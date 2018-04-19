@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListPrincipalPoliciesResponse
- *
  * \brief The ListPrincipalPoliciesResponse class provides an interace for IoT ListPrincipalPolicies responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListPrincipalPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPrincipalPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPrincipalPoliciesResponse::ListPrincipalPoliciesResponse(
         const ListPrincipalPoliciesRequest &request,
@@ -66,6 +61,9 @@ ListPrincipalPoliciesResponse::ListPrincipalPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPrincipalPoliciesRequest * ListPrincipalPoliciesResponse::request() const
 {
     Q_D(const ListPrincipalPoliciesResponse);
@@ -73,9 +71,8 @@ const ListPrincipalPoliciesRequest * ListPrincipalPoliciesResponse::request() co
 }
 
 /*!
- * @brief  Parse a IoT ListPrincipalPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListPrincipalPolicies \a response.
  */
 void ListPrincipalPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListPrincipalPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListPrincipalPoliciesResponsePrivate
+ * \brief The ListPrincipalPoliciesResponsePrivate class provides private implementation for ListPrincipalPoliciesResponse.
  * \internal
  *
- * \class ListPrincipalPoliciesResponsePrivate
- *
- * \brief Private implementation for ListPrincipalPoliciesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPrincipalPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPrincipalPoliciesResponse instance.
+ * Constructs a ListPrincipalPoliciesResponsePrivate object with public implementation \a q.
  */
 ListPrincipalPoliciesResponsePrivate::ListPrincipalPoliciesResponsePrivate(
     ListPrincipalPoliciesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListPrincipalPoliciesResponsePrivate::ListPrincipalPoliciesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListPrincipalPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListPrincipalPolicies response element from \a xml.
  */
 void ListPrincipalPoliciesResponsePrivate::parseListPrincipalPoliciesResponse(QXmlStreamReader &xml)
 {

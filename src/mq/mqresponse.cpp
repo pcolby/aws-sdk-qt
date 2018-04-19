@@ -28,16 +28,13 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::MQResponse
- *
  * \brief The MQResponse class provides an interface for MQ responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @brief  Constructs a new MQResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MQResponse object with parent \a parent.
  */
 MQResponse::MQResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MQResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MQResponse::MQResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MQResponse object.
- *
+ * \internal
+ * Constructs a MQResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MQResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MQResponse::MQResponse(MQResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MQResponse::MQResponse(MQResponsePrivate * const d, QObject * const parent)
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MQResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MQResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MQ::MQResponsePrivate
+ * \brief The MQResponsePrivate class provides private implementation for MQResponse.
+ * \internal
  *
- * @class  MQResponsePrivate
- *
- * @brief  Private implementation for MQResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MQResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MQResponse instance.
+ * Constructs a MQResponsePrivate object with public implementation \a q.
  */
 MQResponsePrivate::MQResponsePrivate(
     MQResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

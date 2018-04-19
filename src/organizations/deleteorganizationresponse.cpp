@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DeleteOrganizationResponse
- *
  * \brief The DeleteOrganizationResponse class provides an interace for Organizations DeleteOrganization responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DeleteOrganizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteOrganizationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteOrganizationResponse::DeleteOrganizationResponse(
         const DeleteOrganizationRequest &request,
@@ -197,6 +192,9 @@ DeleteOrganizationResponse::DeleteOrganizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteOrganizationRequest * DeleteOrganizationResponse::request() const
 {
     Q_D(const DeleteOrganizationResponse);
@@ -204,9 +202,8 @@ const DeleteOrganizationRequest * DeleteOrganizationResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations DeleteOrganization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations DeleteOrganization \a response.
  */
 void DeleteOrganizationResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void DeleteOrganizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::DeleteOrganizationResponsePrivate
+ * \brief The DeleteOrganizationResponsePrivate class provides private implementation for DeleteOrganizationResponse.
  * \internal
  *
- * \class DeleteOrganizationResponsePrivate
- *
- * \brief Private implementation for DeleteOrganizationResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteOrganizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteOrganizationResponse instance.
+ * Constructs a DeleteOrganizationResponsePrivate object with public implementation \a q.
  */
 DeleteOrganizationResponsePrivate::DeleteOrganizationResponsePrivate(
     DeleteOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ DeleteOrganizationResponsePrivate::DeleteOrganizationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations DeleteOrganizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations DeleteOrganization response element from \a xml.
  */
 void DeleteOrganizationResponsePrivate::parseDeleteOrganizationResponse(QXmlStreamReader &xml)
 {

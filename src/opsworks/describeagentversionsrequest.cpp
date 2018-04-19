@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAgentVersionsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeAgentVersionsRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAgentVersionsRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeAgentVersionsRequestPrivate::DescribeAgentVersionsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeAgentVersionsRequest * const q)

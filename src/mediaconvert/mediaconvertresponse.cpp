@@ -28,16 +28,13 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::MediaConvertResponse
- *
  * \brief The MediaConvertResponse class provides an interface for MediaConvert responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @brief  Constructs a new MediaConvertResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MediaConvertResponse object with parent \a parent.
  */
 MediaConvertResponse::MediaConvertResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MediaConvertResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MediaConvertResponse::MediaConvertResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaConvertResponse object.
- *
+ * \internal
+ * Constructs a MediaConvertResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaConvertResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MediaConvertResponse::MediaConvertResponse(MediaConvertResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MediaConvertResponse::MediaConvertResponse(MediaConvertResponsePrivate * const d
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MediaConvertResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MediaConvertResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaConvert::MediaConvertResponsePrivate
+ * \brief The MediaConvertResponsePrivate class provides private implementation for MediaConvertResponse.
+ * \internal
  *
- * @class  MediaConvertResponsePrivate
- *
- * @brief  Private implementation for MediaConvertResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaConvertResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MediaConvertResponse instance.
+ * Constructs a MediaConvertResponsePrivate object with public implementation \a q.
  */
 MediaConvertResponsePrivate::MediaConvertResponsePrivate(
     MediaConvertResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

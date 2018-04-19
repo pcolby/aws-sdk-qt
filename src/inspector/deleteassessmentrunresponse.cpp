@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DeleteAssessmentRunResponse
- *
  * \brief The DeleteAssessmentRunResponse class provides an interace for Inspector DeleteAssessmentRun responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DeleteAssessmentRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAssessmentRunResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAssessmentRunResponse::DeleteAssessmentRunResponse(
         const DeleteAssessmentRunRequest &request,
@@ -60,6 +55,9 @@ DeleteAssessmentRunResponse::DeleteAssessmentRunResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAssessmentRunRequest * DeleteAssessmentRunResponse::request() const
 {
     Q_D(const DeleteAssessmentRunResponse);
@@ -67,9 +65,8 @@ const DeleteAssessmentRunRequest * DeleteAssessmentRunResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector DeleteAssessmentRun response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector DeleteAssessmentRun \a response.
  */
 void DeleteAssessmentRunResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteAssessmentRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::DeleteAssessmentRunResponsePrivate
+ * \brief The DeleteAssessmentRunResponsePrivate class provides private implementation for DeleteAssessmentRunResponse.
  * \internal
  *
- * \class DeleteAssessmentRunResponsePrivate
- *
- * \brief Private implementation for DeleteAssessmentRunResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAssessmentRunResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAssessmentRunResponse instance.
+ * Constructs a DeleteAssessmentRunResponsePrivate object with public implementation \a q.
  */
 DeleteAssessmentRunResponsePrivate::DeleteAssessmentRunResponsePrivate(
     DeleteAssessmentRunResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteAssessmentRunResponsePrivate::DeleteAssessmentRunResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector DeleteAssessmentRunResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector DeleteAssessmentRun response element from \a xml.
  */
 void DeleteAssessmentRunResponsePrivate::parseDeleteAssessmentRunResponse(QXmlStreamReader &xml)
 {

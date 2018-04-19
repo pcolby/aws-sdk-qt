@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DescribeContainerRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribeContainerRequestPrivate object for MediaStore \a action with,
- * public implementation \a q.
+ * Constructs a DescribeContainerRequestPrivate object for MediaStore \a action,
+ * with public implementation \a q.
  */
 DescribeContainerRequestPrivate::DescribeContainerRequestPrivate(
     const MediaStoreRequest::Action action, DescribeContainerRequest * const q)

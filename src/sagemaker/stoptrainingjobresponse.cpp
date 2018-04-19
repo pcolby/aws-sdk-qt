@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::StopTrainingJobResponse
- *
  * \brief The StopTrainingJobResponse class provides an interace for SageMaker StopTrainingJob responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::stopTrainingJob
  */
 
 /*!
- * @brief  Constructs a new StopTrainingJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopTrainingJobResponse object for \a reply to \a request, with parent \a parent.
  */
 StopTrainingJobResponse::StopTrainingJobResponse(
         const StopTrainingJobRequest &request,
@@ -55,6 +50,9 @@ StopTrainingJobResponse::StopTrainingJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopTrainingJobRequest * StopTrainingJobResponse::request() const
 {
     Q_D(const StopTrainingJobResponse);
@@ -62,9 +60,8 @@ const StopTrainingJobRequest * StopTrainingJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a SageMaker StopTrainingJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker StopTrainingJob \a response.
  */
 void StopTrainingJobResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void StopTrainingJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::StopTrainingJobResponsePrivate
+ * \brief The StopTrainingJobResponsePrivate class provides private implementation for StopTrainingJobResponse.
  * \internal
  *
- * \class StopTrainingJobResponsePrivate
- *
- * \brief Private implementation for StopTrainingJobResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopTrainingJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopTrainingJobResponse instance.
+ * Constructs a StopTrainingJobResponsePrivate object with public implementation \a q.
  */
 StopTrainingJobResponsePrivate::StopTrainingJobResponsePrivate(
     StopTrainingJobResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ StopTrainingJobResponsePrivate::StopTrainingJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker StopTrainingJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker StopTrainingJob response element from \a xml.
  */
 void StopTrainingJobResponsePrivate::parseStopTrainingJobResponse(QXmlStreamReader &xml)
 {

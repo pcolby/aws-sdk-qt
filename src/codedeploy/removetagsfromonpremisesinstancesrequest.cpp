@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromOnPremisesInstancesRequest::res
  */
 
 /*!
- *
- * Constructs a RemoveTagsFromOnPremisesInstancesRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsFromOnPremisesInstancesRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 RemoveTagsFromOnPremisesInstancesRequestPrivate::RemoveTagsFromOnPremisesInstancesRequestPrivate(
     const CodeDeployRequest::Action action, RemoveTagsFromOnPremisesInstancesRequest * const q)

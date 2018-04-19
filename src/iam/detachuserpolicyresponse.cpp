@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DetachUserPolicyResponse
- *
  * \brief The DetachUserPolicyResponse class provides an interace for IAM DetachUserPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DetachUserPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachUserPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachUserPolicyResponse::DetachUserPolicyResponse(
         const DetachUserPolicyRequest &request,
@@ -120,6 +115,9 @@ DetachUserPolicyResponse::DetachUserPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachUserPolicyRequest * DetachUserPolicyResponse::request() const
 {
     Q_D(const DetachUserPolicyResponse);
@@ -127,9 +125,8 @@ const DetachUserPolicyRequest * DetachUserPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM DetachUserPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DetachUserPolicy \a response.
  */
 void DetachUserPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DetachUserPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DetachUserPolicyResponsePrivate
+ * \brief The DetachUserPolicyResponsePrivate class provides private implementation for DetachUserPolicyResponse.
  * \internal
  *
- * \class DetachUserPolicyResponsePrivate
- *
- * \brief Private implementation for DetachUserPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachUserPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachUserPolicyResponse instance.
+ * Constructs a DetachUserPolicyResponsePrivate object with public implementation \a q.
  */
 DetachUserPolicyResponsePrivate::DetachUserPolicyResponsePrivate(
     DetachUserPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DetachUserPolicyResponsePrivate::DetachUserPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DetachUserPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DetachUserPolicy response element from \a xml.
  */
 void DetachUserPolicyResponsePrivate::parseDetachUserPolicyResponse(QXmlStreamReader &xml)
 {

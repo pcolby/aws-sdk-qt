@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetUserPolicyResponse
- *
  * \brief The GetUserPolicyResponse class provides an interace for IAM GetUserPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetUserPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetUserPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetUserPolicyResponse::GetUserPolicyResponse(
         const GetUserPolicyRequest &request,
@@ -120,6 +115,9 @@ GetUserPolicyResponse::GetUserPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetUserPolicyRequest * GetUserPolicyResponse::request() const
 {
     Q_D(const GetUserPolicyResponse);
@@ -127,9 +125,8 @@ const GetUserPolicyRequest * GetUserPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetUserPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetUserPolicy \a response.
  */
 void GetUserPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetUserPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetUserPolicyResponsePrivate
+ * \brief The GetUserPolicyResponsePrivate class provides private implementation for GetUserPolicyResponse.
  * \internal
  *
- * \class GetUserPolicyResponsePrivate
- *
- * \brief Private implementation for GetUserPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUserPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetUserPolicyResponse instance.
+ * Constructs a GetUserPolicyResponsePrivate object with public implementation \a q.
  */
 GetUserPolicyResponsePrivate::GetUserPolicyResponsePrivate(
     GetUserPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetUserPolicyResponsePrivate::GetUserPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetUserPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetUserPolicy response element from \a xml.
  */
 void GetUserPolicyResponsePrivate::parseGetUserPolicyResponse(QXmlStreamReader &xml)
 {

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexPatternSetRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteRegexPatternSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRegexPatternSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 DeleteRegexPatternSetRequestPrivate::DeleteRegexPatternSetRequestPrivate(
     const WAFRequest::Action action, DeleteRegexPatternSetRequest * const q)

@@ -67,9 +67,8 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
  */
 
 /*!
- *
- * Constructs a {{ClassName}}Private object for {{ServiceName}} \a action with,
- * public implementation \a q.
+ * Constructs a {{ClassName}}Private object for {{ServiceName}} \a action,
+ * with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(
     const {{ServiceName}}Request::Action action, {{ClassName}} * const q)

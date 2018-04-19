@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeAccountAttributesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAccountAttributesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const EC2Request::Action action, DescribeAccountAttributesRequest * const q)

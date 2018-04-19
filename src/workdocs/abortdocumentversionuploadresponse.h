@@ -34,10 +34,10 @@ class QTAWS_EXPORT AbortDocumentVersionUploadResponse : public WorkDocsResponse 
 public:
     AbortDocumentVersionUploadResponse(const AbortDocumentVersionUploadRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AbortDocumentVersionUploadRequest * request() const;
+    virtual const AbortDocumentVersionUploadRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AbortDocumentVersionUploadResponse)

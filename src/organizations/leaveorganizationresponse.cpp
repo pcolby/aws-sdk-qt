@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::LeaveOrganizationResponse
- *
  * \brief The LeaveOrganizationResponse class provides an interace for Organizations LeaveOrganization responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new LeaveOrganizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a LeaveOrganizationResponse object for \a reply to \a request, with parent \a parent.
  */
 LeaveOrganizationResponse::LeaveOrganizationResponse(
         const LeaveOrganizationRequest &request,
@@ -197,6 +192,9 @@ LeaveOrganizationResponse::LeaveOrganizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const LeaveOrganizationRequest * LeaveOrganizationResponse::request() const
 {
     Q_D(const LeaveOrganizationResponse);
@@ -204,9 +202,8 @@ const LeaveOrganizationRequest * LeaveOrganizationResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations LeaveOrganization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations LeaveOrganization \a response.
  */
 void LeaveOrganizationResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void LeaveOrganizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::LeaveOrganizationResponsePrivate
+ * \brief The LeaveOrganizationResponsePrivate class provides private implementation for LeaveOrganizationResponse.
  * \internal
  *
- * \class LeaveOrganizationResponsePrivate
- *
- * \brief Private implementation for LeaveOrganizationResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LeaveOrganizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public LeaveOrganizationResponse instance.
+ * Constructs a LeaveOrganizationResponsePrivate object with public implementation \a q.
  */
 LeaveOrganizationResponsePrivate::LeaveOrganizationResponsePrivate(
     LeaveOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ LeaveOrganizationResponsePrivate::LeaveOrganizationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations LeaveOrganizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations LeaveOrganization response element from \a xml.
  */
 void LeaveOrganizationResponsePrivate::parseLeaveOrganizationResponse(QXmlStreamReader &xml)
 {

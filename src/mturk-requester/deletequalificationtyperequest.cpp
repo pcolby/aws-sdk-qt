@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteQualificationTypeRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteQualificationTypeRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a DeleteQualificationTypeRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 DeleteQualificationTypeRequestPrivate::DeleteQualificationTypeRequestPrivate(
     const MTurkRequest::Action action, DeleteQualificationTypeRequest * const q)

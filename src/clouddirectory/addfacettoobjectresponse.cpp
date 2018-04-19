@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::AddFacetToObjectResponse
- *
  * \brief The AddFacetToObjectResponse class provides an interace for CloudDirectory AddFacetToObject responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new AddFacetToObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddFacetToObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 AddFacetToObjectResponse::AddFacetToObjectResponse(
         const AddFacetToObjectRequest &request,
@@ -62,6 +57,9 @@ AddFacetToObjectResponse::AddFacetToObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddFacetToObjectRequest * AddFacetToObjectResponse::request() const
 {
     Q_D(const AddFacetToObjectResponse);
@@ -69,9 +67,8 @@ const AddFacetToObjectRequest * AddFacetToObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory AddFacetToObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory AddFacetToObject \a response.
  */
 void AddFacetToObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void AddFacetToObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::AddFacetToObjectResponsePrivate
+ * \brief The AddFacetToObjectResponsePrivate class provides private implementation for AddFacetToObjectResponse.
  * \internal
  *
- * \class AddFacetToObjectResponsePrivate
- *
- * \brief Private implementation for AddFacetToObjectResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddFacetToObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddFacetToObjectResponse instance.
+ * Constructs a AddFacetToObjectResponsePrivate object with public implementation \a q.
  */
 AddFacetToObjectResponsePrivate::AddFacetToObjectResponsePrivate(
     AddFacetToObjectResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ AddFacetToObjectResponsePrivate::AddFacetToObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory AddFacetToObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory AddFacetToObject response element from \a xml.
  */
 void AddFacetToObjectResponsePrivate::parseAddFacetToObjectResponse(QXmlStreamReader &xml)
 {

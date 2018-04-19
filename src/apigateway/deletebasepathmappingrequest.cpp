@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBasePathMappingRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteBasePathMappingRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBasePathMappingRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteBasePathMappingRequestPrivate::DeleteBasePathMappingRequestPrivate(
     const APIGatewayRequest::Action action, DeleteBasePathMappingRequest * const q)

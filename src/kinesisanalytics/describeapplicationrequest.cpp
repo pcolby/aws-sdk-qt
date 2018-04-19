@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeApplicationRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a DescribeApplicationRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 DescribeApplicationRequestPrivate::DescribeApplicationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DescribeApplicationRequest * const q)

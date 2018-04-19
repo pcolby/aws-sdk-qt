@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * GetDiscoverySummaryRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetDiscoverySummaryRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a GetDiscoverySummaryRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, GetDiscoverySummaryRequest * const q)

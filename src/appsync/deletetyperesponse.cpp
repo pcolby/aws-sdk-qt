@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::DeleteTypeResponse
- *
  * \brief The DeleteTypeResponse class provides an interace for AppSync DeleteType responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new DeleteTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTypeResponse::DeleteTypeResponse(
         const DeleteTypeRequest &request,
@@ -56,6 +51,9 @@ DeleteTypeResponse::DeleteTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTypeRequest * DeleteTypeResponse::request() const
 {
     Q_D(const DeleteTypeResponse);
@@ -63,9 +61,8 @@ const DeleteTypeRequest * DeleteTypeResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync DeleteType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync DeleteType \a response.
  */
 void DeleteTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DeleteTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::DeleteTypeResponsePrivate
+ * \brief The DeleteTypeResponsePrivate class provides private implementation for DeleteTypeResponse.
  * \internal
  *
- * \class DeleteTypeResponsePrivate
- *
- * \brief Private implementation for DeleteTypeResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTypeResponse instance.
+ * Constructs a DeleteTypeResponsePrivate object with public implementation \a q.
  */
 DeleteTypeResponsePrivate::DeleteTypeResponsePrivate(
     DeleteTypeResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ DeleteTypeResponsePrivate::DeleteTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync DeleteTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync DeleteType response element from \a xml.
  */
 void DeleteTypeResponsePrivate::parseDeleteTypeResponse(QXmlStreamReader &xml)
 {

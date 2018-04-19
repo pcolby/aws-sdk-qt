@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcEndpointConnectionNotificationResponse
- *
  * \brief The ModifyVpcEndpointConnectionNotificationResponse class provides an interace for EC2 ModifyVpcEndpointConnectionNotification responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyVpcEndpointConnectionNotificationResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyVpcEndpointConnectionNotificationResponse::ModifyVpcEndpointConnectionNotificationResponse(
         const ModifyVpcEndpointConnectionNotificationRequest &request,
@@ -59,6 +54,9 @@ ModifyVpcEndpointConnectionNotificationResponse::ModifyVpcEndpointConnectionNoti
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyVpcEndpointConnectionNotificationRequest * ModifyVpcEndpointConnectionNotificationResponse::request() const
 {
     Q_D(const ModifyVpcEndpointConnectionNotificationResponse);
@@ -66,9 +64,8 @@ const ModifyVpcEndpointConnectionNotificationRequest * ModifyVpcEndpointConnecti
 }
 
 /*!
- * @brief  Parse a EC2 ModifyVpcEndpointConnectionNotification response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyVpcEndpointConnectionNotification \a response.
  */
 void ModifyVpcEndpointConnectionNotificationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyVpcEndpointConnectionNotificationResponse::parseSuccess(QIODevice &re
 }
 
 /*!
+ * \class QtAws::EC2::ModifyVpcEndpointConnectionNotificationResponsePrivate
+ * \brief The ModifyVpcEndpointConnectionNotificationResponsePrivate class provides private implementation for ModifyVpcEndpointConnectionNotificationResponse.
  * \internal
  *
- * \class ModifyVpcEndpointConnectionNotificationResponsePrivate
- *
- * \brief Private implementation for ModifyVpcEndpointConnectionNotificationResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcEndpointConnectionNotificationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyVpcEndpointConnectionNotificationResponse instance.
+ * Constructs a ModifyVpcEndpointConnectionNotificationResponsePrivate object with public implementation \a q.
  */
 ModifyVpcEndpointConnectionNotificationResponsePrivate::ModifyVpcEndpointConnectionNotificationResponsePrivate(
     ModifyVpcEndpointConnectionNotificationResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyVpcEndpointConnectionNotificationResponsePrivate::ModifyVpcEndpointConnect
 }
 
 /*!
- * @brief  Parse an EC2 ModifyVpcEndpointConnectionNotificationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyVpcEndpointConnectionNotification response element from \a xml.
  */
 void ModifyVpcEndpointConnectionNotificationResponsePrivate::parseModifyVpcEndpointConnectionNotificationResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateRouteResponse
- *
  * \brief The CreateRouteResponse class provides an interace for EC2 CreateRoute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateRouteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRouteResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRouteResponse::CreateRouteResponse(
         const CreateRouteRequest &request,
@@ -59,6 +54,9 @@ CreateRouteResponse::CreateRouteResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRouteRequest * CreateRouteResponse::request() const
 {
     Q_D(const CreateRouteResponse);
@@ -66,9 +64,8 @@ const CreateRouteRequest * CreateRouteResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateRoute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateRoute \a response.
  */
 void CreateRouteResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateRouteResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateRouteResponsePrivate
+ * \brief The CreateRouteResponsePrivate class provides private implementation for CreateRouteResponse.
  * \internal
  *
- * \class CreateRouteResponsePrivate
- *
- * \brief Private implementation for CreateRouteResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRouteResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRouteResponse instance.
+ * Constructs a CreateRouteResponsePrivate object with public implementation \a q.
  */
 CreateRouteResponsePrivate::CreateRouteResponsePrivate(
     CreateRouteResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateRouteResponsePrivate::CreateRouteResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateRouteResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateRoute response element from \a xml.
  */
 void CreateRouteResponsePrivate::parseCreateRouteResponse(QXmlStreamReader &xml)
 {

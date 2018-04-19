@@ -29,10 +29,9 @@ namespace IoTJobsDataPlane {
 
 /*!
  * \class QtAws::IoTJobsDataPlane::UpdateJobExecutionResponse
- *
  * \brief The UpdateJobExecutionResponse class provides an interace for IoTJobsDataPlane UpdateJobExecution responses.
  *
- * \ingroup IoTJobsDataPlane
+ * \inmodule QtAwsIoTJobsDataPlane
  *
  *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
  *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
@@ -53,11 +52,7 @@ namespace IoTJobsDataPlane {
  */
 
 /*!
- * @brief  Constructs a new UpdateJobExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateJobExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateJobExecutionResponse::UpdateJobExecutionResponse(
         const UpdateJobExecutionRequest &request,
@@ -69,6 +64,9 @@ UpdateJobExecutionResponse::UpdateJobExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateJobExecutionRequest * UpdateJobExecutionResponse::request() const
 {
     Q_D(const UpdateJobExecutionResponse);
@@ -76,9 +74,8 @@ const UpdateJobExecutionRequest * UpdateJobExecutionResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoTJobsDataPlane UpdateJobExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoTJobsDataPlane UpdateJobExecution \a response.
  */
 void UpdateJobExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void UpdateJobExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoTJobsDataPlane::UpdateJobExecutionResponsePrivate
+ * \brief The UpdateJobExecutionResponsePrivate class provides private implementation for UpdateJobExecutionResponse.
  * \internal
  *
- * \class UpdateJobExecutionResponsePrivate
- *
- * \brief Private implementation for UpdateJobExecutionResponse.
+ * \inmodule QtAwsIoTJobsDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateJobExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateJobExecutionResponse instance.
+ * Constructs a UpdateJobExecutionResponsePrivate object with public implementation \a q.
  */
 UpdateJobExecutionResponsePrivate::UpdateJobExecutionResponsePrivate(
     UpdateJobExecutionResponse * const q) : IoTJobsDataPlaneResponsePrivate(q)
@@ -109,9 +102,7 @@ UpdateJobExecutionResponsePrivate::UpdateJobExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoTJobsDataPlane UpdateJobExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoTJobsDataPlane UpdateJobExecution response element from \a xml.
  */
 void UpdateJobExecutionResponsePrivate::parseUpdateJobExecutionResponse(QXmlStreamReader &xml)
 {

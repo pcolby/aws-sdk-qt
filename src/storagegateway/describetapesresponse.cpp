@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeTapesResponse
- *
  * \brief The DescribeTapesResponse class provides an interace for StorageGateway DescribeTapes responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeTapesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTapesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTapesResponse::DescribeTapesResponse(
         const DescribeTapesRequest &request,
@@ -124,6 +119,9 @@ DescribeTapesResponse::DescribeTapesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTapesRequest * DescribeTapesResponse::request() const
 {
     Q_D(const DescribeTapesResponse);
@@ -131,9 +129,8 @@ const DescribeTapesRequest * DescribeTapesResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeTapes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeTapes \a response.
  */
 void DescribeTapesResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeTapesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeTapesResponsePrivate
+ * \brief The DescribeTapesResponsePrivate class provides private implementation for DescribeTapesResponse.
  * \internal
  *
- * \class DescribeTapesResponsePrivate
- *
- * \brief Private implementation for DescribeTapesResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTapesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTapesResponse instance.
+ * Constructs a DescribeTapesResponsePrivate object with public implementation \a q.
  */
 DescribeTapesResponsePrivate::DescribeTapesResponsePrivate(
     DescribeTapesResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeTapesResponsePrivate::DescribeTapesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeTapesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeTapes response element from \a xml.
  */
 void DescribeTapesResponsePrivate::parseDescribeTapesResponse(QXmlStreamReader &xml)
 {

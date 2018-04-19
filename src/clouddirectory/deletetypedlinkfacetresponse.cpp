@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DeleteTypedLinkFacetResponse
- *
  * \brief The DeleteTypedLinkFacetResponse class provides an interace for CloudDirectory DeleteTypedLinkFacet responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DeleteTypedLinkFacetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTypedLinkFacetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTypedLinkFacetResponse::DeleteTypedLinkFacetResponse(
         const DeleteTypedLinkFacetRequest &request,
@@ -62,6 +57,9 @@ DeleteTypedLinkFacetResponse::DeleteTypedLinkFacetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTypedLinkFacetRequest * DeleteTypedLinkFacetResponse::request() const
 {
     Q_D(const DeleteTypedLinkFacetResponse);
@@ -69,9 +67,8 @@ const DeleteTypedLinkFacetRequest * DeleteTypedLinkFacetResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudDirectory DeleteTypedLinkFacet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory DeleteTypedLinkFacet \a response.
  */
 void DeleteTypedLinkFacetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DeleteTypedLinkFacetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::DeleteTypedLinkFacetResponsePrivate
+ * \brief The DeleteTypedLinkFacetResponsePrivate class provides private implementation for DeleteTypedLinkFacetResponse.
  * \internal
  *
- * \class DeleteTypedLinkFacetResponsePrivate
- *
- * \brief Private implementation for DeleteTypedLinkFacetResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTypedLinkFacetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTypedLinkFacetResponse instance.
+ * Constructs a DeleteTypedLinkFacetResponsePrivate object with public implementation \a q.
  */
 DeleteTypedLinkFacetResponsePrivate::DeleteTypedLinkFacetResponsePrivate(
     DeleteTypedLinkFacetResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ DeleteTypedLinkFacetResponsePrivate::DeleteTypedLinkFacetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory DeleteTypedLinkFacetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory DeleteTypedLinkFacet response element from \a xml.
  */
 void DeleteTypedLinkFacetResponsePrivate::parseDeleteTypedLinkFacetResponse(QXmlStreamReader &xml)
 {

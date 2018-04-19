@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::UpdateObjectAttributesResponse
- *
  * \brief The UpdateObjectAttributesResponse class provides an interace for CloudDirectory UpdateObjectAttributes responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new UpdateObjectAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateObjectAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateObjectAttributesResponse::UpdateObjectAttributesResponse(
         const UpdateObjectAttributesRequest &request,
@@ -62,6 +57,9 @@ UpdateObjectAttributesResponse::UpdateObjectAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateObjectAttributesRequest * UpdateObjectAttributesResponse::request() const
 {
     Q_D(const UpdateObjectAttributesResponse);
@@ -69,9 +67,8 @@ const UpdateObjectAttributesRequest * UpdateObjectAttributesResponse::request() 
 }
 
 /*!
- * @brief  Parse a CloudDirectory UpdateObjectAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory UpdateObjectAttributes \a response.
  */
 void UpdateObjectAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void UpdateObjectAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::UpdateObjectAttributesResponsePrivate
+ * \brief The UpdateObjectAttributesResponsePrivate class provides private implementation for UpdateObjectAttributesResponse.
  * \internal
  *
- * \class UpdateObjectAttributesResponsePrivate
- *
- * \brief Private implementation for UpdateObjectAttributesResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateObjectAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateObjectAttributesResponse instance.
+ * Constructs a UpdateObjectAttributesResponsePrivate object with public implementation \a q.
  */
 UpdateObjectAttributesResponsePrivate::UpdateObjectAttributesResponsePrivate(
     UpdateObjectAttributesResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ UpdateObjectAttributesResponsePrivate::UpdateObjectAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory UpdateObjectAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory UpdateObjectAttributes response element from \a xml.
  */
 void UpdateObjectAttributesResponsePrivate::parseUpdateObjectAttributesResponse(QXmlStreamReader &xml)
 {

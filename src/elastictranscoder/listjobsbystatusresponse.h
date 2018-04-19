@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListJobsByStatusResponse : public ElasticTranscoderResponse {
 public:
     ListJobsByStatusResponse(const ListJobsByStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListJobsByStatusRequest * request() const;
+    virtual const ListJobsByStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListJobsByStatusResponse)

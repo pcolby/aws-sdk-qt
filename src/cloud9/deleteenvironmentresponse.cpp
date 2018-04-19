@@ -29,10 +29,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::DeleteEnvironmentResponse
- *
  * \brief The DeleteEnvironmentResponse class provides an interace for Cloud9 DeleteEnvironment responses.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -93,11 +92,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new DeleteEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEnvironmentResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEnvironmentResponse::DeleteEnvironmentResponse(
         const DeleteEnvironmentRequest &request,
@@ -109,6 +104,9 @@ DeleteEnvironmentResponse::DeleteEnvironmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEnvironmentRequest * DeleteEnvironmentResponse::request() const
 {
     Q_D(const DeleteEnvironmentResponse);
@@ -116,9 +114,8 @@ const DeleteEnvironmentRequest * DeleteEnvironmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a Cloud9 DeleteEnvironment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Cloud9 DeleteEnvironment \a response.
  */
 void DeleteEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -128,19 +125,15 @@ void DeleteEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Cloud9::DeleteEnvironmentResponsePrivate
+ * \brief The DeleteEnvironmentResponsePrivate class provides private implementation for DeleteEnvironmentResponse.
  * \internal
  *
- * \class DeleteEnvironmentResponsePrivate
- *
- * \brief Private implementation for DeleteEnvironmentResponse.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEnvironmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEnvironmentResponse instance.
+ * Constructs a DeleteEnvironmentResponsePrivate object with public implementation \a q.
  */
 DeleteEnvironmentResponsePrivate::DeleteEnvironmentResponsePrivate(
     DeleteEnvironmentResponse * const q) : Cloud9ResponsePrivate(q)
@@ -149,9 +142,7 @@ DeleteEnvironmentResponsePrivate::DeleteEnvironmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Cloud9 DeleteEnvironmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Cloud9 DeleteEnvironment response element from \a xml.
  */
 void DeleteEnvironmentResponsePrivate::parseDeleteEnvironmentResponse(QXmlStreamReader &xml)
 {

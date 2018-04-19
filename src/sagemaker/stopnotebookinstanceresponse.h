@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopNotebookInstanceResponse : public SageMakerResponse {
 public:
     StopNotebookInstanceResponse(const StopNotebookInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopNotebookInstanceRequest * request() const;
+    virtual const StopNotebookInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopNotebookInstanceResponse)

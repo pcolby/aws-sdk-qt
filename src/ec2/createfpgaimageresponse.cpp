@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateFpgaImageResponse
- *
  * \brief The CreateFpgaImageResponse class provides an interace for EC2 CreateFpgaImage responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateFpgaImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateFpgaImageResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateFpgaImageResponse::CreateFpgaImageResponse(
         const CreateFpgaImageRequest &request,
@@ -59,6 +54,9 @@ CreateFpgaImageResponse::CreateFpgaImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateFpgaImageRequest * CreateFpgaImageResponse::request() const
 {
     Q_D(const CreateFpgaImageResponse);
@@ -66,9 +64,8 @@ const CreateFpgaImageRequest * CreateFpgaImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateFpgaImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateFpgaImage \a response.
  */
 void CreateFpgaImageResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateFpgaImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateFpgaImageResponsePrivate
+ * \brief The CreateFpgaImageResponsePrivate class provides private implementation for CreateFpgaImageResponse.
  * \internal
  *
- * \class CreateFpgaImageResponsePrivate
- *
- * \brief Private implementation for CreateFpgaImageResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFpgaImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateFpgaImageResponse instance.
+ * Constructs a CreateFpgaImageResponsePrivate object with public implementation \a q.
  */
 CreateFpgaImageResponsePrivate::CreateFpgaImageResponsePrivate(
     CreateFpgaImageResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateFpgaImageResponsePrivate::CreateFpgaImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateFpgaImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateFpgaImage response element from \a xml.
  */
 void CreateFpgaImageResponsePrivate::parseCreateFpgaImageResponse(QXmlStreamReader &xml)
 {

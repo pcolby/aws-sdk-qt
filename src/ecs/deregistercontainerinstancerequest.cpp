@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterContainerInstanceRequest::response(
  */
 
 /*!
- *
- * Constructs a DeregisterContainerInstanceRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterContainerInstanceRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 DeregisterContainerInstanceRequestPrivate::DeregisterContainerInstanceRequestPrivate(
     const ECSRequest::Action action, DeregisterContainerInstanceRequest * const q)

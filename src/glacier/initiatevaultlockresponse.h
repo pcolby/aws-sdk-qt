@@ -34,10 +34,10 @@ class QTAWS_EXPORT InitiateVaultLockResponse : public GlacierResponse {
 public:
     InitiateVaultLockResponse(const InitiateVaultLockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const InitiateVaultLockRequest * request() const;
+    virtual const InitiateVaultLockRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(InitiateVaultLockResponse)

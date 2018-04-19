@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableAWSServiceAccessResponse : public OrganizationsResponse
 public:
     EnableAWSServiceAccessResponse(const EnableAWSServiceAccessRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableAWSServiceAccessRequest * request() const;
+    virtual const EnableAWSServiceAccessRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EnableAWSServiceAccessResponse)

@@ -72,7 +72,7 @@ namespace AppStream {
  */
 
 /*!
- * Constructs a[n] AppStreamRequest object for AppStream \a action.
+ * Constructs a AppStreamRequest object for AppStream \a action.
  */
 AppStreamRequest::AppStreamRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AppStreamRequestPrivate(action, this))
@@ -272,8 +272,8 @@ QNetworkRequest AppStreamRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a AppStreamRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a AppStreamRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 AppStreamRequestPrivate::AppStreamRequestPrivate(const AppStreamRequest::Action action, AppStreamRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

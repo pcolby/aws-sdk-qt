@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DeleteBackupResponse
- *
  * \brief The DeleteBackupResponse class provides an interace for DynamoDB DeleteBackup responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DeleteBackupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBackupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBackupResponse::DeleteBackupResponse(
         const DeleteBackupRequest &request,
@@ -74,6 +69,9 @@ DeleteBackupResponse::DeleteBackupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBackupRequest * DeleteBackupResponse::request() const
 {
     Q_D(const DeleteBackupResponse);
@@ -81,9 +79,8 @@ const DeleteBackupRequest * DeleteBackupResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB DeleteBackup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB DeleteBackup \a response.
  */
 void DeleteBackupResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DeleteBackupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::DeleteBackupResponsePrivate
+ * \brief The DeleteBackupResponsePrivate class provides private implementation for DeleteBackupResponse.
  * \internal
  *
- * \class DeleteBackupResponsePrivate
- *
- * \brief Private implementation for DeleteBackupResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBackupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBackupResponse instance.
+ * Constructs a DeleteBackupResponsePrivate object with public implementation \a q.
  */
 DeleteBackupResponsePrivate::DeleteBackupResponsePrivate(
     DeleteBackupResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ DeleteBackupResponsePrivate::DeleteBackupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB DeleteBackupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB DeleteBackup response element from \a xml.
  */
 void DeleteBackupResponsePrivate::parseDeleteBackupResponse(QXmlStreamReader &xml)
 {

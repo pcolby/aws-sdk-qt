@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeAvailabilityOptionsResponse
- *
  * \brief The DescribeAvailabilityOptionsResponse class provides an interace for CloudSearch DescribeAvailabilityOptions responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeAvailabilityOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAvailabilityOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAvailabilityOptionsResponse::DescribeAvailabilityOptionsResponse(
         const DescribeAvailabilityOptionsRequest &request,
@@ -66,6 +61,9 @@ DescribeAvailabilityOptionsResponse::DescribeAvailabilityOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAvailabilityOptionsRequest * DescribeAvailabilityOptionsResponse::request() const
 {
     Q_D(const DescribeAvailabilityOptionsResponse);
@@ -73,9 +71,8 @@ const DescribeAvailabilityOptionsRequest * DescribeAvailabilityOptionsResponse::
 }
 
 /*!
- * @brief  Parse a CloudSearch DescribeAvailabilityOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DescribeAvailabilityOptions \a response.
  */
 void DescribeAvailabilityOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeAvailabilityOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DescribeAvailabilityOptionsResponsePrivate
+ * \brief The DescribeAvailabilityOptionsResponsePrivate class provides private implementation for DescribeAvailabilityOptionsResponse.
  * \internal
  *
- * \class DescribeAvailabilityOptionsResponsePrivate
- *
- * \brief Private implementation for DescribeAvailabilityOptionsResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAvailabilityOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAvailabilityOptionsResponse instance.
+ * Constructs a DescribeAvailabilityOptionsResponsePrivate object with public implementation \a q.
  */
 DescribeAvailabilityOptionsResponsePrivate::DescribeAvailabilityOptionsResponsePrivate(
     DescribeAvailabilityOptionsResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeAvailabilityOptionsResponsePrivate::DescribeAvailabilityOptionsResponseP
 }
 
 /*!
- * @brief  Parse an CloudSearch DescribeAvailabilityOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DescribeAvailabilityOptions response element from \a xml.
  */
 void DescribeAvailabilityOptionsResponsePrivate::parseDescribeAvailabilityOptionsResponse(QXmlStreamReader &xml)
 {

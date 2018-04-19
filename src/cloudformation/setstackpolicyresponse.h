@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetStackPolicyResponse : public CloudFormationResponse {
 public:
     SetStackPolicyResponse(const SetStackPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetStackPolicyRequest * request() const;
+    virtual const SetStackPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetStackPolicyResponse)

@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::EncryptResponse
- *
  * \brief The EncryptResponse class provides an interace for KMS Encrypt responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new EncryptResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EncryptResponse object for \a reply to \a request, with parent \a parent.
  */
 EncryptResponse::EncryptResponse(
         const EncryptRequest &request,
@@ -154,6 +149,9 @@ EncryptResponse::EncryptResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EncryptRequest * EncryptResponse::request() const
 {
     Q_D(const EncryptResponse);
@@ -161,9 +159,8 @@ const EncryptRequest * EncryptResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS Encrypt response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS Encrypt \a response.
  */
 void EncryptResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void EncryptResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::EncryptResponsePrivate
+ * \brief The EncryptResponsePrivate class provides private implementation for EncryptResponse.
  * \internal
  *
- * \class EncryptResponsePrivate
- *
- * \brief Private implementation for EncryptResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EncryptResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EncryptResponse instance.
+ * Constructs a EncryptResponsePrivate object with public implementation \a q.
  */
 EncryptResponsePrivate::EncryptResponsePrivate(
     EncryptResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ EncryptResponsePrivate::EncryptResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS EncryptResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS Encrypt response element from \a xml.
  */
 void EncryptResponsePrivate::parseEncryptResponse(QXmlStreamReader &xml)
 {

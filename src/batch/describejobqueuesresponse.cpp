@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::DescribeJobQueuesResponse
- *
  * \brief The DescribeJobQueuesResponse class provides an interace for Batch DescribeJobQueues responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobQueuesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeJobQueuesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeJobQueuesResponse::DescribeJobQueuesResponse(
         const DescribeJobQueuesRequest &request,
@@ -69,6 +64,9 @@ DescribeJobQueuesResponse::DescribeJobQueuesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeJobQueuesRequest * DescribeJobQueuesResponse::request() const
 {
     Q_D(const DescribeJobQueuesResponse);
@@ -76,9 +74,8 @@ const DescribeJobQueuesRequest * DescribeJobQueuesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Batch DescribeJobQueues response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch DescribeJobQueues \a response.
  */
 void DescribeJobQueuesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeJobQueuesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::DescribeJobQueuesResponsePrivate
+ * \brief The DescribeJobQueuesResponsePrivate class provides private implementation for DescribeJobQueuesResponse.
  * \internal
  *
- * \class DescribeJobQueuesResponsePrivate
- *
- * \brief Private implementation for DescribeJobQueuesResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobQueuesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeJobQueuesResponse instance.
+ * Constructs a DescribeJobQueuesResponsePrivate object with public implementation \a q.
  */
 DescribeJobQueuesResponsePrivate::DescribeJobQueuesResponsePrivate(
     DescribeJobQueuesResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeJobQueuesResponsePrivate::DescribeJobQueuesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Batch DescribeJobQueuesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch DescribeJobQueues response element from \a xml.
  */
 void DescribeJobQueuesResponsePrivate::parseDescribeJobQueuesResponse(QXmlStreamReader &xml)
 {

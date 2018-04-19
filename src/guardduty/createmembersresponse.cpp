@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::CreateMembersResponse
- *
  * \brief The CreateMembersResponse class provides an interace for GuardDuty CreateMembers responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::createMembers
  */
 
 /*!
- * @brief  Constructs a new CreateMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateMembersResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateMembersResponse::CreateMembersResponse(
         const CreateMembersRequest &request,
@@ -55,6 +50,9 @@ CreateMembersResponse::CreateMembersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateMembersRequest * CreateMembersResponse::request() const
 {
     Q_D(const CreateMembersResponse);
@@ -62,9 +60,8 @@ const CreateMembersRequest * CreateMembersResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty CreateMembers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty CreateMembers \a response.
  */
 void CreateMembersResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateMembersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::CreateMembersResponsePrivate
+ * \brief The CreateMembersResponsePrivate class provides private implementation for CreateMembersResponse.
  * \internal
  *
- * \class CreateMembersResponsePrivate
- *
- * \brief Private implementation for CreateMembersResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMembersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateMembersResponse instance.
+ * Constructs a CreateMembersResponsePrivate object with public implementation \a q.
  */
 CreateMembersResponsePrivate::CreateMembersResponsePrivate(
     CreateMembersResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateMembersResponsePrivate::CreateMembersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty CreateMembersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty CreateMembers response element from \a xml.
  */
 void CreateMembersResponsePrivate::parseCreateMembersResponse(QXmlStreamReader &xml)
 {

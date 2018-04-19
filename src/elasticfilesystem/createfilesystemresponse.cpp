@@ -29,10 +29,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::CreateFileSystemResponse
- *
  * \brief The CreateFileSystemResponse class provides an interace for EFS CreateFileSystem responses.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -45,11 +44,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new CreateFileSystemResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateFileSystemResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateFileSystemResponse::CreateFileSystemResponse(
         const CreateFileSystemRequest &request,
@@ -61,6 +56,9 @@ CreateFileSystemResponse::CreateFileSystemResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateFileSystemRequest * CreateFileSystemResponse::request() const
 {
     Q_D(const CreateFileSystemResponse);
@@ -68,9 +66,8 @@ const CreateFileSystemRequest * CreateFileSystemResponse::request() const
 }
 
 /*!
- * @brief  Parse a EFS CreateFileSystem response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EFS CreateFileSystem \a response.
  */
 void CreateFileSystemResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreateFileSystemResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EFS::CreateFileSystemResponsePrivate
+ * \brief The CreateFileSystemResponsePrivate class provides private implementation for CreateFileSystemResponse.
  * \internal
  *
- * \class CreateFileSystemResponsePrivate
- *
- * \brief Private implementation for CreateFileSystemResponse.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFileSystemResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateFileSystemResponse instance.
+ * Constructs a CreateFileSystemResponsePrivate object with public implementation \a q.
  */
 CreateFileSystemResponsePrivate::CreateFileSystemResponsePrivate(
     CreateFileSystemResponse * const q) : EFSResponsePrivate(q)
@@ -101,9 +94,7 @@ CreateFileSystemResponsePrivate::CreateFileSystemResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EFS CreateFileSystemResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EFS CreateFileSystem response element from \a xml.
  */
 void CreateFileSystemResponsePrivate::parseCreateFileSystemResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetApplicationSettingsResponse : public PinpointResponse {
 public:
     GetApplicationSettingsResponse(const GetApplicationSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetApplicationSettingsRequest * request() const;
+    virtual const GetApplicationSettingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetApplicationSettingsResponse)

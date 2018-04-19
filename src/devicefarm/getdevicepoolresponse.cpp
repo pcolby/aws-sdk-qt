@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetDevicePoolResponse
- *
  * \brief The GetDevicePoolResponse class provides an interace for DeviceFarm GetDevicePool responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetDevicePoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDevicePoolResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDevicePoolResponse::GetDevicePoolResponse(
         const GetDevicePoolRequest &request,
@@ -57,6 +52,9 @@ GetDevicePoolResponse::GetDevicePoolResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDevicePoolRequest * GetDevicePoolResponse::request() const
 {
     Q_D(const GetDevicePoolResponse);
@@ -64,9 +62,8 @@ const GetDevicePoolRequest * GetDevicePoolResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetDevicePool response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetDevicePool \a response.
  */
 void GetDevicePoolResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetDevicePoolResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetDevicePoolResponsePrivate
+ * \brief The GetDevicePoolResponsePrivate class provides private implementation for GetDevicePoolResponse.
  * \internal
  *
- * \class GetDevicePoolResponsePrivate
- *
- * \brief Private implementation for GetDevicePoolResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDevicePoolResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDevicePoolResponse instance.
+ * Constructs a GetDevicePoolResponsePrivate object with public implementation \a q.
  */
 GetDevicePoolResponsePrivate::GetDevicePoolResponsePrivate(
     GetDevicePoolResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetDevicePoolResponsePrivate::GetDevicePoolResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetDevicePoolResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetDevicePool response element from \a xml.
  */
 void GetDevicePoolResponsePrivate::parseGetDevicePoolResponse(QXmlStreamReader &xml)
 {

@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * GenerateDataKeyRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GenerateDataKeyRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a GenerateDataKeyRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 GenerateDataKeyRequestPrivate::GenerateDataKeyRequestPrivate(
     const KMSRequest::Action action, GenerateDataKeyRequest * const q)

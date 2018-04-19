@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateTopicRuleResponse
- *
  * \brief The CreateTopicRuleResponse class provides an interace for IoT CreateTopicRule responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateTopicRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTopicRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTopicRuleResponse::CreateTopicRuleResponse(
         const CreateTopicRuleRequest &request,
@@ -66,6 +61,9 @@ CreateTopicRuleResponse::CreateTopicRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTopicRuleRequest * CreateTopicRuleResponse::request() const
 {
     Q_D(const CreateTopicRuleResponse);
@@ -73,9 +71,8 @@ const CreateTopicRuleRequest * CreateTopicRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT CreateTopicRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT CreateTopicRule \a response.
  */
 void CreateTopicRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateTopicRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::CreateTopicRuleResponsePrivate
+ * \brief The CreateTopicRuleResponsePrivate class provides private implementation for CreateTopicRuleResponse.
  * \internal
  *
- * \class CreateTopicRuleResponsePrivate
- *
- * \brief Private implementation for CreateTopicRuleResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTopicRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTopicRuleResponse instance.
+ * Constructs a CreateTopicRuleResponsePrivate object with public implementation \a q.
  */
 CreateTopicRuleResponsePrivate::CreateTopicRuleResponsePrivate(
     CreateTopicRuleResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateTopicRuleResponsePrivate::CreateTopicRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT CreateTopicRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT CreateTopicRule response element from \a xml.
  */
 void CreateTopicRuleResponsePrivate::parseCreateTopicRuleResponse(QXmlStreamReader &xml)
 {

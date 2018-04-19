@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * ListResolversRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListResolversRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a ListResolversRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 ListResolversRequestPrivate::ListResolversRequestPrivate(
     const AppSyncRequest::Action action, ListResolversRequest * const q)

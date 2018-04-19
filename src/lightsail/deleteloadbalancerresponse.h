@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteLoadBalancerResponse : public LightsailResponse {
 public:
     DeleteLoadBalancerResponse(const DeleteLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteLoadBalancerRequest * request() const;
+    virtual const DeleteLoadBalancerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteLoadBalancerResponse)

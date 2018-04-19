@@ -28,16 +28,13 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::BudgetsResponse
- *
  * \brief The BudgetsResponse class provides an interface for Budgets responses.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @brief  Constructs a new BudgetsResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a BudgetsResponse object with parent \a parent.
  */
 BudgetsResponse::BudgetsResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new BudgetsResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ BudgetsResponse::BudgetsResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BudgetsResponse object.
- *
+ * \internal
+ * Constructs a BudgetsResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from BudgetsResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 BudgetsResponse::BudgetsResponse(BudgetsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ BudgetsResponse::BudgetsResponse(BudgetsResponsePrivate * const d, QObject * con
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void BudgetsResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void BudgetsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Budgets::BudgetsResponsePrivate
+ * \brief The BudgetsResponsePrivate class provides private implementation for BudgetsResponse.
+ * \internal
  *
- * @class  BudgetsResponsePrivate
- *
- * @brief  Private implementation for BudgetsResponse.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BudgetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BudgetsResponse instance.
+ * Constructs a BudgetsResponsePrivate object with public implementation \a q.
  */
 BudgetsResponsePrivate::BudgetsResponsePrivate(
     BudgetsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

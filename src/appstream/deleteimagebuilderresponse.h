@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteImageBuilderResponse : public AppStreamResponse {
 public:
     DeleteImageBuilderResponse(const DeleteImageBuilderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteImageBuilderRequest * request() const;
+    virtual const DeleteImageBuilderRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteImageBuilderResponse)

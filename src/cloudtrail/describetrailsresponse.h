@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTrailsResponse : public CloudTrailResponse {
 public:
     DescribeTrailsResponse(const DescribeTrailsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTrailsRequest * request() const;
+    virtual const DescribeTrailsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTrailsResponse)

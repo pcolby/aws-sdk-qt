@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * SetIpAddressTypeRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a SetIpAddressTypeRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a SetIpAddressTypeRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 SetIpAddressTypeRequestPrivate::SetIpAddressTypeRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetIpAddressTypeRequest * const q)

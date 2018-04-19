@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateServiceResponse : public ECSResponse {
 public:
     UpdateServiceResponse(const UpdateServiceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateServiceRequest * request() const;
+    virtual const UpdateServiceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateServiceResponse)

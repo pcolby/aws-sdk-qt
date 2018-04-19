@@ -29,10 +29,9 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::GetTraceGraphResponse
- *
  * \brief The GetTraceGraphResponse class provides an interace for XRay GetTraceGraph responses.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  *
  *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  *
@@ -40,11 +39,7 @@ namespace XRay {
  */
 
 /*!
- * @brief  Constructs a new GetTraceGraphResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTraceGraphResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTraceGraphResponse::GetTraceGraphResponse(
         const GetTraceGraphRequest &request,
@@ -56,6 +51,9 @@ GetTraceGraphResponse::GetTraceGraphResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTraceGraphRequest * GetTraceGraphResponse::request() const
 {
     Q_D(const GetTraceGraphResponse);
@@ -63,9 +61,8 @@ const GetTraceGraphRequest * GetTraceGraphResponse::request() const
 }
 
 /*!
- * @brief  Parse a XRay GetTraceGraph response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful XRay GetTraceGraph \a response.
  */
 void GetTraceGraphResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetTraceGraphResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::XRay::GetTraceGraphResponsePrivate
+ * \brief The GetTraceGraphResponsePrivate class provides private implementation for GetTraceGraphResponse.
  * \internal
  *
- * \class GetTraceGraphResponsePrivate
- *
- * \brief Private implementation for GetTraceGraphResponse.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTraceGraphResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTraceGraphResponse instance.
+ * Constructs a GetTraceGraphResponsePrivate object with public implementation \a q.
  */
 GetTraceGraphResponsePrivate::GetTraceGraphResponsePrivate(
     GetTraceGraphResponse * const q) : XRayResponsePrivate(q)
@@ -96,9 +89,7 @@ GetTraceGraphResponsePrivate::GetTraceGraphResponsePrivate(
 }
 
 /*!
- * @brief  Parse an XRay GetTraceGraphResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a XRay GetTraceGraph response element from \a xml.
  */
 void GetTraceGraphResponsePrivate::parseGetTraceGraphResponse(QXmlStreamReader &xml)
 {

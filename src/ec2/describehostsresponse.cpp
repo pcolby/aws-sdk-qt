@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeHostsResponse
- *
  * \brief The DescribeHostsResponse class provides an interace for EC2 DescribeHosts responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeHostsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeHostsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeHostsResponse::DescribeHostsResponse(
         const DescribeHostsRequest &request,
@@ -59,6 +54,9 @@ DescribeHostsResponse::DescribeHostsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeHostsRequest * DescribeHostsResponse::request() const
 {
     Q_D(const DescribeHostsResponse);
@@ -66,9 +64,8 @@ const DescribeHostsRequest * DescribeHostsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeHosts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeHosts \a response.
  */
 void DescribeHostsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeHostsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeHostsResponsePrivate
+ * \brief The DescribeHostsResponsePrivate class provides private implementation for DescribeHostsResponse.
  * \internal
  *
- * \class DescribeHostsResponsePrivate
- *
- * \brief Private implementation for DescribeHostsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHostsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeHostsResponse instance.
+ * Constructs a DescribeHostsResponsePrivate object with public implementation \a q.
  */
 DescribeHostsResponsePrivate::DescribeHostsResponsePrivate(
     DescribeHostsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeHostsResponsePrivate::DescribeHostsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeHostsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeHosts response element from \a xml.
  */
 void DescribeHostsResponsePrivate::parseDescribeHostsResponse(QXmlStreamReader &xml)
 {

@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * GetIdRequest::response(QNetworkReply * const 
  */
 
 /*!
- *
- * Constructs a GetIdRequestPrivate object for CognitoIdentity \a action with,
- * public implementation \a q.
+ * Constructs a GetIdRequestPrivate object for CognitoIdentity \a action,
+ * with public implementation \a q.
  */
 GetIdRequestPrivate::GetIdRequestPrivate(
     const CognitoIdentityRequest::Action action, GetIdRequest * const q)

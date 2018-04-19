@@ -29,10 +29,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DeleteServerResponse
- *
  * \brief The DeleteServerResponse class provides an interace for OpsWorksCM DeleteServer responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -99,11 +98,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DeleteServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteServerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteServerResponse::DeleteServerResponse(
         const DeleteServerRequest &request,
@@ -115,6 +110,9 @@ DeleteServerResponse::DeleteServerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteServerRequest * DeleteServerResponse::request() const
 {
     Q_D(const DeleteServerResponse);
@@ -122,9 +120,8 @@ const DeleteServerRequest * DeleteServerResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorksCM DeleteServer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorksCM DeleteServer \a response.
  */
 void DeleteServerResponse::parseSuccess(QIODevice &response)
 {
@@ -134,19 +131,15 @@ void DeleteServerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorksCM::DeleteServerResponsePrivate
+ * \brief The DeleteServerResponsePrivate class provides private implementation for DeleteServerResponse.
  * \internal
  *
- * \class DeleteServerResponsePrivate
- *
- * \brief Private implementation for DeleteServerResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteServerResponse instance.
+ * Constructs a DeleteServerResponsePrivate object with public implementation \a q.
  */
 DeleteServerResponsePrivate::DeleteServerResponsePrivate(
     DeleteServerResponse * const q) : OpsWorksCMResponsePrivate(q)
@@ -155,9 +148,7 @@ DeleteServerResponsePrivate::DeleteServerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorksCM DeleteServerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorksCM DeleteServer response element from \a xml.
  */
 void DeleteServerResponsePrivate::parseDeleteServerResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::DeleteCertificateResponse
- *
  * \brief The DeleteCertificateResponse class provides an interace for ACM DeleteCertificate responses.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new DeleteCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCertificateResponse::DeleteCertificateResponse(
         const DeleteCertificateRequest &request,
@@ -64,6 +59,9 @@ DeleteCertificateResponse::DeleteCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCertificateRequest * DeleteCertificateResponse::request() const
 {
     Q_D(const DeleteCertificateResponse);
@@ -71,9 +69,8 @@ const DeleteCertificateRequest * DeleteCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a ACM DeleteCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACM DeleteCertificate \a response.
  */
 void DeleteCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void DeleteCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACM::DeleteCertificateResponsePrivate
+ * \brief The DeleteCertificateResponsePrivate class provides private implementation for DeleteCertificateResponse.
  * \internal
  *
- * \class DeleteCertificateResponsePrivate
- *
- * \brief Private implementation for DeleteCertificateResponse.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCertificateResponse instance.
+ * Constructs a DeleteCertificateResponsePrivate object with public implementation \a q.
  */
 DeleteCertificateResponsePrivate::DeleteCertificateResponsePrivate(
     DeleteCertificateResponse * const q) : ACMResponsePrivate(q)
@@ -104,9 +97,7 @@ DeleteCertificateResponsePrivate::DeleteCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACM DeleteCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACM DeleteCertificate response element from \a xml.
  */
 void DeleteCertificateResponsePrivate::parseDeleteCertificateResponse(QXmlStreamReader &xml)
 {

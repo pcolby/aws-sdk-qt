@@ -29,10 +29,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetTagsResponse
- *
  * \brief The GetTagsResponse class provides an interace for CostExplorer GetTags responses.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -52,11 +51,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTagsResponse::GetTagsResponse(
         const GetTagsRequest &request,
@@ -68,6 +63,9 @@ GetTagsResponse::GetTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTagsRequest * GetTagsResponse::request() const
 {
     Q_D(const GetTagsResponse);
@@ -75,9 +73,8 @@ const GetTagsRequest * GetTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CostExplorer GetTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CostExplorer GetTags \a response.
  */
 void GetTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void GetTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CostExplorer::GetTagsResponsePrivate
+ * \brief The GetTagsResponsePrivate class provides private implementation for GetTagsResponse.
  * \internal
  *
- * \class GetTagsResponsePrivate
- *
- * \brief Private implementation for GetTagsResponse.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTagsResponse instance.
+ * Constructs a GetTagsResponsePrivate object with public implementation \a q.
  */
 GetTagsResponsePrivate::GetTagsResponsePrivate(
     GetTagsResponse * const q) : CostExplorerResponsePrivate(q)
@@ -108,9 +101,7 @@ GetTagsResponsePrivate::GetTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CostExplorer GetTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CostExplorer GetTags response element from \a xml.
  */
 void GetTagsResponsePrivate::parseGetTagsResponse(QXmlStreamReader &xml)
 {

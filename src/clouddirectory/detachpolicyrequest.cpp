@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DetachPolicyRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a DetachPolicyRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachPolicyRequest * const q)

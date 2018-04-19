@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcTenancyRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ModifyVpcTenancyRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyVpcTenancyRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyVpcTenancyRequestPrivate::ModifyVpcTenancyRequestPrivate(
     const EC2Request::Action action, ModifyVpcTenancyRequest * const q)

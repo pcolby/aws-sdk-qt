@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetAppliedSchemaVersionResponse
- *
  * \brief The GetAppliedSchemaVersionResponse class provides an interace for CloudDirectory GetAppliedSchemaVersion responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetAppliedSchemaVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAppliedSchemaVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAppliedSchemaVersionResponse::GetAppliedSchemaVersionResponse(
         const GetAppliedSchemaVersionRequest &request,
@@ -62,6 +57,9 @@ GetAppliedSchemaVersionResponse::GetAppliedSchemaVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAppliedSchemaVersionRequest * GetAppliedSchemaVersionResponse::request() const
 {
     Q_D(const GetAppliedSchemaVersionResponse);
@@ -69,9 +67,8 @@ const GetAppliedSchemaVersionRequest * GetAppliedSchemaVersionResponse::request(
 }
 
 /*!
- * @brief  Parse a CloudDirectory GetAppliedSchemaVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory GetAppliedSchemaVersion \a response.
  */
 void GetAppliedSchemaVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetAppliedSchemaVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::GetAppliedSchemaVersionResponsePrivate
+ * \brief The GetAppliedSchemaVersionResponsePrivate class provides private implementation for GetAppliedSchemaVersionResponse.
  * \internal
  *
- * \class GetAppliedSchemaVersionResponsePrivate
- *
- * \brief Private implementation for GetAppliedSchemaVersionResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAppliedSchemaVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAppliedSchemaVersionResponse instance.
+ * Constructs a GetAppliedSchemaVersionResponsePrivate object with public implementation \a q.
  */
 GetAppliedSchemaVersionResponsePrivate::GetAppliedSchemaVersionResponsePrivate(
     GetAppliedSchemaVersionResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ GetAppliedSchemaVersionResponsePrivate::GetAppliedSchemaVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory GetAppliedSchemaVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory GetAppliedSchemaVersion response element from \a xml.
  */
 void GetAppliedSchemaVersionResponsePrivate::parseGetAppliedSchemaVersionResponse(QXmlStreamReader &xml)
 {

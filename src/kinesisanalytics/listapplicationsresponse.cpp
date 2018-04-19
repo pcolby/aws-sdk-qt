@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::ListApplicationsResponse
- *
  * \brief The ListApplicationsResponse class provides an interace for KinesisAnalytics ListApplications responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::listApplications
  */
 
 /*!
- * @brief  Constructs a new ListApplicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListApplicationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListApplicationsResponse::ListApplicationsResponse(
         const ListApplicationsRequest &request,
@@ -55,6 +50,9 @@ ListApplicationsResponse::ListApplicationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListApplicationsRequest * ListApplicationsResponse::request() const
 {
     Q_D(const ListApplicationsResponse);
@@ -62,9 +60,8 @@ const ListApplicationsRequest * ListApplicationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics ListApplications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics ListApplications \a response.
  */
 void ListApplicationsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListApplicationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::ListApplicationsResponsePrivate
+ * \brief The ListApplicationsResponsePrivate class provides private implementation for ListApplicationsResponse.
  * \internal
  *
- * \class ListApplicationsResponsePrivate
- *
- * \brief Private implementation for ListApplicationsResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListApplicationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListApplicationsResponse instance.
+ * Constructs a ListApplicationsResponsePrivate object with public implementation \a q.
  */
 ListApplicationsResponsePrivate::ListApplicationsResponsePrivate(
     ListApplicationsResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ ListApplicationsResponsePrivate::ListApplicationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics ListApplicationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics ListApplications response element from \a xml.
  */
 void ListApplicationsResponsePrivate::parseListApplicationsResponse(QXmlStreamReader &xml)
 {

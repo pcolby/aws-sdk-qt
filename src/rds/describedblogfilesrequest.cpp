@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDBLogFilesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeDBLogFilesRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDBLogFilesRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeDBLogFilesRequestPrivate::DescribeDBLogFilesRequestPrivate(
     const RDSRequest::Action action, DescribeDBLogFilesRequest * const q)

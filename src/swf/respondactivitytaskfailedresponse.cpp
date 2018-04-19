@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RespondActivityTaskFailedResponse
- *
  * \brief The RespondActivityTaskFailedResponse class provides an interace for SWF RespondActivityTaskFailed responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RespondActivityTaskFailedResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RespondActivityTaskFailedResponse object for \a reply to \a request, with parent \a parent.
  */
 RespondActivityTaskFailedResponse::RespondActivityTaskFailedResponse(
         const RespondActivityTaskFailedRequest &request,
@@ -71,6 +66,9 @@ RespondActivityTaskFailedResponse::RespondActivityTaskFailedResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RespondActivityTaskFailedRequest * RespondActivityTaskFailedResponse::request() const
 {
     Q_D(const RespondActivityTaskFailedResponse);
@@ -78,9 +76,8 @@ const RespondActivityTaskFailedRequest * RespondActivityTaskFailedResponse::requ
 }
 
 /*!
- * @brief  Parse a SWF RespondActivityTaskFailed response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF RespondActivityTaskFailed \a response.
  */
 void RespondActivityTaskFailedResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void RespondActivityTaskFailedResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::RespondActivityTaskFailedResponsePrivate
+ * \brief The RespondActivityTaskFailedResponsePrivate class provides private implementation for RespondActivityTaskFailedResponse.
  * \internal
  *
- * \class RespondActivityTaskFailedResponsePrivate
- *
- * \brief Private implementation for RespondActivityTaskFailedResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RespondActivityTaskFailedResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RespondActivityTaskFailedResponse instance.
+ * Constructs a RespondActivityTaskFailedResponsePrivate object with public implementation \a q.
  */
 RespondActivityTaskFailedResponsePrivate::RespondActivityTaskFailedResponsePrivate(
     RespondActivityTaskFailedResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ RespondActivityTaskFailedResponsePrivate::RespondActivityTaskFailedResponsePriva
 }
 
 /*!
- * @brief  Parse an SWF RespondActivityTaskFailedResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF RespondActivityTaskFailed response element from \a xml.
  */
 void RespondActivityTaskFailedResponsePrivate::parseRespondActivityTaskFailedResponse(QXmlStreamReader &xml)
 {

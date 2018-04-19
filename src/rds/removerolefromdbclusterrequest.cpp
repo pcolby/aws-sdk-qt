@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * RemoveRoleFromDBClusterRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a RemoveRoleFromDBClusterRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a RemoveRoleFromDBClusterRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 RemoveRoleFromDBClusterRequestPrivate::RemoveRoleFromDBClusterRequestPrivate(
     const RDSRequest::Action action, RemoveRoleFromDBClusterRequest * const q)

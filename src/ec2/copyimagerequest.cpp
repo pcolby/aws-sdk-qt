@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a CopyImageRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CopyImageRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CopyImageRequestPrivate::CopyImageRequestPrivate(
     const EC2Request::Action action, CopyImageRequest * const q)

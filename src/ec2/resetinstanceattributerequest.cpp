@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ResetInstanceAttributeRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ResetInstanceAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ResetInstanceAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ResetInstanceAttributeRequestPrivate::ResetInstanceAttributeRequestPrivate(
     const EC2Request::Action action, ResetInstanceAttributeRequest * const q)

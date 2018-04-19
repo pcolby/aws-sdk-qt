@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetServiceGraphRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetServiceGraphRequestPrivate object for XRay \a action with,
- * public implementation \a q.
+ * Constructs a GetServiceGraphRequestPrivate object for XRay \a action,
+ * with public implementation \a q.
  */
 GetServiceGraphRequestPrivate::GetServiceGraphRequestPrivate(
     const XRayRequest::Action action, GetServiceGraphRequest * const q)

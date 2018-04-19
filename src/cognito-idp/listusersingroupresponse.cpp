@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ListUsersInGroupResponse
- *
  * \brief The ListUsersInGroupResponse class provides an interace for CognitoIdentityProvider ListUsersInGroup responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ListUsersInGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListUsersInGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ListUsersInGroupResponse::ListUsersInGroupResponse(
         const ListUsersInGroupRequest &request,
@@ -65,6 +60,9 @@ ListUsersInGroupResponse::ListUsersInGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListUsersInGroupRequest * ListUsersInGroupResponse::request() const
 {
     Q_D(const ListUsersInGroupResponse);
@@ -72,9 +70,8 @@ const ListUsersInGroupRequest * ListUsersInGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider ListUsersInGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider ListUsersInGroup \a response.
  */
 void ListUsersInGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void ListUsersInGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::ListUsersInGroupResponsePrivate
+ * \brief The ListUsersInGroupResponsePrivate class provides private implementation for ListUsersInGroupResponse.
  * \internal
  *
- * \class ListUsersInGroupResponsePrivate
- *
- * \brief Private implementation for ListUsersInGroupResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUsersInGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListUsersInGroupResponse instance.
+ * Constructs a ListUsersInGroupResponsePrivate object with public implementation \a q.
  */
 ListUsersInGroupResponsePrivate::ListUsersInGroupResponsePrivate(
     ListUsersInGroupResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ ListUsersInGroupResponsePrivate::ListUsersInGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider ListUsersInGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider ListUsersInGroup response element from \a xml.
  */
 void ListUsersInGroupResponsePrivate::parseListUsersInGroupResponse(QXmlStreamReader &xml)
 {

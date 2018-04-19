@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateAccessKeyResponse
- *
  * \brief The UpdateAccessKeyResponse class provides an interace for IAM UpdateAccessKey responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateAccessKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAccessKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAccessKeyResponse::UpdateAccessKeyResponse(
         const UpdateAccessKeyRequest &request,
@@ -120,6 +115,9 @@ UpdateAccessKeyResponse::UpdateAccessKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAccessKeyRequest * UpdateAccessKeyResponse::request() const
 {
     Q_D(const UpdateAccessKeyResponse);
@@ -127,9 +125,8 @@ const UpdateAccessKeyRequest * UpdateAccessKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM UpdateAccessKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateAccessKey \a response.
  */
 void UpdateAccessKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateAccessKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateAccessKeyResponsePrivate
+ * \brief The UpdateAccessKeyResponsePrivate class provides private implementation for UpdateAccessKeyResponse.
  * \internal
  *
- * \class UpdateAccessKeyResponsePrivate
- *
- * \brief Private implementation for UpdateAccessKeyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAccessKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAccessKeyResponse instance.
+ * Constructs a UpdateAccessKeyResponsePrivate object with public implementation \a q.
  */
 UpdateAccessKeyResponsePrivate::UpdateAccessKeyResponsePrivate(
     UpdateAccessKeyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateAccessKeyResponsePrivate::UpdateAccessKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM UpdateAccessKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateAccessKey response element from \a xml.
  */
 void UpdateAccessKeyResponsePrivate::parseUpdateAccessKeyResponse(QXmlStreamReader &xml)
 {

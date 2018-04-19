@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationStateRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeApplicationStateRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a DescribeApplicationStateRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
     const MigrationHubRequest::Action action, DescribeApplicationStateRequest * const q)

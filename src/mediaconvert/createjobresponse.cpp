@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::CreateJobResponse
- *
  * \brief The CreateJobResponse class provides an interace for MediaConvert CreateJob responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::createJob
  */
 
 /*!
- * @brief  Constructs a new CreateJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateJobResponse::CreateJobResponse(
         const CreateJobRequest &request,
@@ -55,6 +50,9 @@ CreateJobResponse::CreateJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateJobRequest * CreateJobResponse::request() const
 {
     Q_D(const CreateJobResponse);
@@ -62,9 +60,8 @@ const CreateJobRequest * CreateJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert CreateJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert CreateJob \a response.
  */
 void CreateJobResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::CreateJobResponsePrivate
+ * \brief The CreateJobResponsePrivate class provides private implementation for CreateJobResponse.
  * \internal
  *
- * \class CreateJobResponsePrivate
- *
- * \brief Private implementation for CreateJobResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateJobResponse instance.
+ * Constructs a CreateJobResponsePrivate object with public implementation \a q.
  */
 CreateJobResponsePrivate::CreateJobResponsePrivate(
     CreateJobResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateJobResponsePrivate::CreateJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert CreateJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert CreateJob response element from \a xml.
  */
 void CreateJobResponsePrivate::parseCreateJobResponse(QXmlStreamReader &xml)
 {

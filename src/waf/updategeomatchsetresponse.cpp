@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateGeoMatchSetResponse
- *
  * \brief The UpdateGeoMatchSetResponse class provides an interace for WAF UpdateGeoMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateGeoMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateGeoMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateGeoMatchSetResponse::UpdateGeoMatchSetResponse(
         const UpdateGeoMatchSetRequest &request,
@@ -60,6 +55,9 @@ UpdateGeoMatchSetResponse::UpdateGeoMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateGeoMatchSetRequest * UpdateGeoMatchSetResponse::request() const
 {
     Q_D(const UpdateGeoMatchSetResponse);
@@ -67,9 +65,8 @@ const UpdateGeoMatchSetRequest * UpdateGeoMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF UpdateGeoMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF UpdateGeoMatchSet \a response.
  */
 void UpdateGeoMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateGeoMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::UpdateGeoMatchSetResponsePrivate
+ * \brief The UpdateGeoMatchSetResponsePrivate class provides private implementation for UpdateGeoMatchSetResponse.
  * \internal
  *
- * \class UpdateGeoMatchSetResponsePrivate
- *
- * \brief Private implementation for UpdateGeoMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGeoMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateGeoMatchSetResponse instance.
+ * Constructs a UpdateGeoMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateGeoMatchSetResponsePrivate::UpdateGeoMatchSetResponsePrivate(
     UpdateGeoMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateGeoMatchSetResponsePrivate::UpdateGeoMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF UpdateGeoMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF UpdateGeoMatchSet response element from \a xml.
  */
 void UpdateGeoMatchSetResponsePrivate::parseUpdateGeoMatchSetResponse(QXmlStreamReader &xml)
 {

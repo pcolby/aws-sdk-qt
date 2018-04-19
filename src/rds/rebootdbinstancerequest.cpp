@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * RebootDBInstanceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a RebootDBInstanceRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a RebootDBInstanceRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
     const RDSRequest::Action action, RebootDBInstanceRequest * const q)

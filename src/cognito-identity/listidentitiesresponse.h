@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListIdentitiesResponse : public CognitoIdentityResponse {
 public:
     ListIdentitiesResponse(const ListIdentitiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListIdentitiesRequest * request() const;
+    virtual const ListIdentitiesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListIdentitiesResponse)

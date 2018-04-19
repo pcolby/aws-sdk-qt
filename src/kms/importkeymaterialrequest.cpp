@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * ImportKeyMaterialRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ImportKeyMaterialRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a ImportKeyMaterialRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 ImportKeyMaterialRequestPrivate::ImportKeyMaterialRequestPrivate(
     const KMSRequest::Action action, ImportKeyMaterialRequest * const q)

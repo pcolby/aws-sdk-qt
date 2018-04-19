@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ScanProvisionedProductsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ScanProvisionedProductsRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ScanProvisionedProductsRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ScanProvisionedProductsRequestPrivate::ScanProvisionedProductsRequestPrivate(
     const ServiceCatalogRequest::Action action, ScanProvisionedProductsRequest * const q)

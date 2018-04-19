@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteExpressionResponse : public CloudSearchResponse {
 public:
     DeleteExpressionResponse(const DeleteExpressionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteExpressionRequest * request() const;
+    virtual const DeleteExpressionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteExpressionResponse)

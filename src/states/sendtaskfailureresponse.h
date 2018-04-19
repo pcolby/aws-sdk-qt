@@ -34,10 +34,10 @@ class QTAWS_EXPORT SendTaskFailureResponse : public SFNResponse {
 public:
     SendTaskFailureResponse(const SendTaskFailureRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SendTaskFailureRequest * request() const;
+    virtual const SendTaskFailureRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SendTaskFailureResponse)

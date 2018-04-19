@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::StopDBInstanceResponse
- *
  * \brief The StopDBInstanceResponse class provides an interace for RDS StopDBInstance responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new StopDBInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopDBInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 StopDBInstanceResponse::StopDBInstanceResponse(
         const StopDBInstanceRequest &request,
@@ -119,6 +114,9 @@ StopDBInstanceResponse::StopDBInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopDBInstanceRequest * StopDBInstanceResponse::request() const
 {
     Q_D(const StopDBInstanceResponse);
@@ -126,9 +124,8 @@ const StopDBInstanceRequest * StopDBInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS StopDBInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS StopDBInstance \a response.
  */
 void StopDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void StopDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::StopDBInstanceResponsePrivate
+ * \brief The StopDBInstanceResponsePrivate class provides private implementation for StopDBInstanceResponse.
  * \internal
  *
- * \class StopDBInstanceResponsePrivate
- *
- * \brief Private implementation for StopDBInstanceResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopDBInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopDBInstanceResponse instance.
+ * Constructs a StopDBInstanceResponsePrivate object with public implementation \a q.
  */
 StopDBInstanceResponsePrivate::StopDBInstanceResponsePrivate(
     StopDBInstanceResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ StopDBInstanceResponsePrivate::StopDBInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS StopDBInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS StopDBInstance response element from \a xml.
  */
 void StopDBInstanceResponsePrivate::parseStopDBInstanceResponse(QXmlStreamReader &xml)
 {

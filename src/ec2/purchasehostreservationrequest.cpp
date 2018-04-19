@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * PurchaseHostReservationRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a PurchaseHostReservationRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a PurchaseHostReservationRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 PurchaseHostReservationRequestPrivate::PurchaseHostReservationRequestPrivate(
     const EC2Request::Action action, PurchaseHostReservationRequest * const q)

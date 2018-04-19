@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdateDocumentRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDocumentRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
     const SSMRequest::Action action, UpdateDocumentRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetFieldLevelEncryptionConfigResponse : public CloudFrontResp
 public:
     GetFieldLevelEncryptionConfigResponse(const GetFieldLevelEncryptionConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetFieldLevelEncryptionConfigRequest * request() const;
+    virtual const GetFieldLevelEncryptionConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetFieldLevelEncryptionConfigResponse)

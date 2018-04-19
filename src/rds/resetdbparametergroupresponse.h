@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResetDBParameterGroupResponse : public RDSResponse {
 public:
     ResetDBParameterGroupResponse(const ResetDBParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResetDBParameterGroupRequest * request() const;
+    virtual const ResetDBParameterGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResetDBParameterGroupResponse)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeInstanceAttributeResponse
- *
  * \brief The DescribeInstanceAttributeResponse class provides an interace for EC2 DescribeInstanceAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstanceAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeInstanceAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeInstanceAttributeResponse::DescribeInstanceAttributeResponse(
         const DescribeInstanceAttributeRequest &request,
@@ -59,6 +54,9 @@ DescribeInstanceAttributeResponse::DescribeInstanceAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeInstanceAttributeRequest * DescribeInstanceAttributeResponse::request() const
 {
     Q_D(const DescribeInstanceAttributeResponse);
@@ -66,9 +64,8 @@ const DescribeInstanceAttributeRequest * DescribeInstanceAttributeResponse::requ
 }
 
 /*!
- * @brief  Parse a EC2 DescribeInstanceAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeInstanceAttribute \a response.
  */
 void DescribeInstanceAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeInstanceAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeInstanceAttributeResponsePrivate
+ * \brief The DescribeInstanceAttributeResponsePrivate class provides private implementation for DescribeInstanceAttributeResponse.
  * \internal
  *
- * \class DescribeInstanceAttributeResponsePrivate
- *
- * \brief Private implementation for DescribeInstanceAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstanceAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeInstanceAttributeResponse instance.
+ * Constructs a DescribeInstanceAttributeResponsePrivate object with public implementation \a q.
  */
 DescribeInstanceAttributeResponsePrivate::DescribeInstanceAttributeResponsePrivate(
     DescribeInstanceAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeInstanceAttributeResponsePrivate::DescribeInstanceAttributeResponsePriva
 }
 
 /*!
- * @brief  Parse an EC2 DescribeInstanceAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeInstanceAttribute response element from \a xml.
  */
 void DescribeInstanceAttributeResponsePrivate::parseDescribeInstanceAttributeResponse(QXmlStreamReader &xml)
 {

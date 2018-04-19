@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRoleAliasRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteRoleAliasRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRoleAliasRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeleteRoleAliasRequestPrivate::DeleteRoleAliasRequestPrivate(
     const IoTRequest::Action action, DeleteRoleAliasRequest * const q)

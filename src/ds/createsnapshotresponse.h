@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateSnapshotResponse : public DirectoryServiceResponse {
 public:
     CreateSnapshotResponse(const CreateSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateSnapshotRequest * request() const;
+    virtual const CreateSnapshotRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateSnapshotResponse)

@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListCACertificatesResponse
- *
  * \brief The ListCACertificatesResponse class provides an interace for IoT ListCACertificates responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListCACertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCACertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCACertificatesResponse::ListCACertificatesResponse(
         const ListCACertificatesRequest &request,
@@ -66,6 +61,9 @@ ListCACertificatesResponse::ListCACertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCACertificatesRequest * ListCACertificatesResponse::request() const
 {
     Q_D(const ListCACertificatesResponse);
@@ -73,9 +71,8 @@ const ListCACertificatesRequest * ListCACertificatesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListCACertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListCACertificates \a response.
  */
 void ListCACertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListCACertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListCACertificatesResponsePrivate
+ * \brief The ListCACertificatesResponsePrivate class provides private implementation for ListCACertificatesResponse.
  * \internal
  *
- * \class ListCACertificatesResponsePrivate
- *
- * \brief Private implementation for ListCACertificatesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCACertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCACertificatesResponse instance.
+ * Constructs a ListCACertificatesResponsePrivate object with public implementation \a q.
  */
 ListCACertificatesResponsePrivate::ListCACertificatesResponsePrivate(
     ListCACertificatesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListCACertificatesResponsePrivate::ListCACertificatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListCACertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListCACertificates response element from \a xml.
  */
 void ListCACertificatesResponsePrivate::parseListCACertificatesResponse(QXmlStreamReader &xml)
 {

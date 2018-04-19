@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateGroupResponse
- *
  * \brief The UpdateGroupResponse class provides an interace for Greengrass UpdateGroup responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateGroupResponse::UpdateGroupResponse(
         const UpdateGroupRequest &request,
@@ -58,6 +53,9 @@ UpdateGroupResponse::UpdateGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateGroupRequest * UpdateGroupResponse::request() const
 {
     Q_D(const UpdateGroupResponse);
@@ -65,9 +63,8 @@ const UpdateGroupRequest * UpdateGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass UpdateGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass UpdateGroup \a response.
  */
 void UpdateGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::UpdateGroupResponsePrivate
+ * \brief The UpdateGroupResponsePrivate class provides private implementation for UpdateGroupResponse.
  * \internal
  *
- * \class UpdateGroupResponsePrivate
- *
- * \brief Private implementation for UpdateGroupResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateGroupResponse instance.
+ * Constructs a UpdateGroupResponsePrivate object with public implementation \a q.
  */
 UpdateGroupResponsePrivate::UpdateGroupResponsePrivate(
     UpdateGroupResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateGroupResponsePrivate::UpdateGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass UpdateGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass UpdateGroup response element from \a xml.
  */
 void UpdateGroupResponsePrivate::parseUpdateGroupResponse(QXmlStreamReader &xml)
 {

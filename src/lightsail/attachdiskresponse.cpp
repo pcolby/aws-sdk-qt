@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::AttachDiskResponse
- *
  * \brief The AttachDiskResponse class provides an interace for Lightsail AttachDisk responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new AttachDiskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachDiskResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachDiskResponse::AttachDiskResponse(
         const AttachDiskRequest &request,
@@ -71,6 +66,9 @@ AttachDiskResponse::AttachDiskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachDiskRequest * AttachDiskResponse::request() const
 {
     Q_D(const AttachDiskResponse);
@@ -78,9 +76,8 @@ const AttachDiskRequest * AttachDiskResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail AttachDisk response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail AttachDisk \a response.
  */
 void AttachDiskResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void AttachDiskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::AttachDiskResponsePrivate
+ * \brief The AttachDiskResponsePrivate class provides private implementation for AttachDiskResponse.
  * \internal
  *
- * \class AttachDiskResponsePrivate
- *
- * \brief Private implementation for AttachDiskResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachDiskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachDiskResponse instance.
+ * Constructs a AttachDiskResponsePrivate object with public implementation \a q.
  */
 AttachDiskResponsePrivate::AttachDiskResponsePrivate(
     AttachDiskResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ AttachDiskResponsePrivate::AttachDiskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail AttachDiskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail AttachDisk response element from \a xml.
  */
 void AttachDiskResponsePrivate::parseAttachDiskResponse(QXmlStreamReader &xml)
 {

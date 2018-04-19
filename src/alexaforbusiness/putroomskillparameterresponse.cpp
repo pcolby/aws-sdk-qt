@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::PutRoomSkillParameterResponse
- *
  * \brief The PutRoomSkillParameterResponse class provides an interace for AlexaForBusiness PutRoomSkillParameter responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new PutRoomSkillParameterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutRoomSkillParameterResponse object for \a reply to \a request, with parent \a parent.
  */
 PutRoomSkillParameterResponse::PutRoomSkillParameterResponse(
         const PutRoomSkillParameterRequest &request,
@@ -60,6 +55,9 @@ PutRoomSkillParameterResponse::PutRoomSkillParameterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutRoomSkillParameterRequest * PutRoomSkillParameterResponse::request() const
 {
     Q_D(const PutRoomSkillParameterResponse);
@@ -67,9 +65,8 @@ const PutRoomSkillParameterRequest * PutRoomSkillParameterResponse::request() co
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness PutRoomSkillParameter response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness PutRoomSkillParameter \a response.
  */
 void PutRoomSkillParameterResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void PutRoomSkillParameterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::PutRoomSkillParameterResponsePrivate
+ * \brief The PutRoomSkillParameterResponsePrivate class provides private implementation for PutRoomSkillParameterResponse.
  * \internal
  *
- * \class PutRoomSkillParameterResponsePrivate
- *
- * \brief Private implementation for PutRoomSkillParameterResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRoomSkillParameterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutRoomSkillParameterResponse instance.
+ * Constructs a PutRoomSkillParameterResponsePrivate object with public implementation \a q.
  */
 PutRoomSkillParameterResponsePrivate::PutRoomSkillParameterResponsePrivate(
     PutRoomSkillParameterResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ PutRoomSkillParameterResponsePrivate::PutRoomSkillParameterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness PutRoomSkillParameterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness PutRoomSkillParameter response element from \a xml.
  */
 void PutRoomSkillParameterResponsePrivate::parsePutRoomSkillParameterResponse(QXmlStreamReader &xml)
 {

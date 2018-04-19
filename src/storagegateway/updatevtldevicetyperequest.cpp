@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * UpdateVTLDeviceTypeRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a UpdateVTLDeviceTypeRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateVTLDeviceTypeRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 UpdateVTLDeviceTypeRequestPrivate::UpdateVTLDeviceTypeRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateVTLDeviceTypeRequest * const q)

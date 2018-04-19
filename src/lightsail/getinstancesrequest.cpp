@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetInstancesRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetInstancesRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetInstancesRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetInstancesRequestPrivate::GetInstancesRequestPrivate(
     const LightsailRequest::Action action, GetInstancesRequest * const q)

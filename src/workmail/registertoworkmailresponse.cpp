@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::RegisterToWorkMailResponse
- *
  * \brief The RegisterToWorkMailResponse class provides an interace for WorkMail RegisterToWorkMail responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new RegisterToWorkMailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterToWorkMailResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterToWorkMailResponse::RegisterToWorkMailResponse(
         const RegisterToWorkMailRequest &request,
@@ -88,6 +83,9 @@ RegisterToWorkMailResponse::RegisterToWorkMailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterToWorkMailRequest * RegisterToWorkMailResponse::request() const
 {
     Q_D(const RegisterToWorkMailResponse);
@@ -95,9 +93,8 @@ const RegisterToWorkMailRequest * RegisterToWorkMailResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail RegisterToWorkMail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail RegisterToWorkMail \a response.
  */
 void RegisterToWorkMailResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void RegisterToWorkMailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::RegisterToWorkMailResponsePrivate
+ * \brief The RegisterToWorkMailResponsePrivate class provides private implementation for RegisterToWorkMailResponse.
  * \internal
  *
- * \class RegisterToWorkMailResponsePrivate
- *
- * \brief Private implementation for RegisterToWorkMailResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterToWorkMailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterToWorkMailResponse instance.
+ * Constructs a RegisterToWorkMailResponsePrivate object with public implementation \a q.
  */
 RegisterToWorkMailResponsePrivate::RegisterToWorkMailResponsePrivate(
     RegisterToWorkMailResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ RegisterToWorkMailResponsePrivate::RegisterToWorkMailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail RegisterToWorkMailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail RegisterToWorkMail response element from \a xml.
  */
 void RegisterToWorkMailResponsePrivate::parseRegisterToWorkMailResponse(QXmlStreamReader &xml)
 {

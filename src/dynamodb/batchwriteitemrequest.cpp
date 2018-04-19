@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * BatchWriteItemRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a BatchWriteItemRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a BatchWriteItemRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 BatchWriteItemRequestPrivate::BatchWriteItemRequestPrivate(
     const DynamoDBRequest::Action action, BatchWriteItemRequest * const q)

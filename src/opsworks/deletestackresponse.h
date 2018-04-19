@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteStackResponse : public OpsWorksResponse {
 public:
     DeleteStackResponse(const DeleteStackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteStackRequest * request() const;
+    virtual const DeleteStackRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteStackResponse)

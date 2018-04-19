@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * CountClosedWorkflowExecutionsRequest::respons
  */
 
 /*!
- *
- * Constructs a CountClosedWorkflowExecutionsRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a CountClosedWorkflowExecutionsRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 CountClosedWorkflowExecutionsRequestPrivate::CountClosedWorkflowExecutionsRequestPrivate(
     const SWFRequest::Action action, CountClosedWorkflowExecutionsRequest * const q)

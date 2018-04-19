@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListDistributionsByWebACLIdRequest::response(
  */
 
 /*!
- *
- * Constructs a ListDistributionsByWebACLIdRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a ListDistributionsByWebACLIdRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 ListDistributionsByWebACLIdRequestPrivate::ListDistributionsByWebACLIdRequestPrivate(
     const CloudFrontRequest::Action action, ListDistributionsByWebACLIdRequest * const q)

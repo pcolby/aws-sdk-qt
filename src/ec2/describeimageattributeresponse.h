@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeImageAttributeResponse : public EC2Response {
 public:
     DescribeImageAttributeResponse(const DescribeImageAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeImageAttributeRequest * request() const;
+    virtual const DescribeImageAttributeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeImageAttributeResponse)

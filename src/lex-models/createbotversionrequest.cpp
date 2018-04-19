@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateBotVersionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateBotVersionRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a CreateBotVersionRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 CreateBotVersionRequestPrivate::CreateBotVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, CreateBotVersionRequest * const q)

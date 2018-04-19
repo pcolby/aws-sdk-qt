@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::CreatePresetResponse
- *
  * \brief The CreatePresetResponse class provides an interace for MediaConvert CreatePreset responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::createPreset
  */
 
 /*!
- * @brief  Constructs a new CreatePresetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePresetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePresetResponse::CreatePresetResponse(
         const CreatePresetRequest &request,
@@ -55,6 +50,9 @@ CreatePresetResponse::CreatePresetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePresetRequest * CreatePresetResponse::request() const
 {
     Q_D(const CreatePresetResponse);
@@ -62,9 +60,8 @@ const CreatePresetRequest * CreatePresetResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert CreatePreset response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert CreatePreset \a response.
  */
 void CreatePresetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreatePresetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::CreatePresetResponsePrivate
+ * \brief The CreatePresetResponsePrivate class provides private implementation for CreatePresetResponse.
  * \internal
  *
- * \class CreatePresetResponsePrivate
- *
- * \brief Private implementation for CreatePresetResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePresetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePresetResponse instance.
+ * Constructs a CreatePresetResponsePrivate object with public implementation \a q.
  */
 CreatePresetResponsePrivate::CreatePresetResponsePrivate(
     CreatePresetResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ CreatePresetResponsePrivate::CreatePresetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert CreatePresetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert CreatePreset response element from \a xml.
  */
 void CreatePresetResponsePrivate::parseCreatePresetResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateAccountResponse
- *
  * \brief The UpdateAccountResponse class provides an interace for APIGateway UpdateAccount responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAccountResponse::UpdateAccountResponse(
         const UpdateAccountRequest &request,
@@ -60,6 +55,9 @@ UpdateAccountResponse::UpdateAccountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAccountRequest * UpdateAccountResponse::request() const
 {
     Q_D(const UpdateAccountResponse);
@@ -67,9 +65,8 @@ const UpdateAccountRequest * UpdateAccountResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateAccount \a response.
  */
 void UpdateAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateAccountResponsePrivate
+ * \brief The UpdateAccountResponsePrivate class provides private implementation for UpdateAccountResponse.
  * \internal
  *
- * \class UpdateAccountResponsePrivate
- *
- * \brief Private implementation for UpdateAccountResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAccountResponse instance.
+ * Constructs a UpdateAccountResponsePrivate object with public implementation \a q.
  */
 UpdateAccountResponsePrivate::UpdateAccountResponsePrivate(
     UpdateAccountResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateAccountResponsePrivate::UpdateAccountResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateAccount response element from \a xml.
  */
 void UpdateAccountResponsePrivate::parseUpdateAccountResponse(QXmlStreamReader &xml)
 {

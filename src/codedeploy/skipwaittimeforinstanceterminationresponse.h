@@ -34,10 +34,10 @@ class QTAWS_EXPORT SkipWaitTimeForInstanceTerminationResponse : public CodeDeplo
 public:
     SkipWaitTimeForInstanceTerminationResponse(const SkipWaitTimeForInstanceTerminationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SkipWaitTimeForInstanceTerminationRequest * request() const;
+    virtual const SkipWaitTimeForInstanceTerminationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SkipWaitTimeForInstanceTerminationResponse)

@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::AuthorizeSnapshotAccessResponse
- *
  * \brief The AuthorizeSnapshotAccessResponse class provides an interace for Redshift AuthorizeSnapshotAccess responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new AuthorizeSnapshotAccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AuthorizeSnapshotAccessResponse object for \a reply to \a request, with parent \a parent.
  */
 AuthorizeSnapshotAccessResponse::AuthorizeSnapshotAccessResponse(
         const AuthorizeSnapshotAccessRequest &request,
@@ -85,6 +80,9 @@ AuthorizeSnapshotAccessResponse::AuthorizeSnapshotAccessResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AuthorizeSnapshotAccessRequest * AuthorizeSnapshotAccessResponse::request() const
 {
     Q_D(const AuthorizeSnapshotAccessResponse);
@@ -92,9 +90,8 @@ const AuthorizeSnapshotAccessRequest * AuthorizeSnapshotAccessResponse::request(
 }
 
 /*!
- * @brief  Parse a Redshift AuthorizeSnapshotAccess response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift AuthorizeSnapshotAccess \a response.
  */
 void AuthorizeSnapshotAccessResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void AuthorizeSnapshotAccessResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::AuthorizeSnapshotAccessResponsePrivate
+ * \brief The AuthorizeSnapshotAccessResponsePrivate class provides private implementation for AuthorizeSnapshotAccessResponse.
  * \internal
  *
- * \class AuthorizeSnapshotAccessResponsePrivate
- *
- * \brief Private implementation for AuthorizeSnapshotAccessResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AuthorizeSnapshotAccessResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AuthorizeSnapshotAccessResponse instance.
+ * Constructs a AuthorizeSnapshotAccessResponsePrivate object with public implementation \a q.
  */
 AuthorizeSnapshotAccessResponsePrivate::AuthorizeSnapshotAccessResponsePrivate(
     AuthorizeSnapshotAccessResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ AuthorizeSnapshotAccessResponsePrivate::AuthorizeSnapshotAccessResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift AuthorizeSnapshotAccessResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift AuthorizeSnapshotAccess response element from \a xml.
  */
 void AuthorizeSnapshotAccessResponsePrivate::parseAuthorizeSnapshotAccessResponse(QXmlStreamReader &xml)
 {

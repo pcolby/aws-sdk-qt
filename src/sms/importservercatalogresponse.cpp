@@ -29,21 +29,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::ImportServerCatalogResponse
- *
  * \brief The ImportServerCatalogResponse class provides an interace for SMS ImportServerCatalog responses.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::importServerCatalog
  */
 
 /*!
- * @brief  Constructs a new ImportServerCatalogResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportServerCatalogResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportServerCatalogResponse::ImportServerCatalogResponse(
         const ImportServerCatalogRequest &request,
@@ -55,6 +50,9 @@ ImportServerCatalogResponse::ImportServerCatalogResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportServerCatalogRequest * ImportServerCatalogResponse::request() const
 {
     Q_D(const ImportServerCatalogResponse);
@@ -62,9 +60,8 @@ const ImportServerCatalogRequest * ImportServerCatalogResponse::request() const
 }
 
 /*!
- * @brief  Parse a SMS ImportServerCatalog response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SMS ImportServerCatalog \a response.
  */
 void ImportServerCatalogResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ImportServerCatalogResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SMS::ImportServerCatalogResponsePrivate
+ * \brief The ImportServerCatalogResponsePrivate class provides private implementation for ImportServerCatalogResponse.
  * \internal
  *
- * \class ImportServerCatalogResponsePrivate
- *
- * \brief Private implementation for ImportServerCatalogResponse.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportServerCatalogResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportServerCatalogResponse instance.
+ * Constructs a ImportServerCatalogResponsePrivate object with public implementation \a q.
  */
 ImportServerCatalogResponsePrivate::ImportServerCatalogResponsePrivate(
     ImportServerCatalogResponse * const q) : SMSResponsePrivate(q)
@@ -95,9 +88,7 @@ ImportServerCatalogResponsePrivate::ImportServerCatalogResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SMS ImportServerCatalogResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SMS ImportServerCatalog response element from \a xml.
  */
 void ImportServerCatalogResponsePrivate::parseImportServerCatalogResponse(QXmlStreamReader &xml)
 {

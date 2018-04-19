@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DisableTopicRuleResponse
- *
  * \brief The DisableTopicRuleResponse class provides an interace for IoT DisableTopicRule responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DisableTopicRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableTopicRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableTopicRuleResponse::DisableTopicRuleResponse(
         const DisableTopicRuleRequest &request,
@@ -66,6 +61,9 @@ DisableTopicRuleResponse::DisableTopicRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableTopicRuleRequest * DisableTopicRuleResponse::request() const
 {
     Q_D(const DisableTopicRuleResponse);
@@ -73,9 +71,8 @@ const DisableTopicRuleRequest * DisableTopicRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DisableTopicRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DisableTopicRule \a response.
  */
 void DisableTopicRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DisableTopicRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DisableTopicRuleResponsePrivate
+ * \brief The DisableTopicRuleResponsePrivate class provides private implementation for DisableTopicRuleResponse.
  * \internal
  *
- * \class DisableTopicRuleResponsePrivate
- *
- * \brief Private implementation for DisableTopicRuleResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableTopicRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableTopicRuleResponse instance.
+ * Constructs a DisableTopicRuleResponsePrivate object with public implementation \a q.
  */
 DisableTopicRuleResponsePrivate::DisableTopicRuleResponsePrivate(
     DisableTopicRuleResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DisableTopicRuleResponsePrivate::DisableTopicRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DisableTopicRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DisableTopicRule response element from \a xml.
  */
 void DisableTopicRuleResponsePrivate::parseDisableTopicRuleResponse(QXmlStreamReader &xml)
 {

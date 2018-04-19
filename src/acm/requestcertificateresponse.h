@@ -34,10 +34,10 @@ class QTAWS_EXPORT RequestCertificateResponse : public ACMResponse {
 public:
     RequestCertificateResponse(const RequestCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RequestCertificateRequest * request() const;
+    virtual const RequestCertificateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RequestCertificateResponse)

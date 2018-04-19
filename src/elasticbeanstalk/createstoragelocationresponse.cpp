@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::CreateStorageLocationResponse
- *
  * \brief The CreateStorageLocationResponse class provides an interace for ElasticBeanstalk CreateStorageLocation responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new CreateStorageLocationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStorageLocationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStorageLocationResponse::CreateStorageLocationResponse(
         const CreateStorageLocationRequest &request,
@@ -77,6 +72,9 @@ CreateStorageLocationResponse::CreateStorageLocationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStorageLocationRequest * CreateStorageLocationResponse::request() const
 {
     Q_D(const CreateStorageLocationResponse);
@@ -84,9 +82,8 @@ const CreateStorageLocationRequest * CreateStorageLocationResponse::request() co
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk CreateStorageLocation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk CreateStorageLocation \a response.
  */
 void CreateStorageLocationResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void CreateStorageLocationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::CreateStorageLocationResponsePrivate
+ * \brief The CreateStorageLocationResponsePrivate class provides private implementation for CreateStorageLocationResponse.
  * \internal
  *
- * \class CreateStorageLocationResponsePrivate
- *
- * \brief Private implementation for CreateStorageLocationResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStorageLocationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStorageLocationResponse instance.
+ * Constructs a CreateStorageLocationResponsePrivate object with public implementation \a q.
  */
 CreateStorageLocationResponsePrivate::CreateStorageLocationResponsePrivate(
     CreateStorageLocationResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ CreateStorageLocationResponsePrivate::CreateStorageLocationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk CreateStorageLocationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk CreateStorageLocation response element from \a xml.
  */
 void CreateStorageLocationResponsePrivate::parseCreateStorageLocationResponse(QXmlStreamReader &xml)
 {

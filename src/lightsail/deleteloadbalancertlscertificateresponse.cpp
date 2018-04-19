@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DeleteLoadBalancerTlsCertificateResponse
- *
  * \brief The DeleteLoadBalancerTlsCertificateResponse class provides an interace for Lightsail DeleteLoadBalancerTlsCertificate responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerTlsCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLoadBalancerTlsCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLoadBalancerTlsCertificateResponse::DeleteLoadBalancerTlsCertificateResponse(
         const DeleteLoadBalancerTlsCertificateRequest &request,
@@ -71,6 +66,9 @@ DeleteLoadBalancerTlsCertificateResponse::DeleteLoadBalancerTlsCertificateRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLoadBalancerTlsCertificateRequest * DeleteLoadBalancerTlsCertificateResponse::request() const
 {
     Q_D(const DeleteLoadBalancerTlsCertificateResponse);
@@ -78,9 +76,8 @@ const DeleteLoadBalancerTlsCertificateRequest * DeleteLoadBalancerTlsCertificate
 }
 
 /*!
- * @brief  Parse a Lightsail DeleteLoadBalancerTlsCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail DeleteLoadBalancerTlsCertificate \a response.
  */
 void DeleteLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DeleteLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::DeleteLoadBalancerTlsCertificateResponsePrivate
+ * \brief The DeleteLoadBalancerTlsCertificateResponsePrivate class provides private implementation for DeleteLoadBalancerTlsCertificateResponse.
  * \internal
  *
- * \class DeleteLoadBalancerTlsCertificateResponsePrivate
- *
- * \brief Private implementation for DeleteLoadBalancerTlsCertificateResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoadBalancerTlsCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLoadBalancerTlsCertificateResponse instance.
+ * Constructs a DeleteLoadBalancerTlsCertificateResponsePrivate object with public implementation \a q.
  */
 DeleteLoadBalancerTlsCertificateResponsePrivate::DeleteLoadBalancerTlsCertificateResponsePrivate(
     DeleteLoadBalancerTlsCertificateResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ DeleteLoadBalancerTlsCertificateResponsePrivate::DeleteLoadBalancerTlsCertificat
 }
 
 /*!
- * @brief  Parse an Lightsail DeleteLoadBalancerTlsCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail DeleteLoadBalancerTlsCertificate response element from \a xml.
  */
 void DeleteLoadBalancerTlsCertificateResponsePrivate::parseDeleteLoadBalancerTlsCertificateResponse(QXmlStreamReader &xml)
 {

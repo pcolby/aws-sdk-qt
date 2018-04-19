@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeletePublicKeyRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeletePublicKeyRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a DeletePublicKeyRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 DeletePublicKeyRequestPrivate::DeletePublicKeyRequestPrivate(
     const CloudFrontRequest::Action action, DeletePublicKeyRequest * const q)

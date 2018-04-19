@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyNetworkInterfaceAttributeResponse : public EC2Response 
 public:
     ModifyNetworkInterfaceAttributeResponse(const ModifyNetworkInterfaceAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyNetworkInterfaceAttributeRequest * request() const;
+    virtual const ModifyNetworkInterfaceAttributeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyNetworkInterfaceAttributeResponse)

@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListReviewPolicyResultsForHITResponse
- *
  * \brief The ListReviewPolicyResultsForHITResponse class provides an interace for MTurk ListReviewPolicyResultsForHIT responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listReviewPolicyResultsForHIT
  */
 
 /*!
- * @brief  Constructs a new ListReviewPolicyResultsForHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListReviewPolicyResultsForHITResponse object for \a reply to \a request, with parent \a parent.
  */
 ListReviewPolicyResultsForHITResponse::ListReviewPolicyResultsForHITResponse(
         const ListReviewPolicyResultsForHITRequest &request,
@@ -55,6 +50,9 @@ ListReviewPolicyResultsForHITResponse::ListReviewPolicyResultsForHITResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListReviewPolicyResultsForHITRequest * ListReviewPolicyResultsForHITResponse::request() const
 {
     Q_D(const ListReviewPolicyResultsForHITResponse);
@@ -62,9 +60,8 @@ const ListReviewPolicyResultsForHITRequest * ListReviewPolicyResultsForHITRespon
 }
 
 /*!
- * @brief  Parse a MTurk ListReviewPolicyResultsForHIT response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk ListReviewPolicyResultsForHIT \a response.
  */
 void ListReviewPolicyResultsForHITResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListReviewPolicyResultsForHITResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::ListReviewPolicyResultsForHITResponsePrivate
+ * \brief The ListReviewPolicyResultsForHITResponsePrivate class provides private implementation for ListReviewPolicyResultsForHITResponse.
  * \internal
  *
- * \class ListReviewPolicyResultsForHITResponsePrivate
- *
- * \brief Private implementation for ListReviewPolicyResultsForHITResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListReviewPolicyResultsForHITResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListReviewPolicyResultsForHITResponse instance.
+ * Constructs a ListReviewPolicyResultsForHITResponsePrivate object with public implementation \a q.
  */
 ListReviewPolicyResultsForHITResponsePrivate::ListReviewPolicyResultsForHITResponsePrivate(
     ListReviewPolicyResultsForHITResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ ListReviewPolicyResultsForHITResponsePrivate::ListReviewPolicyResultsForHITRespo
 }
 
 /*!
- * @brief  Parse an MTurk ListReviewPolicyResultsForHITResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk ListReviewPolicyResultsForHIT response element from \a xml.
  */
 void ListReviewPolicyResultsForHITResponsePrivate::parseListReviewPolicyResultsForHITResponse(QXmlStreamReader &xml)
 {

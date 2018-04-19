@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeCacheSubnetGroupsResponse
- *
  * \brief The DescribeCacheSubnetGroupsResponse class provides an interace for ElastiCache DescribeCacheSubnetGroups responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeCacheSubnetGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCacheSubnetGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCacheSubnetGroupsResponse::DescribeCacheSubnetGroupsResponse(
         const DescribeCacheSubnetGroupsRequest &request,
@@ -69,6 +64,9 @@ DescribeCacheSubnetGroupsResponse::DescribeCacheSubnetGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCacheSubnetGroupsRequest * DescribeCacheSubnetGroupsResponse::request() const
 {
     Q_D(const DescribeCacheSubnetGroupsResponse);
@@ -76,9 +74,8 @@ const DescribeCacheSubnetGroupsRequest * DescribeCacheSubnetGroupsResponse::requ
 }
 
 /*!
- * @brief  Parse a ElastiCache DescribeCacheSubnetGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DescribeCacheSubnetGroups \a response.
  */
 void DescribeCacheSubnetGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeCacheSubnetGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::DescribeCacheSubnetGroupsResponsePrivate
+ * \brief The DescribeCacheSubnetGroupsResponsePrivate class provides private implementation for DescribeCacheSubnetGroupsResponse.
  * \internal
  *
- * \class DescribeCacheSubnetGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeCacheSubnetGroupsResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCacheSubnetGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCacheSubnetGroupsResponse instance.
+ * Constructs a DescribeCacheSubnetGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeCacheSubnetGroupsResponsePrivate::DescribeCacheSubnetGroupsResponsePrivate(
     DescribeCacheSubnetGroupsResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeCacheSubnetGroupsResponsePrivate::DescribeCacheSubnetGroupsResponsePriva
 }
 
 /*!
- * @brief  Parse an ElastiCache DescribeCacheSubnetGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DescribeCacheSubnetGroups response element from \a xml.
  */
 void DescribeCacheSubnetGroupsResponsePrivate::parseDescribeCacheSubnetGroupsResponse(QXmlStreamReader &xml)
 {

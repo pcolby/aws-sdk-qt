@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListReceiptFiltersResponse : public SESResponse {
 public:
     ListReceiptFiltersResponse(const ListReceiptFiltersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListReceiptFiltersRequest * request() const;
+    virtual const ListReceiptFiltersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListReceiptFiltersResponse)

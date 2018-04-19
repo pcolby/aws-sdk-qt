@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::SendMessageBatchResponse
- *
  * \brief The SendMessageBatchResponse class provides an interace for SQS SendMessageBatch responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new SendMessageBatchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendMessageBatchResponse object for \a reply to \a request, with parent \a parent.
  */
 SendMessageBatchResponse::SendMessageBatchResponse(
         const SendMessageBatchRequest &request,
@@ -121,6 +116,9 @@ SendMessageBatchResponse::SendMessageBatchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendMessageBatchRequest * SendMessageBatchResponse::request() const
 {
     Q_D(const SendMessageBatchResponse);
@@ -128,9 +126,8 @@ const SendMessageBatchRequest * SendMessageBatchResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS SendMessageBatch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS SendMessageBatch \a response.
  */
 void SendMessageBatchResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void SendMessageBatchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::SendMessageBatchResponsePrivate
+ * \brief The SendMessageBatchResponsePrivate class provides private implementation for SendMessageBatchResponse.
  * \internal
  *
- * \class SendMessageBatchResponsePrivate
- *
- * \brief Private implementation for SendMessageBatchResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendMessageBatchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendMessageBatchResponse instance.
+ * Constructs a SendMessageBatchResponsePrivate object with public implementation \a q.
  */
 SendMessageBatchResponsePrivate::SendMessageBatchResponsePrivate(
     SendMessageBatchResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ SendMessageBatchResponsePrivate::SendMessageBatchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS SendMessageBatchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS SendMessageBatch response element from \a xml.
  */
 void SendMessageBatchResponsePrivate::parseSendMessageBatchResponse(QXmlStreamReader &xml)
 {

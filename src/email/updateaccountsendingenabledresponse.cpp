@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::UpdateAccountSendingEnabledResponse
- *
  * \brief The UpdateAccountSendingEnabledResponse class provides an interace for SES UpdateAccountSendingEnabled responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new UpdateAccountSendingEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAccountSendingEnabledResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAccountSendingEnabledResponse::UpdateAccountSendingEnabledResponse(
         const UpdateAccountSendingEnabledRequest &request,
@@ -66,6 +61,9 @@ UpdateAccountSendingEnabledResponse::UpdateAccountSendingEnabledResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAccountSendingEnabledRequest * UpdateAccountSendingEnabledResponse::request() const
 {
     Q_D(const UpdateAccountSendingEnabledResponse);
@@ -73,9 +71,8 @@ const UpdateAccountSendingEnabledRequest * UpdateAccountSendingEnabledResponse::
 }
 
 /*!
- * @brief  Parse a SES UpdateAccountSendingEnabled response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES UpdateAccountSendingEnabled \a response.
  */
 void UpdateAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::UpdateAccountSendingEnabledResponsePrivate
+ * \brief The UpdateAccountSendingEnabledResponsePrivate class provides private implementation for UpdateAccountSendingEnabledResponse.
  * \internal
  *
- * \class UpdateAccountSendingEnabledResponsePrivate
- *
- * \brief Private implementation for UpdateAccountSendingEnabledResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAccountSendingEnabledResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAccountSendingEnabledResponse instance.
+ * Constructs a UpdateAccountSendingEnabledResponsePrivate object with public implementation \a q.
  */
 UpdateAccountSendingEnabledResponsePrivate::UpdateAccountSendingEnabledResponsePrivate(
     UpdateAccountSendingEnabledResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateAccountSendingEnabledResponsePrivate::UpdateAccountSendingEnabledResponseP
 }
 
 /*!
- * @brief  Parse an SES UpdateAccountSendingEnabledResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES UpdateAccountSendingEnabled response element from \a xml.
  */
 void UpdateAccountSendingEnabledResponsePrivate::parseUpdateAccountSendingEnabledResponse(QXmlStreamReader &xml)
 {

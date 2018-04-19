@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcAttributeRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ModifyVpcAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyVpcAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyVpcAttributeRequestPrivate::ModifyVpcAttributeRequestPrivate(
     const EC2Request::Action action, ModifyVpcAttributeRequest * const q)

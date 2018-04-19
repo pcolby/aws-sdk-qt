@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeRuntimeConfigurationResponse
- *
  * \brief The DescribeRuntimeConfigurationResponse class provides an interace for GameLift DescribeRuntimeConfiguration responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeRuntimeConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRuntimeConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRuntimeConfigurationResponse::DescribeRuntimeConfigurationResponse(
         const DescribeRuntimeConfigurationRequest &request,
@@ -491,6 +486,9 @@ DescribeRuntimeConfigurationResponse::DescribeRuntimeConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRuntimeConfigurationRequest * DescribeRuntimeConfigurationResponse::request() const
 {
     Q_D(const DescribeRuntimeConfigurationResponse);
@@ -498,9 +496,8 @@ const DescribeRuntimeConfigurationRequest * DescribeRuntimeConfigurationResponse
 }
 
 /*!
- * @brief  Parse a GameLift DescribeRuntimeConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DescribeRuntimeConfiguration \a response.
  */
 void DescribeRuntimeConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DescribeRuntimeConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DescribeRuntimeConfigurationResponsePrivate
+ * \brief The DescribeRuntimeConfigurationResponsePrivate class provides private implementation for DescribeRuntimeConfigurationResponse.
  * \internal
  *
- * \class DescribeRuntimeConfigurationResponsePrivate
- *
- * \brief Private implementation for DescribeRuntimeConfigurationResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRuntimeConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRuntimeConfigurationResponse instance.
+ * Constructs a DescribeRuntimeConfigurationResponsePrivate object with public implementation \a q.
  */
 DescribeRuntimeConfigurationResponsePrivate::DescribeRuntimeConfigurationResponsePrivate(
     DescribeRuntimeConfigurationResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DescribeRuntimeConfigurationResponsePrivate::DescribeRuntimeConfigurationRespons
 }
 
 /*!
- * @brief  Parse an GameLift DescribeRuntimeConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DescribeRuntimeConfiguration response element from \a xml.
  */
 void DescribeRuntimeConfigurationResponsePrivate::parseDescribeRuntimeConfigurationResponse(QXmlStreamReader &xml)
 {

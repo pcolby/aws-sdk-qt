@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateMyUserProfileResponse
- *
  * \brief The UpdateMyUserProfileResponse class provides an interace for OpsWorks UpdateMyUserProfile responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateMyUserProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateMyUserProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateMyUserProfileResponse::UpdateMyUserProfileResponse(
         const UpdateMyUserProfileRequest &request,
@@ -161,6 +156,9 @@ UpdateMyUserProfileResponse::UpdateMyUserProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateMyUserProfileRequest * UpdateMyUserProfileResponse::request() const
 {
     Q_D(const UpdateMyUserProfileResponse);
@@ -168,9 +166,8 @@ const UpdateMyUserProfileRequest * UpdateMyUserProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks UpdateMyUserProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks UpdateMyUserProfile \a response.
  */
 void UpdateMyUserProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void UpdateMyUserProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::UpdateMyUserProfileResponsePrivate
+ * \brief The UpdateMyUserProfileResponsePrivate class provides private implementation for UpdateMyUserProfileResponse.
  * \internal
  *
- * \class UpdateMyUserProfileResponsePrivate
- *
- * \brief Private implementation for UpdateMyUserProfileResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateMyUserProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateMyUserProfileResponse instance.
+ * Constructs a UpdateMyUserProfileResponsePrivate object with public implementation \a q.
  */
 UpdateMyUserProfileResponsePrivate::UpdateMyUserProfileResponsePrivate(
     UpdateMyUserProfileResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ UpdateMyUserProfileResponsePrivate::UpdateMyUserProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks UpdateMyUserProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks UpdateMyUserProfile response element from \a xml.
  */
 void UpdateMyUserProfileResponsePrivate::parseUpdateMyUserProfileResponse(QXmlStreamReader &xml)
 {

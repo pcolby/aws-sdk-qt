@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchTemplateVersionsRequest::respon
  */
 
 /*!
- *
- * Constructs a DescribeLaunchTemplateVersionsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeLaunchTemplateVersionsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeLaunchTemplateVersionsRequestPrivate::DescribeLaunchTemplateVersionsRequestPrivate(
     const EC2Request::Action action, DescribeLaunchTemplateVersionsRequest * const q)

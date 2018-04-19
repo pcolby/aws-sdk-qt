@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::EnableMFADeviceResponse
- *
  * \brief The EnableMFADeviceResponse class provides an interace for IAM EnableMFADevice responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new EnableMFADeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableMFADeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableMFADeviceResponse::EnableMFADeviceResponse(
         const EnableMFADeviceRequest &request,
@@ -120,6 +115,9 @@ EnableMFADeviceResponse::EnableMFADeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableMFADeviceRequest * EnableMFADeviceResponse::request() const
 {
     Q_D(const EnableMFADeviceResponse);
@@ -127,9 +125,8 @@ const EnableMFADeviceRequest * EnableMFADeviceResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM EnableMFADevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM EnableMFADevice \a response.
  */
 void EnableMFADeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void EnableMFADeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::EnableMFADeviceResponsePrivate
+ * \brief The EnableMFADeviceResponsePrivate class provides private implementation for EnableMFADeviceResponse.
  * \internal
  *
- * \class EnableMFADeviceResponsePrivate
- *
- * \brief Private implementation for EnableMFADeviceResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableMFADeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableMFADeviceResponse instance.
+ * Constructs a EnableMFADeviceResponsePrivate object with public implementation \a q.
  */
 EnableMFADeviceResponsePrivate::EnableMFADeviceResponsePrivate(
     EnableMFADeviceResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ EnableMFADeviceResponsePrivate::EnableMFADeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM EnableMFADeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM EnableMFADevice response element from \a xml.
  */
 void EnableMFADeviceResponsePrivate::parseEnableMFADeviceResponse(QXmlStreamReader &xml)
 {

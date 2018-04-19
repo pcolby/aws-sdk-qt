@@ -29,10 +29,9 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::GetTranscriptionJobResponse
- *
  * \brief The GetTranscriptionJobResponse class provides an interace for TranscribeService GetTranscriptionJob responses.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  *
@@ -40,11 +39,7 @@ namespace TranscribeService {
  */
 
 /*!
- * @brief  Constructs a new GetTranscriptionJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTranscriptionJobResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTranscriptionJobResponse::GetTranscriptionJobResponse(
         const GetTranscriptionJobRequest &request,
@@ -56,6 +51,9 @@ GetTranscriptionJobResponse::GetTranscriptionJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTranscriptionJobRequest * GetTranscriptionJobResponse::request() const
 {
     Q_D(const GetTranscriptionJobResponse);
@@ -63,9 +61,8 @@ const GetTranscriptionJobRequest * GetTranscriptionJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a TranscribeService GetTranscriptionJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful TranscribeService GetTranscriptionJob \a response.
  */
 void GetTranscriptionJobResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetTranscriptionJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::TranscribeService::GetTranscriptionJobResponsePrivate
+ * \brief The GetTranscriptionJobResponsePrivate class provides private implementation for GetTranscriptionJobResponse.
  * \internal
  *
- * \class GetTranscriptionJobResponsePrivate
- *
- * \brief Private implementation for GetTranscriptionJobResponse.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTranscriptionJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTranscriptionJobResponse instance.
+ * Constructs a GetTranscriptionJobResponsePrivate object with public implementation \a q.
  */
 GetTranscriptionJobResponsePrivate::GetTranscriptionJobResponsePrivate(
     GetTranscriptionJobResponse * const q) : TranscribeServiceResponsePrivate(q)
@@ -96,9 +89,7 @@ GetTranscriptionJobResponsePrivate::GetTranscriptionJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an TranscribeService GetTranscriptionJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a TranscribeService GetTranscriptionJob response element from \a xml.
  */
 void GetTranscriptionJobResponsePrivate::parseGetTranscriptionJobResponse(QXmlStreamReader &xml)
 {

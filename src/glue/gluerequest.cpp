@@ -117,7 +117,7 @@ namespace Glue {
  */
 
 /*!
- * Constructs a[n] GlueRequest object for Glue \a action.
+ * Constructs a GlueRequest object for Glue \a action.
  */
 GlueRequest::GlueRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new GlueRequestPrivate(action, this))
@@ -317,8 +317,8 @@ QNetworkRequest GlueRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a GlueRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GlueRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GlueRequestPrivate::GlueRequestPrivate(const GlueRequest::Action action, GlueRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

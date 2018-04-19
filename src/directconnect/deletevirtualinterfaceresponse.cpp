@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DeleteVirtualInterfaceResponse
- *
  * \brief The DeleteVirtualInterfaceResponse class provides an interace for DirectConnect DeleteVirtualInterface responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DeleteVirtualInterfaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVirtualInterfaceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVirtualInterfaceResponse::DeleteVirtualInterfaceResponse(
         const DeleteVirtualInterfaceRequest &request,
@@ -63,6 +58,9 @@ DeleteVirtualInterfaceResponse::DeleteVirtualInterfaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVirtualInterfaceRequest * DeleteVirtualInterfaceResponse::request() const
 {
     Q_D(const DeleteVirtualInterfaceResponse);
@@ -70,9 +68,8 @@ const DeleteVirtualInterfaceRequest * DeleteVirtualInterfaceResponse::request() 
 }
 
 /*!
- * @brief  Parse a DirectConnect DeleteVirtualInterface response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DeleteVirtualInterface \a response.
  */
 void DeleteVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DeleteVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::DeleteVirtualInterfaceResponsePrivate
+ * \brief The DeleteVirtualInterfaceResponsePrivate class provides private implementation for DeleteVirtualInterfaceResponse.
  * \internal
  *
- * \class DeleteVirtualInterfaceResponsePrivate
- *
- * \brief Private implementation for DeleteVirtualInterfaceResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVirtualInterfaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVirtualInterfaceResponse instance.
+ * Constructs a DeleteVirtualInterfaceResponsePrivate object with public implementation \a q.
  */
 DeleteVirtualInterfaceResponsePrivate::DeleteVirtualInterfaceResponsePrivate(
     DeleteVirtualInterfaceResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DeleteVirtualInterfaceResponsePrivate::DeleteVirtualInterfaceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect DeleteVirtualInterfaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DeleteVirtualInterface response element from \a xml.
  */
 void DeleteVirtualInterfaceResponsePrivate::parseDeleteVirtualInterfaceResponse(QXmlStreamReader &xml)
 {

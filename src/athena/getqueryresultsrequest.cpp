@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * GetQueryResultsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetQueryResultsRequestPrivate object for Athena \a action with,
- * public implementation \a q.
+ * Constructs a GetQueryResultsRequestPrivate object for Athena \a action,
+ * with public implementation \a q.
  */
 GetQueryResultsRequestPrivate::GetQueryResultsRequestPrivate(
     const AthenaRequest::Action action, GetQueryResultsRequest * const q)

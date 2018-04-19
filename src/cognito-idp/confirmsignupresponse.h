@@ -34,10 +34,10 @@ class QTAWS_EXPORT ConfirmSignUpResponse : public CognitoIdentityProviderRespons
 public:
     ConfirmSignUpResponse(const ConfirmSignUpRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ConfirmSignUpRequest * request() const;
+    virtual const ConfirmSignUpRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ConfirmSignUpResponse)

@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DiscoverPollEndpointResponse
- *
  * \brief The DiscoverPollEndpointResponse class provides an interace for ECS DiscoverPollEndpoint responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DiscoverPollEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DiscoverPollEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 DiscoverPollEndpointResponse::DiscoverPollEndpointResponse(
         const DiscoverPollEndpointRequest &request,
@@ -72,6 +67,9 @@ DiscoverPollEndpointResponse::DiscoverPollEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DiscoverPollEndpointRequest * DiscoverPollEndpointResponse::request() const
 {
     Q_D(const DiscoverPollEndpointResponse);
@@ -79,9 +77,8 @@ const DiscoverPollEndpointRequest * DiscoverPollEndpointResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ECS DiscoverPollEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS DiscoverPollEndpoint \a response.
  */
 void DiscoverPollEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void DiscoverPollEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::DiscoverPollEndpointResponsePrivate
+ * \brief The DiscoverPollEndpointResponsePrivate class provides private implementation for DiscoverPollEndpointResponse.
  * \internal
  *
- * \class DiscoverPollEndpointResponsePrivate
- *
- * \brief Private implementation for DiscoverPollEndpointResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DiscoverPollEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DiscoverPollEndpointResponse instance.
+ * Constructs a DiscoverPollEndpointResponsePrivate object with public implementation \a q.
  */
 DiscoverPollEndpointResponsePrivate::DiscoverPollEndpointResponsePrivate(
     DiscoverPollEndpointResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ DiscoverPollEndpointResponsePrivate::DiscoverPollEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS DiscoverPollEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS DiscoverPollEndpoint response element from \a xml.
  */
 void DiscoverPollEndpointResponsePrivate::parseDiscoverPollEndpointResponse(QXmlStreamReader &xml)
 {

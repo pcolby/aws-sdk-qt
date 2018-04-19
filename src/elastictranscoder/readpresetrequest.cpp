@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ReadPresetRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ReadPresetRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a ReadPresetRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 ReadPresetRequestPrivate::ReadPresetRequestPrivate(
     const ElasticTranscoderRequest::Action action, ReadPresetRequest * const q)

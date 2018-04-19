@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetGeoLocationRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetGeoLocationRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a GetGeoLocationRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 GetGeoLocationRequestPrivate::GetGeoLocationRequestPrivate(
     const Route53Request::Action action, GetGeoLocationRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetRequestValidatorsResponse : public APIGatewayResponse {
 public:
     GetRequestValidatorsResponse(const GetRequestValidatorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetRequestValidatorsRequest * request() const;
+    virtual const GetRequestValidatorsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetRequestValidatorsResponse)

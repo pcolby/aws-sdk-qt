@@ -69,7 +69,7 @@ namespace SNS {
  */
 
 /*!
- * Constructs a[n] SNSRequest object for SNS \a action.
+ * Constructs a SNSRequest object for SNS \a action.
  */
 SNSRequest::SNSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SNSRequestPrivate(action, this))
@@ -269,8 +269,8 @@ QNetworkRequest SNSRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a SNSRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a SNSRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 SNSRequestPrivate::SNSRequestPrivate(const SNSRequest::Action action, SNSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

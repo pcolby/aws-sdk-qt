@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateUsagePlanKeyRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateUsagePlanKeyRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a CreateUsagePlanKeyRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 CreateUsagePlanKeyRequestPrivate::CreateUsagePlanKeyRequestPrivate(
     const APIGatewayRequest::Action action, CreateUsagePlanKeyRequest * const q)

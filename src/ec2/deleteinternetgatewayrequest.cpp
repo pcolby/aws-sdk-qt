@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteInternetGatewayRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteInternetGatewayRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteInternetGatewayRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteInternetGatewayRequestPrivate::DeleteInternetGatewayRequestPrivate(
     const EC2Request::Action action, DeleteInternetGatewayRequest * const q)

@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeConfigurationRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a DescribeConfigurationRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 DescribeConfigurationRequestPrivate::DescribeConfigurationRequestPrivate(
     const MQRequest::Action action, DescribeConfigurationRequest * const q)

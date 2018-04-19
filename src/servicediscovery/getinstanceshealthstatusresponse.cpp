@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::GetInstancesHealthStatusResponse
- *
  * \brief The GetInstancesHealthStatusResponse class provides an interace for ServiceDiscovery GetInstancesHealthStatus responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new GetInstancesHealthStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInstancesHealthStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInstancesHealthStatusResponse::GetInstancesHealthStatusResponse(
         const GetInstancesHealthStatusRequest &request,
@@ -59,6 +54,9 @@ GetInstancesHealthStatusResponse::GetInstancesHealthStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInstancesHealthStatusRequest * GetInstancesHealthStatusResponse::request() const
 {
     Q_D(const GetInstancesHealthStatusResponse);
@@ -66,9 +64,8 @@ const GetInstancesHealthStatusRequest * GetInstancesHealthStatusResponse::reques
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery GetInstancesHealthStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery GetInstancesHealthStatus \a response.
  */
 void GetInstancesHealthStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetInstancesHealthStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::GetInstancesHealthStatusResponsePrivate
+ * \brief The GetInstancesHealthStatusResponsePrivate class provides private implementation for GetInstancesHealthStatusResponse.
  * \internal
  *
- * \class GetInstancesHealthStatusResponsePrivate
- *
- * \brief Private implementation for GetInstancesHealthStatusResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstancesHealthStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInstancesHealthStatusResponse instance.
+ * Constructs a GetInstancesHealthStatusResponsePrivate object with public implementation \a q.
  */
 GetInstancesHealthStatusResponsePrivate::GetInstancesHealthStatusResponsePrivate(
     GetInstancesHealthStatusResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ GetInstancesHealthStatusResponsePrivate::GetInstancesHealthStatusResponsePrivate
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery GetInstancesHealthStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery GetInstancesHealthStatus response element from \a xml.
  */
 void GetInstancesHealthStatusResponsePrivate::parseGetInstancesHealthStatusResponse(QXmlStreamReader &xml)
 {

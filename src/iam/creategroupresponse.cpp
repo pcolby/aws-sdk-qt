@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateGroupResponse
- *
  * \brief The CreateGroupResponse class provides an interace for IAM CreateGroup responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateGroupResponse::CreateGroupResponse(
         const CreateGroupRequest &request,
@@ -120,6 +115,9 @@ CreateGroupResponse::CreateGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateGroupRequest * CreateGroupResponse::request() const
 {
     Q_D(const CreateGroupResponse);
@@ -127,9 +125,8 @@ const CreateGroupRequest * CreateGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM CreateGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreateGroup \a response.
  */
 void CreateGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreateGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreateGroupResponsePrivate
+ * \brief The CreateGroupResponsePrivate class provides private implementation for CreateGroupResponse.
  * \internal
  *
- * \class CreateGroupResponsePrivate
- *
- * \brief Private implementation for CreateGroupResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateGroupResponse instance.
+ * Constructs a CreateGroupResponsePrivate object with public implementation \a q.
  */
 CreateGroupResponsePrivate::CreateGroupResponsePrivate(
     CreateGroupResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreateGroupResponsePrivate::CreateGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM CreateGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreateGroup response element from \a xml.
  */
 void CreateGroupResponsePrivate::parseCreateGroupResponse(QXmlStreamReader &xml)
 {

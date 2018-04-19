@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DescribeParameterGroupsResponse
- *
  * \brief The DescribeParameterGroupsResponse class provides an interace for DAX DescribeParameterGroups responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DescribeParameterGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeParameterGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeParameterGroupsResponse::DescribeParameterGroupsResponse(
         const DescribeParameterGroupsRequest &request,
@@ -59,6 +54,9 @@ DescribeParameterGroupsResponse::DescribeParameterGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeParameterGroupsRequest * DescribeParameterGroupsResponse::request() const
 {
     Q_D(const DescribeParameterGroupsResponse);
@@ -66,9 +64,8 @@ const DescribeParameterGroupsRequest * DescribeParameterGroupsResponse::request(
 }
 
 /*!
- * @brief  Parse a DAX DescribeParameterGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX DescribeParameterGroups \a response.
  */
 void DescribeParameterGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeParameterGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::DescribeParameterGroupsResponsePrivate
+ * \brief The DescribeParameterGroupsResponsePrivate class provides private implementation for DescribeParameterGroupsResponse.
  * \internal
  *
- * \class DescribeParameterGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeParameterGroupsResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeParameterGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeParameterGroupsResponse instance.
+ * Constructs a DescribeParameterGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeParameterGroupsResponsePrivate::DescribeParameterGroupsResponsePrivate(
     DescribeParameterGroupsResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeParameterGroupsResponsePrivate::DescribeParameterGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX DescribeParameterGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX DescribeParameterGroups response element from \a xml.
  */
 void DescribeParameterGroupsResponsePrivate::parseDescribeParameterGroupsResponse(QXmlStreamReader &xml)
 {

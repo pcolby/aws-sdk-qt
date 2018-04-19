@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * SuspendProcessesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a SuspendProcessesRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a SuspendProcessesRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 SuspendProcessesRequestPrivate::SuspendProcessesRequestPrivate(
     const AutoScalingRequest::Action action, SuspendProcessesRequest * const q)

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeleteConstraintRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteConstraintRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DeleteConstraintRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DeleteConstraintRequestPrivate::DeleteConstraintRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteConstraintRequest * const q)

@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::DeleteCloudFrontOriginAccessIdentityResponse
- *
  * \brief The DeleteCloudFrontOriginAccessIdentityResponse class provides an interace for CloudFront DeleteCloudFrontOriginAccessIdentity responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCloudFrontOriginAccessIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCloudFrontOriginAccessIdentityResponse::DeleteCloudFrontOriginAccessIdentityResponse(
         const DeleteCloudFrontOriginAccessIdentityRequest &request,
@@ -60,6 +55,9 @@ DeleteCloudFrontOriginAccessIdentityResponse::DeleteCloudFrontOriginAccessIdenti
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCloudFrontOriginAccessIdentityRequest * DeleteCloudFrontOriginAccessIdentityResponse::request() const
 {
     Q_D(const DeleteCloudFrontOriginAccessIdentityResponse);
@@ -67,9 +65,8 @@ const DeleteCloudFrontOriginAccessIdentityRequest * DeleteCloudFrontOriginAccess
 }
 
 /*!
- * @brief  Parse a CloudFront DeleteCloudFrontOriginAccessIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront DeleteCloudFrontOriginAccessIdentity \a response.
  */
 void DeleteCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::CloudFront::DeleteCloudFrontOriginAccessIdentityResponsePrivate
+ * \brief The DeleteCloudFrontOriginAccessIdentityResponsePrivate class provides private implementation for DeleteCloudFrontOriginAccessIdentityResponse.
  * \internal
  *
- * \class DeleteCloudFrontOriginAccessIdentityResponsePrivate
- *
- * \brief Private implementation for DeleteCloudFrontOriginAccessIdentityResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCloudFrontOriginAccessIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCloudFrontOriginAccessIdentityResponse instance.
+ * Constructs a DeleteCloudFrontOriginAccessIdentityResponsePrivate object with public implementation \a q.
  */
 DeleteCloudFrontOriginAccessIdentityResponsePrivate::DeleteCloudFrontOriginAccessIdentityResponsePrivate(
     DeleteCloudFrontOriginAccessIdentityResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteCloudFrontOriginAccessIdentityResponsePrivate::DeleteCloudFrontOriginAcces
 }
 
 /*!
- * @brief  Parse an CloudFront DeleteCloudFrontOriginAccessIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront DeleteCloudFrontOriginAccessIdentity response element from \a xml.
  */
 void DeleteCloudFrontOriginAccessIdentityResponsePrivate::parseDeleteCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml)
 {

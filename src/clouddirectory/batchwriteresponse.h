@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchWriteResponse : public CloudDirectoryResponse {
 public:
     BatchWriteResponse(const BatchWriteRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchWriteRequest * request() const;
+    virtual const BatchWriteRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchWriteResponse)

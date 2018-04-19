@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::DeleteEventSourceMappingResponse
- *
  * \brief The DeleteEventSourceMappingResponse class provides an interace for Lambda DeleteEventSourceMapping responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new DeleteEventSourceMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEventSourceMappingResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEventSourceMappingResponse::DeleteEventSourceMappingResponse(
         const DeleteEventSourceMappingRequest &request,
@@ -66,6 +61,9 @@ DeleteEventSourceMappingResponse::DeleteEventSourceMappingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEventSourceMappingRequest * DeleteEventSourceMappingResponse::request() const
 {
     Q_D(const DeleteEventSourceMappingResponse);
@@ -73,9 +71,8 @@ const DeleteEventSourceMappingRequest * DeleteEventSourceMappingResponse::reques
 }
 
 /*!
- * @brief  Parse a Lambda DeleteEventSourceMapping response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda DeleteEventSourceMapping \a response.
  */
 void DeleteEventSourceMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteEventSourceMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::DeleteEventSourceMappingResponsePrivate
+ * \brief The DeleteEventSourceMappingResponsePrivate class provides private implementation for DeleteEventSourceMappingResponse.
  * \internal
  *
- * \class DeleteEventSourceMappingResponsePrivate
- *
- * \brief Private implementation for DeleteEventSourceMappingResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEventSourceMappingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEventSourceMappingResponse instance.
+ * Constructs a DeleteEventSourceMappingResponsePrivate object with public implementation \a q.
  */
 DeleteEventSourceMappingResponsePrivate::DeleteEventSourceMappingResponsePrivate(
     DeleteEventSourceMappingResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteEventSourceMappingResponsePrivate::DeleteEventSourceMappingResponsePrivate
 }
 
 /*!
- * @brief  Parse an Lambda DeleteEventSourceMappingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda DeleteEventSourceMapping response element from \a xml.
  */
 void DeleteEventSourceMappingResponsePrivate::parseDeleteEventSourceMappingResponse(QXmlStreamReader &xml)
 {

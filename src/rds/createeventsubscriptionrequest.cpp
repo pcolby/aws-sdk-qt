@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CreateEventSubscriptionRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CreateEventSubscriptionRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
     const RDSRequest::Action action, CreateEventSubscriptionRequest * const q)

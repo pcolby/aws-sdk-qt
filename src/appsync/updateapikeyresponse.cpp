@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::UpdateApiKeyResponse
- *
  * \brief The UpdateApiKeyResponse class provides an interace for AppSync UpdateApiKey responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new UpdateApiKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateApiKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateApiKeyResponse::UpdateApiKeyResponse(
         const UpdateApiKeyRequest &request,
@@ -56,6 +51,9 @@ UpdateApiKeyResponse::UpdateApiKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateApiKeyRequest * UpdateApiKeyResponse::request() const
 {
     Q_D(const UpdateApiKeyResponse);
@@ -63,9 +61,8 @@ const UpdateApiKeyRequest * UpdateApiKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync UpdateApiKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync UpdateApiKey \a response.
  */
 void UpdateApiKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void UpdateApiKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::UpdateApiKeyResponsePrivate
+ * \brief The UpdateApiKeyResponsePrivate class provides private implementation for UpdateApiKeyResponse.
  * \internal
  *
- * \class UpdateApiKeyResponsePrivate
- *
- * \brief Private implementation for UpdateApiKeyResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApiKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateApiKeyResponse instance.
+ * Constructs a UpdateApiKeyResponsePrivate object with public implementation \a q.
  */
 UpdateApiKeyResponsePrivate::UpdateApiKeyResponsePrivate(
     UpdateApiKeyResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ UpdateApiKeyResponsePrivate::UpdateApiKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync UpdateApiKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync UpdateApiKey response element from \a xml.
  */
 void UpdateApiKeyResponsePrivate::parseUpdateApiKeyResponse(QXmlStreamReader &xml)
 {

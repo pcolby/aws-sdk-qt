@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribePendingAggregationRequestsResponse
- *
  * \brief The DescribePendingAggregationRequestsResponse class provides an interace for ConfigService DescribePendingAggregationRequests responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribePendingAggregationRequestsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePendingAggregationRequestsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePendingAggregationRequestsResponse::DescribePendingAggregationRequestsResponse(
         const DescribePendingAggregationRequestsRequest &request,
@@ -78,6 +73,9 @@ DescribePendingAggregationRequestsResponse::DescribePendingAggregationRequestsRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePendingAggregationRequestsRequest * DescribePendingAggregationRequestsResponse::request() const
 {
     Q_D(const DescribePendingAggregationRequestsResponse);
@@ -85,9 +83,8 @@ const DescribePendingAggregationRequestsRequest * DescribePendingAggregationRequ
 }
 
 /*!
- * @brief  Parse a ConfigService DescribePendingAggregationRequests response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribePendingAggregationRequests \a response.
  */
 void DescribePendingAggregationRequestsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribePendingAggregationRequestsResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribePendingAggregationRequestsResponsePrivate
+ * \brief The DescribePendingAggregationRequestsResponsePrivate class provides private implementation for DescribePendingAggregationRequestsResponse.
  * \internal
  *
- * \class DescribePendingAggregationRequestsResponsePrivate
- *
- * \brief Private implementation for DescribePendingAggregationRequestsResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePendingAggregationRequestsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePendingAggregationRequestsResponse instance.
+ * Constructs a DescribePendingAggregationRequestsResponsePrivate object with public implementation \a q.
  */
 DescribePendingAggregationRequestsResponsePrivate::DescribePendingAggregationRequestsResponsePrivate(
     DescribePendingAggregationRequestsResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribePendingAggregationRequestsResponsePrivate::DescribePendingAggregationReq
 }
 
 /*!
- * @brief  Parse an ConfigService DescribePendingAggregationRequestsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribePendingAggregationRequests response element from \a xml.
  */
 void DescribePendingAggregationRequestsResponsePrivate::parseDescribePendingAggregationRequestsResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetHealthCheckCountRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetHealthCheckCountRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a GetHealthCheckCountRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 GetHealthCheckCountRequestPrivate::GetHealthCheckCountRequestPrivate(
     const Route53Request::Action action, GetHealthCheckCountRequest * const q)

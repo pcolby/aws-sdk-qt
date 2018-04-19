@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ListUserPoolsResponse
- *
  * \brief The ListUserPoolsResponse class provides an interace for CognitoIdentityProvider ListUserPools responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ListUserPoolsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListUserPoolsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListUserPoolsResponse::ListUserPoolsResponse(
         const ListUserPoolsRequest &request,
@@ -65,6 +60,9 @@ ListUserPoolsResponse::ListUserPoolsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListUserPoolsRequest * ListUserPoolsResponse::request() const
 {
     Q_D(const ListUserPoolsResponse);
@@ -72,9 +70,8 @@ const ListUserPoolsRequest * ListUserPoolsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider ListUserPools response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider ListUserPools \a response.
  */
 void ListUserPoolsResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void ListUserPoolsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::ListUserPoolsResponsePrivate
+ * \brief The ListUserPoolsResponsePrivate class provides private implementation for ListUserPoolsResponse.
  * \internal
  *
- * \class ListUserPoolsResponsePrivate
- *
- * \brief Private implementation for ListUserPoolsResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUserPoolsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListUserPoolsResponse instance.
+ * Constructs a ListUserPoolsResponsePrivate object with public implementation \a q.
  */
 ListUserPoolsResponsePrivate::ListUserPoolsResponsePrivate(
     ListUserPoolsResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ ListUserPoolsResponsePrivate::ListUserPoolsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider ListUserPoolsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider ListUserPools response element from \a xml.
  */
 void ListUserPoolsResponsePrivate::parseListUserPoolsResponse(QXmlStreamReader &xml)
 {

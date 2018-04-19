@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateGcmChannelRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateGcmChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a UpdateGcmChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 UpdateGcmChannelRequestPrivate::UpdateGcmChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateGcmChannelRequest * const q)

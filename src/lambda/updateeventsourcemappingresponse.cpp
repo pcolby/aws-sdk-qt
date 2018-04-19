@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::UpdateEventSourceMappingResponse
- *
  * \brief The UpdateEventSourceMappingResponse class provides an interace for Lambda UpdateEventSourceMapping responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new UpdateEventSourceMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateEventSourceMappingResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateEventSourceMappingResponse::UpdateEventSourceMappingResponse(
         const UpdateEventSourceMappingRequest &request,
@@ -66,6 +61,9 @@ UpdateEventSourceMappingResponse::UpdateEventSourceMappingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateEventSourceMappingRequest * UpdateEventSourceMappingResponse::request() const
 {
     Q_D(const UpdateEventSourceMappingResponse);
@@ -73,9 +71,8 @@ const UpdateEventSourceMappingRequest * UpdateEventSourceMappingResponse::reques
 }
 
 /*!
- * @brief  Parse a Lambda UpdateEventSourceMapping response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda UpdateEventSourceMapping \a response.
  */
 void UpdateEventSourceMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateEventSourceMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::UpdateEventSourceMappingResponsePrivate
+ * \brief The UpdateEventSourceMappingResponsePrivate class provides private implementation for UpdateEventSourceMappingResponse.
  * \internal
  *
- * \class UpdateEventSourceMappingResponsePrivate
- *
- * \brief Private implementation for UpdateEventSourceMappingResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEventSourceMappingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateEventSourceMappingResponse instance.
+ * Constructs a UpdateEventSourceMappingResponsePrivate object with public implementation \a q.
  */
 UpdateEventSourceMappingResponsePrivate::UpdateEventSourceMappingResponsePrivate(
     UpdateEventSourceMappingResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateEventSourceMappingResponsePrivate::UpdateEventSourceMappingResponsePrivate
 }
 
 /*!
- * @brief  Parse an Lambda UpdateEventSourceMappingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda UpdateEventSourceMapping response element from \a xml.
  */
 void UpdateEventSourceMappingResponsePrivate::parseUpdateEventSourceMappingResponse(QXmlStreamReader &xml)
 {

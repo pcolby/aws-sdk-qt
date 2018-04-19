@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachElasticLoadBalancerResponse : public OpsWorksResponse {
 public:
     DetachElasticLoadBalancerResponse(const DetachElasticLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachElasticLoadBalancerRequest * request() const;
+    virtual const DetachElasticLoadBalancerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DetachElasticLoadBalancerResponse)

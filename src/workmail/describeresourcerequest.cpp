@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeResourceRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a DescribeResourceRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 DescribeResourceRequestPrivate::DescribeResourceRequestPrivate(
     const WorkMailRequest::Action action, DescribeResourceRequest * const q)

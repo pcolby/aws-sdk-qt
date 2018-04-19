@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::StopFleetResponse
- *
  * \brief The StopFleetResponse class provides an interace for AppStream StopFleet responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new StopFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopFleetResponse object for \a reply to \a request, with parent \a parent.
  */
 StopFleetResponse::StopFleetResponse(
         const StopFleetRequest &request,
@@ -58,6 +53,9 @@ StopFleetResponse::StopFleetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopFleetRequest * StopFleetResponse::request() const
 {
     Q_D(const StopFleetResponse);
@@ -65,9 +63,8 @@ const StopFleetRequest * StopFleetResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream StopFleet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream StopFleet \a response.
  */
 void StopFleetResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StopFleetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::StopFleetResponsePrivate
+ * \brief The StopFleetResponsePrivate class provides private implementation for StopFleetResponse.
  * \internal
  *
- * \class StopFleetResponsePrivate
- *
- * \brief Private implementation for StopFleetResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopFleetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopFleetResponse instance.
+ * Constructs a StopFleetResponsePrivate object with public implementation \a q.
  */
 StopFleetResponsePrivate::StopFleetResponsePrivate(
     StopFleetResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ StopFleetResponsePrivate::StopFleetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream StopFleetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream StopFleet response element from \a xml.
  */
 void StopFleetResponsePrivate::parseStopFleetResponse(QXmlStreamReader &xml)
 {

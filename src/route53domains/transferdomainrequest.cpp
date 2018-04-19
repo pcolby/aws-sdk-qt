@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * TransferDomainRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a TransferDomainRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a TransferDomainRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 TransferDomainRequestPrivate::TransferDomainRequestPrivate(
     const Route53DomainsRequest::Action action, TransferDomainRequest * const q)

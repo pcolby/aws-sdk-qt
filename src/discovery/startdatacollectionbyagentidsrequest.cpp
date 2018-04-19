@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * StartDataCollectionByAgentIdsRequest::respons
  */
 
 /*!
- *
- * Constructs a StartDataCollectionByAgentIdsRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a StartDataCollectionByAgentIdsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 StartDataCollectionByAgentIdsRequestPrivate::StartDataCollectionByAgentIdsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, StartDataCollectionByAgentIdsRequest * const q)

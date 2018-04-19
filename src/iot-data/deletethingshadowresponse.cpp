@@ -29,10 +29,9 @@ namespace IoTDataPlane {
 
 /*!
  * \class QtAws::IoTDataPlane::DeleteThingShadowResponse
- *
  * \brief The DeleteThingShadowResponse class provides an interace for IoTDataPlane DeleteThingShadow responses.
  *
- * \ingroup IoTDataPlane
+ * \inmodule QtAwsIoTDataPlane
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -45,11 +44,7 @@ namespace IoTDataPlane {
  */
 
 /*!
- * @brief  Constructs a new DeleteThingShadowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteThingShadowResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteThingShadowResponse::DeleteThingShadowResponse(
         const DeleteThingShadowRequest &request,
@@ -61,6 +56,9 @@ DeleteThingShadowResponse::DeleteThingShadowResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteThingShadowRequest * DeleteThingShadowResponse::request() const
 {
     Q_D(const DeleteThingShadowResponse);
@@ -68,9 +66,8 @@ const DeleteThingShadowRequest * DeleteThingShadowResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoTDataPlane DeleteThingShadow response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoTDataPlane DeleteThingShadow \a response.
  */
 void DeleteThingShadowResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeleteThingShadowResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoTDataPlane::DeleteThingShadowResponsePrivate
+ * \brief The DeleteThingShadowResponsePrivate class provides private implementation for DeleteThingShadowResponse.
  * \internal
  *
- * \class DeleteThingShadowResponsePrivate
- *
- * \brief Private implementation for DeleteThingShadowResponse.
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteThingShadowResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteThingShadowResponse instance.
+ * Constructs a DeleteThingShadowResponsePrivate object with public implementation \a q.
  */
 DeleteThingShadowResponsePrivate::DeleteThingShadowResponsePrivate(
     DeleteThingShadowResponse * const q) : IoTDataPlaneResponsePrivate(q)
@@ -101,9 +94,7 @@ DeleteThingShadowResponsePrivate::DeleteThingShadowResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoTDataPlane DeleteThingShadowResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoTDataPlane DeleteThingShadow response element from \a xml.
  */
 void DeleteThingShadowResponsePrivate::parseDeleteThingShadowResponse(QXmlStreamReader &xml)
 {

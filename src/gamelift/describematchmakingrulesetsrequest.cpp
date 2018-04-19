@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DescribeMatchmakingRuleSetsRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeMatchmakingRuleSetsRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeMatchmakingRuleSetsRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DescribeMatchmakingRuleSetsRequestPrivate::DescribeMatchmakingRuleSetsRequestPrivate(
     const GameLiftRequest::Action action, DescribeMatchmakingRuleSetsRequest * const q)

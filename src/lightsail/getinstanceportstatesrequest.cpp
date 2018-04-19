@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetInstancePortStatesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetInstancePortStatesRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetInstancePortStatesRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetInstancePortStatesRequestPrivate::GetInstancePortStatesRequestPrivate(
     const LightsailRequest::Action action, GetInstancePortStatesRequest * const q)

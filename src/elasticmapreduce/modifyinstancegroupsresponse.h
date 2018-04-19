@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyInstanceGroupsResponse : public EMRResponse {
 public:
     ModifyInstanceGroupsResponse(const ModifyInstanceGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyInstanceGroupsRequest * request() const;
+    virtual const ModifyInstanceGroupsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyInstanceGroupsResponse)

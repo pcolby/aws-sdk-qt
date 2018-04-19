@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLunaClientRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteLunaClientRequestPrivate object for CloudHSM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLunaClientRequestPrivate object for CloudHSM \a action,
+ * with public implementation \a q.
  */
 DeleteLunaClientRequestPrivate::DeleteLunaClientRequestPrivate(
     const CloudHSMRequest::Action action, DeleteLunaClientRequest * const q)

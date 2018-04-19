@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::ImportCatalogToGlueResponse
- *
  * \brief The ImportCatalogToGlueResponse class provides an interace for Glue ImportCatalogToGlue responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new ImportCatalogToGlueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportCatalogToGlueResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportCatalogToGlueResponse::ImportCatalogToGlueResponse(
         const ImportCatalogToGlueRequest &request,
@@ -58,6 +53,9 @@ ImportCatalogToGlueResponse::ImportCatalogToGlueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportCatalogToGlueRequest * ImportCatalogToGlueResponse::request() const
 {
     Q_D(const ImportCatalogToGlueResponse);
@@ -65,9 +63,8 @@ const ImportCatalogToGlueRequest * ImportCatalogToGlueResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue ImportCatalogToGlue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue ImportCatalogToGlue \a response.
  */
 void ImportCatalogToGlueResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ImportCatalogToGlueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::ImportCatalogToGlueResponsePrivate
+ * \brief The ImportCatalogToGlueResponsePrivate class provides private implementation for ImportCatalogToGlueResponse.
  * \internal
  *
- * \class ImportCatalogToGlueResponsePrivate
- *
- * \brief Private implementation for ImportCatalogToGlueResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportCatalogToGlueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportCatalogToGlueResponse instance.
+ * Constructs a ImportCatalogToGlueResponsePrivate object with public implementation \a q.
  */
 ImportCatalogToGlueResponsePrivate::ImportCatalogToGlueResponsePrivate(
     ImportCatalogToGlueResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ ImportCatalogToGlueResponsePrivate::ImportCatalogToGlueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue ImportCatalogToGlueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue ImportCatalogToGlue response element from \a xml.
  */
 void ImportCatalogToGlueResponsePrivate::parseImportCatalogToGlueResponse(QXmlStreamReader &xml)
 {

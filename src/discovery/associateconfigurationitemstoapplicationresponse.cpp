@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::AssociateConfigurationItemsToApplicationResponse
- *
  * \brief The AssociateConfigurationItemsToApplicationResponse class provides an interace for ApplicationDiscoveryService AssociateConfigurationItemsToApplication responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new AssociateConfigurationItemsToApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateConfigurationItemsToApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateConfigurationItemsToApplicationResponse::AssociateConfigurationItemsToApplicationResponse(
         const AssociateConfigurationItemsToApplicationRequest &request,
@@ -119,6 +114,9 @@ AssociateConfigurationItemsToApplicationResponse::AssociateConfigurationItemsToA
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateConfigurationItemsToApplicationRequest * AssociateConfigurationItemsToApplicationResponse::request() const
 {
     Q_D(const AssociateConfigurationItemsToApplicationResponse);
@@ -126,9 +124,8 @@ const AssociateConfigurationItemsToApplicationRequest * AssociateConfigurationIt
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService AssociateConfigurationItemsToApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService AssociateConfigurationItemsToApplication \a response.
  */
 void AssociateConfigurationItemsToApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void AssociateConfigurationItemsToApplicationResponse::parseSuccess(QIODevice &r
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::AssociateConfigurationItemsToApplicationResponsePrivate
+ * \brief The AssociateConfigurationItemsToApplicationResponsePrivate class provides private implementation for AssociateConfigurationItemsToApplicationResponse.
  * \internal
  *
- * \class AssociateConfigurationItemsToApplicationResponsePrivate
- *
- * \brief Private implementation for AssociateConfigurationItemsToApplicationResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateConfigurationItemsToApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateConfigurationItemsToApplicationResponse instance.
+ * Constructs a AssociateConfigurationItemsToApplicationResponsePrivate object with public implementation \a q.
  */
 AssociateConfigurationItemsToApplicationResponsePrivate::AssociateConfigurationItemsToApplicationResponsePrivate(
     AssociateConfigurationItemsToApplicationResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ AssociateConfigurationItemsToApplicationResponsePrivate::AssociateConfigurationI
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService AssociateConfigurationItemsToApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService AssociateConfigurationItemsToApplication response element from \a xml.
  */
 void AssociateConfigurationItemsToApplicationResponsePrivate::parseAssociateConfigurationItemsToApplicationResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::ListGlobalTablesResponse
- *
  * \brief The ListGlobalTablesResponse class provides an interace for DynamoDB ListGlobalTables responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new ListGlobalTablesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGlobalTablesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGlobalTablesResponse::ListGlobalTablesResponse(
         const ListGlobalTablesRequest &request,
@@ -74,6 +69,9 @@ ListGlobalTablesResponse::ListGlobalTablesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGlobalTablesRequest * ListGlobalTablesResponse::request() const
 {
     Q_D(const ListGlobalTablesResponse);
@@ -81,9 +79,8 @@ const ListGlobalTablesRequest * ListGlobalTablesResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB ListGlobalTables response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB ListGlobalTables \a response.
  */
 void ListGlobalTablesResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void ListGlobalTablesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::ListGlobalTablesResponsePrivate
+ * \brief The ListGlobalTablesResponsePrivate class provides private implementation for ListGlobalTablesResponse.
  * \internal
  *
- * \class ListGlobalTablesResponsePrivate
- *
- * \brief Private implementation for ListGlobalTablesResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGlobalTablesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGlobalTablesResponse instance.
+ * Constructs a ListGlobalTablesResponsePrivate object with public implementation \a q.
  */
 ListGlobalTablesResponsePrivate::ListGlobalTablesResponsePrivate(
     ListGlobalTablesResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ ListGlobalTablesResponsePrivate::ListGlobalTablesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB ListGlobalTablesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB ListGlobalTables response element from \a xml.
  */
 void ListGlobalTablesResponsePrivate::parseListGlobalTablesResponse(QXmlStreamReader &xml)
 {

@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * CreateActivityRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CreateActivityRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a CreateActivityRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 CreateActivityRequestPrivate::CreateActivityRequestPrivate(
     const SFNRequest::Action action, CreateActivityRequest * const q)

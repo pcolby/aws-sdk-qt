@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::AttachInstancesToLoadBalancerResponse
- *
  * \brief The AttachInstancesToLoadBalancerResponse class provides an interace for Lightsail AttachInstancesToLoadBalancer responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new AttachInstancesToLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachInstancesToLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachInstancesToLoadBalancerResponse::AttachInstancesToLoadBalancerResponse(
         const AttachInstancesToLoadBalancerRequest &request,
@@ -71,6 +66,9 @@ AttachInstancesToLoadBalancerResponse::AttachInstancesToLoadBalancerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachInstancesToLoadBalancerRequest * AttachInstancesToLoadBalancerResponse::request() const
 {
     Q_D(const AttachInstancesToLoadBalancerResponse);
@@ -78,9 +76,8 @@ const AttachInstancesToLoadBalancerRequest * AttachInstancesToLoadBalancerRespon
 }
 
 /*!
- * @brief  Parse a Lightsail AttachInstancesToLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail AttachInstancesToLoadBalancer \a response.
  */
 void AttachInstancesToLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void AttachInstancesToLoadBalancerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::AttachInstancesToLoadBalancerResponsePrivate
+ * \brief The AttachInstancesToLoadBalancerResponsePrivate class provides private implementation for AttachInstancesToLoadBalancerResponse.
  * \internal
  *
- * \class AttachInstancesToLoadBalancerResponsePrivate
- *
- * \brief Private implementation for AttachInstancesToLoadBalancerResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachInstancesToLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachInstancesToLoadBalancerResponse instance.
+ * Constructs a AttachInstancesToLoadBalancerResponsePrivate object with public implementation \a q.
  */
 AttachInstancesToLoadBalancerResponsePrivate::AttachInstancesToLoadBalancerResponsePrivate(
     AttachInstancesToLoadBalancerResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ AttachInstancesToLoadBalancerResponsePrivate::AttachInstancesToLoadBalancerRespo
 }
 
 /*!
- * @brief  Parse an Lightsail AttachInstancesToLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail AttachInstancesToLoadBalancer response element from \a xml.
  */
 void AttachInstancesToLoadBalancerResponsePrivate::parseAttachInstancesToLoadBalancerResponse(QXmlStreamReader &xml)
 {

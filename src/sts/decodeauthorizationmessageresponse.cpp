@@ -29,10 +29,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::DecodeAuthorizationMessageResponse
- *
  * \brief The DecodeAuthorizationMessageResponse class provides an interace for STS DecodeAuthorizationMessage responses.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -97,11 +96,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new DecodeAuthorizationMessageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DecodeAuthorizationMessageResponse object for \a reply to \a request, with parent \a parent.
  */
 DecodeAuthorizationMessageResponse::DecodeAuthorizationMessageResponse(
         const DecodeAuthorizationMessageRequest &request,
@@ -113,6 +108,9 @@ DecodeAuthorizationMessageResponse::DecodeAuthorizationMessageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DecodeAuthorizationMessageRequest * DecodeAuthorizationMessageResponse::request() const
 {
     Q_D(const DecodeAuthorizationMessageResponse);
@@ -120,9 +118,8 @@ const DecodeAuthorizationMessageRequest * DecodeAuthorizationMessageResponse::re
 }
 
 /*!
- * @brief  Parse a STS DecodeAuthorizationMessage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful STS DecodeAuthorizationMessage \a response.
  */
 void DecodeAuthorizationMessageResponse::parseSuccess(QIODevice &response)
 {
@@ -132,19 +129,15 @@ void DecodeAuthorizationMessageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::STS::DecodeAuthorizationMessageResponsePrivate
+ * \brief The DecodeAuthorizationMessageResponsePrivate class provides private implementation for DecodeAuthorizationMessageResponse.
  * \internal
  *
- * \class DecodeAuthorizationMessageResponsePrivate
- *
- * \brief Private implementation for DecodeAuthorizationMessageResponse.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DecodeAuthorizationMessageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DecodeAuthorizationMessageResponse instance.
+ * Constructs a DecodeAuthorizationMessageResponsePrivate object with public implementation \a q.
  */
 DecodeAuthorizationMessageResponsePrivate::DecodeAuthorizationMessageResponsePrivate(
     DecodeAuthorizationMessageResponse * const q) : STSResponsePrivate(q)
@@ -153,9 +146,7 @@ DecodeAuthorizationMessageResponsePrivate::DecodeAuthorizationMessageResponsePri
 }
 
 /*!
- * @brief  Parse an STS DecodeAuthorizationMessageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a STS DecodeAuthorizationMessage response element from \a xml.
  */
 void DecodeAuthorizationMessageResponsePrivate::parseDecodeAuthorizationMessageResponse(QXmlStreamReader &xml)
 {

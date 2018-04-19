@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::TagQueueResponse
- *
  * \brief The TagQueueResponse class provides an interace for SQS TagQueue responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new TagQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagQueueResponse object for \a reply to \a request, with parent \a parent.
  */
 TagQueueResponse::TagQueueResponse(
         const TagQueueRequest &request,
@@ -121,6 +116,9 @@ TagQueueResponse::TagQueueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagQueueRequest * TagQueueResponse::request() const
 {
     Q_D(const TagQueueResponse);
@@ -128,9 +126,8 @@ const TagQueueRequest * TagQueueResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS TagQueue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS TagQueue \a response.
  */
 void TagQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void TagQueueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::TagQueueResponsePrivate
+ * \brief The TagQueueResponsePrivate class provides private implementation for TagQueueResponse.
  * \internal
  *
- * \class TagQueueResponsePrivate
- *
- * \brief Private implementation for TagQueueResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagQueueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagQueueResponse instance.
+ * Constructs a TagQueueResponsePrivate object with public implementation \a q.
  */
 TagQueueResponsePrivate::TagQueueResponsePrivate(
     TagQueueResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ TagQueueResponsePrivate::TagQueueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS TagQueueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS TagQueue response element from \a xml.
  */
 void TagQueueResponsePrivate::parseTagQueueResponse(QXmlStreamReader &xml)
 {

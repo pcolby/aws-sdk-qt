@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * CreateUserPoolClientRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a CreateUserPoolClientRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a CreateUserPoolClientRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 CreateUserPoolClientRequestPrivate::CreateUserPoolClientRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, CreateUserPoolClientRequest * const q)

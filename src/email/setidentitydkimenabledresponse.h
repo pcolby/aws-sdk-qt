@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetIdentityDkimEnabledResponse : public SESResponse {
 public:
     SetIdentityDkimEnabledResponse(const SetIdentityDkimEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetIdentityDkimEnabledRequest * request() const;
+    virtual const SetIdentityDkimEnabledRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetIdentityDkimEnabledResponse)

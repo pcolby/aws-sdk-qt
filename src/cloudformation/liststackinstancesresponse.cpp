@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ListStackInstancesResponse
- *
  * \brief The ListStackInstancesResponse class provides an interace for CloudFormation ListStackInstances responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ListStackInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListStackInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListStackInstancesResponse::ListStackInstancesResponse(
         const ListStackInstancesRequest &request,
@@ -77,6 +72,9 @@ ListStackInstancesResponse::ListStackInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListStackInstancesRequest * ListStackInstancesResponse::request() const
 {
     Q_D(const ListStackInstancesResponse);
@@ -84,9 +82,8 @@ const ListStackInstancesRequest * ListStackInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation ListStackInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation ListStackInstances \a response.
  */
 void ListStackInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ListStackInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::ListStackInstancesResponsePrivate
+ * \brief The ListStackInstancesResponsePrivate class provides private implementation for ListStackInstancesResponse.
  * \internal
  *
- * \class ListStackInstancesResponsePrivate
- *
- * \brief Private implementation for ListStackInstancesResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStackInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListStackInstancesResponse instance.
+ * Constructs a ListStackInstancesResponsePrivate object with public implementation \a q.
  */
 ListStackInstancesResponsePrivate::ListStackInstancesResponsePrivate(
     ListStackInstancesResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ ListStackInstancesResponsePrivate::ListStackInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation ListStackInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation ListStackInstances response element from \a xml.
  */
 void ListStackInstancesResponsePrivate::parseListStackInstancesResponse(QXmlStreamReader &xml)
 {

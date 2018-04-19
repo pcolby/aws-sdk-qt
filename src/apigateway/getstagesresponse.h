@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetStagesResponse : public APIGatewayResponse {
 public:
     GetStagesResponse(const GetStagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetStagesRequest * request() const;
+    virtual const GetStagesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetStagesResponse)

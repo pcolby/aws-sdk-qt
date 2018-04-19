@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CancelSpotFleetRequestsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CancelSpotFleetRequestsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CancelSpotFleetRequestsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CancelSpotFleetRequestsRequestPrivate::CancelSpotFleetRequestsRequestPrivate(
     const EC2Request::Action action, CancelSpotFleetRequestsRequest * const q)

@@ -28,16 +28,13 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::LightsailResponse
- *
  * \brief The LightsailResponse class provides an interface for Lightsail responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @brief  Constructs a new LightsailResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a LightsailResponse object with parent \a parent.
  */
 LightsailResponse::LightsailResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new LightsailResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ LightsailResponse::LightsailResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LightsailResponse object.
- *
+ * \internal
+ * Constructs a LightsailResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LightsailResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 LightsailResponse::LightsailResponse(LightsailResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ LightsailResponse::LightsailResponse(LightsailResponsePrivate * const d, QObject
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void LightsailResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void LightsailResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Lightsail::LightsailResponsePrivate
+ * \brief The LightsailResponsePrivate class provides private implementation for LightsailResponse.
+ * \internal
  *
- * @class  LightsailResponsePrivate
- *
- * @brief  Private implementation for LightsailResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LightsailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public LightsailResponse instance.
+ * Constructs a LightsailResponsePrivate object with public implementation \a q.
  */
 LightsailResponsePrivate::LightsailResponsePrivate(
     LightsailResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

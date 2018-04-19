@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBSubnetGroupResponse
- *
  * \brief The CreateDBSubnetGroupResponse class provides an interace for RDS CreateDBSubnetGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDBSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDBSubnetGroupResponse::CreateDBSubnetGroupResponse(
         const CreateDBSubnetGroupRequest &request,
@@ -119,6 +114,9 @@ CreateDBSubnetGroupResponse::CreateDBSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDBSubnetGroupRequest * CreateDBSubnetGroupResponse::request() const
 {
     Q_D(const CreateDBSubnetGroupResponse);
@@ -126,9 +124,8 @@ const CreateDBSubnetGroupRequest * CreateDBSubnetGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS CreateDBSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CreateDBSubnetGroup \a response.
  */
 void CreateDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CreateDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CreateDBSubnetGroupResponsePrivate
+ * \brief The CreateDBSubnetGroupResponsePrivate class provides private implementation for CreateDBSubnetGroupResponse.
  * \internal
  *
- * \class CreateDBSubnetGroupResponsePrivate
- *
- * \brief Private implementation for CreateDBSubnetGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDBSubnetGroupResponse instance.
+ * Constructs a CreateDBSubnetGroupResponsePrivate object with public implementation \a q.
  */
 CreateDBSubnetGroupResponsePrivate::CreateDBSubnetGroupResponsePrivate(
     CreateDBSubnetGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CreateDBSubnetGroupResponsePrivate::CreateDBSubnetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CreateDBSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CreateDBSubnetGroup response element from \a xml.
  */
 void CreateDBSubnetGroupResponsePrivate::parseCreateDBSubnetGroupResponse(QXmlStreamReader &xml)
 {

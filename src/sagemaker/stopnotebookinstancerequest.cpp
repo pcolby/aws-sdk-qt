@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * StopNotebookInstanceRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a StopNotebookInstanceRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a StopNotebookInstanceRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 StopNotebookInstanceRequestPrivate::StopNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, StopNotebookInstanceRequest * const q)

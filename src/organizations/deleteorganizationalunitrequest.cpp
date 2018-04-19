@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * DeleteOrganizationalUnitRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteOrganizationalUnitRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a DeleteOrganizationalUnitRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 DeleteOrganizationalUnitRequestPrivate::DeleteOrganizationalUnitRequestPrivate(
     const OrganizationsRequest::Action action, DeleteOrganizationalUnitRequest * const q)

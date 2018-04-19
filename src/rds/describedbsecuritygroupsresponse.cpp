@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBSecurityGroupsResponse
- *
  * \brief The DescribeDBSecurityGroupsResponse class provides an interace for RDS DescribeDBSecurityGroups responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBSecurityGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDBSecurityGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDBSecurityGroupsResponse::DescribeDBSecurityGroupsResponse(
         const DescribeDBSecurityGroupsRequest &request,
@@ -119,6 +114,9 @@ DescribeDBSecurityGroupsResponse::DescribeDBSecurityGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDBSecurityGroupsRequest * DescribeDBSecurityGroupsResponse::request() const
 {
     Q_D(const DescribeDBSecurityGroupsResponse);
@@ -126,9 +124,8 @@ const DescribeDBSecurityGroupsRequest * DescribeDBSecurityGroupsResponse::reques
 }
 
 /*!
- * @brief  Parse a RDS DescribeDBSecurityGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeDBSecurityGroups \a response.
  */
 void DescribeDBSecurityGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeDBSecurityGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeDBSecurityGroupsResponsePrivate
+ * \brief The DescribeDBSecurityGroupsResponsePrivate class provides private implementation for DescribeDBSecurityGroupsResponse.
  * \internal
  *
- * \class DescribeDBSecurityGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeDBSecurityGroupsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBSecurityGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDBSecurityGroupsResponse instance.
+ * Constructs a DescribeDBSecurityGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeDBSecurityGroupsResponsePrivate::DescribeDBSecurityGroupsResponsePrivate(
     DescribeDBSecurityGroupsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeDBSecurityGroupsResponsePrivate::DescribeDBSecurityGroupsResponsePrivate
 }
 
 /*!
- * @brief  Parse an RDS DescribeDBSecurityGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeDBSecurityGroups response element from \a xml.
  */
 void DescribeDBSecurityGroupsResponsePrivate::parseDescribeDBSecurityGroupsResponse(QXmlStreamReader &xml)
 {

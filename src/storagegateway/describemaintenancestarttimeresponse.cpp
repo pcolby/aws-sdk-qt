@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeMaintenanceStartTimeResponse
- *
  * \brief The DescribeMaintenanceStartTimeResponse class provides an interace for StorageGateway DescribeMaintenanceStartTime responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceStartTimeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeMaintenanceStartTimeResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeMaintenanceStartTimeResponse::DescribeMaintenanceStartTimeResponse(
         const DescribeMaintenanceStartTimeRequest &request,
@@ -124,6 +119,9 @@ DescribeMaintenanceStartTimeResponse::DescribeMaintenanceStartTimeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeMaintenanceStartTimeRequest * DescribeMaintenanceStartTimeResponse::request() const
 {
     Q_D(const DescribeMaintenanceStartTimeResponse);
@@ -131,9 +129,8 @@ const DescribeMaintenanceStartTimeRequest * DescribeMaintenanceStartTimeResponse
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeMaintenanceStartTime response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeMaintenanceStartTime \a response.
  */
 void DescribeMaintenanceStartTimeResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeMaintenanceStartTimeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeMaintenanceStartTimeResponsePrivate
+ * \brief The DescribeMaintenanceStartTimeResponsePrivate class provides private implementation for DescribeMaintenanceStartTimeResponse.
  * \internal
  *
- * \class DescribeMaintenanceStartTimeResponsePrivate
- *
- * \brief Private implementation for DescribeMaintenanceStartTimeResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMaintenanceStartTimeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeMaintenanceStartTimeResponse instance.
+ * Constructs a DescribeMaintenanceStartTimeResponsePrivate object with public implementation \a q.
  */
 DescribeMaintenanceStartTimeResponsePrivate::DescribeMaintenanceStartTimeResponsePrivate(
     DescribeMaintenanceStartTimeResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeMaintenanceStartTimeResponsePrivate::DescribeMaintenanceStartTimeRespons
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeMaintenanceStartTimeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeMaintenanceStartTime response element from \a xml.
  */
 void DescribeMaintenanceStartTimeResponsePrivate::parseDescribeMaintenanceStartTimeResponse(QXmlStreamReader &xml)
 {

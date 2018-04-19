@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListNamespacesResponse : public ServiceDiscoveryResponse {
 public:
     ListNamespacesResponse(const ListNamespacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListNamespacesRequest * request() const;
+    virtual const ListNamespacesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListNamespacesResponse)

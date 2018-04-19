@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListDeadLetterSourceQueuesResponse : public SQSResponse {
 public:
     ListDeadLetterSourceQueuesResponse(const ListDeadLetterSourceQueuesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDeadLetterSourceQueuesRequest * request() const;
+    virtual const ListDeadLetterSourceQueuesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListDeadLetterSourceQueuesResponse)

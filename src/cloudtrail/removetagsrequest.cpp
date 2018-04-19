@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a RemoveTagsRequestPrivate object for CloudTrail \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsRequestPrivate object for CloudTrail \a action,
+ * with public implementation \a q.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const CloudTrailRequest::Action action, RemoveTagsRequest * const q)

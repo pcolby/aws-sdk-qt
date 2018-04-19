@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAuthorizationTokenResponse : public ECRResponse {
 public:
     GetAuthorizationTokenResponse(const GetAuthorizationTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAuthorizationTokenRequest * request() const;
+    virtual const GetAuthorizationTokenRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetAuthorizationTokenResponse)

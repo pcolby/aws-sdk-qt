@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableDBInstanceOptionsRequest::re
  */
 
 /*!
- *
- * Constructs a DescribeOrderableDBInstanceOptionsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeOrderableDBInstanceOptionsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeOrderableDBInstanceOptionsRequestPrivate::DescribeOrderableDBInstanceOptionsRequestPrivate(
     const RDSRequest::Action action, DescribeOrderableDBInstanceOptionsRequest * const q)

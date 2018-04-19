@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::TestEventPatternResponse
- *
  * \brief The TestEventPatternResponse class provides an interace for CloudWatchEvents TestEventPattern responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new TestEventPatternResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TestEventPatternResponse object for \a reply to \a request, with parent \a parent.
  */
 TestEventPatternResponse::TestEventPatternResponse(
         const TestEventPatternRequest &request,
@@ -78,6 +73,9 @@ TestEventPatternResponse::TestEventPatternResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TestEventPatternRequest * TestEventPatternResponse::request() const
 {
     Q_D(const TestEventPatternResponse);
@@ -85,9 +83,8 @@ const TestEventPatternRequest * TestEventPatternResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents TestEventPattern response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents TestEventPattern \a response.
  */
 void TestEventPatternResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void TestEventPatternResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::TestEventPatternResponsePrivate
+ * \brief The TestEventPatternResponsePrivate class provides private implementation for TestEventPatternResponse.
  * \internal
  *
- * \class TestEventPatternResponsePrivate
- *
- * \brief Private implementation for TestEventPatternResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestEventPatternResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TestEventPatternResponse instance.
+ * Constructs a TestEventPatternResponsePrivate object with public implementation \a q.
  */
 TestEventPatternResponsePrivate::TestEventPatternResponsePrivate(
     TestEventPatternResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ TestEventPatternResponsePrivate::TestEventPatternResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents TestEventPatternResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents TestEventPattern response element from \a xml.
  */
 void TestEventPatternResponsePrivate::parseTestEventPatternResponse(QXmlStreamReader &xml)
 {

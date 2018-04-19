@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteJobRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a DeleteJobRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a DeleteJobRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 DeleteJobRequestPrivate::DeleteJobRequestPrivate(
     const GlueRequest::Action action, DeleteJobRequest * const q)

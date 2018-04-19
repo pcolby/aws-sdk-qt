@@ -24,7 +24,7 @@ namespace {{NameSpaceName}} {
  */
 
 /*!
- * Constructs a[n] {{ClassName}} object for {{ServiceName}} \a action.
+ * Constructs a {{ClassName}} object for {{ServiceName}} \a action.
  */
 {{ClassName}}::{{ClassName}}(const Action action)
     : QtAws::Core::AwsAbstractRequest(new {{ClassName}}Private(action, this))
@@ -224,8 +224,8 @@ QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a {{ClassName}}Private object for {{ServiceName}} \a action with,
- * public implementation \a q.
+ * Constructs a {{ClassName}}Private object for {{ServiceName}} \a action,
+ * with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(const {{ClassName}}::Action action, {{ClassName}} * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

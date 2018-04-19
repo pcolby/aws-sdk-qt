@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::BatchGetApplicationRevisionsResponse
- *
  * \brief The BatchGetApplicationRevisionsResponse class provides an interace for CodeDeploy BatchGetApplicationRevisions responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new BatchGetApplicationRevisionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetApplicationRevisionsResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetApplicationRevisionsResponse::BatchGetApplicationRevisionsResponse(
         const BatchGetApplicationRevisionsRequest &request,
@@ -136,6 +131,9 @@ BatchGetApplicationRevisionsResponse::BatchGetApplicationRevisionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetApplicationRevisionsRequest * BatchGetApplicationRevisionsResponse::request() const
 {
     Q_D(const BatchGetApplicationRevisionsResponse);
@@ -143,9 +141,8 @@ const BatchGetApplicationRevisionsRequest * BatchGetApplicationRevisionsResponse
 }
 
 /*!
- * @brief  Parse a CodeDeploy BatchGetApplicationRevisions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy BatchGetApplicationRevisions \a response.
  */
 void BatchGetApplicationRevisionsResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void BatchGetApplicationRevisionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::BatchGetApplicationRevisionsResponsePrivate
+ * \brief The BatchGetApplicationRevisionsResponsePrivate class provides private implementation for BatchGetApplicationRevisionsResponse.
  * \internal
  *
- * \class BatchGetApplicationRevisionsResponsePrivate
- *
- * \brief Private implementation for BatchGetApplicationRevisionsResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetApplicationRevisionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetApplicationRevisionsResponse instance.
+ * Constructs a BatchGetApplicationRevisionsResponsePrivate object with public implementation \a q.
  */
 BatchGetApplicationRevisionsResponsePrivate::BatchGetApplicationRevisionsResponsePrivate(
     BatchGetApplicationRevisionsResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ BatchGetApplicationRevisionsResponsePrivate::BatchGetApplicationRevisionsRespons
 }
 
 /*!
- * @brief  Parse an CodeDeploy BatchGetApplicationRevisionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy BatchGetApplicationRevisions response element from \a xml.
  */
 void BatchGetApplicationRevisionsResponsePrivate::parseBatchGetApplicationRevisionsResponse(QXmlStreamReader &xml)
 {

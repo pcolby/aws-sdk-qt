@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * UpdateFolderRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UpdateFolderRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a UpdateFolderRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 UpdateFolderRequestPrivate::UpdateFolderRequestPrivate(
     const WorkDocsRequest::Action action, UpdateFolderRequest * const q)

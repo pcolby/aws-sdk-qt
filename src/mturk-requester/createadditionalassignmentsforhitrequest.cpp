@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateAdditionalAssignmentsForHITRequest::res
  */
 
 /*!
- *
- * Constructs a CreateAdditionalAssignmentsForHITRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a CreateAdditionalAssignmentsForHITRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 CreateAdditionalAssignmentsForHITRequestPrivate::CreateAdditionalAssignmentsForHITRequestPrivate(
     const MTurkRequest::Action action, CreateAdditionalAssignmentsForHITRequest * const q)

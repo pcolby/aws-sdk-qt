@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutAttributesResponse : public SimpleDBResponse {
 public:
     PutAttributesResponse(const PutAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutAttributesRequest * request() const;
+    virtual const PutAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutAttributesResponse)

@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * PutFileRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a PutFileRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a PutFileRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 PutFileRequestPrivate::PutFileRequestPrivate(
     const CodeCommitRequest::Action action, PutFileRequest * const q)

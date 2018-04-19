@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListRateBasedRulesResponse : public WAFResponse {
 public:
     ListRateBasedRulesResponse(const ListRateBasedRulesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListRateBasedRulesRequest * request() const;
+    virtual const ListRateBasedRulesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListRateBasedRulesResponse)

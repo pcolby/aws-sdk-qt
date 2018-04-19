@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationAggregatorsResponse
- *
  * \brief The DescribeConfigurationAggregatorsResponse class provides an interace for ConfigService DescribeConfigurationAggregators responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationAggregatorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConfigurationAggregatorsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConfigurationAggregatorsResponse::DescribeConfigurationAggregatorsResponse(
         const DescribeConfigurationAggregatorsRequest &request,
@@ -78,6 +73,9 @@ DescribeConfigurationAggregatorsResponse::DescribeConfigurationAggregatorsRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConfigurationAggregatorsRequest * DescribeConfigurationAggregatorsResponse::request() const
 {
     Q_D(const DescribeConfigurationAggregatorsResponse);
@@ -85,9 +83,8 @@ const DescribeConfigurationAggregatorsRequest * DescribeConfigurationAggregators
 }
 
 /*!
- * @brief  Parse a ConfigService DescribeConfigurationAggregators response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribeConfigurationAggregators \a response.
  */
 void DescribeConfigurationAggregatorsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeConfigurationAggregatorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribeConfigurationAggregatorsResponsePrivate
+ * \brief The DescribeConfigurationAggregatorsResponsePrivate class provides private implementation for DescribeConfigurationAggregatorsResponse.
  * \internal
  *
- * \class DescribeConfigurationAggregatorsResponsePrivate
- *
- * \brief Private implementation for DescribeConfigurationAggregatorsResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationAggregatorsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConfigurationAggregatorsResponse instance.
+ * Constructs a DescribeConfigurationAggregatorsResponsePrivate object with public implementation \a q.
  */
 DescribeConfigurationAggregatorsResponsePrivate::DescribeConfigurationAggregatorsResponsePrivate(
     DescribeConfigurationAggregatorsResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeConfigurationAggregatorsResponsePrivate::DescribeConfigurationAggregator
 }
 
 /*!
- * @brief  Parse an ConfigService DescribeConfigurationAggregatorsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribeConfigurationAggregators response element from \a xml.
  */
 void DescribeConfigurationAggregatorsResponsePrivate::parseDescribeConfigurationAggregatorsResponse(QXmlStreamReader &xml)
 {

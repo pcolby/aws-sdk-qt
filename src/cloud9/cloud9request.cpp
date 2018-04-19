@@ -49,7 +49,7 @@ namespace Cloud9 {
  */
 
 /*!
- * Constructs a[n] Cloud9Request object for Cloud9 \a action.
+ * Constructs a Cloud9Request object for Cloud9 \a action.
  */
 Cloud9Request::Cloud9Request(const Action action)
     : QtAws::Core::AwsAbstractRequest(new Cloud9RequestPrivate(action, this))
@@ -249,8 +249,8 @@ QNetworkRequest Cloud9Request::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a Cloud9RequestPrivate object for Cloud9 \a action with,
- * public implementation \a q.
+ * Constructs a Cloud9RequestPrivate object for Cloud9 \a action,
+ * with public implementation \a q.
  */
 Cloud9RequestPrivate::Cloud9RequestPrivate(const Cloud9Request::Action action, Cloud9Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

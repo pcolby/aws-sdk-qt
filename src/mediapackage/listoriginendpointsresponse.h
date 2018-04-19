@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListOriginEndpointsResponse : public MediaPackageResponse {
 public:
     ListOriginEndpointsResponse(const ListOriginEndpointsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListOriginEndpointsRequest * request() const;
+    virtual const ListOriginEndpointsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListOriginEndpointsResponse)

@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::DeleteActivityResponse
- *
  * \brief The DeleteActivityResponse class provides an interace for SFN DeleteActivity responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new DeleteActivityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteActivityResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteActivityResponse::DeleteActivityResponse(
         const DeleteActivityRequest &request,
@@ -74,6 +69,9 @@ DeleteActivityResponse::DeleteActivityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteActivityRequest * DeleteActivityResponse::request() const
 {
     Q_D(const DeleteActivityResponse);
@@ -81,9 +79,8 @@ const DeleteActivityRequest * DeleteActivityResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN DeleteActivity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN DeleteActivity \a response.
  */
 void DeleteActivityResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DeleteActivityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::DeleteActivityResponsePrivate
+ * \brief The DeleteActivityResponsePrivate class provides private implementation for DeleteActivityResponse.
  * \internal
  *
- * \class DeleteActivityResponsePrivate
- *
- * \brief Private implementation for DeleteActivityResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteActivityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteActivityResponse instance.
+ * Constructs a DeleteActivityResponsePrivate object with public implementation \a q.
  */
 DeleteActivityResponsePrivate::DeleteActivityResponsePrivate(
     DeleteActivityResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ DeleteActivityResponsePrivate::DeleteActivityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN DeleteActivityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN DeleteActivity response element from \a xml.
  */
 void DeleteActivityResponsePrivate::parseDeleteActivityResponse(QXmlStreamReader &xml)
 {

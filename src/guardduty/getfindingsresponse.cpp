@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetFindingsResponse
- *
  * \brief The GetFindingsResponse class provides an interace for GuardDuty GetFindings responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getFindings
  */
 
 /*!
- * @brief  Constructs a new GetFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFindingsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFindingsResponse::GetFindingsResponse(
         const GetFindingsRequest &request,
@@ -55,6 +50,9 @@ GetFindingsResponse::GetFindingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFindingsRequest * GetFindingsResponse::request() const
 {
     Q_D(const GetFindingsResponse);
@@ -62,9 +60,8 @@ const GetFindingsRequest * GetFindingsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty GetFindings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty GetFindings \a response.
  */
 void GetFindingsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetFindingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::GetFindingsResponsePrivate
+ * \brief The GetFindingsResponsePrivate class provides private implementation for GetFindingsResponse.
  * \internal
  *
- * \class GetFindingsResponsePrivate
- *
- * \brief Private implementation for GetFindingsResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFindingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFindingsResponse instance.
+ * Constructs a GetFindingsResponsePrivate object with public implementation \a q.
  */
 GetFindingsResponsePrivate::GetFindingsResponsePrivate(
     GetFindingsResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ GetFindingsResponsePrivate::GetFindingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty GetFindingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty GetFindings response element from \a xml.
  */
 void GetFindingsResponsePrivate::parseGetFindingsResponse(QXmlStreamReader &xml)
 {

@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetTranscriptionJobRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetTranscriptionJobRequestPrivate object for TranscribeService \a action with,
- * public implementation \a q.
+ * Constructs a GetTranscriptionJobRequestPrivate object for TranscribeService \a action,
+ * with public implementation \a q.
  */
 GetTranscriptionJobRequestPrivate::GetTranscriptionJobRequestPrivate(
     const TranscribeServiceRequest::Action action, GetTranscriptionJobRequest * const q)

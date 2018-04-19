@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteThingResponse
- *
  * \brief The DeleteThingResponse class provides an interace for IoT DeleteThing responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteThingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteThingResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteThingResponse::DeleteThingResponse(
         const DeleteThingRequest &request,
@@ -66,6 +61,9 @@ DeleteThingResponse::DeleteThingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteThingRequest * DeleteThingResponse::request() const
 {
     Q_D(const DeleteThingResponse);
@@ -73,9 +71,8 @@ const DeleteThingRequest * DeleteThingResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DeleteThing response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DeleteThing \a response.
  */
 void DeleteThingResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteThingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DeleteThingResponsePrivate
+ * \brief The DeleteThingResponsePrivate class provides private implementation for DeleteThingResponse.
  * \internal
  *
- * \class DeleteThingResponsePrivate
- *
- * \brief Private implementation for DeleteThingResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteThingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteThingResponse instance.
+ * Constructs a DeleteThingResponsePrivate object with public implementation \a q.
  */
 DeleteThingResponsePrivate::DeleteThingResponsePrivate(
     DeleteThingResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteThingResponsePrivate::DeleteThingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DeleteThingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DeleteThing response element from \a xml.
  */
 void DeleteThingResponsePrivate::parseDeleteThingResponse(QXmlStreamReader &xml)
 {

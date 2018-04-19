@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifySpotFleetRequestResponse
- *
  * \brief The ModifySpotFleetRequestResponse class provides an interace for EC2 ModifySpotFleetRequest responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifySpotFleetRequestResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifySpotFleetRequestResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifySpotFleetRequestResponse::ModifySpotFleetRequestResponse(
         const ModifySpotFleetRequestRequest &request,
@@ -59,6 +54,9 @@ ModifySpotFleetRequestResponse::ModifySpotFleetRequestResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifySpotFleetRequestRequest * ModifySpotFleetRequestResponse::request() const
 {
     Q_D(const ModifySpotFleetRequestResponse);
@@ -66,9 +64,8 @@ const ModifySpotFleetRequestRequest * ModifySpotFleetRequestResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 ModifySpotFleetRequest response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifySpotFleetRequest \a response.
  */
 void ModifySpotFleetRequestResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifySpotFleetRequestResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifySpotFleetRequestResponsePrivate
+ * \brief The ModifySpotFleetRequestResponsePrivate class provides private implementation for ModifySpotFleetRequestResponse.
  * \internal
  *
- * \class ModifySpotFleetRequestResponsePrivate
- *
- * \brief Private implementation for ModifySpotFleetRequestResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifySpotFleetRequestResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifySpotFleetRequestResponse instance.
+ * Constructs a ModifySpotFleetRequestResponsePrivate object with public implementation \a q.
  */
 ModifySpotFleetRequestResponsePrivate::ModifySpotFleetRequestResponsePrivate(
     ModifySpotFleetRequestResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifySpotFleetRequestResponsePrivate::ModifySpotFleetRequestResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifySpotFleetRequestResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifySpotFleetRequest response element from \a xml.
  */
 void ModifySpotFleetRequestResponsePrivate::parseModifySpotFleetRequestResponse(QXmlStreamReader &xml)
 {

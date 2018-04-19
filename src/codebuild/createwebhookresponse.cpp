@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::CreateWebhookResponse
- *
  * \brief The CreateWebhookResponse class provides an interace for CodeBuild CreateWebhook responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new CreateWebhookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateWebhookResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateWebhookResponse::CreateWebhookResponse(
         const CreateWebhookRequest &request,
@@ -135,6 +130,9 @@ CreateWebhookResponse::CreateWebhookResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateWebhookRequest * CreateWebhookResponse::request() const
 {
     Q_D(const CreateWebhookResponse);
@@ -142,9 +140,8 @@ const CreateWebhookRequest * CreateWebhookResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeBuild CreateWebhook response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild CreateWebhook \a response.
  */
 void CreateWebhookResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void CreateWebhookResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::CreateWebhookResponsePrivate
+ * \brief The CreateWebhookResponsePrivate class provides private implementation for CreateWebhookResponse.
  * \internal
  *
- * \class CreateWebhookResponsePrivate
- *
- * \brief Private implementation for CreateWebhookResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateWebhookResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateWebhookResponse instance.
+ * Constructs a CreateWebhookResponsePrivate object with public implementation \a q.
  */
 CreateWebhookResponsePrivate::CreateWebhookResponsePrivate(
     CreateWebhookResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ CreateWebhookResponsePrivate::CreateWebhookResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeBuild CreateWebhookResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild CreateWebhook response element from \a xml.
  */
 void CreateWebhookResponsePrivate::parseCreateWebhookResponse(QXmlStreamReader &xml)
 {

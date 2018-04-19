@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::PollForJobsResponse
- *
  * \brief The PollForJobsResponse class provides an interace for CodePipeline PollForJobs responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new PollForJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PollForJobsResponse object for \a reply to \a request, with parent \a parent.
  */
 PollForJobsResponse::PollForJobsResponse(
         const PollForJobsRequest &request,
@@ -218,6 +213,9 @@ PollForJobsResponse::PollForJobsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PollForJobsRequest * PollForJobsResponse::request() const
 {
     Q_D(const PollForJobsResponse);
@@ -225,9 +223,8 @@ const PollForJobsRequest * PollForJobsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodePipeline PollForJobs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline PollForJobs \a response.
  */
 void PollForJobsResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void PollForJobsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::PollForJobsResponsePrivate
+ * \brief The PollForJobsResponsePrivate class provides private implementation for PollForJobsResponse.
  * \internal
  *
- * \class PollForJobsResponsePrivate
- *
- * \brief Private implementation for PollForJobsResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PollForJobsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PollForJobsResponse instance.
+ * Constructs a PollForJobsResponsePrivate object with public implementation \a q.
  */
 PollForJobsResponsePrivate::PollForJobsResponsePrivate(
     PollForJobsResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ PollForJobsResponsePrivate::PollForJobsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline PollForJobsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline PollForJobs response element from \a xml.
  */
 void PollForJobsResponsePrivate::parsePollForJobsResponse(QXmlStreamReader &xml)
 {

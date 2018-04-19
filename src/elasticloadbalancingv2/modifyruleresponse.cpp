@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyRuleResponse
- *
  * \brief The ModifyRuleResponse class provides an interace for ElasticLoadBalancingv2 ModifyRule responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyRuleResponse::ModifyRuleResponse(
         const ModifyRuleRequest &request,
@@ -123,6 +118,9 @@ ModifyRuleResponse::ModifyRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyRuleRequest * ModifyRuleResponse::request() const
 {
     Q_D(const ModifyRuleResponse);
@@ -130,9 +128,8 @@ const ModifyRuleRequest * ModifyRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 ModifyRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 ModifyRule \a response.
  */
 void ModifyRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void ModifyRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::ModifyRuleResponsePrivate
+ * \brief The ModifyRuleResponsePrivate class provides private implementation for ModifyRuleResponse.
  * \internal
  *
- * \class ModifyRuleResponsePrivate
- *
- * \brief Private implementation for ModifyRuleResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyRuleResponse instance.
+ * Constructs a ModifyRuleResponsePrivate object with public implementation \a q.
  */
 ModifyRuleResponsePrivate::ModifyRuleResponsePrivate(
     ModifyRuleResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ ModifyRuleResponsePrivate::ModifyRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 ModifyRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 ModifyRule response element from \a xml.
  */
 void ModifyRuleResponsePrivate::parseModifyRuleResponse(QXmlStreamReader &xml)
 {

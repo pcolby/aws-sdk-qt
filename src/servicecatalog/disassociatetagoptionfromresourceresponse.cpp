@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DisassociateTagOptionFromResourceResponse
- *
  * \brief The DisassociateTagOptionFromResourceResponse class provides an interace for ServiceCatalog DisassociateTagOptionFromResource responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DisassociateTagOptionFromResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateTagOptionFromResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateTagOptionFromResourceResponse::DisassociateTagOptionFromResourceResponse(
         const DisassociateTagOptionFromResourceRequest &request,
@@ -61,6 +56,9 @@ DisassociateTagOptionFromResourceResponse::DisassociateTagOptionFromResourceResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateTagOptionFromResourceRequest * DisassociateTagOptionFromResourceResponse::request() const
 {
     Q_D(const DisassociateTagOptionFromResourceResponse);
@@ -68,9 +66,8 @@ const DisassociateTagOptionFromResourceRequest * DisassociateTagOptionFromResour
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DisassociateTagOptionFromResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DisassociateTagOptionFromResource \a response.
  */
 void DisassociateTagOptionFromResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DisassociateTagOptionFromResourceResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DisassociateTagOptionFromResourceResponsePrivate
+ * \brief The DisassociateTagOptionFromResourceResponsePrivate class provides private implementation for DisassociateTagOptionFromResourceResponse.
  * \internal
  *
- * \class DisassociateTagOptionFromResourceResponsePrivate
- *
- * \brief Private implementation for DisassociateTagOptionFromResourceResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateTagOptionFromResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateTagOptionFromResourceResponse instance.
+ * Constructs a DisassociateTagOptionFromResourceResponsePrivate object with public implementation \a q.
  */
 DisassociateTagOptionFromResourceResponsePrivate::DisassociateTagOptionFromResourceResponsePrivate(
     DisassociateTagOptionFromResourceResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DisassociateTagOptionFromResourceResponsePrivate::DisassociateTagOptionFromResou
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DisassociateTagOptionFromResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DisassociateTagOptionFromResource response element from \a xml.
  */
 void DisassociateTagOptionFromResourceResponsePrivate::parseDisassociateTagOptionFromResourceResponse(QXmlStreamReader &xml)
 {

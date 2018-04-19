@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListCreatedArtifactsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListCreatedArtifactsRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a ListCreatedArtifactsRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 ListCreatedArtifactsRequestPrivate::ListCreatedArtifactsRequestPrivate(
     const MigrationHubRequest::Action action, ListCreatedArtifactsRequest * const q)

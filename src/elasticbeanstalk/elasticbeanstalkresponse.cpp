@@ -28,16 +28,13 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::ElasticBeanstalkResponse
- *
  * \brief The ElasticBeanstalkResponse class provides an interface for ElasticBeanstalk responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @brief  Constructs a new ElasticBeanstalkResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ElasticBeanstalkResponse object with parent \a parent.
  */
 ElasticBeanstalkResponse::ElasticBeanstalkResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ElasticBeanstalkResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ElasticBeanstalkResponse::ElasticBeanstalkResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticBeanstalkResponse object.
- *
+ * \internal
+ * Constructs a ElasticBeanstalkResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElasticBeanstalkResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ElasticBeanstalkResponse::ElasticBeanstalkResponse(ElasticBeanstalkResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ElasticBeanstalkResponse::ElasticBeanstalkResponse(ElasticBeanstalkResponsePriva
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ElasticBeanstalkResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ElasticBeanstalkResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticBeanstalk::ElasticBeanstalkResponsePrivate
+ * \brief The ElasticBeanstalkResponsePrivate class provides private implementation for ElasticBeanstalkResponse.
+ * \internal
  *
- * @class  ElasticBeanstalkResponsePrivate
- *
- * @brief  Private implementation for ElasticBeanstalkResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticBeanstalkResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ElasticBeanstalkResponse instance.
+ * Constructs a ElasticBeanstalkResponsePrivate object with public implementation \a q.
  */
 ElasticBeanstalkResponsePrivate::ElasticBeanstalkResponsePrivate(
     ElasticBeanstalkResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

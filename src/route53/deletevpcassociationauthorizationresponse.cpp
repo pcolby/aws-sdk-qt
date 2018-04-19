@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DeleteVPCAssociationAuthorizationResponse
- *
  * \brief The DeleteVPCAssociationAuthorizationResponse class provides an interace for Route53 DeleteVPCAssociationAuthorization responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::deleteVPCAssociationAuthorization
  */
 
 /*!
- * @brief  Constructs a new DeleteVPCAssociationAuthorizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVPCAssociationAuthorizationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVPCAssociationAuthorizationResponse::DeleteVPCAssociationAuthorizationResponse(
         const DeleteVPCAssociationAuthorizationRequest &request,
@@ -55,6 +50,9 @@ DeleteVPCAssociationAuthorizationResponse::DeleteVPCAssociationAuthorizationResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVPCAssociationAuthorizationRequest * DeleteVPCAssociationAuthorizationResponse::request() const
 {
     Q_D(const DeleteVPCAssociationAuthorizationResponse);
@@ -62,9 +60,8 @@ const DeleteVPCAssociationAuthorizationRequest * DeleteVPCAssociationAuthorizati
 }
 
 /*!
- * @brief  Parse a Route53 DeleteVPCAssociationAuthorization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 DeleteVPCAssociationAuthorization \a response.
  */
 void DeleteVPCAssociationAuthorizationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteVPCAssociationAuthorizationResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::Route53::DeleteVPCAssociationAuthorizationResponsePrivate
+ * \brief The DeleteVPCAssociationAuthorizationResponsePrivate class provides private implementation for DeleteVPCAssociationAuthorizationResponse.
  * \internal
  *
- * \class DeleteVPCAssociationAuthorizationResponsePrivate
- *
- * \brief Private implementation for DeleteVPCAssociationAuthorizationResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVPCAssociationAuthorizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVPCAssociationAuthorizationResponse instance.
+ * Constructs a DeleteVPCAssociationAuthorizationResponsePrivate object with public implementation \a q.
  */
 DeleteVPCAssociationAuthorizationResponsePrivate::DeleteVPCAssociationAuthorizationResponsePrivate(
     DeleteVPCAssociationAuthorizationResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteVPCAssociationAuthorizationResponsePrivate::DeleteVPCAssociationAuthorizat
 }
 
 /*!
- * @brief  Parse an Route53 DeleteVPCAssociationAuthorizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 DeleteVPCAssociationAuthorization response element from \a xml.
  */
 void DeleteVPCAssociationAuthorizationResponsePrivate::parseDeleteVPCAssociationAuthorizationResponse(QXmlStreamReader &xml)
 {

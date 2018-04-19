@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreateConnectionResponse
- *
  * \brief The CreateConnectionResponse class provides an interace for DirectConnect CreateConnection responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreateConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateConnectionResponse::CreateConnectionResponse(
         const CreateConnectionRequest &request,
@@ -63,6 +58,9 @@ CreateConnectionResponse::CreateConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateConnectionRequest * CreateConnectionResponse::request() const
 {
     Q_D(const CreateConnectionResponse);
@@ -70,9 +68,8 @@ const CreateConnectionRequest * CreateConnectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect CreateConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect CreateConnection \a response.
  */
 void CreateConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void CreateConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::CreateConnectionResponsePrivate
+ * \brief The CreateConnectionResponsePrivate class provides private implementation for CreateConnectionResponse.
  * \internal
  *
- * \class CreateConnectionResponsePrivate
- *
- * \brief Private implementation for CreateConnectionResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateConnectionResponse instance.
+ * Constructs a CreateConnectionResponsePrivate object with public implementation \a q.
  */
 CreateConnectionResponsePrivate::CreateConnectionResponsePrivate(
     CreateConnectionResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ CreateConnectionResponsePrivate::CreateConnectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect CreateConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect CreateConnection response element from \a xml.
  */
 void CreateConnectionResponsePrivate::parseCreateConnectionResponse(QXmlStreamReader &xml)
 {

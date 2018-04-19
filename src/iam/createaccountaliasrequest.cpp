@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * CreateAccountAliasRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateAccountAliasRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a CreateAccountAliasRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 CreateAccountAliasRequestPrivate::CreateAccountAliasRequestPrivate(
     const IAMRequest::Action action, CreateAccountAliasRequest * const q)

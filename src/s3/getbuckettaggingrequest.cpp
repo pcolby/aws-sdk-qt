@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketTaggingRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetBucketTaggingRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketTaggingRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketTaggingRequestPrivate::GetBucketTaggingRequestPrivate(
     const S3Request::Action action, GetBucketTaggingRequest * const q)

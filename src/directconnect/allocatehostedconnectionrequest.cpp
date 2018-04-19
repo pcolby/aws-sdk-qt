@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * AllocateHostedConnectionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a AllocateHostedConnectionRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a AllocateHostedConnectionRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 AllocateHostedConnectionRequestPrivate::AllocateHostedConnectionRequestPrivate(
     const DirectConnectRequest::Action action, AllocateHostedConnectionRequest * const q)

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteSnapshotRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSnapshotRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteSnapshotRequest * const q)

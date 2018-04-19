@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SearchDevicesResponse
- *
  * \brief The SearchDevicesResponse class provides an interace for AlexaForBusiness SearchDevices responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SearchDevicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SearchDevicesResponse object for \a reply to \a request, with parent \a parent.
  */
 SearchDevicesResponse::SearchDevicesResponse(
         const SearchDevicesRequest &request,
@@ -60,6 +55,9 @@ SearchDevicesResponse::SearchDevicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SearchDevicesRequest * SearchDevicesResponse::request() const
 {
     Q_D(const SearchDevicesResponse);
@@ -67,9 +65,8 @@ const SearchDevicesRequest * SearchDevicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness SearchDevices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness SearchDevices \a response.
  */
 void SearchDevicesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void SearchDevicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::SearchDevicesResponsePrivate
+ * \brief The SearchDevicesResponsePrivate class provides private implementation for SearchDevicesResponse.
  * \internal
  *
- * \class SearchDevicesResponsePrivate
- *
- * \brief Private implementation for SearchDevicesResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchDevicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SearchDevicesResponse instance.
+ * Constructs a SearchDevicesResponsePrivate object with public implementation \a q.
  */
 SearchDevicesResponsePrivate::SearchDevicesResponsePrivate(
     SearchDevicesResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ SearchDevicesResponsePrivate::SearchDevicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness SearchDevicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness SearchDevices response element from \a xml.
  */
 void SearchDevicesResponsePrivate::parseSearchDevicesResponse(QXmlStreamReader &xml)
 {

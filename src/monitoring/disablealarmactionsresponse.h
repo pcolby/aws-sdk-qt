@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisableAlarmActionsResponse : public CloudWatchResponse {
 public:
     DisableAlarmActionsResponse(const DisableAlarmActionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisableAlarmActionsRequest * request() const;
+    virtual const DisableAlarmActionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisableAlarmActionsResponse)

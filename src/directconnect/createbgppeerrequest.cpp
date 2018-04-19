@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * CreateBGPPeerRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateBGPPeerRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a CreateBGPPeerRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 CreateBGPPeerRequestPrivate::CreateBGPPeerRequestPrivate(
     const DirectConnectRequest::Action action, CreateBGPPeerRequest * const q)

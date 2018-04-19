@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::AttachInstancesResponse
- *
  * \brief The AttachInstancesResponse class provides an interace for AutoScaling AttachInstances responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new AttachInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachInstancesResponse::AttachInstancesResponse(
         const AttachInstancesRequest &request,
@@ -60,6 +55,9 @@ AttachInstancesResponse::AttachInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachInstancesRequest * AttachInstancesResponse::request() const
 {
     Q_D(const AttachInstancesResponse);
@@ -67,9 +65,8 @@ const AttachInstancesRequest * AttachInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling AttachInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling AttachInstances \a response.
  */
 void AttachInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void AttachInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::AttachInstancesResponsePrivate
+ * \brief The AttachInstancesResponsePrivate class provides private implementation for AttachInstancesResponse.
  * \internal
  *
- * \class AttachInstancesResponsePrivate
- *
- * \brief Private implementation for AttachInstancesResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachInstancesResponse instance.
+ * Constructs a AttachInstancesResponsePrivate object with public implementation \a q.
  */
 AttachInstancesResponsePrivate::AttachInstancesResponsePrivate(
     AttachInstancesResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ AttachInstancesResponsePrivate::AttachInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling AttachInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling AttachInstances response element from \a xml.
  */
 void AttachInstancesResponsePrivate::parseAttachInstancesResponse(QXmlStreamReader &xml)
 {

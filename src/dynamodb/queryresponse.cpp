@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::QueryResponse
- *
  * \brief The QueryResponse class provides an interace for DynamoDB Query responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new QueryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a QueryResponse object for \a reply to \a request, with parent \a parent.
  */
 QueryResponse::QueryResponse(
         const QueryRequest &request,
@@ -74,6 +69,9 @@ QueryResponse::QueryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const QueryRequest * QueryResponse::request() const
 {
     Q_D(const QueryResponse);
@@ -81,9 +79,8 @@ const QueryRequest * QueryResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB Query response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB Query \a response.
  */
 void QueryResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void QueryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::QueryResponsePrivate
+ * \brief The QueryResponsePrivate class provides private implementation for QueryResponse.
  * \internal
  *
- * \class QueryResponsePrivate
- *
- * \brief Private implementation for QueryResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new QueryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public QueryResponse instance.
+ * Constructs a QueryResponsePrivate object with public implementation \a q.
  */
 QueryResponsePrivate::QueryResponsePrivate(
     QueryResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ QueryResponsePrivate::QueryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB QueryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB Query response element from \a xml.
  */
 void QueryResponsePrivate::parseQueryResponse(QXmlStreamReader &xml)
 {

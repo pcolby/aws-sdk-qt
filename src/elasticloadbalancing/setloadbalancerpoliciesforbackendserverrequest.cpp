@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * SetLoadBalancerPoliciesForBackendServerReques
  */
 
 /*!
- *
- * Constructs a SetLoadBalancerPoliciesForBackendServerRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a SetLoadBalancerPoliciesForBackendServerRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 SetLoadBalancerPoliciesForBackendServerRequestPrivate::SetLoadBalancerPoliciesForBackendServerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, SetLoadBalancerPoliciesForBackendServerRequest * const q)

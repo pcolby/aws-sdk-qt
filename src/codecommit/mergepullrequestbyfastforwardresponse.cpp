@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::MergePullRequestByFastForwardResponse
- *
  * \brief The MergePullRequestByFastForwardResponse class provides an interace for CodeCommit MergePullRequestByFastForward responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new MergePullRequestByFastForwardResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a MergePullRequestByFastForwardResponse object for \a reply to \a request, with parent \a parent.
  */
 MergePullRequestByFastForwardResponse::MergePullRequestByFastForwardResponse(
         const MergePullRequestByFastForwardRequest &request,
@@ -245,6 +240,9 @@ MergePullRequestByFastForwardResponse::MergePullRequestByFastForwardResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const MergePullRequestByFastForwardRequest * MergePullRequestByFastForwardResponse::request() const
 {
     Q_D(const MergePullRequestByFastForwardResponse);
@@ -252,9 +250,8 @@ const MergePullRequestByFastForwardRequest * MergePullRequestByFastForwardRespon
 }
 
 /*!
- * @brief  Parse a CodeCommit MergePullRequestByFastForward response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit MergePullRequestByFastForward \a response.
  */
 void MergePullRequestByFastForwardResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void MergePullRequestByFastForwardResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::MergePullRequestByFastForwardResponsePrivate
+ * \brief The MergePullRequestByFastForwardResponsePrivate class provides private implementation for MergePullRequestByFastForwardResponse.
  * \internal
  *
- * \class MergePullRequestByFastForwardResponsePrivate
- *
- * \brief Private implementation for MergePullRequestByFastForwardResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MergePullRequestByFastForwardResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MergePullRequestByFastForwardResponse instance.
+ * Constructs a MergePullRequestByFastForwardResponsePrivate object with public implementation \a q.
  */
 MergePullRequestByFastForwardResponsePrivate::MergePullRequestByFastForwardResponsePrivate(
     MergePullRequestByFastForwardResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ MergePullRequestByFastForwardResponsePrivate::MergePullRequestByFastForwardRespo
 }
 
 /*!
- * @brief  Parse an CodeCommit MergePullRequestByFastForwardResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit MergePullRequestByFastForward response element from \a xml.
  */
 void MergePullRequestByFastForwardResponsePrivate::parseMergePullRequestByFastForwardResponse(QXmlStreamReader &xml)
 {

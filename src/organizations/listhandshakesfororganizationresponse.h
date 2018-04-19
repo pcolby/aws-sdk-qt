@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListHandshakesForOrganizationResponse : public OrganizationsR
 public:
     ListHandshakesForOrganizationResponse(const ListHandshakesForOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListHandshakesForOrganizationRequest * request() const;
+    virtual const ListHandshakesForOrganizationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListHandshakesForOrganizationResponse)

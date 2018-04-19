@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * SetDesiredCapacityRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a SetDesiredCapacityRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a SetDesiredCapacityRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 SetDesiredCapacityRequestPrivate::SetDesiredCapacityRequestPrivate(
     const AutoScalingRequest::Action action, SetDesiredCapacityRequest * const q)

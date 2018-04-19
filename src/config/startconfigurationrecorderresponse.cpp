@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::StartConfigurationRecorderResponse
- *
  * \brief The StartConfigurationRecorderResponse class provides an interace for ConfigService StartConfigurationRecorder responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new StartConfigurationRecorderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartConfigurationRecorderResponse object for \a reply to \a request, with parent \a parent.
  */
 StartConfigurationRecorderResponse::StartConfigurationRecorderResponse(
         const StartConfigurationRecorderRequest &request,
@@ -78,6 +73,9 @@ StartConfigurationRecorderResponse::StartConfigurationRecorderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartConfigurationRecorderRequest * StartConfigurationRecorderResponse::request() const
 {
     Q_D(const StartConfigurationRecorderResponse);
@@ -85,9 +83,8 @@ const StartConfigurationRecorderRequest * StartConfigurationRecorderResponse::re
 }
 
 /*!
- * @brief  Parse a ConfigService StartConfigurationRecorder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService StartConfigurationRecorder \a response.
  */
 void StartConfigurationRecorderResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void StartConfigurationRecorderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::StartConfigurationRecorderResponsePrivate
+ * \brief The StartConfigurationRecorderResponsePrivate class provides private implementation for StartConfigurationRecorderResponse.
  * \internal
  *
- * \class StartConfigurationRecorderResponsePrivate
- *
- * \brief Private implementation for StartConfigurationRecorderResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartConfigurationRecorderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartConfigurationRecorderResponse instance.
+ * Constructs a StartConfigurationRecorderResponsePrivate object with public implementation \a q.
  */
 StartConfigurationRecorderResponsePrivate::StartConfigurationRecorderResponsePrivate(
     StartConfigurationRecorderResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ StartConfigurationRecorderResponsePrivate::StartConfigurationRecorderResponsePri
 }
 
 /*!
- * @brief  Parse an ConfigService StartConfigurationRecorderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService StartConfigurationRecorder response element from \a xml.
  */
 void StartConfigurationRecorderResponsePrivate::parseStartConfigurationRecorderResponse(QXmlStreamReader &xml)
 {

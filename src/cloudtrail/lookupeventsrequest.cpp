@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * LookupEventsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a LookupEventsRequestPrivate object for CloudTrail \a action with,
- * public implementation \a q.
+ * Constructs a LookupEventsRequestPrivate object for CloudTrail \a action,
+ * with public implementation \a q.
  */
 LookupEventsRequestPrivate::LookupEventsRequestPrivate(
     const CloudTrailRequest::Action action, LookupEventsRequest * const q)

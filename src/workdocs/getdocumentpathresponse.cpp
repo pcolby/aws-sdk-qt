@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::GetDocumentPathResponse
- *
  * \brief The GetDocumentPathResponse class provides an interace for WorkDocs GetDocumentPath responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new GetDocumentPathResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDocumentPathResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDocumentPathResponse::GetDocumentPathResponse(
         const GetDocumentPathRequest &request,
@@ -84,6 +79,9 @@ GetDocumentPathResponse::GetDocumentPathResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDocumentPathRequest * GetDocumentPathResponse::request() const
 {
     Q_D(const GetDocumentPathResponse);
@@ -91,9 +89,8 @@ const GetDocumentPathRequest * GetDocumentPathResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs GetDocumentPath response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs GetDocumentPath \a response.
  */
 void GetDocumentPathResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void GetDocumentPathResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::GetDocumentPathResponsePrivate
+ * \brief The GetDocumentPathResponsePrivate class provides private implementation for GetDocumentPathResponse.
  * \internal
  *
- * \class GetDocumentPathResponsePrivate
- *
- * \brief Private implementation for GetDocumentPathResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDocumentPathResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDocumentPathResponse instance.
+ * Constructs a GetDocumentPathResponsePrivate object with public implementation \a q.
  */
 GetDocumentPathResponsePrivate::GetDocumentPathResponsePrivate(
     GetDocumentPathResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ GetDocumentPathResponsePrivate::GetDocumentPathResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs GetDocumentPathResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs GetDocumentPath response element from \a xml.
  */
 void GetDocumentPathResponsePrivate::parseGetDocumentPathResponse(QXmlStreamReader &xml)
 {

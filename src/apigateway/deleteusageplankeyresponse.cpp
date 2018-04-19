@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteUsagePlanKeyResponse
- *
  * \brief The DeleteUsagePlanKeyResponse class provides an interace for APIGateway DeleteUsagePlanKey responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteUsagePlanKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteUsagePlanKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteUsagePlanKeyResponse::DeleteUsagePlanKeyResponse(
         const DeleteUsagePlanKeyRequest &request,
@@ -60,6 +55,9 @@ DeleteUsagePlanKeyResponse::DeleteUsagePlanKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteUsagePlanKeyRequest * DeleteUsagePlanKeyResponse::request() const
 {
     Q_D(const DeleteUsagePlanKeyResponse);
@@ -67,9 +65,8 @@ const DeleteUsagePlanKeyRequest * DeleteUsagePlanKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteUsagePlanKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteUsagePlanKey \a response.
  */
 void DeleteUsagePlanKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteUsagePlanKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteUsagePlanKeyResponsePrivate
+ * \brief The DeleteUsagePlanKeyResponsePrivate class provides private implementation for DeleteUsagePlanKeyResponse.
  * \internal
  *
- * \class DeleteUsagePlanKeyResponsePrivate
- *
- * \brief Private implementation for DeleteUsagePlanKeyResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUsagePlanKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteUsagePlanKeyResponse instance.
+ * Constructs a DeleteUsagePlanKeyResponsePrivate object with public implementation \a q.
  */
 DeleteUsagePlanKeyResponsePrivate::DeleteUsagePlanKeyResponsePrivate(
     DeleteUsagePlanKeyResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteUsagePlanKeyResponsePrivate::DeleteUsagePlanKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteUsagePlanKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteUsagePlanKey response element from \a xml.
  */
 void DeleteUsagePlanKeyResponsePrivate::parseDeleteUsagePlanKeyResponse(QXmlStreamReader &xml)
 {

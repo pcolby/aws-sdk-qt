@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::TransferCertificateResponse
- *
  * \brief The TransferCertificateResponse class provides an interace for IoT TransferCertificate responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new TransferCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TransferCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 TransferCertificateResponse::TransferCertificateResponse(
         const TransferCertificateRequest &request,
@@ -66,6 +61,9 @@ TransferCertificateResponse::TransferCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TransferCertificateRequest * TransferCertificateResponse::request() const
 {
     Q_D(const TransferCertificateResponse);
@@ -73,9 +71,8 @@ const TransferCertificateRequest * TransferCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT TransferCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT TransferCertificate \a response.
  */
 void TransferCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void TransferCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::TransferCertificateResponsePrivate
+ * \brief The TransferCertificateResponsePrivate class provides private implementation for TransferCertificateResponse.
  * \internal
  *
- * \class TransferCertificateResponsePrivate
- *
- * \brief Private implementation for TransferCertificateResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TransferCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TransferCertificateResponse instance.
+ * Constructs a TransferCertificateResponsePrivate object with public implementation \a q.
  */
 TransferCertificateResponsePrivate::TransferCertificateResponsePrivate(
     TransferCertificateResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ TransferCertificateResponsePrivate::TransferCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT TransferCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT TransferCertificate response element from \a xml.
  */
 void TransferCertificateResponsePrivate::parseTransferCertificateResponse(QXmlStreamReader &xml)
 {

@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * EnableSnapshotCopyRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a EnableSnapshotCopyRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a EnableSnapshotCopyRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 EnableSnapshotCopyRequestPrivate::EnableSnapshotCopyRequestPrivate(
     const RedshiftRequest::Action action, EnableSnapshotCopyRequest * const q)

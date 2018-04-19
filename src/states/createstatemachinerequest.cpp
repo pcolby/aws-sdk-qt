@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * CreateStateMachineRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateStateMachineRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a CreateStateMachineRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 CreateStateMachineRequestPrivate::CreateStateMachineRequestPrivate(
     const SFNRequest::Action action, CreateStateMachineRequest * const q)

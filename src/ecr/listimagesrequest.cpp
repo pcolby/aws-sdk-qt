@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ListImagesRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ListImagesRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a ListImagesRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 ListImagesRequestPrivate::ListImagesRequestPrivate(
     const ECRRequest::Action action, ListImagesRequest * const q)

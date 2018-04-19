@@ -29,10 +29,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::GetComplianceDetailResponse
- *
  * \brief The GetComplianceDetailResponse class provides an interace for FMS GetComplianceDetail responses.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -45,11 +44,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new GetComplianceDetailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetComplianceDetailResponse object for \a reply to \a request, with parent \a parent.
  */
 GetComplianceDetailResponse::GetComplianceDetailResponse(
         const GetComplianceDetailRequest &request,
@@ -61,6 +56,9 @@ GetComplianceDetailResponse::GetComplianceDetailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetComplianceDetailRequest * GetComplianceDetailResponse::request() const
 {
     Q_D(const GetComplianceDetailResponse);
@@ -68,9 +66,8 @@ const GetComplianceDetailRequest * GetComplianceDetailResponse::request() const
 }
 
 /*!
- * @brief  Parse a FMS GetComplianceDetail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful FMS GetComplianceDetail \a response.
  */
 void GetComplianceDetailResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void GetComplianceDetailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::FMS::GetComplianceDetailResponsePrivate
+ * \brief The GetComplianceDetailResponsePrivate class provides private implementation for GetComplianceDetailResponse.
  * \internal
  *
- * \class GetComplianceDetailResponsePrivate
- *
- * \brief Private implementation for GetComplianceDetailResponse.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetComplianceDetailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetComplianceDetailResponse instance.
+ * Constructs a GetComplianceDetailResponsePrivate object with public implementation \a q.
  */
 GetComplianceDetailResponsePrivate::GetComplianceDetailResponsePrivate(
     GetComplianceDetailResponse * const q) : FMSResponsePrivate(q)
@@ -101,9 +94,7 @@ GetComplianceDetailResponsePrivate::GetComplianceDetailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an FMS GetComplianceDetailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a FMS GetComplianceDetail response element from \a xml.
  */
 void GetComplianceDetailResponsePrivate::parseGetComplianceDetailResponse(QXmlStreamReader &xml)
 {

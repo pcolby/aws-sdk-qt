@@ -28,16 +28,13 @@ namespace KinesisVideoMedia {
 
 /*!
  * \class QtAws::KinesisVideoMedia::KinesisVideoMediaResponse
- *
  * \brief The KinesisVideoMediaResponse class provides an interface for KinesisVideoMedia responses.
  *
- * \ingroup KinesisVideoMedia
+ * \inmodule QtAwsKinesisVideoMedia
  */
 
 /*!
- * @brief  Constructs a new KinesisVideoMediaResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a KinesisVideoMediaResponse object with parent \a parent.
  */
 KinesisVideoMediaResponse::KinesisVideoMediaResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new KinesisVideoMediaResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ KinesisVideoMediaResponse::KinesisVideoMediaResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisVideoMediaResponse object.
- *
+ * \internal
+ * Constructs a KinesisVideoMediaResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisVideoMediaResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 KinesisVideoMediaResponse::KinesisVideoMediaResponse(KinesisVideoMediaResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ KinesisVideoMediaResponse::KinesisVideoMediaResponse(KinesisVideoMediaResponsePr
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void KinesisVideoMediaResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void KinesisVideoMediaResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideoMedia::KinesisVideoMediaResponsePrivate
+ * \brief The KinesisVideoMediaResponsePrivate class provides private implementation for KinesisVideoMediaResponse.
+ * \internal
  *
- * @class  KinesisVideoMediaResponsePrivate
- *
- * @brief  Private implementation for KinesisVideoMediaResponse.
+ * \inmodule QtAwsKinesisVideoMedia
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisVideoMediaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public KinesisVideoMediaResponse instance.
+ * Constructs a KinesisVideoMediaResponsePrivate object with public implementation \a q.
  */
 KinesisVideoMediaResponsePrivate::KinesisVideoMediaResponsePrivate(
     KinesisVideoMediaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

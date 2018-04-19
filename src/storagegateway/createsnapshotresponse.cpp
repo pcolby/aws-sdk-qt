@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateSnapshotResponse
- *
  * \brief The CreateSnapshotResponse class provides an interace for StorageGateway CreateSnapshot responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSnapshotResponse::CreateSnapshotResponse(
         const CreateSnapshotRequest &request,
@@ -124,6 +119,9 @@ CreateSnapshotResponse::CreateSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSnapshotRequest * CreateSnapshotResponse::request() const
 {
     Q_D(const CreateSnapshotResponse);
@@ -131,9 +129,8 @@ const CreateSnapshotRequest * CreateSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway CreateSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway CreateSnapshot \a response.
  */
 void CreateSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void CreateSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::CreateSnapshotResponsePrivate
+ * \brief The CreateSnapshotResponsePrivate class provides private implementation for CreateSnapshotResponse.
  * \internal
  *
- * \class CreateSnapshotResponsePrivate
- *
- * \brief Private implementation for CreateSnapshotResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSnapshotResponse instance.
+ * Constructs a CreateSnapshotResponsePrivate object with public implementation \a q.
  */
 CreateSnapshotResponsePrivate::CreateSnapshotResponsePrivate(
     CreateSnapshotResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ CreateSnapshotResponsePrivate::CreateSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway CreateSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway CreateSnapshot response element from \a xml.
  */
 void CreateSnapshotResponsePrivate::parseCreateSnapshotResponse(QXmlStreamReader &xml)
 {

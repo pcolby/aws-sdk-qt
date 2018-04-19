@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::SuspendProcessesResponse
- *
  * \brief The SuspendProcessesResponse class provides an interace for AutoScaling SuspendProcesses responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new SuspendProcessesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SuspendProcessesResponse object for \a reply to \a request, with parent \a parent.
  */
 SuspendProcessesResponse::SuspendProcessesResponse(
         const SuspendProcessesRequest &request,
@@ -60,6 +55,9 @@ SuspendProcessesResponse::SuspendProcessesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SuspendProcessesRequest * SuspendProcessesResponse::request() const
 {
     Q_D(const SuspendProcessesResponse);
@@ -67,9 +65,8 @@ const SuspendProcessesRequest * SuspendProcessesResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling SuspendProcesses response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling SuspendProcesses \a response.
  */
 void SuspendProcessesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void SuspendProcessesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::SuspendProcessesResponsePrivate
+ * \brief The SuspendProcessesResponsePrivate class provides private implementation for SuspendProcessesResponse.
  * \internal
  *
- * \class SuspendProcessesResponsePrivate
- *
- * \brief Private implementation for SuspendProcessesResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SuspendProcessesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SuspendProcessesResponse instance.
+ * Constructs a SuspendProcessesResponsePrivate object with public implementation \a q.
  */
 SuspendProcessesResponsePrivate::SuspendProcessesResponsePrivate(
     SuspendProcessesResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ SuspendProcessesResponsePrivate::SuspendProcessesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling SuspendProcessesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling SuspendProcesses response element from \a xml.
  */
 void SuspendProcessesResponsePrivate::parseSuspendProcessesResponse(QXmlStreamReader &xml)
 {

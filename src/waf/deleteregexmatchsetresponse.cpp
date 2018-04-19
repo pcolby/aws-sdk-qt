@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeleteRegexMatchSetResponse
- *
  * \brief The DeleteRegexMatchSetResponse class provides an interace for WAF DeleteRegexMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeleteRegexMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRegexMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRegexMatchSetResponse::DeleteRegexMatchSetResponse(
         const DeleteRegexMatchSetRequest &request,
@@ -60,6 +55,9 @@ DeleteRegexMatchSetResponse::DeleteRegexMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRegexMatchSetRequest * DeleteRegexMatchSetResponse::request() const
 {
     Q_D(const DeleteRegexMatchSetResponse);
@@ -67,9 +65,8 @@ const DeleteRegexMatchSetRequest * DeleteRegexMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF DeleteRegexMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF DeleteRegexMatchSet \a response.
  */
 void DeleteRegexMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteRegexMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::DeleteRegexMatchSetResponsePrivate
+ * \brief The DeleteRegexMatchSetResponsePrivate class provides private implementation for DeleteRegexMatchSetResponse.
  * \internal
  *
- * \class DeleteRegexMatchSetResponsePrivate
- *
- * \brief Private implementation for DeleteRegexMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRegexMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRegexMatchSetResponse instance.
+ * Constructs a DeleteRegexMatchSetResponsePrivate object with public implementation \a q.
  */
 DeleteRegexMatchSetResponsePrivate::DeleteRegexMatchSetResponsePrivate(
     DeleteRegexMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteRegexMatchSetResponsePrivate::DeleteRegexMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF DeleteRegexMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF DeleteRegexMatchSet response element from \a xml.
  */
 void DeleteRegexMatchSetResponsePrivate::parseDeleteRegexMatchSetResponse(QXmlStreamReader &xml)
 {

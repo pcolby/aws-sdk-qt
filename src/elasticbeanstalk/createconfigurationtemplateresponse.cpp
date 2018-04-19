@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::CreateConfigurationTemplateResponse
- *
  * \brief The CreateConfigurationTemplateResponse class provides an interace for ElasticBeanstalk CreateConfigurationTemplate responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new CreateConfigurationTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateConfigurationTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateConfigurationTemplateResponse::CreateConfigurationTemplateResponse(
         const CreateConfigurationTemplateRequest &request,
@@ -77,6 +72,9 @@ CreateConfigurationTemplateResponse::CreateConfigurationTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateConfigurationTemplateRequest * CreateConfigurationTemplateResponse::request() const
 {
     Q_D(const CreateConfigurationTemplateResponse);
@@ -84,9 +82,8 @@ const CreateConfigurationTemplateRequest * CreateConfigurationTemplateResponse::
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk CreateConfigurationTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk CreateConfigurationTemplate \a response.
  */
 void CreateConfigurationTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void CreateConfigurationTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::CreateConfigurationTemplateResponsePrivate
+ * \brief The CreateConfigurationTemplateResponsePrivate class provides private implementation for CreateConfigurationTemplateResponse.
  * \internal
  *
- * \class CreateConfigurationTemplateResponsePrivate
- *
- * \brief Private implementation for CreateConfigurationTemplateResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConfigurationTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateConfigurationTemplateResponse instance.
+ * Constructs a CreateConfigurationTemplateResponsePrivate object with public implementation \a q.
  */
 CreateConfigurationTemplateResponsePrivate::CreateConfigurationTemplateResponsePrivate(
     CreateConfigurationTemplateResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ CreateConfigurationTemplateResponsePrivate::CreateConfigurationTemplateResponseP
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk CreateConfigurationTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk CreateConfigurationTemplate response element from \a xml.
  */
 void CreateConfigurationTemplateResponsePrivate::parseCreateConfigurationTemplateResponse(QXmlStreamReader &xml)
 {

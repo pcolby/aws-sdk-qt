@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateSnapshotResponse
- *
  * \brief The CreateSnapshotResponse class provides an interace for EC2 CreateSnapshot responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSnapshotResponse::CreateSnapshotResponse(
         const CreateSnapshotRequest &request,
@@ -59,6 +54,9 @@ CreateSnapshotResponse::CreateSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSnapshotRequest * CreateSnapshotResponse::request() const
 {
     Q_D(const CreateSnapshotResponse);
@@ -66,9 +64,8 @@ const CreateSnapshotRequest * CreateSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateSnapshot \a response.
  */
 void CreateSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateSnapshotResponsePrivate
+ * \brief The CreateSnapshotResponsePrivate class provides private implementation for CreateSnapshotResponse.
  * \internal
  *
- * \class CreateSnapshotResponsePrivate
- *
- * \brief Private implementation for CreateSnapshotResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSnapshotResponse instance.
+ * Constructs a CreateSnapshotResponsePrivate object with public implementation \a q.
  */
 CreateSnapshotResponsePrivate::CreateSnapshotResponsePrivate(
     CreateSnapshotResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateSnapshotResponsePrivate::CreateSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateSnapshot response element from \a xml.
  */
 void CreateSnapshotResponsePrivate::parseCreateSnapshotResponse(QXmlStreamReader &xml)
 {

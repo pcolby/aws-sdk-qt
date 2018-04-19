@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * CreatePrivateVirtualInterfaceRequest::respons
  */
 
 /*!
- *
- * Constructs a CreatePrivateVirtualInterfaceRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a CreatePrivateVirtualInterfaceRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 CreatePrivateVirtualInterfaceRequestPrivate::CreatePrivateVirtualInterfaceRequestPrivate(
     const DirectConnectRequest::Action action, CreatePrivateVirtualInterfaceRequest * const q)

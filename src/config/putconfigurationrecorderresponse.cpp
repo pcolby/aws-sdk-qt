@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutConfigurationRecorderResponse
- *
  * \brief The PutConfigurationRecorderResponse class provides an interace for ConfigService PutConfigurationRecorder responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutConfigurationRecorderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutConfigurationRecorderResponse object for \a reply to \a request, with parent \a parent.
  */
 PutConfigurationRecorderResponse::PutConfigurationRecorderResponse(
         const PutConfigurationRecorderRequest &request,
@@ -78,6 +73,9 @@ PutConfigurationRecorderResponse::PutConfigurationRecorderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutConfigurationRecorderRequest * PutConfigurationRecorderResponse::request() const
 {
     Q_D(const PutConfigurationRecorderResponse);
@@ -85,9 +83,8 @@ const PutConfigurationRecorderRequest * PutConfigurationRecorderResponse::reques
 }
 
 /*!
- * @brief  Parse a ConfigService PutConfigurationRecorder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService PutConfigurationRecorder \a response.
  */
 void PutConfigurationRecorderResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void PutConfigurationRecorderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::PutConfigurationRecorderResponsePrivate
+ * \brief The PutConfigurationRecorderResponsePrivate class provides private implementation for PutConfigurationRecorderResponse.
  * \internal
  *
- * \class PutConfigurationRecorderResponsePrivate
- *
- * \brief Private implementation for PutConfigurationRecorderResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutConfigurationRecorderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutConfigurationRecorderResponse instance.
+ * Constructs a PutConfigurationRecorderResponsePrivate object with public implementation \a q.
  */
 PutConfigurationRecorderResponsePrivate::PutConfigurationRecorderResponsePrivate(
     PutConfigurationRecorderResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ PutConfigurationRecorderResponsePrivate::PutConfigurationRecorderResponsePrivate
 }
 
 /*!
- * @brief  Parse an ConfigService PutConfigurationRecorderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService PutConfigurationRecorder response element from \a xml.
  */
 void PutConfigurationRecorderResponsePrivate::parsePutConfigurationRecorderResponse(QXmlStreamReader &xml)
 {

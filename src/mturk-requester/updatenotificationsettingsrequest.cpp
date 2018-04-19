@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateNotificationSettingsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a UpdateNotificationSettingsRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a UpdateNotificationSettingsRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 UpdateNotificationSettingsRequestPrivate::UpdateNotificationSettingsRequestPrivate(
     const MTurkRequest::Action action, UpdateNotificationSettingsRequest * const q)

@@ -29,10 +29,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeCommunicationsResponse
- *
  * \brief The DescribeCommunicationsResponse class provides an interace for Support DescribeCommunications responses.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -107,11 +106,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeCommunicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCommunicationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCommunicationsResponse::DescribeCommunicationsResponse(
         const DescribeCommunicationsRequest &request,
@@ -123,6 +118,9 @@ DescribeCommunicationsResponse::DescribeCommunicationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCommunicationsRequest * DescribeCommunicationsResponse::request() const
 {
     Q_D(const DescribeCommunicationsResponse);
@@ -130,9 +128,8 @@ const DescribeCommunicationsRequest * DescribeCommunicationsResponse::request() 
 }
 
 /*!
- * @brief  Parse a Support DescribeCommunications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Support DescribeCommunications \a response.
  */
 void DescribeCommunicationsResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeCommunicationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Support::DescribeCommunicationsResponsePrivate
+ * \brief The DescribeCommunicationsResponsePrivate class provides private implementation for DescribeCommunicationsResponse.
  * \internal
  *
- * \class DescribeCommunicationsResponsePrivate
- *
- * \brief Private implementation for DescribeCommunicationsResponse.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCommunicationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCommunicationsResponse instance.
+ * Constructs a DescribeCommunicationsResponsePrivate object with public implementation \a q.
  */
 DescribeCommunicationsResponsePrivate::DescribeCommunicationsResponsePrivate(
     DescribeCommunicationsResponse * const q) : SupportResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeCommunicationsResponsePrivate::DescribeCommunicationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Support DescribeCommunicationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Support DescribeCommunications response element from \a xml.
  */
 void DescribeCommunicationsResponsePrivate::parseDescribeCommunicationsResponse(QXmlStreamReader &xml)
 {

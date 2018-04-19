@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AddUserToGroupResponse
- *
  * \brief The AddUserToGroupResponse class provides an interace for IAM AddUserToGroup responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AddUserToGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddUserToGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 AddUserToGroupResponse::AddUserToGroupResponse(
         const AddUserToGroupRequest &request,
@@ -120,6 +115,9 @@ AddUserToGroupResponse::AddUserToGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddUserToGroupRequest * AddUserToGroupResponse::request() const
 {
     Q_D(const AddUserToGroupResponse);
@@ -127,9 +125,8 @@ const AddUserToGroupRequest * AddUserToGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM AddUserToGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM AddUserToGroup \a response.
  */
 void AddUserToGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void AddUserToGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::AddUserToGroupResponsePrivate
+ * \brief The AddUserToGroupResponsePrivate class provides private implementation for AddUserToGroupResponse.
  * \internal
  *
- * \class AddUserToGroupResponsePrivate
- *
- * \brief Private implementation for AddUserToGroupResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddUserToGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddUserToGroupResponse instance.
+ * Constructs a AddUserToGroupResponsePrivate object with public implementation \a q.
  */
 AddUserToGroupResponsePrivate::AddUserToGroupResponsePrivate(
     AddUserToGroupResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ AddUserToGroupResponsePrivate::AddUserToGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM AddUserToGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM AddUserToGroup response element from \a xml.
  */
 void AddUserToGroupResponsePrivate::parseAddUserToGroupResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListKeysResponse
- *
  * \brief The ListKeysResponse class provides an interace for KMS ListKeys responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListKeysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListKeysResponse object for \a reply to \a request, with parent \a parent.
  */
 ListKeysResponse::ListKeysResponse(
         const ListKeysRequest &request,
@@ -154,6 +149,9 @@ ListKeysResponse::ListKeysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListKeysRequest * ListKeysResponse::request() const
 {
     Q_D(const ListKeysResponse);
@@ -161,9 +159,8 @@ const ListKeysRequest * ListKeysResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS ListKeys response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS ListKeys \a response.
  */
 void ListKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void ListKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::ListKeysResponsePrivate
+ * \brief The ListKeysResponsePrivate class provides private implementation for ListKeysResponse.
  * \internal
  *
- * \class ListKeysResponsePrivate
- *
- * \brief Private implementation for ListKeysResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListKeysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListKeysResponse instance.
+ * Constructs a ListKeysResponsePrivate object with public implementation \a q.
  */
 ListKeysResponsePrivate::ListKeysResponsePrivate(
     ListKeysResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ ListKeysResponsePrivate::ListKeysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS ListKeysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS ListKeys response element from \a xml.
  */
 void ListKeysResponsePrivate::parseListKeysResponse(QXmlStreamReader &xml)
 {

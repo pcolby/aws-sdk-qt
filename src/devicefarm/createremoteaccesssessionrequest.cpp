@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * CreateRemoteAccessSessionRequest::response(QN
  */
 
 /*!
- *
- * Constructs a CreateRemoteAccessSessionRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a CreateRemoteAccessSessionRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 CreateRemoteAccessSessionRequestPrivate::CreateRemoteAccessSessionRequestPrivate(
     const DeviceFarmRequest::Action action, CreateRemoteAccessSessionRequest * const q)

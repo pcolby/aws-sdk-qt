@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetInvitationsCountResponse : public GuardDutyResponse {
 public:
     GetInvitationsCountResponse(const GetInvitationsCountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetInvitationsCountRequest * request() const;
+    virtual const GetInvitationsCountRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetInvitationsCountResponse)

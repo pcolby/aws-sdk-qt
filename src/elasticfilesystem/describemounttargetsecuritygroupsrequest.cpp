@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeMountTargetSecurityGroupsRequest::res
  */
 
 /*!
- *
- * Constructs a DescribeMountTargetSecurityGroupsRequestPrivate object for EFS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeMountTargetSecurityGroupsRequestPrivate object for EFS \a action,
+ * with public implementation \a q.
  */
 DescribeMountTargetSecurityGroupsRequestPrivate::DescribeMountTargetSecurityGroupsRequestPrivate(
     const EFSRequest::Action action, DescribeMountTargetSecurityGroupsRequest * const q)

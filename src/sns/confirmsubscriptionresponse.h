@@ -34,10 +34,10 @@ class QTAWS_EXPORT ConfirmSubscriptionResponse : public SNSResponse {
 public:
     ConfirmSubscriptionResponse(const ConfirmSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ConfirmSubscriptionRequest * request() const;
+    virtual const ConfirmSubscriptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ConfirmSubscriptionResponse)

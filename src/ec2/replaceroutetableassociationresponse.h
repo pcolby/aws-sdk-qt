@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReplaceRouteTableAssociationResponse : public EC2Response {
 public:
     ReplaceRouteTableAssociationResponse(const ReplaceRouteTableAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReplaceRouteTableAssociationRequest * request() const;
+    virtual const ReplaceRouteTableAssociationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ReplaceRouteTableAssociationResponse)

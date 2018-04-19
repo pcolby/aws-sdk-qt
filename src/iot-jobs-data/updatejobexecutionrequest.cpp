@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * UpdateJobExecutionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateJobExecutionRequestPrivate object for IoTJobsDataPlane \a action with,
- * public implementation \a q.
+ * Constructs a UpdateJobExecutionRequestPrivate object for IoTJobsDataPlane \a action,
+ * with public implementation \a q.
  */
 UpdateJobExecutionRequestPrivate::UpdateJobExecutionRequestPrivate(
     const IoTJobsDataPlaneRequest::Action action, UpdateJobExecutionRequest * const q)

@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * AssociateConfigurationItemsToApplicationReque
  */
 
 /*!
- *
- * Constructs a AssociateConfigurationItemsToApplicationRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a AssociateConfigurationItemsToApplicationRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 AssociateConfigurationItemsToApplicationRequestPrivate::AssociateConfigurationItemsToApplicationRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, AssociateConfigurationItemsToApplicationRequest * const q)

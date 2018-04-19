@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterParameterGroupRequest::response(
  */
 
 /*!
- *
- * Constructs a DeleteClusterParameterGroupRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteClusterParameterGroupRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DeleteClusterParameterGroupRequestPrivate::DeleteClusterParameterGroupRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterParameterGroupRequest * const q)

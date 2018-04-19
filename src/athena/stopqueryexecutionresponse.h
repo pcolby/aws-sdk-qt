@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopQueryExecutionResponse : public AthenaResponse {
 public:
     StopQueryExecutionResponse(const StopQueryExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopQueryExecutionRequest * request() const;
+    virtual const StopQueryExecutionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopQueryExecutionResponse)

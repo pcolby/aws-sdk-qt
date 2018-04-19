@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::DisableRuleResponse
- *
  * \brief The DisableRuleResponse class provides an interace for CloudWatchEvents DisableRule responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new DisableRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableRuleResponse::DisableRuleResponse(
         const DisableRuleRequest &request,
@@ -78,6 +73,9 @@ DisableRuleResponse::DisableRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableRuleRequest * DisableRuleResponse::request() const
 {
     Q_D(const DisableRuleResponse);
@@ -85,9 +83,8 @@ const DisableRuleRequest * DisableRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents DisableRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents DisableRule \a response.
  */
 void DisableRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DisableRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::DisableRuleResponsePrivate
+ * \brief The DisableRuleResponsePrivate class provides private implementation for DisableRuleResponse.
  * \internal
  *
- * \class DisableRuleResponsePrivate
- *
- * \brief Private implementation for DisableRuleResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableRuleResponse instance.
+ * Constructs a DisableRuleResponsePrivate object with public implementation \a q.
  */
 DisableRuleResponsePrivate::DisableRuleResponsePrivate(
     DisableRuleResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ DisableRuleResponsePrivate::DisableRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents DisableRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents DisableRule response element from \a xml.
  */
 void DisableRuleResponsePrivate::parseDisableRuleResponse(QXmlStreamReader &xml)
 {

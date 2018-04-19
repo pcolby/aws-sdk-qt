@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancePatchesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeInstancePatchesRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInstancePatchesRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeInstancePatchesRequestPrivate::DescribeInstancePatchesRequestPrivate(
     const SSMRequest::Action action, DescribeInstancePatchesRequest * const q)

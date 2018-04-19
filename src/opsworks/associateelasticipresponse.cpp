@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::AssociateElasticIpResponse
- *
  * \brief The AssociateElasticIpResponse class provides an interace for OpsWorks AssociateElasticIp responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new AssociateElasticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateElasticIpResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateElasticIpResponse::AssociateElasticIpResponse(
         const AssociateElasticIpRequest &request,
@@ -161,6 +156,9 @@ AssociateElasticIpResponse::AssociateElasticIpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateElasticIpRequest * AssociateElasticIpResponse::request() const
 {
     Q_D(const AssociateElasticIpResponse);
@@ -168,9 +166,8 @@ const AssociateElasticIpRequest * AssociateElasticIpResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks AssociateElasticIp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks AssociateElasticIp \a response.
  */
 void AssociateElasticIpResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void AssociateElasticIpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::AssociateElasticIpResponsePrivate
+ * \brief The AssociateElasticIpResponsePrivate class provides private implementation for AssociateElasticIpResponse.
  * \internal
  *
- * \class AssociateElasticIpResponsePrivate
- *
- * \brief Private implementation for AssociateElasticIpResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateElasticIpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateElasticIpResponse instance.
+ * Constructs a AssociateElasticIpResponsePrivate object with public implementation \a q.
  */
 AssociateElasticIpResponsePrivate::AssociateElasticIpResponsePrivate(
     AssociateElasticIpResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ AssociateElasticIpResponsePrivate::AssociateElasticIpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks AssociateElasticIpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks AssociateElasticIp response element from \a xml.
  */
 void AssociateElasticIpResponsePrivate::parseAssociateElasticIpResponse(QXmlStreamReader &xml)
 {

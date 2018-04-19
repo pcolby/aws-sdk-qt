@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteVolumeResponse : public StorageGatewayResponse {
 public:
     DeleteVolumeResponse(const DeleteVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteVolumeRequest * request() const;
+    virtual const DeleteVolumeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteVolumeResponse)

@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceStatusRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateDeviceStatusRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDeviceStatusRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 UpdateDeviceStatusRequestPrivate::UpdateDeviceStatusRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateDeviceStatusRequest * const q)

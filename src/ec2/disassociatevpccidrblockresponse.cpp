@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisassociateVpcCidrBlockResponse
- *
  * \brief The DisassociateVpcCidrBlockResponse class provides an interace for EC2 DisassociateVpcCidrBlock responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisassociateVpcCidrBlockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateVpcCidrBlockResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateVpcCidrBlockResponse::DisassociateVpcCidrBlockResponse(
         const DisassociateVpcCidrBlockRequest &request,
@@ -59,6 +54,9 @@ DisassociateVpcCidrBlockResponse::DisassociateVpcCidrBlockResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateVpcCidrBlockRequest * DisassociateVpcCidrBlockResponse::request() const
 {
     Q_D(const DisassociateVpcCidrBlockResponse);
@@ -66,9 +64,8 @@ const DisassociateVpcCidrBlockRequest * DisassociateVpcCidrBlockResponse::reques
 }
 
 /*!
- * @brief  Parse a EC2 DisassociateVpcCidrBlock response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DisassociateVpcCidrBlock \a response.
  */
 void DisassociateVpcCidrBlockResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DisassociateVpcCidrBlockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DisassociateVpcCidrBlockResponsePrivate
+ * \brief The DisassociateVpcCidrBlockResponsePrivate class provides private implementation for DisassociateVpcCidrBlockResponse.
  * \internal
  *
- * \class DisassociateVpcCidrBlockResponsePrivate
- *
- * \brief Private implementation for DisassociateVpcCidrBlockResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateVpcCidrBlockResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateVpcCidrBlockResponse instance.
+ * Constructs a DisassociateVpcCidrBlockResponsePrivate object with public implementation \a q.
  */
 DisassociateVpcCidrBlockResponsePrivate::DisassociateVpcCidrBlockResponsePrivate(
     DisassociateVpcCidrBlockResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DisassociateVpcCidrBlockResponsePrivate::DisassociateVpcCidrBlockResponsePrivate
 }
 
 /*!
- * @brief  Parse an EC2 DisassociateVpcCidrBlockResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DisassociateVpcCidrBlock response element from \a xml.
  */
 void DisassociateVpcCidrBlockResponsePrivate::parseDisassociateVpcCidrBlockResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSegmentVersionsResponse : public PinpointResponse {
 public:
     GetSegmentVersionsResponse(const GetSegmentVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSegmentVersionsRequest * request() const;
+    virtual const GetSegmentVersionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSegmentVersionsResponse)

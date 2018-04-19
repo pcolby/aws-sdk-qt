@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ImportCatalogToGlueRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ImportCatalogToGlueRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a ImportCatalogToGlueRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 ImportCatalogToGlueRequestPrivate::ImportCatalogToGlueRequestPrivate(
     const GlueRequest::Action action, ImportCatalogToGlueRequest * const q)

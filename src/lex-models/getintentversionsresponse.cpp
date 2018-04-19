@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetIntentVersionsResponse
- *
  * \brief The GetIntentVersionsResponse class provides an interace for LexModelBuildingService GetIntentVersions responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetIntentVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetIntentVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetIntentVersionsResponse::GetIntentVersionsResponse(
         const GetIntentVersionsRequest &request,
@@ -59,6 +54,9 @@ GetIntentVersionsResponse::GetIntentVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetIntentVersionsRequest * GetIntentVersionsResponse::request() const
 {
     Q_D(const GetIntentVersionsResponse);
@@ -66,9 +64,8 @@ const GetIntentVersionsRequest * GetIntentVersionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService GetIntentVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService GetIntentVersions \a response.
  */
 void GetIntentVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetIntentVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::GetIntentVersionsResponsePrivate
+ * \brief The GetIntentVersionsResponsePrivate class provides private implementation for GetIntentVersionsResponse.
  * \internal
  *
- * \class GetIntentVersionsResponsePrivate
- *
- * \brief Private implementation for GetIntentVersionsResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIntentVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetIntentVersionsResponse instance.
+ * Constructs a GetIntentVersionsResponsePrivate object with public implementation \a q.
  */
 GetIntentVersionsResponsePrivate::GetIntentVersionsResponsePrivate(
     GetIntentVersionsResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ GetIntentVersionsResponsePrivate::GetIntentVersionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService GetIntentVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService GetIntentVersions response element from \a xml.
  */
 void GetIntentVersionsResponsePrivate::parseGetIntentVersionsResponse(QXmlStreamReader &xml)
 {

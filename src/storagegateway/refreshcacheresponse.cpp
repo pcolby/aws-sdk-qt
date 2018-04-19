@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::RefreshCacheResponse
- *
  * \brief The RefreshCacheResponse class provides an interace for StorageGateway RefreshCache responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new RefreshCacheResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RefreshCacheResponse object for \a reply to \a request, with parent \a parent.
  */
 RefreshCacheResponse::RefreshCacheResponse(
         const RefreshCacheRequest &request,
@@ -124,6 +119,9 @@ RefreshCacheResponse::RefreshCacheResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RefreshCacheRequest * RefreshCacheResponse::request() const
 {
     Q_D(const RefreshCacheResponse);
@@ -131,9 +129,8 @@ const RefreshCacheRequest * RefreshCacheResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway RefreshCache response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway RefreshCache \a response.
  */
 void RefreshCacheResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void RefreshCacheResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::RefreshCacheResponsePrivate
+ * \brief The RefreshCacheResponsePrivate class provides private implementation for RefreshCacheResponse.
  * \internal
  *
- * \class RefreshCacheResponsePrivate
- *
- * \brief Private implementation for RefreshCacheResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RefreshCacheResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RefreshCacheResponse instance.
+ * Constructs a RefreshCacheResponsePrivate object with public implementation \a q.
  */
 RefreshCacheResponsePrivate::RefreshCacheResponsePrivate(
     RefreshCacheResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ RefreshCacheResponsePrivate::RefreshCacheResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway RefreshCacheResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway RefreshCache response element from \a xml.
  */
 void RefreshCacheResponsePrivate::parseRefreshCacheResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveRoleFromInstanceProfileResponse : public IAMResponse {
 public:
     RemoveRoleFromInstanceProfileResponse(const RemoveRoleFromInstanceProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveRoleFromInstanceProfileRequest * request() const;
+    virtual const RemoveRoleFromInstanceProfileRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RemoveRoleFromInstanceProfileResponse)

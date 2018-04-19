@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ChangeTagsForResourceRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ChangeTagsForResourceRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a ChangeTagsForResourceRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 ChangeTagsForResourceRequestPrivate::ChangeTagsForResourceRequestPrivate(
     const Route53Request::Action action, ChangeTagsForResourceRequest * const q)

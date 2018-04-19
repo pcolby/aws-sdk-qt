@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListMigrationTasksResponse : public MigrationHubResponse {
 public:
     ListMigrationTasksResponse(const ListMigrationTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListMigrationTasksRequest * request() const;
+    virtual const ListMigrationTasksRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListMigrationTasksResponse)

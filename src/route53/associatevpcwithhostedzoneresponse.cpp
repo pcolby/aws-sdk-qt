@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::AssociateVPCWithHostedZoneResponse
- *
  * \brief The AssociateVPCWithHostedZoneResponse class provides an interace for Route53 AssociateVPCWithHostedZone responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::associateVPCWithHostedZone
  */
 
 /*!
- * @brief  Constructs a new AssociateVPCWithHostedZoneResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateVPCWithHostedZoneResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateVPCWithHostedZoneResponse::AssociateVPCWithHostedZoneResponse(
         const AssociateVPCWithHostedZoneRequest &request,
@@ -55,6 +50,9 @@ AssociateVPCWithHostedZoneResponse::AssociateVPCWithHostedZoneResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateVPCWithHostedZoneRequest * AssociateVPCWithHostedZoneResponse::request() const
 {
     Q_D(const AssociateVPCWithHostedZoneResponse);
@@ -62,9 +60,8 @@ const AssociateVPCWithHostedZoneRequest * AssociateVPCWithHostedZoneResponse::re
 }
 
 /*!
- * @brief  Parse a Route53 AssociateVPCWithHostedZone response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 AssociateVPCWithHostedZone \a response.
  */
 void AssociateVPCWithHostedZoneResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void AssociateVPCWithHostedZoneResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::AssociateVPCWithHostedZoneResponsePrivate
+ * \brief The AssociateVPCWithHostedZoneResponsePrivate class provides private implementation for AssociateVPCWithHostedZoneResponse.
  * \internal
  *
- * \class AssociateVPCWithHostedZoneResponsePrivate
- *
- * \brief Private implementation for AssociateVPCWithHostedZoneResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateVPCWithHostedZoneResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateVPCWithHostedZoneResponse instance.
+ * Constructs a AssociateVPCWithHostedZoneResponsePrivate object with public implementation \a q.
  */
 AssociateVPCWithHostedZoneResponsePrivate::AssociateVPCWithHostedZoneResponsePrivate(
     AssociateVPCWithHostedZoneResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ AssociateVPCWithHostedZoneResponsePrivate::AssociateVPCWithHostedZoneResponsePri
 }
 
 /*!
- * @brief  Parse an Route53 AssociateVPCWithHostedZoneResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 AssociateVPCWithHostedZone response element from \a xml.
  */
 void AssociateVPCWithHostedZoneResponsePrivate::parseAssociateVPCWithHostedZoneResponse(QXmlStreamReader &xml)
 {

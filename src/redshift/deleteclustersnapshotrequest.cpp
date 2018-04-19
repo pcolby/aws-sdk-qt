@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterSnapshotRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteClusterSnapshotRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteClusterSnapshotRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DeleteClusterSnapshotRequestPrivate::DeleteClusterSnapshotRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterSnapshotRequest * const q)

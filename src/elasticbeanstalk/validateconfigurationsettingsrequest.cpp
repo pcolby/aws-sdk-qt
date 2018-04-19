@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * ValidateConfigurationSettingsRequest::respons
  */
 
 /*!
- *
- * Constructs a ValidateConfigurationSettingsRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a ValidateConfigurationSettingsRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 ValidateConfigurationSettingsRequestPrivate::ValidateConfigurationSettingsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, ValidateConfigurationSettingsRequest * const q)

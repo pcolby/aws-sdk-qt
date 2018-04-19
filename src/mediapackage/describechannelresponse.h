@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeChannelResponse : public MediaPackageResponse {
 public:
     DescribeChannelResponse(const DescribeChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeChannelRequest * request() const;
+    virtual const DescribeChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeChannelResponse)

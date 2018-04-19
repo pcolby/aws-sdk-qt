@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::CreateVpcPeeringAuthorizationResponse
- *
  * \brief The CreateVpcPeeringAuthorizationResponse class provides an interace for GameLift CreateVpcPeeringAuthorization responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new CreateVpcPeeringAuthorizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateVpcPeeringAuthorizationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateVpcPeeringAuthorizationResponse::CreateVpcPeeringAuthorizationResponse(
         const CreateVpcPeeringAuthorizationRequest &request,
@@ -491,6 +486,9 @@ CreateVpcPeeringAuthorizationResponse::CreateVpcPeeringAuthorizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateVpcPeeringAuthorizationRequest * CreateVpcPeeringAuthorizationResponse::request() const
 {
     Q_D(const CreateVpcPeeringAuthorizationResponse);
@@ -498,9 +496,8 @@ const CreateVpcPeeringAuthorizationRequest * CreateVpcPeeringAuthorizationRespon
 }
 
 /*!
- * @brief  Parse a GameLift CreateVpcPeeringAuthorization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift CreateVpcPeeringAuthorization \a response.
  */
 void CreateVpcPeeringAuthorizationResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void CreateVpcPeeringAuthorizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::CreateVpcPeeringAuthorizationResponsePrivate
+ * \brief The CreateVpcPeeringAuthorizationResponsePrivate class provides private implementation for CreateVpcPeeringAuthorizationResponse.
  * \internal
  *
- * \class CreateVpcPeeringAuthorizationResponsePrivate
- *
- * \brief Private implementation for CreateVpcPeeringAuthorizationResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpcPeeringAuthorizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateVpcPeeringAuthorizationResponse instance.
+ * Constructs a CreateVpcPeeringAuthorizationResponsePrivate object with public implementation \a q.
  */
 CreateVpcPeeringAuthorizationResponsePrivate::CreateVpcPeeringAuthorizationResponsePrivate(
     CreateVpcPeeringAuthorizationResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ CreateVpcPeeringAuthorizationResponsePrivate::CreateVpcPeeringAuthorizationRespo
 }
 
 /*!
- * @brief  Parse an GameLift CreateVpcPeeringAuthorizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift CreateVpcPeeringAuthorization response element from \a xml.
  */
 void CreateVpcPeeringAuthorizationResponsePrivate::parseCreateVpcPeeringAuthorizationResponse(QXmlStreamReader &xml)
 {

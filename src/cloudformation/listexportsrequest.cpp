@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * ListExportsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListExportsRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a ListExportsRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 ListExportsRequestPrivate::ListExportsRequestPrivate(
     const CloudFormationRequest::Action action, ListExportsRequest * const q)

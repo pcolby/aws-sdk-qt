@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListSqlInjectionMatchSetsResponse
- *
  * \brief The ListSqlInjectionMatchSetsResponse class provides an interace for WAFRegional ListSqlInjectionMatchSets responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListSqlInjectionMatchSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSqlInjectionMatchSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSqlInjectionMatchSetsResponse::ListSqlInjectionMatchSetsResponse(
         const ListSqlInjectionMatchSetsRequest &request,
@@ -62,6 +57,9 @@ ListSqlInjectionMatchSetsResponse::ListSqlInjectionMatchSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSqlInjectionMatchSetsRequest * ListSqlInjectionMatchSetsResponse::request() const
 {
     Q_D(const ListSqlInjectionMatchSetsResponse);
@@ -69,9 +67,8 @@ const ListSqlInjectionMatchSetsRequest * ListSqlInjectionMatchSetsResponse::requ
 }
 
 /*!
- * @brief  Parse a WAFRegional ListSqlInjectionMatchSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional ListSqlInjectionMatchSets \a response.
  */
 void ListSqlInjectionMatchSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListSqlInjectionMatchSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::ListSqlInjectionMatchSetsResponsePrivate
+ * \brief The ListSqlInjectionMatchSetsResponsePrivate class provides private implementation for ListSqlInjectionMatchSetsResponse.
  * \internal
  *
- * \class ListSqlInjectionMatchSetsResponsePrivate
- *
- * \brief Private implementation for ListSqlInjectionMatchSetsResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSqlInjectionMatchSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSqlInjectionMatchSetsResponse instance.
+ * Constructs a ListSqlInjectionMatchSetsResponsePrivate object with public implementation \a q.
  */
 ListSqlInjectionMatchSetsResponsePrivate::ListSqlInjectionMatchSetsResponsePrivate(
     ListSqlInjectionMatchSetsResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ ListSqlInjectionMatchSetsResponsePrivate::ListSqlInjectionMatchSetsResponsePriva
 }
 
 /*!
- * @brief  Parse an WAFRegional ListSqlInjectionMatchSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional ListSqlInjectionMatchSets response element from \a xml.
  */
 void ListSqlInjectionMatchSetsResponsePrivate::parseListSqlInjectionMatchSetsResponse(QXmlStreamReader &xml)
 {

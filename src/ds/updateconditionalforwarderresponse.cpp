@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::UpdateConditionalForwarderResponse
- *
  * \brief The UpdateConditionalForwarderResponse class provides an interace for DirectoryService UpdateConditionalForwarder responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new UpdateConditionalForwarderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateConditionalForwarderResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateConditionalForwarderResponse::UpdateConditionalForwarderResponse(
         const UpdateConditionalForwarderRequest &request,
@@ -69,6 +64,9 @@ UpdateConditionalForwarderResponse::UpdateConditionalForwarderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateConditionalForwarderRequest * UpdateConditionalForwarderResponse::request() const
 {
     Q_D(const UpdateConditionalForwarderResponse);
@@ -76,9 +74,8 @@ const UpdateConditionalForwarderRequest * UpdateConditionalForwarderResponse::re
 }
 
 /*!
- * @brief  Parse a DirectoryService UpdateConditionalForwarder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService UpdateConditionalForwarder \a response.
  */
 void UpdateConditionalForwarderResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void UpdateConditionalForwarderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::UpdateConditionalForwarderResponsePrivate
+ * \brief The UpdateConditionalForwarderResponsePrivate class provides private implementation for UpdateConditionalForwarderResponse.
  * \internal
  *
- * \class UpdateConditionalForwarderResponsePrivate
- *
- * \brief Private implementation for UpdateConditionalForwarderResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConditionalForwarderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateConditionalForwarderResponse instance.
+ * Constructs a UpdateConditionalForwarderResponsePrivate object with public implementation \a q.
  */
 UpdateConditionalForwarderResponsePrivate::UpdateConditionalForwarderResponsePrivate(
     UpdateConditionalForwarderResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ UpdateConditionalForwarderResponsePrivate::UpdateConditionalForwarderResponsePri
 }
 
 /*!
- * @brief  Parse an DirectoryService UpdateConditionalForwarderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService UpdateConditionalForwarder response element from \a xml.
  */
 void UpdateConditionalForwarderResponsePrivate::parseUpdateConditionalForwarderResponse(QXmlStreamReader &xml)
 {

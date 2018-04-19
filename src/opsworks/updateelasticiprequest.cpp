@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * UpdateElasticIpRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a UpdateElasticIpRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a UpdateElasticIpRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 UpdateElasticIpRequestPrivate::UpdateElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, UpdateElasticIpRequest * const q)

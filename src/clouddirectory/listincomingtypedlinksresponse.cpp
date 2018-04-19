@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListIncomingTypedLinksResponse
- *
  * \brief The ListIncomingTypedLinksResponse class provides an interace for CloudDirectory ListIncomingTypedLinks responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListIncomingTypedLinksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListIncomingTypedLinksResponse object for \a reply to \a request, with parent \a parent.
  */
 ListIncomingTypedLinksResponse::ListIncomingTypedLinksResponse(
         const ListIncomingTypedLinksRequest &request,
@@ -62,6 +57,9 @@ ListIncomingTypedLinksResponse::ListIncomingTypedLinksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListIncomingTypedLinksRequest * ListIncomingTypedLinksResponse::request() const
 {
     Q_D(const ListIncomingTypedLinksResponse);
@@ -69,9 +67,8 @@ const ListIncomingTypedLinksRequest * ListIncomingTypedLinksResponse::request() 
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListIncomingTypedLinks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListIncomingTypedLinks \a response.
  */
 void ListIncomingTypedLinksResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListIncomingTypedLinksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListIncomingTypedLinksResponsePrivate
+ * \brief The ListIncomingTypedLinksResponsePrivate class provides private implementation for ListIncomingTypedLinksResponse.
  * \internal
  *
- * \class ListIncomingTypedLinksResponsePrivate
- *
- * \brief Private implementation for ListIncomingTypedLinksResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIncomingTypedLinksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListIncomingTypedLinksResponse instance.
+ * Constructs a ListIncomingTypedLinksResponsePrivate object with public implementation \a q.
  */
 ListIncomingTypedLinksResponsePrivate::ListIncomingTypedLinksResponsePrivate(
     ListIncomingTypedLinksResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListIncomingTypedLinksResponsePrivate::ListIncomingTypedLinksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListIncomingTypedLinksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListIncomingTypedLinks response element from \a xml.
  */
 void ListIncomingTypedLinksResponsePrivate::parseListIncomingTypedLinksResponse(QXmlStreamReader &xml)
 {

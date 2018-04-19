@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DeleteBatchPredictionResponse
- *
  * \brief The DeleteBatchPredictionResponse class provides an interace for MachineLearning DeleteBatchPrediction responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::deleteBatchPrediction
  */
 
 /*!
- * @brief  Constructs a new DeleteBatchPredictionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBatchPredictionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBatchPredictionResponse::DeleteBatchPredictionResponse(
         const DeleteBatchPredictionRequest &request,
@@ -55,6 +50,9 @@ DeleteBatchPredictionResponse::DeleteBatchPredictionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBatchPredictionRequest * DeleteBatchPredictionResponse::request() const
 {
     Q_D(const DeleteBatchPredictionResponse);
@@ -62,9 +60,8 @@ const DeleteBatchPredictionRequest * DeleteBatchPredictionResponse::request() co
 }
 
 /*!
- * @brief  Parse a MachineLearning DeleteBatchPrediction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning DeleteBatchPrediction \a response.
  */
 void DeleteBatchPredictionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteBatchPredictionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::DeleteBatchPredictionResponsePrivate
+ * \brief The DeleteBatchPredictionResponsePrivate class provides private implementation for DeleteBatchPredictionResponse.
  * \internal
  *
- * \class DeleteBatchPredictionResponsePrivate
- *
- * \brief Private implementation for DeleteBatchPredictionResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBatchPredictionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBatchPredictionResponse instance.
+ * Constructs a DeleteBatchPredictionResponsePrivate object with public implementation \a q.
  */
 DeleteBatchPredictionResponsePrivate::DeleteBatchPredictionResponsePrivate(
     DeleteBatchPredictionResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteBatchPredictionResponsePrivate::DeleteBatchPredictionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning DeleteBatchPredictionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning DeleteBatchPrediction response element from \a xml.
  */
 void DeleteBatchPredictionResponsePrivate::parseDeleteBatchPredictionResponse(QXmlStreamReader &xml)
 {

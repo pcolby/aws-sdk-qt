@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListResourcesForTagOptionResponse
- *
  * \brief The ListResourcesForTagOptionResponse class provides an interace for ServiceCatalog ListResourcesForTagOption responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListResourcesForTagOptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListResourcesForTagOptionResponse object for \a reply to \a request, with parent \a parent.
  */
 ListResourcesForTagOptionResponse::ListResourcesForTagOptionResponse(
         const ListResourcesForTagOptionRequest &request,
@@ -61,6 +56,9 @@ ListResourcesForTagOptionResponse::ListResourcesForTagOptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListResourcesForTagOptionRequest * ListResourcesForTagOptionResponse::request() const
 {
     Q_D(const ListResourcesForTagOptionResponse);
@@ -68,9 +66,8 @@ const ListResourcesForTagOptionRequest * ListResourcesForTagOptionResponse::requ
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ListResourcesForTagOption response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ListResourcesForTagOption \a response.
  */
 void ListResourcesForTagOptionResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListResourcesForTagOptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ListResourcesForTagOptionResponsePrivate
+ * \brief The ListResourcesForTagOptionResponsePrivate class provides private implementation for ListResourcesForTagOptionResponse.
  * \internal
  *
- * \class ListResourcesForTagOptionResponsePrivate
- *
- * \brief Private implementation for ListResourcesForTagOptionResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourcesForTagOptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListResourcesForTagOptionResponse instance.
+ * Constructs a ListResourcesForTagOptionResponsePrivate object with public implementation \a q.
  */
 ListResourcesForTagOptionResponsePrivate::ListResourcesForTagOptionResponsePrivate(
     ListResourcesForTagOptionResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ListResourcesForTagOptionResponsePrivate::ListResourcesForTagOptionResponsePriva
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ListResourcesForTagOptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ListResourcesForTagOption response element from \a xml.
  */
 void ListResourcesForTagOptionResponsePrivate::parseListResourcesForTagOptionResponse(QXmlStreamReader &xml)
 {

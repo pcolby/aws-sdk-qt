@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::CreateMultipartUploadResponse
- *
  * \brief The CreateMultipartUploadResponse class provides an interace for S3 CreateMultipartUpload responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::createMultipartUpload
  */
 
 /*!
- * @brief  Constructs a new CreateMultipartUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateMultipartUploadResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateMultipartUploadResponse::CreateMultipartUploadResponse(
         const CreateMultipartUploadRequest &request,
@@ -55,6 +50,9 @@ CreateMultipartUploadResponse::CreateMultipartUploadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateMultipartUploadRequest * CreateMultipartUploadResponse::request() const
 {
     Q_D(const CreateMultipartUploadResponse);
@@ -62,9 +60,8 @@ const CreateMultipartUploadRequest * CreateMultipartUploadResponse::request() co
 }
 
 /*!
- * @brief  Parse a S3 CreateMultipartUpload response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 CreateMultipartUpload \a response.
  */
 void CreateMultipartUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateMultipartUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::CreateMultipartUploadResponsePrivate
+ * \brief The CreateMultipartUploadResponsePrivate class provides private implementation for CreateMultipartUploadResponse.
  * \internal
  *
- * \class CreateMultipartUploadResponsePrivate
- *
- * \brief Private implementation for CreateMultipartUploadResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMultipartUploadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateMultipartUploadResponse instance.
+ * Constructs a CreateMultipartUploadResponsePrivate object with public implementation \a q.
  */
 CreateMultipartUploadResponsePrivate::CreateMultipartUploadResponsePrivate(
     CreateMultipartUploadResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateMultipartUploadResponsePrivate::CreateMultipartUploadResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 CreateMultipartUploadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 CreateMultipartUpload response element from \a xml.
  */
 void CreateMultipartUploadResponsePrivate::parseCreateMultipartUploadResponse(QXmlStreamReader &xml)
 {

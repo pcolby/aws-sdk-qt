@@ -45,7 +45,7 @@ namespace XRay {
  */
 
 /*!
- * Constructs a[n] XRayRequest object for XRay \a action.
+ * Constructs a XRayRequest object for XRay \a action.
  */
 XRayRequest::XRayRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new XRayRequestPrivate(action, this))
@@ -245,8 +245,8 @@ QNetworkRequest XRayRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a XRayRequestPrivate object for XRay \a action with,
- * public implementation \a q.
+ * Constructs a XRayRequestPrivate object for XRay \a action,
+ * with public implementation \a q.
  */
 XRayRequestPrivate::XRayRequestPrivate(const XRayRequest::Action action, XRayRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

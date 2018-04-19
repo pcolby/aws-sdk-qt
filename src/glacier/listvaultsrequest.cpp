@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * ListVaultsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ListVaultsRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a ListVaultsRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 ListVaultsRequestPrivate::ListVaultsRequestPrivate(
     const GlacierRequest::Action action, ListVaultsRequest * const q)

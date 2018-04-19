@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListAccessKeysResponse
- *
  * \brief The ListAccessKeysResponse class provides an interace for IAM ListAccessKeys responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListAccessKeysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAccessKeysResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAccessKeysResponse::ListAccessKeysResponse(
         const ListAccessKeysRequest &request,
@@ -120,6 +115,9 @@ ListAccessKeysResponse::ListAccessKeysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAccessKeysRequest * ListAccessKeysResponse::request() const
 {
     Q_D(const ListAccessKeysResponse);
@@ -127,9 +125,8 @@ const ListAccessKeysRequest * ListAccessKeysResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM ListAccessKeys response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListAccessKeys \a response.
  */
 void ListAccessKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListAccessKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListAccessKeysResponsePrivate
+ * \brief The ListAccessKeysResponsePrivate class provides private implementation for ListAccessKeysResponse.
  * \internal
  *
- * \class ListAccessKeysResponsePrivate
- *
- * \brief Private implementation for ListAccessKeysResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAccessKeysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAccessKeysResponse instance.
+ * Constructs a ListAccessKeysResponsePrivate object with public implementation \a q.
  */
 ListAccessKeysResponsePrivate::ListAccessKeysResponsePrivate(
     ListAccessKeysResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListAccessKeysResponsePrivate::ListAccessKeysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListAccessKeysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListAccessKeys response element from \a xml.
  */
 void ListAccessKeysResponsePrivate::parseListAccessKeysResponse(QXmlStreamReader &xml)
 {

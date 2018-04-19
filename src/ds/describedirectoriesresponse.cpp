@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeDirectoriesResponse
- *
  * \brief The DescribeDirectoriesResponse class provides an interace for DirectoryService DescribeDirectories responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeDirectoriesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDirectoriesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDirectoriesResponse::DescribeDirectoriesResponse(
         const DescribeDirectoriesRequest &request,
@@ -69,6 +64,9 @@ DescribeDirectoriesResponse::DescribeDirectoriesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDirectoriesRequest * DescribeDirectoriesResponse::request() const
 {
     Q_D(const DescribeDirectoriesResponse);
@@ -76,9 +74,8 @@ const DescribeDirectoriesRequest * DescribeDirectoriesResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService DescribeDirectories response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DescribeDirectories \a response.
  */
 void DescribeDirectoriesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeDirectoriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DescribeDirectoriesResponsePrivate
+ * \brief The DescribeDirectoriesResponsePrivate class provides private implementation for DescribeDirectoriesResponse.
  * \internal
  *
- * \class DescribeDirectoriesResponsePrivate
- *
- * \brief Private implementation for DescribeDirectoriesResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDirectoriesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDirectoriesResponse instance.
+ * Constructs a DescribeDirectoriesResponsePrivate object with public implementation \a q.
  */
 DescribeDirectoriesResponsePrivate::DescribeDirectoriesResponsePrivate(
     DescribeDirectoriesResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeDirectoriesResponsePrivate::DescribeDirectoriesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService DescribeDirectoriesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DescribeDirectories response element from \a xml.
  */
 void DescribeDirectoriesResponsePrivate::parseDescribeDirectoriesResponse(QXmlStreamReader &xml)
 {

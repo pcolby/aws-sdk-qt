@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * GetOpenIDConnectProviderRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a GetOpenIDConnectProviderRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a GetOpenIDConnectProviderRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 GetOpenIDConnectProviderRequestPrivate::GetOpenIDConnectProviderRequestPrivate(
     const IAMRequest::Action action, GetOpenIDConnectProviderRequest * const q)

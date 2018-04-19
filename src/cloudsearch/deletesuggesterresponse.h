@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSuggesterResponse : public CloudSearchResponse {
 public:
     DeleteSuggesterResponse(const DeleteSuggesterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSuggesterRequest * request() const;
+    virtual const DeleteSuggesterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSuggesterResponse)

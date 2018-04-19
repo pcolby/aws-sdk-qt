@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDatasetResponse : public CognitoSyncResponse {
 public:
     DescribeDatasetResponse(const DescribeDatasetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDatasetRequest * request() const;
+    virtual const DescribeDatasetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDatasetResponse)

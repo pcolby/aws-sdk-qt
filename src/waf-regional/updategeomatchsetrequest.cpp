@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * UpdateGeoMatchSetRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateGeoMatchSetRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a UpdateGeoMatchSetRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 UpdateGeoMatchSetRequestPrivate::UpdateGeoMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, UpdateGeoMatchSetRequest * const q)

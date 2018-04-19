@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeUserProfilesResponse
- *
  * \brief The DescribeUserProfilesResponse class provides an interace for OpsWorks DescribeUserProfiles responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeUserProfilesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeUserProfilesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeUserProfilesResponse::DescribeUserProfilesResponse(
         const DescribeUserProfilesRequest &request,
@@ -161,6 +156,9 @@ DescribeUserProfilesResponse::DescribeUserProfilesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeUserProfilesRequest * DescribeUserProfilesResponse::request() const
 {
     Q_D(const DescribeUserProfilesResponse);
@@ -168,9 +166,8 @@ const DescribeUserProfilesRequest * DescribeUserProfilesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeUserProfiles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeUserProfiles \a response.
  */
 void DescribeUserProfilesResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeUserProfilesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeUserProfilesResponsePrivate
+ * \brief The DescribeUserProfilesResponsePrivate class provides private implementation for DescribeUserProfilesResponse.
  * \internal
  *
- * \class DescribeUserProfilesResponsePrivate
- *
- * \brief Private implementation for DescribeUserProfilesResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUserProfilesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeUserProfilesResponse instance.
+ * Constructs a DescribeUserProfilesResponsePrivate object with public implementation \a q.
  */
 DescribeUserProfilesResponsePrivate::DescribeUserProfilesResponsePrivate(
     DescribeUserProfilesResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeUserProfilesResponsePrivate::DescribeUserProfilesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeUserProfilesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeUserProfiles response element from \a xml.
  */
 void DescribeUserProfilesResponsePrivate::parseDescribeUserProfilesResponse(QXmlStreamReader &xml)
 {

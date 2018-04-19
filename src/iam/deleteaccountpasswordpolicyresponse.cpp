@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteAccountPasswordPolicyResponse
- *
  * \brief The DeleteAccountPasswordPolicyResponse class provides an interace for IAM DeleteAccountPasswordPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteAccountPasswordPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAccountPasswordPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAccountPasswordPolicyResponse::DeleteAccountPasswordPolicyResponse(
         const DeleteAccountPasswordPolicyRequest &request,
@@ -120,6 +115,9 @@ DeleteAccountPasswordPolicyResponse::DeleteAccountPasswordPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAccountPasswordPolicyRequest * DeleteAccountPasswordPolicyResponse::request() const
 {
     Q_D(const DeleteAccountPasswordPolicyResponse);
@@ -127,9 +125,8 @@ const DeleteAccountPasswordPolicyRequest * DeleteAccountPasswordPolicyResponse::
 }
 
 /*!
- * @brief  Parse a IAM DeleteAccountPasswordPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteAccountPasswordPolicy \a response.
  */
 void DeleteAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteAccountPasswordPolicyResponsePrivate
+ * \brief The DeleteAccountPasswordPolicyResponsePrivate class provides private implementation for DeleteAccountPasswordPolicyResponse.
  * \internal
  *
- * \class DeleteAccountPasswordPolicyResponsePrivate
- *
- * \brief Private implementation for DeleteAccountPasswordPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAccountPasswordPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAccountPasswordPolicyResponse instance.
+ * Constructs a DeleteAccountPasswordPolicyResponsePrivate object with public implementation \a q.
  */
 DeleteAccountPasswordPolicyResponsePrivate::DeleteAccountPasswordPolicyResponsePrivate(
     DeleteAccountPasswordPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteAccountPasswordPolicyResponsePrivate::DeleteAccountPasswordPolicyResponseP
 }
 
 /*!
- * @brief  Parse an IAM DeleteAccountPasswordPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteAccountPasswordPolicy response element from \a xml.
  */
 void DeleteAccountPasswordPolicyResponsePrivate::parseDeleteAccountPasswordPolicyResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::ListOpenWorkflowExecutionsResponse
- *
  * \brief The ListOpenWorkflowExecutionsResponse class provides an interace for SWF ListOpenWorkflowExecutions responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new ListOpenWorkflowExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListOpenWorkflowExecutionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListOpenWorkflowExecutionsResponse::ListOpenWorkflowExecutionsResponse(
         const ListOpenWorkflowExecutionsRequest &request,
@@ -71,6 +66,9 @@ ListOpenWorkflowExecutionsResponse::ListOpenWorkflowExecutionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListOpenWorkflowExecutionsRequest * ListOpenWorkflowExecutionsResponse::request() const
 {
     Q_D(const ListOpenWorkflowExecutionsResponse);
@@ -78,9 +76,8 @@ const ListOpenWorkflowExecutionsRequest * ListOpenWorkflowExecutionsResponse::re
 }
 
 /*!
- * @brief  Parse a SWF ListOpenWorkflowExecutions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF ListOpenWorkflowExecutions \a response.
  */
 void ListOpenWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void ListOpenWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::ListOpenWorkflowExecutionsResponsePrivate
+ * \brief The ListOpenWorkflowExecutionsResponsePrivate class provides private implementation for ListOpenWorkflowExecutionsResponse.
  * \internal
  *
- * \class ListOpenWorkflowExecutionsResponsePrivate
- *
- * \brief Private implementation for ListOpenWorkflowExecutionsResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOpenWorkflowExecutionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListOpenWorkflowExecutionsResponse instance.
+ * Constructs a ListOpenWorkflowExecutionsResponsePrivate object with public implementation \a q.
  */
 ListOpenWorkflowExecutionsResponsePrivate::ListOpenWorkflowExecutionsResponsePrivate(
     ListOpenWorkflowExecutionsResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ ListOpenWorkflowExecutionsResponsePrivate::ListOpenWorkflowExecutionsResponsePri
 }
 
 /*!
- * @brief  Parse an SWF ListOpenWorkflowExecutionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF ListOpenWorkflowExecutions response element from \a xml.
  */
 void ListOpenWorkflowExecutionsResponsePrivate::parseListOpenWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {

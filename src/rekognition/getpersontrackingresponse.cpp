@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::GetPersonTrackingResponse
- *
  * \brief The GetPersonTrackingResponse class provides an interace for Rekognition GetPersonTracking responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new GetPersonTrackingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPersonTrackingResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPersonTrackingResponse::GetPersonTrackingResponse(
         const GetPersonTrackingRequest &request,
@@ -56,6 +51,9 @@ GetPersonTrackingResponse::GetPersonTrackingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPersonTrackingRequest * GetPersonTrackingResponse::request() const
 {
     Q_D(const GetPersonTrackingResponse);
@@ -63,9 +61,8 @@ const GetPersonTrackingRequest * GetPersonTrackingResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition GetPersonTracking response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition GetPersonTracking \a response.
  */
 void GetPersonTrackingResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetPersonTrackingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::GetPersonTrackingResponsePrivate
+ * \brief The GetPersonTrackingResponsePrivate class provides private implementation for GetPersonTrackingResponse.
  * \internal
  *
- * \class GetPersonTrackingResponsePrivate
- *
- * \brief Private implementation for GetPersonTrackingResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPersonTrackingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPersonTrackingResponse instance.
+ * Constructs a GetPersonTrackingResponsePrivate object with public implementation \a q.
  */
 GetPersonTrackingResponsePrivate::GetPersonTrackingResponsePrivate(
     GetPersonTrackingResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ GetPersonTrackingResponsePrivate::GetPersonTrackingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition GetPersonTrackingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition GetPersonTracking response element from \a xml.
  */
 void GetPersonTrackingResponsePrivate::parseGetPersonTrackingResponse(QXmlStreamReader &xml)
 {

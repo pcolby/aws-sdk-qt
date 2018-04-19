@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteImageBuilderRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteImageBuilderRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a DeleteImageBuilderRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 DeleteImageBuilderRequestPrivate::DeleteImageBuilderRequestPrivate(
     const AppStreamRequest::Action action, DeleteImageBuilderRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateDirectoryConfigRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateDirectoryConfigRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a CreateDirectoryConfigRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 CreateDirectoryConfigRequestPrivate::CreateDirectoryConfigRequestPrivate(
     const AppStreamRequest::Action action, CreateDirectoryConfigRequest * const q)

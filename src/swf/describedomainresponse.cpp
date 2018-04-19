@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::DescribeDomainResponse
- *
  * \brief The DescribeDomainResponse class provides an interace for SWF DescribeDomain responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new DescribeDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDomainResponse::DescribeDomainResponse(
         const DescribeDomainRequest &request,
@@ -71,6 +66,9 @@ DescribeDomainResponse::DescribeDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDomainRequest * DescribeDomainResponse::request() const
 {
     Q_D(const DescribeDomainResponse);
@@ -78,9 +76,8 @@ const DescribeDomainRequest * DescribeDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a SWF DescribeDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF DescribeDomain \a response.
  */
 void DescribeDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DescribeDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::DescribeDomainResponsePrivate
+ * \brief The DescribeDomainResponsePrivate class provides private implementation for DescribeDomainResponse.
  * \internal
  *
- * \class DescribeDomainResponsePrivate
- *
- * \brief Private implementation for DescribeDomainResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDomainResponse instance.
+ * Constructs a DescribeDomainResponsePrivate object with public implementation \a q.
  */
 DescribeDomainResponsePrivate::DescribeDomainResponsePrivate(
     DescribeDomainResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ DescribeDomainResponsePrivate::DescribeDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF DescribeDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF DescribeDomain response element from \a xml.
  */
 void DescribeDomainResponsePrivate::parseDescribeDomainResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DeleteGroupResponse
- *
  * \brief The DeleteGroupResponse class provides an interace for WorkMail DeleteGroup responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DeleteGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteGroupResponse::DeleteGroupResponse(
         const DeleteGroupRequest &request,
@@ -88,6 +83,9 @@ DeleteGroupResponse::DeleteGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteGroupRequest * DeleteGroupResponse::request() const
 {
     Q_D(const DeleteGroupResponse);
@@ -95,9 +93,8 @@ const DeleteGroupRequest * DeleteGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail DeleteGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail DeleteGroup \a response.
  */
 void DeleteGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DeleteGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::DeleteGroupResponsePrivate
+ * \brief The DeleteGroupResponsePrivate class provides private implementation for DeleteGroupResponse.
  * \internal
  *
- * \class DeleteGroupResponsePrivate
- *
- * \brief Private implementation for DeleteGroupResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteGroupResponse instance.
+ * Constructs a DeleteGroupResponsePrivate object with public implementation \a q.
  */
 DeleteGroupResponsePrivate::DeleteGroupResponsePrivate(
     DeleteGroupResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ DeleteGroupResponsePrivate::DeleteGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail DeleteGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail DeleteGroup response element from \a xml.
  */
 void DeleteGroupResponsePrivate::parseDeleteGroupResponse(QXmlStreamReader &xml)
 {

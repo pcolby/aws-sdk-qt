@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetBotChannelAssociationResponse
- *
  * \brief The GetBotChannelAssociationResponse class provides an interace for LexModelBuildingService GetBotChannelAssociation responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetBotChannelAssociationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBotChannelAssociationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBotChannelAssociationResponse::GetBotChannelAssociationResponse(
         const GetBotChannelAssociationRequest &request,
@@ -59,6 +54,9 @@ GetBotChannelAssociationResponse::GetBotChannelAssociationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBotChannelAssociationRequest * GetBotChannelAssociationResponse::request() const
 {
     Q_D(const GetBotChannelAssociationResponse);
@@ -66,9 +64,8 @@ const GetBotChannelAssociationRequest * GetBotChannelAssociationResponse::reques
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService GetBotChannelAssociation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService GetBotChannelAssociation \a response.
  */
 void GetBotChannelAssociationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetBotChannelAssociationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::GetBotChannelAssociationResponsePrivate
+ * \brief The GetBotChannelAssociationResponsePrivate class provides private implementation for GetBotChannelAssociationResponse.
  * \internal
  *
- * \class GetBotChannelAssociationResponsePrivate
- *
- * \brief Private implementation for GetBotChannelAssociationResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBotChannelAssociationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBotChannelAssociationResponse instance.
+ * Constructs a GetBotChannelAssociationResponsePrivate object with public implementation \a q.
  */
 GetBotChannelAssociationResponsePrivate::GetBotChannelAssociationResponsePrivate(
     GetBotChannelAssociationResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ GetBotChannelAssociationResponsePrivate::GetBotChannelAssociationResponsePrivate
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService GetBotChannelAssociationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService GetBotChannelAssociation response element from \a xml.
  */
 void GetBotChannelAssociationResponsePrivate::parseGetBotChannelAssociationResponse(QXmlStreamReader &xml)
 {

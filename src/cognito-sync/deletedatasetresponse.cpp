@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::DeleteDatasetResponse
- *
  * \brief The DeleteDatasetResponse class provides an interace for CognitoSync DeleteDataset responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new DeleteDatasetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDatasetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDatasetResponse::DeleteDatasetResponse(
         const DeleteDatasetRequest &request,
@@ -75,6 +70,9 @@ DeleteDatasetResponse::DeleteDatasetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDatasetRequest * DeleteDatasetResponse::request() const
 {
     Q_D(const DeleteDatasetResponse);
@@ -82,9 +80,8 @@ const DeleteDatasetRequest * DeleteDatasetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoSync DeleteDataset response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync DeleteDataset \a response.
  */
 void DeleteDatasetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void DeleteDatasetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::DeleteDatasetResponsePrivate
+ * \brief The DeleteDatasetResponsePrivate class provides private implementation for DeleteDatasetResponse.
  * \internal
  *
- * \class DeleteDatasetResponsePrivate
- *
- * \brief Private implementation for DeleteDatasetResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDatasetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDatasetResponse instance.
+ * Constructs a DeleteDatasetResponsePrivate object with public implementation \a q.
  */
 DeleteDatasetResponsePrivate::DeleteDatasetResponsePrivate(
     DeleteDatasetResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ DeleteDatasetResponsePrivate::DeleteDatasetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync DeleteDatasetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync DeleteDataset response element from \a xml.
  */
 void DeleteDatasetResponsePrivate::parseDeleteDatasetResponse(QXmlStreamReader &xml)
 {

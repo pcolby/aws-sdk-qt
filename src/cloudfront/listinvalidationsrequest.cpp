@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListInvalidationsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListInvalidationsRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a ListInvalidationsRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 ListInvalidationsRequestPrivate::ListInvalidationsRequestPrivate(
     const CloudFrontRequest::Action action, ListInvalidationsRequest * const q)

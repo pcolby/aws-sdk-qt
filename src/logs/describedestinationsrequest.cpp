@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDestinationsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeDestinationsRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDestinationsRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DescribeDestinationsRequestPrivate::DescribeDestinationsRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeDestinationsRequest * const q)

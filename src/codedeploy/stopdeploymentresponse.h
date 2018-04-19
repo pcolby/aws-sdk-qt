@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopDeploymentResponse : public CodeDeployResponse {
 public:
     StopDeploymentResponse(const StopDeploymentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopDeploymentRequest * request() const;
+    virtual const StopDeploymentRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopDeploymentResponse)

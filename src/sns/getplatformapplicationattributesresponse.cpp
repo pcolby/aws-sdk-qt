@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::GetPlatformApplicationAttributesResponse
- *
  * \brief The GetPlatformApplicationAttributesResponse class provides an interace for SNS GetPlatformApplicationAttributes responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new GetPlatformApplicationAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPlatformApplicationAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPlatformApplicationAttributesResponse::GetPlatformApplicationAttributesResponse(
         const GetPlatformApplicationAttributesRequest &request,
@@ -69,6 +64,9 @@ GetPlatformApplicationAttributesResponse::GetPlatformApplicationAttributesRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPlatformApplicationAttributesRequest * GetPlatformApplicationAttributesResponse::request() const
 {
     Q_D(const GetPlatformApplicationAttributesResponse);
@@ -76,9 +74,8 @@ const GetPlatformApplicationAttributesRequest * GetPlatformApplicationAttributes
 }
 
 /*!
- * @brief  Parse a SNS GetPlatformApplicationAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS GetPlatformApplicationAttributes \a response.
  */
 void GetPlatformApplicationAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void GetPlatformApplicationAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::GetPlatformApplicationAttributesResponsePrivate
+ * \brief The GetPlatformApplicationAttributesResponsePrivate class provides private implementation for GetPlatformApplicationAttributesResponse.
  * \internal
  *
- * \class GetPlatformApplicationAttributesResponsePrivate
- *
- * \brief Private implementation for GetPlatformApplicationAttributesResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPlatformApplicationAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPlatformApplicationAttributesResponse instance.
+ * Constructs a GetPlatformApplicationAttributesResponsePrivate object with public implementation \a q.
  */
 GetPlatformApplicationAttributesResponsePrivate::GetPlatformApplicationAttributesResponsePrivate(
     GetPlatformApplicationAttributesResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ GetPlatformApplicationAttributesResponsePrivate::GetPlatformApplicationAttribute
 }
 
 /*!
- * @brief  Parse an SNS GetPlatformApplicationAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS GetPlatformApplicationAttributes response element from \a xml.
  */
 void GetPlatformApplicationAttributesResponsePrivate::parseGetPlatformApplicationAttributesResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::CreateQualificationTypeResponse
- *
  * \brief The CreateQualificationTypeResponse class provides an interace for MTurk CreateQualificationType responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::createQualificationType
  */
 
 /*!
- * @brief  Constructs a new CreateQualificationTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateQualificationTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateQualificationTypeResponse::CreateQualificationTypeResponse(
         const CreateQualificationTypeRequest &request,
@@ -55,6 +50,9 @@ CreateQualificationTypeResponse::CreateQualificationTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateQualificationTypeRequest * CreateQualificationTypeResponse::request() const
 {
     Q_D(const CreateQualificationTypeResponse);
@@ -62,9 +60,8 @@ const CreateQualificationTypeRequest * CreateQualificationTypeResponse::request(
 }
 
 /*!
- * @brief  Parse a MTurk CreateQualificationType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk CreateQualificationType \a response.
  */
 void CreateQualificationTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateQualificationTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::CreateQualificationTypeResponsePrivate
+ * \brief The CreateQualificationTypeResponsePrivate class provides private implementation for CreateQualificationTypeResponse.
  * \internal
  *
- * \class CreateQualificationTypeResponsePrivate
- *
- * \brief Private implementation for CreateQualificationTypeResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateQualificationTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateQualificationTypeResponse instance.
+ * Constructs a CreateQualificationTypeResponsePrivate object with public implementation \a q.
  */
 CreateQualificationTypeResponsePrivate::CreateQualificationTypeResponsePrivate(
     CreateQualificationTypeResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateQualificationTypeResponsePrivate::CreateQualificationTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk CreateQualificationTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk CreateQualificationType response element from \a xml.
  */
 void CreateQualificationTypeResponsePrivate::parseCreateQualificationTypeResponse(QXmlStreamReader &xml)
 {

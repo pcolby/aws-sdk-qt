@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetDefaultAuthorizerResponse : public IoTResponse {
 public:
     SetDefaultAuthorizerResponse(const SetDefaultAuthorizerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetDefaultAuthorizerRequest * request() const;
+    virtual const SetDefaultAuthorizerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetDefaultAuthorizerResponse)

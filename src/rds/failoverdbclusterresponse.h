@@ -34,10 +34,10 @@ class QTAWS_EXPORT FailoverDBClusterResponse : public RDSResponse {
 public:
     FailoverDBClusterResponse(const FailoverDBClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const FailoverDBClusterRequest * request() const;
+    virtual const FailoverDBClusterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(FailoverDBClusterResponse)

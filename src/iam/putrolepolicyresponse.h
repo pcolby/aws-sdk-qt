@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutRolePolicyResponse : public IAMResponse {
 public:
     PutRolePolicyResponse(const PutRolePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutRolePolicyRequest * request() const;
+    virtual const PutRolePolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutRolePolicyResponse)

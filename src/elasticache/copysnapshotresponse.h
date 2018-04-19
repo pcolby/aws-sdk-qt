@@ -34,10 +34,10 @@ class QTAWS_EXPORT CopySnapshotResponse : public ElastiCacheResponse {
 public:
     CopySnapshotResponse(const CopySnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CopySnapshotRequest * request() const;
+    virtual const CopySnapshotRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CopySnapshotResponse)

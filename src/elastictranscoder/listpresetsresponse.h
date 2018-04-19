@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListPresetsResponse : public ElasticTranscoderResponse {
 public:
     ListPresetsResponse(const ListPresetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListPresetsRequest * request() const;
+    virtual const ListPresetsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListPresetsResponse)

@@ -29,10 +29,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::DeleteLexiconResponse
- *
  * \brief The DeleteLexiconResponse class provides an interace for Polly DeleteLexicon responses.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -46,11 +45,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new DeleteLexiconResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLexiconResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLexiconResponse::DeleteLexiconResponse(
         const DeleteLexiconRequest &request,
@@ -62,6 +57,9 @@ DeleteLexiconResponse::DeleteLexiconResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLexiconRequest * DeleteLexiconResponse::request() const
 {
     Q_D(const DeleteLexiconResponse);
@@ -69,9 +67,8 @@ const DeleteLexiconRequest * DeleteLexiconResponse::request() const
 }
 
 /*!
- * @brief  Parse a Polly DeleteLexicon response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Polly DeleteLexicon \a response.
  */
 void DeleteLexiconResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DeleteLexiconResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Polly::DeleteLexiconResponsePrivate
+ * \brief The DeleteLexiconResponsePrivate class provides private implementation for DeleteLexiconResponse.
  * \internal
  *
- * \class DeleteLexiconResponsePrivate
- *
- * \brief Private implementation for DeleteLexiconResponse.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLexiconResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLexiconResponse instance.
+ * Constructs a DeleteLexiconResponsePrivate object with public implementation \a q.
  */
 DeleteLexiconResponsePrivate::DeleteLexiconResponsePrivate(
     DeleteLexiconResponse * const q) : PollyResponsePrivate(q)
@@ -102,9 +95,7 @@ DeleteLexiconResponsePrivate::DeleteLexiconResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Polly DeleteLexiconResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Polly DeleteLexicon response element from \a xml.
  */
 void DeleteLexiconResponsePrivate::parseDeleteLexiconResponse(QXmlStreamReader &xml)
 {

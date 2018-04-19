@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListHITsRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a ListHITsRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a ListHITsRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 ListHITsRequestPrivate::ListHITsRequestPrivate(
     const MTurkRequest::Action action, ListHITsRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVpcResponse
- *
  * \brief The CreateVpcResponse class provides an interace for EC2 CreateVpc responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVpcResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateVpcResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateVpcResponse::CreateVpcResponse(
         const CreateVpcRequest &request,
@@ -59,6 +54,9 @@ CreateVpcResponse::CreateVpcResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateVpcRequest * CreateVpcResponse::request() const
 {
     Q_D(const CreateVpcResponse);
@@ -66,9 +64,8 @@ const CreateVpcRequest * CreateVpcResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateVpc response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateVpc \a response.
  */
 void CreateVpcResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateVpcResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateVpcResponsePrivate
+ * \brief The CreateVpcResponsePrivate class provides private implementation for CreateVpcResponse.
  * \internal
  *
- * \class CreateVpcResponsePrivate
- *
- * \brief Private implementation for CreateVpcResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpcResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateVpcResponse instance.
+ * Constructs a CreateVpcResponsePrivate object with public implementation \a q.
  */
 CreateVpcResponsePrivate::CreateVpcResponsePrivate(
     CreateVpcResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateVpcResponsePrivate::CreateVpcResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateVpcResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateVpc response element from \a xml.
  */
 void CreateVpcResponsePrivate::parseCreateVpcResponse(QXmlStreamReader &xml)
 {

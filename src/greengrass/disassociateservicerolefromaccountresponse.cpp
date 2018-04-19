@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DisassociateServiceRoleFromAccountResponse
- *
  * \brief The DisassociateServiceRoleFromAccountResponse class provides an interace for Greengrass DisassociateServiceRoleFromAccount responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DisassociateServiceRoleFromAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateServiceRoleFromAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateServiceRoleFromAccountResponse::DisassociateServiceRoleFromAccountResponse(
         const DisassociateServiceRoleFromAccountRequest &request,
@@ -58,6 +53,9 @@ DisassociateServiceRoleFromAccountResponse::DisassociateServiceRoleFromAccountRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateServiceRoleFromAccountRequest * DisassociateServiceRoleFromAccountResponse::request() const
 {
     Q_D(const DisassociateServiceRoleFromAccountResponse);
@@ -65,9 +63,8 @@ const DisassociateServiceRoleFromAccountRequest * DisassociateServiceRoleFromAcc
 }
 
 /*!
- * @brief  Parse a Greengrass DisassociateServiceRoleFromAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass DisassociateServiceRoleFromAccount \a response.
  */
 void DisassociateServiceRoleFromAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DisassociateServiceRoleFromAccountResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::Greengrass::DisassociateServiceRoleFromAccountResponsePrivate
+ * \brief The DisassociateServiceRoleFromAccountResponsePrivate class provides private implementation for DisassociateServiceRoleFromAccountResponse.
  * \internal
  *
- * \class DisassociateServiceRoleFromAccountResponsePrivate
- *
- * \brief Private implementation for DisassociateServiceRoleFromAccountResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateServiceRoleFromAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateServiceRoleFromAccountResponse instance.
+ * Constructs a DisassociateServiceRoleFromAccountResponsePrivate object with public implementation \a q.
  */
 DisassociateServiceRoleFromAccountResponsePrivate::DisassociateServiceRoleFromAccountResponsePrivate(
     DisassociateServiceRoleFromAccountResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ DisassociateServiceRoleFromAccountResponsePrivate::DisassociateServiceRoleFromAc
 }
 
 /*!
- * @brief  Parse an Greengrass DisassociateServiceRoleFromAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass DisassociateServiceRoleFromAccount response element from \a xml.
  */
 void DisassociateServiceRoleFromAccountResponsePrivate::parseDisassociateServiceRoleFromAccountResponse(QXmlStreamReader &xml)
 {

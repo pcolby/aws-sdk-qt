@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteSAMLProviderResponse
- *
  * \brief The DeleteSAMLProviderResponse class provides an interace for IAM DeleteSAMLProvider responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteSAMLProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSAMLProviderResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSAMLProviderResponse::DeleteSAMLProviderResponse(
         const DeleteSAMLProviderRequest &request,
@@ -120,6 +115,9 @@ DeleteSAMLProviderResponse::DeleteSAMLProviderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSAMLProviderRequest * DeleteSAMLProviderResponse::request() const
 {
     Q_D(const DeleteSAMLProviderResponse);
@@ -127,9 +125,8 @@ const DeleteSAMLProviderRequest * DeleteSAMLProviderResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM DeleteSAMLProvider response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteSAMLProvider \a response.
  */
 void DeleteSAMLProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteSAMLProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteSAMLProviderResponsePrivate
+ * \brief The DeleteSAMLProviderResponsePrivate class provides private implementation for DeleteSAMLProviderResponse.
  * \internal
  *
- * \class DeleteSAMLProviderResponsePrivate
- *
- * \brief Private implementation for DeleteSAMLProviderResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSAMLProviderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSAMLProviderResponse instance.
+ * Constructs a DeleteSAMLProviderResponsePrivate object with public implementation \a q.
  */
 DeleteSAMLProviderResponsePrivate::DeleteSAMLProviderResponsePrivate(
     DeleteSAMLProviderResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteSAMLProviderResponsePrivate::DeleteSAMLProviderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeleteSAMLProviderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteSAMLProvider response element from \a xml.
  */
 void DeleteSAMLProviderResponsePrivate::parseDeleteSAMLProviderResponse(QXmlStreamReader &xml)
 {

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * GetSMSAttributesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetSMSAttributesRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a GetSMSAttributesRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 GetSMSAttributesRequestPrivate::GetSMSAttributesRequestPrivate(
     const SNSRequest::Action action, GetSMSAttributesRequest * const q)

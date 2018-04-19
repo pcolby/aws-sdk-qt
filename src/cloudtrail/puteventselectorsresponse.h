@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutEventSelectorsResponse : public CloudTrailResponse {
 public:
     PutEventSelectorsResponse(const PutEventSelectorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutEventSelectorsRequest * request() const;
+    virtual const PutEventSelectorsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutEventSelectorsResponse)

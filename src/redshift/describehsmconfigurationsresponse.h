@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeHsmConfigurationsResponse : public RedshiftResponse {
 public:
     DescribeHsmConfigurationsResponse(const DescribeHsmConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeHsmConfigurationsRequest * request() const;
+    virtual const DescribeHsmConfigurationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeHsmConfigurationsResponse)

@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateStreamingDistributionResponse
- *
  * \brief The CreateStreamingDistributionResponse class provides an interace for CloudFront CreateStreamingDistribution responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateStreamingDistributionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStreamingDistributionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStreamingDistributionResponse::CreateStreamingDistributionResponse(
         const CreateStreamingDistributionRequest &request,
@@ -60,6 +55,9 @@ CreateStreamingDistributionResponse::CreateStreamingDistributionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStreamingDistributionRequest * CreateStreamingDistributionResponse::request() const
 {
     Q_D(const CreateStreamingDistributionResponse);
@@ -67,9 +65,8 @@ const CreateStreamingDistributionRequest * CreateStreamingDistributionResponse::
 }
 
 /*!
- * @brief  Parse a CloudFront CreateStreamingDistribution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront CreateStreamingDistribution \a response.
  */
 void CreateStreamingDistributionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateStreamingDistributionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::CreateStreamingDistributionResponsePrivate
+ * \brief The CreateStreamingDistributionResponsePrivate class provides private implementation for CreateStreamingDistributionResponse.
  * \internal
  *
- * \class CreateStreamingDistributionResponsePrivate
- *
- * \brief Private implementation for CreateStreamingDistributionResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStreamingDistributionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStreamingDistributionResponse instance.
+ * Constructs a CreateStreamingDistributionResponsePrivate object with public implementation \a q.
  */
 CreateStreamingDistributionResponsePrivate::CreateStreamingDistributionResponsePrivate(
     CreateStreamingDistributionResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateStreamingDistributionResponsePrivate::CreateStreamingDistributionResponseP
 }
 
 /*!
- * @brief  Parse an CloudFront CreateStreamingDistributionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront CreateStreamingDistribution response element from \a xml.
  */
 void CreateStreamingDistributionResponsePrivate::parseCreateStreamingDistributionResponse(QXmlStreamReader &xml)
 {

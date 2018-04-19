@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateEnvironmentEC2Response : public Cloud9Response {
 public:
     CreateEnvironmentEC2Response(const CreateEnvironmentEC2Request &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateEnvironmentEC2Request * request() const;
+    virtual const CreateEnvironmentEC2Request * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateEnvironmentEC2Response)

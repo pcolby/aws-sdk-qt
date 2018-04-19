@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListRunsRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a ListRunsRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a ListRunsRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 ListRunsRequestPrivate::ListRunsRequestPrivate(
     const DeviceFarmRequest::Action action, ListRunsRequest * const q)

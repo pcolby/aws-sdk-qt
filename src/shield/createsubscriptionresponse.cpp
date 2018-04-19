@@ -29,10 +29,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::CreateSubscriptionResponse
- *
  * \brief The CreateSubscriptionResponse class provides an interace for Shield CreateSubscription responses.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -45,11 +44,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new CreateSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSubscriptionResponse::CreateSubscriptionResponse(
         const CreateSubscriptionRequest &request,
@@ -61,6 +56,9 @@ CreateSubscriptionResponse::CreateSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSubscriptionRequest * CreateSubscriptionResponse::request() const
 {
     Q_D(const CreateSubscriptionResponse);
@@ -68,9 +66,8 @@ const CreateSubscriptionRequest * CreateSubscriptionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Shield CreateSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Shield CreateSubscription \a response.
  */
 void CreateSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreateSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Shield::CreateSubscriptionResponsePrivate
+ * \brief The CreateSubscriptionResponsePrivate class provides private implementation for CreateSubscriptionResponse.
  * \internal
  *
- * \class CreateSubscriptionResponsePrivate
- *
- * \brief Private implementation for CreateSubscriptionResponse.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSubscriptionResponse instance.
+ * Constructs a CreateSubscriptionResponsePrivate object with public implementation \a q.
  */
 CreateSubscriptionResponsePrivate::CreateSubscriptionResponsePrivate(
     CreateSubscriptionResponse * const q) : ShieldResponsePrivate(q)
@@ -101,9 +94,7 @@ CreateSubscriptionResponsePrivate::CreateSubscriptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Shield CreateSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Shield CreateSubscription response element from \a xml.
  */
 void CreateSubscriptionResponsePrivate::parseCreateSubscriptionResponse(QXmlStreamReader &xml)
 {

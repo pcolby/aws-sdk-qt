@@ -47,7 +47,7 @@ namespace TranscribeService {
  */
 
 /*!
- * Constructs a[n] TranscribeServiceRequest object for TranscribeService \a action.
+ * Constructs a TranscribeServiceRequest object for TranscribeService \a action.
  */
 TranscribeServiceRequest::TranscribeServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new TranscribeServiceRequestPrivate(action, this))
@@ -247,8 +247,8 @@ QNetworkRequest TranscribeServiceRequest::unsignedRequest(const QUrl &endpoint) 
  */
 
 /*!
- * Constructs a TranscribeServiceRequestPrivate object for TranscribeService \a action with,
- * public implementation \a q.
+ * Constructs a TranscribeServiceRequestPrivate object for TranscribeService \a action,
+ * with public implementation \a q.
  */
 TranscribeServiceRequestPrivate::TranscribeServiceRequestPrivate(const TranscribeServiceRequest::Action action, TranscribeServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteRepositoryResponse : public ECRResponse {
 public:
     DeleteRepositoryResponse(const DeleteRepositoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteRepositoryRequest * request() const;
+    virtual const DeleteRepositoryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteRepositoryResponse)

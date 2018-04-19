@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DeleteDirectoryConfigResponse
- *
  * \brief The DeleteDirectoryConfigResponse class provides an interace for AppStream DeleteDirectoryConfig responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DeleteDirectoryConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDirectoryConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDirectoryConfigResponse::DeleteDirectoryConfigResponse(
         const DeleteDirectoryConfigRequest &request,
@@ -58,6 +53,9 @@ DeleteDirectoryConfigResponse::DeleteDirectoryConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDirectoryConfigRequest * DeleteDirectoryConfigResponse::request() const
 {
     Q_D(const DeleteDirectoryConfigResponse);
@@ -65,9 +63,8 @@ const DeleteDirectoryConfigRequest * DeleteDirectoryConfigResponse::request() co
 }
 
 /*!
- * @brief  Parse a AppStream DeleteDirectoryConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream DeleteDirectoryConfig \a response.
  */
 void DeleteDirectoryConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteDirectoryConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::DeleteDirectoryConfigResponsePrivate
+ * \brief The DeleteDirectoryConfigResponsePrivate class provides private implementation for DeleteDirectoryConfigResponse.
  * \internal
  *
- * \class DeleteDirectoryConfigResponsePrivate
- *
- * \brief Private implementation for DeleteDirectoryConfigResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDirectoryConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDirectoryConfigResponse instance.
+ * Constructs a DeleteDirectoryConfigResponsePrivate object with public implementation \a q.
  */
 DeleteDirectoryConfigResponsePrivate::DeleteDirectoryConfigResponsePrivate(
     DeleteDirectoryConfigResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteDirectoryConfigResponsePrivate::DeleteDirectoryConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream DeleteDirectoryConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream DeleteDirectoryConfig response element from \a xml.
  */
 void DeleteDirectoryConfigResponsePrivate::parseDeleteDirectoryConfigResponse(QXmlStreamReader &xml)
 {

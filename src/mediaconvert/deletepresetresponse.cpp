@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::DeletePresetResponse
- *
  * \brief The DeletePresetResponse class provides an interace for MediaConvert DeletePreset responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::deletePreset
  */
 
 /*!
- * @brief  Constructs a new DeletePresetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeletePresetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeletePresetResponse::DeletePresetResponse(
         const DeletePresetRequest &request,
@@ -55,6 +50,9 @@ DeletePresetResponse::DeletePresetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeletePresetRequest * DeletePresetResponse::request() const
 {
     Q_D(const DeletePresetResponse);
@@ -62,9 +60,8 @@ const DeletePresetRequest * DeletePresetResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert DeletePreset response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert DeletePreset \a response.
  */
 void DeletePresetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeletePresetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::DeletePresetResponsePrivate
+ * \brief The DeletePresetResponsePrivate class provides private implementation for DeletePresetResponse.
  * \internal
  *
- * \class DeletePresetResponsePrivate
- *
- * \brief Private implementation for DeletePresetResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePresetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeletePresetResponse instance.
+ * Constructs a DeletePresetResponsePrivate object with public implementation \a q.
  */
 DeletePresetResponsePrivate::DeletePresetResponsePrivate(
     DeletePresetResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ DeletePresetResponsePrivate::DeletePresetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert DeletePresetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert DeletePreset response element from \a xml.
  */
 void DeletePresetResponsePrivate::parseDeletePresetResponse(QXmlStreamReader &xml)
 {

@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * GetSSHPublicKeyRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetSSHPublicKeyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a GetSSHPublicKeyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 GetSSHPublicKeyRequestPrivate::GetSSHPublicKeyRequestPrivate(
     const IAMRequest::Action action, GetSSHPublicKeyRequest * const q)

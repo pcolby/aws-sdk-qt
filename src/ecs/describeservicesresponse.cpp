@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DescribeServicesResponse
- *
  * \brief The DescribeServicesResponse class provides an interace for ECS DescribeServices responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DescribeServicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeServicesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeServicesResponse::DescribeServicesResponse(
         const DescribeServicesRequest &request,
@@ -72,6 +67,9 @@ DescribeServicesResponse::DescribeServicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeServicesRequest * DescribeServicesResponse::request() const
 {
     Q_D(const DescribeServicesResponse);
@@ -79,9 +77,8 @@ const DescribeServicesRequest * DescribeServicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS DescribeServices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS DescribeServices \a response.
  */
 void DescribeServicesResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void DescribeServicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::DescribeServicesResponsePrivate
+ * \brief The DescribeServicesResponsePrivate class provides private implementation for DescribeServicesResponse.
  * \internal
  *
- * \class DescribeServicesResponsePrivate
- *
- * \brief Private implementation for DescribeServicesResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeServicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeServicesResponse instance.
+ * Constructs a DescribeServicesResponsePrivate object with public implementation \a q.
  */
 DescribeServicesResponsePrivate::DescribeServicesResponsePrivate(
     DescribeServicesResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ DescribeServicesResponsePrivate::DescribeServicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS DescribeServicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS DescribeServices response element from \a xml.
  */
 void DescribeServicesResponsePrivate::parseDescribeServicesResponse(QXmlStreamReader &xml)
 {

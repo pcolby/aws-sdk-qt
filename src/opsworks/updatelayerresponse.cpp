@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateLayerResponse
- *
  * \brief The UpdateLayerResponse class provides an interace for OpsWorks UpdateLayer responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateLayerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateLayerResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateLayerResponse::UpdateLayerResponse(
         const UpdateLayerRequest &request,
@@ -161,6 +156,9 @@ UpdateLayerResponse::UpdateLayerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateLayerRequest * UpdateLayerResponse::request() const
 {
     Q_D(const UpdateLayerResponse);
@@ -168,9 +166,8 @@ const UpdateLayerRequest * UpdateLayerResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks UpdateLayer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks UpdateLayer \a response.
  */
 void UpdateLayerResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void UpdateLayerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::UpdateLayerResponsePrivate
+ * \brief The UpdateLayerResponsePrivate class provides private implementation for UpdateLayerResponse.
  * \internal
  *
- * \class UpdateLayerResponsePrivate
- *
- * \brief Private implementation for UpdateLayerResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateLayerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateLayerResponse instance.
+ * Constructs a UpdateLayerResponsePrivate object with public implementation \a q.
  */
 UpdateLayerResponsePrivate::UpdateLayerResponsePrivate(
     UpdateLayerResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ UpdateLayerResponsePrivate::UpdateLayerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks UpdateLayerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks UpdateLayer response element from \a xml.
  */
 void UpdateLayerResponsePrivate::parseUpdateLayerResponse(QXmlStreamReader &xml)
 {

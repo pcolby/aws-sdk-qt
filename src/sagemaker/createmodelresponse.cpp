@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::CreateModelResponse
- *
  * \brief The CreateModelResponse class provides an interace for SageMaker CreateModel responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::createModel
  */
 
 /*!
- * @brief  Constructs a new CreateModelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateModelResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateModelResponse::CreateModelResponse(
         const CreateModelRequest &request,
@@ -55,6 +50,9 @@ CreateModelResponse::CreateModelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateModelRequest * CreateModelResponse::request() const
 {
     Q_D(const CreateModelResponse);
@@ -62,9 +60,8 @@ const CreateModelRequest * CreateModelResponse::request() const
 }
 
 /*!
- * @brief  Parse a SageMaker CreateModel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker CreateModel \a response.
  */
 void CreateModelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateModelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::CreateModelResponsePrivate
+ * \brief The CreateModelResponsePrivate class provides private implementation for CreateModelResponse.
  * \internal
  *
- * \class CreateModelResponsePrivate
- *
- * \brief Private implementation for CreateModelResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateModelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateModelResponse instance.
+ * Constructs a CreateModelResponsePrivate object with public implementation \a q.
  */
 CreateModelResponsePrivate::CreateModelResponsePrivate(
     CreateModelResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateModelResponsePrivate::CreateModelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker CreateModelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker CreateModel response element from \a xml.
  */
 void CreateModelResponsePrivate::parseCreateModelResponse(QXmlStreamReader &xml)
 {

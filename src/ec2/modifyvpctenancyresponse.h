@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyVpcTenancyResponse : public EC2Response {
 public:
     ModifyVpcTenancyResponse(const ModifyVpcTenancyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyVpcTenancyRequest * request() const;
+    virtual const ModifyVpcTenancyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyVpcTenancyResponse)

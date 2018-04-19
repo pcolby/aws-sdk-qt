@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribePrefixListsResponse
- *
  * \brief The DescribePrefixListsResponse class provides an interace for EC2 DescribePrefixLists responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribePrefixListsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePrefixListsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePrefixListsResponse::DescribePrefixListsResponse(
         const DescribePrefixListsRequest &request,
@@ -59,6 +54,9 @@ DescribePrefixListsResponse::DescribePrefixListsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePrefixListsRequest * DescribePrefixListsResponse::request() const
 {
     Q_D(const DescribePrefixListsResponse);
@@ -66,9 +64,8 @@ const DescribePrefixListsRequest * DescribePrefixListsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribePrefixLists response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribePrefixLists \a response.
  */
 void DescribePrefixListsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribePrefixListsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribePrefixListsResponsePrivate
+ * \brief The DescribePrefixListsResponsePrivate class provides private implementation for DescribePrefixListsResponse.
  * \internal
  *
- * \class DescribePrefixListsResponsePrivate
- *
- * \brief Private implementation for DescribePrefixListsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePrefixListsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePrefixListsResponse instance.
+ * Constructs a DescribePrefixListsResponsePrivate object with public implementation \a q.
  */
 DescribePrefixListsResponsePrivate::DescribePrefixListsResponsePrivate(
     DescribePrefixListsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribePrefixListsResponsePrivate::DescribePrefixListsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribePrefixListsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribePrefixLists response element from \a xml.
  */
 void DescribePrefixListsResponsePrivate::parseDescribePrefixListsResponse(QXmlStreamReader &xml)
 {

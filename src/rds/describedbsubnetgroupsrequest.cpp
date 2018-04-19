@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSubnetGroupsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeDBSubnetGroupsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDBSubnetGroupsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeDBSubnetGroupsRequestPrivate::DescribeDBSubnetGroupsRequestPrivate(
     const RDSRequest::Action action, DescribeDBSubnetGroupsRequest * const q)

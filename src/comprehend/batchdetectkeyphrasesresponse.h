@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchDetectKeyPhrasesResponse : public ComprehendResponse {
 public:
     BatchDetectKeyPhrasesResponse(const BatchDetectKeyPhrasesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchDetectKeyPhrasesRequest * request() const;
+    virtual const BatchDetectKeyPhrasesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchDetectKeyPhrasesResponse)

@@ -29,10 +29,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::BatchGetNamedQueryResponse
- *
  * \brief The BatchGetNamedQueryResponse class provides an interace for Athena BatchGetNamedQuery responses.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -51,11 +50,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new BatchGetNamedQueryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetNamedQueryResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetNamedQueryResponse::BatchGetNamedQueryResponse(
         const BatchGetNamedQueryRequest &request,
@@ -67,6 +62,9 @@ BatchGetNamedQueryResponse::BatchGetNamedQueryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetNamedQueryRequest * BatchGetNamedQueryResponse::request() const
 {
     Q_D(const BatchGetNamedQueryResponse);
@@ -74,9 +72,8 @@ const BatchGetNamedQueryRequest * BatchGetNamedQueryResponse::request() const
 }
 
 /*!
- * @brief  Parse a Athena BatchGetNamedQuery response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Athena BatchGetNamedQuery \a response.
  */
 void BatchGetNamedQueryResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void BatchGetNamedQueryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Athena::BatchGetNamedQueryResponsePrivate
+ * \brief The BatchGetNamedQueryResponsePrivate class provides private implementation for BatchGetNamedQueryResponse.
  * \internal
  *
- * \class BatchGetNamedQueryResponsePrivate
- *
- * \brief Private implementation for BatchGetNamedQueryResponse.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetNamedQueryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetNamedQueryResponse instance.
+ * Constructs a BatchGetNamedQueryResponsePrivate object with public implementation \a q.
  */
 BatchGetNamedQueryResponsePrivate::BatchGetNamedQueryResponsePrivate(
     BatchGetNamedQueryResponse * const q) : AthenaResponsePrivate(q)
@@ -107,9 +100,7 @@ BatchGetNamedQueryResponsePrivate::BatchGetNamedQueryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Athena BatchGetNamedQueryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Athena BatchGetNamedQuery response element from \a xml.
  */
 void BatchGetNamedQueryResponsePrivate::parseBatchGetNamedQueryResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::AssociateQualificationWithWorkerResponse
- *
  * \brief The AssociateQualificationWithWorkerResponse class provides an interace for MTurk AssociateQualificationWithWorker responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::associateQualificationWithWorker
  */
 
 /*!
- * @brief  Constructs a new AssociateQualificationWithWorkerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateQualificationWithWorkerResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateQualificationWithWorkerResponse::AssociateQualificationWithWorkerResponse(
         const AssociateQualificationWithWorkerRequest &request,
@@ -55,6 +50,9 @@ AssociateQualificationWithWorkerResponse::AssociateQualificationWithWorkerRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateQualificationWithWorkerRequest * AssociateQualificationWithWorkerResponse::request() const
 {
     Q_D(const AssociateQualificationWithWorkerResponse);
@@ -62,9 +60,8 @@ const AssociateQualificationWithWorkerRequest * AssociateQualificationWithWorker
 }
 
 /*!
- * @brief  Parse a MTurk AssociateQualificationWithWorker response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk AssociateQualificationWithWorker \a response.
  */
 void AssociateQualificationWithWorkerResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void AssociateQualificationWithWorkerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::AssociateQualificationWithWorkerResponsePrivate
+ * \brief The AssociateQualificationWithWorkerResponsePrivate class provides private implementation for AssociateQualificationWithWorkerResponse.
  * \internal
  *
- * \class AssociateQualificationWithWorkerResponsePrivate
- *
- * \brief Private implementation for AssociateQualificationWithWorkerResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateQualificationWithWorkerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateQualificationWithWorkerResponse instance.
+ * Constructs a AssociateQualificationWithWorkerResponsePrivate object with public implementation \a q.
  */
 AssociateQualificationWithWorkerResponsePrivate::AssociateQualificationWithWorkerResponsePrivate(
     AssociateQualificationWithWorkerResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ AssociateQualificationWithWorkerResponsePrivate::AssociateQualificationWithWorke
 }
 
 /*!
- * @brief  Parse an MTurk AssociateQualificationWithWorkerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk AssociateQualificationWithWorker response element from \a xml.
  */
 void AssociateQualificationWithWorkerResponsePrivate::parseAssociateQualificationWithWorkerResponse(QXmlStreamReader &xml)
 {

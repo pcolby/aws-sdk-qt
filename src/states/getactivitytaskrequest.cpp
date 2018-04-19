@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * GetActivityTaskRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetActivityTaskRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a GetActivityTaskRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 GetActivityTaskRequestPrivate::GetActivityTaskRequestPrivate(
     const SFNRequest::Action action, GetActivityTaskRequest * const q)

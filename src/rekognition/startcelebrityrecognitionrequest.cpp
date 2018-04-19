@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * StartCelebrityRecognitionRequest::response(QN
  */
 
 /*!
- *
- * Constructs a StartCelebrityRecognitionRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a StartCelebrityRecognitionRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 StartCelebrityRecognitionRequestPrivate::StartCelebrityRecognitionRequestPrivate(
     const RekognitionRequest::Action action, StartCelebrityRecognitionRequest * const q)

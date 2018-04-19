@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetUserPoolMfaConfigResponse
- *
  * \brief The GetUserPoolMfaConfigResponse class provides an interace for CognitoIdentityProvider GetUserPoolMfaConfig responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetUserPoolMfaConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetUserPoolMfaConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 GetUserPoolMfaConfigResponse::GetUserPoolMfaConfigResponse(
         const GetUserPoolMfaConfigRequest &request,
@@ -65,6 +60,9 @@ GetUserPoolMfaConfigResponse::GetUserPoolMfaConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetUserPoolMfaConfigRequest * GetUserPoolMfaConfigResponse::request() const
 {
     Q_D(const GetUserPoolMfaConfigResponse);
@@ -72,9 +70,8 @@ const GetUserPoolMfaConfigRequest * GetUserPoolMfaConfigResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider GetUserPoolMfaConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider GetUserPoolMfaConfig \a response.
  */
 void GetUserPoolMfaConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void GetUserPoolMfaConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::GetUserPoolMfaConfigResponsePrivate
+ * \brief The GetUserPoolMfaConfigResponsePrivate class provides private implementation for GetUserPoolMfaConfigResponse.
  * \internal
  *
- * \class GetUserPoolMfaConfigResponsePrivate
- *
- * \brief Private implementation for GetUserPoolMfaConfigResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUserPoolMfaConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetUserPoolMfaConfigResponse instance.
+ * Constructs a GetUserPoolMfaConfigResponsePrivate object with public implementation \a q.
  */
 GetUserPoolMfaConfigResponsePrivate::GetUserPoolMfaConfigResponsePrivate(
     GetUserPoolMfaConfigResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ GetUserPoolMfaConfigResponsePrivate::GetUserPoolMfaConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider GetUserPoolMfaConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider GetUserPoolMfaConfig response element from \a xml.
  */
 void GetUserPoolMfaConfigResponsePrivate::parseGetUserPoolMfaConfigResponse(QXmlStreamReader &xml)
 {

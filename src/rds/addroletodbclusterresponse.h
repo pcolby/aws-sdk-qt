@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddRoleToDBClusterResponse : public RDSResponse {
 public:
     AddRoleToDBClusterResponse(const AddRoleToDBClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddRoleToDBClusterRequest * request() const;
+    virtual const AddRoleToDBClusterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddRoleToDBClusterResponse)

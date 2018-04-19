@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeleteAppResponse
- *
  * \brief The DeleteAppResponse class provides an interace for OpsWorks DeleteApp responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeleteAppResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAppResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAppResponse::DeleteAppResponse(
         const DeleteAppRequest &request,
@@ -161,6 +156,9 @@ DeleteAppResponse::DeleteAppResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAppRequest * DeleteAppResponse::request() const
 {
     Q_D(const DeleteAppResponse);
@@ -168,9 +166,8 @@ const DeleteAppRequest * DeleteAppResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DeleteApp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DeleteApp \a response.
  */
 void DeleteAppResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DeleteAppResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DeleteAppResponsePrivate
+ * \brief The DeleteAppResponsePrivate class provides private implementation for DeleteAppResponse.
  * \internal
  *
- * \class DeleteAppResponsePrivate
- *
- * \brief Private implementation for DeleteAppResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAppResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAppResponse instance.
+ * Constructs a DeleteAppResponsePrivate object with public implementation \a q.
  */
 DeleteAppResponsePrivate::DeleteAppResponsePrivate(
     DeleteAppResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DeleteAppResponsePrivate::DeleteAppResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DeleteAppResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DeleteApp response element from \a xml.
  */
 void DeleteAppResponsePrivate::parseDeleteAppResponse(QXmlStreamReader &xml)
 {

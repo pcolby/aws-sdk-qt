@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteScalingPolicyResponse
- *
  * \brief The DeleteScalingPolicyResponse class provides an interace for GameLift DeleteScalingPolicy responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteScalingPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteScalingPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteScalingPolicyResponse::DeleteScalingPolicyResponse(
         const DeleteScalingPolicyRequest &request,
@@ -491,6 +486,9 @@ DeleteScalingPolicyResponse::DeleteScalingPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteScalingPolicyRequest * DeleteScalingPolicyResponse::request() const
 {
     Q_D(const DeleteScalingPolicyResponse);
@@ -498,9 +496,8 @@ const DeleteScalingPolicyRequest * DeleteScalingPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift DeleteScalingPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DeleteScalingPolicy \a response.
  */
 void DeleteScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DeleteScalingPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DeleteScalingPolicyResponsePrivate
+ * \brief The DeleteScalingPolicyResponsePrivate class provides private implementation for DeleteScalingPolicyResponse.
  * \internal
  *
- * \class DeleteScalingPolicyResponsePrivate
- *
- * \brief Private implementation for DeleteScalingPolicyResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteScalingPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteScalingPolicyResponse instance.
+ * Constructs a DeleteScalingPolicyResponsePrivate object with public implementation \a q.
  */
 DeleteScalingPolicyResponsePrivate::DeleteScalingPolicyResponsePrivate(
     DeleteScalingPolicyResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DeleteScalingPolicyResponsePrivate::DeleteScalingPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift DeleteScalingPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DeleteScalingPolicy response element from \a xml.
  */
 void DeleteScalingPolicyResponsePrivate::parseDeleteScalingPolicyResponse(QXmlStreamReader &xml)
 {

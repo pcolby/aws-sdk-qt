@@ -34,10 +34,10 @@ class QTAWS_EXPORT ImportCertificateResponse : public DatabaseMigrationServiceRe
 public:
     ImportCertificateResponse(const ImportCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ImportCertificateRequest * request() const;
+    virtual const ImportCertificateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ImportCertificateResponse)

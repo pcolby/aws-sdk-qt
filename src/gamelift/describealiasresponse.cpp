@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeAliasResponse
- *
  * \brief The DescribeAliasResponse class provides an interace for GameLift DescribeAlias responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAliasResponse::DescribeAliasResponse(
         const DescribeAliasRequest &request,
@@ -491,6 +486,9 @@ DescribeAliasResponse::DescribeAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAliasRequest * DescribeAliasResponse::request() const
 {
     Q_D(const DescribeAliasResponse);
@@ -498,9 +496,8 @@ const DescribeAliasRequest * DescribeAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift DescribeAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DescribeAlias \a response.
  */
 void DescribeAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DescribeAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DescribeAliasResponsePrivate
+ * \brief The DescribeAliasResponsePrivate class provides private implementation for DescribeAliasResponse.
  * \internal
  *
- * \class DescribeAliasResponsePrivate
- *
- * \brief Private implementation for DescribeAliasResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAliasResponse instance.
+ * Constructs a DescribeAliasResponsePrivate object with public implementation \a q.
  */
 DescribeAliasResponsePrivate::DescribeAliasResponsePrivate(
     DescribeAliasResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DescribeAliasResponsePrivate::DescribeAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift DescribeAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DescribeAlias response element from \a xml.
  */
 void DescribeAliasResponsePrivate::parseDescribeAliasResponse(QXmlStreamReader &xml)
 {

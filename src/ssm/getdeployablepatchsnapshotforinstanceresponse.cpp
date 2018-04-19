@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetDeployablePatchSnapshotForInstanceResponse
- *
  * \brief The GetDeployablePatchSnapshotForInstanceResponse class provides an interace for SSM GetDeployablePatchSnapshotForInstance responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDeployablePatchSnapshotForInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDeployablePatchSnapshotForInstanceResponse::GetDeployablePatchSnapshotForInstanceResponse(
         const GetDeployablePatchSnapshotForInstanceRequest &request,
@@ -79,6 +74,9 @@ GetDeployablePatchSnapshotForInstanceResponse::GetDeployablePatchSnapshotForInst
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDeployablePatchSnapshotForInstanceRequest * GetDeployablePatchSnapshotForInstanceResponse::request() const
 {
     Q_D(const GetDeployablePatchSnapshotForInstanceResponse);
@@ -86,9 +84,8 @@ const GetDeployablePatchSnapshotForInstanceRequest * GetDeployablePatchSnapshotF
 }
 
 /*!
- * @brief  Parse a SSM GetDeployablePatchSnapshotForInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM GetDeployablePatchSnapshotForInstance \a response.
  */
 void GetDeployablePatchSnapshotForInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void GetDeployablePatchSnapshotForInstanceResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::SSM::GetDeployablePatchSnapshotForInstanceResponsePrivate
+ * \brief The GetDeployablePatchSnapshotForInstanceResponsePrivate class provides private implementation for GetDeployablePatchSnapshotForInstanceResponse.
  * \internal
  *
- * \class GetDeployablePatchSnapshotForInstanceResponsePrivate
- *
- * \brief Private implementation for GetDeployablePatchSnapshotForInstanceResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeployablePatchSnapshotForInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDeployablePatchSnapshotForInstanceResponse instance.
+ * Constructs a GetDeployablePatchSnapshotForInstanceResponsePrivate object with public implementation \a q.
  */
 GetDeployablePatchSnapshotForInstanceResponsePrivate::GetDeployablePatchSnapshotForInstanceResponsePrivate(
     GetDeployablePatchSnapshotForInstanceResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ GetDeployablePatchSnapshotForInstanceResponsePrivate::GetDeployablePatchSnapshot
 }
 
 /*!
- * @brief  Parse an SSM GetDeployablePatchSnapshotForInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM GetDeployablePatchSnapshotForInstance response element from \a xml.
  */
 void GetDeployablePatchSnapshotForInstanceResponsePrivate::parseGetDeployablePatchSnapshotForInstanceResponse(QXmlStreamReader &xml)
 {

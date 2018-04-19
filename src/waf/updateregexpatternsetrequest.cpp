@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRegexPatternSetRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a UpdateRegexPatternSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRegexPatternSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 UpdateRegexPatternSetRequestPrivate::UpdateRegexPatternSetRequestPrivate(
     const WAFRequest::Action action, UpdateRegexPatternSetRequest * const q)

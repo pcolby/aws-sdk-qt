@@ -29,21 +29,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::RotateChannelCredentialsResponse
- *
  * \brief The RotateChannelCredentialsResponse class provides an interace for MediaPackage RotateChannelCredentials responses.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::rotateChannelCredentials
  */
 
 /*!
- * @brief  Constructs a new RotateChannelCredentialsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RotateChannelCredentialsResponse object for \a reply to \a request, with parent \a parent.
  */
 RotateChannelCredentialsResponse::RotateChannelCredentialsResponse(
         const RotateChannelCredentialsRequest &request,
@@ -55,6 +50,9 @@ RotateChannelCredentialsResponse::RotateChannelCredentialsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RotateChannelCredentialsRequest * RotateChannelCredentialsResponse::request() const
 {
     Q_D(const RotateChannelCredentialsResponse);
@@ -62,9 +60,8 @@ const RotateChannelCredentialsRequest * RotateChannelCredentialsResponse::reques
 }
 
 /*!
- * @brief  Parse a MediaPackage RotateChannelCredentials response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaPackage RotateChannelCredentials \a response.
  */
 void RotateChannelCredentialsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void RotateChannelCredentialsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaPackage::RotateChannelCredentialsResponsePrivate
+ * \brief The RotateChannelCredentialsResponsePrivate class provides private implementation for RotateChannelCredentialsResponse.
  * \internal
  *
- * \class RotateChannelCredentialsResponsePrivate
- *
- * \brief Private implementation for RotateChannelCredentialsResponse.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RotateChannelCredentialsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RotateChannelCredentialsResponse instance.
+ * Constructs a RotateChannelCredentialsResponsePrivate object with public implementation \a q.
  */
 RotateChannelCredentialsResponsePrivate::RotateChannelCredentialsResponsePrivate(
     RotateChannelCredentialsResponse * const q) : MediaPackageResponsePrivate(q)
@@ -95,9 +88,7 @@ RotateChannelCredentialsResponsePrivate::RotateChannelCredentialsResponsePrivate
 }
 
 /*!
- * @brief  Parse an MediaPackage RotateChannelCredentialsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaPackage RotateChannelCredentials response element from \a xml.
  */
 void RotateChannelCredentialsResponsePrivate::parseRotateChannelCredentialsResponse(QXmlStreamReader &xml)
 {

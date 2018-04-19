@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListRegexPatternSetsResponse
- *
  * \brief The ListRegexPatternSetsResponse class provides an interace for WAF ListRegexPatternSets responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListRegexPatternSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRegexPatternSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRegexPatternSetsResponse::ListRegexPatternSetsResponse(
         const ListRegexPatternSetsRequest &request,
@@ -60,6 +55,9 @@ ListRegexPatternSetsResponse::ListRegexPatternSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRegexPatternSetsRequest * ListRegexPatternSetsResponse::request() const
 {
     Q_D(const ListRegexPatternSetsResponse);
@@ -67,9 +65,8 @@ const ListRegexPatternSetsRequest * ListRegexPatternSetsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a WAF ListRegexPatternSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF ListRegexPatternSets \a response.
  */
 void ListRegexPatternSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListRegexPatternSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::ListRegexPatternSetsResponsePrivate
+ * \brief The ListRegexPatternSetsResponsePrivate class provides private implementation for ListRegexPatternSetsResponse.
  * \internal
  *
- * \class ListRegexPatternSetsResponsePrivate
- *
- * \brief Private implementation for ListRegexPatternSetsResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRegexPatternSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRegexPatternSetsResponse instance.
+ * Constructs a ListRegexPatternSetsResponsePrivate object with public implementation \a q.
  */
 ListRegexPatternSetsResponsePrivate::ListRegexPatternSetsResponsePrivate(
     ListRegexPatternSetsResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ ListRegexPatternSetsResponsePrivate::ListRegexPatternSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF ListRegexPatternSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF ListRegexPatternSets response element from \a xml.
  */
 void ListRegexPatternSetsResponsePrivate::parseListRegexPatternSetsResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeNotificationConfigurationsResponse : public AutoScali
 public:
     DescribeNotificationConfigurationsResponse(const DescribeNotificationConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeNotificationConfigurationsRequest * request() const;
+    virtual const DescribeNotificationConfigurationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeNotificationConfigurationsResponse)

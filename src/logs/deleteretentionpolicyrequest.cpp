@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRetentionPolicyRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteRetentionPolicyRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRetentionPolicyRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DeleteRetentionPolicyRequestPrivate::DeleteRetentionPolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteRetentionPolicyRequest * const q)

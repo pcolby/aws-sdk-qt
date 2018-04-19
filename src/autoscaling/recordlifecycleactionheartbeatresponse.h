@@ -34,10 +34,10 @@ class QTAWS_EXPORT RecordLifecycleActionHeartbeatResponse : public AutoScalingRe
 public:
     RecordLifecycleActionHeartbeatResponse(const RecordLifecycleActionHeartbeatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RecordLifecycleActionHeartbeatRequest * request() const;
+    virtual const RecordLifecycleActionHeartbeatRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RecordLifecycleActionHeartbeatResponse)

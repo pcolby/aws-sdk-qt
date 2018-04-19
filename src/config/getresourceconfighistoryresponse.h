@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetResourceConfigHistoryResponse : public ConfigServiceRespon
 public:
     GetResourceConfigHistoryResponse(const GetResourceConfigHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetResourceConfigHistoryRequest * request() const;
+    virtual const GetResourceConfigHistoryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetResourceConfigHistoryResponse)

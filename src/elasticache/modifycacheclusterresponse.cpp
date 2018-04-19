@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ModifyCacheClusterResponse
- *
  * \brief The ModifyCacheClusterResponse class provides an interace for ElastiCache ModifyCacheCluster responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new ModifyCacheClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyCacheClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyCacheClusterResponse::ModifyCacheClusterResponse(
         const ModifyCacheClusterRequest &request,
@@ -69,6 +64,9 @@ ModifyCacheClusterResponse::ModifyCacheClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyCacheClusterRequest * ModifyCacheClusterResponse::request() const
 {
     Q_D(const ModifyCacheClusterResponse);
@@ -76,9 +74,8 @@ const ModifyCacheClusterRequest * ModifyCacheClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElastiCache ModifyCacheCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache ModifyCacheCluster \a response.
  */
 void ModifyCacheClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ModifyCacheClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::ModifyCacheClusterResponsePrivate
+ * \brief The ModifyCacheClusterResponsePrivate class provides private implementation for ModifyCacheClusterResponse.
  * \internal
  *
- * \class ModifyCacheClusterResponsePrivate
- *
- * \brief Private implementation for ModifyCacheClusterResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyCacheClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyCacheClusterResponse instance.
+ * Constructs a ModifyCacheClusterResponsePrivate object with public implementation \a q.
  */
 ModifyCacheClusterResponsePrivate::ModifyCacheClusterResponsePrivate(
     ModifyCacheClusterResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ ModifyCacheClusterResponsePrivate::ModifyCacheClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache ModifyCacheClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache ModifyCacheCluster response element from \a xml.
  */
 void ModifyCacheClusterResponsePrivate::parseModifyCacheClusterResponse(QXmlStreamReader &xml)
 {

@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * GetObjectInformationRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetObjectInformationRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a GetObjectInformationRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 GetObjectInformationRequestPrivate::GetObjectInformationRequestPrivate(
     const CloudDirectoryRequest::Action action, GetObjectInformationRequest * const q)

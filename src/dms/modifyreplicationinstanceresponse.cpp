@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::ModifyReplicationInstanceResponse
- *
  * \brief The ModifyReplicationInstanceResponse class provides an interace for DatabaseMigrationService ModifyReplicationInstance responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new ModifyReplicationInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyReplicationInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyReplicationInstanceResponse::ModifyReplicationInstanceResponse(
         const ModifyReplicationInstanceRequest &request,
@@ -66,6 +61,9 @@ ModifyReplicationInstanceResponse::ModifyReplicationInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyReplicationInstanceRequest * ModifyReplicationInstanceResponse::request() const
 {
     Q_D(const ModifyReplicationInstanceResponse);
@@ -73,9 +71,8 @@ const ModifyReplicationInstanceRequest * ModifyReplicationInstanceResponse::requ
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService ModifyReplicationInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService ModifyReplicationInstance \a response.
  */
 void ModifyReplicationInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ModifyReplicationInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::ModifyReplicationInstanceResponsePrivate
+ * \brief The ModifyReplicationInstanceResponsePrivate class provides private implementation for ModifyReplicationInstanceResponse.
  * \internal
  *
- * \class ModifyReplicationInstanceResponsePrivate
- *
- * \brief Private implementation for ModifyReplicationInstanceResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyReplicationInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyReplicationInstanceResponse instance.
+ * Constructs a ModifyReplicationInstanceResponsePrivate object with public implementation \a q.
  */
 ModifyReplicationInstanceResponsePrivate::ModifyReplicationInstanceResponsePrivate(
     ModifyReplicationInstanceResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ ModifyReplicationInstanceResponsePrivate::ModifyReplicationInstanceResponsePriva
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService ModifyReplicationInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService ModifyReplicationInstance response element from \a xml.
  */
 void ModifyReplicationInstanceResponsePrivate::parseModifyReplicationInstanceResponse(QXmlStreamReader &xml)
 {

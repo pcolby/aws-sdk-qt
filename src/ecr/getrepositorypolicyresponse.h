@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetRepositoryPolicyResponse : public ECRResponse {
 public:
     GetRepositoryPolicyResponse(const GetRepositoryPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetRepositoryPolicyRequest * request() const;
+    virtual const GetRepositoryPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetRepositoryPolicyResponse)

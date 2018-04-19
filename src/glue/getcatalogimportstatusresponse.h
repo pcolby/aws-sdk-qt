@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCatalogImportStatusResponse : public GlueResponse {
 public:
     GetCatalogImportStatusResponse(const GetCatalogImportStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCatalogImportStatusRequest * request() const;
+    virtual const GetCatalogImportStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCatalogImportStatusResponse)

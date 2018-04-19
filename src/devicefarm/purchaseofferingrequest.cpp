@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * PurchaseOfferingRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a PurchaseOfferingRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a PurchaseOfferingRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 PurchaseOfferingRequestPrivate::PurchaseOfferingRequestPrivate(
     const DeviceFarmRequest::Action action, PurchaseOfferingRequest * const q)

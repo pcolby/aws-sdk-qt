@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateAutoScalingGroupResponse : public AutoScalingResponse {
 public:
     CreateAutoScalingGroupResponse(const CreateAutoScalingGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateAutoScalingGroupRequest * request() const;
+    virtual const CreateAutoScalingGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateAutoScalingGroupResponse)

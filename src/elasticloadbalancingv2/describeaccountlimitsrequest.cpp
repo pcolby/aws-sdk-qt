@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountLimitsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeAccountLimitsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAccountLimitsRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeAccountLimitsRequest * const q)

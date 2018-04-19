@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RebootDBInstanceResponse
- *
  * \brief The RebootDBInstanceResponse class provides an interace for RDS RebootDBInstance responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RebootDBInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RebootDBInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 RebootDBInstanceResponse::RebootDBInstanceResponse(
         const RebootDBInstanceRequest &request,
@@ -119,6 +114,9 @@ RebootDBInstanceResponse::RebootDBInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RebootDBInstanceRequest * RebootDBInstanceResponse::request() const
 {
     Q_D(const RebootDBInstanceResponse);
@@ -126,9 +124,8 @@ const RebootDBInstanceRequest * RebootDBInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS RebootDBInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS RebootDBInstance \a response.
  */
 void RebootDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void RebootDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::RebootDBInstanceResponsePrivate
+ * \brief The RebootDBInstanceResponsePrivate class provides private implementation for RebootDBInstanceResponse.
  * \internal
  *
- * \class RebootDBInstanceResponsePrivate
- *
- * \brief Private implementation for RebootDBInstanceResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootDBInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RebootDBInstanceResponse instance.
+ * Constructs a RebootDBInstanceResponsePrivate object with public implementation \a q.
  */
 RebootDBInstanceResponsePrivate::RebootDBInstanceResponsePrivate(
     RebootDBInstanceResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ RebootDBInstanceResponsePrivate::RebootDBInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS RebootDBInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS RebootDBInstance response element from \a xml.
  */
 void RebootDBInstanceResponsePrivate::parseRebootDBInstanceResponse(QXmlStreamReader &xml)
 {

@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * StopInstanceRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a StopInstanceRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a StopInstanceRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 StopInstanceRequestPrivate::StopInstanceRequestPrivate(
     const OpsWorksRequest::Action action, StopInstanceRequest * const q)

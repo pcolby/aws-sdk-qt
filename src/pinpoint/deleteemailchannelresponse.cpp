@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteEmailChannelResponse
- *
  * \brief The DeleteEmailChannelResponse class provides an interace for Pinpoint DeleteEmailChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteEmailChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteEmailChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEmailChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEmailChannelResponse::DeleteEmailChannelResponse(
         const DeleteEmailChannelRequest &request,
@@ -55,6 +50,9 @@ DeleteEmailChannelResponse::DeleteEmailChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEmailChannelRequest * DeleteEmailChannelResponse::request() const
 {
     Q_D(const DeleteEmailChannelResponse);
@@ -62,9 +60,8 @@ const DeleteEmailChannelRequest * DeleteEmailChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint DeleteEmailChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint DeleteEmailChannel \a response.
  */
 void DeleteEmailChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteEmailChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::DeleteEmailChannelResponsePrivate
+ * \brief The DeleteEmailChannelResponsePrivate class provides private implementation for DeleteEmailChannelResponse.
  * \internal
  *
- * \class DeleteEmailChannelResponsePrivate
- *
- * \brief Private implementation for DeleteEmailChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEmailChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEmailChannelResponse instance.
+ * Constructs a DeleteEmailChannelResponsePrivate object with public implementation \a q.
  */
 DeleteEmailChannelResponsePrivate::DeleteEmailChannelResponsePrivate(
     DeleteEmailChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteEmailChannelResponsePrivate::DeleteEmailChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint DeleteEmailChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint DeleteEmailChannel response element from \a xml.
  */
 void DeleteEmailChannelResponsePrivate::parseDeleteEmailChannelResponse(QXmlStreamReader &xml)
 {

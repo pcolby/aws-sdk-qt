@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::ResolveAliasResponse
- *
  * \brief The ResolveAliasResponse class provides an interace for GameLift ResolveAlias responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new ResolveAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResolveAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 ResolveAliasResponse::ResolveAliasResponse(
         const ResolveAliasRequest &request,
@@ -491,6 +486,9 @@ ResolveAliasResponse::ResolveAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResolveAliasRequest * ResolveAliasResponse::request() const
 {
     Q_D(const ResolveAliasResponse);
@@ -498,9 +496,8 @@ const ResolveAliasRequest * ResolveAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift ResolveAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift ResolveAlias \a response.
  */
 void ResolveAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void ResolveAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::ResolveAliasResponsePrivate
+ * \brief The ResolveAliasResponsePrivate class provides private implementation for ResolveAliasResponse.
  * \internal
  *
- * \class ResolveAliasResponsePrivate
- *
- * \brief Private implementation for ResolveAliasResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResolveAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResolveAliasResponse instance.
+ * Constructs a ResolveAliasResponsePrivate object with public implementation \a q.
  */
 ResolveAliasResponsePrivate::ResolveAliasResponsePrivate(
     ResolveAliasResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ ResolveAliasResponsePrivate::ResolveAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift ResolveAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift ResolveAlias response element from \a xml.
  */
 void ResolveAliasResponsePrivate::parseResolveAliasResponse(QXmlStreamReader &xml)
 {

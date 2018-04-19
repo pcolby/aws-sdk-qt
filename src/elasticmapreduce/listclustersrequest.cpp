@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListClustersRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ListClustersRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a ListClustersRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 ListClustersRequestPrivate::ListClustersRequestPrivate(
     const EMRRequest::Action action, ListClustersRequest * const q)

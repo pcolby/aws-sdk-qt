@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminRemoveUserFromGroupResponse : public CognitoIdentityProv
 public:
     AdminRemoveUserFromGroupResponse(const AdminRemoveUserFromGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminRemoveUserFromGroupRequest * request() const;
+    virtual const AdminRemoveUserFromGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AdminRemoveUserFromGroupResponse)

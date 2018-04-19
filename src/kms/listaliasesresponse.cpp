@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListAliasesResponse
- *
  * \brief The ListAliasesResponse class provides an interace for KMS ListAliases responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListAliasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAliasesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAliasesResponse::ListAliasesResponse(
         const ListAliasesRequest &request,
@@ -154,6 +149,9 @@ ListAliasesResponse::ListAliasesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAliasesRequest * ListAliasesResponse::request() const
 {
     Q_D(const ListAliasesResponse);
@@ -161,9 +159,8 @@ const ListAliasesRequest * ListAliasesResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS ListAliases response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS ListAliases \a response.
  */
 void ListAliasesResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void ListAliasesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::ListAliasesResponsePrivate
+ * \brief The ListAliasesResponsePrivate class provides private implementation for ListAliasesResponse.
  * \internal
  *
- * \class ListAliasesResponsePrivate
- *
- * \brief Private implementation for ListAliasesResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAliasesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAliasesResponse instance.
+ * Constructs a ListAliasesResponsePrivate object with public implementation \a q.
  */
 ListAliasesResponsePrivate::ListAliasesResponsePrivate(
     ListAliasesResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ ListAliasesResponsePrivate::ListAliasesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS ListAliasesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS ListAliases response element from \a xml.
  */
 void ListAliasesResponsePrivate::parseListAliasesResponse(QXmlStreamReader &xml)
 {

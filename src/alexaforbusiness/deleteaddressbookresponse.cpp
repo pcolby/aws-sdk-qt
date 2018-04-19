@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DeleteAddressBookResponse
- *
  * \brief The DeleteAddressBookResponse class provides an interace for AlexaForBusiness DeleteAddressBook responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DeleteAddressBookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAddressBookResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAddressBookResponse::DeleteAddressBookResponse(
         const DeleteAddressBookRequest &request,
@@ -60,6 +55,9 @@ DeleteAddressBookResponse::DeleteAddressBookResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAddressBookRequest * DeleteAddressBookResponse::request() const
 {
     Q_D(const DeleteAddressBookResponse);
@@ -67,9 +65,8 @@ const DeleteAddressBookRequest * DeleteAddressBookResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness DeleteAddressBook response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness DeleteAddressBook \a response.
  */
 void DeleteAddressBookResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteAddressBookResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::DeleteAddressBookResponsePrivate
+ * \brief The DeleteAddressBookResponsePrivate class provides private implementation for DeleteAddressBookResponse.
  * \internal
  *
- * \class DeleteAddressBookResponsePrivate
- *
- * \brief Private implementation for DeleteAddressBookResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAddressBookResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAddressBookResponse instance.
+ * Constructs a DeleteAddressBookResponsePrivate object with public implementation \a q.
  */
 DeleteAddressBookResponsePrivate::DeleteAddressBookResponsePrivate(
     DeleteAddressBookResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteAddressBookResponsePrivate::DeleteAddressBookResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness DeleteAddressBookResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness DeleteAddressBook response element from \a xml.
  */
 void DeleteAddressBookResponsePrivate::parseDeleteAddressBookResponse(QXmlStreamReader &xml)
 {

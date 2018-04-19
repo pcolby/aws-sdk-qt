@@ -34,10 +34,10 @@ class QTAWS_EXPORT DefineAnalysisSchemeResponse : public CloudSearchResponse {
 public:
     DefineAnalysisSchemeResponse(const DefineAnalysisSchemeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DefineAnalysisSchemeRequest * request() const;
+    virtual const DefineAnalysisSchemeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DefineAnalysisSchemeResponse)

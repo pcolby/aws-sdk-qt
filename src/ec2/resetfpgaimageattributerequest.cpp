@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ResetFpgaImageAttributeRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ResetFpgaImageAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ResetFpgaImageAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ResetFpgaImageAttributeRequestPrivate::ResetFpgaImageAttributeRequestPrivate(
     const EC2Request::Action action, ResetFpgaImageAttributeRequest * const q)

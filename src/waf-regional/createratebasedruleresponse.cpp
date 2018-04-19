@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::CreateRateBasedRuleResponse
- *
  * \brief The CreateRateBasedRuleResponse class provides an interace for WAFRegional CreateRateBasedRule responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new CreateRateBasedRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRateBasedRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRateBasedRuleResponse::CreateRateBasedRuleResponse(
         const CreateRateBasedRuleRequest &request,
@@ -62,6 +57,9 @@ CreateRateBasedRuleResponse::CreateRateBasedRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRateBasedRuleRequest * CreateRateBasedRuleResponse::request() const
 {
     Q_D(const CreateRateBasedRuleResponse);
@@ -69,9 +67,8 @@ const CreateRateBasedRuleRequest * CreateRateBasedRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional CreateRateBasedRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional CreateRateBasedRule \a response.
  */
 void CreateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void CreateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::CreateRateBasedRuleResponsePrivate
+ * \brief The CreateRateBasedRuleResponsePrivate class provides private implementation for CreateRateBasedRuleResponse.
  * \internal
  *
- * \class CreateRateBasedRuleResponsePrivate
- *
- * \brief Private implementation for CreateRateBasedRuleResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRateBasedRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRateBasedRuleResponse instance.
+ * Constructs a CreateRateBasedRuleResponsePrivate object with public implementation \a q.
  */
 CreateRateBasedRuleResponsePrivate::CreateRateBasedRuleResponsePrivate(
     CreateRateBasedRuleResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ CreateRateBasedRuleResponsePrivate::CreateRateBasedRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional CreateRateBasedRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional CreateRateBasedRule response element from \a xml.
  */
 void CreateRateBasedRuleResponsePrivate::parseCreateRateBasedRuleResponse(QXmlStreamReader &xml)
 {

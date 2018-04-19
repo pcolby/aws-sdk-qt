@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::CreateAliasResponse
- *
  * \brief The CreateAliasResponse class provides an interace for WorkMail CreateAlias responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new CreateAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAliasResponse::CreateAliasResponse(
         const CreateAliasRequest &request,
@@ -88,6 +83,9 @@ CreateAliasResponse::CreateAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAliasRequest * CreateAliasResponse::request() const
 {
     Q_D(const CreateAliasResponse);
@@ -95,9 +93,8 @@ const CreateAliasRequest * CreateAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail CreateAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail CreateAlias \a response.
  */
 void CreateAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void CreateAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::CreateAliasResponsePrivate
+ * \brief The CreateAliasResponsePrivate class provides private implementation for CreateAliasResponse.
  * \internal
  *
- * \class CreateAliasResponsePrivate
- *
- * \brief Private implementation for CreateAliasResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAliasResponse instance.
+ * Constructs a CreateAliasResponsePrivate object with public implementation \a q.
  */
 CreateAliasResponsePrivate::CreateAliasResponsePrivate(
     CreateAliasResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ CreateAliasResponsePrivate::CreateAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail CreateAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail CreateAlias response element from \a xml.
  */
 void CreateAliasResponsePrivate::parseCreateAliasResponse(QXmlStreamReader &xml)
 {

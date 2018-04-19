@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::GetQueueResponse
- *
  * \brief The GetQueueResponse class provides an interace for MediaConvert GetQueue responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::getQueue
  */
 
 /*!
- * @brief  Constructs a new GetQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetQueueResponse object for \a reply to \a request, with parent \a parent.
  */
 GetQueueResponse::GetQueueResponse(
         const GetQueueRequest &request,
@@ -55,6 +50,9 @@ GetQueueResponse::GetQueueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetQueueRequest * GetQueueResponse::request() const
 {
     Q_D(const GetQueueResponse);
@@ -62,9 +60,8 @@ const GetQueueRequest * GetQueueResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert GetQueue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert GetQueue \a response.
  */
 void GetQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetQueueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::GetQueueResponsePrivate
+ * \brief The GetQueueResponsePrivate class provides private implementation for GetQueueResponse.
  * \internal
  *
- * \class GetQueueResponsePrivate
- *
- * \brief Private implementation for GetQueueResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQueueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetQueueResponse instance.
+ * Constructs a GetQueueResponsePrivate object with public implementation \a q.
  */
 GetQueueResponsePrivate::GetQueueResponsePrivate(
     GetQueueResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ GetQueueResponsePrivate::GetQueueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert GetQueueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert GetQueue response element from \a xml.
  */
 void GetQueueResponsePrivate::parseGetQueueResponse(QXmlStreamReader &xml)
 {

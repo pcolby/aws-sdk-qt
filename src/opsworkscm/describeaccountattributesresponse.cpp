@@ -29,10 +29,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DescribeAccountAttributesResponse
- *
  * \brief The DescribeAccountAttributesResponse class provides an interace for OpsWorksCM DescribeAccountAttributes responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -99,11 +98,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAccountAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
         const DescribeAccountAttributesRequest &request,
@@ -115,6 +110,9 @@ DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::request() const
 {
     Q_D(const DescribeAccountAttributesResponse);
@@ -122,9 +120,8 @@ const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::requ
 }
 
 /*!
- * @brief  Parse a OpsWorksCM DescribeAccountAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorksCM DescribeAccountAttributes \a response.
  */
 void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -134,19 +131,15 @@ void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorksCM::DescribeAccountAttributesResponsePrivate
+ * \brief The DescribeAccountAttributesResponsePrivate class provides private implementation for DescribeAccountAttributesResponse.
  * \internal
  *
- * \class DescribeAccountAttributesResponsePrivate
- *
- * \brief Private implementation for DescribeAccountAttributesResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAccountAttributesResponse instance.
+ * Constructs a DescribeAccountAttributesResponsePrivate object with public implementation \a q.
  */
 DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePrivate(
     DescribeAccountAttributesResponse * const q) : OpsWorksCMResponsePrivate(q)
@@ -155,9 +148,7 @@ DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePriva
 }
 
 /*!
- * @brief  Parse an OpsWorksCM DescribeAccountAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorksCM DescribeAccountAttributes response element from \a xml.
  */
 void DescribeAccountAttributesResponsePrivate::parseDescribeAccountAttributesResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteConfigurationSetResponse : public SESResponse {
 public:
     DeleteConfigurationSetResponse(const DeleteConfigurationSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteConfigurationSetRequest * request() const;
+    virtual const DeleteConfigurationSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteConfigurationSetResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeChapCredentialsResponse : public StorageGatewayRespon
 public:
     DescribeChapCredentialsResponse(const DescribeChapCredentialsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeChapCredentialsRequest * request() const;
+    virtual const DescribeChapCredentialsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeChapCredentialsResponse)

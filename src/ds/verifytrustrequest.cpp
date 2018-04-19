@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * VerifyTrustRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a VerifyTrustRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a VerifyTrustRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 VerifyTrustRequestPrivate::VerifyTrustRequestPrivate(
     const DirectoryServiceRequest::Action action, VerifyTrustRequest * const q)

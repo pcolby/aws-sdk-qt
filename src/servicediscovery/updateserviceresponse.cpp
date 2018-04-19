@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::UpdateServiceResponse
- *
  * \brief The UpdateServiceResponse class provides an interace for ServiceDiscovery UpdateService responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new UpdateServiceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateServiceResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateServiceResponse::UpdateServiceResponse(
         const UpdateServiceRequest &request,
@@ -59,6 +54,9 @@ UpdateServiceResponse::UpdateServiceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateServiceRequest * UpdateServiceResponse::request() const
 {
     Q_D(const UpdateServiceResponse);
@@ -66,9 +64,8 @@ const UpdateServiceRequest * UpdateServiceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery UpdateService response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery UpdateService \a response.
  */
 void UpdateServiceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void UpdateServiceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::UpdateServiceResponsePrivate
+ * \brief The UpdateServiceResponsePrivate class provides private implementation for UpdateServiceResponse.
  * \internal
  *
- * \class UpdateServiceResponsePrivate
- *
- * \brief Private implementation for UpdateServiceResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateServiceResponse instance.
+ * Constructs a UpdateServiceResponsePrivate object with public implementation \a q.
  */
 UpdateServiceResponsePrivate::UpdateServiceResponsePrivate(
     UpdateServiceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ UpdateServiceResponsePrivate::UpdateServiceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery UpdateServiceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery UpdateService response element from \a xml.
  */
 void UpdateServiceResponsePrivate::parseUpdateServiceResponse(QXmlStreamReader &xml)
 {

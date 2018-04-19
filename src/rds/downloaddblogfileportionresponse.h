@@ -34,10 +34,10 @@ class QTAWS_EXPORT DownloadDBLogFilePortionResponse : public RDSResponse {
 public:
     DownloadDBLogFilePortionResponse(const DownloadDBLogFilePortionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DownloadDBLogFilePortionRequest * request() const;
+    virtual const DownloadDBLogFilePortionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DownloadDBLogFilePortionResponse)

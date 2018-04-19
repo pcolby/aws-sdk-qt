@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::AddUploadBufferResponse
- *
  * \brief The AddUploadBufferResponse class provides an interace for StorageGateway AddUploadBuffer responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new AddUploadBufferResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddUploadBufferResponse object for \a reply to \a request, with parent \a parent.
  */
 AddUploadBufferResponse::AddUploadBufferResponse(
         const AddUploadBufferRequest &request,
@@ -124,6 +119,9 @@ AddUploadBufferResponse::AddUploadBufferResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddUploadBufferRequest * AddUploadBufferResponse::request() const
 {
     Q_D(const AddUploadBufferResponse);
@@ -131,9 +129,8 @@ const AddUploadBufferRequest * AddUploadBufferResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway AddUploadBuffer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway AddUploadBuffer \a response.
  */
 void AddUploadBufferResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void AddUploadBufferResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::AddUploadBufferResponsePrivate
+ * \brief The AddUploadBufferResponsePrivate class provides private implementation for AddUploadBufferResponse.
  * \internal
  *
- * \class AddUploadBufferResponsePrivate
- *
- * \brief Private implementation for AddUploadBufferResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddUploadBufferResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddUploadBufferResponse instance.
+ * Constructs a AddUploadBufferResponsePrivate object with public implementation \a q.
  */
 AddUploadBufferResponsePrivate::AddUploadBufferResponsePrivate(
     AddUploadBufferResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ AddUploadBufferResponsePrivate::AddUploadBufferResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway AddUploadBufferResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway AddUploadBuffer response element from \a xml.
  */
 void AddUploadBufferResponsePrivate::parseAddUploadBufferResponse(QXmlStreamReader &xml)
 {

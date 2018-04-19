@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeScalingPoliciesResponse : public GameLiftResponse {
 public:
     DescribeScalingPoliciesResponse(const DescribeScalingPoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeScalingPoliciesRequest * request() const;
+    virtual const DescribeScalingPoliciesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeScalingPoliciesResponse)

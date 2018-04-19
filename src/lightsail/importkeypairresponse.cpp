@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::ImportKeyPairResponse
- *
  * \brief The ImportKeyPairResponse class provides an interace for Lightsail ImportKeyPair responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new ImportKeyPairResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportKeyPairResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportKeyPairResponse::ImportKeyPairResponse(
         const ImportKeyPairRequest &request,
@@ -71,6 +66,9 @@ ImportKeyPairResponse::ImportKeyPairResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportKeyPairRequest * ImportKeyPairResponse::request() const
 {
     Q_D(const ImportKeyPairResponse);
@@ -78,9 +76,8 @@ const ImportKeyPairRequest * ImportKeyPairResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail ImportKeyPair response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail ImportKeyPair \a response.
  */
 void ImportKeyPairResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void ImportKeyPairResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::ImportKeyPairResponsePrivate
+ * \brief The ImportKeyPairResponsePrivate class provides private implementation for ImportKeyPairResponse.
  * \internal
  *
- * \class ImportKeyPairResponsePrivate
- *
- * \brief Private implementation for ImportKeyPairResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportKeyPairResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportKeyPairResponse instance.
+ * Constructs a ImportKeyPairResponsePrivate object with public implementation \a q.
  */
 ImportKeyPairResponsePrivate::ImportKeyPairResponsePrivate(
     ImportKeyPairResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ ImportKeyPairResponsePrivate::ImportKeyPairResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail ImportKeyPairResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail ImportKeyPair response element from \a xml.
  */
 void ImportKeyPairResponsePrivate::parseImportKeyPairResponse(QXmlStreamReader &xml)
 {

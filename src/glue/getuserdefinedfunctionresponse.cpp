@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetUserDefinedFunctionResponse
- *
  * \brief The GetUserDefinedFunctionResponse class provides an interace for Glue GetUserDefinedFunction responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetUserDefinedFunctionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetUserDefinedFunctionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetUserDefinedFunctionResponse::GetUserDefinedFunctionResponse(
         const GetUserDefinedFunctionRequest &request,
@@ -58,6 +53,9 @@ GetUserDefinedFunctionResponse::GetUserDefinedFunctionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetUserDefinedFunctionRequest * GetUserDefinedFunctionResponse::request() const
 {
     Q_D(const GetUserDefinedFunctionResponse);
@@ -65,9 +63,8 @@ const GetUserDefinedFunctionRequest * GetUserDefinedFunctionResponse::request() 
 }
 
 /*!
- * @brief  Parse a Glue GetUserDefinedFunction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetUserDefinedFunction \a response.
  */
 void GetUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetUserDefinedFunctionResponsePrivate
+ * \brief The GetUserDefinedFunctionResponsePrivate class provides private implementation for GetUserDefinedFunctionResponse.
  * \internal
  *
- * \class GetUserDefinedFunctionResponsePrivate
- *
- * \brief Private implementation for GetUserDefinedFunctionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUserDefinedFunctionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetUserDefinedFunctionResponse instance.
+ * Constructs a GetUserDefinedFunctionResponsePrivate object with public implementation \a q.
  */
 GetUserDefinedFunctionResponsePrivate::GetUserDefinedFunctionResponsePrivate(
     GetUserDefinedFunctionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetUserDefinedFunctionResponsePrivate::GetUserDefinedFunctionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetUserDefinedFunctionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetUserDefinedFunction response element from \a xml.
  */
 void GetUserDefinedFunctionResponsePrivate::parseGetUserDefinedFunctionResponse(QXmlStreamReader &xml)
 {

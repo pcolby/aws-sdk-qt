@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListPublicKeysRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListPublicKeysRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a ListPublicKeysRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 ListPublicKeysRequestPrivate::ListPublicKeysRequestPrivate(
     const CloudFrontRequest::Action action, ListPublicKeysRequest * const q)

@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeMaintenanceWindowsResponse
- *
  * \brief The DescribeMaintenanceWindowsResponse class provides an interace for SSM DescribeMaintenanceWindows responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceWindowsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeMaintenanceWindowsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeMaintenanceWindowsResponse::DescribeMaintenanceWindowsResponse(
         const DescribeMaintenanceWindowsRequest &request,
@@ -79,6 +74,9 @@ DescribeMaintenanceWindowsResponse::DescribeMaintenanceWindowsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeMaintenanceWindowsRequest * DescribeMaintenanceWindowsResponse::request() const
 {
     Q_D(const DescribeMaintenanceWindowsResponse);
@@ -86,9 +84,8 @@ const DescribeMaintenanceWindowsRequest * DescribeMaintenanceWindowsResponse::re
 }
 
 /*!
- * @brief  Parse a SSM DescribeMaintenanceWindows response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeMaintenanceWindows \a response.
  */
 void DescribeMaintenanceWindowsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeMaintenanceWindowsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeMaintenanceWindowsResponsePrivate
+ * \brief The DescribeMaintenanceWindowsResponsePrivate class provides private implementation for DescribeMaintenanceWindowsResponse.
  * \internal
  *
- * \class DescribeMaintenanceWindowsResponsePrivate
- *
- * \brief Private implementation for DescribeMaintenanceWindowsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMaintenanceWindowsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeMaintenanceWindowsResponse instance.
+ * Constructs a DescribeMaintenanceWindowsResponsePrivate object with public implementation \a q.
  */
 DescribeMaintenanceWindowsResponsePrivate::DescribeMaintenanceWindowsResponsePrivate(
     DescribeMaintenanceWindowsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeMaintenanceWindowsResponsePrivate::DescribeMaintenanceWindowsResponsePri
 }
 
 /*!
- * @brief  Parse an SSM DescribeMaintenanceWindowsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeMaintenanceWindows response element from \a xml.
  */
 void DescribeMaintenanceWindowsResponsePrivate::parseDescribeMaintenanceWindowsResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetXssMatchSetResponse : public WAFResponse {
 public:
     GetXssMatchSetResponse(const GetXssMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetXssMatchSetRequest * request() const;
+    virtual const GetXssMatchSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetXssMatchSetResponse)

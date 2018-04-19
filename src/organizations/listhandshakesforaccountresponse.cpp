@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListHandshakesForAccountResponse
- *
  * \brief The ListHandshakesForAccountResponse class provides an interace for Organizations ListHandshakesForAccount responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListHandshakesForAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListHandshakesForAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 ListHandshakesForAccountResponse::ListHandshakesForAccountResponse(
         const ListHandshakesForAccountRequest &request,
@@ -197,6 +192,9 @@ ListHandshakesForAccountResponse::ListHandshakesForAccountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListHandshakesForAccountRequest * ListHandshakesForAccountResponse::request() const
 {
     Q_D(const ListHandshakesForAccountResponse);
@@ -204,9 +202,8 @@ const ListHandshakesForAccountRequest * ListHandshakesForAccountResponse::reques
 }
 
 /*!
- * @brief  Parse a Organizations ListHandshakesForAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations ListHandshakesForAccount \a response.
  */
 void ListHandshakesForAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void ListHandshakesForAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::ListHandshakesForAccountResponsePrivate
+ * \brief The ListHandshakesForAccountResponsePrivate class provides private implementation for ListHandshakesForAccountResponse.
  * \internal
  *
- * \class ListHandshakesForAccountResponsePrivate
- *
- * \brief Private implementation for ListHandshakesForAccountResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHandshakesForAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListHandshakesForAccountResponse instance.
+ * Constructs a ListHandshakesForAccountResponsePrivate object with public implementation \a q.
  */
 ListHandshakesForAccountResponsePrivate::ListHandshakesForAccountResponsePrivate(
     ListHandshakesForAccountResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ ListHandshakesForAccountResponsePrivate::ListHandshakesForAccountResponsePrivate
 }
 
 /*!
- * @brief  Parse an Organizations ListHandshakesForAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations ListHandshakesForAccount response element from \a xml.
  */
 void ListHandshakesForAccountResponsePrivate::parseListHandshakesForAccountResponse(QXmlStreamReader &xml)
 {

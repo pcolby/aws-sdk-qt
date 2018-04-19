@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateEventSourceMappingRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateEventSourceMappingRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a CreateEventSourceMappingRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 CreateEventSourceMappingRequestPrivate::CreateEventSourceMappingRequestPrivate(
     const LambdaRequest::Action action, CreateEventSourceMappingRequest * const q)

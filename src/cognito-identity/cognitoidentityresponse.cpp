@@ -28,16 +28,13 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::CognitoIdentityResponse
- *
  * \brief The CognitoIdentityResponse class provides an interface for CognitoIdentity responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @brief  Constructs a new CognitoIdentityResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CognitoIdentityResponse object with parent \a parent.
  */
 CognitoIdentityResponse::CognitoIdentityResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CognitoIdentityResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CognitoIdentityResponse::CognitoIdentityResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CognitoIdentityResponse object.
- *
+ * \internal
+ * Constructs a CognitoIdentityResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CognitoIdentityResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CognitoIdentityResponse::CognitoIdentityResponse(CognitoIdentityResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CognitoIdentityResponse::CognitoIdentityResponse(CognitoIdentityResponsePrivate 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CognitoIdentityResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CognitoIdentityResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoIdentity::CognitoIdentityResponsePrivate
+ * \brief The CognitoIdentityResponsePrivate class provides private implementation for CognitoIdentityResponse.
+ * \internal
  *
- * @class  CognitoIdentityResponsePrivate
- *
- * @brief  Private implementation for CognitoIdentityResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CognitoIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CognitoIdentityResponse instance.
+ * Constructs a CognitoIdentityResponsePrivate object with public implementation \a q.
  */
 CognitoIdentityResponsePrivate::CognitoIdentityResponsePrivate(
     CognitoIdentityResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

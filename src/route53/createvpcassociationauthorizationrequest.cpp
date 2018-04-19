@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateVPCAssociationAuthorizationRequest::res
  */
 
 /*!
- *
- * Constructs a CreateVPCAssociationAuthorizationRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a CreateVPCAssociationAuthorizationRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 CreateVPCAssociationAuthorizationRequestPrivate::CreateVPCAssociationAuthorizationRequestPrivate(
     const Route53Request::Action action, CreateVPCAssociationAuthorizationRequest * const q)

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * EnableAlarmActionsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a EnableAlarmActionsRequestPrivate object for CloudWatch \a action with,
- * public implementation \a q.
+ * Constructs a EnableAlarmActionsRequestPrivate object for CloudWatch \a action,
+ * with public implementation \a q.
  */
 EnableAlarmActionsRequestPrivate::EnableAlarmActionsRequestPrivate(
     const CloudWatchRequest::Action action, EnableAlarmActionsRequest * const q)

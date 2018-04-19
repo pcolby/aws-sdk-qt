@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::PutRecordResponse
- *
  * \brief The PutRecordResponse class provides an interace for Kinesis PutRecord responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new PutRecordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutRecordResponse object for \a reply to \a request, with parent \a parent.
  */
 PutRecordResponse::PutRecordResponse(
         const PutRecordRequest &request,
@@ -58,6 +53,9 @@ PutRecordResponse::PutRecordResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutRecordRequest * PutRecordResponse::request() const
 {
     Q_D(const PutRecordResponse);
@@ -65,9 +63,8 @@ const PutRecordRequest * PutRecordResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis PutRecord response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis PutRecord \a response.
  */
 void PutRecordResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void PutRecordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::PutRecordResponsePrivate
+ * \brief The PutRecordResponsePrivate class provides private implementation for PutRecordResponse.
  * \internal
  *
- * \class PutRecordResponsePrivate
- *
- * \brief Private implementation for PutRecordResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRecordResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutRecordResponse instance.
+ * Constructs a PutRecordResponsePrivate object with public implementation \a q.
  */
 PutRecordResponsePrivate::PutRecordResponsePrivate(
     PutRecordResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ PutRecordResponsePrivate::PutRecordResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis PutRecordResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis PutRecord response element from \a xml.
  */
 void PutRecordResponsePrivate::parsePutRecordResponse(QXmlStreamReader &xml)
 {

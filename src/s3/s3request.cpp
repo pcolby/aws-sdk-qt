@@ -117,7 +117,7 @@ namespace S3 {
  */
 
 /*!
- * Constructs a[n] S3Request object for S3 \a action.
+ * Constructs a S3Request object for S3 \a action.
  */
 S3Request::S3Request(const Action action)
     : QtAws::Core::AwsAbstractRequest(new S3RequestPrivate(action, this))
@@ -317,8 +317,8 @@ QNetworkRequest S3Request::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a S3RequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a S3RequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 S3RequestPrivate::S3RequestPrivate(const S3Request::Action action, S3Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

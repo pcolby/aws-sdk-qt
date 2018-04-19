@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * MergePullRequestByFastForwardRequest::respons
  */
 
 /*!
- *
- * Constructs a MergePullRequestByFastForwardRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a MergePullRequestByFastForwardRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 MergePullRequestByFastForwardRequestPrivate::MergePullRequestByFastForwardRequestPrivate(
     const CodeCommitRequest::Action action, MergePullRequestByFastForwardRequest * const q)

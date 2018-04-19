@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetUsagePlanKeysResponse
- *
  * \brief The GetUsagePlanKeysResponse class provides an interace for APIGateway GetUsagePlanKeys responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetUsagePlanKeysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetUsagePlanKeysResponse object for \a reply to \a request, with parent \a parent.
  */
 GetUsagePlanKeysResponse::GetUsagePlanKeysResponse(
         const GetUsagePlanKeysRequest &request,
@@ -60,6 +55,9 @@ GetUsagePlanKeysResponse::GetUsagePlanKeysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetUsagePlanKeysRequest * GetUsagePlanKeysResponse::request() const
 {
     Q_D(const GetUsagePlanKeysResponse);
@@ -67,9 +65,8 @@ const GetUsagePlanKeysRequest * GetUsagePlanKeysResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetUsagePlanKeys response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetUsagePlanKeys \a response.
  */
 void GetUsagePlanKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetUsagePlanKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetUsagePlanKeysResponsePrivate
+ * \brief The GetUsagePlanKeysResponsePrivate class provides private implementation for GetUsagePlanKeysResponse.
  * \internal
  *
- * \class GetUsagePlanKeysResponsePrivate
- *
- * \brief Private implementation for GetUsagePlanKeysResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUsagePlanKeysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetUsagePlanKeysResponse instance.
+ * Constructs a GetUsagePlanKeysResponsePrivate object with public implementation \a q.
  */
 GetUsagePlanKeysResponsePrivate::GetUsagePlanKeysResponsePrivate(
     GetUsagePlanKeysResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetUsagePlanKeysResponsePrivate::GetUsagePlanKeysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetUsagePlanKeysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetUsagePlanKeys response element from \a xml.
  */
 void GetUsagePlanKeysResponsePrivate::parseGetUsagePlanKeysResponse(QXmlStreamReader &xml)
 {

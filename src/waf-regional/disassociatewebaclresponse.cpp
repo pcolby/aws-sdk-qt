@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DisassociateWebACLResponse
- *
  * \brief The DisassociateWebACLResponse class provides an interace for WAFRegional DisassociateWebACL responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DisassociateWebACLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateWebACLResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateWebACLResponse::DisassociateWebACLResponse(
         const DisassociateWebACLRequest &request,
@@ -62,6 +57,9 @@ DisassociateWebACLResponse::DisassociateWebACLResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateWebACLRequest * DisassociateWebACLResponse::request() const
 {
     Q_D(const DisassociateWebACLResponse);
@@ -69,9 +67,8 @@ const DisassociateWebACLRequest * DisassociateWebACLResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional DisassociateWebACL response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional DisassociateWebACL \a response.
  */
 void DisassociateWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DisassociateWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::DisassociateWebACLResponsePrivate
+ * \brief The DisassociateWebACLResponsePrivate class provides private implementation for DisassociateWebACLResponse.
  * \internal
  *
- * \class DisassociateWebACLResponsePrivate
- *
- * \brief Private implementation for DisassociateWebACLResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateWebACLResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateWebACLResponse instance.
+ * Constructs a DisassociateWebACLResponsePrivate object with public implementation \a q.
  */
 DisassociateWebACLResponsePrivate::DisassociateWebACLResponsePrivate(
     DisassociateWebACLResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ DisassociateWebACLResponsePrivate::DisassociateWebACLResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional DisassociateWebACLResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional DisassociateWebACL response element from \a xml.
  */
 void DisassociateWebACLResponsePrivate::parseDisassociateWebACLResponse(QXmlStreamReader &xml)
 {

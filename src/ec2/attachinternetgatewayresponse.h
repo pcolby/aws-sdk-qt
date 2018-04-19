@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachInternetGatewayResponse : public EC2Response {
 public:
     AttachInternetGatewayResponse(const AttachInternetGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachInternetGatewayRequest * request() const;
+    virtual const AttachInternetGatewayRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AttachInternetGatewayResponse)

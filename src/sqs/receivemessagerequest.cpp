@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * ReceiveMessageRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ReceiveMessageRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a ReceiveMessageRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 ReceiveMessageRequestPrivate::ReceiveMessageRequestPrivate(
     const SQSRequest::Action action, ReceiveMessageRequest * const q)

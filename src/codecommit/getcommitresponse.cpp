@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetCommitResponse
- *
  * \brief The GetCommitResponse class provides an interace for CodeCommit GetCommit responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetCommitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCommitResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCommitResponse::GetCommitResponse(
         const GetCommitRequest &request,
@@ -245,6 +240,9 @@ GetCommitResponse::GetCommitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCommitRequest * GetCommitResponse::request() const
 {
     Q_D(const GetCommitResponse);
@@ -252,9 +250,8 @@ const GetCommitRequest * GetCommitResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit GetCommit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit GetCommit \a response.
  */
 void GetCommitResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void GetCommitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::GetCommitResponsePrivate
+ * \brief The GetCommitResponsePrivate class provides private implementation for GetCommitResponse.
  * \internal
  *
- * \class GetCommitResponsePrivate
- *
- * \brief Private implementation for GetCommitResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCommitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCommitResponse instance.
+ * Constructs a GetCommitResponsePrivate object with public implementation \a q.
  */
 GetCommitResponsePrivate::GetCommitResponsePrivate(
     GetCommitResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ GetCommitResponsePrivate::GetCommitResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit GetCommitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit GetCommit response element from \a xml.
  */
 void GetCommitResponsePrivate::parseGetCommitResponse(QXmlStreamReader &xml)
 {

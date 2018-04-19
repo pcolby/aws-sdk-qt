@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * SelectRequest::response(QNetworkReply * const
  */
 
 /*!
- *
- * Constructs a SelectRequestPrivate object for SimpleDB \a action with,
- * public implementation \a q.
+ * Constructs a SelectRequestPrivate object for SimpleDB \a action,
+ * with public implementation \a q.
  */
 SelectRequestPrivate::SelectRequestPrivate(
     const SimpleDBRequest::Action action, SelectRequest * const q)

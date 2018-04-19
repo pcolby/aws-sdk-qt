@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssignVolumeResponse : public OpsWorksResponse {
 public:
     AssignVolumeResponse(const AssignVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssignVolumeRequest * request() const;
+    virtual const AssignVolumeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssignVolumeResponse)

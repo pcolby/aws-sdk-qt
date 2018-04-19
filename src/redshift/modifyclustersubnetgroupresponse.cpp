@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifyClusterSubnetGroupResponse
- *
  * \brief The ModifyClusterSubnetGroupResponse class provides an interace for Redshift ModifyClusterSubnetGroup responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifyClusterSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyClusterSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyClusterSubnetGroupResponse::ModifyClusterSubnetGroupResponse(
         const ModifyClusterSubnetGroupRequest &request,
@@ -85,6 +80,9 @@ ModifyClusterSubnetGroupResponse::ModifyClusterSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyClusterSubnetGroupRequest * ModifyClusterSubnetGroupResponse::request() const
 {
     Q_D(const ModifyClusterSubnetGroupResponse);
@@ -92,9 +90,8 @@ const ModifyClusterSubnetGroupRequest * ModifyClusterSubnetGroupResponse::reques
 }
 
 /*!
- * @brief  Parse a Redshift ModifyClusterSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift ModifyClusterSubnetGroup \a response.
  */
 void ModifyClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void ModifyClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::ModifyClusterSubnetGroupResponsePrivate
+ * \brief The ModifyClusterSubnetGroupResponsePrivate class provides private implementation for ModifyClusterSubnetGroupResponse.
  * \internal
  *
- * \class ModifyClusterSubnetGroupResponsePrivate
- *
- * \brief Private implementation for ModifyClusterSubnetGroupResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyClusterSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyClusterSubnetGroupResponse instance.
+ * Constructs a ModifyClusterSubnetGroupResponsePrivate object with public implementation \a q.
  */
 ModifyClusterSubnetGroupResponsePrivate::ModifyClusterSubnetGroupResponsePrivate(
     ModifyClusterSubnetGroupResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ ModifyClusterSubnetGroupResponsePrivate::ModifyClusterSubnetGroupResponsePrivate
 }
 
 /*!
- * @brief  Parse an Redshift ModifyClusterSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift ModifyClusterSubnetGroup response element from \a xml.
  */
 void ModifyClusterSubnetGroupResponsePrivate::parseModifyClusterSubnetGroupResponse(QXmlStreamReader &xml)
 {

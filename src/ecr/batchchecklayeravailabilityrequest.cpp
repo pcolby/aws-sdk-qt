@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * BatchCheckLayerAvailabilityRequest::response(
  */
 
 /*!
- *
- * Constructs a BatchCheckLayerAvailabilityRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a BatchCheckLayerAvailabilityRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 BatchCheckLayerAvailabilityRequestPrivate::BatchCheckLayerAvailabilityRequestPrivate(
     const ECRRequest::Action action, BatchCheckLayerAvailabilityRequest * const q)

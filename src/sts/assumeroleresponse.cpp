@@ -29,10 +29,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::AssumeRoleResponse
- *
  * \brief The AssumeRoleResponse class provides an interace for STS AssumeRole responses.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -97,11 +96,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new AssumeRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssumeRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 AssumeRoleResponse::AssumeRoleResponse(
         const AssumeRoleRequest &request,
@@ -113,6 +108,9 @@ AssumeRoleResponse::AssumeRoleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssumeRoleRequest * AssumeRoleResponse::request() const
 {
     Q_D(const AssumeRoleResponse);
@@ -120,9 +118,8 @@ const AssumeRoleRequest * AssumeRoleResponse::request() const
 }
 
 /*!
- * @brief  Parse a STS AssumeRole response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful STS AssumeRole \a response.
  */
 void AssumeRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -132,19 +129,15 @@ void AssumeRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::STS::AssumeRoleResponsePrivate
+ * \brief The AssumeRoleResponsePrivate class provides private implementation for AssumeRoleResponse.
  * \internal
  *
- * \class AssumeRoleResponsePrivate
- *
- * \brief Private implementation for AssumeRoleResponse.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssumeRoleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssumeRoleResponse instance.
+ * Constructs a AssumeRoleResponsePrivate object with public implementation \a q.
  */
 AssumeRoleResponsePrivate::AssumeRoleResponsePrivate(
     AssumeRoleResponse * const q) : STSResponsePrivate(q)
@@ -153,9 +146,7 @@ AssumeRoleResponsePrivate::AssumeRoleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an STS AssumeRoleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a STS AssumeRole response element from \a xml.
  */
 void AssumeRoleResponsePrivate::parseAssumeRoleResponse(QXmlStreamReader &xml)
 {

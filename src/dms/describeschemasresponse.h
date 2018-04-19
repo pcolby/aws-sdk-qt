@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSchemasResponse : public DatabaseMigrationServiceResp
 public:
     DescribeSchemasResponse(const DescribeSchemasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSchemasRequest * request() const;
+    virtual const DescribeSchemasRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSchemasResponse)

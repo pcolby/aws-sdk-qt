@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * RegisterToWorkMailRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a RegisterToWorkMailRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a RegisterToWorkMailRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 RegisterToWorkMailRequestPrivate::RegisterToWorkMailRequestPrivate(
     const WorkMailRequest::Action action, RegisterToWorkMailRequest * const q)

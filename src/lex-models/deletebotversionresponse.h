@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBotVersionResponse : public LexModelBuildingServiceResp
 public:
     DeleteBotVersionResponse(const DeleteBotVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBotVersionRequest * request() const;
+    virtual const DeleteBotVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBotVersionResponse)

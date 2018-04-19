@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AttachUserPolicyResponse
- *
  * \brief The AttachUserPolicyResponse class provides an interace for IAM AttachUserPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AttachUserPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachUserPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachUserPolicyResponse::AttachUserPolicyResponse(
         const AttachUserPolicyRequest &request,
@@ -120,6 +115,9 @@ AttachUserPolicyResponse::AttachUserPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachUserPolicyRequest * AttachUserPolicyResponse::request() const
 {
     Q_D(const AttachUserPolicyResponse);
@@ -127,9 +125,8 @@ const AttachUserPolicyRequest * AttachUserPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM AttachUserPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM AttachUserPolicy \a response.
  */
 void AttachUserPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void AttachUserPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::AttachUserPolicyResponsePrivate
+ * \brief The AttachUserPolicyResponsePrivate class provides private implementation for AttachUserPolicyResponse.
  * \internal
  *
- * \class AttachUserPolicyResponsePrivate
- *
- * \brief Private implementation for AttachUserPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachUserPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachUserPolicyResponse instance.
+ * Constructs a AttachUserPolicyResponsePrivate object with public implementation \a q.
  */
 AttachUserPolicyResponsePrivate::AttachUserPolicyResponsePrivate(
     AttachUserPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ AttachUserPolicyResponsePrivate::AttachUserPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM AttachUserPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM AttachUserPolicy response element from \a xml.
  */
 void AttachUserPolicyResponsePrivate::parseAttachUserPolicyResponse(QXmlStreamReader &xml)
 {

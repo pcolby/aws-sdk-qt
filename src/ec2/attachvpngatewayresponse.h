@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachVpnGatewayResponse : public EC2Response {
 public:
     AttachVpnGatewayResponse(const AttachVpnGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachVpnGatewayRequest * request() const;
+    virtual const AttachVpnGatewayRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AttachVpnGatewayResponse)

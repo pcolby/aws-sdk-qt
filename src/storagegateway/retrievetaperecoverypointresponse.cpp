@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::RetrieveTapeRecoveryPointResponse
- *
  * \brief The RetrieveTapeRecoveryPointResponse class provides an interace for StorageGateway RetrieveTapeRecoveryPoint responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new RetrieveTapeRecoveryPointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RetrieveTapeRecoveryPointResponse object for \a reply to \a request, with parent \a parent.
  */
 RetrieveTapeRecoveryPointResponse::RetrieveTapeRecoveryPointResponse(
         const RetrieveTapeRecoveryPointRequest &request,
@@ -124,6 +119,9 @@ RetrieveTapeRecoveryPointResponse::RetrieveTapeRecoveryPointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RetrieveTapeRecoveryPointRequest * RetrieveTapeRecoveryPointResponse::request() const
 {
     Q_D(const RetrieveTapeRecoveryPointResponse);
@@ -131,9 +129,8 @@ const RetrieveTapeRecoveryPointRequest * RetrieveTapeRecoveryPointResponse::requ
 }
 
 /*!
- * @brief  Parse a StorageGateway RetrieveTapeRecoveryPoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway RetrieveTapeRecoveryPoint \a response.
  */
 void RetrieveTapeRecoveryPointResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void RetrieveTapeRecoveryPointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::RetrieveTapeRecoveryPointResponsePrivate
+ * \brief The RetrieveTapeRecoveryPointResponsePrivate class provides private implementation for RetrieveTapeRecoveryPointResponse.
  * \internal
  *
- * \class RetrieveTapeRecoveryPointResponsePrivate
- *
- * \brief Private implementation for RetrieveTapeRecoveryPointResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetrieveTapeRecoveryPointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RetrieveTapeRecoveryPointResponse instance.
+ * Constructs a RetrieveTapeRecoveryPointResponsePrivate object with public implementation \a q.
  */
 RetrieveTapeRecoveryPointResponsePrivate::RetrieveTapeRecoveryPointResponsePrivate(
     RetrieveTapeRecoveryPointResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ RetrieveTapeRecoveryPointResponsePrivate::RetrieveTapeRecoveryPointResponsePriva
 }
 
 /*!
- * @brief  Parse an StorageGateway RetrieveTapeRecoveryPointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway RetrieveTapeRecoveryPoint response element from \a xml.
  */
 void RetrieveTapeRecoveryPointResponsePrivate::parseRetrieveTapeRecoveryPointResponse(QXmlStreamReader &xml)
 {

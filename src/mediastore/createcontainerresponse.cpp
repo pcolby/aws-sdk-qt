@@ -29,10 +29,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::CreateContainerResponse
- *
  * \brief The CreateContainerResponse class provides an interace for MediaStore CreateContainer responses.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -41,11 +40,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new CreateContainerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateContainerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateContainerResponse::CreateContainerResponse(
         const CreateContainerRequest &request,
@@ -57,6 +52,9 @@ CreateContainerResponse::CreateContainerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateContainerRequest * CreateContainerResponse::request() const
 {
     Q_D(const CreateContainerResponse);
@@ -64,9 +62,8 @@ const CreateContainerRequest * CreateContainerResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaStore CreateContainer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaStore CreateContainer \a response.
  */
 void CreateContainerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void CreateContainerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaStore::CreateContainerResponsePrivate
+ * \brief The CreateContainerResponsePrivate class provides private implementation for CreateContainerResponse.
  * \internal
  *
- * \class CreateContainerResponsePrivate
- *
- * \brief Private implementation for CreateContainerResponse.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateContainerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateContainerResponse instance.
+ * Constructs a CreateContainerResponsePrivate object with public implementation \a q.
  */
 CreateContainerResponsePrivate::CreateContainerResponsePrivate(
     CreateContainerResponse * const q) : MediaStoreResponsePrivate(q)
@@ -97,9 +90,7 @@ CreateContainerResponsePrivate::CreateContainerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaStore CreateContainerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaStore CreateContainer response element from \a xml.
  */
 void CreateContainerResponsePrivate::parseCreateContainerResponse(QXmlStreamReader &xml)
 {

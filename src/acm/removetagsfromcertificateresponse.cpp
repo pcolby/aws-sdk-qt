@@ -29,10 +29,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::RemoveTagsFromCertificateResponse
- *
  * \brief The RemoveTagsFromCertificateResponse class provides an interace for ACM RemoveTagsFromCertificate responses.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveTagsFromCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveTagsFromCertificateResponse::RemoveTagsFromCertificateResponse(
         const RemoveTagsFromCertificateRequest &request,
@@ -64,6 +59,9 @@ RemoveTagsFromCertificateResponse::RemoveTagsFromCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveTagsFromCertificateRequest * RemoveTagsFromCertificateResponse::request() const
 {
     Q_D(const RemoveTagsFromCertificateResponse);
@@ -71,9 +69,8 @@ const RemoveTagsFromCertificateRequest * RemoveTagsFromCertificateResponse::requ
 }
 
 /*!
- * @brief  Parse a ACM RemoveTagsFromCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACM RemoveTagsFromCertificate \a response.
  */
 void RemoveTagsFromCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void RemoveTagsFromCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACM::RemoveTagsFromCertificateResponsePrivate
+ * \brief The RemoveTagsFromCertificateResponsePrivate class provides private implementation for RemoveTagsFromCertificateResponse.
  * \internal
  *
- * \class RemoveTagsFromCertificateResponsePrivate
- *
- * \brief Private implementation for RemoveTagsFromCertificateResponse.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveTagsFromCertificateResponse instance.
+ * Constructs a RemoveTagsFromCertificateResponsePrivate object with public implementation \a q.
  */
 RemoveTagsFromCertificateResponsePrivate::RemoveTagsFromCertificateResponsePrivate(
     RemoveTagsFromCertificateResponse * const q) : ACMResponsePrivate(q)
@@ -104,9 +97,7 @@ RemoveTagsFromCertificateResponsePrivate::RemoveTagsFromCertificateResponsePriva
 }
 
 /*!
- * @brief  Parse an ACM RemoveTagsFromCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACM RemoveTagsFromCertificate response element from \a xml.
  */
 void RemoveTagsFromCertificateResponsePrivate::parseRemoveTagsFromCertificateResponse(QXmlStreamReader &xml)
 {

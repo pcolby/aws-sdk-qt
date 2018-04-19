@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreateMaintenanceWindowResponse
- *
  * \brief The CreateMaintenanceWindowResponse class provides an interace for SSM CreateMaintenanceWindow responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreateMaintenanceWindowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateMaintenanceWindowResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateMaintenanceWindowResponse::CreateMaintenanceWindowResponse(
         const CreateMaintenanceWindowRequest &request,
@@ -79,6 +74,9 @@ CreateMaintenanceWindowResponse::CreateMaintenanceWindowResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateMaintenanceWindowRequest * CreateMaintenanceWindowResponse::request() const
 {
     Q_D(const CreateMaintenanceWindowResponse);
@@ -86,9 +84,8 @@ const CreateMaintenanceWindowRequest * CreateMaintenanceWindowResponse::request(
 }
 
 /*!
- * @brief  Parse a SSM CreateMaintenanceWindow response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM CreateMaintenanceWindow \a response.
  */
 void CreateMaintenanceWindowResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void CreateMaintenanceWindowResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::CreateMaintenanceWindowResponsePrivate
+ * \brief The CreateMaintenanceWindowResponsePrivate class provides private implementation for CreateMaintenanceWindowResponse.
  * \internal
  *
- * \class CreateMaintenanceWindowResponsePrivate
- *
- * \brief Private implementation for CreateMaintenanceWindowResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMaintenanceWindowResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateMaintenanceWindowResponse instance.
+ * Constructs a CreateMaintenanceWindowResponsePrivate object with public implementation \a q.
  */
 CreateMaintenanceWindowResponsePrivate::CreateMaintenanceWindowResponsePrivate(
     CreateMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ CreateMaintenanceWindowResponsePrivate::CreateMaintenanceWindowResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM CreateMaintenanceWindowResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM CreateMaintenanceWindow response element from \a xml.
  */
 void CreateMaintenanceWindowResponsePrivate::parseCreateMaintenanceWindowResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::RegisterScalableTargetResponse
- *
  * \brief The RegisterScalableTargetResponse class provides an interace for ApplicationAutoScaling RegisterScalableTarget responses.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -112,11 +111,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new RegisterScalableTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterScalableTargetResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterScalableTargetResponse::RegisterScalableTargetResponse(
         const RegisterScalableTargetRequest &request,
@@ -128,6 +123,9 @@ RegisterScalableTargetResponse::RegisterScalableTargetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterScalableTargetRequest * RegisterScalableTargetResponse::request() const
 {
     Q_D(const RegisterScalableTargetResponse);
@@ -135,9 +133,8 @@ const RegisterScalableTargetRequest * RegisterScalableTargetResponse::request() 
 }
 
 /*!
- * @brief  Parse a ApplicationAutoScaling RegisterScalableTarget response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationAutoScaling RegisterScalableTarget \a response.
  */
 void RegisterScalableTargetResponse::parseSuccess(QIODevice &response)
 {
@@ -147,19 +144,15 @@ void RegisterScalableTargetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationAutoScaling::RegisterScalableTargetResponsePrivate
+ * \brief The RegisterScalableTargetResponsePrivate class provides private implementation for RegisterScalableTargetResponse.
  * \internal
  *
- * \class RegisterScalableTargetResponsePrivate
- *
- * \brief Private implementation for RegisterScalableTargetResponse.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterScalableTargetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterScalableTargetResponse instance.
+ * Constructs a RegisterScalableTargetResponsePrivate object with public implementation \a q.
  */
 RegisterScalableTargetResponsePrivate::RegisterScalableTargetResponsePrivate(
     RegisterScalableTargetResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
@@ -168,9 +161,7 @@ RegisterScalableTargetResponsePrivate::RegisterScalableTargetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationAutoScaling RegisterScalableTargetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationAutoScaling RegisterScalableTarget response element from \a xml.
  */
 void RegisterScalableTargetResponsePrivate::parseRegisterScalableTargetResponse(QXmlStreamReader &xml)
 {

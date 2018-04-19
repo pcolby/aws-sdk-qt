@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CreateDirectoryConfigResponse
- *
  * \brief The CreateDirectoryConfigResponse class provides an interace for AppStream CreateDirectoryConfig responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CreateDirectoryConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDirectoryConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDirectoryConfigResponse::CreateDirectoryConfigResponse(
         const CreateDirectoryConfigRequest &request,
@@ -58,6 +53,9 @@ CreateDirectoryConfigResponse::CreateDirectoryConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDirectoryConfigRequest * CreateDirectoryConfigResponse::request() const
 {
     Q_D(const CreateDirectoryConfigResponse);
@@ -65,9 +63,8 @@ const CreateDirectoryConfigRequest * CreateDirectoryConfigResponse::request() co
 }
 
 /*!
- * @brief  Parse a AppStream CreateDirectoryConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream CreateDirectoryConfig \a response.
  */
 void CreateDirectoryConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateDirectoryConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::CreateDirectoryConfigResponsePrivate
+ * \brief The CreateDirectoryConfigResponsePrivate class provides private implementation for CreateDirectoryConfigResponse.
  * \internal
  *
- * \class CreateDirectoryConfigResponsePrivate
- *
- * \brief Private implementation for CreateDirectoryConfigResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDirectoryConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDirectoryConfigResponse instance.
+ * Constructs a CreateDirectoryConfigResponsePrivate object with public implementation \a q.
  */
 CreateDirectoryConfigResponsePrivate::CreateDirectoryConfigResponsePrivate(
     CreateDirectoryConfigResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateDirectoryConfigResponsePrivate::CreateDirectoryConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream CreateDirectoryConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream CreateDirectoryConfig response element from \a xml.
  */
 void CreateDirectoryConfigResponsePrivate::parseCreateDirectoryConfigResponse(QXmlStreamReader &xml)
 {

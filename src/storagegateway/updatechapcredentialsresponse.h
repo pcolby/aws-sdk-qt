@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateChapCredentialsResponse : public StorageGatewayResponse
 public:
     UpdateChapCredentialsResponse(const UpdateChapCredentialsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateChapCredentialsRequest * request() const;
+    virtual const UpdateChapCredentialsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateChapCredentialsResponse)

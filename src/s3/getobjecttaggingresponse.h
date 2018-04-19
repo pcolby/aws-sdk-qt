@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetObjectTaggingResponse : public S3Response {
 public:
     GetObjectTaggingResponse(const GetObjectTaggingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetObjectTaggingRequest * request() const;
+    virtual const GetObjectTaggingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetObjectTaggingResponse)

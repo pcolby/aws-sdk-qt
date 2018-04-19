@@ -34,10 +34,10 @@ class QTAWS_EXPORT VerifyUserAttributeResponse : public CognitoIdentityProviderR
 public:
     VerifyUserAttributeResponse(const VerifyUserAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const VerifyUserAttributeRequest * request() const;
+    virtual const VerifyUserAttributeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(VerifyUserAttributeResponse)

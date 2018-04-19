@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetServerCertificateResponse
- *
  * \brief The GetServerCertificateResponse class provides an interace for IAM GetServerCertificate responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetServerCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetServerCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 GetServerCertificateResponse::GetServerCertificateResponse(
         const GetServerCertificateRequest &request,
@@ -120,6 +115,9 @@ GetServerCertificateResponse::GetServerCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetServerCertificateRequest * GetServerCertificateResponse::request() const
 {
     Q_D(const GetServerCertificateResponse);
@@ -127,9 +125,8 @@ const GetServerCertificateRequest * GetServerCertificateResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IAM GetServerCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetServerCertificate \a response.
  */
 void GetServerCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetServerCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetServerCertificateResponsePrivate
+ * \brief The GetServerCertificateResponsePrivate class provides private implementation for GetServerCertificateResponse.
  * \internal
  *
- * \class GetServerCertificateResponsePrivate
- *
- * \brief Private implementation for GetServerCertificateResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetServerCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetServerCertificateResponse instance.
+ * Constructs a GetServerCertificateResponsePrivate object with public implementation \a q.
  */
 GetServerCertificateResponsePrivate::GetServerCertificateResponsePrivate(
     GetServerCertificateResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetServerCertificateResponsePrivate::GetServerCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetServerCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetServerCertificate response element from \a xml.
  */
 void GetServerCertificateResponsePrivate::parseGetServerCertificateResponse(QXmlStreamReader &xml)
 {

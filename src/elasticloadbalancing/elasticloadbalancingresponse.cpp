@@ -28,16 +28,13 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::ElasticLoadBalancingResponse
- *
  * \brief The ElasticLoadBalancingResponse class provides an interface for ElasticLoadBalancing responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @brief  Constructs a new ElasticLoadBalancingResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ElasticLoadBalancingResponse object with parent \a parent.
  */
 ElasticLoadBalancingResponse::ElasticLoadBalancingResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ElasticLoadBalancingResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ElasticLoadBalancingResponse::ElasticLoadBalancingResponse(QObject * const paren
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticLoadBalancingResponse object.
- *
+ * \internal
+ * Constructs a ElasticLoadBalancingResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElasticLoadBalancingResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ElasticLoadBalancingResponse::ElasticLoadBalancingResponse(ElasticLoadBalancingResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ElasticLoadBalancingResponse::ElasticLoadBalancingResponse(ElasticLoadBalancingR
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ElasticLoadBalancingResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ElasticLoadBalancingResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticLoadBalancing::ElasticLoadBalancingResponsePrivate
+ * \brief The ElasticLoadBalancingResponsePrivate class provides private implementation for ElasticLoadBalancingResponse.
+ * \internal
  *
- * @class  ElasticLoadBalancingResponsePrivate
- *
- * @brief  Private implementation for ElasticLoadBalancingResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticLoadBalancingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ElasticLoadBalancingResponse instance.
+ * Constructs a ElasticLoadBalancingResponsePrivate object with public implementation \a q.
  */
 ElasticLoadBalancingResponsePrivate::ElasticLoadBalancingResponsePrivate(
     ElasticLoadBalancingResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

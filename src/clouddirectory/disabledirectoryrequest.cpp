@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DisableDirectoryRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DisableDirectoryRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a DisableDirectoryRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 DisableDirectoryRequestPrivate::DisableDirectoryRequestPrivate(
     const CloudDirectoryRequest::Action action, DisableDirectoryRequest * const q)

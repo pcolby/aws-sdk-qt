@@ -34,10 +34,10 @@ class QTAWS_EXPORT RevokeClusterSecurityGroupIngressResponse : public RedshiftRe
 public:
     RevokeClusterSecurityGroupIngressResponse(const RevokeClusterSecurityGroupIngressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RevokeClusterSecurityGroupIngressRequest * request() const;
+    virtual const RevokeClusterSecurityGroupIngressRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RevokeClusterSecurityGroupIngressResponse)

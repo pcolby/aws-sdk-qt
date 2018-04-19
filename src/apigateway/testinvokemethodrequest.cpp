@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * TestInvokeMethodRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a TestInvokeMethodRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a TestInvokeMethodRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 TestInvokeMethodRequestPrivate::TestInvokeMethodRequestPrivate(
     const APIGatewayRequest::Action action, TestInvokeMethodRequest * const q)

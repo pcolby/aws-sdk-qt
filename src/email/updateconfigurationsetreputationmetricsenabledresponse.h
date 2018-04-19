@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledResponse : publ
 public:
     UpdateConfigurationSetReputationMetricsEnabledResponse(const UpdateConfigurationSetReputationMetricsEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateConfigurationSetReputationMetricsEnabledRequest * request() const;
+    virtual const UpdateConfigurationSetReputationMetricsEnabledRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateConfigurationSetReputationMetricsEnabledResponse)

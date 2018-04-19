@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * EnableEnhancedMonitoringRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a EnableEnhancedMonitoringRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a EnableEnhancedMonitoringRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 EnableEnhancedMonitoringRequestPrivate::EnableEnhancedMonitoringRequestPrivate(
     const KinesisRequest::Action action, EnableEnhancedMonitoringRequest * const q)

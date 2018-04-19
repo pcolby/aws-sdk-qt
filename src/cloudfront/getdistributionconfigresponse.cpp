@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetDistributionConfigResponse
- *
  * \brief The GetDistributionConfigResponse class provides an interace for CloudFront GetDistributionConfig responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetDistributionConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDistributionConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDistributionConfigResponse::GetDistributionConfigResponse(
         const GetDistributionConfigRequest &request,
@@ -60,6 +55,9 @@ GetDistributionConfigResponse::GetDistributionConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDistributionConfigRequest * GetDistributionConfigResponse::request() const
 {
     Q_D(const GetDistributionConfigResponse);
@@ -67,9 +65,8 @@ const GetDistributionConfigRequest * GetDistributionConfigResponse::request() co
 }
 
 /*!
- * @brief  Parse a CloudFront GetDistributionConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront GetDistributionConfig \a response.
  */
 void GetDistributionConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetDistributionConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::GetDistributionConfigResponsePrivate
+ * \brief The GetDistributionConfigResponsePrivate class provides private implementation for GetDistributionConfigResponse.
  * \internal
  *
- * \class GetDistributionConfigResponsePrivate
- *
- * \brief Private implementation for GetDistributionConfigResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDistributionConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDistributionConfigResponse instance.
+ * Constructs a GetDistributionConfigResponsePrivate object with public implementation \a q.
  */
 GetDistributionConfigResponsePrivate::GetDistributionConfigResponsePrivate(
     GetDistributionConfigResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ GetDistributionConfigResponsePrivate::GetDistributionConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront GetDistributionConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront GetDistributionConfig response element from \a xml.
  */
 void GetDistributionConfigResponsePrivate::parseGetDistributionConfigResponse(QXmlStreamReader &xml)
 {

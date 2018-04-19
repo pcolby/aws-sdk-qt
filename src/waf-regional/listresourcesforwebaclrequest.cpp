@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListResourcesForWebACLRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListResourcesForWebACLRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a ListResourcesForWebACLRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, ListResourcesForWebACLRequest * const q)

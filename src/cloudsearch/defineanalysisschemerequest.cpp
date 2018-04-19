@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DefineAnalysisSchemeRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DefineAnalysisSchemeRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DefineAnalysisSchemeRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DefineAnalysisSchemeRequestPrivate::DefineAnalysisSchemeRequestPrivate(
     const CloudSearchRequest::Action action, DefineAnalysisSchemeRequest * const q)

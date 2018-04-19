@@ -79,7 +79,7 @@ namespace DirectoryService {
  */
 
 /*!
- * Constructs a[n] DirectoryServiceRequest object for DirectoryService \a action.
+ * Constructs a DirectoryServiceRequest object for DirectoryService \a action.
  */
 DirectoryServiceRequest::DirectoryServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DirectoryServiceRequestPrivate(action, this))
@@ -279,8 +279,8 @@ QNetworkRequest DirectoryServiceRequest::unsignedRequest(const QUrl &endpoint) c
  */
 
 /*!
- * Constructs a DirectoryServiceRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a DirectoryServiceRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 DirectoryServiceRequestPrivate::DirectoryServiceRequestPrivate(const DirectoryServiceRequest::Action action, DirectoryServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

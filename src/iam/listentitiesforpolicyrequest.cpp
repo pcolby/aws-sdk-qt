@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ListEntitiesForPolicyRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListEntitiesForPolicyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ListEntitiesForPolicyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
     const IAMRequest::Action action, ListEntitiesForPolicyRequest * const q)

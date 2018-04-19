@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterSecurityGroupsRequest::respons
  */
 
 /*!
- *
- * Constructs a DescribeClusterSecurityGroupsRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeClusterSecurityGroupsRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeClusterSecurityGroupsRequestPrivate::DescribeClusterSecurityGroupsRequestPrivate(
     const RedshiftRequest::Action action, DescribeClusterSecurityGroupsRequest * const q)

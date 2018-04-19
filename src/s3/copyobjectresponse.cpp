@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::CopyObjectResponse
- *
  * \brief The CopyObjectResponse class provides an interace for S3 CopyObject responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::copyObject
  */
 
 /*!
- * @brief  Constructs a new CopyObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopyObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 CopyObjectResponse::CopyObjectResponse(
         const CopyObjectRequest &request,
@@ -55,6 +50,9 @@ CopyObjectResponse::CopyObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopyObjectRequest * CopyObjectResponse::request() const
 {
     Q_D(const CopyObjectResponse);
@@ -62,9 +60,8 @@ const CopyObjectRequest * CopyObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 CopyObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 CopyObject \a response.
  */
 void CopyObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CopyObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::CopyObjectResponsePrivate
+ * \brief The CopyObjectResponsePrivate class provides private implementation for CopyObjectResponse.
  * \internal
  *
- * \class CopyObjectResponsePrivate
- *
- * \brief Private implementation for CopyObjectResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopyObjectResponse instance.
+ * Constructs a CopyObjectResponsePrivate object with public implementation \a q.
  */
 CopyObjectResponsePrivate::CopyObjectResponsePrivate(
     CopyObjectResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ CopyObjectResponsePrivate::CopyObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 CopyObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 CopyObject response element from \a xml.
  */
 void CopyObjectResponsePrivate::parseCopyObjectResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::StartExportTaskResponse
- *
  * \brief The StartExportTaskResponse class provides an interace for ApplicationDiscoveryService StartExportTask responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new StartExportTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartExportTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 StartExportTaskResponse::StartExportTaskResponse(
         const StartExportTaskRequest &request,
@@ -119,6 +114,9 @@ StartExportTaskResponse::StartExportTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartExportTaskRequest * StartExportTaskResponse::request() const
 {
     Q_D(const StartExportTaskResponse);
@@ -126,9 +124,8 @@ const StartExportTaskRequest * StartExportTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService StartExportTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService StartExportTask \a response.
  */
 void StartExportTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void StartExportTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::StartExportTaskResponsePrivate
+ * \brief The StartExportTaskResponsePrivate class provides private implementation for StartExportTaskResponse.
  * \internal
  *
- * \class StartExportTaskResponsePrivate
- *
- * \brief Private implementation for StartExportTaskResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartExportTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartExportTaskResponse instance.
+ * Constructs a StartExportTaskResponsePrivate object with public implementation \a q.
  */
 StartExportTaskResponsePrivate::StartExportTaskResponsePrivate(
     StartExportTaskResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ StartExportTaskResponsePrivate::StartExportTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService StartExportTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService StartExportTask response element from \a xml.
  */
 void StartExportTaskResponsePrivate::parseStartExportTaskResponse(QXmlStreamReader &xml)
 {

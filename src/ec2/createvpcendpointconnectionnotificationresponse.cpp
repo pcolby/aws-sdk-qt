@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVpcEndpointConnectionNotificationResponse
- *
  * \brief The CreateVpcEndpointConnectionNotificationResponse class provides an interace for EC2 CreateVpcEndpointConnectionNotification responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVpcEndpointConnectionNotificationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateVpcEndpointConnectionNotificationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateVpcEndpointConnectionNotificationResponse::CreateVpcEndpointConnectionNotificationResponse(
         const CreateVpcEndpointConnectionNotificationRequest &request,
@@ -59,6 +54,9 @@ CreateVpcEndpointConnectionNotificationResponse::CreateVpcEndpointConnectionNoti
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateVpcEndpointConnectionNotificationRequest * CreateVpcEndpointConnectionNotificationResponse::request() const
 {
     Q_D(const CreateVpcEndpointConnectionNotificationResponse);
@@ -66,9 +64,8 @@ const CreateVpcEndpointConnectionNotificationRequest * CreateVpcEndpointConnecti
 }
 
 /*!
- * @brief  Parse a EC2 CreateVpcEndpointConnectionNotification response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateVpcEndpointConnectionNotification \a response.
  */
 void CreateVpcEndpointConnectionNotificationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateVpcEndpointConnectionNotificationResponse::parseSuccess(QIODevice &re
 }
 
 /*!
+ * \class QtAws::EC2::CreateVpcEndpointConnectionNotificationResponsePrivate
+ * \brief The CreateVpcEndpointConnectionNotificationResponsePrivate class provides private implementation for CreateVpcEndpointConnectionNotificationResponse.
  * \internal
  *
- * \class CreateVpcEndpointConnectionNotificationResponsePrivate
- *
- * \brief Private implementation for CreateVpcEndpointConnectionNotificationResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpcEndpointConnectionNotificationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateVpcEndpointConnectionNotificationResponse instance.
+ * Constructs a CreateVpcEndpointConnectionNotificationResponsePrivate object with public implementation \a q.
  */
 CreateVpcEndpointConnectionNotificationResponsePrivate::CreateVpcEndpointConnectionNotificationResponsePrivate(
     CreateVpcEndpointConnectionNotificationResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateVpcEndpointConnectionNotificationResponsePrivate::CreateVpcEndpointConnect
 }
 
 /*!
- * @brief  Parse an EC2 CreateVpcEndpointConnectionNotificationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateVpcEndpointConnectionNotification response element from \a xml.
  */
 void CreateVpcEndpointConnectionNotificationResponsePrivate::parseCreateVpcEndpointConnectionNotificationResponse(QXmlStreamReader &xml)
 {

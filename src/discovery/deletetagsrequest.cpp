@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteTagsRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTagsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DeleteTagsRequest * const q)

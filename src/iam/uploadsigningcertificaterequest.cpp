@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UploadSigningCertificateRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UploadSigningCertificateRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UploadSigningCertificateRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UploadSigningCertificateRequestPrivate::UploadSigningCertificateRequestPrivate(
     const IAMRequest::Action action, UploadSigningCertificateRequest * const q)

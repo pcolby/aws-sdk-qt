@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::BatchDeleteBuildsResponse
- *
  * \brief The BatchDeleteBuildsResponse class provides an interace for CodeBuild BatchDeleteBuilds responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new BatchDeleteBuildsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchDeleteBuildsResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchDeleteBuildsResponse::BatchDeleteBuildsResponse(
         const BatchDeleteBuildsRequest &request,
@@ -135,6 +130,9 @@ BatchDeleteBuildsResponse::BatchDeleteBuildsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchDeleteBuildsRequest * BatchDeleteBuildsResponse::request() const
 {
     Q_D(const BatchDeleteBuildsResponse);
@@ -142,9 +140,8 @@ const BatchDeleteBuildsRequest * BatchDeleteBuildsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeBuild BatchDeleteBuilds response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild BatchDeleteBuilds \a response.
  */
 void BatchDeleteBuildsResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void BatchDeleteBuildsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::BatchDeleteBuildsResponsePrivate
+ * \brief The BatchDeleteBuildsResponsePrivate class provides private implementation for BatchDeleteBuildsResponse.
  * \internal
  *
- * \class BatchDeleteBuildsResponsePrivate
- *
- * \brief Private implementation for BatchDeleteBuildsResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeleteBuildsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchDeleteBuildsResponse instance.
+ * Constructs a BatchDeleteBuildsResponsePrivate object with public implementation \a q.
  */
 BatchDeleteBuildsResponsePrivate::BatchDeleteBuildsResponsePrivate(
     BatchDeleteBuildsResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ BatchDeleteBuildsResponsePrivate::BatchDeleteBuildsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeBuild BatchDeleteBuildsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild BatchDeleteBuilds response element from \a xml.
  */
 void BatchDeleteBuildsResponsePrivate::parseBatchDeleteBuildsResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * RotateChannelCredentialsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a RotateChannelCredentialsRequestPrivate object for MediaPackage \a action with,
- * public implementation \a q.
+ * Constructs a RotateChannelCredentialsRequestPrivate object for MediaPackage \a action,
+ * with public implementation \a q.
  */
 RotateChannelCredentialsRequestPrivate::RotateChannelCredentialsRequestPrivate(
     const MediaPackageRequest::Action action, RotateChannelCredentialsRequest * const q)

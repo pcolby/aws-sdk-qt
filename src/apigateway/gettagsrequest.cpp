@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a GetTagsRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetTagsRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetTagsRequestPrivate::GetTagsRequestPrivate(
     const APIGatewayRequest::Action action, GetTagsRequest * const q)

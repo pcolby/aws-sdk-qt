@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreatePolicyVersionResponse
- *
  * \brief The CreatePolicyVersionResponse class provides an interace for IoT CreatePolicyVersion responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreatePolicyVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePolicyVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePolicyVersionResponse::CreatePolicyVersionResponse(
         const CreatePolicyVersionRequest &request,
@@ -66,6 +61,9 @@ CreatePolicyVersionResponse::CreatePolicyVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePolicyVersionRequest * CreatePolicyVersionResponse::request() const
 {
     Q_D(const CreatePolicyVersionResponse);
@@ -73,9 +71,8 @@ const CreatePolicyVersionRequest * CreatePolicyVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT CreatePolicyVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT CreatePolicyVersion \a response.
  */
 void CreatePolicyVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreatePolicyVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::CreatePolicyVersionResponsePrivate
+ * \brief The CreatePolicyVersionResponsePrivate class provides private implementation for CreatePolicyVersionResponse.
  * \internal
  *
- * \class CreatePolicyVersionResponsePrivate
- *
- * \brief Private implementation for CreatePolicyVersionResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePolicyVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePolicyVersionResponse instance.
+ * Constructs a CreatePolicyVersionResponsePrivate object with public implementation \a q.
  */
 CreatePolicyVersionResponsePrivate::CreatePolicyVersionResponsePrivate(
     CreatePolicyVersionResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ CreatePolicyVersionResponsePrivate::CreatePolicyVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT CreatePolicyVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT CreatePolicyVersion response element from \a xml.
  */
 void CreatePolicyVersionResponsePrivate::parseCreatePolicyVersionResponse(QXmlStreamReader &xml)
 {

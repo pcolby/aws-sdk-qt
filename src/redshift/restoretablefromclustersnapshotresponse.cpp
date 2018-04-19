@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RestoreTableFromClusterSnapshotResponse
- *
  * \brief The RestoreTableFromClusterSnapshotResponse class provides an interace for Redshift RestoreTableFromClusterSnapshot responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new RestoreTableFromClusterSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreTableFromClusterSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreTableFromClusterSnapshotResponse::RestoreTableFromClusterSnapshotResponse(
         const RestoreTableFromClusterSnapshotRequest &request,
@@ -85,6 +80,9 @@ RestoreTableFromClusterSnapshotResponse::RestoreTableFromClusterSnapshotResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreTableFromClusterSnapshotRequest * RestoreTableFromClusterSnapshotResponse::request() const
 {
     Q_D(const RestoreTableFromClusterSnapshotResponse);
@@ -92,9 +90,8 @@ const RestoreTableFromClusterSnapshotRequest * RestoreTableFromClusterSnapshotRe
 }
 
 /*!
- * @brief  Parse a Redshift RestoreTableFromClusterSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift RestoreTableFromClusterSnapshot \a response.
  */
 void RestoreTableFromClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void RestoreTableFromClusterSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::RestoreTableFromClusterSnapshotResponsePrivate
+ * \brief The RestoreTableFromClusterSnapshotResponsePrivate class provides private implementation for RestoreTableFromClusterSnapshotResponse.
  * \internal
  *
- * \class RestoreTableFromClusterSnapshotResponsePrivate
- *
- * \brief Private implementation for RestoreTableFromClusterSnapshotResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreTableFromClusterSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreTableFromClusterSnapshotResponse instance.
+ * Constructs a RestoreTableFromClusterSnapshotResponsePrivate object with public implementation \a q.
  */
 RestoreTableFromClusterSnapshotResponsePrivate::RestoreTableFromClusterSnapshotResponsePrivate(
     RestoreTableFromClusterSnapshotResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ RestoreTableFromClusterSnapshotResponsePrivate::RestoreTableFromClusterSnapshotR
 }
 
 /*!
- * @brief  Parse an Redshift RestoreTableFromClusterSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift RestoreTableFromClusterSnapshot response element from \a xml.
  */
 void RestoreTableFromClusterSnapshotResponsePrivate::parseRestoreTableFromClusterSnapshotResponse(QXmlStreamReader &xml)
 {

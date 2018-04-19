@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutPipelineDefinitionResponse : public DataPipelineResponse {
 public:
     PutPipelineDefinitionResponse(const PutPipelineDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutPipelineDefinitionRequest * request() const;
+    virtual const PutPipelineDefinitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutPipelineDefinitionResponse)

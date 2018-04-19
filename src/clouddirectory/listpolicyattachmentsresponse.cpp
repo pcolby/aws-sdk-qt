@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListPolicyAttachmentsResponse
- *
  * \brief The ListPolicyAttachmentsResponse class provides an interace for CloudDirectory ListPolicyAttachments responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListPolicyAttachmentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPolicyAttachmentsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPolicyAttachmentsResponse::ListPolicyAttachmentsResponse(
         const ListPolicyAttachmentsRequest &request,
@@ -62,6 +57,9 @@ ListPolicyAttachmentsResponse::ListPolicyAttachmentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPolicyAttachmentsRequest * ListPolicyAttachmentsResponse::request() const
 {
     Q_D(const ListPolicyAttachmentsResponse);
@@ -69,9 +67,8 @@ const ListPolicyAttachmentsRequest * ListPolicyAttachmentsResponse::request() co
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListPolicyAttachments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListPolicyAttachments \a response.
  */
 void ListPolicyAttachmentsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListPolicyAttachmentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListPolicyAttachmentsResponsePrivate
+ * \brief The ListPolicyAttachmentsResponsePrivate class provides private implementation for ListPolicyAttachmentsResponse.
  * \internal
  *
- * \class ListPolicyAttachmentsResponsePrivate
- *
- * \brief Private implementation for ListPolicyAttachmentsResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPolicyAttachmentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPolicyAttachmentsResponse instance.
+ * Constructs a ListPolicyAttachmentsResponsePrivate object with public implementation \a q.
  */
 ListPolicyAttachmentsResponsePrivate::ListPolicyAttachmentsResponsePrivate(
     ListPolicyAttachmentsResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListPolicyAttachmentsResponsePrivate::ListPolicyAttachmentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListPolicyAttachmentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListPolicyAttachments response element from \a xml.
  */
 void ListPolicyAttachmentsResponsePrivate::parseListPolicyAttachmentsResponse(QXmlStreamReader &xml)
 {

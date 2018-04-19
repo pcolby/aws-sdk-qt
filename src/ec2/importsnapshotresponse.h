@@ -34,10 +34,10 @@ class QTAWS_EXPORT ImportSnapshotResponse : public EC2Response {
 public:
     ImportSnapshotResponse(const ImportSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ImportSnapshotRequest * request() const;
+    virtual const ImportSnapshotRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ImportSnapshotResponse)

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribePortfolioRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribePortfolioRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DescribePortfolioRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DescribePortfolioRequestPrivate::DescribePortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribePortfolioRequest * const q)

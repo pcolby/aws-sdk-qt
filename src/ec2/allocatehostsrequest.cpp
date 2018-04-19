@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AllocateHostsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a AllocateHostsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AllocateHostsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AllocateHostsRequestPrivate::AllocateHostsRequestPrivate(
     const EC2Request::Action action, AllocateHostsRequest * const q)

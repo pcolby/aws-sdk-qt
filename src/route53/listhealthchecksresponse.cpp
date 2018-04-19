@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListHealthChecksResponse
- *
  * \brief The ListHealthChecksResponse class provides an interace for Route53 ListHealthChecks responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listHealthChecks
  */
 
 /*!
- * @brief  Constructs a new ListHealthChecksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListHealthChecksResponse object for \a reply to \a request, with parent \a parent.
  */
 ListHealthChecksResponse::ListHealthChecksResponse(
         const ListHealthChecksRequest &request,
@@ -55,6 +50,9 @@ ListHealthChecksResponse::ListHealthChecksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListHealthChecksRequest * ListHealthChecksResponse::request() const
 {
     Q_D(const ListHealthChecksResponse);
@@ -62,9 +60,8 @@ const ListHealthChecksRequest * ListHealthChecksResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 ListHealthChecks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 ListHealthChecks \a response.
  */
 void ListHealthChecksResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListHealthChecksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::ListHealthChecksResponsePrivate
+ * \brief The ListHealthChecksResponsePrivate class provides private implementation for ListHealthChecksResponse.
  * \internal
  *
- * \class ListHealthChecksResponsePrivate
- *
- * \brief Private implementation for ListHealthChecksResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHealthChecksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListHealthChecksResponse instance.
+ * Constructs a ListHealthChecksResponsePrivate object with public implementation \a q.
  */
 ListHealthChecksResponsePrivate::ListHealthChecksResponsePrivate(
     ListHealthChecksResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListHealthChecksResponsePrivate::ListHealthChecksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 ListHealthChecksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 ListHealthChecks response element from \a xml.
  */
 void ListHealthChecksResponsePrivate::parseListHealthChecksResponse(QXmlStreamReader &xml)
 {

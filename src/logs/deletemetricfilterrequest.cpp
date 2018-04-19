@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteMetricFilterRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteMetricFilterRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteMetricFilterRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DeleteMetricFilterRequestPrivate::DeleteMetricFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteMetricFilterRequest * const q)

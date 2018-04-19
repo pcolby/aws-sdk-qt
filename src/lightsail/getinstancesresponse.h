@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetInstancesResponse : public LightsailResponse {
 public:
     GetInstancesResponse(const GetInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetInstancesRequest * request() const;
+    virtual const GetInstancesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetInstancesResponse)

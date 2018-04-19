@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::CreateGroupResponse
- *
  * \brief The CreateGroupResponse class provides an interace for WorkMail CreateGroup responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new CreateGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateGroupResponse::CreateGroupResponse(
         const CreateGroupRequest &request,
@@ -88,6 +83,9 @@ CreateGroupResponse::CreateGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateGroupRequest * CreateGroupResponse::request() const
 {
     Q_D(const CreateGroupResponse);
@@ -95,9 +93,8 @@ const CreateGroupRequest * CreateGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail CreateGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail CreateGroup \a response.
  */
 void CreateGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void CreateGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::CreateGroupResponsePrivate
+ * \brief The CreateGroupResponsePrivate class provides private implementation for CreateGroupResponse.
  * \internal
  *
- * \class CreateGroupResponsePrivate
- *
- * \brief Private implementation for CreateGroupResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateGroupResponse instance.
+ * Constructs a CreateGroupResponsePrivate object with public implementation \a q.
  */
 CreateGroupResponsePrivate::CreateGroupResponsePrivate(
     CreateGroupResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ CreateGroupResponsePrivate::CreateGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail CreateGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail CreateGroup response element from \a xml.
  */
 void CreateGroupResponsePrivate::parseCreateGroupResponse(QXmlStreamReader &xml)
 {

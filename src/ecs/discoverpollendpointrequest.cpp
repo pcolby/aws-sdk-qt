@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * DiscoverPollEndpointRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DiscoverPollEndpointRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a DiscoverPollEndpointRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 DiscoverPollEndpointRequestPrivate::DiscoverPollEndpointRequestPrivate(
     const ECSRequest::Action action, DiscoverPollEndpointRequest * const q)

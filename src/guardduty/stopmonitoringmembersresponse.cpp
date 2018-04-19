@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::StopMonitoringMembersResponse
- *
  * \brief The StopMonitoringMembersResponse class provides an interace for GuardDuty StopMonitoringMembers responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::stopMonitoringMembers
  */
 
 /*!
- * @brief  Constructs a new StopMonitoringMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopMonitoringMembersResponse object for \a reply to \a request, with parent \a parent.
  */
 StopMonitoringMembersResponse::StopMonitoringMembersResponse(
         const StopMonitoringMembersRequest &request,
@@ -55,6 +50,9 @@ StopMonitoringMembersResponse::StopMonitoringMembersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopMonitoringMembersRequest * StopMonitoringMembersResponse::request() const
 {
     Q_D(const StopMonitoringMembersResponse);
@@ -62,9 +60,8 @@ const StopMonitoringMembersRequest * StopMonitoringMembersResponse::request() co
 }
 
 /*!
- * @brief  Parse a GuardDuty StopMonitoringMembers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty StopMonitoringMembers \a response.
  */
 void StopMonitoringMembersResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void StopMonitoringMembersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::StopMonitoringMembersResponsePrivate
+ * \brief The StopMonitoringMembersResponsePrivate class provides private implementation for StopMonitoringMembersResponse.
  * \internal
  *
- * \class StopMonitoringMembersResponsePrivate
- *
- * \brief Private implementation for StopMonitoringMembersResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopMonitoringMembersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopMonitoringMembersResponse instance.
+ * Constructs a StopMonitoringMembersResponsePrivate object with public implementation \a q.
  */
 StopMonitoringMembersResponsePrivate::StopMonitoringMembersResponsePrivate(
     StopMonitoringMembersResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ StopMonitoringMembersResponsePrivate::StopMonitoringMembersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty StopMonitoringMembersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty StopMonitoringMembers response element from \a xml.
  */
 void StopMonitoringMembersResponsePrivate::parseStopMonitoringMembersResponse(QXmlStreamReader &xml)
 {

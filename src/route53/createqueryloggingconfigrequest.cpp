@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateQueryLoggingConfigRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateQueryLoggingConfigRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a CreateQueryLoggingConfigRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 CreateQueryLoggingConfigRequestPrivate::CreateQueryLoggingConfigRequestPrivate(
     const Route53Request::Action action, CreateQueryLoggingConfigRequest * const q)

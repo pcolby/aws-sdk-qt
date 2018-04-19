@@ -29,10 +29,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::DeleteBudgetResponse
- *
  * \brief The DeleteBudgetResponse class provides an interace for Budgets DeleteBudget responses.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -77,11 +76,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new DeleteBudgetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBudgetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBudgetResponse::DeleteBudgetResponse(
         const DeleteBudgetRequest &request,
@@ -93,6 +88,9 @@ DeleteBudgetResponse::DeleteBudgetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBudgetRequest * DeleteBudgetResponse::request() const
 {
     Q_D(const DeleteBudgetResponse);
@@ -100,9 +98,8 @@ const DeleteBudgetRequest * DeleteBudgetResponse::request() const
 }
 
 /*!
- * @brief  Parse a Budgets DeleteBudget response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Budgets DeleteBudget \a response.
  */
 void DeleteBudgetResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DeleteBudgetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Budgets::DeleteBudgetResponsePrivate
+ * \brief The DeleteBudgetResponsePrivate class provides private implementation for DeleteBudgetResponse.
  * \internal
  *
- * \class DeleteBudgetResponsePrivate
- *
- * \brief Private implementation for DeleteBudgetResponse.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBudgetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBudgetResponse instance.
+ * Constructs a DeleteBudgetResponsePrivate object with public implementation \a q.
  */
 DeleteBudgetResponsePrivate::DeleteBudgetResponsePrivate(
     DeleteBudgetResponse * const q) : BudgetsResponsePrivate(q)
@@ -133,9 +126,7 @@ DeleteBudgetResponsePrivate::DeleteBudgetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Budgets DeleteBudgetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Budgets DeleteBudget response element from \a xml.
  */
 void DeleteBudgetResponsePrivate::parseDeleteBudgetResponse(QXmlStreamReader &xml)
 {

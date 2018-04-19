@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * ListIdentitiesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListIdentitiesRequestPrivate object for CognitoIdentity \a action with,
- * public implementation \a q.
+ * Constructs a ListIdentitiesRequestPrivate object for CognitoIdentity \a action,
+ * with public implementation \a q.
  */
 ListIdentitiesRequestPrivate::ListIdentitiesRequestPrivate(
     const CognitoIdentityRequest::Action action, ListIdentitiesRequest * const q)

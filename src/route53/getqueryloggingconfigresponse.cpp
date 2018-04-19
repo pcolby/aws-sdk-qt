@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetQueryLoggingConfigResponse
- *
  * \brief The GetQueryLoggingConfigResponse class provides an interace for Route53 GetQueryLoggingConfig responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getQueryLoggingConfig
  */
 
 /*!
- * @brief  Constructs a new GetQueryLoggingConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetQueryLoggingConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 GetQueryLoggingConfigResponse::GetQueryLoggingConfigResponse(
         const GetQueryLoggingConfigRequest &request,
@@ -55,6 +50,9 @@ GetQueryLoggingConfigResponse::GetQueryLoggingConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetQueryLoggingConfigRequest * GetQueryLoggingConfigResponse::request() const
 {
     Q_D(const GetQueryLoggingConfigResponse);
@@ -62,9 +60,8 @@ const GetQueryLoggingConfigRequest * GetQueryLoggingConfigResponse::request() co
 }
 
 /*!
- * @brief  Parse a Route53 GetQueryLoggingConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetQueryLoggingConfig \a response.
  */
 void GetQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetQueryLoggingConfigResponsePrivate
+ * \brief The GetQueryLoggingConfigResponsePrivate class provides private implementation for GetQueryLoggingConfigResponse.
  * \internal
  *
- * \class GetQueryLoggingConfigResponsePrivate
- *
- * \brief Private implementation for GetQueryLoggingConfigResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQueryLoggingConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetQueryLoggingConfigResponse instance.
+ * Constructs a GetQueryLoggingConfigResponsePrivate object with public implementation \a q.
  */
 GetQueryLoggingConfigResponsePrivate::GetQueryLoggingConfigResponsePrivate(
     GetQueryLoggingConfigResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetQueryLoggingConfigResponsePrivate::GetQueryLoggingConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 GetQueryLoggingConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetQueryLoggingConfig response element from \a xml.
  */
 void GetQueryLoggingConfigResponsePrivate::parseGetQueryLoggingConfigResponse(QXmlStreamReader &xml)
 {

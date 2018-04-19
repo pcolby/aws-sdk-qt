@@ -59,7 +59,7 @@ namespace MediaConvert {
  */
 
 /*!
- * Constructs a[n] MediaConvertRequest object for MediaConvert \a action.
+ * Constructs a MediaConvertRequest object for MediaConvert \a action.
  */
 MediaConvertRequest::MediaConvertRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MediaConvertRequestPrivate(action, this))
@@ -259,8 +259,8 @@ QNetworkRequest MediaConvertRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a MediaConvertRequestPrivate object for MediaConvert \a action with,
- * public implementation \a q.
+ * Constructs a MediaConvertRequestPrivate object for MediaConvert \a action,
+ * with public implementation \a q.
  */
 MediaConvertRequestPrivate::MediaConvertRequestPrivate(const MediaConvertRequest::Action action, MediaConvertRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

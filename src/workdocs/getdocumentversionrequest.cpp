@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * GetDocumentVersionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetDocumentVersionRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a GetDocumentVersionRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 GetDocumentVersionRequestPrivate::GetDocumentVersionRequestPrivate(
     const WorkDocsRequest::Action action, GetDocumentVersionRequest * const q)

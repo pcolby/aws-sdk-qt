@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * AbortMultipartUploadRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a AbortMultipartUploadRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a AbortMultipartUploadRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
     const S3Request::Action action, AbortMultipartUploadRequest * const q)

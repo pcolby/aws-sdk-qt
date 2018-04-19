@@ -29,10 +29,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetDimensionValuesResponse
- *
  * \brief The GetDimensionValuesResponse class provides an interace for CostExplorer GetDimensionValues responses.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -52,11 +51,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetDimensionValuesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDimensionValuesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDimensionValuesResponse::GetDimensionValuesResponse(
         const GetDimensionValuesRequest &request,
@@ -68,6 +63,9 @@ GetDimensionValuesResponse::GetDimensionValuesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDimensionValuesRequest * GetDimensionValuesResponse::request() const
 {
     Q_D(const GetDimensionValuesResponse);
@@ -75,9 +73,8 @@ const GetDimensionValuesRequest * GetDimensionValuesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CostExplorer GetDimensionValues response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CostExplorer GetDimensionValues \a response.
  */
 void GetDimensionValuesResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void GetDimensionValuesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CostExplorer::GetDimensionValuesResponsePrivate
+ * \brief The GetDimensionValuesResponsePrivate class provides private implementation for GetDimensionValuesResponse.
  * \internal
  *
- * \class GetDimensionValuesResponsePrivate
- *
- * \brief Private implementation for GetDimensionValuesResponse.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDimensionValuesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDimensionValuesResponse instance.
+ * Constructs a GetDimensionValuesResponsePrivate object with public implementation \a q.
  */
 GetDimensionValuesResponsePrivate::GetDimensionValuesResponsePrivate(
     GetDimensionValuesResponse * const q) : CostExplorerResponsePrivate(q)
@@ -108,9 +101,7 @@ GetDimensionValuesResponsePrivate::GetDimensionValuesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CostExplorer GetDimensionValuesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CostExplorer GetDimensionValues response element from \a xml.
  */
 void GetDimensionValuesResponsePrivate::parseGetDimensionValuesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::DisableKeyResponse
- *
  * \brief The DisableKeyResponse class provides an interace for KMS DisableKey responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new DisableKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableKeyResponse::DisableKeyResponse(
         const DisableKeyRequest &request,
@@ -154,6 +149,9 @@ DisableKeyResponse::DisableKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableKeyRequest * DisableKeyResponse::request() const
 {
     Q_D(const DisableKeyResponse);
@@ -161,9 +159,8 @@ const DisableKeyRequest * DisableKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS DisableKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS DisableKey \a response.
  */
 void DisableKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void DisableKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::DisableKeyResponsePrivate
+ * \brief The DisableKeyResponsePrivate class provides private implementation for DisableKeyResponse.
  * \internal
  *
- * \class DisableKeyResponsePrivate
- *
- * \brief Private implementation for DisableKeyResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableKeyResponse instance.
+ * Constructs a DisableKeyResponsePrivate object with public implementation \a q.
  */
 DisableKeyResponsePrivate::DisableKeyResponsePrivate(
     DisableKeyResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ DisableKeyResponsePrivate::DisableKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS DisableKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS DisableKey response element from \a xml.
  */
 void DisableKeyResponsePrivate::parseDisableKeyResponse(QXmlStreamReader &xml)
 {

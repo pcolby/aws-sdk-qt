@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::BatchGetItemResponse
- *
  * \brief The BatchGetItemResponse class provides an interace for DynamoDB BatchGetItem responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new BatchGetItemResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetItemResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetItemResponse::BatchGetItemResponse(
         const BatchGetItemRequest &request,
@@ -74,6 +69,9 @@ BatchGetItemResponse::BatchGetItemResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetItemRequest * BatchGetItemResponse::request() const
 {
     Q_D(const BatchGetItemResponse);
@@ -81,9 +79,8 @@ const BatchGetItemRequest * BatchGetItemResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB BatchGetItem response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB BatchGetItem \a response.
  */
 void BatchGetItemResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void BatchGetItemResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::BatchGetItemResponsePrivate
+ * \brief The BatchGetItemResponsePrivate class provides private implementation for BatchGetItemResponse.
  * \internal
  *
- * \class BatchGetItemResponsePrivate
- *
- * \brief Private implementation for BatchGetItemResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetItemResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetItemResponse instance.
+ * Constructs a BatchGetItemResponsePrivate object with public implementation \a q.
  */
 BatchGetItemResponsePrivate::BatchGetItemResponsePrivate(
     BatchGetItemResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ BatchGetItemResponsePrivate::BatchGetItemResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB BatchGetItemResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB BatchGetItem response element from \a xml.
  */
 void BatchGetItemResponsePrivate::parseBatchGetItemResponse(QXmlStreamReader &xml)
 {

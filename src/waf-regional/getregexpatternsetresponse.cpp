@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetRegexPatternSetResponse
- *
  * \brief The GetRegexPatternSetResponse class provides an interace for WAFRegional GetRegexPatternSet responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetRegexPatternSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRegexPatternSetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRegexPatternSetResponse::GetRegexPatternSetResponse(
         const GetRegexPatternSetRequest &request,
@@ -62,6 +57,9 @@ GetRegexPatternSetResponse::GetRegexPatternSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRegexPatternSetRequest * GetRegexPatternSetResponse::request() const
 {
     Q_D(const GetRegexPatternSetResponse);
@@ -69,9 +67,8 @@ const GetRegexPatternSetRequest * GetRegexPatternSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional GetRegexPatternSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional GetRegexPatternSet \a response.
  */
 void GetRegexPatternSetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetRegexPatternSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::GetRegexPatternSetResponsePrivate
+ * \brief The GetRegexPatternSetResponsePrivate class provides private implementation for GetRegexPatternSetResponse.
  * \internal
  *
- * \class GetRegexPatternSetResponsePrivate
- *
- * \brief Private implementation for GetRegexPatternSetResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRegexPatternSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRegexPatternSetResponse instance.
+ * Constructs a GetRegexPatternSetResponsePrivate object with public implementation \a q.
  */
 GetRegexPatternSetResponsePrivate::GetRegexPatternSetResponsePrivate(
     GetRegexPatternSetResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ GetRegexPatternSetResponsePrivate::GetRegexPatternSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional GetRegexPatternSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional GetRegexPatternSet response element from \a xml.
  */
 void GetRegexPatternSetResponsePrivate::parseGetRegexPatternSetResponse(QXmlStreamReader &xml)
 {

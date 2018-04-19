@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CopySnapshotRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CopySnapshotRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CopySnapshotRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
     const EC2Request::Action action, CopySnapshotRequest * const q)

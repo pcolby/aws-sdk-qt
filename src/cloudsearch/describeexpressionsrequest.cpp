@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeExpressionsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeExpressionsRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DescribeExpressionsRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DescribeExpressionsRequestPrivate::DescribeExpressionsRequestPrivate(
     const CloudSearchRequest::Action action, DescribeExpressionsRequest * const q)

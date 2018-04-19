@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateEndpointResponse
- *
  * \brief The UpdateEndpointResponse class provides an interace for Pinpoint UpdateEndpoint responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateEndpoint
  */
 
 /*!
- * @brief  Constructs a new UpdateEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateEndpointResponse::UpdateEndpointResponse(
         const UpdateEndpointRequest &request,
@@ -55,6 +50,9 @@ UpdateEndpointResponse::UpdateEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateEndpointRequest * UpdateEndpointResponse::request() const
 {
     Q_D(const UpdateEndpointResponse);
@@ -62,9 +60,8 @@ const UpdateEndpointRequest * UpdateEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint UpdateEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint UpdateEndpoint \a response.
  */
 void UpdateEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::UpdateEndpointResponsePrivate
+ * \brief The UpdateEndpointResponsePrivate class provides private implementation for UpdateEndpointResponse.
  * \internal
  *
- * \class UpdateEndpointResponsePrivate
- *
- * \brief Private implementation for UpdateEndpointResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateEndpointResponse instance.
+ * Constructs a UpdateEndpointResponsePrivate object with public implementation \a q.
  */
 UpdateEndpointResponsePrivate::UpdateEndpointResponsePrivate(
     UpdateEndpointResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateEndpointResponsePrivate::UpdateEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint UpdateEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint UpdateEndpoint response element from \a xml.
  */
 void UpdateEndpointResponsePrivate::parseUpdateEndpointResponse(QXmlStreamReader &xml)
 {

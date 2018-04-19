@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * PutNotificationConfigurationRequest::response
  */
 
 /*!
- *
- * Constructs a PutNotificationConfigurationRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a PutNotificationConfigurationRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 PutNotificationConfigurationRequestPrivate::PutNotificationConfigurationRequestPrivate(
     const AutoScalingRequest::Action action, PutNotificationConfigurationRequest * const q)

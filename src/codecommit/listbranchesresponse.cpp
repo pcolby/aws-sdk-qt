@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::ListBranchesResponse
- *
  * \brief The ListBranchesResponse class provides an interace for CodeCommit ListBranches responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new ListBranchesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListBranchesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListBranchesResponse::ListBranchesResponse(
         const ListBranchesRequest &request,
@@ -245,6 +240,9 @@ ListBranchesResponse::ListBranchesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListBranchesRequest * ListBranchesResponse::request() const
 {
     Q_D(const ListBranchesResponse);
@@ -252,9 +250,8 @@ const ListBranchesRequest * ListBranchesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit ListBranches response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit ListBranches \a response.
  */
 void ListBranchesResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void ListBranchesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::ListBranchesResponsePrivate
+ * \brief The ListBranchesResponsePrivate class provides private implementation for ListBranchesResponse.
  * \internal
  *
- * \class ListBranchesResponsePrivate
- *
- * \brief Private implementation for ListBranchesResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBranchesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListBranchesResponse instance.
+ * Constructs a ListBranchesResponsePrivate object with public implementation \a q.
  */
 ListBranchesResponsePrivate::ListBranchesResponsePrivate(
     ListBranchesResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ ListBranchesResponsePrivate::ListBranchesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit ListBranchesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit ListBranches response element from \a xml.
  */
 void ListBranchesResponsePrivate::parseListBranchesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationRecordersResponse
- *
  * \brief The DescribeConfigurationRecordersResponse class provides an interace for ConfigService DescribeConfigurationRecorders responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationRecordersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConfigurationRecordersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConfigurationRecordersResponse::DescribeConfigurationRecordersResponse(
         const DescribeConfigurationRecordersRequest &request,
@@ -78,6 +73,9 @@ DescribeConfigurationRecordersResponse::DescribeConfigurationRecordersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConfigurationRecordersRequest * DescribeConfigurationRecordersResponse::request() const
 {
     Q_D(const DescribeConfigurationRecordersResponse);
@@ -85,9 +83,8 @@ const DescribeConfigurationRecordersRequest * DescribeConfigurationRecordersResp
 }
 
 /*!
- * @brief  Parse a ConfigService DescribeConfigurationRecorders response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribeConfigurationRecorders \a response.
  */
 void DescribeConfigurationRecordersResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeConfigurationRecordersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribeConfigurationRecordersResponsePrivate
+ * \brief The DescribeConfigurationRecordersResponsePrivate class provides private implementation for DescribeConfigurationRecordersResponse.
  * \internal
  *
- * \class DescribeConfigurationRecordersResponsePrivate
- *
- * \brief Private implementation for DescribeConfigurationRecordersResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationRecordersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConfigurationRecordersResponse instance.
+ * Constructs a DescribeConfigurationRecordersResponsePrivate object with public implementation \a q.
  */
 DescribeConfigurationRecordersResponsePrivate::DescribeConfigurationRecordersResponsePrivate(
     DescribeConfigurationRecordersResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeConfigurationRecordersResponsePrivate::DescribeConfigurationRecordersRes
 }
 
 /*!
- * @brief  Parse an ConfigService DescribeConfigurationRecordersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribeConfigurationRecorders response element from \a xml.
  */
 void DescribeConfigurationRecordersResponsePrivate::parseDescribeConfigurationRecordersResponse(QXmlStreamReader &xml)
 {

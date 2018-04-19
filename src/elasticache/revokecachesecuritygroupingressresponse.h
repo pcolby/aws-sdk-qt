@@ -34,10 +34,10 @@ class QTAWS_EXPORT RevokeCacheSecurityGroupIngressResponse : public ElastiCacheR
 public:
     RevokeCacheSecurityGroupIngressResponse(const RevokeCacheSecurityGroupIngressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RevokeCacheSecurityGroupIngressRequest * request() const;
+    virtual const RevokeCacheSecurityGroupIngressRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RevokeCacheSecurityGroupIngressResponse)

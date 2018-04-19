@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRuntimeConfigurationRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeRuntimeConfigurationRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRuntimeConfigurationRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DescribeRuntimeConfigurationRequestPrivate::DescribeRuntimeConfigurationRequestPrivate(
     const GameLiftRequest::Action action, DescribeRuntimeConfigurationRequest * const q)

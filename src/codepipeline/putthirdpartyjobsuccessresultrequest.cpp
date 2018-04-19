@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * PutThirdPartyJobSuccessResultRequest::respons
  */
 
 /*!
- *
- * Constructs a PutThirdPartyJobSuccessResultRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a PutThirdPartyJobSuccessResultRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 PutThirdPartyJobSuccessResultRequestPrivate::PutThirdPartyJobSuccessResultRequestPrivate(
     const CodePipelineRequest::Action action, PutThirdPartyJobSuccessResultRequest * const q)

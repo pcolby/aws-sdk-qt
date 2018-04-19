@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterTargetsResponse : public ElasticLoadBalancingv2Respon
 public:
     RegisterTargetsResponse(const RegisterTargetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterTargetsRequest * request() const;
+    virtual const RegisterTargetsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterTargetsResponse)

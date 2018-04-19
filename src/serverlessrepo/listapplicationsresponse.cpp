@@ -29,10 +29,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::ListApplicationsResponse
- *
  * \brief The ListApplicationsResponse class provides an interace for ServerlessApplicationRepository ListApplications responses.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -60,11 +59,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new ListApplicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListApplicationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListApplicationsResponse::ListApplicationsResponse(
         const ListApplicationsRequest &request,
@@ -76,6 +71,9 @@ ListApplicationsResponse::ListApplicationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListApplicationsRequest * ListApplicationsResponse::request() const
 {
     Q_D(const ListApplicationsResponse);
@@ -83,9 +81,8 @@ const ListApplicationsRequest * ListApplicationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServerlessApplicationRepository ListApplications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServerlessApplicationRepository ListApplications \a response.
  */
 void ListApplicationsResponse::parseSuccess(QIODevice &response)
 {
@@ -95,19 +92,15 @@ void ListApplicationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServerlessApplicationRepository::ListApplicationsResponsePrivate
+ * \brief The ListApplicationsResponsePrivate class provides private implementation for ListApplicationsResponse.
  * \internal
  *
- * \class ListApplicationsResponsePrivate
- *
- * \brief Private implementation for ListApplicationsResponse.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListApplicationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListApplicationsResponse instance.
+ * Constructs a ListApplicationsResponsePrivate object with public implementation \a q.
  */
 ListApplicationsResponsePrivate::ListApplicationsResponsePrivate(
     ListApplicationsResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
@@ -116,9 +109,7 @@ ListApplicationsResponsePrivate::ListApplicationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServerlessApplicationRepository ListApplicationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServerlessApplicationRepository ListApplications response element from \a xml.
  */
 void ListApplicationsResponsePrivate::parseListApplicationsResponse(QXmlStreamReader &xml)
 {

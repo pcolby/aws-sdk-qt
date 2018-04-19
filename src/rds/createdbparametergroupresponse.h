@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDBParameterGroupResponse : public RDSResponse {
 public:
     CreateDBParameterGroupResponse(const CreateDBParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDBParameterGroupRequest * request() const;
+    virtual const CreateDBParameterGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDBParameterGroupResponse)

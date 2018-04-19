@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a CancelJobRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a CancelJobRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 CancelJobRequestPrivate::CancelJobRequestPrivate(
     const ElasticTranscoderRequest::Action action, CancelJobRequest * const q)

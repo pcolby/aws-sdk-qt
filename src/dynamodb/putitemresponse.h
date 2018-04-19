@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutItemResponse : public DynamoDBResponse {
 public:
     PutItemResponse(const PutItemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutItemRequest * request() const;
+    virtual const PutItemRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutItemResponse)

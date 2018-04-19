@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeleteLayerResponse
- *
  * \brief The DeleteLayerResponse class provides an interace for OpsWorks DeleteLayer responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeleteLayerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLayerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLayerResponse::DeleteLayerResponse(
         const DeleteLayerRequest &request,
@@ -161,6 +156,9 @@ DeleteLayerResponse::DeleteLayerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLayerRequest * DeleteLayerResponse::request() const
 {
     Q_D(const DeleteLayerResponse);
@@ -168,9 +166,8 @@ const DeleteLayerRequest * DeleteLayerResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DeleteLayer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DeleteLayer \a response.
  */
 void DeleteLayerResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DeleteLayerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DeleteLayerResponsePrivate
+ * \brief The DeleteLayerResponsePrivate class provides private implementation for DeleteLayerResponse.
  * \internal
  *
- * \class DeleteLayerResponsePrivate
- *
- * \brief Private implementation for DeleteLayerResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLayerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLayerResponse instance.
+ * Constructs a DeleteLayerResponsePrivate object with public implementation \a q.
  */
 DeleteLayerResponsePrivate::DeleteLayerResponsePrivate(
     DeleteLayerResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DeleteLayerResponsePrivate::DeleteLayerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DeleteLayerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DeleteLayer response element from \a xml.
  */
 void DeleteLayerResponsePrivate::parseDeleteLayerResponse(QXmlStreamReader &xml)
 {

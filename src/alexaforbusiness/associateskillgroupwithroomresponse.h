@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateSkillGroupWithRoomResponse : public AlexaForBusiness
 public:
     AssociateSkillGroupWithRoomResponse(const AssociateSkillGroupWithRoomRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateSkillGroupWithRoomRequest * request() const;
+    virtual const AssociateSkillGroupWithRoomRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateSkillGroupWithRoomResponse)

@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeCacheClustersResponse
- *
  * \brief The DescribeCacheClustersResponse class provides an interace for ElastiCache DescribeCacheClusters responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeCacheClustersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCacheClustersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCacheClustersResponse::DescribeCacheClustersResponse(
         const DescribeCacheClustersRequest &request,
@@ -69,6 +64,9 @@ DescribeCacheClustersResponse::DescribeCacheClustersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCacheClustersRequest * DescribeCacheClustersResponse::request() const
 {
     Q_D(const DescribeCacheClustersResponse);
@@ -76,9 +74,8 @@ const DescribeCacheClustersRequest * DescribeCacheClustersResponse::request() co
 }
 
 /*!
- * @brief  Parse a ElastiCache DescribeCacheClusters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DescribeCacheClusters \a response.
  */
 void DescribeCacheClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeCacheClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::DescribeCacheClustersResponsePrivate
+ * \brief The DescribeCacheClustersResponsePrivate class provides private implementation for DescribeCacheClustersResponse.
  * \internal
  *
- * \class DescribeCacheClustersResponsePrivate
- *
- * \brief Private implementation for DescribeCacheClustersResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCacheClustersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCacheClustersResponse instance.
+ * Constructs a DescribeCacheClustersResponsePrivate object with public implementation \a q.
  */
 DescribeCacheClustersResponsePrivate::DescribeCacheClustersResponsePrivate(
     DescribeCacheClustersResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeCacheClustersResponsePrivate::DescribeCacheClustersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache DescribeCacheClustersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DescribeCacheClusters response element from \a xml.
  */
 void DescribeCacheClustersResponsePrivate::parseDescribeCacheClustersResponse(QXmlStreamReader &xml)
 {

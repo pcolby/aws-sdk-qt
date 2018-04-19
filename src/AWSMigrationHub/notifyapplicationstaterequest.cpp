@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * NotifyApplicationStateRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a NotifyApplicationStateRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a NotifyApplicationStateRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 NotifyApplicationStateRequestPrivate::NotifyApplicationStateRequestPrivate(
     const MigrationHubRequest::Action action, NotifyApplicationStateRequest * const q)

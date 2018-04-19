@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * ResetClusterParameterGroupRequest::response(Q
  */
 
 /*!
- *
- * Constructs a ResetClusterParameterGroupRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a ResetClusterParameterGroupRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 ResetClusterParameterGroupRequestPrivate::ResetClusterParameterGroupRequestPrivate(
     const RedshiftRequest::Action action, ResetClusterParameterGroupRequest * const q)

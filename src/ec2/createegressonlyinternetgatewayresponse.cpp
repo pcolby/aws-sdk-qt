@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateEgressOnlyInternetGatewayResponse
- *
  * \brief The CreateEgressOnlyInternetGatewayResponse class provides an interace for EC2 CreateEgressOnlyInternetGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateEgressOnlyInternetGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateEgressOnlyInternetGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateEgressOnlyInternetGatewayResponse::CreateEgressOnlyInternetGatewayResponse(
         const CreateEgressOnlyInternetGatewayRequest &request,
@@ -59,6 +54,9 @@ CreateEgressOnlyInternetGatewayResponse::CreateEgressOnlyInternetGatewayResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateEgressOnlyInternetGatewayRequest * CreateEgressOnlyInternetGatewayResponse::request() const
 {
     Q_D(const CreateEgressOnlyInternetGatewayResponse);
@@ -66,9 +64,8 @@ const CreateEgressOnlyInternetGatewayRequest * CreateEgressOnlyInternetGatewayRe
 }
 
 /*!
- * @brief  Parse a EC2 CreateEgressOnlyInternetGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateEgressOnlyInternetGateway \a response.
  */
 void CreateEgressOnlyInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateEgressOnlyInternetGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateEgressOnlyInternetGatewayResponsePrivate
+ * \brief The CreateEgressOnlyInternetGatewayResponsePrivate class provides private implementation for CreateEgressOnlyInternetGatewayResponse.
  * \internal
  *
- * \class CreateEgressOnlyInternetGatewayResponsePrivate
- *
- * \brief Private implementation for CreateEgressOnlyInternetGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEgressOnlyInternetGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateEgressOnlyInternetGatewayResponse instance.
+ * Constructs a CreateEgressOnlyInternetGatewayResponsePrivate object with public implementation \a q.
  */
 CreateEgressOnlyInternetGatewayResponsePrivate::CreateEgressOnlyInternetGatewayResponsePrivate(
     CreateEgressOnlyInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateEgressOnlyInternetGatewayResponsePrivate::CreateEgressOnlyInternetGatewayR
 }
 
 /*!
- * @brief  Parse an EC2 CreateEgressOnlyInternetGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateEgressOnlyInternetGateway response element from \a xml.
  */
 void CreateEgressOnlyInternetGatewayResponsePrivate::parseCreateEgressOnlyInternetGatewayResponse(QXmlStreamReader &xml)
 {

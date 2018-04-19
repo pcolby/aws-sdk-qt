@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RegisterDomainResponse
- *
  * \brief The RegisterDomainResponse class provides an interace for SWF RegisterDomain responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RegisterDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterDomainResponse::RegisterDomainResponse(
         const RegisterDomainRequest &request,
@@ -71,6 +66,9 @@ RegisterDomainResponse::RegisterDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterDomainRequest * RegisterDomainResponse::request() const
 {
     Q_D(const RegisterDomainResponse);
@@ -78,9 +76,8 @@ const RegisterDomainRequest * RegisterDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a SWF RegisterDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF RegisterDomain \a response.
  */
 void RegisterDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void RegisterDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::RegisterDomainResponsePrivate
+ * \brief The RegisterDomainResponsePrivate class provides private implementation for RegisterDomainResponse.
  * \internal
  *
- * \class RegisterDomainResponsePrivate
- *
- * \brief Private implementation for RegisterDomainResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterDomainResponse instance.
+ * Constructs a RegisterDomainResponsePrivate object with public implementation \a q.
  */
 RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
     RegisterDomainResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF RegisterDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF RegisterDomain response element from \a xml.
  */
 void RegisterDomainResponsePrivate::parseRegisterDomainResponse(QXmlStreamReader &xml)
 {

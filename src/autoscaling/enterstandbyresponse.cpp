@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::EnterStandbyResponse
- *
  * \brief The EnterStandbyResponse class provides an interace for AutoScaling EnterStandby responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new EnterStandbyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnterStandbyResponse object for \a reply to \a request, with parent \a parent.
  */
 EnterStandbyResponse::EnterStandbyResponse(
         const EnterStandbyRequest &request,
@@ -60,6 +55,9 @@ EnterStandbyResponse::EnterStandbyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnterStandbyRequest * EnterStandbyResponse::request() const
 {
     Q_D(const EnterStandbyResponse);
@@ -67,9 +65,8 @@ const EnterStandbyRequest * EnterStandbyResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling EnterStandby response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling EnterStandby \a response.
  */
 void EnterStandbyResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void EnterStandbyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::EnterStandbyResponsePrivate
+ * \brief The EnterStandbyResponsePrivate class provides private implementation for EnterStandbyResponse.
  * \internal
  *
- * \class EnterStandbyResponsePrivate
- *
- * \brief Private implementation for EnterStandbyResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnterStandbyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnterStandbyResponse instance.
+ * Constructs a EnterStandbyResponsePrivate object with public implementation \a q.
  */
 EnterStandbyResponsePrivate::EnterStandbyResponsePrivate(
     EnterStandbyResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ EnterStandbyResponsePrivate::EnterStandbyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling EnterStandbyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling EnterStandby response element from \a xml.
  */
 void EnterStandbyResponsePrivate::parseEnterStandbyResponse(QXmlStreamReader &xml)
 {

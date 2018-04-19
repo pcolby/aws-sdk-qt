@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartCelebrityRecognitionResponse
- *
  * \brief The StartCelebrityRecognitionResponse class provides an interace for Rekognition StartCelebrityRecognition responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartCelebrityRecognitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartCelebrityRecognitionResponse object for \a reply to \a request, with parent \a parent.
  */
 StartCelebrityRecognitionResponse::StartCelebrityRecognitionResponse(
         const StartCelebrityRecognitionRequest &request,
@@ -56,6 +51,9 @@ StartCelebrityRecognitionResponse::StartCelebrityRecognitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartCelebrityRecognitionRequest * StartCelebrityRecognitionResponse::request() const
 {
     Q_D(const StartCelebrityRecognitionResponse);
@@ -63,9 +61,8 @@ const StartCelebrityRecognitionRequest * StartCelebrityRecognitionResponse::requ
 }
 
 /*!
- * @brief  Parse a Rekognition StartCelebrityRecognition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition StartCelebrityRecognition \a response.
  */
 void StartCelebrityRecognitionResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void StartCelebrityRecognitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::StartCelebrityRecognitionResponsePrivate
+ * \brief The StartCelebrityRecognitionResponsePrivate class provides private implementation for StartCelebrityRecognitionResponse.
  * \internal
  *
- * \class StartCelebrityRecognitionResponsePrivate
- *
- * \brief Private implementation for StartCelebrityRecognitionResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartCelebrityRecognitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartCelebrityRecognitionResponse instance.
+ * Constructs a StartCelebrityRecognitionResponsePrivate object with public implementation \a q.
  */
 StartCelebrityRecognitionResponsePrivate::StartCelebrityRecognitionResponsePrivate(
     StartCelebrityRecognitionResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ StartCelebrityRecognitionResponsePrivate::StartCelebrityRecognitionResponsePriva
 }
 
 /*!
- * @brief  Parse an Rekognition StartCelebrityRecognitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition StartCelebrityRecognition response element from \a xml.
  */
 void StartCelebrityRecognitionResponsePrivate::parseStartCelebrityRecognitionResponse(QXmlStreamReader &xml)
 {

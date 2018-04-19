@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListGroupCertificateAuthoritiesResponse : public GreengrassRe
 public:
     ListGroupCertificateAuthoritiesResponse(const ListGroupCertificateAuthoritiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListGroupCertificateAuthoritiesRequest * request() const;
+    virtual const ListGroupCertificateAuthoritiesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListGroupCertificateAuthoritiesResponse)

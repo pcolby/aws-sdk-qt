@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetHostedZoneLimitRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetHostedZoneLimitRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a GetHostedZoneLimitRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 GetHostedZoneLimitRequestPrivate::GetHostedZoneLimitRequestPrivate(
     const Route53Request::Action action, GetHostedZoneLimitRequest * const q)

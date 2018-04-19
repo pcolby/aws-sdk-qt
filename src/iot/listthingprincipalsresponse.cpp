@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListThingPrincipalsResponse
- *
  * \brief The ListThingPrincipalsResponse class provides an interace for IoT ListThingPrincipals responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListThingPrincipalsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListThingPrincipalsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListThingPrincipalsResponse::ListThingPrincipalsResponse(
         const ListThingPrincipalsRequest &request,
@@ -66,6 +61,9 @@ ListThingPrincipalsResponse::ListThingPrincipalsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListThingPrincipalsRequest * ListThingPrincipalsResponse::request() const
 {
     Q_D(const ListThingPrincipalsResponse);
@@ -73,9 +71,8 @@ const ListThingPrincipalsRequest * ListThingPrincipalsResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListThingPrincipals response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListThingPrincipals \a response.
  */
 void ListThingPrincipalsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListThingPrincipalsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListThingPrincipalsResponsePrivate
+ * \brief The ListThingPrincipalsResponsePrivate class provides private implementation for ListThingPrincipalsResponse.
  * \internal
  *
- * \class ListThingPrincipalsResponsePrivate
- *
- * \brief Private implementation for ListThingPrincipalsResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListThingPrincipalsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListThingPrincipalsResponse instance.
+ * Constructs a ListThingPrincipalsResponsePrivate object with public implementation \a q.
  */
 ListThingPrincipalsResponsePrivate::ListThingPrincipalsResponsePrivate(
     ListThingPrincipalsResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListThingPrincipalsResponsePrivate::ListThingPrincipalsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListThingPrincipalsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListThingPrincipals response element from \a xml.
  */
 void ListThingPrincipalsResponsePrivate::parseListThingPrincipalsResponse(QXmlStreamReader &xml)
 {

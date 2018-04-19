@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DescribeCreateAccountStatusResponse
- *
  * \brief The DescribeCreateAccountStatusResponse class provides an interace for Organizations DescribeCreateAccountStatus responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DescribeCreateAccountStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCreateAccountStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCreateAccountStatusResponse::DescribeCreateAccountStatusResponse(
         const DescribeCreateAccountStatusRequest &request,
@@ -197,6 +192,9 @@ DescribeCreateAccountStatusResponse::DescribeCreateAccountStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCreateAccountStatusRequest * DescribeCreateAccountStatusResponse::request() const
 {
     Q_D(const DescribeCreateAccountStatusResponse);
@@ -204,9 +202,8 @@ const DescribeCreateAccountStatusRequest * DescribeCreateAccountStatusResponse::
 }
 
 /*!
- * @brief  Parse a Organizations DescribeCreateAccountStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations DescribeCreateAccountStatus \a response.
  */
 void DescribeCreateAccountStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void DescribeCreateAccountStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::DescribeCreateAccountStatusResponsePrivate
+ * \brief The DescribeCreateAccountStatusResponsePrivate class provides private implementation for DescribeCreateAccountStatusResponse.
  * \internal
  *
- * \class DescribeCreateAccountStatusResponsePrivate
- *
- * \brief Private implementation for DescribeCreateAccountStatusResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCreateAccountStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCreateAccountStatusResponse instance.
+ * Constructs a DescribeCreateAccountStatusResponsePrivate object with public implementation \a q.
  */
 DescribeCreateAccountStatusResponsePrivate::DescribeCreateAccountStatusResponsePrivate(
     DescribeCreateAccountStatusResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ DescribeCreateAccountStatusResponsePrivate::DescribeCreateAccountStatusResponseP
 }
 
 /*!
- * @brief  Parse an Organizations DescribeCreateAccountStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations DescribeCreateAccountStatus response element from \a xml.
  */
 void DescribeCreateAccountStatusResponsePrivate::parseDescribeCreateAccountStatusResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ListInstancesRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListInstancesRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a ListInstancesRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 ListInstancesRequestPrivate::ListInstancesRequestPrivate(
     const ServiceDiscoveryRequest::Action action, ListInstancesRequest * const q)

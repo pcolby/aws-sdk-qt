@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * StartInstanceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a StartInstanceRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a StartInstanceRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 StartInstanceRequestPrivate::StartInstanceRequestPrivate(
     const OpsWorksRequest::Action action, StartInstanceRequest * const q)

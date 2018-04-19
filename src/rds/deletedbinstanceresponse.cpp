@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteDBInstanceResponse
- *
  * \brief The DeleteDBInstanceResponse class provides an interace for RDS DeleteDBInstance responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteDBInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDBInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDBInstanceResponse::DeleteDBInstanceResponse(
         const DeleteDBInstanceRequest &request,
@@ -119,6 +114,9 @@ DeleteDBInstanceResponse::DeleteDBInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDBInstanceRequest * DeleteDBInstanceResponse::request() const
 {
     Q_D(const DeleteDBInstanceResponse);
@@ -126,9 +124,8 @@ const DeleteDBInstanceRequest * DeleteDBInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS DeleteDBInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DeleteDBInstance \a response.
  */
 void DeleteDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DeleteDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DeleteDBInstanceResponsePrivate
+ * \brief The DeleteDBInstanceResponsePrivate class provides private implementation for DeleteDBInstanceResponse.
  * \internal
  *
- * \class DeleteDBInstanceResponsePrivate
- *
- * \brief Private implementation for DeleteDBInstanceResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDBInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDBInstanceResponse instance.
+ * Constructs a DeleteDBInstanceResponsePrivate object with public implementation \a q.
  */
 DeleteDBInstanceResponsePrivate::DeleteDBInstanceResponsePrivate(
     DeleteDBInstanceResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DeleteDBInstanceResponsePrivate::DeleteDBInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DeleteDBInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DeleteDBInstance response element from \a xml.
  */
 void DeleteDBInstanceResponsePrivate::parseDeleteDBInstanceResponse(QXmlStreamReader &xml)
 {

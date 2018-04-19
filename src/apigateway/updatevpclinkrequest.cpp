@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateVpcLinkRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateVpcLinkRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateVpcLinkRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 UpdateVpcLinkRequestPrivate::UpdateVpcLinkRequestPrivate(
     const APIGatewayRequest::Action action, UpdateVpcLinkRequest * const q)

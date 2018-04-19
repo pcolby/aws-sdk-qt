@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateOrUpdateTagsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateOrUpdateTagsRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a CreateOrUpdateTagsRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 CreateOrUpdateTagsRequestPrivate::CreateOrUpdateTagsRequestPrivate(
     const AutoScalingRequest::Action action, CreateOrUpdateTagsRequest * const q)

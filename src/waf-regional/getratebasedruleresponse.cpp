@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetRateBasedRuleResponse
- *
  * \brief The GetRateBasedRuleResponse class provides an interace for WAFRegional GetRateBasedRule responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetRateBasedRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRateBasedRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRateBasedRuleResponse::GetRateBasedRuleResponse(
         const GetRateBasedRuleRequest &request,
@@ -62,6 +57,9 @@ GetRateBasedRuleResponse::GetRateBasedRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRateBasedRuleRequest * GetRateBasedRuleResponse::request() const
 {
     Q_D(const GetRateBasedRuleResponse);
@@ -69,9 +67,8 @@ const GetRateBasedRuleRequest * GetRateBasedRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional GetRateBasedRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional GetRateBasedRule \a response.
  */
 void GetRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::GetRateBasedRuleResponsePrivate
+ * \brief The GetRateBasedRuleResponsePrivate class provides private implementation for GetRateBasedRuleResponse.
  * \internal
  *
- * \class GetRateBasedRuleResponsePrivate
- *
- * \brief Private implementation for GetRateBasedRuleResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRateBasedRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRateBasedRuleResponse instance.
+ * Constructs a GetRateBasedRuleResponsePrivate object with public implementation \a q.
  */
 GetRateBasedRuleResponsePrivate::GetRateBasedRuleResponsePrivate(
     GetRateBasedRuleResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ GetRateBasedRuleResponsePrivate::GetRateBasedRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional GetRateBasedRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional GetRateBasedRule response element from \a xml.
  */
 void GetRateBasedRuleResponsePrivate::parseGetRateBasedRuleResponse(QXmlStreamReader &xml)
 {

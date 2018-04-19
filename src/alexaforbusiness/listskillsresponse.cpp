@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::ListSkillsResponse
- *
  * \brief The ListSkillsResponse class provides an interace for AlexaForBusiness ListSkills responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new ListSkillsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSkillsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSkillsResponse::ListSkillsResponse(
         const ListSkillsRequest &request,
@@ -60,6 +55,9 @@ ListSkillsResponse::ListSkillsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSkillsRequest * ListSkillsResponse::request() const
 {
     Q_D(const ListSkillsResponse);
@@ -67,9 +65,8 @@ const ListSkillsRequest * ListSkillsResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness ListSkills response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness ListSkills \a response.
  */
 void ListSkillsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListSkillsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::ListSkillsResponsePrivate
+ * \brief The ListSkillsResponsePrivate class provides private implementation for ListSkillsResponse.
  * \internal
  *
- * \class ListSkillsResponsePrivate
- *
- * \brief Private implementation for ListSkillsResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSkillsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSkillsResponse instance.
+ * Constructs a ListSkillsResponsePrivate object with public implementation \a q.
  */
 ListSkillsResponsePrivate::ListSkillsResponsePrivate(
     ListSkillsResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ ListSkillsResponsePrivate::ListSkillsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness ListSkillsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness ListSkills response element from \a xml.
  */
 void ListSkillsResponsePrivate::parseListSkillsResponse(QXmlStreamReader &xml)
 {

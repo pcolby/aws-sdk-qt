@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCallerIdentityResponse : public STSResponse {
 public:
     GetCallerIdentityResponse(const GetCallerIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCallerIdentityRequest * request() const;
+    virtual const GetCallerIdentityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCallerIdentityResponse)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetExportRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetExportRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a GetExportRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 GetExportRequestPrivate::GetExportRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetExportRequest * const q)

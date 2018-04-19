@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ConfirmSignUpResponse
- *
  * \brief The ConfirmSignUpResponse class provides an interace for CognitoIdentityProvider ConfirmSignUp responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ConfirmSignUpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ConfirmSignUpResponse object for \a reply to \a request, with parent \a parent.
  */
 ConfirmSignUpResponse::ConfirmSignUpResponse(
         const ConfirmSignUpRequest &request,
@@ -65,6 +60,9 @@ ConfirmSignUpResponse::ConfirmSignUpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ConfirmSignUpRequest * ConfirmSignUpResponse::request() const
 {
     Q_D(const ConfirmSignUpResponse);
@@ -72,9 +70,8 @@ const ConfirmSignUpRequest * ConfirmSignUpResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider ConfirmSignUp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider ConfirmSignUp \a response.
  */
 void ConfirmSignUpResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void ConfirmSignUpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::ConfirmSignUpResponsePrivate
+ * \brief The ConfirmSignUpResponsePrivate class provides private implementation for ConfirmSignUpResponse.
  * \internal
  *
- * \class ConfirmSignUpResponsePrivate
- *
- * \brief Private implementation for ConfirmSignUpResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmSignUpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ConfirmSignUpResponse instance.
+ * Constructs a ConfirmSignUpResponsePrivate object with public implementation \a q.
  */
 ConfirmSignUpResponsePrivate::ConfirmSignUpResponsePrivate(
     ConfirmSignUpResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ ConfirmSignUpResponsePrivate::ConfirmSignUpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider ConfirmSignUpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider ConfirmSignUp response element from \a xml.
  */
 void ConfirmSignUpResponsePrivate::parseConfirmSignUpResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::CreateSchemaResponse
- *
  * \brief The CreateSchemaResponse class provides an interace for CloudDirectory CreateSchema responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new CreateSchemaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSchemaResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSchemaResponse::CreateSchemaResponse(
         const CreateSchemaRequest &request,
@@ -62,6 +57,9 @@ CreateSchemaResponse::CreateSchemaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSchemaRequest * CreateSchemaResponse::request() const
 {
     Q_D(const CreateSchemaResponse);
@@ -69,9 +67,8 @@ const CreateSchemaRequest * CreateSchemaResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory CreateSchema response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory CreateSchema \a response.
  */
 void CreateSchemaResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void CreateSchemaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::CreateSchemaResponsePrivate
+ * \brief The CreateSchemaResponsePrivate class provides private implementation for CreateSchemaResponse.
  * \internal
  *
- * \class CreateSchemaResponsePrivate
- *
- * \brief Private implementation for CreateSchemaResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSchemaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSchemaResponse instance.
+ * Constructs a CreateSchemaResponsePrivate object with public implementation \a q.
  */
 CreateSchemaResponsePrivate::CreateSchemaResponsePrivate(
     CreateSchemaResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ CreateSchemaResponsePrivate::CreateSchemaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory CreateSchemaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory CreateSchema response element from \a xml.
  */
 void CreateSchemaResponsePrivate::parseCreateSchemaResponse(QXmlStreamReader &xml)
 {

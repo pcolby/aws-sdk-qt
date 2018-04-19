@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ShutdownGatewayResponse
- *
  * \brief The ShutdownGatewayResponse class provides an interace for StorageGateway ShutdownGateway responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ShutdownGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ShutdownGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 ShutdownGatewayResponse::ShutdownGatewayResponse(
         const ShutdownGatewayRequest &request,
@@ -124,6 +119,9 @@ ShutdownGatewayResponse::ShutdownGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ShutdownGatewayRequest * ShutdownGatewayResponse::request() const
 {
     Q_D(const ShutdownGatewayResponse);
@@ -131,9 +129,8 @@ const ShutdownGatewayRequest * ShutdownGatewayResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway ShutdownGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway ShutdownGateway \a response.
  */
 void ShutdownGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void ShutdownGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::ShutdownGatewayResponsePrivate
+ * \brief The ShutdownGatewayResponsePrivate class provides private implementation for ShutdownGatewayResponse.
  * \internal
  *
- * \class ShutdownGatewayResponsePrivate
- *
- * \brief Private implementation for ShutdownGatewayResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ShutdownGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ShutdownGatewayResponse instance.
+ * Constructs a ShutdownGatewayResponsePrivate object with public implementation \a q.
  */
 ShutdownGatewayResponsePrivate::ShutdownGatewayResponsePrivate(
     ShutdownGatewayResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ ShutdownGatewayResponsePrivate::ShutdownGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway ShutdownGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway ShutdownGateway response element from \a xml.
  */
 void ShutdownGatewayResponsePrivate::parseShutdownGatewayResponse(QXmlStreamReader &xml)
 {

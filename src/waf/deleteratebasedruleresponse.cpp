@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeleteRateBasedRuleResponse
- *
  * \brief The DeleteRateBasedRuleResponse class provides an interace for WAF DeleteRateBasedRule responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeleteRateBasedRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRateBasedRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRateBasedRuleResponse::DeleteRateBasedRuleResponse(
         const DeleteRateBasedRuleRequest &request,
@@ -60,6 +55,9 @@ DeleteRateBasedRuleResponse::DeleteRateBasedRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRateBasedRuleRequest * DeleteRateBasedRuleResponse::request() const
 {
     Q_D(const DeleteRateBasedRuleResponse);
@@ -67,9 +65,8 @@ const DeleteRateBasedRuleRequest * DeleteRateBasedRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF DeleteRateBasedRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF DeleteRateBasedRule \a response.
  */
 void DeleteRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::DeleteRateBasedRuleResponsePrivate
+ * \brief The DeleteRateBasedRuleResponsePrivate class provides private implementation for DeleteRateBasedRuleResponse.
  * \internal
  *
- * \class DeleteRateBasedRuleResponsePrivate
- *
- * \brief Private implementation for DeleteRateBasedRuleResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRateBasedRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRateBasedRuleResponse instance.
+ * Constructs a DeleteRateBasedRuleResponsePrivate object with public implementation \a q.
  */
 DeleteRateBasedRuleResponsePrivate::DeleteRateBasedRuleResponsePrivate(
     DeleteRateBasedRuleResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteRateBasedRuleResponsePrivate::DeleteRateBasedRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF DeleteRateBasedRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF DeleteRateBasedRule response element from \a xml.
  */
 void DeleteRateBasedRuleResponsePrivate::parseDeleteRateBasedRuleResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartImageBuilderResponse : public AppStreamResponse {
 public:
     StartImageBuilderResponse(const StartImageBuilderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartImageBuilderRequest * request() const;
+    virtual const StartImageBuilderRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartImageBuilderResponse)

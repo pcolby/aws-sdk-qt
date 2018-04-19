@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApnsChannelRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteApnsChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApnsChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 DeleteApnsChannelRequestPrivate::DeleteApnsChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteApnsChannelRequest * const q)

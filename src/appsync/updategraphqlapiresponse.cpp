@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::UpdateGraphqlApiResponse
- *
  * \brief The UpdateGraphqlApiResponse class provides an interace for AppSync UpdateGraphqlApi responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new UpdateGraphqlApiResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateGraphqlApiResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateGraphqlApiResponse::UpdateGraphqlApiResponse(
         const UpdateGraphqlApiRequest &request,
@@ -56,6 +51,9 @@ UpdateGraphqlApiResponse::UpdateGraphqlApiResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateGraphqlApiRequest * UpdateGraphqlApiResponse::request() const
 {
     Q_D(const UpdateGraphqlApiResponse);
@@ -63,9 +61,8 @@ const UpdateGraphqlApiRequest * UpdateGraphqlApiResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync UpdateGraphqlApi response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync UpdateGraphqlApi \a response.
  */
 void UpdateGraphqlApiResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void UpdateGraphqlApiResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::UpdateGraphqlApiResponsePrivate
+ * \brief The UpdateGraphqlApiResponsePrivate class provides private implementation for UpdateGraphqlApiResponse.
  * \internal
  *
- * \class UpdateGraphqlApiResponsePrivate
- *
- * \brief Private implementation for UpdateGraphqlApiResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGraphqlApiResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateGraphqlApiResponse instance.
+ * Constructs a UpdateGraphqlApiResponsePrivate object with public implementation \a q.
  */
 UpdateGraphqlApiResponsePrivate::UpdateGraphqlApiResponsePrivate(
     UpdateGraphqlApiResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ UpdateGraphqlApiResponsePrivate::UpdateGraphqlApiResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync UpdateGraphqlApiResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync UpdateGraphqlApi response element from \a xml.
  */
 void UpdateGraphqlApiResponsePrivate::parseUpdateGraphqlApiResponse(QXmlStreamReader &xml)
 {

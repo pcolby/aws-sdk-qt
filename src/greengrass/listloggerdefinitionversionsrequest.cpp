@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListLoggerDefinitionVersionsRequest::response
  */
 
 /*!
- *
- * Constructs a ListLoggerDefinitionVersionsRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a ListLoggerDefinitionVersionsRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 ListLoggerDefinitionVersionsRequestPrivate::ListLoggerDefinitionVersionsRequestPrivate(
     const GreengrassRequest::Action action, ListLoggerDefinitionVersionsRequest * const q)

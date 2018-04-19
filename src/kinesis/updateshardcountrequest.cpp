@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateShardCountRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateShardCountRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a UpdateShardCountRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 UpdateShardCountRequestPrivate::UpdateShardCountRequestPrivate(
     const KinesisRequest::Action action, UpdateShardCountRequest * const q)

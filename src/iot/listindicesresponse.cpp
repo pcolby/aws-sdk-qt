@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListIndicesResponse
- *
  * \brief The ListIndicesResponse class provides an interace for IoT ListIndices responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListIndicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListIndicesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListIndicesResponse::ListIndicesResponse(
         const ListIndicesRequest &request,
@@ -66,6 +61,9 @@ ListIndicesResponse::ListIndicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListIndicesRequest * ListIndicesResponse::request() const
 {
     Q_D(const ListIndicesResponse);
@@ -73,9 +71,8 @@ const ListIndicesRequest * ListIndicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListIndices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListIndices \a response.
  */
 void ListIndicesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListIndicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListIndicesResponsePrivate
+ * \brief The ListIndicesResponsePrivate class provides private implementation for ListIndicesResponse.
  * \internal
  *
- * \class ListIndicesResponsePrivate
- *
- * \brief Private implementation for ListIndicesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIndicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListIndicesResponse instance.
+ * Constructs a ListIndicesResponsePrivate object with public implementation \a q.
  */
 ListIndicesResponsePrivate::ListIndicesResponsePrivate(
     ListIndicesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListIndicesResponsePrivate::ListIndicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListIndicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListIndices response element from \a xml.
  */
 void ListIndicesResponsePrivate::parseListIndicesResponse(QXmlStreamReader &xml)
 {

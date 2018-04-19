@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::StartExecutionResponse
- *
  * \brief The StartExecutionResponse class provides an interace for SFN StartExecution responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new StartExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 StartExecutionResponse::StartExecutionResponse(
         const StartExecutionRequest &request,
@@ -74,6 +69,9 @@ StartExecutionResponse::StartExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartExecutionRequest * StartExecutionResponse::request() const
 {
     Q_D(const StartExecutionResponse);
@@ -81,9 +79,8 @@ const StartExecutionRequest * StartExecutionResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN StartExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN StartExecution \a response.
  */
 void StartExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void StartExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::StartExecutionResponsePrivate
+ * \brief The StartExecutionResponsePrivate class provides private implementation for StartExecutionResponse.
  * \internal
  *
- * \class StartExecutionResponsePrivate
- *
- * \brief Private implementation for StartExecutionResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartExecutionResponse instance.
+ * Constructs a StartExecutionResponsePrivate object with public implementation \a q.
  */
 StartExecutionResponsePrivate::StartExecutionResponsePrivate(
     StartExecutionResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ StartExecutionResponsePrivate::StartExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN StartExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN StartExecution response element from \a xml.
  */
 void StartExecutionResponsePrivate::parseStartExecutionResponse(QXmlStreamReader &xml)
 {

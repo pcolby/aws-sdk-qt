@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * TranslateTextRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a TranslateTextRequestPrivate object for Translate \a action with,
- * public implementation \a q.
+ * Constructs a TranslateTextRequestPrivate object for Translate \a action,
+ * with public implementation \a q.
  */
 TranslateTextRequestPrivate::TranslateTextRequestPrivate(
     const TranslateRequest::Action action, TranslateTextRequest * const q)

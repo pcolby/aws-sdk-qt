@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ResetFpgaImageAttributeResponse
- *
  * \brief The ResetFpgaImageAttributeResponse class provides an interace for EC2 ResetFpgaImageAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ResetFpgaImageAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetFpgaImageAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetFpgaImageAttributeResponse::ResetFpgaImageAttributeResponse(
         const ResetFpgaImageAttributeRequest &request,
@@ -59,6 +54,9 @@ ResetFpgaImageAttributeResponse::ResetFpgaImageAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetFpgaImageAttributeRequest * ResetFpgaImageAttributeResponse::request() const
 {
     Q_D(const ResetFpgaImageAttributeResponse);
@@ -66,9 +64,8 @@ const ResetFpgaImageAttributeRequest * ResetFpgaImageAttributeResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 ResetFpgaImageAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ResetFpgaImageAttribute \a response.
  */
 void ResetFpgaImageAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ResetFpgaImageAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ResetFpgaImageAttributeResponsePrivate
+ * \brief The ResetFpgaImageAttributeResponsePrivate class provides private implementation for ResetFpgaImageAttributeResponse.
  * \internal
  *
- * \class ResetFpgaImageAttributeResponsePrivate
- *
- * \brief Private implementation for ResetFpgaImageAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetFpgaImageAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetFpgaImageAttributeResponse instance.
+ * Constructs a ResetFpgaImageAttributeResponsePrivate object with public implementation \a q.
  */
 ResetFpgaImageAttributeResponsePrivate::ResetFpgaImageAttributeResponsePrivate(
     ResetFpgaImageAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ResetFpgaImageAttributeResponsePrivate::ResetFpgaImageAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ResetFpgaImageAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ResetFpgaImageAttribute response element from \a xml.
  */
 void ResetFpgaImageAttributeResponsePrivate::parseResetFpgaImageAttributeResponse(QXmlStreamReader &xml)
 {

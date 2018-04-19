@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::GetActivityTaskResponse
- *
  * \brief The GetActivityTaskResponse class provides an interace for SFN GetActivityTask responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new GetActivityTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetActivityTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 GetActivityTaskResponse::GetActivityTaskResponse(
         const GetActivityTaskRequest &request,
@@ -74,6 +69,9 @@ GetActivityTaskResponse::GetActivityTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetActivityTaskRequest * GetActivityTaskResponse::request() const
 {
     Q_D(const GetActivityTaskResponse);
@@ -81,9 +79,8 @@ const GetActivityTaskRequest * GetActivityTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN GetActivityTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN GetActivityTask \a response.
  */
 void GetActivityTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void GetActivityTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::GetActivityTaskResponsePrivate
+ * \brief The GetActivityTaskResponsePrivate class provides private implementation for GetActivityTaskResponse.
  * \internal
  *
- * \class GetActivityTaskResponsePrivate
- *
- * \brief Private implementation for GetActivityTaskResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetActivityTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetActivityTaskResponse instance.
+ * Constructs a GetActivityTaskResponsePrivate object with public implementation \a q.
  */
 GetActivityTaskResponsePrivate::GetActivityTaskResponsePrivate(
     GetActivityTaskResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ GetActivityTaskResponsePrivate::GetActivityTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN GetActivityTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN GetActivityTask response element from \a xml.
  */
 void GetActivityTaskResponsePrivate::parseGetActivityTaskResponse(QXmlStreamReader &xml)
 {

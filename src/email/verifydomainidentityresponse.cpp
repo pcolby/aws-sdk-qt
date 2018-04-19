@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::VerifyDomainIdentityResponse
- *
  * \brief The VerifyDomainIdentityResponse class provides an interace for SES VerifyDomainIdentity responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new VerifyDomainIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a VerifyDomainIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 VerifyDomainIdentityResponse::VerifyDomainIdentityResponse(
         const VerifyDomainIdentityRequest &request,
@@ -66,6 +61,9 @@ VerifyDomainIdentityResponse::VerifyDomainIdentityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const VerifyDomainIdentityRequest * VerifyDomainIdentityResponse::request() const
 {
     Q_D(const VerifyDomainIdentityResponse);
@@ -73,9 +71,8 @@ const VerifyDomainIdentityRequest * VerifyDomainIdentityResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SES VerifyDomainIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES VerifyDomainIdentity \a response.
  */
 void VerifyDomainIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void VerifyDomainIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::VerifyDomainIdentityResponsePrivate
+ * \brief The VerifyDomainIdentityResponsePrivate class provides private implementation for VerifyDomainIdentityResponse.
  * \internal
  *
- * \class VerifyDomainIdentityResponsePrivate
- *
- * \brief Private implementation for VerifyDomainIdentityResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyDomainIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public VerifyDomainIdentityResponse instance.
+ * Constructs a VerifyDomainIdentityResponsePrivate object with public implementation \a q.
  */
 VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponsePrivate(
     VerifyDomainIdentityResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ VerifyDomainIdentityResponsePrivate::VerifyDomainIdentityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES VerifyDomainIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES VerifyDomainIdentity response element from \a xml.
  */
 void VerifyDomainIdentityResponsePrivate::parseVerifyDomainIdentityResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteUsagePlanResponse
- *
  * \brief The DeleteUsagePlanResponse class provides an interace for APIGateway DeleteUsagePlan responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteUsagePlanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteUsagePlanResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteUsagePlanResponse::DeleteUsagePlanResponse(
         const DeleteUsagePlanRequest &request,
@@ -60,6 +55,9 @@ DeleteUsagePlanResponse::DeleteUsagePlanResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteUsagePlanRequest * DeleteUsagePlanResponse::request() const
 {
     Q_D(const DeleteUsagePlanResponse);
@@ -67,9 +65,8 @@ const DeleteUsagePlanRequest * DeleteUsagePlanResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteUsagePlan response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteUsagePlan \a response.
  */
 void DeleteUsagePlanResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteUsagePlanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteUsagePlanResponsePrivate
+ * \brief The DeleteUsagePlanResponsePrivate class provides private implementation for DeleteUsagePlanResponse.
  * \internal
  *
- * \class DeleteUsagePlanResponsePrivate
- *
- * \brief Private implementation for DeleteUsagePlanResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUsagePlanResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteUsagePlanResponse instance.
+ * Constructs a DeleteUsagePlanResponsePrivate object with public implementation \a q.
  */
 DeleteUsagePlanResponsePrivate::DeleteUsagePlanResponsePrivate(
     DeleteUsagePlanResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteUsagePlanResponsePrivate::DeleteUsagePlanResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteUsagePlanResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteUsagePlan response element from \a xml.
  */
 void DeleteUsagePlanResponsePrivate::parseDeleteUsagePlanResponse(QXmlStreamReader &xml)
 {

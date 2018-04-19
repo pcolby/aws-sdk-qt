@@ -54,7 +54,7 @@ namespace SecretsManager {
  */
 
 /*!
- * Constructs a[n] SecretsManagerRequest object for SecretsManager \a action.
+ * Constructs a SecretsManagerRequest object for SecretsManager \a action.
  */
 SecretsManagerRequest::SecretsManagerRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SecretsManagerRequestPrivate(action, this))
@@ -254,8 +254,8 @@ QNetworkRequest SecretsManagerRequest::unsignedRequest(const QUrl &endpoint) con
  */
 
 /*!
- * Constructs a SecretsManagerRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a SecretsManagerRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 SecretsManagerRequestPrivate::SecretsManagerRequestPrivate(const SecretsManagerRequest::Action action, SecretsManagerRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

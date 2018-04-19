@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::CreateClusterResponse
- *
  * \brief The CreateClusterResponse class provides an interace for ECS CreateCluster responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateClusterResponse::CreateClusterResponse(
         const CreateClusterRequest &request,
@@ -72,6 +67,9 @@ CreateClusterResponse::CreateClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateClusterRequest * CreateClusterResponse::request() const
 {
     Q_D(const CreateClusterResponse);
@@ -79,9 +77,8 @@ const CreateClusterRequest * CreateClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS CreateCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS CreateCluster \a response.
  */
 void CreateClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void CreateClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::CreateClusterResponsePrivate
+ * \brief The CreateClusterResponsePrivate class provides private implementation for CreateClusterResponse.
  * \internal
  *
- * \class CreateClusterResponsePrivate
- *
- * \brief Private implementation for CreateClusterResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateClusterResponse instance.
+ * Constructs a CreateClusterResponsePrivate object with public implementation \a q.
  */
 CreateClusterResponsePrivate::CreateClusterResponsePrivate(
     CreateClusterResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ CreateClusterResponsePrivate::CreateClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS CreateClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS CreateCluster response element from \a xml.
  */
 void CreateClusterResponsePrivate::parseCreateClusterResponse(QXmlStreamReader &xml)
 {

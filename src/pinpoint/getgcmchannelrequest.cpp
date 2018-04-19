@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetGcmChannelRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetGcmChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetGcmChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetGcmChannelRequestPrivate::GetGcmChannelRequestPrivate(
     const PinpointRequest::Action action, GetGcmChannelRequest * const q)

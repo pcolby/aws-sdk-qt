@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteOTAUpdateResponse : public IoTResponse {
 public:
     DeleteOTAUpdateResponse(const DeleteOTAUpdateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteOTAUpdateRequest * request() const;
+    virtual const DeleteOTAUpdateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteOTAUpdateResponse)

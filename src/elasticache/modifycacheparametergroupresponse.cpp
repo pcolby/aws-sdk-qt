@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ModifyCacheParameterGroupResponse
- *
  * \brief The ModifyCacheParameterGroupResponse class provides an interace for ElastiCache ModifyCacheParameterGroup responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new ModifyCacheParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyCacheParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyCacheParameterGroupResponse::ModifyCacheParameterGroupResponse(
         const ModifyCacheParameterGroupRequest &request,
@@ -69,6 +64,9 @@ ModifyCacheParameterGroupResponse::ModifyCacheParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyCacheParameterGroupRequest * ModifyCacheParameterGroupResponse::request() const
 {
     Q_D(const ModifyCacheParameterGroupResponse);
@@ -76,9 +74,8 @@ const ModifyCacheParameterGroupRequest * ModifyCacheParameterGroupResponse::requ
 }
 
 /*!
- * @brief  Parse a ElastiCache ModifyCacheParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache ModifyCacheParameterGroup \a response.
  */
 void ModifyCacheParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ModifyCacheParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::ModifyCacheParameterGroupResponsePrivate
+ * \brief The ModifyCacheParameterGroupResponsePrivate class provides private implementation for ModifyCacheParameterGroupResponse.
  * \internal
  *
- * \class ModifyCacheParameterGroupResponsePrivate
- *
- * \brief Private implementation for ModifyCacheParameterGroupResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyCacheParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyCacheParameterGroupResponse instance.
+ * Constructs a ModifyCacheParameterGroupResponsePrivate object with public implementation \a q.
  */
 ModifyCacheParameterGroupResponsePrivate::ModifyCacheParameterGroupResponsePrivate(
     ModifyCacheParameterGroupResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ ModifyCacheParameterGroupResponsePrivate::ModifyCacheParameterGroupResponsePriva
 }
 
 /*!
- * @brief  Parse an ElastiCache ModifyCacheParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache ModifyCacheParameterGroup response element from \a xml.
  */
 void ModifyCacheParameterGroupResponsePrivate::parseModifyCacheParameterGroupResponse(QXmlStreamReader &xml)
 {

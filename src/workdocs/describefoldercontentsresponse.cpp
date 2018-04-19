@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeFolderContentsResponse
- *
  * \brief The DescribeFolderContentsResponse class provides an interace for WorkDocs DescribeFolderContents responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeFolderContentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeFolderContentsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeFolderContentsResponse::DescribeFolderContentsResponse(
         const DescribeFolderContentsRequest &request,
@@ -84,6 +79,9 @@ DescribeFolderContentsResponse::DescribeFolderContentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeFolderContentsRequest * DescribeFolderContentsResponse::request() const
 {
     Q_D(const DescribeFolderContentsResponse);
@@ -91,9 +89,8 @@ const DescribeFolderContentsRequest * DescribeFolderContentsResponse::request() 
 }
 
 /*!
- * @brief  Parse a WorkDocs DescribeFolderContents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DescribeFolderContents \a response.
  */
 void DescribeFolderContentsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeFolderContentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DescribeFolderContentsResponsePrivate
+ * \brief The DescribeFolderContentsResponsePrivate class provides private implementation for DescribeFolderContentsResponse.
  * \internal
  *
- * \class DescribeFolderContentsResponsePrivate
- *
- * \brief Private implementation for DescribeFolderContentsResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFolderContentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeFolderContentsResponse instance.
+ * Constructs a DescribeFolderContentsResponsePrivate object with public implementation \a q.
  */
 DescribeFolderContentsResponsePrivate::DescribeFolderContentsResponsePrivate(
     DescribeFolderContentsResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeFolderContentsResponsePrivate::DescribeFolderContentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DescribeFolderContentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DescribeFolderContents response element from \a xml.
  */
 void DescribeFolderContentsResponsePrivate::parseDescribeFolderContentsResponse(QXmlStreamReader &xml)
 {

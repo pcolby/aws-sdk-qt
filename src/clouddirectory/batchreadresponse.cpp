@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::BatchReadResponse
- *
  * \brief The BatchReadResponse class provides an interace for CloudDirectory BatchRead responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new BatchReadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchReadResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchReadResponse::BatchReadResponse(
         const BatchReadRequest &request,
@@ -62,6 +57,9 @@ BatchReadResponse::BatchReadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchReadRequest * BatchReadResponse::request() const
 {
     Q_D(const BatchReadResponse);
@@ -69,9 +67,8 @@ const BatchReadRequest * BatchReadResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory BatchRead response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory BatchRead \a response.
  */
 void BatchReadResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void BatchReadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::BatchReadResponsePrivate
+ * \brief The BatchReadResponsePrivate class provides private implementation for BatchReadResponse.
  * \internal
  *
- * \class BatchReadResponsePrivate
- *
- * \brief Private implementation for BatchReadResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchReadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchReadResponse instance.
+ * Constructs a BatchReadResponsePrivate object with public implementation \a q.
  */
 BatchReadResponsePrivate::BatchReadResponsePrivate(
     BatchReadResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ BatchReadResponsePrivate::BatchReadResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory BatchReadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory BatchRead response element from \a xml.
  */
 void BatchReadResponsePrivate::parseBatchReadResponse(QXmlStreamReader &xml)
 {

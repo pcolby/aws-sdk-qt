@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetJobTemplateResponse : public MediaConvertResponse {
 public:
     GetJobTemplateResponse(const GetJobTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetJobTemplateRequest * request() const;
+    virtual const GetJobTemplateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetJobTemplateResponse)

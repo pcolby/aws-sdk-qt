@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::ListInputsResponse
- *
  * \brief The ListInputsResponse class provides an interace for MediaLive ListInputs responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::listInputs
  */
 
 /*!
- * @brief  Constructs a new ListInputsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListInputsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListInputsResponse::ListInputsResponse(
         const ListInputsRequest &request,
@@ -55,6 +50,9 @@ ListInputsResponse::ListInputsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListInputsRequest * ListInputsResponse::request() const
 {
     Q_D(const ListInputsResponse);
@@ -62,9 +60,8 @@ const ListInputsRequest * ListInputsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaLive ListInputs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive ListInputs \a response.
  */
 void ListInputsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListInputsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::ListInputsResponsePrivate
+ * \brief The ListInputsResponsePrivate class provides private implementation for ListInputsResponse.
  * \internal
  *
- * \class ListInputsResponsePrivate
- *
- * \brief Private implementation for ListInputsResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInputsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListInputsResponse instance.
+ * Constructs a ListInputsResponsePrivate object with public implementation \a q.
  */
 ListInputsResponsePrivate::ListInputsResponsePrivate(
     ListInputsResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ ListInputsResponsePrivate::ListInputsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive ListInputsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive ListInputs response element from \a xml.
  */
 void ListInputsResponsePrivate::parseListInputsResponse(QXmlStreamReader &xml)
 {

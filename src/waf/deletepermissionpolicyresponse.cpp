@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeletePermissionPolicyResponse
- *
  * \brief The DeletePermissionPolicyResponse class provides an interace for WAF DeletePermissionPolicy responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeletePermissionPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeletePermissionPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeletePermissionPolicyResponse::DeletePermissionPolicyResponse(
         const DeletePermissionPolicyRequest &request,
@@ -60,6 +55,9 @@ DeletePermissionPolicyResponse::DeletePermissionPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeletePermissionPolicyRequest * DeletePermissionPolicyResponse::request() const
 {
     Q_D(const DeletePermissionPolicyResponse);
@@ -67,9 +65,8 @@ const DeletePermissionPolicyRequest * DeletePermissionPolicyResponse::request() 
 }
 
 /*!
- * @brief  Parse a WAF DeletePermissionPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF DeletePermissionPolicy \a response.
  */
 void DeletePermissionPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeletePermissionPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::DeletePermissionPolicyResponsePrivate
+ * \brief The DeletePermissionPolicyResponsePrivate class provides private implementation for DeletePermissionPolicyResponse.
  * \internal
  *
- * \class DeletePermissionPolicyResponsePrivate
- *
- * \brief Private implementation for DeletePermissionPolicyResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePermissionPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeletePermissionPolicyResponse instance.
+ * Constructs a DeletePermissionPolicyResponsePrivate object with public implementation \a q.
  */
 DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponsePrivate(
     DeletePermissionPolicyResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ DeletePermissionPolicyResponsePrivate::DeletePermissionPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF DeletePermissionPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF DeletePermissionPolicy response element from \a xml.
  */
 void DeletePermissionPolicyResponsePrivate::parseDeletePermissionPolicyResponse(QXmlStreamReader &xml)
 {

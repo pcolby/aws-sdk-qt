@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DeletePermissionPolicyRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeletePermissionPolicyRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a DeletePermissionPolicyRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 DeletePermissionPolicyRequestPrivate::DeletePermissionPolicyRequestPrivate(
     const WAFRegionalRequest::Action action, DeletePermissionPolicyRequest * const q)

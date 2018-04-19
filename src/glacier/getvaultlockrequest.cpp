@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * GetVaultLockRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetVaultLockRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a GetVaultLockRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 GetVaultLockRequestPrivate::GetVaultLockRequestPrivate(
     const GlacierRequest::Action action, GetVaultLockRequest * const q)

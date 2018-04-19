@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * StopMatchmakingRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a StopMatchmakingRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a StopMatchmakingRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 StopMatchmakingRequestPrivate::StopMatchmakingRequestPrivate(
     const GameLiftRequest::Action action, StopMatchmakingRequest * const q)

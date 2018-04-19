@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateAssumeRolePolicyResponse : public IAMResponse {
 public:
     UpdateAssumeRolePolicyResponse(const UpdateAssumeRolePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateAssumeRolePolicyRequest * request() const;
+    virtual const UpdateAssumeRolePolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateAssumeRolePolicyResponse)

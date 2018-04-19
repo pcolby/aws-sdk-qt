@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSubscriptionFiltersResponse : public CloudWatchLogsRe
 public:
     DescribeSubscriptionFiltersResponse(const DescribeSubscriptionFiltersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSubscriptionFiltersRequest * request() const;
+    virtual const DescribeSubscriptionFiltersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSubscriptionFiltersResponse)

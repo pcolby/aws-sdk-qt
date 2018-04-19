@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::UpdateInputSecurityGroupResponse
- *
  * \brief The UpdateInputSecurityGroupResponse class provides an interace for MediaLive UpdateInputSecurityGroup responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::updateInputSecurityGroup
  */
 
 /*!
- * @brief  Constructs a new UpdateInputSecurityGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateInputSecurityGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateInputSecurityGroupResponse::UpdateInputSecurityGroupResponse(
         const UpdateInputSecurityGroupRequest &request,
@@ -55,6 +50,9 @@ UpdateInputSecurityGroupResponse::UpdateInputSecurityGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateInputSecurityGroupRequest * UpdateInputSecurityGroupResponse::request() const
 {
     Q_D(const UpdateInputSecurityGroupResponse);
@@ -62,9 +60,8 @@ const UpdateInputSecurityGroupRequest * UpdateInputSecurityGroupResponse::reques
 }
 
 /*!
- * @brief  Parse a MediaLive UpdateInputSecurityGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive UpdateInputSecurityGroup \a response.
  */
 void UpdateInputSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateInputSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::UpdateInputSecurityGroupResponsePrivate
+ * \brief The UpdateInputSecurityGroupResponsePrivate class provides private implementation for UpdateInputSecurityGroupResponse.
  * \internal
  *
- * \class UpdateInputSecurityGroupResponsePrivate
- *
- * \brief Private implementation for UpdateInputSecurityGroupResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateInputSecurityGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateInputSecurityGroupResponse instance.
+ * Constructs a UpdateInputSecurityGroupResponsePrivate object with public implementation \a q.
  */
 UpdateInputSecurityGroupResponsePrivate::UpdateInputSecurityGroupResponsePrivate(
     UpdateInputSecurityGroupResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateInputSecurityGroupResponsePrivate::UpdateInputSecurityGroupResponsePrivate
 }
 
 /*!
- * @brief  Parse an MediaLive UpdateInputSecurityGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive UpdateInputSecurityGroup response element from \a xml.
  */
 void UpdateInputSecurityGroupResponsePrivate::parseUpdateInputSecurityGroupResponse(QXmlStreamReader &xml)
 {

@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * EnableMFADeviceRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a EnableMFADeviceRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a EnableMFADeviceRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 EnableMFADeviceRequestPrivate::EnableMFADeviceRequestPrivate(
     const IAMRequest::Action action, EnableMFADeviceRequest * const q)

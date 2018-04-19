@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateApnsSandboxChannelRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateApnsSandboxChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a UpdateApnsSandboxChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 UpdateApnsSandboxChannelRequestPrivate::UpdateApnsSandboxChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateApnsSandboxChannelRequest * const q)

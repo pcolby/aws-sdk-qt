@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::UploadLayerPartResponse
- *
  * \brief The UploadLayerPartResponse class provides an interace for ECR UploadLayerPart responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new UploadLayerPartResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UploadLayerPartResponse object for \a reply to \a request, with parent \a parent.
  */
 UploadLayerPartResponse::UploadLayerPartResponse(
         const UploadLayerPartRequest &request,
@@ -59,6 +54,9 @@ UploadLayerPartResponse::UploadLayerPartResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UploadLayerPartRequest * UploadLayerPartResponse::request() const
 {
     Q_D(const UploadLayerPartResponse);
@@ -66,9 +64,8 @@ const UploadLayerPartRequest * UploadLayerPartResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR UploadLayerPart response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR UploadLayerPart \a response.
  */
 void UploadLayerPartResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void UploadLayerPartResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::UploadLayerPartResponsePrivate
+ * \brief The UploadLayerPartResponsePrivate class provides private implementation for UploadLayerPartResponse.
  * \internal
  *
- * \class UploadLayerPartResponsePrivate
- *
- * \brief Private implementation for UploadLayerPartResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadLayerPartResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UploadLayerPartResponse instance.
+ * Constructs a UploadLayerPartResponsePrivate object with public implementation \a q.
  */
 UploadLayerPartResponsePrivate::UploadLayerPartResponsePrivate(
     UploadLayerPartResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ UploadLayerPartResponsePrivate::UploadLayerPartResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR UploadLayerPartResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR UploadLayerPart response element from \a xml.
  */
 void UploadLayerPartResponsePrivate::parseUploadLayerPartResponse(QXmlStreamReader &xml)
 {

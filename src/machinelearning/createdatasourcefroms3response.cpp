@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::CreateDataSourceFromS3Response
- *
  * \brief The CreateDataSourceFromS3Response class provides an interace for MachineLearning CreateDataSourceFromS3 responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::createDataSourceFromS3
  */
 
 /*!
- * @brief  Constructs a new CreateDataSourceFromS3Response object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDataSourceFromS3Response object for \a reply to \a request, with parent \a parent.
  */
 CreateDataSourceFromS3Response::CreateDataSourceFromS3Response(
         const CreateDataSourceFromS3Request &request,
@@ -55,6 +50,9 @@ CreateDataSourceFromS3Response::CreateDataSourceFromS3Response(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDataSourceFromS3Request * CreateDataSourceFromS3Response::request() const
 {
     Q_D(const CreateDataSourceFromS3Response);
@@ -62,9 +60,8 @@ const CreateDataSourceFromS3Request * CreateDataSourceFromS3Response::request() 
 }
 
 /*!
- * @brief  Parse a MachineLearning CreateDataSourceFromS3 response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning CreateDataSourceFromS3 \a response.
  */
 void CreateDataSourceFromS3Response::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateDataSourceFromS3Response::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::CreateDataSourceFromS3ResponsePrivate
+ * \brief The CreateDataSourceFromS3ResponsePrivate class provides private implementation for CreateDataSourceFromS3Response.
  * \internal
  *
- * \class CreateDataSourceFromS3ResponsePrivate
- *
- * \brief Private implementation for CreateDataSourceFromS3Response.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDataSourceFromS3ResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDataSourceFromS3Response instance.
+ * Constructs a CreateDataSourceFromS3ResponsePrivate object with public implementation \a q.
  */
 CreateDataSourceFromS3ResponsePrivate::CreateDataSourceFromS3ResponsePrivate(
     CreateDataSourceFromS3Response * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateDataSourceFromS3ResponsePrivate::CreateDataSourceFromS3ResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning CreateDataSourceFromS3Response element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning CreateDataSourceFromS3 response element from \a xml.
  */
 void CreateDataSourceFromS3ResponsePrivate::parseCreateDataSourceFromS3Response(QXmlStreamReader &xml)
 {

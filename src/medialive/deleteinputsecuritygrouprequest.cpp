@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteInputSecurityGroupRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteInputSecurityGroupRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a DeleteInputSecurityGroupRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 DeleteInputSecurityGroupRequestPrivate::DeleteInputSecurityGroupRequestPrivate(
     const MediaLiveRequest::Action action, DeleteInputSecurityGroupRequest * const q)

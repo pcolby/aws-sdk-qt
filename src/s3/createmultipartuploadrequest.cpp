@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateMultipartUploadRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateMultipartUploadRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a CreateMultipartUploadRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 CreateMultipartUploadRequestPrivate::CreateMultipartUploadRequestPrivate(
     const S3Request::Action action, CreateMultipartUploadRequest * const q)

@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * BatchGetDeploymentInstancesRequest::response(
  */
 
 /*!
- *
- * Constructs a BatchGetDeploymentInstancesRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a BatchGetDeploymentInstancesRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 BatchGetDeploymentInstancesRequestPrivate::BatchGetDeploymentInstancesRequestPrivate(
     const CodeDeployRequest::Action action, BatchGetDeploymentInstancesRequest * const q)

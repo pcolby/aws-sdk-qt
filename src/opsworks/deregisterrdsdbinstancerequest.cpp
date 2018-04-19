@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterRdsDbInstanceRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeregisterRdsDbInstanceRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterRdsDbInstanceRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DeregisterRdsDbInstanceRequestPrivate::DeregisterRdsDbInstanceRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterRdsDbInstanceRequest * const q)

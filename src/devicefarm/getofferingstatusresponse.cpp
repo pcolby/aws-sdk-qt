@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetOfferingStatusResponse
- *
  * \brief The GetOfferingStatusResponse class provides an interace for DeviceFarm GetOfferingStatus responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetOfferingStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetOfferingStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 GetOfferingStatusResponse::GetOfferingStatusResponse(
         const GetOfferingStatusRequest &request,
@@ -57,6 +52,9 @@ GetOfferingStatusResponse::GetOfferingStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetOfferingStatusRequest * GetOfferingStatusResponse::request() const
 {
     Q_D(const GetOfferingStatusResponse);
@@ -64,9 +62,8 @@ const GetOfferingStatusRequest * GetOfferingStatusResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetOfferingStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetOfferingStatus \a response.
  */
 void GetOfferingStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetOfferingStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetOfferingStatusResponsePrivate
+ * \brief The GetOfferingStatusResponsePrivate class provides private implementation for GetOfferingStatusResponse.
  * \internal
  *
- * \class GetOfferingStatusResponsePrivate
- *
- * \brief Private implementation for GetOfferingStatusResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOfferingStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetOfferingStatusResponse instance.
+ * Constructs a GetOfferingStatusResponsePrivate object with public implementation \a q.
  */
 GetOfferingStatusResponsePrivate::GetOfferingStatusResponsePrivate(
     GetOfferingStatusResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetOfferingStatusResponsePrivate::GetOfferingStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetOfferingStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetOfferingStatus response element from \a xml.
  */
 void GetOfferingStatusResponsePrivate::parseGetOfferingStatusResponse(QXmlStreamReader &xml)
 {

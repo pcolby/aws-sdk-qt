@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * InitiateMultipartUploadRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a InitiateMultipartUploadRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a InitiateMultipartUploadRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 InitiateMultipartUploadRequestPrivate::InitiateMultipartUploadRequestPrivate(
     const GlacierRequest::Action action, InitiateMultipartUploadRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeregisterRdsDbInstanceResponse : public OpsWorksResponse {
 public:
     DeregisterRdsDbInstanceResponse(const DeregisterRdsDbInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeregisterRdsDbInstanceRequest * request() const;
+    virtual const DeregisterRdsDbInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeregisterRdsDbInstanceResponse)

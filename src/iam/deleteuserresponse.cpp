@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteUserResponse
- *
  * \brief The DeleteUserResponse class provides an interace for IAM DeleteUser responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteUserResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteUserResponse::DeleteUserResponse(
         const DeleteUserRequest &request,
@@ -120,6 +115,9 @@ DeleteUserResponse::DeleteUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteUserRequest * DeleteUserResponse::request() const
 {
     Q_D(const DeleteUserResponse);
@@ -127,9 +125,8 @@ const DeleteUserRequest * DeleteUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM DeleteUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteUser \a response.
  */
 void DeleteUserResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteUserResponsePrivate
+ * \brief The DeleteUserResponsePrivate class provides private implementation for DeleteUserResponse.
  * \internal
  *
- * \class DeleteUserResponsePrivate
- *
- * \brief Private implementation for DeleteUserResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteUserResponse instance.
+ * Constructs a DeleteUserResponsePrivate object with public implementation \a q.
  */
 DeleteUserResponsePrivate::DeleteUserResponsePrivate(
     DeleteUserResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteUserResponsePrivate::DeleteUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeleteUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteUser response element from \a xml.
  */
 void DeleteUserResponsePrivate::parseDeleteUserResponse(QXmlStreamReader &xml)
 {

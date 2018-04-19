@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * CheckDomainAvailabilityRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CheckDomainAvailabilityRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a CheckDomainAvailabilityRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 CheckDomainAvailabilityRequestPrivate::CheckDomainAvailabilityRequestPrivate(
     const Route53DomainsRequest::Action action, CheckDomainAvailabilityRequest * const q)

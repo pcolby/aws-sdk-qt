@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * AcceptMatchRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a AcceptMatchRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a AcceptMatchRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 AcceptMatchRequestPrivate::AcceptMatchRequestPrivate(
     const GameLiftRequest::Action action, AcceptMatchRequest * const q)

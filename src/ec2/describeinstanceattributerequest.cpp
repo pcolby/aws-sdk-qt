@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceAttributeRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeInstanceAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInstanceAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeInstanceAttributeRequestPrivate::DescribeInstanceAttributeRequestPrivate(
     const EC2Request::Action action, DescribeInstanceAttributeRequest * const q)

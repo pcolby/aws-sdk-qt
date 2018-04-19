@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DescribeReceiptRuleResponse
- *
  * \brief The DescribeReceiptRuleResponse class provides an interace for SES DescribeReceiptRule responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DescribeReceiptRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeReceiptRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeReceiptRuleResponse::DescribeReceiptRuleResponse(
         const DescribeReceiptRuleRequest &request,
@@ -66,6 +61,9 @@ DescribeReceiptRuleResponse::DescribeReceiptRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeReceiptRuleRequest * DescribeReceiptRuleResponse::request() const
 {
     Q_D(const DescribeReceiptRuleResponse);
@@ -73,9 +71,8 @@ const DescribeReceiptRuleRequest * DescribeReceiptRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES DescribeReceiptRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES DescribeReceiptRule \a response.
  */
 void DescribeReceiptRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeReceiptRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::DescribeReceiptRuleResponsePrivate
+ * \brief The DescribeReceiptRuleResponsePrivate class provides private implementation for DescribeReceiptRuleResponse.
  * \internal
  *
- * \class DescribeReceiptRuleResponsePrivate
- *
- * \brief Private implementation for DescribeReceiptRuleResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReceiptRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeReceiptRuleResponse instance.
+ * Constructs a DescribeReceiptRuleResponsePrivate object with public implementation \a q.
  */
 DescribeReceiptRuleResponsePrivate::DescribeReceiptRuleResponsePrivate(
     DescribeReceiptRuleResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeReceiptRuleResponsePrivate::DescribeReceiptRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES DescribeReceiptRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES DescribeReceiptRule response element from \a xml.
  */
 void DescribeReceiptRuleResponsePrivate::parseDescribeReceiptRuleResponse(QXmlStreamReader &xml)
 {

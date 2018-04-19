@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListWorkflowTypesResponse : public SWFResponse {
 public:
     ListWorkflowTypesResponse(const ListWorkflowTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListWorkflowTypesRequest * request() const;
+    virtual const ListWorkflowTypesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListWorkflowTypesResponse)

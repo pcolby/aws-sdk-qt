@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteReceiptRuleResponse : public SESResponse {
 public:
     DeleteReceiptRuleResponse(const DeleteReceiptRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteReceiptRuleRequest * request() const;
+    virtual const DeleteReceiptRuleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteReceiptRuleResponse)

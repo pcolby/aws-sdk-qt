@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateReceiptFilterResponse
- *
  * \brief The CreateReceiptFilterResponse class provides an interace for SES CreateReceiptFilter responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateReceiptFilterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateReceiptFilterResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateReceiptFilterResponse::CreateReceiptFilterResponse(
         const CreateReceiptFilterRequest &request,
@@ -66,6 +61,9 @@ CreateReceiptFilterResponse::CreateReceiptFilterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateReceiptFilterRequest * CreateReceiptFilterResponse::request() const
 {
     Q_D(const CreateReceiptFilterResponse);
@@ -73,9 +71,8 @@ const CreateReceiptFilterRequest * CreateReceiptFilterResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES CreateReceiptFilter response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES CreateReceiptFilter \a response.
  */
 void CreateReceiptFilterResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateReceiptFilterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::CreateReceiptFilterResponsePrivate
+ * \brief The CreateReceiptFilterResponsePrivate class provides private implementation for CreateReceiptFilterResponse.
  * \internal
  *
- * \class CreateReceiptFilterResponsePrivate
- *
- * \brief Private implementation for CreateReceiptFilterResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReceiptFilterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateReceiptFilterResponse instance.
+ * Constructs a CreateReceiptFilterResponsePrivate object with public implementation \a q.
  */
 CreateReceiptFilterResponsePrivate::CreateReceiptFilterResponsePrivate(
     CreateReceiptFilterResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateReceiptFilterResponsePrivate::CreateReceiptFilterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES CreateReceiptFilterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES CreateReceiptFilter response element from \a xml.
  */
 void CreateReceiptFilterResponsePrivate::parseCreateReceiptFilterResponse(QXmlStreamReader &xml)
 {

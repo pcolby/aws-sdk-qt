@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminLinkProviderForUserResponse
- *
  * \brief The AdminLinkProviderForUserResponse class provides an interace for CognitoIdentityProvider AdminLinkProviderForUser responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminLinkProviderForUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminLinkProviderForUserResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminLinkProviderForUserResponse::AdminLinkProviderForUserResponse(
         const AdminLinkProviderForUserRequest &request,
@@ -65,6 +60,9 @@ AdminLinkProviderForUserResponse::AdminLinkProviderForUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminLinkProviderForUserRequest * AdminLinkProviderForUserResponse::request() const
 {
     Q_D(const AdminLinkProviderForUserResponse);
@@ -72,9 +70,8 @@ const AdminLinkProviderForUserRequest * AdminLinkProviderForUserResponse::reques
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminLinkProviderForUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminLinkProviderForUser \a response.
  */
 void AdminLinkProviderForUserResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminLinkProviderForUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminLinkProviderForUserResponsePrivate
+ * \brief The AdminLinkProviderForUserResponsePrivate class provides private implementation for AdminLinkProviderForUserResponse.
  * \internal
  *
- * \class AdminLinkProviderForUserResponsePrivate
- *
- * \brief Private implementation for AdminLinkProviderForUserResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminLinkProviderForUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminLinkProviderForUserResponse instance.
+ * Constructs a AdminLinkProviderForUserResponsePrivate object with public implementation \a q.
  */
 AdminLinkProviderForUserResponsePrivate::AdminLinkProviderForUserResponsePrivate(
     AdminLinkProviderForUserResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminLinkProviderForUserResponsePrivate::AdminLinkProviderForUserResponsePrivate
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminLinkProviderForUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminLinkProviderForUser response element from \a xml.
  */
 void AdminLinkProviderForUserResponsePrivate::parseAdminLinkProviderForUserResponse(QXmlStreamReader &xml)
 {

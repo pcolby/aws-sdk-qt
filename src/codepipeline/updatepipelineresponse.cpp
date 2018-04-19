@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::UpdatePipelineResponse
- *
  * \brief The UpdatePipelineResponse class provides an interace for CodePipeline UpdatePipeline responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new UpdatePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePipelineResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePipelineResponse::UpdatePipelineResponse(
         const UpdatePipelineRequest &request,
@@ -218,6 +213,9 @@ UpdatePipelineResponse::UpdatePipelineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePipelineRequest * UpdatePipelineResponse::request() const
 {
     Q_D(const UpdatePipelineResponse);
@@ -225,9 +223,8 @@ const UpdatePipelineRequest * UpdatePipelineResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodePipeline UpdatePipeline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline UpdatePipeline \a response.
  */
 void UpdatePipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void UpdatePipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::UpdatePipelineResponsePrivate
+ * \brief The UpdatePipelineResponsePrivate class provides private implementation for UpdatePipelineResponse.
  * \internal
  *
- * \class UpdatePipelineResponsePrivate
- *
- * \brief Private implementation for UpdatePipelineResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePipelineResponse instance.
+ * Constructs a UpdatePipelineResponsePrivate object with public implementation \a q.
  */
 UpdatePipelineResponsePrivate::UpdatePipelineResponsePrivate(
     UpdatePipelineResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ UpdatePipelineResponsePrivate::UpdatePipelineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline UpdatePipelineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline UpdatePipeline response element from \a xml.
  */
 void UpdatePipelineResponsePrivate::parseUpdatePipelineResponse(QXmlStreamReader &xml)
 {

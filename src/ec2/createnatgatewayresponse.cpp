@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateNatGatewayResponse
- *
  * \brief The CreateNatGatewayResponse class provides an interace for EC2 CreateNatGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateNatGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateNatGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateNatGatewayResponse::CreateNatGatewayResponse(
         const CreateNatGatewayRequest &request,
@@ -59,6 +54,9 @@ CreateNatGatewayResponse::CreateNatGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateNatGatewayRequest * CreateNatGatewayResponse::request() const
 {
     Q_D(const CreateNatGatewayResponse);
@@ -66,9 +64,8 @@ const CreateNatGatewayRequest * CreateNatGatewayResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateNatGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateNatGateway \a response.
  */
 void CreateNatGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateNatGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateNatGatewayResponsePrivate
+ * \brief The CreateNatGatewayResponsePrivate class provides private implementation for CreateNatGatewayResponse.
  * \internal
  *
- * \class CreateNatGatewayResponsePrivate
- *
- * \brief Private implementation for CreateNatGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNatGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateNatGatewayResponse instance.
+ * Constructs a CreateNatGatewayResponsePrivate object with public implementation \a q.
  */
 CreateNatGatewayResponsePrivate::CreateNatGatewayResponsePrivate(
     CreateNatGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateNatGatewayResponsePrivate::CreateNatGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateNatGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateNatGateway response element from \a xml.
  */
 void CreateNatGatewayResponsePrivate::parseCreateNatGatewayResponse(QXmlStreamReader &xml)
 {

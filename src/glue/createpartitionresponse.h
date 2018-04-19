@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreatePartitionResponse : public GlueResponse {
 public:
     CreatePartitionResponse(const CreatePartitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreatePartitionRequest * request() const;
+    virtual const CreatePartitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreatePartitionResponse)

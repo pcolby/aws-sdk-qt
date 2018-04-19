@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DetachDiskRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DetachDiskRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a DetachDiskRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 DetachDiskRequestPrivate::DetachDiskRequestPrivate(
     const LightsailRequest::Action action, DetachDiskRequest * const q)

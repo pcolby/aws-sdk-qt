@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetAggregateConfigRuleComplianceSummaryResponse
- *
  * \brief The GetAggregateConfigRuleComplianceSummaryResponse class provides an interace for ConfigService GetAggregateConfigRuleComplianceSummary responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetAggregateConfigRuleComplianceSummaryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAggregateConfigRuleComplianceSummaryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAggregateConfigRuleComplianceSummaryResponse::GetAggregateConfigRuleComplianceSummaryResponse(
         const GetAggregateConfigRuleComplianceSummaryRequest &request,
@@ -78,6 +73,9 @@ GetAggregateConfigRuleComplianceSummaryResponse::GetAggregateConfigRuleComplianc
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAggregateConfigRuleComplianceSummaryRequest * GetAggregateConfigRuleComplianceSummaryResponse::request() const
 {
     Q_D(const GetAggregateConfigRuleComplianceSummaryResponse);
@@ -85,9 +83,8 @@ const GetAggregateConfigRuleComplianceSummaryRequest * GetAggregateConfigRuleCom
 }
 
 /*!
- * @brief  Parse a ConfigService GetAggregateConfigRuleComplianceSummary response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService GetAggregateConfigRuleComplianceSummary \a response.
  */
 void GetAggregateConfigRuleComplianceSummaryResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void GetAggregateConfigRuleComplianceSummaryResponse::parseSuccess(QIODevice &re
 }
 
 /*!
+ * \class QtAws::ConfigService::GetAggregateConfigRuleComplianceSummaryResponsePrivate
+ * \brief The GetAggregateConfigRuleComplianceSummaryResponsePrivate class provides private implementation for GetAggregateConfigRuleComplianceSummaryResponse.
  * \internal
  *
- * \class GetAggregateConfigRuleComplianceSummaryResponsePrivate
- *
- * \brief Private implementation for GetAggregateConfigRuleComplianceSummaryResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAggregateConfigRuleComplianceSummaryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAggregateConfigRuleComplianceSummaryResponse instance.
+ * Constructs a GetAggregateConfigRuleComplianceSummaryResponsePrivate object with public implementation \a q.
  */
 GetAggregateConfigRuleComplianceSummaryResponsePrivate::GetAggregateConfigRuleComplianceSummaryResponsePrivate(
     GetAggregateConfigRuleComplianceSummaryResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ GetAggregateConfigRuleComplianceSummaryResponsePrivate::GetAggregateConfigRuleCo
 }
 
 /*!
- * @brief  Parse an ConfigService GetAggregateConfigRuleComplianceSummaryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService GetAggregateConfigRuleComplianceSummary response element from \a xml.
  */
 void GetAggregateConfigRuleComplianceSummaryResponsePrivate::parseGetAggregateConfigRuleComplianceSummaryResponse(QXmlStreamReader &xml)
 {

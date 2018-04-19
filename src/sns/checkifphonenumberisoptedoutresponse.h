@@ -34,10 +34,10 @@ class QTAWS_EXPORT CheckIfPhoneNumberIsOptedOutResponse : public SNSResponse {
 public:
     CheckIfPhoneNumberIsOptedOutResponse(const CheckIfPhoneNumberIsOptedOutRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CheckIfPhoneNumberIsOptedOutRequest * request() const;
+    virtual const CheckIfPhoneNumberIsOptedOutRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CheckIfPhoneNumberIsOptedOutResponse)

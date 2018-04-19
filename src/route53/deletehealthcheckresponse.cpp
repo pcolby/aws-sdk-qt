@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DeleteHealthCheckResponse
- *
  * \brief The DeleteHealthCheckResponse class provides an interace for Route53 DeleteHealthCheck responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::deleteHealthCheck
  */
 
 /*!
- * @brief  Constructs a new DeleteHealthCheckResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteHealthCheckResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteHealthCheckResponse::DeleteHealthCheckResponse(
         const DeleteHealthCheckRequest &request,
@@ -55,6 +50,9 @@ DeleteHealthCheckResponse::DeleteHealthCheckResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteHealthCheckRequest * DeleteHealthCheckResponse::request() const
 {
     Q_D(const DeleteHealthCheckResponse);
@@ -62,9 +60,8 @@ const DeleteHealthCheckRequest * DeleteHealthCheckResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 DeleteHealthCheck response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 DeleteHealthCheck \a response.
  */
 void DeleteHealthCheckResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteHealthCheckResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::DeleteHealthCheckResponsePrivate
+ * \brief The DeleteHealthCheckResponsePrivate class provides private implementation for DeleteHealthCheckResponse.
  * \internal
  *
- * \class DeleteHealthCheckResponsePrivate
- *
- * \brief Private implementation for DeleteHealthCheckResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHealthCheckResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteHealthCheckResponse instance.
+ * Constructs a DeleteHealthCheckResponsePrivate object with public implementation \a q.
  */
 DeleteHealthCheckResponsePrivate::DeleteHealthCheckResponsePrivate(
     DeleteHealthCheckResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteHealthCheckResponsePrivate::DeleteHealthCheckResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 DeleteHealthCheckResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 DeleteHealthCheck response element from \a xml.
  */
 void DeleteHealthCheckResponsePrivate::parseDeleteHealthCheckResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetRegexMatchSetResponse
- *
  * \brief The GetRegexMatchSetResponse class provides an interace for WAF GetRegexMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetRegexMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRegexMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRegexMatchSetResponse::GetRegexMatchSetResponse(
         const GetRegexMatchSetRequest &request,
@@ -60,6 +55,9 @@ GetRegexMatchSetResponse::GetRegexMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRegexMatchSetRequest * GetRegexMatchSetResponse::request() const
 {
     Q_D(const GetRegexMatchSetResponse);
@@ -67,9 +65,8 @@ const GetRegexMatchSetRequest * GetRegexMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF GetRegexMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF GetRegexMatchSet \a response.
  */
 void GetRegexMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetRegexMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::GetRegexMatchSetResponsePrivate
+ * \brief The GetRegexMatchSetResponsePrivate class provides private implementation for GetRegexMatchSetResponse.
  * \internal
  *
- * \class GetRegexMatchSetResponsePrivate
- *
- * \brief Private implementation for GetRegexMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRegexMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRegexMatchSetResponse instance.
+ * Constructs a GetRegexMatchSetResponsePrivate object with public implementation \a q.
  */
 GetRegexMatchSetResponsePrivate::GetRegexMatchSetResponsePrivate(
     GetRegexMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ GetRegexMatchSetResponsePrivate::GetRegexMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF GetRegexMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF GetRegexMatchSet response element from \a xml.
  */
 void GetRegexMatchSetResponsePrivate::parseGetRegexMatchSetResponse(QXmlStreamReader &xml)
 {

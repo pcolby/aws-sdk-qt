@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAssessmentTemplateRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteAssessmentTemplateRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAssessmentTemplateRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 DeleteAssessmentTemplateRequestPrivate::DeleteAssessmentTemplateRequestPrivate(
     const InspectorRequest::Action action, DeleteAssessmentTemplateRequest * const q)

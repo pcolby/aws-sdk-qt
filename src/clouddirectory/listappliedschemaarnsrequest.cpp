@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListAppliedSchemaArnsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListAppliedSchemaArnsRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a ListAppliedSchemaArnsRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 ListAppliedSchemaArnsRequestPrivate::ListAppliedSchemaArnsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListAppliedSchemaArnsRequest * const q)

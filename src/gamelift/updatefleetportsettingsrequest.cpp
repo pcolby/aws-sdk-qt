@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetPortSettingsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateFleetPortSettingsRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a UpdateFleetPortSettingsRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 UpdateFleetPortSettingsRequestPrivate::UpdateFleetPortSettingsRequestPrivate(
     const GameLiftRequest::Action action, UpdateFleetPortSettingsRequest * const q)

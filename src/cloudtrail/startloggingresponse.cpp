@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::StartLoggingResponse
- *
  * \brief The StartLoggingResponse class provides an interace for CloudTrail StartLogging responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new StartLoggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartLoggingResponse object for \a reply to \a request, with parent \a parent.
  */
 StartLoggingResponse::StartLoggingResponse(
         const StartLoggingRequest &request,
@@ -78,6 +73,9 @@ StartLoggingResponse::StartLoggingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartLoggingRequest * StartLoggingResponse::request() const
 {
     Q_D(const StartLoggingResponse);
@@ -85,9 +83,8 @@ const StartLoggingRequest * StartLoggingResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail StartLogging response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail StartLogging \a response.
  */
 void StartLoggingResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void StartLoggingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::StartLoggingResponsePrivate
+ * \brief The StartLoggingResponsePrivate class provides private implementation for StartLoggingResponse.
  * \internal
  *
- * \class StartLoggingResponsePrivate
- *
- * \brief Private implementation for StartLoggingResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartLoggingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartLoggingResponse instance.
+ * Constructs a StartLoggingResponsePrivate object with public implementation \a q.
  */
 StartLoggingResponsePrivate::StartLoggingResponsePrivate(
     StartLoggingResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ StartLoggingResponsePrivate::StartLoggingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail StartLoggingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail StartLogging response element from \a xml.
  */
 void StartLoggingResponsePrivate::parseStartLoggingResponse(QXmlStreamReader &xml)
 {

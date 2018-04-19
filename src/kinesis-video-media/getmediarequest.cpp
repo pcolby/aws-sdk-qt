@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetMediaRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a GetMediaRequestPrivate object for KinesisVideoMedia \a action with,
- * public implementation \a q.
+ * Constructs a GetMediaRequestPrivate object for KinesisVideoMedia \a action,
+ * with public implementation \a q.
  */
 GetMediaRequestPrivate::GetMediaRequestPrivate(
     const KinesisVideoMediaRequest::Action action, GetMediaRequest * const q)

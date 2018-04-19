@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::PutScalingPolicyResponse
- *
  * \brief The PutScalingPolicyResponse class provides an interace for GameLift PutScalingPolicy responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new PutScalingPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutScalingPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutScalingPolicyResponse::PutScalingPolicyResponse(
         const PutScalingPolicyRequest &request,
@@ -491,6 +486,9 @@ PutScalingPolicyResponse::PutScalingPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutScalingPolicyRequest * PutScalingPolicyResponse::request() const
 {
     Q_D(const PutScalingPolicyResponse);
@@ -498,9 +496,8 @@ const PutScalingPolicyRequest * PutScalingPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift PutScalingPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift PutScalingPolicy \a response.
  */
 void PutScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void PutScalingPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::PutScalingPolicyResponsePrivate
+ * \brief The PutScalingPolicyResponsePrivate class provides private implementation for PutScalingPolicyResponse.
  * \internal
  *
- * \class PutScalingPolicyResponsePrivate
- *
- * \brief Private implementation for PutScalingPolicyResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutScalingPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutScalingPolicyResponse instance.
+ * Constructs a PutScalingPolicyResponsePrivate object with public implementation \a q.
  */
 PutScalingPolicyResponsePrivate::PutScalingPolicyResponsePrivate(
     PutScalingPolicyResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ PutScalingPolicyResponsePrivate::PutScalingPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift PutScalingPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift PutScalingPolicy response element from \a xml.
  */
 void PutScalingPolicyResponsePrivate::parsePutScalingPolicyResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetApplicationResponse : public CodeDeployResponse {
 public:
     GetApplicationResponse(const GetApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetApplicationRequest * request() const;
+    virtual const GetApplicationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetApplicationResponse)

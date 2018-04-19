@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::ListTagsResponse
- *
  * \brief The ListTagsResponse class provides an interace for AlexaForBusiness ListTags responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new ListTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsResponse::ListTagsResponse(
         const ListTagsRequest &request,
@@ -60,6 +55,9 @@ ListTagsResponse::ListTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsRequest * ListTagsResponse::request() const
 {
     Q_D(const ListTagsResponse);
@@ -67,9 +65,8 @@ const ListTagsRequest * ListTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness ListTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness ListTags \a response.
  */
 void ListTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::ListTagsResponsePrivate
+ * \brief The ListTagsResponsePrivate class provides private implementation for ListTagsResponse.
  * \internal
  *
- * \class ListTagsResponsePrivate
- *
- * \brief Private implementation for ListTagsResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsResponse instance.
+ * Constructs a ListTagsResponsePrivate object with public implementation \a q.
  */
 ListTagsResponsePrivate::ListTagsResponsePrivate(
     ListTagsResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ ListTagsResponsePrivate::ListTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness ListTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness ListTags response element from \a xml.
  */
 void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
 {

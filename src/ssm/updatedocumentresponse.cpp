@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdateDocumentResponse
- *
  * \brief The UpdateDocumentResponse class provides an interace for SSM UpdateDocument responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdateDocumentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDocumentResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDocumentResponse::UpdateDocumentResponse(
         const UpdateDocumentRequest &request,
@@ -79,6 +74,9 @@ UpdateDocumentResponse::UpdateDocumentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDocumentRequest * UpdateDocumentResponse::request() const
 {
     Q_D(const UpdateDocumentResponse);
@@ -86,9 +84,8 @@ const UpdateDocumentRequest * UpdateDocumentResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM UpdateDocument response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM UpdateDocument \a response.
  */
 void UpdateDocumentResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void UpdateDocumentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::UpdateDocumentResponsePrivate
+ * \brief The UpdateDocumentResponsePrivate class provides private implementation for UpdateDocumentResponse.
  * \internal
  *
- * \class UpdateDocumentResponsePrivate
- *
- * \brief Private implementation for UpdateDocumentResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDocumentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDocumentResponse instance.
+ * Constructs a UpdateDocumentResponsePrivate object with public implementation \a q.
  */
 UpdateDocumentResponsePrivate::UpdateDocumentResponsePrivate(
     UpdateDocumentResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ UpdateDocumentResponsePrivate::UpdateDocumentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM UpdateDocumentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM UpdateDocument response element from \a xml.
  */
 void UpdateDocumentResponsePrivate::parseUpdateDocumentResponse(QXmlStreamReader &xml)
 {

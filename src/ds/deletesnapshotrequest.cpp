@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteSnapshotRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSnapshotRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
     const DirectoryServiceRequest::Action action, DeleteSnapshotRequest * const q)

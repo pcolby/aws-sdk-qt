@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * CancelHandshakeRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a CancelHandshakeRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a CancelHandshakeRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 CancelHandshakeRequestPrivate::CancelHandshakeRequestPrivate(
     const OrganizationsRequest::Action action, CancelHandshakeRequest * const q)

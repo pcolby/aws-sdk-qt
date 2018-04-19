@@ -34,10 +34,10 @@ class QTAWS_EXPORT ActivatePipelineResponse : public DataPipelineResponse {
 public:
     ActivatePipelineResponse(const ActivatePipelineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ActivatePipelineRequest * request() const;
+    virtual const ActivatePipelineRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ActivatePipelineResponse)

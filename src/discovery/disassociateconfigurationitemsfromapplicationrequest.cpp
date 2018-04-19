@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateConfigurationItemsFromApplication
  */
 
 /*!
- *
- * Constructs a DisassociateConfigurationItemsFromApplicationRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateConfigurationItemsFromApplicationRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigurationItemsFromApplicationRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DisassociateConfigurationItemsFromApplicationRequest * const q)

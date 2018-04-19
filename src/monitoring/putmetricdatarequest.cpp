@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * PutMetricDataRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a PutMetricDataRequestPrivate object for CloudWatch \a action with,
- * public implementation \a q.
+ * Constructs a PutMetricDataRequestPrivate object for CloudWatch \a action,
+ * with public implementation \a q.
  */
 PutMetricDataRequestPrivate::PutMetricDataRequestPrivate(
     const CloudWatchRequest::Action action, PutMetricDataRequest * const q)

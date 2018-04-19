@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CopyImageResponse
- *
  * \brief The CopyImageResponse class provides an interace for AppStream CopyImage responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CopyImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopyImageResponse object for \a reply to \a request, with parent \a parent.
  */
 CopyImageResponse::CopyImageResponse(
         const CopyImageRequest &request,
@@ -58,6 +53,9 @@ CopyImageResponse::CopyImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopyImageRequest * CopyImageResponse::request() const
 {
     Q_D(const CopyImageResponse);
@@ -65,9 +63,8 @@ const CopyImageRequest * CopyImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream CopyImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream CopyImage \a response.
  */
 void CopyImageResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CopyImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::CopyImageResponsePrivate
+ * \brief The CopyImageResponsePrivate class provides private implementation for CopyImageResponse.
  * \internal
  *
- * \class CopyImageResponsePrivate
- *
- * \brief Private implementation for CopyImageResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopyImageResponse instance.
+ * Constructs a CopyImageResponsePrivate object with public implementation \a q.
  */
 CopyImageResponsePrivate::CopyImageResponsePrivate(
     CopyImageResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ CopyImageResponsePrivate::CopyImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream CopyImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream CopyImage response element from \a xml.
  */
 void CopyImageResponsePrivate::parseCopyImageResponse(QXmlStreamReader &xml)
 {

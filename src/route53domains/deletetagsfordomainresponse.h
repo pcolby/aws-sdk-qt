@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTagsForDomainResponse : public Route53DomainsResponse {
 public:
     DeleteTagsForDomainResponse(const DeleteTagsForDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTagsForDomainRequest * request() const;
+    virtual const DeleteTagsForDomainRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTagsForDomainResponse)

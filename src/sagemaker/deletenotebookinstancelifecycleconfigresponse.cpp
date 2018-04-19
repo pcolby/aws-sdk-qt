@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DeleteNotebookInstanceLifecycleConfigResponse
- *
  * \brief The DeleteNotebookInstanceLifecycleConfigResponse class provides an interace for SageMaker DeleteNotebookInstanceLifecycleConfig responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::deleteNotebookInstanceLifecycleConfig
  */
 
 /*!
- * @brief  Constructs a new DeleteNotebookInstanceLifecycleConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNotebookInstanceLifecycleConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNotebookInstanceLifecycleConfigResponse::DeleteNotebookInstanceLifecycleConfigResponse(
         const DeleteNotebookInstanceLifecycleConfigRequest &request,
@@ -55,6 +50,9 @@ DeleteNotebookInstanceLifecycleConfigResponse::DeleteNotebookInstanceLifecycleCo
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNotebookInstanceLifecycleConfigRequest * DeleteNotebookInstanceLifecycleConfigResponse::request() const
 {
     Q_D(const DeleteNotebookInstanceLifecycleConfigResponse);
@@ -62,9 +60,8 @@ const DeleteNotebookInstanceLifecycleConfigRequest * DeleteNotebookInstanceLifec
 }
 
 /*!
- * @brief  Parse a SageMaker DeleteNotebookInstanceLifecycleConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker DeleteNotebookInstanceLifecycleConfig \a response.
  */
 void DeleteNotebookInstanceLifecycleConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteNotebookInstanceLifecycleConfigResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::SageMaker::DeleteNotebookInstanceLifecycleConfigResponsePrivate
+ * \brief The DeleteNotebookInstanceLifecycleConfigResponsePrivate class provides private implementation for DeleteNotebookInstanceLifecycleConfigResponse.
  * \internal
  *
- * \class DeleteNotebookInstanceLifecycleConfigResponsePrivate
- *
- * \brief Private implementation for DeleteNotebookInstanceLifecycleConfigResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNotebookInstanceLifecycleConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNotebookInstanceLifecycleConfigResponse instance.
+ * Constructs a DeleteNotebookInstanceLifecycleConfigResponsePrivate object with public implementation \a q.
  */
 DeleteNotebookInstanceLifecycleConfigResponsePrivate::DeleteNotebookInstanceLifecycleConfigResponsePrivate(
     DeleteNotebookInstanceLifecycleConfigResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteNotebookInstanceLifecycleConfigResponsePrivate::DeleteNotebookInstanceLife
 }
 
 /*!
- * @brief  Parse an SageMaker DeleteNotebookInstanceLifecycleConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker DeleteNotebookInstanceLifecycleConfig response element from \a xml.
  */
 void DeleteNotebookInstanceLifecycleConfigResponsePrivate::parseDeleteNotebookInstanceLifecycleConfigResponse(QXmlStreamReader &xml)
 {

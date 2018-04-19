@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * RegisterRdsDbInstanceRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a RegisterRdsDbInstanceRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a RegisterRdsDbInstanceRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 RegisterRdsDbInstanceRequestPrivate::RegisterRdsDbInstanceRequestPrivate(
     const OpsWorksRequest::Action action, RegisterRdsDbInstanceRequest * const q)

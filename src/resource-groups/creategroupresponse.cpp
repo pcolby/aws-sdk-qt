@@ -29,10 +29,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::CreateGroupResponse
- *
  * \brief The CreateGroupResponse class provides an interace for ResourceGroups CreateGroup responses.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -83,11 +82,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new CreateGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateGroupResponse::CreateGroupResponse(
         const CreateGroupRequest &request,
@@ -99,6 +94,9 @@ CreateGroupResponse::CreateGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateGroupRequest * CreateGroupResponse::request() const
 {
     Q_D(const CreateGroupResponse);
@@ -106,9 +104,8 @@ const CreateGroupRequest * CreateGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a ResourceGroups CreateGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ResourceGroups CreateGroup \a response.
  */
 void CreateGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -118,19 +115,15 @@ void CreateGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ResourceGroups::CreateGroupResponsePrivate
+ * \brief The CreateGroupResponsePrivate class provides private implementation for CreateGroupResponse.
  * \internal
  *
- * \class CreateGroupResponsePrivate
- *
- * \brief Private implementation for CreateGroupResponse.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateGroupResponse instance.
+ * Constructs a CreateGroupResponsePrivate object with public implementation \a q.
  */
 CreateGroupResponsePrivate::CreateGroupResponsePrivate(
     CreateGroupResponse * const q) : ResourceGroupsResponsePrivate(q)
@@ -139,9 +132,7 @@ CreateGroupResponsePrivate::CreateGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ResourceGroups CreateGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ResourceGroups CreateGroup response element from \a xml.
  */
 void CreateGroupResponsePrivate::parseCreateGroupResponse(QXmlStreamReader &xml)
 {

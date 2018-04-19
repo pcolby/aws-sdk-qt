@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSigningCertificateResponse : public IAMResponse {
 public:
     DeleteSigningCertificateResponse(const DeleteSigningCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSigningCertificateRequest * request() const;
+    virtual const DeleteSigningCertificateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSigningCertificateResponse)

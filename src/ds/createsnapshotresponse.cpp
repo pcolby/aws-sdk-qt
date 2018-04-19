@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CreateSnapshotResponse
- *
  * \brief The CreateSnapshotResponse class provides an interace for DirectoryService CreateSnapshot responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CreateSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSnapshotResponse::CreateSnapshotResponse(
         const CreateSnapshotRequest &request,
@@ -69,6 +64,9 @@ CreateSnapshotResponse::CreateSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSnapshotRequest * CreateSnapshotResponse::request() const
 {
     Q_D(const CreateSnapshotResponse);
@@ -76,9 +74,8 @@ const CreateSnapshotRequest * CreateSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService CreateSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService CreateSnapshot \a response.
  */
 void CreateSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::CreateSnapshotResponsePrivate
+ * \brief The CreateSnapshotResponsePrivate class provides private implementation for CreateSnapshotResponse.
  * \internal
  *
- * \class CreateSnapshotResponsePrivate
- *
- * \brief Private implementation for CreateSnapshotResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSnapshotResponse instance.
+ * Constructs a CreateSnapshotResponsePrivate object with public implementation \a q.
  */
 CreateSnapshotResponsePrivate::CreateSnapshotResponsePrivate(
     CreateSnapshotResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateSnapshotResponsePrivate::CreateSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService CreateSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService CreateSnapshot response element from \a xml.
  */
 void CreateSnapshotResponsePrivate::parseCreateSnapshotResponse(QXmlStreamReader &xml)
 {

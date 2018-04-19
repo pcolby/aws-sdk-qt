@@ -29,10 +29,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::DescribeAlarmsForMetricResponse
- *
  * \brief The DescribeAlarmsForMetricResponse class provides an interace for CloudWatch DescribeAlarmsForMetric responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -53,11 +52,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new DescribeAlarmsForMetricResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAlarmsForMetricResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAlarmsForMetricResponse::DescribeAlarmsForMetricResponse(
         const DescribeAlarmsForMetricRequest &request,
@@ -69,6 +64,9 @@ DescribeAlarmsForMetricResponse::DescribeAlarmsForMetricResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAlarmsForMetricRequest * DescribeAlarmsForMetricResponse::request() const
 {
     Q_D(const DescribeAlarmsForMetricResponse);
@@ -76,9 +74,8 @@ const DescribeAlarmsForMetricRequest * DescribeAlarmsForMetricResponse::request(
 }
 
 /*!
- * @brief  Parse a CloudWatch DescribeAlarmsForMetric response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatch DescribeAlarmsForMetric \a response.
  */
 void DescribeAlarmsForMetricResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeAlarmsForMetricResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatch::DescribeAlarmsForMetricResponsePrivate
+ * \brief The DescribeAlarmsForMetricResponsePrivate class provides private implementation for DescribeAlarmsForMetricResponse.
  * \internal
  *
- * \class DescribeAlarmsForMetricResponsePrivate
- *
- * \brief Private implementation for DescribeAlarmsForMetricResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAlarmsForMetricResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAlarmsForMetricResponse instance.
+ * Constructs a DescribeAlarmsForMetricResponsePrivate object with public implementation \a q.
  */
 DescribeAlarmsForMetricResponsePrivate::DescribeAlarmsForMetricResponsePrivate(
     DescribeAlarmsForMetricResponse * const q) : CloudWatchResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeAlarmsForMetricResponsePrivate::DescribeAlarmsForMetricResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatch DescribeAlarmsForMetricResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatch DescribeAlarmsForMetric response element from \a xml.
  */
 void DescribeAlarmsForMetricResponsePrivate::parseDescribeAlarmsForMetricResponse(QXmlStreamReader &xml)
 {

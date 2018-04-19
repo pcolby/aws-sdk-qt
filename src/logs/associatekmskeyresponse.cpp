@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::AssociateKmsKeyResponse
- *
  * \brief The AssociateKmsKeyResponse class provides an interace for CloudWatchLogs AssociateKmsKey responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new AssociateKmsKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateKmsKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateKmsKeyResponse::AssociateKmsKeyResponse(
         const AssociateKmsKeyRequest &request,
@@ -84,6 +79,9 @@ AssociateKmsKeyResponse::AssociateKmsKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateKmsKeyRequest * AssociateKmsKeyResponse::request() const
 {
     Q_D(const AssociateKmsKeyResponse);
@@ -91,9 +89,8 @@ const AssociateKmsKeyRequest * AssociateKmsKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs AssociateKmsKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs AssociateKmsKey \a response.
  */
 void AssociateKmsKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void AssociateKmsKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::AssociateKmsKeyResponsePrivate
+ * \brief The AssociateKmsKeyResponsePrivate class provides private implementation for AssociateKmsKeyResponse.
  * \internal
  *
- * \class AssociateKmsKeyResponsePrivate
- *
- * \brief Private implementation for AssociateKmsKeyResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateKmsKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateKmsKeyResponse instance.
+ * Constructs a AssociateKmsKeyResponsePrivate object with public implementation \a q.
  */
 AssociateKmsKeyResponsePrivate::AssociateKmsKeyResponsePrivate(
     AssociateKmsKeyResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ AssociateKmsKeyResponsePrivate::AssociateKmsKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs AssociateKmsKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs AssociateKmsKey response element from \a xml.
  */
 void AssociateKmsKeyResponsePrivate::parseAssociateKmsKeyResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::PostCommentReplyResponse
- *
  * \brief The PostCommentReplyResponse class provides an interace for CodeCommit PostCommentReply responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new PostCommentReplyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PostCommentReplyResponse object for \a reply to \a request, with parent \a parent.
  */
 PostCommentReplyResponse::PostCommentReplyResponse(
         const PostCommentReplyRequest &request,
@@ -245,6 +240,9 @@ PostCommentReplyResponse::PostCommentReplyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PostCommentReplyRequest * PostCommentReplyResponse::request() const
 {
     Q_D(const PostCommentReplyResponse);
@@ -252,9 +250,8 @@ const PostCommentReplyRequest * PostCommentReplyResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit PostCommentReply response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit PostCommentReply \a response.
  */
 void PostCommentReplyResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void PostCommentReplyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::PostCommentReplyResponsePrivate
+ * \brief The PostCommentReplyResponsePrivate class provides private implementation for PostCommentReplyResponse.
  * \internal
  *
- * \class PostCommentReplyResponsePrivate
- *
- * \brief Private implementation for PostCommentReplyResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PostCommentReplyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PostCommentReplyResponse instance.
+ * Constructs a PostCommentReplyResponsePrivate object with public implementation \a q.
  */
 PostCommentReplyResponsePrivate::PostCommentReplyResponsePrivate(
     PostCommentReplyResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ PostCommentReplyResponsePrivate::PostCommentReplyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit PostCommentReplyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit PostCommentReply response element from \a xml.
  */
 void PostCommentReplyResponsePrivate::parsePostCommentReplyResponse(QXmlStreamReader &xml)
 {

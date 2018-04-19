@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::DeleteGraphqlApiResponse
- *
  * \brief The DeleteGraphqlApiResponse class provides an interace for AppSync DeleteGraphqlApi responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new DeleteGraphqlApiResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteGraphqlApiResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteGraphqlApiResponse::DeleteGraphqlApiResponse(
         const DeleteGraphqlApiRequest &request,
@@ -56,6 +51,9 @@ DeleteGraphqlApiResponse::DeleteGraphqlApiResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteGraphqlApiRequest * DeleteGraphqlApiResponse::request() const
 {
     Q_D(const DeleteGraphqlApiResponse);
@@ -63,9 +61,8 @@ const DeleteGraphqlApiRequest * DeleteGraphqlApiResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync DeleteGraphqlApi response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync DeleteGraphqlApi \a response.
  */
 void DeleteGraphqlApiResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DeleteGraphqlApiResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::DeleteGraphqlApiResponsePrivate
+ * \brief The DeleteGraphqlApiResponsePrivate class provides private implementation for DeleteGraphqlApiResponse.
  * \internal
  *
- * \class DeleteGraphqlApiResponsePrivate
- *
- * \brief Private implementation for DeleteGraphqlApiResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGraphqlApiResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteGraphqlApiResponse instance.
+ * Constructs a DeleteGraphqlApiResponsePrivate object with public implementation \a q.
  */
 DeleteGraphqlApiResponsePrivate::DeleteGraphqlApiResponsePrivate(
     DeleteGraphqlApiResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ DeleteGraphqlApiResponsePrivate::DeleteGraphqlApiResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync DeleteGraphqlApiResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync DeleteGraphqlApi response element from \a xml.
  */
 void DeleteGraphqlApiResponsePrivate::parseDeleteGraphqlApiResponse(QXmlStreamReader &xml)
 {

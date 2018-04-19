@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateDomainNameserversResponse : public Route53DomainsRespon
 public:
     UpdateDomainNameserversResponse(const UpdateDomainNameserversRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateDomainNameserversRequest * request() const;
+    virtual const UpdateDomainNameserversRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateDomainNameserversResponse)

@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::RebootBrokerResponse
- *
  * \brief The RebootBrokerResponse class provides an interace for MQ RebootBroker responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new RebootBrokerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RebootBrokerResponse object for \a reply to \a request, with parent \a parent.
  */
 RebootBrokerResponse::RebootBrokerResponse(
         const RebootBrokerRequest &request,
@@ -57,6 +52,9 @@ RebootBrokerResponse::RebootBrokerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RebootBrokerRequest * RebootBrokerResponse::request() const
 {
     Q_D(const RebootBrokerResponse);
@@ -64,9 +62,8 @@ const RebootBrokerRequest * RebootBrokerResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ RebootBroker response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ RebootBroker \a response.
  */
 void RebootBrokerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void RebootBrokerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::RebootBrokerResponsePrivate
+ * \brief The RebootBrokerResponsePrivate class provides private implementation for RebootBrokerResponse.
  * \internal
  *
- * \class RebootBrokerResponsePrivate
- *
- * \brief Private implementation for RebootBrokerResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootBrokerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RebootBrokerResponse instance.
+ * Constructs a RebootBrokerResponsePrivate object with public implementation \a q.
  */
 RebootBrokerResponsePrivate::RebootBrokerResponsePrivate(
     RebootBrokerResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ RebootBrokerResponsePrivate::RebootBrokerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ RebootBrokerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ RebootBroker response element from \a xml.
  */
 void RebootBrokerResponsePrivate::parseRebootBrokerResponse(QXmlStreamReader &xml)
 {

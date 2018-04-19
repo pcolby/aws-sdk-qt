@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteConfigurationAggregatorResponse
- *
  * \brief The DeleteConfigurationAggregatorResponse class provides an interace for ConfigService DeleteConfigurationAggregator responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationAggregatorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteConfigurationAggregatorResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteConfigurationAggregatorResponse::DeleteConfigurationAggregatorResponse(
         const DeleteConfigurationAggregatorRequest &request,
@@ -78,6 +73,9 @@ DeleteConfigurationAggregatorResponse::DeleteConfigurationAggregatorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteConfigurationAggregatorRequest * DeleteConfigurationAggregatorResponse::request() const
 {
     Q_D(const DeleteConfigurationAggregatorResponse);
@@ -85,9 +83,8 @@ const DeleteConfigurationAggregatorRequest * DeleteConfigurationAggregatorRespon
 }
 
 /*!
- * @brief  Parse a ConfigService DeleteConfigurationAggregator response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DeleteConfigurationAggregator \a response.
  */
 void DeleteConfigurationAggregatorResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DeleteConfigurationAggregatorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DeleteConfigurationAggregatorResponsePrivate
+ * \brief The DeleteConfigurationAggregatorResponsePrivate class provides private implementation for DeleteConfigurationAggregatorResponse.
  * \internal
  *
- * \class DeleteConfigurationAggregatorResponsePrivate
- *
- * \brief Private implementation for DeleteConfigurationAggregatorResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationAggregatorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteConfigurationAggregatorResponse instance.
+ * Constructs a DeleteConfigurationAggregatorResponsePrivate object with public implementation \a q.
  */
 DeleteConfigurationAggregatorResponsePrivate::DeleteConfigurationAggregatorResponsePrivate(
     DeleteConfigurationAggregatorResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DeleteConfigurationAggregatorResponsePrivate::DeleteConfigurationAggregatorRespo
 }
 
 /*!
- * @brief  Parse an ConfigService DeleteConfigurationAggregatorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DeleteConfigurationAggregator response element from \a xml.
  */
 void DeleteConfigurationAggregatorResponsePrivate::parseDeleteConfigurationAggregatorResponse(QXmlStreamReader &xml)
 {

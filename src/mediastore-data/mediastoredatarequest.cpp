@@ -44,7 +44,7 @@ namespace MediaStoreData {
  */
 
 /*!
- * Constructs a[n] MediaStoreDataRequest object for MediaStoreData \a action.
+ * Constructs a MediaStoreDataRequest object for MediaStoreData \a action.
  */
 MediaStoreDataRequest::MediaStoreDataRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MediaStoreDataRequestPrivate(action, this))
@@ -244,8 +244,8 @@ QNetworkRequest MediaStoreDataRequest::unsignedRequest(const QUrl &endpoint) con
  */
 
 /*!
- * Constructs a MediaStoreDataRequestPrivate object for MediaStoreData \a action with,
- * public implementation \a q.
+ * Constructs a MediaStoreDataRequestPrivate object for MediaStoreData \a action,
+ * with public implementation \a q.
  */
 MediaStoreDataRequestPrivate::MediaStoreDataRequestPrivate(const MediaStoreDataRequest::Action action, MediaStoreDataRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

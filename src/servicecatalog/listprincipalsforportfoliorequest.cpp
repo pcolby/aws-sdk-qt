@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListPrincipalsForPortfolioRequest::response(Q
  */
 
 /*!
- *
- * Constructs a ListPrincipalsForPortfolioRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ListPrincipalsForPortfolioRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ListPrincipalsForPortfolioRequestPrivate::ListPrincipalsForPortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, ListPrincipalsForPortfolioRequest * const q)

@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingPlanResourcesRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeScalingPlanResourcesRequestPrivate object for AutoScalingPlans \a action with,
- * public implementation \a q.
+ * Constructs a DescribeScalingPlanResourcesRequestPrivate object for AutoScalingPlans \a action,
+ * with public implementation \a q.
  */
 DescribeScalingPlanResourcesRequestPrivate::DescribeScalingPlanResourcesRequestPrivate(
     const AutoScalingPlansRequest::Action action, DescribeScalingPlanResourcesRequest * const q)

@@ -28,16 +28,13 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::FirehoseResponse
- *
  * \brief The FirehoseResponse class provides an interface for Firehose responses.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @brief  Constructs a new FirehoseResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a FirehoseResponse object with parent \a parent.
  */
 FirehoseResponse::FirehoseResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new FirehoseResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ FirehoseResponse::FirehoseResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FirehoseResponse object.
- *
+ * \internal
+ * Constructs a FirehoseResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from FirehoseResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 FirehoseResponse::FirehoseResponse(FirehoseResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ FirehoseResponse::FirehoseResponse(FirehoseResponsePrivate * const d, QObject * 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void FirehoseResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void FirehoseResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Firehose::FirehoseResponsePrivate
+ * \brief The FirehoseResponsePrivate class provides private implementation for FirehoseResponse.
+ * \internal
  *
- * @class  FirehoseResponsePrivate
- *
- * @brief  Private implementation for FirehoseResponse.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FirehoseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public FirehoseResponse instance.
+ * Constructs a FirehoseResponsePrivate object with public implementation \a q.
  */
 FirehoseResponsePrivate::FirehoseResponsePrivate(
     FirehoseResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

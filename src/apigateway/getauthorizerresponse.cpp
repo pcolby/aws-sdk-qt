@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetAuthorizerResponse
- *
  * \brief The GetAuthorizerResponse class provides an interace for APIGateway GetAuthorizer responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetAuthorizerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAuthorizerResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAuthorizerResponse::GetAuthorizerResponse(
         const GetAuthorizerRequest &request,
@@ -60,6 +55,9 @@ GetAuthorizerResponse::GetAuthorizerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAuthorizerRequest * GetAuthorizerResponse::request() const
 {
     Q_D(const GetAuthorizerResponse);
@@ -67,9 +65,8 @@ const GetAuthorizerRequest * GetAuthorizerResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetAuthorizer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetAuthorizer \a response.
  */
 void GetAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetAuthorizerResponsePrivate
+ * \brief The GetAuthorizerResponsePrivate class provides private implementation for GetAuthorizerResponse.
  * \internal
  *
- * \class GetAuthorizerResponsePrivate
- *
- * \brief Private implementation for GetAuthorizerResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAuthorizerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAuthorizerResponse instance.
+ * Constructs a GetAuthorizerResponsePrivate object with public implementation \a q.
  */
 GetAuthorizerResponsePrivate::GetAuthorizerResponsePrivate(
     GetAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetAuthorizerResponsePrivate::GetAuthorizerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetAuthorizerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetAuthorizer response element from \a xml.
  */
 void GetAuthorizerResponsePrivate::parseGetAuthorizerResponse(QXmlStreamReader &xml)
 {

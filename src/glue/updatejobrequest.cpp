@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateJobRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a UpdateJobRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a UpdateJobRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 UpdateJobRequestPrivate::UpdateJobRequestPrivate(
     const GlueRequest::Action action, UpdateJobRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteStreamingDistributionResponse : public CloudFrontRespon
 public:
     DeleteStreamingDistributionResponse(const DeleteStreamingDistributionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteStreamingDistributionRequest * request() const;
+    virtual const DeleteStreamingDistributionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteStreamingDistributionResponse)

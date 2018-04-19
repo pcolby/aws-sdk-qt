@@ -28,16 +28,13 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::MediaLiveResponse
- *
  * \brief The MediaLiveResponse class provides an interface for MediaLive responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @brief  Constructs a new MediaLiveResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MediaLiveResponse object with parent \a parent.
  */
 MediaLiveResponse::MediaLiveResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MediaLiveResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MediaLiveResponse::MediaLiveResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaLiveResponse object.
- *
+ * \internal
+ * Constructs a MediaLiveResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaLiveResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MediaLiveResponse::MediaLiveResponse(MediaLiveResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MediaLiveResponse::MediaLiveResponse(MediaLiveResponsePrivate * const d, QObject
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MediaLiveResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MediaLiveResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaLive::MediaLiveResponsePrivate
+ * \brief The MediaLiveResponsePrivate class provides private implementation for MediaLiveResponse.
+ * \internal
  *
- * @class  MediaLiveResponsePrivate
- *
- * @brief  Private implementation for MediaLiveResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaLiveResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MediaLiveResponse instance.
+ * Constructs a MediaLiveResponsePrivate object with public implementation \a q.
  */
 MediaLiveResponsePrivate::MediaLiveResponsePrivate(
     MediaLiveResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

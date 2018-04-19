@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkAclEntryRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateNetworkAclEntryRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateNetworkAclEntryRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateNetworkAclEntryRequestPrivate::CreateNetworkAclEntryRequestPrivate(
     const EC2Request::Action action, CreateNetworkAclEntryRequest * const q)

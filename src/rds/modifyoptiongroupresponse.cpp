@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyOptionGroupResponse
- *
  * \brief The ModifyOptionGroupResponse class provides an interace for RDS ModifyOptionGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyOptionGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyOptionGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyOptionGroupResponse::ModifyOptionGroupResponse(
         const ModifyOptionGroupRequest &request,
@@ -119,6 +114,9 @@ ModifyOptionGroupResponse::ModifyOptionGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyOptionGroupRequest * ModifyOptionGroupResponse::request() const
 {
     Q_D(const ModifyOptionGroupResponse);
@@ -126,9 +124,8 @@ const ModifyOptionGroupRequest * ModifyOptionGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS ModifyOptionGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS ModifyOptionGroup \a response.
  */
 void ModifyOptionGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void ModifyOptionGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::ModifyOptionGroupResponsePrivate
+ * \brief The ModifyOptionGroupResponsePrivate class provides private implementation for ModifyOptionGroupResponse.
  * \internal
  *
- * \class ModifyOptionGroupResponsePrivate
- *
- * \brief Private implementation for ModifyOptionGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyOptionGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyOptionGroupResponse instance.
+ * Constructs a ModifyOptionGroupResponsePrivate object with public implementation \a q.
  */
 ModifyOptionGroupResponsePrivate::ModifyOptionGroupResponsePrivate(
     ModifyOptionGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ ModifyOptionGroupResponsePrivate::ModifyOptionGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS ModifyOptionGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS ModifyOptionGroup response element from \a xml.
  */
 void ModifyOptionGroupResponsePrivate::parseModifyOptionGroupResponse(QXmlStreamReader &xml)
 {

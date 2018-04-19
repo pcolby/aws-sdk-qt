@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreatePolicyVersionResponse : public IoTResponse {
 public:
     CreatePolicyVersionResponse(const CreatePolicyVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreatePolicyVersionRequest * request() const;
+    virtual const CreatePolicyVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreatePolicyVersionResponse)

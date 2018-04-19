@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateRoleAliasResponse
- *
  * \brief The CreateRoleAliasResponse class provides an interace for IoT CreateRoleAlias responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateRoleAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRoleAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRoleAliasResponse::CreateRoleAliasResponse(
         const CreateRoleAliasRequest &request,
@@ -66,6 +61,9 @@ CreateRoleAliasResponse::CreateRoleAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRoleAliasRequest * CreateRoleAliasResponse::request() const
 {
     Q_D(const CreateRoleAliasResponse);
@@ -73,9 +71,8 @@ const CreateRoleAliasRequest * CreateRoleAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT CreateRoleAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT CreateRoleAlias \a response.
  */
 void CreateRoleAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateRoleAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::CreateRoleAliasResponsePrivate
+ * \brief The CreateRoleAliasResponsePrivate class provides private implementation for CreateRoleAliasResponse.
  * \internal
  *
- * \class CreateRoleAliasResponsePrivate
- *
- * \brief Private implementation for CreateRoleAliasResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRoleAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRoleAliasResponse instance.
+ * Constructs a CreateRoleAliasResponsePrivate object with public implementation \a q.
  */
 CreateRoleAliasResponsePrivate::CreateRoleAliasResponsePrivate(
     CreateRoleAliasResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateRoleAliasResponsePrivate::CreateRoleAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT CreateRoleAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT CreateRoleAlias response element from \a xml.
  */
 void CreateRoleAliasResponsePrivate::parseCreateRoleAliasResponse(QXmlStreamReader &xml)
 {

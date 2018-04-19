@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeleteMaintenanceWindowResponse
- *
  * \brief The DeleteMaintenanceWindowResponse class provides an interace for SSM DeleteMaintenanceWindow responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteMaintenanceWindowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteMaintenanceWindowResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteMaintenanceWindowResponse::DeleteMaintenanceWindowResponse(
         const DeleteMaintenanceWindowRequest &request,
@@ -79,6 +74,9 @@ DeleteMaintenanceWindowResponse::DeleteMaintenanceWindowResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteMaintenanceWindowRequest * DeleteMaintenanceWindowResponse::request() const
 {
     Q_D(const DeleteMaintenanceWindowResponse);
@@ -86,9 +84,8 @@ const DeleteMaintenanceWindowRequest * DeleteMaintenanceWindowResponse::request(
 }
 
 /*!
- * @brief  Parse a SSM DeleteMaintenanceWindow response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DeleteMaintenanceWindow \a response.
  */
 void DeleteMaintenanceWindowResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DeleteMaintenanceWindowResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DeleteMaintenanceWindowResponsePrivate
+ * \brief The DeleteMaintenanceWindowResponsePrivate class provides private implementation for DeleteMaintenanceWindowResponse.
  * \internal
  *
- * \class DeleteMaintenanceWindowResponsePrivate
- *
- * \brief Private implementation for DeleteMaintenanceWindowResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMaintenanceWindowResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteMaintenanceWindowResponse instance.
+ * Constructs a DeleteMaintenanceWindowResponsePrivate object with public implementation \a q.
  */
 DeleteMaintenanceWindowResponsePrivate::DeleteMaintenanceWindowResponsePrivate(
     DeleteMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DeleteMaintenanceWindowResponsePrivate::DeleteMaintenanceWindowResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DeleteMaintenanceWindowResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DeleteMaintenanceWindow response element from \a xml.
  */
 void DeleteMaintenanceWindowResponsePrivate::parseDeleteMaintenanceWindowResponse(QXmlStreamReader &xml)
 {

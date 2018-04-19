@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * StopStackSetOperationRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a StopStackSetOperationRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a StopStackSetOperationRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 StopStackSetOperationRequestPrivate::StopStackSetOperationRequestPrivate(
     const CloudFormationRequest::Action action, StopStackSetOperationRequest * const q)

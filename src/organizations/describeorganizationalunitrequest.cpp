@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * DescribeOrganizationalUnitRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeOrganizationalUnitRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a DescribeOrganizationalUnitRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 DescribeOrganizationalUnitRequestPrivate::DescribeOrganizationalUnitRequestPrivate(
     const OrganizationsRequest::Action action, DescribeOrganizationalUnitRequest * const q)

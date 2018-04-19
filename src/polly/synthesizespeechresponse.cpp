@@ -29,10 +29,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::SynthesizeSpeechResponse
- *
  * \brief The SynthesizeSpeechResponse class provides an interace for Polly SynthesizeSpeech responses.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -46,11 +45,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new SynthesizeSpeechResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SynthesizeSpeechResponse object for \a reply to \a request, with parent \a parent.
  */
 SynthesizeSpeechResponse::SynthesizeSpeechResponse(
         const SynthesizeSpeechRequest &request,
@@ -62,6 +57,9 @@ SynthesizeSpeechResponse::SynthesizeSpeechResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SynthesizeSpeechRequest * SynthesizeSpeechResponse::request() const
 {
     Q_D(const SynthesizeSpeechResponse);
@@ -69,9 +67,8 @@ const SynthesizeSpeechRequest * SynthesizeSpeechResponse::request() const
 }
 
 /*!
- * @brief  Parse a Polly SynthesizeSpeech response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Polly SynthesizeSpeech \a response.
  */
 void SynthesizeSpeechResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void SynthesizeSpeechResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Polly::SynthesizeSpeechResponsePrivate
+ * \brief The SynthesizeSpeechResponsePrivate class provides private implementation for SynthesizeSpeechResponse.
  * \internal
  *
- * \class SynthesizeSpeechResponsePrivate
- *
- * \brief Private implementation for SynthesizeSpeechResponse.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SynthesizeSpeechResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SynthesizeSpeechResponse instance.
+ * Constructs a SynthesizeSpeechResponsePrivate object with public implementation \a q.
  */
 SynthesizeSpeechResponsePrivate::SynthesizeSpeechResponsePrivate(
     SynthesizeSpeechResponse * const q) : PollyResponsePrivate(q)
@@ -102,9 +95,7 @@ SynthesizeSpeechResponsePrivate::SynthesizeSpeechResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Polly SynthesizeSpeechResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Polly SynthesizeSpeech response element from \a xml.
  */
 void SynthesizeSpeechResponsePrivate::parseSynthesizeSpeechResponse(QXmlStreamReader &xml)
 {

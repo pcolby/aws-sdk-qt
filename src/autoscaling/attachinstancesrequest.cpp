@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * AttachInstancesRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a AttachInstancesRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a AttachInstancesRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 AttachInstancesRequestPrivate::AttachInstancesRequestPrivate(
     const AutoScalingRequest::Action action, AttachInstancesRequest * const q)

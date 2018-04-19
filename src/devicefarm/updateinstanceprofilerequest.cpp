@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * UpdateInstanceProfileRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a UpdateInstanceProfileRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a UpdateInstanceProfileRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 UpdateInstanceProfileRequestPrivate::UpdateInstanceProfileRequestPrivate(
     const DeviceFarmRequest::Action action, UpdateInstanceProfileRequest * const q)

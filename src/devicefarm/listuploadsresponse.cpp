@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListUploadsResponse
- *
  * \brief The ListUploadsResponse class provides an interace for DeviceFarm ListUploads responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListUploadsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListUploadsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListUploadsResponse::ListUploadsResponse(
         const ListUploadsRequest &request,
@@ -57,6 +52,9 @@ ListUploadsResponse::ListUploadsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListUploadsRequest * ListUploadsResponse::request() const
 {
     Q_D(const ListUploadsResponse);
@@ -64,9 +62,8 @@ const ListUploadsRequest * ListUploadsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm ListUploads response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm ListUploads \a response.
  */
 void ListUploadsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListUploadsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::ListUploadsResponsePrivate
+ * \brief The ListUploadsResponsePrivate class provides private implementation for ListUploadsResponse.
  * \internal
  *
- * \class ListUploadsResponsePrivate
- *
- * \brief Private implementation for ListUploadsResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUploadsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListUploadsResponse instance.
+ * Constructs a ListUploadsResponsePrivate object with public implementation \a q.
  */
 ListUploadsResponsePrivate::ListUploadsResponsePrivate(
     ListUploadsResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ ListUploadsResponsePrivate::ListUploadsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm ListUploadsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm ListUploads response element from \a xml.
  */
 void ListUploadsResponsePrivate::parseListUploadsResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::AbortMultipartUploadResponse
- *
  * \brief The AbortMultipartUploadResponse class provides an interace for S3 AbortMultipartUpload responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::abortMultipartUpload
  */
 
 /*!
- * @brief  Constructs a new AbortMultipartUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AbortMultipartUploadResponse object for \a reply to \a request, with parent \a parent.
  */
 AbortMultipartUploadResponse::AbortMultipartUploadResponse(
         const AbortMultipartUploadRequest &request,
@@ -55,6 +50,9 @@ AbortMultipartUploadResponse::AbortMultipartUploadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AbortMultipartUploadRequest * AbortMultipartUploadResponse::request() const
 {
     Q_D(const AbortMultipartUploadResponse);
@@ -62,9 +60,8 @@ const AbortMultipartUploadRequest * AbortMultipartUploadResponse::request() cons
 }
 
 /*!
- * @brief  Parse a S3 AbortMultipartUpload response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 AbortMultipartUpload \a response.
  */
 void AbortMultipartUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void AbortMultipartUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::AbortMultipartUploadResponsePrivate
+ * \brief The AbortMultipartUploadResponsePrivate class provides private implementation for AbortMultipartUploadResponse.
  * \internal
  *
- * \class AbortMultipartUploadResponsePrivate
- *
- * \brief Private implementation for AbortMultipartUploadResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AbortMultipartUploadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AbortMultipartUploadResponse instance.
+ * Constructs a AbortMultipartUploadResponsePrivate object with public implementation \a q.
  */
 AbortMultipartUploadResponsePrivate::AbortMultipartUploadResponsePrivate(
     AbortMultipartUploadResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ AbortMultipartUploadResponsePrivate::AbortMultipartUploadResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 AbortMultipartUploadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 AbortMultipartUpload response element from \a xml.
  */
 void AbortMultipartUploadResponsePrivate::parseAbortMultipartUploadResponse(QXmlStreamReader &xml)
 {

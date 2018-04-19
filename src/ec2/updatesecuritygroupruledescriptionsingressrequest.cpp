@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsIngressReq
  */
 
 /*!
- *
- * Constructs a UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate::UpdateSecurityGroupRuleDescriptionsIngressRequestPrivate(
     const EC2Request::Action action, UpdateSecurityGroupRuleDescriptionsIngressRequest * const q)

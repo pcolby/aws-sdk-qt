@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeMetricFiltersRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeMetricFiltersRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeMetricFiltersRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DescribeMetricFiltersRequestPrivate::DescribeMetricFiltersRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeMetricFiltersRequest * const q)

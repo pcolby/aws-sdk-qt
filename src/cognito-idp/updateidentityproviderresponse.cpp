@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateIdentityProviderResponse
- *
  * \brief The UpdateIdentityProviderResponse class provides an interace for CognitoIdentityProvider UpdateIdentityProvider responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new UpdateIdentityProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateIdentityProviderResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateIdentityProviderResponse::UpdateIdentityProviderResponse(
         const UpdateIdentityProviderRequest &request,
@@ -65,6 +60,9 @@ UpdateIdentityProviderResponse::UpdateIdentityProviderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateIdentityProviderRequest * UpdateIdentityProviderResponse::request() const
 {
     Q_D(const UpdateIdentityProviderResponse);
@@ -72,9 +70,8 @@ const UpdateIdentityProviderRequest * UpdateIdentityProviderResponse::request() 
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider UpdateIdentityProvider response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider UpdateIdentityProvider \a response.
  */
 void UpdateIdentityProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void UpdateIdentityProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::UpdateIdentityProviderResponsePrivate
+ * \brief The UpdateIdentityProviderResponsePrivate class provides private implementation for UpdateIdentityProviderResponse.
  * \internal
  *
- * \class UpdateIdentityProviderResponsePrivate
- *
- * \brief Private implementation for UpdateIdentityProviderResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateIdentityProviderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateIdentityProviderResponse instance.
+ * Constructs a UpdateIdentityProviderResponsePrivate object with public implementation \a q.
  */
 UpdateIdentityProviderResponsePrivate::UpdateIdentityProviderResponsePrivate(
     UpdateIdentityProviderResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ UpdateIdentityProviderResponsePrivate::UpdateIdentityProviderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider UpdateIdentityProviderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider UpdateIdentityProvider response element from \a xml.
  */
 void UpdateIdentityProviderResponsePrivate::parseUpdateIdentityProviderResponse(QXmlStreamReader &xml)
 {

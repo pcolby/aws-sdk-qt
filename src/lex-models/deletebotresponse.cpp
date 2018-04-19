@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteBotResponse
- *
  * \brief The DeleteBotResponse class provides an interace for LexModelBuildingService DeleteBot responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteBotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBotResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBotResponse::DeleteBotResponse(
         const DeleteBotRequest &request,
@@ -59,6 +54,9 @@ DeleteBotResponse::DeleteBotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBotRequest * DeleteBotResponse::request() const
 {
     Q_D(const DeleteBotResponse);
@@ -66,9 +64,8 @@ const DeleteBotRequest * DeleteBotResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService DeleteBot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService DeleteBot \a response.
  */
 void DeleteBotResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteBotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::DeleteBotResponsePrivate
+ * \brief The DeleteBotResponsePrivate class provides private implementation for DeleteBotResponse.
  * \internal
  *
- * \class DeleteBotResponsePrivate
- *
- * \brief Private implementation for DeleteBotResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBotResponse instance.
+ * Constructs a DeleteBotResponsePrivate object with public implementation \a q.
  */
 DeleteBotResponsePrivate::DeleteBotResponsePrivate(
     DeleteBotResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteBotResponsePrivate::DeleteBotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService DeleteBotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService DeleteBot response element from \a xml.
  */
 void DeleteBotResponsePrivate::parseDeleteBotResponse(QXmlStreamReader &xml)
 {

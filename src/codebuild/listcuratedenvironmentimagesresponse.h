@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListCuratedEnvironmentImagesResponse : public CodeBuildRespon
 public:
     ListCuratedEnvironmentImagesResponse(const ListCuratedEnvironmentImagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListCuratedEnvironmentImagesRequest * request() const;
+    virtual const ListCuratedEnvironmentImagesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListCuratedEnvironmentImagesResponse)

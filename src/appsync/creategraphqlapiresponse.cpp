@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::CreateGraphqlApiResponse
- *
  * \brief The CreateGraphqlApiResponse class provides an interace for AppSync CreateGraphqlApi responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new CreateGraphqlApiResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateGraphqlApiResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateGraphqlApiResponse::CreateGraphqlApiResponse(
         const CreateGraphqlApiRequest &request,
@@ -56,6 +51,9 @@ CreateGraphqlApiResponse::CreateGraphqlApiResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateGraphqlApiRequest * CreateGraphqlApiResponse::request() const
 {
     Q_D(const CreateGraphqlApiResponse);
@@ -63,9 +61,8 @@ const CreateGraphqlApiRequest * CreateGraphqlApiResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync CreateGraphqlApi response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync CreateGraphqlApi \a response.
  */
 void CreateGraphqlApiResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void CreateGraphqlApiResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::CreateGraphqlApiResponsePrivate
+ * \brief The CreateGraphqlApiResponsePrivate class provides private implementation for CreateGraphqlApiResponse.
  * \internal
  *
- * \class CreateGraphqlApiResponsePrivate
- *
- * \brief Private implementation for CreateGraphqlApiResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGraphqlApiResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateGraphqlApiResponse instance.
+ * Constructs a CreateGraphqlApiResponsePrivate object with public implementation \a q.
  */
 CreateGraphqlApiResponsePrivate::CreateGraphqlApiResponsePrivate(
     CreateGraphqlApiResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ CreateGraphqlApiResponsePrivate::CreateGraphqlApiResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync CreateGraphqlApiResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync CreateGraphqlApi response element from \a xml.
  */
 void CreateGraphqlApiResponsePrivate::parseCreateGraphqlApiResponse(QXmlStreamReader &xml)
 {

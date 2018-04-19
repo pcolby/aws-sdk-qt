@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteUserRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteUserRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
     const IAMRequest::Action action, DeleteUserRequest * const q)

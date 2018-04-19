@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::StartSchemaCreationResponse
- *
  * \brief The StartSchemaCreationResponse class provides an interace for AppSync StartSchemaCreation responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new StartSchemaCreationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartSchemaCreationResponse object for \a reply to \a request, with parent \a parent.
  */
 StartSchemaCreationResponse::StartSchemaCreationResponse(
         const StartSchemaCreationRequest &request,
@@ -56,6 +51,9 @@ StartSchemaCreationResponse::StartSchemaCreationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartSchemaCreationRequest * StartSchemaCreationResponse::request() const
 {
     Q_D(const StartSchemaCreationResponse);
@@ -63,9 +61,8 @@ const StartSchemaCreationRequest * StartSchemaCreationResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync StartSchemaCreation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync StartSchemaCreation \a response.
  */
 void StartSchemaCreationResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void StartSchemaCreationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::StartSchemaCreationResponsePrivate
+ * \brief The StartSchemaCreationResponsePrivate class provides private implementation for StartSchemaCreationResponse.
  * \internal
  *
- * \class StartSchemaCreationResponsePrivate
- *
- * \brief Private implementation for StartSchemaCreationResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartSchemaCreationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartSchemaCreationResponse instance.
+ * Constructs a StartSchemaCreationResponsePrivate object with public implementation \a q.
  */
 StartSchemaCreationResponsePrivate::StartSchemaCreationResponsePrivate(
     StartSchemaCreationResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ StartSchemaCreationResponsePrivate::StartSchemaCreationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync StartSchemaCreationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync StartSchemaCreation response element from \a xml.
  */
 void StartSchemaCreationResponsePrivate::parseStartSchemaCreationResponse(QXmlStreamReader &xml)
 {

@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * CancelRetrievalRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a CancelRetrievalRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a CancelRetrievalRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 CancelRetrievalRequestPrivate::CancelRetrievalRequestPrivate(
     const StorageGatewayRequest::Action action, CancelRetrievalRequest * const q)

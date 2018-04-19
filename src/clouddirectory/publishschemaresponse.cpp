@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::PublishSchemaResponse
- *
  * \brief The PublishSchemaResponse class provides an interace for CloudDirectory PublishSchema responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new PublishSchemaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PublishSchemaResponse object for \a reply to \a request, with parent \a parent.
  */
 PublishSchemaResponse::PublishSchemaResponse(
         const PublishSchemaRequest &request,
@@ -62,6 +57,9 @@ PublishSchemaResponse::PublishSchemaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PublishSchemaRequest * PublishSchemaResponse::request() const
 {
     Q_D(const PublishSchemaResponse);
@@ -69,9 +67,8 @@ const PublishSchemaRequest * PublishSchemaResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory PublishSchema response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory PublishSchema \a response.
  */
 void PublishSchemaResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void PublishSchemaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::PublishSchemaResponsePrivate
+ * \brief The PublishSchemaResponsePrivate class provides private implementation for PublishSchemaResponse.
  * \internal
  *
- * \class PublishSchemaResponsePrivate
- *
- * \brief Private implementation for PublishSchemaResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PublishSchemaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PublishSchemaResponse instance.
+ * Constructs a PublishSchemaResponsePrivate object with public implementation \a q.
  */
 PublishSchemaResponsePrivate::PublishSchemaResponsePrivate(
     PublishSchemaResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ PublishSchemaResponsePrivate::PublishSchemaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory PublishSchemaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory PublishSchema response element from \a xml.
  */
 void PublishSchemaResponsePrivate::parsePublishSchemaResponse(QXmlStreamReader &xml)
 {

@@ -66,7 +66,7 @@ namespace CodePipeline {
  */
 
 /*!
- * Constructs a[n] CodePipelineRequest object for CodePipeline \a action.
+ * Constructs a CodePipelineRequest object for CodePipeline \a action.
  */
 CodePipelineRequest::CodePipelineRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CodePipelineRequestPrivate(action, this))
@@ -266,8 +266,8 @@ QNetworkRequest CodePipelineRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CodePipelineRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a CodePipelineRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 CodePipelineRequestPrivate::CodePipelineRequestPrivate(const CodePipelineRequest::Action action, CodePipelineRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

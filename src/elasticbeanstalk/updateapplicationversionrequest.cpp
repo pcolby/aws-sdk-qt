@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationVersionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateApplicationVersionRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a UpdateApplicationVersionRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 UpdateApplicationVersionRequestPrivate::UpdateApplicationVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateApplicationVersionRequest * const q)

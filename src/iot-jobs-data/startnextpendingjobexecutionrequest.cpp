@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * StartNextPendingJobExecutionRequest::response
  */
 
 /*!
- *
- * Constructs a StartNextPendingJobExecutionRequestPrivate object for IoTJobsDataPlane \a action with,
- * public implementation \a q.
+ * Constructs a StartNextPendingJobExecutionRequestPrivate object for IoTJobsDataPlane \a action,
+ * with public implementation \a q.
  */
 StartNextPendingJobExecutionRequestPrivate::StartNextPendingJobExecutionRequestPrivate(
     const IoTJobsDataPlaneRequest::Action action, StartNextPendingJobExecutionRequest * const q)

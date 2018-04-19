@@ -34,10 +34,10 @@ class QTAWS_EXPORT GenerateCredentialReportResponse : public IAMResponse {
 public:
     GenerateCredentialReportResponse(const GenerateCredentialReportRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GenerateCredentialReportRequest * request() const;
+    virtual const GenerateCredentialReportRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GenerateCredentialReportResponse)

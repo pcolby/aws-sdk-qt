@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * GetRateBasedRuleManagedKeysRequest::response(
  */
 
 /*!
- *
- * Constructs a GetRateBasedRuleManagedKeysRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a GetRateBasedRuleManagedKeysRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 GetRateBasedRuleManagedKeysRequestPrivate::GetRateBasedRuleManagedKeysRequestPrivate(
     const WAFRegionalRequest::Action action, GetRateBasedRuleManagedKeysRequest * const q)

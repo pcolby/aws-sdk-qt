@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartDeviceSyncResponse : public AlexaForBusinessResponse {
 public:
     StartDeviceSyncResponse(const StartDeviceSyncRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartDeviceSyncRequest * request() const;
+    virtual const StartDeviceSyncRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartDeviceSyncResponse)

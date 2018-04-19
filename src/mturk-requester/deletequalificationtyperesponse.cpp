@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::DeleteQualificationTypeResponse
- *
  * \brief The DeleteQualificationTypeResponse class provides an interace for MTurk DeleteQualificationType responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::deleteQualificationType
  */
 
 /*!
- * @brief  Constructs a new DeleteQualificationTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteQualificationTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteQualificationTypeResponse::DeleteQualificationTypeResponse(
         const DeleteQualificationTypeRequest &request,
@@ -55,6 +50,9 @@ DeleteQualificationTypeResponse::DeleteQualificationTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteQualificationTypeRequest * DeleteQualificationTypeResponse::request() const
 {
     Q_D(const DeleteQualificationTypeResponse);
@@ -62,9 +60,8 @@ const DeleteQualificationTypeRequest * DeleteQualificationTypeResponse::request(
 }
 
 /*!
- * @brief  Parse a MTurk DeleteQualificationType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk DeleteQualificationType \a response.
  */
 void DeleteQualificationTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteQualificationTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::DeleteQualificationTypeResponsePrivate
+ * \brief The DeleteQualificationTypeResponsePrivate class provides private implementation for DeleteQualificationTypeResponse.
  * \internal
  *
- * \class DeleteQualificationTypeResponsePrivate
- *
- * \brief Private implementation for DeleteQualificationTypeResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteQualificationTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteQualificationTypeResponse instance.
+ * Constructs a DeleteQualificationTypeResponsePrivate object with public implementation \a q.
  */
 DeleteQualificationTypeResponsePrivate::DeleteQualificationTypeResponsePrivate(
     DeleteQualificationTypeResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteQualificationTypeResponsePrivate::DeleteQualificationTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk DeleteQualificationTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk DeleteQualificationType response element from \a xml.
  */
 void DeleteQualificationTypeResponsePrivate::parseDeleteQualificationTypeResponse(QXmlStreamReader &xml)
 {

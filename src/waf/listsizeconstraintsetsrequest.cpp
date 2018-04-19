@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListSizeConstraintSetsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListSizeConstraintSetsRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a ListSizeConstraintSetsRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 ListSizeConstraintSetsRequestPrivate::ListSizeConstraintSetsRequestPrivate(
     const WAFRequest::Action action, ListSizeConstraintSetsRequest * const q)

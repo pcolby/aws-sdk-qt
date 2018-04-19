@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteGcmChannelResponse
- *
  * \brief The DeleteGcmChannelResponse class provides an interace for Pinpoint DeleteGcmChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteGcmChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteGcmChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteGcmChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteGcmChannelResponse::DeleteGcmChannelResponse(
         const DeleteGcmChannelRequest &request,
@@ -55,6 +50,9 @@ DeleteGcmChannelResponse::DeleteGcmChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteGcmChannelRequest * DeleteGcmChannelResponse::request() const
 {
     Q_D(const DeleteGcmChannelResponse);
@@ -62,9 +60,8 @@ const DeleteGcmChannelRequest * DeleteGcmChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint DeleteGcmChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint DeleteGcmChannel \a response.
  */
 void DeleteGcmChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteGcmChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::DeleteGcmChannelResponsePrivate
+ * \brief The DeleteGcmChannelResponsePrivate class provides private implementation for DeleteGcmChannelResponse.
  * \internal
  *
- * \class DeleteGcmChannelResponsePrivate
- *
- * \brief Private implementation for DeleteGcmChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGcmChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteGcmChannelResponse instance.
+ * Constructs a DeleteGcmChannelResponsePrivate object with public implementation \a q.
  */
 DeleteGcmChannelResponsePrivate::DeleteGcmChannelResponsePrivate(
     DeleteGcmChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteGcmChannelResponsePrivate::DeleteGcmChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint DeleteGcmChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint DeleteGcmChannel response element from \a xml.
  */
 void DeleteGcmChannelResponsePrivate::parseDeleteGcmChannelResponse(QXmlStreamReader &xml)
 {

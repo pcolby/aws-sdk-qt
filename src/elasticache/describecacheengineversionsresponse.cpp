@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeCacheEngineVersionsResponse
- *
  * \brief The DescribeCacheEngineVersionsResponse class provides an interace for ElastiCache DescribeCacheEngineVersions responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeCacheEngineVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCacheEngineVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCacheEngineVersionsResponse::DescribeCacheEngineVersionsResponse(
         const DescribeCacheEngineVersionsRequest &request,
@@ -69,6 +64,9 @@ DescribeCacheEngineVersionsResponse::DescribeCacheEngineVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCacheEngineVersionsRequest * DescribeCacheEngineVersionsResponse::request() const
 {
     Q_D(const DescribeCacheEngineVersionsResponse);
@@ -76,9 +74,8 @@ const DescribeCacheEngineVersionsRequest * DescribeCacheEngineVersionsResponse::
 }
 
 /*!
- * @brief  Parse a ElastiCache DescribeCacheEngineVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DescribeCacheEngineVersions \a response.
  */
 void DescribeCacheEngineVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeCacheEngineVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::DescribeCacheEngineVersionsResponsePrivate
+ * \brief The DescribeCacheEngineVersionsResponsePrivate class provides private implementation for DescribeCacheEngineVersionsResponse.
  * \internal
  *
- * \class DescribeCacheEngineVersionsResponsePrivate
- *
- * \brief Private implementation for DescribeCacheEngineVersionsResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCacheEngineVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCacheEngineVersionsResponse instance.
+ * Constructs a DescribeCacheEngineVersionsResponsePrivate object with public implementation \a q.
  */
 DescribeCacheEngineVersionsResponsePrivate::DescribeCacheEngineVersionsResponsePrivate(
     DescribeCacheEngineVersionsResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeCacheEngineVersionsResponsePrivate::DescribeCacheEngineVersionsResponseP
 }
 
 /*!
- * @brief  Parse an ElastiCache DescribeCacheEngineVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DescribeCacheEngineVersions response element from \a xml.
  */
 void DescribeCacheEngineVersionsResponsePrivate::parseDescribeCacheEngineVersionsResponse(QXmlStreamReader &xml)
 {

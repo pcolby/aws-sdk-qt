@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDhcpOptionsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeDhcpOptionsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDhcpOptionsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeDhcpOptionsRequestPrivate::DescribeDhcpOptionsRequestPrivate(
     const EC2Request::Action action, DescribeDhcpOptionsRequest * const q)

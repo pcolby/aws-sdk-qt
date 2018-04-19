@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteStreamRequestPrivate object for KinesisVideo \a action with,
- * public implementation \a q.
+ * Constructs a DeleteStreamRequestPrivate object for KinesisVideo \a action,
+ * with public implementation \a q.
  */
 DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
     const KinesisVideoRequest::Action action, DeleteStreamRequest * const q)

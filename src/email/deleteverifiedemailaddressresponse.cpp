@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteVerifiedEmailAddressResponse
- *
  * \brief The DeleteVerifiedEmailAddressResponse class provides an interace for SES DeleteVerifiedEmailAddress responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteVerifiedEmailAddressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVerifiedEmailAddressResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVerifiedEmailAddressResponse::DeleteVerifiedEmailAddressResponse(
         const DeleteVerifiedEmailAddressRequest &request,
@@ -66,6 +61,9 @@ DeleteVerifiedEmailAddressResponse::DeleteVerifiedEmailAddressResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVerifiedEmailAddressRequest * DeleteVerifiedEmailAddressResponse::request() const
 {
     Q_D(const DeleteVerifiedEmailAddressResponse);
@@ -73,9 +71,8 @@ const DeleteVerifiedEmailAddressRequest * DeleteVerifiedEmailAddressResponse::re
 }
 
 /*!
- * @brief  Parse a SES DeleteVerifiedEmailAddress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES DeleteVerifiedEmailAddress \a response.
  */
 void DeleteVerifiedEmailAddressResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteVerifiedEmailAddressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::DeleteVerifiedEmailAddressResponsePrivate
+ * \brief The DeleteVerifiedEmailAddressResponsePrivate class provides private implementation for DeleteVerifiedEmailAddressResponse.
  * \internal
  *
- * \class DeleteVerifiedEmailAddressResponsePrivate
- *
- * \brief Private implementation for DeleteVerifiedEmailAddressResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVerifiedEmailAddressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVerifiedEmailAddressResponse instance.
+ * Constructs a DeleteVerifiedEmailAddressResponsePrivate object with public implementation \a q.
  */
 DeleteVerifiedEmailAddressResponsePrivate::DeleteVerifiedEmailAddressResponsePrivate(
     DeleteVerifiedEmailAddressResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteVerifiedEmailAddressResponsePrivate::DeleteVerifiedEmailAddressResponsePri
 }
 
 /*!
- * @brief  Parse an SES DeleteVerifiedEmailAddressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES DeleteVerifiedEmailAddress response element from \a xml.
  */
 void DeleteVerifiedEmailAddressResponsePrivate::parseDeleteVerifiedEmailAddressResponse(QXmlStreamReader &xml)
 {

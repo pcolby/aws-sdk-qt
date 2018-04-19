@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBuildRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteBuildRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBuildRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DeleteBuildRequestPrivate::DeleteBuildRequestPrivate(
     const GameLiftRequest::Action action, DeleteBuildRequest * const q)

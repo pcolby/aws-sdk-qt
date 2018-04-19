@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ListDevicesResponse
- *
  * \brief The ListDevicesResponse class provides an interace for CognitoIdentityProvider ListDevices responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ListDevicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDevicesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDevicesResponse::ListDevicesResponse(
         const ListDevicesRequest &request,
@@ -65,6 +60,9 @@ ListDevicesResponse::ListDevicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDevicesRequest * ListDevicesResponse::request() const
 {
     Q_D(const ListDevicesResponse);
@@ -72,9 +70,8 @@ const ListDevicesRequest * ListDevicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider ListDevices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider ListDevices \a response.
  */
 void ListDevicesResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void ListDevicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::ListDevicesResponsePrivate
+ * \brief The ListDevicesResponsePrivate class provides private implementation for ListDevicesResponse.
  * \internal
  *
- * \class ListDevicesResponsePrivate
- *
- * \brief Private implementation for ListDevicesResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDevicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDevicesResponse instance.
+ * Constructs a ListDevicesResponsePrivate object with public implementation \a q.
  */
 ListDevicesResponsePrivate::ListDevicesResponsePrivate(
     ListDevicesResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ ListDevicesResponsePrivate::ListDevicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider ListDevicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider ListDevices response element from \a xml.
  */
 void ListDevicesResponsePrivate::parseListDevicesResponse(QXmlStreamReader &xml)
 {

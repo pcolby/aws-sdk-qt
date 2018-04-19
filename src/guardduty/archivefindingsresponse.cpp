@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::ArchiveFindingsResponse
- *
  * \brief The ArchiveFindingsResponse class provides an interace for GuardDuty ArchiveFindings responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::archiveFindings
  */
 
 /*!
- * @brief  Constructs a new ArchiveFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ArchiveFindingsResponse object for \a reply to \a request, with parent \a parent.
  */
 ArchiveFindingsResponse::ArchiveFindingsResponse(
         const ArchiveFindingsRequest &request,
@@ -55,6 +50,9 @@ ArchiveFindingsResponse::ArchiveFindingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ArchiveFindingsRequest * ArchiveFindingsResponse::request() const
 {
     Q_D(const ArchiveFindingsResponse);
@@ -62,9 +60,8 @@ const ArchiveFindingsRequest * ArchiveFindingsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty ArchiveFindings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty ArchiveFindings \a response.
  */
 void ArchiveFindingsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ArchiveFindingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::ArchiveFindingsResponsePrivate
+ * \brief The ArchiveFindingsResponsePrivate class provides private implementation for ArchiveFindingsResponse.
  * \internal
  *
- * \class ArchiveFindingsResponsePrivate
- *
- * \brief Private implementation for ArchiveFindingsResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ArchiveFindingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ArchiveFindingsResponse instance.
+ * Constructs a ArchiveFindingsResponsePrivate object with public implementation \a q.
  */
 ArchiveFindingsResponsePrivate::ArchiveFindingsResponsePrivate(
     ArchiveFindingsResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ ArchiveFindingsResponsePrivate::ArchiveFindingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty ArchiveFindingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty ArchiveFindings response element from \a xml.
  */
 void ArchiveFindingsResponsePrivate::parseArchiveFindingsResponse(QXmlStreamReader &xml)
 {

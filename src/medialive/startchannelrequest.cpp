@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * StartChannelRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a StartChannelRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a StartChannelRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 StartChannelRequestPrivate::StartChannelRequestPrivate(
     const MediaLiveRequest::Action action, StartChannelRequest * const q)

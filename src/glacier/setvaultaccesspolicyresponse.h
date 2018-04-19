@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetVaultAccessPolicyResponse : public GlacierResponse {
 public:
     SetVaultAccessPolicyResponse(const SetVaultAccessPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetVaultAccessPolicyRequest * request() const;
+    virtual const SetVaultAccessPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetVaultAccessPolicyResponse)

@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * CreateHsmClientCertificateRequest::response(Q
  */
 
 /*!
- *
- * Constructs a CreateHsmClientCertificateRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a CreateHsmClientCertificateRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 CreateHsmClientCertificateRequestPrivate::CreateHsmClientCertificateRequestPrivate(
     const RedshiftRequest::Action action, CreateHsmClientCertificateRequest * const q)

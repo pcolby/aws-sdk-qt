@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListAssociatedFleetsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListAssociatedFleetsRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a ListAssociatedFleetsRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 ListAssociatedFleetsRequestPrivate::ListAssociatedFleetsRequestPrivate(
     const AppStreamRequest::Action action, ListAssociatedFleetsRequest * const q)

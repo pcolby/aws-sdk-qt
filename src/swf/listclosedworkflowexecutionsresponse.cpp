@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::ListClosedWorkflowExecutionsResponse
- *
  * \brief The ListClosedWorkflowExecutionsResponse class provides an interace for SWF ListClosedWorkflowExecutions responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new ListClosedWorkflowExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListClosedWorkflowExecutionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListClosedWorkflowExecutionsResponse::ListClosedWorkflowExecutionsResponse(
         const ListClosedWorkflowExecutionsRequest &request,
@@ -71,6 +66,9 @@ ListClosedWorkflowExecutionsResponse::ListClosedWorkflowExecutionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListClosedWorkflowExecutionsRequest * ListClosedWorkflowExecutionsResponse::request() const
 {
     Q_D(const ListClosedWorkflowExecutionsResponse);
@@ -78,9 +76,8 @@ const ListClosedWorkflowExecutionsRequest * ListClosedWorkflowExecutionsResponse
 }
 
 /*!
- * @brief  Parse a SWF ListClosedWorkflowExecutions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF ListClosedWorkflowExecutions \a response.
  */
 void ListClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void ListClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::ListClosedWorkflowExecutionsResponsePrivate
+ * \brief The ListClosedWorkflowExecutionsResponsePrivate class provides private implementation for ListClosedWorkflowExecutionsResponse.
  * \internal
  *
- * \class ListClosedWorkflowExecutionsResponsePrivate
- *
- * \brief Private implementation for ListClosedWorkflowExecutionsResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListClosedWorkflowExecutionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListClosedWorkflowExecutionsResponse instance.
+ * Constructs a ListClosedWorkflowExecutionsResponsePrivate object with public implementation \a q.
  */
 ListClosedWorkflowExecutionsResponsePrivate::ListClosedWorkflowExecutionsResponsePrivate(
     ListClosedWorkflowExecutionsResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ ListClosedWorkflowExecutionsResponsePrivate::ListClosedWorkflowExecutionsRespons
 }
 
 /*!
- * @brief  Parse an SWF ListClosedWorkflowExecutionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF ListClosedWorkflowExecutions response element from \a xml.
  */
 void ListClosedWorkflowExecutionsResponsePrivate::parseListClosedWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {

@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRecordsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateRecordsRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRecordsRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 UpdateRecordsRequestPrivate::UpdateRecordsRequestPrivate(
     const CognitoSyncRequest::Action action, UpdateRecordsRequest * const q)

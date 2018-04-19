@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetServiceRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetServiceRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a GetServiceRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 GetServiceRequestPrivate::GetServiceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, GetServiceRequest * const q)

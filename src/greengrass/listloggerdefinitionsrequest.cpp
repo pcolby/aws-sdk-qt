@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListLoggerDefinitionsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListLoggerDefinitionsRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a ListLoggerDefinitionsRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 ListLoggerDefinitionsRequestPrivate::ListLoggerDefinitionsRequestPrivate(
     const GreengrassRequest::Action action, ListLoggerDefinitionsRequest * const q)

@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::AllocateHostedConnectionResponse
- *
  * \brief The AllocateHostedConnectionResponse class provides an interace for DirectConnect AllocateHostedConnection responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new AllocateHostedConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AllocateHostedConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 AllocateHostedConnectionResponse::AllocateHostedConnectionResponse(
         const AllocateHostedConnectionRequest &request,
@@ -63,6 +58,9 @@ AllocateHostedConnectionResponse::AllocateHostedConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AllocateHostedConnectionRequest * AllocateHostedConnectionResponse::request() const
 {
     Q_D(const AllocateHostedConnectionResponse);
@@ -70,9 +68,8 @@ const AllocateHostedConnectionRequest * AllocateHostedConnectionResponse::reques
 }
 
 /*!
- * @brief  Parse a DirectConnect AllocateHostedConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect AllocateHostedConnection \a response.
  */
 void AllocateHostedConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void AllocateHostedConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::AllocateHostedConnectionResponsePrivate
+ * \brief The AllocateHostedConnectionResponsePrivate class provides private implementation for AllocateHostedConnectionResponse.
  * \internal
  *
- * \class AllocateHostedConnectionResponsePrivate
- *
- * \brief Private implementation for AllocateHostedConnectionResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocateHostedConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AllocateHostedConnectionResponse instance.
+ * Constructs a AllocateHostedConnectionResponsePrivate object with public implementation \a q.
  */
 AllocateHostedConnectionResponsePrivate::AllocateHostedConnectionResponsePrivate(
     AllocateHostedConnectionResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ AllocateHostedConnectionResponsePrivate::AllocateHostedConnectionResponsePrivate
 }
 
 /*!
- * @brief  Parse an DirectConnect AllocateHostedConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect AllocateHostedConnection response element from \a xml.
  */
 void AllocateHostedConnectionResponsePrivate::parseAllocateHostedConnectionResponse(QXmlStreamReader &xml)
 {

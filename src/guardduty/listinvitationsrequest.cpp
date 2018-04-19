@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListInvitationsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ListInvitationsRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a ListInvitationsRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 ListInvitationsRequestPrivate::ListInvitationsRequestPrivate(
     const GuardDutyRequest::Action action, ListInvitationsRequest * const q)

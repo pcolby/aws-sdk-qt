@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::DeleteDeploymentConfigResponse
- *
  * \brief The DeleteDeploymentConfigResponse class provides an interace for CodeDeploy DeleteDeploymentConfig responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new DeleteDeploymentConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDeploymentConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDeploymentConfigResponse::DeleteDeploymentConfigResponse(
         const DeleteDeploymentConfigRequest &request,
@@ -136,6 +131,9 @@ DeleteDeploymentConfigResponse::DeleteDeploymentConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDeploymentConfigRequest * DeleteDeploymentConfigResponse::request() const
 {
     Q_D(const DeleteDeploymentConfigResponse);
@@ -143,9 +141,8 @@ const DeleteDeploymentConfigRequest * DeleteDeploymentConfigResponse::request() 
 }
 
 /*!
- * @brief  Parse a CodeDeploy DeleteDeploymentConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy DeleteDeploymentConfig \a response.
  */
 void DeleteDeploymentConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void DeleteDeploymentConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::DeleteDeploymentConfigResponsePrivate
+ * \brief The DeleteDeploymentConfigResponsePrivate class provides private implementation for DeleteDeploymentConfigResponse.
  * \internal
  *
- * \class DeleteDeploymentConfigResponsePrivate
- *
- * \brief Private implementation for DeleteDeploymentConfigResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDeploymentConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDeploymentConfigResponse instance.
+ * Constructs a DeleteDeploymentConfigResponsePrivate object with public implementation \a q.
  */
 DeleteDeploymentConfigResponsePrivate::DeleteDeploymentConfigResponsePrivate(
     DeleteDeploymentConfigResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ DeleteDeploymentConfigResponsePrivate::DeleteDeploymentConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy DeleteDeploymentConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy DeleteDeploymentConfig response element from \a xml.
  */
 void DeleteDeploymentConfigResponsePrivate::parseDeleteDeploymentConfigResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::AddTagsResponse
- *
  * \brief The AddTagsResponse class provides an interace for ElasticLoadBalancingv2 AddTags responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new AddTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 AddTagsResponse::AddTagsResponse(
         const AddTagsRequest &request,
@@ -123,6 +118,9 @@ AddTagsResponse::AddTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddTagsRequest * AddTagsResponse::request() const
 {
     Q_D(const AddTagsResponse);
@@ -130,9 +128,8 @@ const AddTagsRequest * AddTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 AddTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 AddTags \a response.
  */
 void AddTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void AddTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::AddTagsResponsePrivate
+ * \brief The AddTagsResponsePrivate class provides private implementation for AddTagsResponse.
  * \internal
  *
- * \class AddTagsResponsePrivate
- *
- * \brief Private implementation for AddTagsResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddTagsResponse instance.
+ * Constructs a AddTagsResponsePrivate object with public implementation \a q.
  */
 AddTagsResponsePrivate::AddTagsResponsePrivate(
     AddTagsResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ AddTagsResponsePrivate::AddTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 AddTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 AddTags response element from \a xml.
  */
 void AddTagsResponsePrivate::parseAddTagsResponse(QXmlStreamReader &xml)
 {

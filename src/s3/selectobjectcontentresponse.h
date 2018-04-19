@@ -34,10 +34,10 @@ class QTAWS_EXPORT SelectObjectContentResponse : public S3Response {
 public:
     SelectObjectContentResponse(const SelectObjectContentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SelectObjectContentRequest * request() const;
+    virtual const SelectObjectContentRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SelectObjectContentResponse)

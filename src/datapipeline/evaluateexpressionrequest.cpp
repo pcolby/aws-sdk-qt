@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * EvaluateExpressionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a EvaluateExpressionRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a EvaluateExpressionRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 EvaluateExpressionRequestPrivate::EvaluateExpressionRequestPrivate(
     const DataPipelineRequest::Action action, EvaluateExpressionRequest * const q)

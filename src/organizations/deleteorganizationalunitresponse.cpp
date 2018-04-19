@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DeleteOrganizationalUnitResponse
- *
  * \brief The DeleteOrganizationalUnitResponse class provides an interace for Organizations DeleteOrganizationalUnit responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DeleteOrganizationalUnitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteOrganizationalUnitResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteOrganizationalUnitResponse::DeleteOrganizationalUnitResponse(
         const DeleteOrganizationalUnitRequest &request,
@@ -197,6 +192,9 @@ DeleteOrganizationalUnitResponse::DeleteOrganizationalUnitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteOrganizationalUnitRequest * DeleteOrganizationalUnitResponse::request() const
 {
     Q_D(const DeleteOrganizationalUnitResponse);
@@ -204,9 +202,8 @@ const DeleteOrganizationalUnitRequest * DeleteOrganizationalUnitResponse::reques
 }
 
 /*!
- * @brief  Parse a Organizations DeleteOrganizationalUnit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations DeleteOrganizationalUnit \a response.
  */
 void DeleteOrganizationalUnitResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void DeleteOrganizationalUnitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::DeleteOrganizationalUnitResponsePrivate
+ * \brief The DeleteOrganizationalUnitResponsePrivate class provides private implementation for DeleteOrganizationalUnitResponse.
  * \internal
  *
- * \class DeleteOrganizationalUnitResponsePrivate
- *
- * \brief Private implementation for DeleteOrganizationalUnitResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteOrganizationalUnitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteOrganizationalUnitResponse instance.
+ * Constructs a DeleteOrganizationalUnitResponsePrivate object with public implementation \a q.
  */
 DeleteOrganizationalUnitResponsePrivate::DeleteOrganizationalUnitResponsePrivate(
     DeleteOrganizationalUnitResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ DeleteOrganizationalUnitResponsePrivate::DeleteOrganizationalUnitResponsePrivate
 }
 
 /*!
- * @brief  Parse an Organizations DeleteOrganizationalUnitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations DeleteOrganizationalUnit response element from \a xml.
  */
 void DeleteOrganizationalUnitResponsePrivate::parseDeleteOrganizationalUnitResponse(QXmlStreamReader &xml)
 {

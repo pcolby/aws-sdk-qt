@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDataSourceFromRedshiftResponse : public MachineLearning
 public:
     CreateDataSourceFromRedshiftResponse(const CreateDataSourceFromRedshiftRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDataSourceFromRedshiftRequest * request() const;
+    virtual const CreateDataSourceFromRedshiftRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDataSourceFromRedshiftResponse)

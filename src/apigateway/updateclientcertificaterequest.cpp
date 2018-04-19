@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateClientCertificateRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateClientCertificateRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateClientCertificateRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 UpdateClientCertificateRequestPrivate::UpdateClientCertificateRequestPrivate(
     const APIGatewayRequest::Action action, UpdateClientCertificateRequest * const q)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UntagResourceRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a UntagResourceRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const AlexaForBusinessRequest::Action action, UntagResourceRequest * const q)

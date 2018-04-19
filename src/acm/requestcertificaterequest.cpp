@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * RequestCertificateRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a RequestCertificateRequestPrivate object for ACM \a action with,
- * public implementation \a q.
+ * Constructs a RequestCertificateRequestPrivate object for ACM \a action,
+ * with public implementation \a q.
  */
 RequestCertificateRequestPrivate::RequestCertificateRequestPrivate(
     const ACMRequest::Action action, RequestCertificateRequest * const q)

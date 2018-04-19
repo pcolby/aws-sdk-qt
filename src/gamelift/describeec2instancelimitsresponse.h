@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEC2InstanceLimitsResponse : public GameLiftResponse {
 public:
     DescribeEC2InstanceLimitsResponse(const DescribeEC2InstanceLimitsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEC2InstanceLimitsRequest * request() const;
+    virtual const DescribeEC2InstanceLimitsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEC2InstanceLimitsResponse)

@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSnapshotScheduleRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateSnapshotScheduleRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSnapshotScheduleRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 UpdateSnapshotScheduleRequestPrivate::UpdateSnapshotScheduleRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateSnapshotScheduleRequest * const q)

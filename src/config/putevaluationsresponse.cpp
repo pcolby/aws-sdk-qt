@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutEvaluationsResponse
- *
  * \brief The PutEvaluationsResponse class provides an interace for ConfigService PutEvaluations responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutEvaluationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutEvaluationsResponse object for \a reply to \a request, with parent \a parent.
  */
 PutEvaluationsResponse::PutEvaluationsResponse(
         const PutEvaluationsRequest &request,
@@ -78,6 +73,9 @@ PutEvaluationsResponse::PutEvaluationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutEvaluationsRequest * PutEvaluationsResponse::request() const
 {
     Q_D(const PutEvaluationsResponse);
@@ -85,9 +83,8 @@ const PutEvaluationsRequest * PutEvaluationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ConfigService PutEvaluations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService PutEvaluations \a response.
  */
 void PutEvaluationsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void PutEvaluationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::PutEvaluationsResponsePrivate
+ * \brief The PutEvaluationsResponsePrivate class provides private implementation for PutEvaluationsResponse.
  * \internal
  *
- * \class PutEvaluationsResponsePrivate
- *
- * \brief Private implementation for PutEvaluationsResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutEvaluationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutEvaluationsResponse instance.
+ * Constructs a PutEvaluationsResponsePrivate object with public implementation \a q.
  */
 PutEvaluationsResponsePrivate::PutEvaluationsResponsePrivate(
     PutEvaluationsResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ PutEvaluationsResponsePrivate::PutEvaluationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ConfigService PutEvaluationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService PutEvaluations response element from \a xml.
  */
 void PutEvaluationsResponsePrivate::parsePutEvaluationsResponse(QXmlStreamReader &xml)
 {

@@ -28,16 +28,13 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::Route53Response
- *
  * \brief The Route53Response class provides an interface for Route53 responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @brief  Constructs a new Route53Response object.
- *
- * @param  parent   This object's parent.
+ * Constructs a Route53Response object with parent \a parent.
  */
 Route53Response::Route53Response(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new Route53ResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ Route53Response::Route53Response(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new Route53Response object.
- *
+ * \internal
+ * Constructs a Route53Response object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from Route53ResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 Route53Response::Route53Response(Route53ResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ Route53Response::Route53Response(Route53ResponsePrivate * const d, QObject * con
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void Route53Response::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void Route53Response::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53::Route53ResponsePrivate
+ * \brief The Route53ResponsePrivate class provides private implementation for Route53Response.
+ * \internal
  *
- * @class  Route53ResponsePrivate
- *
- * @brief  Private implementation for Route53Response.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new Route53ResponsePrivate object.
- *
- * @param  q  Pointer to this object's public Route53Response instance.
+ * Constructs a Route53ResponsePrivate object with public implementation \a q.
  */
 Route53ResponsePrivate::Route53ResponsePrivate(
     Route53Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

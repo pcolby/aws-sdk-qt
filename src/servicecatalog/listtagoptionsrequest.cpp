@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListTagOptionsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListTagOptionsRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ListTagOptionsRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ListTagOptionsRequestPrivate::ListTagOptionsRequestPrivate(
     const ServiceCatalogRequest::Action action, ListTagOptionsRequest * const q)

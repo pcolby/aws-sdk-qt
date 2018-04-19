@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a AddPermissionRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a AddPermissionRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
     const LambdaRequest::Action action, AddPermissionRequest * const q)

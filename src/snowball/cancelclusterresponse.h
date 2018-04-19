@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelClusterResponse : public SnowballResponse {
 public:
     CancelClusterResponse(const CancelClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelClusterRequest * request() const;
+    virtual const CancelClusterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CancelClusterResponse)

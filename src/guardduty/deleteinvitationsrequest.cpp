@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteInvitationsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteInvitationsRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a DeleteInvitationsRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 DeleteInvitationsRequestPrivate::DeleteInvitationsRequestPrivate(
     const GuardDutyRequest::Action action, DeleteInvitationsRequest * const q)

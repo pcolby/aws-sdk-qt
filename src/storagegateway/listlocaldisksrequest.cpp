@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * ListLocalDisksRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListLocalDisksRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a ListLocalDisksRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 ListLocalDisksRequestPrivate::ListLocalDisksRequestPrivate(
     const StorageGatewayRequest::Action action, ListLocalDisksRequest * const q)

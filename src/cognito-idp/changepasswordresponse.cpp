@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ChangePasswordResponse
- *
  * \brief The ChangePasswordResponse class provides an interace for CognitoIdentityProvider ChangePassword responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ChangePasswordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ChangePasswordResponse object for \a reply to \a request, with parent \a parent.
  */
 ChangePasswordResponse::ChangePasswordResponse(
         const ChangePasswordRequest &request,
@@ -65,6 +60,9 @@ ChangePasswordResponse::ChangePasswordResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ChangePasswordRequest * ChangePasswordResponse::request() const
 {
     Q_D(const ChangePasswordResponse);
@@ -72,9 +70,8 @@ const ChangePasswordRequest * ChangePasswordResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider ChangePassword response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider ChangePassword \a response.
  */
 void ChangePasswordResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void ChangePasswordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::ChangePasswordResponsePrivate
+ * \brief The ChangePasswordResponsePrivate class provides private implementation for ChangePasswordResponse.
  * \internal
  *
- * \class ChangePasswordResponsePrivate
- *
- * \brief Private implementation for ChangePasswordResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ChangePasswordResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ChangePasswordResponse instance.
+ * Constructs a ChangePasswordResponsePrivate object with public implementation \a q.
  */
 ChangePasswordResponsePrivate::ChangePasswordResponsePrivate(
     ChangePasswordResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ ChangePasswordResponsePrivate::ChangePasswordResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider ChangePasswordResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider ChangePassword response element from \a xml.
  */
 void ChangePasswordResponsePrivate::parseChangePasswordResponse(QXmlStreamReader &xml)
 {

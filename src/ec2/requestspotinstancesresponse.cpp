@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RequestSpotInstancesResponse
- *
  * \brief The RequestSpotInstancesResponse class provides an interace for EC2 RequestSpotInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RequestSpotInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RequestSpotInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 RequestSpotInstancesResponse::RequestSpotInstancesResponse(
         const RequestSpotInstancesRequest &request,
@@ -59,6 +54,9 @@ RequestSpotInstancesResponse::RequestSpotInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RequestSpotInstancesRequest * RequestSpotInstancesResponse::request() const
 {
     Q_D(const RequestSpotInstancesResponse);
@@ -66,9 +64,8 @@ const RequestSpotInstancesRequest * RequestSpotInstancesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 RequestSpotInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 RequestSpotInstances \a response.
  */
 void RequestSpotInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void RequestSpotInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::RequestSpotInstancesResponsePrivate
+ * \brief The RequestSpotInstancesResponsePrivate class provides private implementation for RequestSpotInstancesResponse.
  * \internal
  *
- * \class RequestSpotInstancesResponsePrivate
- *
- * \brief Private implementation for RequestSpotInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RequestSpotInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RequestSpotInstancesResponse instance.
+ * Constructs a RequestSpotInstancesResponsePrivate object with public implementation \a q.
  */
 RequestSpotInstancesResponsePrivate::RequestSpotInstancesResponsePrivate(
     RequestSpotInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ RequestSpotInstancesResponsePrivate::RequestSpotInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 RequestSpotInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 RequestSpotInstances response element from \a xml.
  */
 void RequestSpotInstancesResponsePrivate::parseRequestSpotInstancesResponse(QXmlStreamReader &xml)
 {

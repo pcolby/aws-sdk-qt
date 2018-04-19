@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetRegexMatchSetResponse : public WAFRegionalResponse {
 public:
     GetRegexMatchSetResponse(const GetRegexMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetRegexMatchSetRequest * request() const;
+    virtual const GetRegexMatchSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetRegexMatchSetResponse)

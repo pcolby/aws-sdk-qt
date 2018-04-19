@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeImageBuildersRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeImageBuildersRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a DescribeImageBuildersRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 DescribeImageBuildersRequestPrivate::DescribeImageBuildersRequestPrivate(
     const AppStreamRequest::Action action, DescribeImageBuildersRequest * const q)

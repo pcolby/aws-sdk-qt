@@ -29,10 +29,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::DeleteNamedQueryResponse
- *
  * \brief The DeleteNamedQueryResponse class provides an interace for Athena DeleteNamedQuery responses.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -51,11 +50,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new DeleteNamedQueryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNamedQueryResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNamedQueryResponse::DeleteNamedQueryResponse(
         const DeleteNamedQueryRequest &request,
@@ -67,6 +62,9 @@ DeleteNamedQueryResponse::DeleteNamedQueryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNamedQueryRequest * DeleteNamedQueryResponse::request() const
 {
     Q_D(const DeleteNamedQueryResponse);
@@ -74,9 +72,8 @@ const DeleteNamedQueryRequest * DeleteNamedQueryResponse::request() const
 }
 
 /*!
- * @brief  Parse a Athena DeleteNamedQuery response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Athena DeleteNamedQuery \a response.
  */
 void DeleteNamedQueryResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void DeleteNamedQueryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Athena::DeleteNamedQueryResponsePrivate
+ * \brief The DeleteNamedQueryResponsePrivate class provides private implementation for DeleteNamedQueryResponse.
  * \internal
  *
- * \class DeleteNamedQueryResponsePrivate
- *
- * \brief Private implementation for DeleteNamedQueryResponse.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNamedQueryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNamedQueryResponse instance.
+ * Constructs a DeleteNamedQueryResponsePrivate object with public implementation \a q.
  */
 DeleteNamedQueryResponsePrivate::DeleteNamedQueryResponsePrivate(
     DeleteNamedQueryResponse * const q) : AthenaResponsePrivate(q)
@@ -107,9 +100,7 @@ DeleteNamedQueryResponsePrivate::DeleteNamedQueryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Athena DeleteNamedQueryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Athena DeleteNamedQuery response element from \a xml.
  */
 void DeleteNamedQueryResponsePrivate::parseDeleteNamedQueryResponse(QXmlStreamReader &xml)
 {

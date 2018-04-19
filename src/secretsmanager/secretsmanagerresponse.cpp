@@ -28,16 +28,13 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::SecretsManagerResponse
- *
  * \brief The SecretsManagerResponse class provides an interface for SecretsManager responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @brief  Constructs a new SecretsManagerResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a SecretsManagerResponse object with parent \a parent.
  */
 SecretsManagerResponse::SecretsManagerResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new SecretsManagerResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ SecretsManagerResponse::SecretsManagerResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SecretsManagerResponse object.
- *
+ * \internal
+ * Constructs a SecretsManagerResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SecretsManagerResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 SecretsManagerResponse::SecretsManagerResponse(SecretsManagerResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ SecretsManagerResponse::SecretsManagerResponse(SecretsManagerResponsePrivate * c
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void SecretsManagerResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void SecretsManagerResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::SecretsManager::SecretsManagerResponsePrivate
+ * \brief The SecretsManagerResponsePrivate class provides private implementation for SecretsManagerResponse.
+ * \internal
  *
- * @class  SecretsManagerResponsePrivate
- *
- * @brief  Private implementation for SecretsManagerResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SecretsManagerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SecretsManagerResponse instance.
+ * Constructs a SecretsManagerResponsePrivate object with public implementation \a q.
  */
 SecretsManagerResponsePrivate::SecretsManagerResponsePrivate(
     SecretsManagerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

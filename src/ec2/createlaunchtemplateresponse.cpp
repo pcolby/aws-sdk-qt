@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateLaunchTemplateResponse
- *
  * \brief The CreateLaunchTemplateResponse class provides an interace for EC2 CreateLaunchTemplate responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateLaunchTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLaunchTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLaunchTemplateResponse::CreateLaunchTemplateResponse(
         const CreateLaunchTemplateRequest &request,
@@ -59,6 +54,9 @@ CreateLaunchTemplateResponse::CreateLaunchTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLaunchTemplateRequest * CreateLaunchTemplateResponse::request() const
 {
     Q_D(const CreateLaunchTemplateResponse);
@@ -66,9 +64,8 @@ const CreateLaunchTemplateRequest * CreateLaunchTemplateResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 CreateLaunchTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateLaunchTemplate \a response.
  */
 void CreateLaunchTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateLaunchTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateLaunchTemplateResponsePrivate
+ * \brief The CreateLaunchTemplateResponsePrivate class provides private implementation for CreateLaunchTemplateResponse.
  * \internal
  *
- * \class CreateLaunchTemplateResponsePrivate
- *
- * \brief Private implementation for CreateLaunchTemplateResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLaunchTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLaunchTemplateResponse instance.
+ * Constructs a CreateLaunchTemplateResponsePrivate object with public implementation \a q.
  */
 CreateLaunchTemplateResponsePrivate::CreateLaunchTemplateResponsePrivate(
     CreateLaunchTemplateResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateLaunchTemplateResponsePrivate::CreateLaunchTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateLaunchTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateLaunchTemplate response element from \a xml.
  */
 void CreateLaunchTemplateResponsePrivate::parseCreateLaunchTemplateResponse(QXmlStreamReader &xml)
 {

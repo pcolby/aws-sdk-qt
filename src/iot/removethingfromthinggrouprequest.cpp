@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * RemoveThingFromThingGroupRequest::response(QN
  */
 
 /*!
- *
- * Constructs a RemoveThingFromThingGroupRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a RemoveThingFromThingGroupRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 RemoveThingFromThingGroupRequestPrivate::RemoveThingFromThingGroupRequestPrivate(
     const IoTRequest::Action action, RemoveThingFromThingGroupRequest * const q)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * BuildSuggestersRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a BuildSuggestersRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a BuildSuggestersRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 BuildSuggestersRequestPrivate::BuildSuggestersRequestPrivate(
     const CloudSearchRequest::Action action, BuildSuggestersRequest * const q)

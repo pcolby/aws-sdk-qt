@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteTableRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a BatchDeleteTableRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a BatchDeleteTableRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 BatchDeleteTableRequestPrivate::BatchDeleteTableRequestPrivate(
     const GlueRequest::Action action, BatchDeleteTableRequest * const q)

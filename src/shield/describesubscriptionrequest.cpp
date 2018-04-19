@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSubscriptionRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeSubscriptionRequestPrivate object for Shield \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSubscriptionRequestPrivate object for Shield \a action,
+ * with public implementation \a q.
  */
 DescribeSubscriptionRequestPrivate::DescribeSubscriptionRequestPrivate(
     const ShieldRequest::Action action, DescribeSubscriptionRequest * const q)

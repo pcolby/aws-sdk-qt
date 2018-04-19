@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * CreateLabelsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateLabelsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a CreateLabelsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 CreateLabelsRequestPrivate::CreateLabelsRequestPrivate(
     const WorkDocsRequest::Action action, CreateLabelsRequest * const q)

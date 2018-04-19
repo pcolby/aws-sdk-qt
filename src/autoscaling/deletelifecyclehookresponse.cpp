@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeleteLifecycleHookResponse
- *
  * \brief The DeleteLifecycleHookResponse class provides an interace for AutoScaling DeleteLifecycleHook responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteLifecycleHookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLifecycleHookResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLifecycleHookResponse::DeleteLifecycleHookResponse(
         const DeleteLifecycleHookRequest &request,
@@ -60,6 +55,9 @@ DeleteLifecycleHookResponse::DeleteLifecycleHookResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLifecycleHookRequest * DeleteLifecycleHookResponse::request() const
 {
     Q_D(const DeleteLifecycleHookResponse);
@@ -67,9 +65,8 @@ const DeleteLifecycleHookRequest * DeleteLifecycleHookResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling DeleteLifecycleHook response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DeleteLifecycleHook \a response.
  */
 void DeleteLifecycleHookResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteLifecycleHookResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DeleteLifecycleHookResponsePrivate
+ * \brief The DeleteLifecycleHookResponsePrivate class provides private implementation for DeleteLifecycleHookResponse.
  * \internal
  *
- * \class DeleteLifecycleHookResponsePrivate
- *
- * \brief Private implementation for DeleteLifecycleHookResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLifecycleHookResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLifecycleHookResponse instance.
+ * Constructs a DeleteLifecycleHookResponsePrivate object with public implementation \a q.
  */
 DeleteLifecycleHookResponsePrivate::DeleteLifecycleHookResponsePrivate(
     DeleteLifecycleHookResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteLifecycleHookResponsePrivate::DeleteLifecycleHookResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling DeleteLifecycleHookResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DeleteLifecycleHook response element from \a xml.
  */
 void DeleteLifecycleHookResponsePrivate::parseDeleteLifecycleHookResponse(QXmlStreamReader &xml)
 {

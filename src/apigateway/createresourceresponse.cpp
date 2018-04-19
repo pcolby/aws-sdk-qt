@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateResourceResponse
- *
  * \brief The CreateResourceResponse class provides an interace for APIGateway CreateResource responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateResourceResponse::CreateResourceResponse(
         const CreateResourceRequest &request,
@@ -60,6 +55,9 @@ CreateResourceResponse::CreateResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateResourceRequest * CreateResourceResponse::request() const
 {
     Q_D(const CreateResourceResponse);
@@ -67,9 +65,8 @@ const CreateResourceRequest * CreateResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway CreateResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway CreateResource \a response.
  */
 void CreateResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::CreateResourceResponsePrivate
+ * \brief The CreateResourceResponsePrivate class provides private implementation for CreateResourceResponse.
  * \internal
  *
- * \class CreateResourceResponsePrivate
- *
- * \brief Private implementation for CreateResourceResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateResourceResponse instance.
+ * Constructs a CreateResourceResponsePrivate object with public implementation \a q.
  */
 CreateResourceResponsePrivate::CreateResourceResponsePrivate(
     CreateResourceResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateResourceResponsePrivate::CreateResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway CreateResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway CreateResource response element from \a xml.
  */
 void CreateResourceResponsePrivate::parseCreateResourceResponse(QXmlStreamReader &xml)
 {

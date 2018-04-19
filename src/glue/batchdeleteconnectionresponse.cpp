@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::BatchDeleteConnectionResponse
- *
  * \brief The BatchDeleteConnectionResponse class provides an interace for Glue BatchDeleteConnection responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new BatchDeleteConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchDeleteConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchDeleteConnectionResponse::BatchDeleteConnectionResponse(
         const BatchDeleteConnectionRequest &request,
@@ -58,6 +53,9 @@ BatchDeleteConnectionResponse::BatchDeleteConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchDeleteConnectionRequest * BatchDeleteConnectionResponse::request() const
 {
     Q_D(const BatchDeleteConnectionResponse);
@@ -65,9 +63,8 @@ const BatchDeleteConnectionRequest * BatchDeleteConnectionResponse::request() co
 }
 
 /*!
- * @brief  Parse a Glue BatchDeleteConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue BatchDeleteConnection \a response.
  */
 void BatchDeleteConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void BatchDeleteConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::BatchDeleteConnectionResponsePrivate
+ * \brief The BatchDeleteConnectionResponsePrivate class provides private implementation for BatchDeleteConnectionResponse.
  * \internal
  *
- * \class BatchDeleteConnectionResponsePrivate
- *
- * \brief Private implementation for BatchDeleteConnectionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeleteConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchDeleteConnectionResponse instance.
+ * Constructs a BatchDeleteConnectionResponsePrivate object with public implementation \a q.
  */
 BatchDeleteConnectionResponsePrivate::BatchDeleteConnectionResponsePrivate(
     BatchDeleteConnectionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ BatchDeleteConnectionResponsePrivate::BatchDeleteConnectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue BatchDeleteConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue BatchDeleteConnection response element from \a xml.
  */
 void BatchDeleteConnectionResponsePrivate::parseBatchDeleteConnectionResponse(QXmlStreamReader &xml)
 {

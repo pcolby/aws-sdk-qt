@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListAccountsResponse
- *
  * \brief The ListAccountsResponse class provides an interace for Organizations ListAccounts responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListAccountsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAccountsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAccountsResponse::ListAccountsResponse(
         const ListAccountsRequest &request,
@@ -197,6 +192,9 @@ ListAccountsResponse::ListAccountsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAccountsRequest * ListAccountsResponse::request() const
 {
     Q_D(const ListAccountsResponse);
@@ -204,9 +202,8 @@ const ListAccountsRequest * ListAccountsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations ListAccounts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations ListAccounts \a response.
  */
 void ListAccountsResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void ListAccountsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::ListAccountsResponsePrivate
+ * \brief The ListAccountsResponsePrivate class provides private implementation for ListAccountsResponse.
  * \internal
  *
- * \class ListAccountsResponsePrivate
- *
- * \brief Private implementation for ListAccountsResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAccountsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAccountsResponse instance.
+ * Constructs a ListAccountsResponsePrivate object with public implementation \a q.
  */
 ListAccountsResponsePrivate::ListAccountsResponsePrivate(
     ListAccountsResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ ListAccountsResponsePrivate::ListAccountsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations ListAccountsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations ListAccounts response element from \a xml.
  */
 void ListAccountsResponsePrivate::parseListAccountsResponse(QXmlStreamReader &xml)
 {

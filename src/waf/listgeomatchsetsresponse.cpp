@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListGeoMatchSetsResponse
- *
  * \brief The ListGeoMatchSetsResponse class provides an interace for WAF ListGeoMatchSets responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListGeoMatchSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGeoMatchSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGeoMatchSetsResponse::ListGeoMatchSetsResponse(
         const ListGeoMatchSetsRequest &request,
@@ -60,6 +55,9 @@ ListGeoMatchSetsResponse::ListGeoMatchSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGeoMatchSetsRequest * ListGeoMatchSetsResponse::request() const
 {
     Q_D(const ListGeoMatchSetsResponse);
@@ -67,9 +65,8 @@ const ListGeoMatchSetsRequest * ListGeoMatchSetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF ListGeoMatchSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF ListGeoMatchSets \a response.
  */
 void ListGeoMatchSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListGeoMatchSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::ListGeoMatchSetsResponsePrivate
+ * \brief The ListGeoMatchSetsResponsePrivate class provides private implementation for ListGeoMatchSetsResponse.
  * \internal
  *
- * \class ListGeoMatchSetsResponsePrivate
- *
- * \brief Private implementation for ListGeoMatchSetsResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGeoMatchSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGeoMatchSetsResponse instance.
+ * Constructs a ListGeoMatchSetsResponsePrivate object with public implementation \a q.
  */
 ListGeoMatchSetsResponsePrivate::ListGeoMatchSetsResponsePrivate(
     ListGeoMatchSetsResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ ListGeoMatchSetsResponsePrivate::ListGeoMatchSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF ListGeoMatchSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF ListGeoMatchSets response element from \a xml.
  */
 void ListGeoMatchSetsResponsePrivate::parseListGeoMatchSetsResponse(QXmlStreamReader &xml)
 {

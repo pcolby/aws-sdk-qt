@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBSubnetGroupsResponse
- *
  * \brief The DescribeDBSubnetGroupsResponse class provides an interace for RDS DescribeDBSubnetGroups responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBSubnetGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDBSubnetGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDBSubnetGroupsResponse::DescribeDBSubnetGroupsResponse(
         const DescribeDBSubnetGroupsRequest &request,
@@ -119,6 +114,9 @@ DescribeDBSubnetGroupsResponse::DescribeDBSubnetGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDBSubnetGroupsRequest * DescribeDBSubnetGroupsResponse::request() const
 {
     Q_D(const DescribeDBSubnetGroupsResponse);
@@ -126,9 +124,8 @@ const DescribeDBSubnetGroupsRequest * DescribeDBSubnetGroupsResponse::request() 
 }
 
 /*!
- * @brief  Parse a RDS DescribeDBSubnetGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeDBSubnetGroups \a response.
  */
 void DescribeDBSubnetGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeDBSubnetGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeDBSubnetGroupsResponsePrivate
+ * \brief The DescribeDBSubnetGroupsResponsePrivate class provides private implementation for DescribeDBSubnetGroupsResponse.
  * \internal
  *
- * \class DescribeDBSubnetGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeDBSubnetGroupsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBSubnetGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDBSubnetGroupsResponse instance.
+ * Constructs a DescribeDBSubnetGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeDBSubnetGroupsResponsePrivate::DescribeDBSubnetGroupsResponsePrivate(
     DescribeDBSubnetGroupsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeDBSubnetGroupsResponsePrivate::DescribeDBSubnetGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DescribeDBSubnetGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeDBSubnetGroups response element from \a xml.
  */
 void DescribeDBSubnetGroupsResponsePrivate::parseDescribeDBSubnetGroupsResponse(QXmlStreamReader &xml)
 {

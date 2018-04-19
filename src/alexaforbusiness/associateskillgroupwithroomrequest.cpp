@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * AssociateSkillGroupWithRoomRequest::response(
  */
 
 /*!
- *
- * Constructs a AssociateSkillGroupWithRoomRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a AssociateSkillGroupWithRoomRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 AssociateSkillGroupWithRoomRequestPrivate::AssociateSkillGroupWithRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, AssociateSkillGroupWithRoomRequest * const q)

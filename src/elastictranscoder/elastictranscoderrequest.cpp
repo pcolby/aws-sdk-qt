@@ -56,7 +56,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * Constructs a[n] ElasticTranscoderRequest object for ElasticTranscoder \a action.
+ * Constructs a ElasticTranscoderRequest object for ElasticTranscoder \a action.
  */
 ElasticTranscoderRequest::ElasticTranscoderRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ElasticTranscoderRequestPrivate(action, this))
@@ -256,8 +256,8 @@ QNetworkRequest ElasticTranscoderRequest::unsignedRequest(const QUrl &endpoint) 
  */
 
 /*!
- * Constructs a ElasticTranscoderRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a ElasticTranscoderRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 ElasticTranscoderRequestPrivate::ElasticTranscoderRequestPrivate(const ElasticTranscoderRequest::Action action, ElasticTranscoderRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::UnassignPrivateIpAddressesResponse
- *
  * \brief The UnassignPrivateIpAddressesResponse class provides an interace for EC2 UnassignPrivateIpAddresses responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new UnassignPrivateIpAddressesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UnassignPrivateIpAddressesResponse object for \a reply to \a request, with parent \a parent.
  */
 UnassignPrivateIpAddressesResponse::UnassignPrivateIpAddressesResponse(
         const UnassignPrivateIpAddressesRequest &request,
@@ -59,6 +54,9 @@ UnassignPrivateIpAddressesResponse::UnassignPrivateIpAddressesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UnassignPrivateIpAddressesRequest * UnassignPrivateIpAddressesResponse::request() const
 {
     Q_D(const UnassignPrivateIpAddressesResponse);
@@ -66,9 +64,8 @@ const UnassignPrivateIpAddressesRequest * UnassignPrivateIpAddressesResponse::re
 }
 
 /*!
- * @brief  Parse a EC2 UnassignPrivateIpAddresses response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 UnassignPrivateIpAddresses \a response.
  */
 void UnassignPrivateIpAddressesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void UnassignPrivateIpAddressesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::UnassignPrivateIpAddressesResponsePrivate
+ * \brief The UnassignPrivateIpAddressesResponsePrivate class provides private implementation for UnassignPrivateIpAddressesResponse.
  * \internal
  *
- * \class UnassignPrivateIpAddressesResponsePrivate
- *
- * \brief Private implementation for UnassignPrivateIpAddressesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnassignPrivateIpAddressesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UnassignPrivateIpAddressesResponse instance.
+ * Constructs a UnassignPrivateIpAddressesResponsePrivate object with public implementation \a q.
  */
 UnassignPrivateIpAddressesResponsePrivate::UnassignPrivateIpAddressesResponsePrivate(
     UnassignPrivateIpAddressesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ UnassignPrivateIpAddressesResponsePrivate::UnassignPrivateIpAddressesResponsePri
 }
 
 /*!
- * @brief  Parse an EC2 UnassignPrivateIpAddressesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 UnassignPrivateIpAddresses response element from \a xml.
  */
 void UnassignPrivateIpAddressesResponsePrivate::parseUnassignPrivateIpAddressesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::DescribeJobDefinitionsResponse
- *
  * \brief The DescribeJobDefinitionsResponse class provides an interace for Batch DescribeJobDefinitions responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobDefinitionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeJobDefinitionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeJobDefinitionsResponse::DescribeJobDefinitionsResponse(
         const DescribeJobDefinitionsRequest &request,
@@ -69,6 +64,9 @@ DescribeJobDefinitionsResponse::DescribeJobDefinitionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeJobDefinitionsRequest * DescribeJobDefinitionsResponse::request() const
 {
     Q_D(const DescribeJobDefinitionsResponse);
@@ -76,9 +74,8 @@ const DescribeJobDefinitionsRequest * DescribeJobDefinitionsResponse::request() 
 }
 
 /*!
- * @brief  Parse a Batch DescribeJobDefinitions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch DescribeJobDefinitions \a response.
  */
 void DescribeJobDefinitionsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeJobDefinitionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::DescribeJobDefinitionsResponsePrivate
+ * \brief The DescribeJobDefinitionsResponsePrivate class provides private implementation for DescribeJobDefinitionsResponse.
  * \internal
  *
- * \class DescribeJobDefinitionsResponsePrivate
- *
- * \brief Private implementation for DescribeJobDefinitionsResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobDefinitionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeJobDefinitionsResponse instance.
+ * Constructs a DescribeJobDefinitionsResponsePrivate object with public implementation \a q.
  */
 DescribeJobDefinitionsResponsePrivate::DescribeJobDefinitionsResponsePrivate(
     DescribeJobDefinitionsResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeJobDefinitionsResponsePrivate::DescribeJobDefinitionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Batch DescribeJobDefinitionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch DescribeJobDefinitions response element from \a xml.
  */
 void DescribeJobDefinitionsResponsePrivate::parseDescribeJobDefinitionsResponse(QXmlStreamReader &xml)
 {

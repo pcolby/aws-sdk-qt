@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetContactResponse
- *
  * \brief The GetContactResponse class provides an interace for AlexaForBusiness GetContact responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetContactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetContactResponse object for \a reply to \a request, with parent \a parent.
  */
 GetContactResponse::GetContactResponse(
         const GetContactRequest &request,
@@ -60,6 +55,9 @@ GetContactResponse::GetContactResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetContactRequest * GetContactResponse::request() const
 {
     Q_D(const GetContactResponse);
@@ -67,9 +65,8 @@ const GetContactRequest * GetContactResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness GetContact response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness GetContact \a response.
  */
 void GetContactResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetContactResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::GetContactResponsePrivate
+ * \brief The GetContactResponsePrivate class provides private implementation for GetContactResponse.
  * \internal
  *
- * \class GetContactResponsePrivate
- *
- * \brief Private implementation for GetContactResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetContactResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetContactResponse instance.
+ * Constructs a GetContactResponsePrivate object with public implementation \a q.
  */
 GetContactResponsePrivate::GetContactResponsePrivate(
     GetContactResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ GetContactResponsePrivate::GetContactResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness GetContactResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness GetContact response element from \a xml.
  */
 void GetContactResponsePrivate::parseGetContactResponse(QXmlStreamReader &xml)
 {

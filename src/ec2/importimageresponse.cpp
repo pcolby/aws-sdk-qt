@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ImportImageResponse
- *
  * \brief The ImportImageResponse class provides an interace for EC2 ImportImage responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ImportImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportImageResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportImageResponse::ImportImageResponse(
         const ImportImageRequest &request,
@@ -59,6 +54,9 @@ ImportImageResponse::ImportImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportImageRequest * ImportImageResponse::request() const
 {
     Q_D(const ImportImageResponse);
@@ -66,9 +64,8 @@ const ImportImageRequest * ImportImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ImportImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ImportImage \a response.
  */
 void ImportImageResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ImportImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ImportImageResponsePrivate
+ * \brief The ImportImageResponsePrivate class provides private implementation for ImportImageResponse.
  * \internal
  *
- * \class ImportImageResponsePrivate
- *
- * \brief Private implementation for ImportImageResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportImageResponse instance.
+ * Constructs a ImportImageResponsePrivate object with public implementation \a q.
  */
 ImportImageResponsePrivate::ImportImageResponsePrivate(
     ImportImageResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ImportImageResponsePrivate::ImportImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ImportImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ImportImage response element from \a xml.
  */
 void ImportImageResponsePrivate::parseImportImageResponse(QXmlStreamReader &xml)
 {

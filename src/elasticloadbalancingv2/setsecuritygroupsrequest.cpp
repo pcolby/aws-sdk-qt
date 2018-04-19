@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * SetSecurityGroupsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a SetSecurityGroupsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a SetSecurityGroupsRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 SetSecurityGroupsRequestPrivate::SetSecurityGroupsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetSecurityGroupsRequest * const q)

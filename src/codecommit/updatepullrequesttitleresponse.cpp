@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdatePullRequestTitleResponse
- *
  * \brief The UpdatePullRequestTitleResponse class provides an interace for CodeCommit UpdatePullRequestTitle responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdatePullRequestTitleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePullRequestTitleResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePullRequestTitleResponse::UpdatePullRequestTitleResponse(
         const UpdatePullRequestTitleRequest &request,
@@ -245,6 +240,9 @@ UpdatePullRequestTitleResponse::UpdatePullRequestTitleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePullRequestTitleRequest * UpdatePullRequestTitleResponse::request() const
 {
     Q_D(const UpdatePullRequestTitleResponse);
@@ -252,9 +250,8 @@ const UpdatePullRequestTitleRequest * UpdatePullRequestTitleResponse::request() 
 }
 
 /*!
- * @brief  Parse a CodeCommit UpdatePullRequestTitle response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit UpdatePullRequestTitle \a response.
  */
 void UpdatePullRequestTitleResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void UpdatePullRequestTitleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::UpdatePullRequestTitleResponsePrivate
+ * \brief The UpdatePullRequestTitleResponsePrivate class provides private implementation for UpdatePullRequestTitleResponse.
  * \internal
  *
- * \class UpdatePullRequestTitleResponsePrivate
- *
- * \brief Private implementation for UpdatePullRequestTitleResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePullRequestTitleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePullRequestTitleResponse instance.
+ * Constructs a UpdatePullRequestTitleResponsePrivate object with public implementation \a q.
  */
 UpdatePullRequestTitleResponsePrivate::UpdatePullRequestTitleResponsePrivate(
     UpdatePullRequestTitleResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ UpdatePullRequestTitleResponsePrivate::UpdatePullRequestTitleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit UpdatePullRequestTitleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit UpdatePullRequestTitle response element from \a xml.
  */
 void UpdatePullRequestTitleResponsePrivate::parseUpdatePullRequestTitleResponse(QXmlStreamReader &xml)
 {

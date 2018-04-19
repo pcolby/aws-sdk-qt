@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteVirtualInterfaceResponse : public DirectConnectResponse
 public:
     DeleteVirtualInterfaceResponse(const DeleteVirtualInterfaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteVirtualInterfaceRequest * request() const;
+    virtual const DeleteVirtualInterfaceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteVirtualInterfaceResponse)

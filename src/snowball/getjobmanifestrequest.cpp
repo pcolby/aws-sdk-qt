@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * GetJobManifestRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetJobManifestRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a GetJobManifestRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 GetJobManifestRequestPrivate::GetJobManifestRequestPrivate(
     const SnowballRequest::Action action, GetJobManifestRequest * const q)

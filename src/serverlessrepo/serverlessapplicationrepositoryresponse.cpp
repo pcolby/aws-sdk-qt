@@ -28,16 +28,13 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryResponse
- *
  * \brief The ServerlessApplicationRepositoryResponse class provides an interface for ServerlessApplicationRepository responses.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @brief  Constructs a new ServerlessApplicationRepositoryResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ServerlessApplicationRepositoryResponse object with parent \a parent.
  */
 ServerlessApplicationRepositoryResponse::ServerlessApplicationRepositoryResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ServerlessApplicationRepositoryResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ServerlessApplicationRepositoryResponse::ServerlessApplicationRepositoryResponse
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServerlessApplicationRepositoryResponse object.
- *
+ * \internal
+ * Constructs a ServerlessApplicationRepositoryResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ServerlessApplicationRepositoryResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ServerlessApplicationRepositoryResponse::ServerlessApplicationRepositoryResponse(ServerlessApplicationRepositoryResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ServerlessApplicationRepositoryResponse::ServerlessApplicationRepositoryResponse
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ServerlessApplicationRepositoryResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ServerlessApplicationRepositoryResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryResponsePrivate
+ * \brief The ServerlessApplicationRepositoryResponsePrivate class provides private implementation for ServerlessApplicationRepositoryResponse.
+ * \internal
  *
- * @class  ServerlessApplicationRepositoryResponsePrivate
- *
- * @brief  Private implementation for ServerlessApplicationRepositoryResponse.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServerlessApplicationRepositoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ServerlessApplicationRepositoryResponse instance.
+ * Constructs a ServerlessApplicationRepositoryResponsePrivate object with public implementation \a q.
  */
 ServerlessApplicationRepositoryResponsePrivate::ServerlessApplicationRepositoryResponsePrivate(
     ServerlessApplicationRepositoryResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

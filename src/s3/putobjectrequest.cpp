@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PutObjectRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a PutObjectRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a PutObjectRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 PutObjectRequestPrivate::PutObjectRequestPrivate(
     const S3Request::Action action, PutObjectRequest * const q)

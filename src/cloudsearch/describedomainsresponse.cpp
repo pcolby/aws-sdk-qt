@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeDomainsResponse
- *
  * \brief The DescribeDomainsResponse class provides an interace for CloudSearch DescribeDomains responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeDomainsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDomainsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDomainsResponse::DescribeDomainsResponse(
         const DescribeDomainsRequest &request,
@@ -66,6 +61,9 @@ DescribeDomainsResponse::DescribeDomainsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDomainsRequest * DescribeDomainsResponse::request() const
 {
     Q_D(const DescribeDomainsResponse);
@@ -73,9 +71,8 @@ const DescribeDomainsRequest * DescribeDomainsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch DescribeDomains response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DescribeDomains \a response.
  */
 void DescribeDomainsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeDomainsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DescribeDomainsResponsePrivate
+ * \brief The DescribeDomainsResponsePrivate class provides private implementation for DescribeDomainsResponse.
  * \internal
  *
- * \class DescribeDomainsResponsePrivate
- *
- * \brief Private implementation for DescribeDomainsResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDomainsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDomainsResponse instance.
+ * Constructs a DescribeDomainsResponsePrivate object with public implementation \a q.
  */
 DescribeDomainsResponsePrivate::DescribeDomainsResponsePrivate(
     DescribeDomainsResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeDomainsResponsePrivate::DescribeDomainsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DescribeDomainsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DescribeDomains response element from \a xml.
  */
 void DescribeDomainsResponsePrivate::parseDescribeDomainsResponse(QXmlStreamReader &xml)
 {

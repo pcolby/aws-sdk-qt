@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateDomainNameRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateDomainNameRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a CreateDomainNameRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 CreateDomainNameRequestPrivate::CreateDomainNameRequestPrivate(
     const APIGatewayRequest::Action action, CreateDomainNameRequest * const q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListTrainingJobsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListTrainingJobsRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a ListTrainingJobsRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 ListTrainingJobsRequestPrivate::ListTrainingJobsRequestPrivate(
     const SageMakerRequest::Action action, ListTrainingJobsRequest * const q)

@@ -49,7 +49,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * Constructs a[n] ServerlessApplicationRepositoryRequest object for ServerlessApplicationRepository \a action.
+ * Constructs a ServerlessApplicationRepositoryRequest object for ServerlessApplicationRepository \a action.
  */
 ServerlessApplicationRepositoryRequest::ServerlessApplicationRepositoryRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ServerlessApplicationRepositoryRequestPrivate(action, this))
@@ -249,8 +249,8 @@ QNetworkRequest ServerlessApplicationRepositoryRequest::unsignedRequest(const QU
  */
 
 /*!
- * Constructs a ServerlessApplicationRepositoryRequestPrivate object for ServerlessApplicationRepository \a action with,
- * public implementation \a q.
+ * Constructs a ServerlessApplicationRepositoryRequestPrivate object for ServerlessApplicationRepository \a action,
+ * with public implementation \a q.
  */
 ServerlessApplicationRepositoryRequestPrivate::ServerlessApplicationRepositoryRequestPrivate(const ServerlessApplicationRepositoryRequest::Action action, ServerlessApplicationRepositoryRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

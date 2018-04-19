@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::UpdateInstanceCustomHealthStatusResponse
- *
  * \brief The UpdateInstanceCustomHealthStatusResponse class provides an interace for ServiceDiscovery UpdateInstanceCustomHealthStatus responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new UpdateInstanceCustomHealthStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateInstanceCustomHealthStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateInstanceCustomHealthStatusResponse::UpdateInstanceCustomHealthStatusResponse(
         const UpdateInstanceCustomHealthStatusRequest &request,
@@ -59,6 +54,9 @@ UpdateInstanceCustomHealthStatusResponse::UpdateInstanceCustomHealthStatusRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateInstanceCustomHealthStatusRequest * UpdateInstanceCustomHealthStatusResponse::request() const
 {
     Q_D(const UpdateInstanceCustomHealthStatusResponse);
@@ -66,9 +64,8 @@ const UpdateInstanceCustomHealthStatusRequest * UpdateInstanceCustomHealthStatus
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery UpdateInstanceCustomHealthStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery UpdateInstanceCustomHealthStatus \a response.
  */
 void UpdateInstanceCustomHealthStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void UpdateInstanceCustomHealthStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::UpdateInstanceCustomHealthStatusResponsePrivate
+ * \brief The UpdateInstanceCustomHealthStatusResponsePrivate class provides private implementation for UpdateInstanceCustomHealthStatusResponse.
  * \internal
  *
- * \class UpdateInstanceCustomHealthStatusResponsePrivate
- *
- * \brief Private implementation for UpdateInstanceCustomHealthStatusResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateInstanceCustomHealthStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateInstanceCustomHealthStatusResponse instance.
+ * Constructs a UpdateInstanceCustomHealthStatusResponsePrivate object with public implementation \a q.
  */
 UpdateInstanceCustomHealthStatusResponsePrivate::UpdateInstanceCustomHealthStatusResponsePrivate(
     UpdateInstanceCustomHealthStatusResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ UpdateInstanceCustomHealthStatusResponsePrivate::UpdateInstanceCustomHealthStatu
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery UpdateInstanceCustomHealthStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery UpdateInstanceCustomHealthStatus response element from \a xml.
  */
 void UpdateInstanceCustomHealthStatusResponsePrivate::parseUpdateInstanceCustomHealthStatusResponse(QXmlStreamReader &xml)
 {

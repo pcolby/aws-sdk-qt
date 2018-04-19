@@ -29,10 +29,9 @@ namespace ImportExport {
 
 /*!
  * \class QtAws::ImportExport::UpdateJobResponse
- *
  * \brief The UpdateJobResponse class provides an interace for ImportExport UpdateJob responses.
  *
- * \ingroup ImportExport
+ * \inmodule QtAwsImportExport
  *
  *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
  *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
@@ -42,11 +41,7 @@ namespace ImportExport {
  */
 
 /*!
- * @brief  Constructs a new UpdateJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateJobResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateJobResponse::UpdateJobResponse(
         const UpdateJobRequest &request,
@@ -58,6 +53,9 @@ UpdateJobResponse::UpdateJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateJobRequest * UpdateJobResponse::request() const
 {
     Q_D(const UpdateJobResponse);
@@ -65,9 +63,8 @@ const UpdateJobRequest * UpdateJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a ImportExport UpdateJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ImportExport UpdateJob \a response.
  */
 void UpdateJobResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ImportExport::UpdateJobResponsePrivate
+ * \brief The UpdateJobResponsePrivate class provides private implementation for UpdateJobResponse.
  * \internal
  *
- * \class UpdateJobResponsePrivate
- *
- * \brief Private implementation for UpdateJobResponse.
+ * \inmodule QtAwsImportExport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateJobResponse instance.
+ * Constructs a UpdateJobResponsePrivate object with public implementation \a q.
  */
 UpdateJobResponsePrivate::UpdateJobResponsePrivate(
     UpdateJobResponse * const q) : ImportExportResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateJobResponsePrivate::UpdateJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ImportExport UpdateJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ImportExport UpdateJob response element from \a xml.
  */
 void UpdateJobResponsePrivate::parseUpdateJobResponse(QXmlStreamReader &xml)
 {

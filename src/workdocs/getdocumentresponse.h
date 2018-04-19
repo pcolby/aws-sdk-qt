@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDocumentResponse : public WorkDocsResponse {
 public:
     GetDocumentResponse(const GetDocumentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDocumentRequest * request() const;
+    virtual const GetDocumentRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDocumentResponse)

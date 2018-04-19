@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListTestsResponse
- *
  * \brief The ListTestsResponse class provides an interace for DeviceFarm ListTests responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListTestsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTestsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTestsResponse::ListTestsResponse(
         const ListTestsRequest &request,
@@ -57,6 +52,9 @@ ListTestsResponse::ListTestsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTestsRequest * ListTestsResponse::request() const
 {
     Q_D(const ListTestsResponse);
@@ -64,9 +62,8 @@ const ListTestsRequest * ListTestsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm ListTests response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm ListTests \a response.
  */
 void ListTestsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListTestsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::ListTestsResponsePrivate
+ * \brief The ListTestsResponsePrivate class provides private implementation for ListTestsResponse.
  * \internal
  *
- * \class ListTestsResponsePrivate
- *
- * \brief Private implementation for ListTestsResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTestsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTestsResponse instance.
+ * Constructs a ListTestsResponsePrivate object with public implementation \a q.
  */
 ListTestsResponsePrivate::ListTestsResponsePrivate(
     ListTestsResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ ListTestsResponsePrivate::ListTestsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm ListTestsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm ListTests response element from \a xml.
  */
 void ListTestsResponsePrivate::parseListTestsResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeIndexFieldsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeIndexFieldsRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DescribeIndexFieldsRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DescribeIndexFieldsRequestPrivate::DescribeIndexFieldsRequestPrivate(
     const CloudSearchRequest::Action action, DescribeIndexFieldsRequest * const q)

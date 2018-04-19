@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * AllocateConnectionOnInterconnectRequest::resp
  */
 
 /*!
- *
- * Constructs a AllocateConnectionOnInterconnectRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a AllocateConnectionOnInterconnectRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 AllocateConnectionOnInterconnectRequestPrivate::AllocateConnectionOnInterconnectRequestPrivate(
     const DirectConnectRequest::Action action, AllocateConnectionOnInterconnectRequest * const q)

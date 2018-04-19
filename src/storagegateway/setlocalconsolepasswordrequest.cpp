@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * SetLocalConsolePasswordRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a SetLocalConsolePasswordRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a SetLocalConsolePasswordRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 SetLocalConsolePasswordRequestPrivate::SetLocalConsolePasswordRequestPrivate(
     const StorageGatewayRequest::Action action, SetLocalConsolePasswordRequest * const q)

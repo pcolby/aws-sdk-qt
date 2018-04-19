@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreateDevEndpointResponse
- *
  * \brief The CreateDevEndpointResponse class provides an interace for Glue CreateDevEndpoint responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreateDevEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDevEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDevEndpointResponse::CreateDevEndpointResponse(
         const CreateDevEndpointRequest &request,
@@ -58,6 +53,9 @@ CreateDevEndpointResponse::CreateDevEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDevEndpointRequest * CreateDevEndpointResponse::request() const
 {
     Q_D(const CreateDevEndpointResponse);
@@ -65,9 +63,8 @@ const CreateDevEndpointRequest * CreateDevEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue CreateDevEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue CreateDevEndpoint \a response.
  */
 void CreateDevEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateDevEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::CreateDevEndpointResponsePrivate
+ * \brief The CreateDevEndpointResponsePrivate class provides private implementation for CreateDevEndpointResponse.
  * \internal
  *
- * \class CreateDevEndpointResponsePrivate
- *
- * \brief Private implementation for CreateDevEndpointResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDevEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDevEndpointResponse instance.
+ * Constructs a CreateDevEndpointResponsePrivate object with public implementation \a q.
  */
 CreateDevEndpointResponsePrivate::CreateDevEndpointResponsePrivate(
     CreateDevEndpointResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateDevEndpointResponsePrivate::CreateDevEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue CreateDevEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue CreateDevEndpoint response element from \a xml.
  */
 void CreateDevEndpointResponsePrivate::parseCreateDevEndpointResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetImportRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetImportRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a GetImportRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 GetImportRequestPrivate::GetImportRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetImportRequest * const q)

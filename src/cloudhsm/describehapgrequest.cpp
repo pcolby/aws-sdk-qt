@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * DescribeHapgRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeHapgRequestPrivate object for CloudHSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeHapgRequestPrivate object for CloudHSM \a action,
+ * with public implementation \a q.
  */
 DescribeHapgRequestPrivate::DescribeHapgRequestPrivate(
     const CloudHSMRequest::Action action, DescribeHapgRequest * const q)

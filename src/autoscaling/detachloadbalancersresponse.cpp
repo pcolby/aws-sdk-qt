@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DetachLoadBalancersResponse
- *
  * \brief The DetachLoadBalancersResponse class provides an interace for AutoScaling DetachLoadBalancers responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DetachLoadBalancersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachLoadBalancersResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachLoadBalancersResponse::DetachLoadBalancersResponse(
         const DetachLoadBalancersRequest &request,
@@ -60,6 +55,9 @@ DetachLoadBalancersResponse::DetachLoadBalancersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachLoadBalancersRequest * DetachLoadBalancersResponse::request() const
 {
     Q_D(const DetachLoadBalancersResponse);
@@ -67,9 +65,8 @@ const DetachLoadBalancersRequest * DetachLoadBalancersResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling DetachLoadBalancers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DetachLoadBalancers \a response.
  */
 void DetachLoadBalancersResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DetachLoadBalancersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DetachLoadBalancersResponsePrivate
+ * \brief The DetachLoadBalancersResponsePrivate class provides private implementation for DetachLoadBalancersResponse.
  * \internal
  *
- * \class DetachLoadBalancersResponsePrivate
- *
- * \brief Private implementation for DetachLoadBalancersResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachLoadBalancersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachLoadBalancersResponse instance.
+ * Constructs a DetachLoadBalancersResponsePrivate object with public implementation \a q.
  */
 DetachLoadBalancersResponsePrivate::DetachLoadBalancersResponsePrivate(
     DetachLoadBalancersResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DetachLoadBalancersResponsePrivate::DetachLoadBalancersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling DetachLoadBalancersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DetachLoadBalancers response element from \a xml.
  */
 void DetachLoadBalancersResponsePrivate::parseDetachLoadBalancersResponse(QXmlStreamReader &xml)
 {

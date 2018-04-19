@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::CreateBatchPredictionResponse
- *
  * \brief The CreateBatchPredictionResponse class provides an interace for MachineLearning CreateBatchPrediction responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::createBatchPrediction
  */
 
 /*!
- * @brief  Constructs a new CreateBatchPredictionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateBatchPredictionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateBatchPredictionResponse::CreateBatchPredictionResponse(
         const CreateBatchPredictionRequest &request,
@@ -55,6 +50,9 @@ CreateBatchPredictionResponse::CreateBatchPredictionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateBatchPredictionRequest * CreateBatchPredictionResponse::request() const
 {
     Q_D(const CreateBatchPredictionResponse);
@@ -62,9 +60,8 @@ const CreateBatchPredictionRequest * CreateBatchPredictionResponse::request() co
 }
 
 /*!
- * @brief  Parse a MachineLearning CreateBatchPrediction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning CreateBatchPrediction \a response.
  */
 void CreateBatchPredictionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateBatchPredictionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::CreateBatchPredictionResponsePrivate
+ * \brief The CreateBatchPredictionResponsePrivate class provides private implementation for CreateBatchPredictionResponse.
  * \internal
  *
- * \class CreateBatchPredictionResponsePrivate
- *
- * \brief Private implementation for CreateBatchPredictionResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBatchPredictionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateBatchPredictionResponse instance.
+ * Constructs a CreateBatchPredictionResponsePrivate object with public implementation \a q.
  */
 CreateBatchPredictionResponsePrivate::CreateBatchPredictionResponsePrivate(
     CreateBatchPredictionResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateBatchPredictionResponsePrivate::CreateBatchPredictionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning CreateBatchPredictionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning CreateBatchPrediction response element from \a xml.
  */
 void CreateBatchPredictionResponsePrivate::parseCreateBatchPredictionResponse(QXmlStreamReader &xml)
 {

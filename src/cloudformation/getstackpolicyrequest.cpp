@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * GetStackPolicyRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetStackPolicyRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a GetStackPolicyRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 GetStackPolicyRequestPrivate::GetStackPolicyRequestPrivate(
     const CloudFormationRequest::Action action, GetStackPolicyRequest * const q)

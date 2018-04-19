@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateAccountSendingEnabledResponse : public SESResponse {
 public:
     UpdateAccountSendingEnabledResponse(const UpdateAccountSendingEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateAccountSendingEnabledRequest * request() const;
+    virtual const UpdateAccountSendingEnabledRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateAccountSendingEnabledResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetReusableDelegationSetResponse : public Route53Response {
 public:
     GetReusableDelegationSetResponse(const GetReusableDelegationSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetReusableDelegationSetRequest * request() const;
+    virtual const GetReusableDelegationSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetReusableDelegationSetResponse)

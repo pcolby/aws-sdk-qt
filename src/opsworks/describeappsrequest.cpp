@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAppsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeAppsRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAppsRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeAppsRequestPrivate::DescribeAppsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeAppsRequest * const q)

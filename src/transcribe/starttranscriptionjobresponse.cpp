@@ -29,10 +29,9 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::StartTranscriptionJobResponse
- *
  * \brief The StartTranscriptionJobResponse class provides an interace for TranscribeService StartTranscriptionJob responses.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  *
@@ -40,11 +39,7 @@ namespace TranscribeService {
  */
 
 /*!
- * @brief  Constructs a new StartTranscriptionJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartTranscriptionJobResponse object for \a reply to \a request, with parent \a parent.
  */
 StartTranscriptionJobResponse::StartTranscriptionJobResponse(
         const StartTranscriptionJobRequest &request,
@@ -56,6 +51,9 @@ StartTranscriptionJobResponse::StartTranscriptionJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartTranscriptionJobRequest * StartTranscriptionJobResponse::request() const
 {
     Q_D(const StartTranscriptionJobResponse);
@@ -63,9 +61,8 @@ const StartTranscriptionJobRequest * StartTranscriptionJobResponse::request() co
 }
 
 /*!
- * @brief  Parse a TranscribeService StartTranscriptionJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful TranscribeService StartTranscriptionJob \a response.
  */
 void StartTranscriptionJobResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void StartTranscriptionJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::TranscribeService::StartTranscriptionJobResponsePrivate
+ * \brief The StartTranscriptionJobResponsePrivate class provides private implementation for StartTranscriptionJobResponse.
  * \internal
  *
- * \class StartTranscriptionJobResponsePrivate
- *
- * \brief Private implementation for StartTranscriptionJobResponse.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartTranscriptionJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartTranscriptionJobResponse instance.
+ * Constructs a StartTranscriptionJobResponsePrivate object with public implementation \a q.
  */
 StartTranscriptionJobResponsePrivate::StartTranscriptionJobResponsePrivate(
     StartTranscriptionJobResponse * const q) : TranscribeServiceResponsePrivate(q)
@@ -96,9 +89,7 @@ StartTranscriptionJobResponsePrivate::StartTranscriptionJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an TranscribeService StartTranscriptionJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a TranscribeService StartTranscriptionJob response element from \a xml.
  */
 void StartTranscriptionJobResponsePrivate::parseStartTranscriptionJobResponse(QXmlStreamReader &xml)
 {

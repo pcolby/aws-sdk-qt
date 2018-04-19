@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * SetRulePrioritiesRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a SetRulePrioritiesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a SetRulePrioritiesRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 SetRulePrioritiesRequestPrivate::SetRulePrioritiesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetRulePrioritiesRequest * const q)

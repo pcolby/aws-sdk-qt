@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateClusterSubnetGroupResponse : public RedshiftResponse {
 public:
     CreateClusterSubnetGroupResponse(const CreateClusterSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateClusterSubnetGroupRequest * request() const;
+    virtual const CreateClusterSubnetGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateClusterSubnetGroupResponse)

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateSigningCertificateResponse
- *
  * \brief The UpdateSigningCertificateResponse class provides an interace for IAM UpdateSigningCertificate responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateSigningCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSigningCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSigningCertificateResponse::UpdateSigningCertificateResponse(
         const UpdateSigningCertificateRequest &request,
@@ -120,6 +115,9 @@ UpdateSigningCertificateResponse::UpdateSigningCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSigningCertificateRequest * UpdateSigningCertificateResponse::request() const
 {
     Q_D(const UpdateSigningCertificateResponse);
@@ -127,9 +125,8 @@ const UpdateSigningCertificateRequest * UpdateSigningCertificateResponse::reques
 }
 
 /*!
- * @brief  Parse a IAM UpdateSigningCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateSigningCertificate \a response.
  */
 void UpdateSigningCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateSigningCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateSigningCertificateResponsePrivate
+ * \brief The UpdateSigningCertificateResponsePrivate class provides private implementation for UpdateSigningCertificateResponse.
  * \internal
  *
- * \class UpdateSigningCertificateResponsePrivate
- *
- * \brief Private implementation for UpdateSigningCertificateResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSigningCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSigningCertificateResponse instance.
+ * Constructs a UpdateSigningCertificateResponsePrivate object with public implementation \a q.
  */
 UpdateSigningCertificateResponsePrivate::UpdateSigningCertificateResponsePrivate(
     UpdateSigningCertificateResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateSigningCertificateResponsePrivate::UpdateSigningCertificateResponsePrivate
 }
 
 /*!
- * @brief  Parse an IAM UpdateSigningCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateSigningCertificate response element from \a xml.
  */
 void UpdateSigningCertificateResponsePrivate::parseUpdateSigningCertificateResponse(QXmlStreamReader &xml)
 {

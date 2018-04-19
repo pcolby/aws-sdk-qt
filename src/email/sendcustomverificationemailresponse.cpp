@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SendCustomVerificationEmailResponse
- *
  * \brief The SendCustomVerificationEmailResponse class provides an interace for SES SendCustomVerificationEmail responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SendCustomVerificationEmailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendCustomVerificationEmailResponse object for \a reply to \a request, with parent \a parent.
  */
 SendCustomVerificationEmailResponse::SendCustomVerificationEmailResponse(
         const SendCustomVerificationEmailRequest &request,
@@ -66,6 +61,9 @@ SendCustomVerificationEmailResponse::SendCustomVerificationEmailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendCustomVerificationEmailRequest * SendCustomVerificationEmailResponse::request() const
 {
     Q_D(const SendCustomVerificationEmailResponse);
@@ -73,9 +71,8 @@ const SendCustomVerificationEmailRequest * SendCustomVerificationEmailResponse::
 }
 
 /*!
- * @brief  Parse a SES SendCustomVerificationEmail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SendCustomVerificationEmail \a response.
  */
 void SendCustomVerificationEmailResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SendCustomVerificationEmailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::SendCustomVerificationEmailResponsePrivate
+ * \brief The SendCustomVerificationEmailResponsePrivate class provides private implementation for SendCustomVerificationEmailResponse.
  * \internal
  *
- * \class SendCustomVerificationEmailResponsePrivate
- *
- * \brief Private implementation for SendCustomVerificationEmailResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendCustomVerificationEmailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendCustomVerificationEmailResponse instance.
+ * Constructs a SendCustomVerificationEmailResponsePrivate object with public implementation \a q.
  */
 SendCustomVerificationEmailResponsePrivate::SendCustomVerificationEmailResponsePrivate(
     SendCustomVerificationEmailResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SendCustomVerificationEmailResponsePrivate::SendCustomVerificationEmailResponseP
 }
 
 /*!
- * @brief  Parse an SES SendCustomVerificationEmailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SendCustomVerificationEmail response element from \a xml.
  */
 void SendCustomVerificationEmailResponsePrivate::parseSendCustomVerificationEmailResponse(QXmlStreamReader &xml)
 {

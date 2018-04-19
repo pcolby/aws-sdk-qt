@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRuntimeConfigurationRequest::response(Q
  */
 
 /*!
- *
- * Constructs a UpdateRuntimeConfigurationRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRuntimeConfigurationRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 UpdateRuntimeConfigurationRequestPrivate::UpdateRuntimeConfigurationRequestPrivate(
     const GameLiftRequest::Action action, UpdateRuntimeConfigurationRequest * const q)

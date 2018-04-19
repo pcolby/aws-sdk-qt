@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetRateBasedRuleManagedKeysResponse : public WAFResponse {
 public:
     GetRateBasedRuleManagedKeysResponse(const GetRateBasedRuleManagedKeysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetRateBasedRuleManagedKeysRequest * request() const;
+    virtual const GetRateBasedRuleManagedKeysRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetRateBasedRuleManagedKeysResponse)

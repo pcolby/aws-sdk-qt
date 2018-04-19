@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSSHPublicKeyRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateSSHPublicKeyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSSHPublicKeyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateSSHPublicKeyRequestPrivate::UpdateSSHPublicKeyRequestPrivate(
     const IAMRequest::Action action, UpdateSSHPublicKeyRequest * const q)

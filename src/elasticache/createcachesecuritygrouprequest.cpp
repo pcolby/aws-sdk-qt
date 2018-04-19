@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateCacheSecurityGroupRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateCacheSecurityGroupRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a CreateCacheSecurityGroupRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 CreateCacheSecurityGroupRequestPrivate::CreateCacheSecurityGroupRequestPrivate(
     const ElastiCacheRequest::Action action, CreateCacheSecurityGroupRequest * const q)

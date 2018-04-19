@@ -29,10 +29,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::CreateCloudFormationChangeSetResponse
- *
  * \brief The CreateCloudFormationChangeSetResponse class provides an interace for ServerlessApplicationRepository CreateCloudFormationChangeSet responses.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -60,11 +59,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new CreateCloudFormationChangeSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCloudFormationChangeSetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCloudFormationChangeSetResponse::CreateCloudFormationChangeSetResponse(
         const CreateCloudFormationChangeSetRequest &request,
@@ -76,6 +71,9 @@ CreateCloudFormationChangeSetResponse::CreateCloudFormationChangeSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCloudFormationChangeSetRequest * CreateCloudFormationChangeSetResponse::request() const
 {
     Q_D(const CreateCloudFormationChangeSetResponse);
@@ -83,9 +81,8 @@ const CreateCloudFormationChangeSetRequest * CreateCloudFormationChangeSetRespon
 }
 
 /*!
- * @brief  Parse a ServerlessApplicationRepository CreateCloudFormationChangeSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServerlessApplicationRepository CreateCloudFormationChangeSet \a response.
  */
 void CreateCloudFormationChangeSetResponse::parseSuccess(QIODevice &response)
 {
@@ -95,19 +92,15 @@ void CreateCloudFormationChangeSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServerlessApplicationRepository::CreateCloudFormationChangeSetResponsePrivate
+ * \brief The CreateCloudFormationChangeSetResponsePrivate class provides private implementation for CreateCloudFormationChangeSetResponse.
  * \internal
  *
- * \class CreateCloudFormationChangeSetResponsePrivate
- *
- * \brief Private implementation for CreateCloudFormationChangeSetResponse.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCloudFormationChangeSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCloudFormationChangeSetResponse instance.
+ * Constructs a CreateCloudFormationChangeSetResponsePrivate object with public implementation \a q.
  */
 CreateCloudFormationChangeSetResponsePrivate::CreateCloudFormationChangeSetResponsePrivate(
     CreateCloudFormationChangeSetResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
@@ -116,9 +109,7 @@ CreateCloudFormationChangeSetResponsePrivate::CreateCloudFormationChangeSetRespo
 }
 
 /*!
- * @brief  Parse an ServerlessApplicationRepository CreateCloudFormationChangeSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServerlessApplicationRepository CreateCloudFormationChangeSet response element from \a xml.
  */
 void CreateCloudFormationChangeSetResponsePrivate::parseCreateCloudFormationChangeSetResponse(QXmlStreamReader &xml)
 {

@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRoleRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a UpdateRoleRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRoleRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateRoleRequestPrivate::UpdateRoleRequestPrivate(
     const IAMRequest::Action action, UpdateRoleRequest * const q)

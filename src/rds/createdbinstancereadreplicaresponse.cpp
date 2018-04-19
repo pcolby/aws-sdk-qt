@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBInstanceReadReplicaResponse
- *
  * \brief The CreateDBInstanceReadReplicaResponse class provides an interace for RDS CreateDBInstanceReadReplica responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBInstanceReadReplicaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDBInstanceReadReplicaResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDBInstanceReadReplicaResponse::CreateDBInstanceReadReplicaResponse(
         const CreateDBInstanceReadReplicaRequest &request,
@@ -119,6 +114,9 @@ CreateDBInstanceReadReplicaResponse::CreateDBInstanceReadReplicaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDBInstanceReadReplicaRequest * CreateDBInstanceReadReplicaResponse::request() const
 {
     Q_D(const CreateDBInstanceReadReplicaResponse);
@@ -126,9 +124,8 @@ const CreateDBInstanceReadReplicaRequest * CreateDBInstanceReadReplicaResponse::
 }
 
 /*!
- * @brief  Parse a RDS CreateDBInstanceReadReplica response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CreateDBInstanceReadReplica \a response.
  */
 void CreateDBInstanceReadReplicaResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CreateDBInstanceReadReplicaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CreateDBInstanceReadReplicaResponsePrivate
+ * \brief The CreateDBInstanceReadReplicaResponsePrivate class provides private implementation for CreateDBInstanceReadReplicaResponse.
  * \internal
  *
- * \class CreateDBInstanceReadReplicaResponsePrivate
- *
- * \brief Private implementation for CreateDBInstanceReadReplicaResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBInstanceReadReplicaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDBInstanceReadReplicaResponse instance.
+ * Constructs a CreateDBInstanceReadReplicaResponsePrivate object with public implementation \a q.
  */
 CreateDBInstanceReadReplicaResponsePrivate::CreateDBInstanceReadReplicaResponsePrivate(
     CreateDBInstanceReadReplicaResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CreateDBInstanceReadReplicaResponsePrivate::CreateDBInstanceReadReplicaResponseP
 }
 
 /*!
- * @brief  Parse an RDS CreateDBInstanceReadReplicaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CreateDBInstanceReadReplica response element from \a xml.
  */
 void CreateDBInstanceReadReplicaResponsePrivate::parseCreateDBInstanceReadReplicaResponse(QXmlStreamReader &xml)
 {

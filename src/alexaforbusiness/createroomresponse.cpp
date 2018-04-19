@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::CreateRoomResponse
- *
  * \brief The CreateRoomResponse class provides an interace for AlexaForBusiness CreateRoom responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new CreateRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRoomResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRoomResponse::CreateRoomResponse(
         const CreateRoomRequest &request,
@@ -60,6 +55,9 @@ CreateRoomResponse::CreateRoomResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRoomRequest * CreateRoomResponse::request() const
 {
     Q_D(const CreateRoomResponse);
@@ -67,9 +65,8 @@ const CreateRoomRequest * CreateRoomResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness CreateRoom response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness CreateRoom \a response.
  */
 void CreateRoomResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateRoomResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::CreateRoomResponsePrivate
+ * \brief The CreateRoomResponsePrivate class provides private implementation for CreateRoomResponse.
  * \internal
  *
- * \class CreateRoomResponsePrivate
- *
- * \brief Private implementation for CreateRoomResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRoomResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRoomResponse instance.
+ * Constructs a CreateRoomResponsePrivate object with public implementation \a q.
  */
 CreateRoomResponsePrivate::CreateRoomResponsePrivate(
     CreateRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateRoomResponsePrivate::CreateRoomResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness CreateRoomResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness CreateRoom response element from \a xml.
  */
 void CreateRoomResponsePrivate::parseCreateRoomResponse(QXmlStreamReader &xml)
 {

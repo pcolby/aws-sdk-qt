@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetCatalogImportStatusRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a GetCatalogImportStatusRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GetCatalogImportStatusRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GetCatalogImportStatusRequestPrivate::GetCatalogImportStatusRequestPrivate(
     const GlueRequest::Action action, GetCatalogImportStatusRequest * const q)

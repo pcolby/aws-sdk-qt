@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteEventStreamResponse
- *
  * \brief The DeleteEventStreamResponse class provides an interace for Pinpoint DeleteEventStream responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteEventStream
  */
 
 /*!
- * @brief  Constructs a new DeleteEventStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEventStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEventStreamResponse::DeleteEventStreamResponse(
         const DeleteEventStreamRequest &request,
@@ -55,6 +50,9 @@ DeleteEventStreamResponse::DeleteEventStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEventStreamRequest * DeleteEventStreamResponse::request() const
 {
     Q_D(const DeleteEventStreamResponse);
@@ -62,9 +60,8 @@ const DeleteEventStreamRequest * DeleteEventStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint DeleteEventStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint DeleteEventStream \a response.
  */
 void DeleteEventStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteEventStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::DeleteEventStreamResponsePrivate
+ * \brief The DeleteEventStreamResponsePrivate class provides private implementation for DeleteEventStreamResponse.
  * \internal
  *
- * \class DeleteEventStreamResponsePrivate
- *
- * \brief Private implementation for DeleteEventStreamResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEventStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEventStreamResponse instance.
+ * Constructs a DeleteEventStreamResponsePrivate object with public implementation \a q.
  */
 DeleteEventStreamResponsePrivate::DeleteEventStreamResponsePrivate(
     DeleteEventStreamResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteEventStreamResponsePrivate::DeleteEventStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint DeleteEventStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint DeleteEventStream response element from \a xml.
  */
 void DeleteEventStreamResponsePrivate::parseDeleteEventStreamResponse(QXmlStreamReader &xml)
 {

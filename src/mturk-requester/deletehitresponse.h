@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteHITResponse : public MTurkResponse {
 public:
     DeleteHITResponse(const DeleteHITRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteHITRequest * request() const;
+    virtual const DeleteHITRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteHITResponse)

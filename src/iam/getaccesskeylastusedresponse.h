@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAccessKeyLastUsedResponse : public IAMResponse {
 public:
     GetAccessKeyLastUsedResponse(const GetAccessKeyLastUsedRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAccessKeyLastUsedRequest * request() const;
+    virtual const GetAccessKeyLastUsedRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetAccessKeyLastUsedResponse)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAdmChannelRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateAdmChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAdmChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 UpdateAdmChannelRequestPrivate::UpdateAdmChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateAdmChannelRequest * const q)

@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DeleteFileShareRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteFileShareRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteFileShareRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DeleteFileShareRequestPrivate::DeleteFileShareRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteFileShareRequest * const q)

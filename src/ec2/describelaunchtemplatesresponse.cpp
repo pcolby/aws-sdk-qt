@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeLaunchTemplatesResponse
- *
  * \brief The DescribeLaunchTemplatesResponse class provides an interace for EC2 DescribeLaunchTemplates responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeLaunchTemplatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLaunchTemplatesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLaunchTemplatesResponse::DescribeLaunchTemplatesResponse(
         const DescribeLaunchTemplatesRequest &request,
@@ -59,6 +54,9 @@ DescribeLaunchTemplatesResponse::DescribeLaunchTemplatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLaunchTemplatesRequest * DescribeLaunchTemplatesResponse::request() const
 {
     Q_D(const DescribeLaunchTemplatesResponse);
@@ -66,9 +64,8 @@ const DescribeLaunchTemplatesRequest * DescribeLaunchTemplatesResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 DescribeLaunchTemplates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeLaunchTemplates \a response.
  */
 void DescribeLaunchTemplatesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeLaunchTemplatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeLaunchTemplatesResponsePrivate
+ * \brief The DescribeLaunchTemplatesResponsePrivate class provides private implementation for DescribeLaunchTemplatesResponse.
  * \internal
  *
- * \class DescribeLaunchTemplatesResponsePrivate
- *
- * \brief Private implementation for DescribeLaunchTemplatesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLaunchTemplatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLaunchTemplatesResponse instance.
+ * Constructs a DescribeLaunchTemplatesResponsePrivate object with public implementation \a q.
  */
 DescribeLaunchTemplatesResponsePrivate::DescribeLaunchTemplatesResponsePrivate(
     DescribeLaunchTemplatesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeLaunchTemplatesResponsePrivate::DescribeLaunchTemplatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeLaunchTemplatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeLaunchTemplates response element from \a xml.
  */
 void DescribeLaunchTemplatesResponsePrivate::parseDescribeLaunchTemplatesResponse(QXmlStreamReader &xml)
 {

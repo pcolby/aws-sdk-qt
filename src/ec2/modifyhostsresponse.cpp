@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyHostsResponse
- *
  * \brief The ModifyHostsResponse class provides an interace for EC2 ModifyHosts responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyHostsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyHostsResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyHostsResponse::ModifyHostsResponse(
         const ModifyHostsRequest &request,
@@ -59,6 +54,9 @@ ModifyHostsResponse::ModifyHostsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyHostsRequest * ModifyHostsResponse::request() const
 {
     Q_D(const ModifyHostsResponse);
@@ -66,9 +64,8 @@ const ModifyHostsRequest * ModifyHostsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ModifyHosts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyHosts \a response.
  */
 void ModifyHostsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyHostsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyHostsResponsePrivate
+ * \brief The ModifyHostsResponsePrivate class provides private implementation for ModifyHostsResponse.
  * \internal
  *
- * \class ModifyHostsResponsePrivate
- *
- * \brief Private implementation for ModifyHostsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyHostsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyHostsResponse instance.
+ * Constructs a ModifyHostsResponsePrivate object with public implementation \a q.
  */
 ModifyHostsResponsePrivate::ModifyHostsResponsePrivate(
     ModifyHostsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyHostsResponsePrivate::ModifyHostsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifyHostsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyHosts response element from \a xml.
  */
 void ModifyHostsResponsePrivate::parseModifyHostsResponse(QXmlStreamReader &xml)
 {

@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * ViewBillingRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ViewBillingRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a ViewBillingRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 ViewBillingRequestPrivate::ViewBillingRequestPrivate(
     const Route53DomainsRequest::Action action, ViewBillingRequest * const q)

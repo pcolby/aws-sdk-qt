@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * RunScheduledInstancesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a RunScheduledInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a RunScheduledInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 RunScheduledInstancesRequestPrivate::RunScheduledInstancesRequestPrivate(
     const EC2Request::Action action, RunScheduledInstancesRequest * const q)

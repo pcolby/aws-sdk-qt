@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyVolumeAttributeRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ModifyVolumeAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyVolumeAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyVolumeAttributeRequestPrivate::ModifyVolumeAttributeRequestPrivate(
     const EC2Request::Action action, ModifyVolumeAttributeRequest * const q)

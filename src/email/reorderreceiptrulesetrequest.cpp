@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ReorderReceiptRuleSetRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ReorderReceiptRuleSetRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a ReorderReceiptRuleSetRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 ReorderReceiptRuleSetRequestPrivate::ReorderReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, ReorderReceiptRuleSetRequest * const q)

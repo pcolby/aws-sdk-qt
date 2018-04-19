@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetStreamingDistributionConfigResponse : public CloudFrontRes
 public:
     GetStreamingDistributionConfigResponse(const GetStreamingDistributionConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetStreamingDistributionConfigRequest * request() const;
+    virtual const GetStreamingDistributionConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetStreamingDistributionConfigResponse)

@@ -102,9 +102,8 @@ QtAws::Core::AwsAbstractResponse * PutApplicationPolicyRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a PutApplicationPolicyRequestPrivate object for ServerlessApplicationRepository \a action with,
- * public implementation \a q.
+ * Constructs a PutApplicationPolicyRequestPrivate object for ServerlessApplicationRepository \a action,
+ * with public implementation \a q.
  */
 PutApplicationPolicyRequestPrivate::PutApplicationPolicyRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, PutApplicationPolicyRequest * const q)

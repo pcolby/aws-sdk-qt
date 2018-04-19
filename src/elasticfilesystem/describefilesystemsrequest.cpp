@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeFileSystemsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeFileSystemsRequestPrivate object for EFS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeFileSystemsRequestPrivate object for EFS \a action,
+ * with public implementation \a q.
  */
 DescribeFileSystemsRequestPrivate::DescribeFileSystemsRequestPrivate(
     const EFSRequest::Action action, DescribeFileSystemsRequest * const q)

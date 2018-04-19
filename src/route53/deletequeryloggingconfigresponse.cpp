@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DeleteQueryLoggingConfigResponse
- *
  * \brief The DeleteQueryLoggingConfigResponse class provides an interace for Route53 DeleteQueryLoggingConfig responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::deleteQueryLoggingConfig
  */
 
 /*!
- * @brief  Constructs a new DeleteQueryLoggingConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteQueryLoggingConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteQueryLoggingConfigResponse::DeleteQueryLoggingConfigResponse(
         const DeleteQueryLoggingConfigRequest &request,
@@ -55,6 +50,9 @@ DeleteQueryLoggingConfigResponse::DeleteQueryLoggingConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteQueryLoggingConfigRequest * DeleteQueryLoggingConfigResponse::request() const
 {
     Q_D(const DeleteQueryLoggingConfigResponse);
@@ -62,9 +60,8 @@ const DeleteQueryLoggingConfigRequest * DeleteQueryLoggingConfigResponse::reques
 }
 
 /*!
- * @brief  Parse a Route53 DeleteQueryLoggingConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 DeleteQueryLoggingConfig \a response.
  */
 void DeleteQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::DeleteQueryLoggingConfigResponsePrivate
+ * \brief The DeleteQueryLoggingConfigResponsePrivate class provides private implementation for DeleteQueryLoggingConfigResponse.
  * \internal
  *
- * \class DeleteQueryLoggingConfigResponsePrivate
- *
- * \brief Private implementation for DeleteQueryLoggingConfigResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteQueryLoggingConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteQueryLoggingConfigResponse instance.
+ * Constructs a DeleteQueryLoggingConfigResponsePrivate object with public implementation \a q.
  */
 DeleteQueryLoggingConfigResponsePrivate::DeleteQueryLoggingConfigResponsePrivate(
     DeleteQueryLoggingConfigResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteQueryLoggingConfigResponsePrivate::DeleteQueryLoggingConfigResponsePrivate
 }
 
 /*!
- * @brief  Parse an Route53 DeleteQueryLoggingConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 DeleteQueryLoggingConfig response element from \a xml.
  */
 void DeleteQueryLoggingConfigResponsePrivate::parseDeleteQueryLoggingConfigResponse(QXmlStreamReader &xml)
 {

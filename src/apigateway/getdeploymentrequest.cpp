@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetDeploymentRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetDeploymentRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetDeploymentRequestPrivate::GetDeploymentRequestPrivate(
     const APIGatewayRequest::Action action, GetDeploymentRequest * const q)

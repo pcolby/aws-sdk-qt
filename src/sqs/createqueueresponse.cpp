@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::CreateQueueResponse
- *
  * \brief The CreateQueueResponse class provides an interace for SQS CreateQueue responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new CreateQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateQueueResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateQueueResponse::CreateQueueResponse(
         const CreateQueueRequest &request,
@@ -121,6 +116,9 @@ CreateQueueResponse::CreateQueueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateQueueRequest * CreateQueueResponse::request() const
 {
     Q_D(const CreateQueueResponse);
@@ -128,9 +126,8 @@ const CreateQueueRequest * CreateQueueResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS CreateQueue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS CreateQueue \a response.
  */
 void CreateQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void CreateQueueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::CreateQueueResponsePrivate
+ * \brief The CreateQueueResponsePrivate class provides private implementation for CreateQueueResponse.
  * \internal
  *
- * \class CreateQueueResponsePrivate
- *
- * \brief Private implementation for CreateQueueResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateQueueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateQueueResponse instance.
+ * Constructs a CreateQueueResponsePrivate object with public implementation \a q.
  */
 CreateQueueResponsePrivate::CreateQueueResponsePrivate(
     CreateQueueResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ CreateQueueResponsePrivate::CreateQueueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS CreateQueueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS CreateQueue response element from \a xml.
  */
 void CreateQueueResponsePrivate::parseCreateQueueResponse(QXmlStreamReader &xml)
 {

@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * SetUserPoolMfaConfigRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a SetUserPoolMfaConfigRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a SetUserPoolMfaConfigRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 SetUserPoolMfaConfigRequestPrivate::SetUserPoolMfaConfigRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetUserPoolMfaConfigRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListQueueTagsResponse : public SQSResponse {
 public:
     ListQueueTagsResponse(const ListQueueTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListQueueTagsRequest * request() const;
+    virtual const ListQueueTagsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListQueueTagsResponse)

@@ -29,10 +29,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::UpdateElasticsearchDomainConfigResponse
- *
  * \brief The UpdateElasticsearchDomainConfigResponse class provides an interace for ElasticsearchService UpdateElasticsearchDomainConfig responses.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new UpdateElasticsearchDomainConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateElasticsearchDomainConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateElasticsearchDomainConfigResponse::UpdateElasticsearchDomainConfigResponse(
         const UpdateElasticsearchDomainConfigRequest &request,
@@ -64,6 +59,9 @@ UpdateElasticsearchDomainConfigResponse::UpdateElasticsearchDomainConfigResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateElasticsearchDomainConfigRequest * UpdateElasticsearchDomainConfigResponse::request() const
 {
     Q_D(const UpdateElasticsearchDomainConfigResponse);
@@ -71,9 +69,8 @@ const UpdateElasticsearchDomainConfigRequest * UpdateElasticsearchDomainConfigRe
 }
 
 /*!
- * @brief  Parse a ElasticsearchService UpdateElasticsearchDomainConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticsearchService UpdateElasticsearchDomainConfig \a response.
  */
 void UpdateElasticsearchDomainConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void UpdateElasticsearchDomainConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticsearchService::UpdateElasticsearchDomainConfigResponsePrivate
+ * \brief The UpdateElasticsearchDomainConfigResponsePrivate class provides private implementation for UpdateElasticsearchDomainConfigResponse.
  * \internal
  *
- * \class UpdateElasticsearchDomainConfigResponsePrivate
- *
- * \brief Private implementation for UpdateElasticsearchDomainConfigResponse.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateElasticsearchDomainConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateElasticsearchDomainConfigResponse instance.
+ * Constructs a UpdateElasticsearchDomainConfigResponsePrivate object with public implementation \a q.
  */
 UpdateElasticsearchDomainConfigResponsePrivate::UpdateElasticsearchDomainConfigResponsePrivate(
     UpdateElasticsearchDomainConfigResponse * const q) : ElasticsearchServiceResponsePrivate(q)
@@ -104,9 +97,7 @@ UpdateElasticsearchDomainConfigResponsePrivate::UpdateElasticsearchDomainConfigR
 }
 
 /*!
- * @brief  Parse an ElasticsearchService UpdateElasticsearchDomainConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticsearchService UpdateElasticsearchDomainConfig response element from \a xml.
  */
 void UpdateElasticsearchDomainConfigResponsePrivate::parseUpdateElasticsearchDomainConfigResponse(QXmlStreamReader &xml)
 {

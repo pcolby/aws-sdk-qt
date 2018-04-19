@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetAddressBookResponse
- *
  * \brief The GetAddressBookResponse class provides an interace for AlexaForBusiness GetAddressBook responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetAddressBookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAddressBookResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAddressBookResponse::GetAddressBookResponse(
         const GetAddressBookRequest &request,
@@ -60,6 +55,9 @@ GetAddressBookResponse::GetAddressBookResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAddressBookRequest * GetAddressBookResponse::request() const
 {
     Q_D(const GetAddressBookResponse);
@@ -67,9 +65,8 @@ const GetAddressBookRequest * GetAddressBookResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness GetAddressBook response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness GetAddressBook \a response.
  */
 void GetAddressBookResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetAddressBookResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::GetAddressBookResponsePrivate
+ * \brief The GetAddressBookResponsePrivate class provides private implementation for GetAddressBookResponse.
  * \internal
  *
- * \class GetAddressBookResponsePrivate
- *
- * \brief Private implementation for GetAddressBookResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAddressBookResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAddressBookResponse instance.
+ * Constructs a GetAddressBookResponsePrivate object with public implementation \a q.
  */
 GetAddressBookResponsePrivate::GetAddressBookResponsePrivate(
     GetAddressBookResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ GetAddressBookResponsePrivate::GetAddressBookResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness GetAddressBookResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness GetAddressBook response element from \a xml.
  */
 void GetAddressBookResponsePrivate::parseGetAddressBookResponse(QXmlStreamReader &xml)
 {

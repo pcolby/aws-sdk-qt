@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateParameterGroupRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a CreateParameterGroupRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a CreateParameterGroupRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 CreateParameterGroupRequestPrivate::CreateParameterGroupRequestPrivate(
     const DAXRequest::Action action, CreateParameterGroupRequest * const q)

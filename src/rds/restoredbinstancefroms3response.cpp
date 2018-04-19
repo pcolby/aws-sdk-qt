@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RestoreDBInstanceFromS3Response
- *
  * \brief The RestoreDBInstanceFromS3Response class provides an interace for RDS RestoreDBInstanceFromS3 responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RestoreDBInstanceFromS3Response object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreDBInstanceFromS3Response object for \a reply to \a request, with parent \a parent.
  */
 RestoreDBInstanceFromS3Response::RestoreDBInstanceFromS3Response(
         const RestoreDBInstanceFromS3Request &request,
@@ -119,6 +114,9 @@ RestoreDBInstanceFromS3Response::RestoreDBInstanceFromS3Response(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreDBInstanceFromS3Request * RestoreDBInstanceFromS3Response::request() const
 {
     Q_D(const RestoreDBInstanceFromS3Response);
@@ -126,9 +124,8 @@ const RestoreDBInstanceFromS3Request * RestoreDBInstanceFromS3Response::request(
 }
 
 /*!
- * @brief  Parse a RDS RestoreDBInstanceFromS3 response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS RestoreDBInstanceFromS3 \a response.
  */
 void RestoreDBInstanceFromS3Response::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void RestoreDBInstanceFromS3Response::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::RestoreDBInstanceFromS3ResponsePrivate
+ * \brief The RestoreDBInstanceFromS3ResponsePrivate class provides private implementation for RestoreDBInstanceFromS3Response.
  * \internal
  *
- * \class RestoreDBInstanceFromS3ResponsePrivate
- *
- * \brief Private implementation for RestoreDBInstanceFromS3Response.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreDBInstanceFromS3ResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreDBInstanceFromS3Response instance.
+ * Constructs a RestoreDBInstanceFromS3ResponsePrivate object with public implementation \a q.
  */
 RestoreDBInstanceFromS3ResponsePrivate::RestoreDBInstanceFromS3ResponsePrivate(
     RestoreDBInstanceFromS3Response * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ RestoreDBInstanceFromS3ResponsePrivate::RestoreDBInstanceFromS3ResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS RestoreDBInstanceFromS3Response element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS RestoreDBInstanceFromS3 response element from \a xml.
  */
 void RestoreDBInstanceFromS3ResponsePrivate::parseRestoreDBInstanceFromS3Response(QXmlStreamReader &xml)
 {

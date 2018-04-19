@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStackResourcesRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeStackResourcesRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStackResourcesRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 DescribeStackResourcesRequestPrivate::DescribeStackResourcesRequestPrivate(
     const CloudFormationRequest::Action action, DescribeStackResourcesRequest * const q)

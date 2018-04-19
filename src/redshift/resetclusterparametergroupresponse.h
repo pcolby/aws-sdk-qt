@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResetClusterParameterGroupResponse : public RedshiftResponse 
 public:
     ResetClusterParameterGroupResponse(const ResetClusterParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResetClusterParameterGroupRequest * request() const;
+    virtual const ResetClusterParameterGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResetClusterParameterGroupResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListObjectChildrenResponse : public CloudDirectoryResponse {
 public:
     ListObjectChildrenResponse(const ListObjectChildrenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListObjectChildrenRequest * request() const;
+    virtual const ListObjectChildrenRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListObjectChildrenResponse)

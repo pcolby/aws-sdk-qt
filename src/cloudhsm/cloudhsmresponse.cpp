@@ -28,16 +28,13 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::CloudHSMResponse
- *
  * \brief The CloudHSMResponse class provides an interface for CloudHSM responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @brief  Constructs a new CloudHSMResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CloudHSMResponse object with parent \a parent.
  */
 CloudHSMResponse::CloudHSMResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CloudHSMResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CloudHSMResponse::CloudHSMResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudHSMResponse object.
- *
+ * \internal
+ * Constructs a CloudHSMResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudHSMResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CloudHSMResponse::CloudHSMResponse(CloudHSMResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CloudHSMResponse::CloudHSMResponse(CloudHSMResponsePrivate * const d, QObject * 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CloudHSMResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CloudHSMResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSM::CloudHSMResponsePrivate
+ * \brief The CloudHSMResponsePrivate class provides private implementation for CloudHSMResponse.
+ * \internal
  *
- * @class  CloudHSMResponsePrivate
- *
- * @brief  Private implementation for CloudHSMResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudHSMResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloudHSMResponse instance.
+ * Constructs a CloudHSMResponsePrivate object with public implementation \a q.
  */
 CloudHSMResponsePrivate::CloudHSMResponsePrivate(
     CloudHSMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

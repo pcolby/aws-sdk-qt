@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CopyDBParameterGroupRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a CopyDBParameterGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CopyDBParameterGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CopyDBParameterGroupRequestPrivate::CopyDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, CopyDBParameterGroupRequest * const q)

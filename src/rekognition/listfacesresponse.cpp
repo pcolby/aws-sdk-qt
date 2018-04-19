@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::ListFacesResponse
- *
  * \brief The ListFacesResponse class provides an interace for Rekognition ListFaces responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new ListFacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListFacesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListFacesResponse::ListFacesResponse(
         const ListFacesRequest &request,
@@ -56,6 +51,9 @@ ListFacesResponse::ListFacesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListFacesRequest * ListFacesResponse::request() const
 {
     Q_D(const ListFacesResponse);
@@ -63,9 +61,8 @@ const ListFacesRequest * ListFacesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition ListFaces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition ListFaces \a response.
  */
 void ListFacesResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListFacesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::ListFacesResponsePrivate
+ * \brief The ListFacesResponsePrivate class provides private implementation for ListFacesResponse.
  * \internal
  *
- * \class ListFacesResponsePrivate
- *
- * \brief Private implementation for ListFacesResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListFacesResponse instance.
+ * Constructs a ListFacesResponsePrivate object with public implementation \a q.
  */
 ListFacesResponsePrivate::ListFacesResponsePrivate(
     ListFacesResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ ListFacesResponsePrivate::ListFacesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition ListFacesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition ListFaces response element from \a xml.
  */
 void ListFacesResponsePrivate::parseListFacesResponse(QXmlStreamReader &xml)
 {

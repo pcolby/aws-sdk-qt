@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AttachClassicLinkVpcRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a AttachClassicLinkVpcRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AttachClassicLinkVpcRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AttachClassicLinkVpcRequestPrivate::AttachClassicLinkVpcRequestPrivate(
     const EC2Request::Action action, AttachClassicLinkVpcRequest * const q)

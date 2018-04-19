@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * RebootReplicationInstanceRequest::response(QN
  */
 
 /*!
- *
- * Constructs a RebootReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a RebootReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 RebootReplicationInstanceRequestPrivate::RebootReplicationInstanceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, RebootReplicationInstanceRequest * const q)

@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetDiskSnapshotsResponse
- *
  * \brief The GetDiskSnapshotsResponse class provides an interace for Lightsail GetDiskSnapshots responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetDiskSnapshotsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDiskSnapshotsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDiskSnapshotsResponse::GetDiskSnapshotsResponse(
         const GetDiskSnapshotsRequest &request,
@@ -71,6 +66,9 @@ GetDiskSnapshotsResponse::GetDiskSnapshotsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDiskSnapshotsRequest * GetDiskSnapshotsResponse::request() const
 {
     Q_D(const GetDiskSnapshotsResponse);
@@ -78,9 +76,8 @@ const GetDiskSnapshotsRequest * GetDiskSnapshotsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetDiskSnapshots response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetDiskSnapshots \a response.
  */
 void GetDiskSnapshotsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetDiskSnapshotsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetDiskSnapshotsResponsePrivate
+ * \brief The GetDiskSnapshotsResponsePrivate class provides private implementation for GetDiskSnapshotsResponse.
  * \internal
  *
- * \class GetDiskSnapshotsResponsePrivate
- *
- * \brief Private implementation for GetDiskSnapshotsResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDiskSnapshotsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDiskSnapshotsResponse instance.
+ * Constructs a GetDiskSnapshotsResponsePrivate object with public implementation \a q.
  */
 GetDiskSnapshotsResponsePrivate::GetDiskSnapshotsResponsePrivate(
     GetDiskSnapshotsResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetDiskSnapshotsResponsePrivate::GetDiskSnapshotsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetDiskSnapshotsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetDiskSnapshots response element from \a xml.
  */
 void GetDiskSnapshotsResponsePrivate::parseGetDiskSnapshotsResponse(QXmlStreamReader &xml)
 {

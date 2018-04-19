@@ -72,7 +72,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * Constructs a[n] CloudWatchLogsRequest object for CloudWatchLogs \a action.
+ * Constructs a CloudWatchLogsRequest object for CloudWatchLogs \a action.
  */
 CloudWatchLogsRequest::CloudWatchLogsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudWatchLogsRequestPrivate(action, this))
@@ -272,8 +272,8 @@ QNetworkRequest CloudWatchLogsRequest::unsignedRequest(const QUrl &endpoint) con
  */
 
 /*!
- * Constructs a CloudWatchLogsRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a CloudWatchLogsRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 CloudWatchLogsRequestPrivate::CloudWatchLogsRequestPrivate(const CloudWatchLogsRequest::Action action, CloudWatchLogsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

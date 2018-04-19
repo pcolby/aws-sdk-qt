@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * PutPermissionPolicyRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a PutPermissionPolicyRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a PutPermissionPolicyRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
     const WAFRequest::Action action, PutPermissionPolicyRequest * const q)

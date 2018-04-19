@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetIntegrationResponse
- *
  * \brief The GetIntegrationResponse class provides an interace for APIGateway GetIntegration responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetIntegrationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetIntegrationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetIntegrationResponse::GetIntegrationResponse(
         const GetIntegrationRequest &request,
@@ -60,6 +55,9 @@ GetIntegrationResponse::GetIntegrationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetIntegrationRequest * GetIntegrationResponse::request() const
 {
     Q_D(const GetIntegrationResponse);
@@ -67,9 +65,8 @@ const GetIntegrationRequest * GetIntegrationResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetIntegration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetIntegration \a response.
  */
 void GetIntegrationResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetIntegrationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetIntegrationResponsePrivate
+ * \brief The GetIntegrationResponsePrivate class provides private implementation for GetIntegrationResponse.
  * \internal
  *
- * \class GetIntegrationResponsePrivate
- *
- * \brief Private implementation for GetIntegrationResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIntegrationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetIntegrationResponse instance.
+ * Constructs a GetIntegrationResponsePrivate object with public implementation \a q.
  */
 GetIntegrationResponsePrivate::GetIntegrationResponsePrivate(
     GetIntegrationResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetIntegrationResponsePrivate::GetIntegrationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetIntegrationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetIntegration response element from \a xml.
  */
 void GetIntegrationResponsePrivate::parseGetIntegrationResponse(QXmlStreamReader &xml)
 {

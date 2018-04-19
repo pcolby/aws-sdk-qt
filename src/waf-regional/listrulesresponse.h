@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListRulesResponse : public WAFRegionalResponse {
 public:
     ListRulesResponse(const ListRulesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListRulesRequest * request() const;
+    virtual const ListRulesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListRulesResponse)

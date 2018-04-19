@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RecordActivityTaskHeartbeatResponse
- *
  * \brief The RecordActivityTaskHeartbeatResponse class provides an interace for SWF RecordActivityTaskHeartbeat responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RecordActivityTaskHeartbeatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RecordActivityTaskHeartbeatResponse object for \a reply to \a request, with parent \a parent.
  */
 RecordActivityTaskHeartbeatResponse::RecordActivityTaskHeartbeatResponse(
         const RecordActivityTaskHeartbeatRequest &request,
@@ -71,6 +66,9 @@ RecordActivityTaskHeartbeatResponse::RecordActivityTaskHeartbeatResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RecordActivityTaskHeartbeatRequest * RecordActivityTaskHeartbeatResponse::request() const
 {
     Q_D(const RecordActivityTaskHeartbeatResponse);
@@ -78,9 +76,8 @@ const RecordActivityTaskHeartbeatRequest * RecordActivityTaskHeartbeatResponse::
 }
 
 /*!
- * @brief  Parse a SWF RecordActivityTaskHeartbeat response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF RecordActivityTaskHeartbeat \a response.
  */
 void RecordActivityTaskHeartbeatResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void RecordActivityTaskHeartbeatResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::RecordActivityTaskHeartbeatResponsePrivate
+ * \brief The RecordActivityTaskHeartbeatResponsePrivate class provides private implementation for RecordActivityTaskHeartbeatResponse.
  * \internal
  *
- * \class RecordActivityTaskHeartbeatResponsePrivate
- *
- * \brief Private implementation for RecordActivityTaskHeartbeatResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RecordActivityTaskHeartbeatResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RecordActivityTaskHeartbeatResponse instance.
+ * Constructs a RecordActivityTaskHeartbeatResponsePrivate object with public implementation \a q.
  */
 RecordActivityTaskHeartbeatResponsePrivate::RecordActivityTaskHeartbeatResponsePrivate(
     RecordActivityTaskHeartbeatResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ RecordActivityTaskHeartbeatResponsePrivate::RecordActivityTaskHeartbeatResponseP
 }
 
 /*!
- * @brief  Parse an SWF RecordActivityTaskHeartbeatResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF RecordActivityTaskHeartbeat response element from \a xml.
  */
 void RecordActivityTaskHeartbeatResponsePrivate::parseRecordActivityTaskHeartbeatResponse(QXmlStreamReader &xml)
 {

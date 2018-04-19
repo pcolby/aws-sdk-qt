@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::ListDeadLetterSourceQueuesResponse
- *
  * \brief The ListDeadLetterSourceQueuesResponse class provides an interace for SQS ListDeadLetterSourceQueues responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new ListDeadLetterSourceQueuesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDeadLetterSourceQueuesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDeadLetterSourceQueuesResponse::ListDeadLetterSourceQueuesResponse(
         const ListDeadLetterSourceQueuesRequest &request,
@@ -121,6 +116,9 @@ ListDeadLetterSourceQueuesResponse::ListDeadLetterSourceQueuesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDeadLetterSourceQueuesRequest * ListDeadLetterSourceQueuesResponse::request() const
 {
     Q_D(const ListDeadLetterSourceQueuesResponse);
@@ -128,9 +126,8 @@ const ListDeadLetterSourceQueuesRequest * ListDeadLetterSourceQueuesResponse::re
 }
 
 /*!
- * @brief  Parse a SQS ListDeadLetterSourceQueues response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS ListDeadLetterSourceQueues \a response.
  */
 void ListDeadLetterSourceQueuesResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void ListDeadLetterSourceQueuesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::ListDeadLetterSourceQueuesResponsePrivate
+ * \brief The ListDeadLetterSourceQueuesResponsePrivate class provides private implementation for ListDeadLetterSourceQueuesResponse.
  * \internal
  *
- * \class ListDeadLetterSourceQueuesResponsePrivate
- *
- * \brief Private implementation for ListDeadLetterSourceQueuesResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeadLetterSourceQueuesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDeadLetterSourceQueuesResponse instance.
+ * Constructs a ListDeadLetterSourceQueuesResponsePrivate object with public implementation \a q.
  */
 ListDeadLetterSourceQueuesResponsePrivate::ListDeadLetterSourceQueuesResponsePrivate(
     ListDeadLetterSourceQueuesResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ ListDeadLetterSourceQueuesResponsePrivate::ListDeadLetterSourceQueuesResponsePri
 }
 
 /*!
- * @brief  Parse an SQS ListDeadLetterSourceQueuesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS ListDeadLetterSourceQueues response element from \a xml.
  */
 void ListDeadLetterSourceQueuesResponsePrivate::parseListDeadLetterSourceQueuesResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListReviewableHITsResponse
- *
  * \brief The ListReviewableHITsResponse class provides an interace for MTurk ListReviewableHITs responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listReviewableHITs
  */
 
 /*!
- * @brief  Constructs a new ListReviewableHITsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListReviewableHITsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListReviewableHITsResponse::ListReviewableHITsResponse(
         const ListReviewableHITsRequest &request,
@@ -55,6 +50,9 @@ ListReviewableHITsResponse::ListReviewableHITsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListReviewableHITsRequest * ListReviewableHITsResponse::request() const
 {
     Q_D(const ListReviewableHITsResponse);
@@ -62,9 +60,8 @@ const ListReviewableHITsRequest * ListReviewableHITsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk ListReviewableHITs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk ListReviewableHITs \a response.
  */
 void ListReviewableHITsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListReviewableHITsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::ListReviewableHITsResponsePrivate
+ * \brief The ListReviewableHITsResponsePrivate class provides private implementation for ListReviewableHITsResponse.
  * \internal
  *
- * \class ListReviewableHITsResponsePrivate
- *
- * \brief Private implementation for ListReviewableHITsResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListReviewableHITsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListReviewableHITsResponse instance.
+ * Constructs a ListReviewableHITsResponsePrivate object with public implementation \a q.
  */
 ListReviewableHITsResponsePrivate::ListReviewableHITsResponsePrivate(
     ListReviewableHITsResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ ListReviewableHITsResponsePrivate::ListReviewableHITsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk ListReviewableHITsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk ListReviewableHITs response element from \a xml.
  */
 void ListReviewableHITsResponsePrivate::parseListReviewableHITsResponse(QXmlStreamReader &xml)
 {

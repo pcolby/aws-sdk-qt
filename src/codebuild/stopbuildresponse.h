@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopBuildResponse : public CodeBuildResponse {
 public:
     StopBuildResponse(const StopBuildRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopBuildRequest * request() const;
+    virtual const StopBuildRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopBuildResponse)

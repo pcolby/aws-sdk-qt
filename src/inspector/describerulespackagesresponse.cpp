@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DescribeRulesPackagesResponse
- *
  * \brief The DescribeRulesPackagesResponse class provides an interace for Inspector DescribeRulesPackages responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DescribeRulesPackagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRulesPackagesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRulesPackagesResponse::DescribeRulesPackagesResponse(
         const DescribeRulesPackagesRequest &request,
@@ -60,6 +55,9 @@ DescribeRulesPackagesResponse::DescribeRulesPackagesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRulesPackagesRequest * DescribeRulesPackagesResponse::request() const
 {
     Q_D(const DescribeRulesPackagesResponse);
@@ -67,9 +65,8 @@ const DescribeRulesPackagesRequest * DescribeRulesPackagesResponse::request() co
 }
 
 /*!
- * @brief  Parse a Inspector DescribeRulesPackages response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector DescribeRulesPackages \a response.
  */
 void DescribeRulesPackagesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeRulesPackagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::DescribeRulesPackagesResponsePrivate
+ * \brief The DescribeRulesPackagesResponsePrivate class provides private implementation for DescribeRulesPackagesResponse.
  * \internal
  *
- * \class DescribeRulesPackagesResponsePrivate
- *
- * \brief Private implementation for DescribeRulesPackagesResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRulesPackagesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRulesPackagesResponse instance.
+ * Constructs a DescribeRulesPackagesResponsePrivate object with public implementation \a q.
  */
 DescribeRulesPackagesResponsePrivate::DescribeRulesPackagesResponsePrivate(
     DescribeRulesPackagesResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeRulesPackagesResponsePrivate::DescribeRulesPackagesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector DescribeRulesPackagesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector DescribeRulesPackages response element from \a xml.
  */
 void DescribeRulesPackagesResponsePrivate::parseDescribeRulesPackagesResponse(QXmlStreamReader &xml)
 {

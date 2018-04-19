@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateAccountAliasResponse
- *
  * \brief The CreateAccountAliasResponse class provides an interace for IAM CreateAccountAlias responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateAccountAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAccountAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAccountAliasResponse::CreateAccountAliasResponse(
         const CreateAccountAliasRequest &request,
@@ -120,6 +115,9 @@ CreateAccountAliasResponse::CreateAccountAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAccountAliasRequest * CreateAccountAliasResponse::request() const
 {
     Q_D(const CreateAccountAliasResponse);
@@ -127,9 +125,8 @@ const CreateAccountAliasRequest * CreateAccountAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM CreateAccountAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreateAccountAlias \a response.
  */
 void CreateAccountAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreateAccountAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreateAccountAliasResponsePrivate
+ * \brief The CreateAccountAliasResponsePrivate class provides private implementation for CreateAccountAliasResponse.
  * \internal
  *
- * \class CreateAccountAliasResponsePrivate
- *
- * \brief Private implementation for CreateAccountAliasResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAccountAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAccountAliasResponse instance.
+ * Constructs a CreateAccountAliasResponsePrivate object with public implementation \a q.
  */
 CreateAccountAliasResponsePrivate::CreateAccountAliasResponsePrivate(
     CreateAccountAliasResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreateAccountAliasResponsePrivate::CreateAccountAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM CreateAccountAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreateAccountAlias response element from \a xml.
  */
 void CreateAccountAliasResponsePrivate::parseCreateAccountAliasResponse(QXmlStreamReader &xml)
 {

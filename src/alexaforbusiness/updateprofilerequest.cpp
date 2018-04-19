@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateProfileRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateProfileRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a UpdateProfileRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 UpdateProfileRequestPrivate::UpdateProfileRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateProfileRequest * const q)

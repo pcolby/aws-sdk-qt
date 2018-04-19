@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeReservedDBInstancesResponse
- *
  * \brief The DescribeReservedDBInstancesResponse class provides an interace for RDS DescribeReservedDBInstances responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeReservedDBInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeReservedDBInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeReservedDBInstancesResponse::DescribeReservedDBInstancesResponse(
         const DescribeReservedDBInstancesRequest &request,
@@ -119,6 +114,9 @@ DescribeReservedDBInstancesResponse::DescribeReservedDBInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeReservedDBInstancesRequest * DescribeReservedDBInstancesResponse::request() const
 {
     Q_D(const DescribeReservedDBInstancesResponse);
@@ -126,9 +124,8 @@ const DescribeReservedDBInstancesRequest * DescribeReservedDBInstancesResponse::
 }
 
 /*!
- * @brief  Parse a RDS DescribeReservedDBInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeReservedDBInstances \a response.
  */
 void DescribeReservedDBInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeReservedDBInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeReservedDBInstancesResponsePrivate
+ * \brief The DescribeReservedDBInstancesResponsePrivate class provides private implementation for DescribeReservedDBInstancesResponse.
  * \internal
  *
- * \class DescribeReservedDBInstancesResponsePrivate
- *
- * \brief Private implementation for DescribeReservedDBInstancesResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReservedDBInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeReservedDBInstancesResponse instance.
+ * Constructs a DescribeReservedDBInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeReservedDBInstancesResponsePrivate::DescribeReservedDBInstancesResponsePrivate(
     DescribeReservedDBInstancesResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeReservedDBInstancesResponsePrivate::DescribeReservedDBInstancesResponseP
 }
 
 /*!
- * @brief  Parse an RDS DescribeReservedDBInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeReservedDBInstances response element from \a xml.
  */
 void DescribeReservedDBInstancesResponsePrivate::parseDescribeReservedDBInstancesResponse(QXmlStreamReader &xml)
 {

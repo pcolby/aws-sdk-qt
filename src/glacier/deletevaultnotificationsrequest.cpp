@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVaultNotificationsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteVaultNotificationsRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVaultNotificationsRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 DeleteVaultNotificationsRequestPrivate::DeleteVaultNotificationsRequestPrivate(
     const GlacierRequest::Action action, DeleteVaultNotificationsRequest * const q)

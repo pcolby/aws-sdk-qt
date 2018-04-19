@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * DeleteInterconnectRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteInterconnectRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a DeleteInterconnectRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 DeleteInterconnectRequestPrivate::DeleteInterconnectRequestPrivate(
     const DirectConnectRequest::Action action, DeleteInterconnectRequest * const q)

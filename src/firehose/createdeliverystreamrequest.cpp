@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateDeliveryStreamRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a CreateDeliveryStreamRequestPrivate object for Firehose \a action with,
- * public implementation \a q.
+ * Constructs a CreateDeliveryStreamRequestPrivate object for Firehose \a action,
+ * with public implementation \a q.
  */
 CreateDeliveryStreamRequestPrivate::CreateDeliveryStreamRequestPrivate(
     const FirehoseRequest::Action action, CreateDeliveryStreamRequest * const q)

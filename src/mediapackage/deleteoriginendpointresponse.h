@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteOriginEndpointResponse : public MediaPackageResponse {
 public:
     DeleteOriginEndpointResponse(const DeleteOriginEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteOriginEndpointRequest * request() const;
+    virtual const DeleteOriginEndpointRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteOriginEndpointResponse)

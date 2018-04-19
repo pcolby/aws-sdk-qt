@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAliasRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateAliasRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAliasRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
     const GameLiftRequest::Action action, UpdateAliasRequest * const q)

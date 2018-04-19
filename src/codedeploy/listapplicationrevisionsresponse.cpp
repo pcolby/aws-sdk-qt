@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ListApplicationRevisionsResponse
- *
  * \brief The ListApplicationRevisionsResponse class provides an interace for CodeDeploy ListApplicationRevisions responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ListApplicationRevisionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListApplicationRevisionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListApplicationRevisionsResponse::ListApplicationRevisionsResponse(
         const ListApplicationRevisionsRequest &request,
@@ -136,6 +131,9 @@ ListApplicationRevisionsResponse::ListApplicationRevisionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListApplicationRevisionsRequest * ListApplicationRevisionsResponse::request() const
 {
     Q_D(const ListApplicationRevisionsResponse);
@@ -143,9 +141,8 @@ const ListApplicationRevisionsRequest * ListApplicationRevisionsResponse::reques
 }
 
 /*!
- * @brief  Parse a CodeDeploy ListApplicationRevisions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy ListApplicationRevisions \a response.
  */
 void ListApplicationRevisionsResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void ListApplicationRevisionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::ListApplicationRevisionsResponsePrivate
+ * \brief The ListApplicationRevisionsResponsePrivate class provides private implementation for ListApplicationRevisionsResponse.
  * \internal
  *
- * \class ListApplicationRevisionsResponsePrivate
- *
- * \brief Private implementation for ListApplicationRevisionsResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListApplicationRevisionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListApplicationRevisionsResponse instance.
+ * Constructs a ListApplicationRevisionsResponsePrivate object with public implementation \a q.
  */
 ListApplicationRevisionsResponsePrivate::ListApplicationRevisionsResponsePrivate(
     ListApplicationRevisionsResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ ListApplicationRevisionsResponsePrivate::ListApplicationRevisionsResponsePrivate
 }
 
 /*!
- * @brief  Parse an CodeDeploy ListApplicationRevisionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy ListApplicationRevisions response element from \a xml.
  */
 void ListApplicationRevisionsResponsePrivate::parseListApplicationRevisionsResponse(QXmlStreamReader &xml)
 {

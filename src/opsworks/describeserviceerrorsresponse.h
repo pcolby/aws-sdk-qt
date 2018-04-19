@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeServiceErrorsResponse : public OpsWorksResponse {
 public:
     DescribeServiceErrorsResponse(const DescribeServiceErrorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeServiceErrorsRequest * request() const;
+    virtual const DescribeServiceErrorsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeServiceErrorsResponse)

@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::StartBuildResponse
- *
  * \brief The StartBuildResponse class provides an interace for CodeBuild StartBuild responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new StartBuildResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartBuildResponse object for \a reply to \a request, with parent \a parent.
  */
 StartBuildResponse::StartBuildResponse(
         const StartBuildRequest &request,
@@ -135,6 +130,9 @@ StartBuildResponse::StartBuildResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartBuildRequest * StartBuildResponse::request() const
 {
     Q_D(const StartBuildResponse);
@@ -142,9 +140,8 @@ const StartBuildRequest * StartBuildResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeBuild StartBuild response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild StartBuild \a response.
  */
 void StartBuildResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void StartBuildResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::StartBuildResponsePrivate
+ * \brief The StartBuildResponsePrivate class provides private implementation for StartBuildResponse.
  * \internal
  *
- * \class StartBuildResponsePrivate
- *
- * \brief Private implementation for StartBuildResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartBuildResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartBuildResponse instance.
+ * Constructs a StartBuildResponsePrivate object with public implementation \a q.
  */
 StartBuildResponsePrivate::StartBuildResponsePrivate(
     StartBuildResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ StartBuildResponsePrivate::StartBuildResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeBuild StartBuildResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild StartBuild response element from \a xml.
  */
 void StartBuildResponsePrivate::parseStartBuildResponse(QXmlStreamReader &xml)
 {

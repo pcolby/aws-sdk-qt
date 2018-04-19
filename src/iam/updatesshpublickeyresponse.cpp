@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateSSHPublicKeyResponse
- *
  * \brief The UpdateSSHPublicKeyResponse class provides an interace for IAM UpdateSSHPublicKey responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateSSHPublicKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSSHPublicKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSSHPublicKeyResponse::UpdateSSHPublicKeyResponse(
         const UpdateSSHPublicKeyRequest &request,
@@ -120,6 +115,9 @@ UpdateSSHPublicKeyResponse::UpdateSSHPublicKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSSHPublicKeyRequest * UpdateSSHPublicKeyResponse::request() const
 {
     Q_D(const UpdateSSHPublicKeyResponse);
@@ -127,9 +125,8 @@ const UpdateSSHPublicKeyRequest * UpdateSSHPublicKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM UpdateSSHPublicKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateSSHPublicKey \a response.
  */
 void UpdateSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateSSHPublicKeyResponsePrivate
+ * \brief The UpdateSSHPublicKeyResponsePrivate class provides private implementation for UpdateSSHPublicKeyResponse.
  * \internal
  *
- * \class UpdateSSHPublicKeyResponsePrivate
- *
- * \brief Private implementation for UpdateSSHPublicKeyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSSHPublicKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSSHPublicKeyResponse instance.
+ * Constructs a UpdateSSHPublicKeyResponsePrivate object with public implementation \a q.
  */
 UpdateSSHPublicKeyResponsePrivate::UpdateSSHPublicKeyResponsePrivate(
     UpdateSSHPublicKeyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateSSHPublicKeyResponsePrivate::UpdateSSHPublicKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM UpdateSSHPublicKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateSSHPublicKey response element from \a xml.
  */
 void UpdateSSHPublicKeyResponsePrivate::parseUpdateSSHPublicKeyResponse(QXmlStreamReader &xml)
 {

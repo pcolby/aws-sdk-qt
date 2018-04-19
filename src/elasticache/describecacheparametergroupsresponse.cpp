@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeCacheParameterGroupsResponse
- *
  * \brief The DescribeCacheParameterGroupsResponse class provides an interace for ElastiCache DescribeCacheParameterGroups responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeCacheParameterGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCacheParameterGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCacheParameterGroupsResponse::DescribeCacheParameterGroupsResponse(
         const DescribeCacheParameterGroupsRequest &request,
@@ -69,6 +64,9 @@ DescribeCacheParameterGroupsResponse::DescribeCacheParameterGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCacheParameterGroupsRequest * DescribeCacheParameterGroupsResponse::request() const
 {
     Q_D(const DescribeCacheParameterGroupsResponse);
@@ -76,9 +74,8 @@ const DescribeCacheParameterGroupsRequest * DescribeCacheParameterGroupsResponse
 }
 
 /*!
- * @brief  Parse a ElastiCache DescribeCacheParameterGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DescribeCacheParameterGroups \a response.
  */
 void DescribeCacheParameterGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeCacheParameterGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::DescribeCacheParameterGroupsResponsePrivate
+ * \brief The DescribeCacheParameterGroupsResponsePrivate class provides private implementation for DescribeCacheParameterGroupsResponse.
  * \internal
  *
- * \class DescribeCacheParameterGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeCacheParameterGroupsResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCacheParameterGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCacheParameterGroupsResponse instance.
+ * Constructs a DescribeCacheParameterGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeCacheParameterGroupsResponsePrivate::DescribeCacheParameterGroupsResponsePrivate(
     DescribeCacheParameterGroupsResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeCacheParameterGroupsResponsePrivate::DescribeCacheParameterGroupsRespons
 }
 
 /*!
- * @brief  Parse an ElastiCache DescribeCacheParameterGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DescribeCacheParameterGroups response element from \a xml.
  */
 void DescribeCacheParameterGroupsResponsePrivate::parseDescribeCacheParameterGroupsResponse(QXmlStreamReader &xml)
 {

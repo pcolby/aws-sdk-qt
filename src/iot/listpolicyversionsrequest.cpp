@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListPolicyVersionsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListPolicyVersionsRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListPolicyVersionsRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListPolicyVersionsRequestPrivate::ListPolicyVersionsRequestPrivate(
     const IoTRequest::Action action, ListPolicyVersionsRequest * const q)

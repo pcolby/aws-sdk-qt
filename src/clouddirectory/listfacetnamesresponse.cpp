@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListFacetNamesResponse
- *
  * \brief The ListFacetNamesResponse class provides an interace for CloudDirectory ListFacetNames responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListFacetNamesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListFacetNamesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListFacetNamesResponse::ListFacetNamesResponse(
         const ListFacetNamesRequest &request,
@@ -62,6 +57,9 @@ ListFacetNamesResponse::ListFacetNamesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListFacetNamesRequest * ListFacetNamesResponse::request() const
 {
     Q_D(const ListFacetNamesResponse);
@@ -69,9 +67,8 @@ const ListFacetNamesRequest * ListFacetNamesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListFacetNames response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListFacetNames \a response.
  */
 void ListFacetNamesResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListFacetNamesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListFacetNamesResponsePrivate
+ * \brief The ListFacetNamesResponsePrivate class provides private implementation for ListFacetNamesResponse.
  * \internal
  *
- * \class ListFacetNamesResponsePrivate
- *
- * \brief Private implementation for ListFacetNamesResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFacetNamesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListFacetNamesResponse instance.
+ * Constructs a ListFacetNamesResponsePrivate object with public implementation \a q.
  */
 ListFacetNamesResponsePrivate::ListFacetNamesResponsePrivate(
     ListFacetNamesResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListFacetNamesResponsePrivate::ListFacetNamesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListFacetNamesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListFacetNames response element from \a xml.
  */
 void ListFacetNamesResponsePrivate::parseListFacetNamesResponse(QXmlStreamReader &xml)
 {

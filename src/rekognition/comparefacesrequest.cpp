@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * CompareFacesRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CompareFacesRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a CompareFacesRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 CompareFacesRequestPrivate::CompareFacesRequestPrivate(
     const RekognitionRequest::Action action, CompareFacesRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListShardsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ListShardsRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a ListShardsRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 ListShardsRequestPrivate::ListShardsRequestPrivate(
     const KinesisRequest::Action action, ListShardsRequest * const q)

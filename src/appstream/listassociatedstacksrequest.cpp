@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListAssociatedStacksRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListAssociatedStacksRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a ListAssociatedStacksRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 ListAssociatedStacksRequestPrivate::ListAssociatedStacksRequestPrivate(
     const AppStreamRequest::Action action, ListAssociatedStacksRequest * const q)

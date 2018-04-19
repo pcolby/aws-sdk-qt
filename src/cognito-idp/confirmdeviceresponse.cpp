@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ConfirmDeviceResponse
- *
  * \brief The ConfirmDeviceResponse class provides an interace for CognitoIdentityProvider ConfirmDevice responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ConfirmDeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ConfirmDeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 ConfirmDeviceResponse::ConfirmDeviceResponse(
         const ConfirmDeviceRequest &request,
@@ -65,6 +60,9 @@ ConfirmDeviceResponse::ConfirmDeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ConfirmDeviceRequest * ConfirmDeviceResponse::request() const
 {
     Q_D(const ConfirmDeviceResponse);
@@ -72,9 +70,8 @@ const ConfirmDeviceRequest * ConfirmDeviceResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider ConfirmDevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider ConfirmDevice \a response.
  */
 void ConfirmDeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void ConfirmDeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::ConfirmDeviceResponsePrivate
+ * \brief The ConfirmDeviceResponsePrivate class provides private implementation for ConfirmDeviceResponse.
  * \internal
  *
- * \class ConfirmDeviceResponsePrivate
- *
- * \brief Private implementation for ConfirmDeviceResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmDeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ConfirmDeviceResponse instance.
+ * Constructs a ConfirmDeviceResponsePrivate object with public implementation \a q.
  */
 ConfirmDeviceResponsePrivate::ConfirmDeviceResponsePrivate(
     ConfirmDeviceResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ ConfirmDeviceResponsePrivate::ConfirmDeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider ConfirmDeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider ConfirmDevice response element from \a xml.
  */
 void ConfirmDeviceResponsePrivate::parseConfirmDeviceResponse(QXmlStreamReader &xml)
 {

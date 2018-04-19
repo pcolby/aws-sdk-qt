@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateSpotDatafeedSubscriptionResponse
- *
  * \brief The CreateSpotDatafeedSubscriptionResponse class provides an interace for EC2 CreateSpotDatafeedSubscription responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateSpotDatafeedSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSpotDatafeedSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSpotDatafeedSubscriptionResponse::CreateSpotDatafeedSubscriptionResponse(
         const CreateSpotDatafeedSubscriptionRequest &request,
@@ -59,6 +54,9 @@ CreateSpotDatafeedSubscriptionResponse::CreateSpotDatafeedSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSpotDatafeedSubscriptionRequest * CreateSpotDatafeedSubscriptionResponse::request() const
 {
     Q_D(const CreateSpotDatafeedSubscriptionResponse);
@@ -66,9 +64,8 @@ const CreateSpotDatafeedSubscriptionRequest * CreateSpotDatafeedSubscriptionResp
 }
 
 /*!
- * @brief  Parse a EC2 CreateSpotDatafeedSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateSpotDatafeedSubscription \a response.
  */
 void CreateSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateSpotDatafeedSubscriptionResponsePrivate
+ * \brief The CreateSpotDatafeedSubscriptionResponsePrivate class provides private implementation for CreateSpotDatafeedSubscriptionResponse.
  * \internal
  *
- * \class CreateSpotDatafeedSubscriptionResponsePrivate
- *
- * \brief Private implementation for CreateSpotDatafeedSubscriptionResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSpotDatafeedSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSpotDatafeedSubscriptionResponse instance.
+ * Constructs a CreateSpotDatafeedSubscriptionResponsePrivate object with public implementation \a q.
  */
 CreateSpotDatafeedSubscriptionResponsePrivate::CreateSpotDatafeedSubscriptionResponsePrivate(
     CreateSpotDatafeedSubscriptionResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateSpotDatafeedSubscriptionResponsePrivate::CreateSpotDatafeedSubscriptionRes
 }
 
 /*!
- * @brief  Parse an EC2 CreateSpotDatafeedSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateSpotDatafeedSubscription response element from \a xml.
  */
 void CreateSpotDatafeedSubscriptionResponsePrivate::parseCreateSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateCoreDefinitionVersionResponse
- *
  * \brief The CreateCoreDefinitionVersionResponse class provides an interace for Greengrass CreateCoreDefinitionVersion responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateCoreDefinitionVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCoreDefinitionVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCoreDefinitionVersionResponse::CreateCoreDefinitionVersionResponse(
         const CreateCoreDefinitionVersionRequest &request,
@@ -58,6 +53,9 @@ CreateCoreDefinitionVersionResponse::CreateCoreDefinitionVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCoreDefinitionVersionRequest * CreateCoreDefinitionVersionResponse::request() const
 {
     Q_D(const CreateCoreDefinitionVersionResponse);
@@ -65,9 +63,8 @@ const CreateCoreDefinitionVersionRequest * CreateCoreDefinitionVersionResponse::
 }
 
 /*!
- * @brief  Parse a Greengrass CreateCoreDefinitionVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass CreateCoreDefinitionVersion \a response.
  */
 void CreateCoreDefinitionVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateCoreDefinitionVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::CreateCoreDefinitionVersionResponsePrivate
+ * \brief The CreateCoreDefinitionVersionResponsePrivate class provides private implementation for CreateCoreDefinitionVersionResponse.
  * \internal
  *
- * \class CreateCoreDefinitionVersionResponsePrivate
- *
- * \brief Private implementation for CreateCoreDefinitionVersionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCoreDefinitionVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCoreDefinitionVersionResponse instance.
+ * Constructs a CreateCoreDefinitionVersionResponsePrivate object with public implementation \a q.
  */
 CreateCoreDefinitionVersionResponsePrivate::CreateCoreDefinitionVersionResponsePrivate(
     CreateCoreDefinitionVersionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateCoreDefinitionVersionResponsePrivate::CreateCoreDefinitionVersionResponseP
 }
 
 /*!
- * @brief  Parse an Greengrass CreateCoreDefinitionVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass CreateCoreDefinitionVersion response element from \a xml.
  */
 void CreateCoreDefinitionVersionResponsePrivate::parseCreateCoreDefinitionVersionResponse(QXmlStreamReader &xml)
 {

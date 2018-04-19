@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListFieldLevelEncryptionConfigsResponse : public CloudFrontRe
 public:
     ListFieldLevelEncryptionConfigsResponse(const ListFieldLevelEncryptionConfigsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListFieldLevelEncryptionConfigsRequest * request() const;
+    virtual const ListFieldLevelEncryptionConfigsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListFieldLevelEncryptionConfigsResponse)

@@ -154,9 +154,8 @@ QtAws::Core::AwsAbstractResponse * PutScalingPolicyRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a PutScalingPolicyRequestPrivate object for ApplicationAutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a PutScalingPolicyRequestPrivate object for ApplicationAutoScaling \a action,
+ * with public implementation \a q.
  */
 PutScalingPolicyRequestPrivate::PutScalingPolicyRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, PutScalingPolicyRequest * const q)

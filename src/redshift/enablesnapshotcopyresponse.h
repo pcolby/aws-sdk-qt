@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableSnapshotCopyResponse : public RedshiftResponse {
 public:
     EnableSnapshotCopyResponse(const EnableSnapshotCopyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableSnapshotCopyRequest * request() const;
+    virtual const EnableSnapshotCopyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EnableSnapshotCopyResponse)

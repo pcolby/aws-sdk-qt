@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::DeleteResolverResponse
- *
  * \brief The DeleteResolverResponse class provides an interace for AppSync DeleteResolver responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new DeleteResolverResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteResolverResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteResolverResponse::DeleteResolverResponse(
         const DeleteResolverRequest &request,
@@ -56,6 +51,9 @@ DeleteResolverResponse::DeleteResolverResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteResolverRequest * DeleteResolverResponse::request() const
 {
     Q_D(const DeleteResolverResponse);
@@ -63,9 +61,8 @@ const DeleteResolverRequest * DeleteResolverResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync DeleteResolver response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync DeleteResolver \a response.
  */
 void DeleteResolverResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DeleteResolverResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::DeleteResolverResponsePrivate
+ * \brief The DeleteResolverResponsePrivate class provides private implementation for DeleteResolverResponse.
  * \internal
  *
- * \class DeleteResolverResponsePrivate
- *
- * \brief Private implementation for DeleteResolverResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteResolverResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteResolverResponse instance.
+ * Constructs a DeleteResolverResponsePrivate object with public implementation \a q.
  */
 DeleteResolverResponsePrivate::DeleteResolverResponsePrivate(
     DeleteResolverResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ DeleteResolverResponsePrivate::DeleteResolverResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync DeleteResolverResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync DeleteResolver response element from \a xml.
  */
 void DeleteResolverResponsePrivate::parseDeleteResolverResponse(QXmlStreamReader &xml)
 {

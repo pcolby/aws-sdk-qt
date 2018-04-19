@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ApproveAssignmentRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ApproveAssignmentRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a ApproveAssignmentRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 ApproveAssignmentRequestPrivate::ApproveAssignmentRequestPrivate(
     const MTurkRequest::Action action, ApproveAssignmentRequest * const q)

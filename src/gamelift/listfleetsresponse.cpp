@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::ListFleetsResponse
- *
  * \brief The ListFleetsResponse class provides an interace for GameLift ListFleets responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new ListFleetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListFleetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListFleetsResponse::ListFleetsResponse(
         const ListFleetsRequest &request,
@@ -491,6 +486,9 @@ ListFleetsResponse::ListFleetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListFleetsRequest * ListFleetsResponse::request() const
 {
     Q_D(const ListFleetsResponse);
@@ -498,9 +496,8 @@ const ListFleetsRequest * ListFleetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift ListFleets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift ListFleets \a response.
  */
 void ListFleetsResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void ListFleetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::ListFleetsResponsePrivate
+ * \brief The ListFleetsResponsePrivate class provides private implementation for ListFleetsResponse.
  * \internal
  *
- * \class ListFleetsResponsePrivate
- *
- * \brief Private implementation for ListFleetsResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFleetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListFleetsResponse instance.
+ * Constructs a ListFleetsResponsePrivate object with public implementation \a q.
  */
 ListFleetsResponsePrivate::ListFleetsResponsePrivate(
     ListFleetsResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ ListFleetsResponsePrivate::ListFleetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift ListFleetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift ListFleets response element from \a xml.
  */
 void ListFleetsResponsePrivate::parseListFleetsResponse(QXmlStreamReader &xml)
 {

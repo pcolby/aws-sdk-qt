@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetTopicRuleResponse
- *
  * \brief The GetTopicRuleResponse class provides an interace for IoT GetTopicRule responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetTopicRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTopicRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTopicRuleResponse::GetTopicRuleResponse(
         const GetTopicRuleRequest &request,
@@ -66,6 +61,9 @@ GetTopicRuleResponse::GetTopicRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTopicRuleRequest * GetTopicRuleResponse::request() const
 {
     Q_D(const GetTopicRuleResponse);
@@ -73,9 +71,8 @@ const GetTopicRuleRequest * GetTopicRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT GetTopicRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT GetTopicRule \a response.
  */
 void GetTopicRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetTopicRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::GetTopicRuleResponsePrivate
+ * \brief The GetTopicRuleResponsePrivate class provides private implementation for GetTopicRuleResponse.
  * \internal
  *
- * \class GetTopicRuleResponsePrivate
- *
- * \brief Private implementation for GetTopicRuleResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTopicRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTopicRuleResponse instance.
+ * Constructs a GetTopicRuleResponsePrivate object with public implementation \a q.
  */
 GetTopicRuleResponsePrivate::GetTopicRuleResponsePrivate(
     GetTopicRuleResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ GetTopicRuleResponsePrivate::GetTopicRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT GetTopicRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT GetTopicRule response element from \a xml.
  */
 void GetTopicRuleResponsePrivate::parseGetTopicRuleResponse(QXmlStreamReader &xml)
 {

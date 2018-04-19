@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CompleteLifecycleActionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CompleteLifecycleActionRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a CompleteLifecycleActionRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 CompleteLifecycleActionRequestPrivate::CompleteLifecycleActionRequestPrivate(
     const AutoScalingRequest::Action action, CompleteLifecycleActionRequest * const q)

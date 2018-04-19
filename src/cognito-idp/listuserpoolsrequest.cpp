@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * ListUserPoolsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListUserPoolsRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a ListUserPoolsRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 ListUserPoolsRequestPrivate::ListUserPoolsRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ListUserPoolsRequest * const q)

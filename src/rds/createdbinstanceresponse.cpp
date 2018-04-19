@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBInstanceResponse
- *
  * \brief The CreateDBInstanceResponse class provides an interace for RDS CreateDBInstance responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDBInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDBInstanceResponse::CreateDBInstanceResponse(
         const CreateDBInstanceRequest &request,
@@ -119,6 +114,9 @@ CreateDBInstanceResponse::CreateDBInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDBInstanceRequest * CreateDBInstanceResponse::request() const
 {
     Q_D(const CreateDBInstanceResponse);
@@ -126,9 +124,8 @@ const CreateDBInstanceRequest * CreateDBInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS CreateDBInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CreateDBInstance \a response.
  */
 void CreateDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CreateDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CreateDBInstanceResponsePrivate
+ * \brief The CreateDBInstanceResponsePrivate class provides private implementation for CreateDBInstanceResponse.
  * \internal
  *
- * \class CreateDBInstanceResponsePrivate
- *
- * \brief Private implementation for CreateDBInstanceResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDBInstanceResponse instance.
+ * Constructs a CreateDBInstanceResponsePrivate object with public implementation \a q.
  */
 CreateDBInstanceResponsePrivate::CreateDBInstanceResponsePrivate(
     CreateDBInstanceResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CreateDBInstanceResponsePrivate::CreateDBInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CreateDBInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CreateDBInstance response element from \a xml.
  */
 void CreateDBInstanceResponsePrivate::parseCreateDBInstanceResponse(QXmlStreamReader &xml)
 {

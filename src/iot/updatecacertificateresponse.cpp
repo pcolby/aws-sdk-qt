@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateCACertificateResponse
- *
  * \brief The UpdateCACertificateResponse class provides an interace for IoT UpdateCACertificate responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateCACertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateCACertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateCACertificateResponse::UpdateCACertificateResponse(
         const UpdateCACertificateRequest &request,
@@ -66,6 +61,9 @@ UpdateCACertificateResponse::UpdateCACertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateCACertificateRequest * UpdateCACertificateResponse::request() const
 {
     Q_D(const UpdateCACertificateResponse);
@@ -73,9 +71,8 @@ const UpdateCACertificateRequest * UpdateCACertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT UpdateCACertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT UpdateCACertificate \a response.
  */
 void UpdateCACertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateCACertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::UpdateCACertificateResponsePrivate
+ * \brief The UpdateCACertificateResponsePrivate class provides private implementation for UpdateCACertificateResponse.
  * \internal
  *
- * \class UpdateCACertificateResponsePrivate
- *
- * \brief Private implementation for UpdateCACertificateResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCACertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateCACertificateResponse instance.
+ * Constructs a UpdateCACertificateResponsePrivate object with public implementation \a q.
  */
 UpdateCACertificateResponsePrivate::UpdateCACertificateResponsePrivate(
     UpdateCACertificateResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateCACertificateResponsePrivate::UpdateCACertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT UpdateCACertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT UpdateCACertificate response element from \a xml.
  */
 void UpdateCACertificateResponsePrivate::parseUpdateCACertificateResponse(QXmlStreamReader &xml)
 {

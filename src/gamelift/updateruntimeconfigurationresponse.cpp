@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateRuntimeConfigurationResponse
- *
  * \brief The UpdateRuntimeConfigurationResponse class provides an interace for GameLift UpdateRuntimeConfiguration responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateRuntimeConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRuntimeConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRuntimeConfigurationResponse::UpdateRuntimeConfigurationResponse(
         const UpdateRuntimeConfigurationRequest &request,
@@ -491,6 +486,9 @@ UpdateRuntimeConfigurationResponse::UpdateRuntimeConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRuntimeConfigurationRequest * UpdateRuntimeConfigurationResponse::request() const
 {
     Q_D(const UpdateRuntimeConfigurationResponse);
@@ -498,9 +496,8 @@ const UpdateRuntimeConfigurationRequest * UpdateRuntimeConfigurationResponse::re
 }
 
 /*!
- * @brief  Parse a GameLift UpdateRuntimeConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift UpdateRuntimeConfiguration \a response.
  */
 void UpdateRuntimeConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void UpdateRuntimeConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::UpdateRuntimeConfigurationResponsePrivate
+ * \brief The UpdateRuntimeConfigurationResponsePrivate class provides private implementation for UpdateRuntimeConfigurationResponse.
  * \internal
  *
- * \class UpdateRuntimeConfigurationResponsePrivate
- *
- * \brief Private implementation for UpdateRuntimeConfigurationResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRuntimeConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRuntimeConfigurationResponse instance.
+ * Constructs a UpdateRuntimeConfigurationResponsePrivate object with public implementation \a q.
  */
 UpdateRuntimeConfigurationResponsePrivate::UpdateRuntimeConfigurationResponsePrivate(
     UpdateRuntimeConfigurationResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ UpdateRuntimeConfigurationResponsePrivate::UpdateRuntimeConfigurationResponsePri
 }
 
 /*!
- * @brief  Parse an GameLift UpdateRuntimeConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift UpdateRuntimeConfiguration response element from \a xml.
  */
 void UpdateRuntimeConfigurationResponsePrivate::parseUpdateRuntimeConfigurationResponse(QXmlStreamReader &xml)
 {

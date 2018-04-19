@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::ListDatasetsResponse
- *
  * \brief The ListDatasetsResponse class provides an interace for CognitoSync ListDatasets responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new ListDatasetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDatasetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDatasetsResponse::ListDatasetsResponse(
         const ListDatasetsRequest &request,
@@ -75,6 +70,9 @@ ListDatasetsResponse::ListDatasetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDatasetsRequest * ListDatasetsResponse::request() const
 {
     Q_D(const ListDatasetsResponse);
@@ -82,9 +80,8 @@ const ListDatasetsRequest * ListDatasetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoSync ListDatasets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync ListDatasets \a response.
  */
 void ListDatasetsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void ListDatasetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::ListDatasetsResponsePrivate
+ * \brief The ListDatasetsResponsePrivate class provides private implementation for ListDatasetsResponse.
  * \internal
  *
- * \class ListDatasetsResponsePrivate
- *
- * \brief Private implementation for ListDatasetsResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDatasetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDatasetsResponse instance.
+ * Constructs a ListDatasetsResponsePrivate object with public implementation \a q.
  */
 ListDatasetsResponsePrivate::ListDatasetsResponsePrivate(
     ListDatasetsResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ ListDatasetsResponsePrivate::ListDatasetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync ListDatasetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync ListDatasets response element from \a xml.
  */
 void ListDatasetsResponsePrivate::parseListDatasetsResponse(QXmlStreamReader &xml)
 {

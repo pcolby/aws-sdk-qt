@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetHealthCheckLastFailureReasonRequest::respo
  */
 
 /*!
- *
- * Constructs a GetHealthCheckLastFailureReasonRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a GetHealthCheckLastFailureReasonRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 GetHealthCheckLastFailureReasonRequestPrivate::GetHealthCheckLastFailureReasonRequestPrivate(
     const Route53Request::Action action, GetHealthCheckLastFailureReasonRequest * const q)

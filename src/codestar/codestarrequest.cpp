@@ -57,7 +57,7 @@ namespace CodeStar {
  */
 
 /*!
- * Constructs a[n] CodeStarRequest object for CodeStar \a action.
+ * Constructs a CodeStarRequest object for CodeStar \a action.
  */
 CodeStarRequest::CodeStarRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CodeStarRequestPrivate(action, this))
@@ -257,8 +257,8 @@ QNetworkRequest CodeStarRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CodeStarRequestPrivate object for CodeStar \a action with,
- * public implementation \a q.
+ * Constructs a CodeStarRequestPrivate object for CodeStar \a action,
+ * with public implementation \a q.
  */
 CodeStarRequestPrivate::CodeStarRequestPrivate(const CodeStarRequest::Action action, CodeStarRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

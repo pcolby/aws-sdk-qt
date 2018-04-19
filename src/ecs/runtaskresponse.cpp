@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::RunTaskResponse
- *
  * \brief The RunTaskResponse class provides an interace for ECS RunTask responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new RunTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RunTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 RunTaskResponse::RunTaskResponse(
         const RunTaskRequest &request,
@@ -72,6 +67,9 @@ RunTaskResponse::RunTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RunTaskRequest * RunTaskResponse::request() const
 {
     Q_D(const RunTaskResponse);
@@ -79,9 +77,8 @@ const RunTaskRequest * RunTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS RunTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS RunTask \a response.
  */
 void RunTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void RunTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::RunTaskResponsePrivate
+ * \brief The RunTaskResponsePrivate class provides private implementation for RunTaskResponse.
  * \internal
  *
- * \class RunTaskResponsePrivate
- *
- * \brief Private implementation for RunTaskResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RunTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RunTaskResponse instance.
+ * Constructs a RunTaskResponsePrivate object with public implementation \a q.
  */
 RunTaskResponsePrivate::RunTaskResponsePrivate(
     RunTaskResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ RunTaskResponsePrivate::RunTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS RunTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS RunTask response element from \a xml.
  */
 void RunTaskResponsePrivate::parseRunTaskResponse(QXmlStreamReader &xml)
 {

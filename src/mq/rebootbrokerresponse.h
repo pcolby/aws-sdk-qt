@@ -34,10 +34,10 @@ class QTAWS_EXPORT RebootBrokerResponse : public MQResponse {
 public:
     RebootBrokerResponse(const RebootBrokerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RebootBrokerRequest * request() const;
+    virtual const RebootBrokerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RebootBrokerResponse)

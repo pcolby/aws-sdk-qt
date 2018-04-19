@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutLogEventsResponse : public CloudWatchLogsResponse {
 public:
     PutLogEventsResponse(const PutLogEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutLogEventsRequest * request() const;
+    virtual const PutLogEventsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutLogEventsResponse)

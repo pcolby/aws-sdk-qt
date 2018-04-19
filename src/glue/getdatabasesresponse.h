@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDatabasesResponse : public GlueResponse {
 public:
     GetDatabasesResponse(const GetDatabasesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDatabasesRequest * request() const;
+    virtual const GetDatabasesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDatabasesResponse)

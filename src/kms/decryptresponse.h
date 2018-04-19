@@ -34,10 +34,10 @@ class QTAWS_EXPORT DecryptResponse : public KMSResponse {
 public:
     DecryptResponse(const DecryptRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DecryptRequest * request() const;
+    virtual const DecryptRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DecryptResponse)

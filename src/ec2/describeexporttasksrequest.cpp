@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeExportTasksRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeExportTasksRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
     const EC2Request::Action action, DescribeExportTasksRequest * const q)

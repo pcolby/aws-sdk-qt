@@ -34,10 +34,10 @@ class QTAWS_EXPORT RestoreObjectResponse : public S3Response {
 public:
     RestoreObjectResponse(const RestoreObjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RestoreObjectRequest * request() const;
+    virtual const RestoreObjectRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RestoreObjectResponse)

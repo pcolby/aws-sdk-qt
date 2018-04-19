@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::DescribeWorkflowTypeResponse
- *
  * \brief The DescribeWorkflowTypeResponse class provides an interace for SWF DescribeWorkflowType responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new DescribeWorkflowTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeWorkflowTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeWorkflowTypeResponse::DescribeWorkflowTypeResponse(
         const DescribeWorkflowTypeRequest &request,
@@ -71,6 +66,9 @@ DescribeWorkflowTypeResponse::DescribeWorkflowTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeWorkflowTypeRequest * DescribeWorkflowTypeResponse::request() const
 {
     Q_D(const DescribeWorkflowTypeResponse);
@@ -78,9 +76,8 @@ const DescribeWorkflowTypeRequest * DescribeWorkflowTypeResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SWF DescribeWorkflowType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF DescribeWorkflowType \a response.
  */
 void DescribeWorkflowTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DescribeWorkflowTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::DescribeWorkflowTypeResponsePrivate
+ * \brief The DescribeWorkflowTypeResponsePrivate class provides private implementation for DescribeWorkflowTypeResponse.
  * \internal
  *
- * \class DescribeWorkflowTypeResponsePrivate
- *
- * \brief Private implementation for DescribeWorkflowTypeResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeWorkflowTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeWorkflowTypeResponse instance.
+ * Constructs a DescribeWorkflowTypeResponsePrivate object with public implementation \a q.
  */
 DescribeWorkflowTypeResponsePrivate::DescribeWorkflowTypeResponsePrivate(
     DescribeWorkflowTypeResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ DescribeWorkflowTypeResponsePrivate::DescribeWorkflowTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF DescribeWorkflowTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF DescribeWorkflowType response element from \a xml.
  */
 void DescribeWorkflowTypeResponsePrivate::parseDescribeWorkflowTypeResponse(QXmlStreamReader &xml)
 {

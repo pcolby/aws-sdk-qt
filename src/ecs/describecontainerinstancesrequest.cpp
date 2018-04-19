@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * DescribeContainerInstancesRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeContainerInstancesRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeContainerInstancesRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 DescribeContainerInstancesRequestPrivate::DescribeContainerInstancesRequestPrivate(
     const ECSRequest::Action action, DescribeContainerInstancesRequest * const q)

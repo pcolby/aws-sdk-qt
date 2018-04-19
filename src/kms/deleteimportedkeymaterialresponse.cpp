@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::DeleteImportedKeyMaterialResponse
- *
  * \brief The DeleteImportedKeyMaterialResponse class provides an interace for KMS DeleteImportedKeyMaterial responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new DeleteImportedKeyMaterialResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteImportedKeyMaterialResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteImportedKeyMaterialResponse::DeleteImportedKeyMaterialResponse(
         const DeleteImportedKeyMaterialRequest &request,
@@ -154,6 +149,9 @@ DeleteImportedKeyMaterialResponse::DeleteImportedKeyMaterialResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteImportedKeyMaterialRequest * DeleteImportedKeyMaterialResponse::request() const
 {
     Q_D(const DeleteImportedKeyMaterialResponse);
@@ -161,9 +159,8 @@ const DeleteImportedKeyMaterialRequest * DeleteImportedKeyMaterialResponse::requ
 }
 
 /*!
- * @brief  Parse a KMS DeleteImportedKeyMaterial response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS DeleteImportedKeyMaterial \a response.
  */
 void DeleteImportedKeyMaterialResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void DeleteImportedKeyMaterialResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::DeleteImportedKeyMaterialResponsePrivate
+ * \brief The DeleteImportedKeyMaterialResponsePrivate class provides private implementation for DeleteImportedKeyMaterialResponse.
  * \internal
  *
- * \class DeleteImportedKeyMaterialResponsePrivate
- *
- * \brief Private implementation for DeleteImportedKeyMaterialResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteImportedKeyMaterialResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteImportedKeyMaterialResponse instance.
+ * Constructs a DeleteImportedKeyMaterialResponsePrivate object with public implementation \a q.
  */
 DeleteImportedKeyMaterialResponsePrivate::DeleteImportedKeyMaterialResponsePrivate(
     DeleteImportedKeyMaterialResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ DeleteImportedKeyMaterialResponsePrivate::DeleteImportedKeyMaterialResponsePriva
 }
 
 /*!
- * @brief  Parse an KMS DeleteImportedKeyMaterialResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS DeleteImportedKeyMaterial response element from \a xml.
  */
 void DeleteImportedKeyMaterialResponsePrivate::parseDeleteImportedKeyMaterialResponse(QXmlStreamReader &xml)
 {

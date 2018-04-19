@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UntagResourceRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a UntagResourceRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const AppStreamRequest::Action action, UntagResourceRequest * const q)

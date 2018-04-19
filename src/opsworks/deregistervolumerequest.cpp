@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterVolumeRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeregisterVolumeRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterVolumeRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DeregisterVolumeRequestPrivate::DeregisterVolumeRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterVolumeRequest * const q)

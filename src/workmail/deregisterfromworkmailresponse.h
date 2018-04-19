@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeregisterFromWorkMailResponse : public WorkMailResponse {
 public:
     DeregisterFromWorkMailResponse(const DeregisterFromWorkMailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeregisterFromWorkMailRequest * request() const;
+    virtual const DeregisterFromWorkMailRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeregisterFromWorkMailResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeServiceAccessPoliciesResponse : public CloudSearchRes
 public:
     DescribeServiceAccessPoliciesResponse(const DescribeServiceAccessPoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeServiceAccessPoliciesRequest * request() const;
+    virtual const DescribeServiceAccessPoliciesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeServiceAccessPoliciesResponse)

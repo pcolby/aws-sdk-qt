@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateSubnetResponse
- *
  * \brief The CreateSubnetResponse class provides an interace for EC2 CreateSubnet responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateSubnetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSubnetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSubnetResponse::CreateSubnetResponse(
         const CreateSubnetRequest &request,
@@ -59,6 +54,9 @@ CreateSubnetResponse::CreateSubnetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSubnetRequest * CreateSubnetResponse::request() const
 {
     Q_D(const CreateSubnetResponse);
@@ -66,9 +64,8 @@ const CreateSubnetRequest * CreateSubnetResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateSubnet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateSubnet \a response.
  */
 void CreateSubnetResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateSubnetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateSubnetResponsePrivate
+ * \brief The CreateSubnetResponsePrivate class provides private implementation for CreateSubnetResponse.
  * \internal
  *
- * \class CreateSubnetResponsePrivate
- *
- * \brief Private implementation for CreateSubnetResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSubnetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSubnetResponse instance.
+ * Constructs a CreateSubnetResponsePrivate object with public implementation \a q.
  */
 CreateSubnetResponsePrivate::CreateSubnetResponsePrivate(
     CreateSubnetResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateSubnetResponsePrivate::CreateSubnetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateSubnetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateSubnet response element from \a xml.
  */
 void CreateSubnetResponsePrivate::parseCreateSubnetResponse(QXmlStreamReader &xml)
 {

@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainNameserversRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateDomainNameserversRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDomainNameserversRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 UpdateDomainNameserversRequestPrivate::UpdateDomainNameserversRequestPrivate(
     const Route53DomainsRequest::Action action, UpdateDomainNameserversRequest * const q)

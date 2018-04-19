@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::GetAuthorizationTokenResponse
- *
  * \brief The GetAuthorizationTokenResponse class provides an interace for ECR GetAuthorizationToken responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new GetAuthorizationTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAuthorizationTokenResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAuthorizationTokenResponse::GetAuthorizationTokenResponse(
         const GetAuthorizationTokenRequest &request,
@@ -59,6 +54,9 @@ GetAuthorizationTokenResponse::GetAuthorizationTokenResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAuthorizationTokenRequest * GetAuthorizationTokenResponse::request() const
 {
     Q_D(const GetAuthorizationTokenResponse);
@@ -66,9 +64,8 @@ const GetAuthorizationTokenRequest * GetAuthorizationTokenResponse::request() co
 }
 
 /*!
- * @brief  Parse a ECR GetAuthorizationToken response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR GetAuthorizationToken \a response.
  */
 void GetAuthorizationTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetAuthorizationTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::GetAuthorizationTokenResponsePrivate
+ * \brief The GetAuthorizationTokenResponsePrivate class provides private implementation for GetAuthorizationTokenResponse.
  * \internal
  *
- * \class GetAuthorizationTokenResponsePrivate
- *
- * \brief Private implementation for GetAuthorizationTokenResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAuthorizationTokenResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAuthorizationTokenResponse instance.
+ * Constructs a GetAuthorizationTokenResponsePrivate object with public implementation \a q.
  */
 GetAuthorizationTokenResponsePrivate::GetAuthorizationTokenResponsePrivate(
     GetAuthorizationTokenResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ GetAuthorizationTokenResponsePrivate::GetAuthorizationTokenResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR GetAuthorizationTokenResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR GetAuthorizationToken response element from \a xml.
  */
 void GetAuthorizationTokenResponsePrivate::parseGetAuthorizationTokenResponse(QXmlStreamReader &xml)
 {

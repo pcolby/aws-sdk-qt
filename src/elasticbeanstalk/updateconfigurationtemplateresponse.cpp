@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateConfigurationTemplateResponse
- *
  * \brief The UpdateConfigurationTemplateResponse class provides an interace for ElasticBeanstalk UpdateConfigurationTemplate responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new UpdateConfigurationTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateConfigurationTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateConfigurationTemplateResponse::UpdateConfigurationTemplateResponse(
         const UpdateConfigurationTemplateRequest &request,
@@ -77,6 +72,9 @@ UpdateConfigurationTemplateResponse::UpdateConfigurationTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateConfigurationTemplateRequest * UpdateConfigurationTemplateResponse::request() const
 {
     Q_D(const UpdateConfigurationTemplateResponse);
@@ -84,9 +82,8 @@ const UpdateConfigurationTemplateRequest * UpdateConfigurationTemplateResponse::
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk UpdateConfigurationTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk UpdateConfigurationTemplate \a response.
  */
 void UpdateConfigurationTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void UpdateConfigurationTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::UpdateConfigurationTemplateResponsePrivate
+ * \brief The UpdateConfigurationTemplateResponsePrivate class provides private implementation for UpdateConfigurationTemplateResponse.
  * \internal
  *
- * \class UpdateConfigurationTemplateResponsePrivate
- *
- * \brief Private implementation for UpdateConfigurationTemplateResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConfigurationTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateConfigurationTemplateResponse instance.
+ * Constructs a UpdateConfigurationTemplateResponsePrivate object with public implementation \a q.
  */
 UpdateConfigurationTemplateResponsePrivate::UpdateConfigurationTemplateResponsePrivate(
     UpdateConfigurationTemplateResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ UpdateConfigurationTemplateResponsePrivate::UpdateConfigurationTemplateResponseP
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk UpdateConfigurationTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk UpdateConfigurationTemplate response element from \a xml.
  */
 void UpdateConfigurationTemplateResponsePrivate::parseUpdateConfigurationTemplateResponse(QXmlStreamReader &xml)
 {

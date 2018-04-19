@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DeleteUserResponse
- *
  * \brief The DeleteUserResponse class provides an interace for AlexaForBusiness DeleteUser responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteUserResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteUserResponse::DeleteUserResponse(
         const DeleteUserRequest &request,
@@ -60,6 +55,9 @@ DeleteUserResponse::DeleteUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteUserRequest * DeleteUserResponse::request() const
 {
     Q_D(const DeleteUserResponse);
@@ -67,9 +65,8 @@ const DeleteUserRequest * DeleteUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness DeleteUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness DeleteUser \a response.
  */
 void DeleteUserResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::DeleteUserResponsePrivate
+ * \brief The DeleteUserResponsePrivate class provides private implementation for DeleteUserResponse.
  * \internal
  *
- * \class DeleteUserResponsePrivate
- *
- * \brief Private implementation for DeleteUserResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteUserResponse instance.
+ * Constructs a DeleteUserResponsePrivate object with public implementation \a q.
  */
 DeleteUserResponsePrivate::DeleteUserResponsePrivate(
     DeleteUserResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteUserResponsePrivate::DeleteUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness DeleteUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness DeleteUser response element from \a xml.
  */
 void DeleteUserResponsePrivate::parseDeleteUserResponse(QXmlStreamReader &xml)
 {

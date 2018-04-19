@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CreateConditionalForwarderResponse
- *
  * \brief The CreateConditionalForwarderResponse class provides an interace for DirectoryService CreateConditionalForwarder responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CreateConditionalForwarderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateConditionalForwarderResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateConditionalForwarderResponse::CreateConditionalForwarderResponse(
         const CreateConditionalForwarderRequest &request,
@@ -69,6 +64,9 @@ CreateConditionalForwarderResponse::CreateConditionalForwarderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateConditionalForwarderRequest * CreateConditionalForwarderResponse::request() const
 {
     Q_D(const CreateConditionalForwarderResponse);
@@ -76,9 +74,8 @@ const CreateConditionalForwarderRequest * CreateConditionalForwarderResponse::re
 }
 
 /*!
- * @brief  Parse a DirectoryService CreateConditionalForwarder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService CreateConditionalForwarder \a response.
  */
 void CreateConditionalForwarderResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateConditionalForwarderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::CreateConditionalForwarderResponsePrivate
+ * \brief The CreateConditionalForwarderResponsePrivate class provides private implementation for CreateConditionalForwarderResponse.
  * \internal
  *
- * \class CreateConditionalForwarderResponsePrivate
- *
- * \brief Private implementation for CreateConditionalForwarderResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConditionalForwarderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateConditionalForwarderResponse instance.
+ * Constructs a CreateConditionalForwarderResponsePrivate object with public implementation \a q.
  */
 CreateConditionalForwarderResponsePrivate::CreateConditionalForwarderResponsePrivate(
     CreateConditionalForwarderResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateConditionalForwarderResponsePrivate::CreateConditionalForwarderResponsePri
 }
 
 /*!
- * @brief  Parse an DirectoryService CreateConditionalForwarderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService CreateConditionalForwarder response element from \a xml.
  */
 void CreateConditionalForwarderResponsePrivate::parseCreateConditionalForwarderResponse(QXmlStreamReader &xml)
 {

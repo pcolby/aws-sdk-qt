@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteKeyPairRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteKeyPairRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
     const EC2Request::Action action, DeleteKeyPairRequest * const q)

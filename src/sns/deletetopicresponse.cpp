@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::DeleteTopicResponse
- *
  * \brief The DeleteTopicResponse class provides an interace for SNS DeleteTopic responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new DeleteTopicResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTopicResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTopicResponse::DeleteTopicResponse(
         const DeleteTopicRequest &request,
@@ -69,6 +64,9 @@ DeleteTopicResponse::DeleteTopicResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTopicRequest * DeleteTopicResponse::request() const
 {
     Q_D(const DeleteTopicResponse);
@@ -76,9 +74,8 @@ const DeleteTopicRequest * DeleteTopicResponse::request() const
 }
 
 /*!
- * @brief  Parse a SNS DeleteTopic response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS DeleteTopic \a response.
  */
 void DeleteTopicResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeleteTopicResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::DeleteTopicResponsePrivate
+ * \brief The DeleteTopicResponsePrivate class provides private implementation for DeleteTopicResponse.
  * \internal
  *
- * \class DeleteTopicResponsePrivate
- *
- * \brief Private implementation for DeleteTopicResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTopicResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTopicResponse instance.
+ * Constructs a DeleteTopicResponsePrivate object with public implementation \a q.
  */
 DeleteTopicResponsePrivate::DeleteTopicResponsePrivate(
     DeleteTopicResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ DeleteTopicResponsePrivate::DeleteTopicResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS DeleteTopicResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS DeleteTopic response element from \a xml.
  */
 void DeleteTopicResponsePrivate::parseDeleteTopicResponse(QXmlStreamReader &xml)
 {

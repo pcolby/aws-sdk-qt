@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateResourceGroupRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a CreateResourceGroupRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a CreateResourceGroupRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 CreateResourceGroupRequestPrivate::CreateResourceGroupRequestPrivate(
     const InspectorRequest::Action action, CreateResourceGroupRequest * const q)

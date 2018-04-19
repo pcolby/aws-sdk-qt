@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * UpdateTrailRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateTrailRequestPrivate object for CloudTrail \a action with,
- * public implementation \a q.
+ * Constructs a UpdateTrailRequestPrivate object for CloudTrail \a action,
+ * with public implementation \a q.
  */
 UpdateTrailRequestPrivate::UpdateTrailRequestPrivate(
     const CloudTrailRequest::Action action, UpdateTrailRequest * const q)

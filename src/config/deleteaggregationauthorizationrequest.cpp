@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAggregationAuthorizationRequest::respon
  */
 
 /*!
- *
- * Constructs a DeleteAggregationAuthorizationRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAggregationAuthorizationRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DeleteAggregationAuthorizationRequestPrivate::DeleteAggregationAuthorizationRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteAggregationAuthorizationRequest * const q)

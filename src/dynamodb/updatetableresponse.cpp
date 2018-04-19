@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::UpdateTableResponse
- *
  * \brief The UpdateTableResponse class provides an interace for DynamoDB UpdateTable responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new UpdateTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTableResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTableResponse::UpdateTableResponse(
         const UpdateTableRequest &request,
@@ -74,6 +69,9 @@ UpdateTableResponse::UpdateTableResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTableRequest * UpdateTableResponse::request() const
 {
     Q_D(const UpdateTableResponse);
@@ -81,9 +79,8 @@ const UpdateTableRequest * UpdateTableResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB UpdateTable response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB UpdateTable \a response.
  */
 void UpdateTableResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void UpdateTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::UpdateTableResponsePrivate
+ * \brief The UpdateTableResponsePrivate class provides private implementation for UpdateTableResponse.
  * \internal
  *
- * \class UpdateTableResponsePrivate
- *
- * \brief Private implementation for UpdateTableResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTableResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTableResponse instance.
+ * Constructs a UpdateTableResponsePrivate object with public implementation \a q.
  */
 UpdateTableResponsePrivate::UpdateTableResponsePrivate(
     UpdateTableResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ UpdateTableResponsePrivate::UpdateTableResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB UpdateTableResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB UpdateTable response element from \a xml.
  */
 void UpdateTableResponsePrivate::parseUpdateTableResponse(QXmlStreamReader &xml)
 {

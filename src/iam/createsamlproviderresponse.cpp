@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateSAMLProviderResponse
- *
  * \brief The CreateSAMLProviderResponse class provides an interace for IAM CreateSAMLProvider responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateSAMLProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSAMLProviderResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSAMLProviderResponse::CreateSAMLProviderResponse(
         const CreateSAMLProviderRequest &request,
@@ -120,6 +115,9 @@ CreateSAMLProviderResponse::CreateSAMLProviderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSAMLProviderRequest * CreateSAMLProviderResponse::request() const
 {
     Q_D(const CreateSAMLProviderResponse);
@@ -127,9 +125,8 @@ const CreateSAMLProviderRequest * CreateSAMLProviderResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM CreateSAMLProvider response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreateSAMLProvider \a response.
  */
 void CreateSAMLProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreateSAMLProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreateSAMLProviderResponsePrivate
+ * \brief The CreateSAMLProviderResponsePrivate class provides private implementation for CreateSAMLProviderResponse.
  * \internal
  *
- * \class CreateSAMLProviderResponsePrivate
- *
- * \brief Private implementation for CreateSAMLProviderResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSAMLProviderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSAMLProviderResponse instance.
+ * Constructs a CreateSAMLProviderResponsePrivate object with public implementation \a q.
  */
 CreateSAMLProviderResponsePrivate::CreateSAMLProviderResponsePrivate(
     CreateSAMLProviderResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreateSAMLProviderResponsePrivate::CreateSAMLProviderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM CreateSAMLProviderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreateSAMLProvider response element from \a xml.
  */
 void CreateSAMLProviderResponsePrivate::parseCreateSAMLProviderResponse(QXmlStreamReader &xml)
 {

@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceServerRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteResourceServerRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a DeleteResourceServerRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 DeleteResourceServerRequestPrivate::DeleteResourceServerRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteResourceServerRequest * const q)

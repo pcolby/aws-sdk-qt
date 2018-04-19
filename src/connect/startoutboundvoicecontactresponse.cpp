@@ -29,10 +29,9 @@ namespace Connect {
 
 /*!
  * \class QtAws::Connect::StartOutboundVoiceContactResponse
- *
  * \brief The StartOutboundVoiceContactResponse class provides an interace for Connect StartOutboundVoiceContact responses.
  *
- * \ingroup Connect
+ * \inmodule QtAwsConnect
  *
  *  The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect
  *  actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy
@@ -42,11 +41,7 @@ namespace Connect {
  */
 
 /*!
- * @brief  Constructs a new StartOutboundVoiceContactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartOutboundVoiceContactResponse object for \a reply to \a request, with parent \a parent.
  */
 StartOutboundVoiceContactResponse::StartOutboundVoiceContactResponse(
         const StartOutboundVoiceContactRequest &request,
@@ -58,6 +53,9 @@ StartOutboundVoiceContactResponse::StartOutboundVoiceContactResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartOutboundVoiceContactRequest * StartOutboundVoiceContactResponse::request() const
 {
     Q_D(const StartOutboundVoiceContactResponse);
@@ -65,9 +63,8 @@ const StartOutboundVoiceContactRequest * StartOutboundVoiceContactResponse::requ
 }
 
 /*!
- * @brief  Parse a Connect StartOutboundVoiceContact response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Connect StartOutboundVoiceContact \a response.
  */
 void StartOutboundVoiceContactResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StartOutboundVoiceContactResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Connect::StartOutboundVoiceContactResponsePrivate
+ * \brief The StartOutboundVoiceContactResponsePrivate class provides private implementation for StartOutboundVoiceContactResponse.
  * \internal
  *
- * \class StartOutboundVoiceContactResponsePrivate
- *
- * \brief Private implementation for StartOutboundVoiceContactResponse.
+ * \inmodule QtAwsConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartOutboundVoiceContactResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartOutboundVoiceContactResponse instance.
+ * Constructs a StartOutboundVoiceContactResponsePrivate object with public implementation \a q.
  */
 StartOutboundVoiceContactResponsePrivate::StartOutboundVoiceContactResponsePrivate(
     StartOutboundVoiceContactResponse * const q) : ConnectResponsePrivate(q)
@@ -98,9 +91,7 @@ StartOutboundVoiceContactResponsePrivate::StartOutboundVoiceContactResponsePriva
 }
 
 /*!
- * @brief  Parse an Connect StartOutboundVoiceContactResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Connect StartOutboundVoiceContact response element from \a xml.
  */
 void StartOutboundVoiceContactResponsePrivate::parseStartOutboundVoiceContactResponse(QXmlStreamReader &xml)
 {

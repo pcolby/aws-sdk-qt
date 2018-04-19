@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeTagsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTagsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const EC2Request::Action action, DescribeTagsRequest * const q)

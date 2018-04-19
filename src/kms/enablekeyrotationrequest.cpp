@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * EnableKeyRotationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a EnableKeyRotationRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a EnableKeyRotationRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 EnableKeyRotationRequestPrivate::EnableKeyRotationRequestPrivate(
     const KMSRequest::Action action, EnableKeyRotationRequest * const q)

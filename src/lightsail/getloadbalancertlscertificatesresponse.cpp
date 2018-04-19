@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetLoadBalancerTlsCertificatesResponse
- *
  * \brief The GetLoadBalancerTlsCertificatesResponse class provides an interace for Lightsail GetLoadBalancerTlsCertificates responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetLoadBalancerTlsCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetLoadBalancerTlsCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetLoadBalancerTlsCertificatesResponse::GetLoadBalancerTlsCertificatesResponse(
         const GetLoadBalancerTlsCertificatesRequest &request,
@@ -71,6 +66,9 @@ GetLoadBalancerTlsCertificatesResponse::GetLoadBalancerTlsCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetLoadBalancerTlsCertificatesRequest * GetLoadBalancerTlsCertificatesResponse::request() const
 {
     Q_D(const GetLoadBalancerTlsCertificatesResponse);
@@ -78,9 +76,8 @@ const GetLoadBalancerTlsCertificatesRequest * GetLoadBalancerTlsCertificatesResp
 }
 
 /*!
- * @brief  Parse a Lightsail GetLoadBalancerTlsCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetLoadBalancerTlsCertificates \a response.
  */
 void GetLoadBalancerTlsCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetLoadBalancerTlsCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetLoadBalancerTlsCertificatesResponsePrivate
+ * \brief The GetLoadBalancerTlsCertificatesResponsePrivate class provides private implementation for GetLoadBalancerTlsCertificatesResponse.
  * \internal
  *
- * \class GetLoadBalancerTlsCertificatesResponsePrivate
- *
- * \brief Private implementation for GetLoadBalancerTlsCertificatesResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLoadBalancerTlsCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetLoadBalancerTlsCertificatesResponse instance.
+ * Constructs a GetLoadBalancerTlsCertificatesResponsePrivate object with public implementation \a q.
  */
 GetLoadBalancerTlsCertificatesResponsePrivate::GetLoadBalancerTlsCertificatesResponsePrivate(
     GetLoadBalancerTlsCertificatesResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetLoadBalancerTlsCertificatesResponsePrivate::GetLoadBalancerTlsCertificatesRes
 }
 
 /*!
- * @brief  Parse an Lightsail GetLoadBalancerTlsCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetLoadBalancerTlsCertificates response element from \a xml.
  */
 void GetLoadBalancerTlsCertificatesResponsePrivate::parseGetLoadBalancerTlsCertificatesResponse(QXmlStreamReader &xml)
 {

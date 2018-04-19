@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::AbortVaultLockResponse
- *
  * \brief The AbortVaultLockResponse class provides an interace for Glacier AbortVaultLock responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new AbortVaultLockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AbortVaultLockResponse object for \a reply to \a request, with parent \a parent.
  */
 AbortVaultLockResponse::AbortVaultLockResponse(
         const AbortVaultLockRequest &request,
@@ -93,6 +88,9 @@ AbortVaultLockResponse::AbortVaultLockResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AbortVaultLockRequest * AbortVaultLockResponse::request() const
 {
     Q_D(const AbortVaultLockResponse);
@@ -100,9 +98,8 @@ const AbortVaultLockRequest * AbortVaultLockResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier AbortVaultLock response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier AbortVaultLock \a response.
  */
 void AbortVaultLockResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void AbortVaultLockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::AbortVaultLockResponsePrivate
+ * \brief The AbortVaultLockResponsePrivate class provides private implementation for AbortVaultLockResponse.
  * \internal
  *
- * \class AbortVaultLockResponsePrivate
- *
- * \brief Private implementation for AbortVaultLockResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AbortVaultLockResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AbortVaultLockResponse instance.
+ * Constructs a AbortVaultLockResponsePrivate object with public implementation \a q.
  */
 AbortVaultLockResponsePrivate::AbortVaultLockResponsePrivate(
     AbortVaultLockResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ AbortVaultLockResponsePrivate::AbortVaultLockResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier AbortVaultLockResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier AbortVaultLock response element from \a xml.
  */
 void AbortVaultLockResponsePrivate::parseAbortVaultLockResponse(QXmlStreamReader &xml)
 {

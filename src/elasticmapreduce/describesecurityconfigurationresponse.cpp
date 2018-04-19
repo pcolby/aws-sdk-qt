@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::DescribeSecurityConfigurationResponse
- *
  * \brief The DescribeSecurityConfigurationResponse class provides an interace for EMR DescribeSecurityConfiguration responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new DescribeSecurityConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSecurityConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSecurityConfigurationResponse::DescribeSecurityConfigurationResponse(
         const DescribeSecurityConfigurationRequest &request,
@@ -58,6 +53,9 @@ DescribeSecurityConfigurationResponse::DescribeSecurityConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSecurityConfigurationRequest * DescribeSecurityConfigurationResponse::request() const
 {
     Q_D(const DescribeSecurityConfigurationResponse);
@@ -65,9 +63,8 @@ const DescribeSecurityConfigurationRequest * DescribeSecurityConfigurationRespon
 }
 
 /*!
- * @brief  Parse a EMR DescribeSecurityConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR DescribeSecurityConfiguration \a response.
  */
 void DescribeSecurityConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeSecurityConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::DescribeSecurityConfigurationResponsePrivate
+ * \brief The DescribeSecurityConfigurationResponsePrivate class provides private implementation for DescribeSecurityConfigurationResponse.
  * \internal
  *
- * \class DescribeSecurityConfigurationResponsePrivate
- *
- * \brief Private implementation for DescribeSecurityConfigurationResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSecurityConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSecurityConfigurationResponse instance.
+ * Constructs a DescribeSecurityConfigurationResponsePrivate object with public implementation \a q.
  */
 DescribeSecurityConfigurationResponsePrivate::DescribeSecurityConfigurationResponsePrivate(
     DescribeSecurityConfigurationResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeSecurityConfigurationResponsePrivate::DescribeSecurityConfigurationRespo
 }
 
 /*!
- * @brief  Parse an EMR DescribeSecurityConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR DescribeSecurityConfiguration response element from \a xml.
  */
 void DescribeSecurityConfigurationResponsePrivate::parseDescribeSecurityConfigurationResponse(QXmlStreamReader &xml)
 {

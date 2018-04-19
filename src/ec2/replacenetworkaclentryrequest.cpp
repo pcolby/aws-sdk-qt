@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclEntryRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ReplaceNetworkAclEntryRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ReplaceNetworkAclEntryRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ReplaceNetworkAclEntryRequestPrivate::ReplaceNetworkAclEntryRequestPrivate(
     const EC2Request::Action action, ReplaceNetworkAclEntryRequest * const q)

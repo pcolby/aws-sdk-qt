@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterIamRolesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ModifyClusterIamRolesRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a ModifyClusterIamRolesRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 ModifyClusterIamRolesRequestPrivate::ModifyClusterIamRolesRequestPrivate(
     const RedshiftRequest::Action action, ModifyClusterIamRolesRequest * const q)

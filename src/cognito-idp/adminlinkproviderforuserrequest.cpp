@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminLinkProviderForUserRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a AdminLinkProviderForUserRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminLinkProviderForUserRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminLinkProviderForUserRequestPrivate::AdminLinkProviderForUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminLinkProviderForUserRequest * const q)

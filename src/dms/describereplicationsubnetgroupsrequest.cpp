@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationSubnetGroupsRequest::respo
  */
 
 /*!
- *
- * Constructs a DescribeReplicationSubnetGroupsRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeReplicationSubnetGroupsRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DescribeReplicationSubnetGroupsRequestPrivate::DescribeReplicationSubnetGroupsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeReplicationSubnetGroupsRequest * const q)

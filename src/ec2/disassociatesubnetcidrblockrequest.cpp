@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateSubnetCidrBlockRequest::response(
  */
 
 /*!
- *
- * Constructs a DisassociateSubnetCidrBlockRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateSubnetCidrBlockRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DisassociateSubnetCidrBlockRequestPrivate::DisassociateSubnetCidrBlockRequestPrivate(
     const EC2Request::Action action, DisassociateSubnetCidrBlockRequest * const q)

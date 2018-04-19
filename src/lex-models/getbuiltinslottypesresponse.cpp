@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetBuiltinSlotTypesResponse
- *
  * \brief The GetBuiltinSlotTypesResponse class provides an interace for LexModelBuildingService GetBuiltinSlotTypes responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetBuiltinSlotTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBuiltinSlotTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBuiltinSlotTypesResponse::GetBuiltinSlotTypesResponse(
         const GetBuiltinSlotTypesRequest &request,
@@ -59,6 +54,9 @@ GetBuiltinSlotTypesResponse::GetBuiltinSlotTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBuiltinSlotTypesRequest * GetBuiltinSlotTypesResponse::request() const
 {
     Q_D(const GetBuiltinSlotTypesResponse);
@@ -66,9 +64,8 @@ const GetBuiltinSlotTypesRequest * GetBuiltinSlotTypesResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService GetBuiltinSlotTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService GetBuiltinSlotTypes \a response.
  */
 void GetBuiltinSlotTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetBuiltinSlotTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::GetBuiltinSlotTypesResponsePrivate
+ * \brief The GetBuiltinSlotTypesResponsePrivate class provides private implementation for GetBuiltinSlotTypesResponse.
  * \internal
  *
- * \class GetBuiltinSlotTypesResponsePrivate
- *
- * \brief Private implementation for GetBuiltinSlotTypesResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBuiltinSlotTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBuiltinSlotTypesResponse instance.
+ * Constructs a GetBuiltinSlotTypesResponsePrivate object with public implementation \a q.
  */
 GetBuiltinSlotTypesResponsePrivate::GetBuiltinSlotTypesResponsePrivate(
     GetBuiltinSlotTypesResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ GetBuiltinSlotTypesResponsePrivate::GetBuiltinSlotTypesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService GetBuiltinSlotTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService GetBuiltinSlotTypes response element from \a xml.
  */
 void GetBuiltinSlotTypesResponsePrivate::parseGetBuiltinSlotTypesResponse(QXmlStreamReader &xml)
 {

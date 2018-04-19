@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeletePortfolioResponse : public ServiceCatalogResponse {
 public:
     DeletePortfolioResponse(const DeletePortfolioRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeletePortfolioRequest * request() const;
+    virtual const DeletePortfolioRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeletePortfolioResponse)

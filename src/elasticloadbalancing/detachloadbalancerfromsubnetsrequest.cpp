@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * DetachLoadBalancerFromSubnetsRequest::respons
  */
 
 /*!
- *
- * Constructs a DetachLoadBalancerFromSubnetsRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a DetachLoadBalancerFromSubnetsRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 DetachLoadBalancerFromSubnetsRequestPrivate::DetachLoadBalancerFromSubnetsRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DetachLoadBalancerFromSubnetsRequest * const q)

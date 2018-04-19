@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAssumeRolePolicyRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateAssumeRolePolicyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAssumeRolePolicyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateAssumeRolePolicyRequestPrivate::UpdateAssumeRolePolicyRequestPrivate(
     const IAMRequest::Action action, UpdateAssumeRolePolicyRequest * const q)

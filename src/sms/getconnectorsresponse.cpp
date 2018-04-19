@@ -29,21 +29,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::GetConnectorsResponse
- *
  * \brief The GetConnectorsResponse class provides an interace for SMS GetConnectors responses.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::getConnectors
  */
 
 /*!
- * @brief  Constructs a new GetConnectorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetConnectorsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetConnectorsResponse::GetConnectorsResponse(
         const GetConnectorsRequest &request,
@@ -55,6 +50,9 @@ GetConnectorsResponse::GetConnectorsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetConnectorsRequest * GetConnectorsResponse::request() const
 {
     Q_D(const GetConnectorsResponse);
@@ -62,9 +60,8 @@ const GetConnectorsRequest * GetConnectorsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SMS GetConnectors response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SMS GetConnectors \a response.
  */
 void GetConnectorsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetConnectorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SMS::GetConnectorsResponsePrivate
+ * \brief The GetConnectorsResponsePrivate class provides private implementation for GetConnectorsResponse.
  * \internal
  *
- * \class GetConnectorsResponsePrivate
- *
- * \brief Private implementation for GetConnectorsResponse.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConnectorsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetConnectorsResponse instance.
+ * Constructs a GetConnectorsResponsePrivate object with public implementation \a q.
  */
 GetConnectorsResponsePrivate::GetConnectorsResponsePrivate(
     GetConnectorsResponse * const q) : SMSResponsePrivate(q)
@@ -95,9 +88,7 @@ GetConnectorsResponsePrivate::GetConnectorsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SMS GetConnectorsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SMS GetConnectors response element from \a xml.
  */
 void GetConnectorsResponsePrivate::parseGetConnectorsResponse(QXmlStreamReader &xml)
 {

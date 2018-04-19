@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDirectConnectGatewayAttachmentsResponse : public Dire
 public:
     DescribeDirectConnectGatewayAttachmentsResponse(const DescribeDirectConnectGatewayAttachmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDirectConnectGatewayAttachmentsRequest * request() const;
+    virtual const DescribeDirectConnectGatewayAttachmentsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDirectConnectGatewayAttachmentsResponse)

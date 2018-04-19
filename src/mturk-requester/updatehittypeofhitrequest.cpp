@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateHITTypeOfHITRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateHITTypeOfHITRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a UpdateHITTypeOfHITRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
     const MTurkRequest::Action action, UpdateHITTypeOfHITRequest * const q)

@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::StartGatewayResponse
- *
  * \brief The StartGatewayResponse class provides an interace for StorageGateway StartGateway responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new StartGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 StartGatewayResponse::StartGatewayResponse(
         const StartGatewayRequest &request,
@@ -124,6 +119,9 @@ StartGatewayResponse::StartGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartGatewayRequest * StartGatewayResponse::request() const
 {
     Q_D(const StartGatewayResponse);
@@ -131,9 +129,8 @@ const StartGatewayRequest * StartGatewayResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway StartGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway StartGateway \a response.
  */
 void StartGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void StartGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::StartGatewayResponsePrivate
+ * \brief The StartGatewayResponsePrivate class provides private implementation for StartGatewayResponse.
  * \internal
  *
- * \class StartGatewayResponsePrivate
- *
- * \brief Private implementation for StartGatewayResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartGatewayResponse instance.
+ * Constructs a StartGatewayResponsePrivate object with public implementation \a q.
  */
 StartGatewayResponsePrivate::StartGatewayResponsePrivate(
     StartGatewayResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ StartGatewayResponsePrivate::StartGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway StartGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway StartGateway response element from \a xml.
  */
 void StartGatewayResponsePrivate::parseStartGatewayResponse(QXmlStreamReader &xml)
 {

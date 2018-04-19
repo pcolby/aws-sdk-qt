@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetPolicyVersionResponse
- *
  * \brief The GetPolicyVersionResponse class provides an interace for IAM GetPolicyVersion responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetPolicyVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPolicyVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPolicyVersionResponse::GetPolicyVersionResponse(
         const GetPolicyVersionRequest &request,
@@ -120,6 +115,9 @@ GetPolicyVersionResponse::GetPolicyVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPolicyVersionRequest * GetPolicyVersionResponse::request() const
 {
     Q_D(const GetPolicyVersionResponse);
@@ -127,9 +125,8 @@ const GetPolicyVersionRequest * GetPolicyVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetPolicyVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetPolicyVersion \a response.
  */
 void GetPolicyVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetPolicyVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetPolicyVersionResponsePrivate
+ * \brief The GetPolicyVersionResponsePrivate class provides private implementation for GetPolicyVersionResponse.
  * \internal
  *
- * \class GetPolicyVersionResponsePrivate
- *
- * \brief Private implementation for GetPolicyVersionResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPolicyVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPolicyVersionResponse instance.
+ * Constructs a GetPolicyVersionResponsePrivate object with public implementation \a q.
  */
 GetPolicyVersionResponsePrivate::GetPolicyVersionResponsePrivate(
     GetPolicyVersionResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetPolicyVersionResponsePrivate::GetPolicyVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetPolicyVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetPolicyVersion response element from \a xml.
  */
 void GetPolicyVersionResponsePrivate::parseGetPolicyVersionResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelJobResponse : public IoTResponse {
 public:
     CancelJobResponse(const CancelJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelJobRequest * request() const;
+    virtual const CancelJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CancelJobResponse)

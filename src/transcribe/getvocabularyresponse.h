@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetVocabularyResponse : public TranscribeServiceResponse {
 public:
     GetVocabularyResponse(const GetVocabularyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetVocabularyRequest * request() const;
+    virtual const GetVocabularyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetVocabularyResponse)

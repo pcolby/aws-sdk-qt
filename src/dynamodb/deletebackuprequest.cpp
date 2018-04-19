@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBackupRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteBackupRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBackupRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
     const DynamoDBRequest::Action action, DeleteBackupRequest * const q)

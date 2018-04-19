@@ -161,9 +161,8 @@ QtAws::Core::AwsAbstractResponse * ListBuildsForProjectRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListBuildsForProjectRequestPrivate object for CodeBuild \a action with,
- * public implementation \a q.
+ * Constructs a ListBuildsForProjectRequestPrivate object for CodeBuild \a action,
+ * with public implementation \a q.
  */
 ListBuildsForProjectRequestPrivate::ListBuildsForProjectRequestPrivate(
     const CodeBuildRequest::Action action, ListBuildsForProjectRequest * const q)

@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ChangeTagsForResourceResponse
- *
  * \brief The ChangeTagsForResourceResponse class provides an interace for Route53 ChangeTagsForResource responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::changeTagsForResource
  */
 
 /*!
- * @brief  Constructs a new ChangeTagsForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ChangeTagsForResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 ChangeTagsForResourceResponse::ChangeTagsForResourceResponse(
         const ChangeTagsForResourceRequest &request,
@@ -55,6 +50,9 @@ ChangeTagsForResourceResponse::ChangeTagsForResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ChangeTagsForResourceRequest * ChangeTagsForResourceResponse::request() const
 {
     Q_D(const ChangeTagsForResourceResponse);
@@ -62,9 +60,8 @@ const ChangeTagsForResourceRequest * ChangeTagsForResourceResponse::request() co
 }
 
 /*!
- * @brief  Parse a Route53 ChangeTagsForResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 ChangeTagsForResource \a response.
  */
 void ChangeTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ChangeTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::ChangeTagsForResourceResponsePrivate
+ * \brief The ChangeTagsForResourceResponsePrivate class provides private implementation for ChangeTagsForResourceResponse.
  * \internal
  *
- * \class ChangeTagsForResourceResponsePrivate
- *
- * \brief Private implementation for ChangeTagsForResourceResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ChangeTagsForResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ChangeTagsForResourceResponse instance.
+ * Constructs a ChangeTagsForResourceResponsePrivate object with public implementation \a q.
  */
 ChangeTagsForResourceResponsePrivate::ChangeTagsForResourceResponsePrivate(
     ChangeTagsForResourceResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ ChangeTagsForResourceResponsePrivate::ChangeTagsForResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 ChangeTagsForResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 ChangeTagsForResource response element from \a xml.
  */
 void ChangeTagsForResourceResponsePrivate::parseChangeTagsForResourceResponse(QXmlStreamReader &xml)
 {

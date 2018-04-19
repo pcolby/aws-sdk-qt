@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::GetQueueAttributesResponse
- *
  * \brief The GetQueueAttributesResponse class provides an interace for SQS GetQueueAttributes responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new GetQueueAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetQueueAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetQueueAttributesResponse::GetQueueAttributesResponse(
         const GetQueueAttributesRequest &request,
@@ -121,6 +116,9 @@ GetQueueAttributesResponse::GetQueueAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetQueueAttributesRequest * GetQueueAttributesResponse::request() const
 {
     Q_D(const GetQueueAttributesResponse);
@@ -128,9 +126,8 @@ const GetQueueAttributesRequest * GetQueueAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS GetQueueAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS GetQueueAttributes \a response.
  */
 void GetQueueAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void GetQueueAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::GetQueueAttributesResponsePrivate
+ * \brief The GetQueueAttributesResponsePrivate class provides private implementation for GetQueueAttributesResponse.
  * \internal
  *
- * \class GetQueueAttributesResponsePrivate
- *
- * \brief Private implementation for GetQueueAttributesResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQueueAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetQueueAttributesResponse instance.
+ * Constructs a GetQueueAttributesResponsePrivate object with public implementation \a q.
  */
 GetQueueAttributesResponsePrivate::GetQueueAttributesResponsePrivate(
     GetQueueAttributesResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ GetQueueAttributesResponsePrivate::GetQueueAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS GetQueueAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS GetQueueAttributes response element from \a xml.
  */
 void GetQueueAttributesResponsePrivate::parseGetQueueAttributesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Health {
 
 /*!
  * \class QtAws::Health::DescribeEntityAggregatesResponse
- *
  * \brief The DescribeEntityAggregatesResponse class provides an interace for Health DescribeEntityAggregates responses.
  *
- * \ingroup Health
+ * \inmodule QtAwsHealth
  *
  *  <fullname>AWS Health</fullname>
  * 
@@ -100,11 +99,7 @@ namespace Health {
  */
 
 /*!
- * @brief  Constructs a new DescribeEntityAggregatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEntityAggregatesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEntityAggregatesResponse::DescribeEntityAggregatesResponse(
         const DescribeEntityAggregatesRequest &request,
@@ -116,6 +111,9 @@ DescribeEntityAggregatesResponse::DescribeEntityAggregatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEntityAggregatesRequest * DescribeEntityAggregatesResponse::request() const
 {
     Q_D(const DescribeEntityAggregatesResponse);
@@ -123,9 +121,8 @@ const DescribeEntityAggregatesRequest * DescribeEntityAggregatesResponse::reques
 }
 
 /*!
- * @brief  Parse a Health DescribeEntityAggregates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Health DescribeEntityAggregates \a response.
  */
 void DescribeEntityAggregatesResponse::parseSuccess(QIODevice &response)
 {
@@ -135,19 +132,15 @@ void DescribeEntityAggregatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Health::DescribeEntityAggregatesResponsePrivate
+ * \brief The DescribeEntityAggregatesResponsePrivate class provides private implementation for DescribeEntityAggregatesResponse.
  * \internal
  *
- * \class DescribeEntityAggregatesResponsePrivate
- *
- * \brief Private implementation for DescribeEntityAggregatesResponse.
+ * \inmodule QtAwsHealth
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEntityAggregatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEntityAggregatesResponse instance.
+ * Constructs a DescribeEntityAggregatesResponsePrivate object with public implementation \a q.
  */
 DescribeEntityAggregatesResponsePrivate::DescribeEntityAggregatesResponsePrivate(
     DescribeEntityAggregatesResponse * const q) : HealthResponsePrivate(q)
@@ -156,9 +149,7 @@ DescribeEntityAggregatesResponsePrivate::DescribeEntityAggregatesResponsePrivate
 }
 
 /*!
- * @brief  Parse an Health DescribeEntityAggregatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Health DescribeEntityAggregates response element from \a xml.
  */
 void DescribeEntityAggregatesResponsePrivate::parseDescribeEntityAggregatesResponse(QXmlStreamReader &xml)
 {

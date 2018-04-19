@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApiKeyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteApiKeyRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApiKeyRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
     const AppSyncRequest::Action action, DeleteApiKeyRequest * const q)

@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::UpdateJobTemplateResponse
- *
  * \brief The UpdateJobTemplateResponse class provides an interace for MediaConvert UpdateJobTemplate responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::updateJobTemplate
  */
 
 /*!
- * @brief  Constructs a new UpdateJobTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateJobTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateJobTemplateResponse::UpdateJobTemplateResponse(
         const UpdateJobTemplateRequest &request,
@@ -55,6 +50,9 @@ UpdateJobTemplateResponse::UpdateJobTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateJobTemplateRequest * UpdateJobTemplateResponse::request() const
 {
     Q_D(const UpdateJobTemplateResponse);
@@ -62,9 +60,8 @@ const UpdateJobTemplateRequest * UpdateJobTemplateResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert UpdateJobTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert UpdateJobTemplate \a response.
  */
 void UpdateJobTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateJobTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::UpdateJobTemplateResponsePrivate
+ * \brief The UpdateJobTemplateResponsePrivate class provides private implementation for UpdateJobTemplateResponse.
  * \internal
  *
- * \class UpdateJobTemplateResponsePrivate
- *
- * \brief Private implementation for UpdateJobTemplateResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateJobTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateJobTemplateResponse instance.
+ * Constructs a UpdateJobTemplateResponsePrivate object with public implementation \a q.
  */
 UpdateJobTemplateResponsePrivate::UpdateJobTemplateResponsePrivate(
     UpdateJobTemplateResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateJobTemplateResponsePrivate::UpdateJobTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert UpdateJobTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert UpdateJobTemplate response element from \a xml.
  */
 void UpdateJobTemplateResponsePrivate::parseUpdateJobTemplateResponse(QXmlStreamReader &xml)
 {

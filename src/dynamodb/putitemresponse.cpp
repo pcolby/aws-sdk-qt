@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::PutItemResponse
- *
  * \brief The PutItemResponse class provides an interace for DynamoDB PutItem responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new PutItemResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutItemResponse object for \a reply to \a request, with parent \a parent.
  */
 PutItemResponse::PutItemResponse(
         const PutItemRequest &request,
@@ -74,6 +69,9 @@ PutItemResponse::PutItemResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutItemRequest * PutItemResponse::request() const
 {
     Q_D(const PutItemResponse);
@@ -81,9 +79,8 @@ const PutItemRequest * PutItemResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB PutItem response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB PutItem \a response.
  */
 void PutItemResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void PutItemResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::PutItemResponsePrivate
+ * \brief The PutItemResponsePrivate class provides private implementation for PutItemResponse.
  * \internal
  *
- * \class PutItemResponsePrivate
- *
- * \brief Private implementation for PutItemResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutItemResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutItemResponse instance.
+ * Constructs a PutItemResponsePrivate object with public implementation \a q.
  */
 PutItemResponsePrivate::PutItemResponsePrivate(
     PutItemResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ PutItemResponsePrivate::PutItemResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB PutItemResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB PutItem response element from \a xml.
  */
 void PutItemResponsePrivate::parsePutItemResponse(QXmlStreamReader &xml)
 {

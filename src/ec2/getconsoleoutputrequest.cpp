@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetConsoleOutputRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetConsoleOutputRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a GetConsoleOutputRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 GetConsoleOutputRequestPrivate::GetConsoleOutputRequestPrivate(
     const EC2Request::Action action, GetConsoleOutputRequest * const q)

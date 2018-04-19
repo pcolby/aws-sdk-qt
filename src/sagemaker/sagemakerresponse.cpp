@@ -28,16 +28,13 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::SageMakerResponse
- *
  * \brief The SageMakerResponse class provides an interface for SageMaker responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @brief  Constructs a new SageMakerResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a SageMakerResponse object with parent \a parent.
  */
 SageMakerResponse::SageMakerResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new SageMakerResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ SageMakerResponse::SageMakerResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SageMakerResponse object.
- *
+ * \internal
+ * Constructs a SageMakerResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SageMakerResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 SageMakerResponse::SageMakerResponse(SageMakerResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ SageMakerResponse::SageMakerResponse(SageMakerResponsePrivate * const d, QObject
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void SageMakerResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void SageMakerResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMaker::SageMakerResponsePrivate
+ * \brief The SageMakerResponsePrivate class provides private implementation for SageMakerResponse.
+ * \internal
  *
- * @class  SageMakerResponsePrivate
- *
- * @brief  Private implementation for SageMakerResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SageMakerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SageMakerResponse instance.
+ * Constructs a SageMakerResponsePrivate object with public implementation \a q.
  */
 SageMakerResponsePrivate::SageMakerResponsePrivate(
     SageMakerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

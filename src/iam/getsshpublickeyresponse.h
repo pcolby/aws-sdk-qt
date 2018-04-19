@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSSHPublicKeyResponse : public IAMResponse {
 public:
     GetSSHPublicKeyResponse(const GetSSHPublicKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSSHPublicKeyRequest * request() const;
+    virtual const GetSSHPublicKeyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSSHPublicKeyResponse)

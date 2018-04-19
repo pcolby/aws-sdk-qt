@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::SubscribeResponse
- *
  * \brief The SubscribeResponse class provides an interace for SNS Subscribe responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new SubscribeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SubscribeResponse object for \a reply to \a request, with parent \a parent.
  */
 SubscribeResponse::SubscribeResponse(
         const SubscribeRequest &request,
@@ -69,6 +64,9 @@ SubscribeResponse::SubscribeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SubscribeRequest * SubscribeResponse::request() const
 {
     Q_D(const SubscribeResponse);
@@ -76,9 +74,8 @@ const SubscribeRequest * SubscribeResponse::request() const
 }
 
 /*!
- * @brief  Parse a SNS Subscribe response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS Subscribe \a response.
  */
 void SubscribeResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void SubscribeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::SubscribeResponsePrivate
+ * \brief The SubscribeResponsePrivate class provides private implementation for SubscribeResponse.
  * \internal
  *
- * \class SubscribeResponsePrivate
- *
- * \brief Private implementation for SubscribeResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubscribeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SubscribeResponse instance.
+ * Constructs a SubscribeResponsePrivate object with public implementation \a q.
  */
 SubscribeResponsePrivate::SubscribeResponsePrivate(
     SubscribeResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ SubscribeResponsePrivate::SubscribeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS SubscribeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS Subscribe response element from \a xml.
  */
 void SubscribeResponsePrivate::parseSubscribeResponse(QXmlStreamReader &xml)
 {

@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * RegisterOnPremisesInstanceRequest::response(Q
  */
 
 /*!
- *
- * Constructs a RegisterOnPremisesInstanceRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a RegisterOnPremisesInstanceRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 RegisterOnPremisesInstanceRequestPrivate::RegisterOnPremisesInstanceRequestPrivate(
     const CodeDeployRequest::Action action, RegisterOnPremisesInstanceRequest * const q)

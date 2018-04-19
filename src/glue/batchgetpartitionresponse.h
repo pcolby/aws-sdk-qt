@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchGetPartitionResponse : public GlueResponse {
 public:
     BatchGetPartitionResponse(const BatchGetPartitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchGetPartitionRequest * request() const;
+    virtual const BatchGetPartitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchGetPartitionResponse)

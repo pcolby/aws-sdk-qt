@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::ListEventSourceMappingsResponse
- *
  * \brief The ListEventSourceMappingsResponse class provides an interace for Lambda ListEventSourceMappings responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new ListEventSourceMappingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListEventSourceMappingsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListEventSourceMappingsResponse::ListEventSourceMappingsResponse(
         const ListEventSourceMappingsRequest &request,
@@ -66,6 +61,9 @@ ListEventSourceMappingsResponse::ListEventSourceMappingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListEventSourceMappingsRequest * ListEventSourceMappingsResponse::request() const
 {
     Q_D(const ListEventSourceMappingsResponse);
@@ -73,9 +71,8 @@ const ListEventSourceMappingsRequest * ListEventSourceMappingsResponse::request(
 }
 
 /*!
- * @brief  Parse a Lambda ListEventSourceMappings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda ListEventSourceMappings \a response.
  */
 void ListEventSourceMappingsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListEventSourceMappingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::ListEventSourceMappingsResponsePrivate
+ * \brief The ListEventSourceMappingsResponsePrivate class provides private implementation for ListEventSourceMappingsResponse.
  * \internal
  *
- * \class ListEventSourceMappingsResponsePrivate
- *
- * \brief Private implementation for ListEventSourceMappingsResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEventSourceMappingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListEventSourceMappingsResponse instance.
+ * Constructs a ListEventSourceMappingsResponsePrivate object with public implementation \a q.
  */
 ListEventSourceMappingsResponsePrivate::ListEventSourceMappingsResponsePrivate(
     ListEventSourceMappingsResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ ListEventSourceMappingsResponsePrivate::ListEventSourceMappingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda ListEventSourceMappingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda ListEventSourceMappings response element from \a xml.
  */
 void ListEventSourceMappingsResponsePrivate::parseListEventSourceMappingsResponse(QXmlStreamReader &xml)
 {

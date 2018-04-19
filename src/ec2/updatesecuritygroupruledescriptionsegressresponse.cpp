@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::UpdateSecurityGroupRuleDescriptionsEgressResponse
- *
  * \brief The UpdateSecurityGroupRuleDescriptionsEgressResponse class provides an interace for EC2 UpdateSecurityGroupRuleDescriptionsEgress responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSecurityGroupRuleDescriptionsEgressResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSecurityGroupRuleDescriptionsEgressResponse::UpdateSecurityGroupRuleDescriptionsEgressResponse(
         const UpdateSecurityGroupRuleDescriptionsEgressRequest &request,
@@ -59,6 +54,9 @@ UpdateSecurityGroupRuleDescriptionsEgressResponse::UpdateSecurityGroupRuleDescri
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSecurityGroupRuleDescriptionsEgressRequest * UpdateSecurityGroupRuleDescriptionsEgressResponse::request() const
 {
     Q_D(const UpdateSecurityGroupRuleDescriptionsEgressResponse);
@@ -66,9 +64,8 @@ const UpdateSecurityGroupRuleDescriptionsEgressRequest * UpdateSecurityGroupRule
 }
 
 /*!
- * @brief  Parse a EC2 UpdateSecurityGroupRuleDescriptionsEgress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 UpdateSecurityGroupRuleDescriptionsEgress \a response.
  */
 void UpdateSecurityGroupRuleDescriptionsEgressResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void UpdateSecurityGroupRuleDescriptionsEgressResponse::parseSuccess(QIODevice &
 }
 
 /*!
+ * \class QtAws::EC2::UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate
+ * \brief The UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate class provides private implementation for UpdateSecurityGroupRuleDescriptionsEgressResponse.
  * \internal
  *
- * \class UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate
- *
- * \brief Private implementation for UpdateSecurityGroupRuleDescriptionsEgressResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSecurityGroupRuleDescriptionsEgressResponse instance.
+ * Constructs a UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate object with public implementation \a q.
  */
 UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate::UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate(
     UpdateSecurityGroupRuleDescriptionsEgressResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate::UpdateSecurityGroupRul
 }
 
 /*!
- * @brief  Parse an EC2 UpdateSecurityGroupRuleDescriptionsEgressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 UpdateSecurityGroupRuleDescriptionsEgress response element from \a xml.
  */
 void UpdateSecurityGroupRuleDescriptionsEgressResponsePrivate::parseUpdateSecurityGroupRuleDescriptionsEgressResponse(QXmlStreamReader &xml)
 {

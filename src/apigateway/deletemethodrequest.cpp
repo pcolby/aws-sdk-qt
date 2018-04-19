@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteMethodRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteMethodRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteMethodRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteMethodRequestPrivate::DeleteMethodRequestPrivate(
     const APIGatewayRequest::Action action, DeleteMethodRequest * const q)

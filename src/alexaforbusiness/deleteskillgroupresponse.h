@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSkillGroupResponse : public AlexaForBusinessResponse {
 public:
     DeleteSkillGroupResponse(const DeleteSkillGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSkillGroupRequest * request() const;
+    virtual const DeleteSkillGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSkillGroupResponse)

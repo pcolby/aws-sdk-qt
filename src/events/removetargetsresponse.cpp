@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::RemoveTargetsResponse
- *
  * \brief The RemoveTargetsResponse class provides an interace for CloudWatchEvents RemoveTargets responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new RemoveTargetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveTargetsResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveTargetsResponse::RemoveTargetsResponse(
         const RemoveTargetsRequest &request,
@@ -78,6 +73,9 @@ RemoveTargetsResponse::RemoveTargetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveTargetsRequest * RemoveTargetsResponse::request() const
 {
     Q_D(const RemoveTargetsResponse);
@@ -85,9 +83,8 @@ const RemoveTargetsRequest * RemoveTargetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents RemoveTargets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents RemoveTargets \a response.
  */
 void RemoveTargetsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void RemoveTargetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::RemoveTargetsResponsePrivate
+ * \brief The RemoveTargetsResponsePrivate class provides private implementation for RemoveTargetsResponse.
  * \internal
  *
- * \class RemoveTargetsResponsePrivate
- *
- * \brief Private implementation for RemoveTargetsResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTargetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveTargetsResponse instance.
+ * Constructs a RemoveTargetsResponsePrivate object with public implementation \a q.
  */
 RemoveTargetsResponsePrivate::RemoveTargetsResponsePrivate(
     RemoveTargetsResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ RemoveTargetsResponsePrivate::RemoveTargetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents RemoveTargetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents RemoveTargets response element from \a xml.
  */
 void RemoveTargetsResponsePrivate::parseRemoveTargetsResponse(QXmlStreamReader &xml)
 {

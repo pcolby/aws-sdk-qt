@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisableVgwRoutePropagationResponse
- *
  * \brief The DisableVgwRoutePropagationResponse class provides an interace for EC2 DisableVgwRoutePropagation responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisableVgwRoutePropagationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableVgwRoutePropagationResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableVgwRoutePropagationResponse::DisableVgwRoutePropagationResponse(
         const DisableVgwRoutePropagationRequest &request,
@@ -59,6 +54,9 @@ DisableVgwRoutePropagationResponse::DisableVgwRoutePropagationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableVgwRoutePropagationRequest * DisableVgwRoutePropagationResponse::request() const
 {
     Q_D(const DisableVgwRoutePropagationResponse);
@@ -66,9 +64,8 @@ const DisableVgwRoutePropagationRequest * DisableVgwRoutePropagationResponse::re
 }
 
 /*!
- * @brief  Parse a EC2 DisableVgwRoutePropagation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DisableVgwRoutePropagation \a response.
  */
 void DisableVgwRoutePropagationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DisableVgwRoutePropagationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DisableVgwRoutePropagationResponsePrivate
+ * \brief The DisableVgwRoutePropagationResponsePrivate class provides private implementation for DisableVgwRoutePropagationResponse.
  * \internal
  *
- * \class DisableVgwRoutePropagationResponsePrivate
- *
- * \brief Private implementation for DisableVgwRoutePropagationResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableVgwRoutePropagationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableVgwRoutePropagationResponse instance.
+ * Constructs a DisableVgwRoutePropagationResponsePrivate object with public implementation \a q.
  */
 DisableVgwRoutePropagationResponsePrivate::DisableVgwRoutePropagationResponsePrivate(
     DisableVgwRoutePropagationResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DisableVgwRoutePropagationResponsePrivate::DisableVgwRoutePropagationResponsePri
 }
 
 /*!
- * @brief  Parse an EC2 DisableVgwRoutePropagationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DisableVgwRoutePropagation response element from \a xml.
  */
 void DisableVgwRoutePropagationResponsePrivate::parseDisableVgwRoutePropagationResponse(QXmlStreamReader &xml)
 {

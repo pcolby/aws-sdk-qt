@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListObjectParentPathsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListObjectParentPathsRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a ListObjectParentPathsRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 ListObjectParentPathsRequestPrivate::ListObjectParentPathsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListObjectParentPathsRequest * const q)

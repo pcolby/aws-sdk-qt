@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyHostsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ModifyHostsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyHostsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyHostsRequestPrivate::ModifyHostsRequestPrivate(
     const EC2Request::Action action, ModifyHostsRequest * const q)

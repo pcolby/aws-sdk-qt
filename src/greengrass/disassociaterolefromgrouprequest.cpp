@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateRoleFromGroupRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DisassociateRoleFromGroupRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateRoleFromGroupRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 DisassociateRoleFromGroupRequestPrivate::DisassociateRoleFromGroupRequestPrivate(
     const GreengrassRequest::Action action, DisassociateRoleFromGroupRequest * const q)

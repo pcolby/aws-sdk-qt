@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetVpcLinksResponse
- *
  * \brief The GetVpcLinksResponse class provides an interace for APIGateway GetVpcLinks responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetVpcLinksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetVpcLinksResponse object for \a reply to \a request, with parent \a parent.
  */
 GetVpcLinksResponse::GetVpcLinksResponse(
         const GetVpcLinksRequest &request,
@@ -60,6 +55,9 @@ GetVpcLinksResponse::GetVpcLinksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetVpcLinksRequest * GetVpcLinksResponse::request() const
 {
     Q_D(const GetVpcLinksResponse);
@@ -67,9 +65,8 @@ const GetVpcLinksRequest * GetVpcLinksResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetVpcLinks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetVpcLinks \a response.
  */
 void GetVpcLinksResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetVpcLinksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetVpcLinksResponsePrivate
+ * \brief The GetVpcLinksResponsePrivate class provides private implementation for GetVpcLinksResponse.
  * \internal
  *
- * \class GetVpcLinksResponsePrivate
- *
- * \brief Private implementation for GetVpcLinksResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetVpcLinksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetVpcLinksResponse instance.
+ * Constructs a GetVpcLinksResponsePrivate object with public implementation \a q.
  */
 GetVpcLinksResponsePrivate::GetVpcLinksResponsePrivate(
     GetVpcLinksResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetVpcLinksResponsePrivate::GetVpcLinksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetVpcLinksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetVpcLinks response element from \a xml.
  */
 void GetVpcLinksResponsePrivate::parseGetVpcLinksResponse(QXmlStreamReader &xml)
 {

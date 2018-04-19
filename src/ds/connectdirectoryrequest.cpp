@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ConnectDirectoryRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ConnectDirectoryRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a ConnectDirectoryRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 ConnectDirectoryRequestPrivate::ConnectDirectoryRequestPrivate(
     const DirectoryServiceRequest::Action action, ConnectDirectoryRequest * const q)

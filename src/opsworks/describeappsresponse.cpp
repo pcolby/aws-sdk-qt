@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeAppsResponse
- *
  * \brief The DescribeAppsResponse class provides an interace for OpsWorks DescribeApps responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeAppsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAppsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAppsResponse::DescribeAppsResponse(
         const DescribeAppsRequest &request,
@@ -161,6 +156,9 @@ DescribeAppsResponse::DescribeAppsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAppsRequest * DescribeAppsResponse::request() const
 {
     Q_D(const DescribeAppsResponse);
@@ -168,9 +166,8 @@ const DescribeAppsRequest * DescribeAppsResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeApps response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeApps \a response.
  */
 void DescribeAppsResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeAppsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeAppsResponsePrivate
+ * \brief The DescribeAppsResponsePrivate class provides private implementation for DescribeAppsResponse.
  * \internal
  *
- * \class DescribeAppsResponsePrivate
- *
- * \brief Private implementation for DescribeAppsResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAppsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAppsResponse instance.
+ * Constructs a DescribeAppsResponsePrivate object with public implementation \a q.
  */
 DescribeAppsResponsePrivate::DescribeAppsResponsePrivate(
     DescribeAppsResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeAppsResponsePrivate::DescribeAppsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeAppsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeApps response element from \a xml.
  */
 void DescribeAppsResponsePrivate::parseDescribeAppsResponse(QXmlStreamReader &xml)
 {

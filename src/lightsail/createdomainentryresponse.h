@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDomainEntryResponse : public LightsailResponse {
 public:
     CreateDomainEntryResponse(const CreateDomainEntryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDomainEntryRequest * request() const;
+    virtual const CreateDomainEntryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDomainEntryResponse)

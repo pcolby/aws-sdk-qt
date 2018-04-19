@@ -29,21 +29,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::StartOnDemandReplicationRunResponse
- *
  * \brief The StartOnDemandReplicationRunResponse class provides an interace for SMS StartOnDemandReplicationRun responses.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::startOnDemandReplicationRun
  */
 
 /*!
- * @brief  Constructs a new StartOnDemandReplicationRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartOnDemandReplicationRunResponse object for \a reply to \a request, with parent \a parent.
  */
 StartOnDemandReplicationRunResponse::StartOnDemandReplicationRunResponse(
         const StartOnDemandReplicationRunRequest &request,
@@ -55,6 +50,9 @@ StartOnDemandReplicationRunResponse::StartOnDemandReplicationRunResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartOnDemandReplicationRunRequest * StartOnDemandReplicationRunResponse::request() const
 {
     Q_D(const StartOnDemandReplicationRunResponse);
@@ -62,9 +60,8 @@ const StartOnDemandReplicationRunRequest * StartOnDemandReplicationRunResponse::
 }
 
 /*!
- * @brief  Parse a SMS StartOnDemandReplicationRun response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SMS StartOnDemandReplicationRun \a response.
  */
 void StartOnDemandReplicationRunResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void StartOnDemandReplicationRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SMS::StartOnDemandReplicationRunResponsePrivate
+ * \brief The StartOnDemandReplicationRunResponsePrivate class provides private implementation for StartOnDemandReplicationRunResponse.
  * \internal
  *
- * \class StartOnDemandReplicationRunResponsePrivate
- *
- * \brief Private implementation for StartOnDemandReplicationRunResponse.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartOnDemandReplicationRunResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartOnDemandReplicationRunResponse instance.
+ * Constructs a StartOnDemandReplicationRunResponsePrivate object with public implementation \a q.
  */
 StartOnDemandReplicationRunResponsePrivate::StartOnDemandReplicationRunResponsePrivate(
     StartOnDemandReplicationRunResponse * const q) : SMSResponsePrivate(q)
@@ -95,9 +88,7 @@ StartOnDemandReplicationRunResponsePrivate::StartOnDemandReplicationRunResponseP
 }
 
 /*!
- * @brief  Parse an SMS StartOnDemandReplicationRunResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SMS StartOnDemandReplicationRun response element from \a xml.
  */
 void StartOnDemandReplicationRunResponsePrivate::parseStartOnDemandReplicationRunResponse(QXmlStreamReader &xml)
 {

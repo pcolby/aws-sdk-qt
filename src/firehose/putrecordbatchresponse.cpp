@@ -29,10 +29,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::PutRecordBatchResponse
- *
  * \brief The PutRecordBatchResponse class provides an interace for Firehose PutRecordBatch responses.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -43,11 +42,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new PutRecordBatchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutRecordBatchResponse object for \a reply to \a request, with parent \a parent.
  */
 PutRecordBatchResponse::PutRecordBatchResponse(
         const PutRecordBatchRequest &request,
@@ -59,6 +54,9 @@ PutRecordBatchResponse::PutRecordBatchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutRecordBatchRequest * PutRecordBatchResponse::request() const
 {
     Q_D(const PutRecordBatchResponse);
@@ -66,9 +64,8 @@ const PutRecordBatchRequest * PutRecordBatchResponse::request() const
 }
 
 /*!
- * @brief  Parse a Firehose PutRecordBatch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Firehose PutRecordBatch \a response.
  */
 void PutRecordBatchResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void PutRecordBatchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Firehose::PutRecordBatchResponsePrivate
+ * \brief The PutRecordBatchResponsePrivate class provides private implementation for PutRecordBatchResponse.
  * \internal
  *
- * \class PutRecordBatchResponsePrivate
- *
- * \brief Private implementation for PutRecordBatchResponse.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRecordBatchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutRecordBatchResponse instance.
+ * Constructs a PutRecordBatchResponsePrivate object with public implementation \a q.
  */
 PutRecordBatchResponsePrivate::PutRecordBatchResponsePrivate(
     PutRecordBatchResponse * const q) : FirehoseResponsePrivate(q)
@@ -99,9 +92,7 @@ PutRecordBatchResponsePrivate::PutRecordBatchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Firehose PutRecordBatchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Firehose PutRecordBatch response element from \a xml.
  */
 void PutRecordBatchResponsePrivate::parsePutRecordBatchResponse(QXmlStreamReader &xml)
 {

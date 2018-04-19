@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcEndpointServiceConfigurationsResponse
- *
  * \brief The DescribeVpcEndpointServiceConfigurationsResponse class provides an interace for EC2 DescribeVpcEndpointServiceConfigurations responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVpcEndpointServiceConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVpcEndpointServiceConfigurationsResponse::DescribeVpcEndpointServiceConfigurationsResponse(
         const DescribeVpcEndpointServiceConfigurationsRequest &request,
@@ -59,6 +54,9 @@ DescribeVpcEndpointServiceConfigurationsResponse::DescribeVpcEndpointServiceConf
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVpcEndpointServiceConfigurationsRequest * DescribeVpcEndpointServiceConfigurationsResponse::request() const
 {
     Q_D(const DescribeVpcEndpointServiceConfigurationsResponse);
@@ -66,9 +64,8 @@ const DescribeVpcEndpointServiceConfigurationsRequest * DescribeVpcEndpointServi
 }
 
 /*!
- * @brief  Parse a EC2 DescribeVpcEndpointServiceConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeVpcEndpointServiceConfigurations \a response.
  */
 void DescribeVpcEndpointServiceConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeVpcEndpointServiceConfigurationsResponse::parseSuccess(QIODevice &r
 }
 
 /*!
+ * \class QtAws::EC2::DescribeVpcEndpointServiceConfigurationsResponsePrivate
+ * \brief The DescribeVpcEndpointServiceConfigurationsResponsePrivate class provides private implementation for DescribeVpcEndpointServiceConfigurationsResponse.
  * \internal
  *
- * \class DescribeVpcEndpointServiceConfigurationsResponsePrivate
- *
- * \brief Private implementation for DescribeVpcEndpointServiceConfigurationsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcEndpointServiceConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVpcEndpointServiceConfigurationsResponse instance.
+ * Constructs a DescribeVpcEndpointServiceConfigurationsResponsePrivate object with public implementation \a q.
  */
 DescribeVpcEndpointServiceConfigurationsResponsePrivate::DescribeVpcEndpointServiceConfigurationsResponsePrivate(
     DescribeVpcEndpointServiceConfigurationsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeVpcEndpointServiceConfigurationsResponsePrivate::DescribeVpcEndpointServ
 }
 
 /*!
- * @brief  Parse an EC2 DescribeVpcEndpointServiceConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeVpcEndpointServiceConfigurations response element from \a xml.
  */
 void DescribeVpcEndpointServiceConfigurationsResponsePrivate::parseDescribeVpcEndpointServiceConfigurationsResponse(QXmlStreamReader &xml)
 {

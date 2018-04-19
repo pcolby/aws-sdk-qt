@@ -34,10 +34,10 @@ class QTAWS_EXPORT PeerVpcResponse : public LightsailResponse {
 public:
     PeerVpcResponse(const PeerVpcRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PeerVpcRequest * request() const;
+    virtual const PeerVpcRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PeerVpcResponse)

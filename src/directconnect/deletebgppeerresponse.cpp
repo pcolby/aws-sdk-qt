@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DeleteBGPPeerResponse
- *
  * \brief The DeleteBGPPeerResponse class provides an interace for DirectConnect DeleteBGPPeer responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DeleteBGPPeerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBGPPeerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBGPPeerResponse::DeleteBGPPeerResponse(
         const DeleteBGPPeerRequest &request,
@@ -63,6 +58,9 @@ DeleteBGPPeerResponse::DeleteBGPPeerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBGPPeerRequest * DeleteBGPPeerResponse::request() const
 {
     Q_D(const DeleteBGPPeerResponse);
@@ -70,9 +68,8 @@ const DeleteBGPPeerRequest * DeleteBGPPeerResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect DeleteBGPPeer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DeleteBGPPeer \a response.
  */
 void DeleteBGPPeerResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DeleteBGPPeerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::DeleteBGPPeerResponsePrivate
+ * \brief The DeleteBGPPeerResponsePrivate class provides private implementation for DeleteBGPPeerResponse.
  * \internal
  *
- * \class DeleteBGPPeerResponsePrivate
- *
- * \brief Private implementation for DeleteBGPPeerResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBGPPeerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBGPPeerResponse instance.
+ * Constructs a DeleteBGPPeerResponsePrivate object with public implementation \a q.
  */
 DeleteBGPPeerResponsePrivate::DeleteBGPPeerResponsePrivate(
     DeleteBGPPeerResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DeleteBGPPeerResponsePrivate::DeleteBGPPeerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect DeleteBGPPeerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DeleteBGPPeer response element from \a xml.
  */
 void DeleteBGPPeerResponsePrivate::parseDeleteBGPPeerResponse(QXmlStreamReader &xml)
 {

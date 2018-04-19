@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDistributionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteDistributionRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDistributionRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 DeleteDistributionRequestPrivate::DeleteDistributionRequestPrivate(
     const CloudFrontRequest::Action action, DeleteDistributionRequest * const q)

@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterTaskDefinitionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeregisterTaskDefinitionRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterTaskDefinitionRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 DeregisterTaskDefinitionRequestPrivate::DeregisterTaskDefinitionRequestPrivate(
     const ECSRequest::Action action, DeregisterTaskDefinitionRequest * const q)

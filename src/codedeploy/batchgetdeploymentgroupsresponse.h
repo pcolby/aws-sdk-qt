@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchGetDeploymentGroupsResponse : public CodeDeployResponse 
 public:
     BatchGetDeploymentGroupsResponse(const BatchGetDeploymentGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchGetDeploymentGroupsRequest * request() const;
+    virtual const BatchGetDeploymentGroupsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchGetDeploymentGroupsResponse)

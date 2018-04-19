@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateSubnetGroupRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CreateSubnetGroupRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a CreateSubnetGroupRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 CreateSubnetGroupRequestPrivate::CreateSubnetGroupRequestPrivate(
     const DAXRequest::Action action, CreateSubnetGroupRequest * const q)

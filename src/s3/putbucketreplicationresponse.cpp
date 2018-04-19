@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketReplicationResponse
- *
  * \brief The PutBucketReplicationResponse class provides an interace for S3 PutBucketReplication responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketReplication
  */
 
 /*!
- * @brief  Constructs a new PutBucketReplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketReplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketReplicationResponse::PutBucketReplicationResponse(
         const PutBucketReplicationRequest &request,
@@ -55,6 +50,9 @@ PutBucketReplicationResponse::PutBucketReplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketReplicationRequest * PutBucketReplicationResponse::request() const
 {
     Q_D(const PutBucketReplicationResponse);
@@ -62,9 +60,8 @@ const PutBucketReplicationRequest * PutBucketReplicationResponse::request() cons
 }
 
 /*!
- * @brief  Parse a S3 PutBucketReplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketReplication \a response.
  */
 void PutBucketReplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketReplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketReplicationResponsePrivate
+ * \brief The PutBucketReplicationResponsePrivate class provides private implementation for PutBucketReplicationResponse.
  * \internal
  *
- * \class PutBucketReplicationResponsePrivate
- *
- * \brief Private implementation for PutBucketReplicationResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketReplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketReplicationResponse instance.
+ * Constructs a PutBucketReplicationResponsePrivate object with public implementation \a q.
  */
 PutBucketReplicationResponsePrivate::PutBucketReplicationResponsePrivate(
     PutBucketReplicationResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketReplicationResponsePrivate::PutBucketReplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 PutBucketReplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketReplication response element from \a xml.
  */
 void PutBucketReplicationResponsePrivate::parsePutBucketReplicationResponse(QXmlStreamReader &xml)
 {

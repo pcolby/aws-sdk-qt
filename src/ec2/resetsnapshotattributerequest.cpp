@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ResetSnapshotAttributeRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ResetSnapshotAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ResetSnapshotAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ResetSnapshotAttributeRequestPrivate::ResetSnapshotAttributeRequestPrivate(
     const EC2Request::Action action, ResetSnapshotAttributeRequest * const q)

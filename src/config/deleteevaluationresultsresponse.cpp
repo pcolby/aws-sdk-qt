@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteEvaluationResultsResponse
- *
  * \brief The DeleteEvaluationResultsResponse class provides an interace for ConfigService DeleteEvaluationResults responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteEvaluationResultsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEvaluationResultsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEvaluationResultsResponse::DeleteEvaluationResultsResponse(
         const DeleteEvaluationResultsRequest &request,
@@ -78,6 +73,9 @@ DeleteEvaluationResultsResponse::DeleteEvaluationResultsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEvaluationResultsRequest * DeleteEvaluationResultsResponse::request() const
 {
     Q_D(const DeleteEvaluationResultsResponse);
@@ -85,9 +83,8 @@ const DeleteEvaluationResultsRequest * DeleteEvaluationResultsResponse::request(
 }
 
 /*!
- * @brief  Parse a ConfigService DeleteEvaluationResults response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DeleteEvaluationResults \a response.
  */
 void DeleteEvaluationResultsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DeleteEvaluationResultsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DeleteEvaluationResultsResponsePrivate
+ * \brief The DeleteEvaluationResultsResponsePrivate class provides private implementation for DeleteEvaluationResultsResponse.
  * \internal
  *
- * \class DeleteEvaluationResultsResponsePrivate
- *
- * \brief Private implementation for DeleteEvaluationResultsResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEvaluationResultsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEvaluationResultsResponse instance.
+ * Constructs a DeleteEvaluationResultsResponsePrivate object with public implementation \a q.
  */
 DeleteEvaluationResultsResponsePrivate::DeleteEvaluationResultsResponsePrivate(
     DeleteEvaluationResultsResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DeleteEvaluationResultsResponsePrivate::DeleteEvaluationResultsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ConfigService DeleteEvaluationResultsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DeleteEvaluationResults response element from \a xml.
  */
 void DeleteEvaluationResultsResponsePrivate::parseDeleteEvaluationResultsResponse(QXmlStreamReader &xml)
 {

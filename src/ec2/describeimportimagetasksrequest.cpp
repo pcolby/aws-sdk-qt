@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeImportImageTasksRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeImportImageTasksRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeImportImageTasksRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeImportImageTasksRequestPrivate::DescribeImportImageTasksRequestPrivate(
     const EC2Request::Action action, DescribeImportImageTasksRequest * const q)

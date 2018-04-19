@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetApnsChannelResponse : public PinpointResponse {
 public:
     GetApnsChannelResponse(const GetApnsChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetApnsChannelRequest * request() const;
+    virtual const GetApnsChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetApnsChannelResponse)

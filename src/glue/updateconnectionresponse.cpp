@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateConnectionResponse
- *
  * \brief The UpdateConnectionResponse class provides an interace for Glue UpdateConnection responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateConnectionResponse::UpdateConnectionResponse(
         const UpdateConnectionRequest &request,
@@ -58,6 +53,9 @@ UpdateConnectionResponse::UpdateConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateConnectionRequest * UpdateConnectionResponse::request() const
 {
     Q_D(const UpdateConnectionResponse);
@@ -65,9 +63,8 @@ const UpdateConnectionRequest * UpdateConnectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue UpdateConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue UpdateConnection \a response.
  */
 void UpdateConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::UpdateConnectionResponsePrivate
+ * \brief The UpdateConnectionResponsePrivate class provides private implementation for UpdateConnectionResponse.
  * \internal
  *
- * \class UpdateConnectionResponsePrivate
- *
- * \brief Private implementation for UpdateConnectionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateConnectionResponse instance.
+ * Constructs a UpdateConnectionResponsePrivate object with public implementation \a q.
  */
 UpdateConnectionResponsePrivate::UpdateConnectionResponsePrivate(
     UpdateConnectionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateConnectionResponsePrivate::UpdateConnectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue UpdateConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue UpdateConnection response element from \a xml.
  */
 void UpdateConnectionResponsePrivate::parseUpdateConnectionResponse(QXmlStreamReader &xml)
 {

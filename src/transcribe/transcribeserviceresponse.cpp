@@ -28,16 +28,13 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::TranscribeServiceResponse
- *
  * \brief The TranscribeServiceResponse class provides an interface for TranscribeService responses.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @brief  Constructs a new TranscribeServiceResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a TranscribeServiceResponse object with parent \a parent.
  */
 TranscribeServiceResponse::TranscribeServiceResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new TranscribeServiceResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ TranscribeServiceResponse::TranscribeServiceResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TranscribeServiceResponse object.
- *
+ * \internal
+ * Constructs a TranscribeServiceResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from TranscribeServiceResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 TranscribeServiceResponse::TranscribeServiceResponse(TranscribeServiceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ TranscribeServiceResponse::TranscribeServiceResponse(TranscribeServiceResponsePr
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void TranscribeServiceResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void TranscribeServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::TranscribeService::TranscribeServiceResponsePrivate
+ * \brief The TranscribeServiceResponsePrivate class provides private implementation for TranscribeServiceResponse.
+ * \internal
  *
- * @class  TranscribeServiceResponsePrivate
- *
- * @brief  Private implementation for TranscribeServiceResponse.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TranscribeServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TranscribeServiceResponse instance.
+ * Constructs a TranscribeServiceResponsePrivate object with public implementation \a q.
  */
 TranscribeServiceResponsePrivate::TranscribeServiceResponsePrivate(
     TranscribeServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT RestoreDBInstanceFromDBSnapshotResponse : public RDSResponse 
 public:
     RestoreDBInstanceFromDBSnapshotResponse(const RestoreDBInstanceFromDBSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RestoreDBInstanceFromDBSnapshotRequest * request() const;
+    virtual const RestoreDBInstanceFromDBSnapshotRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RestoreDBInstanceFromDBSnapshotResponse)

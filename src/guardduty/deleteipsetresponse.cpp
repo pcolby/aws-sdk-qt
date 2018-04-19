@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DeleteIPSetResponse
- *
  * \brief The DeleteIPSetResponse class provides an interace for GuardDuty DeleteIPSet responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::deleteIPSet
  */
 
 /*!
- * @brief  Constructs a new DeleteIPSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteIPSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteIPSetResponse::DeleteIPSetResponse(
         const DeleteIPSetRequest &request,
@@ -55,6 +50,9 @@ DeleteIPSetResponse::DeleteIPSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteIPSetRequest * DeleteIPSetResponse::request() const
 {
     Q_D(const DeleteIPSetResponse);
@@ -62,9 +60,8 @@ const DeleteIPSetRequest * DeleteIPSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty DeleteIPSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty DeleteIPSet \a response.
  */
 void DeleteIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::DeleteIPSetResponsePrivate
+ * \brief The DeleteIPSetResponsePrivate class provides private implementation for DeleteIPSetResponse.
  * \internal
  *
- * \class DeleteIPSetResponsePrivate
- *
- * \brief Private implementation for DeleteIPSetResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIPSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteIPSetResponse instance.
+ * Constructs a DeleteIPSetResponsePrivate object with public implementation \a q.
  */
 DeleteIPSetResponsePrivate::DeleteIPSetResponsePrivate(
     DeleteIPSetResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteIPSetResponsePrivate::DeleteIPSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty DeleteIPSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty DeleteIPSet response element from \a xml.
  */
 void DeleteIPSetResponsePrivate::parseDeleteIPSetResponse(QXmlStreamReader &xml)
 {

@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingPoliciesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeScalingPoliciesRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeScalingPoliciesRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DescribeScalingPoliciesRequestPrivate::DescribeScalingPoliciesRequestPrivate(
     const GameLiftRequest::Action action, DescribeScalingPoliciesRequest * const q)

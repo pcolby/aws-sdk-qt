@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeSessionsResponse
- *
  * \brief The DescribeSessionsResponse class provides an interace for AppStream DescribeSessions responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeSessionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSessionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSessionsResponse::DescribeSessionsResponse(
         const DescribeSessionsRequest &request,
@@ -58,6 +53,9 @@ DescribeSessionsResponse::DescribeSessionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSessionsRequest * DescribeSessionsResponse::request() const
 {
     Q_D(const DescribeSessionsResponse);
@@ -65,9 +63,8 @@ const DescribeSessionsRequest * DescribeSessionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream DescribeSessions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream DescribeSessions \a response.
  */
 void DescribeSessionsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeSessionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::DescribeSessionsResponsePrivate
+ * \brief The DescribeSessionsResponsePrivate class provides private implementation for DescribeSessionsResponse.
  * \internal
  *
- * \class DescribeSessionsResponsePrivate
- *
- * \brief Private implementation for DescribeSessionsResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSessionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSessionsResponse instance.
+ * Constructs a DescribeSessionsResponsePrivate object with public implementation \a q.
  */
 DescribeSessionsResponsePrivate::DescribeSessionsResponsePrivate(
     DescribeSessionsResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeSessionsResponsePrivate::DescribeSessionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream DescribeSessionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream DescribeSessions response element from \a xml.
  */
 void DescribeSessionsResponsePrivate::parseDescribeSessionsResponse(QXmlStreamReader &xml)
 {

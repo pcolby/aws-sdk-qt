@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteTargetGroupResponse
- *
  * \brief The DeleteTargetGroupResponse class provides an interace for ElasticLoadBalancingv2 DeleteTargetGroup responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteTargetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTargetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTargetGroupResponse::DeleteTargetGroupResponse(
         const DeleteTargetGroupRequest &request,
@@ -123,6 +118,9 @@ DeleteTargetGroupResponse::DeleteTargetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTargetGroupRequest * DeleteTargetGroupResponse::request() const
 {
     Q_D(const DeleteTargetGroupResponse);
@@ -130,9 +128,8 @@ const DeleteTargetGroupRequest * DeleteTargetGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DeleteTargetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DeleteTargetGroup \a response.
  */
 void DeleteTargetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DeleteTargetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DeleteTargetGroupResponsePrivate
+ * \brief The DeleteTargetGroupResponsePrivate class provides private implementation for DeleteTargetGroupResponse.
  * \internal
  *
- * \class DeleteTargetGroupResponsePrivate
- *
- * \brief Private implementation for DeleteTargetGroupResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTargetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTargetGroupResponse instance.
+ * Constructs a DeleteTargetGroupResponsePrivate object with public implementation \a q.
  */
 DeleteTargetGroupResponsePrivate::DeleteTargetGroupResponsePrivate(
     DeleteTargetGroupResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DeleteTargetGroupResponsePrivate::DeleteTargetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DeleteTargetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DeleteTargetGroup response element from \a xml.
  */
 void DeleteTargetGroupResponsePrivate::parseDeleteTargetGroupResponse(QXmlStreamReader &xml)
 {

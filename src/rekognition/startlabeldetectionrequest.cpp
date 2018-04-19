@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * StartLabelDetectionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a StartLabelDetectionRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a StartLabelDetectionRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 StartLabelDetectionRequestPrivate::StartLabelDetectionRequestPrivate(
     const RekognitionRequest::Action action, StartLabelDetectionRequest * const q)

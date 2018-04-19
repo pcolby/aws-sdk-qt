@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AuthorizeSecurityGroupIngressRequest::respons
  */
 
 /*!
- *
- * Constructs a AuthorizeSecurityGroupIngressRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AuthorizeSecurityGroupIngressRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AuthorizeSecurityGroupIngressRequestPrivate::AuthorizeSecurityGroupIngressRequestPrivate(
     const EC2Request::Action action, AuthorizeSecurityGroupIngressRequest * const q)

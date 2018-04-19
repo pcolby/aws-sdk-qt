@@ -56,7 +56,7 @@ namespace MediaLive {
  */
 
 /*!
- * Constructs a[n] MediaLiveRequest object for MediaLive \a action.
+ * Constructs a MediaLiveRequest object for MediaLive \a action.
  */
 MediaLiveRequest::MediaLiveRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MediaLiveRequestPrivate(action, this))
@@ -256,8 +256,8 @@ QNetworkRequest MediaLiveRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a MediaLiveRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a MediaLiveRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 MediaLiveRequestPrivate::MediaLiveRequestPrivate(const MediaLiveRequest::Action action, MediaLiveRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

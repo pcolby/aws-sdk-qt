@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListReviewPolicyResultsForHITRequest::respons
  */
 
 /*!
- *
- * Constructs a ListReviewPolicyResultsForHITRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a ListReviewPolicyResultsForHITRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 ListReviewPolicyResultsForHITRequestPrivate::ListReviewPolicyResultsForHITRequestPrivate(
     const MTurkRequest::Action action, ListReviewPolicyResultsForHITRequest * const q)

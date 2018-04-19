@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ResyncMFADeviceResponse
- *
  * \brief The ResyncMFADeviceResponse class provides an interace for IAM ResyncMFADevice responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ResyncMFADeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResyncMFADeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 ResyncMFADeviceResponse::ResyncMFADeviceResponse(
         const ResyncMFADeviceRequest &request,
@@ -120,6 +115,9 @@ ResyncMFADeviceResponse::ResyncMFADeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResyncMFADeviceRequest * ResyncMFADeviceResponse::request() const
 {
     Q_D(const ResyncMFADeviceResponse);
@@ -127,9 +125,8 @@ const ResyncMFADeviceRequest * ResyncMFADeviceResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM ResyncMFADevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ResyncMFADevice \a response.
  */
 void ResyncMFADeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ResyncMFADeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ResyncMFADeviceResponsePrivate
+ * \brief The ResyncMFADeviceResponsePrivate class provides private implementation for ResyncMFADeviceResponse.
  * \internal
  *
- * \class ResyncMFADeviceResponsePrivate
- *
- * \brief Private implementation for ResyncMFADeviceResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResyncMFADeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResyncMFADeviceResponse instance.
+ * Constructs a ResyncMFADeviceResponsePrivate object with public implementation \a q.
  */
 ResyncMFADeviceResponsePrivate::ResyncMFADeviceResponsePrivate(
     ResyncMFADeviceResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ResyncMFADeviceResponsePrivate::ResyncMFADeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ResyncMFADeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ResyncMFADevice response element from \a xml.
  */
 void ResyncMFADeviceResponsePrivate::parseResyncMFADeviceResponse(QXmlStreamReader &xml)
 {

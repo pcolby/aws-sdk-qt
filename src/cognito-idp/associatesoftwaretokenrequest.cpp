@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AssociateSoftwareTokenRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a AssociateSoftwareTokenRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AssociateSoftwareTokenRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AssociateSoftwareTokenRequest * const q)

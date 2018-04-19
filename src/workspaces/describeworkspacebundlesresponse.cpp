@@ -29,10 +29,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::DescribeWorkspaceBundlesResponse
- *
  * \brief The DescribeWorkspaceBundlesResponse class provides an interace for WorkSpaces DescribeWorkspaceBundles responses.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new DescribeWorkspaceBundlesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeWorkspaceBundlesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeWorkspaceBundlesResponse::DescribeWorkspaceBundlesResponse(
         const DescribeWorkspaceBundlesRequest &request,
@@ -58,6 +53,9 @@ DescribeWorkspaceBundlesResponse::DescribeWorkspaceBundlesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeWorkspaceBundlesRequest * DescribeWorkspaceBundlesResponse::request() const
 {
     Q_D(const DescribeWorkspaceBundlesResponse);
@@ -65,9 +63,8 @@ const DescribeWorkspaceBundlesRequest * DescribeWorkspaceBundlesResponse::reques
 }
 
 /*!
- * @brief  Parse a WorkSpaces DescribeWorkspaceBundles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkSpaces DescribeWorkspaceBundles \a response.
  */
 void DescribeWorkspaceBundlesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeWorkspaceBundlesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkSpaces::DescribeWorkspaceBundlesResponsePrivate
+ * \brief The DescribeWorkspaceBundlesResponsePrivate class provides private implementation for DescribeWorkspaceBundlesResponse.
  * \internal
  *
- * \class DescribeWorkspaceBundlesResponsePrivate
- *
- * \brief Private implementation for DescribeWorkspaceBundlesResponse.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeWorkspaceBundlesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeWorkspaceBundlesResponse instance.
+ * Constructs a DescribeWorkspaceBundlesResponsePrivate object with public implementation \a q.
  */
 DescribeWorkspaceBundlesResponsePrivate::DescribeWorkspaceBundlesResponsePrivate(
     DescribeWorkspaceBundlesResponse * const q) : WorkSpacesResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeWorkspaceBundlesResponsePrivate::DescribeWorkspaceBundlesResponsePrivate
 }
 
 /*!
- * @brief  Parse an WorkSpaces DescribeWorkspaceBundlesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkSpaces DescribeWorkspaceBundles response element from \a xml.
  */
 void DescribeWorkspaceBundlesResponsePrivate::parseDescribeWorkspaceBundlesResponse(QXmlStreamReader &xml)
 {

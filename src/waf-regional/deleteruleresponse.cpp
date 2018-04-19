@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DeleteRuleResponse
- *
  * \brief The DeleteRuleResponse class provides an interace for WAFRegional DeleteRule responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DeleteRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRuleResponse::DeleteRuleResponse(
         const DeleteRuleRequest &request,
@@ -62,6 +57,9 @@ DeleteRuleResponse::DeleteRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRuleRequest * DeleteRuleResponse::request() const
 {
     Q_D(const DeleteRuleResponse);
@@ -69,9 +67,8 @@ const DeleteRuleRequest * DeleteRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional DeleteRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional DeleteRule \a response.
  */
 void DeleteRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DeleteRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::DeleteRuleResponsePrivate
+ * \brief The DeleteRuleResponsePrivate class provides private implementation for DeleteRuleResponse.
  * \internal
  *
- * \class DeleteRuleResponsePrivate
- *
- * \brief Private implementation for DeleteRuleResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRuleResponse instance.
+ * Constructs a DeleteRuleResponsePrivate object with public implementation \a q.
  */
 DeleteRuleResponsePrivate::DeleteRuleResponsePrivate(
     DeleteRuleResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ DeleteRuleResponsePrivate::DeleteRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional DeleteRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional DeleteRule response element from \a xml.
  */
 void DeleteRuleResponsePrivate::parseDeleteRuleResponse(QXmlStreamReader &xml)
 {

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ResetJobBookmarkRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ResetJobBookmarkRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a ResetJobBookmarkRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 ResetJobBookmarkRequestPrivate::ResetJobBookmarkRequestPrivate(
     const GlueRequest::Action action, ResetJobBookmarkRequest * const q)

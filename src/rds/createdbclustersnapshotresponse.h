@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDBClusterSnapshotResponse : public RDSResponse {
 public:
     CreateDBClusterSnapshotResponse(const CreateDBClusterSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDBClusterSnapshotRequest * request() const;
+    virtual const CreateDBClusterSnapshotRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDBClusterSnapshotResponse)

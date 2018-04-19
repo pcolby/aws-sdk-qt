@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeTargetHealthResponse
- *
  * \brief The DescribeTargetHealthResponse class provides an interace for ElasticLoadBalancingv2 DescribeTargetHealth responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeTargetHealthResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTargetHealthResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTargetHealthResponse::DescribeTargetHealthResponse(
         const DescribeTargetHealthRequest &request,
@@ -123,6 +118,9 @@ DescribeTargetHealthResponse::DescribeTargetHealthResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTargetHealthRequest * DescribeTargetHealthResponse::request() const
 {
     Q_D(const DescribeTargetHealthResponse);
@@ -130,9 +128,8 @@ const DescribeTargetHealthRequest * DescribeTargetHealthResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DescribeTargetHealth response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DescribeTargetHealth \a response.
  */
 void DescribeTargetHealthResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeTargetHealthResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DescribeTargetHealthResponsePrivate
+ * \brief The DescribeTargetHealthResponsePrivate class provides private implementation for DescribeTargetHealthResponse.
  * \internal
  *
- * \class DescribeTargetHealthResponsePrivate
- *
- * \brief Private implementation for DescribeTargetHealthResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTargetHealthResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTargetHealthResponse instance.
+ * Constructs a DescribeTargetHealthResponsePrivate object with public implementation \a q.
  */
 DescribeTargetHealthResponsePrivate::DescribeTargetHealthResponsePrivate(
     DescribeTargetHealthResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeTargetHealthResponsePrivate::DescribeTargetHealthResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DescribeTargetHealthResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DescribeTargetHealth response element from \a xml.
  */
 void DescribeTargetHealthResponsePrivate::parseDescribeTargetHealthResponse(QXmlStreamReader &xml)
 {

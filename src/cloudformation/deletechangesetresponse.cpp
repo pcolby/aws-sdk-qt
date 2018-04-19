@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::DeleteChangeSetResponse
- *
  * \brief The DeleteChangeSetResponse class provides an interace for CloudFormation DeleteChangeSet responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new DeleteChangeSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteChangeSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteChangeSetResponse::DeleteChangeSetResponse(
         const DeleteChangeSetRequest &request,
@@ -77,6 +72,9 @@ DeleteChangeSetResponse::DeleteChangeSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteChangeSetRequest * DeleteChangeSetResponse::request() const
 {
     Q_D(const DeleteChangeSetResponse);
@@ -84,9 +82,8 @@ const DeleteChangeSetRequest * DeleteChangeSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation DeleteChangeSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation DeleteChangeSet \a response.
  */
 void DeleteChangeSetResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DeleteChangeSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::DeleteChangeSetResponsePrivate
+ * \brief The DeleteChangeSetResponsePrivate class provides private implementation for DeleteChangeSetResponse.
  * \internal
  *
- * \class DeleteChangeSetResponsePrivate
- *
- * \brief Private implementation for DeleteChangeSetResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteChangeSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteChangeSetResponse instance.
+ * Constructs a DeleteChangeSetResponsePrivate object with public implementation \a q.
  */
 DeleteChangeSetResponsePrivate::DeleteChangeSetResponsePrivate(
     DeleteChangeSetResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ DeleteChangeSetResponsePrivate::DeleteChangeSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation DeleteChangeSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation DeleteChangeSet response element from \a xml.
  */
 void DeleteChangeSetResponsePrivate::parseDeleteChangeSetResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::StartDBInstanceResponse
- *
  * \brief The StartDBInstanceResponse class provides an interace for RDS StartDBInstance responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new StartDBInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartDBInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 StartDBInstanceResponse::StartDBInstanceResponse(
         const StartDBInstanceRequest &request,
@@ -119,6 +114,9 @@ StartDBInstanceResponse::StartDBInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartDBInstanceRequest * StartDBInstanceResponse::request() const
 {
     Q_D(const StartDBInstanceResponse);
@@ -126,9 +124,8 @@ const StartDBInstanceRequest * StartDBInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS StartDBInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS StartDBInstance \a response.
  */
 void StartDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void StartDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::StartDBInstanceResponsePrivate
+ * \brief The StartDBInstanceResponsePrivate class provides private implementation for StartDBInstanceResponse.
  * \internal
  *
- * \class StartDBInstanceResponsePrivate
- *
- * \brief Private implementation for StartDBInstanceResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartDBInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartDBInstanceResponse instance.
+ * Constructs a StartDBInstanceResponsePrivate object with public implementation \a q.
  */
 StartDBInstanceResponsePrivate::StartDBInstanceResponsePrivate(
     StartDBInstanceResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ StartDBInstanceResponsePrivate::StartDBInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS StartDBInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS StartDBInstance response element from \a xml.
  */
 void StartDBInstanceResponsePrivate::parseStartDBInstanceResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreatePresignedNotebookInstanceUrlRequest::re
  */
 
 /*!
- *
- * Constructs a CreatePresignedNotebookInstanceUrlRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a CreatePresignedNotebookInstanceUrlRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 CreatePresignedNotebookInstanceUrlRequestPrivate::CreatePresignedNotebookInstanceUrlRequestPrivate(
     const SageMakerRequest::Action action, CreatePresignedNotebookInstanceUrlRequest * const q)

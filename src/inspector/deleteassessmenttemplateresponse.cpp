@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DeleteAssessmentTemplateResponse
- *
  * \brief The DeleteAssessmentTemplateResponse class provides an interace for Inspector DeleteAssessmentTemplate responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DeleteAssessmentTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAssessmentTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAssessmentTemplateResponse::DeleteAssessmentTemplateResponse(
         const DeleteAssessmentTemplateRequest &request,
@@ -60,6 +55,9 @@ DeleteAssessmentTemplateResponse::DeleteAssessmentTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAssessmentTemplateRequest * DeleteAssessmentTemplateResponse::request() const
 {
     Q_D(const DeleteAssessmentTemplateResponse);
@@ -67,9 +65,8 @@ const DeleteAssessmentTemplateRequest * DeleteAssessmentTemplateResponse::reques
 }
 
 /*!
- * @brief  Parse a Inspector DeleteAssessmentTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector DeleteAssessmentTemplate \a response.
  */
 void DeleteAssessmentTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteAssessmentTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::DeleteAssessmentTemplateResponsePrivate
+ * \brief The DeleteAssessmentTemplateResponsePrivate class provides private implementation for DeleteAssessmentTemplateResponse.
  * \internal
  *
- * \class DeleteAssessmentTemplateResponsePrivate
- *
- * \brief Private implementation for DeleteAssessmentTemplateResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAssessmentTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAssessmentTemplateResponse instance.
+ * Constructs a DeleteAssessmentTemplateResponsePrivate object with public implementation \a q.
  */
 DeleteAssessmentTemplateResponsePrivate::DeleteAssessmentTemplateResponsePrivate(
     DeleteAssessmentTemplateResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteAssessmentTemplateResponsePrivate::DeleteAssessmentTemplateResponsePrivate
 }
 
 /*!
- * @brief  Parse an Inspector DeleteAssessmentTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector DeleteAssessmentTemplate response element from \a xml.
  */
 void DeleteAssessmentTemplateResponsePrivate::parseDeleteAssessmentTemplateResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteSSHPublicKeyResponse
- *
  * \brief The DeleteSSHPublicKeyResponse class provides an interace for IAM DeleteSSHPublicKey responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteSSHPublicKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSSHPublicKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSSHPublicKeyResponse::DeleteSSHPublicKeyResponse(
         const DeleteSSHPublicKeyRequest &request,
@@ -120,6 +115,9 @@ DeleteSSHPublicKeyResponse::DeleteSSHPublicKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSSHPublicKeyRequest * DeleteSSHPublicKeyResponse::request() const
 {
     Q_D(const DeleteSSHPublicKeyResponse);
@@ -127,9 +125,8 @@ const DeleteSSHPublicKeyRequest * DeleteSSHPublicKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM DeleteSSHPublicKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteSSHPublicKey \a response.
  */
 void DeleteSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteSSHPublicKeyResponsePrivate
+ * \brief The DeleteSSHPublicKeyResponsePrivate class provides private implementation for DeleteSSHPublicKeyResponse.
  * \internal
  *
- * \class DeleteSSHPublicKeyResponsePrivate
- *
- * \brief Private implementation for DeleteSSHPublicKeyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSSHPublicKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSSHPublicKeyResponse instance.
+ * Constructs a DeleteSSHPublicKeyResponsePrivate object with public implementation \a q.
  */
 DeleteSSHPublicKeyResponsePrivate::DeleteSSHPublicKeyResponsePrivate(
     DeleteSSHPublicKeyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteSSHPublicKeyResponsePrivate::DeleteSSHPublicKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeleteSSHPublicKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteSSHPublicKey response element from \a xml.
  */
 void DeleteSSHPublicKeyResponsePrivate::parseDeleteSSHPublicKeyResponse(QXmlStreamReader &xml)
 {

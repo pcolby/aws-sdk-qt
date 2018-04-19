@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * MergeShardsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a MergeShardsRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a MergeShardsRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 MergeShardsRequestPrivate::MergeShardsRequestPrivate(
     const KinesisRequest::Action action, MergeShardsRequest * const q)

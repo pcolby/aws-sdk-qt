@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * AddIpRoutesRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a AddIpRoutesRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a AddIpRoutesRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 AddIpRoutesRequestPrivate::AddIpRoutesRequestPrivate(
     const DirectoryServiceRequest::Action action, AddIpRoutesRequest * const q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBatchPredictionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteBatchPredictionRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBatchPredictionRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 DeleteBatchPredictionRequestPrivate::DeleteBatchPredictionRequestPrivate(
     const MachineLearningRequest::Action action, DeleteBatchPredictionRequest * const q)

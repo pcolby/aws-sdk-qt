@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomerGatewayRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteCustomerGatewayRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCustomerGatewayRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteCustomerGatewayRequestPrivate::DeleteCustomerGatewayRequestPrivate(
     const EC2Request::Action action, DeleteCustomerGatewayRequest * const q)

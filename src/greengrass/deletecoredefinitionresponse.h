@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCoreDefinitionResponse : public GreengrassResponse {
 public:
     DeleteCoreDefinitionResponse(const DeleteCoreDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCoreDefinitionRequest * request() const;
+    virtual const DeleteCoreDefinitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCoreDefinitionResponse)

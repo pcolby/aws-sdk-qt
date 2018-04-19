@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeSnapshotsResponse
- *
  * \brief The DescribeSnapshotsResponse class provides an interace for DirectoryService DescribeSnapshots responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeSnapshotsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSnapshotsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSnapshotsResponse::DescribeSnapshotsResponse(
         const DescribeSnapshotsRequest &request,
@@ -69,6 +64,9 @@ DescribeSnapshotsResponse::DescribeSnapshotsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSnapshotsRequest * DescribeSnapshotsResponse::request() const
 {
     Q_D(const DescribeSnapshotsResponse);
@@ -76,9 +74,8 @@ const DescribeSnapshotsRequest * DescribeSnapshotsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService DescribeSnapshots response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DescribeSnapshots \a response.
  */
 void DescribeSnapshotsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeSnapshotsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DescribeSnapshotsResponsePrivate
+ * \brief The DescribeSnapshotsResponsePrivate class provides private implementation for DescribeSnapshotsResponse.
  * \internal
  *
- * \class DescribeSnapshotsResponsePrivate
- *
- * \brief Private implementation for DescribeSnapshotsResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSnapshotsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSnapshotsResponse instance.
+ * Constructs a DescribeSnapshotsResponsePrivate object with public implementation \a q.
  */
 DescribeSnapshotsResponsePrivate::DescribeSnapshotsResponsePrivate(
     DescribeSnapshotsResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeSnapshotsResponsePrivate::DescribeSnapshotsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService DescribeSnapshotsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DescribeSnapshots response element from \a xml.
  */
 void DescribeSnapshotsResponsePrivate::parseDescribeSnapshotsResponse(QXmlStreamReader &xml)
 {

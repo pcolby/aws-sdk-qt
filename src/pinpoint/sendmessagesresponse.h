@@ -34,10 +34,10 @@ class QTAWS_EXPORT SendMessagesResponse : public PinpointResponse {
 public:
     SendMessagesResponse(const SendMessagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SendMessagesRequest * request() const;
+    virtual const SendMessagesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SendMessagesResponse)

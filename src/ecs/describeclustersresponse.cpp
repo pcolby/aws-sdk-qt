@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DescribeClustersResponse
- *
  * \brief The DescribeClustersResponse class provides an interace for ECS DescribeClusters responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DescribeClustersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeClustersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeClustersResponse::DescribeClustersResponse(
         const DescribeClustersRequest &request,
@@ -72,6 +67,9 @@ DescribeClustersResponse::DescribeClustersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeClustersRequest * DescribeClustersResponse::request() const
 {
     Q_D(const DescribeClustersResponse);
@@ -79,9 +77,8 @@ const DescribeClustersRequest * DescribeClustersResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS DescribeClusters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS DescribeClusters \a response.
  */
 void DescribeClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void DescribeClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::DescribeClustersResponsePrivate
+ * \brief The DescribeClustersResponsePrivate class provides private implementation for DescribeClustersResponse.
  * \internal
  *
- * \class DescribeClustersResponsePrivate
- *
- * \brief Private implementation for DescribeClustersResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClustersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeClustersResponse instance.
+ * Constructs a DescribeClustersResponsePrivate object with public implementation \a q.
  */
 DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
     DescribeClustersResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS DescribeClustersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS DescribeClusters response element from \a xml.
  */
 void DescribeClustersResponsePrivate::parseDescribeClustersResponse(QXmlStreamReader &xml)
 {

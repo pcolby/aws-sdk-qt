@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeParametersRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeParametersRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a DescribeParametersRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
     const DAXRequest::Action action, DescribeParametersRequest * const q)

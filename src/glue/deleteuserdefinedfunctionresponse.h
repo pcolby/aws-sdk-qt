@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteUserDefinedFunctionResponse : public GlueResponse {
 public:
     DeleteUserDefinedFunctionResponse(const DeleteUserDefinedFunctionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteUserDefinedFunctionRequest * request() const;
+    virtual const DeleteUserDefinedFunctionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteUserDefinedFunctionResponse)

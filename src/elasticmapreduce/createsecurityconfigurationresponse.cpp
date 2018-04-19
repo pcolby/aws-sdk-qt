@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::CreateSecurityConfigurationResponse
- *
  * \brief The CreateSecurityConfigurationResponse class provides an interace for EMR CreateSecurityConfiguration responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new CreateSecurityConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSecurityConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSecurityConfigurationResponse::CreateSecurityConfigurationResponse(
         const CreateSecurityConfigurationRequest &request,
@@ -58,6 +53,9 @@ CreateSecurityConfigurationResponse::CreateSecurityConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSecurityConfigurationRequest * CreateSecurityConfigurationResponse::request() const
 {
     Q_D(const CreateSecurityConfigurationResponse);
@@ -65,9 +63,8 @@ const CreateSecurityConfigurationRequest * CreateSecurityConfigurationResponse::
 }
 
 /*!
- * @brief  Parse a EMR CreateSecurityConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR CreateSecurityConfiguration \a response.
  */
 void CreateSecurityConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateSecurityConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::CreateSecurityConfigurationResponsePrivate
+ * \brief The CreateSecurityConfigurationResponsePrivate class provides private implementation for CreateSecurityConfigurationResponse.
  * \internal
  *
- * \class CreateSecurityConfigurationResponsePrivate
- *
- * \brief Private implementation for CreateSecurityConfigurationResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSecurityConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSecurityConfigurationResponse instance.
+ * Constructs a CreateSecurityConfigurationResponsePrivate object with public implementation \a q.
  */
 CreateSecurityConfigurationResponsePrivate::CreateSecurityConfigurationResponsePrivate(
     CreateSecurityConfigurationResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateSecurityConfigurationResponsePrivate::CreateSecurityConfigurationResponseP
 }
 
 /*!
- * @brief  Parse an EMR CreateSecurityConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR CreateSecurityConfiguration response element from \a xml.
  */
 void CreateSecurityConfigurationResponsePrivate::parseCreateSecurityConfigurationResponse(QXmlStreamReader &xml)
 {

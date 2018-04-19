@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateCustomerGatewayResponse
- *
  * \brief The CreateCustomerGatewayResponse class provides an interace for EC2 CreateCustomerGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateCustomerGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCustomerGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCustomerGatewayResponse::CreateCustomerGatewayResponse(
         const CreateCustomerGatewayRequest &request,
@@ -59,6 +54,9 @@ CreateCustomerGatewayResponse::CreateCustomerGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCustomerGatewayRequest * CreateCustomerGatewayResponse::request() const
 {
     Q_D(const CreateCustomerGatewayResponse);
@@ -66,9 +64,8 @@ const CreateCustomerGatewayRequest * CreateCustomerGatewayResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 CreateCustomerGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateCustomerGateway \a response.
  */
 void CreateCustomerGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateCustomerGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateCustomerGatewayResponsePrivate
+ * \brief The CreateCustomerGatewayResponsePrivate class provides private implementation for CreateCustomerGatewayResponse.
  * \internal
  *
- * \class CreateCustomerGatewayResponsePrivate
- *
- * \brief Private implementation for CreateCustomerGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCustomerGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCustomerGatewayResponse instance.
+ * Constructs a CreateCustomerGatewayResponsePrivate object with public implementation \a q.
  */
 CreateCustomerGatewayResponsePrivate::CreateCustomerGatewayResponsePrivate(
     CreateCustomerGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateCustomerGatewayResponsePrivate::CreateCustomerGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateCustomerGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateCustomerGateway response element from \a xml.
  */
 void CreateCustomerGatewayResponsePrivate::parseCreateCustomerGatewayResponse(QXmlStreamReader &xml)
 {

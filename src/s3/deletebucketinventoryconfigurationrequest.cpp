@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketInventoryConfigurationRequest::re
  */
 
 /*!
- *
- * Constructs a DeleteBucketInventoryConfigurationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBucketInventoryConfigurationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 DeleteBucketInventoryConfigurationRequestPrivate::DeleteBucketInventoryConfigurationRequestPrivate(
     const S3Request::Action action, DeleteBucketInventoryConfigurationRequest * const q)

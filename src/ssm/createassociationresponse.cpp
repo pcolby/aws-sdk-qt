@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreateAssociationResponse
- *
  * \brief The CreateAssociationResponse class provides an interace for SSM CreateAssociation responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreateAssociationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAssociationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAssociationResponse::CreateAssociationResponse(
         const CreateAssociationRequest &request,
@@ -79,6 +74,9 @@ CreateAssociationResponse::CreateAssociationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAssociationRequest * CreateAssociationResponse::request() const
 {
     Q_D(const CreateAssociationResponse);
@@ -86,9 +84,8 @@ const CreateAssociationRequest * CreateAssociationResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM CreateAssociation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM CreateAssociation \a response.
  */
 void CreateAssociationResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void CreateAssociationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::CreateAssociationResponsePrivate
+ * \brief The CreateAssociationResponsePrivate class provides private implementation for CreateAssociationResponse.
  * \internal
  *
- * \class CreateAssociationResponsePrivate
- *
- * \brief Private implementation for CreateAssociationResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAssociationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAssociationResponse instance.
+ * Constructs a CreateAssociationResponsePrivate object with public implementation \a q.
  */
 CreateAssociationResponsePrivate::CreateAssociationResponsePrivate(
     CreateAssociationResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ CreateAssociationResponsePrivate::CreateAssociationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM CreateAssociationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM CreateAssociation response element from \a xml.
  */
 void CreateAssociationResponsePrivate::parseCreateAssociationResponse(QXmlStreamReader &xml)
 {

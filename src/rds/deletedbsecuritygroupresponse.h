@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDBSecurityGroupResponse : public RDSResponse {
 public:
     DeleteDBSecurityGroupResponse(const DeleteDBSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDBSecurityGroupRequest * request() const;
+    virtual const DeleteDBSecurityGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDBSecurityGroupResponse)

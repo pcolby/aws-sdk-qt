@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelRetrievalResponse : public StorageGatewayResponse {
 public:
     CancelRetrievalResponse(const CancelRetrievalRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelRetrievalRequest * request() const;
+    virtual const CancelRetrievalRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CancelRetrievalResponse)

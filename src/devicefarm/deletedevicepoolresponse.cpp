@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeleteDevicePoolResponse
- *
  * \brief The DeleteDevicePoolResponse class provides an interace for DeviceFarm DeleteDevicePool responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new DeleteDevicePoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDevicePoolResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDevicePoolResponse::DeleteDevicePoolResponse(
         const DeleteDevicePoolRequest &request,
@@ -57,6 +52,9 @@ DeleteDevicePoolResponse::DeleteDevicePoolResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDevicePoolRequest * DeleteDevicePoolResponse::request() const
 {
     Q_D(const DeleteDevicePoolResponse);
@@ -64,9 +62,8 @@ const DeleteDevicePoolRequest * DeleteDevicePoolResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm DeleteDevicePool response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm DeleteDevicePool \a response.
  */
 void DeleteDevicePoolResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DeleteDevicePoolResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::DeleteDevicePoolResponsePrivate
+ * \brief The DeleteDevicePoolResponsePrivate class provides private implementation for DeleteDevicePoolResponse.
  * \internal
  *
- * \class DeleteDevicePoolResponsePrivate
- *
- * \brief Private implementation for DeleteDevicePoolResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDevicePoolResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDevicePoolResponse instance.
+ * Constructs a DeleteDevicePoolResponsePrivate object with public implementation \a q.
  */
 DeleteDevicePoolResponsePrivate::DeleteDevicePoolResponsePrivate(
     DeleteDevicePoolResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ DeleteDevicePoolResponsePrivate::DeleteDevicePoolResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm DeleteDevicePoolResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm DeleteDevicePool response element from \a xml.
  */
 void DeleteDevicePoolResponsePrivate::parseDeleteDevicePoolResponse(QXmlStreamReader &xml)
 {

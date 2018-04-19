@@ -29,10 +29,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetReservationUtilizationResponse
- *
  * \brief The GetReservationUtilizationResponse class provides an interace for CostExplorer GetReservationUtilization responses.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -52,11 +51,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetReservationUtilizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetReservationUtilizationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetReservationUtilizationResponse::GetReservationUtilizationResponse(
         const GetReservationUtilizationRequest &request,
@@ -68,6 +63,9 @@ GetReservationUtilizationResponse::GetReservationUtilizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetReservationUtilizationRequest * GetReservationUtilizationResponse::request() const
 {
     Q_D(const GetReservationUtilizationResponse);
@@ -75,9 +73,8 @@ const GetReservationUtilizationRequest * GetReservationUtilizationResponse::requ
 }
 
 /*!
- * @brief  Parse a CostExplorer GetReservationUtilization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CostExplorer GetReservationUtilization \a response.
  */
 void GetReservationUtilizationResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void GetReservationUtilizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CostExplorer::GetReservationUtilizationResponsePrivate
+ * \brief The GetReservationUtilizationResponsePrivate class provides private implementation for GetReservationUtilizationResponse.
  * \internal
  *
- * \class GetReservationUtilizationResponsePrivate
- *
- * \brief Private implementation for GetReservationUtilizationResponse.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReservationUtilizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetReservationUtilizationResponse instance.
+ * Constructs a GetReservationUtilizationResponsePrivate object with public implementation \a q.
  */
 GetReservationUtilizationResponsePrivate::GetReservationUtilizationResponsePrivate(
     GetReservationUtilizationResponse * const q) : CostExplorerResponsePrivate(q)
@@ -108,9 +101,7 @@ GetReservationUtilizationResponsePrivate::GetReservationUtilizationResponsePriva
 }
 
 /*!
- * @brief  Parse an CostExplorer GetReservationUtilizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CostExplorer GetReservationUtilization response element from \a xml.
  */
 void GetReservationUtilizationResponsePrivate::parseGetReservationUtilizationResponse(QXmlStreamReader &xml)
 {

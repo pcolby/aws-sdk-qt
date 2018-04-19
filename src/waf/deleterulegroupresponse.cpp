@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeleteRuleGroupResponse
- *
  * \brief The DeleteRuleGroupResponse class provides an interace for WAF DeleteRuleGroup responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeleteRuleGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRuleGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRuleGroupResponse::DeleteRuleGroupResponse(
         const DeleteRuleGroupRequest &request,
@@ -60,6 +55,9 @@ DeleteRuleGroupResponse::DeleteRuleGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRuleGroupRequest * DeleteRuleGroupResponse::request() const
 {
     Q_D(const DeleteRuleGroupResponse);
@@ -67,9 +65,8 @@ const DeleteRuleGroupRequest * DeleteRuleGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF DeleteRuleGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF DeleteRuleGroup \a response.
  */
 void DeleteRuleGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteRuleGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::DeleteRuleGroupResponsePrivate
+ * \brief The DeleteRuleGroupResponsePrivate class provides private implementation for DeleteRuleGroupResponse.
  * \internal
  *
- * \class DeleteRuleGroupResponsePrivate
- *
- * \brief Private implementation for DeleteRuleGroupResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRuleGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRuleGroupResponse instance.
+ * Constructs a DeleteRuleGroupResponsePrivate object with public implementation \a q.
  */
 DeleteRuleGroupResponsePrivate::DeleteRuleGroupResponsePrivate(
     DeleteRuleGroupResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteRuleGroupResponsePrivate::DeleteRuleGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF DeleteRuleGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF DeleteRuleGroup response element from \a xml.
  */
 void DeleteRuleGroupResponsePrivate::parseDeleteRuleGroupResponse(QXmlStreamReader &xml)
 {

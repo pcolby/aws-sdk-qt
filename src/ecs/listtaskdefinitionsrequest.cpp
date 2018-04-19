@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * ListTaskDefinitionsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListTaskDefinitionsRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a ListTaskDefinitionsRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 ListTaskDefinitionsRequestPrivate::ListTaskDefinitionsRequestPrivate(
     const ECSRequest::Action action, ListTaskDefinitionsRequest * const q)

@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::RemoveResourcePermissionResponse
- *
  * \brief The RemoveResourcePermissionResponse class provides an interace for WorkDocs RemoveResourcePermission responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new RemoveResourcePermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveResourcePermissionResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveResourcePermissionResponse::RemoveResourcePermissionResponse(
         const RemoveResourcePermissionRequest &request,
@@ -84,6 +79,9 @@ RemoveResourcePermissionResponse::RemoveResourcePermissionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveResourcePermissionRequest * RemoveResourcePermissionResponse::request() const
 {
     Q_D(const RemoveResourcePermissionResponse);
@@ -91,9 +89,8 @@ const RemoveResourcePermissionRequest * RemoveResourcePermissionResponse::reques
 }
 
 /*!
- * @brief  Parse a WorkDocs RemoveResourcePermission response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs RemoveResourcePermission \a response.
  */
 void RemoveResourcePermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void RemoveResourcePermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::RemoveResourcePermissionResponsePrivate
+ * \brief The RemoveResourcePermissionResponsePrivate class provides private implementation for RemoveResourcePermissionResponse.
  * \internal
  *
- * \class RemoveResourcePermissionResponsePrivate
- *
- * \brief Private implementation for RemoveResourcePermissionResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveResourcePermissionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveResourcePermissionResponse instance.
+ * Constructs a RemoveResourcePermissionResponsePrivate object with public implementation \a q.
  */
 RemoveResourcePermissionResponsePrivate::RemoveResourcePermissionResponsePrivate(
     RemoveResourcePermissionResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ RemoveResourcePermissionResponsePrivate::RemoveResourcePermissionResponsePrivate
 }
 
 /*!
- * @brief  Parse an WorkDocs RemoveResourcePermissionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs RemoveResourcePermission response element from \a xml.
  */
 void RemoveResourcePermissionResponsePrivate::parseRemoveResourcePermissionResponse(QXmlStreamReader &xml)
 {

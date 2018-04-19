@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ListOnPremisesInstancesResponse
- *
  * \brief The ListOnPremisesInstancesResponse class provides an interace for CodeDeploy ListOnPremisesInstances responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ListOnPremisesInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListOnPremisesInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListOnPremisesInstancesResponse::ListOnPremisesInstancesResponse(
         const ListOnPremisesInstancesRequest &request,
@@ -136,6 +131,9 @@ ListOnPremisesInstancesResponse::ListOnPremisesInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListOnPremisesInstancesRequest * ListOnPremisesInstancesResponse::request() const
 {
     Q_D(const ListOnPremisesInstancesResponse);
@@ -143,9 +141,8 @@ const ListOnPremisesInstancesRequest * ListOnPremisesInstancesResponse::request(
 }
 
 /*!
- * @brief  Parse a CodeDeploy ListOnPremisesInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy ListOnPremisesInstances \a response.
  */
 void ListOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void ListOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::ListOnPremisesInstancesResponsePrivate
+ * \brief The ListOnPremisesInstancesResponsePrivate class provides private implementation for ListOnPremisesInstancesResponse.
  * \internal
  *
- * \class ListOnPremisesInstancesResponsePrivate
- *
- * \brief Private implementation for ListOnPremisesInstancesResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOnPremisesInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListOnPremisesInstancesResponse instance.
+ * Constructs a ListOnPremisesInstancesResponsePrivate object with public implementation \a q.
  */
 ListOnPremisesInstancesResponsePrivate::ListOnPremisesInstancesResponsePrivate(
     ListOnPremisesInstancesResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ ListOnPremisesInstancesResponsePrivate::ListOnPremisesInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy ListOnPremisesInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy ListOnPremisesInstances response element from \a xml.
  */
 void ListOnPremisesInstancesResponsePrivate::parseListOnPremisesInstancesResponse(QXmlStreamReader &xml)
 {

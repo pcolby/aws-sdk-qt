@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingPlansRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeScalingPlansRequestPrivate object for AutoScalingPlans \a action with,
- * public implementation \a q.
+ * Constructs a DescribeScalingPlansRequestPrivate object for AutoScalingPlans \a action,
+ * with public implementation \a q.
  */
 DescribeScalingPlansRequestPrivate::DescribeScalingPlansRequestPrivate(
     const AutoScalingPlansRequest::Action action, DescribeScalingPlansRequest * const q)

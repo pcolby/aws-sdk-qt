@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::CreateRateBasedRuleResponse
- *
  * \brief The CreateRateBasedRuleResponse class provides an interace for WAF CreateRateBasedRule responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new CreateRateBasedRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRateBasedRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRateBasedRuleResponse::CreateRateBasedRuleResponse(
         const CreateRateBasedRuleRequest &request,
@@ -60,6 +55,9 @@ CreateRateBasedRuleResponse::CreateRateBasedRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRateBasedRuleRequest * CreateRateBasedRuleResponse::request() const
 {
     Q_D(const CreateRateBasedRuleResponse);
@@ -67,9 +65,8 @@ const CreateRateBasedRuleRequest * CreateRateBasedRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF CreateRateBasedRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF CreateRateBasedRule \a response.
  */
 void CreateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::CreateRateBasedRuleResponsePrivate
+ * \brief The CreateRateBasedRuleResponsePrivate class provides private implementation for CreateRateBasedRuleResponse.
  * \internal
  *
- * \class CreateRateBasedRuleResponsePrivate
- *
- * \brief Private implementation for CreateRateBasedRuleResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRateBasedRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRateBasedRuleResponse instance.
+ * Constructs a CreateRateBasedRuleResponsePrivate object with public implementation \a q.
  */
 CreateRateBasedRuleResponsePrivate::CreateRateBasedRuleResponsePrivate(
     CreateRateBasedRuleResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateRateBasedRuleResponsePrivate::CreateRateBasedRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF CreateRateBasedRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF CreateRateBasedRule response element from \a xml.
  */
 void CreateRateBasedRuleResponsePrivate::parseCreateRateBasedRuleResponse(QXmlStreamReader &xml)
 {

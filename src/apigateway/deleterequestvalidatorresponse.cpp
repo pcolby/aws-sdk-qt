@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteRequestValidatorResponse
- *
  * \brief The DeleteRequestValidatorResponse class provides an interace for APIGateway DeleteRequestValidator responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteRequestValidatorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRequestValidatorResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRequestValidatorResponse::DeleteRequestValidatorResponse(
         const DeleteRequestValidatorRequest &request,
@@ -60,6 +55,9 @@ DeleteRequestValidatorResponse::DeleteRequestValidatorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRequestValidatorRequest * DeleteRequestValidatorResponse::request() const
 {
     Q_D(const DeleteRequestValidatorResponse);
@@ -67,9 +65,8 @@ const DeleteRequestValidatorRequest * DeleteRequestValidatorResponse::request() 
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteRequestValidator response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteRequestValidator \a response.
  */
 void DeleteRequestValidatorResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteRequestValidatorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteRequestValidatorResponsePrivate
+ * \brief The DeleteRequestValidatorResponsePrivate class provides private implementation for DeleteRequestValidatorResponse.
  * \internal
  *
- * \class DeleteRequestValidatorResponsePrivate
- *
- * \brief Private implementation for DeleteRequestValidatorResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRequestValidatorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRequestValidatorResponse instance.
+ * Constructs a DeleteRequestValidatorResponsePrivate object with public implementation \a q.
  */
 DeleteRequestValidatorResponsePrivate::DeleteRequestValidatorResponsePrivate(
     DeleteRequestValidatorResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteRequestValidatorResponsePrivate::DeleteRequestValidatorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteRequestValidatorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteRequestValidator response element from \a xml.
  */
 void DeleteRequestValidatorResponsePrivate::parseDeleteRequestValidatorResponse(QXmlStreamReader &xml)
 {

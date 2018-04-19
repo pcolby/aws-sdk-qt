@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListSigningCertificatesResponse
- *
  * \brief The ListSigningCertificatesResponse class provides an interace for IAM ListSigningCertificates responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListSigningCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSigningCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSigningCertificatesResponse::ListSigningCertificatesResponse(
         const ListSigningCertificatesRequest &request,
@@ -120,6 +115,9 @@ ListSigningCertificatesResponse::ListSigningCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSigningCertificatesRequest * ListSigningCertificatesResponse::request() const
 {
     Q_D(const ListSigningCertificatesResponse);
@@ -127,9 +125,8 @@ const ListSigningCertificatesRequest * ListSigningCertificatesResponse::request(
 }
 
 /*!
- * @brief  Parse a IAM ListSigningCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListSigningCertificates \a response.
  */
 void ListSigningCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListSigningCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListSigningCertificatesResponsePrivate
+ * \brief The ListSigningCertificatesResponsePrivate class provides private implementation for ListSigningCertificatesResponse.
  * \internal
  *
- * \class ListSigningCertificatesResponsePrivate
- *
- * \brief Private implementation for ListSigningCertificatesResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSigningCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSigningCertificatesResponse instance.
+ * Constructs a ListSigningCertificatesResponsePrivate object with public implementation \a q.
  */
 ListSigningCertificatesResponsePrivate::ListSigningCertificatesResponsePrivate(
     ListSigningCertificatesResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListSigningCertificatesResponsePrivate::ListSigningCertificatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListSigningCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListSigningCertificates response element from \a xml.
  */
 void ListSigningCertificatesResponsePrivate::parseListSigningCertificatesResponse(QXmlStreamReader &xml)
 {

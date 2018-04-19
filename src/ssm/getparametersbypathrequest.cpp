@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * GetParametersByPathRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetParametersByPathRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a GetParametersByPathRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 GetParametersByPathRequestPrivate::GetParametersByPathRequestPrivate(
     const SSMRequest::Action action, GetParametersByPathRequest * const q)

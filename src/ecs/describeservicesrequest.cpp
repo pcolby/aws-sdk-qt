@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * DescribeServicesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeServicesRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeServicesRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
     const ECSRequest::Action action, DescribeServicesRequest * const q)

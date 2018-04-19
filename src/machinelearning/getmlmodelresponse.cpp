@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::GetMLModelResponse
- *
  * \brief The GetMLModelResponse class provides an interace for MachineLearning GetMLModel responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::getMLModel
  */
 
 /*!
- * @brief  Constructs a new GetMLModelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetMLModelResponse object for \a reply to \a request, with parent \a parent.
  */
 GetMLModelResponse::GetMLModelResponse(
         const GetMLModelRequest &request,
@@ -55,6 +50,9 @@ GetMLModelResponse::GetMLModelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetMLModelRequest * GetMLModelResponse::request() const
 {
     Q_D(const GetMLModelResponse);
@@ -62,9 +60,8 @@ const GetMLModelRequest * GetMLModelResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning GetMLModel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning GetMLModel \a response.
  */
 void GetMLModelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetMLModelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::GetMLModelResponsePrivate
+ * \brief The GetMLModelResponsePrivate class provides private implementation for GetMLModelResponse.
  * \internal
  *
- * \class GetMLModelResponsePrivate
- *
- * \brief Private implementation for GetMLModelResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMLModelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetMLModelResponse instance.
+ * Constructs a GetMLModelResponsePrivate object with public implementation \a q.
  */
 GetMLModelResponsePrivate::GetMLModelResponsePrivate(
     GetMLModelResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ GetMLModelResponsePrivate::GetMLModelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning GetMLModelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning GetMLModel response element from \a xml.
  */
 void GetMLModelResponsePrivate::parseGetMLModelResponse(QXmlStreamReader &xml)
 {

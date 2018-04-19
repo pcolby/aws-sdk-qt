@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterEcsClusterRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeregisterEcsClusterRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterEcsClusterRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DeregisterEcsClusterRequestPrivate::DeregisterEcsClusterRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterEcsClusterRequest * const q)

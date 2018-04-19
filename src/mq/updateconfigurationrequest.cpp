@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a UpdateConfigurationRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a UpdateConfigurationRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 UpdateConfigurationRequestPrivate::UpdateConfigurationRequestPrivate(
     const MQRequest::Action action, UpdateConfigurationRequest * const q)

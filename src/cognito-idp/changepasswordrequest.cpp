@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * ChangePasswordRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ChangePasswordRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a ChangePasswordRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ChangePasswordRequest * const q)

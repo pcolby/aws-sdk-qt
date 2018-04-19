@@ -29,10 +29,9 @@ namespace IoTDataPlane {
 
 /*!
  * \class QtAws::IoTDataPlane::UpdateThingShadowResponse
- *
  * \brief The UpdateThingShadowResponse class provides an interace for IoTDataPlane UpdateThingShadow responses.
  *
- * \ingroup IoTDataPlane
+ * \inmodule QtAwsIoTDataPlane
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -45,11 +44,7 @@ namespace IoTDataPlane {
  */
 
 /*!
- * @brief  Constructs a new UpdateThingShadowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateThingShadowResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateThingShadowResponse::UpdateThingShadowResponse(
         const UpdateThingShadowRequest &request,
@@ -61,6 +56,9 @@ UpdateThingShadowResponse::UpdateThingShadowResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateThingShadowRequest * UpdateThingShadowResponse::request() const
 {
     Q_D(const UpdateThingShadowResponse);
@@ -68,9 +66,8 @@ const UpdateThingShadowRequest * UpdateThingShadowResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoTDataPlane UpdateThingShadow response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoTDataPlane UpdateThingShadow \a response.
  */
 void UpdateThingShadowResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void UpdateThingShadowResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoTDataPlane::UpdateThingShadowResponsePrivate
+ * \brief The UpdateThingShadowResponsePrivate class provides private implementation for UpdateThingShadowResponse.
  * \internal
  *
- * \class UpdateThingShadowResponsePrivate
- *
- * \brief Private implementation for UpdateThingShadowResponse.
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateThingShadowResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateThingShadowResponse instance.
+ * Constructs a UpdateThingShadowResponsePrivate object with public implementation \a q.
  */
 UpdateThingShadowResponsePrivate::UpdateThingShadowResponsePrivate(
     UpdateThingShadowResponse * const q) : IoTDataPlaneResponsePrivate(q)
@@ -101,9 +94,7 @@ UpdateThingShadowResponsePrivate::UpdateThingShadowResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoTDataPlane UpdateThingShadowResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoTDataPlane UpdateThingShadow response element from \a xml.
  */
 void UpdateThingShadowResponsePrivate::parseUpdateThingShadowResponse(QXmlStreamReader &xml)
 {

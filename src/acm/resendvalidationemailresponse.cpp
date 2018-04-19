@@ -29,10 +29,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::ResendValidationEmailResponse
- *
  * \brief The ResendValidationEmailResponse class provides an interace for ACM ResendValidationEmail responses.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new ResendValidationEmailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResendValidationEmailResponse object for \a reply to \a request, with parent \a parent.
  */
 ResendValidationEmailResponse::ResendValidationEmailResponse(
         const ResendValidationEmailRequest &request,
@@ -64,6 +59,9 @@ ResendValidationEmailResponse::ResendValidationEmailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResendValidationEmailRequest * ResendValidationEmailResponse::request() const
 {
     Q_D(const ResendValidationEmailResponse);
@@ -71,9 +69,8 @@ const ResendValidationEmailRequest * ResendValidationEmailResponse::request() co
 }
 
 /*!
- * @brief  Parse a ACM ResendValidationEmail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACM ResendValidationEmail \a response.
  */
 void ResendValidationEmailResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void ResendValidationEmailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACM::ResendValidationEmailResponsePrivate
+ * \brief The ResendValidationEmailResponsePrivate class provides private implementation for ResendValidationEmailResponse.
  * \internal
  *
- * \class ResendValidationEmailResponsePrivate
- *
- * \brief Private implementation for ResendValidationEmailResponse.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResendValidationEmailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResendValidationEmailResponse instance.
+ * Constructs a ResendValidationEmailResponsePrivate object with public implementation \a q.
  */
 ResendValidationEmailResponsePrivate::ResendValidationEmailResponsePrivate(
     ResendValidationEmailResponse * const q) : ACMResponsePrivate(q)
@@ -104,9 +97,7 @@ ResendValidationEmailResponsePrivate::ResendValidationEmailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACM ResendValidationEmailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACM ResendValidationEmail response element from \a xml.
  */
 void ResendValidationEmailResponsePrivate::parseResendValidationEmailResponse(QXmlStreamReader &xml)
 {

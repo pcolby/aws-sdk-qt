@@ -125,9 +125,8 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupQueryRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateGroupQueryRequestPrivate object for ResourceGroups \a action with,
- * public implementation \a q.
+ * Constructs a UpdateGroupQueryRequestPrivate object for ResourceGroups \a action,
+ * with public implementation \a q.
  */
 UpdateGroupQueryRequestPrivate::UpdateGroupQueryRequestPrivate(
     const ResourceGroupsRequest::Action action, UpdateGroupQueryRequest * const q)

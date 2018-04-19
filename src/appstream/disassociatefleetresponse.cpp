@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DisassociateFleetResponse
- *
  * \brief The DisassociateFleetResponse class provides an interace for AppStream DisassociateFleet responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DisassociateFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateFleetResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateFleetResponse::DisassociateFleetResponse(
         const DisassociateFleetRequest &request,
@@ -58,6 +53,9 @@ DisassociateFleetResponse::DisassociateFleetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateFleetRequest * DisassociateFleetResponse::request() const
 {
     Q_D(const DisassociateFleetResponse);
@@ -65,9 +63,8 @@ const DisassociateFleetRequest * DisassociateFleetResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream DisassociateFleet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream DisassociateFleet \a response.
  */
 void DisassociateFleetResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DisassociateFleetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::DisassociateFleetResponsePrivate
+ * \brief The DisassociateFleetResponsePrivate class provides private implementation for DisassociateFleetResponse.
  * \internal
  *
- * \class DisassociateFleetResponsePrivate
- *
- * \brief Private implementation for DisassociateFleetResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateFleetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateFleetResponse instance.
+ * Constructs a DisassociateFleetResponsePrivate object with public implementation \a q.
  */
 DisassociateFleetResponsePrivate::DisassociateFleetResponsePrivate(
     DisassociateFleetResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ DisassociateFleetResponsePrivate::DisassociateFleetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream DisassociateFleetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream DisassociateFleet response element from \a xml.
  */
 void DisassociateFleetResponsePrivate::parseDisassociateFleetResponse(QXmlStreamReader &xml)
 {

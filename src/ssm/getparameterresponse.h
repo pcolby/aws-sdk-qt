@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetParameterResponse : public SSMResponse {
 public:
     GetParameterResponse(const GetParameterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetParameterRequest * request() const;
+    virtual const GetParameterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetParameterResponse)

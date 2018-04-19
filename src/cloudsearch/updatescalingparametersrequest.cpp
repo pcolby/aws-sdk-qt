@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateScalingParametersRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateScalingParametersRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a UpdateScalingParametersRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 UpdateScalingParametersRequestPrivate::UpdateScalingParametersRequestPrivate(
     const CloudSearchRequest::Action action, UpdateScalingParametersRequest * const q)

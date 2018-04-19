@@ -29,10 +29,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::IssueCertificateResponse
- *
  * \brief The IssueCertificateResponse class provides an interace for ACMPCA IssueCertificate responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -69,11 +68,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new IssueCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a IssueCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 IssueCertificateResponse::IssueCertificateResponse(
         const IssueCertificateRequest &request,
@@ -85,6 +80,9 @@ IssueCertificateResponse::IssueCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const IssueCertificateRequest * IssueCertificateResponse::request() const
 {
     Q_D(const IssueCertificateResponse);
@@ -92,9 +90,8 @@ const IssueCertificateRequest * IssueCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a ACMPCA IssueCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACMPCA IssueCertificate \a response.
  */
 void IssueCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void IssueCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACMPCA::IssueCertificateResponsePrivate
+ * \brief The IssueCertificateResponsePrivate class provides private implementation for IssueCertificateResponse.
  * \internal
  *
- * \class IssueCertificateResponsePrivate
- *
- * \brief Private implementation for IssueCertificateResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IssueCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public IssueCertificateResponse instance.
+ * Constructs a IssueCertificateResponsePrivate object with public implementation \a q.
  */
 IssueCertificateResponsePrivate::IssueCertificateResponsePrivate(
     IssueCertificateResponse * const q) : ACMPCAResponsePrivate(q)
@@ -125,9 +118,7 @@ IssueCertificateResponsePrivate::IssueCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACMPCA IssueCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACMPCA IssueCertificate response element from \a xml.
  */
 void IssueCertificateResponsePrivate::parseIssueCertificateResponse(QXmlStreamReader &xml)
 {

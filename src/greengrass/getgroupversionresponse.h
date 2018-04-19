@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetGroupVersionResponse : public GreengrassResponse {
 public:
     GetGroupVersionResponse(const GetGroupVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetGroupVersionRequest * request() const;
+    virtual const GetGroupVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetGroupVersionResponse)

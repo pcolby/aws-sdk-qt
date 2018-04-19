@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::ReceiveMessageResponse
- *
  * \brief The ReceiveMessageResponse class provides an interace for SQS ReceiveMessage responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new ReceiveMessageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReceiveMessageResponse object for \a reply to \a request, with parent \a parent.
  */
 ReceiveMessageResponse::ReceiveMessageResponse(
         const ReceiveMessageRequest &request,
@@ -121,6 +116,9 @@ ReceiveMessageResponse::ReceiveMessageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReceiveMessageRequest * ReceiveMessageResponse::request() const
 {
     Q_D(const ReceiveMessageResponse);
@@ -128,9 +126,8 @@ const ReceiveMessageRequest * ReceiveMessageResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS ReceiveMessage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS ReceiveMessage \a response.
  */
 void ReceiveMessageResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void ReceiveMessageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::ReceiveMessageResponsePrivate
+ * \brief The ReceiveMessageResponsePrivate class provides private implementation for ReceiveMessageResponse.
  * \internal
  *
- * \class ReceiveMessageResponsePrivate
- *
- * \brief Private implementation for ReceiveMessageResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReceiveMessageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReceiveMessageResponse instance.
+ * Constructs a ReceiveMessageResponsePrivate object with public implementation \a q.
  */
 ReceiveMessageResponsePrivate::ReceiveMessageResponsePrivate(
     ReceiveMessageResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ ReceiveMessageResponsePrivate::ReceiveMessageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS ReceiveMessageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS ReceiveMessage response element from \a xml.
  */
 void ReceiveMessageResponsePrivate::parseReceiveMessageResponse(QXmlStreamReader &xml)
 {

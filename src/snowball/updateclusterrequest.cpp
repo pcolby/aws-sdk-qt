@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateClusterRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a UpdateClusterRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
     const SnowballRequest::Action action, UpdateClusterRequest * const q)

@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateApnsVoipChannelResponse
- *
  * \brief The UpdateApnsVoipChannelResponse class provides an interace for Pinpoint UpdateApnsVoipChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateApnsVoipChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateApnsVoipChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateApnsVoipChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateApnsVoipChannelResponse::UpdateApnsVoipChannelResponse(
         const UpdateApnsVoipChannelRequest &request,
@@ -55,6 +50,9 @@ UpdateApnsVoipChannelResponse::UpdateApnsVoipChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateApnsVoipChannelRequest * UpdateApnsVoipChannelResponse::request() const
 {
     Q_D(const UpdateApnsVoipChannelResponse);
@@ -62,9 +60,8 @@ const UpdateApnsVoipChannelRequest * UpdateApnsVoipChannelResponse::request() co
 }
 
 /*!
- * @brief  Parse a Pinpoint UpdateApnsVoipChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint UpdateApnsVoipChannel \a response.
  */
 void UpdateApnsVoipChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateApnsVoipChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::UpdateApnsVoipChannelResponsePrivate
+ * \brief The UpdateApnsVoipChannelResponsePrivate class provides private implementation for UpdateApnsVoipChannelResponse.
  * \internal
  *
- * \class UpdateApnsVoipChannelResponsePrivate
- *
- * \brief Private implementation for UpdateApnsVoipChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApnsVoipChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateApnsVoipChannelResponse instance.
+ * Constructs a UpdateApnsVoipChannelResponsePrivate object with public implementation \a q.
  */
 UpdateApnsVoipChannelResponsePrivate::UpdateApnsVoipChannelResponsePrivate(
     UpdateApnsVoipChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateApnsVoipChannelResponsePrivate::UpdateApnsVoipChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint UpdateApnsVoipChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint UpdateApnsVoipChannel response element from \a xml.
  */
 void UpdateApnsVoipChannelResponsePrivate::parseUpdateApnsVoipChannelResponse(QXmlStreamReader &xml)
 {

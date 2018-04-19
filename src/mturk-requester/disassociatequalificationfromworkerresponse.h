@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateQualificationFromWorkerResponse : public MTurkRes
 public:
     DisassociateQualificationFromWorkerResponse(const DisassociateQualificationFromWorkerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateQualificationFromWorkerRequest * request() const;
+    virtual const DisassociateQualificationFromWorkerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateQualificationFromWorkerResponse)

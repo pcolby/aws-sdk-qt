@@ -102,7 +102,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * Constructs a[n] CloudDirectoryRequest object for CloudDirectory \a action.
+ * Constructs a CloudDirectoryRequest object for CloudDirectory \a action.
  */
 CloudDirectoryRequest::CloudDirectoryRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudDirectoryRequestPrivate(action, this))
@@ -302,8 +302,8 @@ QNetworkRequest CloudDirectoryRequest::unsignedRequest(const QUrl &endpoint) con
  */
 
 /*!
- * Constructs a CloudDirectoryRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a CloudDirectoryRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 CloudDirectoryRequestPrivate::CloudDirectoryRequestPrivate(const CloudDirectoryRequest::Action action, CloudDirectoryRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

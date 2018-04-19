@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeLoggingStatusResponse : public RedshiftResponse {
 public:
     DescribeLoggingStatusResponse(const DescribeLoggingStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeLoggingStatusRequest * request() const;
+    virtual const DescribeLoggingStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeLoggingStatusResponse)

@@ -28,16 +28,13 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::XRayResponse
- *
  * \brief The XRayResponse class provides an interface for XRay responses.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @brief  Constructs a new XRayResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a XRayResponse object with parent \a parent.
  */
 XRayResponse::XRayResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new XRayResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ XRayResponse::XRayResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new XRayResponse object.
- *
+ * \internal
+ * Constructs a XRayResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from XRayResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 XRayResponse::XRayResponse(XRayResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ XRayResponse::XRayResponse(XRayResponsePrivate * const d, QObject * const parent
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void XRayResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void XRayResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::XRay::XRayResponsePrivate
+ * \brief The XRayResponsePrivate class provides private implementation for XRayResponse.
+ * \internal
  *
- * @class  XRayResponsePrivate
- *
- * @brief  Private implementation for XRayResponse.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new XRayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public XRayResponse instance.
+ * Constructs a XRayResponsePrivate object with public implementation \a q.
  */
 XRayResponsePrivate::XRayResponsePrivate(
     XRayResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

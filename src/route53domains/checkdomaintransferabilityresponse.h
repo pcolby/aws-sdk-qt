@@ -34,10 +34,10 @@ class QTAWS_EXPORT CheckDomainTransferabilityResponse : public Route53DomainsRes
 public:
     CheckDomainTransferabilityResponse(const CheckDomainTransferabilityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CheckDomainTransferabilityRequest * request() const;
+    virtual const CheckDomainTransferabilityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CheckDomainTransferabilityResponse)

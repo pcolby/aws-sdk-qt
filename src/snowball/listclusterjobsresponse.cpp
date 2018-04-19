@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::ListClusterJobsResponse
- *
  * \brief The ListClusterJobsResponse class provides an interace for Snowball ListClusterJobs responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new ListClusterJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListClusterJobsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListClusterJobsResponse::ListClusterJobsResponse(
         const ListClusterJobsRequest &request,
@@ -61,6 +56,9 @@ ListClusterJobsResponse::ListClusterJobsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListClusterJobsRequest * ListClusterJobsResponse::request() const
 {
     Q_D(const ListClusterJobsResponse);
@@ -68,9 +66,8 @@ const ListClusterJobsRequest * ListClusterJobsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball ListClusterJobs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball ListClusterJobs \a response.
  */
 void ListClusterJobsResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListClusterJobsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::ListClusterJobsResponsePrivate
+ * \brief The ListClusterJobsResponsePrivate class provides private implementation for ListClusterJobsResponse.
  * \internal
  *
- * \class ListClusterJobsResponsePrivate
- *
- * \brief Private implementation for ListClusterJobsResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListClusterJobsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListClusterJobsResponse instance.
+ * Constructs a ListClusterJobsResponsePrivate object with public implementation \a q.
  */
 ListClusterJobsResponsePrivate::ListClusterJobsResponsePrivate(
     ListClusterJobsResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ ListClusterJobsResponsePrivate::ListClusterJobsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball ListClusterJobsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball ListClusterJobs response element from \a xml.
  */
 void ListClusterJobsResponsePrivate::parseListClusterJobsResponse(QXmlStreamReader &xml)
 {

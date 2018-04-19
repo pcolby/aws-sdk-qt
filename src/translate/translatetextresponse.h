@@ -34,10 +34,10 @@ class QTAWS_EXPORT TranslateTextResponse : public TranslateResponse {
 public:
     TranslateTextResponse(const TranslateTextRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TranslateTextRequest * request() const;
+    virtual const TranslateTextRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TranslateTextResponse)

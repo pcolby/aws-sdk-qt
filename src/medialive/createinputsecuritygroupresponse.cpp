@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::CreateInputSecurityGroupResponse
- *
  * \brief The CreateInputSecurityGroupResponse class provides an interace for MediaLive CreateInputSecurityGroup responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::createInputSecurityGroup
  */
 
 /*!
- * @brief  Constructs a new CreateInputSecurityGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateInputSecurityGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateInputSecurityGroupResponse::CreateInputSecurityGroupResponse(
         const CreateInputSecurityGroupRequest &request,
@@ -55,6 +50,9 @@ CreateInputSecurityGroupResponse::CreateInputSecurityGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateInputSecurityGroupRequest * CreateInputSecurityGroupResponse::request() const
 {
     Q_D(const CreateInputSecurityGroupResponse);
@@ -62,9 +60,8 @@ const CreateInputSecurityGroupRequest * CreateInputSecurityGroupResponse::reques
 }
 
 /*!
- * @brief  Parse a MediaLive CreateInputSecurityGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive CreateInputSecurityGroup \a response.
  */
 void CreateInputSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateInputSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::CreateInputSecurityGroupResponsePrivate
+ * \brief The CreateInputSecurityGroupResponsePrivate class provides private implementation for CreateInputSecurityGroupResponse.
  * \internal
  *
- * \class CreateInputSecurityGroupResponsePrivate
- *
- * \brief Private implementation for CreateInputSecurityGroupResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInputSecurityGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateInputSecurityGroupResponse instance.
+ * Constructs a CreateInputSecurityGroupResponsePrivate object with public implementation \a q.
  */
 CreateInputSecurityGroupResponsePrivate::CreateInputSecurityGroupResponsePrivate(
     CreateInputSecurityGroupResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateInputSecurityGroupResponsePrivate::CreateInputSecurityGroupResponsePrivate
 }
 
 /*!
- * @brief  Parse an MediaLive CreateInputSecurityGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive CreateInputSecurityGroup response element from \a xml.
  */
 void CreateInputSecurityGroupResponsePrivate::parseCreateInputSecurityGroupResponse(QXmlStreamReader &xml)
 {

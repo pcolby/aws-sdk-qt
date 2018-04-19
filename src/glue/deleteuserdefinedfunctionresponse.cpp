@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteUserDefinedFunctionResponse
- *
  * \brief The DeleteUserDefinedFunctionResponse class provides an interace for Glue DeleteUserDefinedFunction responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserDefinedFunctionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteUserDefinedFunctionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteUserDefinedFunctionResponse::DeleteUserDefinedFunctionResponse(
         const DeleteUserDefinedFunctionRequest &request,
@@ -58,6 +53,9 @@ DeleteUserDefinedFunctionResponse::DeleteUserDefinedFunctionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteUserDefinedFunctionRequest * DeleteUserDefinedFunctionResponse::request() const
 {
     Q_D(const DeleteUserDefinedFunctionResponse);
@@ -65,9 +63,8 @@ const DeleteUserDefinedFunctionRequest * DeleteUserDefinedFunctionResponse::requ
 }
 
 /*!
- * @brief  Parse a Glue DeleteUserDefinedFunction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue DeleteUserDefinedFunction \a response.
  */
 void DeleteUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::DeleteUserDefinedFunctionResponsePrivate
+ * \brief The DeleteUserDefinedFunctionResponsePrivate class provides private implementation for DeleteUserDefinedFunctionResponse.
  * \internal
  *
- * \class DeleteUserDefinedFunctionResponsePrivate
- *
- * \brief Private implementation for DeleteUserDefinedFunctionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserDefinedFunctionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteUserDefinedFunctionResponse instance.
+ * Constructs a DeleteUserDefinedFunctionResponsePrivate object with public implementation \a q.
  */
 DeleteUserDefinedFunctionResponsePrivate::DeleteUserDefinedFunctionResponsePrivate(
     DeleteUserDefinedFunctionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteUserDefinedFunctionResponsePrivate::DeleteUserDefinedFunctionResponsePriva
 }
 
 /*!
- * @brief  Parse an Glue DeleteUserDefinedFunctionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue DeleteUserDefinedFunction response element from \a xml.
  */
 void DeleteUserDefinedFunctionResponsePrivate::parseDeleteUserDefinedFunctionResponse(QXmlStreamReader &xml)
 {

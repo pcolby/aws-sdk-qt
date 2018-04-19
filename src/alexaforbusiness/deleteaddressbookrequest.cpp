@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAddressBookRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteAddressBookRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAddressBookRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 DeleteAddressBookRequestPrivate::DeleteAddressBookRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteAddressBookRequest * const q)

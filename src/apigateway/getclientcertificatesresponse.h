@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetClientCertificatesResponse : public APIGatewayResponse {
 public:
     GetClientCertificatesResponse(const GetClientCertificatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetClientCertificatesRequest * request() const;
+    virtual const GetClientCertificatesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetClientCertificatesResponse)

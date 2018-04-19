@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * CreateCommentRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateCommentRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a CreateCommentRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 CreateCommentRequestPrivate::CreateCommentRequestPrivate(
     const WorkDocsRequest::Action action, CreateCommentRequest * const q)

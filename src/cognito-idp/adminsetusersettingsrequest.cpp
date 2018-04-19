@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminSetUserSettingsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a AdminSetUserSettingsRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminSetUserSettingsRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminSetUserSettingsRequestPrivate::AdminSetUserSettingsRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminSetUserSettingsRequest * const q)

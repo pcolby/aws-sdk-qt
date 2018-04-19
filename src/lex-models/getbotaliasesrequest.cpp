@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetBotAliasesRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetBotAliasesRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a GetBotAliasesRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 GetBotAliasesRequestPrivate::GetBotAliasesRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBotAliasesRequest * const q)

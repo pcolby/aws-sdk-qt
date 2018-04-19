@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::PutAttributesResponse
- *
  * \brief The PutAttributesResponse class provides an interace for ECS PutAttributes responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new PutAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 PutAttributesResponse::PutAttributesResponse(
         const PutAttributesRequest &request,
@@ -72,6 +67,9 @@ PutAttributesResponse::PutAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutAttributesRequest * PutAttributesResponse::request() const
 {
     Q_D(const PutAttributesResponse);
@@ -79,9 +77,8 @@ const PutAttributesRequest * PutAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS PutAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS PutAttributes \a response.
  */
 void PutAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void PutAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::PutAttributesResponsePrivate
+ * \brief The PutAttributesResponsePrivate class provides private implementation for PutAttributesResponse.
  * \internal
  *
- * \class PutAttributesResponsePrivate
- *
- * \brief Private implementation for PutAttributesResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutAttributesResponse instance.
+ * Constructs a PutAttributesResponsePrivate object with public implementation \a q.
  */
 PutAttributesResponsePrivate::PutAttributesResponsePrivate(
     PutAttributesResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ PutAttributesResponsePrivate::PutAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS PutAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS PutAttributes response element from \a xml.
  */
 void PutAttributesResponsePrivate::parsePutAttributesResponse(QXmlStreamReader &xml)
 {

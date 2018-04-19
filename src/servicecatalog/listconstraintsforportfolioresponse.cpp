@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListConstraintsForPortfolioResponse
- *
  * \brief The ListConstraintsForPortfolioResponse class provides an interace for ServiceCatalog ListConstraintsForPortfolio responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListConstraintsForPortfolioResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListConstraintsForPortfolioResponse object for \a reply to \a request, with parent \a parent.
  */
 ListConstraintsForPortfolioResponse::ListConstraintsForPortfolioResponse(
         const ListConstraintsForPortfolioRequest &request,
@@ -61,6 +56,9 @@ ListConstraintsForPortfolioResponse::ListConstraintsForPortfolioResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListConstraintsForPortfolioRequest * ListConstraintsForPortfolioResponse::request() const
 {
     Q_D(const ListConstraintsForPortfolioResponse);
@@ -68,9 +66,8 @@ const ListConstraintsForPortfolioRequest * ListConstraintsForPortfolioResponse::
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ListConstraintsForPortfolio response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ListConstraintsForPortfolio \a response.
  */
 void ListConstraintsForPortfolioResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListConstraintsForPortfolioResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ListConstraintsForPortfolioResponsePrivate
+ * \brief The ListConstraintsForPortfolioResponsePrivate class provides private implementation for ListConstraintsForPortfolioResponse.
  * \internal
  *
- * \class ListConstraintsForPortfolioResponsePrivate
- *
- * \brief Private implementation for ListConstraintsForPortfolioResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListConstraintsForPortfolioResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListConstraintsForPortfolioResponse instance.
+ * Constructs a ListConstraintsForPortfolioResponsePrivate object with public implementation \a q.
  */
 ListConstraintsForPortfolioResponsePrivate::ListConstraintsForPortfolioResponsePrivate(
     ListConstraintsForPortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ListConstraintsForPortfolioResponsePrivate::ListConstraintsForPortfolioResponseP
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ListConstraintsForPortfolioResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ListConstraintsForPortfolio response element from \a xml.
  */
 void ListConstraintsForPortfolioResponsePrivate::parseListConstraintsForPortfolioResponse(QXmlStreamReader &xml)
 {

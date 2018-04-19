@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetIdentityFeedbackForwardingEnabledResponse : public SESResp
 public:
     SetIdentityFeedbackForwardingEnabledResponse(const SetIdentityFeedbackForwardingEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetIdentityFeedbackForwardingEnabledRequest * request() const;
+    virtual const SetIdentityFeedbackForwardingEnabledRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetIdentityFeedbackForwardingEnabledResponse)

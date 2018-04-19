@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeHostsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DescribeHostsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeHostsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeHostsRequestPrivate::DescribeHostsRequestPrivate(
     const EC2Request::Action action, DescribeHostsRequest * const q)

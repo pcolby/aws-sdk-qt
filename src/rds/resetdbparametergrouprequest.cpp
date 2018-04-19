@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * ResetDBParameterGroupRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ResetDBParameterGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a ResetDBParameterGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 ResetDBParameterGroupRequestPrivate::ResetDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, ResetDBParameterGroupRequest * const q)

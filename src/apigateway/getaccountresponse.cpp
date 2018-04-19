@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetAccountResponse
- *
  * \brief The GetAccountResponse class provides an interace for APIGateway GetAccount responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAccountResponse::GetAccountResponse(
         const GetAccountRequest &request,
@@ -60,6 +55,9 @@ GetAccountResponse::GetAccountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAccountRequest * GetAccountResponse::request() const
 {
     Q_D(const GetAccountResponse);
@@ -67,9 +65,8 @@ const GetAccountRequest * GetAccountResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetAccount \a response.
  */
 void GetAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetAccountResponsePrivate
+ * \brief The GetAccountResponsePrivate class provides private implementation for GetAccountResponse.
  * \internal
  *
- * \class GetAccountResponsePrivate
- *
- * \brief Private implementation for GetAccountResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAccountResponse instance.
+ * Constructs a GetAccountResponsePrivate object with public implementation \a q.
  */
 GetAccountResponsePrivate::GetAccountResponsePrivate(
     GetAccountResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetAccountResponsePrivate::GetAccountResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetAccount response element from \a xml.
  */
 void GetAccountResponsePrivate::parseGetAccountResponse(QXmlStreamReader &xml)
 {

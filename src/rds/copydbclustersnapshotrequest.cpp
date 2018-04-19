@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CopyDBClusterSnapshotRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CopyDBClusterSnapshotRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CopyDBClusterSnapshotRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CopyDBClusterSnapshotRequestPrivate::CopyDBClusterSnapshotRequestPrivate(
     const RDSRequest::Action action, CopyDBClusterSnapshotRequest * const q)

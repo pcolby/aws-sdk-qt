@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::AssociatePrincipalWithPortfolioResponse
- *
  * \brief The AssociatePrincipalWithPortfolioResponse class provides an interace for ServiceCatalog AssociatePrincipalWithPortfolio responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new AssociatePrincipalWithPortfolioResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociatePrincipalWithPortfolioResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociatePrincipalWithPortfolioResponse::AssociatePrincipalWithPortfolioResponse(
         const AssociatePrincipalWithPortfolioRequest &request,
@@ -61,6 +56,9 @@ AssociatePrincipalWithPortfolioResponse::AssociatePrincipalWithPortfolioResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociatePrincipalWithPortfolioRequest * AssociatePrincipalWithPortfolioResponse::request() const
 {
     Q_D(const AssociatePrincipalWithPortfolioResponse);
@@ -68,9 +66,8 @@ const AssociatePrincipalWithPortfolioRequest * AssociatePrincipalWithPortfolioRe
 }
 
 /*!
- * @brief  Parse a ServiceCatalog AssociatePrincipalWithPortfolio response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog AssociatePrincipalWithPortfolio \a response.
  */
 void AssociatePrincipalWithPortfolioResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void AssociatePrincipalWithPortfolioResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::AssociatePrincipalWithPortfolioResponsePrivate
+ * \brief The AssociatePrincipalWithPortfolioResponsePrivate class provides private implementation for AssociatePrincipalWithPortfolioResponse.
  * \internal
  *
- * \class AssociatePrincipalWithPortfolioResponsePrivate
- *
- * \brief Private implementation for AssociatePrincipalWithPortfolioResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociatePrincipalWithPortfolioResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociatePrincipalWithPortfolioResponse instance.
+ * Constructs a AssociatePrincipalWithPortfolioResponsePrivate object with public implementation \a q.
  */
 AssociatePrincipalWithPortfolioResponsePrivate::AssociatePrincipalWithPortfolioResponsePrivate(
     AssociatePrincipalWithPortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ AssociatePrincipalWithPortfolioResponsePrivate::AssociatePrincipalWithPortfolioR
 }
 
 /*!
- * @brief  Parse an ServiceCatalog AssociatePrincipalWithPortfolioResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog AssociatePrincipalWithPortfolio response element from \a xml.
  */
 void AssociatePrincipalWithPortfolioResponsePrivate::parseAssociatePrincipalWithPortfolioResponse(QXmlStreamReader &xml)
 {

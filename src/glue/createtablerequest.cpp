@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateTableRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateTableRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a CreateTableRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 CreateTableRequestPrivate::CreateTableRequestPrivate(
     const GlueRequest::Action action, CreateTableRequest * const q)

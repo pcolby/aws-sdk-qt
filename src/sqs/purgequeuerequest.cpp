@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * PurgeQueueRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a PurgeQueueRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a PurgeQueueRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 PurgeQueueRequestPrivate::PurgeQueueRequestPrivate(
     const SQSRequest::Action action, PurgeQueueRequest * const q)

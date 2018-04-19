@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeReservedCacheNodesOfferingsResponse
- *
  * \brief The DescribeReservedCacheNodesOfferingsResponse class provides an interace for ElastiCache DescribeReservedCacheNodesOfferings responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeReservedCacheNodesOfferingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeReservedCacheNodesOfferingsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeReservedCacheNodesOfferingsResponse::DescribeReservedCacheNodesOfferingsResponse(
         const DescribeReservedCacheNodesOfferingsRequest &request,
@@ -69,6 +64,9 @@ DescribeReservedCacheNodesOfferingsResponse::DescribeReservedCacheNodesOfferings
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeReservedCacheNodesOfferingsRequest * DescribeReservedCacheNodesOfferingsResponse::request() const
 {
     Q_D(const DescribeReservedCacheNodesOfferingsResponse);
@@ -76,9 +74,8 @@ const DescribeReservedCacheNodesOfferingsRequest * DescribeReservedCacheNodesOff
 }
 
 /*!
- * @brief  Parse a ElastiCache DescribeReservedCacheNodesOfferings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DescribeReservedCacheNodesOfferings \a response.
  */
 void DescribeReservedCacheNodesOfferingsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeReservedCacheNodesOfferingsResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::ElastiCache::DescribeReservedCacheNodesOfferingsResponsePrivate
+ * \brief The DescribeReservedCacheNodesOfferingsResponsePrivate class provides private implementation for DescribeReservedCacheNodesOfferingsResponse.
  * \internal
  *
- * \class DescribeReservedCacheNodesOfferingsResponsePrivate
- *
- * \brief Private implementation for DescribeReservedCacheNodesOfferingsResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReservedCacheNodesOfferingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeReservedCacheNodesOfferingsResponse instance.
+ * Constructs a DescribeReservedCacheNodesOfferingsResponsePrivate object with public implementation \a q.
  */
 DescribeReservedCacheNodesOfferingsResponsePrivate::DescribeReservedCacheNodesOfferingsResponsePrivate(
     DescribeReservedCacheNodesOfferingsResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeReservedCacheNodesOfferingsResponsePrivate::DescribeReservedCacheNodesOf
 }
 
 /*!
- * @brief  Parse an ElastiCache DescribeReservedCacheNodesOfferingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DescribeReservedCacheNodesOfferings response element from \a xml.
  */
 void DescribeReservedCacheNodesOfferingsResponsePrivate::parseDescribeReservedCacheNodesOfferingsResponse(QXmlStreamReader &xml)
 {

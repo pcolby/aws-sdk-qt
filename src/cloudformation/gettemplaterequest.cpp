@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GetTemplateRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a GetTemplateRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 GetTemplateRequestPrivate::GetTemplateRequestPrivate(
     const CloudFormationRequest::Action action, GetTemplateRequest * const q)

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateAliasRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateAliasRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a CreateAliasRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 CreateAliasRequestPrivate::CreateAliasRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateAliasRequest * const q)

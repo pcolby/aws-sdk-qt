@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateRoomResponse
- *
  * \brief The UpdateRoomResponse class provides an interace for AlexaForBusiness UpdateRoom responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRoomResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRoomResponse::UpdateRoomResponse(
         const UpdateRoomRequest &request,
@@ -60,6 +55,9 @@ UpdateRoomResponse::UpdateRoomResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRoomRequest * UpdateRoomResponse::request() const
 {
     Q_D(const UpdateRoomResponse);
@@ -67,9 +65,8 @@ const UpdateRoomRequest * UpdateRoomResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness UpdateRoom response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness UpdateRoom \a response.
  */
 void UpdateRoomResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateRoomResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::UpdateRoomResponsePrivate
+ * \brief The UpdateRoomResponsePrivate class provides private implementation for UpdateRoomResponse.
  * \internal
  *
- * \class UpdateRoomResponsePrivate
- *
- * \brief Private implementation for UpdateRoomResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRoomResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRoomResponse instance.
+ * Constructs a UpdateRoomResponsePrivate object with public implementation \a q.
  */
 UpdateRoomResponsePrivate::UpdateRoomResponsePrivate(
     UpdateRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateRoomResponsePrivate::UpdateRoomResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness UpdateRoomResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness UpdateRoom response element from \a xml.
  */
 void UpdateRoomResponsePrivate::parseUpdateRoomResponse(QXmlStreamReader &xml)
 {

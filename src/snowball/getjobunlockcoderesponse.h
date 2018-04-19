@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetJobUnlockCodeResponse : public SnowballResponse {
 public:
     GetJobUnlockCodeResponse(const GetJobUnlockCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetJobUnlockCodeRequest * request() const;
+    virtual const GetJobUnlockCodeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetJobUnlockCodeResponse)

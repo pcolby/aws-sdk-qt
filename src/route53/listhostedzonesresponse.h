@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListHostedZonesResponse : public Route53Response {
 public:
     ListHostedZonesResponse(const ListHostedZonesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListHostedZonesRequest * request() const;
+    virtual const ListHostedZonesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListHostedZonesResponse)

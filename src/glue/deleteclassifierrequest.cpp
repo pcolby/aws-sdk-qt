@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteClassifierRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteClassifierRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a DeleteClassifierRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 DeleteClassifierRequestPrivate::DeleteClassifierRequestPrivate(
     const GlueRequest::Action action, DeleteClassifierRequest * const q)

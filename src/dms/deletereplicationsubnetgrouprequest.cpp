@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationSubnetGroupRequest::response
  */
 
 /*!
- *
- * Constructs a DeleteReplicationSubnetGroupRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteReplicationSubnetGroupRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DeleteReplicationSubnetGroupRequest * const q)

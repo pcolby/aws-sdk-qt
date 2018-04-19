@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * ShutdownGatewayRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ShutdownGatewayRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a ShutdownGatewayRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 ShutdownGatewayRequestPrivate::ShutdownGatewayRequestPrivate(
     const StorageGatewayRequest::Action action, ShutdownGatewayRequest * const q)

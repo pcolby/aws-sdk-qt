@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateListenerResponse
- *
  * \brief The CreateListenerResponse class provides an interace for ElasticLoadBalancingv2 CreateListener responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new CreateListenerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateListenerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateListenerResponse::CreateListenerResponse(
         const CreateListenerRequest &request,
@@ -123,6 +118,9 @@ CreateListenerResponse::CreateListenerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateListenerRequest * CreateListenerResponse::request() const
 {
     Q_D(const CreateListenerResponse);
@@ -130,9 +128,8 @@ const CreateListenerRequest * CreateListenerResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 CreateListener response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 CreateListener \a response.
  */
 void CreateListenerResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void CreateListenerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::CreateListenerResponsePrivate
+ * \brief The CreateListenerResponsePrivate class provides private implementation for CreateListenerResponse.
  * \internal
  *
- * \class CreateListenerResponsePrivate
- *
- * \brief Private implementation for CreateListenerResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateListenerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateListenerResponse instance.
+ * Constructs a CreateListenerResponsePrivate object with public implementation \a q.
  */
 CreateListenerResponsePrivate::CreateListenerResponsePrivate(
     CreateListenerResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ CreateListenerResponsePrivate::CreateListenerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 CreateListenerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 CreateListener response element from \a xml.
  */
 void CreateListenerResponsePrivate::parseCreateListenerResponse(QXmlStreamReader &xml)
 {

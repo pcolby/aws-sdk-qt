@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::ListDomainsResponse
- *
  * \brief The ListDomainsResponse class provides an interace for SWF ListDomains responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new ListDomainsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDomainsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDomainsResponse::ListDomainsResponse(
         const ListDomainsRequest &request,
@@ -71,6 +66,9 @@ ListDomainsResponse::ListDomainsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDomainsRequest * ListDomainsResponse::request() const
 {
     Q_D(const ListDomainsResponse);
@@ -78,9 +76,8 @@ const ListDomainsRequest * ListDomainsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SWF ListDomains response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF ListDomains \a response.
  */
 void ListDomainsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void ListDomainsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::ListDomainsResponsePrivate
+ * \brief The ListDomainsResponsePrivate class provides private implementation for ListDomainsResponse.
  * \internal
  *
- * \class ListDomainsResponsePrivate
- *
- * \brief Private implementation for ListDomainsResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDomainsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDomainsResponse instance.
+ * Constructs a ListDomainsResponsePrivate object with public implementation \a q.
  */
 ListDomainsResponsePrivate::ListDomainsResponsePrivate(
     ListDomainsResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ ListDomainsResponsePrivate::ListDomainsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF ListDomainsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF ListDomains response element from \a xml.
  */
 void ListDomainsResponsePrivate::parseListDomainsResponse(QXmlStreamReader &xml)
 {

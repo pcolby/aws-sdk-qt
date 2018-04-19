@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DescribeResourceGroupsResponse
- *
  * \brief The DescribeResourceGroupsResponse class provides an interace for Inspector DescribeResourceGroups responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DescribeResourceGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeResourceGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeResourceGroupsResponse::DescribeResourceGroupsResponse(
         const DescribeResourceGroupsRequest &request,
@@ -60,6 +55,9 @@ DescribeResourceGroupsResponse::DescribeResourceGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeResourceGroupsRequest * DescribeResourceGroupsResponse::request() const
 {
     Q_D(const DescribeResourceGroupsResponse);
@@ -67,9 +65,8 @@ const DescribeResourceGroupsRequest * DescribeResourceGroupsResponse::request() 
 }
 
 /*!
- * @brief  Parse a Inspector DescribeResourceGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector DescribeResourceGroups \a response.
  */
 void DescribeResourceGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeResourceGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::DescribeResourceGroupsResponsePrivate
+ * \brief The DescribeResourceGroupsResponsePrivate class provides private implementation for DescribeResourceGroupsResponse.
  * \internal
  *
- * \class DescribeResourceGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeResourceGroupsResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResourceGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeResourceGroupsResponse instance.
+ * Constructs a DescribeResourceGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeResourceGroupsResponsePrivate::DescribeResourceGroupsResponsePrivate(
     DescribeResourceGroupsResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeResourceGroupsResponsePrivate::DescribeResourceGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector DescribeResourceGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector DescribeResourceGroups response element from \a xml.
  */
 void DescribeResourceGroupsResponsePrivate::parseDescribeResourceGroupsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::PutActionRevisionResponse
- *
  * \brief The PutActionRevisionResponse class provides an interace for CodePipeline PutActionRevision responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new PutActionRevisionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutActionRevisionResponse object for \a reply to \a request, with parent \a parent.
  */
 PutActionRevisionResponse::PutActionRevisionResponse(
         const PutActionRevisionRequest &request,
@@ -218,6 +213,9 @@ PutActionRevisionResponse::PutActionRevisionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutActionRevisionRequest * PutActionRevisionResponse::request() const
 {
     Q_D(const PutActionRevisionResponse);
@@ -225,9 +223,8 @@ const PutActionRevisionRequest * PutActionRevisionResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodePipeline PutActionRevision response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline PutActionRevision \a response.
  */
 void PutActionRevisionResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void PutActionRevisionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::PutActionRevisionResponsePrivate
+ * \brief The PutActionRevisionResponsePrivate class provides private implementation for PutActionRevisionResponse.
  * \internal
  *
- * \class PutActionRevisionResponsePrivate
- *
- * \brief Private implementation for PutActionRevisionResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutActionRevisionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutActionRevisionResponse instance.
+ * Constructs a PutActionRevisionResponsePrivate object with public implementation \a q.
  */
 PutActionRevisionResponsePrivate::PutActionRevisionResponsePrivate(
     PutActionRevisionResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ PutActionRevisionResponsePrivate::PutActionRevisionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline PutActionRevisionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline PutActionRevision response element from \a xml.
  */
 void PutActionRevisionResponsePrivate::parsePutActionRevisionResponse(QXmlStreamReader &xml)
 {

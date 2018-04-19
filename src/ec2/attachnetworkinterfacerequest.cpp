@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AttachNetworkInterfaceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a AttachNetworkInterfaceRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AttachNetworkInterfaceRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AttachNetworkInterfaceRequestPrivate::AttachNetworkInterfaceRequestPrivate(
     const EC2Request::Action action, AttachNetworkInterfaceRequest * const q)

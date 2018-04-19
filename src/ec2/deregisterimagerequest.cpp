@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterImageRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeregisterImageRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterImageRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeregisterImageRequestPrivate::DeregisterImageRequestPrivate(
     const EC2Request::Action action, DeregisterImageRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReplaceRouteTableAssociationResponse
- *
  * \brief The ReplaceRouteTableAssociationResponse class provides an interace for EC2 ReplaceRouteTableAssociation responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReplaceRouteTableAssociationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReplaceRouteTableAssociationResponse object for \a reply to \a request, with parent \a parent.
  */
 ReplaceRouteTableAssociationResponse::ReplaceRouteTableAssociationResponse(
         const ReplaceRouteTableAssociationRequest &request,
@@ -59,6 +54,9 @@ ReplaceRouteTableAssociationResponse::ReplaceRouteTableAssociationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReplaceRouteTableAssociationRequest * ReplaceRouteTableAssociationResponse::request() const
 {
     Q_D(const ReplaceRouteTableAssociationResponse);
@@ -66,9 +64,8 @@ const ReplaceRouteTableAssociationRequest * ReplaceRouteTableAssociationResponse
 }
 
 /*!
- * @brief  Parse a EC2 ReplaceRouteTableAssociation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ReplaceRouteTableAssociation \a response.
  */
 void ReplaceRouteTableAssociationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ReplaceRouteTableAssociationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ReplaceRouteTableAssociationResponsePrivate
+ * \brief The ReplaceRouteTableAssociationResponsePrivate class provides private implementation for ReplaceRouteTableAssociationResponse.
  * \internal
  *
- * \class ReplaceRouteTableAssociationResponsePrivate
- *
- * \brief Private implementation for ReplaceRouteTableAssociationResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReplaceRouteTableAssociationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReplaceRouteTableAssociationResponse instance.
+ * Constructs a ReplaceRouteTableAssociationResponsePrivate object with public implementation \a q.
  */
 ReplaceRouteTableAssociationResponsePrivate::ReplaceRouteTableAssociationResponsePrivate(
     ReplaceRouteTableAssociationResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ReplaceRouteTableAssociationResponsePrivate::ReplaceRouteTableAssociationRespons
 }
 
 /*!
- * @brief  Parse an EC2 ReplaceRouteTableAssociationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ReplaceRouteTableAssociation response element from \a xml.
  */
 void ReplaceRouteTableAssociationResponsePrivate::parseReplaceRouteTableAssociationResponse(QXmlStreamReader &xml)
 {

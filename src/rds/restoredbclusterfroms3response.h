@@ -34,10 +34,10 @@ class QTAWS_EXPORT RestoreDBClusterFromS3Response : public RDSResponse {
 public:
     RestoreDBClusterFromS3Response(const RestoreDBClusterFromS3Request &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RestoreDBClusterFromS3Request * request() const;
+    virtual const RestoreDBClusterFromS3Request * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RestoreDBClusterFromS3Response)

@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DescribeListenersRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribeListenersRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeListenersRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 DescribeListenersRequestPrivate::DescribeListenersRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeListenersRequest * const q)

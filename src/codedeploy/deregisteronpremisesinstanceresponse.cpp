@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::DeregisterOnPremisesInstanceResponse
- *
  * \brief The DeregisterOnPremisesInstanceResponse class provides an interace for CodeDeploy DeregisterOnPremisesInstance responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new DeregisterOnPremisesInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterOnPremisesInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterOnPremisesInstanceResponse::DeregisterOnPremisesInstanceResponse(
         const DeregisterOnPremisesInstanceRequest &request,
@@ -136,6 +131,9 @@ DeregisterOnPremisesInstanceResponse::DeregisterOnPremisesInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterOnPremisesInstanceRequest * DeregisterOnPremisesInstanceResponse::request() const
 {
     Q_D(const DeregisterOnPremisesInstanceResponse);
@@ -143,9 +141,8 @@ const DeregisterOnPremisesInstanceRequest * DeregisterOnPremisesInstanceResponse
 }
 
 /*!
- * @brief  Parse a CodeDeploy DeregisterOnPremisesInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy DeregisterOnPremisesInstance \a response.
  */
 void DeregisterOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void DeregisterOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::DeregisterOnPremisesInstanceResponsePrivate
+ * \brief The DeregisterOnPremisesInstanceResponsePrivate class provides private implementation for DeregisterOnPremisesInstanceResponse.
  * \internal
  *
- * \class DeregisterOnPremisesInstanceResponsePrivate
- *
- * \brief Private implementation for DeregisterOnPremisesInstanceResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterOnPremisesInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterOnPremisesInstanceResponse instance.
+ * Constructs a DeregisterOnPremisesInstanceResponsePrivate object with public implementation \a q.
  */
 DeregisterOnPremisesInstanceResponsePrivate::DeregisterOnPremisesInstanceResponsePrivate(
     DeregisterOnPremisesInstanceResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ DeregisterOnPremisesInstanceResponsePrivate::DeregisterOnPremisesInstanceRespons
 }
 
 /*!
- * @brief  Parse an CodeDeploy DeregisterOnPremisesInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy DeregisterOnPremisesInstance response element from \a xml.
  */
 void DeregisterOnPremisesInstanceResponsePrivate::parseDeregisterOnPremisesInstanceResponse(QXmlStreamReader &xml)
 {

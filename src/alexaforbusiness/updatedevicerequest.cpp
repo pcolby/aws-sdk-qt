@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UpdateDeviceRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDeviceRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateDeviceRequest * const q)

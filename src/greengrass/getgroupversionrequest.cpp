@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetGroupVersionRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetGroupVersionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a GetGroupVersionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 GetGroupVersionRequestPrivate::GetGroupVersionRequestPrivate(
     const GreengrassRequest::Action action, GetGroupVersionRequest * const q)

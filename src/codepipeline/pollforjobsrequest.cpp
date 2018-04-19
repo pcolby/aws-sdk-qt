@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * PollForJobsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a PollForJobsRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a PollForJobsRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 PollForJobsRequestPrivate::PollForJobsRequestPrivate(
     const CodePipelineRequest::Action action, PollForJobsRequest * const q)

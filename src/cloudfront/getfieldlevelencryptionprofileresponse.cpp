@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetFieldLevelEncryptionProfileResponse
- *
  * \brief The GetFieldLevelEncryptionProfileResponse class provides an interace for CloudFront GetFieldLevelEncryptionProfile responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetFieldLevelEncryptionProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFieldLevelEncryptionProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFieldLevelEncryptionProfileResponse::GetFieldLevelEncryptionProfileResponse(
         const GetFieldLevelEncryptionProfileRequest &request,
@@ -60,6 +55,9 @@ GetFieldLevelEncryptionProfileResponse::GetFieldLevelEncryptionProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFieldLevelEncryptionProfileRequest * GetFieldLevelEncryptionProfileResponse::request() const
 {
     Q_D(const GetFieldLevelEncryptionProfileResponse);
@@ -67,9 +65,8 @@ const GetFieldLevelEncryptionProfileRequest * GetFieldLevelEncryptionProfileResp
 }
 
 /*!
- * @brief  Parse a CloudFront GetFieldLevelEncryptionProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront GetFieldLevelEncryptionProfile \a response.
  */
 void GetFieldLevelEncryptionProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetFieldLevelEncryptionProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::GetFieldLevelEncryptionProfileResponsePrivate
+ * \brief The GetFieldLevelEncryptionProfileResponsePrivate class provides private implementation for GetFieldLevelEncryptionProfileResponse.
  * \internal
  *
- * \class GetFieldLevelEncryptionProfileResponsePrivate
- *
- * \brief Private implementation for GetFieldLevelEncryptionProfileResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFieldLevelEncryptionProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFieldLevelEncryptionProfileResponse instance.
+ * Constructs a GetFieldLevelEncryptionProfileResponsePrivate object with public implementation \a q.
  */
 GetFieldLevelEncryptionProfileResponsePrivate::GetFieldLevelEncryptionProfileResponsePrivate(
     GetFieldLevelEncryptionProfileResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ GetFieldLevelEncryptionProfileResponsePrivate::GetFieldLevelEncryptionProfileRes
 }
 
 /*!
- * @brief  Parse an CloudFront GetFieldLevelEncryptionProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront GetFieldLevelEncryptionProfile response element from \a xml.
  */
 void GetFieldLevelEncryptionProfileResponsePrivate::parseGetFieldLevelEncryptionProfileResponse(QXmlStreamReader &xml)
 {

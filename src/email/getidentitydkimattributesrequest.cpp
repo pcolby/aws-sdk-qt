@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetIdentityDkimAttributesRequest::response(QN
  */
 
 /*!
- *
- * Constructs a GetIdentityDkimAttributesRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a GetIdentityDkimAttributesRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 GetIdentityDkimAttributesRequestPrivate::GetIdentityDkimAttributesRequestPrivate(
     const SESRequest::Action action, GetIdentityDkimAttributesRequest * const q)

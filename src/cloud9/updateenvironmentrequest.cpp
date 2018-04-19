@@ -135,9 +135,8 @@ QtAws::Core::AwsAbstractResponse * UpdateEnvironmentRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateEnvironmentRequestPrivate object for Cloud9 \a action with,
- * public implementation \a q.
+ * Constructs a UpdateEnvironmentRequestPrivate object for Cloud9 \a action,
+ * with public implementation \a q.
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
     const Cloud9Request::Action action, UpdateEnvironmentRequest * const q)

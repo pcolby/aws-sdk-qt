@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResetFpgaImageAttributeResponse : public EC2Response {
 public:
     ResetFpgaImageAttributeResponse(const ResetFpgaImageAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResetFpgaImageAttributeRequest * request() const;
+    virtual const ResetFpgaImageAttributeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResetFpgaImageAttributeResponse)

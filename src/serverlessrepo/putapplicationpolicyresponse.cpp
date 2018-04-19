@@ -29,10 +29,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::PutApplicationPolicyResponse
- *
  * \brief The PutApplicationPolicyResponse class provides an interace for ServerlessApplicationRepository PutApplicationPolicy responses.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -60,11 +59,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new PutApplicationPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutApplicationPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutApplicationPolicyResponse::PutApplicationPolicyResponse(
         const PutApplicationPolicyRequest &request,
@@ -76,6 +71,9 @@ PutApplicationPolicyResponse::PutApplicationPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutApplicationPolicyRequest * PutApplicationPolicyResponse::request() const
 {
     Q_D(const PutApplicationPolicyResponse);
@@ -83,9 +81,8 @@ const PutApplicationPolicyRequest * PutApplicationPolicyResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ServerlessApplicationRepository PutApplicationPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServerlessApplicationRepository PutApplicationPolicy \a response.
  */
 void PutApplicationPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -95,19 +92,15 @@ void PutApplicationPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServerlessApplicationRepository::PutApplicationPolicyResponsePrivate
+ * \brief The PutApplicationPolicyResponsePrivate class provides private implementation for PutApplicationPolicyResponse.
  * \internal
  *
- * \class PutApplicationPolicyResponsePrivate
- *
- * \brief Private implementation for PutApplicationPolicyResponse.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutApplicationPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutApplicationPolicyResponse instance.
+ * Constructs a PutApplicationPolicyResponsePrivate object with public implementation \a q.
  */
 PutApplicationPolicyResponsePrivate::PutApplicationPolicyResponsePrivate(
     PutApplicationPolicyResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
@@ -116,9 +109,7 @@ PutApplicationPolicyResponsePrivate::PutApplicationPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServerlessApplicationRepository PutApplicationPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServerlessApplicationRepository PutApplicationPolicy response element from \a xml.
  */
 void PutApplicationPolicyResponsePrivate::parsePutApplicationPolicyResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::CreateHostedZoneResponse
- *
  * \brief The CreateHostedZoneResponse class provides an interace for Route53 CreateHostedZone responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::createHostedZone
  */
 
 /*!
- * @brief  Constructs a new CreateHostedZoneResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateHostedZoneResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateHostedZoneResponse::CreateHostedZoneResponse(
         const CreateHostedZoneRequest &request,
@@ -55,6 +50,9 @@ CreateHostedZoneResponse::CreateHostedZoneResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateHostedZoneRequest * CreateHostedZoneResponse::request() const
 {
     Q_D(const CreateHostedZoneResponse);
@@ -62,9 +60,8 @@ const CreateHostedZoneRequest * CreateHostedZoneResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 CreateHostedZone response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 CreateHostedZone \a response.
  */
 void CreateHostedZoneResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateHostedZoneResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::CreateHostedZoneResponsePrivate
+ * \brief The CreateHostedZoneResponsePrivate class provides private implementation for CreateHostedZoneResponse.
  * \internal
  *
- * \class CreateHostedZoneResponsePrivate
- *
- * \brief Private implementation for CreateHostedZoneResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHostedZoneResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateHostedZoneResponse instance.
+ * Constructs a CreateHostedZoneResponsePrivate object with public implementation \a q.
  */
 CreateHostedZoneResponsePrivate::CreateHostedZoneResponsePrivate(
     CreateHostedZoneResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateHostedZoneResponsePrivate::CreateHostedZoneResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 CreateHostedZoneResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 CreateHostedZone response element from \a xml.
  */
 void CreateHostedZoneResponsePrivate::parseCreateHostedZoneResponse(QXmlStreamReader &xml)
 {

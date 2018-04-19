@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartChannelResponse : public MediaLiveResponse {
 public:
     StartChannelResponse(const StartChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartChannelRequest * request() const;
+    virtual const StartChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartChannelResponse)

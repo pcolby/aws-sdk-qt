@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * UpdateGatewaySoftwareNowRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateGatewaySoftwareNowRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateGatewaySoftwareNowRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 UpdateGatewaySoftwareNowRequestPrivate::UpdateGatewaySoftwareNowRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateGatewaySoftwareNowRequest * const q)

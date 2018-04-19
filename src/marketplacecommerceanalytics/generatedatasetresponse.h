@@ -34,10 +34,10 @@ class QTAWS_EXPORT GenerateDataSetResponse : public MarketplaceCommerceAnalytics
 public:
     GenerateDataSetResponse(const GenerateDataSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GenerateDataSetRequest * request() const;
+    virtual const GenerateDataSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GenerateDataSetResponse)

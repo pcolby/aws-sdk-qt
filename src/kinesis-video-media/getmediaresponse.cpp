@@ -29,21 +29,16 @@ namespace KinesisVideoMedia {
 
 /*!
  * \class QtAws::KinesisVideoMedia::GetMediaResponse
- *
  * \brief The GetMediaResponse class provides an interace for KinesisVideoMedia GetMedia responses.
  *
- * \ingroup KinesisVideoMedia
+ * \inmodule QtAwsKinesisVideoMedia
  *
  *
  * \sa KinesisVideoMediaClient::getMedia
  */
 
 /*!
- * @brief  Constructs a new GetMediaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetMediaResponse object for \a reply to \a request, with parent \a parent.
  */
 GetMediaResponse::GetMediaResponse(
         const GetMediaRequest &request,
@@ -55,6 +50,9 @@ GetMediaResponse::GetMediaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetMediaRequest * GetMediaResponse::request() const
 {
     Q_D(const GetMediaResponse);
@@ -62,9 +60,8 @@ const GetMediaRequest * GetMediaResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisVideoMedia GetMedia response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisVideoMedia GetMedia \a response.
  */
 void GetMediaResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetMediaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisVideoMedia::GetMediaResponsePrivate
+ * \brief The GetMediaResponsePrivate class provides private implementation for GetMediaResponse.
  * \internal
  *
- * \class GetMediaResponsePrivate
- *
- * \brief Private implementation for GetMediaResponse.
+ * \inmodule QtAwsKinesisVideoMedia
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMediaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetMediaResponse instance.
+ * Constructs a GetMediaResponsePrivate object with public implementation \a q.
  */
 GetMediaResponsePrivate::GetMediaResponsePrivate(
     GetMediaResponse * const q) : KinesisVideoMediaResponsePrivate(q)
@@ -95,9 +88,7 @@ GetMediaResponsePrivate::GetMediaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisVideoMedia GetMediaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisVideoMedia GetMedia response element from \a xml.
  */
 void GetMediaResponsePrivate::parseGetMediaResponse(QXmlStreamReader &xml)
 {

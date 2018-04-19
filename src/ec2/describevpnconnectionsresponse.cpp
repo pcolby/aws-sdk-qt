@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpnConnectionsResponse
- *
  * \brief The DescribeVpnConnectionsResponse class provides an interace for EC2 DescribeVpnConnections responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpnConnectionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVpnConnectionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVpnConnectionsResponse::DescribeVpnConnectionsResponse(
         const DescribeVpnConnectionsRequest &request,
@@ -59,6 +54,9 @@ DescribeVpnConnectionsResponse::DescribeVpnConnectionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVpnConnectionsRequest * DescribeVpnConnectionsResponse::request() const
 {
     Q_D(const DescribeVpnConnectionsResponse);
@@ -66,9 +64,8 @@ const DescribeVpnConnectionsRequest * DescribeVpnConnectionsResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 DescribeVpnConnections response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeVpnConnections \a response.
  */
 void DescribeVpnConnectionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeVpnConnectionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeVpnConnectionsResponsePrivate
+ * \brief The DescribeVpnConnectionsResponsePrivate class provides private implementation for DescribeVpnConnectionsResponse.
  * \internal
  *
- * \class DescribeVpnConnectionsResponsePrivate
- *
- * \brief Private implementation for DescribeVpnConnectionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpnConnectionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVpnConnectionsResponse instance.
+ * Constructs a DescribeVpnConnectionsResponsePrivate object with public implementation \a q.
  */
 DescribeVpnConnectionsResponsePrivate::DescribeVpnConnectionsResponsePrivate(
     DescribeVpnConnectionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeVpnConnectionsResponsePrivate::DescribeVpnConnectionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeVpnConnectionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeVpnConnections response element from \a xml.
  */
 void DescribeVpnConnectionsResponsePrivate::parseDescribeVpnConnectionsResponse(QXmlStreamReader &xml)
 {

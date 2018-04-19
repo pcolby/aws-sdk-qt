@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * ScanRequest::response(QNetworkReply * const r
  */
 
 /*!
- *
- * Constructs a ScanRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a ScanRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 ScanRequestPrivate::ScanRequestPrivate(
     const DynamoDBRequest::Action action, ScanRequest * const q)

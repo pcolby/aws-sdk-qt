@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetMLModelRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetMLModelRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a GetMLModelRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 GetMLModelRequestPrivate::GetMLModelRequestPrivate(
     const MachineLearningRequest::Action action, GetMLModelRequest * const q)

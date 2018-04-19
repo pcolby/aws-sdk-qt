@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeServiceErrorsResponse
- *
  * \brief The DescribeServiceErrorsResponse class provides an interace for OpsWorks DescribeServiceErrors responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeServiceErrorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeServiceErrorsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeServiceErrorsResponse::DescribeServiceErrorsResponse(
         const DescribeServiceErrorsRequest &request,
@@ -161,6 +156,9 @@ DescribeServiceErrorsResponse::DescribeServiceErrorsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeServiceErrorsRequest * DescribeServiceErrorsResponse::request() const
 {
     Q_D(const DescribeServiceErrorsResponse);
@@ -168,9 +166,8 @@ const DescribeServiceErrorsRequest * DescribeServiceErrorsResponse::request() co
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeServiceErrors response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeServiceErrors \a response.
  */
 void DescribeServiceErrorsResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeServiceErrorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeServiceErrorsResponsePrivate
+ * \brief The DescribeServiceErrorsResponsePrivate class provides private implementation for DescribeServiceErrorsResponse.
  * \internal
  *
- * \class DescribeServiceErrorsResponsePrivate
- *
- * \brief Private implementation for DescribeServiceErrorsResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeServiceErrorsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeServiceErrorsResponse instance.
+ * Constructs a DescribeServiceErrorsResponsePrivate object with public implementation \a q.
  */
 DescribeServiceErrorsResponsePrivate::DescribeServiceErrorsResponsePrivate(
     DescribeServiceErrorsResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeServiceErrorsResponsePrivate::DescribeServiceErrorsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeServiceErrorsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeServiceErrors response element from \a xml.
  */
 void DescribeServiceErrorsResponsePrivate::parseDescribeServiceErrorsResponse(QXmlStreamReader &xml)
 {

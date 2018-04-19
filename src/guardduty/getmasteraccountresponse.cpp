@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetMasterAccountResponse
- *
  * \brief The GetMasterAccountResponse class provides an interace for GuardDuty GetMasterAccount responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getMasterAccount
  */
 
 /*!
- * @brief  Constructs a new GetMasterAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetMasterAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 GetMasterAccountResponse::GetMasterAccountResponse(
         const GetMasterAccountRequest &request,
@@ -55,6 +50,9 @@ GetMasterAccountResponse::GetMasterAccountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetMasterAccountRequest * GetMasterAccountResponse::request() const
 {
     Q_D(const GetMasterAccountResponse);
@@ -62,9 +60,8 @@ const GetMasterAccountRequest * GetMasterAccountResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty GetMasterAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty GetMasterAccount \a response.
  */
 void GetMasterAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetMasterAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::GetMasterAccountResponsePrivate
+ * \brief The GetMasterAccountResponsePrivate class provides private implementation for GetMasterAccountResponse.
  * \internal
  *
- * \class GetMasterAccountResponsePrivate
- *
- * \brief Private implementation for GetMasterAccountResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMasterAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetMasterAccountResponse instance.
+ * Constructs a GetMasterAccountResponsePrivate object with public implementation \a q.
  */
 GetMasterAccountResponsePrivate::GetMasterAccountResponsePrivate(
     GetMasterAccountResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ GetMasterAccountResponsePrivate::GetMasterAccountResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty GetMasterAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty GetMasterAccount response element from \a xml.
  */
 void GetMasterAccountResponsePrivate::parseGetMasterAccountResponse(QXmlStreamReader &xml)
 {

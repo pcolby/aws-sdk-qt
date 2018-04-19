@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetIntrospectionSchemaRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a GetIntrospectionSchemaRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a GetIntrospectionSchemaRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 GetIntrospectionSchemaRequestPrivate::GetIntrospectionSchemaRequestPrivate(
     const AppSyncRequest::Action action, GetIntrospectionSchemaRequest * const q)

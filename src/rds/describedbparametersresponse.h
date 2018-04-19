@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDBParametersResponse : public RDSResponse {
 public:
     DescribeDBParametersResponse(const DescribeDBParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDBParametersRequest * request() const;
+    virtual const DescribeDBParametersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDBParametersResponse)

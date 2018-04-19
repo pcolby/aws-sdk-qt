@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveTagsFromCertificateResponse : public ACMResponse {
 public:
     RemoveTagsFromCertificateResponse(const RemoveTagsFromCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveTagsFromCertificateRequest * request() const;
+    virtual const RemoveTagsFromCertificateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RemoveTagsFromCertificateResponse)

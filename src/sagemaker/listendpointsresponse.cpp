@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::ListEndpointsResponse
- *
  * \brief The ListEndpointsResponse class provides an interace for SageMaker ListEndpoints responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::listEndpoints
  */
 
 /*!
- * @brief  Constructs a new ListEndpointsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListEndpointsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListEndpointsResponse::ListEndpointsResponse(
         const ListEndpointsRequest &request,
@@ -55,6 +50,9 @@ ListEndpointsResponse::ListEndpointsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListEndpointsRequest * ListEndpointsResponse::request() const
 {
     Q_D(const ListEndpointsResponse);
@@ -62,9 +60,8 @@ const ListEndpointsRequest * ListEndpointsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SageMaker ListEndpoints response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker ListEndpoints \a response.
  */
 void ListEndpointsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListEndpointsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::ListEndpointsResponsePrivate
+ * \brief The ListEndpointsResponsePrivate class provides private implementation for ListEndpointsResponse.
  * \internal
  *
- * \class ListEndpointsResponsePrivate
- *
- * \brief Private implementation for ListEndpointsResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEndpointsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListEndpointsResponse instance.
+ * Constructs a ListEndpointsResponsePrivate object with public implementation \a q.
  */
 ListEndpointsResponsePrivate::ListEndpointsResponsePrivate(
     ListEndpointsResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ ListEndpointsResponsePrivate::ListEndpointsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker ListEndpointsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker ListEndpoints response element from \a xml.
  */
 void ListEndpointsResponsePrivate::parseListEndpointsResponse(QXmlStreamReader &xml)
 {

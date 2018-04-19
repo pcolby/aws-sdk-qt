@@ -29,10 +29,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::DeleteDomainResponse
- *
  * \brief The DeleteDomainResponse class provides an interace for SimpleDB DeleteDomain responses.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -52,11 +51,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new DeleteDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDomainResponse::DeleteDomainResponse(
         const DeleteDomainRequest &request,
@@ -68,6 +63,9 @@ DeleteDomainResponse::DeleteDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDomainRequest * DeleteDomainResponse::request() const
 {
     Q_D(const DeleteDomainResponse);
@@ -75,9 +73,8 @@ const DeleteDomainRequest * DeleteDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a SimpleDB DeleteDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SimpleDB DeleteDomain \a response.
  */
 void DeleteDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void DeleteDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SimpleDB::DeleteDomainResponsePrivate
+ * \brief The DeleteDomainResponsePrivate class provides private implementation for DeleteDomainResponse.
  * \internal
  *
- * \class DeleteDomainResponsePrivate
- *
- * \brief Private implementation for DeleteDomainResponse.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDomainResponse instance.
+ * Constructs a DeleteDomainResponsePrivate object with public implementation \a q.
  */
 DeleteDomainResponsePrivate::DeleteDomainResponsePrivate(
     DeleteDomainResponse * const q) : SimpleDBResponsePrivate(q)
@@ -108,9 +101,7 @@ DeleteDomainResponsePrivate::DeleteDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SimpleDB DeleteDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SimpleDB DeleteDomain response element from \a xml.
  */
 void DeleteDomainResponsePrivate::parseDeleteDomainResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetImportJobResponse : public PinpointResponse {
 public:
     GetImportJobResponse(const GetImportJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetImportJobRequest * request() const;
+    virtual const GetImportJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetImportJobResponse)

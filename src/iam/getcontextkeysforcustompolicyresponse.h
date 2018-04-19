@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetContextKeysForCustomPolicyResponse : public IAMResponse {
 public:
     GetContextKeysForCustomPolicyResponse(const GetContextKeysForCustomPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetContextKeysForCustomPolicyRequest * request() const;
+    virtual const GetContextKeysForCustomPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetContextKeysForCustomPolicyResponse)

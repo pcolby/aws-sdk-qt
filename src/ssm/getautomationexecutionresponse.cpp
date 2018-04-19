@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetAutomationExecutionResponse
- *
  * \brief The GetAutomationExecutionResponse class provides an interace for SSM GetAutomationExecution responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetAutomationExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAutomationExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAutomationExecutionResponse::GetAutomationExecutionResponse(
         const GetAutomationExecutionRequest &request,
@@ -79,6 +74,9 @@ GetAutomationExecutionResponse::GetAutomationExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAutomationExecutionRequest * GetAutomationExecutionResponse::request() const
 {
     Q_D(const GetAutomationExecutionResponse);
@@ -86,9 +84,8 @@ const GetAutomationExecutionRequest * GetAutomationExecutionResponse::request() 
 }
 
 /*!
- * @brief  Parse a SSM GetAutomationExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM GetAutomationExecution \a response.
  */
 void GetAutomationExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void GetAutomationExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::GetAutomationExecutionResponsePrivate
+ * \brief The GetAutomationExecutionResponsePrivate class provides private implementation for GetAutomationExecutionResponse.
  * \internal
  *
- * \class GetAutomationExecutionResponsePrivate
- *
- * \brief Private implementation for GetAutomationExecutionResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAutomationExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAutomationExecutionResponse instance.
+ * Constructs a GetAutomationExecutionResponsePrivate object with public implementation \a q.
  */
 GetAutomationExecutionResponsePrivate::GetAutomationExecutionResponsePrivate(
     GetAutomationExecutionResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ GetAutomationExecutionResponsePrivate::GetAutomationExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM GetAutomationExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM GetAutomationExecution response element from \a xml.
  */
 void GetAutomationExecutionResponsePrivate::parseGetAutomationExecutionResponse(QXmlStreamReader &xml)
 {

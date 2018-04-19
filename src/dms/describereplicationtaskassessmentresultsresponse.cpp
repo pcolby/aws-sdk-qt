@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentResultsResponse
- *
  * \brief The DescribeReplicationTaskAssessmentResultsResponse class provides an interace for DatabaseMigrationService DescribeReplicationTaskAssessmentResults responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeReplicationTaskAssessmentResultsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeReplicationTaskAssessmentResultsResponse::DescribeReplicationTaskAssessmentResultsResponse(
         const DescribeReplicationTaskAssessmentResultsRequest &request,
@@ -66,6 +61,9 @@ DescribeReplicationTaskAssessmentResultsResponse::DescribeReplicationTaskAssessm
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeReplicationTaskAssessmentResultsRequest * DescribeReplicationTaskAssessmentResultsResponse::request() const
 {
     Q_D(const DescribeReplicationTaskAssessmentResultsResponse);
@@ -73,9 +71,8 @@ const DescribeReplicationTaskAssessmentResultsRequest * DescribeReplicationTaskA
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DescribeReplicationTaskAssessmentResults response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DescribeReplicationTaskAssessmentResults \a response.
  */
 void DescribeReplicationTaskAssessmentResultsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeReplicationTaskAssessmentResultsResponse::parseSuccess(QIODevice &r
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentResultsResponsePrivate
+ * \brief The DescribeReplicationTaskAssessmentResultsResponsePrivate class provides private implementation for DescribeReplicationTaskAssessmentResultsResponse.
  * \internal
  *
- * \class DescribeReplicationTaskAssessmentResultsResponsePrivate
- *
- * \brief Private implementation for DescribeReplicationTaskAssessmentResultsResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReplicationTaskAssessmentResultsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeReplicationTaskAssessmentResultsResponse instance.
+ * Constructs a DescribeReplicationTaskAssessmentResultsResponsePrivate object with public implementation \a q.
  */
 DescribeReplicationTaskAssessmentResultsResponsePrivate::DescribeReplicationTaskAssessmentResultsResponsePrivate(
     DescribeReplicationTaskAssessmentResultsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeReplicationTaskAssessmentResultsResponsePrivate::DescribeReplicationTask
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DescribeReplicationTaskAssessmentResultsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DescribeReplicationTaskAssessmentResults response element from \a xml.
  */
 void DescribeReplicationTaskAssessmentResultsResponsePrivate::parseDescribeReplicationTaskAssessmentResultsResponse(QXmlStreamReader &xml)
 {

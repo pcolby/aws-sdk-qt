@@ -29,10 +29,9 @@ namespace Health {
 
 /*!
  * \class QtAws::Health::DescribeEventDetailsResponse
- *
  * \brief The DescribeEventDetailsResponse class provides an interace for Health DescribeEventDetails responses.
  *
- * \ingroup Health
+ * \inmodule QtAwsHealth
  *
  *  <fullname>AWS Health</fullname>
  * 
@@ -100,11 +99,7 @@ namespace Health {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventDetailsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEventDetailsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEventDetailsResponse::DescribeEventDetailsResponse(
         const DescribeEventDetailsRequest &request,
@@ -116,6 +111,9 @@ DescribeEventDetailsResponse::DescribeEventDetailsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEventDetailsRequest * DescribeEventDetailsResponse::request() const
 {
     Q_D(const DescribeEventDetailsResponse);
@@ -123,9 +121,8 @@ const DescribeEventDetailsRequest * DescribeEventDetailsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Health DescribeEventDetails response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Health DescribeEventDetails \a response.
  */
 void DescribeEventDetailsResponse::parseSuccess(QIODevice &response)
 {
@@ -135,19 +132,15 @@ void DescribeEventDetailsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Health::DescribeEventDetailsResponsePrivate
+ * \brief The DescribeEventDetailsResponsePrivate class provides private implementation for DescribeEventDetailsResponse.
  * \internal
  *
- * \class DescribeEventDetailsResponsePrivate
- *
- * \brief Private implementation for DescribeEventDetailsResponse.
+ * \inmodule QtAwsHealth
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventDetailsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEventDetailsResponse instance.
+ * Constructs a DescribeEventDetailsResponsePrivate object with public implementation \a q.
  */
 DescribeEventDetailsResponsePrivate::DescribeEventDetailsResponsePrivate(
     DescribeEventDetailsResponse * const q) : HealthResponsePrivate(q)
@@ -156,9 +149,7 @@ DescribeEventDetailsResponsePrivate::DescribeEventDetailsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Health DescribeEventDetailsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Health DescribeEventDetails response element from \a xml.
  */
 void DescribeEventDetailsResponsePrivate::parseDescribeEventDetailsResponse(QXmlStreamReader &xml)
 {

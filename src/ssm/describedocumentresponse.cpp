@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeDocumentResponse
- *
  * \brief The DescribeDocumentResponse class provides an interace for SSM DescribeDocument responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeDocumentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDocumentResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDocumentResponse::DescribeDocumentResponse(
         const DescribeDocumentRequest &request,
@@ -79,6 +74,9 @@ DescribeDocumentResponse::DescribeDocumentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDocumentRequest * DescribeDocumentResponse::request() const
 {
     Q_D(const DescribeDocumentResponse);
@@ -86,9 +84,8 @@ const DescribeDocumentRequest * DescribeDocumentResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM DescribeDocument response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeDocument \a response.
  */
 void DescribeDocumentResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeDocumentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeDocumentResponsePrivate
+ * \brief The DescribeDocumentResponsePrivate class provides private implementation for DescribeDocumentResponse.
  * \internal
  *
- * \class DescribeDocumentResponsePrivate
- *
- * \brief Private implementation for DescribeDocumentResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDocumentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDocumentResponse instance.
+ * Constructs a DescribeDocumentResponsePrivate object with public implementation \a q.
  */
 DescribeDocumentResponsePrivate::DescribeDocumentResponsePrivate(
     DescribeDocumentResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeDocumentResponsePrivate::DescribeDocumentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DescribeDocumentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeDocument response element from \a xml.
  */
 void DescribeDocumentResponsePrivate::parseDescribeDocumentResponse(QXmlStreamReader &xml)
 {

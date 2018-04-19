@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetJobsResponse : public GlueResponse {
 public:
     GetJobsResponse(const GetJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetJobsRequest * request() const;
+    virtual const GetJobsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetJobsResponse)

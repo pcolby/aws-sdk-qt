@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * DescribeUserRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeUserRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a DescribeUserRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 DescribeUserRequestPrivate::DescribeUserRequestPrivate(
     const WorkMailRequest::Action action, DescribeUserRequest * const q)

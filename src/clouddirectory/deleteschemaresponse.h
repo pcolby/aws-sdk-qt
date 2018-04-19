@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSchemaResponse : public CloudDirectoryResponse {
 public:
     DeleteSchemaResponse(const DeleteSchemaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSchemaRequest * request() const;
+    virtual const DeleteSchemaRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSchemaResponse)

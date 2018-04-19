@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelSpotInstanceRequestsResponse
- *
  * \brief The CancelSpotInstanceRequestsResponse class provides an interace for EC2 CancelSpotInstanceRequests responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelSpotInstanceRequestsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelSpotInstanceRequestsResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelSpotInstanceRequestsResponse::CancelSpotInstanceRequestsResponse(
         const CancelSpotInstanceRequestsRequest &request,
@@ -59,6 +54,9 @@ CancelSpotInstanceRequestsResponse::CancelSpotInstanceRequestsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelSpotInstanceRequestsRequest * CancelSpotInstanceRequestsResponse::request() const
 {
     Q_D(const CancelSpotInstanceRequestsResponse);
@@ -66,9 +64,8 @@ const CancelSpotInstanceRequestsRequest * CancelSpotInstanceRequestsResponse::re
 }
 
 /*!
- * @brief  Parse a EC2 CancelSpotInstanceRequests response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CancelSpotInstanceRequests \a response.
  */
 void CancelSpotInstanceRequestsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CancelSpotInstanceRequestsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CancelSpotInstanceRequestsResponsePrivate
+ * \brief The CancelSpotInstanceRequestsResponsePrivate class provides private implementation for CancelSpotInstanceRequestsResponse.
  * \internal
  *
- * \class CancelSpotInstanceRequestsResponsePrivate
- *
- * \brief Private implementation for CancelSpotInstanceRequestsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelSpotInstanceRequestsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelSpotInstanceRequestsResponse instance.
+ * Constructs a CancelSpotInstanceRequestsResponsePrivate object with public implementation \a q.
  */
 CancelSpotInstanceRequestsResponsePrivate::CancelSpotInstanceRequestsResponsePrivate(
     CancelSpotInstanceRequestsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CancelSpotInstanceRequestsResponsePrivate::CancelSpotInstanceRequestsResponsePri
 }
 
 /*!
- * @brief  Parse an EC2 CancelSpotInstanceRequestsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CancelSpotInstanceRequests response element from \a xml.
  */
 void CancelSpotInstanceRequestsResponsePrivate::parseCancelSpotInstanceRequestsResponse(QXmlStreamReader &xml)
 {

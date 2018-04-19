@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeActivityTypeResponse : public SWFResponse {
 public:
     DescribeActivityTypeResponse(const DescribeActivityTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeActivityTypeRequest * request() const;
+    virtual const DescribeActivityTypeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeActivityTypeResponse)

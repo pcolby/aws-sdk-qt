@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::EnableVpcClassicLinkResponse
- *
  * \brief The EnableVpcClassicLinkResponse class provides an interace for EC2 EnableVpcClassicLink responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new EnableVpcClassicLinkResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableVpcClassicLinkResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableVpcClassicLinkResponse::EnableVpcClassicLinkResponse(
         const EnableVpcClassicLinkRequest &request,
@@ -59,6 +54,9 @@ EnableVpcClassicLinkResponse::EnableVpcClassicLinkResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableVpcClassicLinkRequest * EnableVpcClassicLinkResponse::request() const
 {
     Q_D(const EnableVpcClassicLinkResponse);
@@ -66,9 +64,8 @@ const EnableVpcClassicLinkRequest * EnableVpcClassicLinkResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 EnableVpcClassicLink response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 EnableVpcClassicLink \a response.
  */
 void EnableVpcClassicLinkResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void EnableVpcClassicLinkResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::EnableVpcClassicLinkResponsePrivate
+ * \brief The EnableVpcClassicLinkResponsePrivate class provides private implementation for EnableVpcClassicLinkResponse.
  * \internal
  *
- * \class EnableVpcClassicLinkResponsePrivate
- *
- * \brief Private implementation for EnableVpcClassicLinkResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableVpcClassicLinkResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableVpcClassicLinkResponse instance.
+ * Constructs a EnableVpcClassicLinkResponsePrivate object with public implementation \a q.
  */
 EnableVpcClassicLinkResponsePrivate::EnableVpcClassicLinkResponsePrivate(
     EnableVpcClassicLinkResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ EnableVpcClassicLinkResponsePrivate::EnableVpcClassicLinkResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 EnableVpcClassicLinkResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 EnableVpcClassicLink response element from \a xml.
  */
 void EnableVpcClassicLinkResponsePrivate::parseEnableVpcClassicLinkResponse(QXmlStreamReader &xml)
 {

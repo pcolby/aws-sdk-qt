@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketLifecycleResponse
- *
  * \brief The GetBucketLifecycleResponse class provides an interace for S3 GetBucketLifecycle responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketLifecycle
  */
 
 /*!
- * @brief  Constructs a new GetBucketLifecycleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBucketLifecycleResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBucketLifecycleResponse::GetBucketLifecycleResponse(
         const GetBucketLifecycleRequest &request,
@@ -55,6 +50,9 @@ GetBucketLifecycleResponse::GetBucketLifecycleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBucketLifecycleRequest * GetBucketLifecycleResponse::request() const
 {
     Q_D(const GetBucketLifecycleResponse);
@@ -62,9 +60,8 @@ const GetBucketLifecycleRequest * GetBucketLifecycleResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 GetBucketLifecycle response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetBucketLifecycle \a response.
  */
 void GetBucketLifecycleResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBucketLifecycleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetBucketLifecycleResponsePrivate
+ * \brief The GetBucketLifecycleResponsePrivate class provides private implementation for GetBucketLifecycleResponse.
  * \internal
  *
- * \class GetBucketLifecycleResponsePrivate
- *
- * \brief Private implementation for GetBucketLifecycleResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketLifecycleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBucketLifecycleResponse instance.
+ * Constructs a GetBucketLifecycleResponsePrivate object with public implementation \a q.
  */
 GetBucketLifecycleResponsePrivate::GetBucketLifecycleResponsePrivate(
     GetBucketLifecycleResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBucketLifecycleResponsePrivate::GetBucketLifecycleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 GetBucketLifecycleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetBucketLifecycle response element from \a xml.
  */
 void GetBucketLifecycleResponsePrivate::parseGetBucketLifecycleResponse(QXmlStreamReader &xml)
 {

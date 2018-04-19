@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetApnsVoipChannelResponse
- *
  * \brief The GetApnsVoipChannelResponse class provides an interace for Pinpoint GetApnsVoipChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getApnsVoipChannel
  */
 
 /*!
- * @brief  Constructs a new GetApnsVoipChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetApnsVoipChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 GetApnsVoipChannelResponse::GetApnsVoipChannelResponse(
         const GetApnsVoipChannelRequest &request,
@@ -55,6 +50,9 @@ GetApnsVoipChannelResponse::GetApnsVoipChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetApnsVoipChannelRequest * GetApnsVoipChannelResponse::request() const
 {
     Q_D(const GetApnsVoipChannelResponse);
@@ -62,9 +60,8 @@ const GetApnsVoipChannelRequest * GetApnsVoipChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetApnsVoipChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetApnsVoipChannel \a response.
  */
 void GetApnsVoipChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetApnsVoipChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetApnsVoipChannelResponsePrivate
+ * \brief The GetApnsVoipChannelResponsePrivate class provides private implementation for GetApnsVoipChannelResponse.
  * \internal
  *
- * \class GetApnsVoipChannelResponsePrivate
- *
- * \brief Private implementation for GetApnsVoipChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApnsVoipChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetApnsVoipChannelResponse instance.
+ * Constructs a GetApnsVoipChannelResponsePrivate object with public implementation \a q.
  */
 GetApnsVoipChannelResponsePrivate::GetApnsVoipChannelResponsePrivate(
     GetApnsVoipChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetApnsVoipChannelResponsePrivate::GetApnsVoipChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetApnsVoipChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetApnsVoipChannel response element from \a xml.
  */
 void GetApnsVoipChannelResponsePrivate::parseGetApnsVoipChannelResponse(QXmlStreamReader &xml)
 {

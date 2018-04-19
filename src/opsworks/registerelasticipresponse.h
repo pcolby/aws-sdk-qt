@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterElasticIpResponse : public OpsWorksResponse {
 public:
     RegisterElasticIpResponse(const RegisterElasticIpRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterElasticIpRequest * request() const;
+    virtual const RegisterElasticIpRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterElasticIpResponse)

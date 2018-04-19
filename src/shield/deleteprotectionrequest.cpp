@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeleteProtectionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteProtectionRequestPrivate object for Shield \a action with,
- * public implementation \a q.
+ * Constructs a DeleteProtectionRequestPrivate object for Shield \a action,
+ * with public implementation \a q.
  */
 DeleteProtectionRequestPrivate::DeleteProtectionRequestPrivate(
     const ShieldRequest::Action action, DeleteProtectionRequest * const q)

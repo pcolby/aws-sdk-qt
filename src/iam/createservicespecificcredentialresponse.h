@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateServiceSpecificCredentialResponse : public IAMResponse 
 public:
     CreateServiceSpecificCredentialResponse(const CreateServiceSpecificCredentialRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateServiceSpecificCredentialRequest * request() const;
+    virtual const CreateServiceSpecificCredentialRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateServiceSpecificCredentialResponse)

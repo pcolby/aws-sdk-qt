@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CancelCertificateTransferRequest::response(QN
  */
 
 /*!
- *
- * Constructs a CancelCertificateTransferRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a CancelCertificateTransferRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 CancelCertificateTransferRequestPrivate::CancelCertificateTransferRequestPrivate(
     const IoTRequest::Action action, CancelCertificateTransferRequest * const q)

@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * InitiateDocumentVersionUploadRequest::respons
  */
 
 /*!
- *
- * Constructs a InitiateDocumentVersionUploadRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a InitiateDocumentVersionUploadRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 InitiateDocumentVersionUploadRequestPrivate::InitiateDocumentVersionUploadRequestPrivate(
     const WorkDocsRequest::Action action, InitiateDocumentVersionUploadRequest * const q)

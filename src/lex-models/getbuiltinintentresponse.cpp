@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetBuiltinIntentResponse
- *
  * \brief The GetBuiltinIntentResponse class provides an interace for LexModelBuildingService GetBuiltinIntent responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetBuiltinIntentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBuiltinIntentResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBuiltinIntentResponse::GetBuiltinIntentResponse(
         const GetBuiltinIntentRequest &request,
@@ -59,6 +54,9 @@ GetBuiltinIntentResponse::GetBuiltinIntentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBuiltinIntentRequest * GetBuiltinIntentResponse::request() const
 {
     Q_D(const GetBuiltinIntentResponse);
@@ -66,9 +64,8 @@ const GetBuiltinIntentRequest * GetBuiltinIntentResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService GetBuiltinIntent response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService GetBuiltinIntent \a response.
  */
 void GetBuiltinIntentResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetBuiltinIntentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::GetBuiltinIntentResponsePrivate
+ * \brief The GetBuiltinIntentResponsePrivate class provides private implementation for GetBuiltinIntentResponse.
  * \internal
  *
- * \class GetBuiltinIntentResponsePrivate
- *
- * \brief Private implementation for GetBuiltinIntentResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBuiltinIntentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBuiltinIntentResponse instance.
+ * Constructs a GetBuiltinIntentResponsePrivate object with public implementation \a q.
  */
 GetBuiltinIntentResponsePrivate::GetBuiltinIntentResponsePrivate(
     GetBuiltinIntentResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ GetBuiltinIntentResponsePrivate::GetBuiltinIntentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService GetBuiltinIntentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService GetBuiltinIntent response element from \a xml.
  */
 void GetBuiltinIntentResponsePrivate::parseGetBuiltinIntentResponse(QXmlStreamReader &xml)
 {

@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeMaintenanceWindowTargetsRequest::resp
  */
 
 /*!
- *
- * Constructs a DescribeMaintenanceWindowTargetsRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeMaintenanceWindowTargetsRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeMaintenanceWindowTargetsRequestPrivate::DescribeMaintenanceWindowTargetsRequestPrivate(
     const SSMRequest::Action action, DescribeMaintenanceWindowTargetsRequest * const q)

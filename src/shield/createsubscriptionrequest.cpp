@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriptionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateSubscriptionRequestPrivate object for Shield \a action with,
- * public implementation \a q.
+ * Constructs a CreateSubscriptionRequestPrivate object for Shield \a action,
+ * with public implementation \a q.
  */
 CreateSubscriptionRequestPrivate::CreateSubscriptionRequestPrivate(
     const ShieldRequest::Action action, CreateSubscriptionRequest * const q)

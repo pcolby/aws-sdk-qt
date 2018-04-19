@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * PurchaseProvisionedCapacityRequest::response(
  */
 
 /*!
- *
- * Constructs a PurchaseProvisionedCapacityRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a PurchaseProvisionedCapacityRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 PurchaseProvisionedCapacityRequestPrivate::PurchaseProvisionedCapacityRequestPrivate(
     const GlacierRequest::Action action, PurchaseProvisionedCapacityRequest * const q)

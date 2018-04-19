@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBucketEncryptionResponse : public S3Response {
 public:
     DeleteBucketEncryptionResponse(const DeleteBucketEncryptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBucketEncryptionRequest * request() const;
+    virtual const DeleteBucketEncryptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBucketEncryptionResponse)

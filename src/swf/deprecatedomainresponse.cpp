@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::DeprecateDomainResponse
- *
  * \brief The DeprecateDomainResponse class provides an interace for SWF DeprecateDomain responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new DeprecateDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeprecateDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 DeprecateDomainResponse::DeprecateDomainResponse(
         const DeprecateDomainRequest &request,
@@ -71,6 +66,9 @@ DeprecateDomainResponse::DeprecateDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeprecateDomainRequest * DeprecateDomainResponse::request() const
 {
     Q_D(const DeprecateDomainResponse);
@@ -78,9 +76,8 @@ const DeprecateDomainRequest * DeprecateDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a SWF DeprecateDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF DeprecateDomain \a response.
  */
 void DeprecateDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DeprecateDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::DeprecateDomainResponsePrivate
+ * \brief The DeprecateDomainResponsePrivate class provides private implementation for DeprecateDomainResponse.
  * \internal
  *
- * \class DeprecateDomainResponsePrivate
- *
- * \brief Private implementation for DeprecateDomainResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeprecateDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeprecateDomainResponse instance.
+ * Constructs a DeprecateDomainResponsePrivate object with public implementation \a q.
  */
 DeprecateDomainResponsePrivate::DeprecateDomainResponsePrivate(
     DeprecateDomainResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ DeprecateDomainResponsePrivate::DeprecateDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF DeprecateDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF DeprecateDomain response element from \a xml.
  */
 void DeprecateDomainResponsePrivate::parseDeprecateDomainResponse(QXmlStreamReader &xml)
 {

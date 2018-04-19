@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeleteStackResponse
- *
  * \brief The DeleteStackResponse class provides an interace for OpsWorks DeleteStack responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeleteStackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteStackResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteStackResponse::DeleteStackResponse(
         const DeleteStackRequest &request,
@@ -161,6 +156,9 @@ DeleteStackResponse::DeleteStackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteStackRequest * DeleteStackResponse::request() const
 {
     Q_D(const DeleteStackResponse);
@@ -168,9 +166,8 @@ const DeleteStackRequest * DeleteStackResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DeleteStack response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DeleteStack \a response.
  */
 void DeleteStackResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DeleteStackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DeleteStackResponsePrivate
+ * \brief The DeleteStackResponsePrivate class provides private implementation for DeleteStackResponse.
  * \internal
  *
- * \class DeleteStackResponsePrivate
- *
- * \brief Private implementation for DeleteStackResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteStackResponse instance.
+ * Constructs a DeleteStackResponsePrivate object with public implementation \a q.
  */
 DeleteStackResponsePrivate::DeleteStackResponsePrivate(
     DeleteStackResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DeleteStackResponsePrivate::DeleteStackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DeleteStackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DeleteStack response element from \a xml.
  */
 void DeleteStackResponsePrivate::parseDeleteStackResponse(QXmlStreamReader &xml)
 {

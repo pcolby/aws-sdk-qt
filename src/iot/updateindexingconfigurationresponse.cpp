@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateIndexingConfigurationResponse
- *
  * \brief The UpdateIndexingConfigurationResponse class provides an interace for IoT UpdateIndexingConfiguration responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateIndexingConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateIndexingConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateIndexingConfigurationResponse::UpdateIndexingConfigurationResponse(
         const UpdateIndexingConfigurationRequest &request,
@@ -66,6 +61,9 @@ UpdateIndexingConfigurationResponse::UpdateIndexingConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateIndexingConfigurationRequest * UpdateIndexingConfigurationResponse::request() const
 {
     Q_D(const UpdateIndexingConfigurationResponse);
@@ -73,9 +71,8 @@ const UpdateIndexingConfigurationRequest * UpdateIndexingConfigurationResponse::
 }
 
 /*!
- * @brief  Parse a IoT UpdateIndexingConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT UpdateIndexingConfiguration \a response.
  */
 void UpdateIndexingConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateIndexingConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::UpdateIndexingConfigurationResponsePrivate
+ * \brief The UpdateIndexingConfigurationResponsePrivate class provides private implementation for UpdateIndexingConfigurationResponse.
  * \internal
  *
- * \class UpdateIndexingConfigurationResponsePrivate
- *
- * \brief Private implementation for UpdateIndexingConfigurationResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateIndexingConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateIndexingConfigurationResponse instance.
+ * Constructs a UpdateIndexingConfigurationResponsePrivate object with public implementation \a q.
  */
 UpdateIndexingConfigurationResponsePrivate::UpdateIndexingConfigurationResponsePrivate(
     UpdateIndexingConfigurationResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateIndexingConfigurationResponsePrivate::UpdateIndexingConfigurationResponseP
 }
 
 /*!
- * @brief  Parse an IoT UpdateIndexingConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT UpdateIndexingConfiguration response element from \a xml.
  */
 void UpdateIndexingConfigurationResponsePrivate::parseUpdateIndexingConfigurationResponse(QXmlStreamReader &xml)
 {

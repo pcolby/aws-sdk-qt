@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetReservationUtilizationResponse : public CostExplorerRespon
 public:
     GetReservationUtilizationResponse(const GetReservationUtilizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetReservationUtilizationRequest * request() const;
+    virtual const GetReservationUtilizationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetReservationUtilizationResponse)

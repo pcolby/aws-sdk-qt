@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeCustomerGatewaysResponse
- *
  * \brief The DescribeCustomerGatewaysResponse class provides an interace for EC2 DescribeCustomerGateways responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeCustomerGatewaysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCustomerGatewaysResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCustomerGatewaysResponse::DescribeCustomerGatewaysResponse(
         const DescribeCustomerGatewaysRequest &request,
@@ -59,6 +54,9 @@ DescribeCustomerGatewaysResponse::DescribeCustomerGatewaysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCustomerGatewaysRequest * DescribeCustomerGatewaysResponse::request() const
 {
     Q_D(const DescribeCustomerGatewaysResponse);
@@ -66,9 +64,8 @@ const DescribeCustomerGatewaysRequest * DescribeCustomerGatewaysResponse::reques
 }
 
 /*!
- * @brief  Parse a EC2 DescribeCustomerGateways response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeCustomerGateways \a response.
  */
 void DescribeCustomerGatewaysResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeCustomerGatewaysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeCustomerGatewaysResponsePrivate
+ * \brief The DescribeCustomerGatewaysResponsePrivate class provides private implementation for DescribeCustomerGatewaysResponse.
  * \internal
  *
- * \class DescribeCustomerGatewaysResponsePrivate
- *
- * \brief Private implementation for DescribeCustomerGatewaysResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCustomerGatewaysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCustomerGatewaysResponse instance.
+ * Constructs a DescribeCustomerGatewaysResponsePrivate object with public implementation \a q.
  */
 DescribeCustomerGatewaysResponsePrivate::DescribeCustomerGatewaysResponsePrivate(
     DescribeCustomerGatewaysResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeCustomerGatewaysResponsePrivate::DescribeCustomerGatewaysResponsePrivate
 }
 
 /*!
- * @brief  Parse an EC2 DescribeCustomerGatewaysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeCustomerGateways response element from \a xml.
  */
 void DescribeCustomerGatewaysResponsePrivate::parseDescribeCustomerGatewaysResponse(QXmlStreamReader &xml)
 {

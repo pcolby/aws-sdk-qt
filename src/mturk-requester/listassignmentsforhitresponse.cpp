@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListAssignmentsForHITResponse
- *
  * \brief The ListAssignmentsForHITResponse class provides an interace for MTurk ListAssignmentsForHIT responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listAssignmentsForHIT
  */
 
 /*!
- * @brief  Constructs a new ListAssignmentsForHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAssignmentsForHITResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAssignmentsForHITResponse::ListAssignmentsForHITResponse(
         const ListAssignmentsForHITRequest &request,
@@ -55,6 +50,9 @@ ListAssignmentsForHITResponse::ListAssignmentsForHITResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAssignmentsForHITRequest * ListAssignmentsForHITResponse::request() const
 {
     Q_D(const ListAssignmentsForHITResponse);
@@ -62,9 +60,8 @@ const ListAssignmentsForHITRequest * ListAssignmentsForHITResponse::request() co
 }
 
 /*!
- * @brief  Parse a MTurk ListAssignmentsForHIT response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk ListAssignmentsForHIT \a response.
  */
 void ListAssignmentsForHITResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListAssignmentsForHITResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::ListAssignmentsForHITResponsePrivate
+ * \brief The ListAssignmentsForHITResponsePrivate class provides private implementation for ListAssignmentsForHITResponse.
  * \internal
  *
- * \class ListAssignmentsForHITResponsePrivate
- *
- * \brief Private implementation for ListAssignmentsForHITResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssignmentsForHITResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAssignmentsForHITResponse instance.
+ * Constructs a ListAssignmentsForHITResponsePrivate object with public implementation \a q.
  */
 ListAssignmentsForHITResponsePrivate::ListAssignmentsForHITResponsePrivate(
     ListAssignmentsForHITResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ ListAssignmentsForHITResponsePrivate::ListAssignmentsForHITResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk ListAssignmentsForHITResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk ListAssignmentsForHIT response element from \a xml.
  */
 void ListAssignmentsForHITResponsePrivate::parseListAssignmentsForHITResponse(QXmlStreamReader &xml)
 {

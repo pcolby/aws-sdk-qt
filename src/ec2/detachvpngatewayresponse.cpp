@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DetachVpnGatewayResponse
- *
  * \brief The DetachVpnGatewayResponse class provides an interace for EC2 DetachVpnGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DetachVpnGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachVpnGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachVpnGatewayResponse::DetachVpnGatewayResponse(
         const DetachVpnGatewayRequest &request,
@@ -59,6 +54,9 @@ DetachVpnGatewayResponse::DetachVpnGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachVpnGatewayRequest * DetachVpnGatewayResponse::request() const
 {
     Q_D(const DetachVpnGatewayResponse);
@@ -66,9 +64,8 @@ const DetachVpnGatewayRequest * DetachVpnGatewayResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DetachVpnGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DetachVpnGateway \a response.
  */
 void DetachVpnGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DetachVpnGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DetachVpnGatewayResponsePrivate
+ * \brief The DetachVpnGatewayResponsePrivate class provides private implementation for DetachVpnGatewayResponse.
  * \internal
  *
- * \class DetachVpnGatewayResponsePrivate
- *
- * \brief Private implementation for DetachVpnGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachVpnGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachVpnGatewayResponse instance.
+ * Constructs a DetachVpnGatewayResponsePrivate object with public implementation \a q.
  */
 DetachVpnGatewayResponsePrivate::DetachVpnGatewayResponsePrivate(
     DetachVpnGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DetachVpnGatewayResponsePrivate::DetachVpnGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DetachVpnGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DetachVpnGateway response element from \a xml.
  */
 void DetachVpnGatewayResponsePrivate::parseDetachVpnGatewayResponse(QXmlStreamReader &xml)
 {

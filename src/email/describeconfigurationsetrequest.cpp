@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationSetRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeConfigurationSetRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a DescribeConfigurationSetRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 DescribeConfigurationSetRequestPrivate::DescribeConfigurationSetRequestPrivate(
     const SESRequest::Action action, DescribeConfigurationSetRequest * const q)

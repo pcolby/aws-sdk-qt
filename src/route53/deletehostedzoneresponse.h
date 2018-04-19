@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteHostedZoneResponse : public Route53Response {
 public:
     DeleteHostedZoneResponse(const DeleteHostedZoneRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteHostedZoneRequest * request() const;
+    virtual const DeleteHostedZoneRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteHostedZoneResponse)

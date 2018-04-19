@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSubscriptionDefinitionResponse : public GreengrassResponse
 public:
     GetSubscriptionDefinitionResponse(const GetSubscriptionDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSubscriptionDefinitionRequest * request() const;
+    virtual const GetSubscriptionDefinitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSubscriptionDefinitionResponse)

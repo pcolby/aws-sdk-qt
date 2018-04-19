@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeTargetGroupAttributesResponse
- *
  * \brief The DescribeTargetGroupAttributesResponse class provides an interace for ElasticLoadBalancingv2 DescribeTargetGroupAttributes responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeTargetGroupAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTargetGroupAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTargetGroupAttributesResponse::DescribeTargetGroupAttributesResponse(
         const DescribeTargetGroupAttributesRequest &request,
@@ -123,6 +118,9 @@ DescribeTargetGroupAttributesResponse::DescribeTargetGroupAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTargetGroupAttributesRequest * DescribeTargetGroupAttributesResponse::request() const
 {
     Q_D(const DescribeTargetGroupAttributesResponse);
@@ -130,9 +128,8 @@ const DescribeTargetGroupAttributesRequest * DescribeTargetGroupAttributesRespon
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DescribeTargetGroupAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DescribeTargetGroupAttributes \a response.
  */
 void DescribeTargetGroupAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeTargetGroupAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DescribeTargetGroupAttributesResponsePrivate
+ * \brief The DescribeTargetGroupAttributesResponsePrivate class provides private implementation for DescribeTargetGroupAttributesResponse.
  * \internal
  *
- * \class DescribeTargetGroupAttributesResponsePrivate
- *
- * \brief Private implementation for DescribeTargetGroupAttributesResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTargetGroupAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTargetGroupAttributesResponse instance.
+ * Constructs a DescribeTargetGroupAttributesResponsePrivate object with public implementation \a q.
  */
 DescribeTargetGroupAttributesResponsePrivate::DescribeTargetGroupAttributesResponsePrivate(
     DescribeTargetGroupAttributesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeTargetGroupAttributesResponsePrivate::DescribeTargetGroupAttributesRespo
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DescribeTargetGroupAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DescribeTargetGroupAttributes response element from \a xml.
  */
 void DescribeTargetGroupAttributesResponsePrivate::parseDescribeTargetGroupAttributesResponse(QXmlStreamReader &xml)
 {

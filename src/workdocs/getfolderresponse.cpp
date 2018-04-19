@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::GetFolderResponse
- *
  * \brief The GetFolderResponse class provides an interace for WorkDocs GetFolder responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new GetFolderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFolderResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFolderResponse::GetFolderResponse(
         const GetFolderRequest &request,
@@ -84,6 +79,9 @@ GetFolderResponse::GetFolderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFolderRequest * GetFolderResponse::request() const
 {
     Q_D(const GetFolderResponse);
@@ -91,9 +89,8 @@ const GetFolderRequest * GetFolderResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs GetFolder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs GetFolder \a response.
  */
 void GetFolderResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void GetFolderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::GetFolderResponsePrivate
+ * \brief The GetFolderResponsePrivate class provides private implementation for GetFolderResponse.
  * \internal
  *
- * \class GetFolderResponsePrivate
- *
- * \brief Private implementation for GetFolderResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFolderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFolderResponse instance.
+ * Constructs a GetFolderResponsePrivate object with public implementation \a q.
  */
 GetFolderResponsePrivate::GetFolderResponsePrivate(
     GetFolderResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ GetFolderResponsePrivate::GetFolderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs GetFolderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs GetFolder response element from \a xml.
  */
 void GetFolderResponsePrivate::parseGetFolderResponse(QXmlStreamReader &xml)
 {

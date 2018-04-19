@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationTaskAssessmentResultsReque
  */
 
 /*!
- *
- * Constructs a DescribeReplicationTaskAssessmentResultsRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeReplicationTaskAssessmentResultsRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DescribeReplicationTaskAssessmentResultsRequestPrivate::DescribeReplicationTaskAssessmentResultsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeReplicationTaskAssessmentResultsRequest * const q)

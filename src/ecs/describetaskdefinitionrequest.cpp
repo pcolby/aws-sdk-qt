@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTaskDefinitionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeTaskDefinitionRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTaskDefinitionRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 DescribeTaskDefinitionRequestPrivate::DescribeTaskDefinitionRequestPrivate(
     const ECSRequest::Action action, DescribeTaskDefinitionRequest * const q)

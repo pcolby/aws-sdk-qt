@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDefaultBranchRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a UpdateDefaultBranchRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDefaultBranchRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 UpdateDefaultBranchRequestPrivate::UpdateDefaultBranchRequestPrivate(
     const CodeCommitRequest::Action action, UpdateDefaultBranchRequest * const q)

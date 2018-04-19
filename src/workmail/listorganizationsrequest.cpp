@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * ListOrganizationsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListOrganizationsRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a ListOrganizationsRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 ListOrganizationsRequestPrivate::ListOrganizationsRequestPrivate(
     const WorkMailRequest::Action action, ListOrganizationsRequest * const q)

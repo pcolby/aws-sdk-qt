@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateXssMatchSetResponse : public WAFRegionalResponse {
 public:
     UpdateXssMatchSetResponse(const UpdateXssMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateXssMatchSetRequest * request() const;
+    virtual const UpdateXssMatchSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateXssMatchSetResponse)

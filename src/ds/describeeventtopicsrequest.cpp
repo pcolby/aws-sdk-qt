@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventTopicsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeEventTopicsRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventTopicsRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 DescribeEventTopicsRequestPrivate::DescribeEventTopicsRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeEventTopicsRequest * const q)

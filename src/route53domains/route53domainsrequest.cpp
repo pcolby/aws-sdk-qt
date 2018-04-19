@@ -63,7 +63,7 @@ namespace Route53Domains {
  */
 
 /*!
- * Constructs a[n] Route53DomainsRequest object for Route53Domains \a action.
+ * Constructs a Route53DomainsRequest object for Route53Domains \a action.
  */
 Route53DomainsRequest::Route53DomainsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new Route53DomainsRequestPrivate(action, this))
@@ -263,8 +263,8 @@ QNetworkRequest Route53DomainsRequest::unsignedRequest(const QUrl &endpoint) con
  */
 
 /*!
- * Constructs a Route53DomainsRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a Route53DomainsRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 Route53DomainsRequestPrivate::Route53DomainsRequestPrivate(const Route53DomainsRequest::Action action, Route53DomainsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

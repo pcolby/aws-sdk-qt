@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteUserDefinedFunctionRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DeleteUserDefinedFunctionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a DeleteUserDefinedFunctionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 DeleteUserDefinedFunctionRequestPrivate::DeleteUserDefinedFunctionRequestPrivate(
     const GlueRequest::Action action, DeleteUserDefinedFunctionRequest * const q)

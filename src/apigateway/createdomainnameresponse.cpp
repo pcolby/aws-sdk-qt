@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateDomainNameResponse
- *
  * \brief The CreateDomainNameResponse class provides an interace for APIGateway CreateDomainName responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateDomainNameResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDomainNameResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDomainNameResponse::CreateDomainNameResponse(
         const CreateDomainNameRequest &request,
@@ -60,6 +55,9 @@ CreateDomainNameResponse::CreateDomainNameResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDomainNameRequest * CreateDomainNameResponse::request() const
 {
     Q_D(const CreateDomainNameResponse);
@@ -67,9 +65,8 @@ const CreateDomainNameRequest * CreateDomainNameResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway CreateDomainName response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway CreateDomainName \a response.
  */
 void CreateDomainNameResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateDomainNameResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::CreateDomainNameResponsePrivate
+ * \brief The CreateDomainNameResponsePrivate class provides private implementation for CreateDomainNameResponse.
  * \internal
  *
- * \class CreateDomainNameResponsePrivate
- *
- * \brief Private implementation for CreateDomainNameResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDomainNameResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDomainNameResponse instance.
+ * Constructs a CreateDomainNameResponsePrivate object with public implementation \a q.
  */
 CreateDomainNameResponsePrivate::CreateDomainNameResponsePrivate(
     CreateDomainNameResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateDomainNameResponsePrivate::CreateDomainNameResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway CreateDomainNameResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway CreateDomainName response element from \a xml.
  */
 void CreateDomainNameResponsePrivate::parseCreateDomainNameResponse(QXmlStreamReader &xml)
 {

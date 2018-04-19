@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateTemplateResponse
- *
  * \brief The CreateTemplateResponse class provides an interace for SES CreateTemplate responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTemplateResponse::CreateTemplateResponse(
         const CreateTemplateRequest &request,
@@ -66,6 +61,9 @@ CreateTemplateResponse::CreateTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTemplateRequest * CreateTemplateResponse::request() const
 {
     Q_D(const CreateTemplateResponse);
@@ -73,9 +71,8 @@ const CreateTemplateRequest * CreateTemplateResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES CreateTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES CreateTemplate \a response.
  */
 void CreateTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::CreateTemplateResponsePrivate
+ * \brief The CreateTemplateResponsePrivate class provides private implementation for CreateTemplateResponse.
  * \internal
  *
- * \class CreateTemplateResponsePrivate
- *
- * \brief Private implementation for CreateTemplateResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTemplateResponse instance.
+ * Constructs a CreateTemplateResponsePrivate object with public implementation \a q.
  */
 CreateTemplateResponsePrivate::CreateTemplateResponsePrivate(
     CreateTemplateResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateTemplateResponsePrivate::CreateTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES CreateTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES CreateTemplate response element from \a xml.
  */
 void CreateTemplateResponsePrivate::parseCreateTemplateResponse(QXmlStreamReader &xml)
 {

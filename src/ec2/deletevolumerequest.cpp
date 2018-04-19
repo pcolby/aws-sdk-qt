@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVolumeRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteVolumeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVolumeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
     const EC2Request::Action action, DeleteVolumeRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateLayerResponse : public OpsWorksResponse {
 public:
     UpdateLayerResponse(const UpdateLayerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateLayerRequest * request() const;
+    virtual const UpdateLayerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateLayerResponse)

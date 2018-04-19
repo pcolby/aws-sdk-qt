@@ -34,10 +34,10 @@ class QTAWS_EXPORT TestInvokeAuthorizerResponse : public APIGatewayResponse {
 public:
     TestInvokeAuthorizerResponse(const TestInvokeAuthorizerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TestInvokeAuthorizerRequest * request() const;
+    virtual const TestInvokeAuthorizerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TestInvokeAuthorizerResponse)

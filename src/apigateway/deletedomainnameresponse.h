@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDomainNameResponse : public APIGatewayResponse {
 public:
     DeleteDomainNameResponse(const DeleteDomainNameRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDomainNameRequest * request() const;
+    virtual const DeleteDomainNameRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDomainNameResponse)

@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::StopUserImportJobResponse
- *
  * \brief The StopUserImportJobResponse class provides an interace for CognitoIdentityProvider StopUserImportJob responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new StopUserImportJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopUserImportJobResponse object for \a reply to \a request, with parent \a parent.
  */
 StopUserImportJobResponse::StopUserImportJobResponse(
         const StopUserImportJobRequest &request,
@@ -65,6 +60,9 @@ StopUserImportJobResponse::StopUserImportJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopUserImportJobRequest * StopUserImportJobResponse::request() const
 {
     Q_D(const StopUserImportJobResponse);
@@ -72,9 +70,8 @@ const StopUserImportJobRequest * StopUserImportJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider StopUserImportJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider StopUserImportJob \a response.
  */
 void StopUserImportJobResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void StopUserImportJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::StopUserImportJobResponsePrivate
+ * \brief The StopUserImportJobResponsePrivate class provides private implementation for StopUserImportJobResponse.
  * \internal
  *
- * \class StopUserImportJobResponsePrivate
- *
- * \brief Private implementation for StopUserImportJobResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopUserImportJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopUserImportJobResponse instance.
+ * Constructs a StopUserImportJobResponsePrivate object with public implementation \a q.
  */
 StopUserImportJobResponsePrivate::StopUserImportJobResponsePrivate(
     StopUserImportJobResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ StopUserImportJobResponsePrivate::StopUserImportJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider StopUserImportJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider StopUserImportJob response element from \a xml.
  */
 void StopUserImportJobResponsePrivate::parseStopUserImportJobResponse(QXmlStreamReader &xml)
 {

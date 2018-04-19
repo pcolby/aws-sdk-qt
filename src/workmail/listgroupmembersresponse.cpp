@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListGroupMembersResponse
- *
  * \brief The ListGroupMembersResponse class provides an interace for WorkMail ListGroupMembers responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListGroupMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGroupMembersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGroupMembersResponse::ListGroupMembersResponse(
         const ListGroupMembersRequest &request,
@@ -88,6 +83,9 @@ ListGroupMembersResponse::ListGroupMembersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGroupMembersRequest * ListGroupMembersResponse::request() const
 {
     Q_D(const ListGroupMembersResponse);
@@ -95,9 +93,8 @@ const ListGroupMembersRequest * ListGroupMembersResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail ListGroupMembers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail ListGroupMembers \a response.
  */
 void ListGroupMembersResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void ListGroupMembersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::ListGroupMembersResponsePrivate
+ * \brief The ListGroupMembersResponsePrivate class provides private implementation for ListGroupMembersResponse.
  * \internal
  *
- * \class ListGroupMembersResponsePrivate
- *
- * \brief Private implementation for ListGroupMembersResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupMembersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGroupMembersResponse instance.
+ * Constructs a ListGroupMembersResponsePrivate object with public implementation \a q.
  */
 ListGroupMembersResponsePrivate::ListGroupMembersResponsePrivate(
     ListGroupMembersResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ ListGroupMembersResponsePrivate::ListGroupMembersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail ListGroupMembersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail ListGroupMembers response element from \a xml.
  */
 void ListGroupMembersResponsePrivate::parseListGroupMembersResponse(QXmlStreamReader &xml)
 {

@@ -161,9 +161,8 @@ QtAws::Core::AwsAbstractResponse * UpdateProjectRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateProjectRequestPrivate object for CodeBuild \a action with,
- * public implementation \a q.
+ * Constructs a UpdateProjectRequestPrivate object for CodeBuild \a action,
+ * with public implementation \a q.
  */
 UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
     const CodeBuildRequest::Action action, UpdateProjectRequest * const q)

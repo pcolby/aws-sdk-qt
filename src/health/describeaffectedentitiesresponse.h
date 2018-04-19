@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAffectedEntitiesResponse : public HealthResponse {
 public:
     DescribeAffectedEntitiesResponse(const DescribeAffectedEntitiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAffectedEntitiesRequest * request() const;
+    virtual const DescribeAffectedEntitiesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAffectedEntitiesResponse)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StopContactRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a StopContactRequestPrivate object for Connect \a action with,
- * public implementation \a q.
+ * Constructs a StopContactRequestPrivate object for Connect \a action,
+ * with public implementation \a q.
  */
 StopContactRequestPrivate::StopContactRequestPrivate(
     const ConnectRequest::Action action, StopContactRequest * const q)

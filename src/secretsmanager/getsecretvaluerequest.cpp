@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * GetSecretValueRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetSecretValueRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a GetSecretValueRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 GetSecretValueRequestPrivate::GetSecretValueRequestPrivate(
     const SecretsManagerRequest::Action action, GetSecretValueRequest * const q)

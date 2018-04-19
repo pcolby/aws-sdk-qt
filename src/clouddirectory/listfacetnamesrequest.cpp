@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListFacetNamesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListFacetNamesRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a ListFacetNamesRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 ListFacetNamesRequestPrivate::ListFacetNamesRequestPrivate(
     const CloudDirectoryRequest::Action action, ListFacetNamesRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT RebuildEnvironmentResponse : public ElasticBeanstalkResponse 
 public:
     RebuildEnvironmentResponse(const RebuildEnvironmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RebuildEnvironmentRequest * request() const;
+    virtual const RebuildEnvironmentRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RebuildEnvironmentResponse)

@@ -29,21 +29,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::CreateReplicationJobResponse
- *
  * \brief The CreateReplicationJobResponse class provides an interace for SMS CreateReplicationJob responses.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::createReplicationJob
  */
 
 /*!
- * @brief  Constructs a new CreateReplicationJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateReplicationJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateReplicationJobResponse::CreateReplicationJobResponse(
         const CreateReplicationJobRequest &request,
@@ -55,6 +50,9 @@ CreateReplicationJobResponse::CreateReplicationJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateReplicationJobRequest * CreateReplicationJobResponse::request() const
 {
     Q_D(const CreateReplicationJobResponse);
@@ -62,9 +60,8 @@ const CreateReplicationJobRequest * CreateReplicationJobResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SMS CreateReplicationJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SMS CreateReplicationJob \a response.
  */
 void CreateReplicationJobResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateReplicationJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SMS::CreateReplicationJobResponsePrivate
+ * \brief The CreateReplicationJobResponsePrivate class provides private implementation for CreateReplicationJobResponse.
  * \internal
  *
- * \class CreateReplicationJobResponsePrivate
- *
- * \brief Private implementation for CreateReplicationJobResponse.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReplicationJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateReplicationJobResponse instance.
+ * Constructs a CreateReplicationJobResponsePrivate object with public implementation \a q.
  */
 CreateReplicationJobResponsePrivate::CreateReplicationJobResponsePrivate(
     CreateReplicationJobResponse * const q) : SMSResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateReplicationJobResponsePrivate::CreateReplicationJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SMS CreateReplicationJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SMS CreateReplicationJob response element from \a xml.
  */
 void CreateReplicationJobResponsePrivate::parseCreateReplicationJobResponse(QXmlStreamReader &xml)
 {

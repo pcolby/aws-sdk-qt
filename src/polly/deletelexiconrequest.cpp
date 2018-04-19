@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLexiconRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteLexiconRequestPrivate object for Polly \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLexiconRequestPrivate object for Polly \a action,
+ * with public implementation \a q.
  */
 DeleteLexiconRequestPrivate::DeleteLexiconRequestPrivate(
     const PollyRequest::Action action, DeleteLexiconRequest * const q)

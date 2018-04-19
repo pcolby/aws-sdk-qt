@@ -28,16 +28,13 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::CloudFormationResponse
- *
  * \brief The CloudFormationResponse class provides an interface for CloudFormation responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @brief  Constructs a new CloudFormationResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CloudFormationResponse object with parent \a parent.
  */
 CloudFormationResponse::CloudFormationResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CloudFormationResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CloudFormationResponse::CloudFormationResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudFormationResponse object.
- *
+ * \internal
+ * Constructs a CloudFormationResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudFormationResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CloudFormationResponse::CloudFormationResponse(CloudFormationResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CloudFormationResponse::CloudFormationResponse(CloudFormationResponsePrivate * c
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CloudFormationResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CloudFormationResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudFormation::CloudFormationResponsePrivate
+ * \brief The CloudFormationResponsePrivate class provides private implementation for CloudFormationResponse.
+ * \internal
  *
- * @class  CloudFormationResponsePrivate
- *
- * @brief  Private implementation for CloudFormationResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudFormationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloudFormationResponse instance.
+ * Constructs a CloudFormationResponsePrivate object with public implementation \a q.
  */
 CloudFormationResponsePrivate::CloudFormationResponsePrivate(
     CloudFormationResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

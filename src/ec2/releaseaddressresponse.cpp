@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReleaseAddressResponse
- *
  * \brief The ReleaseAddressResponse class provides an interace for EC2 ReleaseAddress responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReleaseAddressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReleaseAddressResponse object for \a reply to \a request, with parent \a parent.
  */
 ReleaseAddressResponse::ReleaseAddressResponse(
         const ReleaseAddressRequest &request,
@@ -59,6 +54,9 @@ ReleaseAddressResponse::ReleaseAddressResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReleaseAddressRequest * ReleaseAddressResponse::request() const
 {
     Q_D(const ReleaseAddressResponse);
@@ -66,9 +64,8 @@ const ReleaseAddressRequest * ReleaseAddressResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ReleaseAddress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ReleaseAddress \a response.
  */
 void ReleaseAddressResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ReleaseAddressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ReleaseAddressResponsePrivate
+ * \brief The ReleaseAddressResponsePrivate class provides private implementation for ReleaseAddressResponse.
  * \internal
  *
- * \class ReleaseAddressResponsePrivate
- *
- * \brief Private implementation for ReleaseAddressResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReleaseAddressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReleaseAddressResponse instance.
+ * Constructs a ReleaseAddressResponsePrivate object with public implementation \a q.
  */
 ReleaseAddressResponsePrivate::ReleaseAddressResponsePrivate(
     ReleaseAddressResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ReleaseAddressResponsePrivate::ReleaseAddressResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ReleaseAddressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ReleaseAddress response element from \a xml.
  */
 void ReleaseAddressResponsePrivate::parseReleaseAddressResponse(QXmlStreamReader &xml)
 {

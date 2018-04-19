@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * RetrieveTapeArchiveRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a RetrieveTapeArchiveRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a RetrieveTapeArchiveRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 RetrieveTapeArchiveRequestPrivate::RetrieveTapeArchiveRequestPrivate(
     const StorageGatewayRequest::Action action, RetrieveTapeArchiveRequest * const q)

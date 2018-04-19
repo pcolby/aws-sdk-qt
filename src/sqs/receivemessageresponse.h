@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReceiveMessageResponse : public SQSResponse {
 public:
     ReceiveMessageResponse(const ReceiveMessageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReceiveMessageRequest * request() const;
+    virtual const ReceiveMessageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ReceiveMessageResponse)

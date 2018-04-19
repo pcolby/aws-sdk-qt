@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeClusterParameterGroupsResponse
- *
  * \brief The DescribeClusterParameterGroupsResponse class provides an interace for Redshift DescribeClusterParameterGroups responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeClusterParameterGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeClusterParameterGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeClusterParameterGroupsResponse::DescribeClusterParameterGroupsResponse(
         const DescribeClusterParameterGroupsRequest &request,
@@ -85,6 +80,9 @@ DescribeClusterParameterGroupsResponse::DescribeClusterParameterGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeClusterParameterGroupsRequest * DescribeClusterParameterGroupsResponse::request() const
 {
     Q_D(const DescribeClusterParameterGroupsResponse);
@@ -92,9 +90,8 @@ const DescribeClusterParameterGroupsRequest * DescribeClusterParameterGroupsResp
 }
 
 /*!
- * @brief  Parse a Redshift DescribeClusterParameterGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeClusterParameterGroups \a response.
  */
 void DescribeClusterParameterGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeClusterParameterGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeClusterParameterGroupsResponsePrivate
+ * \brief The DescribeClusterParameterGroupsResponsePrivate class provides private implementation for DescribeClusterParameterGroupsResponse.
  * \internal
  *
- * \class DescribeClusterParameterGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeClusterParameterGroupsResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClusterParameterGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeClusterParameterGroupsResponse instance.
+ * Constructs a DescribeClusterParameterGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeClusterParameterGroupsResponsePrivate::DescribeClusterParameterGroupsResponsePrivate(
     DescribeClusterParameterGroupsResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeClusterParameterGroupsResponsePrivate::DescribeClusterParameterGroupsRes
 }
 
 /*!
- * @brief  Parse an Redshift DescribeClusterParameterGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeClusterParameterGroups response element from \a xml.
  */
 void DescribeClusterParameterGroupsResponsePrivate::parseDescribeClusterParameterGroupsResponse(QXmlStreamReader &xml)
 {

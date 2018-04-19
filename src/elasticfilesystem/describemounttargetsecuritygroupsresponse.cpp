@@ -29,10 +29,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::DescribeMountTargetSecurityGroupsResponse
- *
  * \brief The DescribeMountTargetSecurityGroupsResponse class provides an interace for EFS DescribeMountTargetSecurityGroups responses.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -45,11 +44,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new DescribeMountTargetSecurityGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeMountTargetSecurityGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeMountTargetSecurityGroupsResponse::DescribeMountTargetSecurityGroupsResponse(
         const DescribeMountTargetSecurityGroupsRequest &request,
@@ -61,6 +56,9 @@ DescribeMountTargetSecurityGroupsResponse::DescribeMountTargetSecurityGroupsResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeMountTargetSecurityGroupsRequest * DescribeMountTargetSecurityGroupsResponse::request() const
 {
     Q_D(const DescribeMountTargetSecurityGroupsResponse);
@@ -68,9 +66,8 @@ const DescribeMountTargetSecurityGroupsRequest * DescribeMountTargetSecurityGrou
 }
 
 /*!
- * @brief  Parse a EFS DescribeMountTargetSecurityGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EFS DescribeMountTargetSecurityGroups \a response.
  */
 void DescribeMountTargetSecurityGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeMountTargetSecurityGroupsResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::EFS::DescribeMountTargetSecurityGroupsResponsePrivate
+ * \brief The DescribeMountTargetSecurityGroupsResponsePrivate class provides private implementation for DescribeMountTargetSecurityGroupsResponse.
  * \internal
  *
- * \class DescribeMountTargetSecurityGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeMountTargetSecurityGroupsResponse.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMountTargetSecurityGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeMountTargetSecurityGroupsResponse instance.
+ * Constructs a DescribeMountTargetSecurityGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeMountTargetSecurityGroupsResponsePrivate::DescribeMountTargetSecurityGroupsResponsePrivate(
     DescribeMountTargetSecurityGroupsResponse * const q) : EFSResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeMountTargetSecurityGroupsResponsePrivate::DescribeMountTargetSecurityGro
 }
 
 /*!
- * @brief  Parse an EFS DescribeMountTargetSecurityGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EFS DescribeMountTargetSecurityGroups response element from \a xml.
  */
 void DescribeMountTargetSecurityGroupsResponsePrivate::parseDescribeMountTargetSecurityGroupsResponse(QXmlStreamReader &xml)
 {

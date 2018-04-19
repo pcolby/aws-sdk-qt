@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreatePlacementGroupRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a CreatePlacementGroupRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreatePlacementGroupRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreatePlacementGroupRequestPrivate::CreatePlacementGroupRequestPrivate(
     const EC2Request::Action action, CreatePlacementGroupRequest * const q)

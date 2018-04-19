@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::GetServiceResponse
- *
  * \brief The GetServiceResponse class provides an interace for ServiceDiscovery GetService responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new GetServiceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetServiceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetServiceResponse::GetServiceResponse(
         const GetServiceRequest &request,
@@ -59,6 +54,9 @@ GetServiceResponse::GetServiceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetServiceRequest * GetServiceResponse::request() const
 {
     Q_D(const GetServiceResponse);
@@ -66,9 +64,8 @@ const GetServiceRequest * GetServiceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery GetService response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery GetService \a response.
  */
 void GetServiceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetServiceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::GetServiceResponsePrivate
+ * \brief The GetServiceResponsePrivate class provides private implementation for GetServiceResponse.
  * \internal
  *
- * \class GetServiceResponsePrivate
- *
- * \brief Private implementation for GetServiceResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetServiceResponse instance.
+ * Constructs a GetServiceResponsePrivate object with public implementation \a q.
  */
 GetServiceResponsePrivate::GetServiceResponsePrivate(
     GetServiceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ GetServiceResponsePrivate::GetServiceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery GetServiceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery GetService response element from \a xml.
  */
 void GetServiceResponsePrivate::parseGetServiceResponse(QXmlStreamReader &xml)
 {

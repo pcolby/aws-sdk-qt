@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListAWSServiceAccessForOrganizationResponse
- *
  * \brief The ListAWSServiceAccessForOrganizationResponse class provides an interace for Organizations ListAWSServiceAccessForOrganization responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListAWSServiceAccessForOrganizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAWSServiceAccessForOrganizationResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAWSServiceAccessForOrganizationResponse::ListAWSServiceAccessForOrganizationResponse(
         const ListAWSServiceAccessForOrganizationRequest &request,
@@ -197,6 +192,9 @@ ListAWSServiceAccessForOrganizationResponse::ListAWSServiceAccessForOrganization
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAWSServiceAccessForOrganizationRequest * ListAWSServiceAccessForOrganizationResponse::request() const
 {
     Q_D(const ListAWSServiceAccessForOrganizationResponse);
@@ -204,9 +202,8 @@ const ListAWSServiceAccessForOrganizationRequest * ListAWSServiceAccessForOrgani
 }
 
 /*!
- * @brief  Parse a Organizations ListAWSServiceAccessForOrganization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations ListAWSServiceAccessForOrganization \a response.
  */
 void ListAWSServiceAccessForOrganizationResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void ListAWSServiceAccessForOrganizationResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::Organizations::ListAWSServiceAccessForOrganizationResponsePrivate
+ * \brief The ListAWSServiceAccessForOrganizationResponsePrivate class provides private implementation for ListAWSServiceAccessForOrganizationResponse.
  * \internal
  *
- * \class ListAWSServiceAccessForOrganizationResponsePrivate
- *
- * \brief Private implementation for ListAWSServiceAccessForOrganizationResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAWSServiceAccessForOrganizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAWSServiceAccessForOrganizationResponse instance.
+ * Constructs a ListAWSServiceAccessForOrganizationResponsePrivate object with public implementation \a q.
  */
 ListAWSServiceAccessForOrganizationResponsePrivate::ListAWSServiceAccessForOrganizationResponsePrivate(
     ListAWSServiceAccessForOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ ListAWSServiceAccessForOrganizationResponsePrivate::ListAWSServiceAccessForOrgan
 }
 
 /*!
- * @brief  Parse an Organizations ListAWSServiceAccessForOrganizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations ListAWSServiceAccessForOrganization response element from \a xml.
  */
 void ListAWSServiceAccessForOrganizationResponsePrivate::parseListAWSServiceAccessForOrganizationResponse(QXmlStreamReader &xml)
 {

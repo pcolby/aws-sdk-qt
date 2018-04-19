@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVolumeResponse
- *
  * \brief The CreateVolumeResponse class provides an interace for EC2 CreateVolume responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateVolumeResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateVolumeResponse::CreateVolumeResponse(
         const CreateVolumeRequest &request,
@@ -59,6 +54,9 @@ CreateVolumeResponse::CreateVolumeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateVolumeRequest * CreateVolumeResponse::request() const
 {
     Q_D(const CreateVolumeResponse);
@@ -66,9 +64,8 @@ const CreateVolumeRequest * CreateVolumeResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateVolume response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateVolume \a response.
  */
 void CreateVolumeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateVolumeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateVolumeResponsePrivate
+ * \brief The CreateVolumeResponsePrivate class provides private implementation for CreateVolumeResponse.
  * \internal
  *
- * \class CreateVolumeResponsePrivate
- *
- * \brief Private implementation for CreateVolumeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVolumeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateVolumeResponse instance.
+ * Constructs a CreateVolumeResponsePrivate object with public implementation \a q.
  */
 CreateVolumeResponsePrivate::CreateVolumeResponsePrivate(
     CreateVolumeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateVolumeResponsePrivate::CreateVolumeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateVolumeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateVolume response element from \a xml.
  */
 void CreateVolumeResponsePrivate::parseCreateVolumeResponse(QXmlStreamReader &xml)
 {

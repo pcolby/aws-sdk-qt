@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateChangeSetResponse : public CloudFormationResponse {
 public:
     CreateChangeSetResponse(const CreateChangeSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateChangeSetRequest * request() const;
+    virtual const CreateChangeSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateChangeSetResponse)

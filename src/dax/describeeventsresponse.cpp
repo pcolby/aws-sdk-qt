@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DescribeEventsResponse
- *
  * \brief The DescribeEventsResponse class provides an interace for DAX DescribeEvents responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEventsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEventsResponse::DescribeEventsResponse(
         const DescribeEventsRequest &request,
@@ -59,6 +54,9 @@ DescribeEventsResponse::DescribeEventsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEventsRequest * DescribeEventsResponse::request() const
 {
     Q_D(const DescribeEventsResponse);
@@ -66,9 +64,8 @@ const DescribeEventsRequest * DescribeEventsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DAX DescribeEvents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX DescribeEvents \a response.
  */
 void DescribeEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::DescribeEventsResponsePrivate
+ * \brief The DescribeEventsResponsePrivate class provides private implementation for DescribeEventsResponse.
  * \internal
  *
- * \class DescribeEventsResponsePrivate
- *
- * \brief Private implementation for DescribeEventsResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEventsResponse instance.
+ * Constructs a DescribeEventsResponsePrivate object with public implementation \a q.
  */
 DescribeEventsResponsePrivate::DescribeEventsResponsePrivate(
     DescribeEventsResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeEventsResponsePrivate::DescribeEventsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX DescribeEventsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX DescribeEvents response element from \a xml.
  */
 void DescribeEventsResponsePrivate::parseDescribeEventsResponse(QXmlStreamReader &xml)
 {

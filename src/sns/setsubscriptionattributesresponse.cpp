@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::SetSubscriptionAttributesResponse
- *
  * \brief The SetSubscriptionAttributesResponse class provides an interace for SNS SetSubscriptionAttributes responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new SetSubscriptionAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetSubscriptionAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 SetSubscriptionAttributesResponse::SetSubscriptionAttributesResponse(
         const SetSubscriptionAttributesRequest &request,
@@ -69,6 +64,9 @@ SetSubscriptionAttributesResponse::SetSubscriptionAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetSubscriptionAttributesRequest * SetSubscriptionAttributesResponse::request() const
 {
     Q_D(const SetSubscriptionAttributesResponse);
@@ -76,9 +74,8 @@ const SetSubscriptionAttributesRequest * SetSubscriptionAttributesResponse::requ
 }
 
 /*!
- * @brief  Parse a SNS SetSubscriptionAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS SetSubscriptionAttributes \a response.
  */
 void SetSubscriptionAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void SetSubscriptionAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::SetSubscriptionAttributesResponsePrivate
+ * \brief The SetSubscriptionAttributesResponsePrivate class provides private implementation for SetSubscriptionAttributesResponse.
  * \internal
  *
- * \class SetSubscriptionAttributesResponsePrivate
- *
- * \brief Private implementation for SetSubscriptionAttributesResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetSubscriptionAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetSubscriptionAttributesResponse instance.
+ * Constructs a SetSubscriptionAttributesResponsePrivate object with public implementation \a q.
  */
 SetSubscriptionAttributesResponsePrivate::SetSubscriptionAttributesResponsePrivate(
     SetSubscriptionAttributesResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ SetSubscriptionAttributesResponsePrivate::SetSubscriptionAttributesResponsePriva
 }
 
 /*!
- * @brief  Parse an SNS SetSubscriptionAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS SetSubscriptionAttributes response element from \a xml.
  */
 void SetSubscriptionAttributesResponsePrivate::parseSetSubscriptionAttributesResponse(QXmlStreamReader &xml)
 {

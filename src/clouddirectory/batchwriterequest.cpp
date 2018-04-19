@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * BatchWriteRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a BatchWriteRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a BatchWriteRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 BatchWriteRequestPrivate::BatchWriteRequestPrivate(
     const CloudDirectoryRequest::Action action, BatchWriteRequest * const q)

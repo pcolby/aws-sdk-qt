@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutInstancePublicPortsResponse : public LightsailResponse {
 public:
     PutInstancePublicPortsResponse(const PutInstancePublicPortsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutInstancePublicPortsRequest * request() const;
+    virtual const PutInstancePublicPortsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutInstancePublicPortsResponse)

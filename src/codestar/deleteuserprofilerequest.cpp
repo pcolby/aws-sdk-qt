@@ -169,9 +169,8 @@ QtAws::Core::AwsAbstractResponse * DeleteUserProfileRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteUserProfileRequestPrivate object for CodeStar \a action with,
- * public implementation \a q.
+ * Constructs a DeleteUserProfileRequestPrivate object for CodeStar \a action,
+ * with public implementation \a q.
  */
 DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
     const CodeStarRequest::Action action, DeleteUserProfileRequest * const q)

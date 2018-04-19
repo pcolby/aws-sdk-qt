@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::UpdateInputResponse
- *
  * \brief The UpdateInputResponse class provides an interace for MediaLive UpdateInput responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::updateInput
  */
 
 /*!
- * @brief  Constructs a new UpdateInputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateInputResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateInputResponse::UpdateInputResponse(
         const UpdateInputRequest &request,
@@ -55,6 +50,9 @@ UpdateInputResponse::UpdateInputResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateInputRequest * UpdateInputResponse::request() const
 {
     Q_D(const UpdateInputResponse);
@@ -62,9 +60,8 @@ const UpdateInputRequest * UpdateInputResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaLive UpdateInput response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive UpdateInput \a response.
  */
 void UpdateInputResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateInputResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::UpdateInputResponsePrivate
+ * \brief The UpdateInputResponsePrivate class provides private implementation for UpdateInputResponse.
  * \internal
  *
- * \class UpdateInputResponsePrivate
- *
- * \brief Private implementation for UpdateInputResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateInputResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateInputResponse instance.
+ * Constructs a UpdateInputResponsePrivate object with public implementation \a q.
  */
 UpdateInputResponsePrivate::UpdateInputResponsePrivate(
     UpdateInputResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateInputResponsePrivate::UpdateInputResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive UpdateInputResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive UpdateInput response element from \a xml.
  */
 void UpdateInputResponsePrivate::parseUpdateInputResponse(QXmlStreamReader &xml)
 {

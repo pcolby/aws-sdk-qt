@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * CreateServiceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateServiceRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a CreateServiceRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 CreateServiceRequestPrivate::CreateServiceRequestPrivate(
     const ECSRequest::Action action, CreateServiceRequest * const q)

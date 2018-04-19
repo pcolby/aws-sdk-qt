@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * StopConfigurationRecorderRequest::response(QN
  */
 
 /*!
- *
- * Constructs a StopConfigurationRecorderRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a StopConfigurationRecorderRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 StopConfigurationRecorderRequestPrivate::StopConfigurationRecorderRequestPrivate(
     const ConfigServiceRequest::Action action, StopConfigurationRecorderRequest * const q)

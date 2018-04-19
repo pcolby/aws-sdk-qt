@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * RunJobFlowRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a RunJobFlowRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a RunJobFlowRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 RunJobFlowRequestPrivate::RunJobFlowRequestPrivate(
     const EMRRequest::Action action, RunJobFlowRequest * const q)

@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListXssMatchSetsResponse
- *
  * \brief The ListXssMatchSetsResponse class provides an interace for WAF ListXssMatchSets responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListXssMatchSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListXssMatchSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListXssMatchSetsResponse::ListXssMatchSetsResponse(
         const ListXssMatchSetsRequest &request,
@@ -60,6 +55,9 @@ ListXssMatchSetsResponse::ListXssMatchSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListXssMatchSetsRequest * ListXssMatchSetsResponse::request() const
 {
     Q_D(const ListXssMatchSetsResponse);
@@ -67,9 +65,8 @@ const ListXssMatchSetsRequest * ListXssMatchSetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF ListXssMatchSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF ListXssMatchSets \a response.
  */
 void ListXssMatchSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListXssMatchSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::ListXssMatchSetsResponsePrivate
+ * \brief The ListXssMatchSetsResponsePrivate class provides private implementation for ListXssMatchSetsResponse.
  * \internal
  *
- * \class ListXssMatchSetsResponsePrivate
- *
- * \brief Private implementation for ListXssMatchSetsResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListXssMatchSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListXssMatchSetsResponse instance.
+ * Constructs a ListXssMatchSetsResponsePrivate object with public implementation \a q.
  */
 ListXssMatchSetsResponsePrivate::ListXssMatchSetsResponsePrivate(
     ListXssMatchSetsResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ ListXssMatchSetsResponsePrivate::ListXssMatchSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF ListXssMatchSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF ListXssMatchSets response element from \a xml.
  */
 void ListXssMatchSetsResponsePrivate::parseListXssMatchSetsResponse(QXmlStreamReader &xml)
 {

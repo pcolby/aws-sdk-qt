@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DeleteLoadBalancerResponse
- *
  * \brief The DeleteLoadBalancerResponse class provides an interace for Lightsail DeleteLoadBalancer responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLoadBalancerResponse::DeleteLoadBalancerResponse(
         const DeleteLoadBalancerRequest &request,
@@ -71,6 +66,9 @@ DeleteLoadBalancerResponse::DeleteLoadBalancerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLoadBalancerRequest * DeleteLoadBalancerResponse::request() const
 {
     Q_D(const DeleteLoadBalancerResponse);
@@ -78,9 +76,8 @@ const DeleteLoadBalancerRequest * DeleteLoadBalancerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail DeleteLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail DeleteLoadBalancer \a response.
  */
 void DeleteLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DeleteLoadBalancerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::DeleteLoadBalancerResponsePrivate
+ * \brief The DeleteLoadBalancerResponsePrivate class provides private implementation for DeleteLoadBalancerResponse.
  * \internal
  *
- * \class DeleteLoadBalancerResponsePrivate
- *
- * \brief Private implementation for DeleteLoadBalancerResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLoadBalancerResponse instance.
+ * Constructs a DeleteLoadBalancerResponsePrivate object with public implementation \a q.
  */
 DeleteLoadBalancerResponsePrivate::DeleteLoadBalancerResponsePrivate(
     DeleteLoadBalancerResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ DeleteLoadBalancerResponsePrivate::DeleteLoadBalancerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail DeleteLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail DeleteLoadBalancer response element from \a xml.
  */
 void DeleteLoadBalancerResponsePrivate::parseDeleteLoadBalancerResponse(QXmlStreamReader &xml)
 {

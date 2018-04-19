@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateEndpointWeightsAndCapacitiesResponse : public SageMaker
 public:
     UpdateEndpointWeightsAndCapacitiesResponse(const UpdateEndpointWeightsAndCapacitiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateEndpointWeightsAndCapacitiesRequest * request() const;
+    virtual const UpdateEndpointWeightsAndCapacitiesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateEndpointWeightsAndCapacitiesResponse)

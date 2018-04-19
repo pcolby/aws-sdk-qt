@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DeleteGroupResponse
- *
  * \brief The DeleteGroupResponse class provides an interace for CognitoIdentityProvider DeleteGroup responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DeleteGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteGroupResponse::DeleteGroupResponse(
         const DeleteGroupRequest &request,
@@ -65,6 +60,9 @@ DeleteGroupResponse::DeleteGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteGroupRequest * DeleteGroupResponse::request() const
 {
     Q_D(const DeleteGroupResponse);
@@ -72,9 +70,8 @@ const DeleteGroupRequest * DeleteGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider DeleteGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider DeleteGroup \a response.
  */
 void DeleteGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void DeleteGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::DeleteGroupResponsePrivate
+ * \brief The DeleteGroupResponsePrivate class provides private implementation for DeleteGroupResponse.
  * \internal
  *
- * \class DeleteGroupResponsePrivate
- *
- * \brief Private implementation for DeleteGroupResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteGroupResponse instance.
+ * Constructs a DeleteGroupResponsePrivate object with public implementation \a q.
  */
 DeleteGroupResponsePrivate::DeleteGroupResponsePrivate(
     DeleteGroupResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ DeleteGroupResponsePrivate::DeleteGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider DeleteGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider DeleteGroup response element from \a xml.
  */
 void DeleteGroupResponsePrivate::parseDeleteGroupResponse(QXmlStreamReader &xml)
 {

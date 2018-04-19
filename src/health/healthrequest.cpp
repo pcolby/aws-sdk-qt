@@ -45,7 +45,7 @@ namespace Health {
  */
 
 /*!
- * Constructs a[n] HealthRequest object for Health \a action.
+ * Constructs a HealthRequest object for Health \a action.
  */
 HealthRequest::HealthRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new HealthRequestPrivate(action, this))
@@ -245,8 +245,8 @@ QNetworkRequest HealthRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a HealthRequestPrivate object for Health \a action with,
- * public implementation \a q.
+ * Constructs a HealthRequestPrivate object for Health \a action,
+ * with public implementation \a q.
  */
 HealthRequestPrivate::HealthRequestPrivate(const HealthRequest::Action action, HealthRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

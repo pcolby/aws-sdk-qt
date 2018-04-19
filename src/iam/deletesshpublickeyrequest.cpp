@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSSHPublicKeyRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteSSHPublicKeyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSSHPublicKeyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteSSHPublicKeyRequestPrivate::DeleteSSHPublicKeyRequestPrivate(
     const IAMRequest::Action action, DeleteSSHPublicKeyRequest * const q)

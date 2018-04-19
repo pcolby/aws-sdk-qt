@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::ListPlatformVersionsResponse
- *
  * \brief The ListPlatformVersionsResponse class provides an interace for ElasticBeanstalk ListPlatformVersions responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new ListPlatformVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPlatformVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPlatformVersionsResponse::ListPlatformVersionsResponse(
         const ListPlatformVersionsRequest &request,
@@ -77,6 +72,9 @@ ListPlatformVersionsResponse::ListPlatformVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPlatformVersionsRequest * ListPlatformVersionsResponse::request() const
 {
     Q_D(const ListPlatformVersionsResponse);
@@ -84,9 +82,8 @@ const ListPlatformVersionsRequest * ListPlatformVersionsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk ListPlatformVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk ListPlatformVersions \a response.
  */
 void ListPlatformVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ListPlatformVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::ListPlatformVersionsResponsePrivate
+ * \brief The ListPlatformVersionsResponsePrivate class provides private implementation for ListPlatformVersionsResponse.
  * \internal
  *
- * \class ListPlatformVersionsResponsePrivate
- *
- * \brief Private implementation for ListPlatformVersionsResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPlatformVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPlatformVersionsResponse instance.
+ * Constructs a ListPlatformVersionsResponsePrivate object with public implementation \a q.
  */
 ListPlatformVersionsResponsePrivate::ListPlatformVersionsResponsePrivate(
     ListPlatformVersionsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ ListPlatformVersionsResponsePrivate::ListPlatformVersionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk ListPlatformVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk ListPlatformVersions response element from \a xml.
  */
 void ListPlatformVersionsResponsePrivate::parseListPlatformVersionsResponse(QXmlStreamReader &xml)
 {

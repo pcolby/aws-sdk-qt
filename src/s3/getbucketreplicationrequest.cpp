@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketReplicationRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetBucketReplicationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketReplicationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketReplicationRequestPrivate::GetBucketReplicationRequestPrivate(
     const S3Request::Action action, GetBucketReplicationRequest * const q)

@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::ListFindingsResponse
- *
  * \brief The ListFindingsResponse class provides an interace for Inspector ListFindings responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new ListFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListFindingsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListFindingsResponse::ListFindingsResponse(
         const ListFindingsRequest &request,
@@ -60,6 +55,9 @@ ListFindingsResponse::ListFindingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListFindingsRequest * ListFindingsResponse::request() const
 {
     Q_D(const ListFindingsResponse);
@@ -67,9 +65,8 @@ const ListFindingsRequest * ListFindingsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector ListFindings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector ListFindings \a response.
  */
 void ListFindingsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListFindingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::ListFindingsResponsePrivate
+ * \brief The ListFindingsResponsePrivate class provides private implementation for ListFindingsResponse.
  * \internal
  *
- * \class ListFindingsResponsePrivate
- *
- * \brief Private implementation for ListFindingsResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFindingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListFindingsResponse instance.
+ * Constructs a ListFindingsResponsePrivate object with public implementation \a q.
  */
 ListFindingsResponsePrivate::ListFindingsResponsePrivate(
     ListFindingsResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ ListFindingsResponsePrivate::ListFindingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector ListFindingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector ListFindings response element from \a xml.
  */
 void ListFindingsResponsePrivate::parseListFindingsResponse(QXmlStreamReader &xml)
 {

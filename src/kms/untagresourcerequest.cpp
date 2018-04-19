@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UntagResourceRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a UntagResourceRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const KMSRequest::Action action, UntagResourceRequest * const q)

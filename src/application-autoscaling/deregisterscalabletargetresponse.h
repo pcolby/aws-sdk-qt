@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeregisterScalableTargetResponse : public ApplicationAutoScal
 public:
     DeregisterScalableTargetResponse(const DeregisterScalableTargetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeregisterScalableTargetRequest * request() const;
+    virtual const DeregisterScalableTargetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeregisterScalableTargetResponse)

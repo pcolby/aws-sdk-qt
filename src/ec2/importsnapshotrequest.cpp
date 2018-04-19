@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ImportSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ImportSnapshotRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ImportSnapshotRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ImportSnapshotRequestPrivate::ImportSnapshotRequestPrivate(
     const EC2Request::Action action, ImportSnapshotRequest * const q)

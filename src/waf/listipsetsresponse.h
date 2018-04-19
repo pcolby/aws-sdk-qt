@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListIPSetsResponse : public WAFResponse {
 public:
     ListIPSetsResponse(const ListIPSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListIPSetsRequest * request() const;
+    virtual const ListIPSetsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListIPSetsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutConfigurationAggregatorResponse : public ConfigServiceResp
 public:
     PutConfigurationAggregatorResponse(const PutConfigurationAggregatorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutConfigurationAggregatorRequest * request() const;
+    virtual const PutConfigurationAggregatorRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutConfigurationAggregatorResponse)

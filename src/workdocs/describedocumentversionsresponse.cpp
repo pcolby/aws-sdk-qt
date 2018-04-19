@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeDocumentVersionsResponse
- *
  * \brief The DescribeDocumentVersionsResponse class provides an interace for WorkDocs DescribeDocumentVersions responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeDocumentVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDocumentVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDocumentVersionsResponse::DescribeDocumentVersionsResponse(
         const DescribeDocumentVersionsRequest &request,
@@ -84,6 +79,9 @@ DescribeDocumentVersionsResponse::DescribeDocumentVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDocumentVersionsRequest * DescribeDocumentVersionsResponse::request() const
 {
     Q_D(const DescribeDocumentVersionsResponse);
@@ -91,9 +89,8 @@ const DescribeDocumentVersionsRequest * DescribeDocumentVersionsResponse::reques
 }
 
 /*!
- * @brief  Parse a WorkDocs DescribeDocumentVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DescribeDocumentVersions \a response.
  */
 void DescribeDocumentVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeDocumentVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DescribeDocumentVersionsResponsePrivate
+ * \brief The DescribeDocumentVersionsResponsePrivate class provides private implementation for DescribeDocumentVersionsResponse.
  * \internal
  *
- * \class DescribeDocumentVersionsResponsePrivate
- *
- * \brief Private implementation for DescribeDocumentVersionsResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDocumentVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDocumentVersionsResponse instance.
+ * Constructs a DescribeDocumentVersionsResponsePrivate object with public implementation \a q.
  */
 DescribeDocumentVersionsResponsePrivate::DescribeDocumentVersionsResponsePrivate(
     DescribeDocumentVersionsResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeDocumentVersionsResponsePrivate::DescribeDocumentVersionsResponsePrivate
 }
 
 /*!
- * @brief  Parse an WorkDocs DescribeDocumentVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DescribeDocumentVersions response element from \a xml.
  */
 void DescribeDocumentVersionsResponsePrivate::parseDescribeDocumentVersionsResponse(QXmlStreamReader &xml)
 {

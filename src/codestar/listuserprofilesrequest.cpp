@@ -169,9 +169,8 @@ QtAws::Core::AwsAbstractResponse * ListUserProfilesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListUserProfilesRequestPrivate object for CodeStar \a action with,
- * public implementation \a q.
+ * Constructs a ListUserProfilesRequestPrivate object for CodeStar \a action,
+ * with public implementation \a q.
  */
 ListUserProfilesRequestPrivate::ListUserProfilesRequestPrivate(
     const CodeStarRequest::Action action, ListUserProfilesRequest * const q)

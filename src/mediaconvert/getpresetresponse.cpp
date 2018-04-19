@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::GetPresetResponse
- *
  * \brief The GetPresetResponse class provides an interace for MediaConvert GetPreset responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::getPreset
  */
 
 /*!
- * @brief  Constructs a new GetPresetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPresetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPresetResponse::GetPresetResponse(
         const GetPresetRequest &request,
@@ -55,6 +50,9 @@ GetPresetResponse::GetPresetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPresetRequest * GetPresetResponse::request() const
 {
     Q_D(const GetPresetResponse);
@@ -62,9 +60,8 @@ const GetPresetRequest * GetPresetResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert GetPreset response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert GetPreset \a response.
  */
 void GetPresetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetPresetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::GetPresetResponsePrivate
+ * \brief The GetPresetResponsePrivate class provides private implementation for GetPresetResponse.
  * \internal
  *
- * \class GetPresetResponsePrivate
- *
- * \brief Private implementation for GetPresetResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPresetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPresetResponse instance.
+ * Constructs a GetPresetResponsePrivate object with public implementation \a q.
  */
 GetPresetResponsePrivate::GetPresetResponsePrivate(
     GetPresetResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ GetPresetResponsePrivate::GetPresetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert GetPresetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert GetPreset response element from \a xml.
  */
 void GetPresetResponsePrivate::parseGetPresetResponse(QXmlStreamReader &xml)
 {

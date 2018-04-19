@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetServerCertificateResponse : public IAMResponse {
 public:
     GetServerCertificateResponse(const GetServerCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetServerCertificateRequest * request() const;
+    virtual const GetServerCertificateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetServerCertificateResponse)

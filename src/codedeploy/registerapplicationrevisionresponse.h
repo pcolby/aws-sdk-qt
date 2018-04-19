@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterApplicationRevisionResponse : public CodeDeployRespon
 public:
     RegisterApplicationRevisionResponse(const RegisterApplicationRevisionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterApplicationRevisionRequest * request() const;
+    virtual const RegisterApplicationRevisionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterApplicationRevisionResponse)

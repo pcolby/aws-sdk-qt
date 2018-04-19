@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DownloadDefaultKeyPairRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DownloadDefaultKeyPairRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a DownloadDefaultKeyPairRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 DownloadDefaultKeyPairRequestPrivate::DownloadDefaultKeyPairRequestPrivate(
     const LightsailRequest::Action action, DownloadDefaultKeyPairRequest * const q)

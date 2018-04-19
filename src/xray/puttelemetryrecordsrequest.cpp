@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * PutTelemetryRecordsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a PutTelemetryRecordsRequestPrivate object for XRay \a action with,
- * public implementation \a q.
+ * Constructs a PutTelemetryRecordsRequestPrivate object for XRay \a action,
+ * with public implementation \a q.
  */
 PutTelemetryRecordsRequestPrivate::PutTelemetryRecordsRequestPrivate(
     const XRayRequest::Action action, PutTelemetryRecordsRequest * const q)

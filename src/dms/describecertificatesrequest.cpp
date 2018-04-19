@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificatesRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeCertificatesRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCertificatesRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeCertificatesRequest * const q)

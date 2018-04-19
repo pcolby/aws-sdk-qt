@@ -34,10 +34,10 @@ class QTAWS_EXPORT DiscoverInputSchemaResponse : public KinesisAnalyticsResponse
 public:
     DiscoverInputSchemaResponse(const DiscoverInputSchemaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DiscoverInputSchemaRequest * request() const;
+    virtual const DiscoverInputSchemaRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DiscoverInputSchemaResponse)

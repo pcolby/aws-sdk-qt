@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteDocumentationVersionResponse
- *
  * \brief The DeleteDocumentationVersionResponse class provides an interace for APIGateway DeleteDocumentationVersion responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteDocumentationVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDocumentationVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDocumentationVersionResponse::DeleteDocumentationVersionResponse(
         const DeleteDocumentationVersionRequest &request,
@@ -60,6 +55,9 @@ DeleteDocumentationVersionResponse::DeleteDocumentationVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDocumentationVersionRequest * DeleteDocumentationVersionResponse::request() const
 {
     Q_D(const DeleteDocumentationVersionResponse);
@@ -67,9 +65,8 @@ const DeleteDocumentationVersionRequest * DeleteDocumentationVersionResponse::re
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteDocumentationVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteDocumentationVersion \a response.
  */
 void DeleteDocumentationVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteDocumentationVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteDocumentationVersionResponsePrivate
+ * \brief The DeleteDocumentationVersionResponsePrivate class provides private implementation for DeleteDocumentationVersionResponse.
  * \internal
  *
- * \class DeleteDocumentationVersionResponsePrivate
- *
- * \brief Private implementation for DeleteDocumentationVersionResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDocumentationVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDocumentationVersionResponse instance.
+ * Constructs a DeleteDocumentationVersionResponsePrivate object with public implementation \a q.
  */
 DeleteDocumentationVersionResponsePrivate::DeleteDocumentationVersionResponsePrivate(
     DeleteDocumentationVersionResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteDocumentationVersionResponsePrivate::DeleteDocumentationVersionResponsePri
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteDocumentationVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteDocumentationVersion response element from \a xml.
  */
 void DeleteDocumentationVersionResponsePrivate::parseDeleteDocumentationVersionResponse(QXmlStreamReader &xml)
 {

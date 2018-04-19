@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DescribeListenerCertificatesRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeListenerCertificatesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeListenerCertificatesRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 DescribeListenerCertificatesRequestPrivate::DescribeListenerCertificatesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeListenerCertificatesRequest * const q)

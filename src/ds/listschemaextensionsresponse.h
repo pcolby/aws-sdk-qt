@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListSchemaExtensionsResponse : public DirectoryServiceRespons
 public:
     ListSchemaExtensionsResponse(const ListSchemaExtensionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListSchemaExtensionsRequest * request() const;
+    virtual const ListSchemaExtensionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListSchemaExtensionsResponse)

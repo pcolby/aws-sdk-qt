@@ -49,7 +49,7 @@ namespace Shield {
  */
 
 /*!
- * Constructs a[n] ShieldRequest object for Shield \a action.
+ * Constructs a ShieldRequest object for Shield \a action.
  */
 ShieldRequest::ShieldRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ShieldRequestPrivate(action, this))
@@ -249,8 +249,8 @@ QNetworkRequest ShieldRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a ShieldRequestPrivate object for Shield \a action with,
- * public implementation \a q.
+ * Constructs a ShieldRequestPrivate object for Shield \a action,
+ * with public implementation \a q.
  */
 ShieldRequestPrivate::ShieldRequestPrivate(const ShieldRequest::Action action, ShieldRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

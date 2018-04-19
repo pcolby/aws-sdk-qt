@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationCloudWatchLoggingOptionResponse
- *
  * \brief The DeleteApplicationCloudWatchLoggingOptionResponse class provides an interace for KinesisAnalytics DeleteApplicationCloudWatchLoggingOption responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::deleteApplicationCloudWatchLoggingOption
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationCloudWatchLoggingOptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteApplicationCloudWatchLoggingOptionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteApplicationCloudWatchLoggingOptionResponse::DeleteApplicationCloudWatchLoggingOptionResponse(
         const DeleteApplicationCloudWatchLoggingOptionRequest &request,
@@ -55,6 +50,9 @@ DeleteApplicationCloudWatchLoggingOptionResponse::DeleteApplicationCloudWatchLog
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteApplicationCloudWatchLoggingOptionRequest * DeleteApplicationCloudWatchLoggingOptionResponse::request() const
 {
     Q_D(const DeleteApplicationCloudWatchLoggingOptionResponse);
@@ -62,9 +60,8 @@ const DeleteApplicationCloudWatchLoggingOptionRequest * DeleteApplicationCloudWa
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics DeleteApplicationCloudWatchLoggingOption response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics DeleteApplicationCloudWatchLoggingOption \a response.
  */
 void DeleteApplicationCloudWatchLoggingOptionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteApplicationCloudWatchLoggingOptionResponse::parseSuccess(QIODevice &r
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::DeleteApplicationCloudWatchLoggingOptionResponsePrivate
+ * \brief The DeleteApplicationCloudWatchLoggingOptionResponsePrivate class provides private implementation for DeleteApplicationCloudWatchLoggingOptionResponse.
  * \internal
  *
- * \class DeleteApplicationCloudWatchLoggingOptionResponsePrivate
- *
- * \brief Private implementation for DeleteApplicationCloudWatchLoggingOptionResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationCloudWatchLoggingOptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteApplicationCloudWatchLoggingOptionResponse instance.
+ * Constructs a DeleteApplicationCloudWatchLoggingOptionResponsePrivate object with public implementation \a q.
  */
 DeleteApplicationCloudWatchLoggingOptionResponsePrivate::DeleteApplicationCloudWatchLoggingOptionResponsePrivate(
     DeleteApplicationCloudWatchLoggingOptionResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteApplicationCloudWatchLoggingOptionResponsePrivate::DeleteApplicationCloudW
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics DeleteApplicationCloudWatchLoggingOptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics DeleteApplicationCloudWatchLoggingOption response element from \a xml.
  */
 void DeleteApplicationCloudWatchLoggingOptionResponsePrivate::parseDeleteApplicationCloudWatchLoggingOptionResponse(QXmlStreamReader &xml)
 {

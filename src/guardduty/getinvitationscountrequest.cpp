@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetInvitationsCountRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetInvitationsCountRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a GetInvitationsCountRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
     const GuardDutyRequest::Action action, GetInvitationsCountRequest * const q)

@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * GetRoleRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a GetRoleRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a GetRoleRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 GetRoleRequestPrivate::GetRoleRequestPrivate(
     const IAMRequest::Action action, GetRoleRequest * const q)

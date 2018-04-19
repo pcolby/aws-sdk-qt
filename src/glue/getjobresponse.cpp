@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetJobResponse
- *
  * \brief The GetJobResponse class provides an interace for Glue GetJob responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetJobResponse object for \a reply to \a request, with parent \a parent.
  */
 GetJobResponse::GetJobResponse(
         const GetJobRequest &request,
@@ -58,6 +53,9 @@ GetJobResponse::GetJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetJobRequest * GetJobResponse::request() const
 {
     Q_D(const GetJobResponse);
@@ -65,9 +63,8 @@ const GetJobRequest * GetJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetJob \a response.
  */
 void GetJobResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetJobResponsePrivate
+ * \brief The GetJobResponsePrivate class provides private implementation for GetJobResponse.
  * \internal
  *
- * \class GetJobResponsePrivate
- *
- * \brief Private implementation for GetJobResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetJobResponse instance.
+ * Constructs a GetJobResponsePrivate object with public implementation \a q.
  */
 GetJobResponsePrivate::GetJobResponsePrivate(
     GetJobResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetJobResponsePrivate::GetJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetJob response element from \a xml.
  */
 void GetJobResponsePrivate::parseGetJobResponse(QXmlStreamReader &xml)
 {

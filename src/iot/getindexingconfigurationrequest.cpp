@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetIndexingConfigurationRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a GetIndexingConfigurationRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a GetIndexingConfigurationRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 GetIndexingConfigurationRequestPrivate::GetIndexingConfigurationRequestPrivate(
     const IoTRequest::Action action, GetIndexingConfigurationRequest * const q)

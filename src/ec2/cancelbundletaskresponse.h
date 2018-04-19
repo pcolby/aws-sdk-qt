@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelBundleTaskResponse : public EC2Response {
 public:
     CancelBundleTaskResponse(const CancelBundleTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelBundleTaskRequest * request() const;
+    virtual const CancelBundleTaskRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CancelBundleTaskResponse)

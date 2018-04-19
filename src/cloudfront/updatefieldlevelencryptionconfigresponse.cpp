@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::UpdateFieldLevelEncryptionConfigResponse
- *
  * \brief The UpdateFieldLevelEncryptionConfigResponse class provides an interace for CloudFront UpdateFieldLevelEncryptionConfig responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new UpdateFieldLevelEncryptionConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateFieldLevelEncryptionConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateFieldLevelEncryptionConfigResponse::UpdateFieldLevelEncryptionConfigResponse(
         const UpdateFieldLevelEncryptionConfigRequest &request,
@@ -60,6 +55,9 @@ UpdateFieldLevelEncryptionConfigResponse::UpdateFieldLevelEncryptionConfigRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateFieldLevelEncryptionConfigRequest * UpdateFieldLevelEncryptionConfigResponse::request() const
 {
     Q_D(const UpdateFieldLevelEncryptionConfigResponse);
@@ -67,9 +65,8 @@ const UpdateFieldLevelEncryptionConfigRequest * UpdateFieldLevelEncryptionConfig
 }
 
 /*!
- * @brief  Parse a CloudFront UpdateFieldLevelEncryptionConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront UpdateFieldLevelEncryptionConfig \a response.
  */
 void UpdateFieldLevelEncryptionConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateFieldLevelEncryptionConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::UpdateFieldLevelEncryptionConfigResponsePrivate
+ * \brief The UpdateFieldLevelEncryptionConfigResponsePrivate class provides private implementation for UpdateFieldLevelEncryptionConfigResponse.
  * \internal
  *
- * \class UpdateFieldLevelEncryptionConfigResponsePrivate
- *
- * \brief Private implementation for UpdateFieldLevelEncryptionConfigResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFieldLevelEncryptionConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateFieldLevelEncryptionConfigResponse instance.
+ * Constructs a UpdateFieldLevelEncryptionConfigResponsePrivate object with public implementation \a q.
  */
 UpdateFieldLevelEncryptionConfigResponsePrivate::UpdateFieldLevelEncryptionConfigResponsePrivate(
     UpdateFieldLevelEncryptionConfigResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateFieldLevelEncryptionConfigResponsePrivate::UpdateFieldLevelEncryptionConfi
 }
 
 /*!
- * @brief  Parse an CloudFront UpdateFieldLevelEncryptionConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront UpdateFieldLevelEncryptionConfig response element from \a xml.
  */
 void UpdateFieldLevelEncryptionConfigResponsePrivate::parseUpdateFieldLevelEncryptionConfigResponse(QXmlStreamReader &xml)
 {

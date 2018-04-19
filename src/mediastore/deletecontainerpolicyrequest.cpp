@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteContainerPolicyRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteContainerPolicyRequestPrivate object for MediaStore \a action with,
- * public implementation \a q.
+ * Constructs a DeleteContainerPolicyRequestPrivate object for MediaStore \a action,
+ * with public implementation \a q.
  */
 DeleteContainerPolicyRequestPrivate::DeleteContainerPolicyRequestPrivate(
     const MediaStoreRequest::Action action, DeleteContainerPolicyRequest * const q)

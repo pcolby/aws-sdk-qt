@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationTemplateRequest::response(
  */
 
 /*!
- *
- * Constructs a DeleteConfigurationTemplateRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DeleteConfigurationTemplateRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DeleteConfigurationTemplateRequestPrivate::DeleteConfigurationTemplateRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeleteConfigurationTemplateRequest * const q)

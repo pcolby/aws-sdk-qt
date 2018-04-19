@@ -34,10 +34,10 @@ class QTAWS_EXPORT FlushStageCacheResponse : public APIGatewayResponse {
 public:
     FlushStageCacheResponse(const FlushStageCacheRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const FlushStageCacheRequest * request() const;
+    virtual const FlushStageCacheRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(FlushStageCacheResponse)

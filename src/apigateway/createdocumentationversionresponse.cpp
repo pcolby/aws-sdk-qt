@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateDocumentationVersionResponse
- *
  * \brief The CreateDocumentationVersionResponse class provides an interace for APIGateway CreateDocumentationVersion responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateDocumentationVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDocumentationVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDocumentationVersionResponse::CreateDocumentationVersionResponse(
         const CreateDocumentationVersionRequest &request,
@@ -60,6 +55,9 @@ CreateDocumentationVersionResponse::CreateDocumentationVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDocumentationVersionRequest * CreateDocumentationVersionResponse::request() const
 {
     Q_D(const CreateDocumentationVersionResponse);
@@ -67,9 +65,8 @@ const CreateDocumentationVersionRequest * CreateDocumentationVersionResponse::re
 }
 
 /*!
- * @brief  Parse a APIGateway CreateDocumentationVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway CreateDocumentationVersion \a response.
  */
 void CreateDocumentationVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateDocumentationVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::CreateDocumentationVersionResponsePrivate
+ * \brief The CreateDocumentationVersionResponsePrivate class provides private implementation for CreateDocumentationVersionResponse.
  * \internal
  *
- * \class CreateDocumentationVersionResponsePrivate
- *
- * \brief Private implementation for CreateDocumentationVersionResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDocumentationVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDocumentationVersionResponse instance.
+ * Constructs a CreateDocumentationVersionResponsePrivate object with public implementation \a q.
  */
 CreateDocumentationVersionResponsePrivate::CreateDocumentationVersionResponsePrivate(
     CreateDocumentationVersionResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateDocumentationVersionResponsePrivate::CreateDocumentationVersionResponsePri
 }
 
 /*!
- * @brief  Parse an APIGateway CreateDocumentationVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway CreateDocumentationVersion response element from \a xml.
  */
 void CreateDocumentationVersionResponsePrivate::parseCreateDocumentationVersionResponse(QXmlStreamReader &xml)
 {

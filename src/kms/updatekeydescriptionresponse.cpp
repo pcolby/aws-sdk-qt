@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::UpdateKeyDescriptionResponse
- *
  * \brief The UpdateKeyDescriptionResponse class provides an interace for KMS UpdateKeyDescription responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new UpdateKeyDescriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateKeyDescriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateKeyDescriptionResponse::UpdateKeyDescriptionResponse(
         const UpdateKeyDescriptionRequest &request,
@@ -154,6 +149,9 @@ UpdateKeyDescriptionResponse::UpdateKeyDescriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateKeyDescriptionRequest * UpdateKeyDescriptionResponse::request() const
 {
     Q_D(const UpdateKeyDescriptionResponse);
@@ -161,9 +159,8 @@ const UpdateKeyDescriptionRequest * UpdateKeyDescriptionResponse::request() cons
 }
 
 /*!
- * @brief  Parse a KMS UpdateKeyDescription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS UpdateKeyDescription \a response.
  */
 void UpdateKeyDescriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void UpdateKeyDescriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::UpdateKeyDescriptionResponsePrivate
+ * \brief The UpdateKeyDescriptionResponsePrivate class provides private implementation for UpdateKeyDescriptionResponse.
  * \internal
  *
- * \class UpdateKeyDescriptionResponsePrivate
- *
- * \brief Private implementation for UpdateKeyDescriptionResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateKeyDescriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateKeyDescriptionResponse instance.
+ * Constructs a UpdateKeyDescriptionResponsePrivate object with public implementation \a q.
  */
 UpdateKeyDescriptionResponsePrivate::UpdateKeyDescriptionResponsePrivate(
     UpdateKeyDescriptionResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ UpdateKeyDescriptionResponsePrivate::UpdateKeyDescriptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS UpdateKeyDescriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS UpdateKeyDescription response element from \a xml.
  */
 void UpdateKeyDescriptionResponsePrivate::parseUpdateKeyDescriptionResponse(QXmlStreamReader &xml)
 {

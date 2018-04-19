@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ListGitHubAccountTokenNamesResponse
- *
  * \brief The ListGitHubAccountTokenNamesResponse class provides an interace for CodeDeploy ListGitHubAccountTokenNames responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ListGitHubAccountTokenNamesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGitHubAccountTokenNamesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGitHubAccountTokenNamesResponse::ListGitHubAccountTokenNamesResponse(
         const ListGitHubAccountTokenNamesRequest &request,
@@ -136,6 +131,9 @@ ListGitHubAccountTokenNamesResponse::ListGitHubAccountTokenNamesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGitHubAccountTokenNamesRequest * ListGitHubAccountTokenNamesResponse::request() const
 {
     Q_D(const ListGitHubAccountTokenNamesResponse);
@@ -143,9 +141,8 @@ const ListGitHubAccountTokenNamesRequest * ListGitHubAccountTokenNamesResponse::
 }
 
 /*!
- * @brief  Parse a CodeDeploy ListGitHubAccountTokenNames response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy ListGitHubAccountTokenNames \a response.
  */
 void ListGitHubAccountTokenNamesResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void ListGitHubAccountTokenNamesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::ListGitHubAccountTokenNamesResponsePrivate
+ * \brief The ListGitHubAccountTokenNamesResponsePrivate class provides private implementation for ListGitHubAccountTokenNamesResponse.
  * \internal
  *
- * \class ListGitHubAccountTokenNamesResponsePrivate
- *
- * \brief Private implementation for ListGitHubAccountTokenNamesResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGitHubAccountTokenNamesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGitHubAccountTokenNamesResponse instance.
+ * Constructs a ListGitHubAccountTokenNamesResponsePrivate object with public implementation \a q.
  */
 ListGitHubAccountTokenNamesResponsePrivate::ListGitHubAccountTokenNamesResponsePrivate(
     ListGitHubAccountTokenNamesResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ ListGitHubAccountTokenNamesResponsePrivate::ListGitHubAccountTokenNamesResponseP
 }
 
 /*!
- * @brief  Parse an CodeDeploy ListGitHubAccountTokenNamesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy ListGitHubAccountTokenNames response element from \a xml.
  */
 void ListGitHubAccountTokenNamesResponsePrivate::parseListGitHubAccountTokenNamesResponse(QXmlStreamReader &xml)
 {

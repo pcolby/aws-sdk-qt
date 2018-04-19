@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetMasterAccountResponse : public GuardDutyResponse {
 public:
     GetMasterAccountResponse(const GetMasterAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetMasterAccountRequest * request() const;
+    virtual const GetMasterAccountRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetMasterAccountResponse)

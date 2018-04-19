@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * SetDefaultPolicyVersionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a SetDefaultPolicyVersionRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a SetDefaultPolicyVersionRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 SetDefaultPolicyVersionRequestPrivate::SetDefaultPolicyVersionRequestPrivate(
     const IAMRequest::Action action, SetDefaultPolicyVersionRequest * const q)

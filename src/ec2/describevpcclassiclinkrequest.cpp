@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcClassicLinkRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeVpcClassicLinkRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVpcClassicLinkRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeVpcClassicLinkRequestPrivate::DescribeVpcClassicLinkRequestPrivate(
     const EC2Request::Action action, DescribeVpcClassicLinkRequest * const q)

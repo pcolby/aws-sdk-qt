@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::RemovePermissionResponse
- *
  * \brief The RemovePermissionResponse class provides an interace for CloudWatchEvents RemovePermission responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new RemovePermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemovePermissionResponse object for \a reply to \a request, with parent \a parent.
  */
 RemovePermissionResponse::RemovePermissionResponse(
         const RemovePermissionRequest &request,
@@ -78,6 +73,9 @@ RemovePermissionResponse::RemovePermissionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemovePermissionRequest * RemovePermissionResponse::request() const
 {
     Q_D(const RemovePermissionResponse);
@@ -85,9 +83,8 @@ const RemovePermissionRequest * RemovePermissionResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents RemovePermission response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents RemovePermission \a response.
  */
 void RemovePermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void RemovePermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::RemovePermissionResponsePrivate
+ * \brief The RemovePermissionResponsePrivate class provides private implementation for RemovePermissionResponse.
  * \internal
  *
- * \class RemovePermissionResponsePrivate
- *
- * \brief Private implementation for RemovePermissionResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemovePermissionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemovePermissionResponse instance.
+ * Constructs a RemovePermissionResponsePrivate object with public implementation \a q.
  */
 RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
     RemovePermissionResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents RemovePermissionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents RemovePermission response element from \a xml.
  */
 void RemovePermissionResponsePrivate::parseRemovePermissionResponse(QXmlStreamReader &xml)
 {

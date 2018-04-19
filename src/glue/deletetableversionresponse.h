@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTableVersionResponse : public GlueResponse {
 public:
     DeleteTableVersionResponse(const DeleteTableVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTableVersionRequest * request() const;
+    virtual const DeleteTableVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTableVersionResponse)

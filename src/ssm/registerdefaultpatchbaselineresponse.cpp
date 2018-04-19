@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::RegisterDefaultPatchBaselineResponse
- *
  * \brief The RegisterDefaultPatchBaselineResponse class provides an interace for SSM RegisterDefaultPatchBaseline responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new RegisterDefaultPatchBaselineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterDefaultPatchBaselineResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterDefaultPatchBaselineResponse::RegisterDefaultPatchBaselineResponse(
         const RegisterDefaultPatchBaselineRequest &request,
@@ -79,6 +74,9 @@ RegisterDefaultPatchBaselineResponse::RegisterDefaultPatchBaselineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterDefaultPatchBaselineRequest * RegisterDefaultPatchBaselineResponse::request() const
 {
     Q_D(const RegisterDefaultPatchBaselineResponse);
@@ -86,9 +84,8 @@ const RegisterDefaultPatchBaselineRequest * RegisterDefaultPatchBaselineResponse
 }
 
 /*!
- * @brief  Parse a SSM RegisterDefaultPatchBaseline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM RegisterDefaultPatchBaseline \a response.
  */
 void RegisterDefaultPatchBaselineResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void RegisterDefaultPatchBaselineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::RegisterDefaultPatchBaselineResponsePrivate
+ * \brief The RegisterDefaultPatchBaselineResponsePrivate class provides private implementation for RegisterDefaultPatchBaselineResponse.
  * \internal
  *
- * \class RegisterDefaultPatchBaselineResponsePrivate
- *
- * \brief Private implementation for RegisterDefaultPatchBaselineResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterDefaultPatchBaselineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterDefaultPatchBaselineResponse instance.
+ * Constructs a RegisterDefaultPatchBaselineResponsePrivate object with public implementation \a q.
  */
 RegisterDefaultPatchBaselineResponsePrivate::RegisterDefaultPatchBaselineResponsePrivate(
     RegisterDefaultPatchBaselineResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ RegisterDefaultPatchBaselineResponsePrivate::RegisterDefaultPatchBaselineRespons
 }
 
 /*!
- * @brief  Parse an SSM RegisterDefaultPatchBaselineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM RegisterDefaultPatchBaseline response element from \a xml.
  */
 void RegisterDefaultPatchBaselineResponsePrivate::parseRegisterDefaultPatchBaselineResponse(QXmlStreamReader &xml)
 {

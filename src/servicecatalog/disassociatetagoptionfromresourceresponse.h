@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateTagOptionFromResourceResponse : public ServiceCat
 public:
     DisassociateTagOptionFromResourceResponse(const DisassociateTagOptionFromResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateTagOptionFromResourceRequest * request() const;
+    virtual const DisassociateTagOptionFromResourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateTagOptionFromResourceResponse)

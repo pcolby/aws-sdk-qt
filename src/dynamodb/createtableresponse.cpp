@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::CreateTableResponse
- *
  * \brief The CreateTableResponse class provides an interace for DynamoDB CreateTable responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new CreateTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTableResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTableResponse::CreateTableResponse(
         const CreateTableRequest &request,
@@ -74,6 +69,9 @@ CreateTableResponse::CreateTableResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTableRequest * CreateTableResponse::request() const
 {
     Q_D(const CreateTableResponse);
@@ -81,9 +79,8 @@ const CreateTableRequest * CreateTableResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB CreateTable response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB CreateTable \a response.
  */
 void CreateTableResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void CreateTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::CreateTableResponsePrivate
+ * \brief The CreateTableResponsePrivate class provides private implementation for CreateTableResponse.
  * \internal
  *
- * \class CreateTableResponsePrivate
- *
- * \brief Private implementation for CreateTableResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTableResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTableResponse instance.
+ * Constructs a CreateTableResponsePrivate object with public implementation \a q.
  */
 CreateTableResponsePrivate::CreateTableResponsePrivate(
     CreateTableResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ CreateTableResponsePrivate::CreateTableResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB CreateTableResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB CreateTable response element from \a xml.
  */
 void CreateTableResponsePrivate::parseCreateTableResponse(QXmlStreamReader &xml)
 {

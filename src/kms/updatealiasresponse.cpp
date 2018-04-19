@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::UpdateAliasResponse
- *
  * \brief The UpdateAliasResponse class provides an interace for KMS UpdateAlias responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new UpdateAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAliasResponse::UpdateAliasResponse(
         const UpdateAliasRequest &request,
@@ -154,6 +149,9 @@ UpdateAliasResponse::UpdateAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAliasRequest * UpdateAliasResponse::request() const
 {
     Q_D(const UpdateAliasResponse);
@@ -161,9 +159,8 @@ const UpdateAliasRequest * UpdateAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS UpdateAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS UpdateAlias \a response.
  */
 void UpdateAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void UpdateAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::UpdateAliasResponsePrivate
+ * \brief The UpdateAliasResponsePrivate class provides private implementation for UpdateAliasResponse.
  * \internal
  *
- * \class UpdateAliasResponsePrivate
- *
- * \brief Private implementation for UpdateAliasResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAliasResponse instance.
+ * Constructs a UpdateAliasResponsePrivate object with public implementation \a q.
  */
 UpdateAliasResponsePrivate::UpdateAliasResponsePrivate(
     UpdateAliasResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ UpdateAliasResponsePrivate::UpdateAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS UpdateAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS UpdateAlias response element from \a xml.
  */
 void UpdateAliasResponsePrivate::parseUpdateAliasResponse(QXmlStreamReader &xml)
 {

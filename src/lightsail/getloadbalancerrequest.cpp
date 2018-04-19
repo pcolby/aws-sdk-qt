@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetLoadBalancerRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetLoadBalancerRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetLoadBalancerRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetLoadBalancerRequestPrivate::GetLoadBalancerRequestPrivate(
     const LightsailRequest::Action action, GetLoadBalancerRequest * const q)

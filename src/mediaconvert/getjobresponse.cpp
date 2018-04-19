@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::GetJobResponse
- *
  * \brief The GetJobResponse class provides an interace for MediaConvert GetJob responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::getJob
  */
 
 /*!
- * @brief  Constructs a new GetJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetJobResponse object for \a reply to \a request, with parent \a parent.
  */
 GetJobResponse::GetJobResponse(
         const GetJobRequest &request,
@@ -55,6 +50,9 @@ GetJobResponse::GetJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetJobRequest * GetJobResponse::request() const
 {
     Q_D(const GetJobResponse);
@@ -62,9 +60,8 @@ const GetJobRequest * GetJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert GetJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert GetJob \a response.
  */
 void GetJobResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::GetJobResponsePrivate
+ * \brief The GetJobResponsePrivate class provides private implementation for GetJobResponse.
  * \internal
  *
- * \class GetJobResponsePrivate
- *
- * \brief Private implementation for GetJobResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetJobResponse instance.
+ * Constructs a GetJobResponsePrivate object with public implementation \a q.
  */
 GetJobResponsePrivate::GetJobResponsePrivate(
     GetJobResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ GetJobResponsePrivate::GetJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert GetJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert GetJob response element from \a xml.
  */
 void GetJobResponsePrivate::parseGetJobResponse(QXmlStreamReader &xml)
 {

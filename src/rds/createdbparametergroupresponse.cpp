@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBParameterGroupResponse
- *
  * \brief The CreateDBParameterGroupResponse class provides an interace for RDS CreateDBParameterGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDBParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDBParameterGroupResponse::CreateDBParameterGroupResponse(
         const CreateDBParameterGroupRequest &request,
@@ -119,6 +114,9 @@ CreateDBParameterGroupResponse::CreateDBParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDBParameterGroupRequest * CreateDBParameterGroupResponse::request() const
 {
     Q_D(const CreateDBParameterGroupResponse);
@@ -126,9 +124,8 @@ const CreateDBParameterGroupRequest * CreateDBParameterGroupResponse::request() 
 }
 
 /*!
- * @brief  Parse a RDS CreateDBParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CreateDBParameterGroup \a response.
  */
 void CreateDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CreateDBParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CreateDBParameterGroupResponsePrivate
+ * \brief The CreateDBParameterGroupResponsePrivate class provides private implementation for CreateDBParameterGroupResponse.
  * \internal
  *
- * \class CreateDBParameterGroupResponsePrivate
- *
- * \brief Private implementation for CreateDBParameterGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDBParameterGroupResponse instance.
+ * Constructs a CreateDBParameterGroupResponsePrivate object with public implementation \a q.
  */
 CreateDBParameterGroupResponsePrivate::CreateDBParameterGroupResponsePrivate(
     CreateDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CreateDBParameterGroupResponsePrivate::CreateDBParameterGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CreateDBParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CreateDBParameterGroup response element from \a xml.
  */
 void CreateDBParameterGroupResponsePrivate::parseCreateDBParameterGroupResponse(QXmlStreamReader &xml)
 {

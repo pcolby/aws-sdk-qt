@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ExecutePolicyRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ExecutePolicyRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a ExecutePolicyRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 ExecutePolicyRequestPrivate::ExecutePolicyRequestPrivate(
     const AutoScalingRequest::Action action, ExecutePolicyRequest * const q)

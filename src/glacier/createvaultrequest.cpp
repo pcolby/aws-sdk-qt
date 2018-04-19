@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * CreateVaultRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateVaultRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a CreateVaultRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 CreateVaultRequestPrivate::CreateVaultRequestPrivate(
     const GlacierRequest::Action action, CreateVaultRequest * const q)

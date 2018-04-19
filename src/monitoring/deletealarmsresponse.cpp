@@ -29,10 +29,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::DeleteAlarmsResponse
- *
  * \brief The DeleteAlarmsResponse class provides an interace for CloudWatch DeleteAlarms responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -53,11 +52,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new DeleteAlarmsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAlarmsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAlarmsResponse::DeleteAlarmsResponse(
         const DeleteAlarmsRequest &request,
@@ -69,6 +64,9 @@ DeleteAlarmsResponse::DeleteAlarmsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAlarmsRequest * DeleteAlarmsResponse::request() const
 {
     Q_D(const DeleteAlarmsResponse);
@@ -76,9 +74,8 @@ const DeleteAlarmsRequest * DeleteAlarmsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatch DeleteAlarms response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatch DeleteAlarms \a response.
  */
 void DeleteAlarmsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeleteAlarmsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatch::DeleteAlarmsResponsePrivate
+ * \brief The DeleteAlarmsResponsePrivate class provides private implementation for DeleteAlarmsResponse.
  * \internal
  *
- * \class DeleteAlarmsResponsePrivate
- *
- * \brief Private implementation for DeleteAlarmsResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAlarmsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAlarmsResponse instance.
+ * Constructs a DeleteAlarmsResponsePrivate object with public implementation \a q.
  */
 DeleteAlarmsResponsePrivate::DeleteAlarmsResponsePrivate(
     DeleteAlarmsResponse * const q) : CloudWatchResponsePrivate(q)
@@ -109,9 +102,7 @@ DeleteAlarmsResponsePrivate::DeleteAlarmsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatch DeleteAlarmsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatch DeleteAlarms response element from \a xml.
  */
 void DeleteAlarmsResponsePrivate::parseDeleteAlarmsResponse(QXmlStreamReader &xml)
 {

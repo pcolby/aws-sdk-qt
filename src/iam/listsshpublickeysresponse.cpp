@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListSSHPublicKeysResponse
- *
  * \brief The ListSSHPublicKeysResponse class provides an interace for IAM ListSSHPublicKeys responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListSSHPublicKeysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSSHPublicKeysResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSSHPublicKeysResponse::ListSSHPublicKeysResponse(
         const ListSSHPublicKeysRequest &request,
@@ -120,6 +115,9 @@ ListSSHPublicKeysResponse::ListSSHPublicKeysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSSHPublicKeysRequest * ListSSHPublicKeysResponse::request() const
 {
     Q_D(const ListSSHPublicKeysResponse);
@@ -127,9 +125,8 @@ const ListSSHPublicKeysRequest * ListSSHPublicKeysResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM ListSSHPublicKeys response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListSSHPublicKeys \a response.
  */
 void ListSSHPublicKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListSSHPublicKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListSSHPublicKeysResponsePrivate
+ * \brief The ListSSHPublicKeysResponsePrivate class provides private implementation for ListSSHPublicKeysResponse.
  * \internal
  *
- * \class ListSSHPublicKeysResponsePrivate
- *
- * \brief Private implementation for ListSSHPublicKeysResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSSHPublicKeysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSSHPublicKeysResponse instance.
+ * Constructs a ListSSHPublicKeysResponsePrivate object with public implementation \a q.
  */
 ListSSHPublicKeysResponsePrivate::ListSSHPublicKeysResponsePrivate(
     ListSSHPublicKeysResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListSSHPublicKeysResponsePrivate::ListSSHPublicKeysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListSSHPublicKeysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListSSHPublicKeys response element from \a xml.
  */
 void ListSSHPublicKeysResponsePrivate::parseListSSHPublicKeysResponse(QXmlStreamReader &xml)
 {

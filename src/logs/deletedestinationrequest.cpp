@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDestinationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteDestinationRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDestinationRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DeleteDestinationRequestPrivate::DeleteDestinationRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteDestinationRequest * const q)

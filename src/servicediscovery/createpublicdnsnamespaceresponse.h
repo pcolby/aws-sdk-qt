@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreatePublicDnsNamespaceResponse : public ServiceDiscoveryRes
 public:
     CreatePublicDnsNamespaceResponse(const CreatePublicDnsNamespaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreatePublicDnsNamespaceRequest * request() const;
+    virtual const CreatePublicDnsNamespaceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreatePublicDnsNamespaceResponse)

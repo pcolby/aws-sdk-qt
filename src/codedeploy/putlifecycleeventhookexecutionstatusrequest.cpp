@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * PutLifecycleEventHookExecutionStatusRequest::
  */
 
 /*!
- *
- * Constructs a PutLifecycleEventHookExecutionStatusRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a PutLifecycleEventHookExecutionStatusRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 PutLifecycleEventHookExecutionStatusRequestPrivate::PutLifecycleEventHookExecutionStatusRequestPrivate(
     const CodeDeployRequest::Action action, PutLifecycleEventHookExecutionStatusRequest * const q)

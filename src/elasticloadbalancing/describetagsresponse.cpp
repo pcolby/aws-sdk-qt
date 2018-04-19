@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeTagsResponse
- *
  * \brief The DescribeTagsResponse class provides an interace for ElasticLoadBalancing DescribeTags responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DescribeTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTagsResponse::DescribeTagsResponse(
         const DescribeTagsRequest &request,
@@ -83,6 +78,9 @@ DescribeTagsResponse::DescribeTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTagsRequest * DescribeTagsResponse::request() const
 {
     Q_D(const DescribeTagsResponse);
@@ -90,9 +88,8 @@ const DescribeTagsRequest * DescribeTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing DescribeTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing DescribeTags \a response.
  */
 void DescribeTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void DescribeTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::DescribeTagsResponsePrivate
+ * \brief The DescribeTagsResponsePrivate class provides private implementation for DescribeTagsResponse.
  * \internal
  *
- * \class DescribeTagsResponsePrivate
- *
- * \brief Private implementation for DescribeTagsResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTagsResponse instance.
+ * Constructs a DescribeTagsResponsePrivate object with public implementation \a q.
  */
 DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
     DescribeTagsResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing DescribeTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing DescribeTags response element from \a xml.
  */
 void DescribeTagsResponsePrivate::parseDescribeTagsResponse(QXmlStreamReader &xml)
 {

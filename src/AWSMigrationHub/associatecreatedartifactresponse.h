@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateCreatedArtifactResponse : public MigrationHubRespons
 public:
     AssociateCreatedArtifactResponse(const AssociateCreatedArtifactRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateCreatedArtifactRequest * request() const;
+    virtual const AssociateCreatedArtifactRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateCreatedArtifactResponse)

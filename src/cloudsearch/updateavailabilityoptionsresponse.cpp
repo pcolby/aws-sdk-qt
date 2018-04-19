@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::UpdateAvailabilityOptionsResponse
- *
  * \brief The UpdateAvailabilityOptionsResponse class provides an interace for CloudSearch UpdateAvailabilityOptions responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new UpdateAvailabilityOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAvailabilityOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAvailabilityOptionsResponse::UpdateAvailabilityOptionsResponse(
         const UpdateAvailabilityOptionsRequest &request,
@@ -66,6 +61,9 @@ UpdateAvailabilityOptionsResponse::UpdateAvailabilityOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAvailabilityOptionsRequest * UpdateAvailabilityOptionsResponse::request() const
 {
     Q_D(const UpdateAvailabilityOptionsResponse);
@@ -73,9 +71,8 @@ const UpdateAvailabilityOptionsRequest * UpdateAvailabilityOptionsResponse::requ
 }
 
 /*!
- * @brief  Parse a CloudSearch UpdateAvailabilityOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch UpdateAvailabilityOptions \a response.
  */
 void UpdateAvailabilityOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateAvailabilityOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::UpdateAvailabilityOptionsResponsePrivate
+ * \brief The UpdateAvailabilityOptionsResponsePrivate class provides private implementation for UpdateAvailabilityOptionsResponse.
  * \internal
  *
- * \class UpdateAvailabilityOptionsResponsePrivate
- *
- * \brief Private implementation for UpdateAvailabilityOptionsResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAvailabilityOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAvailabilityOptionsResponse instance.
+ * Constructs a UpdateAvailabilityOptionsResponsePrivate object with public implementation \a q.
  */
 UpdateAvailabilityOptionsResponsePrivate::UpdateAvailabilityOptionsResponsePrivate(
     UpdateAvailabilityOptionsResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateAvailabilityOptionsResponsePrivate::UpdateAvailabilityOptionsResponsePriva
 }
 
 /*!
- * @brief  Parse an CloudSearch UpdateAvailabilityOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch UpdateAvailabilityOptions response element from \a xml.
  */
 void UpdateAvailabilityOptionsResponsePrivate::parseUpdateAvailabilityOptionsResponse(QXmlStreamReader &xml)
 {

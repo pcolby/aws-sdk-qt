@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetConnectivityInfoResponse
- *
  * \brief The GetConnectivityInfoResponse class provides an interace for Greengrass GetConnectivityInfo responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetConnectivityInfoResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetConnectivityInfoResponse object for \a reply to \a request, with parent \a parent.
  */
 GetConnectivityInfoResponse::GetConnectivityInfoResponse(
         const GetConnectivityInfoRequest &request,
@@ -58,6 +53,9 @@ GetConnectivityInfoResponse::GetConnectivityInfoResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetConnectivityInfoRequest * GetConnectivityInfoResponse::request() const
 {
     Q_D(const GetConnectivityInfoResponse);
@@ -65,9 +63,8 @@ const GetConnectivityInfoRequest * GetConnectivityInfoResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass GetConnectivityInfo response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass GetConnectivityInfo \a response.
  */
 void GetConnectivityInfoResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetConnectivityInfoResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::GetConnectivityInfoResponsePrivate
+ * \brief The GetConnectivityInfoResponsePrivate class provides private implementation for GetConnectivityInfoResponse.
  * \internal
  *
- * \class GetConnectivityInfoResponsePrivate
- *
- * \brief Private implementation for GetConnectivityInfoResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConnectivityInfoResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetConnectivityInfoResponse instance.
+ * Constructs a GetConnectivityInfoResponsePrivate object with public implementation \a q.
  */
 GetConnectivityInfoResponsePrivate::GetConnectivityInfoResponsePrivate(
     GetConnectivityInfoResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ GetConnectivityInfoResponsePrivate::GetConnectivityInfoResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass GetConnectivityInfoResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass GetConnectivityInfo response element from \a xml.
  */
 void GetConnectivityInfoResponsePrivate::parseGetConnectivityInfoResponse(QXmlStreamReader &xml)
 {

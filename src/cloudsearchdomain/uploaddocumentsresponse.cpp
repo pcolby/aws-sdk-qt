@@ -29,10 +29,9 @@ namespace CloudSearchDomain {
 
 /*!
  * \class QtAws::CloudSearchDomain::UploadDocumentsResponse
- *
  * \brief The UploadDocumentsResponse class provides an interace for CloudSearchDomain UploadDocuments responses.
  *
- * \ingroup CloudSearchDomain
+ * \inmodule QtAwsCloudSearchDomain
  *
  *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
  * 
@@ -52,11 +51,7 @@ namespace CloudSearchDomain {
  */
 
 /*!
- * @brief  Constructs a new UploadDocumentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UploadDocumentsResponse object for \a reply to \a request, with parent \a parent.
  */
 UploadDocumentsResponse::UploadDocumentsResponse(
         const UploadDocumentsRequest &request,
@@ -68,6 +63,9 @@ UploadDocumentsResponse::UploadDocumentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UploadDocumentsRequest * UploadDocumentsResponse::request() const
 {
     Q_D(const UploadDocumentsResponse);
@@ -75,9 +73,8 @@ const UploadDocumentsRequest * UploadDocumentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearchDomain UploadDocuments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearchDomain UploadDocuments \a response.
  */
 void UploadDocumentsResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void UploadDocumentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearchDomain::UploadDocumentsResponsePrivate
+ * \brief The UploadDocumentsResponsePrivate class provides private implementation for UploadDocumentsResponse.
  * \internal
  *
- * \class UploadDocumentsResponsePrivate
- *
- * \brief Private implementation for UploadDocumentsResponse.
+ * \inmodule QtAwsCloudSearchDomain
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadDocumentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UploadDocumentsResponse instance.
+ * Constructs a UploadDocumentsResponsePrivate object with public implementation \a q.
  */
 UploadDocumentsResponsePrivate::UploadDocumentsResponsePrivate(
     UploadDocumentsResponse * const q) : CloudSearchDomainResponsePrivate(q)
@@ -108,9 +101,7 @@ UploadDocumentsResponsePrivate::UploadDocumentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearchDomain UploadDocumentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearchDomain UploadDocuments response element from \a xml.
  */
 void UploadDocumentsResponsePrivate::parseUploadDocumentsResponse(QXmlStreamReader &xml)
 {

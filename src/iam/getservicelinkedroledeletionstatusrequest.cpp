@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * GetServiceLinkedRoleDeletionStatusRequest::re
  */
 
 /*!
- *
- * Constructs a GetServiceLinkedRoleDeletionStatusRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a GetServiceLinkedRoleDeletionStatusRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 GetServiceLinkedRoleDeletionStatusRequestPrivate::GetServiceLinkedRoleDeletionStatusRequestPrivate(
     const IAMRequest::Action action, GetServiceLinkedRoleDeletionStatusRequest * const q)

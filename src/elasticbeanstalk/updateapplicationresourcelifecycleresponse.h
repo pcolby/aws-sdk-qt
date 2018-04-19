@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateApplicationResourceLifecycleResponse : public ElasticBe
 public:
     UpdateApplicationResourceLifecycleResponse(const UpdateApplicationResourceLifecycleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateApplicationResourceLifecycleRequest * request() const;
+    virtual const UpdateApplicationResourceLifecycleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateApplicationResourceLifecycleResponse)

@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * GetCSVHeaderRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetCSVHeaderRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a GetCSVHeaderRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 GetCSVHeaderRequestPrivate::GetCSVHeaderRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetCSVHeaderRequest * const q)

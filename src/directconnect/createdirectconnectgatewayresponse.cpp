@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreateDirectConnectGatewayResponse
- *
  * \brief The CreateDirectConnectGatewayResponse class provides an interace for DirectConnect CreateDirectConnectGateway responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreateDirectConnectGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDirectConnectGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDirectConnectGatewayResponse::CreateDirectConnectGatewayResponse(
         const CreateDirectConnectGatewayRequest &request,
@@ -63,6 +58,9 @@ CreateDirectConnectGatewayResponse::CreateDirectConnectGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDirectConnectGatewayRequest * CreateDirectConnectGatewayResponse::request() const
 {
     Q_D(const CreateDirectConnectGatewayResponse);
@@ -70,9 +68,8 @@ const CreateDirectConnectGatewayRequest * CreateDirectConnectGatewayResponse::re
 }
 
 /*!
- * @brief  Parse a DirectConnect CreateDirectConnectGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect CreateDirectConnectGateway \a response.
  */
 void CreateDirectConnectGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void CreateDirectConnectGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::CreateDirectConnectGatewayResponsePrivate
+ * \brief The CreateDirectConnectGatewayResponsePrivate class provides private implementation for CreateDirectConnectGatewayResponse.
  * \internal
  *
- * \class CreateDirectConnectGatewayResponsePrivate
- *
- * \brief Private implementation for CreateDirectConnectGatewayResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDirectConnectGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDirectConnectGatewayResponse instance.
+ * Constructs a CreateDirectConnectGatewayResponsePrivate object with public implementation \a q.
  */
 CreateDirectConnectGatewayResponsePrivate::CreateDirectConnectGatewayResponsePrivate(
     CreateDirectConnectGatewayResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ CreateDirectConnectGatewayResponsePrivate::CreateDirectConnectGatewayResponsePri
 }
 
 /*!
- * @brief  Parse an DirectConnect CreateDirectConnectGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect CreateDirectConnectGateway response element from \a xml.
  */
 void CreateDirectConnectGatewayResponsePrivate::parseCreateDirectConnectGatewayResponse(QXmlStreamReader &xml)
 {

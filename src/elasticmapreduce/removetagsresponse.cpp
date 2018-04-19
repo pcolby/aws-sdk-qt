@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::RemoveTagsResponse
- *
  * \brief The RemoveTagsResponse class provides an interace for EMR RemoveTags responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveTagsResponse::RemoveTagsResponse(
         const RemoveTagsRequest &request,
@@ -58,6 +53,9 @@ RemoveTagsResponse::RemoveTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveTagsRequest * RemoveTagsResponse::request() const
 {
     Q_D(const RemoveTagsResponse);
@@ -65,9 +63,8 @@ const RemoveTagsRequest * RemoveTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR RemoveTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR RemoveTags \a response.
  */
 void RemoveTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void RemoveTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::RemoveTagsResponsePrivate
+ * \brief The RemoveTagsResponsePrivate class provides private implementation for RemoveTagsResponse.
  * \internal
  *
- * \class RemoveTagsResponsePrivate
- *
- * \brief Private implementation for RemoveTagsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveTagsResponse instance.
+ * Constructs a RemoveTagsResponsePrivate object with public implementation \a q.
  */
 RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
     RemoveTagsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR RemoveTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR RemoveTags response element from \a xml.
  */
 void RemoveTagsResponsePrivate::parseRemoveTagsResponse(QXmlStreamReader &xml)
 {

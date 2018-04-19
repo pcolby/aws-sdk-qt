@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifySnapshotCopyRetentionPeriodResponse
- *
  * \brief The ModifySnapshotCopyRetentionPeriodResponse class provides an interace for Redshift ModifySnapshotCopyRetentionPeriod responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifySnapshotCopyRetentionPeriodResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifySnapshotCopyRetentionPeriodResponse::ModifySnapshotCopyRetentionPeriodResponse(
         const ModifySnapshotCopyRetentionPeriodRequest &request,
@@ -85,6 +80,9 @@ ModifySnapshotCopyRetentionPeriodResponse::ModifySnapshotCopyRetentionPeriodResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifySnapshotCopyRetentionPeriodRequest * ModifySnapshotCopyRetentionPeriodResponse::request() const
 {
     Q_D(const ModifySnapshotCopyRetentionPeriodResponse);
@@ -92,9 +90,8 @@ const ModifySnapshotCopyRetentionPeriodRequest * ModifySnapshotCopyRetentionPeri
 }
 
 /*!
- * @brief  Parse a Redshift ModifySnapshotCopyRetentionPeriod response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift ModifySnapshotCopyRetentionPeriod \a response.
  */
 void ModifySnapshotCopyRetentionPeriodResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void ModifySnapshotCopyRetentionPeriodResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::Redshift::ModifySnapshotCopyRetentionPeriodResponsePrivate
+ * \brief The ModifySnapshotCopyRetentionPeriodResponsePrivate class provides private implementation for ModifySnapshotCopyRetentionPeriodResponse.
  * \internal
  *
- * \class ModifySnapshotCopyRetentionPeriodResponsePrivate
- *
- * \brief Private implementation for ModifySnapshotCopyRetentionPeriodResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifySnapshotCopyRetentionPeriodResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifySnapshotCopyRetentionPeriodResponse instance.
+ * Constructs a ModifySnapshotCopyRetentionPeriodResponsePrivate object with public implementation \a q.
  */
 ModifySnapshotCopyRetentionPeriodResponsePrivate::ModifySnapshotCopyRetentionPeriodResponsePrivate(
     ModifySnapshotCopyRetentionPeriodResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ ModifySnapshotCopyRetentionPeriodResponsePrivate::ModifySnapshotCopyRetentionPer
 }
 
 /*!
- * @brief  Parse an Redshift ModifySnapshotCopyRetentionPeriodResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift ModifySnapshotCopyRetentionPeriod response element from \a xml.
  */
 void ModifySnapshotCopyRetentionPeriodResponsePrivate::parseModifySnapshotCopyRetentionPeriodResponse(QXmlStreamReader &xml)
 {

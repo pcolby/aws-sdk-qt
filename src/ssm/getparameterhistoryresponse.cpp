@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetParameterHistoryResponse
- *
  * \brief The GetParameterHistoryResponse class provides an interace for SSM GetParameterHistory responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetParameterHistoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetParameterHistoryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetParameterHistoryResponse::GetParameterHistoryResponse(
         const GetParameterHistoryRequest &request,
@@ -79,6 +74,9 @@ GetParameterHistoryResponse::GetParameterHistoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetParameterHistoryRequest * GetParameterHistoryResponse::request() const
 {
     Q_D(const GetParameterHistoryResponse);
@@ -86,9 +84,8 @@ const GetParameterHistoryRequest * GetParameterHistoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM GetParameterHistory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM GetParameterHistory \a response.
  */
 void GetParameterHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void GetParameterHistoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::GetParameterHistoryResponsePrivate
+ * \brief The GetParameterHistoryResponsePrivate class provides private implementation for GetParameterHistoryResponse.
  * \internal
  *
- * \class GetParameterHistoryResponsePrivate
- *
- * \brief Private implementation for GetParameterHistoryResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetParameterHistoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetParameterHistoryResponse instance.
+ * Constructs a GetParameterHistoryResponsePrivate object with public implementation \a q.
  */
 GetParameterHistoryResponsePrivate::GetParameterHistoryResponsePrivate(
     GetParameterHistoryResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ GetParameterHistoryResponsePrivate::GetParameterHistoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM GetParameterHistoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM GetParameterHistory response element from \a xml.
  */
 void GetParameterHistoryResponsePrivate::parseGetParameterHistoryResponse(QXmlStreamReader &xml)
 {

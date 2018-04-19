@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::SplitShardResponse
- *
  * \brief The SplitShardResponse class provides an interace for Kinesis SplitShard responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new SplitShardResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SplitShardResponse object for \a reply to \a request, with parent \a parent.
  */
 SplitShardResponse::SplitShardResponse(
         const SplitShardRequest &request,
@@ -58,6 +53,9 @@ SplitShardResponse::SplitShardResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SplitShardRequest * SplitShardResponse::request() const
 {
     Q_D(const SplitShardResponse);
@@ -65,9 +63,8 @@ const SplitShardRequest * SplitShardResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis SplitShard response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis SplitShard \a response.
  */
 void SplitShardResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void SplitShardResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::SplitShardResponsePrivate
+ * \brief The SplitShardResponsePrivate class provides private implementation for SplitShardResponse.
  * \internal
  *
- * \class SplitShardResponsePrivate
- *
- * \brief Private implementation for SplitShardResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SplitShardResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SplitShardResponse instance.
+ * Constructs a SplitShardResponsePrivate object with public implementation \a q.
  */
 SplitShardResponsePrivate::SplitShardResponsePrivate(
     SplitShardResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ SplitShardResponsePrivate::SplitShardResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis SplitShardResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis SplitShard response element from \a xml.
  */
 void SplitShardResponsePrivate::parseSplitShardResponse(QXmlStreamReader &xml)
 {

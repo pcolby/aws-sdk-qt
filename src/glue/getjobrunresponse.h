@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetJobRunResponse : public GlueResponse {
 public:
     GetJobRunResponse(const GetJobRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetJobRunRequest * request() const;
+    virtual const GetJobRunRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetJobRunResponse)

@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteApplicationVersionResponse
- *
  * \brief The DeleteApplicationVersionResponse class provides an interace for ElasticBeanstalk DeleteApplicationVersion responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteApplicationVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteApplicationVersionResponse::DeleteApplicationVersionResponse(
         const DeleteApplicationVersionRequest &request,
@@ -77,6 +72,9 @@ DeleteApplicationVersionResponse::DeleteApplicationVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteApplicationVersionRequest * DeleteApplicationVersionResponse::request() const
 {
     Q_D(const DeleteApplicationVersionResponse);
@@ -84,9 +82,8 @@ const DeleteApplicationVersionRequest * DeleteApplicationVersionResponse::reques
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DeleteApplicationVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DeleteApplicationVersion \a response.
  */
 void DeleteApplicationVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DeleteApplicationVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DeleteApplicationVersionResponsePrivate
+ * \brief The DeleteApplicationVersionResponsePrivate class provides private implementation for DeleteApplicationVersionResponse.
  * \internal
  *
- * \class DeleteApplicationVersionResponsePrivate
- *
- * \brief Private implementation for DeleteApplicationVersionResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteApplicationVersionResponse instance.
+ * Constructs a DeleteApplicationVersionResponsePrivate object with public implementation \a q.
  */
 DeleteApplicationVersionResponsePrivate::DeleteApplicationVersionResponsePrivate(
     DeleteApplicationVersionResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DeleteApplicationVersionResponsePrivate::DeleteApplicationVersionResponsePrivate
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DeleteApplicationVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DeleteApplicationVersion response element from \a xml.
  */
 void DeleteApplicationVersionResponsePrivate::parseDeleteApplicationVersionResponse(QXmlStreamReader &xml)
 {

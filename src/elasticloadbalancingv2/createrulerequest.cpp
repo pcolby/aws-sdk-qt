@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * CreateRuleRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CreateRuleRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateRuleRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 CreateRuleRequestPrivate::CreateRuleRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, CreateRuleRequest * const q)

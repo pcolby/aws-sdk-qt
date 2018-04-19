@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyWorkspacePropertiesResponse : public WorkSpacesResponse
 public:
     ModifyWorkspacePropertiesResponse(const ModifyWorkspacePropertiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyWorkspacePropertiesRequest * request() const;
+    virtual const ModifyWorkspacePropertiesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyWorkspacePropertiesResponse)

@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DisableLoggingResponse
- *
  * \brief The DisableLoggingResponse class provides an interace for Redshift DisableLogging responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DisableLoggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableLoggingResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableLoggingResponse::DisableLoggingResponse(
         const DisableLoggingRequest &request,
@@ -85,6 +80,9 @@ DisableLoggingResponse::DisableLoggingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableLoggingRequest * DisableLoggingResponse::request() const
 {
     Q_D(const DisableLoggingResponse);
@@ -92,9 +90,8 @@ const DisableLoggingRequest * DisableLoggingResponse::request() const
 }
 
 /*!
- * @brief  Parse a Redshift DisableLogging response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DisableLogging \a response.
  */
 void DisableLoggingResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DisableLoggingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DisableLoggingResponsePrivate
+ * \brief The DisableLoggingResponsePrivate class provides private implementation for DisableLoggingResponse.
  * \internal
  *
- * \class DisableLoggingResponsePrivate
- *
- * \brief Private implementation for DisableLoggingResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableLoggingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableLoggingResponse instance.
+ * Constructs a DisableLoggingResponsePrivate object with public implementation \a q.
  */
 DisableLoggingResponsePrivate::DisableLoggingResponsePrivate(
     DisableLoggingResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DisableLoggingResponsePrivate::DisableLoggingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift DisableLoggingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DisableLogging response element from \a xml.
  */
 void DisableLoggingResponsePrivate::parseDisableLoggingResponse(QXmlStreamReader &xml)
 {

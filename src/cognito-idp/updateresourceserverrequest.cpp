@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceServerRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdateResourceServerRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a UpdateResourceServerRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 UpdateResourceServerRequestPrivate::UpdateResourceServerRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateResourceServerRequest * const q)

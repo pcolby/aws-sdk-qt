@@ -76,7 +76,7 @@ namespace GuardDuty {
  */
 
 /*!
- * Constructs a[n] GuardDutyRequest object for GuardDuty \a action.
+ * Constructs a GuardDutyRequest object for GuardDuty \a action.
  */
 GuardDutyRequest::GuardDutyRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new GuardDutyRequestPrivate(action, this))
@@ -276,8 +276,8 @@ QNetworkRequest GuardDutyRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a GuardDutyRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a GuardDutyRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 GuardDutyRequestPrivate::GuardDutyRequestPrivate(const GuardDutyRequest::Action action, GuardDutyRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

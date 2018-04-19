@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::ListGraphqlApisResponse
- *
  * \brief The ListGraphqlApisResponse class provides an interace for AppSync ListGraphqlApis responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new ListGraphqlApisResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGraphqlApisResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGraphqlApisResponse::ListGraphqlApisResponse(
         const ListGraphqlApisRequest &request,
@@ -56,6 +51,9 @@ ListGraphqlApisResponse::ListGraphqlApisResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGraphqlApisRequest * ListGraphqlApisResponse::request() const
 {
     Q_D(const ListGraphqlApisResponse);
@@ -63,9 +61,8 @@ const ListGraphqlApisRequest * ListGraphqlApisResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync ListGraphqlApis response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync ListGraphqlApis \a response.
  */
 void ListGraphqlApisResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListGraphqlApisResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::ListGraphqlApisResponsePrivate
+ * \brief The ListGraphqlApisResponsePrivate class provides private implementation for ListGraphqlApisResponse.
  * \internal
  *
- * \class ListGraphqlApisResponsePrivate
- *
- * \brief Private implementation for ListGraphqlApisResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGraphqlApisResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGraphqlApisResponse instance.
+ * Constructs a ListGraphqlApisResponsePrivate object with public implementation \a q.
  */
 ListGraphqlApisResponsePrivate::ListGraphqlApisResponsePrivate(
     ListGraphqlApisResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ ListGraphqlApisResponsePrivate::ListGraphqlApisResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync ListGraphqlApisResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync ListGraphqlApis response element from \a xml.
  */
 void ListGraphqlApisResponsePrivate::parseListGraphqlApisResponse(QXmlStreamReader &xml)
 {

@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * UpdateItemRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a UpdateItemRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a UpdateItemRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 UpdateItemRequestPrivate::UpdateItemRequestPrivate(
     const DynamoDBRequest::Action action, UpdateItemRequest * const q)

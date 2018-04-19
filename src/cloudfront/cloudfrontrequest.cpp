@@ -85,7 +85,7 @@ namespace CloudFront {
  */
 
 /*!
- * Constructs a[n] CloudFrontRequest object for CloudFront \a action.
+ * Constructs a CloudFrontRequest object for CloudFront \a action.
  */
 CloudFrontRequest::CloudFrontRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudFrontRequestPrivate(action, this))
@@ -285,8 +285,8 @@ QNetworkRequest CloudFrontRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CloudFrontRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a CloudFrontRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 CloudFrontRequestPrivate::CloudFrontRequestPrivate(const CloudFrontRequest::Action action, CloudFrontRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

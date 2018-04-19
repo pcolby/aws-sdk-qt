@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * ListAliasesRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListAliasesRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a ListAliasesRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 ListAliasesRequestPrivate::ListAliasesRequestPrivate(
     const KMSRequest::Action action, ListAliasesRequest * const q)

@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * GetBranchRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetBranchRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a GetBranchRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 GetBranchRequestPrivate::GetBranchRequestPrivate(
     const CodeCommitRequest::Action action, GetBranchRequest * const q)

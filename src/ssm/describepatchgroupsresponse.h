@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribePatchGroupsResponse : public SSMResponse {
 public:
     DescribePatchGroupsResponse(const DescribePatchGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribePatchGroupsRequest * request() const;
+    virtual const DescribePatchGroupsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribePatchGroupsResponse)

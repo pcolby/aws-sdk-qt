@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DisassociateKmsKeyResponse
- *
  * \brief The DisassociateKmsKeyResponse class provides an interace for CloudWatchLogs DisassociateKmsKey responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DisassociateKmsKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateKmsKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateKmsKeyResponse::DisassociateKmsKeyResponse(
         const DisassociateKmsKeyRequest &request,
@@ -84,6 +79,9 @@ DisassociateKmsKeyResponse::DisassociateKmsKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateKmsKeyRequest * DisassociateKmsKeyResponse::request() const
 {
     Q_D(const DisassociateKmsKeyResponse);
@@ -91,9 +89,8 @@ const DisassociateKmsKeyRequest * DisassociateKmsKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DisassociateKmsKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DisassociateKmsKey \a response.
  */
 void DisassociateKmsKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DisassociateKmsKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DisassociateKmsKeyResponsePrivate
+ * \brief The DisassociateKmsKeyResponsePrivate class provides private implementation for DisassociateKmsKeyResponse.
  * \internal
  *
- * \class DisassociateKmsKeyResponsePrivate
- *
- * \brief Private implementation for DisassociateKmsKeyResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateKmsKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateKmsKeyResponse instance.
+ * Constructs a DisassociateKmsKeyResponsePrivate object with public implementation \a q.
  */
 DisassociateKmsKeyResponsePrivate::DisassociateKmsKeyResponsePrivate(
     DisassociateKmsKeyResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DisassociateKmsKeyResponsePrivate::DisassociateKmsKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DisassociateKmsKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DisassociateKmsKey response element from \a xml.
  */
 void DisassociateKmsKeyResponsePrivate::parseDisassociateKmsKeyResponse(QXmlStreamReader &xml)
 {

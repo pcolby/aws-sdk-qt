@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UploadSSHPublicKeyResponse
- *
  * \brief The UploadSSHPublicKeyResponse class provides an interace for IAM UploadSSHPublicKey responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UploadSSHPublicKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UploadSSHPublicKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 UploadSSHPublicKeyResponse::UploadSSHPublicKeyResponse(
         const UploadSSHPublicKeyRequest &request,
@@ -120,6 +115,9 @@ UploadSSHPublicKeyResponse::UploadSSHPublicKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UploadSSHPublicKeyRequest * UploadSSHPublicKeyResponse::request() const
 {
     Q_D(const UploadSSHPublicKeyResponse);
@@ -127,9 +125,8 @@ const UploadSSHPublicKeyRequest * UploadSSHPublicKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM UploadSSHPublicKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UploadSSHPublicKey \a response.
  */
 void UploadSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UploadSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UploadSSHPublicKeyResponsePrivate
+ * \brief The UploadSSHPublicKeyResponsePrivate class provides private implementation for UploadSSHPublicKeyResponse.
  * \internal
  *
- * \class UploadSSHPublicKeyResponsePrivate
- *
- * \brief Private implementation for UploadSSHPublicKeyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadSSHPublicKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UploadSSHPublicKeyResponse instance.
+ * Constructs a UploadSSHPublicKeyResponsePrivate object with public implementation \a q.
  */
 UploadSSHPublicKeyResponsePrivate::UploadSSHPublicKeyResponsePrivate(
     UploadSSHPublicKeyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UploadSSHPublicKeyResponsePrivate::UploadSSHPublicKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM UploadSSHPublicKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UploadSSHPublicKey response element from \a xml.
  */
 void UploadSSHPublicKeyResponsePrivate::parseUploadSSHPublicKeyResponse(QXmlStreamReader &xml)
 {

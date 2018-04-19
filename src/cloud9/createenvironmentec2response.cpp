@@ -29,10 +29,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::CreateEnvironmentEC2Response
- *
  * \brief The CreateEnvironmentEC2Response class provides an interace for Cloud9 CreateEnvironmentEC2 responses.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -93,11 +92,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new CreateEnvironmentEC2Response object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateEnvironmentEC2Response object for \a reply to \a request, with parent \a parent.
  */
 CreateEnvironmentEC2Response::CreateEnvironmentEC2Response(
         const CreateEnvironmentEC2Request &request,
@@ -109,6 +104,9 @@ CreateEnvironmentEC2Response::CreateEnvironmentEC2Response(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateEnvironmentEC2Request * CreateEnvironmentEC2Response::request() const
 {
     Q_D(const CreateEnvironmentEC2Response);
@@ -116,9 +114,8 @@ const CreateEnvironmentEC2Request * CreateEnvironmentEC2Response::request() cons
 }
 
 /*!
- * @brief  Parse a Cloud9 CreateEnvironmentEC2 response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Cloud9 CreateEnvironmentEC2 \a response.
  */
 void CreateEnvironmentEC2Response::parseSuccess(QIODevice &response)
 {
@@ -128,19 +125,15 @@ void CreateEnvironmentEC2Response::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Cloud9::CreateEnvironmentEC2ResponsePrivate
+ * \brief The CreateEnvironmentEC2ResponsePrivate class provides private implementation for CreateEnvironmentEC2Response.
  * \internal
  *
- * \class CreateEnvironmentEC2ResponsePrivate
- *
- * \brief Private implementation for CreateEnvironmentEC2Response.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEnvironmentEC2ResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateEnvironmentEC2Response instance.
+ * Constructs a CreateEnvironmentEC2ResponsePrivate object with public implementation \a q.
  */
 CreateEnvironmentEC2ResponsePrivate::CreateEnvironmentEC2ResponsePrivate(
     CreateEnvironmentEC2Response * const q) : Cloud9ResponsePrivate(q)
@@ -149,9 +142,7 @@ CreateEnvironmentEC2ResponsePrivate::CreateEnvironmentEC2ResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Cloud9 CreateEnvironmentEC2Response element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Cloud9 CreateEnvironmentEC2 response element from \a xml.
  */
 void CreateEnvironmentEC2ResponsePrivate::parseCreateEnvironmentEC2Response(QXmlStreamReader &xml)
 {

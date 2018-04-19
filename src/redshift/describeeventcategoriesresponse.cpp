@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeEventCategoriesResponse
- *
  * \brief The DescribeEventCategoriesResponse class provides an interace for Redshift DescribeEventCategories responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventCategoriesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEventCategoriesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEventCategoriesResponse::DescribeEventCategoriesResponse(
         const DescribeEventCategoriesRequest &request,
@@ -85,6 +80,9 @@ DescribeEventCategoriesResponse::DescribeEventCategoriesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEventCategoriesRequest * DescribeEventCategoriesResponse::request() const
 {
     Q_D(const DescribeEventCategoriesResponse);
@@ -92,9 +90,8 @@ const DescribeEventCategoriesRequest * DescribeEventCategoriesResponse::request(
 }
 
 /*!
- * @brief  Parse a Redshift DescribeEventCategories response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeEventCategories \a response.
  */
 void DescribeEventCategoriesResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeEventCategoriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeEventCategoriesResponsePrivate
+ * \brief The DescribeEventCategoriesResponsePrivate class provides private implementation for DescribeEventCategoriesResponse.
  * \internal
  *
- * \class DescribeEventCategoriesResponsePrivate
- *
- * \brief Private implementation for DescribeEventCategoriesResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventCategoriesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEventCategoriesResponse instance.
+ * Constructs a DescribeEventCategoriesResponsePrivate object with public implementation \a q.
  */
 DescribeEventCategoriesResponsePrivate::DescribeEventCategoriesResponsePrivate(
     DescribeEventCategoriesResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeEventCategoriesResponsePrivate::DescribeEventCategoriesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift DescribeEventCategoriesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeEventCategories response element from \a xml.
  */
 void DescribeEventCategoriesResponsePrivate::parseDescribeEventCategoriesResponse(QXmlStreamReader &xml)
 {

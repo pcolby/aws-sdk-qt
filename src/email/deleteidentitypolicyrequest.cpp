@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityPolicyRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteIdentityPolicyRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a DeleteIdentityPolicyRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 DeleteIdentityPolicyRequestPrivate::DeleteIdentityPolicyRequestPrivate(
     const SESRequest::Action action, DeleteIdentityPolicyRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetPasswordDataRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetPasswordDataRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a GetPasswordDataRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 GetPasswordDataRequestPrivate::GetPasswordDataRequestPrivate(
     const EC2Request::Action action, GetPasswordDataRequest * const q)

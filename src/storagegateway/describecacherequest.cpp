@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DescribeCacheRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCacheRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DescribeCacheRequestPrivate::DescribeCacheRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeCacheRequest * const q)

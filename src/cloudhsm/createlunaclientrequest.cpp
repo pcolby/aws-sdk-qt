@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * CreateLunaClientRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateLunaClientRequestPrivate object for CloudHSM \a action with,
- * public implementation \a q.
+ * Constructs a CreateLunaClientRequestPrivate object for CloudHSM \a action,
+ * with public implementation \a q.
  */
 CreateLunaClientRequestPrivate::CreateLunaClientRequestPrivate(
     const CloudHSMRequest::Action action, CreateLunaClientRequest * const q)

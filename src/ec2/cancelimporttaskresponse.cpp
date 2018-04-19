@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelImportTaskResponse
- *
  * \brief The CancelImportTaskResponse class provides an interace for EC2 CancelImportTask responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelImportTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelImportTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelImportTaskResponse::CancelImportTaskResponse(
         const CancelImportTaskRequest &request,
@@ -59,6 +54,9 @@ CancelImportTaskResponse::CancelImportTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelImportTaskRequest * CancelImportTaskResponse::request() const
 {
     Q_D(const CancelImportTaskResponse);
@@ -66,9 +64,8 @@ const CancelImportTaskRequest * CancelImportTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CancelImportTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CancelImportTask \a response.
  */
 void CancelImportTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CancelImportTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CancelImportTaskResponsePrivate
+ * \brief The CancelImportTaskResponsePrivate class provides private implementation for CancelImportTaskResponse.
  * \internal
  *
- * \class CancelImportTaskResponsePrivate
- *
- * \brief Private implementation for CancelImportTaskResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelImportTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelImportTaskResponse instance.
+ * Constructs a CancelImportTaskResponsePrivate object with public implementation \a q.
  */
 CancelImportTaskResponsePrivate::CancelImportTaskResponsePrivate(
     CancelImportTaskResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CancelImportTaskResponsePrivate::CancelImportTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CancelImportTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CancelImportTask response element from \a xml.
  */
 void CancelImportTaskResponsePrivate::parseCancelImportTaskResponse(QXmlStreamReader &xml)
 {

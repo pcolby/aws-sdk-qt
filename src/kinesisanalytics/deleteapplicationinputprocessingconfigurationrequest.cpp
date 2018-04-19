@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationInputProcessingConfiguration
  */
 
 /*!
- *
- * Constructs a DeleteApplicationInputProcessingConfigurationRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApplicationInputProcessingConfigurationRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 DeleteApplicationInputProcessingConfigurationRequestPrivate::DeleteApplicationInputProcessingConfigurationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationInputProcessingConfigurationRequest * const q)

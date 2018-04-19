@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RejectVpcEndpointConnectionsResponse
- *
  * \brief The RejectVpcEndpointConnectionsResponse class provides an interace for EC2 RejectVpcEndpointConnections responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RejectVpcEndpointConnectionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RejectVpcEndpointConnectionsResponse object for \a reply to \a request, with parent \a parent.
  */
 RejectVpcEndpointConnectionsResponse::RejectVpcEndpointConnectionsResponse(
         const RejectVpcEndpointConnectionsRequest &request,
@@ -59,6 +54,9 @@ RejectVpcEndpointConnectionsResponse::RejectVpcEndpointConnectionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RejectVpcEndpointConnectionsRequest * RejectVpcEndpointConnectionsResponse::request() const
 {
     Q_D(const RejectVpcEndpointConnectionsResponse);
@@ -66,9 +64,8 @@ const RejectVpcEndpointConnectionsRequest * RejectVpcEndpointConnectionsResponse
 }
 
 /*!
- * @brief  Parse a EC2 RejectVpcEndpointConnections response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 RejectVpcEndpointConnections \a response.
  */
 void RejectVpcEndpointConnectionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void RejectVpcEndpointConnectionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::RejectVpcEndpointConnectionsResponsePrivate
+ * \brief The RejectVpcEndpointConnectionsResponsePrivate class provides private implementation for RejectVpcEndpointConnectionsResponse.
  * \internal
  *
- * \class RejectVpcEndpointConnectionsResponsePrivate
- *
- * \brief Private implementation for RejectVpcEndpointConnectionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RejectVpcEndpointConnectionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RejectVpcEndpointConnectionsResponse instance.
+ * Constructs a RejectVpcEndpointConnectionsResponsePrivate object with public implementation \a q.
  */
 RejectVpcEndpointConnectionsResponsePrivate::RejectVpcEndpointConnectionsResponsePrivate(
     RejectVpcEndpointConnectionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ RejectVpcEndpointConnectionsResponsePrivate::RejectVpcEndpointConnectionsRespons
 }
 
 /*!
- * @brief  Parse an EC2 RejectVpcEndpointConnectionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 RejectVpcEndpointConnections response element from \a xml.
  */
 void RejectVpcEndpointConnectionsResponsePrivate::parseRejectVpcEndpointConnectionsResponse(QXmlStreamReader &xml)
 {

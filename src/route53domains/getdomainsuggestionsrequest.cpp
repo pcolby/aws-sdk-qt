@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetDomainSuggestionsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetDomainSuggestionsRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a GetDomainSuggestionsRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 GetDomainSuggestionsRequestPrivate::GetDomainSuggestionsRequestPrivate(
     const Route53DomainsRequest::Action action, GetDomainSuggestionsRequest * const q)

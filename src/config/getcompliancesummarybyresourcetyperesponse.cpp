@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetComplianceSummaryByResourceTypeResponse
- *
  * \brief The GetComplianceSummaryByResourceTypeResponse class provides an interace for ConfigService GetComplianceSummaryByResourceType responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetComplianceSummaryByResourceTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetComplianceSummaryByResourceTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 GetComplianceSummaryByResourceTypeResponse::GetComplianceSummaryByResourceTypeResponse(
         const GetComplianceSummaryByResourceTypeRequest &request,
@@ -78,6 +73,9 @@ GetComplianceSummaryByResourceTypeResponse::GetComplianceSummaryByResourceTypeRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetComplianceSummaryByResourceTypeRequest * GetComplianceSummaryByResourceTypeResponse::request() const
 {
     Q_D(const GetComplianceSummaryByResourceTypeResponse);
@@ -85,9 +83,8 @@ const GetComplianceSummaryByResourceTypeRequest * GetComplianceSummaryByResource
 }
 
 /*!
- * @brief  Parse a ConfigService GetComplianceSummaryByResourceType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService GetComplianceSummaryByResourceType \a response.
  */
 void GetComplianceSummaryByResourceTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void GetComplianceSummaryByResourceTypeResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::ConfigService::GetComplianceSummaryByResourceTypeResponsePrivate
+ * \brief The GetComplianceSummaryByResourceTypeResponsePrivate class provides private implementation for GetComplianceSummaryByResourceTypeResponse.
  * \internal
  *
- * \class GetComplianceSummaryByResourceTypeResponsePrivate
- *
- * \brief Private implementation for GetComplianceSummaryByResourceTypeResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetComplianceSummaryByResourceTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetComplianceSummaryByResourceTypeResponse instance.
+ * Constructs a GetComplianceSummaryByResourceTypeResponsePrivate object with public implementation \a q.
  */
 GetComplianceSummaryByResourceTypeResponsePrivate::GetComplianceSummaryByResourceTypeResponsePrivate(
     GetComplianceSummaryByResourceTypeResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ GetComplianceSummaryByResourceTypeResponsePrivate::GetComplianceSummaryByResourc
 }
 
 /*!
- * @brief  Parse an ConfigService GetComplianceSummaryByResourceTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService GetComplianceSummaryByResourceType response element from \a xml.
  */
 void GetComplianceSummaryByResourceTypeResponsePrivate::parseGetComplianceSummaryByResourceTypeResponse(QXmlStreamReader &xml)
 {

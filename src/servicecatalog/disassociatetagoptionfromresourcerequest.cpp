@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateTagOptionFromResourceRequest::res
  */
 
 /*!
- *
- * Constructs a DisassociateTagOptionFromResourceRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateTagOptionFromResourceRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DisassociateTagOptionFromResourceRequestPrivate::DisassociateTagOptionFromResourceRequestPrivate(
     const ServiceCatalogRequest::Action action, DisassociateTagOptionFromResourceRequest * const q)

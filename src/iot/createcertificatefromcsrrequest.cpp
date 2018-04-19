@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateCertificateFromCsrRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateCertificateFromCsrRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a CreateCertificateFromCsrRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 CreateCertificateFromCsrRequestPrivate::CreateCertificateFromCsrRequestPrivate(
     const IoTRequest::Action action, CreateCertificateFromCsrRequest * const q)

@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StartCrawlerResponse
- *
  * \brief The StartCrawlerResponse class provides an interace for Glue StartCrawler responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StartCrawlerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartCrawlerResponse object for \a reply to \a request, with parent \a parent.
  */
 StartCrawlerResponse::StartCrawlerResponse(
         const StartCrawlerRequest &request,
@@ -58,6 +53,9 @@ StartCrawlerResponse::StartCrawlerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartCrawlerRequest * StartCrawlerResponse::request() const
 {
     Q_D(const StartCrawlerResponse);
@@ -65,9 +63,8 @@ const StartCrawlerRequest * StartCrawlerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue StartCrawler response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue StartCrawler \a response.
  */
 void StartCrawlerResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StartCrawlerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::StartCrawlerResponsePrivate
+ * \brief The StartCrawlerResponsePrivate class provides private implementation for StartCrawlerResponse.
  * \internal
  *
- * \class StartCrawlerResponsePrivate
- *
- * \brief Private implementation for StartCrawlerResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartCrawlerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartCrawlerResponse instance.
+ * Constructs a StartCrawlerResponsePrivate object with public implementation \a q.
  */
 StartCrawlerResponsePrivate::StartCrawlerResponsePrivate(
     StartCrawlerResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ StartCrawlerResponsePrivate::StartCrawlerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue StartCrawlerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue StartCrawler response element from \a xml.
  */
 void StartCrawlerResponsePrivate::parseStartCrawlerResponse(QXmlStreamReader &xml)
 {

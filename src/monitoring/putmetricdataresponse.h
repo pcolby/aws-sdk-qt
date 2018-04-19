@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutMetricDataResponse : public CloudWatchResponse {
 public:
     PutMetricDataResponse(const PutMetricDataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutMetricDataRequest * request() const;
+    virtual const PutMetricDataRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutMetricDataResponse)

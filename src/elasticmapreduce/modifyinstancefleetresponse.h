@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyInstanceFleetResponse : public EMRResponse {
 public:
     ModifyInstanceFleetResponse(const ModifyInstanceFleetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyInstanceFleetRequest * request() const;
+    virtual const ModifyInstanceFleetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyInstanceFleetResponse)

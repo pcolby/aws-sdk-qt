@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetProjectResponse
- *
  * \brief The GetProjectResponse class provides an interace for DeviceFarm GetProject responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 GetProjectResponse::GetProjectResponse(
         const GetProjectRequest &request,
@@ -57,6 +52,9 @@ GetProjectResponse::GetProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetProjectRequest * GetProjectResponse::request() const
 {
     Q_D(const GetProjectResponse);
@@ -64,9 +62,8 @@ const GetProjectRequest * GetProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetProject \a response.
  */
 void GetProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetProjectResponsePrivate
+ * \brief The GetProjectResponsePrivate class provides private implementation for GetProjectResponse.
  * \internal
  *
- * \class GetProjectResponsePrivate
- *
- * \brief Private implementation for GetProjectResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetProjectResponse instance.
+ * Constructs a GetProjectResponsePrivate object with public implementation \a q.
  */
 GetProjectResponsePrivate::GetProjectResponsePrivate(
     GetProjectResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetProjectResponsePrivate::GetProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetProject response element from \a xml.
  */
 void GetProjectResponsePrivate::parseGetProjectResponse(QXmlStreamReader &xml)
 {

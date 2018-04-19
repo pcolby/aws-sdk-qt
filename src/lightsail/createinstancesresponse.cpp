@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateInstancesResponse
- *
  * \brief The CreateInstancesResponse class provides an interace for Lightsail CreateInstances responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateInstancesResponse::CreateInstancesResponse(
         const CreateInstancesRequest &request,
@@ -71,6 +66,9 @@ CreateInstancesResponse::CreateInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateInstancesRequest * CreateInstancesResponse::request() const
 {
     Q_D(const CreateInstancesResponse);
@@ -78,9 +76,8 @@ const CreateInstancesRequest * CreateInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail CreateInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail CreateInstances \a response.
  */
 void CreateInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void CreateInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::CreateInstancesResponsePrivate
+ * \brief The CreateInstancesResponsePrivate class provides private implementation for CreateInstancesResponse.
  * \internal
  *
- * \class CreateInstancesResponsePrivate
- *
- * \brief Private implementation for CreateInstancesResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateInstancesResponse instance.
+ * Constructs a CreateInstancesResponsePrivate object with public implementation \a q.
  */
 CreateInstancesResponsePrivate::CreateInstancesResponsePrivate(
     CreateInstancesResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ CreateInstancesResponsePrivate::CreateInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail CreateInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail CreateInstances response element from \a xml.
  */
 void CreateInstancesResponsePrivate::parseCreateInstancesResponse(QXmlStreamReader &xml)
 {

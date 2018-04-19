@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSuiteResponse : public DeviceFarmResponse {
 public:
     GetSuiteResponse(const GetSuiteRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSuiteRequest * request() const;
+    virtual const GetSuiteRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSuiteResponse)

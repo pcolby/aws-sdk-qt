@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeClustersRequestPrivate object for CloudHSMV2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeClustersRequestPrivate object for CloudHSMV2 \a action,
+ * with public implementation \a q.
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const CloudHSMV2Request::Action action, DescribeClustersRequest * const q)

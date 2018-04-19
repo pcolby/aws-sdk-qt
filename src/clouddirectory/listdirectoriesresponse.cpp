@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListDirectoriesResponse
- *
  * \brief The ListDirectoriesResponse class provides an interace for CloudDirectory ListDirectories responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListDirectoriesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDirectoriesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDirectoriesResponse::ListDirectoriesResponse(
         const ListDirectoriesRequest &request,
@@ -62,6 +57,9 @@ ListDirectoriesResponse::ListDirectoriesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDirectoriesRequest * ListDirectoriesResponse::request() const
 {
     Q_D(const ListDirectoriesResponse);
@@ -69,9 +67,8 @@ const ListDirectoriesRequest * ListDirectoriesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListDirectories response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListDirectories \a response.
  */
 void ListDirectoriesResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListDirectoriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListDirectoriesResponsePrivate
+ * \brief The ListDirectoriesResponsePrivate class provides private implementation for ListDirectoriesResponse.
  * \internal
  *
- * \class ListDirectoriesResponsePrivate
- *
- * \brief Private implementation for ListDirectoriesResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDirectoriesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDirectoriesResponse instance.
+ * Constructs a ListDirectoriesResponsePrivate object with public implementation \a q.
  */
 ListDirectoriesResponsePrivate::ListDirectoriesResponsePrivate(
     ListDirectoriesResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListDirectoriesResponsePrivate::ListDirectoriesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListDirectoriesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListDirectories response element from \a xml.
  */
 void ListDirectoriesResponsePrivate::parseListDirectoriesResponse(QXmlStreamReader &xml)
 {

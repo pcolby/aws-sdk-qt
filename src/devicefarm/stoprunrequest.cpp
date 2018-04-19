@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * StopRunRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a StopRunRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a StopRunRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 StopRunRequestPrivate::StopRunRequestPrivate(
     const DeviceFarmRequest::Action action, StopRunRequest * const q)

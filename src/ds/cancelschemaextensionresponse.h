@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelSchemaExtensionResponse : public DirectoryServiceRespon
 public:
     CancelSchemaExtensionResponse(const CancelSchemaExtensionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelSchemaExtensionRequest * request() const;
+    virtual const CancelSchemaExtensionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CancelSchemaExtensionResponse)

@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::SetVaultNotificationsResponse
- *
  * \brief The SetVaultNotificationsResponse class provides an interace for Glacier SetVaultNotifications responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new SetVaultNotificationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetVaultNotificationsResponse object for \a reply to \a request, with parent \a parent.
  */
 SetVaultNotificationsResponse::SetVaultNotificationsResponse(
         const SetVaultNotificationsRequest &request,
@@ -93,6 +88,9 @@ SetVaultNotificationsResponse::SetVaultNotificationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetVaultNotificationsRequest * SetVaultNotificationsResponse::request() const
 {
     Q_D(const SetVaultNotificationsResponse);
@@ -100,9 +98,8 @@ const SetVaultNotificationsRequest * SetVaultNotificationsResponse::request() co
 }
 
 /*!
- * @brief  Parse a Glacier SetVaultNotifications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier SetVaultNotifications \a response.
  */
 void SetVaultNotificationsResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void SetVaultNotificationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::SetVaultNotificationsResponsePrivate
+ * \brief The SetVaultNotificationsResponsePrivate class provides private implementation for SetVaultNotificationsResponse.
  * \internal
  *
- * \class SetVaultNotificationsResponsePrivate
- *
- * \brief Private implementation for SetVaultNotificationsResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetVaultNotificationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetVaultNotificationsResponse instance.
+ * Constructs a SetVaultNotificationsResponsePrivate object with public implementation \a q.
  */
 SetVaultNotificationsResponsePrivate::SetVaultNotificationsResponsePrivate(
     SetVaultNotificationsResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ SetVaultNotificationsResponsePrivate::SetVaultNotificationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier SetVaultNotificationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier SetVaultNotifications response element from \a xml.
  */
 void SetVaultNotificationsResponsePrivate::parseSetVaultNotificationsResponse(QXmlStreamReader &xml)
 {

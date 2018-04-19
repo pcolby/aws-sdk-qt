@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeBrokerResponse : public MQResponse {
 public:
     DescribeBrokerResponse(const DescribeBrokerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeBrokerRequest * request() const;
+    virtual const DescribeBrokerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeBrokerResponse)

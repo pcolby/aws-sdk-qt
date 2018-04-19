@@ -29,10 +29,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::AssociateAdminAccountResponse
- *
  * \brief The AssociateAdminAccountResponse class provides an interace for FMS AssociateAdminAccount responses.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -45,11 +44,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new AssociateAdminAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateAdminAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateAdminAccountResponse::AssociateAdminAccountResponse(
         const AssociateAdminAccountRequest &request,
@@ -61,6 +56,9 @@ AssociateAdminAccountResponse::AssociateAdminAccountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateAdminAccountRequest * AssociateAdminAccountResponse::request() const
 {
     Q_D(const AssociateAdminAccountResponse);
@@ -68,9 +66,8 @@ const AssociateAdminAccountRequest * AssociateAdminAccountResponse::request() co
 }
 
 /*!
- * @brief  Parse a FMS AssociateAdminAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful FMS AssociateAdminAccount \a response.
  */
 void AssociateAdminAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void AssociateAdminAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::FMS::AssociateAdminAccountResponsePrivate
+ * \brief The AssociateAdminAccountResponsePrivate class provides private implementation for AssociateAdminAccountResponse.
  * \internal
  *
- * \class AssociateAdminAccountResponsePrivate
- *
- * \brief Private implementation for AssociateAdminAccountResponse.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateAdminAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateAdminAccountResponse instance.
+ * Constructs a AssociateAdminAccountResponsePrivate object with public implementation \a q.
  */
 AssociateAdminAccountResponsePrivate::AssociateAdminAccountResponsePrivate(
     AssociateAdminAccountResponse * const q) : FMSResponsePrivate(q)
@@ -101,9 +94,7 @@ AssociateAdminAccountResponsePrivate::AssociateAdminAccountResponsePrivate(
 }
 
 /*!
- * @brief  Parse an FMS AssociateAdminAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a FMS AssociateAdminAccount response element from \a xml.
  */
 void AssociateAdminAccountResponsePrivate::parseAssociateAdminAccountResponse(QXmlStreamReader &xml)
 {

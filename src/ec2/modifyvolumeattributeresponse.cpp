@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVolumeAttributeResponse
- *
  * \brief The ModifyVolumeAttributeResponse class provides an interace for EC2 ModifyVolumeAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVolumeAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyVolumeAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyVolumeAttributeResponse::ModifyVolumeAttributeResponse(
         const ModifyVolumeAttributeRequest &request,
@@ -59,6 +54,9 @@ ModifyVolumeAttributeResponse::ModifyVolumeAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyVolumeAttributeRequest * ModifyVolumeAttributeResponse::request() const
 {
     Q_D(const ModifyVolumeAttributeResponse);
@@ -66,9 +64,8 @@ const ModifyVolumeAttributeRequest * ModifyVolumeAttributeResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 ModifyVolumeAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyVolumeAttribute \a response.
  */
 void ModifyVolumeAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyVolumeAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyVolumeAttributeResponsePrivate
+ * \brief The ModifyVolumeAttributeResponsePrivate class provides private implementation for ModifyVolumeAttributeResponse.
  * \internal
  *
- * \class ModifyVolumeAttributeResponsePrivate
- *
- * \brief Private implementation for ModifyVolumeAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVolumeAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyVolumeAttributeResponse instance.
+ * Constructs a ModifyVolumeAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyVolumeAttributeResponsePrivate::ModifyVolumeAttributeResponsePrivate(
     ModifyVolumeAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyVolumeAttributeResponsePrivate::ModifyVolumeAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifyVolumeAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyVolumeAttribute response element from \a xml.
  */
 void ModifyVolumeAttributeResponsePrivate::parseModifyVolumeAttributeResponse(QXmlStreamReader &xml)
 {

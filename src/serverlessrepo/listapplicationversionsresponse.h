@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListApplicationVersionsResponse : public ServerlessApplicatio
 public:
     ListApplicationVersionsResponse(const ListApplicationVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListApplicationVersionsRequest * request() const;
+    virtual const ListApplicationVersionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListApplicationVersionsResponse)

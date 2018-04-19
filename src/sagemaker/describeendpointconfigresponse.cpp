@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DescribeEndpointConfigResponse
- *
  * \brief The DescribeEndpointConfigResponse class provides an interace for SageMaker DescribeEndpointConfig responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::describeEndpointConfig
  */
 
 /*!
- * @brief  Constructs a new DescribeEndpointConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEndpointConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEndpointConfigResponse::DescribeEndpointConfigResponse(
         const DescribeEndpointConfigRequest &request,
@@ -55,6 +50,9 @@ DescribeEndpointConfigResponse::DescribeEndpointConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEndpointConfigRequest * DescribeEndpointConfigResponse::request() const
 {
     Q_D(const DescribeEndpointConfigResponse);
@@ -62,9 +60,8 @@ const DescribeEndpointConfigRequest * DescribeEndpointConfigResponse::request() 
 }
 
 /*!
- * @brief  Parse a SageMaker DescribeEndpointConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker DescribeEndpointConfig \a response.
  */
 void DescribeEndpointConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeEndpointConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::DescribeEndpointConfigResponsePrivate
+ * \brief The DescribeEndpointConfigResponsePrivate class provides private implementation for DescribeEndpointConfigResponse.
  * \internal
  *
- * \class DescribeEndpointConfigResponsePrivate
- *
- * \brief Private implementation for DescribeEndpointConfigResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEndpointConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEndpointConfigResponse instance.
+ * Constructs a DescribeEndpointConfigResponsePrivate object with public implementation \a q.
  */
 DescribeEndpointConfigResponsePrivate::DescribeEndpointConfigResponsePrivate(
     DescribeEndpointConfigResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeEndpointConfigResponsePrivate::DescribeEndpointConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker DescribeEndpointConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker DescribeEndpointConfig response element from \a xml.
  */
 void DescribeEndpointConfigResponsePrivate::parseDescribeEndpointConfigResponse(QXmlStreamReader &xml)
 {

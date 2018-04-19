@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteAccountAliasResponse
- *
  * \brief The DeleteAccountAliasResponse class provides an interace for IAM DeleteAccountAlias responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteAccountAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAccountAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAccountAliasResponse::DeleteAccountAliasResponse(
         const DeleteAccountAliasRequest &request,
@@ -120,6 +115,9 @@ DeleteAccountAliasResponse::DeleteAccountAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAccountAliasRequest * DeleteAccountAliasResponse::request() const
 {
     Q_D(const DeleteAccountAliasResponse);
@@ -127,9 +125,8 @@ const DeleteAccountAliasRequest * DeleteAccountAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM DeleteAccountAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteAccountAlias \a response.
  */
 void DeleteAccountAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteAccountAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteAccountAliasResponsePrivate
+ * \brief The DeleteAccountAliasResponsePrivate class provides private implementation for DeleteAccountAliasResponse.
  * \internal
  *
- * \class DeleteAccountAliasResponsePrivate
- *
- * \brief Private implementation for DeleteAccountAliasResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAccountAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAccountAliasResponse instance.
+ * Constructs a DeleteAccountAliasResponsePrivate object with public implementation \a q.
  */
 DeleteAccountAliasResponsePrivate::DeleteAccountAliasResponsePrivate(
     DeleteAccountAliasResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteAccountAliasResponsePrivate::DeleteAccountAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeleteAccountAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteAccountAlias response element from \a xml.
  */
 void DeleteAccountAliasResponsePrivate::parseDeleteAccountAliasResponse(QXmlStreamReader &xml)
 {

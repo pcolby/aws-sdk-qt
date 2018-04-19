@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * UpdateLoadBalancerAttributeRequest::response(
  */
 
 /*!
- *
- * Constructs a UpdateLoadBalancerAttributeRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a UpdateLoadBalancerAttributeRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 UpdateLoadBalancerAttributeRequestPrivate::UpdateLoadBalancerAttributeRequestPrivate(
     const LightsailRequest::Action action, UpdateLoadBalancerAttributeRequest * const q)

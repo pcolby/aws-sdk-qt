@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::ListTagsForDomainResponse
- *
  * \brief The ListTagsForDomainResponse class provides an interace for Route53Domains ListTagsForDomain responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsForDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsForDomainResponse::ListTagsForDomainResponse(
         const ListTagsForDomainRequest &request,
@@ -56,6 +51,9 @@ ListTagsForDomainResponse::ListTagsForDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsForDomainRequest * ListTagsForDomainResponse::request() const
 {
     Q_D(const ListTagsForDomainResponse);
@@ -63,9 +61,8 @@ const ListTagsForDomainRequest * ListTagsForDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53Domains ListTagsForDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains ListTagsForDomain \a response.
  */
 void ListTagsForDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListTagsForDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::ListTagsForDomainResponsePrivate
+ * \brief The ListTagsForDomainResponsePrivate class provides private implementation for ListTagsForDomainResponse.
  * \internal
  *
- * \class ListTagsForDomainResponsePrivate
- *
- * \brief Private implementation for ListTagsForDomainResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsForDomainResponse instance.
+ * Constructs a ListTagsForDomainResponsePrivate object with public implementation \a q.
  */
 ListTagsForDomainResponsePrivate::ListTagsForDomainResponsePrivate(
     ListTagsForDomainResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ ListTagsForDomainResponsePrivate::ListTagsForDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains ListTagsForDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains ListTagsForDomain response element from \a xml.
  */
 void ListTagsForDomainResponsePrivate::parseListTagsForDomainResponse(QXmlStreamReader &xml)
 {

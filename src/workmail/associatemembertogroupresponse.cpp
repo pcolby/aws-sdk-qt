@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::AssociateMemberToGroupResponse
- *
  * \brief The AssociateMemberToGroupResponse class provides an interace for WorkMail AssociateMemberToGroup responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new AssociateMemberToGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateMemberToGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateMemberToGroupResponse::AssociateMemberToGroupResponse(
         const AssociateMemberToGroupRequest &request,
@@ -88,6 +83,9 @@ AssociateMemberToGroupResponse::AssociateMemberToGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateMemberToGroupRequest * AssociateMemberToGroupResponse::request() const
 {
     Q_D(const AssociateMemberToGroupResponse);
@@ -95,9 +93,8 @@ const AssociateMemberToGroupRequest * AssociateMemberToGroupResponse::request() 
 }
 
 /*!
- * @brief  Parse a WorkMail AssociateMemberToGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail AssociateMemberToGroup \a response.
  */
 void AssociateMemberToGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void AssociateMemberToGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::AssociateMemberToGroupResponsePrivate
+ * \brief The AssociateMemberToGroupResponsePrivate class provides private implementation for AssociateMemberToGroupResponse.
  * \internal
  *
- * \class AssociateMemberToGroupResponsePrivate
- *
- * \brief Private implementation for AssociateMemberToGroupResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateMemberToGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateMemberToGroupResponse instance.
+ * Constructs a AssociateMemberToGroupResponsePrivate object with public implementation \a q.
  */
 AssociateMemberToGroupResponsePrivate::AssociateMemberToGroupResponsePrivate(
     AssociateMemberToGroupResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ AssociateMemberToGroupResponsePrivate::AssociateMemberToGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail AssociateMemberToGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail AssociateMemberToGroup response element from \a xml.
  */
 void AssociateMemberToGroupResponsePrivate::parseAssociateMemberToGroupResponse(QXmlStreamReader &xml)
 {

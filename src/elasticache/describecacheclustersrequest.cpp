@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheClustersRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeCacheClustersRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCacheClustersRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 DescribeCacheClustersRequestPrivate::DescribeCacheClustersRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeCacheClustersRequest * const q)

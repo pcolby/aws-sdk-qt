@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListSecurityConfigurationsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a ListSecurityConfigurationsRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a ListSecurityConfigurationsRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 ListSecurityConfigurationsRequestPrivate::ListSecurityConfigurationsRequestPrivate(
     const EMRRequest::Action action, ListSecurityConfigurationsRequest * const q)

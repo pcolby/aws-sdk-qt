@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeImportImageTasksResponse
- *
  * \brief The DescribeImportImageTasksResponse class provides an interace for EC2 DescribeImportImageTasks responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeImportImageTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeImportImageTasksResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeImportImageTasksResponse::DescribeImportImageTasksResponse(
         const DescribeImportImageTasksRequest &request,
@@ -59,6 +54,9 @@ DescribeImportImageTasksResponse::DescribeImportImageTasksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeImportImageTasksRequest * DescribeImportImageTasksResponse::request() const
 {
     Q_D(const DescribeImportImageTasksResponse);
@@ -66,9 +64,8 @@ const DescribeImportImageTasksRequest * DescribeImportImageTasksResponse::reques
 }
 
 /*!
- * @brief  Parse a EC2 DescribeImportImageTasks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeImportImageTasks \a response.
  */
 void DescribeImportImageTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeImportImageTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeImportImageTasksResponsePrivate
+ * \brief The DescribeImportImageTasksResponsePrivate class provides private implementation for DescribeImportImageTasksResponse.
  * \internal
  *
- * \class DescribeImportImageTasksResponsePrivate
- *
- * \brief Private implementation for DescribeImportImageTasksResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeImportImageTasksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeImportImageTasksResponse instance.
+ * Constructs a DescribeImportImageTasksResponsePrivate object with public implementation \a q.
  */
 DescribeImportImageTasksResponsePrivate::DescribeImportImageTasksResponsePrivate(
     DescribeImportImageTasksResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeImportImageTasksResponsePrivate::DescribeImportImageTasksResponsePrivate
 }
 
 /*!
- * @brief  Parse an EC2 DescribeImportImageTasksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeImportImageTasks response element from \a xml.
  */
 void DescribeImportImageTasksResponsePrivate::parseDescribeImportImageTasksResponse(QXmlStreamReader &xml)
 {

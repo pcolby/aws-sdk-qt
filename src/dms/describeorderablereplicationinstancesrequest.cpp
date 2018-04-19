@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableReplicationInstancesRequest:
  */
 
 /*!
- *
- * Constructs a DescribeOrderableReplicationInstancesRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeOrderableReplicationInstancesRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicationInstancesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeOrderableReplicationInstancesRequest * const q)

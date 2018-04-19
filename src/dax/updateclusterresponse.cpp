@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::UpdateClusterResponse
- *
  * \brief The UpdateClusterResponse class provides an interace for DAX UpdateCluster responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new UpdateClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateClusterResponse::UpdateClusterResponse(
         const UpdateClusterRequest &request,
@@ -59,6 +54,9 @@ UpdateClusterResponse::UpdateClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateClusterRequest * UpdateClusterResponse::request() const
 {
     Q_D(const UpdateClusterResponse);
@@ -66,9 +64,8 @@ const UpdateClusterRequest * UpdateClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a DAX UpdateCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX UpdateCluster \a response.
  */
 void UpdateClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void UpdateClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::UpdateClusterResponsePrivate
+ * \brief The UpdateClusterResponsePrivate class provides private implementation for UpdateClusterResponse.
  * \internal
  *
- * \class UpdateClusterResponsePrivate
- *
- * \brief Private implementation for UpdateClusterResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateClusterResponse instance.
+ * Constructs a UpdateClusterResponsePrivate object with public implementation \a q.
  */
 UpdateClusterResponsePrivate::UpdateClusterResponsePrivate(
     UpdateClusterResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ UpdateClusterResponsePrivate::UpdateClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX UpdateClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX UpdateCluster response element from \a xml.
  */
 void UpdateClusterResponsePrivate::parseUpdateClusterResponse(QXmlStreamReader &xml)
 {

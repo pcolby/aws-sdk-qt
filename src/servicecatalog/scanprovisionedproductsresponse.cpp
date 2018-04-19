@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ScanProvisionedProductsResponse
- *
  * \brief The ScanProvisionedProductsResponse class provides an interace for ServiceCatalog ScanProvisionedProducts responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ScanProvisionedProductsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ScanProvisionedProductsResponse object for \a reply to \a request, with parent \a parent.
  */
 ScanProvisionedProductsResponse::ScanProvisionedProductsResponse(
         const ScanProvisionedProductsRequest &request,
@@ -61,6 +56,9 @@ ScanProvisionedProductsResponse::ScanProvisionedProductsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ScanProvisionedProductsRequest * ScanProvisionedProductsResponse::request() const
 {
     Q_D(const ScanProvisionedProductsResponse);
@@ -68,9 +66,8 @@ const ScanProvisionedProductsRequest * ScanProvisionedProductsResponse::request(
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ScanProvisionedProducts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ScanProvisionedProducts \a response.
  */
 void ScanProvisionedProductsResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ScanProvisionedProductsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ScanProvisionedProductsResponsePrivate
+ * \brief The ScanProvisionedProductsResponsePrivate class provides private implementation for ScanProvisionedProductsResponse.
  * \internal
  *
- * \class ScanProvisionedProductsResponsePrivate
- *
- * \brief Private implementation for ScanProvisionedProductsResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ScanProvisionedProductsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ScanProvisionedProductsResponse instance.
+ * Constructs a ScanProvisionedProductsResponsePrivate object with public implementation \a q.
  */
 ScanProvisionedProductsResponsePrivate::ScanProvisionedProductsResponsePrivate(
     ScanProvisionedProductsResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ScanProvisionedProductsResponsePrivate::ScanProvisionedProductsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ScanProvisionedProductsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ScanProvisionedProducts response element from \a xml.
  */
 void ScanProvisionedProductsResponsePrivate::parseScanProvisionedProductsResponse(QXmlStreamReader &xml)
 {

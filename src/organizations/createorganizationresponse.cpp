@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::CreateOrganizationResponse
- *
  * \brief The CreateOrganizationResponse class provides an interace for Organizations CreateOrganization responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new CreateOrganizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateOrganizationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateOrganizationResponse::CreateOrganizationResponse(
         const CreateOrganizationRequest &request,
@@ -197,6 +192,9 @@ CreateOrganizationResponse::CreateOrganizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateOrganizationRequest * CreateOrganizationResponse::request() const
 {
     Q_D(const CreateOrganizationResponse);
@@ -204,9 +202,8 @@ const CreateOrganizationRequest * CreateOrganizationResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations CreateOrganization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations CreateOrganization \a response.
  */
 void CreateOrganizationResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void CreateOrganizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::CreateOrganizationResponsePrivate
+ * \brief The CreateOrganizationResponsePrivate class provides private implementation for CreateOrganizationResponse.
  * \internal
  *
- * \class CreateOrganizationResponsePrivate
- *
- * \brief Private implementation for CreateOrganizationResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOrganizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateOrganizationResponse instance.
+ * Constructs a CreateOrganizationResponsePrivate object with public implementation \a q.
  */
 CreateOrganizationResponsePrivate::CreateOrganizationResponsePrivate(
     CreateOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ CreateOrganizationResponsePrivate::CreateOrganizationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations CreateOrganizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations CreateOrganization response element from \a xml.
  */
 void CreateOrganizationResponsePrivate::parseCreateOrganizationResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAccountSendingEnabledResponse : public SESResponse {
 public:
     GetAccountSendingEnabledResponse(const GetAccountSendingEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAccountSendingEnabledRequest * request() const;
+    virtual const GetAccountSendingEnabledRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetAccountSendingEnabledResponse)

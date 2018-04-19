@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateVirtualInterfaceResponse : public DirectConnectRespo
 public:
     AssociateVirtualInterfaceResponse(const AssociateVirtualInterfaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateVirtualInterfaceRequest * request() const;
+    virtual const AssociateVirtualInterfaceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateVirtualInterfaceResponse)

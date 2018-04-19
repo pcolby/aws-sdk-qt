@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * UpdateUserProfileRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateUserProfileRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a UpdateUserProfileRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 UpdateUserProfileRequestPrivate::UpdateUserProfileRequestPrivate(
     const OpsWorksRequest::Action action, UpdateUserProfileRequest * const q)

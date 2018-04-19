@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListAccountAliasesResponse
- *
  * \brief The ListAccountAliasesResponse class provides an interace for IAM ListAccountAliases responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListAccountAliasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAccountAliasesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAccountAliasesResponse::ListAccountAliasesResponse(
         const ListAccountAliasesRequest &request,
@@ -120,6 +115,9 @@ ListAccountAliasesResponse::ListAccountAliasesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAccountAliasesRequest * ListAccountAliasesResponse::request() const
 {
     Q_D(const ListAccountAliasesResponse);
@@ -127,9 +125,8 @@ const ListAccountAliasesRequest * ListAccountAliasesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM ListAccountAliases response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListAccountAliases \a response.
  */
 void ListAccountAliasesResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListAccountAliasesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListAccountAliasesResponsePrivate
+ * \brief The ListAccountAliasesResponsePrivate class provides private implementation for ListAccountAliasesResponse.
  * \internal
  *
- * \class ListAccountAliasesResponsePrivate
- *
- * \brief Private implementation for ListAccountAliasesResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAccountAliasesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAccountAliasesResponse instance.
+ * Constructs a ListAccountAliasesResponsePrivate object with public implementation \a q.
  */
 ListAccountAliasesResponsePrivate::ListAccountAliasesResponsePrivate(
     ListAccountAliasesResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListAccountAliasesResponsePrivate::ListAccountAliasesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListAccountAliasesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListAccountAliases response element from \a xml.
  */
 void ListAccountAliasesResponsePrivate::parseListAccountAliasesResponse(QXmlStreamReader &xml)
 {

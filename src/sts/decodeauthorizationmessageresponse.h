@@ -34,10 +34,10 @@ class QTAWS_EXPORT DecodeAuthorizationMessageResponse : public STSResponse {
 public:
     DecodeAuthorizationMessageResponse(const DecodeAuthorizationMessageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DecodeAuthorizationMessageRequest * request() const;
+    virtual const DecodeAuthorizationMessageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DecodeAuthorizationMessageResponse)

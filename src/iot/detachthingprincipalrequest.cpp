@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DetachThingPrincipalRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DetachThingPrincipalRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DetachThingPrincipalRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DetachThingPrincipalRequestPrivate::DetachThingPrincipalRequestPrivate(
     const IoTRequest::Action action, DetachThingPrincipalRequest * const q)

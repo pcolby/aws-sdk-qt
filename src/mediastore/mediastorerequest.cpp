@@ -49,7 +49,7 @@ namespace MediaStore {
  */
 
 /*!
- * Constructs a[n] MediaStoreRequest object for MediaStore \a action.
+ * Constructs a MediaStoreRequest object for MediaStore \a action.
  */
 MediaStoreRequest::MediaStoreRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MediaStoreRequestPrivate(action, this))
@@ -249,8 +249,8 @@ QNetworkRequest MediaStoreRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a MediaStoreRequestPrivate object for MediaStore \a action with,
- * public implementation \a q.
+ * Constructs a MediaStoreRequestPrivate object for MediaStore \a action,
+ * with public implementation \a q.
  */
 MediaStoreRequestPrivate::MediaStoreRequestPrivate(const MediaStoreRequest::Action action, MediaStoreRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

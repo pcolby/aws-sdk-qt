@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * RemoveAccountFromOrganizationRequest::respons
  */
 
 /*!
- *
- * Constructs a RemoveAccountFromOrganizationRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a RemoveAccountFromOrganizationRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 RemoveAccountFromOrganizationRequestPrivate::RemoveAccountFromOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, RemoveAccountFromOrganizationRequest * const q)

@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::CreateCollectionResponse
- *
  * \brief The CreateCollectionResponse class provides an interace for Rekognition CreateCollection responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new CreateCollectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCollectionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCollectionResponse::CreateCollectionResponse(
         const CreateCollectionRequest &request,
@@ -56,6 +51,9 @@ CreateCollectionResponse::CreateCollectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCollectionRequest * CreateCollectionResponse::request() const
 {
     Q_D(const CreateCollectionResponse);
@@ -63,9 +61,8 @@ const CreateCollectionRequest * CreateCollectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition CreateCollection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition CreateCollection \a response.
  */
 void CreateCollectionResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void CreateCollectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::CreateCollectionResponsePrivate
+ * \brief The CreateCollectionResponsePrivate class provides private implementation for CreateCollectionResponse.
  * \internal
  *
- * \class CreateCollectionResponsePrivate
- *
- * \brief Private implementation for CreateCollectionResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCollectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCollectionResponse instance.
+ * Constructs a CreateCollectionResponsePrivate object with public implementation \a q.
  */
 CreateCollectionResponsePrivate::CreateCollectionResponsePrivate(
     CreateCollectionResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ CreateCollectionResponsePrivate::CreateCollectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition CreateCollectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition CreateCollection response element from \a xml.
  */
 void CreateCollectionResponsePrivate::parseCreateCollectionResponse(QXmlStreamReader &xml)
 {

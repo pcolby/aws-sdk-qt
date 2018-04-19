@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateSpotDatafeedSubscriptionResponse : public EC2Response {
 public:
     CreateSpotDatafeedSubscriptionResponse(const CreateSpotDatafeedSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateSpotDatafeedSubscriptionRequest * request() const;
+    virtual const CreateSpotDatafeedSubscriptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateSpotDatafeedSubscriptionResponse)

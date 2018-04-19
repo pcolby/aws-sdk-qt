@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeConstraintRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeConstraintRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DescribeConstraintRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DescribeConstraintRequestPrivate::DescribeConstraintRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeConstraintRequest * const q)

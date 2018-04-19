@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * SetTerminationProtectionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a SetTerminationProtectionRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a SetTerminationProtectionRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 SetTerminationProtectionRequestPrivate::SetTerminationProtectionRequestPrivate(
     const EMRRequest::Action action, SetTerminationProtectionRequest * const q)

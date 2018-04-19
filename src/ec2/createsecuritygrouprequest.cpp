@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateSecurityGroupRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a CreateSecurityGroupRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateSecurityGroupRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateSecurityGroupRequestPrivate::CreateSecurityGroupRequestPrivate(
     const EC2Request::Action action, CreateSecurityGroupRequest * const q)

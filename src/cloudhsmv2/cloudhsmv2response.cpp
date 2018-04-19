@@ -28,16 +28,13 @@ namespace CloudHSMV2 {
 
 /*!
  * \class QtAws::CloudHSMV2::CloudHSMV2Response
- *
  * \brief The CloudHSMV2Response class provides an interface for CloudHSMV2 responses.
  *
- * \ingroup CloudHSMV2
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * @brief  Constructs a new CloudHSMV2Response object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CloudHSMV2Response object with parent \a parent.
  */
 CloudHSMV2Response::CloudHSMV2Response(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CloudHSMV2ResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CloudHSMV2Response::CloudHSMV2Response(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudHSMV2Response object.
- *
+ * \internal
+ * Constructs a CloudHSMV2Response object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudHSMV2ResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CloudHSMV2Response::CloudHSMV2Response(CloudHSMV2ResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CloudHSMV2Response::CloudHSMV2Response(CloudHSMV2ResponsePrivate * const d, QObj
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CloudHSMV2Response::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CloudHSMV2Response::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudHSMV2::CloudHSMV2ResponsePrivate
+ * \brief The CloudHSMV2ResponsePrivate class provides private implementation for CloudHSMV2Response.
+ * \internal
  *
- * @class  CloudHSMV2ResponsePrivate
- *
- * @brief  Private implementation for CloudHSMV2Response.
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudHSMV2ResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloudHSMV2Response instance.
+ * Constructs a CloudHSMV2ResponsePrivate object with public implementation \a q.
  */
 CloudHSMV2ResponsePrivate::CloudHSMV2ResponsePrivate(
     CloudHSMV2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

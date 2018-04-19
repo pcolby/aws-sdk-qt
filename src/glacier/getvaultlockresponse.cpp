@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::GetVaultLockResponse
- *
  * \brief The GetVaultLockResponse class provides an interace for Glacier GetVaultLock responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new GetVaultLockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetVaultLockResponse object for \a reply to \a request, with parent \a parent.
  */
 GetVaultLockResponse::GetVaultLockResponse(
         const GetVaultLockRequest &request,
@@ -93,6 +88,9 @@ GetVaultLockResponse::GetVaultLockResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetVaultLockRequest * GetVaultLockResponse::request() const
 {
     Q_D(const GetVaultLockResponse);
@@ -100,9 +98,8 @@ const GetVaultLockRequest * GetVaultLockResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier GetVaultLock response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier GetVaultLock \a response.
  */
 void GetVaultLockResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void GetVaultLockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::GetVaultLockResponsePrivate
+ * \brief The GetVaultLockResponsePrivate class provides private implementation for GetVaultLockResponse.
  * \internal
  *
- * \class GetVaultLockResponsePrivate
- *
- * \brief Private implementation for GetVaultLockResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetVaultLockResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetVaultLockResponse instance.
+ * Constructs a GetVaultLockResponsePrivate object with public implementation \a q.
  */
 GetVaultLockResponsePrivate::GetVaultLockResponsePrivate(
     GetVaultLockResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ GetVaultLockResponsePrivate::GetVaultLockResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier GetVaultLockResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier GetVaultLock response element from \a xml.
  */
 void GetVaultLockResponsePrivate::parseGetVaultLockResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ChangePasswordResponse : public IAMResponse {
 public:
     ChangePasswordResponse(const ChangePasswordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ChangePasswordRequest * request() const;
+    virtual const ChangePasswordRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ChangePasswordResponse)

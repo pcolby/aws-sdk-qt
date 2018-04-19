@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheParameterGroupsRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeCacheParameterGroupsRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCacheParameterGroupsRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 DescribeCacheParameterGroupsRequestPrivate::DescribeCacheParameterGroupsRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeCacheParameterGroupsRequest * const q)

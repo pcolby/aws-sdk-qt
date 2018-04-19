@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResetPasswordResponse : public WorkMailResponse {
 public:
     ResetPasswordResponse(const ResetPasswordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResetPasswordRequest * request() const;
+    virtual const ResetPasswordRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResetPasswordResponse)

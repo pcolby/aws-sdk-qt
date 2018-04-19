@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityPoolUsageRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeIdentityPoolUsageRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a DescribeIdentityPoolUsageRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 DescribeIdentityPoolUsageRequestPrivate::DescribeIdentityPoolUsageRequestPrivate(
     const CognitoSyncRequest::Action action, DescribeIdentityPoolUsageRequest * const q)

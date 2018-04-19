@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * UpdateNetworkProfileRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdateNetworkProfileRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a UpdateNetworkProfileRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 UpdateNetworkProfileRequestPrivate::UpdateNetworkProfileRequestPrivate(
     const DeviceFarmRequest::Action action, UpdateNetworkProfileRequest * const q)

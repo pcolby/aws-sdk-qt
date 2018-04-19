@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteParameterGroupRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteParameterGroupRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a DeleteParameterGroupRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 DeleteParameterGroupRequestPrivate::DeleteParameterGroupRequestPrivate(
     const DAXRequest::Action action, DeleteParameterGroupRequest * const q)

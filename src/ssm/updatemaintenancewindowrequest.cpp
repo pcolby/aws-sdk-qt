@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * UpdateMaintenanceWindowRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateMaintenanceWindowRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateMaintenanceWindowRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 UpdateMaintenanceWindowRequestPrivate::UpdateMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, UpdateMaintenanceWindowRequest * const q)

@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeVirtualInterfacesResponse
- *
  * \brief The DescribeVirtualInterfacesResponse class provides an interace for DirectConnect DescribeVirtualInterfaces responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeVirtualInterfacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVirtualInterfacesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVirtualInterfacesResponse::DescribeVirtualInterfacesResponse(
         const DescribeVirtualInterfacesRequest &request,
@@ -63,6 +58,9 @@ DescribeVirtualInterfacesResponse::DescribeVirtualInterfacesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVirtualInterfacesRequest * DescribeVirtualInterfacesResponse::request() const
 {
     Q_D(const DescribeVirtualInterfacesResponse);
@@ -70,9 +68,8 @@ const DescribeVirtualInterfacesRequest * DescribeVirtualInterfacesResponse::requ
 }
 
 /*!
- * @brief  Parse a DirectConnect DescribeVirtualInterfaces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DescribeVirtualInterfaces \a response.
  */
 void DescribeVirtualInterfacesResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DescribeVirtualInterfacesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::DescribeVirtualInterfacesResponsePrivate
+ * \brief The DescribeVirtualInterfacesResponsePrivate class provides private implementation for DescribeVirtualInterfacesResponse.
  * \internal
  *
- * \class DescribeVirtualInterfacesResponsePrivate
- *
- * \brief Private implementation for DescribeVirtualInterfacesResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVirtualInterfacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVirtualInterfacesResponse instance.
+ * Constructs a DescribeVirtualInterfacesResponsePrivate object with public implementation \a q.
  */
 DescribeVirtualInterfacesResponsePrivate::DescribeVirtualInterfacesResponsePrivate(
     DescribeVirtualInterfacesResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DescribeVirtualInterfacesResponsePrivate::DescribeVirtualInterfacesResponsePriva
 }
 
 /*!
- * @brief  Parse an DirectConnect DescribeVirtualInterfacesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DescribeVirtualInterfaces response element from \a xml.
  */
 void DescribeVirtualInterfacesResponsePrivate::parseDescribeVirtualInterfacesResponse(QXmlStreamReader &xml)
 {

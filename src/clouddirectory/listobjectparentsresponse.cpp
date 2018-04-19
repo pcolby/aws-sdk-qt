@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListObjectParentsResponse
- *
  * \brief The ListObjectParentsResponse class provides an interace for CloudDirectory ListObjectParents responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListObjectParentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListObjectParentsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListObjectParentsResponse::ListObjectParentsResponse(
         const ListObjectParentsRequest &request,
@@ -62,6 +57,9 @@ ListObjectParentsResponse::ListObjectParentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListObjectParentsRequest * ListObjectParentsResponse::request() const
 {
     Q_D(const ListObjectParentsResponse);
@@ -69,9 +67,8 @@ const ListObjectParentsRequest * ListObjectParentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListObjectParents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListObjectParents \a response.
  */
 void ListObjectParentsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListObjectParentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListObjectParentsResponsePrivate
+ * \brief The ListObjectParentsResponsePrivate class provides private implementation for ListObjectParentsResponse.
  * \internal
  *
- * \class ListObjectParentsResponsePrivate
- *
- * \brief Private implementation for ListObjectParentsResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectParentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListObjectParentsResponse instance.
+ * Constructs a ListObjectParentsResponsePrivate object with public implementation \a q.
  */
 ListObjectParentsResponsePrivate::ListObjectParentsResponsePrivate(
     ListObjectParentsResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListObjectParentsResponsePrivate::ListObjectParentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListObjectParentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListObjectParents response element from \a xml.
  */
 void ListObjectParentsResponsePrivate::parseListObjectParentsResponse(QXmlStreamReader &xml)
 {

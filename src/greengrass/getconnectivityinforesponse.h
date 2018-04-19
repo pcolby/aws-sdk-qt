@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetConnectivityInfoResponse : public GreengrassResponse {
 public:
     GetConnectivityInfoResponse(const GetConnectivityInfoRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetConnectivityInfoRequest * request() const;
+    virtual const GetConnectivityInfoRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetConnectivityInfoResponse)

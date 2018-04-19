@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeLifecycleHookTypesResponse
- *
  * \brief The DescribeLifecycleHookTypesResponse class provides an interace for AutoScaling DescribeLifecycleHookTypes responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeLifecycleHookTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLifecycleHookTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLifecycleHookTypesResponse::DescribeLifecycleHookTypesResponse(
         const DescribeLifecycleHookTypesRequest &request,
@@ -60,6 +55,9 @@ DescribeLifecycleHookTypesResponse::DescribeLifecycleHookTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLifecycleHookTypesRequest * DescribeLifecycleHookTypesResponse::request() const
 {
     Q_D(const DescribeLifecycleHookTypesResponse);
@@ -67,9 +65,8 @@ const DescribeLifecycleHookTypesRequest * DescribeLifecycleHookTypesResponse::re
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeLifecycleHookTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeLifecycleHookTypes \a response.
  */
 void DescribeLifecycleHookTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeLifecycleHookTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeLifecycleHookTypesResponsePrivate
+ * \brief The DescribeLifecycleHookTypesResponsePrivate class provides private implementation for DescribeLifecycleHookTypesResponse.
  * \internal
  *
- * \class DescribeLifecycleHookTypesResponsePrivate
- *
- * \brief Private implementation for DescribeLifecycleHookTypesResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLifecycleHookTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLifecycleHookTypesResponse instance.
+ * Constructs a DescribeLifecycleHookTypesResponsePrivate object with public implementation \a q.
  */
 DescribeLifecycleHookTypesResponsePrivate::DescribeLifecycleHookTypesResponsePrivate(
     DescribeLifecycleHookTypesResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeLifecycleHookTypesResponsePrivate::DescribeLifecycleHookTypesResponsePri
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeLifecycleHookTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeLifecycleHookTypes response element from \a xml.
  */
 void DescribeLifecycleHookTypesResponsePrivate::parseDescribeLifecycleHookTypesResponse(QXmlStreamReader &xml)
 {

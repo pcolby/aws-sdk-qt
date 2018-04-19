@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateDistributionWithTagsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a CreateDistributionWithTagsRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a CreateDistributionWithTagsRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 CreateDistributionWithTagsRequestPrivate::CreateDistributionWithTagsRequestPrivate(
     const CloudFrontRequest::Action action, CreateDistributionWithTagsRequest * const q)

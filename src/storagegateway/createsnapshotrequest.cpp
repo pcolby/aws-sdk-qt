@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CreateSnapshotRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a CreateSnapshotRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const StorageGatewayRequest::Action action, CreateSnapshotRequest * const q)

@@ -29,10 +29,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::ListDashboardsResponse
- *
  * \brief The ListDashboardsResponse class provides an interace for CloudWatch ListDashboards responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -53,11 +52,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new ListDashboardsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDashboardsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDashboardsResponse::ListDashboardsResponse(
         const ListDashboardsRequest &request,
@@ -69,6 +64,9 @@ ListDashboardsResponse::ListDashboardsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDashboardsRequest * ListDashboardsResponse::request() const
 {
     Q_D(const ListDashboardsResponse);
@@ -76,9 +74,8 @@ const ListDashboardsRequest * ListDashboardsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatch ListDashboards response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatch ListDashboards \a response.
  */
 void ListDashboardsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListDashboardsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatch::ListDashboardsResponsePrivate
+ * \brief The ListDashboardsResponsePrivate class provides private implementation for ListDashboardsResponse.
  * \internal
  *
- * \class ListDashboardsResponsePrivate
- *
- * \brief Private implementation for ListDashboardsResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDashboardsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDashboardsResponse instance.
+ * Constructs a ListDashboardsResponsePrivate object with public implementation \a q.
  */
 ListDashboardsResponsePrivate::ListDashboardsResponsePrivate(
     ListDashboardsResponse * const q) : CloudWatchResponsePrivate(q)
@@ -109,9 +102,7 @@ ListDashboardsResponsePrivate::ListDashboardsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatch ListDashboardsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatch ListDashboards response element from \a xml.
  */
 void ListDashboardsResponsePrivate::parseListDashboardsResponse(QXmlStreamReader &xml)
 {

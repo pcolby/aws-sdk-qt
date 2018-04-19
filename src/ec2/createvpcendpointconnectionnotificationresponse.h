@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateVpcEndpointConnectionNotificationResponse : public EC2R
 public:
     CreateVpcEndpointConnectionNotificationResponse(const CreateVpcEndpointConnectionNotificationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateVpcEndpointConnectionNotificationRequest * request() const;
+    virtual const CreateVpcEndpointConnectionNotificationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateVpcEndpointConnectionNotificationResponse)

@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeEventSubscriptionsResponse
- *
  * \brief The DescribeEventSubscriptionsResponse class provides an interace for RDS DescribeEventSubscriptions responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventSubscriptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEventSubscriptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEventSubscriptionsResponse::DescribeEventSubscriptionsResponse(
         const DescribeEventSubscriptionsRequest &request,
@@ -119,6 +114,9 @@ DescribeEventSubscriptionsResponse::DescribeEventSubscriptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEventSubscriptionsRequest * DescribeEventSubscriptionsResponse::request() const
 {
     Q_D(const DescribeEventSubscriptionsResponse);
@@ -126,9 +124,8 @@ const DescribeEventSubscriptionsRequest * DescribeEventSubscriptionsResponse::re
 }
 
 /*!
- * @brief  Parse a RDS DescribeEventSubscriptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeEventSubscriptions \a response.
  */
 void DescribeEventSubscriptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeEventSubscriptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeEventSubscriptionsResponsePrivate
+ * \brief The DescribeEventSubscriptionsResponsePrivate class provides private implementation for DescribeEventSubscriptionsResponse.
  * \internal
  *
- * \class DescribeEventSubscriptionsResponsePrivate
- *
- * \brief Private implementation for DescribeEventSubscriptionsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventSubscriptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEventSubscriptionsResponse instance.
+ * Constructs a DescribeEventSubscriptionsResponsePrivate object with public implementation \a q.
  */
 DescribeEventSubscriptionsResponsePrivate::DescribeEventSubscriptionsResponsePrivate(
     DescribeEventSubscriptionsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeEventSubscriptionsResponsePrivate::DescribeEventSubscriptionsResponsePri
 }
 
 /*!
- * @brief  Parse an RDS DescribeEventSubscriptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeEventSubscriptions response element from \a xml.
  */
 void DescribeEventSubscriptionsResponsePrivate::parseDescribeEventSubscriptionsResponse(QXmlStreamReader &xml)
 {

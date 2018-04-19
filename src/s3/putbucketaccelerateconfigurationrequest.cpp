@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PutBucketAccelerateConfigurationRequest::resp
  */
 
 /*!
- *
- * Constructs a PutBucketAccelerateConfigurationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a PutBucketAccelerateConfigurationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 PutBucketAccelerateConfigurationRequestPrivate::PutBucketAccelerateConfigurationRequestPrivate(
     const S3Request::Action action, PutBucketAccelerateConfigurationRequest * const q)

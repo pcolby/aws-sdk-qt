@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * UntagCertificateAuthorityRequest::response(QN
  */
 
 /*!
- *
- * Constructs a UntagCertificateAuthorityRequestPrivate object for ACMPCA \a action with,
- * public implementation \a q.
+ * Constructs a UntagCertificateAuthorityRequestPrivate object for ACMPCA \a action,
+ * with public implementation \a q.
  */
 UntagCertificateAuthorityRequestPrivate::UntagCertificateAuthorityRequestPrivate(
     const ACMPCARequest::Action action, UntagCertificateAuthorityRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDiskResponse : public LightsailResponse {
 public:
     GetDiskResponse(const GetDiskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDiskRequest * request() const;
+    virtual const GetDiskRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDiskResponse)

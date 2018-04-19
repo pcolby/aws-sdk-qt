@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableSsoResponse : public DirectoryServiceResponse {
 public:
     EnableSsoResponse(const EnableSsoRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableSsoRequest * request() const;
+    virtual const EnableSsoRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EnableSsoResponse)

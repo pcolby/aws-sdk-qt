@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListGrantsResponse : public KMSResponse {
 public:
     ListGrantsResponse(const ListGrantsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListGrantsRequest * request() const;
+    virtual const ListGrantsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListGrantsResponse)

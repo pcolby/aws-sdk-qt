@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::DecryptResponse
- *
  * \brief The DecryptResponse class provides an interace for KMS Decrypt responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new DecryptResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DecryptResponse object for \a reply to \a request, with parent \a parent.
  */
 DecryptResponse::DecryptResponse(
         const DecryptRequest &request,
@@ -154,6 +149,9 @@ DecryptResponse::DecryptResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DecryptRequest * DecryptResponse::request() const
 {
     Q_D(const DecryptResponse);
@@ -161,9 +159,8 @@ const DecryptRequest * DecryptResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS Decrypt response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS Decrypt \a response.
  */
 void DecryptResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void DecryptResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::DecryptResponsePrivate
+ * \brief The DecryptResponsePrivate class provides private implementation for DecryptResponse.
  * \internal
  *
- * \class DecryptResponsePrivate
- *
- * \brief Private implementation for DecryptResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DecryptResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DecryptResponse instance.
+ * Constructs a DecryptResponsePrivate object with public implementation \a q.
  */
 DecryptResponsePrivate::DecryptResponsePrivate(
     DecryptResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ DecryptResponsePrivate::DecryptResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS DecryptResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS Decrypt response element from \a xml.
  */
 void DecryptResponsePrivate::parseDecryptResponse(QXmlStreamReader &xml)
 {

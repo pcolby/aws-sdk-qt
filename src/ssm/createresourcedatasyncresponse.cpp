@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreateResourceDataSyncResponse
- *
  * \brief The CreateResourceDataSyncResponse class provides an interace for SSM CreateResourceDataSync responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceDataSyncResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateResourceDataSyncResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateResourceDataSyncResponse::CreateResourceDataSyncResponse(
         const CreateResourceDataSyncRequest &request,
@@ -79,6 +74,9 @@ CreateResourceDataSyncResponse::CreateResourceDataSyncResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateResourceDataSyncRequest * CreateResourceDataSyncResponse::request() const
 {
     Q_D(const CreateResourceDataSyncResponse);
@@ -86,9 +84,8 @@ const CreateResourceDataSyncRequest * CreateResourceDataSyncResponse::request() 
 }
 
 /*!
- * @brief  Parse a SSM CreateResourceDataSync response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM CreateResourceDataSync \a response.
  */
 void CreateResourceDataSyncResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void CreateResourceDataSyncResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::CreateResourceDataSyncResponsePrivate
+ * \brief The CreateResourceDataSyncResponsePrivate class provides private implementation for CreateResourceDataSyncResponse.
  * \internal
  *
- * \class CreateResourceDataSyncResponsePrivate
- *
- * \brief Private implementation for CreateResourceDataSyncResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceDataSyncResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateResourceDataSyncResponse instance.
+ * Constructs a CreateResourceDataSyncResponsePrivate object with public implementation \a q.
  */
 CreateResourceDataSyncResponsePrivate::CreateResourceDataSyncResponsePrivate(
     CreateResourceDataSyncResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ CreateResourceDataSyncResponsePrivate::CreateResourceDataSyncResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM CreateResourceDataSyncResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM CreateResourceDataSync response element from \a xml.
  */
 void CreateResourceDataSyncResponsePrivate::parseCreateResourceDataSyncResponse(QXmlStreamReader &xml)
 {

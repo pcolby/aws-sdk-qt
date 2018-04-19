@@ -161,9 +161,8 @@ QtAws::Core::AwsAbstractResponse * ListCuratedEnvironmentImagesRequest::response
  */
 
 /*!
- *
- * Constructs a ListCuratedEnvironmentImagesRequestPrivate object for CodeBuild \a action with,
- * public implementation \a q.
+ * Constructs a ListCuratedEnvironmentImagesRequestPrivate object for CodeBuild \a action,
+ * with public implementation \a q.
  */
 ListCuratedEnvironmentImagesRequestPrivate::ListCuratedEnvironmentImagesRequestPrivate(
     const CodeBuildRequest::Action action, ListCuratedEnvironmentImagesRequest * const q)

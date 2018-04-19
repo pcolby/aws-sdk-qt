@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeInstanceAssociationsStatusResponse
- *
  * \brief The DescribeInstanceAssociationsStatusResponse class provides an interace for SSM DescribeInstanceAssociationsStatus responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstanceAssociationsStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeInstanceAssociationsStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeInstanceAssociationsStatusResponse::DescribeInstanceAssociationsStatusResponse(
         const DescribeInstanceAssociationsStatusRequest &request,
@@ -79,6 +74,9 @@ DescribeInstanceAssociationsStatusResponse::DescribeInstanceAssociationsStatusRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeInstanceAssociationsStatusRequest * DescribeInstanceAssociationsStatusResponse::request() const
 {
     Q_D(const DescribeInstanceAssociationsStatusResponse);
@@ -86,9 +84,8 @@ const DescribeInstanceAssociationsStatusRequest * DescribeInstanceAssociationsSt
 }
 
 /*!
- * @brief  Parse a SSM DescribeInstanceAssociationsStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeInstanceAssociationsStatus \a response.
  */
 void DescribeInstanceAssociationsStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeInstanceAssociationsStatusResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::SSM::DescribeInstanceAssociationsStatusResponsePrivate
+ * \brief The DescribeInstanceAssociationsStatusResponsePrivate class provides private implementation for DescribeInstanceAssociationsStatusResponse.
  * \internal
  *
- * \class DescribeInstanceAssociationsStatusResponsePrivate
- *
- * \brief Private implementation for DescribeInstanceAssociationsStatusResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstanceAssociationsStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeInstanceAssociationsStatusResponse instance.
+ * Constructs a DescribeInstanceAssociationsStatusResponsePrivate object with public implementation \a q.
  */
 DescribeInstanceAssociationsStatusResponsePrivate::DescribeInstanceAssociationsStatusResponsePrivate(
     DescribeInstanceAssociationsStatusResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeInstanceAssociationsStatusResponsePrivate::DescribeInstanceAssociationsS
 }
 
 /*!
- * @brief  Parse an SSM DescribeInstanceAssociationsStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeInstanceAssociationsStatus response element from \a xml.
  */
 void DescribeInstanceAssociationsStatusResponsePrivate::parseDescribeInstanceAssociationsStatusResponse(QXmlStreamReader &xml)
 {

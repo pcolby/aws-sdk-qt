@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateAccountPasswordPolicyResponse
- *
  * \brief The UpdateAccountPasswordPolicyResponse class provides an interace for IAM UpdateAccountPasswordPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateAccountPasswordPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAccountPasswordPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAccountPasswordPolicyResponse::UpdateAccountPasswordPolicyResponse(
         const UpdateAccountPasswordPolicyRequest &request,
@@ -120,6 +115,9 @@ UpdateAccountPasswordPolicyResponse::UpdateAccountPasswordPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAccountPasswordPolicyRequest * UpdateAccountPasswordPolicyResponse::request() const
 {
     Q_D(const UpdateAccountPasswordPolicyResponse);
@@ -127,9 +125,8 @@ const UpdateAccountPasswordPolicyRequest * UpdateAccountPasswordPolicyResponse::
 }
 
 /*!
- * @brief  Parse a IAM UpdateAccountPasswordPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateAccountPasswordPolicy \a response.
  */
 void UpdateAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateAccountPasswordPolicyResponsePrivate
+ * \brief The UpdateAccountPasswordPolicyResponsePrivate class provides private implementation for UpdateAccountPasswordPolicyResponse.
  * \internal
  *
- * \class UpdateAccountPasswordPolicyResponsePrivate
- *
- * \brief Private implementation for UpdateAccountPasswordPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAccountPasswordPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAccountPasswordPolicyResponse instance.
+ * Constructs a UpdateAccountPasswordPolicyResponsePrivate object with public implementation \a q.
  */
 UpdateAccountPasswordPolicyResponsePrivate::UpdateAccountPasswordPolicyResponsePrivate(
     UpdateAccountPasswordPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateAccountPasswordPolicyResponsePrivate::UpdateAccountPasswordPolicyResponseP
 }
 
 /*!
- * @brief  Parse an IAM UpdateAccountPasswordPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateAccountPasswordPolicy response element from \a xml.
  */
 void UpdateAccountPasswordPolicyResponsePrivate::parseUpdateAccountPasswordPolicyResponse(QXmlStreamReader &xml)
 {

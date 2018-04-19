@@ -50,7 +50,7 @@ namespace SMS {
  */
 
 /*!
- * Constructs a[n] SMSRequest object for SMS \a action.
+ * Constructs a SMSRequest object for SMS \a action.
  */
 SMSRequest::SMSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SMSRequestPrivate(action, this))
@@ -250,8 +250,8 @@ QNetworkRequest SMSRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a SMSRequestPrivate object for SMS \a action with,
- * public implementation \a q.
+ * Constructs a SMSRequestPrivate object for SMS \a action,
+ * with public implementation \a q.
  */
 SMSRequestPrivate::SMSRequestPrivate(const SMSRequest::Action action, SMSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

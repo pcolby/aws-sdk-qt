@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::StopRunResponse
- *
  * \brief The StopRunResponse class provides an interace for DeviceFarm StopRun responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new StopRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopRunResponse object for \a reply to \a request, with parent \a parent.
  */
 StopRunResponse::StopRunResponse(
         const StopRunRequest &request,
@@ -57,6 +52,9 @@ StopRunResponse::StopRunResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopRunRequest * StopRunResponse::request() const
 {
     Q_D(const StopRunResponse);
@@ -64,9 +62,8 @@ const StopRunRequest * StopRunResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm StopRun response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm StopRun \a response.
  */
 void StopRunResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void StopRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::StopRunResponsePrivate
+ * \brief The StopRunResponsePrivate class provides private implementation for StopRunResponse.
  * \internal
  *
- * \class StopRunResponsePrivate
- *
- * \brief Private implementation for StopRunResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopRunResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopRunResponse instance.
+ * Constructs a StopRunResponsePrivate object with public implementation \a q.
  */
 StopRunResponsePrivate::StopRunResponsePrivate(
     StopRunResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ StopRunResponsePrivate::StopRunResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm StopRunResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm StopRun response element from \a xml.
  */
 void StopRunResponsePrivate::parseStopRunResponse(QXmlStreamReader &xml)
 {

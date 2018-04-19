@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListObjectParentPathsResponse
- *
  * \brief The ListObjectParentPathsResponse class provides an interace for CloudDirectory ListObjectParentPaths responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListObjectParentPathsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListObjectParentPathsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListObjectParentPathsResponse::ListObjectParentPathsResponse(
         const ListObjectParentPathsRequest &request,
@@ -62,6 +57,9 @@ ListObjectParentPathsResponse::ListObjectParentPathsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListObjectParentPathsRequest * ListObjectParentPathsResponse::request() const
 {
     Q_D(const ListObjectParentPathsResponse);
@@ -69,9 +67,8 @@ const ListObjectParentPathsRequest * ListObjectParentPathsResponse::request() co
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListObjectParentPaths response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListObjectParentPaths \a response.
  */
 void ListObjectParentPathsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListObjectParentPathsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListObjectParentPathsResponsePrivate
+ * \brief The ListObjectParentPathsResponsePrivate class provides private implementation for ListObjectParentPathsResponse.
  * \internal
  *
- * \class ListObjectParentPathsResponsePrivate
- *
- * \brief Private implementation for ListObjectParentPathsResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectParentPathsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListObjectParentPathsResponse instance.
+ * Constructs a ListObjectParentPathsResponsePrivate object with public implementation \a q.
  */
 ListObjectParentPathsResponsePrivate::ListObjectParentPathsResponsePrivate(
     ListObjectParentPathsResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListObjectParentPathsResponsePrivate::ListObjectParentPathsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListObjectParentPathsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListObjectParentPaths response element from \a xml.
  */
 void ListObjectParentPathsResponsePrivate::parseListObjectParentPathsResponse(QXmlStreamReader &xml)
 {

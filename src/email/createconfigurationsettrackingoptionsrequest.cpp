@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetTrackingOptionsRequest:
  */
 
 /*!
- *
- * Constructs a CreateConfigurationSetTrackingOptionsRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a CreateConfigurationSetTrackingOptionsRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 CreateConfigurationSetTrackingOptionsRequestPrivate::CreateConfigurationSetTrackingOptionsRequestPrivate(
     const SESRequest::Action action, CreateConfigurationSetTrackingOptionsRequest * const q)

@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * MoveAccountRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a MoveAccountRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a MoveAccountRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 MoveAccountRequestPrivate::MoveAccountRequestPrivate(
     const OrganizationsRequest::Action action, MoveAccountRequest * const q)

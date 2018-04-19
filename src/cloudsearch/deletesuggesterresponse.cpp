@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DeleteSuggesterResponse
- *
  * \brief The DeleteSuggesterResponse class provides an interace for CloudSearch DeleteSuggester responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DeleteSuggesterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSuggesterResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSuggesterResponse::DeleteSuggesterResponse(
         const DeleteSuggesterRequest &request,
@@ -66,6 +61,9 @@ DeleteSuggesterResponse::DeleteSuggesterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSuggesterRequest * DeleteSuggesterResponse::request() const
 {
     Q_D(const DeleteSuggesterResponse);
@@ -73,9 +71,8 @@ const DeleteSuggesterRequest * DeleteSuggesterResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch DeleteSuggester response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DeleteSuggester \a response.
  */
 void DeleteSuggesterResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteSuggesterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DeleteSuggesterResponsePrivate
+ * \brief The DeleteSuggesterResponsePrivate class provides private implementation for DeleteSuggesterResponse.
  * \internal
  *
- * \class DeleteSuggesterResponsePrivate
- *
- * \brief Private implementation for DeleteSuggesterResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSuggesterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSuggesterResponse instance.
+ * Constructs a DeleteSuggesterResponsePrivate object with public implementation \a q.
  */
 DeleteSuggesterResponsePrivate::DeleteSuggesterResponsePrivate(
     DeleteSuggesterResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteSuggesterResponsePrivate::DeleteSuggesterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DeleteSuggesterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DeleteSuggester response element from \a xml.
  */
 void DeleteSuggesterResponsePrivate::parseDeleteSuggesterResponse(QXmlStreamReader &xml)
 {

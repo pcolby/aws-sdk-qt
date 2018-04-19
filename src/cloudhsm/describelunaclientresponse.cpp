@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::DescribeLunaClientResponse
- *
  * \brief The DescribeLunaClientResponse class provides an interace for CloudHSM DescribeLunaClient responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeLunaClientResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLunaClientResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLunaClientResponse::DescribeLunaClientResponse(
         const DescribeLunaClientRequest &request,
@@ -67,6 +62,9 @@ DescribeLunaClientResponse::DescribeLunaClientResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLunaClientRequest * DescribeLunaClientResponse::request() const
 {
     Q_D(const DescribeLunaClientResponse);
@@ -74,9 +72,8 @@ const DescribeLunaClientRequest * DescribeLunaClientResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSM DescribeLunaClient response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM DescribeLunaClient \a response.
  */
 void DescribeLunaClientResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void DescribeLunaClientResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::DescribeLunaClientResponsePrivate
+ * \brief The DescribeLunaClientResponsePrivate class provides private implementation for DescribeLunaClientResponse.
  * \internal
  *
- * \class DescribeLunaClientResponsePrivate
- *
- * \brief Private implementation for DescribeLunaClientResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLunaClientResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLunaClientResponse instance.
+ * Constructs a DescribeLunaClientResponsePrivate object with public implementation \a q.
  */
 DescribeLunaClientResponsePrivate::DescribeLunaClientResponsePrivate(
     DescribeLunaClientResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ DescribeLunaClientResponsePrivate::DescribeLunaClientResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM DescribeLunaClientResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM DescribeLunaClient response element from \a xml.
  */
 void DescribeLunaClientResponsePrivate::parseDescribeLunaClientResponse(QXmlStreamReader &xml)
 {

@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * PromoteReadReplicaDBClusterRequest::response(
  */
 
 /*!
- *
- * Constructs a PromoteReadReplicaDBClusterRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a PromoteReadReplicaDBClusterRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 PromoteReadReplicaDBClusterRequestPrivate::PromoteReadReplicaDBClusterRequestPrivate(
     const RDSRequest::Action action, PromoteReadReplicaDBClusterRequest * const q)

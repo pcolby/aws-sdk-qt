@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListGeoLocationsResponse
- *
  * \brief The ListGeoLocationsResponse class provides an interace for Route53 ListGeoLocations responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listGeoLocations
  */
 
 /*!
- * @brief  Constructs a new ListGeoLocationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGeoLocationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGeoLocationsResponse::ListGeoLocationsResponse(
         const ListGeoLocationsRequest &request,
@@ -55,6 +50,9 @@ ListGeoLocationsResponse::ListGeoLocationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGeoLocationsRequest * ListGeoLocationsResponse::request() const
 {
     Q_D(const ListGeoLocationsResponse);
@@ -62,9 +60,8 @@ const ListGeoLocationsRequest * ListGeoLocationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 ListGeoLocations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 ListGeoLocations \a response.
  */
 void ListGeoLocationsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListGeoLocationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::ListGeoLocationsResponsePrivate
+ * \brief The ListGeoLocationsResponsePrivate class provides private implementation for ListGeoLocationsResponse.
  * \internal
  *
- * \class ListGeoLocationsResponsePrivate
- *
- * \brief Private implementation for ListGeoLocationsResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGeoLocationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGeoLocationsResponse instance.
+ * Constructs a ListGeoLocationsResponsePrivate object with public implementation \a q.
  */
 ListGeoLocationsResponsePrivate::ListGeoLocationsResponsePrivate(
     ListGeoLocationsResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListGeoLocationsResponsePrivate::ListGeoLocationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 ListGeoLocationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 ListGeoLocations response element from \a xml.
  */
 void ListGeoLocationsResponsePrivate::parseListGeoLocationsResponse(QXmlStreamReader &xml)
 {

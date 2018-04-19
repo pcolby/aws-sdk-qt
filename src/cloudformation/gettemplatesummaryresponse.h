@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetTemplateSummaryResponse : public CloudFormationResponse {
 public:
     GetTemplateSummaryResponse(const GetTemplateSummaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetTemplateSummaryRequest * request() const;
+    virtual const GetTemplateSummaryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetTemplateSummaryResponse)

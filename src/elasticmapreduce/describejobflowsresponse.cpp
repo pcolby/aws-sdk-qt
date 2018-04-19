@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::DescribeJobFlowsResponse
- *
  * \brief The DescribeJobFlowsResponse class provides an interace for EMR DescribeJobFlows responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobFlowsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeJobFlowsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeJobFlowsResponse::DescribeJobFlowsResponse(
         const DescribeJobFlowsRequest &request,
@@ -58,6 +53,9 @@ DescribeJobFlowsResponse::DescribeJobFlowsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeJobFlowsRequest * DescribeJobFlowsResponse::request() const
 {
     Q_D(const DescribeJobFlowsResponse);
@@ -65,9 +63,8 @@ const DescribeJobFlowsRequest * DescribeJobFlowsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR DescribeJobFlows response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR DescribeJobFlows \a response.
  */
 void DescribeJobFlowsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeJobFlowsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::DescribeJobFlowsResponsePrivate
+ * \brief The DescribeJobFlowsResponsePrivate class provides private implementation for DescribeJobFlowsResponse.
  * \internal
  *
- * \class DescribeJobFlowsResponsePrivate
- *
- * \brief Private implementation for DescribeJobFlowsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobFlowsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeJobFlowsResponse instance.
+ * Constructs a DescribeJobFlowsResponsePrivate object with public implementation \a q.
  */
 DescribeJobFlowsResponsePrivate::DescribeJobFlowsResponsePrivate(
     DescribeJobFlowsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeJobFlowsResponsePrivate::DescribeJobFlowsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR DescribeJobFlowsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR DescribeJobFlows response element from \a xml.
  */
 void DescribeJobFlowsResponsePrivate::parseDescribeJobFlowsResponse(QXmlStreamReader &xml)
 {

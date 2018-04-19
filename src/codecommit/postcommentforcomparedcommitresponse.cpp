@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::PostCommentForComparedCommitResponse
- *
  * \brief The PostCommentForComparedCommitResponse class provides an interace for CodeCommit PostCommentForComparedCommit responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new PostCommentForComparedCommitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PostCommentForComparedCommitResponse object for \a reply to \a request, with parent \a parent.
  */
 PostCommentForComparedCommitResponse::PostCommentForComparedCommitResponse(
         const PostCommentForComparedCommitRequest &request,
@@ -245,6 +240,9 @@ PostCommentForComparedCommitResponse::PostCommentForComparedCommitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PostCommentForComparedCommitRequest * PostCommentForComparedCommitResponse::request() const
 {
     Q_D(const PostCommentForComparedCommitResponse);
@@ -252,9 +250,8 @@ const PostCommentForComparedCommitRequest * PostCommentForComparedCommitResponse
 }
 
 /*!
- * @brief  Parse a CodeCommit PostCommentForComparedCommit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit PostCommentForComparedCommit \a response.
  */
 void PostCommentForComparedCommitResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void PostCommentForComparedCommitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::PostCommentForComparedCommitResponsePrivate
+ * \brief The PostCommentForComparedCommitResponsePrivate class provides private implementation for PostCommentForComparedCommitResponse.
  * \internal
  *
- * \class PostCommentForComparedCommitResponsePrivate
- *
- * \brief Private implementation for PostCommentForComparedCommitResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PostCommentForComparedCommitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PostCommentForComparedCommitResponse instance.
+ * Constructs a PostCommentForComparedCommitResponsePrivate object with public implementation \a q.
  */
 PostCommentForComparedCommitResponsePrivate::PostCommentForComparedCommitResponsePrivate(
     PostCommentForComparedCommitResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ PostCommentForComparedCommitResponsePrivate::PostCommentForComparedCommitRespons
 }
 
 /*!
- * @brief  Parse an CodeCommit PostCommentForComparedCommitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit PostCommentForComparedCommit response element from \a xml.
  */
 void PostCommentForComparedCommitResponsePrivate::parsePostCommentForComparedCommitResponse(QXmlStreamReader &xml)
 {

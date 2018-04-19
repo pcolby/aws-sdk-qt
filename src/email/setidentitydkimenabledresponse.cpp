@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SetIdentityDkimEnabledResponse
- *
  * \brief The SetIdentityDkimEnabledResponse class provides an interace for SES SetIdentityDkimEnabled responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SetIdentityDkimEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetIdentityDkimEnabledResponse object for \a reply to \a request, with parent \a parent.
  */
 SetIdentityDkimEnabledResponse::SetIdentityDkimEnabledResponse(
         const SetIdentityDkimEnabledRequest &request,
@@ -66,6 +61,9 @@ SetIdentityDkimEnabledResponse::SetIdentityDkimEnabledResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetIdentityDkimEnabledRequest * SetIdentityDkimEnabledResponse::request() const
 {
     Q_D(const SetIdentityDkimEnabledResponse);
@@ -73,9 +71,8 @@ const SetIdentityDkimEnabledRequest * SetIdentityDkimEnabledResponse::request() 
 }
 
 /*!
- * @brief  Parse a SES SetIdentityDkimEnabled response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SetIdentityDkimEnabled \a response.
  */
 void SetIdentityDkimEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SetIdentityDkimEnabledResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::SetIdentityDkimEnabledResponsePrivate
+ * \brief The SetIdentityDkimEnabledResponsePrivate class provides private implementation for SetIdentityDkimEnabledResponse.
  * \internal
  *
- * \class SetIdentityDkimEnabledResponsePrivate
- *
- * \brief Private implementation for SetIdentityDkimEnabledResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIdentityDkimEnabledResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetIdentityDkimEnabledResponse instance.
+ * Constructs a SetIdentityDkimEnabledResponsePrivate object with public implementation \a q.
  */
 SetIdentityDkimEnabledResponsePrivate::SetIdentityDkimEnabledResponsePrivate(
     SetIdentityDkimEnabledResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SetIdentityDkimEnabledResponsePrivate::SetIdentityDkimEnabledResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES SetIdentityDkimEnabledResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SetIdentityDkimEnabled response element from \a xml.
  */
 void SetIdentityDkimEnabledResponsePrivate::parseSetIdentityDkimEnabledResponse(QXmlStreamReader &xml)
 {

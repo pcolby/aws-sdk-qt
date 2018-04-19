@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * RegisterElasticIpRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a RegisterElasticIpRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a RegisterElasticIpRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 RegisterElasticIpRequestPrivate::RegisterElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, RegisterElasticIpRequest * const q)

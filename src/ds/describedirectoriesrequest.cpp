@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectoriesRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeDirectoriesRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDirectoriesRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 DescribeDirectoriesRequestPrivate::DescribeDirectoriesRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeDirectoriesRequest * const q)

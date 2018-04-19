@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RespondActivityTaskCanceledResponse
- *
  * \brief The RespondActivityTaskCanceledResponse class provides an interace for SWF RespondActivityTaskCanceled responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RespondActivityTaskCanceledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RespondActivityTaskCanceledResponse object for \a reply to \a request, with parent \a parent.
  */
 RespondActivityTaskCanceledResponse::RespondActivityTaskCanceledResponse(
         const RespondActivityTaskCanceledRequest &request,
@@ -71,6 +66,9 @@ RespondActivityTaskCanceledResponse::RespondActivityTaskCanceledResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RespondActivityTaskCanceledRequest * RespondActivityTaskCanceledResponse::request() const
 {
     Q_D(const RespondActivityTaskCanceledResponse);
@@ -78,9 +76,8 @@ const RespondActivityTaskCanceledRequest * RespondActivityTaskCanceledResponse::
 }
 
 /*!
- * @brief  Parse a SWF RespondActivityTaskCanceled response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF RespondActivityTaskCanceled \a response.
  */
 void RespondActivityTaskCanceledResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void RespondActivityTaskCanceledResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::RespondActivityTaskCanceledResponsePrivate
+ * \brief The RespondActivityTaskCanceledResponsePrivate class provides private implementation for RespondActivityTaskCanceledResponse.
  * \internal
  *
- * \class RespondActivityTaskCanceledResponsePrivate
- *
- * \brief Private implementation for RespondActivityTaskCanceledResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RespondActivityTaskCanceledResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RespondActivityTaskCanceledResponse instance.
+ * Constructs a RespondActivityTaskCanceledResponsePrivate object with public implementation \a q.
  */
 RespondActivityTaskCanceledResponsePrivate::RespondActivityTaskCanceledResponsePrivate(
     RespondActivityTaskCanceledResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ RespondActivityTaskCanceledResponsePrivate::RespondActivityTaskCanceledResponseP
 }
 
 /*!
- * @brief  Parse an SWF RespondActivityTaskCanceledResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF RespondActivityTaskCanceled response element from \a xml.
  */
 void RespondActivityTaskCanceledResponsePrivate::parseRespondActivityTaskCanceledResponse(QXmlStreamReader &xml)
 {

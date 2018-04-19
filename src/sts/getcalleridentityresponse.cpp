@@ -29,10 +29,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::GetCallerIdentityResponse
- *
  * \brief The GetCallerIdentityResponse class provides an interace for STS GetCallerIdentity responses.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -97,11 +96,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new GetCallerIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCallerIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCallerIdentityResponse::GetCallerIdentityResponse(
         const GetCallerIdentityRequest &request,
@@ -113,6 +108,9 @@ GetCallerIdentityResponse::GetCallerIdentityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCallerIdentityRequest * GetCallerIdentityResponse::request() const
 {
     Q_D(const GetCallerIdentityResponse);
@@ -120,9 +118,8 @@ const GetCallerIdentityRequest * GetCallerIdentityResponse::request() const
 }
 
 /*!
- * @brief  Parse a STS GetCallerIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful STS GetCallerIdentity \a response.
  */
 void GetCallerIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -132,19 +129,15 @@ void GetCallerIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::STS::GetCallerIdentityResponsePrivate
+ * \brief The GetCallerIdentityResponsePrivate class provides private implementation for GetCallerIdentityResponse.
  * \internal
  *
- * \class GetCallerIdentityResponsePrivate
- *
- * \brief Private implementation for GetCallerIdentityResponse.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCallerIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCallerIdentityResponse instance.
+ * Constructs a GetCallerIdentityResponsePrivate object with public implementation \a q.
  */
 GetCallerIdentityResponsePrivate::GetCallerIdentityResponsePrivate(
     GetCallerIdentityResponse * const q) : STSResponsePrivate(q)
@@ -153,9 +146,7 @@ GetCallerIdentityResponsePrivate::GetCallerIdentityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an STS GetCallerIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a STS GetCallerIdentity response element from \a xml.
  */
 void GetCallerIdentityResponsePrivate::parseGetCallerIdentityResponse(QXmlStreamReader &xml)
 {

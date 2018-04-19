@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ListPlatformApplicationsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ListPlatformApplicationsRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a ListPlatformApplicationsRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 ListPlatformApplicationsRequestPrivate::ListPlatformApplicationsRequestPrivate(
     const SNSRequest::Action action, ListPlatformApplicationsRequest * const q)

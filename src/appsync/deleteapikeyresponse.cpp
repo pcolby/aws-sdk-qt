@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::DeleteApiKeyResponse
- *
  * \brief The DeleteApiKeyResponse class provides an interace for AppSync DeleteApiKey responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new DeleteApiKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteApiKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteApiKeyResponse::DeleteApiKeyResponse(
         const DeleteApiKeyRequest &request,
@@ -56,6 +51,9 @@ DeleteApiKeyResponse::DeleteApiKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteApiKeyRequest * DeleteApiKeyResponse::request() const
 {
     Q_D(const DeleteApiKeyResponse);
@@ -63,9 +61,8 @@ const DeleteApiKeyRequest * DeleteApiKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync DeleteApiKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync DeleteApiKey \a response.
  */
 void DeleteApiKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DeleteApiKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::DeleteApiKeyResponsePrivate
+ * \brief The DeleteApiKeyResponsePrivate class provides private implementation for DeleteApiKeyResponse.
  * \internal
  *
- * \class DeleteApiKeyResponsePrivate
- *
- * \brief Private implementation for DeleteApiKeyResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApiKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteApiKeyResponse instance.
+ * Constructs a DeleteApiKeyResponsePrivate object with public implementation \a q.
  */
 DeleteApiKeyResponsePrivate::DeleteApiKeyResponsePrivate(
     DeleteApiKeyResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ DeleteApiKeyResponsePrivate::DeleteApiKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync DeleteApiKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync DeleteApiKey response element from \a xml.
  */
 void DeleteApiKeyResponsePrivate::parseDeleteApiKeyResponse(QXmlStreamReader &xml)
 {

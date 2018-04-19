@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutBucketAnalyticsConfigurationResponse : public S3Response {
 public:
     PutBucketAnalyticsConfigurationResponse(const PutBucketAnalyticsConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutBucketAnalyticsConfigurationRequest * request() const;
+    virtual const PutBucketAnalyticsConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutBucketAnalyticsConfigurationResponse)

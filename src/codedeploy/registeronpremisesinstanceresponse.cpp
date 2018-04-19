@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::RegisterOnPremisesInstanceResponse
- *
  * \brief The RegisterOnPremisesInstanceResponse class provides an interace for CodeDeploy RegisterOnPremisesInstance responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new RegisterOnPremisesInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterOnPremisesInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterOnPremisesInstanceResponse::RegisterOnPremisesInstanceResponse(
         const RegisterOnPremisesInstanceRequest &request,
@@ -136,6 +131,9 @@ RegisterOnPremisesInstanceResponse::RegisterOnPremisesInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterOnPremisesInstanceRequest * RegisterOnPremisesInstanceResponse::request() const
 {
     Q_D(const RegisterOnPremisesInstanceResponse);
@@ -143,9 +141,8 @@ const RegisterOnPremisesInstanceRequest * RegisterOnPremisesInstanceResponse::re
 }
 
 /*!
- * @brief  Parse a CodeDeploy RegisterOnPremisesInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy RegisterOnPremisesInstance \a response.
  */
 void RegisterOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void RegisterOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::RegisterOnPremisesInstanceResponsePrivate
+ * \brief The RegisterOnPremisesInstanceResponsePrivate class provides private implementation for RegisterOnPremisesInstanceResponse.
  * \internal
  *
- * \class RegisterOnPremisesInstanceResponsePrivate
- *
- * \brief Private implementation for RegisterOnPremisesInstanceResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterOnPremisesInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterOnPremisesInstanceResponse instance.
+ * Constructs a RegisterOnPremisesInstanceResponsePrivate object with public implementation \a q.
  */
 RegisterOnPremisesInstanceResponsePrivate::RegisterOnPremisesInstanceResponsePrivate(
     RegisterOnPremisesInstanceResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ RegisterOnPremisesInstanceResponsePrivate::RegisterOnPremisesInstanceResponsePri
 }
 
 /*!
- * @brief  Parse an CodeDeploy RegisterOnPremisesInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy RegisterOnPremisesInstance response element from \a xml.
  */
 void RegisterOnPremisesInstanceResponsePrivate::parseRegisterOnPremisesInstanceResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::ListMembersResponse
- *
  * \brief The ListMembersResponse class provides an interace for GuardDuty ListMembers responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::listMembers
  */
 
 /*!
- * @brief  Constructs a new ListMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListMembersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListMembersResponse::ListMembersResponse(
         const ListMembersRequest &request,
@@ -55,6 +50,9 @@ ListMembersResponse::ListMembersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListMembersRequest * ListMembersResponse::request() const
 {
     Q_D(const ListMembersResponse);
@@ -62,9 +60,8 @@ const ListMembersRequest * ListMembersResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty ListMembers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty ListMembers \a response.
  */
 void ListMembersResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListMembersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::ListMembersResponsePrivate
+ * \brief The ListMembersResponsePrivate class provides private implementation for ListMembersResponse.
  * \internal
  *
- * \class ListMembersResponsePrivate
- *
- * \brief Private implementation for ListMembersResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListMembersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListMembersResponse instance.
+ * Constructs a ListMembersResponsePrivate object with public implementation \a q.
  */
 ListMembersResponsePrivate::ListMembersResponsePrivate(
     ListMembersResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ ListMembersResponsePrivate::ListMembersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty ListMembersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty ListMembers response element from \a xml.
  */
 void ListMembersResponsePrivate::parseListMembersResponse(QXmlStreamReader &xml)
 {

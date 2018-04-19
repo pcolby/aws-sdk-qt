@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::StopChannelResponse
- *
  * \brief The StopChannelResponse class provides an interace for MediaLive StopChannel responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::stopChannel
  */
 
 /*!
- * @brief  Constructs a new StopChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 StopChannelResponse::StopChannelResponse(
         const StopChannelRequest &request,
@@ -55,6 +50,9 @@ StopChannelResponse::StopChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopChannelRequest * StopChannelResponse::request() const
 {
     Q_D(const StopChannelResponse);
@@ -62,9 +60,8 @@ const StopChannelRequest * StopChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaLive StopChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive StopChannel \a response.
  */
 void StopChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void StopChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::StopChannelResponsePrivate
+ * \brief The StopChannelResponsePrivate class provides private implementation for StopChannelResponse.
  * \internal
  *
- * \class StopChannelResponsePrivate
- *
- * \brief Private implementation for StopChannelResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopChannelResponse instance.
+ * Constructs a StopChannelResponsePrivate object with public implementation \a q.
  */
 StopChannelResponsePrivate::StopChannelResponsePrivate(
     StopChannelResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ StopChannelResponsePrivate::StopChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive StopChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive StopChannel response element from \a xml.
  */
 void StopChannelResponsePrivate::parseStopChannelResponse(QXmlStreamReader &xml)
 {

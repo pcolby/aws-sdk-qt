@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::CreateCustomMetadataResponse
- *
  * \brief The CreateCustomMetadataResponse class provides an interace for WorkDocs CreateCustomMetadata responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new CreateCustomMetadataResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCustomMetadataResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCustomMetadataResponse::CreateCustomMetadataResponse(
         const CreateCustomMetadataRequest &request,
@@ -84,6 +79,9 @@ CreateCustomMetadataResponse::CreateCustomMetadataResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCustomMetadataRequest * CreateCustomMetadataResponse::request() const
 {
     Q_D(const CreateCustomMetadataResponse);
@@ -91,9 +89,8 @@ const CreateCustomMetadataRequest * CreateCustomMetadataResponse::request() cons
 }
 
 /*!
- * @brief  Parse a WorkDocs CreateCustomMetadata response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs CreateCustomMetadata \a response.
  */
 void CreateCustomMetadataResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void CreateCustomMetadataResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::CreateCustomMetadataResponsePrivate
+ * \brief The CreateCustomMetadataResponsePrivate class provides private implementation for CreateCustomMetadataResponse.
  * \internal
  *
- * \class CreateCustomMetadataResponsePrivate
- *
- * \brief Private implementation for CreateCustomMetadataResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCustomMetadataResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCustomMetadataResponse instance.
+ * Constructs a CreateCustomMetadataResponsePrivate object with public implementation \a q.
  */
 CreateCustomMetadataResponsePrivate::CreateCustomMetadataResponsePrivate(
     CreateCustomMetadataResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ CreateCustomMetadataResponsePrivate::CreateCustomMetadataResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs CreateCustomMetadataResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs CreateCustomMetadata response element from \a xml.
  */
 void CreateCustomMetadataResponsePrivate::parseCreateCustomMetadataResponse(QXmlStreamReader &xml)
 {

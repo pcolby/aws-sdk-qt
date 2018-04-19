@@ -28,16 +28,13 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::MediaPackageResponse
- *
  * \brief The MediaPackageResponse class provides an interface for MediaPackage responses.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @brief  Constructs a new MediaPackageResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MediaPackageResponse object with parent \a parent.
  */
 MediaPackageResponse::MediaPackageResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MediaPackageResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MediaPackageResponse::MediaPackageResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaPackageResponse object.
- *
+ * \internal
+ * Constructs a MediaPackageResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaPackageResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MediaPackageResponse::MediaPackageResponse(MediaPackageResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MediaPackageResponse::MediaPackageResponse(MediaPackageResponsePrivate * const d
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MediaPackageResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MediaPackageResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaPackage::MediaPackageResponsePrivate
+ * \brief The MediaPackageResponsePrivate class provides private implementation for MediaPackageResponse.
+ * \internal
  *
- * @class  MediaPackageResponsePrivate
- *
- * @brief  Private implementation for MediaPackageResponse.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaPackageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MediaPackageResponse instance.
+ * Constructs a MediaPackageResponsePrivate object with public implementation \a q.
  */
 MediaPackageResponsePrivate::MediaPackageResponsePrivate(
     MediaPackageResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

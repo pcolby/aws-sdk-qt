@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetStatusResponse : public DataPipelineResponse {
 public:
     SetStatusResponse(const SetStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetStatusRequest * request() const;
+    virtual const SetStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetStatusResponse)

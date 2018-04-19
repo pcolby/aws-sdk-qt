@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterJobDefinitionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeregisterJobDefinitionRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterJobDefinitionRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 DeregisterJobDefinitionRequestPrivate::DeregisterJobDefinitionRequestPrivate(
     const BatchRequest::Action action, DeregisterJobDefinitionRequest * const q)

@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListTapesResponse
- *
  * \brief The ListTapesResponse class provides an interace for StorageGateway ListTapes responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListTapesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTapesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTapesResponse::ListTapesResponse(
         const ListTapesRequest &request,
@@ -124,6 +119,9 @@ ListTapesResponse::ListTapesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTapesRequest * ListTapesResponse::request() const
 {
     Q_D(const ListTapesResponse);
@@ -131,9 +129,8 @@ const ListTapesRequest * ListTapesResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway ListTapes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway ListTapes \a response.
  */
 void ListTapesResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void ListTapesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::ListTapesResponsePrivate
+ * \brief The ListTapesResponsePrivate class provides private implementation for ListTapesResponse.
  * \internal
  *
- * \class ListTapesResponsePrivate
- *
- * \brief Private implementation for ListTapesResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTapesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTapesResponse instance.
+ * Constructs a ListTapesResponsePrivate object with public implementation \a q.
  */
 ListTapesResponsePrivate::ListTapesResponsePrivate(
     ListTapesResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ ListTapesResponsePrivate::ListTapesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway ListTapesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway ListTapes response element from \a xml.
  */
 void ListTapesResponsePrivate::parseListTapesResponse(QXmlStreamReader &xml)
 {

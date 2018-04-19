@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeDomainsRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDomainsRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DescribeDomainsRequestPrivate::DescribeDomainsRequestPrivate(
     const CloudSearchRequest::Action action, DescribeDomainsRequest * const q)

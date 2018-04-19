@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteSubscriptionFilterResponse
- *
  * \brief The DeleteSubscriptionFilterResponse class provides an interace for CloudWatchLogs DeleteSubscriptionFilter responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteSubscriptionFilterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSubscriptionFilterResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSubscriptionFilterResponse::DeleteSubscriptionFilterResponse(
         const DeleteSubscriptionFilterRequest &request,
@@ -84,6 +79,9 @@ DeleteSubscriptionFilterResponse::DeleteSubscriptionFilterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSubscriptionFilterRequest * DeleteSubscriptionFilterResponse::request() const
 {
     Q_D(const DeleteSubscriptionFilterResponse);
@@ -91,9 +89,8 @@ const DeleteSubscriptionFilterRequest * DeleteSubscriptionFilterResponse::reques
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DeleteSubscriptionFilter response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DeleteSubscriptionFilter \a response.
  */
 void DeleteSubscriptionFilterResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteSubscriptionFilterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DeleteSubscriptionFilterResponsePrivate
+ * \brief The DeleteSubscriptionFilterResponsePrivate class provides private implementation for DeleteSubscriptionFilterResponse.
  * \internal
  *
- * \class DeleteSubscriptionFilterResponsePrivate
- *
- * \brief Private implementation for DeleteSubscriptionFilterResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSubscriptionFilterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSubscriptionFilterResponse instance.
+ * Constructs a DeleteSubscriptionFilterResponsePrivate object with public implementation \a q.
  */
 DeleteSubscriptionFilterResponsePrivate::DeleteSubscriptionFilterResponsePrivate(
     DeleteSubscriptionFilterResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteSubscriptionFilterResponsePrivate::DeleteSubscriptionFilterResponsePrivate
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DeleteSubscriptionFilterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DeleteSubscriptionFilter response element from \a xml.
  */
 void DeleteSubscriptionFilterResponsePrivate::parseDeleteSubscriptionFilterResponse(QXmlStreamReader &xml)
 {

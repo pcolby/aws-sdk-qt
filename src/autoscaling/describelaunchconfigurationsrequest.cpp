@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DescribeLaunchConfigurationsRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeLaunchConfigurationsRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DescribeLaunchConfigurationsRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DescribeLaunchConfigurationsRequestPrivate::DescribeLaunchConfigurationsRequestPrivate(
     const AutoScalingRequest::Action action, DescribeLaunchConfigurationsRequest * const q)

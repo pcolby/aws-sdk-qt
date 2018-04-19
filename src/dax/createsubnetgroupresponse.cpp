@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::CreateSubnetGroupResponse
- *
  * \brief The CreateSubnetGroupResponse class provides an interace for DAX CreateSubnetGroup responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new CreateSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSubnetGroupResponse::CreateSubnetGroupResponse(
         const CreateSubnetGroupRequest &request,
@@ -59,6 +54,9 @@ CreateSubnetGroupResponse::CreateSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSubnetGroupRequest * CreateSubnetGroupResponse::request() const
 {
     Q_D(const CreateSubnetGroupResponse);
@@ -66,9 +64,8 @@ const CreateSubnetGroupRequest * CreateSubnetGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a DAX CreateSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX CreateSubnetGroup \a response.
  */
 void CreateSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::CreateSubnetGroupResponsePrivate
+ * \brief The CreateSubnetGroupResponsePrivate class provides private implementation for CreateSubnetGroupResponse.
  * \internal
  *
- * \class CreateSubnetGroupResponsePrivate
- *
- * \brief Private implementation for CreateSubnetGroupResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSubnetGroupResponse instance.
+ * Constructs a CreateSubnetGroupResponsePrivate object with public implementation \a q.
  */
 CreateSubnetGroupResponsePrivate::CreateSubnetGroupResponsePrivate(
     CreateSubnetGroupResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateSubnetGroupResponsePrivate::CreateSubnetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX CreateSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX CreateSubnetGroup response element from \a xml.
  */
 void CreateSubnetGroupResponsePrivate::parseCreateSubnetGroupResponse(QXmlStreamReader &xml)
 {

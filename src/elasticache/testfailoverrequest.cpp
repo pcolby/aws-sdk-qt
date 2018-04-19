@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * TestFailoverRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a TestFailoverRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a TestFailoverRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 TestFailoverRequestPrivate::TestFailoverRequestPrivate(
     const ElastiCacheRequest::Action action, TestFailoverRequest * const q)

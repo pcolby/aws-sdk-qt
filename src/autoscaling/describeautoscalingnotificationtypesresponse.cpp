@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeAutoScalingNotificationTypesResponse
- *
  * \brief The DescribeAutoScalingNotificationTypesResponse class provides an interace for AutoScaling DescribeAutoScalingNotificationTypes responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeAutoScalingNotificationTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAutoScalingNotificationTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAutoScalingNotificationTypesResponse::DescribeAutoScalingNotificationTypesResponse(
         const DescribeAutoScalingNotificationTypesRequest &request,
@@ -60,6 +55,9 @@ DescribeAutoScalingNotificationTypesResponse::DescribeAutoScalingNotificationTyp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAutoScalingNotificationTypesRequest * DescribeAutoScalingNotificationTypesResponse::request() const
 {
     Q_D(const DescribeAutoScalingNotificationTypesResponse);
@@ -67,9 +65,8 @@ const DescribeAutoScalingNotificationTypesRequest * DescribeAutoScalingNotificat
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeAutoScalingNotificationTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeAutoScalingNotificationTypes \a response.
  */
 void DescribeAutoScalingNotificationTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeAutoScalingNotificationTypesResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeAutoScalingNotificationTypesResponsePrivate
+ * \brief The DescribeAutoScalingNotificationTypesResponsePrivate class provides private implementation for DescribeAutoScalingNotificationTypesResponse.
  * \internal
  *
- * \class DescribeAutoScalingNotificationTypesResponsePrivate
- *
- * \brief Private implementation for DescribeAutoScalingNotificationTypesResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAutoScalingNotificationTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAutoScalingNotificationTypesResponse instance.
+ * Constructs a DescribeAutoScalingNotificationTypesResponsePrivate object with public implementation \a q.
  */
 DescribeAutoScalingNotificationTypesResponsePrivate::DescribeAutoScalingNotificationTypesResponsePrivate(
     DescribeAutoScalingNotificationTypesResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeAutoScalingNotificationTypesResponsePrivate::DescribeAutoScalingNotifica
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeAutoScalingNotificationTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeAutoScalingNotificationTypes response element from \a xml.
  */
 void DescribeAutoScalingNotificationTypesResponsePrivate::parseDescribeAutoScalingNotificationTypesResponse(QXmlStreamReader &xml)
 {

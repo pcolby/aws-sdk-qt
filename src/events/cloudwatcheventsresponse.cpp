@@ -28,16 +28,13 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::CloudWatchEventsResponse
- *
  * \brief The CloudWatchEventsResponse class provides an interface for CloudWatchEvents responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @brief  Constructs a new CloudWatchEventsResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CloudWatchEventsResponse object with parent \a parent.
  */
 CloudWatchEventsResponse::CloudWatchEventsResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CloudWatchEventsResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CloudWatchEventsResponse::CloudWatchEventsResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudWatchEventsResponse object.
- *
+ * \internal
+ * Constructs a CloudWatchEventsResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudWatchEventsResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CloudWatchEventsResponse::CloudWatchEventsResponse(CloudWatchEventsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CloudWatchEventsResponse::CloudWatchEventsResponse(CloudWatchEventsResponsePriva
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CloudWatchEventsResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CloudWatchEventsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchEvents::CloudWatchEventsResponsePrivate
+ * \brief The CloudWatchEventsResponsePrivate class provides private implementation for CloudWatchEventsResponse.
+ * \internal
  *
- * @class  CloudWatchEventsResponsePrivate
- *
- * @brief  Private implementation for CloudWatchEventsResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudWatchEventsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloudWatchEventsResponse instance.
+ * Constructs a CloudWatchEventsResponsePrivate object with public implementation \a q.
  */
 CloudWatchEventsResponsePrivate::CloudWatchEventsResponsePrivate(
     CloudWatchEventsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::ListQueueTagsResponse
- *
  * \brief The ListQueueTagsResponse class provides an interace for SQS ListQueueTags responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new ListQueueTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListQueueTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListQueueTagsResponse::ListQueueTagsResponse(
         const ListQueueTagsRequest &request,
@@ -121,6 +116,9 @@ ListQueueTagsResponse::ListQueueTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListQueueTagsRequest * ListQueueTagsResponse::request() const
 {
     Q_D(const ListQueueTagsResponse);
@@ -128,9 +126,8 @@ const ListQueueTagsRequest * ListQueueTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS ListQueueTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS ListQueueTags \a response.
  */
 void ListQueueTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void ListQueueTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::ListQueueTagsResponsePrivate
+ * \brief The ListQueueTagsResponsePrivate class provides private implementation for ListQueueTagsResponse.
  * \internal
  *
- * \class ListQueueTagsResponsePrivate
- *
- * \brief Private implementation for ListQueueTagsResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListQueueTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListQueueTagsResponse instance.
+ * Constructs a ListQueueTagsResponsePrivate object with public implementation \a q.
  */
 ListQueueTagsResponsePrivate::ListQueueTagsResponsePrivate(
     ListQueueTagsResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ ListQueueTagsResponsePrivate::ListQueueTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS ListQueueTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS ListQueueTags response element from \a xml.
  */
 void ListQueueTagsResponsePrivate::parseListQueueTagsResponse(QXmlStreamReader &xml)
 {

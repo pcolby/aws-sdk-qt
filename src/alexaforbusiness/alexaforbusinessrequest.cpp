@@ -87,7 +87,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * Constructs a[n] AlexaForBusinessRequest object for AlexaForBusiness \a action.
+ * Constructs a AlexaForBusinessRequest object for AlexaForBusiness \a action.
  */
 AlexaForBusinessRequest::AlexaForBusinessRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AlexaForBusinessRequestPrivate(action, this))
@@ -287,8 +287,8 @@ QNetworkRequest AlexaForBusinessRequest::unsignedRequest(const QUrl &endpoint) c
  */
 
 /*!
- * Constructs a AlexaForBusinessRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a AlexaForBusinessRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 AlexaForBusinessRequestPrivate::AlexaForBusinessRequestPrivate(const AlexaForBusinessRequest::Action action, AlexaForBusinessRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

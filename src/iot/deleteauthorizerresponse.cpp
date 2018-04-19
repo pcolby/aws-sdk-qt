@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteAuthorizerResponse
- *
  * \brief The DeleteAuthorizerResponse class provides an interace for IoT DeleteAuthorizer responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteAuthorizerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAuthorizerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAuthorizerResponse::DeleteAuthorizerResponse(
         const DeleteAuthorizerRequest &request,
@@ -66,6 +61,9 @@ DeleteAuthorizerResponse::DeleteAuthorizerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAuthorizerRequest * DeleteAuthorizerResponse::request() const
 {
     Q_D(const DeleteAuthorizerResponse);
@@ -73,9 +71,8 @@ const DeleteAuthorizerRequest * DeleteAuthorizerResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DeleteAuthorizer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DeleteAuthorizer \a response.
  */
 void DeleteAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DeleteAuthorizerResponsePrivate
+ * \brief The DeleteAuthorizerResponsePrivate class provides private implementation for DeleteAuthorizerResponse.
  * \internal
  *
- * \class DeleteAuthorizerResponsePrivate
- *
- * \brief Private implementation for DeleteAuthorizerResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAuthorizerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAuthorizerResponse instance.
+ * Constructs a DeleteAuthorizerResponsePrivate object with public implementation \a q.
  */
 DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponsePrivate(
     DeleteAuthorizerResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DeleteAuthorizerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DeleteAuthorizer response element from \a xml.
  */
 void DeleteAuthorizerResponsePrivate::parseDeleteAuthorizerResponse(QXmlStreamReader &xml)
 {

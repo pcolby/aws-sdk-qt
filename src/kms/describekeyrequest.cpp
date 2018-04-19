@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * DescribeKeyRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DescribeKeyRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeKeyRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 DescribeKeyRequestPrivate::DescribeKeyRequestPrivate(
     const KMSRequest::Action action, DescribeKeyRequest * const q)

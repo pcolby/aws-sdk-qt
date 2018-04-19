@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateUserDefinedFunctionRequest::response(QN
  */
 
 /*!
- *
- * Constructs a UpdateUserDefinedFunctionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a UpdateUserDefinedFunctionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 UpdateUserDefinedFunctionRequestPrivate::UpdateUserDefinedFunctionRequestPrivate(
     const GlueRequest::Action action, UpdateUserDefinedFunctionRequest * const q)

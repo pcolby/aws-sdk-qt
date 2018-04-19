@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDatabaseRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdateDatabaseRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDatabaseRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 UpdateDatabaseRequestPrivate::UpdateDatabaseRequestPrivate(
     const GlueRequest::Action action, UpdateDatabaseRequest * const q)

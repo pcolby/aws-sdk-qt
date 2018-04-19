@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::GetOperationDetailResponse
- *
  * \brief The GetOperationDetailResponse class provides an interace for Route53Domains GetOperationDetail responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new GetOperationDetailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetOperationDetailResponse object for \a reply to \a request, with parent \a parent.
  */
 GetOperationDetailResponse::GetOperationDetailResponse(
         const GetOperationDetailRequest &request,
@@ -56,6 +51,9 @@ GetOperationDetailResponse::GetOperationDetailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetOperationDetailRequest * GetOperationDetailResponse::request() const
 {
     Q_D(const GetOperationDetailResponse);
@@ -63,9 +61,8 @@ const GetOperationDetailRequest * GetOperationDetailResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53Domains GetOperationDetail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains GetOperationDetail \a response.
  */
 void GetOperationDetailResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetOperationDetailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::GetOperationDetailResponsePrivate
+ * \brief The GetOperationDetailResponsePrivate class provides private implementation for GetOperationDetailResponse.
  * \internal
  *
- * \class GetOperationDetailResponsePrivate
- *
- * \brief Private implementation for GetOperationDetailResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOperationDetailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetOperationDetailResponse instance.
+ * Constructs a GetOperationDetailResponsePrivate object with public implementation \a q.
  */
 GetOperationDetailResponsePrivate::GetOperationDetailResponsePrivate(
     GetOperationDetailResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ GetOperationDetailResponsePrivate::GetOperationDetailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains GetOperationDetailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains GetOperationDetail response element from \a xml.
  */
 void GetOperationDetailResponsePrivate::parseGetOperationDetailResponse(QXmlStreamReader &xml)
 {

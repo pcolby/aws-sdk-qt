@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::UpdateOrganizationalUnitResponse
- *
  * \brief The UpdateOrganizationalUnitResponse class provides an interace for Organizations UpdateOrganizationalUnit responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new UpdateOrganizationalUnitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateOrganizationalUnitResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateOrganizationalUnitResponse::UpdateOrganizationalUnitResponse(
         const UpdateOrganizationalUnitRequest &request,
@@ -197,6 +192,9 @@ UpdateOrganizationalUnitResponse::UpdateOrganizationalUnitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateOrganizationalUnitRequest * UpdateOrganizationalUnitResponse::request() const
 {
     Q_D(const UpdateOrganizationalUnitResponse);
@@ -204,9 +202,8 @@ const UpdateOrganizationalUnitRequest * UpdateOrganizationalUnitResponse::reques
 }
 
 /*!
- * @brief  Parse a Organizations UpdateOrganizationalUnit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations UpdateOrganizationalUnit \a response.
  */
 void UpdateOrganizationalUnitResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void UpdateOrganizationalUnitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::UpdateOrganizationalUnitResponsePrivate
+ * \brief The UpdateOrganizationalUnitResponsePrivate class provides private implementation for UpdateOrganizationalUnitResponse.
  * \internal
  *
- * \class UpdateOrganizationalUnitResponsePrivate
- *
- * \brief Private implementation for UpdateOrganizationalUnitResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateOrganizationalUnitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateOrganizationalUnitResponse instance.
+ * Constructs a UpdateOrganizationalUnitResponsePrivate object with public implementation \a q.
  */
 UpdateOrganizationalUnitResponsePrivate::UpdateOrganizationalUnitResponsePrivate(
     UpdateOrganizationalUnitResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ UpdateOrganizationalUnitResponsePrivate::UpdateOrganizationalUnitResponsePrivate
 }
 
 /*!
- * @brief  Parse an Organizations UpdateOrganizationalUnitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations UpdateOrganizationalUnit response element from \a xml.
  */
 void UpdateOrganizationalUnitResponsePrivate::parseUpdateOrganizationalUnitResponse(QXmlStreamReader &xml)
 {

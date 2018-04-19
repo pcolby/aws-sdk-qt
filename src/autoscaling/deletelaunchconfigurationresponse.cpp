@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeleteLaunchConfigurationResponse
- *
  * \brief The DeleteLaunchConfigurationResponse class provides an interace for AutoScaling DeleteLaunchConfiguration responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteLaunchConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLaunchConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLaunchConfigurationResponse::DeleteLaunchConfigurationResponse(
         const DeleteLaunchConfigurationRequest &request,
@@ -60,6 +55,9 @@ DeleteLaunchConfigurationResponse::DeleteLaunchConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLaunchConfigurationRequest * DeleteLaunchConfigurationResponse::request() const
 {
     Q_D(const DeleteLaunchConfigurationResponse);
@@ -67,9 +65,8 @@ const DeleteLaunchConfigurationRequest * DeleteLaunchConfigurationResponse::requ
 }
 
 /*!
- * @brief  Parse a AutoScaling DeleteLaunchConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DeleteLaunchConfiguration \a response.
  */
 void DeleteLaunchConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteLaunchConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DeleteLaunchConfigurationResponsePrivate
+ * \brief The DeleteLaunchConfigurationResponsePrivate class provides private implementation for DeleteLaunchConfigurationResponse.
  * \internal
  *
- * \class DeleteLaunchConfigurationResponsePrivate
- *
- * \brief Private implementation for DeleteLaunchConfigurationResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLaunchConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLaunchConfigurationResponse instance.
+ * Constructs a DeleteLaunchConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteLaunchConfigurationResponsePrivate::DeleteLaunchConfigurationResponsePrivate(
     DeleteLaunchConfigurationResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteLaunchConfigurationResponsePrivate::DeleteLaunchConfigurationResponsePriva
 }
 
 /*!
- * @brief  Parse an AutoScaling DeleteLaunchConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DeleteLaunchConfiguration response element from \a xml.
  */
 void DeleteLaunchConfigurationResponsePrivate::parseDeleteLaunchConfigurationResponse(QXmlStreamReader &xml)
 {

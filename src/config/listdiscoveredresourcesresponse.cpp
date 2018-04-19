@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::ListDiscoveredResourcesResponse
- *
  * \brief The ListDiscoveredResourcesResponse class provides an interace for ConfigService ListDiscoveredResources responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new ListDiscoveredResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDiscoveredResourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDiscoveredResourcesResponse::ListDiscoveredResourcesResponse(
         const ListDiscoveredResourcesRequest &request,
@@ -78,6 +73,9 @@ ListDiscoveredResourcesResponse::ListDiscoveredResourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDiscoveredResourcesRequest * ListDiscoveredResourcesResponse::request() const
 {
     Q_D(const ListDiscoveredResourcesResponse);
@@ -85,9 +83,8 @@ const ListDiscoveredResourcesRequest * ListDiscoveredResourcesResponse::request(
 }
 
 /*!
- * @brief  Parse a ConfigService ListDiscoveredResources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService ListDiscoveredResources \a response.
  */
 void ListDiscoveredResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void ListDiscoveredResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::ListDiscoveredResourcesResponsePrivate
+ * \brief The ListDiscoveredResourcesResponsePrivate class provides private implementation for ListDiscoveredResourcesResponse.
  * \internal
  *
- * \class ListDiscoveredResourcesResponsePrivate
- *
- * \brief Private implementation for ListDiscoveredResourcesResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDiscoveredResourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDiscoveredResourcesResponse instance.
+ * Constructs a ListDiscoveredResourcesResponsePrivate object with public implementation \a q.
  */
 ListDiscoveredResourcesResponsePrivate::ListDiscoveredResourcesResponsePrivate(
     ListDiscoveredResourcesResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ ListDiscoveredResourcesResponsePrivate::ListDiscoveredResourcesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ConfigService ListDiscoveredResourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService ListDiscoveredResources response element from \a xml.
  */
 void ListDiscoveredResourcesResponsePrivate::parseListDiscoveredResourcesResponse(QXmlStreamReader &xml)
 {

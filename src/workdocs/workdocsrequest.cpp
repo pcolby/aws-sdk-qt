@@ -79,7 +79,7 @@ namespace WorkDocs {
  */
 
 /*!
- * Constructs a[n] WorkDocsRequest object for WorkDocs \a action.
+ * Constructs a WorkDocsRequest object for WorkDocs \a action.
  */
 WorkDocsRequest::WorkDocsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new WorkDocsRequestPrivate(action, this))
@@ -279,8 +279,8 @@ QNetworkRequest WorkDocsRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a WorkDocsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a WorkDocsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 WorkDocsRequestPrivate::WorkDocsRequestPrivate(const WorkDocsRequest::Action action, WorkDocsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

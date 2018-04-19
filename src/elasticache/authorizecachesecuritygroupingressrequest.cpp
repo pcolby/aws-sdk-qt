@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * AuthorizeCacheSecurityGroupIngressRequest::re
  */
 
 /*!
- *
- * Constructs a AuthorizeCacheSecurityGroupIngressRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a AuthorizeCacheSecurityGroupIngressRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIngressRequestPrivate(
     const ElastiCacheRequest::Action action, AuthorizeCacheSecurityGroupIngressRequest * const q)

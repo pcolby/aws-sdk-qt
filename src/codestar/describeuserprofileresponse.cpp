@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::DescribeUserProfileResponse
- *
  * \brief The DescribeUserProfileResponse class provides an interace for CodeStar DescribeUserProfile responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new DescribeUserProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeUserProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeUserProfileResponse::DescribeUserProfileResponse(
         const DescribeUserProfileRequest &request,
@@ -143,6 +138,9 @@ DescribeUserProfileResponse::DescribeUserProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeUserProfileRequest * DescribeUserProfileResponse::request() const
 {
     Q_D(const DescribeUserProfileResponse);
@@ -150,9 +148,8 @@ const DescribeUserProfileRequest * DescribeUserProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar DescribeUserProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar DescribeUserProfile \a response.
  */
 void DescribeUserProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void DescribeUserProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::DescribeUserProfileResponsePrivate
+ * \brief The DescribeUserProfileResponsePrivate class provides private implementation for DescribeUserProfileResponse.
  * \internal
  *
- * \class DescribeUserProfileResponsePrivate
- *
- * \brief Private implementation for DescribeUserProfileResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUserProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeUserProfileResponse instance.
+ * Constructs a DescribeUserProfileResponsePrivate object with public implementation \a q.
  */
 DescribeUserProfileResponsePrivate::DescribeUserProfileResponsePrivate(
     DescribeUserProfileResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ DescribeUserProfileResponsePrivate::DescribeUserProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar DescribeUserProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar DescribeUserProfile response element from \a xml.
  */
 void DescribeUserProfileResponsePrivate::parseDescribeUserProfileResponse(QXmlStreamReader &xml)
 {

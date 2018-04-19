@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssociateDhcpOptionsResponse
- *
  * \brief The AssociateDhcpOptionsResponse class provides an interace for EC2 AssociateDhcpOptions responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssociateDhcpOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateDhcpOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateDhcpOptionsResponse::AssociateDhcpOptionsResponse(
         const AssociateDhcpOptionsRequest &request,
@@ -59,6 +54,9 @@ AssociateDhcpOptionsResponse::AssociateDhcpOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateDhcpOptionsRequest * AssociateDhcpOptionsResponse::request() const
 {
     Q_D(const AssociateDhcpOptionsResponse);
@@ -66,9 +64,8 @@ const AssociateDhcpOptionsRequest * AssociateDhcpOptionsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 AssociateDhcpOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AssociateDhcpOptions \a response.
  */
 void AssociateDhcpOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AssociateDhcpOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AssociateDhcpOptionsResponsePrivate
+ * \brief The AssociateDhcpOptionsResponsePrivate class provides private implementation for AssociateDhcpOptionsResponse.
  * \internal
  *
- * \class AssociateDhcpOptionsResponsePrivate
- *
- * \brief Private implementation for AssociateDhcpOptionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateDhcpOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateDhcpOptionsResponse instance.
+ * Constructs a AssociateDhcpOptionsResponsePrivate object with public implementation \a q.
  */
 AssociateDhcpOptionsResponsePrivate::AssociateDhcpOptionsResponsePrivate(
     AssociateDhcpOptionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AssociateDhcpOptionsResponsePrivate::AssociateDhcpOptionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 AssociateDhcpOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AssociateDhcpOptions response element from \a xml.
  */
 void AssociateDhcpOptionsResponsePrivate::parseAssociateDhcpOptionsResponse(QXmlStreamReader &xml)
 {

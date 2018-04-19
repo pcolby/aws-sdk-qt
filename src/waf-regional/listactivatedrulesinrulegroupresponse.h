@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListActivatedRulesInRuleGroupResponse : public WAFRegionalRes
 public:
     ListActivatedRulesInRuleGroupResponse(const ListActivatedRulesInRuleGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListActivatedRulesInRuleGroupRequest * request() const;
+    virtual const ListActivatedRulesInRuleGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListActivatedRulesInRuleGroupResponse)

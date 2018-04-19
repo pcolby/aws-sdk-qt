@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::GetConfigResponse
- *
  * \brief The GetConfigResponse class provides an interace for CloudHSM GetConfig responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new GetConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 GetConfigResponse::GetConfigResponse(
         const GetConfigRequest &request,
@@ -67,6 +62,9 @@ GetConfigResponse::GetConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetConfigRequest * GetConfigResponse::request() const
 {
     Q_D(const GetConfigResponse);
@@ -74,9 +72,8 @@ const GetConfigRequest * GetConfigResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSM GetConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM GetConfig \a response.
  */
 void GetConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void GetConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::GetConfigResponsePrivate
+ * \brief The GetConfigResponsePrivate class provides private implementation for GetConfigResponse.
  * \internal
  *
- * \class GetConfigResponsePrivate
- *
- * \brief Private implementation for GetConfigResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetConfigResponse instance.
+ * Constructs a GetConfigResponsePrivate object with public implementation \a q.
  */
 GetConfigResponsePrivate::GetConfigResponsePrivate(
     GetConfigResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ GetConfigResponsePrivate::GetConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM GetConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM GetConfig response element from \a xml.
  */
 void GetConfigResponsePrivate::parseGetConfigResponse(QXmlStreamReader &xml)
 {

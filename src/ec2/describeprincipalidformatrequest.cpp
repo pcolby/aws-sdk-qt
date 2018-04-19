@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribePrincipalIdFormatRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribePrincipalIdFormatRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribePrincipalIdFormatRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribePrincipalIdFormatRequestPrivate::DescribePrincipalIdFormatRequestPrivate(
     const EC2Request::Action action, DescribePrincipalIdFormatRequest * const q)

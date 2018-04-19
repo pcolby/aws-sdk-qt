@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteJobTemplateResponse : public MediaConvertResponse {
 public:
     DeleteJobTemplateResponse(const DeleteJobTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteJobTemplateRequest * request() const;
+    virtual const DeleteJobTemplateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteJobTemplateResponse)

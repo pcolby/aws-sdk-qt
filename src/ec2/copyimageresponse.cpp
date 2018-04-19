@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CopyImageResponse
- *
  * \brief The CopyImageResponse class provides an interace for EC2 CopyImage responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CopyImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopyImageResponse object for \a reply to \a request, with parent \a parent.
  */
 CopyImageResponse::CopyImageResponse(
         const CopyImageRequest &request,
@@ -59,6 +54,9 @@ CopyImageResponse::CopyImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopyImageRequest * CopyImageResponse::request() const
 {
     Q_D(const CopyImageResponse);
@@ -66,9 +64,8 @@ const CopyImageRequest * CopyImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CopyImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CopyImage \a response.
  */
 void CopyImageResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CopyImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CopyImageResponsePrivate
+ * \brief The CopyImageResponsePrivate class provides private implementation for CopyImageResponse.
  * \internal
  *
- * \class CopyImageResponsePrivate
- *
- * \brief Private implementation for CopyImageResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopyImageResponse instance.
+ * Constructs a CopyImageResponsePrivate object with public implementation \a q.
  */
 CopyImageResponsePrivate::CopyImageResponsePrivate(
     CopyImageResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CopyImageResponsePrivate::CopyImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CopyImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CopyImage response element from \a xml.
  */
 void CopyImageResponsePrivate::parseCopyImageResponse(QXmlStreamReader &xml)
 {

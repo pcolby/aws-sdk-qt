@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a TagResourceRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a TagResourceRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const LambdaRequest::Action action, TagResourceRequest * const q)

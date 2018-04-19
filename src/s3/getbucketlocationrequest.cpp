@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketLocationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetBucketLocationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketLocationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketLocationRequestPrivate::GetBucketLocationRequestPrivate(
     const S3Request::Action action, GetBucketLocationRequest * const q)

@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * GetJobRequest::response(QNetworkReply * const
  */
 
 /*!
- *
- * Constructs a GetJobRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a GetJobRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 GetJobRequestPrivate::GetJobRequestPrivate(
     const DeviceFarmRequest::Action action, GetJobRequest * const q)

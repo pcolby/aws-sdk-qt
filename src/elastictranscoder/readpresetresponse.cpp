@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ReadPresetResponse
- *
  * \brief The ReadPresetResponse class provides an interace for ElasticTranscoder ReadPreset responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new ReadPresetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReadPresetResponse object for \a reply to \a request, with parent \a parent.
  */
 ReadPresetResponse::ReadPresetResponse(
         const ReadPresetRequest &request,
@@ -58,6 +53,9 @@ ReadPresetResponse::ReadPresetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReadPresetRequest * ReadPresetResponse::request() const
 {
     Q_D(const ReadPresetResponse);
@@ -65,9 +63,8 @@ const ReadPresetRequest * ReadPresetResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder ReadPreset response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder ReadPreset \a response.
  */
 void ReadPresetResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ReadPresetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::ReadPresetResponsePrivate
+ * \brief The ReadPresetResponsePrivate class provides private implementation for ReadPresetResponse.
  * \internal
  *
- * \class ReadPresetResponsePrivate
- *
- * \brief Private implementation for ReadPresetResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReadPresetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReadPresetResponse instance.
+ * Constructs a ReadPresetResponsePrivate object with public implementation \a q.
  */
 ReadPresetResponsePrivate::ReadPresetResponsePrivate(
     ReadPresetResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ ReadPresetResponsePrivate::ReadPresetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder ReadPresetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder ReadPreset response element from \a xml.
  */
 void ReadPresetResponsePrivate::parseReadPresetResponse(QXmlStreamReader &xml)
 {

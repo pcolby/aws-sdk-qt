@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RevokeSecurityGroupEgressResponse
- *
  * \brief The RevokeSecurityGroupEgressResponse class provides an interace for EC2 RevokeSecurityGroupEgress responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RevokeSecurityGroupEgressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RevokeSecurityGroupEgressResponse object for \a reply to \a request, with parent \a parent.
  */
 RevokeSecurityGroupEgressResponse::RevokeSecurityGroupEgressResponse(
         const RevokeSecurityGroupEgressRequest &request,
@@ -59,6 +54,9 @@ RevokeSecurityGroupEgressResponse::RevokeSecurityGroupEgressResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RevokeSecurityGroupEgressRequest * RevokeSecurityGroupEgressResponse::request() const
 {
     Q_D(const RevokeSecurityGroupEgressResponse);
@@ -66,9 +64,8 @@ const RevokeSecurityGroupEgressRequest * RevokeSecurityGroupEgressResponse::requ
 }
 
 /*!
- * @brief  Parse a EC2 RevokeSecurityGroupEgress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 RevokeSecurityGroupEgress \a response.
  */
 void RevokeSecurityGroupEgressResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void RevokeSecurityGroupEgressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::RevokeSecurityGroupEgressResponsePrivate
+ * \brief The RevokeSecurityGroupEgressResponsePrivate class provides private implementation for RevokeSecurityGroupEgressResponse.
  * \internal
  *
- * \class RevokeSecurityGroupEgressResponsePrivate
- *
- * \brief Private implementation for RevokeSecurityGroupEgressResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeSecurityGroupEgressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RevokeSecurityGroupEgressResponse instance.
+ * Constructs a RevokeSecurityGroupEgressResponsePrivate object with public implementation \a q.
  */
 RevokeSecurityGroupEgressResponsePrivate::RevokeSecurityGroupEgressResponsePrivate(
     RevokeSecurityGroupEgressResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ RevokeSecurityGroupEgressResponsePrivate::RevokeSecurityGroupEgressResponsePriva
 }
 
 /*!
- * @brief  Parse an EC2 RevokeSecurityGroupEgressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 RevokeSecurityGroupEgress response element from \a xml.
  */
 void RevokeSecurityGroupEgressResponsePrivate::parseRevokeSecurityGroupEgressResponse(QXmlStreamReader &xml)
 {

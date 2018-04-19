@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListImportsResponse : public CloudFormationResponse {
 public:
     ListImportsResponse(const ListImportsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListImportsRequest * request() const;
+    virtual const ListImportsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListImportsResponse)

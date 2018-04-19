@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ListPhoneNumbersOptedOutResponse
- *
  * \brief The ListPhoneNumbersOptedOutResponse class provides an interace for SNS ListPhoneNumbersOptedOut responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ListPhoneNumbersOptedOutResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPhoneNumbersOptedOutResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPhoneNumbersOptedOutResponse::ListPhoneNumbersOptedOutResponse(
         const ListPhoneNumbersOptedOutRequest &request,
@@ -69,6 +64,9 @@ ListPhoneNumbersOptedOutResponse::ListPhoneNumbersOptedOutResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPhoneNumbersOptedOutRequest * ListPhoneNumbersOptedOutResponse::request() const
 {
     Q_D(const ListPhoneNumbersOptedOutResponse);
@@ -76,9 +74,8 @@ const ListPhoneNumbersOptedOutRequest * ListPhoneNumbersOptedOutResponse::reques
 }
 
 /*!
- * @brief  Parse a SNS ListPhoneNumbersOptedOut response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS ListPhoneNumbersOptedOut \a response.
  */
 void ListPhoneNumbersOptedOutResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListPhoneNumbersOptedOutResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::ListPhoneNumbersOptedOutResponsePrivate
+ * \brief The ListPhoneNumbersOptedOutResponsePrivate class provides private implementation for ListPhoneNumbersOptedOutResponse.
  * \internal
  *
- * \class ListPhoneNumbersOptedOutResponsePrivate
- *
- * \brief Private implementation for ListPhoneNumbersOptedOutResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPhoneNumbersOptedOutResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPhoneNumbersOptedOutResponse instance.
+ * Constructs a ListPhoneNumbersOptedOutResponsePrivate object with public implementation \a q.
  */
 ListPhoneNumbersOptedOutResponsePrivate::ListPhoneNumbersOptedOutResponsePrivate(
     ListPhoneNumbersOptedOutResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ ListPhoneNumbersOptedOutResponsePrivate::ListPhoneNumbersOptedOutResponsePrivate
 }
 
 /*!
- * @brief  Parse an SNS ListPhoneNumbersOptedOutResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS ListPhoneNumbersOptedOut response element from \a xml.
  */
 void ListPhoneNumbersOptedOutResponsePrivate::parseListPhoneNumbersOptedOutResponse(QXmlStreamReader &xml)
 {

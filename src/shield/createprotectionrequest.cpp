@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CreateProtectionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateProtectionRequestPrivate object for Shield \a action with,
- * public implementation \a q.
+ * Constructs a CreateProtectionRequestPrivate object for Shield \a action,
+ * with public implementation \a q.
  */
 CreateProtectionRequestPrivate::CreateProtectionRequestPrivate(
     const ShieldRequest::Action action, CreateProtectionRequest * const q)

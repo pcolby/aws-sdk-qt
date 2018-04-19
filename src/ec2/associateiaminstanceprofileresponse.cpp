@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssociateIamInstanceProfileResponse
- *
  * \brief The AssociateIamInstanceProfileResponse class provides an interace for EC2 AssociateIamInstanceProfile responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssociateIamInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateIamInstanceProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateIamInstanceProfileResponse::AssociateIamInstanceProfileResponse(
         const AssociateIamInstanceProfileRequest &request,
@@ -59,6 +54,9 @@ AssociateIamInstanceProfileResponse::AssociateIamInstanceProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateIamInstanceProfileRequest * AssociateIamInstanceProfileResponse::request() const
 {
     Q_D(const AssociateIamInstanceProfileResponse);
@@ -66,9 +64,8 @@ const AssociateIamInstanceProfileRequest * AssociateIamInstanceProfileResponse::
 }
 
 /*!
- * @brief  Parse a EC2 AssociateIamInstanceProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AssociateIamInstanceProfile \a response.
  */
 void AssociateIamInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AssociateIamInstanceProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AssociateIamInstanceProfileResponsePrivate
+ * \brief The AssociateIamInstanceProfileResponsePrivate class provides private implementation for AssociateIamInstanceProfileResponse.
  * \internal
  *
- * \class AssociateIamInstanceProfileResponsePrivate
- *
- * \brief Private implementation for AssociateIamInstanceProfileResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateIamInstanceProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateIamInstanceProfileResponse instance.
+ * Constructs a AssociateIamInstanceProfileResponsePrivate object with public implementation \a q.
  */
 AssociateIamInstanceProfileResponsePrivate::AssociateIamInstanceProfileResponsePrivate(
     AssociateIamInstanceProfileResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AssociateIamInstanceProfileResponsePrivate::AssociateIamInstanceProfileResponseP
 }
 
 /*!
- * @brief  Parse an EC2 AssociateIamInstanceProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AssociateIamInstanceProfile response element from \a xml.
  */
 void AssociateIamInstanceProfileResponsePrivate::parseAssociateIamInstanceProfileResponse(QXmlStreamReader &xml)
 {

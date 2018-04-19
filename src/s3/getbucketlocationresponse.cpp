@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketLocationResponse
- *
  * \brief The GetBucketLocationResponse class provides an interace for S3 GetBucketLocation responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketLocation
  */
 
 /*!
- * @brief  Constructs a new GetBucketLocationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBucketLocationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBucketLocationResponse::GetBucketLocationResponse(
         const GetBucketLocationRequest &request,
@@ -55,6 +50,9 @@ GetBucketLocationResponse::GetBucketLocationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBucketLocationRequest * GetBucketLocationResponse::request() const
 {
     Q_D(const GetBucketLocationResponse);
@@ -62,9 +60,8 @@ const GetBucketLocationRequest * GetBucketLocationResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 GetBucketLocation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetBucketLocation \a response.
  */
 void GetBucketLocationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBucketLocationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetBucketLocationResponsePrivate
+ * \brief The GetBucketLocationResponsePrivate class provides private implementation for GetBucketLocationResponse.
  * \internal
  *
- * \class GetBucketLocationResponsePrivate
- *
- * \brief Private implementation for GetBucketLocationResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketLocationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBucketLocationResponse instance.
+ * Constructs a GetBucketLocationResponsePrivate object with public implementation \a q.
  */
 GetBucketLocationResponsePrivate::GetBucketLocationResponsePrivate(
     GetBucketLocationResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBucketLocationResponsePrivate::GetBucketLocationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 GetBucketLocationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetBucketLocation response element from \a xml.
  */
 void GetBucketLocationResponsePrivate::parseGetBucketLocationResponse(QXmlStreamReader &xml)
 {

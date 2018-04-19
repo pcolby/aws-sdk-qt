@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::PutKeyPolicyResponse
- *
  * \brief The PutKeyPolicyResponse class provides an interace for KMS PutKeyPolicy responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new PutKeyPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutKeyPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutKeyPolicyResponse::PutKeyPolicyResponse(
         const PutKeyPolicyRequest &request,
@@ -154,6 +149,9 @@ PutKeyPolicyResponse::PutKeyPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutKeyPolicyRequest * PutKeyPolicyResponse::request() const
 {
     Q_D(const PutKeyPolicyResponse);
@@ -161,9 +159,8 @@ const PutKeyPolicyRequest * PutKeyPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS PutKeyPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS PutKeyPolicy \a response.
  */
 void PutKeyPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void PutKeyPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::PutKeyPolicyResponsePrivate
+ * \brief The PutKeyPolicyResponsePrivate class provides private implementation for PutKeyPolicyResponse.
  * \internal
  *
- * \class PutKeyPolicyResponsePrivate
- *
- * \brief Private implementation for PutKeyPolicyResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutKeyPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutKeyPolicyResponse instance.
+ * Constructs a PutKeyPolicyResponsePrivate object with public implementation \a q.
  */
 PutKeyPolicyResponsePrivate::PutKeyPolicyResponsePrivate(
     PutKeyPolicyResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ PutKeyPolicyResponsePrivate::PutKeyPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS PutKeyPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS PutKeyPolicy response element from \a xml.
  */
 void PutKeyPolicyResponsePrivate::parsePutKeyPolicyResponse(QXmlStreamReader &xml)
 {

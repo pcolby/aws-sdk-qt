@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListTemplatesRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListTemplatesRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a ListTemplatesRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 ListTemplatesRequestPrivate::ListTemplatesRequestPrivate(
     const SESRequest::Action action, ListTemplatesRequest * const q)

@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListOutgoingCertificatesResponse
- *
  * \brief The ListOutgoingCertificatesResponse class provides an interace for IoT ListOutgoingCertificates responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListOutgoingCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListOutgoingCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListOutgoingCertificatesResponse::ListOutgoingCertificatesResponse(
         const ListOutgoingCertificatesRequest &request,
@@ -66,6 +61,9 @@ ListOutgoingCertificatesResponse::ListOutgoingCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListOutgoingCertificatesRequest * ListOutgoingCertificatesResponse::request() const
 {
     Q_D(const ListOutgoingCertificatesResponse);
@@ -73,9 +71,8 @@ const ListOutgoingCertificatesRequest * ListOutgoingCertificatesResponse::reques
 }
 
 /*!
- * @brief  Parse a IoT ListOutgoingCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListOutgoingCertificates \a response.
  */
 void ListOutgoingCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListOutgoingCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListOutgoingCertificatesResponsePrivate
+ * \brief The ListOutgoingCertificatesResponsePrivate class provides private implementation for ListOutgoingCertificatesResponse.
  * \internal
  *
- * \class ListOutgoingCertificatesResponsePrivate
- *
- * \brief Private implementation for ListOutgoingCertificatesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOutgoingCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListOutgoingCertificatesResponse instance.
+ * Constructs a ListOutgoingCertificatesResponsePrivate object with public implementation \a q.
  */
 ListOutgoingCertificatesResponsePrivate::ListOutgoingCertificatesResponsePrivate(
     ListOutgoingCertificatesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListOutgoingCertificatesResponsePrivate::ListOutgoingCertificatesResponsePrivate
 }
 
 /*!
- * @brief  Parse an IoT ListOutgoingCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListOutgoingCertificates response element from \a xml.
  */
 void ListOutgoingCertificatesResponsePrivate::parseListOutgoingCertificatesResponse(QXmlStreamReader &xml)
 {

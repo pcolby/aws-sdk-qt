@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetTrackingOptionsRequest:
  */
 
 /*!
- *
- * Constructs a DeleteConfigurationSetTrackingOptionsRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a DeleteConfigurationSetTrackingOptionsRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 DeleteConfigurationSetTrackingOptionsRequestPrivate::DeleteConfigurationSetTrackingOptionsRequestPrivate(
     const SESRequest::Action action, DeleteConfigurationSetTrackingOptionsRequest * const q)

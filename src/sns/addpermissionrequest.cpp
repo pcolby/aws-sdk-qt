@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * AddPermissionRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a AddPermissionRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a AddPermissionRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 AddPermissionRequestPrivate::AddPermissionRequestPrivate(
     const SNSRequest::Action action, AddPermissionRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListInstanceFleetsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListInstanceFleetsRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a ListInstanceFleetsRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 ListInstanceFleetsRequestPrivate::ListInstanceFleetsRequestPrivate(
     const EMRRequest::Action action, ListInstanceFleetsRequest * const q)

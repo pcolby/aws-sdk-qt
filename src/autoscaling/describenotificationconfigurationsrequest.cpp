@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DescribeNotificationConfigurationsRequest::re
  */
 
 /*!
- *
- * Constructs a DescribeNotificationConfigurationsRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DescribeNotificationConfigurationsRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DescribeNotificationConfigurationsRequestPrivate::DescribeNotificationConfigurationsRequestPrivate(
     const AutoScalingRequest::Action action, DescribeNotificationConfigurationsRequest * const q)

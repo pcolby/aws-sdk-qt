@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * ListCertificateAuthoritiesRequest::response(Q
  */
 
 /*!
- *
- * Constructs a ListCertificateAuthoritiesRequestPrivate object for ACMPCA \a action with,
- * public implementation \a q.
+ * Constructs a ListCertificateAuthoritiesRequestPrivate object for ACMPCA \a action,
+ * with public implementation \a q.
  */
 ListCertificateAuthoritiesRequestPrivate::ListCertificateAuthoritiesRequestPrivate(
     const ACMPCARequest::Action action, ListCertificateAuthoritiesRequest * const q)

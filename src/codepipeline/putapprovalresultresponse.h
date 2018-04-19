@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutApprovalResultResponse : public CodePipelineResponse {
 public:
     PutApprovalResultResponse(const PutApprovalResultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutApprovalResultRequest * request() const;
+    virtual const PutApprovalResultRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutApprovalResultResponse)

@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::DescribeImagesResponse
- *
  * \brief The DescribeImagesResponse class provides an interace for ECR DescribeImages responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new DescribeImagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeImagesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeImagesResponse::DescribeImagesResponse(
         const DescribeImagesRequest &request,
@@ -59,6 +54,9 @@ DescribeImagesResponse::DescribeImagesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeImagesRequest * DescribeImagesResponse::request() const
 {
     Q_D(const DescribeImagesResponse);
@@ -66,9 +64,8 @@ const DescribeImagesRequest * DescribeImagesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR DescribeImages response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR DescribeImages \a response.
  */
 void DescribeImagesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeImagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::DescribeImagesResponsePrivate
+ * \brief The DescribeImagesResponsePrivate class provides private implementation for DescribeImagesResponse.
  * \internal
  *
- * \class DescribeImagesResponsePrivate
- *
- * \brief Private implementation for DescribeImagesResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeImagesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeImagesResponse instance.
+ * Constructs a DescribeImagesResponsePrivate object with public implementation \a q.
  */
 DescribeImagesResponsePrivate::DescribeImagesResponsePrivate(
     DescribeImagesResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeImagesResponsePrivate::DescribeImagesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR DescribeImagesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR DescribeImages response element from \a xml.
  */
 void DescribeImagesResponsePrivate::parseDescribeImagesResponse(QXmlStreamReader &xml)
 {

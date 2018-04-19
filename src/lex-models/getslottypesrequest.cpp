@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetSlotTypesRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetSlotTypesRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a GetSlotTypesRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 GetSlotTypesRequestPrivate::GetSlotTypesRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetSlotTypesRequest * const q)

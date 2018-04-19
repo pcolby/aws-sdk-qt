@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * SearchSkillGroupsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a SearchSkillGroupsRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a SearchSkillGroupsRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 SearchSkillGroupsRequestPrivate::SearchSkillGroupsRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchSkillGroupsRequest * const q)

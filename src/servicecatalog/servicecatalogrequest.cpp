@@ -99,7 +99,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * Constructs a[n] ServiceCatalogRequest object for ServiceCatalog \a action.
+ * Constructs a ServiceCatalogRequest object for ServiceCatalog \a action.
  */
 ServiceCatalogRequest::ServiceCatalogRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ServiceCatalogRequestPrivate(action, this))
@@ -299,8 +299,8 @@ QNetworkRequest ServiceCatalogRequest::unsignedRequest(const QUrl &endpoint) con
  */
 
 /*!
- * Constructs a ServiceCatalogRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ServiceCatalogRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ServiceCatalogRequestPrivate::ServiceCatalogRequestPrivate(const ServiceCatalogRequest::Action action, ServiceCatalogRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

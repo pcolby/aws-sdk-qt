@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketAnalyticsConfigurationResponse
- *
  * \brief The DeleteBucketAnalyticsConfigurationResponse class provides an interace for S3 DeleteBucketAnalyticsConfiguration responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketAnalyticsConfiguration
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketAnalyticsConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBucketAnalyticsConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBucketAnalyticsConfigurationResponse::DeleteBucketAnalyticsConfigurationResponse(
         const DeleteBucketAnalyticsConfigurationRequest &request,
@@ -55,6 +50,9 @@ DeleteBucketAnalyticsConfigurationResponse::DeleteBucketAnalyticsConfigurationRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBucketAnalyticsConfigurationRequest * DeleteBucketAnalyticsConfigurationResponse::request() const
 {
     Q_D(const DeleteBucketAnalyticsConfigurationResponse);
@@ -62,9 +60,8 @@ const DeleteBucketAnalyticsConfigurationRequest * DeleteBucketAnalyticsConfigura
 }
 
 /*!
- * @brief  Parse a S3 DeleteBucketAnalyticsConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 DeleteBucketAnalyticsConfiguration \a response.
  */
 void DeleteBucketAnalyticsConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteBucketAnalyticsConfigurationResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::S3::DeleteBucketAnalyticsConfigurationResponsePrivate
+ * \brief The DeleteBucketAnalyticsConfigurationResponsePrivate class provides private implementation for DeleteBucketAnalyticsConfigurationResponse.
  * \internal
  *
- * \class DeleteBucketAnalyticsConfigurationResponsePrivate
- *
- * \brief Private implementation for DeleteBucketAnalyticsConfigurationResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketAnalyticsConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBucketAnalyticsConfigurationResponse instance.
+ * Constructs a DeleteBucketAnalyticsConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteBucketAnalyticsConfigurationResponsePrivate::DeleteBucketAnalyticsConfigurationResponsePrivate(
     DeleteBucketAnalyticsConfigurationResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteBucketAnalyticsConfigurationResponsePrivate::DeleteBucketAnalyticsConfigur
 }
 
 /*!
- * @brief  Parse an S3 DeleteBucketAnalyticsConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 DeleteBucketAnalyticsConfiguration response element from \a xml.
  */
 void DeleteBucketAnalyticsConfigurationResponsePrivate::parseDeleteBucketAnalyticsConfigurationResponse(QXmlStreamReader &xml)
 {

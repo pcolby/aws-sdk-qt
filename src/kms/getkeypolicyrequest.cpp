@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * GetKeyPolicyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetKeyPolicyRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a GetKeyPolicyRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 GetKeyPolicyRequestPrivate::GetKeyPolicyRequestPrivate(
     const KMSRequest::Action action, GetKeyPolicyRequest * const q)

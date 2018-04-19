@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTrafficPolicyInstanceResponse : public Route53Response 
 public:
     DeleteTrafficPolicyInstanceResponse(const DeleteTrafficPolicyInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTrafficPolicyInstanceRequest * request() const;
+    virtual const DeleteTrafficPolicyInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTrafficPolicyInstanceResponse)

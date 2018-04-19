@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DeleteSchemaResponse
- *
  * \brief The DeleteSchemaResponse class provides an interace for CloudDirectory DeleteSchema responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DeleteSchemaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSchemaResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSchemaResponse::DeleteSchemaResponse(
         const DeleteSchemaRequest &request,
@@ -62,6 +57,9 @@ DeleteSchemaResponse::DeleteSchemaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSchemaRequest * DeleteSchemaResponse::request() const
 {
     Q_D(const DeleteSchemaResponse);
@@ -69,9 +67,8 @@ const DeleteSchemaRequest * DeleteSchemaResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory DeleteSchema response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory DeleteSchema \a response.
  */
 void DeleteSchemaResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DeleteSchemaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::DeleteSchemaResponsePrivate
+ * \brief The DeleteSchemaResponsePrivate class provides private implementation for DeleteSchemaResponse.
  * \internal
  *
- * \class DeleteSchemaResponsePrivate
- *
- * \brief Private implementation for DeleteSchemaResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSchemaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSchemaResponse instance.
+ * Constructs a DeleteSchemaResponsePrivate object with public implementation \a q.
  */
 DeleteSchemaResponsePrivate::DeleteSchemaResponsePrivate(
     DeleteSchemaResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ DeleteSchemaResponsePrivate::DeleteSchemaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory DeleteSchemaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory DeleteSchema response element from \a xml.
  */
 void DeleteSchemaResponsePrivate::parseDeleteSchemaResponse(QXmlStreamReader &xml)
 {

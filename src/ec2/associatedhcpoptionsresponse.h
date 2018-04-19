@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateDhcpOptionsResponse : public EC2Response {
 public:
     AssociateDhcpOptionsResponse(const AssociateDhcpOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateDhcpOptionsRequest * request() const;
+    virtual const AssociateDhcpOptionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateDhcpOptionsResponse)

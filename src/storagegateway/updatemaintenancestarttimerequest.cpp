@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * UpdateMaintenanceStartTimeRequest::response(Q
  */
 
 /*!
- *
- * Constructs a UpdateMaintenanceStartTimeRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateMaintenanceStartTimeRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 UpdateMaintenanceStartTimeRequestPrivate::UpdateMaintenanceStartTimeRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateMaintenanceStartTimeRequest * const q)

@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::GetJobUnlockCodeResponse
- *
  * \brief The GetJobUnlockCodeResponse class provides an interace for Snowball GetJobUnlockCode responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new GetJobUnlockCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetJobUnlockCodeResponse object for \a reply to \a request, with parent \a parent.
  */
 GetJobUnlockCodeResponse::GetJobUnlockCodeResponse(
         const GetJobUnlockCodeRequest &request,
@@ -61,6 +56,9 @@ GetJobUnlockCodeResponse::GetJobUnlockCodeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetJobUnlockCodeRequest * GetJobUnlockCodeResponse::request() const
 {
     Q_D(const GetJobUnlockCodeResponse);
@@ -68,9 +66,8 @@ const GetJobUnlockCodeRequest * GetJobUnlockCodeResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball GetJobUnlockCode response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball GetJobUnlockCode \a response.
  */
 void GetJobUnlockCodeResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void GetJobUnlockCodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::GetJobUnlockCodeResponsePrivate
+ * \brief The GetJobUnlockCodeResponsePrivate class provides private implementation for GetJobUnlockCodeResponse.
  * \internal
  *
- * \class GetJobUnlockCodeResponsePrivate
- *
- * \brief Private implementation for GetJobUnlockCodeResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobUnlockCodeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetJobUnlockCodeResponse instance.
+ * Constructs a GetJobUnlockCodeResponsePrivate object with public implementation \a q.
  */
 GetJobUnlockCodeResponsePrivate::GetJobUnlockCodeResponsePrivate(
     GetJobUnlockCodeResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ GetJobUnlockCodeResponsePrivate::GetJobUnlockCodeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball GetJobUnlockCodeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball GetJobUnlockCode response element from \a xml.
  */
 void GetJobUnlockCodeResponsePrivate::parseGetJobUnlockCodeResponse(QXmlStreamReader &xml)
 {

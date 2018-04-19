@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::PutParameterResponse
- *
  * \brief The PutParameterResponse class provides an interace for SSM PutParameter responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new PutParameterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutParameterResponse object for \a reply to \a request, with parent \a parent.
  */
 PutParameterResponse::PutParameterResponse(
         const PutParameterRequest &request,
@@ -79,6 +74,9 @@ PutParameterResponse::PutParameterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutParameterRequest * PutParameterResponse::request() const
 {
     Q_D(const PutParameterResponse);
@@ -86,9 +84,8 @@ const PutParameterRequest * PutParameterResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM PutParameter response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM PutParameter \a response.
  */
 void PutParameterResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void PutParameterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::PutParameterResponsePrivate
+ * \brief The PutParameterResponsePrivate class provides private implementation for PutParameterResponse.
  * \internal
  *
- * \class PutParameterResponsePrivate
- *
- * \brief Private implementation for PutParameterResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutParameterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutParameterResponse instance.
+ * Constructs a PutParameterResponsePrivate object with public implementation \a q.
  */
 PutParameterResponsePrivate::PutParameterResponsePrivate(
     PutParameterResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ PutParameterResponsePrivate::PutParameterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM PutParameterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM PutParameter response element from \a xml.
  */
 void PutParameterResponsePrivate::parsePutParameterResponse(QXmlStreamReader &xml)
 {

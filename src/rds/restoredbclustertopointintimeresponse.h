@@ -34,10 +34,10 @@ class QTAWS_EXPORT RestoreDBClusterToPointInTimeResponse : public RDSResponse {
 public:
     RestoreDBClusterToPointInTimeResponse(const RestoreDBClusterToPointInTimeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RestoreDBClusterToPointInTimeRequest * request() const;
+    virtual const RestoreDBClusterToPointInTimeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RestoreDBClusterToPointInTimeResponse)

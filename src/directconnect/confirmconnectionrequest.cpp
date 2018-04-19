@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * ConfirmConnectionRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ConfirmConnectionRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a ConfirmConnectionRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 ConfirmConnectionRequestPrivate::ConfirmConnectionRequestPrivate(
     const DirectConnectRequest::Action action, ConfirmConnectionRequest * const q)

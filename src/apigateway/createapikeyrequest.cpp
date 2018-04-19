@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateApiKeyRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a CreateApiKeyRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
     const APIGatewayRequest::Action action, CreateApiKeyRequest * const q)

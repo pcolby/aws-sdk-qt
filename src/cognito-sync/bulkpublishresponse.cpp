@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::BulkPublishResponse
- *
  * \brief The BulkPublishResponse class provides an interace for CognitoSync BulkPublish responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new BulkPublishResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BulkPublishResponse object for \a reply to \a request, with parent \a parent.
  */
 BulkPublishResponse::BulkPublishResponse(
         const BulkPublishRequest &request,
@@ -75,6 +70,9 @@ BulkPublishResponse::BulkPublishResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BulkPublishRequest * BulkPublishResponse::request() const
 {
     Q_D(const BulkPublishResponse);
@@ -82,9 +80,8 @@ const BulkPublishRequest * BulkPublishResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoSync BulkPublish response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync BulkPublish \a response.
  */
 void BulkPublishResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void BulkPublishResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::BulkPublishResponsePrivate
+ * \brief The BulkPublishResponsePrivate class provides private implementation for BulkPublishResponse.
  * \internal
  *
- * \class BulkPublishResponsePrivate
- *
- * \brief Private implementation for BulkPublishResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BulkPublishResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BulkPublishResponse instance.
+ * Constructs a BulkPublishResponsePrivate object with public implementation \a q.
  */
 BulkPublishResponsePrivate::BulkPublishResponsePrivate(
     BulkPublishResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ BulkPublishResponsePrivate::BulkPublishResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync BulkPublishResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync BulkPublish response element from \a xml.
  */
 void BulkPublishResponsePrivate::parseBulkPublishResponse(QXmlStreamReader &xml)
 {

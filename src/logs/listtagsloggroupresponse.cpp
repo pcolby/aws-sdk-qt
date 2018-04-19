@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::ListTagsLogGroupResponse
- *
  * \brief The ListTagsLogGroupResponse class provides an interace for CloudWatchLogs ListTagsLogGroup responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new ListTagsLogGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsLogGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsLogGroupResponse::ListTagsLogGroupResponse(
         const ListTagsLogGroupRequest &request,
@@ -84,6 +79,9 @@ ListTagsLogGroupResponse::ListTagsLogGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsLogGroupRequest * ListTagsLogGroupResponse::request() const
 {
     Q_D(const ListTagsLogGroupResponse);
@@ -91,9 +89,8 @@ const ListTagsLogGroupRequest * ListTagsLogGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs ListTagsLogGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs ListTagsLogGroup \a response.
  */
 void ListTagsLogGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void ListTagsLogGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::ListTagsLogGroupResponsePrivate
+ * \brief The ListTagsLogGroupResponsePrivate class provides private implementation for ListTagsLogGroupResponse.
  * \internal
  *
- * \class ListTagsLogGroupResponsePrivate
- *
- * \brief Private implementation for ListTagsLogGroupResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsLogGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsLogGroupResponse instance.
+ * Constructs a ListTagsLogGroupResponsePrivate object with public implementation \a q.
  */
 ListTagsLogGroupResponsePrivate::ListTagsLogGroupResponsePrivate(
     ListTagsLogGroupResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ ListTagsLogGroupResponsePrivate::ListTagsLogGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs ListTagsLogGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs ListTagsLogGroup response element from \a xml.
  */
 void ListTagsLogGroupResponsePrivate::parseListTagsLogGroupResponse(QXmlStreamReader &xml)
 {

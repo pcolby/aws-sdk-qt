@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateByteMatchSetResponse : public WAFRegionalResponse {
 public:
     UpdateByteMatchSetResponse(const UpdateByteMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateByteMatchSetRequest * request() const;
+    virtual const UpdateByteMatchSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateByteMatchSetResponse)

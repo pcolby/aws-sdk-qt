@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * DescribeExecutionRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribeExecutionRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a DescribeExecutionRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 DescribeExecutionRequestPrivate::DescribeExecutionRequestPrivate(
     const SFNRequest::Action action, DescribeExecutionRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT SelectResponse : public SimpleDBResponse {
 public:
     SelectResponse(const SelectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SelectRequest * request() const;
+    virtual const SelectRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SelectResponse)

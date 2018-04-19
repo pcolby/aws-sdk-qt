@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListInventoryEntriesResponse
- *
  * \brief The ListInventoryEntriesResponse class provides an interace for SSM ListInventoryEntries responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListInventoryEntriesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListInventoryEntriesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListInventoryEntriesResponse::ListInventoryEntriesResponse(
         const ListInventoryEntriesRequest &request,
@@ -79,6 +74,9 @@ ListInventoryEntriesResponse::ListInventoryEntriesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListInventoryEntriesRequest * ListInventoryEntriesResponse::request() const
 {
     Q_D(const ListInventoryEntriesResponse);
@@ -86,9 +84,8 @@ const ListInventoryEntriesRequest * ListInventoryEntriesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SSM ListInventoryEntries response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM ListInventoryEntries \a response.
  */
 void ListInventoryEntriesResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void ListInventoryEntriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::ListInventoryEntriesResponsePrivate
+ * \brief The ListInventoryEntriesResponsePrivate class provides private implementation for ListInventoryEntriesResponse.
  * \internal
  *
- * \class ListInventoryEntriesResponsePrivate
- *
- * \brief Private implementation for ListInventoryEntriesResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInventoryEntriesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListInventoryEntriesResponse instance.
+ * Constructs a ListInventoryEntriesResponsePrivate object with public implementation \a q.
  */
 ListInventoryEntriesResponsePrivate::ListInventoryEntriesResponsePrivate(
     ListInventoryEntriesResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ ListInventoryEntriesResponsePrivate::ListInventoryEntriesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM ListInventoryEntriesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM ListInventoryEntries response element from \a xml.
  */
 void ListInventoryEntriesResponsePrivate::parseListInventoryEntriesResponse(QXmlStreamReader &xml)
 {

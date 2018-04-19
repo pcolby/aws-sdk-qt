@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::DescribePullRequestEventsResponse
- *
  * \brief The DescribePullRequestEventsResponse class provides an interace for CodeCommit DescribePullRequestEvents responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new DescribePullRequestEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePullRequestEventsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePullRequestEventsResponse::DescribePullRequestEventsResponse(
         const DescribePullRequestEventsRequest &request,
@@ -245,6 +240,9 @@ DescribePullRequestEventsResponse::DescribePullRequestEventsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePullRequestEventsRequest * DescribePullRequestEventsResponse::request() const
 {
     Q_D(const DescribePullRequestEventsResponse);
@@ -252,9 +250,8 @@ const DescribePullRequestEventsRequest * DescribePullRequestEventsResponse::requ
 }
 
 /*!
- * @brief  Parse a CodeCommit DescribePullRequestEvents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit DescribePullRequestEvents \a response.
  */
 void DescribePullRequestEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void DescribePullRequestEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::DescribePullRequestEventsResponsePrivate
+ * \brief The DescribePullRequestEventsResponsePrivate class provides private implementation for DescribePullRequestEventsResponse.
  * \internal
  *
- * \class DescribePullRequestEventsResponsePrivate
- *
- * \brief Private implementation for DescribePullRequestEventsResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePullRequestEventsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePullRequestEventsResponse instance.
+ * Constructs a DescribePullRequestEventsResponsePrivate object with public implementation \a q.
  */
 DescribePullRequestEventsResponsePrivate::DescribePullRequestEventsResponsePrivate(
     DescribePullRequestEventsResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ DescribePullRequestEventsResponsePrivate::DescribePullRequestEventsResponsePriva
 }
 
 /*!
- * @brief  Parse an CodeCommit DescribePullRequestEventsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit DescribePullRequestEvents response element from \a xml.
  */
 void DescribePullRequestEventsResponsePrivate::parseDescribePullRequestEventsResponse(QXmlStreamReader &xml)
 {

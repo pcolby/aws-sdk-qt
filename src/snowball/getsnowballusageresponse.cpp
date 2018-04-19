@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::GetSnowballUsageResponse
- *
  * \brief The GetSnowballUsageResponse class provides an interace for Snowball GetSnowballUsage responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new GetSnowballUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSnowballUsageResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSnowballUsageResponse::GetSnowballUsageResponse(
         const GetSnowballUsageRequest &request,
@@ -61,6 +56,9 @@ GetSnowballUsageResponse::GetSnowballUsageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSnowballUsageRequest * GetSnowballUsageResponse::request() const
 {
     Q_D(const GetSnowballUsageResponse);
@@ -68,9 +66,8 @@ const GetSnowballUsageRequest * GetSnowballUsageResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball GetSnowballUsage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball GetSnowballUsage \a response.
  */
 void GetSnowballUsageResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void GetSnowballUsageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::GetSnowballUsageResponsePrivate
+ * \brief The GetSnowballUsageResponsePrivate class provides private implementation for GetSnowballUsageResponse.
  * \internal
  *
- * \class GetSnowballUsageResponsePrivate
- *
- * \brief Private implementation for GetSnowballUsageResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSnowballUsageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSnowballUsageResponse instance.
+ * Constructs a GetSnowballUsageResponsePrivate object with public implementation \a q.
  */
 GetSnowballUsageResponsePrivate::GetSnowballUsageResponsePrivate(
     GetSnowballUsageResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ GetSnowballUsageResponsePrivate::GetSnowballUsageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball GetSnowballUsageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball GetSnowballUsage response element from \a xml.
  */
 void GetSnowballUsageResponsePrivate::parseGetSnowballUsageResponse(QXmlStreamReader &xml)
 {

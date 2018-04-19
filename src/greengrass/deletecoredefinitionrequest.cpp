@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCoreDefinitionRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteCoreDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCoreDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 DeleteCoreDefinitionRequestPrivate::DeleteCoreDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteCoreDefinitionRequest * const q)

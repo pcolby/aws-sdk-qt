@@ -28,16 +28,13 @@ namespace AutoScalingPlans {
 
 /*!
  * \class QtAws::AutoScalingPlans::AutoScalingPlansResponse
- *
  * \brief The AutoScalingPlansResponse class provides an interface for AutoScalingPlans responses.
  *
- * \ingroup AutoScalingPlans
+ * \inmodule QtAwsAutoScalingPlans
  */
 
 /*!
- * @brief  Constructs a new AutoScalingPlansResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a AutoScalingPlansResponse object with parent \a parent.
  */
 AutoScalingPlansResponse::AutoScalingPlansResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new AutoScalingPlansResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ AutoScalingPlansResponse::AutoScalingPlansResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AutoScalingPlansResponse object.
- *
+ * \internal
+ * Constructs a AutoScalingPlansResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AutoScalingPlansResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 AutoScalingPlansResponse::AutoScalingPlansResponse(AutoScalingPlansResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ AutoScalingPlansResponse::AutoScalingPlansResponse(AutoScalingPlansResponsePriva
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void AutoScalingPlansResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void AutoScalingPlansResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::AutoScalingPlans::AutoScalingPlansResponsePrivate
+ * \brief The AutoScalingPlansResponsePrivate class provides private implementation for AutoScalingPlansResponse.
+ * \internal
  *
- * @class  AutoScalingPlansResponsePrivate
- *
- * @brief  Private implementation for AutoScalingPlansResponse.
+ * \inmodule QtAwsAutoScalingPlans
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AutoScalingPlansResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AutoScalingPlansResponse instance.
+ * Constructs a AutoScalingPlansResponsePrivate object with public implementation \a q.
  */
 AutoScalingPlansResponsePrivate::AutoScalingPlansResponsePrivate(
     AutoScalingPlansResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

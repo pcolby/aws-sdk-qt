@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminForgetDeviceResponse
- *
  * \brief The AdminForgetDeviceResponse class provides an interace for CognitoIdentityProvider AdminForgetDevice responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminForgetDeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminForgetDeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminForgetDeviceResponse::AdminForgetDeviceResponse(
         const AdminForgetDeviceRequest &request,
@@ -65,6 +60,9 @@ AdminForgetDeviceResponse::AdminForgetDeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminForgetDeviceRequest * AdminForgetDeviceResponse::request() const
 {
     Q_D(const AdminForgetDeviceResponse);
@@ -72,9 +70,8 @@ const AdminForgetDeviceRequest * AdminForgetDeviceResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminForgetDevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminForgetDevice \a response.
  */
 void AdminForgetDeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminForgetDeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminForgetDeviceResponsePrivate
+ * \brief The AdminForgetDeviceResponsePrivate class provides private implementation for AdminForgetDeviceResponse.
  * \internal
  *
- * \class AdminForgetDeviceResponsePrivate
- *
- * \brief Private implementation for AdminForgetDeviceResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminForgetDeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminForgetDeviceResponse instance.
+ * Constructs a AdminForgetDeviceResponsePrivate object with public implementation \a q.
  */
 AdminForgetDeviceResponsePrivate::AdminForgetDeviceResponsePrivate(
     AdminForgetDeviceResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminForgetDeviceResponsePrivate::AdminForgetDeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminForgetDeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminForgetDevice response element from \a xml.
  */
 void AdminForgetDeviceResponsePrivate::parseAdminForgetDeviceResponse(QXmlStreamReader &xml)
 {

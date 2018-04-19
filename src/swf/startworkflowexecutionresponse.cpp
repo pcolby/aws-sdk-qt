@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::StartWorkflowExecutionResponse
- *
  * \brief The StartWorkflowExecutionResponse class provides an interace for SWF StartWorkflowExecution responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new StartWorkflowExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartWorkflowExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 StartWorkflowExecutionResponse::StartWorkflowExecutionResponse(
         const StartWorkflowExecutionRequest &request,
@@ -71,6 +66,9 @@ StartWorkflowExecutionResponse::StartWorkflowExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartWorkflowExecutionRequest * StartWorkflowExecutionResponse::request() const
 {
     Q_D(const StartWorkflowExecutionResponse);
@@ -78,9 +76,8 @@ const StartWorkflowExecutionRequest * StartWorkflowExecutionResponse::request() 
 }
 
 /*!
- * @brief  Parse a SWF StartWorkflowExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF StartWorkflowExecution \a response.
  */
 void StartWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void StartWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::StartWorkflowExecutionResponsePrivate
+ * \brief The StartWorkflowExecutionResponsePrivate class provides private implementation for StartWorkflowExecutionResponse.
  * \internal
  *
- * \class StartWorkflowExecutionResponsePrivate
- *
- * \brief Private implementation for StartWorkflowExecutionResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartWorkflowExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartWorkflowExecutionResponse instance.
+ * Constructs a StartWorkflowExecutionResponsePrivate object with public implementation \a q.
  */
 StartWorkflowExecutionResponsePrivate::StartWorkflowExecutionResponsePrivate(
     StartWorkflowExecutionResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ StartWorkflowExecutionResponsePrivate::StartWorkflowExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF StartWorkflowExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF StartWorkflowExecution response element from \a xml.
  */
 void StartWorkflowExecutionResponsePrivate::parseStartWorkflowExecutionResponse(QXmlStreamReader &xml)
 {

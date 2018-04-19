@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVpcResponse
- *
  * \brief The DeleteVpcResponse class provides an interace for EC2 DeleteVpc responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVpcResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVpcResponse::DeleteVpcResponse(
         const DeleteVpcRequest &request,
@@ -59,6 +54,9 @@ DeleteVpcResponse::DeleteVpcResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVpcRequest * DeleteVpcResponse::request() const
 {
     Q_D(const DeleteVpcResponse);
@@ -66,9 +64,8 @@ const DeleteVpcRequest * DeleteVpcResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteVpc response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteVpc \a response.
  */
 void DeleteVpcResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteVpcResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteVpcResponsePrivate
+ * \brief The DeleteVpcResponsePrivate class provides private implementation for DeleteVpcResponse.
  * \internal
  *
- * \class DeleteVpcResponsePrivate
- *
- * \brief Private implementation for DeleteVpcResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVpcResponse instance.
+ * Constructs a DeleteVpcResponsePrivate object with public implementation \a q.
  */
 DeleteVpcResponsePrivate::DeleteVpcResponsePrivate(
     DeleteVpcResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteVpcResponsePrivate::DeleteVpcResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteVpcResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteVpc response element from \a xml.
  */
 void DeleteVpcResponsePrivate::parseDeleteVpcResponse(QXmlStreamReader &xml)
 {

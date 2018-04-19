@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketWebsiteResponse
- *
  * \brief The PutBucketWebsiteResponse class provides an interace for S3 PutBucketWebsite responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketWebsite
  */
 
 /*!
- * @brief  Constructs a new PutBucketWebsiteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketWebsiteResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketWebsiteResponse::PutBucketWebsiteResponse(
         const PutBucketWebsiteRequest &request,
@@ -55,6 +50,9 @@ PutBucketWebsiteResponse::PutBucketWebsiteResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketWebsiteRequest * PutBucketWebsiteResponse::request() const
 {
     Q_D(const PutBucketWebsiteResponse);
@@ -62,9 +60,8 @@ const PutBucketWebsiteRequest * PutBucketWebsiteResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 PutBucketWebsite response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketWebsite \a response.
  */
 void PutBucketWebsiteResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketWebsiteResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketWebsiteResponsePrivate
+ * \brief The PutBucketWebsiteResponsePrivate class provides private implementation for PutBucketWebsiteResponse.
  * \internal
  *
- * \class PutBucketWebsiteResponsePrivate
- *
- * \brief Private implementation for PutBucketWebsiteResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketWebsiteResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketWebsiteResponse instance.
+ * Constructs a PutBucketWebsiteResponsePrivate object with public implementation \a q.
  */
 PutBucketWebsiteResponsePrivate::PutBucketWebsiteResponsePrivate(
     PutBucketWebsiteResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketWebsiteResponsePrivate::PutBucketWebsiteResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 PutBucketWebsiteResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketWebsite response element from \a xml.
  */
 void PutBucketWebsiteResponsePrivate::parsePutBucketWebsiteResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInputRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DescribeInputRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInputRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 DescribeInputRequestPrivate::DescribeInputRequestPrivate(
     const MediaLiveRequest::Action action, DescribeInputRequest * const q)

@@ -46,7 +46,7 @@ namespace STS {
  */
 
 /*!
- * Constructs a[n] STSRequest object for STS \a action.
+ * Constructs a STSRequest object for STS \a action.
  */
 STSRequest::STSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new STSRequestPrivate(action, this))
@@ -246,8 +246,8 @@ QNetworkRequest STSRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a STSRequestPrivate object for STS \a action with,
- * public implementation \a q.
+ * Constructs a STSRequestPrivate object for STS \a action,
+ * with public implementation \a q.
  */
 STSRequestPrivate::STSRequestPrivate(const STSRequest::Action action, STSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

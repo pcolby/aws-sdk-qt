@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeAccountAttributesRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAccountAttributesRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const RDSRequest::Action action, DescribeAccountAttributesRequest * const q)

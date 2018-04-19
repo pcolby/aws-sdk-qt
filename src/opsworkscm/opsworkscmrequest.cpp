@@ -54,7 +54,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * Constructs a[n] OpsWorksCMRequest object for OpsWorksCM \a action.
+ * Constructs a OpsWorksCMRequest object for OpsWorksCM \a action.
  */
 OpsWorksCMRequest::OpsWorksCMRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new OpsWorksCMRequestPrivate(action, this))
@@ -254,8 +254,8 @@ QNetworkRequest OpsWorksCMRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a OpsWorksCMRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a OpsWorksCMRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 OpsWorksCMRequestPrivate::OpsWorksCMRequestPrivate(const OpsWorksCMRequest::Action action, OpsWorksCMRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSAMLProviderRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteSAMLProviderRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSAMLProviderRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteSAMLProviderRequestPrivate::DeleteSAMLProviderRequestPrivate(
     const IAMRequest::Action action, DeleteSAMLProviderRequest * const q)

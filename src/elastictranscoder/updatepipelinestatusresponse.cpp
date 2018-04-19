@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::UpdatePipelineStatusResponse
- *
  * \brief The UpdatePipelineStatusResponse class provides an interace for ElasticTranscoder UpdatePipelineStatus responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new UpdatePipelineStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePipelineStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePipelineStatusResponse::UpdatePipelineStatusResponse(
         const UpdatePipelineStatusRequest &request,
@@ -58,6 +53,9 @@ UpdatePipelineStatusResponse::UpdatePipelineStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePipelineStatusRequest * UpdatePipelineStatusResponse::request() const
 {
     Q_D(const UpdatePipelineStatusResponse);
@@ -65,9 +63,8 @@ const UpdatePipelineStatusRequest * UpdatePipelineStatusResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder UpdatePipelineStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder UpdatePipelineStatus \a response.
  */
 void UpdatePipelineStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdatePipelineStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::UpdatePipelineStatusResponsePrivate
+ * \brief The UpdatePipelineStatusResponsePrivate class provides private implementation for UpdatePipelineStatusResponse.
  * \internal
  *
- * \class UpdatePipelineStatusResponsePrivate
- *
- * \brief Private implementation for UpdatePipelineStatusResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePipelineStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePipelineStatusResponse instance.
+ * Constructs a UpdatePipelineStatusResponsePrivate object with public implementation \a q.
  */
 UpdatePipelineStatusResponsePrivate::UpdatePipelineStatusResponsePrivate(
     UpdatePipelineStatusResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdatePipelineStatusResponsePrivate::UpdatePipelineStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder UpdatePipelineStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder UpdatePipelineStatus response element from \a xml.
  */
 void UpdatePipelineStatusResponsePrivate::parseUpdatePipelineStatusResponse(QXmlStreamReader &xml)
 {

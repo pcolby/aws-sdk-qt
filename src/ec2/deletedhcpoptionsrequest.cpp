@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDhcpOptionsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteDhcpOptionsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDhcpOptionsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
     const EC2Request::Action action, DeleteDhcpOptionsRequest * const q)

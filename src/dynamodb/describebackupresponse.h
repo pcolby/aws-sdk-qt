@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeBackupResponse : public DynamoDBResponse {
 public:
     DescribeBackupResponse(const DescribeBackupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeBackupRequest * request() const;
+    virtual const DescribeBackupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeBackupResponse)

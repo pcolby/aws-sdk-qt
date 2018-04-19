@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartPipelineExecutionResponse : public CodePipelineResponse 
 public:
     StartPipelineExecutionResponse(const StartPipelineExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartPipelineExecutionRequest * request() const;
+    virtual const StartPipelineExecutionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartPipelineExecutionResponse)

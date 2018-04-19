@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DisassociateMembersResponse
- *
  * \brief The DisassociateMembersResponse class provides an interace for GuardDuty DisassociateMembers responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::disassociateMembers
  */
 
 /*!
- * @brief  Constructs a new DisassociateMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateMembersResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateMembersResponse::DisassociateMembersResponse(
         const DisassociateMembersRequest &request,
@@ -55,6 +50,9 @@ DisassociateMembersResponse::DisassociateMembersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateMembersRequest * DisassociateMembersResponse::request() const
 {
     Q_D(const DisassociateMembersResponse);
@@ -62,9 +60,8 @@ const DisassociateMembersRequest * DisassociateMembersResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty DisassociateMembers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty DisassociateMembers \a response.
  */
 void DisassociateMembersResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DisassociateMembersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::DisassociateMembersResponsePrivate
+ * \brief The DisassociateMembersResponsePrivate class provides private implementation for DisassociateMembersResponse.
  * \internal
  *
- * \class DisassociateMembersResponsePrivate
- *
- * \brief Private implementation for DisassociateMembersResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateMembersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateMembersResponse instance.
+ * Constructs a DisassociateMembersResponsePrivate object with public implementation \a q.
  */
 DisassociateMembersResponsePrivate::DisassociateMembersResponsePrivate(
     DisassociateMembersResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ DisassociateMembersResponsePrivate::DisassociateMembersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty DisassociateMembersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty DisassociateMembers response element from \a xml.
  */
 void DisassociateMembersResponsePrivate::parseDisassociateMembersResponse(QXmlStreamReader &xml)
 {

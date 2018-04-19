@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ContinueUpdateRollbackResponse
- *
  * \brief The ContinueUpdateRollbackResponse class provides an interace for CloudFormation ContinueUpdateRollback responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ContinueUpdateRollbackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ContinueUpdateRollbackResponse object for \a reply to \a request, with parent \a parent.
  */
 ContinueUpdateRollbackResponse::ContinueUpdateRollbackResponse(
         const ContinueUpdateRollbackRequest &request,
@@ -77,6 +72,9 @@ ContinueUpdateRollbackResponse::ContinueUpdateRollbackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ContinueUpdateRollbackRequest * ContinueUpdateRollbackResponse::request() const
 {
     Q_D(const ContinueUpdateRollbackResponse);
@@ -84,9 +82,8 @@ const ContinueUpdateRollbackRequest * ContinueUpdateRollbackResponse::request() 
 }
 
 /*!
- * @brief  Parse a CloudFormation ContinueUpdateRollback response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation ContinueUpdateRollback \a response.
  */
 void ContinueUpdateRollbackResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ContinueUpdateRollbackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::ContinueUpdateRollbackResponsePrivate
+ * \brief The ContinueUpdateRollbackResponsePrivate class provides private implementation for ContinueUpdateRollbackResponse.
  * \internal
  *
- * \class ContinueUpdateRollbackResponsePrivate
- *
- * \brief Private implementation for ContinueUpdateRollbackResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ContinueUpdateRollbackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ContinueUpdateRollbackResponse instance.
+ * Constructs a ContinueUpdateRollbackResponsePrivate object with public implementation \a q.
  */
 ContinueUpdateRollbackResponsePrivate::ContinueUpdateRollbackResponsePrivate(
     ContinueUpdateRollbackResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ ContinueUpdateRollbackResponsePrivate::ContinueUpdateRollbackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation ContinueUpdateRollbackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation ContinueUpdateRollback response element from \a xml.
  */
 void ContinueUpdateRollbackResponsePrivate::parseContinueUpdateRollbackResponse(QXmlStreamReader &xml)
 {

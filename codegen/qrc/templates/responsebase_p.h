@@ -18,8 +18,8 @@ public:
     {{ClassName}}Private({{ClassName}} * const q);
 
     {# @todo change parse type XML vs JSON #}
-    void parseErrorResponse(QXmlStreamReader &xml);
-    void parseResponseMetadata(QXmlStreamReader &xml);
+    //void parseErrorResponse(QXmlStreamReader &xml);
+    //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC({{ClassName}})

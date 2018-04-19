@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * ListResourceComplianceSummariesRequest::respo
  */
 
 /*!
- *
- * Constructs a ListResourceComplianceSummariesRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a ListResourceComplianceSummariesRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 ListResourceComplianceSummariesRequestPrivate::ListResourceComplianceSummariesRequestPrivate(
     const SSMRequest::Action action, ListResourceComplianceSummariesRequest * const q)

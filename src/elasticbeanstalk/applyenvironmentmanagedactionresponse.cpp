@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::ApplyEnvironmentManagedActionResponse
- *
  * \brief The ApplyEnvironmentManagedActionResponse class provides an interace for ElasticBeanstalk ApplyEnvironmentManagedAction responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new ApplyEnvironmentManagedActionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ApplyEnvironmentManagedActionResponse object for \a reply to \a request, with parent \a parent.
  */
 ApplyEnvironmentManagedActionResponse::ApplyEnvironmentManagedActionResponse(
         const ApplyEnvironmentManagedActionRequest &request,
@@ -77,6 +72,9 @@ ApplyEnvironmentManagedActionResponse::ApplyEnvironmentManagedActionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ApplyEnvironmentManagedActionRequest * ApplyEnvironmentManagedActionResponse::request() const
 {
     Q_D(const ApplyEnvironmentManagedActionResponse);
@@ -84,9 +82,8 @@ const ApplyEnvironmentManagedActionRequest * ApplyEnvironmentManagedActionRespon
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk ApplyEnvironmentManagedAction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk ApplyEnvironmentManagedAction \a response.
  */
 void ApplyEnvironmentManagedActionResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ApplyEnvironmentManagedActionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::ApplyEnvironmentManagedActionResponsePrivate
+ * \brief The ApplyEnvironmentManagedActionResponsePrivate class provides private implementation for ApplyEnvironmentManagedActionResponse.
  * \internal
  *
- * \class ApplyEnvironmentManagedActionResponsePrivate
- *
- * \brief Private implementation for ApplyEnvironmentManagedActionResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplyEnvironmentManagedActionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ApplyEnvironmentManagedActionResponse instance.
+ * Constructs a ApplyEnvironmentManagedActionResponsePrivate object with public implementation \a q.
  */
 ApplyEnvironmentManagedActionResponsePrivate::ApplyEnvironmentManagedActionResponsePrivate(
     ApplyEnvironmentManagedActionResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ ApplyEnvironmentManagedActionResponsePrivate::ApplyEnvironmentManagedActionRespo
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk ApplyEnvironmentManagedActionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk ApplyEnvironmentManagedAction response element from \a xml.
  */
 void ApplyEnvironmentManagedActionResponsePrivate::parseApplyEnvironmentManagedActionResponse(QXmlStreamReader &xml)
 {

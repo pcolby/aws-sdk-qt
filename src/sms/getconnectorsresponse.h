@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetConnectorsResponse : public SMSResponse {
 public:
     GetConnectorsResponse(const GetConnectorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetConnectorsRequest * request() const;
+    virtual const GetConnectorsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetConnectorsResponse)

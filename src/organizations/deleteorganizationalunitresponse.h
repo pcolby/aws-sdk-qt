@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteOrganizationalUnitResponse : public OrganizationsRespon
 public:
     DeleteOrganizationalUnitResponse(const DeleteOrganizationalUnitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteOrganizationalUnitRequest * request() const;
+    virtual const DeleteOrganizationalUnitRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteOrganizationalUnitResponse)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdateResourceRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateResourceRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
     const APIGatewayRequest::Action action, UpdateResourceRequest * const q)

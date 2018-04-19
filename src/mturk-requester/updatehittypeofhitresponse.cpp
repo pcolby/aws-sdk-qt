@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::UpdateHITTypeOfHITResponse
- *
  * \brief The UpdateHITTypeOfHITResponse class provides an interace for MTurk UpdateHITTypeOfHIT responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::updateHITTypeOfHIT
  */
 
 /*!
- * @brief  Constructs a new UpdateHITTypeOfHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateHITTypeOfHITResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateHITTypeOfHITResponse::UpdateHITTypeOfHITResponse(
         const UpdateHITTypeOfHITRequest &request,
@@ -55,6 +50,9 @@ UpdateHITTypeOfHITResponse::UpdateHITTypeOfHITResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateHITTypeOfHITRequest * UpdateHITTypeOfHITResponse::request() const
 {
     Q_D(const UpdateHITTypeOfHITResponse);
@@ -62,9 +60,8 @@ const UpdateHITTypeOfHITRequest * UpdateHITTypeOfHITResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk UpdateHITTypeOfHIT response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk UpdateHITTypeOfHIT \a response.
  */
 void UpdateHITTypeOfHITResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateHITTypeOfHITResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::UpdateHITTypeOfHITResponsePrivate
+ * \brief The UpdateHITTypeOfHITResponsePrivate class provides private implementation for UpdateHITTypeOfHITResponse.
  * \internal
  *
- * \class UpdateHITTypeOfHITResponsePrivate
- *
- * \brief Private implementation for UpdateHITTypeOfHITResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateHITTypeOfHITResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateHITTypeOfHITResponse instance.
+ * Constructs a UpdateHITTypeOfHITResponsePrivate object with public implementation \a q.
  */
 UpdateHITTypeOfHITResponsePrivate::UpdateHITTypeOfHITResponsePrivate(
     UpdateHITTypeOfHITResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateHITTypeOfHITResponsePrivate::UpdateHITTypeOfHITResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk UpdateHITTypeOfHITResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk UpdateHITTypeOfHIT response element from \a xml.
  */
 void UpdateHITTypeOfHITResponsePrivate::parseUpdateHITTypeOfHITResponse(QXmlStreamReader &xml)
 {

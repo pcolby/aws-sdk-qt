@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * DescribeGlobalTableRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeGlobalTableRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a DescribeGlobalTableRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 DescribeGlobalTableRequestPrivate::DescribeGlobalTableRequestPrivate(
     const DynamoDBRequest::Action action, DescribeGlobalTableRequest * const q)

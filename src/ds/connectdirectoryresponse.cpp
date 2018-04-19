@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::ConnectDirectoryResponse
- *
  * \brief The ConnectDirectoryResponse class provides an interace for DirectoryService ConnectDirectory responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new ConnectDirectoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ConnectDirectoryResponse object for \a reply to \a request, with parent \a parent.
  */
 ConnectDirectoryResponse::ConnectDirectoryResponse(
         const ConnectDirectoryRequest &request,
@@ -69,6 +64,9 @@ ConnectDirectoryResponse::ConnectDirectoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ConnectDirectoryRequest * ConnectDirectoryResponse::request() const
 {
     Q_D(const ConnectDirectoryResponse);
@@ -76,9 +74,8 @@ const ConnectDirectoryRequest * ConnectDirectoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService ConnectDirectory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService ConnectDirectory \a response.
  */
 void ConnectDirectoryResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ConnectDirectoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::ConnectDirectoryResponsePrivate
+ * \brief The ConnectDirectoryResponsePrivate class provides private implementation for ConnectDirectoryResponse.
  * \internal
  *
- * \class ConnectDirectoryResponsePrivate
- *
- * \brief Private implementation for ConnectDirectoryResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConnectDirectoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ConnectDirectoryResponse instance.
+ * Constructs a ConnectDirectoryResponsePrivate object with public implementation \a q.
  */
 ConnectDirectoryResponsePrivate::ConnectDirectoryResponsePrivate(
     ConnectDirectoryResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ ConnectDirectoryResponsePrivate::ConnectDirectoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService ConnectDirectoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService ConnectDirectory response element from \a xml.
  */
 void ConnectDirectoryResponsePrivate::parseConnectDirectoryResponse(QXmlStreamReader &xml)
 {

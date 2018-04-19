@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::InitiateVaultLockResponse
- *
  * \brief The InitiateVaultLockResponse class provides an interace for Glacier InitiateVaultLock responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new InitiateVaultLockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a InitiateVaultLockResponse object for \a reply to \a request, with parent \a parent.
  */
 InitiateVaultLockResponse::InitiateVaultLockResponse(
         const InitiateVaultLockRequest &request,
@@ -93,6 +88,9 @@ InitiateVaultLockResponse::InitiateVaultLockResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const InitiateVaultLockRequest * InitiateVaultLockResponse::request() const
 {
     Q_D(const InitiateVaultLockResponse);
@@ -100,9 +98,8 @@ const InitiateVaultLockRequest * InitiateVaultLockResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier InitiateVaultLock response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier InitiateVaultLock \a response.
  */
 void InitiateVaultLockResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void InitiateVaultLockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::InitiateVaultLockResponsePrivate
+ * \brief The InitiateVaultLockResponsePrivate class provides private implementation for InitiateVaultLockResponse.
  * \internal
  *
- * \class InitiateVaultLockResponsePrivate
- *
- * \brief Private implementation for InitiateVaultLockResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InitiateVaultLockResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InitiateVaultLockResponse instance.
+ * Constructs a InitiateVaultLockResponsePrivate object with public implementation \a q.
  */
 InitiateVaultLockResponsePrivate::InitiateVaultLockResponsePrivate(
     InitiateVaultLockResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ InitiateVaultLockResponsePrivate::InitiateVaultLockResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier InitiateVaultLockResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier InitiateVaultLock response element from \a xml.
  */
 void InitiateVaultLockResponsePrivate::parseInitiateVaultLockResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetUsageResponse
- *
  * \brief The GetUsageResponse class provides an interace for APIGateway GetUsage responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetUsageResponse object for \a reply to \a request, with parent \a parent.
  */
 GetUsageResponse::GetUsageResponse(
         const GetUsageRequest &request,
@@ -60,6 +55,9 @@ GetUsageResponse::GetUsageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetUsageRequest * GetUsageResponse::request() const
 {
     Q_D(const GetUsageResponse);
@@ -67,9 +65,8 @@ const GetUsageRequest * GetUsageResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetUsage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetUsage \a response.
  */
 void GetUsageResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetUsageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetUsageResponsePrivate
+ * \brief The GetUsageResponsePrivate class provides private implementation for GetUsageResponse.
  * \internal
  *
- * \class GetUsageResponsePrivate
- *
- * \brief Private implementation for GetUsageResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUsageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetUsageResponse instance.
+ * Constructs a GetUsageResponsePrivate object with public implementation \a q.
  */
 GetUsageResponsePrivate::GetUsageResponsePrivate(
     GetUsageResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetUsageResponsePrivate::GetUsageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetUsageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetUsage response element from \a xml.
  */
 void GetUsageResponsePrivate::parseGetUsageResponse(QXmlStreamReader &xml)
 {

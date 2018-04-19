@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribePrincipalIdFormatResponse : public EC2Response {
 public:
     DescribePrincipalIdFormatResponse(const DescribePrincipalIdFormatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribePrincipalIdFormatRequest * request() const;
+    virtual const DescribePrincipalIdFormatRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribePrincipalIdFormatResponse)

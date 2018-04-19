@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateBaiduChannelResponse
- *
  * \brief The UpdateBaiduChannelResponse class provides an interace for Pinpoint UpdateBaiduChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateBaiduChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateBaiduChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateBaiduChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateBaiduChannelResponse::UpdateBaiduChannelResponse(
         const UpdateBaiduChannelRequest &request,
@@ -55,6 +50,9 @@ UpdateBaiduChannelResponse::UpdateBaiduChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateBaiduChannelRequest * UpdateBaiduChannelResponse::request() const
 {
     Q_D(const UpdateBaiduChannelResponse);
@@ -62,9 +60,8 @@ const UpdateBaiduChannelRequest * UpdateBaiduChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint UpdateBaiduChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint UpdateBaiduChannel \a response.
  */
 void UpdateBaiduChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateBaiduChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::UpdateBaiduChannelResponsePrivate
+ * \brief The UpdateBaiduChannelResponsePrivate class provides private implementation for UpdateBaiduChannelResponse.
  * \internal
  *
- * \class UpdateBaiduChannelResponsePrivate
- *
- * \brief Private implementation for UpdateBaiduChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateBaiduChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateBaiduChannelResponse instance.
+ * Constructs a UpdateBaiduChannelResponsePrivate object with public implementation \a q.
  */
 UpdateBaiduChannelResponsePrivate::UpdateBaiduChannelResponsePrivate(
     UpdateBaiduChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateBaiduChannelResponsePrivate::UpdateBaiduChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint UpdateBaiduChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint UpdateBaiduChannel response element from \a xml.
  */
 void UpdateBaiduChannelResponsePrivate::parseUpdateBaiduChannelResponse(QXmlStreamReader &xml)
 {

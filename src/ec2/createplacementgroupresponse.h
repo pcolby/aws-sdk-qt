@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreatePlacementGroupResponse : public EC2Response {
 public:
     CreatePlacementGroupResponse(const CreatePlacementGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreatePlacementGroupRequest * request() const;
+    virtual const CreatePlacementGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreatePlacementGroupResponse)

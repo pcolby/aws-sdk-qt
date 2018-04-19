@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetAccountAuthorizationDetailsResponse
- *
  * \brief The GetAccountAuthorizationDetailsResponse class provides an interace for IAM GetAccountAuthorizationDetails responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetAccountAuthorizationDetailsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAccountAuthorizationDetailsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAccountAuthorizationDetailsResponse::GetAccountAuthorizationDetailsResponse(
         const GetAccountAuthorizationDetailsRequest &request,
@@ -120,6 +115,9 @@ GetAccountAuthorizationDetailsResponse::GetAccountAuthorizationDetailsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAccountAuthorizationDetailsRequest * GetAccountAuthorizationDetailsResponse::request() const
 {
     Q_D(const GetAccountAuthorizationDetailsResponse);
@@ -127,9 +125,8 @@ const GetAccountAuthorizationDetailsRequest * GetAccountAuthorizationDetailsResp
 }
 
 /*!
- * @brief  Parse a IAM GetAccountAuthorizationDetails response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetAccountAuthorizationDetails \a response.
  */
 void GetAccountAuthorizationDetailsResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetAccountAuthorizationDetailsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetAccountAuthorizationDetailsResponsePrivate
+ * \brief The GetAccountAuthorizationDetailsResponsePrivate class provides private implementation for GetAccountAuthorizationDetailsResponse.
  * \internal
  *
- * \class GetAccountAuthorizationDetailsResponsePrivate
- *
- * \brief Private implementation for GetAccountAuthorizationDetailsResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountAuthorizationDetailsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAccountAuthorizationDetailsResponse instance.
+ * Constructs a GetAccountAuthorizationDetailsResponsePrivate object with public implementation \a q.
  */
 GetAccountAuthorizationDetailsResponsePrivate::GetAccountAuthorizationDetailsResponsePrivate(
     GetAccountAuthorizationDetailsResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetAccountAuthorizationDetailsResponsePrivate::GetAccountAuthorizationDetailsRes
 }
 
 /*!
- * @brief  Parse an IAM GetAccountAuthorizationDetailsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetAccountAuthorizationDetails response element from \a xml.
  */
 void GetAccountAuthorizationDetailsResponsePrivate::parseGetAccountAuthorizationDetailsResponse(QXmlStreamReader &xml)
 {

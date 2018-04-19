@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::ListAssociatedFleetsResponse
- *
  * \brief The ListAssociatedFleetsResponse class provides an interace for AppStream ListAssociatedFleets responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new ListAssociatedFleetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAssociatedFleetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAssociatedFleetsResponse::ListAssociatedFleetsResponse(
         const ListAssociatedFleetsRequest &request,
@@ -58,6 +53,9 @@ ListAssociatedFleetsResponse::ListAssociatedFleetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAssociatedFleetsRequest * ListAssociatedFleetsResponse::request() const
 {
     Q_D(const ListAssociatedFleetsResponse);
@@ -65,9 +63,8 @@ const ListAssociatedFleetsRequest * ListAssociatedFleetsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a AppStream ListAssociatedFleets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream ListAssociatedFleets \a response.
  */
 void ListAssociatedFleetsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListAssociatedFleetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::ListAssociatedFleetsResponsePrivate
+ * \brief The ListAssociatedFleetsResponsePrivate class provides private implementation for ListAssociatedFleetsResponse.
  * \internal
  *
- * \class ListAssociatedFleetsResponsePrivate
- *
- * \brief Private implementation for ListAssociatedFleetsResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssociatedFleetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAssociatedFleetsResponse instance.
+ * Constructs a ListAssociatedFleetsResponsePrivate object with public implementation \a q.
  */
 ListAssociatedFleetsResponsePrivate::ListAssociatedFleetsResponsePrivate(
     ListAssociatedFleetsResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ ListAssociatedFleetsResponsePrivate::ListAssociatedFleetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream ListAssociatedFleetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream ListAssociatedFleets response element from \a xml.
  */
 void ListAssociatedFleetsResponsePrivate::parseListAssociatedFleetsResponse(QXmlStreamReader &xml)
 {

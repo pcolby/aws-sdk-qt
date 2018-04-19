@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateSubscriptionDefinitionResponse
- *
  * \brief The UpdateSubscriptionDefinitionResponse class provides an interace for Greengrass UpdateSubscriptionDefinition responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateSubscriptionDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSubscriptionDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSubscriptionDefinitionResponse::UpdateSubscriptionDefinitionResponse(
         const UpdateSubscriptionDefinitionRequest &request,
@@ -58,6 +53,9 @@ UpdateSubscriptionDefinitionResponse::UpdateSubscriptionDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSubscriptionDefinitionRequest * UpdateSubscriptionDefinitionResponse::request() const
 {
     Q_D(const UpdateSubscriptionDefinitionResponse);
@@ -65,9 +63,8 @@ const UpdateSubscriptionDefinitionRequest * UpdateSubscriptionDefinitionResponse
 }
 
 /*!
- * @brief  Parse a Greengrass UpdateSubscriptionDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass UpdateSubscriptionDefinition \a response.
  */
 void UpdateSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::UpdateSubscriptionDefinitionResponsePrivate
+ * \brief The UpdateSubscriptionDefinitionResponsePrivate class provides private implementation for UpdateSubscriptionDefinitionResponse.
  * \internal
  *
- * \class UpdateSubscriptionDefinitionResponsePrivate
- *
- * \brief Private implementation for UpdateSubscriptionDefinitionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSubscriptionDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSubscriptionDefinitionResponse instance.
+ * Constructs a UpdateSubscriptionDefinitionResponsePrivate object with public implementation \a q.
  */
 UpdateSubscriptionDefinitionResponsePrivate::UpdateSubscriptionDefinitionResponsePrivate(
     UpdateSubscriptionDefinitionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateSubscriptionDefinitionResponsePrivate::UpdateSubscriptionDefinitionRespons
 }
 
 /*!
- * @brief  Parse an Greengrass UpdateSubscriptionDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass UpdateSubscriptionDefinition response element from \a xml.
  */
 void UpdateSubscriptionDefinitionResponsePrivate::parseUpdateSubscriptionDefinitionResponse(QXmlStreamReader &xml)
 {

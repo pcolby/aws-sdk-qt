@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDBParameterGroupsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeDBParameterGroupsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDBParameterGroupsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeDBParameterGroupsRequestPrivate::DescribeDBParameterGroupsRequestPrivate(
     const RDSRequest::Action action, DescribeDBParameterGroupsRequest * const q)

@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * GetDocumentRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GetDocumentRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a GetDocumentRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 GetDocumentRequestPrivate::GetDocumentRequestPrivate(
     const WorkDocsRequest::Action action, GetDocumentRequest * const q)

@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateGroupRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a UpdateGroupRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateGroupRequest * const q)

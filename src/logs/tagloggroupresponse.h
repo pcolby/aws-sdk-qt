@@ -34,10 +34,10 @@ class QTAWS_EXPORT TagLogGroupResponse : public CloudWatchLogsResponse {
 public:
     TagLogGroupResponse(const TagLogGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TagLogGroupRequest * request() const;
+    virtual const TagLogGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TagLogGroupResponse)

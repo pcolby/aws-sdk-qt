@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateTopicResponse : public SNSResponse {
 public:
     CreateTopicResponse(const CreateTopicRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateTopicRequest * request() const;
+    virtual const CreateTopicRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateTopicResponse)

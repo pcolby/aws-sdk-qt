@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListCreateAccountStatusResponse
- *
  * \brief The ListCreateAccountStatusResponse class provides an interace for Organizations ListCreateAccountStatus responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListCreateAccountStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCreateAccountStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCreateAccountStatusResponse::ListCreateAccountStatusResponse(
         const ListCreateAccountStatusRequest &request,
@@ -197,6 +192,9 @@ ListCreateAccountStatusResponse::ListCreateAccountStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCreateAccountStatusRequest * ListCreateAccountStatusResponse::request() const
 {
     Q_D(const ListCreateAccountStatusResponse);
@@ -204,9 +202,8 @@ const ListCreateAccountStatusRequest * ListCreateAccountStatusResponse::request(
 }
 
 /*!
- * @brief  Parse a Organizations ListCreateAccountStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations ListCreateAccountStatus \a response.
  */
 void ListCreateAccountStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void ListCreateAccountStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::ListCreateAccountStatusResponsePrivate
+ * \brief The ListCreateAccountStatusResponsePrivate class provides private implementation for ListCreateAccountStatusResponse.
  * \internal
  *
- * \class ListCreateAccountStatusResponsePrivate
- *
- * \brief Private implementation for ListCreateAccountStatusResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCreateAccountStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCreateAccountStatusResponse instance.
+ * Constructs a ListCreateAccountStatusResponsePrivate object with public implementation \a q.
  */
 ListCreateAccountStatusResponsePrivate::ListCreateAccountStatusResponsePrivate(
     ListCreateAccountStatusResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ ListCreateAccountStatusResponsePrivate::ListCreateAccountStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations ListCreateAccountStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations ListCreateAccountStatus response element from \a xml.
  */
 void ListCreateAccountStatusResponsePrivate::parseListCreateAccountStatusResponse(QXmlStreamReader &xml)
 {

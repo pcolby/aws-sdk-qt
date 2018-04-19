@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutConfigRuleResponse
- *
  * \brief The PutConfigRuleResponse class provides an interace for ConfigService PutConfigRule responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutConfigRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutConfigRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 PutConfigRuleResponse::PutConfigRuleResponse(
         const PutConfigRuleRequest &request,
@@ -78,6 +73,9 @@ PutConfigRuleResponse::PutConfigRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutConfigRuleRequest * PutConfigRuleResponse::request() const
 {
     Q_D(const PutConfigRuleResponse);
@@ -85,9 +83,8 @@ const PutConfigRuleRequest * PutConfigRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a ConfigService PutConfigRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService PutConfigRule \a response.
  */
 void PutConfigRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void PutConfigRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::PutConfigRuleResponsePrivate
+ * \brief The PutConfigRuleResponsePrivate class provides private implementation for PutConfigRuleResponse.
  * \internal
  *
- * \class PutConfigRuleResponsePrivate
- *
- * \brief Private implementation for PutConfigRuleResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutConfigRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutConfigRuleResponse instance.
+ * Constructs a PutConfigRuleResponsePrivate object with public implementation \a q.
  */
 PutConfigRuleResponsePrivate::PutConfigRuleResponsePrivate(
     PutConfigRuleResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ PutConfigRuleResponsePrivate::PutConfigRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ConfigService PutConfigRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService PutConfigRule response element from \a xml.
  */
 void PutConfigRuleResponsePrivate::parsePutConfigRuleResponse(QXmlStreamReader &xml)
 {

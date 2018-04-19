@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDeliveryStreamResponse : public FirehoseResponse {
 public:
     DeleteDeliveryStreamResponse(const DeleteDeliveryStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDeliveryStreamRequest * request() const;
+    virtual const DeleteDeliveryStreamRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDeliveryStreamResponse)

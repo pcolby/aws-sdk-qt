@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::BundleInstanceResponse
- *
  * \brief The BundleInstanceResponse class provides an interace for EC2 BundleInstance responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new BundleInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BundleInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 BundleInstanceResponse::BundleInstanceResponse(
         const BundleInstanceRequest &request,
@@ -59,6 +54,9 @@ BundleInstanceResponse::BundleInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BundleInstanceRequest * BundleInstanceResponse::request() const
 {
     Q_D(const BundleInstanceResponse);
@@ -66,9 +64,8 @@ const BundleInstanceRequest * BundleInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 BundleInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 BundleInstance \a response.
  */
 void BundleInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void BundleInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::BundleInstanceResponsePrivate
+ * \brief The BundleInstanceResponsePrivate class provides private implementation for BundleInstanceResponse.
  * \internal
  *
- * \class BundleInstanceResponsePrivate
- *
- * \brief Private implementation for BundleInstanceResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BundleInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BundleInstanceResponse instance.
+ * Constructs a BundleInstanceResponsePrivate object with public implementation \a q.
  */
 BundleInstanceResponsePrivate::BundleInstanceResponsePrivate(
     BundleInstanceResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ BundleInstanceResponsePrivate::BundleInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 BundleInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 BundleInstance response element from \a xml.
  */
 void BundleInstanceResponsePrivate::parseBundleInstanceResponse(QXmlStreamReader &xml)
 {

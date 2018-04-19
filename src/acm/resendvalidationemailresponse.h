@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResendValidationEmailResponse : public ACMResponse {
 public:
     ResendValidationEmailResponse(const ResendValidationEmailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResendValidationEmailRequest * request() const;
+    virtual const ResendValidationEmailRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResendValidationEmailResponse)

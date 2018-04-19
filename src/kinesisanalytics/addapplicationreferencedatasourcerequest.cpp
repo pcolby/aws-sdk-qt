@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * AddApplicationReferenceDataSourceRequest::res
  */
 
 /*!
- *
- * Constructs a AddApplicationReferenceDataSourceRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a AddApplicationReferenceDataSourceRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 AddApplicationReferenceDataSourceRequestPrivate::AddApplicationReferenceDataSourceRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationReferenceDataSourceRequest * const q)

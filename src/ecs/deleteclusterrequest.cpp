@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteClusterRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteClusterRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const ECSRequest::Action action, DeleteClusterRequest * const q)

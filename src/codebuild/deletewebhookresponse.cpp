@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::DeleteWebhookResponse
- *
  * \brief The DeleteWebhookResponse class provides an interace for CodeBuild DeleteWebhook responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new DeleteWebhookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteWebhookResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteWebhookResponse::DeleteWebhookResponse(
         const DeleteWebhookRequest &request,
@@ -135,6 +130,9 @@ DeleteWebhookResponse::DeleteWebhookResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteWebhookRequest * DeleteWebhookResponse::request() const
 {
     Q_D(const DeleteWebhookResponse);
@@ -142,9 +140,8 @@ const DeleteWebhookRequest * DeleteWebhookResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeBuild DeleteWebhook response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild DeleteWebhook \a response.
  */
 void DeleteWebhookResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void DeleteWebhookResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::DeleteWebhookResponsePrivate
+ * \brief The DeleteWebhookResponsePrivate class provides private implementation for DeleteWebhookResponse.
  * \internal
  *
- * \class DeleteWebhookResponsePrivate
- *
- * \brief Private implementation for DeleteWebhookResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteWebhookResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteWebhookResponse instance.
+ * Constructs a DeleteWebhookResponsePrivate object with public implementation \a q.
  */
 DeleteWebhookResponsePrivate::DeleteWebhookResponsePrivate(
     DeleteWebhookResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ DeleteWebhookResponsePrivate::DeleteWebhookResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeBuild DeleteWebhookResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild DeleteWebhook response element from \a xml.
  */
 void DeleteWebhookResponsePrivate::parseDeleteWebhookResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a RemovePermissionRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a RemovePermissionRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
     const LambdaRequest::Action action, RemovePermissionRequest * const q)

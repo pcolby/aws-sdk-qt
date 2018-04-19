@@ -34,10 +34,10 @@ class QTAWS_EXPORT RecordActivityTaskHeartbeatResponse : public SWFResponse {
 public:
     RecordActivityTaskHeartbeatResponse(const RecordActivityTaskHeartbeatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RecordActivityTaskHeartbeatRequest * request() const;
+    virtual const RecordActivityTaskHeartbeatRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RecordActivityTaskHeartbeatResponse)

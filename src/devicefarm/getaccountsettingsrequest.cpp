@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetAccountSettingsRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a GetAccountSettingsRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
     const DeviceFarmRequest::Action action, GetAccountSettingsRequest * const q)

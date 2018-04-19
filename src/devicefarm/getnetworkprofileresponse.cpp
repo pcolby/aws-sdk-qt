@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetNetworkProfileResponse
- *
  * \brief The GetNetworkProfileResponse class provides an interace for DeviceFarm GetNetworkProfile responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetNetworkProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetNetworkProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 GetNetworkProfileResponse::GetNetworkProfileResponse(
         const GetNetworkProfileRequest &request,
@@ -57,6 +52,9 @@ GetNetworkProfileResponse::GetNetworkProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetNetworkProfileRequest * GetNetworkProfileResponse::request() const
 {
     Q_D(const GetNetworkProfileResponse);
@@ -64,9 +62,8 @@ const GetNetworkProfileRequest * GetNetworkProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetNetworkProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetNetworkProfile \a response.
  */
 void GetNetworkProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetNetworkProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetNetworkProfileResponsePrivate
+ * \brief The GetNetworkProfileResponsePrivate class provides private implementation for GetNetworkProfileResponse.
  * \internal
  *
- * \class GetNetworkProfileResponsePrivate
- *
- * \brief Private implementation for GetNetworkProfileResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetNetworkProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetNetworkProfileResponse instance.
+ * Constructs a GetNetworkProfileResponsePrivate object with public implementation \a q.
  */
 GetNetworkProfileResponsePrivate::GetNetworkProfileResponsePrivate(
     GetNetworkProfileResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetNetworkProfileResponsePrivate::GetNetworkProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetNetworkProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetNetworkProfile response element from \a xml.
  */
 void GetNetworkProfileResponsePrivate::parseGetNetworkProfileResponse(QXmlStreamReader &xml)
 {

@@ -45,7 +45,7 @@ namespace CostExplorer {
  */
 
 /*!
- * Constructs a[n] CostExplorerRequest object for CostExplorer \a action.
+ * Constructs a CostExplorerRequest object for CostExplorer \a action.
  */
 CostExplorerRequest::CostExplorerRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CostExplorerRequestPrivate(action, this))
@@ -245,8 +245,8 @@ QNetworkRequest CostExplorerRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CostExplorerRequestPrivate object for CostExplorer \a action with,
- * public implementation \a q.
+ * Constructs a CostExplorerRequestPrivate object for CostExplorer \a action,
+ * with public implementation \a q.
  */
 CostExplorerRequestPrivate::CostExplorerRequestPrivate(const CostExplorerRequest::Action action, CostExplorerRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingParametersRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeScalingParametersRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DescribeScalingParametersRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DescribeScalingParametersRequestPrivate::DescribeScalingParametersRequestPrivate(
     const CloudSearchRequest::Action action, DescribeScalingParametersRequest * const q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceFromS3Request::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateDataSourceFromS3RequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a CreateDataSourceFromS3RequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 CreateDataSourceFromS3RequestPrivate::CreateDataSourceFromS3RequestPrivate(
     const MachineLearningRequest::Action action, CreateDataSourceFromS3Request * const q)

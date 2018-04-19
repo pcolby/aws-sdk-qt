@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetUserMFAPreferenceResponse : public CognitoIdentityProvider
 public:
     SetUserMFAPreferenceResponse(const SetUserMFAPreferenceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetUserMFAPreferenceRequest * request() const;
+    virtual const SetUserMFAPreferenceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetUserMFAPreferenceResponse)

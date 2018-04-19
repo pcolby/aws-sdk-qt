@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::CreatePipelineResponse
- *
  * \brief The CreatePipelineResponse class provides an interace for DataPipeline CreatePipeline responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new CreatePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePipelineResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePipelineResponse::CreatePipelineResponse(
         const CreatePipelineRequest &request,
@@ -73,6 +68,9 @@ CreatePipelineResponse::CreatePipelineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePipelineRequest * CreatePipelineResponse::request() const
 {
     Q_D(const CreatePipelineResponse);
@@ -80,9 +78,8 @@ const CreatePipelineRequest * CreatePipelineResponse::request() const
 }
 
 /*!
- * @brief  Parse a DataPipeline CreatePipeline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline CreatePipeline \a response.
  */
 void CreatePipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void CreatePipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::CreatePipelineResponsePrivate
+ * \brief The CreatePipelineResponsePrivate class provides private implementation for CreatePipelineResponse.
  * \internal
  *
- * \class CreatePipelineResponsePrivate
- *
- * \brief Private implementation for CreatePipelineResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePipelineResponse instance.
+ * Constructs a CreatePipelineResponsePrivate object with public implementation \a q.
  */
 CreatePipelineResponsePrivate::CreatePipelineResponsePrivate(
     CreatePipelineResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ CreatePipelineResponsePrivate::CreatePipelineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline CreatePipelineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline CreatePipeline response element from \a xml.
  */
 void CreatePipelineResponsePrivate::parseCreatePipelineResponse(QXmlStreamReader &xml)
 {

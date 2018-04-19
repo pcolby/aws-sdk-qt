@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEnvironmentStatusResponse : public Cloud9Response {
 public:
     DescribeEnvironmentStatusResponse(const DescribeEnvironmentStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEnvironmentStatusRequest * request() const;
+    virtual const DescribeEnvironmentStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEnvironmentStatusResponse)

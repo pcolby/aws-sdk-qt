@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBLogFilesResponse
- *
  * \brief The DescribeDBLogFilesResponse class provides an interace for RDS DescribeDBLogFiles responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBLogFilesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDBLogFilesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDBLogFilesResponse::DescribeDBLogFilesResponse(
         const DescribeDBLogFilesRequest &request,
@@ -119,6 +114,9 @@ DescribeDBLogFilesResponse::DescribeDBLogFilesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDBLogFilesRequest * DescribeDBLogFilesResponse::request() const
 {
     Q_D(const DescribeDBLogFilesResponse);
@@ -126,9 +124,8 @@ const DescribeDBLogFilesRequest * DescribeDBLogFilesResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS DescribeDBLogFiles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeDBLogFiles \a response.
  */
 void DescribeDBLogFilesResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeDBLogFilesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeDBLogFilesResponsePrivate
+ * \brief The DescribeDBLogFilesResponsePrivate class provides private implementation for DescribeDBLogFilesResponse.
  * \internal
  *
- * \class DescribeDBLogFilesResponsePrivate
- *
- * \brief Private implementation for DescribeDBLogFilesResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBLogFilesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDBLogFilesResponse instance.
+ * Constructs a DescribeDBLogFilesResponsePrivate object with public implementation \a q.
  */
 DescribeDBLogFilesResponsePrivate::DescribeDBLogFilesResponsePrivate(
     DescribeDBLogFilesResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeDBLogFilesResponsePrivate::DescribeDBLogFilesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DescribeDBLogFilesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeDBLogFiles response element from \a xml.
  */
 void DescribeDBLogFilesResponsePrivate::parseDescribeDBLogFilesResponse(QXmlStreamReader &xml)
 {

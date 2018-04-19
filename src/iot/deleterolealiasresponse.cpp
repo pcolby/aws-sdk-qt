@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteRoleAliasResponse
- *
  * \brief The DeleteRoleAliasResponse class provides an interace for IoT DeleteRoleAlias responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteRoleAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRoleAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRoleAliasResponse::DeleteRoleAliasResponse(
         const DeleteRoleAliasRequest &request,
@@ -66,6 +61,9 @@ DeleteRoleAliasResponse::DeleteRoleAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRoleAliasRequest * DeleteRoleAliasResponse::request() const
 {
     Q_D(const DeleteRoleAliasResponse);
@@ -73,9 +71,8 @@ const DeleteRoleAliasRequest * DeleteRoleAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DeleteRoleAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DeleteRoleAlias \a response.
  */
 void DeleteRoleAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteRoleAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DeleteRoleAliasResponsePrivate
+ * \brief The DeleteRoleAliasResponsePrivate class provides private implementation for DeleteRoleAliasResponse.
  * \internal
  *
- * \class DeleteRoleAliasResponsePrivate
- *
- * \brief Private implementation for DeleteRoleAliasResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRoleAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRoleAliasResponse instance.
+ * Constructs a DeleteRoleAliasResponsePrivate object with public implementation \a q.
  */
 DeleteRoleAliasResponsePrivate::DeleteRoleAliasResponsePrivate(
     DeleteRoleAliasResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteRoleAliasResponsePrivate::DeleteRoleAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DeleteRoleAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DeleteRoleAlias response element from \a xml.
  */
 void DeleteRoleAliasResponsePrivate::parseDeleteRoleAliasResponse(QXmlStreamReader &xml)
 {

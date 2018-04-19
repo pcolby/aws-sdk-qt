@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDomainResponse : public SWFResponse {
 public:
     DescribeDomainResponse(const DescribeDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDomainRequest * request() const;
+    virtual const DescribeDomainRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDomainResponse)

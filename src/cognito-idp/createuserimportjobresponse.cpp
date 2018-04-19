@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateUserImportJobResponse
- *
  * \brief The CreateUserImportJobResponse class provides an interace for CognitoIdentityProvider CreateUserImportJob responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new CreateUserImportJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateUserImportJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateUserImportJobResponse::CreateUserImportJobResponse(
         const CreateUserImportJobRequest &request,
@@ -65,6 +60,9 @@ CreateUserImportJobResponse::CreateUserImportJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateUserImportJobRequest * CreateUserImportJobResponse::request() const
 {
     Q_D(const CreateUserImportJobResponse);
@@ -72,9 +70,8 @@ const CreateUserImportJobRequest * CreateUserImportJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider CreateUserImportJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider CreateUserImportJob \a response.
  */
 void CreateUserImportJobResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void CreateUserImportJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::CreateUserImportJobResponsePrivate
+ * \brief The CreateUserImportJobResponsePrivate class provides private implementation for CreateUserImportJobResponse.
  * \internal
  *
- * \class CreateUserImportJobResponsePrivate
- *
- * \brief Private implementation for CreateUserImportJobResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserImportJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateUserImportJobResponse instance.
+ * Constructs a CreateUserImportJobResponsePrivate object with public implementation \a q.
  */
 CreateUserImportJobResponsePrivate::CreateUserImportJobResponsePrivate(
     CreateUserImportJobResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ CreateUserImportJobResponsePrivate::CreateUserImportJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider CreateUserImportJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider CreateUserImportJob response element from \a xml.
  */
 void CreateUserImportJobResponsePrivate::parseCreateUserImportJobResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteEndpointRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEndpointRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DeleteEndpointRequest * const q)

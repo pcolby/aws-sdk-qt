@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateStorediSCSIVolumeResponse
- *
  * \brief The CreateStorediSCSIVolumeResponse class provides an interace for StorageGateway CreateStorediSCSIVolume responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateStorediSCSIVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStorediSCSIVolumeResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStorediSCSIVolumeResponse::CreateStorediSCSIVolumeResponse(
         const CreateStorediSCSIVolumeRequest &request,
@@ -124,6 +119,9 @@ CreateStorediSCSIVolumeResponse::CreateStorediSCSIVolumeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStorediSCSIVolumeRequest * CreateStorediSCSIVolumeResponse::request() const
 {
     Q_D(const CreateStorediSCSIVolumeResponse);
@@ -131,9 +129,8 @@ const CreateStorediSCSIVolumeRequest * CreateStorediSCSIVolumeResponse::request(
 }
 
 /*!
- * @brief  Parse a StorageGateway CreateStorediSCSIVolume response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway CreateStorediSCSIVolume \a response.
  */
 void CreateStorediSCSIVolumeResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void CreateStorediSCSIVolumeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::CreateStorediSCSIVolumeResponsePrivate
+ * \brief The CreateStorediSCSIVolumeResponsePrivate class provides private implementation for CreateStorediSCSIVolumeResponse.
  * \internal
  *
- * \class CreateStorediSCSIVolumeResponsePrivate
- *
- * \brief Private implementation for CreateStorediSCSIVolumeResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStorediSCSIVolumeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStorediSCSIVolumeResponse instance.
+ * Constructs a CreateStorediSCSIVolumeResponsePrivate object with public implementation \a q.
  */
 CreateStorediSCSIVolumeResponsePrivate::CreateStorediSCSIVolumeResponsePrivate(
     CreateStorediSCSIVolumeResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ CreateStorediSCSIVolumeResponsePrivate::CreateStorediSCSIVolumeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway CreateStorediSCSIVolumeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway CreateStorediSCSIVolume response element from \a xml.
  */
 void CreateStorediSCSIVolumeResponsePrivate::parseCreateStorediSCSIVolumeResponse(QXmlStreamReader &xml)
 {

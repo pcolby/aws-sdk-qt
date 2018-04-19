@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::CreateComputeEnvironmentResponse
- *
  * \brief The CreateComputeEnvironmentResponse class provides an interace for Batch CreateComputeEnvironment responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new CreateComputeEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateComputeEnvironmentResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateComputeEnvironmentResponse::CreateComputeEnvironmentResponse(
         const CreateComputeEnvironmentRequest &request,
@@ -69,6 +64,9 @@ CreateComputeEnvironmentResponse::CreateComputeEnvironmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateComputeEnvironmentRequest * CreateComputeEnvironmentResponse::request() const
 {
     Q_D(const CreateComputeEnvironmentResponse);
@@ -76,9 +74,8 @@ const CreateComputeEnvironmentRequest * CreateComputeEnvironmentResponse::reques
 }
 
 /*!
- * @brief  Parse a Batch CreateComputeEnvironment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch CreateComputeEnvironment \a response.
  */
 void CreateComputeEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateComputeEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::CreateComputeEnvironmentResponsePrivate
+ * \brief The CreateComputeEnvironmentResponsePrivate class provides private implementation for CreateComputeEnvironmentResponse.
  * \internal
  *
- * \class CreateComputeEnvironmentResponsePrivate
- *
- * \brief Private implementation for CreateComputeEnvironmentResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateComputeEnvironmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateComputeEnvironmentResponse instance.
+ * Constructs a CreateComputeEnvironmentResponsePrivate object with public implementation \a q.
  */
 CreateComputeEnvironmentResponsePrivate::CreateComputeEnvironmentResponsePrivate(
     CreateComputeEnvironmentResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateComputeEnvironmentResponsePrivate::CreateComputeEnvironmentResponsePrivate
 }
 
 /*!
- * @brief  Parse an Batch CreateComputeEnvironmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch CreateComputeEnvironment response element from \a xml.
  */
 void CreateComputeEnvironmentResponsePrivate::parseCreateComputeEnvironmentResponse(QXmlStreamReader &xml)
 {

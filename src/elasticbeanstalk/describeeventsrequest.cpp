@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeEventsRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventsRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeEventsRequest * const q)

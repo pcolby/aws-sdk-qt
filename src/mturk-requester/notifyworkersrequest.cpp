@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * NotifyWorkersRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a NotifyWorkersRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a NotifyWorkersRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 NotifyWorkersRequestPrivate::NotifyWorkersRequestPrivate(
     const MTurkRequest::Action action, NotifyWorkersRequest * const q)

@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * GetParametersForImportRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a GetParametersForImportRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a GetParametersForImportRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 GetParametersForImportRequestPrivate::GetParametersForImportRequestPrivate(
     const KMSRequest::Action action, GetParametersForImportRequest * const q)

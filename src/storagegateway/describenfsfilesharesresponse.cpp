@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeNFSFileSharesResponse
- *
  * \brief The DescribeNFSFileSharesResponse class provides an interace for StorageGateway DescribeNFSFileShares responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeNFSFileSharesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeNFSFileSharesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeNFSFileSharesResponse::DescribeNFSFileSharesResponse(
         const DescribeNFSFileSharesRequest &request,
@@ -124,6 +119,9 @@ DescribeNFSFileSharesResponse::DescribeNFSFileSharesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeNFSFileSharesRequest * DescribeNFSFileSharesResponse::request() const
 {
     Q_D(const DescribeNFSFileSharesResponse);
@@ -131,9 +129,8 @@ const DescribeNFSFileSharesRequest * DescribeNFSFileSharesResponse::request() co
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeNFSFileShares response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeNFSFileShares \a response.
  */
 void DescribeNFSFileSharesResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeNFSFileSharesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeNFSFileSharesResponsePrivate
+ * \brief The DescribeNFSFileSharesResponsePrivate class provides private implementation for DescribeNFSFileSharesResponse.
  * \internal
  *
- * \class DescribeNFSFileSharesResponsePrivate
- *
- * \brief Private implementation for DescribeNFSFileSharesResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNFSFileSharesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeNFSFileSharesResponse instance.
+ * Constructs a DescribeNFSFileSharesResponsePrivate object with public implementation \a q.
  */
 DescribeNFSFileSharesResponsePrivate::DescribeNFSFileSharesResponsePrivate(
     DescribeNFSFileSharesResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeNFSFileSharesResponsePrivate::DescribeNFSFileSharesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeNFSFileSharesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeNFSFileShares response element from \a xml.
  */
 void DescribeNFSFileSharesResponsePrivate::parseDescribeNFSFileSharesResponse(QXmlStreamReader &xml)
 {

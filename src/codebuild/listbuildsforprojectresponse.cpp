@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::ListBuildsForProjectResponse
- *
  * \brief The ListBuildsForProjectResponse class provides an interace for CodeBuild ListBuildsForProject responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new ListBuildsForProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListBuildsForProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 ListBuildsForProjectResponse::ListBuildsForProjectResponse(
         const ListBuildsForProjectRequest &request,
@@ -135,6 +130,9 @@ ListBuildsForProjectResponse::ListBuildsForProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListBuildsForProjectRequest * ListBuildsForProjectResponse::request() const
 {
     Q_D(const ListBuildsForProjectResponse);
@@ -142,9 +140,8 @@ const ListBuildsForProjectRequest * ListBuildsForProjectResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CodeBuild ListBuildsForProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild ListBuildsForProject \a response.
  */
 void ListBuildsForProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void ListBuildsForProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::ListBuildsForProjectResponsePrivate
+ * \brief The ListBuildsForProjectResponsePrivate class provides private implementation for ListBuildsForProjectResponse.
  * \internal
  *
- * \class ListBuildsForProjectResponsePrivate
- *
- * \brief Private implementation for ListBuildsForProjectResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBuildsForProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListBuildsForProjectResponse instance.
+ * Constructs a ListBuildsForProjectResponsePrivate object with public implementation \a q.
  */
 ListBuildsForProjectResponsePrivate::ListBuildsForProjectResponsePrivate(
     ListBuildsForProjectResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ ListBuildsForProjectResponsePrivate::ListBuildsForProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeBuild ListBuildsForProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild ListBuildsForProject response element from \a xml.
  */
 void ListBuildsForProjectResponsePrivate::parseListBuildsForProjectResponse(QXmlStreamReader &xml)
 {

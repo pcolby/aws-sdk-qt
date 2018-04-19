@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DescribeUploadBufferRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeUploadBufferRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DescribeUploadBufferRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DescribeUploadBufferRequestPrivate::DescribeUploadBufferRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeUploadBufferRequest * const q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a CancelJobRequestPrivate object for MediaConvert \a action with,
- * public implementation \a q.
+ * Constructs a CancelJobRequestPrivate object for MediaConvert \a action,
+ * with public implementation \a q.
  */
 CancelJobRequestPrivate::CancelJobRequestPrivate(
     const MediaConvertRequest::Action action, CancelJobRequest * const q)

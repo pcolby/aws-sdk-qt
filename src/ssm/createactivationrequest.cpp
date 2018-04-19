@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * CreateActivationRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateActivationRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a CreateActivationRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 CreateActivationRequestPrivate::CreateActivationRequestPrivate(
     const SSMRequest::Action action, CreateActivationRequest * const q)

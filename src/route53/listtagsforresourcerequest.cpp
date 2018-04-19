@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListTagsForResourceRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsForResourceRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const Route53Request::Action action, ListTagsForResourceRequest * const q)

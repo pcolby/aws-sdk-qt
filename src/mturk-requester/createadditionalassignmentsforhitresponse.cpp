@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::CreateAdditionalAssignmentsForHITResponse
- *
  * \brief The CreateAdditionalAssignmentsForHITResponse class provides an interace for MTurk CreateAdditionalAssignmentsForHIT responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::createAdditionalAssignmentsForHIT
  */
 
 /*!
- * @brief  Constructs a new CreateAdditionalAssignmentsForHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAdditionalAssignmentsForHITResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAdditionalAssignmentsForHITResponse::CreateAdditionalAssignmentsForHITResponse(
         const CreateAdditionalAssignmentsForHITRequest &request,
@@ -55,6 +50,9 @@ CreateAdditionalAssignmentsForHITResponse::CreateAdditionalAssignmentsForHITResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAdditionalAssignmentsForHITRequest * CreateAdditionalAssignmentsForHITResponse::request() const
 {
     Q_D(const CreateAdditionalAssignmentsForHITResponse);
@@ -62,9 +60,8 @@ const CreateAdditionalAssignmentsForHITRequest * CreateAdditionalAssignmentsForH
 }
 
 /*!
- * @brief  Parse a MTurk CreateAdditionalAssignmentsForHIT response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk CreateAdditionalAssignmentsForHIT \a response.
  */
 void CreateAdditionalAssignmentsForHITResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateAdditionalAssignmentsForHITResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::MTurk::CreateAdditionalAssignmentsForHITResponsePrivate
+ * \brief The CreateAdditionalAssignmentsForHITResponsePrivate class provides private implementation for CreateAdditionalAssignmentsForHITResponse.
  * \internal
  *
- * \class CreateAdditionalAssignmentsForHITResponsePrivate
- *
- * \brief Private implementation for CreateAdditionalAssignmentsForHITResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAdditionalAssignmentsForHITResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAdditionalAssignmentsForHITResponse instance.
+ * Constructs a CreateAdditionalAssignmentsForHITResponsePrivate object with public implementation \a q.
  */
 CreateAdditionalAssignmentsForHITResponsePrivate::CreateAdditionalAssignmentsForHITResponsePrivate(
     CreateAdditionalAssignmentsForHITResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateAdditionalAssignmentsForHITResponsePrivate::CreateAdditionalAssignmentsFor
 }
 
 /*!
- * @brief  Parse an MTurk CreateAdditionalAssignmentsForHITResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk CreateAdditionalAssignmentsForHIT response element from \a xml.
  */
 void CreateAdditionalAssignmentsForHITResponsePrivate::parseCreateAdditionalAssignmentsForHITResponse(QXmlStreamReader &xml)
 {

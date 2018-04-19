@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetDefaultPolicyVersionResponse : public IAMResponse {
 public:
     SetDefaultPolicyVersionResponse(const SetDefaultPolicyVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetDefaultPolicyVersionRequest * request() const;
+    virtual const SetDefaultPolicyVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetDefaultPolicyVersionResponse)

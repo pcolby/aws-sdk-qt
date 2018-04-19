@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ListPipelinesResponse
- *
  * \brief The ListPipelinesResponse class provides an interace for ElasticTranscoder ListPipelines responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new ListPipelinesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPipelinesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPipelinesResponse::ListPipelinesResponse(
         const ListPipelinesRequest &request,
@@ -58,6 +53,9 @@ ListPipelinesResponse::ListPipelinesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPipelinesRequest * ListPipelinesResponse::request() const
 {
     Q_D(const ListPipelinesResponse);
@@ -65,9 +63,8 @@ const ListPipelinesRequest * ListPipelinesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder ListPipelines response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder ListPipelines \a response.
  */
 void ListPipelinesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListPipelinesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::ListPipelinesResponsePrivate
+ * \brief The ListPipelinesResponsePrivate class provides private implementation for ListPipelinesResponse.
  * \internal
  *
- * \class ListPipelinesResponsePrivate
- *
- * \brief Private implementation for ListPipelinesResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPipelinesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPipelinesResponse instance.
+ * Constructs a ListPipelinesResponsePrivate object with public implementation \a q.
  */
 ListPipelinesResponsePrivate::ListPipelinesResponsePrivate(
     ListPipelinesResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ ListPipelinesResponsePrivate::ListPipelinesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder ListPipelinesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder ListPipelines response element from \a xml.
  */
 void ListPipelinesResponsePrivate::parseListPipelinesResponse(QXmlStreamReader &xml)
 {

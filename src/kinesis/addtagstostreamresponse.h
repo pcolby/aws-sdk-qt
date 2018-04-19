@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddTagsToStreamResponse : public KinesisResponse {
 public:
     AddTagsToStreamResponse(const AddTagsToStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddTagsToStreamRequest * request() const;
+    virtual const AddTagsToStreamRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddTagsToStreamResponse)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetLoggerDefinitionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetLoggerDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a GetLoggerDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 GetLoggerDefinitionRequestPrivate::GetLoggerDefinitionRequestPrivate(
     const GreengrassRequest::Action action, GetLoggerDefinitionRequest * const q)

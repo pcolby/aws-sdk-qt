@@ -29,21 +29,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::GetReplicationRunsResponse
- *
  * \brief The GetReplicationRunsResponse class provides an interace for SMS GetReplicationRuns responses.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::getReplicationRuns
  */
 
 /*!
- * @brief  Constructs a new GetReplicationRunsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetReplicationRunsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetReplicationRunsResponse::GetReplicationRunsResponse(
         const GetReplicationRunsRequest &request,
@@ -55,6 +50,9 @@ GetReplicationRunsResponse::GetReplicationRunsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetReplicationRunsRequest * GetReplicationRunsResponse::request() const
 {
     Q_D(const GetReplicationRunsResponse);
@@ -62,9 +60,8 @@ const GetReplicationRunsRequest * GetReplicationRunsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SMS GetReplicationRuns response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SMS GetReplicationRuns \a response.
  */
 void GetReplicationRunsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetReplicationRunsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SMS::GetReplicationRunsResponsePrivate
+ * \brief The GetReplicationRunsResponsePrivate class provides private implementation for GetReplicationRunsResponse.
  * \internal
  *
- * \class GetReplicationRunsResponsePrivate
- *
- * \brief Private implementation for GetReplicationRunsResponse.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReplicationRunsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetReplicationRunsResponse instance.
+ * Constructs a GetReplicationRunsResponsePrivate object with public implementation \a q.
  */
 GetReplicationRunsResponsePrivate::GetReplicationRunsResponsePrivate(
     GetReplicationRunsResponse * const q) : SMSResponsePrivate(q)
@@ -95,9 +88,7 @@ GetReplicationRunsResponsePrivate::GetReplicationRunsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SMS GetReplicationRunsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SMS GetReplicationRuns response element from \a xml.
  */
 void GetReplicationRunsResponsePrivate::parseGetReplicationRunsResponse(QXmlStreamReader &xml)
 {

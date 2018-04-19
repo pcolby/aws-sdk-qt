@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::SendTaskHeartbeatResponse
- *
  * \brief The SendTaskHeartbeatResponse class provides an interace for SFN SendTaskHeartbeat responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new SendTaskHeartbeatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendTaskHeartbeatResponse object for \a reply to \a request, with parent \a parent.
  */
 SendTaskHeartbeatResponse::SendTaskHeartbeatResponse(
         const SendTaskHeartbeatRequest &request,
@@ -74,6 +69,9 @@ SendTaskHeartbeatResponse::SendTaskHeartbeatResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendTaskHeartbeatRequest * SendTaskHeartbeatResponse::request() const
 {
     Q_D(const SendTaskHeartbeatResponse);
@@ -81,9 +79,8 @@ const SendTaskHeartbeatRequest * SendTaskHeartbeatResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN SendTaskHeartbeat response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN SendTaskHeartbeat \a response.
  */
 void SendTaskHeartbeatResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void SendTaskHeartbeatResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::SendTaskHeartbeatResponsePrivate
+ * \brief The SendTaskHeartbeatResponsePrivate class provides private implementation for SendTaskHeartbeatResponse.
  * \internal
  *
- * \class SendTaskHeartbeatResponsePrivate
- *
- * \brief Private implementation for SendTaskHeartbeatResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendTaskHeartbeatResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendTaskHeartbeatResponse instance.
+ * Constructs a SendTaskHeartbeatResponsePrivate object with public implementation \a q.
  */
 SendTaskHeartbeatResponsePrivate::SendTaskHeartbeatResponsePrivate(
     SendTaskHeartbeatResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ SendTaskHeartbeatResponsePrivate::SendTaskHeartbeatResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN SendTaskHeartbeatResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN SendTaskHeartbeat response element from \a xml.
  */
 void SendTaskHeartbeatResponsePrivate::parseSendTaskHeartbeatResponse(QXmlStreamReader &xml)
 {

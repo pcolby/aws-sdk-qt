@@ -169,9 +169,8 @@ QtAws::Core::AwsAbstractResponse * ListResourcesRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListResourcesRequestPrivate object for CodeStar \a action with,
- * public implementation \a q.
+ * Constructs a ListResourcesRequestPrivate object for CodeStar \a action,
+ * with public implementation \a q.
  */
 ListResourcesRequestPrivate::ListResourcesRequestPrivate(
     const CodeStarRequest::Action action, ListResourcesRequest * const q)

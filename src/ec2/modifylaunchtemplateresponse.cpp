@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyLaunchTemplateResponse
- *
  * \brief The ModifyLaunchTemplateResponse class provides an interace for EC2 ModifyLaunchTemplate responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyLaunchTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyLaunchTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyLaunchTemplateResponse::ModifyLaunchTemplateResponse(
         const ModifyLaunchTemplateRequest &request,
@@ -59,6 +54,9 @@ ModifyLaunchTemplateResponse::ModifyLaunchTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyLaunchTemplateRequest * ModifyLaunchTemplateResponse::request() const
 {
     Q_D(const ModifyLaunchTemplateResponse);
@@ -66,9 +64,8 @@ const ModifyLaunchTemplateRequest * ModifyLaunchTemplateResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 ModifyLaunchTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyLaunchTemplate \a response.
  */
 void ModifyLaunchTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyLaunchTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyLaunchTemplateResponsePrivate
+ * \brief The ModifyLaunchTemplateResponsePrivate class provides private implementation for ModifyLaunchTemplateResponse.
  * \internal
  *
- * \class ModifyLaunchTemplateResponsePrivate
- *
- * \brief Private implementation for ModifyLaunchTemplateResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyLaunchTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyLaunchTemplateResponse instance.
+ * Constructs a ModifyLaunchTemplateResponsePrivate object with public implementation \a q.
  */
 ModifyLaunchTemplateResponsePrivate::ModifyLaunchTemplateResponsePrivate(
     ModifyLaunchTemplateResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyLaunchTemplateResponsePrivate::ModifyLaunchTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifyLaunchTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyLaunchTemplate response element from \a xml.
  */
 void ModifyLaunchTemplateResponsePrivate::parseModifyLaunchTemplateResponse(QXmlStreamReader &xml)
 {

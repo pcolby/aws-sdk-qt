@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * ReEncryptRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ReEncryptRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a ReEncryptRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 ReEncryptRequestPrivate::ReEncryptRequestPrivate(
     const KMSRequest::Action action, ReEncryptRequest * const q)

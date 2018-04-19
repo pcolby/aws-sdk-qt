@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DescribeDefaultParametersResponse
- *
  * \brief The DescribeDefaultParametersResponse class provides an interace for DAX DescribeDefaultParameters responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DescribeDefaultParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDefaultParametersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDefaultParametersResponse::DescribeDefaultParametersResponse(
         const DescribeDefaultParametersRequest &request,
@@ -59,6 +54,9 @@ DescribeDefaultParametersResponse::DescribeDefaultParametersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDefaultParametersRequest * DescribeDefaultParametersResponse::request() const
 {
     Q_D(const DescribeDefaultParametersResponse);
@@ -66,9 +64,8 @@ const DescribeDefaultParametersRequest * DescribeDefaultParametersResponse::requ
 }
 
 /*!
- * @brief  Parse a DAX DescribeDefaultParameters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX DescribeDefaultParameters \a response.
  */
 void DescribeDefaultParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeDefaultParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::DescribeDefaultParametersResponsePrivate
+ * \brief The DescribeDefaultParametersResponsePrivate class provides private implementation for DescribeDefaultParametersResponse.
  * \internal
  *
- * \class DescribeDefaultParametersResponsePrivate
- *
- * \brief Private implementation for DescribeDefaultParametersResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDefaultParametersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDefaultParametersResponse instance.
+ * Constructs a DescribeDefaultParametersResponsePrivate object with public implementation \a q.
  */
 DescribeDefaultParametersResponsePrivate::DescribeDefaultParametersResponsePrivate(
     DescribeDefaultParametersResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeDefaultParametersResponsePrivate::DescribeDefaultParametersResponsePriva
 }
 
 /*!
- * @brief  Parse an DAX DescribeDefaultParametersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX DescribeDefaultParameters response element from \a xml.
  */
 void DescribeDefaultParametersResponsePrivate::parseDescribeDefaultParametersResponse(QXmlStreamReader &xml)
 {

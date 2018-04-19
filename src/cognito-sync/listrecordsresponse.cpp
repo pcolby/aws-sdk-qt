@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::ListRecordsResponse
- *
  * \brief The ListRecordsResponse class provides an interace for CognitoSync ListRecords responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new ListRecordsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRecordsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRecordsResponse::ListRecordsResponse(
         const ListRecordsRequest &request,
@@ -75,6 +70,9 @@ ListRecordsResponse::ListRecordsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRecordsRequest * ListRecordsResponse::request() const
 {
     Q_D(const ListRecordsResponse);
@@ -82,9 +80,8 @@ const ListRecordsRequest * ListRecordsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoSync ListRecords response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync ListRecords \a response.
  */
 void ListRecordsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void ListRecordsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::ListRecordsResponsePrivate
+ * \brief The ListRecordsResponsePrivate class provides private implementation for ListRecordsResponse.
  * \internal
  *
- * \class ListRecordsResponsePrivate
- *
- * \brief Private implementation for ListRecordsResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRecordsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRecordsResponse instance.
+ * Constructs a ListRecordsResponsePrivate object with public implementation \a q.
  */
 ListRecordsResponsePrivate::ListRecordsResponsePrivate(
     ListRecordsResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ ListRecordsResponsePrivate::ListRecordsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync ListRecordsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync ListRecords response element from \a xml.
  */
 void ListRecordsResponsePrivate::parseListRecordsResponse(QXmlStreamReader &xml)
 {

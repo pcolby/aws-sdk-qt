@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListInstanceProfilesForRoleResponse : public IAMResponse {
 public:
     ListInstanceProfilesForRoleResponse(const ListInstanceProfilesForRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListInstanceProfilesForRoleRequest * request() const;
+    virtual const ListInstanceProfilesForRoleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListInstanceProfilesForRoleResponse)

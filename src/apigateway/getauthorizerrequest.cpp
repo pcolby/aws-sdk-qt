@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizerRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetAuthorizerRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetAuthorizerRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetAuthorizerRequestPrivate::GetAuthorizerRequestPrivate(
     const APIGatewayRequest::Action action, GetAuthorizerRequest * const q)

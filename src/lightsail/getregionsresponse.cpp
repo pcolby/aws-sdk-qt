@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetRegionsResponse
- *
  * \brief The GetRegionsResponse class provides an interace for Lightsail GetRegions responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetRegionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRegionsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRegionsResponse::GetRegionsResponse(
         const GetRegionsRequest &request,
@@ -71,6 +66,9 @@ GetRegionsResponse::GetRegionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRegionsRequest * GetRegionsResponse::request() const
 {
     Q_D(const GetRegionsResponse);
@@ -78,9 +76,8 @@ const GetRegionsRequest * GetRegionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetRegions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetRegions \a response.
  */
 void GetRegionsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetRegionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetRegionsResponsePrivate
+ * \brief The GetRegionsResponsePrivate class provides private implementation for GetRegionsResponse.
  * \internal
  *
- * \class GetRegionsResponsePrivate
- *
- * \brief Private implementation for GetRegionsResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRegionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRegionsResponse instance.
+ * Constructs a GetRegionsResponsePrivate object with public implementation \a q.
  */
 GetRegionsResponsePrivate::GetRegionsResponsePrivate(
     GetRegionsResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetRegionsResponsePrivate::GetRegionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetRegionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetRegions response element from \a xml.
  */
 void GetRegionsResponsePrivate::parseGetRegionsResponse(QXmlStreamReader &xml)
 {

@@ -139,9 +139,8 @@ QtAws::Core::AwsAbstractResponse * AssumeRoleWithSAMLRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a AssumeRoleWithSAMLRequestPrivate object for STS \a action with,
- * public implementation \a q.
+ * Constructs a AssumeRoleWithSAMLRequestPrivate object for STS \a action,
+ * with public implementation \a q.
  */
 AssumeRoleWithSAMLRequestPrivate::AssumeRoleWithSAMLRequestPrivate(
     const STSRequest::Action action, AssumeRoleWithSAMLRequest * const q)

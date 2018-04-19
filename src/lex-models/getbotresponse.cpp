@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetBotResponse
- *
  * \brief The GetBotResponse class provides an interace for LexModelBuildingService GetBot responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetBotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBotResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBotResponse::GetBotResponse(
         const GetBotRequest &request,
@@ -59,6 +54,9 @@ GetBotResponse::GetBotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBotRequest * GetBotResponse::request() const
 {
     Q_D(const GetBotResponse);
@@ -66,9 +64,8 @@ const GetBotRequest * GetBotResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService GetBot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService GetBot \a response.
  */
 void GetBotResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetBotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::GetBotResponsePrivate
+ * \brief The GetBotResponsePrivate class provides private implementation for GetBotResponse.
  * \internal
  *
- * \class GetBotResponsePrivate
- *
- * \brief Private implementation for GetBotResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBotResponse instance.
+ * Constructs a GetBotResponsePrivate object with public implementation \a q.
  */
 GetBotResponsePrivate::GetBotResponsePrivate(
     GetBotResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ GetBotResponsePrivate::GetBotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService GetBotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService GetBot response element from \a xml.
  */
 void GetBotResponsePrivate::parseGetBotResponse(QXmlStreamReader &xml)
 {

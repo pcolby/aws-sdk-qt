@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSecurityGroupReferencesRequest::respo
  */
 
 /*!
- *
- * Constructs a DescribeSecurityGroupReferencesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSecurityGroupReferencesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeSecurityGroupReferencesRequestPrivate::DescribeSecurityGroupReferencesRequestPrivate(
     const EC2Request::Action action, DescribeSecurityGroupReferencesRequest * const q)

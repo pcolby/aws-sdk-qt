@@ -28,16 +28,13 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::ShieldResponse
- *
  * \brief The ShieldResponse class provides an interface for Shield responses.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @brief  Constructs a new ShieldResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ShieldResponse object with parent \a parent.
  */
 ShieldResponse::ShieldResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ShieldResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ShieldResponse::ShieldResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ShieldResponse object.
- *
+ * \internal
+ * Constructs a ShieldResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ShieldResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ShieldResponse::ShieldResponse(ShieldResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ShieldResponse::ShieldResponse(ShieldResponsePrivate * const d, QObject * const 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ShieldResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ShieldResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Shield::ShieldResponsePrivate
+ * \brief The ShieldResponsePrivate class provides private implementation for ShieldResponse.
+ * \internal
  *
- * @class  ShieldResponsePrivate
- *
- * @brief  Private implementation for ShieldResponse.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ShieldResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ShieldResponse instance.
+ * Constructs a ShieldResponsePrivate object with public implementation \a q.
  */
 ShieldResponsePrivate::ShieldResponsePrivate(
     ShieldResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

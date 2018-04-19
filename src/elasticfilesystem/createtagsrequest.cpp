@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CreateTagsRequestPrivate object for EFS \a action with,
- * public implementation \a q.
+ * Constructs a CreateTagsRequestPrivate object for EFS \a action,
+ * with public implementation \a q.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const EFSRequest::Action action, CreateTagsRequest * const q)

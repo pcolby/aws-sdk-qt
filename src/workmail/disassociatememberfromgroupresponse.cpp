@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DisassociateMemberFromGroupResponse
- *
  * \brief The DisassociateMemberFromGroupResponse class provides an interace for WorkMail DisassociateMemberFromGroup responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DisassociateMemberFromGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateMemberFromGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateMemberFromGroupResponse::DisassociateMemberFromGroupResponse(
         const DisassociateMemberFromGroupRequest &request,
@@ -88,6 +83,9 @@ DisassociateMemberFromGroupResponse::DisassociateMemberFromGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateMemberFromGroupRequest * DisassociateMemberFromGroupResponse::request() const
 {
     Q_D(const DisassociateMemberFromGroupResponse);
@@ -95,9 +93,8 @@ const DisassociateMemberFromGroupRequest * DisassociateMemberFromGroupResponse::
 }
 
 /*!
- * @brief  Parse a WorkMail DisassociateMemberFromGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail DisassociateMemberFromGroup \a response.
  */
 void DisassociateMemberFromGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DisassociateMemberFromGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::DisassociateMemberFromGroupResponsePrivate
+ * \brief The DisassociateMemberFromGroupResponsePrivate class provides private implementation for DisassociateMemberFromGroupResponse.
  * \internal
  *
- * \class DisassociateMemberFromGroupResponsePrivate
- *
- * \brief Private implementation for DisassociateMemberFromGroupResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateMemberFromGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateMemberFromGroupResponse instance.
+ * Constructs a DisassociateMemberFromGroupResponsePrivate object with public implementation \a q.
  */
 DisassociateMemberFromGroupResponsePrivate::DisassociateMemberFromGroupResponsePrivate(
     DisassociateMemberFromGroupResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ DisassociateMemberFromGroupResponsePrivate::DisassociateMemberFromGroupResponseP
 }
 
 /*!
- * @brief  Parse an WorkMail DisassociateMemberFromGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail DisassociateMemberFromGroup response element from \a xml.
  */
 void DisassociateMemberFromGroupResponsePrivate::parseDisassociateMemberFromGroupResponse(QXmlStreamReader &xml)
 {

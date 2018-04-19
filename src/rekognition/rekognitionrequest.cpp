@@ -72,7 +72,7 @@ namespace Rekognition {
  */
 
 /*!
- * Constructs a[n] RekognitionRequest object for Rekognition \a action.
+ * Constructs a RekognitionRequest object for Rekognition \a action.
  */
 RekognitionRequest::RekognitionRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new RekognitionRequestPrivate(action, this))
@@ -272,8 +272,8 @@ QNetworkRequest RekognitionRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a RekognitionRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a RekognitionRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 RekognitionRequestPrivate::RekognitionRequestPrivate(const RekognitionRequest::Action action, RekognitionRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

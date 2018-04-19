@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::GetFaceSearchResponse
- *
  * \brief The GetFaceSearchResponse class provides an interace for Rekognition GetFaceSearch responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new GetFaceSearchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFaceSearchResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFaceSearchResponse::GetFaceSearchResponse(
         const GetFaceSearchRequest &request,
@@ -56,6 +51,9 @@ GetFaceSearchResponse::GetFaceSearchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFaceSearchRequest * GetFaceSearchResponse::request() const
 {
     Q_D(const GetFaceSearchResponse);
@@ -63,9 +61,8 @@ const GetFaceSearchRequest * GetFaceSearchResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition GetFaceSearch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition GetFaceSearch \a response.
  */
 void GetFaceSearchResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetFaceSearchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::GetFaceSearchResponsePrivate
+ * \brief The GetFaceSearchResponsePrivate class provides private implementation for GetFaceSearchResponse.
  * \internal
  *
- * \class GetFaceSearchResponsePrivate
- *
- * \brief Private implementation for GetFaceSearchResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFaceSearchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFaceSearchResponse instance.
+ * Constructs a GetFaceSearchResponsePrivate object with public implementation \a q.
  */
 GetFaceSearchResponsePrivate::GetFaceSearchResponsePrivate(
     GetFaceSearchResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ GetFaceSearchResponsePrivate::GetFaceSearchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition GetFaceSearchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition GetFaceSearch response element from \a xml.
  */
 void GetFaceSearchResponsePrivate::parseGetFaceSearchResponse(QXmlStreamReader &xml)
 {

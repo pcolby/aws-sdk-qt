@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdateRepositoryNameResponse
- *
  * \brief The UpdateRepositoryNameResponse class provides an interace for CodeCommit UpdateRepositoryName responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdateRepositoryNameResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRepositoryNameResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRepositoryNameResponse::UpdateRepositoryNameResponse(
         const UpdateRepositoryNameRequest &request,
@@ -245,6 +240,9 @@ UpdateRepositoryNameResponse::UpdateRepositoryNameResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRepositoryNameRequest * UpdateRepositoryNameResponse::request() const
 {
     Q_D(const UpdateRepositoryNameResponse);
@@ -252,9 +250,8 @@ const UpdateRepositoryNameRequest * UpdateRepositoryNameResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CodeCommit UpdateRepositoryName response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit UpdateRepositoryName \a response.
  */
 void UpdateRepositoryNameResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void UpdateRepositoryNameResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::UpdateRepositoryNameResponsePrivate
+ * \brief The UpdateRepositoryNameResponsePrivate class provides private implementation for UpdateRepositoryNameResponse.
  * \internal
  *
- * \class UpdateRepositoryNameResponsePrivate
- *
- * \brief Private implementation for UpdateRepositoryNameResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRepositoryNameResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRepositoryNameResponse instance.
+ * Constructs a UpdateRepositoryNameResponsePrivate object with public implementation \a q.
  */
 UpdateRepositoryNameResponsePrivate::UpdateRepositoryNameResponsePrivate(
     UpdateRepositoryNameResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ UpdateRepositoryNameResponsePrivate::UpdateRepositoryNameResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit UpdateRepositoryNameResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit UpdateRepositoryName response element from \a xml.
  */
 void UpdateRepositoryNameResponsePrivate::parseUpdateRepositoryNameResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateNFSFileShareResponse
- *
  * \brief The CreateNFSFileShareResponse class provides an interace for StorageGateway CreateNFSFileShare responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateNFSFileShareResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateNFSFileShareResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateNFSFileShareResponse::CreateNFSFileShareResponse(
         const CreateNFSFileShareRequest &request,
@@ -124,6 +119,9 @@ CreateNFSFileShareResponse::CreateNFSFileShareResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateNFSFileShareRequest * CreateNFSFileShareResponse::request() const
 {
     Q_D(const CreateNFSFileShareResponse);
@@ -131,9 +129,8 @@ const CreateNFSFileShareRequest * CreateNFSFileShareResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway CreateNFSFileShare response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway CreateNFSFileShare \a response.
  */
 void CreateNFSFileShareResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void CreateNFSFileShareResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::CreateNFSFileShareResponsePrivate
+ * \brief The CreateNFSFileShareResponsePrivate class provides private implementation for CreateNFSFileShareResponse.
  * \internal
  *
- * \class CreateNFSFileShareResponsePrivate
- *
- * \brief Private implementation for CreateNFSFileShareResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNFSFileShareResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateNFSFileShareResponse instance.
+ * Constructs a CreateNFSFileShareResponsePrivate object with public implementation \a q.
  */
 CreateNFSFileShareResponsePrivate::CreateNFSFileShareResponsePrivate(
     CreateNFSFileShareResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ CreateNFSFileShareResponsePrivate::CreateNFSFileShareResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway CreateNFSFileShareResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway CreateNFSFileShare response element from \a xml.
  */
 void CreateNFSFileShareResponsePrivate::parseCreateNFSFileShareResponse(QXmlStreamReader &xml)
 {

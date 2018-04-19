@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ApplySchemaResponse
- *
  * \brief The ApplySchemaResponse class provides an interace for CloudDirectory ApplySchema responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ApplySchemaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ApplySchemaResponse object for \a reply to \a request, with parent \a parent.
  */
 ApplySchemaResponse::ApplySchemaResponse(
         const ApplySchemaRequest &request,
@@ -62,6 +57,9 @@ ApplySchemaResponse::ApplySchemaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ApplySchemaRequest * ApplySchemaResponse::request() const
 {
     Q_D(const ApplySchemaResponse);
@@ -69,9 +67,8 @@ const ApplySchemaRequest * ApplySchemaResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory ApplySchema response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ApplySchema \a response.
  */
 void ApplySchemaResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ApplySchemaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ApplySchemaResponsePrivate
+ * \brief The ApplySchemaResponsePrivate class provides private implementation for ApplySchemaResponse.
  * \internal
  *
- * \class ApplySchemaResponsePrivate
- *
- * \brief Private implementation for ApplySchemaResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplySchemaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ApplySchemaResponse instance.
+ * Constructs a ApplySchemaResponsePrivate object with public implementation \a q.
  */
 ApplySchemaResponsePrivate::ApplySchemaResponsePrivate(
     ApplySchemaResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ApplySchemaResponsePrivate::ApplySchemaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory ApplySchemaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ApplySchema response element from \a xml.
  */
 void ApplySchemaResponsePrivate::parseApplySchemaResponse(QXmlStreamReader &xml)
 {

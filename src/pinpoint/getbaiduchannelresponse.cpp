@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetBaiduChannelResponse
- *
  * \brief The GetBaiduChannelResponse class provides an interace for Pinpoint GetBaiduChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getBaiduChannel
  */
 
 /*!
- * @brief  Constructs a new GetBaiduChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBaiduChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBaiduChannelResponse::GetBaiduChannelResponse(
         const GetBaiduChannelRequest &request,
@@ -55,6 +50,9 @@ GetBaiduChannelResponse::GetBaiduChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBaiduChannelRequest * GetBaiduChannelResponse::request() const
 {
     Q_D(const GetBaiduChannelResponse);
@@ -62,9 +60,8 @@ const GetBaiduChannelRequest * GetBaiduChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetBaiduChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetBaiduChannel \a response.
  */
 void GetBaiduChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBaiduChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetBaiduChannelResponsePrivate
+ * \brief The GetBaiduChannelResponsePrivate class provides private implementation for GetBaiduChannelResponse.
  * \internal
  *
- * \class GetBaiduChannelResponsePrivate
- *
- * \brief Private implementation for GetBaiduChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBaiduChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBaiduChannelResponse instance.
+ * Constructs a GetBaiduChannelResponsePrivate object with public implementation \a q.
  */
 GetBaiduChannelResponsePrivate::GetBaiduChannelResponsePrivate(
     GetBaiduChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBaiduChannelResponsePrivate::GetBaiduChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetBaiduChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetBaiduChannel response element from \a xml.
  */
 void GetBaiduChannelResponsePrivate::parseGetBaiduChannelResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RestoreDBClusterFromSnapshotResponse
- *
  * \brief The RestoreDBClusterFromSnapshotResponse class provides an interace for RDS RestoreDBClusterFromSnapshot responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RestoreDBClusterFromSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreDBClusterFromSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreDBClusterFromSnapshotResponse::RestoreDBClusterFromSnapshotResponse(
         const RestoreDBClusterFromSnapshotRequest &request,
@@ -119,6 +114,9 @@ RestoreDBClusterFromSnapshotResponse::RestoreDBClusterFromSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreDBClusterFromSnapshotRequest * RestoreDBClusterFromSnapshotResponse::request() const
 {
     Q_D(const RestoreDBClusterFromSnapshotResponse);
@@ -126,9 +124,8 @@ const RestoreDBClusterFromSnapshotRequest * RestoreDBClusterFromSnapshotResponse
 }
 
 /*!
- * @brief  Parse a RDS RestoreDBClusterFromSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS RestoreDBClusterFromSnapshot \a response.
  */
 void RestoreDBClusterFromSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void RestoreDBClusterFromSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::RestoreDBClusterFromSnapshotResponsePrivate
+ * \brief The RestoreDBClusterFromSnapshotResponsePrivate class provides private implementation for RestoreDBClusterFromSnapshotResponse.
  * \internal
  *
- * \class RestoreDBClusterFromSnapshotResponsePrivate
- *
- * \brief Private implementation for RestoreDBClusterFromSnapshotResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreDBClusterFromSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreDBClusterFromSnapshotResponse instance.
+ * Constructs a RestoreDBClusterFromSnapshotResponsePrivate object with public implementation \a q.
  */
 RestoreDBClusterFromSnapshotResponsePrivate::RestoreDBClusterFromSnapshotResponsePrivate(
     RestoreDBClusterFromSnapshotResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ RestoreDBClusterFromSnapshotResponsePrivate::RestoreDBClusterFromSnapshotRespons
 }
 
 /*!
- * @brief  Parse an RDS RestoreDBClusterFromSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS RestoreDBClusterFromSnapshot response element from \a xml.
  */
 void RestoreDBClusterFromSnapshotResponsePrivate::parseRestoreDBClusterFromSnapshotResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteReusableDelegationSetRequest::response(
  */
 
 /*!
- *
- * Constructs a DeleteReusableDelegationSetRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteReusableDelegationSetRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 DeleteReusableDelegationSetRequestPrivate::DeleteReusableDelegationSetRequestPrivate(
     const Route53Request::Action action, DeleteReusableDelegationSetRequest * const q)

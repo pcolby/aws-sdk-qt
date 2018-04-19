@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribePendingAggregationRequestsResponse : public ConfigSer
 public:
     DescribePendingAggregationRequestsResponse(const DescribePendingAggregationRequestsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribePendingAggregationRequestsRequest * request() const;
+    virtual const DescribePendingAggregationRequestsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribePendingAggregationRequestsResponse)

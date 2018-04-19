@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::PutImageResponse
- *
  * \brief The PutImageResponse class provides an interace for ECR PutImage responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new PutImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutImageResponse object for \a reply to \a request, with parent \a parent.
  */
 PutImageResponse::PutImageResponse(
         const PutImageRequest &request,
@@ -59,6 +54,9 @@ PutImageResponse::PutImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutImageRequest * PutImageResponse::request() const
 {
     Q_D(const PutImageResponse);
@@ -66,9 +64,8 @@ const PutImageRequest * PutImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR PutImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR PutImage \a response.
  */
 void PutImageResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void PutImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::PutImageResponsePrivate
+ * \brief The PutImageResponsePrivate class provides private implementation for PutImageResponse.
  * \internal
  *
- * \class PutImageResponsePrivate
- *
- * \brief Private implementation for PutImageResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutImageResponse instance.
+ * Constructs a PutImageResponsePrivate object with public implementation \a q.
  */
 PutImageResponsePrivate::PutImageResponsePrivate(
     PutImageResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ PutImageResponsePrivate::PutImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR PutImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR PutImage response element from \a xml.
  */
 void PutImageResponsePrivate::parsePutImageResponse(QXmlStreamReader &xml)
 {

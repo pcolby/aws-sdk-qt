@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetResolverRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GetResolverRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a GetResolverRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 GetResolverRequestPrivate::GetResolverRequestPrivate(
     const AppSyncRequest::Action action, GetResolverRequest * const q)

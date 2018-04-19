@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::ListUserProfilesResponse
- *
  * \brief The ListUserProfilesResponse class provides an interace for CodeStar ListUserProfiles responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new ListUserProfilesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListUserProfilesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListUserProfilesResponse::ListUserProfilesResponse(
         const ListUserProfilesRequest &request,
@@ -143,6 +138,9 @@ ListUserProfilesResponse::ListUserProfilesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListUserProfilesRequest * ListUserProfilesResponse::request() const
 {
     Q_D(const ListUserProfilesResponse);
@@ -150,9 +148,8 @@ const ListUserProfilesRequest * ListUserProfilesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar ListUserProfiles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar ListUserProfiles \a response.
  */
 void ListUserProfilesResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void ListUserProfilesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::ListUserProfilesResponsePrivate
+ * \brief The ListUserProfilesResponsePrivate class provides private implementation for ListUserProfilesResponse.
  * \internal
  *
- * \class ListUserProfilesResponsePrivate
- *
- * \brief Private implementation for ListUserProfilesResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUserProfilesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListUserProfilesResponse instance.
+ * Constructs a ListUserProfilesResponsePrivate object with public implementation \a q.
  */
 ListUserProfilesResponsePrivate::ListUserProfilesResponsePrivate(
     ListUserProfilesResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ ListUserProfilesResponsePrivate::ListUserProfilesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar ListUserProfilesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar ListUserProfiles response element from \a xml.
  */
 void ListUserProfilesResponsePrivate::parseListUserProfilesResponse(QXmlStreamReader &xml)
 {

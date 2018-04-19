@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateReservedInstancesListingResponse
- *
  * \brief The CreateReservedInstancesListingResponse class provides an interace for EC2 CreateReservedInstancesListing responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateReservedInstancesListingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateReservedInstancesListingResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateReservedInstancesListingResponse::CreateReservedInstancesListingResponse(
         const CreateReservedInstancesListingRequest &request,
@@ -59,6 +54,9 @@ CreateReservedInstancesListingResponse::CreateReservedInstancesListingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateReservedInstancesListingRequest * CreateReservedInstancesListingResponse::request() const
 {
     Q_D(const CreateReservedInstancesListingResponse);
@@ -66,9 +64,8 @@ const CreateReservedInstancesListingRequest * CreateReservedInstancesListingResp
 }
 
 /*!
- * @brief  Parse a EC2 CreateReservedInstancesListing response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateReservedInstancesListing \a response.
  */
 void CreateReservedInstancesListingResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateReservedInstancesListingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateReservedInstancesListingResponsePrivate
+ * \brief The CreateReservedInstancesListingResponsePrivate class provides private implementation for CreateReservedInstancesListingResponse.
  * \internal
  *
- * \class CreateReservedInstancesListingResponsePrivate
- *
- * \brief Private implementation for CreateReservedInstancesListingResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReservedInstancesListingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateReservedInstancesListingResponse instance.
+ * Constructs a CreateReservedInstancesListingResponsePrivate object with public implementation \a q.
  */
 CreateReservedInstancesListingResponsePrivate::CreateReservedInstancesListingResponsePrivate(
     CreateReservedInstancesListingResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateReservedInstancesListingResponsePrivate::CreateReservedInstancesListingRes
 }
 
 /*!
- * @brief  Parse an EC2 CreateReservedInstancesListingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateReservedInstancesListing response element from \a xml.
  */
 void CreateReservedInstancesListingResponsePrivate::parseCreateReservedInstancesListingResponse(QXmlStreamReader &xml)
 {

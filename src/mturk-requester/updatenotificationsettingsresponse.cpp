@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::UpdateNotificationSettingsResponse
- *
  * \brief The UpdateNotificationSettingsResponse class provides an interace for MTurk UpdateNotificationSettings responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::updateNotificationSettings
  */
 
 /*!
- * @brief  Constructs a new UpdateNotificationSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateNotificationSettingsResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateNotificationSettingsResponse::UpdateNotificationSettingsResponse(
         const UpdateNotificationSettingsRequest &request,
@@ -55,6 +50,9 @@ UpdateNotificationSettingsResponse::UpdateNotificationSettingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateNotificationSettingsRequest * UpdateNotificationSettingsResponse::request() const
 {
     Q_D(const UpdateNotificationSettingsResponse);
@@ -62,9 +60,8 @@ const UpdateNotificationSettingsRequest * UpdateNotificationSettingsResponse::re
 }
 
 /*!
- * @brief  Parse a MTurk UpdateNotificationSettings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk UpdateNotificationSettings \a response.
  */
 void UpdateNotificationSettingsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateNotificationSettingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::UpdateNotificationSettingsResponsePrivate
+ * \brief The UpdateNotificationSettingsResponsePrivate class provides private implementation for UpdateNotificationSettingsResponse.
  * \internal
  *
- * \class UpdateNotificationSettingsResponsePrivate
- *
- * \brief Private implementation for UpdateNotificationSettingsResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateNotificationSettingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateNotificationSettingsResponse instance.
+ * Constructs a UpdateNotificationSettingsResponsePrivate object with public implementation \a q.
  */
 UpdateNotificationSettingsResponsePrivate::UpdateNotificationSettingsResponsePrivate(
     UpdateNotificationSettingsResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateNotificationSettingsResponsePrivate::UpdateNotificationSettingsResponsePri
 }
 
 /*!
- * @brief  Parse an MTurk UpdateNotificationSettingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk UpdateNotificationSettings response element from \a xml.
  */
 void UpdateNotificationSettingsResponsePrivate::parseUpdateNotificationSettingsResponse(QXmlStreamReader &xml)
 {

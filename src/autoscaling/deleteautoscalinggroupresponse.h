@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteAutoScalingGroupResponse : public AutoScalingResponse {
 public:
     DeleteAutoScalingGroupResponse(const DeleteAutoScalingGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAutoScalingGroupRequest * request() const;
+    virtual const DeleteAutoScalingGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteAutoScalingGroupResponse)

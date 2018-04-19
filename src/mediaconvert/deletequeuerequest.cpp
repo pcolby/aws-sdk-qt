@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteQueueRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteQueueRequestPrivate object for MediaConvert \a action with,
- * public implementation \a q.
+ * Constructs a DeleteQueueRequestPrivate object for MediaConvert \a action,
+ * with public implementation \a q.
  */
 DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
     const MediaConvertRequest::Action action, DeleteQueueRequest * const q)

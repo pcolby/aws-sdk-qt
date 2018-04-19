@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutRepositoryTriggersResponse : public CodeCommitResponse {
 public:
     PutRepositoryTriggersResponse(const PutRepositoryTriggersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutRepositoryTriggersRequest * request() const;
+    virtual const PutRepositoryTriggersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutRepositoryTriggersResponse)

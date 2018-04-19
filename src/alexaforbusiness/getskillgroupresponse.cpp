@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetSkillGroupResponse
- *
  * \brief The GetSkillGroupResponse class provides an interace for AlexaForBusiness GetSkillGroup responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetSkillGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSkillGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSkillGroupResponse::GetSkillGroupResponse(
         const GetSkillGroupRequest &request,
@@ -60,6 +55,9 @@ GetSkillGroupResponse::GetSkillGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSkillGroupRequest * GetSkillGroupResponse::request() const
 {
     Q_D(const GetSkillGroupResponse);
@@ -67,9 +65,8 @@ const GetSkillGroupRequest * GetSkillGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness GetSkillGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness GetSkillGroup \a response.
  */
 void GetSkillGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetSkillGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::GetSkillGroupResponsePrivate
+ * \brief The GetSkillGroupResponsePrivate class provides private implementation for GetSkillGroupResponse.
  * \internal
  *
- * \class GetSkillGroupResponsePrivate
- *
- * \brief Private implementation for GetSkillGroupResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSkillGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSkillGroupResponse instance.
+ * Constructs a GetSkillGroupResponsePrivate object with public implementation \a q.
  */
 GetSkillGroupResponsePrivate::GetSkillGroupResponsePrivate(
     GetSkillGroupResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ GetSkillGroupResponsePrivate::GetSkillGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness GetSkillGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness GetSkillGroup response element from \a xml.
  */
 void GetSkillGroupResponsePrivate::parseGetSkillGroupResponse(QXmlStreamReader &xml)
 {

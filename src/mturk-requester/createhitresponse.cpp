@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::CreateHITResponse
- *
  * \brief The CreateHITResponse class provides an interace for MTurk CreateHIT responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::createHIT
  */
 
 /*!
- * @brief  Constructs a new CreateHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateHITResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateHITResponse::CreateHITResponse(
         const CreateHITRequest &request,
@@ -55,6 +50,9 @@ CreateHITResponse::CreateHITResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateHITRequest * CreateHITResponse::request() const
 {
     Q_D(const CreateHITResponse);
@@ -62,9 +60,8 @@ const CreateHITRequest * CreateHITResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk CreateHIT response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk CreateHIT \a response.
  */
 void CreateHITResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateHITResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::CreateHITResponsePrivate
+ * \brief The CreateHITResponsePrivate class provides private implementation for CreateHITResponse.
  * \internal
  *
- * \class CreateHITResponsePrivate
- *
- * \brief Private implementation for CreateHITResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHITResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateHITResponse instance.
+ * Constructs a CreateHITResponsePrivate object with public implementation \a q.
  */
 CreateHITResponsePrivate::CreateHITResponsePrivate(
     CreateHITResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateHITResponsePrivate::CreateHITResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk CreateHITResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk CreateHIT response element from \a xml.
  */
 void CreateHITResponsePrivate::parseCreateHITResponse(QXmlStreamReader &xml)
 {

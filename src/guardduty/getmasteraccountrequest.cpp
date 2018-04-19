@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetMasterAccountRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetMasterAccountRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a GetMasterAccountRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 GetMasterAccountRequestPrivate::GetMasterAccountRequestPrivate(
     const GuardDutyRequest::Action action, GetMasterAccountRequest * const q)

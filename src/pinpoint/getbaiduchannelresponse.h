@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetBaiduChannelResponse : public PinpointResponse {
 public:
     GetBaiduChannelResponse(const GetBaiduChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetBaiduChannelRequest * request() const;
+    virtual const GetBaiduChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetBaiduChannelResponse)

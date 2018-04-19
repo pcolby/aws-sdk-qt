@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeCACertificateResponse
- *
  * \brief The DescribeCACertificateResponse class provides an interace for IoT DescribeCACertificate responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeCACertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCACertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCACertificateResponse::DescribeCACertificateResponse(
         const DescribeCACertificateRequest &request,
@@ -66,6 +61,9 @@ DescribeCACertificateResponse::DescribeCACertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCACertificateRequest * DescribeCACertificateResponse::request() const
 {
     Q_D(const DescribeCACertificateResponse);
@@ -73,9 +71,8 @@ const DescribeCACertificateRequest * DescribeCACertificateResponse::request() co
 }
 
 /*!
- * @brief  Parse a IoT DescribeCACertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DescribeCACertificate \a response.
  */
 void DescribeCACertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeCACertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DescribeCACertificateResponsePrivate
+ * \brief The DescribeCACertificateResponsePrivate class provides private implementation for DescribeCACertificateResponse.
  * \internal
  *
- * \class DescribeCACertificateResponsePrivate
- *
- * \brief Private implementation for DescribeCACertificateResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCACertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCACertificateResponse instance.
+ * Constructs a DescribeCACertificateResponsePrivate object with public implementation \a q.
  */
 DescribeCACertificateResponsePrivate::DescribeCACertificateResponsePrivate(
     DescribeCACertificateResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeCACertificateResponsePrivate::DescribeCACertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DescribeCACertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DescribeCACertificate response element from \a xml.
  */
 void DescribeCACertificateResponsePrivate::parseDescribeCACertificateResponse(QXmlStreamReader &xml)
 {

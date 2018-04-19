@@ -107,9 +107,8 @@ QtAws::Core::AwsAbstractResponse * GetAttributeValuesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetAttributeValuesRequestPrivate object for Pricing \a action with,
- * public implementation \a q.
+ * Constructs a GetAttributeValuesRequestPrivate object for Pricing \a action,
+ * with public implementation \a q.
  */
 GetAttributeValuesRequestPrivate::GetAttributeValuesRequestPrivate(
     const PricingRequest::Action action, GetAttributeValuesRequest * const q)

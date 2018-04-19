@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::StopDataCollectionByAgentIdsResponse
- *
  * \brief The StopDataCollectionByAgentIdsResponse class provides an interace for ApplicationDiscoveryService StopDataCollectionByAgentIds responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new StopDataCollectionByAgentIdsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopDataCollectionByAgentIdsResponse object for \a reply to \a request, with parent \a parent.
  */
 StopDataCollectionByAgentIdsResponse::StopDataCollectionByAgentIdsResponse(
         const StopDataCollectionByAgentIdsRequest &request,
@@ -119,6 +114,9 @@ StopDataCollectionByAgentIdsResponse::StopDataCollectionByAgentIdsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopDataCollectionByAgentIdsRequest * StopDataCollectionByAgentIdsResponse::request() const
 {
     Q_D(const StopDataCollectionByAgentIdsResponse);
@@ -126,9 +124,8 @@ const StopDataCollectionByAgentIdsRequest * StopDataCollectionByAgentIdsResponse
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService StopDataCollectionByAgentIds response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService StopDataCollectionByAgentIds \a response.
  */
 void StopDataCollectionByAgentIdsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void StopDataCollectionByAgentIdsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::StopDataCollectionByAgentIdsResponsePrivate
+ * \brief The StopDataCollectionByAgentIdsResponsePrivate class provides private implementation for StopDataCollectionByAgentIdsResponse.
  * \internal
  *
- * \class StopDataCollectionByAgentIdsResponsePrivate
- *
- * \brief Private implementation for StopDataCollectionByAgentIdsResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopDataCollectionByAgentIdsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopDataCollectionByAgentIdsResponse instance.
+ * Constructs a StopDataCollectionByAgentIdsResponsePrivate object with public implementation \a q.
  */
 StopDataCollectionByAgentIdsResponsePrivate::StopDataCollectionByAgentIdsResponsePrivate(
     StopDataCollectionByAgentIdsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ StopDataCollectionByAgentIdsResponsePrivate::StopDataCollectionByAgentIdsRespons
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService StopDataCollectionByAgentIdsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService StopDataCollectionByAgentIds response element from \a xml.
  */
 void StopDataCollectionByAgentIdsResponsePrivate::parseStopDataCollectionByAgentIdsResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetApnsVoipSandboxChannelResponse : public PinpointResponse {
 public:
     GetApnsVoipSandboxChannelResponse(const GetApnsVoipSandboxChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetApnsVoipSandboxChannelRequest * request() const;
+    virtual const GetApnsVoipSandboxChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetApnsVoipSandboxChannelResponse)

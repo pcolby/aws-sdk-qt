@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeSuggestersResponse
- *
  * \brief The DescribeSuggestersResponse class provides an interace for CloudSearch DescribeSuggesters responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeSuggestersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSuggestersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSuggestersResponse::DescribeSuggestersResponse(
         const DescribeSuggestersRequest &request,
@@ -66,6 +61,9 @@ DescribeSuggestersResponse::DescribeSuggestersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSuggestersRequest * DescribeSuggestersResponse::request() const
 {
     Q_D(const DescribeSuggestersResponse);
@@ -73,9 +71,8 @@ const DescribeSuggestersRequest * DescribeSuggestersResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch DescribeSuggesters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DescribeSuggesters \a response.
  */
 void DescribeSuggestersResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeSuggestersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DescribeSuggestersResponsePrivate
+ * \brief The DescribeSuggestersResponsePrivate class provides private implementation for DescribeSuggestersResponse.
  * \internal
  *
- * \class DescribeSuggestersResponsePrivate
- *
- * \brief Private implementation for DescribeSuggestersResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSuggestersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSuggestersResponse instance.
+ * Constructs a DescribeSuggestersResponsePrivate object with public implementation \a q.
  */
 DescribeSuggestersResponsePrivate::DescribeSuggestersResponsePrivate(
     DescribeSuggestersResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeSuggestersResponsePrivate::DescribeSuggestersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DescribeSuggestersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DescribeSuggesters response element from \a xml.
  */
 void DescribeSuggestersResponsePrivate::parseDescribeSuggestersResponse(QXmlStreamReader &xml)
 {

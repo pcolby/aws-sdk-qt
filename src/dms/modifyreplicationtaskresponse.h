@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyReplicationTaskResponse : public DatabaseMigrationServi
 public:
     ModifyReplicationTaskResponse(const ModifyReplicationTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyReplicationTaskRequest * request() const;
+    virtual const ModifyReplicationTaskRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyReplicationTaskResponse)

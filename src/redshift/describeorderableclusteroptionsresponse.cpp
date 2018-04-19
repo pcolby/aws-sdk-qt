@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeOrderableClusterOptionsResponse
- *
  * \brief The DescribeOrderableClusterOptionsResponse class provides an interace for Redshift DescribeOrderableClusterOptions responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeOrderableClusterOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeOrderableClusterOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeOrderableClusterOptionsResponse::DescribeOrderableClusterOptionsResponse(
         const DescribeOrderableClusterOptionsRequest &request,
@@ -85,6 +80,9 @@ DescribeOrderableClusterOptionsResponse::DescribeOrderableClusterOptionsResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeOrderableClusterOptionsRequest * DescribeOrderableClusterOptionsResponse::request() const
 {
     Q_D(const DescribeOrderableClusterOptionsResponse);
@@ -92,9 +90,8 @@ const DescribeOrderableClusterOptionsRequest * DescribeOrderableClusterOptionsRe
 }
 
 /*!
- * @brief  Parse a Redshift DescribeOrderableClusterOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeOrderableClusterOptions \a response.
  */
 void DescribeOrderableClusterOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeOrderableClusterOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeOrderableClusterOptionsResponsePrivate
+ * \brief The DescribeOrderableClusterOptionsResponsePrivate class provides private implementation for DescribeOrderableClusterOptionsResponse.
  * \internal
  *
- * \class DescribeOrderableClusterOptionsResponsePrivate
- *
- * \brief Private implementation for DescribeOrderableClusterOptionsResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOrderableClusterOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeOrderableClusterOptionsResponse instance.
+ * Constructs a DescribeOrderableClusterOptionsResponsePrivate object with public implementation \a q.
  */
 DescribeOrderableClusterOptionsResponsePrivate::DescribeOrderableClusterOptionsResponsePrivate(
     DescribeOrderableClusterOptionsResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeOrderableClusterOptionsResponsePrivate::DescribeOrderableClusterOptionsR
 }
 
 /*!
- * @brief  Parse an Redshift DescribeOrderableClusterOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeOrderableClusterOptions response element from \a xml.
  */
 void DescribeOrderableClusterOptionsResponsePrivate::parseDescribeOrderableClusterOptionsResponse(QXmlStreamReader &xml)
 {

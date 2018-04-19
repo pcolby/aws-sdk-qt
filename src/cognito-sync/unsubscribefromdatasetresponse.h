@@ -34,10 +34,10 @@ class QTAWS_EXPORT UnsubscribeFromDatasetResponse : public CognitoSyncResponse {
 public:
     UnsubscribeFromDatasetResponse(const UnsubscribeFromDatasetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UnsubscribeFromDatasetRequest * request() const;
+    virtual const UnsubscribeFromDatasetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UnsubscribeFromDatasetResponse)

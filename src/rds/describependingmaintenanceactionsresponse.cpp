@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribePendingMaintenanceActionsResponse
- *
  * \brief The DescribePendingMaintenanceActionsResponse class provides an interace for RDS DescribePendingMaintenanceActions responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribePendingMaintenanceActionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePendingMaintenanceActionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePendingMaintenanceActionsResponse::DescribePendingMaintenanceActionsResponse(
         const DescribePendingMaintenanceActionsRequest &request,
@@ -119,6 +114,9 @@ DescribePendingMaintenanceActionsResponse::DescribePendingMaintenanceActionsResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePendingMaintenanceActionsRequest * DescribePendingMaintenanceActionsResponse::request() const
 {
     Q_D(const DescribePendingMaintenanceActionsResponse);
@@ -126,9 +124,8 @@ const DescribePendingMaintenanceActionsRequest * DescribePendingMaintenanceActio
 }
 
 /*!
- * @brief  Parse a RDS DescribePendingMaintenanceActions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribePendingMaintenanceActions \a response.
  */
 void DescribePendingMaintenanceActionsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribePendingMaintenanceActionsResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::RDS::DescribePendingMaintenanceActionsResponsePrivate
+ * \brief The DescribePendingMaintenanceActionsResponsePrivate class provides private implementation for DescribePendingMaintenanceActionsResponse.
  * \internal
  *
- * \class DescribePendingMaintenanceActionsResponsePrivate
- *
- * \brief Private implementation for DescribePendingMaintenanceActionsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePendingMaintenanceActionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePendingMaintenanceActionsResponse instance.
+ * Constructs a DescribePendingMaintenanceActionsResponsePrivate object with public implementation \a q.
  */
 DescribePendingMaintenanceActionsResponsePrivate::DescribePendingMaintenanceActionsResponsePrivate(
     DescribePendingMaintenanceActionsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribePendingMaintenanceActionsResponsePrivate::DescribePendingMaintenanceActi
 }
 
 /*!
- * @brief  Parse an RDS DescribePendingMaintenanceActionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribePendingMaintenanceActions response element from \a xml.
  */
 void DescribePendingMaintenanceActionsResponsePrivate::parseDescribePendingMaintenanceActionsResponse(QXmlStreamReader &xml)
 {

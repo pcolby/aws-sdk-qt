@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::UpdateIPSetResponse
- *
  * \brief The UpdateIPSetResponse class provides an interace for GuardDuty UpdateIPSet responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::updateIPSet
  */
 
 /*!
- * @brief  Constructs a new UpdateIPSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateIPSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateIPSetResponse::UpdateIPSetResponse(
         const UpdateIPSetRequest &request,
@@ -55,6 +50,9 @@ UpdateIPSetResponse::UpdateIPSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateIPSetRequest * UpdateIPSetResponse::request() const
 {
     Q_D(const UpdateIPSetResponse);
@@ -62,9 +60,8 @@ const UpdateIPSetRequest * UpdateIPSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty UpdateIPSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty UpdateIPSet \a response.
  */
 void UpdateIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::UpdateIPSetResponsePrivate
+ * \brief The UpdateIPSetResponsePrivate class provides private implementation for UpdateIPSetResponse.
  * \internal
  *
- * \class UpdateIPSetResponsePrivate
- *
- * \brief Private implementation for UpdateIPSetResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateIPSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateIPSetResponse instance.
+ * Constructs a UpdateIPSetResponsePrivate object with public implementation \a q.
  */
 UpdateIPSetResponsePrivate::UpdateIPSetResponsePrivate(
     UpdateIPSetResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateIPSetResponsePrivate::UpdateIPSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty UpdateIPSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty UpdateIPSet response element from \a xml.
  */
 void UpdateIPSetResponsePrivate::parseUpdateIPSetResponse(QXmlStreamReader &xml)
 {

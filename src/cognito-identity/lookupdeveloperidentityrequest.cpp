@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * LookupDeveloperIdentityRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a LookupDeveloperIdentityRequestPrivate object for CognitoIdentity \a action with,
- * public implementation \a q.
+ * Constructs a LookupDeveloperIdentityRequestPrivate object for CognitoIdentity \a action,
+ * with public implementation \a q.
  */
 LookupDeveloperIdentityRequestPrivate::LookupDeveloperIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, LookupDeveloperIdentityRequest * const q)

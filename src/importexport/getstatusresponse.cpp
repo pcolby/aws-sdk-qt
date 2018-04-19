@@ -29,10 +29,9 @@ namespace ImportExport {
 
 /*!
  * \class QtAws::ImportExport::GetStatusResponse
- *
  * \brief The GetStatusResponse class provides an interace for ImportExport GetStatus responses.
  *
- * \ingroup ImportExport
+ * \inmodule QtAwsImportExport
  *
  *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
  *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
@@ -42,11 +41,7 @@ namespace ImportExport {
  */
 
 /*!
- * @brief  Constructs a new GetStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 GetStatusResponse::GetStatusResponse(
         const GetStatusRequest &request,
@@ -58,6 +53,9 @@ GetStatusResponse::GetStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetStatusRequest * GetStatusResponse::request() const
 {
     Q_D(const GetStatusResponse);
@@ -65,9 +63,8 @@ const GetStatusRequest * GetStatusResponse::request() const
 }
 
 /*!
- * @brief  Parse a ImportExport GetStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ImportExport GetStatus \a response.
  */
 void GetStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ImportExport::GetStatusResponsePrivate
+ * \brief The GetStatusResponsePrivate class provides private implementation for GetStatusResponse.
  * \internal
  *
- * \class GetStatusResponsePrivate
- *
- * \brief Private implementation for GetStatusResponse.
+ * \inmodule QtAwsImportExport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetStatusResponse instance.
+ * Constructs a GetStatusResponsePrivate object with public implementation \a q.
  */
 GetStatusResponsePrivate::GetStatusResponsePrivate(
     GetStatusResponse * const q) : ImportExportResponsePrivate(q)
@@ -98,9 +91,7 @@ GetStatusResponsePrivate::GetStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ImportExport GetStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ImportExport GetStatus response element from \a xml.
  */
 void GetStatusResponsePrivate::parseGetStatusResponse(QXmlStreamReader &xml)
 {

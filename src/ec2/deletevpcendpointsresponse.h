@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteVpcEndpointsResponse : public EC2Response {
 public:
     DeleteVpcEndpointsResponse(const DeleteVpcEndpointsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteVpcEndpointsRequest * request() const;
+    virtual const DeleteVpcEndpointsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteVpcEndpointsResponse)

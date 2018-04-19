@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CopyProductRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CopyProductRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a CopyProductRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 CopyProductRequestPrivate::CopyProductRequestPrivate(
     const ServiceCatalogRequest::Action action, CopyProductRequest * const q)

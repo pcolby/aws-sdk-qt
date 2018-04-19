@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a RemoveTagsFromResourceRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsFromResourceRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, RemoveTagsFromResourceRequest * const q)

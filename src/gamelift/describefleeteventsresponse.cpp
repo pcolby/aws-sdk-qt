@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeFleetEventsResponse
- *
  * \brief The DescribeFleetEventsResponse class provides an interace for GameLift DescribeFleetEvents responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeFleetEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeFleetEventsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeFleetEventsResponse::DescribeFleetEventsResponse(
         const DescribeFleetEventsRequest &request,
@@ -491,6 +486,9 @@ DescribeFleetEventsResponse::DescribeFleetEventsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeFleetEventsRequest * DescribeFleetEventsResponse::request() const
 {
     Q_D(const DescribeFleetEventsResponse);
@@ -498,9 +496,8 @@ const DescribeFleetEventsRequest * DescribeFleetEventsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift DescribeFleetEvents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DescribeFleetEvents \a response.
  */
 void DescribeFleetEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DescribeFleetEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DescribeFleetEventsResponsePrivate
+ * \brief The DescribeFleetEventsResponsePrivate class provides private implementation for DescribeFleetEventsResponse.
  * \internal
  *
- * \class DescribeFleetEventsResponsePrivate
- *
- * \brief Private implementation for DescribeFleetEventsResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFleetEventsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeFleetEventsResponse instance.
+ * Constructs a DescribeFleetEventsResponsePrivate object with public implementation \a q.
  */
 DescribeFleetEventsResponsePrivate::DescribeFleetEventsResponsePrivate(
     DescribeFleetEventsResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DescribeFleetEventsResponsePrivate::DescribeFleetEventsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift DescribeFleetEventsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DescribeFleetEvents response element from \a xml.
  */
 void DescribeFleetEventsResponsePrivate::parseDescribeFleetEventsResponse(QXmlStreamReader &xml)
 {

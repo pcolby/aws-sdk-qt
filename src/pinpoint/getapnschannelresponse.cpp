@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetApnsChannelResponse
- *
  * \brief The GetApnsChannelResponse class provides an interace for Pinpoint GetApnsChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getApnsChannel
  */
 
 /*!
- * @brief  Constructs a new GetApnsChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetApnsChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 GetApnsChannelResponse::GetApnsChannelResponse(
         const GetApnsChannelRequest &request,
@@ -55,6 +50,9 @@ GetApnsChannelResponse::GetApnsChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetApnsChannelRequest * GetApnsChannelResponse::request() const
 {
     Q_D(const GetApnsChannelResponse);
@@ -62,9 +60,8 @@ const GetApnsChannelRequest * GetApnsChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetApnsChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetApnsChannel \a response.
  */
 void GetApnsChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetApnsChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetApnsChannelResponsePrivate
+ * \brief The GetApnsChannelResponsePrivate class provides private implementation for GetApnsChannelResponse.
  * \internal
  *
- * \class GetApnsChannelResponsePrivate
- *
- * \brief Private implementation for GetApnsChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApnsChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetApnsChannelResponse instance.
+ * Constructs a GetApnsChannelResponsePrivate object with public implementation \a q.
  */
 GetApnsChannelResponsePrivate::GetApnsChannelResponsePrivate(
     GetApnsChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetApnsChannelResponsePrivate::GetApnsChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetApnsChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetApnsChannel response element from \a xml.
  */
 void GetApnsChannelResponsePrivate::parseGetApnsChannelResponse(QXmlStreamReader &xml)
 {

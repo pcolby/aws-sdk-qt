@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeJobFlowsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeJobFlowsRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a DescribeJobFlowsRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 DescribeJobFlowsRequestPrivate::DescribeJobFlowsRequestPrivate(
     const EMRRequest::Action action, DescribeJobFlowsRequest * const q)

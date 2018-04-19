@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * CreateGrantRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateGrantRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a CreateGrantRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 CreateGrantRequestPrivate::CreateGrantRequestPrivate(
     const KMSRequest::Action action, CreateGrantRequest * const q)

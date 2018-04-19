@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DescribeOrganizationResponse
- *
  * \brief The DescribeOrganizationResponse class provides an interace for WorkMail DescribeOrganization responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DescribeOrganizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeOrganizationResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeOrganizationResponse::DescribeOrganizationResponse(
         const DescribeOrganizationRequest &request,
@@ -88,6 +83,9 @@ DescribeOrganizationResponse::DescribeOrganizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeOrganizationRequest * DescribeOrganizationResponse::request() const
 {
     Q_D(const DescribeOrganizationResponse);
@@ -95,9 +93,8 @@ const DescribeOrganizationRequest * DescribeOrganizationResponse::request() cons
 }
 
 /*!
- * @brief  Parse a WorkMail DescribeOrganization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail DescribeOrganization \a response.
  */
 void DescribeOrganizationResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DescribeOrganizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::DescribeOrganizationResponsePrivate
+ * \brief The DescribeOrganizationResponsePrivate class provides private implementation for DescribeOrganizationResponse.
  * \internal
  *
- * \class DescribeOrganizationResponsePrivate
- *
- * \brief Private implementation for DescribeOrganizationResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOrganizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeOrganizationResponse instance.
+ * Constructs a DescribeOrganizationResponsePrivate object with public implementation \a q.
  */
 DescribeOrganizationResponsePrivate::DescribeOrganizationResponsePrivate(
     DescribeOrganizationResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ DescribeOrganizationResponsePrivate::DescribeOrganizationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail DescribeOrganizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail DescribeOrganization response element from \a xml.
  */
 void DescribeOrganizationResponsePrivate::parseDescribeOrganizationResponse(QXmlStreamReader &xml)
 {

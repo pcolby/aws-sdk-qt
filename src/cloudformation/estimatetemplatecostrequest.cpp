@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * EstimateTemplateCostRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a EstimateTemplateCostRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a EstimateTemplateCostRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 EstimateTemplateCostRequestPrivate::EstimateTemplateCostRequestPrivate(
     const CloudFormationRequest::Action action, EstimateTemplateCostRequest * const q)

@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAccessKeyRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteAccessKeyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAccessKeyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteAccessKeyRequestPrivate::DeleteAccessKeyRequestPrivate(
     const IAMRequest::Action action, DeleteAccessKeyRequest * const q)

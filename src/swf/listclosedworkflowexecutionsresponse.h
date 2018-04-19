@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListClosedWorkflowExecutionsResponse : public SWFResponse {
 public:
     ListClosedWorkflowExecutionsResponse(const ListClosedWorkflowExecutionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListClosedWorkflowExecutionsRequest * request() const;
+    virtual const ListClosedWorkflowExecutionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListClosedWorkflowExecutionsResponse)

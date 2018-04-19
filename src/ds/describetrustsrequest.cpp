@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTrustsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeTrustsRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTrustsRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 DescribeTrustsRequestPrivate::DescribeTrustsRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeTrustsRequest * const q)

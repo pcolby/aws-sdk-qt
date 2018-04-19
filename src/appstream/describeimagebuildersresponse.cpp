@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeImageBuildersResponse
- *
  * \brief The DescribeImageBuildersResponse class provides an interace for AppStream DescribeImageBuilders responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeImageBuildersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeImageBuildersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeImageBuildersResponse::DescribeImageBuildersResponse(
         const DescribeImageBuildersRequest &request,
@@ -58,6 +53,9 @@ DescribeImageBuildersResponse::DescribeImageBuildersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeImageBuildersRequest * DescribeImageBuildersResponse::request() const
 {
     Q_D(const DescribeImageBuildersResponse);
@@ -65,9 +63,8 @@ const DescribeImageBuildersRequest * DescribeImageBuildersResponse::request() co
 }
 
 /*!
- * @brief  Parse a AppStream DescribeImageBuilders response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream DescribeImageBuilders \a response.
  */
 void DescribeImageBuildersResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeImageBuildersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::DescribeImageBuildersResponsePrivate
+ * \brief The DescribeImageBuildersResponsePrivate class provides private implementation for DescribeImageBuildersResponse.
  * \internal
  *
- * \class DescribeImageBuildersResponsePrivate
- *
- * \brief Private implementation for DescribeImageBuildersResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeImageBuildersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeImageBuildersResponse instance.
+ * Constructs a DescribeImageBuildersResponsePrivate object with public implementation \a q.
  */
 DescribeImageBuildersResponsePrivate::DescribeImageBuildersResponsePrivate(
     DescribeImageBuildersResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeImageBuildersResponsePrivate::DescribeImageBuildersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream DescribeImageBuildersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream DescribeImageBuilders response element from \a xml.
  */
 void DescribeImageBuildersResponsePrivate::parseDescribeImageBuildersResponse(QXmlStreamReader &xml)
 {

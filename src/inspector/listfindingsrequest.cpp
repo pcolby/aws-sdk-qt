@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListFindingsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ListFindingsRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a ListFindingsRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 ListFindingsRequestPrivate::ListFindingsRequestPrivate(
     const InspectorRequest::Action action, ListFindingsRequest * const q)

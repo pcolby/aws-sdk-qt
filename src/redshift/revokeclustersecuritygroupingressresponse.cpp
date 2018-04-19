@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RevokeClusterSecurityGroupIngressResponse
- *
  * \brief The RevokeClusterSecurityGroupIngressResponse class provides an interace for Redshift RevokeClusterSecurityGroupIngress responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new RevokeClusterSecurityGroupIngressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RevokeClusterSecurityGroupIngressResponse object for \a reply to \a request, with parent \a parent.
  */
 RevokeClusterSecurityGroupIngressResponse::RevokeClusterSecurityGroupIngressResponse(
         const RevokeClusterSecurityGroupIngressRequest &request,
@@ -85,6 +80,9 @@ RevokeClusterSecurityGroupIngressResponse::RevokeClusterSecurityGroupIngressResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RevokeClusterSecurityGroupIngressRequest * RevokeClusterSecurityGroupIngressResponse::request() const
 {
     Q_D(const RevokeClusterSecurityGroupIngressResponse);
@@ -92,9 +90,8 @@ const RevokeClusterSecurityGroupIngressRequest * RevokeClusterSecurityGroupIngre
 }
 
 /*!
- * @brief  Parse a Redshift RevokeClusterSecurityGroupIngress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift RevokeClusterSecurityGroupIngress \a response.
  */
 void RevokeClusterSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void RevokeClusterSecurityGroupIngressResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::Redshift::RevokeClusterSecurityGroupIngressResponsePrivate
+ * \brief The RevokeClusterSecurityGroupIngressResponsePrivate class provides private implementation for RevokeClusterSecurityGroupIngressResponse.
  * \internal
  *
- * \class RevokeClusterSecurityGroupIngressResponsePrivate
- *
- * \brief Private implementation for RevokeClusterSecurityGroupIngressResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeClusterSecurityGroupIngressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RevokeClusterSecurityGroupIngressResponse instance.
+ * Constructs a RevokeClusterSecurityGroupIngressResponsePrivate object with public implementation \a q.
  */
 RevokeClusterSecurityGroupIngressResponsePrivate::RevokeClusterSecurityGroupIngressResponsePrivate(
     RevokeClusterSecurityGroupIngressResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ RevokeClusterSecurityGroupIngressResponsePrivate::RevokeClusterSecurityGroupIngr
 }
 
 /*!
- * @brief  Parse an Redshift RevokeClusterSecurityGroupIngressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift RevokeClusterSecurityGroupIngress response element from \a xml.
  */
 void RevokeClusterSecurityGroupIngressResponsePrivate::parseRevokeClusterSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {

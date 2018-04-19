@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcEndpointServiceConfigurationResponse
- *
  * \brief The ModifyVpcEndpointServiceConfigurationResponse class provides an interace for EC2 ModifyVpcEndpointServiceConfiguration responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcEndpointServiceConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyVpcEndpointServiceConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyVpcEndpointServiceConfigurationResponse::ModifyVpcEndpointServiceConfigurationResponse(
         const ModifyVpcEndpointServiceConfigurationRequest &request,
@@ -59,6 +54,9 @@ ModifyVpcEndpointServiceConfigurationResponse::ModifyVpcEndpointServiceConfigura
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyVpcEndpointServiceConfigurationRequest * ModifyVpcEndpointServiceConfigurationResponse::request() const
 {
     Q_D(const ModifyVpcEndpointServiceConfigurationResponse);
@@ -66,9 +64,8 @@ const ModifyVpcEndpointServiceConfigurationRequest * ModifyVpcEndpointServiceCon
 }
 
 /*!
- * @brief  Parse a EC2 ModifyVpcEndpointServiceConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyVpcEndpointServiceConfiguration \a response.
  */
 void ModifyVpcEndpointServiceConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyVpcEndpointServiceConfigurationResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::EC2::ModifyVpcEndpointServiceConfigurationResponsePrivate
+ * \brief The ModifyVpcEndpointServiceConfigurationResponsePrivate class provides private implementation for ModifyVpcEndpointServiceConfigurationResponse.
  * \internal
  *
- * \class ModifyVpcEndpointServiceConfigurationResponsePrivate
- *
- * \brief Private implementation for ModifyVpcEndpointServiceConfigurationResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcEndpointServiceConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyVpcEndpointServiceConfigurationResponse instance.
+ * Constructs a ModifyVpcEndpointServiceConfigurationResponsePrivate object with public implementation \a q.
  */
 ModifyVpcEndpointServiceConfigurationResponsePrivate::ModifyVpcEndpointServiceConfigurationResponsePrivate(
     ModifyVpcEndpointServiceConfigurationResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyVpcEndpointServiceConfigurationResponsePrivate::ModifyVpcEndpointServiceCo
 }
 
 /*!
- * @brief  Parse an EC2 ModifyVpcEndpointServiceConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyVpcEndpointServiceConfiguration response element from \a xml.
  */
 void ModifyVpcEndpointServiceConfigurationResponsePrivate::parseModifyVpcEndpointServiceConfigurationResponse(QXmlStreamReader &xml)
 {

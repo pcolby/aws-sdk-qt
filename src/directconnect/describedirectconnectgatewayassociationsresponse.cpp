@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeDirectConnectGatewayAssociationsResponse
- *
  * \brief The DescribeDirectConnectGatewayAssociationsResponse class provides an interace for DirectConnect DescribeDirectConnectGatewayAssociations responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeDirectConnectGatewayAssociationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDirectConnectGatewayAssociationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDirectConnectGatewayAssociationsResponse::DescribeDirectConnectGatewayAssociationsResponse(
         const DescribeDirectConnectGatewayAssociationsRequest &request,
@@ -63,6 +58,9 @@ DescribeDirectConnectGatewayAssociationsResponse::DescribeDirectConnectGatewayAs
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDirectConnectGatewayAssociationsRequest * DescribeDirectConnectGatewayAssociationsResponse::request() const
 {
     Q_D(const DescribeDirectConnectGatewayAssociationsResponse);
@@ -70,9 +68,8 @@ const DescribeDirectConnectGatewayAssociationsRequest * DescribeDirectConnectGat
 }
 
 /*!
- * @brief  Parse a DirectConnect DescribeDirectConnectGatewayAssociations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DescribeDirectConnectGatewayAssociations \a response.
  */
 void DescribeDirectConnectGatewayAssociationsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DescribeDirectConnectGatewayAssociationsResponse::parseSuccess(QIODevice &r
 }
 
 /*!
+ * \class QtAws::DirectConnect::DescribeDirectConnectGatewayAssociationsResponsePrivate
+ * \brief The DescribeDirectConnectGatewayAssociationsResponsePrivate class provides private implementation for DescribeDirectConnectGatewayAssociationsResponse.
  * \internal
  *
- * \class DescribeDirectConnectGatewayAssociationsResponsePrivate
- *
- * \brief Private implementation for DescribeDirectConnectGatewayAssociationsResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDirectConnectGatewayAssociationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDirectConnectGatewayAssociationsResponse instance.
+ * Constructs a DescribeDirectConnectGatewayAssociationsResponsePrivate object with public implementation \a q.
  */
 DescribeDirectConnectGatewayAssociationsResponsePrivate::DescribeDirectConnectGatewayAssociationsResponsePrivate(
     DescribeDirectConnectGatewayAssociationsResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DescribeDirectConnectGatewayAssociationsResponsePrivate::DescribeDirectConnectGa
 }
 
 /*!
- * @brief  Parse an DirectConnect DescribeDirectConnectGatewayAssociationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DescribeDirectConnectGatewayAssociations response element from \a xml.
  */
 void DescribeDirectConnectGatewayAssociationsResponsePrivate::parseDescribeDirectConnectGatewayAssociationsResponse(QXmlStreamReader &xml)
 {

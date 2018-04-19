@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::CreateAddressBookResponse
- *
  * \brief The CreateAddressBookResponse class provides an interace for AlexaForBusiness CreateAddressBook responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new CreateAddressBookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAddressBookResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAddressBookResponse::CreateAddressBookResponse(
         const CreateAddressBookRequest &request,
@@ -60,6 +55,9 @@ CreateAddressBookResponse::CreateAddressBookResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAddressBookRequest * CreateAddressBookResponse::request() const
 {
     Q_D(const CreateAddressBookResponse);
@@ -67,9 +65,8 @@ const CreateAddressBookRequest * CreateAddressBookResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness CreateAddressBook response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness CreateAddressBook \a response.
  */
 void CreateAddressBookResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateAddressBookResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::CreateAddressBookResponsePrivate
+ * \brief The CreateAddressBookResponsePrivate class provides private implementation for CreateAddressBookResponse.
  * \internal
  *
- * \class CreateAddressBookResponsePrivate
- *
- * \brief Private implementation for CreateAddressBookResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAddressBookResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAddressBookResponse instance.
+ * Constructs a CreateAddressBookResponsePrivate object with public implementation \a q.
  */
 CreateAddressBookResponsePrivate::CreateAddressBookResponsePrivate(
     CreateAddressBookResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateAddressBookResponsePrivate::CreateAddressBookResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness CreateAddressBookResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness CreateAddressBook response element from \a xml.
  */
 void CreateAddressBookResponsePrivate::parseCreateAddressBookResponse(QXmlStreamReader &xml)
 {

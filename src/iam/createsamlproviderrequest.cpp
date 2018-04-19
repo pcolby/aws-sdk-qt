@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * CreateSAMLProviderRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateSAMLProviderRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a CreateSAMLProviderRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 CreateSAMLProviderRequestPrivate::CreateSAMLProviderRequestPrivate(
     const IAMRequest::Action action, CreateSAMLProviderRequest * const q)

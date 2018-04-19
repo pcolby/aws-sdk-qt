@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeReplicationSubnetGroupsResponse
- *
  * \brief The DescribeReplicationSubnetGroupsResponse class provides an interace for DatabaseMigrationService DescribeReplicationSubnetGroups responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeReplicationSubnetGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeReplicationSubnetGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeReplicationSubnetGroupsResponse::DescribeReplicationSubnetGroupsResponse(
         const DescribeReplicationSubnetGroupsRequest &request,
@@ -66,6 +61,9 @@ DescribeReplicationSubnetGroupsResponse::DescribeReplicationSubnetGroupsResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeReplicationSubnetGroupsRequest * DescribeReplicationSubnetGroupsResponse::request() const
 {
     Q_D(const DescribeReplicationSubnetGroupsResponse);
@@ -73,9 +71,8 @@ const DescribeReplicationSubnetGroupsRequest * DescribeReplicationSubnetGroupsRe
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DescribeReplicationSubnetGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DescribeReplicationSubnetGroups \a response.
  */
 void DescribeReplicationSubnetGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeReplicationSubnetGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DescribeReplicationSubnetGroupsResponsePrivate
+ * \brief The DescribeReplicationSubnetGroupsResponsePrivate class provides private implementation for DescribeReplicationSubnetGroupsResponse.
  * \internal
  *
- * \class DescribeReplicationSubnetGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeReplicationSubnetGroupsResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReplicationSubnetGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeReplicationSubnetGroupsResponse instance.
+ * Constructs a DescribeReplicationSubnetGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeReplicationSubnetGroupsResponsePrivate::DescribeReplicationSubnetGroupsResponsePrivate(
     DescribeReplicationSubnetGroupsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeReplicationSubnetGroupsResponsePrivate::DescribeReplicationSubnetGroupsR
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DescribeReplicationSubnetGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DescribeReplicationSubnetGroups response element from \a xml.
  */
 void DescribeReplicationSubnetGroupsResponsePrivate::parseDescribeReplicationSubnetGroupsResponse(QXmlStreamReader &xml)
 {

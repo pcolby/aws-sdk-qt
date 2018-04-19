@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * EnableMetricsCollectionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a EnableMetricsCollectionRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a EnableMetricsCollectionRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 EnableMetricsCollectionRequestPrivate::EnableMetricsCollectionRequestPrivate(
     const AutoScalingRequest::Action action, EnableMetricsCollectionRequest * const q)

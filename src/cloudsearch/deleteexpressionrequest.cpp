@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteExpressionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteExpressionRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DeleteExpressionRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DeleteExpressionRequestPrivate::DeleteExpressionRequestPrivate(
     const CloudSearchRequest::Action action, DeleteExpressionRequest * const q)

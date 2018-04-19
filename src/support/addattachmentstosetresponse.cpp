@@ -29,10 +29,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::AddAttachmentsToSetResponse
- *
  * \brief The AddAttachmentsToSetResponse class provides an interace for Support AddAttachmentsToSet responses.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -107,11 +106,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new AddAttachmentsToSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddAttachmentsToSetResponse object for \a reply to \a request, with parent \a parent.
  */
 AddAttachmentsToSetResponse::AddAttachmentsToSetResponse(
         const AddAttachmentsToSetRequest &request,
@@ -123,6 +118,9 @@ AddAttachmentsToSetResponse::AddAttachmentsToSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddAttachmentsToSetRequest * AddAttachmentsToSetResponse::request() const
 {
     Q_D(const AddAttachmentsToSetResponse);
@@ -130,9 +128,8 @@ const AddAttachmentsToSetRequest * AddAttachmentsToSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a Support AddAttachmentsToSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Support AddAttachmentsToSet \a response.
  */
 void AddAttachmentsToSetResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void AddAttachmentsToSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Support::AddAttachmentsToSetResponsePrivate
+ * \brief The AddAttachmentsToSetResponsePrivate class provides private implementation for AddAttachmentsToSetResponse.
  * \internal
  *
- * \class AddAttachmentsToSetResponsePrivate
- *
- * \brief Private implementation for AddAttachmentsToSetResponse.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddAttachmentsToSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddAttachmentsToSetResponse instance.
+ * Constructs a AddAttachmentsToSetResponsePrivate object with public implementation \a q.
  */
 AddAttachmentsToSetResponsePrivate::AddAttachmentsToSetResponsePrivate(
     AddAttachmentsToSetResponse * const q) : SupportResponsePrivate(q)
@@ -163,9 +156,7 @@ AddAttachmentsToSetResponsePrivate::AddAttachmentsToSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Support AddAttachmentsToSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Support AddAttachmentsToSet response element from \a xml.
  */
 void AddAttachmentsToSetResponsePrivate::parseAddAttachmentsToSetResponse(QXmlStreamReader &xml)
 {

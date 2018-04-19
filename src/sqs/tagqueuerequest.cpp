@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * TagQueueRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a TagQueueRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a TagQueueRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 TagQueueRequestPrivate::TagQueueRequestPrivate(
     const SQSRequest::Action action, TagQueueRequest * const q)

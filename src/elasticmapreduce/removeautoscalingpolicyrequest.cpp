@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * RemoveAutoScalingPolicyRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a RemoveAutoScalingPolicyRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a RemoveAutoScalingPolicyRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 RemoveAutoScalingPolicyRequestPrivate::RemoveAutoScalingPolicyRequestPrivate(
     const EMRRequest::Action action, RemoveAutoScalingPolicyRequest * const q)

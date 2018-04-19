@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifySpotFleetRequestRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ModifySpotFleetRequestRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifySpotFleetRequestRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifySpotFleetRequestRequestPrivate::ModifySpotFleetRequestRequestPrivate(
     const EC2Request::Action action, ModifySpotFleetRequestRequest * const q)

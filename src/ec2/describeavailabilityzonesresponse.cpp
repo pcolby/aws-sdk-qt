@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeAvailabilityZonesResponse
- *
  * \brief The DescribeAvailabilityZonesResponse class provides an interace for EC2 DescribeAvailabilityZones responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeAvailabilityZonesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAvailabilityZonesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAvailabilityZonesResponse::DescribeAvailabilityZonesResponse(
         const DescribeAvailabilityZonesRequest &request,
@@ -59,6 +54,9 @@ DescribeAvailabilityZonesResponse::DescribeAvailabilityZonesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAvailabilityZonesRequest * DescribeAvailabilityZonesResponse::request() const
 {
     Q_D(const DescribeAvailabilityZonesResponse);
@@ -66,9 +64,8 @@ const DescribeAvailabilityZonesRequest * DescribeAvailabilityZonesResponse::requ
 }
 
 /*!
- * @brief  Parse a EC2 DescribeAvailabilityZones response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeAvailabilityZones \a response.
  */
 void DescribeAvailabilityZonesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeAvailabilityZonesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeAvailabilityZonesResponsePrivate
+ * \brief The DescribeAvailabilityZonesResponsePrivate class provides private implementation for DescribeAvailabilityZonesResponse.
  * \internal
  *
- * \class DescribeAvailabilityZonesResponsePrivate
- *
- * \brief Private implementation for DescribeAvailabilityZonesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAvailabilityZonesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAvailabilityZonesResponse instance.
+ * Constructs a DescribeAvailabilityZonesResponsePrivate object with public implementation \a q.
  */
 DescribeAvailabilityZonesResponsePrivate::DescribeAvailabilityZonesResponsePrivate(
     DescribeAvailabilityZonesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeAvailabilityZonesResponsePrivate::DescribeAvailabilityZonesResponsePriva
 }
 
 /*!
- * @brief  Parse an EC2 DescribeAvailabilityZonesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeAvailabilityZones response element from \a xml.
  */
 void DescribeAvailabilityZonesResponsePrivate::parseDescribeAvailabilityZonesResponse(QXmlStreamReader &xml)
 {

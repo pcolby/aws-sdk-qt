@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::ListTagsForVaultResponse
- *
  * \brief The ListTagsForVaultResponse class provides an interace for Glacier ListTagsForVault responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForVaultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsForVaultResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsForVaultResponse::ListTagsForVaultResponse(
         const ListTagsForVaultRequest &request,
@@ -93,6 +88,9 @@ ListTagsForVaultResponse::ListTagsForVaultResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsForVaultRequest * ListTagsForVaultResponse::request() const
 {
     Q_D(const ListTagsForVaultResponse);
@@ -100,9 +98,8 @@ const ListTagsForVaultRequest * ListTagsForVaultResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier ListTagsForVault response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier ListTagsForVault \a response.
  */
 void ListTagsForVaultResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void ListTagsForVaultResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::ListTagsForVaultResponsePrivate
+ * \brief The ListTagsForVaultResponsePrivate class provides private implementation for ListTagsForVaultResponse.
  * \internal
  *
- * \class ListTagsForVaultResponsePrivate
- *
- * \brief Private implementation for ListTagsForVaultResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForVaultResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsForVaultResponse instance.
+ * Constructs a ListTagsForVaultResponsePrivate object with public implementation \a q.
  */
 ListTagsForVaultResponsePrivate::ListTagsForVaultResponsePrivate(
     ListTagsForVaultResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ ListTagsForVaultResponsePrivate::ListTagsForVaultResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier ListTagsForVaultResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier ListTagsForVault response element from \a xml.
  */
 void ListTagsForVaultResponsePrivate::parseListTagsForVaultResponse(QXmlStreamReader &xml)
 {

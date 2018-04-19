@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRoleAliasRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a UpdateRoleAliasRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRoleAliasRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 UpdateRoleAliasRequestPrivate::UpdateRoleAliasRequestPrivate(
     const IoTRequest::Action action, UpdateRoleAliasRequest * const q)

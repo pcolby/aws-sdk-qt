@@ -29,10 +29,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::GetMetricStatisticsResponse
- *
  * \brief The GetMetricStatisticsResponse class provides an interace for CloudWatch GetMetricStatistics responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -53,11 +52,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new GetMetricStatisticsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetMetricStatisticsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetMetricStatisticsResponse::GetMetricStatisticsResponse(
         const GetMetricStatisticsRequest &request,
@@ -69,6 +64,9 @@ GetMetricStatisticsResponse::GetMetricStatisticsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetMetricStatisticsRequest * GetMetricStatisticsResponse::request() const
 {
     Q_D(const GetMetricStatisticsResponse);
@@ -76,9 +74,8 @@ const GetMetricStatisticsRequest * GetMetricStatisticsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatch GetMetricStatistics response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatch GetMetricStatistics \a response.
  */
 void GetMetricStatisticsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void GetMetricStatisticsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatch::GetMetricStatisticsResponsePrivate
+ * \brief The GetMetricStatisticsResponsePrivate class provides private implementation for GetMetricStatisticsResponse.
  * \internal
  *
- * \class GetMetricStatisticsResponsePrivate
- *
- * \brief Private implementation for GetMetricStatisticsResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMetricStatisticsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetMetricStatisticsResponse instance.
+ * Constructs a GetMetricStatisticsResponsePrivate object with public implementation \a q.
  */
 GetMetricStatisticsResponsePrivate::GetMetricStatisticsResponsePrivate(
     GetMetricStatisticsResponse * const q) : CloudWatchResponsePrivate(q)
@@ -109,9 +102,7 @@ GetMetricStatisticsResponsePrivate::GetMetricStatisticsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatch GetMetricStatisticsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatch GetMetricStatistics response element from \a xml.
  */
 void GetMetricStatisticsResponsePrivate::parseGetMetricStatisticsResponse(QXmlStreamReader &xml)
 {

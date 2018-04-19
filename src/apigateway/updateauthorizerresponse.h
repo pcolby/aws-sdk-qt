@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateAuthorizerResponse : public APIGatewayResponse {
 public:
     UpdateAuthorizerResponse(const UpdateAuthorizerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateAuthorizerRequest * request() const;
+    virtual const UpdateAuthorizerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateAuthorizerResponse)

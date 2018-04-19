@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListResourceDataSyncResponse
- *
  * \brief The ListResourceDataSyncResponse class provides an interace for SSM ListResourceDataSync responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListResourceDataSyncResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListResourceDataSyncResponse object for \a reply to \a request, with parent \a parent.
  */
 ListResourceDataSyncResponse::ListResourceDataSyncResponse(
         const ListResourceDataSyncRequest &request,
@@ -79,6 +74,9 @@ ListResourceDataSyncResponse::ListResourceDataSyncResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListResourceDataSyncRequest * ListResourceDataSyncResponse::request() const
 {
     Q_D(const ListResourceDataSyncResponse);
@@ -86,9 +84,8 @@ const ListResourceDataSyncRequest * ListResourceDataSyncResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SSM ListResourceDataSync response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM ListResourceDataSync \a response.
  */
 void ListResourceDataSyncResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void ListResourceDataSyncResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::ListResourceDataSyncResponsePrivate
+ * \brief The ListResourceDataSyncResponsePrivate class provides private implementation for ListResourceDataSyncResponse.
  * \internal
  *
- * \class ListResourceDataSyncResponsePrivate
- *
- * \brief Private implementation for ListResourceDataSyncResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceDataSyncResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListResourceDataSyncResponse instance.
+ * Constructs a ListResourceDataSyncResponsePrivate object with public implementation \a q.
  */
 ListResourceDataSyncResponsePrivate::ListResourceDataSyncResponsePrivate(
     ListResourceDataSyncResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ ListResourceDataSyncResponsePrivate::ListResourceDataSyncResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM ListResourceDataSyncResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM ListResourceDataSync response element from \a xml.
  */
 void ListResourceDataSyncResponsePrivate::parseListResourceDataSyncResponse(QXmlStreamReader &xml)
 {

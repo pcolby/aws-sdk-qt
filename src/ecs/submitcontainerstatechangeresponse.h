@@ -34,10 +34,10 @@ class QTAWS_EXPORT SubmitContainerStateChangeResponse : public ECSResponse {
 public:
     SubmitContainerStateChangeResponse(const SubmitContainerStateChangeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SubmitContainerStateChangeRequest * request() const;
+    virtual const SubmitContainerStateChangeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SubmitContainerStateChangeResponse)

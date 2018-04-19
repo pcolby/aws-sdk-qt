@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSqlInjectionMatchSetRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteSqlInjectionMatchSetRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSqlInjectionMatchSetRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 DeleteSqlInjectionMatchSetRequestPrivate::DeleteSqlInjectionMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteSqlInjectionMatchSetRequest * const q)

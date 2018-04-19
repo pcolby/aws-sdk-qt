@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::EnableAWSServiceAccessResponse
- *
  * \brief The EnableAWSServiceAccessResponse class provides an interace for Organizations EnableAWSServiceAccess responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new EnableAWSServiceAccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableAWSServiceAccessResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableAWSServiceAccessResponse::EnableAWSServiceAccessResponse(
         const EnableAWSServiceAccessRequest &request,
@@ -197,6 +192,9 @@ EnableAWSServiceAccessResponse::EnableAWSServiceAccessResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableAWSServiceAccessRequest * EnableAWSServiceAccessResponse::request() const
 {
     Q_D(const EnableAWSServiceAccessResponse);
@@ -204,9 +202,8 @@ const EnableAWSServiceAccessRequest * EnableAWSServiceAccessResponse::request() 
 }
 
 /*!
- * @brief  Parse a Organizations EnableAWSServiceAccess response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations EnableAWSServiceAccess \a response.
  */
 void EnableAWSServiceAccessResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void EnableAWSServiceAccessResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::EnableAWSServiceAccessResponsePrivate
+ * \brief The EnableAWSServiceAccessResponsePrivate class provides private implementation for EnableAWSServiceAccessResponse.
  * \internal
  *
- * \class EnableAWSServiceAccessResponsePrivate
- *
- * \brief Private implementation for EnableAWSServiceAccessResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableAWSServiceAccessResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableAWSServiceAccessResponse instance.
+ * Constructs a EnableAWSServiceAccessResponsePrivate object with public implementation \a q.
  */
 EnableAWSServiceAccessResponsePrivate::EnableAWSServiceAccessResponsePrivate(
     EnableAWSServiceAccessResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ EnableAWSServiceAccessResponsePrivate::EnableAWSServiceAccessResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations EnableAWSServiceAccessResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations EnableAWSServiceAccess response element from \a xml.
  */
 void EnableAWSServiceAccessResponsePrivate::parseEnableAWSServiceAccessResponse(QXmlStreamReader &xml)
 {

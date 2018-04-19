@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::ListConfigurationRevisionsResponse
- *
  * \brief The ListConfigurationRevisionsResponse class provides an interace for MQ ListConfigurationRevisions responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new ListConfigurationRevisionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListConfigurationRevisionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListConfigurationRevisionsResponse::ListConfigurationRevisionsResponse(
         const ListConfigurationRevisionsRequest &request,
@@ -57,6 +52,9 @@ ListConfigurationRevisionsResponse::ListConfigurationRevisionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListConfigurationRevisionsRequest * ListConfigurationRevisionsResponse::request() const
 {
     Q_D(const ListConfigurationRevisionsResponse);
@@ -64,9 +62,8 @@ const ListConfigurationRevisionsRequest * ListConfigurationRevisionsResponse::re
 }
 
 /*!
- * @brief  Parse a MQ ListConfigurationRevisions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ ListConfigurationRevisions \a response.
  */
 void ListConfigurationRevisionsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListConfigurationRevisionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::ListConfigurationRevisionsResponsePrivate
+ * \brief The ListConfigurationRevisionsResponsePrivate class provides private implementation for ListConfigurationRevisionsResponse.
  * \internal
  *
- * \class ListConfigurationRevisionsResponsePrivate
- *
- * \brief Private implementation for ListConfigurationRevisionsResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListConfigurationRevisionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListConfigurationRevisionsResponse instance.
+ * Constructs a ListConfigurationRevisionsResponsePrivate object with public implementation \a q.
  */
 ListConfigurationRevisionsResponsePrivate::ListConfigurationRevisionsResponsePrivate(
     ListConfigurationRevisionsResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ ListConfigurationRevisionsResponsePrivate::ListConfigurationRevisionsResponsePri
 }
 
 /*!
- * @brief  Parse an MQ ListConfigurationRevisionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ ListConfigurationRevisions response element from \a xml.
  */
 void ListConfigurationRevisionsResponsePrivate::parseListConfigurationRevisionsResponse(QXmlStreamReader &xml)
 {

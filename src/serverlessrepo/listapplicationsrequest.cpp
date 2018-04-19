@@ -102,9 +102,8 @@ QtAws::Core::AwsAbstractResponse * ListApplicationsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListApplicationsRequestPrivate object for ServerlessApplicationRepository \a action with,
- * public implementation \a q.
+ * Constructs a ListApplicationsRequestPrivate object for ServerlessApplicationRepository \a action,
+ * with public implementation \a q.
  */
 ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, ListApplicationsRequest * const q)

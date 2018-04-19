@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CreateMicrosoftADResponse
- *
  * \brief The CreateMicrosoftADResponse class provides an interace for DirectoryService CreateMicrosoftAD responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CreateMicrosoftADResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateMicrosoftADResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateMicrosoftADResponse::CreateMicrosoftADResponse(
         const CreateMicrosoftADRequest &request,
@@ -69,6 +64,9 @@ CreateMicrosoftADResponse::CreateMicrosoftADResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateMicrosoftADRequest * CreateMicrosoftADResponse::request() const
 {
     Q_D(const CreateMicrosoftADResponse);
@@ -76,9 +74,8 @@ const CreateMicrosoftADRequest * CreateMicrosoftADResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService CreateMicrosoftAD response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService CreateMicrosoftAD \a response.
  */
 void CreateMicrosoftADResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateMicrosoftADResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::CreateMicrosoftADResponsePrivate
+ * \brief The CreateMicrosoftADResponsePrivate class provides private implementation for CreateMicrosoftADResponse.
  * \internal
  *
- * \class CreateMicrosoftADResponsePrivate
- *
- * \brief Private implementation for CreateMicrosoftADResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMicrosoftADResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateMicrosoftADResponse instance.
+ * Constructs a CreateMicrosoftADResponsePrivate object with public implementation \a q.
  */
 CreateMicrosoftADResponsePrivate::CreateMicrosoftADResponsePrivate(
     CreateMicrosoftADResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateMicrosoftADResponsePrivate::CreateMicrosoftADResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService CreateMicrosoftADResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService CreateMicrosoftAD response element from \a xml.
  */
 void CreateMicrosoftADResponsePrivate::parseCreateMicrosoftADResponse(QXmlStreamReader &xml)
 {

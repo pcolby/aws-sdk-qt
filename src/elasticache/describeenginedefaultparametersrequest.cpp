@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultParametersRequest::respo
  */
 
 /*!
- *
- * Constructs a DescribeEngineDefaultParametersRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEngineDefaultParametersRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeEngineDefaultParametersRequest * const q)

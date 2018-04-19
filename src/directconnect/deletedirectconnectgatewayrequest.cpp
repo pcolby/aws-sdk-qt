@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectConnectGatewayRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteDirectConnectGatewayRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDirectConnectGatewayRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 DeleteDirectConnectGatewayRequestPrivate::DeleteDirectConnectGatewayRequestPrivate(
     const DirectConnectRequest::Action action, DeleteDirectConnectGatewayRequest * const q)

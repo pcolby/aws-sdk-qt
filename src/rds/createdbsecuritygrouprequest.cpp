@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CreateDBSecurityGroupRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateDBSecurityGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CreateDBSecurityGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CreateDBSecurityGroupRequestPrivate::CreateDBSecurityGroupRequestPrivate(
     const RDSRequest::Action action, CreateDBSecurityGroupRequest * const q)

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformApplicationRequest::response(QN
  */
 
 /*!
- *
- * Constructs a CreatePlatformApplicationRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a CreatePlatformApplicationRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 CreatePlatformApplicationRequestPrivate::CreatePlatformApplicationRequestPrivate(
     const SNSRequest::Action action, CreatePlatformApplicationRequest * const q)

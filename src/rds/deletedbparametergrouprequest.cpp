@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDBParameterGroupRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteDBParameterGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDBParameterGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DeleteDBParameterGroupRequestPrivate::DeleteDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, DeleteDBParameterGroupRequest * const q)

@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetDomainDetailRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetDomainDetailRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a GetDomainDetailRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 GetDomainDetailRequestPrivate::GetDomainDetailRequestPrivate(
     const Route53DomainsRequest::Action action, GetDomainDetailRequest * const q)

@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListMigrationTasksRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListMigrationTasksRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a ListMigrationTasksRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 ListMigrationTasksRequestPrivate::ListMigrationTasksRequestPrivate(
     const MigrationHubRequest::Action action, ListMigrationTasksRequest * const q)

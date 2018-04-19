@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTypedLinkFacetRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteTypedLinkFacetRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTypedLinkFacetRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 DeleteTypedLinkFacetRequestPrivate::DeleteTypedLinkFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, DeleteTypedLinkFacetRequest * const q)

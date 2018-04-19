@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListObjectPoliciesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListObjectPoliciesRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a ListObjectPoliciesRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 ListObjectPoliciesRequestPrivate::ListObjectPoliciesRequestPrivate(
     const CloudDirectoryRequest::Action action, ListObjectPoliciesRequest * const q)

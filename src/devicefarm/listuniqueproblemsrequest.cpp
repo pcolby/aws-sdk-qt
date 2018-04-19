@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListUniqueProblemsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListUniqueProblemsRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a ListUniqueProblemsRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 ListUniqueProblemsRequestPrivate::ListUniqueProblemsRequestPrivate(
     const DeviceFarmRequest::Action action, ListUniqueProblemsRequest * const q)

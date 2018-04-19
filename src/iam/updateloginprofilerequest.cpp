@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateLoginProfileRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateLoginProfileRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateLoginProfileRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateLoginProfileRequestPrivate::UpdateLoginProfileRequestPrivate(
     const IAMRequest::Action action, UpdateLoginProfileRequest * const q)

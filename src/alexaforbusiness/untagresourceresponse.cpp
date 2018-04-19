@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UntagResourceResponse
- *
  * \brief The UntagResourceResponse class provides an interace for AlexaForBusiness UntagResource responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UntagResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UntagResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 UntagResourceResponse::UntagResourceResponse(
         const UntagResourceRequest &request,
@@ -60,6 +55,9 @@ UntagResourceResponse::UntagResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UntagResourceRequest * UntagResourceResponse::request() const
 {
     Q_D(const UntagResourceResponse);
@@ -67,9 +65,8 @@ const UntagResourceRequest * UntagResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness UntagResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness UntagResource \a response.
  */
 void UntagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::UntagResourceResponsePrivate
+ * \brief The UntagResourceResponsePrivate class provides private implementation for UntagResourceResponse.
  * \internal
  *
- * \class UntagResourceResponsePrivate
- *
- * \brief Private implementation for UntagResourceResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UntagResourceResponse instance.
+ * Constructs a UntagResourceResponsePrivate object with public implementation \a q.
  */
 UntagResourceResponsePrivate::UntagResourceResponsePrivate(
     UntagResourceResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ UntagResourceResponsePrivate::UntagResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness UntagResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness UntagResource response element from \a xml.
  */
 void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &xml)
 {

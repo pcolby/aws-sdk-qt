@@ -53,7 +53,7 @@ namespace Support {
  */
 
 /*!
- * Constructs a[n] SupportRequest object for Support \a action.
+ * Constructs a SupportRequest object for Support \a action.
  */
 SupportRequest::SupportRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SupportRequestPrivate(action, this))
@@ -253,8 +253,8 @@ QNetworkRequest SupportRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a SupportRequestPrivate object for Support \a action with,
- * public implementation \a q.
+ * Constructs a SupportRequestPrivate object for Support \a action,
+ * with public implementation \a q.
  */
 SupportRequestPrivate::SupportRequestPrivate(const SupportRequest::Action action, SupportRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

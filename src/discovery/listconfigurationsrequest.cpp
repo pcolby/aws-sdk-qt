@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListConfigurationsRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a ListConfigurationsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, ListConfigurationsRequest * const q)

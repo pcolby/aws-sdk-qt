@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::CreateResourceResponse
- *
  * \brief The CreateResourceResponse class provides an interace for WorkMail CreateResource responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateResourceResponse::CreateResourceResponse(
         const CreateResourceRequest &request,
@@ -88,6 +83,9 @@ CreateResourceResponse::CreateResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateResourceRequest * CreateResourceResponse::request() const
 {
     Q_D(const CreateResourceResponse);
@@ -95,9 +93,8 @@ const CreateResourceRequest * CreateResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail CreateResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail CreateResource \a response.
  */
 void CreateResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void CreateResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::CreateResourceResponsePrivate
+ * \brief The CreateResourceResponsePrivate class provides private implementation for CreateResourceResponse.
  * \internal
  *
- * \class CreateResourceResponsePrivate
- *
- * \brief Private implementation for CreateResourceResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateResourceResponse instance.
+ * Constructs a CreateResourceResponsePrivate object with public implementation \a q.
  */
 CreateResourceResponsePrivate::CreateResourceResponsePrivate(
     CreateResourceResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ CreateResourceResponsePrivate::CreateResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail CreateResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail CreateResource response element from \a xml.
  */
 void CreateResourceResponsePrivate::parseCreateResourceResponse(QXmlStreamReader &xml)
 {

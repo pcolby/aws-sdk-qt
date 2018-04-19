@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeVirtualGatewaysResponse : public DirectConnectRespons
 public:
     DescribeVirtualGatewaysResponse(const DescribeVirtualGatewaysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeVirtualGatewaysRequest * request() const;
+    virtual const DescribeVirtualGatewaysRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeVirtualGatewaysResponse)

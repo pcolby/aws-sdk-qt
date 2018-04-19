@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::CreateContactResponse
- *
  * \brief The CreateContactResponse class provides an interace for AlexaForBusiness CreateContact responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new CreateContactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateContactResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateContactResponse::CreateContactResponse(
         const CreateContactRequest &request,
@@ -60,6 +55,9 @@ CreateContactResponse::CreateContactResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateContactRequest * CreateContactResponse::request() const
 {
     Q_D(const CreateContactResponse);
@@ -67,9 +65,8 @@ const CreateContactRequest * CreateContactResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness CreateContact response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness CreateContact \a response.
  */
 void CreateContactResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateContactResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::CreateContactResponsePrivate
+ * \brief The CreateContactResponsePrivate class provides private implementation for CreateContactResponse.
  * \internal
  *
- * \class CreateContactResponsePrivate
- *
- * \brief Private implementation for CreateContactResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateContactResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateContactResponse instance.
+ * Constructs a CreateContactResponsePrivate object with public implementation \a q.
  */
 CreateContactResponsePrivate::CreateContactResponsePrivate(
     CreateContactResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateContactResponsePrivate::CreateContactResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness CreateContactResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness CreateContact response element from \a xml.
  */
 void CreateContactResponsePrivate::parseCreateContactResponse(QXmlStreamReader &xml)
 {

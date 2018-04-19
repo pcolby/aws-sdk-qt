@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteRetentionPolicyResponse
- *
  * \brief The DeleteRetentionPolicyResponse class provides an interace for CloudWatchLogs DeleteRetentionPolicy responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteRetentionPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRetentionPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRetentionPolicyResponse::DeleteRetentionPolicyResponse(
         const DeleteRetentionPolicyRequest &request,
@@ -84,6 +79,9 @@ DeleteRetentionPolicyResponse::DeleteRetentionPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRetentionPolicyRequest * DeleteRetentionPolicyResponse::request() const
 {
     Q_D(const DeleteRetentionPolicyResponse);
@@ -91,9 +89,8 @@ const DeleteRetentionPolicyRequest * DeleteRetentionPolicyResponse::request() co
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DeleteRetentionPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DeleteRetentionPolicy \a response.
  */
 void DeleteRetentionPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteRetentionPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DeleteRetentionPolicyResponsePrivate
+ * \brief The DeleteRetentionPolicyResponsePrivate class provides private implementation for DeleteRetentionPolicyResponse.
  * \internal
  *
- * \class DeleteRetentionPolicyResponsePrivate
- *
- * \brief Private implementation for DeleteRetentionPolicyResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRetentionPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRetentionPolicyResponse instance.
+ * Constructs a DeleteRetentionPolicyResponsePrivate object with public implementation \a q.
  */
 DeleteRetentionPolicyResponsePrivate::DeleteRetentionPolicyResponsePrivate(
     DeleteRetentionPolicyResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteRetentionPolicyResponsePrivate::DeleteRetentionPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DeleteRetentionPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DeleteRetentionPolicy response element from \a xml.
  */
 void DeleteRetentionPolicyResponsePrivate::parseDeleteRetentionPolicyResponse(QXmlStreamReader &xml)
 {

@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a AddTagsToResourceRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a AddTagsToResourceRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const RDSRequest::Action action, AddTagsToResourceRequest * const q)

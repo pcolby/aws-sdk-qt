@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a AddTagsRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a AddTagsRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const DataPipelineRequest::Action action, AddTagsRequest * const q)

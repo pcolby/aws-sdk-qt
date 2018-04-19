@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * ResolveCustomerRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ResolveCustomerRequestPrivate object for MarketplaceMetering \a action with,
- * public implementation \a q.
+ * Constructs a ResolveCustomerRequestPrivate object for MarketplaceMetering \a action,
+ * with public implementation \a q.
  */
 ResolveCustomerRequestPrivate::ResolveCustomerRequestPrivate(
     const MarketplaceMeteringRequest::Action action, ResolveCustomerRequest * const q)

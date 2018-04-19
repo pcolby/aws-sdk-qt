@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdatePipelineRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a UpdatePipelineRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 UpdatePipelineRequestPrivate::UpdatePipelineRequestPrivate(
     const CodePipelineRequest::Action action, UpdatePipelineRequest * const q)

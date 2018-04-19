@@ -34,10 +34,10 @@ class QTAWS_EXPORT PublishResponse : public IoTDataPlaneResponse {
 public:
     PublishResponse(const PublishRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PublishRequest * request() const;
+    virtual const PublishRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PublishResponse)

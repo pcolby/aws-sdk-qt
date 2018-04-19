@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceAssociationsStatusRequest::re
  */
 
 /*!
- *
- * Constructs a DescribeInstanceAssociationsStatusRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInstanceAssociationsStatusRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeInstanceAssociationsStatusRequestPrivate::DescribeInstanceAssociationsStatusRequestPrivate(
     const SSMRequest::Action action, DescribeInstanceAssociationsStatusRequest * const q)

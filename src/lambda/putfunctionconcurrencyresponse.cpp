@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::PutFunctionConcurrencyResponse
- *
  * \brief The PutFunctionConcurrencyResponse class provides an interace for Lambda PutFunctionConcurrency responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new PutFunctionConcurrencyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutFunctionConcurrencyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutFunctionConcurrencyResponse::PutFunctionConcurrencyResponse(
         const PutFunctionConcurrencyRequest &request,
@@ -66,6 +61,9 @@ PutFunctionConcurrencyResponse::PutFunctionConcurrencyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutFunctionConcurrencyRequest * PutFunctionConcurrencyResponse::request() const
 {
     Q_D(const PutFunctionConcurrencyResponse);
@@ -73,9 +71,8 @@ const PutFunctionConcurrencyRequest * PutFunctionConcurrencyResponse::request() 
 }
 
 /*!
- * @brief  Parse a Lambda PutFunctionConcurrency response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda PutFunctionConcurrency \a response.
  */
 void PutFunctionConcurrencyResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void PutFunctionConcurrencyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::PutFunctionConcurrencyResponsePrivate
+ * \brief The PutFunctionConcurrencyResponsePrivate class provides private implementation for PutFunctionConcurrencyResponse.
  * \internal
  *
- * \class PutFunctionConcurrencyResponsePrivate
- *
- * \brief Private implementation for PutFunctionConcurrencyResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutFunctionConcurrencyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutFunctionConcurrencyResponse instance.
+ * Constructs a PutFunctionConcurrencyResponsePrivate object with public implementation \a q.
  */
 PutFunctionConcurrencyResponsePrivate::PutFunctionConcurrencyResponsePrivate(
     PutFunctionConcurrencyResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ PutFunctionConcurrencyResponsePrivate::PutFunctionConcurrencyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda PutFunctionConcurrencyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda PutFunctionConcurrency response element from \a xml.
  */
 void PutFunctionConcurrencyResponsePrivate::parsePutFunctionConcurrencyResponse(QXmlStreamReader &xml)
 {

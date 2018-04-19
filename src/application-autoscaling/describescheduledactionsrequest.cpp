@@ -154,9 +154,8 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledActionsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeScheduledActionsRequestPrivate object for ApplicationAutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DescribeScheduledActionsRequestPrivate object for ApplicationAutoScaling \a action,
+ * with public implementation \a q.
  */
 DescribeScheduledActionsRequestPrivate::DescribeScheduledActionsRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DescribeScheduledActionsRequest * const q)

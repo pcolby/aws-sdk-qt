@@ -29,10 +29,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::ListComplianceStatusResponse
- *
  * \brief The ListComplianceStatusResponse class provides an interace for FMS ListComplianceStatus responses.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -45,11 +44,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new ListComplianceStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListComplianceStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 ListComplianceStatusResponse::ListComplianceStatusResponse(
         const ListComplianceStatusRequest &request,
@@ -61,6 +56,9 @@ ListComplianceStatusResponse::ListComplianceStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListComplianceStatusRequest * ListComplianceStatusResponse::request() const
 {
     Q_D(const ListComplianceStatusResponse);
@@ -68,9 +66,8 @@ const ListComplianceStatusRequest * ListComplianceStatusResponse::request() cons
 }
 
 /*!
- * @brief  Parse a FMS ListComplianceStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful FMS ListComplianceStatus \a response.
  */
 void ListComplianceStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListComplianceStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::FMS::ListComplianceStatusResponsePrivate
+ * \brief The ListComplianceStatusResponsePrivate class provides private implementation for ListComplianceStatusResponse.
  * \internal
  *
- * \class ListComplianceStatusResponsePrivate
- *
- * \brief Private implementation for ListComplianceStatusResponse.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListComplianceStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListComplianceStatusResponse instance.
+ * Constructs a ListComplianceStatusResponsePrivate object with public implementation \a q.
  */
 ListComplianceStatusResponsePrivate::ListComplianceStatusResponsePrivate(
     ListComplianceStatusResponse * const q) : FMSResponsePrivate(q)
@@ -101,9 +94,7 @@ ListComplianceStatusResponsePrivate::ListComplianceStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an FMS ListComplianceStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a FMS ListComplianceStatus response element from \a xml.
  */
 void ListComplianceStatusResponsePrivate::parseListComplianceStatusResponse(QXmlStreamReader &xml)
 {

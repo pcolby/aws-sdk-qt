@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListRootsResponse
- *
  * \brief The ListRootsResponse class provides an interace for Organizations ListRoots responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListRootsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRootsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRootsResponse::ListRootsResponse(
         const ListRootsRequest &request,
@@ -197,6 +192,9 @@ ListRootsResponse::ListRootsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRootsRequest * ListRootsResponse::request() const
 {
     Q_D(const ListRootsResponse);
@@ -204,9 +202,8 @@ const ListRootsRequest * ListRootsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations ListRoots response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations ListRoots \a response.
  */
 void ListRootsResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void ListRootsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::ListRootsResponsePrivate
+ * \brief The ListRootsResponsePrivate class provides private implementation for ListRootsResponse.
  * \internal
  *
- * \class ListRootsResponsePrivate
- *
- * \brief Private implementation for ListRootsResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRootsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRootsResponse instance.
+ * Constructs a ListRootsResponsePrivate object with public implementation \a q.
  */
 ListRootsResponsePrivate::ListRootsResponsePrivate(
     ListRootsResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ ListRootsResponsePrivate::ListRootsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations ListRootsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations ListRoots response element from \a xml.
  */
 void ListRootsResponsePrivate::parseListRootsResponse(QXmlStreamReader &xml)
 {

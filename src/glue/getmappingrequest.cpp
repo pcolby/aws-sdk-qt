@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetMappingRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetMappingRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GetMappingRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GetMappingRequestPrivate::GetMappingRequestPrivate(
     const GlueRequest::Action action, GetMappingRequest * const q)

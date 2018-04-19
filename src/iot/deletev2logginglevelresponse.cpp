@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteV2LoggingLevelResponse
- *
  * \brief The DeleteV2LoggingLevelResponse class provides an interace for IoT DeleteV2LoggingLevel responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteV2LoggingLevelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteV2LoggingLevelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteV2LoggingLevelResponse::DeleteV2LoggingLevelResponse(
         const DeleteV2LoggingLevelRequest &request,
@@ -66,6 +61,9 @@ DeleteV2LoggingLevelResponse::DeleteV2LoggingLevelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteV2LoggingLevelRequest * DeleteV2LoggingLevelResponse::request() const
 {
     Q_D(const DeleteV2LoggingLevelResponse);
@@ -73,9 +71,8 @@ const DeleteV2LoggingLevelRequest * DeleteV2LoggingLevelResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IoT DeleteV2LoggingLevel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DeleteV2LoggingLevel \a response.
  */
 void DeleteV2LoggingLevelResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteV2LoggingLevelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DeleteV2LoggingLevelResponsePrivate
+ * \brief The DeleteV2LoggingLevelResponsePrivate class provides private implementation for DeleteV2LoggingLevelResponse.
  * \internal
  *
- * \class DeleteV2LoggingLevelResponsePrivate
- *
- * \brief Private implementation for DeleteV2LoggingLevelResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteV2LoggingLevelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteV2LoggingLevelResponse instance.
+ * Constructs a DeleteV2LoggingLevelResponsePrivate object with public implementation \a q.
  */
 DeleteV2LoggingLevelResponsePrivate::DeleteV2LoggingLevelResponsePrivate(
     DeleteV2LoggingLevelResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteV2LoggingLevelResponsePrivate::DeleteV2LoggingLevelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DeleteV2LoggingLevelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DeleteV2LoggingLevel response element from \a xml.
  */
 void DeleteV2LoggingLevelResponsePrivate::parseDeleteV2LoggingLevelResponse(QXmlStreamReader &xml)
 {

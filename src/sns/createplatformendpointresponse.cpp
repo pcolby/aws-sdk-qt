@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::CreatePlatformEndpointResponse
- *
  * \brief The CreatePlatformEndpointResponse class provides an interace for SNS CreatePlatformEndpoint responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new CreatePlatformEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePlatformEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePlatformEndpointResponse::CreatePlatformEndpointResponse(
         const CreatePlatformEndpointRequest &request,
@@ -69,6 +64,9 @@ CreatePlatformEndpointResponse::CreatePlatformEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePlatformEndpointRequest * CreatePlatformEndpointResponse::request() const
 {
     Q_D(const CreatePlatformEndpointResponse);
@@ -76,9 +74,8 @@ const CreatePlatformEndpointRequest * CreatePlatformEndpointResponse::request() 
 }
 
 /*!
- * @brief  Parse a SNS CreatePlatformEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS CreatePlatformEndpoint \a response.
  */
 void CreatePlatformEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreatePlatformEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::CreatePlatformEndpointResponsePrivate
+ * \brief The CreatePlatformEndpointResponsePrivate class provides private implementation for CreatePlatformEndpointResponse.
  * \internal
  *
- * \class CreatePlatformEndpointResponsePrivate
- *
- * \brief Private implementation for CreatePlatformEndpointResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePlatformEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePlatformEndpointResponse instance.
+ * Constructs a CreatePlatformEndpointResponsePrivate object with public implementation \a q.
  */
 CreatePlatformEndpointResponsePrivate::CreatePlatformEndpointResponsePrivate(
     CreatePlatformEndpointResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ CreatePlatformEndpointResponsePrivate::CreatePlatformEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS CreatePlatformEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS CreatePlatformEndpoint response element from \a xml.
  */
 void CreatePlatformEndpointResponsePrivate::parseCreatePlatformEndpointResponse(QXmlStreamReader &xml)
 {

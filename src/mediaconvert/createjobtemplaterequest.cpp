@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateJobTemplateRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CreateJobTemplateRequestPrivate object for MediaConvert \a action with,
- * public implementation \a q.
+ * Constructs a CreateJobTemplateRequestPrivate object for MediaConvert \a action,
+ * with public implementation \a q.
  */
 CreateJobTemplateRequestPrivate::CreateJobTemplateRequestPrivate(
     const MediaConvertRequest::Action action, CreateJobTemplateRequest * const q)

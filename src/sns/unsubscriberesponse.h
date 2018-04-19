@@ -34,10 +34,10 @@ class QTAWS_EXPORT UnsubscribeResponse : public SNSResponse {
 public:
     UnsubscribeResponse(const UnsubscribeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UnsubscribeRequest * request() const;
+    virtual const UnsubscribeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UnsubscribeResponse)

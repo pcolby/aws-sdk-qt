@@ -29,10 +29,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::CreateDomainResponse
- *
  * \brief The CreateDomainResponse class provides an interace for SimpleDB CreateDomain responses.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -52,11 +51,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new CreateDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDomainResponse::CreateDomainResponse(
         const CreateDomainRequest &request,
@@ -68,6 +63,9 @@ CreateDomainResponse::CreateDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDomainRequest * CreateDomainResponse::request() const
 {
     Q_D(const CreateDomainResponse);
@@ -75,9 +73,8 @@ const CreateDomainRequest * CreateDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a SimpleDB CreateDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SimpleDB CreateDomain \a response.
  */
 void CreateDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void CreateDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SimpleDB::CreateDomainResponsePrivate
+ * \brief The CreateDomainResponsePrivate class provides private implementation for CreateDomainResponse.
  * \internal
  *
- * \class CreateDomainResponsePrivate
- *
- * \brief Private implementation for CreateDomainResponse.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDomainResponse instance.
+ * Constructs a CreateDomainResponsePrivate object with public implementation \a q.
  */
 CreateDomainResponsePrivate::CreateDomainResponsePrivate(
     CreateDomainResponse * const q) : SimpleDBResponsePrivate(q)
@@ -108,9 +101,7 @@ CreateDomainResponsePrivate::CreateDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SimpleDB CreateDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SimpleDB CreateDomain response element from \a xml.
  */
 void CreateDomainResponsePrivate::parseCreateDomainResponse(QXmlStreamReader &xml)
 {

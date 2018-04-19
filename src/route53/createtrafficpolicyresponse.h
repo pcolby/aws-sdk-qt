@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateTrafficPolicyResponse : public Route53Response {
 public:
     CreateTrafficPolicyResponse(const CreateTrafficPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateTrafficPolicyRequest * request() const;
+    virtual const CreateTrafficPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateTrafficPolicyResponse)

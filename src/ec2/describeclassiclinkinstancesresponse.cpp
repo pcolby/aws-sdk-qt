@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeClassicLinkInstancesResponse
- *
  * \brief The DescribeClassicLinkInstancesResponse class provides an interace for EC2 DescribeClassicLinkInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeClassicLinkInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeClassicLinkInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeClassicLinkInstancesResponse::DescribeClassicLinkInstancesResponse(
         const DescribeClassicLinkInstancesRequest &request,
@@ -59,6 +54,9 @@ DescribeClassicLinkInstancesResponse::DescribeClassicLinkInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeClassicLinkInstancesRequest * DescribeClassicLinkInstancesResponse::request() const
 {
     Q_D(const DescribeClassicLinkInstancesResponse);
@@ -66,9 +64,8 @@ const DescribeClassicLinkInstancesRequest * DescribeClassicLinkInstancesResponse
 }
 
 /*!
- * @brief  Parse a EC2 DescribeClassicLinkInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeClassicLinkInstances \a response.
  */
 void DescribeClassicLinkInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeClassicLinkInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeClassicLinkInstancesResponsePrivate
+ * \brief The DescribeClassicLinkInstancesResponsePrivate class provides private implementation for DescribeClassicLinkInstancesResponse.
  * \internal
  *
- * \class DescribeClassicLinkInstancesResponsePrivate
- *
- * \brief Private implementation for DescribeClassicLinkInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClassicLinkInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeClassicLinkInstancesResponse instance.
+ * Constructs a DescribeClassicLinkInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeClassicLinkInstancesResponsePrivate::DescribeClassicLinkInstancesResponsePrivate(
     DescribeClassicLinkInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeClassicLinkInstancesResponsePrivate::DescribeClassicLinkInstancesRespons
 }
 
 /*!
- * @brief  Parse an EC2 DescribeClassicLinkInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeClassicLinkInstances response element from \a xml.
  */
 void DescribeClassicLinkInstancesResponsePrivate::parseDescribeClassicLinkInstancesResponse(QXmlStreamReader &xml)
 {

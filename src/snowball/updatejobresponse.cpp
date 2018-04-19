@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::UpdateJobResponse
- *
  * \brief The UpdateJobResponse class provides an interace for Snowball UpdateJob responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new UpdateJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateJobResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateJobResponse::UpdateJobResponse(
         const UpdateJobRequest &request,
@@ -61,6 +56,9 @@ UpdateJobResponse::UpdateJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateJobRequest * UpdateJobResponse::request() const
 {
     Q_D(const UpdateJobResponse);
@@ -68,9 +66,8 @@ const UpdateJobRequest * UpdateJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball UpdateJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball UpdateJob \a response.
  */
 void UpdateJobResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void UpdateJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::UpdateJobResponsePrivate
+ * \brief The UpdateJobResponsePrivate class provides private implementation for UpdateJobResponse.
  * \internal
  *
- * \class UpdateJobResponsePrivate
- *
- * \brief Private implementation for UpdateJobResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateJobResponse instance.
+ * Constructs a UpdateJobResponsePrivate object with public implementation \a q.
  */
 UpdateJobResponsePrivate::UpdateJobResponsePrivate(
     UpdateJobResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ UpdateJobResponsePrivate::UpdateJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball UpdateJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball UpdateJob response element from \a xml.
  */
 void UpdateJobResponsePrivate::parseUpdateJobResponse(QXmlStreamReader &xml)
 {

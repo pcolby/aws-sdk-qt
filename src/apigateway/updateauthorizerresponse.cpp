@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateAuthorizerResponse
- *
  * \brief The UpdateAuthorizerResponse class provides an interace for APIGateway UpdateAuthorizer responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateAuthorizerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAuthorizerResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAuthorizerResponse::UpdateAuthorizerResponse(
         const UpdateAuthorizerRequest &request,
@@ -60,6 +55,9 @@ UpdateAuthorizerResponse::UpdateAuthorizerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAuthorizerRequest * UpdateAuthorizerResponse::request() const
 {
     Q_D(const UpdateAuthorizerResponse);
@@ -67,9 +65,8 @@ const UpdateAuthorizerRequest * UpdateAuthorizerResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateAuthorizer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateAuthorizer \a response.
  */
 void UpdateAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateAuthorizerResponsePrivate
+ * \brief The UpdateAuthorizerResponsePrivate class provides private implementation for UpdateAuthorizerResponse.
  * \internal
  *
- * \class UpdateAuthorizerResponsePrivate
- *
- * \brief Private implementation for UpdateAuthorizerResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAuthorizerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAuthorizerResponse instance.
+ * Constructs a UpdateAuthorizerResponsePrivate object with public implementation \a q.
  */
 UpdateAuthorizerResponsePrivate::UpdateAuthorizerResponsePrivate(
     UpdateAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateAuthorizerResponsePrivate::UpdateAuthorizerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateAuthorizerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateAuthorizer response element from \a xml.
  */
 void UpdateAuthorizerResponsePrivate::parseUpdateAuthorizerResponse(QXmlStreamReader &xml)
 {

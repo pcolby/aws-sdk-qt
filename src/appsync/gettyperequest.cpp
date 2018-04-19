@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetTypeRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a GetTypeRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a GetTypeRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 GetTypeRequestPrivate::GetTypeRequestPrivate(
     const AppSyncRequest::Action action, GetTypeRequest * const q)

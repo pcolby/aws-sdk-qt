@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * RegisterWorkflowTypeRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a RegisterWorkflowTypeRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a RegisterWorkflowTypeRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 RegisterWorkflowTypeRequestPrivate::RegisterWorkflowTypeRequestPrivate(
     const SWFRequest::Action action, RegisterWorkflowTypeRequest * const q)

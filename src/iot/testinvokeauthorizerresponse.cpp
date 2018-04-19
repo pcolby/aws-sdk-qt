@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::TestInvokeAuthorizerResponse
- *
  * \brief The TestInvokeAuthorizerResponse class provides an interace for IoT TestInvokeAuthorizer responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new TestInvokeAuthorizerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TestInvokeAuthorizerResponse object for \a reply to \a request, with parent \a parent.
  */
 TestInvokeAuthorizerResponse::TestInvokeAuthorizerResponse(
         const TestInvokeAuthorizerRequest &request,
@@ -66,6 +61,9 @@ TestInvokeAuthorizerResponse::TestInvokeAuthorizerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TestInvokeAuthorizerRequest * TestInvokeAuthorizerResponse::request() const
 {
     Q_D(const TestInvokeAuthorizerResponse);
@@ -73,9 +71,8 @@ const TestInvokeAuthorizerRequest * TestInvokeAuthorizerResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IoT TestInvokeAuthorizer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT TestInvokeAuthorizer \a response.
  */
 void TestInvokeAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void TestInvokeAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::TestInvokeAuthorizerResponsePrivate
+ * \brief The TestInvokeAuthorizerResponsePrivate class provides private implementation for TestInvokeAuthorizerResponse.
  * \internal
  *
- * \class TestInvokeAuthorizerResponsePrivate
- *
- * \brief Private implementation for TestInvokeAuthorizerResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestInvokeAuthorizerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TestInvokeAuthorizerResponse instance.
+ * Constructs a TestInvokeAuthorizerResponsePrivate object with public implementation \a q.
  */
 TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponsePrivate(
     TestInvokeAuthorizerResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT TestInvokeAuthorizerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT TestInvokeAuthorizer response element from \a xml.
  */
 void TestInvokeAuthorizerResponsePrivate::parseTestInvokeAuthorizerResponse(QXmlStreamReader &xml)
 {

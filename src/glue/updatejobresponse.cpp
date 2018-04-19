@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateJobResponse
- *
  * \brief The UpdateJobResponse class provides an interace for Glue UpdateJob responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateJobResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateJobResponse::UpdateJobResponse(
         const UpdateJobRequest &request,
@@ -58,6 +53,9 @@ UpdateJobResponse::UpdateJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateJobRequest * UpdateJobResponse::request() const
 {
     Q_D(const UpdateJobResponse);
@@ -65,9 +63,8 @@ const UpdateJobRequest * UpdateJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue UpdateJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue UpdateJob \a response.
  */
 void UpdateJobResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::UpdateJobResponsePrivate
+ * \brief The UpdateJobResponsePrivate class provides private implementation for UpdateJobResponse.
  * \internal
  *
- * \class UpdateJobResponsePrivate
- *
- * \brief Private implementation for UpdateJobResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateJobResponse instance.
+ * Constructs a UpdateJobResponsePrivate object with public implementation \a q.
  */
 UpdateJobResponsePrivate::UpdateJobResponsePrivate(
     UpdateJobResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateJobResponsePrivate::UpdateJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue UpdateJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue UpdateJob response element from \a xml.
  */
 void UpdateJobResponsePrivate::parseUpdateJobResponse(QXmlStreamReader &xml)
 {

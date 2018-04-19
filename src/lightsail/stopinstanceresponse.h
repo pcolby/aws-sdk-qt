@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopInstanceResponse : public LightsailResponse {
 public:
     StopInstanceResponse(const StopInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopInstanceRequest * request() const;
+    virtual const StopInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopInstanceResponse)

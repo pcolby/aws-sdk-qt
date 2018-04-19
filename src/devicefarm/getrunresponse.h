@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetRunResponse : public DeviceFarmResponse {
 public:
     GetRunResponse(const GetRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetRunRequest * request() const;
+    virtual const GetRunRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetRunResponse)

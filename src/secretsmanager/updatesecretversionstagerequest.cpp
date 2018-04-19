@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSecretVersionStageRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateSecretVersionStageRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSecretVersionStageRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 UpdateSecretVersionStageRequestPrivate::UpdateSecretVersionStageRequestPrivate(
     const SecretsManagerRequest::Action action, UpdateSecretVersionStageRequest * const q)

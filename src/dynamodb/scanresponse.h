@@ -34,10 +34,10 @@ class QTAWS_EXPORT ScanResponse : public DynamoDBResponse {
 public:
     ScanResponse(const ScanRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ScanRequest * request() const;
+    virtual const ScanRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ScanResponse)

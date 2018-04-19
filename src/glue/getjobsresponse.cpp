@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetJobsResponse
- *
  * \brief The GetJobsResponse class provides an interace for Glue GetJobs responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetJobsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetJobsResponse::GetJobsResponse(
         const GetJobsRequest &request,
@@ -58,6 +53,9 @@ GetJobsResponse::GetJobsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetJobsRequest * GetJobsResponse::request() const
 {
     Q_D(const GetJobsResponse);
@@ -65,9 +63,8 @@ const GetJobsRequest * GetJobsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetJobs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetJobs \a response.
  */
 void GetJobsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetJobsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetJobsResponsePrivate
+ * \brief The GetJobsResponsePrivate class provides private implementation for GetJobsResponse.
  * \internal
  *
- * \class GetJobsResponsePrivate
- *
- * \brief Private implementation for GetJobsResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetJobsResponse instance.
+ * Constructs a GetJobsResponsePrivate object with public implementation \a q.
  */
 GetJobsResponsePrivate::GetJobsResponsePrivate(
     GetJobsResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetJobsResponsePrivate::GetJobsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetJobsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetJobs response element from \a xml.
  */
 void GetJobsResponsePrivate::parseGetJobsResponse(QXmlStreamReader &xml)
 {

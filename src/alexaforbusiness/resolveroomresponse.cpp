@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::ResolveRoomResponse
- *
  * \brief The ResolveRoomResponse class provides an interace for AlexaForBusiness ResolveRoom responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new ResolveRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResolveRoomResponse object for \a reply to \a request, with parent \a parent.
  */
 ResolveRoomResponse::ResolveRoomResponse(
         const ResolveRoomRequest &request,
@@ -60,6 +55,9 @@ ResolveRoomResponse::ResolveRoomResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResolveRoomRequest * ResolveRoomResponse::request() const
 {
     Q_D(const ResolveRoomResponse);
@@ -67,9 +65,8 @@ const ResolveRoomRequest * ResolveRoomResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness ResolveRoom response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness ResolveRoom \a response.
  */
 void ResolveRoomResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ResolveRoomResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::ResolveRoomResponsePrivate
+ * \brief The ResolveRoomResponsePrivate class provides private implementation for ResolveRoomResponse.
  * \internal
  *
- * \class ResolveRoomResponsePrivate
- *
- * \brief Private implementation for ResolveRoomResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResolveRoomResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResolveRoomResponse instance.
+ * Constructs a ResolveRoomResponsePrivate object with public implementation \a q.
  */
 ResolveRoomResponsePrivate::ResolveRoomResponsePrivate(
     ResolveRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ ResolveRoomResponsePrivate::ResolveRoomResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness ResolveRoomResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness ResolveRoom response element from \a xml.
  */
 void ResolveRoomResponsePrivate::parseResolveRoomResponse(QXmlStreamReader &xml)
 {

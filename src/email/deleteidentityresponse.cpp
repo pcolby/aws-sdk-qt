@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteIdentityResponse
- *
  * \brief The DeleteIdentityResponse class provides an interace for SES DeleteIdentity responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteIdentityResponse::DeleteIdentityResponse(
         const DeleteIdentityRequest &request,
@@ -66,6 +61,9 @@ DeleteIdentityResponse::DeleteIdentityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteIdentityRequest * DeleteIdentityResponse::request() const
 {
     Q_D(const DeleteIdentityResponse);
@@ -73,9 +71,8 @@ const DeleteIdentityRequest * DeleteIdentityResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES DeleteIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES DeleteIdentity \a response.
  */
 void DeleteIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::DeleteIdentityResponsePrivate
+ * \brief The DeleteIdentityResponsePrivate class provides private implementation for DeleteIdentityResponse.
  * \internal
  *
- * \class DeleteIdentityResponsePrivate
- *
- * \brief Private implementation for DeleteIdentityResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteIdentityResponse instance.
+ * Constructs a DeleteIdentityResponsePrivate object with public implementation \a q.
  */
 DeleteIdentityResponsePrivate::DeleteIdentityResponsePrivate(
     DeleteIdentityResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteIdentityResponsePrivate::DeleteIdentityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES DeleteIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES DeleteIdentity response element from \a xml.
  */
 void DeleteIdentityResponsePrivate::parseDeleteIdentityResponse(QXmlStreamReader &xml)
 {

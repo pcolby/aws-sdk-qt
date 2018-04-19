@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDestinationsResponse : public CloudWatchLogsResponse 
 public:
     DescribeDestinationsResponse(const DescribeDestinationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDestinationsRequest * request() const;
+    virtual const DescribeDestinationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDestinationsResponse)

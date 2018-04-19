@@ -34,10 +34,10 @@ class QTAWS_EXPORT VerifyTrustResponse : public DirectoryServiceResponse {
 public:
     VerifyTrustResponse(const VerifyTrustRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const VerifyTrustRequest * request() const;
+    virtual const VerifyTrustRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(VerifyTrustResponse)

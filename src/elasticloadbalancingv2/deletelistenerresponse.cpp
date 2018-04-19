@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteListenerResponse
- *
  * \brief The DeleteListenerResponse class provides an interace for ElasticLoadBalancingv2 DeleteListener responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteListenerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteListenerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteListenerResponse::DeleteListenerResponse(
         const DeleteListenerRequest &request,
@@ -123,6 +118,9 @@ DeleteListenerResponse::DeleteListenerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteListenerRequest * DeleteListenerResponse::request() const
 {
     Q_D(const DeleteListenerResponse);
@@ -130,9 +128,8 @@ const DeleteListenerRequest * DeleteListenerResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DeleteListener response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DeleteListener \a response.
  */
 void DeleteListenerResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DeleteListenerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DeleteListenerResponsePrivate
+ * \brief The DeleteListenerResponsePrivate class provides private implementation for DeleteListenerResponse.
  * \internal
  *
- * \class DeleteListenerResponsePrivate
- *
- * \brief Private implementation for DeleteListenerResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteListenerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteListenerResponse instance.
+ * Constructs a DeleteListenerResponsePrivate object with public implementation \a q.
  */
 DeleteListenerResponsePrivate::DeleteListenerResponsePrivate(
     DeleteListenerResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DeleteListenerResponsePrivate::DeleteListenerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DeleteListenerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DeleteListener response element from \a xml.
  */
 void DeleteListenerResponsePrivate::parseDeleteListenerResponse(QXmlStreamReader &xml)
 {

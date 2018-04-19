@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListPortfoliosForProductRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ListPortfoliosForProductRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ListPortfoliosForProductRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ListPortfoliosForProductRequestPrivate::ListPortfoliosForProductRequestPrivate(
     const ServiceCatalogRequest::Action action, ListPortfoliosForProductRequest * const q)

@@ -28,16 +28,13 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::KinesisAnalyticsResponse
- *
  * \brief The KinesisAnalyticsResponse class provides an interface for KinesisAnalytics responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @brief  Constructs a new KinesisAnalyticsResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a KinesisAnalyticsResponse object with parent \a parent.
  */
 KinesisAnalyticsResponse::KinesisAnalyticsResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new KinesisAnalyticsResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ KinesisAnalyticsResponse::KinesisAnalyticsResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisAnalyticsResponse object.
- *
+ * \internal
+ * Constructs a KinesisAnalyticsResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisAnalyticsResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 KinesisAnalyticsResponse::KinesisAnalyticsResponse(KinesisAnalyticsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ KinesisAnalyticsResponse::KinesisAnalyticsResponse(KinesisAnalyticsResponsePriva
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void KinesisAnalyticsResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void KinesisAnalyticsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisAnalytics::KinesisAnalyticsResponsePrivate
+ * \brief The KinesisAnalyticsResponsePrivate class provides private implementation for KinesisAnalyticsResponse.
+ * \internal
  *
- * @class  KinesisAnalyticsResponsePrivate
- *
- * @brief  Private implementation for KinesisAnalyticsResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisAnalyticsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public KinesisAnalyticsResponse instance.
+ * Constructs a KinesisAnalyticsResponsePrivate object with public implementation \a q.
  */
 KinesisAnalyticsResponsePrivate::KinesisAnalyticsResponsePrivate(
     KinesisAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

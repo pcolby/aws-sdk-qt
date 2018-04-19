@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeletePortfolioRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeletePortfolioRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DeletePortfolioRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DeletePortfolioRequestPrivate::DeletePortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, DeletePortfolioRequest * const q)

@@ -29,10 +29,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::UntagResponse
- *
  * \brief The UntagResponse class provides an interace for ResourceGroups Untag responses.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -83,11 +82,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new UntagResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UntagResponse object for \a reply to \a request, with parent \a parent.
  */
 UntagResponse::UntagResponse(
         const UntagRequest &request,
@@ -99,6 +94,9 @@ UntagResponse::UntagResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UntagRequest * UntagResponse::request() const
 {
     Q_D(const UntagResponse);
@@ -106,9 +104,8 @@ const UntagRequest * UntagResponse::request() const
 }
 
 /*!
- * @brief  Parse a ResourceGroups Untag response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ResourceGroups Untag \a response.
  */
 void UntagResponse::parseSuccess(QIODevice &response)
 {
@@ -118,19 +115,15 @@ void UntagResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ResourceGroups::UntagResponsePrivate
+ * \brief The UntagResponsePrivate class provides private implementation for UntagResponse.
  * \internal
  *
- * \class UntagResponsePrivate
- *
- * \brief Private implementation for UntagResponse.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UntagResponse instance.
+ * Constructs a UntagResponsePrivate object with public implementation \a q.
  */
 UntagResponsePrivate::UntagResponsePrivate(
     UntagResponse * const q) : ResourceGroupsResponsePrivate(q)
@@ -139,9 +132,7 @@ UntagResponsePrivate::UntagResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ResourceGroups UntagResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ResourceGroups Untag response element from \a xml.
  */
 void UntagResponsePrivate::parseUntagResponse(QXmlStreamReader &xml)
 {

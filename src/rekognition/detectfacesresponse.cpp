@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DetectFacesResponse
- *
  * \brief The DetectFacesResponse class provides an interace for Rekognition DetectFaces responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DetectFacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetectFacesResponse object for \a reply to \a request, with parent \a parent.
  */
 DetectFacesResponse::DetectFacesResponse(
         const DetectFacesRequest &request,
@@ -56,6 +51,9 @@ DetectFacesResponse::DetectFacesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetectFacesRequest * DetectFacesResponse::request() const
 {
     Q_D(const DetectFacesResponse);
@@ -63,9 +61,8 @@ const DetectFacesRequest * DetectFacesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition DetectFaces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition DetectFaces \a response.
  */
 void DetectFacesResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DetectFacesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::DetectFacesResponsePrivate
+ * \brief The DetectFacesResponsePrivate class provides private implementation for DetectFacesResponse.
  * \internal
  *
- * \class DetectFacesResponsePrivate
- *
- * \brief Private implementation for DetectFacesResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectFacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetectFacesResponse instance.
+ * Constructs a DetectFacesResponsePrivate object with public implementation \a q.
  */
 DetectFacesResponsePrivate::DetectFacesResponsePrivate(
     DetectFacesResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ DetectFacesResponsePrivate::DetectFacesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition DetectFacesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition DetectFaces response element from \a xml.
  */
 void DetectFacesResponsePrivate::parseDetectFacesResponse(QXmlStreamReader &xml)
 {

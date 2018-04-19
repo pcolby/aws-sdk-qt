@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateGraphqlApiResponse : public AppSyncResponse {
 public:
     UpdateGraphqlApiResponse(const UpdateGraphqlApiRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateGraphqlApiRequest * request() const;
+    virtual const UpdateGraphqlApiRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateGraphqlApiResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteGraphqlApiResponse : public AppSyncResponse {
 public:
     DeleteGraphqlApiResponse(const DeleteGraphqlApiRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteGraphqlApiRequest * request() const;
+    virtual const DeleteGraphqlApiRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteGraphqlApiResponse)

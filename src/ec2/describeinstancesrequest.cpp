@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancesRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribeInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeInstancesRequestPrivate::DescribeInstancesRequestPrivate(
     const EC2Request::Action action, DescribeInstancesRequest * const q)

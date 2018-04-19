@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::DisableStageTransitionResponse
- *
  * \brief The DisableStageTransitionResponse class provides an interace for CodePipeline DisableStageTransition responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new DisableStageTransitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableStageTransitionResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableStageTransitionResponse::DisableStageTransitionResponse(
         const DisableStageTransitionRequest &request,
@@ -218,6 +213,9 @@ DisableStageTransitionResponse::DisableStageTransitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableStageTransitionRequest * DisableStageTransitionResponse::request() const
 {
     Q_D(const DisableStageTransitionResponse);
@@ -225,9 +223,8 @@ const DisableStageTransitionRequest * DisableStageTransitionResponse::request() 
 }
 
 /*!
- * @brief  Parse a CodePipeline DisableStageTransition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline DisableStageTransition \a response.
  */
 void DisableStageTransitionResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void DisableStageTransitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::DisableStageTransitionResponsePrivate
+ * \brief The DisableStageTransitionResponsePrivate class provides private implementation for DisableStageTransitionResponse.
  * \internal
  *
- * \class DisableStageTransitionResponsePrivate
- *
- * \brief Private implementation for DisableStageTransitionResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableStageTransitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableStageTransitionResponse instance.
+ * Constructs a DisableStageTransitionResponsePrivate object with public implementation \a q.
  */
 DisableStageTransitionResponsePrivate::DisableStageTransitionResponsePrivate(
     DisableStageTransitionResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ DisableStageTransitionResponsePrivate::DisableStageTransitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline DisableStageTransitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline DisableStageTransition response element from \a xml.
  */
 void DisableStageTransitionResponsePrivate::parseDisableStageTransitionResponse(QXmlStreamReader &xml)
 {

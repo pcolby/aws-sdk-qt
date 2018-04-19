@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketPolicyResponse
- *
  * \brief The PutBucketPolicyResponse class provides an interace for S3 PutBucketPolicy responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketPolicy
  */
 
 /*!
- * @brief  Constructs a new PutBucketPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketPolicyResponse::PutBucketPolicyResponse(
         const PutBucketPolicyRequest &request,
@@ -55,6 +50,9 @@ PutBucketPolicyResponse::PutBucketPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketPolicyRequest * PutBucketPolicyResponse::request() const
 {
     Q_D(const PutBucketPolicyResponse);
@@ -62,9 +60,8 @@ const PutBucketPolicyRequest * PutBucketPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 PutBucketPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketPolicy \a response.
  */
 void PutBucketPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketPolicyResponsePrivate
+ * \brief The PutBucketPolicyResponsePrivate class provides private implementation for PutBucketPolicyResponse.
  * \internal
  *
- * \class PutBucketPolicyResponsePrivate
- *
- * \brief Private implementation for PutBucketPolicyResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketPolicyResponse instance.
+ * Constructs a PutBucketPolicyResponsePrivate object with public implementation \a q.
  */
 PutBucketPolicyResponsePrivate::PutBucketPolicyResponsePrivate(
     PutBucketPolicyResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketPolicyResponsePrivate::PutBucketPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 PutBucketPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketPolicy response element from \a xml.
  */
 void PutBucketPolicyResponsePrivate::parsePutBucketPolicyResponse(QXmlStreamReader &xml)
 {

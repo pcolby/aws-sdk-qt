@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * UnpeerVpcRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a UnpeerVpcRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a UnpeerVpcRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 UnpeerVpcRequestPrivate::UnpeerVpcRequestPrivate(
     const LightsailRequest::Action action, UnpeerVpcRequest * const q)

@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeConfigurationsRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeConfigurationsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 DescribeConfigurationsRequestPrivate::DescribeConfigurationsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DescribeConfigurationsRequest * const q)

@@ -29,10 +29,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::TagCertificateAuthorityResponse
- *
  * \brief The TagCertificateAuthorityResponse class provides an interace for ACMPCA TagCertificateAuthority responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -69,11 +68,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new TagCertificateAuthorityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagCertificateAuthorityResponse object for \a reply to \a request, with parent \a parent.
  */
 TagCertificateAuthorityResponse::TagCertificateAuthorityResponse(
         const TagCertificateAuthorityRequest &request,
@@ -85,6 +80,9 @@ TagCertificateAuthorityResponse::TagCertificateAuthorityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagCertificateAuthorityRequest * TagCertificateAuthorityResponse::request() const
 {
     Q_D(const TagCertificateAuthorityResponse);
@@ -92,9 +90,8 @@ const TagCertificateAuthorityRequest * TagCertificateAuthorityResponse::request(
 }
 
 /*!
- * @brief  Parse a ACMPCA TagCertificateAuthority response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACMPCA TagCertificateAuthority \a response.
  */
 void TagCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void TagCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACMPCA::TagCertificateAuthorityResponsePrivate
+ * \brief The TagCertificateAuthorityResponsePrivate class provides private implementation for TagCertificateAuthorityResponse.
  * \internal
  *
- * \class TagCertificateAuthorityResponsePrivate
- *
- * \brief Private implementation for TagCertificateAuthorityResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagCertificateAuthorityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagCertificateAuthorityResponse instance.
+ * Constructs a TagCertificateAuthorityResponsePrivate object with public implementation \a q.
  */
 TagCertificateAuthorityResponsePrivate::TagCertificateAuthorityResponsePrivate(
     TagCertificateAuthorityResponse * const q) : ACMPCAResponsePrivate(q)
@@ -125,9 +118,7 @@ TagCertificateAuthorityResponsePrivate::TagCertificateAuthorityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACMPCA TagCertificateAuthorityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACMPCA TagCertificateAuthority response element from \a xml.
  */
 void TagCertificateAuthorityResponsePrivate::parseTagCertificateAuthorityResponse(QXmlStreamReader &xml)
 {

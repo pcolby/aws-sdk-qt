@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PutReportDefinitionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a PutReportDefinitionRequestPrivate object for CostandUsageReportService \a action with,
- * public implementation \a q.
+ * Constructs a PutReportDefinitionRequestPrivate object for CostandUsageReportService \a action,
+ * with public implementation \a q.
  */
 PutReportDefinitionRequestPrivate::PutReportDefinitionRequestPrivate(
     const CostandUsageReportServiceRequest::Action action, PutReportDefinitionRequest * const q)

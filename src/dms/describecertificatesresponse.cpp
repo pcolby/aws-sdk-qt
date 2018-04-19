@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeCertificatesResponse
- *
  * \brief The DescribeCertificatesResponse class provides an interace for DatabaseMigrationService DescribeCertificates responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCertificatesResponse::DescribeCertificatesResponse(
         const DescribeCertificatesRequest &request,
@@ -66,6 +61,9 @@ DescribeCertificatesResponse::DescribeCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCertificatesRequest * DescribeCertificatesResponse::request() const
 {
     Q_D(const DescribeCertificatesResponse);
@@ -73,9 +71,8 @@ const DescribeCertificatesRequest * DescribeCertificatesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DescribeCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DescribeCertificates \a response.
  */
 void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DescribeCertificatesResponsePrivate
+ * \brief The DescribeCertificatesResponsePrivate class provides private implementation for DescribeCertificatesResponse.
  * \internal
  *
- * \class DescribeCertificatesResponsePrivate
- *
- * \brief Private implementation for DescribeCertificatesResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCertificatesResponse instance.
+ * Constructs a DescribeCertificatesResponsePrivate object with public implementation \a q.
  */
 DescribeCertificatesResponsePrivate::DescribeCertificatesResponsePrivate(
     DescribeCertificatesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeCertificatesResponsePrivate::DescribeCertificatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DescribeCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DescribeCertificates response element from \a xml.
  */
 void DescribeCertificatesResponsePrivate::parseDescribeCertificatesResponse(QXmlStreamReader &xml)
 {

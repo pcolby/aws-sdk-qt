@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetGcmChannelResponse
- *
  * \brief The GetGcmChannelResponse class provides an interace for Pinpoint GetGcmChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getGcmChannel
  */
 
 /*!
- * @brief  Constructs a new GetGcmChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetGcmChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 GetGcmChannelResponse::GetGcmChannelResponse(
         const GetGcmChannelRequest &request,
@@ -55,6 +50,9 @@ GetGcmChannelResponse::GetGcmChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetGcmChannelRequest * GetGcmChannelResponse::request() const
 {
     Q_D(const GetGcmChannelResponse);
@@ -62,9 +60,8 @@ const GetGcmChannelRequest * GetGcmChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetGcmChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetGcmChannel \a response.
  */
 void GetGcmChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetGcmChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetGcmChannelResponsePrivate
+ * \brief The GetGcmChannelResponsePrivate class provides private implementation for GetGcmChannelResponse.
  * \internal
  *
- * \class GetGcmChannelResponsePrivate
- *
- * \brief Private implementation for GetGcmChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGcmChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetGcmChannelResponse instance.
+ * Constructs a GetGcmChannelResponsePrivate object with public implementation \a q.
  */
 GetGcmChannelResponsePrivate::GetGcmChannelResponsePrivate(
     GetGcmChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetGcmChannelResponsePrivate::GetGcmChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetGcmChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetGcmChannel response element from \a xml.
  */
 void GetGcmChannelResponsePrivate::parseGetGcmChannelResponse(QXmlStreamReader &xml)
 {

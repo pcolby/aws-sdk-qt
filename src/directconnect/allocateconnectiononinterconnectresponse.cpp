@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::AllocateConnectionOnInterconnectResponse
- *
  * \brief The AllocateConnectionOnInterconnectResponse class provides an interace for DirectConnect AllocateConnectionOnInterconnect responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new AllocateConnectionOnInterconnectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AllocateConnectionOnInterconnectResponse object for \a reply to \a request, with parent \a parent.
  */
 AllocateConnectionOnInterconnectResponse::AllocateConnectionOnInterconnectResponse(
         const AllocateConnectionOnInterconnectRequest &request,
@@ -63,6 +58,9 @@ AllocateConnectionOnInterconnectResponse::AllocateConnectionOnInterconnectRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AllocateConnectionOnInterconnectRequest * AllocateConnectionOnInterconnectResponse::request() const
 {
     Q_D(const AllocateConnectionOnInterconnectResponse);
@@ -70,9 +68,8 @@ const AllocateConnectionOnInterconnectRequest * AllocateConnectionOnInterconnect
 }
 
 /*!
- * @brief  Parse a DirectConnect AllocateConnectionOnInterconnect response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect AllocateConnectionOnInterconnect \a response.
  */
 void AllocateConnectionOnInterconnectResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void AllocateConnectionOnInterconnectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::AllocateConnectionOnInterconnectResponsePrivate
+ * \brief The AllocateConnectionOnInterconnectResponsePrivate class provides private implementation for AllocateConnectionOnInterconnectResponse.
  * \internal
  *
- * \class AllocateConnectionOnInterconnectResponsePrivate
- *
- * \brief Private implementation for AllocateConnectionOnInterconnectResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocateConnectionOnInterconnectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AllocateConnectionOnInterconnectResponse instance.
+ * Constructs a AllocateConnectionOnInterconnectResponsePrivate object with public implementation \a q.
  */
 AllocateConnectionOnInterconnectResponsePrivate::AllocateConnectionOnInterconnectResponsePrivate(
     AllocateConnectionOnInterconnectResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ AllocateConnectionOnInterconnectResponsePrivate::AllocateConnectionOnInterconnec
 }
 
 /*!
- * @brief  Parse an DirectConnect AllocateConnectionOnInterconnectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect AllocateConnectionOnInterconnect response element from \a xml.
  */
 void AllocateConnectionOnInterconnectResponsePrivate::parseAllocateConnectionOnInterconnectResponse(QXmlStreamReader &xml)
 {

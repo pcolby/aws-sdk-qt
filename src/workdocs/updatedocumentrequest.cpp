@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdateDocumentRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDocumentRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 UpdateDocumentRequestPrivate::UpdateDocumentRequestPrivate(
     const WorkDocsRequest::Action action, UpdateDocumentRequest * const q)

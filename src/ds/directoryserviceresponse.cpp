@@ -28,16 +28,13 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DirectoryServiceResponse
- *
  * \brief The DirectoryServiceResponse class provides an interface for DirectoryService responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @brief  Constructs a new DirectoryServiceResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a DirectoryServiceResponse object with parent \a parent.
  */
 DirectoryServiceResponse::DirectoryServiceResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new DirectoryServiceResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ DirectoryServiceResponse::DirectoryServiceResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DirectoryServiceResponse object.
- *
+ * \internal
+ * Constructs a DirectoryServiceResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DirectoryServiceResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 DirectoryServiceResponse::DirectoryServiceResponse(DirectoryServiceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ DirectoryServiceResponse::DirectoryServiceResponse(DirectoryServiceResponsePriva
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void DirectoryServiceResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void DirectoryServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectoryService::DirectoryServiceResponsePrivate
+ * \brief The DirectoryServiceResponsePrivate class provides private implementation for DirectoryServiceResponse.
+ * \internal
  *
- * @class  DirectoryServiceResponsePrivate
- *
- * @brief  Private implementation for DirectoryServiceResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DirectoryServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DirectoryServiceResponse instance.
+ * Constructs a DirectoryServiceResponsePrivate object with public implementation \a q.
  */
 DirectoryServiceResponsePrivate::DirectoryServiceResponsePrivate(
     DirectoryServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

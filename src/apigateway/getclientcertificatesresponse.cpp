@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetClientCertificatesResponse
- *
  * \brief The GetClientCertificatesResponse class provides an interace for APIGateway GetClientCertificates responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetClientCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetClientCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetClientCertificatesResponse::GetClientCertificatesResponse(
         const GetClientCertificatesRequest &request,
@@ -60,6 +55,9 @@ GetClientCertificatesResponse::GetClientCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetClientCertificatesRequest * GetClientCertificatesResponse::request() const
 {
     Q_D(const GetClientCertificatesResponse);
@@ -67,9 +65,8 @@ const GetClientCertificatesRequest * GetClientCertificatesResponse::request() co
 }
 
 /*!
- * @brief  Parse a APIGateway GetClientCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetClientCertificates \a response.
  */
 void GetClientCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetClientCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetClientCertificatesResponsePrivate
+ * \brief The GetClientCertificatesResponsePrivate class provides private implementation for GetClientCertificatesResponse.
  * \internal
  *
- * \class GetClientCertificatesResponsePrivate
- *
- * \brief Private implementation for GetClientCertificatesResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetClientCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetClientCertificatesResponse instance.
+ * Constructs a GetClientCertificatesResponsePrivate object with public implementation \a q.
  */
 GetClientCertificatesResponsePrivate::GetClientCertificatesResponsePrivate(
     GetClientCertificatesResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetClientCertificatesResponsePrivate::GetClientCertificatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetClientCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetClientCertificates response element from \a xml.
  */
 void GetClientCertificatesResponsePrivate::parseGetClientCertificatesResponse(QXmlStreamReader &xml)
 {

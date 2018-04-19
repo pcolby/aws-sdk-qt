@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * GlobalSignOutRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GlobalSignOutRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a GlobalSignOutRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 GlobalSignOutRequestPrivate::GlobalSignOutRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GlobalSignOutRequest * const q)

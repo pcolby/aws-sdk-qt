@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListSubscribedRuleGroupsResponse
- *
  * \brief The ListSubscribedRuleGroupsResponse class provides an interace for WAF ListSubscribedRuleGroups responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListSubscribedRuleGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSubscribedRuleGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSubscribedRuleGroupsResponse::ListSubscribedRuleGroupsResponse(
         const ListSubscribedRuleGroupsRequest &request,
@@ -60,6 +55,9 @@ ListSubscribedRuleGroupsResponse::ListSubscribedRuleGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSubscribedRuleGroupsRequest * ListSubscribedRuleGroupsResponse::request() const
 {
     Q_D(const ListSubscribedRuleGroupsResponse);
@@ -67,9 +65,8 @@ const ListSubscribedRuleGroupsRequest * ListSubscribedRuleGroupsResponse::reques
 }
 
 /*!
- * @brief  Parse a WAF ListSubscribedRuleGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF ListSubscribedRuleGroups \a response.
  */
 void ListSubscribedRuleGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListSubscribedRuleGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::ListSubscribedRuleGroupsResponsePrivate
+ * \brief The ListSubscribedRuleGroupsResponsePrivate class provides private implementation for ListSubscribedRuleGroupsResponse.
  * \internal
  *
- * \class ListSubscribedRuleGroupsResponsePrivate
- *
- * \brief Private implementation for ListSubscribedRuleGroupsResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSubscribedRuleGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSubscribedRuleGroupsResponse instance.
+ * Constructs a ListSubscribedRuleGroupsResponsePrivate object with public implementation \a q.
  */
 ListSubscribedRuleGroupsResponsePrivate::ListSubscribedRuleGroupsResponsePrivate(
     ListSubscribedRuleGroupsResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ ListSubscribedRuleGroupsResponsePrivate::ListSubscribedRuleGroupsResponsePrivate
 }
 
 /*!
- * @brief  Parse an WAF ListSubscribedRuleGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF ListSubscribedRuleGroups response element from \a xml.
  */
 void ListSubscribedRuleGroupsResponsePrivate::parseListSubscribedRuleGroupsResponse(QXmlStreamReader &xml)
 {

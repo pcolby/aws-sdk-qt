@@ -43,7 +43,7 @@ namespace DynamoDBStreams {
  */
 
 /*!
- * Constructs a[n] DynamoDBStreamsRequest object for DynamoDBStreams \a action.
+ * Constructs a DynamoDBStreamsRequest object for DynamoDBStreams \a action.
  */
 DynamoDBStreamsRequest::DynamoDBStreamsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DynamoDBStreamsRequestPrivate(action, this))
@@ -243,8 +243,8 @@ QNetworkRequest DynamoDBStreamsRequest::unsignedRequest(const QUrl &endpoint) co
  */
 
 /*!
- * Constructs a DynamoDBStreamsRequestPrivate object for DynamoDBStreams \a action with,
- * public implementation \a q.
+ * Constructs a DynamoDBStreamsRequestPrivate object for DynamoDBStreams \a action,
+ * with public implementation \a q.
  */
 DynamoDBStreamsRequestPrivate::DynamoDBStreamsRequestPrivate(const DynamoDBStreamsRequest::Action action, DynamoDBStreamsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

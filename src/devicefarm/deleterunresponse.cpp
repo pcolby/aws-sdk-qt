@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeleteRunResponse
- *
  * \brief The DeleteRunResponse class provides an interace for DeviceFarm DeleteRun responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new DeleteRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRunResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRunResponse::DeleteRunResponse(
         const DeleteRunRequest &request,
@@ -57,6 +52,9 @@ DeleteRunResponse::DeleteRunResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRunRequest * DeleteRunResponse::request() const
 {
     Q_D(const DeleteRunResponse);
@@ -64,9 +62,8 @@ const DeleteRunRequest * DeleteRunResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm DeleteRun response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm DeleteRun \a response.
  */
 void DeleteRunResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DeleteRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::DeleteRunResponsePrivate
+ * \brief The DeleteRunResponsePrivate class provides private implementation for DeleteRunResponse.
  * \internal
  *
- * \class DeleteRunResponsePrivate
- *
- * \brief Private implementation for DeleteRunResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRunResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRunResponse instance.
+ * Constructs a DeleteRunResponsePrivate object with public implementation \a q.
  */
 DeleteRunResponsePrivate::DeleteRunResponsePrivate(
     DeleteRunResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ DeleteRunResponsePrivate::DeleteRunResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm DeleteRunResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm DeleteRun response element from \a xml.
  */
 void DeleteRunResponsePrivate::parseDeleteRunResponse(QXmlStreamReader &xml)
 {

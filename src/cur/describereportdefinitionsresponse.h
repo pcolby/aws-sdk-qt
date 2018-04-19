@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeReportDefinitionsResponse : public CostandUsageReport
 public:
     DescribeReportDefinitionsResponse(const DescribeReportDefinitionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeReportDefinitionsRequest * request() const;
+    virtual const DescribeReportDefinitionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeReportDefinitionsResponse)

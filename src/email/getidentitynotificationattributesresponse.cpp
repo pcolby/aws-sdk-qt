@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetIdentityNotificationAttributesResponse
- *
  * \brief The GetIdentityNotificationAttributesResponse class provides an interace for SES GetIdentityNotificationAttributes responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityNotificationAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetIdentityNotificationAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetIdentityNotificationAttributesResponse::GetIdentityNotificationAttributesResponse(
         const GetIdentityNotificationAttributesRequest &request,
@@ -66,6 +61,9 @@ GetIdentityNotificationAttributesResponse::GetIdentityNotificationAttributesResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetIdentityNotificationAttributesRequest * GetIdentityNotificationAttributesResponse::request() const
 {
     Q_D(const GetIdentityNotificationAttributesResponse);
@@ -73,9 +71,8 @@ const GetIdentityNotificationAttributesRequest * GetIdentityNotificationAttribut
 }
 
 /*!
- * @brief  Parse a SES GetIdentityNotificationAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES GetIdentityNotificationAttributes \a response.
  */
 void GetIdentityNotificationAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetIdentityNotificationAttributesResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::SES::GetIdentityNotificationAttributesResponsePrivate
+ * \brief The GetIdentityNotificationAttributesResponsePrivate class provides private implementation for GetIdentityNotificationAttributesResponse.
  * \internal
  *
- * \class GetIdentityNotificationAttributesResponsePrivate
- *
- * \brief Private implementation for GetIdentityNotificationAttributesResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityNotificationAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetIdentityNotificationAttributesResponse instance.
+ * Constructs a GetIdentityNotificationAttributesResponsePrivate object with public implementation \a q.
  */
 GetIdentityNotificationAttributesResponsePrivate::GetIdentityNotificationAttributesResponsePrivate(
     GetIdentityNotificationAttributesResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ GetIdentityNotificationAttributesResponsePrivate::GetIdentityNotificationAttribu
 }
 
 /*!
- * @brief  Parse an SES GetIdentityNotificationAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES GetIdentityNotificationAttributes response element from \a xml.
  */
 void GetIdentityNotificationAttributesResponsePrivate::parseGetIdentityNotificationAttributesResponse(QXmlStreamReader &xml)
 {

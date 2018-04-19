@@ -34,10 +34,10 @@ class QTAWS_EXPORT VerifyEmailIdentityResponse : public SESResponse {
 public:
     VerifyEmailIdentityResponse(const VerifyEmailIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const VerifyEmailIdentityRequest * request() const;
+    virtual const VerifyEmailIdentityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(VerifyEmailIdentityResponse)

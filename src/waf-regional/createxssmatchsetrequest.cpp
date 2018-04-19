@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * CreateXssMatchSetRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CreateXssMatchSetRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a CreateXssMatchSetRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 CreateXssMatchSetRequestPrivate::CreateXssMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, CreateXssMatchSetRequest * const q)

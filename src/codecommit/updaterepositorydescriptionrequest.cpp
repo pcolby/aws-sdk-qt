@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRepositoryDescriptionRequest::response(
  */
 
 /*!
- *
- * Constructs a UpdateRepositoryDescriptionRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRepositoryDescriptionRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 UpdateRepositoryDescriptionRequestPrivate::UpdateRepositoryDescriptionRequestPrivate(
     const CodeCommitRequest::Action action, UpdateRepositoryDescriptionRequest * const q)

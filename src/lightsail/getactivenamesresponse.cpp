@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetActiveNamesResponse
- *
  * \brief The GetActiveNamesResponse class provides an interace for Lightsail GetActiveNames responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetActiveNamesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetActiveNamesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetActiveNamesResponse::GetActiveNamesResponse(
         const GetActiveNamesRequest &request,
@@ -71,6 +66,9 @@ GetActiveNamesResponse::GetActiveNamesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetActiveNamesRequest * GetActiveNamesResponse::request() const
 {
     Q_D(const GetActiveNamesResponse);
@@ -78,9 +76,8 @@ const GetActiveNamesRequest * GetActiveNamesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetActiveNames response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetActiveNames \a response.
  */
 void GetActiveNamesResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetActiveNamesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetActiveNamesResponsePrivate
+ * \brief The GetActiveNamesResponsePrivate class provides private implementation for GetActiveNamesResponse.
  * \internal
  *
- * \class GetActiveNamesResponsePrivate
- *
- * \brief Private implementation for GetActiveNamesResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetActiveNamesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetActiveNamesResponse instance.
+ * Constructs a GetActiveNamesResponsePrivate object with public implementation \a q.
  */
 GetActiveNamesResponsePrivate::GetActiveNamesResponsePrivate(
     GetActiveNamesResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetActiveNamesResponsePrivate::GetActiveNamesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetActiveNamesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetActiveNames response element from \a xml.
  */
 void GetActiveNamesResponsePrivate::parseGetActiveNamesResponse(QXmlStreamReader &xml)
 {

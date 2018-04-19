@@ -29,10 +29,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::DetectSentimentResponse
- *
  * \brief The DetectSentimentResponse class provides an interace for Comprehend DetectSentiment responses.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -42,11 +41,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new DetectSentimentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetectSentimentResponse object for \a reply to \a request, with parent \a parent.
  */
 DetectSentimentResponse::DetectSentimentResponse(
         const DetectSentimentRequest &request,
@@ -58,6 +53,9 @@ DetectSentimentResponse::DetectSentimentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetectSentimentRequest * DetectSentimentResponse::request() const
 {
     Q_D(const DetectSentimentResponse);
@@ -65,9 +63,8 @@ const DetectSentimentRequest * DetectSentimentResponse::request() const
 }
 
 /*!
- * @brief  Parse a Comprehend DetectSentiment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Comprehend DetectSentiment \a response.
  */
 void DetectSentimentResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DetectSentimentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Comprehend::DetectSentimentResponsePrivate
+ * \brief The DetectSentimentResponsePrivate class provides private implementation for DetectSentimentResponse.
  * \internal
  *
- * \class DetectSentimentResponsePrivate
- *
- * \brief Private implementation for DetectSentimentResponse.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectSentimentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetectSentimentResponse instance.
+ * Constructs a DetectSentimentResponsePrivate object with public implementation \a q.
  */
 DetectSentimentResponsePrivate::DetectSentimentResponsePrivate(
     DetectSentimentResponse * const q) : ComprehendResponsePrivate(q)
@@ -98,9 +91,7 @@ DetectSentimentResponsePrivate::DetectSentimentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Comprehend DetectSentimentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Comprehend DetectSentiment response element from \a xml.
  */
 void DetectSentimentResponsePrivate::parseDetectSentimentResponse(QXmlStreamReader &xml)
 {

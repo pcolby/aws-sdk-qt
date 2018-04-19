@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeTagsResponse
- *
  * \brief The DescribeTagsResponse class provides an interace for Redshift DescribeTags responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTagsResponse::DescribeTagsResponse(
         const DescribeTagsRequest &request,
@@ -85,6 +80,9 @@ DescribeTagsResponse::DescribeTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTagsRequest * DescribeTagsResponse::request() const
 {
     Q_D(const DescribeTagsResponse);
@@ -92,9 +90,8 @@ const DescribeTagsRequest * DescribeTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Redshift DescribeTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeTags \a response.
  */
 void DescribeTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeTagsResponsePrivate
+ * \brief The DescribeTagsResponsePrivate class provides private implementation for DescribeTagsResponse.
  * \internal
  *
- * \class DescribeTagsResponsePrivate
- *
- * \brief Private implementation for DescribeTagsResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTagsResponse instance.
+ * Constructs a DescribeTagsResponsePrivate object with public implementation \a q.
  */
 DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
     DescribeTagsResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift DescribeTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeTags response element from \a xml.
  */
 void DescribeTagsResponsePrivate::parseDescribeTagsResponse(QXmlStreamReader &xml)
 {

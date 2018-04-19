@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * UnassignInstanceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UnassignInstanceRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a UnassignInstanceRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 UnassignInstanceRequestPrivate::UnassignInstanceRequestPrivate(
     const OpsWorksRequest::Action action, UnassignInstanceRequest * const q)

@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * ContinueUpdateRollbackRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ContinueUpdateRollbackRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a ContinueUpdateRollbackRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 ContinueUpdateRollbackRequestPrivate::ContinueUpdateRollbackRequestPrivate(
     const CloudFormationRequest::Action action, ContinueUpdateRollbackRequest * const q)

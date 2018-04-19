@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeLoaResponse
- *
  * \brief The DescribeLoaResponse class provides an interace for DirectConnect DescribeLoa responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeLoaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLoaResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLoaResponse::DescribeLoaResponse(
         const DescribeLoaRequest &request,
@@ -63,6 +58,9 @@ DescribeLoaResponse::DescribeLoaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLoaRequest * DescribeLoaResponse::request() const
 {
     Q_D(const DescribeLoaResponse);
@@ -70,9 +68,8 @@ const DescribeLoaRequest * DescribeLoaResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect DescribeLoa response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DescribeLoa \a response.
  */
 void DescribeLoaResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DescribeLoaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::DescribeLoaResponsePrivate
+ * \brief The DescribeLoaResponsePrivate class provides private implementation for DescribeLoaResponse.
  * \internal
  *
- * \class DescribeLoaResponsePrivate
- *
- * \brief Private implementation for DescribeLoaResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLoaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLoaResponse instance.
+ * Constructs a DescribeLoaResponsePrivate object with public implementation \a q.
  */
 DescribeLoaResponsePrivate::DescribeLoaResponsePrivate(
     DescribeLoaResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DescribeLoaResponsePrivate::DescribeLoaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect DescribeLoaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DescribeLoa response element from \a xml.
  */
 void DescribeLoaResponsePrivate::parseDescribeLoaResponse(QXmlStreamReader &xml)
 {

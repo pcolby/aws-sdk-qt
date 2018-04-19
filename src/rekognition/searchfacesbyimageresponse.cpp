@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::SearchFacesByImageResponse
- *
  * \brief The SearchFacesByImageResponse class provides an interace for Rekognition SearchFacesByImage responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new SearchFacesByImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SearchFacesByImageResponse object for \a reply to \a request, with parent \a parent.
  */
 SearchFacesByImageResponse::SearchFacesByImageResponse(
         const SearchFacesByImageRequest &request,
@@ -56,6 +51,9 @@ SearchFacesByImageResponse::SearchFacesByImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SearchFacesByImageRequest * SearchFacesByImageResponse::request() const
 {
     Q_D(const SearchFacesByImageResponse);
@@ -63,9 +61,8 @@ const SearchFacesByImageRequest * SearchFacesByImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition SearchFacesByImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition SearchFacesByImage \a response.
  */
 void SearchFacesByImageResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void SearchFacesByImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::SearchFacesByImageResponsePrivate
+ * \brief The SearchFacesByImageResponsePrivate class provides private implementation for SearchFacesByImageResponse.
  * \internal
  *
- * \class SearchFacesByImageResponsePrivate
- *
- * \brief Private implementation for SearchFacesByImageResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchFacesByImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SearchFacesByImageResponse instance.
+ * Constructs a SearchFacesByImageResponsePrivate object with public implementation \a q.
  */
 SearchFacesByImageResponsePrivate::SearchFacesByImageResponsePrivate(
     SearchFacesByImageResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ SearchFacesByImageResponsePrivate::SearchFacesByImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition SearchFacesByImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition SearchFacesByImage response element from \a xml.
  */
 void SearchFacesByImageResponsePrivate::parseSearchFacesByImageResponse(QXmlStreamReader &xml)
 {

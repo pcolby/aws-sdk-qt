@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeleteScheduledActionResponse
- *
  * \brief The DeleteScheduledActionResponse class provides an interace for AutoScaling DeleteScheduledAction responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteScheduledActionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteScheduledActionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteScheduledActionResponse::DeleteScheduledActionResponse(
         const DeleteScheduledActionRequest &request,
@@ -60,6 +55,9 @@ DeleteScheduledActionResponse::DeleteScheduledActionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteScheduledActionRequest * DeleteScheduledActionResponse::request() const
 {
     Q_D(const DeleteScheduledActionResponse);
@@ -67,9 +65,8 @@ const DeleteScheduledActionRequest * DeleteScheduledActionResponse::request() co
 }
 
 /*!
- * @brief  Parse a AutoScaling DeleteScheduledAction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DeleteScheduledAction \a response.
  */
 void DeleteScheduledActionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteScheduledActionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DeleteScheduledActionResponsePrivate
+ * \brief The DeleteScheduledActionResponsePrivate class provides private implementation for DeleteScheduledActionResponse.
  * \internal
  *
- * \class DeleteScheduledActionResponsePrivate
- *
- * \brief Private implementation for DeleteScheduledActionResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteScheduledActionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteScheduledActionResponse instance.
+ * Constructs a DeleteScheduledActionResponsePrivate object with public implementation \a q.
  */
 DeleteScheduledActionResponsePrivate::DeleteScheduledActionResponsePrivate(
     DeleteScheduledActionResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteScheduledActionResponsePrivate::DeleteScheduledActionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling DeleteScheduledActionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DeleteScheduledAction response element from \a xml.
  */
 void DeleteScheduledActionResponsePrivate::parseDeleteScheduledActionResponse(QXmlStreamReader &xml)
 {

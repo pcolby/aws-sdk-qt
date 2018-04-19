@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::GetRandomPasswordResponse
- *
  * \brief The GetRandomPasswordResponse class provides an interace for SecretsManager GetRandomPassword responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new GetRandomPasswordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRandomPasswordResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRandomPasswordResponse::GetRandomPasswordResponse(
         const GetRandomPasswordRequest &request,
@@ -155,6 +150,9 @@ GetRandomPasswordResponse::GetRandomPasswordResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRandomPasswordRequest * GetRandomPasswordResponse::request() const
 {
     Q_D(const GetRandomPasswordResponse);
@@ -162,9 +160,8 @@ const GetRandomPasswordRequest * GetRandomPasswordResponse::request() const
 }
 
 /*!
- * @brief  Parse a SecretsManager GetRandomPassword response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager GetRandomPassword \a response.
  */
 void GetRandomPasswordResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void GetRandomPasswordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::GetRandomPasswordResponsePrivate
+ * \brief The GetRandomPasswordResponsePrivate class provides private implementation for GetRandomPasswordResponse.
  * \internal
  *
- * \class GetRandomPasswordResponsePrivate
- *
- * \brief Private implementation for GetRandomPasswordResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRandomPasswordResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRandomPasswordResponse instance.
+ * Constructs a GetRandomPasswordResponsePrivate object with public implementation \a q.
  */
 GetRandomPasswordResponsePrivate::GetRandomPasswordResponsePrivate(
     GetRandomPasswordResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ GetRandomPasswordResponsePrivate::GetRandomPasswordResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SecretsManager GetRandomPasswordResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager GetRandomPassword response element from \a xml.
  */
 void GetRandomPasswordResponsePrivate::parseGetRandomPasswordResponse(QXmlStreamReader &xml)
 {

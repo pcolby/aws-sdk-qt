@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ReplaceNetworkAclAssociationRequest::response
  */
 
 /*!
- *
- * Constructs a ReplaceNetworkAclAssociationRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ReplaceNetworkAclAssociationRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ReplaceNetworkAclAssociationRequestPrivate::ReplaceNetworkAclAssociationRequestPrivate(
     const EC2Request::Action action, ReplaceNetworkAclAssociationRequest * const q)

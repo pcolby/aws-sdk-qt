@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * StopInstanceRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a StopInstanceRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a StopInstanceRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 StopInstanceRequestPrivate::StopInstanceRequestPrivate(
     const LightsailRequest::Action action, StopInstanceRequest * const q)

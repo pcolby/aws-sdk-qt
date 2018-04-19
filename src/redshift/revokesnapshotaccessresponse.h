@@ -34,10 +34,10 @@ class QTAWS_EXPORT RevokeSnapshotAccessResponse : public RedshiftResponse {
 public:
     RevokeSnapshotAccessResponse(const RevokeSnapshotAccessRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RevokeSnapshotAccessRequest * request() const;
+    virtual const RevokeSnapshotAccessRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RevokeSnapshotAccessResponse)

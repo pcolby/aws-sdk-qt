@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketTaggingResponse
- *
  * \brief The PutBucketTaggingResponse class provides an interace for S3 PutBucketTagging responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketTagging
  */
 
 /*!
- * @brief  Constructs a new PutBucketTaggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketTaggingResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketTaggingResponse::PutBucketTaggingResponse(
         const PutBucketTaggingRequest &request,
@@ -55,6 +50,9 @@ PutBucketTaggingResponse::PutBucketTaggingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketTaggingRequest * PutBucketTaggingResponse::request() const
 {
     Q_D(const PutBucketTaggingResponse);
@@ -62,9 +60,8 @@ const PutBucketTaggingRequest * PutBucketTaggingResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 PutBucketTagging response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketTagging \a response.
  */
 void PutBucketTaggingResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketTaggingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketTaggingResponsePrivate
+ * \brief The PutBucketTaggingResponsePrivate class provides private implementation for PutBucketTaggingResponse.
  * \internal
  *
- * \class PutBucketTaggingResponsePrivate
- *
- * \brief Private implementation for PutBucketTaggingResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketTaggingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketTaggingResponse instance.
+ * Constructs a PutBucketTaggingResponsePrivate object with public implementation \a q.
  */
 PutBucketTaggingResponsePrivate::PutBucketTaggingResponsePrivate(
     PutBucketTaggingResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketTaggingResponsePrivate::PutBucketTaggingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 PutBucketTaggingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketTagging response element from \a xml.
  */
 void PutBucketTaggingResponsePrivate::parsePutBucketTaggingResponse(QXmlStreamReader &xml)
 {

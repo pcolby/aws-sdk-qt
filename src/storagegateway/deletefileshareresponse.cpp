@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteFileShareResponse
- *
  * \brief The DeleteFileShareResponse class provides an interace for StorageGateway DeleteFileShare responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteFileShareResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteFileShareResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteFileShareResponse::DeleteFileShareResponse(
         const DeleteFileShareRequest &request,
@@ -124,6 +119,9 @@ DeleteFileShareResponse::DeleteFileShareResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteFileShareRequest * DeleteFileShareResponse::request() const
 {
     Q_D(const DeleteFileShareResponse);
@@ -131,9 +129,8 @@ const DeleteFileShareRequest * DeleteFileShareResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway DeleteFileShare response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DeleteFileShare \a response.
  */
 void DeleteFileShareResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DeleteFileShareResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DeleteFileShareResponsePrivate
+ * \brief The DeleteFileShareResponsePrivate class provides private implementation for DeleteFileShareResponse.
  * \internal
  *
- * \class DeleteFileShareResponsePrivate
- *
- * \brief Private implementation for DeleteFileShareResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFileShareResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteFileShareResponse instance.
+ * Constructs a DeleteFileShareResponsePrivate object with public implementation \a q.
  */
 DeleteFileShareResponsePrivate::DeleteFileShareResponsePrivate(
     DeleteFileShareResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DeleteFileShareResponsePrivate::DeleteFileShareResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DeleteFileShareResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DeleteFileShare response element from \a xml.
  */
 void DeleteFileShareResponsePrivate::parseDeleteFileShareResponse(QXmlStreamReader &xml)
 {

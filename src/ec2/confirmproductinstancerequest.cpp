@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ConfirmProductInstanceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ConfirmProductInstanceRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ConfirmProductInstanceRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ConfirmProductInstanceRequestPrivate::ConfirmProductInstanceRequestPrivate(
     const EC2Request::Action action, ConfirmProductInstanceRequest * const q)

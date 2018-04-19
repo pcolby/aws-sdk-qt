@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::DeleteArchiveResponse
- *
  * \brief The DeleteArchiveResponse class provides an interace for Glacier DeleteArchive responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new DeleteArchiveResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteArchiveResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteArchiveResponse::DeleteArchiveResponse(
         const DeleteArchiveRequest &request,
@@ -93,6 +88,9 @@ DeleteArchiveResponse::DeleteArchiveResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteArchiveRequest * DeleteArchiveResponse::request() const
 {
     Q_D(const DeleteArchiveResponse);
@@ -100,9 +98,8 @@ const DeleteArchiveRequest * DeleteArchiveResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier DeleteArchive response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier DeleteArchive \a response.
  */
 void DeleteArchiveResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DeleteArchiveResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::DeleteArchiveResponsePrivate
+ * \brief The DeleteArchiveResponsePrivate class provides private implementation for DeleteArchiveResponse.
  * \internal
  *
- * \class DeleteArchiveResponsePrivate
- *
- * \brief Private implementation for DeleteArchiveResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteArchiveResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteArchiveResponse instance.
+ * Constructs a DeleteArchiveResponsePrivate object with public implementation \a q.
  */
 DeleteArchiveResponsePrivate::DeleteArchiveResponsePrivate(
     DeleteArchiveResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ DeleteArchiveResponsePrivate::DeleteArchiveResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier DeleteArchiveResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier DeleteArchive response element from \a xml.
  */
 void DeleteArchiveResponsePrivate::parseDeleteArchiveResponse(QXmlStreamReader &xml)
 {

@@ -28,16 +28,13 @@ namespace MarketplaceEntitlementService {
 
 /*!
  * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceResponse
- *
  * \brief The MarketplaceEntitlementServiceResponse class provides an interface for MarketplaceEntitlementService responses.
  *
- * \ingroup MarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlementService
  */
 
 /*!
- * @brief  Constructs a new MarketplaceEntitlementServiceResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MarketplaceEntitlementServiceResponse object with parent \a parent.
  */
 MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MarketplaceEntitlementServiceResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(QOb
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MarketplaceEntitlementServiceResponse object.
- *
+ * \internal
+ * Constructs a MarketplaceEntitlementServiceResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MarketplaceEntitlementServiceResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(MarketplaceEntitlementServiceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(Mar
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MarketplaceEntitlementServiceResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MarketplaceEntitlementServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceResponsePrivate
+ * \brief The MarketplaceEntitlementServiceResponsePrivate class provides private implementation for MarketplaceEntitlementServiceResponse.
+ * \internal
  *
- * @class  MarketplaceEntitlementServiceResponsePrivate
- *
- * @brief  Private implementation for MarketplaceEntitlementServiceResponse.
+ * \inmodule QtAwsMarketplaceEntitlementService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MarketplaceEntitlementServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MarketplaceEntitlementServiceResponse instance.
+ * Constructs a MarketplaceEntitlementServiceResponsePrivate object with public implementation \a q.
  */
 MarketplaceEntitlementServiceResponsePrivate::MarketplaceEntitlementServiceResponsePrivate(
     MarketplaceEntitlementServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

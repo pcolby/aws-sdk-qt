@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * CloneStackRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CloneStackRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a CloneStackRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 CloneStackRequestPrivate::CloneStackRequestPrivate(
     const OpsWorksRequest::Action action, CloneStackRequest * const q)

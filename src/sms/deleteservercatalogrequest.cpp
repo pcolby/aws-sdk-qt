@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteServerCatalogRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteServerCatalogRequestPrivate object for SMS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteServerCatalogRequestPrivate object for SMS \a action,
+ * with public implementation \a q.
  */
 DeleteServerCatalogRequestPrivate::DeleteServerCatalogRequestPrivate(
     const SMSRequest::Action action, DeleteServerCatalogRequest * const q)

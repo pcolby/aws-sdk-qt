@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeAccountAttributesRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAccountAttributesRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeAccountAttributesRequest * const q)

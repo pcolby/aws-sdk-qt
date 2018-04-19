@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::CreateEnvironmentResponse
- *
  * \brief The CreateEnvironmentResponse class provides an interace for ElasticBeanstalk CreateEnvironment responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new CreateEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateEnvironmentResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateEnvironmentResponse::CreateEnvironmentResponse(
         const CreateEnvironmentRequest &request,
@@ -77,6 +72,9 @@ CreateEnvironmentResponse::CreateEnvironmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateEnvironmentRequest * CreateEnvironmentResponse::request() const
 {
     Q_D(const CreateEnvironmentResponse);
@@ -84,9 +82,8 @@ const CreateEnvironmentRequest * CreateEnvironmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk CreateEnvironment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk CreateEnvironment \a response.
  */
 void CreateEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void CreateEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::CreateEnvironmentResponsePrivate
+ * \brief The CreateEnvironmentResponsePrivate class provides private implementation for CreateEnvironmentResponse.
  * \internal
  *
- * \class CreateEnvironmentResponsePrivate
- *
- * \brief Private implementation for CreateEnvironmentResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEnvironmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateEnvironmentResponse instance.
+ * Constructs a CreateEnvironmentResponsePrivate object with public implementation \a q.
  */
 CreateEnvironmentResponsePrivate::CreateEnvironmentResponsePrivate(
     CreateEnvironmentResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ CreateEnvironmentResponsePrivate::CreateEnvironmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk CreateEnvironmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk CreateEnvironment response element from \a xml.
  */
 void CreateEnvironmentResponsePrivate::parseCreateEnvironmentResponse(QXmlStreamReader &xml)
 {

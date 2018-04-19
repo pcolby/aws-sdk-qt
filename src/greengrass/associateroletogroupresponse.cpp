@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::AssociateRoleToGroupResponse
- *
  * \brief The AssociateRoleToGroupResponse class provides an interace for Greengrass AssociateRoleToGroup responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new AssociateRoleToGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateRoleToGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateRoleToGroupResponse::AssociateRoleToGroupResponse(
         const AssociateRoleToGroupRequest &request,
@@ -58,6 +53,9 @@ AssociateRoleToGroupResponse::AssociateRoleToGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateRoleToGroupRequest * AssociateRoleToGroupResponse::request() const
 {
     Q_D(const AssociateRoleToGroupResponse);
@@ -65,9 +63,8 @@ const AssociateRoleToGroupRequest * AssociateRoleToGroupResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Greengrass AssociateRoleToGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass AssociateRoleToGroup \a response.
  */
 void AssociateRoleToGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void AssociateRoleToGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::AssociateRoleToGroupResponsePrivate
+ * \brief The AssociateRoleToGroupResponsePrivate class provides private implementation for AssociateRoleToGroupResponse.
  * \internal
  *
- * \class AssociateRoleToGroupResponsePrivate
- *
- * \brief Private implementation for AssociateRoleToGroupResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateRoleToGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateRoleToGroupResponse instance.
+ * Constructs a AssociateRoleToGroupResponsePrivate object with public implementation \a q.
  */
 AssociateRoleToGroupResponsePrivate::AssociateRoleToGroupResponsePrivate(
     AssociateRoleToGroupResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ AssociateRoleToGroupResponsePrivate::AssociateRoleToGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass AssociateRoleToGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass AssociateRoleToGroup response element from \a xml.
  */
 void AssociateRoleToGroupResponsePrivate::parseAssociateRoleToGroupResponse(QXmlStreamReader &xml)
 {

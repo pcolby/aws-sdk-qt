@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterSnapshotsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeClusterSnapshotsRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeClusterSnapshotsRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeClusterSnapshotsRequestPrivate::DescribeClusterSnapshotsRequestPrivate(
     const RedshiftRequest::Action action, DescribeClusterSnapshotsRequest * const q)

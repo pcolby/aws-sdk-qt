@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSpotFleetRequestHistoryResponse
- *
  * \brief The DescribeSpotFleetRequestHistoryResponse class provides an interace for EC2 DescribeSpotFleetRequestHistory responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSpotFleetRequestHistoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSpotFleetRequestHistoryResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSpotFleetRequestHistoryResponse::DescribeSpotFleetRequestHistoryResponse(
         const DescribeSpotFleetRequestHistoryRequest &request,
@@ -59,6 +54,9 @@ DescribeSpotFleetRequestHistoryResponse::DescribeSpotFleetRequestHistoryResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSpotFleetRequestHistoryRequest * DescribeSpotFleetRequestHistoryResponse::request() const
 {
     Q_D(const DescribeSpotFleetRequestHistoryResponse);
@@ -66,9 +64,8 @@ const DescribeSpotFleetRequestHistoryRequest * DescribeSpotFleetRequestHistoryRe
 }
 
 /*!
- * @brief  Parse a EC2 DescribeSpotFleetRequestHistory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeSpotFleetRequestHistory \a response.
  */
 void DescribeSpotFleetRequestHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeSpotFleetRequestHistoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeSpotFleetRequestHistoryResponsePrivate
+ * \brief The DescribeSpotFleetRequestHistoryResponsePrivate class provides private implementation for DescribeSpotFleetRequestHistoryResponse.
  * \internal
  *
- * \class DescribeSpotFleetRequestHistoryResponsePrivate
- *
- * \brief Private implementation for DescribeSpotFleetRequestHistoryResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSpotFleetRequestHistoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSpotFleetRequestHistoryResponse instance.
+ * Constructs a DescribeSpotFleetRequestHistoryResponsePrivate object with public implementation \a q.
  */
 DescribeSpotFleetRequestHistoryResponsePrivate::DescribeSpotFleetRequestHistoryResponsePrivate(
     DescribeSpotFleetRequestHistoryResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeSpotFleetRequestHistoryResponsePrivate::DescribeSpotFleetRequestHistoryR
 }
 
 /*!
- * @brief  Parse an EC2 DescribeSpotFleetRequestHistoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeSpotFleetRequestHistory response element from \a xml.
  */
 void DescribeSpotFleetRequestHistoryResponsePrivate::parseDescribeSpotFleetRequestHistoryResponse(QXmlStreamReader &xml)
 {

@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * CheckDNSAvailabilityRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a CheckDNSAvailabilityRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a CheckDNSAvailabilityRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 CheckDNSAvailabilityRequestPrivate::CheckDNSAvailabilityRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CheckDNSAvailabilityRequest * const q)

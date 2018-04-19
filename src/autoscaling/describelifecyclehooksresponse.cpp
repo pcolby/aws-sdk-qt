@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeLifecycleHooksResponse
- *
  * \brief The DescribeLifecycleHooksResponse class provides an interace for AutoScaling DescribeLifecycleHooks responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeLifecycleHooksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLifecycleHooksResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLifecycleHooksResponse::DescribeLifecycleHooksResponse(
         const DescribeLifecycleHooksRequest &request,
@@ -60,6 +55,9 @@ DescribeLifecycleHooksResponse::DescribeLifecycleHooksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLifecycleHooksRequest * DescribeLifecycleHooksResponse::request() const
 {
     Q_D(const DescribeLifecycleHooksResponse);
@@ -67,9 +65,8 @@ const DescribeLifecycleHooksRequest * DescribeLifecycleHooksResponse::request() 
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeLifecycleHooks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeLifecycleHooks \a response.
  */
 void DescribeLifecycleHooksResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeLifecycleHooksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeLifecycleHooksResponsePrivate
+ * \brief The DescribeLifecycleHooksResponsePrivate class provides private implementation for DescribeLifecycleHooksResponse.
  * \internal
  *
- * \class DescribeLifecycleHooksResponsePrivate
- *
- * \brief Private implementation for DescribeLifecycleHooksResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLifecycleHooksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLifecycleHooksResponse instance.
+ * Constructs a DescribeLifecycleHooksResponsePrivate object with public implementation \a q.
  */
 DescribeLifecycleHooksResponsePrivate::DescribeLifecycleHooksResponsePrivate(
     DescribeLifecycleHooksResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeLifecycleHooksResponsePrivate::DescribeLifecycleHooksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeLifecycleHooksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeLifecycleHooks response element from \a xml.
  */
 void DescribeLifecycleHooksResponsePrivate::parseDescribeLifecycleHooksResponse(QXmlStreamReader &xml)
 {

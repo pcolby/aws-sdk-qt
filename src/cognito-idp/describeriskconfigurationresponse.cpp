@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DescribeRiskConfigurationResponse
- *
  * \brief The DescribeRiskConfigurationResponse class provides an interace for CognitoIdentityProvider DescribeRiskConfiguration responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DescribeRiskConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRiskConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRiskConfigurationResponse::DescribeRiskConfigurationResponse(
         const DescribeRiskConfigurationRequest &request,
@@ -65,6 +60,9 @@ DescribeRiskConfigurationResponse::DescribeRiskConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRiskConfigurationRequest * DescribeRiskConfigurationResponse::request() const
 {
     Q_D(const DescribeRiskConfigurationResponse);
@@ -72,9 +70,8 @@ const DescribeRiskConfigurationRequest * DescribeRiskConfigurationResponse::requ
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider DescribeRiskConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider DescribeRiskConfiguration \a response.
  */
 void DescribeRiskConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void DescribeRiskConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::DescribeRiskConfigurationResponsePrivate
+ * \brief The DescribeRiskConfigurationResponsePrivate class provides private implementation for DescribeRiskConfigurationResponse.
  * \internal
  *
- * \class DescribeRiskConfigurationResponsePrivate
- *
- * \brief Private implementation for DescribeRiskConfigurationResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRiskConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRiskConfigurationResponse instance.
+ * Constructs a DescribeRiskConfigurationResponsePrivate object with public implementation \a q.
  */
 DescribeRiskConfigurationResponsePrivate::DescribeRiskConfigurationResponsePrivate(
     DescribeRiskConfigurationResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ DescribeRiskConfigurationResponsePrivate::DescribeRiskConfigurationResponsePriva
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider DescribeRiskConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider DescribeRiskConfiguration response element from \a xml.
  */
 void DescribeRiskConfigurationResponsePrivate::parseDescribeRiskConfigurationResponse(QXmlStreamReader &xml)
 {

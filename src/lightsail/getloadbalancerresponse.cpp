@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetLoadBalancerResponse
- *
  * \brief The GetLoadBalancerResponse class provides an interace for Lightsail GetLoadBalancer responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 GetLoadBalancerResponse::GetLoadBalancerResponse(
         const GetLoadBalancerRequest &request,
@@ -71,6 +66,9 @@ GetLoadBalancerResponse::GetLoadBalancerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetLoadBalancerRequest * GetLoadBalancerResponse::request() const
 {
     Q_D(const GetLoadBalancerResponse);
@@ -78,9 +76,8 @@ const GetLoadBalancerRequest * GetLoadBalancerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetLoadBalancer \a response.
  */
 void GetLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetLoadBalancerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetLoadBalancerResponsePrivate
+ * \brief The GetLoadBalancerResponsePrivate class provides private implementation for GetLoadBalancerResponse.
  * \internal
  *
- * \class GetLoadBalancerResponsePrivate
- *
- * \brief Private implementation for GetLoadBalancerResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetLoadBalancerResponse instance.
+ * Constructs a GetLoadBalancerResponsePrivate object with public implementation \a q.
  */
 GetLoadBalancerResponsePrivate::GetLoadBalancerResponsePrivate(
     GetLoadBalancerResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetLoadBalancerResponsePrivate::GetLoadBalancerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetLoadBalancer response element from \a xml.
  */
 void GetLoadBalancerResponsePrivate::parseGetLoadBalancerResponse(QXmlStreamReader &xml)
 {

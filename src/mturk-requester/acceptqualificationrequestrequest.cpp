@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * AcceptQualificationRequestRequest::response(Q
  */
 
 /*!
- *
- * Constructs a AcceptQualificationRequestRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a AcceptQualificationRequestRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 AcceptQualificationRequestRequestPrivate::AcceptQualificationRequestRequestPrivate(
     const MTurkRequest::Action action, AcceptQualificationRequestRequest * const q)

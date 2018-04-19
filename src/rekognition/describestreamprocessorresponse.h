@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeStreamProcessorResponse : public RekognitionResponse 
 public:
     DescribeStreamProcessorResponse(const DescribeStreamProcessorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeStreamProcessorRequest * request() const;
+    virtual const DescribeStreamProcessorRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeStreamProcessorResponse)

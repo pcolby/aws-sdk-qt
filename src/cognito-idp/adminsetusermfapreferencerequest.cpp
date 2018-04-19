@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminSetUserMFAPreferenceRequest::response(QN
  */
 
 /*!
- *
- * Constructs a AdminSetUserMFAPreferenceRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminSetUserMFAPreferenceRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminSetUserMFAPreferenceRequestPrivate::AdminSetUserMFAPreferenceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminSetUserMFAPreferenceRequest * const q)

@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateProfileResponse
- *
  * \brief The UpdateProfileResponse class provides an interace for AlexaForBusiness UpdateProfile responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateProfileResponse::UpdateProfileResponse(
         const UpdateProfileRequest &request,
@@ -60,6 +55,9 @@ UpdateProfileResponse::UpdateProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateProfileRequest * UpdateProfileResponse::request() const
 {
     Q_D(const UpdateProfileResponse);
@@ -67,9 +65,8 @@ const UpdateProfileRequest * UpdateProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness UpdateProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness UpdateProfile \a response.
  */
 void UpdateProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::UpdateProfileResponsePrivate
+ * \brief The UpdateProfileResponsePrivate class provides private implementation for UpdateProfileResponse.
  * \internal
  *
- * \class UpdateProfileResponsePrivate
- *
- * \brief Private implementation for UpdateProfileResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateProfileResponse instance.
+ * Constructs a UpdateProfileResponsePrivate object with public implementation \a q.
  */
 UpdateProfileResponsePrivate::UpdateProfileResponsePrivate(
     UpdateProfileResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateProfileResponsePrivate::UpdateProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness UpdateProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness UpdateProfile response element from \a xml.
  */
 void UpdateProfileResponsePrivate::parseUpdateProfileResponse(QXmlStreamReader &xml)
 {

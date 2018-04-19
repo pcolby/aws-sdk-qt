@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListFieldLevelEncryptionProfilesRequest::resp
  */
 
 /*!
- *
- * Constructs a ListFieldLevelEncryptionProfilesRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a ListFieldLevelEncryptionProfilesRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 ListFieldLevelEncryptionProfilesRequestPrivate::ListFieldLevelEncryptionProfilesRequestPrivate(
     const CloudFrontRequest::Action action, ListFieldLevelEncryptionProfilesRequest * const q)

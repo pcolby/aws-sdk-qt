@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a AddTagsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a AddTagsRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, AddTagsRequest * const q)

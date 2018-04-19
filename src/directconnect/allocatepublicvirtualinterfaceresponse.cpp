@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::AllocatePublicVirtualInterfaceResponse
- *
  * \brief The AllocatePublicVirtualInterfaceResponse class provides an interace for DirectConnect AllocatePublicVirtualInterface responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new AllocatePublicVirtualInterfaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AllocatePublicVirtualInterfaceResponse object for \a reply to \a request, with parent \a parent.
  */
 AllocatePublicVirtualInterfaceResponse::AllocatePublicVirtualInterfaceResponse(
         const AllocatePublicVirtualInterfaceRequest &request,
@@ -63,6 +58,9 @@ AllocatePublicVirtualInterfaceResponse::AllocatePublicVirtualInterfaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AllocatePublicVirtualInterfaceRequest * AllocatePublicVirtualInterfaceResponse::request() const
 {
     Q_D(const AllocatePublicVirtualInterfaceResponse);
@@ -70,9 +68,8 @@ const AllocatePublicVirtualInterfaceRequest * AllocatePublicVirtualInterfaceResp
 }
 
 /*!
- * @brief  Parse a DirectConnect AllocatePublicVirtualInterface response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect AllocatePublicVirtualInterface \a response.
  */
 void AllocatePublicVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void AllocatePublicVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::AllocatePublicVirtualInterfaceResponsePrivate
+ * \brief The AllocatePublicVirtualInterfaceResponsePrivate class provides private implementation for AllocatePublicVirtualInterfaceResponse.
  * \internal
  *
- * \class AllocatePublicVirtualInterfaceResponsePrivate
- *
- * \brief Private implementation for AllocatePublicVirtualInterfaceResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocatePublicVirtualInterfaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AllocatePublicVirtualInterfaceResponse instance.
+ * Constructs a AllocatePublicVirtualInterfaceResponsePrivate object with public implementation \a q.
  */
 AllocatePublicVirtualInterfaceResponsePrivate::AllocatePublicVirtualInterfaceResponsePrivate(
     AllocatePublicVirtualInterfaceResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ AllocatePublicVirtualInterfaceResponsePrivate::AllocatePublicVirtualInterfaceRes
 }
 
 /*!
- * @brief  Parse an DirectConnect AllocatePublicVirtualInterfaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect AllocatePublicVirtualInterface response element from \a xml.
  */
 void AllocatePublicVirtualInterfaceResponsePrivate::parseAllocatePublicVirtualInterfaceResponse(QXmlStreamReader &xml)
 {

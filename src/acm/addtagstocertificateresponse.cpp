@@ -29,10 +29,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::AddTagsToCertificateResponse
- *
  * \brief The AddTagsToCertificateResponse class provides an interace for ACM AddTagsToCertificate responses.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new AddTagsToCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddTagsToCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 AddTagsToCertificateResponse::AddTagsToCertificateResponse(
         const AddTagsToCertificateRequest &request,
@@ -64,6 +59,9 @@ AddTagsToCertificateResponse::AddTagsToCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddTagsToCertificateRequest * AddTagsToCertificateResponse::request() const
 {
     Q_D(const AddTagsToCertificateResponse);
@@ -71,9 +69,8 @@ const AddTagsToCertificateRequest * AddTagsToCertificateResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ACM AddTagsToCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACM AddTagsToCertificate \a response.
  */
 void AddTagsToCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void AddTagsToCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACM::AddTagsToCertificateResponsePrivate
+ * \brief The AddTagsToCertificateResponsePrivate class provides private implementation for AddTagsToCertificateResponse.
  * \internal
  *
- * \class AddTagsToCertificateResponsePrivate
- *
- * \brief Private implementation for AddTagsToCertificateResponse.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsToCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddTagsToCertificateResponse instance.
+ * Constructs a AddTagsToCertificateResponsePrivate object with public implementation \a q.
  */
 AddTagsToCertificateResponsePrivate::AddTagsToCertificateResponsePrivate(
     AddTagsToCertificateResponse * const q) : ACMResponsePrivate(q)
@@ -104,9 +97,7 @@ AddTagsToCertificateResponsePrivate::AddTagsToCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACM AddTagsToCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACM AddTagsToCertificate response element from \a xml.
  */
 void AddTagsToCertificateResponsePrivate::parseAddTagsToCertificateResponse(QXmlStreamReader &xml)
 {

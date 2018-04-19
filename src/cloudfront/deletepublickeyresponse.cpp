@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::DeletePublicKeyResponse
- *
  * \brief The DeletePublicKeyResponse class provides an interace for CloudFront DeletePublicKey responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new DeletePublicKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeletePublicKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeletePublicKeyResponse::DeletePublicKeyResponse(
         const DeletePublicKeyRequest &request,
@@ -60,6 +55,9 @@ DeletePublicKeyResponse::DeletePublicKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeletePublicKeyRequest * DeletePublicKeyResponse::request() const
 {
     Q_D(const DeletePublicKeyResponse);
@@ -67,9 +65,8 @@ const DeletePublicKeyRequest * DeletePublicKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront DeletePublicKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront DeletePublicKey \a response.
  */
 void DeletePublicKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeletePublicKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::DeletePublicKeyResponsePrivate
+ * \brief The DeletePublicKeyResponsePrivate class provides private implementation for DeletePublicKeyResponse.
  * \internal
  *
- * \class DeletePublicKeyResponsePrivate
- *
- * \brief Private implementation for DeletePublicKeyResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePublicKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeletePublicKeyResponse instance.
+ * Constructs a DeletePublicKeyResponsePrivate object with public implementation \a q.
  */
 DeletePublicKeyResponsePrivate::DeletePublicKeyResponsePrivate(
     DeletePublicKeyResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ DeletePublicKeyResponsePrivate::DeletePublicKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront DeletePublicKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront DeletePublicKey response element from \a xml.
  */
 void DeletePublicKeyResponsePrivate::parseDeletePublicKeyResponse(QXmlStreamReader &xml)
 {

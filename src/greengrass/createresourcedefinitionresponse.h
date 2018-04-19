@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateResourceDefinitionResponse : public GreengrassResponse 
 public:
     CreateResourceDefinitionResponse(const CreateResourceDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateResourceDefinitionRequest * request() const;
+    virtual const CreateResourceDefinitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateResourceDefinitionResponse)

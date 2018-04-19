@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteAddressBookResponse : public AlexaForBusinessResponse {
 public:
     DeleteAddressBookResponse(const DeleteAddressBookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAddressBookRequest * request() const;
+    virtual const DeleteAddressBookRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteAddressBookResponse)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetReputationMetricsEnable
  */
 
 /*!
- *
- * Constructs a UpdateConfigurationSetReputationMetricsEnabledRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a UpdateConfigurationSetReputationMetricsEnabledRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 UpdateConfigurationSetReputationMetricsEnabledRequestPrivate::UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(
     const SESRequest::Action action, UpdateConfigurationSetReputationMetricsEnabledRequest * const q)

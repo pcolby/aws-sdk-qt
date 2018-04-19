@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutDeliveryChannelResponse
- *
  * \brief The PutDeliveryChannelResponse class provides an interace for ConfigService PutDeliveryChannel responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutDeliveryChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutDeliveryChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 PutDeliveryChannelResponse::PutDeliveryChannelResponse(
         const PutDeliveryChannelRequest &request,
@@ -78,6 +73,9 @@ PutDeliveryChannelResponse::PutDeliveryChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutDeliveryChannelRequest * PutDeliveryChannelResponse::request() const
 {
     Q_D(const PutDeliveryChannelResponse);
@@ -85,9 +83,8 @@ const PutDeliveryChannelRequest * PutDeliveryChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a ConfigService PutDeliveryChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService PutDeliveryChannel \a response.
  */
 void PutDeliveryChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void PutDeliveryChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::PutDeliveryChannelResponsePrivate
+ * \brief The PutDeliveryChannelResponsePrivate class provides private implementation for PutDeliveryChannelResponse.
  * \internal
  *
- * \class PutDeliveryChannelResponsePrivate
- *
- * \brief Private implementation for PutDeliveryChannelResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutDeliveryChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutDeliveryChannelResponse instance.
+ * Constructs a PutDeliveryChannelResponsePrivate object with public implementation \a q.
  */
 PutDeliveryChannelResponsePrivate::PutDeliveryChannelResponsePrivate(
     PutDeliveryChannelResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ PutDeliveryChannelResponsePrivate::PutDeliveryChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ConfigService PutDeliveryChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService PutDeliveryChannel response element from \a xml.
  */
 void PutDeliveryChannelResponsePrivate::parsePutDeliveryChannelResponse(QXmlStreamReader &xml)
 {

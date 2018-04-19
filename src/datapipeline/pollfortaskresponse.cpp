@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::PollForTaskResponse
- *
  * \brief The PollForTaskResponse class provides an interace for DataPipeline PollForTask responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new PollForTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PollForTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 PollForTaskResponse::PollForTaskResponse(
         const PollForTaskRequest &request,
@@ -73,6 +68,9 @@ PollForTaskResponse::PollForTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PollForTaskRequest * PollForTaskResponse::request() const
 {
     Q_D(const PollForTaskResponse);
@@ -80,9 +78,8 @@ const PollForTaskRequest * PollForTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a DataPipeline PollForTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline PollForTask \a response.
  */
 void PollForTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void PollForTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::PollForTaskResponsePrivate
+ * \brief The PollForTaskResponsePrivate class provides private implementation for PollForTaskResponse.
  * \internal
  *
- * \class PollForTaskResponsePrivate
- *
- * \brief Private implementation for PollForTaskResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PollForTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PollForTaskResponse instance.
+ * Constructs a PollForTaskResponsePrivate object with public implementation \a q.
  */
 PollForTaskResponsePrivate::PollForTaskResponsePrivate(
     PollForTaskResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ PollForTaskResponsePrivate::PollForTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline PollForTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline PollForTask response element from \a xml.
  */
 void PollForTaskResponsePrivate::parsePollForTaskResponse(QXmlStreamReader &xml)
 {

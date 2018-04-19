@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::DescribeRepositoriesResponse
- *
  * \brief The DescribeRepositoriesResponse class provides an interace for ECR DescribeRepositories responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new DescribeRepositoriesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRepositoriesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRepositoriesResponse::DescribeRepositoriesResponse(
         const DescribeRepositoriesRequest &request,
@@ -59,6 +54,9 @@ DescribeRepositoriesResponse::DescribeRepositoriesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRepositoriesRequest * DescribeRepositoriesResponse::request() const
 {
     Q_D(const DescribeRepositoriesResponse);
@@ -66,9 +64,8 @@ const DescribeRepositoriesRequest * DescribeRepositoriesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ECR DescribeRepositories response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR DescribeRepositories \a response.
  */
 void DescribeRepositoriesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeRepositoriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::DescribeRepositoriesResponsePrivate
+ * \brief The DescribeRepositoriesResponsePrivate class provides private implementation for DescribeRepositoriesResponse.
  * \internal
  *
- * \class DescribeRepositoriesResponsePrivate
- *
- * \brief Private implementation for DescribeRepositoriesResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRepositoriesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRepositoriesResponse instance.
+ * Constructs a DescribeRepositoriesResponsePrivate object with public implementation \a q.
  */
 DescribeRepositoriesResponsePrivate::DescribeRepositoriesResponsePrivate(
     DescribeRepositoriesResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeRepositoriesResponsePrivate::DescribeRepositoriesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR DescribeRepositoriesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR DescribeRepositories response element from \a xml.
  */
 void DescribeRepositoriesResponsePrivate::parseDescribeRepositoriesResponse(QXmlStreamReader &xml)
 {

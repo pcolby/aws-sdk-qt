@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetStreamingDistributionConfigResponse
- *
  * \brief The GetStreamingDistributionConfigResponse class provides an interace for CloudFront GetStreamingDistributionConfig responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetStreamingDistributionConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetStreamingDistributionConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 GetStreamingDistributionConfigResponse::GetStreamingDistributionConfigResponse(
         const GetStreamingDistributionConfigRequest &request,
@@ -60,6 +55,9 @@ GetStreamingDistributionConfigResponse::GetStreamingDistributionConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetStreamingDistributionConfigRequest * GetStreamingDistributionConfigResponse::request() const
 {
     Q_D(const GetStreamingDistributionConfigResponse);
@@ -67,9 +65,8 @@ const GetStreamingDistributionConfigRequest * GetStreamingDistributionConfigResp
 }
 
 /*!
- * @brief  Parse a CloudFront GetStreamingDistributionConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront GetStreamingDistributionConfig \a response.
  */
 void GetStreamingDistributionConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetStreamingDistributionConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::GetStreamingDistributionConfigResponsePrivate
+ * \brief The GetStreamingDistributionConfigResponsePrivate class provides private implementation for GetStreamingDistributionConfigResponse.
  * \internal
  *
- * \class GetStreamingDistributionConfigResponsePrivate
- *
- * \brief Private implementation for GetStreamingDistributionConfigResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetStreamingDistributionConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetStreamingDistributionConfigResponse instance.
+ * Constructs a GetStreamingDistributionConfigResponsePrivate object with public implementation \a q.
  */
 GetStreamingDistributionConfigResponsePrivate::GetStreamingDistributionConfigResponsePrivate(
     GetStreamingDistributionConfigResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ GetStreamingDistributionConfigResponsePrivate::GetStreamingDistributionConfigRes
 }
 
 /*!
- * @brief  Parse an CloudFront GetStreamingDistributionConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront GetStreamingDistributionConfig response element from \a xml.
  */
 void GetStreamingDistributionConfigResponsePrivate::parseGetStreamingDistributionConfigResponse(QXmlStreamReader &xml)
 {

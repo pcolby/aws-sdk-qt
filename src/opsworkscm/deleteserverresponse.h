@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteServerResponse : public OpsWorksCMResponse {
 public:
     DeleteServerResponse(const DeleteServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteServerRequest * request() const;
+    virtual const DeleteServerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteServerResponse)

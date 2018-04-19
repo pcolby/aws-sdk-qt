@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedNodeOfferingsRequest::respons
  */
 
 /*!
- *
- * Constructs a DescribeReservedNodeOfferingsRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeReservedNodeOfferingsRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeReservedNodeOfferingsRequestPrivate::DescribeReservedNodeOfferingsRequestPrivate(
     const RedshiftRequest::Action action, DescribeReservedNodeOfferingsRequest * const q)

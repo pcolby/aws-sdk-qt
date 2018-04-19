@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::UpdateFunctionCodeResponse
- *
  * \brief The UpdateFunctionCodeResponse class provides an interace for Lambda UpdateFunctionCode responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new UpdateFunctionCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateFunctionCodeResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateFunctionCodeResponse::UpdateFunctionCodeResponse(
         const UpdateFunctionCodeRequest &request,
@@ -66,6 +61,9 @@ UpdateFunctionCodeResponse::UpdateFunctionCodeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateFunctionCodeRequest * UpdateFunctionCodeResponse::request() const
 {
     Q_D(const UpdateFunctionCodeResponse);
@@ -73,9 +71,8 @@ const UpdateFunctionCodeRequest * UpdateFunctionCodeResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda UpdateFunctionCode response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda UpdateFunctionCode \a response.
  */
 void UpdateFunctionCodeResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateFunctionCodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::UpdateFunctionCodeResponsePrivate
+ * \brief The UpdateFunctionCodeResponsePrivate class provides private implementation for UpdateFunctionCodeResponse.
  * \internal
  *
- * \class UpdateFunctionCodeResponsePrivate
- *
- * \brief Private implementation for UpdateFunctionCodeResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFunctionCodeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateFunctionCodeResponse instance.
+ * Constructs a UpdateFunctionCodeResponsePrivate object with public implementation \a q.
  */
 UpdateFunctionCodeResponsePrivate::UpdateFunctionCodeResponsePrivate(
     UpdateFunctionCodeResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateFunctionCodeResponsePrivate::UpdateFunctionCodeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda UpdateFunctionCodeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda UpdateFunctionCode response element from \a xml.
  */
 void UpdateFunctionCodeResponsePrivate::parseUpdateFunctionCodeResponse(QXmlStreamReader &xml)
 {

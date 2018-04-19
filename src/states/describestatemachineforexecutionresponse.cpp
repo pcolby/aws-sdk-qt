@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::DescribeStateMachineForExecutionResponse
- *
  * \brief The DescribeStateMachineForExecutionResponse class provides an interace for SFN DescribeStateMachineForExecution responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new DescribeStateMachineForExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStateMachineForExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStateMachineForExecutionResponse::DescribeStateMachineForExecutionResponse(
         const DescribeStateMachineForExecutionRequest &request,
@@ -74,6 +69,9 @@ DescribeStateMachineForExecutionResponse::DescribeStateMachineForExecutionRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStateMachineForExecutionRequest * DescribeStateMachineForExecutionResponse::request() const
 {
     Q_D(const DescribeStateMachineForExecutionResponse);
@@ -81,9 +79,8 @@ const DescribeStateMachineForExecutionRequest * DescribeStateMachineForExecution
 }
 
 /*!
- * @brief  Parse a SFN DescribeStateMachineForExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN DescribeStateMachineForExecution \a response.
  */
 void DescribeStateMachineForExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DescribeStateMachineForExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::DescribeStateMachineForExecutionResponsePrivate
+ * \brief The DescribeStateMachineForExecutionResponsePrivate class provides private implementation for DescribeStateMachineForExecutionResponse.
  * \internal
  *
- * \class DescribeStateMachineForExecutionResponsePrivate
- *
- * \brief Private implementation for DescribeStateMachineForExecutionResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStateMachineForExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStateMachineForExecutionResponse instance.
+ * Constructs a DescribeStateMachineForExecutionResponsePrivate object with public implementation \a q.
  */
 DescribeStateMachineForExecutionResponsePrivate::DescribeStateMachineForExecutionResponsePrivate(
     DescribeStateMachineForExecutionResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ DescribeStateMachineForExecutionResponsePrivate::DescribeStateMachineForExecutio
 }
 
 /*!
- * @brief  Parse an SFN DescribeStateMachineForExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN DescribeStateMachineForExecution response element from \a xml.
  */
 void DescribeStateMachineForExecutionResponsePrivate::parseDescribeStateMachineForExecutionResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::UpdateOriginEndpointResponse
- *
  * \brief The UpdateOriginEndpointResponse class provides an interace for MediaPackage UpdateOriginEndpoint responses.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::updateOriginEndpoint
  */
 
 /*!
- * @brief  Constructs a new UpdateOriginEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateOriginEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateOriginEndpointResponse::UpdateOriginEndpointResponse(
         const UpdateOriginEndpointRequest &request,
@@ -55,6 +50,9 @@ UpdateOriginEndpointResponse::UpdateOriginEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateOriginEndpointRequest * UpdateOriginEndpointResponse::request() const
 {
     Q_D(const UpdateOriginEndpointResponse);
@@ -62,9 +60,8 @@ const UpdateOriginEndpointRequest * UpdateOriginEndpointResponse::request() cons
 }
 
 /*!
- * @brief  Parse a MediaPackage UpdateOriginEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaPackage UpdateOriginEndpoint \a response.
  */
 void UpdateOriginEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateOriginEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaPackage::UpdateOriginEndpointResponsePrivate
+ * \brief The UpdateOriginEndpointResponsePrivate class provides private implementation for UpdateOriginEndpointResponse.
  * \internal
  *
- * \class UpdateOriginEndpointResponsePrivate
- *
- * \brief Private implementation for UpdateOriginEndpointResponse.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateOriginEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateOriginEndpointResponse instance.
+ * Constructs a UpdateOriginEndpointResponsePrivate object with public implementation \a q.
  */
 UpdateOriginEndpointResponsePrivate::UpdateOriginEndpointResponsePrivate(
     UpdateOriginEndpointResponse * const q) : MediaPackageResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateOriginEndpointResponsePrivate::UpdateOriginEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaPackage UpdateOriginEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaPackage UpdateOriginEndpoint response element from \a xml.
  */
 void UpdateOriginEndpointResponsePrivate::parseUpdateOriginEndpointResponse(QXmlStreamReader &xml)
 {

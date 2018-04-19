@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVolumeResponse
- *
  * \brief The ModifyVolumeResponse class provides an interace for EC2 ModifyVolume responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyVolumeResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyVolumeResponse::ModifyVolumeResponse(
         const ModifyVolumeRequest &request,
@@ -59,6 +54,9 @@ ModifyVolumeResponse::ModifyVolumeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyVolumeRequest * ModifyVolumeResponse::request() const
 {
     Q_D(const ModifyVolumeResponse);
@@ -66,9 +64,8 @@ const ModifyVolumeRequest * ModifyVolumeResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ModifyVolume response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyVolume \a response.
  */
 void ModifyVolumeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyVolumeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyVolumeResponsePrivate
+ * \brief The ModifyVolumeResponsePrivate class provides private implementation for ModifyVolumeResponse.
  * \internal
  *
- * \class ModifyVolumeResponsePrivate
- *
- * \brief Private implementation for ModifyVolumeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVolumeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyVolumeResponse instance.
+ * Constructs a ModifyVolumeResponsePrivate object with public implementation \a q.
  */
 ModifyVolumeResponsePrivate::ModifyVolumeResponsePrivate(
     ModifyVolumeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyVolumeResponsePrivate::ModifyVolumeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifyVolumeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyVolume response element from \a xml.
  */
 void ModifyVolumeResponsePrivate::parseModifyVolumeResponse(QXmlStreamReader &xml)
 {

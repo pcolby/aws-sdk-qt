@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateStreamRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateStreamRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a CreateStreamRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 CreateStreamRequestPrivate::CreateStreamRequestPrivate(
     const IoTRequest::Action action, CreateStreamRequest * const q)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeFromEventRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UnsubscribeFromEventRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a UnsubscribeFromEventRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 UnsubscribeFromEventRequestPrivate::UnsubscribeFromEventRequestPrivate(
     const InspectorRequest::Action action, UnsubscribeFromEventRequest * const q)

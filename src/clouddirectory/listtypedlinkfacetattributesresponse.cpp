@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListTypedLinkFacetAttributesResponse
- *
  * \brief The ListTypedLinkFacetAttributesResponse class provides an interace for CloudDirectory ListTypedLinkFacetAttributes responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListTypedLinkFacetAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTypedLinkFacetAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTypedLinkFacetAttributesResponse::ListTypedLinkFacetAttributesResponse(
         const ListTypedLinkFacetAttributesRequest &request,
@@ -62,6 +57,9 @@ ListTypedLinkFacetAttributesResponse::ListTypedLinkFacetAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTypedLinkFacetAttributesRequest * ListTypedLinkFacetAttributesResponse::request() const
 {
     Q_D(const ListTypedLinkFacetAttributesResponse);
@@ -69,9 +67,8 @@ const ListTypedLinkFacetAttributesRequest * ListTypedLinkFacetAttributesResponse
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListTypedLinkFacetAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListTypedLinkFacetAttributes \a response.
  */
 void ListTypedLinkFacetAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListTypedLinkFacetAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListTypedLinkFacetAttributesResponsePrivate
+ * \brief The ListTypedLinkFacetAttributesResponsePrivate class provides private implementation for ListTypedLinkFacetAttributesResponse.
  * \internal
  *
- * \class ListTypedLinkFacetAttributesResponsePrivate
- *
- * \brief Private implementation for ListTypedLinkFacetAttributesResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTypedLinkFacetAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTypedLinkFacetAttributesResponse instance.
+ * Constructs a ListTypedLinkFacetAttributesResponsePrivate object with public implementation \a q.
  */
 ListTypedLinkFacetAttributesResponsePrivate::ListTypedLinkFacetAttributesResponsePrivate(
     ListTypedLinkFacetAttributesResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListTypedLinkFacetAttributesResponsePrivate::ListTypedLinkFacetAttributesRespons
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListTypedLinkFacetAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListTypedLinkFacetAttributes response element from \a xml.
  */
 void ListTypedLinkFacetAttributesResponsePrivate::parseListTypedLinkFacetAttributesResponse(QXmlStreamReader &xml)
 {

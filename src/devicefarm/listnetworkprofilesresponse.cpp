@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListNetworkProfilesResponse
- *
  * \brief The ListNetworkProfilesResponse class provides an interace for DeviceFarm ListNetworkProfiles responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListNetworkProfilesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListNetworkProfilesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListNetworkProfilesResponse::ListNetworkProfilesResponse(
         const ListNetworkProfilesRequest &request,
@@ -57,6 +52,9 @@ ListNetworkProfilesResponse::ListNetworkProfilesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListNetworkProfilesRequest * ListNetworkProfilesResponse::request() const
 {
     Q_D(const ListNetworkProfilesResponse);
@@ -64,9 +62,8 @@ const ListNetworkProfilesRequest * ListNetworkProfilesResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm ListNetworkProfiles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm ListNetworkProfiles \a response.
  */
 void ListNetworkProfilesResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListNetworkProfilesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::ListNetworkProfilesResponsePrivate
+ * \brief The ListNetworkProfilesResponsePrivate class provides private implementation for ListNetworkProfilesResponse.
  * \internal
  *
- * \class ListNetworkProfilesResponsePrivate
- *
- * \brief Private implementation for ListNetworkProfilesResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListNetworkProfilesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListNetworkProfilesResponse instance.
+ * Constructs a ListNetworkProfilesResponsePrivate object with public implementation \a q.
  */
 ListNetworkProfilesResponsePrivate::ListNetworkProfilesResponsePrivate(
     ListNetworkProfilesResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ ListNetworkProfilesResponsePrivate::ListNetworkProfilesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm ListNetworkProfilesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm ListNetworkProfiles response element from \a xml.
  */
 void ListNetworkProfilesResponsePrivate::parseListNetworkProfilesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetDeviceResponse
- *
  * \brief The GetDeviceResponse class provides an interace for AlexaForBusiness GetDevice responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetDeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDeviceResponse::GetDeviceResponse(
         const GetDeviceRequest &request,
@@ -60,6 +55,9 @@ GetDeviceResponse::GetDeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDeviceRequest * GetDeviceResponse::request() const
 {
     Q_D(const GetDeviceResponse);
@@ -67,9 +65,8 @@ const GetDeviceRequest * GetDeviceResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness GetDevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness GetDevice \a response.
  */
 void GetDeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetDeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::GetDeviceResponsePrivate
+ * \brief The GetDeviceResponsePrivate class provides private implementation for GetDeviceResponse.
  * \internal
  *
- * \class GetDeviceResponsePrivate
- *
- * \brief Private implementation for GetDeviceResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDeviceResponse instance.
+ * Constructs a GetDeviceResponsePrivate object with public implementation \a q.
  */
 GetDeviceResponsePrivate::GetDeviceResponsePrivate(
     GetDeviceResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ GetDeviceResponsePrivate::GetDeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness GetDeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness GetDevice response element from \a xml.
  */
 void GetDeviceResponsePrivate::parseGetDeviceResponse(QXmlStreamReader &xml)
 {

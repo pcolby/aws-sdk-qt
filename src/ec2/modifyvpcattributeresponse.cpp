@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcAttributeResponse
- *
  * \brief The ModifyVpcAttributeResponse class provides an interace for EC2 ModifyVpcAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyVpcAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyVpcAttributeResponse::ModifyVpcAttributeResponse(
         const ModifyVpcAttributeRequest &request,
@@ -59,6 +54,9 @@ ModifyVpcAttributeResponse::ModifyVpcAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyVpcAttributeRequest * ModifyVpcAttributeResponse::request() const
 {
     Q_D(const ModifyVpcAttributeResponse);
@@ -66,9 +64,8 @@ const ModifyVpcAttributeRequest * ModifyVpcAttributeResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ModifyVpcAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyVpcAttribute \a response.
  */
 void ModifyVpcAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyVpcAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyVpcAttributeResponsePrivate
+ * \brief The ModifyVpcAttributeResponsePrivate class provides private implementation for ModifyVpcAttributeResponse.
  * \internal
  *
- * \class ModifyVpcAttributeResponsePrivate
- *
- * \brief Private implementation for ModifyVpcAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyVpcAttributeResponse instance.
+ * Constructs a ModifyVpcAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyVpcAttributeResponsePrivate::ModifyVpcAttributeResponsePrivate(
     ModifyVpcAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyVpcAttributeResponsePrivate::ModifyVpcAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifyVpcAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyVpcAttribute response element from \a xml.
  */
 void ModifyVpcAttributeResponsePrivate::parseModifyVpcAttributeResponse(QXmlStreamReader &xml)
 {

@@ -169,9 +169,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateTeamMemberRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DisassociateTeamMemberRequestPrivate object for CodeStar \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateTeamMemberRequestPrivate object for CodeStar \a action,
+ * with public implementation \a q.
  */
 DisassociateTeamMemberRequestPrivate::DisassociateTeamMemberRequestPrivate(
     const CodeStarRequest::Action action, DisassociateTeamMemberRequest * const q)

@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutDestinationPolicyResponse
- *
  * \brief The PutDestinationPolicyResponse class provides an interace for CloudWatchLogs PutDestinationPolicy responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutDestinationPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutDestinationPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutDestinationPolicyResponse::PutDestinationPolicyResponse(
         const PutDestinationPolicyRequest &request,
@@ -84,6 +79,9 @@ PutDestinationPolicyResponse::PutDestinationPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutDestinationPolicyRequest * PutDestinationPolicyResponse::request() const
 {
     Q_D(const PutDestinationPolicyResponse);
@@ -91,9 +89,8 @@ const PutDestinationPolicyRequest * PutDestinationPolicyResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs PutDestinationPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs PutDestinationPolicy \a response.
  */
 void PutDestinationPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void PutDestinationPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::PutDestinationPolicyResponsePrivate
+ * \brief The PutDestinationPolicyResponsePrivate class provides private implementation for PutDestinationPolicyResponse.
  * \internal
  *
- * \class PutDestinationPolicyResponsePrivate
- *
- * \brief Private implementation for PutDestinationPolicyResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutDestinationPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutDestinationPolicyResponse instance.
+ * Constructs a PutDestinationPolicyResponsePrivate object with public implementation \a q.
  */
 PutDestinationPolicyResponsePrivate::PutDestinationPolicyResponsePrivate(
     PutDestinationPolicyResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ PutDestinationPolicyResponsePrivate::PutDestinationPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs PutDestinationPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs PutDestinationPolicy response element from \a xml.
  */
 void PutDestinationPolicyResponsePrivate::parsePutDestinationPolicyResponse(QXmlStreamReader &xml)
 {

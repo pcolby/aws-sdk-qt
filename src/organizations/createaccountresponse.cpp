@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::CreateAccountResponse
- *
  * \brief The CreateAccountResponse class provides an interace for Organizations CreateAccount responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new CreateAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAccountResponse::CreateAccountResponse(
         const CreateAccountRequest &request,
@@ -197,6 +192,9 @@ CreateAccountResponse::CreateAccountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAccountRequest * CreateAccountResponse::request() const
 {
     Q_D(const CreateAccountResponse);
@@ -204,9 +202,8 @@ const CreateAccountRequest * CreateAccountResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations CreateAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations CreateAccount \a response.
  */
 void CreateAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void CreateAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::CreateAccountResponsePrivate
+ * \brief The CreateAccountResponsePrivate class provides private implementation for CreateAccountResponse.
  * \internal
  *
- * \class CreateAccountResponsePrivate
- *
- * \brief Private implementation for CreateAccountResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAccountResponse instance.
+ * Constructs a CreateAccountResponsePrivate object with public implementation \a q.
  */
 CreateAccountResponsePrivate::CreateAccountResponsePrivate(
     CreateAccountResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ CreateAccountResponsePrivate::CreateAccountResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations CreateAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations CreateAccount response element from \a xml.
  */
 void CreateAccountResponsePrivate::parseCreateAccountResponse(QXmlStreamReader &xml)
 {

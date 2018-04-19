@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::ListBackupsResponse
- *
  * \brief The ListBackupsResponse class provides an interace for DynamoDB ListBackups responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new ListBackupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListBackupsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListBackupsResponse::ListBackupsResponse(
         const ListBackupsRequest &request,
@@ -74,6 +69,9 @@ ListBackupsResponse::ListBackupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListBackupsRequest * ListBackupsResponse::request() const
 {
     Q_D(const ListBackupsResponse);
@@ -81,9 +79,8 @@ const ListBackupsRequest * ListBackupsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB ListBackups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB ListBackups \a response.
  */
 void ListBackupsResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void ListBackupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::ListBackupsResponsePrivate
+ * \brief The ListBackupsResponsePrivate class provides private implementation for ListBackupsResponse.
  * \internal
  *
- * \class ListBackupsResponsePrivate
- *
- * \brief Private implementation for ListBackupsResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBackupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListBackupsResponse instance.
+ * Constructs a ListBackupsResponsePrivate object with public implementation \a q.
  */
 ListBackupsResponsePrivate::ListBackupsResponsePrivate(
     ListBackupsResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ ListBackupsResponsePrivate::ListBackupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB ListBackupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB ListBackups response element from \a xml.
  */
 void ListBackupsResponsePrivate::parseListBackupsResponse(QXmlStreamReader &xml)
 {

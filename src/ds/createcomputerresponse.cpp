@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CreateComputerResponse
- *
  * \brief The CreateComputerResponse class provides an interace for DirectoryService CreateComputer responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CreateComputerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateComputerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateComputerResponse::CreateComputerResponse(
         const CreateComputerRequest &request,
@@ -69,6 +64,9 @@ CreateComputerResponse::CreateComputerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateComputerRequest * CreateComputerResponse::request() const
 {
     Q_D(const CreateComputerResponse);
@@ -76,9 +74,8 @@ const CreateComputerRequest * CreateComputerResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService CreateComputer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService CreateComputer \a response.
  */
 void CreateComputerResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateComputerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::CreateComputerResponsePrivate
+ * \brief The CreateComputerResponsePrivate class provides private implementation for CreateComputerResponse.
  * \internal
  *
- * \class CreateComputerResponsePrivate
- *
- * \brief Private implementation for CreateComputerResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateComputerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateComputerResponse instance.
+ * Constructs a CreateComputerResponsePrivate object with public implementation \a q.
  */
 CreateComputerResponsePrivate::CreateComputerResponsePrivate(
     CreateComputerResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateComputerResponsePrivate::CreateComputerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService CreateComputerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService CreateComputer response element from \a xml.
  */
 void CreateComputerResponsePrivate::parseCreateComputerResponse(QXmlStreamReader &xml)
 {

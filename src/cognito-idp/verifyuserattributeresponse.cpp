@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::VerifyUserAttributeResponse
- *
  * \brief The VerifyUserAttributeResponse class provides an interace for CognitoIdentityProvider VerifyUserAttribute responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new VerifyUserAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a VerifyUserAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 VerifyUserAttributeResponse::VerifyUserAttributeResponse(
         const VerifyUserAttributeRequest &request,
@@ -65,6 +60,9 @@ VerifyUserAttributeResponse::VerifyUserAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const VerifyUserAttributeRequest * VerifyUserAttributeResponse::request() const
 {
     Q_D(const VerifyUserAttributeResponse);
@@ -72,9 +70,8 @@ const VerifyUserAttributeRequest * VerifyUserAttributeResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider VerifyUserAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider VerifyUserAttribute \a response.
  */
 void VerifyUserAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void VerifyUserAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::VerifyUserAttributeResponsePrivate
+ * \brief The VerifyUserAttributeResponsePrivate class provides private implementation for VerifyUserAttributeResponse.
  * \internal
  *
- * \class VerifyUserAttributeResponsePrivate
- *
- * \brief Private implementation for VerifyUserAttributeResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyUserAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public VerifyUserAttributeResponse instance.
+ * Constructs a VerifyUserAttributeResponsePrivate object with public implementation \a q.
  */
 VerifyUserAttributeResponsePrivate::VerifyUserAttributeResponsePrivate(
     VerifyUserAttributeResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ VerifyUserAttributeResponsePrivate::VerifyUserAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider VerifyUserAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider VerifyUserAttribute response element from \a xml.
  */
 void VerifyUserAttributeResponsePrivate::parseVerifyUserAttributeResponse(QXmlStreamReader &xml)
 {

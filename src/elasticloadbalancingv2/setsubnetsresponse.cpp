@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetSubnetsResponse
- *
  * \brief The SetSubnetsResponse class provides an interace for ElasticLoadBalancingv2 SetSubnets responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new SetSubnetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetSubnetsResponse object for \a reply to \a request, with parent \a parent.
  */
 SetSubnetsResponse::SetSubnetsResponse(
         const SetSubnetsRequest &request,
@@ -123,6 +118,9 @@ SetSubnetsResponse::SetSubnetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetSubnetsRequest * SetSubnetsResponse::request() const
 {
     Q_D(const SetSubnetsResponse);
@@ -130,9 +128,8 @@ const SetSubnetsRequest * SetSubnetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 SetSubnets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 SetSubnets \a response.
  */
 void SetSubnetsResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void SetSubnetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::SetSubnetsResponsePrivate
+ * \brief The SetSubnetsResponsePrivate class provides private implementation for SetSubnetsResponse.
  * \internal
  *
- * \class SetSubnetsResponsePrivate
- *
- * \brief Private implementation for SetSubnetsResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetSubnetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetSubnetsResponse instance.
+ * Constructs a SetSubnetsResponsePrivate object with public implementation \a q.
  */
 SetSubnetsResponsePrivate::SetSubnetsResponsePrivate(
     SetSubnetsResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ SetSubnetsResponsePrivate::SetSubnetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 SetSubnetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 SetSubnets response element from \a xml.
  */
 void SetSubnetsResponsePrivate::parseSetSubnetsResponse(QXmlStreamReader &xml)
 {

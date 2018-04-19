@@ -29,10 +29,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::StartQueryExecutionResponse
- *
  * \brief The StartQueryExecutionResponse class provides an interace for Athena StartQueryExecution responses.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -51,11 +50,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new StartQueryExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartQueryExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 StartQueryExecutionResponse::StartQueryExecutionResponse(
         const StartQueryExecutionRequest &request,
@@ -67,6 +62,9 @@ StartQueryExecutionResponse::StartQueryExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartQueryExecutionRequest * StartQueryExecutionResponse::request() const
 {
     Q_D(const StartQueryExecutionResponse);
@@ -74,9 +72,8 @@ const StartQueryExecutionRequest * StartQueryExecutionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Athena StartQueryExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Athena StartQueryExecution \a response.
  */
 void StartQueryExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void StartQueryExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Athena::StartQueryExecutionResponsePrivate
+ * \brief The StartQueryExecutionResponsePrivate class provides private implementation for StartQueryExecutionResponse.
  * \internal
  *
- * \class StartQueryExecutionResponsePrivate
- *
- * \brief Private implementation for StartQueryExecutionResponse.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartQueryExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartQueryExecutionResponse instance.
+ * Constructs a StartQueryExecutionResponsePrivate object with public implementation \a q.
  */
 StartQueryExecutionResponsePrivate::StartQueryExecutionResponsePrivate(
     StartQueryExecutionResponse * const q) : AthenaResponsePrivate(q)
@@ -107,9 +100,7 @@ StartQueryExecutionResponsePrivate::StartQueryExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Athena StartQueryExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Athena StartQueryExecution response element from \a xml.
  */
 void StartQueryExecutionResponsePrivate::parseStartQueryExecutionResponse(QXmlStreamReader &xml)
 {

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetServiceRoleForAccountRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a GetServiceRoleForAccountRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a GetServiceRoleForAccountRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 GetServiceRoleForAccountRequestPrivate::GetServiceRoleForAccountRequestPrivate(
     const GreengrassRequest::Action action, GetServiceRoleForAccountRequest * const q)

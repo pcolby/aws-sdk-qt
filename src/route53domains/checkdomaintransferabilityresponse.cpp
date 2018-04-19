@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::CheckDomainTransferabilityResponse
- *
  * \brief The CheckDomainTransferabilityResponse class provides an interace for Route53Domains CheckDomainTransferability responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new CheckDomainTransferabilityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CheckDomainTransferabilityResponse object for \a reply to \a request, with parent \a parent.
  */
 CheckDomainTransferabilityResponse::CheckDomainTransferabilityResponse(
         const CheckDomainTransferabilityRequest &request,
@@ -56,6 +51,9 @@ CheckDomainTransferabilityResponse::CheckDomainTransferabilityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CheckDomainTransferabilityRequest * CheckDomainTransferabilityResponse::request() const
 {
     Q_D(const CheckDomainTransferabilityResponse);
@@ -63,9 +61,8 @@ const CheckDomainTransferabilityRequest * CheckDomainTransferabilityResponse::re
 }
 
 /*!
- * @brief  Parse a Route53Domains CheckDomainTransferability response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains CheckDomainTransferability \a response.
  */
 void CheckDomainTransferabilityResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void CheckDomainTransferabilityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::CheckDomainTransferabilityResponsePrivate
+ * \brief The CheckDomainTransferabilityResponsePrivate class provides private implementation for CheckDomainTransferabilityResponse.
  * \internal
  *
- * \class CheckDomainTransferabilityResponsePrivate
- *
- * \brief Private implementation for CheckDomainTransferabilityResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CheckDomainTransferabilityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CheckDomainTransferabilityResponse instance.
+ * Constructs a CheckDomainTransferabilityResponsePrivate object with public implementation \a q.
  */
 CheckDomainTransferabilityResponsePrivate::CheckDomainTransferabilityResponsePrivate(
     CheckDomainTransferabilityResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ CheckDomainTransferabilityResponsePrivate::CheckDomainTransferabilityResponsePri
 }
 
 /*!
- * @brief  Parse an Route53Domains CheckDomainTransferabilityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains CheckDomainTransferability response element from \a xml.
  */
 void CheckDomainTransferabilityResponsePrivate::parseCheckDomainTransferabilityResponse(QXmlStreamReader &xml)
 {

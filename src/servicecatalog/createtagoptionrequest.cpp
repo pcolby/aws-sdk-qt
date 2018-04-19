@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CreateTagOptionRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a CreateTagOptionRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a CreateTagOptionRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 CreateTagOptionRequestPrivate::CreateTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, CreateTagOptionRequest * const q)

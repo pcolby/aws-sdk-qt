@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeProvisionedProductPlanResponse
- *
  * \brief The DescribeProvisionedProductPlanResponse class provides an interace for ServiceCatalog DescribeProvisionedProductPlan responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeProvisionedProductPlanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeProvisionedProductPlanResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeProvisionedProductPlanResponse::DescribeProvisionedProductPlanResponse(
         const DescribeProvisionedProductPlanRequest &request,
@@ -61,6 +56,9 @@ DescribeProvisionedProductPlanResponse::DescribeProvisionedProductPlanResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeProvisionedProductPlanRequest * DescribeProvisionedProductPlanResponse::request() const
 {
     Q_D(const DescribeProvisionedProductPlanResponse);
@@ -68,9 +66,8 @@ const DescribeProvisionedProductPlanRequest * DescribeProvisionedProductPlanResp
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DescribeProvisionedProductPlan response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DescribeProvisionedProductPlan \a response.
  */
 void DescribeProvisionedProductPlanResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeProvisionedProductPlanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DescribeProvisionedProductPlanResponsePrivate
+ * \brief The DescribeProvisionedProductPlanResponsePrivate class provides private implementation for DescribeProvisionedProductPlanResponse.
  * \internal
  *
- * \class DescribeProvisionedProductPlanResponsePrivate
- *
- * \brief Private implementation for DescribeProvisionedProductPlanResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProvisionedProductPlanResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeProvisionedProductPlanResponse instance.
+ * Constructs a DescribeProvisionedProductPlanResponsePrivate object with public implementation \a q.
  */
 DescribeProvisionedProductPlanResponsePrivate::DescribeProvisionedProductPlanResponsePrivate(
     DescribeProvisionedProductPlanResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeProvisionedProductPlanResponsePrivate::DescribeProvisionedProductPlanRes
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DescribeProvisionedProductPlanResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DescribeProvisionedProductPlan response element from \a xml.
  */
 void DescribeProvisionedProductPlanResponsePrivate::parseDescribeProvisionedProductPlanResponse(QXmlStreamReader &xml)
 {

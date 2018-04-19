@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteVerifiedEmailAddressResponse : public SESResponse {
 public:
     DeleteVerifiedEmailAddressResponse(const DeleteVerifiedEmailAddressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteVerifiedEmailAddressRequest * request() const;
+    virtual const DeleteVerifiedEmailAddressRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteVerifiedEmailAddressResponse)

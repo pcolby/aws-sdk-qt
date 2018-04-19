@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteEventSubscriptionRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEventSubscriptionRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const RDSRequest::Action action, DeleteEventSubscriptionRequest * const q)

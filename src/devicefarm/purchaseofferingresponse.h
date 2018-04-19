@@ -34,10 +34,10 @@ class QTAWS_EXPORT PurchaseOfferingResponse : public DeviceFarmResponse {
 public:
     PurchaseOfferingResponse(const PurchaseOfferingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PurchaseOfferingRequest * request() const;
+    virtual const PurchaseOfferingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PurchaseOfferingResponse)

@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * UpdatePullRequestDescriptionRequest::response
  */
 
 /*!
- *
- * Constructs a UpdatePullRequestDescriptionRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a UpdatePullRequestDescriptionRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 UpdatePullRequestDescriptionRequestPrivate::UpdatePullRequestDescriptionRequestPrivate(
     const CodeCommitRequest::Action action, UpdatePullRequestDescriptionRequest * const q)

@@ -107,9 +107,8 @@ QtAws::Core::AwsAbstractResponse * GetProductsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GetProductsRequestPrivate object for Pricing \a action with,
- * public implementation \a q.
+ * Constructs a GetProductsRequestPrivate object for Pricing \a action,
+ * with public implementation \a q.
  */
 GetProductsRequestPrivate::GetProductsRequestPrivate(
     const PricingRequest::Action action, GetProductsRequest * const q)

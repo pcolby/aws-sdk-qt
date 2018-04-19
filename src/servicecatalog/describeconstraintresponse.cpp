@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeConstraintResponse
- *
  * \brief The DescribeConstraintResponse class provides an interace for ServiceCatalog DescribeConstraint responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeConstraintResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConstraintResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConstraintResponse::DescribeConstraintResponse(
         const DescribeConstraintRequest &request,
@@ -61,6 +56,9 @@ DescribeConstraintResponse::DescribeConstraintResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConstraintRequest * DescribeConstraintResponse::request() const
 {
     Q_D(const DescribeConstraintResponse);
@@ -68,9 +66,8 @@ const DescribeConstraintRequest * DescribeConstraintResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DescribeConstraint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DescribeConstraint \a response.
  */
 void DescribeConstraintResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeConstraintResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DescribeConstraintResponsePrivate
+ * \brief The DescribeConstraintResponsePrivate class provides private implementation for DescribeConstraintResponse.
  * \internal
  *
- * \class DescribeConstraintResponsePrivate
- *
- * \brief Private implementation for DescribeConstraintResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConstraintResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConstraintResponse instance.
+ * Constructs a DescribeConstraintResponsePrivate object with public implementation \a q.
  */
 DescribeConstraintResponsePrivate::DescribeConstraintResponsePrivate(
     DescribeConstraintResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeConstraintResponsePrivate::DescribeConstraintResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DescribeConstraintResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DescribeConstraint response element from \a xml.
  */
 void DescribeConstraintResponsePrivate::parseDescribeConstraintResponse(QXmlStreamReader &xml)
 {

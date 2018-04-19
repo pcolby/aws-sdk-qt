@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::DescribeClusterResponse
- *
  * \brief The DescribeClusterResponse class provides an interace for Snowball DescribeCluster responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new DescribeClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeClusterResponse::DescribeClusterResponse(
         const DescribeClusterRequest &request,
@@ -61,6 +56,9 @@ DescribeClusterResponse::DescribeClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeClusterRequest * DescribeClusterResponse::request() const
 {
     Q_D(const DescribeClusterResponse);
@@ -68,9 +66,8 @@ const DescribeClusterRequest * DescribeClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball DescribeCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball DescribeCluster \a response.
  */
 void DescribeClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::DescribeClusterResponsePrivate
+ * \brief The DescribeClusterResponsePrivate class provides private implementation for DescribeClusterResponse.
  * \internal
  *
- * \class DescribeClusterResponsePrivate
- *
- * \brief Private implementation for DescribeClusterResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeClusterResponse instance.
+ * Constructs a DescribeClusterResponsePrivate object with public implementation \a q.
  */
 DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
     DescribeClusterResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball DescribeClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball DescribeCluster response element from \a xml.
  */
 void DescribeClusterResponsePrivate::parseDescribeClusterResponse(QXmlStreamReader &xml)
 {

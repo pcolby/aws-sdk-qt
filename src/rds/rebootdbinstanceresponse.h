@@ -34,10 +34,10 @@ class QTAWS_EXPORT RebootDBInstanceResponse : public RDSResponse {
 public:
     RebootDBInstanceResponse(const RebootDBInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RebootDBInstanceRequest * request() const;
+    virtual const RebootDBInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RebootDBInstanceResponse)

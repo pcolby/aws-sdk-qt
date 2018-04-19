@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * RejectVpcEndpointConnectionsRequest::response
  */
 
 /*!
- *
- * Constructs a RejectVpcEndpointConnectionsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a RejectVpcEndpointConnectionsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 RejectVpcEndpointConnectionsRequestPrivate::RejectVpcEndpointConnectionsRequestPrivate(
     const EC2Request::Action action, RejectVpcEndpointConnectionsRequest * const q)

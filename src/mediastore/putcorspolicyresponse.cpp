@@ -29,10 +29,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::PutCorsPolicyResponse
- *
  * \brief The PutCorsPolicyResponse class provides an interace for MediaStore PutCorsPolicy responses.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -41,11 +40,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new PutCorsPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutCorsPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutCorsPolicyResponse::PutCorsPolicyResponse(
         const PutCorsPolicyRequest &request,
@@ -57,6 +52,9 @@ PutCorsPolicyResponse::PutCorsPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutCorsPolicyRequest * PutCorsPolicyResponse::request() const
 {
     Q_D(const PutCorsPolicyResponse);
@@ -64,9 +62,8 @@ const PutCorsPolicyRequest * PutCorsPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaStore PutCorsPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaStore PutCorsPolicy \a response.
  */
 void PutCorsPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void PutCorsPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaStore::PutCorsPolicyResponsePrivate
+ * \brief The PutCorsPolicyResponsePrivate class provides private implementation for PutCorsPolicyResponse.
  * \internal
  *
- * \class PutCorsPolicyResponsePrivate
- *
- * \brief Private implementation for PutCorsPolicyResponse.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutCorsPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutCorsPolicyResponse instance.
+ * Constructs a PutCorsPolicyResponsePrivate object with public implementation \a q.
  */
 PutCorsPolicyResponsePrivate::PutCorsPolicyResponsePrivate(
     PutCorsPolicyResponse * const q) : MediaStoreResponsePrivate(q)
@@ -97,9 +90,7 @@ PutCorsPolicyResponsePrivate::PutCorsPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaStore PutCorsPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaStore PutCorsPolicy response element from \a xml.
  */
 void PutCorsPolicyResponsePrivate::parsePutCorsPolicyResponse(QXmlStreamReader &xml)
 {

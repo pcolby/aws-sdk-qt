@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * CreateIndexRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateIndexRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a CreateIndexRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 CreateIndexRequestPrivate::CreateIndexRequestPrivate(
     const CloudDirectoryRequest::Action action, CreateIndexRequest * const q)

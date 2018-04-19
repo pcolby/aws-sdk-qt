@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ReloadTablesRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ReloadTablesRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a ReloadTablesRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 ReloadTablesRequestPrivate::ReloadTablesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ReloadTablesRequest * const q)

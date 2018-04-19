@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * GetAttributesRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetAttributesRequestPrivate object for SimpleDB \a action with,
- * public implementation \a q.
+ * Constructs a GetAttributesRequestPrivate object for SimpleDB \a action,
+ * with public implementation \a q.
  */
 GetAttributesRequestPrivate::GetAttributesRequestPrivate(
     const SimpleDBRequest::Action action, GetAttributesRequest * const q)

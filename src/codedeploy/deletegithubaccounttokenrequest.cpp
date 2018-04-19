@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * DeleteGitHubAccountTokenRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteGitHubAccountTokenRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a DeleteGitHubAccountTokenRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 DeleteGitHubAccountTokenRequestPrivate::DeleteGitHubAccountTokenRequestPrivate(
     const CodeDeployRequest::Action action, DeleteGitHubAccountTokenRequest * const q)

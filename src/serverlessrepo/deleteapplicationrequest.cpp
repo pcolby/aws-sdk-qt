@@ -102,9 +102,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteApplicationRequestPrivate object for ServerlessApplicationRepository \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApplicationRequestPrivate object for ServerlessApplicationRepository \a action,
+ * with public implementation \a q.
  */
 DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, DeleteApplicationRequest * const q)

@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::SendTaskSuccessResponse
- *
  * \brief The SendTaskSuccessResponse class provides an interace for SFN SendTaskSuccess responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new SendTaskSuccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendTaskSuccessResponse object for \a reply to \a request, with parent \a parent.
  */
 SendTaskSuccessResponse::SendTaskSuccessResponse(
         const SendTaskSuccessRequest &request,
@@ -74,6 +69,9 @@ SendTaskSuccessResponse::SendTaskSuccessResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendTaskSuccessRequest * SendTaskSuccessResponse::request() const
 {
     Q_D(const SendTaskSuccessResponse);
@@ -81,9 +79,8 @@ const SendTaskSuccessRequest * SendTaskSuccessResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN SendTaskSuccess response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN SendTaskSuccess \a response.
  */
 void SendTaskSuccessResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void SendTaskSuccessResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::SendTaskSuccessResponsePrivate
+ * \brief The SendTaskSuccessResponsePrivate class provides private implementation for SendTaskSuccessResponse.
  * \internal
  *
- * \class SendTaskSuccessResponsePrivate
- *
- * \brief Private implementation for SendTaskSuccessResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendTaskSuccessResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendTaskSuccessResponse instance.
+ * Constructs a SendTaskSuccessResponsePrivate object with public implementation \a q.
  */
 SendTaskSuccessResponsePrivate::SendTaskSuccessResponsePrivate(
     SendTaskSuccessResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ SendTaskSuccessResponsePrivate::SendTaskSuccessResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN SendTaskSuccessResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN SendTaskSuccess response element from \a xml.
  */
 void SendTaskSuccessResponsePrivate::parseSendTaskSuccessResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::RegisterTaskWithMaintenanceWindowResponse
- *
  * \brief The RegisterTaskWithMaintenanceWindowResponse class provides an interace for SSM RegisterTaskWithMaintenanceWindow responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new RegisterTaskWithMaintenanceWindowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterTaskWithMaintenanceWindowResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterTaskWithMaintenanceWindowResponse::RegisterTaskWithMaintenanceWindowResponse(
         const RegisterTaskWithMaintenanceWindowRequest &request,
@@ -79,6 +74,9 @@ RegisterTaskWithMaintenanceWindowResponse::RegisterTaskWithMaintenanceWindowResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterTaskWithMaintenanceWindowRequest * RegisterTaskWithMaintenanceWindowResponse::request() const
 {
     Q_D(const RegisterTaskWithMaintenanceWindowResponse);
@@ -86,9 +84,8 @@ const RegisterTaskWithMaintenanceWindowRequest * RegisterTaskWithMaintenanceWind
 }
 
 /*!
- * @brief  Parse a SSM RegisterTaskWithMaintenanceWindow response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM RegisterTaskWithMaintenanceWindow \a response.
  */
 void RegisterTaskWithMaintenanceWindowResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void RegisterTaskWithMaintenanceWindowResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::SSM::RegisterTaskWithMaintenanceWindowResponsePrivate
+ * \brief The RegisterTaskWithMaintenanceWindowResponsePrivate class provides private implementation for RegisterTaskWithMaintenanceWindowResponse.
  * \internal
  *
- * \class RegisterTaskWithMaintenanceWindowResponsePrivate
- *
- * \brief Private implementation for RegisterTaskWithMaintenanceWindowResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterTaskWithMaintenanceWindowResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterTaskWithMaintenanceWindowResponse instance.
+ * Constructs a RegisterTaskWithMaintenanceWindowResponsePrivate object with public implementation \a q.
  */
 RegisterTaskWithMaintenanceWindowResponsePrivate::RegisterTaskWithMaintenanceWindowResponsePrivate(
     RegisterTaskWithMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ RegisterTaskWithMaintenanceWindowResponsePrivate::RegisterTaskWithMaintenanceWin
 }
 
 /*!
- * @brief  Parse an SSM RegisterTaskWithMaintenanceWindowResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM RegisterTaskWithMaintenanceWindow response element from \a xml.
  */
 void RegisterTaskWithMaintenanceWindowResponsePrivate::parseRegisterTaskWithMaintenanceWindowResponse(QXmlStreamReader &xml)
 {

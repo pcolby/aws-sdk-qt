@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcLinkRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteVpcLinkRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVpcLinkRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteVpcLinkRequestPrivate::DeleteVpcLinkRequestPrivate(
     const APIGatewayRequest::Action action, DeleteVpcLinkRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTagOptionResponse : public ServiceCatalogResponse {
 public:
     DeleteTagOptionResponse(const DeleteTagOptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTagOptionRequest * request() const;
+    virtual const DeleteTagOptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTagOptionResponse)

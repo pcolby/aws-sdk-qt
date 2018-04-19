@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * AcknowledgeThirdPartyJobRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a AcknowledgeThirdPartyJobRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a AcknowledgeThirdPartyJobRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 AcknowledgeThirdPartyJobRequestPrivate::AcknowledgeThirdPartyJobRequestPrivate(
     const CodePipelineRequest::Action action, AcknowledgeThirdPartyJobRequest * const q)

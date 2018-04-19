@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeTagsResponse
- *
  * \brief The DescribeTagsResponse class provides an interace for AutoScaling DescribeTags responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTagsResponse::DescribeTagsResponse(
         const DescribeTagsRequest &request,
@@ -60,6 +55,9 @@ DescribeTagsResponse::DescribeTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTagsRequest * DescribeTagsResponse::request() const
 {
     Q_D(const DescribeTagsResponse);
@@ -67,9 +65,8 @@ const DescribeTagsRequest * DescribeTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeTags \a response.
  */
 void DescribeTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeTagsResponsePrivate
+ * \brief The DescribeTagsResponsePrivate class provides private implementation for DescribeTagsResponse.
  * \internal
  *
- * \class DescribeTagsResponsePrivate
- *
- * \brief Private implementation for DescribeTagsResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTagsResponse instance.
+ * Constructs a DescribeTagsResponsePrivate object with public implementation \a q.
  */
 DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
     DescribeTagsResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeTags response element from \a xml.
  */
 void DescribeTagsResponsePrivate::parseDescribeTagsResponse(QXmlStreamReader &xml)
 {

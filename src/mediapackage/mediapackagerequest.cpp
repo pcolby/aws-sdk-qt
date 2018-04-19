@@ -50,7 +50,7 @@ namespace MediaPackage {
  */
 
 /*!
- * Constructs a[n] MediaPackageRequest object for MediaPackage \a action.
+ * Constructs a MediaPackageRequest object for MediaPackage \a action.
  */
 MediaPackageRequest::MediaPackageRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MediaPackageRequestPrivate(action, this))
@@ -250,8 +250,8 @@ QNetworkRequest MediaPackageRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a MediaPackageRequestPrivate object for MediaPackage \a action with,
- * public implementation \a q.
+ * Constructs a MediaPackageRequestPrivate object for MediaPackage \a action,
+ * with public implementation \a q.
  */
 MediaPackageRequestPrivate::MediaPackageRequestPrivate(const MediaPackageRequest::Action action, MediaPackageRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

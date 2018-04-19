@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::ListIdentityPoolUsageResponse
- *
  * \brief The ListIdentityPoolUsageResponse class provides an interace for CognitoSync ListIdentityPoolUsage responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new ListIdentityPoolUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListIdentityPoolUsageResponse object for \a reply to \a request, with parent \a parent.
  */
 ListIdentityPoolUsageResponse::ListIdentityPoolUsageResponse(
         const ListIdentityPoolUsageRequest &request,
@@ -75,6 +70,9 @@ ListIdentityPoolUsageResponse::ListIdentityPoolUsageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListIdentityPoolUsageRequest * ListIdentityPoolUsageResponse::request() const
 {
     Q_D(const ListIdentityPoolUsageResponse);
@@ -82,9 +80,8 @@ const ListIdentityPoolUsageRequest * ListIdentityPoolUsageResponse::request() co
 }
 
 /*!
- * @brief  Parse a CognitoSync ListIdentityPoolUsage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync ListIdentityPoolUsage \a response.
  */
 void ListIdentityPoolUsageResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void ListIdentityPoolUsageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::ListIdentityPoolUsageResponsePrivate
+ * \brief The ListIdentityPoolUsageResponsePrivate class provides private implementation for ListIdentityPoolUsageResponse.
  * \internal
  *
- * \class ListIdentityPoolUsageResponsePrivate
- *
- * \brief Private implementation for ListIdentityPoolUsageResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIdentityPoolUsageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListIdentityPoolUsageResponse instance.
+ * Constructs a ListIdentityPoolUsageResponsePrivate object with public implementation \a q.
  */
 ListIdentityPoolUsageResponsePrivate::ListIdentityPoolUsageResponsePrivate(
     ListIdentityPoolUsageResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ ListIdentityPoolUsageResponsePrivate::ListIdentityPoolUsageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync ListIdentityPoolUsageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync ListIdentityPoolUsage response element from \a xml.
  */
 void ListIdentityPoolUsageResponsePrivate::parseListIdentityPoolUsageResponse(QXmlStreamReader &xml)
 {

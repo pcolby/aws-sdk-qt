@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateCustomVerificationEmailTemplateRequest:
  */
 
 /*!
- *
- * Constructs a UpdateCustomVerificationEmailTemplateRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a UpdateCustomVerificationEmailTemplateRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEmailTemplateRequestPrivate(
     const SESRequest::Action action, UpdateCustomVerificationEmailTemplateRequest * const q)

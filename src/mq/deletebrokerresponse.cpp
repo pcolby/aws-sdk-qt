@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::DeleteBrokerResponse
- *
  * \brief The DeleteBrokerResponse class provides an interace for MQ DeleteBroker responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new DeleteBrokerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBrokerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBrokerResponse::DeleteBrokerResponse(
         const DeleteBrokerRequest &request,
@@ -57,6 +52,9 @@ DeleteBrokerResponse::DeleteBrokerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBrokerRequest * DeleteBrokerResponse::request() const
 {
     Q_D(const DeleteBrokerResponse);
@@ -64,9 +62,8 @@ const DeleteBrokerRequest * DeleteBrokerResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ DeleteBroker response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ DeleteBroker \a response.
  */
 void DeleteBrokerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DeleteBrokerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::DeleteBrokerResponsePrivate
+ * \brief The DeleteBrokerResponsePrivate class provides private implementation for DeleteBrokerResponse.
  * \internal
  *
- * \class DeleteBrokerResponsePrivate
- *
- * \brief Private implementation for DeleteBrokerResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBrokerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBrokerResponse instance.
+ * Constructs a DeleteBrokerResponsePrivate object with public implementation \a q.
  */
 DeleteBrokerResponsePrivate::DeleteBrokerResponsePrivate(
     DeleteBrokerResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ DeleteBrokerResponsePrivate::DeleteBrokerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ DeleteBrokerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ DeleteBroker response element from \a xml.
  */
 void DeleteBrokerResponsePrivate::parseDeleteBrokerResponse(QXmlStreamReader &xml)
 {

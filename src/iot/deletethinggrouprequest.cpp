@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteThingGroupRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteThingGroupRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeleteThingGroupRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeleteThingGroupRequestPrivate::DeleteThingGroupRequestPrivate(
     const IoTRequest::Action action, DeleteThingGroupRequest * const q)

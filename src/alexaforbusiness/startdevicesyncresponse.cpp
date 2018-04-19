@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::StartDeviceSyncResponse
- *
  * \brief The StartDeviceSyncResponse class provides an interace for AlexaForBusiness StartDeviceSync responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new StartDeviceSyncResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartDeviceSyncResponse object for \a reply to \a request, with parent \a parent.
  */
 StartDeviceSyncResponse::StartDeviceSyncResponse(
         const StartDeviceSyncRequest &request,
@@ -60,6 +55,9 @@ StartDeviceSyncResponse::StartDeviceSyncResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartDeviceSyncRequest * StartDeviceSyncResponse::request() const
 {
     Q_D(const StartDeviceSyncResponse);
@@ -67,9 +65,8 @@ const StartDeviceSyncRequest * StartDeviceSyncResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness StartDeviceSync response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness StartDeviceSync \a response.
  */
 void StartDeviceSyncResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void StartDeviceSyncResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::StartDeviceSyncResponsePrivate
+ * \brief The StartDeviceSyncResponsePrivate class provides private implementation for StartDeviceSyncResponse.
  * \internal
  *
- * \class StartDeviceSyncResponsePrivate
- *
- * \brief Private implementation for StartDeviceSyncResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartDeviceSyncResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartDeviceSyncResponse instance.
+ * Constructs a StartDeviceSyncResponsePrivate object with public implementation \a q.
  */
 StartDeviceSyncResponsePrivate::StartDeviceSyncResponsePrivate(
     StartDeviceSyncResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ StartDeviceSyncResponsePrivate::StartDeviceSyncResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness StartDeviceSyncResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness StartDeviceSync response element from \a xml.
  */
 void StartDeviceSyncResponsePrivate::parseStartDeviceSyncResponse(QXmlStreamReader &xml)
 {

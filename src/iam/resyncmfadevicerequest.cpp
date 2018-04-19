@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ResyncMFADeviceRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ResyncMFADeviceRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ResyncMFADeviceRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ResyncMFADeviceRequestPrivate::ResyncMFADeviceRequestPrivate(
     const IAMRequest::Action action, ResyncMFADeviceRequest * const q)

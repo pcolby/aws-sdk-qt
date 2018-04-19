@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTargetGroupAttributesResponse : public ElasticLoadBal
 public:
     DescribeTargetGroupAttributesResponse(const DescribeTargetGroupAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTargetGroupAttributesRequest * request() const;
+    virtual const DescribeTargetGroupAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTargetGroupAttributesResponse)

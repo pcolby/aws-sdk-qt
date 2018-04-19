@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * AllocateStaticIpRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a AllocateStaticIpRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a AllocateStaticIpRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 AllocateStaticIpRequestPrivate::AllocateStaticIpRequestPrivate(
     const LightsailRequest::Action action, AllocateStaticIpRequest * const q)

@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterFromWorkMailRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeregisterFromWorkMailRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterFromWorkMailRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 DeregisterFromWorkMailRequestPrivate::DeregisterFromWorkMailRequestPrivate(
     const WorkMailRequest::Action action, DeregisterFromWorkMailRequest * const q)

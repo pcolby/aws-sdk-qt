@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateNetworkAclEntryResponse : public EC2Response {
 public:
     CreateNetworkAclEntryResponse(const CreateNetworkAclEntryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateNetworkAclEntryRequest * request() const;
+    virtual const CreateNetworkAclEntryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateNetworkAclEntryResponse)

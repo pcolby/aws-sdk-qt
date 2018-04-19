@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::DeleteStateMachineResponse
- *
  * \brief The DeleteStateMachineResponse class provides an interace for SFN DeleteStateMachine responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new DeleteStateMachineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteStateMachineResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteStateMachineResponse::DeleteStateMachineResponse(
         const DeleteStateMachineRequest &request,
@@ -74,6 +69,9 @@ DeleteStateMachineResponse::DeleteStateMachineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteStateMachineRequest * DeleteStateMachineResponse::request() const
 {
     Q_D(const DeleteStateMachineResponse);
@@ -81,9 +79,8 @@ const DeleteStateMachineRequest * DeleteStateMachineResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN DeleteStateMachine response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN DeleteStateMachine \a response.
  */
 void DeleteStateMachineResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DeleteStateMachineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::DeleteStateMachineResponsePrivate
+ * \brief The DeleteStateMachineResponsePrivate class provides private implementation for DeleteStateMachineResponse.
  * \internal
  *
- * \class DeleteStateMachineResponsePrivate
- *
- * \brief Private implementation for DeleteStateMachineResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStateMachineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteStateMachineResponse instance.
+ * Constructs a DeleteStateMachineResponsePrivate object with public implementation \a q.
  */
 DeleteStateMachineResponsePrivate::DeleteStateMachineResponsePrivate(
     DeleteStateMachineResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ DeleteStateMachineResponsePrivate::DeleteStateMachineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN DeleteStateMachineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN DeleteStateMachine response element from \a xml.
  */
 void DeleteStateMachineResponsePrivate::parseDeleteStateMachineResponse(QXmlStreamReader &xml)
 {

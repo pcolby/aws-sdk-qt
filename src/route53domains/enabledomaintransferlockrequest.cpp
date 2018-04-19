@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * EnableDomainTransferLockRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a EnableDomainTransferLockRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a EnableDomainTransferLockRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 EnableDomainTransferLockRequestPrivate::EnableDomainTransferLockRequestPrivate(
     const Route53DomainsRequest::Action action, EnableDomainTransferLockRequest * const q)

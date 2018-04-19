@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::TestRepositoryTriggersResponse
- *
  * \brief The TestRepositoryTriggersResponse class provides an interace for CodeCommit TestRepositoryTriggers responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new TestRepositoryTriggersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TestRepositoryTriggersResponse object for \a reply to \a request, with parent \a parent.
  */
 TestRepositoryTriggersResponse::TestRepositoryTriggersResponse(
         const TestRepositoryTriggersRequest &request,
@@ -245,6 +240,9 @@ TestRepositoryTriggersResponse::TestRepositoryTriggersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TestRepositoryTriggersRequest * TestRepositoryTriggersResponse::request() const
 {
     Q_D(const TestRepositoryTriggersResponse);
@@ -252,9 +250,8 @@ const TestRepositoryTriggersRequest * TestRepositoryTriggersResponse::request() 
 }
 
 /*!
- * @brief  Parse a CodeCommit TestRepositoryTriggers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit TestRepositoryTriggers \a response.
  */
 void TestRepositoryTriggersResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void TestRepositoryTriggersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::TestRepositoryTriggersResponsePrivate
+ * \brief The TestRepositoryTriggersResponsePrivate class provides private implementation for TestRepositoryTriggersResponse.
  * \internal
  *
- * \class TestRepositoryTriggersResponsePrivate
- *
- * \brief Private implementation for TestRepositoryTriggersResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestRepositoryTriggersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TestRepositoryTriggersResponse instance.
+ * Constructs a TestRepositoryTriggersResponsePrivate object with public implementation \a q.
  */
 TestRepositoryTriggersResponsePrivate::TestRepositoryTriggersResponsePrivate(
     TestRepositoryTriggersResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ TestRepositoryTriggersResponsePrivate::TestRepositoryTriggersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit TestRepositoryTriggersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit TestRepositoryTriggers response element from \a xml.
  */
 void TestRepositoryTriggersResponsePrivate::parseTestRepositoryTriggersResponse(QXmlStreamReader &xml)
 {

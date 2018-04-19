@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a AddTagsRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a AddTagsRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const MachineLearningRequest::Action action, AddTagsRequest * const q)

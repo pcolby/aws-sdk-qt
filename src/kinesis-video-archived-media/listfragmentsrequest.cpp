@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListFragmentsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListFragmentsRequestPrivate object for KinesisVideoArchivedMedia \a action with,
- * public implementation \a q.
+ * Constructs a ListFragmentsRequestPrivate object for KinesisVideoArchivedMedia \a action,
+ * with public implementation \a q.
  */
 ListFragmentsRequestPrivate::ListFragmentsRequestPrivate(
     const KinesisVideoArchivedMediaRequest::Action action, ListFragmentsRequest * const q)

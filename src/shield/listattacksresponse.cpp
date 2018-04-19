@@ -29,10 +29,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::ListAttacksResponse
- *
  * \brief The ListAttacksResponse class provides an interace for Shield ListAttacks responses.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -45,11 +44,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new ListAttacksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAttacksResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAttacksResponse::ListAttacksResponse(
         const ListAttacksRequest &request,
@@ -61,6 +56,9 @@ ListAttacksResponse::ListAttacksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAttacksRequest * ListAttacksResponse::request() const
 {
     Q_D(const ListAttacksResponse);
@@ -68,9 +66,8 @@ const ListAttacksRequest * ListAttacksResponse::request() const
 }
 
 /*!
- * @brief  Parse a Shield ListAttacks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Shield ListAttacks \a response.
  */
 void ListAttacksResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListAttacksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Shield::ListAttacksResponsePrivate
+ * \brief The ListAttacksResponsePrivate class provides private implementation for ListAttacksResponse.
  * \internal
  *
- * \class ListAttacksResponsePrivate
- *
- * \brief Private implementation for ListAttacksResponse.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAttacksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAttacksResponse instance.
+ * Constructs a ListAttacksResponsePrivate object with public implementation \a q.
  */
 ListAttacksResponsePrivate::ListAttacksResponsePrivate(
     ListAttacksResponse * const q) : ShieldResponsePrivate(q)
@@ -101,9 +94,7 @@ ListAttacksResponsePrivate::ListAttacksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Shield ListAttacksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Shield ListAttacks response element from \a xml.
  */
 void ListAttacksResponsePrivate::parseListAttacksResponse(QXmlStreamReader &xml)
 {

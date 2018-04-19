@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DefineSuggesterRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DefineSuggesterRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DefineSuggesterRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DefineSuggesterRequestPrivate::DefineSuggesterRequestPrivate(
     const CloudSearchRequest::Action action, DefineSuggesterRequest * const q)

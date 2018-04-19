@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetParameterResponse
- *
  * \brief The GetParameterResponse class provides an interace for SSM GetParameter responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetParameterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetParameterResponse object for \a reply to \a request, with parent \a parent.
  */
 GetParameterResponse::GetParameterResponse(
         const GetParameterRequest &request,
@@ -79,6 +74,9 @@ GetParameterResponse::GetParameterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetParameterRequest * GetParameterResponse::request() const
 {
     Q_D(const GetParameterResponse);
@@ -86,9 +84,8 @@ const GetParameterRequest * GetParameterResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM GetParameter response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM GetParameter \a response.
  */
 void GetParameterResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void GetParameterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::GetParameterResponsePrivate
+ * \brief The GetParameterResponsePrivate class provides private implementation for GetParameterResponse.
  * \internal
  *
- * \class GetParameterResponsePrivate
- *
- * \brief Private implementation for GetParameterResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetParameterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetParameterResponse instance.
+ * Constructs a GetParameterResponsePrivate object with public implementation \a q.
  */
 GetParameterResponsePrivate::GetParameterResponsePrivate(
     GetParameterResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ GetParameterResponsePrivate::GetParameterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM GetParameterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM GetParameter response element from \a xml.
  */
 void GetParameterResponsePrivate::parseGetParameterResponse(QXmlStreamReader &xml)
 {

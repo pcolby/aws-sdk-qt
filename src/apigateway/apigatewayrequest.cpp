@@ -159,7 +159,7 @@ namespace APIGateway {
  */
 
 /*!
- * Constructs a[n] APIGatewayRequest object for APIGateway \a action.
+ * Constructs a APIGatewayRequest object for APIGateway \a action.
  */
 APIGatewayRequest::APIGatewayRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new APIGatewayRequestPrivate(action, this))
@@ -359,8 +359,8 @@ QNetworkRequest APIGatewayRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a APIGatewayRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a APIGatewayRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 APIGatewayRequestPrivate::APIGatewayRequestPrivate(const APIGatewayRequest::Action action, APIGatewayRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

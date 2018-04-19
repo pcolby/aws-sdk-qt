@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::UpdateWebACLResponse
- *
  * \brief The UpdateWebACLResponse class provides an interace for WAFRegional UpdateWebACL responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new UpdateWebACLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateWebACLResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateWebACLResponse::UpdateWebACLResponse(
         const UpdateWebACLRequest &request,
@@ -62,6 +57,9 @@ UpdateWebACLResponse::UpdateWebACLResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateWebACLRequest * UpdateWebACLResponse::request() const
 {
     Q_D(const UpdateWebACLResponse);
@@ -69,9 +67,8 @@ const UpdateWebACLRequest * UpdateWebACLResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional UpdateWebACL response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional UpdateWebACL \a response.
  */
 void UpdateWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void UpdateWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::UpdateWebACLResponsePrivate
+ * \brief The UpdateWebACLResponsePrivate class provides private implementation for UpdateWebACLResponse.
  * \internal
  *
- * \class UpdateWebACLResponsePrivate
- *
- * \brief Private implementation for UpdateWebACLResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateWebACLResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateWebACLResponse instance.
+ * Constructs a UpdateWebACLResponsePrivate object with public implementation \a q.
  */
 UpdateWebACLResponsePrivate::UpdateWebACLResponsePrivate(
     UpdateWebACLResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ UpdateWebACLResponsePrivate::UpdateWebACLResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional UpdateWebACLResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional UpdateWebACL response element from \a xml.
  */
 void UpdateWebACLResponsePrivate::parseUpdateWebACLResponse(QXmlStreamReader &xml)
 {

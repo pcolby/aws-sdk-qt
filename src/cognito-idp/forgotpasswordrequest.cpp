@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * ForgotPasswordRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ForgotPasswordRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a ForgotPasswordRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 ForgotPasswordRequestPrivate::ForgotPasswordRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ForgotPasswordRequest * const q)

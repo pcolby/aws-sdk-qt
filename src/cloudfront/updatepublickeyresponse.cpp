@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::UpdatePublicKeyResponse
- *
  * \brief The UpdatePublicKeyResponse class provides an interace for CloudFront UpdatePublicKey responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new UpdatePublicKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePublicKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePublicKeyResponse::UpdatePublicKeyResponse(
         const UpdatePublicKeyRequest &request,
@@ -60,6 +55,9 @@ UpdatePublicKeyResponse::UpdatePublicKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePublicKeyRequest * UpdatePublicKeyResponse::request() const
 {
     Q_D(const UpdatePublicKeyResponse);
@@ -67,9 +65,8 @@ const UpdatePublicKeyRequest * UpdatePublicKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront UpdatePublicKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront UpdatePublicKey \a response.
  */
 void UpdatePublicKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdatePublicKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::UpdatePublicKeyResponsePrivate
+ * \brief The UpdatePublicKeyResponsePrivate class provides private implementation for UpdatePublicKeyResponse.
  * \internal
  *
- * \class UpdatePublicKeyResponsePrivate
- *
- * \brief Private implementation for UpdatePublicKeyResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePublicKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePublicKeyResponse instance.
+ * Constructs a UpdatePublicKeyResponsePrivate object with public implementation \a q.
  */
 UpdatePublicKeyResponsePrivate::UpdatePublicKeyResponsePrivate(
     UpdatePublicKeyResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdatePublicKeyResponsePrivate::UpdatePublicKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront UpdatePublicKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront UpdatePublicKey response element from \a xml.
  */
 void UpdatePublicKeyResponsePrivate::parseUpdatePublicKeyResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteFpgaImageResponse
- *
  * \brief The DeleteFpgaImageResponse class provides an interace for EC2 DeleteFpgaImage responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteFpgaImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteFpgaImageResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteFpgaImageResponse::DeleteFpgaImageResponse(
         const DeleteFpgaImageRequest &request,
@@ -59,6 +54,9 @@ DeleteFpgaImageResponse::DeleteFpgaImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteFpgaImageRequest * DeleteFpgaImageResponse::request() const
 {
     Q_D(const DeleteFpgaImageResponse);
@@ -66,9 +64,8 @@ const DeleteFpgaImageRequest * DeleteFpgaImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteFpgaImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteFpgaImage \a response.
  */
 void DeleteFpgaImageResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteFpgaImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteFpgaImageResponsePrivate
+ * \brief The DeleteFpgaImageResponsePrivate class provides private implementation for DeleteFpgaImageResponse.
  * \internal
  *
- * \class DeleteFpgaImageResponsePrivate
- *
- * \brief Private implementation for DeleteFpgaImageResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFpgaImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteFpgaImageResponse instance.
+ * Constructs a DeleteFpgaImageResponsePrivate object with public implementation \a q.
  */
 DeleteFpgaImageResponsePrivate::DeleteFpgaImageResponsePrivate(
     DeleteFpgaImageResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteFpgaImageResponsePrivate::DeleteFpgaImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteFpgaImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteFpgaImage response element from \a xml.
  */
 void DeleteFpgaImageResponsePrivate::parseDeleteFpgaImageResponse(QXmlStreamReader &xml)
 {

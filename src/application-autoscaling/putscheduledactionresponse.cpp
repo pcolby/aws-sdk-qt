@@ -29,10 +29,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::PutScheduledActionResponse
- *
  * \brief The PutScheduledActionResponse class provides an interace for ApplicationAutoScaling PutScheduledAction responses.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -112,11 +111,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new PutScheduledActionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutScheduledActionResponse object for \a reply to \a request, with parent \a parent.
  */
 PutScheduledActionResponse::PutScheduledActionResponse(
         const PutScheduledActionRequest &request,
@@ -128,6 +123,9 @@ PutScheduledActionResponse::PutScheduledActionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutScheduledActionRequest * PutScheduledActionResponse::request() const
 {
     Q_D(const PutScheduledActionResponse);
@@ -135,9 +133,8 @@ const PutScheduledActionRequest * PutScheduledActionResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationAutoScaling PutScheduledAction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationAutoScaling PutScheduledAction \a response.
  */
 void PutScheduledActionResponse::parseSuccess(QIODevice &response)
 {
@@ -147,19 +144,15 @@ void PutScheduledActionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationAutoScaling::PutScheduledActionResponsePrivate
+ * \brief The PutScheduledActionResponsePrivate class provides private implementation for PutScheduledActionResponse.
  * \internal
  *
- * \class PutScheduledActionResponsePrivate
- *
- * \brief Private implementation for PutScheduledActionResponse.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutScheduledActionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutScheduledActionResponse instance.
+ * Constructs a PutScheduledActionResponsePrivate object with public implementation \a q.
  */
 PutScheduledActionResponsePrivate::PutScheduledActionResponsePrivate(
     PutScheduledActionResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
@@ -168,9 +161,7 @@ PutScheduledActionResponsePrivate::PutScheduledActionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationAutoScaling PutScheduledActionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationAutoScaling PutScheduledAction response element from \a xml.
  */
 void PutScheduledActionResponsePrivate::parsePutScheduledActionResponse(QXmlStreamReader &xml)
 {

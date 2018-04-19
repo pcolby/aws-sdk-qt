@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * ListAccountsForParentRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListAccountsForParentRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a ListAccountsForParentRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 ListAccountsForParentRequestPrivate::ListAccountsForParentRequestPrivate(
     const OrganizationsRequest::Action action, ListAccountsForParentRequest * const q)

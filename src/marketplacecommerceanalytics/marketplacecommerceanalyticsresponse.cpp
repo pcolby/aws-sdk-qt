@@ -28,16 +28,13 @@ namespace MarketplaceCommerceAnalytics {
 
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsResponse
- *
  * \brief The MarketplaceCommerceAnalyticsResponse class provides an interface for MarketplaceCommerceAnalytics responses.
  *
- * \ingroup MarketplaceCommerceAnalytics
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  */
 
 /*!
- * @brief  Constructs a new MarketplaceCommerceAnalyticsResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MarketplaceCommerceAnalyticsResponse object with parent \a parent.
  */
 MarketplaceCommerceAnalyticsResponse::MarketplaceCommerceAnalyticsResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MarketplaceCommerceAnalyticsResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MarketplaceCommerceAnalyticsResponse::MarketplaceCommerceAnalyticsResponse(QObje
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MarketplaceCommerceAnalyticsResponse object.
- *
+ * \internal
+ * Constructs a MarketplaceCommerceAnalyticsResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MarketplaceCommerceAnalyticsResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MarketplaceCommerceAnalyticsResponse::MarketplaceCommerceAnalyticsResponse(MarketplaceCommerceAnalyticsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MarketplaceCommerceAnalyticsResponse::MarketplaceCommerceAnalyticsResponse(Marke
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MarketplaceCommerceAnalyticsResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MarketplaceCommerceAnalyticsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsResponsePrivate
+ * \brief The MarketplaceCommerceAnalyticsResponsePrivate class provides private implementation for MarketplaceCommerceAnalyticsResponse.
+ * \internal
  *
- * @class  MarketplaceCommerceAnalyticsResponsePrivate
- *
- * @brief  Private implementation for MarketplaceCommerceAnalyticsResponse.
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MarketplaceCommerceAnalyticsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MarketplaceCommerceAnalyticsResponse instance.
+ * Constructs a MarketplaceCommerceAnalyticsResponsePrivate object with public implementation \a q.
  */
 MarketplaceCommerceAnalyticsResponsePrivate::MarketplaceCommerceAnalyticsResponsePrivate(
     MarketplaceCommerceAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

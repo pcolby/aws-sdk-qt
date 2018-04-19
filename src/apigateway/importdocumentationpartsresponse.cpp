@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::ImportDocumentationPartsResponse
- *
  * \brief The ImportDocumentationPartsResponse class provides an interace for APIGateway ImportDocumentationParts responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new ImportDocumentationPartsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportDocumentationPartsResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportDocumentationPartsResponse::ImportDocumentationPartsResponse(
         const ImportDocumentationPartsRequest &request,
@@ -60,6 +55,9 @@ ImportDocumentationPartsResponse::ImportDocumentationPartsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportDocumentationPartsRequest * ImportDocumentationPartsResponse::request() const
 {
     Q_D(const ImportDocumentationPartsResponse);
@@ -67,9 +65,8 @@ const ImportDocumentationPartsRequest * ImportDocumentationPartsResponse::reques
 }
 
 /*!
- * @brief  Parse a APIGateway ImportDocumentationParts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway ImportDocumentationParts \a response.
  */
 void ImportDocumentationPartsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ImportDocumentationPartsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::ImportDocumentationPartsResponsePrivate
+ * \brief The ImportDocumentationPartsResponsePrivate class provides private implementation for ImportDocumentationPartsResponse.
  * \internal
  *
- * \class ImportDocumentationPartsResponsePrivate
- *
- * \brief Private implementation for ImportDocumentationPartsResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportDocumentationPartsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportDocumentationPartsResponse instance.
+ * Constructs a ImportDocumentationPartsResponsePrivate object with public implementation \a q.
  */
 ImportDocumentationPartsResponsePrivate::ImportDocumentationPartsResponsePrivate(
     ImportDocumentationPartsResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ ImportDocumentationPartsResponsePrivate::ImportDocumentationPartsResponsePrivate
 }
 
 /*!
- * @brief  Parse an APIGateway ImportDocumentationPartsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway ImportDocumentationParts response element from \a xml.
  */
 void ImportDocumentationPartsResponsePrivate::parseImportDocumentationPartsResponse(QXmlStreamReader &xml)
 {

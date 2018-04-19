@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetJobDocumentRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetJobDocumentRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a GetJobDocumentRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 GetJobDocumentRequestPrivate::GetJobDocumentRequestPrivate(
     const IoTRequest::Action action, GetJobDocumentRequest * const q)

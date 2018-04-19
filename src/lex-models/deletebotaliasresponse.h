@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBotAliasResponse : public LexModelBuildingServiceRespon
 public:
     DeleteBotAliasResponse(const DeleteBotAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBotAliasRequest * request() const;
+    virtual const DeleteBotAliasRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBotAliasResponse)

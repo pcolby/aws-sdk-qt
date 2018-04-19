@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DeleteReusableDelegationSetResponse
- *
  * \brief The DeleteReusableDelegationSetResponse class provides an interace for Route53 DeleteReusableDelegationSet responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::deleteReusableDelegationSet
  */
 
 /*!
- * @brief  Constructs a new DeleteReusableDelegationSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteReusableDelegationSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteReusableDelegationSetResponse::DeleteReusableDelegationSetResponse(
         const DeleteReusableDelegationSetRequest &request,
@@ -55,6 +50,9 @@ DeleteReusableDelegationSetResponse::DeleteReusableDelegationSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteReusableDelegationSetRequest * DeleteReusableDelegationSetResponse::request() const
 {
     Q_D(const DeleteReusableDelegationSetResponse);
@@ -62,9 +60,8 @@ const DeleteReusableDelegationSetRequest * DeleteReusableDelegationSetResponse::
 }
 
 /*!
- * @brief  Parse a Route53 DeleteReusableDelegationSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 DeleteReusableDelegationSet \a response.
  */
 void DeleteReusableDelegationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteReusableDelegationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::DeleteReusableDelegationSetResponsePrivate
+ * \brief The DeleteReusableDelegationSetResponsePrivate class provides private implementation for DeleteReusableDelegationSetResponse.
  * \internal
  *
- * \class DeleteReusableDelegationSetResponsePrivate
- *
- * \brief Private implementation for DeleteReusableDelegationSetResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReusableDelegationSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteReusableDelegationSetResponse instance.
+ * Constructs a DeleteReusableDelegationSetResponsePrivate object with public implementation \a q.
  */
 DeleteReusableDelegationSetResponsePrivate::DeleteReusableDelegationSetResponsePrivate(
     DeleteReusableDelegationSetResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteReusableDelegationSetResponsePrivate::DeleteReusableDelegationSetResponseP
 }
 
 /*!
- * @brief  Parse an Route53 DeleteReusableDelegationSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 DeleteReusableDelegationSet response element from \a xml.
  */
 void DeleteReusableDelegationSetResponsePrivate::parseDeleteReusableDelegationSetResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteGameSessionQueueResponse : public GameLiftResponse {
 public:
     DeleteGameSessionQueueResponse(const DeleteGameSessionQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteGameSessionQueueRequest * request() const;
+    virtual const DeleteGameSessionQueueRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteGameSessionQueueResponse)

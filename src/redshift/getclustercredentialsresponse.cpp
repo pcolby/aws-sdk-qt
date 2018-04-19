@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::GetClusterCredentialsResponse
- *
  * \brief The GetClusterCredentialsResponse class provides an interace for Redshift GetClusterCredentials responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new GetClusterCredentialsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetClusterCredentialsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetClusterCredentialsResponse::GetClusterCredentialsResponse(
         const GetClusterCredentialsRequest &request,
@@ -85,6 +80,9 @@ GetClusterCredentialsResponse::GetClusterCredentialsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetClusterCredentialsRequest * GetClusterCredentialsResponse::request() const
 {
     Q_D(const GetClusterCredentialsResponse);
@@ -92,9 +90,8 @@ const GetClusterCredentialsRequest * GetClusterCredentialsResponse::request() co
 }
 
 /*!
- * @brief  Parse a Redshift GetClusterCredentials response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift GetClusterCredentials \a response.
  */
 void GetClusterCredentialsResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void GetClusterCredentialsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::GetClusterCredentialsResponsePrivate
+ * \brief The GetClusterCredentialsResponsePrivate class provides private implementation for GetClusterCredentialsResponse.
  * \internal
  *
- * \class GetClusterCredentialsResponsePrivate
- *
- * \brief Private implementation for GetClusterCredentialsResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetClusterCredentialsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetClusterCredentialsResponse instance.
+ * Constructs a GetClusterCredentialsResponsePrivate object with public implementation \a q.
  */
 GetClusterCredentialsResponsePrivate::GetClusterCredentialsResponsePrivate(
     GetClusterCredentialsResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ GetClusterCredentialsResponsePrivate::GetClusterCredentialsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift GetClusterCredentialsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift GetClusterCredentials response element from \a xml.
  */
 void GetClusterCredentialsResponsePrivate::parseGetClusterCredentialsResponse(QXmlStreamReader &xml)
 {

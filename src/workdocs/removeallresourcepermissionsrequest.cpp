@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * RemoveAllResourcePermissionsRequest::response
  */
 
 /*!
- *
- * Constructs a RemoveAllResourcePermissionsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a RemoveAllResourcePermissionsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 RemoveAllResourcePermissionsRequestPrivate::RemoveAllResourcePermissionsRequestPrivate(
     const WorkDocsRequest::Action action, RemoveAllResourcePermissionsRequest * const q)

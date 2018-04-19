@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::DeregisterInstanceResponse
- *
  * \brief The DeregisterInstanceResponse class provides an interace for ServiceDiscovery DeregisterInstance responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new DeregisterInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterInstanceResponse::DeregisterInstanceResponse(
         const DeregisterInstanceRequest &request,
@@ -59,6 +54,9 @@ DeregisterInstanceResponse::DeregisterInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterInstanceRequest * DeregisterInstanceResponse::request() const
 {
     Q_D(const DeregisterInstanceResponse);
@@ -66,9 +64,8 @@ const DeregisterInstanceRequest * DeregisterInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery DeregisterInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery DeregisterInstance \a response.
  */
 void DeregisterInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeregisterInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::DeregisterInstanceResponsePrivate
+ * \brief The DeregisterInstanceResponsePrivate class provides private implementation for DeregisterInstanceResponse.
  * \internal
  *
- * \class DeregisterInstanceResponsePrivate
- *
- * \brief Private implementation for DeregisterInstanceResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterInstanceResponse instance.
+ * Constructs a DeregisterInstanceResponsePrivate object with public implementation \a q.
  */
 DeregisterInstanceResponsePrivate::DeregisterInstanceResponsePrivate(
     DeregisterInstanceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ DeregisterInstanceResponsePrivate::DeregisterInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery DeregisterInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery DeregisterInstance response element from \a xml.
  */
 void DeregisterInstanceResponsePrivate::parseDeregisterInstanceResponse(QXmlStreamReader &xml)
 {

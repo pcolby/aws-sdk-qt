@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * GetUserRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a GetUserRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a GetUserRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 GetUserRequestPrivate::GetUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetUserRequest * const q)

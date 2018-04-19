@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateSecurityGroupResponse : public EC2Response {
 public:
     CreateSecurityGroupResponse(const CreateSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateSecurityGroupRequest * request() const;
+    virtual const CreateSecurityGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateSecurityGroupResponse)

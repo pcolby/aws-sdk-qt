@@ -34,10 +34,10 @@ class QTAWS_EXPORT SearchResponse : public CloudSearchDomainResponse {
 public:
     SearchResponse(const SearchRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SearchRequest * request() const;
+    virtual const SearchRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SearchResponse)

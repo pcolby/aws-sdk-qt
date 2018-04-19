@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteTapeArchiveResponse
- *
  * \brief The DeleteTapeArchiveResponse class provides an interace for StorageGateway DeleteTapeArchive responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteTapeArchiveResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTapeArchiveResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTapeArchiveResponse::DeleteTapeArchiveResponse(
         const DeleteTapeArchiveRequest &request,
@@ -124,6 +119,9 @@ DeleteTapeArchiveResponse::DeleteTapeArchiveResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTapeArchiveRequest * DeleteTapeArchiveResponse::request() const
 {
     Q_D(const DeleteTapeArchiveResponse);
@@ -131,9 +129,8 @@ const DeleteTapeArchiveRequest * DeleteTapeArchiveResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway DeleteTapeArchive response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DeleteTapeArchive \a response.
  */
 void DeleteTapeArchiveResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DeleteTapeArchiveResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DeleteTapeArchiveResponsePrivate
+ * \brief The DeleteTapeArchiveResponsePrivate class provides private implementation for DeleteTapeArchiveResponse.
  * \internal
  *
- * \class DeleteTapeArchiveResponsePrivate
- *
- * \brief Private implementation for DeleteTapeArchiveResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTapeArchiveResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTapeArchiveResponse instance.
+ * Constructs a DeleteTapeArchiveResponsePrivate object with public implementation \a q.
  */
 DeleteTapeArchiveResponsePrivate::DeleteTapeArchiveResponsePrivate(
     DeleteTapeArchiveResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DeleteTapeArchiveResponsePrivate::DeleteTapeArchiveResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DeleteTapeArchiveResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DeleteTapeArchive response element from \a xml.
  */
 void DeleteTapeArchiveResponsePrivate::parseDeleteTapeArchiveResponse(QXmlStreamReader &xml)
 {

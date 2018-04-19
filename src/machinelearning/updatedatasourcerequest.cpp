@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDataSourceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateDataSourceRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDataSourceRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
     const MachineLearningRequest::Action action, UpdateDataSourceRequest * const q)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreatePolicyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreatePolicyRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a CreatePolicyRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 CreatePolicyRequestPrivate::CreatePolicyRequestPrivate(
     const IoTRequest::Action action, CreatePolicyRequest * const q)

@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeVpcPeeringConnectionsResponse
- *
  * \brief The DescribeVpcPeeringConnectionsResponse class provides an interace for GameLift DescribeVpcPeeringConnections responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcPeeringConnectionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVpcPeeringConnectionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVpcPeeringConnectionsResponse::DescribeVpcPeeringConnectionsResponse(
         const DescribeVpcPeeringConnectionsRequest &request,
@@ -491,6 +486,9 @@ DescribeVpcPeeringConnectionsResponse::DescribeVpcPeeringConnectionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVpcPeeringConnectionsRequest * DescribeVpcPeeringConnectionsResponse::request() const
 {
     Q_D(const DescribeVpcPeeringConnectionsResponse);
@@ -498,9 +496,8 @@ const DescribeVpcPeeringConnectionsRequest * DescribeVpcPeeringConnectionsRespon
 }
 
 /*!
- * @brief  Parse a GameLift DescribeVpcPeeringConnections response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DescribeVpcPeeringConnections \a response.
  */
 void DescribeVpcPeeringConnectionsResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DescribeVpcPeeringConnectionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DescribeVpcPeeringConnectionsResponsePrivate
+ * \brief The DescribeVpcPeeringConnectionsResponsePrivate class provides private implementation for DescribeVpcPeeringConnectionsResponse.
  * \internal
  *
- * \class DescribeVpcPeeringConnectionsResponsePrivate
- *
- * \brief Private implementation for DescribeVpcPeeringConnectionsResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcPeeringConnectionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVpcPeeringConnectionsResponse instance.
+ * Constructs a DescribeVpcPeeringConnectionsResponsePrivate object with public implementation \a q.
  */
 DescribeVpcPeeringConnectionsResponsePrivate::DescribeVpcPeeringConnectionsResponsePrivate(
     DescribeVpcPeeringConnectionsResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DescribeVpcPeeringConnectionsResponsePrivate::DescribeVpcPeeringConnectionsRespo
 }
 
 /*!
- * @brief  Parse an GameLift DescribeVpcPeeringConnectionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DescribeVpcPeeringConnections response element from \a xml.
  */
 void DescribeVpcPeeringConnectionsResponsePrivate::parseDescribeVpcPeeringConnectionsResponse(QXmlStreamReader &xml)
 {

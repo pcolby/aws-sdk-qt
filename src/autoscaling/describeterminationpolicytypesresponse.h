@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTerminationPolicyTypesResponse : public AutoScalingRe
 public:
     DescribeTerminationPolicyTypesResponse(const DescribeTerminationPolicyTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTerminationPolicyTypesRequest * request() const;
+    virtual const DescribeTerminationPolicyTypesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTerminationPolicyTypesResponse)

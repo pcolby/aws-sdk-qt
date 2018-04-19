@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetExportResponse
- *
  * \brief The GetExportResponse class provides an interace for APIGateway GetExport responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetExportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetExportResponse object for \a reply to \a request, with parent \a parent.
  */
 GetExportResponse::GetExportResponse(
         const GetExportRequest &request,
@@ -60,6 +55,9 @@ GetExportResponse::GetExportResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetExportRequest * GetExportResponse::request() const
 {
     Q_D(const GetExportResponse);
@@ -67,9 +65,8 @@ const GetExportRequest * GetExportResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetExport response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetExport \a response.
  */
 void GetExportResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetExportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetExportResponsePrivate
+ * \brief The GetExportResponsePrivate class provides private implementation for GetExportResponse.
  * \internal
  *
- * \class GetExportResponsePrivate
- *
- * \brief Private implementation for GetExportResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetExportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetExportResponse instance.
+ * Constructs a GetExportResponsePrivate object with public implementation \a q.
  */
 GetExportResponsePrivate::GetExportResponsePrivate(
     GetExportResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetExportResponsePrivate::GetExportResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetExportResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetExport response element from \a xml.
  */
 void GetExportResponsePrivate::parseGetExportResponse(QXmlStreamReader &xml)
 {

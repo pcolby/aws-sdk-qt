@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListVirtualMFADevicesResponse
- *
  * \brief The ListVirtualMFADevicesResponse class provides an interace for IAM ListVirtualMFADevices responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListVirtualMFADevicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListVirtualMFADevicesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListVirtualMFADevicesResponse::ListVirtualMFADevicesResponse(
         const ListVirtualMFADevicesRequest &request,
@@ -120,6 +115,9 @@ ListVirtualMFADevicesResponse::ListVirtualMFADevicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListVirtualMFADevicesRequest * ListVirtualMFADevicesResponse::request() const
 {
     Q_D(const ListVirtualMFADevicesResponse);
@@ -127,9 +125,8 @@ const ListVirtualMFADevicesRequest * ListVirtualMFADevicesResponse::request() co
 }
 
 /*!
- * @brief  Parse a IAM ListVirtualMFADevices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListVirtualMFADevices \a response.
  */
 void ListVirtualMFADevicesResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListVirtualMFADevicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListVirtualMFADevicesResponsePrivate
+ * \brief The ListVirtualMFADevicesResponsePrivate class provides private implementation for ListVirtualMFADevicesResponse.
  * \internal
  *
- * \class ListVirtualMFADevicesResponsePrivate
- *
- * \brief Private implementation for ListVirtualMFADevicesResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVirtualMFADevicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListVirtualMFADevicesResponse instance.
+ * Constructs a ListVirtualMFADevicesResponsePrivate object with public implementation \a q.
  */
 ListVirtualMFADevicesResponsePrivate::ListVirtualMFADevicesResponsePrivate(
     ListVirtualMFADevicesResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListVirtualMFADevicesResponsePrivate::ListVirtualMFADevicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListVirtualMFADevicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListVirtualMFADevices response element from \a xml.
  */
 void ListVirtualMFADevicesResponsePrivate::parseListVirtualMFADevicesResponse(QXmlStreamReader &xml)
 {

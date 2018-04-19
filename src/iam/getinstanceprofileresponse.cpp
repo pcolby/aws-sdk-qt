@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetInstanceProfileResponse
- *
  * \brief The GetInstanceProfileResponse class provides an interace for IAM GetInstanceProfile responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInstanceProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInstanceProfileResponse::GetInstanceProfileResponse(
         const GetInstanceProfileRequest &request,
@@ -120,6 +115,9 @@ GetInstanceProfileResponse::GetInstanceProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInstanceProfileRequest * GetInstanceProfileResponse::request() const
 {
     Q_D(const GetInstanceProfileResponse);
@@ -127,9 +125,8 @@ const GetInstanceProfileRequest * GetInstanceProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetInstanceProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetInstanceProfile \a response.
  */
 void GetInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetInstanceProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetInstanceProfileResponsePrivate
+ * \brief The GetInstanceProfileResponsePrivate class provides private implementation for GetInstanceProfileResponse.
  * \internal
  *
- * \class GetInstanceProfileResponsePrivate
- *
- * \brief Private implementation for GetInstanceProfileResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInstanceProfileResponse instance.
+ * Constructs a GetInstanceProfileResponsePrivate object with public implementation \a q.
  */
 GetInstanceProfileResponsePrivate::GetInstanceProfileResponsePrivate(
     GetInstanceProfileResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetInstanceProfileResponsePrivate::GetInstanceProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetInstanceProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetInstanceProfile response element from \a xml.
  */
 void GetInstanceProfileResponsePrivate::parseGetInstanceProfileResponse(QXmlStreamReader &xml)
 {

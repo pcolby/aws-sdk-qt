@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateStackRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateStackRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a UpdateStackRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 UpdateStackRequestPrivate::UpdateStackRequestPrivate(
     const AppStreamRequest::Action action, UpdateStackRequest * const q)

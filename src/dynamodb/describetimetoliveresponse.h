@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTimeToLiveResponse : public DynamoDBResponse {
 public:
     DescribeTimeToLiveResponse(const DescribeTimeToLiveRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTimeToLiveRequest * request() const;
+    virtual const DescribeTimeToLiveRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTimeToLiveResponse)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateHostedZoneRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateHostedZoneRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a CreateHostedZoneRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 CreateHostedZoneRequestPrivate::CreateHostedZoneRequestPrivate(
     const Route53Request::Action action, CreateHostedZoneRequest * const q)

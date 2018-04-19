@@ -29,10 +29,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::ImportCertificateAuthorityCertificateResponse
- *
  * \brief The ImportCertificateAuthorityCertificateResponse class provides an interace for ACMPCA ImportCertificateAuthorityCertificate responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -69,11 +68,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new ImportCertificateAuthorityCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportCertificateAuthorityCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportCertificateAuthorityCertificateResponse::ImportCertificateAuthorityCertificateResponse(
         const ImportCertificateAuthorityCertificateRequest &request,
@@ -85,6 +80,9 @@ ImportCertificateAuthorityCertificateResponse::ImportCertificateAuthorityCertifi
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportCertificateAuthorityCertificateRequest * ImportCertificateAuthorityCertificateResponse::request() const
 {
     Q_D(const ImportCertificateAuthorityCertificateResponse);
@@ -92,9 +90,8 @@ const ImportCertificateAuthorityCertificateRequest * ImportCertificateAuthorityC
 }
 
 /*!
- * @brief  Parse a ACMPCA ImportCertificateAuthorityCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACMPCA ImportCertificateAuthorityCertificate \a response.
  */
 void ImportCertificateAuthorityCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void ImportCertificateAuthorityCertificateResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::ACMPCA::ImportCertificateAuthorityCertificateResponsePrivate
+ * \brief The ImportCertificateAuthorityCertificateResponsePrivate class provides private implementation for ImportCertificateAuthorityCertificateResponse.
  * \internal
  *
- * \class ImportCertificateAuthorityCertificateResponsePrivate
- *
- * \brief Private implementation for ImportCertificateAuthorityCertificateResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportCertificateAuthorityCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportCertificateAuthorityCertificateResponse instance.
+ * Constructs a ImportCertificateAuthorityCertificateResponsePrivate object with public implementation \a q.
  */
 ImportCertificateAuthorityCertificateResponsePrivate::ImportCertificateAuthorityCertificateResponsePrivate(
     ImportCertificateAuthorityCertificateResponse * const q) : ACMPCAResponsePrivate(q)
@@ -125,9 +118,7 @@ ImportCertificateAuthorityCertificateResponsePrivate::ImportCertificateAuthority
 }
 
 /*!
- * @brief  Parse an ACMPCA ImportCertificateAuthorityCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACMPCA ImportCertificateAuthorityCertificate response element from \a xml.
  */
 void ImportCertificateAuthorityCertificateResponsePrivate::parseImportCertificateAuthorityCertificateResponse(QXmlStreamReader &xml)
 {

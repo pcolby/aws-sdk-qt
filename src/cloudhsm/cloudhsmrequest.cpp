@@ -59,7 +59,7 @@ namespace CloudHSM {
  */
 
 /*!
- * Constructs a[n] CloudHSMRequest object for CloudHSM \a action.
+ * Constructs a CloudHSMRequest object for CloudHSM \a action.
  */
 CloudHSMRequest::CloudHSMRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudHSMRequestPrivate(action, this))
@@ -259,8 +259,8 @@ QNetworkRequest CloudHSMRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CloudHSMRequestPrivate object for CloudHSM \a action with,
- * public implementation \a q.
+ * Constructs a CloudHSMRequestPrivate object for CloudHSM \a action,
+ * with public implementation \a q.
  */
 CloudHSMRequestPrivate::CloudHSMRequestPrivate(const CloudHSMRequest::Action action, CloudHSMRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

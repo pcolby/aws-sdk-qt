@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateBasePathMappingResponse
- *
  * \brief The UpdateBasePathMappingResponse class provides an interace for APIGateway UpdateBasePathMapping responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateBasePathMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateBasePathMappingResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateBasePathMappingResponse::UpdateBasePathMappingResponse(
         const UpdateBasePathMappingRequest &request,
@@ -60,6 +55,9 @@ UpdateBasePathMappingResponse::UpdateBasePathMappingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateBasePathMappingRequest * UpdateBasePathMappingResponse::request() const
 {
     Q_D(const UpdateBasePathMappingResponse);
@@ -67,9 +65,8 @@ const UpdateBasePathMappingRequest * UpdateBasePathMappingResponse::request() co
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateBasePathMapping response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateBasePathMapping \a response.
  */
 void UpdateBasePathMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateBasePathMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateBasePathMappingResponsePrivate
+ * \brief The UpdateBasePathMappingResponsePrivate class provides private implementation for UpdateBasePathMappingResponse.
  * \internal
  *
- * \class UpdateBasePathMappingResponsePrivate
- *
- * \brief Private implementation for UpdateBasePathMappingResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateBasePathMappingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateBasePathMappingResponse instance.
+ * Constructs a UpdateBasePathMappingResponsePrivate object with public implementation \a q.
  */
 UpdateBasePathMappingResponsePrivate::UpdateBasePathMappingResponsePrivate(
     UpdateBasePathMappingResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateBasePathMappingResponsePrivate::UpdateBasePathMappingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateBasePathMappingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateBasePathMapping response element from \a xml.
  */
 void UpdateBasePathMappingResponsePrivate::parseUpdateBasePathMappingResponse(QXmlStreamReader &xml)
 {

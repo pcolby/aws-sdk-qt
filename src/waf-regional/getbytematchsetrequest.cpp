@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * GetByteMatchSetRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetByteMatchSetRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a GetByteMatchSetRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 GetByteMatchSetRequestPrivate::GetByteMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, GetByteMatchSetRequest * const q)

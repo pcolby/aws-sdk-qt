@@ -28,16 +28,13 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::OrganizationsResponse
- *
  * \brief The OrganizationsResponse class provides an interface for Organizations responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @brief  Constructs a new OrganizationsResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a OrganizationsResponse object with parent \a parent.
  */
 OrganizationsResponse::OrganizationsResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new OrganizationsResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ OrganizationsResponse::OrganizationsResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new OrganizationsResponse object.
- *
+ * \internal
+ * Constructs a OrganizationsResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from OrganizationsResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 OrganizationsResponse::OrganizationsResponse(OrganizationsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ OrganizationsResponse::OrganizationsResponse(OrganizationsResponsePrivate * cons
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void OrganizationsResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void OrganizationsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Organizations::OrganizationsResponsePrivate
+ * \brief The OrganizationsResponsePrivate class provides private implementation for OrganizationsResponse.
+ * \internal
  *
- * @class  OrganizationsResponsePrivate
- *
- * @brief  Private implementation for OrganizationsResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new OrganizationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public OrganizationsResponse instance.
+ * Constructs a OrganizationsResponsePrivate object with public implementation \a q.
  */
 OrganizationsResponsePrivate::OrganizationsResponsePrivate(
     OrganizationsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

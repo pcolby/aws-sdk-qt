@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DeleteCacheClusterResponse
- *
  * \brief The DeleteCacheClusterResponse class provides an interace for ElastiCache DeleteCacheCluster responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DeleteCacheClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCacheClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCacheClusterResponse::DeleteCacheClusterResponse(
         const DeleteCacheClusterRequest &request,
@@ -69,6 +64,9 @@ DeleteCacheClusterResponse::DeleteCacheClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCacheClusterRequest * DeleteCacheClusterResponse::request() const
 {
     Q_D(const DeleteCacheClusterResponse);
@@ -76,9 +74,8 @@ const DeleteCacheClusterRequest * DeleteCacheClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElastiCache DeleteCacheCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DeleteCacheCluster \a response.
  */
 void DeleteCacheClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeleteCacheClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::DeleteCacheClusterResponsePrivate
+ * \brief The DeleteCacheClusterResponsePrivate class provides private implementation for DeleteCacheClusterResponse.
  * \internal
  *
- * \class DeleteCacheClusterResponsePrivate
- *
- * \brief Private implementation for DeleteCacheClusterResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCacheClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCacheClusterResponse instance.
+ * Constructs a DeleteCacheClusterResponsePrivate object with public implementation \a q.
  */
 DeleteCacheClusterResponsePrivate::DeleteCacheClusterResponsePrivate(
     DeleteCacheClusterResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DeleteCacheClusterResponsePrivate::DeleteCacheClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache DeleteCacheClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DeleteCacheCluster response element from \a xml.
  */
 void DeleteCacheClusterResponsePrivate::parseDeleteCacheClusterResponse(QXmlStreamReader &xml)
 {

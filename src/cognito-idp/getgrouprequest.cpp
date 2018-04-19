@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * GetGroupRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a GetGroupRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a GetGroupRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 GetGroupRequestPrivate::GetGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetGroupRequest * const q)

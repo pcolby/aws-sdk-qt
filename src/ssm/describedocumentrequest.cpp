@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDocumentRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeDocumentRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDocumentRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeDocumentRequestPrivate::DescribeDocumentRequestPrivate(
     const SSMRequest::Action action, DescribeDocumentRequest * const q)

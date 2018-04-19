@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListUploadsResponse : public DeviceFarmResponse {
 public:
     ListUploadsResponse(const ListUploadsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListUploadsRequest * request() const;
+    virtual const ListUploadsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListUploadsResponse)

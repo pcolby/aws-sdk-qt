@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListIPSetsResponse
- *
  * \brief The ListIPSetsResponse class provides an interace for WAF ListIPSets responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListIPSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListIPSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListIPSetsResponse::ListIPSetsResponse(
         const ListIPSetsRequest &request,
@@ -60,6 +55,9 @@ ListIPSetsResponse::ListIPSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListIPSetsRequest * ListIPSetsResponse::request() const
 {
     Q_D(const ListIPSetsResponse);
@@ -67,9 +65,8 @@ const ListIPSetsRequest * ListIPSetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF ListIPSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF ListIPSets \a response.
  */
 void ListIPSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListIPSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::ListIPSetsResponsePrivate
+ * \brief The ListIPSetsResponsePrivate class provides private implementation for ListIPSetsResponse.
  * \internal
  *
- * \class ListIPSetsResponsePrivate
- *
- * \brief Private implementation for ListIPSetsResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIPSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListIPSetsResponse instance.
+ * Constructs a ListIPSetsResponsePrivate object with public implementation \a q.
  */
 ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
     ListIPSetsResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF ListIPSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF ListIPSets response element from \a xml.
  */
 void ListIPSetsResponsePrivate::parseListIPSetsResponse(QXmlStreamReader &xml)
 {

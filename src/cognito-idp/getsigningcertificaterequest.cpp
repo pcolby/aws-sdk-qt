@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * GetSigningCertificateRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetSigningCertificateRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a GetSigningCertificateRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 GetSigningCertificateRequestPrivate::GetSigningCertificateRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetSigningCertificateRequest * const q)

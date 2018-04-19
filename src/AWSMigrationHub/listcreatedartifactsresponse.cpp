@@ -29,10 +29,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::ListCreatedArtifactsResponse
- *
  * \brief The ListCreatedArtifactsResponse class provides an interace for MigrationHub ListCreatedArtifacts responses.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -41,11 +40,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new ListCreatedArtifactsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCreatedArtifactsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCreatedArtifactsResponse::ListCreatedArtifactsResponse(
         const ListCreatedArtifactsRequest &request,
@@ -57,6 +52,9 @@ ListCreatedArtifactsResponse::ListCreatedArtifactsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCreatedArtifactsRequest * ListCreatedArtifactsResponse::request() const
 {
     Q_D(const ListCreatedArtifactsResponse);
@@ -64,9 +62,8 @@ const ListCreatedArtifactsRequest * ListCreatedArtifactsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a MigrationHub ListCreatedArtifacts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MigrationHub ListCreatedArtifacts \a response.
  */
 void ListCreatedArtifactsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListCreatedArtifactsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MigrationHub::ListCreatedArtifactsResponsePrivate
+ * \brief The ListCreatedArtifactsResponsePrivate class provides private implementation for ListCreatedArtifactsResponse.
  * \internal
  *
- * \class ListCreatedArtifactsResponsePrivate
- *
- * \brief Private implementation for ListCreatedArtifactsResponse.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCreatedArtifactsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCreatedArtifactsResponse instance.
+ * Constructs a ListCreatedArtifactsResponsePrivate object with public implementation \a q.
  */
 ListCreatedArtifactsResponsePrivate::ListCreatedArtifactsResponsePrivate(
     ListCreatedArtifactsResponse * const q) : MigrationHubResponsePrivate(q)
@@ -97,9 +90,7 @@ ListCreatedArtifactsResponsePrivate::ListCreatedArtifactsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MigrationHub ListCreatedArtifactsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MigrationHub ListCreatedArtifacts response element from \a xml.
  */
 void ListCreatedArtifactsResponsePrivate::parseListCreatedArtifactsResponse(QXmlStreamReader &xml)
 {

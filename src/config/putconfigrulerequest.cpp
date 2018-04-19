@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * PutConfigRuleRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a PutConfigRuleRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a PutConfigRuleRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 PutConfigRuleRequestPrivate::PutConfigRuleRequestPrivate(
     const ConfigServiceRequest::Action action, PutConfigRuleRequest * const q)

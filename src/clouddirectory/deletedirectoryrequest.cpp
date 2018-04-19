@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectoryRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteDirectoryRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDirectoryRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 DeleteDirectoryRequestPrivate::DeleteDirectoryRequestPrivate(
     const CloudDirectoryRequest::Action action, DeleteDirectoryRequest * const q)

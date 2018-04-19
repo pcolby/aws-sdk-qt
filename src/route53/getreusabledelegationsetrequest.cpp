@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetReusableDelegationSetRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a GetReusableDelegationSetRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a GetReusableDelegationSetRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 GetReusableDelegationSetRequestPrivate::GetReusableDelegationSetRequestPrivate(
     const Route53Request::Action action, GetReusableDelegationSetRequest * const q)

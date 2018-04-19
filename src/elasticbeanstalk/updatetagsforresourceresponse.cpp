@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateTagsForResourceResponse
- *
  * \brief The UpdateTagsForResourceResponse class provides an interace for ElasticBeanstalk UpdateTagsForResource responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new UpdateTagsForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTagsForResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTagsForResourceResponse::UpdateTagsForResourceResponse(
         const UpdateTagsForResourceRequest &request,
@@ -77,6 +72,9 @@ UpdateTagsForResourceResponse::UpdateTagsForResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTagsForResourceRequest * UpdateTagsForResourceResponse::request() const
 {
     Q_D(const UpdateTagsForResourceResponse);
@@ -84,9 +82,8 @@ const UpdateTagsForResourceRequest * UpdateTagsForResourceResponse::request() co
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk UpdateTagsForResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk UpdateTagsForResource \a response.
  */
 void UpdateTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void UpdateTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::UpdateTagsForResourceResponsePrivate
+ * \brief The UpdateTagsForResourceResponsePrivate class provides private implementation for UpdateTagsForResourceResponse.
  * \internal
  *
- * \class UpdateTagsForResourceResponsePrivate
- *
- * \brief Private implementation for UpdateTagsForResourceResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTagsForResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTagsForResourceResponse instance.
+ * Constructs a UpdateTagsForResourceResponsePrivate object with public implementation \a q.
  */
 UpdateTagsForResourceResponsePrivate::UpdateTagsForResourceResponsePrivate(
     UpdateTagsForResourceResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ UpdateTagsForResourceResponsePrivate::UpdateTagsForResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk UpdateTagsForResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk UpdateTagsForResource response element from \a xml.
  */
 void UpdateTagsForResourceResponsePrivate::parseUpdateTagsForResourceResponse(QXmlStreamReader &xml)
 {

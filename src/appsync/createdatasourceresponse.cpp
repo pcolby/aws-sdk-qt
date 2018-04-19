@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::CreateDataSourceResponse
- *
  * \brief The CreateDataSourceResponse class provides an interace for AppSync CreateDataSource responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new CreateDataSourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDataSourceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDataSourceResponse::CreateDataSourceResponse(
         const CreateDataSourceRequest &request,
@@ -56,6 +51,9 @@ CreateDataSourceResponse::CreateDataSourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDataSourceRequest * CreateDataSourceResponse::request() const
 {
     Q_D(const CreateDataSourceResponse);
@@ -63,9 +61,8 @@ const CreateDataSourceRequest * CreateDataSourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync CreateDataSource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync CreateDataSource \a response.
  */
 void CreateDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void CreateDataSourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::CreateDataSourceResponsePrivate
+ * \brief The CreateDataSourceResponsePrivate class provides private implementation for CreateDataSourceResponse.
  * \internal
  *
- * \class CreateDataSourceResponsePrivate
- *
- * \brief Private implementation for CreateDataSourceResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDataSourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDataSourceResponse instance.
+ * Constructs a CreateDataSourceResponsePrivate object with public implementation \a q.
  */
 CreateDataSourceResponsePrivate::CreateDataSourceResponsePrivate(
     CreateDataSourceResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ CreateDataSourceResponsePrivate::CreateDataSourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync CreateDataSourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync CreateDataSource response element from \a xml.
  */
 void CreateDataSourceResponsePrivate::parseCreateDataSourceResponse(QXmlStreamReader &xml)
 {

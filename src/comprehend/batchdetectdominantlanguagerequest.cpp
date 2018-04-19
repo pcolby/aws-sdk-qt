@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * BatchDetectDominantLanguageRequest::response(
  */
 
 /*!
- *
- * Constructs a BatchDetectDominantLanguageRequestPrivate object for Comprehend \a action with,
- * public implementation \a q.
+ * Constructs a BatchDetectDominantLanguageRequestPrivate object for Comprehend \a action,
+ * with public implementation \a q.
  */
 BatchDetectDominantLanguageRequestPrivate::BatchDetectDominantLanguageRequestPrivate(
     const ComprehendRequest::Action action, BatchDetectDominantLanguageRequest * const q)

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateIntegrationResponseResponse
- *
  * \brief The UpdateIntegrationResponseResponse class provides an interace for APIGateway UpdateIntegrationResponse responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateIntegrationResponseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateIntegrationResponseResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateIntegrationResponseResponse::UpdateIntegrationResponseResponse(
         const UpdateIntegrationResponseRequest &request,
@@ -60,6 +55,9 @@ UpdateIntegrationResponseResponse::UpdateIntegrationResponseResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateIntegrationResponseRequest * UpdateIntegrationResponseResponse::request() const
 {
     Q_D(const UpdateIntegrationResponseResponse);
@@ -67,9 +65,8 @@ const UpdateIntegrationResponseRequest * UpdateIntegrationResponseResponse::requ
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateIntegrationResponse response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateIntegrationResponse \a response.
  */
 void UpdateIntegrationResponseResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateIntegrationResponseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateIntegrationResponseResponsePrivate
+ * \brief The UpdateIntegrationResponseResponsePrivate class provides private implementation for UpdateIntegrationResponseResponse.
  * \internal
  *
- * \class UpdateIntegrationResponseResponsePrivate
- *
- * \brief Private implementation for UpdateIntegrationResponseResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateIntegrationResponseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateIntegrationResponseResponse instance.
+ * Constructs a UpdateIntegrationResponseResponsePrivate object with public implementation \a q.
  */
 UpdateIntegrationResponseResponsePrivate::UpdateIntegrationResponseResponsePrivate(
     UpdateIntegrationResponseResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateIntegrationResponseResponsePrivate::UpdateIntegrationResponseResponsePriva
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateIntegrationResponseResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateIntegrationResponse response element from \a xml.
  */
 void UpdateIntegrationResponseResponsePrivate::parseUpdateIntegrationResponseResponse(QXmlStreamReader &xml)
 {

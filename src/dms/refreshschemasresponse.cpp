@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::RefreshSchemasResponse
- *
  * \brief The RefreshSchemasResponse class provides an interace for DatabaseMigrationService RefreshSchemas responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new RefreshSchemasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RefreshSchemasResponse object for \a reply to \a request, with parent \a parent.
  */
 RefreshSchemasResponse::RefreshSchemasResponse(
         const RefreshSchemasRequest &request,
@@ -66,6 +61,9 @@ RefreshSchemasResponse::RefreshSchemasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RefreshSchemasRequest * RefreshSchemasResponse::request() const
 {
     Q_D(const RefreshSchemasResponse);
@@ -73,9 +71,8 @@ const RefreshSchemasRequest * RefreshSchemasResponse::request() const
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService RefreshSchemas response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService RefreshSchemas \a response.
  */
 void RefreshSchemasResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void RefreshSchemasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::RefreshSchemasResponsePrivate
+ * \brief The RefreshSchemasResponsePrivate class provides private implementation for RefreshSchemasResponse.
  * \internal
  *
- * \class RefreshSchemasResponsePrivate
- *
- * \brief Private implementation for RefreshSchemasResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RefreshSchemasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RefreshSchemasResponse instance.
+ * Constructs a RefreshSchemasResponsePrivate object with public implementation \a q.
  */
 RefreshSchemasResponsePrivate::RefreshSchemasResponsePrivate(
     RefreshSchemasResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ RefreshSchemasResponsePrivate::RefreshSchemasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService RefreshSchemasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService RefreshSchemas response element from \a xml.
  */
 void RefreshSchemasResponsePrivate::parseRefreshSchemasResponse(QXmlStreamReader &xml)
 {

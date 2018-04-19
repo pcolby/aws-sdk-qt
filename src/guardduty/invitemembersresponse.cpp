@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::InviteMembersResponse
- *
  * \brief The InviteMembersResponse class provides an interace for GuardDuty InviteMembers responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::inviteMembers
  */
 
 /*!
- * @brief  Constructs a new InviteMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a InviteMembersResponse object for \a reply to \a request, with parent \a parent.
  */
 InviteMembersResponse::InviteMembersResponse(
         const InviteMembersRequest &request,
@@ -55,6 +50,9 @@ InviteMembersResponse::InviteMembersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const InviteMembersRequest * InviteMembersResponse::request() const
 {
     Q_D(const InviteMembersResponse);
@@ -62,9 +60,8 @@ const InviteMembersRequest * InviteMembersResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty InviteMembers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty InviteMembers \a response.
  */
 void InviteMembersResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void InviteMembersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::InviteMembersResponsePrivate
+ * \brief The InviteMembersResponsePrivate class provides private implementation for InviteMembersResponse.
  * \internal
  *
- * \class InviteMembersResponsePrivate
- *
- * \brief Private implementation for InviteMembersResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InviteMembersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InviteMembersResponse instance.
+ * Constructs a InviteMembersResponsePrivate object with public implementation \a q.
  */
 InviteMembersResponsePrivate::InviteMembersResponsePrivate(
     InviteMembersResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ InviteMembersResponsePrivate::InviteMembersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty InviteMembersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty InviteMembers response element from \a xml.
  */
 void InviteMembersResponsePrivate::parseInviteMembersResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisassociateRouteTableResponse
- *
  * \brief The DisassociateRouteTableResponse class provides an interace for EC2 DisassociateRouteTable responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisassociateRouteTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateRouteTableResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateRouteTableResponse::DisassociateRouteTableResponse(
         const DisassociateRouteTableRequest &request,
@@ -59,6 +54,9 @@ DisassociateRouteTableResponse::DisassociateRouteTableResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateRouteTableRequest * DisassociateRouteTableResponse::request() const
 {
     Q_D(const DisassociateRouteTableResponse);
@@ -66,9 +64,8 @@ const DisassociateRouteTableRequest * DisassociateRouteTableResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 DisassociateRouteTable response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DisassociateRouteTable \a response.
  */
 void DisassociateRouteTableResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DisassociateRouteTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DisassociateRouteTableResponsePrivate
+ * \brief The DisassociateRouteTableResponsePrivate class provides private implementation for DisassociateRouteTableResponse.
  * \internal
  *
- * \class DisassociateRouteTableResponsePrivate
- *
- * \brief Private implementation for DisassociateRouteTableResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateRouteTableResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateRouteTableResponse instance.
+ * Constructs a DisassociateRouteTableResponsePrivate object with public implementation \a q.
  */
 DisassociateRouteTableResponsePrivate::DisassociateRouteTableResponsePrivate(
     DisassociateRouteTableResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DisassociateRouteTableResponsePrivate::DisassociateRouteTableResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DisassociateRouteTableResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DisassociateRouteTable response element from \a xml.
  */
 void DisassociateRouteTableResponsePrivate::parseDisassociateRouteTableResponse(QXmlStreamReader &xml)
 {

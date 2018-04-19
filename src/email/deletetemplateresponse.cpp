@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteTemplateResponse
- *
  * \brief The DeleteTemplateResponse class provides an interace for SES DeleteTemplate responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTemplateResponse::DeleteTemplateResponse(
         const DeleteTemplateRequest &request,
@@ -66,6 +61,9 @@ DeleteTemplateResponse::DeleteTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTemplateRequest * DeleteTemplateResponse::request() const
 {
     Q_D(const DeleteTemplateResponse);
@@ -73,9 +71,8 @@ const DeleteTemplateRequest * DeleteTemplateResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES DeleteTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES DeleteTemplate \a response.
  */
 void DeleteTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::DeleteTemplateResponsePrivate
+ * \brief The DeleteTemplateResponsePrivate class provides private implementation for DeleteTemplateResponse.
  * \internal
  *
- * \class DeleteTemplateResponsePrivate
- *
- * \brief Private implementation for DeleteTemplateResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTemplateResponse instance.
+ * Constructs a DeleteTemplateResponsePrivate object with public implementation \a q.
  */
 DeleteTemplateResponsePrivate::DeleteTemplateResponsePrivate(
     DeleteTemplateResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteTemplateResponsePrivate::DeleteTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES DeleteTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES DeleteTemplate response element from \a xml.
  */
 void DeleteTemplateResponsePrivate::parseDeleteTemplateResponse(QXmlStreamReader &xml)
 {

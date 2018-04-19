@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateConnectivityInfoRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateConnectivityInfoRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a UpdateConnectivityInfoRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 UpdateConnectivityInfoRequestPrivate::UpdateConnectivityInfoRequestPrivate(
     const GreengrassRequest::Action action, UpdateConnectivityInfoRequest * const q)

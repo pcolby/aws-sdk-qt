@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * CreateSchemaRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateSchemaRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a CreateSchemaRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 CreateSchemaRequestPrivate::CreateSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, CreateSchemaRequest * const q)

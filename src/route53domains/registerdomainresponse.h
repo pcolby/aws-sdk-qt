@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterDomainResponse : public Route53DomainsResponse {
 public:
     RegisterDomainResponse(const RegisterDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterDomainRequest * request() const;
+    virtual const RegisterDomainRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterDomainResponse)

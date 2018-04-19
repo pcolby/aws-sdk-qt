@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::UpdateRecordsResponse
- *
  * \brief The UpdateRecordsResponse class provides an interace for CognitoSync UpdateRecords responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new UpdateRecordsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRecordsResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRecordsResponse::UpdateRecordsResponse(
         const UpdateRecordsRequest &request,
@@ -75,6 +70,9 @@ UpdateRecordsResponse::UpdateRecordsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRecordsRequest * UpdateRecordsResponse::request() const
 {
     Q_D(const UpdateRecordsResponse);
@@ -82,9 +80,8 @@ const UpdateRecordsRequest * UpdateRecordsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoSync UpdateRecords response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync UpdateRecords \a response.
  */
 void UpdateRecordsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void UpdateRecordsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::UpdateRecordsResponsePrivate
+ * \brief The UpdateRecordsResponsePrivate class provides private implementation for UpdateRecordsResponse.
  * \internal
  *
- * \class UpdateRecordsResponsePrivate
- *
- * \brief Private implementation for UpdateRecordsResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRecordsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRecordsResponse instance.
+ * Constructs a UpdateRecordsResponsePrivate object with public implementation \a q.
  */
 UpdateRecordsResponsePrivate::UpdateRecordsResponsePrivate(
     UpdateRecordsResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ UpdateRecordsResponsePrivate::UpdateRecordsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync UpdateRecordsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync UpdateRecords response element from \a xml.
  */
 void UpdateRecordsResponsePrivate::parseUpdateRecordsResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteTableAssociationRequest::response
  */
 
 /*!
- *
- * Constructs a ReplaceRouteTableAssociationRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ReplaceRouteTableAssociationRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ReplaceRouteTableAssociationRequestPrivate::ReplaceRouteTableAssociationRequestPrivate(
     const EC2Request::Action action, ReplaceRouteTableAssociationRequest * const q)

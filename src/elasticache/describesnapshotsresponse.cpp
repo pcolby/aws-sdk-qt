@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeSnapshotsResponse
- *
  * \brief The DescribeSnapshotsResponse class provides an interace for ElastiCache DescribeSnapshots responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeSnapshotsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSnapshotsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSnapshotsResponse::DescribeSnapshotsResponse(
         const DescribeSnapshotsRequest &request,
@@ -69,6 +64,9 @@ DescribeSnapshotsResponse::DescribeSnapshotsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSnapshotsRequest * DescribeSnapshotsResponse::request() const
 {
     Q_D(const DescribeSnapshotsResponse);
@@ -76,9 +74,8 @@ const DescribeSnapshotsRequest * DescribeSnapshotsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElastiCache DescribeSnapshots response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DescribeSnapshots \a response.
  */
 void DescribeSnapshotsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeSnapshotsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::DescribeSnapshotsResponsePrivate
+ * \brief The DescribeSnapshotsResponsePrivate class provides private implementation for DescribeSnapshotsResponse.
  * \internal
  *
- * \class DescribeSnapshotsResponsePrivate
- *
- * \brief Private implementation for DescribeSnapshotsResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSnapshotsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSnapshotsResponse instance.
+ * Constructs a DescribeSnapshotsResponsePrivate object with public implementation \a q.
  */
 DescribeSnapshotsResponsePrivate::DescribeSnapshotsResponsePrivate(
     DescribeSnapshotsResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeSnapshotsResponsePrivate::DescribeSnapshotsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache DescribeSnapshotsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DescribeSnapshots response element from \a xml.
  */
 void DescribeSnapshotsResponsePrivate::parseDescribeSnapshotsResponse(QXmlStreamReader &xml)
 {

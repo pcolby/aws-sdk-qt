@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRemoteAccessSessionRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DeleteRemoteAccessSessionRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRemoteAccessSessionRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 DeleteRemoteAccessSessionRequestPrivate::DeleteRemoteAccessSessionRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteRemoteAccessSessionRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetSecurityGroupsResponse : public ElasticLoadBalancingv2Resp
 public:
     SetSecurityGroupsResponse(const SetSecurityGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetSecurityGroupsRequest * request() const;
+    virtual const SetSecurityGroupsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetSecurityGroupsResponse)

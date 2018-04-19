@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::RevokeCacheSecurityGroupIngressResponse
- *
  * \brief The RevokeCacheSecurityGroupIngressResponse class provides an interace for ElastiCache RevokeCacheSecurityGroupIngress responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new RevokeCacheSecurityGroupIngressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RevokeCacheSecurityGroupIngressResponse object for \a reply to \a request, with parent \a parent.
  */
 RevokeCacheSecurityGroupIngressResponse::RevokeCacheSecurityGroupIngressResponse(
         const RevokeCacheSecurityGroupIngressRequest &request,
@@ -69,6 +64,9 @@ RevokeCacheSecurityGroupIngressResponse::RevokeCacheSecurityGroupIngressResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RevokeCacheSecurityGroupIngressRequest * RevokeCacheSecurityGroupIngressResponse::request() const
 {
     Q_D(const RevokeCacheSecurityGroupIngressResponse);
@@ -76,9 +74,8 @@ const RevokeCacheSecurityGroupIngressRequest * RevokeCacheSecurityGroupIngressRe
 }
 
 /*!
- * @brief  Parse a ElastiCache RevokeCacheSecurityGroupIngress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache RevokeCacheSecurityGroupIngress \a response.
  */
 void RevokeCacheSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void RevokeCacheSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::RevokeCacheSecurityGroupIngressResponsePrivate
+ * \brief The RevokeCacheSecurityGroupIngressResponsePrivate class provides private implementation for RevokeCacheSecurityGroupIngressResponse.
  * \internal
  *
- * \class RevokeCacheSecurityGroupIngressResponsePrivate
- *
- * \brief Private implementation for RevokeCacheSecurityGroupIngressResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeCacheSecurityGroupIngressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RevokeCacheSecurityGroupIngressResponse instance.
+ * Constructs a RevokeCacheSecurityGroupIngressResponsePrivate object with public implementation \a q.
  */
 RevokeCacheSecurityGroupIngressResponsePrivate::RevokeCacheSecurityGroupIngressResponsePrivate(
     RevokeCacheSecurityGroupIngressResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ RevokeCacheSecurityGroupIngressResponsePrivate::RevokeCacheSecurityGroupIngressR
 }
 
 /*!
- * @brief  Parse an ElastiCache RevokeCacheSecurityGroupIngressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache RevokeCacheSecurityGroupIngress response element from \a xml.
  */
 void RevokeCacheSecurityGroupIngressResponsePrivate::parseRevokeCacheSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {

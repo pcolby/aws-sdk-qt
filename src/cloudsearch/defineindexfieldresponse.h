@@ -34,10 +34,10 @@ class QTAWS_EXPORT DefineIndexFieldResponse : public CloudSearchResponse {
 public:
     DefineIndexFieldResponse(const DefineIndexFieldRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DefineIndexFieldRequest * request() const;
+    virtual const DefineIndexFieldRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DefineIndexFieldResponse)

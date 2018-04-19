@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * StopTaskRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a StopTaskRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a StopTaskRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 StopTaskRequestPrivate::StopTaskRequestPrivate(
     const ECSRequest::Action action, StopTaskRequest * const q)

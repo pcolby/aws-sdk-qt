@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * GetAggregateComplianceDetailsByConfigRuleRequ
  */
 
 /*!
- *
- * Constructs a GetAggregateComplianceDetailsByConfigRuleRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a GetAggregateComplianceDetailsByConfigRuleRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 GetAggregateComplianceDetailsByConfigRuleRequestPrivate::GetAggregateComplianceDetailsByConfigRuleRequestPrivate(
     const ConfigServiceRequest::Action action, GetAggregateComplianceDetailsByConfigRuleRequest * const q)

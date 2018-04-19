@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::PutThirdPartyJobSuccessResultResponse
- *
  * \brief The PutThirdPartyJobSuccessResultResponse class provides an interace for CodePipeline PutThirdPartyJobSuccessResult responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new PutThirdPartyJobSuccessResultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutThirdPartyJobSuccessResultResponse object for \a reply to \a request, with parent \a parent.
  */
 PutThirdPartyJobSuccessResultResponse::PutThirdPartyJobSuccessResultResponse(
         const PutThirdPartyJobSuccessResultRequest &request,
@@ -218,6 +213,9 @@ PutThirdPartyJobSuccessResultResponse::PutThirdPartyJobSuccessResultResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutThirdPartyJobSuccessResultRequest * PutThirdPartyJobSuccessResultResponse::request() const
 {
     Q_D(const PutThirdPartyJobSuccessResultResponse);
@@ -225,9 +223,8 @@ const PutThirdPartyJobSuccessResultRequest * PutThirdPartyJobSuccessResultRespon
 }
 
 /*!
- * @brief  Parse a CodePipeline PutThirdPartyJobSuccessResult response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline PutThirdPartyJobSuccessResult \a response.
  */
 void PutThirdPartyJobSuccessResultResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void PutThirdPartyJobSuccessResultResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::PutThirdPartyJobSuccessResultResponsePrivate
+ * \brief The PutThirdPartyJobSuccessResultResponsePrivate class provides private implementation for PutThirdPartyJobSuccessResultResponse.
  * \internal
  *
- * \class PutThirdPartyJobSuccessResultResponsePrivate
- *
- * \brief Private implementation for PutThirdPartyJobSuccessResultResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutThirdPartyJobSuccessResultResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutThirdPartyJobSuccessResultResponse instance.
+ * Constructs a PutThirdPartyJobSuccessResultResponsePrivate object with public implementation \a q.
  */
 PutThirdPartyJobSuccessResultResponsePrivate::PutThirdPartyJobSuccessResultResponsePrivate(
     PutThirdPartyJobSuccessResultResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ PutThirdPartyJobSuccessResultResponsePrivate::PutThirdPartyJobSuccessResultRespo
 }
 
 /*!
- * @brief  Parse an CodePipeline PutThirdPartyJobSuccessResultResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline PutThirdPartyJobSuccessResult response element from \a xml.
  */
 void PutThirdPartyJobSuccessResultResponsePrivate::parsePutThirdPartyJobSuccessResultResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::CreatePullRequestResponse
- *
  * \brief The CreatePullRequestResponse class provides an interace for CodeCommit CreatePullRequest responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new CreatePullRequestResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePullRequestResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePullRequestResponse::CreatePullRequestResponse(
         const CreatePullRequestRequest &request,
@@ -245,6 +240,9 @@ CreatePullRequestResponse::CreatePullRequestResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePullRequestRequest * CreatePullRequestResponse::request() const
 {
     Q_D(const CreatePullRequestResponse);
@@ -252,9 +250,8 @@ const CreatePullRequestRequest * CreatePullRequestResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit CreatePullRequest response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit CreatePullRequest \a response.
  */
 void CreatePullRequestResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void CreatePullRequestResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::CreatePullRequestResponsePrivate
+ * \brief The CreatePullRequestResponsePrivate class provides private implementation for CreatePullRequestResponse.
  * \internal
  *
- * \class CreatePullRequestResponsePrivate
- *
- * \brief Private implementation for CreatePullRequestResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePullRequestResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePullRequestResponse instance.
+ * Constructs a CreatePullRequestResponsePrivate object with public implementation \a q.
  */
 CreatePullRequestResponsePrivate::CreatePullRequestResponsePrivate(
     CreatePullRequestResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ CreatePullRequestResponsePrivate::CreatePullRequestResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit CreatePullRequestResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit CreatePullRequest response element from \a xml.
  */
 void CreatePullRequestResponsePrivate::parseCreatePullRequestResponse(QXmlStreamReader &xml)
 {

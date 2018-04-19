@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::RunJobFlowResponse
- *
  * \brief The RunJobFlowResponse class provides an interace for EMR RunJobFlow responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new RunJobFlowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RunJobFlowResponse object for \a reply to \a request, with parent \a parent.
  */
 RunJobFlowResponse::RunJobFlowResponse(
         const RunJobFlowRequest &request,
@@ -58,6 +53,9 @@ RunJobFlowResponse::RunJobFlowResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RunJobFlowRequest * RunJobFlowResponse::request() const
 {
     Q_D(const RunJobFlowResponse);
@@ -65,9 +63,8 @@ const RunJobFlowRequest * RunJobFlowResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR RunJobFlow response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR RunJobFlow \a response.
  */
 void RunJobFlowResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void RunJobFlowResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::RunJobFlowResponsePrivate
+ * \brief The RunJobFlowResponsePrivate class provides private implementation for RunJobFlowResponse.
  * \internal
  *
- * \class RunJobFlowResponsePrivate
- *
- * \brief Private implementation for RunJobFlowResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RunJobFlowResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RunJobFlowResponse instance.
+ * Constructs a RunJobFlowResponsePrivate object with public implementation \a q.
  */
 RunJobFlowResponsePrivate::RunJobFlowResponsePrivate(
     RunJobFlowResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ RunJobFlowResponsePrivate::RunJobFlowResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR RunJobFlowResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR RunJobFlow response element from \a xml.
  */
 void RunJobFlowResponsePrivate::parseRunJobFlowResponse(QXmlStreamReader &xml)
 {

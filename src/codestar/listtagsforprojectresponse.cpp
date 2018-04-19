@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::ListTagsForProjectResponse
- *
  * \brief The ListTagsForProjectResponse class provides an interace for CodeStar ListTagsForProject responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsForProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsForProjectResponse::ListTagsForProjectResponse(
         const ListTagsForProjectRequest &request,
@@ -143,6 +138,9 @@ ListTagsForProjectResponse::ListTagsForProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsForProjectRequest * ListTagsForProjectResponse::request() const
 {
     Q_D(const ListTagsForProjectResponse);
@@ -150,9 +148,8 @@ const ListTagsForProjectRequest * ListTagsForProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar ListTagsForProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar ListTagsForProject \a response.
  */
 void ListTagsForProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void ListTagsForProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::ListTagsForProjectResponsePrivate
+ * \brief The ListTagsForProjectResponsePrivate class provides private implementation for ListTagsForProjectResponse.
  * \internal
  *
- * \class ListTagsForProjectResponsePrivate
- *
- * \brief Private implementation for ListTagsForProjectResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsForProjectResponse instance.
+ * Constructs a ListTagsForProjectResponsePrivate object with public implementation \a q.
  */
 ListTagsForProjectResponsePrivate::ListTagsForProjectResponsePrivate(
     ListTagsForProjectResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ ListTagsForProjectResponsePrivate::ListTagsForProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar ListTagsForProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar ListTagsForProject response element from \a xml.
  */
 void ListTagsForProjectResponsePrivate::parseListTagsForProjectResponse(QXmlStreamReader &xml)
 {

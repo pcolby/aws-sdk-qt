@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * GetSuiteRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a GetSuiteRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a GetSuiteRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 GetSuiteRequestPrivate::GetSuiteRequestPrivate(
     const DeviceFarmRequest::Action action, GetSuiteRequest * const q)

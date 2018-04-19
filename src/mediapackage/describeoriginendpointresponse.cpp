@@ -29,21 +29,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::DescribeOriginEndpointResponse
- *
  * \brief The DescribeOriginEndpointResponse class provides an interace for MediaPackage DescribeOriginEndpoint responses.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::describeOriginEndpoint
  */
 
 /*!
- * @brief  Constructs a new DescribeOriginEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeOriginEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeOriginEndpointResponse::DescribeOriginEndpointResponse(
         const DescribeOriginEndpointRequest &request,
@@ -55,6 +50,9 @@ DescribeOriginEndpointResponse::DescribeOriginEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeOriginEndpointRequest * DescribeOriginEndpointResponse::request() const
 {
     Q_D(const DescribeOriginEndpointResponse);
@@ -62,9 +60,8 @@ const DescribeOriginEndpointRequest * DescribeOriginEndpointResponse::request() 
 }
 
 /*!
- * @brief  Parse a MediaPackage DescribeOriginEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaPackage DescribeOriginEndpoint \a response.
  */
 void DescribeOriginEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeOriginEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaPackage::DescribeOriginEndpointResponsePrivate
+ * \brief The DescribeOriginEndpointResponsePrivate class provides private implementation for DescribeOriginEndpointResponse.
  * \internal
  *
- * \class DescribeOriginEndpointResponsePrivate
- *
- * \brief Private implementation for DescribeOriginEndpointResponse.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOriginEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeOriginEndpointResponse instance.
+ * Constructs a DescribeOriginEndpointResponsePrivate object with public implementation \a q.
  */
 DescribeOriginEndpointResponsePrivate::DescribeOriginEndpointResponsePrivate(
     DescribeOriginEndpointResponse * const q) : MediaPackageResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeOriginEndpointResponsePrivate::DescribeOriginEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaPackage DescribeOriginEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaPackage DescribeOriginEndpoint response element from \a xml.
  */
 void DescribeOriginEndpointResponsePrivate::parseDescribeOriginEndpointResponse(QXmlStreamReader &xml)
 {

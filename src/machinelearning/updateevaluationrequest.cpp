@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateEvaluationRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateEvaluationRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a UpdateEvaluationRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 UpdateEvaluationRequestPrivate::UpdateEvaluationRequestPrivate(
     const MachineLearningRequest::Action action, UpdateEvaluationRequest * const q)

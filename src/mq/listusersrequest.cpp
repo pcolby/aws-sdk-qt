@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ListUsersRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a ListUsersRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 ListUsersRequestPrivate::ListUsersRequestPrivate(
     const MQRequest::Action action, ListUsersRequest * const q)

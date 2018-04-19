@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdateAssociationStatusResponse
- *
  * \brief The UpdateAssociationStatusResponse class provides an interace for SSM UpdateAssociationStatus responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdateAssociationStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAssociationStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAssociationStatusResponse::UpdateAssociationStatusResponse(
         const UpdateAssociationStatusRequest &request,
@@ -79,6 +74,9 @@ UpdateAssociationStatusResponse::UpdateAssociationStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAssociationStatusRequest * UpdateAssociationStatusResponse::request() const
 {
     Q_D(const UpdateAssociationStatusResponse);
@@ -86,9 +84,8 @@ const UpdateAssociationStatusRequest * UpdateAssociationStatusResponse::request(
 }
 
 /*!
- * @brief  Parse a SSM UpdateAssociationStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM UpdateAssociationStatus \a response.
  */
 void UpdateAssociationStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void UpdateAssociationStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::UpdateAssociationStatusResponsePrivate
+ * \brief The UpdateAssociationStatusResponsePrivate class provides private implementation for UpdateAssociationStatusResponse.
  * \internal
  *
- * \class UpdateAssociationStatusResponsePrivate
- *
- * \brief Private implementation for UpdateAssociationStatusResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAssociationStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAssociationStatusResponse instance.
+ * Constructs a UpdateAssociationStatusResponsePrivate object with public implementation \a q.
  */
 UpdateAssociationStatusResponsePrivate::UpdateAssociationStatusResponsePrivate(
     UpdateAssociationStatusResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ UpdateAssociationStatusResponsePrivate::UpdateAssociationStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM UpdateAssociationStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM UpdateAssociationStatus response element from \a xml.
  */
 void UpdateAssociationStatusResponsePrivate::parseUpdateAssociationStatusResponse(QXmlStreamReader &xml)
 {

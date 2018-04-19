@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetTrafficPolicyInstanceCountRequest::respons
  */
 
 /*!
- *
- * Constructs a GetTrafficPolicyInstanceCountRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a GetTrafficPolicyInstanceCountRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 GetTrafficPolicyInstanceCountRequestPrivate::GetTrafficPolicyInstanceCountRequestPrivate(
     const Route53Request::Action action, GetTrafficPolicyInstanceCountRequest * const q)

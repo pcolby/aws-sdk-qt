@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::PutComplianceItemsResponse
- *
  * \brief The PutComplianceItemsResponse class provides an interace for SSM PutComplianceItems responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new PutComplianceItemsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutComplianceItemsResponse object for \a reply to \a request, with parent \a parent.
  */
 PutComplianceItemsResponse::PutComplianceItemsResponse(
         const PutComplianceItemsRequest &request,
@@ -79,6 +74,9 @@ PutComplianceItemsResponse::PutComplianceItemsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutComplianceItemsRequest * PutComplianceItemsResponse::request() const
 {
     Q_D(const PutComplianceItemsResponse);
@@ -86,9 +84,8 @@ const PutComplianceItemsRequest * PutComplianceItemsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM PutComplianceItems response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM PutComplianceItems \a response.
  */
 void PutComplianceItemsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void PutComplianceItemsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::PutComplianceItemsResponsePrivate
+ * \brief The PutComplianceItemsResponsePrivate class provides private implementation for PutComplianceItemsResponse.
  * \internal
  *
- * \class PutComplianceItemsResponsePrivate
- *
- * \brief Private implementation for PutComplianceItemsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutComplianceItemsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutComplianceItemsResponse instance.
+ * Constructs a PutComplianceItemsResponsePrivate object with public implementation \a q.
  */
 PutComplianceItemsResponsePrivate::PutComplianceItemsResponsePrivate(
     PutComplianceItemsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ PutComplianceItemsResponsePrivate::PutComplianceItemsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM PutComplianceItemsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM PutComplianceItems response element from \a xml.
  */
 void PutComplianceItemsResponsePrivate::parsePutComplianceItemsResponse(QXmlStreamReader &xml)
 {

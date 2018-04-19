@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::AssociateTagOptionWithResourceResponse
- *
  * \brief The AssociateTagOptionWithResourceResponse class provides an interace for ServiceCatalog AssociateTagOptionWithResource responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new AssociateTagOptionWithResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateTagOptionWithResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateTagOptionWithResourceResponse::AssociateTagOptionWithResourceResponse(
         const AssociateTagOptionWithResourceRequest &request,
@@ -61,6 +56,9 @@ AssociateTagOptionWithResourceResponse::AssociateTagOptionWithResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateTagOptionWithResourceRequest * AssociateTagOptionWithResourceResponse::request() const
 {
     Q_D(const AssociateTagOptionWithResourceResponse);
@@ -68,9 +66,8 @@ const AssociateTagOptionWithResourceRequest * AssociateTagOptionWithResourceResp
 }
 
 /*!
- * @brief  Parse a ServiceCatalog AssociateTagOptionWithResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog AssociateTagOptionWithResource \a response.
  */
 void AssociateTagOptionWithResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void AssociateTagOptionWithResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::AssociateTagOptionWithResourceResponsePrivate
+ * \brief The AssociateTagOptionWithResourceResponsePrivate class provides private implementation for AssociateTagOptionWithResourceResponse.
  * \internal
  *
- * \class AssociateTagOptionWithResourceResponsePrivate
- *
- * \brief Private implementation for AssociateTagOptionWithResourceResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateTagOptionWithResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateTagOptionWithResourceResponse instance.
+ * Constructs a AssociateTagOptionWithResourceResponsePrivate object with public implementation \a q.
  */
 AssociateTagOptionWithResourceResponsePrivate::AssociateTagOptionWithResourceResponsePrivate(
     AssociateTagOptionWithResourceResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ AssociateTagOptionWithResourceResponsePrivate::AssociateTagOptionWithResourceRes
 }
 
 /*!
- * @brief  Parse an ServiceCatalog AssociateTagOptionWithResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog AssociateTagOptionWithResource response element from \a xml.
  */
 void AssociateTagOptionWithResourceResponsePrivate::parseAssociateTagOptionWithResourceResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * RestoreAddressToClassicRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a RestoreAddressToClassicRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a RestoreAddressToClassicRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 RestoreAddressToClassicRequestPrivate::RestoreAddressToClassicRequestPrivate(
     const EC2Request::Action action, RestoreAddressToClassicRequest * const q)

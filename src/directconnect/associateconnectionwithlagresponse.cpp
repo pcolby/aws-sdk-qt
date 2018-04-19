@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::AssociateConnectionWithLagResponse
- *
  * \brief The AssociateConnectionWithLagResponse class provides an interace for DirectConnect AssociateConnectionWithLag responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new AssociateConnectionWithLagResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateConnectionWithLagResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateConnectionWithLagResponse::AssociateConnectionWithLagResponse(
         const AssociateConnectionWithLagRequest &request,
@@ -63,6 +58,9 @@ AssociateConnectionWithLagResponse::AssociateConnectionWithLagResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateConnectionWithLagRequest * AssociateConnectionWithLagResponse::request() const
 {
     Q_D(const AssociateConnectionWithLagResponse);
@@ -70,9 +68,8 @@ const AssociateConnectionWithLagRequest * AssociateConnectionWithLagResponse::re
 }
 
 /*!
- * @brief  Parse a DirectConnect AssociateConnectionWithLag response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect AssociateConnectionWithLag \a response.
  */
 void AssociateConnectionWithLagResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void AssociateConnectionWithLagResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::AssociateConnectionWithLagResponsePrivate
+ * \brief The AssociateConnectionWithLagResponsePrivate class provides private implementation for AssociateConnectionWithLagResponse.
  * \internal
  *
- * \class AssociateConnectionWithLagResponsePrivate
- *
- * \brief Private implementation for AssociateConnectionWithLagResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateConnectionWithLagResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateConnectionWithLagResponse instance.
+ * Constructs a AssociateConnectionWithLagResponsePrivate object with public implementation \a q.
  */
 AssociateConnectionWithLagResponsePrivate::AssociateConnectionWithLagResponsePrivate(
     AssociateConnectionWithLagResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ AssociateConnectionWithLagResponsePrivate::AssociateConnectionWithLagResponsePri
 }
 
 /*!
- * @brief  Parse an DirectConnect AssociateConnectionWithLagResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect AssociateConnectionWithLag response element from \a xml.
  */
 void AssociateConnectionWithLagResponsePrivate::parseAssociateConnectionWithLagResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::CreateTrafficPolicyVersionResponse
- *
  * \brief The CreateTrafficPolicyVersionResponse class provides an interace for Route53 CreateTrafficPolicyVersion responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::createTrafficPolicyVersion
  */
 
 /*!
- * @brief  Constructs a new CreateTrafficPolicyVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTrafficPolicyVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTrafficPolicyVersionResponse::CreateTrafficPolicyVersionResponse(
         const CreateTrafficPolicyVersionRequest &request,
@@ -55,6 +50,9 @@ CreateTrafficPolicyVersionResponse::CreateTrafficPolicyVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTrafficPolicyVersionRequest * CreateTrafficPolicyVersionResponse::request() const
 {
     Q_D(const CreateTrafficPolicyVersionResponse);
@@ -62,9 +60,8 @@ const CreateTrafficPolicyVersionRequest * CreateTrafficPolicyVersionResponse::re
 }
 
 /*!
- * @brief  Parse a Route53 CreateTrafficPolicyVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 CreateTrafficPolicyVersion \a response.
  */
 void CreateTrafficPolicyVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateTrafficPolicyVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::CreateTrafficPolicyVersionResponsePrivate
+ * \brief The CreateTrafficPolicyVersionResponsePrivate class provides private implementation for CreateTrafficPolicyVersionResponse.
  * \internal
  *
- * \class CreateTrafficPolicyVersionResponsePrivate
- *
- * \brief Private implementation for CreateTrafficPolicyVersionResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTrafficPolicyVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTrafficPolicyVersionResponse instance.
+ * Constructs a CreateTrafficPolicyVersionResponsePrivate object with public implementation \a q.
  */
 CreateTrafficPolicyVersionResponsePrivate::CreateTrafficPolicyVersionResponsePrivate(
     CreateTrafficPolicyVersionResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateTrafficPolicyVersionResponsePrivate::CreateTrafficPolicyVersionResponsePri
 }
 
 /*!
- * @brief  Parse an Route53 CreateTrafficPolicyVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 CreateTrafficPolicyVersion response element from \a xml.
  */
 void CreateTrafficPolicyVersionResponsePrivate::parseCreateTrafficPolicyVersionResponse(QXmlStreamReader &xml)
 {

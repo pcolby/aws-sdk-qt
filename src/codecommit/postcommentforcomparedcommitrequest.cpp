@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * PostCommentForComparedCommitRequest::response
  */
 
 /*!
- *
- * Constructs a PostCommentForComparedCommitRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a PostCommentForComparedCommitRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 PostCommentForComparedCommitRequestPrivate::PostCommentForComparedCommitRequestPrivate(
     const CodeCommitRequest::Action action, PostCommentForComparedCommitRequest * const q)

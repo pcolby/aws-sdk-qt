@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceSnapshotRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteInstanceSnapshotRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a DeleteInstanceSnapshotRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 DeleteInstanceSnapshotRequestPrivate::DeleteInstanceSnapshotRequestPrivate(
     const LightsailRequest::Action action, DeleteInstanceSnapshotRequest * const q)

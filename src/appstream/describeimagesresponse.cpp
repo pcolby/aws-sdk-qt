@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeImagesResponse
- *
  * \brief The DescribeImagesResponse class provides an interace for AppStream DescribeImages responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeImagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeImagesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeImagesResponse::DescribeImagesResponse(
         const DescribeImagesRequest &request,
@@ -58,6 +53,9 @@ DescribeImagesResponse::DescribeImagesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeImagesRequest * DescribeImagesResponse::request() const
 {
     Q_D(const DescribeImagesResponse);
@@ -65,9 +63,8 @@ const DescribeImagesRequest * DescribeImagesResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream DescribeImages response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream DescribeImages \a response.
  */
 void DescribeImagesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeImagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::DescribeImagesResponsePrivate
+ * \brief The DescribeImagesResponsePrivate class provides private implementation for DescribeImagesResponse.
  * \internal
  *
- * \class DescribeImagesResponsePrivate
- *
- * \brief Private implementation for DescribeImagesResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeImagesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeImagesResponse instance.
+ * Constructs a DescribeImagesResponsePrivate object with public implementation \a q.
  */
 DescribeImagesResponsePrivate::DescribeImagesResponsePrivate(
     DescribeImagesResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeImagesResponsePrivate::DescribeImagesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream DescribeImagesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream DescribeImages response element from \a xml.
  */
 void DescribeImagesResponsePrivate::parseDescribeImagesResponse(QXmlStreamReader &xml)
 {

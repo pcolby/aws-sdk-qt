@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::DescribeHapgResponse
- *
  * \brief The DescribeHapgResponse class provides an interace for CloudHSM DescribeHapg responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeHapgResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeHapgResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeHapgResponse::DescribeHapgResponse(
         const DescribeHapgRequest &request,
@@ -67,6 +62,9 @@ DescribeHapgResponse::DescribeHapgResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeHapgRequest * DescribeHapgResponse::request() const
 {
     Q_D(const DescribeHapgResponse);
@@ -74,9 +72,8 @@ const DescribeHapgRequest * DescribeHapgResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSM DescribeHapg response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM DescribeHapg \a response.
  */
 void DescribeHapgResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void DescribeHapgResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::DescribeHapgResponsePrivate
+ * \brief The DescribeHapgResponsePrivate class provides private implementation for DescribeHapgResponse.
  * \internal
  *
- * \class DescribeHapgResponsePrivate
- *
- * \brief Private implementation for DescribeHapgResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHapgResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeHapgResponse instance.
+ * Constructs a DescribeHapgResponsePrivate object with public implementation \a q.
  */
 DescribeHapgResponsePrivate::DescribeHapgResponsePrivate(
     DescribeHapgResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ DescribeHapgResponsePrivate::DescribeHapgResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM DescribeHapgResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM DescribeHapg response element from \a xml.
  */
 void DescribeHapgResponsePrivate::parseDescribeHapgResponse(QXmlStreamReader &xml)
 {

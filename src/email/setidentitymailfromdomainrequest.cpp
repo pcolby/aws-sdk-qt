@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SetIdentityMailFromDomainRequest::response(QN
  */
 
 /*!
- *
- * Constructs a SetIdentityMailFromDomainRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a SetIdentityMailFromDomainRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 SetIdentityMailFromDomainRequestPrivate::SetIdentityMailFromDomainRequestPrivate(
     const SESRequest::Action action, SetIdentityMailFromDomainRequest * const q)

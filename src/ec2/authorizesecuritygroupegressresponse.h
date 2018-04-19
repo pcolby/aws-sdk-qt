@@ -34,10 +34,10 @@ class QTAWS_EXPORT AuthorizeSecurityGroupEgressResponse : public EC2Response {
 public:
     AuthorizeSecurityGroupEgressResponse(const AuthorizeSecurityGroupEgressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AuthorizeSecurityGroupEgressRequest * request() const;
+    virtual const AuthorizeSecurityGroupEgressRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AuthorizeSecurityGroupEgressResponse)

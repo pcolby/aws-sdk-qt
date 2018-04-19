@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationOutputRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteApplicationOutputRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApplicationOutputRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 DeleteApplicationOutputRequestPrivate::DeleteApplicationOutputRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationOutputRequest * const q)

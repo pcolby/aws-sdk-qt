@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * GetReservationUtilizationRequest::response(QN
  */
 
 /*!
- *
- * Constructs a GetReservationUtilizationRequestPrivate object for CostExplorer \a action with,
- * public implementation \a q.
+ * Constructs a GetReservationUtilizationRequestPrivate object for CostExplorer \a action,
+ * with public implementation \a q.
  */
 GetReservationUtilizationRequestPrivate::GetReservationUtilizationRequestPrivate(
     const CostExplorerRequest::Action action, GetReservationUtilizationRequest * const q)

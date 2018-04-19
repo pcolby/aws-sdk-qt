@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CreateEventSubscriptionRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a CreateEventSubscriptionRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, CreateEventSubscriptionRequest * const q)

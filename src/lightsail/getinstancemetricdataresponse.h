@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetInstanceMetricDataResponse : public LightsailResponse {
 public:
     GetInstanceMetricDataResponse(const GetInstanceMetricDataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetInstanceMetricDataRequest * request() const;
+    virtual const GetInstanceMetricDataRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetInstanceMetricDataResponse)

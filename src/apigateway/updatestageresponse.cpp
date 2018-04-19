@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateStageResponse
- *
  * \brief The UpdateStageResponse class provides an interace for APIGateway UpdateStage responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateStageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateStageResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateStageResponse::UpdateStageResponse(
         const UpdateStageRequest &request,
@@ -60,6 +55,9 @@ UpdateStageResponse::UpdateStageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateStageRequest * UpdateStageResponse::request() const
 {
     Q_D(const UpdateStageResponse);
@@ -67,9 +65,8 @@ const UpdateStageRequest * UpdateStageResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateStage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateStage \a response.
  */
 void UpdateStageResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateStageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateStageResponsePrivate
+ * \brief The UpdateStageResponsePrivate class provides private implementation for UpdateStageResponse.
  * \internal
  *
- * \class UpdateStageResponsePrivate
- *
- * \brief Private implementation for UpdateStageResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateStageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateStageResponse instance.
+ * Constructs a UpdateStageResponsePrivate object with public implementation \a q.
  */
 UpdateStageResponsePrivate::UpdateStageResponsePrivate(
     UpdateStageResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateStageResponsePrivate::UpdateStageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateStageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateStage response element from \a xml.
  */
 void UpdateStageResponsePrivate::parseUpdateStageResponse(QXmlStreamReader &xml)
 {

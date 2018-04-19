@@ -28,16 +28,13 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::Cloud9Response
- *
  * \brief The Cloud9Response class provides an interface for Cloud9 responses.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @brief  Constructs a new Cloud9Response object.
- *
- * @param  parent   This object's parent.
+ * Constructs a Cloud9Response object with parent \a parent.
  */
 Cloud9Response::Cloud9Response(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new Cloud9ResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ Cloud9Response::Cloud9Response(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new Cloud9Response object.
- *
+ * \internal
+ * Constructs a Cloud9Response object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from Cloud9ResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 Cloud9Response::Cloud9Response(Cloud9ResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ Cloud9Response::Cloud9Response(Cloud9ResponsePrivate * const d, QObject * const 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void Cloud9Response::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void Cloud9Response::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Cloud9::Cloud9ResponsePrivate
+ * \brief The Cloud9ResponsePrivate class provides private implementation for Cloud9Response.
+ * \internal
  *
- * @class  Cloud9ResponsePrivate
- *
- * @brief  Private implementation for Cloud9Response.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new Cloud9ResponsePrivate object.
- *
- * @param  q  Pointer to this object's public Cloud9Response instance.
+ * Constructs a Cloud9ResponsePrivate object with public implementation \a q.
  */
 Cloud9ResponsePrivate::Cloud9ResponsePrivate(
     Cloud9Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

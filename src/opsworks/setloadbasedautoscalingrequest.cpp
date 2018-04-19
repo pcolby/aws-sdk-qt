@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * SetLoadBasedAutoScalingRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a SetLoadBasedAutoScalingRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a SetLoadBasedAutoScalingRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 SetLoadBasedAutoScalingRequestPrivate::SetLoadBasedAutoScalingRequestPrivate(
     const OpsWorksRequest::Action action, SetLoadBasedAutoScalingRequest * const q)

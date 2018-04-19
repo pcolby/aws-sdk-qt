@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::RegisterEcsClusterResponse
- *
  * \brief The RegisterEcsClusterResponse class provides an interace for OpsWorks RegisterEcsCluster responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new RegisterEcsClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterEcsClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterEcsClusterResponse::RegisterEcsClusterResponse(
         const RegisterEcsClusterRequest &request,
@@ -161,6 +156,9 @@ RegisterEcsClusterResponse::RegisterEcsClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterEcsClusterRequest * RegisterEcsClusterResponse::request() const
 {
     Q_D(const RegisterEcsClusterResponse);
@@ -168,9 +166,8 @@ const RegisterEcsClusterRequest * RegisterEcsClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks RegisterEcsCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks RegisterEcsCluster \a response.
  */
 void RegisterEcsClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void RegisterEcsClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::RegisterEcsClusterResponsePrivate
+ * \brief The RegisterEcsClusterResponsePrivate class provides private implementation for RegisterEcsClusterResponse.
  * \internal
  *
- * \class RegisterEcsClusterResponsePrivate
- *
- * \brief Private implementation for RegisterEcsClusterResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterEcsClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterEcsClusterResponse instance.
+ * Constructs a RegisterEcsClusterResponsePrivate object with public implementation \a q.
  */
 RegisterEcsClusterResponsePrivate::RegisterEcsClusterResponsePrivate(
     RegisterEcsClusterResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ RegisterEcsClusterResponsePrivate::RegisterEcsClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks RegisterEcsClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks RegisterEcsCluster response element from \a xml.
  */
 void RegisterEcsClusterResponsePrivate::parseRegisterEcsClusterResponse(QXmlStreamReader &xml)
 {

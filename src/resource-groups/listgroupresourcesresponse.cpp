@@ -29,10 +29,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::ListGroupResourcesResponse
- *
  * \brief The ListGroupResourcesResponse class provides an interace for ResourceGroups ListGroupResources responses.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -83,11 +82,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new ListGroupResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGroupResourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGroupResourcesResponse::ListGroupResourcesResponse(
         const ListGroupResourcesRequest &request,
@@ -99,6 +94,9 @@ ListGroupResourcesResponse::ListGroupResourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGroupResourcesRequest * ListGroupResourcesResponse::request() const
 {
     Q_D(const ListGroupResourcesResponse);
@@ -106,9 +104,8 @@ const ListGroupResourcesRequest * ListGroupResourcesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ResourceGroups ListGroupResources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ResourceGroups ListGroupResources \a response.
  */
 void ListGroupResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -118,19 +115,15 @@ void ListGroupResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ResourceGroups::ListGroupResourcesResponsePrivate
+ * \brief The ListGroupResourcesResponsePrivate class provides private implementation for ListGroupResourcesResponse.
  * \internal
  *
- * \class ListGroupResourcesResponsePrivate
- *
- * \brief Private implementation for ListGroupResourcesResponse.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupResourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGroupResourcesResponse instance.
+ * Constructs a ListGroupResourcesResponsePrivate object with public implementation \a q.
  */
 ListGroupResourcesResponsePrivate::ListGroupResourcesResponsePrivate(
     ListGroupResourcesResponse * const q) : ResourceGroupsResponsePrivate(q)
@@ -139,9 +132,7 @@ ListGroupResourcesResponsePrivate::ListGroupResourcesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ResourceGroups ListGroupResourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ResourceGroups ListGroupResources response element from \a xml.
  */
 void ListGroupResourcesResponsePrivate::parseListGroupResourcesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::DisableDomainAutoRenewResponse
- *
  * \brief The DisableDomainAutoRenewResponse class provides an interace for Route53Domains DisableDomainAutoRenew responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new DisableDomainAutoRenewResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableDomainAutoRenewResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableDomainAutoRenewResponse::DisableDomainAutoRenewResponse(
         const DisableDomainAutoRenewRequest &request,
@@ -56,6 +51,9 @@ DisableDomainAutoRenewResponse::DisableDomainAutoRenewResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableDomainAutoRenewRequest * DisableDomainAutoRenewResponse::request() const
 {
     Q_D(const DisableDomainAutoRenewResponse);
@@ -63,9 +61,8 @@ const DisableDomainAutoRenewRequest * DisableDomainAutoRenewResponse::request() 
 }
 
 /*!
- * @brief  Parse a Route53Domains DisableDomainAutoRenew response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains DisableDomainAutoRenew \a response.
  */
 void DisableDomainAutoRenewResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DisableDomainAutoRenewResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::DisableDomainAutoRenewResponsePrivate
+ * \brief The DisableDomainAutoRenewResponsePrivate class provides private implementation for DisableDomainAutoRenewResponse.
  * \internal
  *
- * \class DisableDomainAutoRenewResponsePrivate
- *
- * \brief Private implementation for DisableDomainAutoRenewResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableDomainAutoRenewResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableDomainAutoRenewResponse instance.
+ * Constructs a DisableDomainAutoRenewResponsePrivate object with public implementation \a q.
  */
 DisableDomainAutoRenewResponsePrivate::DisableDomainAutoRenewResponsePrivate(
     DisableDomainAutoRenewResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ DisableDomainAutoRenewResponsePrivate::DisableDomainAutoRenewResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains DisableDomainAutoRenewResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains DisableDomainAutoRenew response element from \a xml.
  */
 void DisableDomainAutoRenewResponsePrivate::parseDisableDomainAutoRenewResponse(QXmlStreamReader &xml)
 {

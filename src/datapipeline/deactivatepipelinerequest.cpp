@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * DeactivatePipelineRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeactivatePipelineRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a DeactivatePipelineRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 DeactivatePipelineRequestPrivate::DeactivatePipelineRequestPrivate(
     const DataPipelineRequest::Action action, DeactivatePipelineRequest * const q)

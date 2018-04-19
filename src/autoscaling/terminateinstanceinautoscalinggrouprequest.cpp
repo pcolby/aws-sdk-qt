@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * TerminateInstanceInAutoScalingGroupRequest::r
  */
 
 /*!
- *
- * Constructs a TerminateInstanceInAutoScalingGroupRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a TerminateInstanceInAutoScalingGroupRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalingGroupRequestPrivate(
     const AutoScalingRequest::Action action, TerminateInstanceInAutoScalingGroupRequest * const q)

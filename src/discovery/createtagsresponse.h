@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateTagsResponse : public ApplicationDiscoveryServiceRespon
 public:
     CreateTagsResponse(const CreateTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateTagsRequest * request() const;
+    virtual const CreateTagsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateTagsResponse)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateTrafficPolicyRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a CreateTrafficPolicyRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a CreateTrafficPolicyRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 CreateTrafficPolicyRequestPrivate::CreateTrafficPolicyRequestPrivate(
     const Route53Request::Action action, CreateTrafficPolicyRequest * const q)

@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * AddListenerCertificatesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a AddListenerCertificatesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a AddListenerCertificatesRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 AddListenerCertificatesRequestPrivate::AddListenerCertificatesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, AddListenerCertificatesRequest * const q)

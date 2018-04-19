@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * ListDevicesRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListDevicesRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a ListDevicesRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 ListDevicesRequestPrivate::ListDevicesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ListDevicesRequest * const q)

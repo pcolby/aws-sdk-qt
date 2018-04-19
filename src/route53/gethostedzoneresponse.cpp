@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetHostedZoneResponse
- *
  * \brief The GetHostedZoneResponse class provides an interace for Route53 GetHostedZone responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getHostedZone
  */
 
 /*!
- * @brief  Constructs a new GetHostedZoneResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetHostedZoneResponse object for \a reply to \a request, with parent \a parent.
  */
 GetHostedZoneResponse::GetHostedZoneResponse(
         const GetHostedZoneRequest &request,
@@ -55,6 +50,9 @@ GetHostedZoneResponse::GetHostedZoneResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetHostedZoneRequest * GetHostedZoneResponse::request() const
 {
     Q_D(const GetHostedZoneResponse);
@@ -62,9 +60,8 @@ const GetHostedZoneRequest * GetHostedZoneResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 GetHostedZone response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetHostedZone \a response.
  */
 void GetHostedZoneResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetHostedZoneResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetHostedZoneResponsePrivate
+ * \brief The GetHostedZoneResponsePrivate class provides private implementation for GetHostedZoneResponse.
  * \internal
  *
- * \class GetHostedZoneResponsePrivate
- *
- * \brief Private implementation for GetHostedZoneResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHostedZoneResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetHostedZoneResponse instance.
+ * Constructs a GetHostedZoneResponsePrivate object with public implementation \a q.
  */
 GetHostedZoneResponsePrivate::GetHostedZoneResponsePrivate(
     GetHostedZoneResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetHostedZoneResponsePrivate::GetHostedZoneResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 GetHostedZoneResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetHostedZone response element from \a xml.
  */
 void GetHostedZoneResponsePrivate::parseGetHostedZoneResponse(QXmlStreamReader &xml)
 {

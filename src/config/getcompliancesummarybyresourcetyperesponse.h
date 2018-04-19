@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetComplianceSummaryByResourceTypeResponse : public ConfigSer
 public:
     GetComplianceSummaryByResourceTypeResponse(const GetComplianceSummaryByResourceTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetComplianceSummaryByResourceTypeRequest * request() const;
+    virtual const GetComplianceSummaryByResourceTypeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetComplianceSummaryByResourceTypeResponse)

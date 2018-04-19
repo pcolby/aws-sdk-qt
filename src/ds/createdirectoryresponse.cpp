@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CreateDirectoryResponse
- *
  * \brief The CreateDirectoryResponse class provides an interace for DirectoryService CreateDirectory responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CreateDirectoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDirectoryResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDirectoryResponse::CreateDirectoryResponse(
         const CreateDirectoryRequest &request,
@@ -69,6 +64,9 @@ CreateDirectoryResponse::CreateDirectoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDirectoryRequest * CreateDirectoryResponse::request() const
 {
     Q_D(const CreateDirectoryResponse);
@@ -76,9 +74,8 @@ const CreateDirectoryRequest * CreateDirectoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService CreateDirectory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService CreateDirectory \a response.
  */
 void CreateDirectoryResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateDirectoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::CreateDirectoryResponsePrivate
+ * \brief The CreateDirectoryResponsePrivate class provides private implementation for CreateDirectoryResponse.
  * \internal
  *
- * \class CreateDirectoryResponsePrivate
- *
- * \brief Private implementation for CreateDirectoryResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDirectoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDirectoryResponse instance.
+ * Constructs a CreateDirectoryResponsePrivate object with public implementation \a q.
  */
 CreateDirectoryResponsePrivate::CreateDirectoryResponsePrivate(
     CreateDirectoryResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateDirectoryResponsePrivate::CreateDirectoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService CreateDirectoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService CreateDirectory response element from \a xml.
  */
 void CreateDirectoryResponsePrivate::parseCreateDirectoryResponse(QXmlStreamReader &xml)
 {

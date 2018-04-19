@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetMappingResponse
- *
  * \brief The GetMappingResponse class provides an interace for Glue GetMapping responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetMappingResponse object for \a reply to \a request, with parent \a parent.
  */
 GetMappingResponse::GetMappingResponse(
         const GetMappingRequest &request,
@@ -58,6 +53,9 @@ GetMappingResponse::GetMappingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetMappingRequest * GetMappingResponse::request() const
 {
     Q_D(const GetMappingResponse);
@@ -65,9 +63,8 @@ const GetMappingRequest * GetMappingResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetMapping response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetMapping \a response.
  */
 void GetMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetMappingResponsePrivate
+ * \brief The GetMappingResponsePrivate class provides private implementation for GetMappingResponse.
  * \internal
  *
- * \class GetMappingResponsePrivate
- *
- * \brief Private implementation for GetMappingResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMappingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetMappingResponse instance.
+ * Constructs a GetMappingResponsePrivate object with public implementation \a q.
  */
 GetMappingResponsePrivate::GetMappingResponsePrivate(
     GetMappingResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetMappingResponsePrivate::GetMappingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetMappingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetMapping response element from \a xml.
  */
 void GetMappingResponsePrivate::parseGetMappingResponse(QXmlStreamReader &xml)
 {

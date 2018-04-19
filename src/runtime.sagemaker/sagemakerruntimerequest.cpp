@@ -40,7 +40,7 @@ namespace SageMakerRuntime {
  */
 
 /*!
- * Constructs a[n] SageMakerRuntimeRequest object for SageMakerRuntime \a action.
+ * Constructs a SageMakerRuntimeRequest object for SageMakerRuntime \a action.
  */
 SageMakerRuntimeRequest::SageMakerRuntimeRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SageMakerRuntimeRequestPrivate(action, this))
@@ -240,8 +240,8 @@ QNetworkRequest SageMakerRuntimeRequest::unsignedRequest(const QUrl &endpoint) c
  */
 
 /*!
- * Constructs a SageMakerRuntimeRequestPrivate object for SageMakerRuntime \a action with,
- * public implementation \a q.
+ * Constructs a SageMakerRuntimeRequestPrivate object for SageMakerRuntime \a action,
+ * with public implementation \a q.
  */
 SageMakerRuntimeRequestPrivate::SageMakerRuntimeRequestPrivate(const SageMakerRuntimeRequest::Action action, SageMakerRuntimeRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

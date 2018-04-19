@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::ListModelsResponse
- *
  * \brief The ListModelsResponse class provides an interace for SageMaker ListModels responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::listModels
  */
 
 /*!
- * @brief  Constructs a new ListModelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListModelsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListModelsResponse::ListModelsResponse(
         const ListModelsRequest &request,
@@ -55,6 +50,9 @@ ListModelsResponse::ListModelsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListModelsRequest * ListModelsResponse::request() const
 {
     Q_D(const ListModelsResponse);
@@ -62,9 +60,8 @@ const ListModelsRequest * ListModelsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SageMaker ListModels response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker ListModels \a response.
  */
 void ListModelsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListModelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::ListModelsResponsePrivate
+ * \brief The ListModelsResponsePrivate class provides private implementation for ListModelsResponse.
  * \internal
  *
- * \class ListModelsResponsePrivate
- *
- * \brief Private implementation for ListModelsResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListModelsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListModelsResponse instance.
+ * Constructs a ListModelsResponsePrivate object with public implementation \a q.
  */
 ListModelsResponsePrivate::ListModelsResponsePrivate(
     ListModelsResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ ListModelsResponsePrivate::ListModelsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker ListModelsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker ListModels response element from \a xml.
  */
 void ListModelsResponsePrivate::parseListModelsResponse(QXmlStreamReader &xml)
 {

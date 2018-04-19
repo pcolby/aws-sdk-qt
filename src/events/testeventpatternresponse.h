@@ -34,10 +34,10 @@ class QTAWS_EXPORT TestEventPatternResponse : public CloudWatchEventsResponse {
 public:
     TestEventPatternResponse(const TestEventPatternRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TestEventPatternRequest * request() const;
+    virtual const TestEventPatternRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TestEventPatternResponse)

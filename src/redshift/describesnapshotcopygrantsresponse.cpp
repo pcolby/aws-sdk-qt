@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeSnapshotCopyGrantsResponse
- *
  * \brief The DescribeSnapshotCopyGrantsResponse class provides an interace for Redshift DescribeSnapshotCopyGrants responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeSnapshotCopyGrantsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSnapshotCopyGrantsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSnapshotCopyGrantsResponse::DescribeSnapshotCopyGrantsResponse(
         const DescribeSnapshotCopyGrantsRequest &request,
@@ -85,6 +80,9 @@ DescribeSnapshotCopyGrantsResponse::DescribeSnapshotCopyGrantsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSnapshotCopyGrantsRequest * DescribeSnapshotCopyGrantsResponse::request() const
 {
     Q_D(const DescribeSnapshotCopyGrantsResponse);
@@ -92,9 +90,8 @@ const DescribeSnapshotCopyGrantsRequest * DescribeSnapshotCopyGrantsResponse::re
 }
 
 /*!
- * @brief  Parse a Redshift DescribeSnapshotCopyGrants response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeSnapshotCopyGrants \a response.
  */
 void DescribeSnapshotCopyGrantsResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeSnapshotCopyGrantsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeSnapshotCopyGrantsResponsePrivate
+ * \brief The DescribeSnapshotCopyGrantsResponsePrivate class provides private implementation for DescribeSnapshotCopyGrantsResponse.
  * \internal
  *
- * \class DescribeSnapshotCopyGrantsResponsePrivate
- *
- * \brief Private implementation for DescribeSnapshotCopyGrantsResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSnapshotCopyGrantsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSnapshotCopyGrantsResponse instance.
+ * Constructs a DescribeSnapshotCopyGrantsResponsePrivate object with public implementation \a q.
  */
 DescribeSnapshotCopyGrantsResponsePrivate::DescribeSnapshotCopyGrantsResponsePrivate(
     DescribeSnapshotCopyGrantsResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeSnapshotCopyGrantsResponsePrivate::DescribeSnapshotCopyGrantsResponsePri
 }
 
 /*!
- * @brief  Parse an Redshift DescribeSnapshotCopyGrantsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeSnapshotCopyGrants response element from \a xml.
  */
 void DescribeSnapshotCopyGrantsResponsePrivate::parseDescribeSnapshotCopyGrantsResponse(QXmlStreamReader &xml)
 {

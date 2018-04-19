@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetIpAddressTypeResponse
- *
  * \brief The SetIpAddressTypeResponse class provides an interace for ElasticLoadBalancingv2 SetIpAddressType responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new SetIpAddressTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetIpAddressTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 SetIpAddressTypeResponse::SetIpAddressTypeResponse(
         const SetIpAddressTypeRequest &request,
@@ -123,6 +118,9 @@ SetIpAddressTypeResponse::SetIpAddressTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetIpAddressTypeRequest * SetIpAddressTypeResponse::request() const
 {
     Q_D(const SetIpAddressTypeResponse);
@@ -130,9 +128,8 @@ const SetIpAddressTypeRequest * SetIpAddressTypeResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 SetIpAddressType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 SetIpAddressType \a response.
  */
 void SetIpAddressTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void SetIpAddressTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::SetIpAddressTypeResponsePrivate
+ * \brief The SetIpAddressTypeResponsePrivate class provides private implementation for SetIpAddressTypeResponse.
  * \internal
  *
- * \class SetIpAddressTypeResponsePrivate
- *
- * \brief Private implementation for SetIpAddressTypeResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIpAddressTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetIpAddressTypeResponse instance.
+ * Constructs a SetIpAddressTypeResponsePrivate object with public implementation \a q.
  */
 SetIpAddressTypeResponsePrivate::SetIpAddressTypeResponsePrivate(
     SetIpAddressTypeResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ SetIpAddressTypeResponsePrivate::SetIpAddressTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 SetIpAddressTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 SetIpAddressType response element from \a xml.
  */
 void SetIpAddressTypeResponsePrivate::parseSetIpAddressTypeResponse(QXmlStreamReader &xml)
 {

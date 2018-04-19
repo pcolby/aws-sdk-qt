@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyListenerResponse
- *
  * \brief The ModifyListenerResponse class provides an interace for ElasticLoadBalancingv2 ModifyListener responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyListenerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyListenerResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyListenerResponse::ModifyListenerResponse(
         const ModifyListenerRequest &request,
@@ -123,6 +118,9 @@ ModifyListenerResponse::ModifyListenerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyListenerRequest * ModifyListenerResponse::request() const
 {
     Q_D(const ModifyListenerResponse);
@@ -130,9 +128,8 @@ const ModifyListenerRequest * ModifyListenerResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 ModifyListener response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 ModifyListener \a response.
  */
 void ModifyListenerResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void ModifyListenerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::ModifyListenerResponsePrivate
+ * \brief The ModifyListenerResponsePrivate class provides private implementation for ModifyListenerResponse.
  * \internal
  *
- * \class ModifyListenerResponsePrivate
- *
- * \brief Private implementation for ModifyListenerResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyListenerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyListenerResponse instance.
+ * Constructs a ModifyListenerResponsePrivate object with public implementation \a q.
  */
 ModifyListenerResponsePrivate::ModifyListenerResponsePrivate(
     ModifyListenerResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ ModifyListenerResponsePrivate::ModifyListenerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 ModifyListenerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 ModifyListener response element from \a xml.
  */
 void ModifyListenerResponsePrivate::parseModifyListenerResponse(QXmlStreamReader &xml)
 {

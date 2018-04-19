@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ApproveAssignmentResponse
- *
  * \brief The ApproveAssignmentResponse class provides an interace for MTurk ApproveAssignment responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::approveAssignment
  */
 
 /*!
- * @brief  Constructs a new ApproveAssignmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ApproveAssignmentResponse object for \a reply to \a request, with parent \a parent.
  */
 ApproveAssignmentResponse::ApproveAssignmentResponse(
         const ApproveAssignmentRequest &request,
@@ -55,6 +50,9 @@ ApproveAssignmentResponse::ApproveAssignmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ApproveAssignmentRequest * ApproveAssignmentResponse::request() const
 {
     Q_D(const ApproveAssignmentResponse);
@@ -62,9 +60,8 @@ const ApproveAssignmentRequest * ApproveAssignmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk ApproveAssignment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk ApproveAssignment \a response.
  */
 void ApproveAssignmentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ApproveAssignmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::ApproveAssignmentResponsePrivate
+ * \brief The ApproveAssignmentResponsePrivate class provides private implementation for ApproveAssignmentResponse.
  * \internal
  *
- * \class ApproveAssignmentResponsePrivate
- *
- * \brief Private implementation for ApproveAssignmentResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApproveAssignmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ApproveAssignmentResponse instance.
+ * Constructs a ApproveAssignmentResponsePrivate object with public implementation \a q.
  */
 ApproveAssignmentResponsePrivate::ApproveAssignmentResponsePrivate(
     ApproveAssignmentResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ ApproveAssignmentResponsePrivate::ApproveAssignmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk ApproveAssignmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk ApproveAssignment response element from \a xml.
  */
 void ApproveAssignmentResponsePrivate::parseApproveAssignmentResponse(QXmlStreamReader &xml)
 {

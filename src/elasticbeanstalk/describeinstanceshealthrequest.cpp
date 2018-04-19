@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancesHealthRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeInstancesHealthRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInstancesHealthRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DescribeInstancesHealthRequestPrivate::DescribeInstancesHealthRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeInstancesHealthRequest * const q)

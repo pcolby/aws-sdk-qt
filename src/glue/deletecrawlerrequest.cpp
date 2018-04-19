@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCrawlerRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteCrawlerRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCrawlerRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 DeleteCrawlerRequestPrivate::DeleteCrawlerRequestPrivate(
     const GlueRequest::Action action, DeleteCrawlerRequest * const q)

@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::CreateTrailResponse
- *
  * \brief The CreateTrailResponse class provides an interace for CloudTrail CreateTrail responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new CreateTrailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTrailResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTrailResponse::CreateTrailResponse(
         const CreateTrailRequest &request,
@@ -78,6 +73,9 @@ CreateTrailResponse::CreateTrailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTrailRequest * CreateTrailResponse::request() const
 {
     Q_D(const CreateTrailResponse);
@@ -85,9 +83,8 @@ const CreateTrailRequest * CreateTrailResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail CreateTrail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail CreateTrail \a response.
  */
 void CreateTrailResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void CreateTrailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::CreateTrailResponsePrivate
+ * \brief The CreateTrailResponsePrivate class provides private implementation for CreateTrailResponse.
  * \internal
  *
- * \class CreateTrailResponsePrivate
- *
- * \brief Private implementation for CreateTrailResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTrailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTrailResponse instance.
+ * Constructs a CreateTrailResponsePrivate object with public implementation \a q.
  */
 CreateTrailResponsePrivate::CreateTrailResponsePrivate(
     CreateTrailResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ CreateTrailResponsePrivate::CreateTrailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail CreateTrailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail CreateTrail response element from \a xml.
  */
 void CreateTrailResponsePrivate::parseCreateTrailResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetQualificationTypeRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetQualificationTypeRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a GetQualificationTypeRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 GetQualificationTypeRequestPrivate::GetQualificationTypeRequestPrivate(
     const MTurkRequest::Action action, GetQualificationTypeRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::respons
  */
 
 /*!
- *
- * Constructs a DescribeVpcPeeringConnectionsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVpcPeeringConnectionsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
     const EC2Request::Action action, DescribeVpcPeeringConnectionsRequest * const q)

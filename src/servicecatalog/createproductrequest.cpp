@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CreateProductRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateProductRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a CreateProductRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 CreateProductRequestPrivate::CreateProductRequestPrivate(
     const ServiceCatalogRequest::Action action, CreateProductRequest * const q)

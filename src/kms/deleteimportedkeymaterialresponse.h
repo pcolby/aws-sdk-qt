@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteImportedKeyMaterialResponse : public KMSResponse {
 public:
     DeleteImportedKeyMaterialResponse(const DeleteImportedKeyMaterialRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteImportedKeyMaterialRequest * request() const;
+    virtual const DeleteImportedKeyMaterialRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteImportedKeyMaterialResponse)

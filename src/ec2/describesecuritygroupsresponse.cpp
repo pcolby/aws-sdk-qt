@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSecurityGroupsResponse
- *
  * \brief The DescribeSecurityGroupsResponse class provides an interace for EC2 DescribeSecurityGroups responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSecurityGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSecurityGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSecurityGroupsResponse::DescribeSecurityGroupsResponse(
         const DescribeSecurityGroupsRequest &request,
@@ -59,6 +54,9 @@ DescribeSecurityGroupsResponse::DescribeSecurityGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSecurityGroupsRequest * DescribeSecurityGroupsResponse::request() const
 {
     Q_D(const DescribeSecurityGroupsResponse);
@@ -66,9 +64,8 @@ const DescribeSecurityGroupsRequest * DescribeSecurityGroupsResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 DescribeSecurityGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeSecurityGroups \a response.
  */
 void DescribeSecurityGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeSecurityGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeSecurityGroupsResponsePrivate
+ * \brief The DescribeSecurityGroupsResponsePrivate class provides private implementation for DescribeSecurityGroupsResponse.
  * \internal
  *
- * \class DescribeSecurityGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeSecurityGroupsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSecurityGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSecurityGroupsResponse instance.
+ * Constructs a DescribeSecurityGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeSecurityGroupsResponsePrivate::DescribeSecurityGroupsResponsePrivate(
     DescribeSecurityGroupsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeSecurityGroupsResponsePrivate::DescribeSecurityGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeSecurityGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeSecurityGroups response element from \a xml.
  */
 void DescribeSecurityGroupsResponsePrivate::parseDescribeSecurityGroupsResponse(QXmlStreamReader &xml)
 {

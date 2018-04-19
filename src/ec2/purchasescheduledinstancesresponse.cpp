@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::PurchaseScheduledInstancesResponse
- *
  * \brief The PurchaseScheduledInstancesResponse class provides an interace for EC2 PurchaseScheduledInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new PurchaseScheduledInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PurchaseScheduledInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 PurchaseScheduledInstancesResponse::PurchaseScheduledInstancesResponse(
         const PurchaseScheduledInstancesRequest &request,
@@ -59,6 +54,9 @@ PurchaseScheduledInstancesResponse::PurchaseScheduledInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PurchaseScheduledInstancesRequest * PurchaseScheduledInstancesResponse::request() const
 {
     Q_D(const PurchaseScheduledInstancesResponse);
@@ -66,9 +64,8 @@ const PurchaseScheduledInstancesRequest * PurchaseScheduledInstancesResponse::re
 }
 
 /*!
- * @brief  Parse a EC2 PurchaseScheduledInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 PurchaseScheduledInstances \a response.
  */
 void PurchaseScheduledInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void PurchaseScheduledInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::PurchaseScheduledInstancesResponsePrivate
+ * \brief The PurchaseScheduledInstancesResponsePrivate class provides private implementation for PurchaseScheduledInstancesResponse.
  * \internal
  *
- * \class PurchaseScheduledInstancesResponsePrivate
- *
- * \brief Private implementation for PurchaseScheduledInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseScheduledInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PurchaseScheduledInstancesResponse instance.
+ * Constructs a PurchaseScheduledInstancesResponsePrivate object with public implementation \a q.
  */
 PurchaseScheduledInstancesResponsePrivate::PurchaseScheduledInstancesResponsePrivate(
     PurchaseScheduledInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ PurchaseScheduledInstancesResponsePrivate::PurchaseScheduledInstancesResponsePri
 }
 
 /*!
- * @brief  Parse an EC2 PurchaseScheduledInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 PurchaseScheduledInstances response element from \a xml.
  */
 void PurchaseScheduledInstancesResponsePrivate::parsePurchaseScheduledInstancesResponse(QXmlStreamReader &xml)
 {

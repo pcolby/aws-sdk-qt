@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetAdmChannelRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetAdmChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetAdmChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetAdmChannelRequestPrivate::GetAdmChannelRequestPrivate(
     const PinpointRequest::Action action, GetAdmChannelRequest * const q)

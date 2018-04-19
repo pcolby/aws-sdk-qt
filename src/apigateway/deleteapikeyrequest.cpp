@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApiKeyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteApiKeyRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApiKeyRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteApiKeyRequestPrivate::DeleteApiKeyRequestPrivate(
     const APIGatewayRequest::Action action, DeleteApiKeyRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetShippingLabelRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetShippingLabelRequestPrivate object for ImportExport \a action with,
- * public implementation \a q.
+ * Constructs a GetShippingLabelRequestPrivate object for ImportExport \a action,
+ * with public implementation \a q.
  */
 GetShippingLabelRequestPrivate::GetShippingLabelRequestPrivate(
     const ImportExportRequest::Action action, GetShippingLabelRequest * const q)

@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DeclineHandshakeResponse
- *
  * \brief The DeclineHandshakeResponse class provides an interace for Organizations DeclineHandshake responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DeclineHandshakeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeclineHandshakeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeclineHandshakeResponse::DeclineHandshakeResponse(
         const DeclineHandshakeRequest &request,
@@ -197,6 +192,9 @@ DeclineHandshakeResponse::DeclineHandshakeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeclineHandshakeRequest * DeclineHandshakeResponse::request() const
 {
     Q_D(const DeclineHandshakeResponse);
@@ -204,9 +202,8 @@ const DeclineHandshakeRequest * DeclineHandshakeResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations DeclineHandshake response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations DeclineHandshake \a response.
  */
 void DeclineHandshakeResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void DeclineHandshakeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::DeclineHandshakeResponsePrivate
+ * \brief The DeclineHandshakeResponsePrivate class provides private implementation for DeclineHandshakeResponse.
  * \internal
  *
- * \class DeclineHandshakeResponsePrivate
- *
- * \brief Private implementation for DeclineHandshakeResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeclineHandshakeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeclineHandshakeResponse instance.
+ * Constructs a DeclineHandshakeResponsePrivate object with public implementation \a q.
  */
 DeclineHandshakeResponsePrivate::DeclineHandshakeResponsePrivate(
     DeclineHandshakeResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ DeclineHandshakeResponsePrivate::DeclineHandshakeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations DeclineHandshakeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations DeclineHandshake response element from \a xml.
  */
 void DeclineHandshakeResponsePrivate::parseDeclineHandshakeResponse(QXmlStreamReader &xml)
 {

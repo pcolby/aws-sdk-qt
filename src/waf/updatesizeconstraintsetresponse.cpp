@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateSizeConstraintSetResponse
- *
  * \brief The UpdateSizeConstraintSetResponse class provides an interace for WAF UpdateSizeConstraintSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateSizeConstraintSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSizeConstraintSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSizeConstraintSetResponse::UpdateSizeConstraintSetResponse(
         const UpdateSizeConstraintSetRequest &request,
@@ -60,6 +55,9 @@ UpdateSizeConstraintSetResponse::UpdateSizeConstraintSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSizeConstraintSetRequest * UpdateSizeConstraintSetResponse::request() const
 {
     Q_D(const UpdateSizeConstraintSetResponse);
@@ -67,9 +65,8 @@ const UpdateSizeConstraintSetRequest * UpdateSizeConstraintSetResponse::request(
 }
 
 /*!
- * @brief  Parse a WAF UpdateSizeConstraintSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF UpdateSizeConstraintSet \a response.
  */
 void UpdateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::UpdateSizeConstraintSetResponsePrivate
+ * \brief The UpdateSizeConstraintSetResponsePrivate class provides private implementation for UpdateSizeConstraintSetResponse.
  * \internal
  *
- * \class UpdateSizeConstraintSetResponsePrivate
- *
- * \brief Private implementation for UpdateSizeConstraintSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSizeConstraintSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSizeConstraintSetResponse instance.
+ * Constructs a UpdateSizeConstraintSetResponsePrivate object with public implementation \a q.
  */
 UpdateSizeConstraintSetResponsePrivate::UpdateSizeConstraintSetResponsePrivate(
     UpdateSizeConstraintSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateSizeConstraintSetResponsePrivate::UpdateSizeConstraintSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF UpdateSizeConstraintSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF UpdateSizeConstraintSet response element from \a xml.
  */
 void UpdateSizeConstraintSetResponsePrivate::parseUpdateSizeConstraintSetResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceCreditSpecificationsRequest::
  */
 
 /*!
- *
- * Constructs a DescribeInstanceCreditSpecificationsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInstanceCreditSpecificationsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeInstanceCreditSpecificationsRequestPrivate::DescribeInstanceCreditSpecificationsRequestPrivate(
     const EC2Request::Action action, DescribeInstanceCreditSpecificationsRequest * const q)

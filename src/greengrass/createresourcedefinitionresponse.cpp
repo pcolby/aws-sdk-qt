@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateResourceDefinitionResponse
- *
  * \brief The CreateResourceDefinitionResponse class provides an interace for Greengrass CreateResourceDefinition responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateResourceDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateResourceDefinitionResponse::CreateResourceDefinitionResponse(
         const CreateResourceDefinitionRequest &request,
@@ -58,6 +53,9 @@ CreateResourceDefinitionResponse::CreateResourceDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateResourceDefinitionRequest * CreateResourceDefinitionResponse::request() const
 {
     Q_D(const CreateResourceDefinitionResponse);
@@ -65,9 +63,8 @@ const CreateResourceDefinitionRequest * CreateResourceDefinitionResponse::reques
 }
 
 /*!
- * @brief  Parse a Greengrass CreateResourceDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass CreateResourceDefinition \a response.
  */
 void CreateResourceDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateResourceDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::CreateResourceDefinitionResponsePrivate
+ * \brief The CreateResourceDefinitionResponsePrivate class provides private implementation for CreateResourceDefinitionResponse.
  * \internal
  *
- * \class CreateResourceDefinitionResponsePrivate
- *
- * \brief Private implementation for CreateResourceDefinitionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateResourceDefinitionResponse instance.
+ * Constructs a CreateResourceDefinitionResponsePrivate object with public implementation \a q.
  */
 CreateResourceDefinitionResponsePrivate::CreateResourceDefinitionResponsePrivate(
     CreateResourceDefinitionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateResourceDefinitionResponsePrivate::CreateResourceDefinitionResponsePrivate
 }
 
 /*!
- * @brief  Parse an Greengrass CreateResourceDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass CreateResourceDefinition response element from \a xml.
  */
 void CreateResourceDefinitionResponsePrivate::parseCreateResourceDefinitionResponse(QXmlStreamReader &xml)
 {

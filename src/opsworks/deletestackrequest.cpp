@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DeleteStackRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteStackRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DeleteStackRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DeleteStackRequestPrivate::DeleteStackRequestPrivate(
     const OpsWorksRequest::Action action, DeleteStackRequest * const q)

@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeRecordResponse
- *
  * \brief The DescribeRecordResponse class provides an interace for ServiceCatalog DescribeRecord responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeRecordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRecordResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRecordResponse::DescribeRecordResponse(
         const DescribeRecordRequest &request,
@@ -61,6 +56,9 @@ DescribeRecordResponse::DescribeRecordResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRecordRequest * DescribeRecordResponse::request() const
 {
     Q_D(const DescribeRecordResponse);
@@ -68,9 +66,8 @@ const DescribeRecordRequest * DescribeRecordResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DescribeRecord response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DescribeRecord \a response.
  */
 void DescribeRecordResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeRecordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DescribeRecordResponsePrivate
+ * \brief The DescribeRecordResponsePrivate class provides private implementation for DescribeRecordResponse.
  * \internal
  *
- * \class DescribeRecordResponsePrivate
- *
- * \brief Private implementation for DescribeRecordResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRecordResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRecordResponse instance.
+ * Constructs a DescribeRecordResponsePrivate object with public implementation \a q.
  */
 DescribeRecordResponsePrivate::DescribeRecordResponsePrivate(
     DescribeRecordResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeRecordResponsePrivate::DescribeRecordResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DescribeRecordResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DescribeRecord response element from \a xml.
  */
 void DescribeRecordResponsePrivate::parseDescribeRecordResponse(QXmlStreamReader &xml)
 {

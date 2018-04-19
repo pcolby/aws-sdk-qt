@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * SetSubnetsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a SetSubnetsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a SetSubnetsRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 SetSubnetsRequestPrivate::SetSubnetsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, SetSubnetsRequest * const q)

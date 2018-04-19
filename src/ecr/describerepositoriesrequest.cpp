@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRepositoriesRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeRepositoriesRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRepositoriesRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 DescribeRepositoriesRequestPrivate::DescribeRepositoriesRequestPrivate(
     const ECRRequest::Action action, DescribeRepositoriesRequest * const q)

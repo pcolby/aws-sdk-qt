@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateStreamResponse
- *
  * \brief The UpdateStreamResponse class provides an interace for IoT UpdateStream responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateStreamResponse::UpdateStreamResponse(
         const UpdateStreamRequest &request,
@@ -66,6 +61,9 @@ UpdateStreamResponse::UpdateStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateStreamRequest * UpdateStreamResponse::request() const
 {
     Q_D(const UpdateStreamResponse);
@@ -73,9 +71,8 @@ const UpdateStreamRequest * UpdateStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT UpdateStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT UpdateStream \a response.
  */
 void UpdateStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::UpdateStreamResponsePrivate
+ * \brief The UpdateStreamResponsePrivate class provides private implementation for UpdateStreamResponse.
  * \internal
  *
- * \class UpdateStreamResponsePrivate
- *
- * \brief Private implementation for UpdateStreamResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateStreamResponse instance.
+ * Constructs a UpdateStreamResponsePrivate object with public implementation \a q.
  */
 UpdateStreamResponsePrivate::UpdateStreamResponsePrivate(
     UpdateStreamResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateStreamResponsePrivate::UpdateStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT UpdateStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT UpdateStream response element from \a xml.
  */
 void UpdateStreamResponsePrivate::parseUpdateStreamResponse(QXmlStreamReader &xml)
 {

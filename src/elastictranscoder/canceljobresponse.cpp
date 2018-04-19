@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::CancelJobResponse
- *
  * \brief The CancelJobResponse class provides an interace for ElasticTranscoder CancelJob responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new CancelJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelJobResponse::CancelJobResponse(
         const CancelJobRequest &request,
@@ -58,6 +53,9 @@ CancelJobResponse::CancelJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelJobRequest * CancelJobResponse::request() const
 {
     Q_D(const CancelJobResponse);
@@ -65,9 +63,8 @@ const CancelJobRequest * CancelJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder CancelJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder CancelJob \a response.
  */
 void CancelJobResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CancelJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::CancelJobResponsePrivate
+ * \brief The CancelJobResponsePrivate class provides private implementation for CancelJobResponse.
  * \internal
  *
- * \class CancelJobResponsePrivate
- *
- * \brief Private implementation for CancelJobResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelJobResponse instance.
+ * Constructs a CancelJobResponsePrivate object with public implementation \a q.
  */
 CancelJobResponsePrivate::CancelJobResponsePrivate(
     CancelJobResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ CancelJobResponsePrivate::CancelJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder CancelJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder CancelJob response element from \a xml.
  */
 void CancelJobResponsePrivate::parseCancelJobResponse(QXmlStreamReader &xml)
 {

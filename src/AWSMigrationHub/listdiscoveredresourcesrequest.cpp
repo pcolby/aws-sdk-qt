@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListDiscoveredResourcesRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a ListDiscoveredResourcesRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
     const MigrationHubRequest::Action action, ListDiscoveredResourcesRequest * const q)

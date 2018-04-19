@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * ListServerNeighborsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListServerNeighborsRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a ListServerNeighborsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 ListServerNeighborsRequestPrivate::ListServerNeighborsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, ListServerNeighborsRequest * const q)

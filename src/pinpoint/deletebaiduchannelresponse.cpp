@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteBaiduChannelResponse
- *
  * \brief The DeleteBaiduChannelResponse class provides an interace for Pinpoint DeleteBaiduChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteBaiduChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteBaiduChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBaiduChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBaiduChannelResponse::DeleteBaiduChannelResponse(
         const DeleteBaiduChannelRequest &request,
@@ -55,6 +50,9 @@ DeleteBaiduChannelResponse::DeleteBaiduChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBaiduChannelRequest * DeleteBaiduChannelResponse::request() const
 {
     Q_D(const DeleteBaiduChannelResponse);
@@ -62,9 +60,8 @@ const DeleteBaiduChannelRequest * DeleteBaiduChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint DeleteBaiduChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint DeleteBaiduChannel \a response.
  */
 void DeleteBaiduChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteBaiduChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::DeleteBaiduChannelResponsePrivate
+ * \brief The DeleteBaiduChannelResponsePrivate class provides private implementation for DeleteBaiduChannelResponse.
  * \internal
  *
- * \class DeleteBaiduChannelResponsePrivate
- *
- * \brief Private implementation for DeleteBaiduChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBaiduChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBaiduChannelResponse instance.
+ * Constructs a DeleteBaiduChannelResponsePrivate object with public implementation \a q.
  */
 DeleteBaiduChannelResponsePrivate::DeleteBaiduChannelResponsePrivate(
     DeleteBaiduChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteBaiduChannelResponsePrivate::DeleteBaiduChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint DeleteBaiduChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint DeleteBaiduChannel response element from \a xml.
  */
 void DeleteBaiduChannelResponsePrivate::parseDeleteBaiduChannelResponse(QXmlStreamReader &xml)
 {

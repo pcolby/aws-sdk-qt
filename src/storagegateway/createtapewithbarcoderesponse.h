@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateTapeWithBarcodeResponse : public StorageGatewayResponse
 public:
     CreateTapeWithBarcodeResponse(const CreateTapeWithBarcodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateTapeWithBarcodeRequest * request() const;
+    virtual const CreateTapeWithBarcodeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateTapeWithBarcodeResponse)

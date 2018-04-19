@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateApplicationSettingsResponse
- *
  * \brief The UpdateApplicationSettingsResponse class provides an interace for Pinpoint UpdateApplicationSettings responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateApplicationSettings
  */
 
 /*!
- * @brief  Constructs a new UpdateApplicationSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateApplicationSettingsResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateApplicationSettingsResponse::UpdateApplicationSettingsResponse(
         const UpdateApplicationSettingsRequest &request,
@@ -55,6 +50,9 @@ UpdateApplicationSettingsResponse::UpdateApplicationSettingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateApplicationSettingsRequest * UpdateApplicationSettingsResponse::request() const
 {
     Q_D(const UpdateApplicationSettingsResponse);
@@ -62,9 +60,8 @@ const UpdateApplicationSettingsRequest * UpdateApplicationSettingsResponse::requ
 }
 
 /*!
- * @brief  Parse a Pinpoint UpdateApplicationSettings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint UpdateApplicationSettings \a response.
  */
 void UpdateApplicationSettingsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateApplicationSettingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::UpdateApplicationSettingsResponsePrivate
+ * \brief The UpdateApplicationSettingsResponsePrivate class provides private implementation for UpdateApplicationSettingsResponse.
  * \internal
  *
- * \class UpdateApplicationSettingsResponsePrivate
- *
- * \brief Private implementation for UpdateApplicationSettingsResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApplicationSettingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateApplicationSettingsResponse instance.
+ * Constructs a UpdateApplicationSettingsResponsePrivate object with public implementation \a q.
  */
 UpdateApplicationSettingsResponsePrivate::UpdateApplicationSettingsResponsePrivate(
     UpdateApplicationSettingsResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateApplicationSettingsResponsePrivate::UpdateApplicationSettingsResponsePriva
 }
 
 /*!
- * @brief  Parse an Pinpoint UpdateApplicationSettingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint UpdateApplicationSettings response element from \a xml.
  */
 void UpdateApplicationSettingsResponsePrivate::parseUpdateApplicationSettingsResponse(QXmlStreamReader &xml)
 {

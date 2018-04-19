@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListRepositoriesResponse : public CodeCommitResponse {
 public:
     ListRepositoriesResponse(const ListRepositoriesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListRepositoriesRequest * request() const;
+    virtual const ListRepositoriesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListRepositoriesResponse)

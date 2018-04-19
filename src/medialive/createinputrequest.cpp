@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateInputRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateInputRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a CreateInputRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 CreateInputRequestPrivate::CreateInputRequestPrivate(
     const MediaLiveRequest::Action action, CreateInputRequest * const q)

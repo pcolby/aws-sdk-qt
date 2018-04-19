@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::DeleteServiceResponse
- *
  * \brief The DeleteServiceResponse class provides an interace for ServiceDiscovery DeleteService responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new DeleteServiceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteServiceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteServiceResponse::DeleteServiceResponse(
         const DeleteServiceRequest &request,
@@ -59,6 +54,9 @@ DeleteServiceResponse::DeleteServiceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteServiceRequest * DeleteServiceResponse::request() const
 {
     Q_D(const DeleteServiceResponse);
@@ -66,9 +64,8 @@ const DeleteServiceRequest * DeleteServiceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery DeleteService response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery DeleteService \a response.
  */
 void DeleteServiceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteServiceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::DeleteServiceResponsePrivate
+ * \brief The DeleteServiceResponsePrivate class provides private implementation for DeleteServiceResponse.
  * \internal
  *
- * \class DeleteServiceResponsePrivate
- *
- * \brief Private implementation for DeleteServiceResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteServiceResponse instance.
+ * Constructs a DeleteServiceResponsePrivate object with public implementation \a q.
  */
 DeleteServiceResponsePrivate::DeleteServiceResponsePrivate(
     DeleteServiceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteServiceResponsePrivate::DeleteServiceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery DeleteServiceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery DeleteService response element from \a xml.
  */
 void DeleteServiceResponsePrivate::parseDeleteServiceResponse(QXmlStreamReader &xml)
 {

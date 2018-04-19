@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetJobOutputResponse : public GlacierResponse {
 public:
     GetJobOutputResponse(const GetJobOutputRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetJobOutputRequest * request() const;
+    virtual const GetJobOutputRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetJobOutputResponse)

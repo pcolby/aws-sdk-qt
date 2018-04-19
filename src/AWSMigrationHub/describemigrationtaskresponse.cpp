@@ -29,10 +29,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::DescribeMigrationTaskResponse
- *
  * \brief The DescribeMigrationTaskResponse class provides an interace for MigrationHub DescribeMigrationTask responses.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -41,11 +40,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new DescribeMigrationTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeMigrationTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeMigrationTaskResponse::DescribeMigrationTaskResponse(
         const DescribeMigrationTaskRequest &request,
@@ -57,6 +52,9 @@ DescribeMigrationTaskResponse::DescribeMigrationTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeMigrationTaskRequest * DescribeMigrationTaskResponse::request() const
 {
     Q_D(const DescribeMigrationTaskResponse);
@@ -64,9 +62,8 @@ const DescribeMigrationTaskRequest * DescribeMigrationTaskResponse::request() co
 }
 
 /*!
- * @brief  Parse a MigrationHub DescribeMigrationTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MigrationHub DescribeMigrationTask \a response.
  */
 void DescribeMigrationTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DescribeMigrationTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MigrationHub::DescribeMigrationTaskResponsePrivate
+ * \brief The DescribeMigrationTaskResponsePrivate class provides private implementation for DescribeMigrationTaskResponse.
  * \internal
  *
- * \class DescribeMigrationTaskResponsePrivate
- *
- * \brief Private implementation for DescribeMigrationTaskResponse.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMigrationTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeMigrationTaskResponse instance.
+ * Constructs a DescribeMigrationTaskResponsePrivate object with public implementation \a q.
  */
 DescribeMigrationTaskResponsePrivate::DescribeMigrationTaskResponsePrivate(
     DescribeMigrationTaskResponse * const q) : MigrationHubResponsePrivate(q)
@@ -97,9 +90,7 @@ DescribeMigrationTaskResponsePrivate::DescribeMigrationTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MigrationHub DescribeMigrationTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MigrationHub DescribeMigrationTask response element from \a xml.
  */
 void DescribeMigrationTaskResponsePrivate::parseDescribeMigrationTaskResponse(QXmlStreamReader &xml)
 {

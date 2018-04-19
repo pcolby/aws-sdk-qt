@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::UpdateParameterGroupResponse
- *
  * \brief The UpdateParameterGroupResponse class provides an interace for DAX UpdateParameterGroup responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new UpdateParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateParameterGroupResponse::UpdateParameterGroupResponse(
         const UpdateParameterGroupRequest &request,
@@ -59,6 +54,9 @@ UpdateParameterGroupResponse::UpdateParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateParameterGroupRequest * UpdateParameterGroupResponse::request() const
 {
     Q_D(const UpdateParameterGroupResponse);
@@ -66,9 +64,8 @@ const UpdateParameterGroupRequest * UpdateParameterGroupResponse::request() cons
 }
 
 /*!
- * @brief  Parse a DAX UpdateParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX UpdateParameterGroup \a response.
  */
 void UpdateParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void UpdateParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::UpdateParameterGroupResponsePrivate
+ * \brief The UpdateParameterGroupResponsePrivate class provides private implementation for UpdateParameterGroupResponse.
  * \internal
  *
- * \class UpdateParameterGroupResponsePrivate
- *
- * \brief Private implementation for UpdateParameterGroupResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateParameterGroupResponse instance.
+ * Constructs a UpdateParameterGroupResponsePrivate object with public implementation \a q.
  */
 UpdateParameterGroupResponsePrivate::UpdateParameterGroupResponsePrivate(
     UpdateParameterGroupResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ UpdateParameterGroupResponsePrivate::UpdateParameterGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX UpdateParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX UpdateParameterGroup response element from \a xml.
  */
 void UpdateParameterGroupResponsePrivate::parseUpdateParameterGroupResponse(QXmlStreamReader &xml)
 {

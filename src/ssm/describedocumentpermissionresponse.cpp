@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeDocumentPermissionResponse
- *
  * \brief The DescribeDocumentPermissionResponse class provides an interace for SSM DescribeDocumentPermission responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeDocumentPermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDocumentPermissionResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDocumentPermissionResponse::DescribeDocumentPermissionResponse(
         const DescribeDocumentPermissionRequest &request,
@@ -79,6 +74,9 @@ DescribeDocumentPermissionResponse::DescribeDocumentPermissionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDocumentPermissionRequest * DescribeDocumentPermissionResponse::request() const
 {
     Q_D(const DescribeDocumentPermissionResponse);
@@ -86,9 +84,8 @@ const DescribeDocumentPermissionRequest * DescribeDocumentPermissionResponse::re
 }
 
 /*!
- * @brief  Parse a SSM DescribeDocumentPermission response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeDocumentPermission \a response.
  */
 void DescribeDocumentPermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeDocumentPermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeDocumentPermissionResponsePrivate
+ * \brief The DescribeDocumentPermissionResponsePrivate class provides private implementation for DescribeDocumentPermissionResponse.
  * \internal
  *
- * \class DescribeDocumentPermissionResponsePrivate
- *
- * \brief Private implementation for DescribeDocumentPermissionResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDocumentPermissionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDocumentPermissionResponse instance.
+ * Constructs a DescribeDocumentPermissionResponsePrivate object with public implementation \a q.
  */
 DescribeDocumentPermissionResponsePrivate::DescribeDocumentPermissionResponsePrivate(
     DescribeDocumentPermissionResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeDocumentPermissionResponsePrivate::DescribeDocumentPermissionResponsePri
 }
 
 /*!
- * @brief  Parse an SSM DescribeDocumentPermissionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeDocumentPermission response element from \a xml.
  */
 void DescribeDocumentPermissionResponsePrivate::parseDescribeDocumentPermissionResponse(QXmlStreamReader &xml)
 {

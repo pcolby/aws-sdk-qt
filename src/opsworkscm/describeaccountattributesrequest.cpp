@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountAttributesRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeAccountAttributesRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAccountAttributesRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate(
     const OpsWorksCMRequest::Action action, DescribeAccountAttributesRequest * const q)

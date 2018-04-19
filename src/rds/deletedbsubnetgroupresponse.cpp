@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteDBSubnetGroupResponse
- *
  * \brief The DeleteDBSubnetGroupResponse class provides an interace for RDS DeleteDBSubnetGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteDBSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDBSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDBSubnetGroupResponse::DeleteDBSubnetGroupResponse(
         const DeleteDBSubnetGroupRequest &request,
@@ -119,6 +114,9 @@ DeleteDBSubnetGroupResponse::DeleteDBSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDBSubnetGroupRequest * DeleteDBSubnetGroupResponse::request() const
 {
     Q_D(const DeleteDBSubnetGroupResponse);
@@ -126,9 +124,8 @@ const DeleteDBSubnetGroupRequest * DeleteDBSubnetGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS DeleteDBSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DeleteDBSubnetGroup \a response.
  */
 void DeleteDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DeleteDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DeleteDBSubnetGroupResponsePrivate
+ * \brief The DeleteDBSubnetGroupResponsePrivate class provides private implementation for DeleteDBSubnetGroupResponse.
  * \internal
  *
- * \class DeleteDBSubnetGroupResponsePrivate
- *
- * \brief Private implementation for DeleteDBSubnetGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDBSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDBSubnetGroupResponse instance.
+ * Constructs a DeleteDBSubnetGroupResponsePrivate object with public implementation \a q.
  */
 DeleteDBSubnetGroupResponsePrivate::DeleteDBSubnetGroupResponsePrivate(
     DeleteDBSubnetGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DeleteDBSubnetGroupResponsePrivate::DeleteDBSubnetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DeleteDBSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DeleteDBSubnetGroup response element from \a xml.
  */
 void DeleteDBSubnetGroupResponsePrivate::parseDeleteDBSubnetGroupResponse(QXmlStreamReader &xml)
 {

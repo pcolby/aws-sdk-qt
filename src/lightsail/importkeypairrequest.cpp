@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * ImportKeyPairRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ImportKeyPairRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a ImportKeyPairRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
     const LightsailRequest::Action action, ImportKeyPairRequest * const q)

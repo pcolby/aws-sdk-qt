@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetExportRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetExportRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetExportRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetExportRequestPrivate::GetExportRequestPrivate(
     const APIGatewayRequest::Action action, GetExportRequest * const q)

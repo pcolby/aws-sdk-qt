@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * AssociateQualificationWithWorkerRequest::resp
  */
 
 /*!
- *
- * Constructs a AssociateQualificationWithWorkerRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a AssociateQualificationWithWorkerRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 AssociateQualificationWithWorkerRequestPrivate::AssociateQualificationWithWorkerRequestPrivate(
     const MTurkRequest::Action action, AssociateQualificationWithWorkerRequest * const q)

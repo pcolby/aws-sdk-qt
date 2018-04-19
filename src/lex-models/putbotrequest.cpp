@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * PutBotRequest::response(QNetworkReply * const
  */
 
 /*!
- *
- * Constructs a PutBotRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a PutBotRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 PutBotRequestPrivate::PutBotRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, PutBotRequest * const q)

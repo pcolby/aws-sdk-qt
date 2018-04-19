@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromVaultRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a RemoveTagsFromVaultRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsFromVaultRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 RemoveTagsFromVaultRequestPrivate::RemoveTagsFromVaultRequestPrivate(
     const GlacierRequest::Action action, RemoveTagsFromVaultRequest * const q)

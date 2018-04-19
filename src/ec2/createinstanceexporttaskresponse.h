@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateInstanceExportTaskResponse : public EC2Response {
 public:
     CreateInstanceExportTaskResponse(const CreateInstanceExportTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateInstanceExportTaskRequest * request() const;
+    virtual const CreateInstanceExportTaskRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateInstanceExportTaskResponse)

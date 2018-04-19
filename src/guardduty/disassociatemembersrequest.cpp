@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateMembersRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DisassociateMembersRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateMembersRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 DisassociateMembersRequestPrivate::DisassociateMembersRequestPrivate(
     const GuardDutyRequest::Action action, DisassociateMembersRequest * const q)

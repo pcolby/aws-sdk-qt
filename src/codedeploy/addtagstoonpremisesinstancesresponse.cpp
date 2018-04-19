@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::AddTagsToOnPremisesInstancesResponse
- *
  * \brief The AddTagsToOnPremisesInstancesResponse class provides an interace for CodeDeploy AddTagsToOnPremisesInstances responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new AddTagsToOnPremisesInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddTagsToOnPremisesInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 AddTagsToOnPremisesInstancesResponse::AddTagsToOnPremisesInstancesResponse(
         const AddTagsToOnPremisesInstancesRequest &request,
@@ -136,6 +131,9 @@ AddTagsToOnPremisesInstancesResponse::AddTagsToOnPremisesInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddTagsToOnPremisesInstancesRequest * AddTagsToOnPremisesInstancesResponse::request() const
 {
     Q_D(const AddTagsToOnPremisesInstancesResponse);
@@ -143,9 +141,8 @@ const AddTagsToOnPremisesInstancesRequest * AddTagsToOnPremisesInstancesResponse
 }
 
 /*!
- * @brief  Parse a CodeDeploy AddTagsToOnPremisesInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy AddTagsToOnPremisesInstances \a response.
  */
 void AddTagsToOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void AddTagsToOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::AddTagsToOnPremisesInstancesResponsePrivate
+ * \brief The AddTagsToOnPremisesInstancesResponsePrivate class provides private implementation for AddTagsToOnPremisesInstancesResponse.
  * \internal
  *
- * \class AddTagsToOnPremisesInstancesResponsePrivate
- *
- * \brief Private implementation for AddTagsToOnPremisesInstancesResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsToOnPremisesInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddTagsToOnPremisesInstancesResponse instance.
+ * Constructs a AddTagsToOnPremisesInstancesResponsePrivate object with public implementation \a q.
  */
 AddTagsToOnPremisesInstancesResponsePrivate::AddTagsToOnPremisesInstancesResponsePrivate(
     AddTagsToOnPremisesInstancesResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ AddTagsToOnPremisesInstancesResponsePrivate::AddTagsToOnPremisesInstancesRespons
 }
 
 /*!
- * @brief  Parse an CodeDeploy AddTagsToOnPremisesInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy AddTagsToOnPremisesInstances response element from \a xml.
  */
 void AddTagsToOnPremisesInstancesResponsePrivate::parseAddTagsToOnPremisesInstancesResponse(QXmlStreamReader &xml)
 {

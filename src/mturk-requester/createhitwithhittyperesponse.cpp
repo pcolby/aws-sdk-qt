@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::CreateHITWithHITTypeResponse
- *
  * \brief The CreateHITWithHITTypeResponse class provides an interace for MTurk CreateHITWithHITType responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::createHITWithHITType
  */
 
 /*!
- * @brief  Constructs a new CreateHITWithHITTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateHITWithHITTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateHITWithHITTypeResponse::CreateHITWithHITTypeResponse(
         const CreateHITWithHITTypeRequest &request,
@@ -55,6 +50,9 @@ CreateHITWithHITTypeResponse::CreateHITWithHITTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateHITWithHITTypeRequest * CreateHITWithHITTypeResponse::request() const
 {
     Q_D(const CreateHITWithHITTypeResponse);
@@ -62,9 +60,8 @@ const CreateHITWithHITTypeRequest * CreateHITWithHITTypeResponse::request() cons
 }
 
 /*!
- * @brief  Parse a MTurk CreateHITWithHITType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk CreateHITWithHITType \a response.
  */
 void CreateHITWithHITTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateHITWithHITTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::CreateHITWithHITTypeResponsePrivate
+ * \brief The CreateHITWithHITTypeResponsePrivate class provides private implementation for CreateHITWithHITTypeResponse.
  * \internal
  *
- * \class CreateHITWithHITTypeResponsePrivate
- *
- * \brief Private implementation for CreateHITWithHITTypeResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHITWithHITTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateHITWithHITTypeResponse instance.
+ * Constructs a CreateHITWithHITTypeResponsePrivate object with public implementation \a q.
  */
 CreateHITWithHITTypeResponsePrivate::CreateHITWithHITTypeResponsePrivate(
     CreateHITWithHITTypeResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateHITWithHITTypeResponsePrivate::CreateHITWithHITTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk CreateHITWithHITTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk CreateHITWithHITType response element from \a xml.
  */
 void CreateHITWithHITTypeResponsePrivate::parseCreateHITWithHITTypeResponse(QXmlStreamReader &xml)
 {

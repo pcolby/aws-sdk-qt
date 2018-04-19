@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAggregateIdFormatRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeAggregateIdFormatRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAggregateIdFormatRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeAggregateIdFormatRequestPrivate::DescribeAggregateIdFormatRequestPrivate(
     const EC2Request::Action action, DescribeAggregateIdFormatRequest * const q)

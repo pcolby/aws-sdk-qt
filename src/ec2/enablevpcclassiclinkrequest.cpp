@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * EnableVpcClassicLinkRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a EnableVpcClassicLinkRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a EnableVpcClassicLinkRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 EnableVpcClassicLinkRequestPrivate::EnableVpcClassicLinkRequestPrivate(
     const EC2Request::Action action, EnableVpcClassicLinkRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AssociateDhcpOptionsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a AssociateDhcpOptionsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AssociateDhcpOptionsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AssociateDhcpOptionsRequestPrivate::AssociateDhcpOptionsRequestPrivate(
     const EC2Request::Action action, AssociateDhcpOptionsRequest * const q)

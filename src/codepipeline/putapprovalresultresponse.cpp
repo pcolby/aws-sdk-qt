@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::PutApprovalResultResponse
- *
  * \brief The PutApprovalResultResponse class provides an interace for CodePipeline PutApprovalResult responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new PutApprovalResultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutApprovalResultResponse object for \a reply to \a request, with parent \a parent.
  */
 PutApprovalResultResponse::PutApprovalResultResponse(
         const PutApprovalResultRequest &request,
@@ -218,6 +213,9 @@ PutApprovalResultResponse::PutApprovalResultResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutApprovalResultRequest * PutApprovalResultResponse::request() const
 {
     Q_D(const PutApprovalResultResponse);
@@ -225,9 +223,8 @@ const PutApprovalResultRequest * PutApprovalResultResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodePipeline PutApprovalResult response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline PutApprovalResult \a response.
  */
 void PutApprovalResultResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void PutApprovalResultResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::PutApprovalResultResponsePrivate
+ * \brief The PutApprovalResultResponsePrivate class provides private implementation for PutApprovalResultResponse.
  * \internal
  *
- * \class PutApprovalResultResponsePrivate
- *
- * \brief Private implementation for PutApprovalResultResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutApprovalResultResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutApprovalResultResponse instance.
+ * Constructs a PutApprovalResultResponsePrivate object with public implementation \a q.
  */
 PutApprovalResultResponsePrivate::PutApprovalResultResponsePrivate(
     PutApprovalResultResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ PutApprovalResultResponsePrivate::PutApprovalResultResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline PutApprovalResultResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline PutApprovalResult response element from \a xml.
  */
 void PutApprovalResultResponsePrivate::parsePutApprovalResultResponse(QXmlStreamReader &xml)
 {

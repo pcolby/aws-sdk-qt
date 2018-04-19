@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSubnetGroupRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateSubnetGroupRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSubnetGroupRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
     const DAXRequest::Action action, UpdateSubnetGroupRequest * const q)

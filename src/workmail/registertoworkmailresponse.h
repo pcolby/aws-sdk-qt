@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterToWorkMailResponse : public WorkMailResponse {
 public:
     RegisterToWorkMailResponse(const RegisterToWorkMailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterToWorkMailRequest * request() const;
+    virtual const RegisterToWorkMailRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterToWorkMailResponse)

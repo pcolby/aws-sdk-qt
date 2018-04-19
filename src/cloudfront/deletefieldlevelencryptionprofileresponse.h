@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteFieldLevelEncryptionProfileResponse : public CloudFront
 public:
     DeleteFieldLevelEncryptionProfileResponse(const DeleteFieldLevelEncryptionProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteFieldLevelEncryptionProfileRequest * request() const;
+    virtual const DeleteFieldLevelEncryptionProfileRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteFieldLevelEncryptionProfileResponse)

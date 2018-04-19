@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAssessmentTargetRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteAssessmentTargetRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAssessmentTargetRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 DeleteAssessmentTargetRequestPrivate::DeleteAssessmentTargetRequestPrivate(
     const InspectorRequest::Action action, DeleteAssessmentTargetRequest * const q)

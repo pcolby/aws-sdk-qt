@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListRoleAliasesResponse
- *
  * \brief The ListRoleAliasesResponse class provides an interace for IoT ListRoleAliases responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListRoleAliasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRoleAliasesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRoleAliasesResponse::ListRoleAliasesResponse(
         const ListRoleAliasesRequest &request,
@@ -66,6 +61,9 @@ ListRoleAliasesResponse::ListRoleAliasesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRoleAliasesRequest * ListRoleAliasesResponse::request() const
 {
     Q_D(const ListRoleAliasesResponse);
@@ -73,9 +71,8 @@ const ListRoleAliasesRequest * ListRoleAliasesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListRoleAliases response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListRoleAliases \a response.
  */
 void ListRoleAliasesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListRoleAliasesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListRoleAliasesResponsePrivate
+ * \brief The ListRoleAliasesResponsePrivate class provides private implementation for ListRoleAliasesResponse.
  * \internal
  *
- * \class ListRoleAliasesResponsePrivate
- *
- * \brief Private implementation for ListRoleAliasesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRoleAliasesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRoleAliasesResponse instance.
+ * Constructs a ListRoleAliasesResponsePrivate object with public implementation \a q.
  */
 ListRoleAliasesResponsePrivate::ListRoleAliasesResponsePrivate(
     ListRoleAliasesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListRoleAliasesResponsePrivate::ListRoleAliasesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListRoleAliasesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListRoleAliases response element from \a xml.
  */
 void ListRoleAliasesResponsePrivate::parseListRoleAliasesResponse(QXmlStreamReader &xml)
 {

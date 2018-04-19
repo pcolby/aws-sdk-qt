@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::ActivateUserResponse
- *
  * \brief The ActivateUserResponse class provides an interace for WorkDocs ActivateUser responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new ActivateUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ActivateUserResponse object for \a reply to \a request, with parent \a parent.
  */
 ActivateUserResponse::ActivateUserResponse(
         const ActivateUserRequest &request,
@@ -84,6 +79,9 @@ ActivateUserResponse::ActivateUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ActivateUserRequest * ActivateUserResponse::request() const
 {
     Q_D(const ActivateUserResponse);
@@ -91,9 +89,8 @@ const ActivateUserRequest * ActivateUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs ActivateUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs ActivateUser \a response.
  */
 void ActivateUserResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void ActivateUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::ActivateUserResponsePrivate
+ * \brief The ActivateUserResponsePrivate class provides private implementation for ActivateUserResponse.
  * \internal
  *
- * \class ActivateUserResponsePrivate
- *
- * \brief Private implementation for ActivateUserResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ActivateUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ActivateUserResponse instance.
+ * Constructs a ActivateUserResponsePrivate object with public implementation \a q.
  */
 ActivateUserResponsePrivate::ActivateUserResponsePrivate(
     ActivateUserResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ ActivateUserResponsePrivate::ActivateUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs ActivateUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs ActivateUser response element from \a xml.
  */
 void ActivateUserResponsePrivate::parseActivateUserResponse(QXmlStreamReader &xml)
 {

@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeEventCategoriesRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventCategoriesRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
     const RedshiftRequest::Action action, DescribeEventCategoriesRequest * const q)

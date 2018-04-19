@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DetectKeyPhrasesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DetectKeyPhrasesRequestPrivate object for Comprehend \a action with,
- * public implementation \a q.
+ * Constructs a DetectKeyPhrasesRequestPrivate object for Comprehend \a action,
+ * with public implementation \a q.
  */
 DetectKeyPhrasesRequestPrivate::DetectKeyPhrasesRequestPrivate(
     const ComprehendRequest::Action action, DetectKeyPhrasesRequest * const q)

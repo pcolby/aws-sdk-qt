@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetDatabaseRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GetDatabaseRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GetDatabaseRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GetDatabaseRequestPrivate::GetDatabaseRequestPrivate(
     const GlueRequest::Action action, GetDatabaseRequest * const q)

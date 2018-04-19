@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateThingShadowResponse : public IoTDataPlaneResponse {
 public:
     UpdateThingShadowResponse(const UpdateThingShadowRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateThingShadowRequest * request() const;
+    virtual const UpdateThingShadowRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateThingShadowResponse)

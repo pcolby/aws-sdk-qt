@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::GrantAccessResponse
- *
  * \brief The GrantAccessResponse class provides an interace for OpsWorks GrantAccess responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new GrantAccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GrantAccessResponse object for \a reply to \a request, with parent \a parent.
  */
 GrantAccessResponse::GrantAccessResponse(
         const GrantAccessRequest &request,
@@ -161,6 +156,9 @@ GrantAccessResponse::GrantAccessResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GrantAccessRequest * GrantAccessResponse::request() const
 {
     Q_D(const GrantAccessResponse);
@@ -168,9 +166,8 @@ const GrantAccessRequest * GrantAccessResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks GrantAccess response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks GrantAccess \a response.
  */
 void GrantAccessResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void GrantAccessResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::GrantAccessResponsePrivate
+ * \brief The GrantAccessResponsePrivate class provides private implementation for GrantAccessResponse.
  * \internal
  *
- * \class GrantAccessResponsePrivate
- *
- * \brief Private implementation for GrantAccessResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GrantAccessResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GrantAccessResponse instance.
+ * Constructs a GrantAccessResponsePrivate object with public implementation \a q.
  */
 GrantAccessResponsePrivate::GrantAccessResponsePrivate(
     GrantAccessResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ GrantAccessResponsePrivate::GrantAccessResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks GrantAccessResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks GrantAccess response element from \a xml.
  */
 void GrantAccessResponsePrivate::parseGrantAccessResponse(QXmlStreamReader &xml)
 {

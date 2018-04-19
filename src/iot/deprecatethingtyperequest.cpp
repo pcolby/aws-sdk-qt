@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeprecateThingTypeRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeprecateThingTypeRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeprecateThingTypeRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeprecateThingTypeRequestPrivate::DeprecateThingTypeRequestPrivate(
     const IoTRequest::Action action, DeprecateThingTypeRequest * const q)

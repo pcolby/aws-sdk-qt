@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteGitHubAccountTokenResponse : public CodeDeployResponse 
 public:
     DeleteGitHubAccountTokenResponse(const DeleteGitHubAccountTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteGitHubAccountTokenRequest * request() const;
+    virtual const DeleteGitHubAccountTokenRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteGitHubAccountTokenResponse)

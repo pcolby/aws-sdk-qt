@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * StopAutomationExecutionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a StopAutomationExecutionRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a StopAutomationExecutionRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 StopAutomationExecutionRequestPrivate::StopAutomationExecutionRequestPrivate(
     const SSMRequest::Action action, StopAutomationExecutionRequest * const q)

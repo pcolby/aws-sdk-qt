@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * GetReservationCoverageRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a GetReservationCoverageRequestPrivate object for CostExplorer \a action with,
- * public implementation \a q.
+ * Constructs a GetReservationCoverageRequestPrivate object for CostExplorer \a action,
+ * with public implementation \a q.
  */
 GetReservationCoverageRequestPrivate::GetReservationCoverageRequestPrivate(
     const CostExplorerRequest::Action action, GetReservationCoverageRequest * const q)

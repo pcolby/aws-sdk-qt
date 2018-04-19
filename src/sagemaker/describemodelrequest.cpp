@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DescribeModelRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DescribeModelRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a DescribeModelRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 DescribeModelRequestPrivate::DescribeModelRequestPrivate(
     const SageMakerRequest::Action action, DescribeModelRequest * const q)

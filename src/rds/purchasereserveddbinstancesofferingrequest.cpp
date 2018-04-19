@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedDBInstancesOfferingRequest::r
  */
 
 /*!
- *
- * Constructs a PurchaseReservedDBInstancesOfferingRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a PurchaseReservedDBInstancesOfferingRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 PurchaseReservedDBInstancesOfferingRequestPrivate::PurchaseReservedDBInstancesOfferingRequestPrivate(
     const RDSRequest::Action action, PurchaseReservedDBInstancesOfferingRequest * const q)

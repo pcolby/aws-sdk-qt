@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * DisableAWSServiceAccessRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DisableAWSServiceAccessRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a DisableAWSServiceAccessRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 DisableAWSServiceAccessRequestPrivate::DisableAWSServiceAccessRequestPrivate(
     const OrganizationsRequest::Action action, DisableAWSServiceAccessRequest * const q)

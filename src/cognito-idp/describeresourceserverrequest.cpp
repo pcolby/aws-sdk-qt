@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceServerRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeResourceServerRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a DescribeResourceServerRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 DescribeResourceServerRequestPrivate::DescribeResourceServerRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DescribeResourceServerRequest * const q)

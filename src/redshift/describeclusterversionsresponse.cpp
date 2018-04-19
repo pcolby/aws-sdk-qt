@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeClusterVersionsResponse
- *
  * \brief The DescribeClusterVersionsResponse class provides an interace for Redshift DescribeClusterVersions responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeClusterVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeClusterVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeClusterVersionsResponse::DescribeClusterVersionsResponse(
         const DescribeClusterVersionsRequest &request,
@@ -85,6 +80,9 @@ DescribeClusterVersionsResponse::DescribeClusterVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeClusterVersionsRequest * DescribeClusterVersionsResponse::request() const
 {
     Q_D(const DescribeClusterVersionsResponse);
@@ -92,9 +90,8 @@ const DescribeClusterVersionsRequest * DescribeClusterVersionsResponse::request(
 }
 
 /*!
- * @brief  Parse a Redshift DescribeClusterVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeClusterVersions \a response.
  */
 void DescribeClusterVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeClusterVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeClusterVersionsResponsePrivate
+ * \brief The DescribeClusterVersionsResponsePrivate class provides private implementation for DescribeClusterVersionsResponse.
  * \internal
  *
- * \class DescribeClusterVersionsResponsePrivate
- *
- * \brief Private implementation for DescribeClusterVersionsResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClusterVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeClusterVersionsResponse instance.
+ * Constructs a DescribeClusterVersionsResponsePrivate object with public implementation \a q.
  */
 DescribeClusterVersionsResponsePrivate::DescribeClusterVersionsResponsePrivate(
     DescribeClusterVersionsResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeClusterVersionsResponsePrivate::DescribeClusterVersionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift DescribeClusterVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeClusterVersions response element from \a xml.
  */
 void DescribeClusterVersionsResponsePrivate::parseDescribeClusterVersionsResponse(QXmlStreamReader &xml)
 {

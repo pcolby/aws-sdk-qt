@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventConfigurationsRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeEventConfigurationsRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventConfigurationsRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DescribeEventConfigurationsRequestPrivate::DescribeEventConfigurationsRequestPrivate(
     const IoTRequest::Action action, DescribeEventConfigurationsRequest * const q)

@@ -142,9 +142,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventAggregatesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeEventAggregatesRequestPrivate object for Health \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventAggregatesRequestPrivate object for Health \a action,
+ * with public implementation \a q.
  */
 DescribeEventAggregatesRequestPrivate::DescribeEventAggregatesRequestPrivate(
     const HealthRequest::Action action, DescribeEventAggregatesRequest * const q)

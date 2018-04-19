@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListMultipartUploadsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListMultipartUploadsRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a ListMultipartUploadsRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 ListMultipartUploadsRequestPrivate::ListMultipartUploadsRequestPrivate(
     const S3Request::Action action, ListMultipartUploadsRequest * const q)

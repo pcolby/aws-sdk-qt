@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * RegisterCertificateRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a RegisterCertificateRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a RegisterCertificateRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 RegisterCertificateRequestPrivate::RegisterCertificateRequestPrivate(
     const IoTRequest::Action action, RegisterCertificateRequest * const q)

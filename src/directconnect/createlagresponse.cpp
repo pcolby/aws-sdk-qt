@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreateLagResponse
- *
  * \brief The CreateLagResponse class provides an interace for DirectConnect CreateLag responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreateLagResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLagResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLagResponse::CreateLagResponse(
         const CreateLagRequest &request,
@@ -63,6 +58,9 @@ CreateLagResponse::CreateLagResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLagRequest * CreateLagResponse::request() const
 {
     Q_D(const CreateLagResponse);
@@ -70,9 +68,8 @@ const CreateLagRequest * CreateLagResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect CreateLag response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect CreateLag \a response.
  */
 void CreateLagResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void CreateLagResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::CreateLagResponsePrivate
+ * \brief The CreateLagResponsePrivate class provides private implementation for CreateLagResponse.
  * \internal
  *
- * \class CreateLagResponsePrivate
- *
- * \brief Private implementation for CreateLagResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLagResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLagResponse instance.
+ * Constructs a CreateLagResponsePrivate object with public implementation \a q.
  */
 CreateLagResponsePrivate::CreateLagResponsePrivate(
     CreateLagResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ CreateLagResponsePrivate::CreateLagResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect CreateLagResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect CreateLag response element from \a xml.
  */
 void CreateLagResponsePrivate::parseCreateLagResponse(QXmlStreamReader &xml)
 {

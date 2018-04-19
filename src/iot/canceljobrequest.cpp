@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CancelJobRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a CancelJobRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a CancelJobRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 CancelJobRequestPrivate::CancelJobRequestPrivate(
     const IoTRequest::Action action, CancelJobRequest * const q)

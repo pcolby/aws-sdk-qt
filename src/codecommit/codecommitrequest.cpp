@@ -75,7 +75,7 @@ namespace CodeCommit {
  */
 
 /*!
- * Constructs a[n] CodeCommitRequest object for CodeCommit \a action.
+ * Constructs a CodeCommitRequest object for CodeCommit \a action.
  */
 CodeCommitRequest::CodeCommitRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CodeCommitRequestPrivate(action, this))
@@ -275,8 +275,8 @@ QNetworkRequest CodeCommitRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CodeCommitRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a CodeCommitRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 CodeCommitRequestPrivate::CodeCommitRequestPrivate(const CodeCommitRequest::Action action, CodeCommitRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

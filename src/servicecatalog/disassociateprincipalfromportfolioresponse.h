@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociatePrincipalFromPortfolioResponse : public ServiceCa
 public:
     DisassociatePrincipalFromPortfolioResponse(const DisassociatePrincipalFromPortfolioRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociatePrincipalFromPortfolioRequest * request() const;
+    virtual const DisassociatePrincipalFromPortfolioRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociatePrincipalFromPortfolioResponse)

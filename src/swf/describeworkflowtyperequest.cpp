@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkflowTypeRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeWorkflowTypeRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a DescribeWorkflowTypeRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 DescribeWorkflowTypeRequestPrivate::DescribeWorkflowTypeRequestPrivate(
     const SWFRequest::Action action, DescribeWorkflowTypeRequest * const q)

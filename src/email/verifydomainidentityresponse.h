@@ -34,10 +34,10 @@ class QTAWS_EXPORT VerifyDomainIdentityResponse : public SESResponse {
 public:
     VerifyDomainIdentityResponse(const VerifyDomainIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const VerifyDomainIdentityRequest * request() const;
+    virtual const VerifyDomainIdentityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(VerifyDomainIdentityResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTapeResponse : public StorageGatewayResponse {
 public:
     DeleteTapeResponse(const DeleteTapeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTapeRequest * request() const;
+    virtual const DeleteTapeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTapeResponse)

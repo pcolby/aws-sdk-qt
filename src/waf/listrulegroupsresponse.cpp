@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListRuleGroupsResponse
- *
  * \brief The ListRuleGroupsResponse class provides an interace for WAF ListRuleGroups responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListRuleGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRuleGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRuleGroupsResponse::ListRuleGroupsResponse(
         const ListRuleGroupsRequest &request,
@@ -60,6 +55,9 @@ ListRuleGroupsResponse::ListRuleGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRuleGroupsRequest * ListRuleGroupsResponse::request() const
 {
     Q_D(const ListRuleGroupsResponse);
@@ -67,9 +65,8 @@ const ListRuleGroupsRequest * ListRuleGroupsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF ListRuleGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF ListRuleGroups \a response.
  */
 void ListRuleGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListRuleGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::ListRuleGroupsResponsePrivate
+ * \brief The ListRuleGroupsResponsePrivate class provides private implementation for ListRuleGroupsResponse.
  * \internal
  *
- * \class ListRuleGroupsResponsePrivate
- *
- * \brief Private implementation for ListRuleGroupsResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRuleGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRuleGroupsResponse instance.
+ * Constructs a ListRuleGroupsResponsePrivate object with public implementation \a q.
  */
 ListRuleGroupsResponsePrivate::ListRuleGroupsResponsePrivate(
     ListRuleGroupsResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ ListRuleGroupsResponsePrivate::ListRuleGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF ListRuleGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF ListRuleGroups response element from \a xml.
  */
 void ListRuleGroupsResponsePrivate::parseListRuleGroupsResponse(QXmlStreamReader &xml)
 {

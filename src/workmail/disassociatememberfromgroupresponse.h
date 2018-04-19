@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateMemberFromGroupResponse : public WorkMailResponse
 public:
     DisassociateMemberFromGroupResponse(const DisassociateMemberFromGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateMemberFromGroupRequest * request() const;
+    virtual const DisassociateMemberFromGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateMemberFromGroupResponse)

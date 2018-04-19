@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachLoadBalancerToSubnetsResponse : public ElasticLoadBalan
 public:
     AttachLoadBalancerToSubnetsResponse(const AttachLoadBalancerToSubnetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachLoadBalancerToSubnetsRequest * request() const;
+    virtual const AttachLoadBalancerToSubnetsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AttachLoadBalancerToSubnetsResponse)

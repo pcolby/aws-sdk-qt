@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetResourceDefinitionVersionResponse
- *
  * \brief The GetResourceDefinitionVersionResponse class provides an interace for Greengrass GetResourceDefinitionVersion responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetResourceDefinitionVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetResourceDefinitionVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetResourceDefinitionVersionResponse::GetResourceDefinitionVersionResponse(
         const GetResourceDefinitionVersionRequest &request,
@@ -58,6 +53,9 @@ GetResourceDefinitionVersionResponse::GetResourceDefinitionVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetResourceDefinitionVersionRequest * GetResourceDefinitionVersionResponse::request() const
 {
     Q_D(const GetResourceDefinitionVersionResponse);
@@ -65,9 +63,8 @@ const GetResourceDefinitionVersionRequest * GetResourceDefinitionVersionResponse
 }
 
 /*!
- * @brief  Parse a Greengrass GetResourceDefinitionVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass GetResourceDefinitionVersion \a response.
  */
 void GetResourceDefinitionVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetResourceDefinitionVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::GetResourceDefinitionVersionResponsePrivate
+ * \brief The GetResourceDefinitionVersionResponsePrivate class provides private implementation for GetResourceDefinitionVersionResponse.
  * \internal
  *
- * \class GetResourceDefinitionVersionResponsePrivate
- *
- * \brief Private implementation for GetResourceDefinitionVersionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetResourceDefinitionVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetResourceDefinitionVersionResponse instance.
+ * Constructs a GetResourceDefinitionVersionResponsePrivate object with public implementation \a q.
  */
 GetResourceDefinitionVersionResponsePrivate::GetResourceDefinitionVersionResponsePrivate(
     GetResourceDefinitionVersionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ GetResourceDefinitionVersionResponsePrivate::GetResourceDefinitionVersionRespons
 }
 
 /*!
- * @brief  Parse an Greengrass GetResourceDefinitionVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass GetResourceDefinitionVersion response element from \a xml.
  */
 void GetResourceDefinitionVersionResponsePrivate::parseGetResourceDefinitionVersionResponse(QXmlStreamReader &xml)
 {

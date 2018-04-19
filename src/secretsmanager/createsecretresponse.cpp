@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::CreateSecretResponse
- *
  * \brief The CreateSecretResponse class provides an interace for SecretsManager CreateSecret responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new CreateSecretResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSecretResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSecretResponse::CreateSecretResponse(
         const CreateSecretRequest &request,
@@ -155,6 +150,9 @@ CreateSecretResponse::CreateSecretResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSecretRequest * CreateSecretResponse::request() const
 {
     Q_D(const CreateSecretResponse);
@@ -162,9 +160,8 @@ const CreateSecretRequest * CreateSecretResponse::request() const
 }
 
 /*!
- * @brief  Parse a SecretsManager CreateSecret response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager CreateSecret \a response.
  */
 void CreateSecretResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void CreateSecretResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::CreateSecretResponsePrivate
+ * \brief The CreateSecretResponsePrivate class provides private implementation for CreateSecretResponse.
  * \internal
  *
- * \class CreateSecretResponsePrivate
- *
- * \brief Private implementation for CreateSecretResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSecretResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSecretResponse instance.
+ * Constructs a CreateSecretResponsePrivate object with public implementation \a q.
  */
 CreateSecretResponsePrivate::CreateSecretResponsePrivate(
     CreateSecretResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ CreateSecretResponsePrivate::CreateSecretResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SecretsManager CreateSecretResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager CreateSecret response element from \a xml.
  */
 void CreateSecretResponsePrivate::parseCreateSecretResponse(QXmlStreamReader &xml)
 {

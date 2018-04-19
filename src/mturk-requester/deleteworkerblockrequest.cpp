@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteWorkerBlockRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteWorkerBlockRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a DeleteWorkerBlockRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 DeleteWorkerBlockRequestPrivate::DeleteWorkerBlockRequestPrivate(
     const MTurkRequest::Action action, DeleteWorkerBlockRequest * const q)

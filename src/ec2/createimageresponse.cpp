@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateImageResponse
- *
  * \brief The CreateImageResponse class provides an interace for EC2 CreateImage responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateImageResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateImageResponse::CreateImageResponse(
         const CreateImageRequest &request,
@@ -59,6 +54,9 @@ CreateImageResponse::CreateImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateImageRequest * CreateImageResponse::request() const
 {
     Q_D(const CreateImageResponse);
@@ -66,9 +64,8 @@ const CreateImageRequest * CreateImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateImage \a response.
  */
 void CreateImageResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateImageResponsePrivate
+ * \brief The CreateImageResponsePrivate class provides private implementation for CreateImageResponse.
  * \internal
  *
- * \class CreateImageResponsePrivate
- *
- * \brief Private implementation for CreateImageResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateImageResponse instance.
+ * Constructs a CreateImageResponsePrivate object with public implementation \a q.
  */
 CreateImageResponsePrivate::CreateImageResponsePrivate(
     CreateImageResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateImageResponsePrivate::CreateImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateImage response element from \a xml.
  */
 void CreateImageResponsePrivate::parseCreateImageResponse(QXmlStreamReader &xml)
 {

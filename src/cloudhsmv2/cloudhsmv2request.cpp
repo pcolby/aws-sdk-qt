@@ -49,7 +49,7 @@ namespace CloudHSMV2 {
  */
 
 /*!
- * Constructs a[n] CloudHSMV2Request object for CloudHSMV2 \a action.
+ * Constructs a CloudHSMV2Request object for CloudHSMV2 \a action.
  */
 CloudHSMV2Request::CloudHSMV2Request(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudHSMV2RequestPrivate(action, this))
@@ -249,8 +249,8 @@ QNetworkRequest CloudHSMV2Request::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CloudHSMV2RequestPrivate object for CloudHSMV2 \a action with,
- * public implementation \a q.
+ * Constructs a CloudHSMV2RequestPrivate object for CloudHSMV2 \a action,
+ * with public implementation \a q.
  */
 CloudHSMV2RequestPrivate::CloudHSMV2RequestPrivate(const CloudHSMV2Request::Action action, CloudHSMV2Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

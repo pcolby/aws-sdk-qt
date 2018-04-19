@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateByteMatchSetResponse
- *
  * \brief The UpdateByteMatchSetResponse class provides an interace for WAF UpdateByteMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateByteMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateByteMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateByteMatchSetResponse::UpdateByteMatchSetResponse(
         const UpdateByteMatchSetRequest &request,
@@ -60,6 +55,9 @@ UpdateByteMatchSetResponse::UpdateByteMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateByteMatchSetRequest * UpdateByteMatchSetResponse::request() const
 {
     Q_D(const UpdateByteMatchSetResponse);
@@ -67,9 +65,8 @@ const UpdateByteMatchSetRequest * UpdateByteMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF UpdateByteMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF UpdateByteMatchSet \a response.
  */
 void UpdateByteMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateByteMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::UpdateByteMatchSetResponsePrivate
+ * \brief The UpdateByteMatchSetResponsePrivate class provides private implementation for UpdateByteMatchSetResponse.
  * \internal
  *
- * \class UpdateByteMatchSetResponsePrivate
- *
- * \brief Private implementation for UpdateByteMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateByteMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateByteMatchSetResponse instance.
+ * Constructs a UpdateByteMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateByteMatchSetResponsePrivate::UpdateByteMatchSetResponsePrivate(
     UpdateByteMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateByteMatchSetResponsePrivate::UpdateByteMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF UpdateByteMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF UpdateByteMatchSet response element from \a xml.
  */
 void UpdateByteMatchSetResponsePrivate::parseUpdateByteMatchSetResponse(QXmlStreamReader &xml)
 {

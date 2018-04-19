@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListInputsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ListInputsRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a ListInputsRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 ListInputsRequestPrivate::ListInputsRequestPrivate(
     const MediaLiveRequest::Action action, ListInputsRequest * const q)

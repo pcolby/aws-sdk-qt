@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::RemoveAccountFromOrganizationResponse
- *
  * \brief The RemoveAccountFromOrganizationResponse class provides an interace for Organizations RemoveAccountFromOrganization responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new RemoveAccountFromOrganizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveAccountFromOrganizationResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveAccountFromOrganizationResponse::RemoveAccountFromOrganizationResponse(
         const RemoveAccountFromOrganizationRequest &request,
@@ -197,6 +192,9 @@ RemoveAccountFromOrganizationResponse::RemoveAccountFromOrganizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveAccountFromOrganizationRequest * RemoveAccountFromOrganizationResponse::request() const
 {
     Q_D(const RemoveAccountFromOrganizationResponse);
@@ -204,9 +202,8 @@ const RemoveAccountFromOrganizationRequest * RemoveAccountFromOrganizationRespon
 }
 
 /*!
- * @brief  Parse a Organizations RemoveAccountFromOrganization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations RemoveAccountFromOrganization \a response.
  */
 void RemoveAccountFromOrganizationResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void RemoveAccountFromOrganizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::RemoveAccountFromOrganizationResponsePrivate
+ * \brief The RemoveAccountFromOrganizationResponsePrivate class provides private implementation for RemoveAccountFromOrganizationResponse.
  * \internal
  *
- * \class RemoveAccountFromOrganizationResponsePrivate
- *
- * \brief Private implementation for RemoveAccountFromOrganizationResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveAccountFromOrganizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveAccountFromOrganizationResponse instance.
+ * Constructs a RemoveAccountFromOrganizationResponsePrivate object with public implementation \a q.
  */
 RemoveAccountFromOrganizationResponsePrivate::RemoveAccountFromOrganizationResponsePrivate(
     RemoveAccountFromOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ RemoveAccountFromOrganizationResponsePrivate::RemoveAccountFromOrganizationRespo
 }
 
 /*!
- * @brief  Parse an Organizations RemoveAccountFromOrganizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations RemoveAccountFromOrganization response element from \a xml.
  */
 void RemoveAccountFromOrganizationResponsePrivate::parseRemoveAccountFromOrganizationResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateInstanceResponse
- *
  * \brief The UpdateInstanceResponse class provides an interace for OpsWorks UpdateInstance responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateInstanceResponse::UpdateInstanceResponse(
         const UpdateInstanceRequest &request,
@@ -161,6 +156,9 @@ UpdateInstanceResponse::UpdateInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateInstanceRequest * UpdateInstanceResponse::request() const
 {
     Q_D(const UpdateInstanceResponse);
@@ -168,9 +166,8 @@ const UpdateInstanceRequest * UpdateInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks UpdateInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks UpdateInstance \a response.
  */
 void UpdateInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void UpdateInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::UpdateInstanceResponsePrivate
+ * \brief The UpdateInstanceResponsePrivate class provides private implementation for UpdateInstanceResponse.
  * \internal
  *
- * \class UpdateInstanceResponsePrivate
- *
- * \brief Private implementation for UpdateInstanceResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateInstanceResponse instance.
+ * Constructs a UpdateInstanceResponsePrivate object with public implementation \a q.
  */
 UpdateInstanceResponsePrivate::UpdateInstanceResponsePrivate(
     UpdateInstanceResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ UpdateInstanceResponsePrivate::UpdateInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks UpdateInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks UpdateInstance response element from \a xml.
  */
 void UpdateInstanceResponsePrivate::parseUpdateInstanceResponse(QXmlStreamReader &xml)
 {

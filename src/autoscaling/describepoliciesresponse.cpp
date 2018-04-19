@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribePoliciesResponse
- *
  * \brief The DescribePoliciesResponse class provides an interace for AutoScaling DescribePolicies responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribePoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePoliciesResponse::DescribePoliciesResponse(
         const DescribePoliciesRequest &request,
@@ -60,6 +55,9 @@ DescribePoliciesResponse::DescribePoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePoliciesRequest * DescribePoliciesResponse::request() const
 {
     Q_D(const DescribePoliciesResponse);
@@ -67,9 +65,8 @@ const DescribePoliciesRequest * DescribePoliciesResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribePolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribePolicies \a response.
  */
 void DescribePoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribePoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribePoliciesResponsePrivate
+ * \brief The DescribePoliciesResponsePrivate class provides private implementation for DescribePoliciesResponse.
  * \internal
  *
- * \class DescribePoliciesResponsePrivate
- *
- * \brief Private implementation for DescribePoliciesResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePoliciesResponse instance.
+ * Constructs a DescribePoliciesResponsePrivate object with public implementation \a q.
  */
 DescribePoliciesResponsePrivate::DescribePoliciesResponsePrivate(
     DescribePoliciesResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribePoliciesResponsePrivate::DescribePoliciesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribePoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribePolicies response element from \a xml.
  */
 void DescribePoliciesResponsePrivate::parseDescribePoliciesResponse(QXmlStreamReader &xml)
 {

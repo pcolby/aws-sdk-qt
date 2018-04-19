@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListMultipartUploadsResponse : public GlacierResponse {
 public:
     ListMultipartUploadsResponse(const ListMultipartUploadsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListMultipartUploadsRequest * request() const;
+    virtual const ListMultipartUploadsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListMultipartUploadsResponse)

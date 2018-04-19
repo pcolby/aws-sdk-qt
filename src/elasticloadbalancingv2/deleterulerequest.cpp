@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRuleRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteRuleRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRuleRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DeleteRuleRequest * const q)

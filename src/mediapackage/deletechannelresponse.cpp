@@ -29,21 +29,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::DeleteChannelResponse
- *
  * \brief The DeleteChannelResponse class provides an interace for MediaPackage DeleteChannel responses.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::deleteChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteChannelResponse::DeleteChannelResponse(
         const DeleteChannelRequest &request,
@@ -55,6 +50,9 @@ DeleteChannelResponse::DeleteChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteChannelRequest * DeleteChannelResponse::request() const
 {
     Q_D(const DeleteChannelResponse);
@@ -62,9 +60,8 @@ const DeleteChannelRequest * DeleteChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaPackage DeleteChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaPackage DeleteChannel \a response.
  */
 void DeleteChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaPackage::DeleteChannelResponsePrivate
+ * \brief The DeleteChannelResponsePrivate class provides private implementation for DeleteChannelResponse.
  * \internal
  *
- * \class DeleteChannelResponsePrivate
- *
- * \brief Private implementation for DeleteChannelResponse.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteChannelResponse instance.
+ * Constructs a DeleteChannelResponsePrivate object with public implementation \a q.
  */
 DeleteChannelResponsePrivate::DeleteChannelResponsePrivate(
     DeleteChannelResponse * const q) : MediaPackageResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteChannelResponsePrivate::DeleteChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaPackage DeleteChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaPackage DeleteChannel response element from \a xml.
  */
 void DeleteChannelResponsePrivate::parseDeleteChannelResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceLifecycleConfigRequest:
  */
 
 /*!
- *
- * Constructs a UpdateNotebookInstanceLifecycleConfigRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a UpdateNotebookInstanceLifecycleConfigRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 UpdateNotebookInstanceLifecycleConfigRequestPrivate::UpdateNotebookInstanceLifecycleConfigRequestPrivate(
     const SageMakerRequest::Action action, UpdateNotebookInstanceLifecycleConfigRequest * const q)

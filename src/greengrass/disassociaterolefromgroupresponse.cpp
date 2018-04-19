@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DisassociateRoleFromGroupResponse
- *
  * \brief The DisassociateRoleFromGroupResponse class provides an interace for Greengrass DisassociateRoleFromGroup responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DisassociateRoleFromGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateRoleFromGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateRoleFromGroupResponse::DisassociateRoleFromGroupResponse(
         const DisassociateRoleFromGroupRequest &request,
@@ -58,6 +53,9 @@ DisassociateRoleFromGroupResponse::DisassociateRoleFromGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateRoleFromGroupRequest * DisassociateRoleFromGroupResponse::request() const
 {
     Q_D(const DisassociateRoleFromGroupResponse);
@@ -65,9 +63,8 @@ const DisassociateRoleFromGroupRequest * DisassociateRoleFromGroupResponse::requ
 }
 
 /*!
- * @brief  Parse a Greengrass DisassociateRoleFromGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass DisassociateRoleFromGroup \a response.
  */
 void DisassociateRoleFromGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DisassociateRoleFromGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::DisassociateRoleFromGroupResponsePrivate
+ * \brief The DisassociateRoleFromGroupResponsePrivate class provides private implementation for DisassociateRoleFromGroupResponse.
  * \internal
  *
- * \class DisassociateRoleFromGroupResponsePrivate
- *
- * \brief Private implementation for DisassociateRoleFromGroupResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateRoleFromGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateRoleFromGroupResponse instance.
+ * Constructs a DisassociateRoleFromGroupResponsePrivate object with public implementation \a q.
  */
 DisassociateRoleFromGroupResponsePrivate::DisassociateRoleFromGroupResponsePrivate(
     DisassociateRoleFromGroupResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ DisassociateRoleFromGroupResponsePrivate::DisassociateRoleFromGroupResponsePriva
 }
 
 /*!
- * @brief  Parse an Greengrass DisassociateRoleFromGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass DisassociateRoleFromGroup response element from \a xml.
  */
 void DisassociateRoleFromGroupResponsePrivate::parseDisassociateRoleFromGroupResponse(QXmlStreamReader &xml)
 {

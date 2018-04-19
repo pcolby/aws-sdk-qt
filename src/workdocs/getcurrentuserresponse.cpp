@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::GetCurrentUserResponse
- *
  * \brief The GetCurrentUserResponse class provides an interace for WorkDocs GetCurrentUser responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new GetCurrentUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCurrentUserResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCurrentUserResponse::GetCurrentUserResponse(
         const GetCurrentUserRequest &request,
@@ -84,6 +79,9 @@ GetCurrentUserResponse::GetCurrentUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCurrentUserRequest * GetCurrentUserResponse::request() const
 {
     Q_D(const GetCurrentUserResponse);
@@ -91,9 +89,8 @@ const GetCurrentUserRequest * GetCurrentUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs GetCurrentUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs GetCurrentUser \a response.
  */
 void GetCurrentUserResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void GetCurrentUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::GetCurrentUserResponsePrivate
+ * \brief The GetCurrentUserResponsePrivate class provides private implementation for GetCurrentUserResponse.
  * \internal
  *
- * \class GetCurrentUserResponsePrivate
- *
- * \brief Private implementation for GetCurrentUserResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCurrentUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCurrentUserResponse instance.
+ * Constructs a GetCurrentUserResponsePrivate object with public implementation \a q.
  */
 GetCurrentUserResponsePrivate::GetCurrentUserResponsePrivate(
     GetCurrentUserResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ GetCurrentUserResponsePrivate::GetCurrentUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs GetCurrentUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs GetCurrentUser response element from \a xml.
  */
 void GetCurrentUserResponsePrivate::parseGetCurrentUserResponse(QXmlStreamReader &xml)
 {

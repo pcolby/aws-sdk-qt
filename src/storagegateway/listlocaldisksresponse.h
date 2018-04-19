@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListLocalDisksResponse : public StorageGatewayResponse {
 public:
     ListLocalDisksResponse(const ListLocalDisksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListLocalDisksRequest * request() const;
+    virtual const ListLocalDisksRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListLocalDisksResponse)

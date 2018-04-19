@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopLoggingResponse : public CloudTrailResponse {
 public:
     StopLoggingResponse(const StopLoggingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopLoggingRequest * request() const;
+    virtual const StopLoggingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopLoggingResponse)

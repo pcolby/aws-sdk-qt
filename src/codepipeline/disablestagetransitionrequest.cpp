@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * DisableStageTransitionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DisableStageTransitionRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a DisableStageTransitionRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 DisableStageTransitionRequestPrivate::DisableStageTransitionRequestPrivate(
     const CodePipelineRequest::Action action, DisableStageTransitionRequest * const q)

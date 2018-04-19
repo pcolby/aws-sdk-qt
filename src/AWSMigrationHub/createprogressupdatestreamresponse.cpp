@@ -29,10 +29,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::CreateProgressUpdateStreamResponse
- *
  * \brief The CreateProgressUpdateStreamResponse class provides an interace for MigrationHub CreateProgressUpdateStream responses.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -41,11 +40,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new CreateProgressUpdateStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateProgressUpdateStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateProgressUpdateStreamResponse::CreateProgressUpdateStreamResponse(
         const CreateProgressUpdateStreamRequest &request,
@@ -57,6 +52,9 @@ CreateProgressUpdateStreamResponse::CreateProgressUpdateStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateProgressUpdateStreamRequest * CreateProgressUpdateStreamResponse::request() const
 {
     Q_D(const CreateProgressUpdateStreamResponse);
@@ -64,9 +62,8 @@ const CreateProgressUpdateStreamRequest * CreateProgressUpdateStreamResponse::re
 }
 
 /*!
- * @brief  Parse a MigrationHub CreateProgressUpdateStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MigrationHub CreateProgressUpdateStream \a response.
  */
 void CreateProgressUpdateStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void CreateProgressUpdateStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MigrationHub::CreateProgressUpdateStreamResponsePrivate
+ * \brief The CreateProgressUpdateStreamResponsePrivate class provides private implementation for CreateProgressUpdateStreamResponse.
  * \internal
  *
- * \class CreateProgressUpdateStreamResponsePrivate
- *
- * \brief Private implementation for CreateProgressUpdateStreamResponse.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProgressUpdateStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateProgressUpdateStreamResponse instance.
+ * Constructs a CreateProgressUpdateStreamResponsePrivate object with public implementation \a q.
  */
 CreateProgressUpdateStreamResponsePrivate::CreateProgressUpdateStreamResponsePrivate(
     CreateProgressUpdateStreamResponse * const q) : MigrationHubResponsePrivate(q)
@@ -97,9 +90,7 @@ CreateProgressUpdateStreamResponsePrivate::CreateProgressUpdateStreamResponsePri
 }
 
 /*!
- * @brief  Parse an MigrationHub CreateProgressUpdateStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MigrationHub CreateProgressUpdateStream response element from \a xml.
  */
 void CreateProgressUpdateStreamResponsePrivate::parseCreateProgressUpdateStreamResponse(QXmlStreamReader &xml)
 {

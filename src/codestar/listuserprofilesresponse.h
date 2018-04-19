@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListUserProfilesResponse : public CodeStarResponse {
 public:
     ListUserProfilesResponse(const ListUserProfilesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListUserProfilesRequest * request() const;
+    virtual const ListUserProfilesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListUserProfilesResponse)

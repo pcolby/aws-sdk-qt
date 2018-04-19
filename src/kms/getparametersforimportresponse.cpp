@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GetParametersForImportResponse
- *
  * \brief The GetParametersForImportResponse class provides an interace for KMS GetParametersForImport responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GetParametersForImportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetParametersForImportResponse object for \a reply to \a request, with parent \a parent.
  */
 GetParametersForImportResponse::GetParametersForImportResponse(
         const GetParametersForImportRequest &request,
@@ -154,6 +149,9 @@ GetParametersForImportResponse::GetParametersForImportResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetParametersForImportRequest * GetParametersForImportResponse::request() const
 {
     Q_D(const GetParametersForImportResponse);
@@ -161,9 +159,8 @@ const GetParametersForImportRequest * GetParametersForImportResponse::request() 
 }
 
 /*!
- * @brief  Parse a KMS GetParametersForImport response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS GetParametersForImport \a response.
  */
 void GetParametersForImportResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void GetParametersForImportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::GetParametersForImportResponsePrivate
+ * \brief The GetParametersForImportResponsePrivate class provides private implementation for GetParametersForImportResponse.
  * \internal
  *
- * \class GetParametersForImportResponsePrivate
- *
- * \brief Private implementation for GetParametersForImportResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetParametersForImportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetParametersForImportResponse instance.
+ * Constructs a GetParametersForImportResponsePrivate object with public implementation \a q.
  */
 GetParametersForImportResponsePrivate::GetParametersForImportResponsePrivate(
     GetParametersForImportResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ GetParametersForImportResponsePrivate::GetParametersForImportResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS GetParametersForImportResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS GetParametersForImport response element from \a xml.
  */
 void GetParametersForImportResponsePrivate::parseGetParametersForImportResponse(QXmlStreamReader &xml)
 {

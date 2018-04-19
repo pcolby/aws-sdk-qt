@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::AttachPrincipalPolicyResponse
- *
  * \brief The AttachPrincipalPolicyResponse class provides an interace for IoT AttachPrincipalPolicy responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new AttachPrincipalPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachPrincipalPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachPrincipalPolicyResponse::AttachPrincipalPolicyResponse(
         const AttachPrincipalPolicyRequest &request,
@@ -66,6 +61,9 @@ AttachPrincipalPolicyResponse::AttachPrincipalPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachPrincipalPolicyRequest * AttachPrincipalPolicyResponse::request() const
 {
     Q_D(const AttachPrincipalPolicyResponse);
@@ -73,9 +71,8 @@ const AttachPrincipalPolicyRequest * AttachPrincipalPolicyResponse::request() co
 }
 
 /*!
- * @brief  Parse a IoT AttachPrincipalPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT AttachPrincipalPolicy \a response.
  */
 void AttachPrincipalPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void AttachPrincipalPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::AttachPrincipalPolicyResponsePrivate
+ * \brief The AttachPrincipalPolicyResponsePrivate class provides private implementation for AttachPrincipalPolicyResponse.
  * \internal
  *
- * \class AttachPrincipalPolicyResponsePrivate
- *
- * \brief Private implementation for AttachPrincipalPolicyResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachPrincipalPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachPrincipalPolicyResponse instance.
+ * Constructs a AttachPrincipalPolicyResponsePrivate object with public implementation \a q.
  */
 AttachPrincipalPolicyResponsePrivate::AttachPrincipalPolicyResponsePrivate(
     AttachPrincipalPolicyResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ AttachPrincipalPolicyResponsePrivate::AttachPrincipalPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT AttachPrincipalPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT AttachPrincipalPolicy response element from \a xml.
  */
 void AttachPrincipalPolicyResponsePrivate::parseAttachPrincipalPolicyResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::UntagCertificateAuthorityResponse
- *
  * \brief The UntagCertificateAuthorityResponse class provides an interace for ACMPCA UntagCertificateAuthority responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -69,11 +68,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new UntagCertificateAuthorityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UntagCertificateAuthorityResponse object for \a reply to \a request, with parent \a parent.
  */
 UntagCertificateAuthorityResponse::UntagCertificateAuthorityResponse(
         const UntagCertificateAuthorityRequest &request,
@@ -85,6 +80,9 @@ UntagCertificateAuthorityResponse::UntagCertificateAuthorityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UntagCertificateAuthorityRequest * UntagCertificateAuthorityResponse::request() const
 {
     Q_D(const UntagCertificateAuthorityResponse);
@@ -92,9 +90,8 @@ const UntagCertificateAuthorityRequest * UntagCertificateAuthorityResponse::requ
 }
 
 /*!
- * @brief  Parse a ACMPCA UntagCertificateAuthority response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACMPCA UntagCertificateAuthority \a response.
  */
 void UntagCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void UntagCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACMPCA::UntagCertificateAuthorityResponsePrivate
+ * \brief The UntagCertificateAuthorityResponsePrivate class provides private implementation for UntagCertificateAuthorityResponse.
  * \internal
  *
- * \class UntagCertificateAuthorityResponsePrivate
- *
- * \brief Private implementation for UntagCertificateAuthorityResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagCertificateAuthorityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UntagCertificateAuthorityResponse instance.
+ * Constructs a UntagCertificateAuthorityResponsePrivate object with public implementation \a q.
  */
 UntagCertificateAuthorityResponsePrivate::UntagCertificateAuthorityResponsePrivate(
     UntagCertificateAuthorityResponse * const q) : ACMPCAResponsePrivate(q)
@@ -125,9 +118,7 @@ UntagCertificateAuthorityResponsePrivate::UntagCertificateAuthorityResponsePriva
 }
 
 /*!
- * @brief  Parse an ACMPCA UntagCertificateAuthorityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACMPCA UntagCertificateAuthority response element from \a xml.
  */
 void UntagCertificateAuthorityResponsePrivate::parseUntagCertificateAuthorityResponse(QXmlStreamReader &xml)
 {

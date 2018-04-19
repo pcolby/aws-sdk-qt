@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::SetRiskConfigurationResponse
- *
  * \brief The SetRiskConfigurationResponse class provides an interace for CognitoIdentityProvider SetRiskConfiguration responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new SetRiskConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetRiskConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 SetRiskConfigurationResponse::SetRiskConfigurationResponse(
         const SetRiskConfigurationRequest &request,
@@ -65,6 +60,9 @@ SetRiskConfigurationResponse::SetRiskConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetRiskConfigurationRequest * SetRiskConfigurationResponse::request() const
 {
     Q_D(const SetRiskConfigurationResponse);
@@ -72,9 +70,8 @@ const SetRiskConfigurationRequest * SetRiskConfigurationResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider SetRiskConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider SetRiskConfiguration \a response.
  */
 void SetRiskConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void SetRiskConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::SetRiskConfigurationResponsePrivate
+ * \brief The SetRiskConfigurationResponsePrivate class provides private implementation for SetRiskConfigurationResponse.
  * \internal
  *
- * \class SetRiskConfigurationResponsePrivate
- *
- * \brief Private implementation for SetRiskConfigurationResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetRiskConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetRiskConfigurationResponse instance.
+ * Constructs a SetRiskConfigurationResponsePrivate object with public implementation \a q.
  */
 SetRiskConfigurationResponsePrivate::SetRiskConfigurationResponsePrivate(
     SetRiskConfigurationResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ SetRiskConfigurationResponsePrivate::SetRiskConfigurationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider SetRiskConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider SetRiskConfiguration response element from \a xml.
  */
 void SetRiskConfigurationResponsePrivate::parseSetRiskConfigurationResponse(QXmlStreamReader &xml)
 {

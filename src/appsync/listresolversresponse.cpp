@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::ListResolversResponse
- *
  * \brief The ListResolversResponse class provides an interace for AppSync ListResolvers responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new ListResolversResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListResolversResponse object for \a reply to \a request, with parent \a parent.
  */
 ListResolversResponse::ListResolversResponse(
         const ListResolversRequest &request,
@@ -56,6 +51,9 @@ ListResolversResponse::ListResolversResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListResolversRequest * ListResolversResponse::request() const
 {
     Q_D(const ListResolversResponse);
@@ -63,9 +61,8 @@ const ListResolversRequest * ListResolversResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync ListResolvers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync ListResolvers \a response.
  */
 void ListResolversResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListResolversResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::ListResolversResponsePrivate
+ * \brief The ListResolversResponsePrivate class provides private implementation for ListResolversResponse.
  * \internal
  *
- * \class ListResolversResponsePrivate
- *
- * \brief Private implementation for ListResolversResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResolversResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListResolversResponse instance.
+ * Constructs a ListResolversResponsePrivate object with public implementation \a q.
  */
 ListResolversResponsePrivate::ListResolversResponsePrivate(
     ListResolversResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ ListResolversResponsePrivate::ListResolversResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync ListResolversResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync ListResolvers response element from \a xml.
  */
 void ListResolversResponsePrivate::parseListResolversResponse(QXmlStreamReader &xml)
 {

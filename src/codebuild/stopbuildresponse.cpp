@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::StopBuildResponse
- *
  * \brief The StopBuildResponse class provides an interace for CodeBuild StopBuild responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new StopBuildResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopBuildResponse object for \a reply to \a request, with parent \a parent.
  */
 StopBuildResponse::StopBuildResponse(
         const StopBuildRequest &request,
@@ -135,6 +130,9 @@ StopBuildResponse::StopBuildResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopBuildRequest * StopBuildResponse::request() const
 {
     Q_D(const StopBuildResponse);
@@ -142,9 +140,8 @@ const StopBuildRequest * StopBuildResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeBuild StopBuild response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild StopBuild \a response.
  */
 void StopBuildResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void StopBuildResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::StopBuildResponsePrivate
+ * \brief The StopBuildResponsePrivate class provides private implementation for StopBuildResponse.
  * \internal
  *
- * \class StopBuildResponsePrivate
- *
- * \brief Private implementation for StopBuildResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopBuildResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopBuildResponse instance.
+ * Constructs a StopBuildResponsePrivate object with public implementation \a q.
  */
 StopBuildResponsePrivate::StopBuildResponsePrivate(
     StopBuildResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ StopBuildResponsePrivate::StopBuildResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeBuild StopBuildResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild StopBuild response element from \a xml.
  */
 void StopBuildResponsePrivate::parseStopBuildResponse(QXmlStreamReader &xml)
 {

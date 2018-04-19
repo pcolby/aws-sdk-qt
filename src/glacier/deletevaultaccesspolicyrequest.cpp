@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVaultAccessPolicyRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteVaultAccessPolicyRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVaultAccessPolicyRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 DeleteVaultAccessPolicyRequestPrivate::DeleteVaultAccessPolicyRequestPrivate(
     const GlacierRequest::Action action, DeleteVaultAccessPolicyRequest * const q)

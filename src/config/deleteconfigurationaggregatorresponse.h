@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteConfigurationAggregatorResponse : public ConfigServiceR
 public:
     DeleteConfigurationAggregatorResponse(const DeleteConfigurationAggregatorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteConfigurationAggregatorRequest * request() const;
+    virtual const DeleteConfigurationAggregatorRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteConfigurationAggregatorResponse)

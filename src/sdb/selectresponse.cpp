@@ -29,10 +29,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::SelectResponse
- *
  * \brief The SelectResponse class provides an interace for SimpleDB Select responses.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -52,11 +51,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new SelectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SelectResponse object for \a reply to \a request, with parent \a parent.
  */
 SelectResponse::SelectResponse(
         const SelectRequest &request,
@@ -68,6 +63,9 @@ SelectResponse::SelectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SelectRequest * SelectResponse::request() const
 {
     Q_D(const SelectResponse);
@@ -75,9 +73,8 @@ const SelectRequest * SelectResponse::request() const
 }
 
 /*!
- * @brief  Parse a SimpleDB Select response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SimpleDB Select \a response.
  */
 void SelectResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void SelectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SimpleDB::SelectResponsePrivate
+ * \brief The SelectResponsePrivate class provides private implementation for SelectResponse.
  * \internal
  *
- * \class SelectResponsePrivate
- *
- * \brief Private implementation for SelectResponse.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SelectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SelectResponse instance.
+ * Constructs a SelectResponsePrivate object with public implementation \a q.
  */
 SelectResponsePrivate::SelectResponsePrivate(
     SelectResponse * const q) : SimpleDBResponsePrivate(q)
@@ -108,9 +101,7 @@ SelectResponsePrivate::SelectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SimpleDB SelectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SimpleDB Select response element from \a xml.
  */
 void SelectResponsePrivate::parseSelectResponse(QXmlStreamReader &xml)
 {

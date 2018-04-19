@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::SetPlatformApplicationAttributesResponse
- *
  * \brief The SetPlatformApplicationAttributesResponse class provides an interace for SNS SetPlatformApplicationAttributes responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new SetPlatformApplicationAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetPlatformApplicationAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 SetPlatformApplicationAttributesResponse::SetPlatformApplicationAttributesResponse(
         const SetPlatformApplicationAttributesRequest &request,
@@ -69,6 +64,9 @@ SetPlatformApplicationAttributesResponse::SetPlatformApplicationAttributesRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetPlatformApplicationAttributesRequest * SetPlatformApplicationAttributesResponse::request() const
 {
     Q_D(const SetPlatformApplicationAttributesResponse);
@@ -76,9 +74,8 @@ const SetPlatformApplicationAttributesRequest * SetPlatformApplicationAttributes
 }
 
 /*!
- * @brief  Parse a SNS SetPlatformApplicationAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS SetPlatformApplicationAttributes \a response.
  */
 void SetPlatformApplicationAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void SetPlatformApplicationAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::SetPlatformApplicationAttributesResponsePrivate
+ * \brief The SetPlatformApplicationAttributesResponsePrivate class provides private implementation for SetPlatformApplicationAttributesResponse.
  * \internal
  *
- * \class SetPlatformApplicationAttributesResponsePrivate
- *
- * \brief Private implementation for SetPlatformApplicationAttributesResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetPlatformApplicationAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetPlatformApplicationAttributesResponse instance.
+ * Constructs a SetPlatformApplicationAttributesResponsePrivate object with public implementation \a q.
  */
 SetPlatformApplicationAttributesResponsePrivate::SetPlatformApplicationAttributesResponsePrivate(
     SetPlatformApplicationAttributesResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ SetPlatformApplicationAttributesResponsePrivate::SetPlatformApplicationAttribute
 }
 
 /*!
- * @brief  Parse an SNS SetPlatformApplicationAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS SetPlatformApplicationAttributes response element from \a xml.
  */
 void SetPlatformApplicationAttributesResponsePrivate::parseSetPlatformApplicationAttributesResponse(QXmlStreamReader &xml)
 {

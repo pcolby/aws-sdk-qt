@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRoomSkillParameterRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteRoomSkillParameterRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRoomSkillParameterRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 DeleteRoomSkillParameterRequestPrivate::DeleteRoomSkillParameterRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteRoomSkillParameterRequest * const q)

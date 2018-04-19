@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteNatGatewayResponse
- *
  * \brief The DeleteNatGatewayResponse class provides an interace for EC2 DeleteNatGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteNatGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNatGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNatGatewayResponse::DeleteNatGatewayResponse(
         const DeleteNatGatewayRequest &request,
@@ -59,6 +54,9 @@ DeleteNatGatewayResponse::DeleteNatGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNatGatewayRequest * DeleteNatGatewayResponse::request() const
 {
     Q_D(const DeleteNatGatewayResponse);
@@ -66,9 +64,8 @@ const DeleteNatGatewayRequest * DeleteNatGatewayResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteNatGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteNatGateway \a response.
  */
 void DeleteNatGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteNatGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteNatGatewayResponsePrivate
+ * \brief The DeleteNatGatewayResponsePrivate class provides private implementation for DeleteNatGatewayResponse.
  * \internal
  *
- * \class DeleteNatGatewayResponsePrivate
- *
- * \brief Private implementation for DeleteNatGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNatGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNatGatewayResponse instance.
+ * Constructs a DeleteNatGatewayResponsePrivate object with public implementation \a q.
  */
 DeleteNatGatewayResponsePrivate::DeleteNatGatewayResponsePrivate(
     DeleteNatGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteNatGatewayResponsePrivate::DeleteNatGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteNatGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteNatGateway response element from \a xml.
  */
 void DeleteNatGatewayResponsePrivate::parseDeleteNatGatewayResponse(QXmlStreamReader &xml)
 {

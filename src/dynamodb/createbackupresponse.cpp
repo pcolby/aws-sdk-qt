@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::CreateBackupResponse
- *
  * \brief The CreateBackupResponse class provides an interace for DynamoDB CreateBackup responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new CreateBackupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateBackupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateBackupResponse::CreateBackupResponse(
         const CreateBackupRequest &request,
@@ -74,6 +69,9 @@ CreateBackupResponse::CreateBackupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateBackupRequest * CreateBackupResponse::request() const
 {
     Q_D(const CreateBackupResponse);
@@ -81,9 +79,8 @@ const CreateBackupRequest * CreateBackupResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB CreateBackup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB CreateBackup \a response.
  */
 void CreateBackupResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void CreateBackupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::CreateBackupResponsePrivate
+ * \brief The CreateBackupResponsePrivate class provides private implementation for CreateBackupResponse.
  * \internal
  *
- * \class CreateBackupResponsePrivate
- *
- * \brief Private implementation for CreateBackupResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBackupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateBackupResponse instance.
+ * Constructs a CreateBackupResponsePrivate object with public implementation \a q.
  */
 CreateBackupResponsePrivate::CreateBackupResponsePrivate(
     CreateBackupResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ CreateBackupResponsePrivate::CreateBackupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB CreateBackupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB CreateBackup response element from \a xml.
  */
 void CreateBackupResponsePrivate::parseCreateBackupResponse(QXmlStreamReader &xml)
 {

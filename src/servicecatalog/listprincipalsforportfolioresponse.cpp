@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListPrincipalsForPortfolioResponse
- *
  * \brief The ListPrincipalsForPortfolioResponse class provides an interace for ServiceCatalog ListPrincipalsForPortfolio responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListPrincipalsForPortfolioResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPrincipalsForPortfolioResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPrincipalsForPortfolioResponse::ListPrincipalsForPortfolioResponse(
         const ListPrincipalsForPortfolioRequest &request,
@@ -61,6 +56,9 @@ ListPrincipalsForPortfolioResponse::ListPrincipalsForPortfolioResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPrincipalsForPortfolioRequest * ListPrincipalsForPortfolioResponse::request() const
 {
     Q_D(const ListPrincipalsForPortfolioResponse);
@@ -68,9 +66,8 @@ const ListPrincipalsForPortfolioRequest * ListPrincipalsForPortfolioResponse::re
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ListPrincipalsForPortfolio response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ListPrincipalsForPortfolio \a response.
  */
 void ListPrincipalsForPortfolioResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListPrincipalsForPortfolioResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ListPrincipalsForPortfolioResponsePrivate
+ * \brief The ListPrincipalsForPortfolioResponsePrivate class provides private implementation for ListPrincipalsForPortfolioResponse.
  * \internal
  *
- * \class ListPrincipalsForPortfolioResponsePrivate
- *
- * \brief Private implementation for ListPrincipalsForPortfolioResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPrincipalsForPortfolioResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPrincipalsForPortfolioResponse instance.
+ * Constructs a ListPrincipalsForPortfolioResponsePrivate object with public implementation \a q.
  */
 ListPrincipalsForPortfolioResponsePrivate::ListPrincipalsForPortfolioResponsePrivate(
     ListPrincipalsForPortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ListPrincipalsForPortfolioResponsePrivate::ListPrincipalsForPortfolioResponsePri
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ListPrincipalsForPortfolioResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ListPrincipalsForPortfolio response element from \a xml.
  */
 void ListPrincipalsForPortfolioResponsePrivate::parseListPrincipalsForPortfolioResponse(QXmlStreamReader &xml)
 {

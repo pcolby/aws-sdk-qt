@@ -42,7 +42,7 @@ namespace Pricing {
  */
 
 /*!
- * Constructs a[n] PricingRequest object for Pricing \a action.
+ * Constructs a PricingRequest object for Pricing \a action.
  */
 PricingRequest::PricingRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new PricingRequestPrivate(action, this))
@@ -242,8 +242,8 @@ QNetworkRequest PricingRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a PricingRequestPrivate object for Pricing \a action with,
- * public implementation \a q.
+ * Constructs a PricingRequestPrivate object for Pricing \a action,
+ * with public implementation \a q.
  */
 PricingRequestPrivate::PricingRequestPrivate(const PricingRequest::Action action, PricingRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

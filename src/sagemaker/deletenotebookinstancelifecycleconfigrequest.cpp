@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNotebookInstanceLifecycleConfigRequest:
  */
 
 /*!
- *
- * Constructs a DeleteNotebookInstanceLifecycleConfigRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNotebookInstanceLifecycleConfigRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 DeleteNotebookInstanceLifecycleConfigRequestPrivate::DeleteNotebookInstanceLifecycleConfigRequestPrivate(
     const SageMakerRequest::Action action, DeleteNotebookInstanceLifecycleConfigRequest * const q)

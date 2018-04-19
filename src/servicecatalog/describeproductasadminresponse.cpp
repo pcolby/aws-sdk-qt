@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeProductAsAdminResponse
- *
  * \brief The DescribeProductAsAdminResponse class provides an interace for ServiceCatalog DescribeProductAsAdmin responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeProductAsAdminResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeProductAsAdminResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeProductAsAdminResponse::DescribeProductAsAdminResponse(
         const DescribeProductAsAdminRequest &request,
@@ -61,6 +56,9 @@ DescribeProductAsAdminResponse::DescribeProductAsAdminResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeProductAsAdminRequest * DescribeProductAsAdminResponse::request() const
 {
     Q_D(const DescribeProductAsAdminResponse);
@@ -68,9 +66,8 @@ const DescribeProductAsAdminRequest * DescribeProductAsAdminResponse::request() 
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DescribeProductAsAdmin response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DescribeProductAsAdmin \a response.
  */
 void DescribeProductAsAdminResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeProductAsAdminResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DescribeProductAsAdminResponsePrivate
+ * \brief The DescribeProductAsAdminResponsePrivate class provides private implementation for DescribeProductAsAdminResponse.
  * \internal
  *
- * \class DescribeProductAsAdminResponsePrivate
- *
- * \brief Private implementation for DescribeProductAsAdminResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProductAsAdminResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeProductAsAdminResponse instance.
+ * Constructs a DescribeProductAsAdminResponsePrivate object with public implementation \a q.
  */
 DescribeProductAsAdminResponsePrivate::DescribeProductAsAdminResponsePrivate(
     DescribeProductAsAdminResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeProductAsAdminResponsePrivate::DescribeProductAsAdminResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DescribeProductAsAdminResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DescribeProductAsAdmin response element from \a xml.
  */
 void DescribeProductAsAdminResponsePrivate::parseDescribeProductAsAdminResponse(QXmlStreamReader &xml)
 {

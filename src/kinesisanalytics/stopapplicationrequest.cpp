@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * StopApplicationRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a StopApplicationRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a StopApplicationRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 StopApplicationRequestPrivate::StopApplicationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, StopApplicationRequest * const q)

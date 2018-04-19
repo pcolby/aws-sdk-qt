@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::ListJobsResponse
- *
  * \brief The ListJobsResponse class provides an interace for MediaConvert ListJobs responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::listJobs
  */
 
 /*!
- * @brief  Constructs a new ListJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListJobsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListJobsResponse::ListJobsResponse(
         const ListJobsRequest &request,
@@ -55,6 +50,9 @@ ListJobsResponse::ListJobsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListJobsRequest * ListJobsResponse::request() const
 {
     Q_D(const ListJobsResponse);
@@ -62,9 +60,8 @@ const ListJobsRequest * ListJobsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert ListJobs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert ListJobs \a response.
  */
 void ListJobsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListJobsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::ListJobsResponsePrivate
+ * \brief The ListJobsResponsePrivate class provides private implementation for ListJobsResponse.
  * \internal
  *
- * \class ListJobsResponsePrivate
- *
- * \brief Private implementation for ListJobsResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListJobsResponse instance.
+ * Constructs a ListJobsResponsePrivate object with public implementation \a q.
  */
 ListJobsResponsePrivate::ListJobsResponsePrivate(
     ListJobsResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ ListJobsResponsePrivate::ListJobsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert ListJobsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert ListJobs response element from \a xml.
  */
 void ListJobsResponsePrivate::parseListJobsResponse(QXmlStreamReader &xml)
 {

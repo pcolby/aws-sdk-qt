@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteFlowLogsResponse : public EC2Response {
 public:
     DeleteFlowLogsResponse(const DeleteFlowLogsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteFlowLogsRequest * request() const;
+    virtual const DeleteFlowLogsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteFlowLogsResponse)

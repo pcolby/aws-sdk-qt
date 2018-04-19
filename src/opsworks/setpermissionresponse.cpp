@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::SetPermissionResponse
- *
  * \brief The SetPermissionResponse class provides an interace for OpsWorks SetPermission responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new SetPermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetPermissionResponse object for \a reply to \a request, with parent \a parent.
  */
 SetPermissionResponse::SetPermissionResponse(
         const SetPermissionRequest &request,
@@ -161,6 +156,9 @@ SetPermissionResponse::SetPermissionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetPermissionRequest * SetPermissionResponse::request() const
 {
     Q_D(const SetPermissionResponse);
@@ -168,9 +166,8 @@ const SetPermissionRequest * SetPermissionResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks SetPermission response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks SetPermission \a response.
  */
 void SetPermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void SetPermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::SetPermissionResponsePrivate
+ * \brief The SetPermissionResponsePrivate class provides private implementation for SetPermissionResponse.
  * \internal
  *
- * \class SetPermissionResponsePrivate
- *
- * \brief Private implementation for SetPermissionResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetPermissionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetPermissionResponse instance.
+ * Constructs a SetPermissionResponsePrivate object with public implementation \a q.
  */
 SetPermissionResponsePrivate::SetPermissionResponsePrivate(
     SetPermissionResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ SetPermissionResponsePrivate::SetPermissionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks SetPermissionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks SetPermission response element from \a xml.
  */
 void SetPermissionResponsePrivate::parseSetPermissionResponse(QXmlStreamReader &xml)
 {

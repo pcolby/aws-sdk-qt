@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetDeviceResponse
- *
  * \brief The GetDeviceResponse class provides an interace for DeviceFarm GetDevice responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetDeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDeviceResponse::GetDeviceResponse(
         const GetDeviceRequest &request,
@@ -57,6 +52,9 @@ GetDeviceResponse::GetDeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDeviceRequest * GetDeviceResponse::request() const
 {
     Q_D(const GetDeviceResponse);
@@ -64,9 +62,8 @@ const GetDeviceRequest * GetDeviceResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetDevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetDevice \a response.
  */
 void GetDeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetDeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetDeviceResponsePrivate
+ * \brief The GetDeviceResponsePrivate class provides private implementation for GetDeviceResponse.
  * \internal
  *
- * \class GetDeviceResponsePrivate
- *
- * \brief Private implementation for GetDeviceResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDeviceResponse instance.
+ * Constructs a GetDeviceResponsePrivate object with public implementation \a q.
  */
 GetDeviceResponsePrivate::GetDeviceResponsePrivate(
     GetDeviceResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetDeviceResponsePrivate::GetDeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetDeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetDevice response element from \a xml.
  */
 void GetDeviceResponsePrivate::parseGetDeviceResponse(QXmlStreamReader &xml)
 {

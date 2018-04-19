@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheParameterGroupRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DeleteCacheParameterGroupRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCacheParameterGroupRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 DeleteCacheParameterGroupRequestPrivate::DeleteCacheParameterGroupRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteCacheParameterGroupRequest * const q)

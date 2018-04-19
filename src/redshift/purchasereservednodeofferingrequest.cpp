@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedNodeOfferingRequest::response
  */
 
 /*!
- *
- * Constructs a PurchaseReservedNodeOfferingRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a PurchaseReservedNodeOfferingRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 PurchaseReservedNodeOfferingRequestPrivate::PurchaseReservedNodeOfferingRequestPrivate(
     const RedshiftRequest::Action action, PurchaseReservedNodeOfferingRequest * const q)

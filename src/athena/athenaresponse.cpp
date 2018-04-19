@@ -28,16 +28,13 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::AthenaResponse
- *
  * \brief The AthenaResponse class provides an interface for Athena responses.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @brief  Constructs a new AthenaResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a AthenaResponse object with parent \a parent.
  */
 AthenaResponse::AthenaResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new AthenaResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ AthenaResponse::AthenaResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AthenaResponse object.
- *
+ * \internal
+ * Constructs a AthenaResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AthenaResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 AthenaResponse::AthenaResponse(AthenaResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ AthenaResponse::AthenaResponse(AthenaResponsePrivate * const d, QObject * const 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void AthenaResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void AthenaResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Athena::AthenaResponsePrivate
+ * \brief The AthenaResponsePrivate class provides private implementation for AthenaResponse.
+ * \internal
  *
- * @class  AthenaResponsePrivate
- *
- * @brief  Private implementation for AthenaResponse.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AthenaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AthenaResponse instance.
+ * Constructs a AthenaResponsePrivate object with public implementation \a q.
  */
 AthenaResponsePrivate::AthenaResponsePrivate(
     AthenaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

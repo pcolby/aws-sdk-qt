@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeDirectoryConfigsResponse
- *
  * \brief The DescribeDirectoryConfigsResponse class provides an interace for AppStream DescribeDirectoryConfigs responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeDirectoryConfigsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDirectoryConfigsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDirectoryConfigsResponse::DescribeDirectoryConfigsResponse(
         const DescribeDirectoryConfigsRequest &request,
@@ -58,6 +53,9 @@ DescribeDirectoryConfigsResponse::DescribeDirectoryConfigsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDirectoryConfigsRequest * DescribeDirectoryConfigsResponse::request() const
 {
     Q_D(const DescribeDirectoryConfigsResponse);
@@ -65,9 +63,8 @@ const DescribeDirectoryConfigsRequest * DescribeDirectoryConfigsResponse::reques
 }
 
 /*!
- * @brief  Parse a AppStream DescribeDirectoryConfigs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream DescribeDirectoryConfigs \a response.
  */
 void DescribeDirectoryConfigsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeDirectoryConfigsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::DescribeDirectoryConfigsResponsePrivate
+ * \brief The DescribeDirectoryConfigsResponsePrivate class provides private implementation for DescribeDirectoryConfigsResponse.
  * \internal
  *
- * \class DescribeDirectoryConfigsResponsePrivate
- *
- * \brief Private implementation for DescribeDirectoryConfigsResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDirectoryConfigsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDirectoryConfigsResponse instance.
+ * Constructs a DescribeDirectoryConfigsResponsePrivate object with public implementation \a q.
  */
 DescribeDirectoryConfigsResponsePrivate::DescribeDirectoryConfigsResponsePrivate(
     DescribeDirectoryConfigsResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeDirectoryConfigsResponsePrivate::DescribeDirectoryConfigsResponsePrivate
 }
 
 /*!
- * @brief  Parse an AppStream DescribeDirectoryConfigsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream DescribeDirectoryConfigs response element from \a xml.
  */
 void DescribeDirectoryConfigsResponsePrivate::parseDescribeDirectoryConfigsResponse(QXmlStreamReader &xml)
 {

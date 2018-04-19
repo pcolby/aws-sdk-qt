@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::CompleteLayerUploadResponse
- *
  * \brief The CompleteLayerUploadResponse class provides an interace for ECR CompleteLayerUpload responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new CompleteLayerUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CompleteLayerUploadResponse object for \a reply to \a request, with parent \a parent.
  */
 CompleteLayerUploadResponse::CompleteLayerUploadResponse(
         const CompleteLayerUploadRequest &request,
@@ -59,6 +54,9 @@ CompleteLayerUploadResponse::CompleteLayerUploadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CompleteLayerUploadRequest * CompleteLayerUploadResponse::request() const
 {
     Q_D(const CompleteLayerUploadResponse);
@@ -66,9 +64,8 @@ const CompleteLayerUploadRequest * CompleteLayerUploadResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR CompleteLayerUpload response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR CompleteLayerUpload \a response.
  */
 void CompleteLayerUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CompleteLayerUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::CompleteLayerUploadResponsePrivate
+ * \brief The CompleteLayerUploadResponsePrivate class provides private implementation for CompleteLayerUploadResponse.
  * \internal
  *
- * \class CompleteLayerUploadResponsePrivate
- *
- * \brief Private implementation for CompleteLayerUploadResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CompleteLayerUploadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CompleteLayerUploadResponse instance.
+ * Constructs a CompleteLayerUploadResponsePrivate object with public implementation \a q.
  */
 CompleteLayerUploadResponsePrivate::CompleteLayerUploadResponsePrivate(
     CompleteLayerUploadResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ CompleteLayerUploadResponsePrivate::CompleteLayerUploadResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR CompleteLayerUploadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR CompleteLayerUpload response element from \a xml.
  */
 void CompleteLayerUploadResponsePrivate::parseCompleteLayerUploadResponse(QXmlStreamReader &xml)
 {

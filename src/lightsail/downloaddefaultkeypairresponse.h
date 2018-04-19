@@ -34,10 +34,10 @@ class QTAWS_EXPORT DownloadDefaultKeyPairResponse : public LightsailResponse {
 public:
     DownloadDefaultKeyPairResponse(const DownloadDefaultKeyPairRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DownloadDefaultKeyPairRequest * request() const;
+    virtual const DownloadDefaultKeyPairRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DownloadDefaultKeyPairResponse)

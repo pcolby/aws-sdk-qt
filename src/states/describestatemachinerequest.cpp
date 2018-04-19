@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStateMachineRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeStateMachineRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStateMachineRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 DescribeStateMachineRequestPrivate::DescribeStateMachineRequestPrivate(
     const SFNRequest::Action action, DescribeStateMachineRequest * const q)

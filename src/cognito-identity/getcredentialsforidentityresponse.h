@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCredentialsForIdentityResponse : public CognitoIdentityRes
 public:
     GetCredentialsForIdentityResponse(const GetCredentialsForIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCredentialsForIdentityRequest * request() const;
+    virtual const GetCredentialsForIdentityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCredentialsForIdentityResponse)

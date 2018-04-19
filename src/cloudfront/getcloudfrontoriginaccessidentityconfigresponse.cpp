@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetCloudFrontOriginAccessIdentityConfigResponse
- *
  * \brief The GetCloudFrontOriginAccessIdentityConfigResponse class provides an interace for CloudFront GetCloudFrontOriginAccessIdentityConfig responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCloudFrontOriginAccessIdentityConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCloudFrontOriginAccessIdentityConfigResponse::GetCloudFrontOriginAccessIdentityConfigResponse(
         const GetCloudFrontOriginAccessIdentityConfigRequest &request,
@@ -60,6 +55,9 @@ GetCloudFrontOriginAccessIdentityConfigResponse::GetCloudFrontOriginAccessIdenti
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCloudFrontOriginAccessIdentityConfigRequest * GetCloudFrontOriginAccessIdentityConfigResponse::request() const
 {
     Q_D(const GetCloudFrontOriginAccessIdentityConfigResponse);
@@ -67,9 +65,8 @@ const GetCloudFrontOriginAccessIdentityConfigRequest * GetCloudFrontOriginAccess
 }
 
 /*!
- * @brief  Parse a CloudFront GetCloudFrontOriginAccessIdentityConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront GetCloudFrontOriginAccessIdentityConfig \a response.
  */
 void GetCloudFrontOriginAccessIdentityConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetCloudFrontOriginAccessIdentityConfigResponse::parseSuccess(QIODevice &re
 }
 
 /*!
+ * \class QtAws::CloudFront::GetCloudFrontOriginAccessIdentityConfigResponsePrivate
+ * \brief The GetCloudFrontOriginAccessIdentityConfigResponsePrivate class provides private implementation for GetCloudFrontOriginAccessIdentityConfigResponse.
  * \internal
  *
- * \class GetCloudFrontOriginAccessIdentityConfigResponsePrivate
- *
- * \brief Private implementation for GetCloudFrontOriginAccessIdentityConfigResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCloudFrontOriginAccessIdentityConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCloudFrontOriginAccessIdentityConfigResponse instance.
+ * Constructs a GetCloudFrontOriginAccessIdentityConfigResponsePrivate object with public implementation \a q.
  */
 GetCloudFrontOriginAccessIdentityConfigResponsePrivate::GetCloudFrontOriginAccessIdentityConfigResponsePrivate(
     GetCloudFrontOriginAccessIdentityConfigResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ GetCloudFrontOriginAccessIdentityConfigResponsePrivate::GetCloudFrontOriginAcces
 }
 
 /*!
- * @brief  Parse an CloudFront GetCloudFrontOriginAccessIdentityConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront GetCloudFrontOriginAccessIdentityConfig response element from \a xml.
  */
 void GetCloudFrontOriginAccessIdentityConfigResponsePrivate::parseGetCloudFrontOriginAccessIdentityConfigResponse(QXmlStreamReader &xml)
 {

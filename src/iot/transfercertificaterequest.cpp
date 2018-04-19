@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * TransferCertificateRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a TransferCertificateRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a TransferCertificateRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 TransferCertificateRequestPrivate::TransferCertificateRequestPrivate(
     const IoTRequest::Action action, TransferCertificateRequest * const q)

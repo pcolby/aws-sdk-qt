@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::SetTerminationProtectionResponse
- *
  * \brief The SetTerminationProtectionResponse class provides an interace for EMR SetTerminationProtection responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new SetTerminationProtectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetTerminationProtectionResponse object for \a reply to \a request, with parent \a parent.
  */
 SetTerminationProtectionResponse::SetTerminationProtectionResponse(
         const SetTerminationProtectionRequest &request,
@@ -58,6 +53,9 @@ SetTerminationProtectionResponse::SetTerminationProtectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetTerminationProtectionRequest * SetTerminationProtectionResponse::request() const
 {
     Q_D(const SetTerminationProtectionResponse);
@@ -65,9 +63,8 @@ const SetTerminationProtectionRequest * SetTerminationProtectionResponse::reques
 }
 
 /*!
- * @brief  Parse a EMR SetTerminationProtection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR SetTerminationProtection \a response.
  */
 void SetTerminationProtectionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void SetTerminationProtectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::SetTerminationProtectionResponsePrivate
+ * \brief The SetTerminationProtectionResponsePrivate class provides private implementation for SetTerminationProtectionResponse.
  * \internal
  *
- * \class SetTerminationProtectionResponsePrivate
- *
- * \brief Private implementation for SetTerminationProtectionResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetTerminationProtectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetTerminationProtectionResponse instance.
+ * Constructs a SetTerminationProtectionResponsePrivate object with public implementation \a q.
  */
 SetTerminationProtectionResponsePrivate::SetTerminationProtectionResponsePrivate(
     SetTerminationProtectionResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ SetTerminationProtectionResponsePrivate::SetTerminationProtectionResponsePrivate
 }
 
 /*!
- * @brief  Parse an EMR SetTerminationProtectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR SetTerminationProtection response element from \a xml.
  */
 void SetTerminationProtectionResponsePrivate::parseSetTerminationProtectionResponse(QXmlStreamReader &xml)
 {

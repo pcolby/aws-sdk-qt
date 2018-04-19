@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::GetFunctionConfigurationResponse
- *
  * \brief The GetFunctionConfigurationResponse class provides an interace for Lambda GetFunctionConfiguration responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new GetFunctionConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFunctionConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFunctionConfigurationResponse::GetFunctionConfigurationResponse(
         const GetFunctionConfigurationRequest &request,
@@ -66,6 +61,9 @@ GetFunctionConfigurationResponse::GetFunctionConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFunctionConfigurationRequest * GetFunctionConfigurationResponse::request() const
 {
     Q_D(const GetFunctionConfigurationResponse);
@@ -73,9 +71,8 @@ const GetFunctionConfigurationRequest * GetFunctionConfigurationResponse::reques
 }
 
 /*!
- * @brief  Parse a Lambda GetFunctionConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda GetFunctionConfiguration \a response.
  */
 void GetFunctionConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetFunctionConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::GetFunctionConfigurationResponsePrivate
+ * \brief The GetFunctionConfigurationResponsePrivate class provides private implementation for GetFunctionConfigurationResponse.
  * \internal
  *
- * \class GetFunctionConfigurationResponsePrivate
- *
- * \brief Private implementation for GetFunctionConfigurationResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFunctionConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFunctionConfigurationResponse instance.
+ * Constructs a GetFunctionConfigurationResponsePrivate object with public implementation \a q.
  */
 GetFunctionConfigurationResponsePrivate::GetFunctionConfigurationResponsePrivate(
     GetFunctionConfigurationResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ GetFunctionConfigurationResponsePrivate::GetFunctionConfigurationResponsePrivate
 }
 
 /*!
- * @brief  Parse an Lambda GetFunctionConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda GetFunctionConfiguration response element from \a xml.
  */
 void GetFunctionConfigurationResponsePrivate::parseGetFunctionConfigurationResponse(QXmlStreamReader &xml)
 {

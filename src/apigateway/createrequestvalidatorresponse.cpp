@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateRequestValidatorResponse
- *
  * \brief The CreateRequestValidatorResponse class provides an interace for APIGateway CreateRequestValidator responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateRequestValidatorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRequestValidatorResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRequestValidatorResponse::CreateRequestValidatorResponse(
         const CreateRequestValidatorRequest &request,
@@ -60,6 +55,9 @@ CreateRequestValidatorResponse::CreateRequestValidatorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRequestValidatorRequest * CreateRequestValidatorResponse::request() const
 {
     Q_D(const CreateRequestValidatorResponse);
@@ -67,9 +65,8 @@ const CreateRequestValidatorRequest * CreateRequestValidatorResponse::request() 
 }
 
 /*!
- * @brief  Parse a APIGateway CreateRequestValidator response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway CreateRequestValidator \a response.
  */
 void CreateRequestValidatorResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateRequestValidatorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::CreateRequestValidatorResponsePrivate
+ * \brief The CreateRequestValidatorResponsePrivate class provides private implementation for CreateRequestValidatorResponse.
  * \internal
  *
- * \class CreateRequestValidatorResponsePrivate
- *
- * \brief Private implementation for CreateRequestValidatorResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRequestValidatorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRequestValidatorResponse instance.
+ * Constructs a CreateRequestValidatorResponsePrivate object with public implementation \a q.
  */
 CreateRequestValidatorResponsePrivate::CreateRequestValidatorResponsePrivate(
     CreateRequestValidatorResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateRequestValidatorResponsePrivate::CreateRequestValidatorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway CreateRequestValidatorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway CreateRequestValidator response element from \a xml.
  */
 void CreateRequestValidatorResponsePrivate::parseCreateRequestValidatorResponse(QXmlStreamReader &xml)
 {

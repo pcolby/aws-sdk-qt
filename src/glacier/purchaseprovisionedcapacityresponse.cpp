@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::PurchaseProvisionedCapacityResponse
- *
  * \brief The PurchaseProvisionedCapacityResponse class provides an interace for Glacier PurchaseProvisionedCapacity responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new PurchaseProvisionedCapacityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PurchaseProvisionedCapacityResponse object for \a reply to \a request, with parent \a parent.
  */
 PurchaseProvisionedCapacityResponse::PurchaseProvisionedCapacityResponse(
         const PurchaseProvisionedCapacityRequest &request,
@@ -93,6 +88,9 @@ PurchaseProvisionedCapacityResponse::PurchaseProvisionedCapacityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PurchaseProvisionedCapacityRequest * PurchaseProvisionedCapacityResponse::request() const
 {
     Q_D(const PurchaseProvisionedCapacityResponse);
@@ -100,9 +98,8 @@ const PurchaseProvisionedCapacityRequest * PurchaseProvisionedCapacityResponse::
 }
 
 /*!
- * @brief  Parse a Glacier PurchaseProvisionedCapacity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier PurchaseProvisionedCapacity \a response.
  */
 void PurchaseProvisionedCapacityResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void PurchaseProvisionedCapacityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::PurchaseProvisionedCapacityResponsePrivate
+ * \brief The PurchaseProvisionedCapacityResponsePrivate class provides private implementation for PurchaseProvisionedCapacityResponse.
  * \internal
  *
- * \class PurchaseProvisionedCapacityResponsePrivate
- *
- * \brief Private implementation for PurchaseProvisionedCapacityResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseProvisionedCapacityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PurchaseProvisionedCapacityResponse instance.
+ * Constructs a PurchaseProvisionedCapacityResponsePrivate object with public implementation \a q.
  */
 PurchaseProvisionedCapacityResponsePrivate::PurchaseProvisionedCapacityResponsePrivate(
     PurchaseProvisionedCapacityResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ PurchaseProvisionedCapacityResponsePrivate::PurchaseProvisionedCapacityResponseP
 }
 
 /*!
- * @brief  Parse an Glacier PurchaseProvisionedCapacityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier PurchaseProvisionedCapacity response element from \a xml.
  */
 void PurchaseProvisionedCapacityResponsePrivate::parsePurchaseProvisionedCapacityResponse(QXmlStreamReader &xml)
 {

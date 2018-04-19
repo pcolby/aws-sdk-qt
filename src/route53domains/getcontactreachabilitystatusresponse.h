@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetContactReachabilityStatusResponse : public Route53DomainsR
 public:
     GetContactReachabilityStatusResponse(const GetContactReachabilityStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetContactReachabilityStatusRequest * request() const;
+    virtual const GetContactReachabilityStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetContactReachabilityStatusResponse)

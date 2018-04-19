@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::DeletePlatformApplicationResponse
- *
  * \brief The DeletePlatformApplicationResponse class provides an interace for SNS DeletePlatformApplication responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new DeletePlatformApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeletePlatformApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeletePlatformApplicationResponse::DeletePlatformApplicationResponse(
         const DeletePlatformApplicationRequest &request,
@@ -69,6 +64,9 @@ DeletePlatformApplicationResponse::DeletePlatformApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeletePlatformApplicationRequest * DeletePlatformApplicationResponse::request() const
 {
     Q_D(const DeletePlatformApplicationResponse);
@@ -76,9 +74,8 @@ const DeletePlatformApplicationRequest * DeletePlatformApplicationResponse::requ
 }
 
 /*!
- * @brief  Parse a SNS DeletePlatformApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS DeletePlatformApplication \a response.
  */
 void DeletePlatformApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeletePlatformApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::DeletePlatformApplicationResponsePrivate
+ * \brief The DeletePlatformApplicationResponsePrivate class provides private implementation for DeletePlatformApplicationResponse.
  * \internal
  *
- * \class DeletePlatformApplicationResponsePrivate
- *
- * \brief Private implementation for DeletePlatformApplicationResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePlatformApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeletePlatformApplicationResponse instance.
+ * Constructs a DeletePlatformApplicationResponsePrivate object with public implementation \a q.
  */
 DeletePlatformApplicationResponsePrivate::DeletePlatformApplicationResponsePrivate(
     DeletePlatformApplicationResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ DeletePlatformApplicationResponsePrivate::DeletePlatformApplicationResponsePriva
 }
 
 /*!
- * @brief  Parse an SNS DeletePlatformApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS DeletePlatformApplication response element from \a xml.
  */
 void DeletePlatformApplicationResponsePrivate::parseDeletePlatformApplicationResponse(QXmlStreamReader &xml)
 {

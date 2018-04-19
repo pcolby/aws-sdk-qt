@@ -154,9 +154,8 @@ QtAws::Core::AwsAbstractResponse * DeleteScalingPolicyRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteScalingPolicyRequestPrivate object for ApplicationAutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DeleteScalingPolicyRequestPrivate object for ApplicationAutoScaling \a action,
+ * with public implementation \a q.
  */
 DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DeleteScalingPolicyRequest * const q)

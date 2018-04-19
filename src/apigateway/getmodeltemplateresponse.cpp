@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetModelTemplateResponse
- *
  * \brief The GetModelTemplateResponse class provides an interace for APIGateway GetModelTemplate responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetModelTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetModelTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 GetModelTemplateResponse::GetModelTemplateResponse(
         const GetModelTemplateRequest &request,
@@ -60,6 +55,9 @@ GetModelTemplateResponse::GetModelTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetModelTemplateRequest * GetModelTemplateResponse::request() const
 {
     Q_D(const GetModelTemplateResponse);
@@ -67,9 +65,8 @@ const GetModelTemplateRequest * GetModelTemplateResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetModelTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetModelTemplate \a response.
  */
 void GetModelTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetModelTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetModelTemplateResponsePrivate
+ * \brief The GetModelTemplateResponsePrivate class provides private implementation for GetModelTemplateResponse.
  * \internal
  *
- * \class GetModelTemplateResponsePrivate
- *
- * \brief Private implementation for GetModelTemplateResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetModelTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetModelTemplateResponse instance.
+ * Constructs a GetModelTemplateResponsePrivate object with public implementation \a q.
  */
 GetModelTemplateResponsePrivate::GetModelTemplateResponsePrivate(
     GetModelTemplateResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetModelTemplateResponsePrivate::GetModelTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetModelTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetModelTemplate response element from \a xml.
  */
 void GetModelTemplateResponsePrivate::parseGetModelTemplateResponse(QXmlStreamReader &xml)
 {

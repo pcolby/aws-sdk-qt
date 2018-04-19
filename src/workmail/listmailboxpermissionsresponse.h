@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListMailboxPermissionsResponse : public WorkMailResponse {
 public:
     ListMailboxPermissionsResponse(const ListMailboxPermissionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListMailboxPermissionsRequest * request() const;
+    virtual const ListMailboxPermissionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListMailboxPermissionsResponse)

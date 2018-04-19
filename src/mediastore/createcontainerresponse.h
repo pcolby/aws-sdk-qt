@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateContainerResponse : public MediaStoreResponse {
 public:
     CreateContainerResponse(const CreateContainerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateContainerRequest * request() const;
+    virtual const CreateContainerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateContainerResponse)

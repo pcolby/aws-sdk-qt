@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * PutPolicyRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a PutPolicyRequestPrivate object for FMS \a action with,
- * public implementation \a q.
+ * Constructs a PutPolicyRequestPrivate object for FMS \a action,
+ * with public implementation \a q.
  */
 PutPolicyRequestPrivate::PutPolicyRequestPrivate(
     const FMSRequest::Action action, PutPolicyRequest * const q)

@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::GetTopicAttributesResponse
- *
  * \brief The GetTopicAttributesResponse class provides an interace for SNS GetTopicAttributes responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new GetTopicAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTopicAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTopicAttributesResponse::GetTopicAttributesResponse(
         const GetTopicAttributesRequest &request,
@@ -69,6 +64,9 @@ GetTopicAttributesResponse::GetTopicAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTopicAttributesRequest * GetTopicAttributesResponse::request() const
 {
     Q_D(const GetTopicAttributesResponse);
@@ -76,9 +74,8 @@ const GetTopicAttributesRequest * GetTopicAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SNS GetTopicAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS GetTopicAttributes \a response.
  */
 void GetTopicAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void GetTopicAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::GetTopicAttributesResponsePrivate
+ * \brief The GetTopicAttributesResponsePrivate class provides private implementation for GetTopicAttributesResponse.
  * \internal
  *
- * \class GetTopicAttributesResponsePrivate
- *
- * \brief Private implementation for GetTopicAttributesResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTopicAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTopicAttributesResponse instance.
+ * Constructs a GetTopicAttributesResponsePrivate object with public implementation \a q.
  */
 GetTopicAttributesResponsePrivate::GetTopicAttributesResponsePrivate(
     GetTopicAttributesResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ GetTopicAttributesResponsePrivate::GetTopicAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS GetTopicAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS GetTopicAttributes response element from \a xml.
  */
 void GetTopicAttributesResponsePrivate::parseGetTopicAttributesResponse(QXmlStreamReader &xml)
 {

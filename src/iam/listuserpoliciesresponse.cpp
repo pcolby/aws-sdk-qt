@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListUserPoliciesResponse
- *
  * \brief The ListUserPoliciesResponse class provides an interace for IAM ListUserPolicies responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListUserPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListUserPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListUserPoliciesResponse::ListUserPoliciesResponse(
         const ListUserPoliciesRequest &request,
@@ -120,6 +115,9 @@ ListUserPoliciesResponse::ListUserPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListUserPoliciesRequest * ListUserPoliciesResponse::request() const
 {
     Q_D(const ListUserPoliciesResponse);
@@ -127,9 +125,8 @@ const ListUserPoliciesRequest * ListUserPoliciesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM ListUserPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListUserPolicies \a response.
  */
 void ListUserPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListUserPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListUserPoliciesResponsePrivate
+ * \brief The ListUserPoliciesResponsePrivate class provides private implementation for ListUserPoliciesResponse.
  * \internal
  *
- * \class ListUserPoliciesResponsePrivate
- *
- * \brief Private implementation for ListUserPoliciesResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUserPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListUserPoliciesResponse instance.
+ * Constructs a ListUserPoliciesResponsePrivate object with public implementation \a q.
  */
 ListUserPoliciesResponsePrivate::ListUserPoliciesResponsePrivate(
     ListUserPoliciesResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListUserPoliciesResponsePrivate::ListUserPoliciesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListUserPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListUserPolicies response element from \a xml.
  */
 void ListUserPoliciesResponsePrivate::parseListUserPoliciesResponse(QXmlStreamReader &xml)
 {

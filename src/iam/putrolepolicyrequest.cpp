@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * PutRolePolicyRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a PutRolePolicyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a PutRolePolicyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 PutRolePolicyRequestPrivate::PutRolePolicyRequestPrivate(
     const IAMRequest::Action action, PutRolePolicyRequest * const q)

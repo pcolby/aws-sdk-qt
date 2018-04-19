@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::CountPendingActivityTasksResponse
- *
  * \brief The CountPendingActivityTasksResponse class provides an interace for SWF CountPendingActivityTasks responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new CountPendingActivityTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CountPendingActivityTasksResponse object for \a reply to \a request, with parent \a parent.
  */
 CountPendingActivityTasksResponse::CountPendingActivityTasksResponse(
         const CountPendingActivityTasksRequest &request,
@@ -71,6 +66,9 @@ CountPendingActivityTasksResponse::CountPendingActivityTasksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CountPendingActivityTasksRequest * CountPendingActivityTasksResponse::request() const
 {
     Q_D(const CountPendingActivityTasksResponse);
@@ -78,9 +76,8 @@ const CountPendingActivityTasksRequest * CountPendingActivityTasksResponse::requ
 }
 
 /*!
- * @brief  Parse a SWF CountPendingActivityTasks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF CountPendingActivityTasks \a response.
  */
 void CountPendingActivityTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void CountPendingActivityTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::CountPendingActivityTasksResponsePrivate
+ * \brief The CountPendingActivityTasksResponsePrivate class provides private implementation for CountPendingActivityTasksResponse.
  * \internal
  *
- * \class CountPendingActivityTasksResponsePrivate
- *
- * \brief Private implementation for CountPendingActivityTasksResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CountPendingActivityTasksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CountPendingActivityTasksResponse instance.
+ * Constructs a CountPendingActivityTasksResponsePrivate object with public implementation \a q.
  */
 CountPendingActivityTasksResponsePrivate::CountPendingActivityTasksResponsePrivate(
     CountPendingActivityTasksResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ CountPendingActivityTasksResponsePrivate::CountPendingActivityTasksResponsePriva
 }
 
 /*!
- * @brief  Parse an SWF CountPendingActivityTasksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF CountPendingActivityTasks response element from \a xml.
  */
 void CountPendingActivityTasksResponsePrivate::parseCountPendingActivityTasksResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelReservedInstancesListingResponse
- *
  * \brief The CancelReservedInstancesListingResponse class provides an interace for EC2 CancelReservedInstancesListing responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelReservedInstancesListingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelReservedInstancesListingResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelReservedInstancesListingResponse::CancelReservedInstancesListingResponse(
         const CancelReservedInstancesListingRequest &request,
@@ -59,6 +54,9 @@ CancelReservedInstancesListingResponse::CancelReservedInstancesListingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelReservedInstancesListingRequest * CancelReservedInstancesListingResponse::request() const
 {
     Q_D(const CancelReservedInstancesListingResponse);
@@ -66,9 +64,8 @@ const CancelReservedInstancesListingRequest * CancelReservedInstancesListingResp
 }
 
 /*!
- * @brief  Parse a EC2 CancelReservedInstancesListing response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CancelReservedInstancesListing \a response.
  */
 void CancelReservedInstancesListingResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CancelReservedInstancesListingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CancelReservedInstancesListingResponsePrivate
+ * \brief The CancelReservedInstancesListingResponsePrivate class provides private implementation for CancelReservedInstancesListingResponse.
  * \internal
  *
- * \class CancelReservedInstancesListingResponsePrivate
- *
- * \brief Private implementation for CancelReservedInstancesListingResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelReservedInstancesListingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelReservedInstancesListingResponse instance.
+ * Constructs a CancelReservedInstancesListingResponsePrivate object with public implementation \a q.
  */
 CancelReservedInstancesListingResponsePrivate::CancelReservedInstancesListingResponsePrivate(
     CancelReservedInstancesListingResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CancelReservedInstancesListingResponsePrivate::CancelReservedInstancesListingRes
 }
 
 /*!
- * @brief  Parse an EC2 CancelReservedInstancesListingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CancelReservedInstancesListing response element from \a xml.
  */
 void CancelReservedInstancesListingResponsePrivate::parseCancelReservedInstancesListingResponse(QXmlStreamReader &xml)
 {

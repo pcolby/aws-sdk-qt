@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeNotificationConfigurationsResponse
- *
  * \brief The DescribeNotificationConfigurationsResponse class provides an interace for AutoScaling DescribeNotificationConfigurations responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeNotificationConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeNotificationConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeNotificationConfigurationsResponse::DescribeNotificationConfigurationsResponse(
         const DescribeNotificationConfigurationsRequest &request,
@@ -60,6 +55,9 @@ DescribeNotificationConfigurationsResponse::DescribeNotificationConfigurationsRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeNotificationConfigurationsRequest * DescribeNotificationConfigurationsResponse::request() const
 {
     Q_D(const DescribeNotificationConfigurationsResponse);
@@ -67,9 +65,8 @@ const DescribeNotificationConfigurationsRequest * DescribeNotificationConfigurat
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeNotificationConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeNotificationConfigurations \a response.
  */
 void DescribeNotificationConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeNotificationConfigurationsResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeNotificationConfigurationsResponsePrivate
+ * \brief The DescribeNotificationConfigurationsResponsePrivate class provides private implementation for DescribeNotificationConfigurationsResponse.
  * \internal
  *
- * \class DescribeNotificationConfigurationsResponsePrivate
- *
- * \brief Private implementation for DescribeNotificationConfigurationsResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNotificationConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeNotificationConfigurationsResponse instance.
+ * Constructs a DescribeNotificationConfigurationsResponsePrivate object with public implementation \a q.
  */
 DescribeNotificationConfigurationsResponsePrivate::DescribeNotificationConfigurationsResponsePrivate(
     DescribeNotificationConfigurationsResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeNotificationConfigurationsResponsePrivate::DescribeNotificationConfigura
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeNotificationConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeNotificationConfigurations response element from \a xml.
  */
 void DescribeNotificationConfigurationsResponsePrivate::parseDescribeNotificationConfigurationsResponse(QXmlStreamReader &xml)
 {

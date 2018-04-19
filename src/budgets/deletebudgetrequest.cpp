@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBudgetRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteBudgetRequestPrivate object for Budgets \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBudgetRequestPrivate object for Budgets \a action,
+ * with public implementation \a q.
  */
 DeleteBudgetRequestPrivate::DeleteBudgetRequestPrivate(
     const BudgetsRequest::Action action, DeleteBudgetRequest * const q)

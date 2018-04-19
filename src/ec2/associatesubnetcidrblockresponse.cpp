@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssociateSubnetCidrBlockResponse
- *
  * \brief The AssociateSubnetCidrBlockResponse class provides an interace for EC2 AssociateSubnetCidrBlock responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssociateSubnetCidrBlockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateSubnetCidrBlockResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateSubnetCidrBlockResponse::AssociateSubnetCidrBlockResponse(
         const AssociateSubnetCidrBlockRequest &request,
@@ -59,6 +54,9 @@ AssociateSubnetCidrBlockResponse::AssociateSubnetCidrBlockResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateSubnetCidrBlockRequest * AssociateSubnetCidrBlockResponse::request() const
 {
     Q_D(const AssociateSubnetCidrBlockResponse);
@@ -66,9 +64,8 @@ const AssociateSubnetCidrBlockRequest * AssociateSubnetCidrBlockResponse::reques
 }
 
 /*!
- * @brief  Parse a EC2 AssociateSubnetCidrBlock response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AssociateSubnetCidrBlock \a response.
  */
 void AssociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AssociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AssociateSubnetCidrBlockResponsePrivate
+ * \brief The AssociateSubnetCidrBlockResponsePrivate class provides private implementation for AssociateSubnetCidrBlockResponse.
  * \internal
  *
- * \class AssociateSubnetCidrBlockResponsePrivate
- *
- * \brief Private implementation for AssociateSubnetCidrBlockResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateSubnetCidrBlockResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateSubnetCidrBlockResponse instance.
+ * Constructs a AssociateSubnetCidrBlockResponsePrivate object with public implementation \a q.
  */
 AssociateSubnetCidrBlockResponsePrivate::AssociateSubnetCidrBlockResponsePrivate(
     AssociateSubnetCidrBlockResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AssociateSubnetCidrBlockResponsePrivate::AssociateSubnetCidrBlockResponsePrivate
 }
 
 /*!
- * @brief  Parse an EC2 AssociateSubnetCidrBlockResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AssociateSubnetCidrBlock response element from \a xml.
  */
 void AssociateSubnetCidrBlockResponsePrivate::parseAssociateSubnetCidrBlockResponse(QXmlStreamReader &xml)
 {

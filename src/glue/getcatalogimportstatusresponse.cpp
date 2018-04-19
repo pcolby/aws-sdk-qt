@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetCatalogImportStatusResponse
- *
  * \brief The GetCatalogImportStatusResponse class provides an interace for Glue GetCatalogImportStatus responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetCatalogImportStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCatalogImportStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCatalogImportStatusResponse::GetCatalogImportStatusResponse(
         const GetCatalogImportStatusRequest &request,
@@ -58,6 +53,9 @@ GetCatalogImportStatusResponse::GetCatalogImportStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCatalogImportStatusRequest * GetCatalogImportStatusResponse::request() const
 {
     Q_D(const GetCatalogImportStatusResponse);
@@ -65,9 +63,8 @@ const GetCatalogImportStatusRequest * GetCatalogImportStatusResponse::request() 
 }
 
 /*!
- * @brief  Parse a Glue GetCatalogImportStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetCatalogImportStatus \a response.
  */
 void GetCatalogImportStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetCatalogImportStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetCatalogImportStatusResponsePrivate
+ * \brief The GetCatalogImportStatusResponsePrivate class provides private implementation for GetCatalogImportStatusResponse.
  * \internal
  *
- * \class GetCatalogImportStatusResponsePrivate
- *
- * \brief Private implementation for GetCatalogImportStatusResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCatalogImportStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCatalogImportStatusResponse instance.
+ * Constructs a GetCatalogImportStatusResponsePrivate object with public implementation \a q.
  */
 GetCatalogImportStatusResponsePrivate::GetCatalogImportStatusResponsePrivate(
     GetCatalogImportStatusResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetCatalogImportStatusResponsePrivate::GetCatalogImportStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetCatalogImportStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetCatalogImportStatus response element from \a xml.
  */
 void GetCatalogImportStatusResponsePrivate::parseGetCatalogImportStatusResponse(QXmlStreamReader &xml)
 {

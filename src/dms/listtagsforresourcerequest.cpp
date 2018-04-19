@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListTagsForResourceRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsForResourceRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ListTagsForResourceRequest * const q)

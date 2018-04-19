@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::CountOpenWorkflowExecutionsResponse
- *
  * \brief The CountOpenWorkflowExecutionsResponse class provides an interace for SWF CountOpenWorkflowExecutions responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new CountOpenWorkflowExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CountOpenWorkflowExecutionsResponse object for \a reply to \a request, with parent \a parent.
  */
 CountOpenWorkflowExecutionsResponse::CountOpenWorkflowExecutionsResponse(
         const CountOpenWorkflowExecutionsRequest &request,
@@ -71,6 +66,9 @@ CountOpenWorkflowExecutionsResponse::CountOpenWorkflowExecutionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CountOpenWorkflowExecutionsRequest * CountOpenWorkflowExecutionsResponse::request() const
 {
     Q_D(const CountOpenWorkflowExecutionsResponse);
@@ -78,9 +76,8 @@ const CountOpenWorkflowExecutionsRequest * CountOpenWorkflowExecutionsResponse::
 }
 
 /*!
- * @brief  Parse a SWF CountOpenWorkflowExecutions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF CountOpenWorkflowExecutions \a response.
  */
 void CountOpenWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void CountOpenWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::CountOpenWorkflowExecutionsResponsePrivate
+ * \brief The CountOpenWorkflowExecutionsResponsePrivate class provides private implementation for CountOpenWorkflowExecutionsResponse.
  * \internal
  *
- * \class CountOpenWorkflowExecutionsResponsePrivate
- *
- * \brief Private implementation for CountOpenWorkflowExecutionsResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CountOpenWorkflowExecutionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CountOpenWorkflowExecutionsResponse instance.
+ * Constructs a CountOpenWorkflowExecutionsResponsePrivate object with public implementation \a q.
  */
 CountOpenWorkflowExecutionsResponsePrivate::CountOpenWorkflowExecutionsResponsePrivate(
     CountOpenWorkflowExecutionsResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ CountOpenWorkflowExecutionsResponsePrivate::CountOpenWorkflowExecutionsResponseP
 }
 
 /*!
- * @brief  Parse an SWF CountOpenWorkflowExecutionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF CountOpenWorkflowExecutions response element from \a xml.
  */
 void CountOpenWorkflowExecutionsResponsePrivate::parseCountOpenWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {

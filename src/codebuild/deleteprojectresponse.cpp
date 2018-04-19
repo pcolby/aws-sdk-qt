@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::DeleteProjectResponse
- *
  * \brief The DeleteProjectResponse class provides an interace for CodeBuild DeleteProject responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new DeleteProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteProjectResponse::DeleteProjectResponse(
         const DeleteProjectRequest &request,
@@ -135,6 +130,9 @@ DeleteProjectResponse::DeleteProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteProjectRequest * DeleteProjectResponse::request() const
 {
     Q_D(const DeleteProjectResponse);
@@ -142,9 +140,8 @@ const DeleteProjectRequest * DeleteProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeBuild DeleteProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild DeleteProject \a response.
  */
 void DeleteProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void DeleteProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::DeleteProjectResponsePrivate
+ * \brief The DeleteProjectResponsePrivate class provides private implementation for DeleteProjectResponse.
  * \internal
  *
- * \class DeleteProjectResponsePrivate
- *
- * \brief Private implementation for DeleteProjectResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteProjectResponse instance.
+ * Constructs a DeleteProjectResponsePrivate object with public implementation \a q.
  */
 DeleteProjectResponsePrivate::DeleteProjectResponsePrivate(
     DeleteProjectResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ DeleteProjectResponsePrivate::DeleteProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeBuild DeleteProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild DeleteProject response element from \a xml.
  */
 void DeleteProjectResponsePrivate::parseDeleteProjectResponse(QXmlStreamReader &xml)
 {

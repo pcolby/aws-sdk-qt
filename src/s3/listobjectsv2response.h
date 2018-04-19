@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListObjectsV2Response : public S3Response {
 public:
     ListObjectsV2Response(const ListObjectsV2Request &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListObjectsV2Request * request() const;
+    virtual const ListObjectsV2Request * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListObjectsV2Response)

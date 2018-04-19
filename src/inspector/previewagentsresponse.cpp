@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::PreviewAgentsResponse
- *
  * \brief The PreviewAgentsResponse class provides an interace for Inspector PreviewAgents responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new PreviewAgentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PreviewAgentsResponse object for \a reply to \a request, with parent \a parent.
  */
 PreviewAgentsResponse::PreviewAgentsResponse(
         const PreviewAgentsRequest &request,
@@ -60,6 +55,9 @@ PreviewAgentsResponse::PreviewAgentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PreviewAgentsRequest * PreviewAgentsResponse::request() const
 {
     Q_D(const PreviewAgentsResponse);
@@ -67,9 +65,8 @@ const PreviewAgentsRequest * PreviewAgentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector PreviewAgents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector PreviewAgents \a response.
  */
 void PreviewAgentsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void PreviewAgentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::PreviewAgentsResponsePrivate
+ * \brief The PreviewAgentsResponsePrivate class provides private implementation for PreviewAgentsResponse.
  * \internal
  *
- * \class PreviewAgentsResponsePrivate
- *
- * \brief Private implementation for PreviewAgentsResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PreviewAgentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PreviewAgentsResponse instance.
+ * Constructs a PreviewAgentsResponsePrivate object with public implementation \a q.
  */
 PreviewAgentsResponsePrivate::PreviewAgentsResponsePrivate(
     PreviewAgentsResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ PreviewAgentsResponsePrivate::PreviewAgentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector PreviewAgentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector PreviewAgents response element from \a xml.
  */
 void PreviewAgentsResponsePrivate::parsePreviewAgentsResponse(QXmlStreamReader &xml)
 {

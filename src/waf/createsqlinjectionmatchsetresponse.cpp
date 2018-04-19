@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::CreateSqlInjectionMatchSetResponse
- *
  * \brief The CreateSqlInjectionMatchSetResponse class provides an interace for WAF CreateSqlInjectionMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new CreateSqlInjectionMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSqlInjectionMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSqlInjectionMatchSetResponse::CreateSqlInjectionMatchSetResponse(
         const CreateSqlInjectionMatchSetRequest &request,
@@ -60,6 +55,9 @@ CreateSqlInjectionMatchSetResponse::CreateSqlInjectionMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSqlInjectionMatchSetRequest * CreateSqlInjectionMatchSetResponse::request() const
 {
     Q_D(const CreateSqlInjectionMatchSetResponse);
@@ -67,9 +65,8 @@ const CreateSqlInjectionMatchSetRequest * CreateSqlInjectionMatchSetResponse::re
 }
 
 /*!
- * @brief  Parse a WAF CreateSqlInjectionMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF CreateSqlInjectionMatchSet \a response.
  */
 void CreateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::CreateSqlInjectionMatchSetResponsePrivate
+ * \brief The CreateSqlInjectionMatchSetResponsePrivate class provides private implementation for CreateSqlInjectionMatchSetResponse.
  * \internal
  *
- * \class CreateSqlInjectionMatchSetResponsePrivate
- *
- * \brief Private implementation for CreateSqlInjectionMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSqlInjectionMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSqlInjectionMatchSetResponse instance.
+ * Constructs a CreateSqlInjectionMatchSetResponsePrivate object with public implementation \a q.
  */
 CreateSqlInjectionMatchSetResponsePrivate::CreateSqlInjectionMatchSetResponsePrivate(
     CreateSqlInjectionMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateSqlInjectionMatchSetResponsePrivate::CreateSqlInjectionMatchSetResponsePri
 }
 
 /*!
- * @brief  Parse an WAF CreateSqlInjectionMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF CreateSqlInjectionMatchSet response element from \a xml.
  */
 void CreateSqlInjectionMatchSetResponsePrivate::parseCreateSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {

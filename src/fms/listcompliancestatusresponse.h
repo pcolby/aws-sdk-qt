@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListComplianceStatusResponse : public FMSResponse {
 public:
     ListComplianceStatusResponse(const ListComplianceStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListComplianceStatusRequest * request() const;
+    virtual const ListComplianceStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListComplianceStatusResponse)

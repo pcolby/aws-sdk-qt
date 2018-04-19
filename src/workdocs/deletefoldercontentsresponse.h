@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteFolderContentsResponse : public WorkDocsResponse {
 public:
     DeleteFolderContentsResponse(const DeleteFolderContentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteFolderContentsRequest * request() const;
+    virtual const DeleteFolderContentsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteFolderContentsResponse)

@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * GetContainerPolicyRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetContainerPolicyRequestPrivate object for MediaStore \a action with,
- * public implementation \a q.
+ * Constructs a GetContainerPolicyRequestPrivate object for MediaStore \a action,
+ * with public implementation \a q.
  */
 GetContainerPolicyRequestPrivate::GetContainerPolicyRequestPrivate(
     const MediaStoreRequest::Action action, GetContainerPolicyRequest * const q)

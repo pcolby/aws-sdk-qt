@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * VerifyEmailIdentityRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a VerifyEmailIdentityRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a VerifyEmailIdentityRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
     const SESRequest::Action action, VerifyEmailIdentityRequest * const q)

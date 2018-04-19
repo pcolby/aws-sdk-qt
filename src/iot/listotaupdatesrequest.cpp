@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListOTAUpdatesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListOTAUpdatesRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListOTAUpdatesRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListOTAUpdatesRequestPrivate::ListOTAUpdatesRequestPrivate(
     const IoTRequest::Action action, ListOTAUpdatesRequest * const q)

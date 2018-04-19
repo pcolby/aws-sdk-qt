@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteProjectRequestPrivate object for Mobile \a action with,
- * public implementation \a q.
+ * Constructs a DeleteProjectRequestPrivate object for Mobile \a action,
+ * with public implementation \a q.
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const MobileRequest::Action action, DeleteProjectRequest * const q)

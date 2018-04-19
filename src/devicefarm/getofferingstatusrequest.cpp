@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * GetOfferingStatusRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetOfferingStatusRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a GetOfferingStatusRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 GetOfferingStatusRequestPrivate::GetOfferingStatusRequestPrivate(
     const DeviceFarmRequest::Action action, GetOfferingStatusRequest * const q)

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::TestInvokeMethodResponse
- *
  * \brief The TestInvokeMethodResponse class provides an interace for APIGateway TestInvokeMethod responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new TestInvokeMethodResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TestInvokeMethodResponse object for \a reply to \a request, with parent \a parent.
  */
 TestInvokeMethodResponse::TestInvokeMethodResponse(
         const TestInvokeMethodRequest &request,
@@ -60,6 +55,9 @@ TestInvokeMethodResponse::TestInvokeMethodResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TestInvokeMethodRequest * TestInvokeMethodResponse::request() const
 {
     Q_D(const TestInvokeMethodResponse);
@@ -67,9 +65,8 @@ const TestInvokeMethodRequest * TestInvokeMethodResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway TestInvokeMethod response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway TestInvokeMethod \a response.
  */
 void TestInvokeMethodResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void TestInvokeMethodResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::TestInvokeMethodResponsePrivate
+ * \brief The TestInvokeMethodResponsePrivate class provides private implementation for TestInvokeMethodResponse.
  * \internal
  *
- * \class TestInvokeMethodResponsePrivate
- *
- * \brief Private implementation for TestInvokeMethodResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestInvokeMethodResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TestInvokeMethodResponse instance.
+ * Constructs a TestInvokeMethodResponsePrivate object with public implementation \a q.
  */
 TestInvokeMethodResponsePrivate::TestInvokeMethodResponsePrivate(
     TestInvokeMethodResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ TestInvokeMethodResponsePrivate::TestInvokeMethodResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway TestInvokeMethodResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway TestInvokeMethod response element from \a xml.
  */
 void TestInvokeMethodResponsePrivate::parseTestInvokeMethodResponse(QXmlStreamReader &xml)
 {

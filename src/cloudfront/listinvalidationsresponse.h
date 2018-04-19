@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListInvalidationsResponse : public CloudFrontResponse {
 public:
     ListInvalidationsResponse(const ListInvalidationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListInvalidationsRequest * request() const;
+    virtual const ListInvalidationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListInvalidationsResponse)

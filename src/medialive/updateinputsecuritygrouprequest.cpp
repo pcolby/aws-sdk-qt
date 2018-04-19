@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateInputSecurityGroupRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateInputSecurityGroupRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a UpdateInputSecurityGroupRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 UpdateInputSecurityGroupRequestPrivate::UpdateInputSecurityGroupRequestPrivate(
     const MediaLiveRequest::Action action, UpdateInputSecurityGroupRequest * const q)

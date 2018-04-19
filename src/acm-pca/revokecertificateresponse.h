@@ -34,10 +34,10 @@ class QTAWS_EXPORT RevokeCertificateResponse : public ACMPCAResponse {
 public:
     RevokeCertificateResponse(const RevokeCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RevokeCertificateRequest * request() const;
+    virtual const RevokeCertificateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RevokeCertificateResponse)

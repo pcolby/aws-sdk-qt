@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListPublishedSchemaArnsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListPublishedSchemaArnsRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a ListPublishedSchemaArnsRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 ListPublishedSchemaArnsRequestPrivate::ListPublishedSchemaArnsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListPublishedSchemaArnsRequest * const q)

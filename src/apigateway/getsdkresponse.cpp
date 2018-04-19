@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetSdkResponse
- *
  * \brief The GetSdkResponse class provides an interace for APIGateway GetSdk responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetSdkResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSdkResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSdkResponse::GetSdkResponse(
         const GetSdkRequest &request,
@@ -60,6 +55,9 @@ GetSdkResponse::GetSdkResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSdkRequest * GetSdkResponse::request() const
 {
     Q_D(const GetSdkResponse);
@@ -67,9 +65,8 @@ const GetSdkRequest * GetSdkResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetSdk response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetSdk \a response.
  */
 void GetSdkResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetSdkResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetSdkResponsePrivate
+ * \brief The GetSdkResponsePrivate class provides private implementation for GetSdkResponse.
  * \internal
  *
- * \class GetSdkResponsePrivate
- *
- * \brief Private implementation for GetSdkResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSdkResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSdkResponse instance.
+ * Constructs a GetSdkResponsePrivate object with public implementation \a q.
  */
 GetSdkResponsePrivate::GetSdkResponsePrivate(
     GetSdkResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetSdkResponsePrivate::GetSdkResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetSdkResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetSdk response element from \a xml.
  */
 void GetSdkResponsePrivate::parseGetSdkResponse(QXmlStreamReader &xml)
 {

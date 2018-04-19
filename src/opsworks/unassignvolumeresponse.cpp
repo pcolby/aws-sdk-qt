@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UnassignVolumeResponse
- *
  * \brief The UnassignVolumeResponse class provides an interace for OpsWorks UnassignVolume responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UnassignVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UnassignVolumeResponse object for \a reply to \a request, with parent \a parent.
  */
 UnassignVolumeResponse::UnassignVolumeResponse(
         const UnassignVolumeRequest &request,
@@ -161,6 +156,9 @@ UnassignVolumeResponse::UnassignVolumeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UnassignVolumeRequest * UnassignVolumeResponse::request() const
 {
     Q_D(const UnassignVolumeResponse);
@@ -168,9 +166,8 @@ const UnassignVolumeRequest * UnassignVolumeResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks UnassignVolume response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks UnassignVolume \a response.
  */
 void UnassignVolumeResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void UnassignVolumeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::UnassignVolumeResponsePrivate
+ * \brief The UnassignVolumeResponsePrivate class provides private implementation for UnassignVolumeResponse.
  * \internal
  *
- * \class UnassignVolumeResponsePrivate
- *
- * \brief Private implementation for UnassignVolumeResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnassignVolumeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UnassignVolumeResponse instance.
+ * Constructs a UnassignVolumeResponsePrivate object with public implementation \a q.
  */
 UnassignVolumeResponsePrivate::UnassignVolumeResponsePrivate(
     UnassignVolumeResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ UnassignVolumeResponsePrivate::UnassignVolumeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks UnassignVolumeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks UnassignVolume response element from \a xml.
  */
 void UnassignVolumeResponsePrivate::parseUnassignVolumeResponse(QXmlStreamReader &xml)
 {

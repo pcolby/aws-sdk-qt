@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DeleteContactResponse
- *
  * \brief The DeleteContactResponse class provides an interace for AlexaForBusiness DeleteContact responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DeleteContactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteContactResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteContactResponse::DeleteContactResponse(
         const DeleteContactRequest &request,
@@ -60,6 +55,9 @@ DeleteContactResponse::DeleteContactResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteContactRequest * DeleteContactResponse::request() const
 {
     Q_D(const DeleteContactResponse);
@@ -67,9 +65,8 @@ const DeleteContactRequest * DeleteContactResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness DeleteContact response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness DeleteContact \a response.
  */
 void DeleteContactResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteContactResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::DeleteContactResponsePrivate
+ * \brief The DeleteContactResponsePrivate class provides private implementation for DeleteContactResponse.
  * \internal
  *
- * \class DeleteContactResponsePrivate
- *
- * \brief Private implementation for DeleteContactResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteContactResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteContactResponse instance.
+ * Constructs a DeleteContactResponsePrivate object with public implementation \a q.
  */
 DeleteContactResponsePrivate::DeleteContactResponsePrivate(
     DeleteContactResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteContactResponsePrivate::DeleteContactResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness DeleteContactResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness DeleteContact response element from \a xml.
  */
 void DeleteContactResponsePrivate::parseDeleteContactResponse(QXmlStreamReader &xml)
 {

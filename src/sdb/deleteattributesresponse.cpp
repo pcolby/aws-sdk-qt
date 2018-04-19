@@ -29,10 +29,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::DeleteAttributesResponse
- *
  * \brief The DeleteAttributesResponse class provides an interace for SimpleDB DeleteAttributes responses.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -52,11 +51,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new DeleteAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAttributesResponse::DeleteAttributesResponse(
         const DeleteAttributesRequest &request,
@@ -68,6 +63,9 @@ DeleteAttributesResponse::DeleteAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAttributesRequest * DeleteAttributesResponse::request() const
 {
     Q_D(const DeleteAttributesResponse);
@@ -75,9 +73,8 @@ const DeleteAttributesRequest * DeleteAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SimpleDB DeleteAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SimpleDB DeleteAttributes \a response.
  */
 void DeleteAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void DeleteAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SimpleDB::DeleteAttributesResponsePrivate
+ * \brief The DeleteAttributesResponsePrivate class provides private implementation for DeleteAttributesResponse.
  * \internal
  *
- * \class DeleteAttributesResponsePrivate
- *
- * \brief Private implementation for DeleteAttributesResponse.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAttributesResponse instance.
+ * Constructs a DeleteAttributesResponsePrivate object with public implementation \a q.
  */
 DeleteAttributesResponsePrivate::DeleteAttributesResponsePrivate(
     DeleteAttributesResponse * const q) : SimpleDBResponsePrivate(q)
@@ -108,9 +101,7 @@ DeleteAttributesResponsePrivate::DeleteAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SimpleDB DeleteAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SimpleDB DeleteAttributes response element from \a xml.
  */
 void DeleteAttributesResponsePrivate::parseDeleteAttributesResponse(QXmlStreamReader &xml)
 {

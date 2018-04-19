@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeConfigRuleEvaluationStatusResponse
- *
  * \brief The DescribeConfigRuleEvaluationStatusResponse class provides an interace for ConfigService DescribeConfigRuleEvaluationStatus responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigRuleEvaluationStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConfigRuleEvaluationStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConfigRuleEvaluationStatusResponse::DescribeConfigRuleEvaluationStatusResponse(
         const DescribeConfigRuleEvaluationStatusRequest &request,
@@ -78,6 +73,9 @@ DescribeConfigRuleEvaluationStatusResponse::DescribeConfigRuleEvaluationStatusRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConfigRuleEvaluationStatusRequest * DescribeConfigRuleEvaluationStatusResponse::request() const
 {
     Q_D(const DescribeConfigRuleEvaluationStatusResponse);
@@ -85,9 +83,8 @@ const DescribeConfigRuleEvaluationStatusRequest * DescribeConfigRuleEvaluationSt
 }
 
 /*!
- * @brief  Parse a ConfigService DescribeConfigRuleEvaluationStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribeConfigRuleEvaluationStatus \a response.
  */
 void DescribeConfigRuleEvaluationStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeConfigRuleEvaluationStatusResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribeConfigRuleEvaluationStatusResponsePrivate
+ * \brief The DescribeConfigRuleEvaluationStatusResponsePrivate class provides private implementation for DescribeConfigRuleEvaluationStatusResponse.
  * \internal
  *
- * \class DescribeConfigRuleEvaluationStatusResponsePrivate
- *
- * \brief Private implementation for DescribeConfigRuleEvaluationStatusResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigRuleEvaluationStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConfigRuleEvaluationStatusResponse instance.
+ * Constructs a DescribeConfigRuleEvaluationStatusResponsePrivate object with public implementation \a q.
  */
 DescribeConfigRuleEvaluationStatusResponsePrivate::DescribeConfigRuleEvaluationStatusResponsePrivate(
     DescribeConfigRuleEvaluationStatusResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeConfigRuleEvaluationStatusResponsePrivate::DescribeConfigRuleEvaluationS
 }
 
 /*!
- * @brief  Parse an ConfigService DescribeConfigRuleEvaluationStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribeConfigRuleEvaluationStatus response element from \a xml.
  */
 void DescribeConfigRuleEvaluationStatusResponsePrivate::parseDescribeConfigRuleEvaluationStatusResponse(QXmlStreamReader &xml)
 {

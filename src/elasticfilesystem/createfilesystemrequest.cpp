@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CreateFileSystemRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateFileSystemRequestPrivate object for EFS \a action with,
- * public implementation \a q.
+ * Constructs a CreateFileSystemRequestPrivate object for EFS \a action,
+ * with public implementation \a q.
  */
 CreateFileSystemRequestPrivate::CreateFileSystemRequestPrivate(
     const EFSRequest::Action action, CreateFileSystemRequest * const q)

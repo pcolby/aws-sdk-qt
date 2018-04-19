@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainNameRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteDomainNameRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDomainNameRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteDomainNameRequestPrivate::DeleteDomainNameRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDomainNameRequest * const q)

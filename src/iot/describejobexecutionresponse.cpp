@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeJobExecutionResponse
- *
  * \brief The DescribeJobExecutionResponse class provides an interace for IoT DescribeJobExecution responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeJobExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeJobExecutionResponse::DescribeJobExecutionResponse(
         const DescribeJobExecutionRequest &request,
@@ -66,6 +61,9 @@ DescribeJobExecutionResponse::DescribeJobExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeJobExecutionRequest * DescribeJobExecutionResponse::request() const
 {
     Q_D(const DescribeJobExecutionResponse);
@@ -73,9 +71,8 @@ const DescribeJobExecutionRequest * DescribeJobExecutionResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IoT DescribeJobExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DescribeJobExecution \a response.
  */
 void DescribeJobExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeJobExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DescribeJobExecutionResponsePrivate
+ * \brief The DescribeJobExecutionResponsePrivate class provides private implementation for DescribeJobExecutionResponse.
  * \internal
  *
- * \class DescribeJobExecutionResponsePrivate
- *
- * \brief Private implementation for DescribeJobExecutionResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeJobExecutionResponse instance.
+ * Constructs a DescribeJobExecutionResponsePrivate object with public implementation \a q.
  */
 DescribeJobExecutionResponsePrivate::DescribeJobExecutionResponsePrivate(
     DescribeJobExecutionResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeJobExecutionResponsePrivate::DescribeJobExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DescribeJobExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DescribeJobExecution response element from \a xml.
  */
 void DescribeJobExecutionResponsePrivate::parseDescribeJobExecutionResponse(QXmlStreamReader &xml)
 {

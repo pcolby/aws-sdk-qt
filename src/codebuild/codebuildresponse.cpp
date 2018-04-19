@@ -28,16 +28,13 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::CodeBuildResponse
- *
  * \brief The CodeBuildResponse class provides an interface for CodeBuild responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @brief  Constructs a new CodeBuildResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CodeBuildResponse object with parent \a parent.
  */
 CodeBuildResponse::CodeBuildResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CodeBuildResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CodeBuildResponse::CodeBuildResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeBuildResponse object.
- *
+ * \internal
+ * Constructs a CodeBuildResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeBuildResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CodeBuildResponse::CodeBuildResponse(CodeBuildResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CodeBuildResponse::CodeBuildResponse(CodeBuildResponsePrivate * const d, QObject
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CodeBuildResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CodeBuildResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeBuild::CodeBuildResponsePrivate
+ * \brief The CodeBuildResponsePrivate class provides private implementation for CodeBuildResponse.
+ * \internal
  *
- * @class  CodeBuildResponsePrivate
- *
- * @brief  Private implementation for CodeBuildResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeBuildResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CodeBuildResponse instance.
+ * Constructs a CodeBuildResponsePrivate object with public implementation \a q.
  */
 CodeBuildResponsePrivate::CodeBuildResponsePrivate(
     CodeBuildResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

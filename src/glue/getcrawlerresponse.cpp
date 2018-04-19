@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetCrawlerResponse
- *
  * \brief The GetCrawlerResponse class provides an interace for Glue GetCrawler responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetCrawlerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCrawlerResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCrawlerResponse::GetCrawlerResponse(
         const GetCrawlerRequest &request,
@@ -58,6 +53,9 @@ GetCrawlerResponse::GetCrawlerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCrawlerRequest * GetCrawlerResponse::request() const
 {
     Q_D(const GetCrawlerResponse);
@@ -65,9 +63,8 @@ const GetCrawlerRequest * GetCrawlerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetCrawler response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetCrawler \a response.
  */
 void GetCrawlerResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetCrawlerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetCrawlerResponsePrivate
+ * \brief The GetCrawlerResponsePrivate class provides private implementation for GetCrawlerResponse.
  * \internal
  *
- * \class GetCrawlerResponsePrivate
- *
- * \brief Private implementation for GetCrawlerResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCrawlerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCrawlerResponse instance.
+ * Constructs a GetCrawlerResponsePrivate object with public implementation \a q.
  */
 GetCrawlerResponsePrivate::GetCrawlerResponsePrivate(
     GetCrawlerResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetCrawlerResponsePrivate::GetCrawlerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetCrawlerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetCrawler response element from \a xml.
  */
 void GetCrawlerResponsePrivate::parseGetCrawlerResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::VerifyEmailAddressResponse
- *
  * \brief The VerifyEmailAddressResponse class provides an interace for SES VerifyEmailAddress responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new VerifyEmailAddressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a VerifyEmailAddressResponse object for \a reply to \a request, with parent \a parent.
  */
 VerifyEmailAddressResponse::VerifyEmailAddressResponse(
         const VerifyEmailAddressRequest &request,
@@ -66,6 +61,9 @@ VerifyEmailAddressResponse::VerifyEmailAddressResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const VerifyEmailAddressRequest * VerifyEmailAddressResponse::request() const
 {
     Q_D(const VerifyEmailAddressResponse);
@@ -73,9 +71,8 @@ const VerifyEmailAddressRequest * VerifyEmailAddressResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES VerifyEmailAddress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES VerifyEmailAddress \a response.
  */
 void VerifyEmailAddressResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void VerifyEmailAddressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::VerifyEmailAddressResponsePrivate
+ * \brief The VerifyEmailAddressResponsePrivate class provides private implementation for VerifyEmailAddressResponse.
  * \internal
  *
- * \class VerifyEmailAddressResponsePrivate
- *
- * \brief Private implementation for VerifyEmailAddressResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyEmailAddressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public VerifyEmailAddressResponse instance.
+ * Constructs a VerifyEmailAddressResponsePrivate object with public implementation \a q.
  */
 VerifyEmailAddressResponsePrivate::VerifyEmailAddressResponsePrivate(
     VerifyEmailAddressResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ VerifyEmailAddressResponsePrivate::VerifyEmailAddressResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES VerifyEmailAddressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES VerifyEmailAddress response element from \a xml.
  */
 void VerifyEmailAddressResponsePrivate::parseVerifyEmailAddressResponse(QXmlStreamReader &xml)
 {

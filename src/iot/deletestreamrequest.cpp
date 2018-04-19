@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteStreamRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeleteStreamRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
     const IoTRequest::Action action, DeleteStreamRequest * const q)

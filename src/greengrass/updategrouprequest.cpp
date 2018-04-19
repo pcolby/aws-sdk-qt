@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateGroupRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a UpdateGroupRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
     const GreengrassRequest::Action action, UpdateGroupRequest * const q)

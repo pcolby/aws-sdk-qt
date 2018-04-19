@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * RebootNodeRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a RebootNodeRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a RebootNodeRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 RebootNodeRequestPrivate::RebootNodeRequestPrivate(
     const DAXRequest::Action action, RebootNodeRequest * const q)

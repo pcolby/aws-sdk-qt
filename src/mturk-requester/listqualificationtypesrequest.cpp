@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListQualificationTypesRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListQualificationTypesRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a ListQualificationTypesRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 ListQualificationTypesRequestPrivate::ListQualificationTypesRequestPrivate(
     const MTurkRequest::Action action, ListQualificationTypesRequest * const q)

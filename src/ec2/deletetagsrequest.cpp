@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteTagsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTagsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const EC2Request::Action action, DeleteTagsRequest * const q)

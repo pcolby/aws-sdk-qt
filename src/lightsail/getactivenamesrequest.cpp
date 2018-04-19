@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetActiveNamesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetActiveNamesRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetActiveNamesRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetActiveNamesRequestPrivate::GetActiveNamesRequestPrivate(
     const LightsailRequest::Action action, GetActiveNamesRequest * const q)

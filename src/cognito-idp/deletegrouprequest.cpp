@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteGroupRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a DeleteGroupRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteGroupRequest * const q)

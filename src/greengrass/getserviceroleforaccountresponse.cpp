@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetServiceRoleForAccountResponse
- *
  * \brief The GetServiceRoleForAccountResponse class provides an interace for Greengrass GetServiceRoleForAccount responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetServiceRoleForAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetServiceRoleForAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 GetServiceRoleForAccountResponse::GetServiceRoleForAccountResponse(
         const GetServiceRoleForAccountRequest &request,
@@ -58,6 +53,9 @@ GetServiceRoleForAccountResponse::GetServiceRoleForAccountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetServiceRoleForAccountRequest * GetServiceRoleForAccountResponse::request() const
 {
     Q_D(const GetServiceRoleForAccountResponse);
@@ -65,9 +63,8 @@ const GetServiceRoleForAccountRequest * GetServiceRoleForAccountResponse::reques
 }
 
 /*!
- * @brief  Parse a Greengrass GetServiceRoleForAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass GetServiceRoleForAccount \a response.
  */
 void GetServiceRoleForAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetServiceRoleForAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::GetServiceRoleForAccountResponsePrivate
+ * \brief The GetServiceRoleForAccountResponsePrivate class provides private implementation for GetServiceRoleForAccountResponse.
  * \internal
  *
- * \class GetServiceRoleForAccountResponsePrivate
- *
- * \brief Private implementation for GetServiceRoleForAccountResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetServiceRoleForAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetServiceRoleForAccountResponse instance.
+ * Constructs a GetServiceRoleForAccountResponsePrivate object with public implementation \a q.
  */
 GetServiceRoleForAccountResponsePrivate::GetServiceRoleForAccountResponsePrivate(
     GetServiceRoleForAccountResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ GetServiceRoleForAccountResponsePrivate::GetServiceRoleForAccountResponsePrivate
 }
 
 /*!
- * @brief  Parse an Greengrass GetServiceRoleForAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass GetServiceRoleForAccount response element from \a xml.
  */
 void GetServiceRoleForAccountResponsePrivate::parseGetServiceRoleForAccountResponse(QXmlStreamReader &xml)
 {

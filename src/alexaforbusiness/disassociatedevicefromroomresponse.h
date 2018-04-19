@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateDeviceFromRoomResponse : public AlexaForBusinessR
 public:
     DisassociateDeviceFromRoomResponse(const DisassociateDeviceFromRoomRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateDeviceFromRoomRequest * request() const;
+    virtual const DisassociateDeviceFromRoomRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateDeviceFromRoomResponse)

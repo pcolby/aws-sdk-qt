@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::ListTypesResponse
- *
  * \brief The ListTypesResponse class provides an interace for AppSync ListTypes responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new ListTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTypesResponse::ListTypesResponse(
         const ListTypesRequest &request,
@@ -56,6 +51,9 @@ ListTypesResponse::ListTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTypesRequest * ListTypesResponse::request() const
 {
     Q_D(const ListTypesResponse);
@@ -63,9 +61,8 @@ const ListTypesRequest * ListTypesResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync ListTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync ListTypes \a response.
  */
 void ListTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::ListTypesResponsePrivate
+ * \brief The ListTypesResponsePrivate class provides private implementation for ListTypesResponse.
  * \internal
  *
- * \class ListTypesResponsePrivate
- *
- * \brief Private implementation for ListTypesResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTypesResponse instance.
+ * Constructs a ListTypesResponsePrivate object with public implementation \a q.
  */
 ListTypesResponsePrivate::ListTypesResponsePrivate(
     ListTypesResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ ListTypesResponsePrivate::ListTypesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync ListTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync ListTypes response element from \a xml.
  */
 void ListTypesResponsePrivate::parseListTypesResponse(QXmlStreamReader &xml)
 {

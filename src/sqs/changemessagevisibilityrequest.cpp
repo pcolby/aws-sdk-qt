@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * ChangeMessageVisibilityRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ChangeMessageVisibilityRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a ChangeMessageVisibilityRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
     const SQSRequest::Action action, ChangeMessageVisibilityRequest * const q)

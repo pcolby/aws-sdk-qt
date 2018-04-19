@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::DeleteWorkerBlockResponse
- *
  * \brief The DeleteWorkerBlockResponse class provides an interace for MTurk DeleteWorkerBlock responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::deleteWorkerBlock
  */
 
 /*!
- * @brief  Constructs a new DeleteWorkerBlockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteWorkerBlockResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteWorkerBlockResponse::DeleteWorkerBlockResponse(
         const DeleteWorkerBlockRequest &request,
@@ -55,6 +50,9 @@ DeleteWorkerBlockResponse::DeleteWorkerBlockResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteWorkerBlockRequest * DeleteWorkerBlockResponse::request() const
 {
     Q_D(const DeleteWorkerBlockResponse);
@@ -62,9 +60,8 @@ const DeleteWorkerBlockRequest * DeleteWorkerBlockResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk DeleteWorkerBlock response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk DeleteWorkerBlock \a response.
  */
 void DeleteWorkerBlockResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteWorkerBlockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::DeleteWorkerBlockResponsePrivate
+ * \brief The DeleteWorkerBlockResponsePrivate class provides private implementation for DeleteWorkerBlockResponse.
  * \internal
  *
- * \class DeleteWorkerBlockResponsePrivate
- *
- * \brief Private implementation for DeleteWorkerBlockResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteWorkerBlockResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteWorkerBlockResponse instance.
+ * Constructs a DeleteWorkerBlockResponsePrivate object with public implementation \a q.
  */
 DeleteWorkerBlockResponsePrivate::DeleteWorkerBlockResponsePrivate(
     DeleteWorkerBlockResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteWorkerBlockResponsePrivate::DeleteWorkerBlockResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk DeleteWorkerBlockResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk DeleteWorkerBlock response element from \a xml.
  */
 void DeleteWorkerBlockResponsePrivate::parseDeleteWorkerBlockResponse(QXmlStreamReader &xml)
 {

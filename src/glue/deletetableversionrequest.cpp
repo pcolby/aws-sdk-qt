@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTableVersionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteTableVersionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTableVersionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 DeleteTableVersionRequestPrivate::DeleteTableVersionRequestPrivate(
     const GlueRequest::Action action, DeleteTableVersionRequest * const q)

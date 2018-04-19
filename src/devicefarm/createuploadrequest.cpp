@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * CreateUploadRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateUploadRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a CreateUploadRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 CreateUploadRequestPrivate::CreateUploadRequestPrivate(
     const DeviceFarmRequest::Action action, CreateUploadRequest * const q)

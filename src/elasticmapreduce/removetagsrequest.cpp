@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a RemoveTagsRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const EMRRequest::Action action, RemoveTagsRequest * const q)

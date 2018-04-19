@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CreateAddressRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateAddressRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a CreateAddressRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 CreateAddressRequestPrivate::CreateAddressRequestPrivate(
     const SnowballRequest::Action action, CreateAddressRequest * const q)

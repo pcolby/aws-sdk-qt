@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CreateStreamingURLResponse
- *
  * \brief The CreateStreamingURLResponse class provides an interace for AppStream CreateStreamingURL responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CreateStreamingURLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStreamingURLResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStreamingURLResponse::CreateStreamingURLResponse(
         const CreateStreamingURLRequest &request,
@@ -58,6 +53,9 @@ CreateStreamingURLResponse::CreateStreamingURLResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStreamingURLRequest * CreateStreamingURLResponse::request() const
 {
     Q_D(const CreateStreamingURLResponse);
@@ -65,9 +63,8 @@ const CreateStreamingURLRequest * CreateStreamingURLResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream CreateStreamingURL response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream CreateStreamingURL \a response.
  */
 void CreateStreamingURLResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateStreamingURLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::CreateStreamingURLResponsePrivate
+ * \brief The CreateStreamingURLResponsePrivate class provides private implementation for CreateStreamingURLResponse.
  * \internal
  *
- * \class CreateStreamingURLResponsePrivate
- *
- * \brief Private implementation for CreateStreamingURLResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStreamingURLResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStreamingURLResponse instance.
+ * Constructs a CreateStreamingURLResponsePrivate object with public implementation \a q.
  */
 CreateStreamingURLResponsePrivate::CreateStreamingURLResponsePrivate(
     CreateStreamingURLResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateStreamingURLResponsePrivate::CreateStreamingURLResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream CreateStreamingURLResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream CreateStreamingURL response element from \a xml.
  */
 void CreateStreamingURLResponsePrivate::parseCreateStreamingURLResponse(QXmlStreamReader &xml)
 {

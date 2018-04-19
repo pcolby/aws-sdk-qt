@@ -34,10 +34,10 @@ class QTAWS_EXPORT SearchFacesResponse : public RekognitionResponse {
 public:
     SearchFacesResponse(const SearchFacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SearchFacesRequest * request() const;
+    virtual const SearchFacesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SearchFacesResponse)

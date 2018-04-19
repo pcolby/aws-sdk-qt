@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListSubscriptionsRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a ListSubscriptionsRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 ListSubscriptionsRequestPrivate::ListSubscriptionsRequestPrivate(
     const SNSRequest::Action action, ListSubscriptionsRequest * const q)

@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateAddressBookResponse
- *
  * \brief The UpdateAddressBookResponse class provides an interace for AlexaForBusiness UpdateAddressBook responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateAddressBookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAddressBookResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAddressBookResponse::UpdateAddressBookResponse(
         const UpdateAddressBookRequest &request,
@@ -60,6 +55,9 @@ UpdateAddressBookResponse::UpdateAddressBookResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAddressBookRequest * UpdateAddressBookResponse::request() const
 {
     Q_D(const UpdateAddressBookResponse);
@@ -67,9 +65,8 @@ const UpdateAddressBookRequest * UpdateAddressBookResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness UpdateAddressBook response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness UpdateAddressBook \a response.
  */
 void UpdateAddressBookResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateAddressBookResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::UpdateAddressBookResponsePrivate
+ * \brief The UpdateAddressBookResponsePrivate class provides private implementation for UpdateAddressBookResponse.
  * \internal
  *
- * \class UpdateAddressBookResponsePrivate
- *
- * \brief Private implementation for UpdateAddressBookResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAddressBookResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAddressBookResponse instance.
+ * Constructs a UpdateAddressBookResponsePrivate object with public implementation \a q.
  */
 UpdateAddressBookResponsePrivate::UpdateAddressBookResponsePrivate(
     UpdateAddressBookResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateAddressBookResponsePrivate::UpdateAddressBookResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness UpdateAddressBookResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness UpdateAddressBook response element from \a xml.
  */
 void UpdateAddressBookResponsePrivate::parseUpdateAddressBookResponse(QXmlStreamReader &xml)
 {

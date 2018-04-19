@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteSubnetResponse
- *
  * \brief The DeleteSubnetResponse class provides an interace for EC2 DeleteSubnet responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteSubnetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSubnetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSubnetResponse::DeleteSubnetResponse(
         const DeleteSubnetRequest &request,
@@ -59,6 +54,9 @@ DeleteSubnetResponse::DeleteSubnetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSubnetRequest * DeleteSubnetResponse::request() const
 {
     Q_D(const DeleteSubnetResponse);
@@ -66,9 +64,8 @@ const DeleteSubnetRequest * DeleteSubnetResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteSubnet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteSubnet \a response.
  */
 void DeleteSubnetResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteSubnetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteSubnetResponsePrivate
+ * \brief The DeleteSubnetResponsePrivate class provides private implementation for DeleteSubnetResponse.
  * \internal
  *
- * \class DeleteSubnetResponsePrivate
- *
- * \brief Private implementation for DeleteSubnetResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSubnetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSubnetResponse instance.
+ * Constructs a DeleteSubnetResponsePrivate object with public implementation \a q.
  */
 DeleteSubnetResponsePrivate::DeleteSubnetResponsePrivate(
     DeleteSubnetResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteSubnetResponsePrivate::DeleteSubnetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteSubnetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteSubnet response element from \a xml.
  */
 void DeleteSubnetResponsePrivate::parseDeleteSubnetResponse(QXmlStreamReader &xml)
 {

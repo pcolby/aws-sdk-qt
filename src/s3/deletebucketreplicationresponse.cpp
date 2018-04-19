@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketReplicationResponse
- *
  * \brief The DeleteBucketReplicationResponse class provides an interace for S3 DeleteBucketReplication responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketReplication
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketReplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBucketReplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBucketReplicationResponse::DeleteBucketReplicationResponse(
         const DeleteBucketReplicationRequest &request,
@@ -55,6 +50,9 @@ DeleteBucketReplicationResponse::DeleteBucketReplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBucketReplicationRequest * DeleteBucketReplicationResponse::request() const
 {
     Q_D(const DeleteBucketReplicationResponse);
@@ -62,9 +60,8 @@ const DeleteBucketReplicationRequest * DeleteBucketReplicationResponse::request(
 }
 
 /*!
- * @brief  Parse a S3 DeleteBucketReplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 DeleteBucketReplication \a response.
  */
 void DeleteBucketReplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteBucketReplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::DeleteBucketReplicationResponsePrivate
+ * \brief The DeleteBucketReplicationResponsePrivate class provides private implementation for DeleteBucketReplicationResponse.
  * \internal
  *
- * \class DeleteBucketReplicationResponsePrivate
- *
- * \brief Private implementation for DeleteBucketReplicationResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketReplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBucketReplicationResponse instance.
+ * Constructs a DeleteBucketReplicationResponsePrivate object with public implementation \a q.
  */
 DeleteBucketReplicationResponsePrivate::DeleteBucketReplicationResponsePrivate(
     DeleteBucketReplicationResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteBucketReplicationResponsePrivate::DeleteBucketReplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 DeleteBucketReplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 DeleteBucketReplication response element from \a xml.
  */
 void DeleteBucketReplicationResponsePrivate::parseDeleteBucketReplicationResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateConfigurationSetResponse
- *
  * \brief The CreateConfigurationSetResponse class provides an interace for SES CreateConfigurationSet responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateConfigurationSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateConfigurationSetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateConfigurationSetResponse::CreateConfigurationSetResponse(
         const CreateConfigurationSetRequest &request,
@@ -66,6 +61,9 @@ CreateConfigurationSetResponse::CreateConfigurationSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateConfigurationSetRequest * CreateConfigurationSetResponse::request() const
 {
     Q_D(const CreateConfigurationSetResponse);
@@ -73,9 +71,8 @@ const CreateConfigurationSetRequest * CreateConfigurationSetResponse::request() 
 }
 
 /*!
- * @brief  Parse a SES CreateConfigurationSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES CreateConfigurationSet \a response.
  */
 void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateConfigurationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::CreateConfigurationSetResponsePrivate
+ * \brief The CreateConfigurationSetResponsePrivate class provides private implementation for CreateConfigurationSetResponse.
  * \internal
  *
- * \class CreateConfigurationSetResponsePrivate
- *
- * \brief Private implementation for CreateConfigurationSetResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConfigurationSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateConfigurationSetResponse instance.
+ * Constructs a CreateConfigurationSetResponsePrivate object with public implementation \a q.
  */
 CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponsePrivate(
     CreateConfigurationSetResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateConfigurationSetResponsePrivate::CreateConfigurationSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES CreateConfigurationSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES CreateConfigurationSet response element from \a xml.
  */
 void CreateConfigurationSetResponsePrivate::parseCreateConfigurationSetResponse(QXmlStreamReader &xml)
 {

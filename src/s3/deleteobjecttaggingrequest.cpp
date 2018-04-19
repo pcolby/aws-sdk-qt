@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteObjectTaggingRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteObjectTaggingRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteObjectTaggingRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 DeleteObjectTaggingRequestPrivate::DeleteObjectTaggingRequestPrivate(
     const S3Request::Action action, DeleteObjectTaggingRequest * const q)

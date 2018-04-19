@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteOpenIDConnectProviderResponse : public IAMResponse {
 public:
     DeleteOpenIDConnectProviderResponse(const DeleteOpenIDConnectProviderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteOpenIDConnectProviderRequest * request() const;
+    virtual const DeleteOpenIDConnectProviderRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteOpenIDConnectProviderResponse)

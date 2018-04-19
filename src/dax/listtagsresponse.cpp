@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::ListTagsResponse
- *
  * \brief The ListTagsResponse class provides an interace for DAX ListTags responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new ListTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsResponse::ListTagsResponse(
         const ListTagsRequest &request,
@@ -59,6 +54,9 @@ ListTagsResponse::ListTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsRequest * ListTagsResponse::request() const
 {
     Q_D(const ListTagsResponse);
@@ -66,9 +64,8 @@ const ListTagsRequest * ListTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DAX ListTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX ListTags \a response.
  */
 void ListTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::ListTagsResponsePrivate
+ * \brief The ListTagsResponsePrivate class provides private implementation for ListTagsResponse.
  * \internal
  *
- * \class ListTagsResponsePrivate
- *
- * \brief Private implementation for ListTagsResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsResponse instance.
+ * Constructs a ListTagsResponsePrivate object with public implementation \a q.
  */
 ListTagsResponsePrivate::ListTagsResponsePrivate(
     ListTagsResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ ListTagsResponsePrivate::ListTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX ListTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX ListTags response element from \a xml.
  */
 void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
 {

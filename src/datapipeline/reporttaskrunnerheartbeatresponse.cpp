@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::ReportTaskRunnerHeartbeatResponse
- *
  * \brief The ReportTaskRunnerHeartbeatResponse class provides an interace for DataPipeline ReportTaskRunnerHeartbeat responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new ReportTaskRunnerHeartbeatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReportTaskRunnerHeartbeatResponse object for \a reply to \a request, with parent \a parent.
  */
 ReportTaskRunnerHeartbeatResponse::ReportTaskRunnerHeartbeatResponse(
         const ReportTaskRunnerHeartbeatRequest &request,
@@ -73,6 +68,9 @@ ReportTaskRunnerHeartbeatResponse::ReportTaskRunnerHeartbeatResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReportTaskRunnerHeartbeatRequest * ReportTaskRunnerHeartbeatResponse::request() const
 {
     Q_D(const ReportTaskRunnerHeartbeatResponse);
@@ -80,9 +78,8 @@ const ReportTaskRunnerHeartbeatRequest * ReportTaskRunnerHeartbeatResponse::requ
 }
 
 /*!
- * @brief  Parse a DataPipeline ReportTaskRunnerHeartbeat response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline ReportTaskRunnerHeartbeat \a response.
  */
 void ReportTaskRunnerHeartbeatResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void ReportTaskRunnerHeartbeatResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::ReportTaskRunnerHeartbeatResponsePrivate
+ * \brief The ReportTaskRunnerHeartbeatResponsePrivate class provides private implementation for ReportTaskRunnerHeartbeatResponse.
  * \internal
  *
- * \class ReportTaskRunnerHeartbeatResponsePrivate
- *
- * \brief Private implementation for ReportTaskRunnerHeartbeatResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReportTaskRunnerHeartbeatResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReportTaskRunnerHeartbeatResponse instance.
+ * Constructs a ReportTaskRunnerHeartbeatResponsePrivate object with public implementation \a q.
  */
 ReportTaskRunnerHeartbeatResponsePrivate::ReportTaskRunnerHeartbeatResponsePrivate(
     ReportTaskRunnerHeartbeatResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ ReportTaskRunnerHeartbeatResponsePrivate::ReportTaskRunnerHeartbeatResponsePriva
 }
 
 /*!
- * @brief  Parse an DataPipeline ReportTaskRunnerHeartbeatResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline ReportTaskRunnerHeartbeat response element from \a xml.
  */
 void ReportTaskRunnerHeartbeatResponsePrivate::parseReportTaskRunnerHeartbeatResponse(QXmlStreamReader &xml)
 {

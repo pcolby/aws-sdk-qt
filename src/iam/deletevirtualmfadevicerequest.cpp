@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVirtualMFADeviceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteVirtualMFADeviceRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVirtualMFADeviceRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteVirtualMFADeviceRequestPrivate::DeleteVirtualMFADeviceRequestPrivate(
     const IAMRequest::Action action, DeleteVirtualMFADeviceRequest * const q)

@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListAppliedSchemaArnsResponse
- *
  * \brief The ListAppliedSchemaArnsResponse class provides an interace for CloudDirectory ListAppliedSchemaArns responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListAppliedSchemaArnsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAppliedSchemaArnsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAppliedSchemaArnsResponse::ListAppliedSchemaArnsResponse(
         const ListAppliedSchemaArnsRequest &request,
@@ -62,6 +57,9 @@ ListAppliedSchemaArnsResponse::ListAppliedSchemaArnsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAppliedSchemaArnsRequest * ListAppliedSchemaArnsResponse::request() const
 {
     Q_D(const ListAppliedSchemaArnsResponse);
@@ -69,9 +67,8 @@ const ListAppliedSchemaArnsRequest * ListAppliedSchemaArnsResponse::request() co
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListAppliedSchemaArns response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListAppliedSchemaArns \a response.
  */
 void ListAppliedSchemaArnsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListAppliedSchemaArnsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListAppliedSchemaArnsResponsePrivate
+ * \brief The ListAppliedSchemaArnsResponsePrivate class provides private implementation for ListAppliedSchemaArnsResponse.
  * \internal
  *
- * \class ListAppliedSchemaArnsResponsePrivate
- *
- * \brief Private implementation for ListAppliedSchemaArnsResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAppliedSchemaArnsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAppliedSchemaArnsResponse instance.
+ * Constructs a ListAppliedSchemaArnsResponsePrivate object with public implementation \a q.
  */
 ListAppliedSchemaArnsResponsePrivate::ListAppliedSchemaArnsResponsePrivate(
     ListAppliedSchemaArnsResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListAppliedSchemaArnsResponsePrivate::ListAppliedSchemaArnsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListAppliedSchemaArnsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListAppliedSchemaArns response element from \a xml.
  */
 void ListAppliedSchemaArnsResponsePrivate::parseListAppliedSchemaArnsResponse(QXmlStreamReader &xml)
 {

@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsOfResourceRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListTagsOfResourceRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsOfResourceRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 ListTagsOfResourceRequestPrivate::ListTagsOfResourceRequestPrivate(
     const DynamoDBRequest::Action action, ListTagsOfResourceRequest * const q)

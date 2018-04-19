@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * ListPartsRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ListPartsRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a ListPartsRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 ListPartsRequestPrivate::ListPartsRequestPrivate(
     const GlacierRequest::Action action, ListPartsRequest * const q)

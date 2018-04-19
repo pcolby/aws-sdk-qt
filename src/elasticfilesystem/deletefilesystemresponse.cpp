@@ -29,10 +29,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::DeleteFileSystemResponse
- *
  * \brief The DeleteFileSystemResponse class provides an interace for EFS DeleteFileSystem responses.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -45,11 +44,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new DeleteFileSystemResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteFileSystemResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteFileSystemResponse::DeleteFileSystemResponse(
         const DeleteFileSystemRequest &request,
@@ -61,6 +56,9 @@ DeleteFileSystemResponse::DeleteFileSystemResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteFileSystemRequest * DeleteFileSystemResponse::request() const
 {
     Q_D(const DeleteFileSystemResponse);
@@ -68,9 +66,8 @@ const DeleteFileSystemRequest * DeleteFileSystemResponse::request() const
 }
 
 /*!
- * @brief  Parse a EFS DeleteFileSystem response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EFS DeleteFileSystem \a response.
  */
 void DeleteFileSystemResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeleteFileSystemResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EFS::DeleteFileSystemResponsePrivate
+ * \brief The DeleteFileSystemResponsePrivate class provides private implementation for DeleteFileSystemResponse.
  * \internal
  *
- * \class DeleteFileSystemResponsePrivate
- *
- * \brief Private implementation for DeleteFileSystemResponse.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFileSystemResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteFileSystemResponse instance.
+ * Constructs a DeleteFileSystemResponsePrivate object with public implementation \a q.
  */
 DeleteFileSystemResponsePrivate::DeleteFileSystemResponsePrivate(
     DeleteFileSystemResponse * const q) : EFSResponsePrivate(q)
@@ -101,9 +94,7 @@ DeleteFileSystemResponsePrivate::DeleteFileSystemResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EFS DeleteFileSystemResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EFS DeleteFileSystem response element from \a xml.
  */
 void DeleteFileSystemResponsePrivate::parseDeleteFileSystemResponse(QXmlStreamReader &xml)
 {

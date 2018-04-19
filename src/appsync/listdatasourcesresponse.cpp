@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::ListDataSourcesResponse
- *
  * \brief The ListDataSourcesResponse class provides an interace for AppSync ListDataSources responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new ListDataSourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDataSourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDataSourcesResponse::ListDataSourcesResponse(
         const ListDataSourcesRequest &request,
@@ -56,6 +51,9 @@ ListDataSourcesResponse::ListDataSourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDataSourcesRequest * ListDataSourcesResponse::request() const
 {
     Q_D(const ListDataSourcesResponse);
@@ -63,9 +61,8 @@ const ListDataSourcesRequest * ListDataSourcesResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync ListDataSources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync ListDataSources \a response.
  */
 void ListDataSourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListDataSourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::ListDataSourcesResponsePrivate
+ * \brief The ListDataSourcesResponsePrivate class provides private implementation for ListDataSourcesResponse.
  * \internal
  *
- * \class ListDataSourcesResponsePrivate
- *
- * \brief Private implementation for ListDataSourcesResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDataSourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDataSourcesResponse instance.
+ * Constructs a ListDataSourcesResponsePrivate object with public implementation \a q.
  */
 ListDataSourcesResponsePrivate::ListDataSourcesResponsePrivate(
     ListDataSourcesResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ ListDataSourcesResponsePrivate::ListDataSourcesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync ListDataSourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync ListDataSources response element from \a xml.
  */
 void ListDataSourcesResponsePrivate::parseListDataSourcesResponse(QXmlStreamReader &xml)
 {

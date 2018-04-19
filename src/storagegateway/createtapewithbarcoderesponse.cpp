@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateTapeWithBarcodeResponse
- *
  * \brief The CreateTapeWithBarcodeResponse class provides an interace for StorageGateway CreateTapeWithBarcode responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateTapeWithBarcodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTapeWithBarcodeResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTapeWithBarcodeResponse::CreateTapeWithBarcodeResponse(
         const CreateTapeWithBarcodeRequest &request,
@@ -124,6 +119,9 @@ CreateTapeWithBarcodeResponse::CreateTapeWithBarcodeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTapeWithBarcodeRequest * CreateTapeWithBarcodeResponse::request() const
 {
     Q_D(const CreateTapeWithBarcodeResponse);
@@ -131,9 +129,8 @@ const CreateTapeWithBarcodeRequest * CreateTapeWithBarcodeResponse::request() co
 }
 
 /*!
- * @brief  Parse a StorageGateway CreateTapeWithBarcode response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway CreateTapeWithBarcode \a response.
  */
 void CreateTapeWithBarcodeResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void CreateTapeWithBarcodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::CreateTapeWithBarcodeResponsePrivate
+ * \brief The CreateTapeWithBarcodeResponsePrivate class provides private implementation for CreateTapeWithBarcodeResponse.
  * \internal
  *
- * \class CreateTapeWithBarcodeResponsePrivate
- *
- * \brief Private implementation for CreateTapeWithBarcodeResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTapeWithBarcodeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTapeWithBarcodeResponse instance.
+ * Constructs a CreateTapeWithBarcodeResponsePrivate object with public implementation \a q.
  */
 CreateTapeWithBarcodeResponsePrivate::CreateTapeWithBarcodeResponsePrivate(
     CreateTapeWithBarcodeResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ CreateTapeWithBarcodeResponsePrivate::CreateTapeWithBarcodeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway CreateTapeWithBarcodeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway CreateTapeWithBarcode response element from \a xml.
  */
 void CreateTapeWithBarcodeResponsePrivate::parseCreateTapeWithBarcodeResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT RotateEncryptionKeyResponse : public RedshiftResponse {
 public:
     RotateEncryptionKeyResponse(const RotateEncryptionKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RotateEncryptionKeyRequest * request() const;
+    virtual const RotateEncryptionKeyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RotateEncryptionKeyResponse)

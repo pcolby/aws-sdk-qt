@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * DescribeObjectsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeObjectsRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a DescribeObjectsRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 DescribeObjectsRequestPrivate::DescribeObjectsRequestPrivate(
     const DataPipelineRequest::Action action, DescribeObjectsRequest * const q)

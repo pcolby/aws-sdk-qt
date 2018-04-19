@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartOutboundVoiceContactResponse : public ConnectResponse {
 public:
     StartOutboundVoiceContactResponse(const StartOutboundVoiceContactRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartOutboundVoiceContactRequest * request() const;
+    virtual const StartOutboundVoiceContactRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartOutboundVoiceContactResponse)

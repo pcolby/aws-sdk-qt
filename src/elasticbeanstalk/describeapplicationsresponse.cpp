@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeApplicationsResponse
- *
  * \brief The DescribeApplicationsResponse class provides an interace for ElasticBeanstalk DescribeApplications responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeApplicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeApplicationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeApplicationsResponse::DescribeApplicationsResponse(
         const DescribeApplicationsRequest &request,
@@ -77,6 +72,9 @@ DescribeApplicationsResponse::DescribeApplicationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeApplicationsRequest * DescribeApplicationsResponse::request() const
 {
     Q_D(const DescribeApplicationsResponse);
@@ -84,9 +82,8 @@ const DescribeApplicationsRequest * DescribeApplicationsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DescribeApplications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DescribeApplications \a response.
  */
 void DescribeApplicationsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribeApplicationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DescribeApplicationsResponsePrivate
+ * \brief The DescribeApplicationsResponsePrivate class provides private implementation for DescribeApplicationsResponse.
  * \internal
  *
- * \class DescribeApplicationsResponsePrivate
- *
- * \brief Private implementation for DescribeApplicationsResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeApplicationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeApplicationsResponse instance.
+ * Constructs a DescribeApplicationsResponsePrivate object with public implementation \a q.
  */
 DescribeApplicationsResponsePrivate::DescribeApplicationsResponsePrivate(
     DescribeApplicationsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribeApplicationsResponsePrivate::DescribeApplicationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DescribeApplicationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DescribeApplications response element from \a xml.
  */
 void DescribeApplicationsResponsePrivate::parseDescribeApplicationsResponse(QXmlStreamReader &xml)
 {

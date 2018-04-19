@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeStackSummaryResponse : public OpsWorksResponse {
 public:
     DescribeStackSummaryResponse(const DescribeStackSummaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeStackSummaryRequest * request() const;
+    virtual const DescribeStackSummaryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeStackSummaryResponse)

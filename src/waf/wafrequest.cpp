@@ -108,7 +108,7 @@ namespace WAF {
  */
 
 /*!
- * Constructs a[n] WAFRequest object for WAF \a action.
+ * Constructs a WAFRequest object for WAF \a action.
  */
 WAFRequest::WAFRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new WAFRequestPrivate(action, this))
@@ -308,8 +308,8 @@ QNetworkRequest WAFRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a WAFRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a WAFRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 WAFRequestPrivate::WAFRequestPrivate(const WAFRequest::Action action, WAFRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::GetApplicationResponse
- *
  * \brief The GetApplicationResponse class provides an interace for CodeDeploy GetApplication responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new GetApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetApplicationResponse::GetApplicationResponse(
         const GetApplicationRequest &request,
@@ -136,6 +131,9 @@ GetApplicationResponse::GetApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetApplicationRequest * GetApplicationResponse::request() const
 {
     Q_D(const GetApplicationResponse);
@@ -143,9 +141,8 @@ const GetApplicationRequest * GetApplicationResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeDeploy GetApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy GetApplication \a response.
  */
 void GetApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void GetApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::GetApplicationResponsePrivate
+ * \brief The GetApplicationResponsePrivate class provides private implementation for GetApplicationResponse.
  * \internal
  *
- * \class GetApplicationResponsePrivate
- *
- * \brief Private implementation for GetApplicationResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetApplicationResponse instance.
+ * Constructs a GetApplicationResponsePrivate object with public implementation \a q.
  */
 GetApplicationResponsePrivate::GetApplicationResponsePrivate(
     GetApplicationResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ GetApplicationResponsePrivate::GetApplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy GetApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy GetApplication response element from \a xml.
  */
 void GetApplicationResponsePrivate::parseGetApplicationResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeAggregationAuthorizationsResponse
- *
  * \brief The DescribeAggregationAuthorizationsResponse class provides an interace for ConfigService DescribeAggregationAuthorizations responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeAggregationAuthorizationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAggregationAuthorizationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAggregationAuthorizationsResponse::DescribeAggregationAuthorizationsResponse(
         const DescribeAggregationAuthorizationsRequest &request,
@@ -78,6 +73,9 @@ DescribeAggregationAuthorizationsResponse::DescribeAggregationAuthorizationsResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAggregationAuthorizationsRequest * DescribeAggregationAuthorizationsResponse::request() const
 {
     Q_D(const DescribeAggregationAuthorizationsResponse);
@@ -85,9 +83,8 @@ const DescribeAggregationAuthorizationsRequest * DescribeAggregationAuthorizatio
 }
 
 /*!
- * @brief  Parse a ConfigService DescribeAggregationAuthorizations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribeAggregationAuthorizations \a response.
  */
 void DescribeAggregationAuthorizationsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeAggregationAuthorizationsResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribeAggregationAuthorizationsResponsePrivate
+ * \brief The DescribeAggregationAuthorizationsResponsePrivate class provides private implementation for DescribeAggregationAuthorizationsResponse.
  * \internal
  *
- * \class DescribeAggregationAuthorizationsResponsePrivate
- *
- * \brief Private implementation for DescribeAggregationAuthorizationsResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAggregationAuthorizationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAggregationAuthorizationsResponse instance.
+ * Constructs a DescribeAggregationAuthorizationsResponsePrivate object with public implementation \a q.
  */
 DescribeAggregationAuthorizationsResponsePrivate::DescribeAggregationAuthorizationsResponsePrivate(
     DescribeAggregationAuthorizationsResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeAggregationAuthorizationsResponsePrivate::DescribeAggregationAuthorizati
 }
 
 /*!
- * @brief  Parse an ConfigService DescribeAggregationAuthorizationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribeAggregationAuthorizations response element from \a xml.
  */
 void DescribeAggregationAuthorizationsResponsePrivate::parseDescribeAggregationAuthorizationsResponse(QXmlStreamReader &xml)
 {

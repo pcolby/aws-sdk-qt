@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAliasResponse : public LambdaResponse {
 public:
     GetAliasResponse(const GetAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAliasRequest * request() const;
+    virtual const GetAliasRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetAliasResponse)

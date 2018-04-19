@@ -34,10 +34,10 @@ class QTAWS_EXPORT QueryResponse : public DynamoDBResponse {
 public:
     QueryResponse(const QueryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const QueryRequest * request() const;
+    virtual const QueryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(QueryResponse)

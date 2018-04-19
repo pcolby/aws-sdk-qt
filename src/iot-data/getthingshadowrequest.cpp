@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * GetThingShadowRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetThingShadowRequestPrivate object for IoTDataPlane \a action with,
- * public implementation \a q.
+ * Constructs a GetThingShadowRequestPrivate object for IoTDataPlane \a action,
+ * with public implementation \a q.
  */
 GetThingShadowRequestPrivate::GetThingShadowRequestPrivate(
     const IoTDataPlaneRequest::Action action, GetThingShadowRequest * const q)

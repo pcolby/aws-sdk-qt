@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetTraceSummariesRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetTraceSummariesRequestPrivate object for XRay \a action with,
- * public implementation \a q.
+ * Constructs a GetTraceSummariesRequestPrivate object for XRay \a action,
+ * with public implementation \a q.
  */
 GetTraceSummariesRequestPrivate::GetTraceSummariesRequestPrivate(
     const XRayRequest::Action action, GetTraceSummariesRequest * const q)

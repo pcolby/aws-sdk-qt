@@ -41,7 +41,7 @@ namespace Connect {
  */
 
 /*!
- * Constructs a[n] ConnectRequest object for Connect \a action.
+ * Constructs a ConnectRequest object for Connect \a action.
  */
 ConnectRequest::ConnectRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ConnectRequestPrivate(action, this))
@@ -241,8 +241,8 @@ QNetworkRequest ConnectRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a ConnectRequestPrivate object for Connect \a action with,
- * public implementation \a q.
+ * Constructs a ConnectRequestPrivate object for Connect \a action,
+ * with public implementation \a q.
  */
 ConnectRequestPrivate::ConnectRequestPrivate(const ConnectRequest::Action action, ConnectRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

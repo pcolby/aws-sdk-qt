@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * RestoreSecretRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a RestoreSecretRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a RestoreSecretRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 RestoreSecretRequestPrivate::RestoreSecretRequestPrivate(
     const SecretsManagerRequest::Action action, RestoreSecretRequest * const q)

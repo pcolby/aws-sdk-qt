@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::QueryObjectsResponse
- *
  * \brief The QueryObjectsResponse class provides an interace for DataPipeline QueryObjects responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new QueryObjectsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a QueryObjectsResponse object for \a reply to \a request, with parent \a parent.
  */
 QueryObjectsResponse::QueryObjectsResponse(
         const QueryObjectsRequest &request,
@@ -73,6 +68,9 @@ QueryObjectsResponse::QueryObjectsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const QueryObjectsRequest * QueryObjectsResponse::request() const
 {
     Q_D(const QueryObjectsResponse);
@@ -80,9 +78,8 @@ const QueryObjectsRequest * QueryObjectsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DataPipeline QueryObjects response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline QueryObjects \a response.
  */
 void QueryObjectsResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void QueryObjectsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::QueryObjectsResponsePrivate
+ * \brief The QueryObjectsResponsePrivate class provides private implementation for QueryObjectsResponse.
  * \internal
  *
- * \class QueryObjectsResponsePrivate
- *
- * \brief Private implementation for QueryObjectsResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new QueryObjectsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public QueryObjectsResponse instance.
+ * Constructs a QueryObjectsResponsePrivate object with public implementation \a q.
  */
 QueryObjectsResponsePrivate::QueryObjectsResponsePrivate(
     QueryObjectsResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ QueryObjectsResponsePrivate::QueryObjectsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline QueryObjectsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline QueryObjects response element from \a xml.
  */
 void QueryObjectsResponsePrivate::parseQueryObjectsResponse(QXmlStreamReader &xml)
 {

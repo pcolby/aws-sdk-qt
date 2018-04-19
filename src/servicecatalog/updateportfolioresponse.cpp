@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::UpdatePortfolioResponse
- *
  * \brief The UpdatePortfolioResponse class provides an interace for ServiceCatalog UpdatePortfolio responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new UpdatePortfolioResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePortfolioResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePortfolioResponse::UpdatePortfolioResponse(
         const UpdatePortfolioRequest &request,
@@ -61,6 +56,9 @@ UpdatePortfolioResponse::UpdatePortfolioResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePortfolioRequest * UpdatePortfolioResponse::request() const
 {
     Q_D(const UpdatePortfolioResponse);
@@ -68,9 +66,8 @@ const UpdatePortfolioRequest * UpdatePortfolioResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog UpdatePortfolio response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog UpdatePortfolio \a response.
  */
 void UpdatePortfolioResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void UpdatePortfolioResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::UpdatePortfolioResponsePrivate
+ * \brief The UpdatePortfolioResponsePrivate class provides private implementation for UpdatePortfolioResponse.
  * \internal
  *
- * \class UpdatePortfolioResponsePrivate
- *
- * \brief Private implementation for UpdatePortfolioResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePortfolioResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePortfolioResponse instance.
+ * Constructs a UpdatePortfolioResponsePrivate object with public implementation \a q.
  */
 UpdatePortfolioResponsePrivate::UpdatePortfolioResponsePrivate(
     UpdatePortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ UpdatePortfolioResponsePrivate::UpdatePortfolioResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog UpdatePortfolioResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog UpdatePortfolio response element from \a xml.
  */
 void UpdatePortfolioResponsePrivate::parseUpdatePortfolioResponse(QXmlStreamReader &xml)
 {

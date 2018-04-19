@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterImageResponse : public EC2Response {
 public:
     RegisterImageResponse(const RegisterImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterImageRequest * request() const;
+    virtual const RegisterImageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterImageResponse)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * SetTagsForResourceRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a SetTagsForResourceRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a SetTagsForResourceRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
     const InspectorRequest::Action action, SetTagsForResourceRequest * const q)

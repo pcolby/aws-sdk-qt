@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyInstancePlacementResponse
- *
  * \brief The ModifyInstancePlacementResponse class provides an interace for EC2 ModifyInstancePlacement responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyInstancePlacementResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyInstancePlacementResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyInstancePlacementResponse::ModifyInstancePlacementResponse(
         const ModifyInstancePlacementRequest &request,
@@ -59,6 +54,9 @@ ModifyInstancePlacementResponse::ModifyInstancePlacementResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyInstancePlacementRequest * ModifyInstancePlacementResponse::request() const
 {
     Q_D(const ModifyInstancePlacementResponse);
@@ -66,9 +64,8 @@ const ModifyInstancePlacementRequest * ModifyInstancePlacementResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 ModifyInstancePlacement response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyInstancePlacement \a response.
  */
 void ModifyInstancePlacementResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyInstancePlacementResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyInstancePlacementResponsePrivate
+ * \brief The ModifyInstancePlacementResponsePrivate class provides private implementation for ModifyInstancePlacementResponse.
  * \internal
  *
- * \class ModifyInstancePlacementResponsePrivate
- *
- * \brief Private implementation for ModifyInstancePlacementResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyInstancePlacementResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyInstancePlacementResponse instance.
+ * Constructs a ModifyInstancePlacementResponsePrivate object with public implementation \a q.
  */
 ModifyInstancePlacementResponsePrivate::ModifyInstancePlacementResponsePrivate(
     ModifyInstancePlacementResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyInstancePlacementResponsePrivate::ModifyInstancePlacementResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifyInstancePlacementResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyInstancePlacement response element from \a xml.
  */
 void ModifyInstancePlacementResponsePrivate::parseModifyInstancePlacementResponse(QXmlStreamReader &xml)
 {

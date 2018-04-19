@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * ModifyDBSubnetGroupRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ModifyDBSubnetGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a ModifyDBSubnetGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 ModifyDBSubnetGroupRequestPrivate::ModifyDBSubnetGroupRequestPrivate(
     const RDSRequest::Action action, ModifyDBSubnetGroupRequest * const q)

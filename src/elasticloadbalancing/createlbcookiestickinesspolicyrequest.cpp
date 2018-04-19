@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * CreateLBCookieStickinessPolicyRequest::respon
  */
 
 /*!
- *
- * Constructs a CreateLBCookieStickinessPolicyRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a CreateLBCookieStickinessPolicyRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 CreateLBCookieStickinessPolicyRequestPrivate::CreateLBCookieStickinessPolicyRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, CreateLBCookieStickinessPolicyRequest * const q)

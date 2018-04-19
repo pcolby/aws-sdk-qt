@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateGatewayInformationResponse
- *
  * \brief The UpdateGatewayInformationResponse class provides an interace for StorageGateway UpdateGatewayInformation responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateGatewayInformationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateGatewayInformationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateGatewayInformationResponse::UpdateGatewayInformationResponse(
         const UpdateGatewayInformationRequest &request,
@@ -124,6 +119,9 @@ UpdateGatewayInformationResponse::UpdateGatewayInformationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateGatewayInformationRequest * UpdateGatewayInformationResponse::request() const
 {
     Q_D(const UpdateGatewayInformationResponse);
@@ -131,9 +129,8 @@ const UpdateGatewayInformationRequest * UpdateGatewayInformationResponse::reques
 }
 
 /*!
- * @brief  Parse a StorageGateway UpdateGatewayInformation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway UpdateGatewayInformation \a response.
  */
 void UpdateGatewayInformationResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void UpdateGatewayInformationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::UpdateGatewayInformationResponsePrivate
+ * \brief The UpdateGatewayInformationResponsePrivate class provides private implementation for UpdateGatewayInformationResponse.
  * \internal
  *
- * \class UpdateGatewayInformationResponsePrivate
- *
- * \brief Private implementation for UpdateGatewayInformationResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGatewayInformationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateGatewayInformationResponse instance.
+ * Constructs a UpdateGatewayInformationResponsePrivate object with public implementation \a q.
  */
 UpdateGatewayInformationResponsePrivate::UpdateGatewayInformationResponsePrivate(
     UpdateGatewayInformationResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ UpdateGatewayInformationResponsePrivate::UpdateGatewayInformationResponsePrivate
 }
 
 /*!
- * @brief  Parse an StorageGateway UpdateGatewayInformationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway UpdateGatewayInformation response element from \a xml.
  */
 void UpdateGatewayInformationResponsePrivate::parseUpdateGatewayInformationResponse(QXmlStreamReader &xml)
 {

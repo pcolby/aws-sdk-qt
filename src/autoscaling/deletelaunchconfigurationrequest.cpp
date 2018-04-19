@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchConfigurationRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DeleteLaunchConfigurationRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLaunchConfigurationRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DeleteLaunchConfigurationRequestPrivate::DeleteLaunchConfigurationRequestPrivate(
     const AutoScalingRequest::Action action, DeleteLaunchConfigurationRequest * const q)

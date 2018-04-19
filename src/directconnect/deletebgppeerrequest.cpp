@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBGPPeerRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteBGPPeerRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBGPPeerRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 DeleteBGPPeerRequestPrivate::DeleteBGPPeerRequestPrivate(
     const DirectConnectRequest::Action action, DeleteBGPPeerRequest * const q)

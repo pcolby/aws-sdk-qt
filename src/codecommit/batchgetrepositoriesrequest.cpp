@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * BatchGetRepositoriesRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a BatchGetRepositoriesRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a BatchGetRepositoriesRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 BatchGetRepositoriesRequestPrivate::BatchGetRepositoriesRequestPrivate(
     const CodeCommitRequest::Action action, BatchGetRepositoriesRequest * const q)

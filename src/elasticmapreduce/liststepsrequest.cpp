@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListStepsRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ListStepsRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a ListStepsRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 ListStepsRequestPrivate::ListStepsRequestPrivate(
     const EMRRequest::Action action, ListStepsRequest * const q)

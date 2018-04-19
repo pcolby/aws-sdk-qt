@@ -29,10 +29,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::DisassociateDiscoveredResourceResponse
- *
  * \brief The DisassociateDiscoveredResourceResponse class provides an interace for MigrationHub DisassociateDiscoveredResource responses.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -41,11 +40,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new DisassociateDiscoveredResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateDiscoveredResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateDiscoveredResourceResponse::DisassociateDiscoveredResourceResponse(
         const DisassociateDiscoveredResourceRequest &request,
@@ -57,6 +52,9 @@ DisassociateDiscoveredResourceResponse::DisassociateDiscoveredResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateDiscoveredResourceRequest * DisassociateDiscoveredResourceResponse::request() const
 {
     Q_D(const DisassociateDiscoveredResourceResponse);
@@ -64,9 +62,8 @@ const DisassociateDiscoveredResourceRequest * DisassociateDiscoveredResourceResp
 }
 
 /*!
- * @brief  Parse a MigrationHub DisassociateDiscoveredResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MigrationHub DisassociateDiscoveredResource \a response.
  */
 void DisassociateDiscoveredResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DisassociateDiscoveredResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MigrationHub::DisassociateDiscoveredResourceResponsePrivate
+ * \brief The DisassociateDiscoveredResourceResponsePrivate class provides private implementation for DisassociateDiscoveredResourceResponse.
  * \internal
  *
- * \class DisassociateDiscoveredResourceResponsePrivate
- *
- * \brief Private implementation for DisassociateDiscoveredResourceResponse.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateDiscoveredResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateDiscoveredResourceResponse instance.
+ * Constructs a DisassociateDiscoveredResourceResponsePrivate object with public implementation \a q.
  */
 DisassociateDiscoveredResourceResponsePrivate::DisassociateDiscoveredResourceResponsePrivate(
     DisassociateDiscoveredResourceResponse * const q) : MigrationHubResponsePrivate(q)
@@ -97,9 +90,7 @@ DisassociateDiscoveredResourceResponsePrivate::DisassociateDiscoveredResourceRes
 }
 
 /*!
- * @brief  Parse an MigrationHub DisassociateDiscoveredResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MigrationHub DisassociateDiscoveredResource response element from \a xml.
  */
 void DisassociateDiscoveredResourceResponsePrivate::parseDisassociateDiscoveredResourceResponse(QXmlStreamReader &xml)
 {

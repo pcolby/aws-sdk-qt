@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeExportTasksResponse
- *
  * \brief The DescribeExportTasksResponse class provides an interace for EC2 DescribeExportTasks responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeExportTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeExportTasksResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeExportTasksResponse::DescribeExportTasksResponse(
         const DescribeExportTasksRequest &request,
@@ -59,6 +54,9 @@ DescribeExportTasksResponse::DescribeExportTasksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeExportTasksRequest * DescribeExportTasksResponse::request() const
 {
     Q_D(const DescribeExportTasksResponse);
@@ -66,9 +64,8 @@ const DescribeExportTasksRequest * DescribeExportTasksResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeExportTasks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeExportTasks \a response.
  */
 void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeExportTasksResponsePrivate
+ * \brief The DescribeExportTasksResponsePrivate class provides private implementation for DescribeExportTasksResponse.
  * \internal
  *
- * \class DescribeExportTasksResponsePrivate
- *
- * \brief Private implementation for DescribeExportTasksResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeExportTasksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeExportTasksResponse instance.
+ * Constructs a DescribeExportTasksResponsePrivate object with public implementation \a q.
  */
 DescribeExportTasksResponsePrivate::DescribeExportTasksResponsePrivate(
     DescribeExportTasksResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeExportTasksResponsePrivate::DescribeExportTasksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeExportTasksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeExportTasks response element from \a xml.
  */
 void DescribeExportTasksResponsePrivate::parseDescribeExportTasksResponse(QXmlStreamReader &xml)
 {

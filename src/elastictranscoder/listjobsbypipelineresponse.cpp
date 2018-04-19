@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ListJobsByPipelineResponse
- *
  * \brief The ListJobsByPipelineResponse class provides an interace for ElasticTranscoder ListJobsByPipeline responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new ListJobsByPipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListJobsByPipelineResponse object for \a reply to \a request, with parent \a parent.
  */
 ListJobsByPipelineResponse::ListJobsByPipelineResponse(
         const ListJobsByPipelineRequest &request,
@@ -58,6 +53,9 @@ ListJobsByPipelineResponse::ListJobsByPipelineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListJobsByPipelineRequest * ListJobsByPipelineResponse::request() const
 {
     Q_D(const ListJobsByPipelineResponse);
@@ -65,9 +63,8 @@ const ListJobsByPipelineRequest * ListJobsByPipelineResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder ListJobsByPipeline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder ListJobsByPipeline \a response.
  */
 void ListJobsByPipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListJobsByPipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::ListJobsByPipelineResponsePrivate
+ * \brief The ListJobsByPipelineResponsePrivate class provides private implementation for ListJobsByPipelineResponse.
  * \internal
  *
- * \class ListJobsByPipelineResponsePrivate
- *
- * \brief Private implementation for ListJobsByPipelineResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobsByPipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListJobsByPipelineResponse instance.
+ * Constructs a ListJobsByPipelineResponsePrivate object with public implementation \a q.
  */
 ListJobsByPipelineResponsePrivate::ListJobsByPipelineResponsePrivate(
     ListJobsByPipelineResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ ListJobsByPipelineResponsePrivate::ListJobsByPipelineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder ListJobsByPipelineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder ListJobsByPipeline response element from \a xml.
  */
 void ListJobsByPipelineResponsePrivate::parseListJobsByPipelineResponse(QXmlStreamReader &xml)
 {

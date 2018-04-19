@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateProfileRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateProfileRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a CreateProfileRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 CreateProfileRequestPrivate::CreateProfileRequestPrivate(
     const AlexaForBusinessRequest::Action action, CreateProfileRequest * const q)

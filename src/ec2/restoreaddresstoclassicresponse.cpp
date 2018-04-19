@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RestoreAddressToClassicResponse
- *
  * \brief The RestoreAddressToClassicResponse class provides an interace for EC2 RestoreAddressToClassic responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RestoreAddressToClassicResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreAddressToClassicResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreAddressToClassicResponse::RestoreAddressToClassicResponse(
         const RestoreAddressToClassicRequest &request,
@@ -59,6 +54,9 @@ RestoreAddressToClassicResponse::RestoreAddressToClassicResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreAddressToClassicRequest * RestoreAddressToClassicResponse::request() const
 {
     Q_D(const RestoreAddressToClassicResponse);
@@ -66,9 +64,8 @@ const RestoreAddressToClassicRequest * RestoreAddressToClassicResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 RestoreAddressToClassic response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 RestoreAddressToClassic \a response.
  */
 void RestoreAddressToClassicResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void RestoreAddressToClassicResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::RestoreAddressToClassicResponsePrivate
+ * \brief The RestoreAddressToClassicResponsePrivate class provides private implementation for RestoreAddressToClassicResponse.
  * \internal
  *
- * \class RestoreAddressToClassicResponsePrivate
- *
- * \brief Private implementation for RestoreAddressToClassicResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreAddressToClassicResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreAddressToClassicResponse instance.
+ * Constructs a RestoreAddressToClassicResponsePrivate object with public implementation \a q.
  */
 RestoreAddressToClassicResponsePrivate::RestoreAddressToClassicResponsePrivate(
     RestoreAddressToClassicResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ RestoreAddressToClassicResponsePrivate::RestoreAddressToClassicResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 RestoreAddressToClassicResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 RestoreAddressToClassic response element from \a xml.
  */
 void RestoreAddressToClassicResponsePrivate::parseRestoreAddressToClassicResponse(QXmlStreamReader &xml)
 {

@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetStaticIpsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetStaticIpsRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetStaticIpsRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetStaticIpsRequestPrivate::GetStaticIpsRequestPrivate(
     const LightsailRequest::Action action, GetStaticIpsRequest * const q)

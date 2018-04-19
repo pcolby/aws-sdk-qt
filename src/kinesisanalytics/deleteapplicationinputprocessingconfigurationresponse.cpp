@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationInputProcessingConfigurationResponse
- *
  * \brief The DeleteApplicationInputProcessingConfigurationResponse class provides an interace for KinesisAnalytics DeleteApplicationInputProcessingConfiguration responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::deleteApplicationInputProcessingConfiguration
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteApplicationInputProcessingConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteApplicationInputProcessingConfigurationResponse::DeleteApplicationInputProcessingConfigurationResponse(
         const DeleteApplicationInputProcessingConfigurationRequest &request,
@@ -55,6 +50,9 @@ DeleteApplicationInputProcessingConfigurationResponse::DeleteApplicationInputPro
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteApplicationInputProcessingConfigurationRequest * DeleteApplicationInputProcessingConfigurationResponse::request() const
 {
     Q_D(const DeleteApplicationInputProcessingConfigurationResponse);
@@ -62,9 +60,8 @@ const DeleteApplicationInputProcessingConfigurationRequest * DeleteApplicationIn
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics DeleteApplicationInputProcessingConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics DeleteApplicationInputProcessingConfiguration \a response.
  */
 void DeleteApplicationInputProcessingConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteApplicationInputProcessingConfigurationResponse::parseSuccess(QIODevi
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::DeleteApplicationInputProcessingConfigurationResponsePrivate
+ * \brief The DeleteApplicationInputProcessingConfigurationResponsePrivate class provides private implementation for DeleteApplicationInputProcessingConfigurationResponse.
  * \internal
  *
- * \class DeleteApplicationInputProcessingConfigurationResponsePrivate
- *
- * \brief Private implementation for DeleteApplicationInputProcessingConfigurationResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationInputProcessingConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteApplicationInputProcessingConfigurationResponse instance.
+ * Constructs a DeleteApplicationInputProcessingConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteApplicationInputProcessingConfigurationResponsePrivate::DeleteApplicationInputProcessingConfigurationResponsePrivate(
     DeleteApplicationInputProcessingConfigurationResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteApplicationInputProcessingConfigurationResponsePrivate::DeleteApplicationI
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics DeleteApplicationInputProcessingConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics DeleteApplicationInputProcessingConfiguration response element from \a xml.
  */
 void DeleteApplicationInputProcessingConfigurationResponsePrivate::parseDeleteApplicationInputProcessingConfigurationResponse(QXmlStreamReader &xml)
 {

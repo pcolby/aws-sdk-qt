@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationGroupShardConfigurationReque
  */
 
 /*!
- *
- * Constructs a ModifyReplicationGroupShardConfigurationRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a ModifyReplicationGroupShardConfigurationRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 ModifyReplicationGroupShardConfigurationRequestPrivate::ModifyReplicationGroupShardConfigurationRequestPrivate(
     const ElastiCacheRequest::Action action, ModifyReplicationGroupShardConfigurationRequest * const q)

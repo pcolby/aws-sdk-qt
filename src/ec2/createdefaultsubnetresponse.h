@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDefaultSubnetResponse : public EC2Response {
 public:
     CreateDefaultSubnetResponse(const CreateDefaultSubnetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDefaultSubnetRequest * request() const;
+    virtual const CreateDefaultSubnetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDefaultSubnetResponse)

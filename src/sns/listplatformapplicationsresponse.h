@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListPlatformApplicationsResponse : public SNSResponse {
 public:
     ListPlatformApplicationsResponse(const ListPlatformApplicationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListPlatformApplicationsRequest * request() const;
+    virtual const ListPlatformApplicationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListPlatformApplicationsResponse)

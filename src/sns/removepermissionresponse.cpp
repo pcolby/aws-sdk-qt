@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::RemovePermissionResponse
- *
  * \brief The RemovePermissionResponse class provides an interace for SNS RemovePermission responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new RemovePermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemovePermissionResponse object for \a reply to \a request, with parent \a parent.
  */
 RemovePermissionResponse::RemovePermissionResponse(
         const RemovePermissionRequest &request,
@@ -69,6 +64,9 @@ RemovePermissionResponse::RemovePermissionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemovePermissionRequest * RemovePermissionResponse::request() const
 {
     Q_D(const RemovePermissionResponse);
@@ -76,9 +74,8 @@ const RemovePermissionRequest * RemovePermissionResponse::request() const
 }
 
 /*!
- * @brief  Parse a SNS RemovePermission response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS RemovePermission \a response.
  */
 void RemovePermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void RemovePermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::RemovePermissionResponsePrivate
+ * \brief The RemovePermissionResponsePrivate class provides private implementation for RemovePermissionResponse.
  * \internal
  *
- * \class RemovePermissionResponsePrivate
- *
- * \brief Private implementation for RemovePermissionResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemovePermissionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemovePermissionResponse instance.
+ * Constructs a RemovePermissionResponsePrivate object with public implementation \a q.
  */
 RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
     RemovePermissionResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS RemovePermissionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS RemovePermission response element from \a xml.
  */
 void RemovePermissionResponsePrivate::parseRemovePermissionResponse(QXmlStreamReader &xml)
 {

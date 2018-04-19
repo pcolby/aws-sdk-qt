@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteReceiptRuleResponse
- *
  * \brief The DeleteReceiptRuleResponse class provides an interace for SES DeleteReceiptRule responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteReceiptRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteReceiptRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteReceiptRuleResponse::DeleteReceiptRuleResponse(
         const DeleteReceiptRuleRequest &request,
@@ -66,6 +61,9 @@ DeleteReceiptRuleResponse::DeleteReceiptRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteReceiptRuleRequest * DeleteReceiptRuleResponse::request() const
 {
     Q_D(const DeleteReceiptRuleResponse);
@@ -73,9 +71,8 @@ const DeleteReceiptRuleRequest * DeleteReceiptRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES DeleteReceiptRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES DeleteReceiptRule \a response.
  */
 void DeleteReceiptRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteReceiptRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::DeleteReceiptRuleResponsePrivate
+ * \brief The DeleteReceiptRuleResponsePrivate class provides private implementation for DeleteReceiptRuleResponse.
  * \internal
  *
- * \class DeleteReceiptRuleResponsePrivate
- *
- * \brief Private implementation for DeleteReceiptRuleResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReceiptRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteReceiptRuleResponse instance.
+ * Constructs a DeleteReceiptRuleResponsePrivate object with public implementation \a q.
  */
 DeleteReceiptRuleResponsePrivate::DeleteReceiptRuleResponsePrivate(
     DeleteReceiptRuleResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteReceiptRuleResponsePrivate::DeleteReceiptRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES DeleteReceiptRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES DeleteReceiptRule response element from \a xml.
  */
 void DeleteReceiptRuleResponsePrivate::parseDeleteReceiptRuleResponse(QXmlStreamReader &xml)
 {

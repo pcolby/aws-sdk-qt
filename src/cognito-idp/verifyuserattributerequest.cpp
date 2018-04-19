@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * VerifyUserAttributeRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a VerifyUserAttributeRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a VerifyUserAttributeRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 VerifyUserAttributeRequestPrivate::VerifyUserAttributeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, VerifyUserAttributeRequest * const q)

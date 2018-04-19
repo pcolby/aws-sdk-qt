@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAgentsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeAgentsRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAgentsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 DescribeAgentsRequestPrivate::DescribeAgentsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DescribeAgentsRequest * const q)

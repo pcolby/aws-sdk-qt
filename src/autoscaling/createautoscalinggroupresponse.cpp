@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::CreateAutoScalingGroupResponse
- *
  * \brief The CreateAutoScalingGroupResponse class provides an interace for AutoScaling CreateAutoScalingGroup responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new CreateAutoScalingGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAutoScalingGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAutoScalingGroupResponse::CreateAutoScalingGroupResponse(
         const CreateAutoScalingGroupRequest &request,
@@ -60,6 +55,9 @@ CreateAutoScalingGroupResponse::CreateAutoScalingGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAutoScalingGroupRequest * CreateAutoScalingGroupResponse::request() const
 {
     Q_D(const CreateAutoScalingGroupResponse);
@@ -67,9 +65,8 @@ const CreateAutoScalingGroupRequest * CreateAutoScalingGroupResponse::request() 
 }
 
 /*!
- * @brief  Parse a AutoScaling CreateAutoScalingGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling CreateAutoScalingGroup \a response.
  */
 void CreateAutoScalingGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateAutoScalingGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::CreateAutoScalingGroupResponsePrivate
+ * \brief The CreateAutoScalingGroupResponsePrivate class provides private implementation for CreateAutoScalingGroupResponse.
  * \internal
  *
- * \class CreateAutoScalingGroupResponsePrivate
- *
- * \brief Private implementation for CreateAutoScalingGroupResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAutoScalingGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAutoScalingGroupResponse instance.
+ * Constructs a CreateAutoScalingGroupResponsePrivate object with public implementation \a q.
  */
 CreateAutoScalingGroupResponsePrivate::CreateAutoScalingGroupResponsePrivate(
     CreateAutoScalingGroupResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateAutoScalingGroupResponsePrivate::CreateAutoScalingGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling CreateAutoScalingGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling CreateAutoScalingGroup response element from \a xml.
  */
 void CreateAutoScalingGroupResponsePrivate::parseCreateAutoScalingGroupResponse(QXmlStreamReader &xml)
 {

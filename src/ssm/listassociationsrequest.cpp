@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * ListAssociationsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListAssociationsRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a ListAssociationsRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 ListAssociationsRequestPrivate::ListAssociationsRequestPrivate(
     const SSMRequest::Action action, ListAssociationsRequest * const q)

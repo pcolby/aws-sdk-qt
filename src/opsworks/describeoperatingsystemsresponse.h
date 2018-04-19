@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeOperatingSystemsResponse : public OpsWorksResponse {
 public:
     DescribeOperatingSystemsResponse(const DescribeOperatingSystemsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeOperatingSystemsRequest * request() const;
+    virtual const DescribeOperatingSystemsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeOperatingSystemsResponse)

@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * GetPermissionPolicyRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetPermissionPolicyRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a GetPermissionPolicyRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 GetPermissionPolicyRequestPrivate::GetPermissionPolicyRequestPrivate(
     const WAFRegionalRequest::Action action, GetPermissionPolicyRequest * const q)

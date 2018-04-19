@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * AddRoleToInstanceProfileRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a AddRoleToInstanceProfileRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a AddRoleToInstanceProfileRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
     const IAMRequest::Action action, AddRoleToInstanceProfileRequest * const q)

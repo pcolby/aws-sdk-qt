@@ -29,10 +29,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeServicesResponse
- *
  * \brief The DescribeServicesResponse class provides an interace for Support DescribeServices responses.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -107,11 +106,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeServicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeServicesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeServicesResponse::DescribeServicesResponse(
         const DescribeServicesRequest &request,
@@ -123,6 +118,9 @@ DescribeServicesResponse::DescribeServicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeServicesRequest * DescribeServicesResponse::request() const
 {
     Q_D(const DescribeServicesResponse);
@@ -130,9 +128,8 @@ const DescribeServicesRequest * DescribeServicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Support DescribeServices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Support DescribeServices \a response.
  */
 void DescribeServicesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeServicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Support::DescribeServicesResponsePrivate
+ * \brief The DescribeServicesResponsePrivate class provides private implementation for DescribeServicesResponse.
  * \internal
  *
- * \class DescribeServicesResponsePrivate
- *
- * \brief Private implementation for DescribeServicesResponse.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeServicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeServicesResponse instance.
+ * Constructs a DescribeServicesResponsePrivate object with public implementation \a q.
  */
 DescribeServicesResponsePrivate::DescribeServicesResponsePrivate(
     DescribeServicesResponse * const q) : SupportResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeServicesResponsePrivate::DescribeServicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Support DescribeServicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Support DescribeServices response element from \a xml.
  */
 void DescribeServicesResponsePrivate::parseDescribeServicesResponse(QXmlStreamReader &xml)
 {

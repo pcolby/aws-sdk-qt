@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 DeleteLoadBalancerRequestPrivate::DeleteLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DeleteLoadBalancerRequest * const q)

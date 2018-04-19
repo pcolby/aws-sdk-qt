@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticsearchInstanceTypeLimitsReques
  */
 
 /*!
- *
- * Constructs a DescribeElasticsearchInstanceTypeLimitsRequestPrivate object for ElasticsearchService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeElasticsearchInstanceTypeLimitsRequestPrivate object for ElasticsearchService \a action,
+ * with public implementation \a q.
  */
 DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInstanceTypeLimitsRequestPrivate(
     const ElasticsearchServiceRequest::Action action, DescribeElasticsearchInstanceTypeLimitsRequest * const q)

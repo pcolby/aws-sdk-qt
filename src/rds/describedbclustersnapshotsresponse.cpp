@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBClusterSnapshotsResponse
- *
  * \brief The DescribeDBClusterSnapshotsResponse class provides an interace for RDS DescribeDBClusterSnapshots responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBClusterSnapshotsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDBClusterSnapshotsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDBClusterSnapshotsResponse::DescribeDBClusterSnapshotsResponse(
         const DescribeDBClusterSnapshotsRequest &request,
@@ -119,6 +114,9 @@ DescribeDBClusterSnapshotsResponse::DescribeDBClusterSnapshotsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDBClusterSnapshotsRequest * DescribeDBClusterSnapshotsResponse::request() const
 {
     Q_D(const DescribeDBClusterSnapshotsResponse);
@@ -126,9 +124,8 @@ const DescribeDBClusterSnapshotsRequest * DescribeDBClusterSnapshotsResponse::re
 }
 
 /*!
- * @brief  Parse a RDS DescribeDBClusterSnapshots response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeDBClusterSnapshots \a response.
  */
 void DescribeDBClusterSnapshotsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeDBClusterSnapshotsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeDBClusterSnapshotsResponsePrivate
+ * \brief The DescribeDBClusterSnapshotsResponsePrivate class provides private implementation for DescribeDBClusterSnapshotsResponse.
  * \internal
  *
- * \class DescribeDBClusterSnapshotsResponsePrivate
- *
- * \brief Private implementation for DescribeDBClusterSnapshotsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBClusterSnapshotsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDBClusterSnapshotsResponse instance.
+ * Constructs a DescribeDBClusterSnapshotsResponsePrivate object with public implementation \a q.
  */
 DescribeDBClusterSnapshotsResponsePrivate::DescribeDBClusterSnapshotsResponsePrivate(
     DescribeDBClusterSnapshotsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeDBClusterSnapshotsResponsePrivate::DescribeDBClusterSnapshotsResponsePri
 }
 
 /*!
- * @brief  Parse an RDS DescribeDBClusterSnapshotsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeDBClusterSnapshots response element from \a xml.
  */
 void DescribeDBClusterSnapshotsResponsePrivate::parseDescribeDBClusterSnapshotsResponse(QXmlStreamReader &xml)
 {

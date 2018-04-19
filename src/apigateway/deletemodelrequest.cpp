@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteModelRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteModelRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteModelRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteModelRequestPrivate::DeleteModelRequestPrivate(
     const APIGatewayRequest::Action action, DeleteModelRequest * const q)

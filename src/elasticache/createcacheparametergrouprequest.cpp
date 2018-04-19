@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateCacheParameterGroupRequest::response(QN
  */
 
 /*!
- *
- * Constructs a CreateCacheParameterGroupRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a CreateCacheParameterGroupRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 CreateCacheParameterGroupRequestPrivate::CreateCacheParameterGroupRequestPrivate(
     const ElastiCacheRequest::Action action, CreateCacheParameterGroupRequest * const q)

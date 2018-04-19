@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListResourcesResponse
- *
  * \brief The ListResourcesResponse class provides an interace for WorkMail ListResources responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListResourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListResourcesResponse::ListResourcesResponse(
         const ListResourcesRequest &request,
@@ -88,6 +83,9 @@ ListResourcesResponse::ListResourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListResourcesRequest * ListResourcesResponse::request() const
 {
     Q_D(const ListResourcesResponse);
@@ -95,9 +93,8 @@ const ListResourcesRequest * ListResourcesResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail ListResources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail ListResources \a response.
  */
 void ListResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void ListResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::ListResourcesResponsePrivate
+ * \brief The ListResourcesResponsePrivate class provides private implementation for ListResourcesResponse.
  * \internal
  *
- * \class ListResourcesResponsePrivate
- *
- * \brief Private implementation for ListResourcesResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListResourcesResponse instance.
+ * Constructs a ListResourcesResponsePrivate object with public implementation \a q.
  */
 ListResourcesResponsePrivate::ListResourcesResponsePrivate(
     ListResourcesResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ ListResourcesResponsePrivate::ListResourcesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail ListResourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail ListResources response element from \a xml.
  */
 void ListResourcesResponsePrivate::parseListResourcesResponse(QXmlStreamReader &xml)
 {

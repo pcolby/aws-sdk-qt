@@ -29,10 +29,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::GetApplicationPolicyResponse
- *
  * \brief The GetApplicationPolicyResponse class provides an interace for ServerlessApplicationRepository GetApplicationPolicy responses.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -60,11 +59,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new GetApplicationPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetApplicationPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetApplicationPolicyResponse::GetApplicationPolicyResponse(
         const GetApplicationPolicyRequest &request,
@@ -76,6 +71,9 @@ GetApplicationPolicyResponse::GetApplicationPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetApplicationPolicyRequest * GetApplicationPolicyResponse::request() const
 {
     Q_D(const GetApplicationPolicyResponse);
@@ -83,9 +81,8 @@ const GetApplicationPolicyRequest * GetApplicationPolicyResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ServerlessApplicationRepository GetApplicationPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServerlessApplicationRepository GetApplicationPolicy \a response.
  */
 void GetApplicationPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -95,19 +92,15 @@ void GetApplicationPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServerlessApplicationRepository::GetApplicationPolicyResponsePrivate
+ * \brief The GetApplicationPolicyResponsePrivate class provides private implementation for GetApplicationPolicyResponse.
  * \internal
  *
- * \class GetApplicationPolicyResponsePrivate
- *
- * \brief Private implementation for GetApplicationPolicyResponse.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApplicationPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetApplicationPolicyResponse instance.
+ * Constructs a GetApplicationPolicyResponsePrivate object with public implementation \a q.
  */
 GetApplicationPolicyResponsePrivate::GetApplicationPolicyResponsePrivate(
     GetApplicationPolicyResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
@@ -116,9 +109,7 @@ GetApplicationPolicyResponsePrivate::GetApplicationPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServerlessApplicationRepository GetApplicationPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServerlessApplicationRepository GetApplicationPolicy response element from \a xml.
  */
 void GetApplicationPolicyResponsePrivate::parseGetApplicationPolicyResponse(QXmlStreamReader &xml)
 {

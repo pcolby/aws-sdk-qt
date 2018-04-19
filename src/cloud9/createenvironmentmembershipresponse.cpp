@@ -29,10 +29,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::CreateEnvironmentMembershipResponse
- *
  * \brief The CreateEnvironmentMembershipResponse class provides an interace for Cloud9 CreateEnvironmentMembership responses.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -93,11 +92,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new CreateEnvironmentMembershipResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateEnvironmentMembershipResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateEnvironmentMembershipResponse::CreateEnvironmentMembershipResponse(
         const CreateEnvironmentMembershipRequest &request,
@@ -109,6 +104,9 @@ CreateEnvironmentMembershipResponse::CreateEnvironmentMembershipResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateEnvironmentMembershipRequest * CreateEnvironmentMembershipResponse::request() const
 {
     Q_D(const CreateEnvironmentMembershipResponse);
@@ -116,9 +114,8 @@ const CreateEnvironmentMembershipRequest * CreateEnvironmentMembershipResponse::
 }
 
 /*!
- * @brief  Parse a Cloud9 CreateEnvironmentMembership response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Cloud9 CreateEnvironmentMembership \a response.
  */
 void CreateEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
 {
@@ -128,19 +125,15 @@ void CreateEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Cloud9::CreateEnvironmentMembershipResponsePrivate
+ * \brief The CreateEnvironmentMembershipResponsePrivate class provides private implementation for CreateEnvironmentMembershipResponse.
  * \internal
  *
- * \class CreateEnvironmentMembershipResponsePrivate
- *
- * \brief Private implementation for CreateEnvironmentMembershipResponse.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEnvironmentMembershipResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateEnvironmentMembershipResponse instance.
+ * Constructs a CreateEnvironmentMembershipResponsePrivate object with public implementation \a q.
  */
 CreateEnvironmentMembershipResponsePrivate::CreateEnvironmentMembershipResponsePrivate(
     CreateEnvironmentMembershipResponse * const q) : Cloud9ResponsePrivate(q)
@@ -149,9 +142,7 @@ CreateEnvironmentMembershipResponsePrivate::CreateEnvironmentMembershipResponseP
 }
 
 /*!
- * @brief  Parse an Cloud9 CreateEnvironmentMembershipResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Cloud9 CreateEnvironmentMembership response element from \a xml.
  */
 void CreateEnvironmentMembershipResponsePrivate::parseCreateEnvironmentMembershipResponse(QXmlStreamReader &xml)
 {

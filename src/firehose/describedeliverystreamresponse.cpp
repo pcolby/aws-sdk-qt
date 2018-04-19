@@ -29,10 +29,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::DescribeDeliveryStreamResponse
- *
  * \brief The DescribeDeliveryStreamResponse class provides an interace for Firehose DescribeDeliveryStream responses.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -43,11 +42,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new DescribeDeliveryStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDeliveryStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDeliveryStreamResponse::DescribeDeliveryStreamResponse(
         const DescribeDeliveryStreamRequest &request,
@@ -59,6 +54,9 @@ DescribeDeliveryStreamResponse::DescribeDeliveryStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDeliveryStreamRequest * DescribeDeliveryStreamResponse::request() const
 {
     Q_D(const DescribeDeliveryStreamResponse);
@@ -66,9 +64,8 @@ const DescribeDeliveryStreamRequest * DescribeDeliveryStreamResponse::request() 
 }
 
 /*!
- * @brief  Parse a Firehose DescribeDeliveryStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Firehose DescribeDeliveryStream \a response.
  */
 void DescribeDeliveryStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeDeliveryStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Firehose::DescribeDeliveryStreamResponsePrivate
+ * \brief The DescribeDeliveryStreamResponsePrivate class provides private implementation for DescribeDeliveryStreamResponse.
  * \internal
  *
- * \class DescribeDeliveryStreamResponsePrivate
- *
- * \brief Private implementation for DescribeDeliveryStreamResponse.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDeliveryStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDeliveryStreamResponse instance.
+ * Constructs a DescribeDeliveryStreamResponsePrivate object with public implementation \a q.
  */
 DescribeDeliveryStreamResponsePrivate::DescribeDeliveryStreamResponsePrivate(
     DescribeDeliveryStreamResponse * const q) : FirehoseResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeDeliveryStreamResponsePrivate::DescribeDeliveryStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Firehose DescribeDeliveryStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Firehose DescribeDeliveryStream response element from \a xml.
  */
 void DescribeDeliveryStreamResponsePrivate::parseDescribeDeliveryStreamResponse(QXmlStreamReader &xml)
 {

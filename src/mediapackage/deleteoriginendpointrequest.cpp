@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteOriginEndpointRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteOriginEndpointRequestPrivate object for MediaPackage \a action with,
- * public implementation \a q.
+ * Constructs a DeleteOriginEndpointRequestPrivate object for MediaPackage \a action,
+ * with public implementation \a q.
  */
 DeleteOriginEndpointRequestPrivate::DeleteOriginEndpointRequestPrivate(
     const MediaPackageRequest::Action action, DeleteOriginEndpointRequest * const q)

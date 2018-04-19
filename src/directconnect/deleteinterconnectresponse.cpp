@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DeleteInterconnectResponse
- *
  * \brief The DeleteInterconnectResponse class provides an interace for DirectConnect DeleteInterconnect responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DeleteInterconnectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteInterconnectResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteInterconnectResponse::DeleteInterconnectResponse(
         const DeleteInterconnectRequest &request,
@@ -63,6 +58,9 @@ DeleteInterconnectResponse::DeleteInterconnectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteInterconnectRequest * DeleteInterconnectResponse::request() const
 {
     Q_D(const DeleteInterconnectResponse);
@@ -70,9 +68,8 @@ const DeleteInterconnectRequest * DeleteInterconnectResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect DeleteInterconnect response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DeleteInterconnect \a response.
  */
 void DeleteInterconnectResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DeleteInterconnectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::DeleteInterconnectResponsePrivate
+ * \brief The DeleteInterconnectResponsePrivate class provides private implementation for DeleteInterconnectResponse.
  * \internal
  *
- * \class DeleteInterconnectResponsePrivate
- *
- * \brief Private implementation for DeleteInterconnectResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInterconnectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteInterconnectResponse instance.
+ * Constructs a DeleteInterconnectResponsePrivate object with public implementation \a q.
  */
 DeleteInterconnectResponsePrivate::DeleteInterconnectResponsePrivate(
     DeleteInterconnectResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DeleteInterconnectResponsePrivate::DeleteInterconnectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect DeleteInterconnectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DeleteInterconnect response element from \a xml.
  */
 void DeleteInterconnectResponsePrivate::parseDeleteInterconnectResponse(QXmlStreamReader &xml)
 {

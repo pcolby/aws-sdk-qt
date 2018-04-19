@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::CreateClusterResponse
- *
  * \brief The CreateClusterResponse class provides an interace for DAX CreateCluster responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateClusterResponse::CreateClusterResponse(
         const CreateClusterRequest &request,
@@ -59,6 +54,9 @@ CreateClusterResponse::CreateClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateClusterRequest * CreateClusterResponse::request() const
 {
     Q_D(const CreateClusterResponse);
@@ -66,9 +64,8 @@ const CreateClusterRequest * CreateClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a DAX CreateCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX CreateCluster \a response.
  */
 void CreateClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::CreateClusterResponsePrivate
+ * \brief The CreateClusterResponsePrivate class provides private implementation for CreateClusterResponse.
  * \internal
  *
- * \class CreateClusterResponsePrivate
- *
- * \brief Private implementation for CreateClusterResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateClusterResponse instance.
+ * Constructs a CreateClusterResponsePrivate object with public implementation \a q.
  */
 CreateClusterResponsePrivate::CreateClusterResponsePrivate(
     CreateClusterResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateClusterResponsePrivate::CreateClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX CreateClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX CreateCluster response element from \a xml.
  */
 void CreateClusterResponsePrivate::parseCreateClusterResponse(QXmlStreamReader &xml)
 {

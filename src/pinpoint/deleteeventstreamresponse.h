@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteEventStreamResponse : public PinpointResponse {
 public:
     DeleteEventStreamResponse(const DeleteEventStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteEventStreamRequest * request() const;
+    virtual const DeleteEventStreamRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteEventStreamResponse)

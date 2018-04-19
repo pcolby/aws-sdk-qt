@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeLoadBalancerTargetGroupsResponse
- *
  * \brief The DescribeLoadBalancerTargetGroupsResponse class provides an interace for AutoScaling DescribeLoadBalancerTargetGroups responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeLoadBalancerTargetGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLoadBalancerTargetGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLoadBalancerTargetGroupsResponse::DescribeLoadBalancerTargetGroupsResponse(
         const DescribeLoadBalancerTargetGroupsRequest &request,
@@ -60,6 +55,9 @@ DescribeLoadBalancerTargetGroupsResponse::DescribeLoadBalancerTargetGroupsRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLoadBalancerTargetGroupsRequest * DescribeLoadBalancerTargetGroupsResponse::request() const
 {
     Q_D(const DescribeLoadBalancerTargetGroupsResponse);
@@ -67,9 +65,8 @@ const DescribeLoadBalancerTargetGroupsRequest * DescribeLoadBalancerTargetGroups
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeLoadBalancerTargetGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeLoadBalancerTargetGroups \a response.
  */
 void DescribeLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeLoadBalancerTargetGroupsResponsePrivate
+ * \brief The DescribeLoadBalancerTargetGroupsResponsePrivate class provides private implementation for DescribeLoadBalancerTargetGroupsResponse.
  * \internal
  *
- * \class DescribeLoadBalancerTargetGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeLoadBalancerTargetGroupsResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLoadBalancerTargetGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLoadBalancerTargetGroupsResponse instance.
+ * Constructs a DescribeLoadBalancerTargetGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeLoadBalancerTargetGroupsResponsePrivate::DescribeLoadBalancerTargetGroupsResponsePrivate(
     DescribeLoadBalancerTargetGroupsResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeLoadBalancerTargetGroupsResponsePrivate::DescribeLoadBalancerTargetGroup
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeLoadBalancerTargetGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeLoadBalancerTargetGroups response element from \a xml.
  */
 void DescribeLoadBalancerTargetGroupsResponsePrivate::parseDescribeLoadBalancerTargetGroupsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::GetNamedQueryResponse
- *
  * \brief The GetNamedQueryResponse class provides an interace for Athena GetNamedQuery responses.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -51,11 +50,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new GetNamedQueryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetNamedQueryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetNamedQueryResponse::GetNamedQueryResponse(
         const GetNamedQueryRequest &request,
@@ -67,6 +62,9 @@ GetNamedQueryResponse::GetNamedQueryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetNamedQueryRequest * GetNamedQueryResponse::request() const
 {
     Q_D(const GetNamedQueryResponse);
@@ -74,9 +72,8 @@ const GetNamedQueryRequest * GetNamedQueryResponse::request() const
 }
 
 /*!
- * @brief  Parse a Athena GetNamedQuery response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Athena GetNamedQuery \a response.
  */
 void GetNamedQueryResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void GetNamedQueryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Athena::GetNamedQueryResponsePrivate
+ * \brief The GetNamedQueryResponsePrivate class provides private implementation for GetNamedQueryResponse.
  * \internal
  *
- * \class GetNamedQueryResponsePrivate
- *
- * \brief Private implementation for GetNamedQueryResponse.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetNamedQueryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetNamedQueryResponse instance.
+ * Constructs a GetNamedQueryResponsePrivate object with public implementation \a q.
  */
 GetNamedQueryResponsePrivate::GetNamedQueryResponsePrivate(
     GetNamedQueryResponse * const q) : AthenaResponsePrivate(q)
@@ -107,9 +100,7 @@ GetNamedQueryResponsePrivate::GetNamedQueryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Athena GetNamedQueryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Athena GetNamedQuery response element from \a xml.
  */
 void GetNamedQueryResponsePrivate::parseGetNamedQueryResponse(QXmlStreamReader &xml)
 {

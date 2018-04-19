@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * RebuildWorkspacesRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a RebuildWorkspacesRequestPrivate object for WorkSpaces \a action with,
- * public implementation \a q.
+ * Constructs a RebuildWorkspacesRequestPrivate object for WorkSpaces \a action,
+ * with public implementation \a q.
  */
 RebuildWorkspacesRequestPrivate::RebuildWorkspacesRequestPrivate(
     const WorkSpacesRequest::Action action, RebuildWorkspacesRequest * const q)

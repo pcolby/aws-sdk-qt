@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::StartConfigRulesEvaluationResponse
- *
  * \brief The StartConfigRulesEvaluationResponse class provides an interace for ConfigService StartConfigRulesEvaluation responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new StartConfigRulesEvaluationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartConfigRulesEvaluationResponse object for \a reply to \a request, with parent \a parent.
  */
 StartConfigRulesEvaluationResponse::StartConfigRulesEvaluationResponse(
         const StartConfigRulesEvaluationRequest &request,
@@ -78,6 +73,9 @@ StartConfigRulesEvaluationResponse::StartConfigRulesEvaluationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartConfigRulesEvaluationRequest * StartConfigRulesEvaluationResponse::request() const
 {
     Q_D(const StartConfigRulesEvaluationResponse);
@@ -85,9 +83,8 @@ const StartConfigRulesEvaluationRequest * StartConfigRulesEvaluationResponse::re
 }
 
 /*!
- * @brief  Parse a ConfigService StartConfigRulesEvaluation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService StartConfigRulesEvaluation \a response.
  */
 void StartConfigRulesEvaluationResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void StartConfigRulesEvaluationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::StartConfigRulesEvaluationResponsePrivate
+ * \brief The StartConfigRulesEvaluationResponsePrivate class provides private implementation for StartConfigRulesEvaluationResponse.
  * \internal
  *
- * \class StartConfigRulesEvaluationResponsePrivate
- *
- * \brief Private implementation for StartConfigRulesEvaluationResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartConfigRulesEvaluationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartConfigRulesEvaluationResponse instance.
+ * Constructs a StartConfigRulesEvaluationResponsePrivate object with public implementation \a q.
  */
 StartConfigRulesEvaluationResponsePrivate::StartConfigRulesEvaluationResponsePrivate(
     StartConfigRulesEvaluationResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ StartConfigRulesEvaluationResponsePrivate::StartConfigRulesEvaluationResponsePri
 }
 
 /*!
- * @brief  Parse an ConfigService StartConfigRulesEvaluationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService StartConfigRulesEvaluation response element from \a xml.
  */
 void StartConfigRulesEvaluationResponsePrivate::parseStartConfigRulesEvaluationResponse(QXmlStreamReader &xml)
 {

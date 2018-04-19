@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::AddTagsResponse
- *
  * \brief The AddTagsResponse class provides an interace for DataPipeline AddTags responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new AddTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 AddTagsResponse::AddTagsResponse(
         const AddTagsRequest &request,
@@ -73,6 +68,9 @@ AddTagsResponse::AddTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddTagsRequest * AddTagsResponse::request() const
 {
     Q_D(const AddTagsResponse);
@@ -80,9 +78,8 @@ const AddTagsRequest * AddTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DataPipeline AddTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline AddTags \a response.
  */
 void AddTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void AddTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::AddTagsResponsePrivate
+ * \brief The AddTagsResponsePrivate class provides private implementation for AddTagsResponse.
  * \internal
  *
- * \class AddTagsResponsePrivate
- *
- * \brief Private implementation for AddTagsResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddTagsResponse instance.
+ * Constructs a AddTagsResponsePrivate object with public implementation \a q.
  */
 AddTagsResponsePrivate::AddTagsResponsePrivate(
     AddTagsResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ AddTagsResponsePrivate::AddTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline AddTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline AddTags response element from \a xml.
  */
 void AddTagsResponsePrivate::parseAddTagsResponse(QXmlStreamReader &xml)
 {

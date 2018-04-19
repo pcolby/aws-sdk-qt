@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterPatchBaselineForPatchGroupResponse : public SSMRespon
 public:
     RegisterPatchBaselineForPatchGroupResponse(const RegisterPatchBaselineForPatchGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterPatchBaselineForPatchGroupRequest * request() const;
+    virtual const RegisterPatchBaselineForPatchGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterPatchBaselineForPatchGroupResponse)

@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::RequestUploadCredentialsResponse
- *
  * \brief The RequestUploadCredentialsResponse class provides an interace for GameLift RequestUploadCredentials responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new RequestUploadCredentialsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RequestUploadCredentialsResponse object for \a reply to \a request, with parent \a parent.
  */
 RequestUploadCredentialsResponse::RequestUploadCredentialsResponse(
         const RequestUploadCredentialsRequest &request,
@@ -491,6 +486,9 @@ RequestUploadCredentialsResponse::RequestUploadCredentialsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RequestUploadCredentialsRequest * RequestUploadCredentialsResponse::request() const
 {
     Q_D(const RequestUploadCredentialsResponse);
@@ -498,9 +496,8 @@ const RequestUploadCredentialsRequest * RequestUploadCredentialsResponse::reques
 }
 
 /*!
- * @brief  Parse a GameLift RequestUploadCredentials response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift RequestUploadCredentials \a response.
  */
 void RequestUploadCredentialsResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void RequestUploadCredentialsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::RequestUploadCredentialsResponsePrivate
+ * \brief The RequestUploadCredentialsResponsePrivate class provides private implementation for RequestUploadCredentialsResponse.
  * \internal
  *
- * \class RequestUploadCredentialsResponsePrivate
- *
- * \brief Private implementation for RequestUploadCredentialsResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RequestUploadCredentialsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RequestUploadCredentialsResponse instance.
+ * Constructs a RequestUploadCredentialsResponsePrivate object with public implementation \a q.
  */
 RequestUploadCredentialsResponsePrivate::RequestUploadCredentialsResponsePrivate(
     RequestUploadCredentialsResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ RequestUploadCredentialsResponsePrivate::RequestUploadCredentialsResponsePrivate
 }
 
 /*!
- * @brief  Parse an GameLift RequestUploadCredentialsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift RequestUploadCredentials response element from \a xml.
  */
 void RequestUploadCredentialsResponsePrivate::parseRequestUploadCredentialsResponse(QXmlStreamReader &xml)
 {

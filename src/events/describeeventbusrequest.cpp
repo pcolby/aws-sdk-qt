@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventBusRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeEventBusRequestPrivate object for CloudWatchEvents \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventBusRequestPrivate object for CloudWatchEvents \a action,
+ * with public implementation \a q.
  */
 DescribeEventBusRequestPrivate::DescribeEventBusRequestPrivate(
     const CloudWatchEventsRequest::Action action, DescribeEventBusRequest * const q)

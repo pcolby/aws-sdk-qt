@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::CreateRepositoryResponse
- *
  * \brief The CreateRepositoryResponse class provides an interace for CodeCommit CreateRepository responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new CreateRepositoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRepositoryResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRepositoryResponse::CreateRepositoryResponse(
         const CreateRepositoryRequest &request,
@@ -245,6 +240,9 @@ CreateRepositoryResponse::CreateRepositoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRepositoryRequest * CreateRepositoryResponse::request() const
 {
     Q_D(const CreateRepositoryResponse);
@@ -252,9 +250,8 @@ const CreateRepositoryRequest * CreateRepositoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit CreateRepository response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit CreateRepository \a response.
  */
 void CreateRepositoryResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void CreateRepositoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::CreateRepositoryResponsePrivate
+ * \brief The CreateRepositoryResponsePrivate class provides private implementation for CreateRepositoryResponse.
  * \internal
  *
- * \class CreateRepositoryResponsePrivate
- *
- * \brief Private implementation for CreateRepositoryResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRepositoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRepositoryResponse instance.
+ * Constructs a CreateRepositoryResponsePrivate object with public implementation \a q.
  */
 CreateRepositoryResponsePrivate::CreateRepositoryResponsePrivate(
     CreateRepositoryResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ CreateRepositoryResponsePrivate::CreateRepositoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit CreateRepositoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit CreateRepository response element from \a xml.
  */
 void CreateRepositoryResponsePrivate::parseCreateRepositoryResponse(QXmlStreamReader &xml)
 {

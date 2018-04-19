@@ -29,21 +29,16 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::TagStreamResponse
- *
  * \brief The TagStreamResponse class provides an interace for KinesisVideo TagStream responses.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  *
  *
  * \sa KinesisVideoClient::tagStream
  */
 
 /*!
- * @brief  Constructs a new TagStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 TagStreamResponse::TagStreamResponse(
         const TagStreamRequest &request,
@@ -55,6 +50,9 @@ TagStreamResponse::TagStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagStreamRequest * TagStreamResponse::request() const
 {
     Q_D(const TagStreamResponse);
@@ -62,9 +60,8 @@ const TagStreamRequest * TagStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisVideo TagStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisVideo TagStream \a response.
  */
 void TagStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void TagStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisVideo::TagStreamResponsePrivate
+ * \brief The TagStreamResponsePrivate class provides private implementation for TagStreamResponse.
  * \internal
  *
- * \class TagStreamResponsePrivate
- *
- * \brief Private implementation for TagStreamResponse.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagStreamResponse instance.
+ * Constructs a TagStreamResponsePrivate object with public implementation \a q.
  */
 TagStreamResponsePrivate::TagStreamResponsePrivate(
     TagStreamResponse * const q) : KinesisVideoResponsePrivate(q)
@@ -95,9 +88,7 @@ TagStreamResponsePrivate::TagStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisVideo TagStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisVideo TagStream response element from \a xml.
  */
 void TagStreamResponsePrivate::parseTagStreamResponse(QXmlStreamReader &xml)
 {

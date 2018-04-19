@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateRouteTableResponse : public EC2Response {
 public:
     CreateRouteTableResponse(const CreateRouteTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateRouteTableRequest * request() const;
+    virtual const CreateRouteTableRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateRouteTableResponse)

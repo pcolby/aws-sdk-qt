@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketRequestPaymentResponse
- *
  * \brief The GetBucketRequestPaymentResponse class provides an interace for S3 GetBucketRequestPayment responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketRequestPayment
  */
 
 /*!
- * @brief  Constructs a new GetBucketRequestPaymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBucketRequestPaymentResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBucketRequestPaymentResponse::GetBucketRequestPaymentResponse(
         const GetBucketRequestPaymentRequest &request,
@@ -55,6 +50,9 @@ GetBucketRequestPaymentResponse::GetBucketRequestPaymentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBucketRequestPaymentRequest * GetBucketRequestPaymentResponse::request() const
 {
     Q_D(const GetBucketRequestPaymentResponse);
@@ -62,9 +60,8 @@ const GetBucketRequestPaymentRequest * GetBucketRequestPaymentResponse::request(
 }
 
 /*!
- * @brief  Parse a S3 GetBucketRequestPayment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetBucketRequestPayment \a response.
  */
 void GetBucketRequestPaymentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBucketRequestPaymentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetBucketRequestPaymentResponsePrivate
+ * \brief The GetBucketRequestPaymentResponsePrivate class provides private implementation for GetBucketRequestPaymentResponse.
  * \internal
  *
- * \class GetBucketRequestPaymentResponsePrivate
- *
- * \brief Private implementation for GetBucketRequestPaymentResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketRequestPaymentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBucketRequestPaymentResponse instance.
+ * Constructs a GetBucketRequestPaymentResponsePrivate object with public implementation \a q.
  */
 GetBucketRequestPaymentResponsePrivate::GetBucketRequestPaymentResponsePrivate(
     GetBucketRequestPaymentResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBucketRequestPaymentResponsePrivate::GetBucketRequestPaymentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 GetBucketRequestPaymentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetBucketRequestPayment response element from \a xml.
  */
 void GetBucketRequestPaymentResponsePrivate::parseGetBucketRequestPaymentResponse(QXmlStreamReader &xml)
 {

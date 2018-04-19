@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBalancerTargetGroupsRequest::resp
  */
 
 /*!
- *
- * Constructs a DescribeLoadBalancerTargetGroupsRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DescribeLoadBalancerTargetGroupsRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DescribeLoadBalancerTargetGroupsRequestPrivate::DescribeLoadBalancerTargetGroupsRequestPrivate(
     const AutoScalingRequest::Action action, DescribeLoadBalancerTargetGroupsRequest * const q)

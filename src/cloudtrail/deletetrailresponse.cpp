@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::DeleteTrailResponse
- *
  * \brief The DeleteTrailResponse class provides an interace for CloudTrail DeleteTrail responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new DeleteTrailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTrailResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTrailResponse::DeleteTrailResponse(
         const DeleteTrailRequest &request,
@@ -78,6 +73,9 @@ DeleteTrailResponse::DeleteTrailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTrailRequest * DeleteTrailResponse::request() const
 {
     Q_D(const DeleteTrailResponse);
@@ -85,9 +83,8 @@ const DeleteTrailRequest * DeleteTrailResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail DeleteTrail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail DeleteTrail \a response.
  */
 void DeleteTrailResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DeleteTrailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::DeleteTrailResponsePrivate
+ * \brief The DeleteTrailResponsePrivate class provides private implementation for DeleteTrailResponse.
  * \internal
  *
- * \class DeleteTrailResponsePrivate
- *
- * \brief Private implementation for DeleteTrailResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTrailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTrailResponse instance.
+ * Constructs a DeleteTrailResponsePrivate object with public implementation \a q.
  */
 DeleteTrailResponsePrivate::DeleteTrailResponsePrivate(
     DeleteTrailResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ DeleteTrailResponsePrivate::DeleteTrailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail DeleteTrailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail DeleteTrail response element from \a xml.
  */
 void DeleteTrailResponsePrivate::parseDeleteTrailResponse(QXmlStreamReader &xml)
 {

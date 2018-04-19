@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * SearchFacesRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a SearchFacesRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a SearchFacesRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 SearchFacesRequestPrivate::SearchFacesRequestPrivate(
     const RekognitionRequest::Action action, SearchFacesRequest * const q)

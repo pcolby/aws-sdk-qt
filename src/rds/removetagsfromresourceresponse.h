@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveTagsFromResourceResponse : public RDSResponse {
 public:
     RemoveTagsFromResourceResponse(const RemoveTagsFromResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveTagsFromResourceRequest * request() const;
+    virtual const RemoveTagsFromResourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RemoveTagsFromResourceResponse)

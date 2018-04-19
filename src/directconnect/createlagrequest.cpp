@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * CreateLagRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a CreateLagRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a CreateLagRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 CreateLagRequestPrivate::CreateLagRequestPrivate(
     const DirectConnectRequest::Action action, CreateLagRequest * const q)

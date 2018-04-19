@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * IndexDocumentsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a IndexDocumentsRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a IndexDocumentsRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 IndexDocumentsRequestPrivate::IndexDocumentsRequestPrivate(
     const CloudSearchRequest::Action action, IndexDocumentsRequest * const q)

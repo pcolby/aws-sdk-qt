@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetStatusResponse : public ImportExportResponse {
 public:
     GetStatusResponse(const GetStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetStatusRequest * request() const;
+    virtual const GetStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetStatusResponse)

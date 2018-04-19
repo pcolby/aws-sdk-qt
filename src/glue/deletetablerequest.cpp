@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTableRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteTableRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTableRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 DeleteTableRequestPrivate::DeleteTableRequestPrivate(
     const GlueRequest::Action action, DeleteTableRequest * const q)

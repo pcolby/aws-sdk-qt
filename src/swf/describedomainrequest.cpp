@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeDomainRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDomainRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 DescribeDomainRequestPrivate::DescribeDomainRequestPrivate(
     const SWFRequest::Action action, DescribeDomainRequest * const q)

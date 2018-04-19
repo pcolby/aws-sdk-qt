@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetFederationTokenResponse : public STSResponse {
 public:
     GetFederationTokenResponse(const GetFederationTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetFederationTokenRequest * request() const;
+    virtual const GetFederationTokenRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetFederationTokenResponse)

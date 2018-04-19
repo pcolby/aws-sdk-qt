@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutSchemaFromJsonResponse : public CloudDirectoryResponse {
 public:
     PutSchemaFromJsonResponse(const PutSchemaFromJsonRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutSchemaFromJsonRequest * request() const;
+    virtual const PutSchemaFromJsonRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutSchemaFromJsonResponse)

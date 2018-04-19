@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteTagsResponse
- *
  * \brief The DeleteTagsResponse class provides an interace for EC2 DeleteTags responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTagsResponse::DeleteTagsResponse(
         const DeleteTagsRequest &request,
@@ -59,6 +54,9 @@ DeleteTagsResponse::DeleteTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTagsRequest * DeleteTagsResponse::request() const
 {
     Q_D(const DeleteTagsResponse);
@@ -66,9 +64,8 @@ const DeleteTagsRequest * DeleteTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteTags \a response.
  */
 void DeleteTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteTagsResponsePrivate
+ * \brief The DeleteTagsResponsePrivate class provides private implementation for DeleteTagsResponse.
  * \internal
  *
- * \class DeleteTagsResponsePrivate
- *
- * \brief Private implementation for DeleteTagsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTagsResponse instance.
+ * Constructs a DeleteTagsResponsePrivate object with public implementation \a q.
  */
 DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
     DeleteTagsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteTags response element from \a xml.
  */
 void DeleteTagsResponsePrivate::parseDeleteTagsResponse(QXmlStreamReader &xml)
 {

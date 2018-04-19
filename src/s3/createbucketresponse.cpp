@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::CreateBucketResponse
- *
  * \brief The CreateBucketResponse class provides an interace for S3 CreateBucket responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::createBucket
  */
 
 /*!
- * @brief  Constructs a new CreateBucketResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateBucketResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateBucketResponse::CreateBucketResponse(
         const CreateBucketRequest &request,
@@ -55,6 +50,9 @@ CreateBucketResponse::CreateBucketResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateBucketRequest * CreateBucketResponse::request() const
 {
     Q_D(const CreateBucketResponse);
@@ -62,9 +60,8 @@ const CreateBucketRequest * CreateBucketResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 CreateBucket response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 CreateBucket \a response.
  */
 void CreateBucketResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateBucketResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::CreateBucketResponsePrivate
+ * \brief The CreateBucketResponsePrivate class provides private implementation for CreateBucketResponse.
  * \internal
  *
- * \class CreateBucketResponsePrivate
- *
- * \brief Private implementation for CreateBucketResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBucketResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateBucketResponse instance.
+ * Constructs a CreateBucketResponsePrivate object with public implementation \a q.
  */
 CreateBucketResponsePrivate::CreateBucketResponsePrivate(
     CreateBucketResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateBucketResponsePrivate::CreateBucketResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 CreateBucketResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 CreateBucket response element from \a xml.
  */
 void CreateBucketResponsePrivate::parseCreateBucketResponse(QXmlStreamReader &xml)
 {

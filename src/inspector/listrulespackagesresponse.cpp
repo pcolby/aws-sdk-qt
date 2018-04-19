@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::ListRulesPackagesResponse
- *
  * \brief The ListRulesPackagesResponse class provides an interace for Inspector ListRulesPackages responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new ListRulesPackagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRulesPackagesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRulesPackagesResponse::ListRulesPackagesResponse(
         const ListRulesPackagesRequest &request,
@@ -60,6 +55,9 @@ ListRulesPackagesResponse::ListRulesPackagesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRulesPackagesRequest * ListRulesPackagesResponse::request() const
 {
     Q_D(const ListRulesPackagesResponse);
@@ -67,9 +65,8 @@ const ListRulesPackagesRequest * ListRulesPackagesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector ListRulesPackages response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector ListRulesPackages \a response.
  */
 void ListRulesPackagesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListRulesPackagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::ListRulesPackagesResponsePrivate
+ * \brief The ListRulesPackagesResponsePrivate class provides private implementation for ListRulesPackagesResponse.
  * \internal
  *
- * \class ListRulesPackagesResponsePrivate
- *
- * \brief Private implementation for ListRulesPackagesResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRulesPackagesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRulesPackagesResponse instance.
+ * Constructs a ListRulesPackagesResponsePrivate object with public implementation \a q.
  */
 ListRulesPackagesResponsePrivate::ListRulesPackagesResponsePrivate(
     ListRulesPackagesResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ ListRulesPackagesResponsePrivate::ListRulesPackagesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector ListRulesPackagesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector ListRulesPackages response element from \a xml.
  */
 void ListRulesPackagesResponsePrivate::parseListRulesPackagesResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReorderReceiptRuleSetResponse : public SESResponse {
 public:
     ReorderReceiptRuleSetResponse(const ReorderReceiptRuleSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReorderReceiptRuleSetRequest * request() const;
+    virtual const ReorderReceiptRuleSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ReorderReceiptRuleSetResponse)

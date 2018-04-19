@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminUpdateDeviceStatusResponse
- *
  * \brief The AdminUpdateDeviceStatusResponse class provides an interace for CognitoIdentityProvider AdminUpdateDeviceStatus responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminUpdateDeviceStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminUpdateDeviceStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminUpdateDeviceStatusResponse::AdminUpdateDeviceStatusResponse(
         const AdminUpdateDeviceStatusRequest &request,
@@ -65,6 +60,9 @@ AdminUpdateDeviceStatusResponse::AdminUpdateDeviceStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminUpdateDeviceStatusRequest * AdminUpdateDeviceStatusResponse::request() const
 {
     Q_D(const AdminUpdateDeviceStatusResponse);
@@ -72,9 +70,8 @@ const AdminUpdateDeviceStatusRequest * AdminUpdateDeviceStatusResponse::request(
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminUpdateDeviceStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminUpdateDeviceStatus \a response.
  */
 void AdminUpdateDeviceStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminUpdateDeviceStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminUpdateDeviceStatusResponsePrivate
+ * \brief The AdminUpdateDeviceStatusResponsePrivate class provides private implementation for AdminUpdateDeviceStatusResponse.
  * \internal
  *
- * \class AdminUpdateDeviceStatusResponsePrivate
- *
- * \brief Private implementation for AdminUpdateDeviceStatusResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminUpdateDeviceStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminUpdateDeviceStatusResponse instance.
+ * Constructs a AdminUpdateDeviceStatusResponsePrivate object with public implementation \a q.
  */
 AdminUpdateDeviceStatusResponsePrivate::AdminUpdateDeviceStatusResponsePrivate(
     AdminUpdateDeviceStatusResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminUpdateDeviceStatusResponsePrivate::AdminUpdateDeviceStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminUpdateDeviceStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminUpdateDeviceStatus response element from \a xml.
  */
 void AdminUpdateDeviceStatusResponsePrivate::parseAdminUpdateDeviceStatusResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteItemResponse : public DynamoDBResponse {
 public:
     DeleteItemResponse(const DeleteItemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteItemRequest * request() const;
+    virtual const DeleteItemRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteItemResponse)

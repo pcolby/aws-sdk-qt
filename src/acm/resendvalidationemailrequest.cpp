@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * ResendValidationEmailRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ResendValidationEmailRequestPrivate object for ACM \a action with,
- * public implementation \a q.
+ * Constructs a ResendValidationEmailRequestPrivate object for ACM \a action,
+ * with public implementation \a q.
  */
 ResendValidationEmailRequestPrivate::ResendValidationEmailRequestPrivate(
     const ACMRequest::Action action, ResendValidationEmailRequest * const q)

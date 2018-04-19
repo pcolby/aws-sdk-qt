@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * UpdateProvisionedProductRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateProvisionedProductRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a UpdateProvisionedProductRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 UpdateProvisionedProductRequestPrivate::UpdateProvisionedProductRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateProvisionedProductRequest * const q)

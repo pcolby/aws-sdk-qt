@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeValidDBInstanceModificationsRequest::
  */
 
 /*!
- *
- * Constructs a DescribeValidDBInstanceModificationsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeValidDBInstanceModificationsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeValidDBInstanceModificationsRequestPrivate::DescribeValidDBInstanceModificationsRequestPrivate(
     const RDSRequest::Action action, DescribeValidDBInstanceModificationsRequest * const q)

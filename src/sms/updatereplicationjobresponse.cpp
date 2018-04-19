@@ -29,21 +29,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::UpdateReplicationJobResponse
- *
  * \brief The UpdateReplicationJobResponse class provides an interace for SMS UpdateReplicationJob responses.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::updateReplicationJob
  */
 
 /*!
- * @brief  Constructs a new UpdateReplicationJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateReplicationJobResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateReplicationJobResponse::UpdateReplicationJobResponse(
         const UpdateReplicationJobRequest &request,
@@ -55,6 +50,9 @@ UpdateReplicationJobResponse::UpdateReplicationJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateReplicationJobRequest * UpdateReplicationJobResponse::request() const
 {
     Q_D(const UpdateReplicationJobResponse);
@@ -62,9 +60,8 @@ const UpdateReplicationJobRequest * UpdateReplicationJobResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SMS UpdateReplicationJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SMS UpdateReplicationJob \a response.
  */
 void UpdateReplicationJobResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateReplicationJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SMS::UpdateReplicationJobResponsePrivate
+ * \brief The UpdateReplicationJobResponsePrivate class provides private implementation for UpdateReplicationJobResponse.
  * \internal
  *
- * \class UpdateReplicationJobResponsePrivate
- *
- * \brief Private implementation for UpdateReplicationJobResponse.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateReplicationJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateReplicationJobResponse instance.
+ * Constructs a UpdateReplicationJobResponsePrivate object with public implementation \a q.
  */
 UpdateReplicationJobResponsePrivate::UpdateReplicationJobResponsePrivate(
     UpdateReplicationJobResponse * const q) : SMSResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateReplicationJobResponsePrivate::UpdateReplicationJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SMS UpdateReplicationJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SMS UpdateReplicationJob response element from \a xml.
  */
 void UpdateReplicationJobResponsePrivate::parseUpdateReplicationJobResponse(QXmlStreamReader &xml)
 {

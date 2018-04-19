@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CloseInstancePublicPortsResponse
- *
  * \brief The CloseInstancePublicPortsResponse class provides an interace for Lightsail CloseInstancePublicPorts responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CloseInstancePublicPortsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CloseInstancePublicPortsResponse object for \a reply to \a request, with parent \a parent.
  */
 CloseInstancePublicPortsResponse::CloseInstancePublicPortsResponse(
         const CloseInstancePublicPortsRequest &request,
@@ -71,6 +66,9 @@ CloseInstancePublicPortsResponse::CloseInstancePublicPortsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CloseInstancePublicPortsRequest * CloseInstancePublicPortsResponse::request() const
 {
     Q_D(const CloseInstancePublicPortsResponse);
@@ -78,9 +76,8 @@ const CloseInstancePublicPortsRequest * CloseInstancePublicPortsResponse::reques
 }
 
 /*!
- * @brief  Parse a Lightsail CloseInstancePublicPorts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail CloseInstancePublicPorts \a response.
  */
 void CloseInstancePublicPortsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void CloseInstancePublicPortsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::CloseInstancePublicPortsResponsePrivate
+ * \brief The CloseInstancePublicPortsResponsePrivate class provides private implementation for CloseInstancePublicPortsResponse.
  * \internal
  *
- * \class CloseInstancePublicPortsResponsePrivate
- *
- * \brief Private implementation for CloseInstancePublicPortsResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloseInstancePublicPortsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloseInstancePublicPortsResponse instance.
+ * Constructs a CloseInstancePublicPortsResponsePrivate object with public implementation \a q.
  */
 CloseInstancePublicPortsResponsePrivate::CloseInstancePublicPortsResponsePrivate(
     CloseInstancePublicPortsResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ CloseInstancePublicPortsResponsePrivate::CloseInstancePublicPortsResponsePrivate
 }
 
 /*!
- * @brief  Parse an Lightsail CloseInstancePublicPortsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail CloseInstancePublicPorts response element from \a xml.
  */
 void CloseInstancePublicPortsResponsePrivate::parseCloseInstancePublicPortsResponse(QXmlStreamReader &xml)
 {

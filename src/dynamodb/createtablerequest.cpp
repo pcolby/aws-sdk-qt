@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * CreateTableRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateTableRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a CreateTableRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 CreateTableRequestPrivate::CreateTableRequestPrivate(
     const DynamoDBRequest::Action action, CreateTableRequest * const q)

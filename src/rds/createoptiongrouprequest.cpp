@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CreateOptionGroupRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CreateOptionGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CreateOptionGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CreateOptionGroupRequestPrivate::CreateOptionGroupRequestPrivate(
     const RDSRequest::Action action, CreateOptionGroupRequest * const q)

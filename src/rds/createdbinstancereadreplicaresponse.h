@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDBInstanceReadReplicaResponse : public RDSResponse {
 public:
     CreateDBInstanceReadReplicaResponse(const CreateDBInstanceReadReplicaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDBInstanceReadReplicaRequest * request() const;
+    virtual const CreateDBInstanceReadReplicaRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDBInstanceReadReplicaResponse)

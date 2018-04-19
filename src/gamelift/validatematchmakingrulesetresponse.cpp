@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::ValidateMatchmakingRuleSetResponse
- *
  * \brief The ValidateMatchmakingRuleSetResponse class provides an interace for GameLift ValidateMatchmakingRuleSet responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new ValidateMatchmakingRuleSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ValidateMatchmakingRuleSetResponse object for \a reply to \a request, with parent \a parent.
  */
 ValidateMatchmakingRuleSetResponse::ValidateMatchmakingRuleSetResponse(
         const ValidateMatchmakingRuleSetRequest &request,
@@ -491,6 +486,9 @@ ValidateMatchmakingRuleSetResponse::ValidateMatchmakingRuleSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ValidateMatchmakingRuleSetRequest * ValidateMatchmakingRuleSetResponse::request() const
 {
     Q_D(const ValidateMatchmakingRuleSetResponse);
@@ -498,9 +496,8 @@ const ValidateMatchmakingRuleSetRequest * ValidateMatchmakingRuleSetResponse::re
 }
 
 /*!
- * @brief  Parse a GameLift ValidateMatchmakingRuleSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift ValidateMatchmakingRuleSet \a response.
  */
 void ValidateMatchmakingRuleSetResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void ValidateMatchmakingRuleSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::ValidateMatchmakingRuleSetResponsePrivate
+ * \brief The ValidateMatchmakingRuleSetResponsePrivate class provides private implementation for ValidateMatchmakingRuleSetResponse.
  * \internal
  *
- * \class ValidateMatchmakingRuleSetResponsePrivate
- *
- * \brief Private implementation for ValidateMatchmakingRuleSetResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ValidateMatchmakingRuleSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ValidateMatchmakingRuleSetResponse instance.
+ * Constructs a ValidateMatchmakingRuleSetResponsePrivate object with public implementation \a q.
  */
 ValidateMatchmakingRuleSetResponsePrivate::ValidateMatchmakingRuleSetResponsePrivate(
     ValidateMatchmakingRuleSetResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ ValidateMatchmakingRuleSetResponsePrivate::ValidateMatchmakingRuleSetResponsePri
 }
 
 /*!
- * @brief  Parse an GameLift ValidateMatchmakingRuleSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift ValidateMatchmakingRuleSet response element from \a xml.
  */
 void ValidateMatchmakingRuleSetResponsePrivate::parseValidateMatchmakingRuleSetResponse(QXmlStreamReader &xml)
 {

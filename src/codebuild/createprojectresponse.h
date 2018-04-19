@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateProjectResponse : public CodeBuildResponse {
 public:
     CreateProjectResponse(const CreateProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateProjectRequest * request() const;
+    virtual const CreateProjectRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateProjectResponse)

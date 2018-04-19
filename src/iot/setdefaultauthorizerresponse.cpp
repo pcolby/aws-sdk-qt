@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::SetDefaultAuthorizerResponse
- *
  * \brief The SetDefaultAuthorizerResponse class provides an interace for IoT SetDefaultAuthorizer responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new SetDefaultAuthorizerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetDefaultAuthorizerResponse object for \a reply to \a request, with parent \a parent.
  */
 SetDefaultAuthorizerResponse::SetDefaultAuthorizerResponse(
         const SetDefaultAuthorizerRequest &request,
@@ -66,6 +61,9 @@ SetDefaultAuthorizerResponse::SetDefaultAuthorizerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetDefaultAuthorizerRequest * SetDefaultAuthorizerResponse::request() const
 {
     Q_D(const SetDefaultAuthorizerResponse);
@@ -73,9 +71,8 @@ const SetDefaultAuthorizerRequest * SetDefaultAuthorizerResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IoT SetDefaultAuthorizer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT SetDefaultAuthorizer \a response.
  */
 void SetDefaultAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SetDefaultAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::SetDefaultAuthorizerResponsePrivate
+ * \brief The SetDefaultAuthorizerResponsePrivate class provides private implementation for SetDefaultAuthorizerResponse.
  * \internal
  *
- * \class SetDefaultAuthorizerResponsePrivate
- *
- * \brief Private implementation for SetDefaultAuthorizerResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetDefaultAuthorizerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetDefaultAuthorizerResponse instance.
+ * Constructs a SetDefaultAuthorizerResponsePrivate object with public implementation \a q.
  */
 SetDefaultAuthorizerResponsePrivate::SetDefaultAuthorizerResponsePrivate(
     SetDefaultAuthorizerResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ SetDefaultAuthorizerResponsePrivate::SetDefaultAuthorizerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT SetDefaultAuthorizerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT SetDefaultAuthorizer response element from \a xml.
  */
 void SetDefaultAuthorizerResponsePrivate::parseSetDefaultAuthorizerResponse(QXmlStreamReader &xml)
 {

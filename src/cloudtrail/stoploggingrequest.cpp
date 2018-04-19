@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * StopLoggingRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a StopLoggingRequestPrivate object for CloudTrail \a action with,
- * public implementation \a q.
+ * Constructs a StopLoggingRequestPrivate object for CloudTrail \a action,
+ * with public implementation \a q.
  */
 StopLoggingRequestPrivate::StopLoggingRequestPrivate(
     const CloudTrailRequest::Action action, StopLoggingRequest * const q)

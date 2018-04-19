@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::GetDocumentVersionResponse
- *
  * \brief The GetDocumentVersionResponse class provides an interace for WorkDocs GetDocumentVersion responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new GetDocumentVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDocumentVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDocumentVersionResponse::GetDocumentVersionResponse(
         const GetDocumentVersionRequest &request,
@@ -84,6 +79,9 @@ GetDocumentVersionResponse::GetDocumentVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDocumentVersionRequest * GetDocumentVersionResponse::request() const
 {
     Q_D(const GetDocumentVersionResponse);
@@ -91,9 +89,8 @@ const GetDocumentVersionRequest * GetDocumentVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs GetDocumentVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs GetDocumentVersion \a response.
  */
 void GetDocumentVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void GetDocumentVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::GetDocumentVersionResponsePrivate
+ * \brief The GetDocumentVersionResponsePrivate class provides private implementation for GetDocumentVersionResponse.
  * \internal
  *
- * \class GetDocumentVersionResponsePrivate
- *
- * \brief Private implementation for GetDocumentVersionResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDocumentVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDocumentVersionResponse instance.
+ * Constructs a GetDocumentVersionResponsePrivate object with public implementation \a q.
  */
 GetDocumentVersionResponsePrivate::GetDocumentVersionResponsePrivate(
     GetDocumentVersionResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ GetDocumentVersionResponsePrivate::GetDocumentVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs GetDocumentVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs GetDocumentVersion response element from \a xml.
  */
 void GetDocumentVersionResponsePrivate::parseGetDocumentVersionResponse(QXmlStreamReader &xml)
 {

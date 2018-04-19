@@ -29,10 +29,9 @@ namespace IoTDataPlane {
 
 /*!
  * \class QtAws::IoTDataPlane::PublishResponse
- *
  * \brief The PublishResponse class provides an interace for IoTDataPlane Publish responses.
  *
- * \ingroup IoTDataPlane
+ * \inmodule QtAwsIoTDataPlane
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -45,11 +44,7 @@ namespace IoTDataPlane {
  */
 
 /*!
- * @brief  Constructs a new PublishResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PublishResponse object for \a reply to \a request, with parent \a parent.
  */
 PublishResponse::PublishResponse(
         const PublishRequest &request,
@@ -61,6 +56,9 @@ PublishResponse::PublishResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PublishRequest * PublishResponse::request() const
 {
     Q_D(const PublishResponse);
@@ -68,9 +66,8 @@ const PublishRequest * PublishResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoTDataPlane Publish response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoTDataPlane Publish \a response.
  */
 void PublishResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void PublishResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoTDataPlane::PublishResponsePrivate
+ * \brief The PublishResponsePrivate class provides private implementation for PublishResponse.
  * \internal
  *
- * \class PublishResponsePrivate
- *
- * \brief Private implementation for PublishResponse.
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PublishResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PublishResponse instance.
+ * Constructs a PublishResponsePrivate object with public implementation \a q.
  */
 PublishResponsePrivate::PublishResponsePrivate(
     PublishResponse * const q) : IoTDataPlaneResponsePrivate(q)
@@ -101,9 +94,7 @@ PublishResponsePrivate::PublishResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoTDataPlane PublishResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoTDataPlane Publish response element from \a xml.
  */
 void PublishResponsePrivate::parsePublishResponse(QXmlStreamReader &xml)
 {

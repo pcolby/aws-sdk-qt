@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * QueryObjectsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a QueryObjectsRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a QueryObjectsRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 QueryObjectsRequestPrivate::QueryObjectsRequestPrivate(
     const DataPipelineRequest::Action action, QueryObjectsRequest * const q)

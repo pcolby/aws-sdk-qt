@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CancelBundleTaskRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CancelBundleTaskRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CancelBundleTaskRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CancelBundleTaskRequestPrivate::CancelBundleTaskRequestPrivate(
     const EC2Request::Action action, CancelBundleTaskRequest * const q)

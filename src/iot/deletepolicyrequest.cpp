@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeletePolicyRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeletePolicyRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
     const IoTRequest::Action action, DeletePolicyRequest * const q)

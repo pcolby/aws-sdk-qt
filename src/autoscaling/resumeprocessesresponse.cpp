@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::ResumeProcessesResponse
- *
  * \brief The ResumeProcessesResponse class provides an interace for AutoScaling ResumeProcesses responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new ResumeProcessesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResumeProcessesResponse object for \a reply to \a request, with parent \a parent.
  */
 ResumeProcessesResponse::ResumeProcessesResponse(
         const ResumeProcessesRequest &request,
@@ -60,6 +55,9 @@ ResumeProcessesResponse::ResumeProcessesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResumeProcessesRequest * ResumeProcessesResponse::request() const
 {
     Q_D(const ResumeProcessesResponse);
@@ -67,9 +65,8 @@ const ResumeProcessesRequest * ResumeProcessesResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling ResumeProcesses response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling ResumeProcesses \a response.
  */
 void ResumeProcessesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ResumeProcessesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::ResumeProcessesResponsePrivate
+ * \brief The ResumeProcessesResponsePrivate class provides private implementation for ResumeProcessesResponse.
  * \internal
  *
- * \class ResumeProcessesResponsePrivate
- *
- * \brief Private implementation for ResumeProcessesResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResumeProcessesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResumeProcessesResponse instance.
+ * Constructs a ResumeProcessesResponsePrivate object with public implementation \a q.
  */
 ResumeProcessesResponsePrivate::ResumeProcessesResponsePrivate(
     ResumeProcessesResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ ResumeProcessesResponsePrivate::ResumeProcessesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling ResumeProcessesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling ResumeProcesses response element from \a xml.
  */
 void ResumeProcessesResponsePrivate::parseResumeProcessesResponse(QXmlStreamReader &xml)
 {

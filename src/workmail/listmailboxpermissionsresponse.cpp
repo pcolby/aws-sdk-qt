@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListMailboxPermissionsResponse
- *
  * \brief The ListMailboxPermissionsResponse class provides an interace for WorkMail ListMailboxPermissions responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListMailboxPermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListMailboxPermissionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListMailboxPermissionsResponse::ListMailboxPermissionsResponse(
         const ListMailboxPermissionsRequest &request,
@@ -88,6 +83,9 @@ ListMailboxPermissionsResponse::ListMailboxPermissionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListMailboxPermissionsRequest * ListMailboxPermissionsResponse::request() const
 {
     Q_D(const ListMailboxPermissionsResponse);
@@ -95,9 +93,8 @@ const ListMailboxPermissionsRequest * ListMailboxPermissionsResponse::request() 
 }
 
 /*!
- * @brief  Parse a WorkMail ListMailboxPermissions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail ListMailboxPermissions \a response.
  */
 void ListMailboxPermissionsResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void ListMailboxPermissionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::ListMailboxPermissionsResponsePrivate
+ * \brief The ListMailboxPermissionsResponsePrivate class provides private implementation for ListMailboxPermissionsResponse.
  * \internal
  *
- * \class ListMailboxPermissionsResponsePrivate
- *
- * \brief Private implementation for ListMailboxPermissionsResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListMailboxPermissionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListMailboxPermissionsResponse instance.
+ * Constructs a ListMailboxPermissionsResponsePrivate object with public implementation \a q.
  */
 ListMailboxPermissionsResponsePrivate::ListMailboxPermissionsResponsePrivate(
     ListMailboxPermissionsResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ ListMailboxPermissionsResponsePrivate::ListMailboxPermissionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail ListMailboxPermissionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail ListMailboxPermissions response element from \a xml.
  */
 void ListMailboxPermissionsResponsePrivate::parseListMailboxPermissionsResponse(QXmlStreamReader &xml)
 {

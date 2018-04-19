@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteJobTemplateRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteJobTemplateRequestPrivate object for MediaConvert \a action with,
- * public implementation \a q.
+ * Constructs a DeleteJobTemplateRequestPrivate object for MediaConvert \a action,
+ * with public implementation \a q.
  */
 DeleteJobTemplateRequestPrivate::DeleteJobTemplateRequestPrivate(
     const MediaConvertRequest::Action action, DeleteJobTemplateRequest * const q)

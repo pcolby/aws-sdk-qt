@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyImageAttributeRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ModifyImageAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyImageAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyImageAttributeRequestPrivate::ModifyImageAttributeRequestPrivate(
     const EC2Request::Action action, ModifyImageAttributeRequest * const q)

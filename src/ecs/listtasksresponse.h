@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTasksResponse : public ECSResponse {
 public:
     ListTasksResponse(const ListTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTasksRequest * request() const;
+    virtual const ListTasksRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListTasksResponse)

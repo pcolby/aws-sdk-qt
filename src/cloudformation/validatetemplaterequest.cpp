@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * ValidateTemplateRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ValidateTemplateRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a ValidateTemplateRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 ValidateTemplateRequestPrivate::ValidateTemplateRequestPrivate(
     const CloudFormationRequest::Action action, ValidateTemplateRequest * const q)

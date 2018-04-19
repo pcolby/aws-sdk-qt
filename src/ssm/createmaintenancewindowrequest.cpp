@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * CreateMaintenanceWindowRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CreateMaintenanceWindowRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a CreateMaintenanceWindowRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 CreateMaintenanceWindowRequestPrivate::CreateMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, CreateMaintenanceWindowRequest * const q)

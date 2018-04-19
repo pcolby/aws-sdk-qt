@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DeleteDirectoryResponse
- *
  * \brief The DeleteDirectoryResponse class provides an interace for CloudDirectory DeleteDirectory responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DeleteDirectoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDirectoryResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDirectoryResponse::DeleteDirectoryResponse(
         const DeleteDirectoryRequest &request,
@@ -62,6 +57,9 @@ DeleteDirectoryResponse::DeleteDirectoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDirectoryRequest * DeleteDirectoryResponse::request() const
 {
     Q_D(const DeleteDirectoryResponse);
@@ -69,9 +67,8 @@ const DeleteDirectoryRequest * DeleteDirectoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory DeleteDirectory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory DeleteDirectory \a response.
  */
 void DeleteDirectoryResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DeleteDirectoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::DeleteDirectoryResponsePrivate
+ * \brief The DeleteDirectoryResponsePrivate class provides private implementation for DeleteDirectoryResponse.
  * \internal
  *
- * \class DeleteDirectoryResponsePrivate
- *
- * \brief Private implementation for DeleteDirectoryResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDirectoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDirectoryResponse instance.
+ * Constructs a DeleteDirectoryResponsePrivate object with public implementation \a q.
  */
 DeleteDirectoryResponsePrivate::DeleteDirectoryResponsePrivate(
     DeleteDirectoryResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ DeleteDirectoryResponsePrivate::DeleteDirectoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory DeleteDirectoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory DeleteDirectory response element from \a xml.
  */
 void DeleteDirectoryResponsePrivate::parseDeleteDirectoryResponse(QXmlStreamReader &xml)
 {

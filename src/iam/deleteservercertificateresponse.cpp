@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteServerCertificateResponse
- *
  * \brief The DeleteServerCertificateResponse class provides an interace for IAM DeleteServerCertificate responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteServerCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteServerCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteServerCertificateResponse::DeleteServerCertificateResponse(
         const DeleteServerCertificateRequest &request,
@@ -120,6 +115,9 @@ DeleteServerCertificateResponse::DeleteServerCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteServerCertificateRequest * DeleteServerCertificateResponse::request() const
 {
     Q_D(const DeleteServerCertificateResponse);
@@ -127,9 +125,8 @@ const DeleteServerCertificateRequest * DeleteServerCertificateResponse::request(
 }
 
 /*!
- * @brief  Parse a IAM DeleteServerCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteServerCertificate \a response.
  */
 void DeleteServerCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteServerCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteServerCertificateResponsePrivate
+ * \brief The DeleteServerCertificateResponsePrivate class provides private implementation for DeleteServerCertificateResponse.
  * \internal
  *
- * \class DeleteServerCertificateResponsePrivate
- *
- * \brief Private implementation for DeleteServerCertificateResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServerCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteServerCertificateResponse instance.
+ * Constructs a DeleteServerCertificateResponsePrivate object with public implementation \a q.
  */
 DeleteServerCertificateResponsePrivate::DeleteServerCertificateResponsePrivate(
     DeleteServerCertificateResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteServerCertificateResponsePrivate::DeleteServerCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeleteServerCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteServerCertificate response element from \a xml.
  */
 void DeleteServerCertificateResponsePrivate::parseDeleteServerCertificateResponse(QXmlStreamReader &xml)
 {

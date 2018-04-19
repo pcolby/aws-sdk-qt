@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * IncreaseReplicationFactorRequest::response(QN
  */
 
 /*!
- *
- * Constructs a IncreaseReplicationFactorRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a IncreaseReplicationFactorRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 IncreaseReplicationFactorRequestPrivate::IncreaseReplicationFactorRequestPrivate(
     const DAXRequest::Action action, IncreaseReplicationFactorRequest * const q)

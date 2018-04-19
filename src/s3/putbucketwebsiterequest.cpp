@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PutBucketWebsiteRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a PutBucketWebsiteRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a PutBucketWebsiteRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 PutBucketWebsiteRequestPrivate::PutBucketWebsiteRequestPrivate(
     const S3Request::Action action, PutBucketWebsiteRequest * const q)

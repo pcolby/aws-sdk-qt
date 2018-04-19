@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRuleGroupRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a UpdateRuleGroupRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRuleGroupRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 UpdateRuleGroupRequestPrivate::UpdateRuleGroupRequestPrivate(
     const WAFRequest::Action action, UpdateRuleGroupRequest * const q)

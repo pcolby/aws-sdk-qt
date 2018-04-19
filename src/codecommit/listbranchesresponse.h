@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListBranchesResponse : public CodeCommitResponse {
 public:
     ListBranchesResponse(const ListBranchesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListBranchesRequest * request() const;
+    virtual const ListBranchesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListBranchesResponse)

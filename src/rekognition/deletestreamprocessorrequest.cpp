@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamProcessorRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteStreamProcessorRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a DeleteStreamProcessorRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 DeleteStreamProcessorRequestPrivate::DeleteStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, DeleteStreamProcessorRequest * const q)

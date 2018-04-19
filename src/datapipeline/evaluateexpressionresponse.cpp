@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::EvaluateExpressionResponse
- *
  * \brief The EvaluateExpressionResponse class provides an interace for DataPipeline EvaluateExpression responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new EvaluateExpressionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EvaluateExpressionResponse object for \a reply to \a request, with parent \a parent.
  */
 EvaluateExpressionResponse::EvaluateExpressionResponse(
         const EvaluateExpressionRequest &request,
@@ -73,6 +68,9 @@ EvaluateExpressionResponse::EvaluateExpressionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EvaluateExpressionRequest * EvaluateExpressionResponse::request() const
 {
     Q_D(const EvaluateExpressionResponse);
@@ -80,9 +78,8 @@ const EvaluateExpressionRequest * EvaluateExpressionResponse::request() const
 }
 
 /*!
- * @brief  Parse a DataPipeline EvaluateExpression response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline EvaluateExpression \a response.
  */
 void EvaluateExpressionResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void EvaluateExpressionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::EvaluateExpressionResponsePrivate
+ * \brief The EvaluateExpressionResponsePrivate class provides private implementation for EvaluateExpressionResponse.
  * \internal
  *
- * \class EvaluateExpressionResponsePrivate
- *
- * \brief Private implementation for EvaluateExpressionResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EvaluateExpressionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EvaluateExpressionResponse instance.
+ * Constructs a EvaluateExpressionResponsePrivate object with public implementation \a q.
  */
 EvaluateExpressionResponsePrivate::EvaluateExpressionResponsePrivate(
     EvaluateExpressionResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ EvaluateExpressionResponsePrivate::EvaluateExpressionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline EvaluateExpressionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline EvaluateExpression response element from \a xml.
  */
 void EvaluateExpressionResponsePrivate::parseEvaluateExpressionResponse(QXmlStreamReader &xml)
 {

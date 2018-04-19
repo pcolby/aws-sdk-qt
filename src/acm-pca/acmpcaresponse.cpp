@@ -28,16 +28,13 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::ACMPCAResponse
- *
  * \brief The ACMPCAResponse class provides an interface for ACMPCA responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @brief  Constructs a new ACMPCAResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ACMPCAResponse object with parent \a parent.
  */
 ACMPCAResponse::ACMPCAResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ACMPCAResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ACMPCAResponse::ACMPCAResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ACMPCAResponse object.
- *
+ * \internal
+ * Constructs a ACMPCAResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ACMPCAResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ACMPCAResponse::ACMPCAResponse(ACMPCAResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ACMPCAResponse::ACMPCAResponse(ACMPCAResponsePrivate * const d, QObject * const 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ACMPCAResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ACMPCAResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ACMPCA::ACMPCAResponsePrivate
+ * \brief The ACMPCAResponsePrivate class provides private implementation for ACMPCAResponse.
+ * \internal
  *
- * @class  ACMPCAResponsePrivate
- *
- * @brief  Private implementation for ACMPCAResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ACMPCAResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ACMPCAResponse instance.
+ * Constructs a ACMPCAResponsePrivate object with public implementation \a q.
  */
 ACMPCAResponsePrivate::ACMPCAResponsePrivate(
     ACMPCAResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribeSnapshotsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSnapshotsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeSnapshotsRequestPrivate::DescribeSnapshotsRequestPrivate(
     const EC2Request::Action action, DescribeSnapshotsRequest * const q)

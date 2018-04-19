@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEvaluationsResponse : public MachineLearningResponse 
 public:
     DescribeEvaluationsResponse(const DescribeEvaluationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEvaluationsRequest * request() const;
+    virtual const DescribeEvaluationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEvaluationsResponse)

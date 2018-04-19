@@ -29,10 +29,9 @@ namespace MediaStoreData {
 
 /*!
  * \class QtAws::MediaStoreData::DescribeObjectResponse
- *
  * \brief The DescribeObjectResponse class provides an interace for MediaStoreData DescribeObject responses.
  *
- * \ingroup MediaStoreData
+ * \inmodule QtAwsMediaStoreData
  *
  *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
  *  fundamental entities that are stored in AWS Elemental
@@ -41,11 +40,7 @@ namespace MediaStoreData {
  */
 
 /*!
- * @brief  Constructs a new DescribeObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeObjectResponse::DescribeObjectResponse(
         const DescribeObjectRequest &request,
@@ -57,6 +52,9 @@ DescribeObjectResponse::DescribeObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeObjectRequest * DescribeObjectResponse::request() const
 {
     Q_D(const DescribeObjectResponse);
@@ -64,9 +62,8 @@ const DescribeObjectRequest * DescribeObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaStoreData DescribeObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaStoreData DescribeObject \a response.
  */
 void DescribeObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DescribeObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaStoreData::DescribeObjectResponsePrivate
+ * \brief The DescribeObjectResponsePrivate class provides private implementation for DescribeObjectResponse.
  * \internal
  *
- * \class DescribeObjectResponsePrivate
- *
- * \brief Private implementation for DescribeObjectResponse.
+ * \inmodule QtAwsMediaStoreData
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeObjectResponse instance.
+ * Constructs a DescribeObjectResponsePrivate object with public implementation \a q.
  */
 DescribeObjectResponsePrivate::DescribeObjectResponsePrivate(
     DescribeObjectResponse * const q) : MediaStoreDataResponsePrivate(q)
@@ -97,9 +90,7 @@ DescribeObjectResponsePrivate::DescribeObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaStoreData DescribeObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaStoreData DescribeObject response element from \a xml.
  */
 void DescribeObjectResponsePrivate::parseDescribeObjectResponse(QXmlStreamReader &xml)
 {

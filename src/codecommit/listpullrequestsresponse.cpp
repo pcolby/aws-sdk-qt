@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::ListPullRequestsResponse
- *
  * \brief The ListPullRequestsResponse class provides an interace for CodeCommit ListPullRequests responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new ListPullRequestsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPullRequestsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPullRequestsResponse::ListPullRequestsResponse(
         const ListPullRequestsRequest &request,
@@ -245,6 +240,9 @@ ListPullRequestsResponse::ListPullRequestsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPullRequestsRequest * ListPullRequestsResponse::request() const
 {
     Q_D(const ListPullRequestsResponse);
@@ -252,9 +250,8 @@ const ListPullRequestsRequest * ListPullRequestsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit ListPullRequests response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit ListPullRequests \a response.
  */
 void ListPullRequestsResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void ListPullRequestsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::ListPullRequestsResponsePrivate
+ * \brief The ListPullRequestsResponsePrivate class provides private implementation for ListPullRequestsResponse.
  * \internal
  *
- * \class ListPullRequestsResponsePrivate
- *
- * \brief Private implementation for ListPullRequestsResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPullRequestsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPullRequestsResponse instance.
+ * Constructs a ListPullRequestsResponsePrivate object with public implementation \a q.
  */
 ListPullRequestsResponsePrivate::ListPullRequestsResponsePrivate(
     ListPullRequestsResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ ListPullRequestsResponsePrivate::ListPullRequestsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit ListPullRequestsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit ListPullRequests response element from \a xml.
  */
 void ListPullRequestsResponsePrivate::parseListPullRequestsResponse(QXmlStreamReader &xml)
 {

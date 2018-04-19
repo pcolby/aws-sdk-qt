@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateBaiduChannelRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateBaiduChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a UpdateBaiduChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 UpdateBaiduChannelRequestPrivate::UpdateBaiduChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateBaiduChannelRequest * const q)

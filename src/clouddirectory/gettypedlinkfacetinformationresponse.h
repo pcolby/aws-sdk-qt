@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetTypedLinkFacetInformationResponse : public CloudDirectoryR
 public:
     GetTypedLinkFacetInformationResponse(const GetTypedLinkFacetInformationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetTypedLinkFacetInformationRequest * request() const;
+    virtual const GetTypedLinkFacetInformationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetTypedLinkFacetInformationResponse)

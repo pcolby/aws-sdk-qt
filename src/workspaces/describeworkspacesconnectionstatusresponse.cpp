@@ -29,10 +29,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::DescribeWorkspacesConnectionStatusResponse
- *
  * \brief The DescribeWorkspacesConnectionStatusResponse class provides an interace for WorkSpaces DescribeWorkspacesConnectionStatus responses.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new DescribeWorkspacesConnectionStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeWorkspacesConnectionStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeWorkspacesConnectionStatusResponse::DescribeWorkspacesConnectionStatusResponse(
         const DescribeWorkspacesConnectionStatusRequest &request,
@@ -58,6 +53,9 @@ DescribeWorkspacesConnectionStatusResponse::DescribeWorkspacesConnectionStatusRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeWorkspacesConnectionStatusRequest * DescribeWorkspacesConnectionStatusResponse::request() const
 {
     Q_D(const DescribeWorkspacesConnectionStatusResponse);
@@ -65,9 +63,8 @@ const DescribeWorkspacesConnectionStatusRequest * DescribeWorkspacesConnectionSt
 }
 
 /*!
- * @brief  Parse a WorkSpaces DescribeWorkspacesConnectionStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkSpaces DescribeWorkspacesConnectionStatus \a response.
  */
 void DescribeWorkspacesConnectionStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeWorkspacesConnectionStatusResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::WorkSpaces::DescribeWorkspacesConnectionStatusResponsePrivate
+ * \brief The DescribeWorkspacesConnectionStatusResponsePrivate class provides private implementation for DescribeWorkspacesConnectionStatusResponse.
  * \internal
  *
- * \class DescribeWorkspacesConnectionStatusResponsePrivate
- *
- * \brief Private implementation for DescribeWorkspacesConnectionStatusResponse.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeWorkspacesConnectionStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeWorkspacesConnectionStatusResponse instance.
+ * Constructs a DescribeWorkspacesConnectionStatusResponsePrivate object with public implementation \a q.
  */
 DescribeWorkspacesConnectionStatusResponsePrivate::DescribeWorkspacesConnectionStatusResponsePrivate(
     DescribeWorkspacesConnectionStatusResponse * const q) : WorkSpacesResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeWorkspacesConnectionStatusResponsePrivate::DescribeWorkspacesConnectionS
 }
 
 /*!
- * @brief  Parse an WorkSpaces DescribeWorkspacesConnectionStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkSpaces DescribeWorkspacesConnectionStatus response element from \a xml.
  */
 void DescribeWorkspacesConnectionStatusResponsePrivate::parseDescribeWorkspacesConnectionStatusResponse(QXmlStreamReader &xml)
 {

@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * CreateNotificationSubscriptionRequest::respon
  */
 
 /*!
- *
- * Constructs a CreateNotificationSubscriptionRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a CreateNotificationSubscriptionRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 CreateNotificationSubscriptionRequestPrivate::CreateNotificationSubscriptionRequestPrivate(
     const WorkDocsRequest::Action action, CreateNotificationSubscriptionRequest * const q)

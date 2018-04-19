@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * UpdateVolumeRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UpdateVolumeRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a UpdateVolumeRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 UpdateVolumeRequestPrivate::UpdateVolumeRequestPrivate(
     const OpsWorksRequest::Action action, UpdateVolumeRequest * const q)

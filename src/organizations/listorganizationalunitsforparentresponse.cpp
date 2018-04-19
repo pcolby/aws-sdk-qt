@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListOrganizationalUnitsForParentResponse
- *
  * \brief The ListOrganizationalUnitsForParentResponse class provides an interace for Organizations ListOrganizationalUnitsForParent responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListOrganizationalUnitsForParentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListOrganizationalUnitsForParentResponse object for \a reply to \a request, with parent \a parent.
  */
 ListOrganizationalUnitsForParentResponse::ListOrganizationalUnitsForParentResponse(
         const ListOrganizationalUnitsForParentRequest &request,
@@ -197,6 +192,9 @@ ListOrganizationalUnitsForParentResponse::ListOrganizationalUnitsForParentRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListOrganizationalUnitsForParentRequest * ListOrganizationalUnitsForParentResponse::request() const
 {
     Q_D(const ListOrganizationalUnitsForParentResponse);
@@ -204,9 +202,8 @@ const ListOrganizationalUnitsForParentRequest * ListOrganizationalUnitsForParent
 }
 
 /*!
- * @brief  Parse a Organizations ListOrganizationalUnitsForParent response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations ListOrganizationalUnitsForParent \a response.
  */
 void ListOrganizationalUnitsForParentResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void ListOrganizationalUnitsForParentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::ListOrganizationalUnitsForParentResponsePrivate
+ * \brief The ListOrganizationalUnitsForParentResponsePrivate class provides private implementation for ListOrganizationalUnitsForParentResponse.
  * \internal
  *
- * \class ListOrganizationalUnitsForParentResponsePrivate
- *
- * \brief Private implementation for ListOrganizationalUnitsForParentResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOrganizationalUnitsForParentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListOrganizationalUnitsForParentResponse instance.
+ * Constructs a ListOrganizationalUnitsForParentResponsePrivate object with public implementation \a q.
  */
 ListOrganizationalUnitsForParentResponsePrivate::ListOrganizationalUnitsForParentResponsePrivate(
     ListOrganizationalUnitsForParentResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ ListOrganizationalUnitsForParentResponsePrivate::ListOrganizationalUnitsForParen
 }
 
 /*!
- * @brief  Parse an Organizations ListOrganizationalUnitsForParentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations ListOrganizationalUnitsForParent response element from \a xml.
  */
 void ListOrganizationalUnitsForParentResponsePrivate::parseListOrganizationalUnitsForParentResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SearchIndexRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a SearchIndexRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a SearchIndexRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 SearchIndexRequestPrivate::SearchIndexRequestPrivate(
     const IoTRequest::Action action, SearchIndexRequest * const q)

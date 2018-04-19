@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListHostedZonesResponse
- *
  * \brief The ListHostedZonesResponse class provides an interace for Route53 ListHostedZones responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listHostedZones
  */
 
 /*!
- * @brief  Constructs a new ListHostedZonesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListHostedZonesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListHostedZonesResponse::ListHostedZonesResponse(
         const ListHostedZonesRequest &request,
@@ -55,6 +50,9 @@ ListHostedZonesResponse::ListHostedZonesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListHostedZonesRequest * ListHostedZonesResponse::request() const
 {
     Q_D(const ListHostedZonesResponse);
@@ -62,9 +60,8 @@ const ListHostedZonesRequest * ListHostedZonesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 ListHostedZones response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 ListHostedZones \a response.
  */
 void ListHostedZonesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListHostedZonesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::ListHostedZonesResponsePrivate
+ * \brief The ListHostedZonesResponsePrivate class provides private implementation for ListHostedZonesResponse.
  * \internal
  *
- * \class ListHostedZonesResponsePrivate
- *
- * \brief Private implementation for ListHostedZonesResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHostedZonesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListHostedZonesResponse instance.
+ * Constructs a ListHostedZonesResponsePrivate object with public implementation \a q.
  */
 ListHostedZonesResponsePrivate::ListHostedZonesResponsePrivate(
     ListHostedZonesResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListHostedZonesResponsePrivate::ListHostedZonesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 ListHostedZonesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 ListHostedZones response element from \a xml.
  */
 void ListHostedZonesResponsePrivate::parseListHostedZonesResponse(QXmlStreamReader &xml)
 {

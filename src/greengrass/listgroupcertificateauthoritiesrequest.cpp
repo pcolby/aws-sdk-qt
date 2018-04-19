@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListGroupCertificateAuthoritiesRequest::respo
  */
 
 /*!
- *
- * Constructs a ListGroupCertificateAuthoritiesRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a ListGroupCertificateAuthoritiesRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 ListGroupCertificateAuthoritiesRequestPrivate::ListGroupCertificateAuthoritiesRequestPrivate(
     const GreengrassRequest::Action action, ListGroupCertificateAuthoritiesRequest * const q)

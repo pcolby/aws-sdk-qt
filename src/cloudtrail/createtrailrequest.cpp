@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * CreateTrailRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateTrailRequestPrivate object for CloudTrail \a action with,
- * public implementation \a q.
+ * Constructs a CreateTrailRequestPrivate object for CloudTrail \a action,
+ * with public implementation \a q.
  */
 CreateTrailRequestPrivate::CreateTrailRequestPrivate(
     const CloudTrailRequest::Action action, CreateTrailRequest * const q)

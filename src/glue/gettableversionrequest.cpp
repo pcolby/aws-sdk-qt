@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetTableVersionRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetTableVersionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GetTableVersionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GetTableVersionRequestPrivate::GetTableVersionRequestPrivate(
     const GlueRequest::Action action, GetTableVersionRequest * const q)

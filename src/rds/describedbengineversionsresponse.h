@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDBEngineVersionsResponse : public RDSResponse {
 public:
     DescribeDBEngineVersionsResponse(const DescribeDBEngineVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDBEngineVersionsRequest * request() const;
+    virtual const DescribeDBEngineVersionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDBEngineVersionsResponse)

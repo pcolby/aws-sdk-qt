@@ -34,10 +34,10 @@ class QTAWS_EXPORT RenewDomainResponse : public Route53DomainsResponse {
 public:
     RenewDomainResponse(const RenewDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RenewDomainRequest * request() const;
+    virtual const RenewDomainRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RenewDomainResponse)

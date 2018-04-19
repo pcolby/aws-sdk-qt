@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeEnvironmentsRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEnvironmentsRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DescribeEnvironmentsRequestPrivate::DescribeEnvironmentsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeEnvironmentsRequest * const q)

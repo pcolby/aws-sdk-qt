@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::GetDataSourceResponse
- *
  * \brief The GetDataSourceResponse class provides an interace for MachineLearning GetDataSource responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::getDataSource
  */
 
 /*!
- * @brief  Constructs a new GetDataSourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDataSourceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDataSourceResponse::GetDataSourceResponse(
         const GetDataSourceRequest &request,
@@ -55,6 +50,9 @@ GetDataSourceResponse::GetDataSourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDataSourceRequest * GetDataSourceResponse::request() const
 {
     Q_D(const GetDataSourceResponse);
@@ -62,9 +60,8 @@ const GetDataSourceRequest * GetDataSourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning GetDataSource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning GetDataSource \a response.
  */
 void GetDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetDataSourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::GetDataSourceResponsePrivate
+ * \brief The GetDataSourceResponsePrivate class provides private implementation for GetDataSourceResponse.
  * \internal
  *
- * \class GetDataSourceResponsePrivate
- *
- * \brief Private implementation for GetDataSourceResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDataSourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDataSourceResponse instance.
+ * Constructs a GetDataSourceResponsePrivate object with public implementation \a q.
  */
 GetDataSourceResponsePrivate::GetDataSourceResponsePrivate(
     GetDataSourceResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ GetDataSourceResponsePrivate::GetDataSourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning GetDataSourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning GetDataSource response element from \a xml.
  */
 void GetDataSourceResponsePrivate::parseGetDataSourceResponse(QXmlStreamReader &xml)
 {

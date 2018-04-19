@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * UntagLogGroupRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UntagLogGroupRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a UntagLogGroupRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 UntagLogGroupRequestPrivate::UntagLogGroupRequestPrivate(
     const CloudWatchLogsRequest::Action action, UntagLogGroupRequest * const q)

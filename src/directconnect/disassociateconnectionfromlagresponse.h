@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateConnectionFromLagResponse : public DirectConnectR
 public:
     DisassociateConnectionFromLagResponse(const DisassociateConnectionFromLagRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateConnectionFromLagRequest * request() const;
+    virtual const DisassociateConnectionFromLagRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateConnectionFromLagResponse)

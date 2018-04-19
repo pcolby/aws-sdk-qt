@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::DescribeStreamResponse
- *
  * \brief The DescribeStreamResponse class provides an interace for Kinesis DescribeStream responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new DescribeStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStreamResponse::DescribeStreamResponse(
         const DescribeStreamRequest &request,
@@ -58,6 +53,9 @@ DescribeStreamResponse::DescribeStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStreamRequest * DescribeStreamResponse::request() const
 {
     Q_D(const DescribeStreamResponse);
@@ -65,9 +63,8 @@ const DescribeStreamRequest * DescribeStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis DescribeStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis DescribeStream \a response.
  */
 void DescribeStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::DescribeStreamResponsePrivate
+ * \brief The DescribeStreamResponsePrivate class provides private implementation for DescribeStreamResponse.
  * \internal
  *
- * \class DescribeStreamResponsePrivate
- *
- * \brief Private implementation for DescribeStreamResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStreamResponse instance.
+ * Constructs a DescribeStreamResponsePrivate object with public implementation \a q.
  */
 DescribeStreamResponsePrivate::DescribeStreamResponsePrivate(
     DescribeStreamResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeStreamResponsePrivate::DescribeStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis DescribeStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis DescribeStream response element from \a xml.
  */
 void DescribeStreamResponsePrivate::parseDescribeStreamResponse(QXmlStreamReader &xml)
 {

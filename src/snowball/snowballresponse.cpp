@@ -28,16 +28,13 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::SnowballResponse
- *
  * \brief The SnowballResponse class provides an interface for Snowball responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @brief  Constructs a new SnowballResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a SnowballResponse object with parent \a parent.
  */
 SnowballResponse::SnowballResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new SnowballResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ SnowballResponse::SnowballResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SnowballResponse object.
- *
+ * \internal
+ * Constructs a SnowballResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SnowballResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 SnowballResponse::SnowballResponse(SnowballResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ SnowballResponse::SnowballResponse(SnowballResponsePrivate * const d, QObject * 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void SnowballResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void SnowballResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Snowball::SnowballResponsePrivate
+ * \brief The SnowballResponsePrivate class provides private implementation for SnowballResponse.
+ * \internal
  *
- * @class  SnowballResponsePrivate
- *
- * @brief  Private implementation for SnowballResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SnowballResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SnowballResponse instance.
+ * Constructs a SnowballResponsePrivate object with public implementation \a q.
  */
 SnowballResponsePrivate::SnowballResponsePrivate(
     SnowballResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -29,10 +29,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::DescribeSubscriptionResponse
- *
  * \brief The DescribeSubscriptionResponse class provides an interace for Shield DescribeSubscription responses.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -45,11 +44,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new DescribeSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSubscriptionResponse::DescribeSubscriptionResponse(
         const DescribeSubscriptionRequest &request,
@@ -61,6 +56,9 @@ DescribeSubscriptionResponse::DescribeSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSubscriptionRequest * DescribeSubscriptionResponse::request() const
 {
     Q_D(const DescribeSubscriptionResponse);
@@ -68,9 +66,8 @@ const DescribeSubscriptionRequest * DescribeSubscriptionResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Shield DescribeSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Shield DescribeSubscription \a response.
  */
 void DescribeSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Shield::DescribeSubscriptionResponsePrivate
+ * \brief The DescribeSubscriptionResponsePrivate class provides private implementation for DescribeSubscriptionResponse.
  * \internal
  *
- * \class DescribeSubscriptionResponsePrivate
- *
- * \brief Private implementation for DescribeSubscriptionResponse.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSubscriptionResponse instance.
+ * Constructs a DescribeSubscriptionResponsePrivate object with public implementation \a q.
  */
 DescribeSubscriptionResponsePrivate::DescribeSubscriptionResponsePrivate(
     DescribeSubscriptionResponse * const q) : ShieldResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeSubscriptionResponsePrivate::DescribeSubscriptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Shield DescribeSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Shield DescribeSubscription response element from \a xml.
  */
 void DescribeSubscriptionResponsePrivate::parseDescribeSubscriptionResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a ListJobsRequestPrivate object for MediaConvert \a action with,
- * public implementation \a q.
+ * Constructs a ListJobsRequestPrivate object for MediaConvert \a action,
+ * with public implementation \a q.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const MediaConvertRequest::Action action, ListJobsRequest * const q)

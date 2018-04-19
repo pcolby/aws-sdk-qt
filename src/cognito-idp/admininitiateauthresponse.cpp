@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminInitiateAuthResponse
- *
  * \brief The AdminInitiateAuthResponse class provides an interace for CognitoIdentityProvider AdminInitiateAuth responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminInitiateAuthResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminInitiateAuthResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminInitiateAuthResponse::AdminInitiateAuthResponse(
         const AdminInitiateAuthRequest &request,
@@ -65,6 +60,9 @@ AdminInitiateAuthResponse::AdminInitiateAuthResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminInitiateAuthRequest * AdminInitiateAuthResponse::request() const
 {
     Q_D(const AdminInitiateAuthResponse);
@@ -72,9 +70,8 @@ const AdminInitiateAuthRequest * AdminInitiateAuthResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminInitiateAuth response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminInitiateAuth \a response.
  */
 void AdminInitiateAuthResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminInitiateAuthResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminInitiateAuthResponsePrivate
+ * \brief The AdminInitiateAuthResponsePrivate class provides private implementation for AdminInitiateAuthResponse.
  * \internal
  *
- * \class AdminInitiateAuthResponsePrivate
- *
- * \brief Private implementation for AdminInitiateAuthResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminInitiateAuthResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminInitiateAuthResponse instance.
+ * Constructs a AdminInitiateAuthResponsePrivate object with public implementation \a q.
  */
 AdminInitiateAuthResponsePrivate::AdminInitiateAuthResponsePrivate(
     AdminInitiateAuthResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminInitiateAuthResponsePrivate::AdminInitiateAuthResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminInitiateAuthResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminInitiateAuth response element from \a xml.
  */
 void AdminInitiateAuthResponsePrivate::parseAdminInitiateAuthResponse(QXmlStreamReader &xml)
 {

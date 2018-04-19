@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelExportTaskResponse
- *
  * \brief The CancelExportTaskResponse class provides an interace for EC2 CancelExportTask responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelExportTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelExportTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelExportTaskResponse::CancelExportTaskResponse(
         const CancelExportTaskRequest &request,
@@ -59,6 +54,9 @@ CancelExportTaskResponse::CancelExportTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelExportTaskRequest * CancelExportTaskResponse::request() const
 {
     Q_D(const CancelExportTaskResponse);
@@ -66,9 +64,8 @@ const CancelExportTaskRequest * CancelExportTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CancelExportTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CancelExportTask \a response.
  */
 void CancelExportTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CancelExportTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CancelExportTaskResponsePrivate
+ * \brief The CancelExportTaskResponsePrivate class provides private implementation for CancelExportTaskResponse.
  * \internal
  *
- * \class CancelExportTaskResponsePrivate
- *
- * \brief Private implementation for CancelExportTaskResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelExportTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelExportTaskResponse instance.
+ * Constructs a CancelExportTaskResponsePrivate object with public implementation \a q.
  */
 CancelExportTaskResponsePrivate::CancelExportTaskResponsePrivate(
     CancelExportTaskResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CancelExportTaskResponsePrivate::CancelExportTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CancelExportTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CancelExportTask response element from \a xml.
  */
 void CancelExportTaskResponsePrivate::parseCancelExportTaskResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeJobsResponse : public BatchResponse {
 public:
     DescribeJobsResponse(const DescribeJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeJobsRequest * request() const;
+    virtual const DescribeJobsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeJobsResponse)

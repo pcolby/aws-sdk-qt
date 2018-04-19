@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListSqlInjectionMatchSetsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a ListSqlInjectionMatchSetsRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a ListSqlInjectionMatchSetsRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 ListSqlInjectionMatchSetsRequestPrivate::ListSqlInjectionMatchSetsRequestPrivate(
     const WAFRequest::Action action, ListSqlInjectionMatchSetsRequest * const q)

@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::AddThingToThingGroupResponse
- *
  * \brief The AddThingToThingGroupResponse class provides an interace for IoT AddThingToThingGroup responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new AddThingToThingGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddThingToThingGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 AddThingToThingGroupResponse::AddThingToThingGroupResponse(
         const AddThingToThingGroupRequest &request,
@@ -66,6 +61,9 @@ AddThingToThingGroupResponse::AddThingToThingGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddThingToThingGroupRequest * AddThingToThingGroupResponse::request() const
 {
     Q_D(const AddThingToThingGroupResponse);
@@ -73,9 +71,8 @@ const AddThingToThingGroupRequest * AddThingToThingGroupResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IoT AddThingToThingGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT AddThingToThingGroup \a response.
  */
 void AddThingToThingGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void AddThingToThingGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::AddThingToThingGroupResponsePrivate
+ * \brief The AddThingToThingGroupResponsePrivate class provides private implementation for AddThingToThingGroupResponse.
  * \internal
  *
- * \class AddThingToThingGroupResponsePrivate
- *
- * \brief Private implementation for AddThingToThingGroupResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddThingToThingGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddThingToThingGroupResponse instance.
+ * Constructs a AddThingToThingGroupResponsePrivate object with public implementation \a q.
  */
 AddThingToThingGroupResponsePrivate::AddThingToThingGroupResponsePrivate(
     AddThingToThingGroupResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ AddThingToThingGroupResponsePrivate::AddThingToThingGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT AddThingToThingGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT AddThingToThingGroup response element from \a xml.
  */
 void AddThingToThingGroupResponsePrivate::parseAddThingToThingGroupResponse(QXmlStreamReader &xml)
 {

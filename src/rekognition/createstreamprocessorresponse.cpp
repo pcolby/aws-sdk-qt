@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::CreateStreamProcessorResponse
- *
  * \brief The CreateStreamProcessorResponse class provides an interace for Rekognition CreateStreamProcessor responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new CreateStreamProcessorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStreamProcessorResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStreamProcessorResponse::CreateStreamProcessorResponse(
         const CreateStreamProcessorRequest &request,
@@ -56,6 +51,9 @@ CreateStreamProcessorResponse::CreateStreamProcessorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStreamProcessorRequest * CreateStreamProcessorResponse::request() const
 {
     Q_D(const CreateStreamProcessorResponse);
@@ -63,9 +61,8 @@ const CreateStreamProcessorRequest * CreateStreamProcessorResponse::request() co
 }
 
 /*!
- * @brief  Parse a Rekognition CreateStreamProcessor response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition CreateStreamProcessor \a response.
  */
 void CreateStreamProcessorResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void CreateStreamProcessorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::CreateStreamProcessorResponsePrivate
+ * \brief The CreateStreamProcessorResponsePrivate class provides private implementation for CreateStreamProcessorResponse.
  * \internal
  *
- * \class CreateStreamProcessorResponsePrivate
- *
- * \brief Private implementation for CreateStreamProcessorResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStreamProcessorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStreamProcessorResponse instance.
+ * Constructs a CreateStreamProcessorResponsePrivate object with public implementation \a q.
  */
 CreateStreamProcessorResponsePrivate::CreateStreamProcessorResponsePrivate(
     CreateStreamProcessorResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ CreateStreamProcessorResponsePrivate::CreateStreamProcessorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition CreateStreamProcessorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition CreateStreamProcessor response element from \a xml.
  */
 void CreateStreamProcessorResponsePrivate::parseCreateStreamProcessorResponse(QXmlStreamReader &xml)
 {

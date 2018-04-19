@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::DescribeInputSecurityGroupResponse
- *
  * \brief The DescribeInputSecurityGroupResponse class provides an interace for MediaLive DescribeInputSecurityGroup responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::describeInputSecurityGroup
  */
 
 /*!
- * @brief  Constructs a new DescribeInputSecurityGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeInputSecurityGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeInputSecurityGroupResponse::DescribeInputSecurityGroupResponse(
         const DescribeInputSecurityGroupRequest &request,
@@ -55,6 +50,9 @@ DescribeInputSecurityGroupResponse::DescribeInputSecurityGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeInputSecurityGroupRequest * DescribeInputSecurityGroupResponse::request() const
 {
     Q_D(const DescribeInputSecurityGroupResponse);
@@ -62,9 +60,8 @@ const DescribeInputSecurityGroupRequest * DescribeInputSecurityGroupResponse::re
 }
 
 /*!
- * @brief  Parse a MediaLive DescribeInputSecurityGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive DescribeInputSecurityGroup \a response.
  */
 void DescribeInputSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeInputSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::DescribeInputSecurityGroupResponsePrivate
+ * \brief The DescribeInputSecurityGroupResponsePrivate class provides private implementation for DescribeInputSecurityGroupResponse.
  * \internal
  *
- * \class DescribeInputSecurityGroupResponsePrivate
- *
- * \brief Private implementation for DescribeInputSecurityGroupResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInputSecurityGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeInputSecurityGroupResponse instance.
+ * Constructs a DescribeInputSecurityGroupResponsePrivate object with public implementation \a q.
  */
 DescribeInputSecurityGroupResponsePrivate::DescribeInputSecurityGroupResponsePrivate(
     DescribeInputSecurityGroupResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeInputSecurityGroupResponsePrivate::DescribeInputSecurityGroupResponsePri
 }
 
 /*!
- * @brief  Parse an MediaLive DescribeInputSecurityGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive DescribeInputSecurityGroup response element from \a xml.
  */
 void DescribeInputSecurityGroupResponsePrivate::parseDescribeInputSecurityGroupResponse(QXmlStreamReader &xml)
 {

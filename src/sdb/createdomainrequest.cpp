@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * CreateDomainRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateDomainRequestPrivate object for SimpleDB \a action with,
- * public implementation \a q.
+ * Constructs a CreateDomainRequestPrivate object for SimpleDB \a action,
+ * with public implementation \a q.
  */
 CreateDomainRequestPrivate::CreateDomainRequestPrivate(
     const SimpleDBRequest::Action action, CreateDomainRequest * const q)

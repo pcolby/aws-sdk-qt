@@ -34,10 +34,10 @@ class QTAWS_EXPORT OptInPhoneNumberResponse : public SNSResponse {
 public:
     OptInPhoneNumberResponse(const OptInPhoneNumberRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const OptInPhoneNumberRequest * request() const;
+    virtual const OptInPhoneNumberRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(OptInPhoneNumberResponse)

@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * ListCommandsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ListCommandsRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a ListCommandsRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 ListCommandsRequestPrivate::ListCommandsRequestPrivate(
     const SSMRequest::Action action, ListCommandsRequest * const q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRedshiftRequest::response
  */
 
 /*!
- *
- * Constructs a CreateDataSourceFromRedshiftRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a CreateDataSourceFromRedshiftRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 CreateDataSourceFromRedshiftRequestPrivate::CreateDataSourceFromRedshiftRequestPrivate(
     const MachineLearningRequest::Action action, CreateDataSourceFromRedshiftRequest * const q)

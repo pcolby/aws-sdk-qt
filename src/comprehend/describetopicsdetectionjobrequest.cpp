@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTopicsDetectionJobRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeTopicsDetectionJobRequestPrivate object for Comprehend \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTopicsDetectionJobRequestPrivate object for Comprehend \a action,
+ * with public implementation \a q.
  */
 DescribeTopicsDetectionJobRequestPrivate::DescribeTopicsDetectionJobRequestPrivate(
     const ComprehendRequest::Action action, DescribeTopicsDetectionJobRequest * const q)

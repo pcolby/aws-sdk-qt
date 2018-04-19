@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DeleteSnapshotResponse
- *
  * \brief The DeleteSnapshotResponse class provides an interace for DirectoryService DeleteSnapshot responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DeleteSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSnapshotResponse::DeleteSnapshotResponse(
         const DeleteSnapshotRequest &request,
@@ -69,6 +64,9 @@ DeleteSnapshotResponse::DeleteSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSnapshotRequest * DeleteSnapshotResponse::request() const
 {
     Q_D(const DeleteSnapshotResponse);
@@ -76,9 +74,8 @@ const DeleteSnapshotRequest * DeleteSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService DeleteSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DeleteSnapshot \a response.
  */
 void DeleteSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeleteSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DeleteSnapshotResponsePrivate
+ * \brief The DeleteSnapshotResponsePrivate class provides private implementation for DeleteSnapshotResponse.
  * \internal
  *
- * \class DeleteSnapshotResponsePrivate
- *
- * \brief Private implementation for DeleteSnapshotResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSnapshotResponse instance.
+ * Constructs a DeleteSnapshotResponsePrivate object with public implementation \a q.
  */
 DeleteSnapshotResponsePrivate::DeleteSnapshotResponsePrivate(
     DeleteSnapshotResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DeleteSnapshotResponsePrivate::DeleteSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService DeleteSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DeleteSnapshot response element from \a xml.
  */
 void DeleteSnapshotResponsePrivate::parseDeleteSnapshotResponse(QXmlStreamReader &xml)
 {

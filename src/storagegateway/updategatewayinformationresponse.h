@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateGatewayInformationResponse : public StorageGatewayRespo
 public:
     UpdateGatewayInformationResponse(const UpdateGatewayInformationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateGatewayInformationRequest * request() const;
+    virtual const UpdateGatewayInformationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateGatewayInformationResponse)

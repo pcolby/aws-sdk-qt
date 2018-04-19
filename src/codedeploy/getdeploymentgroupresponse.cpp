@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::GetDeploymentGroupResponse
- *
  * \brief The GetDeploymentGroupResponse class provides an interace for CodeDeploy GetDeploymentGroup responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new GetDeploymentGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDeploymentGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDeploymentGroupResponse::GetDeploymentGroupResponse(
         const GetDeploymentGroupRequest &request,
@@ -136,6 +131,9 @@ GetDeploymentGroupResponse::GetDeploymentGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDeploymentGroupRequest * GetDeploymentGroupResponse::request() const
 {
     Q_D(const GetDeploymentGroupResponse);
@@ -143,9 +141,8 @@ const GetDeploymentGroupRequest * GetDeploymentGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeDeploy GetDeploymentGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy GetDeploymentGroup \a response.
  */
 void GetDeploymentGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void GetDeploymentGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::GetDeploymentGroupResponsePrivate
+ * \brief The GetDeploymentGroupResponsePrivate class provides private implementation for GetDeploymentGroupResponse.
  * \internal
  *
- * \class GetDeploymentGroupResponsePrivate
- *
- * \brief Private implementation for GetDeploymentGroupResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeploymentGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDeploymentGroupResponse instance.
+ * Constructs a GetDeploymentGroupResponsePrivate object with public implementation \a q.
  */
 GetDeploymentGroupResponsePrivate::GetDeploymentGroupResponsePrivate(
     GetDeploymentGroupResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ GetDeploymentGroupResponsePrivate::GetDeploymentGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy GetDeploymentGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy GetDeploymentGroup response element from \a xml.
  */
 void GetDeploymentGroupResponsePrivate::parseGetDeploymentGroupResponse(QXmlStreamReader &xml)
 {

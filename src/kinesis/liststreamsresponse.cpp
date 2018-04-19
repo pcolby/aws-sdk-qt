@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::ListStreamsResponse
- *
  * \brief The ListStreamsResponse class provides an interace for Kinesis ListStreams responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new ListStreamsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListStreamsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListStreamsResponse::ListStreamsResponse(
         const ListStreamsRequest &request,
@@ -58,6 +53,9 @@ ListStreamsResponse::ListStreamsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListStreamsRequest * ListStreamsResponse::request() const
 {
     Q_D(const ListStreamsResponse);
@@ -65,9 +63,8 @@ const ListStreamsRequest * ListStreamsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis ListStreams response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis ListStreams \a response.
  */
 void ListStreamsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListStreamsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::ListStreamsResponsePrivate
+ * \brief The ListStreamsResponsePrivate class provides private implementation for ListStreamsResponse.
  * \internal
  *
- * \class ListStreamsResponsePrivate
- *
- * \brief Private implementation for ListStreamsResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStreamsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListStreamsResponse instance.
+ * Constructs a ListStreamsResponsePrivate object with public implementation \a q.
  */
 ListStreamsResponsePrivate::ListStreamsResponsePrivate(
     ListStreamsResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ ListStreamsResponsePrivate::ListStreamsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis ListStreamsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis ListStreams response element from \a xml.
  */
 void ListStreamsResponsePrivate::parseListStreamsResponse(QXmlStreamReader &xml)
 {

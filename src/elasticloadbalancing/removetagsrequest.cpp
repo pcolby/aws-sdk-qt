@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a RemoveTagsRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, RemoveTagsRequest * const q)

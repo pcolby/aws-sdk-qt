@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCacheClusterResponse : public ElastiCacheResponse {
 public:
     DeleteCacheClusterResponse(const DeleteCacheClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCacheClusterRequest * request() const;
+    virtual const DeleteCacheClusterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCacheClusterResponse)

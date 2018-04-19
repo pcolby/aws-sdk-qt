@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetConsoleScreenshotRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetConsoleScreenshotRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a GetConsoleScreenshotRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 GetConsoleScreenshotRequestPrivate::GetConsoleScreenshotRequestPrivate(
     const EC2Request::Action action, GetConsoleScreenshotRequest * const q)

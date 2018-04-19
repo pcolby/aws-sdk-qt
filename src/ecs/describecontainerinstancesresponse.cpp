@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DescribeContainerInstancesResponse
- *
  * \brief The DescribeContainerInstancesResponse class provides an interace for ECS DescribeContainerInstances responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DescribeContainerInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeContainerInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeContainerInstancesResponse::DescribeContainerInstancesResponse(
         const DescribeContainerInstancesRequest &request,
@@ -72,6 +67,9 @@ DescribeContainerInstancesResponse::DescribeContainerInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeContainerInstancesRequest * DescribeContainerInstancesResponse::request() const
 {
     Q_D(const DescribeContainerInstancesResponse);
@@ -79,9 +77,8 @@ const DescribeContainerInstancesRequest * DescribeContainerInstancesResponse::re
 }
 
 /*!
- * @brief  Parse a ECS DescribeContainerInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS DescribeContainerInstances \a response.
  */
 void DescribeContainerInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void DescribeContainerInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::DescribeContainerInstancesResponsePrivate
+ * \brief The DescribeContainerInstancesResponsePrivate class provides private implementation for DescribeContainerInstancesResponse.
  * \internal
  *
- * \class DescribeContainerInstancesResponsePrivate
- *
- * \brief Private implementation for DescribeContainerInstancesResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeContainerInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeContainerInstancesResponse instance.
+ * Constructs a DescribeContainerInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeContainerInstancesResponsePrivate::DescribeContainerInstancesResponsePrivate(
     DescribeContainerInstancesResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ DescribeContainerInstancesResponsePrivate::DescribeContainerInstancesResponsePri
 }
 
 /*!
- * @brief  Parse an ECS DescribeContainerInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS DescribeContainerInstances response element from \a xml.
  */
 void DescribeContainerInstancesResponsePrivate::parseDescribeContainerInstancesResponse(QXmlStreamReader &xml)
 {

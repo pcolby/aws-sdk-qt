@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * SendInvitationRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a SendInvitationRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a SendInvitationRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 SendInvitationRequestPrivate::SendInvitationRequestPrivate(
     const AlexaForBusinessRequest::Action action, SendInvitationRequest * const q)

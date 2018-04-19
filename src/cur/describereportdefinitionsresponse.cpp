@@ -29,21 +29,16 @@ namespace CostandUsageReportService {
 
 /*!
  * \class QtAws::CostandUsageReportService::DescribeReportDefinitionsResponse
- *
  * \brief The DescribeReportDefinitionsResponse class provides an interace for CostandUsageReportService DescribeReportDefinitions responses.
  *
- * \ingroup CostandUsageReportService
+ * \inmodule QtAwsCostandUsageReportService
  *
  *
  * \sa CostandUsageReportServiceClient::describeReportDefinitions
  */
 
 /*!
- * @brief  Constructs a new DescribeReportDefinitionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeReportDefinitionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeReportDefinitionsResponse::DescribeReportDefinitionsResponse(
         const DescribeReportDefinitionsRequest &request,
@@ -55,6 +50,9 @@ DescribeReportDefinitionsResponse::DescribeReportDefinitionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeReportDefinitionsRequest * DescribeReportDefinitionsResponse::request() const
 {
     Q_D(const DescribeReportDefinitionsResponse);
@@ -62,9 +60,8 @@ const DescribeReportDefinitionsRequest * DescribeReportDefinitionsResponse::requ
 }
 
 /*!
- * @brief  Parse a CostandUsageReportService DescribeReportDefinitions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CostandUsageReportService DescribeReportDefinitions \a response.
  */
 void DescribeReportDefinitionsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeReportDefinitionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CostandUsageReportService::DescribeReportDefinitionsResponsePrivate
+ * \brief The DescribeReportDefinitionsResponsePrivate class provides private implementation for DescribeReportDefinitionsResponse.
  * \internal
  *
- * \class DescribeReportDefinitionsResponsePrivate
- *
- * \brief Private implementation for DescribeReportDefinitionsResponse.
+ * \inmodule QtAwsCostandUsageReportService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReportDefinitionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeReportDefinitionsResponse instance.
+ * Constructs a DescribeReportDefinitionsResponsePrivate object with public implementation \a q.
  */
 DescribeReportDefinitionsResponsePrivate::DescribeReportDefinitionsResponsePrivate(
     DescribeReportDefinitionsResponse * const q) : CostandUsageReportServiceResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeReportDefinitionsResponsePrivate::DescribeReportDefinitionsResponsePriva
 }
 
 /*!
- * @brief  Parse an CostandUsageReportService DescribeReportDefinitionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CostandUsageReportService DescribeReportDefinitions response element from \a xml.
  */
 void DescribeReportDefinitionsResponsePrivate::parseDescribeReportDefinitionsResponse(QXmlStreamReader &xml)
 {

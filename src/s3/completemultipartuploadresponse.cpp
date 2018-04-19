@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::CompleteMultipartUploadResponse
- *
  * \brief The CompleteMultipartUploadResponse class provides an interace for S3 CompleteMultipartUpload responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::completeMultipartUpload
  */
 
 /*!
- * @brief  Constructs a new CompleteMultipartUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CompleteMultipartUploadResponse object for \a reply to \a request, with parent \a parent.
  */
 CompleteMultipartUploadResponse::CompleteMultipartUploadResponse(
         const CompleteMultipartUploadRequest &request,
@@ -55,6 +50,9 @@ CompleteMultipartUploadResponse::CompleteMultipartUploadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CompleteMultipartUploadRequest * CompleteMultipartUploadResponse::request() const
 {
     Q_D(const CompleteMultipartUploadResponse);
@@ -62,9 +60,8 @@ const CompleteMultipartUploadRequest * CompleteMultipartUploadResponse::request(
 }
 
 /*!
- * @brief  Parse a S3 CompleteMultipartUpload response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 CompleteMultipartUpload \a response.
  */
 void CompleteMultipartUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CompleteMultipartUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::CompleteMultipartUploadResponsePrivate
+ * \brief The CompleteMultipartUploadResponsePrivate class provides private implementation for CompleteMultipartUploadResponse.
  * \internal
  *
- * \class CompleteMultipartUploadResponsePrivate
- *
- * \brief Private implementation for CompleteMultipartUploadResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CompleteMultipartUploadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CompleteMultipartUploadResponse instance.
+ * Constructs a CompleteMultipartUploadResponsePrivate object with public implementation \a q.
  */
 CompleteMultipartUploadResponsePrivate::CompleteMultipartUploadResponsePrivate(
     CompleteMultipartUploadResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ CompleteMultipartUploadResponsePrivate::CompleteMultipartUploadResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 CompleteMultipartUploadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 CompleteMultipartUpload response element from \a xml.
  */
 void CompleteMultipartUploadResponsePrivate::parseCompleteMultipartUploadResponse(QXmlStreamReader &xml)
 {

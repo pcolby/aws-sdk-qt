@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::ExecutePolicyResponse
- *
  * \brief The ExecutePolicyResponse class provides an interace for AutoScaling ExecutePolicy responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new ExecutePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ExecutePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 ExecutePolicyResponse::ExecutePolicyResponse(
         const ExecutePolicyRequest &request,
@@ -60,6 +55,9 @@ ExecutePolicyResponse::ExecutePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ExecutePolicyRequest * ExecutePolicyResponse::request() const
 {
     Q_D(const ExecutePolicyResponse);
@@ -67,9 +65,8 @@ const ExecutePolicyRequest * ExecutePolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling ExecutePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling ExecutePolicy \a response.
  */
 void ExecutePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ExecutePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::ExecutePolicyResponsePrivate
+ * \brief The ExecutePolicyResponsePrivate class provides private implementation for ExecutePolicyResponse.
  * \internal
  *
- * \class ExecutePolicyResponsePrivate
- *
- * \brief Private implementation for ExecutePolicyResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExecutePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ExecutePolicyResponse instance.
+ * Constructs a ExecutePolicyResponsePrivate object with public implementation \a q.
  */
 ExecutePolicyResponsePrivate::ExecutePolicyResponsePrivate(
     ExecutePolicyResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ ExecutePolicyResponsePrivate::ExecutePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling ExecutePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling ExecutePolicy response element from \a xml.
  */
 void ExecutePolicyResponsePrivate::parseExecutePolicyResponse(QXmlStreamReader &xml)
 {

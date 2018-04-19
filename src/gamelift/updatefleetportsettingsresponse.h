@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateFleetPortSettingsResponse : public GameLiftResponse {
 public:
     UpdateFleetPortSettingsResponse(const UpdateFleetPortSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateFleetPortSettingsRequest * request() const;
+    virtual const UpdateFleetPortSettingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateFleetPortSettingsResponse)

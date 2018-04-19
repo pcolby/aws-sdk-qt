@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CreateSnapshotRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a CreateSnapshotRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const ElastiCacheRequest::Action action, CreateSnapshotRequest * const q)

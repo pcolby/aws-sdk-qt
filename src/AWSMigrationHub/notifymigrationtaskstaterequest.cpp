@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * NotifyMigrationTaskStateRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a NotifyMigrationTaskStateRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a NotifyMigrationTaskStateRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 NotifyMigrationTaskStateRequestPrivate::NotifyMigrationTaskStateRequestPrivate(
     const MigrationHubRequest::Action action, NotifyMigrationTaskStateRequest * const q)

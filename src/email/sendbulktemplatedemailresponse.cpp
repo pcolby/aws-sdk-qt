@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SendBulkTemplatedEmailResponse
- *
  * \brief The SendBulkTemplatedEmailResponse class provides an interace for SES SendBulkTemplatedEmail responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SendBulkTemplatedEmailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendBulkTemplatedEmailResponse object for \a reply to \a request, with parent \a parent.
  */
 SendBulkTemplatedEmailResponse::SendBulkTemplatedEmailResponse(
         const SendBulkTemplatedEmailRequest &request,
@@ -66,6 +61,9 @@ SendBulkTemplatedEmailResponse::SendBulkTemplatedEmailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendBulkTemplatedEmailRequest * SendBulkTemplatedEmailResponse::request() const
 {
     Q_D(const SendBulkTemplatedEmailResponse);
@@ -73,9 +71,8 @@ const SendBulkTemplatedEmailRequest * SendBulkTemplatedEmailResponse::request() 
 }
 
 /*!
- * @brief  Parse a SES SendBulkTemplatedEmail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SendBulkTemplatedEmail \a response.
  */
 void SendBulkTemplatedEmailResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SendBulkTemplatedEmailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::SendBulkTemplatedEmailResponsePrivate
+ * \brief The SendBulkTemplatedEmailResponsePrivate class provides private implementation for SendBulkTemplatedEmailResponse.
  * \internal
  *
- * \class SendBulkTemplatedEmailResponsePrivate
- *
- * \brief Private implementation for SendBulkTemplatedEmailResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendBulkTemplatedEmailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendBulkTemplatedEmailResponse instance.
+ * Constructs a SendBulkTemplatedEmailResponsePrivate object with public implementation \a q.
  */
 SendBulkTemplatedEmailResponsePrivate::SendBulkTemplatedEmailResponsePrivate(
     SendBulkTemplatedEmailResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SendBulkTemplatedEmailResponsePrivate::SendBulkTemplatedEmailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES SendBulkTemplatedEmailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SendBulkTemplatedEmail response element from \a xml.
  */
 void SendBulkTemplatedEmailResponsePrivate::parseSendBulkTemplatedEmailResponse(QXmlStreamReader &xml)
 {

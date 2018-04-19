@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeLoggingStatusResponse
- *
  * \brief The DescribeLoggingStatusResponse class provides an interace for Redshift DescribeLoggingStatus responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeLoggingStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLoggingStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLoggingStatusResponse::DescribeLoggingStatusResponse(
         const DescribeLoggingStatusRequest &request,
@@ -85,6 +80,9 @@ DescribeLoggingStatusResponse::DescribeLoggingStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLoggingStatusRequest * DescribeLoggingStatusResponse::request() const
 {
     Q_D(const DescribeLoggingStatusResponse);
@@ -92,9 +90,8 @@ const DescribeLoggingStatusRequest * DescribeLoggingStatusResponse::request() co
 }
 
 /*!
- * @brief  Parse a Redshift DescribeLoggingStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeLoggingStatus \a response.
  */
 void DescribeLoggingStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeLoggingStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeLoggingStatusResponsePrivate
+ * \brief The DescribeLoggingStatusResponsePrivate class provides private implementation for DescribeLoggingStatusResponse.
  * \internal
  *
- * \class DescribeLoggingStatusResponsePrivate
- *
- * \brief Private implementation for DescribeLoggingStatusResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLoggingStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLoggingStatusResponse instance.
+ * Constructs a DescribeLoggingStatusResponsePrivate object with public implementation \a q.
  */
 DescribeLoggingStatusResponsePrivate::DescribeLoggingStatusResponsePrivate(
     DescribeLoggingStatusResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeLoggingStatusResponsePrivate::DescribeLoggingStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift DescribeLoggingStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeLoggingStatus response element from \a xml.
  */
 void DescribeLoggingStatusResponsePrivate::parseDescribeLoggingStatusResponse(QXmlStreamReader &xml)
 {

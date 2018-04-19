@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * UntagQueueRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a UntagQueueRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a UntagQueueRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 UntagQueueRequestPrivate::UntagQueueRequestPrivate(
     const SQSRequest::Action action, UntagQueueRequest * const q)

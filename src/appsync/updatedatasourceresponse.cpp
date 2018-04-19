@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::UpdateDataSourceResponse
- *
  * \brief The UpdateDataSourceResponse class provides an interace for AppSync UpdateDataSource responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new UpdateDataSourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDataSourceResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDataSourceResponse::UpdateDataSourceResponse(
         const UpdateDataSourceRequest &request,
@@ -56,6 +51,9 @@ UpdateDataSourceResponse::UpdateDataSourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDataSourceRequest * UpdateDataSourceResponse::request() const
 {
     Q_D(const UpdateDataSourceResponse);
@@ -63,9 +61,8 @@ const UpdateDataSourceRequest * UpdateDataSourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync UpdateDataSource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync UpdateDataSource \a response.
  */
 void UpdateDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void UpdateDataSourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::UpdateDataSourceResponsePrivate
+ * \brief The UpdateDataSourceResponsePrivate class provides private implementation for UpdateDataSourceResponse.
  * \internal
  *
- * \class UpdateDataSourceResponsePrivate
- *
- * \brief Private implementation for UpdateDataSourceResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDataSourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDataSourceResponse instance.
+ * Constructs a UpdateDataSourceResponsePrivate object with public implementation \a q.
  */
 UpdateDataSourceResponsePrivate::UpdateDataSourceResponsePrivate(
     UpdateDataSourceResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ UpdateDataSourceResponsePrivate::UpdateDataSourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync UpdateDataSourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync UpdateDataSource response element from \a xml.
  */
 void UpdateDataSourceResponsePrivate::parseUpdateDataSourceResponse(QXmlStreamReader &xml)
 {

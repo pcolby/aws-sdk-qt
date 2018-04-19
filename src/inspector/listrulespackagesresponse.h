@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListRulesPackagesResponse : public InspectorResponse {
 public:
     ListRulesPackagesResponse(const ListRulesPackagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListRulesPackagesRequest * request() const;
+    virtual const ListRulesPackagesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListRulesPackagesResponse)

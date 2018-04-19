@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEventTopicsResponse : public DirectoryServiceResponse
 public:
     DescribeEventTopicsResponse(const DescribeEventTopicsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEventTopicsRequest * request() const;
+    virtual const DescribeEventTopicsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEventTopicsResponse)

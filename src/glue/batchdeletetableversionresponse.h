@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchDeleteTableVersionResponse : public GlueResponse {
 public:
     BatchDeleteTableVersionResponse(const BatchDeleteTableVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchDeleteTableVersionRequest * request() const;
+    virtual const BatchDeleteTableVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchDeleteTableVersionResponse)

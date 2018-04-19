@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * PollForTaskRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a PollForTaskRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a PollForTaskRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 PollForTaskRequestPrivate::PollForTaskRequestPrivate(
     const DataPipelineRequest::Action action, PollForTaskRequest * const q)

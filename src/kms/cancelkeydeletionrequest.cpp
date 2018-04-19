@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * CancelKeyDeletionRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CancelKeyDeletionRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a CancelKeyDeletionRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 CancelKeyDeletionRequestPrivate::CancelKeyDeletionRequestPrivate(
     const KMSRequest::Action action, CancelKeyDeletionRequest * const q)

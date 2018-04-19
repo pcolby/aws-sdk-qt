@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteApnsVoipChannelResponse
- *
  * \brief The DeleteApnsVoipChannelResponse class provides an interace for Pinpoint DeleteApnsVoipChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteApnsVoipChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteApnsVoipChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteApnsVoipChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteApnsVoipChannelResponse::DeleteApnsVoipChannelResponse(
         const DeleteApnsVoipChannelRequest &request,
@@ -55,6 +50,9 @@ DeleteApnsVoipChannelResponse::DeleteApnsVoipChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteApnsVoipChannelRequest * DeleteApnsVoipChannelResponse::request() const
 {
     Q_D(const DeleteApnsVoipChannelResponse);
@@ -62,9 +60,8 @@ const DeleteApnsVoipChannelRequest * DeleteApnsVoipChannelResponse::request() co
 }
 
 /*!
- * @brief  Parse a Pinpoint DeleteApnsVoipChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint DeleteApnsVoipChannel \a response.
  */
 void DeleteApnsVoipChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteApnsVoipChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::DeleteApnsVoipChannelResponsePrivate
+ * \brief The DeleteApnsVoipChannelResponsePrivate class provides private implementation for DeleteApnsVoipChannelResponse.
  * \internal
  *
- * \class DeleteApnsVoipChannelResponsePrivate
- *
- * \brief Private implementation for DeleteApnsVoipChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApnsVoipChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteApnsVoipChannelResponse instance.
+ * Constructs a DeleteApnsVoipChannelResponsePrivate object with public implementation \a q.
  */
 DeleteApnsVoipChannelResponsePrivate::DeleteApnsVoipChannelResponsePrivate(
     DeleteApnsVoipChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteApnsVoipChannelResponsePrivate::DeleteApnsVoipChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint DeleteApnsVoipChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint DeleteApnsVoipChannel response element from \a xml.
  */
 void DeleteApnsVoipChannelResponsePrivate::parseDeleteApnsVoipChannelResponse(QXmlStreamReader &xml)
 {

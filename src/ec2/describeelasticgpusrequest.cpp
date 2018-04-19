@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticGpusRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeElasticGpusRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeElasticGpusRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeElasticGpusRequestPrivate::DescribeElasticGpusRequestPrivate(
     const EC2Request::Action action, DescribeElasticGpusRequest * const q)

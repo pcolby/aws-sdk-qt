@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteDhcpOptionsResponse
- *
  * \brief The DeleteDhcpOptionsResponse class provides an interace for EC2 DeleteDhcpOptions responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteDhcpOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDhcpOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDhcpOptionsResponse::DeleteDhcpOptionsResponse(
         const DeleteDhcpOptionsRequest &request,
@@ -59,6 +54,9 @@ DeleteDhcpOptionsResponse::DeleteDhcpOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDhcpOptionsRequest * DeleteDhcpOptionsResponse::request() const
 {
     Q_D(const DeleteDhcpOptionsResponse);
@@ -66,9 +64,8 @@ const DeleteDhcpOptionsRequest * DeleteDhcpOptionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteDhcpOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteDhcpOptions \a response.
  */
 void DeleteDhcpOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteDhcpOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteDhcpOptionsResponsePrivate
+ * \brief The DeleteDhcpOptionsResponsePrivate class provides private implementation for DeleteDhcpOptionsResponse.
  * \internal
  *
- * \class DeleteDhcpOptionsResponsePrivate
- *
- * \brief Private implementation for DeleteDhcpOptionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDhcpOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDhcpOptionsResponse instance.
+ * Constructs a DeleteDhcpOptionsResponsePrivate object with public implementation \a q.
  */
 DeleteDhcpOptionsResponsePrivate::DeleteDhcpOptionsResponsePrivate(
     DeleteDhcpOptionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteDhcpOptionsResponsePrivate::DeleteDhcpOptionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteDhcpOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteDhcpOptions response element from \a xml.
  */
 void DeleteDhcpOptionsResponsePrivate::parseDeleteDhcpOptionsResponse(QXmlStreamReader &xml)
 {

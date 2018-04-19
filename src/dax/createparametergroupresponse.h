@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateParameterGroupResponse : public DAXResponse {
 public:
     CreateParameterGroupResponse(const CreateParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateParameterGroupRequest * request() const;
+    virtual const CreateParameterGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateParameterGroupResponse)

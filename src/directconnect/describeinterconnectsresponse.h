@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeInterconnectsResponse : public DirectConnectResponse 
 public:
     DescribeInterconnectsResponse(const DescribeInterconnectsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeInterconnectsRequest * request() const;
+    virtual const DescribeInterconnectsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeInterconnectsResponse)

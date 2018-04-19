@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DetachRolePolicyResponse
- *
  * \brief The DetachRolePolicyResponse class provides an interace for IAM DetachRolePolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DetachRolePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachRolePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachRolePolicyResponse::DetachRolePolicyResponse(
         const DetachRolePolicyRequest &request,
@@ -120,6 +115,9 @@ DetachRolePolicyResponse::DetachRolePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachRolePolicyRequest * DetachRolePolicyResponse::request() const
 {
     Q_D(const DetachRolePolicyResponse);
@@ -127,9 +125,8 @@ const DetachRolePolicyRequest * DetachRolePolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM DetachRolePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DetachRolePolicy \a response.
  */
 void DetachRolePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DetachRolePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DetachRolePolicyResponsePrivate
+ * \brief The DetachRolePolicyResponsePrivate class provides private implementation for DetachRolePolicyResponse.
  * \internal
  *
- * \class DetachRolePolicyResponsePrivate
- *
- * \brief Private implementation for DetachRolePolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachRolePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachRolePolicyResponse instance.
+ * Constructs a DetachRolePolicyResponsePrivate object with public implementation \a q.
  */
 DetachRolePolicyResponsePrivate::DetachRolePolicyResponsePrivate(
     DetachRolePolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DetachRolePolicyResponsePrivate::DetachRolePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DetachRolePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DetachRolePolicy response element from \a xml.
  */
 void DetachRolePolicyResponsePrivate::parseDetachRolePolicyResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT PublishVersionResponse : public LambdaResponse {
 public:
     PublishVersionResponse(const PublishVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PublishVersionRequest * request() const;
+    virtual const PublishVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PublishVersionResponse)

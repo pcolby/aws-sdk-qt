@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateVpnConnectionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a CreateVpnConnectionRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateVpnConnectionRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateVpnConnectionRequestPrivate::CreateVpnConnectionRequestPrivate(
     const EC2Request::Action action, CreateVpnConnectionRequest * const q)

@@ -29,10 +29,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::UpdateCertificateOptionsResponse
- *
  * \brief The UpdateCertificateOptionsResponse class provides an interace for ACM UpdateCertificateOptions responses.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new UpdateCertificateOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateCertificateOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateCertificateOptionsResponse::UpdateCertificateOptionsResponse(
         const UpdateCertificateOptionsRequest &request,
@@ -64,6 +59,9 @@ UpdateCertificateOptionsResponse::UpdateCertificateOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateCertificateOptionsRequest * UpdateCertificateOptionsResponse::request() const
 {
     Q_D(const UpdateCertificateOptionsResponse);
@@ -71,9 +69,8 @@ const UpdateCertificateOptionsRequest * UpdateCertificateOptionsResponse::reques
 }
 
 /*!
- * @brief  Parse a ACM UpdateCertificateOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACM UpdateCertificateOptions \a response.
  */
 void UpdateCertificateOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void UpdateCertificateOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACM::UpdateCertificateOptionsResponsePrivate
+ * \brief The UpdateCertificateOptionsResponsePrivate class provides private implementation for UpdateCertificateOptionsResponse.
  * \internal
  *
- * \class UpdateCertificateOptionsResponsePrivate
- *
- * \brief Private implementation for UpdateCertificateOptionsResponse.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCertificateOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateCertificateOptionsResponse instance.
+ * Constructs a UpdateCertificateOptionsResponsePrivate object with public implementation \a q.
  */
 UpdateCertificateOptionsResponsePrivate::UpdateCertificateOptionsResponsePrivate(
     UpdateCertificateOptionsResponse * const q) : ACMResponsePrivate(q)
@@ -104,9 +97,7 @@ UpdateCertificateOptionsResponsePrivate::UpdateCertificateOptionsResponsePrivate
 }
 
 /*!
- * @brief  Parse an ACM UpdateCertificateOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACM UpdateCertificateOptions response element from \a xml.
  */
 void UpdateCertificateOptionsResponsePrivate::parseUpdateCertificateOptionsResponse(QXmlStreamReader &xml)
 {

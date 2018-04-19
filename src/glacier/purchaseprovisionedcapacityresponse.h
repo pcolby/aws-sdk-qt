@@ -34,10 +34,10 @@ class QTAWS_EXPORT PurchaseProvisionedCapacityResponse : public GlacierResponse 
 public:
     PurchaseProvisionedCapacityResponse(const PurchaseProvisionedCapacityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PurchaseProvisionedCapacityRequest * request() const;
+    virtual const PurchaseProvisionedCapacityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PurchaseProvisionedCapacityResponse)

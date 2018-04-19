@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDBSecurityGroupRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteDBSecurityGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDBSecurityGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DeleteDBSecurityGroupRequestPrivate::DeleteDBSecurityGroupRequestPrivate(
     const RDSRequest::Action action, DeleteDBSecurityGroupRequest * const q)

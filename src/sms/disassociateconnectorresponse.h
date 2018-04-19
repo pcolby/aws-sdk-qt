@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateConnectorResponse : public SMSResponse {
 public:
     DisassociateConnectorResponse(const DisassociateConnectorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateConnectorRequest * request() const;
+    virtual const DisassociateConnectorRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateConnectorResponse)

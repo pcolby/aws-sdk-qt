@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AssociateVpcCidrBlockRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a AssociateVpcCidrBlockRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AssociateVpcCidrBlockRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AssociateVpcCidrBlockRequestPrivate::AssociateVpcCidrBlockRequestPrivate(
     const EC2Request::Action action, AssociateVpcCidrBlockRequest * const q)

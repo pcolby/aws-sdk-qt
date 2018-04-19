@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetContextKeysForCustomPolicyResponse
- *
  * \brief The GetContextKeysForCustomPolicyResponse class provides an interace for IAM GetContextKeysForCustomPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetContextKeysForCustomPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetContextKeysForCustomPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetContextKeysForCustomPolicyResponse::GetContextKeysForCustomPolicyResponse(
         const GetContextKeysForCustomPolicyRequest &request,
@@ -120,6 +115,9 @@ GetContextKeysForCustomPolicyResponse::GetContextKeysForCustomPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetContextKeysForCustomPolicyRequest * GetContextKeysForCustomPolicyResponse::request() const
 {
     Q_D(const GetContextKeysForCustomPolicyResponse);
@@ -127,9 +125,8 @@ const GetContextKeysForCustomPolicyRequest * GetContextKeysForCustomPolicyRespon
 }
 
 /*!
- * @brief  Parse a IAM GetContextKeysForCustomPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetContextKeysForCustomPolicy \a response.
  */
 void GetContextKeysForCustomPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetContextKeysForCustomPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetContextKeysForCustomPolicyResponsePrivate
+ * \brief The GetContextKeysForCustomPolicyResponsePrivate class provides private implementation for GetContextKeysForCustomPolicyResponse.
  * \internal
  *
- * \class GetContextKeysForCustomPolicyResponsePrivate
- *
- * \brief Private implementation for GetContextKeysForCustomPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetContextKeysForCustomPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetContextKeysForCustomPolicyResponse instance.
+ * Constructs a GetContextKeysForCustomPolicyResponsePrivate object with public implementation \a q.
  */
 GetContextKeysForCustomPolicyResponsePrivate::GetContextKeysForCustomPolicyResponsePrivate(
     GetContextKeysForCustomPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetContextKeysForCustomPolicyResponsePrivate::GetContextKeysForCustomPolicyRespo
 }
 
 /*!
- * @brief  Parse an IAM GetContextKeysForCustomPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetContextKeysForCustomPolicy response element from \a xml.
  */
 void GetContextKeysForCustomPolicyResponsePrivate::parseGetContextKeysForCustomPolicyResponse(QXmlStreamReader &xml)
 {

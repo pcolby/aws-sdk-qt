@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * StartExecutionRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a StartExecutionRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a StartExecutionRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 StartExecutionRequestPrivate::StartExecutionRequestPrivate(
     const SFNRequest::Action action, StartExecutionRequest * const q)

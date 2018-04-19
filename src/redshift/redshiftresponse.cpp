@@ -28,16 +28,13 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RedshiftResponse
- *
  * \brief The RedshiftResponse class provides an interface for Redshift responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @brief  Constructs a new RedshiftResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a RedshiftResponse object with parent \a parent.
  */
 RedshiftResponse::RedshiftResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new RedshiftResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ RedshiftResponse::RedshiftResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RedshiftResponse object.
- *
+ * \internal
+ * Constructs a RedshiftResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from RedshiftResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 RedshiftResponse::RedshiftResponse(RedshiftResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ RedshiftResponse::RedshiftResponse(RedshiftResponsePrivate * const d, QObject * 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void RedshiftResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void RedshiftResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Redshift::RedshiftResponsePrivate
+ * \brief The RedshiftResponsePrivate class provides private implementation for RedshiftResponse.
+ * \internal
  *
- * @class  RedshiftResponsePrivate
- *
- * @brief  Private implementation for RedshiftResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RedshiftResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RedshiftResponse instance.
+ * Constructs a RedshiftResponsePrivate object with public implementation \a q.
  */
 RedshiftResponsePrivate::RedshiftResponsePrivate(
     RedshiftResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

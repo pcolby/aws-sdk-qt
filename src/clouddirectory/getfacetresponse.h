@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetFacetResponse : public CloudDirectoryResponse {
 public:
     GetFacetResponse(const GetFacetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetFacetRequest * request() const;
+    virtual const GetFacetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetFacetResponse)

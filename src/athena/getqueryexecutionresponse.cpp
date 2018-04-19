@@ -29,10 +29,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::GetQueryExecutionResponse
- *
  * \brief The GetQueryExecutionResponse class provides an interace for Athena GetQueryExecution responses.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -51,11 +50,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new GetQueryExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetQueryExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetQueryExecutionResponse::GetQueryExecutionResponse(
         const GetQueryExecutionRequest &request,
@@ -67,6 +62,9 @@ GetQueryExecutionResponse::GetQueryExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetQueryExecutionRequest * GetQueryExecutionResponse::request() const
 {
     Q_D(const GetQueryExecutionResponse);
@@ -74,9 +72,8 @@ const GetQueryExecutionRequest * GetQueryExecutionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Athena GetQueryExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Athena GetQueryExecution \a response.
  */
 void GetQueryExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void GetQueryExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Athena::GetQueryExecutionResponsePrivate
+ * \brief The GetQueryExecutionResponsePrivate class provides private implementation for GetQueryExecutionResponse.
  * \internal
  *
- * \class GetQueryExecutionResponsePrivate
- *
- * \brief Private implementation for GetQueryExecutionResponse.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQueryExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetQueryExecutionResponse instance.
+ * Constructs a GetQueryExecutionResponsePrivate object with public implementation \a q.
  */
 GetQueryExecutionResponsePrivate::GetQueryExecutionResponsePrivate(
     GetQueryExecutionResponse * const q) : AthenaResponsePrivate(q)
@@ -107,9 +100,7 @@ GetQueryExecutionResponsePrivate::GetQueryExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Athena GetQueryExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Athena GetQueryExecution response element from \a xml.
  */
 void GetQueryExecutionResponsePrivate::parseGetQueryExecutionResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::RegisterDeviceResponse
- *
  * \brief The RegisterDeviceResponse class provides an interace for CognitoSync RegisterDevice responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new RegisterDeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterDeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterDeviceResponse::RegisterDeviceResponse(
         const RegisterDeviceRequest &request,
@@ -75,6 +70,9 @@ RegisterDeviceResponse::RegisterDeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterDeviceRequest * RegisterDeviceResponse::request() const
 {
     Q_D(const RegisterDeviceResponse);
@@ -82,9 +80,8 @@ const RegisterDeviceRequest * RegisterDeviceResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoSync RegisterDevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync RegisterDevice \a response.
  */
 void RegisterDeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void RegisterDeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::RegisterDeviceResponsePrivate
+ * \brief The RegisterDeviceResponsePrivate class provides private implementation for RegisterDeviceResponse.
  * \internal
  *
- * \class RegisterDeviceResponsePrivate
- *
- * \brief Private implementation for RegisterDeviceResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterDeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterDeviceResponse instance.
+ * Constructs a RegisterDeviceResponsePrivate object with public implementation \a q.
  */
 RegisterDeviceResponsePrivate::RegisterDeviceResponsePrivate(
     RegisterDeviceResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ RegisterDeviceResponsePrivate::RegisterDeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync RegisterDeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync RegisterDevice response element from \a xml.
  */
 void RegisterDeviceResponsePrivate::parseRegisterDeviceResponse(QXmlStreamReader &xml)
 {

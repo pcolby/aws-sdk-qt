@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetBotAliasesResponse
- *
  * \brief The GetBotAliasesResponse class provides an interace for LexModelBuildingService GetBotAliases responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetBotAliasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBotAliasesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBotAliasesResponse::GetBotAliasesResponse(
         const GetBotAliasesRequest &request,
@@ -59,6 +54,9 @@ GetBotAliasesResponse::GetBotAliasesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBotAliasesRequest * GetBotAliasesResponse::request() const
 {
     Q_D(const GetBotAliasesResponse);
@@ -66,9 +64,8 @@ const GetBotAliasesRequest * GetBotAliasesResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService GetBotAliases response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService GetBotAliases \a response.
  */
 void GetBotAliasesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetBotAliasesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::GetBotAliasesResponsePrivate
+ * \brief The GetBotAliasesResponsePrivate class provides private implementation for GetBotAliasesResponse.
  * \internal
  *
- * \class GetBotAliasesResponsePrivate
- *
- * \brief Private implementation for GetBotAliasesResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBotAliasesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBotAliasesResponse instance.
+ * Constructs a GetBotAliasesResponsePrivate object with public implementation \a q.
  */
 GetBotAliasesResponsePrivate::GetBotAliasesResponsePrivate(
     GetBotAliasesResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ GetBotAliasesResponsePrivate::GetBotAliasesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService GetBotAliasesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService GetBotAliases response element from \a xml.
  */
 void GetBotAliasesResponsePrivate::parseGetBotAliasesResponse(QXmlStreamReader &xml)
 {

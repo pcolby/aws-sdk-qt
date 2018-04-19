@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEngineDefaultClusterParametersResponse : public RDSRe
 public:
     DescribeEngineDefaultClusterParametersResponse(const DescribeEngineDefaultClusterParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEngineDefaultClusterParametersRequest * request() const;
+    virtual const DescribeEngineDefaultClusterParametersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEngineDefaultClusterParametersResponse)

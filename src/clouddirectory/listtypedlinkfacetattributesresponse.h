@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTypedLinkFacetAttributesResponse : public CloudDirectoryR
 public:
     ListTypedLinkFacetAttributesResponse(const ListTypedLinkFacetAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTypedLinkFacetAttributesRequest * request() const;
+    virtual const ListTypedLinkFacetAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListTypedLinkFacetAttributesResponse)

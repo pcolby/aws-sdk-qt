@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * RevokeCertificateRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a RevokeCertificateRequestPrivate object for ACMPCA \a action with,
- * public implementation \a q.
+ * Constructs a RevokeCertificateRequestPrivate object for ACMPCA \a action,
+ * with public implementation \a q.
  */
 RevokeCertificateRequestPrivate::RevokeCertificateRequestPrivate(
     const ACMPCARequest::Action action, RevokeCertificateRequest * const q)

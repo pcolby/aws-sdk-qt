@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * SearchDevicesRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a SearchDevicesRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a SearchDevicesRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 SearchDevicesRequestPrivate::SearchDevicesRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchDevicesRequest * const q)

@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::EnablePolicyTypeResponse
- *
  * \brief The EnablePolicyTypeResponse class provides an interace for Organizations EnablePolicyType responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new EnablePolicyTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnablePolicyTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 EnablePolicyTypeResponse::EnablePolicyTypeResponse(
         const EnablePolicyTypeRequest &request,
@@ -197,6 +192,9 @@ EnablePolicyTypeResponse::EnablePolicyTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnablePolicyTypeRequest * EnablePolicyTypeResponse::request() const
 {
     Q_D(const EnablePolicyTypeResponse);
@@ -204,9 +202,8 @@ const EnablePolicyTypeRequest * EnablePolicyTypeResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations EnablePolicyType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations EnablePolicyType \a response.
  */
 void EnablePolicyTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void EnablePolicyTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::EnablePolicyTypeResponsePrivate
+ * \brief The EnablePolicyTypeResponsePrivate class provides private implementation for EnablePolicyTypeResponse.
  * \internal
  *
- * \class EnablePolicyTypeResponsePrivate
- *
- * \brief Private implementation for EnablePolicyTypeResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnablePolicyTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnablePolicyTypeResponse instance.
+ * Constructs a EnablePolicyTypeResponsePrivate object with public implementation \a q.
  */
 EnablePolicyTypeResponsePrivate::EnablePolicyTypeResponsePrivate(
     EnablePolicyTypeResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ EnablePolicyTypeResponsePrivate::EnablePolicyTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations EnablePolicyTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations EnablePolicyType response element from \a xml.
  */
 void EnablePolicyTypeResponsePrivate::parseEnablePolicyTypeResponse(QXmlStreamReader &xml)
 {

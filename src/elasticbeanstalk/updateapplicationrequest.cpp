@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateApplicationRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a UpdateApplicationRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateApplicationRequest * const q)

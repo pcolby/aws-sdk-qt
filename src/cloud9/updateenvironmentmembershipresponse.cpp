@@ -29,10 +29,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::UpdateEnvironmentMembershipResponse
- *
  * \brief The UpdateEnvironmentMembershipResponse class provides an interace for Cloud9 UpdateEnvironmentMembership responses.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -93,11 +92,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new UpdateEnvironmentMembershipResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateEnvironmentMembershipResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateEnvironmentMembershipResponse::UpdateEnvironmentMembershipResponse(
         const UpdateEnvironmentMembershipRequest &request,
@@ -109,6 +104,9 @@ UpdateEnvironmentMembershipResponse::UpdateEnvironmentMembershipResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateEnvironmentMembershipRequest * UpdateEnvironmentMembershipResponse::request() const
 {
     Q_D(const UpdateEnvironmentMembershipResponse);
@@ -116,9 +114,8 @@ const UpdateEnvironmentMembershipRequest * UpdateEnvironmentMembershipResponse::
 }
 
 /*!
- * @brief  Parse a Cloud9 UpdateEnvironmentMembership response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Cloud9 UpdateEnvironmentMembership \a response.
  */
 void UpdateEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
 {
@@ -128,19 +125,15 @@ void UpdateEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Cloud9::UpdateEnvironmentMembershipResponsePrivate
+ * \brief The UpdateEnvironmentMembershipResponsePrivate class provides private implementation for UpdateEnvironmentMembershipResponse.
  * \internal
  *
- * \class UpdateEnvironmentMembershipResponsePrivate
- *
- * \brief Private implementation for UpdateEnvironmentMembershipResponse.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEnvironmentMembershipResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateEnvironmentMembershipResponse instance.
+ * Constructs a UpdateEnvironmentMembershipResponsePrivate object with public implementation \a q.
  */
 UpdateEnvironmentMembershipResponsePrivate::UpdateEnvironmentMembershipResponsePrivate(
     UpdateEnvironmentMembershipResponse * const q) : Cloud9ResponsePrivate(q)
@@ -149,9 +142,7 @@ UpdateEnvironmentMembershipResponsePrivate::UpdateEnvironmentMembershipResponseP
 }
 
 /*!
- * @brief  Parse an Cloud9 UpdateEnvironmentMembershipResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Cloud9 UpdateEnvironmentMembership response element from \a xml.
  */
 void UpdateEnvironmentMembershipResponsePrivate::parseUpdateEnvironmentMembershipResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetProfileResponse
- *
  * \brief The GetProfileResponse class provides an interace for AlexaForBusiness GetProfile responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 GetProfileResponse::GetProfileResponse(
         const GetProfileRequest &request,
@@ -60,6 +55,9 @@ GetProfileResponse::GetProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetProfileRequest * GetProfileResponse::request() const
 {
     Q_D(const GetProfileResponse);
@@ -67,9 +65,8 @@ const GetProfileRequest * GetProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness GetProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness GetProfile \a response.
  */
 void GetProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::GetProfileResponsePrivate
+ * \brief The GetProfileResponsePrivate class provides private implementation for GetProfileResponse.
  * \internal
  *
- * \class GetProfileResponsePrivate
- *
- * \brief Private implementation for GetProfileResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetProfileResponse instance.
+ * Constructs a GetProfileResponsePrivate object with public implementation \a q.
  */
 GetProfileResponsePrivate::GetProfileResponsePrivate(
     GetProfileResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ GetProfileResponsePrivate::GetProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness GetProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness GetProfile response element from \a xml.
  */
 void GetProfileResponsePrivate::parseGetProfileResponse(QXmlStreamReader &xml)
 {

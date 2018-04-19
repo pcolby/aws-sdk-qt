@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListChannelsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ListChannelsRequestPrivate object for MediaPackage \a action with,
- * public implementation \a q.
+ * Constructs a ListChannelsRequestPrivate object for MediaPackage \a action,
+ * with public implementation \a q.
  */
 ListChannelsRequestPrivate::ListChannelsRequestPrivate(
     const MediaPackageRequest::Action action, ListChannelsRequest * const q)

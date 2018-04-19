@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyEndpointResponse : public DatabaseMigrationServiceRespo
 public:
     ModifyEndpointResponse(const ModifyEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyEndpointRequest * request() const;
+    virtual const ModifyEndpointRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyEndpointResponse)

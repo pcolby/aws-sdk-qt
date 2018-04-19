@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableKeyResponse : public KMSResponse {
 public:
     EnableKeyResponse(const EnableKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableKeyRequest * request() const;
+    virtual const EnableKeyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EnableKeyResponse)

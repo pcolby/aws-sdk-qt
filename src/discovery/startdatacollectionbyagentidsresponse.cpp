@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::StartDataCollectionByAgentIdsResponse
- *
  * \brief The StartDataCollectionByAgentIdsResponse class provides an interace for ApplicationDiscoveryService StartDataCollectionByAgentIds responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new StartDataCollectionByAgentIdsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartDataCollectionByAgentIdsResponse object for \a reply to \a request, with parent \a parent.
  */
 StartDataCollectionByAgentIdsResponse::StartDataCollectionByAgentIdsResponse(
         const StartDataCollectionByAgentIdsRequest &request,
@@ -119,6 +114,9 @@ StartDataCollectionByAgentIdsResponse::StartDataCollectionByAgentIdsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartDataCollectionByAgentIdsRequest * StartDataCollectionByAgentIdsResponse::request() const
 {
     Q_D(const StartDataCollectionByAgentIdsResponse);
@@ -126,9 +124,8 @@ const StartDataCollectionByAgentIdsRequest * StartDataCollectionByAgentIdsRespon
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService StartDataCollectionByAgentIds response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService StartDataCollectionByAgentIds \a response.
  */
 void StartDataCollectionByAgentIdsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void StartDataCollectionByAgentIdsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::StartDataCollectionByAgentIdsResponsePrivate
+ * \brief The StartDataCollectionByAgentIdsResponsePrivate class provides private implementation for StartDataCollectionByAgentIdsResponse.
  * \internal
  *
- * \class StartDataCollectionByAgentIdsResponsePrivate
- *
- * \brief Private implementation for StartDataCollectionByAgentIdsResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartDataCollectionByAgentIdsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartDataCollectionByAgentIdsResponse instance.
+ * Constructs a StartDataCollectionByAgentIdsResponsePrivate object with public implementation \a q.
  */
 StartDataCollectionByAgentIdsResponsePrivate::StartDataCollectionByAgentIdsResponsePrivate(
     StartDataCollectionByAgentIdsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ StartDataCollectionByAgentIdsResponsePrivate::StartDataCollectionByAgentIdsRespo
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService StartDataCollectionByAgentIdsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService StartDataCollectionByAgentIds response element from \a xml.
  */
 void StartDataCollectionByAgentIdsResponsePrivate::parseStartDataCollectionByAgentIdsResponse(QXmlStreamReader &xml)
 {

@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * CreateBrokerRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateBrokerRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a CreateBrokerRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
     const MQRequest::Action action, CreateBrokerRequest * const q)

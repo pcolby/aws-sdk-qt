@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * AssociateNodeRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a AssociateNodeRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a AssociateNodeRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 AssociateNodeRequestPrivate::AssociateNodeRequestPrivate(
     const OpsWorksCMRequest::Action action, AssociateNodeRequest * const q)

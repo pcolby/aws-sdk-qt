@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeWorkspaceDirectoriesResponse : public WorkSpacesRespo
 public:
     DescribeWorkspaceDirectoriesResponse(const DescribeWorkspaceDirectoriesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeWorkspaceDirectoriesRequest * request() const;
+    virtual const DescribeWorkspaceDirectoriesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeWorkspaceDirectoriesResponse)

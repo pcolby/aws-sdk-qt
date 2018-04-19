@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListReusableDelegationSetsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a ListReusableDelegationSetsRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a ListReusableDelegationSetsRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 ListReusableDelegationSetsRequestPrivate::ListReusableDelegationSetsRequestPrivate(
     const Route53Request::Action action, ListReusableDelegationSetsRequest * const q)

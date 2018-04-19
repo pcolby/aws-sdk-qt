@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribePermissionsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribePermissionsRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribePermissionsRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribePermissionsRequestPrivate::DescribePermissionsRequestPrivate(
     const OpsWorksRequest::Action action, DescribePermissionsRequest * const q)

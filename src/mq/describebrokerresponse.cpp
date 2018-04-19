@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::DescribeBrokerResponse
- *
  * \brief The DescribeBrokerResponse class provides an interace for MQ DescribeBroker responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new DescribeBrokerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeBrokerResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeBrokerResponse::DescribeBrokerResponse(
         const DescribeBrokerRequest &request,
@@ -57,6 +52,9 @@ DescribeBrokerResponse::DescribeBrokerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeBrokerRequest * DescribeBrokerResponse::request() const
 {
     Q_D(const DescribeBrokerResponse);
@@ -64,9 +62,8 @@ const DescribeBrokerRequest * DescribeBrokerResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ DescribeBroker response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ DescribeBroker \a response.
  */
 void DescribeBrokerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DescribeBrokerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::DescribeBrokerResponsePrivate
+ * \brief The DescribeBrokerResponsePrivate class provides private implementation for DescribeBrokerResponse.
  * \internal
  *
- * \class DescribeBrokerResponsePrivate
- *
- * \brief Private implementation for DescribeBrokerResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBrokerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeBrokerResponse instance.
+ * Constructs a DescribeBrokerResponsePrivate object with public implementation \a q.
  */
 DescribeBrokerResponsePrivate::DescribeBrokerResponsePrivate(
     DescribeBrokerResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ DescribeBrokerResponsePrivate::DescribeBrokerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ DescribeBrokerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ DescribeBroker response element from \a xml.
  */
 void DescribeBrokerResponsePrivate::parseDescribeBrokerResponse(QXmlStreamReader &xml)
 {

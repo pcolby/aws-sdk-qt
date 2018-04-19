@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetUserPoolMfaConfigResponse : public CognitoIdentityProvider
 public:
     GetUserPoolMfaConfigResponse(const GetUserPoolMfaConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetUserPoolMfaConfigRequest * request() const;
+    virtual const GetUserPoolMfaConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetUserPoolMfaConfigResponse)

@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetStaticIpResponse
- *
  * \brief The GetStaticIpResponse class provides an interace for Lightsail GetStaticIp responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetStaticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetStaticIpResponse object for \a reply to \a request, with parent \a parent.
  */
 GetStaticIpResponse::GetStaticIpResponse(
         const GetStaticIpRequest &request,
@@ -71,6 +66,9 @@ GetStaticIpResponse::GetStaticIpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetStaticIpRequest * GetStaticIpResponse::request() const
 {
     Q_D(const GetStaticIpResponse);
@@ -78,9 +76,8 @@ const GetStaticIpRequest * GetStaticIpResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetStaticIp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetStaticIp \a response.
  */
 void GetStaticIpResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetStaticIpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetStaticIpResponsePrivate
+ * \brief The GetStaticIpResponsePrivate class provides private implementation for GetStaticIpResponse.
  * \internal
  *
- * \class GetStaticIpResponsePrivate
- *
- * \brief Private implementation for GetStaticIpResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetStaticIpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetStaticIpResponse instance.
+ * Constructs a GetStaticIpResponsePrivate object with public implementation \a q.
  */
 GetStaticIpResponsePrivate::GetStaticIpResponsePrivate(
     GetStaticIpResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetStaticIpResponsePrivate::GetStaticIpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetStaticIpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetStaticIp response element from \a xml.
  */
 void GetStaticIpResponsePrivate::parseGetStaticIpResponse(QXmlStreamReader &xml)
 {

@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DeleteGameSessionQueueRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteGameSessionQueueRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteGameSessionQueueRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DeleteGameSessionQueueRequestPrivate::DeleteGameSessionQueueRequestPrivate(
     const GameLiftRequest::Action action, DeleteGameSessionQueueRequest * const q)

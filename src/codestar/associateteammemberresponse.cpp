@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::AssociateTeamMemberResponse
- *
  * \brief The AssociateTeamMemberResponse class provides an interace for CodeStar AssociateTeamMember responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new AssociateTeamMemberResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateTeamMemberResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateTeamMemberResponse::AssociateTeamMemberResponse(
         const AssociateTeamMemberRequest &request,
@@ -143,6 +138,9 @@ AssociateTeamMemberResponse::AssociateTeamMemberResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateTeamMemberRequest * AssociateTeamMemberResponse::request() const
 {
     Q_D(const AssociateTeamMemberResponse);
@@ -150,9 +148,8 @@ const AssociateTeamMemberRequest * AssociateTeamMemberResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar AssociateTeamMember response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar AssociateTeamMember \a response.
  */
 void AssociateTeamMemberResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void AssociateTeamMemberResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::AssociateTeamMemberResponsePrivate
+ * \brief The AssociateTeamMemberResponsePrivate class provides private implementation for AssociateTeamMemberResponse.
  * \internal
  *
- * \class AssociateTeamMemberResponsePrivate
- *
- * \brief Private implementation for AssociateTeamMemberResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateTeamMemberResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateTeamMemberResponse instance.
+ * Constructs a AssociateTeamMemberResponsePrivate object with public implementation \a q.
  */
 AssociateTeamMemberResponsePrivate::AssociateTeamMemberResponsePrivate(
     AssociateTeamMemberResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ AssociateTeamMemberResponsePrivate::AssociateTeamMemberResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar AssociateTeamMemberResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar AssociateTeamMember response element from \a xml.
  */
 void AssociateTeamMemberResponsePrivate::parseAssociateTeamMemberResponse(QXmlStreamReader &xml)
 {

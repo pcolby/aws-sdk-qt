@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListBundlesRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListBundlesRequestPrivate object for Mobile \a action with,
- * public implementation \a q.
+ * Constructs a ListBundlesRequestPrivate object for Mobile \a action,
+ * with public implementation \a q.
  */
 ListBundlesRequestPrivate::ListBundlesRequestPrivate(
     const MobileRequest::Action action, ListBundlesRequest * const q)

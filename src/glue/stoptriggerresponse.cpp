@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StopTriggerResponse
- *
  * \brief The StopTriggerResponse class provides an interace for Glue StopTrigger responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StopTriggerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopTriggerResponse object for \a reply to \a request, with parent \a parent.
  */
 StopTriggerResponse::StopTriggerResponse(
         const StopTriggerRequest &request,
@@ -58,6 +53,9 @@ StopTriggerResponse::StopTriggerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopTriggerRequest * StopTriggerResponse::request() const
 {
     Q_D(const StopTriggerResponse);
@@ -65,9 +63,8 @@ const StopTriggerRequest * StopTriggerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue StopTrigger response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue StopTrigger \a response.
  */
 void StopTriggerResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StopTriggerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::StopTriggerResponsePrivate
+ * \brief The StopTriggerResponsePrivate class provides private implementation for StopTriggerResponse.
  * \internal
  *
- * \class StopTriggerResponsePrivate
- *
- * \brief Private implementation for StopTriggerResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopTriggerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopTriggerResponse instance.
+ * Constructs a StopTriggerResponsePrivate object with public implementation \a q.
  */
 StopTriggerResponsePrivate::StopTriggerResponsePrivate(
     StopTriggerResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ StopTriggerResponsePrivate::StopTriggerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue StopTriggerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue StopTrigger response element from \a xml.
  */
 void StopTriggerResponsePrivate::parseStopTriggerResponse(QXmlStreamReader &xml)
 {

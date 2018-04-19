@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::StartInstancesResponse
- *
  * \brief The StartInstancesResponse class provides an interace for EC2 StartInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new StartInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 StartInstancesResponse::StartInstancesResponse(
         const StartInstancesRequest &request,
@@ -59,6 +54,9 @@ StartInstancesResponse::StartInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartInstancesRequest * StartInstancesResponse::request() const
 {
     Q_D(const StartInstancesResponse);
@@ -66,9 +64,8 @@ const StartInstancesRequest * StartInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 StartInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 StartInstances \a response.
  */
 void StartInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void StartInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::StartInstancesResponsePrivate
+ * \brief The StartInstancesResponsePrivate class provides private implementation for StartInstancesResponse.
  * \internal
  *
- * \class StartInstancesResponsePrivate
- *
- * \brief Private implementation for StartInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartInstancesResponse instance.
+ * Constructs a StartInstancesResponsePrivate object with public implementation \a q.
  */
 StartInstancesResponsePrivate::StartInstancesResponsePrivate(
     StartInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ StartInstancesResponsePrivate::StartInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 StartInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 StartInstances response element from \a xml.
  */
 void StartInstancesResponsePrivate::parseStartInstancesResponse(QXmlStreamReader &xml)
 {

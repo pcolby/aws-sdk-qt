@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListLunaClientsResponse : public CloudHSMResponse {
 public:
     ListLunaClientsResponse(const ListLunaClientsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListLunaClientsRequest * request() const;
+    virtual const ListLunaClientsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListLunaClientsResponse)

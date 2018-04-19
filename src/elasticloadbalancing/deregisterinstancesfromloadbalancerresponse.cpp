@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DeregisterInstancesFromLoadBalancerResponse
- *
  * \brief The DeregisterInstancesFromLoadBalancerResponse class provides an interace for ElasticLoadBalancing DeregisterInstancesFromLoadBalancer responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DeregisterInstancesFromLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterInstancesFromLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterInstancesFromLoadBalancerResponse::DeregisterInstancesFromLoadBalancerResponse(
         const DeregisterInstancesFromLoadBalancerRequest &request,
@@ -83,6 +78,9 @@ DeregisterInstancesFromLoadBalancerResponse::DeregisterInstancesFromLoadBalancer
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterInstancesFromLoadBalancerRequest * DeregisterInstancesFromLoadBalancerResponse::request() const
 {
     Q_D(const DeregisterInstancesFromLoadBalancerResponse);
@@ -90,9 +88,8 @@ const DeregisterInstancesFromLoadBalancerRequest * DeregisterInstancesFromLoadBa
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing DeregisterInstancesFromLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing DeregisterInstancesFromLoadBalancer \a response.
  */
 void DeregisterInstancesFromLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void DeregisterInstancesFromLoadBalancerResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::DeregisterInstancesFromLoadBalancerResponsePrivate
+ * \brief The DeregisterInstancesFromLoadBalancerResponsePrivate class provides private implementation for DeregisterInstancesFromLoadBalancerResponse.
  * \internal
  *
- * \class DeregisterInstancesFromLoadBalancerResponsePrivate
- *
- * \brief Private implementation for DeregisterInstancesFromLoadBalancerResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterInstancesFromLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterInstancesFromLoadBalancerResponse instance.
+ * Constructs a DeregisterInstancesFromLoadBalancerResponsePrivate object with public implementation \a q.
  */
 DeregisterInstancesFromLoadBalancerResponsePrivate::DeregisterInstancesFromLoadBalancerResponsePrivate(
     DeregisterInstancesFromLoadBalancerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ DeregisterInstancesFromLoadBalancerResponsePrivate::DeregisterInstancesFromLoadB
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing DeregisterInstancesFromLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing DeregisterInstancesFromLoadBalancer response element from \a xml.
  */
 void DeregisterInstancesFromLoadBalancerResponsePrivate::parseDeregisterInstancesFromLoadBalancerResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetSAMLProviderResponse
- *
  * \brief The GetSAMLProviderResponse class provides an interace for IAM GetSAMLProvider responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetSAMLProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSAMLProviderResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSAMLProviderResponse::GetSAMLProviderResponse(
         const GetSAMLProviderRequest &request,
@@ -120,6 +115,9 @@ GetSAMLProviderResponse::GetSAMLProviderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSAMLProviderRequest * GetSAMLProviderResponse::request() const
 {
     Q_D(const GetSAMLProviderResponse);
@@ -127,9 +125,8 @@ const GetSAMLProviderRequest * GetSAMLProviderResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetSAMLProvider response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetSAMLProvider \a response.
  */
 void GetSAMLProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetSAMLProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetSAMLProviderResponsePrivate
+ * \brief The GetSAMLProviderResponsePrivate class provides private implementation for GetSAMLProviderResponse.
  * \internal
  *
- * \class GetSAMLProviderResponsePrivate
- *
- * \brief Private implementation for GetSAMLProviderResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSAMLProviderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSAMLProviderResponse instance.
+ * Constructs a GetSAMLProviderResponsePrivate object with public implementation \a q.
  */
 GetSAMLProviderResponsePrivate::GetSAMLProviderResponsePrivate(
     GetSAMLProviderResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetSAMLProviderResponsePrivate::GetSAMLProviderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetSAMLProviderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetSAMLProvider response element from \a xml.
  */
 void GetSAMLProviderResponsePrivate::parseGetSAMLProviderResponse(QXmlStreamReader &xml)
 {

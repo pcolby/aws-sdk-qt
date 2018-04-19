@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * CreateOrganizationRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateOrganizationRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a CreateOrganizationRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 CreateOrganizationRequestPrivate::CreateOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, CreateOrganizationRequest * const q)

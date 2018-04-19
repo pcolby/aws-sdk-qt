@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::DescribeExecutionResponse
- *
  * \brief The DescribeExecutionResponse class provides an interace for SFN DescribeExecution responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new DescribeExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeExecutionResponse::DescribeExecutionResponse(
         const DescribeExecutionRequest &request,
@@ -74,6 +69,9 @@ DescribeExecutionResponse::DescribeExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeExecutionRequest * DescribeExecutionResponse::request() const
 {
     Q_D(const DescribeExecutionResponse);
@@ -81,9 +79,8 @@ const DescribeExecutionRequest * DescribeExecutionResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN DescribeExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN DescribeExecution \a response.
  */
 void DescribeExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DescribeExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::DescribeExecutionResponsePrivate
+ * \brief The DescribeExecutionResponsePrivate class provides private implementation for DescribeExecutionResponse.
  * \internal
  *
- * \class DescribeExecutionResponsePrivate
- *
- * \brief Private implementation for DescribeExecutionResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeExecutionResponse instance.
+ * Constructs a DescribeExecutionResponsePrivate object with public implementation \a q.
  */
 DescribeExecutionResponsePrivate::DescribeExecutionResponsePrivate(
     DescribeExecutionResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ DescribeExecutionResponsePrivate::DescribeExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN DescribeExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN DescribeExecution response element from \a xml.
  */
 void DescribeExecutionResponsePrivate::parseDescribeExecutionResponse(QXmlStreamReader &xml)
 {

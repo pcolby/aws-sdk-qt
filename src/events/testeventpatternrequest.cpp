@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * TestEventPatternRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a TestEventPatternRequestPrivate object for CloudWatchEvents \a action with,
- * public implementation \a q.
+ * Constructs a TestEventPatternRequestPrivate object for CloudWatchEvents \a action,
+ * with public implementation \a q.
  */
 TestEventPatternRequestPrivate::TestEventPatternRequestPrivate(
     const CloudWatchEventsRequest::Action action, TestEventPatternRequest * const q)

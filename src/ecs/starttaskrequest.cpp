@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * StartTaskRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a StartTaskRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a StartTaskRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 StartTaskRequestPrivate::StartTaskRequestPrivate(
     const ECSRequest::Action action, StartTaskRequest * const q)

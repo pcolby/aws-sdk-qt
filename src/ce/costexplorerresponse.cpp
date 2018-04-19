@@ -28,16 +28,13 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::CostExplorerResponse
- *
  * \brief The CostExplorerResponse class provides an interface for CostExplorer responses.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @brief  Constructs a new CostExplorerResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CostExplorerResponse object with parent \a parent.
  */
 CostExplorerResponse::CostExplorerResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CostExplorerResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CostExplorerResponse::CostExplorerResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CostExplorerResponse object.
- *
+ * \internal
+ * Constructs a CostExplorerResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CostExplorerResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CostExplorerResponse::CostExplorerResponse(CostExplorerResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CostExplorerResponse::CostExplorerResponse(CostExplorerResponsePrivate * const d
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CostExplorerResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CostExplorerResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CostExplorer::CostExplorerResponsePrivate
+ * \brief The CostExplorerResponsePrivate class provides private implementation for CostExplorerResponse.
+ * \internal
  *
- * @class  CostExplorerResponsePrivate
- *
- * @brief  Private implementation for CostExplorerResponse.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CostExplorerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CostExplorerResponse instance.
+ * Constructs a CostExplorerResponsePrivate object with public implementation \a q.
  */
 CostExplorerResponsePrivate::CostExplorerResponsePrivate(
     CostExplorerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

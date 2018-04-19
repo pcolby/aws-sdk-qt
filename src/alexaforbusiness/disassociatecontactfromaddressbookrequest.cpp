@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateContactFromAddressBookRequest::re
  */
 
 /*!
- *
- * Constructs a DisassociateContactFromAddressBookRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateContactFromAddressBookRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 DisassociateContactFromAddressBookRequestPrivate::DisassociateContactFromAddressBookRequestPrivate(
     const AlexaForBusinessRequest::Action action, DisassociateContactFromAddressBookRequest * const q)

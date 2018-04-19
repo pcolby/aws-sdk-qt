@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateDomainNameResponse
- *
  * \brief The UpdateDomainNameResponse class provides an interace for APIGateway UpdateDomainName responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateDomainNameResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDomainNameResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDomainNameResponse::UpdateDomainNameResponse(
         const UpdateDomainNameRequest &request,
@@ -60,6 +55,9 @@ UpdateDomainNameResponse::UpdateDomainNameResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDomainNameRequest * UpdateDomainNameResponse::request() const
 {
     Q_D(const UpdateDomainNameResponse);
@@ -67,9 +65,8 @@ const UpdateDomainNameRequest * UpdateDomainNameResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateDomainName response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateDomainName \a response.
  */
 void UpdateDomainNameResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateDomainNameResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateDomainNameResponsePrivate
+ * \brief The UpdateDomainNameResponsePrivate class provides private implementation for UpdateDomainNameResponse.
  * \internal
  *
- * \class UpdateDomainNameResponsePrivate
- *
- * \brief Private implementation for UpdateDomainNameResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDomainNameResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDomainNameResponse instance.
+ * Constructs a UpdateDomainNameResponsePrivate object with public implementation \a q.
  */
 UpdateDomainNameResponsePrivate::UpdateDomainNameResponsePrivate(
     UpdateDomainNameResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateDomainNameResponsePrivate::UpdateDomainNameResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateDomainNameResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateDomainName response element from \a xml.
  */
 void UpdateDomainNameResponsePrivate::parseUpdateDomainNameResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetReplicationRunsResponse : public SMSResponse {
 public:
     GetReplicationRunsResponse(const GetReplicationRunsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetReplicationRunsRequest * request() const;
+    virtual const GetReplicationRunsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetReplicationRunsResponse)

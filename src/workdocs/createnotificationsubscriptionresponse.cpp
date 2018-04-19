@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::CreateNotificationSubscriptionResponse
- *
  * \brief The CreateNotificationSubscriptionResponse class provides an interace for WorkDocs CreateNotificationSubscription responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new CreateNotificationSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateNotificationSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateNotificationSubscriptionResponse::CreateNotificationSubscriptionResponse(
         const CreateNotificationSubscriptionRequest &request,
@@ -84,6 +79,9 @@ CreateNotificationSubscriptionResponse::CreateNotificationSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateNotificationSubscriptionRequest * CreateNotificationSubscriptionResponse::request() const
 {
     Q_D(const CreateNotificationSubscriptionResponse);
@@ -91,9 +89,8 @@ const CreateNotificationSubscriptionRequest * CreateNotificationSubscriptionResp
 }
 
 /*!
- * @brief  Parse a WorkDocs CreateNotificationSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs CreateNotificationSubscription \a response.
  */
 void CreateNotificationSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void CreateNotificationSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::CreateNotificationSubscriptionResponsePrivate
+ * \brief The CreateNotificationSubscriptionResponsePrivate class provides private implementation for CreateNotificationSubscriptionResponse.
  * \internal
  *
- * \class CreateNotificationSubscriptionResponsePrivate
- *
- * \brief Private implementation for CreateNotificationSubscriptionResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNotificationSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateNotificationSubscriptionResponse instance.
+ * Constructs a CreateNotificationSubscriptionResponsePrivate object with public implementation \a q.
  */
 CreateNotificationSubscriptionResponsePrivate::CreateNotificationSubscriptionResponsePrivate(
     CreateNotificationSubscriptionResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ CreateNotificationSubscriptionResponsePrivate::CreateNotificationSubscriptionRes
 }
 
 /*!
- * @brief  Parse an WorkDocs CreateNotificationSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs CreateNotificationSubscription response element from \a xml.
  */
 void CreateNotificationSubscriptionResponsePrivate::parseCreateNotificationSubscriptionResponse(QXmlStreamReader &xml)
 {

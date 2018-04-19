@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::CreateStreamResponse
- *
  * \brief The CreateStreamResponse class provides an interace for Kinesis CreateStream responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new CreateStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStreamResponse::CreateStreamResponse(
         const CreateStreamRequest &request,
@@ -58,6 +53,9 @@ CreateStreamResponse::CreateStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStreamRequest * CreateStreamResponse::request() const
 {
     Q_D(const CreateStreamResponse);
@@ -65,9 +63,8 @@ const CreateStreamRequest * CreateStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis CreateStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis CreateStream \a response.
  */
 void CreateStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::CreateStreamResponsePrivate
+ * \brief The CreateStreamResponsePrivate class provides private implementation for CreateStreamResponse.
  * \internal
  *
- * \class CreateStreamResponsePrivate
- *
- * \brief Private implementation for CreateStreamResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStreamResponse instance.
+ * Constructs a CreateStreamResponsePrivate object with public implementation \a q.
  */
 CreateStreamResponsePrivate::CreateStreamResponsePrivate(
     CreateStreamResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateStreamResponsePrivate::CreateStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis CreateStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis CreateStream response element from \a xml.
  */
 void CreateStreamResponsePrivate::parseCreateStreamResponse(QXmlStreamReader &xml)
 {

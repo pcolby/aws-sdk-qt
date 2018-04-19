@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * BatchPutAttributesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a BatchPutAttributesRequestPrivate object for SimpleDB \a action with,
- * public implementation \a q.
+ * Constructs a BatchPutAttributesRequestPrivate object for SimpleDB \a action,
+ * with public implementation \a q.
  */
 BatchPutAttributesRequestPrivate::BatchPutAttributesRequestPrivate(
     const SimpleDBRequest::Action action, BatchPutAttributesRequest * const q)

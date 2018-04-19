@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ListPresetsResponse
- *
  * \brief The ListPresetsResponse class provides an interace for ElasticTranscoder ListPresets responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new ListPresetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPresetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPresetsResponse::ListPresetsResponse(
         const ListPresetsRequest &request,
@@ -58,6 +53,9 @@ ListPresetsResponse::ListPresetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPresetsRequest * ListPresetsResponse::request() const
 {
     Q_D(const ListPresetsResponse);
@@ -65,9 +63,8 @@ const ListPresetsRequest * ListPresetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder ListPresets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder ListPresets \a response.
  */
 void ListPresetsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListPresetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::ListPresetsResponsePrivate
+ * \brief The ListPresetsResponsePrivate class provides private implementation for ListPresetsResponse.
  * \internal
  *
- * \class ListPresetsResponsePrivate
- *
- * \brief Private implementation for ListPresetsResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPresetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPresetsResponse instance.
+ * Constructs a ListPresetsResponsePrivate object with public implementation \a q.
  */
 ListPresetsResponsePrivate::ListPresetsResponsePrivate(
     ListPresetsResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ ListPresetsResponsePrivate::ListPresetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder ListPresetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder ListPresets response element from \a xml.
  */
 void ListPresetsResponsePrivate::parseListPresetsResponse(QXmlStreamReader &xml)
 {

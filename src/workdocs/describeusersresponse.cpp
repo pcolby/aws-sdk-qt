@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeUsersResponse
- *
  * \brief The DescribeUsersResponse class provides an interace for WorkDocs DescribeUsers responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeUsersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeUsersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeUsersResponse::DescribeUsersResponse(
         const DescribeUsersRequest &request,
@@ -84,6 +79,9 @@ DescribeUsersResponse::DescribeUsersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeUsersRequest * DescribeUsersResponse::request() const
 {
     Q_D(const DescribeUsersResponse);
@@ -91,9 +89,8 @@ const DescribeUsersRequest * DescribeUsersResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs DescribeUsers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DescribeUsers \a response.
  */
 void DescribeUsersResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeUsersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DescribeUsersResponsePrivate
+ * \brief The DescribeUsersResponsePrivate class provides private implementation for DescribeUsersResponse.
  * \internal
  *
- * \class DescribeUsersResponsePrivate
- *
- * \brief Private implementation for DescribeUsersResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUsersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeUsersResponse instance.
+ * Constructs a DescribeUsersResponsePrivate object with public implementation \a q.
  */
 DescribeUsersResponsePrivate::DescribeUsersResponsePrivate(
     DescribeUsersResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeUsersResponsePrivate::DescribeUsersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DescribeUsersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DescribeUsers response element from \a xml.
  */
 void DescribeUsersResponsePrivate::parseDescribeUsersResponse(QXmlStreamReader &xml)
 {

@@ -154,9 +154,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterScalableTargetRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeregisterScalableTargetRequestPrivate object for ApplicationAutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterScalableTargetRequestPrivate object for ApplicationAutoScaling \a action,
+ * with public implementation \a q.
  */
 DeregisterScalableTargetRequestPrivate::DeregisterScalableTargetRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DeregisterScalableTargetRequest * const q)

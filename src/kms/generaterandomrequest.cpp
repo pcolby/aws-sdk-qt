@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * GenerateRandomRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GenerateRandomRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a GenerateRandomRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 GenerateRandomRequestPrivate::GenerateRandomRequestPrivate(
     const KMSRequest::Action action, GenerateRandomRequest * const q)

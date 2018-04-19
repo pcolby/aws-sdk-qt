@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * StopRemoteAccessSessionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a StopRemoteAccessSessionRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a StopRemoteAccessSessionRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 StopRemoteAccessSessionRequestPrivate::StopRemoteAccessSessionRequestPrivate(
     const DeviceFarmRequest::Action action, StopRemoteAccessSessionRequest * const q)

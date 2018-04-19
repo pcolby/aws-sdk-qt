@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteOptionGroupResponse
- *
  * \brief The DeleteOptionGroupResponse class provides an interace for RDS DeleteOptionGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteOptionGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteOptionGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteOptionGroupResponse::DeleteOptionGroupResponse(
         const DeleteOptionGroupRequest &request,
@@ -119,6 +114,9 @@ DeleteOptionGroupResponse::DeleteOptionGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteOptionGroupRequest * DeleteOptionGroupResponse::request() const
 {
     Q_D(const DeleteOptionGroupResponse);
@@ -126,9 +124,8 @@ const DeleteOptionGroupRequest * DeleteOptionGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS DeleteOptionGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DeleteOptionGroup \a response.
  */
 void DeleteOptionGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DeleteOptionGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DeleteOptionGroupResponsePrivate
+ * \brief The DeleteOptionGroupResponsePrivate class provides private implementation for DeleteOptionGroupResponse.
  * \internal
  *
- * \class DeleteOptionGroupResponsePrivate
- *
- * \brief Private implementation for DeleteOptionGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteOptionGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteOptionGroupResponse instance.
+ * Constructs a DeleteOptionGroupResponsePrivate object with public implementation \a q.
  */
 DeleteOptionGroupResponsePrivate::DeleteOptionGroupResponsePrivate(
     DeleteOptionGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DeleteOptionGroupResponsePrivate::DeleteOptionGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DeleteOptionGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DeleteOptionGroup response element from \a xml.
  */
 void DeleteOptionGroupResponsePrivate::parseDeleteOptionGroupResponse(QXmlStreamReader &xml)
 {

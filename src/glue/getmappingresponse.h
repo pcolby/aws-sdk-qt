@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetMappingResponse : public GlueResponse {
 public:
     GetMappingResponse(const GetMappingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetMappingRequest * request() const;
+    virtual const GetMappingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetMappingResponse)

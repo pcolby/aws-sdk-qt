@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::CreateUserResponse
- *
  * \brief The CreateUserResponse class provides an interace for WorkMail CreateUser responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new CreateUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateUserResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateUserResponse::CreateUserResponse(
         const CreateUserRequest &request,
@@ -88,6 +83,9 @@ CreateUserResponse::CreateUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateUserRequest * CreateUserResponse::request() const
 {
     Q_D(const CreateUserResponse);
@@ -95,9 +93,8 @@ const CreateUserRequest * CreateUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail CreateUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail CreateUser \a response.
  */
 void CreateUserResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void CreateUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::CreateUserResponsePrivate
+ * \brief The CreateUserResponsePrivate class provides private implementation for CreateUserResponse.
  * \internal
  *
- * \class CreateUserResponsePrivate
- *
- * \brief Private implementation for CreateUserResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateUserResponse instance.
+ * Constructs a CreateUserResponsePrivate object with public implementation \a q.
  */
 CreateUserResponsePrivate::CreateUserResponsePrivate(
     CreateUserResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ CreateUserResponsePrivate::CreateUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail CreateUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail CreateUser response element from \a xml.
  */
 void CreateUserResponsePrivate::parseCreateUserResponse(QXmlStreamReader &xml)
 {

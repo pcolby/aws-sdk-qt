@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RestoreDBClusterToPointInTimeResponse
- *
  * \brief The RestoreDBClusterToPointInTimeResponse class provides an interace for RDS RestoreDBClusterToPointInTime responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RestoreDBClusterToPointInTimeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreDBClusterToPointInTimeResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreDBClusterToPointInTimeResponse::RestoreDBClusterToPointInTimeResponse(
         const RestoreDBClusterToPointInTimeRequest &request,
@@ -119,6 +114,9 @@ RestoreDBClusterToPointInTimeResponse::RestoreDBClusterToPointInTimeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreDBClusterToPointInTimeRequest * RestoreDBClusterToPointInTimeResponse::request() const
 {
     Q_D(const RestoreDBClusterToPointInTimeResponse);
@@ -126,9 +124,8 @@ const RestoreDBClusterToPointInTimeRequest * RestoreDBClusterToPointInTimeRespon
 }
 
 /*!
- * @brief  Parse a RDS RestoreDBClusterToPointInTime response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS RestoreDBClusterToPointInTime \a response.
  */
 void RestoreDBClusterToPointInTimeResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void RestoreDBClusterToPointInTimeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::RestoreDBClusterToPointInTimeResponsePrivate
+ * \brief The RestoreDBClusterToPointInTimeResponsePrivate class provides private implementation for RestoreDBClusterToPointInTimeResponse.
  * \internal
  *
- * \class RestoreDBClusterToPointInTimeResponsePrivate
- *
- * \brief Private implementation for RestoreDBClusterToPointInTimeResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreDBClusterToPointInTimeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreDBClusterToPointInTimeResponse instance.
+ * Constructs a RestoreDBClusterToPointInTimeResponsePrivate object with public implementation \a q.
  */
 RestoreDBClusterToPointInTimeResponsePrivate::RestoreDBClusterToPointInTimeResponsePrivate(
     RestoreDBClusterToPointInTimeResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ RestoreDBClusterToPointInTimeResponsePrivate::RestoreDBClusterToPointInTimeRespo
 }
 
 /*!
- * @brief  Parse an RDS RestoreDBClusterToPointInTimeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS RestoreDBClusterToPointInTime response element from \a xml.
  */
 void RestoreDBClusterToPointInTimeResponsePrivate::parseRestoreDBClusterToPointInTimeResponse(QXmlStreamReader &xml)
 {

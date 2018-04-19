@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * LookupPolicyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a LookupPolicyRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a LookupPolicyRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 LookupPolicyRequestPrivate::LookupPolicyRequestPrivate(
     const CloudDirectoryRequest::Action action, LookupPolicyRequest * const q)

@@ -29,10 +29,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::CreateProjectResponse
- *
  * \brief The CreateProjectResponse class provides an interace for Mobile CreateProject responses.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -42,11 +41,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new CreateProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateProjectResponse::CreateProjectResponse(
         const CreateProjectRequest &request,
@@ -58,6 +53,9 @@ CreateProjectResponse::CreateProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateProjectRequest * CreateProjectResponse::request() const
 {
     Q_D(const CreateProjectResponse);
@@ -65,9 +63,8 @@ const CreateProjectRequest * CreateProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a Mobile CreateProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Mobile CreateProject \a response.
  */
 void CreateProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Mobile::CreateProjectResponsePrivate
+ * \brief The CreateProjectResponsePrivate class provides private implementation for CreateProjectResponse.
  * \internal
  *
- * \class CreateProjectResponsePrivate
- *
- * \brief Private implementation for CreateProjectResponse.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateProjectResponse instance.
+ * Constructs a CreateProjectResponsePrivate object with public implementation \a q.
  */
 CreateProjectResponsePrivate::CreateProjectResponsePrivate(
     CreateProjectResponse * const q) : MobileResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateProjectResponsePrivate::CreateProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Mobile CreateProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Mobile CreateProject response element from \a xml.
  */
 void CreateProjectResponsePrivate::parseCreateProjectResponse(QXmlStreamReader &xml)
 {

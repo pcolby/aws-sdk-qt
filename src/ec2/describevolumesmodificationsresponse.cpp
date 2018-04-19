@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVolumesModificationsResponse
- *
  * \brief The DescribeVolumesModificationsResponse class provides an interace for EC2 DescribeVolumesModifications responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVolumesModificationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVolumesModificationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVolumesModificationsResponse::DescribeVolumesModificationsResponse(
         const DescribeVolumesModificationsRequest &request,
@@ -59,6 +54,9 @@ DescribeVolumesModificationsResponse::DescribeVolumesModificationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVolumesModificationsRequest * DescribeVolumesModificationsResponse::request() const
 {
     Q_D(const DescribeVolumesModificationsResponse);
@@ -66,9 +64,8 @@ const DescribeVolumesModificationsRequest * DescribeVolumesModificationsResponse
 }
 
 /*!
- * @brief  Parse a EC2 DescribeVolumesModifications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeVolumesModifications \a response.
  */
 void DescribeVolumesModificationsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeVolumesModificationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeVolumesModificationsResponsePrivate
+ * \brief The DescribeVolumesModificationsResponsePrivate class provides private implementation for DescribeVolumesModificationsResponse.
  * \internal
  *
- * \class DescribeVolumesModificationsResponsePrivate
- *
- * \brief Private implementation for DescribeVolumesModificationsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVolumesModificationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVolumesModificationsResponse instance.
+ * Constructs a DescribeVolumesModificationsResponsePrivate object with public implementation \a q.
  */
 DescribeVolumesModificationsResponsePrivate::DescribeVolumesModificationsResponsePrivate(
     DescribeVolumesModificationsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeVolumesModificationsResponsePrivate::DescribeVolumesModificationsRespons
 }
 
 /*!
- * @brief  Parse an EC2 DescribeVolumesModificationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeVolumesModifications response element from \a xml.
  */
 void DescribeVolumesModificationsResponsePrivate::parseDescribeVolumesModificationsResponse(QXmlStreamReader &xml)
 {

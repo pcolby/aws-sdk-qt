@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CreateApplicationRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a CreateApplicationRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 CreateApplicationRequestPrivate::CreateApplicationRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, CreateApplicationRequest * const q)

@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListOfferingsResponse
- *
  * \brief The ListOfferingsResponse class provides an interace for DeviceFarm ListOfferings responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListOfferingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListOfferingsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListOfferingsResponse::ListOfferingsResponse(
         const ListOfferingsRequest &request,
@@ -57,6 +52,9 @@ ListOfferingsResponse::ListOfferingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListOfferingsRequest * ListOfferingsResponse::request() const
 {
     Q_D(const ListOfferingsResponse);
@@ -64,9 +62,8 @@ const ListOfferingsRequest * ListOfferingsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm ListOfferings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm ListOfferings \a response.
  */
 void ListOfferingsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListOfferingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::ListOfferingsResponsePrivate
+ * \brief The ListOfferingsResponsePrivate class provides private implementation for ListOfferingsResponse.
  * \internal
  *
- * \class ListOfferingsResponsePrivate
- *
- * \brief Private implementation for ListOfferingsResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOfferingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListOfferingsResponse instance.
+ * Constructs a ListOfferingsResponsePrivate object with public implementation \a q.
  */
 ListOfferingsResponsePrivate::ListOfferingsResponsePrivate(
     ListOfferingsResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ ListOfferingsResponsePrivate::ListOfferingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm ListOfferingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm ListOfferings response element from \a xml.
  */
 void ListOfferingsResponsePrivate::parseListOfferingsResponse(QXmlStreamReader &xml)
 {

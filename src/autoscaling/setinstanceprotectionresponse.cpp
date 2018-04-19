@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::SetInstanceProtectionResponse
- *
  * \brief The SetInstanceProtectionResponse class provides an interace for AutoScaling SetInstanceProtection responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new SetInstanceProtectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetInstanceProtectionResponse object for \a reply to \a request, with parent \a parent.
  */
 SetInstanceProtectionResponse::SetInstanceProtectionResponse(
         const SetInstanceProtectionRequest &request,
@@ -60,6 +55,9 @@ SetInstanceProtectionResponse::SetInstanceProtectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetInstanceProtectionRequest * SetInstanceProtectionResponse::request() const
 {
     Q_D(const SetInstanceProtectionResponse);
@@ -67,9 +65,8 @@ const SetInstanceProtectionRequest * SetInstanceProtectionResponse::request() co
 }
 
 /*!
- * @brief  Parse a AutoScaling SetInstanceProtection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling SetInstanceProtection \a response.
  */
 void SetInstanceProtectionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void SetInstanceProtectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::SetInstanceProtectionResponsePrivate
+ * \brief The SetInstanceProtectionResponsePrivate class provides private implementation for SetInstanceProtectionResponse.
  * \internal
  *
- * \class SetInstanceProtectionResponsePrivate
- *
- * \brief Private implementation for SetInstanceProtectionResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetInstanceProtectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetInstanceProtectionResponse instance.
+ * Constructs a SetInstanceProtectionResponsePrivate object with public implementation \a q.
  */
 SetInstanceProtectionResponsePrivate::SetInstanceProtectionResponsePrivate(
     SetInstanceProtectionResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ SetInstanceProtectionResponsePrivate::SetInstanceProtectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling SetInstanceProtectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling SetInstanceProtection response element from \a xml.
  */
 void SetInstanceProtectionResponsePrivate::parseSetInstanceProtectionResponse(QXmlStreamReader &xml)
 {

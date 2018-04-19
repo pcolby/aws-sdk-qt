@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateProvisioningArtifactResponse : public ServiceCatalogRes
 public:
     UpdateProvisioningArtifactResponse(const UpdateProvisioningArtifactRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateProvisioningArtifactRequest * request() const;
+    virtual const UpdateProvisioningArtifactRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateProvisioningArtifactResponse)

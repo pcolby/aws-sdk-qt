@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteConnectionResponse : public DirectConnectResponse {
 public:
     DeleteConnectionResponse(const DeleteConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteConnectionRequest * request() const;
+    virtual const DeleteConnectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteConnectionResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelUpdateStackResponse : public CloudFormationResponse {
 public:
     CancelUpdateStackResponse(const CancelUpdateStackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelUpdateStackRequest * request() const;
+    virtual const CancelUpdateStackRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CancelUpdateStackResponse)

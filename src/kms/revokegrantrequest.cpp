@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * RevokeGrantRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a RevokeGrantRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a RevokeGrantRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 RevokeGrantRequestPrivate::RevokeGrantRequestPrivate(
     const KMSRequest::Action action, RevokeGrantRequest * const q)

@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminResetUserPasswordRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a AdminResetUserPasswordRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminResetUserPasswordRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminResetUserPasswordRequestPrivate::AdminResetUserPasswordRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminResetUserPasswordRequest * const q)

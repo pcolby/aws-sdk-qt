@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::UpdateQualificationTypeResponse
- *
  * \brief The UpdateQualificationTypeResponse class provides an interace for MTurk UpdateQualificationType responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::updateQualificationType
  */
 
 /*!
- * @brief  Constructs a new UpdateQualificationTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateQualificationTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateQualificationTypeResponse::UpdateQualificationTypeResponse(
         const UpdateQualificationTypeRequest &request,
@@ -55,6 +50,9 @@ UpdateQualificationTypeResponse::UpdateQualificationTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateQualificationTypeRequest * UpdateQualificationTypeResponse::request() const
 {
     Q_D(const UpdateQualificationTypeResponse);
@@ -62,9 +60,8 @@ const UpdateQualificationTypeRequest * UpdateQualificationTypeResponse::request(
 }
 
 /*!
- * @brief  Parse a MTurk UpdateQualificationType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk UpdateQualificationType \a response.
  */
 void UpdateQualificationTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateQualificationTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::UpdateQualificationTypeResponsePrivate
+ * \brief The UpdateQualificationTypeResponsePrivate class provides private implementation for UpdateQualificationTypeResponse.
  * \internal
  *
- * \class UpdateQualificationTypeResponsePrivate
- *
- * \brief Private implementation for UpdateQualificationTypeResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateQualificationTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateQualificationTypeResponse instance.
+ * Constructs a UpdateQualificationTypeResponsePrivate object with public implementation \a q.
  */
 UpdateQualificationTypeResponsePrivate::UpdateQualificationTypeResponsePrivate(
     UpdateQualificationTypeResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateQualificationTypeResponsePrivate::UpdateQualificationTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk UpdateQualificationTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk UpdateQualificationType response element from \a xml.
  */
 void UpdateQualificationTypeResponsePrivate::parseUpdateQualificationTypeResponse(QXmlStreamReader &xml)
 {

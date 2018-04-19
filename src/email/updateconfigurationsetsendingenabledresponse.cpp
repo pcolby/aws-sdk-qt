@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::UpdateConfigurationSetSendingEnabledResponse
- *
  * \brief The UpdateConfigurationSetSendingEnabledResponse class provides an interace for SES UpdateConfigurationSetSendingEnabled responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new UpdateConfigurationSetSendingEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateConfigurationSetSendingEnabledResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateConfigurationSetSendingEnabledResponse::UpdateConfigurationSetSendingEnabledResponse(
         const UpdateConfigurationSetSendingEnabledRequest &request,
@@ -66,6 +61,9 @@ UpdateConfigurationSetSendingEnabledResponse::UpdateConfigurationSetSendingEnabl
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateConfigurationSetSendingEnabledRequest * UpdateConfigurationSetSendingEnabledResponse::request() const
 {
     Q_D(const UpdateConfigurationSetSendingEnabledResponse);
@@ -73,9 +71,8 @@ const UpdateConfigurationSetSendingEnabledRequest * UpdateConfigurationSetSendin
 }
 
 /*!
- * @brief  Parse a SES UpdateConfigurationSetSendingEnabled response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES UpdateConfigurationSetSendingEnabled \a response.
  */
 void UpdateConfigurationSetSendingEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateConfigurationSetSendingEnabledResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::SES::UpdateConfigurationSetSendingEnabledResponsePrivate
+ * \brief The UpdateConfigurationSetSendingEnabledResponsePrivate class provides private implementation for UpdateConfigurationSetSendingEnabledResponse.
  * \internal
  *
- * \class UpdateConfigurationSetSendingEnabledResponsePrivate
- *
- * \brief Private implementation for UpdateConfigurationSetSendingEnabledResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConfigurationSetSendingEnabledResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateConfigurationSetSendingEnabledResponse instance.
+ * Constructs a UpdateConfigurationSetSendingEnabledResponsePrivate object with public implementation \a q.
  */
 UpdateConfigurationSetSendingEnabledResponsePrivate::UpdateConfigurationSetSendingEnabledResponsePrivate(
     UpdateConfigurationSetSendingEnabledResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateConfigurationSetSendingEnabledResponsePrivate::UpdateConfigurationSetSendi
 }
 
 /*!
- * @brief  Parse an SES UpdateConfigurationSetSendingEnabledResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES UpdateConfigurationSetSendingEnabled response element from \a xml.
  */
 void UpdateConfigurationSetSendingEnabledResponsePrivate::parseUpdateConfigurationSetSendingEnabledResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::AddResourcePermissionsResponse
- *
  * \brief The AddResourcePermissionsResponse class provides an interace for WorkDocs AddResourcePermissions responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new AddResourcePermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddResourcePermissionsResponse object for \a reply to \a request, with parent \a parent.
  */
 AddResourcePermissionsResponse::AddResourcePermissionsResponse(
         const AddResourcePermissionsRequest &request,
@@ -84,6 +79,9 @@ AddResourcePermissionsResponse::AddResourcePermissionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddResourcePermissionsRequest * AddResourcePermissionsResponse::request() const
 {
     Q_D(const AddResourcePermissionsResponse);
@@ -91,9 +89,8 @@ const AddResourcePermissionsRequest * AddResourcePermissionsResponse::request() 
 }
 
 /*!
- * @brief  Parse a WorkDocs AddResourcePermissions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs AddResourcePermissions \a response.
  */
 void AddResourcePermissionsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void AddResourcePermissionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::AddResourcePermissionsResponsePrivate
+ * \brief The AddResourcePermissionsResponsePrivate class provides private implementation for AddResourcePermissionsResponse.
  * \internal
  *
- * \class AddResourcePermissionsResponsePrivate
- *
- * \brief Private implementation for AddResourcePermissionsResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddResourcePermissionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddResourcePermissionsResponse instance.
+ * Constructs a AddResourcePermissionsResponsePrivate object with public implementation \a q.
  */
 AddResourcePermissionsResponsePrivate::AddResourcePermissionsResponsePrivate(
     AddResourcePermissionsResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ AddResourcePermissionsResponsePrivate::AddResourcePermissionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs AddResourcePermissionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs AddResourcePermissions response element from \a xml.
  */
 void AddResourcePermissionsResponsePrivate::parseAddResourcePermissionsResponse(QXmlStreamReader &xml)
 {

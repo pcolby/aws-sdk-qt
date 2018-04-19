@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::TagResourceResponse
- *
  * \brief The TagResourceResponse class provides an interace for Lambda TagResource responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new TagResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
@@ -66,6 +61,9 @@ TagResourceResponse::TagResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagResourceRequest * TagResourceResponse::request() const
 {
     Q_D(const TagResourceResponse);
@@ -73,9 +71,8 @@ const TagResourceRequest * TagResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda TagResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::TagResourceResponsePrivate
+ * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \class TagResourceResponsePrivate
- *
- * \brief Private implementation for TagResourceResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagResourceResponse instance.
+ * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
     TagResourceResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ TagResourceResponsePrivate::TagResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda TagResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {

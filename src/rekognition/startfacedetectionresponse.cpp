@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartFaceDetectionResponse
- *
  * \brief The StartFaceDetectionResponse class provides an interace for Rekognition StartFaceDetection responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartFaceDetectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartFaceDetectionResponse object for \a reply to \a request, with parent \a parent.
  */
 StartFaceDetectionResponse::StartFaceDetectionResponse(
         const StartFaceDetectionRequest &request,
@@ -56,6 +51,9 @@ StartFaceDetectionResponse::StartFaceDetectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartFaceDetectionRequest * StartFaceDetectionResponse::request() const
 {
     Q_D(const StartFaceDetectionResponse);
@@ -63,9 +61,8 @@ const StartFaceDetectionRequest * StartFaceDetectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition StartFaceDetection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition StartFaceDetection \a response.
  */
 void StartFaceDetectionResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void StartFaceDetectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::StartFaceDetectionResponsePrivate
+ * \brief The StartFaceDetectionResponsePrivate class provides private implementation for StartFaceDetectionResponse.
  * \internal
  *
- * \class StartFaceDetectionResponsePrivate
- *
- * \brief Private implementation for StartFaceDetectionResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartFaceDetectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartFaceDetectionResponse instance.
+ * Constructs a StartFaceDetectionResponsePrivate object with public implementation \a q.
  */
 StartFaceDetectionResponsePrivate::StartFaceDetectionResponsePrivate(
     StartFaceDetectionResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ StartFaceDetectionResponsePrivate::StartFaceDetectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition StartFaceDetectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition StartFaceDetection response element from \a xml.
  */
 void StartFaceDetectionResponsePrivate::parseStartFaceDetectionResponse(QXmlStreamReader &xml)
 {

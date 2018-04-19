@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateApiKeyResponse : public AppSyncResponse {
 public:
     UpdateApiKeyResponse(const UpdateApiKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateApiKeyRequest * request() const;
+    virtual const UpdateApiKeyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateApiKeyResponse)

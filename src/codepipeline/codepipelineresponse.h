@@ -40,7 +40,7 @@ protected:
     /// @endcond
 
 protected slots:
-    virtual void parseFailure(QIODevice &response);
+    virtual void parseFailure(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CodePipelineResponse)

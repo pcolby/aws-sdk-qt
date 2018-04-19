@@ -78,7 +78,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const EMRRequest &other) const;
+    virtual bool operator==(const EMRRequest &other) const override;
 
 
 protected:
@@ -93,7 +93,7 @@ protected:
     void setParameter(const QString &name, const QVariant &value);
     void setParameters(const QVariantMap &parameters);
 
-    virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const;
+    virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
     Q_DECLARE_PRIVATE(EMRRequest)

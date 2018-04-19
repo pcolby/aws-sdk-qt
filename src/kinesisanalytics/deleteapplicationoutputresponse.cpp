@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationOutputResponse
- *
  * \brief The DeleteApplicationOutputResponse class provides an interace for KinesisAnalytics DeleteApplicationOutput responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::deleteApplicationOutput
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationOutputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteApplicationOutputResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteApplicationOutputResponse::DeleteApplicationOutputResponse(
         const DeleteApplicationOutputRequest &request,
@@ -55,6 +50,9 @@ DeleteApplicationOutputResponse::DeleteApplicationOutputResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteApplicationOutputRequest * DeleteApplicationOutputResponse::request() const
 {
     Q_D(const DeleteApplicationOutputResponse);
@@ -62,9 +60,8 @@ const DeleteApplicationOutputRequest * DeleteApplicationOutputResponse::request(
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics DeleteApplicationOutput response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics DeleteApplicationOutput \a response.
  */
 void DeleteApplicationOutputResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteApplicationOutputResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::DeleteApplicationOutputResponsePrivate
+ * \brief The DeleteApplicationOutputResponsePrivate class provides private implementation for DeleteApplicationOutputResponse.
  * \internal
  *
- * \class DeleteApplicationOutputResponsePrivate
- *
- * \brief Private implementation for DeleteApplicationOutputResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationOutputResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteApplicationOutputResponse instance.
+ * Constructs a DeleteApplicationOutputResponsePrivate object with public implementation \a q.
  */
 DeleteApplicationOutputResponsePrivate::DeleteApplicationOutputResponsePrivate(
     DeleteApplicationOutputResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteApplicationOutputResponsePrivate::DeleteApplicationOutputResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics DeleteApplicationOutputResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics DeleteApplicationOutput response element from \a xml.
  */
 void DeleteApplicationOutputResponsePrivate::parseDeleteApplicationOutputResponse(QXmlStreamReader &xml)
 {

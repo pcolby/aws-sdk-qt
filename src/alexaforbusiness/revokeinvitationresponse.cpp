@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::RevokeInvitationResponse
- *
  * \brief The RevokeInvitationResponse class provides an interace for AlexaForBusiness RevokeInvitation responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new RevokeInvitationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RevokeInvitationResponse object for \a reply to \a request, with parent \a parent.
  */
 RevokeInvitationResponse::RevokeInvitationResponse(
         const RevokeInvitationRequest &request,
@@ -60,6 +55,9 @@ RevokeInvitationResponse::RevokeInvitationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RevokeInvitationRequest * RevokeInvitationResponse::request() const
 {
     Q_D(const RevokeInvitationResponse);
@@ -67,9 +65,8 @@ const RevokeInvitationRequest * RevokeInvitationResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness RevokeInvitation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness RevokeInvitation \a response.
  */
 void RevokeInvitationResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void RevokeInvitationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::RevokeInvitationResponsePrivate
+ * \brief The RevokeInvitationResponsePrivate class provides private implementation for RevokeInvitationResponse.
  * \internal
  *
- * \class RevokeInvitationResponsePrivate
- *
- * \brief Private implementation for RevokeInvitationResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeInvitationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RevokeInvitationResponse instance.
+ * Constructs a RevokeInvitationResponsePrivate object with public implementation \a q.
  */
 RevokeInvitationResponsePrivate::RevokeInvitationResponsePrivate(
     RevokeInvitationResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ RevokeInvitationResponsePrivate::RevokeInvitationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness RevokeInvitationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness RevokeInvitation response element from \a xml.
  */
 void RevokeInvitationResponsePrivate::parseRevokeInvitationResponse(QXmlStreamReader &xml)
 {

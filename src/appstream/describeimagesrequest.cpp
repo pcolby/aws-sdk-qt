@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeImagesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeImagesRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a DescribeImagesRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 DescribeImagesRequestPrivate::DescribeImagesRequestPrivate(
     const AppStreamRequest::Action action, DescribeImagesRequest * const q)

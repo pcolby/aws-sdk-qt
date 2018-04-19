@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListActivatedRulesInRuleGroupRequest::respons
  */
 
 /*!
- *
- * Constructs a ListActivatedRulesInRuleGroupRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a ListActivatedRulesInRuleGroupRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 ListActivatedRulesInRuleGroupRequestPrivate::ListActivatedRulesInRuleGroupRequestPrivate(
     const WAFRequest::Action action, ListActivatedRulesInRuleGroupRequest * const q)

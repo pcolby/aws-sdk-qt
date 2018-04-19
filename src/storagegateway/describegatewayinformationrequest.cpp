@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DescribeGatewayInformationRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeGatewayInformationRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DescribeGatewayInformationRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DescribeGatewayInformationRequestPrivate::DescribeGatewayInformationRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeGatewayInformationRequest * const q)

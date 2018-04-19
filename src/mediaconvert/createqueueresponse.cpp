@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::CreateQueueResponse
- *
  * \brief The CreateQueueResponse class provides an interace for MediaConvert CreateQueue responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::createQueue
  */
 
 /*!
- * @brief  Constructs a new CreateQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateQueueResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateQueueResponse::CreateQueueResponse(
         const CreateQueueRequest &request,
@@ -55,6 +50,9 @@ CreateQueueResponse::CreateQueueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateQueueRequest * CreateQueueResponse::request() const
 {
     Q_D(const CreateQueueResponse);
@@ -62,9 +60,8 @@ const CreateQueueRequest * CreateQueueResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert CreateQueue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert CreateQueue \a response.
  */
 void CreateQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateQueueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::CreateQueueResponsePrivate
+ * \brief The CreateQueueResponsePrivate class provides private implementation for CreateQueueResponse.
  * \internal
  *
- * \class CreateQueueResponsePrivate
- *
- * \brief Private implementation for CreateQueueResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateQueueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateQueueResponse instance.
+ * Constructs a CreateQueueResponsePrivate object with public implementation \a q.
  */
 CreateQueueResponsePrivate::CreateQueueResponsePrivate(
     CreateQueueResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateQueueResponsePrivate::CreateQueueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert CreateQueueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert CreateQueue response element from \a xml.
  */
 void CreateQueueResponsePrivate::parseCreateQueueResponse(QXmlStreamReader &xml)
 {

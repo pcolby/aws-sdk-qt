@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DeleteSkillGroupResponse
- *
  * \brief The DeleteSkillGroupResponse class provides an interace for AlexaForBusiness DeleteSkillGroup responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DeleteSkillGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSkillGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSkillGroupResponse::DeleteSkillGroupResponse(
         const DeleteSkillGroupRequest &request,
@@ -60,6 +55,9 @@ DeleteSkillGroupResponse::DeleteSkillGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSkillGroupRequest * DeleteSkillGroupResponse::request() const
 {
     Q_D(const DeleteSkillGroupResponse);
@@ -67,9 +65,8 @@ const DeleteSkillGroupRequest * DeleteSkillGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness DeleteSkillGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness DeleteSkillGroup \a response.
  */
 void DeleteSkillGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteSkillGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::DeleteSkillGroupResponsePrivate
+ * \brief The DeleteSkillGroupResponsePrivate class provides private implementation for DeleteSkillGroupResponse.
  * \internal
  *
- * \class DeleteSkillGroupResponsePrivate
- *
- * \brief Private implementation for DeleteSkillGroupResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSkillGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSkillGroupResponse instance.
+ * Constructs a DeleteSkillGroupResponsePrivate object with public implementation \a q.
  */
 DeleteSkillGroupResponsePrivate::DeleteSkillGroupResponsePrivate(
     DeleteSkillGroupResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteSkillGroupResponsePrivate::DeleteSkillGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness DeleteSkillGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness DeleteSkillGroup response element from \a xml.
  */
 void DeleteSkillGroupResponsePrivate::parseDeleteSkillGroupResponse(QXmlStreamReader &xml)
 {

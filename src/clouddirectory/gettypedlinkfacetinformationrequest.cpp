@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * GetTypedLinkFacetInformationRequest::response
  */
 
 /*!
- *
- * Constructs a GetTypedLinkFacetInformationRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a GetTypedLinkFacetInformationRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 GetTypedLinkFacetInformationRequestPrivate::GetTypedLinkFacetInformationRequestPrivate(
     const CloudDirectoryRequest::Action action, GetTypedLinkFacetInformationRequest * const q)

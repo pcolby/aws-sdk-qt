@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DeleteDetectorResponse
- *
  * \brief The DeleteDetectorResponse class provides an interace for GuardDuty DeleteDetector responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::deleteDetector
  */
 
 /*!
- * @brief  Constructs a new DeleteDetectorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDetectorResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDetectorResponse::DeleteDetectorResponse(
         const DeleteDetectorRequest &request,
@@ -55,6 +50,9 @@ DeleteDetectorResponse::DeleteDetectorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDetectorRequest * DeleteDetectorResponse::request() const
 {
     Q_D(const DeleteDetectorResponse);
@@ -62,9 +60,8 @@ const DeleteDetectorRequest * DeleteDetectorResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty DeleteDetector response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty DeleteDetector \a response.
  */
 void DeleteDetectorResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteDetectorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::DeleteDetectorResponsePrivate
+ * \brief The DeleteDetectorResponsePrivate class provides private implementation for DeleteDetectorResponse.
  * \internal
  *
- * \class DeleteDetectorResponsePrivate
- *
- * \brief Private implementation for DeleteDetectorResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDetectorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDetectorResponse instance.
+ * Constructs a DeleteDetectorResponsePrivate object with public implementation \a q.
  */
 DeleteDetectorResponsePrivate::DeleteDetectorResponsePrivate(
     DeleteDetectorResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteDetectorResponsePrivate::DeleteDetectorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty DeleteDetectorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty DeleteDetector response element from \a xml.
  */
 void DeleteDetectorResponsePrivate::parseDeleteDetectorResponse(QXmlStreamReader &xml)
 {

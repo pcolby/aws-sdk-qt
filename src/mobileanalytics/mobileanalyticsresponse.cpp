@@ -28,16 +28,13 @@ namespace MobileAnalytics {
 
 /*!
  * \class QtAws::MobileAnalytics::MobileAnalyticsResponse
- *
  * \brief The MobileAnalyticsResponse class provides an interface for MobileAnalytics responses.
  *
- * \ingroup MobileAnalytics
+ * \inmodule QtAwsMobileAnalytics
  */
 
 /*!
- * @brief  Constructs a new MobileAnalyticsResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MobileAnalyticsResponse object with parent \a parent.
  */
 MobileAnalyticsResponse::MobileAnalyticsResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MobileAnalyticsResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MobileAnalyticsResponse::MobileAnalyticsResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MobileAnalyticsResponse object.
- *
+ * \internal
+ * Constructs a MobileAnalyticsResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MobileAnalyticsResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MobileAnalyticsResponse::MobileAnalyticsResponse(MobileAnalyticsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MobileAnalyticsResponse::MobileAnalyticsResponse(MobileAnalyticsResponsePrivate 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MobileAnalyticsResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MobileAnalyticsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MobileAnalytics::MobileAnalyticsResponsePrivate
+ * \brief The MobileAnalyticsResponsePrivate class provides private implementation for MobileAnalyticsResponse.
+ * \internal
  *
- * @class  MobileAnalyticsResponsePrivate
- *
- * @brief  Private implementation for MobileAnalyticsResponse.
+ * \inmodule QtAwsMobileAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MobileAnalyticsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MobileAnalyticsResponse instance.
+ * Constructs a MobileAnalyticsResponsePrivate object with public implementation \a q.
  */
 MobileAnalyticsResponsePrivate::MobileAnalyticsResponsePrivate(
     MobileAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * MonitorInstancesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a MonitorInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a MonitorInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 MonitorInstancesRequestPrivate::MonitorInstancesRequestPrivate(
     const EC2Request::Action action, MonitorInstancesRequest * const q)

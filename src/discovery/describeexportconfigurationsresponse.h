@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeExportConfigurationsResponse : public ApplicationDisc
 public:
     DescribeExportConfigurationsResponse(const DescribeExportConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeExportConfigurationsRequest * request() const;
+    virtual const DescribeExportConfigurationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeExportConfigurationsResponse)

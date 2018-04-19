@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeVTLDevicesResponse
- *
  * \brief The DescribeVTLDevicesResponse class provides an interace for StorageGateway DescribeVTLDevices responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeVTLDevicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVTLDevicesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVTLDevicesResponse::DescribeVTLDevicesResponse(
         const DescribeVTLDevicesRequest &request,
@@ -124,6 +119,9 @@ DescribeVTLDevicesResponse::DescribeVTLDevicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVTLDevicesRequest * DescribeVTLDevicesResponse::request() const
 {
     Q_D(const DescribeVTLDevicesResponse);
@@ -131,9 +129,8 @@ const DescribeVTLDevicesRequest * DescribeVTLDevicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeVTLDevices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeVTLDevices \a response.
  */
 void DescribeVTLDevicesResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeVTLDevicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeVTLDevicesResponsePrivate
+ * \brief The DescribeVTLDevicesResponsePrivate class provides private implementation for DescribeVTLDevicesResponse.
  * \internal
  *
- * \class DescribeVTLDevicesResponsePrivate
- *
- * \brief Private implementation for DescribeVTLDevicesResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVTLDevicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVTLDevicesResponse instance.
+ * Constructs a DescribeVTLDevicesResponsePrivate object with public implementation \a q.
  */
 DescribeVTLDevicesResponsePrivate::DescribeVTLDevicesResponsePrivate(
     DescribeVTLDevicesResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeVTLDevicesResponsePrivate::DescribeVTLDevicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeVTLDevicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeVTLDevices response element from \a xml.
  */
 void DescribeVTLDevicesResponsePrivate::parseDescribeVTLDevicesResponse(QXmlStreamReader &xml)
 {

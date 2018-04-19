@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceLifecycleConfigReques
  */
 
 /*!
- *
- * Constructs a DescribeNotebookInstanceLifecycleConfigRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a DescribeNotebookInstanceLifecycleConfigRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 DescribeNotebookInstanceLifecycleConfigRequestPrivate::DescribeNotebookInstanceLifecycleConfigRequestPrivate(
     const SageMakerRequest::Action action, DescribeNotebookInstanceLifecycleConfigRequest * const q)

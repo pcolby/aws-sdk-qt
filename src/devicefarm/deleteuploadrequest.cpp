@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteUploadRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteUploadRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a DeleteUploadRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 DeleteUploadRequestPrivate::DeleteUploadRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteUploadRequest * const q)

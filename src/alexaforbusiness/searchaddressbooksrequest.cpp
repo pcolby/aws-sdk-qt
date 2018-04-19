@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * SearchAddressBooksRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a SearchAddressBooksRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a SearchAddressBooksRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 SearchAddressBooksRequestPrivate::SearchAddressBooksRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchAddressBooksRequest * const q)

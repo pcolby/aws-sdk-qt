@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * ForgetDeviceRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ForgetDeviceRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a ForgetDeviceRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 ForgetDeviceRequestPrivate::ForgetDeviceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ForgetDeviceRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateMaintenanceStartTimeResponse : public StorageGatewayRes
 public:
     UpdateMaintenanceStartTimeResponse(const UpdateMaintenanceStartTimeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateMaintenanceStartTimeRequest * request() const;
+    virtual const UpdateMaintenanceStartTimeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateMaintenanceStartTimeResponse)

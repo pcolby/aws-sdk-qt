@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::PromoteReadReplicaResponse
- *
  * \brief The PromoteReadReplicaResponse class provides an interace for RDS PromoteReadReplica responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new PromoteReadReplicaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PromoteReadReplicaResponse object for \a reply to \a request, with parent \a parent.
  */
 PromoteReadReplicaResponse::PromoteReadReplicaResponse(
         const PromoteReadReplicaRequest &request,
@@ -119,6 +114,9 @@ PromoteReadReplicaResponse::PromoteReadReplicaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PromoteReadReplicaRequest * PromoteReadReplicaResponse::request() const
 {
     Q_D(const PromoteReadReplicaResponse);
@@ -126,9 +124,8 @@ const PromoteReadReplicaRequest * PromoteReadReplicaResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS PromoteReadReplica response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS PromoteReadReplica \a response.
  */
 void PromoteReadReplicaResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void PromoteReadReplicaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::PromoteReadReplicaResponsePrivate
+ * \brief The PromoteReadReplicaResponsePrivate class provides private implementation for PromoteReadReplicaResponse.
  * \internal
  *
- * \class PromoteReadReplicaResponsePrivate
- *
- * \brief Private implementation for PromoteReadReplicaResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PromoteReadReplicaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PromoteReadReplicaResponse instance.
+ * Constructs a PromoteReadReplicaResponsePrivate object with public implementation \a q.
  */
 PromoteReadReplicaResponsePrivate::PromoteReadReplicaResponsePrivate(
     PromoteReadReplicaResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ PromoteReadReplicaResponsePrivate::PromoteReadReplicaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS PromoteReadReplicaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS PromoteReadReplica response element from \a xml.
  */
 void PromoteReadReplicaResponsePrivate::parsePromoteReadReplicaResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketLifecycleRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteBucketLifecycleRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBucketLifecycleRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 DeleteBucketLifecycleRequestPrivate::DeleteBucketLifecycleRequestPrivate(
     const S3Request::Action action, DeleteBucketLifecycleRequest * const q)

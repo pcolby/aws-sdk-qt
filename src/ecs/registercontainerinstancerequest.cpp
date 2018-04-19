@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * RegisterContainerInstanceRequest::response(QN
  */
 
 /*!
- *
- * Constructs a RegisterContainerInstanceRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a RegisterContainerInstanceRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate(
     const ECSRequest::Action action, RegisterContainerInstanceRequest * const q)

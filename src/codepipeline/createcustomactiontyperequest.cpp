@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * CreateCustomActionTypeRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateCustomActionTypeRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a CreateCustomActionTypeRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 CreateCustomActionTypeRequestPrivate::CreateCustomActionTypeRequestPrivate(
     const CodePipelineRequest::Action action, CreateCustomActionTypeRequest * const q)

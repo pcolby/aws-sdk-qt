@@ -34,10 +34,10 @@ class QTAWS_EXPORT RevokeGrantResponse : public KMSResponse {
 public:
     RevokeGrantResponse(const RevokeGrantRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RevokeGrantRequest * request() const;
+    virtual const RevokeGrantRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RevokeGrantResponse)

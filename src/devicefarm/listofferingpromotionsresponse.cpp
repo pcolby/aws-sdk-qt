@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListOfferingPromotionsResponse
- *
  * \brief The ListOfferingPromotionsResponse class provides an interace for DeviceFarm ListOfferingPromotions responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListOfferingPromotionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListOfferingPromotionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListOfferingPromotionsResponse::ListOfferingPromotionsResponse(
         const ListOfferingPromotionsRequest &request,
@@ -57,6 +52,9 @@ ListOfferingPromotionsResponse::ListOfferingPromotionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListOfferingPromotionsRequest * ListOfferingPromotionsResponse::request() const
 {
     Q_D(const ListOfferingPromotionsResponse);
@@ -64,9 +62,8 @@ const ListOfferingPromotionsRequest * ListOfferingPromotionsResponse::request() 
 }
 
 /*!
- * @brief  Parse a DeviceFarm ListOfferingPromotions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm ListOfferingPromotions \a response.
  */
 void ListOfferingPromotionsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListOfferingPromotionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::ListOfferingPromotionsResponsePrivate
+ * \brief The ListOfferingPromotionsResponsePrivate class provides private implementation for ListOfferingPromotionsResponse.
  * \internal
  *
- * \class ListOfferingPromotionsResponsePrivate
- *
- * \brief Private implementation for ListOfferingPromotionsResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOfferingPromotionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListOfferingPromotionsResponse instance.
+ * Constructs a ListOfferingPromotionsResponsePrivate object with public implementation \a q.
  */
 ListOfferingPromotionsResponsePrivate::ListOfferingPromotionsResponsePrivate(
     ListOfferingPromotionsResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ ListOfferingPromotionsResponsePrivate::ListOfferingPromotionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm ListOfferingPromotionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm ListOfferingPromotions response element from \a xml.
  */
 void ListOfferingPromotionsResponsePrivate::parseListOfferingPromotionsResponse(QXmlStreamReader &xml)
 {

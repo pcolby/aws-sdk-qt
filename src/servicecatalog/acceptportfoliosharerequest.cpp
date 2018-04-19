@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * AcceptPortfolioShareRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a AcceptPortfolioShareRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a AcceptPortfolioShareRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 AcceptPortfolioShareRequestPrivate::AcceptPortfolioShareRequestPrivate(
     const ServiceCatalogRequest::Action action, AcceptPortfolioShareRequest * const q)

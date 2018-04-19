@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * PutAggregationAuthorizationRequest::response(
  */
 
 /*!
- *
- * Constructs a PutAggregationAuthorizationRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a PutAggregationAuthorizationRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 PutAggregationAuthorizationRequestPrivate::PutAggregationAuthorizationRequestPrivate(
     const ConfigServiceRequest::Action action, PutAggregationAuthorizationRequest * const q)

@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetBlobResponse
- *
  * \brief The GetBlobResponse class provides an interace for CodeCommit GetBlob responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetBlobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBlobResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBlobResponse::GetBlobResponse(
         const GetBlobRequest &request,
@@ -245,6 +240,9 @@ GetBlobResponse::GetBlobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBlobRequest * GetBlobResponse::request() const
 {
     Q_D(const GetBlobResponse);
@@ -252,9 +250,8 @@ const GetBlobRequest * GetBlobResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit GetBlob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit GetBlob \a response.
  */
 void GetBlobResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void GetBlobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::GetBlobResponsePrivate
+ * \brief The GetBlobResponsePrivate class provides private implementation for GetBlobResponse.
  * \internal
  *
- * \class GetBlobResponsePrivate
- *
- * \brief Private implementation for GetBlobResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBlobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBlobResponse instance.
+ * Constructs a GetBlobResponsePrivate object with public implementation \a q.
  */
 GetBlobResponsePrivate::GetBlobResponsePrivate(
     GetBlobResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ GetBlobResponsePrivate::GetBlobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit GetBlobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit GetBlob response element from \a xml.
  */
 void GetBlobResponsePrivate::parseGetBlobResponse(QXmlStreamReader &xml)
 {

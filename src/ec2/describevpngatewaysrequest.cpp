@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVpnGatewaysRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeVpnGatewaysRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVpnGatewaysRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeVpnGatewaysRequestPrivate::DescribeVpnGatewaysRequestPrivate(
     const EC2Request::Action action, DescribeVpnGatewaysRequest * const q)

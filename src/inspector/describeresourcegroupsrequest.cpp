@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DescribeResourceGroupsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeResourceGroupsRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a DescribeResourceGroupsRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 DescribeResourceGroupsRequestPrivate::DescribeResourceGroupsRequestPrivate(
     const InspectorRequest::Action action, DescribeResourceGroupsRequest * const q)

@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListItemsRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ListItemsRequestPrivate object for MediaStoreData \a action with,
- * public implementation \a q.
+ * Constructs a ListItemsRequestPrivate object for MediaStoreData \a action,
+ * with public implementation \a q.
  */
 ListItemsRequestPrivate::ListItemsRequestPrivate(
     const MediaStoreDataRequest::Action action, ListItemsRequest * const q)

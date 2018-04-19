@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::DescribeActivityResponse
- *
  * \brief The DescribeActivityResponse class provides an interace for SFN DescribeActivity responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new DescribeActivityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeActivityResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeActivityResponse::DescribeActivityResponse(
         const DescribeActivityRequest &request,
@@ -74,6 +69,9 @@ DescribeActivityResponse::DescribeActivityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeActivityRequest * DescribeActivityResponse::request() const
 {
     Q_D(const DescribeActivityResponse);
@@ -81,9 +79,8 @@ const DescribeActivityRequest * DescribeActivityResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN DescribeActivity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN DescribeActivity \a response.
  */
 void DescribeActivityResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DescribeActivityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::DescribeActivityResponsePrivate
+ * \brief The DescribeActivityResponsePrivate class provides private implementation for DescribeActivityResponse.
  * \internal
  *
- * \class DescribeActivityResponsePrivate
- *
- * \brief Private implementation for DescribeActivityResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeActivityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeActivityResponse instance.
+ * Constructs a DescribeActivityResponsePrivate object with public implementation \a q.
  */
 DescribeActivityResponsePrivate::DescribeActivityResponsePrivate(
     DescribeActivityResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ DescribeActivityResponsePrivate::DescribeActivityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN DescribeActivityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN DescribeActivity response element from \a xml.
  */
 void DescribeActivityResponsePrivate::parseDescribeActivityResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateEventSubscriptionResponse
- *
  * \brief The CreateEventSubscriptionResponse class provides an interace for Redshift CreateEventSubscription responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateEventSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateEventSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateEventSubscriptionResponse::CreateEventSubscriptionResponse(
         const CreateEventSubscriptionRequest &request,
@@ -85,6 +80,9 @@ CreateEventSubscriptionResponse::CreateEventSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateEventSubscriptionRequest * CreateEventSubscriptionResponse::request() const
 {
     Q_D(const CreateEventSubscriptionResponse);
@@ -92,9 +90,8 @@ const CreateEventSubscriptionRequest * CreateEventSubscriptionResponse::request(
 }
 
 /*!
- * @brief  Parse a Redshift CreateEventSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift CreateEventSubscription \a response.
  */
 void CreateEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void CreateEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::CreateEventSubscriptionResponsePrivate
+ * \brief The CreateEventSubscriptionResponsePrivate class provides private implementation for CreateEventSubscriptionResponse.
  * \internal
  *
- * \class CreateEventSubscriptionResponsePrivate
- *
- * \brief Private implementation for CreateEventSubscriptionResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEventSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateEventSubscriptionResponse instance.
+ * Constructs a CreateEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 CreateEventSubscriptionResponsePrivate::CreateEventSubscriptionResponsePrivate(
     CreateEventSubscriptionResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ CreateEventSubscriptionResponsePrivate::CreateEventSubscriptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift CreateEventSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift CreateEventSubscription response element from \a xml.
  */
 void CreateEventSubscriptionResponsePrivate::parseCreateEventSubscriptionResponse(QXmlStreamReader &xml)
 {

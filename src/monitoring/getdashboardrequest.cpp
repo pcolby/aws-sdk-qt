@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * GetDashboardRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetDashboardRequestPrivate object for CloudWatch \a action with,
- * public implementation \a q.
+ * Constructs a GetDashboardRequestPrivate object for CloudWatch \a action,
+ * with public implementation \a q.
  */
 GetDashboardRequestPrivate::GetDashboardRequestPrivate(
     const CloudWatchRequest::Action action, GetDashboardRequest * const q)

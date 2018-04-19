@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateSlotTypeVersionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateSlotTypeVersionRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a CreateSlotTypeVersionRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 CreateSlotTypeVersionRequestPrivate::CreateSlotTypeVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, CreateSlotTypeVersionRequest * const q)

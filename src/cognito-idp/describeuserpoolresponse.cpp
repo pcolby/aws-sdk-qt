@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DescribeUserPoolResponse
- *
  * \brief The DescribeUserPoolResponse class provides an interace for CognitoIdentityProvider DescribeUserPool responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DescribeUserPoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeUserPoolResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeUserPoolResponse::DescribeUserPoolResponse(
         const DescribeUserPoolRequest &request,
@@ -65,6 +60,9 @@ DescribeUserPoolResponse::DescribeUserPoolResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeUserPoolRequest * DescribeUserPoolResponse::request() const
 {
     Q_D(const DescribeUserPoolResponse);
@@ -72,9 +70,8 @@ const DescribeUserPoolRequest * DescribeUserPoolResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider DescribeUserPool response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider DescribeUserPool \a response.
  */
 void DescribeUserPoolResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void DescribeUserPoolResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::DescribeUserPoolResponsePrivate
+ * \brief The DescribeUserPoolResponsePrivate class provides private implementation for DescribeUserPoolResponse.
  * \internal
  *
- * \class DescribeUserPoolResponsePrivate
- *
- * \brief Private implementation for DescribeUserPoolResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUserPoolResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeUserPoolResponse instance.
+ * Constructs a DescribeUserPoolResponsePrivate object with public implementation \a q.
  */
 DescribeUserPoolResponsePrivate::DescribeUserPoolResponsePrivate(
     DescribeUserPoolResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ DescribeUserPoolResponsePrivate::DescribeUserPoolResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider DescribeUserPoolResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider DescribeUserPool response element from \a xml.
  */
 void DescribeUserPoolResponsePrivate::parseDescribeUserPoolResponse(QXmlStreamReader &xml)
 {

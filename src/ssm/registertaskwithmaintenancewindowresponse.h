@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterTaskWithMaintenanceWindowResponse : public SSMRespons
 public:
     RegisterTaskWithMaintenanceWindowResponse(const RegisterTaskWithMaintenanceWindowRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterTaskWithMaintenanceWindowRequest * request() const;
+    virtual const RegisterTaskWithMaintenanceWindowRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterTaskWithMaintenanceWindowResponse)

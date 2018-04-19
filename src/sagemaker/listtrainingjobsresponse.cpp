@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::ListTrainingJobsResponse
- *
  * \brief The ListTrainingJobsResponse class provides an interace for SageMaker ListTrainingJobs responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::listTrainingJobs
  */
 
 /*!
- * @brief  Constructs a new ListTrainingJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTrainingJobsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTrainingJobsResponse::ListTrainingJobsResponse(
         const ListTrainingJobsRequest &request,
@@ -55,6 +50,9 @@ ListTrainingJobsResponse::ListTrainingJobsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTrainingJobsRequest * ListTrainingJobsResponse::request() const
 {
     Q_D(const ListTrainingJobsResponse);
@@ -62,9 +60,8 @@ const ListTrainingJobsRequest * ListTrainingJobsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SageMaker ListTrainingJobs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker ListTrainingJobs \a response.
  */
 void ListTrainingJobsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListTrainingJobsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::ListTrainingJobsResponsePrivate
+ * \brief The ListTrainingJobsResponsePrivate class provides private implementation for ListTrainingJobsResponse.
  * \internal
  *
- * \class ListTrainingJobsResponsePrivate
- *
- * \brief Private implementation for ListTrainingJobsResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTrainingJobsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTrainingJobsResponse instance.
+ * Constructs a ListTrainingJobsResponsePrivate object with public implementation \a q.
  */
 ListTrainingJobsResponsePrivate::ListTrainingJobsResponsePrivate(
     ListTrainingJobsResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ ListTrainingJobsResponsePrivate::ListTrainingJobsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker ListTrainingJobsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker ListTrainingJobs response element from \a xml.
  */
 void ListTrainingJobsResponsePrivate::parseListTrainingJobsResponse(QXmlStreamReader &xml)
 {

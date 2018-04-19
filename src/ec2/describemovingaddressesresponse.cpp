@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeMovingAddressesResponse
- *
  * \brief The DescribeMovingAddressesResponse class provides an interace for EC2 DescribeMovingAddresses responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeMovingAddressesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeMovingAddressesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeMovingAddressesResponse::DescribeMovingAddressesResponse(
         const DescribeMovingAddressesRequest &request,
@@ -59,6 +54,9 @@ DescribeMovingAddressesResponse::DescribeMovingAddressesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeMovingAddressesRequest * DescribeMovingAddressesResponse::request() const
 {
     Q_D(const DescribeMovingAddressesResponse);
@@ -66,9 +64,8 @@ const DescribeMovingAddressesRequest * DescribeMovingAddressesResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 DescribeMovingAddresses response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeMovingAddresses \a response.
  */
 void DescribeMovingAddressesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeMovingAddressesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeMovingAddressesResponsePrivate
+ * \brief The DescribeMovingAddressesResponsePrivate class provides private implementation for DescribeMovingAddressesResponse.
  * \internal
  *
- * \class DescribeMovingAddressesResponsePrivate
- *
- * \brief Private implementation for DescribeMovingAddressesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMovingAddressesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeMovingAddressesResponse instance.
+ * Constructs a DescribeMovingAddressesResponsePrivate object with public implementation \a q.
  */
 DescribeMovingAddressesResponsePrivate::DescribeMovingAddressesResponsePrivate(
     DescribeMovingAddressesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeMovingAddressesResponsePrivate::DescribeMovingAddressesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeMovingAddressesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeMovingAddresses response element from \a xml.
  */
 void DescribeMovingAddressesResponsePrivate::parseDescribeMovingAddressesResponse(QXmlStreamReader &xml)
 {

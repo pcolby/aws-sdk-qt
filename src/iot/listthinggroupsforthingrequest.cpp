@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListThingGroupsForThingRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListThingGroupsForThingRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListThingGroupsForThingRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListThingGroupsForThingRequestPrivate::ListThingGroupsForThingRequestPrivate(
     const IoTRequest::Action action, ListThingGroupsForThingRequest * const q)

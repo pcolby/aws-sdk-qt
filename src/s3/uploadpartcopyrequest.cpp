@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UploadPartCopyRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UploadPartCopyRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a UploadPartCopyRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 UploadPartCopyRequestPrivate::UploadPartCopyRequestPrivate(
     const S3Request::Action action, UploadPartCopyRequest * const q)

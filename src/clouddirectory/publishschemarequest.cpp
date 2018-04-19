@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * PublishSchemaRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a PublishSchemaRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a PublishSchemaRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 PublishSchemaRequestPrivate::PublishSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, PublishSchemaRequest * const q)

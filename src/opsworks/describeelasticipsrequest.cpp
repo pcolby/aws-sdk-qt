@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticIpsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeElasticIpsRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeElasticIpsRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeElasticIpsRequestPrivate::DescribeElasticIpsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeElasticIpsRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ReleaseAddressRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ReleaseAddressRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ReleaseAddressRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ReleaseAddressRequestPrivate::ReleaseAddressRequestPrivate(
     const EC2Request::Action action, ReleaseAddressRequest * const q)

@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * ModifyLoadBalancerAttributesRequest::response
  */
 
 /*!
- *
- * Constructs a ModifyLoadBalancerAttributesRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a ModifyLoadBalancerAttributesRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 ModifyLoadBalancerAttributesRequestPrivate::ModifyLoadBalancerAttributesRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, ModifyLoadBalancerAttributesRequest * const q)

@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ListPlatformApplicationsResponse
- *
  * \brief The ListPlatformApplicationsResponse class provides an interace for SNS ListPlatformApplications responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ListPlatformApplicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPlatformApplicationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPlatformApplicationsResponse::ListPlatformApplicationsResponse(
         const ListPlatformApplicationsRequest &request,
@@ -69,6 +64,9 @@ ListPlatformApplicationsResponse::ListPlatformApplicationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPlatformApplicationsRequest * ListPlatformApplicationsResponse::request() const
 {
     Q_D(const ListPlatformApplicationsResponse);
@@ -76,9 +74,8 @@ const ListPlatformApplicationsRequest * ListPlatformApplicationsResponse::reques
 }
 
 /*!
- * @brief  Parse a SNS ListPlatformApplications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS ListPlatformApplications \a response.
  */
 void ListPlatformApplicationsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListPlatformApplicationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::ListPlatformApplicationsResponsePrivate
+ * \brief The ListPlatformApplicationsResponsePrivate class provides private implementation for ListPlatformApplicationsResponse.
  * \internal
  *
- * \class ListPlatformApplicationsResponsePrivate
- *
- * \brief Private implementation for ListPlatformApplicationsResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPlatformApplicationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPlatformApplicationsResponse instance.
+ * Constructs a ListPlatformApplicationsResponsePrivate object with public implementation \a q.
  */
 ListPlatformApplicationsResponsePrivate::ListPlatformApplicationsResponsePrivate(
     ListPlatformApplicationsResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ ListPlatformApplicationsResponsePrivate::ListPlatformApplicationsResponsePrivate
 }
 
 /*!
- * @brief  Parse an SNS ListPlatformApplicationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS ListPlatformApplications response element from \a xml.
  */
 void ListPlatformApplicationsResponsePrivate::parseListPlatformApplicationsResponse(QXmlStreamReader &xml)
 {

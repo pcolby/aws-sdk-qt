@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopReplicationTaskResponse : public DatabaseMigrationService
 public:
     StopReplicationTaskResponse(const StopReplicationTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopReplicationTaskRequest * request() const;
+    virtual const StopReplicationTaskRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopReplicationTaskResponse)

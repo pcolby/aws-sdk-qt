@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskCanceledRequest::response(
  */
 
 /*!
- *
- * Constructs a RespondActivityTaskCanceledRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a RespondActivityTaskCanceledRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 RespondActivityTaskCanceledRequestPrivate::RespondActivityTaskCanceledRequestPrivate(
     const SWFRequest::Action action, RespondActivityTaskCanceledRequest * const q)

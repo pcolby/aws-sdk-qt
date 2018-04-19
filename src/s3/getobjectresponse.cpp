@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetObjectResponse
- *
  * \brief The GetObjectResponse class provides an interace for S3 GetObject responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getObject
  */
 
 /*!
- * @brief  Constructs a new GetObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 GetObjectResponse::GetObjectResponse(
         const GetObjectRequest &request,
@@ -55,6 +50,9 @@ GetObjectResponse::GetObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetObjectRequest * GetObjectResponse::request() const
 {
     Q_D(const GetObjectResponse);
@@ -62,9 +60,8 @@ const GetObjectRequest * GetObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 GetObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetObject \a response.
  */
 void GetObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetObjectResponsePrivate
+ * \brief The GetObjectResponsePrivate class provides private implementation for GetObjectResponse.
  * \internal
  *
- * \class GetObjectResponsePrivate
- *
- * \brief Private implementation for GetObjectResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetObjectResponse instance.
+ * Constructs a GetObjectResponsePrivate object with public implementation \a q.
  */
 GetObjectResponsePrivate::GetObjectResponsePrivate(
     GetObjectResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetObjectResponsePrivate::GetObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 GetObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetObject response element from \a xml.
  */
 void GetObjectResponsePrivate::parseGetObjectResponse(QXmlStreamReader &xml)
 {

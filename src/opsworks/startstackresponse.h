@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartStackResponse : public OpsWorksResponse {
 public:
     StartStackResponse(const StartStackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartStackRequest * request() const;
+    virtual const StartStackRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartStackResponse)

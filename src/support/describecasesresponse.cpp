@@ -29,10 +29,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeCasesResponse
- *
  * \brief The DescribeCasesResponse class provides an interace for Support DescribeCases responses.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -107,11 +106,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeCasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCasesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCasesResponse::DescribeCasesResponse(
         const DescribeCasesRequest &request,
@@ -123,6 +118,9 @@ DescribeCasesResponse::DescribeCasesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCasesRequest * DescribeCasesResponse::request() const
 {
     Q_D(const DescribeCasesResponse);
@@ -130,9 +128,8 @@ const DescribeCasesRequest * DescribeCasesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Support DescribeCases response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Support DescribeCases \a response.
  */
 void DescribeCasesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeCasesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Support::DescribeCasesResponsePrivate
+ * \brief The DescribeCasesResponsePrivate class provides private implementation for DescribeCasesResponse.
  * \internal
  *
- * \class DescribeCasesResponsePrivate
- *
- * \brief Private implementation for DescribeCasesResponse.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCasesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCasesResponse instance.
+ * Constructs a DescribeCasesResponsePrivate object with public implementation \a q.
  */
 DescribeCasesResponsePrivate::DescribeCasesResponsePrivate(
     DescribeCasesResponse * const q) : SupportResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeCasesResponsePrivate::DescribeCasesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Support DescribeCasesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Support DescribeCases response element from \a xml.
  */
 void DescribeCasesResponsePrivate::parseDescribeCasesResponse(QXmlStreamReader &xml)
 {

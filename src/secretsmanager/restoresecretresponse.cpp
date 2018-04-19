@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::RestoreSecretResponse
- *
  * \brief The RestoreSecretResponse class provides an interace for SecretsManager RestoreSecret responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new RestoreSecretResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreSecretResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreSecretResponse::RestoreSecretResponse(
         const RestoreSecretRequest &request,
@@ -155,6 +150,9 @@ RestoreSecretResponse::RestoreSecretResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreSecretRequest * RestoreSecretResponse::request() const
 {
     Q_D(const RestoreSecretResponse);
@@ -162,9 +160,8 @@ const RestoreSecretRequest * RestoreSecretResponse::request() const
 }
 
 /*!
- * @brief  Parse a SecretsManager RestoreSecret response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager RestoreSecret \a response.
  */
 void RestoreSecretResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void RestoreSecretResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::RestoreSecretResponsePrivate
+ * \brief The RestoreSecretResponsePrivate class provides private implementation for RestoreSecretResponse.
  * \internal
  *
- * \class RestoreSecretResponsePrivate
- *
- * \brief Private implementation for RestoreSecretResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreSecretResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreSecretResponse instance.
+ * Constructs a RestoreSecretResponsePrivate object with public implementation \a q.
  */
 RestoreSecretResponsePrivate::RestoreSecretResponsePrivate(
     RestoreSecretResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ RestoreSecretResponsePrivate::RestoreSecretResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SecretsManager RestoreSecretResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager RestoreSecret response element from \a xml.
  */
 void RestoreSecretResponsePrivate::parseRestoreSecretResponse(QXmlStreamReader &xml)
 {

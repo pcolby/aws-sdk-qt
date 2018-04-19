@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSubscriptionStateResponse : public ShieldResponse {
 public:
     GetSubscriptionStateResponse(const GetSubscriptionStateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSubscriptionStateRequest * request() const;
+    virtual const GetSubscriptionStateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSubscriptionStateResponse)

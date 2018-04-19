@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * PutScalingPolicyRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a PutScalingPolicyRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a PutScalingPolicyRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 PutScalingPolicyRequestPrivate::PutScalingPolicyRequestPrivate(
     const GameLiftRequest::Action action, PutScalingPolicyRequest * const q)

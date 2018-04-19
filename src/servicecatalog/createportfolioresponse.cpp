@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CreatePortfolioResponse
- *
  * \brief The CreatePortfolioResponse class provides an interace for ServiceCatalog CreatePortfolio responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CreatePortfolioResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePortfolioResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePortfolioResponse::CreatePortfolioResponse(
         const CreatePortfolioRequest &request,
@@ -61,6 +56,9 @@ CreatePortfolioResponse::CreatePortfolioResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePortfolioRequest * CreatePortfolioResponse::request() const
 {
     Q_D(const CreatePortfolioResponse);
@@ -68,9 +66,8 @@ const CreatePortfolioRequest * CreatePortfolioResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog CreatePortfolio response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog CreatePortfolio \a response.
  */
 void CreatePortfolioResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreatePortfolioResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::CreatePortfolioResponsePrivate
+ * \brief The CreatePortfolioResponsePrivate class provides private implementation for CreatePortfolioResponse.
  * \internal
  *
- * \class CreatePortfolioResponsePrivate
- *
- * \brief Private implementation for CreatePortfolioResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePortfolioResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePortfolioResponse instance.
+ * Constructs a CreatePortfolioResponsePrivate object with public implementation \a q.
  */
 CreatePortfolioResponsePrivate::CreatePortfolioResponsePrivate(
     CreatePortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ CreatePortfolioResponsePrivate::CreatePortfolioResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog CreatePortfolioResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog CreatePortfolio response element from \a xml.
  */
 void CreatePortfolioResponsePrivate::parseCreatePortfolioResponse(QXmlStreamReader &xml)
 {

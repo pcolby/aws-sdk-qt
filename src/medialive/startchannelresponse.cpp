@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::StartChannelResponse
- *
  * \brief The StartChannelResponse class provides an interace for MediaLive StartChannel responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::startChannel
  */
 
 /*!
- * @brief  Constructs a new StartChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 StartChannelResponse::StartChannelResponse(
         const StartChannelRequest &request,
@@ -55,6 +50,9 @@ StartChannelResponse::StartChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartChannelRequest * StartChannelResponse::request() const
 {
     Q_D(const StartChannelResponse);
@@ -62,9 +60,8 @@ const StartChannelRequest * StartChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaLive StartChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive StartChannel \a response.
  */
 void StartChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void StartChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::StartChannelResponsePrivate
+ * \brief The StartChannelResponsePrivate class provides private implementation for StartChannelResponse.
  * \internal
  *
- * \class StartChannelResponsePrivate
- *
- * \brief Private implementation for StartChannelResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartChannelResponse instance.
+ * Constructs a StartChannelResponsePrivate object with public implementation \a q.
  */
 StartChannelResponsePrivate::StartChannelResponsePrivate(
     StartChannelResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ StartChannelResponsePrivate::StartChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive StartChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive StartChannel response element from \a xml.
  */
 void StartChannelResponsePrivate::parseStartChannelResponse(QXmlStreamReader &xml)
 {

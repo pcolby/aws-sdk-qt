@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * IsVpcPeeredRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a IsVpcPeeredRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a IsVpcPeeredRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 IsVpcPeeredRequestPrivate::IsVpcPeeredRequestPrivate(
     const LightsailRequest::Action action, IsVpcPeeredRequest * const q)

@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ListSubscriptionsResponse
- *
  * \brief The ListSubscriptionsResponse class provides an interace for SNS ListSubscriptions responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ListSubscriptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSubscriptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSubscriptionsResponse::ListSubscriptionsResponse(
         const ListSubscriptionsRequest &request,
@@ -69,6 +64,9 @@ ListSubscriptionsResponse::ListSubscriptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSubscriptionsRequest * ListSubscriptionsResponse::request() const
 {
     Q_D(const ListSubscriptionsResponse);
@@ -76,9 +74,8 @@ const ListSubscriptionsRequest * ListSubscriptionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SNS ListSubscriptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS ListSubscriptions \a response.
  */
 void ListSubscriptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListSubscriptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::ListSubscriptionsResponsePrivate
+ * \brief The ListSubscriptionsResponsePrivate class provides private implementation for ListSubscriptionsResponse.
  * \internal
  *
- * \class ListSubscriptionsResponsePrivate
- *
- * \brief Private implementation for ListSubscriptionsResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSubscriptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSubscriptionsResponse instance.
+ * Constructs a ListSubscriptionsResponsePrivate object with public implementation \a q.
  */
 ListSubscriptionsResponsePrivate::ListSubscriptionsResponsePrivate(
     ListSubscriptionsResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ ListSubscriptionsResponsePrivate::ListSubscriptionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS ListSubscriptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS ListSubscriptions response element from \a xml.
  */
 void ListSubscriptionsResponsePrivate::parseListSubscriptionsResponse(QXmlStreamReader &xml)
 {

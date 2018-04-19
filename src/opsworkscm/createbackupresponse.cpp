@@ -29,10 +29,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::CreateBackupResponse
- *
  * \brief The CreateBackupResponse class provides an interace for OpsWorksCM CreateBackup responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -99,11 +98,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new CreateBackupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateBackupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateBackupResponse::CreateBackupResponse(
         const CreateBackupRequest &request,
@@ -115,6 +110,9 @@ CreateBackupResponse::CreateBackupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateBackupRequest * CreateBackupResponse::request() const
 {
     Q_D(const CreateBackupResponse);
@@ -122,9 +120,8 @@ const CreateBackupRequest * CreateBackupResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorksCM CreateBackup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorksCM CreateBackup \a response.
  */
 void CreateBackupResponse::parseSuccess(QIODevice &response)
 {
@@ -134,19 +131,15 @@ void CreateBackupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorksCM::CreateBackupResponsePrivate
+ * \brief The CreateBackupResponsePrivate class provides private implementation for CreateBackupResponse.
  * \internal
  *
- * \class CreateBackupResponsePrivate
- *
- * \brief Private implementation for CreateBackupResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBackupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateBackupResponse instance.
+ * Constructs a CreateBackupResponsePrivate object with public implementation \a q.
  */
 CreateBackupResponsePrivate::CreateBackupResponsePrivate(
     CreateBackupResponse * const q) : OpsWorksCMResponsePrivate(q)
@@ -155,9 +148,7 @@ CreateBackupResponsePrivate::CreateBackupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorksCM CreateBackupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorksCM CreateBackup response element from \a xml.
  */
 void CreateBackupResponsePrivate::parseCreateBackupResponse(QXmlStreamReader &xml)
 {

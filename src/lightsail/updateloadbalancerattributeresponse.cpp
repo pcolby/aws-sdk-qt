@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::UpdateLoadBalancerAttributeResponse
- *
  * \brief The UpdateLoadBalancerAttributeResponse class provides an interace for Lightsail UpdateLoadBalancerAttribute responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new UpdateLoadBalancerAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateLoadBalancerAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateLoadBalancerAttributeResponse::UpdateLoadBalancerAttributeResponse(
         const UpdateLoadBalancerAttributeRequest &request,
@@ -71,6 +66,9 @@ UpdateLoadBalancerAttributeResponse::UpdateLoadBalancerAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateLoadBalancerAttributeRequest * UpdateLoadBalancerAttributeResponse::request() const
 {
     Q_D(const UpdateLoadBalancerAttributeResponse);
@@ -78,9 +76,8 @@ const UpdateLoadBalancerAttributeRequest * UpdateLoadBalancerAttributeResponse::
 }
 
 /*!
- * @brief  Parse a Lightsail UpdateLoadBalancerAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail UpdateLoadBalancerAttribute \a response.
  */
 void UpdateLoadBalancerAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void UpdateLoadBalancerAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::UpdateLoadBalancerAttributeResponsePrivate
+ * \brief The UpdateLoadBalancerAttributeResponsePrivate class provides private implementation for UpdateLoadBalancerAttributeResponse.
  * \internal
  *
- * \class UpdateLoadBalancerAttributeResponsePrivate
- *
- * \brief Private implementation for UpdateLoadBalancerAttributeResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateLoadBalancerAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateLoadBalancerAttributeResponse instance.
+ * Constructs a UpdateLoadBalancerAttributeResponsePrivate object with public implementation \a q.
  */
 UpdateLoadBalancerAttributeResponsePrivate::UpdateLoadBalancerAttributeResponsePrivate(
     UpdateLoadBalancerAttributeResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ UpdateLoadBalancerAttributeResponsePrivate::UpdateLoadBalancerAttributeResponseP
 }
 
 /*!
- * @brief  Parse an Lightsail UpdateLoadBalancerAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail UpdateLoadBalancerAttribute response element from \a xml.
  */
 void UpdateLoadBalancerAttributeResponsePrivate::parseUpdateLoadBalancerAttributeResponse(QXmlStreamReader &xml)
 {

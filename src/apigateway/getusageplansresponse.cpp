@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetUsagePlansResponse
- *
  * \brief The GetUsagePlansResponse class provides an interace for APIGateway GetUsagePlans responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetUsagePlansResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetUsagePlansResponse object for \a reply to \a request, with parent \a parent.
  */
 GetUsagePlansResponse::GetUsagePlansResponse(
         const GetUsagePlansRequest &request,
@@ -60,6 +55,9 @@ GetUsagePlansResponse::GetUsagePlansResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetUsagePlansRequest * GetUsagePlansResponse::request() const
 {
     Q_D(const GetUsagePlansResponse);
@@ -67,9 +65,8 @@ const GetUsagePlansRequest * GetUsagePlansResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetUsagePlans response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetUsagePlans \a response.
  */
 void GetUsagePlansResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetUsagePlansResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetUsagePlansResponsePrivate
+ * \brief The GetUsagePlansResponsePrivate class provides private implementation for GetUsagePlansResponse.
  * \internal
  *
- * \class GetUsagePlansResponsePrivate
- *
- * \brief Private implementation for GetUsagePlansResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUsagePlansResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetUsagePlansResponse instance.
+ * Constructs a GetUsagePlansResponsePrivate object with public implementation \a q.
  */
 GetUsagePlansResponsePrivate::GetUsagePlansResponsePrivate(
     GetUsagePlansResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetUsagePlansResponsePrivate::GetUsagePlansResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetUsagePlansResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetUsagePlans response element from \a xml.
  */
 void GetUsagePlansResponsePrivate::parseGetUsagePlansResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetPlatformApplicationAttributesResponse : public SNSResponse
 public:
     GetPlatformApplicationAttributesResponse(const GetPlatformApplicationAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetPlatformApplicationAttributesRequest * request() const;
+    virtual const GetPlatformApplicationAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetPlatformApplicationAttributesResponse)

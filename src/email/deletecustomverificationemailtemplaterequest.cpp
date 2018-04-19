@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomVerificationEmailTemplateRequest:
  */
 
 /*!
- *
- * Constructs a DeleteCustomVerificationEmailTemplateRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCustomVerificationEmailTemplateRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 DeleteCustomVerificationEmailTemplateRequestPrivate::DeleteCustomVerificationEmailTemplateRequestPrivate(
     const SESRequest::Action action, DeleteCustomVerificationEmailTemplateRequest * const q)

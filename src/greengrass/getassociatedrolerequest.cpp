@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetAssociatedRoleRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetAssociatedRoleRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a GetAssociatedRoleRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 GetAssociatedRoleRequestPrivate::GetAssociatedRoleRequestPrivate(
     const GreengrassRequest::Action action, GetAssociatedRoleRequest * const q)

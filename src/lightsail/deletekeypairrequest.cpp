@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DeleteKeyPairRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteKeyPairRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a DeleteKeyPairRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 DeleteKeyPairRequestPrivate::DeleteKeyPairRequestPrivate(
     const LightsailRequest::Action action, DeleteKeyPairRequest * const q)

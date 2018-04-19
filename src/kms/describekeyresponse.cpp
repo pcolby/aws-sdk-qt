@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::DescribeKeyResponse
- *
  * \brief The DescribeKeyResponse class provides an interace for KMS DescribeKey responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new DescribeKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeKeyResponse::DescribeKeyResponse(
         const DescribeKeyRequest &request,
@@ -154,6 +149,9 @@ DescribeKeyResponse::DescribeKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeKeyRequest * DescribeKeyResponse::request() const
 {
     Q_D(const DescribeKeyResponse);
@@ -161,9 +159,8 @@ const DescribeKeyRequest * DescribeKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS DescribeKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS DescribeKey \a response.
  */
 void DescribeKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void DescribeKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::DescribeKeyResponsePrivate
+ * \brief The DescribeKeyResponsePrivate class provides private implementation for DescribeKeyResponse.
  * \internal
  *
- * \class DescribeKeyResponsePrivate
- *
- * \brief Private implementation for DescribeKeyResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeKeyResponse instance.
+ * Constructs a DescribeKeyResponsePrivate object with public implementation \a q.
  */
 DescribeKeyResponsePrivate::DescribeKeyResponsePrivate(
     DescribeKeyResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ DescribeKeyResponsePrivate::DescribeKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS DescribeKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS DescribeKey response element from \a xml.
  */
 void DescribeKeyResponsePrivate::parseDescribeKeyResponse(QXmlStreamReader &xml)
 {

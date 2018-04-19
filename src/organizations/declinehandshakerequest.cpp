@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * DeclineHandshakeRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeclineHandshakeRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a DeclineHandshakeRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 DeclineHandshakeRequestPrivate::DeclineHandshakeRequestPrivate(
     const OrganizationsRequest::Action action, DeclineHandshakeRequest * const q)

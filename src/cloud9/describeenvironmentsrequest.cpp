@@ -135,9 +135,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeEnvironmentsRequestPrivate object for Cloud9 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEnvironmentsRequestPrivate object for Cloud9 \a action,
+ * with public implementation \a q.
  */
 DescribeEnvironmentsRequestPrivate::DescribeEnvironmentsRequestPrivate(
     const Cloud9Request::Action action, DescribeEnvironmentsRequest * const q)

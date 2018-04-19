@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * TerminateWorkflowExecutionRequest::response(Q
  */
 
 /*!
- *
- * Constructs a TerminateWorkflowExecutionRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a TerminateWorkflowExecutionRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 TerminateWorkflowExecutionRequestPrivate::TerminateWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, TerminateWorkflowExecutionRequest * const q)

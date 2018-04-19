@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * ApplyPendingMaintenanceActionRequest::respons
  */
 
 /*!
- *
- * Constructs a ApplyPendingMaintenanceActionRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a ApplyPendingMaintenanceActionRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 ApplyPendingMaintenanceActionRequestPrivate::ApplyPendingMaintenanceActionRequestPrivate(
     const RDSRequest::Action action, ApplyPendingMaintenanceActionRequest * const q)

@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeActivitiesResponse
- *
  * \brief The DescribeActivitiesResponse class provides an interace for WorkDocs DescribeActivities responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeActivitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeActivitiesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeActivitiesResponse::DescribeActivitiesResponse(
         const DescribeActivitiesRequest &request,
@@ -84,6 +79,9 @@ DescribeActivitiesResponse::DescribeActivitiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeActivitiesRequest * DescribeActivitiesResponse::request() const
 {
     Q_D(const DescribeActivitiesResponse);
@@ -91,9 +89,8 @@ const DescribeActivitiesRequest * DescribeActivitiesResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs DescribeActivities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DescribeActivities \a response.
  */
 void DescribeActivitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeActivitiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DescribeActivitiesResponsePrivate
+ * \brief The DescribeActivitiesResponsePrivate class provides private implementation for DescribeActivitiesResponse.
  * \internal
  *
- * \class DescribeActivitiesResponsePrivate
- *
- * \brief Private implementation for DescribeActivitiesResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeActivitiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeActivitiesResponse instance.
+ * Constructs a DescribeActivitiesResponsePrivate object with public implementation \a q.
  */
 DescribeActivitiesResponsePrivate::DescribeActivitiesResponsePrivate(
     DescribeActivitiesResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeActivitiesResponsePrivate::DescribeActivitiesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DescribeActivitiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DescribeActivities response element from \a xml.
  */
 void DescribeActivitiesResponsePrivate::parseDescribeActivitiesResponse(QXmlStreamReader &xml)
 {

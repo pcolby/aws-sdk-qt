@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteMethodResponseResponse
- *
  * \brief The DeleteMethodResponseResponse class provides an interace for APIGateway DeleteMethodResponse responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteMethodResponseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteMethodResponseResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteMethodResponseResponse::DeleteMethodResponseResponse(
         const DeleteMethodResponseRequest &request,
@@ -60,6 +55,9 @@ DeleteMethodResponseResponse::DeleteMethodResponseResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteMethodResponseRequest * DeleteMethodResponseResponse::request() const
 {
     Q_D(const DeleteMethodResponseResponse);
@@ -67,9 +65,8 @@ const DeleteMethodResponseRequest * DeleteMethodResponseResponse::request() cons
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteMethodResponse response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteMethodResponse \a response.
  */
 void DeleteMethodResponseResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteMethodResponseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteMethodResponseResponsePrivate
+ * \brief The DeleteMethodResponseResponsePrivate class provides private implementation for DeleteMethodResponseResponse.
  * \internal
  *
- * \class DeleteMethodResponseResponsePrivate
- *
- * \brief Private implementation for DeleteMethodResponseResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMethodResponseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteMethodResponseResponse instance.
+ * Constructs a DeleteMethodResponseResponsePrivate object with public implementation \a q.
  */
 DeleteMethodResponseResponsePrivate::DeleteMethodResponseResponsePrivate(
     DeleteMethodResponseResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteMethodResponseResponsePrivate::DeleteMethodResponseResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteMethodResponseResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteMethodResponse response element from \a xml.
  */
 void DeleteMethodResponseResponsePrivate::parseDeleteMethodResponseResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListResourceRecordSetsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListResourceRecordSetsRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a ListResourceRecordSetsRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 ListResourceRecordSetsRequestPrivate::ListResourceRecordSetsRequestPrivate(
     const Route53Request::Action action, ListResourceRecordSetsRequest * const q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PutBucketRequestPaymentRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a PutBucketRequestPaymentRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a PutBucketRequestPaymentRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 PutBucketRequestPaymentRequestPrivate::PutBucketRequestPaymentRequestPrivate(
     const S3Request::Action action, PutBucketRequestPaymentRequest * const q)

@@ -29,10 +29,9 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::GetServiceGraphResponse
- *
  * \brief The GetServiceGraphResponse class provides an interace for XRay GetServiceGraph responses.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  *
  *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  *
@@ -40,11 +39,7 @@ namespace XRay {
  */
 
 /*!
- * @brief  Constructs a new GetServiceGraphResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetServiceGraphResponse object for \a reply to \a request, with parent \a parent.
  */
 GetServiceGraphResponse::GetServiceGraphResponse(
         const GetServiceGraphRequest &request,
@@ -56,6 +51,9 @@ GetServiceGraphResponse::GetServiceGraphResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetServiceGraphRequest * GetServiceGraphResponse::request() const
 {
     Q_D(const GetServiceGraphResponse);
@@ -63,9 +61,8 @@ const GetServiceGraphRequest * GetServiceGraphResponse::request() const
 }
 
 /*!
- * @brief  Parse a XRay GetServiceGraph response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful XRay GetServiceGraph \a response.
  */
 void GetServiceGraphResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetServiceGraphResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::XRay::GetServiceGraphResponsePrivate
+ * \brief The GetServiceGraphResponsePrivate class provides private implementation for GetServiceGraphResponse.
  * \internal
  *
- * \class GetServiceGraphResponsePrivate
- *
- * \brief Private implementation for GetServiceGraphResponse.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetServiceGraphResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetServiceGraphResponse instance.
+ * Constructs a GetServiceGraphResponsePrivate object with public implementation \a q.
  */
 GetServiceGraphResponsePrivate::GetServiceGraphResponsePrivate(
     GetServiceGraphResponse * const q) : XRayResponsePrivate(q)
@@ -96,9 +89,7 @@ GetServiceGraphResponsePrivate::GetServiceGraphResponsePrivate(
 }
 
 /*!
- * @brief  Parse an XRay GetServiceGraphResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a XRay GetServiceGraph response element from \a xml.
  */
 void GetServiceGraphResponsePrivate::parseGetServiceGraphResponse(QXmlStreamReader &xml)
 {

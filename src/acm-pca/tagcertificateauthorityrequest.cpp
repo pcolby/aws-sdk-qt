@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * TagCertificateAuthorityRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a TagCertificateAuthorityRequestPrivate object for ACMPCA \a action with,
- * public implementation \a q.
+ * Constructs a TagCertificateAuthorityRequestPrivate object for ACMPCA \a action,
+ * with public implementation \a q.
  */
 TagCertificateAuthorityRequestPrivate::TagCertificateAuthorityRequestPrivate(
     const ACMPCARequest::Action action, TagCertificateAuthorityRequest * const q)

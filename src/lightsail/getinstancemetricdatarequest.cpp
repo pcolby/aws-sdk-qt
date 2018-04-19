@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetInstanceMetricDataRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetInstanceMetricDataRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetInstanceMetricDataRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetInstanceMetricDataRequestPrivate::GetInstanceMetricDataRequestPrivate(
     const LightsailRequest::Action action, GetInstanceMetricDataRequest * const q)

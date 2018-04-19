@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RequestSpotFleetResponse
- *
  * \brief The RequestSpotFleetResponse class provides an interace for EC2 RequestSpotFleet responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RequestSpotFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RequestSpotFleetResponse object for \a reply to \a request, with parent \a parent.
  */
 RequestSpotFleetResponse::RequestSpotFleetResponse(
         const RequestSpotFleetRequest &request,
@@ -59,6 +54,9 @@ RequestSpotFleetResponse::RequestSpotFleetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RequestSpotFleetRequest * RequestSpotFleetResponse::request() const
 {
     Q_D(const RequestSpotFleetResponse);
@@ -66,9 +64,8 @@ const RequestSpotFleetRequest * RequestSpotFleetResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 RequestSpotFleet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 RequestSpotFleet \a response.
  */
 void RequestSpotFleetResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void RequestSpotFleetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::RequestSpotFleetResponsePrivate
+ * \brief The RequestSpotFleetResponsePrivate class provides private implementation for RequestSpotFleetResponse.
  * \internal
  *
- * \class RequestSpotFleetResponsePrivate
- *
- * \brief Private implementation for RequestSpotFleetResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RequestSpotFleetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RequestSpotFleetResponse instance.
+ * Constructs a RequestSpotFleetResponsePrivate object with public implementation \a q.
  */
 RequestSpotFleetResponsePrivate::RequestSpotFleetResponsePrivate(
     RequestSpotFleetResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ RequestSpotFleetResponsePrivate::RequestSpotFleetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 RequestSpotFleetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 RequestSpotFleet response element from \a xml.
  */
 void RequestSpotFleetResponsePrivate::parseRequestSpotFleetResponse(QXmlStreamReader &xml)
 {

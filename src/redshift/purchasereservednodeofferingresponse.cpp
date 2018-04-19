@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::PurchaseReservedNodeOfferingResponse
- *
  * \brief The PurchaseReservedNodeOfferingResponse class provides an interace for Redshift PurchaseReservedNodeOffering responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new PurchaseReservedNodeOfferingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PurchaseReservedNodeOfferingResponse object for \a reply to \a request, with parent \a parent.
  */
 PurchaseReservedNodeOfferingResponse::PurchaseReservedNodeOfferingResponse(
         const PurchaseReservedNodeOfferingRequest &request,
@@ -85,6 +80,9 @@ PurchaseReservedNodeOfferingResponse::PurchaseReservedNodeOfferingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PurchaseReservedNodeOfferingRequest * PurchaseReservedNodeOfferingResponse::request() const
 {
     Q_D(const PurchaseReservedNodeOfferingResponse);
@@ -92,9 +90,8 @@ const PurchaseReservedNodeOfferingRequest * PurchaseReservedNodeOfferingResponse
 }
 
 /*!
- * @brief  Parse a Redshift PurchaseReservedNodeOffering response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift PurchaseReservedNodeOffering \a response.
  */
 void PurchaseReservedNodeOfferingResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void PurchaseReservedNodeOfferingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::PurchaseReservedNodeOfferingResponsePrivate
+ * \brief The PurchaseReservedNodeOfferingResponsePrivate class provides private implementation for PurchaseReservedNodeOfferingResponse.
  * \internal
  *
- * \class PurchaseReservedNodeOfferingResponsePrivate
- *
- * \brief Private implementation for PurchaseReservedNodeOfferingResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseReservedNodeOfferingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PurchaseReservedNodeOfferingResponse instance.
+ * Constructs a PurchaseReservedNodeOfferingResponsePrivate object with public implementation \a q.
  */
 PurchaseReservedNodeOfferingResponsePrivate::PurchaseReservedNodeOfferingResponsePrivate(
     PurchaseReservedNodeOfferingResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ PurchaseReservedNodeOfferingResponsePrivate::PurchaseReservedNodeOfferingRespons
 }
 
 /*!
- * @brief  Parse an Redshift PurchaseReservedNodeOfferingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift PurchaseReservedNodeOffering response element from \a xml.
  */
 void PurchaseReservedNodeOfferingResponsePrivate::parsePurchaseReservedNodeOfferingResponse(QXmlStreamReader &xml)
 {

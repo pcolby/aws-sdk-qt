@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * GetComplianceDetailRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetComplianceDetailRequestPrivate object for FMS \a action with,
- * public implementation \a q.
+ * Constructs a GetComplianceDetailRequestPrivate object for FMS \a action,
+ * with public implementation \a q.
  */
 GetComplianceDetailRequestPrivate::GetComplianceDetailRequestPrivate(
     const FMSRequest::Action action, GetComplianceDetailRequest * const q)

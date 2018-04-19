@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * GetProjectRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetProjectRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a GetProjectRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 GetProjectRequestPrivate::GetProjectRequestPrivate(
     const DeviceFarmRequest::Action action, GetProjectRequest * const q)

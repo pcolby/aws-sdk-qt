@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::UpdateUserResponse
- *
  * \brief The UpdateUserResponse class provides an interace for MQ UpdateUser responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new UpdateUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateUserResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateUserResponse::UpdateUserResponse(
         const UpdateUserRequest &request,
@@ -57,6 +52,9 @@ UpdateUserResponse::UpdateUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateUserRequest * UpdateUserResponse::request() const
 {
     Q_D(const UpdateUserResponse);
@@ -64,9 +62,8 @@ const UpdateUserRequest * UpdateUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ UpdateUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ UpdateUser \a response.
  */
 void UpdateUserResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void UpdateUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::UpdateUserResponsePrivate
+ * \brief The UpdateUserResponsePrivate class provides private implementation for UpdateUserResponse.
  * \internal
  *
- * \class UpdateUserResponsePrivate
- *
- * \brief Private implementation for UpdateUserResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateUserResponse instance.
+ * Constructs a UpdateUserResponsePrivate object with public implementation \a q.
  */
 UpdateUserResponsePrivate::UpdateUserResponsePrivate(
     UpdateUserResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ UpdateUserResponsePrivate::UpdateUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ UpdateUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ UpdateUser response element from \a xml.
  */
 void UpdateUserResponsePrivate::parseUpdateUserResponse(QXmlStreamReader &xml)
 {

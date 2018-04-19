@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ConfirmSubscriptionResponse
- *
  * \brief The ConfirmSubscriptionResponse class provides an interace for SNS ConfirmSubscription responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ConfirmSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ConfirmSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 ConfirmSubscriptionResponse::ConfirmSubscriptionResponse(
         const ConfirmSubscriptionRequest &request,
@@ -69,6 +64,9 @@ ConfirmSubscriptionResponse::ConfirmSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ConfirmSubscriptionRequest * ConfirmSubscriptionResponse::request() const
 {
     Q_D(const ConfirmSubscriptionResponse);
@@ -76,9 +74,8 @@ const ConfirmSubscriptionRequest * ConfirmSubscriptionResponse::request() const
 }
 
 /*!
- * @brief  Parse a SNS ConfirmSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS ConfirmSubscription \a response.
  */
 void ConfirmSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ConfirmSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::ConfirmSubscriptionResponsePrivate
+ * \brief The ConfirmSubscriptionResponsePrivate class provides private implementation for ConfirmSubscriptionResponse.
  * \internal
  *
- * \class ConfirmSubscriptionResponsePrivate
- *
- * \brief Private implementation for ConfirmSubscriptionResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ConfirmSubscriptionResponse instance.
+ * Constructs a ConfirmSubscriptionResponsePrivate object with public implementation \a q.
  */
 ConfirmSubscriptionResponsePrivate::ConfirmSubscriptionResponsePrivate(
     ConfirmSubscriptionResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ ConfirmSubscriptionResponsePrivate::ConfirmSubscriptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS ConfirmSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS ConfirmSubscription response element from \a xml.
  */
 void ConfirmSubscriptionResponsePrivate::parseConfirmSubscriptionResponse(QXmlStreamReader &xml)
 {

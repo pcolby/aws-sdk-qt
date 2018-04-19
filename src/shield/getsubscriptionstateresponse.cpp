@@ -29,10 +29,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::GetSubscriptionStateResponse
- *
  * \brief The GetSubscriptionStateResponse class provides an interace for Shield GetSubscriptionState responses.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -45,11 +44,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new GetSubscriptionStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSubscriptionStateResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSubscriptionStateResponse::GetSubscriptionStateResponse(
         const GetSubscriptionStateRequest &request,
@@ -61,6 +56,9 @@ GetSubscriptionStateResponse::GetSubscriptionStateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSubscriptionStateRequest * GetSubscriptionStateResponse::request() const
 {
     Q_D(const GetSubscriptionStateResponse);
@@ -68,9 +66,8 @@ const GetSubscriptionStateRequest * GetSubscriptionStateResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Shield GetSubscriptionState response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Shield GetSubscriptionState \a response.
  */
 void GetSubscriptionStateResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void GetSubscriptionStateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Shield::GetSubscriptionStateResponsePrivate
+ * \brief The GetSubscriptionStateResponsePrivate class provides private implementation for GetSubscriptionStateResponse.
  * \internal
  *
- * \class GetSubscriptionStateResponsePrivate
- *
- * \brief Private implementation for GetSubscriptionStateResponse.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSubscriptionStateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSubscriptionStateResponse instance.
+ * Constructs a GetSubscriptionStateResponsePrivate object with public implementation \a q.
  */
 GetSubscriptionStateResponsePrivate::GetSubscriptionStateResponsePrivate(
     GetSubscriptionStateResponse * const q) : ShieldResponsePrivate(q)
@@ -101,9 +94,7 @@ GetSubscriptionStateResponsePrivate::GetSubscriptionStateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Shield GetSubscriptionStateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Shield GetSubscriptionState response element from \a xml.
  */
 void GetSubscriptionStateResponsePrivate::parseGetSubscriptionStateResponse(QXmlStreamReader &xml)
 {

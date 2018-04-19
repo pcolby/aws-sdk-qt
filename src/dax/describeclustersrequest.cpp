@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeClustersRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a DescribeClustersRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const DAXRequest::Action action, DescribeClustersRequest * const q)

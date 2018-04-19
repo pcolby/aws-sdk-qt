@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteSmsChannelResponse
- *
  * \brief The DeleteSmsChannelResponse class provides an interace for Pinpoint DeleteSmsChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteSmsChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteSmsChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSmsChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSmsChannelResponse::DeleteSmsChannelResponse(
         const DeleteSmsChannelRequest &request,
@@ -55,6 +50,9 @@ DeleteSmsChannelResponse::DeleteSmsChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSmsChannelRequest * DeleteSmsChannelResponse::request() const
 {
     Q_D(const DeleteSmsChannelResponse);
@@ -62,9 +60,8 @@ const DeleteSmsChannelRequest * DeleteSmsChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint DeleteSmsChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint DeleteSmsChannel \a response.
  */
 void DeleteSmsChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteSmsChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::DeleteSmsChannelResponsePrivate
+ * \brief The DeleteSmsChannelResponsePrivate class provides private implementation for DeleteSmsChannelResponse.
  * \internal
  *
- * \class DeleteSmsChannelResponsePrivate
- *
- * \brief Private implementation for DeleteSmsChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSmsChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSmsChannelResponse instance.
+ * Constructs a DeleteSmsChannelResponsePrivate object with public implementation \a q.
  */
 DeleteSmsChannelResponsePrivate::DeleteSmsChannelResponsePrivate(
     DeleteSmsChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteSmsChannelResponsePrivate::DeleteSmsChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint DeleteSmsChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint DeleteSmsChannel response element from \a xml.
  */
 void DeleteSmsChannelResponsePrivate::parseDeleteSmsChannelResponse(QXmlStreamReader &xml)
 {

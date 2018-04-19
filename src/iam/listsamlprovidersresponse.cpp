@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListSAMLProvidersResponse
- *
  * \brief The ListSAMLProvidersResponse class provides an interace for IAM ListSAMLProviders responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListSAMLProvidersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSAMLProvidersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSAMLProvidersResponse::ListSAMLProvidersResponse(
         const ListSAMLProvidersRequest &request,
@@ -120,6 +115,9 @@ ListSAMLProvidersResponse::ListSAMLProvidersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSAMLProvidersRequest * ListSAMLProvidersResponse::request() const
 {
     Q_D(const ListSAMLProvidersResponse);
@@ -127,9 +125,8 @@ const ListSAMLProvidersRequest * ListSAMLProvidersResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM ListSAMLProviders response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListSAMLProviders \a response.
  */
 void ListSAMLProvidersResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListSAMLProvidersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListSAMLProvidersResponsePrivate
+ * \brief The ListSAMLProvidersResponsePrivate class provides private implementation for ListSAMLProvidersResponse.
  * \internal
  *
- * \class ListSAMLProvidersResponsePrivate
- *
- * \brief Private implementation for ListSAMLProvidersResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSAMLProvidersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSAMLProvidersResponse instance.
+ * Constructs a ListSAMLProvidersResponsePrivate object with public implementation \a q.
  */
 ListSAMLProvidersResponsePrivate::ListSAMLProvidersResponsePrivate(
     ListSAMLProvidersResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListSAMLProvidersResponsePrivate::ListSAMLProvidersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListSAMLProvidersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListSAMLProviders response element from \a xml.
  */
 void ListSAMLProvidersResponsePrivate::parseListSAMLProvidersResponse(QXmlStreamReader &xml)
 {

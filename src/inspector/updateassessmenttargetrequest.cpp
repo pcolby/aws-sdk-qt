@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAssessmentTargetRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateAssessmentTargetRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAssessmentTargetRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 UpdateAssessmentTargetRequestPrivate::UpdateAssessmentTargetRequestPrivate(
     const InspectorRequest::Action action, UpdateAssessmentTargetRequest * const q)

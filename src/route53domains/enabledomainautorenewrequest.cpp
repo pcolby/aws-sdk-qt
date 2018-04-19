@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * EnableDomainAutoRenewRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a EnableDomainAutoRenewRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a EnableDomainAutoRenewRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 EnableDomainAutoRenewRequestPrivate::EnableDomainAutoRenewRequestPrivate(
     const Route53DomainsRequest::Action action, EnableDomainAutoRenewRequest * const q)

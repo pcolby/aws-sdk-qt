@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminRemoveUserFromGroupResponse
- *
  * \brief The AdminRemoveUserFromGroupResponse class provides an interace for CognitoIdentityProvider AdminRemoveUserFromGroup responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminRemoveUserFromGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminRemoveUserFromGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminRemoveUserFromGroupResponse::AdminRemoveUserFromGroupResponse(
         const AdminRemoveUserFromGroupRequest &request,
@@ -65,6 +60,9 @@ AdminRemoveUserFromGroupResponse::AdminRemoveUserFromGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminRemoveUserFromGroupRequest * AdminRemoveUserFromGroupResponse::request() const
 {
     Q_D(const AdminRemoveUserFromGroupResponse);
@@ -72,9 +70,8 @@ const AdminRemoveUserFromGroupRequest * AdminRemoveUserFromGroupResponse::reques
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminRemoveUserFromGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminRemoveUserFromGroup \a response.
  */
 void AdminRemoveUserFromGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminRemoveUserFromGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminRemoveUserFromGroupResponsePrivate
+ * \brief The AdminRemoveUserFromGroupResponsePrivate class provides private implementation for AdminRemoveUserFromGroupResponse.
  * \internal
  *
- * \class AdminRemoveUserFromGroupResponsePrivate
- *
- * \brief Private implementation for AdminRemoveUserFromGroupResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminRemoveUserFromGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminRemoveUserFromGroupResponse instance.
+ * Constructs a AdminRemoveUserFromGroupResponsePrivate object with public implementation \a q.
  */
 AdminRemoveUserFromGroupResponsePrivate::AdminRemoveUserFromGroupResponsePrivate(
     AdminRemoveUserFromGroupResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminRemoveUserFromGroupResponsePrivate::AdminRemoveUserFromGroupResponsePrivate
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminRemoveUserFromGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminRemoveUserFromGroup response element from \a xml.
  */
 void AdminRemoveUserFromGroupResponsePrivate::parseAdminRemoveUserFromGroupResponse(QXmlStreamReader &xml)
 {

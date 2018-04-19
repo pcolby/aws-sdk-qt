@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteServerCertificateRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteServerCertificateRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteServerCertificateRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteServerCertificateRequestPrivate::DeleteServerCertificateRequestPrivate(
     const IAMRequest::Action action, DeleteServerCertificateRequest * const q)

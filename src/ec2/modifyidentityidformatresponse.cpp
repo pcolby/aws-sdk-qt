@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyIdentityIdFormatResponse
- *
  * \brief The ModifyIdentityIdFormatResponse class provides an interace for EC2 ModifyIdentityIdFormat responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyIdentityIdFormatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyIdentityIdFormatResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyIdentityIdFormatResponse::ModifyIdentityIdFormatResponse(
         const ModifyIdentityIdFormatRequest &request,
@@ -59,6 +54,9 @@ ModifyIdentityIdFormatResponse::ModifyIdentityIdFormatResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyIdentityIdFormatRequest * ModifyIdentityIdFormatResponse::request() const
 {
     Q_D(const ModifyIdentityIdFormatResponse);
@@ -66,9 +64,8 @@ const ModifyIdentityIdFormatRequest * ModifyIdentityIdFormatResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 ModifyIdentityIdFormat response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyIdentityIdFormat \a response.
  */
 void ModifyIdentityIdFormatResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyIdentityIdFormatResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyIdentityIdFormatResponsePrivate
+ * \brief The ModifyIdentityIdFormatResponsePrivate class provides private implementation for ModifyIdentityIdFormatResponse.
  * \internal
  *
- * \class ModifyIdentityIdFormatResponsePrivate
- *
- * \brief Private implementation for ModifyIdentityIdFormatResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyIdentityIdFormatResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyIdentityIdFormatResponse instance.
+ * Constructs a ModifyIdentityIdFormatResponsePrivate object with public implementation \a q.
  */
 ModifyIdentityIdFormatResponsePrivate::ModifyIdentityIdFormatResponsePrivate(
     ModifyIdentityIdFormatResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyIdentityIdFormatResponsePrivate::ModifyIdentityIdFormatResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifyIdentityIdFormatResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyIdentityIdFormat response element from \a xml.
  */
 void ModifyIdentityIdFormatResponsePrivate::parseModifyIdentityIdFormatResponse(QXmlStreamReader &xml)
 {

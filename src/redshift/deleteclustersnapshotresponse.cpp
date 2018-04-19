@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteClusterSnapshotResponse
- *
  * \brief The DeleteClusterSnapshotResponse class provides an interace for Redshift DeleteClusterSnapshot responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteClusterSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteClusterSnapshotResponse::DeleteClusterSnapshotResponse(
         const DeleteClusterSnapshotRequest &request,
@@ -85,6 +80,9 @@ DeleteClusterSnapshotResponse::DeleteClusterSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteClusterSnapshotRequest * DeleteClusterSnapshotResponse::request() const
 {
     Q_D(const DeleteClusterSnapshotResponse);
@@ -92,9 +90,8 @@ const DeleteClusterSnapshotRequest * DeleteClusterSnapshotResponse::request() co
 }
 
 /*!
- * @brief  Parse a Redshift DeleteClusterSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DeleteClusterSnapshot \a response.
  */
 void DeleteClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DeleteClusterSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DeleteClusterSnapshotResponsePrivate
+ * \brief The DeleteClusterSnapshotResponsePrivate class provides private implementation for DeleteClusterSnapshotResponse.
  * \internal
  *
- * \class DeleteClusterSnapshotResponsePrivate
- *
- * \brief Private implementation for DeleteClusterSnapshotResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteClusterSnapshotResponse instance.
+ * Constructs a DeleteClusterSnapshotResponsePrivate object with public implementation \a q.
  */
 DeleteClusterSnapshotResponsePrivate::DeleteClusterSnapshotResponsePrivate(
     DeleteClusterSnapshotResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DeleteClusterSnapshotResponsePrivate::DeleteClusterSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift DeleteClusterSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DeleteClusterSnapshot response element from \a xml.
  */
 void DeleteClusterSnapshotResponsePrivate::parseDeleteClusterSnapshotResponse(QXmlStreamReader &xml)
 {

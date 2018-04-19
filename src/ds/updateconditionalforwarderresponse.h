@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateConditionalForwarderResponse : public DirectoryServiceR
 public:
     UpdateConditionalForwarderResponse(const UpdateConditionalForwarderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateConditionalForwarderRequest * request() const;
+    virtual const UpdateConditionalForwarderRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateConditionalForwarderResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateRdsDbInstanceResponse : public OpsWorksResponse {
 public:
     UpdateRdsDbInstanceResponse(const UpdateRdsDbInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateRdsDbInstanceRequest * request() const;
+    virtual const UpdateRdsDbInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateRdsDbInstanceResponse)

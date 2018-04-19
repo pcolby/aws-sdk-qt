@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetGroupResponse
- *
  * \brief The GetGroupResponse class provides an interace for CognitoIdentityProvider GetGroup responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 GetGroupResponse::GetGroupResponse(
         const GetGroupRequest &request,
@@ -65,6 +60,9 @@ GetGroupResponse::GetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetGroupRequest * GetGroupResponse::request() const
 {
     Q_D(const GetGroupResponse);
@@ -72,9 +70,8 @@ const GetGroupRequest * GetGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider GetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider GetGroup \a response.
  */
 void GetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void GetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::GetGroupResponsePrivate
+ * \brief The GetGroupResponsePrivate class provides private implementation for GetGroupResponse.
  * \internal
  *
- * \class GetGroupResponsePrivate
- *
- * \brief Private implementation for GetGroupResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetGroupResponse instance.
+ * Constructs a GetGroupResponsePrivate object with public implementation \a q.
  */
 GetGroupResponsePrivate::GetGroupResponsePrivate(
     GetGroupResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ GetGroupResponsePrivate::GetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider GetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider GetGroup response element from \a xml.
  */
 void GetGroupResponsePrivate::parseGetGroupResponse(QXmlStreamReader &xml)
 {

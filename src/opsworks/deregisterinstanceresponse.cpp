@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeregisterInstanceResponse
- *
  * \brief The DeregisterInstanceResponse class provides an interace for OpsWorks DeregisterInstance responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeregisterInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterInstanceResponse::DeregisterInstanceResponse(
         const DeregisterInstanceRequest &request,
@@ -161,6 +156,9 @@ DeregisterInstanceResponse::DeregisterInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterInstanceRequest * DeregisterInstanceResponse::request() const
 {
     Q_D(const DeregisterInstanceResponse);
@@ -168,9 +166,8 @@ const DeregisterInstanceRequest * DeregisterInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DeregisterInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DeregisterInstance \a response.
  */
 void DeregisterInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DeregisterInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DeregisterInstanceResponsePrivate
+ * \brief The DeregisterInstanceResponsePrivate class provides private implementation for DeregisterInstanceResponse.
  * \internal
  *
- * \class DeregisterInstanceResponsePrivate
- *
- * \brief Private implementation for DeregisterInstanceResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterInstanceResponse instance.
+ * Constructs a DeregisterInstanceResponsePrivate object with public implementation \a q.
  */
 DeregisterInstanceResponsePrivate::DeregisterInstanceResponsePrivate(
     DeregisterInstanceResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DeregisterInstanceResponsePrivate::DeregisterInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DeregisterInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DeregisterInstance response element from \a xml.
  */
 void DeregisterInstanceResponsePrivate::parseDeregisterInstanceResponse(QXmlStreamReader &xml)
 {

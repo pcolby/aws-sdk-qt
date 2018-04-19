@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateRoleAliasResponse
- *
  * \brief The UpdateRoleAliasResponse class provides an interace for IoT UpdateRoleAlias responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateRoleAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRoleAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRoleAliasResponse::UpdateRoleAliasResponse(
         const UpdateRoleAliasRequest &request,
@@ -66,6 +61,9 @@ UpdateRoleAliasResponse::UpdateRoleAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRoleAliasRequest * UpdateRoleAliasResponse::request() const
 {
     Q_D(const UpdateRoleAliasResponse);
@@ -73,9 +71,8 @@ const UpdateRoleAliasRequest * UpdateRoleAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT UpdateRoleAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT UpdateRoleAlias \a response.
  */
 void UpdateRoleAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateRoleAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::UpdateRoleAliasResponsePrivate
+ * \brief The UpdateRoleAliasResponsePrivate class provides private implementation for UpdateRoleAliasResponse.
  * \internal
  *
- * \class UpdateRoleAliasResponsePrivate
- *
- * \brief Private implementation for UpdateRoleAliasResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRoleAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRoleAliasResponse instance.
+ * Constructs a UpdateRoleAliasResponsePrivate object with public implementation \a q.
  */
 UpdateRoleAliasResponsePrivate::UpdateRoleAliasResponsePrivate(
     UpdateRoleAliasResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateRoleAliasResponsePrivate::UpdateRoleAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT UpdateRoleAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT UpdateRoleAlias response element from \a xml.
  */
 void UpdateRoleAliasResponsePrivate::parseUpdateRoleAliasResponse(QXmlStreamReader &xml)
 {

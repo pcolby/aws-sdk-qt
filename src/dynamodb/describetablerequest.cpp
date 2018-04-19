@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTableRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DescribeTableRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTableRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 DescribeTableRequestPrivate::DescribeTableRequestPrivate(
     const DynamoDBRequest::Action action, DescribeTableRequest * const q)

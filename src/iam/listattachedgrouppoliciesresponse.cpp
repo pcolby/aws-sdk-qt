@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListAttachedGroupPoliciesResponse
- *
  * \brief The ListAttachedGroupPoliciesResponse class provides an interace for IAM ListAttachedGroupPolicies responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListAttachedGroupPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAttachedGroupPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAttachedGroupPoliciesResponse::ListAttachedGroupPoliciesResponse(
         const ListAttachedGroupPoliciesRequest &request,
@@ -120,6 +115,9 @@ ListAttachedGroupPoliciesResponse::ListAttachedGroupPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAttachedGroupPoliciesRequest * ListAttachedGroupPoliciesResponse::request() const
 {
     Q_D(const ListAttachedGroupPoliciesResponse);
@@ -127,9 +125,8 @@ const ListAttachedGroupPoliciesRequest * ListAttachedGroupPoliciesResponse::requ
 }
 
 /*!
- * @brief  Parse a IAM ListAttachedGroupPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListAttachedGroupPolicies \a response.
  */
 void ListAttachedGroupPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListAttachedGroupPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListAttachedGroupPoliciesResponsePrivate
+ * \brief The ListAttachedGroupPoliciesResponsePrivate class provides private implementation for ListAttachedGroupPoliciesResponse.
  * \internal
  *
- * \class ListAttachedGroupPoliciesResponsePrivate
- *
- * \brief Private implementation for ListAttachedGroupPoliciesResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAttachedGroupPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAttachedGroupPoliciesResponse instance.
+ * Constructs a ListAttachedGroupPoliciesResponsePrivate object with public implementation \a q.
  */
 ListAttachedGroupPoliciesResponsePrivate::ListAttachedGroupPoliciesResponsePrivate(
     ListAttachedGroupPoliciesResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListAttachedGroupPoliciesResponsePrivate::ListAttachedGroupPoliciesResponsePriva
 }
 
 /*!
- * @brief  Parse an IAM ListAttachedGroupPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListAttachedGroupPolicies response element from \a xml.
  */
 void ListAttachedGroupPoliciesResponsePrivate::parseListAttachedGroupPoliciesResponse(QXmlStreamReader &xml)
 {

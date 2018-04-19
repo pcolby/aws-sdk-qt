@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::SetIdentityPoolRolesResponse
- *
  * \brief The SetIdentityPoolRolesResponse class provides an interace for CognitoIdentity SetIdentityPoolRoles responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new SetIdentityPoolRolesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetIdentityPoolRolesResponse object for \a reply to \a request, with parent \a parent.
  */
 SetIdentityPoolRolesResponse::SetIdentityPoolRolesResponse(
         const SetIdentityPoolRolesRequest &request,
@@ -93,6 +88,9 @@ SetIdentityPoolRolesResponse::SetIdentityPoolRolesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetIdentityPoolRolesRequest * SetIdentityPoolRolesResponse::request() const
 {
     Q_D(const SetIdentityPoolRolesResponse);
@@ -100,9 +98,8 @@ const SetIdentityPoolRolesRequest * SetIdentityPoolRolesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CognitoIdentity SetIdentityPoolRoles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity SetIdentityPoolRoles \a response.
  */
 void SetIdentityPoolRolesResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void SetIdentityPoolRolesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::SetIdentityPoolRolesResponsePrivate
+ * \brief The SetIdentityPoolRolesResponsePrivate class provides private implementation for SetIdentityPoolRolesResponse.
  * \internal
  *
- * \class SetIdentityPoolRolesResponsePrivate
- *
- * \brief Private implementation for SetIdentityPoolRolesResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIdentityPoolRolesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetIdentityPoolRolesResponse instance.
+ * Constructs a SetIdentityPoolRolesResponsePrivate object with public implementation \a q.
  */
 SetIdentityPoolRolesResponsePrivate::SetIdentityPoolRolesResponsePrivate(
     SetIdentityPoolRolesResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ SetIdentityPoolRolesResponsePrivate::SetIdentityPoolRolesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentity SetIdentityPoolRolesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity SetIdentityPoolRoles response element from \a xml.
  */
 void SetIdentityPoolRolesResponsePrivate::parseSetIdentityPoolRolesResponse(QXmlStreamReader &xml)
 {

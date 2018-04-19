@@ -29,10 +29,9 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::ListVocabulariesResponse
- *
  * \brief The ListVocabulariesResponse class provides an interace for TranscribeService ListVocabularies responses.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  *
@@ -40,11 +39,7 @@ namespace TranscribeService {
  */
 
 /*!
- * @brief  Constructs a new ListVocabulariesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListVocabulariesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListVocabulariesResponse::ListVocabulariesResponse(
         const ListVocabulariesRequest &request,
@@ -56,6 +51,9 @@ ListVocabulariesResponse::ListVocabulariesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListVocabulariesRequest * ListVocabulariesResponse::request() const
 {
     Q_D(const ListVocabulariesResponse);
@@ -63,9 +61,8 @@ const ListVocabulariesRequest * ListVocabulariesResponse::request() const
 }
 
 /*!
- * @brief  Parse a TranscribeService ListVocabularies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful TranscribeService ListVocabularies \a response.
  */
 void ListVocabulariesResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListVocabulariesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::TranscribeService::ListVocabulariesResponsePrivate
+ * \brief The ListVocabulariesResponsePrivate class provides private implementation for ListVocabulariesResponse.
  * \internal
  *
- * \class ListVocabulariesResponsePrivate
- *
- * \brief Private implementation for ListVocabulariesResponse.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVocabulariesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListVocabulariesResponse instance.
+ * Constructs a ListVocabulariesResponsePrivate object with public implementation \a q.
  */
 ListVocabulariesResponsePrivate::ListVocabulariesResponsePrivate(
     ListVocabulariesResponse * const q) : TranscribeServiceResponsePrivate(q)
@@ -96,9 +89,7 @@ ListVocabulariesResponsePrivate::ListVocabulariesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an TranscribeService ListVocabulariesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a TranscribeService ListVocabularies response element from \a xml.
  */
 void ListVocabulariesResponsePrivate::parseListVocabulariesResponse(QXmlStreamReader &xml)
 {

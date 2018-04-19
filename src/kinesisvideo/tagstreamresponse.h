@@ -34,10 +34,10 @@ class QTAWS_EXPORT TagStreamResponse : public KinesisVideoResponse {
 public:
     TagStreamResponse(const TagStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TagStreamRequest * request() const;
+    virtual const TagStreamRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TagStreamResponse)

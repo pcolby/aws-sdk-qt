@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::BatchGetApplicationsResponse
- *
  * \brief The BatchGetApplicationsResponse class provides an interace for CodeDeploy BatchGetApplications responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new BatchGetApplicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetApplicationsResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetApplicationsResponse::BatchGetApplicationsResponse(
         const BatchGetApplicationsRequest &request,
@@ -136,6 +131,9 @@ BatchGetApplicationsResponse::BatchGetApplicationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetApplicationsRequest * BatchGetApplicationsResponse::request() const
 {
     Q_D(const BatchGetApplicationsResponse);
@@ -143,9 +141,8 @@ const BatchGetApplicationsRequest * BatchGetApplicationsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CodeDeploy BatchGetApplications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy BatchGetApplications \a response.
  */
 void BatchGetApplicationsResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void BatchGetApplicationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::BatchGetApplicationsResponsePrivate
+ * \brief The BatchGetApplicationsResponsePrivate class provides private implementation for BatchGetApplicationsResponse.
  * \internal
  *
- * \class BatchGetApplicationsResponsePrivate
- *
- * \brief Private implementation for BatchGetApplicationsResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetApplicationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetApplicationsResponse instance.
+ * Constructs a BatchGetApplicationsResponsePrivate object with public implementation \a q.
  */
 BatchGetApplicationsResponsePrivate::BatchGetApplicationsResponsePrivate(
     BatchGetApplicationsResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ BatchGetApplicationsResponsePrivate::BatchGetApplicationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy BatchGetApplicationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy BatchGetApplications response element from \a xml.
  */
 void BatchGetApplicationsResponsePrivate::parseBatchGetApplicationsResponse(QXmlStreamReader &xml)
 {

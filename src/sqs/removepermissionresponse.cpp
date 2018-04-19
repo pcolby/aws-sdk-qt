@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::RemovePermissionResponse
- *
  * \brief The RemovePermissionResponse class provides an interace for SQS RemovePermission responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new RemovePermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemovePermissionResponse object for \a reply to \a request, with parent \a parent.
  */
 RemovePermissionResponse::RemovePermissionResponse(
         const RemovePermissionRequest &request,
@@ -121,6 +116,9 @@ RemovePermissionResponse::RemovePermissionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemovePermissionRequest * RemovePermissionResponse::request() const
 {
     Q_D(const RemovePermissionResponse);
@@ -128,9 +126,8 @@ const RemovePermissionRequest * RemovePermissionResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS RemovePermission response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS RemovePermission \a response.
  */
 void RemovePermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void RemovePermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::RemovePermissionResponsePrivate
+ * \brief The RemovePermissionResponsePrivate class provides private implementation for RemovePermissionResponse.
  * \internal
  *
- * \class RemovePermissionResponsePrivate
- *
- * \brief Private implementation for RemovePermissionResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemovePermissionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemovePermissionResponse instance.
+ * Constructs a RemovePermissionResponsePrivate object with public implementation \a q.
  */
 RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
     RemovePermissionResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ RemovePermissionResponsePrivate::RemovePermissionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS RemovePermissionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS RemovePermission response element from \a xml.
  */
 void RemovePermissionResponsePrivate::parseRemovePermissionResponse(QXmlStreamReader &xml)
 {

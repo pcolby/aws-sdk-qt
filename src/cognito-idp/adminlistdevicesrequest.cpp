@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminListDevicesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a AdminListDevicesRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminListDevicesRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminListDevicesRequestPrivate::AdminListDevicesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminListDevicesRequest * const q)

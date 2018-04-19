@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::ListActivityTypesResponse
- *
  * \brief The ListActivityTypesResponse class provides an interace for SWF ListActivityTypes responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new ListActivityTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListActivityTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListActivityTypesResponse::ListActivityTypesResponse(
         const ListActivityTypesRequest &request,
@@ -71,6 +66,9 @@ ListActivityTypesResponse::ListActivityTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListActivityTypesRequest * ListActivityTypesResponse::request() const
 {
     Q_D(const ListActivityTypesResponse);
@@ -78,9 +76,8 @@ const ListActivityTypesRequest * ListActivityTypesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SWF ListActivityTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF ListActivityTypes \a response.
  */
 void ListActivityTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void ListActivityTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::ListActivityTypesResponsePrivate
+ * \brief The ListActivityTypesResponsePrivate class provides private implementation for ListActivityTypesResponse.
  * \internal
  *
- * \class ListActivityTypesResponsePrivate
- *
- * \brief Private implementation for ListActivityTypesResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListActivityTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListActivityTypesResponse instance.
+ * Constructs a ListActivityTypesResponsePrivate object with public implementation \a q.
  */
 ListActivityTypesResponsePrivate::ListActivityTypesResponsePrivate(
     ListActivityTypesResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ ListActivityTypesResponsePrivate::ListActivityTypesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF ListActivityTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF ListActivityTypes response element from \a xml.
  */
 void ListActivityTypesResponsePrivate::parseListActivityTypesResponse(QXmlStreamReader &xml)
 {

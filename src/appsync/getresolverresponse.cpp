@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::GetResolverResponse
- *
  * \brief The GetResolverResponse class provides an interace for AppSync GetResolver responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new GetResolverResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetResolverResponse object for \a reply to \a request, with parent \a parent.
  */
 GetResolverResponse::GetResolverResponse(
         const GetResolverRequest &request,
@@ -56,6 +51,9 @@ GetResolverResponse::GetResolverResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetResolverRequest * GetResolverResponse::request() const
 {
     Q_D(const GetResolverResponse);
@@ -63,9 +61,8 @@ const GetResolverRequest * GetResolverResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync GetResolver response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync GetResolver \a response.
  */
 void GetResolverResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetResolverResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::GetResolverResponsePrivate
+ * \brief The GetResolverResponsePrivate class provides private implementation for GetResolverResponse.
  * \internal
  *
- * \class GetResolverResponsePrivate
- *
- * \brief Private implementation for GetResolverResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetResolverResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetResolverResponse instance.
+ * Constructs a GetResolverResponsePrivate object with public implementation \a q.
  */
 GetResolverResponsePrivate::GetResolverResponsePrivate(
     GetResolverResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ GetResolverResponsePrivate::GetResolverResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync GetResolverResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync GetResolver response element from \a xml.
  */
 void GetResolverResponsePrivate::parseGetResolverResponse(QXmlStreamReader &xml)
 {

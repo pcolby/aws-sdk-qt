@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeDeliveryChannelsResponse
- *
  * \brief The DescribeDeliveryChannelsResponse class provides an interace for ConfigService DescribeDeliveryChannels responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeDeliveryChannelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDeliveryChannelsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDeliveryChannelsResponse::DescribeDeliveryChannelsResponse(
         const DescribeDeliveryChannelsRequest &request,
@@ -78,6 +73,9 @@ DescribeDeliveryChannelsResponse::DescribeDeliveryChannelsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDeliveryChannelsRequest * DescribeDeliveryChannelsResponse::request() const
 {
     Q_D(const DescribeDeliveryChannelsResponse);
@@ -85,9 +83,8 @@ const DescribeDeliveryChannelsRequest * DescribeDeliveryChannelsResponse::reques
 }
 
 /*!
- * @brief  Parse a ConfigService DescribeDeliveryChannels response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribeDeliveryChannels \a response.
  */
 void DescribeDeliveryChannelsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeDeliveryChannelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribeDeliveryChannelsResponsePrivate
+ * \brief The DescribeDeliveryChannelsResponsePrivate class provides private implementation for DescribeDeliveryChannelsResponse.
  * \internal
  *
- * \class DescribeDeliveryChannelsResponsePrivate
- *
- * \brief Private implementation for DescribeDeliveryChannelsResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDeliveryChannelsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDeliveryChannelsResponse instance.
+ * Constructs a DescribeDeliveryChannelsResponsePrivate object with public implementation \a q.
  */
 DescribeDeliveryChannelsResponsePrivate::DescribeDeliveryChannelsResponsePrivate(
     DescribeDeliveryChannelsResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeDeliveryChannelsResponsePrivate::DescribeDeliveryChannelsResponsePrivate
 }
 
 /*!
- * @brief  Parse an ConfigService DescribeDeliveryChannelsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribeDeliveryChannels response element from \a xml.
  */
 void DescribeDeliveryChannelsResponsePrivate::parseDescribeDeliveryChannelsResponse(QXmlStreamReader &xml)
 {

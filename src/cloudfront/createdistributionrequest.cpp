@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateDistributionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateDistributionRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a CreateDistributionRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 CreateDistributionRequestPrivate::CreateDistributionRequestPrivate(
     const CloudFrontRequest::Action action, CreateDistributionRequest * const q)

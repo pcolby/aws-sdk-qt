@@ -53,7 +53,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * Constructs a[n] ElasticsearchServiceRequest object for ElasticsearchService \a action.
+ * Constructs a ElasticsearchServiceRequest object for ElasticsearchService \a action.
  */
 ElasticsearchServiceRequest::ElasticsearchServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ElasticsearchServiceRequestPrivate(action, this))
@@ -253,8 +253,8 @@ QNetworkRequest ElasticsearchServiceRequest::unsignedRequest(const QUrl &endpoin
  */
 
 /*!
- * Constructs a ElasticsearchServiceRequestPrivate object for ElasticsearchService \a action with,
- * public implementation \a q.
+ * Constructs a ElasticsearchServiceRequestPrivate object for ElasticsearchService \a action,
+ * with public implementation \a q.
  */
 ElasticsearchServiceRequestPrivate::ElasticsearchServiceRequestPrivate(const ElasticsearchServiceRequest::Action action, ElasticsearchServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

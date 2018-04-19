@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::RemoveIpRoutesResponse
- *
  * \brief The RemoveIpRoutesResponse class provides an interace for DirectoryService RemoveIpRoutes responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new RemoveIpRoutesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveIpRoutesResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveIpRoutesResponse::RemoveIpRoutesResponse(
         const RemoveIpRoutesRequest &request,
@@ -69,6 +64,9 @@ RemoveIpRoutesResponse::RemoveIpRoutesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveIpRoutesRequest * RemoveIpRoutesResponse::request() const
 {
     Q_D(const RemoveIpRoutesResponse);
@@ -76,9 +74,8 @@ const RemoveIpRoutesRequest * RemoveIpRoutesResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService RemoveIpRoutes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService RemoveIpRoutes \a response.
  */
 void RemoveIpRoutesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void RemoveIpRoutesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::RemoveIpRoutesResponsePrivate
+ * \brief The RemoveIpRoutesResponsePrivate class provides private implementation for RemoveIpRoutesResponse.
  * \internal
  *
- * \class RemoveIpRoutesResponsePrivate
- *
- * \brief Private implementation for RemoveIpRoutesResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveIpRoutesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveIpRoutesResponse instance.
+ * Constructs a RemoveIpRoutesResponsePrivate object with public implementation \a q.
  */
 RemoveIpRoutesResponsePrivate::RemoveIpRoutesResponsePrivate(
     RemoveIpRoutesResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ RemoveIpRoutesResponsePrivate::RemoveIpRoutesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService RemoveIpRoutesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService RemoveIpRoutes response element from \a xml.
  */
 void RemoveIpRoutesResponsePrivate::parseRemoveIpRoutesResponse(QXmlStreamReader &xml)
 {

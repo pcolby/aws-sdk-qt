@@ -161,9 +161,8 @@ QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteProjectRequestPrivate object for CodeBuild \a action with,
- * public implementation \a q.
+ * Constructs a DeleteProjectRequestPrivate object for CodeBuild \a action,
+ * with public implementation \a q.
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const CodeBuildRequest::Action action, DeleteProjectRequest * const q)

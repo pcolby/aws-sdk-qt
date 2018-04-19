@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * GetShardIteratorRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetShardIteratorRequestPrivate object for DynamoDBStreams \a action with,
- * public implementation \a q.
+ * Constructs a GetShardIteratorRequestPrivate object for DynamoDBStreams \a action,
+ * with public implementation \a q.
  */
 GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
     const DynamoDBStreamsRequest::Action action, GetShardIteratorRequest * const q)

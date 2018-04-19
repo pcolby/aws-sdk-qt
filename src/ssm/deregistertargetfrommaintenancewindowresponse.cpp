@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeregisterTargetFromMaintenanceWindowResponse
- *
  * \brief The DeregisterTargetFromMaintenanceWindowResponse class provides an interace for SSM DeregisterTargetFromMaintenanceWindow responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeregisterTargetFromMaintenanceWindowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterTargetFromMaintenanceWindowResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterTargetFromMaintenanceWindowResponse::DeregisterTargetFromMaintenanceWindowResponse(
         const DeregisterTargetFromMaintenanceWindowRequest &request,
@@ -79,6 +74,9 @@ DeregisterTargetFromMaintenanceWindowResponse::DeregisterTargetFromMaintenanceWi
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterTargetFromMaintenanceWindowRequest * DeregisterTargetFromMaintenanceWindowResponse::request() const
 {
     Q_D(const DeregisterTargetFromMaintenanceWindowResponse);
@@ -86,9 +84,8 @@ const DeregisterTargetFromMaintenanceWindowRequest * DeregisterTargetFromMainten
 }
 
 /*!
- * @brief  Parse a SSM DeregisterTargetFromMaintenanceWindow response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DeregisterTargetFromMaintenanceWindow \a response.
  */
 void DeregisterTargetFromMaintenanceWindowResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DeregisterTargetFromMaintenanceWindowResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::SSM::DeregisterTargetFromMaintenanceWindowResponsePrivate
+ * \brief The DeregisterTargetFromMaintenanceWindowResponsePrivate class provides private implementation for DeregisterTargetFromMaintenanceWindowResponse.
  * \internal
  *
- * \class DeregisterTargetFromMaintenanceWindowResponsePrivate
- *
- * \brief Private implementation for DeregisterTargetFromMaintenanceWindowResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterTargetFromMaintenanceWindowResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterTargetFromMaintenanceWindowResponse instance.
+ * Constructs a DeregisterTargetFromMaintenanceWindowResponsePrivate object with public implementation \a q.
  */
 DeregisterTargetFromMaintenanceWindowResponsePrivate::DeregisterTargetFromMaintenanceWindowResponsePrivate(
     DeregisterTargetFromMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DeregisterTargetFromMaintenanceWindowResponsePrivate::DeregisterTargetFromMainte
 }
 
 /*!
- * @brief  Parse an SSM DeregisterTargetFromMaintenanceWindowResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DeregisterTargetFromMaintenanceWindow response element from \a xml.
  */
 void DeregisterTargetFromMaintenanceWindowResponsePrivate::parseDeregisterTargetFromMaintenanceWindowResponse(QXmlStreamReader &xml)
 {

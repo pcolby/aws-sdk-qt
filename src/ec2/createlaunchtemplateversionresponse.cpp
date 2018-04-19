@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateLaunchTemplateVersionResponse
- *
  * \brief The CreateLaunchTemplateVersionResponse class provides an interace for EC2 CreateLaunchTemplateVersion responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateLaunchTemplateVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLaunchTemplateVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLaunchTemplateVersionResponse::CreateLaunchTemplateVersionResponse(
         const CreateLaunchTemplateVersionRequest &request,
@@ -59,6 +54,9 @@ CreateLaunchTemplateVersionResponse::CreateLaunchTemplateVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLaunchTemplateVersionRequest * CreateLaunchTemplateVersionResponse::request() const
 {
     Q_D(const CreateLaunchTemplateVersionResponse);
@@ -66,9 +64,8 @@ const CreateLaunchTemplateVersionRequest * CreateLaunchTemplateVersionResponse::
 }
 
 /*!
- * @brief  Parse a EC2 CreateLaunchTemplateVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateLaunchTemplateVersion \a response.
  */
 void CreateLaunchTemplateVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateLaunchTemplateVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateLaunchTemplateVersionResponsePrivate
+ * \brief The CreateLaunchTemplateVersionResponsePrivate class provides private implementation for CreateLaunchTemplateVersionResponse.
  * \internal
  *
- * \class CreateLaunchTemplateVersionResponsePrivate
- *
- * \brief Private implementation for CreateLaunchTemplateVersionResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLaunchTemplateVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLaunchTemplateVersionResponse instance.
+ * Constructs a CreateLaunchTemplateVersionResponsePrivate object with public implementation \a q.
  */
 CreateLaunchTemplateVersionResponsePrivate::CreateLaunchTemplateVersionResponsePrivate(
     CreateLaunchTemplateVersionResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateLaunchTemplateVersionResponsePrivate::CreateLaunchTemplateVersionResponseP
 }
 
 /*!
- * @brief  Parse an EC2 CreateLaunchTemplateVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateLaunchTemplateVersion response element from \a xml.
  */
 void CreateLaunchTemplateVersionResponsePrivate::parseCreateLaunchTemplateVersionResponse(QXmlStreamReader &xml)
 {

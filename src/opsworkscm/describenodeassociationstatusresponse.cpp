@@ -29,10 +29,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DescribeNodeAssociationStatusResponse
- *
  * \brief The DescribeNodeAssociationStatusResponse class provides an interace for OpsWorksCM DescribeNodeAssociationStatus responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -99,11 +98,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DescribeNodeAssociationStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeNodeAssociationStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeNodeAssociationStatusResponse::DescribeNodeAssociationStatusResponse(
         const DescribeNodeAssociationStatusRequest &request,
@@ -115,6 +110,9 @@ DescribeNodeAssociationStatusResponse::DescribeNodeAssociationStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeNodeAssociationStatusRequest * DescribeNodeAssociationStatusResponse::request() const
 {
     Q_D(const DescribeNodeAssociationStatusResponse);
@@ -122,9 +120,8 @@ const DescribeNodeAssociationStatusRequest * DescribeNodeAssociationStatusRespon
 }
 
 /*!
- * @brief  Parse a OpsWorksCM DescribeNodeAssociationStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorksCM DescribeNodeAssociationStatus \a response.
  */
 void DescribeNodeAssociationStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -134,19 +131,15 @@ void DescribeNodeAssociationStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorksCM::DescribeNodeAssociationStatusResponsePrivate
+ * \brief The DescribeNodeAssociationStatusResponsePrivate class provides private implementation for DescribeNodeAssociationStatusResponse.
  * \internal
  *
- * \class DescribeNodeAssociationStatusResponsePrivate
- *
- * \brief Private implementation for DescribeNodeAssociationStatusResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNodeAssociationStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeNodeAssociationStatusResponse instance.
+ * Constructs a DescribeNodeAssociationStatusResponsePrivate object with public implementation \a q.
  */
 DescribeNodeAssociationStatusResponsePrivate::DescribeNodeAssociationStatusResponsePrivate(
     DescribeNodeAssociationStatusResponse * const q) : OpsWorksCMResponsePrivate(q)
@@ -155,9 +148,7 @@ DescribeNodeAssociationStatusResponsePrivate::DescribeNodeAssociationStatusRespo
 }
 
 /*!
- * @brief  Parse an OpsWorksCM DescribeNodeAssociationStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorksCM DescribeNodeAssociationStatus response element from \a xml.
  */
 void DescribeNodeAssociationStatusResponsePrivate::parseDescribeNodeAssociationStatusResponse(QXmlStreamReader &xml)
 {

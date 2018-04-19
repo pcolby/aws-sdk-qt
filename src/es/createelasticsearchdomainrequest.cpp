@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * CreateElasticsearchDomainRequest::response(QN
  */
 
 /*!
- *
- * Constructs a CreateElasticsearchDomainRequestPrivate object for ElasticsearchService \a action with,
- * public implementation \a q.
+ * Constructs a CreateElasticsearchDomainRequestPrivate object for ElasticsearchService \a action,
+ * with public implementation \a q.
  */
 CreateElasticsearchDomainRequestPrivate::CreateElasticsearchDomainRequestPrivate(
     const ElasticsearchServiceRequest::Action action, CreateElasticsearchDomainRequest * const q)

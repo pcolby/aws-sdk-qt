@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DetachObjectResponse
- *
  * \brief The DetachObjectResponse class provides an interace for CloudDirectory DetachObject responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DetachObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachObjectResponse::DetachObjectResponse(
         const DetachObjectRequest &request,
@@ -62,6 +57,9 @@ DetachObjectResponse::DetachObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachObjectRequest * DetachObjectResponse::request() const
 {
     Q_D(const DetachObjectResponse);
@@ -69,9 +67,8 @@ const DetachObjectRequest * DetachObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory DetachObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory DetachObject \a response.
  */
 void DetachObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DetachObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::DetachObjectResponsePrivate
+ * \brief The DetachObjectResponsePrivate class provides private implementation for DetachObjectResponse.
  * \internal
  *
- * \class DetachObjectResponsePrivate
- *
- * \brief Private implementation for DetachObjectResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachObjectResponse instance.
+ * Constructs a DetachObjectResponsePrivate object with public implementation \a q.
  */
 DetachObjectResponsePrivate::DetachObjectResponsePrivate(
     DetachObjectResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ DetachObjectResponsePrivate::DetachObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory DetachObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory DetachObject response element from \a xml.
  */
 void DetachObjectResponsePrivate::parseDetachObjectResponse(QXmlStreamReader &xml)
 {

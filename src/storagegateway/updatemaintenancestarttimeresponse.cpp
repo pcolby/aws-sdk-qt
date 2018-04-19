@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateMaintenanceStartTimeResponse
- *
  * \brief The UpdateMaintenanceStartTimeResponse class provides an interace for StorageGateway UpdateMaintenanceStartTime responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateMaintenanceStartTimeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateMaintenanceStartTimeResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateMaintenanceStartTimeResponse::UpdateMaintenanceStartTimeResponse(
         const UpdateMaintenanceStartTimeRequest &request,
@@ -124,6 +119,9 @@ UpdateMaintenanceStartTimeResponse::UpdateMaintenanceStartTimeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateMaintenanceStartTimeRequest * UpdateMaintenanceStartTimeResponse::request() const
 {
     Q_D(const UpdateMaintenanceStartTimeResponse);
@@ -131,9 +129,8 @@ const UpdateMaintenanceStartTimeRequest * UpdateMaintenanceStartTimeResponse::re
 }
 
 /*!
- * @brief  Parse a StorageGateway UpdateMaintenanceStartTime response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway UpdateMaintenanceStartTime \a response.
  */
 void UpdateMaintenanceStartTimeResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void UpdateMaintenanceStartTimeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::UpdateMaintenanceStartTimeResponsePrivate
+ * \brief The UpdateMaintenanceStartTimeResponsePrivate class provides private implementation for UpdateMaintenanceStartTimeResponse.
  * \internal
  *
- * \class UpdateMaintenanceStartTimeResponsePrivate
- *
- * \brief Private implementation for UpdateMaintenanceStartTimeResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateMaintenanceStartTimeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateMaintenanceStartTimeResponse instance.
+ * Constructs a UpdateMaintenanceStartTimeResponsePrivate object with public implementation \a q.
  */
 UpdateMaintenanceStartTimeResponsePrivate::UpdateMaintenanceStartTimeResponsePrivate(
     UpdateMaintenanceStartTimeResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ UpdateMaintenanceStartTimeResponsePrivate::UpdateMaintenanceStartTimeResponsePri
 }
 
 /*!
- * @brief  Parse an StorageGateway UpdateMaintenanceStartTimeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway UpdateMaintenanceStartTime response element from \a xml.
  */
 void UpdateMaintenanceStartTimeResponsePrivate::parseUpdateMaintenanceStartTimeResponse(QXmlStreamReader &xml)
 {

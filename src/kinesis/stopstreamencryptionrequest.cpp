@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StopStreamEncryptionRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a StopStreamEncryptionRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a StopStreamEncryptionRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 StopStreamEncryptionRequestPrivate::StopStreamEncryptionRequestPrivate(
     const KinesisRequest::Action action, StopStreamEncryptionRequest * const q)

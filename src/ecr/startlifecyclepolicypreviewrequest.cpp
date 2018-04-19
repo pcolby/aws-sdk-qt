@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * StartLifecyclePolicyPreviewRequest::response(
  */
 
 /*!
- *
- * Constructs a StartLifecyclePolicyPreviewRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a StartLifecyclePolicyPreviewRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 StartLifecyclePolicyPreviewRequestPrivate::StartLifecyclePolicyPreviewRequestPrivate(
     const ECRRequest::Action action, StartLifecyclePolicyPreviewRequest * const q)

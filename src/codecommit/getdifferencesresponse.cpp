@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetDifferencesResponse
- *
  * \brief The GetDifferencesResponse class provides an interace for CodeCommit GetDifferences responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetDifferencesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDifferencesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDifferencesResponse::GetDifferencesResponse(
         const GetDifferencesRequest &request,
@@ -245,6 +240,9 @@ GetDifferencesResponse::GetDifferencesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDifferencesRequest * GetDifferencesResponse::request() const
 {
     Q_D(const GetDifferencesResponse);
@@ -252,9 +250,8 @@ const GetDifferencesRequest * GetDifferencesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit GetDifferences response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit GetDifferences \a response.
  */
 void GetDifferencesResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void GetDifferencesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::GetDifferencesResponsePrivate
+ * \brief The GetDifferencesResponsePrivate class provides private implementation for GetDifferencesResponse.
  * \internal
  *
- * \class GetDifferencesResponsePrivate
- *
- * \brief Private implementation for GetDifferencesResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDifferencesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDifferencesResponse instance.
+ * Constructs a GetDifferencesResponsePrivate object with public implementation \a q.
  */
 GetDifferencesResponsePrivate::GetDifferencesResponsePrivate(
     GetDifferencesResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ GetDifferencesResponsePrivate::GetDifferencesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit GetDifferencesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit GetDifferences response element from \a xml.
  */
 void GetDifferencesResponsePrivate::parseGetDifferencesResponse(QXmlStreamReader &xml)
 {

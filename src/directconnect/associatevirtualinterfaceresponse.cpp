@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::AssociateVirtualInterfaceResponse
- *
  * \brief The AssociateVirtualInterfaceResponse class provides an interace for DirectConnect AssociateVirtualInterface responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new AssociateVirtualInterfaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateVirtualInterfaceResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateVirtualInterfaceResponse::AssociateVirtualInterfaceResponse(
         const AssociateVirtualInterfaceRequest &request,
@@ -63,6 +58,9 @@ AssociateVirtualInterfaceResponse::AssociateVirtualInterfaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateVirtualInterfaceRequest * AssociateVirtualInterfaceResponse::request() const
 {
     Q_D(const AssociateVirtualInterfaceResponse);
@@ -70,9 +68,8 @@ const AssociateVirtualInterfaceRequest * AssociateVirtualInterfaceResponse::requ
 }
 
 /*!
- * @brief  Parse a DirectConnect AssociateVirtualInterface response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect AssociateVirtualInterface \a response.
  */
 void AssociateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void AssociateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::AssociateVirtualInterfaceResponsePrivate
+ * \brief The AssociateVirtualInterfaceResponsePrivate class provides private implementation for AssociateVirtualInterfaceResponse.
  * \internal
  *
- * \class AssociateVirtualInterfaceResponsePrivate
- *
- * \brief Private implementation for AssociateVirtualInterfaceResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateVirtualInterfaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateVirtualInterfaceResponse instance.
+ * Constructs a AssociateVirtualInterfaceResponsePrivate object with public implementation \a q.
  */
 AssociateVirtualInterfaceResponsePrivate::AssociateVirtualInterfaceResponsePrivate(
     AssociateVirtualInterfaceResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ AssociateVirtualInterfaceResponsePrivate::AssociateVirtualInterfaceResponsePriva
 }
 
 /*!
- * @brief  Parse an DirectConnect AssociateVirtualInterfaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect AssociateVirtualInterface response element from \a xml.
  */
 void AssociateVirtualInterfaceResponsePrivate::parseAssociateVirtualInterfaceResponse(QXmlStreamReader &xml)
 {

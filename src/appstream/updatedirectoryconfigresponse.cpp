@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::UpdateDirectoryConfigResponse
- *
  * \brief The UpdateDirectoryConfigResponse class provides an interace for AppStream UpdateDirectoryConfig responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new UpdateDirectoryConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDirectoryConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDirectoryConfigResponse::UpdateDirectoryConfigResponse(
         const UpdateDirectoryConfigRequest &request,
@@ -58,6 +53,9 @@ UpdateDirectoryConfigResponse::UpdateDirectoryConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDirectoryConfigRequest * UpdateDirectoryConfigResponse::request() const
 {
     Q_D(const UpdateDirectoryConfigResponse);
@@ -65,9 +63,8 @@ const UpdateDirectoryConfigRequest * UpdateDirectoryConfigResponse::request() co
 }
 
 /*!
- * @brief  Parse a AppStream UpdateDirectoryConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream UpdateDirectoryConfig \a response.
  */
 void UpdateDirectoryConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateDirectoryConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::UpdateDirectoryConfigResponsePrivate
+ * \brief The UpdateDirectoryConfigResponsePrivate class provides private implementation for UpdateDirectoryConfigResponse.
  * \internal
  *
- * \class UpdateDirectoryConfigResponsePrivate
- *
- * \brief Private implementation for UpdateDirectoryConfigResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDirectoryConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDirectoryConfigResponse instance.
+ * Constructs a UpdateDirectoryConfigResponsePrivate object with public implementation \a q.
  */
 UpdateDirectoryConfigResponsePrivate::UpdateDirectoryConfigResponsePrivate(
     UpdateDirectoryConfigResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateDirectoryConfigResponsePrivate::UpdateDirectoryConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream UpdateDirectoryConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream UpdateDirectoryConfig response element from \a xml.
  */
 void UpdateDirectoryConfigResponsePrivate::parseUpdateDirectoryConfigResponse(QXmlStreamReader &xml)
 {

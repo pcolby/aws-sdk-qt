@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteInstanceProfileResponse : public IAMResponse {
 public:
     DeleteInstanceProfileResponse(const DeleteInstanceProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteInstanceProfileRequest * request() const;
+    virtual const DeleteInstanceProfileRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteInstanceProfileResponse)

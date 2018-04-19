@@ -104,7 +104,7 @@ namespace Pinpoint {
  */
 
 /*!
- * Constructs a[n] PinpointRequest object for Pinpoint \a action.
+ * Constructs a PinpointRequest object for Pinpoint \a action.
  */
 PinpointRequest::PinpointRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new PinpointRequestPrivate(action, this))
@@ -304,8 +304,8 @@ QNetworkRequest PinpointRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a PinpointRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a PinpointRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 PinpointRequestPrivate::PinpointRequestPrivate(const PinpointRequest::Action action, PinpointRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

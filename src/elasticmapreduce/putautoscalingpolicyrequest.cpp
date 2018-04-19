@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * PutAutoScalingPolicyRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a PutAutoScalingPolicyRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a PutAutoScalingPolicyRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 PutAutoScalingPolicyRequestPrivate::PutAutoScalingPolicyRequestPrivate(
     const EMRRequest::Action action, PutAutoScalingPolicyRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVpnGatewayResponse
- *
  * \brief The CreateVpnGatewayResponse class provides an interace for EC2 CreateVpnGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVpnGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateVpnGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateVpnGatewayResponse::CreateVpnGatewayResponse(
         const CreateVpnGatewayRequest &request,
@@ -59,6 +54,9 @@ CreateVpnGatewayResponse::CreateVpnGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateVpnGatewayRequest * CreateVpnGatewayResponse::request() const
 {
     Q_D(const CreateVpnGatewayResponse);
@@ -66,9 +64,8 @@ const CreateVpnGatewayRequest * CreateVpnGatewayResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateVpnGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateVpnGateway \a response.
  */
 void CreateVpnGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateVpnGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateVpnGatewayResponsePrivate
+ * \brief The CreateVpnGatewayResponsePrivate class provides private implementation for CreateVpnGatewayResponse.
  * \internal
  *
- * \class CreateVpnGatewayResponsePrivate
- *
- * \brief Private implementation for CreateVpnGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpnGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateVpnGatewayResponse instance.
+ * Constructs a CreateVpnGatewayResponsePrivate object with public implementation \a q.
  */
 CreateVpnGatewayResponsePrivate::CreateVpnGatewayResponsePrivate(
     CreateVpnGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateVpnGatewayResponsePrivate::CreateVpnGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateVpnGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateVpnGateway response element from \a xml.
  */
 void CreateVpnGatewayResponsePrivate::parseCreateVpnGatewayResponse(QXmlStreamReader &xml)
 {

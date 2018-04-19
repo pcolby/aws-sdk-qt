@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteFolderContentsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteFolderContentsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteFolderContentsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DeleteFolderContentsRequestPrivate::DeleteFolderContentsRequestPrivate(
     const WorkDocsRequest::Action action, DeleteFolderContentsRequest * const q)

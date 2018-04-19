@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentTemplatesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListAssessmentTemplatesRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a ListAssessmentTemplatesRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 ListAssessmentTemplatesRequestPrivate::ListAssessmentTemplatesRequestPrivate(
     const InspectorRequest::Action action, ListAssessmentTemplatesRequest * const q)

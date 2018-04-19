@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * AssociateTargetsWithJobRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a AssociateTargetsWithJobRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a AssociateTargetsWithJobRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 AssociateTargetsWithJobRequestPrivate::AssociateTargetsWithJobRequestPrivate(
     const IoTRequest::Action action, AssociateTargetsWithJobRequest * const q)

@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::SubscribeToDatasetResponse
- *
  * \brief The SubscribeToDatasetResponse class provides an interace for CognitoSync SubscribeToDataset responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new SubscribeToDatasetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SubscribeToDatasetResponse object for \a reply to \a request, with parent \a parent.
  */
 SubscribeToDatasetResponse::SubscribeToDatasetResponse(
         const SubscribeToDatasetRequest &request,
@@ -75,6 +70,9 @@ SubscribeToDatasetResponse::SubscribeToDatasetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SubscribeToDatasetRequest * SubscribeToDatasetResponse::request() const
 {
     Q_D(const SubscribeToDatasetResponse);
@@ -82,9 +80,8 @@ const SubscribeToDatasetRequest * SubscribeToDatasetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoSync SubscribeToDataset response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync SubscribeToDataset \a response.
  */
 void SubscribeToDatasetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void SubscribeToDatasetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::SubscribeToDatasetResponsePrivate
+ * \brief The SubscribeToDatasetResponsePrivate class provides private implementation for SubscribeToDatasetResponse.
  * \internal
  *
- * \class SubscribeToDatasetResponsePrivate
- *
- * \brief Private implementation for SubscribeToDatasetResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubscribeToDatasetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SubscribeToDatasetResponse instance.
+ * Constructs a SubscribeToDatasetResponsePrivate object with public implementation \a q.
  */
 SubscribeToDatasetResponsePrivate::SubscribeToDatasetResponsePrivate(
     SubscribeToDatasetResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ SubscribeToDatasetResponsePrivate::SubscribeToDatasetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync SubscribeToDatasetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync SubscribeToDataset response element from \a xml.
  */
 void SubscribeToDatasetResponsePrivate::parseSubscribeToDatasetResponse(QXmlStreamReader &xml)
 {

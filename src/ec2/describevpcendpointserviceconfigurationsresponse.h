@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeVpcEndpointServiceConfigurationsResponse : public EC2
 public:
     DescribeVpcEndpointServiceConfigurationsResponse(const DescribeVpcEndpointServiceConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeVpcEndpointServiceConfigurationsRequest * request() const;
+    virtual const DescribeVpcEndpointServiceConfigurationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeVpcEndpointServiceConfigurationsResponse)

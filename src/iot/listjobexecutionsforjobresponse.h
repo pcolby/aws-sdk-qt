@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListJobExecutionsForJobResponse : public IoTResponse {
 public:
     ListJobExecutionsForJobResponse(const ListJobExecutionsForJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListJobExecutionsForJobRequest * request() const;
+    virtual const ListJobExecutionsForJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListJobExecutionsForJobResponse)

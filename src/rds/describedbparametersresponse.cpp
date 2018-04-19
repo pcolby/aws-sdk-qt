@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBParametersResponse
- *
  * \brief The DescribeDBParametersResponse class provides an interace for RDS DescribeDBParameters responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDBParametersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDBParametersResponse::DescribeDBParametersResponse(
         const DescribeDBParametersRequest &request,
@@ -119,6 +114,9 @@ DescribeDBParametersResponse::DescribeDBParametersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDBParametersRequest * DescribeDBParametersResponse::request() const
 {
     Q_D(const DescribeDBParametersResponse);
@@ -126,9 +124,8 @@ const DescribeDBParametersRequest * DescribeDBParametersResponse::request() cons
 }
 
 /*!
- * @brief  Parse a RDS DescribeDBParameters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeDBParameters \a response.
  */
 void DescribeDBParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeDBParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeDBParametersResponsePrivate
+ * \brief The DescribeDBParametersResponsePrivate class provides private implementation for DescribeDBParametersResponse.
  * \internal
  *
- * \class DescribeDBParametersResponsePrivate
- *
- * \brief Private implementation for DescribeDBParametersResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBParametersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDBParametersResponse instance.
+ * Constructs a DescribeDBParametersResponsePrivate object with public implementation \a q.
  */
 DescribeDBParametersResponsePrivate::DescribeDBParametersResponsePrivate(
     DescribeDBParametersResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeDBParametersResponsePrivate::DescribeDBParametersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DescribeDBParametersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeDBParameters response element from \a xml.
  */
 void DescribeDBParametersResponsePrivate::parseDescribeDBParametersResponse(QXmlStreamReader &xml)
 {

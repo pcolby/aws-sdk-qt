@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetClassifierResponse
- *
  * \brief The GetClassifierResponse class provides an interace for Glue GetClassifier responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetClassifierResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetClassifierResponse object for \a reply to \a request, with parent \a parent.
  */
 GetClassifierResponse::GetClassifierResponse(
         const GetClassifierRequest &request,
@@ -58,6 +53,9 @@ GetClassifierResponse::GetClassifierResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetClassifierRequest * GetClassifierResponse::request() const
 {
     Q_D(const GetClassifierResponse);
@@ -65,9 +63,8 @@ const GetClassifierRequest * GetClassifierResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetClassifier response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetClassifier \a response.
  */
 void GetClassifierResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetClassifierResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetClassifierResponsePrivate
+ * \brief The GetClassifierResponsePrivate class provides private implementation for GetClassifierResponse.
  * \internal
  *
- * \class GetClassifierResponsePrivate
- *
- * \brief Private implementation for GetClassifierResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetClassifierResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetClassifierResponse instance.
+ * Constructs a GetClassifierResponsePrivate object with public implementation \a q.
  */
 GetClassifierResponsePrivate::GetClassifierResponsePrivate(
     GetClassifierResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetClassifierResponsePrivate::GetClassifierResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetClassifierResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetClassifier response element from \a xml.
  */
 void GetClassifierResponsePrivate::parseGetClassifierResponse(QXmlStreamReader &xml)
 {

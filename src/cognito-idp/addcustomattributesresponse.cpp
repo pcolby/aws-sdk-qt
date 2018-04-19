@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AddCustomAttributesResponse
- *
  * \brief The AddCustomAttributesResponse class provides an interace for CognitoIdentityProvider AddCustomAttributes responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AddCustomAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddCustomAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 AddCustomAttributesResponse::AddCustomAttributesResponse(
         const AddCustomAttributesRequest &request,
@@ -65,6 +60,9 @@ AddCustomAttributesResponse::AddCustomAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddCustomAttributesRequest * AddCustomAttributesResponse::request() const
 {
     Q_D(const AddCustomAttributesResponse);
@@ -72,9 +70,8 @@ const AddCustomAttributesRequest * AddCustomAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AddCustomAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AddCustomAttributes \a response.
  */
 void AddCustomAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AddCustomAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AddCustomAttributesResponsePrivate
+ * \brief The AddCustomAttributesResponsePrivate class provides private implementation for AddCustomAttributesResponse.
  * \internal
  *
- * \class AddCustomAttributesResponsePrivate
- *
- * \brief Private implementation for AddCustomAttributesResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddCustomAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddCustomAttributesResponse instance.
+ * Constructs a AddCustomAttributesResponsePrivate object with public implementation \a q.
  */
 AddCustomAttributesResponsePrivate::AddCustomAttributesResponsePrivate(
     AddCustomAttributesResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AddCustomAttributesResponsePrivate::AddCustomAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AddCustomAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AddCustomAttributes response element from \a xml.
  */
 void AddCustomAttributesResponsePrivate::parseAddCustomAttributesResponse(QXmlStreamReader &xml)
 {

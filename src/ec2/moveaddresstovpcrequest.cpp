@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * MoveAddressToVpcRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a MoveAddressToVpcRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a MoveAddressToVpcRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 MoveAddressToVpcRequestPrivate::MoveAddressToVpcRequestPrivate(
     const EC2Request::Action action, MoveAddressToVpcRequest * const q)

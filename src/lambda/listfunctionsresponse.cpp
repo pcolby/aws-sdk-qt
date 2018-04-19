@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::ListFunctionsResponse
- *
  * \brief The ListFunctionsResponse class provides an interace for Lambda ListFunctions responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new ListFunctionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListFunctionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListFunctionsResponse::ListFunctionsResponse(
         const ListFunctionsRequest &request,
@@ -66,6 +61,9 @@ ListFunctionsResponse::ListFunctionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListFunctionsRequest * ListFunctionsResponse::request() const
 {
     Q_D(const ListFunctionsResponse);
@@ -73,9 +71,8 @@ const ListFunctionsRequest * ListFunctionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda ListFunctions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda ListFunctions \a response.
  */
 void ListFunctionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListFunctionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::ListFunctionsResponsePrivate
+ * \brief The ListFunctionsResponsePrivate class provides private implementation for ListFunctionsResponse.
  * \internal
  *
- * \class ListFunctionsResponsePrivate
- *
- * \brief Private implementation for ListFunctionsResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFunctionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListFunctionsResponse instance.
+ * Constructs a ListFunctionsResponsePrivate object with public implementation \a q.
  */
 ListFunctionsResponsePrivate::ListFunctionsResponsePrivate(
     ListFunctionsResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ ListFunctionsResponsePrivate::ListFunctionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda ListFunctionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda ListFunctions response element from \a xml.
  */
 void ListFunctionsResponsePrivate::parseListFunctionsResponse(QXmlStreamReader &xml)
 {

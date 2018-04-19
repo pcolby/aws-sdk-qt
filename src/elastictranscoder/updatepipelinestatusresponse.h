@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdatePipelineStatusResponse : public ElasticTranscoderRespon
 public:
     UpdatePipelineStatusResponse(const UpdatePipelineStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdatePipelineStatusRequest * request() const;
+    virtual const UpdatePipelineStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdatePipelineStatusResponse)

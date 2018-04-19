@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::StartInstanceResponse
- *
  * \brief The StartInstanceResponse class provides an interace for OpsWorks StartInstance responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new StartInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 StartInstanceResponse::StartInstanceResponse(
         const StartInstanceRequest &request,
@@ -161,6 +156,9 @@ StartInstanceResponse::StartInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartInstanceRequest * StartInstanceResponse::request() const
 {
     Q_D(const StartInstanceResponse);
@@ -168,9 +166,8 @@ const StartInstanceRequest * StartInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks StartInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks StartInstance \a response.
  */
 void StartInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void StartInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::StartInstanceResponsePrivate
+ * \brief The StartInstanceResponsePrivate class provides private implementation for StartInstanceResponse.
  * \internal
  *
- * \class StartInstanceResponsePrivate
- *
- * \brief Private implementation for StartInstanceResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartInstanceResponse instance.
+ * Constructs a StartInstanceResponsePrivate object with public implementation \a q.
  */
 StartInstanceResponsePrivate::StartInstanceResponsePrivate(
     StartInstanceResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ StartInstanceResponsePrivate::StartInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks StartInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks StartInstance response element from \a xml.
  */
 void StartInstanceResponsePrivate::parseStartInstanceResponse(QXmlStreamReader &xml)
 {

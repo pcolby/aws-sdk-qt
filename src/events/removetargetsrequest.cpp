@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTargetsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a RemoveTargetsRequestPrivate object for CloudWatchEvents \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTargetsRequestPrivate object for CloudWatchEvents \a action,
+ * with public implementation \a q.
  */
 RemoveTargetsRequestPrivate::RemoveTargetsRequestPrivate(
     const CloudWatchEventsRequest::Action action, RemoveTargetsRequest * const q)

@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::PostCommentForPullRequestResponse
- *
  * \brief The PostCommentForPullRequestResponse class provides an interace for CodeCommit PostCommentForPullRequest responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new PostCommentForPullRequestResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PostCommentForPullRequestResponse object for \a reply to \a request, with parent \a parent.
  */
 PostCommentForPullRequestResponse::PostCommentForPullRequestResponse(
         const PostCommentForPullRequestRequest &request,
@@ -245,6 +240,9 @@ PostCommentForPullRequestResponse::PostCommentForPullRequestResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PostCommentForPullRequestRequest * PostCommentForPullRequestResponse::request() const
 {
     Q_D(const PostCommentForPullRequestResponse);
@@ -252,9 +250,8 @@ const PostCommentForPullRequestRequest * PostCommentForPullRequestResponse::requ
 }
 
 /*!
- * @brief  Parse a CodeCommit PostCommentForPullRequest response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit PostCommentForPullRequest \a response.
  */
 void PostCommentForPullRequestResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void PostCommentForPullRequestResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::PostCommentForPullRequestResponsePrivate
+ * \brief The PostCommentForPullRequestResponsePrivate class provides private implementation for PostCommentForPullRequestResponse.
  * \internal
  *
- * \class PostCommentForPullRequestResponsePrivate
- *
- * \brief Private implementation for PostCommentForPullRequestResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PostCommentForPullRequestResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PostCommentForPullRequestResponse instance.
+ * Constructs a PostCommentForPullRequestResponsePrivate object with public implementation \a q.
  */
 PostCommentForPullRequestResponsePrivate::PostCommentForPullRequestResponsePrivate(
     PostCommentForPullRequestResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ PostCommentForPullRequestResponsePrivate::PostCommentForPullRequestResponsePriva
 }
 
 /*!
- * @brief  Parse an CodeCommit PostCommentForPullRequestResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit PostCommentForPullRequest response element from \a xml.
  */
 void PostCommentForPullRequestResponsePrivate::parsePostCommentForPullRequestResponse(QXmlStreamReader &xml)
 {

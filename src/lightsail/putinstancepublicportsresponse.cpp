@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::PutInstancePublicPortsResponse
- *
  * \brief The PutInstancePublicPortsResponse class provides an interace for Lightsail PutInstancePublicPorts responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new PutInstancePublicPortsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutInstancePublicPortsResponse object for \a reply to \a request, with parent \a parent.
  */
 PutInstancePublicPortsResponse::PutInstancePublicPortsResponse(
         const PutInstancePublicPortsRequest &request,
@@ -71,6 +66,9 @@ PutInstancePublicPortsResponse::PutInstancePublicPortsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutInstancePublicPortsRequest * PutInstancePublicPortsResponse::request() const
 {
     Q_D(const PutInstancePublicPortsResponse);
@@ -78,9 +76,8 @@ const PutInstancePublicPortsRequest * PutInstancePublicPortsResponse::request() 
 }
 
 /*!
- * @brief  Parse a Lightsail PutInstancePublicPorts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail PutInstancePublicPorts \a response.
  */
 void PutInstancePublicPortsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void PutInstancePublicPortsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::PutInstancePublicPortsResponsePrivate
+ * \brief The PutInstancePublicPortsResponsePrivate class provides private implementation for PutInstancePublicPortsResponse.
  * \internal
  *
- * \class PutInstancePublicPortsResponsePrivate
- *
- * \brief Private implementation for PutInstancePublicPortsResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutInstancePublicPortsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutInstancePublicPortsResponse instance.
+ * Constructs a PutInstancePublicPortsResponsePrivate object with public implementation \a q.
  */
 PutInstancePublicPortsResponsePrivate::PutInstancePublicPortsResponsePrivate(
     PutInstancePublicPortsResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ PutInstancePublicPortsResponsePrivate::PutInstancePublicPortsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail PutInstancePublicPortsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail PutInstancePublicPorts response element from \a xml.
  */
 void PutInstancePublicPortsResponsePrivate::parsePutInstancePublicPortsResponse(QXmlStreamReader &xml)
 {

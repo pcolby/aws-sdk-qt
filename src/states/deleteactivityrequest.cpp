@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * DeleteActivityRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteActivityRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a DeleteActivityRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 DeleteActivityRequestPrivate::DeleteActivityRequestPrivate(
     const SFNRequest::Action action, DeleteActivityRequest * const q)

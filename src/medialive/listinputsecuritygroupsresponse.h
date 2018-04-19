@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListInputSecurityGroupsResponse : public MediaLiveResponse {
 public:
     ListInputSecurityGroupsResponse(const ListInputSecurityGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListInputSecurityGroupsRequest * request() const;
+    virtual const ListInputSecurityGroupsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListInputSecurityGroupsResponse)

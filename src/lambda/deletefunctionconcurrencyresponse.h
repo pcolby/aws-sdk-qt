@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteFunctionConcurrencyResponse : public LambdaResponse {
 public:
     DeleteFunctionConcurrencyResponse(const DeleteFunctionConcurrencyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteFunctionConcurrencyRequest * request() const;
+    virtual const DeleteFunctionConcurrencyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteFunctionConcurrencyResponse)

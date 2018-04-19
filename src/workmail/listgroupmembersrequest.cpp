@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * ListGroupMembersRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListGroupMembersRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a ListGroupMembersRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 ListGroupMembersRequestPrivate::ListGroupMembersRequestPrivate(
     const WorkMailRequest::Action action, ListGroupMembersRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeHostReservationsResponse : public EC2Response {
 public:
     DescribeHostReservationsResponse(const DescribeHostReservationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeHostReservationsRequest * request() const;
+    virtual const DescribeHostReservationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeHostReservationsResponse)

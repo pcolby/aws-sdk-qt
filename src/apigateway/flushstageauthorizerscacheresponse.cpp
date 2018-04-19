@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::FlushStageAuthorizersCacheResponse
- *
  * \brief The FlushStageAuthorizersCacheResponse class provides an interace for APIGateway FlushStageAuthorizersCache responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new FlushStageAuthorizersCacheResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a FlushStageAuthorizersCacheResponse object for \a reply to \a request, with parent \a parent.
  */
 FlushStageAuthorizersCacheResponse::FlushStageAuthorizersCacheResponse(
         const FlushStageAuthorizersCacheRequest &request,
@@ -60,6 +55,9 @@ FlushStageAuthorizersCacheResponse::FlushStageAuthorizersCacheResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const FlushStageAuthorizersCacheRequest * FlushStageAuthorizersCacheResponse::request() const
 {
     Q_D(const FlushStageAuthorizersCacheResponse);
@@ -67,9 +65,8 @@ const FlushStageAuthorizersCacheRequest * FlushStageAuthorizersCacheResponse::re
 }
 
 /*!
- * @brief  Parse a APIGateway FlushStageAuthorizersCache response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway FlushStageAuthorizersCache \a response.
  */
 void FlushStageAuthorizersCacheResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void FlushStageAuthorizersCacheResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::FlushStageAuthorizersCacheResponsePrivate
+ * \brief The FlushStageAuthorizersCacheResponsePrivate class provides private implementation for FlushStageAuthorizersCacheResponse.
  * \internal
  *
- * \class FlushStageAuthorizersCacheResponsePrivate
- *
- * \brief Private implementation for FlushStageAuthorizersCacheResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FlushStageAuthorizersCacheResponsePrivate object.
- *
- * @param  q  Pointer to this object's public FlushStageAuthorizersCacheResponse instance.
+ * Constructs a FlushStageAuthorizersCacheResponsePrivate object with public implementation \a q.
  */
 FlushStageAuthorizersCacheResponsePrivate::FlushStageAuthorizersCacheResponsePrivate(
     FlushStageAuthorizersCacheResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ FlushStageAuthorizersCacheResponsePrivate::FlushStageAuthorizersCacheResponsePri
 }
 
 /*!
- * @brief  Parse an APIGateway FlushStageAuthorizersCacheResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway FlushStageAuthorizersCache response element from \a xml.
  */
 void FlushStageAuthorizersCacheResponsePrivate::parseFlushStageAuthorizersCacheResponse(QXmlStreamReader &xml)
 {

@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * ResetDBClusterParameterGroupRequest::response
  */
 
 /*!
- *
- * Constructs a ResetDBClusterParameterGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a ResetDBClusterParameterGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestPrivate(
     const RDSRequest::Action action, ResetDBClusterParameterGroupRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AcceptVpcPeeringConnectionResponse
- *
  * \brief The AcceptVpcPeeringConnectionResponse class provides an interace for EC2 AcceptVpcPeeringConnection responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AcceptVpcPeeringConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AcceptVpcPeeringConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 AcceptVpcPeeringConnectionResponse::AcceptVpcPeeringConnectionResponse(
         const AcceptVpcPeeringConnectionRequest &request,
@@ -59,6 +54,9 @@ AcceptVpcPeeringConnectionResponse::AcceptVpcPeeringConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AcceptVpcPeeringConnectionRequest * AcceptVpcPeeringConnectionResponse::request() const
 {
     Q_D(const AcceptVpcPeeringConnectionResponse);
@@ -66,9 +64,8 @@ const AcceptVpcPeeringConnectionRequest * AcceptVpcPeeringConnectionResponse::re
 }
 
 /*!
- * @brief  Parse a EC2 AcceptVpcPeeringConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AcceptVpcPeeringConnection \a response.
  */
 void AcceptVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AcceptVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AcceptVpcPeeringConnectionResponsePrivate
+ * \brief The AcceptVpcPeeringConnectionResponsePrivate class provides private implementation for AcceptVpcPeeringConnectionResponse.
  * \internal
  *
- * \class AcceptVpcPeeringConnectionResponsePrivate
- *
- * \brief Private implementation for AcceptVpcPeeringConnectionResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptVpcPeeringConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AcceptVpcPeeringConnectionResponse instance.
+ * Constructs a AcceptVpcPeeringConnectionResponsePrivate object with public implementation \a q.
  */
 AcceptVpcPeeringConnectionResponsePrivate::AcceptVpcPeeringConnectionResponsePrivate(
     AcceptVpcPeeringConnectionResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AcceptVpcPeeringConnectionResponsePrivate::AcceptVpcPeeringConnectionResponsePri
 }
 
 /*!
- * @brief  Parse an EC2 AcceptVpcPeeringConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AcceptVpcPeeringConnection response element from \a xml.
  */
 void AcceptVpcPeeringConnectionResponsePrivate::parseAcceptVpcPeeringConnectionResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::UpdatePresetResponse
- *
  * \brief The UpdatePresetResponse class provides an interace for MediaConvert UpdatePreset responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::updatePreset
  */
 
 /*!
- * @brief  Constructs a new UpdatePresetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePresetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePresetResponse::UpdatePresetResponse(
         const UpdatePresetRequest &request,
@@ -55,6 +50,9 @@ UpdatePresetResponse::UpdatePresetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePresetRequest * UpdatePresetResponse::request() const
 {
     Q_D(const UpdatePresetResponse);
@@ -62,9 +60,8 @@ const UpdatePresetRequest * UpdatePresetResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert UpdatePreset response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert UpdatePreset \a response.
  */
 void UpdatePresetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdatePresetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::UpdatePresetResponsePrivate
+ * \brief The UpdatePresetResponsePrivate class provides private implementation for UpdatePresetResponse.
  * \internal
  *
- * \class UpdatePresetResponsePrivate
- *
- * \brief Private implementation for UpdatePresetResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePresetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePresetResponse instance.
+ * Constructs a UpdatePresetResponsePrivate object with public implementation \a q.
  */
 UpdatePresetResponsePrivate::UpdatePresetResponsePrivate(
     UpdatePresetResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdatePresetResponsePrivate::UpdatePresetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert UpdatePresetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert UpdatePreset response element from \a xml.
  */
 void UpdatePresetResponsePrivate::parseUpdatePresetResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDeploymentGroupResponse : public CodeDeployResponse {
 public:
     DeleteDeploymentGroupResponse(const DeleteDeploymentGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDeploymentGroupRequest * request() const;
+    virtual const DeleteDeploymentGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDeploymentGroupResponse)

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDashboardsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteDashboardsRequestPrivate object for CloudWatch \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDashboardsRequestPrivate object for CloudWatch \a action,
+ * with public implementation \a q.
  */
 DeleteDashboardsRequestPrivate::DeleteDashboardsRequestPrivate(
     const CloudWatchRequest::Action action, DeleteDashboardsRequest * const q)

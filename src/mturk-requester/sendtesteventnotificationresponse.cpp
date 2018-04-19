@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::SendTestEventNotificationResponse
- *
  * \brief The SendTestEventNotificationResponse class provides an interace for MTurk SendTestEventNotification responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::sendTestEventNotification
  */
 
 /*!
- * @brief  Constructs a new SendTestEventNotificationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendTestEventNotificationResponse object for \a reply to \a request, with parent \a parent.
  */
 SendTestEventNotificationResponse::SendTestEventNotificationResponse(
         const SendTestEventNotificationRequest &request,
@@ -55,6 +50,9 @@ SendTestEventNotificationResponse::SendTestEventNotificationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendTestEventNotificationRequest * SendTestEventNotificationResponse::request() const
 {
     Q_D(const SendTestEventNotificationResponse);
@@ -62,9 +60,8 @@ const SendTestEventNotificationRequest * SendTestEventNotificationResponse::requ
 }
 
 /*!
- * @brief  Parse a MTurk SendTestEventNotification response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk SendTestEventNotification \a response.
  */
 void SendTestEventNotificationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void SendTestEventNotificationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::SendTestEventNotificationResponsePrivate
+ * \brief The SendTestEventNotificationResponsePrivate class provides private implementation for SendTestEventNotificationResponse.
  * \internal
  *
- * \class SendTestEventNotificationResponsePrivate
- *
- * \brief Private implementation for SendTestEventNotificationResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendTestEventNotificationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendTestEventNotificationResponse instance.
+ * Constructs a SendTestEventNotificationResponsePrivate object with public implementation \a q.
  */
 SendTestEventNotificationResponsePrivate::SendTestEventNotificationResponsePrivate(
     SendTestEventNotificationResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ SendTestEventNotificationResponsePrivate::SendTestEventNotificationResponsePriva
 }
 
 /*!
- * @brief  Parse an MTurk SendTestEventNotificationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk SendTestEventNotification response element from \a xml.
  */
 void SendTestEventNotificationResponsePrivate::parseSendTestEventNotificationResponse(QXmlStreamReader &xml)
 {

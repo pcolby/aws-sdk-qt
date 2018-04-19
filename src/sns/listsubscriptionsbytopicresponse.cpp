@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ListSubscriptionsByTopicResponse
- *
  * \brief The ListSubscriptionsByTopicResponse class provides an interace for SNS ListSubscriptionsByTopic responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ListSubscriptionsByTopicResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSubscriptionsByTopicResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSubscriptionsByTopicResponse::ListSubscriptionsByTopicResponse(
         const ListSubscriptionsByTopicRequest &request,
@@ -69,6 +64,9 @@ ListSubscriptionsByTopicResponse::ListSubscriptionsByTopicResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSubscriptionsByTopicRequest * ListSubscriptionsByTopicResponse::request() const
 {
     Q_D(const ListSubscriptionsByTopicResponse);
@@ -76,9 +74,8 @@ const ListSubscriptionsByTopicRequest * ListSubscriptionsByTopicResponse::reques
 }
 
 /*!
- * @brief  Parse a SNS ListSubscriptionsByTopic response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS ListSubscriptionsByTopic \a response.
  */
 void ListSubscriptionsByTopicResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListSubscriptionsByTopicResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::ListSubscriptionsByTopicResponsePrivate
+ * \brief The ListSubscriptionsByTopicResponsePrivate class provides private implementation for ListSubscriptionsByTopicResponse.
  * \internal
  *
- * \class ListSubscriptionsByTopicResponsePrivate
- *
- * \brief Private implementation for ListSubscriptionsByTopicResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSubscriptionsByTopicResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSubscriptionsByTopicResponse instance.
+ * Constructs a ListSubscriptionsByTopicResponsePrivate object with public implementation \a q.
  */
 ListSubscriptionsByTopicResponsePrivate::ListSubscriptionsByTopicResponsePrivate(
     ListSubscriptionsByTopicResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ ListSubscriptionsByTopicResponsePrivate::ListSubscriptionsByTopicResponsePrivate
 }
 
 /*!
- * @brief  Parse an SNS ListSubscriptionsByTopicResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS ListSubscriptionsByTopic response element from \a xml.
  */
 void ListSubscriptionsByTopicResponsePrivate::parseListSubscriptionsByTopicResponse(QXmlStreamReader &xml)
 {

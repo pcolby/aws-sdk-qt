@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::UnlinkIdentityResponse
- *
  * \brief The UnlinkIdentityResponse class provides an interace for CognitoIdentity UnlinkIdentity responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new UnlinkIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UnlinkIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 UnlinkIdentityResponse::UnlinkIdentityResponse(
         const UnlinkIdentityRequest &request,
@@ -93,6 +88,9 @@ UnlinkIdentityResponse::UnlinkIdentityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UnlinkIdentityRequest * UnlinkIdentityResponse::request() const
 {
     Q_D(const UnlinkIdentityResponse);
@@ -100,9 +98,8 @@ const UnlinkIdentityRequest * UnlinkIdentityResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentity UnlinkIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity UnlinkIdentity \a response.
  */
 void UnlinkIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void UnlinkIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::UnlinkIdentityResponsePrivate
+ * \brief The UnlinkIdentityResponsePrivate class provides private implementation for UnlinkIdentityResponse.
  * \internal
  *
- * \class UnlinkIdentityResponsePrivate
- *
- * \brief Private implementation for UnlinkIdentityResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnlinkIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UnlinkIdentityResponse instance.
+ * Constructs a UnlinkIdentityResponsePrivate object with public implementation \a q.
  */
 UnlinkIdentityResponsePrivate::UnlinkIdentityResponsePrivate(
     UnlinkIdentityResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ UnlinkIdentityResponsePrivate::UnlinkIdentityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentity UnlinkIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity UnlinkIdentity response element from \a xml.
  */
 void UnlinkIdentityResponsePrivate::parseUnlinkIdentityResponse(QXmlStreamReader &xml)
 {

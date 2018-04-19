@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * SetUserSettingsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a SetUserSettingsRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a SetUserSettingsRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 SetUserSettingsRequestPrivate::SetUserSettingsRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetUserSettingsRequest * const q)

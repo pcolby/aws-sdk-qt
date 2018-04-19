@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetClusterCredentialsResponse : public RedshiftResponse {
 public:
     GetClusterCredentialsResponse(const GetClusterCredentialsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetClusterCredentialsRequest * request() const;
+    virtual const GetClusterCredentialsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetClusterCredentialsResponse)

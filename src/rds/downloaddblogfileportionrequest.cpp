@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DownloadDBLogFilePortionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DownloadDBLogFilePortionRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DownloadDBLogFilePortionRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DownloadDBLogFilePortionRequestPrivate::DownloadDBLogFilePortionRequestPrivate(
     const RDSRequest::Action action, DownloadDBLogFilePortionRequest * const q)

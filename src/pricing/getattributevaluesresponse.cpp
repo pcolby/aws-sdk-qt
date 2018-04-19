@@ -29,10 +29,9 @@ namespace Pricing {
 
 /*!
  * \class QtAws::Pricing::GetAttributeValuesResponse
- *
  * \brief The GetAttributeValuesResponse class provides an interace for Pricing GetAttributeValues responses.
  *
- * \ingroup Pricing
+ * \inmodule QtAwsPricing
  *
  *  AWS Price List Service API (AWS Price List Service) is a centralized and convenient way to programmatically query Amazon
  *  Web Services for services, products, and pricing information. The AWS Price List Service uses standardized product
@@ -65,11 +64,7 @@ namespace Pricing {
  */
 
 /*!
- * @brief  Constructs a new GetAttributeValuesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAttributeValuesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAttributeValuesResponse::GetAttributeValuesResponse(
         const GetAttributeValuesRequest &request,
@@ -81,6 +76,9 @@ GetAttributeValuesResponse::GetAttributeValuesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAttributeValuesRequest * GetAttributeValuesResponse::request() const
 {
     Q_D(const GetAttributeValuesResponse);
@@ -88,9 +86,8 @@ const GetAttributeValuesRequest * GetAttributeValuesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pricing GetAttributeValues response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pricing GetAttributeValues \a response.
  */
 void GetAttributeValuesResponse::parseSuccess(QIODevice &response)
 {
@@ -100,19 +97,15 @@ void GetAttributeValuesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pricing::GetAttributeValuesResponsePrivate
+ * \brief The GetAttributeValuesResponsePrivate class provides private implementation for GetAttributeValuesResponse.
  * \internal
  *
- * \class GetAttributeValuesResponsePrivate
- *
- * \brief Private implementation for GetAttributeValuesResponse.
+ * \inmodule QtAwsPricing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAttributeValuesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAttributeValuesResponse instance.
+ * Constructs a GetAttributeValuesResponsePrivate object with public implementation \a q.
  */
 GetAttributeValuesResponsePrivate::GetAttributeValuesResponsePrivate(
     GetAttributeValuesResponse * const q) : PricingResponsePrivate(q)
@@ -121,9 +114,7 @@ GetAttributeValuesResponsePrivate::GetAttributeValuesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pricing GetAttributeValuesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pricing GetAttributeValues response element from \a xml.
  */
 void GetAttributeValuesResponsePrivate::parseGetAttributeValuesResponse(QXmlStreamReader &xml)
 {

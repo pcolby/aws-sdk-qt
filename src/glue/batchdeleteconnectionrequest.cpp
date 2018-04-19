@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteConnectionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a BatchDeleteConnectionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a BatchDeleteConnectionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 BatchDeleteConnectionRequestPrivate::BatchDeleteConnectionRequestPrivate(
     const GlueRequest::Action action, BatchDeleteConnectionRequest * const q)

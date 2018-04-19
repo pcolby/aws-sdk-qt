@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ListServerCertificatesRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListServerCertificatesRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ListServerCertificatesRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ListServerCertificatesRequestPrivate::ListServerCertificatesRequestPrivate(
     const IAMRequest::Action action, ListServerCertificatesRequest * const q)

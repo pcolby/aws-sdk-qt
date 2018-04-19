@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListDocumentVersionsResponse
- *
  * \brief The ListDocumentVersionsResponse class provides an interace for SSM ListDocumentVersions responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListDocumentVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDocumentVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDocumentVersionsResponse::ListDocumentVersionsResponse(
         const ListDocumentVersionsRequest &request,
@@ -79,6 +74,9 @@ ListDocumentVersionsResponse::ListDocumentVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDocumentVersionsRequest * ListDocumentVersionsResponse::request() const
 {
     Q_D(const ListDocumentVersionsResponse);
@@ -86,9 +84,8 @@ const ListDocumentVersionsRequest * ListDocumentVersionsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SSM ListDocumentVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM ListDocumentVersions \a response.
  */
 void ListDocumentVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void ListDocumentVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::ListDocumentVersionsResponsePrivate
+ * \brief The ListDocumentVersionsResponsePrivate class provides private implementation for ListDocumentVersionsResponse.
  * \internal
  *
- * \class ListDocumentVersionsResponsePrivate
- *
- * \brief Private implementation for ListDocumentVersionsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDocumentVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDocumentVersionsResponse instance.
+ * Constructs a ListDocumentVersionsResponsePrivate object with public implementation \a q.
  */
 ListDocumentVersionsResponsePrivate::ListDocumentVersionsResponsePrivate(
     ListDocumentVersionsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ ListDocumentVersionsResponsePrivate::ListDocumentVersionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM ListDocumentVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM ListDocumentVersions response element from \a xml.
  */
 void ListDocumentVersionsResponsePrivate::parseListDocumentVersionsResponse(QXmlStreamReader &xml)
 {

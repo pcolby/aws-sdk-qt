@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * ListContainerInstancesRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListContainerInstancesRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a ListContainerInstancesRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 ListContainerInstancesRequestPrivate::ListContainerInstancesRequestPrivate(
     const ECSRequest::Action action, ListContainerInstancesRequest * const q)

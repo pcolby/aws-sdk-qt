@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteConfigurationSetEventDestinationResponse
- *
  * \brief The DeleteConfigurationSetEventDestinationResponse class provides an interace for SES DeleteConfigurationSetEventDestination responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationSetEventDestinationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteConfigurationSetEventDestinationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteConfigurationSetEventDestinationResponse::DeleteConfigurationSetEventDestinationResponse(
         const DeleteConfigurationSetEventDestinationRequest &request,
@@ -66,6 +61,9 @@ DeleteConfigurationSetEventDestinationResponse::DeleteConfigurationSetEventDesti
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteConfigurationSetEventDestinationRequest * DeleteConfigurationSetEventDestinationResponse::request() const
 {
     Q_D(const DeleteConfigurationSetEventDestinationResponse);
@@ -73,9 +71,8 @@ const DeleteConfigurationSetEventDestinationRequest * DeleteConfigurationSetEven
 }
 
 /*!
- * @brief  Parse a SES DeleteConfigurationSetEventDestination response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES DeleteConfigurationSetEventDestination \a response.
  */
 void DeleteConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &res
 }
 
 /*!
+ * \class QtAws::SES::DeleteConfigurationSetEventDestinationResponsePrivate
+ * \brief The DeleteConfigurationSetEventDestinationResponsePrivate class provides private implementation for DeleteConfigurationSetEventDestinationResponse.
  * \internal
  *
- * \class DeleteConfigurationSetEventDestinationResponsePrivate
- *
- * \brief Private implementation for DeleteConfigurationSetEventDestinationResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationSetEventDestinationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteConfigurationSetEventDestinationResponse instance.
+ * Constructs a DeleteConfigurationSetEventDestinationResponsePrivate object with public implementation \a q.
  */
 DeleteConfigurationSetEventDestinationResponsePrivate::DeleteConfigurationSetEventDestinationResponsePrivate(
     DeleteConfigurationSetEventDestinationResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteConfigurationSetEventDestinationResponsePrivate::DeleteConfigurationSetEve
 }
 
 /*!
- * @brief  Parse an SES DeleteConfigurationSetEventDestinationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES DeleteConfigurationSetEventDestination response element from \a xml.
  */
 void DeleteConfigurationSetEventDestinationResponsePrivate::parseDeleteConfigurationSetEventDestinationResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteJobResponse : public GlueResponse {
 public:
     DeleteJobResponse(const DeleteJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteJobRequest * request() const;
+    virtual const DeleteJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteJobResponse)

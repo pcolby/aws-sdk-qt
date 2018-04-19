@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBInstanceResponse
- *
  * \brief The ModifyDBInstanceResponse class provides an interace for RDS ModifyDBInstance responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyDBInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyDBInstanceResponse::ModifyDBInstanceResponse(
         const ModifyDBInstanceRequest &request,
@@ -119,6 +114,9 @@ ModifyDBInstanceResponse::ModifyDBInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyDBInstanceRequest * ModifyDBInstanceResponse::request() const
 {
     Q_D(const ModifyDBInstanceResponse);
@@ -126,9 +124,8 @@ const ModifyDBInstanceRequest * ModifyDBInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS ModifyDBInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS ModifyDBInstance \a response.
  */
 void ModifyDBInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void ModifyDBInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::ModifyDBInstanceResponsePrivate
+ * \brief The ModifyDBInstanceResponsePrivate class provides private implementation for ModifyDBInstanceResponse.
  * \internal
  *
- * \class ModifyDBInstanceResponsePrivate
- *
- * \brief Private implementation for ModifyDBInstanceResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyDBInstanceResponse instance.
+ * Constructs a ModifyDBInstanceResponsePrivate object with public implementation \a q.
  */
 ModifyDBInstanceResponsePrivate::ModifyDBInstanceResponsePrivate(
     ModifyDBInstanceResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ ModifyDBInstanceResponsePrivate::ModifyDBInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS ModifyDBInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS ModifyDBInstance response element from \a xml.
  */
 void ModifyDBInstanceResponsePrivate::parseModifyDBInstanceResponse(QXmlStreamReader &xml)
 {

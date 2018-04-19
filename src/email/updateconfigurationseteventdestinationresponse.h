@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateConfigurationSetEventDestinationResponse : public SESRe
 public:
     UpdateConfigurationSetEventDestinationResponse(const UpdateConfigurationSetEventDestinationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateConfigurationSetEventDestinationRequest * request() const;
+    virtual const UpdateConfigurationSetEventDestinationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateConfigurationSetEventDestinationResponse)

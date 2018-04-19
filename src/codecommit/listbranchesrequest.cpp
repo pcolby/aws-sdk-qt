@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * ListBranchesRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ListBranchesRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a ListBranchesRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 ListBranchesRequestPrivate::ListBranchesRequestPrivate(
     const CodeCommitRequest::Action action, ListBranchesRequest * const q)

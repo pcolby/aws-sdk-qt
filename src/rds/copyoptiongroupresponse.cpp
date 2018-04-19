@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CopyOptionGroupResponse
- *
  * \brief The CopyOptionGroupResponse class provides an interace for RDS CopyOptionGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CopyOptionGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopyOptionGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CopyOptionGroupResponse::CopyOptionGroupResponse(
         const CopyOptionGroupRequest &request,
@@ -119,6 +114,9 @@ CopyOptionGroupResponse::CopyOptionGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopyOptionGroupRequest * CopyOptionGroupResponse::request() const
 {
     Q_D(const CopyOptionGroupResponse);
@@ -126,9 +124,8 @@ const CopyOptionGroupRequest * CopyOptionGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS CopyOptionGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CopyOptionGroup \a response.
  */
 void CopyOptionGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CopyOptionGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CopyOptionGroupResponsePrivate
+ * \brief The CopyOptionGroupResponsePrivate class provides private implementation for CopyOptionGroupResponse.
  * \internal
  *
- * \class CopyOptionGroupResponsePrivate
- *
- * \brief Private implementation for CopyOptionGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyOptionGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopyOptionGroupResponse instance.
+ * Constructs a CopyOptionGroupResponsePrivate object with public implementation \a q.
  */
 CopyOptionGroupResponsePrivate::CopyOptionGroupResponsePrivate(
     CopyOptionGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CopyOptionGroupResponsePrivate::CopyOptionGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CopyOptionGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CopyOptionGroup response element from \a xml.
  */
 void CopyOptionGroupResponsePrivate::parseCopyOptionGroupResponse(QXmlStreamReader &xml)
 {

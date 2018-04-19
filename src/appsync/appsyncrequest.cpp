@@ -66,7 +66,7 @@ namespace AppSync {
  */
 
 /*!
- * Constructs a[n] AppSyncRequest object for AppSync \a action.
+ * Constructs a AppSyncRequest object for AppSync \a action.
  */
 AppSyncRequest::AppSyncRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AppSyncRequestPrivate(action, this))
@@ -266,8 +266,8 @@ QNetworkRequest AppSyncRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a AppSyncRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a AppSyncRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 AppSyncRequestPrivate::AppSyncRequestPrivate(const AppSyncRequest::Action action, AppSyncRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

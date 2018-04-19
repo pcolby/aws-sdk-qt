@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::AttachLoadBalancerTlsCertificateResponse
- *
  * \brief The AttachLoadBalancerTlsCertificateResponse class provides an interace for Lightsail AttachLoadBalancerTlsCertificate responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new AttachLoadBalancerTlsCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachLoadBalancerTlsCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachLoadBalancerTlsCertificateResponse::AttachLoadBalancerTlsCertificateResponse(
         const AttachLoadBalancerTlsCertificateRequest &request,
@@ -71,6 +66,9 @@ AttachLoadBalancerTlsCertificateResponse::AttachLoadBalancerTlsCertificateRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachLoadBalancerTlsCertificateRequest * AttachLoadBalancerTlsCertificateResponse::request() const
 {
     Q_D(const AttachLoadBalancerTlsCertificateResponse);
@@ -78,9 +76,8 @@ const AttachLoadBalancerTlsCertificateRequest * AttachLoadBalancerTlsCertificate
 }
 
 /*!
- * @brief  Parse a Lightsail AttachLoadBalancerTlsCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail AttachLoadBalancerTlsCertificate \a response.
  */
 void AttachLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void AttachLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::AttachLoadBalancerTlsCertificateResponsePrivate
+ * \brief The AttachLoadBalancerTlsCertificateResponsePrivate class provides private implementation for AttachLoadBalancerTlsCertificateResponse.
  * \internal
  *
- * \class AttachLoadBalancerTlsCertificateResponsePrivate
- *
- * \brief Private implementation for AttachLoadBalancerTlsCertificateResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachLoadBalancerTlsCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachLoadBalancerTlsCertificateResponse instance.
+ * Constructs a AttachLoadBalancerTlsCertificateResponsePrivate object with public implementation \a q.
  */
 AttachLoadBalancerTlsCertificateResponsePrivate::AttachLoadBalancerTlsCertificateResponsePrivate(
     AttachLoadBalancerTlsCertificateResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ AttachLoadBalancerTlsCertificateResponsePrivate::AttachLoadBalancerTlsCertificat
 }
 
 /*!
- * @brief  Parse an Lightsail AttachLoadBalancerTlsCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail AttachLoadBalancerTlsCertificate response element from \a xml.
  */
 void AttachLoadBalancerTlsCertificateResponsePrivate::parseAttachLoadBalancerTlsCertificateResponse(QXmlStreamReader &xml)
 {

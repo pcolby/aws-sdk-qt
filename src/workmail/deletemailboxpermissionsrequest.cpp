@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * DeleteMailboxPermissionsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteMailboxPermissionsRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a DeleteMailboxPermissionsRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 DeleteMailboxPermissionsRequestPrivate::DeleteMailboxPermissionsRequestPrivate(
     const WorkMailRequest::Action action, DeleteMailboxPermissionsRequest * const q)

@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * DeleteArchiveRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteArchiveRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a DeleteArchiveRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 DeleteArchiveRequestPrivate::DeleteArchiveRequestPrivate(
     const GlacierRequest::Action action, DeleteArchiveRequest * const q)

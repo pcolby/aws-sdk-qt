@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * SplitShardRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a SplitShardRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a SplitShardRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 SplitShardRequestPrivate::SplitShardRequestPrivate(
     const KinesisRequest::Action action, SplitShardRequest * const q)

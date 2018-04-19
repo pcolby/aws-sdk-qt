@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::CreateRuleGroupResponse
- *
  * \brief The CreateRuleGroupResponse class provides an interace for WAFRegional CreateRuleGroup responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new CreateRuleGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRuleGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRuleGroupResponse::CreateRuleGroupResponse(
         const CreateRuleGroupRequest &request,
@@ -62,6 +57,9 @@ CreateRuleGroupResponse::CreateRuleGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRuleGroupRequest * CreateRuleGroupResponse::request() const
 {
     Q_D(const CreateRuleGroupResponse);
@@ -69,9 +67,8 @@ const CreateRuleGroupRequest * CreateRuleGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional CreateRuleGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional CreateRuleGroup \a response.
  */
 void CreateRuleGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void CreateRuleGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::CreateRuleGroupResponsePrivate
+ * \brief The CreateRuleGroupResponsePrivate class provides private implementation for CreateRuleGroupResponse.
  * \internal
  *
- * \class CreateRuleGroupResponsePrivate
- *
- * \brief Private implementation for CreateRuleGroupResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRuleGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRuleGroupResponse instance.
+ * Constructs a CreateRuleGroupResponsePrivate object with public implementation \a q.
  */
 CreateRuleGroupResponsePrivate::CreateRuleGroupResponsePrivate(
     CreateRuleGroupResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ CreateRuleGroupResponsePrivate::CreateRuleGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional CreateRuleGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional CreateRuleGroup response element from \a xml.
  */
 void CreateRuleGroupResponsePrivate::parseCreateRuleGroupResponse(QXmlStreamReader &xml)
 {

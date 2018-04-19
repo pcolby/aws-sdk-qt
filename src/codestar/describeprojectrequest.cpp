@@ -169,9 +169,8 @@ QtAws::Core::AwsAbstractResponse * DescribeProjectRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeProjectRequestPrivate object for CodeStar \a action with,
- * public implementation \a q.
+ * Constructs a DescribeProjectRequestPrivate object for CodeStar \a action,
+ * with public implementation \a q.
  */
 DescribeProjectRequestPrivate::DescribeProjectRequestPrivate(
     const CodeStarRequest::Action action, DescribeProjectRequest * const q)

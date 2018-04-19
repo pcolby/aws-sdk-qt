@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreateConnectionResponse
- *
  * \brief The CreateConnectionResponse class provides an interace for Glue CreateConnection responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreateConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateConnectionResponse::CreateConnectionResponse(
         const CreateConnectionRequest &request,
@@ -58,6 +53,9 @@ CreateConnectionResponse::CreateConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateConnectionRequest * CreateConnectionResponse::request() const
 {
     Q_D(const CreateConnectionResponse);
@@ -65,9 +63,8 @@ const CreateConnectionRequest * CreateConnectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue CreateConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue CreateConnection \a response.
  */
 void CreateConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::CreateConnectionResponsePrivate
+ * \brief The CreateConnectionResponsePrivate class provides private implementation for CreateConnectionResponse.
  * \internal
  *
- * \class CreateConnectionResponsePrivate
- *
- * \brief Private implementation for CreateConnectionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateConnectionResponse instance.
+ * Constructs a CreateConnectionResponsePrivate object with public implementation \a q.
  */
 CreateConnectionResponsePrivate::CreateConnectionResponsePrivate(
     CreateConnectionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateConnectionResponsePrivate::CreateConnectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue CreateConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue CreateConnection response element from \a xml.
  */
 void CreateConnectionResponsePrivate::parseCreateConnectionResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::TerminateWorkflowExecutionResponse
- *
  * \brief The TerminateWorkflowExecutionResponse class provides an interace for SWF TerminateWorkflowExecution responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new TerminateWorkflowExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TerminateWorkflowExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 TerminateWorkflowExecutionResponse::TerminateWorkflowExecutionResponse(
         const TerminateWorkflowExecutionRequest &request,
@@ -71,6 +66,9 @@ TerminateWorkflowExecutionResponse::TerminateWorkflowExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TerminateWorkflowExecutionRequest * TerminateWorkflowExecutionResponse::request() const
 {
     Q_D(const TerminateWorkflowExecutionResponse);
@@ -78,9 +76,8 @@ const TerminateWorkflowExecutionRequest * TerminateWorkflowExecutionResponse::re
 }
 
 /*!
- * @brief  Parse a SWF TerminateWorkflowExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF TerminateWorkflowExecution \a response.
  */
 void TerminateWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void TerminateWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::TerminateWorkflowExecutionResponsePrivate
+ * \brief The TerminateWorkflowExecutionResponsePrivate class provides private implementation for TerminateWorkflowExecutionResponse.
  * \internal
  *
- * \class TerminateWorkflowExecutionResponsePrivate
- *
- * \brief Private implementation for TerminateWorkflowExecutionResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateWorkflowExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TerminateWorkflowExecutionResponse instance.
+ * Constructs a TerminateWorkflowExecutionResponsePrivate object with public implementation \a q.
  */
 TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionResponsePrivate(
     TerminateWorkflowExecutionResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ TerminateWorkflowExecutionResponsePrivate::TerminateWorkflowExecutionResponsePri
 }
 
 /*!
- * @brief  Parse an SWF TerminateWorkflowExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF TerminateWorkflowExecution response element from \a xml.
  */
 void TerminateWorkflowExecutionResponsePrivate::parseTerminateWorkflowExecutionResponse(QXmlStreamReader &xml)
 {

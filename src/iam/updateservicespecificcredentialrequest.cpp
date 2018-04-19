@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceSpecificCredentialRequest::respo
  */
 
 /*!
- *
- * Constructs a UpdateServiceSpecificCredentialRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateServiceSpecificCredentialRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateServiceSpecificCredentialRequestPrivate::UpdateServiceSpecificCredentialRequestPrivate(
     const IAMRequest::Action action, UpdateServiceSpecificCredentialRequest * const q)

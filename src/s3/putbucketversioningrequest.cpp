@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PutBucketVersioningRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a PutBucketVersioningRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a PutBucketVersioningRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 PutBucketVersioningRequestPrivate::PutBucketVersioningRequestPrivate(
     const S3Request::Action action, PutBucketVersioningRequest * const q)

@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteAggregationAuthorizationResponse
- *
  * \brief The DeleteAggregationAuthorizationResponse class provides an interace for ConfigService DeleteAggregationAuthorization responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteAggregationAuthorizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAggregationAuthorizationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAggregationAuthorizationResponse::DeleteAggregationAuthorizationResponse(
         const DeleteAggregationAuthorizationRequest &request,
@@ -78,6 +73,9 @@ DeleteAggregationAuthorizationResponse::DeleteAggregationAuthorizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAggregationAuthorizationRequest * DeleteAggregationAuthorizationResponse::request() const
 {
     Q_D(const DeleteAggregationAuthorizationResponse);
@@ -85,9 +83,8 @@ const DeleteAggregationAuthorizationRequest * DeleteAggregationAuthorizationResp
 }
 
 /*!
- * @brief  Parse a ConfigService DeleteAggregationAuthorization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DeleteAggregationAuthorization \a response.
  */
 void DeleteAggregationAuthorizationResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DeleteAggregationAuthorizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DeleteAggregationAuthorizationResponsePrivate
+ * \brief The DeleteAggregationAuthorizationResponsePrivate class provides private implementation for DeleteAggregationAuthorizationResponse.
  * \internal
  *
- * \class DeleteAggregationAuthorizationResponsePrivate
- *
- * \brief Private implementation for DeleteAggregationAuthorizationResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAggregationAuthorizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAggregationAuthorizationResponse instance.
+ * Constructs a DeleteAggregationAuthorizationResponsePrivate object with public implementation \a q.
  */
 DeleteAggregationAuthorizationResponsePrivate::DeleteAggregationAuthorizationResponsePrivate(
     DeleteAggregationAuthorizationResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DeleteAggregationAuthorizationResponsePrivate::DeleteAggregationAuthorizationRes
 }
 
 /*!
- * @brief  Parse an ConfigService DeleteAggregationAuthorizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DeleteAggregationAuthorization response element from \a xml.
  */
 void DeleteAggregationAuthorizationResponsePrivate::parseDeleteAggregationAuthorizationResponse(QXmlStreamReader &xml)
 {

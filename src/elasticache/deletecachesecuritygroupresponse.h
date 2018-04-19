@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCacheSecurityGroupResponse : public ElastiCacheResponse
 public:
     DeleteCacheSecurityGroupResponse(const DeleteCacheSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCacheSecurityGroupRequest * request() const;
+    virtual const DeleteCacheSecurityGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCacheSecurityGroupResponse)

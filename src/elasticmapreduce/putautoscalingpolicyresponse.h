@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutAutoScalingPolicyResponse : public EMRResponse {
 public:
     PutAutoScalingPolicyResponse(const PutAutoScalingPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutAutoScalingPolicyRequest * request() const;
+    virtual const PutAutoScalingPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutAutoScalingPolicyResponse)

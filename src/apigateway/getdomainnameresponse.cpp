@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetDomainNameResponse
- *
  * \brief The GetDomainNameResponse class provides an interace for APIGateway GetDomainName responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetDomainNameResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDomainNameResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDomainNameResponse::GetDomainNameResponse(
         const GetDomainNameRequest &request,
@@ -60,6 +55,9 @@ GetDomainNameResponse::GetDomainNameResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDomainNameRequest * GetDomainNameResponse::request() const
 {
     Q_D(const GetDomainNameResponse);
@@ -67,9 +65,8 @@ const GetDomainNameRequest * GetDomainNameResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetDomainName response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetDomainName \a response.
  */
 void GetDomainNameResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetDomainNameResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetDomainNameResponsePrivate
+ * \brief The GetDomainNameResponsePrivate class provides private implementation for GetDomainNameResponse.
  * \internal
  *
- * \class GetDomainNameResponsePrivate
- *
- * \brief Private implementation for GetDomainNameResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDomainNameResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDomainNameResponse instance.
+ * Constructs a GetDomainNameResponsePrivate object with public implementation \a q.
  */
 GetDomainNameResponsePrivate::GetDomainNameResponsePrivate(
     GetDomainNameResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetDomainNameResponsePrivate::GetDomainNameResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetDomainNameResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetDomainName response element from \a xml.
  */
 void GetDomainNameResponsePrivate::parseGetDomainNameResponse(QXmlStreamReader &xml)
 {

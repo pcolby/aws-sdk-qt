@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceInformationRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeInstanceInformationRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInstanceInformationRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeInstanceInformationRequestPrivate::DescribeInstanceInformationRequestPrivate(
     const SSMRequest::Action action, DescribeInstanceInformationRequest * const q)

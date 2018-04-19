@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetCapacityRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a UpdateFleetCapacityRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a UpdateFleetCapacityRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 UpdateFleetCapacityRequestPrivate::UpdateFleetCapacityRequestPrivate(
     const GameLiftRequest::Action action, UpdateFleetCapacityRequest * const q)

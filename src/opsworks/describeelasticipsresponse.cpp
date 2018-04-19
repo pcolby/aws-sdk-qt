@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeElasticIpsResponse
- *
  * \brief The DescribeElasticIpsResponse class provides an interace for OpsWorks DescribeElasticIps responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeElasticIpsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeElasticIpsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeElasticIpsResponse::DescribeElasticIpsResponse(
         const DescribeElasticIpsRequest &request,
@@ -161,6 +156,9 @@ DescribeElasticIpsResponse::DescribeElasticIpsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeElasticIpsRequest * DescribeElasticIpsResponse::request() const
 {
     Q_D(const DescribeElasticIpsResponse);
@@ -168,9 +166,8 @@ const DescribeElasticIpsRequest * DescribeElasticIpsResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeElasticIps response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeElasticIps \a response.
  */
 void DescribeElasticIpsResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeElasticIpsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeElasticIpsResponsePrivate
+ * \brief The DescribeElasticIpsResponsePrivate class provides private implementation for DescribeElasticIpsResponse.
  * \internal
  *
- * \class DescribeElasticIpsResponsePrivate
- *
- * \brief Private implementation for DescribeElasticIpsResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeElasticIpsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeElasticIpsResponse instance.
+ * Constructs a DescribeElasticIpsResponsePrivate object with public implementation \a q.
  */
 DescribeElasticIpsResponsePrivate::DescribeElasticIpsResponsePrivate(
     DescribeElasticIpsResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeElasticIpsResponsePrivate::DescribeElasticIpsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeElasticIpsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeElasticIps response element from \a xml.
  */
 void DescribeElasticIpsResponsePrivate::parseDescribeElasticIpsResponse(QXmlStreamReader &xml)
 {

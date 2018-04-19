@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::CreateChannelResponse
- *
  * \brief The CreateChannelResponse class provides an interace for MediaLive CreateChannel responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::createChannel
  */
 
 /*!
- * @brief  Constructs a new CreateChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateChannelResponse::CreateChannelResponse(
         const CreateChannelRequest &request,
@@ -55,6 +50,9 @@ CreateChannelResponse::CreateChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateChannelRequest * CreateChannelResponse::request() const
 {
     Q_D(const CreateChannelResponse);
@@ -62,9 +60,8 @@ const CreateChannelRequest * CreateChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaLive CreateChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive CreateChannel \a response.
  */
 void CreateChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::CreateChannelResponsePrivate
+ * \brief The CreateChannelResponsePrivate class provides private implementation for CreateChannelResponse.
  * \internal
  *
- * \class CreateChannelResponsePrivate
- *
- * \brief Private implementation for CreateChannelResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateChannelResponse instance.
+ * Constructs a CreateChannelResponsePrivate object with public implementation \a q.
  */
 CreateChannelResponsePrivate::CreateChannelResponsePrivate(
     CreateChannelResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateChannelResponsePrivate::CreateChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive CreateChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive CreateChannel response element from \a xml.
  */
 void CreateChannelResponsePrivate::parseCreateChannelResponse(QXmlStreamReader &xml)
 {

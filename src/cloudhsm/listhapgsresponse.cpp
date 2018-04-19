@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ListHapgsResponse
- *
  * \brief The ListHapgsResponse class provides an interace for CloudHSM ListHapgs responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ListHapgsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListHapgsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListHapgsResponse::ListHapgsResponse(
         const ListHapgsRequest &request,
@@ -67,6 +62,9 @@ ListHapgsResponse::ListHapgsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListHapgsRequest * ListHapgsResponse::request() const
 {
     Q_D(const ListHapgsResponse);
@@ -74,9 +72,8 @@ const ListHapgsRequest * ListHapgsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSM ListHapgs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM ListHapgs \a response.
  */
 void ListHapgsResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void ListHapgsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::ListHapgsResponsePrivate
+ * \brief The ListHapgsResponsePrivate class provides private implementation for ListHapgsResponse.
  * \internal
  *
- * \class ListHapgsResponsePrivate
- *
- * \brief Private implementation for ListHapgsResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHapgsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListHapgsResponse instance.
+ * Constructs a ListHapgsResponsePrivate object with public implementation \a q.
  */
 ListHapgsResponsePrivate::ListHapgsResponsePrivate(
     ListHapgsResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ ListHapgsResponsePrivate::ListHapgsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM ListHapgsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM ListHapgs response element from \a xml.
  */
 void ListHapgsResponsePrivate::parseListHapgsResponse(QXmlStreamReader &xml)
 {

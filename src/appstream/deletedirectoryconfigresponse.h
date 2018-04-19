@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDirectoryConfigResponse : public AppStreamResponse {
 public:
     DeleteDirectoryConfigResponse(const DeleteDirectoryConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDirectoryConfigRequest * request() const;
+    virtual const DeleteDirectoryConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDirectoryConfigResponse)

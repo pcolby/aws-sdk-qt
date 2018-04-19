@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * CreateClusterSubnetGroupRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateClusterSubnetGroupRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a CreateClusterSubnetGroupRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 CreateClusterSubnetGroupRequestPrivate::CreateClusterSubnetGroupRequestPrivate(
     const RedshiftRequest::Action action, CreateClusterSubnetGroupRequest * const q)

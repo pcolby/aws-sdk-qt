@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterInstancesFromLoadBalancerRequest::r
  */
 
 /*!
- *
- * Constructs a DeregisterInstancesFromLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterInstancesFromLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 DeregisterInstancesFromLoadBalancerRequestPrivate::DeregisterInstancesFromLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DeregisterInstancesFromLoadBalancerRequest * const q)

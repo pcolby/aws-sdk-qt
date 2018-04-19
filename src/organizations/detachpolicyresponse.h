@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachPolicyResponse : public OrganizationsResponse {
 public:
     DetachPolicyResponse(const DetachPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachPolicyRequest * request() const;
+    virtual const DetachPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DetachPolicyResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListWebACLsResponse : public WAFRegionalResponse {
 public:
     ListWebACLsResponse(const ListWebACLsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListWebACLsRequest * request() const;
+    virtual const ListWebACLsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListWebACLsResponse)

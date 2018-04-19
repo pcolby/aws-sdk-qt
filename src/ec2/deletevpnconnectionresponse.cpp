@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVpnConnectionResponse
- *
  * \brief The DeleteVpnConnectionResponse class provides an interace for EC2 DeleteVpnConnection responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpnConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVpnConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVpnConnectionResponse::DeleteVpnConnectionResponse(
         const DeleteVpnConnectionRequest &request,
@@ -59,6 +54,9 @@ DeleteVpnConnectionResponse::DeleteVpnConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVpnConnectionRequest * DeleteVpnConnectionResponse::request() const
 {
     Q_D(const DeleteVpnConnectionResponse);
@@ -66,9 +64,8 @@ const DeleteVpnConnectionRequest * DeleteVpnConnectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteVpnConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteVpnConnection \a response.
  */
 void DeleteVpnConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteVpnConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteVpnConnectionResponsePrivate
+ * \brief The DeleteVpnConnectionResponsePrivate class provides private implementation for DeleteVpnConnectionResponse.
  * \internal
  *
- * \class DeleteVpnConnectionResponsePrivate
- *
- * \brief Private implementation for DeleteVpnConnectionResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpnConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVpnConnectionResponse instance.
+ * Constructs a DeleteVpnConnectionResponsePrivate object with public implementation \a q.
  */
 DeleteVpnConnectionResponsePrivate::DeleteVpnConnectionResponsePrivate(
     DeleteVpnConnectionResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteVpnConnectionResponsePrivate::DeleteVpnConnectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteVpnConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteVpnConnection response element from \a xml.
  */
 void DeleteVpnConnectionResponsePrivate::parseDeleteVpnConnectionResponse(QXmlStreamReader &xml)
 {

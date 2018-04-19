@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetHealthCheckStatusResponse
- *
  * \brief The GetHealthCheckStatusResponse class provides an interace for Route53 GetHealthCheckStatus responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getHealthCheckStatus
  */
 
 /*!
- * @brief  Constructs a new GetHealthCheckStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetHealthCheckStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 GetHealthCheckStatusResponse::GetHealthCheckStatusResponse(
         const GetHealthCheckStatusRequest &request,
@@ -55,6 +50,9 @@ GetHealthCheckStatusResponse::GetHealthCheckStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetHealthCheckStatusRequest * GetHealthCheckStatusResponse::request() const
 {
     Q_D(const GetHealthCheckStatusResponse);
@@ -62,9 +60,8 @@ const GetHealthCheckStatusRequest * GetHealthCheckStatusResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Route53 GetHealthCheckStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetHealthCheckStatus \a response.
  */
 void GetHealthCheckStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetHealthCheckStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetHealthCheckStatusResponsePrivate
+ * \brief The GetHealthCheckStatusResponsePrivate class provides private implementation for GetHealthCheckStatusResponse.
  * \internal
  *
- * \class GetHealthCheckStatusResponsePrivate
- *
- * \brief Private implementation for GetHealthCheckStatusResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHealthCheckStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetHealthCheckStatusResponse instance.
+ * Constructs a GetHealthCheckStatusResponsePrivate object with public implementation \a q.
  */
 GetHealthCheckStatusResponsePrivate::GetHealthCheckStatusResponsePrivate(
     GetHealthCheckStatusResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetHealthCheckStatusResponsePrivate::GetHealthCheckStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 GetHealthCheckStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetHealthCheckStatus response element from \a xml.
  */
 void GetHealthCheckStatusResponsePrivate::parseGetHealthCheckStatusResponse(QXmlStreamReader &xml)
 {

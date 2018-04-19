@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityUsageRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeIdentityUsageRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a DescribeIdentityUsageRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 DescribeIdentityUsageRequestPrivate::DescribeIdentityUsageRequestPrivate(
     const CognitoSyncRequest::Action action, DescribeIdentityUsageRequest * const q)

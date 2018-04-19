@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a RemoveTagsFromResourceRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsFromResourceRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const SSMRequest::Action action, RemoveTagsFromResourceRequest * const q)

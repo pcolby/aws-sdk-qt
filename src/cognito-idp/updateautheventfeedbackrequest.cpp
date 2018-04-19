@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAuthEventFeedbackRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateAuthEventFeedbackRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAuthEventFeedbackRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 UpdateAuthEventFeedbackRequestPrivate::UpdateAuthEventFeedbackRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateAuthEventFeedbackRequest * const q)

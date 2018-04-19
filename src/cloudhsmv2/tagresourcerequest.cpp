@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a TagResourceRequestPrivate object for CloudHSMV2 \a action with,
- * public implementation \a q.
+ * Constructs a TagResourceRequestPrivate object for CloudHSMV2 \a action,
+ * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const CloudHSMV2Request::Action action, TagResourceRequest * const q)

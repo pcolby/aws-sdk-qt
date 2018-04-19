@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListDeviceInstancesRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListDeviceInstancesRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a ListDeviceInstancesRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 ListDeviceInstancesRequestPrivate::ListDeviceInstancesRequestPrivate(
     const DeviceFarmRequest::Action action, ListDeviceInstancesRequest * const q)

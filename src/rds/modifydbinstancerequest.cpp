@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * ModifyDBInstanceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ModifyDBInstanceRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a ModifyDBInstanceRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 ModifyDBInstanceRequestPrivate::ModifyDBInstanceRequestPrivate(
     const RDSRequest::Action action, ModifyDBInstanceRequest * const q)

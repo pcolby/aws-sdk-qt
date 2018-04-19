@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSnapshotResponse : public EC2Response {
 public:
     DeleteSnapshotResponse(const DeleteSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSnapshotRequest * request() const;
+    virtual const DeleteSnapshotRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSnapshotResponse)

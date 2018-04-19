@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::SetRepositoryPolicyResponse
- *
  * \brief The SetRepositoryPolicyResponse class provides an interace for ECR SetRepositoryPolicy responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new SetRepositoryPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetRepositoryPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 SetRepositoryPolicyResponse::SetRepositoryPolicyResponse(
         const SetRepositoryPolicyRequest &request,
@@ -59,6 +54,9 @@ SetRepositoryPolicyResponse::SetRepositoryPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetRepositoryPolicyRequest * SetRepositoryPolicyResponse::request() const
 {
     Q_D(const SetRepositoryPolicyResponse);
@@ -66,9 +64,8 @@ const SetRepositoryPolicyRequest * SetRepositoryPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR SetRepositoryPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR SetRepositoryPolicy \a response.
  */
 void SetRepositoryPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void SetRepositoryPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::SetRepositoryPolicyResponsePrivate
+ * \brief The SetRepositoryPolicyResponsePrivate class provides private implementation for SetRepositoryPolicyResponse.
  * \internal
  *
- * \class SetRepositoryPolicyResponsePrivate
- *
- * \brief Private implementation for SetRepositoryPolicyResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetRepositoryPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetRepositoryPolicyResponse instance.
+ * Constructs a SetRepositoryPolicyResponsePrivate object with public implementation \a q.
  */
 SetRepositoryPolicyResponsePrivate::SetRepositoryPolicyResponsePrivate(
     SetRepositoryPolicyResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ SetRepositoryPolicyResponsePrivate::SetRepositoryPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR SetRepositoryPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR SetRepositoryPolicy response element from \a xml.
  */
 void SetRepositoryPolicyResponsePrivate::parseSetRepositoryPolicyResponse(QXmlStreamReader &xml)
 {

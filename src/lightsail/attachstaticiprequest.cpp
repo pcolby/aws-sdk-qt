@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * AttachStaticIpRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a AttachStaticIpRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a AttachStaticIpRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 AttachStaticIpRequestPrivate::AttachStaticIpRequestPrivate(
     const LightsailRequest::Action action, AttachStaticIpRequest * const q)

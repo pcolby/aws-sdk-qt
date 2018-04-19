@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetCheckerIpRangesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetCheckerIpRangesRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a GetCheckerIpRangesRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 GetCheckerIpRangesRequestPrivate::GetCheckerIpRangesRequestPrivate(
     const Route53Request::Action action, GetCheckerIpRangesRequest * const q)

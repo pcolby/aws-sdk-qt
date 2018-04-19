@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetGatewayResponseResponse
- *
  * \brief The GetGatewayResponseResponse class provides an interace for APIGateway GetGatewayResponse responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetGatewayResponseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetGatewayResponseResponse object for \a reply to \a request, with parent \a parent.
  */
 GetGatewayResponseResponse::GetGatewayResponseResponse(
         const GetGatewayResponseRequest &request,
@@ -60,6 +55,9 @@ GetGatewayResponseResponse::GetGatewayResponseResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetGatewayResponseRequest * GetGatewayResponseResponse::request() const
 {
     Q_D(const GetGatewayResponseResponse);
@@ -67,9 +65,8 @@ const GetGatewayResponseRequest * GetGatewayResponseResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetGatewayResponse response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetGatewayResponse \a response.
  */
 void GetGatewayResponseResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetGatewayResponseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetGatewayResponseResponsePrivate
+ * \brief The GetGatewayResponseResponsePrivate class provides private implementation for GetGatewayResponseResponse.
  * \internal
  *
- * \class GetGatewayResponseResponsePrivate
- *
- * \brief Private implementation for GetGatewayResponseResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGatewayResponseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetGatewayResponseResponse instance.
+ * Constructs a GetGatewayResponseResponsePrivate object with public implementation \a q.
  */
 GetGatewayResponseResponsePrivate::GetGatewayResponseResponsePrivate(
     GetGatewayResponseResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetGatewayResponseResponsePrivate::GetGatewayResponseResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetGatewayResponseResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetGatewayResponse response element from \a xml.
  */
 void GetGatewayResponseResponsePrivate::parseGetGatewayResponseResponse(QXmlStreamReader &xml)
 {

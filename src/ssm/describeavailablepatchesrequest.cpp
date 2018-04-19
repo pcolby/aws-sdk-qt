@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailablePatchesRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeAvailablePatchesRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAvailablePatchesRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeAvailablePatchesRequestPrivate::DescribeAvailablePatchesRequestPrivate(
     const SSMRequest::Action action, DescribeAvailablePatchesRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBGPPeerResponse : public DirectConnectResponse {
 public:
     DeleteBGPPeerResponse(const DeleteBGPPeerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBGPPeerRequest * request() const;
+    virtual const DeleteBGPPeerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBGPPeerResponse)

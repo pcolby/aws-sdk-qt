@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * CreateResourceDataSyncRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateResourceDataSyncRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a CreateResourceDataSyncRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 CreateResourceDataSyncRequestPrivate::CreateResourceDataSyncRequestPrivate(
     const SSMRequest::Action action, CreateResourceDataSyncRequest * const q)

@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * ResendContactReachabilityEmailRequest::respon
  */
 
 /*!
- *
- * Constructs a ResendContactReachabilityEmailRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a ResendContactReachabilityEmailRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 ResendContactReachabilityEmailRequestPrivate::ResendContactReachabilityEmailRequestPrivate(
     const Route53DomainsRequest::Action action, ResendContactReachabilityEmailRequest * const q)

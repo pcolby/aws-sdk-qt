@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeInstancePatchesResponse
- *
  * \brief The DescribeInstancePatchesResponse class provides an interace for SSM DescribeInstancePatches responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstancePatchesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeInstancePatchesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeInstancePatchesResponse::DescribeInstancePatchesResponse(
         const DescribeInstancePatchesRequest &request,
@@ -79,6 +74,9 @@ DescribeInstancePatchesResponse::DescribeInstancePatchesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeInstancePatchesRequest * DescribeInstancePatchesResponse::request() const
 {
     Q_D(const DescribeInstancePatchesResponse);
@@ -86,9 +84,8 @@ const DescribeInstancePatchesRequest * DescribeInstancePatchesResponse::request(
 }
 
 /*!
- * @brief  Parse a SSM DescribeInstancePatches response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeInstancePatches \a response.
  */
 void DescribeInstancePatchesResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeInstancePatchesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeInstancePatchesResponsePrivate
+ * \brief The DescribeInstancePatchesResponsePrivate class provides private implementation for DescribeInstancePatchesResponse.
  * \internal
  *
- * \class DescribeInstancePatchesResponsePrivate
- *
- * \brief Private implementation for DescribeInstancePatchesResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstancePatchesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeInstancePatchesResponse instance.
+ * Constructs a DescribeInstancePatchesResponsePrivate object with public implementation \a q.
  */
 DescribeInstancePatchesResponsePrivate::DescribeInstancePatchesResponsePrivate(
     DescribeInstancePatchesResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeInstancePatchesResponsePrivate::DescribeInstancePatchesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DescribeInstancePatchesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeInstancePatches response element from \a xml.
  */
 void DescribeInstancePatchesResponsePrivate::parseDescribeInstancePatchesResponse(QXmlStreamReader &xml)
 {

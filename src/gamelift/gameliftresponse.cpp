@@ -28,16 +28,13 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::GameLiftResponse
- *
  * \brief The GameLiftResponse class provides an interface for GameLift responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @brief  Constructs a new GameLiftResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a GameLiftResponse object with parent \a parent.
  */
 GameLiftResponse::GameLiftResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new GameLiftResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ GameLiftResponse::GameLiftResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GameLiftResponse object.
- *
+ * \internal
+ * Constructs a GameLiftResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GameLiftResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 GameLiftResponse::GameLiftResponse(GameLiftResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ GameLiftResponse::GameLiftResponse(GameLiftResponsePrivate * const d, QObject * 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void GameLiftResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void GameLiftResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::GameLift::GameLiftResponsePrivate
+ * \brief The GameLiftResponsePrivate class provides private implementation for GameLiftResponse.
+ * \internal
  *
- * @class  GameLiftResponsePrivate
- *
- * @brief  Private implementation for GameLiftResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GameLiftResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GameLiftResponse instance.
+ * Constructs a GameLiftResponsePrivate object with public implementation \a q.
  */
 GameLiftResponsePrivate::GameLiftResponsePrivate(
     GameLiftResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

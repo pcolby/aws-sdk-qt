@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListAssessmentRunsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListAssessmentRunsRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a ListAssessmentRunsRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 ListAssessmentRunsRequestPrivate::ListAssessmentRunsRequestPrivate(
     const InspectorRequest::Action action, ListAssessmentRunsRequest * const q)

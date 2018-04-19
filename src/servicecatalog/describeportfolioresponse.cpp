@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribePortfolioResponse
- *
  * \brief The DescribePortfolioResponse class provides an interace for ServiceCatalog DescribePortfolio responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribePortfolioResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePortfolioResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePortfolioResponse::DescribePortfolioResponse(
         const DescribePortfolioRequest &request,
@@ -61,6 +56,9 @@ DescribePortfolioResponse::DescribePortfolioResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePortfolioRequest * DescribePortfolioResponse::request() const
 {
     Q_D(const DescribePortfolioResponse);
@@ -68,9 +66,8 @@ const DescribePortfolioRequest * DescribePortfolioResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DescribePortfolio response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DescribePortfolio \a response.
  */
 void DescribePortfolioResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribePortfolioResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DescribePortfolioResponsePrivate
+ * \brief The DescribePortfolioResponsePrivate class provides private implementation for DescribePortfolioResponse.
  * \internal
  *
- * \class DescribePortfolioResponsePrivate
- *
- * \brief Private implementation for DescribePortfolioResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePortfolioResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePortfolioResponse instance.
+ * Constructs a DescribePortfolioResponsePrivate object with public implementation \a q.
  */
 DescribePortfolioResponsePrivate::DescribePortfolioResponsePrivate(
     DescribePortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribePortfolioResponsePrivate::DescribePortfolioResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DescribePortfolioResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DescribePortfolio response element from \a xml.
  */
 void DescribePortfolioResponsePrivate::parseDescribePortfolioResponse(QXmlStreamReader &xml)
 {

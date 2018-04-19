@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DisableAWSServiceAccessResponse
- *
  * \brief The DisableAWSServiceAccessResponse class provides an interace for Organizations DisableAWSServiceAccess responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DisableAWSServiceAccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableAWSServiceAccessResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableAWSServiceAccessResponse::DisableAWSServiceAccessResponse(
         const DisableAWSServiceAccessRequest &request,
@@ -197,6 +192,9 @@ DisableAWSServiceAccessResponse::DisableAWSServiceAccessResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableAWSServiceAccessRequest * DisableAWSServiceAccessResponse::request() const
 {
     Q_D(const DisableAWSServiceAccessResponse);
@@ -204,9 +202,8 @@ const DisableAWSServiceAccessRequest * DisableAWSServiceAccessResponse::request(
 }
 
 /*!
- * @brief  Parse a Organizations DisableAWSServiceAccess response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations DisableAWSServiceAccess \a response.
  */
 void DisableAWSServiceAccessResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void DisableAWSServiceAccessResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::DisableAWSServiceAccessResponsePrivate
+ * \brief The DisableAWSServiceAccessResponsePrivate class provides private implementation for DisableAWSServiceAccessResponse.
  * \internal
  *
- * \class DisableAWSServiceAccessResponsePrivate
- *
- * \brief Private implementation for DisableAWSServiceAccessResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableAWSServiceAccessResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableAWSServiceAccessResponse instance.
+ * Constructs a DisableAWSServiceAccessResponsePrivate object with public implementation \a q.
  */
 DisableAWSServiceAccessResponsePrivate::DisableAWSServiceAccessResponsePrivate(
     DisableAWSServiceAccessResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ DisableAWSServiceAccessResponsePrivate::DisableAWSServiceAccessResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations DisableAWSServiceAccessResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations DisableAWSServiceAccess response element from \a xml.
  */
 void DisableAWSServiceAccessResponsePrivate::parseDisableAWSServiceAccessResponse(QXmlStreamReader &xml)
 {

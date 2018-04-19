@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyNetworkInterfaceAttributeRequest::respo
  */
 
 /*!
- *
- * Constructs a ModifyNetworkInterfaceAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyNetworkInterfaceAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyNetworkInterfaceAttributeRequestPrivate::ModifyNetworkInterfaceAttributeRequestPrivate(
     const EC2Request::Action action, ModifyNetworkInterfaceAttributeRequest * const q)

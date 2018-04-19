@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkInterfacePermissionRequest::resp
  */
 
 /*!
- *
- * Constructs a CreateNetworkInterfacePermissionRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateNetworkInterfacePermissionRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateNetworkInterfacePermissionRequestPrivate::CreateNetworkInterfacePermissionRequestPrivate(
     const EC2Request::Action action, CreateNetworkInterfacePermissionRequest * const q)

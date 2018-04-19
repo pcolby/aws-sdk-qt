@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateDeviceDefinitionResponse
- *
  * \brief The CreateDeviceDefinitionResponse class provides an interace for Greengrass CreateDeviceDefinition responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateDeviceDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDeviceDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDeviceDefinitionResponse::CreateDeviceDefinitionResponse(
         const CreateDeviceDefinitionRequest &request,
@@ -58,6 +53,9 @@ CreateDeviceDefinitionResponse::CreateDeviceDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDeviceDefinitionRequest * CreateDeviceDefinitionResponse::request() const
 {
     Q_D(const CreateDeviceDefinitionResponse);
@@ -65,9 +63,8 @@ const CreateDeviceDefinitionRequest * CreateDeviceDefinitionResponse::request() 
 }
 
 /*!
- * @brief  Parse a Greengrass CreateDeviceDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass CreateDeviceDefinition \a response.
  */
 void CreateDeviceDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateDeviceDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::CreateDeviceDefinitionResponsePrivate
+ * \brief The CreateDeviceDefinitionResponsePrivate class provides private implementation for CreateDeviceDefinitionResponse.
  * \internal
  *
- * \class CreateDeviceDefinitionResponsePrivate
- *
- * \brief Private implementation for CreateDeviceDefinitionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDeviceDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDeviceDefinitionResponse instance.
+ * Constructs a CreateDeviceDefinitionResponsePrivate object with public implementation \a q.
  */
 CreateDeviceDefinitionResponsePrivate::CreateDeviceDefinitionResponsePrivate(
     CreateDeviceDefinitionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateDeviceDefinitionResponsePrivate::CreateDeviceDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass CreateDeviceDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass CreateDeviceDefinition response element from \a xml.
  */
 void CreateDeviceDefinitionResponsePrivate::parseCreateDeviceDefinitionResponse(QXmlStreamReader &xml)
 {

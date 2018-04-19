@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetIdentityPoliciesRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetIdentityPoliciesRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a GetIdentityPoliciesRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 GetIdentityPoliciesRequestPrivate::GetIdentityPoliciesRequestPrivate(
     const SESRequest::Action action, GetIdentityPoliciesRequest * const q)

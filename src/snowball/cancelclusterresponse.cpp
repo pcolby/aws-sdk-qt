@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::CancelClusterResponse
- *
  * \brief The CancelClusterResponse class provides an interace for Snowball CancelCluster responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new CancelClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelClusterResponse::CancelClusterResponse(
         const CancelClusterRequest &request,
@@ -61,6 +56,9 @@ CancelClusterResponse::CancelClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelClusterRequest * CancelClusterResponse::request() const
 {
     Q_D(const CancelClusterResponse);
@@ -68,9 +66,8 @@ const CancelClusterRequest * CancelClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball CancelCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball CancelCluster \a response.
  */
 void CancelClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CancelClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::CancelClusterResponsePrivate
+ * \brief The CancelClusterResponsePrivate class provides private implementation for CancelClusterResponse.
  * \internal
  *
- * \class CancelClusterResponsePrivate
- *
- * \brief Private implementation for CancelClusterResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelClusterResponse instance.
+ * Constructs a CancelClusterResponsePrivate object with public implementation \a q.
  */
 CancelClusterResponsePrivate::CancelClusterResponsePrivate(
     CancelClusterResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ CancelClusterResponsePrivate::CancelClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball CancelClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball CancelCluster response element from \a xml.
  */
 void CancelClusterResponsePrivate::parseCancelClusterResponse(QXmlStreamReader &xml)
 {

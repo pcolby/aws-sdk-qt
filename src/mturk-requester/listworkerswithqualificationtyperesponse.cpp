@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListWorkersWithQualificationTypeResponse
- *
  * \brief The ListWorkersWithQualificationTypeResponse class provides an interace for MTurk ListWorkersWithQualificationType responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listWorkersWithQualificationType
  */
 
 /*!
- * @brief  Constructs a new ListWorkersWithQualificationTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListWorkersWithQualificationTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 ListWorkersWithQualificationTypeResponse::ListWorkersWithQualificationTypeResponse(
         const ListWorkersWithQualificationTypeRequest &request,
@@ -55,6 +50,9 @@ ListWorkersWithQualificationTypeResponse::ListWorkersWithQualificationTypeRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListWorkersWithQualificationTypeRequest * ListWorkersWithQualificationTypeResponse::request() const
 {
     Q_D(const ListWorkersWithQualificationTypeResponse);
@@ -62,9 +60,8 @@ const ListWorkersWithQualificationTypeRequest * ListWorkersWithQualificationType
 }
 
 /*!
- * @brief  Parse a MTurk ListWorkersWithQualificationType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk ListWorkersWithQualificationType \a response.
  */
 void ListWorkersWithQualificationTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListWorkersWithQualificationTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::ListWorkersWithQualificationTypeResponsePrivate
+ * \brief The ListWorkersWithQualificationTypeResponsePrivate class provides private implementation for ListWorkersWithQualificationTypeResponse.
  * \internal
  *
- * \class ListWorkersWithQualificationTypeResponsePrivate
- *
- * \brief Private implementation for ListWorkersWithQualificationTypeResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListWorkersWithQualificationTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListWorkersWithQualificationTypeResponse instance.
+ * Constructs a ListWorkersWithQualificationTypeResponsePrivate object with public implementation \a q.
  */
 ListWorkersWithQualificationTypeResponsePrivate::ListWorkersWithQualificationTypeResponsePrivate(
     ListWorkersWithQualificationTypeResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ ListWorkersWithQualificationTypeResponsePrivate::ListWorkersWithQualificationTyp
 }
 
 /*!
- * @brief  Parse an MTurk ListWorkersWithQualificationTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk ListWorkersWithQualificationType response element from \a xml.
  */
 void ListWorkersWithQualificationTypeResponsePrivate::parseListWorkersWithQualificationTypeResponse(QXmlStreamReader &xml)
 {

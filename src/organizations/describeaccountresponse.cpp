@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DescribeAccountResponse
- *
  * \brief The DescribeAccountResponse class provides an interace for Organizations DescribeAccount responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAccountResponse::DescribeAccountResponse(
         const DescribeAccountRequest &request,
@@ -197,6 +192,9 @@ DescribeAccountResponse::DescribeAccountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAccountRequest * DescribeAccountResponse::request() const
 {
     Q_D(const DescribeAccountResponse);
@@ -204,9 +202,8 @@ const DescribeAccountRequest * DescribeAccountResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations DescribeAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations DescribeAccount \a response.
  */
 void DescribeAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void DescribeAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::DescribeAccountResponsePrivate
+ * \brief The DescribeAccountResponsePrivate class provides private implementation for DescribeAccountResponse.
  * \internal
  *
- * \class DescribeAccountResponsePrivate
- *
- * \brief Private implementation for DescribeAccountResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAccountResponse instance.
+ * Constructs a DescribeAccountResponsePrivate object with public implementation \a q.
  */
 DescribeAccountResponsePrivate::DescribeAccountResponsePrivate(
     DescribeAccountResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ DescribeAccountResponsePrivate::DescribeAccountResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations DescribeAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations DescribeAccount response element from \a xml.
  */
 void DescribeAccountResponsePrivate::parseDescribeAccountResponse(QXmlStreamReader &xml)
 {

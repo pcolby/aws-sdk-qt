@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * HeadBucketRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a HeadBucketRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a HeadBucketRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 HeadBucketRequestPrivate::HeadBucketRequestPrivate(
     const S3Request::Action action, HeadBucketRequest * const q)

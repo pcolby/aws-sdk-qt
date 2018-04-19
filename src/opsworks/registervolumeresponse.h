@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterVolumeResponse : public OpsWorksResponse {
 public:
     RegisterVolumeResponse(const RegisterVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterVolumeRequest * request() const;
+    virtual const RegisterVolumeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterVolumeResponse)

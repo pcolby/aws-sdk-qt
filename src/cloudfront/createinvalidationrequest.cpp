@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateInvalidationRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateInvalidationRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a CreateInvalidationRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 CreateInvalidationRequestPrivate::CreateInvalidationRequestPrivate(
     const CloudFrontRequest::Action action, CreateInvalidationRequest * const q)

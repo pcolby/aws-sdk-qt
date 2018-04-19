@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetTelemetryMetadataResponse : public InspectorResponse {
 public:
     GetTelemetryMetadataResponse(const GetTelemetryMetadataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetTelemetryMetadataRequest * request() const;
+    virtual const GetTelemetryMetadataRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetTelemetryMetadataResponse)

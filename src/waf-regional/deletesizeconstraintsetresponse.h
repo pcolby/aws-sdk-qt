@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSizeConstraintSetResponse : public WAFRegionalResponse 
 public:
     DeleteSizeConstraintSetResponse(const DeleteSizeConstraintSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSizeConstraintSetRequest * request() const;
+    virtual const DeleteSizeConstraintSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSizeConstraintSetResponse)

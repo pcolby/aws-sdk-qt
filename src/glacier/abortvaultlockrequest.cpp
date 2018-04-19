@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * AbortVaultLockRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a AbortVaultLockRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a AbortVaultLockRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 AbortVaultLockRequestPrivate::AbortVaultLockRequestPrivate(
     const GlacierRequest::Action action, AbortVaultLockRequest * const q)

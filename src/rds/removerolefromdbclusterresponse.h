@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveRoleFromDBClusterResponse : public RDSResponse {
 public:
     RemoveRoleFromDBClusterResponse(const RemoveRoleFromDBClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveRoleFromDBClusterRequest * request() const;
+    virtual const RemoveRoleFromDBClusterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RemoveRoleFromDBClusterResponse)

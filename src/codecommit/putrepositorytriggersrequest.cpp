@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * PutRepositoryTriggersRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a PutRepositoryTriggersRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a PutRepositoryTriggersRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 PutRepositoryTriggersRequestPrivate::PutRepositoryTriggersRequestPrivate(
     const CodeCommitRequest::Action action, PutRepositoryTriggersRequest * const q)

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTagOptionRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteTagOptionRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTagOptionRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DeleteTagOptionRequestPrivate::DeleteTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteTagOptionRequest * const q)

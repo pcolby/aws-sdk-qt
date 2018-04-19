@@ -29,10 +29,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::DeleteDeliveryStreamResponse
- *
  * \brief The DeleteDeliveryStreamResponse class provides an interace for Firehose DeleteDeliveryStream responses.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -43,11 +42,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new DeleteDeliveryStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDeliveryStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDeliveryStreamResponse::DeleteDeliveryStreamResponse(
         const DeleteDeliveryStreamRequest &request,
@@ -59,6 +54,9 @@ DeleteDeliveryStreamResponse::DeleteDeliveryStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDeliveryStreamRequest * DeleteDeliveryStreamResponse::request() const
 {
     Q_D(const DeleteDeliveryStreamResponse);
@@ -66,9 +64,8 @@ const DeleteDeliveryStreamRequest * DeleteDeliveryStreamResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Firehose DeleteDeliveryStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Firehose DeleteDeliveryStream \a response.
  */
 void DeleteDeliveryStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteDeliveryStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Firehose::DeleteDeliveryStreamResponsePrivate
+ * \brief The DeleteDeliveryStreamResponsePrivate class provides private implementation for DeleteDeliveryStreamResponse.
  * \internal
  *
- * \class DeleteDeliveryStreamResponsePrivate
- *
- * \brief Private implementation for DeleteDeliveryStreamResponse.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDeliveryStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDeliveryStreamResponse instance.
+ * Constructs a DeleteDeliveryStreamResponsePrivate object with public implementation \a q.
  */
 DeleteDeliveryStreamResponsePrivate::DeleteDeliveryStreamResponsePrivate(
     DeleteDeliveryStreamResponse * const q) : FirehoseResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteDeliveryStreamResponsePrivate::DeleteDeliveryStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Firehose DeleteDeliveryStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Firehose DeleteDeliveryStream response element from \a xml.
  */
 void DeleteDeliveryStreamResponsePrivate::parseDeleteDeliveryStreamResponse(QXmlStreamReader &xml)
 {

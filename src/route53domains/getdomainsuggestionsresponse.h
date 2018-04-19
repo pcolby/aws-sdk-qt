@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDomainSuggestionsResponse : public Route53DomainsResponse 
 public:
     GetDomainSuggestionsResponse(const GetDomainSuggestionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDomainSuggestionsRequest * request() const;
+    virtual const GetDomainSuggestionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDomainSuggestionsResponse)

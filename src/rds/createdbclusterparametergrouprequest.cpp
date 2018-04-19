@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CreateDBClusterParameterGroupRequest::respons
  */
 
 /*!
- *
- * Constructs a CreateDBClusterParameterGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CreateDBClusterParameterGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CreateDBClusterParameterGroupRequestPrivate::CreateDBClusterParameterGroupRequestPrivate(
     const RDSRequest::Action action, CreateDBClusterParameterGroupRequest * const q)

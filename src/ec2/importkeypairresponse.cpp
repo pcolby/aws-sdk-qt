@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ImportKeyPairResponse
- *
  * \brief The ImportKeyPairResponse class provides an interace for EC2 ImportKeyPair responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ImportKeyPairResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportKeyPairResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportKeyPairResponse::ImportKeyPairResponse(
         const ImportKeyPairRequest &request,
@@ -59,6 +54,9 @@ ImportKeyPairResponse::ImportKeyPairResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportKeyPairRequest * ImportKeyPairResponse::request() const
 {
     Q_D(const ImportKeyPairResponse);
@@ -66,9 +64,8 @@ const ImportKeyPairRequest * ImportKeyPairResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ImportKeyPair response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ImportKeyPair \a response.
  */
 void ImportKeyPairResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ImportKeyPairResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ImportKeyPairResponsePrivate
+ * \brief The ImportKeyPairResponsePrivate class provides private implementation for ImportKeyPairResponse.
  * \internal
  *
- * \class ImportKeyPairResponsePrivate
- *
- * \brief Private implementation for ImportKeyPairResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportKeyPairResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportKeyPairResponse instance.
+ * Constructs a ImportKeyPairResponsePrivate object with public implementation \a q.
  */
 ImportKeyPairResponsePrivate::ImportKeyPairResponsePrivate(
     ImportKeyPairResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ImportKeyPairResponsePrivate::ImportKeyPairResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ImportKeyPairResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ImportKeyPair response element from \a xml.
  */
 void ImportKeyPairResponsePrivate::parseImportKeyPairResponse(QXmlStreamReader &xml)
 {

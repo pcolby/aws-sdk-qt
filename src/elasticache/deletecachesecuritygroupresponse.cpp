@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DeleteCacheSecurityGroupResponse
- *
  * \brief The DeleteCacheSecurityGroupResponse class provides an interace for ElastiCache DeleteCacheSecurityGroup responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DeleteCacheSecurityGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCacheSecurityGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCacheSecurityGroupResponse::DeleteCacheSecurityGroupResponse(
         const DeleteCacheSecurityGroupRequest &request,
@@ -69,6 +64,9 @@ DeleteCacheSecurityGroupResponse::DeleteCacheSecurityGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCacheSecurityGroupRequest * DeleteCacheSecurityGroupResponse::request() const
 {
     Q_D(const DeleteCacheSecurityGroupResponse);
@@ -76,9 +74,8 @@ const DeleteCacheSecurityGroupRequest * DeleteCacheSecurityGroupResponse::reques
 }
 
 /*!
- * @brief  Parse a ElastiCache DeleteCacheSecurityGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DeleteCacheSecurityGroup \a response.
  */
 void DeleteCacheSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeleteCacheSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::DeleteCacheSecurityGroupResponsePrivate
+ * \brief The DeleteCacheSecurityGroupResponsePrivate class provides private implementation for DeleteCacheSecurityGroupResponse.
  * \internal
  *
- * \class DeleteCacheSecurityGroupResponsePrivate
- *
- * \brief Private implementation for DeleteCacheSecurityGroupResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCacheSecurityGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCacheSecurityGroupResponse instance.
+ * Constructs a DeleteCacheSecurityGroupResponsePrivate object with public implementation \a q.
  */
 DeleteCacheSecurityGroupResponsePrivate::DeleteCacheSecurityGroupResponsePrivate(
     DeleteCacheSecurityGroupResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DeleteCacheSecurityGroupResponsePrivate::DeleteCacheSecurityGroupResponsePrivate
 }
 
 /*!
- * @brief  Parse an ElastiCache DeleteCacheSecurityGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DeleteCacheSecurityGroup response element from \a xml.
  */
 void DeleteCacheSecurityGroupResponsePrivate::parseDeleteCacheSecurityGroupResponse(QXmlStreamReader &xml)
 {

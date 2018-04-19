@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceProfileRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteInstanceProfileRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a DeleteInstanceProfileRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteInstanceProfileRequest * const q)

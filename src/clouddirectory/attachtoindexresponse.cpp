@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::AttachToIndexResponse
- *
  * \brief The AttachToIndexResponse class provides an interace for CloudDirectory AttachToIndex responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new AttachToIndexResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachToIndexResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachToIndexResponse::AttachToIndexResponse(
         const AttachToIndexRequest &request,
@@ -62,6 +57,9 @@ AttachToIndexResponse::AttachToIndexResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachToIndexRequest * AttachToIndexResponse::request() const
 {
     Q_D(const AttachToIndexResponse);
@@ -69,9 +67,8 @@ const AttachToIndexRequest * AttachToIndexResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory AttachToIndex response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory AttachToIndex \a response.
  */
 void AttachToIndexResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void AttachToIndexResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::AttachToIndexResponsePrivate
+ * \brief The AttachToIndexResponsePrivate class provides private implementation for AttachToIndexResponse.
  * \internal
  *
- * \class AttachToIndexResponsePrivate
- *
- * \brief Private implementation for AttachToIndexResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachToIndexResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachToIndexResponse instance.
+ * Constructs a AttachToIndexResponsePrivate object with public implementation \a q.
  */
 AttachToIndexResponsePrivate::AttachToIndexResponsePrivate(
     AttachToIndexResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ AttachToIndexResponsePrivate::AttachToIndexResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory AttachToIndexResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory AttachToIndex response element from \a xml.
  */
 void AttachToIndexResponsePrivate::parseAttachToIndexResponse(QXmlStreamReader &xml)
 {

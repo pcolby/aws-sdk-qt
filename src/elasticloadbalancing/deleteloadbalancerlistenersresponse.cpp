@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DeleteLoadBalancerListenersResponse
- *
  * \brief The DeleteLoadBalancerListenersResponse class provides an interace for ElasticLoadBalancing DeleteLoadBalancerListeners responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerListenersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLoadBalancerListenersResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLoadBalancerListenersResponse::DeleteLoadBalancerListenersResponse(
         const DeleteLoadBalancerListenersRequest &request,
@@ -83,6 +78,9 @@ DeleteLoadBalancerListenersResponse::DeleteLoadBalancerListenersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLoadBalancerListenersRequest * DeleteLoadBalancerListenersResponse::request() const
 {
     Q_D(const DeleteLoadBalancerListenersResponse);
@@ -90,9 +88,8 @@ const DeleteLoadBalancerListenersRequest * DeleteLoadBalancerListenersResponse::
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing DeleteLoadBalancerListeners response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing DeleteLoadBalancerListeners \a response.
  */
 void DeleteLoadBalancerListenersResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void DeleteLoadBalancerListenersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::DeleteLoadBalancerListenersResponsePrivate
+ * \brief The DeleteLoadBalancerListenersResponsePrivate class provides private implementation for DeleteLoadBalancerListenersResponse.
  * \internal
  *
- * \class DeleteLoadBalancerListenersResponsePrivate
- *
- * \brief Private implementation for DeleteLoadBalancerListenersResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoadBalancerListenersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLoadBalancerListenersResponse instance.
+ * Constructs a DeleteLoadBalancerListenersResponsePrivate object with public implementation \a q.
  */
 DeleteLoadBalancerListenersResponsePrivate::DeleteLoadBalancerListenersResponsePrivate(
     DeleteLoadBalancerListenersResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ DeleteLoadBalancerListenersResponsePrivate::DeleteLoadBalancerListenersResponseP
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing DeleteLoadBalancerListenersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing DeleteLoadBalancerListeners response element from \a xml.
  */
 void DeleteLoadBalancerListenersResponsePrivate::parseDeleteLoadBalancerListenersResponse(QXmlStreamReader &xml)
 {

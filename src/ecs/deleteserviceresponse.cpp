@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DeleteServiceResponse
- *
  * \brief The DeleteServiceResponse class provides an interace for ECS DeleteService responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DeleteServiceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteServiceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteServiceResponse::DeleteServiceResponse(
         const DeleteServiceRequest &request,
@@ -72,6 +67,9 @@ DeleteServiceResponse::DeleteServiceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteServiceRequest * DeleteServiceResponse::request() const
 {
     Q_D(const DeleteServiceResponse);
@@ -79,9 +77,8 @@ const DeleteServiceRequest * DeleteServiceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS DeleteService response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS DeleteService \a response.
  */
 void DeleteServiceResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void DeleteServiceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::DeleteServiceResponsePrivate
+ * \brief The DeleteServiceResponsePrivate class provides private implementation for DeleteServiceResponse.
  * \internal
  *
- * \class DeleteServiceResponsePrivate
- *
- * \brief Private implementation for DeleteServiceResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteServiceResponse instance.
+ * Constructs a DeleteServiceResponsePrivate object with public implementation \a q.
  */
 DeleteServiceResponsePrivate::DeleteServiceResponsePrivate(
     DeleteServiceResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ DeleteServiceResponsePrivate::DeleteServiceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS DeleteServiceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS DeleteService response element from \a xml.
  */
 void DeleteServiceResponsePrivate::parseDeleteServiceResponse(QXmlStreamReader &xml)
 {

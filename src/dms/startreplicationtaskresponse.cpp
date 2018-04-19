@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::StartReplicationTaskResponse
- *
  * \brief The StartReplicationTaskResponse class provides an interace for DatabaseMigrationService StartReplicationTask responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new StartReplicationTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartReplicationTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 StartReplicationTaskResponse::StartReplicationTaskResponse(
         const StartReplicationTaskRequest &request,
@@ -66,6 +61,9 @@ StartReplicationTaskResponse::StartReplicationTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartReplicationTaskRequest * StartReplicationTaskResponse::request() const
 {
     Q_D(const StartReplicationTaskResponse);
@@ -73,9 +71,8 @@ const StartReplicationTaskRequest * StartReplicationTaskResponse::request() cons
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService StartReplicationTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService StartReplicationTask \a response.
  */
 void StartReplicationTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void StartReplicationTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::StartReplicationTaskResponsePrivate
+ * \brief The StartReplicationTaskResponsePrivate class provides private implementation for StartReplicationTaskResponse.
  * \internal
  *
- * \class StartReplicationTaskResponsePrivate
- *
- * \brief Private implementation for StartReplicationTaskResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartReplicationTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartReplicationTaskResponse instance.
+ * Constructs a StartReplicationTaskResponsePrivate object with public implementation \a q.
  */
 StartReplicationTaskResponsePrivate::StartReplicationTaskResponsePrivate(
     StartReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ StartReplicationTaskResponsePrivate::StartReplicationTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService StartReplicationTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService StartReplicationTask response element from \a xml.
  */
 void StartReplicationTaskResponsePrivate::parseStartReplicationTaskResponse(QXmlStreamReader &xml)
 {

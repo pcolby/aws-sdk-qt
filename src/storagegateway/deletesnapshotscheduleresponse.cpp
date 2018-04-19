@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteSnapshotScheduleResponse
- *
  * \brief The DeleteSnapshotScheduleResponse class provides an interace for StorageGateway DeleteSnapshotSchedule responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteSnapshotScheduleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSnapshotScheduleResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSnapshotScheduleResponse::DeleteSnapshotScheduleResponse(
         const DeleteSnapshotScheduleRequest &request,
@@ -124,6 +119,9 @@ DeleteSnapshotScheduleResponse::DeleteSnapshotScheduleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSnapshotScheduleRequest * DeleteSnapshotScheduleResponse::request() const
 {
     Q_D(const DeleteSnapshotScheduleResponse);
@@ -131,9 +129,8 @@ const DeleteSnapshotScheduleRequest * DeleteSnapshotScheduleResponse::request() 
 }
 
 /*!
- * @brief  Parse a StorageGateway DeleteSnapshotSchedule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DeleteSnapshotSchedule \a response.
  */
 void DeleteSnapshotScheduleResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DeleteSnapshotScheduleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DeleteSnapshotScheduleResponsePrivate
+ * \brief The DeleteSnapshotScheduleResponsePrivate class provides private implementation for DeleteSnapshotScheduleResponse.
  * \internal
  *
- * \class DeleteSnapshotScheduleResponsePrivate
- *
- * \brief Private implementation for DeleteSnapshotScheduleResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSnapshotScheduleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSnapshotScheduleResponse instance.
+ * Constructs a DeleteSnapshotScheduleResponsePrivate object with public implementation \a q.
  */
 DeleteSnapshotScheduleResponsePrivate::DeleteSnapshotScheduleResponsePrivate(
     DeleteSnapshotScheduleResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DeleteSnapshotScheduleResponsePrivate::DeleteSnapshotScheduleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DeleteSnapshotScheduleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DeleteSnapshotSchedule response element from \a xml.
  */
 void DeleteSnapshotScheduleResponsePrivate::parseDeleteSnapshotScheduleResponse(QXmlStreamReader &xml)
 {

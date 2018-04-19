@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CopyDBParameterGroupResponse
- *
  * \brief The CopyDBParameterGroupResponse class provides an interace for RDS CopyDBParameterGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CopyDBParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopyDBParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CopyDBParameterGroupResponse::CopyDBParameterGroupResponse(
         const CopyDBParameterGroupRequest &request,
@@ -119,6 +114,9 @@ CopyDBParameterGroupResponse::CopyDBParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopyDBParameterGroupRequest * CopyDBParameterGroupResponse::request() const
 {
     Q_D(const CopyDBParameterGroupResponse);
@@ -126,9 +124,8 @@ const CopyDBParameterGroupRequest * CopyDBParameterGroupResponse::request() cons
 }
 
 /*!
- * @brief  Parse a RDS CopyDBParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CopyDBParameterGroup \a response.
  */
 void CopyDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CopyDBParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CopyDBParameterGroupResponsePrivate
+ * \brief The CopyDBParameterGroupResponsePrivate class provides private implementation for CopyDBParameterGroupResponse.
  * \internal
  *
- * \class CopyDBParameterGroupResponsePrivate
- *
- * \brief Private implementation for CopyDBParameterGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyDBParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopyDBParameterGroupResponse instance.
+ * Constructs a CopyDBParameterGroupResponsePrivate object with public implementation \a q.
  */
 CopyDBParameterGroupResponsePrivate::CopyDBParameterGroupResponsePrivate(
     CopyDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CopyDBParameterGroupResponsePrivate::CopyDBParameterGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CopyDBParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CopyDBParameterGroup response element from \a xml.
  */
 void CopyDBParameterGroupResponsePrivate::parseCopyDBParameterGroupResponse(QXmlStreamReader &xml)
 {

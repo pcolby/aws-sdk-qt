@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::CloneStackResponse
- *
  * \brief The CloneStackResponse class provides an interace for OpsWorks CloneStack responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new CloneStackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CloneStackResponse object for \a reply to \a request, with parent \a parent.
  */
 CloneStackResponse::CloneStackResponse(
         const CloneStackRequest &request,
@@ -161,6 +156,9 @@ CloneStackResponse::CloneStackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CloneStackRequest * CloneStackResponse::request() const
 {
     Q_D(const CloneStackResponse);
@@ -168,9 +166,8 @@ const CloneStackRequest * CloneStackResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks CloneStack response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks CloneStack \a response.
  */
 void CloneStackResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void CloneStackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::CloneStackResponsePrivate
+ * \brief The CloneStackResponsePrivate class provides private implementation for CloneStackResponse.
  * \internal
  *
- * \class CloneStackResponsePrivate
- *
- * \brief Private implementation for CloneStackResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloneStackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloneStackResponse instance.
+ * Constructs a CloneStackResponsePrivate object with public implementation \a q.
  */
 CloneStackResponsePrivate::CloneStackResponsePrivate(
     CloneStackResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ CloneStackResponsePrivate::CloneStackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks CloneStackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks CloneStack response element from \a xml.
  */
 void CloneStackResponsePrivate::parseCloneStackResponse(QXmlStreamReader &xml)
 {

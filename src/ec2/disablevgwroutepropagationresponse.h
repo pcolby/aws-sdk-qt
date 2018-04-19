@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisableVgwRoutePropagationResponse : public EC2Response {
 public:
     DisableVgwRoutePropagationResponse(const DisableVgwRoutePropagationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisableVgwRoutePropagationRequest * request() const;
+    virtual const DisableVgwRoutePropagationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisableVgwRoutePropagationResponse)

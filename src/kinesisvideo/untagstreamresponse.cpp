@@ -29,21 +29,16 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::UntagStreamResponse
- *
  * \brief The UntagStreamResponse class provides an interace for KinesisVideo UntagStream responses.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  *
  *
  * \sa KinesisVideoClient::untagStream
  */
 
 /*!
- * @brief  Constructs a new UntagStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UntagStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 UntagStreamResponse::UntagStreamResponse(
         const UntagStreamRequest &request,
@@ -55,6 +50,9 @@ UntagStreamResponse::UntagStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UntagStreamRequest * UntagStreamResponse::request() const
 {
     Q_D(const UntagStreamResponse);
@@ -62,9 +60,8 @@ const UntagStreamRequest * UntagStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisVideo UntagStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisVideo UntagStream \a response.
  */
 void UntagStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UntagStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisVideo::UntagStreamResponsePrivate
+ * \brief The UntagStreamResponsePrivate class provides private implementation for UntagStreamResponse.
  * \internal
  *
- * \class UntagStreamResponsePrivate
- *
- * \brief Private implementation for UntagStreamResponse.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UntagStreamResponse instance.
+ * Constructs a UntagStreamResponsePrivate object with public implementation \a q.
  */
 UntagStreamResponsePrivate::UntagStreamResponsePrivate(
     UntagStreamResponse * const q) : KinesisVideoResponsePrivate(q)
@@ -95,9 +88,7 @@ UntagStreamResponsePrivate::UntagStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisVideo UntagStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisVideo UntagStream response element from \a xml.
  */
 void UntagStreamResponsePrivate::parseUntagStreamResponse(QXmlStreamReader &xml)
 {

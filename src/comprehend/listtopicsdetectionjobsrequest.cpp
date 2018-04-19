@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListTopicsDetectionJobsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListTopicsDetectionJobsRequestPrivate object for Comprehend \a action with,
- * public implementation \a q.
+ * Constructs a ListTopicsDetectionJobsRequestPrivate object for Comprehend \a action,
+ * with public implementation \a q.
  */
 ListTopicsDetectionJobsRequestPrivate::ListTopicsDetectionJobsRequestPrivate(
     const ComprehendRequest::Action action, ListTopicsDetectionJobsRequest * const q)

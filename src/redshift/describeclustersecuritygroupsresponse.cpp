@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeClusterSecurityGroupsResponse
- *
  * \brief The DescribeClusterSecurityGroupsResponse class provides an interace for Redshift DescribeClusterSecurityGroups responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeClusterSecurityGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeClusterSecurityGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeClusterSecurityGroupsResponse::DescribeClusterSecurityGroupsResponse(
         const DescribeClusterSecurityGroupsRequest &request,
@@ -85,6 +80,9 @@ DescribeClusterSecurityGroupsResponse::DescribeClusterSecurityGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeClusterSecurityGroupsRequest * DescribeClusterSecurityGroupsResponse::request() const
 {
     Q_D(const DescribeClusterSecurityGroupsResponse);
@@ -92,9 +90,8 @@ const DescribeClusterSecurityGroupsRequest * DescribeClusterSecurityGroupsRespon
 }
 
 /*!
- * @brief  Parse a Redshift DescribeClusterSecurityGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeClusterSecurityGroups \a response.
  */
 void DescribeClusterSecurityGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeClusterSecurityGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeClusterSecurityGroupsResponsePrivate
+ * \brief The DescribeClusterSecurityGroupsResponsePrivate class provides private implementation for DescribeClusterSecurityGroupsResponse.
  * \internal
  *
- * \class DescribeClusterSecurityGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeClusterSecurityGroupsResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClusterSecurityGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeClusterSecurityGroupsResponse instance.
+ * Constructs a DescribeClusterSecurityGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeClusterSecurityGroupsResponsePrivate::DescribeClusterSecurityGroupsResponsePrivate(
     DescribeClusterSecurityGroupsResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeClusterSecurityGroupsResponsePrivate::DescribeClusterSecurityGroupsRespo
 }
 
 /*!
- * @brief  Parse an Redshift DescribeClusterSecurityGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeClusterSecurityGroups response element from \a xml.
  */
 void DescribeClusterSecurityGroupsResponsePrivate::parseDescribeClusterSecurityGroupsResponse(QXmlStreamReader &xml)
 {

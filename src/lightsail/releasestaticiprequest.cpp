@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * ReleaseStaticIpRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ReleaseStaticIpRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a ReleaseStaticIpRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 ReleaseStaticIpRequestPrivate::ReleaseStaticIpRequestPrivate(
     const LightsailRequest::Action action, ReleaseStaticIpRequest * const q)

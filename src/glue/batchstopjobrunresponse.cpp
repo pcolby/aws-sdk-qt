@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::BatchStopJobRunResponse
- *
  * \brief The BatchStopJobRunResponse class provides an interace for Glue BatchStopJobRun responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new BatchStopJobRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchStopJobRunResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchStopJobRunResponse::BatchStopJobRunResponse(
         const BatchStopJobRunRequest &request,
@@ -58,6 +53,9 @@ BatchStopJobRunResponse::BatchStopJobRunResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchStopJobRunRequest * BatchStopJobRunResponse::request() const
 {
     Q_D(const BatchStopJobRunResponse);
@@ -65,9 +63,8 @@ const BatchStopJobRunRequest * BatchStopJobRunResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue BatchStopJobRun response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue BatchStopJobRun \a response.
  */
 void BatchStopJobRunResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void BatchStopJobRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::BatchStopJobRunResponsePrivate
+ * \brief The BatchStopJobRunResponsePrivate class provides private implementation for BatchStopJobRunResponse.
  * \internal
  *
- * \class BatchStopJobRunResponsePrivate
- *
- * \brief Private implementation for BatchStopJobRunResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchStopJobRunResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchStopJobRunResponse instance.
+ * Constructs a BatchStopJobRunResponsePrivate object with public implementation \a q.
  */
 BatchStopJobRunResponsePrivate::BatchStopJobRunResponsePrivate(
     BatchStopJobRunResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ BatchStopJobRunResponsePrivate::BatchStopJobRunResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue BatchStopJobRunResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue BatchStopJobRun response element from \a xml.
  */
 void BatchStopJobRunResponsePrivate::parseBatchStopJobRunResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetLoggingOptionsResponse : public IoTResponse {
 public:
     SetLoggingOptionsResponse(const SetLoggingOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetLoggingOptionsRequest * request() const;
+    virtual const SetLoggingOptionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetLoggingOptionsResponse)

@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeleteAutoScalingGroupResponse
- *
  * \brief The DeleteAutoScalingGroupResponse class provides an interace for AutoScaling DeleteAutoScalingGroup responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteAutoScalingGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAutoScalingGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAutoScalingGroupResponse::DeleteAutoScalingGroupResponse(
         const DeleteAutoScalingGroupRequest &request,
@@ -60,6 +55,9 @@ DeleteAutoScalingGroupResponse::DeleteAutoScalingGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAutoScalingGroupRequest * DeleteAutoScalingGroupResponse::request() const
 {
     Q_D(const DeleteAutoScalingGroupResponse);
@@ -67,9 +65,8 @@ const DeleteAutoScalingGroupRequest * DeleteAutoScalingGroupResponse::request() 
 }
 
 /*!
- * @brief  Parse a AutoScaling DeleteAutoScalingGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DeleteAutoScalingGroup \a response.
  */
 void DeleteAutoScalingGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteAutoScalingGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DeleteAutoScalingGroupResponsePrivate
+ * \brief The DeleteAutoScalingGroupResponsePrivate class provides private implementation for DeleteAutoScalingGroupResponse.
  * \internal
  *
- * \class DeleteAutoScalingGroupResponsePrivate
- *
- * \brief Private implementation for DeleteAutoScalingGroupResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAutoScalingGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAutoScalingGroupResponse instance.
+ * Constructs a DeleteAutoScalingGroupResponsePrivate object with public implementation \a q.
  */
 DeleteAutoScalingGroupResponsePrivate::DeleteAutoScalingGroupResponsePrivate(
     DeleteAutoScalingGroupResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteAutoScalingGroupResponsePrivate::DeleteAutoScalingGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling DeleteAutoScalingGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DeleteAutoScalingGroup response element from \a xml.
  */
 void DeleteAutoScalingGroupResponsePrivate::parseDeleteAutoScalingGroupResponse(QXmlStreamReader &xml)
 {

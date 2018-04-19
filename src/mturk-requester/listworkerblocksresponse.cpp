@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListWorkerBlocksResponse
- *
  * \brief The ListWorkerBlocksResponse class provides an interace for MTurk ListWorkerBlocks responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listWorkerBlocks
  */
 
 /*!
- * @brief  Constructs a new ListWorkerBlocksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListWorkerBlocksResponse object for \a reply to \a request, with parent \a parent.
  */
 ListWorkerBlocksResponse::ListWorkerBlocksResponse(
         const ListWorkerBlocksRequest &request,
@@ -55,6 +50,9 @@ ListWorkerBlocksResponse::ListWorkerBlocksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListWorkerBlocksRequest * ListWorkerBlocksResponse::request() const
 {
     Q_D(const ListWorkerBlocksResponse);
@@ -62,9 +60,8 @@ const ListWorkerBlocksRequest * ListWorkerBlocksResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk ListWorkerBlocks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk ListWorkerBlocks \a response.
  */
 void ListWorkerBlocksResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListWorkerBlocksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::ListWorkerBlocksResponsePrivate
+ * \brief The ListWorkerBlocksResponsePrivate class provides private implementation for ListWorkerBlocksResponse.
  * \internal
  *
- * \class ListWorkerBlocksResponsePrivate
- *
- * \brief Private implementation for ListWorkerBlocksResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListWorkerBlocksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListWorkerBlocksResponse instance.
+ * Constructs a ListWorkerBlocksResponsePrivate object with public implementation \a q.
  */
 ListWorkerBlocksResponsePrivate::ListWorkerBlocksResponsePrivate(
     ListWorkerBlocksResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ ListWorkerBlocksResponsePrivate::ListWorkerBlocksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk ListWorkerBlocksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk ListWorkerBlocks response element from \a xml.
  */
 void ListWorkerBlocksResponsePrivate::parseListWorkerBlocksResponse(QXmlStreamReader &xml)
 {

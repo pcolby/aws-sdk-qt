@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * SubmitJobRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a SubmitJobRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a SubmitJobRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 SubmitJobRequestPrivate::SubmitJobRequestPrivate(
     const BatchRequest::Action action, SubmitJobRequest * const q)

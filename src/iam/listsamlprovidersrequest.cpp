@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ListSAMLProvidersRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListSAMLProvidersRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ListSAMLProvidersRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ListSAMLProvidersRequestPrivate::ListSAMLProvidersRequestPrivate(
     const IAMRequest::Action action, ListSAMLProvidersRequest * const q)

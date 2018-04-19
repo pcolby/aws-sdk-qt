@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::ListTagsForResourceResponse
- *
  * \brief The ListTagsForResourceResponse class provides an interace for DirectoryService ListTagsForResource responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsForResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsForResourceResponse::ListTagsForResourceResponse(
         const ListTagsForResourceRequest &request,
@@ -69,6 +64,9 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 {
     Q_D(const ListTagsForResourceResponse);
@@ -76,9 +74,8 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService ListTagsForResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService ListTagsForResource \a response.
  */
 void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::ListTagsForResourceResponsePrivate
+ * \brief The ListTagsForResourceResponsePrivate class provides private implementation for ListTagsForResourceResponse.
  * \internal
  *
- * \class ListTagsForResourceResponsePrivate
- *
- * \brief Private implementation for ListTagsForResourceResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsForResourceResponse instance.
+ * Constructs a ListTagsForResourceResponsePrivate object with public implementation \a q.
  */
 ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
     ListTagsForResourceResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService ListTagsForResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService ListTagsForResource response element from \a xml.
  */
 void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlStreamReader &xml)
 {

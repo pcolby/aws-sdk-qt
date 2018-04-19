@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutConfigurationAggregatorResponse
- *
  * \brief The PutConfigurationAggregatorResponse class provides an interace for ConfigService PutConfigurationAggregator responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutConfigurationAggregatorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutConfigurationAggregatorResponse object for \a reply to \a request, with parent \a parent.
  */
 PutConfigurationAggregatorResponse::PutConfigurationAggregatorResponse(
         const PutConfigurationAggregatorRequest &request,
@@ -78,6 +73,9 @@ PutConfigurationAggregatorResponse::PutConfigurationAggregatorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutConfigurationAggregatorRequest * PutConfigurationAggregatorResponse::request() const
 {
     Q_D(const PutConfigurationAggregatorResponse);
@@ -85,9 +83,8 @@ const PutConfigurationAggregatorRequest * PutConfigurationAggregatorResponse::re
 }
 
 /*!
- * @brief  Parse a ConfigService PutConfigurationAggregator response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService PutConfigurationAggregator \a response.
  */
 void PutConfigurationAggregatorResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void PutConfigurationAggregatorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::PutConfigurationAggregatorResponsePrivate
+ * \brief The PutConfigurationAggregatorResponsePrivate class provides private implementation for PutConfigurationAggregatorResponse.
  * \internal
  *
- * \class PutConfigurationAggregatorResponsePrivate
- *
- * \brief Private implementation for PutConfigurationAggregatorResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutConfigurationAggregatorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutConfigurationAggregatorResponse instance.
+ * Constructs a PutConfigurationAggregatorResponsePrivate object with public implementation \a q.
  */
 PutConfigurationAggregatorResponsePrivate::PutConfigurationAggregatorResponsePrivate(
     PutConfigurationAggregatorResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ PutConfigurationAggregatorResponsePrivate::PutConfigurationAggregatorResponsePri
 }
 
 /*!
- * @brief  Parse an ConfigService PutConfigurationAggregatorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService PutConfigurationAggregator response element from \a xml.
  */
 void PutConfigurationAggregatorResponsePrivate::parsePutConfigurationAggregatorResponse(QXmlStreamReader &xml)
 {

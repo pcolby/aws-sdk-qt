@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketReplicationRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteBucketReplicationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBucketReplicationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 DeleteBucketReplicationRequestPrivate::DeleteBucketReplicationRequestPrivate(
     const S3Request::Action action, DeleteBucketReplicationRequest * const q)

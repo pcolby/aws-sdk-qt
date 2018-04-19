@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CreateImageBuilderResponse
- *
  * \brief The CreateImageBuilderResponse class provides an interace for AppStream CreateImageBuilder responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CreateImageBuilderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateImageBuilderResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateImageBuilderResponse::CreateImageBuilderResponse(
         const CreateImageBuilderRequest &request,
@@ -58,6 +53,9 @@ CreateImageBuilderResponse::CreateImageBuilderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateImageBuilderRequest * CreateImageBuilderResponse::request() const
 {
     Q_D(const CreateImageBuilderResponse);
@@ -65,9 +63,8 @@ const CreateImageBuilderRequest * CreateImageBuilderResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream CreateImageBuilder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream CreateImageBuilder \a response.
  */
 void CreateImageBuilderResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateImageBuilderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::CreateImageBuilderResponsePrivate
+ * \brief The CreateImageBuilderResponsePrivate class provides private implementation for CreateImageBuilderResponse.
  * \internal
  *
- * \class CreateImageBuilderResponsePrivate
- *
- * \brief Private implementation for CreateImageBuilderResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateImageBuilderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateImageBuilderResponse instance.
+ * Constructs a CreateImageBuilderResponsePrivate object with public implementation \a q.
  */
 CreateImageBuilderResponsePrivate::CreateImageBuilderResponsePrivate(
     CreateImageBuilderResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateImageBuilderResponsePrivate::CreateImageBuilderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream CreateImageBuilderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream CreateImageBuilder response element from \a xml.
  */
 void CreateImageBuilderResponsePrivate::parseCreateImageBuilderResponse(QXmlStreamReader &xml)
 {

@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * CreateTapeWithBarcodeRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateTapeWithBarcodeRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a CreateTapeWithBarcodeRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 CreateTapeWithBarcodeRequestPrivate::CreateTapeWithBarcodeRequestPrivate(
     const StorageGatewayRequest::Action action, CreateTapeWithBarcodeRequest * const q)

@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::ComposeEnvironmentsResponse
- *
  * \brief The ComposeEnvironmentsResponse class provides an interace for ElasticBeanstalk ComposeEnvironments responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new ComposeEnvironmentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ComposeEnvironmentsResponse object for \a reply to \a request, with parent \a parent.
  */
 ComposeEnvironmentsResponse::ComposeEnvironmentsResponse(
         const ComposeEnvironmentsRequest &request,
@@ -77,6 +72,9 @@ ComposeEnvironmentsResponse::ComposeEnvironmentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ComposeEnvironmentsRequest * ComposeEnvironmentsResponse::request() const
 {
     Q_D(const ComposeEnvironmentsResponse);
@@ -84,9 +82,8 @@ const ComposeEnvironmentsRequest * ComposeEnvironmentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk ComposeEnvironments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk ComposeEnvironments \a response.
  */
 void ComposeEnvironmentsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ComposeEnvironmentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::ComposeEnvironmentsResponsePrivate
+ * \brief The ComposeEnvironmentsResponsePrivate class provides private implementation for ComposeEnvironmentsResponse.
  * \internal
  *
- * \class ComposeEnvironmentsResponsePrivate
- *
- * \brief Private implementation for ComposeEnvironmentsResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ComposeEnvironmentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ComposeEnvironmentsResponse instance.
+ * Constructs a ComposeEnvironmentsResponsePrivate object with public implementation \a q.
  */
 ComposeEnvironmentsResponsePrivate::ComposeEnvironmentsResponsePrivate(
     ComposeEnvironmentsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ ComposeEnvironmentsResponsePrivate::ComposeEnvironmentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk ComposeEnvironmentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk ComposeEnvironments response element from \a xml.
  */
 void ComposeEnvironmentsResponsePrivate::parseComposeEnvironmentsResponse(QXmlStreamReader &xml)
 {

@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDatasetRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeDatasetRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDatasetRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 DescribeDatasetRequestPrivate::DescribeDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, DescribeDatasetRequest * const q)

@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeEcsClustersResponse
- *
  * \brief The DescribeEcsClustersResponse class provides an interace for OpsWorks DescribeEcsClusters responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeEcsClustersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEcsClustersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEcsClustersResponse::DescribeEcsClustersResponse(
         const DescribeEcsClustersRequest &request,
@@ -161,6 +156,9 @@ DescribeEcsClustersResponse::DescribeEcsClustersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEcsClustersRequest * DescribeEcsClustersResponse::request() const
 {
     Q_D(const DescribeEcsClustersResponse);
@@ -168,9 +166,8 @@ const DescribeEcsClustersRequest * DescribeEcsClustersResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeEcsClusters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeEcsClusters \a response.
  */
 void DescribeEcsClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeEcsClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeEcsClustersResponsePrivate
+ * \brief The DescribeEcsClustersResponsePrivate class provides private implementation for DescribeEcsClustersResponse.
  * \internal
  *
- * \class DescribeEcsClustersResponsePrivate
- *
- * \brief Private implementation for DescribeEcsClustersResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEcsClustersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEcsClustersResponse instance.
+ * Constructs a DescribeEcsClustersResponsePrivate object with public implementation \a q.
  */
 DescribeEcsClustersResponsePrivate::DescribeEcsClustersResponsePrivate(
     DescribeEcsClustersResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeEcsClustersResponsePrivate::DescribeEcsClustersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeEcsClustersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeEcsClusters response element from \a xml.
  */
 void DescribeEcsClustersResponsePrivate::parseDescribeEcsClustersResponse(QXmlStreamReader &xml)
 {

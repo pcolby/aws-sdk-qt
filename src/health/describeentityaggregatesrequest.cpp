@@ -142,9 +142,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEntityAggregatesRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeEntityAggregatesRequestPrivate object for Health \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEntityAggregatesRequestPrivate object for Health \a action,
+ * with public implementation \a q.
  */
 DescribeEntityAggregatesRequestPrivate::DescribeEntityAggregatesRequestPrivate(
     const HealthRequest::Action action, DescribeEntityAggregatesRequest * const q)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * SearchProfilesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a SearchProfilesRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a SearchProfilesRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 SearchProfilesRequestPrivate::SearchProfilesRequestPrivate(
     const AlexaForBusinessRequest::Action action, SearchProfilesRequest * const q)

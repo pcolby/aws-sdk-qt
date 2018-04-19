@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutFileResponse : public CodeCommitResponse {
 public:
     PutFileResponse(const PutFileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutFileRequest * request() const;
+    virtual const PutFileRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutFileResponse)

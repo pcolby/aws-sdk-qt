@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSegmentRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteSegmentRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSegmentRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 DeleteSegmentRequestPrivate::DeleteSegmentRequestPrivate(
     const PinpointRequest::Action action, DeleteSegmentRequest * const q)

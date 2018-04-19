@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::CreateJobQueueResponse
- *
  * \brief The CreateJobQueueResponse class provides an interace for Batch CreateJobQueue responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new CreateJobQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateJobQueueResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateJobQueueResponse::CreateJobQueueResponse(
         const CreateJobQueueRequest &request,
@@ -69,6 +64,9 @@ CreateJobQueueResponse::CreateJobQueueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateJobQueueRequest * CreateJobQueueResponse::request() const
 {
     Q_D(const CreateJobQueueResponse);
@@ -76,9 +74,8 @@ const CreateJobQueueRequest * CreateJobQueueResponse::request() const
 }
 
 /*!
- * @brief  Parse a Batch CreateJobQueue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch CreateJobQueue \a response.
  */
 void CreateJobQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateJobQueueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::CreateJobQueueResponsePrivate
+ * \brief The CreateJobQueueResponsePrivate class provides private implementation for CreateJobQueueResponse.
  * \internal
  *
- * \class CreateJobQueueResponsePrivate
- *
- * \brief Private implementation for CreateJobQueueResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateJobQueueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateJobQueueResponse instance.
+ * Constructs a CreateJobQueueResponsePrivate object with public implementation \a q.
  */
 CreateJobQueueResponsePrivate::CreateJobQueueResponsePrivate(
     CreateJobQueueResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateJobQueueResponsePrivate::CreateJobQueueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Batch CreateJobQueueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch CreateJobQueue response element from \a xml.
  */
 void CreateJobQueueResponsePrivate::parseCreateJobQueueResponse(QXmlStreamReader &xml)
 {

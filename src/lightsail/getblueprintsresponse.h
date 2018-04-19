@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetBlueprintsResponse : public LightsailResponse {
 public:
     GetBlueprintsResponse(const GetBlueprintsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetBlueprintsRequest * request() const;
+    virtual const GetBlueprintsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetBlueprintsResponse)

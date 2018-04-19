@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateServerCertificateResponse
- *
  * \brief The UpdateServerCertificateResponse class provides an interace for IAM UpdateServerCertificate responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateServerCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateServerCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateServerCertificateResponse::UpdateServerCertificateResponse(
         const UpdateServerCertificateRequest &request,
@@ -120,6 +115,9 @@ UpdateServerCertificateResponse::UpdateServerCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateServerCertificateRequest * UpdateServerCertificateResponse::request() const
 {
     Q_D(const UpdateServerCertificateResponse);
@@ -127,9 +125,8 @@ const UpdateServerCertificateRequest * UpdateServerCertificateResponse::request(
 }
 
 /*!
- * @brief  Parse a IAM UpdateServerCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateServerCertificate \a response.
  */
 void UpdateServerCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateServerCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateServerCertificateResponsePrivate
+ * \brief The UpdateServerCertificateResponsePrivate class provides private implementation for UpdateServerCertificateResponse.
  * \internal
  *
- * \class UpdateServerCertificateResponsePrivate
- *
- * \brief Private implementation for UpdateServerCertificateResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServerCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateServerCertificateResponse instance.
+ * Constructs a UpdateServerCertificateResponsePrivate object with public implementation \a q.
  */
 UpdateServerCertificateResponsePrivate::UpdateServerCertificateResponsePrivate(
     UpdateServerCertificateResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateServerCertificateResponsePrivate::UpdateServerCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM UpdateServerCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateServerCertificate response element from \a xml.
  */
 void UpdateServerCertificateResponsePrivate::parseUpdateServerCertificateResponse(QXmlStreamReader &xml)
 {

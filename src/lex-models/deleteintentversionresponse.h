@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteIntentVersionResponse : public LexModelBuildingServiceR
 public:
     DeleteIntentVersionResponse(const DeleteIntentVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteIntentVersionRequest * request() const;
+    virtual const DeleteIntentVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteIntentVersionResponse)

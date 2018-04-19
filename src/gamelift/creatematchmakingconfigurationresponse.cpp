@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::CreateMatchmakingConfigurationResponse
- *
  * \brief The CreateMatchmakingConfigurationResponse class provides an interace for GameLift CreateMatchmakingConfiguration responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new CreateMatchmakingConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateMatchmakingConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateMatchmakingConfigurationResponse::CreateMatchmakingConfigurationResponse(
         const CreateMatchmakingConfigurationRequest &request,
@@ -491,6 +486,9 @@ CreateMatchmakingConfigurationResponse::CreateMatchmakingConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateMatchmakingConfigurationRequest * CreateMatchmakingConfigurationResponse::request() const
 {
     Q_D(const CreateMatchmakingConfigurationResponse);
@@ -498,9 +496,8 @@ const CreateMatchmakingConfigurationRequest * CreateMatchmakingConfigurationResp
 }
 
 /*!
- * @brief  Parse a GameLift CreateMatchmakingConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift CreateMatchmakingConfiguration \a response.
  */
 void CreateMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void CreateMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::CreateMatchmakingConfigurationResponsePrivate
+ * \brief The CreateMatchmakingConfigurationResponsePrivate class provides private implementation for CreateMatchmakingConfigurationResponse.
  * \internal
  *
- * \class CreateMatchmakingConfigurationResponsePrivate
- *
- * \brief Private implementation for CreateMatchmakingConfigurationResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMatchmakingConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateMatchmakingConfigurationResponse instance.
+ * Constructs a CreateMatchmakingConfigurationResponsePrivate object with public implementation \a q.
  */
 CreateMatchmakingConfigurationResponsePrivate::CreateMatchmakingConfigurationResponsePrivate(
     CreateMatchmakingConfigurationResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ CreateMatchmakingConfigurationResponsePrivate::CreateMatchmakingConfigurationRes
 }
 
 /*!
- * @brief  Parse an GameLift CreateMatchmakingConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift CreateMatchmakingConfiguration response element from \a xml.
  */
 void CreateMatchmakingConfigurationResponsePrivate::parseCreateMatchmakingConfigurationResponse(QXmlStreamReader &xml)
 {

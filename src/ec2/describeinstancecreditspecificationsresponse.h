@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeInstanceCreditSpecificationsResponse : public EC2Resp
 public:
     DescribeInstanceCreditSpecificationsResponse(const DescribeInstanceCreditSpecificationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeInstanceCreditSpecificationsRequest * request() const;
+    virtual const DescribeInstanceCreditSpecificationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeInstanceCreditSpecificationsResponse)

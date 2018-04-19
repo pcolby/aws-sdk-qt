@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskAssessmentRequest::respon
  */
 
 /*!
- *
- * Constructs a StartReplicationTaskAssessmentRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a StartReplicationTaskAssessmentRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 StartReplicationTaskAssessmentRequestPrivate::StartReplicationTaskAssessmentRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, StartReplicationTaskAssessmentRequest * const q)

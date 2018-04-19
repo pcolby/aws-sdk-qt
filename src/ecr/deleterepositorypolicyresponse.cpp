@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::DeleteRepositoryPolicyResponse
- *
  * \brief The DeleteRepositoryPolicyResponse class provides an interace for ECR DeleteRepositoryPolicy responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new DeleteRepositoryPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRepositoryPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRepositoryPolicyResponse::DeleteRepositoryPolicyResponse(
         const DeleteRepositoryPolicyRequest &request,
@@ -59,6 +54,9 @@ DeleteRepositoryPolicyResponse::DeleteRepositoryPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRepositoryPolicyRequest * DeleteRepositoryPolicyResponse::request() const
 {
     Q_D(const DeleteRepositoryPolicyResponse);
@@ -66,9 +64,8 @@ const DeleteRepositoryPolicyRequest * DeleteRepositoryPolicyResponse::request() 
 }
 
 /*!
- * @brief  Parse a ECR DeleteRepositoryPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR DeleteRepositoryPolicy \a response.
  */
 void DeleteRepositoryPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteRepositoryPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::DeleteRepositoryPolicyResponsePrivate
+ * \brief The DeleteRepositoryPolicyResponsePrivate class provides private implementation for DeleteRepositoryPolicyResponse.
  * \internal
  *
- * \class DeleteRepositoryPolicyResponsePrivate
- *
- * \brief Private implementation for DeleteRepositoryPolicyResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRepositoryPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRepositoryPolicyResponse instance.
+ * Constructs a DeleteRepositoryPolicyResponsePrivate object with public implementation \a q.
  */
 DeleteRepositoryPolicyResponsePrivate::DeleteRepositoryPolicyResponsePrivate(
     DeleteRepositoryPolicyResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteRepositoryPolicyResponsePrivate::DeleteRepositoryPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR DeleteRepositoryPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR DeleteRepositoryPolicy response element from \a xml.
  */
 void DeleteRepositoryPolicyResponsePrivate::parseDeleteRepositoryPolicyResponse(QXmlStreamReader &xml)
 {

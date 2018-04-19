@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AllocateAddressResponse
- *
  * \brief The AllocateAddressResponse class provides an interace for EC2 AllocateAddress responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AllocateAddressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AllocateAddressResponse object for \a reply to \a request, with parent \a parent.
  */
 AllocateAddressResponse::AllocateAddressResponse(
         const AllocateAddressRequest &request,
@@ -59,6 +54,9 @@ AllocateAddressResponse::AllocateAddressResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AllocateAddressRequest * AllocateAddressResponse::request() const
 {
     Q_D(const AllocateAddressResponse);
@@ -66,9 +64,8 @@ const AllocateAddressRequest * AllocateAddressResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 AllocateAddress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AllocateAddress \a response.
  */
 void AllocateAddressResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AllocateAddressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AllocateAddressResponsePrivate
+ * \brief The AllocateAddressResponsePrivate class provides private implementation for AllocateAddressResponse.
  * \internal
  *
- * \class AllocateAddressResponsePrivate
- *
- * \brief Private implementation for AllocateAddressResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocateAddressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AllocateAddressResponse instance.
+ * Constructs a AllocateAddressResponsePrivate object with public implementation \a q.
  */
 AllocateAddressResponsePrivate::AllocateAddressResponsePrivate(
     AllocateAddressResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AllocateAddressResponsePrivate::AllocateAddressResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 AllocateAddressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AllocateAddress response element from \a xml.
  */
 void AllocateAddressResponsePrivate::parseAllocateAddressResponse(QXmlStreamReader &xml)
 {

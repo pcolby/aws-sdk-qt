@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketEncryptionResponse
- *
  * \brief The DeleteBucketEncryptionResponse class provides an interace for S3 DeleteBucketEncryption responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketEncryption
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketEncryptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBucketEncryptionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBucketEncryptionResponse::DeleteBucketEncryptionResponse(
         const DeleteBucketEncryptionRequest &request,
@@ -55,6 +50,9 @@ DeleteBucketEncryptionResponse::DeleteBucketEncryptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBucketEncryptionRequest * DeleteBucketEncryptionResponse::request() const
 {
     Q_D(const DeleteBucketEncryptionResponse);
@@ -62,9 +60,8 @@ const DeleteBucketEncryptionRequest * DeleteBucketEncryptionResponse::request() 
 }
 
 /*!
- * @brief  Parse a S3 DeleteBucketEncryption response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 DeleteBucketEncryption \a response.
  */
 void DeleteBucketEncryptionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteBucketEncryptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::DeleteBucketEncryptionResponsePrivate
+ * \brief The DeleteBucketEncryptionResponsePrivate class provides private implementation for DeleteBucketEncryptionResponse.
  * \internal
  *
- * \class DeleteBucketEncryptionResponsePrivate
- *
- * \brief Private implementation for DeleteBucketEncryptionResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketEncryptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBucketEncryptionResponse instance.
+ * Constructs a DeleteBucketEncryptionResponsePrivate object with public implementation \a q.
  */
 DeleteBucketEncryptionResponsePrivate::DeleteBucketEncryptionResponsePrivate(
     DeleteBucketEncryptionResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteBucketEncryptionResponsePrivate::DeleteBucketEncryptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 DeleteBucketEncryptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 DeleteBucketEncryption response element from \a xml.
  */
 void DeleteBucketEncryptionResponsePrivate::parseDeleteBucketEncryptionResponse(QXmlStreamReader &xml)
 {

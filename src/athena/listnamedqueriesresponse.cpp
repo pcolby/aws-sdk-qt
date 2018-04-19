@@ -29,10 +29,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::ListNamedQueriesResponse
- *
  * \brief The ListNamedQueriesResponse class provides an interace for Athena ListNamedQueries responses.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -51,11 +50,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new ListNamedQueriesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListNamedQueriesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListNamedQueriesResponse::ListNamedQueriesResponse(
         const ListNamedQueriesRequest &request,
@@ -67,6 +62,9 @@ ListNamedQueriesResponse::ListNamedQueriesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListNamedQueriesRequest * ListNamedQueriesResponse::request() const
 {
     Q_D(const ListNamedQueriesResponse);
@@ -74,9 +72,8 @@ const ListNamedQueriesRequest * ListNamedQueriesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Athena ListNamedQueries response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Athena ListNamedQueries \a response.
  */
 void ListNamedQueriesResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void ListNamedQueriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Athena::ListNamedQueriesResponsePrivate
+ * \brief The ListNamedQueriesResponsePrivate class provides private implementation for ListNamedQueriesResponse.
  * \internal
  *
- * \class ListNamedQueriesResponsePrivate
- *
- * \brief Private implementation for ListNamedQueriesResponse.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListNamedQueriesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListNamedQueriesResponse instance.
+ * Constructs a ListNamedQueriesResponsePrivate object with public implementation \a q.
  */
 ListNamedQueriesResponsePrivate::ListNamedQueriesResponsePrivate(
     ListNamedQueriesResponse * const q) : AthenaResponsePrivate(q)
@@ -107,9 +100,7 @@ ListNamedQueriesResponsePrivate::ListNamedQueriesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Athena ListNamedQueriesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Athena ListNamedQueries response element from \a xml.
  */
 void ListNamedQueriesResponsePrivate::parseListNamedQueriesResponse(QXmlStreamReader &xml)
 {

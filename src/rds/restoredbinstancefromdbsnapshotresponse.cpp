@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RestoreDBInstanceFromDBSnapshotResponse
- *
  * \brief The RestoreDBInstanceFromDBSnapshotResponse class provides an interace for RDS RestoreDBInstanceFromDBSnapshot responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RestoreDBInstanceFromDBSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreDBInstanceFromDBSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreDBInstanceFromDBSnapshotResponse::RestoreDBInstanceFromDBSnapshotResponse(
         const RestoreDBInstanceFromDBSnapshotRequest &request,
@@ -119,6 +114,9 @@ RestoreDBInstanceFromDBSnapshotResponse::RestoreDBInstanceFromDBSnapshotResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreDBInstanceFromDBSnapshotRequest * RestoreDBInstanceFromDBSnapshotResponse::request() const
 {
     Q_D(const RestoreDBInstanceFromDBSnapshotResponse);
@@ -126,9 +124,8 @@ const RestoreDBInstanceFromDBSnapshotRequest * RestoreDBInstanceFromDBSnapshotRe
 }
 
 /*!
- * @brief  Parse a RDS RestoreDBInstanceFromDBSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS RestoreDBInstanceFromDBSnapshot \a response.
  */
 void RestoreDBInstanceFromDBSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void RestoreDBInstanceFromDBSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::RestoreDBInstanceFromDBSnapshotResponsePrivate
+ * \brief The RestoreDBInstanceFromDBSnapshotResponsePrivate class provides private implementation for RestoreDBInstanceFromDBSnapshotResponse.
  * \internal
  *
- * \class RestoreDBInstanceFromDBSnapshotResponsePrivate
- *
- * \brief Private implementation for RestoreDBInstanceFromDBSnapshotResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreDBInstanceFromDBSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreDBInstanceFromDBSnapshotResponse instance.
+ * Constructs a RestoreDBInstanceFromDBSnapshotResponsePrivate object with public implementation \a q.
  */
 RestoreDBInstanceFromDBSnapshotResponsePrivate::RestoreDBInstanceFromDBSnapshotResponsePrivate(
     RestoreDBInstanceFromDBSnapshotResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ RestoreDBInstanceFromDBSnapshotResponsePrivate::RestoreDBInstanceFromDBSnapshotR
 }
 
 /*!
- * @brief  Parse an RDS RestoreDBInstanceFromDBSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS RestoreDBInstanceFromDBSnapshot response element from \a xml.
  */
 void RestoreDBInstanceFromDBSnapshotResponsePrivate::parseRestoreDBInstanceFromDBSnapshotResponse(QXmlStreamReader &xml)
 {

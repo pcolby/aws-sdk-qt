@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * PutMailboxPermissionsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a PutMailboxPermissionsRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a PutMailboxPermissionsRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 PutMailboxPermissionsRequestPrivate::PutMailboxPermissionsRequestPrivate(
     const WorkMailRequest::Action action, PutMailboxPermissionsRequest * const q)

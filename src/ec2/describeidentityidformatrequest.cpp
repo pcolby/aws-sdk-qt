@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityIdFormatRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeIdentityIdFormatRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeIdentityIdFormatRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeIdentityIdFormatRequestPrivate::DescribeIdentityIdFormatRequestPrivate(
     const EC2Request::Action action, DescribeIdentityIdFormatRequest * const q)

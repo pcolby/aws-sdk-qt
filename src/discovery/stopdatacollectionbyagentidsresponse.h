@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopDataCollectionByAgentIdsResponse : public ApplicationDisc
 public:
     StopDataCollectionByAgentIdsResponse(const StopDataCollectionByAgentIdsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopDataCollectionByAgentIdsRequest * request() const;
+    virtual const StopDataCollectionByAgentIdsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopDataCollectionByAgentIdsResponse)

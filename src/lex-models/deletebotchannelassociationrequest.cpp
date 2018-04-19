@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBotChannelAssociationRequest::response(
  */
 
 /*!
- *
- * Constructs a DeleteBotChannelAssociationRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBotChannelAssociationRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 DeleteBotChannelAssociationRequestPrivate::DeleteBotChannelAssociationRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteBotChannelAssociationRequest * const q)

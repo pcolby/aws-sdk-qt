@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSecurityGroupsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeDBSecurityGroupsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDBSecurityGroupsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeDBSecurityGroupsRequestPrivate::DescribeDBSecurityGroupsRequestPrivate(
     const RDSRequest::Action action, DescribeDBSecurityGroupsRequest * const q)

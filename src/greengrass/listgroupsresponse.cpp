@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListGroupsResponse
- *
  * \brief The ListGroupsResponse class provides an interace for Greengrass ListGroups responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGroupsResponse::ListGroupsResponse(
         const ListGroupsRequest &request,
@@ -58,6 +53,9 @@ ListGroupsResponse::ListGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGroupsRequest * ListGroupsResponse::request() const
 {
     Q_D(const ListGroupsResponse);
@@ -65,9 +63,8 @@ const ListGroupsRequest * ListGroupsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass ListGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass ListGroups \a response.
  */
 void ListGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::ListGroupsResponsePrivate
+ * \brief The ListGroupsResponsePrivate class provides private implementation for ListGroupsResponse.
  * \internal
  *
- * \class ListGroupsResponsePrivate
- *
- * \brief Private implementation for ListGroupsResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGroupsResponse instance.
+ * Constructs a ListGroupsResponsePrivate object with public implementation \a q.
  */
 ListGroupsResponsePrivate::ListGroupsResponsePrivate(
     ListGroupsResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ ListGroupsResponsePrivate::ListGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass ListGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass ListGroups response element from \a xml.
  */
 void ListGroupsResponsePrivate::parseListGroupsResponse(QXmlStreamReader &xml)
 {

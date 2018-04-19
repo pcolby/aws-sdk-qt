@@ -161,9 +161,8 @@ QtAws::Core::AwsAbstractResponse * CreateWebhookRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateWebhookRequestPrivate object for CodeBuild \a action with,
- * public implementation \a q.
+ * Constructs a CreateWebhookRequestPrivate object for CodeBuild \a action,
+ * with public implementation \a q.
  */
 CreateWebhookRequestPrivate::CreateWebhookRequestPrivate(
     const CodeBuildRequest::Action action, CreateWebhookRequest * const q)

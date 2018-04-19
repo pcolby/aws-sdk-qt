@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::UpdateTimeToLiveResponse
- *
  * \brief The UpdateTimeToLiveResponse class provides an interace for DynamoDB UpdateTimeToLive responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new UpdateTimeToLiveResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTimeToLiveResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTimeToLiveResponse::UpdateTimeToLiveResponse(
         const UpdateTimeToLiveRequest &request,
@@ -74,6 +69,9 @@ UpdateTimeToLiveResponse::UpdateTimeToLiveResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTimeToLiveRequest * UpdateTimeToLiveResponse::request() const
 {
     Q_D(const UpdateTimeToLiveResponse);
@@ -81,9 +79,8 @@ const UpdateTimeToLiveRequest * UpdateTimeToLiveResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB UpdateTimeToLive response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB UpdateTimeToLive \a response.
  */
 void UpdateTimeToLiveResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void UpdateTimeToLiveResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::UpdateTimeToLiveResponsePrivate
+ * \brief The UpdateTimeToLiveResponsePrivate class provides private implementation for UpdateTimeToLiveResponse.
  * \internal
  *
- * \class UpdateTimeToLiveResponsePrivate
- *
- * \brief Private implementation for UpdateTimeToLiveResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTimeToLiveResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTimeToLiveResponse instance.
+ * Constructs a UpdateTimeToLiveResponsePrivate object with public implementation \a q.
  */
 UpdateTimeToLiveResponsePrivate::UpdateTimeToLiveResponsePrivate(
     UpdateTimeToLiveResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ UpdateTimeToLiveResponsePrivate::UpdateTimeToLiveResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB UpdateTimeToLiveResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB UpdateTimeToLive response element from \a xml.
  */
 void UpdateTimeToLiveResponsePrivate::parseUpdateTimeToLiveResponse(QXmlStreamReader &xml)
 {

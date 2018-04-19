@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeDeliveryChannelStatusResponse
- *
  * \brief The DescribeDeliveryChannelStatusResponse class provides an interace for ConfigService DescribeDeliveryChannelStatus responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeDeliveryChannelStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDeliveryChannelStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDeliveryChannelStatusResponse::DescribeDeliveryChannelStatusResponse(
         const DescribeDeliveryChannelStatusRequest &request,
@@ -78,6 +73,9 @@ DescribeDeliveryChannelStatusResponse::DescribeDeliveryChannelStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDeliveryChannelStatusRequest * DescribeDeliveryChannelStatusResponse::request() const
 {
     Q_D(const DescribeDeliveryChannelStatusResponse);
@@ -85,9 +83,8 @@ const DescribeDeliveryChannelStatusRequest * DescribeDeliveryChannelStatusRespon
 }
 
 /*!
- * @brief  Parse a ConfigService DescribeDeliveryChannelStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribeDeliveryChannelStatus \a response.
  */
 void DescribeDeliveryChannelStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeDeliveryChannelStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribeDeliveryChannelStatusResponsePrivate
+ * \brief The DescribeDeliveryChannelStatusResponsePrivate class provides private implementation for DescribeDeliveryChannelStatusResponse.
  * \internal
  *
- * \class DescribeDeliveryChannelStatusResponsePrivate
- *
- * \brief Private implementation for DescribeDeliveryChannelStatusResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDeliveryChannelStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDeliveryChannelStatusResponse instance.
+ * Constructs a DescribeDeliveryChannelStatusResponsePrivate object with public implementation \a q.
  */
 DescribeDeliveryChannelStatusResponsePrivate::DescribeDeliveryChannelStatusResponsePrivate(
     DescribeDeliveryChannelStatusResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeDeliveryChannelStatusResponsePrivate::DescribeDeliveryChannelStatusRespo
 }
 
 /*!
- * @brief  Parse an ConfigService DescribeDeliveryChannelStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribeDeliveryChannelStatus response element from \a xml.
  */
 void DescribeDeliveryChannelStatusResponsePrivate::parseDescribeDeliveryChannelStatusResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteIntentResponse
- *
  * \brief The DeleteIntentResponse class provides an interace for LexModelBuildingService DeleteIntent responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteIntentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteIntentResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteIntentResponse::DeleteIntentResponse(
         const DeleteIntentRequest &request,
@@ -59,6 +54,9 @@ DeleteIntentResponse::DeleteIntentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteIntentRequest * DeleteIntentResponse::request() const
 {
     Q_D(const DeleteIntentResponse);
@@ -66,9 +64,8 @@ const DeleteIntentRequest * DeleteIntentResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService DeleteIntent response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService DeleteIntent \a response.
  */
 void DeleteIntentResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteIntentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::DeleteIntentResponsePrivate
+ * \brief The DeleteIntentResponsePrivate class provides private implementation for DeleteIntentResponse.
  * \internal
  *
- * \class DeleteIntentResponsePrivate
- *
- * \brief Private implementation for DeleteIntentResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIntentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteIntentResponse instance.
+ * Constructs a DeleteIntentResponsePrivate object with public implementation \a q.
  */
 DeleteIntentResponsePrivate::DeleteIntentResponsePrivate(
     DeleteIntentResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteIntentResponsePrivate::DeleteIntentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService DeleteIntentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService DeleteIntent response element from \a xml.
  */
 void DeleteIntentResponsePrivate::parseDeleteIntentResponse(QXmlStreamReader &xml)
 {

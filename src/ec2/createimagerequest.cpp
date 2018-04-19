@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateImageRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateImageRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateImageRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateImageRequestPrivate::CreateImageRequestPrivate(
     const EC2Request::Action action, CreateImageRequest * const q)

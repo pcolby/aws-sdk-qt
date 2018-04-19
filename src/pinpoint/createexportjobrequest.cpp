@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateExportJobRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a CreateExportJobRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a CreateExportJobRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 CreateExportJobRequestPrivate::CreateExportJobRequestPrivate(
     const PinpointRequest::Action action, CreateExportJobRequest * const q)

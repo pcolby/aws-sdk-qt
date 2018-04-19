@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::RespondToAuthChallengeResponse
- *
  * \brief The RespondToAuthChallengeResponse class provides an interace for CognitoIdentityProvider RespondToAuthChallenge responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new RespondToAuthChallengeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RespondToAuthChallengeResponse object for \a reply to \a request, with parent \a parent.
  */
 RespondToAuthChallengeResponse::RespondToAuthChallengeResponse(
         const RespondToAuthChallengeRequest &request,
@@ -65,6 +60,9 @@ RespondToAuthChallengeResponse::RespondToAuthChallengeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RespondToAuthChallengeRequest * RespondToAuthChallengeResponse::request() const
 {
     Q_D(const RespondToAuthChallengeResponse);
@@ -72,9 +70,8 @@ const RespondToAuthChallengeRequest * RespondToAuthChallengeResponse::request() 
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider RespondToAuthChallenge response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider RespondToAuthChallenge \a response.
  */
 void RespondToAuthChallengeResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void RespondToAuthChallengeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::RespondToAuthChallengeResponsePrivate
+ * \brief The RespondToAuthChallengeResponsePrivate class provides private implementation for RespondToAuthChallengeResponse.
  * \internal
  *
- * \class RespondToAuthChallengeResponsePrivate
- *
- * \brief Private implementation for RespondToAuthChallengeResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RespondToAuthChallengeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RespondToAuthChallengeResponse instance.
+ * Constructs a RespondToAuthChallengeResponsePrivate object with public implementation \a q.
  */
 RespondToAuthChallengeResponsePrivate::RespondToAuthChallengeResponsePrivate(
     RespondToAuthChallengeResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ RespondToAuthChallengeResponsePrivate::RespondToAuthChallengeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider RespondToAuthChallengeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider RespondToAuthChallenge response element from \a xml.
  */
 void RespondToAuthChallengeResponsePrivate::parseRespondToAuthChallengeResponse(QXmlStreamReader &xml)
 {

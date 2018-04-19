@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::ListWorkflowTypesResponse
- *
  * \brief The ListWorkflowTypesResponse class provides an interace for SWF ListWorkflowTypes responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new ListWorkflowTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListWorkflowTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListWorkflowTypesResponse::ListWorkflowTypesResponse(
         const ListWorkflowTypesRequest &request,
@@ -71,6 +66,9 @@ ListWorkflowTypesResponse::ListWorkflowTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListWorkflowTypesRequest * ListWorkflowTypesResponse::request() const
 {
     Q_D(const ListWorkflowTypesResponse);
@@ -78,9 +76,8 @@ const ListWorkflowTypesRequest * ListWorkflowTypesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SWF ListWorkflowTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF ListWorkflowTypes \a response.
  */
 void ListWorkflowTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void ListWorkflowTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::ListWorkflowTypesResponsePrivate
+ * \brief The ListWorkflowTypesResponsePrivate class provides private implementation for ListWorkflowTypesResponse.
  * \internal
  *
- * \class ListWorkflowTypesResponsePrivate
- *
- * \brief Private implementation for ListWorkflowTypesResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListWorkflowTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListWorkflowTypesResponse instance.
+ * Constructs a ListWorkflowTypesResponsePrivate object with public implementation \a q.
  */
 ListWorkflowTypesResponsePrivate::ListWorkflowTypesResponsePrivate(
     ListWorkflowTypesResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ ListWorkflowTypesResponsePrivate::ListWorkflowTypesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF ListWorkflowTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF ListWorkflowTypes response element from \a xml.
  */
 void ListWorkflowTypesResponsePrivate::parseListWorkflowTypesResponse(QXmlStreamReader &xml)
 {

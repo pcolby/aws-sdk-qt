@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DetachFromIndexResponse
- *
  * \brief The DetachFromIndexResponse class provides an interace for CloudDirectory DetachFromIndex responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DetachFromIndexResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachFromIndexResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachFromIndexResponse::DetachFromIndexResponse(
         const DetachFromIndexRequest &request,
@@ -62,6 +57,9 @@ DetachFromIndexResponse::DetachFromIndexResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachFromIndexRequest * DetachFromIndexResponse::request() const
 {
     Q_D(const DetachFromIndexResponse);
@@ -69,9 +67,8 @@ const DetachFromIndexRequest * DetachFromIndexResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory DetachFromIndex response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory DetachFromIndex \a response.
  */
 void DetachFromIndexResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DetachFromIndexResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::DetachFromIndexResponsePrivate
+ * \brief The DetachFromIndexResponsePrivate class provides private implementation for DetachFromIndexResponse.
  * \internal
  *
- * \class DetachFromIndexResponsePrivate
- *
- * \brief Private implementation for DetachFromIndexResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachFromIndexResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachFromIndexResponse instance.
+ * Constructs a DetachFromIndexResponsePrivate object with public implementation \a q.
  */
 DetachFromIndexResponsePrivate::DetachFromIndexResponsePrivate(
     DetachFromIndexResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ DetachFromIndexResponsePrivate::DetachFromIndexResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory DetachFromIndexResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory DetachFromIndex response element from \a xml.
  */
 void DetachFromIndexResponsePrivate::parseDetachFromIndexResponse(QXmlStreamReader &xml)
 {

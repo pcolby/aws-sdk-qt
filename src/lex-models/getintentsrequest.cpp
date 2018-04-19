@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetIntentsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetIntentsRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a GetIntentsRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 GetIntentsRequestPrivate::GetIntentsRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetIntentsRequest * const q)

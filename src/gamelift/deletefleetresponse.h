@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteFleetResponse : public GameLiftResponse {
 public:
     DeleteFleetResponse(const DeleteFleetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteFleetRequest * request() const;
+    virtual const DeleteFleetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteFleetResponse)

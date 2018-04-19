@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CreateUserRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a CreateUserRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 CreateUserRequestPrivate::CreateUserRequestPrivate(
     const WorkDocsRequest::Action action, CreateUserRequest * const q)

@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::DeleteRepositoryResponse
- *
  * \brief The DeleteRepositoryResponse class provides an interace for ECR DeleteRepository responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new DeleteRepositoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRepositoryResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRepositoryResponse::DeleteRepositoryResponse(
         const DeleteRepositoryRequest &request,
@@ -59,6 +54,9 @@ DeleteRepositoryResponse::DeleteRepositoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRepositoryRequest * DeleteRepositoryResponse::request() const
 {
     Q_D(const DeleteRepositoryResponse);
@@ -66,9 +64,8 @@ const DeleteRepositoryRequest * DeleteRepositoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR DeleteRepository response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR DeleteRepository \a response.
  */
 void DeleteRepositoryResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteRepositoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::DeleteRepositoryResponsePrivate
+ * \brief The DeleteRepositoryResponsePrivate class provides private implementation for DeleteRepositoryResponse.
  * \internal
  *
- * \class DeleteRepositoryResponsePrivate
- *
- * \brief Private implementation for DeleteRepositoryResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRepositoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRepositoryResponse instance.
+ * Constructs a DeleteRepositoryResponsePrivate object with public implementation \a q.
  */
 DeleteRepositoryResponsePrivate::DeleteRepositoryResponsePrivate(
     DeleteRepositoryResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteRepositoryResponsePrivate::DeleteRepositoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR DeleteRepositoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR DeleteRepository response element from \a xml.
  */
 void DeleteRepositoryResponsePrivate::parseDeleteRepositoryResponse(QXmlStreamReader &xml)
 {

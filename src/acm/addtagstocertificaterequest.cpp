@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * AddTagsToCertificateRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a AddTagsToCertificateRequestPrivate object for ACM \a action with,
- * public implementation \a q.
+ * Constructs a AddTagsToCertificateRequestPrivate object for ACM \a action,
+ * with public implementation \a q.
  */
 AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
     const ACMRequest::Action action, AddTagsToCertificateRequest * const q)

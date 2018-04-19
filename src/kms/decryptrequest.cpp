@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * DecryptRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a DecryptRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a DecryptRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 DecryptRequestPrivate::DecryptRequestPrivate(
     const KMSRequest::Action action, DecryptRequest * const q)

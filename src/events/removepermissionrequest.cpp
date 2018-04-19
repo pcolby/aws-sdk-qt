@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a RemovePermissionRequestPrivate object for CloudWatchEvents \a action with,
- * public implementation \a q.
+ * Constructs a RemovePermissionRequestPrivate object for CloudWatchEvents \a action,
+ * with public implementation \a q.
  */
 RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
     const CloudWatchEventsRequest::Action action, RemovePermissionRequest * const q)

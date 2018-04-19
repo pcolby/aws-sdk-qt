@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddCustomAttributesResponse : public CognitoIdentityProviderR
 public:
     AddCustomAttributesResponse(const AddCustomAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddCustomAttributesRequest * request() const;
+    virtual const AddCustomAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddCustomAttributesResponse)

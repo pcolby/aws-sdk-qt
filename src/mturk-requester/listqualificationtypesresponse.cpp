@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListQualificationTypesResponse
- *
  * \brief The ListQualificationTypesResponse class provides an interace for MTurk ListQualificationTypes responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listQualificationTypes
  */
 
 /*!
- * @brief  Constructs a new ListQualificationTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListQualificationTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListQualificationTypesResponse::ListQualificationTypesResponse(
         const ListQualificationTypesRequest &request,
@@ -55,6 +50,9 @@ ListQualificationTypesResponse::ListQualificationTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListQualificationTypesRequest * ListQualificationTypesResponse::request() const
 {
     Q_D(const ListQualificationTypesResponse);
@@ -62,9 +60,8 @@ const ListQualificationTypesRequest * ListQualificationTypesResponse::request() 
 }
 
 /*!
- * @brief  Parse a MTurk ListQualificationTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk ListQualificationTypes \a response.
  */
 void ListQualificationTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListQualificationTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::ListQualificationTypesResponsePrivate
+ * \brief The ListQualificationTypesResponsePrivate class provides private implementation for ListQualificationTypesResponse.
  * \internal
  *
- * \class ListQualificationTypesResponsePrivate
- *
- * \brief Private implementation for ListQualificationTypesResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListQualificationTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListQualificationTypesResponse instance.
+ * Constructs a ListQualificationTypesResponsePrivate object with public implementation \a q.
  */
 ListQualificationTypesResponsePrivate::ListQualificationTypesResponsePrivate(
     ListQualificationTypesResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ ListQualificationTypesResponsePrivate::ListQualificationTypesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk ListQualificationTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk ListQualificationTypes response element from \a xml.
  */
 void ListQualificationTypesResponsePrivate::parseListQualificationTypesResponse(QXmlStreamReader &xml)
 {

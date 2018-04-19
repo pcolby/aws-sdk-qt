@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteSigningCertificateResponse
- *
  * \brief The DeleteSigningCertificateResponse class provides an interace for IAM DeleteSigningCertificate responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteSigningCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSigningCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSigningCertificateResponse::DeleteSigningCertificateResponse(
         const DeleteSigningCertificateRequest &request,
@@ -120,6 +115,9 @@ DeleteSigningCertificateResponse::DeleteSigningCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSigningCertificateRequest * DeleteSigningCertificateResponse::request() const
 {
     Q_D(const DeleteSigningCertificateResponse);
@@ -127,9 +125,8 @@ const DeleteSigningCertificateRequest * DeleteSigningCertificateResponse::reques
 }
 
 /*!
- * @brief  Parse a IAM DeleteSigningCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteSigningCertificate \a response.
  */
 void DeleteSigningCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteSigningCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteSigningCertificateResponsePrivate
+ * \brief The DeleteSigningCertificateResponsePrivate class provides private implementation for DeleteSigningCertificateResponse.
  * \internal
  *
- * \class DeleteSigningCertificateResponsePrivate
- *
- * \brief Private implementation for DeleteSigningCertificateResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSigningCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSigningCertificateResponse instance.
+ * Constructs a DeleteSigningCertificateResponsePrivate object with public implementation \a q.
  */
 DeleteSigningCertificateResponsePrivate::DeleteSigningCertificateResponsePrivate(
     DeleteSigningCertificateResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteSigningCertificateResponsePrivate::DeleteSigningCertificateResponsePrivate
 }
 
 /*!
- * @brief  Parse an IAM DeleteSigningCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteSigningCertificate response element from \a xml.
  */
 void DeleteSigningCertificateResponsePrivate::parseDeleteSigningCertificateResponse(QXmlStreamReader &xml)
 {

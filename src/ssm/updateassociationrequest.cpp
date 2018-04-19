@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAssociationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateAssociationRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAssociationRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 UpdateAssociationRequestPrivate::UpdateAssociationRequestPrivate(
     const SSMRequest::Action action, UpdateAssociationRequest * const q)

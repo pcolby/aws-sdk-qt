@@ -34,10 +34,10 @@ class QTAWS_EXPORT CompleteMultipartUploadResponse : public GlacierResponse {
 public:
     CompleteMultipartUploadResponse(const CompleteMultipartUploadRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CompleteMultipartUploadRequest * request() const;
+    virtual const CompleteMultipartUploadRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CompleteMultipartUploadResponse)

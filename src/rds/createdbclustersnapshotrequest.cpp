@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CreateDBClusterSnapshotRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CreateDBClusterSnapshotRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CreateDBClusterSnapshotRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CreateDBClusterSnapshotRequestPrivate::CreateDBClusterSnapshotRequestPrivate(
     const RDSRequest::Action action, CreateDBClusterSnapshotRequest * const q)

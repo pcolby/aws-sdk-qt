@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisableDomainAutoRenewResponse : public Route53DomainsRespons
 public:
     DisableDomainAutoRenewResponse(const DisableDomainAutoRenewRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisableDomainAutoRenewRequest * request() const;
+    virtual const DisableDomainAutoRenewRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisableDomainAutoRenewResponse)

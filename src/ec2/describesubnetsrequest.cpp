@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeSubnetsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSubnetsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeSubnetsRequestPrivate::DescribeSubnetsRequestPrivate(
     const EC2Request::Action action, DescribeSubnetsRequest * const q)

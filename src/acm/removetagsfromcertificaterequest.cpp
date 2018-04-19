@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromCertificateRequest::response(QN
  */
 
 /*!
- *
- * Constructs a RemoveTagsFromCertificateRequestPrivate object for ACM \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsFromCertificateRequestPrivate object for ACM \a action,
+ * with public implementation \a q.
  */
 RemoveTagsFromCertificateRequestPrivate::RemoveTagsFromCertificateRequestPrivate(
     const ACMRequest::Action action, RemoveTagsFromCertificateRequest * const q)

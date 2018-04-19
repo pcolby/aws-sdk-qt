@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminConfirmSignUpResponse
- *
  * \brief The AdminConfirmSignUpResponse class provides an interace for CognitoIdentityProvider AdminConfirmSignUp responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminConfirmSignUpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminConfirmSignUpResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminConfirmSignUpResponse::AdminConfirmSignUpResponse(
         const AdminConfirmSignUpRequest &request,
@@ -65,6 +60,9 @@ AdminConfirmSignUpResponse::AdminConfirmSignUpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminConfirmSignUpRequest * AdminConfirmSignUpResponse::request() const
 {
     Q_D(const AdminConfirmSignUpResponse);
@@ -72,9 +70,8 @@ const AdminConfirmSignUpRequest * AdminConfirmSignUpResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminConfirmSignUp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminConfirmSignUp \a response.
  */
 void AdminConfirmSignUpResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminConfirmSignUpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminConfirmSignUpResponsePrivate
+ * \brief The AdminConfirmSignUpResponsePrivate class provides private implementation for AdminConfirmSignUpResponse.
  * \internal
  *
- * \class AdminConfirmSignUpResponsePrivate
- *
- * \brief Private implementation for AdminConfirmSignUpResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminConfirmSignUpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminConfirmSignUpResponse instance.
+ * Constructs a AdminConfirmSignUpResponsePrivate object with public implementation \a q.
  */
 AdminConfirmSignUpResponsePrivate::AdminConfirmSignUpResponsePrivate(
     AdminConfirmSignUpResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminConfirmSignUpResponsePrivate::AdminConfirmSignUpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminConfirmSignUpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminConfirmSignUp response element from \a xml.
  */
 void AdminConfirmSignUpResponsePrivate::parseAdminConfirmSignUpResponse(QXmlStreamReader &xml)
 {

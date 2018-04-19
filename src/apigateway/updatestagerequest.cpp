@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateStageRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateStageRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateStageRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 UpdateStageRequestPrivate::UpdateStageRequestPrivate(
     const APIGatewayRequest::Action action, UpdateStageRequest * const q)

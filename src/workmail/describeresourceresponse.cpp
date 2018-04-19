@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DescribeResourceResponse
- *
  * \brief The DescribeResourceResponse class provides an interace for WorkMail DescribeResource responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DescribeResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeResourceResponse::DescribeResourceResponse(
         const DescribeResourceRequest &request,
@@ -88,6 +83,9 @@ DescribeResourceResponse::DescribeResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeResourceRequest * DescribeResourceResponse::request() const
 {
     Q_D(const DescribeResourceResponse);
@@ -95,9 +93,8 @@ const DescribeResourceRequest * DescribeResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail DescribeResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail DescribeResource \a response.
  */
 void DescribeResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DescribeResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::DescribeResourceResponsePrivate
+ * \brief The DescribeResourceResponsePrivate class provides private implementation for DescribeResourceResponse.
  * \internal
  *
- * \class DescribeResourceResponsePrivate
- *
- * \brief Private implementation for DescribeResourceResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeResourceResponse instance.
+ * Constructs a DescribeResourceResponsePrivate object with public implementation \a q.
  */
 DescribeResourceResponsePrivate::DescribeResourceResponsePrivate(
     DescribeResourceResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ DescribeResourceResponsePrivate::DescribeResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail DescribeResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail DescribeResource response element from \a xml.
  */
 void DescribeResourceResponsePrivate::parseDescribeResourceResponse(QXmlStreamReader &xml)
 {

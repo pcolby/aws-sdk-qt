@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::DeleteStackInstancesResponse
- *
  * \brief The DeleteStackInstancesResponse class provides an interace for CloudFormation DeleteStackInstances responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new DeleteStackInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteStackInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteStackInstancesResponse::DeleteStackInstancesResponse(
         const DeleteStackInstancesRequest &request,
@@ -77,6 +72,9 @@ DeleteStackInstancesResponse::DeleteStackInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteStackInstancesRequest * DeleteStackInstancesResponse::request() const
 {
     Q_D(const DeleteStackInstancesResponse);
@@ -84,9 +82,8 @@ const DeleteStackInstancesRequest * DeleteStackInstancesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudFormation DeleteStackInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation DeleteStackInstances \a response.
  */
 void DeleteStackInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DeleteStackInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::DeleteStackInstancesResponsePrivate
+ * \brief The DeleteStackInstancesResponsePrivate class provides private implementation for DeleteStackInstancesResponse.
  * \internal
  *
- * \class DeleteStackInstancesResponsePrivate
- *
- * \brief Private implementation for DeleteStackInstancesResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStackInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteStackInstancesResponse instance.
+ * Constructs a DeleteStackInstancesResponsePrivate object with public implementation \a q.
  */
 DeleteStackInstancesResponsePrivate::DeleteStackInstancesResponsePrivate(
     DeleteStackInstancesResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ DeleteStackInstancesResponsePrivate::DeleteStackInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation DeleteStackInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation DeleteStackInstances response element from \a xml.
  */
 void DeleteStackInstancesResponsePrivate::parseDeleteStackInstancesResponse(QXmlStreamReader &xml)
 {

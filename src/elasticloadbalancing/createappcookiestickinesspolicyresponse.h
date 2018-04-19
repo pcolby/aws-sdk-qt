@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateAppCookieStickinessPolicyResponse : public ElasticLoadB
 public:
     CreateAppCookieStickinessPolicyResponse(const CreateAppCookieStickinessPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateAppCookieStickinessPolicyRequest * request() const;
+    virtual const CreateAppCookieStickinessPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateAppCookieStickinessPolicyResponse)

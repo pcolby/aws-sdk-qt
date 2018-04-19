@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutLifecycleEventHookExecutionStatusResponse : public CodeDep
 public:
     PutLifecycleEventHookExecutionStatusResponse(const PutLifecycleEventHookExecutionStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutLifecycleEventHookExecutionStatusRequest * request() const;
+    virtual const PutLifecycleEventHookExecutionStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutLifecycleEventHookExecutionStatusResponse)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRouteTablesRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeRouteTablesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRouteTablesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeRouteTablesRequestPrivate::DescribeRouteTablesRequestPrivate(
     const EC2Request::Action action, DescribeRouteTablesRequest * const q)

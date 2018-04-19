@@ -29,10 +29,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::DescribeSubscribersForNotificationResponse
- *
  * \brief The DescribeSubscribersForNotificationResponse class provides an interace for Budgets DescribeSubscribersForNotification responses.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -77,11 +76,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new DescribeSubscribersForNotificationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSubscribersForNotificationResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSubscribersForNotificationResponse::DescribeSubscribersForNotificationResponse(
         const DescribeSubscribersForNotificationRequest &request,
@@ -93,6 +88,9 @@ DescribeSubscribersForNotificationResponse::DescribeSubscribersForNotificationRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSubscribersForNotificationRequest * DescribeSubscribersForNotificationResponse::request() const
 {
     Q_D(const DescribeSubscribersForNotificationResponse);
@@ -100,9 +98,8 @@ const DescribeSubscribersForNotificationRequest * DescribeSubscribersForNotifica
 }
 
 /*!
- * @brief  Parse a Budgets DescribeSubscribersForNotification response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Budgets DescribeSubscribersForNotification \a response.
  */
 void DescribeSubscribersForNotificationResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DescribeSubscribersForNotificationResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::Budgets::DescribeSubscribersForNotificationResponsePrivate
+ * \brief The DescribeSubscribersForNotificationResponsePrivate class provides private implementation for DescribeSubscribersForNotificationResponse.
  * \internal
  *
- * \class DescribeSubscribersForNotificationResponsePrivate
- *
- * \brief Private implementation for DescribeSubscribersForNotificationResponse.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSubscribersForNotificationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSubscribersForNotificationResponse instance.
+ * Constructs a DescribeSubscribersForNotificationResponsePrivate object with public implementation \a q.
  */
 DescribeSubscribersForNotificationResponsePrivate::DescribeSubscribersForNotificationResponsePrivate(
     DescribeSubscribersForNotificationResponse * const q) : BudgetsResponsePrivate(q)
@@ -133,9 +126,7 @@ DescribeSubscribersForNotificationResponsePrivate::DescribeSubscribersForNotific
 }
 
 /*!
- * @brief  Parse an Budgets DescribeSubscribersForNotificationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Budgets DescribeSubscribersForNotification response element from \a xml.
  */
 void DescribeSubscribersForNotificationResponsePrivate::parseDescribeSubscribersForNotificationResponse(QXmlStreamReader &xml)
 {

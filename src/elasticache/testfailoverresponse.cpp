@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::TestFailoverResponse
- *
  * \brief The TestFailoverResponse class provides an interace for ElastiCache TestFailover responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new TestFailoverResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TestFailoverResponse object for \a reply to \a request, with parent \a parent.
  */
 TestFailoverResponse::TestFailoverResponse(
         const TestFailoverRequest &request,
@@ -69,6 +64,9 @@ TestFailoverResponse::TestFailoverResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TestFailoverRequest * TestFailoverResponse::request() const
 {
     Q_D(const TestFailoverResponse);
@@ -76,9 +74,8 @@ const TestFailoverRequest * TestFailoverResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElastiCache TestFailover response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache TestFailover \a response.
  */
 void TestFailoverResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void TestFailoverResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::TestFailoverResponsePrivate
+ * \brief The TestFailoverResponsePrivate class provides private implementation for TestFailoverResponse.
  * \internal
  *
- * \class TestFailoverResponsePrivate
- *
- * \brief Private implementation for TestFailoverResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestFailoverResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TestFailoverResponse instance.
+ * Constructs a TestFailoverResponsePrivate object with public implementation \a q.
  */
 TestFailoverResponsePrivate::TestFailoverResponsePrivate(
     TestFailoverResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ TestFailoverResponsePrivate::TestFailoverResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache TestFailoverResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache TestFailover response element from \a xml.
  */
 void TestFailoverResponsePrivate::parseTestFailoverResponse(QXmlStreamReader &xml)
 {

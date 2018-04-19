@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddListenerCertificatesResponse : public ElasticLoadBalancing
 public:
     AddListenerCertificatesResponse(const AddListenerCertificatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddListenerCertificatesRequest * request() const;
+    virtual const AddListenerCertificatesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddListenerCertificatesResponse)

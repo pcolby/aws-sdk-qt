@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateIdentityPoolResponse : public CognitoIdentityResponse {
 public:
     UpdateIdentityPoolResponse(const UpdateIdentityPoolRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateIdentityPoolRequest * request() const;
+    virtual const UpdateIdentityPoolRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateIdentityPoolResponse)

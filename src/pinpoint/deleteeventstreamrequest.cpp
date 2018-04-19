@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEventStreamRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteEventStreamRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEventStreamRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 DeleteEventStreamRequestPrivate::DeleteEventStreamRequestPrivate(
     const PinpointRequest::Action action, DeleteEventStreamRequest * const q)

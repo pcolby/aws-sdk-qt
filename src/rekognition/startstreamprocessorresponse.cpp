@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartStreamProcessorResponse
- *
  * \brief The StartStreamProcessorResponse class provides an interace for Rekognition StartStreamProcessor responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartStreamProcessorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartStreamProcessorResponse object for \a reply to \a request, with parent \a parent.
  */
 StartStreamProcessorResponse::StartStreamProcessorResponse(
         const StartStreamProcessorRequest &request,
@@ -56,6 +51,9 @@ StartStreamProcessorResponse::StartStreamProcessorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartStreamProcessorRequest * StartStreamProcessorResponse::request() const
 {
     Q_D(const StartStreamProcessorResponse);
@@ -63,9 +61,8 @@ const StartStreamProcessorRequest * StartStreamProcessorResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Rekognition StartStreamProcessor response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition StartStreamProcessor \a response.
  */
 void StartStreamProcessorResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void StartStreamProcessorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::StartStreamProcessorResponsePrivate
+ * \brief The StartStreamProcessorResponsePrivate class provides private implementation for StartStreamProcessorResponse.
  * \internal
  *
- * \class StartStreamProcessorResponsePrivate
- *
- * \brief Private implementation for StartStreamProcessorResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartStreamProcessorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartStreamProcessorResponse instance.
+ * Constructs a StartStreamProcessorResponsePrivate object with public implementation \a q.
  */
 StartStreamProcessorResponsePrivate::StartStreamProcessorResponsePrivate(
     StartStreamProcessorResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ StartStreamProcessorResponsePrivate::StartStreamProcessorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition StartStreamProcessorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition StartStreamProcessor response element from \a xml.
  */
 void StartStreamProcessorResponsePrivate::parseStartStreamProcessorResponse(QXmlStreamReader &xml)
 {

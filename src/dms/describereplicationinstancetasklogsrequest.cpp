@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationInstanceTaskLogsRequest::r
  */
 
 /*!
- *
- * Constructs a DescribeReplicationInstanceTaskLogsRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeReplicationInstanceTaskLogsRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DescribeReplicationInstanceTaskLogsRequestPrivate::DescribeReplicationInstanceTaskLogsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeReplicationInstanceTaskLogsRequest * const q)

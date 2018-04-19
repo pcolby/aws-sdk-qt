@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetCampaignVersionResponse
- *
  * \brief The GetCampaignVersionResponse class provides an interace for Pinpoint GetCampaignVersion responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getCampaignVersion
  */
 
 /*!
- * @brief  Constructs a new GetCampaignVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCampaignVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCampaignVersionResponse::GetCampaignVersionResponse(
         const GetCampaignVersionRequest &request,
@@ -55,6 +50,9 @@ GetCampaignVersionResponse::GetCampaignVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCampaignVersionRequest * GetCampaignVersionResponse::request() const
 {
     Q_D(const GetCampaignVersionResponse);
@@ -62,9 +60,8 @@ const GetCampaignVersionRequest * GetCampaignVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetCampaignVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetCampaignVersion \a response.
  */
 void GetCampaignVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetCampaignVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetCampaignVersionResponsePrivate
+ * \brief The GetCampaignVersionResponsePrivate class provides private implementation for GetCampaignVersionResponse.
  * \internal
  *
- * \class GetCampaignVersionResponsePrivate
- *
- * \brief Private implementation for GetCampaignVersionResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCampaignVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCampaignVersionResponse instance.
+ * Constructs a GetCampaignVersionResponsePrivate object with public implementation \a q.
  */
 GetCampaignVersionResponsePrivate::GetCampaignVersionResponsePrivate(
     GetCampaignVersionResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetCampaignVersionResponsePrivate::GetCampaignVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetCampaignVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetCampaignVersion response element from \a xml.
  */
 void GetCampaignVersionResponsePrivate::parseGetCampaignVersionResponse(QXmlStreamReader &xml)
 {

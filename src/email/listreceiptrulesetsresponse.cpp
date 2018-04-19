@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListReceiptRuleSetsResponse
- *
  * \brief The ListReceiptRuleSetsResponse class provides an interace for SES ListReceiptRuleSets responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListReceiptRuleSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListReceiptRuleSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListReceiptRuleSetsResponse::ListReceiptRuleSetsResponse(
         const ListReceiptRuleSetsRequest &request,
@@ -66,6 +61,9 @@ ListReceiptRuleSetsResponse::ListReceiptRuleSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListReceiptRuleSetsRequest * ListReceiptRuleSetsResponse::request() const
 {
     Q_D(const ListReceiptRuleSetsResponse);
@@ -73,9 +71,8 @@ const ListReceiptRuleSetsRequest * ListReceiptRuleSetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES ListReceiptRuleSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES ListReceiptRuleSets \a response.
  */
 void ListReceiptRuleSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListReceiptRuleSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::ListReceiptRuleSetsResponsePrivate
+ * \brief The ListReceiptRuleSetsResponsePrivate class provides private implementation for ListReceiptRuleSetsResponse.
  * \internal
  *
- * \class ListReceiptRuleSetsResponsePrivate
- *
- * \brief Private implementation for ListReceiptRuleSetsResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListReceiptRuleSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListReceiptRuleSetsResponse instance.
+ * Constructs a ListReceiptRuleSetsResponsePrivate object with public implementation \a q.
  */
 ListReceiptRuleSetsResponsePrivate::ListReceiptRuleSetsResponsePrivate(
     ListReceiptRuleSetsResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ ListReceiptRuleSetsResponsePrivate::ListReceiptRuleSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES ListReceiptRuleSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES ListReceiptRuleSets response element from \a xml.
  */
 void ListReceiptRuleSetsResponsePrivate::parseListReceiptRuleSetsResponse(QXmlStreamReader &xml)
 {

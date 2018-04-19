@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * ListAvailableZonesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListAvailableZonesRequestPrivate object for CloudHSM \a action with,
- * public implementation \a q.
+ * Constructs a ListAvailableZonesRequestPrivate object for CloudHSM \a action,
+ * with public implementation \a q.
  */
 ListAvailableZonesRequestPrivate::ListAvailableZonesRequestPrivate(
     const CloudHSMRequest::Action action, ListAvailableZonesRequest * const q)

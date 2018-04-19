@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateNotebookInstanceLifecycleConfigResponse : public SageMa
 public:
     CreateNotebookInstanceLifecycleConfigResponse(const CreateNotebookInstanceLifecycleConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateNotebookInstanceLifecycleConfigRequest * request() const;
+    virtual const CreateNotebookInstanceLifecycleConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateNotebookInstanceLifecycleConfigResponse)

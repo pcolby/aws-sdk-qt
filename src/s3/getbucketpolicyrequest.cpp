@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketPolicyRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetBucketPolicyRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketPolicyRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketPolicyRequestPrivate::GetBucketPolicyRequestPrivate(
     const S3Request::Action action, GetBucketPolicyRequest * const q)

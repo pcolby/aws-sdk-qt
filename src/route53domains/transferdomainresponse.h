@@ -34,10 +34,10 @@ class QTAWS_EXPORT TransferDomainResponse : public Route53DomainsResponse {
 public:
     TransferDomainResponse(const TransferDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TransferDomainRequest * request() const;
+    virtual const TransferDomainRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TransferDomainResponse)

@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::UpdateTypeResponse
- *
  * \brief The UpdateTypeResponse class provides an interace for AppSync UpdateType responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new UpdateTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTypeResponse::UpdateTypeResponse(
         const UpdateTypeRequest &request,
@@ -56,6 +51,9 @@ UpdateTypeResponse::UpdateTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTypeRequest * UpdateTypeResponse::request() const
 {
     Q_D(const UpdateTypeResponse);
@@ -63,9 +61,8 @@ const UpdateTypeRequest * UpdateTypeResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync UpdateType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync UpdateType \a response.
  */
 void UpdateTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void UpdateTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::UpdateTypeResponsePrivate
+ * \brief The UpdateTypeResponsePrivate class provides private implementation for UpdateTypeResponse.
  * \internal
  *
- * \class UpdateTypeResponsePrivate
- *
- * \brief Private implementation for UpdateTypeResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTypeResponse instance.
+ * Constructs a UpdateTypeResponsePrivate object with public implementation \a q.
  */
 UpdateTypeResponsePrivate::UpdateTypeResponsePrivate(
     UpdateTypeResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ UpdateTypeResponsePrivate::UpdateTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync UpdateTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync UpdateType response element from \a xml.
  */
 void UpdateTypeResponsePrivate::parseUpdateTypeResponse(QXmlStreamReader &xml)
 {

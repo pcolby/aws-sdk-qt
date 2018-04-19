@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * CreateNFSFileShareRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateNFSFileShareRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a CreateNFSFileShareRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 CreateNFSFileShareRequestPrivate::CreateNFSFileShareRequestPrivate(
     const StorageGatewayRequest::Action action, CreateNFSFileShareRequest * const q)

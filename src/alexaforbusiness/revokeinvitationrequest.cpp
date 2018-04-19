@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * RevokeInvitationRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a RevokeInvitationRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a RevokeInvitationRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 RevokeInvitationRequestPrivate::RevokeInvitationRequestPrivate(
     const AlexaForBusinessRequest::Action action, RevokeInvitationRequest * const q)

@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::ListChannelsResponse
- *
  * \brief The ListChannelsResponse class provides an interace for MediaLive ListChannels responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::listChannels
  */
 
 /*!
- * @brief  Constructs a new ListChannelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListChannelsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListChannelsResponse::ListChannelsResponse(
         const ListChannelsRequest &request,
@@ -55,6 +50,9 @@ ListChannelsResponse::ListChannelsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListChannelsRequest * ListChannelsResponse::request() const
 {
     Q_D(const ListChannelsResponse);
@@ -62,9 +60,8 @@ const ListChannelsRequest * ListChannelsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaLive ListChannels response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive ListChannels \a response.
  */
 void ListChannelsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListChannelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::ListChannelsResponsePrivate
+ * \brief The ListChannelsResponsePrivate class provides private implementation for ListChannelsResponse.
  * \internal
  *
- * \class ListChannelsResponsePrivate
- *
- * \brief Private implementation for ListChannelsResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListChannelsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListChannelsResponse instance.
+ * Constructs a ListChannelsResponsePrivate object with public implementation \a q.
  */
 ListChannelsResponsePrivate::ListChannelsResponsePrivate(
     ListChannelsResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ ListChannelsResponsePrivate::ListChannelsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive ListChannelsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive ListChannels response element from \a xml.
  */
 void ListChannelsResponsePrivate::parseListChannelsResponse(QXmlStreamReader &xml)
 {

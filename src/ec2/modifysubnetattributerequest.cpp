@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifySubnetAttributeRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ModifySubnetAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifySubnetAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifySubnetAttributeRequestPrivate::ModifySubnetAttributeRequestPrivate(
     const EC2Request::Action action, ModifySubnetAttributeRequest * const q)

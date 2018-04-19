@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DescribePendingAggregationRequestsRequest::re
  */
 
 /*!
- *
- * Constructs a DescribePendingAggregationRequestsRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DescribePendingAggregationRequestsRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DescribePendingAggregationRequestsRequestPrivate::DescribePendingAggregationRequestsRequestPrivate(
     const ConfigServiceRequest::Action action, DescribePendingAggregationRequestsRequest * const q)

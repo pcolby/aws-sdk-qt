@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::GetCelebrityRecognitionResponse
- *
  * \brief The GetCelebrityRecognitionResponse class provides an interace for Rekognition GetCelebrityRecognition responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new GetCelebrityRecognitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCelebrityRecognitionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCelebrityRecognitionResponse::GetCelebrityRecognitionResponse(
         const GetCelebrityRecognitionRequest &request,
@@ -56,6 +51,9 @@ GetCelebrityRecognitionResponse::GetCelebrityRecognitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCelebrityRecognitionRequest * GetCelebrityRecognitionResponse::request() const
 {
     Q_D(const GetCelebrityRecognitionResponse);
@@ -63,9 +61,8 @@ const GetCelebrityRecognitionRequest * GetCelebrityRecognitionResponse::request(
 }
 
 /*!
- * @brief  Parse a Rekognition GetCelebrityRecognition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition GetCelebrityRecognition \a response.
  */
 void GetCelebrityRecognitionResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetCelebrityRecognitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::GetCelebrityRecognitionResponsePrivate
+ * \brief The GetCelebrityRecognitionResponsePrivate class provides private implementation for GetCelebrityRecognitionResponse.
  * \internal
  *
- * \class GetCelebrityRecognitionResponsePrivate
- *
- * \brief Private implementation for GetCelebrityRecognitionResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCelebrityRecognitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCelebrityRecognitionResponse instance.
+ * Constructs a GetCelebrityRecognitionResponsePrivate object with public implementation \a q.
  */
 GetCelebrityRecognitionResponsePrivate::GetCelebrityRecognitionResponsePrivate(
     GetCelebrityRecognitionResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ GetCelebrityRecognitionResponsePrivate::GetCelebrityRecognitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition GetCelebrityRecognitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition GetCelebrityRecognition response element from \a xml.
  */
 void GetCelebrityRecognitionResponsePrivate::parseGetCelebrityRecognitionResponse(QXmlStreamReader &xml)
 {

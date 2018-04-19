@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StopTriggerRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a StopTriggerRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a StopTriggerRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 StopTriggerRequestPrivate::StopTriggerRequestPrivate(
     const GlueRequest::Action action, StopTriggerRequest * const q)

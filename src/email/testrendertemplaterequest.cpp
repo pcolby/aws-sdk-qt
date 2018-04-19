@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * TestRenderTemplateRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a TestRenderTemplateRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a TestRenderTemplateRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 TestRenderTemplateRequestPrivate::TestRenderTemplateRequestPrivate(
     const SESRequest::Action action, TestRenderTemplateRequest * const q)

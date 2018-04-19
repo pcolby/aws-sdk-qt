@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DownloadDBLogFilePortionResponse
- *
  * \brief The DownloadDBLogFilePortionResponse class provides an interace for RDS DownloadDBLogFilePortion responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DownloadDBLogFilePortionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DownloadDBLogFilePortionResponse object for \a reply to \a request, with parent \a parent.
  */
 DownloadDBLogFilePortionResponse::DownloadDBLogFilePortionResponse(
         const DownloadDBLogFilePortionRequest &request,
@@ -119,6 +114,9 @@ DownloadDBLogFilePortionResponse::DownloadDBLogFilePortionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DownloadDBLogFilePortionRequest * DownloadDBLogFilePortionResponse::request() const
 {
     Q_D(const DownloadDBLogFilePortionResponse);
@@ -126,9 +124,8 @@ const DownloadDBLogFilePortionRequest * DownloadDBLogFilePortionResponse::reques
 }
 
 /*!
- * @brief  Parse a RDS DownloadDBLogFilePortion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DownloadDBLogFilePortion \a response.
  */
 void DownloadDBLogFilePortionResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DownloadDBLogFilePortionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DownloadDBLogFilePortionResponsePrivate
+ * \brief The DownloadDBLogFilePortionResponsePrivate class provides private implementation for DownloadDBLogFilePortionResponse.
  * \internal
  *
- * \class DownloadDBLogFilePortionResponsePrivate
- *
- * \brief Private implementation for DownloadDBLogFilePortionResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DownloadDBLogFilePortionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DownloadDBLogFilePortionResponse instance.
+ * Constructs a DownloadDBLogFilePortionResponsePrivate object with public implementation \a q.
  */
 DownloadDBLogFilePortionResponsePrivate::DownloadDBLogFilePortionResponsePrivate(
     DownloadDBLogFilePortionResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DownloadDBLogFilePortionResponsePrivate::DownloadDBLogFilePortionResponsePrivate
 }
 
 /*!
- * @brief  Parse an RDS DownloadDBLogFilePortionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DownloadDBLogFilePortion response element from \a xml.
  */
 void DownloadDBLogFilePortionResponsePrivate::parseDownloadDBLogFilePortionResponse(QXmlStreamReader &xml)
 {

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * EnterStandbyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a EnterStandbyRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a EnterStandbyRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 EnterStandbyRequestPrivate::EnterStandbyRequestPrivate(
     const AutoScalingRequest::Action action, EnterStandbyRequest * const q)

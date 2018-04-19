@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdateDocumentDefaultVersionResponse
- *
  * \brief The UpdateDocumentDefaultVersionResponse class provides an interace for SSM UpdateDocumentDefaultVersion responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdateDocumentDefaultVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDocumentDefaultVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDocumentDefaultVersionResponse::UpdateDocumentDefaultVersionResponse(
         const UpdateDocumentDefaultVersionRequest &request,
@@ -79,6 +74,9 @@ UpdateDocumentDefaultVersionResponse::UpdateDocumentDefaultVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDocumentDefaultVersionRequest * UpdateDocumentDefaultVersionResponse::request() const
 {
     Q_D(const UpdateDocumentDefaultVersionResponse);
@@ -86,9 +84,8 @@ const UpdateDocumentDefaultVersionRequest * UpdateDocumentDefaultVersionResponse
 }
 
 /*!
- * @brief  Parse a SSM UpdateDocumentDefaultVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM UpdateDocumentDefaultVersion \a response.
  */
 void UpdateDocumentDefaultVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void UpdateDocumentDefaultVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::UpdateDocumentDefaultVersionResponsePrivate
+ * \brief The UpdateDocumentDefaultVersionResponsePrivate class provides private implementation for UpdateDocumentDefaultVersionResponse.
  * \internal
  *
- * \class UpdateDocumentDefaultVersionResponsePrivate
- *
- * \brief Private implementation for UpdateDocumentDefaultVersionResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDocumentDefaultVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDocumentDefaultVersionResponse instance.
+ * Constructs a UpdateDocumentDefaultVersionResponsePrivate object with public implementation \a q.
  */
 UpdateDocumentDefaultVersionResponsePrivate::UpdateDocumentDefaultVersionResponsePrivate(
     UpdateDocumentDefaultVersionResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ UpdateDocumentDefaultVersionResponsePrivate::UpdateDocumentDefaultVersionRespons
 }
 
 /*!
- * @brief  Parse an SSM UpdateDocumentDefaultVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM UpdateDocumentDefaultVersion response element from \a xml.
  */
 void UpdateDocumentDefaultVersionResponsePrivate::parseUpdateDocumentDefaultVersionResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeHsmClientCertificatesResponse
- *
  * \brief The DescribeHsmClientCertificatesResponse class provides an interace for Redshift DescribeHsmClientCertificates responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeHsmClientCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeHsmClientCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeHsmClientCertificatesResponse::DescribeHsmClientCertificatesResponse(
         const DescribeHsmClientCertificatesRequest &request,
@@ -85,6 +80,9 @@ DescribeHsmClientCertificatesResponse::DescribeHsmClientCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeHsmClientCertificatesRequest * DescribeHsmClientCertificatesResponse::request() const
 {
     Q_D(const DescribeHsmClientCertificatesResponse);
@@ -92,9 +90,8 @@ const DescribeHsmClientCertificatesRequest * DescribeHsmClientCertificatesRespon
 }
 
 /*!
- * @brief  Parse a Redshift DescribeHsmClientCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeHsmClientCertificates \a response.
  */
 void DescribeHsmClientCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeHsmClientCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeHsmClientCertificatesResponsePrivate
+ * \brief The DescribeHsmClientCertificatesResponsePrivate class provides private implementation for DescribeHsmClientCertificatesResponse.
  * \internal
  *
- * \class DescribeHsmClientCertificatesResponsePrivate
- *
- * \brief Private implementation for DescribeHsmClientCertificatesResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHsmClientCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeHsmClientCertificatesResponse instance.
+ * Constructs a DescribeHsmClientCertificatesResponsePrivate object with public implementation \a q.
  */
 DescribeHsmClientCertificatesResponsePrivate::DescribeHsmClientCertificatesResponsePrivate(
     DescribeHsmClientCertificatesResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeHsmClientCertificatesResponsePrivate::DescribeHsmClientCertificatesRespo
 }
 
 /*!
- * @brief  Parse an Redshift DescribeHsmClientCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeHsmClientCertificates response element from \a xml.
  */
 void DescribeHsmClientCertificatesResponsePrivate::parseDescribeHsmClientCertificatesResponse(QXmlStreamReader &xml)
 {

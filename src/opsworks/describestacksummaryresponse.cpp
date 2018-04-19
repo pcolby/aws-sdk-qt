@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeStackSummaryResponse
- *
  * \brief The DescribeStackSummaryResponse class provides an interace for OpsWorks DescribeStackSummary responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeStackSummaryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStackSummaryResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStackSummaryResponse::DescribeStackSummaryResponse(
         const DescribeStackSummaryRequest &request,
@@ -161,6 +156,9 @@ DescribeStackSummaryResponse::DescribeStackSummaryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStackSummaryRequest * DescribeStackSummaryResponse::request() const
 {
     Q_D(const DescribeStackSummaryResponse);
@@ -168,9 +166,8 @@ const DescribeStackSummaryRequest * DescribeStackSummaryResponse::request() cons
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeStackSummary response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeStackSummary \a response.
  */
 void DescribeStackSummaryResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeStackSummaryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeStackSummaryResponsePrivate
+ * \brief The DescribeStackSummaryResponsePrivate class provides private implementation for DescribeStackSummaryResponse.
  * \internal
  *
- * \class DescribeStackSummaryResponsePrivate
- *
- * \brief Private implementation for DescribeStackSummaryResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStackSummaryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStackSummaryResponse instance.
+ * Constructs a DescribeStackSummaryResponsePrivate object with public implementation \a q.
  */
 DescribeStackSummaryResponsePrivate::DescribeStackSummaryResponsePrivate(
     DescribeStackSummaryResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeStackSummaryResponsePrivate::DescribeStackSummaryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeStackSummaryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeStackSummary response element from \a xml.
  */
 void DescribeStackSummaryResponsePrivate::parseDescribeStackSummaryResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::DisassociateTeamMemberResponse
- *
  * \brief The DisassociateTeamMemberResponse class provides an interace for CodeStar DisassociateTeamMember responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new DisassociateTeamMemberResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateTeamMemberResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateTeamMemberResponse::DisassociateTeamMemberResponse(
         const DisassociateTeamMemberRequest &request,
@@ -143,6 +138,9 @@ DisassociateTeamMemberResponse::DisassociateTeamMemberResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateTeamMemberRequest * DisassociateTeamMemberResponse::request() const
 {
     Q_D(const DisassociateTeamMemberResponse);
@@ -150,9 +148,8 @@ const DisassociateTeamMemberRequest * DisassociateTeamMemberResponse::request() 
 }
 
 /*!
- * @brief  Parse a CodeStar DisassociateTeamMember response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar DisassociateTeamMember \a response.
  */
 void DisassociateTeamMemberResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void DisassociateTeamMemberResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::DisassociateTeamMemberResponsePrivate
+ * \brief The DisassociateTeamMemberResponsePrivate class provides private implementation for DisassociateTeamMemberResponse.
  * \internal
  *
- * \class DisassociateTeamMemberResponsePrivate
- *
- * \brief Private implementation for DisassociateTeamMemberResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateTeamMemberResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateTeamMemberResponse instance.
+ * Constructs a DisassociateTeamMemberResponsePrivate object with public implementation \a q.
  */
 DisassociateTeamMemberResponsePrivate::DisassociateTeamMemberResponsePrivate(
     DisassociateTeamMemberResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ DisassociateTeamMemberResponsePrivate::DisassociateTeamMemberResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar DisassociateTeamMemberResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar DisassociateTeamMember response element from \a xml.
  */
 void DisassociateTeamMemberResponsePrivate::parseDisassociateTeamMemberResponse(QXmlStreamReader &xml)
 {

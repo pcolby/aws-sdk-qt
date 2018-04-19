@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeClusterResponse : public SnowballResponse {
 public:
     DescribeClusterResponse(const DescribeClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeClusterRequest * request() const;
+    virtual const DescribeClusterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeClusterResponse)

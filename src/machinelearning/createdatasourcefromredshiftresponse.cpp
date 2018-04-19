@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::CreateDataSourceFromRedshiftResponse
- *
  * \brief The CreateDataSourceFromRedshiftResponse class provides an interace for MachineLearning CreateDataSourceFromRedshift responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::createDataSourceFromRedshift
  */
 
 /*!
- * @brief  Constructs a new CreateDataSourceFromRedshiftResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDataSourceFromRedshiftResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDataSourceFromRedshiftResponse::CreateDataSourceFromRedshiftResponse(
         const CreateDataSourceFromRedshiftRequest &request,
@@ -55,6 +50,9 @@ CreateDataSourceFromRedshiftResponse::CreateDataSourceFromRedshiftResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDataSourceFromRedshiftRequest * CreateDataSourceFromRedshiftResponse::request() const
 {
     Q_D(const CreateDataSourceFromRedshiftResponse);
@@ -62,9 +60,8 @@ const CreateDataSourceFromRedshiftRequest * CreateDataSourceFromRedshiftResponse
 }
 
 /*!
- * @brief  Parse a MachineLearning CreateDataSourceFromRedshift response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning CreateDataSourceFromRedshift \a response.
  */
 void CreateDataSourceFromRedshiftResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateDataSourceFromRedshiftResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::CreateDataSourceFromRedshiftResponsePrivate
+ * \brief The CreateDataSourceFromRedshiftResponsePrivate class provides private implementation for CreateDataSourceFromRedshiftResponse.
  * \internal
  *
- * \class CreateDataSourceFromRedshiftResponsePrivate
- *
- * \brief Private implementation for CreateDataSourceFromRedshiftResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDataSourceFromRedshiftResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDataSourceFromRedshiftResponse instance.
+ * Constructs a CreateDataSourceFromRedshiftResponsePrivate object with public implementation \a q.
  */
 CreateDataSourceFromRedshiftResponsePrivate::CreateDataSourceFromRedshiftResponsePrivate(
     CreateDataSourceFromRedshiftResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateDataSourceFromRedshiftResponsePrivate::CreateDataSourceFromRedshiftRespons
 }
 
 /*!
- * @brief  Parse an MachineLearning CreateDataSourceFromRedshiftResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning CreateDataSourceFromRedshift response element from \a xml.
  */
 void CreateDataSourceFromRedshiftResponsePrivate::parseCreateDataSourceFromRedshiftResponse(QXmlStreamReader &xml)
 {

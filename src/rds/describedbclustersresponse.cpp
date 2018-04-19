@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBClustersResponse
- *
  * \brief The DescribeDBClustersResponse class provides an interace for RDS DescribeDBClusters responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBClustersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDBClustersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDBClustersResponse::DescribeDBClustersResponse(
         const DescribeDBClustersRequest &request,
@@ -119,6 +114,9 @@ DescribeDBClustersResponse::DescribeDBClustersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDBClustersRequest * DescribeDBClustersResponse::request() const
 {
     Q_D(const DescribeDBClustersResponse);
@@ -126,9 +124,8 @@ const DescribeDBClustersRequest * DescribeDBClustersResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS DescribeDBClusters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeDBClusters \a response.
  */
 void DescribeDBClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeDBClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeDBClustersResponsePrivate
+ * \brief The DescribeDBClustersResponsePrivate class provides private implementation for DescribeDBClustersResponse.
  * \internal
  *
- * \class DescribeDBClustersResponsePrivate
- *
- * \brief Private implementation for DescribeDBClustersResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBClustersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDBClustersResponse instance.
+ * Constructs a DescribeDBClustersResponsePrivate object with public implementation \a q.
  */
 DescribeDBClustersResponsePrivate::DescribeDBClustersResponsePrivate(
     DescribeDBClustersResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeDBClustersResponsePrivate::DescribeDBClustersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DescribeDBClustersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeDBClusters response element from \a xml.
  */
 void DescribeDBClustersResponsePrivate::parseDescribeDBClustersResponse(QXmlStreamReader &xml)
 {

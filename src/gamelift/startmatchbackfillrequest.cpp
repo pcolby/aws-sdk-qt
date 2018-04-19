@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * StartMatchBackfillRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a StartMatchBackfillRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a StartMatchBackfillRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 StartMatchBackfillRequestPrivate::StartMatchBackfillRequestPrivate(
     const GameLiftRequest::Action action, StartMatchBackfillRequest * const q)

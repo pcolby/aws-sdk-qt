@@ -29,10 +29,9 @@ namespace MediaStoreData {
 
 /*!
  * \class QtAws::MediaStoreData::GetObjectResponse
- *
  * \brief The GetObjectResponse class provides an interace for MediaStoreData GetObject responses.
  *
- * \ingroup MediaStoreData
+ * \inmodule QtAwsMediaStoreData
  *
  *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
  *  fundamental entities that are stored in AWS Elemental
@@ -41,11 +40,7 @@ namespace MediaStoreData {
  */
 
 /*!
- * @brief  Constructs a new GetObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 GetObjectResponse::GetObjectResponse(
         const GetObjectRequest &request,
@@ -57,6 +52,9 @@ GetObjectResponse::GetObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetObjectRequest * GetObjectResponse::request() const
 {
     Q_D(const GetObjectResponse);
@@ -64,9 +62,8 @@ const GetObjectRequest * GetObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaStoreData GetObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaStoreData GetObject \a response.
  */
 void GetObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaStoreData::GetObjectResponsePrivate
+ * \brief The GetObjectResponsePrivate class provides private implementation for GetObjectResponse.
  * \internal
  *
- * \class GetObjectResponsePrivate
- *
- * \brief Private implementation for GetObjectResponse.
+ * \inmodule QtAwsMediaStoreData
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetObjectResponse instance.
+ * Constructs a GetObjectResponsePrivate object with public implementation \a q.
  */
 GetObjectResponsePrivate::GetObjectResponsePrivate(
     GetObjectResponse * const q) : MediaStoreDataResponsePrivate(q)
@@ -97,9 +90,7 @@ GetObjectResponsePrivate::GetObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaStoreData GetObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaStoreData GetObject response element from \a xml.
  */
 void GetObjectResponsePrivate::parseGetObjectResponse(QXmlStreamReader &xml)
 {

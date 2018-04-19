@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListVolumeInitiatorsResponse
- *
  * \brief The ListVolumeInitiatorsResponse class provides an interace for StorageGateway ListVolumeInitiators responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListVolumeInitiatorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListVolumeInitiatorsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListVolumeInitiatorsResponse::ListVolumeInitiatorsResponse(
         const ListVolumeInitiatorsRequest &request,
@@ -124,6 +119,9 @@ ListVolumeInitiatorsResponse::ListVolumeInitiatorsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListVolumeInitiatorsRequest * ListVolumeInitiatorsResponse::request() const
 {
     Q_D(const ListVolumeInitiatorsResponse);
@@ -131,9 +129,8 @@ const ListVolumeInitiatorsRequest * ListVolumeInitiatorsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a StorageGateway ListVolumeInitiators response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway ListVolumeInitiators \a response.
  */
 void ListVolumeInitiatorsResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void ListVolumeInitiatorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::ListVolumeInitiatorsResponsePrivate
+ * \brief The ListVolumeInitiatorsResponsePrivate class provides private implementation for ListVolumeInitiatorsResponse.
  * \internal
  *
- * \class ListVolumeInitiatorsResponsePrivate
- *
- * \brief Private implementation for ListVolumeInitiatorsResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVolumeInitiatorsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListVolumeInitiatorsResponse instance.
+ * Constructs a ListVolumeInitiatorsResponsePrivate object with public implementation \a q.
  */
 ListVolumeInitiatorsResponsePrivate::ListVolumeInitiatorsResponsePrivate(
     ListVolumeInitiatorsResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ ListVolumeInitiatorsResponsePrivate::ListVolumeInitiatorsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway ListVolumeInitiatorsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway ListVolumeInitiators response element from \a xml.
  */
 void ListVolumeInitiatorsResponsePrivate::parseListVolumeInitiatorsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::UpdateDistributionResponse
- *
  * \brief The UpdateDistributionResponse class provides an interace for CloudFront UpdateDistribution responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new UpdateDistributionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDistributionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDistributionResponse::UpdateDistributionResponse(
         const UpdateDistributionRequest &request,
@@ -60,6 +55,9 @@ UpdateDistributionResponse::UpdateDistributionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDistributionRequest * UpdateDistributionResponse::request() const
 {
     Q_D(const UpdateDistributionResponse);
@@ -67,9 +65,8 @@ const UpdateDistributionRequest * UpdateDistributionResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront UpdateDistribution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront UpdateDistribution \a response.
  */
 void UpdateDistributionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateDistributionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::UpdateDistributionResponsePrivate
+ * \brief The UpdateDistributionResponsePrivate class provides private implementation for UpdateDistributionResponse.
  * \internal
  *
- * \class UpdateDistributionResponsePrivate
- *
- * \brief Private implementation for UpdateDistributionResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDistributionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDistributionResponse instance.
+ * Constructs a UpdateDistributionResponsePrivate object with public implementation \a q.
  */
 UpdateDistributionResponsePrivate::UpdateDistributionResponsePrivate(
     UpdateDistributionResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateDistributionResponsePrivate::UpdateDistributionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront UpdateDistributionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront UpdateDistribution response element from \a xml.
  */
 void UpdateDistributionResponsePrivate::parseUpdateDistributionResponse(QXmlStreamReader &xml)
 {

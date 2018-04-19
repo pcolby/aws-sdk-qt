@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DescribeResourcePoliciesResponse
- *
  * \brief The DescribeResourcePoliciesResponse class provides an interace for CloudWatchLogs DescribeResourcePolicies responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DescribeResourcePoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeResourcePoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeResourcePoliciesResponse::DescribeResourcePoliciesResponse(
         const DescribeResourcePoliciesRequest &request,
@@ -84,6 +79,9 @@ DescribeResourcePoliciesResponse::DescribeResourcePoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeResourcePoliciesRequest * DescribeResourcePoliciesResponse::request() const
 {
     Q_D(const DescribeResourcePoliciesResponse);
@@ -91,9 +89,8 @@ const DescribeResourcePoliciesRequest * DescribeResourcePoliciesResponse::reques
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DescribeResourcePolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DescribeResourcePolicies \a response.
  */
 void DescribeResourcePoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeResourcePoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DescribeResourcePoliciesResponsePrivate
+ * \brief The DescribeResourcePoliciesResponsePrivate class provides private implementation for DescribeResourcePoliciesResponse.
  * \internal
  *
- * \class DescribeResourcePoliciesResponsePrivate
- *
- * \brief Private implementation for DescribeResourcePoliciesResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResourcePoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeResourcePoliciesResponse instance.
+ * Constructs a DescribeResourcePoliciesResponsePrivate object with public implementation \a q.
  */
 DescribeResourcePoliciesResponsePrivate::DescribeResourcePoliciesResponsePrivate(
     DescribeResourcePoliciesResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeResourcePoliciesResponsePrivate::DescribeResourcePoliciesResponsePrivate
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DescribeResourcePoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DescribeResourcePolicies response element from \a xml.
  */
 void DescribeResourcePoliciesResponsePrivate::parseDescribeResourcePoliciesResponse(QXmlStreamReader &xml)
 {

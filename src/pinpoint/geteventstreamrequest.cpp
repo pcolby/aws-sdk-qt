@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetEventStreamRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetEventStreamRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetEventStreamRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetEventStreamRequestPrivate::GetEventStreamRequestPrivate(
     const PinpointRequest::Action action, GetEventStreamRequest * const q)

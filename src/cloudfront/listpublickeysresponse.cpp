@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListPublicKeysResponse
- *
  * \brief The ListPublicKeysResponse class provides an interace for CloudFront ListPublicKeys responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListPublicKeysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPublicKeysResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPublicKeysResponse::ListPublicKeysResponse(
         const ListPublicKeysRequest &request,
@@ -60,6 +55,9 @@ ListPublicKeysResponse::ListPublicKeysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPublicKeysRequest * ListPublicKeysResponse::request() const
 {
     Q_D(const ListPublicKeysResponse);
@@ -67,9 +65,8 @@ const ListPublicKeysRequest * ListPublicKeysResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront ListPublicKeys response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront ListPublicKeys \a response.
  */
 void ListPublicKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListPublicKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::ListPublicKeysResponsePrivate
+ * \brief The ListPublicKeysResponsePrivate class provides private implementation for ListPublicKeysResponse.
  * \internal
  *
- * \class ListPublicKeysResponsePrivate
- *
- * \brief Private implementation for ListPublicKeysResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPublicKeysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPublicKeysResponse instance.
+ * Constructs a ListPublicKeysResponsePrivate object with public implementation \a q.
  */
 ListPublicKeysResponsePrivate::ListPublicKeysResponsePrivate(
     ListPublicKeysResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ ListPublicKeysResponsePrivate::ListPublicKeysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront ListPublicKeysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront ListPublicKeys response element from \a xml.
  */
 void ListPublicKeysResponsePrivate::parseListPublicKeysResponse(QXmlStreamReader &xml)
 {

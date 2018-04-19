@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * SubmitContainerStateChangeRequest::response(Q
  */
 
 /*!
- *
- * Constructs a SubmitContainerStateChangeRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a SubmitContainerStateChangeRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 SubmitContainerStateChangeRequestPrivate::SubmitContainerStateChangeRequestPrivate(
     const ECSRequest::Action action, SubmitContainerStateChangeRequest * const q)

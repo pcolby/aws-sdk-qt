@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ResetCacheParameterGroupRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ResetCacheParameterGroupRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a ResetCacheParameterGroupRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 ResetCacheParameterGroupRequestPrivate::ResetCacheParameterGroupRequestPrivate(
     const ElastiCacheRequest::Action action, ResetCacheParameterGroupRequest * const q)

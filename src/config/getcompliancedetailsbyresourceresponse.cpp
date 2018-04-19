@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetComplianceDetailsByResourceResponse
- *
  * \brief The GetComplianceDetailsByResourceResponse class provides an interace for ConfigService GetComplianceDetailsByResource responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetComplianceDetailsByResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetComplianceDetailsByResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetComplianceDetailsByResourceResponse::GetComplianceDetailsByResourceResponse(
         const GetComplianceDetailsByResourceRequest &request,
@@ -78,6 +73,9 @@ GetComplianceDetailsByResourceResponse::GetComplianceDetailsByResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetComplianceDetailsByResourceRequest * GetComplianceDetailsByResourceResponse::request() const
 {
     Q_D(const GetComplianceDetailsByResourceResponse);
@@ -85,9 +83,8 @@ const GetComplianceDetailsByResourceRequest * GetComplianceDetailsByResourceResp
 }
 
 /*!
- * @brief  Parse a ConfigService GetComplianceDetailsByResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService GetComplianceDetailsByResource \a response.
  */
 void GetComplianceDetailsByResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void GetComplianceDetailsByResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::GetComplianceDetailsByResourceResponsePrivate
+ * \brief The GetComplianceDetailsByResourceResponsePrivate class provides private implementation for GetComplianceDetailsByResourceResponse.
  * \internal
  *
- * \class GetComplianceDetailsByResourceResponsePrivate
- *
- * \brief Private implementation for GetComplianceDetailsByResourceResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetComplianceDetailsByResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetComplianceDetailsByResourceResponse instance.
+ * Constructs a GetComplianceDetailsByResourceResponsePrivate object with public implementation \a q.
  */
 GetComplianceDetailsByResourceResponsePrivate::GetComplianceDetailsByResourceResponsePrivate(
     GetComplianceDetailsByResourceResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ GetComplianceDetailsByResourceResponsePrivate::GetComplianceDetailsByResourceRes
 }
 
 /*!
- * @brief  Parse an ConfigService GetComplianceDetailsByResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService GetComplianceDetailsByResource response element from \a xml.
  */
 void GetComplianceDetailsByResourceResponsePrivate::parseGetComplianceDetailsByResourceResponse(QXmlStreamReader &xml)
 {

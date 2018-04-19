@@ -28,16 +28,13 @@ namespace IoTJobsDataPlane {
 
 /*!
  * \class QtAws::IoTJobsDataPlane::IoTJobsDataPlaneResponse
- *
  * \brief The IoTJobsDataPlaneResponse class provides an interface for IoTJobsDataPlane responses.
  *
- * \ingroup IoTJobsDataPlane
+ * \inmodule QtAwsIoTJobsDataPlane
  */
 
 /*!
- * @brief  Constructs a new IoTJobsDataPlaneResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a IoTJobsDataPlaneResponse object with parent \a parent.
  */
 IoTJobsDataPlaneResponse::IoTJobsDataPlaneResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new IoTJobsDataPlaneResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ IoTJobsDataPlaneResponse::IoTJobsDataPlaneResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IoTJobsDataPlaneResponse object.
- *
+ * \internal
+ * Constructs a IoTJobsDataPlaneResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoTJobsDataPlaneResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 IoTJobsDataPlaneResponse::IoTJobsDataPlaneResponse(IoTJobsDataPlaneResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ IoTJobsDataPlaneResponse::IoTJobsDataPlaneResponse(IoTJobsDataPlaneResponsePriva
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void IoTJobsDataPlaneResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void IoTJobsDataPlaneResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::IoTJobsDataPlane::IoTJobsDataPlaneResponsePrivate
+ * \brief The IoTJobsDataPlaneResponsePrivate class provides private implementation for IoTJobsDataPlaneResponse.
+ * \internal
  *
- * @class  IoTJobsDataPlaneResponsePrivate
- *
- * @brief  Private implementation for IoTJobsDataPlaneResponse.
+ * \inmodule QtAwsIoTJobsDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IoTJobsDataPlaneResponsePrivate object.
- *
- * @param  q  Pointer to this object's public IoTJobsDataPlaneResponse instance.
+ * Constructs a IoTJobsDataPlaneResponsePrivate object with public implementation \a q.
  */
 IoTJobsDataPlaneResponsePrivate::IoTJobsDataPlaneResponsePrivate(
     IoTJobsDataPlaneResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

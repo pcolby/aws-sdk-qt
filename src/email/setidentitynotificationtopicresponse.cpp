@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SetIdentityNotificationTopicResponse
- *
  * \brief The SetIdentityNotificationTopicResponse class provides an interace for SES SetIdentityNotificationTopic responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SetIdentityNotificationTopicResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetIdentityNotificationTopicResponse object for \a reply to \a request, with parent \a parent.
  */
 SetIdentityNotificationTopicResponse::SetIdentityNotificationTopicResponse(
         const SetIdentityNotificationTopicRequest &request,
@@ -66,6 +61,9 @@ SetIdentityNotificationTopicResponse::SetIdentityNotificationTopicResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetIdentityNotificationTopicRequest * SetIdentityNotificationTopicResponse::request() const
 {
     Q_D(const SetIdentityNotificationTopicResponse);
@@ -73,9 +71,8 @@ const SetIdentityNotificationTopicRequest * SetIdentityNotificationTopicResponse
 }
 
 /*!
- * @brief  Parse a SES SetIdentityNotificationTopic response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SetIdentityNotificationTopic \a response.
  */
 void SetIdentityNotificationTopicResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SetIdentityNotificationTopicResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::SetIdentityNotificationTopicResponsePrivate
+ * \brief The SetIdentityNotificationTopicResponsePrivate class provides private implementation for SetIdentityNotificationTopicResponse.
  * \internal
  *
- * \class SetIdentityNotificationTopicResponsePrivate
- *
- * \brief Private implementation for SetIdentityNotificationTopicResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIdentityNotificationTopicResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetIdentityNotificationTopicResponse instance.
+ * Constructs a SetIdentityNotificationTopicResponsePrivate object with public implementation \a q.
  */
 SetIdentityNotificationTopicResponsePrivate::SetIdentityNotificationTopicResponsePrivate(
     SetIdentityNotificationTopicResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SetIdentityNotificationTopicResponsePrivate::SetIdentityNotificationTopicRespons
 }
 
 /*!
- * @brief  Parse an SES SetIdentityNotificationTopicResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SetIdentityNotificationTopic response element from \a xml.
  */
 void SetIdentityNotificationTopicResponsePrivate::parseSetIdentityNotificationTopicResponse(QXmlStreamReader &xml)
 {

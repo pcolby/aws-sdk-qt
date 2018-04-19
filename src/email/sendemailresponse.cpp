@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SendEmailResponse
- *
  * \brief The SendEmailResponse class provides an interace for SES SendEmail responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SendEmailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendEmailResponse object for \a reply to \a request, with parent \a parent.
  */
 SendEmailResponse::SendEmailResponse(
         const SendEmailRequest &request,
@@ -66,6 +61,9 @@ SendEmailResponse::SendEmailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendEmailRequest * SendEmailResponse::request() const
 {
     Q_D(const SendEmailResponse);
@@ -73,9 +71,8 @@ const SendEmailRequest * SendEmailResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES SendEmail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SendEmail \a response.
  */
 void SendEmailResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SendEmailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::SendEmailResponsePrivate
+ * \brief The SendEmailResponsePrivate class provides private implementation for SendEmailResponse.
  * \internal
  *
- * \class SendEmailResponsePrivate
- *
- * \brief Private implementation for SendEmailResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendEmailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendEmailResponse instance.
+ * Constructs a SendEmailResponsePrivate object with public implementation \a q.
  */
 SendEmailResponsePrivate::SendEmailResponsePrivate(
     SendEmailResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SendEmailResponsePrivate::SendEmailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES SendEmailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SendEmail response element from \a xml.
  */
 void SendEmailResponsePrivate::parseSendEmailResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeRulesPackagesResponse : public InspectorResponse {
 public:
     DescribeRulesPackagesResponse(const DescribeRulesPackagesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeRulesPackagesRequest * request() const;
+    virtual const DescribeRulesPackagesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeRulesPackagesResponse)

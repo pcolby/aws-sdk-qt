@@ -29,10 +29,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::DeleteElasticsearchDomainResponse
- *
  * \brief The DeleteElasticsearchDomainResponse class provides an interace for ElasticsearchService DeleteElasticsearchDomain responses.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new DeleteElasticsearchDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteElasticsearchDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteElasticsearchDomainResponse::DeleteElasticsearchDomainResponse(
         const DeleteElasticsearchDomainRequest &request,
@@ -64,6 +59,9 @@ DeleteElasticsearchDomainResponse::DeleteElasticsearchDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteElasticsearchDomainRequest * DeleteElasticsearchDomainResponse::request() const
 {
     Q_D(const DeleteElasticsearchDomainResponse);
@@ -71,9 +69,8 @@ const DeleteElasticsearchDomainRequest * DeleteElasticsearchDomainResponse::requ
 }
 
 /*!
- * @brief  Parse a ElasticsearchService DeleteElasticsearchDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticsearchService DeleteElasticsearchDomain \a response.
  */
 void DeleteElasticsearchDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void DeleteElasticsearchDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticsearchService::DeleteElasticsearchDomainResponsePrivate
+ * \brief The DeleteElasticsearchDomainResponsePrivate class provides private implementation for DeleteElasticsearchDomainResponse.
  * \internal
  *
- * \class DeleteElasticsearchDomainResponsePrivate
- *
- * \brief Private implementation for DeleteElasticsearchDomainResponse.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteElasticsearchDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteElasticsearchDomainResponse instance.
+ * Constructs a DeleteElasticsearchDomainResponsePrivate object with public implementation \a q.
  */
 DeleteElasticsearchDomainResponsePrivate::DeleteElasticsearchDomainResponsePrivate(
     DeleteElasticsearchDomainResponse * const q) : ElasticsearchServiceResponsePrivate(q)
@@ -104,9 +97,7 @@ DeleteElasticsearchDomainResponsePrivate::DeleteElasticsearchDomainResponsePriva
 }
 
 /*!
- * @brief  Parse an ElasticsearchService DeleteElasticsearchDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticsearchService DeleteElasticsearchDomain response element from \a xml.
  */
 void DeleteElasticsearchDomainResponsePrivate::parseDeleteElasticsearchDomainResponse(QXmlStreamReader &xml)
 {

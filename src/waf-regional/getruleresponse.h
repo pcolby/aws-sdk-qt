@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetRuleResponse : public WAFRegionalResponse {
 public:
     GetRuleResponse(const GetRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetRuleRequest * request() const;
+    virtual const GetRuleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetRuleResponse)

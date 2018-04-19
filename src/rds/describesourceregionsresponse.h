@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSourceRegionsResponse : public RDSResponse {
 public:
     DescribeSourceRegionsResponse(const DescribeSourceRegionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSourceRegionsRequest * request() const;
+    virtual const DescribeSourceRegionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSourceRegionsResponse)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAvailabilityOptionsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a UpdateAvailabilityOptionsRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAvailabilityOptionsRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 UpdateAvailabilityOptionsRequestPrivate::UpdateAvailabilityOptionsRequestPrivate(
     const CloudSearchRequest::Action action, UpdateAvailabilityOptionsRequest * const q)

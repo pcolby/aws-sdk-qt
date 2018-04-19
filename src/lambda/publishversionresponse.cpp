@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::PublishVersionResponse
- *
  * \brief The PublishVersionResponse class provides an interace for Lambda PublishVersion responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new PublishVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PublishVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 PublishVersionResponse::PublishVersionResponse(
         const PublishVersionRequest &request,
@@ -66,6 +61,9 @@ PublishVersionResponse::PublishVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PublishVersionRequest * PublishVersionResponse::request() const
 {
     Q_D(const PublishVersionResponse);
@@ -73,9 +71,8 @@ const PublishVersionRequest * PublishVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda PublishVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda PublishVersion \a response.
  */
 void PublishVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void PublishVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::PublishVersionResponsePrivate
+ * \brief The PublishVersionResponsePrivate class provides private implementation for PublishVersionResponse.
  * \internal
  *
- * \class PublishVersionResponsePrivate
- *
- * \brief Private implementation for PublishVersionResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PublishVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PublishVersionResponse instance.
+ * Constructs a PublishVersionResponsePrivate object with public implementation \a q.
  */
 PublishVersionResponsePrivate::PublishVersionResponsePrivate(
     PublishVersionResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ PublishVersionResponsePrivate::PublishVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda PublishVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda PublishVersion response element from \a xml.
  */
 void PublishVersionResponsePrivate::parsePublishVersionResponse(QXmlStreamReader &xml)
 {

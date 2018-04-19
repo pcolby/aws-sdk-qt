@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeResourcePoliciesRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeResourcePoliciesRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeResourcePoliciesRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DescribeResourcePoliciesRequestPrivate::DescribeResourcePoliciesRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeResourcePoliciesRequest * const q)

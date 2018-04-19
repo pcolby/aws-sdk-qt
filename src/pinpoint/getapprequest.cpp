@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetAppRequest::response(QNetworkReply * const
  */
 
 /*!
- *
- * Constructs a GetAppRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetAppRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetAppRequestPrivate::GetAppRequestPrivate(
     const PinpointRequest::Action action, GetAppRequest * const q)

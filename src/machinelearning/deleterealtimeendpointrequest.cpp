@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRealtimeEndpointRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteRealtimeEndpointRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRealtimeEndpointRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 DeleteRealtimeEndpointRequestPrivate::DeleteRealtimeEndpointRequestPrivate(
     const MachineLearningRequest::Action action, DeleteRealtimeEndpointRequest * const q)

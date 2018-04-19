@@ -34,10 +34,10 @@ class QTAWS_EXPORT GenerateDataKeyWithoutPlaintextResponse : public KMSResponse 
 public:
     GenerateDataKeyWithoutPlaintextResponse(const GenerateDataKeyWithoutPlaintextRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GenerateDataKeyWithoutPlaintextRequest * request() const;
+    virtual const GenerateDataKeyWithoutPlaintextRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GenerateDataKeyWithoutPlaintextResponse)

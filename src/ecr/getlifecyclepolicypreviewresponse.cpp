@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::GetLifecyclePolicyPreviewResponse
- *
  * \brief The GetLifecyclePolicyPreviewResponse class provides an interace for ECR GetLifecyclePolicyPreview responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new GetLifecyclePolicyPreviewResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetLifecyclePolicyPreviewResponse object for \a reply to \a request, with parent \a parent.
  */
 GetLifecyclePolicyPreviewResponse::GetLifecyclePolicyPreviewResponse(
         const GetLifecyclePolicyPreviewRequest &request,
@@ -59,6 +54,9 @@ GetLifecyclePolicyPreviewResponse::GetLifecyclePolicyPreviewResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetLifecyclePolicyPreviewRequest * GetLifecyclePolicyPreviewResponse::request() const
 {
     Q_D(const GetLifecyclePolicyPreviewResponse);
@@ -66,9 +64,8 @@ const GetLifecyclePolicyPreviewRequest * GetLifecyclePolicyPreviewResponse::requ
 }
 
 /*!
- * @brief  Parse a ECR GetLifecyclePolicyPreview response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR GetLifecyclePolicyPreview \a response.
  */
 void GetLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::GetLifecyclePolicyPreviewResponsePrivate
+ * \brief The GetLifecyclePolicyPreviewResponsePrivate class provides private implementation for GetLifecyclePolicyPreviewResponse.
  * \internal
  *
- * \class GetLifecyclePolicyPreviewResponsePrivate
- *
- * \brief Private implementation for GetLifecyclePolicyPreviewResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLifecyclePolicyPreviewResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetLifecyclePolicyPreviewResponse instance.
+ * Constructs a GetLifecyclePolicyPreviewResponsePrivate object with public implementation \a q.
  */
 GetLifecyclePolicyPreviewResponsePrivate::GetLifecyclePolicyPreviewResponsePrivate(
     GetLifecyclePolicyPreviewResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ GetLifecyclePolicyPreviewResponsePrivate::GetLifecyclePolicyPreviewResponsePriva
 }
 
 /*!
- * @brief  Parse an ECR GetLifecyclePolicyPreviewResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR GetLifecyclePolicyPreview response element from \a xml.
  */
 void GetLifecyclePolicyPreviewResponsePrivate::parseGetLifecyclePolicyPreviewResponse(QXmlStreamReader &xml)
 {

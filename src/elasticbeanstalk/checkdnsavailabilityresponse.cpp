@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::CheckDNSAvailabilityResponse
- *
  * \brief The CheckDNSAvailabilityResponse class provides an interace for ElasticBeanstalk CheckDNSAvailability responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new CheckDNSAvailabilityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CheckDNSAvailabilityResponse object for \a reply to \a request, with parent \a parent.
  */
 CheckDNSAvailabilityResponse::CheckDNSAvailabilityResponse(
         const CheckDNSAvailabilityRequest &request,
@@ -77,6 +72,9 @@ CheckDNSAvailabilityResponse::CheckDNSAvailabilityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CheckDNSAvailabilityRequest * CheckDNSAvailabilityResponse::request() const
 {
     Q_D(const CheckDNSAvailabilityResponse);
@@ -84,9 +82,8 @@ const CheckDNSAvailabilityRequest * CheckDNSAvailabilityResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk CheckDNSAvailability response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk CheckDNSAvailability \a response.
  */
 void CheckDNSAvailabilityResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void CheckDNSAvailabilityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::CheckDNSAvailabilityResponsePrivate
+ * \brief The CheckDNSAvailabilityResponsePrivate class provides private implementation for CheckDNSAvailabilityResponse.
  * \internal
  *
- * \class CheckDNSAvailabilityResponsePrivate
- *
- * \brief Private implementation for CheckDNSAvailabilityResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CheckDNSAvailabilityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CheckDNSAvailabilityResponse instance.
+ * Constructs a CheckDNSAvailabilityResponsePrivate object with public implementation \a q.
  */
 CheckDNSAvailabilityResponsePrivate::CheckDNSAvailabilityResponsePrivate(
     CheckDNSAvailabilityResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ CheckDNSAvailabilityResponsePrivate::CheckDNSAvailabilityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk CheckDNSAvailabilityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk CheckDNSAvailability response element from \a xml.
  */
 void CheckDNSAvailabilityResponsePrivate::parseCheckDNSAvailabilityResponse(QXmlStreamReader &xml)
 {

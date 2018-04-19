@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetInstanceSnapshotsResponse
- *
  * \brief The GetInstanceSnapshotsResponse class provides an interace for Lightsail GetInstanceSnapshots responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceSnapshotsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInstanceSnapshotsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInstanceSnapshotsResponse::GetInstanceSnapshotsResponse(
         const GetInstanceSnapshotsRequest &request,
@@ -71,6 +66,9 @@ GetInstanceSnapshotsResponse::GetInstanceSnapshotsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInstanceSnapshotsRequest * GetInstanceSnapshotsResponse::request() const
 {
     Q_D(const GetInstanceSnapshotsResponse);
@@ -78,9 +76,8 @@ const GetInstanceSnapshotsRequest * GetInstanceSnapshotsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Lightsail GetInstanceSnapshots response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetInstanceSnapshots \a response.
  */
 void GetInstanceSnapshotsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetInstanceSnapshotsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetInstanceSnapshotsResponsePrivate
+ * \brief The GetInstanceSnapshotsResponsePrivate class provides private implementation for GetInstanceSnapshotsResponse.
  * \internal
  *
- * \class GetInstanceSnapshotsResponsePrivate
- *
- * \brief Private implementation for GetInstanceSnapshotsResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceSnapshotsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInstanceSnapshotsResponse instance.
+ * Constructs a GetInstanceSnapshotsResponsePrivate object with public implementation \a q.
  */
 GetInstanceSnapshotsResponsePrivate::GetInstanceSnapshotsResponsePrivate(
     GetInstanceSnapshotsResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetInstanceSnapshotsResponsePrivate::GetInstanceSnapshotsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetInstanceSnapshotsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetInstanceSnapshots response element from \a xml.
  */
 void GetInstanceSnapshotsResponsePrivate::parseGetInstanceSnapshotsResponse(QXmlStreamReader &xml)
 {

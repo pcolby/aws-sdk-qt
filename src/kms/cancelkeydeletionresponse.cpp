@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::CancelKeyDeletionResponse
- *
  * \brief The CancelKeyDeletionResponse class provides an interace for KMS CancelKeyDeletion responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new CancelKeyDeletionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelKeyDeletionResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelKeyDeletionResponse::CancelKeyDeletionResponse(
         const CancelKeyDeletionRequest &request,
@@ -154,6 +149,9 @@ CancelKeyDeletionResponse::CancelKeyDeletionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelKeyDeletionRequest * CancelKeyDeletionResponse::request() const
 {
     Q_D(const CancelKeyDeletionResponse);
@@ -161,9 +159,8 @@ const CancelKeyDeletionRequest * CancelKeyDeletionResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS CancelKeyDeletion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS CancelKeyDeletion \a response.
  */
 void CancelKeyDeletionResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void CancelKeyDeletionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::CancelKeyDeletionResponsePrivate
+ * \brief The CancelKeyDeletionResponsePrivate class provides private implementation for CancelKeyDeletionResponse.
  * \internal
  *
- * \class CancelKeyDeletionResponsePrivate
- *
- * \brief Private implementation for CancelKeyDeletionResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelKeyDeletionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelKeyDeletionResponse instance.
+ * Constructs a CancelKeyDeletionResponsePrivate object with public implementation \a q.
  */
 CancelKeyDeletionResponsePrivate::CancelKeyDeletionResponsePrivate(
     CancelKeyDeletionResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ CancelKeyDeletionResponsePrivate::CancelKeyDeletionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS CancelKeyDeletionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS CancelKeyDeletion response element from \a xml.
  */
 void CancelKeyDeletionResponsePrivate::parseCancelKeyDeletionResponse(QXmlStreamReader &xml)
 {

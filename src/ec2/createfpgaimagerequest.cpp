@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateFpgaImageRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a CreateFpgaImageRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateFpgaImageRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateFpgaImageRequestPrivate::CreateFpgaImageRequestPrivate(
     const EC2Request::Action action, CreateFpgaImageRequest * const q)

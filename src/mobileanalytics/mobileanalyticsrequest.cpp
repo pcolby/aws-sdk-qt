@@ -40,7 +40,7 @@ namespace MobileAnalytics {
  */
 
 /*!
- * Constructs a[n] MobileAnalyticsRequest object for MobileAnalytics \a action.
+ * Constructs a MobileAnalyticsRequest object for MobileAnalytics \a action.
  */
 MobileAnalyticsRequest::MobileAnalyticsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MobileAnalyticsRequestPrivate(action, this))
@@ -240,8 +240,8 @@ QNetworkRequest MobileAnalyticsRequest::unsignedRequest(const QUrl &endpoint) co
  */
 
 /*!
- * Constructs a MobileAnalyticsRequestPrivate object for MobileAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a MobileAnalyticsRequestPrivate object for MobileAnalytics \a action,
+ * with public implementation \a q.
  */
 MobileAnalyticsRequestPrivate::MobileAnalyticsRequestPrivate(const MobileAnalyticsRequest::Action action, MobileAnalyticsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

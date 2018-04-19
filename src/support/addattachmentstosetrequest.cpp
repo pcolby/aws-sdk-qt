@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * AddAttachmentsToSetRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a AddAttachmentsToSetRequestPrivate object for Support \a action with,
- * public implementation \a q.
+ * Constructs a AddAttachmentsToSetRequestPrivate object for Support \a action,
+ * with public implementation \a q.
  */
 AddAttachmentsToSetRequestPrivate::AddAttachmentsToSetRequestPrivate(
     const SupportRequest::Action action, AddAttachmentsToSetRequest * const q)

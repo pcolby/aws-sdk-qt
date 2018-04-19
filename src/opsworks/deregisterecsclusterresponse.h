@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeregisterEcsClusterResponse : public OpsWorksResponse {
 public:
     DeregisterEcsClusterResponse(const DeregisterEcsClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeregisterEcsClusterRequest * request() const;
+    virtual const DeregisterEcsClusterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeregisterEcsClusterResponse)

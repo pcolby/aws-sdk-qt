@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeregisterContainerInstanceResponse : public ECSResponse {
 public:
     DeregisterContainerInstanceResponse(const DeregisterContainerInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeregisterContainerInstanceRequest * request() const;
+    virtual const DeregisterContainerInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeregisterContainerInstanceResponse)

@@ -29,10 +29,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::DescribeTopicsDetectionJobResponse
- *
  * \brief The DescribeTopicsDetectionJobResponse class provides an interace for Comprehend DescribeTopicsDetectionJob responses.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -42,11 +41,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new DescribeTopicsDetectionJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTopicsDetectionJobResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTopicsDetectionJobResponse::DescribeTopicsDetectionJobResponse(
         const DescribeTopicsDetectionJobRequest &request,
@@ -58,6 +53,9 @@ DescribeTopicsDetectionJobResponse::DescribeTopicsDetectionJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTopicsDetectionJobRequest * DescribeTopicsDetectionJobResponse::request() const
 {
     Q_D(const DescribeTopicsDetectionJobResponse);
@@ -65,9 +63,8 @@ const DescribeTopicsDetectionJobRequest * DescribeTopicsDetectionJobResponse::re
 }
 
 /*!
- * @brief  Parse a Comprehend DescribeTopicsDetectionJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Comprehend DescribeTopicsDetectionJob \a response.
  */
 void DescribeTopicsDetectionJobResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeTopicsDetectionJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Comprehend::DescribeTopicsDetectionJobResponsePrivate
+ * \brief The DescribeTopicsDetectionJobResponsePrivate class provides private implementation for DescribeTopicsDetectionJobResponse.
  * \internal
  *
- * \class DescribeTopicsDetectionJobResponsePrivate
- *
- * \brief Private implementation for DescribeTopicsDetectionJobResponse.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTopicsDetectionJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTopicsDetectionJobResponse instance.
+ * Constructs a DescribeTopicsDetectionJobResponsePrivate object with public implementation \a q.
  */
 DescribeTopicsDetectionJobResponsePrivate::DescribeTopicsDetectionJobResponsePrivate(
     DescribeTopicsDetectionJobResponse * const q) : ComprehendResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeTopicsDetectionJobResponsePrivate::DescribeTopicsDetectionJobResponsePri
 }
 
 /*!
- * @brief  Parse an Comprehend DescribeTopicsDetectionJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Comprehend DescribeTopicsDetectionJob response element from \a xml.
  */
 void DescribeTopicsDetectionJobResponsePrivate::parseDescribeTopicsDetectionJobResponse(QXmlStreamReader &xml)
 {

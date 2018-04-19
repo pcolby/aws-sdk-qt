@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::MergeShardsResponse
- *
  * \brief The MergeShardsResponse class provides an interace for Kinesis MergeShards responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new MergeShardsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a MergeShardsResponse object for \a reply to \a request, with parent \a parent.
  */
 MergeShardsResponse::MergeShardsResponse(
         const MergeShardsRequest &request,
@@ -58,6 +53,9 @@ MergeShardsResponse::MergeShardsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const MergeShardsRequest * MergeShardsResponse::request() const
 {
     Q_D(const MergeShardsResponse);
@@ -65,9 +63,8 @@ const MergeShardsRequest * MergeShardsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis MergeShards response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis MergeShards \a response.
  */
 void MergeShardsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void MergeShardsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::MergeShardsResponsePrivate
+ * \brief The MergeShardsResponsePrivate class provides private implementation for MergeShardsResponse.
  * \internal
  *
- * \class MergeShardsResponsePrivate
- *
- * \brief Private implementation for MergeShardsResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MergeShardsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MergeShardsResponse instance.
+ * Constructs a MergeShardsResponsePrivate object with public implementation \a q.
  */
 MergeShardsResponsePrivate::MergeShardsResponsePrivate(
     MergeShardsResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ MergeShardsResponsePrivate::MergeShardsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis MergeShardsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis MergeShards response element from \a xml.
  */
 void MergeShardsResponsePrivate::parseMergeShardsResponse(QXmlStreamReader &xml)
 {

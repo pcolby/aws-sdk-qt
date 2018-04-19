@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateFunctionResponse : public LambdaResponse {
 public:
     CreateFunctionResponse(const CreateFunctionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateFunctionRequest * request() const;
+    virtual const CreateFunctionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateFunctionResponse)

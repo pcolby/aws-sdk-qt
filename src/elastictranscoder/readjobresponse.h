@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReadJobResponse : public ElasticTranscoderResponse {
 public:
     ReadJobResponse(const ReadJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReadJobRequest * request() const;
+    virtual const ReadJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ReadJobResponse)

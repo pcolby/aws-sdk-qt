@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeScalingProcessTypesResponse : public AutoScalingRespo
 public:
     DescribeScalingProcessTypesResponse(const DescribeScalingProcessTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeScalingProcessTypesRequest * request() const;
+    virtual const DescribeScalingProcessTypesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeScalingProcessTypesResponse)

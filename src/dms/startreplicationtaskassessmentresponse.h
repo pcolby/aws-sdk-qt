@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartReplicationTaskAssessmentResponse : public DatabaseMigra
 public:
     StartReplicationTaskAssessmentResponse(const StartReplicationTaskAssessmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartReplicationTaskAssessmentRequest * request() const;
+    virtual const StartReplicationTaskAssessmentRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartReplicationTaskAssessmentResponse)

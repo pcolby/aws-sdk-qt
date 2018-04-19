@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateRoleAliasResponse : public IoTResponse {
 public:
     UpdateRoleAliasResponse(const UpdateRoleAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateRoleAliasRequest * request() const;
+    virtual const UpdateRoleAliasRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateRoleAliasResponse)

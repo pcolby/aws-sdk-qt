@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDirectoryConfigsResponse : public AppStreamResponse {
 public:
     DescribeDirectoryConfigsResponse(const DescribeDirectoryConfigsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDirectoryConfigsRequest * request() const;
+    virtual const DescribeDirectoryConfigsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDirectoryConfigsResponse)

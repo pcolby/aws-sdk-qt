@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteRetentionPolicyResponse : public CloudWatchLogsResponse
 public:
     DeleteRetentionPolicyResponse(const DeleteRetentionPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteRetentionPolicyRequest * request() const;
+    virtual const DeleteRetentionPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteRetentionPolicyResponse)

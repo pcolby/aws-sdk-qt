@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * BatchGetImageRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a BatchGetImageRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a BatchGetImageRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
     const ECRRequest::Action action, BatchGetImageRequest * const q)

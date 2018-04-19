@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketCorsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteBucketCorsRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBucketCorsRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 DeleteBucketCorsRequestPrivate::DeleteBucketCorsRequestPrivate(
     const S3Request::Action action, DeleteBucketCorsRequest * const q)

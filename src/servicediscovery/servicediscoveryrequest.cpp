@@ -57,7 +57,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * Constructs a[n] ServiceDiscoveryRequest object for ServiceDiscovery \a action.
+ * Constructs a ServiceDiscoveryRequest object for ServiceDiscovery \a action.
  */
 ServiceDiscoveryRequest::ServiceDiscoveryRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ServiceDiscoveryRequestPrivate(action, this))
@@ -257,8 +257,8 @@ QNetworkRequest ServiceDiscoveryRequest::unsignedRequest(const QUrl &endpoint) c
  */
 
 /*!
- * Constructs a ServiceDiscoveryRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a ServiceDiscoveryRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 ServiceDiscoveryRequestPrivate::ServiceDiscoveryRequestPrivate(const ServiceDiscoveryRequest::Action action, ServiceDiscoveryRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

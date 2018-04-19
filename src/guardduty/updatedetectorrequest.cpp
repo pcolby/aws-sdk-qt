@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDetectorRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdateDetectorRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDetectorRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 UpdateDetectorRequestPrivate::UpdateDetectorRequestPrivate(
     const GuardDutyRequest::Action action, UpdateDetectorRequest * const q)

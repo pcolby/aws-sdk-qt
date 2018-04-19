@@ -29,10 +29,9 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::PutTelemetryRecordsResponse
- *
  * \brief The PutTelemetryRecordsResponse class provides an interace for XRay PutTelemetryRecords responses.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  *
  *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  *
@@ -40,11 +39,7 @@ namespace XRay {
  */
 
 /*!
- * @brief  Constructs a new PutTelemetryRecordsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutTelemetryRecordsResponse object for \a reply to \a request, with parent \a parent.
  */
 PutTelemetryRecordsResponse::PutTelemetryRecordsResponse(
         const PutTelemetryRecordsRequest &request,
@@ -56,6 +51,9 @@ PutTelemetryRecordsResponse::PutTelemetryRecordsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutTelemetryRecordsRequest * PutTelemetryRecordsResponse::request() const
 {
     Q_D(const PutTelemetryRecordsResponse);
@@ -63,9 +61,8 @@ const PutTelemetryRecordsRequest * PutTelemetryRecordsResponse::request() const
 }
 
 /*!
- * @brief  Parse a XRay PutTelemetryRecords response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful XRay PutTelemetryRecords \a response.
  */
 void PutTelemetryRecordsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void PutTelemetryRecordsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::XRay::PutTelemetryRecordsResponsePrivate
+ * \brief The PutTelemetryRecordsResponsePrivate class provides private implementation for PutTelemetryRecordsResponse.
  * \internal
  *
- * \class PutTelemetryRecordsResponsePrivate
- *
- * \brief Private implementation for PutTelemetryRecordsResponse.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutTelemetryRecordsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutTelemetryRecordsResponse instance.
+ * Constructs a PutTelemetryRecordsResponsePrivate object with public implementation \a q.
  */
 PutTelemetryRecordsResponsePrivate::PutTelemetryRecordsResponsePrivate(
     PutTelemetryRecordsResponse * const q) : XRayResponsePrivate(q)
@@ -96,9 +89,7 @@ PutTelemetryRecordsResponsePrivate::PutTelemetryRecordsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an XRay PutTelemetryRecordsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a XRay PutTelemetryRecords response element from \a xml.
  */
 void PutTelemetryRecordsResponsePrivate::parsePutTelemetryRecordsResponse(QXmlStreamReader &xml)
 {

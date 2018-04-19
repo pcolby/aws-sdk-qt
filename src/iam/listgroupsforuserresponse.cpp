@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListGroupsForUserResponse
- *
  * \brief The ListGroupsForUserResponse class provides an interace for IAM ListGroupsForUser responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListGroupsForUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGroupsForUserResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGroupsForUserResponse::ListGroupsForUserResponse(
         const ListGroupsForUserRequest &request,
@@ -120,6 +115,9 @@ ListGroupsForUserResponse::ListGroupsForUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGroupsForUserRequest * ListGroupsForUserResponse::request() const
 {
     Q_D(const ListGroupsForUserResponse);
@@ -127,9 +125,8 @@ const ListGroupsForUserRequest * ListGroupsForUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM ListGroupsForUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListGroupsForUser \a response.
  */
 void ListGroupsForUserResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListGroupsForUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListGroupsForUserResponsePrivate
+ * \brief The ListGroupsForUserResponsePrivate class provides private implementation for ListGroupsForUserResponse.
  * \internal
  *
- * \class ListGroupsForUserResponsePrivate
- *
- * \brief Private implementation for ListGroupsForUserResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupsForUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGroupsForUserResponse instance.
+ * Constructs a ListGroupsForUserResponsePrivate object with public implementation \a q.
  */
 ListGroupsForUserResponsePrivate::ListGroupsForUserResponsePrivate(
     ListGroupsForUserResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListGroupsForUserResponsePrivate::ListGroupsForUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListGroupsForUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListGroupsForUser response element from \a xml.
  */
 void ListGroupsForUserResponsePrivate::parseListGroupsForUserResponse(QXmlStreamReader &xml)
 {

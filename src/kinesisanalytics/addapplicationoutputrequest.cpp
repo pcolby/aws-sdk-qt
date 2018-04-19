@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * AddApplicationOutputRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a AddApplicationOutputRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a AddApplicationOutputRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 AddApplicationOutputRequestPrivate::AddApplicationOutputRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationOutputRequest * const q)

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateStageResponse
- *
  * \brief The CreateStageResponse class provides an interace for APIGateway CreateStage responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateStageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStageResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStageResponse::CreateStageResponse(
         const CreateStageRequest &request,
@@ -60,6 +55,9 @@ CreateStageResponse::CreateStageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStageRequest * CreateStageResponse::request() const
 {
     Q_D(const CreateStageResponse);
@@ -67,9 +65,8 @@ const CreateStageRequest * CreateStageResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway CreateStage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway CreateStage \a response.
  */
 void CreateStageResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateStageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::CreateStageResponsePrivate
+ * \brief The CreateStageResponsePrivate class provides private implementation for CreateStageResponse.
  * \internal
  *
- * \class CreateStageResponsePrivate
- *
- * \brief Private implementation for CreateStageResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStageResponse instance.
+ * Constructs a CreateStageResponsePrivate object with public implementation \a q.
  */
 CreateStageResponsePrivate::CreateStageResponsePrivate(
     CreateStageResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateStageResponsePrivate::CreateStageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway CreateStageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway CreateStage response element from \a xml.
  */
 void CreateStageResponsePrivate::parseCreateStageResponse(QXmlStreamReader &xml)
 {

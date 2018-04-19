@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListStreamingDistributionsResponse
- *
  * \brief The ListStreamingDistributionsResponse class provides an interace for CloudFront ListStreamingDistributions responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListStreamingDistributionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListStreamingDistributionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListStreamingDistributionsResponse::ListStreamingDistributionsResponse(
         const ListStreamingDistributionsRequest &request,
@@ -60,6 +55,9 @@ ListStreamingDistributionsResponse::ListStreamingDistributionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListStreamingDistributionsRequest * ListStreamingDistributionsResponse::request() const
 {
     Q_D(const ListStreamingDistributionsResponse);
@@ -67,9 +65,8 @@ const ListStreamingDistributionsRequest * ListStreamingDistributionsResponse::re
 }
 
 /*!
- * @brief  Parse a CloudFront ListStreamingDistributions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront ListStreamingDistributions \a response.
  */
 void ListStreamingDistributionsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListStreamingDistributionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::ListStreamingDistributionsResponsePrivate
+ * \brief The ListStreamingDistributionsResponsePrivate class provides private implementation for ListStreamingDistributionsResponse.
  * \internal
  *
- * \class ListStreamingDistributionsResponsePrivate
- *
- * \brief Private implementation for ListStreamingDistributionsResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStreamingDistributionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListStreamingDistributionsResponse instance.
+ * Constructs a ListStreamingDistributionsResponsePrivate object with public implementation \a q.
  */
 ListStreamingDistributionsResponsePrivate::ListStreamingDistributionsResponsePrivate(
     ListStreamingDistributionsResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ ListStreamingDistributionsResponsePrivate::ListStreamingDistributionsResponsePri
 }
 
 /*!
- * @brief  Parse an CloudFront ListStreamingDistributionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront ListStreamingDistributions response element from \a xml.
  */
 void ListStreamingDistributionsResponsePrivate::parseListStreamingDistributionsResponse(QXmlStreamReader &xml)
 {

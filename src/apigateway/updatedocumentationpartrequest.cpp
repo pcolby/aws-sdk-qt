@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentationPartRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateDocumentationPartRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDocumentationPartRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 UpdateDocumentationPartRequestPrivate::UpdateDocumentationPartRequestPrivate(
     const APIGatewayRequest::Action action, UpdateDocumentationPartRequest * const q)

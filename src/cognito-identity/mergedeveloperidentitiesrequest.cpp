@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * MergeDeveloperIdentitiesRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a MergeDeveloperIdentitiesRequestPrivate object for CognitoIdentity \a action with,
- * public implementation \a q.
+ * Constructs a MergeDeveloperIdentitiesRequestPrivate object for CognitoIdentity \a action,
+ * with public implementation \a q.
  */
 MergeDeveloperIdentitiesRequestPrivate::MergeDeveloperIdentitiesRequestPrivate(
     const CognitoIdentityRequest::Action action, MergeDeveloperIdentitiesRequest * const q)

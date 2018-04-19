@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListAttachedIndicesResponse
- *
  * \brief The ListAttachedIndicesResponse class provides an interace for CloudDirectory ListAttachedIndices responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListAttachedIndicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAttachedIndicesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAttachedIndicesResponse::ListAttachedIndicesResponse(
         const ListAttachedIndicesRequest &request,
@@ -62,6 +57,9 @@ ListAttachedIndicesResponse::ListAttachedIndicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAttachedIndicesRequest * ListAttachedIndicesResponse::request() const
 {
     Q_D(const ListAttachedIndicesResponse);
@@ -69,9 +67,8 @@ const ListAttachedIndicesRequest * ListAttachedIndicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListAttachedIndices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListAttachedIndices \a response.
  */
 void ListAttachedIndicesResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListAttachedIndicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListAttachedIndicesResponsePrivate
+ * \brief The ListAttachedIndicesResponsePrivate class provides private implementation for ListAttachedIndicesResponse.
  * \internal
  *
- * \class ListAttachedIndicesResponsePrivate
- *
- * \brief Private implementation for ListAttachedIndicesResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAttachedIndicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAttachedIndicesResponse instance.
+ * Constructs a ListAttachedIndicesResponsePrivate object with public implementation \a q.
  */
 ListAttachedIndicesResponsePrivate::ListAttachedIndicesResponsePrivate(
     ListAttachedIndicesResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListAttachedIndicesResponsePrivate::ListAttachedIndicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListAttachedIndicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListAttachedIndices response element from \a xml.
  */
 void ListAttachedIndicesResponsePrivate::parseListAttachedIndicesResponse(QXmlStreamReader &xml)
 {

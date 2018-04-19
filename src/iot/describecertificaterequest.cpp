@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificateRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeCertificateRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCertificateRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
     const IoTRequest::Action action, DescribeCertificateRequest * const q)

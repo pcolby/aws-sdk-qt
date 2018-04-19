@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSnapshotLimitsResponse : public DirectoryServiceResponse {
 public:
     GetSnapshotLimitsResponse(const GetSnapshotLimitsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSnapshotLimitsRequest * request() const;
+    virtual const GetSnapshotLimitsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSnapshotLimitsResponse)

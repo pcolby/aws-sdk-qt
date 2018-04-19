@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListReviewPolicyResultsForHITResponse : public MTurkResponse 
 public:
     ListReviewPolicyResultsForHITResponse(const ListReviewPolicyResultsForHITRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListReviewPolicyResultsForHITRequest * request() const;
+    virtual const ListReviewPolicyResultsForHITRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListReviewPolicyResultsForHITResponse)

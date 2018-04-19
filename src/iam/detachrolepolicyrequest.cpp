@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DetachRolePolicyRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DetachRolePolicyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DetachRolePolicyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DetachRolePolicyRequestPrivate::DetachRolePolicyRequestPrivate(
     const IAMRequest::Action action, DetachRolePolicyRequest * const q)

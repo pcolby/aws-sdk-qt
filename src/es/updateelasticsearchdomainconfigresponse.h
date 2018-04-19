@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateElasticsearchDomainConfigResponse : public Elasticsearc
 public:
     UpdateElasticsearchDomainConfigResponse(const UpdateElasticsearchDomainConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateElasticsearchDomainConfigRequest * request() const;
+    virtual const UpdateElasticsearchDomainConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateElasticsearchDomainConfigResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeWorkspaceBundlesResponse : public WorkSpacesResponse 
 public:
     DescribeWorkspaceBundlesResponse(const DescribeWorkspaceBundlesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeWorkspaceBundlesRequest * request() const;
+    virtual const DescribeWorkspaceBundlesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeWorkspaceBundlesResponse)

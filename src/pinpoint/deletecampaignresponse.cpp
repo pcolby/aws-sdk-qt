@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteCampaignResponse
- *
  * \brief The DeleteCampaignResponse class provides an interace for Pinpoint DeleteCampaign responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteCampaign
  */
 
 /*!
- * @brief  Constructs a new DeleteCampaignResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCampaignResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCampaignResponse::DeleteCampaignResponse(
         const DeleteCampaignRequest &request,
@@ -55,6 +50,9 @@ DeleteCampaignResponse::DeleteCampaignResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCampaignRequest * DeleteCampaignResponse::request() const
 {
     Q_D(const DeleteCampaignResponse);
@@ -62,9 +60,8 @@ const DeleteCampaignRequest * DeleteCampaignResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint DeleteCampaign response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint DeleteCampaign \a response.
  */
 void DeleteCampaignResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteCampaignResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::DeleteCampaignResponsePrivate
+ * \brief The DeleteCampaignResponsePrivate class provides private implementation for DeleteCampaignResponse.
  * \internal
  *
- * \class DeleteCampaignResponsePrivate
- *
- * \brief Private implementation for DeleteCampaignResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCampaignResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCampaignResponse instance.
+ * Constructs a DeleteCampaignResponsePrivate object with public implementation \a q.
  */
 DeleteCampaignResponsePrivate::DeleteCampaignResponsePrivate(
     DeleteCampaignResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteCampaignResponsePrivate::DeleteCampaignResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint DeleteCampaignResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint DeleteCampaign response element from \a xml.
  */
 void DeleteCampaignResponsePrivate::parseDeleteCampaignResponse(QXmlStreamReader &xml)
 {

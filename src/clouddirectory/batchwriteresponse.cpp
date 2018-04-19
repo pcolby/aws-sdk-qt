@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::BatchWriteResponse
- *
  * \brief The BatchWriteResponse class provides an interace for CloudDirectory BatchWrite responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new BatchWriteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchWriteResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchWriteResponse::BatchWriteResponse(
         const BatchWriteRequest &request,
@@ -62,6 +57,9 @@ BatchWriteResponse::BatchWriteResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchWriteRequest * BatchWriteResponse::request() const
 {
     Q_D(const BatchWriteResponse);
@@ -69,9 +67,8 @@ const BatchWriteRequest * BatchWriteResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory BatchWrite response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory BatchWrite \a response.
  */
 void BatchWriteResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void BatchWriteResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::BatchWriteResponsePrivate
+ * \brief The BatchWriteResponsePrivate class provides private implementation for BatchWriteResponse.
  * \internal
  *
- * \class BatchWriteResponsePrivate
- *
- * \brief Private implementation for BatchWriteResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchWriteResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchWriteResponse instance.
+ * Constructs a BatchWriteResponsePrivate object with public implementation \a q.
  */
 BatchWriteResponsePrivate::BatchWriteResponsePrivate(
     BatchWriteResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ BatchWriteResponsePrivate::BatchWriteResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory BatchWriteResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory BatchWrite response element from \a xml.
  */
 void BatchWriteResponsePrivate::parseBatchWriteResponse(QXmlStreamReader &xml)
 {

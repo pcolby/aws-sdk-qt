@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateTriggerRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateTriggerRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a UpdateTriggerRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 UpdateTriggerRequestPrivate::UpdateTriggerRequestPrivate(
     const GlueRequest::Action action, UpdateTriggerRequest * const q)

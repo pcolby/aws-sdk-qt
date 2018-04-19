@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::SubmitJobResponse
- *
  * \brief The SubmitJobResponse class provides an interace for Batch SubmitJob responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new SubmitJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SubmitJobResponse object for \a reply to \a request, with parent \a parent.
  */
 SubmitJobResponse::SubmitJobResponse(
         const SubmitJobRequest &request,
@@ -69,6 +64,9 @@ SubmitJobResponse::SubmitJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SubmitJobRequest * SubmitJobResponse::request() const
 {
     Q_D(const SubmitJobResponse);
@@ -76,9 +74,8 @@ const SubmitJobRequest * SubmitJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Batch SubmitJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch SubmitJob \a response.
  */
 void SubmitJobResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void SubmitJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::SubmitJobResponsePrivate
+ * \brief The SubmitJobResponsePrivate class provides private implementation for SubmitJobResponse.
  * \internal
  *
- * \class SubmitJobResponsePrivate
- *
- * \brief Private implementation for SubmitJobResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubmitJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SubmitJobResponse instance.
+ * Constructs a SubmitJobResponsePrivate object with public implementation \a q.
  */
 SubmitJobResponsePrivate::SubmitJobResponsePrivate(
     SubmitJobResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ SubmitJobResponsePrivate::SubmitJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Batch SubmitJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch SubmitJob response element from \a xml.
  */
 void SubmitJobResponsePrivate::parseSubmitJobResponse(QXmlStreamReader &xml)
 {

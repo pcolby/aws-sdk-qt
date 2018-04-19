@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::ListInstancesResponse
- *
  * \brief The ListInstancesResponse class provides an interace for ServiceDiscovery ListInstances responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new ListInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListInstancesResponse::ListInstancesResponse(
         const ListInstancesRequest &request,
@@ -59,6 +54,9 @@ ListInstancesResponse::ListInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListInstancesRequest * ListInstancesResponse::request() const
 {
     Q_D(const ListInstancesResponse);
@@ -66,9 +64,8 @@ const ListInstancesRequest * ListInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery ListInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery ListInstances \a response.
  */
 void ListInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ListInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::ListInstancesResponsePrivate
+ * \brief The ListInstancesResponsePrivate class provides private implementation for ListInstancesResponse.
  * \internal
  *
- * \class ListInstancesResponsePrivate
- *
- * \brief Private implementation for ListInstancesResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListInstancesResponse instance.
+ * Constructs a ListInstancesResponsePrivate object with public implementation \a q.
  */
 ListInstancesResponsePrivate::ListInstancesResponsePrivate(
     ListInstancesResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ ListInstancesResponsePrivate::ListInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery ListInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery ListInstances response element from \a xml.
  */
 void ListInstancesResponsePrivate::parseListInstancesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteCustomMetadataResponse
- *
  * \brief The DeleteCustomMetadataResponse class provides an interace for WorkDocs DeleteCustomMetadata responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteCustomMetadataResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCustomMetadataResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCustomMetadataResponse::DeleteCustomMetadataResponse(
         const DeleteCustomMetadataRequest &request,
@@ -84,6 +79,9 @@ DeleteCustomMetadataResponse::DeleteCustomMetadataResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCustomMetadataRequest * DeleteCustomMetadataResponse::request() const
 {
     Q_D(const DeleteCustomMetadataResponse);
@@ -91,9 +89,8 @@ const DeleteCustomMetadataRequest * DeleteCustomMetadataResponse::request() cons
 }
 
 /*!
- * @brief  Parse a WorkDocs DeleteCustomMetadata response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DeleteCustomMetadata \a response.
  */
 void DeleteCustomMetadataResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteCustomMetadataResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DeleteCustomMetadataResponsePrivate
+ * \brief The DeleteCustomMetadataResponsePrivate class provides private implementation for DeleteCustomMetadataResponse.
  * \internal
  *
- * \class DeleteCustomMetadataResponsePrivate
- *
- * \brief Private implementation for DeleteCustomMetadataResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCustomMetadataResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCustomMetadataResponse instance.
+ * Constructs a DeleteCustomMetadataResponsePrivate object with public implementation \a q.
  */
 DeleteCustomMetadataResponsePrivate::DeleteCustomMetadataResponsePrivate(
     DeleteCustomMetadataResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteCustomMetadataResponsePrivate::DeleteCustomMetadataResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DeleteCustomMetadataResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DeleteCustomMetadata response element from \a xml.
  */
 void DeleteCustomMetadataResponsePrivate::parseDeleteCustomMetadataResponse(QXmlStreamReader &xml)
 {

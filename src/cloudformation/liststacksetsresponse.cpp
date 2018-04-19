@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ListStackSetsResponse
- *
  * \brief The ListStackSetsResponse class provides an interace for CloudFormation ListStackSets responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ListStackSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListStackSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListStackSetsResponse::ListStackSetsResponse(
         const ListStackSetsRequest &request,
@@ -77,6 +72,9 @@ ListStackSetsResponse::ListStackSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListStackSetsRequest * ListStackSetsResponse::request() const
 {
     Q_D(const ListStackSetsResponse);
@@ -84,9 +82,8 @@ const ListStackSetsRequest * ListStackSetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation ListStackSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation ListStackSets \a response.
  */
 void ListStackSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ListStackSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::ListStackSetsResponsePrivate
+ * \brief The ListStackSetsResponsePrivate class provides private implementation for ListStackSetsResponse.
  * \internal
  *
- * \class ListStackSetsResponsePrivate
- *
- * \brief Private implementation for ListStackSetsResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStackSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListStackSetsResponse instance.
+ * Constructs a ListStackSetsResponsePrivate object with public implementation \a q.
  */
 ListStackSetsResponsePrivate::ListStackSetsResponsePrivate(
     ListStackSetsResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ ListStackSetsResponsePrivate::ListStackSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation ListStackSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation ListStackSets response element from \a xml.
  */
 void ListStackSetsResponsePrivate::parseListStackSetsResponse(QXmlStreamReader &xml)
 {

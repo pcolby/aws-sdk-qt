@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeListenersResponse : public ElasticLoadBalancingv2Resp
 public:
     DescribeListenersResponse(const DescribeListenersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeListenersRequest * request() const;
+    virtual const DescribeListenersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeListenersResponse)

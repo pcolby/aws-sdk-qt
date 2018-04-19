@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEngineDefaultClusterParametersRequest
  */
 
 /*!
- *
- * Constructs a DescribeEngineDefaultClusterParametersRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEngineDefaultClusterParametersRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeEngineDefaultClusterParametersRequestPrivate::DescribeEngineDefaultClusterParametersRequestPrivate(
     const RDSRequest::Action action, DescribeEngineDefaultClusterParametersRequest * const q)

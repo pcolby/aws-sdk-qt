@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateNotebookInstanceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateNotebookInstanceRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a UpdateNotebookInstanceRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 UpdateNotebookInstanceRequestPrivate::UpdateNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, UpdateNotebookInstanceRequest * const q)

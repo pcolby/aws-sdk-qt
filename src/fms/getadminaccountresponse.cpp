@@ -29,10 +29,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::GetAdminAccountResponse
- *
  * \brief The GetAdminAccountResponse class provides an interace for FMS GetAdminAccount responses.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -45,11 +44,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new GetAdminAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAdminAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAdminAccountResponse::GetAdminAccountResponse(
         const GetAdminAccountRequest &request,
@@ -61,6 +56,9 @@ GetAdminAccountResponse::GetAdminAccountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAdminAccountRequest * GetAdminAccountResponse::request() const
 {
     Q_D(const GetAdminAccountResponse);
@@ -68,9 +66,8 @@ const GetAdminAccountRequest * GetAdminAccountResponse::request() const
 }
 
 /*!
- * @brief  Parse a FMS GetAdminAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful FMS GetAdminAccount \a response.
  */
 void GetAdminAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void GetAdminAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::FMS::GetAdminAccountResponsePrivate
+ * \brief The GetAdminAccountResponsePrivate class provides private implementation for GetAdminAccountResponse.
  * \internal
  *
- * \class GetAdminAccountResponsePrivate
- *
- * \brief Private implementation for GetAdminAccountResponse.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAdminAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAdminAccountResponse instance.
+ * Constructs a GetAdminAccountResponsePrivate object with public implementation \a q.
  */
 GetAdminAccountResponsePrivate::GetAdminAccountResponsePrivate(
     GetAdminAccountResponse * const q) : FMSResponsePrivate(q)
@@ -101,9 +94,7 @@ GetAdminAccountResponsePrivate::GetAdminAccountResponsePrivate(
 }
 
 /*!
- * @brief  Parse an FMS GetAdminAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a FMS GetAdminAccount response element from \a xml.
  */
 void GetAdminAccountResponsePrivate::parseGetAdminAccountResponse(QXmlStreamReader &xml)
 {

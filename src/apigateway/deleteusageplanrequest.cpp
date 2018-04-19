@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteUsagePlanRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteUsagePlanRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteUsagePlanRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteUsagePlanRequestPrivate::DeleteUsagePlanRequestPrivate(
     const APIGatewayRequest::Action action, DeleteUsagePlanRequest * const q)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * StartDeviceSyncRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a StartDeviceSyncRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a StartDeviceSyncRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 StartDeviceSyncRequestPrivate::StartDeviceSyncRequestPrivate(
     const AlexaForBusinessRequest::Action action, StartDeviceSyncRequest * const q)

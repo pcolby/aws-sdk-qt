@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeletePartitionResponse : public GlueResponse {
 public:
     DeletePartitionResponse(const DeletePartitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeletePartitionRequest * request() const;
+    virtual const DeletePartitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeletePartitionResponse)

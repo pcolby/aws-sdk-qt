@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateAssumeRolePolicyResponse
- *
  * \brief The UpdateAssumeRolePolicyResponse class provides an interace for IAM UpdateAssumeRolePolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateAssumeRolePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAssumeRolePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAssumeRolePolicyResponse::UpdateAssumeRolePolicyResponse(
         const UpdateAssumeRolePolicyRequest &request,
@@ -120,6 +115,9 @@ UpdateAssumeRolePolicyResponse::UpdateAssumeRolePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAssumeRolePolicyRequest * UpdateAssumeRolePolicyResponse::request() const
 {
     Q_D(const UpdateAssumeRolePolicyResponse);
@@ -127,9 +125,8 @@ const UpdateAssumeRolePolicyRequest * UpdateAssumeRolePolicyResponse::request() 
 }
 
 /*!
- * @brief  Parse a IAM UpdateAssumeRolePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateAssumeRolePolicy \a response.
  */
 void UpdateAssumeRolePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateAssumeRolePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateAssumeRolePolicyResponsePrivate
+ * \brief The UpdateAssumeRolePolicyResponsePrivate class provides private implementation for UpdateAssumeRolePolicyResponse.
  * \internal
  *
- * \class UpdateAssumeRolePolicyResponsePrivate
- *
- * \brief Private implementation for UpdateAssumeRolePolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAssumeRolePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAssumeRolePolicyResponse instance.
+ * Constructs a UpdateAssumeRolePolicyResponsePrivate object with public implementation \a q.
  */
 UpdateAssumeRolePolicyResponsePrivate::UpdateAssumeRolePolicyResponsePrivate(
     UpdateAssumeRolePolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateAssumeRolePolicyResponsePrivate::UpdateAssumeRolePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM UpdateAssumeRolePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateAssumeRolePolicy response element from \a xml.
  */
 void UpdateAssumeRolePolicyResponsePrivate::parseUpdateAssumeRolePolicyResponse(QXmlStreamReader &xml)
 {

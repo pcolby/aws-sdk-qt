@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCustomVerificationEmailTemplateResponse : public SESRespon
 public:
     GetCustomVerificationEmailTemplateResponse(const GetCustomVerificationEmailTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCustomVerificationEmailTemplateRequest * request() const;
+    virtual const GetCustomVerificationEmailTemplateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCustomVerificationEmailTemplateResponse)

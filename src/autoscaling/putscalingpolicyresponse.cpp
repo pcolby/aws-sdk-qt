@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::PutScalingPolicyResponse
- *
  * \brief The PutScalingPolicyResponse class provides an interace for AutoScaling PutScalingPolicy responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new PutScalingPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutScalingPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutScalingPolicyResponse::PutScalingPolicyResponse(
         const PutScalingPolicyRequest &request,
@@ -60,6 +55,9 @@ PutScalingPolicyResponse::PutScalingPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutScalingPolicyRequest * PutScalingPolicyResponse::request() const
 {
     Q_D(const PutScalingPolicyResponse);
@@ -67,9 +65,8 @@ const PutScalingPolicyRequest * PutScalingPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling PutScalingPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling PutScalingPolicy \a response.
  */
 void PutScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void PutScalingPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::PutScalingPolicyResponsePrivate
+ * \brief The PutScalingPolicyResponsePrivate class provides private implementation for PutScalingPolicyResponse.
  * \internal
  *
- * \class PutScalingPolicyResponsePrivate
- *
- * \brief Private implementation for PutScalingPolicyResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutScalingPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutScalingPolicyResponse instance.
+ * Constructs a PutScalingPolicyResponsePrivate object with public implementation \a q.
  */
 PutScalingPolicyResponsePrivate::PutScalingPolicyResponsePrivate(
     PutScalingPolicyResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ PutScalingPolicyResponsePrivate::PutScalingPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling PutScalingPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling PutScalingPolicy response element from \a xml.
  */
 void PutScalingPolicyResponsePrivate::parsePutScalingPolicyResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DeleteNotebookInstanceResponse
- *
  * \brief The DeleteNotebookInstanceResponse class provides an interace for SageMaker DeleteNotebookInstance responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::deleteNotebookInstance
  */
 
 /*!
- * @brief  Constructs a new DeleteNotebookInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNotebookInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNotebookInstanceResponse::DeleteNotebookInstanceResponse(
         const DeleteNotebookInstanceRequest &request,
@@ -55,6 +50,9 @@ DeleteNotebookInstanceResponse::DeleteNotebookInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNotebookInstanceRequest * DeleteNotebookInstanceResponse::request() const
 {
     Q_D(const DeleteNotebookInstanceResponse);
@@ -62,9 +60,8 @@ const DeleteNotebookInstanceRequest * DeleteNotebookInstanceResponse::request() 
 }
 
 /*!
- * @brief  Parse a SageMaker DeleteNotebookInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker DeleteNotebookInstance \a response.
  */
 void DeleteNotebookInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteNotebookInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::DeleteNotebookInstanceResponsePrivate
+ * \brief The DeleteNotebookInstanceResponsePrivate class provides private implementation for DeleteNotebookInstanceResponse.
  * \internal
  *
- * \class DeleteNotebookInstanceResponsePrivate
- *
- * \brief Private implementation for DeleteNotebookInstanceResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNotebookInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNotebookInstanceResponse instance.
+ * Constructs a DeleteNotebookInstanceResponsePrivate object with public implementation \a q.
  */
 DeleteNotebookInstanceResponsePrivate::DeleteNotebookInstanceResponsePrivate(
     DeleteNotebookInstanceResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteNotebookInstanceResponsePrivate::DeleteNotebookInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker DeleteNotebookInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker DeleteNotebookInstance response element from \a xml.
  */
 void DeleteNotebookInstanceResponsePrivate::parseDeleteNotebookInstanceResponse(QXmlStreamReader &xml)
 {

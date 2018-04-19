@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetRegexMatchSetResponse
- *
  * \brief The GetRegexMatchSetResponse class provides an interace for WAFRegional GetRegexMatchSet responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetRegexMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRegexMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRegexMatchSetResponse::GetRegexMatchSetResponse(
         const GetRegexMatchSetRequest &request,
@@ -62,6 +57,9 @@ GetRegexMatchSetResponse::GetRegexMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRegexMatchSetRequest * GetRegexMatchSetResponse::request() const
 {
     Q_D(const GetRegexMatchSetResponse);
@@ -69,9 +67,8 @@ const GetRegexMatchSetRequest * GetRegexMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional GetRegexMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional GetRegexMatchSet \a response.
  */
 void GetRegexMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetRegexMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::GetRegexMatchSetResponsePrivate
+ * \brief The GetRegexMatchSetResponsePrivate class provides private implementation for GetRegexMatchSetResponse.
  * \internal
  *
- * \class GetRegexMatchSetResponsePrivate
- *
- * \brief Private implementation for GetRegexMatchSetResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRegexMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRegexMatchSetResponse instance.
+ * Constructs a GetRegexMatchSetResponsePrivate object with public implementation \a q.
  */
 GetRegexMatchSetResponsePrivate::GetRegexMatchSetResponsePrivate(
     GetRegexMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ GetRegexMatchSetResponsePrivate::GetRegexMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional GetRegexMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional GetRegexMatchSet response element from \a xml.
  */
 void GetRegexMatchSetResponsePrivate::parseGetRegexMatchSetResponse(QXmlStreamReader &xml)
 {

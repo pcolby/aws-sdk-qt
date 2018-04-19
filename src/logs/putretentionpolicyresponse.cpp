@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutRetentionPolicyResponse
- *
  * \brief The PutRetentionPolicyResponse class provides an interace for CloudWatchLogs PutRetentionPolicy responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutRetentionPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutRetentionPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutRetentionPolicyResponse::PutRetentionPolicyResponse(
         const PutRetentionPolicyRequest &request,
@@ -84,6 +79,9 @@ PutRetentionPolicyResponse::PutRetentionPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutRetentionPolicyRequest * PutRetentionPolicyResponse::request() const
 {
     Q_D(const PutRetentionPolicyResponse);
@@ -91,9 +89,8 @@ const PutRetentionPolicyRequest * PutRetentionPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs PutRetentionPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs PutRetentionPolicy \a response.
  */
 void PutRetentionPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void PutRetentionPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::PutRetentionPolicyResponsePrivate
+ * \brief The PutRetentionPolicyResponsePrivate class provides private implementation for PutRetentionPolicyResponse.
  * \internal
  *
- * \class PutRetentionPolicyResponsePrivate
- *
- * \brief Private implementation for PutRetentionPolicyResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRetentionPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutRetentionPolicyResponse instance.
+ * Constructs a PutRetentionPolicyResponsePrivate object with public implementation \a q.
  */
 PutRetentionPolicyResponsePrivate::PutRetentionPolicyResponsePrivate(
     PutRetentionPolicyResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ PutRetentionPolicyResponsePrivate::PutRetentionPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs PutRetentionPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs PutRetentionPolicy response element from \a xml.
  */
 void PutRetentionPolicyResponsePrivate::parsePutRetentionPolicyResponse(QXmlStreamReader &xml)
 {

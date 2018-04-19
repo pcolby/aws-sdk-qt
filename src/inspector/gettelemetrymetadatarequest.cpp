@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetTelemetryMetadataRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetTelemetryMetadataRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a GetTelemetryMetadataRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 GetTelemetryMetadataRequestPrivate::GetTelemetryMetadataRequestPrivate(
     const InspectorRequest::Action action, GetTelemetryMetadataRequest * const q)

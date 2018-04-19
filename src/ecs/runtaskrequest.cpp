@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * RunTaskRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a RunTaskRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a RunTaskRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 RunTaskRequestPrivate::RunTaskRequestPrivate(
     const ECSRequest::Action action, RunTaskRequest * const q)

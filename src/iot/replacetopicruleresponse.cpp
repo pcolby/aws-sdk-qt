@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ReplaceTopicRuleResponse
- *
  * \brief The ReplaceTopicRuleResponse class provides an interace for IoT ReplaceTopicRule responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ReplaceTopicRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReplaceTopicRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 ReplaceTopicRuleResponse::ReplaceTopicRuleResponse(
         const ReplaceTopicRuleRequest &request,
@@ -66,6 +61,9 @@ ReplaceTopicRuleResponse::ReplaceTopicRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReplaceTopicRuleRequest * ReplaceTopicRuleResponse::request() const
 {
     Q_D(const ReplaceTopicRuleResponse);
@@ -73,9 +71,8 @@ const ReplaceTopicRuleRequest * ReplaceTopicRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ReplaceTopicRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ReplaceTopicRule \a response.
  */
 void ReplaceTopicRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ReplaceTopicRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ReplaceTopicRuleResponsePrivate
+ * \brief The ReplaceTopicRuleResponsePrivate class provides private implementation for ReplaceTopicRuleResponse.
  * \internal
  *
- * \class ReplaceTopicRuleResponsePrivate
- *
- * \brief Private implementation for ReplaceTopicRuleResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReplaceTopicRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReplaceTopicRuleResponse instance.
+ * Constructs a ReplaceTopicRuleResponsePrivate object with public implementation \a q.
  */
 ReplaceTopicRuleResponsePrivate::ReplaceTopicRuleResponsePrivate(
     ReplaceTopicRuleResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ReplaceTopicRuleResponsePrivate::ReplaceTopicRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ReplaceTopicRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ReplaceTopicRule response element from \a xml.
  */
 void ReplaceTopicRuleResponsePrivate::parseReplaceTopicRuleResponse(QXmlStreamReader &xml)
 {

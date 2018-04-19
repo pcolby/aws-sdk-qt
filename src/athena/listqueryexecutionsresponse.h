@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListQueryExecutionsResponse : public AthenaResponse {
 public:
     ListQueryExecutionsResponse(const ListQueryExecutionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListQueryExecutionsRequest * request() const;
+    virtual const ListQueryExecutionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListQueryExecutionsResponse)

@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * ListNamedQueriesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListNamedQueriesRequestPrivate object for Athena \a action with,
- * public implementation \a q.
+ * Constructs a ListNamedQueriesRequestPrivate object for Athena \a action,
+ * with public implementation \a q.
  */
 ListNamedQueriesRequestPrivate::ListNamedQueriesRequestPrivate(
     const AthenaRequest::Action action, ListNamedQueriesRequest * const q)

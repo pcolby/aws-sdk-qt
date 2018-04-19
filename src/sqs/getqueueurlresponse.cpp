@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::GetQueueUrlResponse
- *
  * \brief The GetQueueUrlResponse class provides an interace for SQS GetQueueUrl responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new GetQueueUrlResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetQueueUrlResponse object for \a reply to \a request, with parent \a parent.
  */
 GetQueueUrlResponse::GetQueueUrlResponse(
         const GetQueueUrlRequest &request,
@@ -121,6 +116,9 @@ GetQueueUrlResponse::GetQueueUrlResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetQueueUrlRequest * GetQueueUrlResponse::request() const
 {
     Q_D(const GetQueueUrlResponse);
@@ -128,9 +126,8 @@ const GetQueueUrlRequest * GetQueueUrlResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS GetQueueUrl response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS GetQueueUrl \a response.
  */
 void GetQueueUrlResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void GetQueueUrlResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::GetQueueUrlResponsePrivate
+ * \brief The GetQueueUrlResponsePrivate class provides private implementation for GetQueueUrlResponse.
  * \internal
  *
- * \class GetQueueUrlResponsePrivate
- *
- * \brief Private implementation for GetQueueUrlResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQueueUrlResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetQueueUrlResponse instance.
+ * Constructs a GetQueueUrlResponsePrivate object with public implementation \a q.
  */
 GetQueueUrlResponsePrivate::GetQueueUrlResponsePrivate(
     GetQueueUrlResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ GetQueueUrlResponsePrivate::GetQueueUrlResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS GetQueueUrlResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS GetQueueUrl response element from \a xml.
  */
 void GetQueueUrlResponsePrivate::parseGetQueueUrlResponse(QXmlStreamReader &xml)
 {

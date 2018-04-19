@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateAuthorityRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteCertificateAuthorityRequestPrivate object for ACMPCA \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCertificateAuthorityRequestPrivate object for ACMPCA \a action,
+ * with public implementation \a q.
  */
 DeleteCertificateAuthorityRequestPrivate::DeleteCertificateAuthorityRequestPrivate(
     const ACMPCARequest::Action action, DeleteCertificateAuthorityRequest * const q)

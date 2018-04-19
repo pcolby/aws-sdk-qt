@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeletePlacementGroupRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeletePlacementGroupRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeletePlacementGroupRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeletePlacementGroupRequestPrivate::DeletePlacementGroupRequestPrivate(
     const EC2Request::Action action, DeletePlacementGroupRequest * const q)

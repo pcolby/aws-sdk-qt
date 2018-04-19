@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetFindingsStatisticsResponse
- *
  * \brief The GetFindingsStatisticsResponse class provides an interace for GuardDuty GetFindingsStatistics responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getFindingsStatistics
  */
 
 /*!
- * @brief  Constructs a new GetFindingsStatisticsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFindingsStatisticsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFindingsStatisticsResponse::GetFindingsStatisticsResponse(
         const GetFindingsStatisticsRequest &request,
@@ -55,6 +50,9 @@ GetFindingsStatisticsResponse::GetFindingsStatisticsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFindingsStatisticsRequest * GetFindingsStatisticsResponse::request() const
 {
     Q_D(const GetFindingsStatisticsResponse);
@@ -62,9 +60,8 @@ const GetFindingsStatisticsRequest * GetFindingsStatisticsResponse::request() co
 }
 
 /*!
- * @brief  Parse a GuardDuty GetFindingsStatistics response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty GetFindingsStatistics \a response.
  */
 void GetFindingsStatisticsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetFindingsStatisticsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::GetFindingsStatisticsResponsePrivate
+ * \brief The GetFindingsStatisticsResponsePrivate class provides private implementation for GetFindingsStatisticsResponse.
  * \internal
  *
- * \class GetFindingsStatisticsResponsePrivate
- *
- * \brief Private implementation for GetFindingsStatisticsResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFindingsStatisticsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFindingsStatisticsResponse instance.
+ * Constructs a GetFindingsStatisticsResponsePrivate object with public implementation \a q.
  */
 GetFindingsStatisticsResponsePrivate::GetFindingsStatisticsResponsePrivate(
     GetFindingsStatisticsResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ GetFindingsStatisticsResponsePrivate::GetFindingsStatisticsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty GetFindingsStatisticsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty GetFindingsStatistics response element from \a xml.
  */
 void GetFindingsStatisticsResponsePrivate::parseGetFindingsStatisticsResponse(QXmlStreamReader &xml)
 {

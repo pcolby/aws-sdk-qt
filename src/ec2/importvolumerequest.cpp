@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ImportVolumeRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ImportVolumeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ImportVolumeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ImportVolumeRequestPrivate::ImportVolumeRequestPrivate(
     const EC2Request::Action action, ImportVolumeRequest * const q)

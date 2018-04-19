@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeLaunchTemplateVersionsResponse
- *
  * \brief The DescribeLaunchTemplateVersionsResponse class provides an interace for EC2 DescribeLaunchTemplateVersions responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeLaunchTemplateVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLaunchTemplateVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLaunchTemplateVersionsResponse::DescribeLaunchTemplateVersionsResponse(
         const DescribeLaunchTemplateVersionsRequest &request,
@@ -59,6 +54,9 @@ DescribeLaunchTemplateVersionsResponse::DescribeLaunchTemplateVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLaunchTemplateVersionsRequest * DescribeLaunchTemplateVersionsResponse::request() const
 {
     Q_D(const DescribeLaunchTemplateVersionsResponse);
@@ -66,9 +64,8 @@ const DescribeLaunchTemplateVersionsRequest * DescribeLaunchTemplateVersionsResp
 }
 
 /*!
- * @brief  Parse a EC2 DescribeLaunchTemplateVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeLaunchTemplateVersions \a response.
  */
 void DescribeLaunchTemplateVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeLaunchTemplateVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeLaunchTemplateVersionsResponsePrivate
+ * \brief The DescribeLaunchTemplateVersionsResponsePrivate class provides private implementation for DescribeLaunchTemplateVersionsResponse.
  * \internal
  *
- * \class DescribeLaunchTemplateVersionsResponsePrivate
- *
- * \brief Private implementation for DescribeLaunchTemplateVersionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLaunchTemplateVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLaunchTemplateVersionsResponse instance.
+ * Constructs a DescribeLaunchTemplateVersionsResponsePrivate object with public implementation \a q.
  */
 DescribeLaunchTemplateVersionsResponsePrivate::DescribeLaunchTemplateVersionsResponsePrivate(
     DescribeLaunchTemplateVersionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeLaunchTemplateVersionsResponsePrivate::DescribeLaunchTemplateVersionsRes
 }
 
 /*!
- * @brief  Parse an EC2 DescribeLaunchTemplateVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeLaunchTemplateVersions response element from \a xml.
  */
 void DescribeLaunchTemplateVersionsResponsePrivate::parseDescribeLaunchTemplateVersionsResponse(QXmlStreamReader &xml)
 {

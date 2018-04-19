@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminUpdateUserAttributesResponse
- *
  * \brief The AdminUpdateUserAttributesResponse class provides an interace for CognitoIdentityProvider AdminUpdateUserAttributes responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminUpdateUserAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminUpdateUserAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminUpdateUserAttributesResponse::AdminUpdateUserAttributesResponse(
         const AdminUpdateUserAttributesRequest &request,
@@ -65,6 +60,9 @@ AdminUpdateUserAttributesResponse::AdminUpdateUserAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminUpdateUserAttributesRequest * AdminUpdateUserAttributesResponse::request() const
 {
     Q_D(const AdminUpdateUserAttributesResponse);
@@ -72,9 +70,8 @@ const AdminUpdateUserAttributesRequest * AdminUpdateUserAttributesResponse::requ
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminUpdateUserAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminUpdateUserAttributes \a response.
  */
 void AdminUpdateUserAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminUpdateUserAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminUpdateUserAttributesResponsePrivate
+ * \brief The AdminUpdateUserAttributesResponsePrivate class provides private implementation for AdminUpdateUserAttributesResponse.
  * \internal
  *
- * \class AdminUpdateUserAttributesResponsePrivate
- *
- * \brief Private implementation for AdminUpdateUserAttributesResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminUpdateUserAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminUpdateUserAttributesResponse instance.
+ * Constructs a AdminUpdateUserAttributesResponsePrivate object with public implementation \a q.
  */
 AdminUpdateUserAttributesResponsePrivate::AdminUpdateUserAttributesResponsePrivate(
     AdminUpdateUserAttributesResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminUpdateUserAttributesResponsePrivate::AdminUpdateUserAttributesResponsePriva
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminUpdateUserAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminUpdateUserAttributes response element from \a xml.
  */
 void AdminUpdateUserAttributesResponsePrivate::parseAdminUpdateUserAttributesResponse(QXmlStreamReader &xml)
 {

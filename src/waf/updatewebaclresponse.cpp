@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateWebACLResponse
- *
  * \brief The UpdateWebACLResponse class provides an interace for WAF UpdateWebACL responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateWebACLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateWebACLResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateWebACLResponse::UpdateWebACLResponse(
         const UpdateWebACLRequest &request,
@@ -60,6 +55,9 @@ UpdateWebACLResponse::UpdateWebACLResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateWebACLRequest * UpdateWebACLResponse::request() const
 {
     Q_D(const UpdateWebACLResponse);
@@ -67,9 +65,8 @@ const UpdateWebACLRequest * UpdateWebACLResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF UpdateWebACL response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF UpdateWebACL \a response.
  */
 void UpdateWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::UpdateWebACLResponsePrivate
+ * \brief The UpdateWebACLResponsePrivate class provides private implementation for UpdateWebACLResponse.
  * \internal
  *
- * \class UpdateWebACLResponsePrivate
- *
- * \brief Private implementation for UpdateWebACLResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateWebACLResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateWebACLResponse instance.
+ * Constructs a UpdateWebACLResponsePrivate object with public implementation \a q.
  */
 UpdateWebACLResponsePrivate::UpdateWebACLResponsePrivate(
     UpdateWebACLResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateWebACLResponsePrivate::UpdateWebACLResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF UpdateWebACLResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF UpdateWebACL response element from \a xml.
  */
 void UpdateWebACLResponsePrivate::parseUpdateWebACLResponse(QXmlStreamReader &xml)
 {

@@ -55,7 +55,7 @@ namespace Batch {
  */
 
 /*!
- * Constructs a[n] BatchRequest object for Batch \a action.
+ * Constructs a BatchRequest object for Batch \a action.
  */
 BatchRequest::BatchRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new BatchRequestPrivate(action, this))
@@ -255,8 +255,8 @@ QNetworkRequest BatchRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a BatchRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a BatchRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 BatchRequestPrivate::BatchRequestPrivate(const BatchRequest::Action action, BatchRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

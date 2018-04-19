@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::RegisterContainerInstanceResponse
- *
  * \brief The RegisterContainerInstanceResponse class provides an interace for ECS RegisterContainerInstance responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new RegisterContainerInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterContainerInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterContainerInstanceResponse::RegisterContainerInstanceResponse(
         const RegisterContainerInstanceRequest &request,
@@ -72,6 +67,9 @@ RegisterContainerInstanceResponse::RegisterContainerInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterContainerInstanceRequest * RegisterContainerInstanceResponse::request() const
 {
     Q_D(const RegisterContainerInstanceResponse);
@@ -79,9 +77,8 @@ const RegisterContainerInstanceRequest * RegisterContainerInstanceResponse::requ
 }
 
 /*!
- * @brief  Parse a ECS RegisterContainerInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS RegisterContainerInstance \a response.
  */
 void RegisterContainerInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void RegisterContainerInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::RegisterContainerInstanceResponsePrivate
+ * \brief The RegisterContainerInstanceResponsePrivate class provides private implementation for RegisterContainerInstanceResponse.
  * \internal
  *
- * \class RegisterContainerInstanceResponsePrivate
- *
- * \brief Private implementation for RegisterContainerInstanceResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterContainerInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterContainerInstanceResponse instance.
+ * Constructs a RegisterContainerInstanceResponsePrivate object with public implementation \a q.
  */
 RegisterContainerInstanceResponsePrivate::RegisterContainerInstanceResponsePrivate(
     RegisterContainerInstanceResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ RegisterContainerInstanceResponsePrivate::RegisterContainerInstanceResponsePriva
 }
 
 /*!
- * @brief  Parse an ECS RegisterContainerInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS RegisterContainerInstance response element from \a xml.
  */
 void RegisterContainerInstanceResponsePrivate::parseRegisterContainerInstanceResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AssignIpv6AddressesRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a AssignIpv6AddressesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AssignIpv6AddressesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AssignIpv6AddressesRequestPrivate::AssignIpv6AddressesRequestPrivate(
     const EC2Request::Action action, AssignIpv6AddressesRequest * const q)

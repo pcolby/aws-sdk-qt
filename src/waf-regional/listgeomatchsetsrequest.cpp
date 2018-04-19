@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListGeoMatchSetsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListGeoMatchSetsRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a ListGeoMatchSetsRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 ListGeoMatchSetsRequestPrivate::ListGeoMatchSetsRequestPrivate(
     const WAFRegionalRequest::Action action, ListGeoMatchSetsRequest * const q)

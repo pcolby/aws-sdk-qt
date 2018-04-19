@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * AssociateServiceRoleToAccountRequest::respons
  */
 
 /*!
- *
- * Constructs a AssociateServiceRoleToAccountRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a AssociateServiceRoleToAccountRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 AssociateServiceRoleToAccountRequestPrivate::AssociateServiceRoleToAccountRequestPrivate(
     const GreengrassRequest::Action action, AssociateServiceRoleToAccountRequest * const q)

@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DeregisterFromWorkMailResponse
- *
  * \brief The DeregisterFromWorkMailResponse class provides an interace for WorkMail DeregisterFromWorkMail responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DeregisterFromWorkMailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterFromWorkMailResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterFromWorkMailResponse::DeregisterFromWorkMailResponse(
         const DeregisterFromWorkMailRequest &request,
@@ -88,6 +83,9 @@ DeregisterFromWorkMailResponse::DeregisterFromWorkMailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterFromWorkMailRequest * DeregisterFromWorkMailResponse::request() const
 {
     Q_D(const DeregisterFromWorkMailResponse);
@@ -95,9 +93,8 @@ const DeregisterFromWorkMailRequest * DeregisterFromWorkMailResponse::request() 
 }
 
 /*!
- * @brief  Parse a WorkMail DeregisterFromWorkMail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail DeregisterFromWorkMail \a response.
  */
 void DeregisterFromWorkMailResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DeregisterFromWorkMailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::DeregisterFromWorkMailResponsePrivate
+ * \brief The DeregisterFromWorkMailResponsePrivate class provides private implementation for DeregisterFromWorkMailResponse.
  * \internal
  *
- * \class DeregisterFromWorkMailResponsePrivate
- *
- * \brief Private implementation for DeregisterFromWorkMailResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterFromWorkMailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterFromWorkMailResponse instance.
+ * Constructs a DeregisterFromWorkMailResponsePrivate object with public implementation \a q.
  */
 DeregisterFromWorkMailResponsePrivate::DeregisterFromWorkMailResponsePrivate(
     DeregisterFromWorkMailResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ DeregisterFromWorkMailResponsePrivate::DeregisterFromWorkMailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail DeregisterFromWorkMailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail DeregisterFromWorkMail response element from \a xml.
  */
 void DeregisterFromWorkMailResponsePrivate::parseDeregisterFromWorkMailResponse(QXmlStreamReader &xml)
 {

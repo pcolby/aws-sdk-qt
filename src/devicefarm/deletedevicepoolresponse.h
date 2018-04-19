@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDevicePoolResponse : public DeviceFarmResponse {
 public:
     DeleteDevicePoolResponse(const DeleteDevicePoolRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDevicePoolRequest * request() const;
+    virtual const DeleteDevicePoolRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDevicePoolResponse)

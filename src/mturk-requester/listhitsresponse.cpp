@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListHITsResponse
- *
  * \brief The ListHITsResponse class provides an interace for MTurk ListHITs responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listHITs
  */
 
 /*!
- * @brief  Constructs a new ListHITsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListHITsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListHITsResponse::ListHITsResponse(
         const ListHITsRequest &request,
@@ -55,6 +50,9 @@ ListHITsResponse::ListHITsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListHITsRequest * ListHITsResponse::request() const
 {
     Q_D(const ListHITsResponse);
@@ -62,9 +60,8 @@ const ListHITsRequest * ListHITsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk ListHITs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk ListHITs \a response.
  */
 void ListHITsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListHITsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::ListHITsResponsePrivate
+ * \brief The ListHITsResponsePrivate class provides private implementation for ListHITsResponse.
  * \internal
  *
- * \class ListHITsResponsePrivate
- *
- * \brief Private implementation for ListHITsResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHITsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListHITsResponse instance.
+ * Constructs a ListHITsResponsePrivate object with public implementation \a q.
  */
 ListHITsResponsePrivate::ListHITsResponsePrivate(
     ListHITsResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ ListHITsResponsePrivate::ListHITsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk ListHITsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk ListHITs response element from \a xml.
  */
 void ListHITsResponsePrivate::parseListHITsResponse(QXmlStreamReader &xml)
 {

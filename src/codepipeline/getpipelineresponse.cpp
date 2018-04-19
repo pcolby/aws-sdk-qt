@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::GetPipelineResponse
- *
  * \brief The GetPipelineResponse class provides an interace for CodePipeline GetPipeline responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new GetPipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPipelineResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPipelineResponse::GetPipelineResponse(
         const GetPipelineRequest &request,
@@ -218,6 +213,9 @@ GetPipelineResponse::GetPipelineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPipelineRequest * GetPipelineResponse::request() const
 {
     Q_D(const GetPipelineResponse);
@@ -225,9 +223,8 @@ const GetPipelineRequest * GetPipelineResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodePipeline GetPipeline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline GetPipeline \a response.
  */
 void GetPipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void GetPipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::GetPipelineResponsePrivate
+ * \brief The GetPipelineResponsePrivate class provides private implementation for GetPipelineResponse.
  * \internal
  *
- * \class GetPipelineResponsePrivate
- *
- * \brief Private implementation for GetPipelineResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPipelineResponse instance.
+ * Constructs a GetPipelineResponsePrivate object with public implementation \a q.
  */
 GetPipelineResponsePrivate::GetPipelineResponsePrivate(
     GetPipelineResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ GetPipelineResponsePrivate::GetPipelineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline GetPipelineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline GetPipeline response element from \a xml.
  */
 void GetPipelineResponsePrivate::parseGetPipelineResponse(QXmlStreamReader &xml)
 {

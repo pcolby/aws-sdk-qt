@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteQueueResponse : public SQSResponse {
 public:
     DeleteQueueResponse(const DeleteQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteQueueRequest * request() const;
+    virtual const DeleteQueueRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteQueueResponse)

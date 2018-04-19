@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateWorkerBlockResponse : public MTurkResponse {
 public:
     CreateWorkerBlockResponse(const CreateWorkerBlockRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateWorkerBlockRequest * request() const;
+    virtual const CreateWorkerBlockRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateWorkerBlockResponse)

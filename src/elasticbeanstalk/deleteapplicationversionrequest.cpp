@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationVersionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteApplicationVersionRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApplicationVersionRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DeleteApplicationVersionRequestPrivate::DeleteApplicationVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeleteApplicationVersionRequest * const q)

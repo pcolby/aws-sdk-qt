@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeLaunchConfigurationsResponse
- *
  * \brief The DescribeLaunchConfigurationsResponse class provides an interace for AutoScaling DescribeLaunchConfigurations responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeLaunchConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLaunchConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLaunchConfigurationsResponse::DescribeLaunchConfigurationsResponse(
         const DescribeLaunchConfigurationsRequest &request,
@@ -60,6 +55,9 @@ DescribeLaunchConfigurationsResponse::DescribeLaunchConfigurationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLaunchConfigurationsRequest * DescribeLaunchConfigurationsResponse::request() const
 {
     Q_D(const DescribeLaunchConfigurationsResponse);
@@ -67,9 +65,8 @@ const DescribeLaunchConfigurationsRequest * DescribeLaunchConfigurationsResponse
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeLaunchConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeLaunchConfigurations \a response.
  */
 void DescribeLaunchConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeLaunchConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeLaunchConfigurationsResponsePrivate
+ * \brief The DescribeLaunchConfigurationsResponsePrivate class provides private implementation for DescribeLaunchConfigurationsResponse.
  * \internal
  *
- * \class DescribeLaunchConfigurationsResponsePrivate
- *
- * \brief Private implementation for DescribeLaunchConfigurationsResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLaunchConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLaunchConfigurationsResponse instance.
+ * Constructs a DescribeLaunchConfigurationsResponsePrivate object with public implementation \a q.
  */
 DescribeLaunchConfigurationsResponsePrivate::DescribeLaunchConfigurationsResponsePrivate(
     DescribeLaunchConfigurationsResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeLaunchConfigurationsResponsePrivate::DescribeLaunchConfigurationsRespons
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeLaunchConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeLaunchConfigurations response element from \a xml.
  */
 void DescribeLaunchConfigurationsResponsePrivate::parseDescribeLaunchConfigurationsResponse(QXmlStreamReader &xml)
 {

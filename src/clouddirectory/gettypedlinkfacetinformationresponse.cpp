@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetTypedLinkFacetInformationResponse
- *
  * \brief The GetTypedLinkFacetInformationResponse class provides an interace for CloudDirectory GetTypedLinkFacetInformation responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetTypedLinkFacetInformationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTypedLinkFacetInformationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTypedLinkFacetInformationResponse::GetTypedLinkFacetInformationResponse(
         const GetTypedLinkFacetInformationRequest &request,
@@ -62,6 +57,9 @@ GetTypedLinkFacetInformationResponse::GetTypedLinkFacetInformationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTypedLinkFacetInformationRequest * GetTypedLinkFacetInformationResponse::request() const
 {
     Q_D(const GetTypedLinkFacetInformationResponse);
@@ -69,9 +67,8 @@ const GetTypedLinkFacetInformationRequest * GetTypedLinkFacetInformationResponse
 }
 
 /*!
- * @brief  Parse a CloudDirectory GetTypedLinkFacetInformation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory GetTypedLinkFacetInformation \a response.
  */
 void GetTypedLinkFacetInformationResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetTypedLinkFacetInformationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::GetTypedLinkFacetInformationResponsePrivate
+ * \brief The GetTypedLinkFacetInformationResponsePrivate class provides private implementation for GetTypedLinkFacetInformationResponse.
  * \internal
  *
- * \class GetTypedLinkFacetInformationResponsePrivate
- *
- * \brief Private implementation for GetTypedLinkFacetInformationResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTypedLinkFacetInformationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTypedLinkFacetInformationResponse instance.
+ * Constructs a GetTypedLinkFacetInformationResponsePrivate object with public implementation \a q.
  */
 GetTypedLinkFacetInformationResponsePrivate::GetTypedLinkFacetInformationResponsePrivate(
     GetTypedLinkFacetInformationResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ GetTypedLinkFacetInformationResponsePrivate::GetTypedLinkFacetInformationRespons
 }
 
 /*!
- * @brief  Parse an CloudDirectory GetTypedLinkFacetInformationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory GetTypedLinkFacetInformation response element from \a xml.
  */
 void GetTypedLinkFacetInformationResponsePrivate::parseGetTypedLinkFacetInformationResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteMembersRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteMembersRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a DeleteMembersRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 DeleteMembersRequestPrivate::DeleteMembersRequestPrivate(
     const GuardDutyRequest::Action action, DeleteMembersRequest * const q)

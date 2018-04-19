@@ -135,9 +135,8 @@ QtAws::Core::AwsAbstractResponse * UpdateEnvironmentMembershipRequest::response(
  */
 
 /*!
- *
- * Constructs a UpdateEnvironmentMembershipRequestPrivate object for Cloud9 \a action with,
- * public implementation \a q.
+ * Constructs a UpdateEnvironmentMembershipRequestPrivate object for Cloud9 \a action,
+ * with public implementation \a q.
  */
 UpdateEnvironmentMembershipRequestPrivate::UpdateEnvironmentMembershipRequestPrivate(
     const Cloud9Request::Action action, UpdateEnvironmentMembershipRequest * const q)

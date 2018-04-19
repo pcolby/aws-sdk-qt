@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a TagResourceRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a TagResourceRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const DAXRequest::Action action, TagResourceRequest * const q)

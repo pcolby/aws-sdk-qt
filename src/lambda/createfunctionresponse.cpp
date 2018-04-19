@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::CreateFunctionResponse
- *
  * \brief The CreateFunctionResponse class provides an interace for Lambda CreateFunction responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new CreateFunctionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateFunctionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateFunctionResponse::CreateFunctionResponse(
         const CreateFunctionRequest &request,
@@ -66,6 +61,9 @@ CreateFunctionResponse::CreateFunctionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateFunctionRequest * CreateFunctionResponse::request() const
 {
     Q_D(const CreateFunctionResponse);
@@ -73,9 +71,8 @@ const CreateFunctionRequest * CreateFunctionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda CreateFunction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda CreateFunction \a response.
  */
 void CreateFunctionResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateFunctionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::CreateFunctionResponsePrivate
+ * \brief The CreateFunctionResponsePrivate class provides private implementation for CreateFunctionResponse.
  * \internal
  *
- * \class CreateFunctionResponsePrivate
- *
- * \brief Private implementation for CreateFunctionResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFunctionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateFunctionResponse instance.
+ * Constructs a CreateFunctionResponsePrivate object with public implementation \a q.
  */
 CreateFunctionResponsePrivate::CreateFunctionResponsePrivate(
     CreateFunctionResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateFunctionResponsePrivate::CreateFunctionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda CreateFunctionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda CreateFunction response element from \a xml.
  */
 void CreateFunctionResponsePrivate::parseCreateFunctionResponse(QXmlStreamReader &xml)
 {

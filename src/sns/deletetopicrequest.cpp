@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTopicRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteTopicRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTopicRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 DeleteTopicRequestPrivate::DeleteTopicRequestPrivate(
     const SNSRequest::Action action, DeleteTopicRequest * const q)

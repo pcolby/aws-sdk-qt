@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DescribeNotebookInstanceRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeNotebookInstanceRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a DescribeNotebookInstanceRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 DescribeNotebookInstanceRequestPrivate::DescribeNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, DescribeNotebookInstanceRequest * const q)

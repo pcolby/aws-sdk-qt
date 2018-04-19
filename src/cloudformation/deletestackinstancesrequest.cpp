@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DeleteStackInstancesRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteStackInstancesRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a DeleteStackInstancesRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 DeleteStackInstancesRequestPrivate::DeleteStackInstancesRequestPrivate(
     const CloudFormationRequest::Action action, DeleteStackInstancesRequest * const q)

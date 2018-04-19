@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeKeyPairsResponse
- *
  * \brief The DescribeKeyPairsResponse class provides an interace for EC2 DescribeKeyPairs responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeKeyPairsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeKeyPairsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeKeyPairsResponse::DescribeKeyPairsResponse(
         const DescribeKeyPairsRequest &request,
@@ -59,6 +54,9 @@ DescribeKeyPairsResponse::DescribeKeyPairsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeKeyPairsRequest * DescribeKeyPairsResponse::request() const
 {
     Q_D(const DescribeKeyPairsResponse);
@@ -66,9 +64,8 @@ const DescribeKeyPairsRequest * DescribeKeyPairsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeKeyPairs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeKeyPairs \a response.
  */
 void DescribeKeyPairsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeKeyPairsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeKeyPairsResponsePrivate
+ * \brief The DescribeKeyPairsResponsePrivate class provides private implementation for DescribeKeyPairsResponse.
  * \internal
  *
- * \class DescribeKeyPairsResponsePrivate
- *
- * \brief Private implementation for DescribeKeyPairsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeKeyPairsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeKeyPairsResponse instance.
+ * Constructs a DescribeKeyPairsResponsePrivate object with public implementation \a q.
  */
 DescribeKeyPairsResponsePrivate::DescribeKeyPairsResponsePrivate(
     DescribeKeyPairsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeKeyPairsResponsePrivate::DescribeKeyPairsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeKeyPairsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeKeyPairs response element from \a xml.
  */
 void DescribeKeyPairsResponsePrivate::parseDescribeKeyPairsResponse(QXmlStreamReader &xml)
 {

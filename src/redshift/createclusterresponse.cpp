@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateClusterResponse
- *
  * \brief The CreateClusterResponse class provides an interace for Redshift CreateCluster responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateClusterResponse::CreateClusterResponse(
         const CreateClusterRequest &request,
@@ -85,6 +80,9 @@ CreateClusterResponse::CreateClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateClusterRequest * CreateClusterResponse::request() const
 {
     Q_D(const CreateClusterResponse);
@@ -92,9 +90,8 @@ const CreateClusterRequest * CreateClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a Redshift CreateCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift CreateCluster \a response.
  */
 void CreateClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void CreateClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::CreateClusterResponsePrivate
+ * \brief The CreateClusterResponsePrivate class provides private implementation for CreateClusterResponse.
  * \internal
  *
- * \class CreateClusterResponsePrivate
- *
- * \brief Private implementation for CreateClusterResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateClusterResponse instance.
+ * Constructs a CreateClusterResponsePrivate object with public implementation \a q.
  */
 CreateClusterResponsePrivate::CreateClusterResponsePrivate(
     CreateClusterResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ CreateClusterResponsePrivate::CreateClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift CreateClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift CreateCluster response element from \a xml.
  */
 void CreateClusterResponsePrivate::parseCreateClusterResponse(QXmlStreamReader &xml)
 {

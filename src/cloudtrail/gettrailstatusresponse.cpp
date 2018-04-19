@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::GetTrailStatusResponse
- *
  * \brief The GetTrailStatusResponse class provides an interace for CloudTrail GetTrailStatus responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new GetTrailStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTrailStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTrailStatusResponse::GetTrailStatusResponse(
         const GetTrailStatusRequest &request,
@@ -78,6 +73,9 @@ GetTrailStatusResponse::GetTrailStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTrailStatusRequest * GetTrailStatusResponse::request() const
 {
     Q_D(const GetTrailStatusResponse);
@@ -85,9 +83,8 @@ const GetTrailStatusRequest * GetTrailStatusResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail GetTrailStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail GetTrailStatus \a response.
  */
 void GetTrailStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void GetTrailStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::GetTrailStatusResponsePrivate
+ * \brief The GetTrailStatusResponsePrivate class provides private implementation for GetTrailStatusResponse.
  * \internal
  *
- * \class GetTrailStatusResponsePrivate
- *
- * \brief Private implementation for GetTrailStatusResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTrailStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTrailStatusResponse instance.
+ * Constructs a GetTrailStatusResponsePrivate object with public implementation \a q.
  */
 GetTrailStatusResponsePrivate::GetTrailStatusResponsePrivate(
     GetTrailStatusResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ GetTrailStatusResponsePrivate::GetTrailStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail GetTrailStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail GetTrailStatus response element from \a xml.
  */
 void GetTrailStatusResponsePrivate::parseGetTrailStatusResponse(QXmlStreamReader &xml)
 {

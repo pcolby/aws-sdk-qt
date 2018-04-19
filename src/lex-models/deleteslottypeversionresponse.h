@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSlotTypeVersionResponse : public LexModelBuildingServic
 public:
     DeleteSlotTypeVersionResponse(const DeleteSlotTypeVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSlotTypeVersionRequest * request() const;
+    virtual const DeleteSlotTypeVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSlotTypeVersionResponse)

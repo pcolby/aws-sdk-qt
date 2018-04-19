@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::RegisterThingResponse
- *
  * \brief The RegisterThingResponse class provides an interace for IoT RegisterThing responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new RegisterThingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterThingResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterThingResponse::RegisterThingResponse(
         const RegisterThingRequest &request,
@@ -66,6 +61,9 @@ RegisterThingResponse::RegisterThingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterThingRequest * RegisterThingResponse::request() const
 {
     Q_D(const RegisterThingResponse);
@@ -73,9 +71,8 @@ const RegisterThingRequest * RegisterThingResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT RegisterThing response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT RegisterThing \a response.
  */
 void RegisterThingResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void RegisterThingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::RegisterThingResponsePrivate
+ * \brief The RegisterThingResponsePrivate class provides private implementation for RegisterThingResponse.
  * \internal
  *
- * \class RegisterThingResponsePrivate
- *
- * \brief Private implementation for RegisterThingResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterThingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterThingResponse instance.
+ * Constructs a RegisterThingResponsePrivate object with public implementation \a q.
  */
 RegisterThingResponsePrivate::RegisterThingResponsePrivate(
     RegisterThingResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ RegisterThingResponsePrivate::RegisterThingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT RegisterThingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT RegisterThing response element from \a xml.
  */
 void RegisterThingResponsePrivate::parseRegisterThingResponse(QXmlStreamReader &xml)
 {

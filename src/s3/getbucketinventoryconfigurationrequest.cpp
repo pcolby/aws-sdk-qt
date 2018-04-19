@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketInventoryConfigurationRequest::respo
  */
 
 /*!
- *
- * Constructs a GetBucketInventoryConfigurationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketInventoryConfigurationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketInventoryConfigurationRequestPrivate::GetBucketInventoryConfigurationRequestPrivate(
     const S3Request::Action action, GetBucketInventoryConfigurationRequest * const q)

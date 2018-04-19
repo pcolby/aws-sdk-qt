@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetReplicationJobsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetReplicationJobsRequestPrivate object for SMS \a action with,
- * public implementation \a q.
+ * Constructs a GetReplicationJobsRequestPrivate object for SMS \a action,
+ * with public implementation \a q.
  */
 GetReplicationJobsRequestPrivate::GetReplicationJobsRequestPrivate(
     const SMSRequest::Action action, GetReplicationJobsRequest * const q)

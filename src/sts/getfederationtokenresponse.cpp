@@ -29,10 +29,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::GetFederationTokenResponse
- *
  * \brief The GetFederationTokenResponse class provides an interace for STS GetFederationToken responses.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -97,11 +96,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new GetFederationTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFederationTokenResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFederationTokenResponse::GetFederationTokenResponse(
         const GetFederationTokenRequest &request,
@@ -113,6 +108,9 @@ GetFederationTokenResponse::GetFederationTokenResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFederationTokenRequest * GetFederationTokenResponse::request() const
 {
     Q_D(const GetFederationTokenResponse);
@@ -120,9 +118,8 @@ const GetFederationTokenRequest * GetFederationTokenResponse::request() const
 }
 
 /*!
- * @brief  Parse a STS GetFederationToken response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful STS GetFederationToken \a response.
  */
 void GetFederationTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -132,19 +129,15 @@ void GetFederationTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::STS::GetFederationTokenResponsePrivate
+ * \brief The GetFederationTokenResponsePrivate class provides private implementation for GetFederationTokenResponse.
  * \internal
  *
- * \class GetFederationTokenResponsePrivate
- *
- * \brief Private implementation for GetFederationTokenResponse.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFederationTokenResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFederationTokenResponse instance.
+ * Constructs a GetFederationTokenResponsePrivate object with public implementation \a q.
  */
 GetFederationTokenResponsePrivate::GetFederationTokenResponsePrivate(
     GetFederationTokenResponse * const q) : STSResponsePrivate(q)
@@ -153,9 +146,7 @@ GetFederationTokenResponsePrivate::GetFederationTokenResponsePrivate(
 }
 
 /*!
- * @brief  Parse an STS GetFederationTokenResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a STS GetFederationToken response element from \a xml.
  */
 void GetFederationTokenResponsePrivate::parseGetFederationTokenResponse(QXmlStreamReader &xml)
 {

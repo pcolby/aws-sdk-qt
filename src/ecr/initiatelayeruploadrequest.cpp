@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * InitiateLayerUploadRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a InitiateLayerUploadRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a InitiateLayerUploadRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
     const ECRRequest::Action action, InitiateLayerUploadRequest * const q)

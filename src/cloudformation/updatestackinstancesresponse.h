@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateStackInstancesResponse : public CloudFormationResponse 
 public:
     UpdateStackInstancesResponse(const UpdateStackInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateStackInstancesRequest * request() const;
+    virtual const UpdateStackInstancesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateStackInstancesResponse)

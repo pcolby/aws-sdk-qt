@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTypesResponse : public AppSyncResponse {
 public:
     ListTypesResponse(const ListTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTypesRequest * request() const;
+    virtual const ListTypesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListTypesResponse)

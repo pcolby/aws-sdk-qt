@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListFileSharesResponse
- *
  * \brief The ListFileSharesResponse class provides an interace for StorageGateway ListFileShares responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListFileSharesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListFileSharesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListFileSharesResponse::ListFileSharesResponse(
         const ListFileSharesRequest &request,
@@ -124,6 +119,9 @@ ListFileSharesResponse::ListFileSharesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListFileSharesRequest * ListFileSharesResponse::request() const
 {
     Q_D(const ListFileSharesResponse);
@@ -131,9 +129,8 @@ const ListFileSharesRequest * ListFileSharesResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway ListFileShares response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway ListFileShares \a response.
  */
 void ListFileSharesResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void ListFileSharesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::ListFileSharesResponsePrivate
+ * \brief The ListFileSharesResponsePrivate class provides private implementation for ListFileSharesResponse.
  * \internal
  *
- * \class ListFileSharesResponsePrivate
- *
- * \brief Private implementation for ListFileSharesResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFileSharesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListFileSharesResponse instance.
+ * Constructs a ListFileSharesResponsePrivate object with public implementation \a q.
  */
 ListFileSharesResponsePrivate::ListFileSharesResponsePrivate(
     ListFileSharesResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ ListFileSharesResponsePrivate::ListFileSharesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway ListFileSharesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway ListFileShares response element from \a xml.
  */
 void ListFileSharesResponsePrivate::parseListFileSharesResponse(QXmlStreamReader &xml)
 {

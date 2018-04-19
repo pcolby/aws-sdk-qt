@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateUserProfileResponse : public CodeStarResponse {
 public:
     CreateUserProfileResponse(const CreateUserProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateUserProfileRequest * request() const;
+    virtual const CreateUserProfileRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateUserProfileResponse)

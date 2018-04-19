@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteHealthCheckRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteHealthCheckRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteHealthCheckRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 DeleteHealthCheckRequestPrivate::DeleteHealthCheckRequestPrivate(
     const Route53Request::Action action, DeleteHealthCheckRequest * const q)

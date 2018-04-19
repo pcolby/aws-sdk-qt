@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteV2LoggingLevelRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteV2LoggingLevelRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeleteV2LoggingLevelRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeleteV2LoggingLevelRequestPrivate::DeleteV2LoggingLevelRequestPrivate(
     const IoTRequest::Action action, DeleteV2LoggingLevelRequest * const q)

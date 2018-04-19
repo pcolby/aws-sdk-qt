@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::IndexDocumentsResponse
- *
  * \brief The IndexDocumentsResponse class provides an interace for CloudSearch IndexDocuments responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new IndexDocumentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a IndexDocumentsResponse object for \a reply to \a request, with parent \a parent.
  */
 IndexDocumentsResponse::IndexDocumentsResponse(
         const IndexDocumentsRequest &request,
@@ -66,6 +61,9 @@ IndexDocumentsResponse::IndexDocumentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const IndexDocumentsRequest * IndexDocumentsResponse::request() const
 {
     Q_D(const IndexDocumentsResponse);
@@ -73,9 +71,8 @@ const IndexDocumentsRequest * IndexDocumentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch IndexDocuments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch IndexDocuments \a response.
  */
 void IndexDocumentsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void IndexDocumentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::IndexDocumentsResponsePrivate
+ * \brief The IndexDocumentsResponsePrivate class provides private implementation for IndexDocumentsResponse.
  * \internal
  *
- * \class IndexDocumentsResponsePrivate
- *
- * \brief Private implementation for IndexDocumentsResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IndexDocumentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public IndexDocumentsResponse instance.
+ * Constructs a IndexDocumentsResponsePrivate object with public implementation \a q.
  */
 IndexDocumentsResponsePrivate::IndexDocumentsResponsePrivate(
     IndexDocumentsResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ IndexDocumentsResponsePrivate::IndexDocumentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch IndexDocumentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch IndexDocuments response element from \a xml.
  */
 void IndexDocumentsResponsePrivate::parseIndexDocumentsResponse(QXmlStreamReader &xml)
 {

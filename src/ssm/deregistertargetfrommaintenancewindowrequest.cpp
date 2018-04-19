@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterTargetFromMaintenanceWindowRequest:
  */
 
 /*!
- *
- * Constructs a DeregisterTargetFromMaintenanceWindowRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterTargetFromMaintenanceWindowRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DeregisterTargetFromMaintenanceWindowRequestPrivate::DeregisterTargetFromMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, DeregisterTargetFromMaintenanceWindowRequest * const q)

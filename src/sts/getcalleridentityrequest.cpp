@@ -139,9 +139,8 @@ QtAws::Core::AwsAbstractResponse * GetCallerIdentityRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetCallerIdentityRequestPrivate object for STS \a action with,
- * public implementation \a q.
+ * Constructs a GetCallerIdentityRequestPrivate object for STS \a action,
+ * with public implementation \a q.
  */
 GetCallerIdentityRequestPrivate::GetCallerIdentityRequestPrivate(
     const STSRequest::Action action, GetCallerIdentityRequest * const q)

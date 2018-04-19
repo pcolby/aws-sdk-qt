@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateVPCFromHostedZoneResponse : public Route53Respons
 public:
     DisassociateVPCFromHostedZoneResponse(const DisassociateVPCFromHostedZoneRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateVPCFromHostedZoneRequest * request() const;
+    virtual const DisassociateVPCFromHostedZoneRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateVPCFromHostedZoneResponse)

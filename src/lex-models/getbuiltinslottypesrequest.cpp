@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetBuiltinSlotTypesRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetBuiltinSlotTypesRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a GetBuiltinSlotTypesRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 GetBuiltinSlotTypesRequestPrivate::GetBuiltinSlotTypesRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBuiltinSlotTypesRequest * const q)

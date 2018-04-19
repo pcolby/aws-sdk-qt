@@ -29,10 +29,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::DeletePolicyResponse
- *
  * \brief The DeletePolicyResponse class provides an interace for FMS DeletePolicy responses.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -45,11 +44,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new DeletePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeletePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeletePolicyResponse::DeletePolicyResponse(
         const DeletePolicyRequest &request,
@@ -61,6 +56,9 @@ DeletePolicyResponse::DeletePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeletePolicyRequest * DeletePolicyResponse::request() const
 {
     Q_D(const DeletePolicyResponse);
@@ -68,9 +66,8 @@ const DeletePolicyRequest * DeletePolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a FMS DeletePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful FMS DeletePolicy \a response.
  */
 void DeletePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeletePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::FMS::DeletePolicyResponsePrivate
+ * \brief The DeletePolicyResponsePrivate class provides private implementation for DeletePolicyResponse.
  * \internal
  *
- * \class DeletePolicyResponsePrivate
- *
- * \brief Private implementation for DeletePolicyResponse.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeletePolicyResponse instance.
+ * Constructs a DeletePolicyResponsePrivate object with public implementation \a q.
  */
 DeletePolicyResponsePrivate::DeletePolicyResponsePrivate(
     DeletePolicyResponse * const q) : FMSResponsePrivate(q)
@@ -101,9 +94,7 @@ DeletePolicyResponsePrivate::DeletePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an FMS DeletePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a FMS DeletePolicy response element from \a xml.
  */
 void DeletePolicyResponsePrivate::parseDeletePolicyResponse(QXmlStreamReader &xml)
 {

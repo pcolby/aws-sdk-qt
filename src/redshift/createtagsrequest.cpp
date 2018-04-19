@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CreateTagsRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a CreateTagsRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const RedshiftRequest::Action action, CreateTagsRequest * const q)

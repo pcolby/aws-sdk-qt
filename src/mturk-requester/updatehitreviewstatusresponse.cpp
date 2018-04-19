@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::UpdateHITReviewStatusResponse
- *
  * \brief The UpdateHITReviewStatusResponse class provides an interace for MTurk UpdateHITReviewStatus responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::updateHITReviewStatus
  */
 
 /*!
- * @brief  Constructs a new UpdateHITReviewStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateHITReviewStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateHITReviewStatusResponse::UpdateHITReviewStatusResponse(
         const UpdateHITReviewStatusRequest &request,
@@ -55,6 +50,9 @@ UpdateHITReviewStatusResponse::UpdateHITReviewStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateHITReviewStatusRequest * UpdateHITReviewStatusResponse::request() const
 {
     Q_D(const UpdateHITReviewStatusResponse);
@@ -62,9 +60,8 @@ const UpdateHITReviewStatusRequest * UpdateHITReviewStatusResponse::request() co
 }
 
 /*!
- * @brief  Parse a MTurk UpdateHITReviewStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk UpdateHITReviewStatus \a response.
  */
 void UpdateHITReviewStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateHITReviewStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::UpdateHITReviewStatusResponsePrivate
+ * \brief The UpdateHITReviewStatusResponsePrivate class provides private implementation for UpdateHITReviewStatusResponse.
  * \internal
  *
- * \class UpdateHITReviewStatusResponsePrivate
- *
- * \brief Private implementation for UpdateHITReviewStatusResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateHITReviewStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateHITReviewStatusResponse instance.
+ * Constructs a UpdateHITReviewStatusResponsePrivate object with public implementation \a q.
  */
 UpdateHITReviewStatusResponsePrivate::UpdateHITReviewStatusResponsePrivate(
     UpdateHITReviewStatusResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateHITReviewStatusResponsePrivate::UpdateHITReviewStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk UpdateHITReviewStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk UpdateHITReviewStatus response element from \a xml.
  */
 void UpdateHITReviewStatusResponsePrivate::parseUpdateHITReviewStatusResponse(QXmlStreamReader &xml)
 {

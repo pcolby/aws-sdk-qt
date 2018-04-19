@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreatePortfolioResponse : public ServiceCatalogResponse {
 public:
     CreatePortfolioResponse(const CreatePortfolioRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreatePortfolioRequest * request() const;
+    virtual const CreatePortfolioRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreatePortfolioResponse)

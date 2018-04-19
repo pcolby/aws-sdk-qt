@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::GetApplicationRevisionResponse
- *
  * \brief The GetApplicationRevisionResponse class provides an interace for CodeDeploy GetApplicationRevision responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new GetApplicationRevisionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetApplicationRevisionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetApplicationRevisionResponse::GetApplicationRevisionResponse(
         const GetApplicationRevisionRequest &request,
@@ -136,6 +131,9 @@ GetApplicationRevisionResponse::GetApplicationRevisionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetApplicationRevisionRequest * GetApplicationRevisionResponse::request() const
 {
     Q_D(const GetApplicationRevisionResponse);
@@ -143,9 +141,8 @@ const GetApplicationRevisionRequest * GetApplicationRevisionResponse::request() 
 }
 
 /*!
- * @brief  Parse a CodeDeploy GetApplicationRevision response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy GetApplicationRevision \a response.
  */
 void GetApplicationRevisionResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void GetApplicationRevisionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::GetApplicationRevisionResponsePrivate
+ * \brief The GetApplicationRevisionResponsePrivate class provides private implementation for GetApplicationRevisionResponse.
  * \internal
  *
- * \class GetApplicationRevisionResponsePrivate
- *
- * \brief Private implementation for GetApplicationRevisionResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApplicationRevisionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetApplicationRevisionResponse instance.
+ * Constructs a GetApplicationRevisionResponsePrivate object with public implementation \a q.
  */
 GetApplicationRevisionResponsePrivate::GetApplicationRevisionResponsePrivate(
     GetApplicationRevisionResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ GetApplicationRevisionResponsePrivate::GetApplicationRevisionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy GetApplicationRevisionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy GetApplicationRevision response element from \a xml.
  */
 void GetApplicationRevisionResponsePrivate::parseGetApplicationRevisionResponse(QXmlStreamReader &xml)
 {

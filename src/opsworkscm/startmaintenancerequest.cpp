@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * StartMaintenanceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a StartMaintenanceRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a StartMaintenanceRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 StartMaintenanceRequestPrivate::StartMaintenanceRequestPrivate(
     const OpsWorksCMRequest::Action action, StartMaintenanceRequest * const q)

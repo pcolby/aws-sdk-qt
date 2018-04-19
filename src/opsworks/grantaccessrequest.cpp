@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * GrantAccessRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GrantAccessRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a GrantAccessRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 GrantAccessRequestPrivate::GrantAccessRequestPrivate(
     const OpsWorksRequest::Action action, GrantAccessRequest * const q)

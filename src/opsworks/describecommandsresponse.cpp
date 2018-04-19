@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeCommandsResponse
- *
  * \brief The DescribeCommandsResponse class provides an interace for OpsWorks DescribeCommands responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeCommandsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCommandsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCommandsResponse::DescribeCommandsResponse(
         const DescribeCommandsRequest &request,
@@ -161,6 +156,9 @@ DescribeCommandsResponse::DescribeCommandsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCommandsRequest * DescribeCommandsResponse::request() const
 {
     Q_D(const DescribeCommandsResponse);
@@ -168,9 +166,8 @@ const DescribeCommandsRequest * DescribeCommandsResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeCommands response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeCommands \a response.
  */
 void DescribeCommandsResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeCommandsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeCommandsResponsePrivate
+ * \brief The DescribeCommandsResponsePrivate class provides private implementation for DescribeCommandsResponse.
  * \internal
  *
- * \class DescribeCommandsResponsePrivate
- *
- * \brief Private implementation for DescribeCommandsResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCommandsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCommandsResponse instance.
+ * Constructs a DescribeCommandsResponsePrivate object with public implementation \a q.
  */
 DescribeCommandsResponsePrivate::DescribeCommandsResponsePrivate(
     DescribeCommandsResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeCommandsResponsePrivate::DescribeCommandsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeCommandsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeCommands response element from \a xml.
  */
 void DescribeCommandsResponsePrivate::parseDescribeCommandsResponse(QXmlStreamReader &xml)
 {

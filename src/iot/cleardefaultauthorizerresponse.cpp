@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ClearDefaultAuthorizerResponse
- *
  * \brief The ClearDefaultAuthorizerResponse class provides an interace for IoT ClearDefaultAuthorizer responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ClearDefaultAuthorizerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ClearDefaultAuthorizerResponse object for \a reply to \a request, with parent \a parent.
  */
 ClearDefaultAuthorizerResponse::ClearDefaultAuthorizerResponse(
         const ClearDefaultAuthorizerRequest &request,
@@ -66,6 +61,9 @@ ClearDefaultAuthorizerResponse::ClearDefaultAuthorizerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ClearDefaultAuthorizerRequest * ClearDefaultAuthorizerResponse::request() const
 {
     Q_D(const ClearDefaultAuthorizerResponse);
@@ -73,9 +71,8 @@ const ClearDefaultAuthorizerRequest * ClearDefaultAuthorizerResponse::request() 
 }
 
 /*!
- * @brief  Parse a IoT ClearDefaultAuthorizer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ClearDefaultAuthorizer \a response.
  */
 void ClearDefaultAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ClearDefaultAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ClearDefaultAuthorizerResponsePrivate
+ * \brief The ClearDefaultAuthorizerResponsePrivate class provides private implementation for ClearDefaultAuthorizerResponse.
  * \internal
  *
- * \class ClearDefaultAuthorizerResponsePrivate
- *
- * \brief Private implementation for ClearDefaultAuthorizerResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ClearDefaultAuthorizerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ClearDefaultAuthorizerResponse instance.
+ * Constructs a ClearDefaultAuthorizerResponsePrivate object with public implementation \a q.
  */
 ClearDefaultAuthorizerResponsePrivate::ClearDefaultAuthorizerResponsePrivate(
     ClearDefaultAuthorizerResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ClearDefaultAuthorizerResponsePrivate::ClearDefaultAuthorizerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ClearDefaultAuthorizerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ClearDefaultAuthorizer response element from \a xml.
  */
 void ClearDefaultAuthorizerResponsePrivate::parseClearDefaultAuthorizerResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::StopInstancesResponse
- *
  * \brief The StopInstancesResponse class provides an interace for EC2 StopInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new StopInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 StopInstancesResponse::StopInstancesResponse(
         const StopInstancesRequest &request,
@@ -59,6 +54,9 @@ StopInstancesResponse::StopInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopInstancesRequest * StopInstancesResponse::request() const
 {
     Q_D(const StopInstancesResponse);
@@ -66,9 +64,8 @@ const StopInstancesRequest * StopInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 StopInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 StopInstances \a response.
  */
 void StopInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void StopInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::StopInstancesResponsePrivate
+ * \brief The StopInstancesResponsePrivate class provides private implementation for StopInstancesResponse.
  * \internal
  *
- * \class StopInstancesResponsePrivate
- *
- * \brief Private implementation for StopInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopInstancesResponse instance.
+ * Constructs a StopInstancesResponsePrivate object with public implementation \a q.
  */
 StopInstancesResponsePrivate::StopInstancesResponsePrivate(
     StopInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ StopInstancesResponsePrivate::StopInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 StopInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 StopInstances response element from \a xml.
  */
 void StopInstancesResponsePrivate::parseStopInstancesResponse(QXmlStreamReader &xml)
 {

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCacheEngineVersionsRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeCacheEngineVersionsRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCacheEngineVersionsRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 DescribeCacheEngineVersionsRequestPrivate::DescribeCacheEngineVersionsRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeCacheEngineVersionsRequest * const q)

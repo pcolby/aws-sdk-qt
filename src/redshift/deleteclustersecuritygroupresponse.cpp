@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteClusterSecurityGroupResponse
- *
  * \brief The DeleteClusterSecurityGroupResponse class provides an interace for Redshift DeleteClusterSecurityGroup responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterSecurityGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteClusterSecurityGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteClusterSecurityGroupResponse::DeleteClusterSecurityGroupResponse(
         const DeleteClusterSecurityGroupRequest &request,
@@ -85,6 +80,9 @@ DeleteClusterSecurityGroupResponse::DeleteClusterSecurityGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteClusterSecurityGroupRequest * DeleteClusterSecurityGroupResponse::request() const
 {
     Q_D(const DeleteClusterSecurityGroupResponse);
@@ -92,9 +90,8 @@ const DeleteClusterSecurityGroupRequest * DeleteClusterSecurityGroupResponse::re
 }
 
 /*!
- * @brief  Parse a Redshift DeleteClusterSecurityGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DeleteClusterSecurityGroup \a response.
  */
 void DeleteClusterSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DeleteClusterSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DeleteClusterSecurityGroupResponsePrivate
+ * \brief The DeleteClusterSecurityGroupResponsePrivate class provides private implementation for DeleteClusterSecurityGroupResponse.
  * \internal
  *
- * \class DeleteClusterSecurityGroupResponsePrivate
- *
- * \brief Private implementation for DeleteClusterSecurityGroupResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterSecurityGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteClusterSecurityGroupResponse instance.
+ * Constructs a DeleteClusterSecurityGroupResponsePrivate object with public implementation \a q.
  */
 DeleteClusterSecurityGroupResponsePrivate::DeleteClusterSecurityGroupResponsePrivate(
     DeleteClusterSecurityGroupResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DeleteClusterSecurityGroupResponsePrivate::DeleteClusterSecurityGroupResponsePri
 }
 
 /*!
- * @brief  Parse an Redshift DeleteClusterSecurityGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DeleteClusterSecurityGroup response element from \a xml.
  */
 void DeleteClusterSecurityGroupResponsePrivate::parseDeleteClusterSecurityGroupResponse(QXmlStreamReader &xml)
 {

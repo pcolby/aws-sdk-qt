@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::BatchGetDeploymentGroupsResponse
- *
  * \brief The BatchGetDeploymentGroupsResponse class provides an interace for CodeDeploy BatchGetDeploymentGroups responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new BatchGetDeploymentGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetDeploymentGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetDeploymentGroupsResponse::BatchGetDeploymentGroupsResponse(
         const BatchGetDeploymentGroupsRequest &request,
@@ -136,6 +131,9 @@ BatchGetDeploymentGroupsResponse::BatchGetDeploymentGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetDeploymentGroupsRequest * BatchGetDeploymentGroupsResponse::request() const
 {
     Q_D(const BatchGetDeploymentGroupsResponse);
@@ -143,9 +141,8 @@ const BatchGetDeploymentGroupsRequest * BatchGetDeploymentGroupsResponse::reques
 }
 
 /*!
- * @brief  Parse a CodeDeploy BatchGetDeploymentGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy BatchGetDeploymentGroups \a response.
  */
 void BatchGetDeploymentGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void BatchGetDeploymentGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::BatchGetDeploymentGroupsResponsePrivate
+ * \brief The BatchGetDeploymentGroupsResponsePrivate class provides private implementation for BatchGetDeploymentGroupsResponse.
  * \internal
  *
- * \class BatchGetDeploymentGroupsResponsePrivate
- *
- * \brief Private implementation for BatchGetDeploymentGroupsResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetDeploymentGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetDeploymentGroupsResponse instance.
+ * Constructs a BatchGetDeploymentGroupsResponsePrivate object with public implementation \a q.
  */
 BatchGetDeploymentGroupsResponsePrivate::BatchGetDeploymentGroupsResponsePrivate(
     BatchGetDeploymentGroupsResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ BatchGetDeploymentGroupsResponsePrivate::BatchGetDeploymentGroupsResponsePrivate
 }
 
 /*!
- * @brief  Parse an CodeDeploy BatchGetDeploymentGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy BatchGetDeploymentGroups response element from \a xml.
  */
 void BatchGetDeploymentGroupsResponsePrivate::parseBatchGetDeploymentGroupsResponse(QXmlStreamReader &xml)
 {

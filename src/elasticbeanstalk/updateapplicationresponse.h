@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateApplicationResponse : public ElasticBeanstalkResponse {
 public:
     UpdateApplicationResponse(const UpdateApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateApplicationRequest * request() const;
+    virtual const UpdateApplicationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateApplicationResponse)

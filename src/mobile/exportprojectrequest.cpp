@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ExportProjectRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ExportProjectRequestPrivate object for Mobile \a action with,
- * public implementation \a q.
+ * Constructs a ExportProjectRequestPrivate object for Mobile \a action,
+ * with public implementation \a q.
  */
 ExportProjectRequestPrivate::ExportProjectRequestPrivate(
     const MobileRequest::Action action, ExportProjectRequest * const q)

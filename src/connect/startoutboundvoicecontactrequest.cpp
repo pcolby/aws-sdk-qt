@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StartOutboundVoiceContactRequest::response(QN
  */
 
 /*!
- *
- * Constructs a StartOutboundVoiceContactRequestPrivate object for Connect \a action with,
- * public implementation \a q.
+ * Constructs a StartOutboundVoiceContactRequestPrivate object for Connect \a action,
+ * with public implementation \a q.
  */
 StartOutboundVoiceContactRequestPrivate::StartOutboundVoiceContactRequestPrivate(
     const ConnectRequest::Action action, StartOutboundVoiceContactRequest * const q)

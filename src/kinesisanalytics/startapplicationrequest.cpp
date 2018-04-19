@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * StartApplicationRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a StartApplicationRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a StartApplicationRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 StartApplicationRequestPrivate::StartApplicationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, StartApplicationRequest * const q)

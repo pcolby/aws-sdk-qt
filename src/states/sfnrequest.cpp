@@ -58,7 +58,7 @@ namespace SFN {
  */
 
 /*!
- * Constructs a[n] SFNRequest object for SFN \a action.
+ * Constructs a SFNRequest object for SFN \a action.
  */
 SFNRequest::SFNRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SFNRequestPrivate(action, this))
@@ -258,8 +258,8 @@ QNetworkRequest SFNRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a SFNRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a SFNRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 SFNRequestPrivate::SFNRequestPrivate(const SFNRequest::Action action, SFNRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

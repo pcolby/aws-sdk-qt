@@ -29,10 +29,9 @@ namespace CloudHSMV2 {
 
 /*!
  * \class QtAws::CloudHSMV2::DescribeClustersResponse
- *
  * \brief The DescribeClustersResponse class provides an interace for CloudHSMV2 DescribeClusters responses.
  *
- * \ingroup CloudHSMV2
+ * \inmodule QtAwsCloudHSMV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
@@ -41,11 +40,7 @@ namespace CloudHSMV2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeClustersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeClustersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeClustersResponse::DescribeClustersResponse(
         const DescribeClustersRequest &request,
@@ -57,6 +52,9 @@ DescribeClustersResponse::DescribeClustersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeClustersRequest * DescribeClustersResponse::request() const
 {
     Q_D(const DescribeClustersResponse);
@@ -64,9 +62,8 @@ const DescribeClustersRequest * DescribeClustersResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSMV2 DescribeClusters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSMV2 DescribeClusters \a response.
  */
 void DescribeClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DescribeClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSMV2::DescribeClustersResponsePrivate
+ * \brief The DescribeClustersResponsePrivate class provides private implementation for DescribeClustersResponse.
  * \internal
  *
- * \class DescribeClustersResponsePrivate
- *
- * \brief Private implementation for DescribeClustersResponse.
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClustersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeClustersResponse instance.
+ * Constructs a DescribeClustersResponsePrivate object with public implementation \a q.
  */
 DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
     DescribeClustersResponse * const q) : CloudHSMV2ResponsePrivate(q)
@@ -97,9 +90,7 @@ DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSMV2 DescribeClustersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSMV2 DescribeClusters response element from \a xml.
  */
 void DescribeClustersResponsePrivate::parseDescribeClustersResponse(QXmlStreamReader &xml)
 {

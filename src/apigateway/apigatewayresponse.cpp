@@ -28,16 +28,13 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::APIGatewayResponse
- *
  * \brief The APIGatewayResponse class provides an interface for APIGateway responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @brief  Constructs a new APIGatewayResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a APIGatewayResponse object with parent \a parent.
  */
 APIGatewayResponse::APIGatewayResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new APIGatewayResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ APIGatewayResponse::APIGatewayResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new APIGatewayResponse object.
- *
+ * \internal
+ * Constructs a APIGatewayResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from APIGatewayResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 APIGatewayResponse::APIGatewayResponse(APIGatewayResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ APIGatewayResponse::APIGatewayResponse(APIGatewayResponsePrivate * const d, QObj
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void APIGatewayResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void APIGatewayResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::APIGateway::APIGatewayResponsePrivate
+ * \brief The APIGatewayResponsePrivate class provides private implementation for APIGatewayResponse.
+ * \internal
  *
- * @class  APIGatewayResponsePrivate
- *
- * @brief  Private implementation for APIGatewayResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new APIGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public APIGatewayResponse instance.
+ * Constructs a APIGatewayResponsePrivate object with public implementation \a q.
  */
 APIGatewayResponsePrivate::APIGatewayResponsePrivate(
     APIGatewayResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetLabelDetectionResponse : public RekognitionResponse {
 public:
     GetLabelDetectionResponse(const GetLabelDetectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetLabelDetectionRequest * request() const;
+    virtual const GetLabelDetectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetLabelDetectionResponse)

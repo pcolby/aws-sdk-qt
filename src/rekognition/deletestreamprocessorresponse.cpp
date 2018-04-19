@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DeleteStreamProcessorResponse
- *
  * \brief The DeleteStreamProcessorResponse class provides an interace for Rekognition DeleteStreamProcessor responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DeleteStreamProcessorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteStreamProcessorResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteStreamProcessorResponse::DeleteStreamProcessorResponse(
         const DeleteStreamProcessorRequest &request,
@@ -56,6 +51,9 @@ DeleteStreamProcessorResponse::DeleteStreamProcessorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteStreamProcessorRequest * DeleteStreamProcessorResponse::request() const
 {
     Q_D(const DeleteStreamProcessorResponse);
@@ -63,9 +61,8 @@ const DeleteStreamProcessorRequest * DeleteStreamProcessorResponse::request() co
 }
 
 /*!
- * @brief  Parse a Rekognition DeleteStreamProcessor response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition DeleteStreamProcessor \a response.
  */
 void DeleteStreamProcessorResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DeleteStreamProcessorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::DeleteStreamProcessorResponsePrivate
+ * \brief The DeleteStreamProcessorResponsePrivate class provides private implementation for DeleteStreamProcessorResponse.
  * \internal
  *
- * \class DeleteStreamProcessorResponsePrivate
- *
- * \brief Private implementation for DeleteStreamProcessorResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStreamProcessorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteStreamProcessorResponse instance.
+ * Constructs a DeleteStreamProcessorResponsePrivate object with public implementation \a q.
  */
 DeleteStreamProcessorResponsePrivate::DeleteStreamProcessorResponsePrivate(
     DeleteStreamProcessorResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ DeleteStreamProcessorResponsePrivate::DeleteStreamProcessorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition DeleteStreamProcessorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition DeleteStreamProcessor response element from \a xml.
  */
 void DeleteStreamProcessorResponsePrivate::parseDeleteStreamProcessorResponse(QXmlStreamReader &xml)
 {

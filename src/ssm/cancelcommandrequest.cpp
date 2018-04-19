@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * CancelCommandRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CancelCommandRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a CancelCommandRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 CancelCommandRequestPrivate::CancelCommandRequestPrivate(
     const SSMRequest::Action action, CancelCommandRequest * const q)

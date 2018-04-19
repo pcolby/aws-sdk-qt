@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DetachPolicyResponse
- *
  * \brief The DetachPolicyResponse class provides an interace for Organizations DetachPolicy responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DetachPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachPolicyResponse::DetachPolicyResponse(
         const DetachPolicyRequest &request,
@@ -197,6 +192,9 @@ DetachPolicyResponse::DetachPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachPolicyRequest * DetachPolicyResponse::request() const
 {
     Q_D(const DetachPolicyResponse);
@@ -204,9 +202,8 @@ const DetachPolicyRequest * DetachPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations DetachPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations DetachPolicy \a response.
  */
 void DetachPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void DetachPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::DetachPolicyResponsePrivate
+ * \brief The DetachPolicyResponsePrivate class provides private implementation for DetachPolicyResponse.
  * \internal
  *
- * \class DetachPolicyResponsePrivate
- *
- * \brief Private implementation for DetachPolicyResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachPolicyResponse instance.
+ * Constructs a DetachPolicyResponsePrivate object with public implementation \a q.
  */
 DetachPolicyResponsePrivate::DetachPolicyResponsePrivate(
     DetachPolicyResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ DetachPolicyResponsePrivate::DetachPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations DetachPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations DetachPolicy response element from \a xml.
  */
 void DetachPolicyResponsePrivate::parseDetachPolicyResponse(QXmlStreamReader &xml)
 {

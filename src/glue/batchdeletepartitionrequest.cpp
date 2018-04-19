@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * BatchDeletePartitionRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a BatchDeletePartitionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a BatchDeletePartitionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 BatchDeletePartitionRequestPrivate::BatchDeletePartitionRequestPrivate(
     const GlueRequest::Action action, BatchDeletePartitionRequest * const q)

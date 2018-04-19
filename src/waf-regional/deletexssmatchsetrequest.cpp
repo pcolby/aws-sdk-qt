@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DeleteXssMatchSetRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteXssMatchSetRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a DeleteXssMatchSetRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 DeleteXssMatchSetRequestPrivate::DeleteXssMatchSetRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteXssMatchSetRequest * const q)

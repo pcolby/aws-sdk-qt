@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::GetGameSessionLogUrlResponse
- *
  * \brief The GetGameSessionLogUrlResponse class provides an interace for GameLift GetGameSessionLogUrl responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new GetGameSessionLogUrlResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetGameSessionLogUrlResponse object for \a reply to \a request, with parent \a parent.
  */
 GetGameSessionLogUrlResponse::GetGameSessionLogUrlResponse(
         const GetGameSessionLogUrlRequest &request,
@@ -491,6 +486,9 @@ GetGameSessionLogUrlResponse::GetGameSessionLogUrlResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetGameSessionLogUrlRequest * GetGameSessionLogUrlResponse::request() const
 {
     Q_D(const GetGameSessionLogUrlResponse);
@@ -498,9 +496,8 @@ const GetGameSessionLogUrlRequest * GetGameSessionLogUrlResponse::request() cons
 }
 
 /*!
- * @brief  Parse a GameLift GetGameSessionLogUrl response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift GetGameSessionLogUrl \a response.
  */
 void GetGameSessionLogUrlResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void GetGameSessionLogUrlResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::GetGameSessionLogUrlResponsePrivate
+ * \brief The GetGameSessionLogUrlResponsePrivate class provides private implementation for GetGameSessionLogUrlResponse.
  * \internal
  *
- * \class GetGameSessionLogUrlResponsePrivate
- *
- * \brief Private implementation for GetGameSessionLogUrlResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGameSessionLogUrlResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetGameSessionLogUrlResponse instance.
+ * Constructs a GetGameSessionLogUrlResponsePrivate object with public implementation \a q.
  */
 GetGameSessionLogUrlResponsePrivate::GetGameSessionLogUrlResponsePrivate(
     GetGameSessionLogUrlResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ GetGameSessionLogUrlResponsePrivate::GetGameSessionLogUrlResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift GetGameSessionLogUrlResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift GetGameSessionLogUrl response element from \a xml.
  */
 void GetGameSessionLogUrlResponsePrivate::parseGetGameSessionLogUrlResponse(QXmlStreamReader &xml)
 {

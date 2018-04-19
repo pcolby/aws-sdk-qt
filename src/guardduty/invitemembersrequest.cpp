@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * InviteMembersRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a InviteMembersRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a InviteMembersRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 InviteMembersRequestPrivate::InviteMembersRequestPrivate(
     const GuardDutyRequest::Action action, InviteMembersRequest * const q)

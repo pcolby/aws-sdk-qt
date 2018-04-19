@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a UpdateUserRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a UpdateUserRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 UpdateUserRequestPrivate::UpdateUserRequestPrivate(
     const WorkDocsRequest::Action action, UpdateUserRequest * const q)

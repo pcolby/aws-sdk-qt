@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListOfferingTransactionsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ListOfferingTransactionsRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a ListOfferingTransactionsRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 ListOfferingTransactionsRequestPrivate::ListOfferingTransactionsRequestPrivate(
     const DeviceFarmRequest::Action action, ListOfferingTransactionsRequest * const q)

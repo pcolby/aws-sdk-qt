@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartTaskResponse : public ECSResponse {
 public:
     StartTaskResponse(const StartTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartTaskRequest * request() const;
+    virtual const StartTaskRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartTaskResponse)

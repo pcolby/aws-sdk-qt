@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetObjectTaggingResponse
- *
  * \brief The GetObjectTaggingResponse class provides an interace for S3 GetObjectTagging responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getObjectTagging
  */
 
 /*!
- * @brief  Constructs a new GetObjectTaggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetObjectTaggingResponse object for \a reply to \a request, with parent \a parent.
  */
 GetObjectTaggingResponse::GetObjectTaggingResponse(
         const GetObjectTaggingRequest &request,
@@ -55,6 +50,9 @@ GetObjectTaggingResponse::GetObjectTaggingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetObjectTaggingRequest * GetObjectTaggingResponse::request() const
 {
     Q_D(const GetObjectTaggingResponse);
@@ -62,9 +60,8 @@ const GetObjectTaggingRequest * GetObjectTaggingResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 GetObjectTagging response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetObjectTagging \a response.
  */
 void GetObjectTaggingResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetObjectTaggingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetObjectTaggingResponsePrivate
+ * \brief The GetObjectTaggingResponsePrivate class provides private implementation for GetObjectTaggingResponse.
  * \internal
  *
- * \class GetObjectTaggingResponsePrivate
- *
- * \brief Private implementation for GetObjectTaggingResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetObjectTaggingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetObjectTaggingResponse instance.
+ * Constructs a GetObjectTaggingResponsePrivate object with public implementation \a q.
  */
 GetObjectTaggingResponsePrivate::GetObjectTaggingResponsePrivate(
     GetObjectTaggingResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetObjectTaggingResponsePrivate::GetObjectTaggingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 GetObjectTaggingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetObjectTagging response element from \a xml.
  */
 void GetObjectTaggingResponsePrivate::parseGetObjectTaggingResponse(QXmlStreamReader &xml)
 {

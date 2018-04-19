@@ -28,16 +28,13 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::CloudWatchLogsResponse
- *
  * \brief The CloudWatchLogsResponse class provides an interface for CloudWatchLogs responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @brief  Constructs a new CloudWatchLogsResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CloudWatchLogsResponse object with parent \a parent.
  */
 CloudWatchLogsResponse::CloudWatchLogsResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CloudWatchLogsResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CloudWatchLogsResponse::CloudWatchLogsResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudWatchLogsResponse object.
- *
+ * \internal
+ * Constructs a CloudWatchLogsResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudWatchLogsResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CloudWatchLogsResponse::CloudWatchLogsResponse(CloudWatchLogsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CloudWatchLogsResponse::CloudWatchLogsResponse(CloudWatchLogsResponsePrivate * c
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CloudWatchLogsResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CloudWatchLogsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatchLogs::CloudWatchLogsResponsePrivate
+ * \brief The CloudWatchLogsResponsePrivate class provides private implementation for CloudWatchLogsResponse.
+ * \internal
  *
- * @class  CloudWatchLogsResponsePrivate
- *
- * @brief  Private implementation for CloudWatchLogsResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudWatchLogsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloudWatchLogsResponse instance.
+ * Constructs a CloudWatchLogsResponsePrivate object with public implementation \a q.
  */
 CloudWatchLogsResponsePrivate::CloudWatchLogsResponsePrivate(
     CloudWatchLogsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

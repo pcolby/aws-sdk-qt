@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAutoScalingInstancesRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeAutoScalingInstancesRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAutoScalingInstancesRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DescribeAutoScalingInstancesRequestPrivate::DescribeAutoScalingInstancesRequestPrivate(
     const AutoScalingRequest::Action action, DescribeAutoScalingInstancesRequest * const q)

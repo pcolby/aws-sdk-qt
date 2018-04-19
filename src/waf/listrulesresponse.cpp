@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListRulesResponse
- *
  * \brief The ListRulesResponse class provides an interace for WAF ListRules responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListRulesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRulesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRulesResponse::ListRulesResponse(
         const ListRulesRequest &request,
@@ -60,6 +55,9 @@ ListRulesResponse::ListRulesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRulesRequest * ListRulesResponse::request() const
 {
     Q_D(const ListRulesResponse);
@@ -67,9 +65,8 @@ const ListRulesRequest * ListRulesResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF ListRules response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF ListRules \a response.
  */
 void ListRulesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListRulesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::ListRulesResponsePrivate
+ * \brief The ListRulesResponsePrivate class provides private implementation for ListRulesResponse.
  * \internal
  *
- * \class ListRulesResponsePrivate
- *
- * \brief Private implementation for ListRulesResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRulesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRulesResponse instance.
+ * Constructs a ListRulesResponsePrivate object with public implementation \a q.
  */
 ListRulesResponsePrivate::ListRulesResponsePrivate(
     ListRulesResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ ListRulesResponsePrivate::ListRulesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF ListRulesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF ListRules response element from \a xml.
  */
 void ListRulesResponsePrivate::parseListRulesResponse(QXmlStreamReader &xml)
 {

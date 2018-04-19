@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::CreateAppCookieStickinessPolicyResponse
- *
  * \brief The CreateAppCookieStickinessPolicyResponse class provides an interace for ElasticLoadBalancing CreateAppCookieStickinessPolicy responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new CreateAppCookieStickinessPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAppCookieStickinessPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAppCookieStickinessPolicyResponse::CreateAppCookieStickinessPolicyResponse(
         const CreateAppCookieStickinessPolicyRequest &request,
@@ -83,6 +78,9 @@ CreateAppCookieStickinessPolicyResponse::CreateAppCookieStickinessPolicyResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAppCookieStickinessPolicyRequest * CreateAppCookieStickinessPolicyResponse::request() const
 {
     Q_D(const CreateAppCookieStickinessPolicyResponse);
@@ -90,9 +88,8 @@ const CreateAppCookieStickinessPolicyRequest * CreateAppCookieStickinessPolicyRe
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing CreateAppCookieStickinessPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing CreateAppCookieStickinessPolicy \a response.
  */
 void CreateAppCookieStickinessPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void CreateAppCookieStickinessPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::CreateAppCookieStickinessPolicyResponsePrivate
+ * \brief The CreateAppCookieStickinessPolicyResponsePrivate class provides private implementation for CreateAppCookieStickinessPolicyResponse.
  * \internal
  *
- * \class CreateAppCookieStickinessPolicyResponsePrivate
- *
- * \brief Private implementation for CreateAppCookieStickinessPolicyResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAppCookieStickinessPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAppCookieStickinessPolicyResponse instance.
+ * Constructs a CreateAppCookieStickinessPolicyResponsePrivate object with public implementation \a q.
  */
 CreateAppCookieStickinessPolicyResponsePrivate::CreateAppCookieStickinessPolicyResponsePrivate(
     CreateAppCookieStickinessPolicyResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ CreateAppCookieStickinessPolicyResponsePrivate::CreateAppCookieStickinessPolicyR
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing CreateAppCookieStickinessPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing CreateAppCookieStickinessPolicy response element from \a xml.
  */
 void CreateAppCookieStickinessPolicyResponsePrivate::parseCreateAppCookieStickinessPolicyResponse(QXmlStreamReader &xml)
 {

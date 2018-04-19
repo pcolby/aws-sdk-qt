@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * UpdateObjectAttributesRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateObjectAttributesRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a UpdateObjectAttributesRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 UpdateObjectAttributesRequestPrivate::UpdateObjectAttributesRequestPrivate(
     const CloudDirectoryRequest::Action action, UpdateObjectAttributesRequest * const q)

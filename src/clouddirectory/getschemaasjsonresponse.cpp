@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetSchemaAsJsonResponse
- *
  * \brief The GetSchemaAsJsonResponse class provides an interace for CloudDirectory GetSchemaAsJson responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetSchemaAsJsonResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSchemaAsJsonResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSchemaAsJsonResponse::GetSchemaAsJsonResponse(
         const GetSchemaAsJsonRequest &request,
@@ -62,6 +57,9 @@ GetSchemaAsJsonResponse::GetSchemaAsJsonResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSchemaAsJsonRequest * GetSchemaAsJsonResponse::request() const
 {
     Q_D(const GetSchemaAsJsonResponse);
@@ -69,9 +67,8 @@ const GetSchemaAsJsonRequest * GetSchemaAsJsonResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory GetSchemaAsJson response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory GetSchemaAsJson \a response.
  */
 void GetSchemaAsJsonResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetSchemaAsJsonResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::GetSchemaAsJsonResponsePrivate
+ * \brief The GetSchemaAsJsonResponsePrivate class provides private implementation for GetSchemaAsJsonResponse.
  * \internal
  *
- * \class GetSchemaAsJsonResponsePrivate
- *
- * \brief Private implementation for GetSchemaAsJsonResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSchemaAsJsonResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSchemaAsJsonResponse instance.
+ * Constructs a GetSchemaAsJsonResponsePrivate object with public implementation \a q.
  */
 GetSchemaAsJsonResponsePrivate::GetSchemaAsJsonResponsePrivate(
     GetSchemaAsJsonResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ GetSchemaAsJsonResponsePrivate::GetSchemaAsJsonResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory GetSchemaAsJsonResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory GetSchemaAsJson response element from \a xml.
  */
 void GetSchemaAsJsonResponsePrivate::parseGetSchemaAsJsonResponse(QXmlStreamReader &xml)
 {

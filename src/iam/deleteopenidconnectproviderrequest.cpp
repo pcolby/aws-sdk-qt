@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteOpenIDConnectProviderRequest::response(
  */
 
 /*!
- *
- * Constructs a DeleteOpenIDConnectProviderRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteOpenIDConnectProviderRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteOpenIDConnectProviderRequestPrivate::DeleteOpenIDConnectProviderRequestPrivate(
     const IAMRequest::Action action, DeleteOpenIDConnectProviderRequest * const q)

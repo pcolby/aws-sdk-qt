@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * CreateDomainRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateDomainRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a CreateDomainRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 CreateDomainRequestPrivate::CreateDomainRequestPrivate(
     const LightsailRequest::Action action, CreateDomainRequest * const q)

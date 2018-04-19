@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * RegisterTaskDefinitionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a RegisterTaskDefinitionRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a RegisterTaskDefinitionRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 RegisterTaskDefinitionRequestPrivate::RegisterTaskDefinitionRequestPrivate(
     const ECSRequest::Action action, RegisterTaskDefinitionRequest * const q)

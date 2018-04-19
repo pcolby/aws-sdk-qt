@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeFromDatasetRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UnsubscribeFromDatasetRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a UnsubscribeFromDatasetRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 UnsubscribeFromDatasetRequestPrivate::UnsubscribeFromDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, UnsubscribeFromDatasetRequest * const q)

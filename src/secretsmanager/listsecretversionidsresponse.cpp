@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::ListSecretVersionIdsResponse
- *
  * \brief The ListSecretVersionIdsResponse class provides an interace for SecretsManager ListSecretVersionIds responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new ListSecretVersionIdsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSecretVersionIdsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSecretVersionIdsResponse::ListSecretVersionIdsResponse(
         const ListSecretVersionIdsRequest &request,
@@ -155,6 +150,9 @@ ListSecretVersionIdsResponse::ListSecretVersionIdsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSecretVersionIdsRequest * ListSecretVersionIdsResponse::request() const
 {
     Q_D(const ListSecretVersionIdsResponse);
@@ -162,9 +160,8 @@ const ListSecretVersionIdsRequest * ListSecretVersionIdsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SecretsManager ListSecretVersionIds response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager ListSecretVersionIds \a response.
  */
 void ListSecretVersionIdsResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void ListSecretVersionIdsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::ListSecretVersionIdsResponsePrivate
+ * \brief The ListSecretVersionIdsResponsePrivate class provides private implementation for ListSecretVersionIdsResponse.
  * \internal
  *
- * \class ListSecretVersionIdsResponsePrivate
- *
- * \brief Private implementation for ListSecretVersionIdsResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSecretVersionIdsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSecretVersionIdsResponse instance.
+ * Constructs a ListSecretVersionIdsResponsePrivate object with public implementation \a q.
  */
 ListSecretVersionIdsResponsePrivate::ListSecretVersionIdsResponsePrivate(
     ListSecretVersionIdsResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ ListSecretVersionIdsResponsePrivate::ListSecretVersionIdsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SecretsManager ListSecretVersionIdsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager ListSecretVersionIds response element from \a xml.
  */
 void ListSecretVersionIdsResponsePrivate::parseListSecretVersionIdsResponse(QXmlStreamReader &xml)
 {

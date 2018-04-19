@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmClientCertificateRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteHsmClientCertificateRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteHsmClientCertificateRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DeleteHsmClientCertificateRequestPrivate::DeleteHsmClientCertificateRequestPrivate(
     const RedshiftRequest::Action action, DeleteHsmClientCertificateRequest * const q)

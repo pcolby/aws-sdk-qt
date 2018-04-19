@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ResetDeploymentsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ResetDeploymentsRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a ResetDeploymentsRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 ResetDeploymentsRequestPrivate::ResetDeploymentsRequestPrivate(
     const GreengrassRequest::Action action, ResetDeploymentsRequest * const q)

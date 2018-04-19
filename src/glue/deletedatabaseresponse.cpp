@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteDatabaseResponse
- *
  * \brief The DeleteDatabaseResponse class provides an interace for Glue DeleteDatabase responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteDatabaseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDatabaseResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDatabaseResponse::DeleteDatabaseResponse(
         const DeleteDatabaseRequest &request,
@@ -58,6 +53,9 @@ DeleteDatabaseResponse::DeleteDatabaseResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDatabaseRequest * DeleteDatabaseResponse::request() const
 {
     Q_D(const DeleteDatabaseResponse);
@@ -65,9 +63,8 @@ const DeleteDatabaseRequest * DeleteDatabaseResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue DeleteDatabase response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue DeleteDatabase \a response.
  */
 void DeleteDatabaseResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteDatabaseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::DeleteDatabaseResponsePrivate
+ * \brief The DeleteDatabaseResponsePrivate class provides private implementation for DeleteDatabaseResponse.
  * \internal
  *
- * \class DeleteDatabaseResponsePrivate
- *
- * \brief Private implementation for DeleteDatabaseResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDatabaseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDatabaseResponse instance.
+ * Constructs a DeleteDatabaseResponsePrivate object with public implementation \a q.
  */
 DeleteDatabaseResponsePrivate::DeleteDatabaseResponsePrivate(
     DeleteDatabaseResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteDatabaseResponsePrivate::DeleteDatabaseResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue DeleteDatabaseResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue DeleteDatabase response element from \a xml.
  */
 void DeleteDatabaseResponsePrivate::parseDeleteDatabaseResponse(QXmlStreamReader &xml)
 {

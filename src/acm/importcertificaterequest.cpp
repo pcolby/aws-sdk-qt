@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ImportCertificateRequestPrivate object for ACM \a action with,
- * public implementation \a q.
+ * Constructs a ImportCertificateRequestPrivate object for ACM \a action,
+ * with public implementation \a q.
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const ACMRequest::Action action, ImportCertificateRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateCertificateAuthorityAuditReportResponse : public ACMPCA
 public:
     CreateCertificateAuthorityAuditReportResponse(const CreateCertificateAuthorityAuditReportRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateCertificateAuthorityAuditReportRequest * request() const;
+    virtual const CreateCertificateAuthorityAuditReportRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateCertificateAuthorityAuditReportResponse)

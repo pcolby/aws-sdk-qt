@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRdsDbInstancesRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeRdsDbInstancesRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRdsDbInstancesRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeRdsDbInstancesRequestPrivate::DescribeRdsDbInstancesRequestPrivate(
     const OpsWorksRequest::Action action, DescribeRdsDbInstancesRequest * const q)

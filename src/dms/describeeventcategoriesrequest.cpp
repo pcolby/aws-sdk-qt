@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeEventCategoriesRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventCategoriesRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeEventCategoriesRequest * const q)

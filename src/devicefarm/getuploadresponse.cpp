@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetUploadResponse
- *
  * \brief The GetUploadResponse class provides an interace for DeviceFarm GetUpload responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetUploadResponse object for \a reply to \a request, with parent \a parent.
  */
 GetUploadResponse::GetUploadResponse(
         const GetUploadRequest &request,
@@ -57,6 +52,9 @@ GetUploadResponse::GetUploadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetUploadRequest * GetUploadResponse::request() const
 {
     Q_D(const GetUploadResponse);
@@ -64,9 +62,8 @@ const GetUploadRequest * GetUploadResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetUpload response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetUpload \a response.
  */
 void GetUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetUploadResponsePrivate
+ * \brief The GetUploadResponsePrivate class provides private implementation for GetUploadResponse.
  * \internal
  *
- * \class GetUploadResponsePrivate
- *
- * \brief Private implementation for GetUploadResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUploadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetUploadResponse instance.
+ * Constructs a GetUploadResponsePrivate object with public implementation \a q.
  */
 GetUploadResponsePrivate::GetUploadResponsePrivate(
     GetUploadResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetUploadResponsePrivate::GetUploadResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetUploadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetUpload response element from \a xml.
  */
 void GetUploadResponsePrivate::parseGetUploadResponse(QXmlStreamReader &xml)
 {

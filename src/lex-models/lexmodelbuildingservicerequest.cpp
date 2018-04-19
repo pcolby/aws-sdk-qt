@@ -75,7 +75,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * Constructs a[n] LexModelBuildingServiceRequest object for LexModelBuildingService \a action.
+ * Constructs a LexModelBuildingServiceRequest object for LexModelBuildingService \a action.
  */
 LexModelBuildingServiceRequest::LexModelBuildingServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new LexModelBuildingServiceRequestPrivate(action, this))
@@ -275,8 +275,8 @@ QNetworkRequest LexModelBuildingServiceRequest::unsignedRequest(const QUrl &endp
  */
 
 /*!
- * Constructs a LexModelBuildingServiceRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a LexModelBuildingServiceRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 LexModelBuildingServiceRequestPrivate::LexModelBuildingServiceRequestPrivate(const LexModelBuildingServiceRequest::Action action, LexModelBuildingServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

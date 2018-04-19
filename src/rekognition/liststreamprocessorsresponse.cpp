@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::ListStreamProcessorsResponse
- *
  * \brief The ListStreamProcessorsResponse class provides an interace for Rekognition ListStreamProcessors responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new ListStreamProcessorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListStreamProcessorsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListStreamProcessorsResponse::ListStreamProcessorsResponse(
         const ListStreamProcessorsRequest &request,
@@ -56,6 +51,9 @@ ListStreamProcessorsResponse::ListStreamProcessorsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListStreamProcessorsRequest * ListStreamProcessorsResponse::request() const
 {
     Q_D(const ListStreamProcessorsResponse);
@@ -63,9 +61,8 @@ const ListStreamProcessorsRequest * ListStreamProcessorsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Rekognition ListStreamProcessors response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition ListStreamProcessors \a response.
  */
 void ListStreamProcessorsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListStreamProcessorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::ListStreamProcessorsResponsePrivate
+ * \brief The ListStreamProcessorsResponsePrivate class provides private implementation for ListStreamProcessorsResponse.
  * \internal
  *
- * \class ListStreamProcessorsResponsePrivate
- *
- * \brief Private implementation for ListStreamProcessorsResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStreamProcessorsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListStreamProcessorsResponse instance.
+ * Constructs a ListStreamProcessorsResponsePrivate object with public implementation \a q.
  */
 ListStreamProcessorsResponsePrivate::ListStreamProcessorsResponsePrivate(
     ListStreamProcessorsResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ ListStreamProcessorsResponsePrivate::ListStreamProcessorsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition ListStreamProcessorsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition ListStreamProcessors response element from \a xml.
  */
 void ListStreamProcessorsResponsePrivate::parseListStreamProcessorsResponse(QXmlStreamReader &xml)
 {

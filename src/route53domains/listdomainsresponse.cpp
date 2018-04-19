@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::ListDomainsResponse
- *
  * \brief The ListDomainsResponse class provides an interace for Route53Domains ListDomains responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new ListDomainsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDomainsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDomainsResponse::ListDomainsResponse(
         const ListDomainsRequest &request,
@@ -56,6 +51,9 @@ ListDomainsResponse::ListDomainsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDomainsRequest * ListDomainsResponse::request() const
 {
     Q_D(const ListDomainsResponse);
@@ -63,9 +61,8 @@ const ListDomainsRequest * ListDomainsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53Domains ListDomains response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains ListDomains \a response.
  */
 void ListDomainsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListDomainsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::ListDomainsResponsePrivate
+ * \brief The ListDomainsResponsePrivate class provides private implementation for ListDomainsResponse.
  * \internal
  *
- * \class ListDomainsResponsePrivate
- *
- * \brief Private implementation for ListDomainsResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDomainsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDomainsResponse instance.
+ * Constructs a ListDomainsResponsePrivate object with public implementation \a q.
  */
 ListDomainsResponsePrivate::ListDomainsResponsePrivate(
     ListDomainsResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ ListDomainsResponsePrivate::ListDomainsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains ListDomainsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains ListDomains response element from \a xml.
  */
 void ListDomainsResponsePrivate::parseListDomainsResponse(QXmlStreamReader &xml)
 {

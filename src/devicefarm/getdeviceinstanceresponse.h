@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDeviceInstanceResponse : public DeviceFarmResponse {
 public:
     GetDeviceInstanceResponse(const GetDeviceInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDeviceInstanceRequest * request() const;
+    virtual const GetDeviceInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDeviceInstanceResponse)

@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::CreateDetectorResponse
- *
  * \brief The CreateDetectorResponse class provides an interace for GuardDuty CreateDetector responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::createDetector
  */
 
 /*!
- * @brief  Constructs a new CreateDetectorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDetectorResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDetectorResponse::CreateDetectorResponse(
         const CreateDetectorRequest &request,
@@ -55,6 +50,9 @@ CreateDetectorResponse::CreateDetectorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDetectorRequest * CreateDetectorResponse::request() const
 {
     Q_D(const CreateDetectorResponse);
@@ -62,9 +60,8 @@ const CreateDetectorRequest * CreateDetectorResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty CreateDetector response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty CreateDetector \a response.
  */
 void CreateDetectorResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateDetectorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::CreateDetectorResponsePrivate
+ * \brief The CreateDetectorResponsePrivate class provides private implementation for CreateDetectorResponse.
  * \internal
  *
- * \class CreateDetectorResponsePrivate
- *
- * \brief Private implementation for CreateDetectorResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDetectorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDetectorResponse instance.
+ * Constructs a CreateDetectorResponsePrivate object with public implementation \a q.
  */
 CreateDetectorResponsePrivate::CreateDetectorResponsePrivate(
     CreateDetectorResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateDetectorResponsePrivate::CreateDetectorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty CreateDetectorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty CreateDetector response element from \a xml.
  */
 void CreateDetectorResponsePrivate::parseCreateDetectorResponse(QXmlStreamReader &xml)
 {

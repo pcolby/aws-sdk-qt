@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskCompletedRequest::response
  */
 
 /*!
- *
- * Constructs a RespondActivityTaskCompletedRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a RespondActivityTaskCompletedRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 RespondActivityTaskCompletedRequestPrivate::RespondActivityTaskCompletedRequestPrivate(
     const SWFRequest::Action action, RespondActivityTaskCompletedRequest * const q)

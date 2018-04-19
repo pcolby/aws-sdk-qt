@@ -28,16 +28,13 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::LexModelBuildingServiceResponse
- *
  * \brief The LexModelBuildingServiceResponse class provides an interface for LexModelBuildingService responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @brief  Constructs a new LexModelBuildingServiceResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a LexModelBuildingServiceResponse object with parent \a parent.
  */
 LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new LexModelBuildingServiceResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(QObject * const
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LexModelBuildingServiceResponse object.
- *
+ * \internal
+ * Constructs a LexModelBuildingServiceResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LexModelBuildingServiceResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(LexModelBuildingServiceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ LexModelBuildingServiceResponse::LexModelBuildingServiceResponse(LexModelBuildin
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void LexModelBuildingServiceResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void LexModelBuildingServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::LexModelBuildingService::LexModelBuildingServiceResponsePrivate
+ * \brief The LexModelBuildingServiceResponsePrivate class provides private implementation for LexModelBuildingServiceResponse.
+ * \internal
  *
- * @class  LexModelBuildingServiceResponsePrivate
- *
- * @brief  Private implementation for LexModelBuildingServiceResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LexModelBuildingServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public LexModelBuildingServiceResponse instance.
+ * Constructs a LexModelBuildingServiceResponsePrivate object with public implementation \a q.
  */
 LexModelBuildingServiceResponsePrivate::LexModelBuildingServiceResponsePrivate(
     LexModelBuildingServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

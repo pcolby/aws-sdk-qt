@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * PutDestinationRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a PutDestinationRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a PutDestinationRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 PutDestinationRequestPrivate::PutDestinationRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutDestinationRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteRouteTableResponse
- *
  * \brief The DeleteRouteTableResponse class provides an interace for EC2 DeleteRouteTable responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteRouteTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRouteTableResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRouteTableResponse::DeleteRouteTableResponse(
         const DeleteRouteTableRequest &request,
@@ -59,6 +54,9 @@ DeleteRouteTableResponse::DeleteRouteTableResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRouteTableRequest * DeleteRouteTableResponse::request() const
 {
     Q_D(const DeleteRouteTableResponse);
@@ -66,9 +64,8 @@ const DeleteRouteTableRequest * DeleteRouteTableResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteRouteTable response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteRouteTable \a response.
  */
 void DeleteRouteTableResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteRouteTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteRouteTableResponsePrivate
+ * \brief The DeleteRouteTableResponsePrivate class provides private implementation for DeleteRouteTableResponse.
  * \internal
  *
- * \class DeleteRouteTableResponsePrivate
- *
- * \brief Private implementation for DeleteRouteTableResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRouteTableResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRouteTableResponse instance.
+ * Constructs a DeleteRouteTableResponsePrivate object with public implementation \a q.
  */
 DeleteRouteTableResponsePrivate::DeleteRouteTableResponsePrivate(
     DeleteRouteTableResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteRouteTableResponsePrivate::DeleteRouteTableResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteRouteTableResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteRouteTable response element from \a xml.
  */
 void DeleteRouteTableResponsePrivate::parseDeleteRouteTableResponse(QXmlStreamReader &xml)
 {

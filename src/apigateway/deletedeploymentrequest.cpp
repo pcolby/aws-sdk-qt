@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDeploymentRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteDeploymentRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDeploymentRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteDeploymentRequestPrivate::DeleteDeploymentRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDeploymentRequest * const q)

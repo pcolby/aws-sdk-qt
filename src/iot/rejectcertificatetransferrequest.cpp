@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * RejectCertificateTransferRequest::response(QN
  */
 
 /*!
- *
- * Constructs a RejectCertificateTransferRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a RejectCertificateTransferRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 RejectCertificateTransferRequestPrivate::RejectCertificateTransferRequestPrivate(
     const IoTRequest::Action action, RejectCertificateTransferRequest * const q)

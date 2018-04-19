@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetCredentialReportResponse
- *
  * \brief The GetCredentialReportResponse class provides an interace for IAM GetCredentialReport responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetCredentialReportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCredentialReportResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCredentialReportResponse::GetCredentialReportResponse(
         const GetCredentialReportRequest &request,
@@ -120,6 +115,9 @@ GetCredentialReportResponse::GetCredentialReportResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCredentialReportRequest * GetCredentialReportResponse::request() const
 {
     Q_D(const GetCredentialReportResponse);
@@ -127,9 +125,8 @@ const GetCredentialReportRequest * GetCredentialReportResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetCredentialReport response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetCredentialReport \a response.
  */
 void GetCredentialReportResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetCredentialReportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetCredentialReportResponsePrivate
+ * \brief The GetCredentialReportResponsePrivate class provides private implementation for GetCredentialReportResponse.
  * \internal
  *
- * \class GetCredentialReportResponsePrivate
- *
- * \brief Private implementation for GetCredentialReportResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCredentialReportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCredentialReportResponse instance.
+ * Constructs a GetCredentialReportResponsePrivate object with public implementation \a q.
  */
 GetCredentialReportResponsePrivate::GetCredentialReportResponsePrivate(
     GetCredentialReportResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetCredentialReportResponsePrivate::GetCredentialReportResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetCredentialReportResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetCredentialReport response element from \a xml.
  */
 void GetCredentialReportResponsePrivate::parseGetCredentialReportResponse(QXmlStreamReader &xml)
 {

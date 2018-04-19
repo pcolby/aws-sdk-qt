@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::DeleteCommentContentResponse
- *
  * \brief The DeleteCommentContentResponse class provides an interace for CodeCommit DeleteCommentContent responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new DeleteCommentContentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCommentContentResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCommentContentResponse::DeleteCommentContentResponse(
         const DeleteCommentContentRequest &request,
@@ -245,6 +240,9 @@ DeleteCommentContentResponse::DeleteCommentContentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCommentContentRequest * DeleteCommentContentResponse::request() const
 {
     Q_D(const DeleteCommentContentResponse);
@@ -252,9 +250,8 @@ const DeleteCommentContentRequest * DeleteCommentContentResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CodeCommit DeleteCommentContent response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit DeleteCommentContent \a response.
  */
 void DeleteCommentContentResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void DeleteCommentContentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::DeleteCommentContentResponsePrivate
+ * \brief The DeleteCommentContentResponsePrivate class provides private implementation for DeleteCommentContentResponse.
  * \internal
  *
- * \class DeleteCommentContentResponsePrivate
- *
- * \brief Private implementation for DeleteCommentContentResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCommentContentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCommentContentResponse instance.
+ * Constructs a DeleteCommentContentResponsePrivate object with public implementation \a q.
  */
 DeleteCommentContentResponsePrivate::DeleteCommentContentResponsePrivate(
     DeleteCommentContentResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ DeleteCommentContentResponsePrivate::DeleteCommentContentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit DeleteCommentContentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit DeleteCommentContent response element from \a xml.
  */
 void DeleteCommentContentResponsePrivate::parseDeleteCommentContentResponse(QXmlStreamReader &xml)
 {

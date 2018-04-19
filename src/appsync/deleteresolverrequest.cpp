@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DeleteResolverRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteResolverRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a DeleteResolverRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 DeleteResolverRequestPrivate::DeleteResolverRequestPrivate(
     const AppSyncRequest::Action action, DeleteResolverRequest * const q)

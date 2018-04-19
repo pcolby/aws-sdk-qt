@@ -169,9 +169,8 @@ QtAws::Core::AwsAbstractResponse * UntagProjectRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UntagProjectRequestPrivate object for CodeStar \a action with,
- * public implementation \a q.
+ * Constructs a UntagProjectRequestPrivate object for CodeStar \a action,
+ * with public implementation \a q.
  */
 UntagProjectRequestPrivate::UntagProjectRequestPrivate(
     const CodeStarRequest::Action action, UntagProjectRequest * const q)

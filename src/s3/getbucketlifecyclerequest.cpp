@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketLifecycleRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetBucketLifecycleRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketLifecycleRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketLifecycleRequestPrivate::GetBucketLifecycleRequestPrivate(
     const S3Request::Action action, GetBucketLifecycleRequest * const q)

@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmConfigurationRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteHsmConfigurationRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteHsmConfigurationRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DeleteHsmConfigurationRequestPrivate::DeleteHsmConfigurationRequestPrivate(
     const RedshiftRequest::Action action, DeleteHsmConfigurationRequest * const q)

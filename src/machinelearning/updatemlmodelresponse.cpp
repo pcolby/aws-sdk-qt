@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::UpdateMLModelResponse
- *
  * \brief The UpdateMLModelResponse class provides an interace for MachineLearning UpdateMLModel responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::updateMLModel
  */
 
 /*!
- * @brief  Constructs a new UpdateMLModelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateMLModelResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateMLModelResponse::UpdateMLModelResponse(
         const UpdateMLModelRequest &request,
@@ -55,6 +50,9 @@ UpdateMLModelResponse::UpdateMLModelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateMLModelRequest * UpdateMLModelResponse::request() const
 {
     Q_D(const UpdateMLModelResponse);
@@ -62,9 +60,8 @@ const UpdateMLModelRequest * UpdateMLModelResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning UpdateMLModel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning UpdateMLModel \a response.
  */
 void UpdateMLModelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateMLModelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::UpdateMLModelResponsePrivate
+ * \brief The UpdateMLModelResponsePrivate class provides private implementation for UpdateMLModelResponse.
  * \internal
  *
- * \class UpdateMLModelResponsePrivate
- *
- * \brief Private implementation for UpdateMLModelResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateMLModelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateMLModelResponse instance.
+ * Constructs a UpdateMLModelResponsePrivate object with public implementation \a q.
  */
 UpdateMLModelResponsePrivate::UpdateMLModelResponsePrivate(
     UpdateMLModelResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateMLModelResponsePrivate::UpdateMLModelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning UpdateMLModelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning UpdateMLModel response element from \a xml.
  */
 void UpdateMLModelResponsePrivate::parseUpdateMLModelResponse(QXmlStreamReader &xml)
 {

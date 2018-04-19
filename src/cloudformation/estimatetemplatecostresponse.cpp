@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::EstimateTemplateCostResponse
- *
  * \brief The EstimateTemplateCostResponse class provides an interace for CloudFormation EstimateTemplateCost responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new EstimateTemplateCostResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EstimateTemplateCostResponse object for \a reply to \a request, with parent \a parent.
  */
 EstimateTemplateCostResponse::EstimateTemplateCostResponse(
         const EstimateTemplateCostRequest &request,
@@ -77,6 +72,9 @@ EstimateTemplateCostResponse::EstimateTemplateCostResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EstimateTemplateCostRequest * EstimateTemplateCostResponse::request() const
 {
     Q_D(const EstimateTemplateCostResponse);
@@ -84,9 +82,8 @@ const EstimateTemplateCostRequest * EstimateTemplateCostResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudFormation EstimateTemplateCost response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation EstimateTemplateCost \a response.
  */
 void EstimateTemplateCostResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void EstimateTemplateCostResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::EstimateTemplateCostResponsePrivate
+ * \brief The EstimateTemplateCostResponsePrivate class provides private implementation for EstimateTemplateCostResponse.
  * \internal
  *
- * \class EstimateTemplateCostResponsePrivate
- *
- * \brief Private implementation for EstimateTemplateCostResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EstimateTemplateCostResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EstimateTemplateCostResponse instance.
+ * Constructs a EstimateTemplateCostResponsePrivate object with public implementation \a q.
  */
 EstimateTemplateCostResponsePrivate::EstimateTemplateCostResponsePrivate(
     EstimateTemplateCostResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ EstimateTemplateCostResponsePrivate::EstimateTemplateCostResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation EstimateTemplateCostResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation EstimateTemplateCost response element from \a xml.
  */
 void EstimateTemplateCostResponsePrivate::parseEstimateTemplateCostResponse(QXmlStreamReader &xml)
 {

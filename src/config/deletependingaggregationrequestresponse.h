@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeletePendingAggregationRequestResponse : public ConfigServic
 public:
     DeletePendingAggregationRequestResponse(const DeletePendingAggregationRequestRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeletePendingAggregationRequestRequest * request() const;
+    virtual const DeletePendingAggregationRequestRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeletePendingAggregationRequestResponse)

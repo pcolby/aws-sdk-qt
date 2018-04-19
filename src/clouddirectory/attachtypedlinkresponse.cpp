@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::AttachTypedLinkResponse
- *
  * \brief The AttachTypedLinkResponse class provides an interace for CloudDirectory AttachTypedLink responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new AttachTypedLinkResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachTypedLinkResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachTypedLinkResponse::AttachTypedLinkResponse(
         const AttachTypedLinkRequest &request,
@@ -62,6 +57,9 @@ AttachTypedLinkResponse::AttachTypedLinkResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachTypedLinkRequest * AttachTypedLinkResponse::request() const
 {
     Q_D(const AttachTypedLinkResponse);
@@ -69,9 +67,8 @@ const AttachTypedLinkRequest * AttachTypedLinkResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory AttachTypedLink response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory AttachTypedLink \a response.
  */
 void AttachTypedLinkResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void AttachTypedLinkResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::AttachTypedLinkResponsePrivate
+ * \brief The AttachTypedLinkResponsePrivate class provides private implementation for AttachTypedLinkResponse.
  * \internal
  *
- * \class AttachTypedLinkResponsePrivate
- *
- * \brief Private implementation for AttachTypedLinkResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachTypedLinkResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachTypedLinkResponse instance.
+ * Constructs a AttachTypedLinkResponsePrivate object with public implementation \a q.
  */
 AttachTypedLinkResponsePrivate::AttachTypedLinkResponsePrivate(
     AttachTypedLinkResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ AttachTypedLinkResponsePrivate::AttachTypedLinkResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory AttachTypedLinkResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory AttachTypedLink response element from \a xml.
  */
 void AttachTypedLinkResponsePrivate::parseAttachTypedLinkResponse(QXmlStreamReader &xml)
 {

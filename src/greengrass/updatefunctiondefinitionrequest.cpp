@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateFunctionDefinitionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateFunctionDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a UpdateFunctionDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 UpdateFunctionDefinitionRequestPrivate::UpdateFunctionDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateFunctionDefinitionRequest * const q)

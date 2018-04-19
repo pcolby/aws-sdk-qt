@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteContainerRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteContainerRequestPrivate object for MediaStore \a action with,
- * public implementation \a q.
+ * Constructs a DeleteContainerRequestPrivate object for MediaStore \a action,
+ * with public implementation \a q.
  */
 DeleteContainerRequestPrivate::DeleteContainerRequestPrivate(
     const MediaStoreRequest::Action action, DeleteContainerRequest * const q)

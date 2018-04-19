@@ -70,7 +70,7 @@ namespace WorkMail {
  */
 
 /*!
- * Constructs a[n] WorkMailRequest object for WorkMail \a action.
+ * Constructs a WorkMailRequest object for WorkMail \a action.
  */
 WorkMailRequest::WorkMailRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new WorkMailRequestPrivate(action, this))
@@ -270,8 +270,8 @@ QNetworkRequest WorkMailRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a WorkMailRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a WorkMailRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 WorkMailRequestPrivate::WorkMailRequestPrivate(const WorkMailRequest::Action action, WorkMailRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

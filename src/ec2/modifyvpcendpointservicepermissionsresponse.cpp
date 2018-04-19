@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcEndpointServicePermissionsResponse
- *
  * \brief The ModifyVpcEndpointServicePermissionsResponse class provides an interace for EC2 ModifyVpcEndpointServicePermissions responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcEndpointServicePermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyVpcEndpointServicePermissionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyVpcEndpointServicePermissionsResponse::ModifyVpcEndpointServicePermissionsResponse(
         const ModifyVpcEndpointServicePermissionsRequest &request,
@@ -59,6 +54,9 @@ ModifyVpcEndpointServicePermissionsResponse::ModifyVpcEndpointServicePermissions
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyVpcEndpointServicePermissionsRequest * ModifyVpcEndpointServicePermissionsResponse::request() const
 {
     Q_D(const ModifyVpcEndpointServicePermissionsResponse);
@@ -66,9 +64,8 @@ const ModifyVpcEndpointServicePermissionsRequest * ModifyVpcEndpointServicePermi
 }
 
 /*!
- * @brief  Parse a EC2 ModifyVpcEndpointServicePermissions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyVpcEndpointServicePermissions \a response.
  */
 void ModifyVpcEndpointServicePermissionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyVpcEndpointServicePermissionsResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::EC2::ModifyVpcEndpointServicePermissionsResponsePrivate
+ * \brief The ModifyVpcEndpointServicePermissionsResponsePrivate class provides private implementation for ModifyVpcEndpointServicePermissionsResponse.
  * \internal
  *
- * \class ModifyVpcEndpointServicePermissionsResponsePrivate
- *
- * \brief Private implementation for ModifyVpcEndpointServicePermissionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcEndpointServicePermissionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyVpcEndpointServicePermissionsResponse instance.
+ * Constructs a ModifyVpcEndpointServicePermissionsResponsePrivate object with public implementation \a q.
  */
 ModifyVpcEndpointServicePermissionsResponsePrivate::ModifyVpcEndpointServicePermissionsResponsePrivate(
     ModifyVpcEndpointServicePermissionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyVpcEndpointServicePermissionsResponsePrivate::ModifyVpcEndpointServicePerm
 }
 
 /*!
- * @brief  Parse an EC2 ModifyVpcEndpointServicePermissionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyVpcEndpointServicePermissions response element from \a xml.
  */
 void ModifyVpcEndpointServicePermissionsResponsePrivate::parseModifyVpcEndpointServicePermissionsResponse(QXmlStreamReader &xml)
 {

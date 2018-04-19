@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListAssociationsResponse
- *
  * \brief The ListAssociationsResponse class provides an interace for SSM ListAssociations responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListAssociationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAssociationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAssociationsResponse::ListAssociationsResponse(
         const ListAssociationsRequest &request,
@@ -79,6 +74,9 @@ ListAssociationsResponse::ListAssociationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAssociationsRequest * ListAssociationsResponse::request() const
 {
     Q_D(const ListAssociationsResponse);
@@ -86,9 +84,8 @@ const ListAssociationsRequest * ListAssociationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM ListAssociations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM ListAssociations \a response.
  */
 void ListAssociationsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void ListAssociationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::ListAssociationsResponsePrivate
+ * \brief The ListAssociationsResponsePrivate class provides private implementation for ListAssociationsResponse.
  * \internal
  *
- * \class ListAssociationsResponsePrivate
- *
- * \brief Private implementation for ListAssociationsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssociationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAssociationsResponse instance.
+ * Constructs a ListAssociationsResponsePrivate object with public implementation \a q.
  */
 ListAssociationsResponsePrivate::ListAssociationsResponsePrivate(
     ListAssociationsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ ListAssociationsResponsePrivate::ListAssociationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM ListAssociationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM ListAssociations response element from \a xml.
  */
 void ListAssociationsResponsePrivate::parseListAssociationsResponse(QXmlStreamReader &xml)
 {

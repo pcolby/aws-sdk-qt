@@ -40,7 +40,7 @@ namespace Translate {
  */
 
 /*!
- * Constructs a[n] TranslateRequest object for Translate \a action.
+ * Constructs a TranslateRequest object for Translate \a action.
  */
 TranslateRequest::TranslateRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new TranslateRequestPrivate(action, this))
@@ -240,8 +240,8 @@ QNetworkRequest TranslateRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a TranslateRequestPrivate object for Translate \a action with,
- * public implementation \a q.
+ * Constructs a TranslateRequestPrivate object for Translate \a action,
+ * with public implementation \a q.
  */
 TranslateRequestPrivate::TranslateRequestPrivate(const TranslateRequest::Action action, TranslateRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

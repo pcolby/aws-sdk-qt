@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * ListIdentityPoolUsageRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListIdentityPoolUsageRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a ListIdentityPoolUsageRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 ListIdentityPoolUsageRequestPrivate::ListIdentityPoolUsageRequestPrivate(
     const CognitoSyncRequest::Action action, ListIdentityPoolUsageRequest * const q)

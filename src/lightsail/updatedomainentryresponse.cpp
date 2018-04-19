@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::UpdateDomainEntryResponse
- *
  * \brief The UpdateDomainEntryResponse class provides an interace for Lightsail UpdateDomainEntry responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new UpdateDomainEntryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDomainEntryResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDomainEntryResponse::UpdateDomainEntryResponse(
         const UpdateDomainEntryRequest &request,
@@ -71,6 +66,9 @@ UpdateDomainEntryResponse::UpdateDomainEntryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDomainEntryRequest * UpdateDomainEntryResponse::request() const
 {
     Q_D(const UpdateDomainEntryResponse);
@@ -78,9 +76,8 @@ const UpdateDomainEntryRequest * UpdateDomainEntryResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail UpdateDomainEntry response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail UpdateDomainEntry \a response.
  */
 void UpdateDomainEntryResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void UpdateDomainEntryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::UpdateDomainEntryResponsePrivate
+ * \brief The UpdateDomainEntryResponsePrivate class provides private implementation for UpdateDomainEntryResponse.
  * \internal
  *
- * \class UpdateDomainEntryResponsePrivate
- *
- * \brief Private implementation for UpdateDomainEntryResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDomainEntryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDomainEntryResponse instance.
+ * Constructs a UpdateDomainEntryResponsePrivate object with public implementation \a q.
  */
 UpdateDomainEntryResponsePrivate::UpdateDomainEntryResponsePrivate(
     UpdateDomainEntryResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ UpdateDomainEntryResponsePrivate::UpdateDomainEntryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail UpdateDomainEntryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail UpdateDomainEntry response element from \a xml.
  */
 void UpdateDomainEntryResponsePrivate::parseUpdateDomainEntryResponse(QXmlStreamReader &xml)
 {

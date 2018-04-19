@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeOrderableReplicationInstancesResponse
- *
  * \brief The DescribeOrderableReplicationInstancesResponse class provides an interace for DatabaseMigrationService DescribeOrderableReplicationInstances responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeOrderableReplicationInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeOrderableReplicationInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeOrderableReplicationInstancesResponse::DescribeOrderableReplicationInstancesResponse(
         const DescribeOrderableReplicationInstancesRequest &request,
@@ -66,6 +61,9 @@ DescribeOrderableReplicationInstancesResponse::DescribeOrderableReplicationInsta
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeOrderableReplicationInstancesRequest * DescribeOrderableReplicationInstancesResponse::request() const
 {
     Q_D(const DescribeOrderableReplicationInstancesResponse);
@@ -73,9 +71,8 @@ const DescribeOrderableReplicationInstancesRequest * DescribeOrderableReplicatio
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DescribeOrderableReplicationInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DescribeOrderableReplicationInstances \a response.
  */
 void DescribeOrderableReplicationInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeOrderableReplicationInstancesResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DescribeOrderableReplicationInstancesResponsePrivate
+ * \brief The DescribeOrderableReplicationInstancesResponsePrivate class provides private implementation for DescribeOrderableReplicationInstancesResponse.
  * \internal
  *
- * \class DescribeOrderableReplicationInstancesResponsePrivate
- *
- * \brief Private implementation for DescribeOrderableReplicationInstancesResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOrderableReplicationInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeOrderableReplicationInstancesResponse instance.
+ * Constructs a DescribeOrderableReplicationInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeOrderableReplicationInstancesResponsePrivate::DescribeOrderableReplicationInstancesResponsePrivate(
     DescribeOrderableReplicationInstancesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeOrderableReplicationInstancesResponsePrivate::DescribeOrderableReplicati
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DescribeOrderableReplicationInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DescribeOrderableReplicationInstances response element from \a xml.
  */
 void DescribeOrderableReplicationInstancesResponsePrivate::parseDescribeOrderableReplicationInstancesResponse(QXmlStreamReader &xml)
 {

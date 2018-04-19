@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetAppResponse
- *
  * \brief The GetAppResponse class provides an interace for Pinpoint GetApp responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getApp
  */
 
 /*!
- * @brief  Constructs a new GetAppResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAppResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAppResponse::GetAppResponse(
         const GetAppRequest &request,
@@ -55,6 +50,9 @@ GetAppResponse::GetAppResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAppRequest * GetAppResponse::request() const
 {
     Q_D(const GetAppResponse);
@@ -62,9 +60,8 @@ const GetAppRequest * GetAppResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetApp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetApp \a response.
  */
 void GetAppResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetAppResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetAppResponsePrivate
+ * \brief The GetAppResponsePrivate class provides private implementation for GetAppResponse.
  * \internal
  *
- * \class GetAppResponsePrivate
- *
- * \brief Private implementation for GetAppResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAppResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAppResponse instance.
+ * Constructs a GetAppResponsePrivate object with public implementation \a q.
  */
 GetAppResponsePrivate::GetAppResponsePrivate(
     GetAppResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetAppResponsePrivate::GetAppResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetAppResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetApp response element from \a xml.
  */
 void GetAppResponsePrivate::parseGetAppResponse(QXmlStreamReader &xml)
 {

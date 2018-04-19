@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::CreateKeyResponse
- *
  * \brief The CreateKeyResponse class provides an interace for KMS CreateKey responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new CreateKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateKeyResponse::CreateKeyResponse(
         const CreateKeyRequest &request,
@@ -154,6 +149,9 @@ CreateKeyResponse::CreateKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateKeyRequest * CreateKeyResponse::request() const
 {
     Q_D(const CreateKeyResponse);
@@ -161,9 +159,8 @@ const CreateKeyRequest * CreateKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS CreateKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS CreateKey \a response.
  */
 void CreateKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void CreateKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::CreateKeyResponsePrivate
+ * \brief The CreateKeyResponsePrivate class provides private implementation for CreateKeyResponse.
  * \internal
  *
- * \class CreateKeyResponsePrivate
- *
- * \brief Private implementation for CreateKeyResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateKeyResponse instance.
+ * Constructs a CreateKeyResponsePrivate object with public implementation \a q.
  */
 CreateKeyResponsePrivate::CreateKeyResponsePrivate(
     CreateKeyResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ CreateKeyResponsePrivate::CreateKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS CreateKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS CreateKey response element from \a xml.
  */
 void CreateKeyResponsePrivate::parseCreateKeyResponse(QXmlStreamReader &xml)
 {

@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * DescribeIdentityProviderRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeIdentityProviderRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a DescribeIdentityProviderRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 DescribeIdentityProviderRequestPrivate::DescribeIdentityProviderRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DescribeIdentityProviderRequest * const q)

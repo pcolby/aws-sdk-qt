@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CopyDBClusterParameterGroupResponse
- *
  * \brief The CopyDBClusterParameterGroupResponse class provides an interace for RDS CopyDBClusterParameterGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CopyDBClusterParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopyDBClusterParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CopyDBClusterParameterGroupResponse::CopyDBClusterParameterGroupResponse(
         const CopyDBClusterParameterGroupRequest &request,
@@ -119,6 +114,9 @@ CopyDBClusterParameterGroupResponse::CopyDBClusterParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopyDBClusterParameterGroupRequest * CopyDBClusterParameterGroupResponse::request() const
 {
     Q_D(const CopyDBClusterParameterGroupResponse);
@@ -126,9 +124,8 @@ const CopyDBClusterParameterGroupRequest * CopyDBClusterParameterGroupResponse::
 }
 
 /*!
- * @brief  Parse a RDS CopyDBClusterParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CopyDBClusterParameterGroup \a response.
  */
 void CopyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CopyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CopyDBClusterParameterGroupResponsePrivate
+ * \brief The CopyDBClusterParameterGroupResponsePrivate class provides private implementation for CopyDBClusterParameterGroupResponse.
  * \internal
  *
- * \class CopyDBClusterParameterGroupResponsePrivate
- *
- * \brief Private implementation for CopyDBClusterParameterGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyDBClusterParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopyDBClusterParameterGroupResponse instance.
+ * Constructs a CopyDBClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 CopyDBClusterParameterGroupResponsePrivate::CopyDBClusterParameterGroupResponsePrivate(
     CopyDBClusterParameterGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CopyDBClusterParameterGroupResponsePrivate::CopyDBClusterParameterGroupResponseP
 }
 
 /*!
- * @brief  Parse an RDS CopyDBClusterParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CopyDBClusterParameterGroup response element from \a xml.
  */
 void CopyDBClusterParameterGroupResponsePrivate::parseCopyDBClusterParameterGroupResponse(QXmlStreamReader &xml)
 {

@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteDomainRequestPrivate object for SimpleDB \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDomainRequestPrivate object for SimpleDB \a action,
+ * with public implementation \a q.
  */
 DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
     const SimpleDBRequest::Action action, DeleteDomainRequest * const q)

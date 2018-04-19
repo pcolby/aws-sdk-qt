@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AllocateAddressRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a AllocateAddressRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AllocateAddressRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AllocateAddressRequestPrivate::AllocateAddressRequestPrivate(
     const EC2Request::Action action, AllocateAddressRequest * const q)

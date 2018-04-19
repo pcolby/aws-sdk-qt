@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * AddApplicationInputProcessingConfigurationReq
  */
 
 /*!
- *
- * Constructs a AddApplicationInputProcessingConfigurationRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a AddApplicationInputProcessingConfigurationRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 AddApplicationInputProcessingConfigurationRequestPrivate::AddApplicationInputProcessingConfigurationRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationInputProcessingConfigurationRequest * const q)

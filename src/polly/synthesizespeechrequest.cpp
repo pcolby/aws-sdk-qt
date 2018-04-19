@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * SynthesizeSpeechRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a SynthesizeSpeechRequestPrivate object for Polly \a action with,
- * public implementation \a q.
+ * Constructs a SynthesizeSpeechRequestPrivate object for Polly \a action,
+ * with public implementation \a q.
  */
 SynthesizeSpeechRequestPrivate::SynthesizeSpeechRequestPrivate(
     const PollyRequest::Action action, SynthesizeSpeechRequest * const q)

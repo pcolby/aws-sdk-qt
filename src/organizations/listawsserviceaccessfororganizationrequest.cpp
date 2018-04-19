@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * ListAWSServiceAccessForOrganizationRequest::r
  */
 
 /*!
- *
- * Constructs a ListAWSServiceAccessForOrganizationRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a ListAWSServiceAccessForOrganizationRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 ListAWSServiceAccessForOrganizationRequestPrivate::ListAWSServiceAccessForOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, ListAWSServiceAccessForOrganizationRequest * const q)

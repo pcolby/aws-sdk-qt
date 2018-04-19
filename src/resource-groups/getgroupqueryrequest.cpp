@@ -125,9 +125,8 @@ QtAws::Core::AwsAbstractResponse * GetGroupQueryRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetGroupQueryRequestPrivate object for ResourceGroups \a action with,
- * public implementation \a q.
+ * Constructs a GetGroupQueryRequestPrivate object for ResourceGroups \a action,
+ * with public implementation \a q.
  */
 GetGroupQueryRequestPrivate::GetGroupQueryRequestPrivate(
     const ResourceGroupsRequest::Action action, GetGroupQueryRequest * const q)

@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DescribeDataSourcesResponse
- *
  * \brief The DescribeDataSourcesResponse class provides an interace for MachineLearning DescribeDataSources responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::describeDataSources
  */
 
 /*!
- * @brief  Constructs a new DescribeDataSourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDataSourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDataSourcesResponse::DescribeDataSourcesResponse(
         const DescribeDataSourcesRequest &request,
@@ -55,6 +50,9 @@ DescribeDataSourcesResponse::DescribeDataSourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDataSourcesRequest * DescribeDataSourcesResponse::request() const
 {
     Q_D(const DescribeDataSourcesResponse);
@@ -62,9 +60,8 @@ const DescribeDataSourcesRequest * DescribeDataSourcesResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning DescribeDataSources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning DescribeDataSources \a response.
  */
 void DescribeDataSourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeDataSourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::DescribeDataSourcesResponsePrivate
+ * \brief The DescribeDataSourcesResponsePrivate class provides private implementation for DescribeDataSourcesResponse.
  * \internal
  *
- * \class DescribeDataSourcesResponsePrivate
- *
- * \brief Private implementation for DescribeDataSourcesResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDataSourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDataSourcesResponse instance.
+ * Constructs a DescribeDataSourcesResponsePrivate object with public implementation \a q.
  */
 DescribeDataSourcesResponsePrivate::DescribeDataSourcesResponsePrivate(
     DescribeDataSourcesResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeDataSourcesResponsePrivate::DescribeDataSourcesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning DescribeDataSourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning DescribeDataSources response element from \a xml.
  */
 void DescribeDataSourcesResponsePrivate::parseDescribeDataSourcesResponse(QXmlStreamReader &xml)
 {

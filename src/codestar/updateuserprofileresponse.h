@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateUserProfileResponse : public CodeStarResponse {
 public:
     UpdateUserProfileResponse(const UpdateUserProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateUserProfileRequest * request() const;
+    virtual const UpdateUserProfileRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateUserProfileResponse)

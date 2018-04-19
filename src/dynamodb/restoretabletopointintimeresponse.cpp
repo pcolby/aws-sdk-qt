@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::RestoreTableToPointInTimeResponse
- *
  * \brief The RestoreTableToPointInTimeResponse class provides an interace for DynamoDB RestoreTableToPointInTime responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new RestoreTableToPointInTimeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreTableToPointInTimeResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreTableToPointInTimeResponse::RestoreTableToPointInTimeResponse(
         const RestoreTableToPointInTimeRequest &request,
@@ -74,6 +69,9 @@ RestoreTableToPointInTimeResponse::RestoreTableToPointInTimeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreTableToPointInTimeRequest * RestoreTableToPointInTimeResponse::request() const
 {
     Q_D(const RestoreTableToPointInTimeResponse);
@@ -81,9 +79,8 @@ const RestoreTableToPointInTimeRequest * RestoreTableToPointInTimeResponse::requ
 }
 
 /*!
- * @brief  Parse a DynamoDB RestoreTableToPointInTime response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB RestoreTableToPointInTime \a response.
  */
 void RestoreTableToPointInTimeResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void RestoreTableToPointInTimeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::RestoreTableToPointInTimeResponsePrivate
+ * \brief The RestoreTableToPointInTimeResponsePrivate class provides private implementation for RestoreTableToPointInTimeResponse.
  * \internal
  *
- * \class RestoreTableToPointInTimeResponsePrivate
- *
- * \brief Private implementation for RestoreTableToPointInTimeResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreTableToPointInTimeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreTableToPointInTimeResponse instance.
+ * Constructs a RestoreTableToPointInTimeResponsePrivate object with public implementation \a q.
  */
 RestoreTableToPointInTimeResponsePrivate::RestoreTableToPointInTimeResponsePrivate(
     RestoreTableToPointInTimeResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ RestoreTableToPointInTimeResponsePrivate::RestoreTableToPointInTimeResponsePriva
 }
 
 /*!
- * @brief  Parse an DynamoDB RestoreTableToPointInTimeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB RestoreTableToPointInTime response element from \a xml.
  */
 void RestoreTableToPointInTimeResponsePrivate::parseRestoreTableToPointInTimeResponse(QXmlStreamReader &xml)
 {

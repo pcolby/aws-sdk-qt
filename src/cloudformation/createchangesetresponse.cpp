@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::CreateChangeSetResponse
- *
  * \brief The CreateChangeSetResponse class provides an interace for CloudFormation CreateChangeSet responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new CreateChangeSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateChangeSetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateChangeSetResponse::CreateChangeSetResponse(
         const CreateChangeSetRequest &request,
@@ -77,6 +72,9 @@ CreateChangeSetResponse::CreateChangeSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateChangeSetRequest * CreateChangeSetResponse::request() const
 {
     Q_D(const CreateChangeSetResponse);
@@ -84,9 +82,8 @@ const CreateChangeSetRequest * CreateChangeSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation CreateChangeSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation CreateChangeSet \a response.
  */
 void CreateChangeSetResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void CreateChangeSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::CreateChangeSetResponsePrivate
+ * \brief The CreateChangeSetResponsePrivate class provides private implementation for CreateChangeSetResponse.
  * \internal
  *
- * \class CreateChangeSetResponsePrivate
- *
- * \brief Private implementation for CreateChangeSetResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateChangeSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateChangeSetResponse instance.
+ * Constructs a CreateChangeSetResponsePrivate object with public implementation \a q.
  */
 CreateChangeSetResponsePrivate::CreateChangeSetResponsePrivate(
     CreateChangeSetResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ CreateChangeSetResponsePrivate::CreateChangeSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation CreateChangeSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation CreateChangeSet response element from \a xml.
  */
 void CreateChangeSetResponsePrivate::parseCreateChangeSetResponse(QXmlStreamReader &xml)
 {

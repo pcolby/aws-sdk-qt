@@ -29,10 +29,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::DeleteNotificationChannelResponse
- *
  * \brief The DeleteNotificationChannelResponse class provides an interace for FMS DeleteNotificationChannel responses.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -45,11 +44,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new DeleteNotificationChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNotificationChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNotificationChannelResponse::DeleteNotificationChannelResponse(
         const DeleteNotificationChannelRequest &request,
@@ -61,6 +56,9 @@ DeleteNotificationChannelResponse::DeleteNotificationChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNotificationChannelRequest * DeleteNotificationChannelResponse::request() const
 {
     Q_D(const DeleteNotificationChannelResponse);
@@ -68,9 +66,8 @@ const DeleteNotificationChannelRequest * DeleteNotificationChannelResponse::requ
 }
 
 /*!
- * @brief  Parse a FMS DeleteNotificationChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful FMS DeleteNotificationChannel \a response.
  */
 void DeleteNotificationChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeleteNotificationChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::FMS::DeleteNotificationChannelResponsePrivate
+ * \brief The DeleteNotificationChannelResponsePrivate class provides private implementation for DeleteNotificationChannelResponse.
  * \internal
  *
- * \class DeleteNotificationChannelResponsePrivate
- *
- * \brief Private implementation for DeleteNotificationChannelResponse.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNotificationChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNotificationChannelResponse instance.
+ * Constructs a DeleteNotificationChannelResponsePrivate object with public implementation \a q.
  */
 DeleteNotificationChannelResponsePrivate::DeleteNotificationChannelResponsePrivate(
     DeleteNotificationChannelResponse * const q) : FMSResponsePrivate(q)
@@ -101,9 +94,7 @@ DeleteNotificationChannelResponsePrivate::DeleteNotificationChannelResponsePriva
 }
 
 /*!
- * @brief  Parse an FMS DeleteNotificationChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a FMS DeleteNotificationChannel response element from \a xml.
  */
 void DeleteNotificationChannelResponsePrivate::parseDeleteNotificationChannelResponse(QXmlStreamReader &xml)
 {

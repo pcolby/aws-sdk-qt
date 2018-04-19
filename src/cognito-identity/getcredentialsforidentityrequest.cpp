@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * GetCredentialsForIdentityRequest::response(QN
  */
 
 /*!
- *
- * Constructs a GetCredentialsForIdentityRequestPrivate object for CognitoIdentity \a action with,
- * public implementation \a q.
+ * Constructs a GetCredentialsForIdentityRequestPrivate object for CognitoIdentity \a action,
+ * with public implementation \a q.
  */
 GetCredentialsForIdentityRequestPrivate::GetCredentialsForIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, GetCredentialsForIdentityRequest * const q)

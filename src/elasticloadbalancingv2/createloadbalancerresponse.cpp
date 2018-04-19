@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateLoadBalancerResponse
- *
  * \brief The CreateLoadBalancerResponse class provides an interace for ElasticLoadBalancingv2 CreateLoadBalancer responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new CreateLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLoadBalancerResponse::CreateLoadBalancerResponse(
         const CreateLoadBalancerRequest &request,
@@ -123,6 +118,9 @@ CreateLoadBalancerResponse::CreateLoadBalancerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLoadBalancerRequest * CreateLoadBalancerResponse::request() const
 {
     Q_D(const CreateLoadBalancerResponse);
@@ -130,9 +128,8 @@ const CreateLoadBalancerRequest * CreateLoadBalancerResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 CreateLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 CreateLoadBalancer \a response.
  */
 void CreateLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void CreateLoadBalancerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::CreateLoadBalancerResponsePrivate
+ * \brief The CreateLoadBalancerResponsePrivate class provides private implementation for CreateLoadBalancerResponse.
  * \internal
  *
- * \class CreateLoadBalancerResponsePrivate
- *
- * \brief Private implementation for CreateLoadBalancerResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLoadBalancerResponse instance.
+ * Constructs a CreateLoadBalancerResponsePrivate object with public implementation \a q.
  */
 CreateLoadBalancerResponsePrivate::CreateLoadBalancerResponsePrivate(
     CreateLoadBalancerResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ CreateLoadBalancerResponsePrivate::CreateLoadBalancerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 CreateLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 CreateLoadBalancer response element from \a xml.
  */
 void CreateLoadBalancerResponsePrivate::parseCreateLoadBalancerResponse(QXmlStreamReader &xml)
 {

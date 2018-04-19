@@ -136,7 +136,7 @@ namespace SSM {
  */
 
 /*!
- * Constructs a[n] SSMRequest object for SSM \a action.
+ * Constructs a SSMRequest object for SSM \a action.
  */
 SSMRequest::SSMRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SSMRequestPrivate(action, this))
@@ -336,8 +336,8 @@ QNetworkRequest SSMRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a SSMRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a SSMRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 SSMRequestPrivate::SSMRequestPrivate(const SSMRequest::Action action, SSMRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

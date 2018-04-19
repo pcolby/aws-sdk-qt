@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateClusterRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a CreateClusterRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const ECSRequest::Action action, CreateClusterRequest * const q)

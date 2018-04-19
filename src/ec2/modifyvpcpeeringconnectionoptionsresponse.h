@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyVpcPeeringConnectionOptionsResponse : public EC2Respons
 public:
     ModifyVpcPeeringConnectionOptionsResponse(const ModifyVpcPeeringConnectionOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyVpcPeeringConnectionOptionsRequest * request() const;
+    virtual const ModifyVpcPeeringConnectionOptionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyVpcPeeringConnectionOptionsResponse)

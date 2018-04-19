@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateIndexResponse : public CloudDirectoryResponse {
 public:
     CreateIndexResponse(const CreateIndexRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateIndexRequest * request() const;
+    virtual const CreateIndexRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateIndexResponse)

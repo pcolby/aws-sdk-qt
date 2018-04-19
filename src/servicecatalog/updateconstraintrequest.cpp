@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * UpdateConstraintRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateConstraintRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a UpdateConstraintRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 UpdateConstraintRequestPrivate::UpdateConstraintRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateConstraintRequest * const q)

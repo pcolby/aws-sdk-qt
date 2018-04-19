@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateDiscoveredResourceRequest::respon
  */
 
 /*!
- *
- * Constructs a DisassociateDiscoveredResourceRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateDiscoveredResourceRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 DisassociateDiscoveredResourceRequestPrivate::DisassociateDiscoveredResourceRequestPrivate(
     const MigrationHubRequest::Action action, DisassociateDiscoveredResourceRequest * const q)

@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeInstanceHealthResponse
- *
  * \brief The DescribeInstanceHealthResponse class provides an interace for ElasticLoadBalancing DescribeInstanceHealth responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstanceHealthResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeInstanceHealthResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeInstanceHealthResponse::DescribeInstanceHealthResponse(
         const DescribeInstanceHealthRequest &request,
@@ -83,6 +78,9 @@ DescribeInstanceHealthResponse::DescribeInstanceHealthResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeInstanceHealthRequest * DescribeInstanceHealthResponse::request() const
 {
     Q_D(const DescribeInstanceHealthResponse);
@@ -90,9 +88,8 @@ const DescribeInstanceHealthRequest * DescribeInstanceHealthResponse::request() 
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing DescribeInstanceHealth response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing DescribeInstanceHealth \a response.
  */
 void DescribeInstanceHealthResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void DescribeInstanceHealthResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::DescribeInstanceHealthResponsePrivate
+ * \brief The DescribeInstanceHealthResponsePrivate class provides private implementation for DescribeInstanceHealthResponse.
  * \internal
  *
- * \class DescribeInstanceHealthResponsePrivate
- *
- * \brief Private implementation for DescribeInstanceHealthResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstanceHealthResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeInstanceHealthResponse instance.
+ * Constructs a DescribeInstanceHealthResponsePrivate object with public implementation \a q.
  */
 DescribeInstanceHealthResponsePrivate::DescribeInstanceHealthResponsePrivate(
     DescribeInstanceHealthResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ DescribeInstanceHealthResponsePrivate::DescribeInstanceHealthResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing DescribeInstanceHealthResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing DescribeInstanceHealth response element from \a xml.
  */
 void DescribeInstanceHealthResponsePrivate::parseDescribeInstanceHealthResponse(QXmlStreamReader &xml)
 {

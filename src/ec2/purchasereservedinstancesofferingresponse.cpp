@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::PurchaseReservedInstancesOfferingResponse
- *
  * \brief The PurchaseReservedInstancesOfferingResponse class provides an interace for EC2 PurchaseReservedInstancesOffering responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new PurchaseReservedInstancesOfferingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PurchaseReservedInstancesOfferingResponse object for \a reply to \a request, with parent \a parent.
  */
 PurchaseReservedInstancesOfferingResponse::PurchaseReservedInstancesOfferingResponse(
         const PurchaseReservedInstancesOfferingRequest &request,
@@ -59,6 +54,9 @@ PurchaseReservedInstancesOfferingResponse::PurchaseReservedInstancesOfferingResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PurchaseReservedInstancesOfferingRequest * PurchaseReservedInstancesOfferingResponse::request() const
 {
     Q_D(const PurchaseReservedInstancesOfferingResponse);
@@ -66,9 +64,8 @@ const PurchaseReservedInstancesOfferingRequest * PurchaseReservedInstancesOfferi
 }
 
 /*!
- * @brief  Parse a EC2 PurchaseReservedInstancesOffering response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 PurchaseReservedInstancesOffering \a response.
  */
 void PurchaseReservedInstancesOfferingResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void PurchaseReservedInstancesOfferingResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::EC2::PurchaseReservedInstancesOfferingResponsePrivate
+ * \brief The PurchaseReservedInstancesOfferingResponsePrivate class provides private implementation for PurchaseReservedInstancesOfferingResponse.
  * \internal
  *
- * \class PurchaseReservedInstancesOfferingResponsePrivate
- *
- * \brief Private implementation for PurchaseReservedInstancesOfferingResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseReservedInstancesOfferingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PurchaseReservedInstancesOfferingResponse instance.
+ * Constructs a PurchaseReservedInstancesOfferingResponsePrivate object with public implementation \a q.
  */
 PurchaseReservedInstancesOfferingResponsePrivate::PurchaseReservedInstancesOfferingResponsePrivate(
     PurchaseReservedInstancesOfferingResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ PurchaseReservedInstancesOfferingResponsePrivate::PurchaseReservedInstancesOffer
 }
 
 /*!
- * @brief  Parse an EC2 PurchaseReservedInstancesOfferingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 PurchaseReservedInstancesOffering response element from \a xml.
  */
 void PurchaseReservedInstancesOfferingResponsePrivate::parsePurchaseReservedInstancesOfferingResponse(QXmlStreamReader &xml)
 {

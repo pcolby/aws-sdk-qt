@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * GetDeviceInstanceRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetDeviceInstanceRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a GetDeviceInstanceRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 GetDeviceInstanceRequestPrivate::GetDeviceInstanceRequestPrivate(
     const DeviceFarmRequest::Action action, GetDeviceInstanceRequest * const q)

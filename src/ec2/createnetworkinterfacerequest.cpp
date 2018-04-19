@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateNetworkInterfaceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateNetworkInterfaceRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateNetworkInterfaceRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateNetworkInterfaceRequestPrivate::CreateNetworkInterfaceRequestPrivate(
     const EC2Request::Action action, CreateNetworkInterfaceRequest * const q)

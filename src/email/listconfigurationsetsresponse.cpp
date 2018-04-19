@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListConfigurationSetsResponse
- *
  * \brief The ListConfigurationSetsResponse class provides an interace for SES ListConfigurationSets responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListConfigurationSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListConfigurationSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListConfigurationSetsResponse::ListConfigurationSetsResponse(
         const ListConfigurationSetsRequest &request,
@@ -66,6 +61,9 @@ ListConfigurationSetsResponse::ListConfigurationSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListConfigurationSetsRequest * ListConfigurationSetsResponse::request() const
 {
     Q_D(const ListConfigurationSetsResponse);
@@ -73,9 +71,8 @@ const ListConfigurationSetsRequest * ListConfigurationSetsResponse::request() co
 }
 
 /*!
- * @brief  Parse a SES ListConfigurationSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES ListConfigurationSets \a response.
  */
 void ListConfigurationSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListConfigurationSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::ListConfigurationSetsResponsePrivate
+ * \brief The ListConfigurationSetsResponsePrivate class provides private implementation for ListConfigurationSetsResponse.
  * \internal
  *
- * \class ListConfigurationSetsResponsePrivate
- *
- * \brief Private implementation for ListConfigurationSetsResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListConfigurationSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListConfigurationSetsResponse instance.
+ * Constructs a ListConfigurationSetsResponsePrivate object with public implementation \a q.
  */
 ListConfigurationSetsResponsePrivate::ListConfigurationSetsResponsePrivate(
     ListConfigurationSetsResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ ListConfigurationSetsResponsePrivate::ListConfigurationSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES ListConfigurationSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES ListConfigurationSets response element from \a xml.
  */
 void ListConfigurationSetsResponsePrivate::parseListConfigurationSetsResponse(QXmlStreamReader &xml)
 {

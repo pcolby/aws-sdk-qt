@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateRegexMatchSetRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a CreateRegexMatchSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a CreateRegexMatchSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 CreateRegexMatchSetRequestPrivate::CreateRegexMatchSetRequestPrivate(
     const WAFRequest::Action action, CreateRegexMatchSetRequest * const q)

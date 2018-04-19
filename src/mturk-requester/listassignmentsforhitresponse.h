@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAssignmentsForHITResponse : public MTurkResponse {
 public:
     ListAssignmentsForHITResponse(const ListAssignmentsForHITRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAssignmentsForHITRequest * request() const;
+    virtual const ListAssignmentsForHITRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListAssignmentsForHITResponse)

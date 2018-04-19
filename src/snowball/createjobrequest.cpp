@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CreateJobRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a CreateJobRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a CreateJobRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 CreateJobRequestPrivate::CreateJobRequestPrivate(
     const SnowballRequest::Action action, CreateJobRequest * const q)

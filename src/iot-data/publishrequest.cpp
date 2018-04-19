@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * PublishRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a PublishRequestPrivate object for IoTDataPlane \a action with,
- * public implementation \a q.
+ * Constructs a PublishRequestPrivate object for IoTDataPlane \a action,
+ * with public implementation \a q.
  */
 PublishRequestPrivate::PublishRequestPrivate(
     const IoTDataPlaneRequest::Action action, PublishRequest * const q)

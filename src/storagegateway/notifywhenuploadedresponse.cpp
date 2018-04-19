@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::NotifyWhenUploadedResponse
- *
  * \brief The NotifyWhenUploadedResponse class provides an interace for StorageGateway NotifyWhenUploaded responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new NotifyWhenUploadedResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a NotifyWhenUploadedResponse object for \a reply to \a request, with parent \a parent.
  */
 NotifyWhenUploadedResponse::NotifyWhenUploadedResponse(
         const NotifyWhenUploadedRequest &request,
@@ -124,6 +119,9 @@ NotifyWhenUploadedResponse::NotifyWhenUploadedResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const NotifyWhenUploadedRequest * NotifyWhenUploadedResponse::request() const
 {
     Q_D(const NotifyWhenUploadedResponse);
@@ -131,9 +129,8 @@ const NotifyWhenUploadedRequest * NotifyWhenUploadedResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway NotifyWhenUploaded response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway NotifyWhenUploaded \a response.
  */
 void NotifyWhenUploadedResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void NotifyWhenUploadedResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::NotifyWhenUploadedResponsePrivate
+ * \brief The NotifyWhenUploadedResponsePrivate class provides private implementation for NotifyWhenUploadedResponse.
  * \internal
  *
- * \class NotifyWhenUploadedResponsePrivate
- *
- * \brief Private implementation for NotifyWhenUploadedResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new NotifyWhenUploadedResponsePrivate object.
- *
- * @param  q  Pointer to this object's public NotifyWhenUploadedResponse instance.
+ * Constructs a NotifyWhenUploadedResponsePrivate object with public implementation \a q.
  */
 NotifyWhenUploadedResponsePrivate::NotifyWhenUploadedResponsePrivate(
     NotifyWhenUploadedResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ NotifyWhenUploadedResponsePrivate::NotifyWhenUploadedResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway NotifyWhenUploadedResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway NotifyWhenUploaded response element from \a xml.
  */
 void NotifyWhenUploadedResponsePrivate::parseNotifyWhenUploadedResponse(QXmlStreamReader &xml)
 {

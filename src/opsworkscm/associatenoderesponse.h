@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateNodeResponse : public OpsWorksCMResponse {
 public:
     AssociateNodeResponse(const AssociateNodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateNodeRequest * request() const;
+    virtual const AssociateNodeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateNodeResponse)

@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * ListOperationsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListOperationsRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a ListOperationsRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 ListOperationsRequestPrivate::ListOperationsRequestPrivate(
     const Route53DomainsRequest::Action action, ListOperationsRequest * const q)

@@ -83,7 +83,7 @@ namespace DirectConnect {
  */
 
 /*!
- * Constructs a[n] DirectConnectRequest object for DirectConnect \a action.
+ * Constructs a DirectConnectRequest object for DirectConnect \a action.
  */
 DirectConnectRequest::DirectConnectRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DirectConnectRequestPrivate(action, this))
@@ -283,8 +283,8 @@ QNetworkRequest DirectConnectRequest::unsignedRequest(const QUrl &endpoint) cons
  */
 
 /*!
- * Constructs a DirectConnectRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a DirectConnectRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 DirectConnectRequestPrivate::DirectConnectRequestPrivate(const DirectConnectRequest::Action action, DirectConnectRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

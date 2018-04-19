@@ -29,10 +29,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsResponse
- *
  * \brief The DescribeElasticsearchInstanceTypeLimitsResponse class provides an interace for ElasticsearchService DescribeElasticsearchInstanceTypeLimits responses.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeElasticsearchInstanceTypeLimitsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeElasticsearchInstanceTypeLimitsResponse::DescribeElasticsearchInstanceTypeLimitsResponse(
         const DescribeElasticsearchInstanceTypeLimitsRequest &request,
@@ -64,6 +59,9 @@ DescribeElasticsearchInstanceTypeLimitsResponse::DescribeElasticsearchInstanceTy
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeElasticsearchInstanceTypeLimitsRequest * DescribeElasticsearchInstanceTypeLimitsResponse::request() const
 {
     Q_D(const DescribeElasticsearchInstanceTypeLimitsResponse);
@@ -71,9 +69,8 @@ const DescribeElasticsearchInstanceTypeLimitsRequest * DescribeElasticsearchInst
 }
 
 /*!
- * @brief  Parse a ElasticsearchService DescribeElasticsearchInstanceTypeLimits response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticsearchService DescribeElasticsearchInstanceTypeLimits \a response.
  */
 void DescribeElasticsearchInstanceTypeLimitsResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void DescribeElasticsearchInstanceTypeLimitsResponse::parseSuccess(QIODevice &re
 }
 
 /*!
+ * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsResponsePrivate
+ * \brief The DescribeElasticsearchInstanceTypeLimitsResponsePrivate class provides private implementation for DescribeElasticsearchInstanceTypeLimitsResponse.
  * \internal
  *
- * \class DescribeElasticsearchInstanceTypeLimitsResponsePrivate
- *
- * \brief Private implementation for DescribeElasticsearchInstanceTypeLimitsResponse.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeElasticsearchInstanceTypeLimitsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeElasticsearchInstanceTypeLimitsResponse instance.
+ * Constructs a DescribeElasticsearchInstanceTypeLimitsResponsePrivate object with public implementation \a q.
  */
 DescribeElasticsearchInstanceTypeLimitsResponsePrivate::DescribeElasticsearchInstanceTypeLimitsResponsePrivate(
     DescribeElasticsearchInstanceTypeLimitsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
@@ -104,9 +97,7 @@ DescribeElasticsearchInstanceTypeLimitsResponsePrivate::DescribeElasticsearchIns
 }
 
 /*!
- * @brief  Parse an ElasticsearchService DescribeElasticsearchInstanceTypeLimitsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticsearchService DescribeElasticsearchInstanceTypeLimits response element from \a xml.
  */
 void DescribeElasticsearchInstanceTypeLimitsResponsePrivate::parseDescribeElasticsearchInstanceTypeLimitsResponse(QXmlStreamReader &xml)
 {

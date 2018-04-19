@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DeleteUserResponse
- *
  * \brief The DeleteUserResponse class provides an interace for WorkMail DeleteUser responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteUserResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteUserResponse::DeleteUserResponse(
         const DeleteUserRequest &request,
@@ -88,6 +83,9 @@ DeleteUserResponse::DeleteUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteUserRequest * DeleteUserResponse::request() const
 {
     Q_D(const DeleteUserResponse);
@@ -95,9 +93,8 @@ const DeleteUserRequest * DeleteUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail DeleteUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail DeleteUser \a response.
  */
 void DeleteUserResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DeleteUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::DeleteUserResponsePrivate
+ * \brief The DeleteUserResponsePrivate class provides private implementation for DeleteUserResponse.
  * \internal
  *
- * \class DeleteUserResponsePrivate
- *
- * \brief Private implementation for DeleteUserResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteUserResponse instance.
+ * Constructs a DeleteUserResponsePrivate object with public implementation \a q.
  */
 DeleteUserResponsePrivate::DeleteUserResponsePrivate(
     DeleteUserResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ DeleteUserResponsePrivate::DeleteUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail DeleteUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail DeleteUser response element from \a xml.
  */
 void DeleteUserResponsePrivate::parseDeleteUserResponse(QXmlStreamReader &xml)
 {

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetDeploymentStatusRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetDeploymentStatusRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a GetDeploymentStatusRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 GetDeploymentStatusRequestPrivate::GetDeploymentStatusRequestPrivate(
     const GreengrassRequest::Action action, GetDeploymentStatusRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVpnConnectionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteVpnConnectionRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVpnConnectionRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteVpnConnectionRequestPrivate::DeleteVpnConnectionRequestPrivate(
     const EC2Request::Action action, DeleteVpnConnectionRequest * const q)

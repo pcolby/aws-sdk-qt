@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeCacheResponse : public StorageGatewayResponse {
 public:
     DescribeCacheResponse(const DescribeCacheRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeCacheRequest * request() const;
+    virtual const DescribeCacheRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeCacheResponse)

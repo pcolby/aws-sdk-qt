@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateCrawlerScheduleRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a UpdateCrawlerScheduleRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a UpdateCrawlerScheduleRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 UpdateCrawlerScheduleRequestPrivate::UpdateCrawlerScheduleRequestPrivate(
     const GlueRequest::Action action, UpdateCrawlerScheduleRequest * const q)

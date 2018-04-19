@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GenerateCredentialReportResponse
- *
  * \brief The GenerateCredentialReportResponse class provides an interace for IAM GenerateCredentialReport responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GenerateCredentialReportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GenerateCredentialReportResponse object for \a reply to \a request, with parent \a parent.
  */
 GenerateCredentialReportResponse::GenerateCredentialReportResponse(
         const GenerateCredentialReportRequest &request,
@@ -120,6 +115,9 @@ GenerateCredentialReportResponse::GenerateCredentialReportResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GenerateCredentialReportRequest * GenerateCredentialReportResponse::request() const
 {
     Q_D(const GenerateCredentialReportResponse);
@@ -127,9 +125,8 @@ const GenerateCredentialReportRequest * GenerateCredentialReportResponse::reques
 }
 
 /*!
- * @brief  Parse a IAM GenerateCredentialReport response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GenerateCredentialReport \a response.
  */
 void GenerateCredentialReportResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GenerateCredentialReportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GenerateCredentialReportResponsePrivate
+ * \brief The GenerateCredentialReportResponsePrivate class provides private implementation for GenerateCredentialReportResponse.
  * \internal
  *
- * \class GenerateCredentialReportResponsePrivate
- *
- * \brief Private implementation for GenerateCredentialReportResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GenerateCredentialReportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GenerateCredentialReportResponse instance.
+ * Constructs a GenerateCredentialReportResponsePrivate object with public implementation \a q.
  */
 GenerateCredentialReportResponsePrivate::GenerateCredentialReportResponsePrivate(
     GenerateCredentialReportResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GenerateCredentialReportResponsePrivate::GenerateCredentialReportResponsePrivate
 }
 
 /*!
- * @brief  Parse an IAM GenerateCredentialReportResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GenerateCredentialReport response element from \a xml.
  */
 void GenerateCredentialReportResponsePrivate::parseGenerateCredentialReportResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::ListElasticsearchInstanceTypesResponse
- *
  * \brief The ListElasticsearchInstanceTypesResponse class provides an interace for ElasticsearchService ListElasticsearchInstanceTypes responses.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new ListElasticsearchInstanceTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListElasticsearchInstanceTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListElasticsearchInstanceTypesResponse::ListElasticsearchInstanceTypesResponse(
         const ListElasticsearchInstanceTypesRequest &request,
@@ -64,6 +59,9 @@ ListElasticsearchInstanceTypesResponse::ListElasticsearchInstanceTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListElasticsearchInstanceTypesRequest * ListElasticsearchInstanceTypesResponse::request() const
 {
     Q_D(const ListElasticsearchInstanceTypesResponse);
@@ -71,9 +69,8 @@ const ListElasticsearchInstanceTypesRequest * ListElasticsearchInstanceTypesResp
 }
 
 /*!
- * @brief  Parse a ElasticsearchService ListElasticsearchInstanceTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticsearchService ListElasticsearchInstanceTypes \a response.
  */
 void ListElasticsearchInstanceTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void ListElasticsearchInstanceTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticsearchService::ListElasticsearchInstanceTypesResponsePrivate
+ * \brief The ListElasticsearchInstanceTypesResponsePrivate class provides private implementation for ListElasticsearchInstanceTypesResponse.
  * \internal
  *
- * \class ListElasticsearchInstanceTypesResponsePrivate
- *
- * \brief Private implementation for ListElasticsearchInstanceTypesResponse.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListElasticsearchInstanceTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListElasticsearchInstanceTypesResponse instance.
+ * Constructs a ListElasticsearchInstanceTypesResponsePrivate object with public implementation \a q.
  */
 ListElasticsearchInstanceTypesResponsePrivate::ListElasticsearchInstanceTypesResponsePrivate(
     ListElasticsearchInstanceTypesResponse * const q) : ElasticsearchServiceResponsePrivate(q)
@@ -104,9 +97,7 @@ ListElasticsearchInstanceTypesResponsePrivate::ListElasticsearchInstanceTypesRes
 }
 
 /*!
- * @brief  Parse an ElasticsearchService ListElasticsearchInstanceTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticsearchService ListElasticsearchInstanceTypes response element from \a xml.
  */
 void ListElasticsearchInstanceTypesResponsePrivate::parseListElasticsearchInstanceTypesResponse(QXmlStreamReader &xml)
 {

@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * RemoveFacetFromObjectRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a RemoveFacetFromObjectRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a RemoveFacetFromObjectRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 RemoveFacetFromObjectRequestPrivate::RemoveFacetFromObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, RemoveFacetFromObjectRequest * const q)

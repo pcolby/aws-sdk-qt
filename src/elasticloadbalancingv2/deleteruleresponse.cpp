@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteRuleResponse
- *
  * \brief The DeleteRuleResponse class provides an interace for ElasticLoadBalancingv2 DeleteRule responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRuleResponse::DeleteRuleResponse(
         const DeleteRuleRequest &request,
@@ -123,6 +118,9 @@ DeleteRuleResponse::DeleteRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRuleRequest * DeleteRuleResponse::request() const
 {
     Q_D(const DeleteRuleResponse);
@@ -130,9 +128,8 @@ const DeleteRuleRequest * DeleteRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DeleteRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DeleteRule \a response.
  */
 void DeleteRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DeleteRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DeleteRuleResponsePrivate
+ * \brief The DeleteRuleResponsePrivate class provides private implementation for DeleteRuleResponse.
  * \internal
  *
- * \class DeleteRuleResponsePrivate
- *
- * \brief Private implementation for DeleteRuleResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRuleResponse instance.
+ * Constructs a DeleteRuleResponsePrivate object with public implementation \a q.
  */
 DeleteRuleResponsePrivate::DeleteRuleResponsePrivate(
     DeleteRuleResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DeleteRuleResponsePrivate::DeleteRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DeleteRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DeleteRule response element from \a xml.
  */
 void DeleteRuleResponsePrivate::parseDeleteRuleResponse(QXmlStreamReader &xml)
 {

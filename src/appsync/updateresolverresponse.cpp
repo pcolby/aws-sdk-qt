@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::UpdateResolverResponse
- *
  * \brief The UpdateResolverResponse class provides an interace for AppSync UpdateResolver responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new UpdateResolverResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateResolverResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateResolverResponse::UpdateResolverResponse(
         const UpdateResolverRequest &request,
@@ -56,6 +51,9 @@ UpdateResolverResponse::UpdateResolverResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateResolverRequest * UpdateResolverResponse::request() const
 {
     Q_D(const UpdateResolverResponse);
@@ -63,9 +61,8 @@ const UpdateResolverRequest * UpdateResolverResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync UpdateResolver response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync UpdateResolver \a response.
  */
 void UpdateResolverResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void UpdateResolverResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::UpdateResolverResponsePrivate
+ * \brief The UpdateResolverResponsePrivate class provides private implementation for UpdateResolverResponse.
  * \internal
  *
- * \class UpdateResolverResponsePrivate
- *
- * \brief Private implementation for UpdateResolverResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateResolverResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateResolverResponse instance.
+ * Constructs a UpdateResolverResponsePrivate object with public implementation \a q.
  */
 UpdateResolverResponsePrivate::UpdateResolverResponsePrivate(
     UpdateResolverResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ UpdateResolverResponsePrivate::UpdateResolverResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync UpdateResolverResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync UpdateResolver response element from \a xml.
  */
 void UpdateResolverResponsePrivate::parseUpdateResolverResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAccountAliasesResponse : public IAMResponse {
 public:
     ListAccountAliasesResponse(const ListAccountAliasesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAccountAliasesRequest * request() const;
+    virtual const ListAccountAliasesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListAccountAliasesResponse)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * TestInvokeAuthorizerRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a TestInvokeAuthorizerRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a TestInvokeAuthorizerRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
     const APIGatewayRequest::Action action, TestInvokeAuthorizerRequest * const q)

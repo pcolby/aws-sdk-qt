@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * AddAttributesToFindingsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a AddAttributesToFindingsRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a AddAttributesToFindingsRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 AddAttributesToFindingsRequestPrivate::AddAttributesToFindingsRequestPrivate(
     const InspectorRequest::Action action, AddAttributesToFindingsRequest * const q)

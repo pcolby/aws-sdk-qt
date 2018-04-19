@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::UploadPartCopyResponse
- *
  * \brief The UploadPartCopyResponse class provides an interace for S3 UploadPartCopy responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::uploadPartCopy
  */
 
 /*!
- * @brief  Constructs a new UploadPartCopyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UploadPartCopyResponse object for \a reply to \a request, with parent \a parent.
  */
 UploadPartCopyResponse::UploadPartCopyResponse(
         const UploadPartCopyRequest &request,
@@ -55,6 +50,9 @@ UploadPartCopyResponse::UploadPartCopyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UploadPartCopyRequest * UploadPartCopyResponse::request() const
 {
     Q_D(const UploadPartCopyResponse);
@@ -62,9 +60,8 @@ const UploadPartCopyRequest * UploadPartCopyResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 UploadPartCopy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 UploadPartCopy \a response.
  */
 void UploadPartCopyResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UploadPartCopyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::UploadPartCopyResponsePrivate
+ * \brief The UploadPartCopyResponsePrivate class provides private implementation for UploadPartCopyResponse.
  * \internal
  *
- * \class UploadPartCopyResponsePrivate
- *
- * \brief Private implementation for UploadPartCopyResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadPartCopyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UploadPartCopyResponse instance.
+ * Constructs a UploadPartCopyResponsePrivate object with public implementation \a q.
  */
 UploadPartCopyResponsePrivate::UploadPartCopyResponsePrivate(
     UploadPartCopyResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ UploadPartCopyResponsePrivate::UploadPartCopyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 UploadPartCopyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 UploadPartCopy response element from \a xml.
  */
 void UploadPartCopyResponsePrivate::parseUploadPartCopyResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::CreateStateMachineResponse
- *
  * \brief The CreateStateMachineResponse class provides an interace for SFN CreateStateMachine responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new CreateStateMachineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStateMachineResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStateMachineResponse::CreateStateMachineResponse(
         const CreateStateMachineRequest &request,
@@ -74,6 +69,9 @@ CreateStateMachineResponse::CreateStateMachineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStateMachineRequest * CreateStateMachineResponse::request() const
 {
     Q_D(const CreateStateMachineResponse);
@@ -81,9 +79,8 @@ const CreateStateMachineRequest * CreateStateMachineResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN CreateStateMachine response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN CreateStateMachine \a response.
  */
 void CreateStateMachineResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void CreateStateMachineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::CreateStateMachineResponsePrivate
+ * \brief The CreateStateMachineResponsePrivate class provides private implementation for CreateStateMachineResponse.
  * \internal
  *
- * \class CreateStateMachineResponsePrivate
- *
- * \brief Private implementation for CreateStateMachineResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStateMachineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStateMachineResponse instance.
+ * Constructs a CreateStateMachineResponsePrivate object with public implementation \a q.
  */
 CreateStateMachineResponsePrivate::CreateStateMachineResponsePrivate(
     CreateStateMachineResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ CreateStateMachineResponsePrivate::CreateStateMachineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN CreateStateMachineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN CreateStateMachine response element from \a xml.
  */
 void CreateStateMachineResponsePrivate::parseCreateStateMachineResponse(QXmlStreamReader &xml)
 {

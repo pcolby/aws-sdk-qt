@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::UpdateStackResponse
- *
  * \brief The UpdateStackResponse class provides an interace for CloudFormation UpdateStack responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new UpdateStackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateStackResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateStackResponse::UpdateStackResponse(
         const UpdateStackRequest &request,
@@ -77,6 +72,9 @@ UpdateStackResponse::UpdateStackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateStackRequest * UpdateStackResponse::request() const
 {
     Q_D(const UpdateStackResponse);
@@ -84,9 +82,8 @@ const UpdateStackRequest * UpdateStackResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation UpdateStack response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation UpdateStack \a response.
  */
 void UpdateStackResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void UpdateStackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::UpdateStackResponsePrivate
+ * \brief The UpdateStackResponsePrivate class provides private implementation for UpdateStackResponse.
  * \internal
  *
- * \class UpdateStackResponsePrivate
- *
- * \brief Private implementation for UpdateStackResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateStackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateStackResponse instance.
+ * Constructs a UpdateStackResponsePrivate object with public implementation \a q.
  */
 UpdateStackResponsePrivate::UpdateStackResponsePrivate(
     UpdateStackResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ UpdateStackResponsePrivate::UpdateStackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation UpdateStackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation UpdateStack response element from \a xml.
  */
 void UpdateStackResponsePrivate::parseUpdateStackResponse(QXmlStreamReader &xml)
 {

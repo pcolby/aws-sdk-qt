@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * UnmonitorInstancesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UnmonitorInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a UnmonitorInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 UnmonitorInstancesRequestPrivate::UnmonitorInstancesRequestPrivate(
     const EC2Request::Action action, UnmonitorInstancesRequest * const q)

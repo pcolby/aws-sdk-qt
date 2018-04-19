@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::UpdateQueueResponse
- *
  * \brief The UpdateQueueResponse class provides an interace for MediaConvert UpdateQueue responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::updateQueue
  */
 
 /*!
- * @brief  Constructs a new UpdateQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateQueueResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateQueueResponse::UpdateQueueResponse(
         const UpdateQueueRequest &request,
@@ -55,6 +50,9 @@ UpdateQueueResponse::UpdateQueueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateQueueRequest * UpdateQueueResponse::request() const
 {
     Q_D(const UpdateQueueResponse);
@@ -62,9 +60,8 @@ const UpdateQueueRequest * UpdateQueueResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert UpdateQueue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert UpdateQueue \a response.
  */
 void UpdateQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateQueueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::UpdateQueueResponsePrivate
+ * \brief The UpdateQueueResponsePrivate class provides private implementation for UpdateQueueResponse.
  * \internal
  *
- * \class UpdateQueueResponsePrivate
- *
- * \brief Private implementation for UpdateQueueResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateQueueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateQueueResponse instance.
+ * Constructs a UpdateQueueResponsePrivate object with public implementation \a q.
  */
 UpdateQueueResponsePrivate::UpdateQueueResponsePrivate(
     UpdateQueueResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateQueueResponsePrivate::UpdateQueueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert UpdateQueueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert UpdateQueue response element from \a xml.
  */
 void UpdateQueueResponsePrivate::parseUpdateQueueResponse(QXmlStreamReader &xml)
 {

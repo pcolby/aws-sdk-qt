@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartOnDemandReplicationRunResponse : public SMSResponse {
 public:
     StartOnDemandReplicationRunResponse(const StartOnDemandReplicationRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartOnDemandReplicationRunRequest * request() const;
+    virtual const StartOnDemandReplicationRunRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartOnDemandReplicationRunResponse)

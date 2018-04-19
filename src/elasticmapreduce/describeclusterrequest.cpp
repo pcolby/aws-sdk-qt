@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeClusterRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a DescribeClusterRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
     const EMRRequest::Action action, DescribeClusterRequest * const q)

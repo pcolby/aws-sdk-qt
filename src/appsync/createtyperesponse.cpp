@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::CreateTypeResponse
- *
  * \brief The CreateTypeResponse class provides an interace for AppSync CreateType responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new CreateTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTypeResponse::CreateTypeResponse(
         const CreateTypeRequest &request,
@@ -56,6 +51,9 @@ CreateTypeResponse::CreateTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTypeRequest * CreateTypeResponse::request() const
 {
     Q_D(const CreateTypeResponse);
@@ -63,9 +61,8 @@ const CreateTypeRequest * CreateTypeResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync CreateType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync CreateType \a response.
  */
 void CreateTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void CreateTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::CreateTypeResponsePrivate
+ * \brief The CreateTypeResponsePrivate class provides private implementation for CreateTypeResponse.
  * \internal
  *
- * \class CreateTypeResponsePrivate
- *
- * \brief Private implementation for CreateTypeResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTypeResponse instance.
+ * Constructs a CreateTypeResponsePrivate object with public implementation \a q.
  */
 CreateTypeResponsePrivate::CreateTypeResponsePrivate(
     CreateTypeResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ CreateTypeResponsePrivate::CreateTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync CreateTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync CreateType response element from \a xml.
  */
 void CreateTypeResponsePrivate::parseCreateTypeResponse(QXmlStreamReader &xml)
 {

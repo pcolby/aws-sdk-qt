@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::SetSMSAttributesResponse
- *
  * \brief The SetSMSAttributesResponse class provides an interace for SNS SetSMSAttributes responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new SetSMSAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetSMSAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 SetSMSAttributesResponse::SetSMSAttributesResponse(
         const SetSMSAttributesRequest &request,
@@ -69,6 +64,9 @@ SetSMSAttributesResponse::SetSMSAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetSMSAttributesRequest * SetSMSAttributesResponse::request() const
 {
     Q_D(const SetSMSAttributesResponse);
@@ -76,9 +74,8 @@ const SetSMSAttributesRequest * SetSMSAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SNS SetSMSAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS SetSMSAttributes \a response.
  */
 void SetSMSAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void SetSMSAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::SetSMSAttributesResponsePrivate
+ * \brief The SetSMSAttributesResponsePrivate class provides private implementation for SetSMSAttributesResponse.
  * \internal
  *
- * \class SetSMSAttributesResponsePrivate
- *
- * \brief Private implementation for SetSMSAttributesResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetSMSAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetSMSAttributesResponse instance.
+ * Constructs a SetSMSAttributesResponsePrivate object with public implementation \a q.
  */
 SetSMSAttributesResponsePrivate::SetSMSAttributesResponsePrivate(
     SetSMSAttributesResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ SetSMSAttributesResponsePrivate::SetSMSAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS SetSMSAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS SetSMSAttributes response element from \a xml.
  */
 void SetSMSAttributesResponsePrivate::parseSetSMSAttributesResponse(QXmlStreamReader &xml)
 {

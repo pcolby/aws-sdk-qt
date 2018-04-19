@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetClientCertificatesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetClientCertificatesRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetClientCertificatesRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetClientCertificatesRequestPrivate::GetClientCertificatesRequestPrivate(
     const APIGatewayRequest::Action action, GetClientCertificatesRequest * const q)

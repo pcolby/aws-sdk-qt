@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsForStreamRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListTagsForStreamRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsForStreamRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 ListTagsForStreamRequestPrivate::ListTagsForStreamRequestPrivate(
     const KinesisRequest::Action action, ListTagsForStreamRequest * const q)

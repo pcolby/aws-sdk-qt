@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateFindingsFeedbackRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateFindingsFeedbackRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a UpdateFindingsFeedbackRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 UpdateFindingsFeedbackRequestPrivate::UpdateFindingsFeedbackRequestPrivate(
     const GuardDutyRequest::Action action, UpdateFindingsFeedbackRequest * const q)

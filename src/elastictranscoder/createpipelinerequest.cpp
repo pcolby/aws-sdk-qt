@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreatePipelineRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CreatePipelineRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a CreatePipelineRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 CreatePipelineRequestPrivate::CreatePipelineRequestPrivate(
     const ElasticTranscoderRequest::Action action, CreatePipelineRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyInstanceAttributeResponse
- *
  * \brief The ModifyInstanceAttributeResponse class provides an interace for EC2 ModifyInstanceAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyInstanceAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyInstanceAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyInstanceAttributeResponse::ModifyInstanceAttributeResponse(
         const ModifyInstanceAttributeRequest &request,
@@ -59,6 +54,9 @@ ModifyInstanceAttributeResponse::ModifyInstanceAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyInstanceAttributeRequest * ModifyInstanceAttributeResponse::request() const
 {
     Q_D(const ModifyInstanceAttributeResponse);
@@ -66,9 +64,8 @@ const ModifyInstanceAttributeRequest * ModifyInstanceAttributeResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 ModifyInstanceAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyInstanceAttribute \a response.
  */
 void ModifyInstanceAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyInstanceAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyInstanceAttributeResponsePrivate
+ * \brief The ModifyInstanceAttributeResponsePrivate class provides private implementation for ModifyInstanceAttributeResponse.
  * \internal
  *
- * \class ModifyInstanceAttributeResponsePrivate
- *
- * \brief Private implementation for ModifyInstanceAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyInstanceAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyInstanceAttributeResponse instance.
+ * Constructs a ModifyInstanceAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyInstanceAttributeResponsePrivate::ModifyInstanceAttributeResponsePrivate(
     ModifyInstanceAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyInstanceAttributeResponsePrivate::ModifyInstanceAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifyInstanceAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyInstanceAttribute response element from \a xml.
  */
 void ModifyInstanceAttributeResponsePrivate::parseModifyInstanceAttributeResponse(QXmlStreamReader &xml)
 {

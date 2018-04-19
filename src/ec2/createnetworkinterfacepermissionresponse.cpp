@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateNetworkInterfacePermissionResponse
- *
  * \brief The CreateNetworkInterfacePermissionResponse class provides an interace for EC2 CreateNetworkInterfacePermission responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateNetworkInterfacePermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateNetworkInterfacePermissionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateNetworkInterfacePermissionResponse::CreateNetworkInterfacePermissionResponse(
         const CreateNetworkInterfacePermissionRequest &request,
@@ -59,6 +54,9 @@ CreateNetworkInterfacePermissionResponse::CreateNetworkInterfacePermissionRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateNetworkInterfacePermissionRequest * CreateNetworkInterfacePermissionResponse::request() const
 {
     Q_D(const CreateNetworkInterfacePermissionResponse);
@@ -66,9 +64,8 @@ const CreateNetworkInterfacePermissionRequest * CreateNetworkInterfacePermission
 }
 
 /*!
- * @brief  Parse a EC2 CreateNetworkInterfacePermission response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateNetworkInterfacePermission \a response.
  */
 void CreateNetworkInterfacePermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateNetworkInterfacePermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateNetworkInterfacePermissionResponsePrivate
+ * \brief The CreateNetworkInterfacePermissionResponsePrivate class provides private implementation for CreateNetworkInterfacePermissionResponse.
  * \internal
  *
- * \class CreateNetworkInterfacePermissionResponsePrivate
- *
- * \brief Private implementation for CreateNetworkInterfacePermissionResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNetworkInterfacePermissionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateNetworkInterfacePermissionResponse instance.
+ * Constructs a CreateNetworkInterfacePermissionResponsePrivate object with public implementation \a q.
  */
 CreateNetworkInterfacePermissionResponsePrivate::CreateNetworkInterfacePermissionResponsePrivate(
     CreateNetworkInterfacePermissionResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateNetworkInterfacePermissionResponsePrivate::CreateNetworkInterfacePermissio
 }
 
 /*!
- * @brief  Parse an EC2 CreateNetworkInterfacePermissionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateNetworkInterfacePermission response element from \a xml.
  */
 void CreateNetworkInterfacePermissionResponsePrivate::parseCreateNetworkInterfacePermissionResponse(QXmlStreamReader &xml)
 {

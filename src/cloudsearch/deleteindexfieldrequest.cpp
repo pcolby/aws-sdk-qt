@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteIndexFieldRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteIndexFieldRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DeleteIndexFieldRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DeleteIndexFieldRequestPrivate::DeleteIndexFieldRequestPrivate(
     const CloudSearchRequest::Action action, DeleteIndexFieldRequest * const q)

@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteConfigRuleResponse
- *
  * \brief The DeleteConfigRuleResponse class provides an interace for ConfigService DeleteConfigRule responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteConfigRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteConfigRuleResponse::DeleteConfigRuleResponse(
         const DeleteConfigRuleRequest &request,
@@ -78,6 +73,9 @@ DeleteConfigRuleResponse::DeleteConfigRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteConfigRuleRequest * DeleteConfigRuleResponse::request() const
 {
     Q_D(const DeleteConfigRuleResponse);
@@ -85,9 +83,8 @@ const DeleteConfigRuleRequest * DeleteConfigRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a ConfigService DeleteConfigRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DeleteConfigRule \a response.
  */
 void DeleteConfigRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DeleteConfigRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DeleteConfigRuleResponsePrivate
+ * \brief The DeleteConfigRuleResponsePrivate class provides private implementation for DeleteConfigRuleResponse.
  * \internal
  *
- * \class DeleteConfigRuleResponsePrivate
- *
- * \brief Private implementation for DeleteConfigRuleResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteConfigRuleResponse instance.
+ * Constructs a DeleteConfigRuleResponsePrivate object with public implementation \a q.
  */
 DeleteConfigRuleResponsePrivate::DeleteConfigRuleResponsePrivate(
     DeleteConfigRuleResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DeleteConfigRuleResponsePrivate::DeleteConfigRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ConfigService DeleteConfigRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DeleteConfigRule response element from \a xml.
  */
 void DeleteConfigRuleResponsePrivate::parseDeleteConfigRuleResponse(QXmlStreamReader &xml)
 {

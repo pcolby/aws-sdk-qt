@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSubscriptionFiltersRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeSubscriptionFiltersRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSubscriptionFiltersRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DescribeSubscriptionFiltersRequestPrivate::DescribeSubscriptionFiltersRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeSubscriptionFiltersRequest * const q)

@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * CreateAssociationBatchRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateAssociationBatchRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a CreateAssociationBatchRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 CreateAssociationBatchRequestPrivate::CreateAssociationBatchRequestPrivate(
     const SSMRequest::Action action, CreateAssociationBatchRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * AddInstanceGroupsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a AddInstanceGroupsRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a AddInstanceGroupsRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 AddInstanceGroupsRequestPrivate::AddInstanceGroupsRequestPrivate(
     const EMRRequest::Action action, AddInstanceGroupsRequest * const q)

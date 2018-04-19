@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListVPCAssociationAuthorizationsResponse
- *
  * \brief The ListVPCAssociationAuthorizationsResponse class provides an interace for Route53 ListVPCAssociationAuthorizations responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listVPCAssociationAuthorizations
  */
 
 /*!
- * @brief  Constructs a new ListVPCAssociationAuthorizationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListVPCAssociationAuthorizationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListVPCAssociationAuthorizationsResponse::ListVPCAssociationAuthorizationsResponse(
         const ListVPCAssociationAuthorizationsRequest &request,
@@ -55,6 +50,9 @@ ListVPCAssociationAuthorizationsResponse::ListVPCAssociationAuthorizationsRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListVPCAssociationAuthorizationsRequest * ListVPCAssociationAuthorizationsResponse::request() const
 {
     Q_D(const ListVPCAssociationAuthorizationsResponse);
@@ -62,9 +60,8 @@ const ListVPCAssociationAuthorizationsRequest * ListVPCAssociationAuthorizations
 }
 
 /*!
- * @brief  Parse a Route53 ListVPCAssociationAuthorizations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 ListVPCAssociationAuthorizations \a response.
  */
 void ListVPCAssociationAuthorizationsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListVPCAssociationAuthorizationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::ListVPCAssociationAuthorizationsResponsePrivate
+ * \brief The ListVPCAssociationAuthorizationsResponsePrivate class provides private implementation for ListVPCAssociationAuthorizationsResponse.
  * \internal
  *
- * \class ListVPCAssociationAuthorizationsResponsePrivate
- *
- * \brief Private implementation for ListVPCAssociationAuthorizationsResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVPCAssociationAuthorizationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListVPCAssociationAuthorizationsResponse instance.
+ * Constructs a ListVPCAssociationAuthorizationsResponsePrivate object with public implementation \a q.
  */
 ListVPCAssociationAuthorizationsResponsePrivate::ListVPCAssociationAuthorizationsResponsePrivate(
     ListVPCAssociationAuthorizationsResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListVPCAssociationAuthorizationsResponsePrivate::ListVPCAssociationAuthorization
 }
 
 /*!
- * @brief  Parse an Route53 ListVPCAssociationAuthorizationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 ListVPCAssociationAuthorizations response element from \a xml.
  */
 void ListVPCAssociationAuthorizationsResponsePrivate::parseListVPCAssociationAuthorizationsResponse(QXmlStreamReader &xml)
 {

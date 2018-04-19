@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountSendingEnabledRequest::response(
  */
 
 /*!
- *
- * Constructs a UpdateAccountSendingEnabledRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAccountSendingEnabledRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 UpdateAccountSendingEnabledRequestPrivate::UpdateAccountSendingEnabledRequestPrivate(
     const SESRequest::Action action, UpdateAccountSendingEnabledRequest * const q)

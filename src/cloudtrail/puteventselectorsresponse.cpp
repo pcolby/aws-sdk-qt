@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::PutEventSelectorsResponse
- *
  * \brief The PutEventSelectorsResponse class provides an interace for CloudTrail PutEventSelectors responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new PutEventSelectorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutEventSelectorsResponse object for \a reply to \a request, with parent \a parent.
  */
 PutEventSelectorsResponse::PutEventSelectorsResponse(
         const PutEventSelectorsRequest &request,
@@ -78,6 +73,9 @@ PutEventSelectorsResponse::PutEventSelectorsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutEventSelectorsRequest * PutEventSelectorsResponse::request() const
 {
     Q_D(const PutEventSelectorsResponse);
@@ -85,9 +83,8 @@ const PutEventSelectorsRequest * PutEventSelectorsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail PutEventSelectors response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail PutEventSelectors \a response.
  */
 void PutEventSelectorsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void PutEventSelectorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::PutEventSelectorsResponsePrivate
+ * \brief The PutEventSelectorsResponsePrivate class provides private implementation for PutEventSelectorsResponse.
  * \internal
  *
- * \class PutEventSelectorsResponsePrivate
- *
- * \brief Private implementation for PutEventSelectorsResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutEventSelectorsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutEventSelectorsResponse instance.
+ * Constructs a PutEventSelectorsResponsePrivate object with public implementation \a q.
  */
 PutEventSelectorsResponsePrivate::PutEventSelectorsResponsePrivate(
     PutEventSelectorsResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ PutEventSelectorsResponsePrivate::PutEventSelectorsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail PutEventSelectorsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail PutEventSelectors response element from \a xml.
  */
 void PutEventSelectorsResponsePrivate::parsePutEventSelectorsResponse(QXmlStreamReader &xml)
 {

@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DescribeBandwidthRateLimitRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeBandwidthRateLimitRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DescribeBandwidthRateLimitRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DescribeBandwidthRateLimitRequestPrivate::DescribeBandwidthRateLimitRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeBandwidthRateLimitRequest * const q)

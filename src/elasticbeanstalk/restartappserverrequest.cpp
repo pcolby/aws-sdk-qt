@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * RestartAppServerRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a RestartAppServerRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a RestartAppServerRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 RestartAppServerRequestPrivate::RestartAppServerRequestPrivate(
     const ElasticBeanstalkRequest::Action action, RestartAppServerRequest * const q)

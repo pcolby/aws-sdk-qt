@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionStateRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetSubscriptionStateRequestPrivate object for Shield \a action with,
- * public implementation \a q.
+ * Constructs a GetSubscriptionStateRequestPrivate object for Shield \a action,
+ * with public implementation \a q.
  */
 GetSubscriptionStateRequestPrivate::GetSubscriptionStateRequestPrivate(
     const ShieldRequest::Action action, GetSubscriptionStateRequest * const q)

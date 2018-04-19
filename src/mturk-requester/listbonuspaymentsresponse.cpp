@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListBonusPaymentsResponse
- *
  * \brief The ListBonusPaymentsResponse class provides an interace for MTurk ListBonusPayments responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listBonusPayments
  */
 
 /*!
- * @brief  Constructs a new ListBonusPaymentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListBonusPaymentsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListBonusPaymentsResponse::ListBonusPaymentsResponse(
         const ListBonusPaymentsRequest &request,
@@ -55,6 +50,9 @@ ListBonusPaymentsResponse::ListBonusPaymentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListBonusPaymentsRequest * ListBonusPaymentsResponse::request() const
 {
     Q_D(const ListBonusPaymentsResponse);
@@ -62,9 +60,8 @@ const ListBonusPaymentsRequest * ListBonusPaymentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk ListBonusPayments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk ListBonusPayments \a response.
  */
 void ListBonusPaymentsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListBonusPaymentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::ListBonusPaymentsResponsePrivate
+ * \brief The ListBonusPaymentsResponsePrivate class provides private implementation for ListBonusPaymentsResponse.
  * \internal
  *
- * \class ListBonusPaymentsResponsePrivate
- *
- * \brief Private implementation for ListBonusPaymentsResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBonusPaymentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListBonusPaymentsResponse instance.
+ * Constructs a ListBonusPaymentsResponsePrivate object with public implementation \a q.
  */
 ListBonusPaymentsResponsePrivate::ListBonusPaymentsResponsePrivate(
     ListBonusPaymentsResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ ListBonusPaymentsResponsePrivate::ListBonusPaymentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk ListBonusPaymentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk ListBonusPayments response element from \a xml.
  */
 void ListBonusPaymentsResponsePrivate::parseListBonusPaymentsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::EnableVpcClassicLinkDnsSupportResponse
- *
  * \brief The EnableVpcClassicLinkDnsSupportResponse class provides an interace for EC2 EnableVpcClassicLinkDnsSupport responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new EnableVpcClassicLinkDnsSupportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableVpcClassicLinkDnsSupportResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableVpcClassicLinkDnsSupportResponse::EnableVpcClassicLinkDnsSupportResponse(
         const EnableVpcClassicLinkDnsSupportRequest &request,
@@ -59,6 +54,9 @@ EnableVpcClassicLinkDnsSupportResponse::EnableVpcClassicLinkDnsSupportResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableVpcClassicLinkDnsSupportRequest * EnableVpcClassicLinkDnsSupportResponse::request() const
 {
     Q_D(const EnableVpcClassicLinkDnsSupportResponse);
@@ -66,9 +64,8 @@ const EnableVpcClassicLinkDnsSupportRequest * EnableVpcClassicLinkDnsSupportResp
 }
 
 /*!
- * @brief  Parse a EC2 EnableVpcClassicLinkDnsSupport response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 EnableVpcClassicLinkDnsSupport \a response.
  */
 void EnableVpcClassicLinkDnsSupportResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void EnableVpcClassicLinkDnsSupportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::EnableVpcClassicLinkDnsSupportResponsePrivate
+ * \brief The EnableVpcClassicLinkDnsSupportResponsePrivate class provides private implementation for EnableVpcClassicLinkDnsSupportResponse.
  * \internal
  *
- * \class EnableVpcClassicLinkDnsSupportResponsePrivate
- *
- * \brief Private implementation for EnableVpcClassicLinkDnsSupportResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableVpcClassicLinkDnsSupportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableVpcClassicLinkDnsSupportResponse instance.
+ * Constructs a EnableVpcClassicLinkDnsSupportResponsePrivate object with public implementation \a q.
  */
 EnableVpcClassicLinkDnsSupportResponsePrivate::EnableVpcClassicLinkDnsSupportResponsePrivate(
     EnableVpcClassicLinkDnsSupportResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ EnableVpcClassicLinkDnsSupportResponsePrivate::EnableVpcClassicLinkDnsSupportRes
 }
 
 /*!
- * @brief  Parse an EC2 EnableVpcClassicLinkDnsSupportResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 EnableVpcClassicLinkDnsSupport response element from \a xml.
  */
 void EnableVpcClassicLinkDnsSupportResponsePrivate::parseEnableVpcClassicLinkDnsSupportResponse(QXmlStreamReader &xml)
 {

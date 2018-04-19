@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListDistributionsResponse
- *
  * \brief The ListDistributionsResponse class provides an interace for CloudFront ListDistributions responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListDistributionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDistributionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDistributionsResponse::ListDistributionsResponse(
         const ListDistributionsRequest &request,
@@ -60,6 +55,9 @@ ListDistributionsResponse::ListDistributionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDistributionsRequest * ListDistributionsResponse::request() const
 {
     Q_D(const ListDistributionsResponse);
@@ -67,9 +65,8 @@ const ListDistributionsRequest * ListDistributionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront ListDistributions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront ListDistributions \a response.
  */
 void ListDistributionsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListDistributionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::ListDistributionsResponsePrivate
+ * \brief The ListDistributionsResponsePrivate class provides private implementation for ListDistributionsResponse.
  * \internal
  *
- * \class ListDistributionsResponsePrivate
- *
- * \brief Private implementation for ListDistributionsResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDistributionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDistributionsResponse instance.
+ * Constructs a ListDistributionsResponsePrivate object with public implementation \a q.
  */
 ListDistributionsResponsePrivate::ListDistributionsResponsePrivate(
     ListDistributionsResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ ListDistributionsResponsePrivate::ListDistributionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront ListDistributionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront ListDistributions response element from \a xml.
  */
 void ListDistributionsResponsePrivate::parseListDistributionsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::CreateElasticsearchDomainResponse
- *
  * \brief The CreateElasticsearchDomainResponse class provides an interace for ElasticsearchService CreateElasticsearchDomain responses.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new CreateElasticsearchDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateElasticsearchDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateElasticsearchDomainResponse::CreateElasticsearchDomainResponse(
         const CreateElasticsearchDomainRequest &request,
@@ -64,6 +59,9 @@ CreateElasticsearchDomainResponse::CreateElasticsearchDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateElasticsearchDomainRequest * CreateElasticsearchDomainResponse::request() const
 {
     Q_D(const CreateElasticsearchDomainResponse);
@@ -71,9 +69,8 @@ const CreateElasticsearchDomainRequest * CreateElasticsearchDomainResponse::requ
 }
 
 /*!
- * @brief  Parse a ElasticsearchService CreateElasticsearchDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticsearchService CreateElasticsearchDomain \a response.
  */
 void CreateElasticsearchDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void CreateElasticsearchDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticsearchService::CreateElasticsearchDomainResponsePrivate
+ * \brief The CreateElasticsearchDomainResponsePrivate class provides private implementation for CreateElasticsearchDomainResponse.
  * \internal
  *
- * \class CreateElasticsearchDomainResponsePrivate
- *
- * \brief Private implementation for CreateElasticsearchDomainResponse.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateElasticsearchDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateElasticsearchDomainResponse instance.
+ * Constructs a CreateElasticsearchDomainResponsePrivate object with public implementation \a q.
  */
 CreateElasticsearchDomainResponsePrivate::CreateElasticsearchDomainResponsePrivate(
     CreateElasticsearchDomainResponse * const q) : ElasticsearchServiceResponsePrivate(q)
@@ -104,9 +97,7 @@ CreateElasticsearchDomainResponsePrivate::CreateElasticsearchDomainResponsePriva
 }
 
 /*!
- * @brief  Parse an ElasticsearchService CreateElasticsearchDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticsearchService CreateElasticsearchDomain response element from \a xml.
  */
 void CreateElasticsearchDomainResponsePrivate::parseCreateElasticsearchDomainResponse(QXmlStreamReader &xml)
 {

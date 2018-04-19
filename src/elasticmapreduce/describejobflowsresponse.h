@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeJobFlowsResponse : public EMRResponse {
 public:
     DescribeJobFlowsResponse(const DescribeJobFlowsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeJobFlowsRequest * request() const;
+    virtual const DescribeJobFlowsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeJobFlowsResponse)

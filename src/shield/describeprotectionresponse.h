@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeProtectionResponse : public ShieldResponse {
 public:
     DescribeProtectionResponse(const DescribeProtectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeProtectionRequest * request() const;
+    virtual const DescribeProtectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeProtectionResponse)

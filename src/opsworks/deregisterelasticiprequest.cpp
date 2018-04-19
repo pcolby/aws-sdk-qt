@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterElasticIpRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeregisterElasticIpRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterElasticIpRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DeregisterElasticIpRequestPrivate::DeregisterElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, DeregisterElasticIpRequest * const q)

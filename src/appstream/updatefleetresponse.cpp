@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::UpdateFleetResponse
- *
  * \brief The UpdateFleetResponse class provides an interace for AppStream UpdateFleet responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new UpdateFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateFleetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateFleetResponse::UpdateFleetResponse(
         const UpdateFleetRequest &request,
@@ -58,6 +53,9 @@ UpdateFleetResponse::UpdateFleetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateFleetRequest * UpdateFleetResponse::request() const
 {
     Q_D(const UpdateFleetResponse);
@@ -65,9 +63,8 @@ const UpdateFleetRequest * UpdateFleetResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream UpdateFleet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream UpdateFleet \a response.
  */
 void UpdateFleetResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateFleetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::UpdateFleetResponsePrivate
+ * \brief The UpdateFleetResponsePrivate class provides private implementation for UpdateFleetResponse.
  * \internal
  *
- * \class UpdateFleetResponsePrivate
- *
- * \brief Private implementation for UpdateFleetResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFleetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateFleetResponse instance.
+ * Constructs a UpdateFleetResponsePrivate object with public implementation \a q.
  */
 UpdateFleetResponsePrivate::UpdateFleetResponsePrivate(
     UpdateFleetResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateFleetResponsePrivate::UpdateFleetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream UpdateFleetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream UpdateFleet response element from \a xml.
  */
 void UpdateFleetResponsePrivate::parseUpdateFleetResponse(QXmlStreamReader &xml)
 {

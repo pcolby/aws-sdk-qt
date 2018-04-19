@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRuleGroupRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteRuleGroupRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRuleGroupRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 DeleteRuleGroupRequestPrivate::DeleteRuleGroupRequestPrivate(
     const WAFRequest::Action action, DeleteRuleGroupRequest * const q)

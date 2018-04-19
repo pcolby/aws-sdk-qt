@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * RotateSecretRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a RotateSecretRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a RotateSecretRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 RotateSecretRequestPrivate::RotateSecretRequestPrivate(
     const SecretsManagerRequest::Action action, RotateSecretRequest * const q)

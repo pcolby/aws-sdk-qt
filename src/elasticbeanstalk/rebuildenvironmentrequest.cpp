@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * RebuildEnvironmentRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a RebuildEnvironmentRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a RebuildEnvironmentRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 RebuildEnvironmentRequestPrivate::RebuildEnvironmentRequestPrivate(
     const ElasticBeanstalkRequest::Action action, RebuildEnvironmentRequest * const q)

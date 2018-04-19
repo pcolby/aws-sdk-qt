@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetSSHPublicKeyResponse
- *
  * \brief The GetSSHPublicKeyResponse class provides an interace for IAM GetSSHPublicKey responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetSSHPublicKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSSHPublicKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSSHPublicKeyResponse::GetSSHPublicKeyResponse(
         const GetSSHPublicKeyRequest &request,
@@ -120,6 +115,9 @@ GetSSHPublicKeyResponse::GetSSHPublicKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSSHPublicKeyRequest * GetSSHPublicKeyResponse::request() const
 {
     Q_D(const GetSSHPublicKeyResponse);
@@ -127,9 +125,8 @@ const GetSSHPublicKeyRequest * GetSSHPublicKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetSSHPublicKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetSSHPublicKey \a response.
  */
 void GetSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetSSHPublicKeyResponsePrivate
+ * \brief The GetSSHPublicKeyResponsePrivate class provides private implementation for GetSSHPublicKeyResponse.
  * \internal
  *
- * \class GetSSHPublicKeyResponsePrivate
- *
- * \brief Private implementation for GetSSHPublicKeyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSSHPublicKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSSHPublicKeyResponse instance.
+ * Constructs a GetSSHPublicKeyResponsePrivate object with public implementation \a q.
  */
 GetSSHPublicKeyResponsePrivate::GetSSHPublicKeyResponsePrivate(
     GetSSHPublicKeyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetSSHPublicKeyResponsePrivate::GetSSHPublicKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetSSHPublicKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetSSHPublicKey response element from \a xml.
  */
 void GetSSHPublicKeyResponsePrivate::parseGetSSHPublicKeyResponse(QXmlStreamReader &xml)
 {

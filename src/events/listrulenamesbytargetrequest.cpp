@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * ListRuleNamesByTargetRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListRuleNamesByTargetRequestPrivate object for CloudWatchEvents \a action with,
- * public implementation \a q.
+ * Constructs a ListRuleNamesByTargetRequestPrivate object for CloudWatchEvents \a action,
+ * with public implementation \a q.
  */
 ListRuleNamesByTargetRequestPrivate::ListRuleNamesByTargetRequestPrivate(
     const CloudWatchEventsRequest::Action action, ListRuleNamesByTargetRequest * const q)

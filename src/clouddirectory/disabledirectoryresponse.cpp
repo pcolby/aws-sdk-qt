@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DisableDirectoryResponse
- *
  * \brief The DisableDirectoryResponse class provides an interace for CloudDirectory DisableDirectory responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DisableDirectoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableDirectoryResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableDirectoryResponse::DisableDirectoryResponse(
         const DisableDirectoryRequest &request,
@@ -62,6 +57,9 @@ DisableDirectoryResponse::DisableDirectoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableDirectoryRequest * DisableDirectoryResponse::request() const
 {
     Q_D(const DisableDirectoryResponse);
@@ -69,9 +67,8 @@ const DisableDirectoryRequest * DisableDirectoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory DisableDirectory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory DisableDirectory \a response.
  */
 void DisableDirectoryResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DisableDirectoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::DisableDirectoryResponsePrivate
+ * \brief The DisableDirectoryResponsePrivate class provides private implementation for DisableDirectoryResponse.
  * \internal
  *
- * \class DisableDirectoryResponsePrivate
- *
- * \brief Private implementation for DisableDirectoryResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableDirectoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableDirectoryResponse instance.
+ * Constructs a DisableDirectoryResponsePrivate object with public implementation \a q.
  */
 DisableDirectoryResponsePrivate::DisableDirectoryResponsePrivate(
     DisableDirectoryResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ DisableDirectoryResponsePrivate::DisableDirectoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory DisableDirectoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory DisableDirectory response element from \a xml.
  */
 void DisableDirectoryResponsePrivate::parseDisableDirectoryResponse(QXmlStreamReader &xml)
 {

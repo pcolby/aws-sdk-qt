@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * AddTagsRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a AddTagsRequestPrivate object for ElasticsearchService \a action with,
- * public implementation \a q.
+ * Constructs a AddTagsRequestPrivate object for ElasticsearchService \a action,
+ * with public implementation \a q.
  */
 AddTagsRequestPrivate::AddTagsRequestPrivate(
     const ElasticsearchServiceRequest::Action action, AddTagsRequest * const q)

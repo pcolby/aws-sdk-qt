@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::UpdateInstanceProfileResponse
- *
  * \brief The UpdateInstanceProfileResponse class provides an interace for DeviceFarm UpdateInstanceProfile responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new UpdateInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateInstanceProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateInstanceProfileResponse::UpdateInstanceProfileResponse(
         const UpdateInstanceProfileRequest &request,
@@ -57,6 +52,9 @@ UpdateInstanceProfileResponse::UpdateInstanceProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateInstanceProfileRequest * UpdateInstanceProfileResponse::request() const
 {
     Q_D(const UpdateInstanceProfileResponse);
@@ -64,9 +62,8 @@ const UpdateInstanceProfileRequest * UpdateInstanceProfileResponse::request() co
 }
 
 /*!
- * @brief  Parse a DeviceFarm UpdateInstanceProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm UpdateInstanceProfile \a response.
  */
 void UpdateInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void UpdateInstanceProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::UpdateInstanceProfileResponsePrivate
+ * \brief The UpdateInstanceProfileResponsePrivate class provides private implementation for UpdateInstanceProfileResponse.
  * \internal
  *
- * \class UpdateInstanceProfileResponsePrivate
- *
- * \brief Private implementation for UpdateInstanceProfileResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateInstanceProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateInstanceProfileResponse instance.
+ * Constructs a UpdateInstanceProfileResponsePrivate object with public implementation \a q.
  */
 UpdateInstanceProfileResponsePrivate::UpdateInstanceProfileResponsePrivate(
     UpdateInstanceProfileResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ UpdateInstanceProfileResponsePrivate::UpdateInstanceProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm UpdateInstanceProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm UpdateInstanceProfile response element from \a xml.
  */
 void UpdateInstanceProfileResponsePrivate::parseUpdateInstanceProfileResponse(QXmlStreamReader &xml)
 {

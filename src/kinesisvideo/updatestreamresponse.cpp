@@ -29,21 +29,16 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::UpdateStreamResponse
- *
  * \brief The UpdateStreamResponse class provides an interace for KinesisVideo UpdateStream responses.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  *
  *
  * \sa KinesisVideoClient::updateStream
  */
 
 /*!
- * @brief  Constructs a new UpdateStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateStreamResponse::UpdateStreamResponse(
         const UpdateStreamRequest &request,
@@ -55,6 +50,9 @@ UpdateStreamResponse::UpdateStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateStreamRequest * UpdateStreamResponse::request() const
 {
     Q_D(const UpdateStreamResponse);
@@ -62,9 +60,8 @@ const UpdateStreamRequest * UpdateStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisVideo UpdateStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisVideo UpdateStream \a response.
  */
 void UpdateStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisVideo::UpdateStreamResponsePrivate
+ * \brief The UpdateStreamResponsePrivate class provides private implementation for UpdateStreamResponse.
  * \internal
  *
- * \class UpdateStreamResponsePrivate
- *
- * \brief Private implementation for UpdateStreamResponse.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateStreamResponse instance.
+ * Constructs a UpdateStreamResponsePrivate object with public implementation \a q.
  */
 UpdateStreamResponsePrivate::UpdateStreamResponsePrivate(
     UpdateStreamResponse * const q) : KinesisVideoResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateStreamResponsePrivate::UpdateStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisVideo UpdateStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisVideo UpdateStream response element from \a xml.
  */
 void UpdateStreamResponsePrivate::parseUpdateStreamResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetPullRequestResponse
- *
  * \brief The GetPullRequestResponse class provides an interace for CodeCommit GetPullRequest responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetPullRequestResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPullRequestResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPullRequestResponse::GetPullRequestResponse(
         const GetPullRequestRequest &request,
@@ -245,6 +240,9 @@ GetPullRequestResponse::GetPullRequestResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPullRequestRequest * GetPullRequestResponse::request() const
 {
     Q_D(const GetPullRequestResponse);
@@ -252,9 +250,8 @@ const GetPullRequestRequest * GetPullRequestResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit GetPullRequest response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit GetPullRequest \a response.
  */
 void GetPullRequestResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void GetPullRequestResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::GetPullRequestResponsePrivate
+ * \brief The GetPullRequestResponsePrivate class provides private implementation for GetPullRequestResponse.
  * \internal
  *
- * \class GetPullRequestResponsePrivate
- *
- * \brief Private implementation for GetPullRequestResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPullRequestResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPullRequestResponse instance.
+ * Constructs a GetPullRequestResponsePrivate object with public implementation \a q.
  */
 GetPullRequestResponsePrivate::GetPullRequestResponsePrivate(
     GetPullRequestResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ GetPullRequestResponsePrivate::GetPullRequestResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit GetPullRequestResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit GetPullRequest response element from \a xml.
  */
 void GetPullRequestResponsePrivate::parseGetPullRequestResponse(QXmlStreamReader &xml)
 {

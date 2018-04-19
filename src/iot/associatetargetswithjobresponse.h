@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateTargetsWithJobResponse : public IoTResponse {
 public:
     AssociateTargetsWithJobResponse(const AssociateTargetsWithJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateTargetsWithJobRequest * request() const;
+    virtual const AssociateTargetsWithJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateTargetsWithJobResponse)

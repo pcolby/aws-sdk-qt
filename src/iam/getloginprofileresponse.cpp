@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetLoginProfileResponse
- *
  * \brief The GetLoginProfileResponse class provides an interace for IAM GetLoginProfile responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetLoginProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetLoginProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 GetLoginProfileResponse::GetLoginProfileResponse(
         const GetLoginProfileRequest &request,
@@ -120,6 +115,9 @@ GetLoginProfileResponse::GetLoginProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetLoginProfileRequest * GetLoginProfileResponse::request() const
 {
     Q_D(const GetLoginProfileResponse);
@@ -127,9 +125,8 @@ const GetLoginProfileRequest * GetLoginProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetLoginProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetLoginProfile \a response.
  */
 void GetLoginProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetLoginProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetLoginProfileResponsePrivate
+ * \brief The GetLoginProfileResponsePrivate class provides private implementation for GetLoginProfileResponse.
  * \internal
  *
- * \class GetLoginProfileResponsePrivate
- *
- * \brief Private implementation for GetLoginProfileResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLoginProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetLoginProfileResponse instance.
+ * Constructs a GetLoginProfileResponsePrivate object with public implementation \a q.
  */
 GetLoginProfileResponsePrivate::GetLoginProfileResponsePrivate(
     GetLoginProfileResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetLoginProfileResponsePrivate::GetLoginProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetLoginProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetLoginProfile response element from \a xml.
  */
 void GetLoginProfileResponsePrivate::parseGetLoginProfileResponse(QXmlStreamReader &xml)
 {

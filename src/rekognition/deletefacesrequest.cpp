@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DeleteFacesRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteFacesRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a DeleteFacesRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 DeleteFacesRequestPrivate::DeleteFacesRequestPrivate(
     const RekognitionRequest::Action action, DeleteFacesRequest * const q)

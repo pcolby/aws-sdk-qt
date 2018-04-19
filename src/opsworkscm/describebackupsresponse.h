@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeBackupsResponse : public OpsWorksCMResponse {
 public:
     DescribeBackupsResponse(const DescribeBackupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeBackupsRequest * request() const;
+    virtual const DescribeBackupsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeBackupsResponse)

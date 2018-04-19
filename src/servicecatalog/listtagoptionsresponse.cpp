@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListTagOptionsResponse
- *
  * \brief The ListTagOptionsResponse class provides an interace for ServiceCatalog ListTagOptions responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListTagOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagOptionsResponse::ListTagOptionsResponse(
         const ListTagOptionsRequest &request,
@@ -61,6 +56,9 @@ ListTagOptionsResponse::ListTagOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagOptionsRequest * ListTagOptionsResponse::request() const
 {
     Q_D(const ListTagOptionsResponse);
@@ -68,9 +66,8 @@ const ListTagOptionsRequest * ListTagOptionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ListTagOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ListTagOptions \a response.
  */
 void ListTagOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListTagOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ListTagOptionsResponsePrivate
+ * \brief The ListTagOptionsResponsePrivate class provides private implementation for ListTagOptionsResponse.
  * \internal
  *
- * \class ListTagOptionsResponsePrivate
- *
- * \brief Private implementation for ListTagOptionsResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagOptionsResponse instance.
+ * Constructs a ListTagOptionsResponsePrivate object with public implementation \a q.
  */
 ListTagOptionsResponsePrivate::ListTagOptionsResponsePrivate(
     ListTagOptionsResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ListTagOptionsResponsePrivate::ListTagOptionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ListTagOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ListTagOptions response element from \a xml.
  */
 void ListTagOptionsResponsePrivate::parseListTagOptionsResponse(QXmlStreamReader &xml)
 {

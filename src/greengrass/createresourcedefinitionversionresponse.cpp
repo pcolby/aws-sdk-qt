@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateResourceDefinitionVersionResponse
- *
  * \brief The CreateResourceDefinitionVersionResponse class provides an interace for Greengrass CreateResourceDefinitionVersion responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceDefinitionVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateResourceDefinitionVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateResourceDefinitionVersionResponse::CreateResourceDefinitionVersionResponse(
         const CreateResourceDefinitionVersionRequest &request,
@@ -58,6 +53,9 @@ CreateResourceDefinitionVersionResponse::CreateResourceDefinitionVersionResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateResourceDefinitionVersionRequest * CreateResourceDefinitionVersionResponse::request() const
 {
     Q_D(const CreateResourceDefinitionVersionResponse);
@@ -65,9 +63,8 @@ const CreateResourceDefinitionVersionRequest * CreateResourceDefinitionVersionRe
 }
 
 /*!
- * @brief  Parse a Greengrass CreateResourceDefinitionVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass CreateResourceDefinitionVersion \a response.
  */
 void CreateResourceDefinitionVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateResourceDefinitionVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::CreateResourceDefinitionVersionResponsePrivate
+ * \brief The CreateResourceDefinitionVersionResponsePrivate class provides private implementation for CreateResourceDefinitionVersionResponse.
  * \internal
  *
- * \class CreateResourceDefinitionVersionResponsePrivate
- *
- * \brief Private implementation for CreateResourceDefinitionVersionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceDefinitionVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateResourceDefinitionVersionResponse instance.
+ * Constructs a CreateResourceDefinitionVersionResponsePrivate object with public implementation \a q.
  */
 CreateResourceDefinitionVersionResponsePrivate::CreateResourceDefinitionVersionResponsePrivate(
     CreateResourceDefinitionVersionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateResourceDefinitionVersionResponsePrivate::CreateResourceDefinitionVersionR
 }
 
 /*!
- * @brief  Parse an Greengrass CreateResourceDefinitionVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass CreateResourceDefinitionVersion response element from \a xml.
  */
 void CreateResourceDefinitionVersionResponsePrivate::parseCreateResourceDefinitionVersionResponse(QXmlStreamReader &xml)
 {

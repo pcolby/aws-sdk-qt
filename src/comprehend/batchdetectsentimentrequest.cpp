@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * BatchDetectSentimentRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a BatchDetectSentimentRequestPrivate object for Comprehend \a action with,
- * public implementation \a q.
+ * Constructs a BatchDetectSentimentRequestPrivate object for Comprehend \a action,
+ * with public implementation \a q.
  */
 BatchDetectSentimentRequestPrivate::BatchDetectSentimentRequestPrivate(
     const ComprehendRequest::Action action, BatchDetectSentimentRequest * const q)

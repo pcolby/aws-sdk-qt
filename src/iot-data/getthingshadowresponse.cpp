@@ -29,10 +29,9 @@ namespace IoTDataPlane {
 
 /*!
  * \class QtAws::IoTDataPlane::GetThingShadowResponse
- *
  * \brief The GetThingShadowResponse class provides an interace for IoTDataPlane GetThingShadow responses.
  *
- * \ingroup IoTDataPlane
+ * \inmodule QtAwsIoTDataPlane
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -45,11 +44,7 @@ namespace IoTDataPlane {
  */
 
 /*!
- * @brief  Constructs a new GetThingShadowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetThingShadowResponse object for \a reply to \a request, with parent \a parent.
  */
 GetThingShadowResponse::GetThingShadowResponse(
         const GetThingShadowRequest &request,
@@ -61,6 +56,9 @@ GetThingShadowResponse::GetThingShadowResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetThingShadowRequest * GetThingShadowResponse::request() const
 {
     Q_D(const GetThingShadowResponse);
@@ -68,9 +66,8 @@ const GetThingShadowRequest * GetThingShadowResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoTDataPlane GetThingShadow response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoTDataPlane GetThingShadow \a response.
  */
 void GetThingShadowResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void GetThingShadowResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoTDataPlane::GetThingShadowResponsePrivate
+ * \brief The GetThingShadowResponsePrivate class provides private implementation for GetThingShadowResponse.
  * \internal
  *
- * \class GetThingShadowResponsePrivate
- *
- * \brief Private implementation for GetThingShadowResponse.
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetThingShadowResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetThingShadowResponse instance.
+ * Constructs a GetThingShadowResponsePrivate object with public implementation \a q.
  */
 GetThingShadowResponsePrivate::GetThingShadowResponsePrivate(
     GetThingShadowResponse * const q) : IoTDataPlaneResponsePrivate(q)
@@ -101,9 +94,7 @@ GetThingShadowResponsePrivate::GetThingShadowResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoTDataPlane GetThingShadowResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoTDataPlane GetThingShadow response element from \a xml.
  */
 void GetThingShadowResponsePrivate::parseGetThingShadowResponse(QXmlStreamReader &xml)
 {

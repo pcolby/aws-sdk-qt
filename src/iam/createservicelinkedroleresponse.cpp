@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateServiceLinkedRoleResponse
- *
  * \brief The CreateServiceLinkedRoleResponse class provides an interace for IAM CreateServiceLinkedRole responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateServiceLinkedRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateServiceLinkedRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateServiceLinkedRoleResponse::CreateServiceLinkedRoleResponse(
         const CreateServiceLinkedRoleRequest &request,
@@ -120,6 +115,9 @@ CreateServiceLinkedRoleResponse::CreateServiceLinkedRoleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateServiceLinkedRoleRequest * CreateServiceLinkedRoleResponse::request() const
 {
     Q_D(const CreateServiceLinkedRoleResponse);
@@ -127,9 +125,8 @@ const CreateServiceLinkedRoleRequest * CreateServiceLinkedRoleResponse::request(
 }
 
 /*!
- * @brief  Parse a IAM CreateServiceLinkedRole response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreateServiceLinkedRole \a response.
  */
 void CreateServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreateServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreateServiceLinkedRoleResponsePrivate
+ * \brief The CreateServiceLinkedRoleResponsePrivate class provides private implementation for CreateServiceLinkedRoleResponse.
  * \internal
  *
- * \class CreateServiceLinkedRoleResponsePrivate
- *
- * \brief Private implementation for CreateServiceLinkedRoleResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateServiceLinkedRoleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateServiceLinkedRoleResponse instance.
+ * Constructs a CreateServiceLinkedRoleResponsePrivate object with public implementation \a q.
  */
 CreateServiceLinkedRoleResponsePrivate::CreateServiceLinkedRoleResponsePrivate(
     CreateServiceLinkedRoleResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreateServiceLinkedRoleResponsePrivate::CreateServiceLinkedRoleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM CreateServiceLinkedRoleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreateServiceLinkedRole response element from \a xml.
  */
 void CreateServiceLinkedRoleResponsePrivate::parseCreateServiceLinkedRoleResponse(QXmlStreamReader &xml)
 {

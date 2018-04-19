@@ -28,16 +28,13 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::KMSResponse
- *
  * \brief The KMSResponse class provides an interface for KMS responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @brief  Constructs a new KMSResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a KMSResponse object with parent \a parent.
  */
 KMSResponse::KMSResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new KMSResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ KMSResponse::KMSResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KMSResponse object.
- *
+ * \internal
+ * Constructs a KMSResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KMSResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 KMSResponse::KMSResponse(KMSResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ KMSResponse::KMSResponse(KMSResponsePrivate * const d, QObject * const parent)
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void KMSResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void KMSResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::KMS::KMSResponsePrivate
+ * \brief The KMSResponsePrivate class provides private implementation for KMSResponse.
+ * \internal
  *
- * @class  KMSResponsePrivate
- *
- * @brief  Private implementation for KMSResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KMSResponsePrivate object.
- *
- * @param  q  Pointer to this object's public KMSResponse instance.
+ * Constructs a KMSResponsePrivate object with public implementation \a q.
  */
 KMSResponsePrivate::KMSResponsePrivate(
     KMSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

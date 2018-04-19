@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterDeviceResponse : public CognitoSyncResponse {
 public:
     RegisterDeviceResponse(const RegisterDeviceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterDeviceRequest * request() const;
+    virtual const RegisterDeviceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterDeviceResponse)

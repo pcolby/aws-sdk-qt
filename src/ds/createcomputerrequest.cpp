@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateComputerRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CreateComputerRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a CreateComputerRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 CreateComputerRequestPrivate::CreateComputerRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateComputerRequest * const q)

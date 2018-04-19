@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::ModifyReplicationSubnetGroupResponse
- *
  * \brief The ModifyReplicationSubnetGroupResponse class provides an interace for DatabaseMigrationService ModifyReplicationSubnetGroup responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new ModifyReplicationSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyReplicationSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyReplicationSubnetGroupResponse::ModifyReplicationSubnetGroupResponse(
         const ModifyReplicationSubnetGroupRequest &request,
@@ -66,6 +61,9 @@ ModifyReplicationSubnetGroupResponse::ModifyReplicationSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyReplicationSubnetGroupRequest * ModifyReplicationSubnetGroupResponse::request() const
 {
     Q_D(const ModifyReplicationSubnetGroupResponse);
@@ -73,9 +71,8 @@ const ModifyReplicationSubnetGroupRequest * ModifyReplicationSubnetGroupResponse
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService ModifyReplicationSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService ModifyReplicationSubnetGroup \a response.
  */
 void ModifyReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ModifyReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::ModifyReplicationSubnetGroupResponsePrivate
+ * \brief The ModifyReplicationSubnetGroupResponsePrivate class provides private implementation for ModifyReplicationSubnetGroupResponse.
  * \internal
  *
- * \class ModifyReplicationSubnetGroupResponsePrivate
- *
- * \brief Private implementation for ModifyReplicationSubnetGroupResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyReplicationSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyReplicationSubnetGroupResponse instance.
+ * Constructs a ModifyReplicationSubnetGroupResponsePrivate object with public implementation \a q.
  */
 ModifyReplicationSubnetGroupResponsePrivate::ModifyReplicationSubnetGroupResponsePrivate(
     ModifyReplicationSubnetGroupResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ ModifyReplicationSubnetGroupResponsePrivate::ModifyReplicationSubnetGroupRespons
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService ModifyReplicationSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService ModifyReplicationSubnetGroup response element from \a xml.
  */
 void ModifyReplicationSubnetGroupResponsePrivate::parseModifyReplicationSubnetGroupResponse(QXmlStreamReader &xml)
 {

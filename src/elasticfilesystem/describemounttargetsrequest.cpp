@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeMountTargetsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeMountTargetsRequestPrivate object for EFS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeMountTargetsRequestPrivate object for EFS \a action,
+ * with public implementation \a q.
  */
 DescribeMountTargetsRequestPrivate::DescribeMountTargetsRequestPrivate(
     const EFSRequest::Action action, DescribeMountTargetsRequest * const q)

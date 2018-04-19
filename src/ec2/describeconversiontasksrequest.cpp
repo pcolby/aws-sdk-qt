@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeConversionTasksRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeConversionTasksRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeConversionTasksRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeConversionTasksRequestPrivate::DescribeConversionTasksRequestPrivate(
     const EC2Request::Action action, DescribeConversionTasksRequest * const q)

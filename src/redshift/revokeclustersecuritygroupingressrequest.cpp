@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * RevokeClusterSecurityGroupIngressRequest::res
  */
 
 /*!
- *
- * Constructs a RevokeClusterSecurityGroupIngressRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a RevokeClusterSecurityGroupIngressRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 RevokeClusterSecurityGroupIngressRequestPrivate::RevokeClusterSecurityGroupIngressRequestPrivate(
     const RedshiftRequest::Action action, RevokeClusterSecurityGroupIngressRequest * const q)

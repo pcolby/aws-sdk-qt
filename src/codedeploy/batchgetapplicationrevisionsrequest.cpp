@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * BatchGetApplicationRevisionsRequest::response
  */
 
 /*!
- *
- * Constructs a BatchGetApplicationRevisionsRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a BatchGetApplicationRevisionsRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 BatchGetApplicationRevisionsRequestPrivate::BatchGetApplicationRevisionsRequestPrivate(
     const CodeDeployRequest::Action action, BatchGetApplicationRevisionsRequest * const q)

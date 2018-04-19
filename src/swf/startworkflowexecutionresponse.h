@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartWorkflowExecutionResponse : public SWFResponse {
 public:
     StartWorkflowExecutionResponse(const StartWorkflowExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartWorkflowExecutionRequest * request() const;
+    virtual const StartWorkflowExecutionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartWorkflowExecutionResponse)

@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetDomainResponse
- *
  * \brief The GetDomainResponse class provides an interace for Lightsail GetDomain responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDomainResponse::GetDomainResponse(
         const GetDomainRequest &request,
@@ -71,6 +66,9 @@ GetDomainResponse::GetDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDomainRequest * GetDomainResponse::request() const
 {
     Q_D(const GetDomainResponse);
@@ -78,9 +76,8 @@ const GetDomainRequest * GetDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetDomain \a response.
  */
 void GetDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetDomainResponsePrivate
+ * \brief The GetDomainResponsePrivate class provides private implementation for GetDomainResponse.
  * \internal
  *
- * \class GetDomainResponsePrivate
- *
- * \brief Private implementation for GetDomainResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDomainResponse instance.
+ * Constructs a GetDomainResponsePrivate object with public implementation \a q.
  */
 GetDomainResponsePrivate::GetDomainResponsePrivate(
     GetDomainResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetDomainResponsePrivate::GetDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetDomain response element from \a xml.
  */
 void GetDomainResponsePrivate::parseGetDomainResponse(QXmlStreamReader &xml)
 {

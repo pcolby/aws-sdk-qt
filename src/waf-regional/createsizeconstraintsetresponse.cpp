@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::CreateSizeConstraintSetResponse
- *
  * \brief The CreateSizeConstraintSetResponse class provides an interace for WAFRegional CreateSizeConstraintSet responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new CreateSizeConstraintSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSizeConstraintSetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSizeConstraintSetResponse::CreateSizeConstraintSetResponse(
         const CreateSizeConstraintSetRequest &request,
@@ -62,6 +57,9 @@ CreateSizeConstraintSetResponse::CreateSizeConstraintSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSizeConstraintSetRequest * CreateSizeConstraintSetResponse::request() const
 {
     Q_D(const CreateSizeConstraintSetResponse);
@@ -69,9 +67,8 @@ const CreateSizeConstraintSetRequest * CreateSizeConstraintSetResponse::request(
 }
 
 /*!
- * @brief  Parse a WAFRegional CreateSizeConstraintSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional CreateSizeConstraintSet \a response.
  */
 void CreateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void CreateSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::CreateSizeConstraintSetResponsePrivate
+ * \brief The CreateSizeConstraintSetResponsePrivate class provides private implementation for CreateSizeConstraintSetResponse.
  * \internal
  *
- * \class CreateSizeConstraintSetResponsePrivate
- *
- * \brief Private implementation for CreateSizeConstraintSetResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSizeConstraintSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSizeConstraintSetResponse instance.
+ * Constructs a CreateSizeConstraintSetResponsePrivate object with public implementation \a q.
  */
 CreateSizeConstraintSetResponsePrivate::CreateSizeConstraintSetResponsePrivate(
     CreateSizeConstraintSetResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ CreateSizeConstraintSetResponsePrivate::CreateSizeConstraintSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional CreateSizeConstraintSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional CreateSizeConstraintSet response element from \a xml.
  */
 void CreateSizeConstraintSetResponsePrivate::parseCreateSizeConstraintSetResponse(QXmlStreamReader &xml)
 {

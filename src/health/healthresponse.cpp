@@ -28,16 +28,13 @@ namespace Health {
 
 /*!
  * \class QtAws::Health::HealthResponse
- *
  * \brief The HealthResponse class provides an interface for Health responses.
  *
- * \ingroup Health
+ * \inmodule QtAwsHealth
  */
 
 /*!
- * @brief  Constructs a new HealthResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a HealthResponse object with parent \a parent.
  */
 HealthResponse::HealthResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new HealthResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ HealthResponse::HealthResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new HealthResponse object.
- *
+ * \internal
+ * Constructs a HealthResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from HealthResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 HealthResponse::HealthResponse(HealthResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ HealthResponse::HealthResponse(HealthResponsePrivate * const d, QObject * const 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void HealthResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void HealthResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Health::HealthResponsePrivate
+ * \brief The HealthResponsePrivate class provides private implementation for HealthResponse.
+ * \internal
  *
- * @class  HealthResponsePrivate
- *
- * @brief  Private implementation for HealthResponse.
+ * \inmodule QtAwsHealth
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new HealthResponsePrivate object.
- *
- * @param  q  Pointer to this object's public HealthResponse instance.
+ * Constructs a HealthResponsePrivate object with public implementation \a q.
  */
 HealthResponsePrivate::HealthResponsePrivate(
     HealthResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

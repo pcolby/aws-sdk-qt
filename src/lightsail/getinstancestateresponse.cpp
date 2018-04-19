@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetInstanceStateResponse
- *
  * \brief The GetInstanceStateResponse class provides an interace for Lightsail GetInstanceState responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInstanceStateResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInstanceStateResponse::GetInstanceStateResponse(
         const GetInstanceStateRequest &request,
@@ -71,6 +66,9 @@ GetInstanceStateResponse::GetInstanceStateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInstanceStateRequest * GetInstanceStateResponse::request() const
 {
     Q_D(const GetInstanceStateResponse);
@@ -78,9 +76,8 @@ const GetInstanceStateRequest * GetInstanceStateResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetInstanceState response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetInstanceState \a response.
  */
 void GetInstanceStateResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetInstanceStateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetInstanceStateResponsePrivate
+ * \brief The GetInstanceStateResponsePrivate class provides private implementation for GetInstanceStateResponse.
  * \internal
  *
- * \class GetInstanceStateResponsePrivate
- *
- * \brief Private implementation for GetInstanceStateResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceStateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInstanceStateResponse instance.
+ * Constructs a GetInstanceStateResponsePrivate object with public implementation \a q.
  */
 GetInstanceStateResponsePrivate::GetInstanceStateResponsePrivate(
     GetInstanceStateResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetInstanceStateResponsePrivate::GetInstanceStateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetInstanceStateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetInstanceState response element from \a xml.
  */
 void GetInstanceStateResponsePrivate::parseGetInstanceStateResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::RejectPortfolioShareResponse
- *
  * \brief The RejectPortfolioShareResponse class provides an interace for ServiceCatalog RejectPortfolioShare responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new RejectPortfolioShareResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RejectPortfolioShareResponse object for \a reply to \a request, with parent \a parent.
  */
 RejectPortfolioShareResponse::RejectPortfolioShareResponse(
         const RejectPortfolioShareRequest &request,
@@ -61,6 +56,9 @@ RejectPortfolioShareResponse::RejectPortfolioShareResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RejectPortfolioShareRequest * RejectPortfolioShareResponse::request() const
 {
     Q_D(const RejectPortfolioShareResponse);
@@ -68,9 +66,8 @@ const RejectPortfolioShareRequest * RejectPortfolioShareResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ServiceCatalog RejectPortfolioShare response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog RejectPortfolioShare \a response.
  */
 void RejectPortfolioShareResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void RejectPortfolioShareResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::RejectPortfolioShareResponsePrivate
+ * \brief The RejectPortfolioShareResponsePrivate class provides private implementation for RejectPortfolioShareResponse.
  * \internal
  *
- * \class RejectPortfolioShareResponsePrivate
- *
- * \brief Private implementation for RejectPortfolioShareResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RejectPortfolioShareResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RejectPortfolioShareResponse instance.
+ * Constructs a RejectPortfolioShareResponsePrivate object with public implementation \a q.
  */
 RejectPortfolioShareResponsePrivate::RejectPortfolioShareResponsePrivate(
     RejectPortfolioShareResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ RejectPortfolioShareResponsePrivate::RejectPortfolioShareResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog RejectPortfolioShareResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog RejectPortfolioShare response element from \a xml.
  */
 void RejectPortfolioShareResponsePrivate::parseRejectPortfolioShareResponse(QXmlStreamReader &xml)
 {

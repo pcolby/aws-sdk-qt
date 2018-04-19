@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * StartAutomationExecutionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a StartAutomationExecutionRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a StartAutomationExecutionRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 StartAutomationExecutionRequestPrivate::StartAutomationExecutionRequestPrivate(
     const SSMRequest::Action action, StartAutomationExecutionRequest * const q)

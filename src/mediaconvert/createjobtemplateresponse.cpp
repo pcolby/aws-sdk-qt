@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::CreateJobTemplateResponse
- *
  * \brief The CreateJobTemplateResponse class provides an interace for MediaConvert CreateJobTemplate responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::createJobTemplate
  */
 
 /*!
- * @brief  Constructs a new CreateJobTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateJobTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateJobTemplateResponse::CreateJobTemplateResponse(
         const CreateJobTemplateRequest &request,
@@ -55,6 +50,9 @@ CreateJobTemplateResponse::CreateJobTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateJobTemplateRequest * CreateJobTemplateResponse::request() const
 {
     Q_D(const CreateJobTemplateResponse);
@@ -62,9 +60,8 @@ const CreateJobTemplateRequest * CreateJobTemplateResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert CreateJobTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert CreateJobTemplate \a response.
  */
 void CreateJobTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateJobTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::CreateJobTemplateResponsePrivate
+ * \brief The CreateJobTemplateResponsePrivate class provides private implementation for CreateJobTemplateResponse.
  * \internal
  *
- * \class CreateJobTemplateResponsePrivate
- *
- * \brief Private implementation for CreateJobTemplateResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateJobTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateJobTemplateResponse instance.
+ * Constructs a CreateJobTemplateResponsePrivate object with public implementation \a q.
  */
 CreateJobTemplateResponsePrivate::CreateJobTemplateResponsePrivate(
     CreateJobTemplateResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateJobTemplateResponsePrivate::CreateJobTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert CreateJobTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert CreateJobTemplate response element from \a xml.
  */
 void CreateJobTemplateResponsePrivate::parseCreateJobTemplateResponse(QXmlStreamReader &xml)
 {

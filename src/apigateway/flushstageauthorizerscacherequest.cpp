@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * FlushStageAuthorizersCacheRequest::response(Q
  */
 
 /*!
- *
- * Constructs a FlushStageAuthorizersCacheRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a FlushStageAuthorizersCacheRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 FlushStageAuthorizersCacheRequestPrivate::FlushStageAuthorizersCacheRequestPrivate(
     const APIGatewayRequest::Action action, FlushStageAuthorizersCacheRequest * const q)

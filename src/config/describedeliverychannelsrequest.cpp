@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDeliveryChannelsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeDeliveryChannelsRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDeliveryChannelsRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DescribeDeliveryChannelsRequestPrivate::DescribeDeliveryChannelsRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeDeliveryChannelsRequest * const q)

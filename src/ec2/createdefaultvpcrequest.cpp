@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateDefaultVpcRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateDefaultVpcRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateDefaultVpcRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateDefaultVpcRequestPrivate::CreateDefaultVpcRequestPrivate(
     const EC2Request::Action action, CreateDefaultVpcRequest * const q)

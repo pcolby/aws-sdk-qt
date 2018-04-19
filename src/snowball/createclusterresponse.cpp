@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::CreateClusterResponse
- *
  * \brief The CreateClusterResponse class provides an interace for Snowball CreateCluster responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateClusterResponse::CreateClusterResponse(
         const CreateClusterRequest &request,
@@ -61,6 +56,9 @@ CreateClusterResponse::CreateClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateClusterRequest * CreateClusterResponse::request() const
 {
     Q_D(const CreateClusterResponse);
@@ -68,9 +66,8 @@ const CreateClusterRequest * CreateClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball CreateCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball CreateCluster \a response.
  */
 void CreateClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreateClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::CreateClusterResponsePrivate
+ * \brief The CreateClusterResponsePrivate class provides private implementation for CreateClusterResponse.
  * \internal
  *
- * \class CreateClusterResponsePrivate
- *
- * \brief Private implementation for CreateClusterResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateClusterResponse instance.
+ * Constructs a CreateClusterResponsePrivate object with public implementation \a q.
  */
 CreateClusterResponsePrivate::CreateClusterResponsePrivate(
     CreateClusterResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ CreateClusterResponsePrivate::CreateClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball CreateClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball CreateCluster response element from \a xml.
  */
 void CreateClusterResponsePrivate::parseCreateClusterResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssignIpv6AddressesResponse
- *
  * \brief The AssignIpv6AddressesResponse class provides an interace for EC2 AssignIpv6Addresses responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssignIpv6AddressesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssignIpv6AddressesResponse object for \a reply to \a request, with parent \a parent.
  */
 AssignIpv6AddressesResponse::AssignIpv6AddressesResponse(
         const AssignIpv6AddressesRequest &request,
@@ -59,6 +54,9 @@ AssignIpv6AddressesResponse::AssignIpv6AddressesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssignIpv6AddressesRequest * AssignIpv6AddressesResponse::request() const
 {
     Q_D(const AssignIpv6AddressesResponse);
@@ -66,9 +64,8 @@ const AssignIpv6AddressesRequest * AssignIpv6AddressesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 AssignIpv6Addresses response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AssignIpv6Addresses \a response.
  */
 void AssignIpv6AddressesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AssignIpv6AddressesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AssignIpv6AddressesResponsePrivate
+ * \brief The AssignIpv6AddressesResponsePrivate class provides private implementation for AssignIpv6AddressesResponse.
  * \internal
  *
- * \class AssignIpv6AddressesResponsePrivate
- *
- * \brief Private implementation for AssignIpv6AddressesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssignIpv6AddressesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssignIpv6AddressesResponse instance.
+ * Constructs a AssignIpv6AddressesResponsePrivate object with public implementation \a q.
  */
 AssignIpv6AddressesResponsePrivate::AssignIpv6AddressesResponsePrivate(
     AssignIpv6AddressesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AssignIpv6AddressesResponsePrivate::AssignIpv6AddressesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 AssignIpv6AddressesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AssignIpv6Addresses response element from \a xml.
  */
 void AssignIpv6AddressesResponsePrivate::parseAssignIpv6AddressesResponse(QXmlStreamReader &xml)
 {

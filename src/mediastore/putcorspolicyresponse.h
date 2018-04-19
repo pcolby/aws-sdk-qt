@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutCorsPolicyResponse : public MediaStoreResponse {
 public:
     PutCorsPolicyResponse(const PutCorsPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutCorsPolicyRequest * request() const;
+    virtual const PutCorsPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutCorsPolicyResponse)

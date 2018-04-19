@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVerifiedEmailAddressRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteVerifiedEmailAddressRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVerifiedEmailAddressRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 DeleteVerifiedEmailAddressRequestPrivate::DeleteVerifiedEmailAddressRequestPrivate(
     const SESRequest::Action action, DeleteVerifiedEmailAddressRequest * const q)

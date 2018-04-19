@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * ListBackupsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListBackupsRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a ListBackupsRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 ListBackupsRequestPrivate::ListBackupsRequestPrivate(
     const DynamoDBRequest::Action action, ListBackupsRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateRepositoryRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateRepositoryRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a CreateRepositoryRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
     const ECRRequest::Action action, CreateRepositoryRequest * const q)

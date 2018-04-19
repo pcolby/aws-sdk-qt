@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateKeysAndCertificateRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateKeysAndCertificateRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a CreateKeysAndCertificateRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 CreateKeysAndCertificateRequestPrivate::CreateKeysAndCertificateRequestPrivate(
     const IoTRequest::Action action, CreateKeysAndCertificateRequest * const q)

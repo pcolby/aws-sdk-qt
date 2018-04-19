@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBotVersionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteBotVersionRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBotVersionRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 DeleteBotVersionRequestPrivate::DeleteBotVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteBotVersionRequest * const q)

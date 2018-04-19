@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CreateDBParameterGroupRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateDBParameterGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CreateDBParameterGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CreateDBParameterGroupRequestPrivate::CreateDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, CreateDBParameterGroupRequest * const q)

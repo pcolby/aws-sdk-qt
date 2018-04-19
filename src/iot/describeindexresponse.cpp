@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeIndexResponse
- *
  * \brief The DescribeIndexResponse class provides an interace for IoT DescribeIndex responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeIndexResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeIndexResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeIndexResponse::DescribeIndexResponse(
         const DescribeIndexRequest &request,
@@ -66,6 +61,9 @@ DescribeIndexResponse::DescribeIndexResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeIndexRequest * DescribeIndexResponse::request() const
 {
     Q_D(const DescribeIndexResponse);
@@ -73,9 +71,8 @@ const DescribeIndexRequest * DescribeIndexResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DescribeIndex response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DescribeIndex \a response.
  */
 void DescribeIndexResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeIndexResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DescribeIndexResponsePrivate
+ * \brief The DescribeIndexResponsePrivate class provides private implementation for DescribeIndexResponse.
  * \internal
  *
- * \class DescribeIndexResponsePrivate
- *
- * \brief Private implementation for DescribeIndexResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeIndexResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeIndexResponse instance.
+ * Constructs a DescribeIndexResponsePrivate object with public implementation \a q.
  */
 DescribeIndexResponsePrivate::DescribeIndexResponsePrivate(
     DescribeIndexResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeIndexResponsePrivate::DescribeIndexResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DescribeIndexResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DescribeIndex response element from \a xml.
  */
 void DescribeIndexResponsePrivate::parseDescribeIndexResponse(QXmlStreamReader &xml)
 {

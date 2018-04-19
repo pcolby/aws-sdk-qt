@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::SendCommandResponse
- *
  * \brief The SendCommandResponse class provides an interace for SSM SendCommand responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new SendCommandResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendCommandResponse object for \a reply to \a request, with parent \a parent.
  */
 SendCommandResponse::SendCommandResponse(
         const SendCommandRequest &request,
@@ -79,6 +74,9 @@ SendCommandResponse::SendCommandResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendCommandRequest * SendCommandResponse::request() const
 {
     Q_D(const SendCommandResponse);
@@ -86,9 +84,8 @@ const SendCommandRequest * SendCommandResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM SendCommand response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM SendCommand \a response.
  */
 void SendCommandResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void SendCommandResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::SendCommandResponsePrivate
+ * \brief The SendCommandResponsePrivate class provides private implementation for SendCommandResponse.
  * \internal
  *
- * \class SendCommandResponsePrivate
- *
- * \brief Private implementation for SendCommandResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendCommandResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendCommandResponse instance.
+ * Constructs a SendCommandResponsePrivate object with public implementation \a q.
  */
 SendCommandResponsePrivate::SendCommandResponsePrivate(
     SendCommandResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ SendCommandResponsePrivate::SendCommandResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM SendCommandResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM SendCommand response element from \a xml.
  */
 void SendCommandResponsePrivate::parseSendCommandResponse(QXmlStreamReader &xml)
 {

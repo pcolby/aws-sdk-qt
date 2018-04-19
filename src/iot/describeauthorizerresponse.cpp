@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeAuthorizerResponse
- *
  * \brief The DescribeAuthorizerResponse class provides an interace for IoT DescribeAuthorizer responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeAuthorizerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAuthorizerResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAuthorizerResponse::DescribeAuthorizerResponse(
         const DescribeAuthorizerRequest &request,
@@ -66,6 +61,9 @@ DescribeAuthorizerResponse::DescribeAuthorizerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAuthorizerRequest * DescribeAuthorizerResponse::request() const
 {
     Q_D(const DescribeAuthorizerResponse);
@@ -73,9 +71,8 @@ const DescribeAuthorizerRequest * DescribeAuthorizerResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DescribeAuthorizer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DescribeAuthorizer \a response.
  */
 void DescribeAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DescribeAuthorizerResponsePrivate
+ * \brief The DescribeAuthorizerResponsePrivate class provides private implementation for DescribeAuthorizerResponse.
  * \internal
  *
- * \class DescribeAuthorizerResponsePrivate
- *
- * \brief Private implementation for DescribeAuthorizerResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAuthorizerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAuthorizerResponse instance.
+ * Constructs a DescribeAuthorizerResponsePrivate object with public implementation \a q.
  */
 DescribeAuthorizerResponsePrivate::DescribeAuthorizerResponsePrivate(
     DescribeAuthorizerResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeAuthorizerResponsePrivate::DescribeAuthorizerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DescribeAuthorizerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DescribeAuthorizer response element from \a xml.
  */
 void DescribeAuthorizerResponsePrivate::parseDescribeAuthorizerResponse(QXmlStreamReader &xml)
 {

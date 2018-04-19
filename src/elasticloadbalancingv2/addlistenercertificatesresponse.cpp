@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::AddListenerCertificatesResponse
- *
  * \brief The AddListenerCertificatesResponse class provides an interace for ElasticLoadBalancingv2 AddListenerCertificates responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new AddListenerCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddListenerCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 AddListenerCertificatesResponse::AddListenerCertificatesResponse(
         const AddListenerCertificatesRequest &request,
@@ -123,6 +118,9 @@ AddListenerCertificatesResponse::AddListenerCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddListenerCertificatesRequest * AddListenerCertificatesResponse::request() const
 {
     Q_D(const AddListenerCertificatesResponse);
@@ -130,9 +128,8 @@ const AddListenerCertificatesRequest * AddListenerCertificatesResponse::request(
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 AddListenerCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 AddListenerCertificates \a response.
  */
 void AddListenerCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void AddListenerCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::AddListenerCertificatesResponsePrivate
+ * \brief The AddListenerCertificatesResponsePrivate class provides private implementation for AddListenerCertificatesResponse.
  * \internal
  *
- * \class AddListenerCertificatesResponsePrivate
- *
- * \brief Private implementation for AddListenerCertificatesResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddListenerCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddListenerCertificatesResponse instance.
+ * Constructs a AddListenerCertificatesResponsePrivate object with public implementation \a q.
  */
 AddListenerCertificatesResponsePrivate::AddListenerCertificatesResponsePrivate(
     AddListenerCertificatesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ AddListenerCertificatesResponsePrivate::AddListenerCertificatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 AddListenerCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 AddListenerCertificates response element from \a xml.
  */
 void AddListenerCertificatesResponsePrivate::parseAddListenerCertificatesResponse(QXmlStreamReader &xml)
 {

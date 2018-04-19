@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DetectTextRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DetectTextRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a DetectTextRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 DetectTextRequestPrivate::DetectTextRequestPrivate(
     const RekognitionRequest::Action action, DetectTextRequest * const q)

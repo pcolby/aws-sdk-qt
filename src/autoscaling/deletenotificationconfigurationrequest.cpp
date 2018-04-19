@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationConfigurationRequest::respo
  */
 
 /*!
- *
- * Constructs a DeleteNotificationConfigurationRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNotificationConfigurationRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DeleteNotificationConfigurationRequestPrivate::DeleteNotificationConfigurationRequestPrivate(
     const AutoScalingRequest::Action action, DeleteNotificationConfigurationRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssociateAddressResponse
- *
  * \brief The AssociateAddressResponse class provides an interace for EC2 AssociateAddress responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssociateAddressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateAddressResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateAddressResponse::AssociateAddressResponse(
         const AssociateAddressRequest &request,
@@ -59,6 +54,9 @@ AssociateAddressResponse::AssociateAddressResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateAddressRequest * AssociateAddressResponse::request() const
 {
     Q_D(const AssociateAddressResponse);
@@ -66,9 +64,8 @@ const AssociateAddressRequest * AssociateAddressResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 AssociateAddress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AssociateAddress \a response.
  */
 void AssociateAddressResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AssociateAddressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AssociateAddressResponsePrivate
+ * \brief The AssociateAddressResponsePrivate class provides private implementation for AssociateAddressResponse.
  * \internal
  *
- * \class AssociateAddressResponsePrivate
- *
- * \brief Private implementation for AssociateAddressResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateAddressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateAddressResponse instance.
+ * Constructs a AssociateAddressResponsePrivate object with public implementation \a q.
  */
 AssociateAddressResponsePrivate::AssociateAddressResponsePrivate(
     AssociateAddressResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AssociateAddressResponsePrivate::AssociateAddressResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 AssociateAddressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AssociateAddress response element from \a xml.
  */
 void AssociateAddressResponsePrivate::parseAssociateAddressResponse(QXmlStreamReader &xml)
 {

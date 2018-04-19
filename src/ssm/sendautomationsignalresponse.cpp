@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::SendAutomationSignalResponse
- *
  * \brief The SendAutomationSignalResponse class provides an interace for SSM SendAutomationSignal responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new SendAutomationSignalResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendAutomationSignalResponse object for \a reply to \a request, with parent \a parent.
  */
 SendAutomationSignalResponse::SendAutomationSignalResponse(
         const SendAutomationSignalRequest &request,
@@ -79,6 +74,9 @@ SendAutomationSignalResponse::SendAutomationSignalResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendAutomationSignalRequest * SendAutomationSignalResponse::request() const
 {
     Q_D(const SendAutomationSignalResponse);
@@ -86,9 +84,8 @@ const SendAutomationSignalRequest * SendAutomationSignalResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SSM SendAutomationSignal response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM SendAutomationSignal \a response.
  */
 void SendAutomationSignalResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void SendAutomationSignalResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::SendAutomationSignalResponsePrivate
+ * \brief The SendAutomationSignalResponsePrivate class provides private implementation for SendAutomationSignalResponse.
  * \internal
  *
- * \class SendAutomationSignalResponsePrivate
- *
- * \brief Private implementation for SendAutomationSignalResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendAutomationSignalResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendAutomationSignalResponse instance.
+ * Constructs a SendAutomationSignalResponsePrivate object with public implementation \a q.
  */
 SendAutomationSignalResponsePrivate::SendAutomationSignalResponsePrivate(
     SendAutomationSignalResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ SendAutomationSignalResponsePrivate::SendAutomationSignalResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM SendAutomationSignalResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM SendAutomationSignal response element from \a xml.
  */
 void SendAutomationSignalResponsePrivate::parseSendAutomationSignalResponse(QXmlStreamReader &xml)
 {

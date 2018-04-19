@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ListTopicsResponse
- *
  * \brief The ListTopicsResponse class provides an interace for SNS ListTopics responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ListTopicsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTopicsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTopicsResponse::ListTopicsResponse(
         const ListTopicsRequest &request,
@@ -69,6 +64,9 @@ ListTopicsResponse::ListTopicsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTopicsRequest * ListTopicsResponse::request() const
 {
     Q_D(const ListTopicsResponse);
@@ -76,9 +74,8 @@ const ListTopicsRequest * ListTopicsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SNS ListTopics response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS ListTopics \a response.
  */
 void ListTopicsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListTopicsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::ListTopicsResponsePrivate
+ * \brief The ListTopicsResponsePrivate class provides private implementation for ListTopicsResponse.
  * \internal
  *
- * \class ListTopicsResponsePrivate
- *
- * \brief Private implementation for ListTopicsResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTopicsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTopicsResponse instance.
+ * Constructs a ListTopicsResponsePrivate object with public implementation \a q.
  */
 ListTopicsResponsePrivate::ListTopicsResponsePrivate(
     ListTopicsResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ ListTopicsResponsePrivate::ListTopicsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS ListTopicsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS ListTopics response element from \a xml.
  */
 void ListTopicsResponsePrivate::parseListTopicsResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceStatusRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeInstanceStatusRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInstanceStatusRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeInstanceStatusRequestPrivate::DescribeInstanceStatusRequestPrivate(
     const EC2Request::Action action, DescribeInstanceStatusRequest * const q)

@@ -29,10 +29,9 @@ namespace CloudHSMV2 {
 
 /*!
  * \class QtAws::CloudHSMV2::ListTagsResponse
- *
  * \brief The ListTagsResponse class provides an interace for CloudHSMV2 ListTags responses.
  *
- * \ingroup CloudHSMV2
+ * \inmodule QtAwsCloudHSMV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
@@ -41,11 +40,7 @@ namespace CloudHSMV2 {
  */
 
 /*!
- * @brief  Constructs a new ListTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsResponse::ListTagsResponse(
         const ListTagsRequest &request,
@@ -57,6 +52,9 @@ ListTagsResponse::ListTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsRequest * ListTagsResponse::request() const
 {
     Q_D(const ListTagsResponse);
@@ -64,9 +62,8 @@ const ListTagsRequest * ListTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSMV2 ListTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSMV2 ListTags \a response.
  */
 void ListTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSMV2::ListTagsResponsePrivate
+ * \brief The ListTagsResponsePrivate class provides private implementation for ListTagsResponse.
  * \internal
  *
- * \class ListTagsResponsePrivate
- *
- * \brief Private implementation for ListTagsResponse.
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsResponse instance.
+ * Constructs a ListTagsResponsePrivate object with public implementation \a q.
  */
 ListTagsResponsePrivate::ListTagsResponsePrivate(
     ListTagsResponse * const q) : CloudHSMV2ResponsePrivate(q)
@@ -97,9 +90,7 @@ ListTagsResponsePrivate::ListTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSMV2 ListTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSMV2 ListTags response element from \a xml.
  */
 void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
 {

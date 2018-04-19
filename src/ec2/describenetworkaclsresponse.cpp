@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeNetworkAclsResponse
- *
  * \brief The DescribeNetworkAclsResponse class provides an interace for EC2 DescribeNetworkAcls responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeNetworkAclsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeNetworkAclsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeNetworkAclsResponse::DescribeNetworkAclsResponse(
         const DescribeNetworkAclsRequest &request,
@@ -59,6 +54,9 @@ DescribeNetworkAclsResponse::DescribeNetworkAclsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeNetworkAclsRequest * DescribeNetworkAclsResponse::request() const
 {
     Q_D(const DescribeNetworkAclsResponse);
@@ -66,9 +64,8 @@ const DescribeNetworkAclsRequest * DescribeNetworkAclsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeNetworkAcls response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeNetworkAcls \a response.
  */
 void DescribeNetworkAclsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeNetworkAclsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeNetworkAclsResponsePrivate
+ * \brief The DescribeNetworkAclsResponsePrivate class provides private implementation for DescribeNetworkAclsResponse.
  * \internal
  *
- * \class DescribeNetworkAclsResponsePrivate
- *
- * \brief Private implementation for DescribeNetworkAclsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNetworkAclsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeNetworkAclsResponse instance.
+ * Constructs a DescribeNetworkAclsResponsePrivate object with public implementation \a q.
  */
 DescribeNetworkAclsResponsePrivate::DescribeNetworkAclsResponsePrivate(
     DescribeNetworkAclsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeNetworkAclsResponsePrivate::DescribeNetworkAclsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeNetworkAclsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeNetworkAcls response element from \a xml.
  */
 void DescribeNetworkAclsResponsePrivate::parseDescribeNetworkAclsResponse(QXmlStreamReader &xml)
 {

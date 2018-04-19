@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UnarchiveFindingsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UnarchiveFindingsRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a UnarchiveFindingsRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 UnarchiveFindingsRequestPrivate::UnarchiveFindingsRequestPrivate(
     const GuardDutyRequest::Action action, UnarchiveFindingsRequest * const q)

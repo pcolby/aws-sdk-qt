@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * CreateExportTaskRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateExportTaskRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a CreateExportTaskRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 CreateExportTaskRequestPrivate::CreateExportTaskRequestPrivate(
     const CloudWatchLogsRequest::Action action, CreateExportTaskRequest * const q)

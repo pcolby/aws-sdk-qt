@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeBundleTasksRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeBundleTasksRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeBundleTasksRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeBundleTasksRequestPrivate::DescribeBundleTasksRequestPrivate(
     const EC2Request::Action action, DescribeBundleTasksRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * AssociateRoleToGroupRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a AssociateRoleToGroupRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a AssociateRoleToGroupRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 AssociateRoleToGroupRequestPrivate::AssociateRoleToGroupRequestPrivate(
     const GreengrassRequest::Action action, AssociateRoleToGroupRequest * const q)

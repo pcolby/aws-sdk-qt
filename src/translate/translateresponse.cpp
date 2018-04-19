@@ -28,16 +28,13 @@ namespace Translate {
 
 /*!
  * \class QtAws::Translate::TranslateResponse
- *
  * \brief The TranslateResponse class provides an interface for Translate responses.
  *
- * \ingroup Translate
+ * \inmodule QtAwsTranslate
  */
 
 /*!
- * @brief  Constructs a new TranslateResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a TranslateResponse object with parent \a parent.
  */
 TranslateResponse::TranslateResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new TranslateResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ TranslateResponse::TranslateResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TranslateResponse object.
- *
+ * \internal
+ * Constructs a TranslateResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from TranslateResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 TranslateResponse::TranslateResponse(TranslateResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ TranslateResponse::TranslateResponse(TranslateResponsePrivate * const d, QObject
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void TranslateResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void TranslateResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Translate::TranslateResponsePrivate
+ * \brief The TranslateResponsePrivate class provides private implementation for TranslateResponse.
+ * \internal
  *
- * @class  TranslateResponsePrivate
- *
- * @brief  Private implementation for TranslateResponse.
+ * \inmodule QtAwsTranslate
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TranslateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TranslateResponse instance.
+ * Constructs a TranslateResponsePrivate object with public implementation \a q.
  */
 TranslateResponsePrivate::TranslateResponsePrivate(
     TranslateResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

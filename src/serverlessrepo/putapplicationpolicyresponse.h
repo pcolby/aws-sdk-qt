@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutApplicationPolicyResponse : public ServerlessApplicationRe
 public:
     PutApplicationPolicyResponse(const PutApplicationPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutApplicationPolicyRequest * request() const;
+    virtual const PutApplicationPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutApplicationPolicyResponse)

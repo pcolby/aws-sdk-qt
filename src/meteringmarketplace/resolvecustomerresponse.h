@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResolveCustomerResponse : public MarketplaceMeteringResponse 
 public:
     ResolveCustomerResponse(const ResolveCustomerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResolveCustomerRequest * request() const;
+    virtual const ResolveCustomerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResolveCustomerResponse)

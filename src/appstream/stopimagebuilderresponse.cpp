@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::StopImageBuilderResponse
- *
  * \brief The StopImageBuilderResponse class provides an interace for AppStream StopImageBuilder responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new StopImageBuilderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopImageBuilderResponse object for \a reply to \a request, with parent \a parent.
  */
 StopImageBuilderResponse::StopImageBuilderResponse(
         const StopImageBuilderRequest &request,
@@ -58,6 +53,9 @@ StopImageBuilderResponse::StopImageBuilderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopImageBuilderRequest * StopImageBuilderResponse::request() const
 {
     Q_D(const StopImageBuilderResponse);
@@ -65,9 +63,8 @@ const StopImageBuilderRequest * StopImageBuilderResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream StopImageBuilder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream StopImageBuilder \a response.
  */
 void StopImageBuilderResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StopImageBuilderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::StopImageBuilderResponsePrivate
+ * \brief The StopImageBuilderResponsePrivate class provides private implementation for StopImageBuilderResponse.
  * \internal
  *
- * \class StopImageBuilderResponsePrivate
- *
- * \brief Private implementation for StopImageBuilderResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopImageBuilderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopImageBuilderResponse instance.
+ * Constructs a StopImageBuilderResponsePrivate object with public implementation \a q.
  */
 StopImageBuilderResponsePrivate::StopImageBuilderResponsePrivate(
     StopImageBuilderResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ StopImageBuilderResponsePrivate::StopImageBuilderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream StopImageBuilderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream StopImageBuilder response element from \a xml.
  */
 void StopImageBuilderResponsePrivate::parseStopImageBuilderResponse(QXmlStreamReader &xml)
 {

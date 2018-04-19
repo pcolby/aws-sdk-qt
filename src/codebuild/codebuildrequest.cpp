@@ -55,7 +55,7 @@ namespace CodeBuild {
  */
 
 /*!
- * Constructs a[n] CodeBuildRequest object for CodeBuild \a action.
+ * Constructs a CodeBuildRequest object for CodeBuild \a action.
  */
 CodeBuildRequest::CodeBuildRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CodeBuildRequestPrivate(action, this))
@@ -255,8 +255,8 @@ QNetworkRequest CodeBuildRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CodeBuildRequestPrivate object for CodeBuild \a action with,
- * public implementation \a q.
+ * Constructs a CodeBuildRequestPrivate object for CodeBuild \a action,
+ * with public implementation \a q.
  */
 CodeBuildRequestPrivate::CodeBuildRequestPrivate(const CodeBuildRequest::Action action, CodeBuildRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

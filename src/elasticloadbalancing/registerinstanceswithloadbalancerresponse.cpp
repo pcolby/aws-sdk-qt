@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::RegisterInstancesWithLoadBalancerResponse
- *
  * \brief The RegisterInstancesWithLoadBalancerResponse class provides an interace for ElasticLoadBalancing RegisterInstancesWithLoadBalancer responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new RegisterInstancesWithLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterInstancesWithLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterInstancesWithLoadBalancerResponse::RegisterInstancesWithLoadBalancerResponse(
         const RegisterInstancesWithLoadBalancerRequest &request,
@@ -83,6 +78,9 @@ RegisterInstancesWithLoadBalancerResponse::RegisterInstancesWithLoadBalancerResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterInstancesWithLoadBalancerRequest * RegisterInstancesWithLoadBalancerResponse::request() const
 {
     Q_D(const RegisterInstancesWithLoadBalancerResponse);
@@ -90,9 +88,8 @@ const RegisterInstancesWithLoadBalancerRequest * RegisterInstancesWithLoadBalanc
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing RegisterInstancesWithLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing RegisterInstancesWithLoadBalancer \a response.
  */
 void RegisterInstancesWithLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void RegisterInstancesWithLoadBalancerResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::RegisterInstancesWithLoadBalancerResponsePrivate
+ * \brief The RegisterInstancesWithLoadBalancerResponsePrivate class provides private implementation for RegisterInstancesWithLoadBalancerResponse.
  * \internal
  *
- * \class RegisterInstancesWithLoadBalancerResponsePrivate
- *
- * \brief Private implementation for RegisterInstancesWithLoadBalancerResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterInstancesWithLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterInstancesWithLoadBalancerResponse instance.
+ * Constructs a RegisterInstancesWithLoadBalancerResponsePrivate object with public implementation \a q.
  */
 RegisterInstancesWithLoadBalancerResponsePrivate::RegisterInstancesWithLoadBalancerResponsePrivate(
     RegisterInstancesWithLoadBalancerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ RegisterInstancesWithLoadBalancerResponsePrivate::RegisterInstancesWithLoadBalan
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing RegisterInstancesWithLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing RegisterInstancesWithLoadBalancer response element from \a xml.
  */
 void RegisterInstancesWithLoadBalancerResponsePrivate::parseRegisterInstancesWithLoadBalancerResponse(QXmlStreamReader &xml)
 {

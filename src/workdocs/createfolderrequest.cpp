@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * CreateFolderRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateFolderRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a CreateFolderRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 CreateFolderRequestPrivate::CreateFolderRequestPrivate(
     const WorkDocsRequest::Action action, CreateFolderRequest * const q)

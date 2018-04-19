@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAccessKeyRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a UpdateAccessKeyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAccessKeyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
     const IAMRequest::Action action, UpdateAccessKeyRequest * const q)

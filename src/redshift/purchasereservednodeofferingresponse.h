@@ -34,10 +34,10 @@ class QTAWS_EXPORT PurchaseReservedNodeOfferingResponse : public RedshiftRespons
 public:
     PurchaseReservedNodeOfferingResponse(const PurchaseReservedNodeOfferingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PurchaseReservedNodeOfferingRequest * request() const;
+    virtual const PurchaseReservedNodeOfferingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PurchaseReservedNodeOfferingResponse)

@@ -29,10 +29,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeTrustedAdvisorCheckSummariesResponse
- *
  * \brief The DescribeTrustedAdvisorCheckSummariesResponse class provides an interace for Support DescribeTrustedAdvisorCheckSummaries responses.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -107,11 +106,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTrustedAdvisorCheckSummariesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTrustedAdvisorCheckSummariesResponse::DescribeTrustedAdvisorCheckSummariesResponse(
         const DescribeTrustedAdvisorCheckSummariesRequest &request,
@@ -123,6 +118,9 @@ DescribeTrustedAdvisorCheckSummariesResponse::DescribeTrustedAdvisorCheckSummari
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTrustedAdvisorCheckSummariesRequest * DescribeTrustedAdvisorCheckSummariesResponse::request() const
 {
     Q_D(const DescribeTrustedAdvisorCheckSummariesResponse);
@@ -130,9 +128,8 @@ const DescribeTrustedAdvisorCheckSummariesRequest * DescribeTrustedAdvisorCheckS
 }
 
 /*!
- * @brief  Parse a Support DescribeTrustedAdvisorCheckSummaries response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Support DescribeTrustedAdvisorCheckSummaries \a response.
  */
 void DescribeTrustedAdvisorCheckSummariesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeTrustedAdvisorCheckSummariesResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::Support::DescribeTrustedAdvisorCheckSummariesResponsePrivate
+ * \brief The DescribeTrustedAdvisorCheckSummariesResponsePrivate class provides private implementation for DescribeTrustedAdvisorCheckSummariesResponse.
  * \internal
  *
- * \class DescribeTrustedAdvisorCheckSummariesResponsePrivate
- *
- * \brief Private implementation for DescribeTrustedAdvisorCheckSummariesResponse.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTrustedAdvisorCheckSummariesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTrustedAdvisorCheckSummariesResponse instance.
+ * Constructs a DescribeTrustedAdvisorCheckSummariesResponsePrivate object with public implementation \a q.
  */
 DescribeTrustedAdvisorCheckSummariesResponsePrivate::DescribeTrustedAdvisorCheckSummariesResponsePrivate(
     DescribeTrustedAdvisorCheckSummariesResponse * const q) : SupportResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeTrustedAdvisorCheckSummariesResponsePrivate::DescribeTrustedAdvisorCheck
 }
 
 /*!
- * @brief  Parse an Support DescribeTrustedAdvisorCheckSummariesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Support DescribeTrustedAdvisorCheckSummaries response element from \a xml.
  */
 void DescribeTrustedAdvisorCheckSummariesResponsePrivate::parseDescribeTrustedAdvisorCheckSummariesResponse(QXmlStreamReader &xml)
 {

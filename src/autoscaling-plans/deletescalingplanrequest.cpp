@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * DeleteScalingPlanRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteScalingPlanRequestPrivate object for AutoScalingPlans \a action with,
- * public implementation \a q.
+ * Constructs a DeleteScalingPlanRequestPrivate object for AutoScalingPlans \a action,
+ * with public implementation \a q.
  */
 DeleteScalingPlanRequestPrivate::DeleteScalingPlanRequestPrivate(
     const AutoScalingPlansRequest::Action action, DeleteScalingPlanRequest * const q)

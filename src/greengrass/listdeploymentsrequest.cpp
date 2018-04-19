@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListDeploymentsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ListDeploymentsRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a ListDeploymentsRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 ListDeploymentsRequestPrivate::ListDeploymentsRequestPrivate(
     const GreengrassRequest::Action action, ListDeploymentsRequest * const q)

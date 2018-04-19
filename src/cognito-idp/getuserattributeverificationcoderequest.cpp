@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * GetUserAttributeVerificationCodeRequest::resp
  */
 
 /*!
- *
- * Constructs a GetUserAttributeVerificationCodeRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a GetUserAttributeVerificationCodeRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 GetUserAttributeVerificationCodeRequestPrivate::GetUserAttributeVerificationCodeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetUserAttributeVerificationCodeRequest * const q)

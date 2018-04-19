@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateClusterSecurityGroupResponse
- *
  * \brief The CreateClusterSecurityGroupResponse class provides an interace for Redshift CreateClusterSecurityGroup responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterSecurityGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateClusterSecurityGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateClusterSecurityGroupResponse::CreateClusterSecurityGroupResponse(
         const CreateClusterSecurityGroupRequest &request,
@@ -85,6 +80,9 @@ CreateClusterSecurityGroupResponse::CreateClusterSecurityGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateClusterSecurityGroupRequest * CreateClusterSecurityGroupResponse::request() const
 {
     Q_D(const CreateClusterSecurityGroupResponse);
@@ -92,9 +90,8 @@ const CreateClusterSecurityGroupRequest * CreateClusterSecurityGroupResponse::re
 }
 
 /*!
- * @brief  Parse a Redshift CreateClusterSecurityGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift CreateClusterSecurityGroup \a response.
  */
 void CreateClusterSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void CreateClusterSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::CreateClusterSecurityGroupResponsePrivate
+ * \brief The CreateClusterSecurityGroupResponsePrivate class provides private implementation for CreateClusterSecurityGroupResponse.
  * \internal
  *
- * \class CreateClusterSecurityGroupResponsePrivate
- *
- * \brief Private implementation for CreateClusterSecurityGroupResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterSecurityGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateClusterSecurityGroupResponse instance.
+ * Constructs a CreateClusterSecurityGroupResponsePrivate object with public implementation \a q.
  */
 CreateClusterSecurityGroupResponsePrivate::CreateClusterSecurityGroupResponsePrivate(
     CreateClusterSecurityGroupResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ CreateClusterSecurityGroupResponsePrivate::CreateClusterSecurityGroupResponsePri
 }
 
 /*!
- * @brief  Parse an Redshift CreateClusterSecurityGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift CreateClusterSecurityGroup response element from \a xml.
  */
 void CreateClusterSecurityGroupResponsePrivate::parseCreateClusterSecurityGroupResponse(QXmlStreamReader &xml)
 {

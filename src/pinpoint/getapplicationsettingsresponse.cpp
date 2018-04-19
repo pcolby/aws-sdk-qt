@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetApplicationSettingsResponse
- *
  * \brief The GetApplicationSettingsResponse class provides an interace for Pinpoint GetApplicationSettings responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getApplicationSettings
  */
 
 /*!
- * @brief  Constructs a new GetApplicationSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetApplicationSettingsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetApplicationSettingsResponse::GetApplicationSettingsResponse(
         const GetApplicationSettingsRequest &request,
@@ -55,6 +50,9 @@ GetApplicationSettingsResponse::GetApplicationSettingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetApplicationSettingsRequest * GetApplicationSettingsResponse::request() const
 {
     Q_D(const GetApplicationSettingsResponse);
@@ -62,9 +60,8 @@ const GetApplicationSettingsRequest * GetApplicationSettingsResponse::request() 
 }
 
 /*!
- * @brief  Parse a Pinpoint GetApplicationSettings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetApplicationSettings \a response.
  */
 void GetApplicationSettingsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetApplicationSettingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetApplicationSettingsResponsePrivate
+ * \brief The GetApplicationSettingsResponsePrivate class provides private implementation for GetApplicationSettingsResponse.
  * \internal
  *
- * \class GetApplicationSettingsResponsePrivate
- *
- * \brief Private implementation for GetApplicationSettingsResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApplicationSettingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetApplicationSettingsResponse instance.
+ * Constructs a GetApplicationSettingsResponsePrivate object with public implementation \a q.
  */
 GetApplicationSettingsResponsePrivate::GetApplicationSettingsResponsePrivate(
     GetApplicationSettingsResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetApplicationSettingsResponsePrivate::GetApplicationSettingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetApplicationSettingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetApplicationSettings response element from \a xml.
  */
 void GetApplicationSettingsResponsePrivate::parseGetApplicationSettingsResponse(QXmlStreamReader &xml)
 {

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateUsageRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateUsageRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateUsageRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 UpdateUsageRequestPrivate::UpdateUsageRequestPrivate(
     const APIGatewayRequest::Action action, UpdateUsageRequest * const q)

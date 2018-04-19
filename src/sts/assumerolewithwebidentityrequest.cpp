@@ -139,9 +139,8 @@ QtAws::Core::AwsAbstractResponse * AssumeRoleWithWebIdentityRequest::response(QN
  */
 
 /*!
- *
- * Constructs a AssumeRoleWithWebIdentityRequestPrivate object for STS \a action with,
- * public implementation \a q.
+ * Constructs a AssumeRoleWithWebIdentityRequestPrivate object for STS \a action,
+ * with public implementation \a q.
  */
 AssumeRoleWithWebIdentityRequestPrivate::AssumeRoleWithWebIdentityRequestPrivate(
     const STSRequest::Action action, AssumeRoleWithWebIdentityRequest * const q)

@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * RemoveListenerCertificatesRequest::response(Q
  */
 
 /*!
- *
- * Constructs a RemoveListenerCertificatesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a RemoveListenerCertificatesRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 RemoveListenerCertificatesRequestPrivate::RemoveListenerCertificatesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, RemoveListenerCertificatesRequest * const q)

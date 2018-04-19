@@ -29,10 +29,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::PutLexiconResponse
- *
  * \brief The PutLexiconResponse class provides an interace for Polly PutLexicon responses.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -46,11 +45,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new PutLexiconResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutLexiconResponse object for \a reply to \a request, with parent \a parent.
  */
 PutLexiconResponse::PutLexiconResponse(
         const PutLexiconRequest &request,
@@ -62,6 +57,9 @@ PutLexiconResponse::PutLexiconResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutLexiconRequest * PutLexiconResponse::request() const
 {
     Q_D(const PutLexiconResponse);
@@ -69,9 +67,8 @@ const PutLexiconRequest * PutLexiconResponse::request() const
 }
 
 /*!
- * @brief  Parse a Polly PutLexicon response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Polly PutLexicon \a response.
  */
 void PutLexiconResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void PutLexiconResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Polly::PutLexiconResponsePrivate
+ * \brief The PutLexiconResponsePrivate class provides private implementation for PutLexiconResponse.
  * \internal
  *
- * \class PutLexiconResponsePrivate
- *
- * \brief Private implementation for PutLexiconResponse.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutLexiconResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutLexiconResponse instance.
+ * Constructs a PutLexiconResponsePrivate object with public implementation \a q.
  */
 PutLexiconResponsePrivate::PutLexiconResponsePrivate(
     PutLexiconResponse * const q) : PollyResponsePrivate(q)
@@ -102,9 +95,7 @@ PutLexiconResponsePrivate::PutLexiconResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Polly PutLexiconResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Polly PutLexicon response element from \a xml.
  */
 void PutLexiconResponsePrivate::parsePutLexiconResponse(QXmlStreamReader &xml)
 {

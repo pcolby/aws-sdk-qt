@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * EnableAWSServiceAccessRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a EnableAWSServiceAccessRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a EnableAWSServiceAccessRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 EnableAWSServiceAccessRequestPrivate::EnableAWSServiceAccessRequestPrivate(
     const OrganizationsRequest::Action action, EnableAWSServiceAccessRequest * const q)

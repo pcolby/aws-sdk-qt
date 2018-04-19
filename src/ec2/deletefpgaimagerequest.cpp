@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteFpgaImageRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteFpgaImageRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteFpgaImageRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteFpgaImageRequestPrivate::DeleteFpgaImageRequestPrivate(
     const EC2Request::Action action, DeleteFpgaImageRequest * const q)

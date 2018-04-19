@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * EnableRuleRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a EnableRuleRequestPrivate object for CloudWatchEvents \a action with,
- * public implementation \a q.
+ * Constructs a EnableRuleRequestPrivate object for CloudWatchEvents \a action,
+ * with public implementation \a q.
  */
 EnableRuleRequestPrivate::EnableRuleRequestPrivate(
     const CloudWatchEventsRequest::Action action, EnableRuleRequest * const q)

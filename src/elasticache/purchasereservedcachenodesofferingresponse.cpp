@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::PurchaseReservedCacheNodesOfferingResponse
- *
  * \brief The PurchaseReservedCacheNodesOfferingResponse class provides an interace for ElastiCache PurchaseReservedCacheNodesOffering responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new PurchaseReservedCacheNodesOfferingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PurchaseReservedCacheNodesOfferingResponse object for \a reply to \a request, with parent \a parent.
  */
 PurchaseReservedCacheNodesOfferingResponse::PurchaseReservedCacheNodesOfferingResponse(
         const PurchaseReservedCacheNodesOfferingRequest &request,
@@ -69,6 +64,9 @@ PurchaseReservedCacheNodesOfferingResponse::PurchaseReservedCacheNodesOfferingRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PurchaseReservedCacheNodesOfferingRequest * PurchaseReservedCacheNodesOfferingResponse::request() const
 {
     Q_D(const PurchaseReservedCacheNodesOfferingResponse);
@@ -76,9 +74,8 @@ const PurchaseReservedCacheNodesOfferingRequest * PurchaseReservedCacheNodesOffe
 }
 
 /*!
- * @brief  Parse a ElastiCache PurchaseReservedCacheNodesOffering response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache PurchaseReservedCacheNodesOffering \a response.
  */
 void PurchaseReservedCacheNodesOfferingResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void PurchaseReservedCacheNodesOfferingResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::ElastiCache::PurchaseReservedCacheNodesOfferingResponsePrivate
+ * \brief The PurchaseReservedCacheNodesOfferingResponsePrivate class provides private implementation for PurchaseReservedCacheNodesOfferingResponse.
  * \internal
  *
- * \class PurchaseReservedCacheNodesOfferingResponsePrivate
- *
- * \brief Private implementation for PurchaseReservedCacheNodesOfferingResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseReservedCacheNodesOfferingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PurchaseReservedCacheNodesOfferingResponse instance.
+ * Constructs a PurchaseReservedCacheNodesOfferingResponsePrivate object with public implementation \a q.
  */
 PurchaseReservedCacheNodesOfferingResponsePrivate::PurchaseReservedCacheNodesOfferingResponsePrivate(
     PurchaseReservedCacheNodesOfferingResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ PurchaseReservedCacheNodesOfferingResponsePrivate::PurchaseReservedCacheNodesOff
 }
 
 /*!
- * @brief  Parse an ElastiCache PurchaseReservedCacheNodesOfferingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache PurchaseReservedCacheNodesOffering response element from \a xml.
  */
 void PurchaseReservedCacheNodesOfferingResponsePrivate::parsePurchaseReservedCacheNodesOfferingResponse(QXmlStreamReader &xml)
 {

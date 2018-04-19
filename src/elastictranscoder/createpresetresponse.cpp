@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::CreatePresetResponse
- *
  * \brief The CreatePresetResponse class provides an interace for ElasticTranscoder CreatePreset responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new CreatePresetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePresetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePresetResponse::CreatePresetResponse(
         const CreatePresetRequest &request,
@@ -58,6 +53,9 @@ CreatePresetResponse::CreatePresetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePresetRequest * CreatePresetResponse::request() const
 {
     Q_D(const CreatePresetResponse);
@@ -65,9 +63,8 @@ const CreatePresetRequest * CreatePresetResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder CreatePreset response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder CreatePreset \a response.
  */
 void CreatePresetResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreatePresetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::CreatePresetResponsePrivate
+ * \brief The CreatePresetResponsePrivate class provides private implementation for CreatePresetResponse.
  * \internal
  *
- * \class CreatePresetResponsePrivate
- *
- * \brief Private implementation for CreatePresetResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePresetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePresetResponse instance.
+ * Constructs a CreatePresetResponsePrivate object with public implementation \a q.
  */
 CreatePresetResponsePrivate::CreatePresetResponsePrivate(
     CreatePresetResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ CreatePresetResponsePrivate::CreatePresetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder CreatePresetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder CreatePreset response element from \a xml.
  */
 void CreatePresetResponsePrivate::parseCreatePresetResponse(QXmlStreamReader &xml)
 {

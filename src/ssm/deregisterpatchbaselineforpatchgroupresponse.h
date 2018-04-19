@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeregisterPatchBaselineForPatchGroupResponse : public SSMResp
 public:
     DeregisterPatchBaselineForPatchGroupResponse(const DeregisterPatchBaselineForPatchGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeregisterPatchBaselineForPatchGroupRequest * request() const;
+    virtual const DeregisterPatchBaselineForPatchGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeregisterPatchBaselineForPatchGroupResponse)

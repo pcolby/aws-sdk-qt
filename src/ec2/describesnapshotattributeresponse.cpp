@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSnapshotAttributeResponse
- *
  * \brief The DescribeSnapshotAttributeResponse class provides an interace for EC2 DescribeSnapshotAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSnapshotAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSnapshotAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSnapshotAttributeResponse::DescribeSnapshotAttributeResponse(
         const DescribeSnapshotAttributeRequest &request,
@@ -59,6 +54,9 @@ DescribeSnapshotAttributeResponse::DescribeSnapshotAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSnapshotAttributeRequest * DescribeSnapshotAttributeResponse::request() const
 {
     Q_D(const DescribeSnapshotAttributeResponse);
@@ -66,9 +64,8 @@ const DescribeSnapshotAttributeRequest * DescribeSnapshotAttributeResponse::requ
 }
 
 /*!
- * @brief  Parse a EC2 DescribeSnapshotAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeSnapshotAttribute \a response.
  */
 void DescribeSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeSnapshotAttributeResponsePrivate
+ * \brief The DescribeSnapshotAttributeResponsePrivate class provides private implementation for DescribeSnapshotAttributeResponse.
  * \internal
  *
- * \class DescribeSnapshotAttributeResponsePrivate
- *
- * \brief Private implementation for DescribeSnapshotAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSnapshotAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSnapshotAttributeResponse instance.
+ * Constructs a DescribeSnapshotAttributeResponsePrivate object with public implementation \a q.
  */
 DescribeSnapshotAttributeResponsePrivate::DescribeSnapshotAttributeResponsePrivate(
     DescribeSnapshotAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeSnapshotAttributeResponsePrivate::DescribeSnapshotAttributeResponsePriva
 }
 
 /*!
- * @brief  Parse an EC2 DescribeSnapshotAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeSnapshotAttribute response element from \a xml.
  */
 void DescribeSnapshotAttributeResponsePrivate::parseDescribeSnapshotAttributeResponse(QXmlStreamReader &xml)
 {

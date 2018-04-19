@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeAccountAttributesResponse
- *
  * \brief The DescribeAccountAttributesResponse class provides an interace for RDS DescribeAccountAttributes responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAccountAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
         const DescribeAccountAttributesRequest &request,
@@ -119,6 +114,9 @@ DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::request() const
 {
     Q_D(const DescribeAccountAttributesResponse);
@@ -126,9 +124,8 @@ const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::requ
 }
 
 /*!
- * @brief  Parse a RDS DescribeAccountAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeAccountAttributes \a response.
  */
 void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeAccountAttributesResponsePrivate
+ * \brief The DescribeAccountAttributesResponsePrivate class provides private implementation for DescribeAccountAttributesResponse.
  * \internal
  *
- * \class DescribeAccountAttributesResponsePrivate
- *
- * \brief Private implementation for DescribeAccountAttributesResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAccountAttributesResponse instance.
+ * Constructs a DescribeAccountAttributesResponsePrivate object with public implementation \a q.
  */
 DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePrivate(
     DescribeAccountAttributesResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePriva
 }
 
 /*!
- * @brief  Parse an RDS DescribeAccountAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeAccountAttributes response element from \a xml.
  */
 void DescribeAccountAttributesResponsePrivate::parseDescribeAccountAttributesResponse(QXmlStreamReader &xml)
 {

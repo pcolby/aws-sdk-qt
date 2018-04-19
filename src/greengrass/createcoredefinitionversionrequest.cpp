@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateCoreDefinitionVersionRequest::response(
  */
 
 /*!
- *
- * Constructs a CreateCoreDefinitionVersionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a CreateCoreDefinitionVersionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 CreateCoreDefinitionVersionRequestPrivate::CreateCoreDefinitionVersionRequestPrivate(
     const GreengrassRequest::Action action, CreateCoreDefinitionVersionRequest * const q)

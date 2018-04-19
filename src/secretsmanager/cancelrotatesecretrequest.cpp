@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * CancelRotateSecretRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CancelRotateSecretRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a CancelRotateSecretRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 CancelRotateSecretRequestPrivate::CancelRotateSecretRequestPrivate(
     const SecretsManagerRequest::Action action, CancelRotateSecretRequest * const q)

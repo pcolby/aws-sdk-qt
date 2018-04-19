@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeWorkspacesConnectionStatusResponse : public WorkSpace
 public:
     DescribeWorkspacesConnectionStatusResponse(const DescribeWorkspacesConnectionStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeWorkspacesConnectionStatusRequest * request() const;
+    virtual const DescribeWorkspacesConnectionStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeWorkspacesConnectionStatusResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableAllFeaturesResponse : public OrganizationsResponse {
 public:
     EnableAllFeaturesResponse(const EnableAllFeaturesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableAllFeaturesRequest * request() const;
+    virtual const EnableAllFeaturesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EnableAllFeaturesResponse)

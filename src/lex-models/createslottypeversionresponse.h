@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateSlotTypeVersionResponse : public LexModelBuildingServic
 public:
     CreateSlotTypeVersionResponse(const CreateSlotTypeVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateSlotTypeVersionRequest * request() const;
+    virtual const CreateSlotTypeVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateSlotTypeVersionResponse)

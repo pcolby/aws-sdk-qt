@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdateResourceRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a UpdateResourceRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 UpdateResourceRequestPrivate::UpdateResourceRequestPrivate(
     const WorkMailRequest::Action action, UpdateResourceRequest * const q)

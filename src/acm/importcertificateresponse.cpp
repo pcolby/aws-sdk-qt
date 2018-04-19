@@ -29,10 +29,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::ImportCertificateResponse
- *
  * \brief The ImportCertificateResponse class provides an interace for ACM ImportCertificate responses.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new ImportCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportCertificateResponse::ImportCertificateResponse(
         const ImportCertificateRequest &request,
@@ -64,6 +59,9 @@ ImportCertificateResponse::ImportCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportCertificateRequest * ImportCertificateResponse::request() const
 {
     Q_D(const ImportCertificateResponse);
@@ -71,9 +69,8 @@ const ImportCertificateRequest * ImportCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a ACM ImportCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACM ImportCertificate \a response.
  */
 void ImportCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void ImportCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACM::ImportCertificateResponsePrivate
+ * \brief The ImportCertificateResponsePrivate class provides private implementation for ImportCertificateResponse.
  * \internal
  *
- * \class ImportCertificateResponsePrivate
- *
- * \brief Private implementation for ImportCertificateResponse.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportCertificateResponse instance.
+ * Constructs a ImportCertificateResponsePrivate object with public implementation \a q.
  */
 ImportCertificateResponsePrivate::ImportCertificateResponsePrivate(
     ImportCertificateResponse * const q) : ACMResponsePrivate(q)
@@ -104,9 +97,7 @@ ImportCertificateResponsePrivate::ImportCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACM ImportCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACM ImportCertificate response element from \a xml.
  */
 void ImportCertificateResponsePrivate::parseImportCertificateResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::DeleteReplicationJobResponse
- *
  * \brief The DeleteReplicationJobResponse class provides an interace for SMS DeleteReplicationJob responses.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::deleteReplicationJob
  */
 
 /*!
- * @brief  Constructs a new DeleteReplicationJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteReplicationJobResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteReplicationJobResponse::DeleteReplicationJobResponse(
         const DeleteReplicationJobRequest &request,
@@ -55,6 +50,9 @@ DeleteReplicationJobResponse::DeleteReplicationJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteReplicationJobRequest * DeleteReplicationJobResponse::request() const
 {
     Q_D(const DeleteReplicationJobResponse);
@@ -62,9 +60,8 @@ const DeleteReplicationJobRequest * DeleteReplicationJobResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SMS DeleteReplicationJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SMS DeleteReplicationJob \a response.
  */
 void DeleteReplicationJobResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteReplicationJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SMS::DeleteReplicationJobResponsePrivate
+ * \brief The DeleteReplicationJobResponsePrivate class provides private implementation for DeleteReplicationJobResponse.
  * \internal
  *
- * \class DeleteReplicationJobResponsePrivate
- *
- * \brief Private implementation for DeleteReplicationJobResponse.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReplicationJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteReplicationJobResponse instance.
+ * Constructs a DeleteReplicationJobResponsePrivate object with public implementation \a q.
  */
 DeleteReplicationJobResponsePrivate::DeleteReplicationJobResponsePrivate(
     DeleteReplicationJobResponse * const q) : SMSResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteReplicationJobResponsePrivate::DeleteReplicationJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SMS DeleteReplicationJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SMS DeleteReplicationJob response element from \a xml.
  */
 void DeleteReplicationJobResponsePrivate::parseDeleteReplicationJobResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::UpdateServiceAccessPoliciesResponse
- *
  * \brief The UpdateServiceAccessPoliciesResponse class provides an interace for CloudSearch UpdateServiceAccessPolicies responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new UpdateServiceAccessPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateServiceAccessPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateServiceAccessPoliciesResponse::UpdateServiceAccessPoliciesResponse(
         const UpdateServiceAccessPoliciesRequest &request,
@@ -66,6 +61,9 @@ UpdateServiceAccessPoliciesResponse::UpdateServiceAccessPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateServiceAccessPoliciesRequest * UpdateServiceAccessPoliciesResponse::request() const
 {
     Q_D(const UpdateServiceAccessPoliciesResponse);
@@ -73,9 +71,8 @@ const UpdateServiceAccessPoliciesRequest * UpdateServiceAccessPoliciesResponse::
 }
 
 /*!
- * @brief  Parse a CloudSearch UpdateServiceAccessPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch UpdateServiceAccessPolicies \a response.
  */
 void UpdateServiceAccessPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateServiceAccessPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::UpdateServiceAccessPoliciesResponsePrivate
+ * \brief The UpdateServiceAccessPoliciesResponsePrivate class provides private implementation for UpdateServiceAccessPoliciesResponse.
  * \internal
  *
- * \class UpdateServiceAccessPoliciesResponsePrivate
- *
- * \brief Private implementation for UpdateServiceAccessPoliciesResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServiceAccessPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateServiceAccessPoliciesResponse instance.
+ * Constructs a UpdateServiceAccessPoliciesResponsePrivate object with public implementation \a q.
  */
 UpdateServiceAccessPoliciesResponsePrivate::UpdateServiceAccessPoliciesResponsePrivate(
     UpdateServiceAccessPoliciesResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateServiceAccessPoliciesResponsePrivate::UpdateServiceAccessPoliciesResponseP
 }
 
 /*!
- * @brief  Parse an CloudSearch UpdateServiceAccessPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch UpdateServiceAccessPolicies response element from \a xml.
  */
 void UpdateServiceAccessPoliciesResponsePrivate::parseUpdateServiceAccessPoliciesResponse(QXmlStreamReader &xml)
 {

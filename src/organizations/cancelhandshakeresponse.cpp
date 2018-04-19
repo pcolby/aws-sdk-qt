@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::CancelHandshakeResponse
- *
  * \brief The CancelHandshakeResponse class provides an interace for Organizations CancelHandshake responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new CancelHandshakeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelHandshakeResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelHandshakeResponse::CancelHandshakeResponse(
         const CancelHandshakeRequest &request,
@@ -197,6 +192,9 @@ CancelHandshakeResponse::CancelHandshakeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelHandshakeRequest * CancelHandshakeResponse::request() const
 {
     Q_D(const CancelHandshakeResponse);
@@ -204,9 +202,8 @@ const CancelHandshakeRequest * CancelHandshakeResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations CancelHandshake response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations CancelHandshake \a response.
  */
 void CancelHandshakeResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void CancelHandshakeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::CancelHandshakeResponsePrivate
+ * \brief The CancelHandshakeResponsePrivate class provides private implementation for CancelHandshakeResponse.
  * \internal
  *
- * \class CancelHandshakeResponsePrivate
- *
- * \brief Private implementation for CancelHandshakeResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelHandshakeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelHandshakeResponse instance.
+ * Constructs a CancelHandshakeResponsePrivate object with public implementation \a q.
  */
 CancelHandshakeResponsePrivate::CancelHandshakeResponsePrivate(
     CancelHandshakeResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ CancelHandshakeResponsePrivate::CancelHandshakeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations CancelHandshakeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations CancelHandshake response element from \a xml.
  */
 void CancelHandshakeResponsePrivate::parseCancelHandshakeResponse(QXmlStreamReader &xml)
 {

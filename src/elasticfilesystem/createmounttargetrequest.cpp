@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CreateMountTargetRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CreateMountTargetRequestPrivate object for EFS \a action with,
- * public implementation \a q.
+ * Constructs a CreateMountTargetRequestPrivate object for EFS \a action,
+ * with public implementation \a q.
  */
 CreateMountTargetRequestPrivate::CreateMountTargetRequestPrivate(
     const EFSRequest::Action action, CreateMountTargetRequest * const q)

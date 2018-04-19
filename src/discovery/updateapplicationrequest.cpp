@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateApplicationRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a UpdateApplicationRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, UpdateApplicationRequest * const q)

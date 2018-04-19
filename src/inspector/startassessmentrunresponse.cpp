@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::StartAssessmentRunResponse
- *
  * \brief The StartAssessmentRunResponse class provides an interace for Inspector StartAssessmentRun responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new StartAssessmentRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartAssessmentRunResponse object for \a reply to \a request, with parent \a parent.
  */
 StartAssessmentRunResponse::StartAssessmentRunResponse(
         const StartAssessmentRunRequest &request,
@@ -60,6 +55,9 @@ StartAssessmentRunResponse::StartAssessmentRunResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartAssessmentRunRequest * StartAssessmentRunResponse::request() const
 {
     Q_D(const StartAssessmentRunResponse);
@@ -67,9 +65,8 @@ const StartAssessmentRunRequest * StartAssessmentRunResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector StartAssessmentRun response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector StartAssessmentRun \a response.
  */
 void StartAssessmentRunResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void StartAssessmentRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::StartAssessmentRunResponsePrivate
+ * \brief The StartAssessmentRunResponsePrivate class provides private implementation for StartAssessmentRunResponse.
  * \internal
  *
- * \class StartAssessmentRunResponsePrivate
- *
- * \brief Private implementation for StartAssessmentRunResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartAssessmentRunResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartAssessmentRunResponse instance.
+ * Constructs a StartAssessmentRunResponsePrivate object with public implementation \a q.
  */
 StartAssessmentRunResponsePrivate::StartAssessmentRunResponsePrivate(
     StartAssessmentRunResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ StartAssessmentRunResponsePrivate::StartAssessmentRunResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector StartAssessmentRunResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector StartAssessmentRun response element from \a xml.
  */
 void StartAssessmentRunResponsePrivate::parseStartAssessmentRunResponse(QXmlStreamReader &xml)
 {

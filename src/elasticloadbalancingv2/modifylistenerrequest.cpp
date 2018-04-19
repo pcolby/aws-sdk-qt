@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * ModifyListenerRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ModifyListenerRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyListenerRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 ModifyListenerRequestPrivate::ModifyListenerRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, ModifyListenerRequest * const q)

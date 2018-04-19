@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeWorkingStorageResponse
- *
  * \brief The DescribeWorkingStorageResponse class provides an interace for StorageGateway DescribeWorkingStorage responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeWorkingStorageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeWorkingStorageResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeWorkingStorageResponse::DescribeWorkingStorageResponse(
         const DescribeWorkingStorageRequest &request,
@@ -124,6 +119,9 @@ DescribeWorkingStorageResponse::DescribeWorkingStorageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeWorkingStorageRequest * DescribeWorkingStorageResponse::request() const
 {
     Q_D(const DescribeWorkingStorageResponse);
@@ -131,9 +129,8 @@ const DescribeWorkingStorageRequest * DescribeWorkingStorageResponse::request() 
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeWorkingStorage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeWorkingStorage \a response.
  */
 void DescribeWorkingStorageResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeWorkingStorageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeWorkingStorageResponsePrivate
+ * \brief The DescribeWorkingStorageResponsePrivate class provides private implementation for DescribeWorkingStorageResponse.
  * \internal
  *
- * \class DescribeWorkingStorageResponsePrivate
- *
- * \brief Private implementation for DescribeWorkingStorageResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeWorkingStorageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeWorkingStorageResponse instance.
+ * Constructs a DescribeWorkingStorageResponsePrivate object with public implementation \a q.
  */
 DescribeWorkingStorageResponsePrivate::DescribeWorkingStorageResponsePrivate(
     DescribeWorkingStorageResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeWorkingStorageResponsePrivate::DescribeWorkingStorageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeWorkingStorageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeWorkingStorage response element from \a xml.
  */
 void DescribeWorkingStorageResponsePrivate::parseDescribeWorkingStorageResponse(QXmlStreamReader &xml)
 {

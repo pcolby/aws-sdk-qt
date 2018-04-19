@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateHsmConfigurationResponse
- *
  * \brief The CreateHsmConfigurationResponse class provides an interace for Redshift CreateHsmConfiguration responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateHsmConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateHsmConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateHsmConfigurationResponse::CreateHsmConfigurationResponse(
         const CreateHsmConfigurationRequest &request,
@@ -85,6 +80,9 @@ CreateHsmConfigurationResponse::CreateHsmConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateHsmConfigurationRequest * CreateHsmConfigurationResponse::request() const
 {
     Q_D(const CreateHsmConfigurationResponse);
@@ -92,9 +90,8 @@ const CreateHsmConfigurationRequest * CreateHsmConfigurationResponse::request() 
 }
 
 /*!
- * @brief  Parse a Redshift CreateHsmConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift CreateHsmConfiguration \a response.
  */
 void CreateHsmConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void CreateHsmConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::CreateHsmConfigurationResponsePrivate
+ * \brief The CreateHsmConfigurationResponsePrivate class provides private implementation for CreateHsmConfigurationResponse.
  * \internal
  *
- * \class CreateHsmConfigurationResponsePrivate
- *
- * \brief Private implementation for CreateHsmConfigurationResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHsmConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateHsmConfigurationResponse instance.
+ * Constructs a CreateHsmConfigurationResponsePrivate object with public implementation \a q.
  */
 CreateHsmConfigurationResponsePrivate::CreateHsmConfigurationResponsePrivate(
     CreateHsmConfigurationResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ CreateHsmConfigurationResponsePrivate::CreateHsmConfigurationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift CreateHsmConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift CreateHsmConfiguration response element from \a xml.
  */
 void CreateHsmConfigurationResponsePrivate::parseCreateHsmConfigurationResponse(QXmlStreamReader &xml)
 {

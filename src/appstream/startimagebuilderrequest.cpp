@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StartImageBuilderRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a StartImageBuilderRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a StartImageBuilderRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 StartImageBuilderRequestPrivate::StartImageBuilderRequestPrivate(
     const AppStreamRequest::Action action, StartImageBuilderRequest * const q)

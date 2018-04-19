@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::UpdatePipelineNotificationsResponse
- *
  * \brief The UpdatePipelineNotificationsResponse class provides an interace for ElasticTranscoder UpdatePipelineNotifications responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new UpdatePipelineNotificationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePipelineNotificationsResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePipelineNotificationsResponse::UpdatePipelineNotificationsResponse(
         const UpdatePipelineNotificationsRequest &request,
@@ -58,6 +53,9 @@ UpdatePipelineNotificationsResponse::UpdatePipelineNotificationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePipelineNotificationsRequest * UpdatePipelineNotificationsResponse::request() const
 {
     Q_D(const UpdatePipelineNotificationsResponse);
@@ -65,9 +63,8 @@ const UpdatePipelineNotificationsRequest * UpdatePipelineNotificationsResponse::
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder UpdatePipelineNotifications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder UpdatePipelineNotifications \a response.
  */
 void UpdatePipelineNotificationsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdatePipelineNotificationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::UpdatePipelineNotificationsResponsePrivate
+ * \brief The UpdatePipelineNotificationsResponsePrivate class provides private implementation for UpdatePipelineNotificationsResponse.
  * \internal
  *
- * \class UpdatePipelineNotificationsResponsePrivate
- *
- * \brief Private implementation for UpdatePipelineNotificationsResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePipelineNotificationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePipelineNotificationsResponse instance.
+ * Constructs a UpdatePipelineNotificationsResponsePrivate object with public implementation \a q.
  */
 UpdatePipelineNotificationsResponsePrivate::UpdatePipelineNotificationsResponsePrivate(
     UpdatePipelineNotificationsResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdatePipelineNotificationsResponsePrivate::UpdatePipelineNotificationsResponseP
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder UpdatePipelineNotificationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder UpdatePipelineNotifications response element from \a xml.
  */
 void UpdatePipelineNotificationsResponsePrivate::parseUpdatePipelineNotificationsResponse(QXmlStreamReader &xml)
 {

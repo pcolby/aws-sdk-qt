@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CreateTagsRequestPrivate object for WorkSpaces \a action with,
- * public implementation \a q.
+ * Constructs a CreateTagsRequestPrivate object for WorkSpaces \a action,
+ * with public implementation \a q.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const WorkSpacesRequest::Action action, CreateTagsRequest * const q)

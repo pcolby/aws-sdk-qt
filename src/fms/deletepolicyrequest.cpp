@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeletePolicyRequestPrivate object for FMS \a action with,
- * public implementation \a q.
+ * Constructs a DeletePolicyRequestPrivate object for FMS \a action,
+ * with public implementation \a q.
  */
 DeletePolicyRequestPrivate::DeletePolicyRequestPrivate(
     const FMSRequest::Action action, DeletePolicyRequest * const q)

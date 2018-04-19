@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateExpirationForHITRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateExpirationForHITRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a UpdateExpirationForHITRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 UpdateExpirationForHITRequestPrivate::UpdateExpirationForHITRequestPrivate(
     const MTurkRequest::Action action, UpdateExpirationForHITRequest * const q)

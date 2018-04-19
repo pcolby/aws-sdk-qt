@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAssociationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteAssociationRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAssociationRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DeleteAssociationRequestPrivate::DeleteAssociationRequestPrivate(
     const SSMRequest::Action action, DeleteAssociationRequest * const q)

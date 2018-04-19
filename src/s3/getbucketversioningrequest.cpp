@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketVersioningRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetBucketVersioningRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketVersioningRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketVersioningRequestPrivate::GetBucketVersioningRequestPrivate(
     const S3Request::Action action, GetBucketVersioningRequest * const q)

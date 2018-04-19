@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AttachVpnGatewayResponse
- *
  * \brief The AttachVpnGatewayResponse class provides an interace for EC2 AttachVpnGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AttachVpnGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachVpnGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachVpnGatewayResponse::AttachVpnGatewayResponse(
         const AttachVpnGatewayRequest &request,
@@ -59,6 +54,9 @@ AttachVpnGatewayResponse::AttachVpnGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachVpnGatewayRequest * AttachVpnGatewayResponse::request() const
 {
     Q_D(const AttachVpnGatewayResponse);
@@ -66,9 +64,8 @@ const AttachVpnGatewayRequest * AttachVpnGatewayResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 AttachVpnGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AttachVpnGateway \a response.
  */
 void AttachVpnGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AttachVpnGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AttachVpnGatewayResponsePrivate
+ * \brief The AttachVpnGatewayResponsePrivate class provides private implementation for AttachVpnGatewayResponse.
  * \internal
  *
- * \class AttachVpnGatewayResponsePrivate
- *
- * \brief Private implementation for AttachVpnGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachVpnGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachVpnGatewayResponse instance.
+ * Constructs a AttachVpnGatewayResponsePrivate object with public implementation \a q.
  */
 AttachVpnGatewayResponsePrivate::AttachVpnGatewayResponsePrivate(
     AttachVpnGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AttachVpnGatewayResponsePrivate::AttachVpnGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 AttachVpnGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AttachVpnGateway response element from \a xml.
  */
 void AttachVpnGatewayResponsePrivate::parseAttachVpnGatewayResponse(QXmlStreamReader &xml)
 {

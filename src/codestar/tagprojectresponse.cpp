@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::TagProjectResponse
- *
  * \brief The TagProjectResponse class provides an interace for CodeStar TagProject responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new TagProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 TagProjectResponse::TagProjectResponse(
         const TagProjectRequest &request,
@@ -143,6 +138,9 @@ TagProjectResponse::TagProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagProjectRequest * TagProjectResponse::request() const
 {
     Q_D(const TagProjectResponse);
@@ -150,9 +148,8 @@ const TagProjectRequest * TagProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar TagProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar TagProject \a response.
  */
 void TagProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void TagProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::TagProjectResponsePrivate
+ * \brief The TagProjectResponsePrivate class provides private implementation for TagProjectResponse.
  * \internal
  *
- * \class TagProjectResponsePrivate
- *
- * \brief Private implementation for TagProjectResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagProjectResponse instance.
+ * Constructs a TagProjectResponsePrivate object with public implementation \a q.
  */
 TagProjectResponsePrivate::TagProjectResponsePrivate(
     TagProjectResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ TagProjectResponsePrivate::TagProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar TagProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar TagProject response element from \a xml.
  */
 void TagProjectResponsePrivate::parseTagProjectResponse(QXmlStreamReader &xml)
 {

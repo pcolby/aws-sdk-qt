@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * AssociateProductWithPortfolioRequest::respons
  */
 
 /*!
- *
- * Constructs a AssociateProductWithPortfolioRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a AssociateProductWithPortfolioRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 AssociateProductWithPortfolioRequestPrivate::AssociateProductWithPortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, AssociateProductWithPortfolioRequest * const q)

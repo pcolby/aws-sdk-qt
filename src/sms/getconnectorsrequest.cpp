@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetConnectorsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetConnectorsRequestPrivate object for SMS \a action with,
- * public implementation \a q.
+ * Constructs a GetConnectorsRequestPrivate object for SMS \a action,
+ * with public implementation \a q.
  */
 GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
     const SMSRequest::Action action, GetConnectorsRequest * const q)

@@ -29,21 +29,16 @@ namespace MarketplaceCommerceAnalytics {
 
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::StartSupportDataExportResponse
- *
  * \brief The StartSupportDataExportResponse class provides an interace for MarketplaceCommerceAnalytics StartSupportDataExport responses.
  *
- * \ingroup MarketplaceCommerceAnalytics
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  *
  *
  * \sa MarketplaceCommerceAnalyticsClient::startSupportDataExport
  */
 
 /*!
- * @brief  Constructs a new StartSupportDataExportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartSupportDataExportResponse object for \a reply to \a request, with parent \a parent.
  */
 StartSupportDataExportResponse::StartSupportDataExportResponse(
         const StartSupportDataExportRequest &request,
@@ -55,6 +50,9 @@ StartSupportDataExportResponse::StartSupportDataExportResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartSupportDataExportRequest * StartSupportDataExportResponse::request() const
 {
     Q_D(const StartSupportDataExportResponse);
@@ -62,9 +60,8 @@ const StartSupportDataExportRequest * StartSupportDataExportResponse::request() 
 }
 
 /*!
- * @brief  Parse a MarketplaceCommerceAnalytics StartSupportDataExport response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MarketplaceCommerceAnalytics StartSupportDataExport \a response.
  */
 void StartSupportDataExportResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void StartSupportDataExportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MarketplaceCommerceAnalytics::StartSupportDataExportResponsePrivate
+ * \brief The StartSupportDataExportResponsePrivate class provides private implementation for StartSupportDataExportResponse.
  * \internal
  *
- * \class StartSupportDataExportResponsePrivate
- *
- * \brief Private implementation for StartSupportDataExportResponse.
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartSupportDataExportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartSupportDataExportResponse instance.
+ * Constructs a StartSupportDataExportResponsePrivate object with public implementation \a q.
  */
 StartSupportDataExportResponsePrivate::StartSupportDataExportResponsePrivate(
     StartSupportDataExportResponse * const q) : MarketplaceCommerceAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ StartSupportDataExportResponsePrivate::StartSupportDataExportResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MarketplaceCommerceAnalytics StartSupportDataExportResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MarketplaceCommerceAnalytics StartSupportDataExport response element from \a xml.
  */
 void StartSupportDataExportResponsePrivate::parseStartSupportDataExportResponse(QXmlStreamReader &xml)
 {

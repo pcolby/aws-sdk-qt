@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteDataSourceRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDataSourceRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
     const AppSyncRequest::Action action, DeleteDataSourceRequest * const q)

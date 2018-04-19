@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * StopReplicationTaskRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a StopReplicationTaskRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a StopReplicationTaskRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 StopReplicationTaskRequestPrivate::StopReplicationTaskRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, StopReplicationTaskRequest * const q)

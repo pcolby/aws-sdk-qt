@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListGroupVersionsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListGroupVersionsRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a ListGroupVersionsRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 ListGroupVersionsRequestPrivate::ListGroupVersionsRequestPrivate(
     const GreengrassRequest::Action action, ListGroupVersionsRequest * const q)

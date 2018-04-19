@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteInstanceRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DeleteInstanceRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DeleteInstanceRequestPrivate::DeleteInstanceRequestPrivate(
     const OpsWorksRequest::Action action, DeleteInstanceRequest * const q)

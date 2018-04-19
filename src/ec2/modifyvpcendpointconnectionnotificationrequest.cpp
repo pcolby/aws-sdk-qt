@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointConnectionNotificationReques
  */
 
 /*!
- *
- * Constructs a ModifyVpcEndpointConnectionNotificationRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyVpcEndpointConnectionNotificationRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyVpcEndpointConnectionNotificationRequestPrivate::ModifyVpcEndpointConnectionNotificationRequestPrivate(
     const EC2Request::Action action, ModifyVpcEndpointConnectionNotificationRequest * const q)

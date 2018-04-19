@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetOperationResponse : public ServiceDiscoveryResponse {
 public:
     GetOperationResponse(const GetOperationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetOperationRequest * request() const;
+    virtual const GetOperationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetOperationResponse)

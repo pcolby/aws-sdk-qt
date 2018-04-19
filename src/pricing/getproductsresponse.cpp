@@ -29,10 +29,9 @@ namespace Pricing {
 
 /*!
  * \class QtAws::Pricing::GetProductsResponse
- *
  * \brief The GetProductsResponse class provides an interace for Pricing GetProducts responses.
  *
- * \ingroup Pricing
+ * \inmodule QtAwsPricing
  *
  *  AWS Price List Service API (AWS Price List Service) is a centralized and convenient way to programmatically query Amazon
  *  Web Services for services, products, and pricing information. The AWS Price List Service uses standardized product
@@ -65,11 +64,7 @@ namespace Pricing {
  */
 
 /*!
- * @brief  Constructs a new GetProductsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetProductsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetProductsResponse::GetProductsResponse(
         const GetProductsRequest &request,
@@ -81,6 +76,9 @@ GetProductsResponse::GetProductsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetProductsRequest * GetProductsResponse::request() const
 {
     Q_D(const GetProductsResponse);
@@ -88,9 +86,8 @@ const GetProductsRequest * GetProductsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pricing GetProducts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pricing GetProducts \a response.
  */
 void GetProductsResponse::parseSuccess(QIODevice &response)
 {
@@ -100,19 +97,15 @@ void GetProductsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pricing::GetProductsResponsePrivate
+ * \brief The GetProductsResponsePrivate class provides private implementation for GetProductsResponse.
  * \internal
  *
- * \class GetProductsResponsePrivate
- *
- * \brief Private implementation for GetProductsResponse.
+ * \inmodule QtAwsPricing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetProductsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetProductsResponse instance.
+ * Constructs a GetProductsResponsePrivate object with public implementation \a q.
  */
 GetProductsResponsePrivate::GetProductsResponsePrivate(
     GetProductsResponse * const q) : PricingResponsePrivate(q)
@@ -121,9 +114,7 @@ GetProductsResponsePrivate::GetProductsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pricing GetProductsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pricing GetProducts response element from \a xml.
  */
 void GetProductsResponsePrivate::parseGetProductsResponse(QXmlStreamReader &xml)
 {

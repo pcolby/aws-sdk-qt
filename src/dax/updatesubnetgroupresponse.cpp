@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::UpdateSubnetGroupResponse
- *
  * \brief The UpdateSubnetGroupResponse class provides an interace for DAX UpdateSubnetGroup responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new UpdateSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSubnetGroupResponse::UpdateSubnetGroupResponse(
         const UpdateSubnetGroupRequest &request,
@@ -59,6 +54,9 @@ UpdateSubnetGroupResponse::UpdateSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSubnetGroupRequest * UpdateSubnetGroupResponse::request() const
 {
     Q_D(const UpdateSubnetGroupResponse);
@@ -66,9 +64,8 @@ const UpdateSubnetGroupRequest * UpdateSubnetGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a DAX UpdateSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX UpdateSubnetGroup \a response.
  */
 void UpdateSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void UpdateSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::UpdateSubnetGroupResponsePrivate
+ * \brief The UpdateSubnetGroupResponsePrivate class provides private implementation for UpdateSubnetGroupResponse.
  * \internal
  *
- * \class UpdateSubnetGroupResponsePrivate
- *
- * \brief Private implementation for UpdateSubnetGroupResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSubnetGroupResponse instance.
+ * Constructs a UpdateSubnetGroupResponsePrivate object with public implementation \a q.
  */
 UpdateSubnetGroupResponsePrivate::UpdateSubnetGroupResponsePrivate(
     UpdateSubnetGroupResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ UpdateSubnetGroupResponsePrivate::UpdateSubnetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX UpdateSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX UpdateSubnetGroup response element from \a xml.
  */
 void UpdateSubnetGroupResponsePrivate::parseUpdateSubnetGroupResponse(QXmlStreamReader &xml)
 {

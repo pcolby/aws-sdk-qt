@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetRecordsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetRecordsRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a GetRecordsRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 GetRecordsRequestPrivate::GetRecordsRequestPrivate(
     const KinesisRequest::Action action, GetRecordsRequest * const q)

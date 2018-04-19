@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ListSecurityConfigurationsResponse
- *
  * \brief The ListSecurityConfigurationsResponse class provides an interace for EMR ListSecurityConfigurations responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ListSecurityConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSecurityConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSecurityConfigurationsResponse::ListSecurityConfigurationsResponse(
         const ListSecurityConfigurationsRequest &request,
@@ -58,6 +53,9 @@ ListSecurityConfigurationsResponse::ListSecurityConfigurationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSecurityConfigurationsRequest * ListSecurityConfigurationsResponse::request() const
 {
     Q_D(const ListSecurityConfigurationsResponse);
@@ -65,9 +63,8 @@ const ListSecurityConfigurationsRequest * ListSecurityConfigurationsResponse::re
 }
 
 /*!
- * @brief  Parse a EMR ListSecurityConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR ListSecurityConfigurations \a response.
  */
 void ListSecurityConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListSecurityConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::ListSecurityConfigurationsResponsePrivate
+ * \brief The ListSecurityConfigurationsResponsePrivate class provides private implementation for ListSecurityConfigurationsResponse.
  * \internal
  *
- * \class ListSecurityConfigurationsResponsePrivate
- *
- * \brief Private implementation for ListSecurityConfigurationsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSecurityConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSecurityConfigurationsResponse instance.
+ * Constructs a ListSecurityConfigurationsResponsePrivate object with public implementation \a q.
  */
 ListSecurityConfigurationsResponsePrivate::ListSecurityConfigurationsResponsePrivate(
     ListSecurityConfigurationsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ ListSecurityConfigurationsResponsePrivate::ListSecurityConfigurationsResponsePri
 }
 
 /*!
- * @brief  Parse an EMR ListSecurityConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR ListSecurityConfigurations response element from \a xml.
  */
 void ListSecurityConfigurationsResponsePrivate::parseListSecurityConfigurationsResponse(QXmlStreamReader &xml)
 {

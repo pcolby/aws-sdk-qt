@@ -29,10 +29,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::GetLexiconResponse
- *
  * \brief The GetLexiconResponse class provides an interace for Polly GetLexicon responses.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -46,11 +45,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new GetLexiconResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetLexiconResponse object for \a reply to \a request, with parent \a parent.
  */
 GetLexiconResponse::GetLexiconResponse(
         const GetLexiconRequest &request,
@@ -62,6 +57,9 @@ GetLexiconResponse::GetLexiconResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetLexiconRequest * GetLexiconResponse::request() const
 {
     Q_D(const GetLexiconResponse);
@@ -69,9 +67,8 @@ const GetLexiconRequest * GetLexiconResponse::request() const
 }
 
 /*!
- * @brief  Parse a Polly GetLexicon response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Polly GetLexicon \a response.
  */
 void GetLexiconResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetLexiconResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Polly::GetLexiconResponsePrivate
+ * \brief The GetLexiconResponsePrivate class provides private implementation for GetLexiconResponse.
  * \internal
  *
- * \class GetLexiconResponsePrivate
- *
- * \brief Private implementation for GetLexiconResponse.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLexiconResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetLexiconResponse instance.
+ * Constructs a GetLexiconResponsePrivate object with public implementation \a q.
  */
 GetLexiconResponsePrivate::GetLexiconResponsePrivate(
     GetLexiconResponse * const q) : PollyResponsePrivate(q)
@@ -102,9 +95,7 @@ GetLexiconResponsePrivate::GetLexiconResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Polly GetLexiconResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Polly GetLexicon response element from \a xml.
  */
 void GetLexiconResponsePrivate::parseGetLexiconResponse(QXmlStreamReader &xml)
 {

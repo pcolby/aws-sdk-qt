@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetV2LoggingOptionsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetV2LoggingOptionsRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a GetV2LoggingOptionsRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 GetV2LoggingOptionsRequestPrivate::GetV2LoggingOptionsRequestPrivate(
     const IoTRequest::Action action, GetV2LoggingOptionsRequest * const q)

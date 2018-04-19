@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DisableAvailabilityZonesForLoadBalancerResponse
- *
  * \brief The DisableAvailabilityZonesForLoadBalancerResponse class provides an interace for ElasticLoadBalancing DisableAvailabilityZonesForLoadBalancer responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DisableAvailabilityZonesForLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableAvailabilityZonesForLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableAvailabilityZonesForLoadBalancerResponse::DisableAvailabilityZonesForLoadBalancerResponse(
         const DisableAvailabilityZonesForLoadBalancerRequest &request,
@@ -83,6 +78,9 @@ DisableAvailabilityZonesForLoadBalancerResponse::DisableAvailabilityZonesForLoad
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableAvailabilityZonesForLoadBalancerRequest * DisableAvailabilityZonesForLoadBalancerResponse::request() const
 {
     Q_D(const DisableAvailabilityZonesForLoadBalancerResponse);
@@ -90,9 +88,8 @@ const DisableAvailabilityZonesForLoadBalancerRequest * DisableAvailabilityZonesF
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing DisableAvailabilityZonesForLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing DisableAvailabilityZonesForLoadBalancer \a response.
  */
 void DisableAvailabilityZonesForLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void DisableAvailabilityZonesForLoadBalancerResponse::parseSuccess(QIODevice &re
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::DisableAvailabilityZonesForLoadBalancerResponsePrivate
+ * \brief The DisableAvailabilityZonesForLoadBalancerResponsePrivate class provides private implementation for DisableAvailabilityZonesForLoadBalancerResponse.
  * \internal
  *
- * \class DisableAvailabilityZonesForLoadBalancerResponsePrivate
- *
- * \brief Private implementation for DisableAvailabilityZonesForLoadBalancerResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableAvailabilityZonesForLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableAvailabilityZonesForLoadBalancerResponse instance.
+ * Constructs a DisableAvailabilityZonesForLoadBalancerResponsePrivate object with public implementation \a q.
  */
 DisableAvailabilityZonesForLoadBalancerResponsePrivate::DisableAvailabilityZonesForLoadBalancerResponsePrivate(
     DisableAvailabilityZonesForLoadBalancerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ DisableAvailabilityZonesForLoadBalancerResponsePrivate::DisableAvailabilityZones
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing DisableAvailabilityZonesForLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing DisableAvailabilityZonesForLoadBalancer response element from \a xml.
  */
 void DisableAvailabilityZonesForLoadBalancerResponsePrivate::parseDisableAvailabilityZonesForLoadBalancerResponse(QXmlStreamReader &xml)
 {

@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DetachTypedLinkRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DetachTypedLinkRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a DetachTypedLinkRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 DetachTypedLinkRequestPrivate::DetachTypedLinkRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachTypedLinkRequest * const q)

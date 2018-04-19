@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteThingRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteThingRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeleteThingRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeleteThingRequestPrivate::DeleteThingRequestPrivate(
     const IoTRequest::Action action, DeleteThingRequest * const q)

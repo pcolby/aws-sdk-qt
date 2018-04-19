@@ -29,10 +29,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::GetContainerPolicyResponse
- *
  * \brief The GetContainerPolicyResponse class provides an interace for MediaStore GetContainerPolicy responses.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -41,11 +40,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new GetContainerPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetContainerPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetContainerPolicyResponse::GetContainerPolicyResponse(
         const GetContainerPolicyRequest &request,
@@ -57,6 +52,9 @@ GetContainerPolicyResponse::GetContainerPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetContainerPolicyRequest * GetContainerPolicyResponse::request() const
 {
     Q_D(const GetContainerPolicyResponse);
@@ -64,9 +62,8 @@ const GetContainerPolicyRequest * GetContainerPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaStore GetContainerPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaStore GetContainerPolicy \a response.
  */
 void GetContainerPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetContainerPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaStore::GetContainerPolicyResponsePrivate
+ * \brief The GetContainerPolicyResponsePrivate class provides private implementation for GetContainerPolicyResponse.
  * \internal
  *
- * \class GetContainerPolicyResponsePrivate
- *
- * \brief Private implementation for GetContainerPolicyResponse.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetContainerPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetContainerPolicyResponse instance.
+ * Constructs a GetContainerPolicyResponsePrivate object with public implementation \a q.
  */
 GetContainerPolicyResponsePrivate::GetContainerPolicyResponsePrivate(
     GetContainerPolicyResponse * const q) : MediaStoreResponsePrivate(q)
@@ -97,9 +90,7 @@ GetContainerPolicyResponsePrivate::GetContainerPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaStore GetContainerPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaStore GetContainerPolicy response element from \a xml.
  */
 void GetContainerPolicyResponsePrivate::parseGetContainerPolicyResponse(QXmlStreamReader &xml)
 {

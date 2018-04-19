@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::CreateReplicationSubnetGroupResponse
- *
  * \brief The CreateReplicationSubnetGroupResponse class provides an interace for DatabaseMigrationService CreateReplicationSubnetGroup responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new CreateReplicationSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateReplicationSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateReplicationSubnetGroupResponse::CreateReplicationSubnetGroupResponse(
         const CreateReplicationSubnetGroupRequest &request,
@@ -66,6 +61,9 @@ CreateReplicationSubnetGroupResponse::CreateReplicationSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateReplicationSubnetGroupRequest * CreateReplicationSubnetGroupResponse::request() const
 {
     Q_D(const CreateReplicationSubnetGroupResponse);
@@ -73,9 +71,8 @@ const CreateReplicationSubnetGroupRequest * CreateReplicationSubnetGroupResponse
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService CreateReplicationSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService CreateReplicationSubnetGroup \a response.
  */
 void CreateReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::CreateReplicationSubnetGroupResponsePrivate
+ * \brief The CreateReplicationSubnetGroupResponsePrivate class provides private implementation for CreateReplicationSubnetGroupResponse.
  * \internal
  *
- * \class CreateReplicationSubnetGroupResponsePrivate
- *
- * \brief Private implementation for CreateReplicationSubnetGroupResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReplicationSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateReplicationSubnetGroupResponse instance.
+ * Constructs a CreateReplicationSubnetGroupResponsePrivate object with public implementation \a q.
  */
 CreateReplicationSubnetGroupResponsePrivate::CreateReplicationSubnetGroupResponsePrivate(
     CreateReplicationSubnetGroupResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateReplicationSubnetGroupResponsePrivate::CreateReplicationSubnetGroupRespons
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService CreateReplicationSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService CreateReplicationSubnetGroup response element from \a xml.
  */
 void CreateReplicationSubnetGroupResponsePrivate::parseCreateReplicationSubnetGroupResponse(QXmlStreamReader &xml)
 {

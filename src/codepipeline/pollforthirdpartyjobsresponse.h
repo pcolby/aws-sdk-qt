@@ -34,10 +34,10 @@ class QTAWS_EXPORT PollForThirdPartyJobsResponse : public CodePipelineResponse {
 public:
     PollForThirdPartyJobsResponse(const PollForThirdPartyJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PollForThirdPartyJobsRequest * request() const;
+    virtual const PollForThirdPartyJobsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PollForThirdPartyJobsResponse)

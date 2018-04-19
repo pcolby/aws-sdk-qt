@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeComputeEnvironmentsResponse : public BatchResponse {
 public:
     DescribeComputeEnvironmentsResponse(const DescribeComputeEnvironmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeComputeEnvironmentsRequest * request() const;
+    virtual const DescribeComputeEnvironmentsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeComputeEnvironmentsResponse)

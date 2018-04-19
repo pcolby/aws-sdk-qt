@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspaceDirectoriesRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeWorkspaceDirectoriesRequestPrivate object for WorkSpaces \a action with,
- * public implementation \a q.
+ * Constructs a DescribeWorkspaceDirectoriesRequestPrivate object for WorkSpaces \a action,
+ * with public implementation \a q.
  */
 DescribeWorkspaceDirectoriesRequestPrivate::DescribeWorkspaceDirectoriesRequestPrivate(
     const WorkSpacesRequest::Action action, DescribeWorkspaceDirectoriesRequest * const q)

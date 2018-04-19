@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListDocumentsResponse
- *
  * \brief The ListDocumentsResponse class provides an interace for SSM ListDocuments responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListDocumentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDocumentsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDocumentsResponse::ListDocumentsResponse(
         const ListDocumentsRequest &request,
@@ -79,6 +74,9 @@ ListDocumentsResponse::ListDocumentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDocumentsRequest * ListDocumentsResponse::request() const
 {
     Q_D(const ListDocumentsResponse);
@@ -86,9 +84,8 @@ const ListDocumentsRequest * ListDocumentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM ListDocuments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM ListDocuments \a response.
  */
 void ListDocumentsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void ListDocumentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::ListDocumentsResponsePrivate
+ * \brief The ListDocumentsResponsePrivate class provides private implementation for ListDocumentsResponse.
  * \internal
  *
- * \class ListDocumentsResponsePrivate
- *
- * \brief Private implementation for ListDocumentsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDocumentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDocumentsResponse instance.
+ * Constructs a ListDocumentsResponsePrivate object with public implementation \a q.
  */
 ListDocumentsResponsePrivate::ListDocumentsResponsePrivate(
     ListDocumentsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ ListDocumentsResponsePrivate::ListDocumentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM ListDocumentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM ListDocuments response element from \a xml.
  */
 void ListDocumentsResponsePrivate::parseListDocumentsResponse(QXmlStreamReader &xml)
 {

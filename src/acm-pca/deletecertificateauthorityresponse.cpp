@@ -29,10 +29,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::DeleteCertificateAuthorityResponse
- *
  * \brief The DeleteCertificateAuthorityResponse class provides an interace for ACMPCA DeleteCertificateAuthority responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -69,11 +68,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new DeleteCertificateAuthorityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCertificateAuthorityResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCertificateAuthorityResponse::DeleteCertificateAuthorityResponse(
         const DeleteCertificateAuthorityRequest &request,
@@ -85,6 +80,9 @@ DeleteCertificateAuthorityResponse::DeleteCertificateAuthorityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCertificateAuthorityRequest * DeleteCertificateAuthorityResponse::request() const
 {
     Q_D(const DeleteCertificateAuthorityResponse);
@@ -92,9 +90,8 @@ const DeleteCertificateAuthorityRequest * DeleteCertificateAuthorityResponse::re
 }
 
 /*!
- * @brief  Parse a ACMPCA DeleteCertificateAuthority response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACMPCA DeleteCertificateAuthority \a response.
  */
 void DeleteCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DeleteCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACMPCA::DeleteCertificateAuthorityResponsePrivate
+ * \brief The DeleteCertificateAuthorityResponsePrivate class provides private implementation for DeleteCertificateAuthorityResponse.
  * \internal
  *
- * \class DeleteCertificateAuthorityResponsePrivate
- *
- * \brief Private implementation for DeleteCertificateAuthorityResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCertificateAuthorityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCertificateAuthorityResponse instance.
+ * Constructs a DeleteCertificateAuthorityResponsePrivate object with public implementation \a q.
  */
 DeleteCertificateAuthorityResponsePrivate::DeleteCertificateAuthorityResponsePrivate(
     DeleteCertificateAuthorityResponse * const q) : ACMPCAResponsePrivate(q)
@@ -125,9 +118,7 @@ DeleteCertificateAuthorityResponsePrivate::DeleteCertificateAuthorityResponsePri
 }
 
 /*!
- * @brief  Parse an ACMPCA DeleteCertificateAuthorityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACMPCA DeleteCertificateAuthority response element from \a xml.
  */
 void DeleteCertificateAuthorityResponsePrivate::parseDeleteCertificateAuthorityResponse(QXmlStreamReader &xml)
 {

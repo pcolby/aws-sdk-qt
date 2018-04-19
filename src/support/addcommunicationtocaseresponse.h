@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddCommunicationToCaseResponse : public SupportResponse {
 public:
     AddCommunicationToCaseResponse(const AddCommunicationToCaseRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddCommunicationToCaseRequest * request() const;
+    virtual const AddCommunicationToCaseRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddCommunicationToCaseResponse)

@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetCampaignActivitiesResponse
- *
  * \brief The GetCampaignActivitiesResponse class provides an interace for Pinpoint GetCampaignActivities responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getCampaignActivities
  */
 
 /*!
- * @brief  Constructs a new GetCampaignActivitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCampaignActivitiesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCampaignActivitiesResponse::GetCampaignActivitiesResponse(
         const GetCampaignActivitiesRequest &request,
@@ -55,6 +50,9 @@ GetCampaignActivitiesResponse::GetCampaignActivitiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCampaignActivitiesRequest * GetCampaignActivitiesResponse::request() const
 {
     Q_D(const GetCampaignActivitiesResponse);
@@ -62,9 +60,8 @@ const GetCampaignActivitiesRequest * GetCampaignActivitiesResponse::request() co
 }
 
 /*!
- * @brief  Parse a Pinpoint GetCampaignActivities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetCampaignActivities \a response.
  */
 void GetCampaignActivitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetCampaignActivitiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetCampaignActivitiesResponsePrivate
+ * \brief The GetCampaignActivitiesResponsePrivate class provides private implementation for GetCampaignActivitiesResponse.
  * \internal
  *
- * \class GetCampaignActivitiesResponsePrivate
- *
- * \brief Private implementation for GetCampaignActivitiesResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCampaignActivitiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCampaignActivitiesResponse instance.
+ * Constructs a GetCampaignActivitiesResponsePrivate object with public implementation \a q.
  */
 GetCampaignActivitiesResponsePrivate::GetCampaignActivitiesResponsePrivate(
     GetCampaignActivitiesResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetCampaignActivitiesResponsePrivate::GetCampaignActivitiesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetCampaignActivitiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetCampaignActivities response element from \a xml.
  */
 void GetCampaignActivitiesResponsePrivate::parseGetCampaignActivitiesResponse(QXmlStreamReader &xml)
 {

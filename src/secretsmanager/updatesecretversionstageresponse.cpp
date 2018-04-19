@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::UpdateSecretVersionStageResponse
- *
  * \brief The UpdateSecretVersionStageResponse class provides an interace for SecretsManager UpdateSecretVersionStage responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new UpdateSecretVersionStageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSecretVersionStageResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSecretVersionStageResponse::UpdateSecretVersionStageResponse(
         const UpdateSecretVersionStageRequest &request,
@@ -155,6 +150,9 @@ UpdateSecretVersionStageResponse::UpdateSecretVersionStageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSecretVersionStageRequest * UpdateSecretVersionStageResponse::request() const
 {
     Q_D(const UpdateSecretVersionStageResponse);
@@ -162,9 +160,8 @@ const UpdateSecretVersionStageRequest * UpdateSecretVersionStageResponse::reques
 }
 
 /*!
- * @brief  Parse a SecretsManager UpdateSecretVersionStage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager UpdateSecretVersionStage \a response.
  */
 void UpdateSecretVersionStageResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void UpdateSecretVersionStageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::UpdateSecretVersionStageResponsePrivate
+ * \brief The UpdateSecretVersionStageResponsePrivate class provides private implementation for UpdateSecretVersionStageResponse.
  * \internal
  *
- * \class UpdateSecretVersionStageResponsePrivate
- *
- * \brief Private implementation for UpdateSecretVersionStageResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSecretVersionStageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSecretVersionStageResponse instance.
+ * Constructs a UpdateSecretVersionStageResponsePrivate object with public implementation \a q.
  */
 UpdateSecretVersionStageResponsePrivate::UpdateSecretVersionStageResponsePrivate(
     UpdateSecretVersionStageResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ UpdateSecretVersionStageResponsePrivate::UpdateSecretVersionStageResponsePrivate
 }
 
 /*!
- * @brief  Parse an SecretsManager UpdateSecretVersionStageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager UpdateSecretVersionStage response element from \a xml.
  */
 void UpdateSecretVersionStageResponsePrivate::parseUpdateSecretVersionStageResponse(QXmlStreamReader &xml)
 {

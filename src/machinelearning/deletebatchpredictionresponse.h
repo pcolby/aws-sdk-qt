@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBatchPredictionResponse : public MachineLearningRespons
 public:
     DeleteBatchPredictionResponse(const DeleteBatchPredictionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBatchPredictionRequest * request() const;
+    virtual const DeleteBatchPredictionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBatchPredictionResponse)

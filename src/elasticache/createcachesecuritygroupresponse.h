@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateCacheSecurityGroupResponse : public ElastiCacheResponse
 public:
     CreateCacheSecurityGroupResponse(const CreateCacheSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateCacheSecurityGroupRequest * request() const;
+    virtual const CreateCacheSecurityGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateCacheSecurityGroupResponse)

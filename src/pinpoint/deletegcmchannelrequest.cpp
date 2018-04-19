@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteGcmChannelRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteGcmChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a DeleteGcmChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 DeleteGcmChannelRequestPrivate::DeleteGcmChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteGcmChannelRequest * const q)

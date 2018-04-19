@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyCacheParameterGroupResponse : public ElastiCacheRespons
 public:
     ModifyCacheParameterGroupResponse(const ModifyCacheParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyCacheParameterGroupRequest * request() const;
+    virtual const ModifyCacheParameterGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyCacheParameterGroupResponse)

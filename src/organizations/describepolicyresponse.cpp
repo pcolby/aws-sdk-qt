@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DescribePolicyResponse
- *
  * \brief The DescribePolicyResponse class provides an interace for Organizations DescribePolicy responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DescribePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePolicyResponse::DescribePolicyResponse(
         const DescribePolicyRequest &request,
@@ -197,6 +192,9 @@ DescribePolicyResponse::DescribePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePolicyRequest * DescribePolicyResponse::request() const
 {
     Q_D(const DescribePolicyResponse);
@@ -204,9 +202,8 @@ const DescribePolicyRequest * DescribePolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations DescribePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations DescribePolicy \a response.
  */
 void DescribePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void DescribePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::DescribePolicyResponsePrivate
+ * \brief The DescribePolicyResponsePrivate class provides private implementation for DescribePolicyResponse.
  * \internal
  *
- * \class DescribePolicyResponsePrivate
- *
- * \brief Private implementation for DescribePolicyResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePolicyResponse instance.
+ * Constructs a DescribePolicyResponsePrivate object with public implementation \a q.
  */
 DescribePolicyResponsePrivate::DescribePolicyResponsePrivate(
     DescribePolicyResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ DescribePolicyResponsePrivate::DescribePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations DescribePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations DescribePolicy response element from \a xml.
  */
 void DescribePolicyResponsePrivate::parseDescribePolicyResponse(QXmlStreamReader &xml)
 {

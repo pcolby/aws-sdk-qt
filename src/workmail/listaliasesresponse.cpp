@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListAliasesResponse
- *
  * \brief The ListAliasesResponse class provides an interace for WorkMail ListAliases responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListAliasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAliasesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAliasesResponse::ListAliasesResponse(
         const ListAliasesRequest &request,
@@ -88,6 +83,9 @@ ListAliasesResponse::ListAliasesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAliasesRequest * ListAliasesResponse::request() const
 {
     Q_D(const ListAliasesResponse);
@@ -95,9 +93,8 @@ const ListAliasesRequest * ListAliasesResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail ListAliases response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail ListAliases \a response.
  */
 void ListAliasesResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void ListAliasesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::ListAliasesResponsePrivate
+ * \brief The ListAliasesResponsePrivate class provides private implementation for ListAliasesResponse.
  * \internal
  *
- * \class ListAliasesResponsePrivate
- *
- * \brief Private implementation for ListAliasesResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAliasesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAliasesResponse instance.
+ * Constructs a ListAliasesResponsePrivate object with public implementation \a q.
  */
 ListAliasesResponsePrivate::ListAliasesResponsePrivate(
     ListAliasesResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ ListAliasesResponsePrivate::ListAliasesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail ListAliasesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail ListAliases response element from \a xml.
  */
 void ListAliasesResponsePrivate::parseListAliasesResponse(QXmlStreamReader &xml)
 {

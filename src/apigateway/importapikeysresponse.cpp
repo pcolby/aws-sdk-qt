@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::ImportApiKeysResponse
- *
  * \brief The ImportApiKeysResponse class provides an interace for APIGateway ImportApiKeys responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new ImportApiKeysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportApiKeysResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportApiKeysResponse::ImportApiKeysResponse(
         const ImportApiKeysRequest &request,
@@ -60,6 +55,9 @@ ImportApiKeysResponse::ImportApiKeysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportApiKeysRequest * ImportApiKeysResponse::request() const
 {
     Q_D(const ImportApiKeysResponse);
@@ -67,9 +65,8 @@ const ImportApiKeysRequest * ImportApiKeysResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway ImportApiKeys response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway ImportApiKeys \a response.
  */
 void ImportApiKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ImportApiKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::ImportApiKeysResponsePrivate
+ * \brief The ImportApiKeysResponsePrivate class provides private implementation for ImportApiKeysResponse.
  * \internal
  *
- * \class ImportApiKeysResponsePrivate
- *
- * \brief Private implementation for ImportApiKeysResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportApiKeysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportApiKeysResponse instance.
+ * Constructs a ImportApiKeysResponsePrivate object with public implementation \a q.
  */
 ImportApiKeysResponsePrivate::ImportApiKeysResponsePrivate(
     ImportApiKeysResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ ImportApiKeysResponsePrivate::ImportApiKeysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway ImportApiKeysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway ImportApiKeys response element from \a xml.
  */
 void ImportApiKeysResponsePrivate::parseImportApiKeysResponse(QXmlStreamReader &xml)
 {

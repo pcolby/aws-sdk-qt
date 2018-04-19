@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * CreateAccessKeyRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a CreateAccessKeyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a CreateAccessKeyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 CreateAccessKeyRequestPrivate::CreateAccessKeyRequestPrivate(
     const IAMRequest::Action action, CreateAccessKeyRequest * const q)

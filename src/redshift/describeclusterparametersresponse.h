@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeClusterParametersResponse : public RedshiftResponse {
 public:
     DescribeClusterParametersResponse(const DescribeClusterParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeClusterParametersRequest * request() const;
+    virtual const DescribeClusterParametersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeClusterParametersResponse)

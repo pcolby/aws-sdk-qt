@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeProductViewResponse
- *
  * \brief The DescribeProductViewResponse class provides an interace for ServiceCatalog DescribeProductView responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeProductViewResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeProductViewResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeProductViewResponse::DescribeProductViewResponse(
         const DescribeProductViewRequest &request,
@@ -61,6 +56,9 @@ DescribeProductViewResponse::DescribeProductViewResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeProductViewRequest * DescribeProductViewResponse::request() const
 {
     Q_D(const DescribeProductViewResponse);
@@ -68,9 +66,8 @@ const DescribeProductViewRequest * DescribeProductViewResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DescribeProductView response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DescribeProductView \a response.
  */
 void DescribeProductViewResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeProductViewResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DescribeProductViewResponsePrivate
+ * \brief The DescribeProductViewResponsePrivate class provides private implementation for DescribeProductViewResponse.
  * \internal
  *
- * \class DescribeProductViewResponsePrivate
- *
- * \brief Private implementation for DescribeProductViewResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProductViewResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeProductViewResponse instance.
+ * Constructs a DescribeProductViewResponsePrivate object with public implementation \a q.
  */
 DescribeProductViewResponsePrivate::DescribeProductViewResponsePrivate(
     DescribeProductViewResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeProductViewResponsePrivate::DescribeProductViewResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DescribeProductViewResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DescribeProductView response element from \a xml.
  */
 void DescribeProductViewResponsePrivate::parseDescribeProductViewResponse(QXmlStreamReader &xml)
 {

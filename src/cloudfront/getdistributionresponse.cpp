@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetDistributionResponse
- *
  * \brief The GetDistributionResponse class provides an interace for CloudFront GetDistribution responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetDistributionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDistributionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDistributionResponse::GetDistributionResponse(
         const GetDistributionRequest &request,
@@ -60,6 +55,9 @@ GetDistributionResponse::GetDistributionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDistributionRequest * GetDistributionResponse::request() const
 {
     Q_D(const GetDistributionResponse);
@@ -67,9 +65,8 @@ const GetDistributionRequest * GetDistributionResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront GetDistribution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront GetDistribution \a response.
  */
 void GetDistributionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetDistributionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::GetDistributionResponsePrivate
+ * \brief The GetDistributionResponsePrivate class provides private implementation for GetDistributionResponse.
  * \internal
  *
- * \class GetDistributionResponsePrivate
- *
- * \brief Private implementation for GetDistributionResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDistributionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDistributionResponse instance.
+ * Constructs a GetDistributionResponsePrivate object with public implementation \a q.
  */
 GetDistributionResponsePrivate::GetDistributionResponsePrivate(
     GetDistributionResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ GetDistributionResponsePrivate::GetDistributionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront GetDistributionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront GetDistribution response element from \a xml.
  */
 void GetDistributionResponsePrivate::parseGetDistributionResponse(QXmlStreamReader &xml)
 {

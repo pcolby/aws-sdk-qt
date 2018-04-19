@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateIntegrationResponseRequest::response(QN
  */
 
 /*!
- *
- * Constructs a UpdateIntegrationResponseRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateIntegrationResponseRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 UpdateIntegrationResponseRequestPrivate::UpdateIntegrationResponseRequestPrivate(
     const APIGatewayRequest::Action action, UpdateIntegrationResponseRequest * const q)

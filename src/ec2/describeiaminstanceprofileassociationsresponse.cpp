@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeIamInstanceProfileAssociationsResponse
- *
  * \brief The DescribeIamInstanceProfileAssociationsResponse class provides an interace for EC2 DescribeIamInstanceProfileAssociations responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeIamInstanceProfileAssociationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeIamInstanceProfileAssociationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeIamInstanceProfileAssociationsResponse::DescribeIamInstanceProfileAssociationsResponse(
         const DescribeIamInstanceProfileAssociationsRequest &request,
@@ -59,6 +54,9 @@ DescribeIamInstanceProfileAssociationsResponse::DescribeIamInstanceProfileAssoci
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeIamInstanceProfileAssociationsRequest * DescribeIamInstanceProfileAssociationsResponse::request() const
 {
     Q_D(const DescribeIamInstanceProfileAssociationsResponse);
@@ -66,9 +64,8 @@ const DescribeIamInstanceProfileAssociationsRequest * DescribeIamInstanceProfile
 }
 
 /*!
- * @brief  Parse a EC2 DescribeIamInstanceProfileAssociations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeIamInstanceProfileAssociations \a response.
  */
 void DescribeIamInstanceProfileAssociationsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeIamInstanceProfileAssociationsResponse::parseSuccess(QIODevice &res
 }
 
 /*!
+ * \class QtAws::EC2::DescribeIamInstanceProfileAssociationsResponsePrivate
+ * \brief The DescribeIamInstanceProfileAssociationsResponsePrivate class provides private implementation for DescribeIamInstanceProfileAssociationsResponse.
  * \internal
  *
- * \class DescribeIamInstanceProfileAssociationsResponsePrivate
- *
- * \brief Private implementation for DescribeIamInstanceProfileAssociationsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeIamInstanceProfileAssociationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeIamInstanceProfileAssociationsResponse instance.
+ * Constructs a DescribeIamInstanceProfileAssociationsResponsePrivate object with public implementation \a q.
  */
 DescribeIamInstanceProfileAssociationsResponsePrivate::DescribeIamInstanceProfileAssociationsResponsePrivate(
     DescribeIamInstanceProfileAssociationsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeIamInstanceProfileAssociationsResponsePrivate::DescribeIamInstanceProfil
 }
 
 /*!
- * @brief  Parse an EC2 DescribeIamInstanceProfileAssociationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeIamInstanceProfileAssociations response element from \a xml.
  */
 void DescribeIamInstanceProfileAssociationsResponsePrivate::parseDescribeIamInstanceProfileAssociationsResponse(QXmlStreamReader &xml)
 {

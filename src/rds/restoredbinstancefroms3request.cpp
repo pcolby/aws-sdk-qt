@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromS3Request::response(QNet
  */
 
 /*!
- *
- * Constructs a RestoreDBInstanceFromS3RequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a RestoreDBInstanceFromS3RequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 RestoreDBInstanceFromS3RequestPrivate::RestoreDBInstanceFromS3RequestPrivate(
     const RDSRequest::Action action, RestoreDBInstanceFromS3Request * const q)

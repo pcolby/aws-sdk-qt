@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteNetworkAclEntryResponse : public EC2Response {
 public:
     DeleteNetworkAclEntryResponse(const DeleteNetworkAclEntryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteNetworkAclEntryRequest * request() const;
+    virtual const DeleteNetworkAclEntryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteNetworkAclEntryResponse)

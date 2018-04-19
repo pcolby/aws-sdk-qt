@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCrawlersResponse : public GlueResponse {
 public:
     GetCrawlersResponse(const GetCrawlersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCrawlersRequest * request() const;
+    virtual const GetCrawlersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCrawlersResponse)

@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteAliasResponse
- *
  * \brief The DeleteAliasResponse class provides an interace for GameLift DeleteAlias responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAliasResponse::DeleteAliasResponse(
         const DeleteAliasRequest &request,
@@ -491,6 +486,9 @@ DeleteAliasResponse::DeleteAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAliasRequest * DeleteAliasResponse::request() const
 {
     Q_D(const DeleteAliasResponse);
@@ -498,9 +496,8 @@ const DeleteAliasRequest * DeleteAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift DeleteAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DeleteAlias \a response.
  */
 void DeleteAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DeleteAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DeleteAliasResponsePrivate
+ * \brief The DeleteAliasResponsePrivate class provides private implementation for DeleteAliasResponse.
  * \internal
  *
- * \class DeleteAliasResponsePrivate
- *
- * \brief Private implementation for DeleteAliasResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAliasResponse instance.
+ * Constructs a DeleteAliasResponsePrivate object with public implementation \a q.
  */
 DeleteAliasResponsePrivate::DeleteAliasResponsePrivate(
     DeleteAliasResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DeleteAliasResponsePrivate::DeleteAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift DeleteAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DeleteAlias response element from \a xml.
  */
 void DeleteAliasResponsePrivate::parseDeleteAliasResponse(QXmlStreamReader &xml)
 {

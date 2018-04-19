@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::CancelExportTaskResponse
- *
  * \brief The CancelExportTaskResponse class provides an interace for CloudWatchLogs CancelExportTask responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new CancelExportTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelExportTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelExportTaskResponse::CancelExportTaskResponse(
         const CancelExportTaskRequest &request,
@@ -84,6 +79,9 @@ CancelExportTaskResponse::CancelExportTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelExportTaskRequest * CancelExportTaskResponse::request() const
 {
     Q_D(const CancelExportTaskResponse);
@@ -91,9 +89,8 @@ const CancelExportTaskRequest * CancelExportTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs CancelExportTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs CancelExportTask \a response.
  */
 void CancelExportTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void CancelExportTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::CancelExportTaskResponsePrivate
+ * \brief The CancelExportTaskResponsePrivate class provides private implementation for CancelExportTaskResponse.
  * \internal
  *
- * \class CancelExportTaskResponsePrivate
- *
- * \brief Private implementation for CancelExportTaskResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelExportTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelExportTaskResponse instance.
+ * Constructs a CancelExportTaskResponsePrivate object with public implementation \a q.
  */
 CancelExportTaskResponsePrivate::CancelExportTaskResponsePrivate(
     CancelExportTaskResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ CancelExportTaskResponsePrivate::CancelExportTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs CancelExportTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs CancelExportTask response element from \a xml.
  */
 void CancelExportTaskResponsePrivate::parseCancelExportTaskResponse(QXmlStreamReader &xml)
 {

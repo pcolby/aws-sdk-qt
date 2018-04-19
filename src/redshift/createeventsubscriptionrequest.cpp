@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * CreateEventSubscriptionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CreateEventSubscriptionRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a CreateEventSubscriptionRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 CreateEventSubscriptionRequestPrivate::CreateEventSubscriptionRequestPrivate(
     const RedshiftRequest::Action action, CreateEventSubscriptionRequest * const q)

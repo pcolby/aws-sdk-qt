@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCSVHeaderResponse : public CognitoIdentityProviderResponse
 public:
     GetCSVHeaderResponse(const GetCSVHeaderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCSVHeaderRequest * request() const;
+    virtual const GetCSVHeaderRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCSVHeaderResponse)

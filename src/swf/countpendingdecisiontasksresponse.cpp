@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::CountPendingDecisionTasksResponse
- *
  * \brief The CountPendingDecisionTasksResponse class provides an interace for SWF CountPendingDecisionTasks responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new CountPendingDecisionTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CountPendingDecisionTasksResponse object for \a reply to \a request, with parent \a parent.
  */
 CountPendingDecisionTasksResponse::CountPendingDecisionTasksResponse(
         const CountPendingDecisionTasksRequest &request,
@@ -71,6 +66,9 @@ CountPendingDecisionTasksResponse::CountPendingDecisionTasksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CountPendingDecisionTasksRequest * CountPendingDecisionTasksResponse::request() const
 {
     Q_D(const CountPendingDecisionTasksResponse);
@@ -78,9 +76,8 @@ const CountPendingDecisionTasksRequest * CountPendingDecisionTasksResponse::requ
 }
 
 /*!
- * @brief  Parse a SWF CountPendingDecisionTasks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF CountPendingDecisionTasks \a response.
  */
 void CountPendingDecisionTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void CountPendingDecisionTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::CountPendingDecisionTasksResponsePrivate
+ * \brief The CountPendingDecisionTasksResponsePrivate class provides private implementation for CountPendingDecisionTasksResponse.
  * \internal
  *
- * \class CountPendingDecisionTasksResponsePrivate
- *
- * \brief Private implementation for CountPendingDecisionTasksResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CountPendingDecisionTasksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CountPendingDecisionTasksResponse instance.
+ * Constructs a CountPendingDecisionTasksResponsePrivate object with public implementation \a q.
  */
 CountPendingDecisionTasksResponsePrivate::CountPendingDecisionTasksResponsePrivate(
     CountPendingDecisionTasksResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ CountPendingDecisionTasksResponsePrivate::CountPendingDecisionTasksResponsePriva
 }
 
 /*!
- * @brief  Parse an SWF CountPendingDecisionTasksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF CountPendingDecisionTasks response element from \a xml.
  */
 void CountPendingDecisionTasksResponsePrivate::parseCountPendingDecisionTasksResponse(QXmlStreamReader &xml)
 {

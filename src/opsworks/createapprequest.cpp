@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * CreateAppRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a CreateAppRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a CreateAppRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 CreateAppRequestPrivate::CreateAppRequestPrivate(
     const OpsWorksRequest::Action action, CreateAppRequest * const q)

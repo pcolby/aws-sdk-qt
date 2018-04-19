@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::AttachLoadBalancerTargetGroupsResponse
- *
  * \brief The AttachLoadBalancerTargetGroupsResponse class provides an interace for AutoScaling AttachLoadBalancerTargetGroups responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new AttachLoadBalancerTargetGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachLoadBalancerTargetGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachLoadBalancerTargetGroupsResponse::AttachLoadBalancerTargetGroupsResponse(
         const AttachLoadBalancerTargetGroupsRequest &request,
@@ -60,6 +55,9 @@ AttachLoadBalancerTargetGroupsResponse::AttachLoadBalancerTargetGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachLoadBalancerTargetGroupsRequest * AttachLoadBalancerTargetGroupsResponse::request() const
 {
     Q_D(const AttachLoadBalancerTargetGroupsResponse);
@@ -67,9 +65,8 @@ const AttachLoadBalancerTargetGroupsRequest * AttachLoadBalancerTargetGroupsResp
 }
 
 /*!
- * @brief  Parse a AutoScaling AttachLoadBalancerTargetGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling AttachLoadBalancerTargetGroups \a response.
  */
 void AttachLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void AttachLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::AttachLoadBalancerTargetGroupsResponsePrivate
+ * \brief The AttachLoadBalancerTargetGroupsResponsePrivate class provides private implementation for AttachLoadBalancerTargetGroupsResponse.
  * \internal
  *
- * \class AttachLoadBalancerTargetGroupsResponsePrivate
- *
- * \brief Private implementation for AttachLoadBalancerTargetGroupsResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachLoadBalancerTargetGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachLoadBalancerTargetGroupsResponse instance.
+ * Constructs a AttachLoadBalancerTargetGroupsResponsePrivate object with public implementation \a q.
  */
 AttachLoadBalancerTargetGroupsResponsePrivate::AttachLoadBalancerTargetGroupsResponsePrivate(
     AttachLoadBalancerTargetGroupsResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ AttachLoadBalancerTargetGroupsResponsePrivate::AttachLoadBalancerTargetGroupsRes
 }
 
 /*!
- * @brief  Parse an AutoScaling AttachLoadBalancerTargetGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling AttachLoadBalancerTargetGroups response element from \a xml.
  */
 void AttachLoadBalancerTargetGroupsResponsePrivate::parseAttachLoadBalancerTargetGroupsResponse(QXmlStreamReader &xml)
 {

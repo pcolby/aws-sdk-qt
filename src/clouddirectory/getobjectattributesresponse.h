@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetObjectAttributesResponse : public CloudDirectoryResponse {
 public:
     GetObjectAttributesResponse(const GetObjectAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetObjectAttributesRequest * request() const;
+    virtual const GetObjectAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetObjectAttributesResponse)

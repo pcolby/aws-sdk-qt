@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetFileUploadURLResponse
- *
  * \brief The GetFileUploadURLResponse class provides an interace for MTurk GetFileUploadURL responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getFileUploadURL
  */
 
 /*!
- * @brief  Constructs a new GetFileUploadURLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFileUploadURLResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFileUploadURLResponse::GetFileUploadURLResponse(
         const GetFileUploadURLRequest &request,
@@ -55,6 +50,9 @@ GetFileUploadURLResponse::GetFileUploadURLResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFileUploadURLRequest * GetFileUploadURLResponse::request() const
 {
     Q_D(const GetFileUploadURLResponse);
@@ -62,9 +60,8 @@ const GetFileUploadURLRequest * GetFileUploadURLResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk GetFileUploadURL response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk GetFileUploadURL \a response.
  */
 void GetFileUploadURLResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetFileUploadURLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::GetFileUploadURLResponsePrivate
+ * \brief The GetFileUploadURLResponsePrivate class provides private implementation for GetFileUploadURLResponse.
  * \internal
  *
- * \class GetFileUploadURLResponsePrivate
- *
- * \brief Private implementation for GetFileUploadURLResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFileUploadURLResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFileUploadURLResponse instance.
+ * Constructs a GetFileUploadURLResponsePrivate object with public implementation \a q.
  */
 GetFileUploadURLResponsePrivate::GetFileUploadURLResponsePrivate(
     GetFileUploadURLResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ GetFileUploadURLResponsePrivate::GetFileUploadURLResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk GetFileUploadURLResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk GetFileUploadURL response element from \a xml.
  */
 void GetFileUploadURLResponsePrivate::parseGetFileUploadURLResponse(QXmlStreamReader &xml)
 {

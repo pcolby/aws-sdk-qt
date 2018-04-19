@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssumeRoleWithSAMLResponse : public STSResponse {
 public:
     AssumeRoleWithSAMLResponse(const AssumeRoleWithSAMLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssumeRoleWithSAMLRequest * request() const;
+    virtual const AssumeRoleWithSAMLRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssumeRoleWithSAMLResponse)

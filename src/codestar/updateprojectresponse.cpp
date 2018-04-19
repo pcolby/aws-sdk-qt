@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::UpdateProjectResponse
- *
  * \brief The UpdateProjectResponse class provides an interace for CodeStar UpdateProject responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new UpdateProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateProjectResponse::UpdateProjectResponse(
         const UpdateProjectRequest &request,
@@ -143,6 +138,9 @@ UpdateProjectResponse::UpdateProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateProjectRequest * UpdateProjectResponse::request() const
 {
     Q_D(const UpdateProjectResponse);
@@ -150,9 +148,8 @@ const UpdateProjectRequest * UpdateProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar UpdateProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar UpdateProject \a response.
  */
 void UpdateProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void UpdateProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::UpdateProjectResponsePrivate
+ * \brief The UpdateProjectResponsePrivate class provides private implementation for UpdateProjectResponse.
  * \internal
  *
- * \class UpdateProjectResponsePrivate
- *
- * \brief Private implementation for UpdateProjectResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateProjectResponse instance.
+ * Constructs a UpdateProjectResponsePrivate object with public implementation \a q.
  */
 UpdateProjectResponsePrivate::UpdateProjectResponsePrivate(
     UpdateProjectResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ UpdateProjectResponsePrivate::UpdateProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar UpdateProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar UpdateProject response element from \a xml.
  */
 void UpdateProjectResponsePrivate::parseUpdateProjectResponse(QXmlStreamReader &xml)
 {

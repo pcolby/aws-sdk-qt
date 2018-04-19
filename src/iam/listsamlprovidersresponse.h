@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListSAMLProvidersResponse : public IAMResponse {
 public:
     ListSAMLProvidersResponse(const ListSAMLProvidersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListSAMLProvidersRequest * request() const;
+    virtual const ListSAMLProvidersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListSAMLProvidersResponse)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketEncryptionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteBucketEncryptionRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBucketEncryptionRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 DeleteBucketEncryptionRequestPrivate::DeleteBucketEncryptionRequestPrivate(
     const S3Request::Action action, DeleteBucketEncryptionRequest * const q)

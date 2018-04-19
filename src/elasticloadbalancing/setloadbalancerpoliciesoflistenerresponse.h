@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetLoadBalancerPoliciesOfListenerResponse : public ElasticLoa
 public:
     SetLoadBalancerPoliciesOfListenerResponse(const SetLoadBalancerPoliciesOfListenerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetLoadBalancerPoliciesOfListenerRequest * request() const;
+    virtual const SetLoadBalancerPoliciesOfListenerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetLoadBalancerPoliciesOfListenerResponse)

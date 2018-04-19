@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateKeyPairResponse
- *
  * \brief The CreateKeyPairResponse class provides an interace for Lightsail CreateKeyPair responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateKeyPairResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateKeyPairResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateKeyPairResponse::CreateKeyPairResponse(
         const CreateKeyPairRequest &request,
@@ -71,6 +66,9 @@ CreateKeyPairResponse::CreateKeyPairResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateKeyPairRequest * CreateKeyPairResponse::request() const
 {
     Q_D(const CreateKeyPairResponse);
@@ -78,9 +76,8 @@ const CreateKeyPairRequest * CreateKeyPairResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail CreateKeyPair response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail CreateKeyPair \a response.
  */
 void CreateKeyPairResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void CreateKeyPairResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::CreateKeyPairResponsePrivate
+ * \brief The CreateKeyPairResponsePrivate class provides private implementation for CreateKeyPairResponse.
  * \internal
  *
- * \class CreateKeyPairResponsePrivate
- *
- * \brief Private implementation for CreateKeyPairResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateKeyPairResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateKeyPairResponse instance.
+ * Constructs a CreateKeyPairResponsePrivate object with public implementation \a q.
  */
 CreateKeyPairResponsePrivate::CreateKeyPairResponsePrivate(
     CreateKeyPairResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ CreateKeyPairResponsePrivate::CreateKeyPairResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail CreateKeyPairResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail CreateKeyPair response element from \a xml.
  */
 void CreateKeyPairResponsePrivate::parseCreateKeyPairResponse(QXmlStreamReader &xml)
 {

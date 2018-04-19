@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * GetEventSelectorsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetEventSelectorsRequestPrivate object for CloudTrail \a action with,
- * public implementation \a q.
+ * Constructs a GetEventSelectorsRequestPrivate object for CloudTrail \a action,
+ * with public implementation \a q.
  */
 GetEventSelectorsRequestPrivate::GetEventSelectorsRequestPrivate(
     const CloudTrailRequest::Action action, GetEventSelectorsRequest * const q)

@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateTableResponse
- *
  * \brief The UpdateTableResponse class provides an interace for Glue UpdateTable responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTableResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTableResponse::UpdateTableResponse(
         const UpdateTableRequest &request,
@@ -58,6 +53,9 @@ UpdateTableResponse::UpdateTableResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTableRequest * UpdateTableResponse::request() const
 {
     Q_D(const UpdateTableResponse);
@@ -65,9 +63,8 @@ const UpdateTableRequest * UpdateTableResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue UpdateTable response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue UpdateTable \a response.
  */
 void UpdateTableResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::UpdateTableResponsePrivate
+ * \brief The UpdateTableResponsePrivate class provides private implementation for UpdateTableResponse.
  * \internal
  *
- * \class UpdateTableResponsePrivate
- *
- * \brief Private implementation for UpdateTableResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTableResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTableResponse instance.
+ * Constructs a UpdateTableResponsePrivate object with public implementation \a q.
  */
 UpdateTableResponsePrivate::UpdateTableResponsePrivate(
     UpdateTableResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateTableResponsePrivate::UpdateTableResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue UpdateTableResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue UpdateTable response element from \a xml.
  */
 void UpdateTableResponsePrivate::parseUpdateTableResponse(QXmlStreamReader &xml)
 {

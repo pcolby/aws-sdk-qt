@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ReportInstanceStatusRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ReportInstanceStatusRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ReportInstanceStatusRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ReportInstanceStatusRequestPrivate::ReportInstanceStatusRequestPrivate(
     const EC2Request::Action action, ReportInstanceStatusRequest * const q)

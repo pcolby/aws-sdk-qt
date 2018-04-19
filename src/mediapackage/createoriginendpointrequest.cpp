@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateOriginEndpointRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a CreateOriginEndpointRequestPrivate object for MediaPackage \a action with,
- * public implementation \a q.
+ * Constructs a CreateOriginEndpointRequestPrivate object for MediaPackage \a action,
+ * with public implementation \a q.
  */
 CreateOriginEndpointRequestPrivate::CreateOriginEndpointRequestPrivate(
     const MediaPackageRequest::Action action, CreateOriginEndpointRequest * const q)

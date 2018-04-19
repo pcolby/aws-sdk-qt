@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRoleRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteRoleRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRoleRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteRoleRequestPrivate::DeleteRoleRequestPrivate(
     const IAMRequest::Action action, DeleteRoleRequest * const q)

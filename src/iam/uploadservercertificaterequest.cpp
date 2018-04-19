@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UploadServerCertificateRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UploadServerCertificateRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UploadServerCertificateRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UploadServerCertificateRequestPrivate::UploadServerCertificateRequestPrivate(
     const IAMRequest::Action action, UploadServerCertificateRequest * const q)

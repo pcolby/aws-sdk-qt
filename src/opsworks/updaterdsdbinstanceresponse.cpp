@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateRdsDbInstanceResponse
- *
  * \brief The UpdateRdsDbInstanceResponse class provides an interace for OpsWorks UpdateRdsDbInstance responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateRdsDbInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRdsDbInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRdsDbInstanceResponse::UpdateRdsDbInstanceResponse(
         const UpdateRdsDbInstanceRequest &request,
@@ -161,6 +156,9 @@ UpdateRdsDbInstanceResponse::UpdateRdsDbInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRdsDbInstanceRequest * UpdateRdsDbInstanceResponse::request() const
 {
     Q_D(const UpdateRdsDbInstanceResponse);
@@ -168,9 +166,8 @@ const UpdateRdsDbInstanceRequest * UpdateRdsDbInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks UpdateRdsDbInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks UpdateRdsDbInstance \a response.
  */
 void UpdateRdsDbInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void UpdateRdsDbInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::UpdateRdsDbInstanceResponsePrivate
+ * \brief The UpdateRdsDbInstanceResponsePrivate class provides private implementation for UpdateRdsDbInstanceResponse.
  * \internal
  *
- * \class UpdateRdsDbInstanceResponsePrivate
- *
- * \brief Private implementation for UpdateRdsDbInstanceResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRdsDbInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRdsDbInstanceResponse instance.
+ * Constructs a UpdateRdsDbInstanceResponsePrivate object with public implementation \a q.
  */
 UpdateRdsDbInstanceResponsePrivate::UpdateRdsDbInstanceResponsePrivate(
     UpdateRdsDbInstanceResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ UpdateRdsDbInstanceResponsePrivate::UpdateRdsDbInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks UpdateRdsDbInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks UpdateRdsDbInstance response element from \a xml.
  */
 void UpdateRdsDbInstanceResponsePrivate::parseUpdateRdsDbInstanceResponse(QXmlStreamReader &xml)
 {

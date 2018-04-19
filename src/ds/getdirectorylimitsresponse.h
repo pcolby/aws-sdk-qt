@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDirectoryLimitsResponse : public DirectoryServiceResponse 
 public:
     GetDirectoryLimitsResponse(const GetDirectoryLimitsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDirectoryLimitsRequest * request() const;
+    virtual const GetDirectoryLimitsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDirectoryLimitsResponse)

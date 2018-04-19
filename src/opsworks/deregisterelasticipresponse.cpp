@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeregisterElasticIpResponse
- *
  * \brief The DeregisterElasticIpResponse class provides an interace for OpsWorks DeregisterElasticIp responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeregisterElasticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterElasticIpResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterElasticIpResponse::DeregisterElasticIpResponse(
         const DeregisterElasticIpRequest &request,
@@ -161,6 +156,9 @@ DeregisterElasticIpResponse::DeregisterElasticIpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterElasticIpRequest * DeregisterElasticIpResponse::request() const
 {
     Q_D(const DeregisterElasticIpResponse);
@@ -168,9 +166,8 @@ const DeregisterElasticIpRequest * DeregisterElasticIpResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DeregisterElasticIp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DeregisterElasticIp \a response.
  */
 void DeregisterElasticIpResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DeregisterElasticIpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DeregisterElasticIpResponsePrivate
+ * \brief The DeregisterElasticIpResponsePrivate class provides private implementation for DeregisterElasticIpResponse.
  * \internal
  *
- * \class DeregisterElasticIpResponsePrivate
- *
- * \brief Private implementation for DeregisterElasticIpResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterElasticIpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterElasticIpResponse instance.
+ * Constructs a DeregisterElasticIpResponsePrivate object with public implementation \a q.
  */
 DeregisterElasticIpResponsePrivate::DeregisterElasticIpResponsePrivate(
     DeregisterElasticIpResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DeregisterElasticIpResponsePrivate::DeregisterElasticIpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DeregisterElasticIpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DeregisterElasticIp response element from \a xml.
  */
 void DeregisterElasticIpResponsePrivate::parseDeregisterElasticIpResponse(QXmlStreamReader &xml)
 {

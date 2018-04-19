@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * CreateHsmRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a CreateHsmRequestPrivate object for CloudHSM \a action with,
- * public implementation \a q.
+ * Constructs a CreateHsmRequestPrivate object for CloudHSM \a action,
+ * with public implementation \a q.
  */
 CreateHsmRequestPrivate::CreateHsmRequestPrivate(
     const CloudHSMRequest::Action action, CreateHsmRequest * const q)

@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::CreateQueryLoggingConfigResponse
- *
  * \brief The CreateQueryLoggingConfigResponse class provides an interace for Route53 CreateQueryLoggingConfig responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::createQueryLoggingConfig
  */
 
 /*!
- * @brief  Constructs a new CreateQueryLoggingConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateQueryLoggingConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateQueryLoggingConfigResponse::CreateQueryLoggingConfigResponse(
         const CreateQueryLoggingConfigRequest &request,
@@ -55,6 +50,9 @@ CreateQueryLoggingConfigResponse::CreateQueryLoggingConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateQueryLoggingConfigRequest * CreateQueryLoggingConfigResponse::request() const
 {
     Q_D(const CreateQueryLoggingConfigResponse);
@@ -62,9 +60,8 @@ const CreateQueryLoggingConfigRequest * CreateQueryLoggingConfigResponse::reques
 }
 
 /*!
- * @brief  Parse a Route53 CreateQueryLoggingConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 CreateQueryLoggingConfig \a response.
  */
 void CreateQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::CreateQueryLoggingConfigResponsePrivate
+ * \brief The CreateQueryLoggingConfigResponsePrivate class provides private implementation for CreateQueryLoggingConfigResponse.
  * \internal
  *
- * \class CreateQueryLoggingConfigResponsePrivate
- *
- * \brief Private implementation for CreateQueryLoggingConfigResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateQueryLoggingConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateQueryLoggingConfigResponse instance.
+ * Constructs a CreateQueryLoggingConfigResponsePrivate object with public implementation \a q.
  */
 CreateQueryLoggingConfigResponsePrivate::CreateQueryLoggingConfigResponsePrivate(
     CreateQueryLoggingConfigResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateQueryLoggingConfigResponsePrivate::CreateQueryLoggingConfigResponsePrivate
 }
 
 /*!
- * @brief  Parse an Route53 CreateQueryLoggingConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 CreateQueryLoggingConfig response element from \a xml.
  */
 void CreateQueryLoggingConfigResponsePrivate::parseCreateQueryLoggingConfigResponse(QXmlStreamReader &xml)
 {

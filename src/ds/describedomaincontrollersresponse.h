@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDomainControllersResponse : public DirectoryServiceRe
 public:
     DescribeDomainControllersResponse(const DescribeDomainControllersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDomainControllersRequest * request() const;
+    virtual const DescribeDomainControllersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDomainControllersResponse)

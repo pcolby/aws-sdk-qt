@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisionedProductRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeProvisionedProductRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DescribeProvisionedProductRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DescribeProvisionedProductRequestPrivate::DescribeProvisionedProductRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeProvisionedProductRequest * const q)

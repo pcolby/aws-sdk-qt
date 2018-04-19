@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateFunctionDefinitionResponse
- *
  * \brief The CreateFunctionDefinitionResponse class provides an interace for Greengrass CreateFunctionDefinition responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateFunctionDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateFunctionDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateFunctionDefinitionResponse::CreateFunctionDefinitionResponse(
         const CreateFunctionDefinitionRequest &request,
@@ -58,6 +53,9 @@ CreateFunctionDefinitionResponse::CreateFunctionDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateFunctionDefinitionRequest * CreateFunctionDefinitionResponse::request() const
 {
     Q_D(const CreateFunctionDefinitionResponse);
@@ -65,9 +63,8 @@ const CreateFunctionDefinitionRequest * CreateFunctionDefinitionResponse::reques
 }
 
 /*!
- * @brief  Parse a Greengrass CreateFunctionDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass CreateFunctionDefinition \a response.
  */
 void CreateFunctionDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateFunctionDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::CreateFunctionDefinitionResponsePrivate
+ * \brief The CreateFunctionDefinitionResponsePrivate class provides private implementation for CreateFunctionDefinitionResponse.
  * \internal
  *
- * \class CreateFunctionDefinitionResponsePrivate
- *
- * \brief Private implementation for CreateFunctionDefinitionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFunctionDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateFunctionDefinitionResponse instance.
+ * Constructs a CreateFunctionDefinitionResponsePrivate object with public implementation \a q.
  */
 CreateFunctionDefinitionResponsePrivate::CreateFunctionDefinitionResponsePrivate(
     CreateFunctionDefinitionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateFunctionDefinitionResponsePrivate::CreateFunctionDefinitionResponsePrivate
 }
 
 /*!
- * @brief  Parse an Greengrass CreateFunctionDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass CreateFunctionDefinition response element from \a xml.
  */
 void CreateFunctionDefinitionResponsePrivate::parseCreateFunctionDefinitionResponse(QXmlStreamReader &xml)
 {

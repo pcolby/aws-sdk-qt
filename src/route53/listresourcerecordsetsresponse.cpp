@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListResourceRecordSetsResponse
- *
  * \brief The ListResourceRecordSetsResponse class provides an interace for Route53 ListResourceRecordSets responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listResourceRecordSets
  */
 
 /*!
- * @brief  Constructs a new ListResourceRecordSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListResourceRecordSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListResourceRecordSetsResponse::ListResourceRecordSetsResponse(
         const ListResourceRecordSetsRequest &request,
@@ -55,6 +50,9 @@ ListResourceRecordSetsResponse::ListResourceRecordSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListResourceRecordSetsRequest * ListResourceRecordSetsResponse::request() const
 {
     Q_D(const ListResourceRecordSetsResponse);
@@ -62,9 +60,8 @@ const ListResourceRecordSetsRequest * ListResourceRecordSetsResponse::request() 
 }
 
 /*!
- * @brief  Parse a Route53 ListResourceRecordSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 ListResourceRecordSets \a response.
  */
 void ListResourceRecordSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListResourceRecordSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::ListResourceRecordSetsResponsePrivate
+ * \brief The ListResourceRecordSetsResponsePrivate class provides private implementation for ListResourceRecordSetsResponse.
  * \internal
  *
- * \class ListResourceRecordSetsResponsePrivate
- *
- * \brief Private implementation for ListResourceRecordSetsResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceRecordSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListResourceRecordSetsResponse instance.
+ * Constructs a ListResourceRecordSetsResponsePrivate object with public implementation \a q.
  */
 ListResourceRecordSetsResponsePrivate::ListResourceRecordSetsResponsePrivate(
     ListResourceRecordSetsResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListResourceRecordSetsResponsePrivate::ListResourceRecordSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 ListResourceRecordSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 ListResourceRecordSets response element from \a xml.
  */
 void ListResourceRecordSetsResponsePrivate::parseListResourceRecordSetsResponse(QXmlStreamReader &xml)
 {

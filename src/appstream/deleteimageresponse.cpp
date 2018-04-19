@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DeleteImageResponse
- *
  * \brief The DeleteImageResponse class provides an interace for AppStream DeleteImage responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DeleteImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteImageResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteImageResponse::DeleteImageResponse(
         const DeleteImageRequest &request,
@@ -58,6 +53,9 @@ DeleteImageResponse::DeleteImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteImageRequest * DeleteImageResponse::request() const
 {
     Q_D(const DeleteImageResponse);
@@ -65,9 +63,8 @@ const DeleteImageRequest * DeleteImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream DeleteImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream DeleteImage \a response.
  */
 void DeleteImageResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::DeleteImageResponsePrivate
+ * \brief The DeleteImageResponsePrivate class provides private implementation for DeleteImageResponse.
  * \internal
  *
- * \class DeleteImageResponsePrivate
- *
- * \brief Private implementation for DeleteImageResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteImageResponse instance.
+ * Constructs a DeleteImageResponsePrivate object with public implementation \a q.
  */
 DeleteImageResponsePrivate::DeleteImageResponsePrivate(
     DeleteImageResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteImageResponsePrivate::DeleteImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream DeleteImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream DeleteImage response element from \a xml.
  */
 void DeleteImageResponsePrivate::parseDeleteImageResponse(QXmlStreamReader &xml)
 {

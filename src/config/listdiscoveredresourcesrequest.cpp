@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * ListDiscoveredResourcesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListDiscoveredResourcesRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a ListDiscoveredResourcesRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
     const ConfigServiceRequest::Action action, ListDiscoveredResourcesRequest * const q)

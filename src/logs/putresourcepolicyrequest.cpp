@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * PutResourcePolicyRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a PutResourcePolicyRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a PutResourcePolicyRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 PutResourcePolicyRequestPrivate::PutResourcePolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutResourcePolicyRequest * const q)

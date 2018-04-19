@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListResourcesForWebACLResponse : public WAFRegionalResponse {
 public:
     ListResourcesForWebACLResponse(const ListResourcesForWebACLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListResourcesForWebACLRequest * request() const;
+    virtual const ListResourcesForWebACLRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListResourcesForWebACLResponse)

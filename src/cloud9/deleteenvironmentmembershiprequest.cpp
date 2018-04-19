@@ -135,9 +135,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEnvironmentMembershipRequest::response(
  */
 
 /*!
- *
- * Constructs a DeleteEnvironmentMembershipRequestPrivate object for Cloud9 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEnvironmentMembershipRequestPrivate object for Cloud9 \a action,
+ * with public implementation \a q.
  */
 DeleteEnvironmentMembershipRequestPrivate::DeleteEnvironmentMembershipRequestPrivate(
     const Cloud9Request::Action action, DeleteEnvironmentMembershipRequest * const q)

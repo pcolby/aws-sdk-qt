@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDBClusterRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteDBClusterRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDBClusterRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DeleteDBClusterRequestPrivate::DeleteDBClusterRequestPrivate(
     const RDSRequest::Action action, DeleteDBClusterRequest * const q)

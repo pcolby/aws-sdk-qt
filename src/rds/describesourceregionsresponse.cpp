@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeSourceRegionsResponse
- *
  * \brief The DescribeSourceRegionsResponse class provides an interace for RDS DescribeSourceRegions responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeSourceRegionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSourceRegionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSourceRegionsResponse::DescribeSourceRegionsResponse(
         const DescribeSourceRegionsRequest &request,
@@ -119,6 +114,9 @@ DescribeSourceRegionsResponse::DescribeSourceRegionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSourceRegionsRequest * DescribeSourceRegionsResponse::request() const
 {
     Q_D(const DescribeSourceRegionsResponse);
@@ -126,9 +124,8 @@ const DescribeSourceRegionsRequest * DescribeSourceRegionsResponse::request() co
 }
 
 /*!
- * @brief  Parse a RDS DescribeSourceRegions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeSourceRegions \a response.
  */
 void DescribeSourceRegionsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeSourceRegionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeSourceRegionsResponsePrivate
+ * \brief The DescribeSourceRegionsResponsePrivate class provides private implementation for DescribeSourceRegionsResponse.
  * \internal
  *
- * \class DescribeSourceRegionsResponsePrivate
- *
- * \brief Private implementation for DescribeSourceRegionsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSourceRegionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSourceRegionsResponse instance.
+ * Constructs a DescribeSourceRegionsResponsePrivate object with public implementation \a q.
  */
 DescribeSourceRegionsResponsePrivate::DescribeSourceRegionsResponsePrivate(
     DescribeSourceRegionsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeSourceRegionsResponsePrivate::DescribeSourceRegionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DescribeSourceRegionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeSourceRegions response element from \a xml.
  */
 void DescribeSourceRegionsResponsePrivate::parseDescribeSourceRegionsResponse(QXmlStreamReader &xml)
 {

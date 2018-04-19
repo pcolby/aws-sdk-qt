@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::GetTelemetryMetadataResponse
- *
  * \brief The GetTelemetryMetadataResponse class provides an interace for Inspector GetTelemetryMetadata responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new GetTelemetryMetadataResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTelemetryMetadataResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTelemetryMetadataResponse::GetTelemetryMetadataResponse(
         const GetTelemetryMetadataRequest &request,
@@ -60,6 +55,9 @@ GetTelemetryMetadataResponse::GetTelemetryMetadataResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTelemetryMetadataRequest * GetTelemetryMetadataResponse::request() const
 {
     Q_D(const GetTelemetryMetadataResponse);
@@ -67,9 +65,8 @@ const GetTelemetryMetadataRequest * GetTelemetryMetadataResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Inspector GetTelemetryMetadata response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector GetTelemetryMetadata \a response.
  */
 void GetTelemetryMetadataResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetTelemetryMetadataResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::GetTelemetryMetadataResponsePrivate
+ * \brief The GetTelemetryMetadataResponsePrivate class provides private implementation for GetTelemetryMetadataResponse.
  * \internal
  *
- * \class GetTelemetryMetadataResponsePrivate
- *
- * \brief Private implementation for GetTelemetryMetadataResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTelemetryMetadataResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTelemetryMetadataResponse instance.
+ * Constructs a GetTelemetryMetadataResponsePrivate object with public implementation \a q.
  */
 GetTelemetryMetadataResponsePrivate::GetTelemetryMetadataResponsePrivate(
     GetTelemetryMetadataResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ GetTelemetryMetadataResponsePrivate::GetTelemetryMetadataResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector GetTelemetryMetadataResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector GetTelemetryMetadata response element from \a xml.
  */
 void GetTelemetryMetadataResponsePrivate::parseGetTelemetryMetadataResponse(QXmlStreamReader &xml)
 {

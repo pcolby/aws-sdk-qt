@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::CreateIPSetResponse
- *
  * \brief The CreateIPSetResponse class provides an interace for GuardDuty CreateIPSet responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::createIPSet
  */
 
 /*!
- * @brief  Constructs a new CreateIPSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateIPSetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateIPSetResponse::CreateIPSetResponse(
         const CreateIPSetRequest &request,
@@ -55,6 +50,9 @@ CreateIPSetResponse::CreateIPSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateIPSetRequest * CreateIPSetResponse::request() const
 {
     Q_D(const CreateIPSetResponse);
@@ -62,9 +60,8 @@ const CreateIPSetRequest * CreateIPSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty CreateIPSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty CreateIPSet \a response.
  */
 void CreateIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::CreateIPSetResponsePrivate
+ * \brief The CreateIPSetResponsePrivate class provides private implementation for CreateIPSetResponse.
  * \internal
  *
- * \class CreateIPSetResponsePrivate
- *
- * \brief Private implementation for CreateIPSetResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateIPSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateIPSetResponse instance.
+ * Constructs a CreateIPSetResponsePrivate object with public implementation \a q.
  */
 CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
     CreateIPSetResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty CreateIPSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty CreateIPSet response element from \a xml.
  */
 void CreateIPSetResponsePrivate::parseCreateIPSetResponse(QXmlStreamReader &xml)
 {

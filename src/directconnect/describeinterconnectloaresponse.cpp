@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeInterconnectLoaResponse
- *
  * \brief The DescribeInterconnectLoaResponse class provides an interace for DirectConnect DescribeInterconnectLoa responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeInterconnectLoaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeInterconnectLoaResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeInterconnectLoaResponse::DescribeInterconnectLoaResponse(
         const DescribeInterconnectLoaRequest &request,
@@ -63,6 +58,9 @@ DescribeInterconnectLoaResponse::DescribeInterconnectLoaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeInterconnectLoaRequest * DescribeInterconnectLoaResponse::request() const
 {
     Q_D(const DescribeInterconnectLoaResponse);
@@ -70,9 +68,8 @@ const DescribeInterconnectLoaRequest * DescribeInterconnectLoaResponse::request(
 }
 
 /*!
- * @brief  Parse a DirectConnect DescribeInterconnectLoa response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DescribeInterconnectLoa \a response.
  */
 void DescribeInterconnectLoaResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DescribeInterconnectLoaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::DescribeInterconnectLoaResponsePrivate
+ * \brief The DescribeInterconnectLoaResponsePrivate class provides private implementation for DescribeInterconnectLoaResponse.
  * \internal
  *
- * \class DescribeInterconnectLoaResponsePrivate
- *
- * \brief Private implementation for DescribeInterconnectLoaResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInterconnectLoaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeInterconnectLoaResponse instance.
+ * Constructs a DescribeInterconnectLoaResponsePrivate object with public implementation \a q.
  */
 DescribeInterconnectLoaResponsePrivate::DescribeInterconnectLoaResponsePrivate(
     DescribeInterconnectLoaResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DescribeInterconnectLoaResponsePrivate::DescribeInterconnectLoaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect DescribeInterconnectLoaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DescribeInterconnectLoa response element from \a xml.
  */
 void DescribeInterconnectLoaResponsePrivate::parseDescribeInterconnectLoaResponse(QXmlStreamReader &xml)
 {

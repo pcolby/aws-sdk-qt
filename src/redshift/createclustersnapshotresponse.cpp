@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateClusterSnapshotResponse
- *
  * \brief The CreateClusterSnapshotResponse class provides an interace for Redshift CreateClusterSnapshot responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateClusterSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateClusterSnapshotResponse::CreateClusterSnapshotResponse(
         const CreateClusterSnapshotRequest &request,
@@ -85,6 +80,9 @@ CreateClusterSnapshotResponse::CreateClusterSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateClusterSnapshotRequest * CreateClusterSnapshotResponse::request() const
 {
     Q_D(const CreateClusterSnapshotResponse);
@@ -92,9 +90,8 @@ const CreateClusterSnapshotRequest * CreateClusterSnapshotResponse::request() co
 }
 
 /*!
- * @brief  Parse a Redshift CreateClusterSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift CreateClusterSnapshot \a response.
  */
 void CreateClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void CreateClusterSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::CreateClusterSnapshotResponsePrivate
+ * \brief The CreateClusterSnapshotResponsePrivate class provides private implementation for CreateClusterSnapshotResponse.
  * \internal
  *
- * \class CreateClusterSnapshotResponsePrivate
- *
- * \brief Private implementation for CreateClusterSnapshotResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateClusterSnapshotResponse instance.
+ * Constructs a CreateClusterSnapshotResponsePrivate object with public implementation \a q.
  */
 CreateClusterSnapshotResponsePrivate::CreateClusterSnapshotResponsePrivate(
     CreateClusterSnapshotResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ CreateClusterSnapshotResponsePrivate::CreateClusterSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift CreateClusterSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift CreateClusterSnapshot response element from \a xml.
  */
 void CreateClusterSnapshotResponsePrivate::parseCreateClusterSnapshotResponse(QXmlStreamReader &xml)
 {

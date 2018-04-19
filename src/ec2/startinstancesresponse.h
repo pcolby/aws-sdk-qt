@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartInstancesResponse : public EC2Response {
 public:
     StartInstancesResponse(const StartInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartInstancesRequest * request() const;
+    virtual const StartInstancesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartInstancesResponse)

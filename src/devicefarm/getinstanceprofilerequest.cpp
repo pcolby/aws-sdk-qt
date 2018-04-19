@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * GetInstanceProfileRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetInstanceProfileRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a GetInstanceProfileRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 GetInstanceProfileRequestPrivate::GetInstanceProfileRequestPrivate(
     const DeviceFarmRequest::Action action, GetInstanceProfileRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeStreamRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStreamRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
     const KinesisRequest::Action action, DescribeStreamRequest * const q)

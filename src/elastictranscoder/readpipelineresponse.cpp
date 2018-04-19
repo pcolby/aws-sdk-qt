@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ReadPipelineResponse
- *
  * \brief The ReadPipelineResponse class provides an interace for ElasticTranscoder ReadPipeline responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new ReadPipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReadPipelineResponse object for \a reply to \a request, with parent \a parent.
  */
 ReadPipelineResponse::ReadPipelineResponse(
         const ReadPipelineRequest &request,
@@ -58,6 +53,9 @@ ReadPipelineResponse::ReadPipelineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReadPipelineRequest * ReadPipelineResponse::request() const
 {
     Q_D(const ReadPipelineResponse);
@@ -65,9 +63,8 @@ const ReadPipelineRequest * ReadPipelineResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder ReadPipeline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder ReadPipeline \a response.
  */
 void ReadPipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ReadPipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::ReadPipelineResponsePrivate
+ * \brief The ReadPipelineResponsePrivate class provides private implementation for ReadPipelineResponse.
  * \internal
  *
- * \class ReadPipelineResponsePrivate
- *
- * \brief Private implementation for ReadPipelineResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReadPipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReadPipelineResponse instance.
+ * Constructs a ReadPipelineResponsePrivate object with public implementation \a q.
  */
 ReadPipelineResponsePrivate::ReadPipelineResponsePrivate(
     ReadPipelineResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ ReadPipelineResponsePrivate::ReadPipelineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder ReadPipelineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder ReadPipeline response element from \a xml.
  */
 void ReadPipelineResponsePrivate::parseReadPipelineResponse(QXmlStreamReader &xml)
 {

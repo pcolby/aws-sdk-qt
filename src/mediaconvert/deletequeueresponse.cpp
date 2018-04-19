@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::DeleteQueueResponse
- *
  * \brief The DeleteQueueResponse class provides an interace for MediaConvert DeleteQueue responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::deleteQueue
  */
 
 /*!
- * @brief  Constructs a new DeleteQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteQueueResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteQueueResponse::DeleteQueueResponse(
         const DeleteQueueRequest &request,
@@ -55,6 +50,9 @@ DeleteQueueResponse::DeleteQueueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteQueueRequest * DeleteQueueResponse::request() const
 {
     Q_D(const DeleteQueueResponse);
@@ -62,9 +60,8 @@ const DeleteQueueRequest * DeleteQueueResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert DeleteQueue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert DeleteQueue \a response.
  */
 void DeleteQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteQueueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::DeleteQueueResponsePrivate
+ * \brief The DeleteQueueResponsePrivate class provides private implementation for DeleteQueueResponse.
  * \internal
  *
- * \class DeleteQueueResponsePrivate
- *
- * \brief Private implementation for DeleteQueueResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteQueueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteQueueResponse instance.
+ * Constructs a DeleteQueueResponsePrivate object with public implementation \a q.
  */
 DeleteQueueResponsePrivate::DeleteQueueResponsePrivate(
     DeleteQueueResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteQueueResponsePrivate::DeleteQueueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert DeleteQueueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert DeleteQueue response element from \a xml.
  */
 void DeleteQueueResponsePrivate::parseDeleteQueueResponse(QXmlStreamReader &xml)
 {

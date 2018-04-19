@@ -28,16 +28,13 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GreengrassResponse
- *
  * \brief The GreengrassResponse class provides an interface for Greengrass responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @brief  Constructs a new GreengrassResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a GreengrassResponse object with parent \a parent.
  */
 GreengrassResponse::GreengrassResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new GreengrassResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ GreengrassResponse::GreengrassResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GreengrassResponse object.
- *
+ * \internal
+ * Constructs a GreengrassResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GreengrassResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 GreengrassResponse::GreengrassResponse(GreengrassResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ GreengrassResponse::GreengrassResponse(GreengrassResponsePrivate * const d, QObj
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void GreengrassResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void GreengrassResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Greengrass::GreengrassResponsePrivate
+ * \brief The GreengrassResponsePrivate class provides private implementation for GreengrassResponse.
+ * \internal
  *
- * @class  GreengrassResponsePrivate
- *
- * @brief  Private implementation for GreengrassResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GreengrassResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GreengrassResponse instance.
+ * Constructs a GreengrassResponsePrivate object with public implementation \a q.
  */
 GreengrassResponsePrivate::GreengrassResponsePrivate(
     GreengrassResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

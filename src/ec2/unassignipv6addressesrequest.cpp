@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * UnassignIpv6AddressesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a UnassignIpv6AddressesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a UnassignIpv6AddressesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 UnassignIpv6AddressesRequestPrivate::UnassignIpv6AddressesRequestPrivate(
     const EC2Request::Action action, UnassignIpv6AddressesRequest * const q)

@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDiskRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteDiskRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDiskRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 DeleteDiskRequestPrivate::DeleteDiskRequestPrivate(
     const LightsailRequest::Action action, DeleteDiskRequest * const q)

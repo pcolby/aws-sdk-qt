@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteUtterancesResponse
- *
  * \brief The DeleteUtterancesResponse class provides an interace for LexModelBuildingService DeleteUtterances responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteUtterancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteUtterancesResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteUtterancesResponse::DeleteUtterancesResponse(
         const DeleteUtterancesRequest &request,
@@ -59,6 +54,9 @@ DeleteUtterancesResponse::DeleteUtterancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteUtterancesRequest * DeleteUtterancesResponse::request() const
 {
     Q_D(const DeleteUtterancesResponse);
@@ -66,9 +64,8 @@ const DeleteUtterancesRequest * DeleteUtterancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService DeleteUtterances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService DeleteUtterances \a response.
  */
 void DeleteUtterancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteUtterancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::DeleteUtterancesResponsePrivate
+ * \brief The DeleteUtterancesResponsePrivate class provides private implementation for DeleteUtterancesResponse.
  * \internal
  *
- * \class DeleteUtterancesResponsePrivate
- *
- * \brief Private implementation for DeleteUtterancesResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUtterancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteUtterancesResponse instance.
+ * Constructs a DeleteUtterancesResponsePrivate object with public implementation \a q.
  */
 DeleteUtterancesResponsePrivate::DeleteUtterancesResponsePrivate(
     DeleteUtterancesResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteUtterancesResponsePrivate::DeleteUtterancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService DeleteUtterancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService DeleteUtterances response element from \a xml.
  */
 void DeleteUtterancesResponsePrivate::parseDeleteUtterancesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DeleteAttributesResponse
- *
  * \brief The DeleteAttributesResponse class provides an interace for ECS DeleteAttributes responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DeleteAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAttributesResponse::DeleteAttributesResponse(
         const DeleteAttributesRequest &request,
@@ -72,6 +67,9 @@ DeleteAttributesResponse::DeleteAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAttributesRequest * DeleteAttributesResponse::request() const
 {
     Q_D(const DeleteAttributesResponse);
@@ -79,9 +77,8 @@ const DeleteAttributesRequest * DeleteAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS DeleteAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS DeleteAttributes \a response.
  */
 void DeleteAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void DeleteAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::DeleteAttributesResponsePrivate
+ * \brief The DeleteAttributesResponsePrivate class provides private implementation for DeleteAttributesResponse.
  * \internal
  *
- * \class DeleteAttributesResponsePrivate
- *
- * \brief Private implementation for DeleteAttributesResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAttributesResponse instance.
+ * Constructs a DeleteAttributesResponsePrivate object with public implementation \a q.
  */
 DeleteAttributesResponsePrivate::DeleteAttributesResponsePrivate(
     DeleteAttributesResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ DeleteAttributesResponsePrivate::DeleteAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS DeleteAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS DeleteAttributes response element from \a xml.
  */
 void DeleteAttributesResponsePrivate::parseDeleteAttributesResponse(QXmlStreamReader &xml)
 {

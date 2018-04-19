@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DeleteMatchmakingConfigurationRequest::respon
  */
 
 /*!
- *
- * Constructs a DeleteMatchmakingConfigurationRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteMatchmakingConfigurationRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DeleteMatchmakingConfigurationRequestPrivate::DeleteMatchmakingConfigurationRequestPrivate(
     const GameLiftRequest::Action action, DeleteMatchmakingConfigurationRequest * const q)

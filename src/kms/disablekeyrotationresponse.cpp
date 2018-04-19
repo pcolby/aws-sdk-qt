@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::DisableKeyRotationResponse
- *
  * \brief The DisableKeyRotationResponse class provides an interace for KMS DisableKeyRotation responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new DisableKeyRotationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableKeyRotationResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableKeyRotationResponse::DisableKeyRotationResponse(
         const DisableKeyRotationRequest &request,
@@ -154,6 +149,9 @@ DisableKeyRotationResponse::DisableKeyRotationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableKeyRotationRequest * DisableKeyRotationResponse::request() const
 {
     Q_D(const DisableKeyRotationResponse);
@@ -161,9 +159,8 @@ const DisableKeyRotationRequest * DisableKeyRotationResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS DisableKeyRotation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS DisableKeyRotation \a response.
  */
 void DisableKeyRotationResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void DisableKeyRotationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::DisableKeyRotationResponsePrivate
+ * \brief The DisableKeyRotationResponsePrivate class provides private implementation for DisableKeyRotationResponse.
  * \internal
  *
- * \class DisableKeyRotationResponsePrivate
- *
- * \brief Private implementation for DisableKeyRotationResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableKeyRotationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableKeyRotationResponse instance.
+ * Constructs a DisableKeyRotationResponsePrivate object with public implementation \a q.
  */
 DisableKeyRotationResponsePrivate::DisableKeyRotationResponsePrivate(
     DisableKeyRotationResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ DisableKeyRotationResponsePrivate::DisableKeyRotationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS DisableKeyRotationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS DisableKeyRotation response element from \a xml.
  */
 void DisableKeyRotationResponsePrivate::parseDisableKeyRotationResponse(QXmlStreamReader &xml)
 {

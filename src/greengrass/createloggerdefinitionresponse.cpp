@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateLoggerDefinitionResponse
- *
  * \brief The CreateLoggerDefinitionResponse class provides an interace for Greengrass CreateLoggerDefinition responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateLoggerDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLoggerDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLoggerDefinitionResponse::CreateLoggerDefinitionResponse(
         const CreateLoggerDefinitionRequest &request,
@@ -58,6 +53,9 @@ CreateLoggerDefinitionResponse::CreateLoggerDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLoggerDefinitionRequest * CreateLoggerDefinitionResponse::request() const
 {
     Q_D(const CreateLoggerDefinitionResponse);
@@ -65,9 +63,8 @@ const CreateLoggerDefinitionRequest * CreateLoggerDefinitionResponse::request() 
 }
 
 /*!
- * @brief  Parse a Greengrass CreateLoggerDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass CreateLoggerDefinition \a response.
  */
 void CreateLoggerDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateLoggerDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::CreateLoggerDefinitionResponsePrivate
+ * \brief The CreateLoggerDefinitionResponsePrivate class provides private implementation for CreateLoggerDefinitionResponse.
  * \internal
  *
- * \class CreateLoggerDefinitionResponsePrivate
- *
- * \brief Private implementation for CreateLoggerDefinitionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLoggerDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLoggerDefinitionResponse instance.
+ * Constructs a CreateLoggerDefinitionResponsePrivate object with public implementation \a q.
  */
 CreateLoggerDefinitionResponsePrivate::CreateLoggerDefinitionResponsePrivate(
     CreateLoggerDefinitionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateLoggerDefinitionResponsePrivate::CreateLoggerDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass CreateLoggerDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass CreateLoggerDefinition response element from \a xml.
  */
 void CreateLoggerDefinitionResponsePrivate::parseCreateLoggerDefinitionResponse(QXmlStreamReader &xml)
 {

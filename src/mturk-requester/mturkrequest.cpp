@@ -78,7 +78,7 @@ namespace MTurk {
  */
 
 /*!
- * Constructs a[n] MTurkRequest object for MTurk \a action.
+ * Constructs a MTurkRequest object for MTurk \a action.
  */
 MTurkRequest::MTurkRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MTurkRequestPrivate(action, this))
@@ -278,8 +278,8 @@ QNetworkRequest MTurkRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a MTurkRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a MTurkRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 MTurkRequestPrivate::MTurkRequestPrivate(const MTurkRequest::Action action, MTurkRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

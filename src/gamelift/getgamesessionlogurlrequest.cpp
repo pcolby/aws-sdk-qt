@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * GetGameSessionLogUrlRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetGameSessionLogUrlRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a GetGameSessionLogUrlRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 GetGameSessionLogUrlRequestPrivate::GetGameSessionLogUrlRequestPrivate(
     const GameLiftRequest::Action action, GetGameSessionLogUrlRequest * const q)

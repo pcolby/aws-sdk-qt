@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * SetTopicAttributesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a SetTopicAttributesRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a SetTopicAttributesRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 SetTopicAttributesRequestPrivate::SetTopicAttributesRequestPrivate(
     const SNSRequest::Action action, SetTopicAttributesRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ResetImageAttributeRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ResetImageAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ResetImageAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ResetImageAttributeRequestPrivate::ResetImageAttributeRequestPrivate(
     const EC2Request::Action action, ResetImageAttributeRequest * const q)

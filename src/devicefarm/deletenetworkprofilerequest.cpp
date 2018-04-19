@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkProfileRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteNetworkProfileRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNetworkProfileRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 DeleteNetworkProfileRequestPrivate::DeleteNetworkProfileRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteNetworkProfileRequest * const q)

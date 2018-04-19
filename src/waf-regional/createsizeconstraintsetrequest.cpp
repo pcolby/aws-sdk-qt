@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * CreateSizeConstraintSetRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CreateSizeConstraintSetRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a CreateSizeConstraintSetRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 CreateSizeConstraintSetRequestPrivate::CreateSizeConstraintSetRequestPrivate(
     const WAFRegionalRequest::Action action, CreateSizeConstraintSetRequest * const q)

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateUsagePlanResponse
- *
  * \brief The UpdateUsagePlanResponse class provides an interace for APIGateway UpdateUsagePlan responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateUsagePlanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateUsagePlanResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateUsagePlanResponse::UpdateUsagePlanResponse(
         const UpdateUsagePlanRequest &request,
@@ -60,6 +55,9 @@ UpdateUsagePlanResponse::UpdateUsagePlanResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateUsagePlanRequest * UpdateUsagePlanResponse::request() const
 {
     Q_D(const UpdateUsagePlanResponse);
@@ -67,9 +65,8 @@ const UpdateUsagePlanRequest * UpdateUsagePlanResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateUsagePlan response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateUsagePlan \a response.
  */
 void UpdateUsagePlanResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateUsagePlanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateUsagePlanResponsePrivate
+ * \brief The UpdateUsagePlanResponsePrivate class provides private implementation for UpdateUsagePlanResponse.
  * \internal
  *
- * \class UpdateUsagePlanResponsePrivate
- *
- * \brief Private implementation for UpdateUsagePlanResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUsagePlanResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateUsagePlanResponse instance.
+ * Constructs a UpdateUsagePlanResponsePrivate object with public implementation \a q.
  */
 UpdateUsagePlanResponsePrivate::UpdateUsagePlanResponsePrivate(
     UpdateUsagePlanResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateUsagePlanResponsePrivate::UpdateUsagePlanResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateUsagePlanResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateUsagePlan response element from \a xml.
  */
 void UpdateUsagePlanResponsePrivate::parseUpdateUsagePlanResponse(QXmlStreamReader &xml)
 {

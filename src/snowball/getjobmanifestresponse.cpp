@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::GetJobManifestResponse
- *
  * \brief The GetJobManifestResponse class provides an interace for Snowball GetJobManifest responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new GetJobManifestResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetJobManifestResponse object for \a reply to \a request, with parent \a parent.
  */
 GetJobManifestResponse::GetJobManifestResponse(
         const GetJobManifestRequest &request,
@@ -61,6 +56,9 @@ GetJobManifestResponse::GetJobManifestResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetJobManifestRequest * GetJobManifestResponse::request() const
 {
     Q_D(const GetJobManifestResponse);
@@ -68,9 +66,8 @@ const GetJobManifestRequest * GetJobManifestResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball GetJobManifest response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball GetJobManifest \a response.
  */
 void GetJobManifestResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void GetJobManifestResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::GetJobManifestResponsePrivate
+ * \brief The GetJobManifestResponsePrivate class provides private implementation for GetJobManifestResponse.
  * \internal
  *
- * \class GetJobManifestResponsePrivate
- *
- * \brief Private implementation for GetJobManifestResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobManifestResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetJobManifestResponse instance.
+ * Constructs a GetJobManifestResponsePrivate object with public implementation \a q.
  */
 GetJobManifestResponsePrivate::GetJobManifestResponsePrivate(
     GetJobManifestResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ GetJobManifestResponsePrivate::GetJobManifestResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball GetJobManifestResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball GetJobManifest response element from \a xml.
  */
 void GetJobManifestResponsePrivate::parseGetJobManifestResponse(QXmlStreamReader &xml)
 {

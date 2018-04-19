@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVoicesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeVoicesRequestPrivate object for Polly \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVoicesRequestPrivate object for Polly \a action,
+ * with public implementation \a q.
  */
 DescribeVoicesRequestPrivate::DescribeVoicesRequestPrivate(
     const PollyRequest::Action action, DescribeVoicesRequest * const q)

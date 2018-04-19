@@ -28,16 +28,13 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::AlexaForBusinessResponse
- *
  * \brief The AlexaForBusinessResponse class provides an interface for AlexaForBusiness responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @brief  Constructs a new AlexaForBusinessResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a AlexaForBusinessResponse object with parent \a parent.
  */
 AlexaForBusinessResponse::AlexaForBusinessResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new AlexaForBusinessResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ AlexaForBusinessResponse::AlexaForBusinessResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AlexaForBusinessResponse object.
- *
+ * \internal
+ * Constructs a AlexaForBusinessResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AlexaForBusinessResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 AlexaForBusinessResponse::AlexaForBusinessResponse(AlexaForBusinessResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ AlexaForBusinessResponse::AlexaForBusinessResponse(AlexaForBusinessResponsePriva
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void AlexaForBusinessResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void AlexaForBusinessResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::AlexaForBusiness::AlexaForBusinessResponsePrivate
+ * \brief The AlexaForBusinessResponsePrivate class provides private implementation for AlexaForBusinessResponse.
+ * \internal
  *
- * @class  AlexaForBusinessResponsePrivate
- *
- * @brief  Private implementation for AlexaForBusinessResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AlexaForBusinessResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AlexaForBusinessResponse instance.
+ * Constructs a AlexaForBusinessResponsePrivate object with public implementation \a q.
  */
 AlexaForBusinessResponsePrivate::AlexaForBusinessResponsePrivate(
     AlexaForBusinessResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

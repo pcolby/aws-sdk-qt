@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteScheduledActionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteScheduledActionRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DeleteScheduledActionRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DeleteScheduledActionRequestPrivate::DeleteScheduledActionRequestPrivate(
     const AutoScalingRequest::Action action, DeleteScheduledActionRequest * const q)

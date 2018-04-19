@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * ListVocabulariesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListVocabulariesRequestPrivate object for TranscribeService \a action with,
- * public implementation \a q.
+ * Constructs a ListVocabulariesRequestPrivate object for TranscribeService \a action,
+ * with public implementation \a q.
  */
 ListVocabulariesRequestPrivate::ListVocabulariesRequestPrivate(
     const TranscribeServiceRequest::Action action, ListVocabulariesRequest * const q)

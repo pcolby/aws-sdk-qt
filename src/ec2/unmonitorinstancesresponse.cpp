@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::UnmonitorInstancesResponse
- *
  * \brief The UnmonitorInstancesResponse class provides an interace for EC2 UnmonitorInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new UnmonitorInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UnmonitorInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 UnmonitorInstancesResponse::UnmonitorInstancesResponse(
         const UnmonitorInstancesRequest &request,
@@ -59,6 +54,9 @@ UnmonitorInstancesResponse::UnmonitorInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UnmonitorInstancesRequest * UnmonitorInstancesResponse::request() const
 {
     Q_D(const UnmonitorInstancesResponse);
@@ -66,9 +64,8 @@ const UnmonitorInstancesRequest * UnmonitorInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 UnmonitorInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 UnmonitorInstances \a response.
  */
 void UnmonitorInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void UnmonitorInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::UnmonitorInstancesResponsePrivate
+ * \brief The UnmonitorInstancesResponsePrivate class provides private implementation for UnmonitorInstancesResponse.
  * \internal
  *
- * \class UnmonitorInstancesResponsePrivate
- *
- * \brief Private implementation for UnmonitorInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnmonitorInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UnmonitorInstancesResponse instance.
+ * Constructs a UnmonitorInstancesResponsePrivate object with public implementation \a q.
  */
 UnmonitorInstancesResponsePrivate::UnmonitorInstancesResponsePrivate(
     UnmonitorInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ UnmonitorInstancesResponsePrivate::UnmonitorInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 UnmonitorInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 UnmonitorInstances response element from \a xml.
  */
 void UnmonitorInstancesResponsePrivate::parseUnmonitorInstancesResponse(QXmlStreamReader &xml)
 {

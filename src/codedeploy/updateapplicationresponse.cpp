@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::UpdateApplicationResponse
- *
  * \brief The UpdateApplicationResponse class provides an interace for CodeDeploy UpdateApplication responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new UpdateApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateApplicationResponse::UpdateApplicationResponse(
         const UpdateApplicationRequest &request,
@@ -136,6 +131,9 @@ UpdateApplicationResponse::UpdateApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateApplicationRequest * UpdateApplicationResponse::request() const
 {
     Q_D(const UpdateApplicationResponse);
@@ -143,9 +141,8 @@ const UpdateApplicationRequest * UpdateApplicationResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeDeploy UpdateApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy UpdateApplication \a response.
  */
 void UpdateApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void UpdateApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::UpdateApplicationResponsePrivate
+ * \brief The UpdateApplicationResponsePrivate class provides private implementation for UpdateApplicationResponse.
  * \internal
  *
- * \class UpdateApplicationResponsePrivate
- *
- * \brief Private implementation for UpdateApplicationResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateApplicationResponse instance.
+ * Constructs a UpdateApplicationResponsePrivate object with public implementation \a q.
  */
 UpdateApplicationResponsePrivate::UpdateApplicationResponsePrivate(
     UpdateApplicationResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ UpdateApplicationResponsePrivate::UpdateApplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy UpdateApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy UpdateApplication response element from \a xml.
  */
 void UpdateApplicationResponsePrivate::parseUpdateApplicationResponse(QXmlStreamReader &xml)
 {

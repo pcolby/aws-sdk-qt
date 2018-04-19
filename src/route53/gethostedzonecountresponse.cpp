@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetHostedZoneCountResponse
- *
  * \brief The GetHostedZoneCountResponse class provides an interace for Route53 GetHostedZoneCount responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getHostedZoneCount
  */
 
 /*!
- * @brief  Constructs a new GetHostedZoneCountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetHostedZoneCountResponse object for \a reply to \a request, with parent \a parent.
  */
 GetHostedZoneCountResponse::GetHostedZoneCountResponse(
         const GetHostedZoneCountRequest &request,
@@ -55,6 +50,9 @@ GetHostedZoneCountResponse::GetHostedZoneCountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetHostedZoneCountRequest * GetHostedZoneCountResponse::request() const
 {
     Q_D(const GetHostedZoneCountResponse);
@@ -62,9 +60,8 @@ const GetHostedZoneCountRequest * GetHostedZoneCountResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 GetHostedZoneCount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetHostedZoneCount \a response.
  */
 void GetHostedZoneCountResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetHostedZoneCountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetHostedZoneCountResponsePrivate
+ * \brief The GetHostedZoneCountResponsePrivate class provides private implementation for GetHostedZoneCountResponse.
  * \internal
  *
- * \class GetHostedZoneCountResponsePrivate
- *
- * \brief Private implementation for GetHostedZoneCountResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHostedZoneCountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetHostedZoneCountResponse instance.
+ * Constructs a GetHostedZoneCountResponsePrivate object with public implementation \a q.
  */
 GetHostedZoneCountResponsePrivate::GetHostedZoneCountResponsePrivate(
     GetHostedZoneCountResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetHostedZoneCountResponsePrivate::GetHostedZoneCountResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 GetHostedZoneCountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetHostedZoneCount response element from \a xml.
  */
 void GetHostedZoneCountResponsePrivate::parseGetHostedZoneCountResponse(QXmlStreamReader &xml)
 {

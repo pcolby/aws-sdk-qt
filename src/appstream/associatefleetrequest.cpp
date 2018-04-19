@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * AssociateFleetRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a AssociateFleetRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a AssociateFleetRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 AssociateFleetRequestPrivate::AssociateFleetRequestPrivate(
     const AppStreamRequest::Action action, AssociateFleetRequest * const q)

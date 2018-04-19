@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetRegistrationCodeResponse
- *
  * \brief The GetRegistrationCodeResponse class provides an interace for IoT GetRegistrationCode responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetRegistrationCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRegistrationCodeResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRegistrationCodeResponse::GetRegistrationCodeResponse(
         const GetRegistrationCodeRequest &request,
@@ -66,6 +61,9 @@ GetRegistrationCodeResponse::GetRegistrationCodeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRegistrationCodeRequest * GetRegistrationCodeResponse::request() const
 {
     Q_D(const GetRegistrationCodeResponse);
@@ -73,9 +71,8 @@ const GetRegistrationCodeRequest * GetRegistrationCodeResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT GetRegistrationCode response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT GetRegistrationCode \a response.
  */
 void GetRegistrationCodeResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetRegistrationCodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::GetRegistrationCodeResponsePrivate
+ * \brief The GetRegistrationCodeResponsePrivate class provides private implementation for GetRegistrationCodeResponse.
  * \internal
  *
- * \class GetRegistrationCodeResponsePrivate
- *
- * \brief Private implementation for GetRegistrationCodeResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRegistrationCodeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRegistrationCodeResponse instance.
+ * Constructs a GetRegistrationCodeResponsePrivate object with public implementation \a q.
  */
 GetRegistrationCodeResponsePrivate::GetRegistrationCodeResponsePrivate(
     GetRegistrationCodeResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ GetRegistrationCodeResponsePrivate::GetRegistrationCodeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT GetRegistrationCodeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT GetRegistrationCode response element from \a xml.
  */
 void GetRegistrationCodeResponsePrivate::parseGetRegistrationCodeResponse(QXmlStreamReader &xml)
 {

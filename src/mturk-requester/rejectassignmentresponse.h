@@ -34,10 +34,10 @@ class QTAWS_EXPORT RejectAssignmentResponse : public MTurkResponse {
 public:
     RejectAssignmentResponse(const RejectAssignmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RejectAssignmentRequest * request() const;
+    virtual const RejectAssignmentRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RejectAssignmentResponse)

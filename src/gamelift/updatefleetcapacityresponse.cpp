@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateFleetCapacityResponse
- *
  * \brief The UpdateFleetCapacityResponse class provides an interace for GameLift UpdateFleetCapacity responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateFleetCapacityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateFleetCapacityResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateFleetCapacityResponse::UpdateFleetCapacityResponse(
         const UpdateFleetCapacityRequest &request,
@@ -491,6 +486,9 @@ UpdateFleetCapacityResponse::UpdateFleetCapacityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateFleetCapacityRequest * UpdateFleetCapacityResponse::request() const
 {
     Q_D(const UpdateFleetCapacityResponse);
@@ -498,9 +496,8 @@ const UpdateFleetCapacityRequest * UpdateFleetCapacityResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift UpdateFleetCapacity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift UpdateFleetCapacity \a response.
  */
 void UpdateFleetCapacityResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void UpdateFleetCapacityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::UpdateFleetCapacityResponsePrivate
+ * \brief The UpdateFleetCapacityResponsePrivate class provides private implementation for UpdateFleetCapacityResponse.
  * \internal
  *
- * \class UpdateFleetCapacityResponsePrivate
- *
- * \brief Private implementation for UpdateFleetCapacityResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFleetCapacityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateFleetCapacityResponse instance.
+ * Constructs a UpdateFleetCapacityResponsePrivate object with public implementation \a q.
  */
 UpdateFleetCapacityResponsePrivate::UpdateFleetCapacityResponsePrivate(
     UpdateFleetCapacityResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ UpdateFleetCapacityResponsePrivate::UpdateFleetCapacityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift UpdateFleetCapacityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift UpdateFleetCapacity response element from \a xml.
  */
 void UpdateFleetCapacityResponsePrivate::parseUpdateFleetCapacityResponse(QXmlStreamReader &xml)
 {

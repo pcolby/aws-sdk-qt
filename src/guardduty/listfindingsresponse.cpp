@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::ListFindingsResponse
- *
  * \brief The ListFindingsResponse class provides an interace for GuardDuty ListFindings responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::listFindings
  */
 
 /*!
- * @brief  Constructs a new ListFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListFindingsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListFindingsResponse::ListFindingsResponse(
         const ListFindingsRequest &request,
@@ -55,6 +50,9 @@ ListFindingsResponse::ListFindingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListFindingsRequest * ListFindingsResponse::request() const
 {
     Q_D(const ListFindingsResponse);
@@ -62,9 +60,8 @@ const ListFindingsRequest * ListFindingsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty ListFindings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty ListFindings \a response.
  */
 void ListFindingsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListFindingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::ListFindingsResponsePrivate
+ * \brief The ListFindingsResponsePrivate class provides private implementation for ListFindingsResponse.
  * \internal
  *
- * \class ListFindingsResponsePrivate
- *
- * \brief Private implementation for ListFindingsResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFindingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListFindingsResponse instance.
+ * Constructs a ListFindingsResponsePrivate object with public implementation \a q.
  */
 ListFindingsResponsePrivate::ListFindingsResponsePrivate(
     ListFindingsResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ ListFindingsResponsePrivate::ListFindingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty ListFindingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty ListFindings response element from \a xml.
  */
 void ListFindingsResponsePrivate::parseListFindingsResponse(QXmlStreamReader &xml)
 {

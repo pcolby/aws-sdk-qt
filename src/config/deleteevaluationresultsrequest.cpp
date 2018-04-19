@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEvaluationResultsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteEvaluationResultsRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEvaluationResultsRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DeleteEvaluationResultsRequestPrivate::DeleteEvaluationResultsRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteEvaluationResultsRequest * const q)

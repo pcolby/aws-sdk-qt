@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::RenewDomainResponse
- *
  * \brief The RenewDomainResponse class provides an interace for Route53Domains RenewDomain responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new RenewDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RenewDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 RenewDomainResponse::RenewDomainResponse(
         const RenewDomainRequest &request,
@@ -56,6 +51,9 @@ RenewDomainResponse::RenewDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RenewDomainRequest * RenewDomainResponse::request() const
 {
     Q_D(const RenewDomainResponse);
@@ -63,9 +61,8 @@ const RenewDomainRequest * RenewDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53Domains RenewDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains RenewDomain \a response.
  */
 void RenewDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void RenewDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::RenewDomainResponsePrivate
+ * \brief The RenewDomainResponsePrivate class provides private implementation for RenewDomainResponse.
  * \internal
  *
- * \class RenewDomainResponsePrivate
- *
- * \brief Private implementation for RenewDomainResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RenewDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RenewDomainResponse instance.
+ * Constructs a RenewDomainResponsePrivate object with public implementation \a q.
  */
 RenewDomainResponsePrivate::RenewDomainResponsePrivate(
     RenewDomainResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ RenewDomainResponsePrivate::RenewDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains RenewDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains RenewDomain response element from \a xml.
  */
 void RenewDomainResponsePrivate::parseRenewDomainResponse(QXmlStreamReader &xml)
 {

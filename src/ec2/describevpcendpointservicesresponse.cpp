@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcEndpointServicesResponse
- *
  * \brief The DescribeVpcEndpointServicesResponse class provides an interace for EC2 DescribeVpcEndpointServices responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcEndpointServicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVpcEndpointServicesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVpcEndpointServicesResponse::DescribeVpcEndpointServicesResponse(
         const DescribeVpcEndpointServicesRequest &request,
@@ -59,6 +54,9 @@ DescribeVpcEndpointServicesResponse::DescribeVpcEndpointServicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVpcEndpointServicesRequest * DescribeVpcEndpointServicesResponse::request() const
 {
     Q_D(const DescribeVpcEndpointServicesResponse);
@@ -66,9 +64,8 @@ const DescribeVpcEndpointServicesRequest * DescribeVpcEndpointServicesResponse::
 }
 
 /*!
- * @brief  Parse a EC2 DescribeVpcEndpointServices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeVpcEndpointServices \a response.
  */
 void DescribeVpcEndpointServicesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeVpcEndpointServicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeVpcEndpointServicesResponsePrivate
+ * \brief The DescribeVpcEndpointServicesResponsePrivate class provides private implementation for DescribeVpcEndpointServicesResponse.
  * \internal
  *
- * \class DescribeVpcEndpointServicesResponsePrivate
- *
- * \brief Private implementation for DescribeVpcEndpointServicesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcEndpointServicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVpcEndpointServicesResponse instance.
+ * Constructs a DescribeVpcEndpointServicesResponsePrivate object with public implementation \a q.
  */
 DescribeVpcEndpointServicesResponsePrivate::DescribeVpcEndpointServicesResponsePrivate(
     DescribeVpcEndpointServicesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeVpcEndpointServicesResponsePrivate::DescribeVpcEndpointServicesResponseP
 }
 
 /*!
- * @brief  Parse an EC2 DescribeVpcEndpointServicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeVpcEndpointServices response element from \a xml.
  */
 void DescribeVpcEndpointServicesResponsePrivate::parseDescribeVpcEndpointServicesResponse(QXmlStreamReader &xml)
 {

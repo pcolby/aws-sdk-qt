@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeServiceAccessPoliciesRequest::respons
  */
 
 /*!
- *
- * Constructs a DescribeServiceAccessPoliciesRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DescribeServiceAccessPoliciesRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DescribeServiceAccessPoliciesRequestPrivate::DescribeServiceAccessPoliciesRequestPrivate(
     const CloudSearchRequest::Action action, DescribeServiceAccessPoliciesRequest * const q)

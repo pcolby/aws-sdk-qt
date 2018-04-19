@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListDevelopmentSchemaArnsResponse
- *
  * \brief The ListDevelopmentSchemaArnsResponse class provides an interace for CloudDirectory ListDevelopmentSchemaArns responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListDevelopmentSchemaArnsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDevelopmentSchemaArnsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDevelopmentSchemaArnsResponse::ListDevelopmentSchemaArnsResponse(
         const ListDevelopmentSchemaArnsRequest &request,
@@ -62,6 +57,9 @@ ListDevelopmentSchemaArnsResponse::ListDevelopmentSchemaArnsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDevelopmentSchemaArnsRequest * ListDevelopmentSchemaArnsResponse::request() const
 {
     Q_D(const ListDevelopmentSchemaArnsResponse);
@@ -69,9 +67,8 @@ const ListDevelopmentSchemaArnsRequest * ListDevelopmentSchemaArnsResponse::requ
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListDevelopmentSchemaArns response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListDevelopmentSchemaArns \a response.
  */
 void ListDevelopmentSchemaArnsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListDevelopmentSchemaArnsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListDevelopmentSchemaArnsResponsePrivate
+ * \brief The ListDevelopmentSchemaArnsResponsePrivate class provides private implementation for ListDevelopmentSchemaArnsResponse.
  * \internal
  *
- * \class ListDevelopmentSchemaArnsResponsePrivate
- *
- * \brief Private implementation for ListDevelopmentSchemaArnsResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDevelopmentSchemaArnsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDevelopmentSchemaArnsResponse instance.
+ * Constructs a ListDevelopmentSchemaArnsResponsePrivate object with public implementation \a q.
  */
 ListDevelopmentSchemaArnsResponsePrivate::ListDevelopmentSchemaArnsResponsePrivate(
     ListDevelopmentSchemaArnsResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListDevelopmentSchemaArnsResponsePrivate::ListDevelopmentSchemaArnsResponsePriva
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListDevelopmentSchemaArnsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListDevelopmentSchemaArns response element from \a xml.
  */
 void ListDevelopmentSchemaArnsResponsePrivate::parseListDevelopmentSchemaArnsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListCommandsResponse
- *
  * \brief The ListCommandsResponse class provides an interace for SSM ListCommands responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListCommandsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCommandsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCommandsResponse::ListCommandsResponse(
         const ListCommandsRequest &request,
@@ -79,6 +74,9 @@ ListCommandsResponse::ListCommandsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCommandsRequest * ListCommandsResponse::request() const
 {
     Q_D(const ListCommandsResponse);
@@ -86,9 +84,8 @@ const ListCommandsRequest * ListCommandsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM ListCommands response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM ListCommands \a response.
  */
 void ListCommandsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void ListCommandsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::ListCommandsResponsePrivate
+ * \brief The ListCommandsResponsePrivate class provides private implementation for ListCommandsResponse.
  * \internal
  *
- * \class ListCommandsResponsePrivate
- *
- * \brief Private implementation for ListCommandsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCommandsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCommandsResponse instance.
+ * Constructs a ListCommandsResponsePrivate object with public implementation \a q.
  */
 ListCommandsResponsePrivate::ListCommandsResponsePrivate(
     ListCommandsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ ListCommandsResponsePrivate::ListCommandsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM ListCommandsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM ListCommands response element from \a xml.
  */
 void ListCommandsResponsePrivate::parseListCommandsResponse(QXmlStreamReader &xml)
 {

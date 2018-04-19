@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSecurityGroupRuleDescriptionsEgressRequ
  */
 
 /*!
- *
- * Constructs a UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate::UpdateSecurityGroupRuleDescriptionsEgressRequestPrivate(
     const EC2Request::Action action, UpdateSecurityGroupRuleDescriptionsEgressRequest * const q)

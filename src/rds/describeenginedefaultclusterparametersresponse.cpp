@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeEngineDefaultClusterParametersResponse
- *
  * \brief The DescribeEngineDefaultClusterParametersResponse class provides an interace for RDS DescribeEngineDefaultClusterParameters responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeEngineDefaultClusterParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEngineDefaultClusterParametersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEngineDefaultClusterParametersResponse::DescribeEngineDefaultClusterParametersResponse(
         const DescribeEngineDefaultClusterParametersRequest &request,
@@ -119,6 +114,9 @@ DescribeEngineDefaultClusterParametersResponse::DescribeEngineDefaultClusterPara
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEngineDefaultClusterParametersRequest * DescribeEngineDefaultClusterParametersResponse::request() const
 {
     Q_D(const DescribeEngineDefaultClusterParametersResponse);
@@ -126,9 +124,8 @@ const DescribeEngineDefaultClusterParametersRequest * DescribeEngineDefaultClust
 }
 
 /*!
- * @brief  Parse a RDS DescribeEngineDefaultClusterParameters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeEngineDefaultClusterParameters \a response.
  */
 void DescribeEngineDefaultClusterParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeEngineDefaultClusterParametersResponse::parseSuccess(QIODevice &res
 }
 
 /*!
+ * \class QtAws::RDS::DescribeEngineDefaultClusterParametersResponsePrivate
+ * \brief The DescribeEngineDefaultClusterParametersResponsePrivate class provides private implementation for DescribeEngineDefaultClusterParametersResponse.
  * \internal
  *
- * \class DescribeEngineDefaultClusterParametersResponsePrivate
- *
- * \brief Private implementation for DescribeEngineDefaultClusterParametersResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEngineDefaultClusterParametersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEngineDefaultClusterParametersResponse instance.
+ * Constructs a DescribeEngineDefaultClusterParametersResponsePrivate object with public implementation \a q.
  */
 DescribeEngineDefaultClusterParametersResponsePrivate::DescribeEngineDefaultClusterParametersResponsePrivate(
     DescribeEngineDefaultClusterParametersResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeEngineDefaultClusterParametersResponsePrivate::DescribeEngineDefaultClus
 }
 
 /*!
- * @brief  Parse an RDS DescribeEngineDefaultClusterParametersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeEngineDefaultClusterParameters response element from \a xml.
  */
 void DescribeEngineDefaultClusterParametersResponsePrivate::parseDescribeEngineDefaultClusterParametersResponse(QXmlStreamReader &xml)
 {

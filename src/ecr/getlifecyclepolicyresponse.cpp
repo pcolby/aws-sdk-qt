@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::GetLifecyclePolicyResponse
- *
  * \brief The GetLifecyclePolicyResponse class provides an interace for ECR GetLifecyclePolicy responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new GetLifecyclePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetLifecyclePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetLifecyclePolicyResponse::GetLifecyclePolicyResponse(
         const GetLifecyclePolicyRequest &request,
@@ -59,6 +54,9 @@ GetLifecyclePolicyResponse::GetLifecyclePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetLifecyclePolicyRequest * GetLifecyclePolicyResponse::request() const
 {
     Q_D(const GetLifecyclePolicyResponse);
@@ -66,9 +64,8 @@ const GetLifecyclePolicyRequest * GetLifecyclePolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR GetLifecyclePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR GetLifecyclePolicy \a response.
  */
 void GetLifecyclePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetLifecyclePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::GetLifecyclePolicyResponsePrivate
+ * \brief The GetLifecyclePolicyResponsePrivate class provides private implementation for GetLifecyclePolicyResponse.
  * \internal
  *
- * \class GetLifecyclePolicyResponsePrivate
- *
- * \brief Private implementation for GetLifecyclePolicyResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLifecyclePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetLifecyclePolicyResponse instance.
+ * Constructs a GetLifecyclePolicyResponsePrivate object with public implementation \a q.
  */
 GetLifecyclePolicyResponsePrivate::GetLifecyclePolicyResponsePrivate(
     GetLifecyclePolicyResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ GetLifecyclePolicyResponsePrivate::GetLifecyclePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR GetLifecyclePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR GetLifecyclePolicy response element from \a xml.
  */
 void GetLifecyclePolicyResponsePrivate::parseGetLifecyclePolicyResponse(QXmlStreamReader &xml)
 {

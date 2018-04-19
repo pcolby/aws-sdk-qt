@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * CreateLogGroupRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CreateLogGroupRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a CreateLogGroupRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 CreateLogGroupRequestPrivate::CreateLogGroupRequestPrivate(
     const CloudWatchLogsRequest::Action action, CreateLogGroupRequest * const q)

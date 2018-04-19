@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteOTAUpdateRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteOTAUpdateRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeleteOTAUpdateRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeleteOTAUpdateRequestPrivate::DeleteOTAUpdateRequestPrivate(
     const IoTRequest::Action action, DeleteOTAUpdateRequest * const q)

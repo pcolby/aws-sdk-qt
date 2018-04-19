@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetCoreDefinitionRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetCoreDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a GetCoreDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 GetCoreDefinitionRequestPrivate::GetCoreDefinitionRequestPrivate(
     const GreengrassRequest::Action action, GetCoreDefinitionRequest * const q)

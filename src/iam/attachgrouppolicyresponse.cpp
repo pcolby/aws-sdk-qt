@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AttachGroupPolicyResponse
- *
  * \brief The AttachGroupPolicyResponse class provides an interace for IAM AttachGroupPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AttachGroupPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachGroupPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachGroupPolicyResponse::AttachGroupPolicyResponse(
         const AttachGroupPolicyRequest &request,
@@ -120,6 +115,9 @@ AttachGroupPolicyResponse::AttachGroupPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachGroupPolicyRequest * AttachGroupPolicyResponse::request() const
 {
     Q_D(const AttachGroupPolicyResponse);
@@ -127,9 +125,8 @@ const AttachGroupPolicyRequest * AttachGroupPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM AttachGroupPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM AttachGroupPolicy \a response.
  */
 void AttachGroupPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void AttachGroupPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::AttachGroupPolicyResponsePrivate
+ * \brief The AttachGroupPolicyResponsePrivate class provides private implementation for AttachGroupPolicyResponse.
  * \internal
  *
- * \class AttachGroupPolicyResponsePrivate
- *
- * \brief Private implementation for AttachGroupPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachGroupPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachGroupPolicyResponse instance.
+ * Constructs a AttachGroupPolicyResponsePrivate object with public implementation \a q.
  */
 AttachGroupPolicyResponsePrivate::AttachGroupPolicyResponsePrivate(
     AttachGroupPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ AttachGroupPolicyResponsePrivate::AttachGroupPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM AttachGroupPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM AttachGroupPolicy response element from \a xml.
  */
 void AttachGroupPolicyResponsePrivate::parseAttachGroupPolicyResponse(QXmlStreamReader &xml)
 {

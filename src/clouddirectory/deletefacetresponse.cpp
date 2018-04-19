@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DeleteFacetResponse
- *
  * \brief The DeleteFacetResponse class provides an interace for CloudDirectory DeleteFacet responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DeleteFacetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteFacetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteFacetResponse::DeleteFacetResponse(
         const DeleteFacetRequest &request,
@@ -62,6 +57,9 @@ DeleteFacetResponse::DeleteFacetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteFacetRequest * DeleteFacetResponse::request() const
 {
     Q_D(const DeleteFacetResponse);
@@ -69,9 +67,8 @@ const DeleteFacetRequest * DeleteFacetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory DeleteFacet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory DeleteFacet \a response.
  */
 void DeleteFacetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DeleteFacetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::DeleteFacetResponsePrivate
+ * \brief The DeleteFacetResponsePrivate class provides private implementation for DeleteFacetResponse.
  * \internal
  *
- * \class DeleteFacetResponsePrivate
- *
- * \brief Private implementation for DeleteFacetResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFacetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteFacetResponse instance.
+ * Constructs a DeleteFacetResponsePrivate object with public implementation \a q.
  */
 DeleteFacetResponsePrivate::DeleteFacetResponsePrivate(
     DeleteFacetResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ DeleteFacetResponsePrivate::DeleteFacetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory DeleteFacetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory DeleteFacet response element from \a xml.
  */
 void DeleteFacetResponsePrivate::parseDeleteFacetResponse(QXmlStreamReader &xml)
 {

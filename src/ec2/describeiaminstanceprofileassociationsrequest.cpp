@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeIamInstanceProfileAssociationsRequest
  */
 
 /*!
- *
- * Constructs a DescribeIamInstanceProfileAssociationsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeIamInstanceProfileAssociationsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeIamInstanceProfileAssociationsRequestPrivate::DescribeIamInstanceProfileAssociationsRequestPrivate(
     const EC2Request::Action action, DescribeIamInstanceProfileAssociationsRequest * const q)

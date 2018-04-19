@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteDocumentRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDocumentRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
     const SSMRequest::Action action, DeleteDocumentRequest * const q)

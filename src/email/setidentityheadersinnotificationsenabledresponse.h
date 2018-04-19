@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetIdentityHeadersInNotificationsEnabledResponse : public SES
 public:
     SetIdentityHeadersInNotificationsEnabledResponse(const SetIdentityHeadersInNotificationsEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetIdentityHeadersInNotificationsEnabledRequest * request() const;
+    virtual const SetIdentityHeadersInNotificationsEnabledRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetIdentityHeadersInNotificationsEnabledResponse)

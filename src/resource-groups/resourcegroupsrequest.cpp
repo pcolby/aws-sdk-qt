@@ -51,7 +51,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * Constructs a[n] ResourceGroupsRequest object for ResourceGroups \a action.
+ * Constructs a ResourceGroupsRequest object for ResourceGroups \a action.
  */
 ResourceGroupsRequest::ResourceGroupsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ResourceGroupsRequestPrivate(action, this))
@@ -251,8 +251,8 @@ QNetworkRequest ResourceGroupsRequest::unsignedRequest(const QUrl &endpoint) con
  */
 
 /*!
- * Constructs a ResourceGroupsRequestPrivate object for ResourceGroups \a action with,
- * public implementation \a q.
+ * Constructs a ResourceGroupsRequestPrivate object for ResourceGroups \a action,
+ * with public implementation \a q.
  */
 ResourceGroupsRequestPrivate::ResourceGroupsRequestPrivate(const ResourceGroupsRequest::Action action, ResourceGroupsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

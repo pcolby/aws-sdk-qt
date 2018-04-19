@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDatasetRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteDatasetRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDatasetRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 DeleteDatasetRequestPrivate::DeleteDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, DeleteDatasetRequest * const q)

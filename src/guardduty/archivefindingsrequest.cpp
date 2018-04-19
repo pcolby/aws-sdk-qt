@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ArchiveFindingsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ArchiveFindingsRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a ArchiveFindingsRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 ArchiveFindingsRequestPrivate::ArchiveFindingsRequestPrivate(
     const GuardDutyRequest::Action action, ArchiveFindingsRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateFolderResponse : public WorkDocsResponse {
 public:
     UpdateFolderResponse(const UpdateFolderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateFolderRequest * request() const;
+    virtual const UpdateFolderRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateFolderResponse)

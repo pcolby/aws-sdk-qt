@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * SetQueueAttributesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a SetQueueAttributesRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a SetQueueAttributesRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 SetQueueAttributesRequestPrivate::SetQueueAttributesRequestPrivate(
     const SQSRequest::Action action, SetQueueAttributesRequest * const q)

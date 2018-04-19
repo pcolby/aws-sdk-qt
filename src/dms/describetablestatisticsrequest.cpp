@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTableStatisticsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeTableStatisticsRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTableStatisticsRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DescribeTableStatisticsRequestPrivate::DescribeTableStatisticsRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeTableStatisticsRequest * const q)

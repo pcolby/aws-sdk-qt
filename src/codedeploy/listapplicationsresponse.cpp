@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ListApplicationsResponse
- *
  * \brief The ListApplicationsResponse class provides an interace for CodeDeploy ListApplications responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ListApplicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListApplicationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListApplicationsResponse::ListApplicationsResponse(
         const ListApplicationsRequest &request,
@@ -136,6 +131,9 @@ ListApplicationsResponse::ListApplicationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListApplicationsRequest * ListApplicationsResponse::request() const
 {
     Q_D(const ListApplicationsResponse);
@@ -143,9 +141,8 @@ const ListApplicationsRequest * ListApplicationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeDeploy ListApplications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy ListApplications \a response.
  */
 void ListApplicationsResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void ListApplicationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::ListApplicationsResponsePrivate
+ * \brief The ListApplicationsResponsePrivate class provides private implementation for ListApplicationsResponse.
  * \internal
  *
- * \class ListApplicationsResponsePrivate
- *
- * \brief Private implementation for ListApplicationsResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListApplicationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListApplicationsResponse instance.
+ * Constructs a ListApplicationsResponsePrivate object with public implementation \a q.
  */
 ListApplicationsResponsePrivate::ListApplicationsResponsePrivate(
     ListApplicationsResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ ListApplicationsResponsePrivate::ListApplicationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy ListApplicationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy ListApplications response element from \a xml.
  */
 void ListApplicationsResponsePrivate::parseListApplicationsResponse(QXmlStreamReader &xml)
 {

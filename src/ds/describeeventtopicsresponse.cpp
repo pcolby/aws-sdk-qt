@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeEventTopicsResponse
- *
  * \brief The DescribeEventTopicsResponse class provides an interace for DirectoryService DescribeEventTopics responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventTopicsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEventTopicsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEventTopicsResponse::DescribeEventTopicsResponse(
         const DescribeEventTopicsRequest &request,
@@ -69,6 +64,9 @@ DescribeEventTopicsResponse::DescribeEventTopicsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEventTopicsRequest * DescribeEventTopicsResponse::request() const
 {
     Q_D(const DescribeEventTopicsResponse);
@@ -76,9 +74,8 @@ const DescribeEventTopicsRequest * DescribeEventTopicsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService DescribeEventTopics response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DescribeEventTopics \a response.
  */
 void DescribeEventTopicsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeEventTopicsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DescribeEventTopicsResponsePrivate
+ * \brief The DescribeEventTopicsResponsePrivate class provides private implementation for DescribeEventTopicsResponse.
  * \internal
  *
- * \class DescribeEventTopicsResponsePrivate
- *
- * \brief Private implementation for DescribeEventTopicsResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventTopicsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEventTopicsResponse instance.
+ * Constructs a DescribeEventTopicsResponsePrivate object with public implementation \a q.
  */
 DescribeEventTopicsResponsePrivate::DescribeEventTopicsResponsePrivate(
     DescribeEventTopicsResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeEventTopicsResponsePrivate::DescribeEventTopicsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService DescribeEventTopicsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DescribeEventTopics response element from \a xml.
  */
 void DescribeEventTopicsResponsePrivate::parseDescribeEventTopicsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::DescribeIdentityResponse
- *
  * \brief The DescribeIdentityResponse class provides an interace for CognitoIdentity DescribeIdentity responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new DescribeIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeIdentityResponse::DescribeIdentityResponse(
         const DescribeIdentityRequest &request,
@@ -93,6 +88,9 @@ DescribeIdentityResponse::DescribeIdentityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeIdentityRequest * DescribeIdentityResponse::request() const
 {
     Q_D(const DescribeIdentityResponse);
@@ -100,9 +98,8 @@ const DescribeIdentityRequest * DescribeIdentityResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentity DescribeIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity DescribeIdentity \a response.
  */
 void DescribeIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DescribeIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::DescribeIdentityResponsePrivate
+ * \brief The DescribeIdentityResponsePrivate class provides private implementation for DescribeIdentityResponse.
  * \internal
  *
- * \class DescribeIdentityResponsePrivate
- *
- * \brief Private implementation for DescribeIdentityResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeIdentityResponse instance.
+ * Constructs a DescribeIdentityResponsePrivate object with public implementation \a q.
  */
 DescribeIdentityResponsePrivate::DescribeIdentityResponsePrivate(
     DescribeIdentityResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ DescribeIdentityResponsePrivate::DescribeIdentityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentity DescribeIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity DescribeIdentity response element from \a xml.
  */
 void DescribeIdentityResponsePrivate::parseDescribeIdentityResponse(QXmlStreamReader &xml)
 {

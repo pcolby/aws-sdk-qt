@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::EnableLoggingResponse
- *
  * \brief The EnableLoggingResponse class provides an interace for Redshift EnableLogging responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new EnableLoggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableLoggingResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableLoggingResponse::EnableLoggingResponse(
         const EnableLoggingRequest &request,
@@ -85,6 +80,9 @@ EnableLoggingResponse::EnableLoggingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableLoggingRequest * EnableLoggingResponse::request() const
 {
     Q_D(const EnableLoggingResponse);
@@ -92,9 +90,8 @@ const EnableLoggingRequest * EnableLoggingResponse::request() const
 }
 
 /*!
- * @brief  Parse a Redshift EnableLogging response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift EnableLogging \a response.
  */
 void EnableLoggingResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void EnableLoggingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::EnableLoggingResponsePrivate
+ * \brief The EnableLoggingResponsePrivate class provides private implementation for EnableLoggingResponse.
  * \internal
  *
- * \class EnableLoggingResponsePrivate
- *
- * \brief Private implementation for EnableLoggingResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableLoggingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableLoggingResponse instance.
+ * Constructs a EnableLoggingResponsePrivate object with public implementation \a q.
  */
 EnableLoggingResponsePrivate::EnableLoggingResponsePrivate(
     EnableLoggingResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ EnableLoggingResponsePrivate::EnableLoggingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift EnableLoggingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift EnableLogging response element from \a xml.
  */
 void EnableLoggingResponsePrivate::parseEnableLoggingResponse(QXmlStreamReader &xml)
 {

@@ -66,7 +66,7 @@ namespace EMR {
  */
 
 /*!
- * Constructs a[n] EMRRequest object for EMR \a action.
+ * Constructs a EMRRequest object for EMR \a action.
  */
 EMRRequest::EMRRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new EMRRequestPrivate(action, this))
@@ -266,8 +266,8 @@ QNetworkRequest EMRRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a EMRRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a EMRRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 EMRRequestPrivate::EMRRequestPrivate(const EMRRequest::Action action, EMRRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

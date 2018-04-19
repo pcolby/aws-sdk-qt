@@ -28,16 +28,13 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::KinesisVideoResponse
- *
  * \brief The KinesisVideoResponse class provides an interface for KinesisVideo responses.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @brief  Constructs a new KinesisVideoResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a KinesisVideoResponse object with parent \a parent.
  */
 KinesisVideoResponse::KinesisVideoResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new KinesisVideoResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ KinesisVideoResponse::KinesisVideoResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisVideoResponse object.
- *
+ * \internal
+ * Constructs a KinesisVideoResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisVideoResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 KinesisVideoResponse::KinesisVideoResponse(KinesisVideoResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ KinesisVideoResponse::KinesisVideoResponse(KinesisVideoResponsePrivate * const d
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void KinesisVideoResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void KinesisVideoResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::KinesisVideo::KinesisVideoResponsePrivate
+ * \brief The KinesisVideoResponsePrivate class provides private implementation for KinesisVideoResponse.
+ * \internal
  *
- * @class  KinesisVideoResponsePrivate
- *
- * @brief  Private implementation for KinesisVideoResponse.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisVideoResponsePrivate object.
- *
- * @param  q  Pointer to this object's public KinesisVideoResponse instance.
+ * Constructs a KinesisVideoResponsePrivate object with public implementation \a q.
  */
 KinesisVideoResponsePrivate::KinesisVideoResponsePrivate(
     KinesisVideoResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

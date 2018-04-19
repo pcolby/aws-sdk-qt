@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListHandshakesForOrganizationResponse
- *
  * \brief The ListHandshakesForOrganizationResponse class provides an interace for Organizations ListHandshakesForOrganization responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListHandshakesForOrganizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListHandshakesForOrganizationResponse object for \a reply to \a request, with parent \a parent.
  */
 ListHandshakesForOrganizationResponse::ListHandshakesForOrganizationResponse(
         const ListHandshakesForOrganizationRequest &request,
@@ -197,6 +192,9 @@ ListHandshakesForOrganizationResponse::ListHandshakesForOrganizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListHandshakesForOrganizationRequest * ListHandshakesForOrganizationResponse::request() const
 {
     Q_D(const ListHandshakesForOrganizationResponse);
@@ -204,9 +202,8 @@ const ListHandshakesForOrganizationRequest * ListHandshakesForOrganizationRespon
 }
 
 /*!
- * @brief  Parse a Organizations ListHandshakesForOrganization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations ListHandshakesForOrganization \a response.
  */
 void ListHandshakesForOrganizationResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void ListHandshakesForOrganizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::ListHandshakesForOrganizationResponsePrivate
+ * \brief The ListHandshakesForOrganizationResponsePrivate class provides private implementation for ListHandshakesForOrganizationResponse.
  * \internal
  *
- * \class ListHandshakesForOrganizationResponsePrivate
- *
- * \brief Private implementation for ListHandshakesForOrganizationResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHandshakesForOrganizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListHandshakesForOrganizationResponse instance.
+ * Constructs a ListHandshakesForOrganizationResponsePrivate object with public implementation \a q.
  */
 ListHandshakesForOrganizationResponsePrivate::ListHandshakesForOrganizationResponsePrivate(
     ListHandshakesForOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ ListHandshakesForOrganizationResponsePrivate::ListHandshakesForOrganizationRespo
 }
 
 /*!
- * @brief  Parse an Organizations ListHandshakesForOrganizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations ListHandshakesForOrganization response element from \a xml.
  */
 void ListHandshakesForOrganizationResponsePrivate::parseListHandshakesForOrganizationResponse(QXmlStreamReader &xml)
 {

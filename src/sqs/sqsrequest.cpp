@@ -59,7 +59,7 @@ namespace SQS {
  */
 
 /*!
- * Constructs a[n] SQSRequest object for SQS \a action.
+ * Constructs a SQSRequest object for SQS \a action.
  */
 SQSRequest::SQSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SQSRequestPrivate(action, this))
@@ -259,8 +259,8 @@ QNetworkRequest SQSRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a SQSRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a SQSRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 SQSRequestPrivate::SQSRequestPrivate(const SQSRequest::Action action, SQSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

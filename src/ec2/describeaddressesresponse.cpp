@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeAddressesResponse
- *
  * \brief The DescribeAddressesResponse class provides an interace for EC2 DescribeAddresses responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeAddressesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAddressesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAddressesResponse::DescribeAddressesResponse(
         const DescribeAddressesRequest &request,
@@ -59,6 +54,9 @@ DescribeAddressesResponse::DescribeAddressesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAddressesRequest * DescribeAddressesResponse::request() const
 {
     Q_D(const DescribeAddressesResponse);
@@ -66,9 +64,8 @@ const DescribeAddressesRequest * DescribeAddressesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeAddresses response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeAddresses \a response.
  */
 void DescribeAddressesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeAddressesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeAddressesResponsePrivate
+ * \brief The DescribeAddressesResponsePrivate class provides private implementation for DescribeAddressesResponse.
  * \internal
  *
- * \class DescribeAddressesResponsePrivate
- *
- * \brief Private implementation for DescribeAddressesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAddressesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAddressesResponse instance.
+ * Constructs a DescribeAddressesResponsePrivate object with public implementation \a q.
  */
 DescribeAddressesResponsePrivate::DescribeAddressesResponsePrivate(
     DescribeAddressesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeAddressesResponsePrivate::DescribeAddressesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeAddressesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeAddresses response element from \a xml.
  */
 void DescribeAddressesResponsePrivate::parseDescribeAddressesResponse(QXmlStreamReader &xml)
 {

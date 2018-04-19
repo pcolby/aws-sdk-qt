@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DescribeGameSessionDetailsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeGameSessionDetailsRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeGameSessionDetailsRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DescribeGameSessionDetailsRequestPrivate::DescribeGameSessionDetailsRequestPrivate(
     const GameLiftRequest::Action action, DescribeGameSessionDetailsRequest * const q)

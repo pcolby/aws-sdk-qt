@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAWSServiceAccessForOrganizationResponse : public Organiza
 public:
     ListAWSServiceAccessForOrganizationResponse(const ListAWSServiceAccessForOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAWSServiceAccessForOrganizationRequest * request() const;
+    virtual const ListAWSServiceAccessForOrganizationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListAWSServiceAccessForOrganizationResponse)

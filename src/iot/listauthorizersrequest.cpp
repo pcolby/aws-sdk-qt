@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListAuthorizersRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ListAuthorizersRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListAuthorizersRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListAuthorizersRequestPrivate::ListAuthorizersRequestPrivate(
     const IoTRequest::Action action, ListAuthorizersRequest * const q)

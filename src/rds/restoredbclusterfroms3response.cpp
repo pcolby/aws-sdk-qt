@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RestoreDBClusterFromS3Response
- *
  * \brief The RestoreDBClusterFromS3Response class provides an interace for RDS RestoreDBClusterFromS3 responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RestoreDBClusterFromS3Response object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreDBClusterFromS3Response object for \a reply to \a request, with parent \a parent.
  */
 RestoreDBClusterFromS3Response::RestoreDBClusterFromS3Response(
         const RestoreDBClusterFromS3Request &request,
@@ -119,6 +114,9 @@ RestoreDBClusterFromS3Response::RestoreDBClusterFromS3Response(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreDBClusterFromS3Request * RestoreDBClusterFromS3Response::request() const
 {
     Q_D(const RestoreDBClusterFromS3Response);
@@ -126,9 +124,8 @@ const RestoreDBClusterFromS3Request * RestoreDBClusterFromS3Response::request() 
 }
 
 /*!
- * @brief  Parse a RDS RestoreDBClusterFromS3 response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS RestoreDBClusterFromS3 \a response.
  */
 void RestoreDBClusterFromS3Response::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void RestoreDBClusterFromS3Response::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::RestoreDBClusterFromS3ResponsePrivate
+ * \brief The RestoreDBClusterFromS3ResponsePrivate class provides private implementation for RestoreDBClusterFromS3Response.
  * \internal
  *
- * \class RestoreDBClusterFromS3ResponsePrivate
- *
- * \brief Private implementation for RestoreDBClusterFromS3Response.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreDBClusterFromS3ResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreDBClusterFromS3Response instance.
+ * Constructs a RestoreDBClusterFromS3ResponsePrivate object with public implementation \a q.
  */
 RestoreDBClusterFromS3ResponsePrivate::RestoreDBClusterFromS3ResponsePrivate(
     RestoreDBClusterFromS3Response * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ RestoreDBClusterFromS3ResponsePrivate::RestoreDBClusterFromS3ResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS RestoreDBClusterFromS3Response element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS RestoreDBClusterFromS3 response element from \a xml.
  */
 void RestoreDBClusterFromS3ResponsePrivate::parseRestoreDBClusterFromS3Response(QXmlStreamReader &xml)
 {

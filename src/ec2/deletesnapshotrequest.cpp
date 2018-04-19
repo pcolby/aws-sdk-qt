@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteSnapshotRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSnapshotRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteSnapshotRequestPrivate::DeleteSnapshotRequestPrivate(
     const EC2Request::Action action, DeleteSnapshotRequest * const q)

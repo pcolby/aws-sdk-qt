@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::TerminateInstanceInAutoScalingGroupResponse
- *
  * \brief The TerminateInstanceInAutoScalingGroupResponse class provides an interace for AutoScaling TerminateInstanceInAutoScalingGroup responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new TerminateInstanceInAutoScalingGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TerminateInstanceInAutoScalingGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 TerminateInstanceInAutoScalingGroupResponse::TerminateInstanceInAutoScalingGroupResponse(
         const TerminateInstanceInAutoScalingGroupRequest &request,
@@ -60,6 +55,9 @@ TerminateInstanceInAutoScalingGroupResponse::TerminateInstanceInAutoScalingGroup
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TerminateInstanceInAutoScalingGroupRequest * TerminateInstanceInAutoScalingGroupResponse::request() const
 {
     Q_D(const TerminateInstanceInAutoScalingGroupResponse);
@@ -67,9 +65,8 @@ const TerminateInstanceInAutoScalingGroupRequest * TerminateInstanceInAutoScalin
 }
 
 /*!
- * @brief  Parse a AutoScaling TerminateInstanceInAutoScalingGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling TerminateInstanceInAutoScalingGroup \a response.
  */
 void TerminateInstanceInAutoScalingGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void TerminateInstanceInAutoScalingGroupResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::AutoScaling::TerminateInstanceInAutoScalingGroupResponsePrivate
+ * \brief The TerminateInstanceInAutoScalingGroupResponsePrivate class provides private implementation for TerminateInstanceInAutoScalingGroupResponse.
  * \internal
  *
- * \class TerminateInstanceInAutoScalingGroupResponsePrivate
- *
- * \brief Private implementation for TerminateInstanceInAutoScalingGroupResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateInstanceInAutoScalingGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TerminateInstanceInAutoScalingGroupResponse instance.
+ * Constructs a TerminateInstanceInAutoScalingGroupResponsePrivate object with public implementation \a q.
  */
 TerminateInstanceInAutoScalingGroupResponsePrivate::TerminateInstanceInAutoScalingGroupResponsePrivate(
     TerminateInstanceInAutoScalingGroupResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ TerminateInstanceInAutoScalingGroupResponsePrivate::TerminateInstanceInAutoScali
 }
 
 /*!
- * @brief  Parse an AutoScaling TerminateInstanceInAutoScalingGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling TerminateInstanceInAutoScalingGroup response element from \a xml.
  */
 void TerminateInstanceInAutoScalingGroupResponsePrivate::parseTerminateInstanceInAutoScalingGroupResponse(QXmlStreamReader &xml)
 {

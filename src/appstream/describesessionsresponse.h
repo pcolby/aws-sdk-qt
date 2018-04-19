@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSessionsResponse : public AppStreamResponse {
 public:
     DescribeSessionsResponse(const DescribeSessionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSessionsRequest * request() const;
+    virtual const DescribeSessionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSessionsResponse)

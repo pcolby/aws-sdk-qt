@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::UpdateSecretResponse
- *
  * \brief The UpdateSecretResponse class provides an interace for SecretsManager UpdateSecret responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new UpdateSecretResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSecretResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSecretResponse::UpdateSecretResponse(
         const UpdateSecretRequest &request,
@@ -155,6 +150,9 @@ UpdateSecretResponse::UpdateSecretResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSecretRequest * UpdateSecretResponse::request() const
 {
     Q_D(const UpdateSecretResponse);
@@ -162,9 +160,8 @@ const UpdateSecretRequest * UpdateSecretResponse::request() const
 }
 
 /*!
- * @brief  Parse a SecretsManager UpdateSecret response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager UpdateSecret \a response.
  */
 void UpdateSecretResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void UpdateSecretResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::UpdateSecretResponsePrivate
+ * \brief The UpdateSecretResponsePrivate class provides private implementation for UpdateSecretResponse.
  * \internal
  *
- * \class UpdateSecretResponsePrivate
- *
- * \brief Private implementation for UpdateSecretResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSecretResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSecretResponse instance.
+ * Constructs a UpdateSecretResponsePrivate object with public implementation \a q.
  */
 UpdateSecretResponsePrivate::UpdateSecretResponsePrivate(
     UpdateSecretResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ UpdateSecretResponsePrivate::UpdateSecretResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SecretsManager UpdateSecretResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager UpdateSecret response element from \a xml.
  */
 void UpdateSecretResponsePrivate::parseUpdateSecretResponse(QXmlStreamReader &xml)
 {

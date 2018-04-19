@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListCoreDefinitionVersionsResponse
- *
  * \brief The ListCoreDefinitionVersionsResponse class provides an interace for Greengrass ListCoreDefinitionVersions responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListCoreDefinitionVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCoreDefinitionVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCoreDefinitionVersionsResponse::ListCoreDefinitionVersionsResponse(
         const ListCoreDefinitionVersionsRequest &request,
@@ -58,6 +53,9 @@ ListCoreDefinitionVersionsResponse::ListCoreDefinitionVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCoreDefinitionVersionsRequest * ListCoreDefinitionVersionsResponse::request() const
 {
     Q_D(const ListCoreDefinitionVersionsResponse);
@@ -65,9 +63,8 @@ const ListCoreDefinitionVersionsRequest * ListCoreDefinitionVersionsResponse::re
 }
 
 /*!
- * @brief  Parse a Greengrass ListCoreDefinitionVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass ListCoreDefinitionVersions \a response.
  */
 void ListCoreDefinitionVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListCoreDefinitionVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::ListCoreDefinitionVersionsResponsePrivate
+ * \brief The ListCoreDefinitionVersionsResponsePrivate class provides private implementation for ListCoreDefinitionVersionsResponse.
  * \internal
  *
- * \class ListCoreDefinitionVersionsResponsePrivate
- *
- * \brief Private implementation for ListCoreDefinitionVersionsResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCoreDefinitionVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCoreDefinitionVersionsResponse instance.
+ * Constructs a ListCoreDefinitionVersionsResponsePrivate object with public implementation \a q.
  */
 ListCoreDefinitionVersionsResponsePrivate::ListCoreDefinitionVersionsResponsePrivate(
     ListCoreDefinitionVersionsResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ ListCoreDefinitionVersionsResponsePrivate::ListCoreDefinitionVersionsResponsePri
 }
 
 /*!
- * @brief  Parse an Greengrass ListCoreDefinitionVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass ListCoreDefinitionVersions response element from \a xml.
  */
 void ListCoreDefinitionVersionsResponsePrivate::parseListCoreDefinitionVersionsResponse(QXmlStreamReader &xml)
 {

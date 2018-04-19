@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::UpdateNotebookInstanceResponse
- *
  * \brief The UpdateNotebookInstanceResponse class provides an interace for SageMaker UpdateNotebookInstance responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::updateNotebookInstance
  */
 
 /*!
- * @brief  Constructs a new UpdateNotebookInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateNotebookInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateNotebookInstanceResponse::UpdateNotebookInstanceResponse(
         const UpdateNotebookInstanceRequest &request,
@@ -55,6 +50,9 @@ UpdateNotebookInstanceResponse::UpdateNotebookInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateNotebookInstanceRequest * UpdateNotebookInstanceResponse::request() const
 {
     Q_D(const UpdateNotebookInstanceResponse);
@@ -62,9 +60,8 @@ const UpdateNotebookInstanceRequest * UpdateNotebookInstanceResponse::request() 
 }
 
 /*!
- * @brief  Parse a SageMaker UpdateNotebookInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker UpdateNotebookInstance \a response.
  */
 void UpdateNotebookInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateNotebookInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::UpdateNotebookInstanceResponsePrivate
+ * \brief The UpdateNotebookInstanceResponsePrivate class provides private implementation for UpdateNotebookInstanceResponse.
  * \internal
  *
- * \class UpdateNotebookInstanceResponsePrivate
- *
- * \brief Private implementation for UpdateNotebookInstanceResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateNotebookInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateNotebookInstanceResponse instance.
+ * Constructs a UpdateNotebookInstanceResponsePrivate object with public implementation \a q.
  */
 UpdateNotebookInstanceResponsePrivate::UpdateNotebookInstanceResponsePrivate(
     UpdateNotebookInstanceResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateNotebookInstanceResponsePrivate::UpdateNotebookInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker UpdateNotebookInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker UpdateNotebookInstance response element from \a xml.
  */
 void UpdateNotebookInstanceResponsePrivate::parseUpdateNotebookInstanceResponse(QXmlStreamReader &xml)
 {

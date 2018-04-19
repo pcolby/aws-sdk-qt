@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetHostedZoneLimitResponse
- *
  * \brief The GetHostedZoneLimitResponse class provides an interace for Route53 GetHostedZoneLimit responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getHostedZoneLimit
  */
 
 /*!
- * @brief  Constructs a new GetHostedZoneLimitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetHostedZoneLimitResponse object for \a reply to \a request, with parent \a parent.
  */
 GetHostedZoneLimitResponse::GetHostedZoneLimitResponse(
         const GetHostedZoneLimitRequest &request,
@@ -55,6 +50,9 @@ GetHostedZoneLimitResponse::GetHostedZoneLimitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetHostedZoneLimitRequest * GetHostedZoneLimitResponse::request() const
 {
     Q_D(const GetHostedZoneLimitResponse);
@@ -62,9 +60,8 @@ const GetHostedZoneLimitRequest * GetHostedZoneLimitResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 GetHostedZoneLimit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetHostedZoneLimit \a response.
  */
 void GetHostedZoneLimitResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetHostedZoneLimitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetHostedZoneLimitResponsePrivate
+ * \brief The GetHostedZoneLimitResponsePrivate class provides private implementation for GetHostedZoneLimitResponse.
  * \internal
  *
- * \class GetHostedZoneLimitResponsePrivate
- *
- * \brief Private implementation for GetHostedZoneLimitResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHostedZoneLimitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetHostedZoneLimitResponse instance.
+ * Constructs a GetHostedZoneLimitResponsePrivate object with public implementation \a q.
  */
 GetHostedZoneLimitResponsePrivate::GetHostedZoneLimitResponsePrivate(
     GetHostedZoneLimitResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetHostedZoneLimitResponsePrivate::GetHostedZoneLimitResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 GetHostedZoneLimitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetHostedZoneLimit response element from \a xml.
  */
 void GetHostedZoneLimitResponsePrivate::parseGetHostedZoneLimitResponse(QXmlStreamReader &xml)
 {

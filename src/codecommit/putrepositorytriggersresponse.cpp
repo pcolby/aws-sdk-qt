@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::PutRepositoryTriggersResponse
- *
  * \brief The PutRepositoryTriggersResponse class provides an interace for CodeCommit PutRepositoryTriggers responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new PutRepositoryTriggersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutRepositoryTriggersResponse object for \a reply to \a request, with parent \a parent.
  */
 PutRepositoryTriggersResponse::PutRepositoryTriggersResponse(
         const PutRepositoryTriggersRequest &request,
@@ -245,6 +240,9 @@ PutRepositoryTriggersResponse::PutRepositoryTriggersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutRepositoryTriggersRequest * PutRepositoryTriggersResponse::request() const
 {
     Q_D(const PutRepositoryTriggersResponse);
@@ -252,9 +250,8 @@ const PutRepositoryTriggersRequest * PutRepositoryTriggersResponse::request() co
 }
 
 /*!
- * @brief  Parse a CodeCommit PutRepositoryTriggers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit PutRepositoryTriggers \a response.
  */
 void PutRepositoryTriggersResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void PutRepositoryTriggersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::PutRepositoryTriggersResponsePrivate
+ * \brief The PutRepositoryTriggersResponsePrivate class provides private implementation for PutRepositoryTriggersResponse.
  * \internal
  *
- * \class PutRepositoryTriggersResponsePrivate
- *
- * \brief Private implementation for PutRepositoryTriggersResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRepositoryTriggersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutRepositoryTriggersResponse instance.
+ * Constructs a PutRepositoryTriggersResponsePrivate object with public implementation \a q.
  */
 PutRepositoryTriggersResponsePrivate::PutRepositoryTriggersResponsePrivate(
     PutRepositoryTriggersResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ PutRepositoryTriggersResponsePrivate::PutRepositoryTriggersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit PutRepositoryTriggersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit PutRepositoryTriggers response element from \a xml.
  */
 void PutRepositoryTriggersResponsePrivate::parsePutRepositoryTriggersResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::EnableVolumeIOResponse
- *
  * \brief The EnableVolumeIOResponse class provides an interace for EC2 EnableVolumeIO responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new EnableVolumeIOResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableVolumeIOResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableVolumeIOResponse::EnableVolumeIOResponse(
         const EnableVolumeIORequest &request,
@@ -59,6 +54,9 @@ EnableVolumeIOResponse::EnableVolumeIOResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableVolumeIORequest * EnableVolumeIOResponse::request() const
 {
     Q_D(const EnableVolumeIOResponse);
@@ -66,9 +64,8 @@ const EnableVolumeIORequest * EnableVolumeIOResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 EnableVolumeIO response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 EnableVolumeIO \a response.
  */
 void EnableVolumeIOResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void EnableVolumeIOResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::EnableVolumeIOResponsePrivate
+ * \brief The EnableVolumeIOResponsePrivate class provides private implementation for EnableVolumeIOResponse.
  * \internal
  *
- * \class EnableVolumeIOResponsePrivate
- *
- * \brief Private implementation for EnableVolumeIOResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableVolumeIOResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableVolumeIOResponse instance.
+ * Constructs a EnableVolumeIOResponsePrivate object with public implementation \a q.
  */
 EnableVolumeIOResponsePrivate::EnableVolumeIOResponsePrivate(
     EnableVolumeIOResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ EnableVolumeIOResponsePrivate::EnableVolumeIOResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 EnableVolumeIOResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 EnableVolumeIO response element from \a xml.
  */
 void EnableVolumeIOResponsePrivate::parseEnableVolumeIOResponse(QXmlStreamReader &xml)
 {

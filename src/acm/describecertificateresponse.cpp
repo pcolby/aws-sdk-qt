@@ -29,10 +29,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::DescribeCertificateResponse
- *
  * \brief The DescribeCertificateResponse class provides an interace for ACM DescribeCertificate responses.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new DescribeCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCertificateResponse::DescribeCertificateResponse(
         const DescribeCertificateRequest &request,
@@ -64,6 +59,9 @@ DescribeCertificateResponse::DescribeCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCertificateRequest * DescribeCertificateResponse::request() const
 {
     Q_D(const DescribeCertificateResponse);
@@ -71,9 +69,8 @@ const DescribeCertificateRequest * DescribeCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a ACM DescribeCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACM DescribeCertificate \a response.
  */
 void DescribeCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void DescribeCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACM::DescribeCertificateResponsePrivate
+ * \brief The DescribeCertificateResponsePrivate class provides private implementation for DescribeCertificateResponse.
  * \internal
  *
- * \class DescribeCertificateResponsePrivate
- *
- * \brief Private implementation for DescribeCertificateResponse.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCertificateResponse instance.
+ * Constructs a DescribeCertificateResponsePrivate object with public implementation \a q.
  */
 DescribeCertificateResponsePrivate::DescribeCertificateResponsePrivate(
     DescribeCertificateResponse * const q) : ACMResponsePrivate(q)
@@ -104,9 +97,7 @@ DescribeCertificateResponsePrivate::DescribeCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACM DescribeCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACM DescribeCertificate response element from \a xml.
  */
 void DescribeCertificateResponsePrivate::parseDescribeCertificateResponse(QXmlStreamReader &xml)
 {

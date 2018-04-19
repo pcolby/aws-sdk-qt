@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeGatewayInformationResponse
- *
  * \brief The DescribeGatewayInformationResponse class provides an interace for StorageGateway DescribeGatewayInformation responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeGatewayInformationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeGatewayInformationResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeGatewayInformationResponse::DescribeGatewayInformationResponse(
         const DescribeGatewayInformationRequest &request,
@@ -124,6 +119,9 @@ DescribeGatewayInformationResponse::DescribeGatewayInformationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeGatewayInformationRequest * DescribeGatewayInformationResponse::request() const
 {
     Q_D(const DescribeGatewayInformationResponse);
@@ -131,9 +129,8 @@ const DescribeGatewayInformationRequest * DescribeGatewayInformationResponse::re
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeGatewayInformation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeGatewayInformation \a response.
  */
 void DescribeGatewayInformationResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeGatewayInformationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeGatewayInformationResponsePrivate
+ * \brief The DescribeGatewayInformationResponsePrivate class provides private implementation for DescribeGatewayInformationResponse.
  * \internal
  *
- * \class DescribeGatewayInformationResponsePrivate
- *
- * \brief Private implementation for DescribeGatewayInformationResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeGatewayInformationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeGatewayInformationResponse instance.
+ * Constructs a DescribeGatewayInformationResponsePrivate object with public implementation \a q.
  */
 DescribeGatewayInformationResponsePrivate::DescribeGatewayInformationResponsePrivate(
     DescribeGatewayInformationResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeGatewayInformationResponsePrivate::DescribeGatewayInformationResponsePri
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeGatewayInformationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeGatewayInformation response element from \a xml.
  */
 void DescribeGatewayInformationResponsePrivate::parseDescribeGatewayInformationResponse(QXmlStreamReader &xml)
 {

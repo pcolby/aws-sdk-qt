@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::CreatePolicyResponse
- *
  * \brief The CreatePolicyResponse class provides an interace for Organizations CreatePolicy responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new CreatePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePolicyResponse::CreatePolicyResponse(
         const CreatePolicyRequest &request,
@@ -197,6 +192,9 @@ CreatePolicyResponse::CreatePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePolicyRequest * CreatePolicyResponse::request() const
 {
     Q_D(const CreatePolicyResponse);
@@ -204,9 +202,8 @@ const CreatePolicyRequest * CreatePolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations CreatePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations CreatePolicy \a response.
  */
 void CreatePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void CreatePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::CreatePolicyResponsePrivate
+ * \brief The CreatePolicyResponsePrivate class provides private implementation for CreatePolicyResponse.
  * \internal
  *
- * \class CreatePolicyResponsePrivate
- *
- * \brief Private implementation for CreatePolicyResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePolicyResponse instance.
+ * Constructs a CreatePolicyResponsePrivate object with public implementation \a q.
  */
 CreatePolicyResponsePrivate::CreatePolicyResponsePrivate(
     CreatePolicyResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ CreatePolicyResponsePrivate::CreatePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations CreatePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations CreatePolicy response element from \a xml.
  */
 void CreatePolicyResponsePrivate::parseCreatePolicyResponse(QXmlStreamReader &xml)
 {

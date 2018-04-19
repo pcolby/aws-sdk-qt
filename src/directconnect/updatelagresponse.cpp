@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::UpdateLagResponse
- *
  * \brief The UpdateLagResponse class provides an interace for DirectConnect UpdateLag responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new UpdateLagResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateLagResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateLagResponse::UpdateLagResponse(
         const UpdateLagRequest &request,
@@ -63,6 +58,9 @@ UpdateLagResponse::UpdateLagResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateLagRequest * UpdateLagResponse::request() const
 {
     Q_D(const UpdateLagResponse);
@@ -70,9 +68,8 @@ const UpdateLagRequest * UpdateLagResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect UpdateLag response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect UpdateLag \a response.
  */
 void UpdateLagResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void UpdateLagResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::UpdateLagResponsePrivate
+ * \brief The UpdateLagResponsePrivate class provides private implementation for UpdateLagResponse.
  * \internal
  *
- * \class UpdateLagResponsePrivate
- *
- * \brief Private implementation for UpdateLagResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateLagResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateLagResponse instance.
+ * Constructs a UpdateLagResponsePrivate object with public implementation \a q.
  */
 UpdateLagResponsePrivate::UpdateLagResponsePrivate(
     UpdateLagResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ UpdateLagResponsePrivate::UpdateLagResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect UpdateLagResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect UpdateLag response element from \a xml.
  */
 void UpdateLagResponsePrivate::parseUpdateLagResponse(QXmlStreamReader &xml)
 {

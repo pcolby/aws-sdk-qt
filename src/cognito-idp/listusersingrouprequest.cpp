@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * ListUsersInGroupRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListUsersInGroupRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a ListUsersInGroupRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 ListUsersInGroupRequestPrivate::ListUsersInGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ListUsersInGroupRequest * const q)

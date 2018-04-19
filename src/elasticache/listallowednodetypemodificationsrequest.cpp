@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ListAllowedNodeTypeModificationsRequest::resp
  */
 
 /*!
- *
- * Constructs a ListAllowedNodeTypeModificationsRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a ListAllowedNodeTypeModificationsRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 ListAllowedNodeTypeModificationsRequestPrivate::ListAllowedNodeTypeModificationsRequestPrivate(
     const ElastiCacheRequest::Action action, ListAllowedNodeTypeModificationsRequest * const q)

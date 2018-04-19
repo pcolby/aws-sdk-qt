@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateFileSystemResponse : public EFSResponse {
 public:
     CreateFileSystemResponse(const CreateFileSystemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateFileSystemRequest * request() const;
+    virtual const CreateFileSystemRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateFileSystemResponse)

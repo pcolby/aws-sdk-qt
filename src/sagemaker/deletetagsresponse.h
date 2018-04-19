@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTagsResponse : public SageMakerResponse {
 public:
     DeleteTagsResponse(const DeleteTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTagsRequest * request() const;
+    virtual const DeleteTagsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTagsResponse)

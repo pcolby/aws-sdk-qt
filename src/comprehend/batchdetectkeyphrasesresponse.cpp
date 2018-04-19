@@ -29,10 +29,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::BatchDetectKeyPhrasesResponse
- *
  * \brief The BatchDetectKeyPhrasesResponse class provides an interace for Comprehend BatchDetectKeyPhrases responses.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -42,11 +41,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new BatchDetectKeyPhrasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchDetectKeyPhrasesResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchDetectKeyPhrasesResponse::BatchDetectKeyPhrasesResponse(
         const BatchDetectKeyPhrasesRequest &request,
@@ -58,6 +53,9 @@ BatchDetectKeyPhrasesResponse::BatchDetectKeyPhrasesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchDetectKeyPhrasesRequest * BatchDetectKeyPhrasesResponse::request() const
 {
     Q_D(const BatchDetectKeyPhrasesResponse);
@@ -65,9 +63,8 @@ const BatchDetectKeyPhrasesRequest * BatchDetectKeyPhrasesResponse::request() co
 }
 
 /*!
- * @brief  Parse a Comprehend BatchDetectKeyPhrases response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Comprehend BatchDetectKeyPhrases \a response.
  */
 void BatchDetectKeyPhrasesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void BatchDetectKeyPhrasesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Comprehend::BatchDetectKeyPhrasesResponsePrivate
+ * \brief The BatchDetectKeyPhrasesResponsePrivate class provides private implementation for BatchDetectKeyPhrasesResponse.
  * \internal
  *
- * \class BatchDetectKeyPhrasesResponsePrivate
- *
- * \brief Private implementation for BatchDetectKeyPhrasesResponse.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDetectKeyPhrasesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchDetectKeyPhrasesResponse instance.
+ * Constructs a BatchDetectKeyPhrasesResponsePrivate object with public implementation \a q.
  */
 BatchDetectKeyPhrasesResponsePrivate::BatchDetectKeyPhrasesResponsePrivate(
     BatchDetectKeyPhrasesResponse * const q) : ComprehendResponsePrivate(q)
@@ -98,9 +91,7 @@ BatchDetectKeyPhrasesResponsePrivate::BatchDetectKeyPhrasesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Comprehend BatchDetectKeyPhrasesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Comprehend BatchDetectKeyPhrases response element from \a xml.
  */
 void BatchDetectKeyPhrasesResponsePrivate::parseBatchDetectKeyPhrasesResponse(QXmlStreamReader &xml)
 {

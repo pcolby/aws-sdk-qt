@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteIdentityPolicyResponse
- *
  * \brief The DeleteIdentityPolicyResponse class provides an interace for SES DeleteIdentityPolicy responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteIdentityPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteIdentityPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteIdentityPolicyResponse::DeleteIdentityPolicyResponse(
         const DeleteIdentityPolicyRequest &request,
@@ -66,6 +61,9 @@ DeleteIdentityPolicyResponse::DeleteIdentityPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteIdentityPolicyRequest * DeleteIdentityPolicyResponse::request() const
 {
     Q_D(const DeleteIdentityPolicyResponse);
@@ -73,9 +71,8 @@ const DeleteIdentityPolicyRequest * DeleteIdentityPolicyResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SES DeleteIdentityPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES DeleteIdentityPolicy \a response.
  */
 void DeleteIdentityPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteIdentityPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::DeleteIdentityPolicyResponsePrivate
+ * \brief The DeleteIdentityPolicyResponsePrivate class provides private implementation for DeleteIdentityPolicyResponse.
  * \internal
  *
- * \class DeleteIdentityPolicyResponsePrivate
- *
- * \brief Private implementation for DeleteIdentityPolicyResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIdentityPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteIdentityPolicyResponse instance.
+ * Constructs a DeleteIdentityPolicyResponsePrivate object with public implementation \a q.
  */
 DeleteIdentityPolicyResponsePrivate::DeleteIdentityPolicyResponsePrivate(
     DeleteIdentityPolicyResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteIdentityPolicyResponsePrivate::DeleteIdentityPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES DeleteIdentityPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES DeleteIdentityPolicy response element from \a xml.
  */
 void DeleteIdentityPolicyResponsePrivate::parseDeleteIdentityPolicyResponse(QXmlStreamReader &xml)
 {

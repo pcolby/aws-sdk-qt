@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledResponse
- *
  * \brief The UpdateConfigurationSetReputationMetricsEnabledResponse class provides an interace for SES UpdateConfigurationSetReputationMetricsEnabled responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateConfigurationSetReputationMetricsEnabledResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateConfigurationSetReputationMetricsEnabledResponse::UpdateConfigurationSetReputationMetricsEnabledResponse(
         const UpdateConfigurationSetReputationMetricsEnabledRequest &request,
@@ -66,6 +61,9 @@ UpdateConfigurationSetReputationMetricsEnabledResponse::UpdateConfigurationSetRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateConfigurationSetReputationMetricsEnabledRequest * UpdateConfigurationSetReputationMetricsEnabledResponse::request() const
 {
     Q_D(const UpdateConfigurationSetReputationMetricsEnabledResponse);
@@ -73,9 +71,8 @@ const UpdateConfigurationSetReputationMetricsEnabledRequest * UpdateConfiguratio
 }
 
 /*!
- * @brief  Parse a SES UpdateConfigurationSetReputationMetricsEnabled response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES UpdateConfigurationSetReputationMetricsEnabled \a response.
  */
 void UpdateConfigurationSetReputationMetricsEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateConfigurationSetReputationMetricsEnabledResponse::parseSuccess(QIODev
 }
 
 /*!
+ * \class QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledResponsePrivate
+ * \brief The UpdateConfigurationSetReputationMetricsEnabledResponsePrivate class provides private implementation for UpdateConfigurationSetReputationMetricsEnabledResponse.
  * \internal
  *
- * \class UpdateConfigurationSetReputationMetricsEnabledResponsePrivate
- *
- * \brief Private implementation for UpdateConfigurationSetReputationMetricsEnabledResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConfigurationSetReputationMetricsEnabledResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateConfigurationSetReputationMetricsEnabledResponse instance.
+ * Constructs a UpdateConfigurationSetReputationMetricsEnabledResponsePrivate object with public implementation \a q.
  */
 UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(
     UpdateConfigurationSetReputationMetricsEnabledResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::UpdateConfigurati
 }
 
 /*!
- * @brief  Parse an SES UpdateConfigurationSetReputationMetricsEnabledResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES UpdateConfigurationSetReputationMetricsEnabled response element from \a xml.
  */
 void UpdateConfigurationSetReputationMetricsEnabledResponsePrivate::parseUpdateConfigurationSetReputationMetricsEnabledResponse(QXmlStreamReader &xml)
 {

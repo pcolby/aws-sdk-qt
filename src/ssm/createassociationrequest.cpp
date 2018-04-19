@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * CreateAssociationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CreateAssociationRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a CreateAssociationRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 CreateAssociationRequestPrivate::CreateAssociationRequestPrivate(
     const SSMRequest::Action action, CreateAssociationRequest * const q)

@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetInstancePortStatesResponse
- *
  * \brief The GetInstancePortStatesResponse class provides an interace for Lightsail GetInstancePortStates responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetInstancePortStatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInstancePortStatesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInstancePortStatesResponse::GetInstancePortStatesResponse(
         const GetInstancePortStatesRequest &request,
@@ -71,6 +66,9 @@ GetInstancePortStatesResponse::GetInstancePortStatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInstancePortStatesRequest * GetInstancePortStatesResponse::request() const
 {
     Q_D(const GetInstancePortStatesResponse);
@@ -78,9 +76,8 @@ const GetInstancePortStatesRequest * GetInstancePortStatesResponse::request() co
 }
 
 /*!
- * @brief  Parse a Lightsail GetInstancePortStates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetInstancePortStates \a response.
  */
 void GetInstancePortStatesResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetInstancePortStatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetInstancePortStatesResponsePrivate
+ * \brief The GetInstancePortStatesResponsePrivate class provides private implementation for GetInstancePortStatesResponse.
  * \internal
  *
- * \class GetInstancePortStatesResponsePrivate
- *
- * \brief Private implementation for GetInstancePortStatesResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstancePortStatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInstancePortStatesResponse instance.
+ * Constructs a GetInstancePortStatesResponsePrivate object with public implementation \a q.
  */
 GetInstancePortStatesResponsePrivate::GetInstancePortStatesResponsePrivate(
     GetInstancePortStatesResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetInstancePortStatesResponsePrivate::GetInstancePortStatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetInstancePortStatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetInstancePortStates response element from \a xml.
  */
 void GetInstancePortStatesResponsePrivate::parseGetInstancePortStatesResponse(QXmlStreamReader &xml)
 {

@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * ListAssociationVersionsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListAssociationVersionsRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a ListAssociationVersionsRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 ListAssociationVersionsRequestPrivate::ListAssociationVersionsRequestPrivate(
     const SSMRequest::Action action, ListAssociationVersionsRequest * const q)

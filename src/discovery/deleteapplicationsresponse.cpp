@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DeleteApplicationsResponse
- *
  * \brief The DeleteApplicationsResponse class provides an interace for ApplicationDiscoveryService DeleteApplications responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteApplicationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteApplicationsResponse::DeleteApplicationsResponse(
         const DeleteApplicationsRequest &request,
@@ -119,6 +114,9 @@ DeleteApplicationsResponse::DeleteApplicationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteApplicationsRequest * DeleteApplicationsResponse::request() const
 {
     Q_D(const DeleteApplicationsResponse);
@@ -126,9 +124,8 @@ const DeleteApplicationsRequest * DeleteApplicationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService DeleteApplications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService DeleteApplications \a response.
  */
 void DeleteApplicationsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DeleteApplicationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::DeleteApplicationsResponsePrivate
+ * \brief The DeleteApplicationsResponsePrivate class provides private implementation for DeleteApplicationsResponse.
  * \internal
  *
- * \class DeleteApplicationsResponsePrivate
- *
- * \brief Private implementation for DeleteApplicationsResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteApplicationsResponse instance.
+ * Constructs a DeleteApplicationsResponsePrivate object with public implementation \a q.
  */
 DeleteApplicationsResponsePrivate::DeleteApplicationsResponsePrivate(
     DeleteApplicationsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ DeleteApplicationsResponsePrivate::DeleteApplicationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService DeleteApplicationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService DeleteApplications response element from \a xml.
  */
 void DeleteApplicationsResponsePrivate::parseDeleteApplicationsResponse(QXmlStreamReader &xml)
 {

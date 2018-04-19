@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AttachInternetGatewayResponse
- *
  * \brief The AttachInternetGatewayResponse class provides an interace for EC2 AttachInternetGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AttachInternetGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachInternetGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachInternetGatewayResponse::AttachInternetGatewayResponse(
         const AttachInternetGatewayRequest &request,
@@ -59,6 +54,9 @@ AttachInternetGatewayResponse::AttachInternetGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachInternetGatewayRequest * AttachInternetGatewayResponse::request() const
 {
     Q_D(const AttachInternetGatewayResponse);
@@ -66,9 +64,8 @@ const AttachInternetGatewayRequest * AttachInternetGatewayResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 AttachInternetGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AttachInternetGateway \a response.
  */
 void AttachInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AttachInternetGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AttachInternetGatewayResponsePrivate
+ * \brief The AttachInternetGatewayResponsePrivate class provides private implementation for AttachInternetGatewayResponse.
  * \internal
  *
- * \class AttachInternetGatewayResponsePrivate
- *
- * \brief Private implementation for AttachInternetGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachInternetGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachInternetGatewayResponse instance.
+ * Constructs a AttachInternetGatewayResponsePrivate object with public implementation \a q.
  */
 AttachInternetGatewayResponsePrivate::AttachInternetGatewayResponsePrivate(
     AttachInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AttachInternetGatewayResponsePrivate::AttachInternetGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 AttachInternetGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AttachInternetGateway response element from \a xml.
  */
 void AttachInternetGatewayResponsePrivate::parseAttachInternetGatewayResponse(QXmlStreamReader &xml)
 {

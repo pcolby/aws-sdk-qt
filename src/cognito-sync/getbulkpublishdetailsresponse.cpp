@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::GetBulkPublishDetailsResponse
- *
  * \brief The GetBulkPublishDetailsResponse class provides an interace for CognitoSync GetBulkPublishDetails responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new GetBulkPublishDetailsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBulkPublishDetailsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBulkPublishDetailsResponse::GetBulkPublishDetailsResponse(
         const GetBulkPublishDetailsRequest &request,
@@ -75,6 +70,9 @@ GetBulkPublishDetailsResponse::GetBulkPublishDetailsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBulkPublishDetailsRequest * GetBulkPublishDetailsResponse::request() const
 {
     Q_D(const GetBulkPublishDetailsResponse);
@@ -82,9 +80,8 @@ const GetBulkPublishDetailsRequest * GetBulkPublishDetailsResponse::request() co
 }
 
 /*!
- * @brief  Parse a CognitoSync GetBulkPublishDetails response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync GetBulkPublishDetails \a response.
  */
 void GetBulkPublishDetailsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void GetBulkPublishDetailsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::GetBulkPublishDetailsResponsePrivate
+ * \brief The GetBulkPublishDetailsResponsePrivate class provides private implementation for GetBulkPublishDetailsResponse.
  * \internal
  *
- * \class GetBulkPublishDetailsResponsePrivate
- *
- * \brief Private implementation for GetBulkPublishDetailsResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBulkPublishDetailsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBulkPublishDetailsResponse instance.
+ * Constructs a GetBulkPublishDetailsResponsePrivate object with public implementation \a q.
  */
 GetBulkPublishDetailsResponsePrivate::GetBulkPublishDetailsResponsePrivate(
     GetBulkPublishDetailsResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ GetBulkPublishDetailsResponsePrivate::GetBulkPublishDetailsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync GetBulkPublishDetailsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync GetBulkPublishDetails response element from \a xml.
  */
 void GetBulkPublishDetailsResponsePrivate::parseGetBulkPublishDetailsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::UpdateSchemaResponse
- *
  * \brief The UpdateSchemaResponse class provides an interace for CloudDirectory UpdateSchema responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new UpdateSchemaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSchemaResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSchemaResponse::UpdateSchemaResponse(
         const UpdateSchemaRequest &request,
@@ -62,6 +57,9 @@ UpdateSchemaResponse::UpdateSchemaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSchemaRequest * UpdateSchemaResponse::request() const
 {
     Q_D(const UpdateSchemaResponse);
@@ -69,9 +67,8 @@ const UpdateSchemaRequest * UpdateSchemaResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory UpdateSchema response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory UpdateSchema \a response.
  */
 void UpdateSchemaResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void UpdateSchemaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::UpdateSchemaResponsePrivate
+ * \brief The UpdateSchemaResponsePrivate class provides private implementation for UpdateSchemaResponse.
  * \internal
  *
- * \class UpdateSchemaResponsePrivate
- *
- * \brief Private implementation for UpdateSchemaResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSchemaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSchemaResponse instance.
+ * Constructs a UpdateSchemaResponsePrivate object with public implementation \a q.
  */
 UpdateSchemaResponsePrivate::UpdateSchemaResponsePrivate(
     UpdateSchemaResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ UpdateSchemaResponsePrivate::UpdateSchemaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory UpdateSchemaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory UpdateSchema response element from \a xml.
  */
 void UpdateSchemaResponsePrivate::parseUpdateSchemaResponse(QXmlStreamReader &xml)
 {

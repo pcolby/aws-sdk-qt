@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * GetUserRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a GetUserRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a GetUserRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 GetUserRequestPrivate::GetUserRequestPrivate(
     const IAMRequest::Action action, GetUserRequest * const q)

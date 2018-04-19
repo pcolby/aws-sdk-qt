@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * AddFacetToObjectRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a AddFacetToObjectRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a AddFacetToObjectRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 AddFacetToObjectRequestPrivate::AddFacetToObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, AddFacetToObjectRequest * const q)

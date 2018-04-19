@@ -169,9 +169,8 @@ QtAws::Core::AwsAbstractResponse * AssociateTeamMemberRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a AssociateTeamMemberRequestPrivate object for CodeStar \a action with,
- * public implementation \a q.
+ * Constructs a AssociateTeamMemberRequestPrivate object for CodeStar \a action,
+ * with public implementation \a q.
  */
 AssociateTeamMemberRequestPrivate::AssociateTeamMemberRequestPrivate(
     const CodeStarRequest::Action action, AssociateTeamMemberRequest * const q)

@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::RegisterJobDefinitionResponse
- *
  * \brief The RegisterJobDefinitionResponse class provides an interace for Batch RegisterJobDefinition responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new RegisterJobDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterJobDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterJobDefinitionResponse::RegisterJobDefinitionResponse(
         const RegisterJobDefinitionRequest &request,
@@ -69,6 +64,9 @@ RegisterJobDefinitionResponse::RegisterJobDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterJobDefinitionRequest * RegisterJobDefinitionResponse::request() const
 {
     Q_D(const RegisterJobDefinitionResponse);
@@ -76,9 +74,8 @@ const RegisterJobDefinitionRequest * RegisterJobDefinitionResponse::request() co
 }
 
 /*!
- * @brief  Parse a Batch RegisterJobDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch RegisterJobDefinition \a response.
  */
 void RegisterJobDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void RegisterJobDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::RegisterJobDefinitionResponsePrivate
+ * \brief The RegisterJobDefinitionResponsePrivate class provides private implementation for RegisterJobDefinitionResponse.
  * \internal
  *
- * \class RegisterJobDefinitionResponsePrivate
- *
- * \brief Private implementation for RegisterJobDefinitionResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterJobDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterJobDefinitionResponse instance.
+ * Constructs a RegisterJobDefinitionResponsePrivate object with public implementation \a q.
  */
 RegisterJobDefinitionResponsePrivate::RegisterJobDefinitionResponsePrivate(
     RegisterJobDefinitionResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ RegisterJobDefinitionResponsePrivate::RegisterJobDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Batch RegisterJobDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch RegisterJobDefinition response element from \a xml.
  */
 void RegisterJobDefinitionResponsePrivate::parseRegisterJobDefinitionResponse(QXmlStreamReader &xml)
 {

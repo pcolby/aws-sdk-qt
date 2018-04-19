@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedInstancesOfferingRequest::res
  */
 
 /*!
- *
- * Constructs a PurchaseReservedInstancesOfferingRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a PurchaseReservedInstancesOfferingRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 PurchaseReservedInstancesOfferingRequestPrivate::PurchaseReservedInstancesOfferingRequestPrivate(
     const EC2Request::Action action, PurchaseReservedInstancesOfferingRequest * const q)

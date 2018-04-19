@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::CreateLayerResponse
- *
  * \brief The CreateLayerResponse class provides an interace for OpsWorks CreateLayer responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new CreateLayerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLayerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLayerResponse::CreateLayerResponse(
         const CreateLayerRequest &request,
@@ -161,6 +156,9 @@ CreateLayerResponse::CreateLayerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLayerRequest * CreateLayerResponse::request() const
 {
     Q_D(const CreateLayerResponse);
@@ -168,9 +166,8 @@ const CreateLayerRequest * CreateLayerResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks CreateLayer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks CreateLayer \a response.
  */
 void CreateLayerResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void CreateLayerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::CreateLayerResponsePrivate
+ * \brief The CreateLayerResponsePrivate class provides private implementation for CreateLayerResponse.
  * \internal
  *
- * \class CreateLayerResponsePrivate
- *
- * \brief Private implementation for CreateLayerResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLayerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLayerResponse instance.
+ * Constructs a CreateLayerResponsePrivate object with public implementation \a q.
  */
 CreateLayerResponsePrivate::CreateLayerResponsePrivate(
     CreateLayerResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ CreateLayerResponsePrivate::CreateLayerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks CreateLayerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks CreateLayer response element from \a xml.
  */
 void CreateLayerResponsePrivate::parseCreateLayerResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::GetSchemaCreationStatusResponse
- *
  * \brief The GetSchemaCreationStatusResponse class provides an interace for AppSync GetSchemaCreationStatus responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new GetSchemaCreationStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSchemaCreationStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSchemaCreationStatusResponse::GetSchemaCreationStatusResponse(
         const GetSchemaCreationStatusRequest &request,
@@ -56,6 +51,9 @@ GetSchemaCreationStatusResponse::GetSchemaCreationStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSchemaCreationStatusRequest * GetSchemaCreationStatusResponse::request() const
 {
     Q_D(const GetSchemaCreationStatusResponse);
@@ -63,9 +61,8 @@ const GetSchemaCreationStatusRequest * GetSchemaCreationStatusResponse::request(
 }
 
 /*!
- * @brief  Parse a AppSync GetSchemaCreationStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync GetSchemaCreationStatus \a response.
  */
 void GetSchemaCreationStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetSchemaCreationStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::GetSchemaCreationStatusResponsePrivate
+ * \brief The GetSchemaCreationStatusResponsePrivate class provides private implementation for GetSchemaCreationStatusResponse.
  * \internal
  *
- * \class GetSchemaCreationStatusResponsePrivate
- *
- * \brief Private implementation for GetSchemaCreationStatusResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSchemaCreationStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSchemaCreationStatusResponse instance.
+ * Constructs a GetSchemaCreationStatusResponsePrivate object with public implementation \a q.
  */
 GetSchemaCreationStatusResponsePrivate::GetSchemaCreationStatusResponsePrivate(
     GetSchemaCreationStatusResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ GetSchemaCreationStatusResponsePrivate::GetSchemaCreationStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync GetSchemaCreationStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync GetSchemaCreationStatus response element from \a xml.
  */
 void GetSchemaCreationStatusResponsePrivate::parseGetSchemaCreationStatusResponse(QXmlStreamReader &xml)
 {

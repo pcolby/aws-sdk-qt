@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetectEntitiesResponse : public ComprehendResponse {
 public:
     DetectEntitiesResponse(const DetectEntitiesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetectEntitiesRequest * request() const;
+    virtual const DetectEntitiesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DetectEntitiesResponse)

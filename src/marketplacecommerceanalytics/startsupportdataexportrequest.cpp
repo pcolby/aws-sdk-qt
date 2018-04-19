@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * StartSupportDataExportRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a StartSupportDataExportRequestPrivate object for MarketplaceCommerceAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a StartSupportDataExportRequestPrivate object for MarketplaceCommerceAnalytics \a action,
+ * with public implementation \a q.
  */
 StartSupportDataExportRequestPrivate::StartSupportDataExportRequestPrivate(
     const MarketplaceCommerceAnalyticsRequest::Action action, StartSupportDataExportRequest * const q)

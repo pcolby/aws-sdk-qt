@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::BatchDeleteTableResponse
- *
  * \brief The BatchDeleteTableResponse class provides an interace for Glue BatchDeleteTable responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new BatchDeleteTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchDeleteTableResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchDeleteTableResponse::BatchDeleteTableResponse(
         const BatchDeleteTableRequest &request,
@@ -58,6 +53,9 @@ BatchDeleteTableResponse::BatchDeleteTableResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchDeleteTableRequest * BatchDeleteTableResponse::request() const
 {
     Q_D(const BatchDeleteTableResponse);
@@ -65,9 +63,8 @@ const BatchDeleteTableRequest * BatchDeleteTableResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue BatchDeleteTable response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue BatchDeleteTable \a response.
  */
 void BatchDeleteTableResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void BatchDeleteTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::BatchDeleteTableResponsePrivate
+ * \brief The BatchDeleteTableResponsePrivate class provides private implementation for BatchDeleteTableResponse.
  * \internal
  *
- * \class BatchDeleteTableResponsePrivate
- *
- * \brief Private implementation for BatchDeleteTableResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeleteTableResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchDeleteTableResponse instance.
+ * Constructs a BatchDeleteTableResponsePrivate object with public implementation \a q.
  */
 BatchDeleteTableResponsePrivate::BatchDeleteTableResponsePrivate(
     BatchDeleteTableResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ BatchDeleteTableResponsePrivate::BatchDeleteTableResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue BatchDeleteTableResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue BatchDeleteTable response element from \a xml.
  */
 void BatchDeleteTableResponsePrivate::parseBatchDeleteTableResponse(QXmlStreamReader &xml)
 {

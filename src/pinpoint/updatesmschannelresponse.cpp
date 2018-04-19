@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateSmsChannelResponse
- *
  * \brief The UpdateSmsChannelResponse class provides an interace for Pinpoint UpdateSmsChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateSmsChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateSmsChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSmsChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSmsChannelResponse::UpdateSmsChannelResponse(
         const UpdateSmsChannelRequest &request,
@@ -55,6 +50,9 @@ UpdateSmsChannelResponse::UpdateSmsChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSmsChannelRequest * UpdateSmsChannelResponse::request() const
 {
     Q_D(const UpdateSmsChannelResponse);
@@ -62,9 +60,8 @@ const UpdateSmsChannelRequest * UpdateSmsChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint UpdateSmsChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint UpdateSmsChannel \a response.
  */
 void UpdateSmsChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateSmsChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::UpdateSmsChannelResponsePrivate
+ * \brief The UpdateSmsChannelResponsePrivate class provides private implementation for UpdateSmsChannelResponse.
  * \internal
  *
- * \class UpdateSmsChannelResponsePrivate
- *
- * \brief Private implementation for UpdateSmsChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSmsChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSmsChannelResponse instance.
+ * Constructs a UpdateSmsChannelResponsePrivate object with public implementation \a q.
  */
 UpdateSmsChannelResponsePrivate::UpdateSmsChannelResponsePrivate(
     UpdateSmsChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateSmsChannelResponsePrivate::UpdateSmsChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint UpdateSmsChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint UpdateSmsChannel response element from \a xml.
  */
 void UpdateSmsChannelResponsePrivate::parseUpdateSmsChannelResponse(QXmlStreamReader &xml)
 {

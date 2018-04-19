@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateReplicationJobRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdateReplicationJobRequestPrivate object for SMS \a action with,
- * public implementation \a q.
+ * Constructs a UpdateReplicationJobRequestPrivate object for SMS \a action,
+ * with public implementation \a q.
  */
 UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
     const SMSRequest::Action action, UpdateReplicationJobRequest * const q)

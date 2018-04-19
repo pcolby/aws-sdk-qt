@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetNotificationChannelResponse : public FMSResponse {
 public:
     GetNotificationChannelResponse(const GetNotificationChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetNotificationChannelRequest * request() const;
+    virtual const GetNotificationChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetNotificationChannelResponse)

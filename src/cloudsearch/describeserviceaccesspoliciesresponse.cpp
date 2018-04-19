@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeServiceAccessPoliciesResponse
- *
  * \brief The DescribeServiceAccessPoliciesResponse class provides an interace for CloudSearch DescribeServiceAccessPolicies responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeServiceAccessPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeServiceAccessPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeServiceAccessPoliciesResponse::DescribeServiceAccessPoliciesResponse(
         const DescribeServiceAccessPoliciesRequest &request,
@@ -66,6 +61,9 @@ DescribeServiceAccessPoliciesResponse::DescribeServiceAccessPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeServiceAccessPoliciesRequest * DescribeServiceAccessPoliciesResponse::request() const
 {
     Q_D(const DescribeServiceAccessPoliciesResponse);
@@ -73,9 +71,8 @@ const DescribeServiceAccessPoliciesRequest * DescribeServiceAccessPoliciesRespon
 }
 
 /*!
- * @brief  Parse a CloudSearch DescribeServiceAccessPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DescribeServiceAccessPolicies \a response.
  */
 void DescribeServiceAccessPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeServiceAccessPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DescribeServiceAccessPoliciesResponsePrivate
+ * \brief The DescribeServiceAccessPoliciesResponsePrivate class provides private implementation for DescribeServiceAccessPoliciesResponse.
  * \internal
  *
- * \class DescribeServiceAccessPoliciesResponsePrivate
- *
- * \brief Private implementation for DescribeServiceAccessPoliciesResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeServiceAccessPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeServiceAccessPoliciesResponse instance.
+ * Constructs a DescribeServiceAccessPoliciesResponsePrivate object with public implementation \a q.
  */
 DescribeServiceAccessPoliciesResponsePrivate::DescribeServiceAccessPoliciesResponsePrivate(
     DescribeServiceAccessPoliciesResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeServiceAccessPoliciesResponsePrivate::DescribeServiceAccessPoliciesRespo
 }
 
 /*!
- * @brief  Parse an CloudSearch DescribeServiceAccessPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DescribeServiceAccessPolicies response element from \a xml.
  */
 void DescribeServiceAccessPoliciesResponsePrivate::parseDescribeServiceAccessPoliciesResponse(QXmlStreamReader &xml)
 {

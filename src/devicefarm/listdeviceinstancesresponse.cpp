@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListDeviceInstancesResponse
- *
  * \brief The ListDeviceInstancesResponse class provides an interace for DeviceFarm ListDeviceInstances responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListDeviceInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDeviceInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDeviceInstancesResponse::ListDeviceInstancesResponse(
         const ListDeviceInstancesRequest &request,
@@ -57,6 +52,9 @@ ListDeviceInstancesResponse::ListDeviceInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDeviceInstancesRequest * ListDeviceInstancesResponse::request() const
 {
     Q_D(const ListDeviceInstancesResponse);
@@ -64,9 +62,8 @@ const ListDeviceInstancesRequest * ListDeviceInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm ListDeviceInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm ListDeviceInstances \a response.
  */
 void ListDeviceInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListDeviceInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::ListDeviceInstancesResponsePrivate
+ * \brief The ListDeviceInstancesResponsePrivate class provides private implementation for ListDeviceInstancesResponse.
  * \internal
  *
- * \class ListDeviceInstancesResponsePrivate
- *
- * \brief Private implementation for ListDeviceInstancesResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeviceInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDeviceInstancesResponse instance.
+ * Constructs a ListDeviceInstancesResponsePrivate object with public implementation \a q.
  */
 ListDeviceInstancesResponsePrivate::ListDeviceInstancesResponsePrivate(
     ListDeviceInstancesResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ ListDeviceInstancesResponsePrivate::ListDeviceInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm ListDeviceInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm ListDeviceInstances response element from \a xml.
  */
 void ListDeviceInstancesResponsePrivate::parseListDeviceInstancesResponse(QXmlStreamReader &xml)
 {

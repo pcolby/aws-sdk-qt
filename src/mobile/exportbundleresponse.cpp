@@ -29,10 +29,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::ExportBundleResponse
- *
  * \brief The ExportBundleResponse class provides an interace for Mobile ExportBundle responses.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -42,11 +41,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new ExportBundleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ExportBundleResponse object for \a reply to \a request, with parent \a parent.
  */
 ExportBundleResponse::ExportBundleResponse(
         const ExportBundleRequest &request,
@@ -58,6 +53,9 @@ ExportBundleResponse::ExportBundleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ExportBundleRequest * ExportBundleResponse::request() const
 {
     Q_D(const ExportBundleResponse);
@@ -65,9 +63,8 @@ const ExportBundleRequest * ExportBundleResponse::request() const
 }
 
 /*!
- * @brief  Parse a Mobile ExportBundle response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Mobile ExportBundle \a response.
  */
 void ExportBundleResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ExportBundleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Mobile::ExportBundleResponsePrivate
+ * \brief The ExportBundleResponsePrivate class provides private implementation for ExportBundleResponse.
  * \internal
  *
- * \class ExportBundleResponsePrivate
- *
- * \brief Private implementation for ExportBundleResponse.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExportBundleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ExportBundleResponse instance.
+ * Constructs a ExportBundleResponsePrivate object with public implementation \a q.
  */
 ExportBundleResponsePrivate::ExportBundleResponsePrivate(
     ExportBundleResponse * const q) : MobileResponsePrivate(q)
@@ -98,9 +91,7 @@ ExportBundleResponsePrivate::ExportBundleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Mobile ExportBundleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Mobile ExportBundle response element from \a xml.
  */
 void ExportBundleResponsePrivate::parseExportBundleResponse(QXmlStreamReader &xml)
 {

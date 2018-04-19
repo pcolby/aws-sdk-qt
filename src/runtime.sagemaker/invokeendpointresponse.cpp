@@ -29,10 +29,9 @@ namespace SageMakerRuntime {
 
 /*!
  * \class QtAws::SageMakerRuntime::InvokeEndpointResponse
- *
  * \brief The InvokeEndpointResponse class provides an interace for SageMakerRuntime InvokeEndpoint responses.
  *
- * \ingroup SageMakerRuntime
+ * \inmodule QtAwsSageMakerRuntime
  *
  *  Amazon SageMaker runtime API.
  *
@@ -40,11 +39,7 @@ namespace SageMakerRuntime {
  */
 
 /*!
- * @brief  Constructs a new InvokeEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a InvokeEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 InvokeEndpointResponse::InvokeEndpointResponse(
         const InvokeEndpointRequest &request,
@@ -56,6 +51,9 @@ InvokeEndpointResponse::InvokeEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const InvokeEndpointRequest * InvokeEndpointResponse::request() const
 {
     Q_D(const InvokeEndpointResponse);
@@ -63,9 +61,8 @@ const InvokeEndpointRequest * InvokeEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a SageMakerRuntime InvokeEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMakerRuntime InvokeEndpoint \a response.
  */
 void InvokeEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void InvokeEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMakerRuntime::InvokeEndpointResponsePrivate
+ * \brief The InvokeEndpointResponsePrivate class provides private implementation for InvokeEndpointResponse.
  * \internal
  *
- * \class InvokeEndpointResponsePrivate
- *
- * \brief Private implementation for InvokeEndpointResponse.
+ * \inmodule QtAwsSageMakerRuntime
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InvokeEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InvokeEndpointResponse instance.
+ * Constructs a InvokeEndpointResponsePrivate object with public implementation \a q.
  */
 InvokeEndpointResponsePrivate::InvokeEndpointResponsePrivate(
     InvokeEndpointResponse * const q) : SageMakerRuntimeResponsePrivate(q)
@@ -96,9 +89,7 @@ InvokeEndpointResponsePrivate::InvokeEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMakerRuntime InvokeEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMakerRuntime InvokeEndpoint response element from \a xml.
  */
 void InvokeEndpointResponsePrivate::parseInvokeEndpointResponse(QXmlStreamReader &xml)
 {

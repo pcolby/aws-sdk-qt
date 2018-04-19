@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminDeleteUserRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a AdminDeleteUserRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminDeleteUserRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminDeleteUserRequestPrivate::AdminDeleteUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminDeleteUserRequest * const q)

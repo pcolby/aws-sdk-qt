@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DescribeMetricFiltersResponse
- *
  * \brief The DescribeMetricFiltersResponse class provides an interace for CloudWatchLogs DescribeMetricFilters responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DescribeMetricFiltersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeMetricFiltersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeMetricFiltersResponse::DescribeMetricFiltersResponse(
         const DescribeMetricFiltersRequest &request,
@@ -84,6 +79,9 @@ DescribeMetricFiltersResponse::DescribeMetricFiltersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeMetricFiltersRequest * DescribeMetricFiltersResponse::request() const
 {
     Q_D(const DescribeMetricFiltersResponse);
@@ -91,9 +89,8 @@ const DescribeMetricFiltersRequest * DescribeMetricFiltersResponse::request() co
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DescribeMetricFilters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DescribeMetricFilters \a response.
  */
 void DescribeMetricFiltersResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeMetricFiltersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DescribeMetricFiltersResponsePrivate
+ * \brief The DescribeMetricFiltersResponsePrivate class provides private implementation for DescribeMetricFiltersResponse.
  * \internal
  *
- * \class DescribeMetricFiltersResponsePrivate
- *
- * \brief Private implementation for DescribeMetricFiltersResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMetricFiltersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeMetricFiltersResponse instance.
+ * Constructs a DescribeMetricFiltersResponsePrivate object with public implementation \a q.
  */
 DescribeMetricFiltersResponsePrivate::DescribeMetricFiltersResponsePrivate(
     DescribeMetricFiltersResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeMetricFiltersResponsePrivate::DescribeMetricFiltersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DescribeMetricFiltersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DescribeMetricFilters response element from \a xml.
  */
 void DescribeMetricFiltersResponsePrivate::parseDescribeMetricFiltersResponse(QXmlStreamReader &xml)
 {

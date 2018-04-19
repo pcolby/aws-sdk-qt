@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * AuthorizeSnapshotAccessRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a AuthorizeSnapshotAccessRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a AuthorizeSnapshotAccessRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 AuthorizeSnapshotAccessRequestPrivate::AuthorizeSnapshotAccessRequestPrivate(
     const RedshiftRequest::Action action, AuthorizeSnapshotAccessRequest * const q)

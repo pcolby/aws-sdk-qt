@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSuggesterRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteSuggesterRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSuggesterRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DeleteSuggesterRequestPrivate::DeleteSuggesterRequestPrivate(
     const CloudSearchRequest::Action action, DeleteSuggesterRequest * const q)

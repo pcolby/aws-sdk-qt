@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDevicePoolRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateDevicePoolRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDevicePoolRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 UpdateDevicePoolRequestPrivate::UpdateDevicePoolRequestPrivate(
     const DeviceFarmRequest::Action action, UpdateDevicePoolRequest * const q)

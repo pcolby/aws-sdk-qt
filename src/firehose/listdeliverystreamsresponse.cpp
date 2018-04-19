@@ -29,10 +29,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::ListDeliveryStreamsResponse
- *
  * \brief The ListDeliveryStreamsResponse class provides an interace for Firehose ListDeliveryStreams responses.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -43,11 +42,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new ListDeliveryStreamsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDeliveryStreamsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDeliveryStreamsResponse::ListDeliveryStreamsResponse(
         const ListDeliveryStreamsRequest &request,
@@ -59,6 +54,9 @@ ListDeliveryStreamsResponse::ListDeliveryStreamsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDeliveryStreamsRequest * ListDeliveryStreamsResponse::request() const
 {
     Q_D(const ListDeliveryStreamsResponse);
@@ -66,9 +64,8 @@ const ListDeliveryStreamsRequest * ListDeliveryStreamsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Firehose ListDeliveryStreams response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Firehose ListDeliveryStreams \a response.
  */
 void ListDeliveryStreamsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ListDeliveryStreamsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Firehose::ListDeliveryStreamsResponsePrivate
+ * \brief The ListDeliveryStreamsResponsePrivate class provides private implementation for ListDeliveryStreamsResponse.
  * \internal
  *
- * \class ListDeliveryStreamsResponsePrivate
- *
- * \brief Private implementation for ListDeliveryStreamsResponse.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeliveryStreamsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDeliveryStreamsResponse instance.
+ * Constructs a ListDeliveryStreamsResponsePrivate object with public implementation \a q.
  */
 ListDeliveryStreamsResponsePrivate::ListDeliveryStreamsResponsePrivate(
     ListDeliveryStreamsResponse * const q) : FirehoseResponsePrivate(q)
@@ -99,9 +92,7 @@ ListDeliveryStreamsResponsePrivate::ListDeliveryStreamsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Firehose ListDeliveryStreamsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Firehose ListDeliveryStreams response element from \a xml.
  */
 void ListDeliveryStreamsResponsePrivate::parseListDeliveryStreamsResponse(QXmlStreamReader &xml)
 {

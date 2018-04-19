@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DeleteLoggerDefinitionResponse
- *
  * \brief The DeleteLoggerDefinitionResponse class provides an interace for Greengrass DeleteLoggerDefinition responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoggerDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLoggerDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLoggerDefinitionResponse::DeleteLoggerDefinitionResponse(
         const DeleteLoggerDefinitionRequest &request,
@@ -58,6 +53,9 @@ DeleteLoggerDefinitionResponse::DeleteLoggerDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLoggerDefinitionRequest * DeleteLoggerDefinitionResponse::request() const
 {
     Q_D(const DeleteLoggerDefinitionResponse);
@@ -65,9 +63,8 @@ const DeleteLoggerDefinitionRequest * DeleteLoggerDefinitionResponse::request() 
 }
 
 /*!
- * @brief  Parse a Greengrass DeleteLoggerDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass DeleteLoggerDefinition \a response.
  */
 void DeleteLoggerDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteLoggerDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::DeleteLoggerDefinitionResponsePrivate
+ * \brief The DeleteLoggerDefinitionResponsePrivate class provides private implementation for DeleteLoggerDefinitionResponse.
  * \internal
  *
- * \class DeleteLoggerDefinitionResponsePrivate
- *
- * \brief Private implementation for DeleteLoggerDefinitionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoggerDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLoggerDefinitionResponse instance.
+ * Constructs a DeleteLoggerDefinitionResponsePrivate object with public implementation \a q.
  */
 DeleteLoggerDefinitionResponsePrivate::DeleteLoggerDefinitionResponsePrivate(
     DeleteLoggerDefinitionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteLoggerDefinitionResponsePrivate::DeleteLoggerDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass DeleteLoggerDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass DeleteLoggerDefinition response element from \a xml.
  */
 void DeleteLoggerDefinitionResponsePrivate::parseDeleteLoggerDefinitionResponse(QXmlStreamReader &xml)
 {

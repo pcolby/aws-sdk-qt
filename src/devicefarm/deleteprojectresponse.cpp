@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeleteProjectResponse
- *
  * \brief The DeleteProjectResponse class provides an interace for DeviceFarm DeleteProject responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new DeleteProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteProjectResponse::DeleteProjectResponse(
         const DeleteProjectRequest &request,
@@ -57,6 +52,9 @@ DeleteProjectResponse::DeleteProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteProjectRequest * DeleteProjectResponse::request() const
 {
     Q_D(const DeleteProjectResponse);
@@ -64,9 +62,8 @@ const DeleteProjectRequest * DeleteProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm DeleteProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm DeleteProject \a response.
  */
 void DeleteProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DeleteProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::DeleteProjectResponsePrivate
+ * \brief The DeleteProjectResponsePrivate class provides private implementation for DeleteProjectResponse.
  * \internal
  *
- * \class DeleteProjectResponsePrivate
- *
- * \brief Private implementation for DeleteProjectResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteProjectResponse instance.
+ * Constructs a DeleteProjectResponsePrivate object with public implementation \a q.
  */
 DeleteProjectResponsePrivate::DeleteProjectResponsePrivate(
     DeleteProjectResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ DeleteProjectResponsePrivate::DeleteProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm DeleteProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm DeleteProject response element from \a xml.
  */
 void DeleteProjectResponsePrivate::parseDeleteProjectResponse(QXmlStreamReader &xml)
 {

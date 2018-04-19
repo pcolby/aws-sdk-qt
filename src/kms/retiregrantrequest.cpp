@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * RetireGrantRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a RetireGrantRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a RetireGrantRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 RetireGrantRequestPrivate::RetireGrantRequestPrivate(
     const KMSRequest::Action action, RetireGrantRequest * const q)

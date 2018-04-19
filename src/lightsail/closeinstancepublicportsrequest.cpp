@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * CloseInstancePublicPortsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CloseInstancePublicPortsRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a CloseInstancePublicPortsRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 CloseInstancePublicPortsRequestPrivate::CloseInstancePublicPortsRequestPrivate(
     const LightsailRequest::Action action, CloseInstancePublicPortsRequest * const q)

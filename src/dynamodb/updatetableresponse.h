@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateTableResponse : public DynamoDBResponse {
 public:
     UpdateTableResponse(const UpdateTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateTableRequest * request() const;
+    virtual const UpdateTableRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateTableResponse)

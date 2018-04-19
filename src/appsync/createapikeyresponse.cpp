@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::CreateApiKeyResponse
- *
  * \brief The CreateApiKeyResponse class provides an interace for AppSync CreateApiKey responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new CreateApiKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateApiKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateApiKeyResponse::CreateApiKeyResponse(
         const CreateApiKeyRequest &request,
@@ -56,6 +51,9 @@ CreateApiKeyResponse::CreateApiKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateApiKeyRequest * CreateApiKeyResponse::request() const
 {
     Q_D(const CreateApiKeyResponse);
@@ -63,9 +61,8 @@ const CreateApiKeyRequest * CreateApiKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync CreateApiKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync CreateApiKey \a response.
  */
 void CreateApiKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void CreateApiKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::CreateApiKeyResponsePrivate
+ * \brief The CreateApiKeyResponsePrivate class provides private implementation for CreateApiKeyResponse.
  * \internal
  *
- * \class CreateApiKeyResponsePrivate
- *
- * \brief Private implementation for CreateApiKeyResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateApiKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateApiKeyResponse instance.
+ * Constructs a CreateApiKeyResponsePrivate object with public implementation \a q.
  */
 CreateApiKeyResponsePrivate::CreateApiKeyResponsePrivate(
     CreateApiKeyResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ CreateApiKeyResponsePrivate::CreateApiKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync CreateApiKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync CreateApiKey response element from \a xml.
  */
 void CreateApiKeyResponsePrivate::parseCreateApiKeyResponse(QXmlStreamReader &xml)
 {

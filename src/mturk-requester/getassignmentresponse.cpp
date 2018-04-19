@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetAssignmentResponse
- *
  * \brief The GetAssignmentResponse class provides an interace for MTurk GetAssignment responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getAssignment
  */
 
 /*!
- * @brief  Constructs a new GetAssignmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAssignmentResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAssignmentResponse::GetAssignmentResponse(
         const GetAssignmentRequest &request,
@@ -55,6 +50,9 @@ GetAssignmentResponse::GetAssignmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAssignmentRequest * GetAssignmentResponse::request() const
 {
     Q_D(const GetAssignmentResponse);
@@ -62,9 +60,8 @@ const GetAssignmentRequest * GetAssignmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk GetAssignment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk GetAssignment \a response.
  */
 void GetAssignmentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetAssignmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::GetAssignmentResponsePrivate
+ * \brief The GetAssignmentResponsePrivate class provides private implementation for GetAssignmentResponse.
  * \internal
  *
- * \class GetAssignmentResponsePrivate
- *
- * \brief Private implementation for GetAssignmentResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAssignmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAssignmentResponse instance.
+ * Constructs a GetAssignmentResponsePrivate object with public implementation \a q.
  */
 GetAssignmentResponsePrivate::GetAssignmentResponsePrivate(
     GetAssignmentResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ GetAssignmentResponsePrivate::GetAssignmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk GetAssignmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk GetAssignment response element from \a xml.
  */
 void GetAssignmentResponsePrivate::parseGetAssignmentResponse(QXmlStreamReader &xml)
 {

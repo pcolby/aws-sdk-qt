@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBParameterGroupResponse
- *
  * \brief The ModifyDBParameterGroupResponse class provides an interace for RDS ModifyDBParameterGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyDBParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyDBParameterGroupResponse::ModifyDBParameterGroupResponse(
         const ModifyDBParameterGroupRequest &request,
@@ -119,6 +114,9 @@ ModifyDBParameterGroupResponse::ModifyDBParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyDBParameterGroupRequest * ModifyDBParameterGroupResponse::request() const
 {
     Q_D(const ModifyDBParameterGroupResponse);
@@ -126,9 +124,8 @@ const ModifyDBParameterGroupRequest * ModifyDBParameterGroupResponse::request() 
 }
 
 /*!
- * @brief  Parse a RDS ModifyDBParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS ModifyDBParameterGroup \a response.
  */
 void ModifyDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void ModifyDBParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::ModifyDBParameterGroupResponsePrivate
+ * \brief The ModifyDBParameterGroupResponsePrivate class provides private implementation for ModifyDBParameterGroupResponse.
  * \internal
  *
- * \class ModifyDBParameterGroupResponsePrivate
- *
- * \brief Private implementation for ModifyDBParameterGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyDBParameterGroupResponse instance.
+ * Constructs a ModifyDBParameterGroupResponsePrivate object with public implementation \a q.
  */
 ModifyDBParameterGroupResponsePrivate::ModifyDBParameterGroupResponsePrivate(
     ModifyDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ ModifyDBParameterGroupResponsePrivate::ModifyDBParameterGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS ModifyDBParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS ModifyDBParameterGroup response element from \a xml.
  */
 void ModifyDBParameterGroupResponsePrivate::parseModifyDBParameterGroupResponse(QXmlStreamReader &xml)
 {

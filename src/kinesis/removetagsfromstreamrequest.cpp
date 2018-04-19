@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromStreamRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a RemoveTagsFromStreamRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsFromStreamRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 RemoveTagsFromStreamRequestPrivate::RemoveTagsFromStreamRequestPrivate(
     const KinesisRequest::Action action, RemoveTagsFromStreamRequest * const q)

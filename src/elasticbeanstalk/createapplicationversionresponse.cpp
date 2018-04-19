@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::CreateApplicationVersionResponse
- *
  * \brief The CreateApplicationVersionResponse class provides an interace for ElasticBeanstalk CreateApplicationVersion responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new CreateApplicationVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateApplicationVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateApplicationVersionResponse::CreateApplicationVersionResponse(
         const CreateApplicationVersionRequest &request,
@@ -77,6 +72,9 @@ CreateApplicationVersionResponse::CreateApplicationVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateApplicationVersionRequest * CreateApplicationVersionResponse::request() const
 {
     Q_D(const CreateApplicationVersionResponse);
@@ -84,9 +82,8 @@ const CreateApplicationVersionRequest * CreateApplicationVersionResponse::reques
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk CreateApplicationVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk CreateApplicationVersion \a response.
  */
 void CreateApplicationVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void CreateApplicationVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::CreateApplicationVersionResponsePrivate
+ * \brief The CreateApplicationVersionResponsePrivate class provides private implementation for CreateApplicationVersionResponse.
  * \internal
  *
- * \class CreateApplicationVersionResponsePrivate
- *
- * \brief Private implementation for CreateApplicationVersionResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateApplicationVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateApplicationVersionResponse instance.
+ * Constructs a CreateApplicationVersionResponsePrivate object with public implementation \a q.
  */
 CreateApplicationVersionResponsePrivate::CreateApplicationVersionResponsePrivate(
     CreateApplicationVersionResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ CreateApplicationVersionResponsePrivate::CreateApplicationVersionResponsePrivate
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk CreateApplicationVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk CreateApplicationVersion response element from \a xml.
  */
 void CreateApplicationVersionResponsePrivate::parseCreateApplicationVersionResponse(QXmlStreamReader &xml)
 {

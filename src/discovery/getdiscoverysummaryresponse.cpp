@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::GetDiscoverySummaryResponse
- *
  * \brief The GetDiscoverySummaryResponse class provides an interace for ApplicationDiscoveryService GetDiscoverySummary responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new GetDiscoverySummaryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDiscoverySummaryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDiscoverySummaryResponse::GetDiscoverySummaryResponse(
         const GetDiscoverySummaryRequest &request,
@@ -119,6 +114,9 @@ GetDiscoverySummaryResponse::GetDiscoverySummaryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDiscoverySummaryRequest * GetDiscoverySummaryResponse::request() const
 {
     Q_D(const GetDiscoverySummaryResponse);
@@ -126,9 +124,8 @@ const GetDiscoverySummaryRequest * GetDiscoverySummaryResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService GetDiscoverySummary response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService GetDiscoverySummary \a response.
  */
 void GetDiscoverySummaryResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void GetDiscoverySummaryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::GetDiscoverySummaryResponsePrivate
+ * \brief The GetDiscoverySummaryResponsePrivate class provides private implementation for GetDiscoverySummaryResponse.
  * \internal
  *
- * \class GetDiscoverySummaryResponsePrivate
- *
- * \brief Private implementation for GetDiscoverySummaryResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDiscoverySummaryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDiscoverySummaryResponse instance.
+ * Constructs a GetDiscoverySummaryResponsePrivate object with public implementation \a q.
  */
 GetDiscoverySummaryResponsePrivate::GetDiscoverySummaryResponsePrivate(
     GetDiscoverySummaryResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ GetDiscoverySummaryResponsePrivate::GetDiscoverySummaryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService GetDiscoverySummaryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService GetDiscoverySummary response element from \a xml.
  */
 void GetDiscoverySummaryResponsePrivate::parseGetDiscoverySummaryResponse(QXmlStreamReader &xml)
 {

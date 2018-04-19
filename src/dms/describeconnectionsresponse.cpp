@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeConnectionsResponse
- *
  * \brief The DescribeConnectionsResponse class provides an interace for DatabaseMigrationService DescribeConnections responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConnectionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConnectionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConnectionsResponse::DescribeConnectionsResponse(
         const DescribeConnectionsRequest &request,
@@ -66,6 +61,9 @@ DescribeConnectionsResponse::DescribeConnectionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConnectionsRequest * DescribeConnectionsResponse::request() const
 {
     Q_D(const DescribeConnectionsResponse);
@@ -73,9 +71,8 @@ const DescribeConnectionsRequest * DescribeConnectionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DescribeConnections response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DescribeConnections \a response.
  */
 void DescribeConnectionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeConnectionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DescribeConnectionsResponsePrivate
+ * \brief The DescribeConnectionsResponsePrivate class provides private implementation for DescribeConnectionsResponse.
  * \internal
  *
- * \class DescribeConnectionsResponsePrivate
- *
- * \brief Private implementation for DescribeConnectionsResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConnectionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConnectionsResponse instance.
+ * Constructs a DescribeConnectionsResponsePrivate object with public implementation \a q.
  */
 DescribeConnectionsResponsePrivate::DescribeConnectionsResponsePrivate(
     DescribeConnectionsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeConnectionsResponsePrivate::DescribeConnectionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DescribeConnectionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DescribeConnections response element from \a xml.
  */
 void DescribeConnectionsResponsePrivate::parseDescribeConnectionsResponse(QXmlStreamReader &xml)
 {

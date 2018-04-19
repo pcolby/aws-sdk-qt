@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::StartAutomationExecutionResponse
- *
  * \brief The StartAutomationExecutionResponse class provides an interace for SSM StartAutomationExecution responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new StartAutomationExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartAutomationExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 StartAutomationExecutionResponse::StartAutomationExecutionResponse(
         const StartAutomationExecutionRequest &request,
@@ -79,6 +74,9 @@ StartAutomationExecutionResponse::StartAutomationExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartAutomationExecutionRequest * StartAutomationExecutionResponse::request() const
 {
     Q_D(const StartAutomationExecutionResponse);
@@ -86,9 +84,8 @@ const StartAutomationExecutionRequest * StartAutomationExecutionResponse::reques
 }
 
 /*!
- * @brief  Parse a SSM StartAutomationExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM StartAutomationExecution \a response.
  */
 void StartAutomationExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void StartAutomationExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::StartAutomationExecutionResponsePrivate
+ * \brief The StartAutomationExecutionResponsePrivate class provides private implementation for StartAutomationExecutionResponse.
  * \internal
  *
- * \class StartAutomationExecutionResponsePrivate
- *
- * \brief Private implementation for StartAutomationExecutionResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartAutomationExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartAutomationExecutionResponse instance.
+ * Constructs a StartAutomationExecutionResponsePrivate object with public implementation \a q.
  */
 StartAutomationExecutionResponsePrivate::StartAutomationExecutionResponsePrivate(
     StartAutomationExecutionResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ StartAutomationExecutionResponsePrivate::StartAutomationExecutionResponsePrivate
 }
 
 /*!
- * @brief  Parse an SSM StartAutomationExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM StartAutomationExecution response element from \a xml.
  */
 void StartAutomationExecutionResponsePrivate::parseStartAutomationExecutionResponse(QXmlStreamReader &xml)
 {

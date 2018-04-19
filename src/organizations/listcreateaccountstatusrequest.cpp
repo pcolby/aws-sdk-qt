@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * ListCreateAccountStatusRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListCreateAccountStatusRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a ListCreateAccountStatusRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 ListCreateAccountStatusRequestPrivate::ListCreateAccountStatusRequestPrivate(
     const OrganizationsRequest::Action action, ListCreateAccountStatusRequest * const q)

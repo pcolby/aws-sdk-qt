@@ -29,10 +29,9 @@ namespace AutoScalingPlans {
 
 /*!
  * \class QtAws::AutoScalingPlans::CreateScalingPlanResponse
- *
  * \brief The CreateScalingPlanResponse class provides an interace for AutoScalingPlans CreateScalingPlan responses.
  *
- * \ingroup AutoScalingPlans
+ * \inmodule QtAwsAutoScalingPlans
  *
  *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
  *  scaling for your scalable
@@ -48,11 +47,7 @@ namespace AutoScalingPlans {
  */
 
 /*!
- * @brief  Constructs a new CreateScalingPlanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateScalingPlanResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateScalingPlanResponse::CreateScalingPlanResponse(
         const CreateScalingPlanRequest &request,
@@ -64,6 +59,9 @@ CreateScalingPlanResponse::CreateScalingPlanResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateScalingPlanRequest * CreateScalingPlanResponse::request() const
 {
     Q_D(const CreateScalingPlanResponse);
@@ -71,9 +69,8 @@ const CreateScalingPlanRequest * CreateScalingPlanResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScalingPlans CreateScalingPlan response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScalingPlans CreateScalingPlan \a response.
  */
 void CreateScalingPlanResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void CreateScalingPlanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScalingPlans::CreateScalingPlanResponsePrivate
+ * \brief The CreateScalingPlanResponsePrivate class provides private implementation for CreateScalingPlanResponse.
  * \internal
  *
- * \class CreateScalingPlanResponsePrivate
- *
- * \brief Private implementation for CreateScalingPlanResponse.
+ * \inmodule QtAwsAutoScalingPlans
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateScalingPlanResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateScalingPlanResponse instance.
+ * Constructs a CreateScalingPlanResponsePrivate object with public implementation \a q.
  */
 CreateScalingPlanResponsePrivate::CreateScalingPlanResponsePrivate(
     CreateScalingPlanResponse * const q) : AutoScalingPlansResponsePrivate(q)
@@ -104,9 +97,7 @@ CreateScalingPlanResponsePrivate::CreateScalingPlanResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScalingPlans CreateScalingPlanResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScalingPlans CreateScalingPlan response element from \a xml.
  */
 void CreateScalingPlanResponsePrivate::parseCreateScalingPlanResponse(QXmlStreamReader &xml)
 {

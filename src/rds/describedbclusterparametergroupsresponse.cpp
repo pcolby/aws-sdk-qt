@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBClusterParameterGroupsResponse
- *
  * \brief The DescribeDBClusterParameterGroupsResponse class provides an interace for RDS DescribeDBClusterParameterGroups responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBClusterParameterGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDBClusterParameterGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDBClusterParameterGroupsResponse::DescribeDBClusterParameterGroupsResponse(
         const DescribeDBClusterParameterGroupsRequest &request,
@@ -119,6 +114,9 @@ DescribeDBClusterParameterGroupsResponse::DescribeDBClusterParameterGroupsRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDBClusterParameterGroupsRequest * DescribeDBClusterParameterGroupsResponse::request() const
 {
     Q_D(const DescribeDBClusterParameterGroupsResponse);
@@ -126,9 +124,8 @@ const DescribeDBClusterParameterGroupsRequest * DescribeDBClusterParameterGroups
 }
 
 /*!
- * @brief  Parse a RDS DescribeDBClusterParameterGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeDBClusterParameterGroups \a response.
  */
 void DescribeDBClusterParameterGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeDBClusterParameterGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeDBClusterParameterGroupsResponsePrivate
+ * \brief The DescribeDBClusterParameterGroupsResponsePrivate class provides private implementation for DescribeDBClusterParameterGroupsResponse.
  * \internal
  *
- * \class DescribeDBClusterParameterGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeDBClusterParameterGroupsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBClusterParameterGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDBClusterParameterGroupsResponse instance.
+ * Constructs a DescribeDBClusterParameterGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeDBClusterParameterGroupsResponsePrivate::DescribeDBClusterParameterGroupsResponsePrivate(
     DescribeDBClusterParameterGroupsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeDBClusterParameterGroupsResponsePrivate::DescribeDBClusterParameterGroup
 }
 
 /*!
- * @brief  Parse an RDS DescribeDBClusterParameterGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeDBClusterParameterGroups response element from \a xml.
  */
 void DescribeDBClusterParameterGroupsResponsePrivate::parseDescribeDBClusterParameterGroupsResponse(QXmlStreamReader &xml)
 {

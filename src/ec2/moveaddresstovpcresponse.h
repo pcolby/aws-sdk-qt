@@ -34,10 +34,10 @@ class QTAWS_EXPORT MoveAddressToVpcResponse : public EC2Response {
 public:
     MoveAddressToVpcResponse(const MoveAddressToVpcRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const MoveAddressToVpcRequest * request() const;
+    virtual const MoveAddressToVpcRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(MoveAddressToVpcResponse)

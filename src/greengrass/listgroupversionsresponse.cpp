@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListGroupVersionsResponse
- *
  * \brief The ListGroupVersionsResponse class provides an interace for Greengrass ListGroupVersions responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListGroupVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGroupVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGroupVersionsResponse::ListGroupVersionsResponse(
         const ListGroupVersionsRequest &request,
@@ -58,6 +53,9 @@ ListGroupVersionsResponse::ListGroupVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGroupVersionsRequest * ListGroupVersionsResponse::request() const
 {
     Q_D(const ListGroupVersionsResponse);
@@ -65,9 +63,8 @@ const ListGroupVersionsRequest * ListGroupVersionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass ListGroupVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass ListGroupVersions \a response.
  */
 void ListGroupVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListGroupVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::ListGroupVersionsResponsePrivate
+ * \brief The ListGroupVersionsResponsePrivate class provides private implementation for ListGroupVersionsResponse.
  * \internal
  *
- * \class ListGroupVersionsResponsePrivate
- *
- * \brief Private implementation for ListGroupVersionsResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGroupVersionsResponse instance.
+ * Constructs a ListGroupVersionsResponsePrivate object with public implementation \a q.
  */
 ListGroupVersionsResponsePrivate::ListGroupVersionsResponsePrivate(
     ListGroupVersionsResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ ListGroupVersionsResponsePrivate::ListGroupVersionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass ListGroupVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass ListGroupVersions response element from \a xml.
  */
 void ListGroupVersionsResponsePrivate::parseListGroupVersionsResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetSubnetsResponse : public ElasticLoadBalancingv2Response {
 public:
     SetSubnetsResponse(const SetSubnetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetSubnetsRequest * request() const;
+    virtual const SetSubnetsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetSubnetsResponse)

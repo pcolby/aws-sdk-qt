@@ -29,10 +29,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::ListElasticsearchVersionsResponse
- *
  * \brief The ListElasticsearchVersionsResponse class provides an interace for ElasticsearchService ListElasticsearchVersions responses.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new ListElasticsearchVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListElasticsearchVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListElasticsearchVersionsResponse::ListElasticsearchVersionsResponse(
         const ListElasticsearchVersionsRequest &request,
@@ -64,6 +59,9 @@ ListElasticsearchVersionsResponse::ListElasticsearchVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListElasticsearchVersionsRequest * ListElasticsearchVersionsResponse::request() const
 {
     Q_D(const ListElasticsearchVersionsResponse);
@@ -71,9 +69,8 @@ const ListElasticsearchVersionsRequest * ListElasticsearchVersionsResponse::requ
 }
 
 /*!
- * @brief  Parse a ElasticsearchService ListElasticsearchVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticsearchService ListElasticsearchVersions \a response.
  */
 void ListElasticsearchVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void ListElasticsearchVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticsearchService::ListElasticsearchVersionsResponsePrivate
+ * \brief The ListElasticsearchVersionsResponsePrivate class provides private implementation for ListElasticsearchVersionsResponse.
  * \internal
  *
- * \class ListElasticsearchVersionsResponsePrivate
- *
- * \brief Private implementation for ListElasticsearchVersionsResponse.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListElasticsearchVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListElasticsearchVersionsResponse instance.
+ * Constructs a ListElasticsearchVersionsResponsePrivate object with public implementation \a q.
  */
 ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponsePrivate(
     ListElasticsearchVersionsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
@@ -104,9 +97,7 @@ ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponsePriva
 }
 
 /*!
- * @brief  Parse an ElasticsearchService ListElasticsearchVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticsearchService ListElasticsearchVersions response element from \a xml.
  */
 void ListElasticsearchVersionsResponsePrivate::parseListElasticsearchVersionsResponse(QXmlStreamReader &xml)
 {

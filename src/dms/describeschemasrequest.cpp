@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSchemasRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeSchemasRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSchemasRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DescribeSchemasRequestPrivate::DescribeSchemasRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeSchemasRequest * const q)

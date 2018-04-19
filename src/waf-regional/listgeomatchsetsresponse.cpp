@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListGeoMatchSetsResponse
- *
  * \brief The ListGeoMatchSetsResponse class provides an interace for WAFRegional ListGeoMatchSets responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListGeoMatchSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGeoMatchSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGeoMatchSetsResponse::ListGeoMatchSetsResponse(
         const ListGeoMatchSetsRequest &request,
@@ -62,6 +57,9 @@ ListGeoMatchSetsResponse::ListGeoMatchSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGeoMatchSetsRequest * ListGeoMatchSetsResponse::request() const
 {
     Q_D(const ListGeoMatchSetsResponse);
@@ -69,9 +67,8 @@ const ListGeoMatchSetsRequest * ListGeoMatchSetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional ListGeoMatchSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional ListGeoMatchSets \a response.
  */
 void ListGeoMatchSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListGeoMatchSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::ListGeoMatchSetsResponsePrivate
+ * \brief The ListGeoMatchSetsResponsePrivate class provides private implementation for ListGeoMatchSetsResponse.
  * \internal
  *
- * \class ListGeoMatchSetsResponsePrivate
- *
- * \brief Private implementation for ListGeoMatchSetsResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGeoMatchSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGeoMatchSetsResponse instance.
+ * Constructs a ListGeoMatchSetsResponsePrivate object with public implementation \a q.
  */
 ListGeoMatchSetsResponsePrivate::ListGeoMatchSetsResponsePrivate(
     ListGeoMatchSetsResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ ListGeoMatchSetsResponsePrivate::ListGeoMatchSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional ListGeoMatchSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional ListGeoMatchSets response element from \a xml.
  */
 void ListGeoMatchSetsResponsePrivate::parseListGeoMatchSetsResponse(QXmlStreamReader &xml)
 {

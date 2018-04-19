@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * PurchaseReservedCacheNodesOfferingRequest::re
  */
 
 /*!
- *
- * Constructs a PurchaseReservedCacheNodesOfferingRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a PurchaseReservedCacheNodesOfferingRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 PurchaseReservedCacheNodesOfferingRequestPrivate::PurchaseReservedCacheNodesOfferingRequestPrivate(
     const ElastiCacheRequest::Action action, PurchaseReservedCacheNodesOfferingRequest * const q)

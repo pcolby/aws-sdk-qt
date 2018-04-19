@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeHostReservationOfferingsRequest::resp
  */
 
 /*!
- *
- * Constructs a DescribeHostReservationOfferingsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeHostReservationOfferingsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeHostReservationOfferingsRequestPrivate::DescribeHostReservationOfferingsRequestPrivate(
     const EC2Request::Action action, DescribeHostReservationOfferingsRequest * const q)

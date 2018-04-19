@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::AttachPolicyResponse
- *
  * \brief The AttachPolicyResponse class provides an interace for Organizations AttachPolicy responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new AttachPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachPolicyResponse::AttachPolicyResponse(
         const AttachPolicyRequest &request,
@@ -197,6 +192,9 @@ AttachPolicyResponse::AttachPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachPolicyRequest * AttachPolicyResponse::request() const
 {
     Q_D(const AttachPolicyResponse);
@@ -204,9 +202,8 @@ const AttachPolicyRequest * AttachPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations AttachPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations AttachPolicy \a response.
  */
 void AttachPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void AttachPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::AttachPolicyResponsePrivate
+ * \brief The AttachPolicyResponsePrivate class provides private implementation for AttachPolicyResponse.
  * \internal
  *
- * \class AttachPolicyResponsePrivate
- *
- * \brief Private implementation for AttachPolicyResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachPolicyResponse instance.
+ * Constructs a AttachPolicyResponsePrivate object with public implementation \a q.
  */
 AttachPolicyResponsePrivate::AttachPolicyResponsePrivate(
     AttachPolicyResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ AttachPolicyResponsePrivate::AttachPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations AttachPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations AttachPolicy response element from \a xml.
  */
 void AttachPolicyResponsePrivate::parseAttachPolicyResponse(QXmlStreamReader &xml)
 {

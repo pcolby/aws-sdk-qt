@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetBucketEncryptionResponse : public S3Response {
 public:
     GetBucketEncryptionResponse(const GetBucketEncryptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetBucketEncryptionRequest * request() const;
+    virtual const GetBucketEncryptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetBucketEncryptionResponse)

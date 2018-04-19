@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDBEngineVersionsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeDBEngineVersionsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDBEngineVersionsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeDBEngineVersionsRequestPrivate::DescribeDBEngineVersionsRequestPrivate(
     const RDSRequest::Action action, DescribeDBEngineVersionsRequest * const q)

@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::DescribeDatasetResponse
- *
  * \brief The DescribeDatasetResponse class provides an interace for CognitoSync DescribeDataset responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new DescribeDatasetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDatasetResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDatasetResponse::DescribeDatasetResponse(
         const DescribeDatasetRequest &request,
@@ -75,6 +70,9 @@ DescribeDatasetResponse::DescribeDatasetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDatasetRequest * DescribeDatasetResponse::request() const
 {
     Q_D(const DescribeDatasetResponse);
@@ -82,9 +80,8 @@ const DescribeDatasetRequest * DescribeDatasetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoSync DescribeDataset response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync DescribeDataset \a response.
  */
 void DescribeDatasetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void DescribeDatasetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::DescribeDatasetResponsePrivate
+ * \brief The DescribeDatasetResponsePrivate class provides private implementation for DescribeDatasetResponse.
  * \internal
  *
- * \class DescribeDatasetResponsePrivate
- *
- * \brief Private implementation for DescribeDatasetResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDatasetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDatasetResponse instance.
+ * Constructs a DescribeDatasetResponsePrivate object with public implementation \a q.
  */
 DescribeDatasetResponsePrivate::DescribeDatasetResponsePrivate(
     DescribeDatasetResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ DescribeDatasetResponsePrivate::DescribeDatasetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync DescribeDatasetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync DescribeDataset response element from \a xml.
  */
 void DescribeDatasetResponsePrivate::parseDescribeDatasetResponse(QXmlStreamReader &xml)
 {

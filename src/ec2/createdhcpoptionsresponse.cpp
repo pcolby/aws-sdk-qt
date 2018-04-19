@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateDhcpOptionsResponse
- *
  * \brief The CreateDhcpOptionsResponse class provides an interace for EC2 CreateDhcpOptions responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateDhcpOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDhcpOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDhcpOptionsResponse::CreateDhcpOptionsResponse(
         const CreateDhcpOptionsRequest &request,
@@ -59,6 +54,9 @@ CreateDhcpOptionsResponse::CreateDhcpOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDhcpOptionsRequest * CreateDhcpOptionsResponse::request() const
 {
     Q_D(const CreateDhcpOptionsResponse);
@@ -66,9 +64,8 @@ const CreateDhcpOptionsRequest * CreateDhcpOptionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateDhcpOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateDhcpOptions \a response.
  */
 void CreateDhcpOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateDhcpOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateDhcpOptionsResponsePrivate
+ * \brief The CreateDhcpOptionsResponsePrivate class provides private implementation for CreateDhcpOptionsResponse.
  * \internal
  *
- * \class CreateDhcpOptionsResponsePrivate
- *
- * \brief Private implementation for CreateDhcpOptionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDhcpOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDhcpOptionsResponse instance.
+ * Constructs a CreateDhcpOptionsResponsePrivate object with public implementation \a q.
  */
 CreateDhcpOptionsResponsePrivate::CreateDhcpOptionsResponsePrivate(
     CreateDhcpOptionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateDhcpOptionsResponsePrivate::CreateDhcpOptionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateDhcpOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateDhcpOptions response element from \a xml.
  */
 void CreateDhcpOptionsResponsePrivate::parseCreateDhcpOptionsResponse(QXmlStreamReader &xml)
 {

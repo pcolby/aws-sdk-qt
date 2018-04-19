@@ -29,10 +29,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::ImportMigrationTaskResponse
- *
  * \brief The ImportMigrationTaskResponse class provides an interace for MigrationHub ImportMigrationTask responses.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -41,11 +40,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new ImportMigrationTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportMigrationTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportMigrationTaskResponse::ImportMigrationTaskResponse(
         const ImportMigrationTaskRequest &request,
@@ -57,6 +52,9 @@ ImportMigrationTaskResponse::ImportMigrationTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportMigrationTaskRequest * ImportMigrationTaskResponse::request() const
 {
     Q_D(const ImportMigrationTaskResponse);
@@ -64,9 +62,8 @@ const ImportMigrationTaskRequest * ImportMigrationTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a MigrationHub ImportMigrationTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MigrationHub ImportMigrationTask \a response.
  */
 void ImportMigrationTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ImportMigrationTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MigrationHub::ImportMigrationTaskResponsePrivate
+ * \brief The ImportMigrationTaskResponsePrivate class provides private implementation for ImportMigrationTaskResponse.
  * \internal
  *
- * \class ImportMigrationTaskResponsePrivate
- *
- * \brief Private implementation for ImportMigrationTaskResponse.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportMigrationTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportMigrationTaskResponse instance.
+ * Constructs a ImportMigrationTaskResponsePrivate object with public implementation \a q.
  */
 ImportMigrationTaskResponsePrivate::ImportMigrationTaskResponsePrivate(
     ImportMigrationTaskResponse * const q) : MigrationHubResponsePrivate(q)
@@ -97,9 +90,7 @@ ImportMigrationTaskResponsePrivate::ImportMigrationTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MigrationHub ImportMigrationTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MigrationHub ImportMigrationTask response element from \a xml.
  */
 void ImportMigrationTaskResponsePrivate::parseImportMigrationTaskResponse(QXmlStreamReader &xml)
 {

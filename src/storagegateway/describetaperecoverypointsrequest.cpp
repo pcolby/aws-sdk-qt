@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTapeRecoveryPointsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeTapeRecoveryPointsRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTapeRecoveryPointsRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DescribeTapeRecoveryPointsRequestPrivate::DescribeTapeRecoveryPointsRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeTapeRecoveryPointsRequest * const q)

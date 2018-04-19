@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * UpdateContinuousBackupsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateContinuousBackupsRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a UpdateContinuousBackupsRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 UpdateContinuousBackupsRequestPrivate::UpdateContinuousBackupsRequestPrivate(
     const DynamoDBRequest::Action action, UpdateContinuousBackupsRequest * const q)

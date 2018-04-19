@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachLoadBalancersResponse : public AutoScalingResponse {
 public:
     DetachLoadBalancersResponse(const DetachLoadBalancersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachLoadBalancersRequest * request() const;
+    virtual const DetachLoadBalancersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DetachLoadBalancersResponse)

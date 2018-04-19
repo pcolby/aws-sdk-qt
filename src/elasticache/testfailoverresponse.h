@@ -34,10 +34,10 @@ class QTAWS_EXPORT TestFailoverResponse : public ElastiCacheResponse {
 public:
     TestFailoverResponse(const TestFailoverRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TestFailoverRequest * request() const;
+    virtual const TestFailoverRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TestFailoverResponse)

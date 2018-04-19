@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateUserRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a UpdateUserRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateUserRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateUserRequestPrivate::UpdateUserRequestPrivate(
     const IAMRequest::Action action, UpdateUserRequest * const q)

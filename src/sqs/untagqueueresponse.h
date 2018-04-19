@@ -34,10 +34,10 @@ class QTAWS_EXPORT UntagQueueResponse : public SQSResponse {
 public:
     UntagQueueResponse(const UntagQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UntagQueueRequest * request() const;
+    virtual const UntagQueueRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UntagQueueResponse)

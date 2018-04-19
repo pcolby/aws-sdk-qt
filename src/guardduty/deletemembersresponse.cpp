@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DeleteMembersResponse
- *
  * \brief The DeleteMembersResponse class provides an interace for GuardDuty DeleteMembers responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::deleteMembers
  */
 
 /*!
- * @brief  Constructs a new DeleteMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteMembersResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteMembersResponse::DeleteMembersResponse(
         const DeleteMembersRequest &request,
@@ -55,6 +50,9 @@ DeleteMembersResponse::DeleteMembersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteMembersRequest * DeleteMembersResponse::request() const
 {
     Q_D(const DeleteMembersResponse);
@@ -62,9 +60,8 @@ const DeleteMembersRequest * DeleteMembersResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty DeleteMembers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty DeleteMembers \a response.
  */
 void DeleteMembersResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteMembersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::DeleteMembersResponsePrivate
+ * \brief The DeleteMembersResponsePrivate class provides private implementation for DeleteMembersResponse.
  * \internal
  *
- * \class DeleteMembersResponsePrivate
- *
- * \brief Private implementation for DeleteMembersResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMembersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteMembersResponse instance.
+ * Constructs a DeleteMembersResponsePrivate object with public implementation \a q.
  */
 DeleteMembersResponsePrivate::DeleteMembersResponsePrivate(
     DeleteMembersResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteMembersResponsePrivate::DeleteMembersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty DeleteMembersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty DeleteMembers response element from \a xml.
  */
 void DeleteMembersResponsePrivate::parseDeleteMembersResponse(QXmlStreamReader &xml)
 {

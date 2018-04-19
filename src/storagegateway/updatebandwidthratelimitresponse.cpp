@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateBandwidthRateLimitResponse
- *
  * \brief The UpdateBandwidthRateLimitResponse class provides an interace for StorageGateway UpdateBandwidthRateLimit responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateBandwidthRateLimitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateBandwidthRateLimitResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateBandwidthRateLimitResponse::UpdateBandwidthRateLimitResponse(
         const UpdateBandwidthRateLimitRequest &request,
@@ -124,6 +119,9 @@ UpdateBandwidthRateLimitResponse::UpdateBandwidthRateLimitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateBandwidthRateLimitRequest * UpdateBandwidthRateLimitResponse::request() const
 {
     Q_D(const UpdateBandwidthRateLimitResponse);
@@ -131,9 +129,8 @@ const UpdateBandwidthRateLimitRequest * UpdateBandwidthRateLimitResponse::reques
 }
 
 /*!
- * @brief  Parse a StorageGateway UpdateBandwidthRateLimit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway UpdateBandwidthRateLimit \a response.
  */
 void UpdateBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void UpdateBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::UpdateBandwidthRateLimitResponsePrivate
+ * \brief The UpdateBandwidthRateLimitResponsePrivate class provides private implementation for UpdateBandwidthRateLimitResponse.
  * \internal
  *
- * \class UpdateBandwidthRateLimitResponsePrivate
- *
- * \brief Private implementation for UpdateBandwidthRateLimitResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateBandwidthRateLimitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateBandwidthRateLimitResponse instance.
+ * Constructs a UpdateBandwidthRateLimitResponsePrivate object with public implementation \a q.
  */
 UpdateBandwidthRateLimitResponsePrivate::UpdateBandwidthRateLimitResponsePrivate(
     UpdateBandwidthRateLimitResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ UpdateBandwidthRateLimitResponsePrivate::UpdateBandwidthRateLimitResponsePrivate
 }
 
 /*!
- * @brief  Parse an StorageGateway UpdateBandwidthRateLimitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway UpdateBandwidthRateLimit response element from \a xml.
  */
 void UpdateBandwidthRateLimitResponsePrivate::parseUpdateBandwidthRateLimitResponse(QXmlStreamReader &xml)
 {

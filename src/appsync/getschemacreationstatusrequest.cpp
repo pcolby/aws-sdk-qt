@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetSchemaCreationStatusRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a GetSchemaCreationStatusRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a GetSchemaCreationStatusRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 GetSchemaCreationStatusRequestPrivate::GetSchemaCreationStatusRequestPrivate(
     const AppSyncRequest::Action action, GetSchemaCreationStatusRequest * const q)

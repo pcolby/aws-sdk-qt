@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::UpdateCloudFrontOriginAccessIdentityResponse
- *
  * \brief The UpdateCloudFrontOriginAccessIdentityResponse class provides an interace for CloudFront UpdateCloudFrontOriginAccessIdentity responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateCloudFrontOriginAccessIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateCloudFrontOriginAccessIdentityResponse::UpdateCloudFrontOriginAccessIdentityResponse(
         const UpdateCloudFrontOriginAccessIdentityRequest &request,
@@ -60,6 +55,9 @@ UpdateCloudFrontOriginAccessIdentityResponse::UpdateCloudFrontOriginAccessIdenti
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateCloudFrontOriginAccessIdentityRequest * UpdateCloudFrontOriginAccessIdentityResponse::request() const
 {
     Q_D(const UpdateCloudFrontOriginAccessIdentityResponse);
@@ -67,9 +65,8 @@ const UpdateCloudFrontOriginAccessIdentityRequest * UpdateCloudFrontOriginAccess
 }
 
 /*!
- * @brief  Parse a CloudFront UpdateCloudFrontOriginAccessIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront UpdateCloudFrontOriginAccessIdentity \a response.
  */
 void UpdateCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::CloudFront::UpdateCloudFrontOriginAccessIdentityResponsePrivate
+ * \brief The UpdateCloudFrontOriginAccessIdentityResponsePrivate class provides private implementation for UpdateCloudFrontOriginAccessIdentityResponse.
  * \internal
  *
- * \class UpdateCloudFrontOriginAccessIdentityResponsePrivate
- *
- * \brief Private implementation for UpdateCloudFrontOriginAccessIdentityResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCloudFrontOriginAccessIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateCloudFrontOriginAccessIdentityResponse instance.
+ * Constructs a UpdateCloudFrontOriginAccessIdentityResponsePrivate object with public implementation \a q.
  */
 UpdateCloudFrontOriginAccessIdentityResponsePrivate::UpdateCloudFrontOriginAccessIdentityResponsePrivate(
     UpdateCloudFrontOriginAccessIdentityResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateCloudFrontOriginAccessIdentityResponsePrivate::UpdateCloudFrontOriginAcces
 }
 
 /*!
- * @brief  Parse an CloudFront UpdateCloudFrontOriginAccessIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront UpdateCloudFrontOriginAccessIdentity response element from \a xml.
  */
 void UpdateCloudFrontOriginAccessIdentityResponsePrivate::parseUpdateCloudFrontOriginAccessIdentityResponse(QXmlStreamReader &xml)
 {

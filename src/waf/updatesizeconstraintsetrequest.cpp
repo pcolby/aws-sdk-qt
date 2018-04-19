@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSizeConstraintSetRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateSizeConstraintSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSizeConstraintSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 UpdateSizeConstraintSetRequestPrivate::UpdateSizeConstraintSetRequestPrivate(
     const WAFRequest::Action action, UpdateSizeConstraintSetRequest * const q)

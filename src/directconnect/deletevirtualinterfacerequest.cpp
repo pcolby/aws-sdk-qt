@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVirtualInterfaceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteVirtualInterfaceRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVirtualInterfaceRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 DeleteVirtualInterfaceRequestPrivate::DeleteVirtualInterfaceRequestPrivate(
     const DirectConnectRequest::Action action, DeleteVirtualInterfaceRequest * const q)

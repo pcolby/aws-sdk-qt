@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerTlsCertificateRequest::resp
  */
 
 /*!
- *
- * Constructs a DeleteLoadBalancerTlsCertificateRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLoadBalancerTlsCertificateRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 DeleteLoadBalancerTlsCertificateRequestPrivate::DeleteLoadBalancerTlsCertificateRequestPrivate(
     const LightsailRequest::Action action, DeleteLoadBalancerTlsCertificateRequest * const q)

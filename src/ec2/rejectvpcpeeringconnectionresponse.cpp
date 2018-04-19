@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RejectVpcPeeringConnectionResponse
- *
  * \brief The RejectVpcPeeringConnectionResponse class provides an interace for EC2 RejectVpcPeeringConnection responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RejectVpcPeeringConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RejectVpcPeeringConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 RejectVpcPeeringConnectionResponse::RejectVpcPeeringConnectionResponse(
         const RejectVpcPeeringConnectionRequest &request,
@@ -59,6 +54,9 @@ RejectVpcPeeringConnectionResponse::RejectVpcPeeringConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RejectVpcPeeringConnectionRequest * RejectVpcPeeringConnectionResponse::request() const
 {
     Q_D(const RejectVpcPeeringConnectionResponse);
@@ -66,9 +64,8 @@ const RejectVpcPeeringConnectionRequest * RejectVpcPeeringConnectionResponse::re
 }
 
 /*!
- * @brief  Parse a EC2 RejectVpcPeeringConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 RejectVpcPeeringConnection \a response.
  */
 void RejectVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void RejectVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::RejectVpcPeeringConnectionResponsePrivate
+ * \brief The RejectVpcPeeringConnectionResponsePrivate class provides private implementation for RejectVpcPeeringConnectionResponse.
  * \internal
  *
- * \class RejectVpcPeeringConnectionResponsePrivate
- *
- * \brief Private implementation for RejectVpcPeeringConnectionResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RejectVpcPeeringConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RejectVpcPeeringConnectionResponse instance.
+ * Constructs a RejectVpcPeeringConnectionResponsePrivate object with public implementation \a q.
  */
 RejectVpcPeeringConnectionResponsePrivate::RejectVpcPeeringConnectionResponsePrivate(
     RejectVpcPeeringConnectionResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ RejectVpcPeeringConnectionResponsePrivate::RejectVpcPeeringConnectionResponsePri
 }
 
 /*!
- * @brief  Parse an EC2 RejectVpcPeeringConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 RejectVpcPeeringConnection response element from \a xml.
  */
 void RejectVpcPeeringConnectionResponsePrivate::parseRejectVpcPeeringConnectionResponse(QXmlStreamReader &xml)
 {

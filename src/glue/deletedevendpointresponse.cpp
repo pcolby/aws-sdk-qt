@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteDevEndpointResponse
- *
  * \brief The DeleteDevEndpointResponse class provides an interace for Glue DeleteDevEndpoint responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteDevEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDevEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDevEndpointResponse::DeleteDevEndpointResponse(
         const DeleteDevEndpointRequest &request,
@@ -58,6 +53,9 @@ DeleteDevEndpointResponse::DeleteDevEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDevEndpointRequest * DeleteDevEndpointResponse::request() const
 {
     Q_D(const DeleteDevEndpointResponse);
@@ -65,9 +63,8 @@ const DeleteDevEndpointRequest * DeleteDevEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue DeleteDevEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue DeleteDevEndpoint \a response.
  */
 void DeleteDevEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteDevEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::DeleteDevEndpointResponsePrivate
+ * \brief The DeleteDevEndpointResponsePrivate class provides private implementation for DeleteDevEndpointResponse.
  * \internal
  *
- * \class DeleteDevEndpointResponsePrivate
- *
- * \brief Private implementation for DeleteDevEndpointResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDevEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDevEndpointResponse instance.
+ * Constructs a DeleteDevEndpointResponsePrivate object with public implementation \a q.
  */
 DeleteDevEndpointResponsePrivate::DeleteDevEndpointResponsePrivate(
     DeleteDevEndpointResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteDevEndpointResponsePrivate::DeleteDevEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue DeleteDevEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue DeleteDevEndpoint response element from \a xml.
  */
 void DeleteDevEndpointResponsePrivate::parseDeleteDevEndpointResponse(QXmlStreamReader &xml)
 {

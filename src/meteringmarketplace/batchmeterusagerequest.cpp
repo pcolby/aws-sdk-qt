@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * BatchMeterUsageRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a BatchMeterUsageRequestPrivate object for MarketplaceMetering \a action with,
- * public implementation \a q.
+ * Constructs a BatchMeterUsageRequestPrivate object for MarketplaceMetering \a action,
+ * with public implementation \a q.
  */
 BatchMeterUsageRequestPrivate::BatchMeterUsageRequestPrivate(
     const MarketplaceMeteringRequest::Action action, BatchMeterUsageRequest * const q)

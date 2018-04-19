@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteMLModelRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteMLModelRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a DeleteMLModelRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 DeleteMLModelRequestPrivate::DeleteMLModelRequestPrivate(
     const MachineLearningRequest::Action action, DeleteMLModelRequest * const q)

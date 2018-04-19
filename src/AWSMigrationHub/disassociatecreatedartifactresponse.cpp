@@ -29,10 +29,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::DisassociateCreatedArtifactResponse
- *
  * \brief The DisassociateCreatedArtifactResponse class provides an interace for MigrationHub DisassociateCreatedArtifact responses.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -41,11 +40,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new DisassociateCreatedArtifactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateCreatedArtifactResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateCreatedArtifactResponse::DisassociateCreatedArtifactResponse(
         const DisassociateCreatedArtifactRequest &request,
@@ -57,6 +52,9 @@ DisassociateCreatedArtifactResponse::DisassociateCreatedArtifactResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateCreatedArtifactRequest * DisassociateCreatedArtifactResponse::request() const
 {
     Q_D(const DisassociateCreatedArtifactResponse);
@@ -64,9 +62,8 @@ const DisassociateCreatedArtifactRequest * DisassociateCreatedArtifactResponse::
 }
 
 /*!
- * @brief  Parse a MigrationHub DisassociateCreatedArtifact response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MigrationHub DisassociateCreatedArtifact \a response.
  */
 void DisassociateCreatedArtifactResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DisassociateCreatedArtifactResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MigrationHub::DisassociateCreatedArtifactResponsePrivate
+ * \brief The DisassociateCreatedArtifactResponsePrivate class provides private implementation for DisassociateCreatedArtifactResponse.
  * \internal
  *
- * \class DisassociateCreatedArtifactResponsePrivate
- *
- * \brief Private implementation for DisassociateCreatedArtifactResponse.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateCreatedArtifactResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateCreatedArtifactResponse instance.
+ * Constructs a DisassociateCreatedArtifactResponsePrivate object with public implementation \a q.
  */
 DisassociateCreatedArtifactResponsePrivate::DisassociateCreatedArtifactResponsePrivate(
     DisassociateCreatedArtifactResponse * const q) : MigrationHubResponsePrivate(q)
@@ -97,9 +90,7 @@ DisassociateCreatedArtifactResponsePrivate::DisassociateCreatedArtifactResponseP
 }
 
 /*!
- * @brief  Parse an MigrationHub DisassociateCreatedArtifactResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MigrationHub DisassociateCreatedArtifact response element from \a xml.
  */
 void DisassociateCreatedArtifactResponsePrivate::parseDisassociateCreatedArtifactResponse(QXmlStreamReader &xml)
 {

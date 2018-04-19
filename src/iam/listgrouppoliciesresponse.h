@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListGroupPoliciesResponse : public IAMResponse {
 public:
     ListGroupPoliciesResponse(const ListGroupPoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListGroupPoliciesRequest * request() const;
+    virtual const ListGroupPoliciesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListGroupPoliciesResponse)

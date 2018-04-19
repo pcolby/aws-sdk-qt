@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * TestInvokeAuthorizerRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a TestInvokeAuthorizerRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a TestInvokeAuthorizerRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 TestInvokeAuthorizerRequestPrivate::TestInvokeAuthorizerRequestPrivate(
     const IoTRequest::Action action, TestInvokeAuthorizerRequest * const q)

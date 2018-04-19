@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StartJobRunResponse
- *
  * \brief The StartJobRunResponse class provides an interace for Glue StartJobRun responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StartJobRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartJobRunResponse object for \a reply to \a request, with parent \a parent.
  */
 StartJobRunResponse::StartJobRunResponse(
         const StartJobRunRequest &request,
@@ -58,6 +53,9 @@ StartJobRunResponse::StartJobRunResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartJobRunRequest * StartJobRunResponse::request() const
 {
     Q_D(const StartJobRunResponse);
@@ -65,9 +63,8 @@ const StartJobRunRequest * StartJobRunResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue StartJobRun response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue StartJobRun \a response.
  */
 void StartJobRunResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StartJobRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::StartJobRunResponsePrivate
+ * \brief The StartJobRunResponsePrivate class provides private implementation for StartJobRunResponse.
  * \internal
  *
- * \class StartJobRunResponsePrivate
- *
- * \brief Private implementation for StartJobRunResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartJobRunResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartJobRunResponse instance.
+ * Constructs a StartJobRunResponsePrivate object with public implementation \a q.
  */
 StartJobRunResponsePrivate::StartJobRunResponsePrivate(
     StartJobRunResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ StartJobRunResponsePrivate::StartJobRunResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue StartJobRunResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue StartJobRun response element from \a xml.
  */
 void StartJobRunResponsePrivate::parseStartJobRunResponse(QXmlStreamReader &xml)
 {

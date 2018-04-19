@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * UpdateNumberOfDomainControllersRequest::respo
  */
 
 /*!
- *
- * Constructs a UpdateNumberOfDomainControllersRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a UpdateNumberOfDomainControllersRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 UpdateNumberOfDomainControllersRequestPrivate::UpdateNumberOfDomainControllersRequestPrivate(
     const DirectoryServiceRequest::Action action, UpdateNumberOfDomainControllersRequest * const q)

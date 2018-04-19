@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetLoadBalancerListenerSSLCertificateResponse : public Elasti
 public:
     SetLoadBalancerListenerSSLCertificateResponse(const SetLoadBalancerListenerSSLCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetLoadBalancerListenerSSLCertificateRequest * request() const;
+    virtual const SetLoadBalancerListenerSSLCertificateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetLoadBalancerListenerSSLCertificateResponse)

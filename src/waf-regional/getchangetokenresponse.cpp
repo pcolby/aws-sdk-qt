@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetChangeTokenResponse
- *
  * \brief The GetChangeTokenResponse class provides an interace for WAFRegional GetChangeToken responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetChangeTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetChangeTokenResponse object for \a reply to \a request, with parent \a parent.
  */
 GetChangeTokenResponse::GetChangeTokenResponse(
         const GetChangeTokenRequest &request,
@@ -62,6 +57,9 @@ GetChangeTokenResponse::GetChangeTokenResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetChangeTokenRequest * GetChangeTokenResponse::request() const
 {
     Q_D(const GetChangeTokenResponse);
@@ -69,9 +67,8 @@ const GetChangeTokenRequest * GetChangeTokenResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional GetChangeToken response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional GetChangeToken \a response.
  */
 void GetChangeTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetChangeTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::GetChangeTokenResponsePrivate
+ * \brief The GetChangeTokenResponsePrivate class provides private implementation for GetChangeTokenResponse.
  * \internal
  *
- * \class GetChangeTokenResponsePrivate
- *
- * \brief Private implementation for GetChangeTokenResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetChangeTokenResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetChangeTokenResponse instance.
+ * Constructs a GetChangeTokenResponsePrivate object with public implementation \a q.
  */
 GetChangeTokenResponsePrivate::GetChangeTokenResponsePrivate(
     GetChangeTokenResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ GetChangeTokenResponsePrivate::GetChangeTokenResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional GetChangeTokenResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional GetChangeToken response element from \a xml.
  */
 void GetChangeTokenResponsePrivate::parseGetChangeTokenResponse(QXmlStreamReader &xml)
 {

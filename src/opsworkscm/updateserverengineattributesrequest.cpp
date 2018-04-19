@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * UpdateServerEngineAttributesRequest::response
  */
 
 /*!
- *
- * Constructs a UpdateServerEngineAttributesRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateServerEngineAttributesRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 UpdateServerEngineAttributesRequestPrivate::UpdateServerEngineAttributesRequestPrivate(
     const OpsWorksCMRequest::Action action, UpdateServerEngineAttributesRequest * const q)

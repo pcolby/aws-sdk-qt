@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeFindingsResponse : public InspectorResponse {
 public:
     DescribeFindingsResponse(const DescribeFindingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeFindingsRequest * request() const;
+    virtual const DescribeFindingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeFindingsResponse)

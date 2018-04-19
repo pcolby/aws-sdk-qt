@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DeleteEvaluationResponse
- *
  * \brief The DeleteEvaluationResponse class provides an interace for MachineLearning DeleteEvaluation responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::deleteEvaluation
  */
 
 /*!
- * @brief  Constructs a new DeleteEvaluationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEvaluationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEvaluationResponse::DeleteEvaluationResponse(
         const DeleteEvaluationRequest &request,
@@ -55,6 +50,9 @@ DeleteEvaluationResponse::DeleteEvaluationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEvaluationRequest * DeleteEvaluationResponse::request() const
 {
     Q_D(const DeleteEvaluationResponse);
@@ -62,9 +60,8 @@ const DeleteEvaluationRequest * DeleteEvaluationResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning DeleteEvaluation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning DeleteEvaluation \a response.
  */
 void DeleteEvaluationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteEvaluationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::DeleteEvaluationResponsePrivate
+ * \brief The DeleteEvaluationResponsePrivate class provides private implementation for DeleteEvaluationResponse.
  * \internal
  *
- * \class DeleteEvaluationResponsePrivate
- *
- * \brief Private implementation for DeleteEvaluationResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEvaluationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEvaluationResponse instance.
+ * Constructs a DeleteEvaluationResponsePrivate object with public implementation \a q.
  */
 DeleteEvaluationResponsePrivate::DeleteEvaluationResponsePrivate(
     DeleteEvaluationResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteEvaluationResponsePrivate::DeleteEvaluationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning DeleteEvaluationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning DeleteEvaluation response element from \a xml.
  */
 void DeleteEvaluationResponsePrivate::parseDeleteEvaluationResponse(QXmlStreamReader &xml)
 {

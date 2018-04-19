@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::AddSourceIdentifierToSubscriptionResponse
- *
  * \brief The AddSourceIdentifierToSubscriptionResponse class provides an interace for RDS AddSourceIdentifierToSubscription responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new AddSourceIdentifierToSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddSourceIdentifierToSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 AddSourceIdentifierToSubscriptionResponse::AddSourceIdentifierToSubscriptionResponse(
         const AddSourceIdentifierToSubscriptionRequest &request,
@@ -119,6 +114,9 @@ AddSourceIdentifierToSubscriptionResponse::AddSourceIdentifierToSubscriptionResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddSourceIdentifierToSubscriptionRequest * AddSourceIdentifierToSubscriptionResponse::request() const
 {
     Q_D(const AddSourceIdentifierToSubscriptionResponse);
@@ -126,9 +124,8 @@ const AddSourceIdentifierToSubscriptionRequest * AddSourceIdentifierToSubscripti
 }
 
 /*!
- * @brief  Parse a RDS AddSourceIdentifierToSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS AddSourceIdentifierToSubscription \a response.
  */
 void AddSourceIdentifierToSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void AddSourceIdentifierToSubscriptionResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::RDS::AddSourceIdentifierToSubscriptionResponsePrivate
+ * \brief The AddSourceIdentifierToSubscriptionResponsePrivate class provides private implementation for AddSourceIdentifierToSubscriptionResponse.
  * \internal
  *
- * \class AddSourceIdentifierToSubscriptionResponsePrivate
- *
- * \brief Private implementation for AddSourceIdentifierToSubscriptionResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddSourceIdentifierToSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddSourceIdentifierToSubscriptionResponse instance.
+ * Constructs a AddSourceIdentifierToSubscriptionResponsePrivate object with public implementation \a q.
  */
 AddSourceIdentifierToSubscriptionResponsePrivate::AddSourceIdentifierToSubscriptionResponsePrivate(
     AddSourceIdentifierToSubscriptionResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ AddSourceIdentifierToSubscriptionResponsePrivate::AddSourceIdentifierToSubscript
 }
 
 /*!
- * @brief  Parse an RDS AddSourceIdentifierToSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS AddSourceIdentifierToSubscription response element from \a xml.
  */
 void AddSourceIdentifierToSubscriptionResponsePrivate::parseAddSourceIdentifierToSubscriptionResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CompleteLayerUploadResponse : public ECRResponse {
 public:
     CompleteLayerUploadResponse(const CompleteLayerUploadRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CompleteLayerUploadRequest * request() const;
+    virtual const CompleteLayerUploadRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CompleteLayerUploadResponse)

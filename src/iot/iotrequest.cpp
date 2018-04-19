@@ -162,7 +162,7 @@ namespace IoT {
  */
 
 /*!
- * Constructs a[n] IoTRequest object for IoT \a action.
+ * Constructs a IoTRequest object for IoT \a action.
  */
 IoTRequest::IoTRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new IoTRequestPrivate(action, this))
@@ -362,8 +362,8 @@ QNetworkRequest IoTRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a IoTRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a IoTRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 IoTRequestPrivate::IoTRequestPrivate(const IoTRequest::Action action, IoTRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

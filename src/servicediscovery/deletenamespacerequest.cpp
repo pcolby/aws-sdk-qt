@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNamespaceRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteNamespaceRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNamespaceRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 DeleteNamespaceRequestPrivate::DeleteNamespaceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, DeleteNamespaceRequest * const q)

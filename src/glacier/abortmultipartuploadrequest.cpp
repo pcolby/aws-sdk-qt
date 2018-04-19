@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * AbortMultipartUploadRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a AbortMultipartUploadRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a AbortMultipartUploadRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 AbortMultipartUploadRequestPrivate::AbortMultipartUploadRequestPrivate(
     const GlacierRequest::Action action, AbortMultipartUploadRequest * const q)

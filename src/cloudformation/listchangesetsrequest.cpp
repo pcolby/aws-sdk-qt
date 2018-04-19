@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * ListChangeSetsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListChangeSetsRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a ListChangeSetsRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 ListChangeSetsRequestPrivate::ListChangeSetsRequestPrivate(
     const CloudFormationRequest::Action action, ListChangeSetsRequest * const q)

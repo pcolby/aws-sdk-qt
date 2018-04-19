@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveAccountFromOrganizationResponse : public OrganizationsR
 public:
     RemoveAccountFromOrganizationResponse(const RemoveAccountFromOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveAccountFromOrganizationRequest * request() const;
+    virtual const RemoveAccountFromOrganizationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RemoveAccountFromOrganizationResponse)

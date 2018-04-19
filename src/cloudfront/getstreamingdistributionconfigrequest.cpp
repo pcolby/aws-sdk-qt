@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetStreamingDistributionConfigRequest::respon
  */
 
 /*!
- *
- * Constructs a GetStreamingDistributionConfigRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a GetStreamingDistributionConfigRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 GetStreamingDistributionConfigRequestPrivate::GetStreamingDistributionConfigRequestPrivate(
     const CloudFrontRequest::Action action, GetStreamingDistributionConfigRequest * const q)

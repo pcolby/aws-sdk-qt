@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DisassociateConfigurationItemsFromApplicationResponse
- *
  * \brief The DisassociateConfigurationItemsFromApplicationResponse class provides an interace for ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DisassociateConfigurationItemsFromApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateConfigurationItemsFromApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateConfigurationItemsFromApplicationResponse::DisassociateConfigurationItemsFromApplicationResponse(
         const DisassociateConfigurationItemsFromApplicationRequest &request,
@@ -119,6 +114,9 @@ DisassociateConfigurationItemsFromApplicationResponse::DisassociateConfiguration
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateConfigurationItemsFromApplicationRequest * DisassociateConfigurationItemsFromApplicationResponse::request() const
 {
     Q_D(const DisassociateConfigurationItemsFromApplicationResponse);
@@ -126,9 +124,8 @@ const DisassociateConfigurationItemsFromApplicationRequest * DisassociateConfigu
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication \a response.
  */
 void DisassociateConfigurationItemsFromApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DisassociateConfigurationItemsFromApplicationResponse::parseSuccess(QIODevi
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::DisassociateConfigurationItemsFromApplicationResponsePrivate
+ * \brief The DisassociateConfigurationItemsFromApplicationResponsePrivate class provides private implementation for DisassociateConfigurationItemsFromApplicationResponse.
  * \internal
  *
- * \class DisassociateConfigurationItemsFromApplicationResponsePrivate
- *
- * \brief Private implementation for DisassociateConfigurationItemsFromApplicationResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateConfigurationItemsFromApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateConfigurationItemsFromApplicationResponse instance.
+ * Constructs a DisassociateConfigurationItemsFromApplicationResponsePrivate object with public implementation \a q.
  */
 DisassociateConfigurationItemsFromApplicationResponsePrivate::DisassociateConfigurationItemsFromApplicationResponsePrivate(
     DisassociateConfigurationItemsFromApplicationResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ DisassociateConfigurationItemsFromApplicationResponsePrivate::DisassociateConfig
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService DisassociateConfigurationItemsFromApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication response element from \a xml.
  */
 void DisassociateConfigurationItemsFromApplicationResponsePrivate::parseDisassociateConfigurationItemsFromApplicationResponse(QXmlStreamReader &xml)
 {

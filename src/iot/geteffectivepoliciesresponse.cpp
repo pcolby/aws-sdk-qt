@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetEffectivePoliciesResponse
- *
  * \brief The GetEffectivePoliciesResponse class provides an interace for IoT GetEffectivePolicies responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetEffectivePoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetEffectivePoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetEffectivePoliciesResponse::GetEffectivePoliciesResponse(
         const GetEffectivePoliciesRequest &request,
@@ -66,6 +61,9 @@ GetEffectivePoliciesResponse::GetEffectivePoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetEffectivePoliciesRequest * GetEffectivePoliciesResponse::request() const
 {
     Q_D(const GetEffectivePoliciesResponse);
@@ -73,9 +71,8 @@ const GetEffectivePoliciesRequest * GetEffectivePoliciesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IoT GetEffectivePolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT GetEffectivePolicies \a response.
  */
 void GetEffectivePoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetEffectivePoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::GetEffectivePoliciesResponsePrivate
+ * \brief The GetEffectivePoliciesResponsePrivate class provides private implementation for GetEffectivePoliciesResponse.
  * \internal
  *
- * \class GetEffectivePoliciesResponsePrivate
- *
- * \brief Private implementation for GetEffectivePoliciesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEffectivePoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetEffectivePoliciesResponse instance.
+ * Constructs a GetEffectivePoliciesResponsePrivate object with public implementation \a q.
  */
 GetEffectivePoliciesResponsePrivate::GetEffectivePoliciesResponsePrivate(
     GetEffectivePoliciesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ GetEffectivePoliciesResponsePrivate::GetEffectivePoliciesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT GetEffectivePoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT GetEffectivePolicies response element from \a xml.
  */
 void GetEffectivePoliciesResponsePrivate::parseGetEffectivePoliciesResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteAccountPasswordPolicyResponse : public IAMResponse {
 public:
     DeleteAccountPasswordPolicyResponse(const DeleteAccountPasswordPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAccountPasswordPolicyRequest * request() const;
+    virtual const DeleteAccountPasswordPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteAccountPasswordPolicyResponse)

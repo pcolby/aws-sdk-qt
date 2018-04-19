@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkInterfaceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteNetworkInterfaceRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNetworkInterfaceRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteNetworkInterfaceRequestPrivate::DeleteNetworkInterfaceRequestPrivate(
     const EC2Request::Action action, DeleteNetworkInterfaceRequest * const q)

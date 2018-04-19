@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * DeleteImportedKeyMaterialRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DeleteImportedKeyMaterialRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteImportedKeyMaterialRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 DeleteImportedKeyMaterialRequestPrivate::DeleteImportedKeyMaterialRequestPrivate(
     const KMSRequest::Action action, DeleteImportedKeyMaterialRequest * const q)

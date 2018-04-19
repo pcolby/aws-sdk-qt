@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * ModifyDBClusterRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ModifyDBClusterRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a ModifyDBClusterRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 ModifyDBClusterRequestPrivate::ModifyDBClusterRequestPrivate(
     const RDSRequest::Action action, ModifyDBClusterRequest * const q)

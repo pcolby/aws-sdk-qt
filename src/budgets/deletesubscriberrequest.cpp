@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriberRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteSubscriberRequestPrivate object for Budgets \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSubscriberRequestPrivate object for Budgets \a action,
+ * with public implementation \a q.
  */
 DeleteSubscriberRequestPrivate::DeleteSubscriberRequestPrivate(
     const BudgetsRequest::Action action, DeleteSubscriberRequest * const q)

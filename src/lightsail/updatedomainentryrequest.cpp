@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainEntryRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateDomainEntryRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDomainEntryRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 UpdateDomainEntryRequestPrivate::UpdateDomainEntryRequestPrivate(
     const LightsailRequest::Action action, UpdateDomainEntryRequest * const q)

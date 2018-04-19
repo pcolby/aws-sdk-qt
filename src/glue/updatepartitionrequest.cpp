@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdatePartitionRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a UpdatePartitionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a UpdatePartitionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 UpdatePartitionRequestPrivate::UpdatePartitionRequestPrivate(
     const GlueRequest::Action action, UpdatePartitionRequest * const q)

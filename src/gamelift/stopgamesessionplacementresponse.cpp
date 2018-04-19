@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::StopGameSessionPlacementResponse
- *
  * \brief The StopGameSessionPlacementResponse class provides an interace for GameLift StopGameSessionPlacement responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new StopGameSessionPlacementResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopGameSessionPlacementResponse object for \a reply to \a request, with parent \a parent.
  */
 StopGameSessionPlacementResponse::StopGameSessionPlacementResponse(
         const StopGameSessionPlacementRequest &request,
@@ -491,6 +486,9 @@ StopGameSessionPlacementResponse::StopGameSessionPlacementResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopGameSessionPlacementRequest * StopGameSessionPlacementResponse::request() const
 {
     Q_D(const StopGameSessionPlacementResponse);
@@ -498,9 +496,8 @@ const StopGameSessionPlacementRequest * StopGameSessionPlacementResponse::reques
 }
 
 /*!
- * @brief  Parse a GameLift StopGameSessionPlacement response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift StopGameSessionPlacement \a response.
  */
 void StopGameSessionPlacementResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void StopGameSessionPlacementResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::StopGameSessionPlacementResponsePrivate
+ * \brief The StopGameSessionPlacementResponsePrivate class provides private implementation for StopGameSessionPlacementResponse.
  * \internal
  *
- * \class StopGameSessionPlacementResponsePrivate
- *
- * \brief Private implementation for StopGameSessionPlacementResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopGameSessionPlacementResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopGameSessionPlacementResponse instance.
+ * Constructs a StopGameSessionPlacementResponsePrivate object with public implementation \a q.
  */
 StopGameSessionPlacementResponsePrivate::StopGameSessionPlacementResponsePrivate(
     StopGameSessionPlacementResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ StopGameSessionPlacementResponsePrivate::StopGameSessionPlacementResponsePrivate
 }
 
 /*!
- * @brief  Parse an GameLift StopGameSessionPlacementResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift StopGameSessionPlacement response element from \a xml.
  */
 void StopGameSessionPlacementResponsePrivate::parseStopGameSessionPlacementResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::UpdateContinuousBackupsResponse
- *
  * \brief The UpdateContinuousBackupsResponse class provides an interace for DynamoDB UpdateContinuousBackups responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new UpdateContinuousBackupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateContinuousBackupsResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateContinuousBackupsResponse::UpdateContinuousBackupsResponse(
         const UpdateContinuousBackupsRequest &request,
@@ -74,6 +69,9 @@ UpdateContinuousBackupsResponse::UpdateContinuousBackupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateContinuousBackupsRequest * UpdateContinuousBackupsResponse::request() const
 {
     Q_D(const UpdateContinuousBackupsResponse);
@@ -81,9 +79,8 @@ const UpdateContinuousBackupsRequest * UpdateContinuousBackupsResponse::request(
 }
 
 /*!
- * @brief  Parse a DynamoDB UpdateContinuousBackups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB UpdateContinuousBackups \a response.
  */
 void UpdateContinuousBackupsResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void UpdateContinuousBackupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::UpdateContinuousBackupsResponsePrivate
+ * \brief The UpdateContinuousBackupsResponsePrivate class provides private implementation for UpdateContinuousBackupsResponse.
  * \internal
  *
- * \class UpdateContinuousBackupsResponsePrivate
- *
- * \brief Private implementation for UpdateContinuousBackupsResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateContinuousBackupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateContinuousBackupsResponse instance.
+ * Constructs a UpdateContinuousBackupsResponsePrivate object with public implementation \a q.
  */
 UpdateContinuousBackupsResponsePrivate::UpdateContinuousBackupsResponsePrivate(
     UpdateContinuousBackupsResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ UpdateContinuousBackupsResponsePrivate::UpdateContinuousBackupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB UpdateContinuousBackupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB UpdateContinuousBackups response element from \a xml.
  */
 void UpdateContinuousBackupsResponsePrivate::parseUpdateContinuousBackupsResponse(QXmlStreamReader &xml)
 {

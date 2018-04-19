@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutNotificationConfigurationResponse : public AutoScalingResp
 public:
     PutNotificationConfigurationResponse(const PutNotificationConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutNotificationConfigurationRequest * request() const;
+    virtual const PutNotificationConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutNotificationConfigurationResponse)

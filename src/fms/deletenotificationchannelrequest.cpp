@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationChannelRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DeleteNotificationChannelRequestPrivate object for FMS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNotificationChannelRequestPrivate object for FMS \a action,
+ * with public implementation \a q.
  */
 DeleteNotificationChannelRequestPrivate::DeleteNotificationChannelRequestPrivate(
     const FMSRequest::Action action, DeleteNotificationChannelRequest * const q)

@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteResourceRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a DeleteResourceRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 DeleteResourceRequestPrivate::DeleteResourceRequestPrivate(
     const WorkMailRequest::Action action, DeleteResourceRequest * const q)

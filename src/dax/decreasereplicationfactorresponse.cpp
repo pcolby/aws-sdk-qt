@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DecreaseReplicationFactorResponse
- *
  * \brief The DecreaseReplicationFactorResponse class provides an interace for DAX DecreaseReplicationFactor responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DecreaseReplicationFactorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DecreaseReplicationFactorResponse object for \a reply to \a request, with parent \a parent.
  */
 DecreaseReplicationFactorResponse::DecreaseReplicationFactorResponse(
         const DecreaseReplicationFactorRequest &request,
@@ -59,6 +54,9 @@ DecreaseReplicationFactorResponse::DecreaseReplicationFactorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DecreaseReplicationFactorRequest * DecreaseReplicationFactorResponse::request() const
 {
     Q_D(const DecreaseReplicationFactorResponse);
@@ -66,9 +64,8 @@ const DecreaseReplicationFactorRequest * DecreaseReplicationFactorResponse::requ
 }
 
 /*!
- * @brief  Parse a DAX DecreaseReplicationFactor response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX DecreaseReplicationFactor \a response.
  */
 void DecreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DecreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::DecreaseReplicationFactorResponsePrivate
+ * \brief The DecreaseReplicationFactorResponsePrivate class provides private implementation for DecreaseReplicationFactorResponse.
  * \internal
  *
- * \class DecreaseReplicationFactorResponsePrivate
- *
- * \brief Private implementation for DecreaseReplicationFactorResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DecreaseReplicationFactorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DecreaseReplicationFactorResponse instance.
+ * Constructs a DecreaseReplicationFactorResponsePrivate object with public implementation \a q.
  */
 DecreaseReplicationFactorResponsePrivate::DecreaseReplicationFactorResponsePrivate(
     DecreaseReplicationFactorResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ DecreaseReplicationFactorResponsePrivate::DecreaseReplicationFactorResponsePriva
 }
 
 /*!
- * @brief  Parse an DAX DecreaseReplicationFactorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX DecreaseReplicationFactor response element from \a xml.
  */
 void DecreaseReplicationFactorResponsePrivate::parseDecreaseReplicationFactorResponse(QXmlStreamReader &xml)
 {

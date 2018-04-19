@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DescribeEvaluationsResponse
- *
  * \brief The DescribeEvaluationsResponse class provides an interace for MachineLearning DescribeEvaluations responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::describeEvaluations
  */
 
 /*!
- * @brief  Constructs a new DescribeEvaluationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEvaluationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEvaluationsResponse::DescribeEvaluationsResponse(
         const DescribeEvaluationsRequest &request,
@@ -55,6 +50,9 @@ DescribeEvaluationsResponse::DescribeEvaluationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEvaluationsRequest * DescribeEvaluationsResponse::request() const
 {
     Q_D(const DescribeEvaluationsResponse);
@@ -62,9 +60,8 @@ const DescribeEvaluationsRequest * DescribeEvaluationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning DescribeEvaluations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning DescribeEvaluations \a response.
  */
 void DescribeEvaluationsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeEvaluationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::DescribeEvaluationsResponsePrivate
+ * \brief The DescribeEvaluationsResponsePrivate class provides private implementation for DescribeEvaluationsResponse.
  * \internal
  *
- * \class DescribeEvaluationsResponsePrivate
- *
- * \brief Private implementation for DescribeEvaluationsResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEvaluationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEvaluationsResponse instance.
+ * Constructs a DescribeEvaluationsResponsePrivate object with public implementation \a q.
  */
 DescribeEvaluationsResponsePrivate::DescribeEvaluationsResponsePrivate(
     DescribeEvaluationsResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeEvaluationsResponsePrivate::DescribeEvaluationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning DescribeEvaluationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning DescribeEvaluations response element from \a xml.
  */
 void DescribeEvaluationsResponsePrivate::parseDescribeEvaluationsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListGrantsResponse
- *
  * \brief The ListGrantsResponse class provides an interace for KMS ListGrants responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListGrantsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGrantsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGrantsResponse::ListGrantsResponse(
         const ListGrantsRequest &request,
@@ -154,6 +149,9 @@ ListGrantsResponse::ListGrantsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGrantsRequest * ListGrantsResponse::request() const
 {
     Q_D(const ListGrantsResponse);
@@ -161,9 +159,8 @@ const ListGrantsRequest * ListGrantsResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS ListGrants response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS ListGrants \a response.
  */
 void ListGrantsResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void ListGrantsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::ListGrantsResponsePrivate
+ * \brief The ListGrantsResponsePrivate class provides private implementation for ListGrantsResponse.
  * \internal
  *
- * \class ListGrantsResponsePrivate
- *
- * \brief Private implementation for ListGrantsResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGrantsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGrantsResponse instance.
+ * Constructs a ListGrantsResponsePrivate object with public implementation \a q.
  */
 ListGrantsResponsePrivate::ListGrantsResponsePrivate(
     ListGrantsResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ ListGrantsResponsePrivate::ListGrantsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS ListGrantsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS ListGrants response element from \a xml.
  */
 void ListGrantsResponsePrivate::parseListGrantsResponse(QXmlStreamReader &xml)
 {

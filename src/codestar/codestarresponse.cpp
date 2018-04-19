@@ -28,16 +28,13 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::CodeStarResponse
- *
  * \brief The CodeStarResponse class provides an interface for CodeStar responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @brief  Constructs a new CodeStarResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CodeStarResponse object with parent \a parent.
  */
 CodeStarResponse::CodeStarResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CodeStarResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CodeStarResponse::CodeStarResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeStarResponse object.
- *
+ * \internal
+ * Constructs a CodeStarResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeStarResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CodeStarResponse::CodeStarResponse(CodeStarResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CodeStarResponse::CodeStarResponse(CodeStarResponsePrivate * const d, QObject * 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CodeStarResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CodeStarResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeStar::CodeStarResponsePrivate
+ * \brief The CodeStarResponsePrivate class provides private implementation for CodeStarResponse.
+ * \internal
  *
- * @class  CodeStarResponsePrivate
- *
- * @brief  Private implementation for CodeStarResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeStarResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CodeStarResponse instance.
+ * Constructs a CodeStarResponsePrivate object with public implementation \a q.
  */
 CodeStarResponsePrivate::CodeStarResponsePrivate(
     CodeStarResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

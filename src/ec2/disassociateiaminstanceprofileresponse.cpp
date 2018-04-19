@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisassociateIamInstanceProfileResponse
- *
  * \brief The DisassociateIamInstanceProfileResponse class provides an interace for EC2 DisassociateIamInstanceProfile responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisassociateIamInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateIamInstanceProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateIamInstanceProfileResponse::DisassociateIamInstanceProfileResponse(
         const DisassociateIamInstanceProfileRequest &request,
@@ -59,6 +54,9 @@ DisassociateIamInstanceProfileResponse::DisassociateIamInstanceProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateIamInstanceProfileRequest * DisassociateIamInstanceProfileResponse::request() const
 {
     Q_D(const DisassociateIamInstanceProfileResponse);
@@ -66,9 +64,8 @@ const DisassociateIamInstanceProfileRequest * DisassociateIamInstanceProfileResp
 }
 
 /*!
- * @brief  Parse a EC2 DisassociateIamInstanceProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DisassociateIamInstanceProfile \a response.
  */
 void DisassociateIamInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DisassociateIamInstanceProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DisassociateIamInstanceProfileResponsePrivate
+ * \brief The DisassociateIamInstanceProfileResponsePrivate class provides private implementation for DisassociateIamInstanceProfileResponse.
  * \internal
  *
- * \class DisassociateIamInstanceProfileResponsePrivate
- *
- * \brief Private implementation for DisassociateIamInstanceProfileResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateIamInstanceProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateIamInstanceProfileResponse instance.
+ * Constructs a DisassociateIamInstanceProfileResponsePrivate object with public implementation \a q.
  */
 DisassociateIamInstanceProfileResponsePrivate::DisassociateIamInstanceProfileResponsePrivate(
     DisassociateIamInstanceProfileResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DisassociateIamInstanceProfileResponsePrivate::DisassociateIamInstanceProfileRes
 }
 
 /*!
- * @brief  Parse an EC2 DisassociateIamInstanceProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DisassociateIamInstanceProfile response element from \a xml.
  */
 void DisassociateIamInstanceProfileResponsePrivate::parseDisassociateIamInstanceProfileResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::DeprecateWorkflowTypeResponse
- *
  * \brief The DeprecateWorkflowTypeResponse class provides an interace for SWF DeprecateWorkflowType responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new DeprecateWorkflowTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeprecateWorkflowTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeprecateWorkflowTypeResponse::DeprecateWorkflowTypeResponse(
         const DeprecateWorkflowTypeRequest &request,
@@ -71,6 +66,9 @@ DeprecateWorkflowTypeResponse::DeprecateWorkflowTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeprecateWorkflowTypeRequest * DeprecateWorkflowTypeResponse::request() const
 {
     Q_D(const DeprecateWorkflowTypeResponse);
@@ -78,9 +76,8 @@ const DeprecateWorkflowTypeRequest * DeprecateWorkflowTypeResponse::request() co
 }
 
 /*!
- * @brief  Parse a SWF DeprecateWorkflowType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF DeprecateWorkflowType \a response.
  */
 void DeprecateWorkflowTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DeprecateWorkflowTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::DeprecateWorkflowTypeResponsePrivate
+ * \brief The DeprecateWorkflowTypeResponsePrivate class provides private implementation for DeprecateWorkflowTypeResponse.
  * \internal
  *
- * \class DeprecateWorkflowTypeResponsePrivate
- *
- * \brief Private implementation for DeprecateWorkflowTypeResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeprecateWorkflowTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeprecateWorkflowTypeResponse instance.
+ * Constructs a DeprecateWorkflowTypeResponsePrivate object with public implementation \a q.
  */
 DeprecateWorkflowTypeResponsePrivate::DeprecateWorkflowTypeResponsePrivate(
     DeprecateWorkflowTypeResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ DeprecateWorkflowTypeResponsePrivate::DeprecateWorkflowTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF DeprecateWorkflowTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF DeprecateWorkflowType response element from \a xml.
  */
 void DeprecateWorkflowTypeResponsePrivate::parseDeprecateWorkflowTypeResponse(QXmlStreamReader &xml)
 {

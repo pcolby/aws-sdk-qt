@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StartStreamEncryptionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a StartStreamEncryptionRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a StartStreamEncryptionRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 StartStreamEncryptionRequestPrivate::StartStreamEncryptionRequestPrivate(
     const KinesisRequest::Action action, StartStreamEncryptionRequest * const q)

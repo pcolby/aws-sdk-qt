@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteClusterSubnetGroupResponse
- *
  * \brief The DeleteClusterSubnetGroupResponse class provides an interace for Redshift DeleteClusterSubnetGroup responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteClusterSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteClusterSubnetGroupResponse::DeleteClusterSubnetGroupResponse(
         const DeleteClusterSubnetGroupRequest &request,
@@ -85,6 +80,9 @@ DeleteClusterSubnetGroupResponse::DeleteClusterSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteClusterSubnetGroupRequest * DeleteClusterSubnetGroupResponse::request() const
 {
     Q_D(const DeleteClusterSubnetGroupResponse);
@@ -92,9 +90,8 @@ const DeleteClusterSubnetGroupRequest * DeleteClusterSubnetGroupResponse::reques
 }
 
 /*!
- * @brief  Parse a Redshift DeleteClusterSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DeleteClusterSubnetGroup \a response.
  */
 void DeleteClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DeleteClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DeleteClusterSubnetGroupResponsePrivate
+ * \brief The DeleteClusterSubnetGroupResponsePrivate class provides private implementation for DeleteClusterSubnetGroupResponse.
  * \internal
  *
- * \class DeleteClusterSubnetGroupResponsePrivate
- *
- * \brief Private implementation for DeleteClusterSubnetGroupResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteClusterSubnetGroupResponse instance.
+ * Constructs a DeleteClusterSubnetGroupResponsePrivate object with public implementation \a q.
  */
 DeleteClusterSubnetGroupResponsePrivate::DeleteClusterSubnetGroupResponsePrivate(
     DeleteClusterSubnetGroupResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DeleteClusterSubnetGroupResponsePrivate::DeleteClusterSubnetGroupResponsePrivate
 }
 
 /*!
- * @brief  Parse an Redshift DeleteClusterSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DeleteClusterSubnetGroup response element from \a xml.
  */
 void DeleteClusterSubnetGroupResponsePrivate::parseDeleteClusterSubnetGroupResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminSetUserMFAPreferenceResponse
- *
  * \brief The AdminSetUserMFAPreferenceResponse class provides an interace for CognitoIdentityProvider AdminSetUserMFAPreference responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminSetUserMFAPreferenceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminSetUserMFAPreferenceResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminSetUserMFAPreferenceResponse::AdminSetUserMFAPreferenceResponse(
         const AdminSetUserMFAPreferenceRequest &request,
@@ -65,6 +60,9 @@ AdminSetUserMFAPreferenceResponse::AdminSetUserMFAPreferenceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminSetUserMFAPreferenceRequest * AdminSetUserMFAPreferenceResponse::request() const
 {
     Q_D(const AdminSetUserMFAPreferenceResponse);
@@ -72,9 +70,8 @@ const AdminSetUserMFAPreferenceRequest * AdminSetUserMFAPreferenceResponse::requ
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminSetUserMFAPreference response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminSetUserMFAPreference \a response.
  */
 void AdminSetUserMFAPreferenceResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminSetUserMFAPreferenceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminSetUserMFAPreferenceResponsePrivate
+ * \brief The AdminSetUserMFAPreferenceResponsePrivate class provides private implementation for AdminSetUserMFAPreferenceResponse.
  * \internal
  *
- * \class AdminSetUserMFAPreferenceResponsePrivate
- *
- * \brief Private implementation for AdminSetUserMFAPreferenceResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminSetUserMFAPreferenceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminSetUserMFAPreferenceResponse instance.
+ * Constructs a AdminSetUserMFAPreferenceResponsePrivate object with public implementation \a q.
  */
 AdminSetUserMFAPreferenceResponsePrivate::AdminSetUserMFAPreferenceResponsePrivate(
     AdminSetUserMFAPreferenceResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminSetUserMFAPreferenceResponsePrivate::AdminSetUserMFAPreferenceResponsePriva
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminSetUserMFAPreferenceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminSetUserMFAPreference response element from \a xml.
  */
 void AdminSetUserMFAPreferenceResponsePrivate::parseAdminSetUserMFAPreferenceResponse(QXmlStreamReader &xml)
 {

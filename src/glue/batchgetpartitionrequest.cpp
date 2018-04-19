@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * BatchGetPartitionRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a BatchGetPartitionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a BatchGetPartitionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 BatchGetPartitionRequestPrivate::BatchGetPartitionRequestPrivate(
     const GlueRequest::Action action, BatchGetPartitionRequest * const q)

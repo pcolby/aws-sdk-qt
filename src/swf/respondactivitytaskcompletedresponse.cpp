@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RespondActivityTaskCompletedResponse
- *
  * \brief The RespondActivityTaskCompletedResponse class provides an interace for SWF RespondActivityTaskCompleted responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RespondActivityTaskCompletedResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RespondActivityTaskCompletedResponse object for \a reply to \a request, with parent \a parent.
  */
 RespondActivityTaskCompletedResponse::RespondActivityTaskCompletedResponse(
         const RespondActivityTaskCompletedRequest &request,
@@ -71,6 +66,9 @@ RespondActivityTaskCompletedResponse::RespondActivityTaskCompletedResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RespondActivityTaskCompletedRequest * RespondActivityTaskCompletedResponse::request() const
 {
     Q_D(const RespondActivityTaskCompletedResponse);
@@ -78,9 +76,8 @@ const RespondActivityTaskCompletedRequest * RespondActivityTaskCompletedResponse
 }
 
 /*!
- * @brief  Parse a SWF RespondActivityTaskCompleted response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF RespondActivityTaskCompleted \a response.
  */
 void RespondActivityTaskCompletedResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void RespondActivityTaskCompletedResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::RespondActivityTaskCompletedResponsePrivate
+ * \brief The RespondActivityTaskCompletedResponsePrivate class provides private implementation for RespondActivityTaskCompletedResponse.
  * \internal
  *
- * \class RespondActivityTaskCompletedResponsePrivate
- *
- * \brief Private implementation for RespondActivityTaskCompletedResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RespondActivityTaskCompletedResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RespondActivityTaskCompletedResponse instance.
+ * Constructs a RespondActivityTaskCompletedResponsePrivate object with public implementation \a q.
  */
 RespondActivityTaskCompletedResponsePrivate::RespondActivityTaskCompletedResponsePrivate(
     RespondActivityTaskCompletedResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ RespondActivityTaskCompletedResponsePrivate::RespondActivityTaskCompletedRespons
 }
 
 /*!
- * @brief  Parse an SWF RespondActivityTaskCompletedResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF RespondActivityTaskCompleted response element from \a xml.
  */
 void RespondActivityTaskCompletedResponsePrivate::parseRespondActivityTaskCompletedResponse(QXmlStreamReader &xml)
 {

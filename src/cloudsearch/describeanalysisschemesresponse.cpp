@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeAnalysisSchemesResponse
- *
  * \brief The DescribeAnalysisSchemesResponse class provides an interace for CloudSearch DescribeAnalysisSchemes responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeAnalysisSchemesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAnalysisSchemesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAnalysisSchemesResponse::DescribeAnalysisSchemesResponse(
         const DescribeAnalysisSchemesRequest &request,
@@ -66,6 +61,9 @@ DescribeAnalysisSchemesResponse::DescribeAnalysisSchemesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAnalysisSchemesRequest * DescribeAnalysisSchemesResponse::request() const
 {
     Q_D(const DescribeAnalysisSchemesResponse);
@@ -73,9 +71,8 @@ const DescribeAnalysisSchemesRequest * DescribeAnalysisSchemesResponse::request(
 }
 
 /*!
- * @brief  Parse a CloudSearch DescribeAnalysisSchemes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DescribeAnalysisSchemes \a response.
  */
 void DescribeAnalysisSchemesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeAnalysisSchemesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DescribeAnalysisSchemesResponsePrivate
+ * \brief The DescribeAnalysisSchemesResponsePrivate class provides private implementation for DescribeAnalysisSchemesResponse.
  * \internal
  *
- * \class DescribeAnalysisSchemesResponsePrivate
- *
- * \brief Private implementation for DescribeAnalysisSchemesResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAnalysisSchemesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAnalysisSchemesResponse instance.
+ * Constructs a DescribeAnalysisSchemesResponsePrivate object with public implementation \a q.
  */
 DescribeAnalysisSchemesResponsePrivate::DescribeAnalysisSchemesResponsePrivate(
     DescribeAnalysisSchemesResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeAnalysisSchemesResponsePrivate::DescribeAnalysisSchemesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DescribeAnalysisSchemesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DescribeAnalysisSchemes response element from \a xml.
  */
 void DescribeAnalysisSchemesResponsePrivate::parseDescribeAnalysisSchemesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DescribeTagsResponse
- *
  * \brief The DescribeTagsResponse class provides an interace for ApplicationDiscoveryService DescribeTags responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTagsResponse::DescribeTagsResponse(
         const DescribeTagsRequest &request,
@@ -119,6 +114,9 @@ DescribeTagsResponse::DescribeTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTagsRequest * DescribeTagsResponse::request() const
 {
     Q_D(const DescribeTagsResponse);
@@ -126,9 +124,8 @@ const DescribeTagsRequest * DescribeTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService DescribeTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService DescribeTags \a response.
  */
 void DescribeTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::DescribeTagsResponsePrivate
+ * \brief The DescribeTagsResponsePrivate class provides private implementation for DescribeTagsResponse.
  * \internal
  *
- * \class DescribeTagsResponsePrivate
- *
- * \brief Private implementation for DescribeTagsResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTagsResponse instance.
+ * Constructs a DescribeTagsResponsePrivate object with public implementation \a q.
  */
 DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
     DescribeTagsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeTagsResponsePrivate::DescribeTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService DescribeTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService DescribeTags response element from \a xml.
  */
 void DescribeTagsResponsePrivate::parseDescribeTagsResponse(QXmlStreamReader &xml)
 {

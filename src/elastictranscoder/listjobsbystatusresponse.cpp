@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ListJobsByStatusResponse
- *
  * \brief The ListJobsByStatusResponse class provides an interace for ElasticTranscoder ListJobsByStatus responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new ListJobsByStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListJobsByStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 ListJobsByStatusResponse::ListJobsByStatusResponse(
         const ListJobsByStatusRequest &request,
@@ -58,6 +53,9 @@ ListJobsByStatusResponse::ListJobsByStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListJobsByStatusRequest * ListJobsByStatusResponse::request() const
 {
     Q_D(const ListJobsByStatusResponse);
@@ -65,9 +63,8 @@ const ListJobsByStatusRequest * ListJobsByStatusResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder ListJobsByStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder ListJobsByStatus \a response.
  */
 void ListJobsByStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListJobsByStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::ListJobsByStatusResponsePrivate
+ * \brief The ListJobsByStatusResponsePrivate class provides private implementation for ListJobsByStatusResponse.
  * \internal
  *
- * \class ListJobsByStatusResponsePrivate
- *
- * \brief Private implementation for ListJobsByStatusResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobsByStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListJobsByStatusResponse instance.
+ * Constructs a ListJobsByStatusResponsePrivate object with public implementation \a q.
  */
 ListJobsByStatusResponsePrivate::ListJobsByStatusResponsePrivate(
     ListJobsByStatusResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ ListJobsByStatusResponsePrivate::ListJobsByStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder ListJobsByStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder ListJobsByStatus response element from \a xml.
  */
 void ListJobsByStatusResponsePrivate::parseListJobsByStatusResponse(QXmlStreamReader &xml)
 {

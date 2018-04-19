@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateOptionGroupResponse
- *
  * \brief The CreateOptionGroupResponse class provides an interace for RDS CreateOptionGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateOptionGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateOptionGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateOptionGroupResponse::CreateOptionGroupResponse(
         const CreateOptionGroupRequest &request,
@@ -119,6 +114,9 @@ CreateOptionGroupResponse::CreateOptionGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateOptionGroupRequest * CreateOptionGroupResponse::request() const
 {
     Q_D(const CreateOptionGroupResponse);
@@ -126,9 +124,8 @@ const CreateOptionGroupRequest * CreateOptionGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS CreateOptionGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CreateOptionGroup \a response.
  */
 void CreateOptionGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CreateOptionGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CreateOptionGroupResponsePrivate
+ * \brief The CreateOptionGroupResponsePrivate class provides private implementation for CreateOptionGroupResponse.
  * \internal
  *
- * \class CreateOptionGroupResponsePrivate
- *
- * \brief Private implementation for CreateOptionGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOptionGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateOptionGroupResponse instance.
+ * Constructs a CreateOptionGroupResponsePrivate object with public implementation \a q.
  */
 CreateOptionGroupResponsePrivate::CreateOptionGroupResponsePrivate(
     CreateOptionGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CreateOptionGroupResponsePrivate::CreateOptionGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CreateOptionGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CreateOptionGroup response element from \a xml.
  */
 void CreateOptionGroupResponsePrivate::parseCreateOptionGroupResponse(QXmlStreamReader &xml)
 {

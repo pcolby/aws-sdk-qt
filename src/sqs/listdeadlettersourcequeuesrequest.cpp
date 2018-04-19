@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * ListDeadLetterSourceQueuesRequest::response(Q
  */
 
 /*!
- *
- * Constructs a ListDeadLetterSourceQueuesRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a ListDeadLetterSourceQueuesRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPrivate(
     const SQSRequest::Action action, ListDeadLetterSourceQueuesRequest * const q)

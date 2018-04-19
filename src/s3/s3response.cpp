@@ -28,16 +28,13 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::S3Response
- *
  * \brief The S3Response class provides an interface for S3 responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @brief  Constructs a new S3Response object.
- *
- * @param  parent   This object's parent.
+ * Constructs a S3Response object with parent \a parent.
  */
 S3Response::S3Response(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new S3ResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ S3Response::S3Response(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new S3Response object.
- *
+ * \internal
+ * Constructs a S3Response object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from S3ResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 S3Response::S3Response(S3ResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ S3Response::S3Response(S3ResponsePrivate * const d, QObject * const parent)
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void S3Response::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void S3Response::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::S3::S3ResponsePrivate
+ * \brief The S3ResponsePrivate class provides private implementation for S3Response.
+ * \internal
  *
- * @class  S3ResponsePrivate
- *
- * @brief  Private implementation for S3Response.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new S3ResponsePrivate object.
- *
- * @param  q  Pointer to this object's public S3Response instance.
+ * Constructs a S3ResponsePrivate object with public implementation \a q.
  */
 S3ResponsePrivate::S3ResponsePrivate(
     S3Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

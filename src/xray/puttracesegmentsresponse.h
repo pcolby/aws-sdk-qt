@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutTraceSegmentsResponse : public XRayResponse {
 public:
     PutTraceSegmentsResponse(const PutTraceSegmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutTraceSegmentsRequest * request() const;
+    virtual const PutTraceSegmentsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutTraceSegmentsResponse)

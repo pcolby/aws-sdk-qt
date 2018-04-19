@@ -102,7 +102,7 @@ namespace StorageGateway {
  */
 
 /*!
- * Constructs a[n] StorageGatewayRequest object for StorageGateway \a action.
+ * Constructs a StorageGatewayRequest object for StorageGateway \a action.
  */
 StorageGatewayRequest::StorageGatewayRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new StorageGatewayRequestPrivate(action, this))
@@ -302,8 +302,8 @@ QNetworkRequest StorageGatewayRequest::unsignedRequest(const QUrl &endpoint) con
  */
 
 /*!
- * Constructs a StorageGatewayRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a StorageGatewayRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 StorageGatewayRequestPrivate::StorageGatewayRequestPrivate(const StorageGatewayRequest::Action action, StorageGatewayRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

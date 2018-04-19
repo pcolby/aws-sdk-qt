@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDeliveryStreamResponse : public FirehoseResponse {
 public:
     CreateDeliveryStreamResponse(const CreateDeliveryStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDeliveryStreamRequest * request() const;
+    virtual const CreateDeliveryStreamRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDeliveryStreamResponse)

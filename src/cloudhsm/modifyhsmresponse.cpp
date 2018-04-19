@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ModifyHsmResponse
- *
  * \brief The ModifyHsmResponse class provides an interace for CloudHSM ModifyHsm responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ModifyHsmResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyHsmResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyHsmResponse::ModifyHsmResponse(
         const ModifyHsmRequest &request,
@@ -67,6 +62,9 @@ ModifyHsmResponse::ModifyHsmResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyHsmRequest * ModifyHsmResponse::request() const
 {
     Q_D(const ModifyHsmResponse);
@@ -74,9 +72,8 @@ const ModifyHsmRequest * ModifyHsmResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSM ModifyHsm response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM ModifyHsm \a response.
  */
 void ModifyHsmResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void ModifyHsmResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::ModifyHsmResponsePrivate
+ * \brief The ModifyHsmResponsePrivate class provides private implementation for ModifyHsmResponse.
  * \internal
  *
- * \class ModifyHsmResponsePrivate
- *
- * \brief Private implementation for ModifyHsmResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyHsmResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyHsmResponse instance.
+ * Constructs a ModifyHsmResponsePrivate object with public implementation \a q.
  */
 ModifyHsmResponsePrivate::ModifyHsmResponsePrivate(
     ModifyHsmResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ ModifyHsmResponsePrivate::ModifyHsmResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM ModifyHsmResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM ModifyHsm response element from \a xml.
  */
 void ModifyHsmResponsePrivate::parseModifyHsmResponse(QXmlStreamReader &xml)
 {

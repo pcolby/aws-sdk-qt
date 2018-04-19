@@ -28,16 +28,13 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::GlacierResponse
- *
  * \brief The GlacierResponse class provides an interface for Glacier responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @brief  Constructs a new GlacierResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a GlacierResponse object with parent \a parent.
  */
 GlacierResponse::GlacierResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new GlacierResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ GlacierResponse::GlacierResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GlacierResponse object.
- *
+ * \internal
+ * Constructs a GlacierResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GlacierResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 GlacierResponse::GlacierResponse(GlacierResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ GlacierResponse::GlacierResponse(GlacierResponsePrivate * const d, QObject * con
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void GlacierResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void GlacierResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Glacier::GlacierResponsePrivate
+ * \brief The GlacierResponsePrivate class provides private implementation for GlacierResponse.
+ * \internal
  *
- * @class  GlacierResponsePrivate
- *
- * @brief  Private implementation for GlacierResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GlacierResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GlacierResponse instance.
+ * Constructs a GlacierResponsePrivate object with public implementation \a q.
  */
 GlacierResponsePrivate::GlacierResponsePrivate(
     GlacierResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

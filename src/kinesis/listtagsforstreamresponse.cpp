@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::ListTagsForStreamResponse
- *
  * \brief The ListTagsForStreamResponse class provides an interace for Kinesis ListTagsForStream responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsForStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsForStreamResponse::ListTagsForStreamResponse(
         const ListTagsForStreamRequest &request,
@@ -58,6 +53,9 @@ ListTagsForStreamResponse::ListTagsForStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsForStreamRequest * ListTagsForStreamResponse::request() const
 {
     Q_D(const ListTagsForStreamResponse);
@@ -65,9 +63,8 @@ const ListTagsForStreamRequest * ListTagsForStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis ListTagsForStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis ListTagsForStream \a response.
  */
 void ListTagsForStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListTagsForStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::ListTagsForStreamResponsePrivate
+ * \brief The ListTagsForStreamResponsePrivate class provides private implementation for ListTagsForStreamResponse.
  * \internal
  *
- * \class ListTagsForStreamResponsePrivate
- *
- * \brief Private implementation for ListTagsForStreamResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsForStreamResponse instance.
+ * Constructs a ListTagsForStreamResponsePrivate object with public implementation \a q.
  */
 ListTagsForStreamResponsePrivate::ListTagsForStreamResponsePrivate(
     ListTagsForStreamResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ ListTagsForStreamResponsePrivate::ListTagsForStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis ListTagsForStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis ListTagsForStream response element from \a xml.
  */
 void ListTagsForStreamResponsePrivate::parseListTagsForStreamResponse(QXmlStreamReader &xml)
 {

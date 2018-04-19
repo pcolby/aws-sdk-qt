@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * CreateUserRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CreateUserRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a CreateUserRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 CreateUserRequestPrivate::CreateUserRequestPrivate(
     const MQRequest::Action action, CreateUserRequest * const q)

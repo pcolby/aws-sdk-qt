@@ -169,9 +169,8 @@ QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteProjectRequestPrivate object for CodeStar \a action with,
- * public implementation \a q.
+ * Constructs a DeleteProjectRequestPrivate object for CodeStar \a action,
+ * with public implementation \a q.
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const CodeStarRequest::Action action, DeleteProjectRequest * const q)

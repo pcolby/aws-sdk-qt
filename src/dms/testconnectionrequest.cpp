@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * TestConnectionRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a TestConnectionRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a TestConnectionRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 TestConnectionRequestPrivate::TestConnectionRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, TestConnectionRequest * const q)

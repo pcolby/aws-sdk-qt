@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListConstraintsForPortfolioRequest::response(
  */
 
 /*!
- *
- * Constructs a ListConstraintsForPortfolioRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ListConstraintsForPortfolioRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ListConstraintsForPortfolioRequestPrivate::ListConstraintsForPortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, ListConstraintsForPortfolioRequest * const q)

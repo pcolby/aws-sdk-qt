@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateOpenIDConnectProviderResponse
- *
  * \brief The CreateOpenIDConnectProviderResponse class provides an interace for IAM CreateOpenIDConnectProvider responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateOpenIDConnectProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateOpenIDConnectProviderResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateOpenIDConnectProviderResponse::CreateOpenIDConnectProviderResponse(
         const CreateOpenIDConnectProviderRequest &request,
@@ -120,6 +115,9 @@ CreateOpenIDConnectProviderResponse::CreateOpenIDConnectProviderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateOpenIDConnectProviderRequest * CreateOpenIDConnectProviderResponse::request() const
 {
     Q_D(const CreateOpenIDConnectProviderResponse);
@@ -127,9 +125,8 @@ const CreateOpenIDConnectProviderRequest * CreateOpenIDConnectProviderResponse::
 }
 
 /*!
- * @brief  Parse a IAM CreateOpenIDConnectProvider response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreateOpenIDConnectProvider \a response.
  */
 void CreateOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreateOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreateOpenIDConnectProviderResponsePrivate
+ * \brief The CreateOpenIDConnectProviderResponsePrivate class provides private implementation for CreateOpenIDConnectProviderResponse.
  * \internal
  *
- * \class CreateOpenIDConnectProviderResponsePrivate
- *
- * \brief Private implementation for CreateOpenIDConnectProviderResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOpenIDConnectProviderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateOpenIDConnectProviderResponse instance.
+ * Constructs a CreateOpenIDConnectProviderResponsePrivate object with public implementation \a q.
  */
 CreateOpenIDConnectProviderResponsePrivate::CreateOpenIDConnectProviderResponsePrivate(
     CreateOpenIDConnectProviderResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreateOpenIDConnectProviderResponsePrivate::CreateOpenIDConnectProviderResponseP
 }
 
 /*!
- * @brief  Parse an IAM CreateOpenIDConnectProviderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreateOpenIDConnectProvider response element from \a xml.
  */
 void CreateOpenIDConnectProviderResponsePrivate::parseCreateOpenIDConnectProviderResponse(QXmlStreamReader &xml)
 {

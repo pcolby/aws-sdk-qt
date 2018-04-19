@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateVPCAssociationAuthorizationResponse : public Route53Res
 public:
     CreateVPCAssociationAuthorizationResponse(const CreateVPCAssociationAuthorizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateVPCAssociationAuthorizationRequest * request() const;
+    virtual const CreateVPCAssociationAuthorizationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateVPCAssociationAuthorizationResponse)

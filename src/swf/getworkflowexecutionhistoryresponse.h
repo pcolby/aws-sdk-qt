@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetWorkflowExecutionHistoryResponse : public SWFResponse {
 public:
     GetWorkflowExecutionHistoryResponse(const GetWorkflowExecutionHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetWorkflowExecutionHistoryRequest * request() const;
+    virtual const GetWorkflowExecutionHistoryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetWorkflowExecutionHistoryResponse)

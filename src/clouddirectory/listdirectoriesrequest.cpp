@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListDirectoriesRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ListDirectoriesRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a ListDirectoriesRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 ListDirectoriesRequestPrivate::ListDirectoriesRequestPrivate(
     const CloudDirectoryRequest::Action action, ListDirectoriesRequest * const q)

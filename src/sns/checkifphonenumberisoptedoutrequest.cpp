@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CheckIfPhoneNumberIsOptedOutRequest::response
  */
 
 /*!
- *
- * Constructs a CheckIfPhoneNumberIsOptedOutRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a CheckIfPhoneNumberIsOptedOutRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 CheckIfPhoneNumberIsOptedOutRequestPrivate::CheckIfPhoneNumberIsOptedOutRequestPrivate(
     const SNSRequest::Action action, CheckIfPhoneNumberIsOptedOutRequest * const q)

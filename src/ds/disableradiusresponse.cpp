@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DisableRadiusResponse
- *
  * \brief The DisableRadiusResponse class provides an interace for DirectoryService DisableRadius responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DisableRadiusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableRadiusResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableRadiusResponse::DisableRadiusResponse(
         const DisableRadiusRequest &request,
@@ -69,6 +64,9 @@ DisableRadiusResponse::DisableRadiusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableRadiusRequest * DisableRadiusResponse::request() const
 {
     Q_D(const DisableRadiusResponse);
@@ -76,9 +74,8 @@ const DisableRadiusRequest * DisableRadiusResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService DisableRadius response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DisableRadius \a response.
  */
 void DisableRadiusResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DisableRadiusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DisableRadiusResponsePrivate
+ * \brief The DisableRadiusResponsePrivate class provides private implementation for DisableRadiusResponse.
  * \internal
  *
- * \class DisableRadiusResponsePrivate
- *
- * \brief Private implementation for DisableRadiusResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableRadiusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableRadiusResponse instance.
+ * Constructs a DisableRadiusResponsePrivate object with public implementation \a q.
  */
 DisableRadiusResponsePrivate::DisableRadiusResponsePrivate(
     DisableRadiusResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DisableRadiusResponsePrivate::DisableRadiusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService DisableRadiusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DisableRadius response element from \a xml.
  */
 void DisableRadiusResponsePrivate::parseDisableRadiusResponse(QXmlStreamReader &xml)
 {

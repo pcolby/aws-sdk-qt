@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ListStepsResponse
- *
  * \brief The ListStepsResponse class provides an interace for EMR ListSteps responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ListStepsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListStepsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListStepsResponse::ListStepsResponse(
         const ListStepsRequest &request,
@@ -58,6 +53,9 @@ ListStepsResponse::ListStepsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListStepsRequest * ListStepsResponse::request() const
 {
     Q_D(const ListStepsResponse);
@@ -65,9 +63,8 @@ const ListStepsRequest * ListStepsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR ListSteps response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR ListSteps \a response.
  */
 void ListStepsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListStepsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::ListStepsResponsePrivate
+ * \brief The ListStepsResponsePrivate class provides private implementation for ListStepsResponse.
  * \internal
  *
- * \class ListStepsResponsePrivate
- *
- * \brief Private implementation for ListStepsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStepsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListStepsResponse instance.
+ * Constructs a ListStepsResponsePrivate object with public implementation \a q.
  */
 ListStepsResponsePrivate::ListStepsResponsePrivate(
     ListStepsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ ListStepsResponsePrivate::ListStepsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR ListStepsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR ListSteps response element from \a xml.
  */
 void ListStepsResponsePrivate::parseListStepsResponse(QXmlStreamReader &xml)
 {

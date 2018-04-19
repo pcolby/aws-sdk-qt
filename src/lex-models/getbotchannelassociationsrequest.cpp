@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetBotChannelAssociationsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a GetBotChannelAssociationsRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a GetBotChannelAssociationsRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 GetBotChannelAssociationsRequestPrivate::GetBotChannelAssociationsRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBotChannelAssociationsRequest * const q)

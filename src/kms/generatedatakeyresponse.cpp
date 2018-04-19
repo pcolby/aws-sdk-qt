@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GenerateDataKeyResponse
- *
  * \brief The GenerateDataKeyResponse class provides an interace for KMS GenerateDataKey responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GenerateDataKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GenerateDataKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 GenerateDataKeyResponse::GenerateDataKeyResponse(
         const GenerateDataKeyRequest &request,
@@ -154,6 +149,9 @@ GenerateDataKeyResponse::GenerateDataKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GenerateDataKeyRequest * GenerateDataKeyResponse::request() const
 {
     Q_D(const GenerateDataKeyResponse);
@@ -161,9 +159,8 @@ const GenerateDataKeyRequest * GenerateDataKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS GenerateDataKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS GenerateDataKey \a response.
  */
 void GenerateDataKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void GenerateDataKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::GenerateDataKeyResponsePrivate
+ * \brief The GenerateDataKeyResponsePrivate class provides private implementation for GenerateDataKeyResponse.
  * \internal
  *
- * \class GenerateDataKeyResponsePrivate
- *
- * \brief Private implementation for GenerateDataKeyResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GenerateDataKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GenerateDataKeyResponse instance.
+ * Constructs a GenerateDataKeyResponsePrivate object with public implementation \a q.
  */
 GenerateDataKeyResponsePrivate::GenerateDataKeyResponsePrivate(
     GenerateDataKeyResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ GenerateDataKeyResponsePrivate::GenerateDataKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS GenerateDataKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS GenerateDataKey response element from \a xml.
  */
 void GenerateDataKeyResponsePrivate::parseGenerateDataKeyResponse(QXmlStreamReader &xml)
 {

@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribePendingMaintenanceActionsRequest::res
  */
 
 /*!
- *
- * Constructs a DescribePendingMaintenanceActionsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribePendingMaintenanceActionsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribePendingMaintenanceActionsRequestPrivate::DescribePendingMaintenanceActionsRequestPrivate(
     const RDSRequest::Action action, DescribePendingMaintenanceActionsRequest * const q)

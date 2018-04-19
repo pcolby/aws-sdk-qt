@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListTrafficPolicyVersionsResponse
- *
  * \brief The ListTrafficPolicyVersionsResponse class provides an interace for Route53 ListTrafficPolicyVersions responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listTrafficPolicyVersions
  */
 
 /*!
- * @brief  Constructs a new ListTrafficPolicyVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTrafficPolicyVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTrafficPolicyVersionsResponse::ListTrafficPolicyVersionsResponse(
         const ListTrafficPolicyVersionsRequest &request,
@@ -55,6 +50,9 @@ ListTrafficPolicyVersionsResponse::ListTrafficPolicyVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTrafficPolicyVersionsRequest * ListTrafficPolicyVersionsResponse::request() const
 {
     Q_D(const ListTrafficPolicyVersionsResponse);
@@ -62,9 +60,8 @@ const ListTrafficPolicyVersionsRequest * ListTrafficPolicyVersionsResponse::requ
 }
 
 /*!
- * @brief  Parse a Route53 ListTrafficPolicyVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 ListTrafficPolicyVersions \a response.
  */
 void ListTrafficPolicyVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListTrafficPolicyVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::ListTrafficPolicyVersionsResponsePrivate
+ * \brief The ListTrafficPolicyVersionsResponsePrivate class provides private implementation for ListTrafficPolicyVersionsResponse.
  * \internal
  *
- * \class ListTrafficPolicyVersionsResponsePrivate
- *
- * \brief Private implementation for ListTrafficPolicyVersionsResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTrafficPolicyVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTrafficPolicyVersionsResponse instance.
+ * Constructs a ListTrafficPolicyVersionsResponsePrivate object with public implementation \a q.
  */
 ListTrafficPolicyVersionsResponsePrivate::ListTrafficPolicyVersionsResponsePrivate(
     ListTrafficPolicyVersionsResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListTrafficPolicyVersionsResponsePrivate::ListTrafficPolicyVersionsResponsePriva
 }
 
 /*!
- * @brief  Parse an Route53 ListTrafficPolicyVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 ListTrafficPolicyVersions response element from \a xml.
  */
 void ListTrafficPolicyVersionsResponsePrivate::parseListTrafficPolicyVersionsResponse(QXmlStreamReader &xml)
 {

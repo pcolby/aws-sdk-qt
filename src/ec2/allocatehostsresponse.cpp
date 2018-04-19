@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AllocateHostsResponse
- *
  * \brief The AllocateHostsResponse class provides an interace for EC2 AllocateHosts responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AllocateHostsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AllocateHostsResponse object for \a reply to \a request, with parent \a parent.
  */
 AllocateHostsResponse::AllocateHostsResponse(
         const AllocateHostsRequest &request,
@@ -59,6 +54,9 @@ AllocateHostsResponse::AllocateHostsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AllocateHostsRequest * AllocateHostsResponse::request() const
 {
     Q_D(const AllocateHostsResponse);
@@ -66,9 +64,8 @@ const AllocateHostsRequest * AllocateHostsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 AllocateHosts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AllocateHosts \a response.
  */
 void AllocateHostsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AllocateHostsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AllocateHostsResponsePrivate
+ * \brief The AllocateHostsResponsePrivate class provides private implementation for AllocateHostsResponse.
  * \internal
  *
- * \class AllocateHostsResponsePrivate
- *
- * \brief Private implementation for AllocateHostsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocateHostsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AllocateHostsResponse instance.
+ * Constructs a AllocateHostsResponsePrivate object with public implementation \a q.
  */
 AllocateHostsResponsePrivate::AllocateHostsResponsePrivate(
     AllocateHostsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AllocateHostsResponsePrivate::AllocateHostsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 AllocateHostsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AllocateHosts response element from \a xml.
  */
 void AllocateHostsResponsePrivate::parseAllocateHostsResponse(QXmlStreamReader &xml)
 {

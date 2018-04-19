@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RotateEncryptionKeyResponse
- *
  * \brief The RotateEncryptionKeyResponse class provides an interace for Redshift RotateEncryptionKey responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new RotateEncryptionKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RotateEncryptionKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 RotateEncryptionKeyResponse::RotateEncryptionKeyResponse(
         const RotateEncryptionKeyRequest &request,
@@ -85,6 +80,9 @@ RotateEncryptionKeyResponse::RotateEncryptionKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RotateEncryptionKeyRequest * RotateEncryptionKeyResponse::request() const
 {
     Q_D(const RotateEncryptionKeyResponse);
@@ -92,9 +90,8 @@ const RotateEncryptionKeyRequest * RotateEncryptionKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a Redshift RotateEncryptionKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift RotateEncryptionKey \a response.
  */
 void RotateEncryptionKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void RotateEncryptionKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::RotateEncryptionKeyResponsePrivate
+ * \brief The RotateEncryptionKeyResponsePrivate class provides private implementation for RotateEncryptionKeyResponse.
  * \internal
  *
- * \class RotateEncryptionKeyResponsePrivate
- *
- * \brief Private implementation for RotateEncryptionKeyResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RotateEncryptionKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RotateEncryptionKeyResponse instance.
+ * Constructs a RotateEncryptionKeyResponsePrivate object with public implementation \a q.
  */
 RotateEncryptionKeyResponsePrivate::RotateEncryptionKeyResponsePrivate(
     RotateEncryptionKeyResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ RotateEncryptionKeyResponsePrivate::RotateEncryptionKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift RotateEncryptionKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift RotateEncryptionKey response element from \a xml.
  */
 void RotateEncryptionKeyResponsePrivate::parseRotateEncryptionKeyResponse(QXmlStreamReader &xml)
 {

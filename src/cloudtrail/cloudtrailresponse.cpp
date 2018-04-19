@@ -28,16 +28,13 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::CloudTrailResponse
- *
  * \brief The CloudTrailResponse class provides an interface for CloudTrail responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @brief  Constructs a new CloudTrailResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CloudTrailResponse object with parent \a parent.
  */
 CloudTrailResponse::CloudTrailResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CloudTrailResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CloudTrailResponse::CloudTrailResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudTrailResponse object.
- *
+ * \internal
+ * Constructs a CloudTrailResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudTrailResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CloudTrailResponse::CloudTrailResponse(CloudTrailResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CloudTrailResponse::CloudTrailResponse(CloudTrailResponsePrivate * const d, QObj
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CloudTrailResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CloudTrailResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudTrail::CloudTrailResponsePrivate
+ * \brief The CloudTrailResponsePrivate class provides private implementation for CloudTrailResponse.
+ * \internal
  *
- * @class  CloudTrailResponsePrivate
- *
- * @brief  Private implementation for CloudTrailResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudTrailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloudTrailResponse instance.
+ * Constructs a CloudTrailResponsePrivate object with public implementation \a q.
  */
 CloudTrailResponsePrivate::CloudTrailResponsePrivate(
     CloudTrailResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

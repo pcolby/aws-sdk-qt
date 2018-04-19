@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * AttachThingPrincipalRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a AttachThingPrincipalRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a AttachThingPrincipalRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 AttachThingPrincipalRequestPrivate::AttachThingPrincipalRequestPrivate(
     const IoTRequest::Action action, AttachThingPrincipalRequest * const q)

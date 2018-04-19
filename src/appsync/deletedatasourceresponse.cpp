@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::DeleteDataSourceResponse
- *
  * \brief The DeleteDataSourceResponse class provides an interace for AppSync DeleteDataSource responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new DeleteDataSourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDataSourceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDataSourceResponse::DeleteDataSourceResponse(
         const DeleteDataSourceRequest &request,
@@ -56,6 +51,9 @@ DeleteDataSourceResponse::DeleteDataSourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
 {
     Q_D(const DeleteDataSourceResponse);
@@ -63,9 +61,8 @@ const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync DeleteDataSource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync DeleteDataSource \a response.
  */
 void DeleteDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DeleteDataSourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::DeleteDataSourceResponsePrivate
+ * \brief The DeleteDataSourceResponsePrivate class provides private implementation for DeleteDataSourceResponse.
  * \internal
  *
- * \class DeleteDataSourceResponsePrivate
- *
- * \brief Private implementation for DeleteDataSourceResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDataSourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDataSourceResponse instance.
+ * Constructs a DeleteDataSourceResponsePrivate object with public implementation \a q.
  */
 DeleteDataSourceResponsePrivate::DeleteDataSourceResponsePrivate(
     DeleteDataSourceResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ DeleteDataSourceResponsePrivate::DeleteDataSourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync DeleteDataSourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync DeleteDataSource response element from \a xml.
  */
 void DeleteDataSourceResponsePrivate::parseDeleteDataSourceResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetGameSessionLogUrlResponse : public GameLiftResponse {
 public:
     GetGameSessionLogUrlResponse(const GetGameSessionLogUrlRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetGameSessionLogUrlRequest * request() const;
+    virtual const GetGameSessionLogUrlRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetGameSessionLogUrlResponse)

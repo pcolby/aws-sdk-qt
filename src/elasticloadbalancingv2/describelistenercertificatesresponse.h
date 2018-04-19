@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeListenerCertificatesResponse : public ElasticLoadBala
 public:
     DescribeListenerCertificatesResponse(const DescribeListenerCertificatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeListenerCertificatesRequest * request() const;
+    virtual const DescribeListenerCertificatesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeListenerCertificatesResponse)

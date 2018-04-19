@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeTapeArchivesResponse
- *
  * \brief The DescribeTapeArchivesResponse class provides an interace for StorageGateway DescribeTapeArchives responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeTapeArchivesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTapeArchivesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTapeArchivesResponse::DescribeTapeArchivesResponse(
         const DescribeTapeArchivesRequest &request,
@@ -124,6 +119,9 @@ DescribeTapeArchivesResponse::DescribeTapeArchivesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTapeArchivesRequest * DescribeTapeArchivesResponse::request() const
 {
     Q_D(const DescribeTapeArchivesResponse);
@@ -131,9 +129,8 @@ const DescribeTapeArchivesRequest * DescribeTapeArchivesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeTapeArchives response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeTapeArchives \a response.
  */
 void DescribeTapeArchivesResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeTapeArchivesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeTapeArchivesResponsePrivate
+ * \brief The DescribeTapeArchivesResponsePrivate class provides private implementation for DescribeTapeArchivesResponse.
  * \internal
  *
- * \class DescribeTapeArchivesResponsePrivate
- *
- * \brief Private implementation for DescribeTapeArchivesResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTapeArchivesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTapeArchivesResponse instance.
+ * Constructs a DescribeTapeArchivesResponsePrivate object with public implementation \a q.
  */
 DescribeTapeArchivesResponsePrivate::DescribeTapeArchivesResponsePrivate(
     DescribeTapeArchivesResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeTapeArchivesResponsePrivate::DescribeTapeArchivesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeTapeArchivesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeTapeArchives response element from \a xml.
  */
 void DescribeTapeArchivesResponsePrivate::parseDescribeTapeArchivesResponse(QXmlStreamReader &xml)
 {

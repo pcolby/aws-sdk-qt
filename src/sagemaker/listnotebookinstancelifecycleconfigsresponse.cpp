@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::ListNotebookInstanceLifecycleConfigsResponse
- *
  * \brief The ListNotebookInstanceLifecycleConfigsResponse class provides an interace for SageMaker ListNotebookInstanceLifecycleConfigs responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::listNotebookInstanceLifecycleConfigs
  */
 
 /*!
- * @brief  Constructs a new ListNotebookInstanceLifecycleConfigsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListNotebookInstanceLifecycleConfigsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListNotebookInstanceLifecycleConfigsResponse::ListNotebookInstanceLifecycleConfigsResponse(
         const ListNotebookInstanceLifecycleConfigsRequest &request,
@@ -55,6 +50,9 @@ ListNotebookInstanceLifecycleConfigsResponse::ListNotebookInstanceLifecycleConfi
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListNotebookInstanceLifecycleConfigsRequest * ListNotebookInstanceLifecycleConfigsResponse::request() const
 {
     Q_D(const ListNotebookInstanceLifecycleConfigsResponse);
@@ -62,9 +60,8 @@ const ListNotebookInstanceLifecycleConfigsRequest * ListNotebookInstanceLifecycl
 }
 
 /*!
- * @brief  Parse a SageMaker ListNotebookInstanceLifecycleConfigs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker ListNotebookInstanceLifecycleConfigs \a response.
  */
 void ListNotebookInstanceLifecycleConfigsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListNotebookInstanceLifecycleConfigsResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::SageMaker::ListNotebookInstanceLifecycleConfigsResponsePrivate
+ * \brief The ListNotebookInstanceLifecycleConfigsResponsePrivate class provides private implementation for ListNotebookInstanceLifecycleConfigsResponse.
  * \internal
  *
- * \class ListNotebookInstanceLifecycleConfigsResponsePrivate
- *
- * \brief Private implementation for ListNotebookInstanceLifecycleConfigsResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListNotebookInstanceLifecycleConfigsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListNotebookInstanceLifecycleConfigsResponse instance.
+ * Constructs a ListNotebookInstanceLifecycleConfigsResponsePrivate object with public implementation \a q.
  */
 ListNotebookInstanceLifecycleConfigsResponsePrivate::ListNotebookInstanceLifecycleConfigsResponsePrivate(
     ListNotebookInstanceLifecycleConfigsResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ ListNotebookInstanceLifecycleConfigsResponsePrivate::ListNotebookInstanceLifecyc
 }
 
 /*!
- * @brief  Parse an SageMaker ListNotebookInstanceLifecycleConfigsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker ListNotebookInstanceLifecycleConfigs response element from \a xml.
  */
 void ListNotebookInstanceLifecycleConfigsResponsePrivate::parseListNotebookInstanceLifecycleConfigsResponse(QXmlStreamReader &xml)
 {

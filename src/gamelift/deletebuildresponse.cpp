@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteBuildResponse
- *
  * \brief The DeleteBuildResponse class provides an interace for GameLift DeleteBuild responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteBuildResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBuildResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBuildResponse::DeleteBuildResponse(
         const DeleteBuildRequest &request,
@@ -491,6 +486,9 @@ DeleteBuildResponse::DeleteBuildResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBuildRequest * DeleteBuildResponse::request() const
 {
     Q_D(const DeleteBuildResponse);
@@ -498,9 +496,8 @@ const DeleteBuildRequest * DeleteBuildResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift DeleteBuild response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DeleteBuild \a response.
  */
 void DeleteBuildResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DeleteBuildResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DeleteBuildResponsePrivate
+ * \brief The DeleteBuildResponsePrivate class provides private implementation for DeleteBuildResponse.
  * \internal
  *
- * \class DeleteBuildResponsePrivate
- *
- * \brief Private implementation for DeleteBuildResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBuildResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBuildResponse instance.
+ * Constructs a DeleteBuildResponsePrivate object with public implementation \a q.
  */
 DeleteBuildResponsePrivate::DeleteBuildResponsePrivate(
     DeleteBuildResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DeleteBuildResponsePrivate::DeleteBuildResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift DeleteBuildResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DeleteBuild response element from \a xml.
  */
 void DeleteBuildResponsePrivate::parseDeleteBuildResponse(QXmlStreamReader &xml)
 {

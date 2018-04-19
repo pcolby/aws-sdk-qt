@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCACertificateRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteCACertificateRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCACertificateRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeleteCACertificateRequestPrivate::DeleteCACertificateRequestPrivate(
     const IoTRequest::Action action, DeleteCACertificateRequest * const q)

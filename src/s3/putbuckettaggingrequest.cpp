@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PutBucketTaggingRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a PutBucketTaggingRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a PutBucketTaggingRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 PutBucketTaggingRequestPrivate::PutBucketTaggingRequestPrivate(
     const S3Request::Action action, PutBucketTaggingRequest * const q)

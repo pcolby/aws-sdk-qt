@@ -28,16 +28,13 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::MigrationHubResponse
- *
  * \brief The MigrationHubResponse class provides an interface for MigrationHub responses.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @brief  Constructs a new MigrationHubResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MigrationHubResponse object with parent \a parent.
  */
 MigrationHubResponse::MigrationHubResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MigrationHubResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MigrationHubResponse::MigrationHubResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MigrationHubResponse object.
- *
+ * \internal
+ * Constructs a MigrationHubResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MigrationHubResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MigrationHubResponse::MigrationHubResponse(MigrationHubResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MigrationHubResponse::MigrationHubResponse(MigrationHubResponsePrivate * const d
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MigrationHubResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MigrationHubResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MigrationHub::MigrationHubResponsePrivate
+ * \brief The MigrationHubResponsePrivate class provides private implementation for MigrationHubResponse.
+ * \internal
  *
- * @class  MigrationHubResponsePrivate
- *
- * @brief  Private implementation for MigrationHubResponse.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MigrationHubResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MigrationHubResponse instance.
+ * Constructs a MigrationHubResponsePrivate object with public implementation \a q.
  */
 MigrationHubResponsePrivate::MigrationHubResponsePrivate(
     MigrationHubResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

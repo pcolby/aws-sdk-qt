@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteFolderResponse
- *
  * \brief The DeleteFolderResponse class provides an interace for WorkDocs DeleteFolder responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteFolderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteFolderResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteFolderResponse::DeleteFolderResponse(
         const DeleteFolderRequest &request,
@@ -84,6 +79,9 @@ DeleteFolderResponse::DeleteFolderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteFolderRequest * DeleteFolderResponse::request() const
 {
     Q_D(const DeleteFolderResponse);
@@ -91,9 +89,8 @@ const DeleteFolderRequest * DeleteFolderResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs DeleteFolder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DeleteFolder \a response.
  */
 void DeleteFolderResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteFolderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DeleteFolderResponsePrivate
+ * \brief The DeleteFolderResponsePrivate class provides private implementation for DeleteFolderResponse.
  * \internal
  *
- * \class DeleteFolderResponsePrivate
- *
- * \brief Private implementation for DeleteFolderResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFolderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteFolderResponse instance.
+ * Constructs a DeleteFolderResponsePrivate object with public implementation \a q.
  */
 DeleteFolderResponsePrivate::DeleteFolderResponsePrivate(
     DeleteFolderResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteFolderResponsePrivate::DeleteFolderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DeleteFolderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DeleteFolder response element from \a xml.
  */
 void DeleteFolderResponsePrivate::parseDeleteFolderResponse(QXmlStreamReader &xml)
 {

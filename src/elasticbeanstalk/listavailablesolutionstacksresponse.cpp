@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::ListAvailableSolutionStacksResponse
- *
  * \brief The ListAvailableSolutionStacksResponse class provides an interace for ElasticBeanstalk ListAvailableSolutionStacks responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new ListAvailableSolutionStacksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAvailableSolutionStacksResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAvailableSolutionStacksResponse::ListAvailableSolutionStacksResponse(
         const ListAvailableSolutionStacksRequest &request,
@@ -77,6 +72,9 @@ ListAvailableSolutionStacksResponse::ListAvailableSolutionStacksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAvailableSolutionStacksRequest * ListAvailableSolutionStacksResponse::request() const
 {
     Q_D(const ListAvailableSolutionStacksResponse);
@@ -84,9 +82,8 @@ const ListAvailableSolutionStacksRequest * ListAvailableSolutionStacksResponse::
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk ListAvailableSolutionStacks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk ListAvailableSolutionStacks \a response.
  */
 void ListAvailableSolutionStacksResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ListAvailableSolutionStacksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::ListAvailableSolutionStacksResponsePrivate
+ * \brief The ListAvailableSolutionStacksResponsePrivate class provides private implementation for ListAvailableSolutionStacksResponse.
  * \internal
  *
- * \class ListAvailableSolutionStacksResponsePrivate
- *
- * \brief Private implementation for ListAvailableSolutionStacksResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAvailableSolutionStacksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAvailableSolutionStacksResponse instance.
+ * Constructs a ListAvailableSolutionStacksResponsePrivate object with public implementation \a q.
  */
 ListAvailableSolutionStacksResponsePrivate::ListAvailableSolutionStacksResponsePrivate(
     ListAvailableSolutionStacksResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ ListAvailableSolutionStacksResponsePrivate::ListAvailableSolutionStacksResponseP
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk ListAvailableSolutionStacksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk ListAvailableSolutionStacks response element from \a xml.
  */
 void ListAvailableSolutionStacksResponsePrivate::parseListAvailableSolutionStacksResponse(QXmlStreamReader &xml)
 {

@@ -154,9 +154,8 @@ QtAws::Core::AwsAbstractResponse * RegisterScalableTargetRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a RegisterScalableTargetRequestPrivate object for ApplicationAutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a RegisterScalableTargetRequestPrivate object for ApplicationAutoScaling \a action,
+ * with public implementation \a q.
  */
 RegisterScalableTargetRequestPrivate::RegisterScalableTargetRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, RegisterScalableTargetRequest * const q)

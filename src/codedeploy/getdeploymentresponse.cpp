@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::GetDeploymentResponse
- *
  * \brief The GetDeploymentResponse class provides an interace for CodeDeploy GetDeployment responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new GetDeploymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDeploymentResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDeploymentResponse::GetDeploymentResponse(
         const GetDeploymentRequest &request,
@@ -136,6 +131,9 @@ GetDeploymentResponse::GetDeploymentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDeploymentRequest * GetDeploymentResponse::request() const
 {
     Q_D(const GetDeploymentResponse);
@@ -143,9 +141,8 @@ const GetDeploymentRequest * GetDeploymentResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeDeploy GetDeployment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy GetDeployment \a response.
  */
 void GetDeploymentResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void GetDeploymentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::GetDeploymentResponsePrivate
+ * \brief The GetDeploymentResponsePrivate class provides private implementation for GetDeploymentResponse.
  * \internal
  *
- * \class GetDeploymentResponsePrivate
- *
- * \brief Private implementation for GetDeploymentResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeploymentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDeploymentResponse instance.
+ * Constructs a GetDeploymentResponsePrivate object with public implementation \a q.
  */
 GetDeploymentResponsePrivate::GetDeploymentResponsePrivate(
     GetDeploymentResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ GetDeploymentResponsePrivate::GetDeploymentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy GetDeploymentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy GetDeployment response element from \a xml.
  */
 void GetDeploymentResponsePrivate::parseGetDeploymentResponse(QXmlStreamReader &xml)
 {

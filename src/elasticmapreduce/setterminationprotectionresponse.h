@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetTerminationProtectionResponse : public EMRResponse {
 public:
     SetTerminationProtectionResponse(const SetTerminationProtectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetTerminationProtectionRequest * request() const;
+    virtual const SetTerminationProtectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetTerminationProtectionResponse)

@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::ListAssessmentTemplatesResponse
- *
  * \brief The ListAssessmentTemplatesResponse class provides an interace for Inspector ListAssessmentTemplates responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new ListAssessmentTemplatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAssessmentTemplatesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAssessmentTemplatesResponse::ListAssessmentTemplatesResponse(
         const ListAssessmentTemplatesRequest &request,
@@ -60,6 +55,9 @@ ListAssessmentTemplatesResponse::ListAssessmentTemplatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAssessmentTemplatesRequest * ListAssessmentTemplatesResponse::request() const
 {
     Q_D(const ListAssessmentTemplatesResponse);
@@ -67,9 +65,8 @@ const ListAssessmentTemplatesRequest * ListAssessmentTemplatesResponse::request(
 }
 
 /*!
- * @brief  Parse a Inspector ListAssessmentTemplates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector ListAssessmentTemplates \a response.
  */
 void ListAssessmentTemplatesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListAssessmentTemplatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::ListAssessmentTemplatesResponsePrivate
+ * \brief The ListAssessmentTemplatesResponsePrivate class provides private implementation for ListAssessmentTemplatesResponse.
  * \internal
  *
- * \class ListAssessmentTemplatesResponsePrivate
- *
- * \brief Private implementation for ListAssessmentTemplatesResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssessmentTemplatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAssessmentTemplatesResponse instance.
+ * Constructs a ListAssessmentTemplatesResponsePrivate object with public implementation \a q.
  */
 ListAssessmentTemplatesResponsePrivate::ListAssessmentTemplatesResponsePrivate(
     ListAssessmentTemplatesResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ ListAssessmentTemplatesResponsePrivate::ListAssessmentTemplatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector ListAssessmentTemplatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector ListAssessmentTemplates response element from \a xml.
  */
 void ListAssessmentTemplatesResponsePrivate::parseListAssessmentTemplatesResponse(QXmlStreamReader &xml)
 {

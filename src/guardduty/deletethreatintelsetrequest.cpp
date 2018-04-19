@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteThreatIntelSetRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteThreatIntelSetRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a DeleteThreatIntelSetRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 DeleteThreatIntelSetRequestPrivate::DeleteThreatIntelSetRequestPrivate(
     const GuardDutyRequest::Action action, DeleteThreatIntelSetRequest * const q)

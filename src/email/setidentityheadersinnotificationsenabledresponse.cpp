@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SetIdentityHeadersInNotificationsEnabledResponse
- *
  * \brief The SetIdentityHeadersInNotificationsEnabledResponse class provides an interace for SES SetIdentityHeadersInNotificationsEnabled responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SetIdentityHeadersInNotificationsEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetIdentityHeadersInNotificationsEnabledResponse object for \a reply to \a request, with parent \a parent.
  */
 SetIdentityHeadersInNotificationsEnabledResponse::SetIdentityHeadersInNotificationsEnabledResponse(
         const SetIdentityHeadersInNotificationsEnabledRequest &request,
@@ -66,6 +61,9 @@ SetIdentityHeadersInNotificationsEnabledResponse::SetIdentityHeadersInNotificati
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetIdentityHeadersInNotificationsEnabledRequest * SetIdentityHeadersInNotificationsEnabledResponse::request() const
 {
     Q_D(const SetIdentityHeadersInNotificationsEnabledResponse);
@@ -73,9 +71,8 @@ const SetIdentityHeadersInNotificationsEnabledRequest * SetIdentityHeadersInNoti
 }
 
 /*!
- * @brief  Parse a SES SetIdentityHeadersInNotificationsEnabled response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SetIdentityHeadersInNotificationsEnabled \a response.
  */
 void SetIdentityHeadersInNotificationsEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SetIdentityHeadersInNotificationsEnabledResponse::parseSuccess(QIODevice &r
 }
 
 /*!
+ * \class QtAws::SES::SetIdentityHeadersInNotificationsEnabledResponsePrivate
+ * \brief The SetIdentityHeadersInNotificationsEnabledResponsePrivate class provides private implementation for SetIdentityHeadersInNotificationsEnabledResponse.
  * \internal
  *
- * \class SetIdentityHeadersInNotificationsEnabledResponsePrivate
- *
- * \brief Private implementation for SetIdentityHeadersInNotificationsEnabledResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIdentityHeadersInNotificationsEnabledResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetIdentityHeadersInNotificationsEnabledResponse instance.
+ * Constructs a SetIdentityHeadersInNotificationsEnabledResponsePrivate object with public implementation \a q.
  */
 SetIdentityHeadersInNotificationsEnabledResponsePrivate::SetIdentityHeadersInNotificationsEnabledResponsePrivate(
     SetIdentityHeadersInNotificationsEnabledResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SetIdentityHeadersInNotificationsEnabledResponsePrivate::SetIdentityHeadersInNot
 }
 
 /*!
- * @brief  Parse an SES SetIdentityHeadersInNotificationsEnabledResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SetIdentityHeadersInNotificationsEnabled response element from \a xml.
  */
 void SetIdentityHeadersInNotificationsEnabledResponsePrivate::parseSetIdentityHeadersInNotificationsEnabledResponse(QXmlStreamReader &xml)
 {

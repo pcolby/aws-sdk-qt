@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * UpdateChapCredentialsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a UpdateChapCredentialsRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateChapCredentialsRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 UpdateChapCredentialsRequestPrivate::UpdateChapCredentialsRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateChapCredentialsRequest * const q)

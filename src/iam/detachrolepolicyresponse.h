@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachRolePolicyResponse : public IAMResponse {
 public:
     DetachRolePolicyResponse(const DetachRolePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachRolePolicyRequest * request() const;
+    virtual const DetachRolePolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DetachRolePolicyResponse)

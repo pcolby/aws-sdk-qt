@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRootFoldersRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeRootFoldersRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRootFoldersRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DescribeRootFoldersRequestPrivate::DescribeRootFoldersRequestPrivate(
     const WorkDocsRequest::Action action, DescribeRootFoldersRequest * const q)

@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::CreateSkillGroupResponse
- *
  * \brief The CreateSkillGroupResponse class provides an interace for AlexaForBusiness CreateSkillGroup responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new CreateSkillGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSkillGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSkillGroupResponse::CreateSkillGroupResponse(
         const CreateSkillGroupRequest &request,
@@ -60,6 +55,9 @@ CreateSkillGroupResponse::CreateSkillGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSkillGroupRequest * CreateSkillGroupResponse::request() const
 {
     Q_D(const CreateSkillGroupResponse);
@@ -67,9 +65,8 @@ const CreateSkillGroupRequest * CreateSkillGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness CreateSkillGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness CreateSkillGroup \a response.
  */
 void CreateSkillGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateSkillGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::CreateSkillGroupResponsePrivate
+ * \brief The CreateSkillGroupResponsePrivate class provides private implementation for CreateSkillGroupResponse.
  * \internal
  *
- * \class CreateSkillGroupResponsePrivate
- *
- * \brief Private implementation for CreateSkillGroupResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSkillGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSkillGroupResponse instance.
+ * Constructs a CreateSkillGroupResponsePrivate object with public implementation \a q.
  */
 CreateSkillGroupResponsePrivate::CreateSkillGroupResponsePrivate(
     CreateSkillGroupResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateSkillGroupResponsePrivate::CreateSkillGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness CreateSkillGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness CreateSkillGroup response element from \a xml.
  */
 void CreateSkillGroupResponsePrivate::parseCreateSkillGroupResponse(QXmlStreamReader &xml)
 {

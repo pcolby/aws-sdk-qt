@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * PutEvaluationsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a PutEvaluationsRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a PutEvaluationsRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 PutEvaluationsRequestPrivate::PutEvaluationsRequestPrivate(
     const ConfigServiceRequest::Action action, PutEvaluationsRequest * const q)

@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreateAssociationBatchResponse
- *
  * \brief The CreateAssociationBatchResponse class provides an interace for SSM CreateAssociationBatch responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreateAssociationBatchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAssociationBatchResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAssociationBatchResponse::CreateAssociationBatchResponse(
         const CreateAssociationBatchRequest &request,
@@ -79,6 +74,9 @@ CreateAssociationBatchResponse::CreateAssociationBatchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAssociationBatchRequest * CreateAssociationBatchResponse::request() const
 {
     Q_D(const CreateAssociationBatchResponse);
@@ -86,9 +84,8 @@ const CreateAssociationBatchRequest * CreateAssociationBatchResponse::request() 
 }
 
 /*!
- * @brief  Parse a SSM CreateAssociationBatch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM CreateAssociationBatch \a response.
  */
 void CreateAssociationBatchResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void CreateAssociationBatchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::CreateAssociationBatchResponsePrivate
+ * \brief The CreateAssociationBatchResponsePrivate class provides private implementation for CreateAssociationBatchResponse.
  * \internal
  *
- * \class CreateAssociationBatchResponsePrivate
- *
- * \brief Private implementation for CreateAssociationBatchResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAssociationBatchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAssociationBatchResponse instance.
+ * Constructs a CreateAssociationBatchResponsePrivate object with public implementation \a q.
  */
 CreateAssociationBatchResponsePrivate::CreateAssociationBatchResponsePrivate(
     CreateAssociationBatchResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ CreateAssociationBatchResponsePrivate::CreateAssociationBatchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM CreateAssociationBatchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM CreateAssociationBatch response element from \a xml.
  */
 void CreateAssociationBatchResponsePrivate::parseCreateAssociationBatchResponse(QXmlStreamReader &xml)
 {

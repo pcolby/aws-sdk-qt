@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateDocumentationPartResponse
- *
  * \brief The UpdateDocumentationPartResponse class provides an interace for APIGateway UpdateDocumentationPart responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateDocumentationPartResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDocumentationPartResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDocumentationPartResponse::UpdateDocumentationPartResponse(
         const UpdateDocumentationPartRequest &request,
@@ -60,6 +55,9 @@ UpdateDocumentationPartResponse::UpdateDocumentationPartResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDocumentationPartRequest * UpdateDocumentationPartResponse::request() const
 {
     Q_D(const UpdateDocumentationPartResponse);
@@ -67,9 +65,8 @@ const UpdateDocumentationPartRequest * UpdateDocumentationPartResponse::request(
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateDocumentationPart response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateDocumentationPart \a response.
  */
 void UpdateDocumentationPartResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateDocumentationPartResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateDocumentationPartResponsePrivate
+ * \brief The UpdateDocumentationPartResponsePrivate class provides private implementation for UpdateDocumentationPartResponse.
  * \internal
  *
- * \class UpdateDocumentationPartResponsePrivate
- *
- * \brief Private implementation for UpdateDocumentationPartResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDocumentationPartResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDocumentationPartResponse instance.
+ * Constructs a UpdateDocumentationPartResponsePrivate object with public implementation \a q.
  */
 UpdateDocumentationPartResponsePrivate::UpdateDocumentationPartResponsePrivate(
     UpdateDocumentationPartResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateDocumentationPartResponsePrivate::UpdateDocumentationPartResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateDocumentationPartResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateDocumentationPart response element from \a xml.
  */
 void UpdateDocumentationPartResponsePrivate::parseUpdateDocumentationPartResponse(QXmlStreamReader &xml)
 {

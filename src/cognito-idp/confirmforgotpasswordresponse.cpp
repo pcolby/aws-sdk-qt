@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ConfirmForgotPasswordResponse
- *
  * \brief The ConfirmForgotPasswordResponse class provides an interace for CognitoIdentityProvider ConfirmForgotPassword responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ConfirmForgotPasswordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ConfirmForgotPasswordResponse object for \a reply to \a request, with parent \a parent.
  */
 ConfirmForgotPasswordResponse::ConfirmForgotPasswordResponse(
         const ConfirmForgotPasswordRequest &request,
@@ -65,6 +60,9 @@ ConfirmForgotPasswordResponse::ConfirmForgotPasswordResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ConfirmForgotPasswordRequest * ConfirmForgotPasswordResponse::request() const
 {
     Q_D(const ConfirmForgotPasswordResponse);
@@ -72,9 +70,8 @@ const ConfirmForgotPasswordRequest * ConfirmForgotPasswordResponse::request() co
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider ConfirmForgotPassword response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider ConfirmForgotPassword \a response.
  */
 void ConfirmForgotPasswordResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void ConfirmForgotPasswordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::ConfirmForgotPasswordResponsePrivate
+ * \brief The ConfirmForgotPasswordResponsePrivate class provides private implementation for ConfirmForgotPasswordResponse.
  * \internal
  *
- * \class ConfirmForgotPasswordResponsePrivate
- *
- * \brief Private implementation for ConfirmForgotPasswordResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmForgotPasswordResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ConfirmForgotPasswordResponse instance.
+ * Constructs a ConfirmForgotPasswordResponsePrivate object with public implementation \a q.
  */
 ConfirmForgotPasswordResponsePrivate::ConfirmForgotPasswordResponsePrivate(
     ConfirmForgotPasswordResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ ConfirmForgotPasswordResponsePrivate::ConfirmForgotPasswordResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider ConfirmForgotPasswordResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider ConfirmForgotPassword response element from \a xml.
  */
 void ConfirmForgotPasswordResponsePrivate::parseConfirmForgotPasswordResponse(QXmlStreamReader &xml)
 {

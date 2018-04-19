@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateIPSetRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a UpdateIPSetRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
     const GuardDutyRequest::Action action, UpdateIPSetRequest * const q)

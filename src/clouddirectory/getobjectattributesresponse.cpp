@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetObjectAttributesResponse
- *
  * \brief The GetObjectAttributesResponse class provides an interace for CloudDirectory GetObjectAttributes responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetObjectAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetObjectAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetObjectAttributesResponse::GetObjectAttributesResponse(
         const GetObjectAttributesRequest &request,
@@ -62,6 +57,9 @@ GetObjectAttributesResponse::GetObjectAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetObjectAttributesRequest * GetObjectAttributesResponse::request() const
 {
     Q_D(const GetObjectAttributesResponse);
@@ -69,9 +67,8 @@ const GetObjectAttributesRequest * GetObjectAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory GetObjectAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory GetObjectAttributes \a response.
  */
 void GetObjectAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetObjectAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::GetObjectAttributesResponsePrivate
+ * \brief The GetObjectAttributesResponsePrivate class provides private implementation for GetObjectAttributesResponse.
  * \internal
  *
- * \class GetObjectAttributesResponsePrivate
- *
- * \brief Private implementation for GetObjectAttributesResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetObjectAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetObjectAttributesResponse instance.
+ * Constructs a GetObjectAttributesResponsePrivate object with public implementation \a q.
  */
 GetObjectAttributesResponsePrivate::GetObjectAttributesResponsePrivate(
     GetObjectAttributesResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ GetObjectAttributesResponsePrivate::GetObjectAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory GetObjectAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory GetObjectAttributes response element from \a xml.
  */
 void GetObjectAttributesResponsePrivate::parseGetObjectAttributesResponse(QXmlStreamReader &xml)
 {

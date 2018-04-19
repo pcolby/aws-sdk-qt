@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAlarmsForMetricResponse : public CloudWatchResponse {
 public:
     DescribeAlarmsForMetricResponse(const DescribeAlarmsForMetricRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAlarmsForMetricRequest * request() const;
+    virtual const DescribeAlarmsForMetricRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAlarmsForMetricResponse)

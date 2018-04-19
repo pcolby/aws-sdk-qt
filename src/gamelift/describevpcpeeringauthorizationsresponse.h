@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeVpcPeeringAuthorizationsResponse : public GameLiftRes
 public:
     DescribeVpcPeeringAuthorizationsResponse(const DescribeVpcPeeringAuthorizationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeVpcPeeringAuthorizationsRequest * request() const;
+    virtual const DescribeVpcPeeringAuthorizationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeVpcPeeringAuthorizationsResponse)

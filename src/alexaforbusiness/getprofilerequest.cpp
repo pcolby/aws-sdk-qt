@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetProfileRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetProfileRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a GetProfileRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 GetProfileRequestPrivate::GetProfileRequestPrivate(
     const AlexaForBusinessRequest::Action action, GetProfileRequest * const q)

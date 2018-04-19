@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdatePipelineStatusRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdatePipelineStatusRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a UpdatePipelineStatusRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 UpdatePipelineStatusRequestPrivate::UpdatePipelineStatusRequestPrivate(
     const ElasticTranscoderRequest::Action action, UpdatePipelineStatusRequest * const q)

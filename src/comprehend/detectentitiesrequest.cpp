@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DetectEntitiesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DetectEntitiesRequestPrivate object for Comprehend \a action with,
- * public implementation \a q.
+ * Constructs a DetectEntitiesRequestPrivate object for Comprehend \a action,
+ * with public implementation \a q.
  */
 DetectEntitiesRequestPrivate::DetectEntitiesRequestPrivate(
     const ComprehendRequest::Action action, DetectEntitiesRequest * const q)

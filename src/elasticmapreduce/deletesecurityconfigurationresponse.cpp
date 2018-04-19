@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::DeleteSecurityConfigurationResponse
- *
  * \brief The DeleteSecurityConfigurationResponse class provides an interace for EMR DeleteSecurityConfiguration responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new DeleteSecurityConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSecurityConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSecurityConfigurationResponse::DeleteSecurityConfigurationResponse(
         const DeleteSecurityConfigurationRequest &request,
@@ -58,6 +53,9 @@ DeleteSecurityConfigurationResponse::DeleteSecurityConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSecurityConfigurationRequest * DeleteSecurityConfigurationResponse::request() const
 {
     Q_D(const DeleteSecurityConfigurationResponse);
@@ -65,9 +63,8 @@ const DeleteSecurityConfigurationRequest * DeleteSecurityConfigurationResponse::
 }
 
 /*!
- * @brief  Parse a EMR DeleteSecurityConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR DeleteSecurityConfiguration \a response.
  */
 void DeleteSecurityConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteSecurityConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::DeleteSecurityConfigurationResponsePrivate
+ * \brief The DeleteSecurityConfigurationResponsePrivate class provides private implementation for DeleteSecurityConfigurationResponse.
  * \internal
  *
- * \class DeleteSecurityConfigurationResponsePrivate
- *
- * \brief Private implementation for DeleteSecurityConfigurationResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSecurityConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSecurityConfigurationResponse instance.
+ * Constructs a DeleteSecurityConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteSecurityConfigurationResponsePrivate::DeleteSecurityConfigurationResponsePrivate(
     DeleteSecurityConfigurationResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteSecurityConfigurationResponsePrivate::DeleteSecurityConfigurationResponseP
 }
 
 /*!
- * @brief  Parse an EMR DeleteSecurityConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR DeleteSecurityConfiguration response element from \a xml.
  */
 void DeleteSecurityConfigurationResponsePrivate::parseDeleteSecurityConfigurationResponse(QXmlStreamReader &xml)
 {

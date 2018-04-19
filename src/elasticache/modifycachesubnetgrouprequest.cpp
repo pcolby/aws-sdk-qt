@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ModifyCacheSubnetGroupRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ModifyCacheSubnetGroupRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a ModifyCacheSubnetGroupRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 ModifyCacheSubnetGroupRequestPrivate::ModifyCacheSubnetGroupRequestPrivate(
     const ElastiCacheRequest::Action action, ModifyCacheSubnetGroupRequest * const q)

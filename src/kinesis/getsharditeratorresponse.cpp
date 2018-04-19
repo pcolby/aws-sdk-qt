@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::GetShardIteratorResponse
- *
  * \brief The GetShardIteratorResponse class provides an interace for Kinesis GetShardIterator responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new GetShardIteratorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetShardIteratorResponse object for \a reply to \a request, with parent \a parent.
  */
 GetShardIteratorResponse::GetShardIteratorResponse(
         const GetShardIteratorRequest &request,
@@ -58,6 +53,9 @@ GetShardIteratorResponse::GetShardIteratorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetShardIteratorRequest * GetShardIteratorResponse::request() const
 {
     Q_D(const GetShardIteratorResponse);
@@ -65,9 +63,8 @@ const GetShardIteratorRequest * GetShardIteratorResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis GetShardIterator response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis GetShardIterator \a response.
  */
 void GetShardIteratorResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetShardIteratorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::GetShardIteratorResponsePrivate
+ * \brief The GetShardIteratorResponsePrivate class provides private implementation for GetShardIteratorResponse.
  * \internal
  *
- * \class GetShardIteratorResponsePrivate
- *
- * \brief Private implementation for GetShardIteratorResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetShardIteratorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetShardIteratorResponse instance.
+ * Constructs a GetShardIteratorResponsePrivate object with public implementation \a q.
  */
 GetShardIteratorResponsePrivate::GetShardIteratorResponsePrivate(
     GetShardIteratorResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ GetShardIteratorResponsePrivate::GetShardIteratorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis GetShardIteratorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis GetShardIterator response element from \a xml.
  */
 void GetShardIteratorResponsePrivate::parseGetShardIteratorResponse(QXmlStreamReader &xml)
 {

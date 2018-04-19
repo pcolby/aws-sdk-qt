@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::PutRestApiResponse
- *
  * \brief The PutRestApiResponse class provides an interace for APIGateway PutRestApi responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new PutRestApiResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutRestApiResponse object for \a reply to \a request, with parent \a parent.
  */
 PutRestApiResponse::PutRestApiResponse(
         const PutRestApiRequest &request,
@@ -60,6 +55,9 @@ PutRestApiResponse::PutRestApiResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutRestApiRequest * PutRestApiResponse::request() const
 {
     Q_D(const PutRestApiResponse);
@@ -67,9 +65,8 @@ const PutRestApiRequest * PutRestApiResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway PutRestApi response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway PutRestApi \a response.
  */
 void PutRestApiResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void PutRestApiResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::PutRestApiResponsePrivate
+ * \brief The PutRestApiResponsePrivate class provides private implementation for PutRestApiResponse.
  * \internal
  *
- * \class PutRestApiResponsePrivate
- *
- * \brief Private implementation for PutRestApiResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRestApiResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutRestApiResponse instance.
+ * Constructs a PutRestApiResponsePrivate object with public implementation \a q.
  */
 PutRestApiResponsePrivate::PutRestApiResponsePrivate(
     PutRestApiResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ PutRestApiResponsePrivate::PutRestApiResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway PutRestApiResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway PutRestApi response element from \a xml.
  */
 void PutRestApiResponsePrivate::parsePutRestApiResponse(QXmlStreamReader &xml)
 {

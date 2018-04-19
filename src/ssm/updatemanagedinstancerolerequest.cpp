@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * UpdateManagedInstanceRoleRequest::response(QN
  */
 
 /*!
- *
- * Constructs a UpdateManagedInstanceRoleRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateManagedInstanceRoleRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 UpdateManagedInstanceRoleRequestPrivate::UpdateManagedInstanceRoleRequestPrivate(
     const SSMRequest::Action action, UpdateManagedInstanceRoleRequest * const q)

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * GetPendingJobExecutionsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a GetPendingJobExecutionsRequestPrivate object for IoTJobsDataPlane \a action with,
- * public implementation \a q.
+ * Constructs a GetPendingJobExecutionsRequestPrivate object for IoTJobsDataPlane \a action,
+ * with public implementation \a q.
  */
 GetPendingJobExecutionsRequestPrivate::GetPendingJobExecutionsRequestPrivate(
     const IoTJobsDataPlaneRequest::Action action, GetPendingJobExecutionsRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTagsResponse : public AutoScalingResponse {
 public:
     DescribeTagsResponse(const DescribeTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTagsRequest * request() const;
+    virtual const DescribeTagsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTagsResponse)

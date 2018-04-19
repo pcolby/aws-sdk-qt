@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchGetApplicationsResponse : public CodeDeployResponse {
 public:
     BatchGetApplicationsResponse(const BatchGetApplicationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchGetApplicationsRequest * request() const;
+    virtual const BatchGetApplicationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchGetApplicationsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachThingPrincipalResponse : public IoTResponse {
 public:
     AttachThingPrincipalResponse(const AttachThingPrincipalRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachThingPrincipalRequest * request() const;
+    virtual const AttachThingPrincipalRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AttachThingPrincipalResponse)

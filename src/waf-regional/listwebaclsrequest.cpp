@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListWebACLsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListWebACLsRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a ListWebACLsRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 ListWebACLsRequestPrivate::ListWebACLsRequestPrivate(
     const WAFRegionalRequest::Action action, ListWebACLsRequest * const q)

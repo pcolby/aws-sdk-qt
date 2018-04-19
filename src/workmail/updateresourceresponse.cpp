@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::UpdateResourceResponse
- *
  * \brief The UpdateResourceResponse class provides an interace for WorkMail UpdateResource responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new UpdateResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateResourceResponse::UpdateResourceResponse(
         const UpdateResourceRequest &request,
@@ -88,6 +83,9 @@ UpdateResourceResponse::UpdateResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateResourceRequest * UpdateResourceResponse::request() const
 {
     Q_D(const UpdateResourceResponse);
@@ -95,9 +93,8 @@ const UpdateResourceRequest * UpdateResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail UpdateResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail UpdateResource \a response.
  */
 void UpdateResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void UpdateResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::UpdateResourceResponsePrivate
+ * \brief The UpdateResourceResponsePrivate class provides private implementation for UpdateResourceResponse.
  * \internal
  *
- * \class UpdateResourceResponsePrivate
- *
- * \brief Private implementation for UpdateResourceResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateResourceResponse instance.
+ * Constructs a UpdateResourceResponsePrivate object with public implementation \a q.
  */
 UpdateResourceResponsePrivate::UpdateResourceResponsePrivate(
     UpdateResourceResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ UpdateResourceResponsePrivate::UpdateResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail UpdateResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail UpdateResource response element from \a xml.
  */
 void UpdateResourceResponsePrivate::parseUpdateResourceResponse(QXmlStreamReader &xml)
 {

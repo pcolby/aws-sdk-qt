@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DescribeFindingsResponse
- *
  * \brief The DescribeFindingsResponse class provides an interace for Inspector DescribeFindings responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DescribeFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeFindingsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeFindingsResponse::DescribeFindingsResponse(
         const DescribeFindingsRequest &request,
@@ -60,6 +55,9 @@ DescribeFindingsResponse::DescribeFindingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeFindingsRequest * DescribeFindingsResponse::request() const
 {
     Q_D(const DescribeFindingsResponse);
@@ -67,9 +65,8 @@ const DescribeFindingsRequest * DescribeFindingsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector DescribeFindings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector DescribeFindings \a response.
  */
 void DescribeFindingsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeFindingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::DescribeFindingsResponsePrivate
+ * \brief The DescribeFindingsResponsePrivate class provides private implementation for DescribeFindingsResponse.
  * \internal
  *
- * \class DescribeFindingsResponsePrivate
- *
- * \brief Private implementation for DescribeFindingsResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFindingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeFindingsResponse instance.
+ * Constructs a DescribeFindingsResponsePrivate object with public implementation \a q.
  */
 DescribeFindingsResponsePrivate::DescribeFindingsResponsePrivate(
     DescribeFindingsResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeFindingsResponsePrivate::DescribeFindingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector DescribeFindingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector DescribeFindings response element from \a xml.
  */
 void DescribeFindingsResponsePrivate::parseDescribeFindingsResponse(QXmlStreamReader &xml)
 {

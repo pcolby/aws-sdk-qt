@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SetLoggingOptionsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a SetLoggingOptionsRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a SetLoggingOptionsRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 SetLoggingOptionsRequestPrivate::SetLoggingOptionsRequestPrivate(
     const IoTRequest::Action action, SetLoggingOptionsRequest * const q)

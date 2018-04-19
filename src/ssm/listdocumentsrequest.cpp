@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * ListDocumentsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListDocumentsRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a ListDocumentsRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 ListDocumentsRequestPrivate::ListDocumentsRequestPrivate(
     const SSMRequest::Action action, ListDocumentsRequest * const q)

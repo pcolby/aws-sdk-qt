@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ListAllowedNodeTypeModificationsResponse
- *
  * \brief The ListAllowedNodeTypeModificationsResponse class provides an interace for ElastiCache ListAllowedNodeTypeModifications responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new ListAllowedNodeTypeModificationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAllowedNodeTypeModificationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAllowedNodeTypeModificationsResponse::ListAllowedNodeTypeModificationsResponse(
         const ListAllowedNodeTypeModificationsRequest &request,
@@ -69,6 +64,9 @@ ListAllowedNodeTypeModificationsResponse::ListAllowedNodeTypeModificationsRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAllowedNodeTypeModificationsRequest * ListAllowedNodeTypeModificationsResponse::request() const
 {
     Q_D(const ListAllowedNodeTypeModificationsResponse);
@@ -76,9 +74,8 @@ const ListAllowedNodeTypeModificationsRequest * ListAllowedNodeTypeModifications
 }
 
 /*!
- * @brief  Parse a ElastiCache ListAllowedNodeTypeModifications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache ListAllowedNodeTypeModifications \a response.
  */
 void ListAllowedNodeTypeModificationsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListAllowedNodeTypeModificationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::ListAllowedNodeTypeModificationsResponsePrivate
+ * \brief The ListAllowedNodeTypeModificationsResponsePrivate class provides private implementation for ListAllowedNodeTypeModificationsResponse.
  * \internal
  *
- * \class ListAllowedNodeTypeModificationsResponsePrivate
- *
- * \brief Private implementation for ListAllowedNodeTypeModificationsResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAllowedNodeTypeModificationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAllowedNodeTypeModificationsResponse instance.
+ * Constructs a ListAllowedNodeTypeModificationsResponsePrivate object with public implementation \a q.
  */
 ListAllowedNodeTypeModificationsResponsePrivate::ListAllowedNodeTypeModificationsResponsePrivate(
     ListAllowedNodeTypeModificationsResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ ListAllowedNodeTypeModificationsResponsePrivate::ListAllowedNodeTypeModification
 }
 
 /*!
- * @brief  Parse an ElastiCache ListAllowedNodeTypeModificationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache ListAllowedNodeTypeModifications response element from \a xml.
  */
 void ListAllowedNodeTypeModificationsResponsePrivate::parseListAllowedNodeTypeModificationsResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetUtterancesViewRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetUtterancesViewRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a GetUtterancesViewRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 GetUtterancesViewRequestPrivate::GetUtterancesViewRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetUtterancesViewRequest * const q)

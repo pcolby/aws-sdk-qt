@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * VerifyDomainDkimRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a VerifyDomainDkimRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a VerifyDomainDkimRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 VerifyDomainDkimRequestPrivate::VerifyDomainDkimRequestPrivate(
     const SESRequest::Action action, VerifyDomainDkimRequest * const q)

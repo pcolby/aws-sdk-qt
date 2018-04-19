@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointConnectionNotificationsReque
  */
 
 /*!
- *
- * Constructs a DeleteVpcEndpointConnectionNotificationsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVpcEndpointConnectionNotificationsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteVpcEndpointConnectionNotificationsRequestPrivate::DeleteVpcEndpointConnectionNotificationsRequestPrivate(
     const EC2Request::Action action, DeleteVpcEndpointConnectionNotificationsRequest * const q)

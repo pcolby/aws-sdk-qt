@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::GetAliasResponse
- *
  * \brief The GetAliasResponse class provides an interace for Lambda GetAlias responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new GetAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAliasResponse::GetAliasResponse(
         const GetAliasRequest &request,
@@ -66,6 +61,9 @@ GetAliasResponse::GetAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAliasRequest * GetAliasResponse::request() const
 {
     Q_D(const GetAliasResponse);
@@ -73,9 +71,8 @@ const GetAliasRequest * GetAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda GetAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda GetAlias \a response.
  */
 void GetAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::GetAliasResponsePrivate
+ * \brief The GetAliasResponsePrivate class provides private implementation for GetAliasResponse.
  * \internal
  *
- * \class GetAliasResponsePrivate
- *
- * \brief Private implementation for GetAliasResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAliasResponse instance.
+ * Constructs a GetAliasResponsePrivate object with public implementation \a q.
  */
 GetAliasResponsePrivate::GetAliasResponsePrivate(
     GetAliasResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ GetAliasResponsePrivate::GetAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda GetAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda GetAlias response element from \a xml.
  */
 void GetAliasResponsePrivate::parseGetAliasResponse(QXmlStreamReader &xml)
 {

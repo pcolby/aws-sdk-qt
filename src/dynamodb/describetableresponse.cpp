@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DescribeTableResponse
- *
  * \brief The DescribeTableResponse class provides an interace for DynamoDB DescribeTable responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DescribeTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTableResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTableResponse::DescribeTableResponse(
         const DescribeTableRequest &request,
@@ -74,6 +69,9 @@ DescribeTableResponse::DescribeTableResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTableRequest * DescribeTableResponse::request() const
 {
     Q_D(const DescribeTableResponse);
@@ -81,9 +79,8 @@ const DescribeTableRequest * DescribeTableResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB DescribeTable response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB DescribeTable \a response.
  */
 void DescribeTableResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DescribeTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::DescribeTableResponsePrivate
+ * \brief The DescribeTableResponsePrivate class provides private implementation for DescribeTableResponse.
  * \internal
  *
- * \class DescribeTableResponsePrivate
- *
- * \brief Private implementation for DescribeTableResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTableResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTableResponse instance.
+ * Constructs a DescribeTableResponsePrivate object with public implementation \a q.
  */
 DescribeTableResponsePrivate::DescribeTableResponsePrivate(
     DescribeTableResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ DescribeTableResponsePrivate::DescribeTableResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB DescribeTableResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB DescribeTable response element from \a xml.
  */
 void DescribeTableResponsePrivate::parseDescribeTableResponse(QXmlStreamReader &xml)
 {

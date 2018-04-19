@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateDataSourceFromRDSRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CreateDataSourceFromRDSRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a CreateDataSourceFromRDSRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 CreateDataSourceFromRDSRequestPrivate::CreateDataSourceFromRDSRequestPrivate(
     const MachineLearningRequest::Action action, CreateDataSourceFromRDSRequest * const q)

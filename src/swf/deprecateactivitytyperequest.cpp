@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DeprecateActivityTypeRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeprecateActivityTypeRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a DeprecateActivityTypeRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 DeprecateActivityTypeRequestPrivate::DeprecateActivityTypeRequestPrivate(
     const SWFRequest::Action action, DeprecateActivityTypeRequest * const q)

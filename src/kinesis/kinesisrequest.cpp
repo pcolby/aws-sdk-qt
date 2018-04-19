@@ -62,7 +62,7 @@ namespace Kinesis {
  */
 
 /*!
- * Constructs a[n] KinesisRequest object for Kinesis \a action.
+ * Constructs a KinesisRequest object for Kinesis \a action.
  */
 KinesisRequest::KinesisRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new KinesisRequestPrivate(action, this))
@@ -262,8 +262,8 @@ QNetworkRequest KinesisRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a KinesisRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a KinesisRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 KinesisRequestPrivate::KinesisRequestPrivate(const KinesisRequest::Action action, KinesisRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

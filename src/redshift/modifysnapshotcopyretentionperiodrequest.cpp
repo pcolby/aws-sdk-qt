@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * ModifySnapshotCopyRetentionPeriodRequest::res
  */
 
 /*!
- *
- * Constructs a ModifySnapshotCopyRetentionPeriodRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a ModifySnapshotCopyRetentionPeriodRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 ModifySnapshotCopyRetentionPeriodRequestPrivate::ModifySnapshotCopyRetentionPeriodRequestPrivate(
     const RedshiftRequest::Action action, ModifySnapshotCopyRetentionPeriodRequest * const q)

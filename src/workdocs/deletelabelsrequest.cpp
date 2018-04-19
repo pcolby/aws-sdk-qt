@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLabelsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteLabelsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLabelsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DeleteLabelsRequestPrivate::DeleteLabelsRequestPrivate(
     const WorkDocsRequest::Action action, DeleteLabelsRequest * const q)

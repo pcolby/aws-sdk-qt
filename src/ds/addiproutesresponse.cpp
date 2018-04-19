@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::AddIpRoutesResponse
- *
  * \brief The AddIpRoutesResponse class provides an interace for DirectoryService AddIpRoutes responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new AddIpRoutesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddIpRoutesResponse object for \a reply to \a request, with parent \a parent.
  */
 AddIpRoutesResponse::AddIpRoutesResponse(
         const AddIpRoutesRequest &request,
@@ -69,6 +64,9 @@ AddIpRoutesResponse::AddIpRoutesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddIpRoutesRequest * AddIpRoutesResponse::request() const
 {
     Q_D(const AddIpRoutesResponse);
@@ -76,9 +74,8 @@ const AddIpRoutesRequest * AddIpRoutesResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService AddIpRoutes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService AddIpRoutes \a response.
  */
 void AddIpRoutesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void AddIpRoutesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::AddIpRoutesResponsePrivate
+ * \brief The AddIpRoutesResponsePrivate class provides private implementation for AddIpRoutesResponse.
  * \internal
  *
- * \class AddIpRoutesResponsePrivate
- *
- * \brief Private implementation for AddIpRoutesResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddIpRoutesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddIpRoutesResponse instance.
+ * Constructs a AddIpRoutesResponsePrivate object with public implementation \a q.
  */
 AddIpRoutesResponsePrivate::AddIpRoutesResponsePrivate(
     AddIpRoutesResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ AddIpRoutesResponsePrivate::AddIpRoutesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService AddIpRoutesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService AddIpRoutes response element from \a xml.
  */
 void AddIpRoutesResponsePrivate::parseAddIpRoutesResponse(QXmlStreamReader &xml)
 {

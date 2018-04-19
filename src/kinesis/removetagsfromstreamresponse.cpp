@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::RemoveTagsFromStreamResponse
- *
  * \brief The RemoveTagsFromStreamResponse class provides an interace for Kinesis RemoveTagsFromStream responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveTagsFromStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveTagsFromStreamResponse::RemoveTagsFromStreamResponse(
         const RemoveTagsFromStreamRequest &request,
@@ -58,6 +53,9 @@ RemoveTagsFromStreamResponse::RemoveTagsFromStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveTagsFromStreamRequest * RemoveTagsFromStreamResponse::request() const
 {
     Q_D(const RemoveTagsFromStreamResponse);
@@ -65,9 +63,8 @@ const RemoveTagsFromStreamRequest * RemoveTagsFromStreamResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Kinesis RemoveTagsFromStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis RemoveTagsFromStream \a response.
  */
 void RemoveTagsFromStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void RemoveTagsFromStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::RemoveTagsFromStreamResponsePrivate
+ * \brief The RemoveTagsFromStreamResponsePrivate class provides private implementation for RemoveTagsFromStreamResponse.
  * \internal
  *
- * \class RemoveTagsFromStreamResponsePrivate
- *
- * \brief Private implementation for RemoveTagsFromStreamResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveTagsFromStreamResponse instance.
+ * Constructs a RemoveTagsFromStreamResponsePrivate object with public implementation \a q.
  */
 RemoveTagsFromStreamResponsePrivate::RemoveTagsFromStreamResponsePrivate(
     RemoveTagsFromStreamResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ RemoveTagsFromStreamResponsePrivate::RemoveTagsFromStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis RemoveTagsFromStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis RemoveTagsFromStream response element from \a xml.
  */
 void RemoveTagsFromStreamResponsePrivate::parseRemoveTagsFromStreamResponse(QXmlStreamReader &xml)
 {

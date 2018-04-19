@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::DeleteInputResponse
- *
  * \brief The DeleteInputResponse class provides an interace for MediaLive DeleteInput responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::deleteInput
  */
 
 /*!
- * @brief  Constructs a new DeleteInputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteInputResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteInputResponse::DeleteInputResponse(
         const DeleteInputRequest &request,
@@ -55,6 +50,9 @@ DeleteInputResponse::DeleteInputResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteInputRequest * DeleteInputResponse::request() const
 {
     Q_D(const DeleteInputResponse);
@@ -62,9 +60,8 @@ const DeleteInputRequest * DeleteInputResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaLive DeleteInput response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive DeleteInput \a response.
  */
 void DeleteInputResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteInputResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::DeleteInputResponsePrivate
+ * \brief The DeleteInputResponsePrivate class provides private implementation for DeleteInputResponse.
  * \internal
  *
- * \class DeleteInputResponsePrivate
- *
- * \brief Private implementation for DeleteInputResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInputResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteInputResponse instance.
+ * Constructs a DeleteInputResponsePrivate object with public implementation \a q.
  */
 DeleteInputResponsePrivate::DeleteInputResponsePrivate(
     DeleteInputResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteInputResponsePrivate::DeleteInputResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive DeleteInputResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive DeleteInput response element from \a xml.
  */
 void DeleteInputResponsePrivate::parseDeleteInputResponse(QXmlStreamReader &xml)
 {

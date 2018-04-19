@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDBLogFilesResponse : public RDSResponse {
 public:
     DescribeDBLogFilesResponse(const DescribeDBLogFilesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDBLogFilesRequest * request() const;
+    virtual const DescribeDBLogFilesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDBLogFilesResponse)

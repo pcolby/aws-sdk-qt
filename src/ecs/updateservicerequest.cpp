@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateServiceRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a UpdateServiceRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
     const ECSRequest::Action action, UpdateServiceRequest * const q)

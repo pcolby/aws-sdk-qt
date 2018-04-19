@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * CreateInterconnectRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateInterconnectRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a CreateInterconnectRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 CreateInterconnectRequestPrivate::CreateInterconnectRequestPrivate(
     const DirectConnectRequest::Action action, CreateInterconnectRequest * const q)

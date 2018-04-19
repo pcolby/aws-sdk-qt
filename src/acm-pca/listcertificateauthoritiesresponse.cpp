@@ -29,10 +29,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::ListCertificateAuthoritiesResponse
- *
  * \brief The ListCertificateAuthoritiesResponse class provides an interace for ACMPCA ListCertificateAuthorities responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -69,11 +68,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new ListCertificateAuthoritiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCertificateAuthoritiesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCertificateAuthoritiesResponse::ListCertificateAuthoritiesResponse(
         const ListCertificateAuthoritiesRequest &request,
@@ -85,6 +80,9 @@ ListCertificateAuthoritiesResponse::ListCertificateAuthoritiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCertificateAuthoritiesRequest * ListCertificateAuthoritiesResponse::request() const
 {
     Q_D(const ListCertificateAuthoritiesResponse);
@@ -92,9 +90,8 @@ const ListCertificateAuthoritiesRequest * ListCertificateAuthoritiesResponse::re
 }
 
 /*!
- * @brief  Parse a ACMPCA ListCertificateAuthorities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACMPCA ListCertificateAuthorities \a response.
  */
 void ListCertificateAuthoritiesResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void ListCertificateAuthoritiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACMPCA::ListCertificateAuthoritiesResponsePrivate
+ * \brief The ListCertificateAuthoritiesResponsePrivate class provides private implementation for ListCertificateAuthoritiesResponse.
  * \internal
  *
- * \class ListCertificateAuthoritiesResponsePrivate
- *
- * \brief Private implementation for ListCertificateAuthoritiesResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCertificateAuthoritiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCertificateAuthoritiesResponse instance.
+ * Constructs a ListCertificateAuthoritiesResponsePrivate object with public implementation \a q.
  */
 ListCertificateAuthoritiesResponsePrivate::ListCertificateAuthoritiesResponsePrivate(
     ListCertificateAuthoritiesResponse * const q) : ACMPCAResponsePrivate(q)
@@ -125,9 +118,7 @@ ListCertificateAuthoritiesResponsePrivate::ListCertificateAuthoritiesResponsePri
 }
 
 /*!
- * @brief  Parse an ACMPCA ListCertificateAuthoritiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACMPCA ListCertificateAuthorities response element from \a xml.
  */
 void ListCertificateAuthoritiesResponsePrivate::parseListCertificateAuthoritiesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListInstanceProfilesForRoleResponse
- *
  * \brief The ListInstanceProfilesForRoleResponse class provides an interace for IAM ListInstanceProfilesForRole responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListInstanceProfilesForRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListInstanceProfilesForRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 ListInstanceProfilesForRoleResponse::ListInstanceProfilesForRoleResponse(
         const ListInstanceProfilesForRoleRequest &request,
@@ -120,6 +115,9 @@ ListInstanceProfilesForRoleResponse::ListInstanceProfilesForRoleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListInstanceProfilesForRoleRequest * ListInstanceProfilesForRoleResponse::request() const
 {
     Q_D(const ListInstanceProfilesForRoleResponse);
@@ -127,9 +125,8 @@ const ListInstanceProfilesForRoleRequest * ListInstanceProfilesForRoleResponse::
 }
 
 /*!
- * @brief  Parse a IAM ListInstanceProfilesForRole response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListInstanceProfilesForRole \a response.
  */
 void ListInstanceProfilesForRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListInstanceProfilesForRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListInstanceProfilesForRoleResponsePrivate
+ * \brief The ListInstanceProfilesForRoleResponsePrivate class provides private implementation for ListInstanceProfilesForRoleResponse.
  * \internal
  *
- * \class ListInstanceProfilesForRoleResponsePrivate
- *
- * \brief Private implementation for ListInstanceProfilesForRoleResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInstanceProfilesForRoleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListInstanceProfilesForRoleResponse instance.
+ * Constructs a ListInstanceProfilesForRoleResponsePrivate object with public implementation \a q.
  */
 ListInstanceProfilesForRoleResponsePrivate::ListInstanceProfilesForRoleResponsePrivate(
     ListInstanceProfilesForRoleResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListInstanceProfilesForRoleResponsePrivate::ListInstanceProfilesForRoleResponseP
 }
 
 /*!
- * @brief  Parse an IAM ListInstanceProfilesForRoleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListInstanceProfilesForRole response element from \a xml.
  */
 void ListInstanceProfilesForRoleResponsePrivate::parseListInstanceProfilesForRoleResponse(QXmlStreamReader &xml)
 {

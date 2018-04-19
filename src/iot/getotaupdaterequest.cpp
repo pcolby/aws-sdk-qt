@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetOTAUpdateRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetOTAUpdateRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a GetOTAUpdateRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 GetOTAUpdateRequestPrivate::GetOTAUpdateRequestPrivate(
     const IoTRequest::Action action, GetOTAUpdateRequest * const q)

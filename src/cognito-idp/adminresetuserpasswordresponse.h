@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminResetUserPasswordResponse : public CognitoIdentityProvid
 public:
     AdminResetUserPasswordResponse(const AdminResetUserPasswordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminResetUserPasswordRequest * request() const;
+    virtual const AdminResetUserPasswordRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AdminResetUserPasswordResponse)

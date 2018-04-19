@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::DeleteRuleResponse
- *
  * \brief The DeleteRuleResponse class provides an interace for CloudWatchEvents DeleteRule responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new DeleteRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRuleResponse::DeleteRuleResponse(
         const DeleteRuleRequest &request,
@@ -78,6 +73,9 @@ DeleteRuleResponse::DeleteRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRuleRequest * DeleteRuleResponse::request() const
 {
     Q_D(const DeleteRuleResponse);
@@ -85,9 +83,8 @@ const DeleteRuleRequest * DeleteRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents DeleteRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents DeleteRule \a response.
  */
 void DeleteRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DeleteRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::DeleteRuleResponsePrivate
+ * \brief The DeleteRuleResponsePrivate class provides private implementation for DeleteRuleResponse.
  * \internal
  *
- * \class DeleteRuleResponsePrivate
- *
- * \brief Private implementation for DeleteRuleResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRuleResponse instance.
+ * Constructs a DeleteRuleResponsePrivate object with public implementation \a q.
  */
 DeleteRuleResponsePrivate::DeleteRuleResponsePrivate(
     DeleteRuleResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ DeleteRuleResponsePrivate::DeleteRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents DeleteRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents DeleteRule response element from \a xml.
  */
 void DeleteRuleResponsePrivate::parseDeleteRuleResponse(QXmlStreamReader &xml)
 {

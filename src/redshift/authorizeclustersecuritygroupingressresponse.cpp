@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::AuthorizeClusterSecurityGroupIngressResponse
- *
  * \brief The AuthorizeClusterSecurityGroupIngressResponse class provides an interace for Redshift AuthorizeClusterSecurityGroupIngress responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new AuthorizeClusterSecurityGroupIngressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AuthorizeClusterSecurityGroupIngressResponse object for \a reply to \a request, with parent \a parent.
  */
 AuthorizeClusterSecurityGroupIngressResponse::AuthorizeClusterSecurityGroupIngressResponse(
         const AuthorizeClusterSecurityGroupIngressRequest &request,
@@ -85,6 +80,9 @@ AuthorizeClusterSecurityGroupIngressResponse::AuthorizeClusterSecurityGroupIngre
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AuthorizeClusterSecurityGroupIngressRequest * AuthorizeClusterSecurityGroupIngressResponse::request() const
 {
     Q_D(const AuthorizeClusterSecurityGroupIngressResponse);
@@ -92,9 +90,8 @@ const AuthorizeClusterSecurityGroupIngressRequest * AuthorizeClusterSecurityGrou
 }
 
 /*!
- * @brief  Parse a Redshift AuthorizeClusterSecurityGroupIngress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift AuthorizeClusterSecurityGroupIngress \a response.
  */
 void AuthorizeClusterSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void AuthorizeClusterSecurityGroupIngressResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::Redshift::AuthorizeClusterSecurityGroupIngressResponsePrivate
+ * \brief The AuthorizeClusterSecurityGroupIngressResponsePrivate class provides private implementation for AuthorizeClusterSecurityGroupIngressResponse.
  * \internal
  *
- * \class AuthorizeClusterSecurityGroupIngressResponsePrivate
- *
- * \brief Private implementation for AuthorizeClusterSecurityGroupIngressResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AuthorizeClusterSecurityGroupIngressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AuthorizeClusterSecurityGroupIngressResponse instance.
+ * Constructs a AuthorizeClusterSecurityGroupIngressResponsePrivate object with public implementation \a q.
  */
 AuthorizeClusterSecurityGroupIngressResponsePrivate::AuthorizeClusterSecurityGroupIngressResponsePrivate(
     AuthorizeClusterSecurityGroupIngressResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ AuthorizeClusterSecurityGroupIngressResponsePrivate::AuthorizeClusterSecurityGro
 }
 
 /*!
- * @brief  Parse an Redshift AuthorizeClusterSecurityGroupIngressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift AuthorizeClusterSecurityGroupIngress response element from \a xml.
  */
 void AuthorizeClusterSecurityGroupIngressResponsePrivate::parseAuthorizeClusterSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {

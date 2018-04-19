@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::GetOnPremisesInstanceResponse
- *
  * \brief The GetOnPremisesInstanceResponse class provides an interace for CodeDeploy GetOnPremisesInstance responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new GetOnPremisesInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetOnPremisesInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetOnPremisesInstanceResponse::GetOnPremisesInstanceResponse(
         const GetOnPremisesInstanceRequest &request,
@@ -136,6 +131,9 @@ GetOnPremisesInstanceResponse::GetOnPremisesInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetOnPremisesInstanceRequest * GetOnPremisesInstanceResponse::request() const
 {
     Q_D(const GetOnPremisesInstanceResponse);
@@ -143,9 +141,8 @@ const GetOnPremisesInstanceRequest * GetOnPremisesInstanceResponse::request() co
 }
 
 /*!
- * @brief  Parse a CodeDeploy GetOnPremisesInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy GetOnPremisesInstance \a response.
  */
 void GetOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void GetOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::GetOnPremisesInstanceResponsePrivate
+ * \brief The GetOnPremisesInstanceResponsePrivate class provides private implementation for GetOnPremisesInstanceResponse.
  * \internal
  *
- * \class GetOnPremisesInstanceResponsePrivate
- *
- * \brief Private implementation for GetOnPremisesInstanceResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOnPremisesInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetOnPremisesInstanceResponse instance.
+ * Constructs a GetOnPremisesInstanceResponsePrivate object with public implementation \a q.
  */
 GetOnPremisesInstanceResponsePrivate::GetOnPremisesInstanceResponsePrivate(
     GetOnPremisesInstanceResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ GetOnPremisesInstanceResponsePrivate::GetOnPremisesInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy GetOnPremisesInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy GetOnPremisesInstance response element from \a xml.
  */
 void GetOnPremisesInstanceResponsePrivate::parseGetOnPremisesInstanceResponse(QXmlStreamReader &xml)
 {

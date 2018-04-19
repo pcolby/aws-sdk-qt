@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRulesPackagesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeRulesPackagesRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRulesPackagesRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 DescribeRulesPackagesRequestPrivate::DescribeRulesPackagesRequestPrivate(
     const InspectorRequest::Action action, DescribeRulesPackagesRequest * const q)

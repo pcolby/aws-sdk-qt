@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeregisterVolumeResponse
- *
  * \brief The DeregisterVolumeResponse class provides an interace for OpsWorks DeregisterVolume responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeregisterVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterVolumeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterVolumeResponse::DeregisterVolumeResponse(
         const DeregisterVolumeRequest &request,
@@ -161,6 +156,9 @@ DeregisterVolumeResponse::DeregisterVolumeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterVolumeRequest * DeregisterVolumeResponse::request() const
 {
     Q_D(const DeregisterVolumeResponse);
@@ -168,9 +166,8 @@ const DeregisterVolumeRequest * DeregisterVolumeResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DeregisterVolume response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DeregisterVolume \a response.
  */
 void DeregisterVolumeResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DeregisterVolumeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DeregisterVolumeResponsePrivate
+ * \brief The DeregisterVolumeResponsePrivate class provides private implementation for DeregisterVolumeResponse.
  * \internal
  *
- * \class DeregisterVolumeResponsePrivate
- *
- * \brief Private implementation for DeregisterVolumeResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterVolumeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterVolumeResponse instance.
+ * Constructs a DeregisterVolumeResponsePrivate object with public implementation \a q.
  */
 DeregisterVolumeResponsePrivate::DeregisterVolumeResponsePrivate(
     DeregisterVolumeResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DeregisterVolumeResponsePrivate::DeregisterVolumeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DeregisterVolumeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DeregisterVolume response element from \a xml.
  */
 void DeregisterVolumeResponsePrivate::parseDeregisterVolumeResponse(QXmlStreamReader &xml)
 {

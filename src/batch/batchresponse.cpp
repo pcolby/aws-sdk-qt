@@ -28,16 +28,13 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::BatchResponse
- *
  * \brief The BatchResponse class provides an interface for Batch responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @brief  Constructs a new BatchResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a BatchResponse object with parent \a parent.
  */
 BatchResponse::BatchResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new BatchResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ BatchResponse::BatchResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchResponse object.
- *
+ * \internal
+ * Constructs a BatchResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from BatchResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 BatchResponse::BatchResponse(BatchResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ BatchResponse::BatchResponse(BatchResponsePrivate * const d, QObject * const par
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void BatchResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void BatchResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Batch::BatchResponsePrivate
+ * \brief The BatchResponsePrivate class provides private implementation for BatchResponse.
+ * \internal
  *
- * @class  BatchResponsePrivate
- *
- * @brief  Private implementation for BatchResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchResponse instance.
+ * Constructs a BatchResponsePrivate object with public implementation \a q.
  */
 BatchResponsePrivate::BatchResponsePrivate(
     BatchResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

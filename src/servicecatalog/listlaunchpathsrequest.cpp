@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListLaunchPathsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ListLaunchPathsRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ListLaunchPathsRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ListLaunchPathsRequestPrivate::ListLaunchPathsRequestPrivate(
     const ServiceCatalogRequest::Action action, ListLaunchPathsRequest * const q)

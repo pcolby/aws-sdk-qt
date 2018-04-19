@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyLaunchTemplateRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ModifyLaunchTemplateRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyLaunchTemplateRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyLaunchTemplateRequestPrivate::ModifyLaunchTemplateRequestPrivate(
     const EC2Request::Action action, ModifyLaunchTemplateRequest * const q)

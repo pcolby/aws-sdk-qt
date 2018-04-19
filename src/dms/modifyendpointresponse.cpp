@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::ModifyEndpointResponse
- *
  * \brief The ModifyEndpointResponse class provides an interace for DatabaseMigrationService ModifyEndpoint responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new ModifyEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyEndpointResponse::ModifyEndpointResponse(
         const ModifyEndpointRequest &request,
@@ -66,6 +61,9 @@ ModifyEndpointResponse::ModifyEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyEndpointRequest * ModifyEndpointResponse::request() const
 {
     Q_D(const ModifyEndpointResponse);
@@ -73,9 +71,8 @@ const ModifyEndpointRequest * ModifyEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService ModifyEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService ModifyEndpoint \a response.
  */
 void ModifyEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ModifyEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::ModifyEndpointResponsePrivate
+ * \brief The ModifyEndpointResponsePrivate class provides private implementation for ModifyEndpointResponse.
  * \internal
  *
- * \class ModifyEndpointResponsePrivate
- *
- * \brief Private implementation for ModifyEndpointResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyEndpointResponse instance.
+ * Constructs a ModifyEndpointResponsePrivate object with public implementation \a q.
  */
 ModifyEndpointResponsePrivate::ModifyEndpointResponsePrivate(
     ModifyEndpointResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ ModifyEndpointResponsePrivate::ModifyEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService ModifyEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService ModifyEndpoint response element from \a xml.
  */
 void ModifyEndpointResponsePrivate::parseModifyEndpointResponse(QXmlStreamReader &xml)
 {

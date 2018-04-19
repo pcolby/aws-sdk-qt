@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::GetDomainSuggestionsResponse
- *
  * \brief The GetDomainSuggestionsResponse class provides an interace for Route53Domains GetDomainSuggestions responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new GetDomainSuggestionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDomainSuggestionsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDomainSuggestionsResponse::GetDomainSuggestionsResponse(
         const GetDomainSuggestionsRequest &request,
@@ -56,6 +51,9 @@ GetDomainSuggestionsResponse::GetDomainSuggestionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDomainSuggestionsRequest * GetDomainSuggestionsResponse::request() const
 {
     Q_D(const GetDomainSuggestionsResponse);
@@ -63,9 +61,8 @@ const GetDomainSuggestionsRequest * GetDomainSuggestionsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Route53Domains GetDomainSuggestions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains GetDomainSuggestions \a response.
  */
 void GetDomainSuggestionsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetDomainSuggestionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::GetDomainSuggestionsResponsePrivate
+ * \brief The GetDomainSuggestionsResponsePrivate class provides private implementation for GetDomainSuggestionsResponse.
  * \internal
  *
- * \class GetDomainSuggestionsResponsePrivate
- *
- * \brief Private implementation for GetDomainSuggestionsResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDomainSuggestionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDomainSuggestionsResponse instance.
+ * Constructs a GetDomainSuggestionsResponsePrivate object with public implementation \a q.
  */
 GetDomainSuggestionsResponsePrivate::GetDomainSuggestionsResponsePrivate(
     GetDomainSuggestionsResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ GetDomainSuggestionsResponsePrivate::GetDomainSuggestionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains GetDomainSuggestionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains GetDomainSuggestions response element from \a xml.
  */
 void GetDomainSuggestionsResponsePrivate::parseGetDomainSuggestionsResponse(QXmlStreamReader &xml)
 {

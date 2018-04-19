@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteProvisioningArtifactResponse : public ServiceCatalogRes
 public:
     DeleteProvisioningArtifactResponse(const DeleteProvisioningArtifactRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteProvisioningArtifactRequest * request() const;
+    virtual const DeleteProvisioningArtifactRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteProvisioningArtifactResponse)

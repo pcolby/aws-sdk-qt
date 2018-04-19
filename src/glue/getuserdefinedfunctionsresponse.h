@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetUserDefinedFunctionsResponse : public GlueResponse {
 public:
     GetUserDefinedFunctionsResponse(const GetUserDefinedFunctionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetUserDefinedFunctionsRequest * request() const;
+    virtual const GetUserDefinedFunctionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetUserDefinedFunctionsResponse)

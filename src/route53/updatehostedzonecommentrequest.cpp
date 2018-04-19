@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateHostedZoneCommentRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateHostedZoneCommentRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a UpdateHostedZoneCommentRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 UpdateHostedZoneCommentRequestPrivate::UpdateHostedZoneCommentRequestPrivate(
     const Route53Request::Action action, UpdateHostedZoneCommentRequest * const q)

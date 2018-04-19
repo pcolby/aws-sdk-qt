@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifyEventSubscriptionResponse
- *
  * \brief The ModifyEventSubscriptionResponse class provides an interace for Redshift ModifyEventSubscription responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifyEventSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyEventSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyEventSubscriptionResponse::ModifyEventSubscriptionResponse(
         const ModifyEventSubscriptionRequest &request,
@@ -85,6 +80,9 @@ ModifyEventSubscriptionResponse::ModifyEventSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyEventSubscriptionRequest * ModifyEventSubscriptionResponse::request() const
 {
     Q_D(const ModifyEventSubscriptionResponse);
@@ -92,9 +90,8 @@ const ModifyEventSubscriptionRequest * ModifyEventSubscriptionResponse::request(
 }
 
 /*!
- * @brief  Parse a Redshift ModifyEventSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift ModifyEventSubscription \a response.
  */
 void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void ModifyEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::ModifyEventSubscriptionResponsePrivate
+ * \brief The ModifyEventSubscriptionResponsePrivate class provides private implementation for ModifyEventSubscriptionResponse.
  * \internal
  *
- * \class ModifyEventSubscriptionResponsePrivate
- *
- * \brief Private implementation for ModifyEventSubscriptionResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyEventSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyEventSubscriptionResponse instance.
+ * Constructs a ModifyEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 ModifyEventSubscriptionResponsePrivate::ModifyEventSubscriptionResponsePrivate(
     ModifyEventSubscriptionResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ ModifyEventSubscriptionResponsePrivate::ModifyEventSubscriptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift ModifyEventSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift ModifyEventSubscription response element from \a xml.
  */
 void ModifyEventSubscriptionResponsePrivate::parseModifyEventSubscriptionResponse(QXmlStreamReader &xml)
 {

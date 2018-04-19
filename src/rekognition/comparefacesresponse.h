@@ -34,10 +34,10 @@ class QTAWS_EXPORT CompareFacesResponse : public RekognitionResponse {
 public:
     CompareFacesResponse(const CompareFacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CompareFacesRequest * request() const;
+    virtual const CompareFacesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CompareFacesResponse)

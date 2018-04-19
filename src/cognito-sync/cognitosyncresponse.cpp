@@ -28,16 +28,13 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::CognitoSyncResponse
- *
  * \brief The CognitoSyncResponse class provides an interface for CognitoSync responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @brief  Constructs a new CognitoSyncResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CognitoSyncResponse object with parent \a parent.
  */
 CognitoSyncResponse::CognitoSyncResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CognitoSyncResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CognitoSyncResponse::CognitoSyncResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CognitoSyncResponse object.
- *
+ * \internal
+ * Constructs a CognitoSyncResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CognitoSyncResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CognitoSyncResponse::CognitoSyncResponse(CognitoSyncResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CognitoSyncResponse::CognitoSyncResponse(CognitoSyncResponsePrivate * const d, Q
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CognitoSyncResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CognitoSyncResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CognitoSync::CognitoSyncResponsePrivate
+ * \brief The CognitoSyncResponsePrivate class provides private implementation for CognitoSyncResponse.
+ * \internal
  *
- * @class  CognitoSyncResponsePrivate
- *
- * @brief  Private implementation for CognitoSyncResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CognitoSyncResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CognitoSyncResponse instance.
+ * Constructs a CognitoSyncResponsePrivate object with public implementation \a q.
  */
 CognitoSyncResponsePrivate::CognitoSyncResponsePrivate(
     CognitoSyncResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

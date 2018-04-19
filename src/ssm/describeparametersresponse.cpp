@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeParametersResponse
- *
  * \brief The DescribeParametersResponse class provides an interace for SSM DescribeParameters responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeParametersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeParametersResponse::DescribeParametersResponse(
         const DescribeParametersRequest &request,
@@ -79,6 +74,9 @@ DescribeParametersResponse::DescribeParametersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeParametersRequest * DescribeParametersResponse::request() const
 {
     Q_D(const DescribeParametersResponse);
@@ -86,9 +84,8 @@ const DescribeParametersRequest * DescribeParametersResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM DescribeParameters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeParameters \a response.
  */
 void DescribeParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeParametersResponsePrivate
+ * \brief The DescribeParametersResponsePrivate class provides private implementation for DescribeParametersResponse.
  * \internal
  *
- * \class DescribeParametersResponsePrivate
- *
- * \brief Private implementation for DescribeParametersResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeParametersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeParametersResponse instance.
+ * Constructs a DescribeParametersResponsePrivate object with public implementation \a q.
  */
 DescribeParametersResponsePrivate::DescribeParametersResponsePrivate(
     DescribeParametersResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeParametersResponsePrivate::DescribeParametersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DescribeParametersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeParameters response element from \a xml.
  */
 void DescribeParametersResponsePrivate::parseDescribeParametersResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::BatchDeleteImageResponse
- *
  * \brief The BatchDeleteImageResponse class provides an interace for ECR BatchDeleteImage responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new BatchDeleteImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchDeleteImageResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchDeleteImageResponse::BatchDeleteImageResponse(
         const BatchDeleteImageRequest &request,
@@ -59,6 +54,9 @@ BatchDeleteImageResponse::BatchDeleteImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchDeleteImageRequest * BatchDeleteImageResponse::request() const
 {
     Q_D(const BatchDeleteImageResponse);
@@ -66,9 +64,8 @@ const BatchDeleteImageRequest * BatchDeleteImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR BatchDeleteImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR BatchDeleteImage \a response.
  */
 void BatchDeleteImageResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void BatchDeleteImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::BatchDeleteImageResponsePrivate
+ * \brief The BatchDeleteImageResponsePrivate class provides private implementation for BatchDeleteImageResponse.
  * \internal
  *
- * \class BatchDeleteImageResponsePrivate
- *
- * \brief Private implementation for BatchDeleteImageResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeleteImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchDeleteImageResponse instance.
+ * Constructs a BatchDeleteImageResponsePrivate object with public implementation \a q.
  */
 BatchDeleteImageResponsePrivate::BatchDeleteImageResponsePrivate(
     BatchDeleteImageResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ BatchDeleteImageResponsePrivate::BatchDeleteImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR BatchDeleteImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR BatchDeleteImage response element from \a xml.
  */
 void BatchDeleteImageResponsePrivate::parseBatchDeleteImageResponse(QXmlStreamReader &xml)
 {

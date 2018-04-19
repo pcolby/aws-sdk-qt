@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeJobRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DescribeJobRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DescribeJobRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DescribeJobRequestPrivate::DescribeJobRequestPrivate(
     const IoTRequest::Action action, DescribeJobRequest * const q)

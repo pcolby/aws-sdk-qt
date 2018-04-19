@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateCoreDefinitionResponse : public GreengrassResponse {
 public:
     UpdateCoreDefinitionResponse(const UpdateCoreDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateCoreDefinitionRequest * request() const;
+    virtual const UpdateCoreDefinitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateCoreDefinitionResponse)

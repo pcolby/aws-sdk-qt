@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateGeoMatchSetResponse : public WAFResponse {
 public:
     CreateGeoMatchSetResponse(const CreateGeoMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateGeoMatchSetRequest * request() const;
+    virtual const CreateGeoMatchSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateGeoMatchSetResponse)

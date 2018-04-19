@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeprecateActivityTypeResponse : public SWFResponse {
 public:
     DeprecateActivityTypeResponse(const DeprecateActivityTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeprecateActivityTypeRequest * request() const;
+    virtual const DeprecateActivityTypeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeprecateActivityTypeResponse)

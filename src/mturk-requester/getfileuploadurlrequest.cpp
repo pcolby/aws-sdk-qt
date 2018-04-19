@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetFileUploadURLRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetFileUploadURLRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a GetFileUploadURLRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 GetFileUploadURLRequestPrivate::GetFileUploadURLRequestPrivate(
     const MTurkRequest::Action action, GetFileUploadURLRequest * const q)

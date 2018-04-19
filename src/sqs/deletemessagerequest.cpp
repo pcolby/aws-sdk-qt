@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * DeleteMessageRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteMessageRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteMessageRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 DeleteMessageRequestPrivate::DeleteMessageRequestPrivate(
     const SQSRequest::Action action, DeleteMessageRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetAuthorizationTokenRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetAuthorizationTokenRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a GetAuthorizationTokenRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 GetAuthorizationTokenRequestPrivate::GetAuthorizationTokenRequestPrivate(
     const ECRRequest::Action action, GetAuthorizationTokenRequest * const q)

@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterTargetsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeregisterTargetsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterTargetsRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 DeregisterTargetsRequestPrivate::DeregisterTargetsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DeregisterTargetsRequest * const q)

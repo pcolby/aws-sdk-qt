@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::GetFunctionResponse
- *
  * \brief The GetFunctionResponse class provides an interace for Lambda GetFunction responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new GetFunctionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFunctionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFunctionResponse::GetFunctionResponse(
         const GetFunctionRequest &request,
@@ -66,6 +61,9 @@ GetFunctionResponse::GetFunctionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFunctionRequest * GetFunctionResponse::request() const
 {
     Q_D(const GetFunctionResponse);
@@ -73,9 +71,8 @@ const GetFunctionRequest * GetFunctionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda GetFunction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda GetFunction \a response.
  */
 void GetFunctionResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetFunctionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::GetFunctionResponsePrivate
+ * \brief The GetFunctionResponsePrivate class provides private implementation for GetFunctionResponse.
  * \internal
  *
- * \class GetFunctionResponsePrivate
- *
- * \brief Private implementation for GetFunctionResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFunctionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFunctionResponse instance.
+ * Constructs a GetFunctionResponsePrivate object with public implementation \a q.
  */
 GetFunctionResponsePrivate::GetFunctionResponsePrivate(
     GetFunctionResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ GetFunctionResponsePrivate::GetFunctionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda GetFunctionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda GetFunction response element from \a xml.
  */
 void GetFunctionResponsePrivate::parseGetFunctionResponse(QXmlStreamReader &xml)
 {

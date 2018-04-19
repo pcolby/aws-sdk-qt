@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::DescribeEventBusResponse
- *
  * \brief The DescribeEventBusResponse class provides an interace for CloudWatchEvents DescribeEventBus responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventBusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEventBusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEventBusResponse::DescribeEventBusResponse(
         const DescribeEventBusRequest &request,
@@ -78,6 +73,9 @@ DescribeEventBusResponse::DescribeEventBusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEventBusRequest * DescribeEventBusResponse::request() const
 {
     Q_D(const DescribeEventBusResponse);
@@ -85,9 +83,8 @@ const DescribeEventBusRequest * DescribeEventBusResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents DescribeEventBus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents DescribeEventBus \a response.
  */
 void DescribeEventBusResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeEventBusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::DescribeEventBusResponsePrivate
+ * \brief The DescribeEventBusResponsePrivate class provides private implementation for DescribeEventBusResponse.
  * \internal
  *
- * \class DescribeEventBusResponsePrivate
- *
- * \brief Private implementation for DescribeEventBusResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventBusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEventBusResponse instance.
+ * Constructs a DescribeEventBusResponsePrivate object with public implementation \a q.
  */
 DescribeEventBusResponsePrivate::DescribeEventBusResponsePrivate(
     DescribeEventBusResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeEventBusResponsePrivate::DescribeEventBusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents DescribeEventBusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents DescribeEventBus response element from \a xml.
  */
 void DescribeEventBusResponsePrivate::parseDescribeEventBusResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetServiceLinkedRoleDeletionStatusResponse : public IAMRespon
 public:
     GetServiceLinkedRoleDeletionStatusResponse(const GetServiceLinkedRoleDeletionStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetServiceLinkedRoleDeletionStatusRequest * request() const;
+    virtual const GetServiceLinkedRoleDeletionStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetServiceLinkedRoleDeletionStatusResponse)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CancelStepsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CancelStepsRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a CancelStepsRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 CancelStepsRequestPrivate::CancelStepsRequestPrivate(
     const EMRRequest::Action action, CancelStepsRequest * const q)

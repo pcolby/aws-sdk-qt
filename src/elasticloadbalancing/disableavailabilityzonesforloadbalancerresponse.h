@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisableAvailabilityZonesForLoadBalancerResponse : public Elas
 public:
     DisableAvailabilityZonesForLoadBalancerResponse(const DisableAvailabilityZonesForLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisableAvailabilityZonesForLoadBalancerRequest * request() const;
+    virtual const DisableAvailabilityZonesForLoadBalancerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisableAvailabilityZonesForLoadBalancerResponse)

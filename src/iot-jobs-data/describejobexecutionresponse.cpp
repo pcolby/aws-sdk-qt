@@ -29,10 +29,9 @@ namespace IoTJobsDataPlane {
 
 /*!
  * \class QtAws::IoTJobsDataPlane::DescribeJobExecutionResponse
- *
  * \brief The DescribeJobExecutionResponse class provides an interace for IoTJobsDataPlane DescribeJobExecution responses.
  *
- * \ingroup IoTJobsDataPlane
+ * \inmodule QtAwsIoTJobsDataPlane
  *
  *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
  *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
@@ -53,11 +52,7 @@ namespace IoTJobsDataPlane {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeJobExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeJobExecutionResponse::DescribeJobExecutionResponse(
         const DescribeJobExecutionRequest &request,
@@ -69,6 +64,9 @@ DescribeJobExecutionResponse::DescribeJobExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeJobExecutionRequest * DescribeJobExecutionResponse::request() const
 {
     Q_D(const DescribeJobExecutionResponse);
@@ -76,9 +74,8 @@ const DescribeJobExecutionRequest * DescribeJobExecutionResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IoTJobsDataPlane DescribeJobExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoTJobsDataPlane DescribeJobExecution \a response.
  */
 void DescribeJobExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeJobExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoTJobsDataPlane::DescribeJobExecutionResponsePrivate
+ * \brief The DescribeJobExecutionResponsePrivate class provides private implementation for DescribeJobExecutionResponse.
  * \internal
  *
- * \class DescribeJobExecutionResponsePrivate
- *
- * \brief Private implementation for DescribeJobExecutionResponse.
+ * \inmodule QtAwsIoTJobsDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeJobExecutionResponse instance.
+ * Constructs a DescribeJobExecutionResponsePrivate object with public implementation \a q.
  */
 DescribeJobExecutionResponsePrivate::DescribeJobExecutionResponsePrivate(
     DescribeJobExecutionResponse * const q) : IoTJobsDataPlaneResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeJobExecutionResponsePrivate::DescribeJobExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoTJobsDataPlane DescribeJobExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoTJobsDataPlane DescribeJobExecution response element from \a xml.
  */
 void DescribeJobExecutionResponsePrivate::parseDescribeJobExecutionResponse(QXmlStreamReader &xml)
 {

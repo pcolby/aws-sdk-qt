@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::ConfigureHealthCheckResponse
- *
  * \brief The ConfigureHealthCheckResponse class provides an interace for ElasticLoadBalancing ConfigureHealthCheck responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new ConfigureHealthCheckResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ConfigureHealthCheckResponse object for \a reply to \a request, with parent \a parent.
  */
 ConfigureHealthCheckResponse::ConfigureHealthCheckResponse(
         const ConfigureHealthCheckRequest &request,
@@ -83,6 +78,9 @@ ConfigureHealthCheckResponse::ConfigureHealthCheckResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ConfigureHealthCheckRequest * ConfigureHealthCheckResponse::request() const
 {
     Q_D(const ConfigureHealthCheckResponse);
@@ -90,9 +88,8 @@ const ConfigureHealthCheckRequest * ConfigureHealthCheckResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing ConfigureHealthCheck response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing ConfigureHealthCheck \a response.
  */
 void ConfigureHealthCheckResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void ConfigureHealthCheckResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::ConfigureHealthCheckResponsePrivate
+ * \brief The ConfigureHealthCheckResponsePrivate class provides private implementation for ConfigureHealthCheckResponse.
  * \internal
  *
- * \class ConfigureHealthCheckResponsePrivate
- *
- * \brief Private implementation for ConfigureHealthCheckResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfigureHealthCheckResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ConfigureHealthCheckResponse instance.
+ * Constructs a ConfigureHealthCheckResponsePrivate object with public implementation \a q.
  */
 ConfigureHealthCheckResponsePrivate::ConfigureHealthCheckResponsePrivate(
     ConfigureHealthCheckResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ ConfigureHealthCheckResponsePrivate::ConfigureHealthCheckResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing ConfigureHealthCheckResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing ConfigureHealthCheck response element from \a xml.
  */
 void ConfigureHealthCheckResponsePrivate::parseConfigureHealthCheckResponse(QXmlStreamReader &xml)
 {

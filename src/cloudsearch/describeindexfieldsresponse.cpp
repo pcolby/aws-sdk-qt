@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeIndexFieldsResponse
- *
  * \brief The DescribeIndexFieldsResponse class provides an interace for CloudSearch DescribeIndexFields responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeIndexFieldsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeIndexFieldsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeIndexFieldsResponse::DescribeIndexFieldsResponse(
         const DescribeIndexFieldsRequest &request,
@@ -66,6 +61,9 @@ DescribeIndexFieldsResponse::DescribeIndexFieldsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeIndexFieldsRequest * DescribeIndexFieldsResponse::request() const
 {
     Q_D(const DescribeIndexFieldsResponse);
@@ -73,9 +71,8 @@ const DescribeIndexFieldsRequest * DescribeIndexFieldsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch DescribeIndexFields response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DescribeIndexFields \a response.
  */
 void DescribeIndexFieldsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeIndexFieldsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DescribeIndexFieldsResponsePrivate
+ * \brief The DescribeIndexFieldsResponsePrivate class provides private implementation for DescribeIndexFieldsResponse.
  * \internal
  *
- * \class DescribeIndexFieldsResponsePrivate
- *
- * \brief Private implementation for DescribeIndexFieldsResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeIndexFieldsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeIndexFieldsResponse instance.
+ * Constructs a DescribeIndexFieldsResponsePrivate object with public implementation \a q.
  */
 DescribeIndexFieldsResponsePrivate::DescribeIndexFieldsResponsePrivate(
     DescribeIndexFieldsResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeIndexFieldsResponsePrivate::DescribeIndexFieldsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DescribeIndexFieldsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DescribeIndexFields response element from \a xml.
  */
 void DescribeIndexFieldsResponsePrivate::parseDescribeIndexFieldsResponse(QXmlStreamReader &xml)
 {

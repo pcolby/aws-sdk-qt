@@ -29,10 +29,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DescribeBackupsResponse
- *
  * \brief The DescribeBackupsResponse class provides an interace for OpsWorksCM DescribeBackups responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -99,11 +98,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DescribeBackupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeBackupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeBackupsResponse::DescribeBackupsResponse(
         const DescribeBackupsRequest &request,
@@ -115,6 +110,9 @@ DescribeBackupsResponse::DescribeBackupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeBackupsRequest * DescribeBackupsResponse::request() const
 {
     Q_D(const DescribeBackupsResponse);
@@ -122,9 +120,8 @@ const DescribeBackupsRequest * DescribeBackupsResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorksCM DescribeBackups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorksCM DescribeBackups \a response.
  */
 void DescribeBackupsResponse::parseSuccess(QIODevice &response)
 {
@@ -134,19 +131,15 @@ void DescribeBackupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorksCM::DescribeBackupsResponsePrivate
+ * \brief The DescribeBackupsResponsePrivate class provides private implementation for DescribeBackupsResponse.
  * \internal
  *
- * \class DescribeBackupsResponsePrivate
- *
- * \brief Private implementation for DescribeBackupsResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBackupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeBackupsResponse instance.
+ * Constructs a DescribeBackupsResponsePrivate object with public implementation \a q.
  */
 DescribeBackupsResponsePrivate::DescribeBackupsResponsePrivate(
     DescribeBackupsResponse * const q) : OpsWorksCMResponsePrivate(q)
@@ -155,9 +148,7 @@ DescribeBackupsResponsePrivate::DescribeBackupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorksCM DescribeBackupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorksCM DescribeBackups response element from \a xml.
  */
 void DescribeBackupsResponsePrivate::parseDescribeBackupsResponse(QXmlStreamReader &xml)
 {

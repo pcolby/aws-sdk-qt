@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateAccessKeyResponse
- *
  * \brief The CreateAccessKeyResponse class provides an interace for IAM CreateAccessKey responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateAccessKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAccessKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAccessKeyResponse::CreateAccessKeyResponse(
         const CreateAccessKeyRequest &request,
@@ -120,6 +115,9 @@ CreateAccessKeyResponse::CreateAccessKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAccessKeyRequest * CreateAccessKeyResponse::request() const
 {
     Q_D(const CreateAccessKeyResponse);
@@ -127,9 +125,8 @@ const CreateAccessKeyRequest * CreateAccessKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM CreateAccessKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreateAccessKey \a response.
  */
 void CreateAccessKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreateAccessKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreateAccessKeyResponsePrivate
+ * \brief The CreateAccessKeyResponsePrivate class provides private implementation for CreateAccessKeyResponse.
  * \internal
  *
- * \class CreateAccessKeyResponsePrivate
- *
- * \brief Private implementation for CreateAccessKeyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAccessKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAccessKeyResponse instance.
+ * Constructs a CreateAccessKeyResponsePrivate object with public implementation \a q.
  */
 CreateAccessKeyResponsePrivate::CreateAccessKeyResponsePrivate(
     CreateAccessKeyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreateAccessKeyResponsePrivate::CreateAccessKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM CreateAccessKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreateAccessKey response element from \a xml.
  */
 void CreateAccessKeyResponsePrivate::parseCreateAccessKeyResponse(QXmlStreamReader &xml)
 {

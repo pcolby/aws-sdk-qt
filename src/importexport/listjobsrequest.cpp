@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a ListJobsRequestPrivate object for ImportExport \a action with,
- * public implementation \a q.
+ * Constructs a ListJobsRequestPrivate object for ImportExport \a action,
+ * with public implementation \a q.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const ImportExportRequest::Action action, ListJobsRequest * const q)

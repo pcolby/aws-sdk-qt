@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::ListAssociatedStacksResponse
- *
  * \brief The ListAssociatedStacksResponse class provides an interace for AppStream ListAssociatedStacks responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new ListAssociatedStacksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAssociatedStacksResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAssociatedStacksResponse::ListAssociatedStacksResponse(
         const ListAssociatedStacksRequest &request,
@@ -58,6 +53,9 @@ ListAssociatedStacksResponse::ListAssociatedStacksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAssociatedStacksRequest * ListAssociatedStacksResponse::request() const
 {
     Q_D(const ListAssociatedStacksResponse);
@@ -65,9 +63,8 @@ const ListAssociatedStacksRequest * ListAssociatedStacksResponse::request() cons
 }
 
 /*!
- * @brief  Parse a AppStream ListAssociatedStacks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream ListAssociatedStacks \a response.
  */
 void ListAssociatedStacksResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListAssociatedStacksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::ListAssociatedStacksResponsePrivate
+ * \brief The ListAssociatedStacksResponsePrivate class provides private implementation for ListAssociatedStacksResponse.
  * \internal
  *
- * \class ListAssociatedStacksResponsePrivate
- *
- * \brief Private implementation for ListAssociatedStacksResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssociatedStacksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAssociatedStacksResponse instance.
+ * Constructs a ListAssociatedStacksResponsePrivate object with public implementation \a q.
  */
 ListAssociatedStacksResponsePrivate::ListAssociatedStacksResponsePrivate(
     ListAssociatedStacksResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ ListAssociatedStacksResponsePrivate::ListAssociatedStacksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream ListAssociatedStacksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream ListAssociatedStacks response element from \a xml.
  */
 void ListAssociatedStacksResponsePrivate::parseListAssociatedStacksResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::CreateUserResponse
- *
  * \brief The CreateUserResponse class provides an interace for WorkDocs CreateUser responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new CreateUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateUserResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateUserResponse::CreateUserResponse(
         const CreateUserRequest &request,
@@ -84,6 +79,9 @@ CreateUserResponse::CreateUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateUserRequest * CreateUserResponse::request() const
 {
     Q_D(const CreateUserResponse);
@@ -91,9 +89,8 @@ const CreateUserRequest * CreateUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs CreateUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs CreateUser \a response.
  */
 void CreateUserResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void CreateUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::CreateUserResponsePrivate
+ * \brief The CreateUserResponsePrivate class provides private implementation for CreateUserResponse.
  * \internal
  *
- * \class CreateUserResponsePrivate
- *
- * \brief Private implementation for CreateUserResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateUserResponse instance.
+ * Constructs a CreateUserResponsePrivate object with public implementation \a q.
  */
 CreateUserResponsePrivate::CreateUserResponsePrivate(
     CreateUserResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ CreateUserResponsePrivate::CreateUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs CreateUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs CreateUser response element from \a xml.
  */
 void CreateUserResponsePrivate::parseCreateUserResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ImportKeyPairRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ImportKeyPairRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ImportKeyPairRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ImportKeyPairRequestPrivate::ImportKeyPairRequestPrivate(
     const EC2Request::Action action, ImportKeyPairRequest * const q)

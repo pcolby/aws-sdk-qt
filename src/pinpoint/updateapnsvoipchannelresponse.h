@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateApnsVoipChannelResponse : public PinpointResponse {
 public:
     UpdateApnsVoipChannelResponse(const UpdateApnsVoipChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateApnsVoipChannelRequest * request() const;
+    virtual const UpdateApnsVoipChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateApnsVoipChannelResponse)

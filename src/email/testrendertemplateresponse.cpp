@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::TestRenderTemplateResponse
- *
  * \brief The TestRenderTemplateResponse class provides an interace for SES TestRenderTemplate responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new TestRenderTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TestRenderTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 TestRenderTemplateResponse::TestRenderTemplateResponse(
         const TestRenderTemplateRequest &request,
@@ -66,6 +61,9 @@ TestRenderTemplateResponse::TestRenderTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TestRenderTemplateRequest * TestRenderTemplateResponse::request() const
 {
     Q_D(const TestRenderTemplateResponse);
@@ -73,9 +71,8 @@ const TestRenderTemplateRequest * TestRenderTemplateResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES TestRenderTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES TestRenderTemplate \a response.
  */
 void TestRenderTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void TestRenderTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::TestRenderTemplateResponsePrivate
+ * \brief The TestRenderTemplateResponsePrivate class provides private implementation for TestRenderTemplateResponse.
  * \internal
  *
- * \class TestRenderTemplateResponsePrivate
- *
- * \brief Private implementation for TestRenderTemplateResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestRenderTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TestRenderTemplateResponse instance.
+ * Constructs a TestRenderTemplateResponsePrivate object with public implementation \a q.
  */
 TestRenderTemplateResponsePrivate::TestRenderTemplateResponsePrivate(
     TestRenderTemplateResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ TestRenderTemplateResponsePrivate::TestRenderTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES TestRenderTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES TestRenderTemplate response element from \a xml.
  */
 void TestRenderTemplateResponsePrivate::parseTestRenderTemplateResponse(QXmlStreamReader &xml)
 {

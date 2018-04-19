@@ -125,9 +125,8 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteGroupRequestPrivate object for ResourceGroups \a action with,
- * public implementation \a q.
+ * Constructs a DeleteGroupRequestPrivate object for ResourceGroups \a action,
+ * with public implementation \a q.
  */
 DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
     const ResourceGroupsRequest::Action action, DeleteGroupRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyReservedInstancesResponse
- *
  * \brief The ModifyReservedInstancesResponse class provides an interace for EC2 ModifyReservedInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyReservedInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyReservedInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyReservedInstancesResponse::ModifyReservedInstancesResponse(
         const ModifyReservedInstancesRequest &request,
@@ -59,6 +54,9 @@ ModifyReservedInstancesResponse::ModifyReservedInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyReservedInstancesRequest * ModifyReservedInstancesResponse::request() const
 {
     Q_D(const ModifyReservedInstancesResponse);
@@ -66,9 +64,8 @@ const ModifyReservedInstancesRequest * ModifyReservedInstancesResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 ModifyReservedInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyReservedInstances \a response.
  */
 void ModifyReservedInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyReservedInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyReservedInstancesResponsePrivate
+ * \brief The ModifyReservedInstancesResponsePrivate class provides private implementation for ModifyReservedInstancesResponse.
  * \internal
  *
- * \class ModifyReservedInstancesResponsePrivate
- *
- * \brief Private implementation for ModifyReservedInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyReservedInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyReservedInstancesResponse instance.
+ * Constructs a ModifyReservedInstancesResponsePrivate object with public implementation \a q.
  */
 ModifyReservedInstancesResponsePrivate::ModifyReservedInstancesResponsePrivate(
     ModifyReservedInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyReservedInstancesResponsePrivate::ModifyReservedInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifyReservedInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyReservedInstances response element from \a xml.
  */
 void ModifyReservedInstancesResponsePrivate::parseModifyReservedInstancesResponse(QXmlStreamReader &xml)
 {

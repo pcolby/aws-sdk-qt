@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteHsmConfigurationResponse : public RedshiftResponse {
 public:
     DeleteHsmConfigurationResponse(const DeleteHsmConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteHsmConfigurationRequest * request() const;
+    virtual const DeleteHsmConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteHsmConfigurationResponse)

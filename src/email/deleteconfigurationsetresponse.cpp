@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteConfigurationSetResponse
- *
  * \brief The DeleteConfigurationSetResponse class provides an interace for SES DeleteConfigurationSet responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteConfigurationSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteConfigurationSetResponse::DeleteConfigurationSetResponse(
         const DeleteConfigurationSetRequest &request,
@@ -66,6 +61,9 @@ DeleteConfigurationSetResponse::DeleteConfigurationSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteConfigurationSetRequest * DeleteConfigurationSetResponse::request() const
 {
     Q_D(const DeleteConfigurationSetResponse);
@@ -73,9 +71,8 @@ const DeleteConfigurationSetRequest * DeleteConfigurationSetResponse::request() 
 }
 
 /*!
- * @brief  Parse a SES DeleteConfigurationSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES DeleteConfigurationSet \a response.
  */
 void DeleteConfigurationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteConfigurationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::DeleteConfigurationSetResponsePrivate
+ * \brief The DeleteConfigurationSetResponsePrivate class provides private implementation for DeleteConfigurationSetResponse.
  * \internal
  *
- * \class DeleteConfigurationSetResponsePrivate
- *
- * \brief Private implementation for DeleteConfigurationSetResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteConfigurationSetResponse instance.
+ * Constructs a DeleteConfigurationSetResponsePrivate object with public implementation \a q.
  */
 DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponsePrivate(
     DeleteConfigurationSetResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES DeleteConfigurationSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES DeleteConfigurationSet response element from \a xml.
  */
 void DeleteConfigurationSetResponsePrivate::parseDeleteConfigurationSetResponse(QXmlStreamReader &xml)
 {

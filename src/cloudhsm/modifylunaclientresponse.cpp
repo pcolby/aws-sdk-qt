@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ModifyLunaClientResponse
- *
  * \brief The ModifyLunaClientResponse class provides an interace for CloudHSM ModifyLunaClient responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ModifyLunaClientResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyLunaClientResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyLunaClientResponse::ModifyLunaClientResponse(
         const ModifyLunaClientRequest &request,
@@ -67,6 +62,9 @@ ModifyLunaClientResponse::ModifyLunaClientResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyLunaClientRequest * ModifyLunaClientResponse::request() const
 {
     Q_D(const ModifyLunaClientResponse);
@@ -74,9 +72,8 @@ const ModifyLunaClientRequest * ModifyLunaClientResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSM ModifyLunaClient response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM ModifyLunaClient \a response.
  */
 void ModifyLunaClientResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void ModifyLunaClientResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::ModifyLunaClientResponsePrivate
+ * \brief The ModifyLunaClientResponsePrivate class provides private implementation for ModifyLunaClientResponse.
  * \internal
  *
- * \class ModifyLunaClientResponsePrivate
- *
- * \brief Private implementation for ModifyLunaClientResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyLunaClientResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyLunaClientResponse instance.
+ * Constructs a ModifyLunaClientResponsePrivate object with public implementation \a q.
  */
 ModifyLunaClientResponsePrivate::ModifyLunaClientResponsePrivate(
     ModifyLunaClientResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ ModifyLunaClientResponsePrivate::ModifyLunaClientResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM ModifyLunaClientResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM ModifyLunaClient response element from \a xml.
  */
 void ModifyLunaClientResponsePrivate::parseModifyLunaClientResponse(QXmlStreamReader &xml)
 {

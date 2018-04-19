@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateKeyResponse : public KMSResponse {
 public:
     CreateKeyResponse(const CreateKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateKeyRequest * request() const;
+    virtual const CreateKeyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateKeyResponse)

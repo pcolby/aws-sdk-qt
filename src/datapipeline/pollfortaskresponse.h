@@ -34,10 +34,10 @@ class QTAWS_EXPORT PollForTaskResponse : public DataPipelineResponse {
 public:
     PollForTaskResponse(const PollForTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PollForTaskRequest * request() const;
+    virtual const PollForTaskRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PollForTaskResponse)

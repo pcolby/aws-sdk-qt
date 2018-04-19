@@ -28,16 +28,13 @@ namespace ResourceGroupsTaggingAPI {
 
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIResponse
- *
  * \brief The ResourceGroupsTaggingAPIResponse class provides an interface for ResourceGroupsTaggingAPI responses.
  *
- * \ingroup ResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  */
 
 /*!
- * @brief  Constructs a new ResourceGroupsTaggingAPIResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ResourceGroupsTaggingAPIResponse object with parent \a parent.
  */
 ResourceGroupsTaggingAPIResponse::ResourceGroupsTaggingAPIResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ResourceGroupsTaggingAPIResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ResourceGroupsTaggingAPIResponse::ResourceGroupsTaggingAPIResponse(QObject * con
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResourceGroupsTaggingAPIResponse object.
- *
+ * \internal
+ * Constructs a ResourceGroupsTaggingAPIResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ResourceGroupsTaggingAPIResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ResourceGroupsTaggingAPIResponse::ResourceGroupsTaggingAPIResponse(ResourceGroupsTaggingAPIResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ResourceGroupsTaggingAPIResponse::ResourceGroupsTaggingAPIResponse(ResourceGroup
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ResourceGroupsTaggingAPIResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ResourceGroupsTaggingAPIResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIResponsePrivate
+ * \brief The ResourceGroupsTaggingAPIResponsePrivate class provides private implementation for ResourceGroupsTaggingAPIResponse.
+ * \internal
  *
- * @class  ResourceGroupsTaggingAPIResponsePrivate
- *
- * @brief  Private implementation for ResourceGroupsTaggingAPIResponse.
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResourceGroupsTaggingAPIResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResourceGroupsTaggingAPIResponse instance.
+ * Constructs a ResourceGroupsTaggingAPIResponsePrivate object with public implementation \a q.
  */
 ResourceGroupsTaggingAPIResponsePrivate::ResourceGroupsTaggingAPIResponsePrivate(
     ResourceGroupsTaggingAPIResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

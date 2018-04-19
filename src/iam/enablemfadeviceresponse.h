@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableMFADeviceResponse : public IAMResponse {
 public:
     EnableMFADeviceResponse(const EnableMFADeviceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableMFADeviceRequest * request() const;
+    virtual const EnableMFADeviceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EnableMFADeviceResponse)

@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateDiskResponse
- *
  * \brief The CreateDiskResponse class provides an interace for Lightsail CreateDisk responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateDiskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDiskResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDiskResponse::CreateDiskResponse(
         const CreateDiskRequest &request,
@@ -71,6 +66,9 @@ CreateDiskResponse::CreateDiskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDiskRequest * CreateDiskResponse::request() const
 {
     Q_D(const CreateDiskResponse);
@@ -78,9 +76,8 @@ const CreateDiskRequest * CreateDiskResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail CreateDisk response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail CreateDisk \a response.
  */
 void CreateDiskResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void CreateDiskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::CreateDiskResponsePrivate
+ * \brief The CreateDiskResponsePrivate class provides private implementation for CreateDiskResponse.
  * \internal
  *
- * \class CreateDiskResponsePrivate
- *
- * \brief Private implementation for CreateDiskResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDiskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDiskResponse instance.
+ * Constructs a CreateDiskResponsePrivate object with public implementation \a q.
  */
 CreateDiskResponsePrivate::CreateDiskResponsePrivate(
     CreateDiskResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ CreateDiskResponsePrivate::CreateDiskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail CreateDiskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail CreateDisk response element from \a xml.
  */
 void CreateDiskResponsePrivate::parseCreateDiskResponse(QXmlStreamReader &xml)
 {

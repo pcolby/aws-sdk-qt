@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::StopThingRegistrationTaskResponse
- *
  * \brief The StopThingRegistrationTaskResponse class provides an interace for IoT StopThingRegistrationTask responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new StopThingRegistrationTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopThingRegistrationTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 StopThingRegistrationTaskResponse::StopThingRegistrationTaskResponse(
         const StopThingRegistrationTaskRequest &request,
@@ -66,6 +61,9 @@ StopThingRegistrationTaskResponse::StopThingRegistrationTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopThingRegistrationTaskRequest * StopThingRegistrationTaskResponse::request() const
 {
     Q_D(const StopThingRegistrationTaskResponse);
@@ -73,9 +71,8 @@ const StopThingRegistrationTaskRequest * StopThingRegistrationTaskResponse::requ
 }
 
 /*!
- * @brief  Parse a IoT StopThingRegistrationTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT StopThingRegistrationTask \a response.
  */
 void StopThingRegistrationTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void StopThingRegistrationTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::StopThingRegistrationTaskResponsePrivate
+ * \brief The StopThingRegistrationTaskResponsePrivate class provides private implementation for StopThingRegistrationTaskResponse.
  * \internal
  *
- * \class StopThingRegistrationTaskResponsePrivate
- *
- * \brief Private implementation for StopThingRegistrationTaskResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopThingRegistrationTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopThingRegistrationTaskResponse instance.
+ * Constructs a StopThingRegistrationTaskResponsePrivate object with public implementation \a q.
  */
 StopThingRegistrationTaskResponsePrivate::StopThingRegistrationTaskResponsePrivate(
     StopThingRegistrationTaskResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ StopThingRegistrationTaskResponsePrivate::StopThingRegistrationTaskResponsePriva
 }
 
 /*!
- * @brief  Parse an IoT StopThingRegistrationTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT StopThingRegistrationTask response element from \a xml.
  */
 void StopThingRegistrationTaskResponsePrivate::parseStopThingRegistrationTaskResponse(QXmlStreamReader &xml)
 {

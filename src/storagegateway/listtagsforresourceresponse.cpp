@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListTagsForResourceResponse
- *
  * \brief The ListTagsForResourceResponse class provides an interace for StorageGateway ListTagsForResource responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsForResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsForResourceResponse::ListTagsForResourceResponse(
         const ListTagsForResourceRequest &request,
@@ -124,6 +119,9 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 {
     Q_D(const ListTagsForResourceResponse);
@@ -131,9 +129,8 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway ListTagsForResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway ListTagsForResource \a response.
  */
 void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::ListTagsForResourceResponsePrivate
+ * \brief The ListTagsForResourceResponsePrivate class provides private implementation for ListTagsForResourceResponse.
  * \internal
  *
- * \class ListTagsForResourceResponsePrivate
- *
- * \brief Private implementation for ListTagsForResourceResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsForResourceResponse instance.
+ * Constructs a ListTagsForResourceResponsePrivate object with public implementation \a q.
  */
 ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
     ListTagsForResourceResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway ListTagsForResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway ListTagsForResource response element from \a xml.
  */
 void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlStreamReader &xml)
 {

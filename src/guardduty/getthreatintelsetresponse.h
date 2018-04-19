@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetThreatIntelSetResponse : public GuardDutyResponse {
 public:
     GetThreatIntelSetResponse(const GetThreatIntelSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetThreatIntelSetRequest * request() const;
+    virtual const GetThreatIntelSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetThreatIntelSetResponse)

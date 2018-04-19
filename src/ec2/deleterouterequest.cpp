@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRouteRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteRouteRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRouteRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteRouteRequestPrivate::DeleteRouteRequestPrivate(
     const EC2Request::Action action, DeleteRouteRequest * const q)

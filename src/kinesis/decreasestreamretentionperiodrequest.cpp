@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DecreaseStreamRetentionPeriodRequest::respons
  */
 
 /*!
- *
- * Constructs a DecreaseStreamRetentionPeriodRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a DecreaseStreamRetentionPeriodRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 DecreaseStreamRetentionPeriodRequestPrivate::DecreaseStreamRetentionPeriodRequestPrivate(
     const KinesisRequest::Action action, DecreaseStreamRetentionPeriodRequest * const q)

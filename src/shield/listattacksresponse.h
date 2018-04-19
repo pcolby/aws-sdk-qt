@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAttacksResponse : public ShieldResponse {
 public:
     ListAttacksResponse(const ListAttacksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAttacksRequest * request() const;
+    virtual const ListAttacksRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListAttacksResponse)

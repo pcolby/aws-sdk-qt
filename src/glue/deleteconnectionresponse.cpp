@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteConnectionResponse
- *
  * \brief The DeleteConnectionResponse class provides an interace for Glue DeleteConnection responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteConnectionResponse::DeleteConnectionResponse(
         const DeleteConnectionRequest &request,
@@ -58,6 +53,9 @@ DeleteConnectionResponse::DeleteConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteConnectionRequest * DeleteConnectionResponse::request() const
 {
     Q_D(const DeleteConnectionResponse);
@@ -65,9 +63,8 @@ const DeleteConnectionRequest * DeleteConnectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue DeleteConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue DeleteConnection \a response.
  */
 void DeleteConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::DeleteConnectionResponsePrivate
+ * \brief The DeleteConnectionResponsePrivate class provides private implementation for DeleteConnectionResponse.
  * \internal
  *
- * \class DeleteConnectionResponsePrivate
- *
- * \brief Private implementation for DeleteConnectionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteConnectionResponse instance.
+ * Constructs a DeleteConnectionResponsePrivate object with public implementation \a q.
  */
 DeleteConnectionResponsePrivate::DeleteConnectionResponsePrivate(
     DeleteConnectionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteConnectionResponsePrivate::DeleteConnectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue DeleteConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue DeleteConnection response element from \a xml.
  */
 void DeleteConnectionResponsePrivate::parseDeleteConnectionResponse(QXmlStreamReader &xml)
 {

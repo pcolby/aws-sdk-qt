@@ -34,10 +34,10 @@ class QTAWS_EXPORT RestoreSecretResponse : public SecretsManagerResponse {
 public:
     RestoreSecretResponse(const RestoreSecretRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RestoreSecretRequest * request() const;
+    virtual const RestoreSecretRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RestoreSecretResponse)

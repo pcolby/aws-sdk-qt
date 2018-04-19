@@ -29,10 +29,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::PutNotificationChannelResponse
- *
  * \brief The PutNotificationChannelResponse class provides an interace for FMS PutNotificationChannel responses.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -45,11 +44,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new PutNotificationChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutNotificationChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 PutNotificationChannelResponse::PutNotificationChannelResponse(
         const PutNotificationChannelRequest &request,
@@ -61,6 +56,9 @@ PutNotificationChannelResponse::PutNotificationChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutNotificationChannelRequest * PutNotificationChannelResponse::request() const
 {
     Q_D(const PutNotificationChannelResponse);
@@ -68,9 +66,8 @@ const PutNotificationChannelRequest * PutNotificationChannelResponse::request() 
 }
 
 /*!
- * @brief  Parse a FMS PutNotificationChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful FMS PutNotificationChannel \a response.
  */
 void PutNotificationChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void PutNotificationChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::FMS::PutNotificationChannelResponsePrivate
+ * \brief The PutNotificationChannelResponsePrivate class provides private implementation for PutNotificationChannelResponse.
  * \internal
  *
- * \class PutNotificationChannelResponsePrivate
- *
- * \brief Private implementation for PutNotificationChannelResponse.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutNotificationChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutNotificationChannelResponse instance.
+ * Constructs a PutNotificationChannelResponsePrivate object with public implementation \a q.
  */
 PutNotificationChannelResponsePrivate::PutNotificationChannelResponsePrivate(
     PutNotificationChannelResponse * const q) : FMSResponsePrivate(q)
@@ -101,9 +94,7 @@ PutNotificationChannelResponsePrivate::PutNotificationChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an FMS PutNotificationChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a FMS PutNotificationChannel response element from \a xml.
  */
 void PutNotificationChannelResponsePrivate::parsePutNotificationChannelResponse(QXmlStreamReader &xml)
 {

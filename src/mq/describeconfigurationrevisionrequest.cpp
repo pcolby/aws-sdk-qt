@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRevisionRequest::respons
  */
 
 /*!
- *
- * Constructs a DescribeConfigurationRevisionRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a DescribeConfigurationRevisionRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionRequestPrivate(
     const MQRequest::Action action, DescribeConfigurationRevisionRequest * const q)

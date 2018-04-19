@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeregisterEcsClusterResponse
- *
  * \brief The DeregisterEcsClusterResponse class provides an interace for OpsWorks DeregisterEcsCluster responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeregisterEcsClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterEcsClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterEcsClusterResponse::DeregisterEcsClusterResponse(
         const DeregisterEcsClusterRequest &request,
@@ -161,6 +156,9 @@ DeregisterEcsClusterResponse::DeregisterEcsClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterEcsClusterRequest * DeregisterEcsClusterResponse::request() const
 {
     Q_D(const DeregisterEcsClusterResponse);
@@ -168,9 +166,8 @@ const DeregisterEcsClusterRequest * DeregisterEcsClusterResponse::request() cons
 }
 
 /*!
- * @brief  Parse a OpsWorks DeregisterEcsCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DeregisterEcsCluster \a response.
  */
 void DeregisterEcsClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DeregisterEcsClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DeregisterEcsClusterResponsePrivate
+ * \brief The DeregisterEcsClusterResponsePrivate class provides private implementation for DeregisterEcsClusterResponse.
  * \internal
  *
- * \class DeregisterEcsClusterResponsePrivate
- *
- * \brief Private implementation for DeregisterEcsClusterResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterEcsClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterEcsClusterResponse instance.
+ * Constructs a DeregisterEcsClusterResponsePrivate object with public implementation \a q.
  */
 DeregisterEcsClusterResponsePrivate::DeregisterEcsClusterResponsePrivate(
     DeregisterEcsClusterResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DeregisterEcsClusterResponsePrivate::DeregisterEcsClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DeregisterEcsClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DeregisterEcsCluster response element from \a xml.
  */
 void DeregisterEcsClusterResponsePrivate::parseDeregisterEcsClusterResponse(QXmlStreamReader &xml)
 {

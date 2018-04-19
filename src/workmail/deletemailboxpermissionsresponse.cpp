@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DeleteMailboxPermissionsResponse
- *
  * \brief The DeleteMailboxPermissionsResponse class provides an interace for WorkMail DeleteMailboxPermissions responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DeleteMailboxPermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteMailboxPermissionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteMailboxPermissionsResponse::DeleteMailboxPermissionsResponse(
         const DeleteMailboxPermissionsRequest &request,
@@ -88,6 +83,9 @@ DeleteMailboxPermissionsResponse::DeleteMailboxPermissionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteMailboxPermissionsRequest * DeleteMailboxPermissionsResponse::request() const
 {
     Q_D(const DeleteMailboxPermissionsResponse);
@@ -95,9 +93,8 @@ const DeleteMailboxPermissionsRequest * DeleteMailboxPermissionsResponse::reques
 }
 
 /*!
- * @brief  Parse a WorkMail DeleteMailboxPermissions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail DeleteMailboxPermissions \a response.
  */
 void DeleteMailboxPermissionsResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DeleteMailboxPermissionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::DeleteMailboxPermissionsResponsePrivate
+ * \brief The DeleteMailboxPermissionsResponsePrivate class provides private implementation for DeleteMailboxPermissionsResponse.
  * \internal
  *
- * \class DeleteMailboxPermissionsResponsePrivate
- *
- * \brief Private implementation for DeleteMailboxPermissionsResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMailboxPermissionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteMailboxPermissionsResponse instance.
+ * Constructs a DeleteMailboxPermissionsResponsePrivate object with public implementation \a q.
  */
 DeleteMailboxPermissionsResponsePrivate::DeleteMailboxPermissionsResponsePrivate(
     DeleteMailboxPermissionsResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ DeleteMailboxPermissionsResponsePrivate::DeleteMailboxPermissionsResponsePrivate
 }
 
 /*!
- * @brief  Parse an WorkMail DeleteMailboxPermissionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail DeleteMailboxPermissions response element from \a xml.
  */
 void DeleteMailboxPermissionsResponsePrivate::parseDeleteMailboxPermissionsResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateConnectionResponse : public GlueResponse {
 public:
     UpdateConnectionResponse(const UpdateConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateConnectionRequest * request() const;
+    virtual const UpdateConnectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateConnectionResponse)

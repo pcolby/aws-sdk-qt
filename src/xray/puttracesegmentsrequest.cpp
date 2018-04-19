@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * PutTraceSegmentsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a PutTraceSegmentsRequestPrivate object for XRay \a action with,
- * public implementation \a q.
+ * Constructs a PutTraceSegmentsRequestPrivate object for XRay \a action,
+ * with public implementation \a q.
  */
 PutTraceSegmentsRequestPrivate::PutTraceSegmentsRequestPrivate(
     const XRayRequest::Action action, PutTraceSegmentsRequest * const q)

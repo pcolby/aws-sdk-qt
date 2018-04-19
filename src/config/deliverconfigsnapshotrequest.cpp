@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DeliverConfigSnapshotRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeliverConfigSnapshotRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DeliverConfigSnapshotRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DeliverConfigSnapshotRequestPrivate::DeliverConfigSnapshotRequestPrivate(
     const ConfigServiceRequest::Action action, DeliverConfigSnapshotRequest * const q)

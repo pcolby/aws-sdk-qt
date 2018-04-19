@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::PutScheduledUpdateGroupActionResponse
- *
  * \brief The PutScheduledUpdateGroupActionResponse class provides an interace for AutoScaling PutScheduledUpdateGroupAction responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new PutScheduledUpdateGroupActionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutScheduledUpdateGroupActionResponse object for \a reply to \a request, with parent \a parent.
  */
 PutScheduledUpdateGroupActionResponse::PutScheduledUpdateGroupActionResponse(
         const PutScheduledUpdateGroupActionRequest &request,
@@ -60,6 +55,9 @@ PutScheduledUpdateGroupActionResponse::PutScheduledUpdateGroupActionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutScheduledUpdateGroupActionRequest * PutScheduledUpdateGroupActionResponse::request() const
 {
     Q_D(const PutScheduledUpdateGroupActionResponse);
@@ -67,9 +65,8 @@ const PutScheduledUpdateGroupActionRequest * PutScheduledUpdateGroupActionRespon
 }
 
 /*!
- * @brief  Parse a AutoScaling PutScheduledUpdateGroupAction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling PutScheduledUpdateGroupAction \a response.
  */
 void PutScheduledUpdateGroupActionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void PutScheduledUpdateGroupActionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::PutScheduledUpdateGroupActionResponsePrivate
+ * \brief The PutScheduledUpdateGroupActionResponsePrivate class provides private implementation for PutScheduledUpdateGroupActionResponse.
  * \internal
  *
- * \class PutScheduledUpdateGroupActionResponsePrivate
- *
- * \brief Private implementation for PutScheduledUpdateGroupActionResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutScheduledUpdateGroupActionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutScheduledUpdateGroupActionResponse instance.
+ * Constructs a PutScheduledUpdateGroupActionResponsePrivate object with public implementation \a q.
  */
 PutScheduledUpdateGroupActionResponsePrivate::PutScheduledUpdateGroupActionResponsePrivate(
     PutScheduledUpdateGroupActionResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ PutScheduledUpdateGroupActionResponsePrivate::PutScheduledUpdateGroupActionRespo
 }
 
 /*!
- * @brief  Parse an AutoScaling PutScheduledUpdateGroupActionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling PutScheduledUpdateGroupAction response element from \a xml.
  */
 void PutScheduledUpdateGroupActionResponsePrivate::parsePutScheduledUpdateGroupActionResponse(QXmlStreamReader &xml)
 {

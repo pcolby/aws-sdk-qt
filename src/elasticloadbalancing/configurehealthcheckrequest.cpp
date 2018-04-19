@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * ConfigureHealthCheckRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ConfigureHealthCheckRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a ConfigureHealthCheckRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 ConfigureHealthCheckRequestPrivate::ConfigureHealthCheckRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, ConfigureHealthCheckRequest * const q)

@@ -29,10 +29,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::BatchPutAttributesResponse
- *
  * \brief The BatchPutAttributesResponse class provides an interace for SimpleDB BatchPutAttributes responses.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -52,11 +51,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new BatchPutAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchPutAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchPutAttributesResponse::BatchPutAttributesResponse(
         const BatchPutAttributesRequest &request,
@@ -68,6 +63,9 @@ BatchPutAttributesResponse::BatchPutAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchPutAttributesRequest * BatchPutAttributesResponse::request() const
 {
     Q_D(const BatchPutAttributesResponse);
@@ -75,9 +73,8 @@ const BatchPutAttributesRequest * BatchPutAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SimpleDB BatchPutAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SimpleDB BatchPutAttributes \a response.
  */
 void BatchPutAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void BatchPutAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SimpleDB::BatchPutAttributesResponsePrivate
+ * \brief The BatchPutAttributesResponsePrivate class provides private implementation for BatchPutAttributesResponse.
  * \internal
  *
- * \class BatchPutAttributesResponsePrivate
- *
- * \brief Private implementation for BatchPutAttributesResponse.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchPutAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchPutAttributesResponse instance.
+ * Constructs a BatchPutAttributesResponsePrivate object with public implementation \a q.
  */
 BatchPutAttributesResponsePrivate::BatchPutAttributesResponsePrivate(
     BatchPutAttributesResponse * const q) : SimpleDBResponsePrivate(q)
@@ -108,9 +101,7 @@ BatchPutAttributesResponsePrivate::BatchPutAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SimpleDB BatchPutAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SimpleDB BatchPutAttributes response element from \a xml.
  */
 void BatchPutAttributesResponsePrivate::parseBatchPutAttributesResponse(QXmlStreamReader &xml)
 {

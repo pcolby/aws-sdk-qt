@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteCrawlerResponse
- *
  * \brief The DeleteCrawlerResponse class provides an interace for Glue DeleteCrawler responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteCrawlerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCrawlerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCrawlerResponse::DeleteCrawlerResponse(
         const DeleteCrawlerRequest &request,
@@ -58,6 +53,9 @@ DeleteCrawlerResponse::DeleteCrawlerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCrawlerRequest * DeleteCrawlerResponse::request() const
 {
     Q_D(const DeleteCrawlerResponse);
@@ -65,9 +63,8 @@ const DeleteCrawlerRequest * DeleteCrawlerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue DeleteCrawler response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue DeleteCrawler \a response.
  */
 void DeleteCrawlerResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteCrawlerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::DeleteCrawlerResponsePrivate
+ * \brief The DeleteCrawlerResponsePrivate class provides private implementation for DeleteCrawlerResponse.
  * \internal
  *
- * \class DeleteCrawlerResponsePrivate
- *
- * \brief Private implementation for DeleteCrawlerResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCrawlerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCrawlerResponse instance.
+ * Constructs a DeleteCrawlerResponsePrivate object with public implementation \a q.
  */
 DeleteCrawlerResponsePrivate::DeleteCrawlerResponsePrivate(
     DeleteCrawlerResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteCrawlerResponsePrivate::DeleteCrawlerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue DeleteCrawlerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue DeleteCrawler response element from \a xml.
  */
 void DeleteCrawlerResponsePrivate::parseDeleteCrawlerResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::ViewBillingResponse
- *
  * \brief The ViewBillingResponse class provides an interace for Route53Domains ViewBilling responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new ViewBillingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ViewBillingResponse object for \a reply to \a request, with parent \a parent.
  */
 ViewBillingResponse::ViewBillingResponse(
         const ViewBillingRequest &request,
@@ -56,6 +51,9 @@ ViewBillingResponse::ViewBillingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ViewBillingRequest * ViewBillingResponse::request() const
 {
     Q_D(const ViewBillingResponse);
@@ -63,9 +61,8 @@ const ViewBillingRequest * ViewBillingResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53Domains ViewBilling response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains ViewBilling \a response.
  */
 void ViewBillingResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ViewBillingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::ViewBillingResponsePrivate
+ * \brief The ViewBillingResponsePrivate class provides private implementation for ViewBillingResponse.
  * \internal
  *
- * \class ViewBillingResponsePrivate
- *
- * \brief Private implementation for ViewBillingResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ViewBillingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ViewBillingResponse instance.
+ * Constructs a ViewBillingResponsePrivate object with public implementation \a q.
  */
 ViewBillingResponsePrivate::ViewBillingResponsePrivate(
     ViewBillingResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ ViewBillingResponsePrivate::ViewBillingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains ViewBillingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains ViewBilling response element from \a xml.
  */
 void ViewBillingResponsePrivate::parseViewBillingResponse(QXmlStreamReader &xml)
 {

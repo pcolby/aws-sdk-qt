@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a TagResourceRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a TagResourceRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const SecretsManagerRequest::Action action, TagResourceRequest * const q)

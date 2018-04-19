@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::SelectObjectContentResponse
- *
  * \brief The SelectObjectContentResponse class provides an interace for S3 SelectObjectContent responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::selectObjectContent
  */
 
 /*!
- * @brief  Constructs a new SelectObjectContentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SelectObjectContentResponse object for \a reply to \a request, with parent \a parent.
  */
 SelectObjectContentResponse::SelectObjectContentResponse(
         const SelectObjectContentRequest &request,
@@ -55,6 +50,9 @@ SelectObjectContentResponse::SelectObjectContentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SelectObjectContentRequest * SelectObjectContentResponse::request() const
 {
     Q_D(const SelectObjectContentResponse);
@@ -62,9 +60,8 @@ const SelectObjectContentRequest * SelectObjectContentResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 SelectObjectContent response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 SelectObjectContent \a response.
  */
 void SelectObjectContentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void SelectObjectContentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::SelectObjectContentResponsePrivate
+ * \brief The SelectObjectContentResponsePrivate class provides private implementation for SelectObjectContentResponse.
  * \internal
  *
- * \class SelectObjectContentResponsePrivate
- *
- * \brief Private implementation for SelectObjectContentResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SelectObjectContentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SelectObjectContentResponse instance.
+ * Constructs a SelectObjectContentResponsePrivate object with public implementation \a q.
  */
 SelectObjectContentResponsePrivate::SelectObjectContentResponsePrivate(
     SelectObjectContentResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ SelectObjectContentResponsePrivate::SelectObjectContentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 SelectObjectContentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 SelectObjectContent response element from \a xml.
  */
 void SelectObjectContentResponsePrivate::parseSelectObjectContentResponse(QXmlStreamReader &xml)
 {

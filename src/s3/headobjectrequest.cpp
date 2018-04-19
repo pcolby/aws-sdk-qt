@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * HeadObjectRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a HeadObjectRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a HeadObjectRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 HeadObjectRequestPrivate::HeadObjectRequestPrivate(
     const S3Request::Action action, HeadObjectRequest * const q)

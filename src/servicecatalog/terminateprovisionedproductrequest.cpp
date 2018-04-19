@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * TerminateProvisionedProductRequest::response(
  */
 
 /*!
- *
- * Constructs a TerminateProvisionedProductRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a TerminateProvisionedProductRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 TerminateProvisionedProductRequestPrivate::TerminateProvisionedProductRequestPrivate(
     const ServiceCatalogRequest::Action action, TerminateProvisionedProductRequest * const q)

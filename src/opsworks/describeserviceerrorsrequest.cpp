@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeServiceErrorsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeServiceErrorsRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeServiceErrorsRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeServiceErrorsRequestPrivate::DescribeServiceErrorsRequestPrivate(
     const OpsWorksRequest::Action action, DescribeServiceErrorsRequest * const q)

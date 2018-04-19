@@ -29,10 +29,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::DisassociateAdminAccountResponse
- *
  * \brief The DisassociateAdminAccountResponse class provides an interace for FMS DisassociateAdminAccount responses.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -45,11 +44,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new DisassociateAdminAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateAdminAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateAdminAccountResponse::DisassociateAdminAccountResponse(
         const DisassociateAdminAccountRequest &request,
@@ -61,6 +56,9 @@ DisassociateAdminAccountResponse::DisassociateAdminAccountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateAdminAccountRequest * DisassociateAdminAccountResponse::request() const
 {
     Q_D(const DisassociateAdminAccountResponse);
@@ -68,9 +66,8 @@ const DisassociateAdminAccountRequest * DisassociateAdminAccountResponse::reques
 }
 
 /*!
- * @brief  Parse a FMS DisassociateAdminAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful FMS DisassociateAdminAccount \a response.
  */
 void DisassociateAdminAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DisassociateAdminAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::FMS::DisassociateAdminAccountResponsePrivate
+ * \brief The DisassociateAdminAccountResponsePrivate class provides private implementation for DisassociateAdminAccountResponse.
  * \internal
  *
- * \class DisassociateAdminAccountResponsePrivate
- *
- * \brief Private implementation for DisassociateAdminAccountResponse.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateAdminAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateAdminAccountResponse instance.
+ * Constructs a DisassociateAdminAccountResponsePrivate object with public implementation \a q.
  */
 DisassociateAdminAccountResponsePrivate::DisassociateAdminAccountResponsePrivate(
     DisassociateAdminAccountResponse * const q) : FMSResponsePrivate(q)
@@ -101,9 +94,7 @@ DisassociateAdminAccountResponsePrivate::DisassociateAdminAccountResponsePrivate
 }
 
 /*!
- * @brief  Parse an FMS DisassociateAdminAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a FMS DisassociateAdminAccount response element from \a xml.
  */
 void DisassociateAdminAccountResponsePrivate::parseDisassociateAdminAccountResponse(QXmlStreamReader &xml)
 {

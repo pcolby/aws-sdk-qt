@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::CheckIfPhoneNumberIsOptedOutResponse
- *
  * \brief The CheckIfPhoneNumberIsOptedOutResponse class provides an interace for SNS CheckIfPhoneNumberIsOptedOut responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CheckIfPhoneNumberIsOptedOutResponse object for \a reply to \a request, with parent \a parent.
  */
 CheckIfPhoneNumberIsOptedOutResponse::CheckIfPhoneNumberIsOptedOutResponse(
         const CheckIfPhoneNumberIsOptedOutRequest &request,
@@ -69,6 +64,9 @@ CheckIfPhoneNumberIsOptedOutResponse::CheckIfPhoneNumberIsOptedOutResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CheckIfPhoneNumberIsOptedOutRequest * CheckIfPhoneNumberIsOptedOutResponse::request() const
 {
     Q_D(const CheckIfPhoneNumberIsOptedOutResponse);
@@ -76,9 +74,8 @@ const CheckIfPhoneNumberIsOptedOutRequest * CheckIfPhoneNumberIsOptedOutResponse
 }
 
 /*!
- * @brief  Parse a SNS CheckIfPhoneNumberIsOptedOut response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS CheckIfPhoneNumberIsOptedOut \a response.
  */
 void CheckIfPhoneNumberIsOptedOutResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CheckIfPhoneNumberIsOptedOutResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::CheckIfPhoneNumberIsOptedOutResponsePrivate
+ * \brief The CheckIfPhoneNumberIsOptedOutResponsePrivate class provides private implementation for CheckIfPhoneNumberIsOptedOutResponse.
  * \internal
  *
- * \class CheckIfPhoneNumberIsOptedOutResponsePrivate
- *
- * \brief Private implementation for CheckIfPhoneNumberIsOptedOutResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CheckIfPhoneNumberIsOptedOutResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CheckIfPhoneNumberIsOptedOutResponse instance.
+ * Constructs a CheckIfPhoneNumberIsOptedOutResponsePrivate object with public implementation \a q.
  */
 CheckIfPhoneNumberIsOptedOutResponsePrivate::CheckIfPhoneNumberIsOptedOutResponsePrivate(
     CheckIfPhoneNumberIsOptedOutResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ CheckIfPhoneNumberIsOptedOutResponsePrivate::CheckIfPhoneNumberIsOptedOutRespons
 }
 
 /*!
- * @brief  Parse an SNS CheckIfPhoneNumberIsOptedOutResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS CheckIfPhoneNumberIsOptedOut response element from \a xml.
  */
 void CheckIfPhoneNumberIsOptedOutResponsePrivate::parseCheckIfPhoneNumberIsOptedOutResponse(QXmlStreamReader &xml)
 {

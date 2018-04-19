@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * EnableVolumeIORequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a EnableVolumeIORequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a EnableVolumeIORequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 EnableVolumeIORequestPrivate::EnableVolumeIORequestPrivate(
     const EC2Request::Action action, EnableVolumeIORequest * const q)

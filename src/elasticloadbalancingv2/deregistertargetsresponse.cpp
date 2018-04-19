@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeregisterTargetsResponse
- *
  * \brief The DeregisterTargetsResponse class provides an interace for ElasticLoadBalancingv2 DeregisterTargets responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DeregisterTargetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterTargetsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterTargetsResponse::DeregisterTargetsResponse(
         const DeregisterTargetsRequest &request,
@@ -123,6 +118,9 @@ DeregisterTargetsResponse::DeregisterTargetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterTargetsRequest * DeregisterTargetsResponse::request() const
 {
     Q_D(const DeregisterTargetsResponse);
@@ -130,9 +128,8 @@ const DeregisterTargetsRequest * DeregisterTargetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DeregisterTargets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DeregisterTargets \a response.
  */
 void DeregisterTargetsResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DeregisterTargetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DeregisterTargetsResponsePrivate
+ * \brief The DeregisterTargetsResponsePrivate class provides private implementation for DeregisterTargetsResponse.
  * \internal
  *
- * \class DeregisterTargetsResponsePrivate
- *
- * \brief Private implementation for DeregisterTargetsResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterTargetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterTargetsResponse instance.
+ * Constructs a DeregisterTargetsResponsePrivate object with public implementation \a q.
  */
 DeregisterTargetsResponsePrivate::DeregisterTargetsResponsePrivate(
     DeregisterTargetsResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DeregisterTargetsResponsePrivate::DeregisterTargetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DeregisterTargetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DeregisterTargets response element from \a xml.
  */
 void DeregisterTargetsResponsePrivate::parseDeregisterTargetsResponse(QXmlStreamReader &xml)
 {

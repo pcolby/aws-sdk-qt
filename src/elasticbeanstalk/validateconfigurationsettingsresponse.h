@@ -34,10 +34,10 @@ class QTAWS_EXPORT ValidateConfigurationSettingsResponse : public ElasticBeansta
 public:
     ValidateConfigurationSettingsResponse(const ValidateConfigurationSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ValidateConfigurationSettingsRequest * request() const;
+    virtual const ValidateConfigurationSettingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ValidateConfigurationSettingsResponse)

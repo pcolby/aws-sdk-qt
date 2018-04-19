@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DeleteChapCredentialsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteChapCredentialsRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteChapCredentialsRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DeleteChapCredentialsRequestPrivate::DeleteChapCredentialsRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteChapCredentialsRequest * const q)

@@ -29,10 +29,9 @@ namespace LexRuntimeService {
 
 /*!
  * \class QtAws::LexRuntimeService::PostTextResponse
- *
  * \brief The PostTextResponse class provides an interace for LexRuntimeService PostText responses.
  *
- * \ingroup LexRuntimeService
+ * \inmodule QtAwsLexRuntimeService
  *
  *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
  *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
@@ -46,11 +45,7 @@ namespace LexRuntimeService {
  */
 
 /*!
- * @brief  Constructs a new PostTextResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PostTextResponse object for \a reply to \a request, with parent \a parent.
  */
 PostTextResponse::PostTextResponse(
         const PostTextRequest &request,
@@ -62,6 +57,9 @@ PostTextResponse::PostTextResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PostTextRequest * PostTextResponse::request() const
 {
     Q_D(const PostTextResponse);
@@ -69,9 +67,8 @@ const PostTextRequest * PostTextResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexRuntimeService PostText response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexRuntimeService PostText \a response.
  */
 void PostTextResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void PostTextResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexRuntimeService::PostTextResponsePrivate
+ * \brief The PostTextResponsePrivate class provides private implementation for PostTextResponse.
  * \internal
  *
- * \class PostTextResponsePrivate
- *
- * \brief Private implementation for PostTextResponse.
+ * \inmodule QtAwsLexRuntimeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PostTextResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PostTextResponse instance.
+ * Constructs a PostTextResponsePrivate object with public implementation \a q.
  */
 PostTextResponsePrivate::PostTextResponsePrivate(
     PostTextResponse * const q) : LexRuntimeServiceResponsePrivate(q)
@@ -102,9 +95,7 @@ PostTextResponsePrivate::PostTextResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexRuntimeService PostTextResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexRuntimeService PostText response element from \a xml.
  */
 void PostTextResponsePrivate::parsePostTextResponse(QXmlStreamReader &xml)
 {

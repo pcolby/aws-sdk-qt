@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTargetsForPolicyResponse : public OrganizationsResponse {
 public:
     ListTargetsForPolicyResponse(const ListTargetsForPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTargetsForPolicyRequest * request() const;
+    virtual const ListTargetsForPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListTargetsForPolicyResponse)

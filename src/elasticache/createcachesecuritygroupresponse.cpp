@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::CreateCacheSecurityGroupResponse
- *
  * \brief The CreateCacheSecurityGroupResponse class provides an interace for ElastiCache CreateCacheSecurityGroup responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new CreateCacheSecurityGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCacheSecurityGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCacheSecurityGroupResponse::CreateCacheSecurityGroupResponse(
         const CreateCacheSecurityGroupRequest &request,
@@ -69,6 +64,9 @@ CreateCacheSecurityGroupResponse::CreateCacheSecurityGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCacheSecurityGroupRequest * CreateCacheSecurityGroupResponse::request() const
 {
     Q_D(const CreateCacheSecurityGroupResponse);
@@ -76,9 +74,8 @@ const CreateCacheSecurityGroupRequest * CreateCacheSecurityGroupResponse::reques
 }
 
 /*!
- * @brief  Parse a ElastiCache CreateCacheSecurityGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache CreateCacheSecurityGroup \a response.
  */
 void CreateCacheSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateCacheSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::CreateCacheSecurityGroupResponsePrivate
+ * \brief The CreateCacheSecurityGroupResponsePrivate class provides private implementation for CreateCacheSecurityGroupResponse.
  * \internal
  *
- * \class CreateCacheSecurityGroupResponsePrivate
- *
- * \brief Private implementation for CreateCacheSecurityGroupResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCacheSecurityGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCacheSecurityGroupResponse instance.
+ * Constructs a CreateCacheSecurityGroupResponsePrivate object with public implementation \a q.
  */
 CreateCacheSecurityGroupResponsePrivate::CreateCacheSecurityGroupResponsePrivate(
     CreateCacheSecurityGroupResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateCacheSecurityGroupResponsePrivate::CreateCacheSecurityGroupResponsePrivate
 }
 
 /*!
- * @brief  Parse an ElastiCache CreateCacheSecurityGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache CreateCacheSecurityGroup response element from \a xml.
  */
 void CreateCacheSecurityGroupResponsePrivate::parseCreateCacheSecurityGroupResponse(QXmlStreamReader &xml)
 {

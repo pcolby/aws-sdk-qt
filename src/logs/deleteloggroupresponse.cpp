@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteLogGroupResponse
- *
  * \brief The DeleteLogGroupResponse class provides an interace for CloudWatchLogs DeleteLogGroup responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteLogGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLogGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLogGroupResponse::DeleteLogGroupResponse(
         const DeleteLogGroupRequest &request,
@@ -84,6 +79,9 @@ DeleteLogGroupResponse::DeleteLogGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLogGroupRequest * DeleteLogGroupResponse::request() const
 {
     Q_D(const DeleteLogGroupResponse);
@@ -91,9 +89,8 @@ const DeleteLogGroupRequest * DeleteLogGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DeleteLogGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DeleteLogGroup \a response.
  */
 void DeleteLogGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteLogGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DeleteLogGroupResponsePrivate
+ * \brief The DeleteLogGroupResponsePrivate class provides private implementation for DeleteLogGroupResponse.
  * \internal
  *
- * \class DeleteLogGroupResponsePrivate
- *
- * \brief Private implementation for DeleteLogGroupResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLogGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLogGroupResponse instance.
+ * Constructs a DeleteLogGroupResponsePrivate object with public implementation \a q.
  */
 DeleteLogGroupResponsePrivate::DeleteLogGroupResponsePrivate(
     DeleteLogGroupResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteLogGroupResponsePrivate::DeleteLogGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DeleteLogGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DeleteLogGroup response element from \a xml.
  */
 void DeleteLogGroupResponsePrivate::parseDeleteLogGroupResponse(QXmlStreamReader &xml)
 {

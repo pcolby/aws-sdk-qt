@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteAuthorizerRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAuthorizerRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
     const APIGatewayRequest::Action action, DeleteAuthorizerRequest * const q)

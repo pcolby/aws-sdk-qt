@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeAccountAttributesResponse
- *
  * \brief The DescribeAccountAttributesResponse class provides an interace for ElasticBeanstalk DescribeAccountAttributes responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAccountAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
         const DescribeAccountAttributesRequest &request,
@@ -77,6 +72,9 @@ DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::request() const
 {
     Q_D(const DescribeAccountAttributesResponse);
@@ -84,9 +82,8 @@ const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::requ
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DescribeAccountAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DescribeAccountAttributes \a response.
  */
 void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DescribeAccountAttributesResponsePrivate
+ * \brief The DescribeAccountAttributesResponsePrivate class provides private implementation for DescribeAccountAttributesResponse.
  * \internal
  *
- * \class DescribeAccountAttributesResponsePrivate
- *
- * \brief Private implementation for DescribeAccountAttributesResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAccountAttributesResponse instance.
+ * Constructs a DescribeAccountAttributesResponsePrivate object with public implementation \a q.
  */
 DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePrivate(
     DescribeAccountAttributesResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePriva
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DescribeAccountAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DescribeAccountAttributes response element from \a xml.
  */
 void DescribeAccountAttributesResponsePrivate::parseDescribeAccountAttributesResponse(QXmlStreamReader &xml)
 {

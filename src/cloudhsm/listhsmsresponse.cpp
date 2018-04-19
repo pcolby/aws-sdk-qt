@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ListHsmsResponse
- *
  * \brief The ListHsmsResponse class provides an interace for CloudHSM ListHsms responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ListHsmsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListHsmsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListHsmsResponse::ListHsmsResponse(
         const ListHsmsRequest &request,
@@ -67,6 +62,9 @@ ListHsmsResponse::ListHsmsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListHsmsRequest * ListHsmsResponse::request() const
 {
     Q_D(const ListHsmsResponse);
@@ -74,9 +72,8 @@ const ListHsmsRequest * ListHsmsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSM ListHsms response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM ListHsms \a response.
  */
 void ListHsmsResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void ListHsmsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::ListHsmsResponsePrivate
+ * \brief The ListHsmsResponsePrivate class provides private implementation for ListHsmsResponse.
  * \internal
  *
- * \class ListHsmsResponsePrivate
- *
- * \brief Private implementation for ListHsmsResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHsmsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListHsmsResponse instance.
+ * Constructs a ListHsmsResponsePrivate object with public implementation \a q.
  */
 ListHsmsResponsePrivate::ListHsmsResponsePrivate(
     ListHsmsResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ ListHsmsResponsePrivate::ListHsmsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM ListHsmsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM ListHsms response element from \a xml.
  */
 void ListHsmsResponsePrivate::parseListHsmsResponse(QXmlStreamReader &xml)
 {

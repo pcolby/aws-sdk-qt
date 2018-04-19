@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetImportResponse
- *
  * \brief The GetImportResponse class provides an interace for LexModelBuildingService GetImport responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetImportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetImportResponse object for \a reply to \a request, with parent \a parent.
  */
 GetImportResponse::GetImportResponse(
         const GetImportRequest &request,
@@ -59,6 +54,9 @@ GetImportResponse::GetImportResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetImportRequest * GetImportResponse::request() const
 {
     Q_D(const GetImportResponse);
@@ -66,9 +64,8 @@ const GetImportRequest * GetImportResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService GetImport response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService GetImport \a response.
  */
 void GetImportResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetImportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::GetImportResponsePrivate
+ * \brief The GetImportResponsePrivate class provides private implementation for GetImportResponse.
  * \internal
  *
- * \class GetImportResponsePrivate
- *
- * \brief Private implementation for GetImportResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetImportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetImportResponse instance.
+ * Constructs a GetImportResponsePrivate object with public implementation \a q.
  */
 GetImportResponsePrivate::GetImportResponsePrivate(
     GetImportResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ GetImportResponsePrivate::GetImportResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService GetImportResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService GetImport response element from \a xml.
  */
 void GetImportResponsePrivate::parseGetImportResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::StopQueryExecutionResponse
- *
  * \brief The StopQueryExecutionResponse class provides an interace for Athena StopQueryExecution responses.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -51,11 +50,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new StopQueryExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopQueryExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 StopQueryExecutionResponse::StopQueryExecutionResponse(
         const StopQueryExecutionRequest &request,
@@ -67,6 +62,9 @@ StopQueryExecutionResponse::StopQueryExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopQueryExecutionRequest * StopQueryExecutionResponse::request() const
 {
     Q_D(const StopQueryExecutionResponse);
@@ -74,9 +72,8 @@ const StopQueryExecutionRequest * StopQueryExecutionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Athena StopQueryExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Athena StopQueryExecution \a response.
  */
 void StopQueryExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void StopQueryExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Athena::StopQueryExecutionResponsePrivate
+ * \brief The StopQueryExecutionResponsePrivate class provides private implementation for StopQueryExecutionResponse.
  * \internal
  *
- * \class StopQueryExecutionResponsePrivate
- *
- * \brief Private implementation for StopQueryExecutionResponse.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopQueryExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopQueryExecutionResponse instance.
+ * Constructs a StopQueryExecutionResponsePrivate object with public implementation \a q.
  */
 StopQueryExecutionResponsePrivate::StopQueryExecutionResponsePrivate(
     StopQueryExecutionResponse * const q) : AthenaResponsePrivate(q)
@@ -107,9 +100,7 @@ StopQueryExecutionResponsePrivate::StopQueryExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Athena StopQueryExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Athena StopQueryExecution response element from \a xml.
  */
 void StopQueryExecutionResponsePrivate::parseStopQueryExecutionResponse(QXmlStreamReader &xml)
 {

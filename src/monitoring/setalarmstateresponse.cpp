@@ -29,10 +29,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::SetAlarmStateResponse
- *
  * \brief The SetAlarmStateResponse class provides an interace for CloudWatch SetAlarmState responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -53,11 +52,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new SetAlarmStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetAlarmStateResponse object for \a reply to \a request, with parent \a parent.
  */
 SetAlarmStateResponse::SetAlarmStateResponse(
         const SetAlarmStateRequest &request,
@@ -69,6 +64,9 @@ SetAlarmStateResponse::SetAlarmStateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetAlarmStateRequest * SetAlarmStateResponse::request() const
 {
     Q_D(const SetAlarmStateResponse);
@@ -76,9 +74,8 @@ const SetAlarmStateRequest * SetAlarmStateResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatch SetAlarmState response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatch SetAlarmState \a response.
  */
 void SetAlarmStateResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void SetAlarmStateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatch::SetAlarmStateResponsePrivate
+ * \brief The SetAlarmStateResponsePrivate class provides private implementation for SetAlarmStateResponse.
  * \internal
  *
- * \class SetAlarmStateResponsePrivate
- *
- * \brief Private implementation for SetAlarmStateResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetAlarmStateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetAlarmStateResponse instance.
+ * Constructs a SetAlarmStateResponsePrivate object with public implementation \a q.
  */
 SetAlarmStateResponsePrivate::SetAlarmStateResponsePrivate(
     SetAlarmStateResponse * const q) : CloudWatchResponsePrivate(q)
@@ -109,9 +102,7 @@ SetAlarmStateResponsePrivate::SetAlarmStateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatch SetAlarmStateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatch SetAlarmState response element from \a xml.
  */
 void SetAlarmStateResponsePrivate::parseSetAlarmStateResponse(QXmlStreamReader &xml)
 {

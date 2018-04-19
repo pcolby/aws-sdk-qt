@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a RemoveTagsFromResourceRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsFromResourceRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const DirectoryServiceRequest::Action action, RemoveTagsFromResourceRequest * const q)

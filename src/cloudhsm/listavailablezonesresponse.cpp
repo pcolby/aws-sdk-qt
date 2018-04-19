@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::ListAvailableZonesResponse
- *
  * \brief The ListAvailableZonesResponse class provides an interace for CloudHSM ListAvailableZones responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new ListAvailableZonesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAvailableZonesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAvailableZonesResponse::ListAvailableZonesResponse(
         const ListAvailableZonesRequest &request,
@@ -67,6 +62,9 @@ ListAvailableZonesResponse::ListAvailableZonesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAvailableZonesRequest * ListAvailableZonesResponse::request() const
 {
     Q_D(const ListAvailableZonesResponse);
@@ -74,9 +72,8 @@ const ListAvailableZonesRequest * ListAvailableZonesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSM ListAvailableZones response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM ListAvailableZones \a response.
  */
 void ListAvailableZonesResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void ListAvailableZonesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::ListAvailableZonesResponsePrivate
+ * \brief The ListAvailableZonesResponsePrivate class provides private implementation for ListAvailableZonesResponse.
  * \internal
  *
- * \class ListAvailableZonesResponsePrivate
- *
- * \brief Private implementation for ListAvailableZonesResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAvailableZonesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAvailableZonesResponse instance.
+ * Constructs a ListAvailableZonesResponsePrivate object with public implementation \a q.
  */
 ListAvailableZonesResponsePrivate::ListAvailableZonesResponsePrivate(
     ListAvailableZonesResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ ListAvailableZonesResponsePrivate::ListAvailableZonesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM ListAvailableZonesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM ListAvailableZones response element from \a xml.
  */
 void ListAvailableZonesResponsePrivate::parseListAvailableZonesResponse(QXmlStreamReader &xml)
 {

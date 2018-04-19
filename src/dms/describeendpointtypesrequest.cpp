@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointTypesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeEndpointTypesRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEndpointTypesRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DescribeEndpointTypesRequestPrivate::DescribeEndpointTypesRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeEndpointTypesRequest * const q)

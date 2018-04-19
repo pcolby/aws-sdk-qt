@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetRestApiResponse
- *
  * \brief The GetRestApiResponse class provides an interace for APIGateway GetRestApi responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetRestApiResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRestApiResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRestApiResponse::GetRestApiResponse(
         const GetRestApiRequest &request,
@@ -60,6 +55,9 @@ GetRestApiResponse::GetRestApiResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRestApiRequest * GetRestApiResponse::request() const
 {
     Q_D(const GetRestApiResponse);
@@ -67,9 +65,8 @@ const GetRestApiRequest * GetRestApiResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetRestApi response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetRestApi \a response.
  */
 void GetRestApiResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetRestApiResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetRestApiResponsePrivate
+ * \brief The GetRestApiResponsePrivate class provides private implementation for GetRestApiResponse.
  * \internal
  *
- * \class GetRestApiResponsePrivate
- *
- * \brief Private implementation for GetRestApiResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRestApiResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRestApiResponse instance.
+ * Constructs a GetRestApiResponsePrivate object with public implementation \a q.
  */
 GetRestApiResponsePrivate::GetRestApiResponsePrivate(
     GetRestApiResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetRestApiResponsePrivate::GetRestApiResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetRestApiResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetRestApi response element from \a xml.
  */
 void GetRestApiResponsePrivate::parseGetRestApiResponse(QXmlStreamReader &xml)
 {

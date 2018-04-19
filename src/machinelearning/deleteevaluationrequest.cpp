@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEvaluationRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteEvaluationRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEvaluationRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 DeleteEvaluationRequestPrivate::DeleteEvaluationRequestPrivate(
     const MachineLearningRequest::Action action, DeleteEvaluationRequest * const q)

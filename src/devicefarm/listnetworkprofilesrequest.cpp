@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListNetworkProfilesRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListNetworkProfilesRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a ListNetworkProfilesRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 ListNetworkProfilesRequestPrivate::ListNetworkProfilesRequestPrivate(
     const DeviceFarmRequest::Action action, ListNetworkProfilesRequest * const q)

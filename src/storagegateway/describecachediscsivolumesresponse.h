@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeCachediSCSIVolumesResponse : public StorageGatewayRes
 public:
     DescribeCachediSCSIVolumesResponse(const DescribeCachediSCSIVolumesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeCachediSCSIVolumesRequest * request() const;
+    virtual const DescribeCachediSCSIVolumesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeCachediSCSIVolumesResponse)

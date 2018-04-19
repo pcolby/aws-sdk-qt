@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DisableGatewayResponse
- *
  * \brief The DisableGatewayResponse class provides an interace for StorageGateway DisableGateway responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DisableGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableGatewayResponse::DisableGatewayResponse(
         const DisableGatewayRequest &request,
@@ -124,6 +119,9 @@ DisableGatewayResponse::DisableGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableGatewayRequest * DisableGatewayResponse::request() const
 {
     Q_D(const DisableGatewayResponse);
@@ -131,9 +129,8 @@ const DisableGatewayRequest * DisableGatewayResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway DisableGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DisableGateway \a response.
  */
 void DisableGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DisableGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DisableGatewayResponsePrivate
+ * \brief The DisableGatewayResponsePrivate class provides private implementation for DisableGatewayResponse.
  * \internal
  *
- * \class DisableGatewayResponsePrivate
- *
- * \brief Private implementation for DisableGatewayResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableGatewayResponse instance.
+ * Constructs a DisableGatewayResponsePrivate object with public implementation \a q.
  */
 DisableGatewayResponsePrivate::DisableGatewayResponsePrivate(
     DisableGatewayResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DisableGatewayResponsePrivate::DisableGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DisableGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DisableGateway response element from \a xml.
  */
 void DisableGatewayResponsePrivate::parseDisableGatewayResponse(QXmlStreamReader &xml)
 {

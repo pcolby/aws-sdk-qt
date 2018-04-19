@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartAutomationExecutionResponse : public SSMResponse {
 public:
     StartAutomationExecutionResponse(const StartAutomationExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartAutomationExecutionRequest * request() const;
+    virtual const StartAutomationExecutionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartAutomationExecutionResponse)

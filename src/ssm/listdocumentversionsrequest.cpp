@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * ListDocumentVersionsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListDocumentVersionsRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a ListDocumentVersionsRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 ListDocumentVersionsRequestPrivate::ListDocumentVersionsRequestPrivate(
     const SSMRequest::Action action, ListDocumentVersionsRequest * const q)

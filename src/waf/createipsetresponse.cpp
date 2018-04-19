@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::CreateIPSetResponse
- *
  * \brief The CreateIPSetResponse class provides an interace for WAF CreateIPSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new CreateIPSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateIPSetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateIPSetResponse::CreateIPSetResponse(
         const CreateIPSetRequest &request,
@@ -60,6 +55,9 @@ CreateIPSetResponse::CreateIPSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateIPSetRequest * CreateIPSetResponse::request() const
 {
     Q_D(const CreateIPSetResponse);
@@ -67,9 +65,8 @@ const CreateIPSetRequest * CreateIPSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF CreateIPSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF CreateIPSet \a response.
  */
 void CreateIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::CreateIPSetResponsePrivate
+ * \brief The CreateIPSetResponsePrivate class provides private implementation for CreateIPSetResponse.
  * \internal
  *
- * \class CreateIPSetResponsePrivate
- *
- * \brief Private implementation for CreateIPSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateIPSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateIPSetResponse instance.
+ * Constructs a CreateIPSetResponsePrivate object with public implementation \a q.
  */
 CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
     CreateIPSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateIPSetResponsePrivate::CreateIPSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF CreateIPSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF CreateIPSet response element from \a xml.
  */
 void CreateIPSetResponsePrivate::parseCreateIPSetResponse(QXmlStreamReader &xml)
 {

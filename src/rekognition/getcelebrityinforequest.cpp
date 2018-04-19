@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetCelebrityInfoRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetCelebrityInfoRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a GetCelebrityInfoRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 GetCelebrityInfoRequestPrivate::GetCelebrityInfoRequestPrivate(
     const RekognitionRequest::Action action, GetCelebrityInfoRequest * const q)

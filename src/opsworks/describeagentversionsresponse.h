@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAgentVersionsResponse : public OpsWorksResponse {
 public:
     DescribeAgentVersionsResponse(const DescribeAgentVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAgentVersionsRequest * request() const;
+    virtual const DescribeAgentVersionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAgentVersionsResponse)

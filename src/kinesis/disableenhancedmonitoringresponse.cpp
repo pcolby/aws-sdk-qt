@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::DisableEnhancedMonitoringResponse
- *
  * \brief The DisableEnhancedMonitoringResponse class provides an interace for Kinesis DisableEnhancedMonitoring responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new DisableEnhancedMonitoringResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableEnhancedMonitoringResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableEnhancedMonitoringResponse::DisableEnhancedMonitoringResponse(
         const DisableEnhancedMonitoringRequest &request,
@@ -58,6 +53,9 @@ DisableEnhancedMonitoringResponse::DisableEnhancedMonitoringResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableEnhancedMonitoringRequest * DisableEnhancedMonitoringResponse::request() const
 {
     Q_D(const DisableEnhancedMonitoringResponse);
@@ -65,9 +63,8 @@ const DisableEnhancedMonitoringRequest * DisableEnhancedMonitoringResponse::requ
 }
 
 /*!
- * @brief  Parse a Kinesis DisableEnhancedMonitoring response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis DisableEnhancedMonitoring \a response.
  */
 void DisableEnhancedMonitoringResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DisableEnhancedMonitoringResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::DisableEnhancedMonitoringResponsePrivate
+ * \brief The DisableEnhancedMonitoringResponsePrivate class provides private implementation for DisableEnhancedMonitoringResponse.
  * \internal
  *
- * \class DisableEnhancedMonitoringResponsePrivate
- *
- * \brief Private implementation for DisableEnhancedMonitoringResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableEnhancedMonitoringResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableEnhancedMonitoringResponse instance.
+ * Constructs a DisableEnhancedMonitoringResponsePrivate object with public implementation \a q.
  */
 DisableEnhancedMonitoringResponsePrivate::DisableEnhancedMonitoringResponsePrivate(
     DisableEnhancedMonitoringResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ DisableEnhancedMonitoringResponsePrivate::DisableEnhancedMonitoringResponsePriva
 }
 
 /*!
- * @brief  Parse an Kinesis DisableEnhancedMonitoringResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis DisableEnhancedMonitoring response element from \a xml.
  */
 void DisableEnhancedMonitoringResponsePrivate::parseDisableEnhancedMonitoringResponse(QXmlStreamReader &xml)
 {

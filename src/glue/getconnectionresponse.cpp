@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetConnectionResponse
- *
  * \brief The GetConnectionResponse class provides an interace for Glue GetConnection responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetConnectionResponse::GetConnectionResponse(
         const GetConnectionRequest &request,
@@ -58,6 +53,9 @@ GetConnectionResponse::GetConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetConnectionRequest * GetConnectionResponse::request() const
 {
     Q_D(const GetConnectionResponse);
@@ -65,9 +63,8 @@ const GetConnectionRequest * GetConnectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetConnection \a response.
  */
 void GetConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetConnectionResponsePrivate
+ * \brief The GetConnectionResponsePrivate class provides private implementation for GetConnectionResponse.
  * \internal
  *
- * \class GetConnectionResponsePrivate
- *
- * \brief Private implementation for GetConnectionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetConnectionResponse instance.
+ * Constructs a GetConnectionResponsePrivate object with public implementation \a q.
  */
 GetConnectionResponsePrivate::GetConnectionResponsePrivate(
     GetConnectionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetConnectionResponsePrivate::GetConnectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetConnection response element from \a xml.
  */
 void GetConnectionResponsePrivate::parseGetConnectionResponse(QXmlStreamReader &xml)
 {

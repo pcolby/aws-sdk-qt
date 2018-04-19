@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeResizeResponse : public RedshiftResponse {
 public:
     DescribeResizeResponse(const DescribeResizeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeResizeRequest * request() const;
+    virtual const DescribeResizeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeResizeResponse)

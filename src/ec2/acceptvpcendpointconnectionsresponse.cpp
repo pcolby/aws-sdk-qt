@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AcceptVpcEndpointConnectionsResponse
- *
  * \brief The AcceptVpcEndpointConnectionsResponse class provides an interace for EC2 AcceptVpcEndpointConnections responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AcceptVpcEndpointConnectionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AcceptVpcEndpointConnectionsResponse object for \a reply to \a request, with parent \a parent.
  */
 AcceptVpcEndpointConnectionsResponse::AcceptVpcEndpointConnectionsResponse(
         const AcceptVpcEndpointConnectionsRequest &request,
@@ -59,6 +54,9 @@ AcceptVpcEndpointConnectionsResponse::AcceptVpcEndpointConnectionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AcceptVpcEndpointConnectionsRequest * AcceptVpcEndpointConnectionsResponse::request() const
 {
     Q_D(const AcceptVpcEndpointConnectionsResponse);
@@ -66,9 +64,8 @@ const AcceptVpcEndpointConnectionsRequest * AcceptVpcEndpointConnectionsResponse
 }
 
 /*!
- * @brief  Parse a EC2 AcceptVpcEndpointConnections response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AcceptVpcEndpointConnections \a response.
  */
 void AcceptVpcEndpointConnectionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AcceptVpcEndpointConnectionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AcceptVpcEndpointConnectionsResponsePrivate
+ * \brief The AcceptVpcEndpointConnectionsResponsePrivate class provides private implementation for AcceptVpcEndpointConnectionsResponse.
  * \internal
  *
- * \class AcceptVpcEndpointConnectionsResponsePrivate
- *
- * \brief Private implementation for AcceptVpcEndpointConnectionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptVpcEndpointConnectionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AcceptVpcEndpointConnectionsResponse instance.
+ * Constructs a AcceptVpcEndpointConnectionsResponsePrivate object with public implementation \a q.
  */
 AcceptVpcEndpointConnectionsResponsePrivate::AcceptVpcEndpointConnectionsResponsePrivate(
     AcceptVpcEndpointConnectionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AcceptVpcEndpointConnectionsResponsePrivate::AcceptVpcEndpointConnectionsRespons
 }
 
 /*!
- * @brief  Parse an EC2 AcceptVpcEndpointConnectionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AcceptVpcEndpointConnections response element from \a xml.
  */
 void AcceptVpcEndpointConnectionsResponsePrivate::parseAcceptVpcEndpointConnectionsResponse(QXmlStreamReader &xml)
 {

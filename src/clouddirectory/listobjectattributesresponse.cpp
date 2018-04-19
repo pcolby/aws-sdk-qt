@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListObjectAttributesResponse
- *
  * \brief The ListObjectAttributesResponse class provides an interace for CloudDirectory ListObjectAttributes responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListObjectAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListObjectAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListObjectAttributesResponse::ListObjectAttributesResponse(
         const ListObjectAttributesRequest &request,
@@ -62,6 +57,9 @@ ListObjectAttributesResponse::ListObjectAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListObjectAttributesRequest * ListObjectAttributesResponse::request() const
 {
     Q_D(const ListObjectAttributesResponse);
@@ -69,9 +67,8 @@ const ListObjectAttributesRequest * ListObjectAttributesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListObjectAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListObjectAttributes \a response.
  */
 void ListObjectAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListObjectAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListObjectAttributesResponsePrivate
+ * \brief The ListObjectAttributesResponsePrivate class provides private implementation for ListObjectAttributesResponse.
  * \internal
  *
- * \class ListObjectAttributesResponsePrivate
- *
- * \brief Private implementation for ListObjectAttributesResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListObjectAttributesResponse instance.
+ * Constructs a ListObjectAttributesResponsePrivate object with public implementation \a q.
  */
 ListObjectAttributesResponsePrivate::ListObjectAttributesResponsePrivate(
     ListObjectAttributesResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListObjectAttributesResponsePrivate::ListObjectAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListObjectAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListObjectAttributes response element from \a xml.
  */
 void ListObjectAttributesResponsePrivate::parseListObjectAttributesResponse(QXmlStreamReader &xml)
 {

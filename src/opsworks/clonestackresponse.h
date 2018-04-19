@@ -34,10 +34,10 @@ class QTAWS_EXPORT CloneStackResponse : public OpsWorksResponse {
 public:
     CloneStackResponse(const CloneStackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CloneStackRequest * request() const;
+    virtual const CloneStackRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CloneStackResponse)

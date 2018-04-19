@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetIdentityProviderByIdentifierResponse
- *
  * \brief The GetIdentityProviderByIdentifierResponse class provides an interace for CognitoIdentityProvider GetIdentityProviderByIdentifier responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityProviderByIdentifierResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetIdentityProviderByIdentifierResponse object for \a reply to \a request, with parent \a parent.
  */
 GetIdentityProviderByIdentifierResponse::GetIdentityProviderByIdentifierResponse(
         const GetIdentityProviderByIdentifierRequest &request,
@@ -65,6 +60,9 @@ GetIdentityProviderByIdentifierResponse::GetIdentityProviderByIdentifierResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetIdentityProviderByIdentifierRequest * GetIdentityProviderByIdentifierResponse::request() const
 {
     Q_D(const GetIdentityProviderByIdentifierResponse);
@@ -72,9 +70,8 @@ const GetIdentityProviderByIdentifierRequest * GetIdentityProviderByIdentifierRe
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider GetIdentityProviderByIdentifier response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider GetIdentityProviderByIdentifier \a response.
  */
 void GetIdentityProviderByIdentifierResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void GetIdentityProviderByIdentifierResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::GetIdentityProviderByIdentifierResponsePrivate
+ * \brief The GetIdentityProviderByIdentifierResponsePrivate class provides private implementation for GetIdentityProviderByIdentifierResponse.
  * \internal
  *
- * \class GetIdentityProviderByIdentifierResponsePrivate
- *
- * \brief Private implementation for GetIdentityProviderByIdentifierResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityProviderByIdentifierResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetIdentityProviderByIdentifierResponse instance.
+ * Constructs a GetIdentityProviderByIdentifierResponsePrivate object with public implementation \a q.
  */
 GetIdentityProviderByIdentifierResponsePrivate::GetIdentityProviderByIdentifierResponsePrivate(
     GetIdentityProviderByIdentifierResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ GetIdentityProviderByIdentifierResponsePrivate::GetIdentityProviderByIdentifierR
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider GetIdentityProviderByIdentifierResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider GetIdentityProviderByIdentifier response element from \a xml.
  */
 void GetIdentityProviderByIdentifierResponsePrivate::parseGetIdentityProviderByIdentifierResponse(QXmlStreamReader &xml)
 {

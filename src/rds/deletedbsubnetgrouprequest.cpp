@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDBSubnetGroupRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteDBSubnetGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDBSubnetGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DeleteDBSubnetGroupRequestPrivate::DeleteDBSubnetGroupRequestPrivate(
     const RDSRequest::Action action, DeleteDBSubnetGroupRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateIamInstanceProfileRequest::respon
  */
 
 /*!
- *
- * Constructs a DisassociateIamInstanceProfileRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateIamInstanceProfileRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DisassociateIamInstanceProfileRequestPrivate::DisassociateIamInstanceProfileRequestPrivate(
     const EC2Request::Action action, DisassociateIamInstanceProfileRequest * const q)

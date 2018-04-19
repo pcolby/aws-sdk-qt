@@ -29,10 +29,9 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::BatchGetTracesResponse
- *
  * \brief The BatchGetTracesResponse class provides an interace for XRay BatchGetTraces responses.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  *
  *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  *
@@ -40,11 +39,7 @@ namespace XRay {
  */
 
 /*!
- * @brief  Constructs a new BatchGetTracesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetTracesResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetTracesResponse::BatchGetTracesResponse(
         const BatchGetTracesRequest &request,
@@ -56,6 +51,9 @@ BatchGetTracesResponse::BatchGetTracesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetTracesRequest * BatchGetTracesResponse::request() const
 {
     Q_D(const BatchGetTracesResponse);
@@ -63,9 +61,8 @@ const BatchGetTracesRequest * BatchGetTracesResponse::request() const
 }
 
 /*!
- * @brief  Parse a XRay BatchGetTraces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful XRay BatchGetTraces \a response.
  */
 void BatchGetTracesResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void BatchGetTracesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::XRay::BatchGetTracesResponsePrivate
+ * \brief The BatchGetTracesResponsePrivate class provides private implementation for BatchGetTracesResponse.
  * \internal
  *
- * \class BatchGetTracesResponsePrivate
- *
- * \brief Private implementation for BatchGetTracesResponse.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetTracesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetTracesResponse instance.
+ * Constructs a BatchGetTracesResponsePrivate object with public implementation \a q.
  */
 BatchGetTracesResponsePrivate::BatchGetTracesResponsePrivate(
     BatchGetTracesResponse * const q) : XRayResponsePrivate(q)
@@ -96,9 +89,7 @@ BatchGetTracesResponsePrivate::BatchGetTracesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an XRay BatchGetTracesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a XRay BatchGetTraces response element from \a xml.
  */
 void BatchGetTracesResponsePrivate::parseBatchGetTracesResponse(QXmlStreamReader &xml)
 {

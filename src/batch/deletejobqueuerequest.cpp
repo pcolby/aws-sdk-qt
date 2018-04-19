@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteJobQueueRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteJobQueueRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a DeleteJobQueueRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 DeleteJobQueueRequestPrivate::DeleteJobQueueRequestPrivate(
     const BatchRequest::Action action, DeleteJobQueueRequest * const q)

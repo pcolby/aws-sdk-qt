@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetBucketInventoryConfigurationResponse : public S3Response {
 public:
     GetBucketInventoryConfigurationResponse(const GetBucketInventoryConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetBucketInventoryConfigurationRequest * request() const;
+    virtual const GetBucketInventoryConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetBucketInventoryConfigurationResponse)

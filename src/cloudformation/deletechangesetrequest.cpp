@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DeleteChangeSetRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteChangeSetRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a DeleteChangeSetRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 DeleteChangeSetRequestPrivate::DeleteChangeSetRequestPrivate(
     const CloudFormationRequest::Action action, DeleteChangeSetRequest * const q)

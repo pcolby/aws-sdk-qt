@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteLoadBalancerTlsCertificateResponse : public LightsailRe
 public:
     DeleteLoadBalancerTlsCertificateResponse(const DeleteLoadBalancerTlsCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteLoadBalancerTlsCertificateRequest * request() const;
+    virtual const DeleteLoadBalancerTlsCertificateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteLoadBalancerTlsCertificateResponse)

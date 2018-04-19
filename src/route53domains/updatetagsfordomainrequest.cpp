@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * UpdateTagsForDomainRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a UpdateTagsForDomainRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a UpdateTagsForDomainRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 UpdateTagsForDomainRequestPrivate::UpdateTagsForDomainRequestPrivate(
     const Route53DomainsRequest::Action action, UpdateTagsForDomainRequest * const q)

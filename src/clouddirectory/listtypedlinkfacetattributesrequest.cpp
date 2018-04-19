@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListTypedLinkFacetAttributesRequest::response
  */
 
 /*!
- *
- * Constructs a ListTypedLinkFacetAttributesRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a ListTypedLinkFacetAttributesRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 ListTypedLinkFacetAttributesRequestPrivate::ListTypedLinkFacetAttributesRequestPrivate(
     const CloudDirectoryRequest::Action action, ListTypedLinkFacetAttributesRequest * const q)

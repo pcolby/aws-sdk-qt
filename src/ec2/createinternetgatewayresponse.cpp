@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateInternetGatewayResponse
- *
  * \brief The CreateInternetGatewayResponse class provides an interace for EC2 CreateInternetGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateInternetGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateInternetGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateInternetGatewayResponse::CreateInternetGatewayResponse(
         const CreateInternetGatewayRequest &request,
@@ -59,6 +54,9 @@ CreateInternetGatewayResponse::CreateInternetGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateInternetGatewayRequest * CreateInternetGatewayResponse::request() const
 {
     Q_D(const CreateInternetGatewayResponse);
@@ -66,9 +64,8 @@ const CreateInternetGatewayRequest * CreateInternetGatewayResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 CreateInternetGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateInternetGateway \a response.
  */
 void CreateInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateInternetGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateInternetGatewayResponsePrivate
+ * \brief The CreateInternetGatewayResponsePrivate class provides private implementation for CreateInternetGatewayResponse.
  * \internal
  *
- * \class CreateInternetGatewayResponsePrivate
- *
- * \brief Private implementation for CreateInternetGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInternetGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateInternetGatewayResponse instance.
+ * Constructs a CreateInternetGatewayResponsePrivate object with public implementation \a q.
  */
 CreateInternetGatewayResponsePrivate::CreateInternetGatewayResponsePrivate(
     CreateInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateInternetGatewayResponsePrivate::CreateInternetGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateInternetGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateInternetGateway response element from \a xml.
  */
 void CreateInternetGatewayResponsePrivate::parseCreateInternetGatewayResponse(QXmlStreamReader &xml)
 {

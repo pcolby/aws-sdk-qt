@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteAuthorizerResponse : public APIGatewayResponse {
 public:
     DeleteAuthorizerResponse(const DeleteAuthorizerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAuthorizerRequest * request() const;
+    virtual const DeleteAuthorizerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteAuthorizerResponse)

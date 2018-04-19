@@ -34,10 +34,10 @@ class QTAWS_EXPORT PurgeQueueResponse : public SQSResponse {
 public:
     PurgeQueueResponse(const PurgeQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PurgeQueueRequest * request() const;
+    virtual const PurgeQueueRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PurgeQueueResponse)

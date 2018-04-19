@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::SendMessagesResponse
- *
  * \brief The SendMessagesResponse class provides an interace for Pinpoint SendMessages responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::sendMessages
  */
 
 /*!
- * @brief  Constructs a new SendMessagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendMessagesResponse object for \a reply to \a request, with parent \a parent.
  */
 SendMessagesResponse::SendMessagesResponse(
         const SendMessagesRequest &request,
@@ -55,6 +50,9 @@ SendMessagesResponse::SendMessagesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendMessagesRequest * SendMessagesResponse::request() const
 {
     Q_D(const SendMessagesResponse);
@@ -62,9 +60,8 @@ const SendMessagesRequest * SendMessagesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint SendMessages response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint SendMessages \a response.
  */
 void SendMessagesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void SendMessagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::SendMessagesResponsePrivate
+ * \brief The SendMessagesResponsePrivate class provides private implementation for SendMessagesResponse.
  * \internal
  *
- * \class SendMessagesResponsePrivate
- *
- * \brief Private implementation for SendMessagesResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendMessagesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendMessagesResponse instance.
+ * Constructs a SendMessagesResponsePrivate object with public implementation \a q.
  */
 SendMessagesResponsePrivate::SendMessagesResponsePrivate(
     SendMessagesResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ SendMessagesResponsePrivate::SendMessagesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint SendMessagesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint SendMessages response element from \a xml.
  */
 void SendMessagesResponsePrivate::parseSendMessagesResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::DeleteOriginEndpointResponse
- *
  * \brief The DeleteOriginEndpointResponse class provides an interace for MediaPackage DeleteOriginEndpoint responses.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::deleteOriginEndpoint
  */
 
 /*!
- * @brief  Constructs a new DeleteOriginEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteOriginEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteOriginEndpointResponse::DeleteOriginEndpointResponse(
         const DeleteOriginEndpointRequest &request,
@@ -55,6 +50,9 @@ DeleteOriginEndpointResponse::DeleteOriginEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteOriginEndpointRequest * DeleteOriginEndpointResponse::request() const
 {
     Q_D(const DeleteOriginEndpointResponse);
@@ -62,9 +60,8 @@ const DeleteOriginEndpointRequest * DeleteOriginEndpointResponse::request() cons
 }
 
 /*!
- * @brief  Parse a MediaPackage DeleteOriginEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaPackage DeleteOriginEndpoint \a response.
  */
 void DeleteOriginEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteOriginEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaPackage::DeleteOriginEndpointResponsePrivate
+ * \brief The DeleteOriginEndpointResponsePrivate class provides private implementation for DeleteOriginEndpointResponse.
  * \internal
  *
- * \class DeleteOriginEndpointResponsePrivate
- *
- * \brief Private implementation for DeleteOriginEndpointResponse.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteOriginEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteOriginEndpointResponse instance.
+ * Constructs a DeleteOriginEndpointResponsePrivate object with public implementation \a q.
  */
 DeleteOriginEndpointResponsePrivate::DeleteOriginEndpointResponsePrivate(
     DeleteOriginEndpointResponse * const q) : MediaPackageResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteOriginEndpointResponsePrivate::DeleteOriginEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaPackage DeleteOriginEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaPackage DeleteOriginEndpoint response element from \a xml.
  */
 void DeleteOriginEndpointResponsePrivate::parseDeleteOriginEndpointResponse(QXmlStreamReader &xml)
 {

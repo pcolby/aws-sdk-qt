@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::AbortDocumentVersionUploadResponse
- *
  * \brief The AbortDocumentVersionUploadResponse class provides an interace for WorkDocs AbortDocumentVersionUpload responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new AbortDocumentVersionUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AbortDocumentVersionUploadResponse object for \a reply to \a request, with parent \a parent.
  */
 AbortDocumentVersionUploadResponse::AbortDocumentVersionUploadResponse(
         const AbortDocumentVersionUploadRequest &request,
@@ -84,6 +79,9 @@ AbortDocumentVersionUploadResponse::AbortDocumentVersionUploadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AbortDocumentVersionUploadRequest * AbortDocumentVersionUploadResponse::request() const
 {
     Q_D(const AbortDocumentVersionUploadResponse);
@@ -91,9 +89,8 @@ const AbortDocumentVersionUploadRequest * AbortDocumentVersionUploadResponse::re
 }
 
 /*!
- * @brief  Parse a WorkDocs AbortDocumentVersionUpload response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs AbortDocumentVersionUpload \a response.
  */
 void AbortDocumentVersionUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void AbortDocumentVersionUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::AbortDocumentVersionUploadResponsePrivate
+ * \brief The AbortDocumentVersionUploadResponsePrivate class provides private implementation for AbortDocumentVersionUploadResponse.
  * \internal
  *
- * \class AbortDocumentVersionUploadResponsePrivate
- *
- * \brief Private implementation for AbortDocumentVersionUploadResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AbortDocumentVersionUploadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AbortDocumentVersionUploadResponse instance.
+ * Constructs a AbortDocumentVersionUploadResponsePrivate object with public implementation \a q.
  */
 AbortDocumentVersionUploadResponsePrivate::AbortDocumentVersionUploadResponsePrivate(
     AbortDocumentVersionUploadResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ AbortDocumentVersionUploadResponsePrivate::AbortDocumentVersionUploadResponsePri
 }
 
 /*!
- * @brief  Parse an WorkDocs AbortDocumentVersionUploadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs AbortDocumentVersionUpload response element from \a xml.
  */
 void AbortDocumentVersionUploadResponsePrivate::parseAbortDocumentVersionUploadResponse(QXmlStreamReader &xml)
 {

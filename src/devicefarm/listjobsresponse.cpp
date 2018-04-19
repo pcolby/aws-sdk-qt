@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListJobsResponse
- *
  * \brief The ListJobsResponse class provides an interace for DeviceFarm ListJobs responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListJobsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListJobsResponse::ListJobsResponse(
         const ListJobsRequest &request,
@@ -57,6 +52,9 @@ ListJobsResponse::ListJobsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListJobsRequest * ListJobsResponse::request() const
 {
     Q_D(const ListJobsResponse);
@@ -64,9 +62,8 @@ const ListJobsRequest * ListJobsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm ListJobs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm ListJobs \a response.
  */
 void ListJobsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListJobsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::ListJobsResponsePrivate
+ * \brief The ListJobsResponsePrivate class provides private implementation for ListJobsResponse.
  * \internal
  *
- * \class ListJobsResponsePrivate
- *
- * \brief Private implementation for ListJobsResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListJobsResponse instance.
+ * Constructs a ListJobsResponsePrivate object with public implementation \a q.
  */
 ListJobsResponsePrivate::ListJobsResponsePrivate(
     ListJobsResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ ListJobsResponsePrivate::ListJobsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm ListJobsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm ListJobs response element from \a xml.
  */
 void ListJobsResponsePrivate::parseListJobsResponse(QXmlStreamReader &xml)
 {

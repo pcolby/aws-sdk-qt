@@ -28,16 +28,13 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GuardDutyResponse
- *
  * \brief The GuardDutyResponse class provides an interface for GuardDuty responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @brief  Constructs a new GuardDutyResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a GuardDutyResponse object with parent \a parent.
  */
 GuardDutyResponse::GuardDutyResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new GuardDutyResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ GuardDutyResponse::GuardDutyResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GuardDutyResponse object.
- *
+ * \internal
+ * Constructs a GuardDutyResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GuardDutyResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 GuardDutyResponse::GuardDutyResponse(GuardDutyResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ GuardDutyResponse::GuardDutyResponse(GuardDutyResponsePrivate * const d, QObject
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void GuardDutyResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void GuardDutyResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::GuardDuty::GuardDutyResponsePrivate
+ * \brief The GuardDutyResponsePrivate class provides private implementation for GuardDutyResponse.
+ * \internal
  *
- * @class  GuardDutyResponsePrivate
- *
- * @brief  Private implementation for GuardDutyResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GuardDutyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GuardDutyResponse instance.
+ * Constructs a GuardDutyResponsePrivate object with public implementation \a q.
  */
 GuardDutyResponsePrivate::GuardDutyResponsePrivate(
     GuardDutyResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

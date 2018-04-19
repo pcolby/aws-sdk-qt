@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeVirtualGatewaysResponse
- *
  * \brief The DescribeVirtualGatewaysResponse class provides an interace for DirectConnect DescribeVirtualGateways responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeVirtualGatewaysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVirtualGatewaysResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVirtualGatewaysResponse::DescribeVirtualGatewaysResponse(
         const DescribeVirtualGatewaysRequest &request,
@@ -63,6 +58,9 @@ DescribeVirtualGatewaysResponse::DescribeVirtualGatewaysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVirtualGatewaysRequest * DescribeVirtualGatewaysResponse::request() const
 {
     Q_D(const DescribeVirtualGatewaysResponse);
@@ -70,9 +68,8 @@ const DescribeVirtualGatewaysRequest * DescribeVirtualGatewaysResponse::request(
 }
 
 /*!
- * @brief  Parse a DirectConnect DescribeVirtualGateways response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DescribeVirtualGateways \a response.
  */
 void DescribeVirtualGatewaysResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DescribeVirtualGatewaysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::DescribeVirtualGatewaysResponsePrivate
+ * \brief The DescribeVirtualGatewaysResponsePrivate class provides private implementation for DescribeVirtualGatewaysResponse.
  * \internal
  *
- * \class DescribeVirtualGatewaysResponsePrivate
- *
- * \brief Private implementation for DescribeVirtualGatewaysResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVirtualGatewaysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVirtualGatewaysResponse instance.
+ * Constructs a DescribeVirtualGatewaysResponsePrivate object with public implementation \a q.
  */
 DescribeVirtualGatewaysResponsePrivate::DescribeVirtualGatewaysResponsePrivate(
     DescribeVirtualGatewaysResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DescribeVirtualGatewaysResponsePrivate::DescribeVirtualGatewaysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect DescribeVirtualGatewaysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DescribeVirtualGateways response element from \a xml.
  */
 void DescribeVirtualGatewaysResponsePrivate::parseDescribeVirtualGatewaysResponse(QXmlStreamReader &xml)
 {

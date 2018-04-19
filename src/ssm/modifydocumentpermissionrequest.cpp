@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * ModifyDocumentPermissionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ModifyDocumentPermissionRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a ModifyDocumentPermissionRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
     const SSMRequest::Action action, ModifyDocumentPermissionRequest * const q)

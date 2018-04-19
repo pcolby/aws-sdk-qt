@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetPresetResponse : public MediaConvertResponse {
 public:
     GetPresetResponse(const GetPresetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetPresetRequest * request() const;
+    virtual const GetPresetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetPresetResponse)

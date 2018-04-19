@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * PutSlotTypeRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a PutSlotTypeRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a PutSlotTypeRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 PutSlotTypeRequestPrivate::PutSlotTypeRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, PutSlotTypeRequest * const q)

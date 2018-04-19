@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminUpdateDeviceStatusRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a AdminUpdateDeviceStatusRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminUpdateDeviceStatusRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminUpdateDeviceStatusRequestPrivate::AdminUpdateDeviceStatusRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminUpdateDeviceStatusRequest * const q)

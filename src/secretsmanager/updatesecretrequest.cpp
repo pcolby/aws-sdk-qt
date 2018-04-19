@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSecretRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UpdateSecretRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSecretRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 UpdateSecretRequestPrivate::UpdateSecretRequestPrivate(
     const SecretsManagerRequest::Action action, UpdateSecretRequest * const q)

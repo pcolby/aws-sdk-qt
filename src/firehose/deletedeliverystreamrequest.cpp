@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDeliveryStreamRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteDeliveryStreamRequestPrivate object for Firehose \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDeliveryStreamRequestPrivate object for Firehose \a action,
+ * with public implementation \a q.
  */
 DeleteDeliveryStreamRequestPrivate::DeleteDeliveryStreamRequestPrivate(
     const FirehoseRequest::Action action, DeleteDeliveryStreamRequest * const q)

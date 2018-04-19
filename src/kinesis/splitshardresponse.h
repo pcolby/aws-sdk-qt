@@ -34,10 +34,10 @@ class QTAWS_EXPORT SplitShardResponse : public KinesisResponse {
 public:
     SplitShardResponse(const SplitShardRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SplitShardRequest * request() const;
+    virtual const SplitShardRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SplitShardResponse)

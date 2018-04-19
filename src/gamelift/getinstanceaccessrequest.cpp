@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * GetInstanceAccessRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetInstanceAccessRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a GetInstanceAccessRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 GetInstanceAccessRequestPrivate::GetInstanceAccessRequestPrivate(
     const GameLiftRequest::Action action, GetInstanceAccessRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StartTriggerRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a StartTriggerRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a StartTriggerRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 StartTriggerRequestPrivate::StartTriggerRequestPrivate(
     const GlueRequest::Action action, StartTriggerRequest * const q)

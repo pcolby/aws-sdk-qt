@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTableRestoreStatusResponse : public RedshiftResponse 
 public:
     DescribeTableRestoreStatusResponse(const DescribeTableRestoreStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTableRestoreStatusRequest * request() const;
+    virtual const DescribeTableRestoreStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTableRestoreStatusResponse)

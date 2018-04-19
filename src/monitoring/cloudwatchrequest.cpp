@@ -55,7 +55,7 @@ namespace CloudWatch {
  */
 
 /*!
- * Constructs a[n] CloudWatchRequest object for CloudWatch \a action.
+ * Constructs a CloudWatchRequest object for CloudWatch \a action.
  */
 CloudWatchRequest::CloudWatchRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudWatchRequestPrivate(action, this))
@@ -255,8 +255,8 @@ QNetworkRequest CloudWatchRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CloudWatchRequestPrivate object for CloudWatch \a action with,
- * public implementation \a q.
+ * Constructs a CloudWatchRequestPrivate object for CloudWatch \a action,
+ * with public implementation \a q.
  */
 CloudWatchRequestPrivate::CloudWatchRequestPrivate(const CloudWatchRequest::Action action, CloudWatchRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

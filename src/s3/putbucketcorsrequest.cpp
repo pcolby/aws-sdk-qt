@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PutBucketCorsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a PutBucketCorsRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a PutBucketCorsRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 PutBucketCorsRequestPrivate::PutBucketCorsRequestPrivate(
     const S3Request::Action action, PutBucketCorsRequest * const q)

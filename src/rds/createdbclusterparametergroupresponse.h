@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDBClusterParameterGroupResponse : public RDSResponse {
 public:
     CreateDBClusterParameterGroupResponse(const CreateDBClusterParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDBClusterParameterGroupRequest * request() const;
+    virtual const CreateDBClusterParameterGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDBClusterParameterGroupResponse)

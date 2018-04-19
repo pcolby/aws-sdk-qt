@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * VerifyDomainIdentityRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a VerifyDomainIdentityRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a VerifyDomainIdentityRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 VerifyDomainIdentityRequestPrivate::VerifyDomainIdentityRequestPrivate(
     const SESRequest::Action action, VerifyDomainIdentityRequest * const q)

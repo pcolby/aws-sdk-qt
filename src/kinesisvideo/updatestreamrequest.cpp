@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateStreamRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UpdateStreamRequestPrivate object for KinesisVideo \a action with,
- * public implementation \a q.
+ * Constructs a UpdateStreamRequestPrivate object for KinesisVideo \a action,
+ * with public implementation \a q.
  */
 UpdateStreamRequestPrivate::UpdateStreamRequestPrivate(
     const KinesisVideoRequest::Action action, UpdateStreamRequest * const q)

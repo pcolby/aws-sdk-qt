@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListHealthChecksResponse : public Route53Response {
 public:
     ListHealthChecksResponse(const ListHealthChecksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListHealthChecksRequest * request() const;
+    virtual const ListHealthChecksRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListHealthChecksResponse)

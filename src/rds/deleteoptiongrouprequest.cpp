@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DeleteOptionGroupRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteOptionGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteOptionGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DeleteOptionGroupRequestPrivate::DeleteOptionGroupRequestPrivate(
     const RDSRequest::Action action, DeleteOptionGroupRequest * const q)

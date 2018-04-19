@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetDeploymentStatusResponse
- *
  * \brief The GetDeploymentStatusResponse class provides an interace for Greengrass GetDeploymentStatus responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetDeploymentStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDeploymentStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDeploymentStatusResponse::GetDeploymentStatusResponse(
         const GetDeploymentStatusRequest &request,
@@ -58,6 +53,9 @@ GetDeploymentStatusResponse::GetDeploymentStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDeploymentStatusRequest * GetDeploymentStatusResponse::request() const
 {
     Q_D(const GetDeploymentStatusResponse);
@@ -65,9 +63,8 @@ const GetDeploymentStatusRequest * GetDeploymentStatusResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass GetDeploymentStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass GetDeploymentStatus \a response.
  */
 void GetDeploymentStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetDeploymentStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::GetDeploymentStatusResponsePrivate
+ * \brief The GetDeploymentStatusResponsePrivate class provides private implementation for GetDeploymentStatusResponse.
  * \internal
  *
- * \class GetDeploymentStatusResponsePrivate
- *
- * \brief Private implementation for GetDeploymentStatusResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeploymentStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDeploymentStatusResponse instance.
+ * Constructs a GetDeploymentStatusResponsePrivate object with public implementation \a q.
  */
 GetDeploymentStatusResponsePrivate::GetDeploymentStatusResponsePrivate(
     GetDeploymentStatusResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ GetDeploymentStatusResponsePrivate::GetDeploymentStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass GetDeploymentStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass GetDeploymentStatus response element from \a xml.
  */
 void GetDeploymentStatusResponsePrivate::parseGetDeploymentStatusResponse(QXmlStreamReader &xml)
 {

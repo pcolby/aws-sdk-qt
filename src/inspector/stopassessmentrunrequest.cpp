@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * StopAssessmentRunRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a StopAssessmentRunRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a StopAssessmentRunRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 StopAssessmentRunRequestPrivate::StopAssessmentRunRequestPrivate(
     const InspectorRequest::Action action, StopAssessmentRunRequest * const q)

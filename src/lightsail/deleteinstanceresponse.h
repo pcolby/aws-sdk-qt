@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteInstanceResponse : public LightsailResponse {
 public:
     DeleteInstanceResponse(const DeleteInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteInstanceRequest * request() const;
+    virtual const DeleteInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteInstanceResponse)

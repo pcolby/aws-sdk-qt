@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotCopyGrantRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteSnapshotCopyGrantRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSnapshotCopyGrantRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DeleteSnapshotCopyGrantRequestPrivate::DeleteSnapshotCopyGrantRequestPrivate(
     const RedshiftRequest::Action action, DeleteSnapshotCopyGrantRequest * const q)

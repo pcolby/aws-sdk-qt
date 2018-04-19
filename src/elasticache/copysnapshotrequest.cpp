@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CopySnapshotRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CopySnapshotRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a CopySnapshotRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 CopySnapshotRequestPrivate::CopySnapshotRequestPrivate(
     const ElastiCacheRequest::Action action, CopySnapshotRequest * const q)

@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * DescribeHandshakeRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribeHandshakeRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a DescribeHandshakeRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 DescribeHandshakeRequestPrivate::DescribeHandshakeRequestPrivate(
     const OrganizationsRequest::Action action, DescribeHandshakeRequest * const q)

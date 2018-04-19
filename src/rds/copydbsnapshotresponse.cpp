@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CopyDBSnapshotResponse
- *
  * \brief The CopyDBSnapshotResponse class provides an interace for RDS CopyDBSnapshot responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CopyDBSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopyDBSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CopyDBSnapshotResponse::CopyDBSnapshotResponse(
         const CopyDBSnapshotRequest &request,
@@ -119,6 +114,9 @@ CopyDBSnapshotResponse::CopyDBSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopyDBSnapshotRequest * CopyDBSnapshotResponse::request() const
 {
     Q_D(const CopyDBSnapshotResponse);
@@ -126,9 +124,8 @@ const CopyDBSnapshotRequest * CopyDBSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS CopyDBSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CopyDBSnapshot \a response.
  */
 void CopyDBSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CopyDBSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CopyDBSnapshotResponsePrivate
+ * \brief The CopyDBSnapshotResponsePrivate class provides private implementation for CopyDBSnapshotResponse.
  * \internal
  *
- * \class CopyDBSnapshotResponsePrivate
- *
- * \brief Private implementation for CopyDBSnapshotResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyDBSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopyDBSnapshotResponse instance.
+ * Constructs a CopyDBSnapshotResponsePrivate object with public implementation \a q.
  */
 CopyDBSnapshotResponsePrivate::CopyDBSnapshotResponsePrivate(
     CopyDBSnapshotResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CopyDBSnapshotResponsePrivate::CopyDBSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CopyDBSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CopyDBSnapshot response element from \a xml.
  */
 void CopyDBSnapshotResponsePrivate::parseCopyDBSnapshotResponse(QXmlStreamReader &xml)
 {

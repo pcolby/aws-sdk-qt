@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeGroupResponse : public WorkMailResponse {
 public:
     DescribeGroupResponse(const DescribeGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeGroupRequest * request() const;
+    virtual const DescribeGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeGroupResponse)

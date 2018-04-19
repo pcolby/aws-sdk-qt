@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTrustedAdvisorCheckRefreshStatusesResponse : public S
 public:
     DescribeTrustedAdvisorCheckRefreshStatusesResponse(const DescribeTrustedAdvisorCheckRefreshStatusesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTrustedAdvisorCheckRefreshStatusesRequest * request() const;
+    virtual const DescribeTrustedAdvisorCheckRefreshStatusesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTrustedAdvisorCheckRefreshStatusesResponse)

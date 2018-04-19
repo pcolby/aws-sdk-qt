@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetPublicKeyConfigResponse
- *
  * \brief The GetPublicKeyConfigResponse class provides an interace for CloudFront GetPublicKeyConfig responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetPublicKeyConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPublicKeyConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPublicKeyConfigResponse::GetPublicKeyConfigResponse(
         const GetPublicKeyConfigRequest &request,
@@ -60,6 +55,9 @@ GetPublicKeyConfigResponse::GetPublicKeyConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPublicKeyConfigRequest * GetPublicKeyConfigResponse::request() const
 {
     Q_D(const GetPublicKeyConfigResponse);
@@ -67,9 +65,8 @@ const GetPublicKeyConfigRequest * GetPublicKeyConfigResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront GetPublicKeyConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront GetPublicKeyConfig \a response.
  */
 void GetPublicKeyConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetPublicKeyConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::GetPublicKeyConfigResponsePrivate
+ * \brief The GetPublicKeyConfigResponsePrivate class provides private implementation for GetPublicKeyConfigResponse.
  * \internal
  *
- * \class GetPublicKeyConfigResponsePrivate
- *
- * \brief Private implementation for GetPublicKeyConfigResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPublicKeyConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPublicKeyConfigResponse instance.
+ * Constructs a GetPublicKeyConfigResponsePrivate object with public implementation \a q.
  */
 GetPublicKeyConfigResponsePrivate::GetPublicKeyConfigResponsePrivate(
     GetPublicKeyConfigResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ GetPublicKeyConfigResponsePrivate::GetPublicKeyConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront GetPublicKeyConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront GetPublicKeyConfig response element from \a xml.
  */
 void GetPublicKeyConfigResponsePrivate::parseGetPublicKeyConfigResponse(QXmlStreamReader &xml)
 {

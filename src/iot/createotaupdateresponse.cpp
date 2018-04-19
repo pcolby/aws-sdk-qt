@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateOTAUpdateResponse
- *
  * \brief The CreateOTAUpdateResponse class provides an interace for IoT CreateOTAUpdate responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateOTAUpdateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateOTAUpdateResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateOTAUpdateResponse::CreateOTAUpdateResponse(
         const CreateOTAUpdateRequest &request,
@@ -66,6 +61,9 @@ CreateOTAUpdateResponse::CreateOTAUpdateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateOTAUpdateRequest * CreateOTAUpdateResponse::request() const
 {
     Q_D(const CreateOTAUpdateResponse);
@@ -73,9 +71,8 @@ const CreateOTAUpdateRequest * CreateOTAUpdateResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT CreateOTAUpdate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT CreateOTAUpdate \a response.
  */
 void CreateOTAUpdateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateOTAUpdateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::CreateOTAUpdateResponsePrivate
+ * \brief The CreateOTAUpdateResponsePrivate class provides private implementation for CreateOTAUpdateResponse.
  * \internal
  *
- * \class CreateOTAUpdateResponsePrivate
- *
- * \brief Private implementation for CreateOTAUpdateResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOTAUpdateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateOTAUpdateResponse instance.
+ * Constructs a CreateOTAUpdateResponsePrivate object with public implementation \a q.
  */
 CreateOTAUpdateResponsePrivate::CreateOTAUpdateResponsePrivate(
     CreateOTAUpdateResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateOTAUpdateResponsePrivate::CreateOTAUpdateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT CreateOTAUpdateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT CreateOTAUpdate response element from \a xml.
  */
 void CreateOTAUpdateResponsePrivate::parseCreateOTAUpdateResponse(QXmlStreamReader &xml)
 {

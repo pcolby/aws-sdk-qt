@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeReplicationGroupsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeReplicationGroupsRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a DescribeReplicationGroupsRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 DescribeReplicationGroupsRequestPrivate::DescribeReplicationGroupsRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeReplicationGroupsRequest * const q)

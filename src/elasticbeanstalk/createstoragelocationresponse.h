@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateStorageLocationResponse : public ElasticBeanstalkRespon
 public:
     CreateStorageLocationResponse(const CreateStorageLocationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateStorageLocationRequest * request() const;
+    virtual const CreateStorageLocationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateStorageLocationResponse)

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeleteProductRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteProductRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DeleteProductRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DeleteProductRequestPrivate::DeleteProductRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteProductRequest * const q)

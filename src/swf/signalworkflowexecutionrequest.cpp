@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * SignalWorkflowExecutionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a SignalWorkflowExecutionRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a SignalWorkflowExecutionRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 SignalWorkflowExecutionRequestPrivate::SignalWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, SignalWorkflowExecutionRequest * const q)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CloneReceiptRuleSetRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a CloneReceiptRuleSetRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a CloneReceiptRuleSetRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, CloneReceiptRuleSetRequest * const q)

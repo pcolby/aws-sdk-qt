@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSeverityLevelsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeSeverityLevelsRequestPrivate object for Support \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSeverityLevelsRequestPrivate object for Support \a action,
+ * with public implementation \a q.
  */
 DescribeSeverityLevelsRequestPrivate::DescribeSeverityLevelsRequestPrivate(
     const SupportRequest::Action action, DescribeSeverityLevelsRequest * const q)

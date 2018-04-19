@@ -29,10 +29,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::DescribeEnvironmentStatusResponse
- *
  * \brief The DescribeEnvironmentStatusResponse class provides an interace for Cloud9 DescribeEnvironmentStatus responses.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -93,11 +92,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEnvironmentStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEnvironmentStatusResponse::DescribeEnvironmentStatusResponse(
         const DescribeEnvironmentStatusRequest &request,
@@ -109,6 +104,9 @@ DescribeEnvironmentStatusResponse::DescribeEnvironmentStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEnvironmentStatusRequest * DescribeEnvironmentStatusResponse::request() const
 {
     Q_D(const DescribeEnvironmentStatusResponse);
@@ -116,9 +114,8 @@ const DescribeEnvironmentStatusRequest * DescribeEnvironmentStatusResponse::requ
 }
 
 /*!
- * @brief  Parse a Cloud9 DescribeEnvironmentStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Cloud9 DescribeEnvironmentStatus \a response.
  */
 void DescribeEnvironmentStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -128,19 +125,15 @@ void DescribeEnvironmentStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Cloud9::DescribeEnvironmentStatusResponsePrivate
+ * \brief The DescribeEnvironmentStatusResponsePrivate class provides private implementation for DescribeEnvironmentStatusResponse.
  * \internal
  *
- * \class DescribeEnvironmentStatusResponsePrivate
- *
- * \brief Private implementation for DescribeEnvironmentStatusResponse.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEnvironmentStatusResponse instance.
+ * Constructs a DescribeEnvironmentStatusResponsePrivate object with public implementation \a q.
  */
 DescribeEnvironmentStatusResponsePrivate::DescribeEnvironmentStatusResponsePrivate(
     DescribeEnvironmentStatusResponse * const q) : Cloud9ResponsePrivate(q)
@@ -149,9 +142,7 @@ DescribeEnvironmentStatusResponsePrivate::DescribeEnvironmentStatusResponsePriva
 }
 
 /*!
- * @brief  Parse an Cloud9 DescribeEnvironmentStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Cloud9 DescribeEnvironmentStatus response element from \a xml.
  */
 void DescribeEnvironmentStatusResponsePrivate::parseDescribeEnvironmentStatusResponse(QXmlStreamReader &xml)
 {

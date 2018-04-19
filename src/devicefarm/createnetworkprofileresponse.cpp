@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::CreateNetworkProfileResponse
- *
  * \brief The CreateNetworkProfileResponse class provides an interace for DeviceFarm CreateNetworkProfile responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new CreateNetworkProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateNetworkProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateNetworkProfileResponse::CreateNetworkProfileResponse(
         const CreateNetworkProfileRequest &request,
@@ -57,6 +52,9 @@ CreateNetworkProfileResponse::CreateNetworkProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateNetworkProfileRequest * CreateNetworkProfileResponse::request() const
 {
     Q_D(const CreateNetworkProfileResponse);
@@ -64,9 +62,8 @@ const CreateNetworkProfileRequest * CreateNetworkProfileResponse::request() cons
 }
 
 /*!
- * @brief  Parse a DeviceFarm CreateNetworkProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm CreateNetworkProfile \a response.
  */
 void CreateNetworkProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void CreateNetworkProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::CreateNetworkProfileResponsePrivate
+ * \brief The CreateNetworkProfileResponsePrivate class provides private implementation for CreateNetworkProfileResponse.
  * \internal
  *
- * \class CreateNetworkProfileResponsePrivate
- *
- * \brief Private implementation for CreateNetworkProfileResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNetworkProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateNetworkProfileResponse instance.
+ * Constructs a CreateNetworkProfileResponsePrivate object with public implementation \a q.
  */
 CreateNetworkProfileResponsePrivate::CreateNetworkProfileResponsePrivate(
     CreateNetworkProfileResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ CreateNetworkProfileResponsePrivate::CreateNetworkProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm CreateNetworkProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm CreateNetworkProfile response element from \a xml.
  */
 void CreateNetworkProfileResponsePrivate::parseCreateNetworkProfileResponse(QXmlStreamReader &xml)
 {

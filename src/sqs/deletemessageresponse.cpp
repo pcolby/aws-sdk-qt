@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::DeleteMessageResponse
- *
  * \brief The DeleteMessageResponse class provides an interace for SQS DeleteMessage responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new DeleteMessageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteMessageResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteMessageResponse::DeleteMessageResponse(
         const DeleteMessageRequest &request,
@@ -121,6 +116,9 @@ DeleteMessageResponse::DeleteMessageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteMessageRequest * DeleteMessageResponse::request() const
 {
     Q_D(const DeleteMessageResponse);
@@ -128,9 +126,8 @@ const DeleteMessageRequest * DeleteMessageResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS DeleteMessage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS DeleteMessage \a response.
  */
 void DeleteMessageResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void DeleteMessageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::DeleteMessageResponsePrivate
+ * \brief The DeleteMessageResponsePrivate class provides private implementation for DeleteMessageResponse.
  * \internal
  *
- * \class DeleteMessageResponsePrivate
- *
- * \brief Private implementation for DeleteMessageResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMessageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteMessageResponse instance.
+ * Constructs a DeleteMessageResponsePrivate object with public implementation \a q.
  */
 DeleteMessageResponsePrivate::DeleteMessageResponsePrivate(
     DeleteMessageResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ DeleteMessageResponsePrivate::DeleteMessageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS DeleteMessageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS DeleteMessage response element from \a xml.
  */
 void DeleteMessageResponsePrivate::parseDeleteMessageResponse(QXmlStreamReader &xml)
 {

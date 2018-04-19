@@ -29,10 +29,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::AddTagsResponse
- *
  * \brief The AddTagsResponse class provides an interace for ElasticsearchService AddTags responses.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new AddTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 AddTagsResponse::AddTagsResponse(
         const AddTagsRequest &request,
@@ -64,6 +59,9 @@ AddTagsResponse::AddTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddTagsRequest * AddTagsResponse::request() const
 {
     Q_D(const AddTagsResponse);
@@ -71,9 +69,8 @@ const AddTagsRequest * AddTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticsearchService AddTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticsearchService AddTags \a response.
  */
 void AddTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void AddTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticsearchService::AddTagsResponsePrivate
+ * \brief The AddTagsResponsePrivate class provides private implementation for AddTagsResponse.
  * \internal
  *
- * \class AddTagsResponsePrivate
- *
- * \brief Private implementation for AddTagsResponse.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddTagsResponse instance.
+ * Constructs a AddTagsResponsePrivate object with public implementation \a q.
  */
 AddTagsResponsePrivate::AddTagsResponsePrivate(
     AddTagsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
@@ -104,9 +97,7 @@ AddTagsResponsePrivate::AddTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticsearchService AddTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticsearchService AddTags response element from \a xml.
  */
 void AddTagsResponsePrivate::parseAddTagsResponse(QXmlStreamReader &xml)
 {

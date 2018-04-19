@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DescribeBackupResponse
- *
  * \brief The DescribeBackupResponse class provides an interace for DynamoDB DescribeBackup responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DescribeBackupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeBackupResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeBackupResponse::DescribeBackupResponse(
         const DescribeBackupRequest &request,
@@ -74,6 +69,9 @@ DescribeBackupResponse::DescribeBackupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeBackupRequest * DescribeBackupResponse::request() const
 {
     Q_D(const DescribeBackupResponse);
@@ -81,9 +79,8 @@ const DescribeBackupRequest * DescribeBackupResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB DescribeBackup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB DescribeBackup \a response.
  */
 void DescribeBackupResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DescribeBackupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::DescribeBackupResponsePrivate
+ * \brief The DescribeBackupResponsePrivate class provides private implementation for DescribeBackupResponse.
  * \internal
  *
- * \class DescribeBackupResponsePrivate
- *
- * \brief Private implementation for DescribeBackupResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBackupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeBackupResponse instance.
+ * Constructs a DescribeBackupResponsePrivate object with public implementation \a q.
  */
 DescribeBackupResponsePrivate::DescribeBackupResponsePrivate(
     DescribeBackupResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ DescribeBackupResponsePrivate::DescribeBackupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB DescribeBackupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB DescribeBackup response element from \a xml.
  */
 void DescribeBackupResponsePrivate::parseDescribeBackupResponse(QXmlStreamReader &xml)
 {

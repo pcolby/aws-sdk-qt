@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateNotebookInstanceResponse : public SageMakerResponse {
 public:
     UpdateNotebookInstanceResponse(const UpdateNotebookInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateNotebookInstanceRequest * request() const;
+    virtual const UpdateNotebookInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateNotebookInstanceResponse)

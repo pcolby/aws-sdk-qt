@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * GetCognitoEventsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetCognitoEventsRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a GetCognitoEventsRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 GetCognitoEventsRequestPrivate::GetCognitoEventsRequestPrivate(
     const CognitoSyncRequest::Action action, GetCognitoEventsRequest * const q)

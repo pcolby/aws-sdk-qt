@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreateActivationResponse
- *
  * \brief The CreateActivationResponse class provides an interace for SSM CreateActivation responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreateActivationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateActivationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateActivationResponse::CreateActivationResponse(
         const CreateActivationRequest &request,
@@ -79,6 +74,9 @@ CreateActivationResponse::CreateActivationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateActivationRequest * CreateActivationResponse::request() const
 {
     Q_D(const CreateActivationResponse);
@@ -86,9 +84,8 @@ const CreateActivationRequest * CreateActivationResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM CreateActivation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM CreateActivation \a response.
  */
 void CreateActivationResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void CreateActivationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::CreateActivationResponsePrivate
+ * \brief The CreateActivationResponsePrivate class provides private implementation for CreateActivationResponse.
  * \internal
  *
- * \class CreateActivationResponsePrivate
- *
- * \brief Private implementation for CreateActivationResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateActivationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateActivationResponse instance.
+ * Constructs a CreateActivationResponsePrivate object with public implementation \a q.
  */
 CreateActivationResponsePrivate::CreateActivationResponsePrivate(
     CreateActivationResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ CreateActivationResponsePrivate::CreateActivationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM CreateActivationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM CreateActivation response element from \a xml.
  */
 void CreateActivationResponsePrivate::parseCreateActivationResponse(QXmlStreamReader &xml)
 {

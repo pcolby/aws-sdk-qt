@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * AttachElasticLoadBalancerRequest::response(QN
  */
 
 /*!
- *
- * Constructs a AttachElasticLoadBalancerRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a AttachElasticLoadBalancerRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 AttachElasticLoadBalancerRequestPrivate::AttachElasticLoadBalancerRequestPrivate(
     const OpsWorksRequest::Action action, AttachElasticLoadBalancerRequest * const q)

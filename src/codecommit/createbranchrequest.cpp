@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * CreateBranchRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateBranchRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a CreateBranchRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 CreateBranchRequestPrivate::CreateBranchRequestPrivate(
     const CodeCommitRequest::Action action, CreateBranchRequest * const q)

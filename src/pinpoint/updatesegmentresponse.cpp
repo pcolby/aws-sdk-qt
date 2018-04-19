@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateSegmentResponse
- *
  * \brief The UpdateSegmentResponse class provides an interace for Pinpoint UpdateSegment responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateSegment
  */
 
 /*!
- * @brief  Constructs a new UpdateSegmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSegmentResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSegmentResponse::UpdateSegmentResponse(
         const UpdateSegmentRequest &request,
@@ -55,6 +50,9 @@ UpdateSegmentResponse::UpdateSegmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSegmentRequest * UpdateSegmentResponse::request() const
 {
     Q_D(const UpdateSegmentResponse);
@@ -62,9 +60,8 @@ const UpdateSegmentRequest * UpdateSegmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint UpdateSegment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint UpdateSegment \a response.
  */
 void UpdateSegmentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateSegmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::UpdateSegmentResponsePrivate
+ * \brief The UpdateSegmentResponsePrivate class provides private implementation for UpdateSegmentResponse.
  * \internal
  *
- * \class UpdateSegmentResponsePrivate
- *
- * \brief Private implementation for UpdateSegmentResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSegmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSegmentResponse instance.
+ * Constructs a UpdateSegmentResponsePrivate object with public implementation \a q.
  */
 UpdateSegmentResponsePrivate::UpdateSegmentResponsePrivate(
     UpdateSegmentResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateSegmentResponsePrivate::UpdateSegmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint UpdateSegmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint UpdateSegment response element from \a xml.
  */
 void UpdateSegmentResponsePrivate::parseUpdateSegmentResponse(QXmlStreamReader &xml)
 {

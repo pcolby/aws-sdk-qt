@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DeleteConnectionResponse
- *
  * \brief The DeleteConnectionResponse class provides an interace for DirectConnect DeleteConnection responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DeleteConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteConnectionResponse::DeleteConnectionResponse(
         const DeleteConnectionRequest &request,
@@ -63,6 +58,9 @@ DeleteConnectionResponse::DeleteConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteConnectionRequest * DeleteConnectionResponse::request() const
 {
     Q_D(const DeleteConnectionResponse);
@@ -70,9 +68,8 @@ const DeleteConnectionRequest * DeleteConnectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect DeleteConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DeleteConnection \a response.
  */
 void DeleteConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DeleteConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::DeleteConnectionResponsePrivate
+ * \brief The DeleteConnectionResponsePrivate class provides private implementation for DeleteConnectionResponse.
  * \internal
  *
- * \class DeleteConnectionResponsePrivate
- *
- * \brief Private implementation for DeleteConnectionResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteConnectionResponse instance.
+ * Constructs a DeleteConnectionResponsePrivate object with public implementation \a q.
  */
 DeleteConnectionResponsePrivate::DeleteConnectionResponsePrivate(
     DeleteConnectionResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DeleteConnectionResponsePrivate::DeleteConnectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect DeleteConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DeleteConnection response element from \a xml.
  */
 void DeleteConnectionResponsePrivate::parseDeleteConnectionResponse(QXmlStreamReader &xml)
 {

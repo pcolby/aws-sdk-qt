@@ -29,10 +29,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::ListContainersResponse
- *
  * \brief The ListContainersResponse class provides an interace for MediaStore ListContainers responses.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -41,11 +40,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new ListContainersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListContainersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListContainersResponse::ListContainersResponse(
         const ListContainersRequest &request,
@@ -57,6 +52,9 @@ ListContainersResponse::ListContainersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListContainersRequest * ListContainersResponse::request() const
 {
     Q_D(const ListContainersResponse);
@@ -64,9 +62,8 @@ const ListContainersRequest * ListContainersResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaStore ListContainers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaStore ListContainers \a response.
  */
 void ListContainersResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListContainersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaStore::ListContainersResponsePrivate
+ * \brief The ListContainersResponsePrivate class provides private implementation for ListContainersResponse.
  * \internal
  *
- * \class ListContainersResponsePrivate
- *
- * \brief Private implementation for ListContainersResponse.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListContainersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListContainersResponse instance.
+ * Constructs a ListContainersResponsePrivate object with public implementation \a q.
  */
 ListContainersResponsePrivate::ListContainersResponsePrivate(
     ListContainersResponse * const q) : MediaStoreResponsePrivate(q)
@@ -97,9 +90,7 @@ ListContainersResponsePrivate::ListContainersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaStore ListContainersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaStore ListContainers response element from \a xml.
  */
 void ListContainersResponsePrivate::parseListContainersResponse(QXmlStreamReader &xml)
 {

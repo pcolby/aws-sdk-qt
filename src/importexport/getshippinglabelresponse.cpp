@@ -29,10 +29,9 @@ namespace ImportExport {
 
 /*!
  * \class QtAws::ImportExport::GetShippingLabelResponse
- *
  * \brief The GetShippingLabelResponse class provides an interace for ImportExport GetShippingLabel responses.
  *
- * \ingroup ImportExport
+ * \inmodule QtAwsImportExport
  *
  *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
  *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
@@ -42,11 +41,7 @@ namespace ImportExport {
  */
 
 /*!
- * @brief  Constructs a new GetShippingLabelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetShippingLabelResponse object for \a reply to \a request, with parent \a parent.
  */
 GetShippingLabelResponse::GetShippingLabelResponse(
         const GetShippingLabelRequest &request,
@@ -58,6 +53,9 @@ GetShippingLabelResponse::GetShippingLabelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetShippingLabelRequest * GetShippingLabelResponse::request() const
 {
     Q_D(const GetShippingLabelResponse);
@@ -65,9 +63,8 @@ const GetShippingLabelRequest * GetShippingLabelResponse::request() const
 }
 
 /*!
- * @brief  Parse a ImportExport GetShippingLabel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ImportExport GetShippingLabel \a response.
  */
 void GetShippingLabelResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetShippingLabelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ImportExport::GetShippingLabelResponsePrivate
+ * \brief The GetShippingLabelResponsePrivate class provides private implementation for GetShippingLabelResponse.
  * \internal
  *
- * \class GetShippingLabelResponsePrivate
- *
- * \brief Private implementation for GetShippingLabelResponse.
+ * \inmodule QtAwsImportExport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetShippingLabelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetShippingLabelResponse instance.
+ * Constructs a GetShippingLabelResponsePrivate object with public implementation \a q.
  */
 GetShippingLabelResponsePrivate::GetShippingLabelResponsePrivate(
     GetShippingLabelResponse * const q) : ImportExportResponsePrivate(q)
@@ -98,9 +91,7 @@ GetShippingLabelResponsePrivate::GetShippingLabelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ImportExport GetShippingLabelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ImportExport GetShippingLabel response element from \a xml.
  */
 void GetShippingLabelResponsePrivate::parseGetShippingLabelResponse(QXmlStreamReader &xml)
 {

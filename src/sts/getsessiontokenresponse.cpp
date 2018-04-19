@@ -29,10 +29,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::GetSessionTokenResponse
- *
  * \brief The GetSessionTokenResponse class provides an interace for STS GetSessionToken responses.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -97,11 +96,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new GetSessionTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSessionTokenResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSessionTokenResponse::GetSessionTokenResponse(
         const GetSessionTokenRequest &request,
@@ -113,6 +108,9 @@ GetSessionTokenResponse::GetSessionTokenResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSessionTokenRequest * GetSessionTokenResponse::request() const
 {
     Q_D(const GetSessionTokenResponse);
@@ -120,9 +118,8 @@ const GetSessionTokenRequest * GetSessionTokenResponse::request() const
 }
 
 /*!
- * @brief  Parse a STS GetSessionToken response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful STS GetSessionToken \a response.
  */
 void GetSessionTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -132,19 +129,15 @@ void GetSessionTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::STS::GetSessionTokenResponsePrivate
+ * \brief The GetSessionTokenResponsePrivate class provides private implementation for GetSessionTokenResponse.
  * \internal
  *
- * \class GetSessionTokenResponsePrivate
- *
- * \brief Private implementation for GetSessionTokenResponse.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSessionTokenResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSessionTokenResponse instance.
+ * Constructs a GetSessionTokenResponsePrivate object with public implementation \a q.
  */
 GetSessionTokenResponsePrivate::GetSessionTokenResponsePrivate(
     GetSessionTokenResponse * const q) : STSResponsePrivate(q)
@@ -153,9 +146,7 @@ GetSessionTokenResponsePrivate::GetSessionTokenResponsePrivate(
 }
 
 /*!
- * @brief  Parse an STS GetSessionTokenResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a STS GetSessionToken response element from \a xml.
  */
 void GetSessionTokenResponsePrivate::parseGetSessionTokenResponse(QXmlStreamReader &xml)
 {

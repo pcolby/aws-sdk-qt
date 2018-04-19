@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ModifyClusterRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a ModifyClusterRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 ModifyClusterRequestPrivate::ModifyClusterRequestPrivate(
     const RedshiftRequest::Action action, ModifyClusterRequest * const q)

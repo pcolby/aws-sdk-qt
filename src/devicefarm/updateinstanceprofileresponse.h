@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateInstanceProfileResponse : public DeviceFarmResponse {
 public:
     UpdateInstanceProfileResponse(const UpdateInstanceProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateInstanceProfileRequest * request() const;
+    virtual const UpdateInstanceProfileRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateInstanceProfileResponse)

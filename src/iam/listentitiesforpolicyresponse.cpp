@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListEntitiesForPolicyResponse
- *
  * \brief The ListEntitiesForPolicyResponse class provides an interace for IAM ListEntitiesForPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListEntitiesForPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListEntitiesForPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 ListEntitiesForPolicyResponse::ListEntitiesForPolicyResponse(
         const ListEntitiesForPolicyRequest &request,
@@ -120,6 +115,9 @@ ListEntitiesForPolicyResponse::ListEntitiesForPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListEntitiesForPolicyRequest * ListEntitiesForPolicyResponse::request() const
 {
     Q_D(const ListEntitiesForPolicyResponse);
@@ -127,9 +125,8 @@ const ListEntitiesForPolicyRequest * ListEntitiesForPolicyResponse::request() co
 }
 
 /*!
- * @brief  Parse a IAM ListEntitiesForPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListEntitiesForPolicy \a response.
  */
 void ListEntitiesForPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListEntitiesForPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListEntitiesForPolicyResponsePrivate
+ * \brief The ListEntitiesForPolicyResponsePrivate class provides private implementation for ListEntitiesForPolicyResponse.
  * \internal
  *
- * \class ListEntitiesForPolicyResponsePrivate
- *
- * \brief Private implementation for ListEntitiesForPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEntitiesForPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListEntitiesForPolicyResponse instance.
+ * Constructs a ListEntitiesForPolicyResponsePrivate object with public implementation \a q.
  */
 ListEntitiesForPolicyResponsePrivate::ListEntitiesForPolicyResponsePrivate(
     ListEntitiesForPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListEntitiesForPolicyResponsePrivate::ListEntitiesForPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListEntitiesForPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListEntitiesForPolicy response element from \a xml.
  */
 void ListEntitiesForPolicyResponsePrivate::parseListEntitiesForPolicyResponse(QXmlStreamReader &xml)
 {

@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * ListQueueTagsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListQueueTagsRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a ListQueueTagsRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 ListQueueTagsRequestPrivate::ListQueueTagsRequestPrivate(
     const SQSRequest::Action action, ListQueueTagsRequest * const q)

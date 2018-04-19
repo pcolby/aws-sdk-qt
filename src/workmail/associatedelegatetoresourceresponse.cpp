@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::AssociateDelegateToResourceResponse
- *
  * \brief The AssociateDelegateToResourceResponse class provides an interace for WorkMail AssociateDelegateToResource responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new AssociateDelegateToResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateDelegateToResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateDelegateToResourceResponse::AssociateDelegateToResourceResponse(
         const AssociateDelegateToResourceRequest &request,
@@ -88,6 +83,9 @@ AssociateDelegateToResourceResponse::AssociateDelegateToResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateDelegateToResourceRequest * AssociateDelegateToResourceResponse::request() const
 {
     Q_D(const AssociateDelegateToResourceResponse);
@@ -95,9 +93,8 @@ const AssociateDelegateToResourceRequest * AssociateDelegateToResourceResponse::
 }
 
 /*!
- * @brief  Parse a WorkMail AssociateDelegateToResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail AssociateDelegateToResource \a response.
  */
 void AssociateDelegateToResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void AssociateDelegateToResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::AssociateDelegateToResourceResponsePrivate
+ * \brief The AssociateDelegateToResourceResponsePrivate class provides private implementation for AssociateDelegateToResourceResponse.
  * \internal
  *
- * \class AssociateDelegateToResourceResponsePrivate
- *
- * \brief Private implementation for AssociateDelegateToResourceResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateDelegateToResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateDelegateToResourceResponse instance.
+ * Constructs a AssociateDelegateToResourceResponsePrivate object with public implementation \a q.
  */
 AssociateDelegateToResourceResponsePrivate::AssociateDelegateToResourceResponsePrivate(
     AssociateDelegateToResourceResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ AssociateDelegateToResourceResponsePrivate::AssociateDelegateToResourceResponseP
 }
 
 /*!
- * @brief  Parse an WorkMail AssociateDelegateToResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail AssociateDelegateToResource response element from \a xml.
  */
 void AssociateDelegateToResourceResponsePrivate::parseAssociateDelegateToResourceResponse(QXmlStreamReader &xml)
 {

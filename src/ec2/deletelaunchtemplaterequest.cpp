@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLaunchTemplateRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteLaunchTemplateRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLaunchTemplateRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteLaunchTemplateRequestPrivate::DeleteLaunchTemplateRequestPrivate(
     const EC2Request::Action action, DeleteLaunchTemplateRequest * const q)

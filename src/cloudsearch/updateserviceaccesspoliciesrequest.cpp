@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceAccessPoliciesRequest::response(
  */
 
 /*!
- *
- * Constructs a UpdateServiceAccessPoliciesRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a UpdateServiceAccessPoliciesRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 UpdateServiceAccessPoliciesRequestPrivate::UpdateServiceAccessPoliciesRequestPrivate(
     const CloudSearchRequest::Action action, UpdateServiceAccessPoliciesRequest * const q)

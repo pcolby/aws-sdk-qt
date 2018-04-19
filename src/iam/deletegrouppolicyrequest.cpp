@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupPolicyRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteGroupPolicyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteGroupPolicyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteGroupPolicyRequestPrivate::DeleteGroupPolicyRequestPrivate(
     const IAMRequest::Action action, DeleteGroupPolicyRequest * const q)

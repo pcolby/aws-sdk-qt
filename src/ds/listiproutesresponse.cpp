@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::ListIpRoutesResponse
- *
  * \brief The ListIpRoutesResponse class provides an interace for DirectoryService ListIpRoutes responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new ListIpRoutesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListIpRoutesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListIpRoutesResponse::ListIpRoutesResponse(
         const ListIpRoutesRequest &request,
@@ -69,6 +64,9 @@ ListIpRoutesResponse::ListIpRoutesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListIpRoutesRequest * ListIpRoutesResponse::request() const
 {
     Q_D(const ListIpRoutesResponse);
@@ -76,9 +74,8 @@ const ListIpRoutesRequest * ListIpRoutesResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService ListIpRoutes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService ListIpRoutes \a response.
  */
 void ListIpRoutesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListIpRoutesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::ListIpRoutesResponsePrivate
+ * \brief The ListIpRoutesResponsePrivate class provides private implementation for ListIpRoutesResponse.
  * \internal
  *
- * \class ListIpRoutesResponsePrivate
- *
- * \brief Private implementation for ListIpRoutesResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIpRoutesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListIpRoutesResponse instance.
+ * Constructs a ListIpRoutesResponsePrivate object with public implementation \a q.
  */
 ListIpRoutesResponsePrivate::ListIpRoutesResponsePrivate(
     ListIpRoutesResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ ListIpRoutesResponsePrivate::ListIpRoutesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService ListIpRoutesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService ListIpRoutes response element from \a xml.
  */
 void ListIpRoutesResponsePrivate::parseListIpRoutesResponse(QXmlStreamReader &xml)
 {

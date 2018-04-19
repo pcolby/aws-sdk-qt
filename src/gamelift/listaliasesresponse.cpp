@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::ListAliasesResponse
- *
  * \brief The ListAliasesResponse class provides an interace for GameLift ListAliases responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new ListAliasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAliasesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAliasesResponse::ListAliasesResponse(
         const ListAliasesRequest &request,
@@ -491,6 +486,9 @@ ListAliasesResponse::ListAliasesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAliasesRequest * ListAliasesResponse::request() const
 {
     Q_D(const ListAliasesResponse);
@@ -498,9 +496,8 @@ const ListAliasesRequest * ListAliasesResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift ListAliases response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift ListAliases \a response.
  */
 void ListAliasesResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void ListAliasesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::ListAliasesResponsePrivate
+ * \brief The ListAliasesResponsePrivate class provides private implementation for ListAliasesResponse.
  * \internal
  *
- * \class ListAliasesResponsePrivate
- *
- * \brief Private implementation for ListAliasesResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAliasesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAliasesResponse instance.
+ * Constructs a ListAliasesResponsePrivate object with public implementation \a q.
  */
 ListAliasesResponsePrivate::ListAliasesResponsePrivate(
     ListAliasesResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ ListAliasesResponsePrivate::ListAliasesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift ListAliasesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift ListAliases response element from \a xml.
  */
 void ListAliasesResponsePrivate::parseListAliasesResponse(QXmlStreamReader &xml)
 {

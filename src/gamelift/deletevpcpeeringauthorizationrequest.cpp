@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringAuthorizationRequest::respons
  */
 
 /*!
- *
- * Constructs a DeleteVpcPeeringAuthorizationRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVpcPeeringAuthorizationRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DeleteVpcPeeringAuthorizationRequestPrivate::DeleteVpcPeeringAuthorizationRequestPrivate(
     const GameLiftRequest::Action action, DeleteVpcPeeringAuthorizationRequest * const q)

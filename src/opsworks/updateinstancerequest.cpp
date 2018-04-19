@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * UpdateInstanceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdateInstanceRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a UpdateInstanceRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 UpdateInstanceRequestPrivate::UpdateInstanceRequestPrivate(
     const OpsWorksRequest::Action action, UpdateInstanceRequest * const q)

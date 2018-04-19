@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::CreateObjectResponse
- *
  * \brief The CreateObjectResponse class provides an interace for CloudDirectory CreateObject responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new CreateObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateObjectResponse::CreateObjectResponse(
         const CreateObjectRequest &request,
@@ -62,6 +57,9 @@ CreateObjectResponse::CreateObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateObjectRequest * CreateObjectResponse::request() const
 {
     Q_D(const CreateObjectResponse);
@@ -69,9 +67,8 @@ const CreateObjectRequest * CreateObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory CreateObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory CreateObject \a response.
  */
 void CreateObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void CreateObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::CreateObjectResponsePrivate
+ * \brief The CreateObjectResponsePrivate class provides private implementation for CreateObjectResponse.
  * \internal
  *
- * \class CreateObjectResponsePrivate
- *
- * \brief Private implementation for CreateObjectResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateObjectResponse instance.
+ * Constructs a CreateObjectResponsePrivate object with public implementation \a q.
  */
 CreateObjectResponsePrivate::CreateObjectResponsePrivate(
     CreateObjectResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ CreateObjectResponsePrivate::CreateObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory CreateObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory CreateObject response element from \a xml.
  */
 void CreateObjectResponsePrivate::parseCreateObjectResponse(QXmlStreamReader &xml)
 {

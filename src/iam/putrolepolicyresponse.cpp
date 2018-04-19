@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::PutRolePolicyResponse
- *
  * \brief The PutRolePolicyResponse class provides an interace for IAM PutRolePolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new PutRolePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutRolePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutRolePolicyResponse::PutRolePolicyResponse(
         const PutRolePolicyRequest &request,
@@ -120,6 +115,9 @@ PutRolePolicyResponse::PutRolePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutRolePolicyRequest * PutRolePolicyResponse::request() const
 {
     Q_D(const PutRolePolicyResponse);
@@ -127,9 +125,8 @@ const PutRolePolicyRequest * PutRolePolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM PutRolePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM PutRolePolicy \a response.
  */
 void PutRolePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void PutRolePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::PutRolePolicyResponsePrivate
+ * \brief The PutRolePolicyResponsePrivate class provides private implementation for PutRolePolicyResponse.
  * \internal
  *
- * \class PutRolePolicyResponsePrivate
- *
- * \brief Private implementation for PutRolePolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRolePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutRolePolicyResponse instance.
+ * Constructs a PutRolePolicyResponsePrivate object with public implementation \a q.
  */
 PutRolePolicyResponsePrivate::PutRolePolicyResponsePrivate(
     PutRolePolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ PutRolePolicyResponsePrivate::PutRolePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM PutRolePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM PutRolePolicy response element from \a xml.
  */
 void PutRolePolicyResponsePrivate::parsePutRolePolicyResponse(QXmlStreamReader &xml)
 {

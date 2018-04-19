@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::DeleteFunctionResponse
- *
  * \brief The DeleteFunctionResponse class provides an interace for Lambda DeleteFunction responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new DeleteFunctionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteFunctionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteFunctionResponse::DeleteFunctionResponse(
         const DeleteFunctionRequest &request,
@@ -66,6 +61,9 @@ DeleteFunctionResponse::DeleteFunctionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteFunctionRequest * DeleteFunctionResponse::request() const
 {
     Q_D(const DeleteFunctionResponse);
@@ -73,9 +71,8 @@ const DeleteFunctionRequest * DeleteFunctionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda DeleteFunction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda DeleteFunction \a response.
  */
 void DeleteFunctionResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteFunctionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::DeleteFunctionResponsePrivate
+ * \brief The DeleteFunctionResponsePrivate class provides private implementation for DeleteFunctionResponse.
  * \internal
  *
- * \class DeleteFunctionResponsePrivate
- *
- * \brief Private implementation for DeleteFunctionResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFunctionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteFunctionResponse instance.
+ * Constructs a DeleteFunctionResponsePrivate object with public implementation \a q.
  */
 DeleteFunctionResponsePrivate::DeleteFunctionResponsePrivate(
     DeleteFunctionResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteFunctionResponsePrivate::DeleteFunctionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda DeleteFunctionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda DeleteFunction response element from \a xml.
  */
 void DeleteFunctionResponsePrivate::parseDeleteFunctionResponse(QXmlStreamReader &xml)
 {

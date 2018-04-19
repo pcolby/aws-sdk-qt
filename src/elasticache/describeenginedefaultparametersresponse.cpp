@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeEngineDefaultParametersResponse
- *
  * \brief The DescribeEngineDefaultParametersResponse class provides an interace for ElastiCache DescribeEngineDefaultParameters responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeEngineDefaultParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEngineDefaultParametersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEngineDefaultParametersResponse::DescribeEngineDefaultParametersResponse(
         const DescribeEngineDefaultParametersRequest &request,
@@ -69,6 +64,9 @@ DescribeEngineDefaultParametersResponse::DescribeEngineDefaultParametersResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEngineDefaultParametersRequest * DescribeEngineDefaultParametersResponse::request() const
 {
     Q_D(const DescribeEngineDefaultParametersResponse);
@@ -76,9 +74,8 @@ const DescribeEngineDefaultParametersRequest * DescribeEngineDefaultParametersRe
 }
 
 /*!
- * @brief  Parse a ElastiCache DescribeEngineDefaultParameters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DescribeEngineDefaultParameters \a response.
  */
 void DescribeEngineDefaultParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeEngineDefaultParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::DescribeEngineDefaultParametersResponsePrivate
+ * \brief The DescribeEngineDefaultParametersResponsePrivate class provides private implementation for DescribeEngineDefaultParametersResponse.
  * \internal
  *
- * \class DescribeEngineDefaultParametersResponsePrivate
- *
- * \brief Private implementation for DescribeEngineDefaultParametersResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEngineDefaultParametersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEngineDefaultParametersResponse instance.
+ * Constructs a DescribeEngineDefaultParametersResponsePrivate object with public implementation \a q.
  */
 DescribeEngineDefaultParametersResponsePrivate::DescribeEngineDefaultParametersResponsePrivate(
     DescribeEngineDefaultParametersResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeEngineDefaultParametersResponsePrivate::DescribeEngineDefaultParametersR
 }
 
 /*!
- * @brief  Parse an ElastiCache DescribeEngineDefaultParametersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DescribeEngineDefaultParameters response element from \a xml.
  */
 void DescribeEngineDefaultParametersResponsePrivate::parseDescribeEngineDefaultParametersResponse(QXmlStreamReader &xml)
 {

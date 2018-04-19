@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectoryConfigsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeDirectoryConfigsRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDirectoryConfigsRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 DescribeDirectoryConfigsRequestPrivate::DescribeDirectoryConfigsRequestPrivate(
     const AppStreamRequest::Action action, DescribeDirectoryConfigsRequest * const q)

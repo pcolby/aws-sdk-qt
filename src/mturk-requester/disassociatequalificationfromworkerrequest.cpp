@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateQualificationFromWorkerRequest::r
  */
 
 /*!
- *
- * Constructs a DisassociateQualificationFromWorkerRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateQualificationFromWorkerRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFromWorkerRequestPrivate(
     const MTurkRequest::Action action, DisassociateQualificationFromWorkerRequest * const q)

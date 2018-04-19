@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetAccountSummaryResponse
- *
  * \brief The GetAccountSummaryResponse class provides an interace for IAM GetAccountSummary responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetAccountSummaryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAccountSummaryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAccountSummaryResponse::GetAccountSummaryResponse(
         const GetAccountSummaryRequest &request,
@@ -120,6 +115,9 @@ GetAccountSummaryResponse::GetAccountSummaryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAccountSummaryRequest * GetAccountSummaryResponse::request() const
 {
     Q_D(const GetAccountSummaryResponse);
@@ -127,9 +125,8 @@ const GetAccountSummaryRequest * GetAccountSummaryResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetAccountSummary response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetAccountSummary \a response.
  */
 void GetAccountSummaryResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetAccountSummaryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetAccountSummaryResponsePrivate
+ * \brief The GetAccountSummaryResponsePrivate class provides private implementation for GetAccountSummaryResponse.
  * \internal
  *
- * \class GetAccountSummaryResponsePrivate
- *
- * \brief Private implementation for GetAccountSummaryResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountSummaryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAccountSummaryResponse instance.
+ * Constructs a GetAccountSummaryResponsePrivate object with public implementation \a q.
  */
 GetAccountSummaryResponsePrivate::GetAccountSummaryResponsePrivate(
     GetAccountSummaryResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetAccountSummaryResponsePrivate::GetAccountSummaryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetAccountSummaryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetAccountSummary response element from \a xml.
  */
 void GetAccountSummaryResponsePrivate::parseGetAccountSummaryResponse(QXmlStreamReader &xml)
 {

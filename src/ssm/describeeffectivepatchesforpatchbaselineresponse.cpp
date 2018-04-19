@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeEffectivePatchesForPatchBaselineResponse
- *
  * \brief The DescribeEffectivePatchesForPatchBaselineResponse class provides an interace for SSM DescribeEffectivePatchesForPatchBaseline responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEffectivePatchesForPatchBaselineResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEffectivePatchesForPatchBaselineResponse::DescribeEffectivePatchesForPatchBaselineResponse(
         const DescribeEffectivePatchesForPatchBaselineRequest &request,
@@ -79,6 +74,9 @@ DescribeEffectivePatchesForPatchBaselineResponse::DescribeEffectivePatchesForPat
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEffectivePatchesForPatchBaselineRequest * DescribeEffectivePatchesForPatchBaselineResponse::request() const
 {
     Q_D(const DescribeEffectivePatchesForPatchBaselineResponse);
@@ -86,9 +84,8 @@ const DescribeEffectivePatchesForPatchBaselineRequest * DescribeEffectivePatches
 }
 
 /*!
- * @brief  Parse a SSM DescribeEffectivePatchesForPatchBaseline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeEffectivePatchesForPatchBaseline \a response.
  */
 void DescribeEffectivePatchesForPatchBaselineResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeEffectivePatchesForPatchBaselineResponse::parseSuccess(QIODevice &r
 }
 
 /*!
+ * \class QtAws::SSM::DescribeEffectivePatchesForPatchBaselineResponsePrivate
+ * \brief The DescribeEffectivePatchesForPatchBaselineResponsePrivate class provides private implementation for DescribeEffectivePatchesForPatchBaselineResponse.
  * \internal
  *
- * \class DescribeEffectivePatchesForPatchBaselineResponsePrivate
- *
- * \brief Private implementation for DescribeEffectivePatchesForPatchBaselineResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEffectivePatchesForPatchBaselineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEffectivePatchesForPatchBaselineResponse instance.
+ * Constructs a DescribeEffectivePatchesForPatchBaselineResponsePrivate object with public implementation \a q.
  */
 DescribeEffectivePatchesForPatchBaselineResponsePrivate::DescribeEffectivePatchesForPatchBaselineResponsePrivate(
     DescribeEffectivePatchesForPatchBaselineResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeEffectivePatchesForPatchBaselineResponsePrivate::DescribeEffectivePatche
 }
 
 /*!
- * @brief  Parse an SSM DescribeEffectivePatchesForPatchBaselineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeEffectivePatchesForPatchBaseline response element from \a xml.
  */
 void DescribeEffectivePatchesForPatchBaselineResponsePrivate::parseDescribeEffectivePatchesForPatchBaselineResponse(QXmlStreamReader &xml)
 {

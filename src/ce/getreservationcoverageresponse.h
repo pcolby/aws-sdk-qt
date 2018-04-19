@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetReservationCoverageResponse : public CostExplorerResponse 
 public:
     GetReservationCoverageResponse(const GetReservationCoverageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetReservationCoverageRequest * request() const;
+    virtual const GetReservationCoverageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetReservationCoverageResponse)

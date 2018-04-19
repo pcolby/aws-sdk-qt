@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * SetVisibleToAllUsersRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a SetVisibleToAllUsersRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a SetVisibleToAllUsersRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 SetVisibleToAllUsersRequestPrivate::SetVisibleToAllUsersRequestPrivate(
     const EMRRequest::Action action, SetVisibleToAllUsersRequest * const q)

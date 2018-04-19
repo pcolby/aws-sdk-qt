@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::CreateCommentResponse
- *
  * \brief The CreateCommentResponse class provides an interace for WorkDocs CreateComment responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new CreateCommentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCommentResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCommentResponse::CreateCommentResponse(
         const CreateCommentRequest &request,
@@ -84,6 +79,9 @@ CreateCommentResponse::CreateCommentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCommentRequest * CreateCommentResponse::request() const
 {
     Q_D(const CreateCommentResponse);
@@ -91,9 +89,8 @@ const CreateCommentRequest * CreateCommentResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs CreateComment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs CreateComment \a response.
  */
 void CreateCommentResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void CreateCommentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::CreateCommentResponsePrivate
+ * \brief The CreateCommentResponsePrivate class provides private implementation for CreateCommentResponse.
  * \internal
  *
- * \class CreateCommentResponsePrivate
- *
- * \brief Private implementation for CreateCommentResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCommentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCommentResponse instance.
+ * Constructs a CreateCommentResponsePrivate object with public implementation \a q.
  */
 CreateCommentResponsePrivate::CreateCommentResponsePrivate(
     CreateCommentResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ CreateCommentResponsePrivate::CreateCommentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs CreateCommentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs CreateComment response element from \a xml.
  */
 void CreateCommentResponsePrivate::parseCreateCommentResponse(QXmlStreamReader &xml)
 {

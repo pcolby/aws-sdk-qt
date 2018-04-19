@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::ListSecretsResponse
- *
  * \brief The ListSecretsResponse class provides an interace for SecretsManager ListSecrets responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new ListSecretsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSecretsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSecretsResponse::ListSecretsResponse(
         const ListSecretsRequest &request,
@@ -155,6 +150,9 @@ ListSecretsResponse::ListSecretsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSecretsRequest * ListSecretsResponse::request() const
 {
     Q_D(const ListSecretsResponse);
@@ -162,9 +160,8 @@ const ListSecretsRequest * ListSecretsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SecretsManager ListSecrets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager ListSecrets \a response.
  */
 void ListSecretsResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void ListSecretsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::ListSecretsResponsePrivate
+ * \brief The ListSecretsResponsePrivate class provides private implementation for ListSecretsResponse.
  * \internal
  *
- * \class ListSecretsResponsePrivate
- *
- * \brief Private implementation for ListSecretsResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSecretsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSecretsResponse instance.
+ * Constructs a ListSecretsResponsePrivate object with public implementation \a q.
  */
 ListSecretsResponsePrivate::ListSecretsResponsePrivate(
     ListSecretsResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ ListSecretsResponsePrivate::ListSecretsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SecretsManager ListSecretsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager ListSecrets response element from \a xml.
  */
 void ListSecretsResponsePrivate::parseListSecretsResponse(QXmlStreamReader &xml)
 {

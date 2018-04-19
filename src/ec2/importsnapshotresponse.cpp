@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ImportSnapshotResponse
- *
  * \brief The ImportSnapshotResponse class provides an interace for EC2 ImportSnapshot responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ImportSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportSnapshotResponse::ImportSnapshotResponse(
         const ImportSnapshotRequest &request,
@@ -59,6 +54,9 @@ ImportSnapshotResponse::ImportSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportSnapshotRequest * ImportSnapshotResponse::request() const
 {
     Q_D(const ImportSnapshotResponse);
@@ -66,9 +64,8 @@ const ImportSnapshotRequest * ImportSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ImportSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ImportSnapshot \a response.
  */
 void ImportSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ImportSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ImportSnapshotResponsePrivate
+ * \brief The ImportSnapshotResponsePrivate class provides private implementation for ImportSnapshotResponse.
  * \internal
  *
- * \class ImportSnapshotResponsePrivate
- *
- * \brief Private implementation for ImportSnapshotResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportSnapshotResponse instance.
+ * Constructs a ImportSnapshotResponsePrivate object with public implementation \a q.
  */
 ImportSnapshotResponsePrivate::ImportSnapshotResponsePrivate(
     ImportSnapshotResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ImportSnapshotResponsePrivate::ImportSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ImportSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ImportSnapshot response element from \a xml.
  */
 void ImportSnapshotResponsePrivate::parseImportSnapshotResponse(QXmlStreamReader &xml)
 {

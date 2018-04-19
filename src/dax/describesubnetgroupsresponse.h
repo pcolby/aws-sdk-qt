@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSubnetGroupsResponse : public DAXResponse {
 public:
     DescribeSubnetGroupsResponse(const DescribeSubnetGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSubnetGroupsRequest * request() const;
+    virtual const DescribeSubnetGroupsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSubnetGroupsResponse)

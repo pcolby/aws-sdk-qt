@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateApplicationVersionResponse
- *
  * \brief The UpdateApplicationVersionResponse class provides an interace for ElasticBeanstalk UpdateApplicationVersion responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new UpdateApplicationVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateApplicationVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateApplicationVersionResponse::UpdateApplicationVersionResponse(
         const UpdateApplicationVersionRequest &request,
@@ -77,6 +72,9 @@ UpdateApplicationVersionResponse::UpdateApplicationVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateApplicationVersionRequest * UpdateApplicationVersionResponse::request() const
 {
     Q_D(const UpdateApplicationVersionResponse);
@@ -84,9 +82,8 @@ const UpdateApplicationVersionRequest * UpdateApplicationVersionResponse::reques
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk UpdateApplicationVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk UpdateApplicationVersion \a response.
  */
 void UpdateApplicationVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void UpdateApplicationVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::UpdateApplicationVersionResponsePrivate
+ * \brief The UpdateApplicationVersionResponsePrivate class provides private implementation for UpdateApplicationVersionResponse.
  * \internal
  *
- * \class UpdateApplicationVersionResponsePrivate
- *
- * \brief Private implementation for UpdateApplicationVersionResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApplicationVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateApplicationVersionResponse instance.
+ * Constructs a UpdateApplicationVersionResponsePrivate object with public implementation \a q.
  */
 UpdateApplicationVersionResponsePrivate::UpdateApplicationVersionResponsePrivate(
     UpdateApplicationVersionResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ UpdateApplicationVersionResponsePrivate::UpdateApplicationVersionResponsePrivate
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk UpdateApplicationVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk UpdateApplicationVersion response element from \a xml.
  */
 void UpdateApplicationVersionResponsePrivate::parseUpdateApplicationVersionResponse(QXmlStreamReader &xml)
 {

@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSnapshotScheduleRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteSnapshotScheduleRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSnapshotScheduleRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DeleteSnapshotScheduleRequestPrivate::DeleteSnapshotScheduleRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteSnapshotScheduleRequest * const q)

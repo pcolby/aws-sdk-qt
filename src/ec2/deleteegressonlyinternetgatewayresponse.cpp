@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteEgressOnlyInternetGatewayResponse
- *
  * \brief The DeleteEgressOnlyInternetGatewayResponse class provides an interace for EC2 DeleteEgressOnlyInternetGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteEgressOnlyInternetGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEgressOnlyInternetGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEgressOnlyInternetGatewayResponse::DeleteEgressOnlyInternetGatewayResponse(
         const DeleteEgressOnlyInternetGatewayRequest &request,
@@ -59,6 +54,9 @@ DeleteEgressOnlyInternetGatewayResponse::DeleteEgressOnlyInternetGatewayResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEgressOnlyInternetGatewayRequest * DeleteEgressOnlyInternetGatewayResponse::request() const
 {
     Q_D(const DeleteEgressOnlyInternetGatewayResponse);
@@ -66,9 +64,8 @@ const DeleteEgressOnlyInternetGatewayRequest * DeleteEgressOnlyInternetGatewayRe
 }
 
 /*!
- * @brief  Parse a EC2 DeleteEgressOnlyInternetGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteEgressOnlyInternetGateway \a response.
  */
 void DeleteEgressOnlyInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteEgressOnlyInternetGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteEgressOnlyInternetGatewayResponsePrivate
+ * \brief The DeleteEgressOnlyInternetGatewayResponsePrivate class provides private implementation for DeleteEgressOnlyInternetGatewayResponse.
  * \internal
  *
- * \class DeleteEgressOnlyInternetGatewayResponsePrivate
- *
- * \brief Private implementation for DeleteEgressOnlyInternetGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEgressOnlyInternetGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEgressOnlyInternetGatewayResponse instance.
+ * Constructs a DeleteEgressOnlyInternetGatewayResponsePrivate object with public implementation \a q.
  */
 DeleteEgressOnlyInternetGatewayResponsePrivate::DeleteEgressOnlyInternetGatewayResponsePrivate(
     DeleteEgressOnlyInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteEgressOnlyInternetGatewayResponsePrivate::DeleteEgressOnlyInternetGatewayR
 }
 
 /*!
- * @brief  Parse an EC2 DeleteEgressOnlyInternetGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteEgressOnlyInternetGateway response element from \a xml.
  */
 void DeleteEgressOnlyInternetGatewayResponsePrivate::parseDeleteEgressOnlyInternetGatewayResponse(QXmlStreamReader &xml)
 {

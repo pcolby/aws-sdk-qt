@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeExportTasksRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeExportTasksRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeExportTasksRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 DescribeExportTasksRequestPrivate::DescribeExportTasksRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DescribeExportTasksRequest * const q)

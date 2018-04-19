@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DescribeNotebookInstanceResponse
- *
  * \brief The DescribeNotebookInstanceResponse class provides an interace for SageMaker DescribeNotebookInstance responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::describeNotebookInstance
  */
 
 /*!
- * @brief  Constructs a new DescribeNotebookInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeNotebookInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeNotebookInstanceResponse::DescribeNotebookInstanceResponse(
         const DescribeNotebookInstanceRequest &request,
@@ -55,6 +50,9 @@ DescribeNotebookInstanceResponse::DescribeNotebookInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeNotebookInstanceRequest * DescribeNotebookInstanceResponse::request() const
 {
     Q_D(const DescribeNotebookInstanceResponse);
@@ -62,9 +60,8 @@ const DescribeNotebookInstanceRequest * DescribeNotebookInstanceResponse::reques
 }
 
 /*!
- * @brief  Parse a SageMaker DescribeNotebookInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker DescribeNotebookInstance \a response.
  */
 void DescribeNotebookInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeNotebookInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::DescribeNotebookInstanceResponsePrivate
+ * \brief The DescribeNotebookInstanceResponsePrivate class provides private implementation for DescribeNotebookInstanceResponse.
  * \internal
  *
- * \class DescribeNotebookInstanceResponsePrivate
- *
- * \brief Private implementation for DescribeNotebookInstanceResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNotebookInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeNotebookInstanceResponse instance.
+ * Constructs a DescribeNotebookInstanceResponsePrivate object with public implementation \a q.
  */
 DescribeNotebookInstanceResponsePrivate::DescribeNotebookInstanceResponsePrivate(
     DescribeNotebookInstanceResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeNotebookInstanceResponsePrivate::DescribeNotebookInstanceResponsePrivate
 }
 
 /*!
- * @brief  Parse an SageMaker DescribeNotebookInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker DescribeNotebookInstance response element from \a xml.
  */
 void DescribeNotebookInstanceResponsePrivate::parseDescribeNotebookInstanceResponse(QXmlStreamReader &xml)
 {

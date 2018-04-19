@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancesRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribeInstancesRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInstancesRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DescribeInstancesRequestPrivate::DescribeInstancesRequestPrivate(
     const GameLiftRequest::Action action, DescribeInstancesRequest * const q)

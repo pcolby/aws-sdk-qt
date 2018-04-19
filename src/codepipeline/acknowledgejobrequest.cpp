@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * AcknowledgeJobRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a AcknowledgeJobRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a AcknowledgeJobRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 AcknowledgeJobRequestPrivate::AcknowledgeJobRequestPrivate(
     const CodePipelineRequest::Action action, AcknowledgeJobRequest * const q)

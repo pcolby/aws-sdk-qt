@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteRequestValidatorResponse : public APIGatewayResponse {
 public:
     DeleteRequestValidatorResponse(const DeleteRequestValidatorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteRequestValidatorRequest * request() const;
+    virtual const DeleteRequestValidatorRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteRequestValidatorResponse)

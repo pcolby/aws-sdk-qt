@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeKeyPairsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeKeyPairsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeKeyPairsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeKeyPairsRequestPrivate::DescribeKeyPairsRequestPrivate(
     const EC2Request::Action action, DescribeKeyPairsRequest * const q)

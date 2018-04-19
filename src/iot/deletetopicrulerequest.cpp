@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTopicRuleRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteTopicRuleRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTopicRuleRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeleteTopicRuleRequestPrivate::DeleteTopicRuleRequestPrivate(
     const IoTRequest::Action action, DeleteTopicRuleRequest * const q)

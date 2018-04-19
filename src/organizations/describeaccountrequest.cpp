@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeAccountRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAccountRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 DescribeAccountRequestPrivate::DescribeAccountRequestPrivate(
     const OrganizationsRequest::Action action, DescribeAccountRequest * const q)

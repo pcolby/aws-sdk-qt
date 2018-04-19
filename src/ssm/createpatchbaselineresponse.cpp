@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreatePatchBaselineResponse
- *
  * \brief The CreatePatchBaselineResponse class provides an interace for SSM CreatePatchBaseline responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreatePatchBaselineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePatchBaselineResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePatchBaselineResponse::CreatePatchBaselineResponse(
         const CreatePatchBaselineRequest &request,
@@ -79,6 +74,9 @@ CreatePatchBaselineResponse::CreatePatchBaselineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePatchBaselineRequest * CreatePatchBaselineResponse::request() const
 {
     Q_D(const CreatePatchBaselineResponse);
@@ -86,9 +84,8 @@ const CreatePatchBaselineRequest * CreatePatchBaselineResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM CreatePatchBaseline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM CreatePatchBaseline \a response.
  */
 void CreatePatchBaselineResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void CreatePatchBaselineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::CreatePatchBaselineResponsePrivate
+ * \brief The CreatePatchBaselineResponsePrivate class provides private implementation for CreatePatchBaselineResponse.
  * \internal
  *
- * \class CreatePatchBaselineResponsePrivate
- *
- * \brief Private implementation for CreatePatchBaselineResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePatchBaselineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePatchBaselineResponse instance.
+ * Constructs a CreatePatchBaselineResponsePrivate object with public implementation \a q.
  */
 CreatePatchBaselineResponsePrivate::CreatePatchBaselineResponsePrivate(
     CreatePatchBaselineResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ CreatePatchBaselineResponsePrivate::CreatePatchBaselineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM CreatePatchBaselineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM CreatePatchBaseline response element from \a xml.
  */
 void CreatePatchBaselineResponsePrivate::parseCreatePatchBaselineResponse(QXmlStreamReader &xml)
 {

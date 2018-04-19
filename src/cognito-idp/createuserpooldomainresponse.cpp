@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateUserPoolDomainResponse
- *
  * \brief The CreateUserPoolDomainResponse class provides an interace for CognitoIdentityProvider CreateUserPoolDomain responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new CreateUserPoolDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateUserPoolDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateUserPoolDomainResponse::CreateUserPoolDomainResponse(
         const CreateUserPoolDomainRequest &request,
@@ -65,6 +60,9 @@ CreateUserPoolDomainResponse::CreateUserPoolDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateUserPoolDomainRequest * CreateUserPoolDomainResponse::request() const
 {
     Q_D(const CreateUserPoolDomainResponse);
@@ -72,9 +70,8 @@ const CreateUserPoolDomainRequest * CreateUserPoolDomainResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider CreateUserPoolDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider CreateUserPoolDomain \a response.
  */
 void CreateUserPoolDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void CreateUserPoolDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::CreateUserPoolDomainResponsePrivate
+ * \brief The CreateUserPoolDomainResponsePrivate class provides private implementation for CreateUserPoolDomainResponse.
  * \internal
  *
- * \class CreateUserPoolDomainResponsePrivate
- *
- * \brief Private implementation for CreateUserPoolDomainResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserPoolDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateUserPoolDomainResponse instance.
+ * Constructs a CreateUserPoolDomainResponsePrivate object with public implementation \a q.
  */
 CreateUserPoolDomainResponsePrivate::CreateUserPoolDomainResponsePrivate(
     CreateUserPoolDomainResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ CreateUserPoolDomainResponsePrivate::CreateUserPoolDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider CreateUserPoolDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider CreateUserPoolDomain response element from \a xml.
  */
 void CreateUserPoolDomainResponsePrivate::parseCreateUserPoolDomainResponse(QXmlStreamReader &xml)
 {

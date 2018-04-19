@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketLoggingResponse
- *
  * \brief The GetBucketLoggingResponse class provides an interace for S3 GetBucketLogging responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketLogging
  */
 
 /*!
- * @brief  Constructs a new GetBucketLoggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBucketLoggingResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBucketLoggingResponse::GetBucketLoggingResponse(
         const GetBucketLoggingRequest &request,
@@ -55,6 +50,9 @@ GetBucketLoggingResponse::GetBucketLoggingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBucketLoggingRequest * GetBucketLoggingResponse::request() const
 {
     Q_D(const GetBucketLoggingResponse);
@@ -62,9 +60,8 @@ const GetBucketLoggingRequest * GetBucketLoggingResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 GetBucketLogging response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetBucketLogging \a response.
  */
 void GetBucketLoggingResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBucketLoggingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetBucketLoggingResponsePrivate
+ * \brief The GetBucketLoggingResponsePrivate class provides private implementation for GetBucketLoggingResponse.
  * \internal
  *
- * \class GetBucketLoggingResponsePrivate
- *
- * \brief Private implementation for GetBucketLoggingResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketLoggingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBucketLoggingResponse instance.
+ * Constructs a GetBucketLoggingResponsePrivate object with public implementation \a q.
  */
 GetBucketLoggingResponsePrivate::GetBucketLoggingResponsePrivate(
     GetBucketLoggingResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBucketLoggingResponsePrivate::GetBucketLoggingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 GetBucketLoggingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetBucketLogging response element from \a xml.
  */
 void GetBucketLoggingResponsePrivate::parseGetBucketLoggingResponse(QXmlStreamReader &xml)
 {

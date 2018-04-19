@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetSmsChannelRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetSmsChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetSmsChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetSmsChannelRequestPrivate::GetSmsChannelRequestPrivate(
     const PinpointRequest::Action action, GetSmsChannelRequest * const q)

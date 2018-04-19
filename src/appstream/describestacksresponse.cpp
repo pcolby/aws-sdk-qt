@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeStacksResponse
- *
  * \brief The DescribeStacksResponse class provides an interace for AppStream DescribeStacks responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeStacksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStacksResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStacksResponse::DescribeStacksResponse(
         const DescribeStacksRequest &request,
@@ -58,6 +53,9 @@ DescribeStacksResponse::DescribeStacksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStacksRequest * DescribeStacksResponse::request() const
 {
     Q_D(const DescribeStacksResponse);
@@ -65,9 +63,8 @@ const DescribeStacksRequest * DescribeStacksResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream DescribeStacks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream DescribeStacks \a response.
  */
 void DescribeStacksResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeStacksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::DescribeStacksResponsePrivate
+ * \brief The DescribeStacksResponsePrivate class provides private implementation for DescribeStacksResponse.
  * \internal
  *
- * \class DescribeStacksResponsePrivate
- *
- * \brief Private implementation for DescribeStacksResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStacksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStacksResponse instance.
+ * Constructs a DescribeStacksResponsePrivate object with public implementation \a q.
  */
 DescribeStacksResponsePrivate::DescribeStacksResponsePrivate(
     DescribeStacksResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeStacksResponsePrivate::DescribeStacksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream DescribeStacksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream DescribeStacks response element from \a xml.
  */
 void DescribeStacksResponsePrivate::parseDescribeStacksResponse(QXmlStreamReader &xml)
 {

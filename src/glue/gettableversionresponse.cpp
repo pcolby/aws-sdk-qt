@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetTableVersionResponse
- *
  * \brief The GetTableVersionResponse class provides an interace for Glue GetTableVersion responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetTableVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTableVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTableVersionResponse::GetTableVersionResponse(
         const GetTableVersionRequest &request,
@@ -58,6 +53,9 @@ GetTableVersionResponse::GetTableVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTableVersionRequest * GetTableVersionResponse::request() const
 {
     Q_D(const GetTableVersionResponse);
@@ -65,9 +63,8 @@ const GetTableVersionRequest * GetTableVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetTableVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetTableVersion \a response.
  */
 void GetTableVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetTableVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetTableVersionResponsePrivate
+ * \brief The GetTableVersionResponsePrivate class provides private implementation for GetTableVersionResponse.
  * \internal
  *
- * \class GetTableVersionResponsePrivate
- *
- * \brief Private implementation for GetTableVersionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTableVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTableVersionResponse instance.
+ * Constructs a GetTableVersionResponsePrivate object with public implementation \a q.
  */
 GetTableVersionResponsePrivate::GetTableVersionResponsePrivate(
     GetTableVersionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetTableVersionResponsePrivate::GetTableVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetTableVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetTableVersion response element from \a xml.
  */
 void GetTableVersionResponsePrivate::parseGetTableVersionResponse(QXmlStreamReader &xml)
 {

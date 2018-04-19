@@ -102,7 +102,7 @@ namespace Redshift {
  */
 
 /*!
- * Constructs a[n] RedshiftRequest object for Redshift \a action.
+ * Constructs a RedshiftRequest object for Redshift \a action.
  */
 RedshiftRequest::RedshiftRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new RedshiftRequestPrivate(action, this))
@@ -302,8 +302,8 @@ QNetworkRequest RedshiftRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a RedshiftRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a RedshiftRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequest::Action action, RedshiftRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

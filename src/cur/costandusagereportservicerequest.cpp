@@ -42,7 +42,7 @@ namespace CostandUsageReportService {
  */
 
 /*!
- * Constructs a[n] CostandUsageReportServiceRequest object for CostandUsageReportService \a action.
+ * Constructs a CostandUsageReportServiceRequest object for CostandUsageReportService \a action.
  */
 CostandUsageReportServiceRequest::CostandUsageReportServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CostandUsageReportServiceRequestPrivate(action, this))
@@ -242,8 +242,8 @@ QNetworkRequest CostandUsageReportServiceRequest::unsignedRequest(const QUrl &en
  */
 
 /*!
- * Constructs a CostandUsageReportServiceRequestPrivate object for CostandUsageReportService \a action with,
- * public implementation \a q.
+ * Constructs a CostandUsageReportServiceRequestPrivate object for CostandUsageReportService \a action,
+ * with public implementation \a q.
  */
 CostandUsageReportServiceRequestPrivate::CostandUsageReportServiceRequestPrivate(const CostandUsageReportServiceRequest::Action action, CostandUsageReportServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * CreateLayerRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateLayerRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a CreateLayerRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 CreateLayerRequestPrivate::CreateLayerRequestPrivate(
     const OpsWorksRequest::Action action, CreateLayerRequest * const q)

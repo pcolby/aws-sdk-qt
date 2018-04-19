@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DeleteRoomSkillParameterResponse
- *
  * \brief The DeleteRoomSkillParameterResponse class provides an interace for AlexaForBusiness DeleteRoomSkillParameter responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DeleteRoomSkillParameterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRoomSkillParameterResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRoomSkillParameterResponse::DeleteRoomSkillParameterResponse(
         const DeleteRoomSkillParameterRequest &request,
@@ -60,6 +55,9 @@ DeleteRoomSkillParameterResponse::DeleteRoomSkillParameterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRoomSkillParameterRequest * DeleteRoomSkillParameterResponse::request() const
 {
     Q_D(const DeleteRoomSkillParameterResponse);
@@ -67,9 +65,8 @@ const DeleteRoomSkillParameterRequest * DeleteRoomSkillParameterResponse::reques
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness DeleteRoomSkillParameter response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness DeleteRoomSkillParameter \a response.
  */
 void DeleteRoomSkillParameterResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteRoomSkillParameterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::DeleteRoomSkillParameterResponsePrivate
+ * \brief The DeleteRoomSkillParameterResponsePrivate class provides private implementation for DeleteRoomSkillParameterResponse.
  * \internal
  *
- * \class DeleteRoomSkillParameterResponsePrivate
- *
- * \brief Private implementation for DeleteRoomSkillParameterResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRoomSkillParameterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRoomSkillParameterResponse instance.
+ * Constructs a DeleteRoomSkillParameterResponsePrivate object with public implementation \a q.
  */
 DeleteRoomSkillParameterResponsePrivate::DeleteRoomSkillParameterResponsePrivate(
     DeleteRoomSkillParameterResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteRoomSkillParameterResponsePrivate::DeleteRoomSkillParameterResponsePrivate
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness DeleteRoomSkillParameterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness DeleteRoomSkillParameter response element from \a xml.
  */
 void DeleteRoomSkillParameterResponsePrivate::parseDeleteRoomSkillParameterResponse(QXmlStreamReader &xml)
 {

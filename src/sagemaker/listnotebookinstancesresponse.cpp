@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::ListNotebookInstancesResponse
- *
  * \brief The ListNotebookInstancesResponse class provides an interace for SageMaker ListNotebookInstances responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::listNotebookInstances
  */
 
 /*!
- * @brief  Constructs a new ListNotebookInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListNotebookInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListNotebookInstancesResponse::ListNotebookInstancesResponse(
         const ListNotebookInstancesRequest &request,
@@ -55,6 +50,9 @@ ListNotebookInstancesResponse::ListNotebookInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListNotebookInstancesRequest * ListNotebookInstancesResponse::request() const
 {
     Q_D(const ListNotebookInstancesResponse);
@@ -62,9 +60,8 @@ const ListNotebookInstancesRequest * ListNotebookInstancesResponse::request() co
 }
 
 /*!
- * @brief  Parse a SageMaker ListNotebookInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker ListNotebookInstances \a response.
  */
 void ListNotebookInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListNotebookInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::ListNotebookInstancesResponsePrivate
+ * \brief The ListNotebookInstancesResponsePrivate class provides private implementation for ListNotebookInstancesResponse.
  * \internal
  *
- * \class ListNotebookInstancesResponsePrivate
- *
- * \brief Private implementation for ListNotebookInstancesResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListNotebookInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListNotebookInstancesResponse instance.
+ * Constructs a ListNotebookInstancesResponsePrivate object with public implementation \a q.
  */
 ListNotebookInstancesResponsePrivate::ListNotebookInstancesResponsePrivate(
     ListNotebookInstancesResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ ListNotebookInstancesResponsePrivate::ListNotebookInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker ListNotebookInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker ListNotebookInstances response element from \a xml.
  */
 void ListNotebookInstancesResponsePrivate::parseListNotebookInstancesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CancelArchivalResponse
- *
  * \brief The CancelArchivalResponse class provides an interace for StorageGateway CancelArchival responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CancelArchivalResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelArchivalResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelArchivalResponse::CancelArchivalResponse(
         const CancelArchivalRequest &request,
@@ -124,6 +119,9 @@ CancelArchivalResponse::CancelArchivalResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelArchivalRequest * CancelArchivalResponse::request() const
 {
     Q_D(const CancelArchivalResponse);
@@ -131,9 +129,8 @@ const CancelArchivalRequest * CancelArchivalResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway CancelArchival response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway CancelArchival \a response.
  */
 void CancelArchivalResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void CancelArchivalResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::CancelArchivalResponsePrivate
+ * \brief The CancelArchivalResponsePrivate class provides private implementation for CancelArchivalResponse.
  * \internal
  *
- * \class CancelArchivalResponsePrivate
- *
- * \brief Private implementation for CancelArchivalResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelArchivalResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelArchivalResponse instance.
+ * Constructs a CancelArchivalResponsePrivate object with public implementation \a q.
  */
 CancelArchivalResponsePrivate::CancelArchivalResponsePrivate(
     CancelArchivalResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ CancelArchivalResponsePrivate::CancelArchivalResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway CancelArchivalResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway CancelArchival response element from \a xml.
  */
 void CancelArchivalResponsePrivate::parseCancelArchivalResponse(QXmlStreamReader &xml)
 {

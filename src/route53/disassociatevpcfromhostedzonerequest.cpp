@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateVPCFromHostedZoneRequest::respons
  */
 
 /*!
- *
- * Constructs a DisassociateVPCFromHostedZoneRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateVPCFromHostedZoneRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 DisassociateVPCFromHostedZoneRequestPrivate::DisassociateVPCFromHostedZoneRequestPrivate(
     const Route53Request::Action action, DisassociateVPCFromHostedZoneRequest * const q)

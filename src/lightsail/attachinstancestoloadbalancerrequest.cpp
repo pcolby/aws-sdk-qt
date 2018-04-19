@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * AttachInstancesToLoadBalancerRequest::respons
  */
 
 /*!
- *
- * Constructs a AttachInstancesToLoadBalancerRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a AttachInstancesToLoadBalancerRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 AttachInstancesToLoadBalancerRequestPrivate::AttachInstancesToLoadBalancerRequestPrivate(
     const LightsailRequest::Action action, AttachInstancesToLoadBalancerRequest * const q)

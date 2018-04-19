@@ -29,10 +29,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::RemoveTagsResponse
- *
  * \brief The RemoveTagsResponse class provides an interace for ElasticsearchService RemoveTags responses.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveTagsResponse::RemoveTagsResponse(
         const RemoveTagsRequest &request,
@@ -64,6 +59,9 @@ RemoveTagsResponse::RemoveTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveTagsRequest * RemoveTagsResponse::request() const
 {
     Q_D(const RemoveTagsResponse);
@@ -71,9 +69,8 @@ const RemoveTagsRequest * RemoveTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticsearchService RemoveTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticsearchService RemoveTags \a response.
  */
 void RemoveTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void RemoveTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticsearchService::RemoveTagsResponsePrivate
+ * \brief The RemoveTagsResponsePrivate class provides private implementation for RemoveTagsResponse.
  * \internal
  *
- * \class RemoveTagsResponsePrivate
- *
- * \brief Private implementation for RemoveTagsResponse.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveTagsResponse instance.
+ * Constructs a RemoveTagsResponsePrivate object with public implementation \a q.
  */
 RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
     RemoveTagsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
@@ -104,9 +97,7 @@ RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticsearchService RemoveTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticsearchService RemoveTags response element from \a xml.
  */
 void RemoveTagsResponsePrivate::parseRemoveTagsResponse(QXmlStreamReader &xml)
 {

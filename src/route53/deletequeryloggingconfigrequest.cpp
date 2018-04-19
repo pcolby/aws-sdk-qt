@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteQueryLoggingConfigRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteQueryLoggingConfigRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteQueryLoggingConfigRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 DeleteQueryLoggingConfigRequestPrivate::DeleteQueryLoggingConfigRequestPrivate(
     const Route53Request::Action action, DeleteQueryLoggingConfigRequest * const q)

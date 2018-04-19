@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateTrafficPolicyInstanceRequest::response(
  */
 
 /*!
- *
- * Constructs a UpdateTrafficPolicyInstanceRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a UpdateTrafficPolicyInstanceRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 UpdateTrafficPolicyInstanceRequestPrivate::UpdateTrafficPolicyInstanceRequestPrivate(
     const Route53Request::Action action, UpdateTrafficPolicyInstanceRequest * const q)

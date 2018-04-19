@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * PutScheduledUpdateGroupActionRequest::respons
  */
 
 /*!
- *
- * Constructs a PutScheduledUpdateGroupActionRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a PutScheduledUpdateGroupActionRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 PutScheduledUpdateGroupActionRequestPrivate::PutScheduledUpdateGroupActionRequestPrivate(
     const AutoScalingRequest::Action action, PutScheduledUpdateGroupActionRequest * const q)

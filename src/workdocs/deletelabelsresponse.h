@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteLabelsResponse : public WorkDocsResponse {
 public:
     DeleteLabelsResponse(const DeleteLabelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteLabelsRequest * request() const;
+    virtual const DeleteLabelsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteLabelsResponse)

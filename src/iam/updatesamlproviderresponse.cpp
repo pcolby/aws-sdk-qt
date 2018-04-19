@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateSAMLProviderResponse
- *
  * \brief The UpdateSAMLProviderResponse class provides an interace for IAM UpdateSAMLProvider responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateSAMLProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSAMLProviderResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSAMLProviderResponse::UpdateSAMLProviderResponse(
         const UpdateSAMLProviderRequest &request,
@@ -120,6 +115,9 @@ UpdateSAMLProviderResponse::UpdateSAMLProviderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSAMLProviderRequest * UpdateSAMLProviderResponse::request() const
 {
     Q_D(const UpdateSAMLProviderResponse);
@@ -127,9 +125,8 @@ const UpdateSAMLProviderRequest * UpdateSAMLProviderResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM UpdateSAMLProvider response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateSAMLProvider \a response.
  */
 void UpdateSAMLProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateSAMLProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateSAMLProviderResponsePrivate
+ * \brief The UpdateSAMLProviderResponsePrivate class provides private implementation for UpdateSAMLProviderResponse.
  * \internal
  *
- * \class UpdateSAMLProviderResponsePrivate
- *
- * \brief Private implementation for UpdateSAMLProviderResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSAMLProviderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSAMLProviderResponse instance.
+ * Constructs a UpdateSAMLProviderResponsePrivate object with public implementation \a q.
  */
 UpdateSAMLProviderResponsePrivate::UpdateSAMLProviderResponsePrivate(
     UpdateSAMLProviderResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateSAMLProviderResponsePrivate::UpdateSAMLProviderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM UpdateSAMLProviderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateSAMLProvider response element from \a xml.
  */
 void UpdateSAMLProviderResponsePrivate::parseUpdateSAMLProviderResponse(QXmlStreamReader &xml)
 {

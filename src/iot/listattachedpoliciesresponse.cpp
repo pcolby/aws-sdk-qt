@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListAttachedPoliciesResponse
- *
  * \brief The ListAttachedPoliciesResponse class provides an interace for IoT ListAttachedPolicies responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListAttachedPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAttachedPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAttachedPoliciesResponse::ListAttachedPoliciesResponse(
         const ListAttachedPoliciesRequest &request,
@@ -66,6 +61,9 @@ ListAttachedPoliciesResponse::ListAttachedPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAttachedPoliciesRequest * ListAttachedPoliciesResponse::request() const
 {
     Q_D(const ListAttachedPoliciesResponse);
@@ -73,9 +71,8 @@ const ListAttachedPoliciesRequest * ListAttachedPoliciesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IoT ListAttachedPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListAttachedPolicies \a response.
  */
 void ListAttachedPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListAttachedPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListAttachedPoliciesResponsePrivate
+ * \brief The ListAttachedPoliciesResponsePrivate class provides private implementation for ListAttachedPoliciesResponse.
  * \internal
  *
- * \class ListAttachedPoliciesResponsePrivate
- *
- * \brief Private implementation for ListAttachedPoliciesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAttachedPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAttachedPoliciesResponse instance.
+ * Constructs a ListAttachedPoliciesResponsePrivate object with public implementation \a q.
  */
 ListAttachedPoliciesResponsePrivate::ListAttachedPoliciesResponsePrivate(
     ListAttachedPoliciesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListAttachedPoliciesResponsePrivate::ListAttachedPoliciesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListAttachedPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListAttachedPolicies response element from \a xml.
  */
 void ListAttachedPoliciesResponsePrivate::parseListAttachedPoliciesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::DescribeApplicationStateResponse
- *
  * \brief The DescribeApplicationStateResponse class provides an interace for MigrationHub DescribeApplicationState responses.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -41,11 +40,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new DescribeApplicationStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeApplicationStateResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeApplicationStateResponse::DescribeApplicationStateResponse(
         const DescribeApplicationStateRequest &request,
@@ -57,6 +52,9 @@ DescribeApplicationStateResponse::DescribeApplicationStateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeApplicationStateRequest * DescribeApplicationStateResponse::request() const
 {
     Q_D(const DescribeApplicationStateResponse);
@@ -64,9 +62,8 @@ const DescribeApplicationStateRequest * DescribeApplicationStateResponse::reques
 }
 
 /*!
- * @brief  Parse a MigrationHub DescribeApplicationState response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MigrationHub DescribeApplicationState \a response.
  */
 void DescribeApplicationStateResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DescribeApplicationStateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MigrationHub::DescribeApplicationStateResponsePrivate
+ * \brief The DescribeApplicationStateResponsePrivate class provides private implementation for DescribeApplicationStateResponse.
  * \internal
  *
- * \class DescribeApplicationStateResponsePrivate
- *
- * \brief Private implementation for DescribeApplicationStateResponse.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeApplicationStateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeApplicationStateResponse instance.
+ * Constructs a DescribeApplicationStateResponsePrivate object with public implementation \a q.
  */
 DescribeApplicationStateResponsePrivate::DescribeApplicationStateResponsePrivate(
     DescribeApplicationStateResponse * const q) : MigrationHubResponsePrivate(q)
@@ -97,9 +90,7 @@ DescribeApplicationStateResponsePrivate::DescribeApplicationStateResponsePrivate
 }
 
 /*!
- * @brief  Parse an MigrationHub DescribeApplicationStateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MigrationHub DescribeApplicationState response element from \a xml.
  */
 void DescribeApplicationStateResponsePrivate::parseDescribeApplicationStateResponse(QXmlStreamReader &xml)
 {

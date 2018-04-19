@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUserSettingsResponse
- *
  * \brief The SetUserSettingsResponse class provides an interace for CognitoIdentityProvider SetUserSettings responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new SetUserSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetUserSettingsResponse object for \a reply to \a request, with parent \a parent.
  */
 SetUserSettingsResponse::SetUserSettingsResponse(
         const SetUserSettingsRequest &request,
@@ -65,6 +60,9 @@ SetUserSettingsResponse::SetUserSettingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetUserSettingsRequest * SetUserSettingsResponse::request() const
 {
     Q_D(const SetUserSettingsResponse);
@@ -72,9 +70,8 @@ const SetUserSettingsRequest * SetUserSettingsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider SetUserSettings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider SetUserSettings \a response.
  */
 void SetUserSettingsResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void SetUserSettingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::SetUserSettingsResponsePrivate
+ * \brief The SetUserSettingsResponsePrivate class provides private implementation for SetUserSettingsResponse.
  * \internal
  *
- * \class SetUserSettingsResponsePrivate
- *
- * \brief Private implementation for SetUserSettingsResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetUserSettingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetUserSettingsResponse instance.
+ * Constructs a SetUserSettingsResponsePrivate object with public implementation \a q.
  */
 SetUserSettingsResponsePrivate::SetUserSettingsResponsePrivate(
     SetUserSettingsResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ SetUserSettingsResponsePrivate::SetUserSettingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider SetUserSettingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider SetUserSettings response element from \a xml.
  */
 void SetUserSettingsResponsePrivate::parseSetUserSettingsResponse(QXmlStreamReader &xml)
 {

@@ -154,9 +154,8 @@ QtAws::Core::AwsAbstractResponse * DescribeScalingActivitiesRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeScalingActivitiesRequestPrivate object for ApplicationAutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DescribeScalingActivitiesRequestPrivate object for ApplicationAutoScaling \a action,
+ * with public implementation \a q.
  */
 DescribeScalingActivitiesRequestPrivate::DescribeScalingActivitiesRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DescribeScalingActivitiesRequest * const q)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateRequestValidatorRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateRequestValidatorRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a CreateRequestValidatorRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 CreateRequestValidatorRequestPrivate::CreateRequestValidatorRequestPrivate(
     const APIGatewayRequest::Action action, CreateRequestValidatorRequest * const q)

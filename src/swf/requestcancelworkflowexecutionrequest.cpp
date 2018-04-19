@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * RequestCancelWorkflowExecutionRequest::respon
  */
 
 /*!
- *
- * Constructs a RequestCancelWorkflowExecutionRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a RequestCancelWorkflowExecutionRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 RequestCancelWorkflowExecutionRequestPrivate::RequestCancelWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, RequestCancelWorkflowExecutionRequest * const q)

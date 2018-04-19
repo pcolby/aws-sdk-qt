@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeprecateDomainResponse : public SWFResponse {
 public:
     DeprecateDomainResponse(const DeprecateDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeprecateDomainRequest * request() const;
+    virtual const DeprecateDomainRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeprecateDomainResponse)

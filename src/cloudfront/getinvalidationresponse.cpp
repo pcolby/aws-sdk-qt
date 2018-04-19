@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::GetInvalidationResponse
- *
  * \brief The GetInvalidationResponse class provides an interace for CloudFront GetInvalidation responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new GetInvalidationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInvalidationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInvalidationResponse::GetInvalidationResponse(
         const GetInvalidationRequest &request,
@@ -60,6 +55,9 @@ GetInvalidationResponse::GetInvalidationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInvalidationRequest * GetInvalidationResponse::request() const
 {
     Q_D(const GetInvalidationResponse);
@@ -67,9 +65,8 @@ const GetInvalidationRequest * GetInvalidationResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront GetInvalidation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront GetInvalidation \a response.
  */
 void GetInvalidationResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetInvalidationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::GetInvalidationResponsePrivate
+ * \brief The GetInvalidationResponsePrivate class provides private implementation for GetInvalidationResponse.
  * \internal
  *
- * \class GetInvalidationResponsePrivate
- *
- * \brief Private implementation for GetInvalidationResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInvalidationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInvalidationResponse instance.
+ * Constructs a GetInvalidationResponsePrivate object with public implementation \a q.
  */
 GetInvalidationResponsePrivate::GetInvalidationResponsePrivate(
     GetInvalidationResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ GetInvalidationResponsePrivate::GetInvalidationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront GetInvalidationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront GetInvalidation response element from \a xml.
  */
 void GetInvalidationResponsePrivate::parseGetInvalidationResponse(QXmlStreamReader &xml)
 {

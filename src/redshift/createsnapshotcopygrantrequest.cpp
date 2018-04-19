@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotCopyGrantRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CreateSnapshotCopyGrantRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a CreateSnapshotCopyGrantRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 CreateSnapshotCopyGrantRequestPrivate::CreateSnapshotCopyGrantRequestPrivate(
     const RedshiftRequest::Action action, CreateSnapshotCopyGrantRequest * const q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSegmentRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateSegmentRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSegmentRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 UpdateSegmentRequestPrivate::UpdateSegmentRequestPrivate(
     const PinpointRequest::Action action, UpdateSegmentRequest * const q)

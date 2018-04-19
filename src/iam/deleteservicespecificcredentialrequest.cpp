@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceSpecificCredentialRequest::respo
  */
 
 /*!
- *
- * Constructs a DeleteServiceSpecificCredentialRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteServiceSpecificCredentialRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteServiceSpecificCredentialRequestPrivate::DeleteServiceSpecificCredentialRequestPrivate(
     const IAMRequest::Action action, DeleteServiceSpecificCredentialRequest * const q)

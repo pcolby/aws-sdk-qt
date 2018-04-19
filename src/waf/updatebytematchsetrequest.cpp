@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateByteMatchSetRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateByteMatchSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a UpdateByteMatchSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 UpdateByteMatchSetRequestPrivate::UpdateByteMatchSetRequestPrivate(
     const WAFRequest::Action action, UpdateByteMatchSetRequest * const q)

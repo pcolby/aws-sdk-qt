@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdatePatchBaselineResponse
- *
  * \brief The UpdatePatchBaselineResponse class provides an interace for SSM UpdatePatchBaseline responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdatePatchBaselineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePatchBaselineResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePatchBaselineResponse::UpdatePatchBaselineResponse(
         const UpdatePatchBaselineRequest &request,
@@ -79,6 +74,9 @@ UpdatePatchBaselineResponse::UpdatePatchBaselineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePatchBaselineRequest * UpdatePatchBaselineResponse::request() const
 {
     Q_D(const UpdatePatchBaselineResponse);
@@ -86,9 +84,8 @@ const UpdatePatchBaselineRequest * UpdatePatchBaselineResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM UpdatePatchBaseline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM UpdatePatchBaseline \a response.
  */
 void UpdatePatchBaselineResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void UpdatePatchBaselineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::UpdatePatchBaselineResponsePrivate
+ * \brief The UpdatePatchBaselineResponsePrivate class provides private implementation for UpdatePatchBaselineResponse.
  * \internal
  *
- * \class UpdatePatchBaselineResponsePrivate
- *
- * \brief Private implementation for UpdatePatchBaselineResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePatchBaselineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePatchBaselineResponse instance.
+ * Constructs a UpdatePatchBaselineResponsePrivate object with public implementation \a q.
  */
 UpdatePatchBaselineResponsePrivate::UpdatePatchBaselineResponsePrivate(
     UpdatePatchBaselineResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ UpdatePatchBaselineResponsePrivate::UpdatePatchBaselineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM UpdatePatchBaselineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM UpdatePatchBaseline response element from \a xml.
  */
 void UpdatePatchBaselineResponsePrivate::parseUpdatePatchBaselineResponse(QXmlStreamReader &xml)
 {

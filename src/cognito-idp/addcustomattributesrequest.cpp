@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AddCustomAttributesRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a AddCustomAttributesRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AddCustomAttributesRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AddCustomAttributesRequestPrivate::AddCustomAttributesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AddCustomAttributesRequest * const q)

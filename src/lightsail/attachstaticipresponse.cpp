@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::AttachStaticIpResponse
- *
  * \brief The AttachStaticIpResponse class provides an interace for Lightsail AttachStaticIp responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new AttachStaticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachStaticIpResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachStaticIpResponse::AttachStaticIpResponse(
         const AttachStaticIpRequest &request,
@@ -71,6 +66,9 @@ AttachStaticIpResponse::AttachStaticIpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachStaticIpRequest * AttachStaticIpResponse::request() const
 {
     Q_D(const AttachStaticIpResponse);
@@ -78,9 +76,8 @@ const AttachStaticIpRequest * AttachStaticIpResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail AttachStaticIp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail AttachStaticIp \a response.
  */
 void AttachStaticIpResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void AttachStaticIpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::AttachStaticIpResponsePrivate
+ * \brief The AttachStaticIpResponsePrivate class provides private implementation for AttachStaticIpResponse.
  * \internal
  *
- * \class AttachStaticIpResponsePrivate
- *
- * \brief Private implementation for AttachStaticIpResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachStaticIpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachStaticIpResponse instance.
+ * Constructs a AttachStaticIpResponsePrivate object with public implementation \a q.
  */
 AttachStaticIpResponsePrivate::AttachStaticIpResponsePrivate(
     AttachStaticIpResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ AttachStaticIpResponsePrivate::AttachStaticIpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail AttachStaticIpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail AttachStaticIp response element from \a xml.
  */
 void AttachStaticIpResponsePrivate::parseAttachStaticIpResponse(QXmlStreamReader &xml)
 {

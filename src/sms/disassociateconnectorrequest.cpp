@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateConnectorRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DisassociateConnectorRequestPrivate object for SMS \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateConnectorRequestPrivate object for SMS \a action,
+ * with public implementation \a q.
  */
 DisassociateConnectorRequestPrivate::DisassociateConnectorRequestPrivate(
     const SMSRequest::Action action, DisassociateConnectorRequest * const q)

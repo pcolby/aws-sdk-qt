@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListVerifiedEmailAddressesResponse
- *
  * \brief The ListVerifiedEmailAddressesResponse class provides an interace for SES ListVerifiedEmailAddresses responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListVerifiedEmailAddressesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListVerifiedEmailAddressesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListVerifiedEmailAddressesResponse::ListVerifiedEmailAddressesResponse(
         const ListVerifiedEmailAddressesRequest &request,
@@ -66,6 +61,9 @@ ListVerifiedEmailAddressesResponse::ListVerifiedEmailAddressesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListVerifiedEmailAddressesRequest * ListVerifiedEmailAddressesResponse::request() const
 {
     Q_D(const ListVerifiedEmailAddressesResponse);
@@ -73,9 +71,8 @@ const ListVerifiedEmailAddressesRequest * ListVerifiedEmailAddressesResponse::re
 }
 
 /*!
- * @brief  Parse a SES ListVerifiedEmailAddresses response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES ListVerifiedEmailAddresses \a response.
  */
 void ListVerifiedEmailAddressesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListVerifiedEmailAddressesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::ListVerifiedEmailAddressesResponsePrivate
+ * \brief The ListVerifiedEmailAddressesResponsePrivate class provides private implementation for ListVerifiedEmailAddressesResponse.
  * \internal
  *
- * \class ListVerifiedEmailAddressesResponsePrivate
- *
- * \brief Private implementation for ListVerifiedEmailAddressesResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVerifiedEmailAddressesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListVerifiedEmailAddressesResponse instance.
+ * Constructs a ListVerifiedEmailAddressesResponsePrivate object with public implementation \a q.
  */
 ListVerifiedEmailAddressesResponsePrivate::ListVerifiedEmailAddressesResponsePrivate(
     ListVerifiedEmailAddressesResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ ListVerifiedEmailAddressesResponsePrivate::ListVerifiedEmailAddressesResponsePri
 }
 
 /*!
- * @brief  Parse an SES ListVerifiedEmailAddressesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES ListVerifiedEmailAddresses response element from \a xml.
  */
 void ListVerifiedEmailAddressesResponsePrivate::parseListVerifiedEmailAddressesResponse(QXmlStreamReader &xml)
 {

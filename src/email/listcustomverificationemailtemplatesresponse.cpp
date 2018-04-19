@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListCustomVerificationEmailTemplatesResponse
- *
  * \brief The ListCustomVerificationEmailTemplatesResponse class provides an interace for SES ListCustomVerificationEmailTemplates responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListCustomVerificationEmailTemplatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCustomVerificationEmailTemplatesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCustomVerificationEmailTemplatesResponse::ListCustomVerificationEmailTemplatesResponse(
         const ListCustomVerificationEmailTemplatesRequest &request,
@@ -66,6 +61,9 @@ ListCustomVerificationEmailTemplatesResponse::ListCustomVerificationEmailTemplat
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCustomVerificationEmailTemplatesRequest * ListCustomVerificationEmailTemplatesResponse::request() const
 {
     Q_D(const ListCustomVerificationEmailTemplatesResponse);
@@ -73,9 +71,8 @@ const ListCustomVerificationEmailTemplatesRequest * ListCustomVerificationEmailT
 }
 
 /*!
- * @brief  Parse a SES ListCustomVerificationEmailTemplates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES ListCustomVerificationEmailTemplates \a response.
  */
 void ListCustomVerificationEmailTemplatesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListCustomVerificationEmailTemplatesResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::SES::ListCustomVerificationEmailTemplatesResponsePrivate
+ * \brief The ListCustomVerificationEmailTemplatesResponsePrivate class provides private implementation for ListCustomVerificationEmailTemplatesResponse.
  * \internal
  *
- * \class ListCustomVerificationEmailTemplatesResponsePrivate
- *
- * \brief Private implementation for ListCustomVerificationEmailTemplatesResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCustomVerificationEmailTemplatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCustomVerificationEmailTemplatesResponse instance.
+ * Constructs a ListCustomVerificationEmailTemplatesResponsePrivate object with public implementation \a q.
  */
 ListCustomVerificationEmailTemplatesResponsePrivate::ListCustomVerificationEmailTemplatesResponsePrivate(
     ListCustomVerificationEmailTemplatesResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ ListCustomVerificationEmailTemplatesResponsePrivate::ListCustomVerificationEmail
 }
 
 /*!
- * @brief  Parse an SES ListCustomVerificationEmailTemplatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES ListCustomVerificationEmailTemplates response element from \a xml.
  */
 void ListCustomVerificationEmailTemplatesResponsePrivate::parseListCustomVerificationEmailTemplatesResponse(QXmlStreamReader &xml)
 {

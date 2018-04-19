@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * StartLoggingRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a StartLoggingRequestPrivate object for CloudTrail \a action with,
- * public implementation \a q.
+ * Constructs a StartLoggingRequestPrivate object for CloudTrail \a action,
+ * with public implementation \a q.
  */
 StartLoggingRequestPrivate::StartLoggingRequestPrivate(
     const CloudTrailRequest::Action action, StartLoggingRequest * const q)

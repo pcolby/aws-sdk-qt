@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::CreatePipelineResponse
- *
  * \brief The CreatePipelineResponse class provides an interace for ElasticTranscoder CreatePipeline responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new CreatePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePipelineResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePipelineResponse::CreatePipelineResponse(
         const CreatePipelineRequest &request,
@@ -58,6 +53,9 @@ CreatePipelineResponse::CreatePipelineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePipelineRequest * CreatePipelineResponse::request() const
 {
     Q_D(const CreatePipelineResponse);
@@ -65,9 +63,8 @@ const CreatePipelineRequest * CreatePipelineResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder CreatePipeline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder CreatePipeline \a response.
  */
 void CreatePipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreatePipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::CreatePipelineResponsePrivate
+ * \brief The CreatePipelineResponsePrivate class provides private implementation for CreatePipelineResponse.
  * \internal
  *
- * \class CreatePipelineResponsePrivate
- *
- * \brief Private implementation for CreatePipelineResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePipelineResponse instance.
+ * Constructs a CreatePipelineResponsePrivate object with public implementation \a q.
  */
 CreatePipelineResponsePrivate::CreatePipelineResponsePrivate(
     CreatePipelineResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ CreatePipelineResponsePrivate::CreatePipelineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder CreatePipelineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder CreatePipeline response element from \a xml.
  */
 void CreatePipelineResponsePrivate::parseCreatePipelineResponse(QXmlStreamReader &xml)
 {

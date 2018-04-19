@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * GetGroupPolicyRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetGroupPolicyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a GetGroupPolicyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 GetGroupPolicyRequestPrivate::GetGroupPolicyRequestPrivate(
     const IAMRequest::Action action, GetGroupPolicyRequest * const q)

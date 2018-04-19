@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::DeletePipelineResponse
- *
  * \brief The DeletePipelineResponse class provides an interace for ElasticTranscoder DeletePipeline responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new DeletePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeletePipelineResponse object for \a reply to \a request, with parent \a parent.
  */
 DeletePipelineResponse::DeletePipelineResponse(
         const DeletePipelineRequest &request,
@@ -58,6 +53,9 @@ DeletePipelineResponse::DeletePipelineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeletePipelineRequest * DeletePipelineResponse::request() const
 {
     Q_D(const DeletePipelineResponse);
@@ -65,9 +63,8 @@ const DeletePipelineRequest * DeletePipelineResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder DeletePipeline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder DeletePipeline \a response.
  */
 void DeletePipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeletePipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::DeletePipelineResponsePrivate
+ * \brief The DeletePipelineResponsePrivate class provides private implementation for DeletePipelineResponse.
  * \internal
  *
- * \class DeletePipelineResponsePrivate
- *
- * \brief Private implementation for DeletePipelineResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeletePipelineResponse instance.
+ * Constructs a DeletePipelineResponsePrivate object with public implementation \a q.
  */
 DeletePipelineResponsePrivate::DeletePipelineResponsePrivate(
     DeletePipelineResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ DeletePipelineResponsePrivate::DeletePipelineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder DeletePipelineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder DeletePipeline response element from \a xml.
  */
 void DeletePipelineResponsePrivate::parseDeletePipelineResponse(QXmlStreamReader &xml)
 {

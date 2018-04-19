@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopWorkspacesResponse : public WorkSpacesResponse {
 public:
     StopWorkspacesResponse(const StopWorkspacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopWorkspacesRequest * request() const;
+    virtual const StopWorkspacesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopWorkspacesResponse)

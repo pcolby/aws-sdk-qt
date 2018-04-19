@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetQueueRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a GetQueueRequestPrivate object for MediaConvert \a action with,
- * public implementation \a q.
+ * Constructs a GetQueueRequestPrivate object for MediaConvert \a action,
+ * with public implementation \a q.
  */
 GetQueueRequestPrivate::GetQueueRequestPrivate(
     const MediaConvertRequest::Action action, GetQueueRequest * const q)

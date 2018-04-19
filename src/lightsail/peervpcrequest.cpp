@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * PeerVpcRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a PeerVpcRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a PeerVpcRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 PeerVpcRequestPrivate::PeerVpcRequestPrivate(
     const LightsailRequest::Action action, PeerVpcRequest * const q)

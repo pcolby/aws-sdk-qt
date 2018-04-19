@@ -34,10 +34,10 @@ class QTAWS_EXPORT DecreaseStreamRetentionPeriodResponse : public KinesisRespons
 public:
     DecreaseStreamRetentionPeriodResponse(const DecreaseStreamRetentionPeriodRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DecreaseStreamRetentionPeriodRequest * request() const;
+    virtual const DecreaseStreamRetentionPeriodRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DecreaseStreamRetentionPeriodResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetChangeTokenResponse : public WAFRegionalResponse {
 public:
     GetChangeTokenResponse(const GetChangeTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetChangeTokenRequest * request() const;
+    virtual const GetChangeTokenRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetChangeTokenResponse)

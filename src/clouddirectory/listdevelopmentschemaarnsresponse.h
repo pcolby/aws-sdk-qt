@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListDevelopmentSchemaArnsResponse : public CloudDirectoryResp
 public:
     ListDevelopmentSchemaArnsResponse(const ListDevelopmentSchemaArnsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDevelopmentSchemaArnsRequest * request() const;
+    virtual const ListDevelopmentSchemaArnsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListDevelopmentSchemaArnsResponse)

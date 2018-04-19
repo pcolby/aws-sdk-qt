@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminRespondToAuthChallengeResponse
- *
  * \brief The AdminRespondToAuthChallengeResponse class provides an interace for CognitoIdentityProvider AdminRespondToAuthChallenge responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminRespondToAuthChallengeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminRespondToAuthChallengeResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminRespondToAuthChallengeResponse::AdminRespondToAuthChallengeResponse(
         const AdminRespondToAuthChallengeRequest &request,
@@ -65,6 +60,9 @@ AdminRespondToAuthChallengeResponse::AdminRespondToAuthChallengeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminRespondToAuthChallengeRequest * AdminRespondToAuthChallengeResponse::request() const
 {
     Q_D(const AdminRespondToAuthChallengeResponse);
@@ -72,9 +70,8 @@ const AdminRespondToAuthChallengeRequest * AdminRespondToAuthChallengeResponse::
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminRespondToAuthChallenge response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminRespondToAuthChallenge \a response.
  */
 void AdminRespondToAuthChallengeResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminRespondToAuthChallengeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminRespondToAuthChallengeResponsePrivate
+ * \brief The AdminRespondToAuthChallengeResponsePrivate class provides private implementation for AdminRespondToAuthChallengeResponse.
  * \internal
  *
- * \class AdminRespondToAuthChallengeResponsePrivate
- *
- * \brief Private implementation for AdminRespondToAuthChallengeResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminRespondToAuthChallengeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminRespondToAuthChallengeResponse instance.
+ * Constructs a AdminRespondToAuthChallengeResponsePrivate object with public implementation \a q.
  */
 AdminRespondToAuthChallengeResponsePrivate::AdminRespondToAuthChallengeResponsePrivate(
     AdminRespondToAuthChallengeResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminRespondToAuthChallengeResponsePrivate::AdminRespondToAuthChallengeResponseP
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminRespondToAuthChallengeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminRespondToAuthChallenge response element from \a xml.
  */
 void AdminRespondToAuthChallengeResponsePrivate::parseAdminRespondToAuthChallengeResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::CreateIndexResponse
- *
  * \brief The CreateIndexResponse class provides an interace for CloudDirectory CreateIndex responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new CreateIndexResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateIndexResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateIndexResponse::CreateIndexResponse(
         const CreateIndexRequest &request,
@@ -62,6 +57,9 @@ CreateIndexResponse::CreateIndexResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateIndexRequest * CreateIndexResponse::request() const
 {
     Q_D(const CreateIndexResponse);
@@ -69,9 +67,8 @@ const CreateIndexRequest * CreateIndexResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory CreateIndex response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory CreateIndex \a response.
  */
 void CreateIndexResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void CreateIndexResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::CreateIndexResponsePrivate
+ * \brief The CreateIndexResponsePrivate class provides private implementation for CreateIndexResponse.
  * \internal
  *
- * \class CreateIndexResponsePrivate
- *
- * \brief Private implementation for CreateIndexResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateIndexResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateIndexResponse instance.
+ * Constructs a CreateIndexResponsePrivate object with public implementation \a q.
  */
 CreateIndexResponsePrivate::CreateIndexResponsePrivate(
     CreateIndexResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ CreateIndexResponsePrivate::CreateIndexResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory CreateIndexResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory CreateIndex response element from \a xml.
  */
 void CreateIndexResponsePrivate::parseCreateIndexResponse(QXmlStreamReader &xml)
 {

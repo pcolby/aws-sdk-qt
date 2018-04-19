@@ -34,10 +34,10 @@ class QTAWS_EXPORT LookupEventsResponse : public CloudTrailResponse {
 public:
     LookupEventsResponse(const LookupEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const LookupEventsRequest * request() const;
+    virtual const LookupEventsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(LookupEventsResponse)

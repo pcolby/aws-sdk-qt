@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::CreateByteMatchSetResponse
- *
  * \brief The CreateByteMatchSetResponse class provides an interace for WAF CreateByteMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new CreateByteMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateByteMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateByteMatchSetResponse::CreateByteMatchSetResponse(
         const CreateByteMatchSetRequest &request,
@@ -60,6 +55,9 @@ CreateByteMatchSetResponse::CreateByteMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateByteMatchSetRequest * CreateByteMatchSetResponse::request() const
 {
     Q_D(const CreateByteMatchSetResponse);
@@ -67,9 +65,8 @@ const CreateByteMatchSetRequest * CreateByteMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF CreateByteMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF CreateByteMatchSet \a response.
  */
 void CreateByteMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateByteMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::CreateByteMatchSetResponsePrivate
+ * \brief The CreateByteMatchSetResponsePrivate class provides private implementation for CreateByteMatchSetResponse.
  * \internal
  *
- * \class CreateByteMatchSetResponsePrivate
- *
- * \brief Private implementation for CreateByteMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateByteMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateByteMatchSetResponse instance.
+ * Constructs a CreateByteMatchSetResponsePrivate object with public implementation \a q.
  */
 CreateByteMatchSetResponsePrivate::CreateByteMatchSetResponsePrivate(
     CreateByteMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateByteMatchSetResponsePrivate::CreateByteMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF CreateByteMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF CreateByteMatchSet response element from \a xml.
  */
 void CreateByteMatchSetResponsePrivate::parseCreateByteMatchSetResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateNetworkAclEntryResponse
- *
  * \brief The CreateNetworkAclEntryResponse class provides an interace for EC2 CreateNetworkAclEntry responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateNetworkAclEntryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateNetworkAclEntryResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateNetworkAclEntryResponse::CreateNetworkAclEntryResponse(
         const CreateNetworkAclEntryRequest &request,
@@ -59,6 +54,9 @@ CreateNetworkAclEntryResponse::CreateNetworkAclEntryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateNetworkAclEntryRequest * CreateNetworkAclEntryResponse::request() const
 {
     Q_D(const CreateNetworkAclEntryResponse);
@@ -66,9 +64,8 @@ const CreateNetworkAclEntryRequest * CreateNetworkAclEntryResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 CreateNetworkAclEntry response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateNetworkAclEntry \a response.
  */
 void CreateNetworkAclEntryResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateNetworkAclEntryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateNetworkAclEntryResponsePrivate
+ * \brief The CreateNetworkAclEntryResponsePrivate class provides private implementation for CreateNetworkAclEntryResponse.
  * \internal
  *
- * \class CreateNetworkAclEntryResponsePrivate
- *
- * \brief Private implementation for CreateNetworkAclEntryResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNetworkAclEntryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateNetworkAclEntryResponse instance.
+ * Constructs a CreateNetworkAclEntryResponsePrivate object with public implementation \a q.
  */
 CreateNetworkAclEntryResponsePrivate::CreateNetworkAclEntryResponsePrivate(
     CreateNetworkAclEntryResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateNetworkAclEntryResponsePrivate::CreateNetworkAclEntryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateNetworkAclEntryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateNetworkAclEntry response element from \a xml.
  */
 void CreateNetworkAclEntryResponsePrivate::parseCreateNetworkAclEntryResponse(QXmlStreamReader &xml)
 {

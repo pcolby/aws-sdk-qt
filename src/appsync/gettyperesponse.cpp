@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::GetTypeResponse
- *
  * \brief The GetTypeResponse class provides an interace for AppSync GetType responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new GetTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTypeResponse::GetTypeResponse(
         const GetTypeRequest &request,
@@ -56,6 +51,9 @@ GetTypeResponse::GetTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTypeRequest * GetTypeResponse::request() const
 {
     Q_D(const GetTypeResponse);
@@ -63,9 +61,8 @@ const GetTypeRequest * GetTypeResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync GetType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync GetType \a response.
  */
 void GetTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::GetTypeResponsePrivate
+ * \brief The GetTypeResponsePrivate class provides private implementation for GetTypeResponse.
  * \internal
  *
- * \class GetTypeResponsePrivate
- *
- * \brief Private implementation for GetTypeResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTypeResponse instance.
+ * Constructs a GetTypeResponsePrivate object with public implementation \a q.
  */
 GetTypeResponsePrivate::GetTypeResponsePrivate(
     GetTypeResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ GetTypeResponsePrivate::GetTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync GetTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync GetType response element from \a xml.
  */
 void GetTypeResponsePrivate::parseGetTypeResponse(QXmlStreamReader &xml)
 {

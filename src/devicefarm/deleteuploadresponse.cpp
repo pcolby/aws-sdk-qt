@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeleteUploadResponse
- *
  * \brief The DeleteUploadResponse class provides an interace for DeviceFarm DeleteUpload responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new DeleteUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteUploadResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteUploadResponse::DeleteUploadResponse(
         const DeleteUploadRequest &request,
@@ -57,6 +52,9 @@ DeleteUploadResponse::DeleteUploadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteUploadRequest * DeleteUploadResponse::request() const
 {
     Q_D(const DeleteUploadResponse);
@@ -64,9 +62,8 @@ const DeleteUploadRequest * DeleteUploadResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm DeleteUpload response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm DeleteUpload \a response.
  */
 void DeleteUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DeleteUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::DeleteUploadResponsePrivate
+ * \brief The DeleteUploadResponsePrivate class provides private implementation for DeleteUploadResponse.
  * \internal
  *
- * \class DeleteUploadResponsePrivate
- *
- * \brief Private implementation for DeleteUploadResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUploadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteUploadResponse instance.
+ * Constructs a DeleteUploadResponsePrivate object with public implementation \a q.
  */
 DeleteUploadResponsePrivate::DeleteUploadResponsePrivate(
     DeleteUploadResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ DeleteUploadResponsePrivate::DeleteUploadResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm DeleteUploadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm DeleteUpload response element from \a xml.
  */
 void DeleteUploadResponsePrivate::parseDeleteUploadResponse(QXmlStreamReader &xml)
 {

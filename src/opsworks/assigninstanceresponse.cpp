@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::AssignInstanceResponse
- *
  * \brief The AssignInstanceResponse class provides an interace for OpsWorks AssignInstance responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new AssignInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssignInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 AssignInstanceResponse::AssignInstanceResponse(
         const AssignInstanceRequest &request,
@@ -161,6 +156,9 @@ AssignInstanceResponse::AssignInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssignInstanceRequest * AssignInstanceResponse::request() const
 {
     Q_D(const AssignInstanceResponse);
@@ -168,9 +166,8 @@ const AssignInstanceRequest * AssignInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks AssignInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks AssignInstance \a response.
  */
 void AssignInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void AssignInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::AssignInstanceResponsePrivate
+ * \brief The AssignInstanceResponsePrivate class provides private implementation for AssignInstanceResponse.
  * \internal
  *
- * \class AssignInstanceResponsePrivate
- *
- * \brief Private implementation for AssignInstanceResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssignInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssignInstanceResponse instance.
+ * Constructs a AssignInstanceResponsePrivate object with public implementation \a q.
  */
 AssignInstanceResponsePrivate::AssignInstanceResponsePrivate(
     AssignInstanceResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ AssignInstanceResponsePrivate::AssignInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks AssignInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks AssignInstance response element from \a xml.
  */
 void AssignInstanceResponsePrivate::parseAssignInstanceResponse(QXmlStreamReader &xml)
 {

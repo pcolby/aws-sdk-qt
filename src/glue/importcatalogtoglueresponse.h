@@ -34,10 +34,10 @@ class QTAWS_EXPORT ImportCatalogToGlueResponse : public GlueResponse {
 public:
     ImportCatalogToGlueResponse(const ImportCatalogToGlueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ImportCatalogToGlueRequest * request() const;
+    virtual const ImportCatalogToGlueRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ImportCatalogToGlueResponse)

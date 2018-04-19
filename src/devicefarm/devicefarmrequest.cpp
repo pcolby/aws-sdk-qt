@@ -96,7 +96,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * Constructs a[n] DeviceFarmRequest object for DeviceFarm \a action.
+ * Constructs a DeviceFarmRequest object for DeviceFarm \a action.
  */
 DeviceFarmRequest::DeviceFarmRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DeviceFarmRequestPrivate(action, this))
@@ -296,8 +296,8 @@ QNetworkRequest DeviceFarmRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a DeviceFarmRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a DeviceFarmRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequest::Action action, DeviceFarmRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

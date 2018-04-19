@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * GetPipelineDefinitionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetPipelineDefinitionRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a GetPipelineDefinitionRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 GetPipelineDefinitionRequestPrivate::GetPipelineDefinitionRequestPrivate(
     const DataPipelineRequest::Action action, GetPipelineDefinitionRequest * const q)

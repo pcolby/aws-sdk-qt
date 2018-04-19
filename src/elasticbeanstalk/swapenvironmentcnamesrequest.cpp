@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * SwapEnvironmentCNAMEsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a SwapEnvironmentCNAMEsRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a SwapEnvironmentCNAMEsRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 SwapEnvironmentCNAMEsRequestPrivate::SwapEnvironmentCNAMEsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, SwapEnvironmentCNAMEsRequest * const q)

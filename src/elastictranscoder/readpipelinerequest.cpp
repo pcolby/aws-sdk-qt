@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ReadPipelineRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ReadPipelineRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a ReadPipelineRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
     const ElasticTranscoderRequest::Action action, ReadPipelineRequest * const q)

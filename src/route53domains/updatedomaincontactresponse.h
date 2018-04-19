@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateDomainContactResponse : public Route53DomainsResponse {
 public:
     UpdateDomainContactResponse(const UpdateDomainContactRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateDomainContactRequest * request() const;
+    virtual const UpdateDomainContactRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateDomainContactResponse)

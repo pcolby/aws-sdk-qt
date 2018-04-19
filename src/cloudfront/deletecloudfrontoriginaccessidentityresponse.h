@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCloudFrontOriginAccessIdentityResponse : public CloudFr
 public:
     DeleteCloudFrontOriginAccessIdentityResponse(const DeleteCloudFrontOriginAccessIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCloudFrontOriginAccessIdentityRequest * request() const;
+    virtual const DeleteCloudFrontOriginAccessIdentityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCloudFrontOriginAccessIdentityResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAccountSettingsResponse : public LambdaResponse {
 public:
     GetAccountSettingsResponse(const GetAccountSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAccountSettingsRequest * request() const;
+    virtual const GetAccountSettingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetAccountSettingsResponse)

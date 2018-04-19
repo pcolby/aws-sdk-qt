@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteHostedZoneRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteHostedZoneRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteHostedZoneRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 DeleteHostedZoneRequestPrivate::DeleteHostedZoneRequestPrivate(
     const Route53Request::Action action, DeleteHostedZoneRequest * const q)

@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeMatchmakingResponse
- *
  * \brief The DescribeMatchmakingResponse class provides an interace for GameLift DescribeMatchmaking responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeMatchmakingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeMatchmakingResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeMatchmakingResponse::DescribeMatchmakingResponse(
         const DescribeMatchmakingRequest &request,
@@ -491,6 +486,9 @@ DescribeMatchmakingResponse::DescribeMatchmakingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeMatchmakingRequest * DescribeMatchmakingResponse::request() const
 {
     Q_D(const DescribeMatchmakingResponse);
@@ -498,9 +496,8 @@ const DescribeMatchmakingRequest * DescribeMatchmakingResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift DescribeMatchmaking response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DescribeMatchmaking \a response.
  */
 void DescribeMatchmakingResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DescribeMatchmakingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DescribeMatchmakingResponsePrivate
+ * \brief The DescribeMatchmakingResponsePrivate class provides private implementation for DescribeMatchmakingResponse.
  * \internal
  *
- * \class DescribeMatchmakingResponsePrivate
- *
- * \brief Private implementation for DescribeMatchmakingResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMatchmakingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeMatchmakingResponse instance.
+ * Constructs a DescribeMatchmakingResponsePrivate object with public implementation \a q.
  */
 DescribeMatchmakingResponsePrivate::DescribeMatchmakingResponsePrivate(
     DescribeMatchmakingResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DescribeMatchmakingResponsePrivate::DescribeMatchmakingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift DescribeMatchmakingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DescribeMatchmaking response element from \a xml.
  */
 void DescribeMatchmakingResponsePrivate::parseDescribeMatchmakingResponse(QXmlStreamReader &xml)
 {

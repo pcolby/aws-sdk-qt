@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeleteInstanceProfileResponse
- *
  * \brief The DeleteInstanceProfileResponse class provides an interace for DeviceFarm DeleteInstanceProfile responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new DeleteInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteInstanceProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteInstanceProfileResponse::DeleteInstanceProfileResponse(
         const DeleteInstanceProfileRequest &request,
@@ -57,6 +52,9 @@ DeleteInstanceProfileResponse::DeleteInstanceProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteInstanceProfileRequest * DeleteInstanceProfileResponse::request() const
 {
     Q_D(const DeleteInstanceProfileResponse);
@@ -64,9 +62,8 @@ const DeleteInstanceProfileRequest * DeleteInstanceProfileResponse::request() co
 }
 
 /*!
- * @brief  Parse a DeviceFarm DeleteInstanceProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm DeleteInstanceProfile \a response.
  */
 void DeleteInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DeleteInstanceProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::DeleteInstanceProfileResponsePrivate
+ * \brief The DeleteInstanceProfileResponsePrivate class provides private implementation for DeleteInstanceProfileResponse.
  * \internal
  *
- * \class DeleteInstanceProfileResponsePrivate
- *
- * \brief Private implementation for DeleteInstanceProfileResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInstanceProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteInstanceProfileResponse instance.
+ * Constructs a DeleteInstanceProfileResponsePrivate object with public implementation \a q.
  */
 DeleteInstanceProfileResponsePrivate::DeleteInstanceProfileResponsePrivate(
     DeleteInstanceProfileResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ DeleteInstanceProfileResponsePrivate::DeleteInstanceProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm DeleteInstanceProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm DeleteInstanceProfile response element from \a xml.
  */
 void DeleteInstanceProfileResponsePrivate::parseDeleteInstanceProfileResponse(QXmlStreamReader &xml)
 {

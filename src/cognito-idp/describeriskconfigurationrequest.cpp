@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRiskConfigurationRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeRiskConfigurationRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRiskConfigurationRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 DescribeRiskConfigurationRequestPrivate::DescribeRiskConfigurationRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DescribeRiskConfigurationRequest * const q)

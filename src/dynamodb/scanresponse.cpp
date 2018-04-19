@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::ScanResponse
- *
  * \brief The ScanResponse class provides an interace for DynamoDB Scan responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new ScanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ScanResponse object for \a reply to \a request, with parent \a parent.
  */
 ScanResponse::ScanResponse(
         const ScanRequest &request,
@@ -74,6 +69,9 @@ ScanResponse::ScanResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ScanRequest * ScanResponse::request() const
 {
     Q_D(const ScanResponse);
@@ -81,9 +79,8 @@ const ScanRequest * ScanResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB Scan response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB Scan \a response.
  */
 void ScanResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void ScanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::ScanResponsePrivate
+ * \brief The ScanResponsePrivate class provides private implementation for ScanResponse.
  * \internal
  *
- * \class ScanResponsePrivate
- *
- * \brief Private implementation for ScanResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ScanResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ScanResponse instance.
+ * Constructs a ScanResponsePrivate object with public implementation \a q.
  */
 ScanResponsePrivate::ScanResponsePrivate(
     ScanResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ ScanResponsePrivate::ScanResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB ScanResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB Scan response element from \a xml.
  */
 void ScanResponsePrivate::parseScanResponse(QXmlStreamReader &xml)
 {

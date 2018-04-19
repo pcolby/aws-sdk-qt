@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DeleteMaintenanceWindowRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteMaintenanceWindowRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteMaintenanceWindowRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DeleteMaintenanceWindowRequestPrivate::DeleteMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, DeleteMaintenanceWindowRequest * const q)

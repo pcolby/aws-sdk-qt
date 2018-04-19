@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeRootFoldersResponse
- *
  * \brief The DescribeRootFoldersResponse class provides an interace for WorkDocs DescribeRootFolders responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeRootFoldersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRootFoldersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRootFoldersResponse::DescribeRootFoldersResponse(
         const DescribeRootFoldersRequest &request,
@@ -84,6 +79,9 @@ DescribeRootFoldersResponse::DescribeRootFoldersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRootFoldersRequest * DescribeRootFoldersResponse::request() const
 {
     Q_D(const DescribeRootFoldersResponse);
@@ -91,9 +89,8 @@ const DescribeRootFoldersRequest * DescribeRootFoldersResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs DescribeRootFolders response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DescribeRootFolders \a response.
  */
 void DescribeRootFoldersResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeRootFoldersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DescribeRootFoldersResponsePrivate
+ * \brief The DescribeRootFoldersResponsePrivate class provides private implementation for DescribeRootFoldersResponse.
  * \internal
  *
- * \class DescribeRootFoldersResponsePrivate
- *
- * \brief Private implementation for DescribeRootFoldersResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRootFoldersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRootFoldersResponse instance.
+ * Constructs a DescribeRootFoldersResponsePrivate object with public implementation \a q.
  */
 DescribeRootFoldersResponsePrivate::DescribeRootFoldersResponsePrivate(
     DescribeRootFoldersResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeRootFoldersResponsePrivate::DescribeRootFoldersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DescribeRootFoldersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DescribeRootFolders response element from \a xml.
  */
 void DescribeRootFoldersResponsePrivate::parseDescribeRootFoldersResponse(QXmlStreamReader &xml)
 {

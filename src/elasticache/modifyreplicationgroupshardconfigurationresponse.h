@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyReplicationGroupShardConfigurationResponse : public Ela
 public:
     ModifyReplicationGroupShardConfigurationResponse(const ModifyReplicationGroupShardConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyReplicationGroupShardConfigurationRequest * request() const;
+    virtual const ModifyReplicationGroupShardConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyReplicationGroupShardConfigurationResponse)

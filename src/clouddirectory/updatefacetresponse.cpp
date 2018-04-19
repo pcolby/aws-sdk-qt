@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::UpdateFacetResponse
- *
  * \brief The UpdateFacetResponse class provides an interace for CloudDirectory UpdateFacet responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new UpdateFacetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateFacetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateFacetResponse::UpdateFacetResponse(
         const UpdateFacetRequest &request,
@@ -62,6 +57,9 @@ UpdateFacetResponse::UpdateFacetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateFacetRequest * UpdateFacetResponse::request() const
 {
     Q_D(const UpdateFacetResponse);
@@ -69,9 +67,8 @@ const UpdateFacetRequest * UpdateFacetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory UpdateFacet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory UpdateFacet \a response.
  */
 void UpdateFacetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void UpdateFacetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::UpdateFacetResponsePrivate
+ * \brief The UpdateFacetResponsePrivate class provides private implementation for UpdateFacetResponse.
  * \internal
  *
- * \class UpdateFacetResponsePrivate
- *
- * \brief Private implementation for UpdateFacetResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFacetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateFacetResponse instance.
+ * Constructs a UpdateFacetResponsePrivate object with public implementation \a q.
  */
 UpdateFacetResponsePrivate::UpdateFacetResponsePrivate(
     UpdateFacetResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ UpdateFacetResponsePrivate::UpdateFacetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory UpdateFacetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory UpdateFacet response element from \a xml.
  */
 void UpdateFacetResponsePrivate::parseUpdateFacetResponse(QXmlStreamReader &xml)
 {

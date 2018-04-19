@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DescribeConfigurationsResponse
- *
  * \brief The DescribeConfigurationsResponse class provides an interace for ApplicationDiscoveryService DescribeConfigurations responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConfigurationsResponse::DescribeConfigurationsResponse(
         const DescribeConfigurationsRequest &request,
@@ -119,6 +114,9 @@ DescribeConfigurationsResponse::DescribeConfigurationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConfigurationsRequest * DescribeConfigurationsResponse::request() const
 {
     Q_D(const DescribeConfigurationsResponse);
@@ -126,9 +124,8 @@ const DescribeConfigurationsRequest * DescribeConfigurationsResponse::request() 
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService DescribeConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService DescribeConfigurations \a response.
  */
 void DescribeConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::DescribeConfigurationsResponsePrivate
+ * \brief The DescribeConfigurationsResponsePrivate class provides private implementation for DescribeConfigurationsResponse.
  * \internal
  *
- * \class DescribeConfigurationsResponsePrivate
- *
- * \brief Private implementation for DescribeConfigurationsResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConfigurationsResponse instance.
+ * Constructs a DescribeConfigurationsResponsePrivate object with public implementation \a q.
  */
 DescribeConfigurationsResponsePrivate::DescribeConfigurationsResponsePrivate(
     DescribeConfigurationsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeConfigurationsResponsePrivate::DescribeConfigurationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService DescribeConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService DescribeConfigurations response element from \a xml.
  */
 void DescribeConfigurationsResponsePrivate::parseDescribeConfigurationsResponse(QXmlStreamReader &xml)
 {

@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DetachInstancesFromLoadBalancerRequest::respo
  */
 
 /*!
- *
- * Constructs a DetachInstancesFromLoadBalancerRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a DetachInstancesFromLoadBalancerRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 DetachInstancesFromLoadBalancerRequestPrivate::DetachInstancesFromLoadBalancerRequestPrivate(
     const LightsailRequest::Action action, DetachInstancesFromLoadBalancerRequest * const q)

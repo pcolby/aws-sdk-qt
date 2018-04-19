@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListOrganizationsResponse
- *
  * \brief The ListOrganizationsResponse class provides an interace for WorkMail ListOrganizations responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListOrganizationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListOrganizationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListOrganizationsResponse::ListOrganizationsResponse(
         const ListOrganizationsRequest &request,
@@ -88,6 +83,9 @@ ListOrganizationsResponse::ListOrganizationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListOrganizationsRequest * ListOrganizationsResponse::request() const
 {
     Q_D(const ListOrganizationsResponse);
@@ -95,9 +93,8 @@ const ListOrganizationsRequest * ListOrganizationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail ListOrganizations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail ListOrganizations \a response.
  */
 void ListOrganizationsResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void ListOrganizationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::ListOrganizationsResponsePrivate
+ * \brief The ListOrganizationsResponsePrivate class provides private implementation for ListOrganizationsResponse.
  * \internal
  *
- * \class ListOrganizationsResponsePrivate
- *
- * \brief Private implementation for ListOrganizationsResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOrganizationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListOrganizationsResponse instance.
+ * Constructs a ListOrganizationsResponsePrivate object with public implementation \a q.
  */
 ListOrganizationsResponsePrivate::ListOrganizationsResponsePrivate(
     ListOrganizationsResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ ListOrganizationsResponsePrivate::ListOrganizationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail ListOrganizationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail ListOrganizations response element from \a xml.
  */
 void ListOrganizationsResponsePrivate::parseListOrganizationsResponse(QXmlStreamReader &xml)
 {

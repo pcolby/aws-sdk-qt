@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeliverConfigSnapshotResponse
- *
  * \brief The DeliverConfigSnapshotResponse class provides an interace for ConfigService DeliverConfigSnapshot responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeliverConfigSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeliverConfigSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 DeliverConfigSnapshotResponse::DeliverConfigSnapshotResponse(
         const DeliverConfigSnapshotRequest &request,
@@ -78,6 +73,9 @@ DeliverConfigSnapshotResponse::DeliverConfigSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeliverConfigSnapshotRequest * DeliverConfigSnapshotResponse::request() const
 {
     Q_D(const DeliverConfigSnapshotResponse);
@@ -85,9 +83,8 @@ const DeliverConfigSnapshotRequest * DeliverConfigSnapshotResponse::request() co
 }
 
 /*!
- * @brief  Parse a ConfigService DeliverConfigSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DeliverConfigSnapshot \a response.
  */
 void DeliverConfigSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DeliverConfigSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DeliverConfigSnapshotResponsePrivate
+ * \brief The DeliverConfigSnapshotResponsePrivate class provides private implementation for DeliverConfigSnapshotResponse.
  * \internal
  *
- * \class DeliverConfigSnapshotResponsePrivate
- *
- * \brief Private implementation for DeliverConfigSnapshotResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeliverConfigSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeliverConfigSnapshotResponse instance.
+ * Constructs a DeliverConfigSnapshotResponsePrivate object with public implementation \a q.
  */
 DeliverConfigSnapshotResponsePrivate::DeliverConfigSnapshotResponsePrivate(
     DeliverConfigSnapshotResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DeliverConfigSnapshotResponsePrivate::DeliverConfigSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ConfigService DeliverConfigSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DeliverConfigSnapshot response element from \a xml.
  */
 void DeliverConfigSnapshotResponsePrivate::parseDeliverConfigSnapshotResponse(QXmlStreamReader &xml)
 {

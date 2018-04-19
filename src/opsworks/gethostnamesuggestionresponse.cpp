@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::GetHostnameSuggestionResponse
- *
  * \brief The GetHostnameSuggestionResponse class provides an interace for OpsWorks GetHostnameSuggestion responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new GetHostnameSuggestionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetHostnameSuggestionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetHostnameSuggestionResponse::GetHostnameSuggestionResponse(
         const GetHostnameSuggestionRequest &request,
@@ -161,6 +156,9 @@ GetHostnameSuggestionResponse::GetHostnameSuggestionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetHostnameSuggestionRequest * GetHostnameSuggestionResponse::request() const
 {
     Q_D(const GetHostnameSuggestionResponse);
@@ -168,9 +166,8 @@ const GetHostnameSuggestionRequest * GetHostnameSuggestionResponse::request() co
 }
 
 /*!
- * @brief  Parse a OpsWorks GetHostnameSuggestion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks GetHostnameSuggestion \a response.
  */
 void GetHostnameSuggestionResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void GetHostnameSuggestionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::GetHostnameSuggestionResponsePrivate
+ * \brief The GetHostnameSuggestionResponsePrivate class provides private implementation for GetHostnameSuggestionResponse.
  * \internal
  *
- * \class GetHostnameSuggestionResponsePrivate
- *
- * \brief Private implementation for GetHostnameSuggestionResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHostnameSuggestionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetHostnameSuggestionResponse instance.
+ * Constructs a GetHostnameSuggestionResponsePrivate object with public implementation \a q.
  */
 GetHostnameSuggestionResponsePrivate::GetHostnameSuggestionResponsePrivate(
     GetHostnameSuggestionResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ GetHostnameSuggestionResponsePrivate::GetHostnameSuggestionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks GetHostnameSuggestionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks GetHostnameSuggestion response element from \a xml.
  */
 void GetHostnameSuggestionResponsePrivate::parseGetHostnameSuggestionResponse(QXmlStreamReader &xml)
 {

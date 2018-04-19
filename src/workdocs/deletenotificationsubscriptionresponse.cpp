@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteNotificationSubscriptionResponse
- *
  * \brief The DeleteNotificationSubscriptionResponse class provides an interace for WorkDocs DeleteNotificationSubscription responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteNotificationSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNotificationSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNotificationSubscriptionResponse::DeleteNotificationSubscriptionResponse(
         const DeleteNotificationSubscriptionRequest &request,
@@ -84,6 +79,9 @@ DeleteNotificationSubscriptionResponse::DeleteNotificationSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNotificationSubscriptionRequest * DeleteNotificationSubscriptionResponse::request() const
 {
     Q_D(const DeleteNotificationSubscriptionResponse);
@@ -91,9 +89,8 @@ const DeleteNotificationSubscriptionRequest * DeleteNotificationSubscriptionResp
 }
 
 /*!
- * @brief  Parse a WorkDocs DeleteNotificationSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DeleteNotificationSubscription \a response.
  */
 void DeleteNotificationSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteNotificationSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DeleteNotificationSubscriptionResponsePrivate
+ * \brief The DeleteNotificationSubscriptionResponsePrivate class provides private implementation for DeleteNotificationSubscriptionResponse.
  * \internal
  *
- * \class DeleteNotificationSubscriptionResponsePrivate
- *
- * \brief Private implementation for DeleteNotificationSubscriptionResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNotificationSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNotificationSubscriptionResponse instance.
+ * Constructs a DeleteNotificationSubscriptionResponsePrivate object with public implementation \a q.
  */
 DeleteNotificationSubscriptionResponsePrivate::DeleteNotificationSubscriptionResponsePrivate(
     DeleteNotificationSubscriptionResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteNotificationSubscriptionResponsePrivate::DeleteNotificationSubscriptionRes
 }
 
 /*!
- * @brief  Parse an WorkDocs DeleteNotificationSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DeleteNotificationSubscription response element from \a xml.
  */
 void DeleteNotificationSubscriptionResponsePrivate::parseDeleteNotificationSubscriptionResponse(QXmlStreamReader &xml)
 {

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSkillGroupRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateSkillGroupRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSkillGroupRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 UpdateSkillGroupRequestPrivate::UpdateSkillGroupRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateSkillGroupRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSpotPriceHistoryResponse : public EC2Response {
 public:
     DescribeSpotPriceHistoryResponse(const DescribeSpotPriceHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSpotPriceHistoryRequest * request() const;
+    virtual const DescribeSpotPriceHistoryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSpotPriceHistoryResponse)

@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DeleteMLModelResponse
- *
  * \brief The DeleteMLModelResponse class provides an interace for MachineLearning DeleteMLModel responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::deleteMLModel
  */
 
 /*!
- * @brief  Constructs a new DeleteMLModelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteMLModelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteMLModelResponse::DeleteMLModelResponse(
         const DeleteMLModelRequest &request,
@@ -55,6 +50,9 @@ DeleteMLModelResponse::DeleteMLModelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteMLModelRequest * DeleteMLModelResponse::request() const
 {
     Q_D(const DeleteMLModelResponse);
@@ -62,9 +60,8 @@ const DeleteMLModelRequest * DeleteMLModelResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning DeleteMLModel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning DeleteMLModel \a response.
  */
 void DeleteMLModelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteMLModelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::DeleteMLModelResponsePrivate
+ * \brief The DeleteMLModelResponsePrivate class provides private implementation for DeleteMLModelResponse.
  * \internal
  *
- * \class DeleteMLModelResponsePrivate
- *
- * \brief Private implementation for DeleteMLModelResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMLModelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteMLModelResponse instance.
+ * Constructs a DeleteMLModelResponsePrivate object with public implementation \a q.
  */
 DeleteMLModelResponsePrivate::DeleteMLModelResponsePrivate(
     DeleteMLModelResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteMLModelResponsePrivate::DeleteMLModelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning DeleteMLModelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning DeleteMLModel response element from \a xml.
  */
 void DeleteMLModelResponsePrivate::parseDeleteMLModelResponse(QXmlStreamReader &xml)
 {

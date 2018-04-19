@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteBasePathMappingResponse
- *
  * \brief The DeleteBasePathMappingResponse class provides an interace for APIGateway DeleteBasePathMapping responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteBasePathMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBasePathMappingResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBasePathMappingResponse::DeleteBasePathMappingResponse(
         const DeleteBasePathMappingRequest &request,
@@ -60,6 +55,9 @@ DeleteBasePathMappingResponse::DeleteBasePathMappingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBasePathMappingRequest * DeleteBasePathMappingResponse::request() const
 {
     Q_D(const DeleteBasePathMappingResponse);
@@ -67,9 +65,8 @@ const DeleteBasePathMappingRequest * DeleteBasePathMappingResponse::request() co
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteBasePathMapping response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteBasePathMapping \a response.
  */
 void DeleteBasePathMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteBasePathMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteBasePathMappingResponsePrivate
+ * \brief The DeleteBasePathMappingResponsePrivate class provides private implementation for DeleteBasePathMappingResponse.
  * \internal
  *
- * \class DeleteBasePathMappingResponsePrivate
- *
- * \brief Private implementation for DeleteBasePathMappingResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBasePathMappingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBasePathMappingResponse instance.
+ * Constructs a DeleteBasePathMappingResponsePrivate object with public implementation \a q.
  */
 DeleteBasePathMappingResponsePrivate::DeleteBasePathMappingResponsePrivate(
     DeleteBasePathMappingResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteBasePathMappingResponsePrivate::DeleteBasePathMappingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteBasePathMappingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteBasePathMapping response element from \a xml.
  */
 void DeleteBasePathMappingResponsePrivate::parseDeleteBasePathMappingResponse(QXmlStreamReader &xml)
 {

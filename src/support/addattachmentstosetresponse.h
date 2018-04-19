@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddAttachmentsToSetResponse : public SupportResponse {
 public:
     AddAttachmentsToSetResponse(const AddAttachmentsToSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddAttachmentsToSetRequest * request() const;
+    virtual const AddAttachmentsToSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddAttachmentsToSetResponse)

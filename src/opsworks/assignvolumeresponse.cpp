@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::AssignVolumeResponse
- *
  * \brief The AssignVolumeResponse class provides an interace for OpsWorks AssignVolume responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new AssignVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssignVolumeResponse object for \a reply to \a request, with parent \a parent.
  */
 AssignVolumeResponse::AssignVolumeResponse(
         const AssignVolumeRequest &request,
@@ -161,6 +156,9 @@ AssignVolumeResponse::AssignVolumeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssignVolumeRequest * AssignVolumeResponse::request() const
 {
     Q_D(const AssignVolumeResponse);
@@ -168,9 +166,8 @@ const AssignVolumeRequest * AssignVolumeResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks AssignVolume response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks AssignVolume \a response.
  */
 void AssignVolumeResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void AssignVolumeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::AssignVolumeResponsePrivate
+ * \brief The AssignVolumeResponsePrivate class provides private implementation for AssignVolumeResponse.
  * \internal
  *
- * \class AssignVolumeResponsePrivate
- *
- * \brief Private implementation for AssignVolumeResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssignVolumeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssignVolumeResponse instance.
+ * Constructs a AssignVolumeResponsePrivate object with public implementation \a q.
  */
 AssignVolumeResponsePrivate::AssignVolumeResponsePrivate(
     AssignVolumeResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ AssignVolumeResponsePrivate::AssignVolumeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks AssignVolumeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks AssignVolume response element from \a xml.
  */
 void AssignVolumeResponsePrivate::parseAssignVolumeResponse(QXmlStreamReader &xml)
 {

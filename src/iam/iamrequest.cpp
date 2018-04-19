@@ -162,7 +162,7 @@ namespace IAM {
  */
 
 /*!
- * Constructs a[n] IAMRequest object for IAM \a action.
+ * Constructs a IAMRequest object for IAM \a action.
  */
 IAMRequest::IAMRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new IAMRequestPrivate(action, this))
@@ -362,8 +362,8 @@ QNetworkRequest IAMRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a IAMRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a IAMRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 IAMRequestPrivate::IAMRequestPrivate(const IAMRequest::Action action, IAMRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

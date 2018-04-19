@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::StopAssessmentRunResponse
- *
  * \brief The StopAssessmentRunResponse class provides an interace for Inspector StopAssessmentRun responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new StopAssessmentRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopAssessmentRunResponse object for \a reply to \a request, with parent \a parent.
  */
 StopAssessmentRunResponse::StopAssessmentRunResponse(
         const StopAssessmentRunRequest &request,
@@ -60,6 +55,9 @@ StopAssessmentRunResponse::StopAssessmentRunResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopAssessmentRunRequest * StopAssessmentRunResponse::request() const
 {
     Q_D(const StopAssessmentRunResponse);
@@ -67,9 +65,8 @@ const StopAssessmentRunRequest * StopAssessmentRunResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector StopAssessmentRun response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector StopAssessmentRun \a response.
  */
 void StopAssessmentRunResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void StopAssessmentRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::StopAssessmentRunResponsePrivate
+ * \brief The StopAssessmentRunResponsePrivate class provides private implementation for StopAssessmentRunResponse.
  * \internal
  *
- * \class StopAssessmentRunResponsePrivate
- *
- * \brief Private implementation for StopAssessmentRunResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopAssessmentRunResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopAssessmentRunResponse instance.
+ * Constructs a StopAssessmentRunResponsePrivate object with public implementation \a q.
  */
 StopAssessmentRunResponsePrivate::StopAssessmentRunResponsePrivate(
     StopAssessmentRunResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ StopAssessmentRunResponsePrivate::StopAssessmentRunResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector StopAssessmentRunResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector StopAssessmentRun response element from \a xml.
  */
 void StopAssessmentRunResponsePrivate::parseStopAssessmentRunResponse(QXmlStreamReader &xml)
 {

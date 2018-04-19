@@ -34,10 +34,10 @@ class QTAWS_EXPORT ApplySecurityGroupsToLoadBalancerResponse : public ElasticLoa
 public:
     ApplySecurityGroupsToLoadBalancerResponse(const ApplySecurityGroupsToLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ApplySecurityGroupsToLoadBalancerRequest * request() const;
+    virtual const ApplySecurityGroupsToLoadBalancerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ApplySecurityGroupsToLoadBalancerResponse)

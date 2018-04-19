@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * StopMonitoringMembersRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a StopMonitoringMembersRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a StopMonitoringMembersRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 StopMonitoringMembersRequestPrivate::StopMonitoringMembersRequestPrivate(
     const GuardDutyRequest::Action action, StopMonitoringMembersRequest * const q)

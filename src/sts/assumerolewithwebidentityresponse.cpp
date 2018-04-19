@@ -29,10 +29,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::AssumeRoleWithWebIdentityResponse
- *
  * \brief The AssumeRoleWithWebIdentityResponse class provides an interace for STS AssumeRoleWithWebIdentity responses.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -97,11 +96,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new AssumeRoleWithWebIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssumeRoleWithWebIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 AssumeRoleWithWebIdentityResponse::AssumeRoleWithWebIdentityResponse(
         const AssumeRoleWithWebIdentityRequest &request,
@@ -113,6 +108,9 @@ AssumeRoleWithWebIdentityResponse::AssumeRoleWithWebIdentityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssumeRoleWithWebIdentityRequest * AssumeRoleWithWebIdentityResponse::request() const
 {
     Q_D(const AssumeRoleWithWebIdentityResponse);
@@ -120,9 +118,8 @@ const AssumeRoleWithWebIdentityRequest * AssumeRoleWithWebIdentityResponse::requ
 }
 
 /*!
- * @brief  Parse a STS AssumeRoleWithWebIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful STS AssumeRoleWithWebIdentity \a response.
  */
 void AssumeRoleWithWebIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -132,19 +129,15 @@ void AssumeRoleWithWebIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::STS::AssumeRoleWithWebIdentityResponsePrivate
+ * \brief The AssumeRoleWithWebIdentityResponsePrivate class provides private implementation for AssumeRoleWithWebIdentityResponse.
  * \internal
  *
- * \class AssumeRoleWithWebIdentityResponsePrivate
- *
- * \brief Private implementation for AssumeRoleWithWebIdentityResponse.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssumeRoleWithWebIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssumeRoleWithWebIdentityResponse instance.
+ * Constructs a AssumeRoleWithWebIdentityResponsePrivate object with public implementation \a q.
  */
 AssumeRoleWithWebIdentityResponsePrivate::AssumeRoleWithWebIdentityResponsePrivate(
     AssumeRoleWithWebIdentityResponse * const q) : STSResponsePrivate(q)
@@ -153,9 +146,7 @@ AssumeRoleWithWebIdentityResponsePrivate::AssumeRoleWithWebIdentityResponsePriva
 }
 
 /*!
- * @brief  Parse an STS AssumeRoleWithWebIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a STS AssumeRoleWithWebIdentity response element from \a xml.
  */
 void AssumeRoleWithWebIdentityResponsePrivate::parseAssumeRoleWithWebIdentityResponse(QXmlStreamReader &xml)
 {

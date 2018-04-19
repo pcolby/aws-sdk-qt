@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::RemoveTagsFromResourceResponse
- *
  * \brief The RemoveTagsFromResourceResponse class provides an interace for StorageGateway RemoveTagsFromResource responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveTagsFromResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
         const RemoveTagsFromResourceRequest &request,
@@ -124,6 +119,9 @@ RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() const
 {
     Q_D(const RemoveTagsFromResourceResponse);
@@ -131,9 +129,8 @@ const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() 
 }
 
 /*!
- * @brief  Parse a StorageGateway RemoveTagsFromResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway RemoveTagsFromResource \a response.
  */
 void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::RemoveTagsFromResourceResponsePrivate
+ * \brief The RemoveTagsFromResourceResponsePrivate class provides private implementation for RemoveTagsFromResourceResponse.
  * \internal
  *
- * \class RemoveTagsFromResourceResponsePrivate
- *
- * \brief Private implementation for RemoveTagsFromResourceResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveTagsFromResourceResponse instance.
+ * Constructs a RemoveTagsFromResourceResponsePrivate object with public implementation \a q.
  */
 RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
     RemoveTagsFromResourceResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway RemoveTagsFromResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway RemoveTagsFromResource response element from \a xml.
  */
 void RemoveTagsFromResourceResponsePrivate::parseRemoveTagsFromResourceResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::UpdateProvisioningArtifactResponse
- *
  * \brief The UpdateProvisioningArtifactResponse class provides an interace for ServiceCatalog UpdateProvisioningArtifact responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new UpdateProvisioningArtifactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateProvisioningArtifactResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateProvisioningArtifactResponse::UpdateProvisioningArtifactResponse(
         const UpdateProvisioningArtifactRequest &request,
@@ -61,6 +56,9 @@ UpdateProvisioningArtifactResponse::UpdateProvisioningArtifactResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateProvisioningArtifactRequest * UpdateProvisioningArtifactResponse::request() const
 {
     Q_D(const UpdateProvisioningArtifactResponse);
@@ -68,9 +66,8 @@ const UpdateProvisioningArtifactRequest * UpdateProvisioningArtifactResponse::re
 }
 
 /*!
- * @brief  Parse a ServiceCatalog UpdateProvisioningArtifact response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog UpdateProvisioningArtifact \a response.
  */
 void UpdateProvisioningArtifactResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void UpdateProvisioningArtifactResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::UpdateProvisioningArtifactResponsePrivate
+ * \brief The UpdateProvisioningArtifactResponsePrivate class provides private implementation for UpdateProvisioningArtifactResponse.
  * \internal
  *
- * \class UpdateProvisioningArtifactResponsePrivate
- *
- * \brief Private implementation for UpdateProvisioningArtifactResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateProvisioningArtifactResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateProvisioningArtifactResponse instance.
+ * Constructs a UpdateProvisioningArtifactResponsePrivate object with public implementation \a q.
  */
 UpdateProvisioningArtifactResponsePrivate::UpdateProvisioningArtifactResponsePrivate(
     UpdateProvisioningArtifactResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ UpdateProvisioningArtifactResponsePrivate::UpdateProvisioningArtifactResponsePri
 }
 
 /*!
- * @brief  Parse an ServiceCatalog UpdateProvisioningArtifactResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog UpdateProvisioningArtifact response element from \a xml.
  */
 void UpdateProvisioningArtifactResponsePrivate::parseUpdateProvisioningArtifactResponse(QXmlStreamReader &xml)
 {

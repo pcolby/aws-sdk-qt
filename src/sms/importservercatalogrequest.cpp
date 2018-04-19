@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ImportServerCatalogRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ImportServerCatalogRequestPrivate object for SMS \a action with,
- * public implementation \a q.
+ * Constructs a ImportServerCatalogRequestPrivate object for SMS \a action,
+ * with public implementation \a q.
  */
 ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
     const SMSRequest::Action action, ImportServerCatalogRequest * const q)

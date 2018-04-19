@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CreateTagOptionResponse
- *
  * \brief The CreateTagOptionResponse class provides an interace for ServiceCatalog CreateTagOption responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CreateTagOptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTagOptionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTagOptionResponse::CreateTagOptionResponse(
         const CreateTagOptionRequest &request,
@@ -61,6 +56,9 @@ CreateTagOptionResponse::CreateTagOptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTagOptionRequest * CreateTagOptionResponse::request() const
 {
     Q_D(const CreateTagOptionResponse);
@@ -68,9 +66,8 @@ const CreateTagOptionRequest * CreateTagOptionResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog CreateTagOption response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog CreateTagOption \a response.
  */
 void CreateTagOptionResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreateTagOptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::CreateTagOptionResponsePrivate
+ * \brief The CreateTagOptionResponsePrivate class provides private implementation for CreateTagOptionResponse.
  * \internal
  *
- * \class CreateTagOptionResponsePrivate
- *
- * \brief Private implementation for CreateTagOptionResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTagOptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTagOptionResponse instance.
+ * Constructs a CreateTagOptionResponsePrivate object with public implementation \a q.
  */
 CreateTagOptionResponsePrivate::CreateTagOptionResponsePrivate(
     CreateTagOptionResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ CreateTagOptionResponsePrivate::CreateTagOptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog CreateTagOptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog CreateTagOption response element from \a xml.
  */
 void CreateTagOptionResponsePrivate::parseCreateTagOptionResponse(QXmlStreamReader &xml)
 {

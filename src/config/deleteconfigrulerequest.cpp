@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigRuleRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteConfigRuleRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteConfigRuleRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DeleteConfigRuleRequestPrivate::DeleteConfigRuleRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteConfigRuleRequest * const q)

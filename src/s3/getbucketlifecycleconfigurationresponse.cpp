@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketLifecycleConfigurationResponse
- *
  * \brief The GetBucketLifecycleConfigurationResponse class provides an interace for S3 GetBucketLifecycleConfiguration responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketLifecycleConfiguration
  */
 
 /*!
- * @brief  Constructs a new GetBucketLifecycleConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBucketLifecycleConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBucketLifecycleConfigurationResponse::GetBucketLifecycleConfigurationResponse(
         const GetBucketLifecycleConfigurationRequest &request,
@@ -55,6 +50,9 @@ GetBucketLifecycleConfigurationResponse::GetBucketLifecycleConfigurationResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBucketLifecycleConfigurationRequest * GetBucketLifecycleConfigurationResponse::request() const
 {
     Q_D(const GetBucketLifecycleConfigurationResponse);
@@ -62,9 +60,8 @@ const GetBucketLifecycleConfigurationRequest * GetBucketLifecycleConfigurationRe
 }
 
 /*!
- * @brief  Parse a S3 GetBucketLifecycleConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetBucketLifecycleConfiguration \a response.
  */
 void GetBucketLifecycleConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBucketLifecycleConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetBucketLifecycleConfigurationResponsePrivate
+ * \brief The GetBucketLifecycleConfigurationResponsePrivate class provides private implementation for GetBucketLifecycleConfigurationResponse.
  * \internal
  *
- * \class GetBucketLifecycleConfigurationResponsePrivate
- *
- * \brief Private implementation for GetBucketLifecycleConfigurationResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketLifecycleConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBucketLifecycleConfigurationResponse instance.
+ * Constructs a GetBucketLifecycleConfigurationResponsePrivate object with public implementation \a q.
  */
 GetBucketLifecycleConfigurationResponsePrivate::GetBucketLifecycleConfigurationResponsePrivate(
     GetBucketLifecycleConfigurationResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBucketLifecycleConfigurationResponsePrivate::GetBucketLifecycleConfigurationR
 }
 
 /*!
- * @brief  Parse an S3 GetBucketLifecycleConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetBucketLifecycleConfiguration response element from \a xml.
  */
 void GetBucketLifecycleConfigurationResponsePrivate::parseGetBucketLifecycleConfigurationResponse(QXmlStreamReader &xml)
 {

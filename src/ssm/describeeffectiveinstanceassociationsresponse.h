@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEffectiveInstanceAssociationsResponse : public SSMRes
 public:
     DescribeEffectiveInstanceAssociationsResponse(const DescribeEffectiveInstanceAssociationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEffectiveInstanceAssociationsRequest * request() const;
+    virtual const DescribeEffectiveInstanceAssociationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEffectiveInstanceAssociationsResponse)

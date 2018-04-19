@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * AssignInstanceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a AssignInstanceRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a AssignInstanceRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 AssignInstanceRequestPrivate::AssignInstanceRequestPrivate(
     const OpsWorksRequest::Action action, AssignInstanceRequest * const q)

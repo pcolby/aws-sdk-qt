@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAutoScalingGroupRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateAutoScalingGroupRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAutoScalingGroupRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 UpdateAutoScalingGroupRequestPrivate::UpdateAutoScalingGroupRequestPrivate(
     const AutoScalingRequest::Action action, UpdateAutoScalingGroupRequest * const q)

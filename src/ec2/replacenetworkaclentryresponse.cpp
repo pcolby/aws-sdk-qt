@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReplaceNetworkAclEntryResponse
- *
  * \brief The ReplaceNetworkAclEntryResponse class provides an interace for EC2 ReplaceNetworkAclEntry responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReplaceNetworkAclEntryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReplaceNetworkAclEntryResponse object for \a reply to \a request, with parent \a parent.
  */
 ReplaceNetworkAclEntryResponse::ReplaceNetworkAclEntryResponse(
         const ReplaceNetworkAclEntryRequest &request,
@@ -59,6 +54,9 @@ ReplaceNetworkAclEntryResponse::ReplaceNetworkAclEntryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReplaceNetworkAclEntryRequest * ReplaceNetworkAclEntryResponse::request() const
 {
     Q_D(const ReplaceNetworkAclEntryResponse);
@@ -66,9 +64,8 @@ const ReplaceNetworkAclEntryRequest * ReplaceNetworkAclEntryResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 ReplaceNetworkAclEntry response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ReplaceNetworkAclEntry \a response.
  */
 void ReplaceNetworkAclEntryResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ReplaceNetworkAclEntryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ReplaceNetworkAclEntryResponsePrivate
+ * \brief The ReplaceNetworkAclEntryResponsePrivate class provides private implementation for ReplaceNetworkAclEntryResponse.
  * \internal
  *
- * \class ReplaceNetworkAclEntryResponsePrivate
- *
- * \brief Private implementation for ReplaceNetworkAclEntryResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReplaceNetworkAclEntryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReplaceNetworkAclEntryResponse instance.
+ * Constructs a ReplaceNetworkAclEntryResponsePrivate object with public implementation \a q.
  */
 ReplaceNetworkAclEntryResponsePrivate::ReplaceNetworkAclEntryResponsePrivate(
     ReplaceNetworkAclEntryResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ReplaceNetworkAclEntryResponsePrivate::ReplaceNetworkAclEntryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ReplaceNetworkAclEntryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ReplaceNetworkAclEntry response element from \a xml.
  */
 void ReplaceNetworkAclEntryResponsePrivate::parseReplaceNetworkAclEntryResponse(QXmlStreamReader &xml)
 {

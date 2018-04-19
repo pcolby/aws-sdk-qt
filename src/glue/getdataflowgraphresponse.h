@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDataflowGraphResponse : public GlueResponse {
 public:
     GetDataflowGraphResponse(const GetDataflowGraphRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDataflowGraphRequest * request() const;
+    virtual const GetDataflowGraphRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDataflowGraphResponse)

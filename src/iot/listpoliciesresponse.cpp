@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListPoliciesResponse
- *
  * \brief The ListPoliciesResponse class provides an interace for IoT ListPolicies responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPoliciesResponse::ListPoliciesResponse(
         const ListPoliciesRequest &request,
@@ -66,6 +61,9 @@ ListPoliciesResponse::ListPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPoliciesRequest * ListPoliciesResponse::request() const
 {
     Q_D(const ListPoliciesResponse);
@@ -73,9 +71,8 @@ const ListPoliciesRequest * ListPoliciesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListPolicies \a response.
  */
 void ListPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListPoliciesResponsePrivate
+ * \brief The ListPoliciesResponsePrivate class provides private implementation for ListPoliciesResponse.
  * \internal
  *
- * \class ListPoliciesResponsePrivate
- *
- * \brief Private implementation for ListPoliciesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPoliciesResponse instance.
+ * Constructs a ListPoliciesResponsePrivate object with public implementation \a q.
  */
 ListPoliciesResponsePrivate::ListPoliciesResponsePrivate(
     ListPoliciesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListPoliciesResponsePrivate::ListPoliciesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListPolicies response element from \a xml.
  */
 void ListPoliciesResponsePrivate::parseListPoliciesResponse(QXmlStreamReader &xml)
 {

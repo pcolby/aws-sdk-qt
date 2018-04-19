@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetEventStreamResponse
- *
  * \brief The GetEventStreamResponse class provides an interace for Pinpoint GetEventStream responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getEventStream
  */
 
 /*!
- * @brief  Constructs a new GetEventStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetEventStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 GetEventStreamResponse::GetEventStreamResponse(
         const GetEventStreamRequest &request,
@@ -55,6 +50,9 @@ GetEventStreamResponse::GetEventStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetEventStreamRequest * GetEventStreamResponse::request() const
 {
     Q_D(const GetEventStreamResponse);
@@ -62,9 +60,8 @@ const GetEventStreamRequest * GetEventStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetEventStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetEventStream \a response.
  */
 void GetEventStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetEventStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetEventStreamResponsePrivate
+ * \brief The GetEventStreamResponsePrivate class provides private implementation for GetEventStreamResponse.
  * \internal
  *
- * \class GetEventStreamResponsePrivate
- *
- * \brief Private implementation for GetEventStreamResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEventStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetEventStreamResponse instance.
+ * Constructs a GetEventStreamResponsePrivate object with public implementation \a q.
  */
 GetEventStreamResponsePrivate::GetEventStreamResponsePrivate(
     GetEventStreamResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetEventStreamResponsePrivate::GetEventStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetEventStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetEventStream response element from \a xml.
  */
 void GetEventStreamResponsePrivate::parseGetEventStreamResponse(QXmlStreamReader &xml)
 {

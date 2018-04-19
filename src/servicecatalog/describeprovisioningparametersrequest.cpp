@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeProvisioningParametersRequest::respon
  */
 
 /*!
- *
- * Constructs a DescribeProvisioningParametersRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DescribeProvisioningParametersRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DescribeProvisioningParametersRequestPrivate::DescribeProvisioningParametersRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeProvisioningParametersRequest * const q)

@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::AuthorizeCacheSecurityGroupIngressResponse
- *
  * \brief The AuthorizeCacheSecurityGroupIngressResponse class provides an interace for ElastiCache AuthorizeCacheSecurityGroupIngress responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AuthorizeCacheSecurityGroupIngressResponse object for \a reply to \a request, with parent \a parent.
  */
 AuthorizeCacheSecurityGroupIngressResponse::AuthorizeCacheSecurityGroupIngressResponse(
         const AuthorizeCacheSecurityGroupIngressRequest &request,
@@ -69,6 +64,9 @@ AuthorizeCacheSecurityGroupIngressResponse::AuthorizeCacheSecurityGroupIngressRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AuthorizeCacheSecurityGroupIngressRequest * AuthorizeCacheSecurityGroupIngressResponse::request() const
 {
     Q_D(const AuthorizeCacheSecurityGroupIngressResponse);
@@ -76,9 +74,8 @@ const AuthorizeCacheSecurityGroupIngressRequest * AuthorizeCacheSecurityGroupIng
 }
 
 /*!
- * @brief  Parse a ElastiCache AuthorizeCacheSecurityGroupIngress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache AuthorizeCacheSecurityGroupIngress \a response.
  */
 void AuthorizeCacheSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void AuthorizeCacheSecurityGroupIngressResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::ElastiCache::AuthorizeCacheSecurityGroupIngressResponsePrivate
+ * \brief The AuthorizeCacheSecurityGroupIngressResponsePrivate class provides private implementation for AuthorizeCacheSecurityGroupIngressResponse.
  * \internal
  *
- * \class AuthorizeCacheSecurityGroupIngressResponsePrivate
- *
- * \brief Private implementation for AuthorizeCacheSecurityGroupIngressResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AuthorizeCacheSecurityGroupIngressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AuthorizeCacheSecurityGroupIngressResponse instance.
+ * Constructs a AuthorizeCacheSecurityGroupIngressResponsePrivate object with public implementation \a q.
  */
 AuthorizeCacheSecurityGroupIngressResponsePrivate::AuthorizeCacheSecurityGroupIngressResponsePrivate(
     AuthorizeCacheSecurityGroupIngressResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ AuthorizeCacheSecurityGroupIngressResponsePrivate::AuthorizeCacheSecurityGroupIn
 }
 
 /*!
- * @brief  Parse an ElastiCache AuthorizeCacheSecurityGroupIngressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache AuthorizeCacheSecurityGroupIngress response element from \a xml.
  */
 void AuthorizeCacheSecurityGroupIngressResponsePrivate::parseAuthorizeCacheSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {

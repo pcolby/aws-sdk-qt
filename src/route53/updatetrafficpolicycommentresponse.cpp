@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::UpdateTrafficPolicyCommentResponse
- *
  * \brief The UpdateTrafficPolicyCommentResponse class provides an interace for Route53 UpdateTrafficPolicyComment responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::updateTrafficPolicyComment
  */
 
 /*!
- * @brief  Constructs a new UpdateTrafficPolicyCommentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTrafficPolicyCommentResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTrafficPolicyCommentResponse::UpdateTrafficPolicyCommentResponse(
         const UpdateTrafficPolicyCommentRequest &request,
@@ -55,6 +50,9 @@ UpdateTrafficPolicyCommentResponse::UpdateTrafficPolicyCommentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTrafficPolicyCommentRequest * UpdateTrafficPolicyCommentResponse::request() const
 {
     Q_D(const UpdateTrafficPolicyCommentResponse);
@@ -62,9 +60,8 @@ const UpdateTrafficPolicyCommentRequest * UpdateTrafficPolicyCommentResponse::re
 }
 
 /*!
- * @brief  Parse a Route53 UpdateTrafficPolicyComment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 UpdateTrafficPolicyComment \a response.
  */
 void UpdateTrafficPolicyCommentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateTrafficPolicyCommentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::UpdateTrafficPolicyCommentResponsePrivate
+ * \brief The UpdateTrafficPolicyCommentResponsePrivate class provides private implementation for UpdateTrafficPolicyCommentResponse.
  * \internal
  *
- * \class UpdateTrafficPolicyCommentResponsePrivate
- *
- * \brief Private implementation for UpdateTrafficPolicyCommentResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTrafficPolicyCommentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTrafficPolicyCommentResponse instance.
+ * Constructs a UpdateTrafficPolicyCommentResponsePrivate object with public implementation \a q.
  */
 UpdateTrafficPolicyCommentResponsePrivate::UpdateTrafficPolicyCommentResponsePrivate(
     UpdateTrafficPolicyCommentResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateTrafficPolicyCommentResponsePrivate::UpdateTrafficPolicyCommentResponsePri
 }
 
 /*!
- * @brief  Parse an Route53 UpdateTrafficPolicyCommentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 UpdateTrafficPolicyComment response element from \a xml.
  */
 void UpdateTrafficPolicyCommentResponsePrivate::parseUpdateTrafficPolicyCommentResponse(QXmlStreamReader &xml)
 {

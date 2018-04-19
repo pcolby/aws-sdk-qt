@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetChangeTokenRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a GetChangeTokenRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
     const WAFRegionalRequest::Action action, GetChangeTokenRequest * const q)

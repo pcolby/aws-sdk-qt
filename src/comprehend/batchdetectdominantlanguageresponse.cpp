@@ -29,10 +29,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::BatchDetectDominantLanguageResponse
- *
  * \brief The BatchDetectDominantLanguageResponse class provides an interace for Comprehend BatchDetectDominantLanguage responses.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -42,11 +41,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new BatchDetectDominantLanguageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchDetectDominantLanguageResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchDetectDominantLanguageResponse::BatchDetectDominantLanguageResponse(
         const BatchDetectDominantLanguageRequest &request,
@@ -58,6 +53,9 @@ BatchDetectDominantLanguageResponse::BatchDetectDominantLanguageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchDetectDominantLanguageRequest * BatchDetectDominantLanguageResponse::request() const
 {
     Q_D(const BatchDetectDominantLanguageResponse);
@@ -65,9 +63,8 @@ const BatchDetectDominantLanguageRequest * BatchDetectDominantLanguageResponse::
 }
 
 /*!
- * @brief  Parse a Comprehend BatchDetectDominantLanguage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Comprehend BatchDetectDominantLanguage \a response.
  */
 void BatchDetectDominantLanguageResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void BatchDetectDominantLanguageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Comprehend::BatchDetectDominantLanguageResponsePrivate
+ * \brief The BatchDetectDominantLanguageResponsePrivate class provides private implementation for BatchDetectDominantLanguageResponse.
  * \internal
  *
- * \class BatchDetectDominantLanguageResponsePrivate
- *
- * \brief Private implementation for BatchDetectDominantLanguageResponse.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDetectDominantLanguageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchDetectDominantLanguageResponse instance.
+ * Constructs a BatchDetectDominantLanguageResponsePrivate object with public implementation \a q.
  */
 BatchDetectDominantLanguageResponsePrivate::BatchDetectDominantLanguageResponsePrivate(
     BatchDetectDominantLanguageResponse * const q) : ComprehendResponsePrivate(q)
@@ -98,9 +91,7 @@ BatchDetectDominantLanguageResponsePrivate::BatchDetectDominantLanguageResponseP
 }
 
 /*!
- * @brief  Parse an Comprehend BatchDetectDominantLanguageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Comprehend BatchDetectDominantLanguage response element from \a xml.
  */
 void BatchDetectDominantLanguageResponsePrivate::parseBatchDetectDominantLanguageResponse(QXmlStreamReader &xml)
 {

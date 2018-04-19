@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ResetServiceSpecificCredentialResponse
- *
  * \brief The ResetServiceSpecificCredentialResponse class provides an interace for IAM ResetServiceSpecificCredential responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ResetServiceSpecificCredentialResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetServiceSpecificCredentialResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetServiceSpecificCredentialResponse::ResetServiceSpecificCredentialResponse(
         const ResetServiceSpecificCredentialRequest &request,
@@ -120,6 +115,9 @@ ResetServiceSpecificCredentialResponse::ResetServiceSpecificCredentialResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetServiceSpecificCredentialRequest * ResetServiceSpecificCredentialResponse::request() const
 {
     Q_D(const ResetServiceSpecificCredentialResponse);
@@ -127,9 +125,8 @@ const ResetServiceSpecificCredentialRequest * ResetServiceSpecificCredentialResp
 }
 
 /*!
- * @brief  Parse a IAM ResetServiceSpecificCredential response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ResetServiceSpecificCredential \a response.
  */
 void ResetServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ResetServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ResetServiceSpecificCredentialResponsePrivate
+ * \brief The ResetServiceSpecificCredentialResponsePrivate class provides private implementation for ResetServiceSpecificCredentialResponse.
  * \internal
  *
- * \class ResetServiceSpecificCredentialResponsePrivate
- *
- * \brief Private implementation for ResetServiceSpecificCredentialResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetServiceSpecificCredentialResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetServiceSpecificCredentialResponse instance.
+ * Constructs a ResetServiceSpecificCredentialResponsePrivate object with public implementation \a q.
  */
 ResetServiceSpecificCredentialResponsePrivate::ResetServiceSpecificCredentialResponsePrivate(
     ResetServiceSpecificCredentialResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ResetServiceSpecificCredentialResponsePrivate::ResetServiceSpecificCredentialRes
 }
 
 /*!
- * @brief  Parse an IAM ResetServiceSpecificCredentialResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ResetServiceSpecificCredential response element from \a xml.
  */
 void ResetServiceSpecificCredentialResponsePrivate::parseResetServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {

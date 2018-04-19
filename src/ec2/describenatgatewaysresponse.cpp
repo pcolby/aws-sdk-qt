@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeNatGatewaysResponse
- *
  * \brief The DescribeNatGatewaysResponse class provides an interace for EC2 DescribeNatGateways responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeNatGatewaysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeNatGatewaysResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeNatGatewaysResponse::DescribeNatGatewaysResponse(
         const DescribeNatGatewaysRequest &request,
@@ -59,6 +54,9 @@ DescribeNatGatewaysResponse::DescribeNatGatewaysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeNatGatewaysRequest * DescribeNatGatewaysResponse::request() const
 {
     Q_D(const DescribeNatGatewaysResponse);
@@ -66,9 +64,8 @@ const DescribeNatGatewaysRequest * DescribeNatGatewaysResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeNatGateways response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeNatGateways \a response.
  */
 void DescribeNatGatewaysResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeNatGatewaysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeNatGatewaysResponsePrivate
+ * \brief The DescribeNatGatewaysResponsePrivate class provides private implementation for DescribeNatGatewaysResponse.
  * \internal
  *
- * \class DescribeNatGatewaysResponsePrivate
- *
- * \brief Private implementation for DescribeNatGatewaysResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNatGatewaysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeNatGatewaysResponse instance.
+ * Constructs a DescribeNatGatewaysResponsePrivate object with public implementation \a q.
  */
 DescribeNatGatewaysResponsePrivate::DescribeNatGatewaysResponsePrivate(
     DescribeNatGatewaysResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeNatGatewaysResponsePrivate::DescribeNatGatewaysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeNatGatewaysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeNatGateways response element from \a xml.
  */
 void DescribeNatGatewaysResponsePrivate::parseDescribeNatGatewaysResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace MarketplaceMetering {
 
 /*!
  * \class QtAws::MarketplaceMetering::ResolveCustomerResponse
- *
  * \brief The ResolveCustomerResponse class provides an interace for MarketplaceMetering ResolveCustomer responses.
  *
- * \ingroup MarketplaceMetering
+ * \inmodule QtAwsMarketplaceMetering
  *
  *  <fullname>AWS Marketplace Metering Service</fullname>
  * 
@@ -69,11 +68,7 @@ namespace MarketplaceMetering {
  */
 
 /*!
- * @brief  Constructs a new ResolveCustomerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResolveCustomerResponse object for \a reply to \a request, with parent \a parent.
  */
 ResolveCustomerResponse::ResolveCustomerResponse(
         const ResolveCustomerRequest &request,
@@ -85,6 +80,9 @@ ResolveCustomerResponse::ResolveCustomerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResolveCustomerRequest * ResolveCustomerResponse::request() const
 {
     Q_D(const ResolveCustomerResponse);
@@ -92,9 +90,8 @@ const ResolveCustomerRequest * ResolveCustomerResponse::request() const
 }
 
 /*!
- * @brief  Parse a MarketplaceMetering ResolveCustomer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MarketplaceMetering ResolveCustomer \a response.
  */
 void ResolveCustomerResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void ResolveCustomerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MarketplaceMetering::ResolveCustomerResponsePrivate
+ * \brief The ResolveCustomerResponsePrivate class provides private implementation for ResolveCustomerResponse.
  * \internal
  *
- * \class ResolveCustomerResponsePrivate
- *
- * \brief Private implementation for ResolveCustomerResponse.
+ * \inmodule QtAwsMarketplaceMetering
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResolveCustomerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResolveCustomerResponse instance.
+ * Constructs a ResolveCustomerResponsePrivate object with public implementation \a q.
  */
 ResolveCustomerResponsePrivate::ResolveCustomerResponsePrivate(
     ResolveCustomerResponse * const q) : MarketplaceMeteringResponsePrivate(q)
@@ -125,9 +118,7 @@ ResolveCustomerResponsePrivate::ResolveCustomerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MarketplaceMetering ResolveCustomerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MarketplaceMetering ResolveCustomer response element from \a xml.
  */
 void ResolveCustomerResponsePrivate::parseResolveCustomerResponse(QXmlStreamReader &xml)
 {

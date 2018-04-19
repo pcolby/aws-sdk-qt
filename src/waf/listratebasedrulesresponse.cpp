@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListRateBasedRulesResponse
- *
  * \brief The ListRateBasedRulesResponse class provides an interace for WAF ListRateBasedRules responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListRateBasedRulesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRateBasedRulesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRateBasedRulesResponse::ListRateBasedRulesResponse(
         const ListRateBasedRulesRequest &request,
@@ -60,6 +55,9 @@ ListRateBasedRulesResponse::ListRateBasedRulesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRateBasedRulesRequest * ListRateBasedRulesResponse::request() const
 {
     Q_D(const ListRateBasedRulesResponse);
@@ -67,9 +65,8 @@ const ListRateBasedRulesRequest * ListRateBasedRulesResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF ListRateBasedRules response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF ListRateBasedRules \a response.
  */
 void ListRateBasedRulesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListRateBasedRulesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::ListRateBasedRulesResponsePrivate
+ * \brief The ListRateBasedRulesResponsePrivate class provides private implementation for ListRateBasedRulesResponse.
  * \internal
  *
- * \class ListRateBasedRulesResponsePrivate
- *
- * \brief Private implementation for ListRateBasedRulesResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRateBasedRulesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRateBasedRulesResponse instance.
+ * Constructs a ListRateBasedRulesResponsePrivate object with public implementation \a q.
  */
 ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponsePrivate(
     ListRateBasedRulesResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ ListRateBasedRulesResponsePrivate::ListRateBasedRulesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF ListRateBasedRulesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF ListRateBasedRules response element from \a xml.
  */
 void ListRateBasedRulesResponsePrivate::parseListRateBasedRulesResponse(QXmlStreamReader &xml)
 {

@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * RequestUploadCredentialsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a RequestUploadCredentialsRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a RequestUploadCredentialsRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 RequestUploadCredentialsRequestPrivate::RequestUploadCredentialsRequestPrivate(
     const GameLiftRequest::Action action, RequestUploadCredentialsRequest * const q)

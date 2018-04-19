@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::DeleteCustomActionTypeResponse
- *
  * \brief The DeleteCustomActionTypeResponse class provides an interace for CodePipeline DeleteCustomActionType responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new DeleteCustomActionTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCustomActionTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCustomActionTypeResponse::DeleteCustomActionTypeResponse(
         const DeleteCustomActionTypeRequest &request,
@@ -218,6 +213,9 @@ DeleteCustomActionTypeResponse::DeleteCustomActionTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCustomActionTypeRequest * DeleteCustomActionTypeResponse::request() const
 {
     Q_D(const DeleteCustomActionTypeResponse);
@@ -225,9 +223,8 @@ const DeleteCustomActionTypeRequest * DeleteCustomActionTypeResponse::request() 
 }
 
 /*!
- * @brief  Parse a CodePipeline DeleteCustomActionType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline DeleteCustomActionType \a response.
  */
 void DeleteCustomActionTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void DeleteCustomActionTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::DeleteCustomActionTypeResponsePrivate
+ * \brief The DeleteCustomActionTypeResponsePrivate class provides private implementation for DeleteCustomActionTypeResponse.
  * \internal
  *
- * \class DeleteCustomActionTypeResponsePrivate
- *
- * \brief Private implementation for DeleteCustomActionTypeResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCustomActionTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCustomActionTypeResponse instance.
+ * Constructs a DeleteCustomActionTypeResponsePrivate object with public implementation \a q.
  */
 DeleteCustomActionTypeResponsePrivate::DeleteCustomActionTypeResponsePrivate(
     DeleteCustomActionTypeResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ DeleteCustomActionTypeResponsePrivate::DeleteCustomActionTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline DeleteCustomActionTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline DeleteCustomActionType response element from \a xml.
  */
 void DeleteCustomActionTypeResponsePrivate::parseDeleteCustomActionTypeResponse(QXmlStreamReader &xml)
 {

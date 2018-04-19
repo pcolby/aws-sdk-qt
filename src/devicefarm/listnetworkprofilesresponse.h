@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListNetworkProfilesResponse : public DeviceFarmResponse {
 public:
     ListNetworkProfilesResponse(const ListNetworkProfilesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListNetworkProfilesRequest * request() const;
+    virtual const ListNetworkProfilesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListNetworkProfilesResponse)

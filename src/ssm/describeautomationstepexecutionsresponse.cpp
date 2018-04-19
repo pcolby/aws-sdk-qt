@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeAutomationStepExecutionsResponse
- *
  * \brief The DescribeAutomationStepExecutionsResponse class provides an interace for SSM DescribeAutomationStepExecutions responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeAutomationStepExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAutomationStepExecutionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAutomationStepExecutionsResponse::DescribeAutomationStepExecutionsResponse(
         const DescribeAutomationStepExecutionsRequest &request,
@@ -79,6 +74,9 @@ DescribeAutomationStepExecutionsResponse::DescribeAutomationStepExecutionsRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAutomationStepExecutionsRequest * DescribeAutomationStepExecutionsResponse::request() const
 {
     Q_D(const DescribeAutomationStepExecutionsResponse);
@@ -86,9 +84,8 @@ const DescribeAutomationStepExecutionsRequest * DescribeAutomationStepExecutions
 }
 
 /*!
- * @brief  Parse a SSM DescribeAutomationStepExecutions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeAutomationStepExecutions \a response.
  */
 void DescribeAutomationStepExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeAutomationStepExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeAutomationStepExecutionsResponsePrivate
+ * \brief The DescribeAutomationStepExecutionsResponsePrivate class provides private implementation for DescribeAutomationStepExecutionsResponse.
  * \internal
  *
- * \class DescribeAutomationStepExecutionsResponsePrivate
- *
- * \brief Private implementation for DescribeAutomationStepExecutionsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAutomationStepExecutionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAutomationStepExecutionsResponse instance.
+ * Constructs a DescribeAutomationStepExecutionsResponsePrivate object with public implementation \a q.
  */
 DescribeAutomationStepExecutionsResponsePrivate::DescribeAutomationStepExecutionsResponsePrivate(
     DescribeAutomationStepExecutionsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeAutomationStepExecutionsResponsePrivate::DescribeAutomationStepExecution
 }
 
 /*!
- * @brief  Parse an SSM DescribeAutomationStepExecutionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeAutomationStepExecutions response element from \a xml.
  */
 void DescribeAutomationStepExecutionsResponsePrivate::parseDescribeAutomationStepExecutionsResponse(QXmlStreamReader &xml)
 {

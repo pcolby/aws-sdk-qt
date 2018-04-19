@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * ListRetirableGrantsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListRetirableGrantsRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a ListRetirableGrantsRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 ListRetirableGrantsRequestPrivate::ListRetirableGrantsRequestPrivate(
     const KMSRequest::Action action, ListRetirableGrantsRequest * const q)

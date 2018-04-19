@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::CancelJobResponse
- *
  * \brief The CancelJobResponse class provides an interace for Snowball CancelJob responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new CancelJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelJobResponse::CancelJobResponse(
         const CancelJobRequest &request,
@@ -61,6 +56,9 @@ CancelJobResponse::CancelJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelJobRequest * CancelJobResponse::request() const
 {
     Q_D(const CancelJobResponse);
@@ -68,9 +66,8 @@ const CancelJobRequest * CancelJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball CancelJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball CancelJob \a response.
  */
 void CancelJobResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CancelJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::CancelJobResponsePrivate
+ * \brief The CancelJobResponsePrivate class provides private implementation for CancelJobResponse.
  * \internal
  *
- * \class CancelJobResponsePrivate
- *
- * \brief Private implementation for CancelJobResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelJobResponse instance.
+ * Constructs a CancelJobResponsePrivate object with public implementation \a q.
  */
 CancelJobResponsePrivate::CancelJobResponsePrivate(
     CancelJobResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ CancelJobResponsePrivate::CancelJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball CancelJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball CancelJob response element from \a xml.
  */
 void CancelJobResponsePrivate::parseCancelJobResponse(QXmlStreamReader &xml)
 {

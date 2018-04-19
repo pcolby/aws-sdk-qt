@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteChannelRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteChannelRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a DeleteChannelRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 DeleteChannelRequestPrivate::DeleteChannelRequestPrivate(
     const MediaLiveRequest::Action action, DeleteChannelRequest * const q)

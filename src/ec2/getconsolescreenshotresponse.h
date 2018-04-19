@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetConsoleScreenshotResponse : public EC2Response {
 public:
     GetConsoleScreenshotResponse(const GetConsoleScreenshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetConsoleScreenshotRequest * request() const;
+    virtual const GetConsoleScreenshotRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetConsoleScreenshotResponse)

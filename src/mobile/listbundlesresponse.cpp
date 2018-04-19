@@ -29,10 +29,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::ListBundlesResponse
- *
  * \brief The ListBundlesResponse class provides an interace for Mobile ListBundles responses.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -42,11 +41,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new ListBundlesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListBundlesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListBundlesResponse::ListBundlesResponse(
         const ListBundlesRequest &request,
@@ -58,6 +53,9 @@ ListBundlesResponse::ListBundlesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListBundlesRequest * ListBundlesResponse::request() const
 {
     Q_D(const ListBundlesResponse);
@@ -65,9 +63,8 @@ const ListBundlesRequest * ListBundlesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Mobile ListBundles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Mobile ListBundles \a response.
  */
 void ListBundlesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListBundlesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Mobile::ListBundlesResponsePrivate
+ * \brief The ListBundlesResponsePrivate class provides private implementation for ListBundlesResponse.
  * \internal
  *
- * \class ListBundlesResponsePrivate
- *
- * \brief Private implementation for ListBundlesResponse.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBundlesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListBundlesResponse instance.
+ * Constructs a ListBundlesResponsePrivate object with public implementation \a q.
  */
 ListBundlesResponsePrivate::ListBundlesResponsePrivate(
     ListBundlesResponse * const q) : MobileResponsePrivate(q)
@@ -98,9 +91,7 @@ ListBundlesResponsePrivate::ListBundlesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Mobile ListBundlesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Mobile ListBundles response element from \a xml.
  */
 void ListBundlesResponsePrivate::parseListBundlesResponse(QXmlStreamReader &xml)
 {

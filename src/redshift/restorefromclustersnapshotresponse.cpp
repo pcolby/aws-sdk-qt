@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RestoreFromClusterSnapshotResponse
- *
  * \brief The RestoreFromClusterSnapshotResponse class provides an interace for Redshift RestoreFromClusterSnapshot responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new RestoreFromClusterSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreFromClusterSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreFromClusterSnapshotResponse::RestoreFromClusterSnapshotResponse(
         const RestoreFromClusterSnapshotRequest &request,
@@ -85,6 +80,9 @@ RestoreFromClusterSnapshotResponse::RestoreFromClusterSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreFromClusterSnapshotRequest * RestoreFromClusterSnapshotResponse::request() const
 {
     Q_D(const RestoreFromClusterSnapshotResponse);
@@ -92,9 +90,8 @@ const RestoreFromClusterSnapshotRequest * RestoreFromClusterSnapshotResponse::re
 }
 
 /*!
- * @brief  Parse a Redshift RestoreFromClusterSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift RestoreFromClusterSnapshot \a response.
  */
 void RestoreFromClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void RestoreFromClusterSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::RestoreFromClusterSnapshotResponsePrivate
+ * \brief The RestoreFromClusterSnapshotResponsePrivate class provides private implementation for RestoreFromClusterSnapshotResponse.
  * \internal
  *
- * \class RestoreFromClusterSnapshotResponsePrivate
- *
- * \brief Private implementation for RestoreFromClusterSnapshotResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreFromClusterSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreFromClusterSnapshotResponse instance.
+ * Constructs a RestoreFromClusterSnapshotResponsePrivate object with public implementation \a q.
  */
 RestoreFromClusterSnapshotResponsePrivate::RestoreFromClusterSnapshotResponsePrivate(
     RestoreFromClusterSnapshotResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ RestoreFromClusterSnapshotResponsePrivate::RestoreFromClusterSnapshotResponsePri
 }
 
 /*!
- * @brief  Parse an Redshift RestoreFromClusterSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift RestoreFromClusterSnapshot response element from \a xml.
  */
 void RestoreFromClusterSnapshotResponsePrivate::parseRestoreFromClusterSnapshotResponse(QXmlStreamReader &xml)
 {

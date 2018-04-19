@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeactivateUserRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeactivateUserRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DeactivateUserRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DeactivateUserRequestPrivate::DeactivateUserRequestPrivate(
     const WorkDocsRequest::Action action, DeactivateUserRequest * const q)

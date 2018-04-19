@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * AddApplicationCloudWatchLoggingOptionRequest:
  */
 
 /*!
- *
- * Constructs a AddApplicationCloudWatchLoggingOptionRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a AddApplicationCloudWatchLoggingOptionRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 AddApplicationCloudWatchLoggingOptionRequestPrivate::AddApplicationCloudWatchLoggingOptionRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationCloudWatchLoggingOptionRequest * const q)

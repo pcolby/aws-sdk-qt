@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::CreateLabelsResponse
- *
  * \brief The CreateLabelsResponse class provides an interace for WorkDocs CreateLabels responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new CreateLabelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLabelsResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLabelsResponse::CreateLabelsResponse(
         const CreateLabelsRequest &request,
@@ -84,6 +79,9 @@ CreateLabelsResponse::CreateLabelsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLabelsRequest * CreateLabelsResponse::request() const
 {
     Q_D(const CreateLabelsResponse);
@@ -91,9 +89,8 @@ const CreateLabelsRequest * CreateLabelsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs CreateLabels response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs CreateLabels \a response.
  */
 void CreateLabelsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void CreateLabelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::CreateLabelsResponsePrivate
+ * \brief The CreateLabelsResponsePrivate class provides private implementation for CreateLabelsResponse.
  * \internal
  *
- * \class CreateLabelsResponsePrivate
- *
- * \brief Private implementation for CreateLabelsResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLabelsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLabelsResponse instance.
+ * Constructs a CreateLabelsResponsePrivate object with public implementation \a q.
  */
 CreateLabelsResponsePrivate::CreateLabelsResponsePrivate(
     CreateLabelsResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ CreateLabelsResponsePrivate::CreateLabelsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs CreateLabelsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs CreateLabels response element from \a xml.
  */
 void CreateLabelsResponsePrivate::parseCreateLabelsResponse(QXmlStreamReader &xml)
 {

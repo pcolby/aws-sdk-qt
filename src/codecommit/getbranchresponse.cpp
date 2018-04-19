@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetBranchResponse
- *
  * \brief The GetBranchResponse class provides an interace for CodeCommit GetBranch responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetBranchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBranchResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBranchResponse::GetBranchResponse(
         const GetBranchRequest &request,
@@ -245,6 +240,9 @@ GetBranchResponse::GetBranchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBranchRequest * GetBranchResponse::request() const
 {
     Q_D(const GetBranchResponse);
@@ -252,9 +250,8 @@ const GetBranchRequest * GetBranchResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit GetBranch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit GetBranch \a response.
  */
 void GetBranchResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void GetBranchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::GetBranchResponsePrivate
+ * \brief The GetBranchResponsePrivate class provides private implementation for GetBranchResponse.
  * \internal
  *
- * \class GetBranchResponsePrivate
- *
- * \brief Private implementation for GetBranchResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBranchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBranchResponse instance.
+ * Constructs a GetBranchResponsePrivate object with public implementation \a q.
  */
 GetBranchResponsePrivate::GetBranchResponsePrivate(
     GetBranchResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ GetBranchResponsePrivate::GetBranchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit GetBranchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit GetBranch response element from \a xml.
  */
 void GetBranchResponsePrivate::parseGetBranchResponse(QXmlStreamReader &xml)
 {

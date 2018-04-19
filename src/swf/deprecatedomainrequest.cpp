@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DeprecateDomainRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeprecateDomainRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a DeprecateDomainRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 DeprecateDomainRequestPrivate::DeprecateDomainRequestPrivate(
     const SWFRequest::Action action, DeprecateDomainRequest * const q)

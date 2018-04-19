@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeleteIPSetResponse
- *
  * \brief The DeleteIPSetResponse class provides an interace for WAF DeleteIPSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeleteIPSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteIPSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteIPSetResponse::DeleteIPSetResponse(
         const DeleteIPSetRequest &request,
@@ -60,6 +55,9 @@ DeleteIPSetResponse::DeleteIPSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteIPSetRequest * DeleteIPSetResponse::request() const
 {
     Q_D(const DeleteIPSetResponse);
@@ -67,9 +65,8 @@ const DeleteIPSetRequest * DeleteIPSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF DeleteIPSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF DeleteIPSet \a response.
  */
 void DeleteIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::DeleteIPSetResponsePrivate
+ * \brief The DeleteIPSetResponsePrivate class provides private implementation for DeleteIPSetResponse.
  * \internal
  *
- * \class DeleteIPSetResponsePrivate
- *
- * \brief Private implementation for DeleteIPSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIPSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteIPSetResponse instance.
+ * Constructs a DeleteIPSetResponsePrivate object with public implementation \a q.
  */
 DeleteIPSetResponsePrivate::DeleteIPSetResponsePrivate(
     DeleteIPSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteIPSetResponsePrivate::DeleteIPSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF DeleteIPSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF DeleteIPSet response element from \a xml.
  */
 void DeleteIPSetResponsePrivate::parseDeleteIPSetResponse(QXmlStreamReader &xml)
 {

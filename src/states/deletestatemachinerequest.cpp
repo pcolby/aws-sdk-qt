@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * DeleteStateMachineRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteStateMachineRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a DeleteStateMachineRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 DeleteStateMachineRequestPrivate::DeleteStateMachineRequestPrivate(
     const SFNRequest::Action action, DeleteStateMachineRequest * const q)

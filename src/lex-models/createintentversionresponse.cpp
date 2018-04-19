@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::CreateIntentVersionResponse
- *
  * \brief The CreateIntentVersionResponse class provides an interace for LexModelBuildingService CreateIntentVersion responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new CreateIntentVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateIntentVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateIntentVersionResponse::CreateIntentVersionResponse(
         const CreateIntentVersionRequest &request,
@@ -59,6 +54,9 @@ CreateIntentVersionResponse::CreateIntentVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateIntentVersionRequest * CreateIntentVersionResponse::request() const
 {
     Q_D(const CreateIntentVersionResponse);
@@ -66,9 +64,8 @@ const CreateIntentVersionRequest * CreateIntentVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService CreateIntentVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService CreateIntentVersion \a response.
  */
 void CreateIntentVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateIntentVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::CreateIntentVersionResponsePrivate
+ * \brief The CreateIntentVersionResponsePrivate class provides private implementation for CreateIntentVersionResponse.
  * \internal
  *
- * \class CreateIntentVersionResponsePrivate
- *
- * \brief Private implementation for CreateIntentVersionResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateIntentVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateIntentVersionResponse instance.
+ * Constructs a CreateIntentVersionResponsePrivate object with public implementation \a q.
  */
 CreateIntentVersionResponsePrivate::CreateIntentVersionResponsePrivate(
     CreateIntentVersionResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateIntentVersionResponsePrivate::CreateIntentVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService CreateIntentVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService CreateIntentVersion response element from \a xml.
  */
 void CreateIntentVersionResponsePrivate::parseCreateIntentVersionResponse(QXmlStreamReader &xml)
 {

@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * ContinueDeploymentRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ContinueDeploymentRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a ContinueDeploymentRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 ContinueDeploymentRequestPrivate::ContinueDeploymentRequestPrivate(
     const CodeDeployRequest::Action action, ContinueDeploymentRequest * const q)

@@ -29,10 +29,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::ListTagsForCertificateResponse
- *
  * \brief The ListTagsForCertificateResponse class provides an interace for ACM ListTagsForCertificate responses.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsForCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsForCertificateResponse::ListTagsForCertificateResponse(
         const ListTagsForCertificateRequest &request,
@@ -64,6 +59,9 @@ ListTagsForCertificateResponse::ListTagsForCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsForCertificateRequest * ListTagsForCertificateResponse::request() const
 {
     Q_D(const ListTagsForCertificateResponse);
@@ -71,9 +69,8 @@ const ListTagsForCertificateRequest * ListTagsForCertificateResponse::request() 
 }
 
 /*!
- * @brief  Parse a ACM ListTagsForCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACM ListTagsForCertificate \a response.
  */
 void ListTagsForCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void ListTagsForCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACM::ListTagsForCertificateResponsePrivate
+ * \brief The ListTagsForCertificateResponsePrivate class provides private implementation for ListTagsForCertificateResponse.
  * \internal
  *
- * \class ListTagsForCertificateResponsePrivate
- *
- * \brief Private implementation for ListTagsForCertificateResponse.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsForCertificateResponse instance.
+ * Constructs a ListTagsForCertificateResponsePrivate object with public implementation \a q.
  */
 ListTagsForCertificateResponsePrivate::ListTagsForCertificateResponsePrivate(
     ListTagsForCertificateResponse * const q) : ACMResponsePrivate(q)
@@ -104,9 +97,7 @@ ListTagsForCertificateResponsePrivate::ListTagsForCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACM ListTagsForCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACM ListTagsForCertificate response element from \a xml.
  */
 void ListTagsForCertificateResponsePrivate::parseListTagsForCertificateResponse(QXmlStreamReader &xml)
 {

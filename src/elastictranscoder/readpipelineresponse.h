@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReadPipelineResponse : public ElasticTranscoderResponse {
 public:
     ReadPipelineResponse(const ReadPipelineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReadPipelineRequest * request() const;
+    virtual const ReadPipelineRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ReadPipelineResponse)

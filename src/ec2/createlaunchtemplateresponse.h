@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateLaunchTemplateResponse : public EC2Response {
 public:
     CreateLaunchTemplateResponse(const CreateLaunchTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateLaunchTemplateRequest * request() const;
+    virtual const CreateLaunchTemplateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateLaunchTemplateResponse)

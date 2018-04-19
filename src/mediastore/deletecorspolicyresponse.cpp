@@ -29,10 +29,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::DeleteCorsPolicyResponse
- *
  * \brief The DeleteCorsPolicyResponse class provides an interace for MediaStore DeleteCorsPolicy responses.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -41,11 +40,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new DeleteCorsPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCorsPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCorsPolicyResponse::DeleteCorsPolicyResponse(
         const DeleteCorsPolicyRequest &request,
@@ -57,6 +52,9 @@ DeleteCorsPolicyResponse::DeleteCorsPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCorsPolicyRequest * DeleteCorsPolicyResponse::request() const
 {
     Q_D(const DeleteCorsPolicyResponse);
@@ -64,9 +62,8 @@ const DeleteCorsPolicyRequest * DeleteCorsPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaStore DeleteCorsPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaStore DeleteCorsPolicy \a response.
  */
 void DeleteCorsPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DeleteCorsPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaStore::DeleteCorsPolicyResponsePrivate
+ * \brief The DeleteCorsPolicyResponsePrivate class provides private implementation for DeleteCorsPolicyResponse.
  * \internal
  *
- * \class DeleteCorsPolicyResponsePrivate
- *
- * \brief Private implementation for DeleteCorsPolicyResponse.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCorsPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCorsPolicyResponse instance.
+ * Constructs a DeleteCorsPolicyResponsePrivate object with public implementation \a q.
  */
 DeleteCorsPolicyResponsePrivate::DeleteCorsPolicyResponsePrivate(
     DeleteCorsPolicyResponse * const q) : MediaStoreResponsePrivate(q)
@@ -97,9 +90,7 @@ DeleteCorsPolicyResponsePrivate::DeleteCorsPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaStore DeleteCorsPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaStore DeleteCorsPolicy response element from \a xml.
  */
 void DeleteCorsPolicyResponsePrivate::parseDeleteCorsPolicyResponse(QXmlStreamReader &xml)
 {

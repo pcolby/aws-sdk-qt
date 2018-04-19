@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListGitHubAccountTokenNamesResponse : public CodeDeployRespon
 public:
     ListGitHubAccountTokenNamesResponse(const ListGitHubAccountTokenNamesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListGitHubAccountTokenNamesRequest * request() const;
+    virtual const ListGitHubAccountTokenNamesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListGitHubAccountTokenNamesResponse)

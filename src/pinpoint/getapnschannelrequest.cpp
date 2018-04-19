@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetApnsChannelRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetApnsChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetApnsChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetApnsChannelRequestPrivate::GetApnsChannelRequestPrivate(
     const PinpointRequest::Action action, GetApnsChannelRequest * const q)

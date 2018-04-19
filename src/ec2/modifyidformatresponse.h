@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyIdFormatResponse : public EC2Response {
 public:
     ModifyIdFormatResponse(const ModifyIdFormatRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyIdFormatRequest * request() const;
+    virtual const ModifyIdFormatRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyIdFormatResponse)

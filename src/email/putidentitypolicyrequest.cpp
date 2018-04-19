@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * PutIdentityPolicyRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a PutIdentityPolicyRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a PutIdentityPolicyRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 PutIdentityPolicyRequestPrivate::PutIdentityPolicyRequestPrivate(
     const SESRequest::Action action, PutIdentityPolicyRequest * const q)

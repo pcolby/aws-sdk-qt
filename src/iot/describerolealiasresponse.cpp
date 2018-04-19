@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeRoleAliasResponse
- *
  * \brief The DescribeRoleAliasResponse class provides an interace for IoT DescribeRoleAlias responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeRoleAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRoleAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRoleAliasResponse::DescribeRoleAliasResponse(
         const DescribeRoleAliasRequest &request,
@@ -66,6 +61,9 @@ DescribeRoleAliasResponse::DescribeRoleAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRoleAliasRequest * DescribeRoleAliasResponse::request() const
 {
     Q_D(const DescribeRoleAliasResponse);
@@ -73,9 +71,8 @@ const DescribeRoleAliasRequest * DescribeRoleAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DescribeRoleAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DescribeRoleAlias \a response.
  */
 void DescribeRoleAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeRoleAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DescribeRoleAliasResponsePrivate
+ * \brief The DescribeRoleAliasResponsePrivate class provides private implementation for DescribeRoleAliasResponse.
  * \internal
  *
- * \class DescribeRoleAliasResponsePrivate
- *
- * \brief Private implementation for DescribeRoleAliasResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRoleAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRoleAliasResponse instance.
+ * Constructs a DescribeRoleAliasResponsePrivate object with public implementation \a q.
  */
 DescribeRoleAliasResponsePrivate::DescribeRoleAliasResponsePrivate(
     DescribeRoleAliasResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeRoleAliasResponsePrivate::DescribeRoleAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DescribeRoleAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DescribeRoleAlias response element from \a xml.
  */
 void DescribeRoleAliasResponsePrivate::parseDescribeRoleAliasResponse(QXmlStreamReader &xml)
 {

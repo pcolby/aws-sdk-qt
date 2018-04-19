@@ -34,10 +34,10 @@ class QTAWS_EXPORT SendAutomationSignalResponse : public SSMResponse {
 public:
     SendAutomationSignalResponse(const SendAutomationSignalRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SendAutomationSignalRequest * request() const;
+    virtual const SendAutomationSignalRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SendAutomationSignalResponse)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * StartOnDemandReplicationRunRequest::response(
  */
 
 /*!
- *
- * Constructs a StartOnDemandReplicationRunRequestPrivate object for SMS \a action with,
- * public implementation \a q.
+ * Constructs a StartOnDemandReplicationRunRequestPrivate object for SMS \a action,
+ * with public implementation \a q.
  */
 StartOnDemandReplicationRunRequestPrivate::StartOnDemandReplicationRunRequestPrivate(
     const SMSRequest::Action action, StartOnDemandReplicationRunRequest * const q)

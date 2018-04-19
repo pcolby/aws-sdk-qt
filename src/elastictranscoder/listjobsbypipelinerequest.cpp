@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListJobsByPipelineRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListJobsByPipelineRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a ListJobsByPipelineRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 ListJobsByPipelineRequestPrivate::ListJobsByPipelineRequestPrivate(
     const ElasticTranscoderRequest::Action action, ListJobsByPipelineRequest * const q)

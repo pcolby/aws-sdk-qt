@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::UpdateFolderResponse
- *
  * \brief The UpdateFolderResponse class provides an interace for WorkDocs UpdateFolder responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new UpdateFolderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateFolderResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateFolderResponse::UpdateFolderResponse(
         const UpdateFolderRequest &request,
@@ -84,6 +79,9 @@ UpdateFolderResponse::UpdateFolderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateFolderRequest * UpdateFolderResponse::request() const
 {
     Q_D(const UpdateFolderResponse);
@@ -91,9 +89,8 @@ const UpdateFolderRequest * UpdateFolderResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs UpdateFolder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs UpdateFolder \a response.
  */
 void UpdateFolderResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void UpdateFolderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::UpdateFolderResponsePrivate
+ * \brief The UpdateFolderResponsePrivate class provides private implementation for UpdateFolderResponse.
  * \internal
  *
- * \class UpdateFolderResponsePrivate
- *
- * \brief Private implementation for UpdateFolderResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFolderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateFolderResponse instance.
+ * Constructs a UpdateFolderResponsePrivate object with public implementation \a q.
  */
 UpdateFolderResponsePrivate::UpdateFolderResponsePrivate(
     UpdateFolderResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ UpdateFolderResponsePrivate::UpdateFolderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs UpdateFolderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs UpdateFolder response element from \a xml.
  */
 void UpdateFolderResponsePrivate::parseUpdateFolderResponse(QXmlStreamReader &xml)
 {

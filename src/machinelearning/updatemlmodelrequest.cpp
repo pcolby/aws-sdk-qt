@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateMLModelRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateMLModelRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a UpdateMLModelRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 UpdateMLModelRequestPrivate::UpdateMLModelRequestPrivate(
     const MachineLearningRequest::Action action, UpdateMLModelRequest * const q)

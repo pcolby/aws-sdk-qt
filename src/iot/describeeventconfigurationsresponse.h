@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEventConfigurationsResponse : public IoTResponse {
 public:
     DescribeEventConfigurationsResponse(const DescribeEventConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEventConfigurationsRequest * request() const;
+    virtual const DescribeEventConfigurationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEventConfigurationsResponse)

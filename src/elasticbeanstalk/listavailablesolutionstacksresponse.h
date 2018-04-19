@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAvailableSolutionStacksResponse : public ElasticBeanstalk
 public:
     ListAvailableSolutionStacksResponse(const ListAvailableSolutionStacksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAvailableSolutionStacksRequest * request() const;
+    virtual const ListAvailableSolutionStacksRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListAvailableSolutionStacksResponse)

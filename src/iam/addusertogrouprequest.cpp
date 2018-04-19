@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * AddUserToGroupRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a AddUserToGroupRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a AddUserToGroupRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 AddUserToGroupRequestPrivate::AddUserToGroupRequestPrivate(
     const IAMRequest::Action action, AddUserToGroupRequest * const q)

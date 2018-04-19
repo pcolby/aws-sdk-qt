@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteApplicationCloudWatchLoggingOptionResponse : public Kin
 public:
     DeleteApplicationCloudWatchLoggingOptionResponse(const DeleteApplicationCloudWatchLoggingOptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteApplicationCloudWatchLoggingOptionRequest * request() const;
+    virtual const DeleteApplicationCloudWatchLoggingOptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteApplicationCloudWatchLoggingOptionResponse)

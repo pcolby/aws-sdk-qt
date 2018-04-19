@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyLoadBalancerAttributesResponse
- *
  * \brief The ModifyLoadBalancerAttributesResponse class provides an interace for ElasticLoadBalancingv2 ModifyLoadBalancerAttributes responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyLoadBalancerAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyLoadBalancerAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyLoadBalancerAttributesResponse::ModifyLoadBalancerAttributesResponse(
         const ModifyLoadBalancerAttributesRequest &request,
@@ -123,6 +118,9 @@ ModifyLoadBalancerAttributesResponse::ModifyLoadBalancerAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyLoadBalancerAttributesRequest * ModifyLoadBalancerAttributesResponse::request() const
 {
     Q_D(const ModifyLoadBalancerAttributesResponse);
@@ -130,9 +128,8 @@ const ModifyLoadBalancerAttributesRequest * ModifyLoadBalancerAttributesResponse
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 ModifyLoadBalancerAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 ModifyLoadBalancerAttributes \a response.
  */
 void ModifyLoadBalancerAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void ModifyLoadBalancerAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::ModifyLoadBalancerAttributesResponsePrivate
+ * \brief The ModifyLoadBalancerAttributesResponsePrivate class provides private implementation for ModifyLoadBalancerAttributesResponse.
  * \internal
  *
- * \class ModifyLoadBalancerAttributesResponsePrivate
- *
- * \brief Private implementation for ModifyLoadBalancerAttributesResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyLoadBalancerAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyLoadBalancerAttributesResponse instance.
+ * Constructs a ModifyLoadBalancerAttributesResponsePrivate object with public implementation \a q.
  */
 ModifyLoadBalancerAttributesResponsePrivate::ModifyLoadBalancerAttributesResponsePrivate(
     ModifyLoadBalancerAttributesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ ModifyLoadBalancerAttributesResponsePrivate::ModifyLoadBalancerAttributesRespons
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 ModifyLoadBalancerAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 ModifyLoadBalancerAttributes response element from \a xml.
  */
 void ModifyLoadBalancerAttributesResponsePrivate::parseModifyLoadBalancerAttributesResponse(QXmlStreamReader &xml)
 {

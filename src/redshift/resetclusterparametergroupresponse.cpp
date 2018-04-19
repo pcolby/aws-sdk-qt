@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ResetClusterParameterGroupResponse
- *
  * \brief The ResetClusterParameterGroupResponse class provides an interace for Redshift ResetClusterParameterGroup responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ResetClusterParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetClusterParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetClusterParameterGroupResponse::ResetClusterParameterGroupResponse(
         const ResetClusterParameterGroupRequest &request,
@@ -85,6 +80,9 @@ ResetClusterParameterGroupResponse::ResetClusterParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetClusterParameterGroupRequest * ResetClusterParameterGroupResponse::request() const
 {
     Q_D(const ResetClusterParameterGroupResponse);
@@ -92,9 +90,8 @@ const ResetClusterParameterGroupRequest * ResetClusterParameterGroupResponse::re
 }
 
 /*!
- * @brief  Parse a Redshift ResetClusterParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift ResetClusterParameterGroup \a response.
  */
 void ResetClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void ResetClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::ResetClusterParameterGroupResponsePrivate
+ * \brief The ResetClusterParameterGroupResponsePrivate class provides private implementation for ResetClusterParameterGroupResponse.
  * \internal
  *
- * \class ResetClusterParameterGroupResponsePrivate
- *
- * \brief Private implementation for ResetClusterParameterGroupResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetClusterParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetClusterParameterGroupResponse instance.
+ * Constructs a ResetClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 ResetClusterParameterGroupResponsePrivate::ResetClusterParameterGroupResponsePrivate(
     ResetClusterParameterGroupResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ ResetClusterParameterGroupResponsePrivate::ResetClusterParameterGroupResponsePri
 }
 
 /*!
- * @brief  Parse an Redshift ResetClusterParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift ResetClusterParameterGroup response element from \a xml.
  */
 void ResetClusterParameterGroupResponsePrivate::parseResetClusterParameterGroupResponse(QXmlStreamReader &xml)
 {

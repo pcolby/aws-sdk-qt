@@ -29,10 +29,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::RefreshTrustedAdvisorCheckResponse
- *
  * \brief The RefreshTrustedAdvisorCheckResponse class provides an interace for Support RefreshTrustedAdvisorCheck responses.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -107,11 +106,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new RefreshTrustedAdvisorCheckResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RefreshTrustedAdvisorCheckResponse object for \a reply to \a request, with parent \a parent.
  */
 RefreshTrustedAdvisorCheckResponse::RefreshTrustedAdvisorCheckResponse(
         const RefreshTrustedAdvisorCheckRequest &request,
@@ -123,6 +118,9 @@ RefreshTrustedAdvisorCheckResponse::RefreshTrustedAdvisorCheckResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RefreshTrustedAdvisorCheckRequest * RefreshTrustedAdvisorCheckResponse::request() const
 {
     Q_D(const RefreshTrustedAdvisorCheckResponse);
@@ -130,9 +128,8 @@ const RefreshTrustedAdvisorCheckRequest * RefreshTrustedAdvisorCheckResponse::re
 }
 
 /*!
- * @brief  Parse a Support RefreshTrustedAdvisorCheck response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Support RefreshTrustedAdvisorCheck \a response.
  */
 void RefreshTrustedAdvisorCheckResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void RefreshTrustedAdvisorCheckResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Support::RefreshTrustedAdvisorCheckResponsePrivate
+ * \brief The RefreshTrustedAdvisorCheckResponsePrivate class provides private implementation for RefreshTrustedAdvisorCheckResponse.
  * \internal
  *
- * \class RefreshTrustedAdvisorCheckResponsePrivate
- *
- * \brief Private implementation for RefreshTrustedAdvisorCheckResponse.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RefreshTrustedAdvisorCheckResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RefreshTrustedAdvisorCheckResponse instance.
+ * Constructs a RefreshTrustedAdvisorCheckResponsePrivate object with public implementation \a q.
  */
 RefreshTrustedAdvisorCheckResponsePrivate::RefreshTrustedAdvisorCheckResponsePrivate(
     RefreshTrustedAdvisorCheckResponse * const q) : SupportResponsePrivate(q)
@@ -163,9 +156,7 @@ RefreshTrustedAdvisorCheckResponsePrivate::RefreshTrustedAdvisorCheckResponsePri
 }
 
 /*!
- * @brief  Parse an Support RefreshTrustedAdvisorCheckResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Support RefreshTrustedAdvisorCheck response element from \a xml.
  */
 void RefreshTrustedAdvisorCheckResponsePrivate::parseRefreshTrustedAdvisorCheckResponse(QXmlStreamReader &xml)
 {

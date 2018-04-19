@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkAclsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeNetworkAclsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeNetworkAclsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeNetworkAclsRequestPrivate::DescribeNetworkAclsRequestPrivate(
     const EC2Request::Action action, DescribeNetworkAclsRequest * const q)

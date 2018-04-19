@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::RegisterTargetsResponse
- *
  * \brief The RegisterTargetsResponse class provides an interace for ElasticLoadBalancingv2 RegisterTargets responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new RegisterTargetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterTargetsResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterTargetsResponse::RegisterTargetsResponse(
         const RegisterTargetsRequest &request,
@@ -123,6 +118,9 @@ RegisterTargetsResponse::RegisterTargetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterTargetsRequest * RegisterTargetsResponse::request() const
 {
     Q_D(const RegisterTargetsResponse);
@@ -130,9 +128,8 @@ const RegisterTargetsRequest * RegisterTargetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 RegisterTargets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 RegisterTargets \a response.
  */
 void RegisterTargetsResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void RegisterTargetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::RegisterTargetsResponsePrivate
+ * \brief The RegisterTargetsResponsePrivate class provides private implementation for RegisterTargetsResponse.
  * \internal
  *
- * \class RegisterTargetsResponsePrivate
- *
- * \brief Private implementation for RegisterTargetsResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterTargetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterTargetsResponse instance.
+ * Constructs a RegisterTargetsResponsePrivate object with public implementation \a q.
  */
 RegisterTargetsResponsePrivate::RegisterTargetsResponsePrivate(
     RegisterTargetsResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ RegisterTargetsResponsePrivate::RegisterTargetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 RegisterTargetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 RegisterTargets response element from \a xml.
  */
 void RegisterTargetsResponsePrivate::parseRegisterTargetsResponse(QXmlStreamReader &xml)
 {

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAutoScalingGroupRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteAutoScalingGroupRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAutoScalingGroupRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DeleteAutoScalingGroupRequestPrivate::DeleteAutoScalingGroupRequestPrivate(
     const AutoScalingRequest::Action action, DeleteAutoScalingGroupRequest * const q)

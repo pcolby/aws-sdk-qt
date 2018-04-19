@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateConnectionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateConnectionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a UpdateConnectionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 UpdateConnectionRequestPrivate::UpdateConnectionRequestPrivate(
     const GlueRequest::Action action, UpdateConnectionRequest * const q)

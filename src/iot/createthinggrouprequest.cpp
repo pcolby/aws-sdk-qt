@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateThingGroupRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateThingGroupRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a CreateThingGroupRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 CreateThingGroupRequestPrivate::CreateThingGroupRequestPrivate(
     const IoTRequest::Action action, CreateThingGroupRequest * const q)

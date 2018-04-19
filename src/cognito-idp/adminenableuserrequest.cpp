@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminEnableUserRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a AdminEnableUserRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminEnableUserRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminEnableUserRequestPrivate::AdminEnableUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminEnableUserRequest * const q)

@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * UpdateFacetRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateFacetRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a UpdateFacetRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 UpdateFacetRequestPrivate::UpdateFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, UpdateFacetRequest * const q)

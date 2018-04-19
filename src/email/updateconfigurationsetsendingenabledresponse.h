@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateConfigurationSetSendingEnabledResponse : public SESResp
 public:
     UpdateConfigurationSetSendingEnabledResponse(const UpdateConfigurationSetSendingEnabledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateConfigurationSetSendingEnabledRequest * request() const;
+    virtual const UpdateConfigurationSetSendingEnabledRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateConfigurationSetSendingEnabledResponse)

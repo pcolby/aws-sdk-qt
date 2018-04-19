@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::UpdateConfigurationResponse
- *
  * \brief The UpdateConfigurationResponse class provides an interace for MQ UpdateConfiguration responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new UpdateConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateConfigurationResponse::UpdateConfigurationResponse(
         const UpdateConfigurationRequest &request,
@@ -57,6 +52,9 @@ UpdateConfigurationResponse::UpdateConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateConfigurationRequest * UpdateConfigurationResponse::request() const
 {
     Q_D(const UpdateConfigurationResponse);
@@ -64,9 +62,8 @@ const UpdateConfigurationRequest * UpdateConfigurationResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ UpdateConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ UpdateConfiguration \a response.
  */
 void UpdateConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void UpdateConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::UpdateConfigurationResponsePrivate
+ * \brief The UpdateConfigurationResponsePrivate class provides private implementation for UpdateConfigurationResponse.
  * \internal
  *
- * \class UpdateConfigurationResponsePrivate
- *
- * \brief Private implementation for UpdateConfigurationResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateConfigurationResponse instance.
+ * Constructs a UpdateConfigurationResponsePrivate object with public implementation \a q.
  */
 UpdateConfigurationResponsePrivate::UpdateConfigurationResponsePrivate(
     UpdateConfigurationResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ UpdateConfigurationResponsePrivate::UpdateConfigurationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ UpdateConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ UpdateConfiguration response element from \a xml.
  */
 void UpdateConfigurationResponsePrivate::parseUpdateConfigurationResponse(QXmlStreamReader &xml)
 {

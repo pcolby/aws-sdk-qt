@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTapeArchivesResponse : public StorageGatewayResponse 
 public:
     DescribeTapeArchivesResponse(const DescribeTapeArchivesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTapeArchivesRequest * request() const;
+    virtual const DescribeTapeArchivesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTapeArchivesResponse)

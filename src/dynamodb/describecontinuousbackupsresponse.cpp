@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DescribeContinuousBackupsResponse
- *
  * \brief The DescribeContinuousBackupsResponse class provides an interace for DynamoDB DescribeContinuousBackups responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DescribeContinuousBackupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeContinuousBackupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeContinuousBackupsResponse::DescribeContinuousBackupsResponse(
         const DescribeContinuousBackupsRequest &request,
@@ -74,6 +69,9 @@ DescribeContinuousBackupsResponse::DescribeContinuousBackupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeContinuousBackupsRequest * DescribeContinuousBackupsResponse::request() const
 {
     Q_D(const DescribeContinuousBackupsResponse);
@@ -81,9 +79,8 @@ const DescribeContinuousBackupsRequest * DescribeContinuousBackupsResponse::requ
 }
 
 /*!
- * @brief  Parse a DynamoDB DescribeContinuousBackups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB DescribeContinuousBackups \a response.
  */
 void DescribeContinuousBackupsResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DescribeContinuousBackupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::DescribeContinuousBackupsResponsePrivate
+ * \brief The DescribeContinuousBackupsResponsePrivate class provides private implementation for DescribeContinuousBackupsResponse.
  * \internal
  *
- * \class DescribeContinuousBackupsResponsePrivate
- *
- * \brief Private implementation for DescribeContinuousBackupsResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeContinuousBackupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeContinuousBackupsResponse instance.
+ * Constructs a DescribeContinuousBackupsResponsePrivate object with public implementation \a q.
  */
 DescribeContinuousBackupsResponsePrivate::DescribeContinuousBackupsResponsePrivate(
     DescribeContinuousBackupsResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ DescribeContinuousBackupsResponsePrivate::DescribeContinuousBackupsResponsePriva
 }
 
 /*!
- * @brief  Parse an DynamoDB DescribeContinuousBackupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB DescribeContinuousBackups response element from \a xml.
  */
 void DescribeContinuousBackupsResponsePrivate::parseDescribeContinuousBackupsResponse(QXmlStreamReader &xml)
 {

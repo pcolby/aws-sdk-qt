@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::PutAggregationAuthorizationResponse
- *
  * \brief The PutAggregationAuthorizationResponse class provides an interace for ConfigService PutAggregationAuthorization responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new PutAggregationAuthorizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutAggregationAuthorizationResponse object for \a reply to \a request, with parent \a parent.
  */
 PutAggregationAuthorizationResponse::PutAggregationAuthorizationResponse(
         const PutAggregationAuthorizationRequest &request,
@@ -78,6 +73,9 @@ PutAggregationAuthorizationResponse::PutAggregationAuthorizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutAggregationAuthorizationRequest * PutAggregationAuthorizationResponse::request() const
 {
     Q_D(const PutAggregationAuthorizationResponse);
@@ -85,9 +83,8 @@ const PutAggregationAuthorizationRequest * PutAggregationAuthorizationResponse::
 }
 
 /*!
- * @brief  Parse a ConfigService PutAggregationAuthorization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService PutAggregationAuthorization \a response.
  */
 void PutAggregationAuthorizationResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void PutAggregationAuthorizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::PutAggregationAuthorizationResponsePrivate
+ * \brief The PutAggregationAuthorizationResponsePrivate class provides private implementation for PutAggregationAuthorizationResponse.
  * \internal
  *
- * \class PutAggregationAuthorizationResponsePrivate
- *
- * \brief Private implementation for PutAggregationAuthorizationResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutAggregationAuthorizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutAggregationAuthorizationResponse instance.
+ * Constructs a PutAggregationAuthorizationResponsePrivate object with public implementation \a q.
  */
 PutAggregationAuthorizationResponsePrivate::PutAggregationAuthorizationResponsePrivate(
     PutAggregationAuthorizationResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ PutAggregationAuthorizationResponsePrivate::PutAggregationAuthorizationResponseP
 }
 
 /*!
- * @brief  Parse an ConfigService PutAggregationAuthorizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService PutAggregationAuthorization response element from \a xml.
  */
 void PutAggregationAuthorizationResponsePrivate::parsePutAggregationAuthorizationResponse(QXmlStreamReader &xml)
 {

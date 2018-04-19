@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * PutJobFailureResultRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a PutJobFailureResultRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a PutJobFailureResultRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 PutJobFailureResultRequestPrivate::PutJobFailureResultRequestPrivate(
     const CodePipelineRequest::Action action, PutJobFailureResultRequest * const q)

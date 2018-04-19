@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBSecurityGroupResponse
- *
  * \brief The CreateDBSecurityGroupResponse class provides an interace for RDS CreateDBSecurityGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBSecurityGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDBSecurityGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDBSecurityGroupResponse::CreateDBSecurityGroupResponse(
         const CreateDBSecurityGroupRequest &request,
@@ -119,6 +114,9 @@ CreateDBSecurityGroupResponse::CreateDBSecurityGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDBSecurityGroupRequest * CreateDBSecurityGroupResponse::request() const
 {
     Q_D(const CreateDBSecurityGroupResponse);
@@ -126,9 +124,8 @@ const CreateDBSecurityGroupRequest * CreateDBSecurityGroupResponse::request() co
 }
 
 /*!
- * @brief  Parse a RDS CreateDBSecurityGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CreateDBSecurityGroup \a response.
  */
 void CreateDBSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CreateDBSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CreateDBSecurityGroupResponsePrivate
+ * \brief The CreateDBSecurityGroupResponsePrivate class provides private implementation for CreateDBSecurityGroupResponse.
  * \internal
  *
- * \class CreateDBSecurityGroupResponsePrivate
- *
- * \brief Private implementation for CreateDBSecurityGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBSecurityGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDBSecurityGroupResponse instance.
+ * Constructs a CreateDBSecurityGroupResponsePrivate object with public implementation \a q.
  */
 CreateDBSecurityGroupResponsePrivate::CreateDBSecurityGroupResponsePrivate(
     CreateDBSecurityGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CreateDBSecurityGroupResponsePrivate::CreateDBSecurityGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CreateDBSecurityGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CreateDBSecurityGroup response element from \a xml.
  */
 void CreateDBSecurityGroupResponsePrivate::parseCreateDBSecurityGroupResponse(QXmlStreamReader &xml)
 {

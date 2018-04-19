@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::RemoveTagsFromResourceResponse
- *
  * \brief The RemoveTagsFromResourceResponse class provides an interace for CloudHSM RemoveTagsFromResource responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveTagsFromResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
         const RemoveTagsFromResourceRequest &request,
@@ -67,6 +62,9 @@ RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() const
 {
     Q_D(const RemoveTagsFromResourceResponse);
@@ -74,9 +72,8 @@ const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() 
 }
 
 /*!
- * @brief  Parse a CloudHSM RemoveTagsFromResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM RemoveTagsFromResource \a response.
  */
 void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::RemoveTagsFromResourceResponsePrivate
+ * \brief The RemoveTagsFromResourceResponsePrivate class provides private implementation for RemoveTagsFromResourceResponse.
  * \internal
  *
- * \class RemoveTagsFromResourceResponsePrivate
- *
- * \brief Private implementation for RemoveTagsFromResourceResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveTagsFromResourceResponse instance.
+ * Constructs a RemoveTagsFromResourceResponsePrivate object with public implementation \a q.
  */
 RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
     RemoveTagsFromResourceResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM RemoveTagsFromResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM RemoveTagsFromResource response element from \a xml.
  */
 void RemoveTagsFromResourceResponsePrivate::parseRemoveTagsFromResourceResponse(QXmlStreamReader &xml)
 {

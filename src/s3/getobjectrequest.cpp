@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetObjectRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetObjectRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetObjectRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetObjectRequestPrivate::GetObjectRequestPrivate(
     const S3Request::Action action, GetObjectRequest * const q)

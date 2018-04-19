@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteConfigurationSetTrackingOptionsResponse
- *
  * \brief The DeleteConfigurationSetTrackingOptionsResponse class provides an interace for SES DeleteConfigurationSetTrackingOptions responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteConfigurationSetTrackingOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteConfigurationSetTrackingOptionsResponse::DeleteConfigurationSetTrackingOptionsResponse(
         const DeleteConfigurationSetTrackingOptionsRequest &request,
@@ -66,6 +61,9 @@ DeleteConfigurationSetTrackingOptionsResponse::DeleteConfigurationSetTrackingOpt
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteConfigurationSetTrackingOptionsRequest * DeleteConfigurationSetTrackingOptionsResponse::request() const
 {
     Q_D(const DeleteConfigurationSetTrackingOptionsResponse);
@@ -73,9 +71,8 @@ const DeleteConfigurationSetTrackingOptionsRequest * DeleteConfigurationSetTrack
 }
 
 /*!
- * @brief  Parse a SES DeleteConfigurationSetTrackingOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES DeleteConfigurationSetTrackingOptions \a response.
  */
 void DeleteConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::SES::DeleteConfigurationSetTrackingOptionsResponsePrivate
+ * \brief The DeleteConfigurationSetTrackingOptionsResponsePrivate class provides private implementation for DeleteConfigurationSetTrackingOptionsResponse.
  * \internal
  *
- * \class DeleteConfigurationSetTrackingOptionsResponsePrivate
- *
- * \brief Private implementation for DeleteConfigurationSetTrackingOptionsResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationSetTrackingOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteConfigurationSetTrackingOptionsResponse instance.
+ * Constructs a DeleteConfigurationSetTrackingOptionsResponsePrivate object with public implementation \a q.
  */
 DeleteConfigurationSetTrackingOptionsResponsePrivate::DeleteConfigurationSetTrackingOptionsResponsePrivate(
     DeleteConfigurationSetTrackingOptionsResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteConfigurationSetTrackingOptionsResponsePrivate::DeleteConfigurationSetTrac
 }
 
 /*!
- * @brief  Parse an SES DeleteConfigurationSetTrackingOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES DeleteConfigurationSetTrackingOptions response element from \a xml.
  */
 void DeleteConfigurationSetTrackingOptionsResponsePrivate::parseDeleteConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml)
 {

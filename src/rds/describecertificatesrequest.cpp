@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificatesRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeCertificatesRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCertificatesRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeCertificatesRequestPrivate::DescribeCertificatesRequestPrivate(
     const RDSRequest::Action action, DescribeCertificatesRequest * const q)

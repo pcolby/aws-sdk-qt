@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListResourceTagsResponse
- *
  * \brief The ListResourceTagsResponse class provides an interace for KMS ListResourceTags responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListResourceTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListResourceTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListResourceTagsResponse::ListResourceTagsResponse(
         const ListResourceTagsRequest &request,
@@ -154,6 +149,9 @@ ListResourceTagsResponse::ListResourceTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListResourceTagsRequest * ListResourceTagsResponse::request() const
 {
     Q_D(const ListResourceTagsResponse);
@@ -161,9 +159,8 @@ const ListResourceTagsRequest * ListResourceTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS ListResourceTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS ListResourceTags \a response.
  */
 void ListResourceTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void ListResourceTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::ListResourceTagsResponsePrivate
+ * \brief The ListResourceTagsResponsePrivate class provides private implementation for ListResourceTagsResponse.
  * \internal
  *
- * \class ListResourceTagsResponsePrivate
- *
- * \brief Private implementation for ListResourceTagsResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListResourceTagsResponse instance.
+ * Constructs a ListResourceTagsResponsePrivate object with public implementation \a q.
  */
 ListResourceTagsResponsePrivate::ListResourceTagsResponsePrivate(
     ListResourceTagsResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ ListResourceTagsResponsePrivate::ListResourceTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS ListResourceTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS ListResourceTags response element from \a xml.
  */
 void ListResourceTagsResponsePrivate::parseListResourceTagsResponse(QXmlStreamReader &xml)
 {

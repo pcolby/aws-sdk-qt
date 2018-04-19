@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::AddTagsResponse
- *
  * \brief The AddTagsResponse class provides an interace for SageMaker AddTags responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::addTags
  */
 
 /*!
- * @brief  Constructs a new AddTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 AddTagsResponse::AddTagsResponse(
         const AddTagsRequest &request,
@@ -55,6 +50,9 @@ AddTagsResponse::AddTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddTagsRequest * AddTagsResponse::request() const
 {
     Q_D(const AddTagsResponse);
@@ -62,9 +60,8 @@ const AddTagsRequest * AddTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SageMaker AddTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker AddTags \a response.
  */
 void AddTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void AddTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::AddTagsResponsePrivate
+ * \brief The AddTagsResponsePrivate class provides private implementation for AddTagsResponse.
  * \internal
  *
- * \class AddTagsResponsePrivate
- *
- * \brief Private implementation for AddTagsResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddTagsResponse instance.
+ * Constructs a AddTagsResponsePrivate object with public implementation \a q.
  */
 AddTagsResponsePrivate::AddTagsResponsePrivate(
     AddTagsResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ AddTagsResponsePrivate::AddTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker AddTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker AddTags response element from \a xml.
  */
 void AddTagsResponsePrivate::parseAddTagsResponse(QXmlStreamReader &xml)
 {

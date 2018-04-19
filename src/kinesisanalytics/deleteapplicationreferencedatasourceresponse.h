@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteApplicationReferenceDataSourceResponse : public Kinesis
 public:
     DeleteApplicationReferenceDataSourceResponse(const DeleteApplicationReferenceDataSourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteApplicationReferenceDataSourceRequest * request() const;
+    virtual const DeleteApplicationReferenceDataSourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteApplicationReferenceDataSourceResponse)

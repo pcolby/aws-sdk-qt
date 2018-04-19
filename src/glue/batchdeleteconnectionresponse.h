@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchDeleteConnectionResponse : public GlueResponse {
 public:
     BatchDeleteConnectionResponse(const BatchDeleteConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchDeleteConnectionRequest * request() const;
+    virtual const BatchDeleteConnectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchDeleteConnectionResponse)

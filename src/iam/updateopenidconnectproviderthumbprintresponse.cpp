@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateOpenIDConnectProviderThumbprintResponse
- *
  * \brief The UpdateOpenIDConnectProviderThumbprintResponse class provides an interace for IAM UpdateOpenIDConnectProviderThumbprint responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateOpenIDConnectProviderThumbprintResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateOpenIDConnectProviderThumbprintResponse::UpdateOpenIDConnectProviderThumbprintResponse(
         const UpdateOpenIDConnectProviderThumbprintRequest &request,
@@ -120,6 +115,9 @@ UpdateOpenIDConnectProviderThumbprintResponse::UpdateOpenIDConnectProviderThumbp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateOpenIDConnectProviderThumbprintRequest * UpdateOpenIDConnectProviderThumbprintResponse::request() const
 {
     Q_D(const UpdateOpenIDConnectProviderThumbprintResponse);
@@ -127,9 +125,8 @@ const UpdateOpenIDConnectProviderThumbprintRequest * UpdateOpenIDConnectProvider
 }
 
 /*!
- * @brief  Parse a IAM UpdateOpenIDConnectProviderThumbprint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateOpenIDConnectProviderThumbprint \a response.
  */
 void UpdateOpenIDConnectProviderThumbprintResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateOpenIDConnectProviderThumbprintResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::IAM::UpdateOpenIDConnectProviderThumbprintResponsePrivate
+ * \brief The UpdateOpenIDConnectProviderThumbprintResponsePrivate class provides private implementation for UpdateOpenIDConnectProviderThumbprintResponse.
  * \internal
  *
- * \class UpdateOpenIDConnectProviderThumbprintResponsePrivate
- *
- * \brief Private implementation for UpdateOpenIDConnectProviderThumbprintResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateOpenIDConnectProviderThumbprintResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateOpenIDConnectProviderThumbprintResponse instance.
+ * Constructs a UpdateOpenIDConnectProviderThumbprintResponsePrivate object with public implementation \a q.
  */
 UpdateOpenIDConnectProviderThumbprintResponsePrivate::UpdateOpenIDConnectProviderThumbprintResponsePrivate(
     UpdateOpenIDConnectProviderThumbprintResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateOpenIDConnectProviderThumbprintResponsePrivate::UpdateOpenIDConnectProvide
 }
 
 /*!
- * @brief  Parse an IAM UpdateOpenIDConnectProviderThumbprintResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateOpenIDConnectProviderThumbprint response element from \a xml.
  */
 void UpdateOpenIDConnectProviderThumbprintResponsePrivate::parseUpdateOpenIDConnectProviderThumbprintResponse(QXmlStreamReader &xml)
 {

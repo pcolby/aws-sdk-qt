@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdateEndpointRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a UpdateEndpointRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
     const SageMakerRequest::Action action, UpdateEndpointRequest * const q)

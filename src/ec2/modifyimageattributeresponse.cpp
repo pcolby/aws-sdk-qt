@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyImageAttributeResponse
- *
  * \brief The ModifyImageAttributeResponse class provides an interace for EC2 ModifyImageAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyImageAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyImageAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyImageAttributeResponse::ModifyImageAttributeResponse(
         const ModifyImageAttributeRequest &request,
@@ -59,6 +54,9 @@ ModifyImageAttributeResponse::ModifyImageAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyImageAttributeRequest * ModifyImageAttributeResponse::request() const
 {
     Q_D(const ModifyImageAttributeResponse);
@@ -66,9 +64,8 @@ const ModifyImageAttributeRequest * ModifyImageAttributeResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 ModifyImageAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyImageAttribute \a response.
  */
 void ModifyImageAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyImageAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyImageAttributeResponsePrivate
+ * \brief The ModifyImageAttributeResponsePrivate class provides private implementation for ModifyImageAttributeResponse.
  * \internal
  *
- * \class ModifyImageAttributeResponsePrivate
- *
- * \brief Private implementation for ModifyImageAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyImageAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyImageAttributeResponse instance.
+ * Constructs a ModifyImageAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyImageAttributeResponsePrivate::ModifyImageAttributeResponsePrivate(
     ModifyImageAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyImageAttributeResponsePrivate::ModifyImageAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifyImageAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyImageAttribute response element from \a xml.
  */
 void ModifyImageAttributeResponsePrivate::parseModifyImageAttributeResponse(QXmlStreamReader &xml)
 {

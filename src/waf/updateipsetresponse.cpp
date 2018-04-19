@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateIPSetResponse
- *
  * \brief The UpdateIPSetResponse class provides an interace for WAF UpdateIPSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateIPSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateIPSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateIPSetResponse::UpdateIPSetResponse(
         const UpdateIPSetRequest &request,
@@ -60,6 +55,9 @@ UpdateIPSetResponse::UpdateIPSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateIPSetRequest * UpdateIPSetResponse::request() const
 {
     Q_D(const UpdateIPSetResponse);
@@ -67,9 +65,8 @@ const UpdateIPSetRequest * UpdateIPSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF UpdateIPSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF UpdateIPSet \a response.
  */
 void UpdateIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::UpdateIPSetResponsePrivate
+ * \brief The UpdateIPSetResponsePrivate class provides private implementation for UpdateIPSetResponse.
  * \internal
  *
- * \class UpdateIPSetResponsePrivate
- *
- * \brief Private implementation for UpdateIPSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateIPSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateIPSetResponse instance.
+ * Constructs a UpdateIPSetResponsePrivate object with public implementation \a q.
  */
 UpdateIPSetResponsePrivate::UpdateIPSetResponsePrivate(
     UpdateIPSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateIPSetResponsePrivate::UpdateIPSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF UpdateIPSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF UpdateIPSet response element from \a xml.
  */
 void UpdateIPSetResponsePrivate::parseUpdateIPSetResponse(QXmlStreamReader &xml)
 {

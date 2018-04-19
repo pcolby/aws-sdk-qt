@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteComputeEnvironmentRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteComputeEnvironmentRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a DeleteComputeEnvironmentRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 DeleteComputeEnvironmentRequestPrivate::DeleteComputeEnvironmentRequestPrivate(
     const BatchRequest::Action action, DeleteComputeEnvironmentRequest * const q)

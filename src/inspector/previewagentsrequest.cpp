@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * PreviewAgentsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a PreviewAgentsRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a PreviewAgentsRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 PreviewAgentsRequestPrivate::PreviewAgentsRequestPrivate(
     const InspectorRequest::Action action, PreviewAgentsRequest * const q)

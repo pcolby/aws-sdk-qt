@@ -28,16 +28,13 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::ServiceDiscoveryResponse
- *
  * \brief The ServiceDiscoveryResponse class provides an interface for ServiceDiscovery responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @brief  Constructs a new ServiceDiscoveryResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ServiceDiscoveryResponse object with parent \a parent.
  */
 ServiceDiscoveryResponse::ServiceDiscoveryResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ServiceDiscoveryResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ServiceDiscoveryResponse::ServiceDiscoveryResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServiceDiscoveryResponse object.
- *
+ * \internal
+ * Constructs a ServiceDiscoveryResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ServiceDiscoveryResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ServiceDiscoveryResponse::ServiceDiscoveryResponse(ServiceDiscoveryResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ServiceDiscoveryResponse::ServiceDiscoveryResponse(ServiceDiscoveryResponsePriva
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ServiceDiscoveryResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ServiceDiscoveryResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceDiscovery::ServiceDiscoveryResponsePrivate
+ * \brief The ServiceDiscoveryResponsePrivate class provides private implementation for ServiceDiscoveryResponse.
+ * \internal
  *
- * @class  ServiceDiscoveryResponsePrivate
- *
- * @brief  Private implementation for ServiceDiscoveryResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServiceDiscoveryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ServiceDiscoveryResponse instance.
+ * Constructs a ServiceDiscoveryResponsePrivate object with public implementation \a q.
  */
 ServiceDiscoveryResponsePrivate::ServiceDiscoveryResponsePrivate(
     ServiceDiscoveryResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

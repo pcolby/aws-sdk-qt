@@ -29,21 +29,16 @@ namespace CostandUsageReportService {
 
 /*!
  * \class QtAws::CostandUsageReportService::PutReportDefinitionResponse
- *
  * \brief The PutReportDefinitionResponse class provides an interace for CostandUsageReportService PutReportDefinition responses.
  *
- * \ingroup CostandUsageReportService
+ * \inmodule QtAwsCostandUsageReportService
  *
  *
  * \sa CostandUsageReportServiceClient::putReportDefinition
  */
 
 /*!
- * @brief  Constructs a new PutReportDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutReportDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 PutReportDefinitionResponse::PutReportDefinitionResponse(
         const PutReportDefinitionRequest &request,
@@ -55,6 +50,9 @@ PutReportDefinitionResponse::PutReportDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutReportDefinitionRequest * PutReportDefinitionResponse::request() const
 {
     Q_D(const PutReportDefinitionResponse);
@@ -62,9 +60,8 @@ const PutReportDefinitionRequest * PutReportDefinitionResponse::request() const
 }
 
 /*!
- * @brief  Parse a CostandUsageReportService PutReportDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CostandUsageReportService PutReportDefinition \a response.
  */
 void PutReportDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutReportDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CostandUsageReportService::PutReportDefinitionResponsePrivate
+ * \brief The PutReportDefinitionResponsePrivate class provides private implementation for PutReportDefinitionResponse.
  * \internal
  *
- * \class PutReportDefinitionResponsePrivate
- *
- * \brief Private implementation for PutReportDefinitionResponse.
+ * \inmodule QtAwsCostandUsageReportService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutReportDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutReportDefinitionResponse instance.
+ * Constructs a PutReportDefinitionResponsePrivate object with public implementation \a q.
  */
 PutReportDefinitionResponsePrivate::PutReportDefinitionResponsePrivate(
     PutReportDefinitionResponse * const q) : CostandUsageReportServiceResponsePrivate(q)
@@ -95,9 +88,7 @@ PutReportDefinitionResponsePrivate::PutReportDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CostandUsageReportService PutReportDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CostandUsageReportService PutReportDefinition response element from \a xml.
  */
 void PutReportDefinitionResponsePrivate::parsePutReportDefinitionResponse(QXmlStreamReader &xml)
 {

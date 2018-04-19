@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::DeleteFieldLevelEncryptionConfigResponse
- *
  * \brief The DeleteFieldLevelEncryptionConfigResponse class provides an interace for CloudFront DeleteFieldLevelEncryptionConfig responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new DeleteFieldLevelEncryptionConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteFieldLevelEncryptionConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteFieldLevelEncryptionConfigResponse::DeleteFieldLevelEncryptionConfigResponse(
         const DeleteFieldLevelEncryptionConfigRequest &request,
@@ -60,6 +55,9 @@ DeleteFieldLevelEncryptionConfigResponse::DeleteFieldLevelEncryptionConfigRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteFieldLevelEncryptionConfigRequest * DeleteFieldLevelEncryptionConfigResponse::request() const
 {
     Q_D(const DeleteFieldLevelEncryptionConfigResponse);
@@ -67,9 +65,8 @@ const DeleteFieldLevelEncryptionConfigRequest * DeleteFieldLevelEncryptionConfig
 }
 
 /*!
- * @brief  Parse a CloudFront DeleteFieldLevelEncryptionConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront DeleteFieldLevelEncryptionConfig \a response.
  */
 void DeleteFieldLevelEncryptionConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteFieldLevelEncryptionConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::DeleteFieldLevelEncryptionConfigResponsePrivate
+ * \brief The DeleteFieldLevelEncryptionConfigResponsePrivate class provides private implementation for DeleteFieldLevelEncryptionConfigResponse.
  * \internal
  *
- * \class DeleteFieldLevelEncryptionConfigResponsePrivate
- *
- * \brief Private implementation for DeleteFieldLevelEncryptionConfigResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFieldLevelEncryptionConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteFieldLevelEncryptionConfigResponse instance.
+ * Constructs a DeleteFieldLevelEncryptionConfigResponsePrivate object with public implementation \a q.
  */
 DeleteFieldLevelEncryptionConfigResponsePrivate::DeleteFieldLevelEncryptionConfigResponsePrivate(
     DeleteFieldLevelEncryptionConfigResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteFieldLevelEncryptionConfigResponsePrivate::DeleteFieldLevelEncryptionConfi
 }
 
 /*!
- * @brief  Parse an CloudFront DeleteFieldLevelEncryptionConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront DeleteFieldLevelEncryptionConfig response element from \a xml.
  */
 void DeleteFieldLevelEncryptionConfigResponsePrivate::parseDeleteFieldLevelEncryptionConfigResponse(QXmlStreamReader &xml)
 {

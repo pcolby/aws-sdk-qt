@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListTagsForResourceRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsForResourceRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const StorageGatewayRequest::Action action, ListTagsForResourceRequest * const q)

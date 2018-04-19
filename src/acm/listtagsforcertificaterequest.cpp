@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsForCertificateRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListTagsForCertificateRequestPrivate object for ACM \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsForCertificateRequestPrivate object for ACM \a action,
+ * with public implementation \a q.
  */
 ListTagsForCertificateRequestPrivate::ListTagsForCertificateRequestPrivate(
     const ACMRequest::Action action, ListTagsForCertificateRequest * const q)

@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ResetPasswordResponse
- *
  * \brief The ResetPasswordResponse class provides an interace for WorkMail ResetPassword responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ResetPasswordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetPasswordResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetPasswordResponse::ResetPasswordResponse(
         const ResetPasswordRequest &request,
@@ -88,6 +83,9 @@ ResetPasswordResponse::ResetPasswordResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetPasswordRequest * ResetPasswordResponse::request() const
 {
     Q_D(const ResetPasswordResponse);
@@ -95,9 +93,8 @@ const ResetPasswordRequest * ResetPasswordResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail ResetPassword response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail ResetPassword \a response.
  */
 void ResetPasswordResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void ResetPasswordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::ResetPasswordResponsePrivate
+ * \brief The ResetPasswordResponsePrivate class provides private implementation for ResetPasswordResponse.
  * \internal
  *
- * \class ResetPasswordResponsePrivate
- *
- * \brief Private implementation for ResetPasswordResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetPasswordResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetPasswordResponse instance.
+ * Constructs a ResetPasswordResponsePrivate object with public implementation \a q.
  */
 ResetPasswordResponsePrivate::ResetPasswordResponsePrivate(
     ResetPasswordResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ ResetPasswordResponsePrivate::ResetPasswordResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail ResetPasswordResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail ResetPassword response element from \a xml.
  */
 void ResetPasswordResponsePrivate::parseResetPasswordResponse(QXmlStreamReader &xml)
 {

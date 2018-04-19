@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketMetricsConfigurationResponse
- *
  * \brief The PutBucketMetricsConfigurationResponse class provides an interace for S3 PutBucketMetricsConfiguration responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketMetricsConfiguration
  */
 
 /*!
- * @brief  Constructs a new PutBucketMetricsConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketMetricsConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketMetricsConfigurationResponse::PutBucketMetricsConfigurationResponse(
         const PutBucketMetricsConfigurationRequest &request,
@@ -55,6 +50,9 @@ PutBucketMetricsConfigurationResponse::PutBucketMetricsConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketMetricsConfigurationRequest * PutBucketMetricsConfigurationResponse::request() const
 {
     Q_D(const PutBucketMetricsConfigurationResponse);
@@ -62,9 +60,8 @@ const PutBucketMetricsConfigurationRequest * PutBucketMetricsConfigurationRespon
 }
 
 /*!
- * @brief  Parse a S3 PutBucketMetricsConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketMetricsConfiguration \a response.
  */
 void PutBucketMetricsConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketMetricsConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketMetricsConfigurationResponsePrivate
+ * \brief The PutBucketMetricsConfigurationResponsePrivate class provides private implementation for PutBucketMetricsConfigurationResponse.
  * \internal
  *
- * \class PutBucketMetricsConfigurationResponsePrivate
- *
- * \brief Private implementation for PutBucketMetricsConfigurationResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketMetricsConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketMetricsConfigurationResponse instance.
+ * Constructs a PutBucketMetricsConfigurationResponsePrivate object with public implementation \a q.
  */
 PutBucketMetricsConfigurationResponsePrivate::PutBucketMetricsConfigurationResponsePrivate(
     PutBucketMetricsConfigurationResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketMetricsConfigurationResponsePrivate::PutBucketMetricsConfigurationRespo
 }
 
 /*!
- * @brief  Parse an S3 PutBucketMetricsConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketMetricsConfiguration response element from \a xml.
  */
 void PutBucketMetricsConfigurationResponsePrivate::parsePutBucketMetricsConfigurationResponse(QXmlStreamReader &xml)
 {

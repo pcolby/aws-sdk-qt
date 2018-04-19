@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainNameRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateDomainNameRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDomainNameRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 UpdateDomainNameRequestPrivate::UpdateDomainNameRequestPrivate(
     const APIGatewayRequest::Action action, UpdateDomainNameRequest * const q)

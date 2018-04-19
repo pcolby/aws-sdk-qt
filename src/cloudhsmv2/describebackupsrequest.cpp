@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DescribeBackupsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeBackupsRequestPrivate object for CloudHSMV2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeBackupsRequestPrivate object for CloudHSMV2 \a action,
+ * with public implementation \a q.
  */
 DescribeBackupsRequestPrivate::DescribeBackupsRequestPrivate(
     const CloudHSMV2Request::Action action, DescribeBackupsRequest * const q)

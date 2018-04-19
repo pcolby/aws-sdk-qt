@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateWebhookResponse : public CodeBuildResponse {
 public:
     UpdateWebhookResponse(const UpdateWebhookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateWebhookRequest * request() const;
+    virtual const UpdateWebhookRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateWebhookResponse)

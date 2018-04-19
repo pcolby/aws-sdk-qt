@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListGatewaysResponse : public StorageGatewayResponse {
 public:
     ListGatewaysResponse(const ListGatewaysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListGatewaysRequest * request() const;
+    virtual const ListGatewaysRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListGatewaysResponse)

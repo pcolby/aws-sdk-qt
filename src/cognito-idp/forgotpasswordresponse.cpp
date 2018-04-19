@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ForgotPasswordResponse
- *
  * \brief The ForgotPasswordResponse class provides an interace for CognitoIdentityProvider ForgotPassword responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ForgotPasswordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ForgotPasswordResponse object for \a reply to \a request, with parent \a parent.
  */
 ForgotPasswordResponse::ForgotPasswordResponse(
         const ForgotPasswordRequest &request,
@@ -65,6 +60,9 @@ ForgotPasswordResponse::ForgotPasswordResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ForgotPasswordRequest * ForgotPasswordResponse::request() const
 {
     Q_D(const ForgotPasswordResponse);
@@ -72,9 +70,8 @@ const ForgotPasswordRequest * ForgotPasswordResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider ForgotPassword response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider ForgotPassword \a response.
  */
 void ForgotPasswordResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void ForgotPasswordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::ForgotPasswordResponsePrivate
+ * \brief The ForgotPasswordResponsePrivate class provides private implementation for ForgotPasswordResponse.
  * \internal
  *
- * \class ForgotPasswordResponsePrivate
- *
- * \brief Private implementation for ForgotPasswordResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ForgotPasswordResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ForgotPasswordResponse instance.
+ * Constructs a ForgotPasswordResponsePrivate object with public implementation \a q.
  */
 ForgotPasswordResponsePrivate::ForgotPasswordResponsePrivate(
     ForgotPasswordResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ ForgotPasswordResponsePrivate::ForgotPasswordResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider ForgotPasswordResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider ForgotPassword response element from \a xml.
  */
 void ForgotPasswordResponsePrivate::parseForgotPasswordResponse(QXmlStreamReader &xml)
 {

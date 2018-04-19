@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeEventsRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventsRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const OpsWorksCMRequest::Action action, DescribeEventsRequest * const q)

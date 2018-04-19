@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteAggregationAuthorizationResponse : public ConfigService
 public:
     DeleteAggregationAuthorizationResponse(const DeleteAggregationAuthorizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAggregationAuthorizationRequest * request() const;
+    virtual const DeleteAggregationAuthorizationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteAggregationAuthorizationResponse)

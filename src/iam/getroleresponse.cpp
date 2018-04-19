@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetRoleResponse
- *
  * \brief The GetRoleResponse class provides an interace for IAM GetRole responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRoleResponse::GetRoleResponse(
         const GetRoleRequest &request,
@@ -120,6 +115,9 @@ GetRoleResponse::GetRoleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRoleRequest * GetRoleResponse::request() const
 {
     Q_D(const GetRoleResponse);
@@ -127,9 +125,8 @@ const GetRoleRequest * GetRoleResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetRole response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetRole \a response.
  */
 void GetRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetRoleResponsePrivate
+ * \brief The GetRoleResponsePrivate class provides private implementation for GetRoleResponse.
  * \internal
  *
- * \class GetRoleResponsePrivate
- *
- * \brief Private implementation for GetRoleResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRoleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRoleResponse instance.
+ * Constructs a GetRoleResponsePrivate object with public implementation \a q.
  */
 GetRoleResponsePrivate::GetRoleResponsePrivate(
     GetRoleResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetRoleResponsePrivate::GetRoleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetRoleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetRole response element from \a xml.
  */
 void GetRoleResponsePrivate::parseGetRoleResponse(QXmlStreamReader &xml)
 {

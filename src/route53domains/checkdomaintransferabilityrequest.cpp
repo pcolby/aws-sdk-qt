@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * CheckDomainTransferabilityRequest::response(Q
  */
 
 /*!
- *
- * Constructs a CheckDomainTransferabilityRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a CheckDomainTransferabilityRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 CheckDomainTransferabilityRequestPrivate::CheckDomainTransferabilityRequestPrivate(
     const Route53DomainsRequest::Action action, CheckDomainTransferabilityRequest * const q)

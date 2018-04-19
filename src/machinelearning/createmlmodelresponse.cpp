@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::CreateMLModelResponse
- *
  * \brief The CreateMLModelResponse class provides an interace for MachineLearning CreateMLModel responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::createMLModel
  */
 
 /*!
- * @brief  Constructs a new CreateMLModelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateMLModelResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateMLModelResponse::CreateMLModelResponse(
         const CreateMLModelRequest &request,
@@ -55,6 +50,9 @@ CreateMLModelResponse::CreateMLModelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateMLModelRequest * CreateMLModelResponse::request() const
 {
     Q_D(const CreateMLModelResponse);
@@ -62,9 +60,8 @@ const CreateMLModelRequest * CreateMLModelResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning CreateMLModel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning CreateMLModel \a response.
  */
 void CreateMLModelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateMLModelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::CreateMLModelResponsePrivate
+ * \brief The CreateMLModelResponsePrivate class provides private implementation for CreateMLModelResponse.
  * \internal
  *
- * \class CreateMLModelResponsePrivate
- *
- * \brief Private implementation for CreateMLModelResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMLModelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateMLModelResponse instance.
+ * Constructs a CreateMLModelResponsePrivate object with public implementation \a q.
  */
 CreateMLModelResponsePrivate::CreateMLModelResponsePrivate(
     CreateMLModelResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateMLModelResponsePrivate::CreateMLModelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning CreateMLModelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning CreateMLModel response element from \a xml.
  */
 void CreateMLModelResponsePrivate::parseCreateMLModelResponse(QXmlStreamReader &xml)
 {

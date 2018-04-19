@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * GetThirdPartyJobDetailsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a GetThirdPartyJobDetailsRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a GetThirdPartyJobDetailsRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 GetThirdPartyJobDetailsRequestPrivate::GetThirdPartyJobDetailsRequestPrivate(
     const CodePipelineRequest::Action action, GetThirdPartyJobDetailsRequest * const q)

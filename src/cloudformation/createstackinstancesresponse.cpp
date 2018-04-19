@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::CreateStackInstancesResponse
- *
  * \brief The CreateStackInstancesResponse class provides an interace for CloudFormation CreateStackInstances responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new CreateStackInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStackInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStackInstancesResponse::CreateStackInstancesResponse(
         const CreateStackInstancesRequest &request,
@@ -77,6 +72,9 @@ CreateStackInstancesResponse::CreateStackInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStackInstancesRequest * CreateStackInstancesResponse::request() const
 {
     Q_D(const CreateStackInstancesResponse);
@@ -84,9 +82,8 @@ const CreateStackInstancesRequest * CreateStackInstancesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudFormation CreateStackInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation CreateStackInstances \a response.
  */
 void CreateStackInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void CreateStackInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::CreateStackInstancesResponsePrivate
+ * \brief The CreateStackInstancesResponsePrivate class provides private implementation for CreateStackInstancesResponse.
  * \internal
  *
- * \class CreateStackInstancesResponsePrivate
- *
- * \brief Private implementation for CreateStackInstancesResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStackInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStackInstancesResponse instance.
+ * Constructs a CreateStackInstancesResponsePrivate object with public implementation \a q.
  */
 CreateStackInstancesResponsePrivate::CreateStackInstancesResponsePrivate(
     CreateStackInstancesResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ CreateStackInstancesResponsePrivate::CreateStackInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation CreateStackInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation CreateStackInstances response element from \a xml.
  */
 void CreateStackInstancesResponsePrivate::parseCreateStackInstancesResponse(QXmlStreamReader &xml)
 {

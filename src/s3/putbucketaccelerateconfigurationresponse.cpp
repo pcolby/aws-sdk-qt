@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketAccelerateConfigurationResponse
- *
  * \brief The PutBucketAccelerateConfigurationResponse class provides an interace for S3 PutBucketAccelerateConfiguration responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketAccelerateConfiguration
  */
 
 /*!
- * @brief  Constructs a new PutBucketAccelerateConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketAccelerateConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketAccelerateConfigurationResponse::PutBucketAccelerateConfigurationResponse(
         const PutBucketAccelerateConfigurationRequest &request,
@@ -55,6 +50,9 @@ PutBucketAccelerateConfigurationResponse::PutBucketAccelerateConfigurationRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketAccelerateConfigurationRequest * PutBucketAccelerateConfigurationResponse::request() const
 {
     Q_D(const PutBucketAccelerateConfigurationResponse);
@@ -62,9 +60,8 @@ const PutBucketAccelerateConfigurationRequest * PutBucketAccelerateConfiguration
 }
 
 /*!
- * @brief  Parse a S3 PutBucketAccelerateConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketAccelerateConfiguration \a response.
  */
 void PutBucketAccelerateConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketAccelerateConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketAccelerateConfigurationResponsePrivate
+ * \brief The PutBucketAccelerateConfigurationResponsePrivate class provides private implementation for PutBucketAccelerateConfigurationResponse.
  * \internal
  *
- * \class PutBucketAccelerateConfigurationResponsePrivate
- *
- * \brief Private implementation for PutBucketAccelerateConfigurationResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketAccelerateConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketAccelerateConfigurationResponse instance.
+ * Constructs a PutBucketAccelerateConfigurationResponsePrivate object with public implementation \a q.
  */
 PutBucketAccelerateConfigurationResponsePrivate::PutBucketAccelerateConfigurationResponsePrivate(
     PutBucketAccelerateConfigurationResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketAccelerateConfigurationResponsePrivate::PutBucketAccelerateConfiguratio
 }
 
 /*!
- * @brief  Parse an S3 PutBucketAccelerateConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketAccelerateConfiguration response element from \a xml.
  */
 void PutBucketAccelerateConfigurationResponsePrivate::parsePutBucketAccelerateConfigurationResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumeAttributeRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeVolumeAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVolumeAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeVolumeAttributeRequestPrivate::DescribeVolumeAttributeRequestPrivate(
     const EC2Request::Action action, DescribeVolumeAttributeRequest * const q)

@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * GetCostAndUsageRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetCostAndUsageRequestPrivate object for CostExplorer \a action with,
- * public implementation \a q.
+ * Constructs a GetCostAndUsageRequestPrivate object for CostExplorer \a action,
+ * with public implementation \a q.
  */
 GetCostAndUsageRequestPrivate::GetCostAndUsageRequestPrivate(
     const CostExplorerRequest::Action action, GetCostAndUsageRequest * const q)

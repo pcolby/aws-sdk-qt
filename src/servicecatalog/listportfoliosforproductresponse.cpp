@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListPortfoliosForProductResponse
- *
  * \brief The ListPortfoliosForProductResponse class provides an interace for ServiceCatalog ListPortfoliosForProduct responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListPortfoliosForProductResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPortfoliosForProductResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPortfoliosForProductResponse::ListPortfoliosForProductResponse(
         const ListPortfoliosForProductRequest &request,
@@ -61,6 +56,9 @@ ListPortfoliosForProductResponse::ListPortfoliosForProductResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPortfoliosForProductRequest * ListPortfoliosForProductResponse::request() const
 {
     Q_D(const ListPortfoliosForProductResponse);
@@ -68,9 +66,8 @@ const ListPortfoliosForProductRequest * ListPortfoliosForProductResponse::reques
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ListPortfoliosForProduct response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ListPortfoliosForProduct \a response.
  */
 void ListPortfoliosForProductResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListPortfoliosForProductResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ListPortfoliosForProductResponsePrivate
+ * \brief The ListPortfoliosForProductResponsePrivate class provides private implementation for ListPortfoliosForProductResponse.
  * \internal
  *
- * \class ListPortfoliosForProductResponsePrivate
- *
- * \brief Private implementation for ListPortfoliosForProductResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPortfoliosForProductResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPortfoliosForProductResponse instance.
+ * Constructs a ListPortfoliosForProductResponsePrivate object with public implementation \a q.
  */
 ListPortfoliosForProductResponsePrivate::ListPortfoliosForProductResponsePrivate(
     ListPortfoliosForProductResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ListPortfoliosForProductResponsePrivate::ListPortfoliosForProductResponsePrivate
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ListPortfoliosForProductResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ListPortfoliosForProduct response element from \a xml.
  */
 void ListPortfoliosForProductResponsePrivate::parseListPortfoliosForProductResponse(QXmlStreamReader &xml)
 {

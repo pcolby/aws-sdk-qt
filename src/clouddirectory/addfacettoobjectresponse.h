@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddFacetToObjectResponse : public CloudDirectoryResponse {
 public:
     AddFacetToObjectResponse(const AddFacetToObjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddFacetToObjectRequest * request() const;
+    virtual const AddFacetToObjectRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddFacetToObjectResponse)

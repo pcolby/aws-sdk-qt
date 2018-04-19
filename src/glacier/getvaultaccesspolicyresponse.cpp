@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::GetVaultAccessPolicyResponse
- *
  * \brief The GetVaultAccessPolicyResponse class provides an interace for Glacier GetVaultAccessPolicy responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new GetVaultAccessPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetVaultAccessPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetVaultAccessPolicyResponse::GetVaultAccessPolicyResponse(
         const GetVaultAccessPolicyRequest &request,
@@ -93,6 +88,9 @@ GetVaultAccessPolicyResponse::GetVaultAccessPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetVaultAccessPolicyRequest * GetVaultAccessPolicyResponse::request() const
 {
     Q_D(const GetVaultAccessPolicyResponse);
@@ -100,9 +98,8 @@ const GetVaultAccessPolicyRequest * GetVaultAccessPolicyResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Glacier GetVaultAccessPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier GetVaultAccessPolicy \a response.
  */
 void GetVaultAccessPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void GetVaultAccessPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::GetVaultAccessPolicyResponsePrivate
+ * \brief The GetVaultAccessPolicyResponsePrivate class provides private implementation for GetVaultAccessPolicyResponse.
  * \internal
  *
- * \class GetVaultAccessPolicyResponsePrivate
- *
- * \brief Private implementation for GetVaultAccessPolicyResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetVaultAccessPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetVaultAccessPolicyResponse instance.
+ * Constructs a GetVaultAccessPolicyResponsePrivate object with public implementation \a q.
  */
 GetVaultAccessPolicyResponsePrivate::GetVaultAccessPolicyResponsePrivate(
     GetVaultAccessPolicyResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ GetVaultAccessPolicyResponsePrivate::GetVaultAccessPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier GetVaultAccessPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier GetVaultAccessPolicy response element from \a xml.
  */
 void GetVaultAccessPolicyResponsePrivate::parseGetVaultAccessPolicyResponse(QXmlStreamReader &xml)
 {

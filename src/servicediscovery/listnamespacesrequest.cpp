@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ListNamespacesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListNamespacesRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a ListNamespacesRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 ListNamespacesRequestPrivate::ListNamespacesRequestPrivate(
     const ServiceDiscoveryRequest::Action action, ListNamespacesRequest * const q)

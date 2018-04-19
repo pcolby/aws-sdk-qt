@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::PutBotAliasResponse
- *
  * \brief The PutBotAliasResponse class provides an interace for LexModelBuildingService PutBotAlias responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new PutBotAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBotAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBotAliasResponse::PutBotAliasResponse(
         const PutBotAliasRequest &request,
@@ -59,6 +54,9 @@ PutBotAliasResponse::PutBotAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBotAliasRequest * PutBotAliasResponse::request() const
 {
     Q_D(const PutBotAliasResponse);
@@ -66,9 +64,8 @@ const PutBotAliasRequest * PutBotAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService PutBotAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService PutBotAlias \a response.
  */
 void PutBotAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void PutBotAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::PutBotAliasResponsePrivate
+ * \brief The PutBotAliasResponsePrivate class provides private implementation for PutBotAliasResponse.
  * \internal
  *
- * \class PutBotAliasResponsePrivate
- *
- * \brief Private implementation for PutBotAliasResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBotAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBotAliasResponse instance.
+ * Constructs a PutBotAliasResponsePrivate object with public implementation \a q.
  */
 PutBotAliasResponsePrivate::PutBotAliasResponsePrivate(
     PutBotAliasResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ PutBotAliasResponsePrivate::PutBotAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService PutBotAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService PutBotAlias response element from \a xml.
  */
 void PutBotAliasResponsePrivate::parsePutBotAliasResponse(QXmlStreamReader &xml)
 {

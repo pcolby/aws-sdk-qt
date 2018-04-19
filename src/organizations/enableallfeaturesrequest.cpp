@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * EnableAllFeaturesRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a EnableAllFeaturesRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a EnableAllFeaturesRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 EnableAllFeaturesRequestPrivate::EnableAllFeaturesRequestPrivate(
     const OrganizationsRequest::Action action, EnableAllFeaturesRequest * const q)

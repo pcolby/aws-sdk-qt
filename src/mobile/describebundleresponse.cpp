@@ -29,10 +29,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::DescribeBundleResponse
- *
  * \brief The DescribeBundleResponse class provides an interace for Mobile DescribeBundle responses.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -42,11 +41,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new DescribeBundleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeBundleResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeBundleResponse::DescribeBundleResponse(
         const DescribeBundleRequest &request,
@@ -58,6 +53,9 @@ DescribeBundleResponse::DescribeBundleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeBundleRequest * DescribeBundleResponse::request() const
 {
     Q_D(const DescribeBundleResponse);
@@ -65,9 +63,8 @@ const DescribeBundleRequest * DescribeBundleResponse::request() const
 }
 
 /*!
- * @brief  Parse a Mobile DescribeBundle response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Mobile DescribeBundle \a response.
  */
 void DescribeBundleResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeBundleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Mobile::DescribeBundleResponsePrivate
+ * \brief The DescribeBundleResponsePrivate class provides private implementation for DescribeBundleResponse.
  * \internal
  *
- * \class DescribeBundleResponsePrivate
- *
- * \brief Private implementation for DescribeBundleResponse.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBundleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeBundleResponse instance.
+ * Constructs a DescribeBundleResponsePrivate object with public implementation \a q.
  */
 DescribeBundleResponsePrivate::DescribeBundleResponsePrivate(
     DescribeBundleResponse * const q) : MobileResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeBundleResponsePrivate::DescribeBundleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Mobile DescribeBundleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Mobile DescribeBundle response element from \a xml.
  */
 void DescribeBundleResponsePrivate::parseDescribeBundleResponse(QXmlStreamReader &xml)
 {

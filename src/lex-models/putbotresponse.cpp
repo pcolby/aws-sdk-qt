@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::PutBotResponse
- *
  * \brief The PutBotResponse class provides an interace for LexModelBuildingService PutBot responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new PutBotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBotResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBotResponse::PutBotResponse(
         const PutBotRequest &request,
@@ -59,6 +54,9 @@ PutBotResponse::PutBotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBotRequest * PutBotResponse::request() const
 {
     Q_D(const PutBotResponse);
@@ -66,9 +64,8 @@ const PutBotRequest * PutBotResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService PutBot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService PutBot \a response.
  */
 void PutBotResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void PutBotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::PutBotResponsePrivate
+ * \brief The PutBotResponsePrivate class provides private implementation for PutBotResponse.
  * \internal
  *
- * \class PutBotResponsePrivate
- *
- * \brief Private implementation for PutBotResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBotResponse instance.
+ * Constructs a PutBotResponsePrivate object with public implementation \a q.
  */
 PutBotResponsePrivate::PutBotResponsePrivate(
     PutBotResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ PutBotResponsePrivate::PutBotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService PutBotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService PutBot response element from \a xml.
  */
 void PutBotResponsePrivate::parsePutBotResponse(QXmlStreamReader &xml)
 {

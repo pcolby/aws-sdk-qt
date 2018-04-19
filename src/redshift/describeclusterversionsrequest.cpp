@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterVersionsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeClusterVersionsRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeClusterVersionsRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeClusterVersionsRequestPrivate::DescribeClusterVersionsRequestPrivate(
     const RedshiftRequest::Action action, DescribeClusterVersionsRequest * const q)

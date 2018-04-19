@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeletePatchBaselineResponse : public SSMResponse {
 public:
     DeletePatchBaselineResponse(const DeletePatchBaselineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeletePatchBaselineRequest * request() const;
+    virtual const DeletePatchBaselineRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeletePatchBaselineResponse)

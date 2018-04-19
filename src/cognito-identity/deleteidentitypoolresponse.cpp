@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::DeleteIdentityPoolResponse
- *
  * \brief The DeleteIdentityPoolResponse class provides an interace for CognitoIdentity DeleteIdentityPool responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new DeleteIdentityPoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteIdentityPoolResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteIdentityPoolResponse::DeleteIdentityPoolResponse(
         const DeleteIdentityPoolRequest &request,
@@ -93,6 +88,9 @@ DeleteIdentityPoolResponse::DeleteIdentityPoolResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteIdentityPoolRequest * DeleteIdentityPoolResponse::request() const
 {
     Q_D(const DeleteIdentityPoolResponse);
@@ -100,9 +98,8 @@ const DeleteIdentityPoolRequest * DeleteIdentityPoolResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentity DeleteIdentityPool response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity DeleteIdentityPool \a response.
  */
 void DeleteIdentityPoolResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DeleteIdentityPoolResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::DeleteIdentityPoolResponsePrivate
+ * \brief The DeleteIdentityPoolResponsePrivate class provides private implementation for DeleteIdentityPoolResponse.
  * \internal
  *
- * \class DeleteIdentityPoolResponsePrivate
- *
- * \brief Private implementation for DeleteIdentityPoolResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIdentityPoolResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteIdentityPoolResponse instance.
+ * Constructs a DeleteIdentityPoolResponsePrivate object with public implementation \a q.
  */
 DeleteIdentityPoolResponsePrivate::DeleteIdentityPoolResponsePrivate(
     DeleteIdentityPoolResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ DeleteIdentityPoolResponsePrivate::DeleteIdentityPoolResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentity DeleteIdentityPoolResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity DeleteIdentityPool response element from \a xml.
  */
 void DeleteIdentityPoolResponsePrivate::parseDeleteIdentityPoolResponse(QXmlStreamReader &xml)
 {

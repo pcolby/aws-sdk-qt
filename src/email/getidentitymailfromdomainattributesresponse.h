@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetIdentityMailFromDomainAttributesResponse : public SESRespo
 public:
     GetIdentityMailFromDomainAttributesResponse(const GetIdentityMailFromDomainAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetIdentityMailFromDomainAttributesRequest * request() const;
+    virtual const GetIdentityMailFromDomainAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetIdentityMailFromDomainAttributesResponse)

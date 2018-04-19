@@ -28,16 +28,13 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::CloudWatchResponse
- *
  * \brief The CloudWatchResponse class provides an interface for CloudWatch responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @brief  Constructs a new CloudWatchResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CloudWatchResponse object with parent \a parent.
  */
 CloudWatchResponse::CloudWatchResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CloudWatchResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CloudWatchResponse::CloudWatchResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudWatchResponse object.
- *
+ * \internal
+ * Constructs a CloudWatchResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudWatchResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CloudWatchResponse::CloudWatchResponse(CloudWatchResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CloudWatchResponse::CloudWatchResponse(CloudWatchResponsePrivate * const d, QObj
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CloudWatchResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CloudWatchResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudWatch::CloudWatchResponsePrivate
+ * \brief The CloudWatchResponsePrivate class provides private implementation for CloudWatchResponse.
+ * \internal
  *
- * @class  CloudWatchResponsePrivate
- *
- * @brief  Private implementation for CloudWatchResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudWatchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloudWatchResponse instance.
+ * Constructs a CloudWatchResponsePrivate object with public implementation \a q.
  */
 CloudWatchResponsePrivate::CloudWatchResponsePrivate(
     CloudWatchResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

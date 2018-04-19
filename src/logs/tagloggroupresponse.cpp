@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::TagLogGroupResponse
- *
  * \brief The TagLogGroupResponse class provides an interace for CloudWatchLogs TagLogGroup responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new TagLogGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagLogGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 TagLogGroupResponse::TagLogGroupResponse(
         const TagLogGroupRequest &request,
@@ -84,6 +79,9 @@ TagLogGroupResponse::TagLogGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagLogGroupRequest * TagLogGroupResponse::request() const
 {
     Q_D(const TagLogGroupResponse);
@@ -91,9 +89,8 @@ const TagLogGroupRequest * TagLogGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs TagLogGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs TagLogGroup \a response.
  */
 void TagLogGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void TagLogGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::TagLogGroupResponsePrivate
+ * \brief The TagLogGroupResponsePrivate class provides private implementation for TagLogGroupResponse.
  * \internal
  *
- * \class TagLogGroupResponsePrivate
- *
- * \brief Private implementation for TagLogGroupResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagLogGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagLogGroupResponse instance.
+ * Constructs a TagLogGroupResponsePrivate object with public implementation \a q.
  */
 TagLogGroupResponsePrivate::TagLogGroupResponsePrivate(
     TagLogGroupResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ TagLogGroupResponsePrivate::TagLogGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs TagLogGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs TagLogGroup response element from \a xml.
  */
 void TagLogGroupResponsePrivate::parseTagLogGroupResponse(QXmlStreamReader &xml)
 {

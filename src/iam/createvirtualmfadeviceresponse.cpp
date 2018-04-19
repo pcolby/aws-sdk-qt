@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateVirtualMFADeviceResponse
- *
  * \brief The CreateVirtualMFADeviceResponse class provides an interace for IAM CreateVirtualMFADevice responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateVirtualMFADeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateVirtualMFADeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateVirtualMFADeviceResponse::CreateVirtualMFADeviceResponse(
         const CreateVirtualMFADeviceRequest &request,
@@ -120,6 +115,9 @@ CreateVirtualMFADeviceResponse::CreateVirtualMFADeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateVirtualMFADeviceRequest * CreateVirtualMFADeviceResponse::request() const
 {
     Q_D(const CreateVirtualMFADeviceResponse);
@@ -127,9 +125,8 @@ const CreateVirtualMFADeviceRequest * CreateVirtualMFADeviceResponse::request() 
 }
 
 /*!
- * @brief  Parse a IAM CreateVirtualMFADevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreateVirtualMFADevice \a response.
  */
 void CreateVirtualMFADeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreateVirtualMFADeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreateVirtualMFADeviceResponsePrivate
+ * \brief The CreateVirtualMFADeviceResponsePrivate class provides private implementation for CreateVirtualMFADeviceResponse.
  * \internal
  *
- * \class CreateVirtualMFADeviceResponsePrivate
- *
- * \brief Private implementation for CreateVirtualMFADeviceResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVirtualMFADeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateVirtualMFADeviceResponse instance.
+ * Constructs a CreateVirtualMFADeviceResponsePrivate object with public implementation \a q.
  */
 CreateVirtualMFADeviceResponsePrivate::CreateVirtualMFADeviceResponsePrivate(
     CreateVirtualMFADeviceResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreateVirtualMFADeviceResponsePrivate::CreateVirtualMFADeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM CreateVirtualMFADeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreateVirtualMFADevice response element from \a xml.
  */
 void CreateVirtualMFADeviceResponsePrivate::parseCreateVirtualMFADeviceResponse(QXmlStreamReader &xml)
 {

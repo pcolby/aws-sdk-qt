@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateEvaluationResponse : public MachineLearningResponse {
 public:
     UpdateEvaluationResponse(const UpdateEvaluationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateEvaluationRequest * request() const;
+    virtual const UpdateEvaluationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateEvaluationResponse)

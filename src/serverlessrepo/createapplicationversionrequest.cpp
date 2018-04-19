@@ -102,9 +102,8 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationVersionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateApplicationVersionRequestPrivate object for ServerlessApplicationRepository \a action with,
- * public implementation \a q.
+ * Constructs a CreateApplicationVersionRequestPrivate object for ServerlessApplicationRepository \a action,
+ * with public implementation \a q.
  */
 CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, CreateApplicationVersionRequest * const q)

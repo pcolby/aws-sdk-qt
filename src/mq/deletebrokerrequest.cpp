@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBrokerRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteBrokerRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBrokerRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 DeleteBrokerRequestPrivate::DeleteBrokerRequestPrivate(
     const MQRequest::Action action, DeleteBrokerRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDirectoryConfigRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteDirectoryConfigRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDirectoryConfigRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
     const AppStreamRequest::Action action, DeleteDirectoryConfigRequest * const q)

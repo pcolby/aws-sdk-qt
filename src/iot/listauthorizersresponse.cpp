@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListAuthorizersResponse
- *
  * \brief The ListAuthorizersResponse class provides an interace for IoT ListAuthorizers responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListAuthorizersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAuthorizersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAuthorizersResponse::ListAuthorizersResponse(
         const ListAuthorizersRequest &request,
@@ -66,6 +61,9 @@ ListAuthorizersResponse::ListAuthorizersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAuthorizersRequest * ListAuthorizersResponse::request() const
 {
     Q_D(const ListAuthorizersResponse);
@@ -73,9 +71,8 @@ const ListAuthorizersRequest * ListAuthorizersResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListAuthorizers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListAuthorizers \a response.
  */
 void ListAuthorizersResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListAuthorizersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListAuthorizersResponsePrivate
+ * \brief The ListAuthorizersResponsePrivate class provides private implementation for ListAuthorizersResponse.
  * \internal
  *
- * \class ListAuthorizersResponsePrivate
- *
- * \brief Private implementation for ListAuthorizersResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAuthorizersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAuthorizersResponse instance.
+ * Constructs a ListAuthorizersResponsePrivate object with public implementation \a q.
  */
 ListAuthorizersResponsePrivate::ListAuthorizersResponsePrivate(
     ListAuthorizersResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListAuthorizersResponsePrivate::ListAuthorizersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListAuthorizersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListAuthorizers response element from \a xml.
  */
 void ListAuthorizersResponsePrivate::parseListAuthorizersResponse(QXmlStreamReader &xml)
 {

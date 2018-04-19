@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeregisterPatchBaselineForPatchGroupResponse
- *
  * \brief The DeregisterPatchBaselineForPatchGroupResponse class provides an interace for SSM DeregisterPatchBaselineForPatchGroup responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeregisterPatchBaselineForPatchGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterPatchBaselineForPatchGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterPatchBaselineForPatchGroupResponse::DeregisterPatchBaselineForPatchGroupResponse(
         const DeregisterPatchBaselineForPatchGroupRequest &request,
@@ -79,6 +74,9 @@ DeregisterPatchBaselineForPatchGroupResponse::DeregisterPatchBaselineForPatchGro
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterPatchBaselineForPatchGroupRequest * DeregisterPatchBaselineForPatchGroupResponse::request() const
 {
     Q_D(const DeregisterPatchBaselineForPatchGroupResponse);
@@ -86,9 +84,8 @@ const DeregisterPatchBaselineForPatchGroupRequest * DeregisterPatchBaselineForPa
 }
 
 /*!
- * @brief  Parse a SSM DeregisterPatchBaselineForPatchGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DeregisterPatchBaselineForPatchGroup \a response.
  */
 void DeregisterPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DeregisterPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::SSM::DeregisterPatchBaselineForPatchGroupResponsePrivate
+ * \brief The DeregisterPatchBaselineForPatchGroupResponsePrivate class provides private implementation for DeregisterPatchBaselineForPatchGroupResponse.
  * \internal
  *
- * \class DeregisterPatchBaselineForPatchGroupResponsePrivate
- *
- * \brief Private implementation for DeregisterPatchBaselineForPatchGroupResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterPatchBaselineForPatchGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterPatchBaselineForPatchGroupResponse instance.
+ * Constructs a DeregisterPatchBaselineForPatchGroupResponsePrivate object with public implementation \a q.
  */
 DeregisterPatchBaselineForPatchGroupResponsePrivate::DeregisterPatchBaselineForPatchGroupResponsePrivate(
     DeregisterPatchBaselineForPatchGroupResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DeregisterPatchBaselineForPatchGroupResponsePrivate::DeregisterPatchBaselineForP
 }
 
 /*!
- * @brief  Parse an SSM DeregisterPatchBaselineForPatchGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DeregisterPatchBaselineForPatchGroup response element from \a xml.
  */
 void DeregisterPatchBaselineForPatchGroupResponsePrivate::parseDeregisterPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml)
 {

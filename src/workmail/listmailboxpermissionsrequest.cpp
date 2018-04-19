@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * ListMailboxPermissionsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListMailboxPermissionsRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a ListMailboxPermissionsRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 ListMailboxPermissionsRequestPrivate::ListMailboxPermissionsRequestPrivate(
     const WorkMailRequest::Action action, ListMailboxPermissionsRequest * const q)

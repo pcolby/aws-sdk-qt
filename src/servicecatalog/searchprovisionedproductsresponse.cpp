@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::SearchProvisionedProductsResponse
- *
  * \brief The SearchProvisionedProductsResponse class provides an interace for ServiceCatalog SearchProvisionedProducts responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new SearchProvisionedProductsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SearchProvisionedProductsResponse object for \a reply to \a request, with parent \a parent.
  */
 SearchProvisionedProductsResponse::SearchProvisionedProductsResponse(
         const SearchProvisionedProductsRequest &request,
@@ -61,6 +56,9 @@ SearchProvisionedProductsResponse::SearchProvisionedProductsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SearchProvisionedProductsRequest * SearchProvisionedProductsResponse::request() const
 {
     Q_D(const SearchProvisionedProductsResponse);
@@ -68,9 +66,8 @@ const SearchProvisionedProductsRequest * SearchProvisionedProductsResponse::requ
 }
 
 /*!
- * @brief  Parse a ServiceCatalog SearchProvisionedProducts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog SearchProvisionedProducts \a response.
  */
 void SearchProvisionedProductsResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void SearchProvisionedProductsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::SearchProvisionedProductsResponsePrivate
+ * \brief The SearchProvisionedProductsResponsePrivate class provides private implementation for SearchProvisionedProductsResponse.
  * \internal
  *
- * \class SearchProvisionedProductsResponsePrivate
- *
- * \brief Private implementation for SearchProvisionedProductsResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchProvisionedProductsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SearchProvisionedProductsResponse instance.
+ * Constructs a SearchProvisionedProductsResponsePrivate object with public implementation \a q.
  */
 SearchProvisionedProductsResponsePrivate::SearchProvisionedProductsResponsePrivate(
     SearchProvisionedProductsResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ SearchProvisionedProductsResponsePrivate::SearchProvisionedProductsResponsePriva
 }
 
 /*!
- * @brief  Parse an ServiceCatalog SearchProvisionedProductsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog SearchProvisionedProducts response element from \a xml.
  */
 void SearchProvisionedProductsResponsePrivate::parseSearchProvisionedProductsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ScheduleKeyDeletionResponse
- *
  * \brief The ScheduleKeyDeletionResponse class provides an interace for KMS ScheduleKeyDeletion responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ScheduleKeyDeletionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ScheduleKeyDeletionResponse object for \a reply to \a request, with parent \a parent.
  */
 ScheduleKeyDeletionResponse::ScheduleKeyDeletionResponse(
         const ScheduleKeyDeletionRequest &request,
@@ -154,6 +149,9 @@ ScheduleKeyDeletionResponse::ScheduleKeyDeletionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ScheduleKeyDeletionRequest * ScheduleKeyDeletionResponse::request() const
 {
     Q_D(const ScheduleKeyDeletionResponse);
@@ -161,9 +159,8 @@ const ScheduleKeyDeletionRequest * ScheduleKeyDeletionResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS ScheduleKeyDeletion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS ScheduleKeyDeletion \a response.
  */
 void ScheduleKeyDeletionResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void ScheduleKeyDeletionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::ScheduleKeyDeletionResponsePrivate
+ * \brief The ScheduleKeyDeletionResponsePrivate class provides private implementation for ScheduleKeyDeletionResponse.
  * \internal
  *
- * \class ScheduleKeyDeletionResponsePrivate
- *
- * \brief Private implementation for ScheduleKeyDeletionResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ScheduleKeyDeletionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ScheduleKeyDeletionResponse instance.
+ * Constructs a ScheduleKeyDeletionResponsePrivate object with public implementation \a q.
  */
 ScheduleKeyDeletionResponsePrivate::ScheduleKeyDeletionResponsePrivate(
     ScheduleKeyDeletionResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ ScheduleKeyDeletionResponsePrivate::ScheduleKeyDeletionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS ScheduleKeyDeletionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS ScheduleKeyDeletion response element from \a xml.
  */
 void ScheduleKeyDeletionResponsePrivate::parseScheduleKeyDeletionResponse(QXmlStreamReader &xml)
 {

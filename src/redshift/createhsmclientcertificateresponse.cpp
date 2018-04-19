@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateHsmClientCertificateResponse
- *
  * \brief The CreateHsmClientCertificateResponse class provides an interace for Redshift CreateHsmClientCertificate responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateHsmClientCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateHsmClientCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateHsmClientCertificateResponse::CreateHsmClientCertificateResponse(
         const CreateHsmClientCertificateRequest &request,
@@ -85,6 +80,9 @@ CreateHsmClientCertificateResponse::CreateHsmClientCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateHsmClientCertificateRequest * CreateHsmClientCertificateResponse::request() const
 {
     Q_D(const CreateHsmClientCertificateResponse);
@@ -92,9 +90,8 @@ const CreateHsmClientCertificateRequest * CreateHsmClientCertificateResponse::re
 }
 
 /*!
- * @brief  Parse a Redshift CreateHsmClientCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift CreateHsmClientCertificate \a response.
  */
 void CreateHsmClientCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void CreateHsmClientCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::CreateHsmClientCertificateResponsePrivate
+ * \brief The CreateHsmClientCertificateResponsePrivate class provides private implementation for CreateHsmClientCertificateResponse.
  * \internal
  *
- * \class CreateHsmClientCertificateResponsePrivate
- *
- * \brief Private implementation for CreateHsmClientCertificateResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHsmClientCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateHsmClientCertificateResponse instance.
+ * Constructs a CreateHsmClientCertificateResponsePrivate object with public implementation \a q.
  */
 CreateHsmClientCertificateResponsePrivate::CreateHsmClientCertificateResponsePrivate(
     CreateHsmClientCertificateResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ CreateHsmClientCertificateResponsePrivate::CreateHsmClientCertificateResponsePri
 }
 
 /*!
- * @brief  Parse an Redshift CreateHsmClientCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift CreateHsmClientCertificate response element from \a xml.
  */
 void CreateHsmClientCertificateResponsePrivate::parseCreateHsmClientCertificateResponse(QXmlStreamReader &xml)
 {

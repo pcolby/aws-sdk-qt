@@ -29,10 +29,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::TerminateWorkspacesResponse
- *
  * \brief The TerminateWorkspacesResponse class provides an interace for WorkSpaces TerminateWorkspaces responses.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new TerminateWorkspacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TerminateWorkspacesResponse object for \a reply to \a request, with parent \a parent.
  */
 TerminateWorkspacesResponse::TerminateWorkspacesResponse(
         const TerminateWorkspacesRequest &request,
@@ -58,6 +53,9 @@ TerminateWorkspacesResponse::TerminateWorkspacesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TerminateWorkspacesRequest * TerminateWorkspacesResponse::request() const
 {
     Q_D(const TerminateWorkspacesResponse);
@@ -65,9 +63,8 @@ const TerminateWorkspacesRequest * TerminateWorkspacesResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkSpaces TerminateWorkspaces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkSpaces TerminateWorkspaces \a response.
  */
 void TerminateWorkspacesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void TerminateWorkspacesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkSpaces::TerminateWorkspacesResponsePrivate
+ * \brief The TerminateWorkspacesResponsePrivate class provides private implementation for TerminateWorkspacesResponse.
  * \internal
  *
- * \class TerminateWorkspacesResponsePrivate
- *
- * \brief Private implementation for TerminateWorkspacesResponse.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateWorkspacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TerminateWorkspacesResponse instance.
+ * Constructs a TerminateWorkspacesResponsePrivate object with public implementation \a q.
  */
 TerminateWorkspacesResponsePrivate::TerminateWorkspacesResponsePrivate(
     TerminateWorkspacesResponse * const q) : WorkSpacesResponsePrivate(q)
@@ -98,9 +91,7 @@ TerminateWorkspacesResponsePrivate::TerminateWorkspacesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkSpaces TerminateWorkspacesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkSpaces TerminateWorkspaces response element from \a xml.
  */
 void TerminateWorkspacesResponsePrivate::parseTerminateWorkspacesResponse(QXmlStreamReader &xml)
 {

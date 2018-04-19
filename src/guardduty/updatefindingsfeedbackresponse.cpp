@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::UpdateFindingsFeedbackResponse
- *
  * \brief The UpdateFindingsFeedbackResponse class provides an interace for GuardDuty UpdateFindingsFeedback responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::updateFindingsFeedback
  */
 
 /*!
- * @brief  Constructs a new UpdateFindingsFeedbackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateFindingsFeedbackResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateFindingsFeedbackResponse::UpdateFindingsFeedbackResponse(
         const UpdateFindingsFeedbackRequest &request,
@@ -55,6 +50,9 @@ UpdateFindingsFeedbackResponse::UpdateFindingsFeedbackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateFindingsFeedbackRequest * UpdateFindingsFeedbackResponse::request() const
 {
     Q_D(const UpdateFindingsFeedbackResponse);
@@ -62,9 +60,8 @@ const UpdateFindingsFeedbackRequest * UpdateFindingsFeedbackResponse::request() 
 }
 
 /*!
- * @brief  Parse a GuardDuty UpdateFindingsFeedback response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty UpdateFindingsFeedback \a response.
  */
 void UpdateFindingsFeedbackResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateFindingsFeedbackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::UpdateFindingsFeedbackResponsePrivate
+ * \brief The UpdateFindingsFeedbackResponsePrivate class provides private implementation for UpdateFindingsFeedbackResponse.
  * \internal
  *
- * \class UpdateFindingsFeedbackResponsePrivate
- *
- * \brief Private implementation for UpdateFindingsFeedbackResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFindingsFeedbackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateFindingsFeedbackResponse instance.
+ * Constructs a UpdateFindingsFeedbackResponsePrivate object with public implementation \a q.
  */
 UpdateFindingsFeedbackResponsePrivate::UpdateFindingsFeedbackResponsePrivate(
     UpdateFindingsFeedbackResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateFindingsFeedbackResponsePrivate::UpdateFindingsFeedbackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty UpdateFindingsFeedbackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty UpdateFindingsFeedback response element from \a xml.
  */
 void UpdateFindingsFeedbackResponsePrivate::parseUpdateFindingsFeedbackResponse(QXmlStreamReader &xml)
 {

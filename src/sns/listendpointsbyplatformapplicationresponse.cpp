@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::ListEndpointsByPlatformApplicationResponse
- *
  * \brief The ListEndpointsByPlatformApplicationResponse class provides an interace for SNS ListEndpointsByPlatformApplication responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new ListEndpointsByPlatformApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListEndpointsByPlatformApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 ListEndpointsByPlatformApplicationResponse::ListEndpointsByPlatformApplicationResponse(
         const ListEndpointsByPlatformApplicationRequest &request,
@@ -69,6 +64,9 @@ ListEndpointsByPlatformApplicationResponse::ListEndpointsByPlatformApplicationRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListEndpointsByPlatformApplicationRequest * ListEndpointsByPlatformApplicationResponse::request() const
 {
     Q_D(const ListEndpointsByPlatformApplicationResponse);
@@ -76,9 +74,8 @@ const ListEndpointsByPlatformApplicationRequest * ListEndpointsByPlatformApplica
 }
 
 /*!
- * @brief  Parse a SNS ListEndpointsByPlatformApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS ListEndpointsByPlatformApplication \a response.
  */
 void ListEndpointsByPlatformApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListEndpointsByPlatformApplicationResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::SNS::ListEndpointsByPlatformApplicationResponsePrivate
+ * \brief The ListEndpointsByPlatformApplicationResponsePrivate class provides private implementation for ListEndpointsByPlatformApplicationResponse.
  * \internal
  *
- * \class ListEndpointsByPlatformApplicationResponsePrivate
- *
- * \brief Private implementation for ListEndpointsByPlatformApplicationResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEndpointsByPlatformApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListEndpointsByPlatformApplicationResponse instance.
+ * Constructs a ListEndpointsByPlatformApplicationResponsePrivate object with public implementation \a q.
  */
 ListEndpointsByPlatformApplicationResponsePrivate::ListEndpointsByPlatformApplicationResponsePrivate(
     ListEndpointsByPlatformApplicationResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ ListEndpointsByPlatformApplicationResponsePrivate::ListEndpointsByPlatformApplic
 }
 
 /*!
- * @brief  Parse an SNS ListEndpointsByPlatformApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS ListEndpointsByPlatformApplication response element from \a xml.
  */
 void ListEndpointsByPlatformApplicationResponsePrivate::parseListEndpointsByPlatformApplicationResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DescribeAgentsResponse
- *
  * \brief The DescribeAgentsResponse class provides an interace for ApplicationDiscoveryService DescribeAgents responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeAgentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAgentsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAgentsResponse::DescribeAgentsResponse(
         const DescribeAgentsRequest &request,
@@ -119,6 +114,9 @@ DescribeAgentsResponse::DescribeAgentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAgentsRequest * DescribeAgentsResponse::request() const
 {
     Q_D(const DescribeAgentsResponse);
@@ -126,9 +124,8 @@ const DescribeAgentsRequest * DescribeAgentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService DescribeAgents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService DescribeAgents \a response.
  */
 void DescribeAgentsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeAgentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::DescribeAgentsResponsePrivate
+ * \brief The DescribeAgentsResponsePrivate class provides private implementation for DescribeAgentsResponse.
  * \internal
  *
- * \class DescribeAgentsResponsePrivate
- *
- * \brief Private implementation for DescribeAgentsResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAgentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAgentsResponse instance.
+ * Constructs a DescribeAgentsResponsePrivate object with public implementation \a q.
  */
 DescribeAgentsResponsePrivate::DescribeAgentsResponsePrivate(
     DescribeAgentsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeAgentsResponsePrivate::DescribeAgentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService DescribeAgentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService DescribeAgents response element from \a xml.
  */
 void DescribeAgentsResponsePrivate::parseDescribeAgentsResponse(QXmlStreamReader &xml)
 {

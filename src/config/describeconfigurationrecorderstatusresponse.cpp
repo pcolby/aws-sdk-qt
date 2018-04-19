@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationRecorderStatusResponse
- *
  * \brief The DescribeConfigurationRecorderStatusResponse class provides an interace for ConfigService DescribeConfigurationRecorderStatus responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationRecorderStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConfigurationRecorderStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConfigurationRecorderStatusResponse::DescribeConfigurationRecorderStatusResponse(
         const DescribeConfigurationRecorderStatusRequest &request,
@@ -78,6 +73,9 @@ DescribeConfigurationRecorderStatusResponse::DescribeConfigurationRecorderStatus
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConfigurationRecorderStatusRequest * DescribeConfigurationRecorderStatusResponse::request() const
 {
     Q_D(const DescribeConfigurationRecorderStatusResponse);
@@ -85,9 +83,8 @@ const DescribeConfigurationRecorderStatusRequest * DescribeConfigurationRecorder
 }
 
 /*!
- * @brief  Parse a ConfigService DescribeConfigurationRecorderStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribeConfigurationRecorderStatus \a response.
  */
 void DescribeConfigurationRecorderStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeConfigurationRecorderStatusResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribeConfigurationRecorderStatusResponsePrivate
+ * \brief The DescribeConfigurationRecorderStatusResponsePrivate class provides private implementation for DescribeConfigurationRecorderStatusResponse.
  * \internal
  *
- * \class DescribeConfigurationRecorderStatusResponsePrivate
- *
- * \brief Private implementation for DescribeConfigurationRecorderStatusResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationRecorderStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConfigurationRecorderStatusResponse instance.
+ * Constructs a DescribeConfigurationRecorderStatusResponsePrivate object with public implementation \a q.
  */
 DescribeConfigurationRecorderStatusResponsePrivate::DescribeConfigurationRecorderStatusResponsePrivate(
     DescribeConfigurationRecorderStatusResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeConfigurationRecorderStatusResponsePrivate::DescribeConfigurationRecorde
 }
 
 /*!
- * @brief  Parse an ConfigService DescribeConfigurationRecorderStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribeConfigurationRecorderStatus response element from \a xml.
  */
 void DescribeConfigurationRecorderStatusResponsePrivate::parseDescribeConfigurationRecorderStatusResponse(QXmlStreamReader &xml)
 {

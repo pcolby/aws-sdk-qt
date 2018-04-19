@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListXssMatchSetsResponse
- *
  * \brief The ListXssMatchSetsResponse class provides an interace for WAFRegional ListXssMatchSets responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListXssMatchSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListXssMatchSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListXssMatchSetsResponse::ListXssMatchSetsResponse(
         const ListXssMatchSetsRequest &request,
@@ -62,6 +57,9 @@ ListXssMatchSetsResponse::ListXssMatchSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListXssMatchSetsRequest * ListXssMatchSetsResponse::request() const
 {
     Q_D(const ListXssMatchSetsResponse);
@@ -69,9 +67,8 @@ const ListXssMatchSetsRequest * ListXssMatchSetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional ListXssMatchSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional ListXssMatchSets \a response.
  */
 void ListXssMatchSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListXssMatchSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::ListXssMatchSetsResponsePrivate
+ * \brief The ListXssMatchSetsResponsePrivate class provides private implementation for ListXssMatchSetsResponse.
  * \internal
  *
- * \class ListXssMatchSetsResponsePrivate
- *
- * \brief Private implementation for ListXssMatchSetsResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListXssMatchSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListXssMatchSetsResponse instance.
+ * Constructs a ListXssMatchSetsResponsePrivate object with public implementation \a q.
  */
 ListXssMatchSetsResponsePrivate::ListXssMatchSetsResponsePrivate(
     ListXssMatchSetsResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ ListXssMatchSetsResponsePrivate::ListXssMatchSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional ListXssMatchSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional ListXssMatchSets response element from \a xml.
  */
 void ListXssMatchSetsResponsePrivate::parseListXssMatchSetsResponse(QXmlStreamReader &xml)
 {

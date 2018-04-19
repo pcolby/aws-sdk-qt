@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * StartMatchmakingRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a StartMatchmakingRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a StartMatchmakingRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 StartMatchmakingRequestPrivate::StartMatchmakingRequestPrivate(
     const GameLiftRequest::Action action, StartMatchmakingRequest * const q)

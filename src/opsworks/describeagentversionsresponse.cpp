@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeAgentVersionsResponse
- *
  * \brief The DescribeAgentVersionsResponse class provides an interace for OpsWorks DescribeAgentVersions responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeAgentVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAgentVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAgentVersionsResponse::DescribeAgentVersionsResponse(
         const DescribeAgentVersionsRequest &request,
@@ -161,6 +156,9 @@ DescribeAgentVersionsResponse::DescribeAgentVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAgentVersionsRequest * DescribeAgentVersionsResponse::request() const
 {
     Q_D(const DescribeAgentVersionsResponse);
@@ -168,9 +166,8 @@ const DescribeAgentVersionsRequest * DescribeAgentVersionsResponse::request() co
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeAgentVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeAgentVersions \a response.
  */
 void DescribeAgentVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeAgentVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeAgentVersionsResponsePrivate
+ * \brief The DescribeAgentVersionsResponsePrivate class provides private implementation for DescribeAgentVersionsResponse.
  * \internal
  *
- * \class DescribeAgentVersionsResponsePrivate
- *
- * \brief Private implementation for DescribeAgentVersionsResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAgentVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAgentVersionsResponse instance.
+ * Constructs a DescribeAgentVersionsResponsePrivate object with public implementation \a q.
  */
 DescribeAgentVersionsResponsePrivate::DescribeAgentVersionsResponsePrivate(
     DescribeAgentVersionsResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeAgentVersionsResponsePrivate::DescribeAgentVersionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeAgentVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeAgentVersions response element from \a xml.
  */
 void DescribeAgentVersionsResponsePrivate::parseDescribeAgentVersionsResponse(QXmlStreamReader &xml)
 {

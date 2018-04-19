@@ -28,16 +28,13 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::InspectorResponse
- *
  * \brief The InspectorResponse class provides an interface for Inspector responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @brief  Constructs a new InspectorResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a InspectorResponse object with parent \a parent.
  */
 InspectorResponse::InspectorResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new InspectorResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ InspectorResponse::InspectorResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InspectorResponse object.
- *
+ * \internal
+ * Constructs a InspectorResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from InspectorResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 InspectorResponse::InspectorResponse(InspectorResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ InspectorResponse::InspectorResponse(InspectorResponsePrivate * const d, QObject
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void InspectorResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void InspectorResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Inspector::InspectorResponsePrivate
+ * \brief The InspectorResponsePrivate class provides private implementation for InspectorResponse.
+ * \internal
  *
- * @class  InspectorResponsePrivate
- *
- * @brief  Private implementation for InspectorResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InspectorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InspectorResponse instance.
+ * Constructs a InspectorResponsePrivate object with public implementation \a q.
  */
 InspectorResponsePrivate::InspectorResponsePrivate(
     InspectorResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

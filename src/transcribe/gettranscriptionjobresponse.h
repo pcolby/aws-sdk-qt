@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetTranscriptionJobResponse : public TranscribeServiceRespons
 public:
     GetTranscriptionJobResponse(const GetTranscriptionJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetTranscriptionJobRequest * request() const;
+    virtual const GetTranscriptionJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetTranscriptionJobResponse)

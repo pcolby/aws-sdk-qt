@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateApplicationResourceLifecycleResponse
- *
  * \brief The UpdateApplicationResourceLifecycleResponse class provides an interace for ElasticBeanstalk UpdateApplicationResourceLifecycle responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new UpdateApplicationResourceLifecycleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateApplicationResourceLifecycleResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateApplicationResourceLifecycleResponse::UpdateApplicationResourceLifecycleResponse(
         const UpdateApplicationResourceLifecycleRequest &request,
@@ -77,6 +72,9 @@ UpdateApplicationResourceLifecycleResponse::UpdateApplicationResourceLifecycleRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateApplicationResourceLifecycleRequest * UpdateApplicationResourceLifecycleResponse::request() const
 {
     Q_D(const UpdateApplicationResourceLifecycleResponse);
@@ -84,9 +82,8 @@ const UpdateApplicationResourceLifecycleRequest * UpdateApplicationResourceLifec
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk UpdateApplicationResourceLifecycle response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk UpdateApplicationResourceLifecycle \a response.
  */
 void UpdateApplicationResourceLifecycleResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void UpdateApplicationResourceLifecycleResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::UpdateApplicationResourceLifecycleResponsePrivate
+ * \brief The UpdateApplicationResourceLifecycleResponsePrivate class provides private implementation for UpdateApplicationResourceLifecycleResponse.
  * \internal
  *
- * \class UpdateApplicationResourceLifecycleResponsePrivate
- *
- * \brief Private implementation for UpdateApplicationResourceLifecycleResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApplicationResourceLifecycleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateApplicationResourceLifecycleResponse instance.
+ * Constructs a UpdateApplicationResourceLifecycleResponsePrivate object with public implementation \a q.
  */
 UpdateApplicationResourceLifecycleResponsePrivate::UpdateApplicationResourceLifecycleResponsePrivate(
     UpdateApplicationResourceLifecycleResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ UpdateApplicationResourceLifecycleResponsePrivate::UpdateApplicationResourceLife
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk UpdateApplicationResourceLifecycleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk UpdateApplicationResourceLifecycle response element from \a xml.
  */
 void UpdateApplicationResourceLifecycleResponsePrivate::parseUpdateApplicationResourceLifecycleResponse(QXmlStreamReader &xml)
 {

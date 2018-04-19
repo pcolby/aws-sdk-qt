@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a GetTagsRequestPrivate object for CostExplorer \a action with,
- * public implementation \a q.
+ * Constructs a GetTagsRequestPrivate object for CostExplorer \a action,
+ * with public implementation \a q.
  */
 GetTagsRequestPrivate::GetTagsRequestPrivate(
     const CostExplorerRequest::Action action, GetTagsRequest * const q)

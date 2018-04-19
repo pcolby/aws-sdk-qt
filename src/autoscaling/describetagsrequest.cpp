@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeTagsRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTagsRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const AutoScalingRequest::Action action, DescribeTagsRequest * const q)

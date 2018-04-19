@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * RestoreFromSnapshotRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a RestoreFromSnapshotRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a RestoreFromSnapshotRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 RestoreFromSnapshotRequestPrivate::RestoreFromSnapshotRequestPrivate(
     const DirectoryServiceRequest::Action action, RestoreFromSnapshotRequest * const q)

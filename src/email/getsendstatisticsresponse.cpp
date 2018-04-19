@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetSendStatisticsResponse
- *
  * \brief The GetSendStatisticsResponse class provides an interace for SES GetSendStatistics responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetSendStatisticsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSendStatisticsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSendStatisticsResponse::GetSendStatisticsResponse(
         const GetSendStatisticsRequest &request,
@@ -66,6 +61,9 @@ GetSendStatisticsResponse::GetSendStatisticsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSendStatisticsRequest * GetSendStatisticsResponse::request() const
 {
     Q_D(const GetSendStatisticsResponse);
@@ -73,9 +71,8 @@ const GetSendStatisticsRequest * GetSendStatisticsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES GetSendStatistics response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES GetSendStatistics \a response.
  */
 void GetSendStatisticsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetSendStatisticsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::GetSendStatisticsResponsePrivate
+ * \brief The GetSendStatisticsResponsePrivate class provides private implementation for GetSendStatisticsResponse.
  * \internal
  *
- * \class GetSendStatisticsResponsePrivate
- *
- * \brief Private implementation for GetSendStatisticsResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSendStatisticsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSendStatisticsResponse instance.
+ * Constructs a GetSendStatisticsResponsePrivate object with public implementation \a q.
  */
 GetSendStatisticsResponsePrivate::GetSendStatisticsResponsePrivate(
     GetSendStatisticsResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ GetSendStatisticsResponsePrivate::GetSendStatisticsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES GetSendStatisticsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES GetSendStatistics response element from \a xml.
  */
 void GetSendStatisticsResponsePrivate::parseGetSendStatisticsResponse(QXmlStreamReader &xml)
 {

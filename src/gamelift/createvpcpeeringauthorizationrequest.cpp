@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * CreateVpcPeeringAuthorizationRequest::respons
  */
 
 /*!
- *
- * Constructs a CreateVpcPeeringAuthorizationRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a CreateVpcPeeringAuthorizationRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 CreateVpcPeeringAuthorizationRequestPrivate::CreateVpcPeeringAuthorizationRequestPrivate(
     const GameLiftRequest::Action action, CreateVpcPeeringAuthorizationRequest * const q)

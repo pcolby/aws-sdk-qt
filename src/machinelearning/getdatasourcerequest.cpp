@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetDataSourceRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a GetDataSourceRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
     const MachineLearningRequest::Action action, GetDataSourceRequest * const q)

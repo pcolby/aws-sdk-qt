@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * GetCorsPolicyRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetCorsPolicyRequestPrivate object for MediaStore \a action with,
- * public implementation \a q.
+ * Constructs a GetCorsPolicyRequestPrivate object for MediaStore \a action,
+ * with public implementation \a q.
  */
 GetCorsPolicyRequestPrivate::GetCorsPolicyRequestPrivate(
     const MediaStoreRequest::Action action, GetCorsPolicyRequest * const q)

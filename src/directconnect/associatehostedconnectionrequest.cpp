@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * AssociateHostedConnectionRequest::response(QN
  */
 
 /*!
- *
- * Constructs a AssociateHostedConnectionRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a AssociateHostedConnectionRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 AssociateHostedConnectionRequestPrivate::AssociateHostedConnectionRequestPrivate(
     const DirectConnectRequest::Action action, AssociateHostedConnectionRequest * const q)

@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateEnvironmentResponse
- *
  * \brief The UpdateEnvironmentResponse class provides an interace for ElasticBeanstalk UpdateEnvironment responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new UpdateEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateEnvironmentResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateEnvironmentResponse::UpdateEnvironmentResponse(
         const UpdateEnvironmentRequest &request,
@@ -77,6 +72,9 @@ UpdateEnvironmentResponse::UpdateEnvironmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateEnvironmentRequest * UpdateEnvironmentResponse::request() const
 {
     Q_D(const UpdateEnvironmentResponse);
@@ -84,9 +82,8 @@ const UpdateEnvironmentRequest * UpdateEnvironmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk UpdateEnvironment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk UpdateEnvironment \a response.
  */
 void UpdateEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void UpdateEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::UpdateEnvironmentResponsePrivate
+ * \brief The UpdateEnvironmentResponsePrivate class provides private implementation for UpdateEnvironmentResponse.
  * \internal
  *
- * \class UpdateEnvironmentResponsePrivate
- *
- * \brief Private implementation for UpdateEnvironmentResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEnvironmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateEnvironmentResponse instance.
+ * Constructs a UpdateEnvironmentResponsePrivate object with public implementation \a q.
  */
 UpdateEnvironmentResponsePrivate::UpdateEnvironmentResponsePrivate(
     UpdateEnvironmentResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ UpdateEnvironmentResponsePrivate::UpdateEnvironmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk UpdateEnvironmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk UpdateEnvironment response element from \a xml.
  */
 void UpdateEnvironmentResponsePrivate::parseUpdateEnvironmentResponse(QXmlStreamReader &xml)
 {

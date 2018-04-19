@@ -28,16 +28,13 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::ComprehendResponse
- *
  * \brief The ComprehendResponse class provides an interface for Comprehend responses.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @brief  Constructs a new ComprehendResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ComprehendResponse object with parent \a parent.
  */
 ComprehendResponse::ComprehendResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ComprehendResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ComprehendResponse::ComprehendResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ComprehendResponse object.
- *
+ * \internal
+ * Constructs a ComprehendResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ComprehendResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ComprehendResponse::ComprehendResponse(ComprehendResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ComprehendResponse::ComprehendResponse(ComprehendResponsePrivate * const d, QObj
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ComprehendResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ComprehendResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Comprehend::ComprehendResponsePrivate
+ * \brief The ComprehendResponsePrivate class provides private implementation for ComprehendResponse.
+ * \internal
  *
- * @class  ComprehendResponsePrivate
- *
- * @brief  Private implementation for ComprehendResponse.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ComprehendResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ComprehendResponse instance.
+ * Constructs a ComprehendResponsePrivate object with public implementation \a q.
  */
 ComprehendResponsePrivate::ComprehendResponsePrivate(
     ComprehendResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

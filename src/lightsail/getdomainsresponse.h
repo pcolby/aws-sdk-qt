@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDomainsResponse : public LightsailResponse {
 public:
     GetDomainsResponse(const GetDomainsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDomainsRequest * request() const;
+    virtual const GetDomainsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDomainsResponse)

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteVpcLinkResponse
- *
  * \brief The DeleteVpcLinkResponse class provides an interace for APIGateway DeleteVpcLink responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcLinkResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVpcLinkResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVpcLinkResponse::DeleteVpcLinkResponse(
         const DeleteVpcLinkRequest &request,
@@ -60,6 +55,9 @@ DeleteVpcLinkResponse::DeleteVpcLinkResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVpcLinkRequest * DeleteVpcLinkResponse::request() const
 {
     Q_D(const DeleteVpcLinkResponse);
@@ -67,9 +65,8 @@ const DeleteVpcLinkRequest * DeleteVpcLinkResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteVpcLink response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteVpcLink \a response.
  */
 void DeleteVpcLinkResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteVpcLinkResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteVpcLinkResponsePrivate
+ * \brief The DeleteVpcLinkResponsePrivate class provides private implementation for DeleteVpcLinkResponse.
  * \internal
  *
- * \class DeleteVpcLinkResponsePrivate
- *
- * \brief Private implementation for DeleteVpcLinkResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcLinkResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVpcLinkResponse instance.
+ * Constructs a DeleteVpcLinkResponsePrivate object with public implementation \a q.
  */
 DeleteVpcLinkResponsePrivate::DeleteVpcLinkResponsePrivate(
     DeleteVpcLinkResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteVpcLinkResponsePrivate::DeleteVpcLinkResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteVpcLinkResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteVpcLink response element from \a xml.
  */
 void DeleteVpcLinkResponsePrivate::parseDeleteVpcLinkResponse(QXmlStreamReader &xml)
 {

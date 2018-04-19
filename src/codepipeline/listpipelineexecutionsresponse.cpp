@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::ListPipelineExecutionsResponse
- *
  * \brief The ListPipelineExecutionsResponse class provides an interace for CodePipeline ListPipelineExecutions responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new ListPipelineExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPipelineExecutionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPipelineExecutionsResponse::ListPipelineExecutionsResponse(
         const ListPipelineExecutionsRequest &request,
@@ -218,6 +213,9 @@ ListPipelineExecutionsResponse::ListPipelineExecutionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPipelineExecutionsRequest * ListPipelineExecutionsResponse::request() const
 {
     Q_D(const ListPipelineExecutionsResponse);
@@ -225,9 +223,8 @@ const ListPipelineExecutionsRequest * ListPipelineExecutionsResponse::request() 
 }
 
 /*!
- * @brief  Parse a CodePipeline ListPipelineExecutions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline ListPipelineExecutions \a response.
  */
 void ListPipelineExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void ListPipelineExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::ListPipelineExecutionsResponsePrivate
+ * \brief The ListPipelineExecutionsResponsePrivate class provides private implementation for ListPipelineExecutionsResponse.
  * \internal
  *
- * \class ListPipelineExecutionsResponsePrivate
- *
- * \brief Private implementation for ListPipelineExecutionsResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPipelineExecutionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPipelineExecutionsResponse instance.
+ * Constructs a ListPipelineExecutionsResponsePrivate object with public implementation \a q.
  */
 ListPipelineExecutionsResponsePrivate::ListPipelineExecutionsResponsePrivate(
     ListPipelineExecutionsResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ ListPipelineExecutionsResponsePrivate::ListPipelineExecutionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline ListPipelineExecutionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline ListPipelineExecutions response element from \a xml.
  */
 void ListPipelineExecutionsResponsePrivate::parseListPipelineExecutionsResponse(QXmlStreamReader &xml)
 {

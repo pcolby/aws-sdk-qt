@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopStackSetOperationResponse : public CloudFormationResponse
 public:
     StopStackSetOperationResponse(const StopStackSetOperationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopStackSetOperationRequest * request() const;
+    virtual const StopStackSetOperationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopStackSetOperationResponse)

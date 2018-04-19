@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::StartInstanceResponse
- *
  * \brief The StartInstanceResponse class provides an interace for Lightsail StartInstance responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new StartInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 StartInstanceResponse::StartInstanceResponse(
         const StartInstanceRequest &request,
@@ -71,6 +66,9 @@ StartInstanceResponse::StartInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartInstanceRequest * StartInstanceResponse::request() const
 {
     Q_D(const StartInstanceResponse);
@@ -78,9 +76,8 @@ const StartInstanceRequest * StartInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail StartInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail StartInstance \a response.
  */
 void StartInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void StartInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::StartInstanceResponsePrivate
+ * \brief The StartInstanceResponsePrivate class provides private implementation for StartInstanceResponse.
  * \internal
  *
- * \class StartInstanceResponsePrivate
- *
- * \brief Private implementation for StartInstanceResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartInstanceResponse instance.
+ * Constructs a StartInstanceResponsePrivate object with public implementation \a q.
  */
 StartInstanceResponsePrivate::StartInstanceResponsePrivate(
     StartInstanceResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ StartInstanceResponsePrivate::StartInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail StartInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail StartInstance response element from \a xml.
  */
 void StartInstanceResponsePrivate::parseStartInstanceResponse(QXmlStreamReader &xml)
 {

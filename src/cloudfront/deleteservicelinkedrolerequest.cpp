@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceLinkedRoleRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteServiceLinkedRoleRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a DeleteServiceLinkedRoleRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 DeleteServiceLinkedRoleRequestPrivate::DeleteServiceLinkedRoleRequestPrivate(
     const CloudFrontRequest::Action action, DeleteServiceLinkedRoleRequest * const q)

@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DetachStaticIpResponse
- *
  * \brief The DetachStaticIpResponse class provides an interace for Lightsail DetachStaticIp responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DetachStaticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachStaticIpResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachStaticIpResponse::DetachStaticIpResponse(
         const DetachStaticIpRequest &request,
@@ -71,6 +66,9 @@ DetachStaticIpResponse::DetachStaticIpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachStaticIpRequest * DetachStaticIpResponse::request() const
 {
     Q_D(const DetachStaticIpResponse);
@@ -78,9 +76,8 @@ const DetachStaticIpRequest * DetachStaticIpResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail DetachStaticIp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail DetachStaticIp \a response.
  */
 void DetachStaticIpResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DetachStaticIpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::DetachStaticIpResponsePrivate
+ * \brief The DetachStaticIpResponsePrivate class provides private implementation for DetachStaticIpResponse.
  * \internal
  *
- * \class DetachStaticIpResponsePrivate
- *
- * \brief Private implementation for DetachStaticIpResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachStaticIpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachStaticIpResponse instance.
+ * Constructs a DetachStaticIpResponsePrivate object with public implementation \a q.
  */
 DetachStaticIpResponsePrivate::DetachStaticIpResponsePrivate(
     DetachStaticIpResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ DetachStaticIpResponsePrivate::DetachStaticIpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail DetachStaticIpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail DetachStaticIp response element from \a xml.
  */
 void DetachStaticIpResponsePrivate::parseDetachStaticIpResponse(QXmlStreamReader &xml)
 {

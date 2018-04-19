@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListUsersResponse
- *
  * \brief The ListUsersResponse class provides an interace for WorkMail ListUsers responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListUsersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListUsersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListUsersResponse::ListUsersResponse(
         const ListUsersRequest &request,
@@ -88,6 +83,9 @@ ListUsersResponse::ListUsersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListUsersRequest * ListUsersResponse::request() const
 {
     Q_D(const ListUsersResponse);
@@ -95,9 +93,8 @@ const ListUsersRequest * ListUsersResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail ListUsers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail ListUsers \a response.
  */
 void ListUsersResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void ListUsersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::ListUsersResponsePrivate
+ * \brief The ListUsersResponsePrivate class provides private implementation for ListUsersResponse.
  * \internal
  *
- * \class ListUsersResponsePrivate
- *
- * \brief Private implementation for ListUsersResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUsersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListUsersResponse instance.
+ * Constructs a ListUsersResponsePrivate object with public implementation \a q.
  */
 ListUsersResponsePrivate::ListUsersResponsePrivate(
     ListUsersResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ ListUsersResponsePrivate::ListUsersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail ListUsersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail ListUsers response element from \a xml.
  */
 void ListUsersResponsePrivate::parseListUsersResponse(QXmlStreamReader &xml)
 {

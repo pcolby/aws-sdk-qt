@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DetachInstancesFromLoadBalancerResponse
- *
  * \brief The DetachInstancesFromLoadBalancerResponse class provides an interace for Lightsail DetachInstancesFromLoadBalancer responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DetachInstancesFromLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachInstancesFromLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachInstancesFromLoadBalancerResponse::DetachInstancesFromLoadBalancerResponse(
         const DetachInstancesFromLoadBalancerRequest &request,
@@ -71,6 +66,9 @@ DetachInstancesFromLoadBalancerResponse::DetachInstancesFromLoadBalancerResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachInstancesFromLoadBalancerRequest * DetachInstancesFromLoadBalancerResponse::request() const
 {
     Q_D(const DetachInstancesFromLoadBalancerResponse);
@@ -78,9 +76,8 @@ const DetachInstancesFromLoadBalancerRequest * DetachInstancesFromLoadBalancerRe
 }
 
 /*!
- * @brief  Parse a Lightsail DetachInstancesFromLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail DetachInstancesFromLoadBalancer \a response.
  */
 void DetachInstancesFromLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DetachInstancesFromLoadBalancerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::DetachInstancesFromLoadBalancerResponsePrivate
+ * \brief The DetachInstancesFromLoadBalancerResponsePrivate class provides private implementation for DetachInstancesFromLoadBalancerResponse.
  * \internal
  *
- * \class DetachInstancesFromLoadBalancerResponsePrivate
- *
- * \brief Private implementation for DetachInstancesFromLoadBalancerResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachInstancesFromLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachInstancesFromLoadBalancerResponse instance.
+ * Constructs a DetachInstancesFromLoadBalancerResponsePrivate object with public implementation \a q.
  */
 DetachInstancesFromLoadBalancerResponsePrivate::DetachInstancesFromLoadBalancerResponsePrivate(
     DetachInstancesFromLoadBalancerResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ DetachInstancesFromLoadBalancerResponsePrivate::DetachInstancesFromLoadBalancerR
 }
 
 /*!
- * @brief  Parse an Lightsail DetachInstancesFromLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail DetachInstancesFromLoadBalancer response element from \a xml.
  */
 void DetachInstancesFromLoadBalancerResponsePrivate::parseDetachInstancesFromLoadBalancerResponse(QXmlStreamReader &xml)
 {

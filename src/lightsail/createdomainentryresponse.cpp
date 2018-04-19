@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateDomainEntryResponse
- *
  * \brief The CreateDomainEntryResponse class provides an interace for Lightsail CreateDomainEntry responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateDomainEntryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDomainEntryResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDomainEntryResponse::CreateDomainEntryResponse(
         const CreateDomainEntryRequest &request,
@@ -71,6 +66,9 @@ CreateDomainEntryResponse::CreateDomainEntryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDomainEntryRequest * CreateDomainEntryResponse::request() const
 {
     Q_D(const CreateDomainEntryResponse);
@@ -78,9 +76,8 @@ const CreateDomainEntryRequest * CreateDomainEntryResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail CreateDomainEntry response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail CreateDomainEntry \a response.
  */
 void CreateDomainEntryResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void CreateDomainEntryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::CreateDomainEntryResponsePrivate
+ * \brief The CreateDomainEntryResponsePrivate class provides private implementation for CreateDomainEntryResponse.
  * \internal
  *
- * \class CreateDomainEntryResponsePrivate
- *
- * \brief Private implementation for CreateDomainEntryResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDomainEntryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDomainEntryResponse instance.
+ * Constructs a CreateDomainEntryResponsePrivate object with public implementation \a q.
  */
 CreateDomainEntryResponsePrivate::CreateDomainEntryResponsePrivate(
     CreateDomainEntryResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ CreateDomainEntryResponsePrivate::CreateDomainEntryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail CreateDomainEntryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail CreateDomainEntry response element from \a xml.
  */
 void CreateDomainEntryResponsePrivate::parseCreateDomainEntryResponse(QXmlStreamReader &xml)
 {

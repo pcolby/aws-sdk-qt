@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::PutRuleResponse
- *
  * \brief The PutRuleResponse class provides an interace for CloudWatchEvents PutRule responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new PutRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 PutRuleResponse::PutRuleResponse(
         const PutRuleRequest &request,
@@ -78,6 +73,9 @@ PutRuleResponse::PutRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutRuleRequest * PutRuleResponse::request() const
 {
     Q_D(const PutRuleResponse);
@@ -85,9 +83,8 @@ const PutRuleRequest * PutRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents PutRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents PutRule \a response.
  */
 void PutRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void PutRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::PutRuleResponsePrivate
+ * \brief The PutRuleResponsePrivate class provides private implementation for PutRuleResponse.
  * \internal
  *
- * \class PutRuleResponsePrivate
- *
- * \brief Private implementation for PutRuleResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutRuleResponse instance.
+ * Constructs a PutRuleResponsePrivate object with public implementation \a q.
  */
 PutRuleResponsePrivate::PutRuleResponsePrivate(
     PutRuleResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ PutRuleResponsePrivate::PutRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents PutRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents PutRule response element from \a xml.
  */
 void PutRuleResponsePrivate::parsePutRuleResponse(QXmlStreamReader &xml)
 {

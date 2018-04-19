@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteTagsRequestPrivate object for WorkSpaces \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTagsRequestPrivate object for WorkSpaces \a action,
+ * with public implementation \a q.
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const WorkSpacesRequest::Action action, DeleteTagsRequest * const q)

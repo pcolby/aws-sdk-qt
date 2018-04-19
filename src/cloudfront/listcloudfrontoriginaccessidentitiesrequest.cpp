@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListCloudFrontOriginAccessIdentitiesRequest::
  */
 
 /*!
- *
- * Constructs a ListCloudFrontOriginAccessIdentitiesRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a ListCloudFrontOriginAccessIdentitiesRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 ListCloudFrontOriginAccessIdentitiesRequestPrivate::ListCloudFrontOriginAccessIdentitiesRequestPrivate(
     const CloudFrontRequest::Action action, ListCloudFrontOriginAccessIdentitiesRequest * const q)

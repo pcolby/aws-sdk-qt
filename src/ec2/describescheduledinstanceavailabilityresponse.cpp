@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeScheduledInstanceAvailabilityResponse
- *
  * \brief The DescribeScheduledInstanceAvailabilityResponse class provides an interace for EC2 DescribeScheduledInstanceAvailability responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeScheduledInstanceAvailabilityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeScheduledInstanceAvailabilityResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeScheduledInstanceAvailabilityResponse::DescribeScheduledInstanceAvailabilityResponse(
         const DescribeScheduledInstanceAvailabilityRequest &request,
@@ -59,6 +54,9 @@ DescribeScheduledInstanceAvailabilityResponse::DescribeScheduledInstanceAvailabi
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeScheduledInstanceAvailabilityRequest * DescribeScheduledInstanceAvailabilityResponse::request() const
 {
     Q_D(const DescribeScheduledInstanceAvailabilityResponse);
@@ -66,9 +64,8 @@ const DescribeScheduledInstanceAvailabilityRequest * DescribeScheduledInstanceAv
 }
 
 /*!
- * @brief  Parse a EC2 DescribeScheduledInstanceAvailability response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeScheduledInstanceAvailability \a response.
  */
 void DescribeScheduledInstanceAvailabilityResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeScheduledInstanceAvailabilityResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::EC2::DescribeScheduledInstanceAvailabilityResponsePrivate
+ * \brief The DescribeScheduledInstanceAvailabilityResponsePrivate class provides private implementation for DescribeScheduledInstanceAvailabilityResponse.
  * \internal
  *
- * \class DescribeScheduledInstanceAvailabilityResponsePrivate
- *
- * \brief Private implementation for DescribeScheduledInstanceAvailabilityResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScheduledInstanceAvailabilityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeScheduledInstanceAvailabilityResponse instance.
+ * Constructs a DescribeScheduledInstanceAvailabilityResponsePrivate object with public implementation \a q.
  */
 DescribeScheduledInstanceAvailabilityResponsePrivate::DescribeScheduledInstanceAvailabilityResponsePrivate(
     DescribeScheduledInstanceAvailabilityResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeScheduledInstanceAvailabilityResponsePrivate::DescribeScheduledInstanceA
 }
 
 /*!
- * @brief  Parse an EC2 DescribeScheduledInstanceAvailabilityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeScheduledInstanceAvailability response element from \a xml.
  */
 void DescribeScheduledInstanceAvailabilityResponsePrivate::parseDescribeScheduledInstanceAvailabilityResponse(QXmlStreamReader &xml)
 {

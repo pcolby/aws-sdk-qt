@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteRateBasedRuleResponse : public WAFResponse {
 public:
     DeleteRateBasedRuleResponse(const DeleteRateBasedRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteRateBasedRuleRequest * request() const;
+    virtual const DeleteRateBasedRuleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteRateBasedRuleResponse)

@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeOrderableClusterOptionsRequest::respo
  */
 
 /*!
- *
- * Constructs a DescribeOrderableClusterOptionsRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeOrderableClusterOptionsRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeOrderableClusterOptionsRequestPrivate::DescribeOrderableClusterOptionsRequestPrivate(
     const RedshiftRequest::Action action, DescribeOrderableClusterOptionsRequest * const q)

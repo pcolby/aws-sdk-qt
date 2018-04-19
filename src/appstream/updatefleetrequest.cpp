@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateFleetRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a UpdateFleetRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 UpdateFleetRequestPrivate::UpdateFleetRequestPrivate(
     const AppStreamRequest::Action action, UpdateFleetRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeregisterInstancesFromLoadBalancerResponse : public ElasticL
 public:
     DeregisterInstancesFromLoadBalancerResponse(const DeregisterInstancesFromLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeregisterInstancesFromLoadBalancerRequest * request() const;
+    virtual const DeregisterInstancesFromLoadBalancerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeregisterInstancesFromLoadBalancerResponse)

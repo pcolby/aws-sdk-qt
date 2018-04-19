@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutMethodResponseResponse : public APIGatewayResponse {
 public:
     PutMethodResponseResponse(const PutMethodResponseRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutMethodResponseRequest * request() const;
+    virtual const PutMethodResponseRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutMethodResponseResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSdkTypesResponse : public APIGatewayResponse {
 public:
     GetSdkTypesResponse(const GetSdkTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSdkTypesRequest * request() const;
+    virtual const GetSdkTypesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSdkTypesResponse)

@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DisassociateDelegateFromResourceResponse
- *
  * \brief The DisassociateDelegateFromResourceResponse class provides an interace for WorkMail DisassociateDelegateFromResource responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DisassociateDelegateFromResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateDelegateFromResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateDelegateFromResourceResponse::DisassociateDelegateFromResourceResponse(
         const DisassociateDelegateFromResourceRequest &request,
@@ -88,6 +83,9 @@ DisassociateDelegateFromResourceResponse::DisassociateDelegateFromResourceRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateDelegateFromResourceRequest * DisassociateDelegateFromResourceResponse::request() const
 {
     Q_D(const DisassociateDelegateFromResourceResponse);
@@ -95,9 +93,8 @@ const DisassociateDelegateFromResourceRequest * DisassociateDelegateFromResource
 }
 
 /*!
- * @brief  Parse a WorkMail DisassociateDelegateFromResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail DisassociateDelegateFromResource \a response.
  */
 void DisassociateDelegateFromResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DisassociateDelegateFromResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::DisassociateDelegateFromResourceResponsePrivate
+ * \brief The DisassociateDelegateFromResourceResponsePrivate class provides private implementation for DisassociateDelegateFromResourceResponse.
  * \internal
  *
- * \class DisassociateDelegateFromResourceResponsePrivate
- *
- * \brief Private implementation for DisassociateDelegateFromResourceResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateDelegateFromResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateDelegateFromResourceResponse instance.
+ * Constructs a DisassociateDelegateFromResourceResponsePrivate object with public implementation \a q.
  */
 DisassociateDelegateFromResourceResponsePrivate::DisassociateDelegateFromResourceResponsePrivate(
     DisassociateDelegateFromResourceResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ DisassociateDelegateFromResourceResponsePrivate::DisassociateDelegateFromResourc
 }
 
 /*!
- * @brief  Parse an WorkMail DisassociateDelegateFromResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail DisassociateDelegateFromResource response element from \a xml.
  */
 void DisassociateDelegateFromResourceResponsePrivate::parseDisassociateDelegateFromResourceResponse(QXmlStreamReader &xml)
 {

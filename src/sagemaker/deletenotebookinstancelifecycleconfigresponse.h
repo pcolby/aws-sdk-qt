@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteNotebookInstanceLifecycleConfigResponse : public SageMa
 public:
     DeleteNotebookInstanceLifecycleConfigResponse(const DeleteNotebookInstanceLifecycleConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteNotebookInstanceLifecycleConfigRequest * request() const;
+    virtual const DeleteNotebookInstanceLifecycleConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteNotebookInstanceLifecycleConfigResponse)

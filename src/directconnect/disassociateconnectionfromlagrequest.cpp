@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateConnectionFromLagRequest::respons
  */
 
 /*!
- *
- * Constructs a DisassociateConnectionFromLagRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateConnectionFromLagRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 DisassociateConnectionFromLagRequestPrivate::DisassociateConnectionFromLagRequestPrivate(
     const DirectConnectRequest::Action action, DisassociateConnectionFromLagRequest * const q)

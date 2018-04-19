@@ -29,10 +29,9 @@ namespace MobileAnalytics {
 
 /*!
  * \class QtAws::MobileAnalytics::PutEventsResponse
- *
  * \brief The PutEventsResponse class provides an interace for MobileAnalytics PutEvents responses.
  *
- * \ingroup MobileAnalytics
+ * \inmodule QtAwsMobileAnalytics
  *
  *  Amazon Mobile Analytics is a service for collecting, visualizing, and understanding app usage data at
  *
@@ -40,11 +39,7 @@ namespace MobileAnalytics {
  */
 
 /*!
- * @brief  Constructs a new PutEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutEventsResponse object for \a reply to \a request, with parent \a parent.
  */
 PutEventsResponse::PutEventsResponse(
         const PutEventsRequest &request,
@@ -56,6 +51,9 @@ PutEventsResponse::PutEventsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutEventsRequest * PutEventsResponse::request() const
 {
     Q_D(const PutEventsResponse);
@@ -63,9 +61,8 @@ const PutEventsRequest * PutEventsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MobileAnalytics PutEvents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MobileAnalytics PutEvents \a response.
  */
 void PutEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void PutEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MobileAnalytics::PutEventsResponsePrivate
+ * \brief The PutEventsResponsePrivate class provides private implementation for PutEventsResponse.
  * \internal
  *
- * \class PutEventsResponsePrivate
- *
- * \brief Private implementation for PutEventsResponse.
+ * \inmodule QtAwsMobileAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutEventsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutEventsResponse instance.
+ * Constructs a PutEventsResponsePrivate object with public implementation \a q.
  */
 PutEventsResponsePrivate::PutEventsResponsePrivate(
     PutEventsResponse * const q) : MobileAnalyticsResponsePrivate(q)
@@ -96,9 +89,7 @@ PutEventsResponsePrivate::PutEventsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MobileAnalytics PutEventsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MobileAnalytics PutEvents response element from \a xml.
  */
 void PutEventsResponsePrivate::parsePutEventsResponse(QXmlStreamReader &xml)
 {

@@ -154,9 +154,8 @@ QtAws::Core::AwsAbstractResponse * PutScheduledActionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a PutScheduledActionRequestPrivate object for ApplicationAutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a PutScheduledActionRequestPrivate object for ApplicationAutoScaling \a action,
+ * with public implementation \a q.
  */
 PutScheduledActionRequestPrivate::PutScheduledActionRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, PutScheduledActionRequest * const q)

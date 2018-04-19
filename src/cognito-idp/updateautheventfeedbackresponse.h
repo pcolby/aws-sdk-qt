@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateAuthEventFeedbackResponse : public CognitoIdentityProvi
 public:
     UpdateAuthEventFeedbackResponse(const UpdateAuthEventFeedbackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateAuthEventFeedbackRequest * request() const;
+    virtual const UpdateAuthEventFeedbackRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateAuthEventFeedbackResponse)

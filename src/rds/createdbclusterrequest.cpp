@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CreateDBClusterRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a CreateDBClusterRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CreateDBClusterRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CreateDBClusterRequestPrivate::CreateDBClusterRequestPrivate(
     const RDSRequest::Action action, CreateDBClusterRequest * const q)

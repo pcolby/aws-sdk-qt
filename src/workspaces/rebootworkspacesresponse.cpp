@@ -29,10 +29,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::RebootWorkspacesResponse
- *
  * \brief The RebootWorkspacesResponse class provides an interace for WorkSpaces RebootWorkspaces responses.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new RebootWorkspacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RebootWorkspacesResponse object for \a reply to \a request, with parent \a parent.
  */
 RebootWorkspacesResponse::RebootWorkspacesResponse(
         const RebootWorkspacesRequest &request,
@@ -58,6 +53,9 @@ RebootWorkspacesResponse::RebootWorkspacesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RebootWorkspacesRequest * RebootWorkspacesResponse::request() const
 {
     Q_D(const RebootWorkspacesResponse);
@@ -65,9 +63,8 @@ const RebootWorkspacesRequest * RebootWorkspacesResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkSpaces RebootWorkspaces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkSpaces RebootWorkspaces \a response.
  */
 void RebootWorkspacesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void RebootWorkspacesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkSpaces::RebootWorkspacesResponsePrivate
+ * \brief The RebootWorkspacesResponsePrivate class provides private implementation for RebootWorkspacesResponse.
  * \internal
  *
- * \class RebootWorkspacesResponsePrivate
- *
- * \brief Private implementation for RebootWorkspacesResponse.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootWorkspacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RebootWorkspacesResponse instance.
+ * Constructs a RebootWorkspacesResponsePrivate object with public implementation \a q.
  */
 RebootWorkspacesResponsePrivate::RebootWorkspacesResponsePrivate(
     RebootWorkspacesResponse * const q) : WorkSpacesResponsePrivate(q)
@@ -98,9 +91,7 @@ RebootWorkspacesResponsePrivate::RebootWorkspacesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkSpaces RebootWorkspacesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkSpaces RebootWorkspaces response element from \a xml.
  */
 void RebootWorkspacesResponsePrivate::parseRebootWorkspacesResponse(QXmlStreamReader &xml)
 {

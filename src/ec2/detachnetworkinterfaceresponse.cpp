@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DetachNetworkInterfaceResponse
- *
  * \brief The DetachNetworkInterfaceResponse class provides an interace for EC2 DetachNetworkInterface responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DetachNetworkInterfaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachNetworkInterfaceResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachNetworkInterfaceResponse::DetachNetworkInterfaceResponse(
         const DetachNetworkInterfaceRequest &request,
@@ -59,6 +54,9 @@ DetachNetworkInterfaceResponse::DetachNetworkInterfaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachNetworkInterfaceRequest * DetachNetworkInterfaceResponse::request() const
 {
     Q_D(const DetachNetworkInterfaceResponse);
@@ -66,9 +64,8 @@ const DetachNetworkInterfaceRequest * DetachNetworkInterfaceResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 DetachNetworkInterface response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DetachNetworkInterface \a response.
  */
 void DetachNetworkInterfaceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DetachNetworkInterfaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DetachNetworkInterfaceResponsePrivate
+ * \brief The DetachNetworkInterfaceResponsePrivate class provides private implementation for DetachNetworkInterfaceResponse.
  * \internal
  *
- * \class DetachNetworkInterfaceResponsePrivate
- *
- * \brief Private implementation for DetachNetworkInterfaceResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachNetworkInterfaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachNetworkInterfaceResponse instance.
+ * Constructs a DetachNetworkInterfaceResponsePrivate object with public implementation \a q.
  */
 DetachNetworkInterfaceResponsePrivate::DetachNetworkInterfaceResponsePrivate(
     DetachNetworkInterfaceResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DetachNetworkInterfaceResponsePrivate::DetachNetworkInterfaceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DetachNetworkInterfaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DetachNetworkInterface response element from \a xml.
  */
 void DetachNetworkInterfaceResponsePrivate::parseDetachNetworkInterfaceResponse(QXmlStreamReader &xml)
 {

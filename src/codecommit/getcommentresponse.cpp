@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetCommentResponse
- *
  * \brief The GetCommentResponse class provides an interace for CodeCommit GetComment responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetCommentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCommentResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCommentResponse::GetCommentResponse(
         const GetCommentRequest &request,
@@ -245,6 +240,9 @@ GetCommentResponse::GetCommentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCommentRequest * GetCommentResponse::request() const
 {
     Q_D(const GetCommentResponse);
@@ -252,9 +250,8 @@ const GetCommentRequest * GetCommentResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit GetComment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit GetComment \a response.
  */
 void GetCommentResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void GetCommentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::GetCommentResponsePrivate
+ * \brief The GetCommentResponsePrivate class provides private implementation for GetCommentResponse.
  * \internal
  *
- * \class GetCommentResponsePrivate
- *
- * \brief Private implementation for GetCommentResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCommentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCommentResponse instance.
+ * Constructs a GetCommentResponsePrivate object with public implementation \a q.
  */
 GetCommentResponsePrivate::GetCommentResponsePrivate(
     GetCommentResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ GetCommentResponsePrivate::GetCommentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit GetCommentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit GetComment response element from \a xml.
  */
 void GetCommentResponsePrivate::parseGetCommentResponse(QXmlStreamReader &xml)
 {

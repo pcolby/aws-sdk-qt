@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeReplicationTasksResponse : public DatabaseMigrationSe
 public:
     DescribeReplicationTasksResponse(const DescribeReplicationTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeReplicationTasksRequest * request() const;
+    virtual const DescribeReplicationTasksRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeReplicationTasksResponse)

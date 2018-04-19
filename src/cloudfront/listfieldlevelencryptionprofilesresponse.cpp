@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListFieldLevelEncryptionProfilesResponse
- *
  * \brief The ListFieldLevelEncryptionProfilesResponse class provides an interace for CloudFront ListFieldLevelEncryptionProfiles responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListFieldLevelEncryptionProfilesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListFieldLevelEncryptionProfilesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListFieldLevelEncryptionProfilesResponse::ListFieldLevelEncryptionProfilesResponse(
         const ListFieldLevelEncryptionProfilesRequest &request,
@@ -60,6 +55,9 @@ ListFieldLevelEncryptionProfilesResponse::ListFieldLevelEncryptionProfilesRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListFieldLevelEncryptionProfilesRequest * ListFieldLevelEncryptionProfilesResponse::request() const
 {
     Q_D(const ListFieldLevelEncryptionProfilesResponse);
@@ -67,9 +65,8 @@ const ListFieldLevelEncryptionProfilesRequest * ListFieldLevelEncryptionProfiles
 }
 
 /*!
- * @brief  Parse a CloudFront ListFieldLevelEncryptionProfiles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront ListFieldLevelEncryptionProfiles \a response.
  */
 void ListFieldLevelEncryptionProfilesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListFieldLevelEncryptionProfilesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::ListFieldLevelEncryptionProfilesResponsePrivate
+ * \brief The ListFieldLevelEncryptionProfilesResponsePrivate class provides private implementation for ListFieldLevelEncryptionProfilesResponse.
  * \internal
  *
- * \class ListFieldLevelEncryptionProfilesResponsePrivate
- *
- * \brief Private implementation for ListFieldLevelEncryptionProfilesResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFieldLevelEncryptionProfilesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListFieldLevelEncryptionProfilesResponse instance.
+ * Constructs a ListFieldLevelEncryptionProfilesResponsePrivate object with public implementation \a q.
  */
 ListFieldLevelEncryptionProfilesResponsePrivate::ListFieldLevelEncryptionProfilesResponsePrivate(
     ListFieldLevelEncryptionProfilesResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ ListFieldLevelEncryptionProfilesResponsePrivate::ListFieldLevelEncryptionProfile
 }
 
 /*!
- * @brief  Parse an CloudFront ListFieldLevelEncryptionProfilesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront ListFieldLevelEncryptionProfiles response element from \a xml.
  */
 void ListFieldLevelEncryptionProfilesResponsePrivate::parseListFieldLevelEncryptionProfilesResponse(QXmlStreamReader &xml)
 {

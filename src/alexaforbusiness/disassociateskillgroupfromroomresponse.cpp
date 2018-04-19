@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DisassociateSkillGroupFromRoomResponse
- *
  * \brief The DisassociateSkillGroupFromRoomResponse class provides an interace for AlexaForBusiness DisassociateSkillGroupFromRoom responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DisassociateSkillGroupFromRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateSkillGroupFromRoomResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateSkillGroupFromRoomResponse::DisassociateSkillGroupFromRoomResponse(
         const DisassociateSkillGroupFromRoomRequest &request,
@@ -60,6 +55,9 @@ DisassociateSkillGroupFromRoomResponse::DisassociateSkillGroupFromRoomResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateSkillGroupFromRoomRequest * DisassociateSkillGroupFromRoomResponse::request() const
 {
     Q_D(const DisassociateSkillGroupFromRoomResponse);
@@ -67,9 +65,8 @@ const DisassociateSkillGroupFromRoomRequest * DisassociateSkillGroupFromRoomResp
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness DisassociateSkillGroupFromRoom response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness DisassociateSkillGroupFromRoom \a response.
  */
 void DisassociateSkillGroupFromRoomResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DisassociateSkillGroupFromRoomResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::DisassociateSkillGroupFromRoomResponsePrivate
+ * \brief The DisassociateSkillGroupFromRoomResponsePrivate class provides private implementation for DisassociateSkillGroupFromRoomResponse.
  * \internal
  *
- * \class DisassociateSkillGroupFromRoomResponsePrivate
- *
- * \brief Private implementation for DisassociateSkillGroupFromRoomResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateSkillGroupFromRoomResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateSkillGroupFromRoomResponse instance.
+ * Constructs a DisassociateSkillGroupFromRoomResponsePrivate object with public implementation \a q.
  */
 DisassociateSkillGroupFromRoomResponsePrivate::DisassociateSkillGroupFromRoomResponsePrivate(
     DisassociateSkillGroupFromRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ DisassociateSkillGroupFromRoomResponsePrivate::DisassociateSkillGroupFromRoomRes
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness DisassociateSkillGroupFromRoomResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness DisassociateSkillGroupFromRoom response element from \a xml.
  */
 void DisassociateSkillGroupFromRoomResponsePrivate::parseDisassociateSkillGroupFromRoomResponse(QXmlStreamReader &xml)
 {

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetSizeConstraintSetRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetSizeConstraintSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a GetSizeConstraintSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 GetSizeConstraintSetRequestPrivate::GetSizeConstraintSetRequestPrivate(
     const WAFRequest::Action action, GetSizeConstraintSetRequest * const q)

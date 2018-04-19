@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::CreateGrantResponse
- *
  * \brief The CreateGrantResponse class provides an interace for KMS CreateGrant responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new CreateGrantResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateGrantResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateGrantResponse::CreateGrantResponse(
         const CreateGrantRequest &request,
@@ -154,6 +149,9 @@ CreateGrantResponse::CreateGrantResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateGrantRequest * CreateGrantResponse::request() const
 {
     Q_D(const CreateGrantResponse);
@@ -161,9 +159,8 @@ const CreateGrantRequest * CreateGrantResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS CreateGrant response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS CreateGrant \a response.
  */
 void CreateGrantResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void CreateGrantResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::CreateGrantResponsePrivate
+ * \brief The CreateGrantResponsePrivate class provides private implementation for CreateGrantResponse.
  * \internal
  *
- * \class CreateGrantResponsePrivate
- *
- * \brief Private implementation for CreateGrantResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGrantResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateGrantResponse instance.
+ * Constructs a CreateGrantResponsePrivate object with public implementation \a q.
  */
 CreateGrantResponsePrivate::CreateGrantResponsePrivate(
     CreateGrantResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ CreateGrantResponsePrivate::CreateGrantResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS CreateGrantResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS CreateGrant response element from \a xml.
  */
 void CreateGrantResponsePrivate::parseCreateGrantResponse(QXmlStreamReader &xml)
 {

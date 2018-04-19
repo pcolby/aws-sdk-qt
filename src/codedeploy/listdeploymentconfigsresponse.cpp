@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ListDeploymentConfigsResponse
- *
  * \brief The ListDeploymentConfigsResponse class provides an interace for CodeDeploy ListDeploymentConfigs responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ListDeploymentConfigsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDeploymentConfigsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDeploymentConfigsResponse::ListDeploymentConfigsResponse(
         const ListDeploymentConfigsRequest &request,
@@ -136,6 +131,9 @@ ListDeploymentConfigsResponse::ListDeploymentConfigsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDeploymentConfigsRequest * ListDeploymentConfigsResponse::request() const
 {
     Q_D(const ListDeploymentConfigsResponse);
@@ -143,9 +141,8 @@ const ListDeploymentConfigsRequest * ListDeploymentConfigsResponse::request() co
 }
 
 /*!
- * @brief  Parse a CodeDeploy ListDeploymentConfigs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy ListDeploymentConfigs \a response.
  */
 void ListDeploymentConfigsResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void ListDeploymentConfigsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::ListDeploymentConfigsResponsePrivate
+ * \brief The ListDeploymentConfigsResponsePrivate class provides private implementation for ListDeploymentConfigsResponse.
  * \internal
  *
- * \class ListDeploymentConfigsResponsePrivate
- *
- * \brief Private implementation for ListDeploymentConfigsResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeploymentConfigsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDeploymentConfigsResponse instance.
+ * Constructs a ListDeploymentConfigsResponsePrivate object with public implementation \a q.
  */
 ListDeploymentConfigsResponsePrivate::ListDeploymentConfigsResponsePrivate(
     ListDeploymentConfigsResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ ListDeploymentConfigsResponsePrivate::ListDeploymentConfigsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy ListDeploymentConfigsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy ListDeploymentConfigs response element from \a xml.
  */
 void ListDeploymentConfigsResponsePrivate::parseListDeploymentConfigsResponse(QXmlStreamReader &xml)
 {

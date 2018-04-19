@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBotChannelAssociationResponse : public LexModelBuilding
 public:
     DeleteBotChannelAssociationResponse(const DeleteBotChannelAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBotChannelAssociationRequest * request() const;
+    virtual const DeleteBotChannelAssociationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBotChannelAssociationResponse)

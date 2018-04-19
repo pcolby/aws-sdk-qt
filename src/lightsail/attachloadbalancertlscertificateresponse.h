@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachLoadBalancerTlsCertificateResponse : public LightsailRe
 public:
     AttachLoadBalancerTlsCertificateResponse(const AttachLoadBalancerTlsCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachLoadBalancerTlsCertificateRequest * request() const;
+    virtual const AttachLoadBalancerTlsCertificateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AttachLoadBalancerTlsCertificateResponse)

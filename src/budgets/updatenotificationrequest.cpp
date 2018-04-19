@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * UpdateNotificationRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateNotificationRequestPrivate object for Budgets \a action with,
- * public implementation \a q.
+ * Constructs a UpdateNotificationRequestPrivate object for Budgets \a action,
+ * with public implementation \a q.
  */
 UpdateNotificationRequestPrivate::UpdateNotificationRequestPrivate(
     const BudgetsRequest::Action action, UpdateNotificationRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetShardIteratorRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetShardIteratorRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a GetShardIteratorRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 GetShardIteratorRequestPrivate::GetShardIteratorRequestPrivate(
     const KinesisRequest::Action action, GetShardIteratorRequest * const q)

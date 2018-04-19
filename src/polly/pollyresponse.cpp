@@ -28,16 +28,13 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::PollyResponse
- *
  * \brief The PollyResponse class provides an interface for Polly responses.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @brief  Constructs a new PollyResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a PollyResponse object with parent \a parent.
  */
 PollyResponse::PollyResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new PollyResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ PollyResponse::PollyResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PollyResponse object.
- *
+ * \internal
+ * Constructs a PollyResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from PollyResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 PollyResponse::PollyResponse(PollyResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ PollyResponse::PollyResponse(PollyResponsePrivate * const d, QObject * const par
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void PollyResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void PollyResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Polly::PollyResponsePrivate
+ * \brief The PollyResponsePrivate class provides private implementation for PollyResponse.
+ * \internal
  *
- * @class  PollyResponsePrivate
- *
- * @brief  Private implementation for PollyResponse.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PollyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PollyResponse instance.
+ * Constructs a PollyResponsePrivate object with public implementation \a q.
  */
 PollyResponsePrivate::PollyResponsePrivate(
     PollyResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

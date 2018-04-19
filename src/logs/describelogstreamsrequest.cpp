@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeLogStreamsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeLogStreamsRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeLogStreamsRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DescribeLogStreamsRequestPrivate::DescribeLogStreamsRequestPrivate(
     const CloudWatchLogsRequest::Action action, DescribeLogStreamsRequest * const q)

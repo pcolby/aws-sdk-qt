@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * TestMetricFilterRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a TestMetricFilterRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a TestMetricFilterRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 TestMetricFilterRequestPrivate::TestMetricFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, TestMetricFilterRequest * const q)

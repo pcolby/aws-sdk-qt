@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationJobRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteReplicationJobRequestPrivate object for SMS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteReplicationJobRequestPrivate object for SMS \a action,
+ * with public implementation \a q.
  */
 DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
     const SMSRequest::Action action, DeleteReplicationJobRequest * const q)

@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetDevicePoolCompatibilityResponse
- *
  * \brief The GetDevicePoolCompatibilityResponse class provides an interace for DeviceFarm GetDevicePoolCompatibility responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetDevicePoolCompatibilityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDevicePoolCompatibilityResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDevicePoolCompatibilityResponse::GetDevicePoolCompatibilityResponse(
         const GetDevicePoolCompatibilityRequest &request,
@@ -57,6 +52,9 @@ GetDevicePoolCompatibilityResponse::GetDevicePoolCompatibilityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDevicePoolCompatibilityRequest * GetDevicePoolCompatibilityResponse::request() const
 {
     Q_D(const GetDevicePoolCompatibilityResponse);
@@ -64,9 +62,8 @@ const GetDevicePoolCompatibilityRequest * GetDevicePoolCompatibilityResponse::re
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetDevicePoolCompatibility response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetDevicePoolCompatibility \a response.
  */
 void GetDevicePoolCompatibilityResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetDevicePoolCompatibilityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetDevicePoolCompatibilityResponsePrivate
+ * \brief The GetDevicePoolCompatibilityResponsePrivate class provides private implementation for GetDevicePoolCompatibilityResponse.
  * \internal
  *
- * \class GetDevicePoolCompatibilityResponsePrivate
- *
- * \brief Private implementation for GetDevicePoolCompatibilityResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDevicePoolCompatibilityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDevicePoolCompatibilityResponse instance.
+ * Constructs a GetDevicePoolCompatibilityResponsePrivate object with public implementation \a q.
  */
 GetDevicePoolCompatibilityResponsePrivate::GetDevicePoolCompatibilityResponsePrivate(
     GetDevicePoolCompatibilityResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetDevicePoolCompatibilityResponsePrivate::GetDevicePoolCompatibilityResponsePri
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetDevicePoolCompatibilityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetDevicePoolCompatibility response element from \a xml.
  */
 void GetDevicePoolCompatibilityResponsePrivate::parseGetDevicePoolCompatibilityResponse(QXmlStreamReader &xml)
 {

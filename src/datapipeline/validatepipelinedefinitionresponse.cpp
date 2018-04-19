@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::ValidatePipelineDefinitionResponse
- *
  * \brief The ValidatePipelineDefinitionResponse class provides an interace for DataPipeline ValidatePipelineDefinition responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new ValidatePipelineDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ValidatePipelineDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 ValidatePipelineDefinitionResponse::ValidatePipelineDefinitionResponse(
         const ValidatePipelineDefinitionRequest &request,
@@ -73,6 +68,9 @@ ValidatePipelineDefinitionResponse::ValidatePipelineDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ValidatePipelineDefinitionRequest * ValidatePipelineDefinitionResponse::request() const
 {
     Q_D(const ValidatePipelineDefinitionResponse);
@@ -80,9 +78,8 @@ const ValidatePipelineDefinitionRequest * ValidatePipelineDefinitionResponse::re
 }
 
 /*!
- * @brief  Parse a DataPipeline ValidatePipelineDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline ValidatePipelineDefinition \a response.
  */
 void ValidatePipelineDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void ValidatePipelineDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::ValidatePipelineDefinitionResponsePrivate
+ * \brief The ValidatePipelineDefinitionResponsePrivate class provides private implementation for ValidatePipelineDefinitionResponse.
  * \internal
  *
- * \class ValidatePipelineDefinitionResponsePrivate
- *
- * \brief Private implementation for ValidatePipelineDefinitionResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ValidatePipelineDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ValidatePipelineDefinitionResponse instance.
+ * Constructs a ValidatePipelineDefinitionResponsePrivate object with public implementation \a q.
  */
 ValidatePipelineDefinitionResponsePrivate::ValidatePipelineDefinitionResponsePrivate(
     ValidatePipelineDefinitionResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ ValidatePipelineDefinitionResponsePrivate::ValidatePipelineDefinitionResponsePri
 }
 
 /*!
- * @brief  Parse an DataPipeline ValidatePipelineDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline ValidatePipelineDefinition response element from \a xml.
  */
 void ValidatePipelineDefinitionResponsePrivate::parseValidatePipelineDefinitionResponse(QXmlStreamReader &xml)
 {

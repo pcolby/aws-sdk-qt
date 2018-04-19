@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAggregationAuthorizationsResponse : public ConfigServ
 public:
     DescribeAggregationAuthorizationsResponse(const DescribeAggregationAuthorizationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAggregationAuthorizationsRequest * request() const;
+    virtual const DescribeAggregationAuthorizationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAggregationAuthorizationsResponse)

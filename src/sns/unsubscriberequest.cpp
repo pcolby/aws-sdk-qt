@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * UnsubscribeRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UnsubscribeRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a UnsubscribeRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 UnsubscribeRequestPrivate::UnsubscribeRequestPrivate(
     const SNSRequest::Action action, UnsubscribeRequest * const q)

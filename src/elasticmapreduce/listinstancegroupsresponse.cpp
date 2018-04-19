@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ListInstanceGroupsResponse
- *
  * \brief The ListInstanceGroupsResponse class provides an interace for EMR ListInstanceGroups responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ListInstanceGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListInstanceGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListInstanceGroupsResponse::ListInstanceGroupsResponse(
         const ListInstanceGroupsRequest &request,
@@ -58,6 +53,9 @@ ListInstanceGroupsResponse::ListInstanceGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListInstanceGroupsRequest * ListInstanceGroupsResponse::request() const
 {
     Q_D(const ListInstanceGroupsResponse);
@@ -65,9 +63,8 @@ const ListInstanceGroupsRequest * ListInstanceGroupsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR ListInstanceGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR ListInstanceGroups \a response.
  */
 void ListInstanceGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListInstanceGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::ListInstanceGroupsResponsePrivate
+ * \brief The ListInstanceGroupsResponsePrivate class provides private implementation for ListInstanceGroupsResponse.
  * \internal
  *
- * \class ListInstanceGroupsResponsePrivate
- *
- * \brief Private implementation for ListInstanceGroupsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInstanceGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListInstanceGroupsResponse instance.
+ * Constructs a ListInstanceGroupsResponsePrivate object with public implementation \a q.
  */
 ListInstanceGroupsResponsePrivate::ListInstanceGroupsResponsePrivate(
     ListInstanceGroupsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ ListInstanceGroupsResponsePrivate::ListInstanceGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR ListInstanceGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR ListInstanceGroups response element from \a xml.
  */
 void ListInstanceGroupsResponsePrivate::parseListInstanceGroupsResponse(QXmlStreamReader &xml)
 {

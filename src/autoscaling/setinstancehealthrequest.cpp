@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * SetInstanceHealthRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a SetInstanceHealthRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a SetInstanceHealthRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 SetInstanceHealthRequestPrivate::SetInstanceHealthRequestPrivate(
     const AutoScalingRequest::Action action, SetInstanceHealthRequest * const q)

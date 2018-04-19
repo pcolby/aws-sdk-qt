@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeObjectsResponse : public DataPipelineResponse {
 public:
     DescribeObjectsResponse(const DescribeObjectsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeObjectsRequest * request() const;
+    virtual const DescribeObjectsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeObjectsResponse)

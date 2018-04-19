@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeletePipelineRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeletePipelineRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a DeletePipelineRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
     const ElasticTranscoderRequest::Action action, DeletePipelineRequest * const q)

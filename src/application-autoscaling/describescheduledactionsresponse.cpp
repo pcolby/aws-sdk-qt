@@ -29,10 +29,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::DescribeScheduledActionsResponse
- *
  * \brief The DescribeScheduledActionsResponse class provides an interace for ApplicationAutoScaling DescribeScheduledActions responses.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -112,11 +111,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeScheduledActionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeScheduledActionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeScheduledActionsResponse::DescribeScheduledActionsResponse(
         const DescribeScheduledActionsRequest &request,
@@ -128,6 +123,9 @@ DescribeScheduledActionsResponse::DescribeScheduledActionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeScheduledActionsRequest * DescribeScheduledActionsResponse::request() const
 {
     Q_D(const DescribeScheduledActionsResponse);
@@ -135,9 +133,8 @@ const DescribeScheduledActionsRequest * DescribeScheduledActionsResponse::reques
 }
 
 /*!
- * @brief  Parse a ApplicationAutoScaling DescribeScheduledActions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationAutoScaling DescribeScheduledActions \a response.
  */
 void DescribeScheduledActionsResponse::parseSuccess(QIODevice &response)
 {
@@ -147,19 +144,15 @@ void DescribeScheduledActionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationAutoScaling::DescribeScheduledActionsResponsePrivate
+ * \brief The DescribeScheduledActionsResponsePrivate class provides private implementation for DescribeScheduledActionsResponse.
  * \internal
  *
- * \class DescribeScheduledActionsResponsePrivate
- *
- * \brief Private implementation for DescribeScheduledActionsResponse.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScheduledActionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeScheduledActionsResponse instance.
+ * Constructs a DescribeScheduledActionsResponsePrivate object with public implementation \a q.
  */
 DescribeScheduledActionsResponsePrivate::DescribeScheduledActionsResponsePrivate(
     DescribeScheduledActionsResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
@@ -168,9 +161,7 @@ DescribeScheduledActionsResponsePrivate::DescribeScheduledActionsResponsePrivate
 }
 
 /*!
- * @brief  Parse an ApplicationAutoScaling DescribeScheduledActionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationAutoScaling DescribeScheduledActions response element from \a xml.
  */
 void DescribeScheduledActionsResponsePrivate::parseDescribeScheduledActionsResponse(QXmlStreamReader &xml)
 {

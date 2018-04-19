@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteAppResponse
- *
  * \brief The DeleteAppResponse class provides an interace for Pinpoint DeleteApp responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteApp
  */
 
 /*!
- * @brief  Constructs a new DeleteAppResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAppResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAppResponse::DeleteAppResponse(
         const DeleteAppRequest &request,
@@ -55,6 +50,9 @@ DeleteAppResponse::DeleteAppResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAppRequest * DeleteAppResponse::request() const
 {
     Q_D(const DeleteAppResponse);
@@ -62,9 +60,8 @@ const DeleteAppRequest * DeleteAppResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint DeleteApp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint DeleteApp \a response.
  */
 void DeleteAppResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteAppResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::DeleteAppResponsePrivate
+ * \brief The DeleteAppResponsePrivate class provides private implementation for DeleteAppResponse.
  * \internal
  *
- * \class DeleteAppResponsePrivate
- *
- * \brief Private implementation for DeleteAppResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAppResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAppResponse instance.
+ * Constructs a DeleteAppResponsePrivate object with public implementation \a q.
  */
 DeleteAppResponsePrivate::DeleteAppResponsePrivate(
     DeleteAppResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteAppResponsePrivate::DeleteAppResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint DeleteAppResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint DeleteApp response element from \a xml.
  */
 void DeleteAppResponsePrivate::parseDeleteAppResponse(QXmlStreamReader &xml)
 {

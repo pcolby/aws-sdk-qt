@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionFilterRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteSubscriptionFilterRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSubscriptionFilterRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DeleteSubscriptionFilterRequestPrivate::DeleteSubscriptionFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteSubscriptionFilterRequest * const q)

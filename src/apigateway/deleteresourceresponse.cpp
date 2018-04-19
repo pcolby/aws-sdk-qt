@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteResourceResponse
- *
  * \brief The DeleteResourceResponse class provides an interace for APIGateway DeleteResource responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteResourceResponse::DeleteResourceResponse(
         const DeleteResourceRequest &request,
@@ -60,6 +55,9 @@ DeleteResourceResponse::DeleteResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteResourceRequest * DeleteResourceResponse::request() const
 {
     Q_D(const DeleteResourceResponse);
@@ -67,9 +65,8 @@ const DeleteResourceRequest * DeleteResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteResource \a response.
  */
 void DeleteResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteResourceResponsePrivate
+ * \brief The DeleteResourceResponsePrivate class provides private implementation for DeleteResourceResponse.
  * \internal
  *
- * \class DeleteResourceResponsePrivate
- *
- * \brief Private implementation for DeleteResourceResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteResourceResponse instance.
+ * Constructs a DeleteResourceResponsePrivate object with public implementation \a q.
  */
 DeleteResourceResponsePrivate::DeleteResourceResponsePrivate(
     DeleteResourceResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteResourceResponsePrivate::DeleteResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteResource response element from \a xml.
  */
 void DeleteResourceResponsePrivate::parseDeleteResourceResponse(QXmlStreamReader &xml)
 {

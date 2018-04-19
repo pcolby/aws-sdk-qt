@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::ListHITsForQualificationTypeResponse
- *
  * \brief The ListHITsForQualificationTypeResponse class provides an interace for MTurk ListHITsForQualificationType responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::listHITsForQualificationType
  */
 
 /*!
- * @brief  Constructs a new ListHITsForQualificationTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListHITsForQualificationTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 ListHITsForQualificationTypeResponse::ListHITsForQualificationTypeResponse(
         const ListHITsForQualificationTypeRequest &request,
@@ -55,6 +50,9 @@ ListHITsForQualificationTypeResponse::ListHITsForQualificationTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListHITsForQualificationTypeRequest * ListHITsForQualificationTypeResponse::request() const
 {
     Q_D(const ListHITsForQualificationTypeResponse);
@@ -62,9 +60,8 @@ const ListHITsForQualificationTypeRequest * ListHITsForQualificationTypeResponse
 }
 
 /*!
- * @brief  Parse a MTurk ListHITsForQualificationType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk ListHITsForQualificationType \a response.
  */
 void ListHITsForQualificationTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListHITsForQualificationTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::ListHITsForQualificationTypeResponsePrivate
+ * \brief The ListHITsForQualificationTypeResponsePrivate class provides private implementation for ListHITsForQualificationTypeResponse.
  * \internal
  *
- * \class ListHITsForQualificationTypeResponsePrivate
- *
- * \brief Private implementation for ListHITsForQualificationTypeResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHITsForQualificationTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListHITsForQualificationTypeResponse instance.
+ * Constructs a ListHITsForQualificationTypeResponsePrivate object with public implementation \a q.
  */
 ListHITsForQualificationTypeResponsePrivate::ListHITsForQualificationTypeResponsePrivate(
     ListHITsForQualificationTypeResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ ListHITsForQualificationTypeResponsePrivate::ListHITsForQualificationTypeRespons
 }
 
 /*!
- * @brief  Parse an MTurk ListHITsForQualificationTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk ListHITsForQualificationType response element from \a xml.
  */
 void ListHITsForQualificationTypeResponsePrivate::parseListHITsForQualificationTypeResponse(QXmlStreamReader &xml)
 {

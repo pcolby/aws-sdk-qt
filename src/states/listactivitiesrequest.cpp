@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * ListActivitiesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListActivitiesRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a ListActivitiesRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 ListActivitiesRequestPrivate::ListActivitiesRequestPrivate(
     const SFNRequest::Action action, ListActivitiesRequest * const q)

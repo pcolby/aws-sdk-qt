@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDevicePoolRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteDevicePoolRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDevicePoolRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 DeleteDevicePoolRequestPrivate::DeleteDevicePoolRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteDevicePoolRequest * const q)

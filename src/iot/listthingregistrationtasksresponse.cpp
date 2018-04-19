@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListThingRegistrationTasksResponse
- *
  * \brief The ListThingRegistrationTasksResponse class provides an interace for IoT ListThingRegistrationTasks responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListThingRegistrationTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListThingRegistrationTasksResponse object for \a reply to \a request, with parent \a parent.
  */
 ListThingRegistrationTasksResponse::ListThingRegistrationTasksResponse(
         const ListThingRegistrationTasksRequest &request,
@@ -66,6 +61,9 @@ ListThingRegistrationTasksResponse::ListThingRegistrationTasksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListThingRegistrationTasksRequest * ListThingRegistrationTasksResponse::request() const
 {
     Q_D(const ListThingRegistrationTasksResponse);
@@ -73,9 +71,8 @@ const ListThingRegistrationTasksRequest * ListThingRegistrationTasksResponse::re
 }
 
 /*!
- * @brief  Parse a IoT ListThingRegistrationTasks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListThingRegistrationTasks \a response.
  */
 void ListThingRegistrationTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListThingRegistrationTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListThingRegistrationTasksResponsePrivate
+ * \brief The ListThingRegistrationTasksResponsePrivate class provides private implementation for ListThingRegistrationTasksResponse.
  * \internal
  *
- * \class ListThingRegistrationTasksResponsePrivate
- *
- * \brief Private implementation for ListThingRegistrationTasksResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListThingRegistrationTasksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListThingRegistrationTasksResponse instance.
+ * Constructs a ListThingRegistrationTasksResponsePrivate object with public implementation \a q.
  */
 ListThingRegistrationTasksResponsePrivate::ListThingRegistrationTasksResponsePrivate(
     ListThingRegistrationTasksResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListThingRegistrationTasksResponsePrivate::ListThingRegistrationTasksResponsePri
 }
 
 /*!
- * @brief  Parse an IoT ListThingRegistrationTasksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListThingRegistrationTasks response element from \a xml.
  */
 void ListThingRegistrationTasksResponsePrivate::parseListThingRegistrationTasksResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::DeregisterJobDefinitionResponse
- *
  * \brief The DeregisterJobDefinitionResponse class provides an interace for Batch DeregisterJobDefinition responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new DeregisterJobDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterJobDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterJobDefinitionResponse::DeregisterJobDefinitionResponse(
         const DeregisterJobDefinitionRequest &request,
@@ -69,6 +64,9 @@ DeregisterJobDefinitionResponse::DeregisterJobDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterJobDefinitionRequest * DeregisterJobDefinitionResponse::request() const
 {
     Q_D(const DeregisterJobDefinitionResponse);
@@ -76,9 +74,8 @@ const DeregisterJobDefinitionRequest * DeregisterJobDefinitionResponse::request(
 }
 
 /*!
- * @brief  Parse a Batch DeregisterJobDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch DeregisterJobDefinition \a response.
  */
 void DeregisterJobDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeregisterJobDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::DeregisterJobDefinitionResponsePrivate
+ * \brief The DeregisterJobDefinitionResponsePrivate class provides private implementation for DeregisterJobDefinitionResponse.
  * \internal
  *
- * \class DeregisterJobDefinitionResponsePrivate
- *
- * \brief Private implementation for DeregisterJobDefinitionResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterJobDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterJobDefinitionResponse instance.
+ * Constructs a DeregisterJobDefinitionResponsePrivate object with public implementation \a q.
  */
 DeregisterJobDefinitionResponsePrivate::DeregisterJobDefinitionResponsePrivate(
     DeregisterJobDefinitionResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ DeregisterJobDefinitionResponsePrivate::DeregisterJobDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Batch DeregisterJobDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch DeregisterJobDefinition response element from \a xml.
  */
 void DeregisterJobDefinitionResponsePrivate::parseDeregisterJobDefinitionResponse(QXmlStreamReader &xml)
 {

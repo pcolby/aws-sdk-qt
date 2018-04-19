@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * PutRetentionPolicyRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a PutRetentionPolicyRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a PutRetentionPolicyRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 PutRetentionPolicyRequestPrivate::PutRetentionPolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutRetentionPolicyRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * AddTagsToStreamRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a AddTagsToStreamRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a AddTagsToStreamRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 AddTagsToStreamRequestPrivate::AddTagsToStreamRequestPrivate(
     const KinesisRequest::Action action, AddTagsToStreamRequest * const q)

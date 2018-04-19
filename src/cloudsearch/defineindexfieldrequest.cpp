@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DefineIndexFieldRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DefineIndexFieldRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DefineIndexFieldRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DefineIndexFieldRequestPrivate::DefineIndexFieldRequestPrivate(
     const CloudSearchRequest::Action action, DefineIndexFieldRequest * const q)

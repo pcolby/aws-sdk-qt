@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SetIdentityDkimEnabledRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a SetIdentityDkimEnabledRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a SetIdentityDkimEnabledRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 SetIdentityDkimEnabledRequestPrivate::SetIdentityDkimEnabledRequestPrivate(
     const SESRequest::Action action, SetIdentityDkimEnabledRequest * const q)

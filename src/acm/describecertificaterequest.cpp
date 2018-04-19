@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCertificateRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeCertificateRequestPrivate object for ACM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCertificateRequestPrivate object for ACM \a action,
+ * with public implementation \a q.
  */
 DescribeCertificateRequestPrivate::DescribeCertificateRequestPrivate(
     const ACMRequest::Action action, DescribeCertificateRequest * const q)

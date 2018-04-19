@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * UpdateBrokerRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UpdateBrokerRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a UpdateBrokerRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 UpdateBrokerRequestPrivate::UpdateBrokerRequestPrivate(
     const MQRequest::Action action, UpdateBrokerRequest * const q)

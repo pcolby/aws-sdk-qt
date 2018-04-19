@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * UpdateInstanceCustomHealthStatusRequest::resp
  */
 
 /*!
- *
- * Constructs a UpdateInstanceCustomHealthStatusRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a UpdateInstanceCustomHealthStatusRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatusRequestPrivate(
     const ServiceDiscoveryRequest::Action action, UpdateInstanceCustomHealthStatusRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AuthorizeSecurityGroupEgressResponse
- *
  * \brief The AuthorizeSecurityGroupEgressResponse class provides an interace for EC2 AuthorizeSecurityGroupEgress responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AuthorizeSecurityGroupEgressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AuthorizeSecurityGroupEgressResponse object for \a reply to \a request, with parent \a parent.
  */
 AuthorizeSecurityGroupEgressResponse::AuthorizeSecurityGroupEgressResponse(
         const AuthorizeSecurityGroupEgressRequest &request,
@@ -59,6 +54,9 @@ AuthorizeSecurityGroupEgressResponse::AuthorizeSecurityGroupEgressResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AuthorizeSecurityGroupEgressRequest * AuthorizeSecurityGroupEgressResponse::request() const
 {
     Q_D(const AuthorizeSecurityGroupEgressResponse);
@@ -66,9 +64,8 @@ const AuthorizeSecurityGroupEgressRequest * AuthorizeSecurityGroupEgressResponse
 }
 
 /*!
- * @brief  Parse a EC2 AuthorizeSecurityGroupEgress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AuthorizeSecurityGroupEgress \a response.
  */
 void AuthorizeSecurityGroupEgressResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AuthorizeSecurityGroupEgressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AuthorizeSecurityGroupEgressResponsePrivate
+ * \brief The AuthorizeSecurityGroupEgressResponsePrivate class provides private implementation for AuthorizeSecurityGroupEgressResponse.
  * \internal
  *
- * \class AuthorizeSecurityGroupEgressResponsePrivate
- *
- * \brief Private implementation for AuthorizeSecurityGroupEgressResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AuthorizeSecurityGroupEgressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AuthorizeSecurityGroupEgressResponse instance.
+ * Constructs a AuthorizeSecurityGroupEgressResponsePrivate object with public implementation \a q.
  */
 AuthorizeSecurityGroupEgressResponsePrivate::AuthorizeSecurityGroupEgressResponsePrivate(
     AuthorizeSecurityGroupEgressResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AuthorizeSecurityGroupEgressResponsePrivate::AuthorizeSecurityGroupEgressRespons
 }
 
 /*!
- * @brief  Parse an EC2 AuthorizeSecurityGroupEgressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AuthorizeSecurityGroupEgress response element from \a xml.
  */
 void AuthorizeSecurityGroupEgressResponsePrivate::parseAuthorizeSecurityGroupEgressResponse(QXmlStreamReader &xml)
 {

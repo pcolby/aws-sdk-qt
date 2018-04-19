@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DeletePatchBaselineRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeletePatchBaselineRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DeletePatchBaselineRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DeletePatchBaselineRequestPrivate::DeletePatchBaselineRequestPrivate(
     const SSMRequest::Action action, DeletePatchBaselineRequest * const q)

@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminSetUserSettingsResponse
- *
  * \brief The AdminSetUserSettingsResponse class provides an interace for CognitoIdentityProvider AdminSetUserSettings responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminSetUserSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminSetUserSettingsResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminSetUserSettingsResponse::AdminSetUserSettingsResponse(
         const AdminSetUserSettingsRequest &request,
@@ -65,6 +60,9 @@ AdminSetUserSettingsResponse::AdminSetUserSettingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminSetUserSettingsRequest * AdminSetUserSettingsResponse::request() const
 {
     Q_D(const AdminSetUserSettingsResponse);
@@ -72,9 +70,8 @@ const AdminSetUserSettingsRequest * AdminSetUserSettingsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminSetUserSettings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminSetUserSettings \a response.
  */
 void AdminSetUserSettingsResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminSetUserSettingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminSetUserSettingsResponsePrivate
+ * \brief The AdminSetUserSettingsResponsePrivate class provides private implementation for AdminSetUserSettingsResponse.
  * \internal
  *
- * \class AdminSetUserSettingsResponsePrivate
- *
- * \brief Private implementation for AdminSetUserSettingsResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminSetUserSettingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminSetUserSettingsResponse instance.
+ * Constructs a AdminSetUserSettingsResponsePrivate object with public implementation \a q.
  */
 AdminSetUserSettingsResponsePrivate::AdminSetUserSettingsResponsePrivate(
     AdminSetUserSettingsResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminSetUserSettingsResponsePrivate::AdminSetUserSettingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminSetUserSettingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminSetUserSettings response element from \a xml.
  */
 void AdminSetUserSettingsResponsePrivate::parseAdminSetUserSettingsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DisassociateDeviceFromRoomResponse
- *
  * \brief The DisassociateDeviceFromRoomResponse class provides an interace for AlexaForBusiness DisassociateDeviceFromRoom responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DisassociateDeviceFromRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateDeviceFromRoomResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateDeviceFromRoomResponse::DisassociateDeviceFromRoomResponse(
         const DisassociateDeviceFromRoomRequest &request,
@@ -60,6 +55,9 @@ DisassociateDeviceFromRoomResponse::DisassociateDeviceFromRoomResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateDeviceFromRoomRequest * DisassociateDeviceFromRoomResponse::request() const
 {
     Q_D(const DisassociateDeviceFromRoomResponse);
@@ -67,9 +65,8 @@ const DisassociateDeviceFromRoomRequest * DisassociateDeviceFromRoomResponse::re
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness DisassociateDeviceFromRoom response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness DisassociateDeviceFromRoom \a response.
  */
 void DisassociateDeviceFromRoomResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DisassociateDeviceFromRoomResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::DisassociateDeviceFromRoomResponsePrivate
+ * \brief The DisassociateDeviceFromRoomResponsePrivate class provides private implementation for DisassociateDeviceFromRoomResponse.
  * \internal
  *
- * \class DisassociateDeviceFromRoomResponsePrivate
- *
- * \brief Private implementation for DisassociateDeviceFromRoomResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateDeviceFromRoomResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateDeviceFromRoomResponse instance.
+ * Constructs a DisassociateDeviceFromRoomResponsePrivate object with public implementation \a q.
  */
 DisassociateDeviceFromRoomResponsePrivate::DisassociateDeviceFromRoomResponsePrivate(
     DisassociateDeviceFromRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ DisassociateDeviceFromRoomResponsePrivate::DisassociateDeviceFromRoomResponsePri
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness DisassociateDeviceFromRoomResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness DisassociateDeviceFromRoom response element from \a xml.
  */
 void DisassociateDeviceFromRoomResponsePrivate::parseDisassociateDeviceFromRoomResponse(QXmlStreamReader &xml)
 {

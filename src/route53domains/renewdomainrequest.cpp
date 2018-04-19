@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * RenewDomainRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a RenewDomainRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a RenewDomainRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 RenewDomainRequestPrivate::RenewDomainRequestPrivate(
     const Route53DomainsRequest::Action action, RenewDomainRequest * const q)

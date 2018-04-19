@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetRuleResponse
- *
  * \brief The GetRuleResponse class provides an interace for WAFRegional GetRule responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRuleResponse::GetRuleResponse(
         const GetRuleRequest &request,
@@ -62,6 +57,9 @@ GetRuleResponse::GetRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRuleRequest * GetRuleResponse::request() const
 {
     Q_D(const GetRuleResponse);
@@ -69,9 +67,8 @@ const GetRuleRequest * GetRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional GetRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional GetRule \a response.
  */
 void GetRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::GetRuleResponsePrivate
+ * \brief The GetRuleResponsePrivate class provides private implementation for GetRuleResponse.
  * \internal
  *
- * \class GetRuleResponsePrivate
- *
- * \brief Private implementation for GetRuleResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRuleResponse instance.
+ * Constructs a GetRuleResponsePrivate object with public implementation \a q.
  */
 GetRuleResponsePrivate::GetRuleResponsePrivate(
     GetRuleResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ GetRuleResponsePrivate::GetRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional GetRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional GetRule response element from \a xml.
  */
 void GetRuleResponsePrivate::parseGetRuleResponse(QXmlStreamReader &xml)
 {

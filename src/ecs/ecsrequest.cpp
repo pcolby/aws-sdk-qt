@@ -70,7 +70,7 @@ namespace ECS {
  */
 
 /*!
- * Constructs a[n] ECSRequest object for ECS \a action.
+ * Constructs a ECSRequest object for ECS \a action.
  */
 ECSRequest::ECSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ECSRequestPrivate(action, this))
@@ -270,8 +270,8 @@ QNetworkRequest ECSRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a ECSRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a ECSRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 ECSRequestPrivate::ECSRequestPrivate(const ECSRequest::Action action, ECSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

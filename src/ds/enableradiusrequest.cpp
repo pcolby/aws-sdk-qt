@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * EnableRadiusRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a EnableRadiusRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a EnableRadiusRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 EnableRadiusRequestPrivate::EnableRadiusRequestPrivate(
     const DirectoryServiceRequest::Action action, EnableRadiusRequest * const q)

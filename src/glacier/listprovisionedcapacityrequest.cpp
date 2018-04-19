@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * ListProvisionedCapacityRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListProvisionedCapacityRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a ListProvisionedCapacityRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 ListProvisionedCapacityRequestPrivate::ListProvisionedCapacityRequestPrivate(
     const GlacierRequest::Action action, ListProvisionedCapacityRequest * const q)

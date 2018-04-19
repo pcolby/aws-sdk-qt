@@ -135,9 +135,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentMembershipsRequest::respon
  */
 
 /*!
- *
- * Constructs a DescribeEnvironmentMembershipsRequestPrivate object for Cloud9 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEnvironmentMembershipsRequestPrivate object for Cloud9 \a action,
+ * with public implementation \a q.
  */
 DescribeEnvironmentMembershipsRequestPrivate::DescribeEnvironmentMembershipsRequestPrivate(
     const Cloud9Request::Action action, DescribeEnvironmentMembershipsRequest * const q)

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateMethodResponseResponse
- *
  * \brief The UpdateMethodResponseResponse class provides an interace for APIGateway UpdateMethodResponse responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateMethodResponseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateMethodResponseResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateMethodResponseResponse::UpdateMethodResponseResponse(
         const UpdateMethodResponseRequest &request,
@@ -60,6 +55,9 @@ UpdateMethodResponseResponse::UpdateMethodResponseResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateMethodResponseRequest * UpdateMethodResponseResponse::request() const
 {
     Q_D(const UpdateMethodResponseResponse);
@@ -67,9 +65,8 @@ const UpdateMethodResponseRequest * UpdateMethodResponseResponse::request() cons
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateMethodResponse response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateMethodResponse \a response.
  */
 void UpdateMethodResponseResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateMethodResponseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateMethodResponseResponsePrivate
+ * \brief The UpdateMethodResponseResponsePrivate class provides private implementation for UpdateMethodResponseResponse.
  * \internal
  *
- * \class UpdateMethodResponseResponsePrivate
- *
- * \brief Private implementation for UpdateMethodResponseResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateMethodResponseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateMethodResponseResponse instance.
+ * Constructs a UpdateMethodResponseResponsePrivate object with public implementation \a q.
  */
 UpdateMethodResponseResponsePrivate::UpdateMethodResponseResponsePrivate(
     UpdateMethodResponseResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateMethodResponseResponsePrivate::UpdateMethodResponseResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateMethodResponseResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateMethodResponse response element from \a xml.
  */
 void UpdateMethodResponseResponsePrivate::parseUpdateMethodResponseResponse(QXmlStreamReader &xml)
 {

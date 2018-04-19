@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartAssessmentRunResponse : public InspectorResponse {
 public:
     StartAssessmentRunResponse(const StartAssessmentRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartAssessmentRunRequest * request() const;
+    virtual const StartAssessmentRunRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartAssessmentRunResponse)

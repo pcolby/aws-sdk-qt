@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::GetEventSourceMappingResponse
- *
  * \brief The GetEventSourceMappingResponse class provides an interace for Lambda GetEventSourceMapping responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new GetEventSourceMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetEventSourceMappingResponse object for \a reply to \a request, with parent \a parent.
  */
 GetEventSourceMappingResponse::GetEventSourceMappingResponse(
         const GetEventSourceMappingRequest &request,
@@ -66,6 +61,9 @@ GetEventSourceMappingResponse::GetEventSourceMappingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetEventSourceMappingRequest * GetEventSourceMappingResponse::request() const
 {
     Q_D(const GetEventSourceMappingResponse);
@@ -73,9 +71,8 @@ const GetEventSourceMappingRequest * GetEventSourceMappingResponse::request() co
 }
 
 /*!
- * @brief  Parse a Lambda GetEventSourceMapping response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda GetEventSourceMapping \a response.
  */
 void GetEventSourceMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetEventSourceMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::GetEventSourceMappingResponsePrivate
+ * \brief The GetEventSourceMappingResponsePrivate class provides private implementation for GetEventSourceMappingResponse.
  * \internal
  *
- * \class GetEventSourceMappingResponsePrivate
- *
- * \brief Private implementation for GetEventSourceMappingResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEventSourceMappingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetEventSourceMappingResponse instance.
+ * Constructs a GetEventSourceMappingResponsePrivate object with public implementation \a q.
  */
 GetEventSourceMappingResponsePrivate::GetEventSourceMappingResponsePrivate(
     GetEventSourceMappingResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ GetEventSourceMappingResponsePrivate::GetEventSourceMappingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda GetEventSourceMappingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda GetEventSourceMapping response element from \a xml.
  */
 void GetEventSourceMappingResponsePrivate::parseGetEventSourceMappingResponse(QXmlStreamReader &xml)
 {

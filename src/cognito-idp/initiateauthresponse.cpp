@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::InitiateAuthResponse
- *
  * \brief The InitiateAuthResponse class provides an interace for CognitoIdentityProvider InitiateAuth responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new InitiateAuthResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a InitiateAuthResponse object for \a reply to \a request, with parent \a parent.
  */
 InitiateAuthResponse::InitiateAuthResponse(
         const InitiateAuthRequest &request,
@@ -65,6 +60,9 @@ InitiateAuthResponse::InitiateAuthResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const InitiateAuthRequest * InitiateAuthResponse::request() const
 {
     Q_D(const InitiateAuthResponse);
@@ -72,9 +70,8 @@ const InitiateAuthRequest * InitiateAuthResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider InitiateAuth response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider InitiateAuth \a response.
  */
 void InitiateAuthResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void InitiateAuthResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::InitiateAuthResponsePrivate
+ * \brief The InitiateAuthResponsePrivate class provides private implementation for InitiateAuthResponse.
  * \internal
  *
- * \class InitiateAuthResponsePrivate
- *
- * \brief Private implementation for InitiateAuthResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InitiateAuthResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InitiateAuthResponse instance.
+ * Constructs a InitiateAuthResponsePrivate object with public implementation \a q.
  */
 InitiateAuthResponsePrivate::InitiateAuthResponsePrivate(
     InitiateAuthResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ InitiateAuthResponsePrivate::InitiateAuthResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider InitiateAuthResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider InitiateAuth response element from \a xml.
  */
 void InitiateAuthResponsePrivate::parseInitiateAuthResponse(QXmlStreamReader &xml)
 {

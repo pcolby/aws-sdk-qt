@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * GetDocumentPathRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetDocumentPathRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a GetDocumentPathRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 GetDocumentPathRequestPrivate::GetDocumentPathRequestPrivate(
     const WorkDocsRequest::Action action, GetDocumentPathRequest * const q)

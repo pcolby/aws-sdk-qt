@@ -79,7 +79,7 @@ namespace ElastiCache {
  */
 
 /*!
- * Constructs a[n] ElastiCacheRequest object for ElastiCache \a action.
+ * Constructs a ElastiCacheRequest object for ElastiCache \a action.
  */
 ElastiCacheRequest::ElastiCacheRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ElastiCacheRequestPrivate(action, this))
@@ -279,8 +279,8 @@ QNetworkRequest ElastiCacheRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a ElastiCacheRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a ElastiCacheRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 ElastiCacheRequestPrivate::ElastiCacheRequestPrivate(const ElastiCacheRequest::Action action, ElastiCacheRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

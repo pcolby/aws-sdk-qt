@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteIntegrationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteIntegrationRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteIntegrationRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteIntegrationRequestPrivate::DeleteIntegrationRequestPrivate(
     const APIGatewayRequest::Action action, DeleteIntegrationRequest * const q)

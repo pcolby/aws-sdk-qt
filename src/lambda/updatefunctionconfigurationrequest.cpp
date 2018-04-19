@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateFunctionConfigurationRequest::response(
  */
 
 /*!
- *
- * Constructs a UpdateFunctionConfigurationRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a UpdateFunctionConfigurationRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 UpdateFunctionConfigurationRequestPrivate::UpdateFunctionConfigurationRequestPrivate(
     const LambdaRequest::Action action, UpdateFunctionConfigurationRequest * const q)

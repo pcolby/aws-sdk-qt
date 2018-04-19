@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * DescribeUserPoolDomainRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeUserPoolDomainRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a DescribeUserPoolDomainRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 DescribeUserPoolDomainRequestPrivate::DescribeUserPoolDomainRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DescribeUserPoolDomainRequest * const q)

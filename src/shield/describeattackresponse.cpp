@@ -29,10 +29,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::DescribeAttackResponse
- *
  * \brief The DescribeAttackResponse class provides an interace for Shield DescribeAttack responses.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -45,11 +44,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new DescribeAttackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAttackResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAttackResponse::DescribeAttackResponse(
         const DescribeAttackRequest &request,
@@ -61,6 +56,9 @@ DescribeAttackResponse::DescribeAttackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAttackRequest * DescribeAttackResponse::request() const
 {
     Q_D(const DescribeAttackResponse);
@@ -68,9 +66,8 @@ const DescribeAttackRequest * DescribeAttackResponse::request() const
 }
 
 /*!
- * @brief  Parse a Shield DescribeAttack response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Shield DescribeAttack \a response.
  */
 void DescribeAttackResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeAttackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Shield::DescribeAttackResponsePrivate
+ * \brief The DescribeAttackResponsePrivate class provides private implementation for DescribeAttackResponse.
  * \internal
  *
- * \class DescribeAttackResponsePrivate
- *
- * \brief Private implementation for DescribeAttackResponse.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAttackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAttackResponse instance.
+ * Constructs a DescribeAttackResponsePrivate object with public implementation \a q.
  */
 DescribeAttackResponsePrivate::DescribeAttackResponsePrivate(
     DescribeAttackResponse * const q) : ShieldResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeAttackResponsePrivate::DescribeAttackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Shield DescribeAttackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Shield DescribeAttack response element from \a xml.
  */
 void DescribeAttackResponsePrivate::parseDescribeAttackResponse(QXmlStreamReader &xml)
 {

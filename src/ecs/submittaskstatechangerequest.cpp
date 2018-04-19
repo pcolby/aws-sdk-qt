@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * SubmitTaskStateChangeRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a SubmitTaskStateChangeRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a SubmitTaskStateChangeRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 SubmitTaskStateChangeRequestPrivate::SubmitTaskStateChangeRequestPrivate(
     const ECSRequest::Action action, SubmitTaskStateChangeRequest * const q)

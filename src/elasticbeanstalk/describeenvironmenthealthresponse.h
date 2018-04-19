@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEnvironmentHealthResponse : public ElasticBeanstalkRe
 public:
     DescribeEnvironmentHealthResponse(const DescribeEnvironmentHealthRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEnvironmentHealthRequest * request() const;
+    virtual const DescribeEnvironmentHealthRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEnvironmentHealthResponse)

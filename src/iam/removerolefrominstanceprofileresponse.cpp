@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::RemoveRoleFromInstanceProfileResponse
- *
  * \brief The RemoveRoleFromInstanceProfileResponse class provides an interace for IAM RemoveRoleFromInstanceProfile responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new RemoveRoleFromInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveRoleFromInstanceProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveRoleFromInstanceProfileResponse::RemoveRoleFromInstanceProfileResponse(
         const RemoveRoleFromInstanceProfileRequest &request,
@@ -120,6 +115,9 @@ RemoveRoleFromInstanceProfileResponse::RemoveRoleFromInstanceProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveRoleFromInstanceProfileRequest * RemoveRoleFromInstanceProfileResponse::request() const
 {
     Q_D(const RemoveRoleFromInstanceProfileResponse);
@@ -127,9 +125,8 @@ const RemoveRoleFromInstanceProfileRequest * RemoveRoleFromInstanceProfileRespon
 }
 
 /*!
- * @brief  Parse a IAM RemoveRoleFromInstanceProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM RemoveRoleFromInstanceProfile \a response.
  */
 void RemoveRoleFromInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void RemoveRoleFromInstanceProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::RemoveRoleFromInstanceProfileResponsePrivate
+ * \brief The RemoveRoleFromInstanceProfileResponsePrivate class provides private implementation for RemoveRoleFromInstanceProfileResponse.
  * \internal
  *
- * \class RemoveRoleFromInstanceProfileResponsePrivate
- *
- * \brief Private implementation for RemoveRoleFromInstanceProfileResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveRoleFromInstanceProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveRoleFromInstanceProfileResponse instance.
+ * Constructs a RemoveRoleFromInstanceProfileResponsePrivate object with public implementation \a q.
  */
 RemoveRoleFromInstanceProfileResponsePrivate::RemoveRoleFromInstanceProfileResponsePrivate(
     RemoveRoleFromInstanceProfileResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ RemoveRoleFromInstanceProfileResponsePrivate::RemoveRoleFromInstanceProfileRespo
 }
 
 /*!
- * @brief  Parse an IAM RemoveRoleFromInstanceProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM RemoveRoleFromInstanceProfile response element from \a xml.
  */
 void RemoveRoleFromInstanceProfileResponsePrivate::parseRemoveRoleFromInstanceProfileResponse(QXmlStreamReader &xml)
 {

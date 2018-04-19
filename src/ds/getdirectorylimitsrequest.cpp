@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * GetDirectoryLimitsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetDirectoryLimitsRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a GetDirectoryLimitsRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 GetDirectoryLimitsRequestPrivate::GetDirectoryLimitsRequestPrivate(
     const DirectoryServiceRequest::Action action, GetDirectoryLimitsRequest * const q)

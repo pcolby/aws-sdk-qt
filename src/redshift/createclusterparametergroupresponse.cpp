@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateClusterParameterGroupResponse
- *
  * \brief The CreateClusterParameterGroupResponse class provides an interace for Redshift CreateClusterParameterGroup responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateClusterParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateClusterParameterGroupResponse::CreateClusterParameterGroupResponse(
         const CreateClusterParameterGroupRequest &request,
@@ -85,6 +80,9 @@ CreateClusterParameterGroupResponse::CreateClusterParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateClusterParameterGroupRequest * CreateClusterParameterGroupResponse::request() const
 {
     Q_D(const CreateClusterParameterGroupResponse);
@@ -92,9 +90,8 @@ const CreateClusterParameterGroupRequest * CreateClusterParameterGroupResponse::
 }
 
 /*!
- * @brief  Parse a Redshift CreateClusterParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift CreateClusterParameterGroup \a response.
  */
 void CreateClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void CreateClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::CreateClusterParameterGroupResponsePrivate
+ * \brief The CreateClusterParameterGroupResponsePrivate class provides private implementation for CreateClusterParameterGroupResponse.
  * \internal
  *
- * \class CreateClusterParameterGroupResponsePrivate
- *
- * \brief Private implementation for CreateClusterParameterGroupResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateClusterParameterGroupResponse instance.
+ * Constructs a CreateClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 CreateClusterParameterGroupResponsePrivate::CreateClusterParameterGroupResponsePrivate(
     CreateClusterParameterGroupResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ CreateClusterParameterGroupResponsePrivate::CreateClusterParameterGroupResponseP
 }
 
 /*!
- * @brief  Parse an Redshift CreateClusterParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift CreateClusterParameterGroup response element from \a xml.
  */
 void CreateClusterParameterGroupResponsePrivate::parseCreateClusterParameterGroupResponse(QXmlStreamReader &xml)
 {

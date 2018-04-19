@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::PromoteReadReplicaDBClusterResponse
- *
  * \brief The PromoteReadReplicaDBClusterResponse class provides an interace for RDS PromoteReadReplicaDBCluster responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new PromoteReadReplicaDBClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PromoteReadReplicaDBClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 PromoteReadReplicaDBClusterResponse::PromoteReadReplicaDBClusterResponse(
         const PromoteReadReplicaDBClusterRequest &request,
@@ -119,6 +114,9 @@ PromoteReadReplicaDBClusterResponse::PromoteReadReplicaDBClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PromoteReadReplicaDBClusterRequest * PromoteReadReplicaDBClusterResponse::request() const
 {
     Q_D(const PromoteReadReplicaDBClusterResponse);
@@ -126,9 +124,8 @@ const PromoteReadReplicaDBClusterRequest * PromoteReadReplicaDBClusterResponse::
 }
 
 /*!
- * @brief  Parse a RDS PromoteReadReplicaDBCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS PromoteReadReplicaDBCluster \a response.
  */
 void PromoteReadReplicaDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void PromoteReadReplicaDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::PromoteReadReplicaDBClusterResponsePrivate
+ * \brief The PromoteReadReplicaDBClusterResponsePrivate class provides private implementation for PromoteReadReplicaDBClusterResponse.
  * \internal
  *
- * \class PromoteReadReplicaDBClusterResponsePrivate
- *
- * \brief Private implementation for PromoteReadReplicaDBClusterResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PromoteReadReplicaDBClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PromoteReadReplicaDBClusterResponse instance.
+ * Constructs a PromoteReadReplicaDBClusterResponsePrivate object with public implementation \a q.
  */
 PromoteReadReplicaDBClusterResponsePrivate::PromoteReadReplicaDBClusterResponsePrivate(
     PromoteReadReplicaDBClusterResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ PromoteReadReplicaDBClusterResponsePrivate::PromoteReadReplicaDBClusterResponseP
 }
 
 /*!
- * @brief  Parse an RDS PromoteReadReplicaDBClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS PromoteReadReplicaDBCluster response element from \a xml.
  */
 void PromoteReadReplicaDBClusterResponsePrivate::parsePromoteReadReplicaDBClusterResponse(QXmlStreamReader &xml)
 {

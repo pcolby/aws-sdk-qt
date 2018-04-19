@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * CreateApiKeyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateApiKeyRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a CreateApiKeyRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 CreateApiKeyRequestPrivate::CreateApiKeyRequestPrivate(
     const AppSyncRequest::Action action, CreateApiKeyRequest * const q)

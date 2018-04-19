@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSourceRegionsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeSourceRegionsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSourceRegionsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
     const RDSRequest::Action action, DescribeSourceRegionsRequest * const q)

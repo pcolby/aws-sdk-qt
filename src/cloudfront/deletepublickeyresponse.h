@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeletePublicKeyResponse : public CloudFrontResponse {
 public:
     DeletePublicKeyResponse(const DeletePublicKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeletePublicKeyRequest * request() const;
+    virtual const DeletePublicKeyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeletePublicKeyResponse)

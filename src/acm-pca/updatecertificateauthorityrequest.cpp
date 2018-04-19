@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * UpdateCertificateAuthorityRequest::response(Q
  */
 
 /*!
- *
- * Constructs a UpdateCertificateAuthorityRequestPrivate object for ACMPCA \a action with,
- * public implementation \a q.
+ * Constructs a UpdateCertificateAuthorityRequestPrivate object for ACMPCA \a action,
+ * with public implementation \a q.
  */
 UpdateCertificateAuthorityRequestPrivate::UpdateCertificateAuthorityRequestPrivate(
     const ACMPCARequest::Action action, UpdateCertificateAuthorityRequest * const q)

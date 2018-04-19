@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetAccountBalanceResponse
- *
  * \brief The GetAccountBalanceResponse class provides an interace for MTurk GetAccountBalance responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getAccountBalance
  */
 
 /*!
- * @brief  Constructs a new GetAccountBalanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAccountBalanceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAccountBalanceResponse::GetAccountBalanceResponse(
         const GetAccountBalanceRequest &request,
@@ -55,6 +50,9 @@ GetAccountBalanceResponse::GetAccountBalanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAccountBalanceRequest * GetAccountBalanceResponse::request() const
 {
     Q_D(const GetAccountBalanceResponse);
@@ -62,9 +60,8 @@ const GetAccountBalanceRequest * GetAccountBalanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk GetAccountBalance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk GetAccountBalance \a response.
  */
 void GetAccountBalanceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetAccountBalanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::GetAccountBalanceResponsePrivate
+ * \brief The GetAccountBalanceResponsePrivate class provides private implementation for GetAccountBalanceResponse.
  * \internal
  *
- * \class GetAccountBalanceResponsePrivate
- *
- * \brief Private implementation for GetAccountBalanceResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountBalanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAccountBalanceResponse instance.
+ * Constructs a GetAccountBalanceResponsePrivate object with public implementation \a q.
  */
 GetAccountBalanceResponsePrivate::GetAccountBalanceResponsePrivate(
     GetAccountBalanceResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ GetAccountBalanceResponsePrivate::GetAccountBalanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk GetAccountBalanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk GetAccountBalance response element from \a xml.
  */
 void GetAccountBalanceResponsePrivate::parseGetAccountBalanceResponse(QXmlStreamReader &xml)
 {

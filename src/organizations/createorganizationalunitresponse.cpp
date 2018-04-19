@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::CreateOrganizationalUnitResponse
- *
  * \brief The CreateOrganizationalUnitResponse class provides an interace for Organizations CreateOrganizationalUnit responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new CreateOrganizationalUnitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateOrganizationalUnitResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateOrganizationalUnitResponse::CreateOrganizationalUnitResponse(
         const CreateOrganizationalUnitRequest &request,
@@ -197,6 +192,9 @@ CreateOrganizationalUnitResponse::CreateOrganizationalUnitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateOrganizationalUnitRequest * CreateOrganizationalUnitResponse::request() const
 {
     Q_D(const CreateOrganizationalUnitResponse);
@@ -204,9 +202,8 @@ const CreateOrganizationalUnitRequest * CreateOrganizationalUnitResponse::reques
 }
 
 /*!
- * @brief  Parse a Organizations CreateOrganizationalUnit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations CreateOrganizationalUnit \a response.
  */
 void CreateOrganizationalUnitResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void CreateOrganizationalUnitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::CreateOrganizationalUnitResponsePrivate
+ * \brief The CreateOrganizationalUnitResponsePrivate class provides private implementation for CreateOrganizationalUnitResponse.
  * \internal
  *
- * \class CreateOrganizationalUnitResponsePrivate
- *
- * \brief Private implementation for CreateOrganizationalUnitResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOrganizationalUnitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateOrganizationalUnitResponse instance.
+ * Constructs a CreateOrganizationalUnitResponsePrivate object with public implementation \a q.
  */
 CreateOrganizationalUnitResponsePrivate::CreateOrganizationalUnitResponsePrivate(
     CreateOrganizationalUnitResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ CreateOrganizationalUnitResponsePrivate::CreateOrganizationalUnitResponsePrivate
 }
 
 /*!
- * @brief  Parse an Organizations CreateOrganizationalUnitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations CreateOrganizationalUnit response element from \a xml.
  */
 void CreateOrganizationalUnitResponsePrivate::parseCreateOrganizationalUnitResponse(QXmlStreamReader &xml)
 {

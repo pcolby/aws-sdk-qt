@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * AbortDocumentVersionUploadRequest::response(Q
  */
 
 /*!
- *
- * Constructs a AbortDocumentVersionUploadRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a AbortDocumentVersionUploadRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 AbortDocumentVersionUploadRequestPrivate::AbortDocumentVersionUploadRequestPrivate(
     const WorkDocsRequest::Action action, AbortDocumentVersionUploadRequest * const q)

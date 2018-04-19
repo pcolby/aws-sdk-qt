@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteNetworkInterfacePermissionResponse
- *
  * \brief The DeleteNetworkInterfacePermissionResponse class provides an interace for EC2 DeleteNetworkInterfacePermission responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteNetworkInterfacePermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNetworkInterfacePermissionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNetworkInterfacePermissionResponse::DeleteNetworkInterfacePermissionResponse(
         const DeleteNetworkInterfacePermissionRequest &request,
@@ -59,6 +54,9 @@ DeleteNetworkInterfacePermissionResponse::DeleteNetworkInterfacePermissionRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNetworkInterfacePermissionRequest * DeleteNetworkInterfacePermissionResponse::request() const
 {
     Q_D(const DeleteNetworkInterfacePermissionResponse);
@@ -66,9 +64,8 @@ const DeleteNetworkInterfacePermissionRequest * DeleteNetworkInterfacePermission
 }
 
 /*!
- * @brief  Parse a EC2 DeleteNetworkInterfacePermission response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteNetworkInterfacePermission \a response.
  */
 void DeleteNetworkInterfacePermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteNetworkInterfacePermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteNetworkInterfacePermissionResponsePrivate
+ * \brief The DeleteNetworkInterfacePermissionResponsePrivate class provides private implementation for DeleteNetworkInterfacePermissionResponse.
  * \internal
  *
- * \class DeleteNetworkInterfacePermissionResponsePrivate
- *
- * \brief Private implementation for DeleteNetworkInterfacePermissionResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNetworkInterfacePermissionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNetworkInterfacePermissionResponse instance.
+ * Constructs a DeleteNetworkInterfacePermissionResponsePrivate object with public implementation \a q.
  */
 DeleteNetworkInterfacePermissionResponsePrivate::DeleteNetworkInterfacePermissionResponsePrivate(
     DeleteNetworkInterfacePermissionResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteNetworkInterfacePermissionResponsePrivate::DeleteNetworkInterfacePermissio
 }
 
 /*!
- * @brief  Parse an EC2 DeleteNetworkInterfacePermissionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteNetworkInterfacePermission response element from \a xml.
  */
 void DeleteNetworkInterfacePermissionResponsePrivate::parseDeleteNetworkInterfacePermissionResponse(QXmlStreamReader &xml)
 {

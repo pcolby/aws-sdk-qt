@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CancelSchemaExtensionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CancelSchemaExtensionRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a CancelSchemaExtensionRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 CancelSchemaExtensionRequestPrivate::CancelSchemaExtensionRequestPrivate(
     const DirectoryServiceRequest::Action action, CancelSchemaExtensionRequest * const q)

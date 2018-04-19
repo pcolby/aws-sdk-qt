@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::ListPartsResponse
- *
  * \brief The ListPartsResponse class provides an interace for S3 ListParts responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::listParts
  */
 
 /*!
- * @brief  Constructs a new ListPartsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPartsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPartsResponse::ListPartsResponse(
         const ListPartsRequest &request,
@@ -55,6 +50,9 @@ ListPartsResponse::ListPartsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPartsRequest * ListPartsResponse::request() const
 {
     Q_D(const ListPartsResponse);
@@ -62,9 +60,8 @@ const ListPartsRequest * ListPartsResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 ListParts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 ListParts \a response.
  */
 void ListPartsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListPartsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::ListPartsResponsePrivate
+ * \brief The ListPartsResponsePrivate class provides private implementation for ListPartsResponse.
  * \internal
  *
- * \class ListPartsResponsePrivate
- *
- * \brief Private implementation for ListPartsResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPartsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPartsResponse instance.
+ * Constructs a ListPartsResponsePrivate object with public implementation \a q.
  */
 ListPartsResponsePrivate::ListPartsResponsePrivate(
     ListPartsResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListPartsResponsePrivate::ListPartsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 ListPartsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 ListParts response element from \a xml.
  */
 void ListPartsResponsePrivate::parseListPartsResponse(QXmlStreamReader &xml)
 {

@@ -83,7 +83,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * Constructs a[n] DatabaseMigrationServiceRequest object for DatabaseMigrationService \a action.
+ * Constructs a DatabaseMigrationServiceRequest object for DatabaseMigrationService \a action.
  */
 DatabaseMigrationServiceRequest::DatabaseMigrationServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DatabaseMigrationServiceRequestPrivate(action, this))
@@ -283,8 +283,8 @@ QNetworkRequest DatabaseMigrationServiceRequest::unsignedRequest(const QUrl &end
  */
 
 /*!
- * Constructs a DatabaseMigrationServiceRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DatabaseMigrationServiceRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DatabaseMigrationServiceRequestPrivate::DatabaseMigrationServiceRequestPrivate(const DatabaseMigrationServiceRequest::Action action, DatabaseMigrationServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::IncreaseReplicationFactorResponse
- *
  * \brief The IncreaseReplicationFactorResponse class provides an interace for DAX IncreaseReplicationFactor responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new IncreaseReplicationFactorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a IncreaseReplicationFactorResponse object for \a reply to \a request, with parent \a parent.
  */
 IncreaseReplicationFactorResponse::IncreaseReplicationFactorResponse(
         const IncreaseReplicationFactorRequest &request,
@@ -59,6 +54,9 @@ IncreaseReplicationFactorResponse::IncreaseReplicationFactorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const IncreaseReplicationFactorRequest * IncreaseReplicationFactorResponse::request() const
 {
     Q_D(const IncreaseReplicationFactorResponse);
@@ -66,9 +64,8 @@ const IncreaseReplicationFactorRequest * IncreaseReplicationFactorResponse::requ
 }
 
 /*!
- * @brief  Parse a DAX IncreaseReplicationFactor response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX IncreaseReplicationFactor \a response.
  */
 void IncreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void IncreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::IncreaseReplicationFactorResponsePrivate
+ * \brief The IncreaseReplicationFactorResponsePrivate class provides private implementation for IncreaseReplicationFactorResponse.
  * \internal
  *
- * \class IncreaseReplicationFactorResponsePrivate
- *
- * \brief Private implementation for IncreaseReplicationFactorResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IncreaseReplicationFactorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public IncreaseReplicationFactorResponse instance.
+ * Constructs a IncreaseReplicationFactorResponsePrivate object with public implementation \a q.
  */
 IncreaseReplicationFactorResponsePrivate::IncreaseReplicationFactorResponsePrivate(
     IncreaseReplicationFactorResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ IncreaseReplicationFactorResponsePrivate::IncreaseReplicationFactorResponsePriva
 }
 
 /*!
- * @brief  Parse an DAX IncreaseReplicationFactorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX IncreaseReplicationFactor response element from \a xml.
  */
 void IncreaseReplicationFactorResponsePrivate::parseIncreaseReplicationFactorResponse(QXmlStreamReader &xml)
 {

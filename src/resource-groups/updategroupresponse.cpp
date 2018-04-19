@@ -29,10 +29,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::UpdateGroupResponse
- *
  * \brief The UpdateGroupResponse class provides an interace for ResourceGroups UpdateGroup responses.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -83,11 +82,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new UpdateGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateGroupResponse::UpdateGroupResponse(
         const UpdateGroupRequest &request,
@@ -99,6 +94,9 @@ UpdateGroupResponse::UpdateGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateGroupRequest * UpdateGroupResponse::request() const
 {
     Q_D(const UpdateGroupResponse);
@@ -106,9 +104,8 @@ const UpdateGroupRequest * UpdateGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a ResourceGroups UpdateGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ResourceGroups UpdateGroup \a response.
  */
 void UpdateGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -118,19 +115,15 @@ void UpdateGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ResourceGroups::UpdateGroupResponsePrivate
+ * \brief The UpdateGroupResponsePrivate class provides private implementation for UpdateGroupResponse.
  * \internal
  *
- * \class UpdateGroupResponsePrivate
- *
- * \brief Private implementation for UpdateGroupResponse.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateGroupResponse instance.
+ * Constructs a UpdateGroupResponsePrivate object with public implementation \a q.
  */
 UpdateGroupResponsePrivate::UpdateGroupResponsePrivate(
     UpdateGroupResponse * const q) : ResourceGroupsResponsePrivate(q)
@@ -139,9 +132,7 @@ UpdateGroupResponsePrivate::UpdateGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ResourceGroups UpdateGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ResourceGroups UpdateGroup response element from \a xml.
  */
 void UpdateGroupResponsePrivate::parseUpdateGroupResponse(QXmlStreamReader &xml)
 {

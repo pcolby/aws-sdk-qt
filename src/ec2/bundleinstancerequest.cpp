@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * BundleInstanceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a BundleInstanceRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a BundleInstanceRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 BundleInstanceRequestPrivate::BundleInstanceRequestPrivate(
     const EC2Request::Action action, BundleInstanceRequest * const q)

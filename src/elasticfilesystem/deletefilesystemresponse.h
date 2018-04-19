@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteFileSystemResponse : public EFSResponse {
 public:
     DeleteFileSystemResponse(const DeleteFileSystemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteFileSystemRequest * request() const;
+    virtual const DeleteFileSystemRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteFileSystemResponse)

@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteObjectTaggingResponse
- *
  * \brief The DeleteObjectTaggingResponse class provides an interace for S3 DeleteObjectTagging responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteObjectTagging
  */
 
 /*!
- * @brief  Constructs a new DeleteObjectTaggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteObjectTaggingResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteObjectTaggingResponse::DeleteObjectTaggingResponse(
         const DeleteObjectTaggingRequest &request,
@@ -55,6 +50,9 @@ DeleteObjectTaggingResponse::DeleteObjectTaggingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteObjectTaggingRequest * DeleteObjectTaggingResponse::request() const
 {
     Q_D(const DeleteObjectTaggingResponse);
@@ -62,9 +60,8 @@ const DeleteObjectTaggingRequest * DeleteObjectTaggingResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 DeleteObjectTagging response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 DeleteObjectTagging \a response.
  */
 void DeleteObjectTaggingResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteObjectTaggingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::DeleteObjectTaggingResponsePrivate
+ * \brief The DeleteObjectTaggingResponsePrivate class provides private implementation for DeleteObjectTaggingResponse.
  * \internal
  *
- * \class DeleteObjectTaggingResponsePrivate
- *
- * \brief Private implementation for DeleteObjectTaggingResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteObjectTaggingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteObjectTaggingResponse instance.
+ * Constructs a DeleteObjectTaggingResponsePrivate object with public implementation \a q.
  */
 DeleteObjectTaggingResponsePrivate::DeleteObjectTaggingResponsePrivate(
     DeleteObjectTaggingResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteObjectTaggingResponsePrivate::DeleteObjectTaggingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 DeleteObjectTaggingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 DeleteObjectTagging response element from \a xml.
  */
 void DeleteObjectTaggingResponsePrivate::parseDeleteObjectTaggingResponse(QXmlStreamReader &xml)
 {

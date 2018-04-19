@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetDataflowGraphRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetDataflowGraphRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GetDataflowGraphRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GetDataflowGraphRequestPrivate::GetDataflowGraphRequestPrivate(
     const GlueRequest::Action action, GetDataflowGraphRequest * const q)

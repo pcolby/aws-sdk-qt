@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * TerminateJobRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a TerminateJobRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a TerminateJobRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 TerminateJobRequestPrivate::TerminateJobRequestPrivate(
     const BatchRequest::Action action, TerminateJobRequest * const q)

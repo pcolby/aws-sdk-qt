@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketReplicationResponse
- *
  * \brief The GetBucketReplicationResponse class provides an interace for S3 GetBucketReplication responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketReplication
  */
 
 /*!
- * @brief  Constructs a new GetBucketReplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBucketReplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBucketReplicationResponse::GetBucketReplicationResponse(
         const GetBucketReplicationRequest &request,
@@ -55,6 +50,9 @@ GetBucketReplicationResponse::GetBucketReplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBucketReplicationRequest * GetBucketReplicationResponse::request() const
 {
     Q_D(const GetBucketReplicationResponse);
@@ -62,9 +60,8 @@ const GetBucketReplicationRequest * GetBucketReplicationResponse::request() cons
 }
 
 /*!
- * @brief  Parse a S3 GetBucketReplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetBucketReplication \a response.
  */
 void GetBucketReplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBucketReplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetBucketReplicationResponsePrivate
+ * \brief The GetBucketReplicationResponsePrivate class provides private implementation for GetBucketReplicationResponse.
  * \internal
  *
- * \class GetBucketReplicationResponsePrivate
- *
- * \brief Private implementation for GetBucketReplicationResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketReplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBucketReplicationResponse instance.
+ * Constructs a GetBucketReplicationResponsePrivate object with public implementation \a q.
  */
 GetBucketReplicationResponsePrivate::GetBucketReplicationResponsePrivate(
     GetBucketReplicationResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBucketReplicationResponsePrivate::GetBucketReplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 GetBucketReplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetBucketReplication response element from \a xml.
  */
 void GetBucketReplicationResponsePrivate::parseGetBucketReplicationResponse(QXmlStreamReader &xml)
 {

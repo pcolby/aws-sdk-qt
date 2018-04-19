@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::StartSchemaExtensionResponse
- *
  * \brief The StartSchemaExtensionResponse class provides an interace for DirectoryService StartSchemaExtension responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new StartSchemaExtensionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartSchemaExtensionResponse object for \a reply to \a request, with parent \a parent.
  */
 StartSchemaExtensionResponse::StartSchemaExtensionResponse(
         const StartSchemaExtensionRequest &request,
@@ -69,6 +64,9 @@ StartSchemaExtensionResponse::StartSchemaExtensionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartSchemaExtensionRequest * StartSchemaExtensionResponse::request() const
 {
     Q_D(const StartSchemaExtensionResponse);
@@ -76,9 +74,8 @@ const StartSchemaExtensionRequest * StartSchemaExtensionResponse::request() cons
 }
 
 /*!
- * @brief  Parse a DirectoryService StartSchemaExtension response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService StartSchemaExtension \a response.
  */
 void StartSchemaExtensionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void StartSchemaExtensionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::StartSchemaExtensionResponsePrivate
+ * \brief The StartSchemaExtensionResponsePrivate class provides private implementation for StartSchemaExtensionResponse.
  * \internal
  *
- * \class StartSchemaExtensionResponsePrivate
- *
- * \brief Private implementation for StartSchemaExtensionResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartSchemaExtensionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartSchemaExtensionResponse instance.
+ * Constructs a StartSchemaExtensionResponsePrivate object with public implementation \a q.
  */
 StartSchemaExtensionResponsePrivate::StartSchemaExtensionResponsePrivate(
     StartSchemaExtensionResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ StartSchemaExtensionResponsePrivate::StartSchemaExtensionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService StartSchemaExtensionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService StartSchemaExtension response element from \a xml.
  */
 void StartSchemaExtensionResponsePrivate::parseStartSchemaExtensionResponse(QXmlStreamReader &xml)
 {

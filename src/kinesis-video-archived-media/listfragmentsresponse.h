@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListFragmentsResponse : public KinesisVideoArchivedMediaRespo
 public:
     ListFragmentsResponse(const ListFragmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListFragmentsRequest * request() const;
+    virtual const ListFragmentsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListFragmentsResponse)

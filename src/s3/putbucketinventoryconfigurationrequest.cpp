@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PutBucketInventoryConfigurationRequest::respo
  */
 
 /*!
- *
- * Constructs a PutBucketInventoryConfigurationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a PutBucketInventoryConfigurationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 PutBucketInventoryConfigurationRequestPrivate::PutBucketInventoryConfigurationRequestPrivate(
     const S3Request::Action action, PutBucketInventoryConfigurationRequest * const q)

@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DescribeActivityTypeRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeActivityTypeRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a DescribeActivityTypeRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 DescribeActivityTypeRequestPrivate::DescribeActivityTypeRequestPrivate(
     const SWFRequest::Action action, DescribeActivityTypeRequest * const q)

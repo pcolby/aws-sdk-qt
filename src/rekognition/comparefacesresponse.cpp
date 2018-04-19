@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::CompareFacesResponse
- *
  * \brief The CompareFacesResponse class provides an interace for Rekognition CompareFaces responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new CompareFacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CompareFacesResponse object for \a reply to \a request, with parent \a parent.
  */
 CompareFacesResponse::CompareFacesResponse(
         const CompareFacesRequest &request,
@@ -56,6 +51,9 @@ CompareFacesResponse::CompareFacesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CompareFacesRequest * CompareFacesResponse::request() const
 {
     Q_D(const CompareFacesResponse);
@@ -63,9 +61,8 @@ const CompareFacesRequest * CompareFacesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition CompareFaces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition CompareFaces \a response.
  */
 void CompareFacesResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void CompareFacesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::CompareFacesResponsePrivate
+ * \brief The CompareFacesResponsePrivate class provides private implementation for CompareFacesResponse.
  * \internal
  *
- * \class CompareFacesResponsePrivate
- *
- * \brief Private implementation for CompareFacesResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CompareFacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CompareFacesResponse instance.
+ * Constructs a CompareFacesResponsePrivate object with public implementation \a q.
  */
 CompareFacesResponsePrivate::CompareFacesResponsePrivate(
     CompareFacesResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ CompareFacesResponsePrivate::CompareFacesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition CompareFacesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition CompareFaces response element from \a xml.
  */
 void CompareFacesResponsePrivate::parseCompareFacesResponse(QXmlStreamReader &xml)
 {

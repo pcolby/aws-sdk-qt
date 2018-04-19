@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::UpdateByteMatchSetResponse
- *
  * \brief The UpdateByteMatchSetResponse class provides an interace for WAFRegional UpdateByteMatchSet responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new UpdateByteMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateByteMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateByteMatchSetResponse::UpdateByteMatchSetResponse(
         const UpdateByteMatchSetRequest &request,
@@ -62,6 +57,9 @@ UpdateByteMatchSetResponse::UpdateByteMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateByteMatchSetRequest * UpdateByteMatchSetResponse::request() const
 {
     Q_D(const UpdateByteMatchSetResponse);
@@ -69,9 +67,8 @@ const UpdateByteMatchSetRequest * UpdateByteMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional UpdateByteMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional UpdateByteMatchSet \a response.
  */
 void UpdateByteMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void UpdateByteMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::UpdateByteMatchSetResponsePrivate
+ * \brief The UpdateByteMatchSetResponsePrivate class provides private implementation for UpdateByteMatchSetResponse.
  * \internal
  *
- * \class UpdateByteMatchSetResponsePrivate
- *
- * \brief Private implementation for UpdateByteMatchSetResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateByteMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateByteMatchSetResponse instance.
+ * Constructs a UpdateByteMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateByteMatchSetResponsePrivate::UpdateByteMatchSetResponsePrivate(
     UpdateByteMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ UpdateByteMatchSetResponsePrivate::UpdateByteMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional UpdateByteMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional UpdateByteMatchSet response element from \a xml.
  */
 void UpdateByteMatchSetResponsePrivate::parseUpdateByteMatchSetResponse(QXmlStreamReader &xml)
 {

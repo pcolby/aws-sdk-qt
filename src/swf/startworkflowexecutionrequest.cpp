@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * StartWorkflowExecutionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a StartWorkflowExecutionRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a StartWorkflowExecutionRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 StartWorkflowExecutionRequestPrivate::StartWorkflowExecutionRequestPrivate(
     const SWFRequest::Action action, StartWorkflowExecutionRequest * const q)

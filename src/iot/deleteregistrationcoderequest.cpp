@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRegistrationCodeRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteRegistrationCodeRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRegistrationCodeRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeleteRegistrationCodeRequestPrivate::DeleteRegistrationCodeRequestPrivate(
     const IoTRequest::Action action, DeleteRegistrationCodeRequest * const q)

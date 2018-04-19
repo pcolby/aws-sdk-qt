@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateTagsForResourceResponse : public ElasticBeanstalkRespon
 public:
     UpdateTagsForResourceResponse(const UpdateTagsForResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateTagsForResourceRequest * request() const;
+    virtual const UpdateTagsForResourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateTagsForResourceResponse)

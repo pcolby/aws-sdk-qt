@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetHealthCheckLastFailureReasonResponse : public Route53Respo
 public:
     GetHealthCheckLastFailureReasonResponse(const GetHealthCheckLastFailureReasonRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetHealthCheckLastFailureReasonRequest * request() const;
+    virtual const GetHealthCheckLastFailureReasonRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetHealthCheckLastFailureReasonResponse)

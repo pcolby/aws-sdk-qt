@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketPolicyResponse
- *
  * \brief The GetBucketPolicyResponse class provides an interace for S3 GetBucketPolicy responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketPolicy
  */
 
 /*!
- * @brief  Constructs a new GetBucketPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBucketPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBucketPolicyResponse::GetBucketPolicyResponse(
         const GetBucketPolicyRequest &request,
@@ -55,6 +50,9 @@ GetBucketPolicyResponse::GetBucketPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBucketPolicyRequest * GetBucketPolicyResponse::request() const
 {
     Q_D(const GetBucketPolicyResponse);
@@ -62,9 +60,8 @@ const GetBucketPolicyRequest * GetBucketPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 GetBucketPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetBucketPolicy \a response.
  */
 void GetBucketPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBucketPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetBucketPolicyResponsePrivate
+ * \brief The GetBucketPolicyResponsePrivate class provides private implementation for GetBucketPolicyResponse.
  * \internal
  *
- * \class GetBucketPolicyResponsePrivate
- *
- * \brief Private implementation for GetBucketPolicyResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBucketPolicyResponse instance.
+ * Constructs a GetBucketPolicyResponsePrivate object with public implementation \a q.
  */
 GetBucketPolicyResponsePrivate::GetBucketPolicyResponsePrivate(
     GetBucketPolicyResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBucketPolicyResponsePrivate::GetBucketPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 GetBucketPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetBucketPolicy response element from \a xml.
  */
 void GetBucketPolicyResponsePrivate::parseGetBucketPolicyResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateSecretVersionStageResponse : public SecretsManagerRespo
 public:
     UpdateSecretVersionStageResponse(const UpdateSecretVersionStageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateSecretVersionStageRequest * request() const;
+    virtual const UpdateSecretVersionStageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateSecretVersionStageResponse)

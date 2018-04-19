@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::BatchDeleteTableVersionResponse
- *
  * \brief The BatchDeleteTableVersionResponse class provides an interace for Glue BatchDeleteTableVersion responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new BatchDeleteTableVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchDeleteTableVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchDeleteTableVersionResponse::BatchDeleteTableVersionResponse(
         const BatchDeleteTableVersionRequest &request,
@@ -58,6 +53,9 @@ BatchDeleteTableVersionResponse::BatchDeleteTableVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchDeleteTableVersionRequest * BatchDeleteTableVersionResponse::request() const
 {
     Q_D(const BatchDeleteTableVersionResponse);
@@ -65,9 +63,8 @@ const BatchDeleteTableVersionRequest * BatchDeleteTableVersionResponse::request(
 }
 
 /*!
- * @brief  Parse a Glue BatchDeleteTableVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue BatchDeleteTableVersion \a response.
  */
 void BatchDeleteTableVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void BatchDeleteTableVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::BatchDeleteTableVersionResponsePrivate
+ * \brief The BatchDeleteTableVersionResponsePrivate class provides private implementation for BatchDeleteTableVersionResponse.
  * \internal
  *
- * \class BatchDeleteTableVersionResponsePrivate
- *
- * \brief Private implementation for BatchDeleteTableVersionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeleteTableVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchDeleteTableVersionResponse instance.
+ * Constructs a BatchDeleteTableVersionResponsePrivate object with public implementation \a q.
  */
 BatchDeleteTableVersionResponsePrivate::BatchDeleteTableVersionResponsePrivate(
     BatchDeleteTableVersionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ BatchDeleteTableVersionResponsePrivate::BatchDeleteTableVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue BatchDeleteTableVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue BatchDeleteTableVersion response element from \a xml.
  */
 void BatchDeleteTableVersionResponsePrivate::parseBatchDeleteTableVersionResponse(QXmlStreamReader &xml)
 {

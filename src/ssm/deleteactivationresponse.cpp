@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeleteActivationResponse
- *
  * \brief The DeleteActivationResponse class provides an interace for SSM DeleteActivation responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteActivationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteActivationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteActivationResponse::DeleteActivationResponse(
         const DeleteActivationRequest &request,
@@ -79,6 +74,9 @@ DeleteActivationResponse::DeleteActivationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteActivationRequest * DeleteActivationResponse::request() const
 {
     Q_D(const DeleteActivationResponse);
@@ -86,9 +84,8 @@ const DeleteActivationRequest * DeleteActivationResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM DeleteActivation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DeleteActivation \a response.
  */
 void DeleteActivationResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DeleteActivationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DeleteActivationResponsePrivate
+ * \brief The DeleteActivationResponsePrivate class provides private implementation for DeleteActivationResponse.
  * \internal
  *
- * \class DeleteActivationResponsePrivate
- *
- * \brief Private implementation for DeleteActivationResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteActivationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteActivationResponse instance.
+ * Constructs a DeleteActivationResponsePrivate object with public implementation \a q.
  */
 DeleteActivationResponsePrivate::DeleteActivationResponsePrivate(
     DeleteActivationResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DeleteActivationResponsePrivate::DeleteActivationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DeleteActivationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DeleteActivation response element from \a xml.
  */
 void DeleteActivationResponsePrivate::parseDeleteActivationResponse(QXmlStreamReader &xml)
 {

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeletePresetRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a DeletePresetRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 DeletePresetRequestPrivate::DeletePresetRequestPrivate(
     const ElasticTranscoderRequest::Action action, DeletePresetRequest * const q)

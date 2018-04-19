@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerListenersRequest::response(
  */
 
 /*!
- *
- * Constructs a DeleteLoadBalancerListenersRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLoadBalancerListenersRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 DeleteLoadBalancerListenersRequestPrivate::DeleteLoadBalancerListenersRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DeleteLoadBalancerListenersRequest * const q)

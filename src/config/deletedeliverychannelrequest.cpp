@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDeliveryChannelRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteDeliveryChannelRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDeliveryChannelRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DeleteDeliveryChannelRequestPrivate::DeleteDeliveryChannelRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteDeliveryChannelRequest * const q)

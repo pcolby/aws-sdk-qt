@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribePlatformVersionResponse
- *
  * \brief The DescribePlatformVersionResponse class provides an interace for ElasticBeanstalk DescribePlatformVersion responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribePlatformVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePlatformVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePlatformVersionResponse::DescribePlatformVersionResponse(
         const DescribePlatformVersionRequest &request,
@@ -77,6 +72,9 @@ DescribePlatformVersionResponse::DescribePlatformVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePlatformVersionRequest * DescribePlatformVersionResponse::request() const
 {
     Q_D(const DescribePlatformVersionResponse);
@@ -84,9 +82,8 @@ const DescribePlatformVersionRequest * DescribePlatformVersionResponse::request(
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DescribePlatformVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DescribePlatformVersion \a response.
  */
 void DescribePlatformVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribePlatformVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DescribePlatformVersionResponsePrivate
+ * \brief The DescribePlatformVersionResponsePrivate class provides private implementation for DescribePlatformVersionResponse.
  * \internal
  *
- * \class DescribePlatformVersionResponsePrivate
- *
- * \brief Private implementation for DescribePlatformVersionResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePlatformVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePlatformVersionResponse instance.
+ * Constructs a DescribePlatformVersionResponsePrivate object with public implementation \a q.
  */
 DescribePlatformVersionResponsePrivate::DescribePlatformVersionResponsePrivate(
     DescribePlatformVersionResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribePlatformVersionResponsePrivate::DescribePlatformVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DescribePlatformVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DescribePlatformVersion response element from \a xml.
  */
 void DescribePlatformVersionResponsePrivate::parseDescribePlatformVersionResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetResourceConfigHistoryResponse
- *
  * \brief The GetResourceConfigHistoryResponse class provides an interace for ConfigService GetResourceConfigHistory responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetResourceConfigHistoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetResourceConfigHistoryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetResourceConfigHistoryResponse::GetResourceConfigHistoryResponse(
         const GetResourceConfigHistoryRequest &request,
@@ -78,6 +73,9 @@ GetResourceConfigHistoryResponse::GetResourceConfigHistoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetResourceConfigHistoryRequest * GetResourceConfigHistoryResponse::request() const
 {
     Q_D(const GetResourceConfigHistoryResponse);
@@ -85,9 +83,8 @@ const GetResourceConfigHistoryRequest * GetResourceConfigHistoryResponse::reques
 }
 
 /*!
- * @brief  Parse a ConfigService GetResourceConfigHistory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService GetResourceConfigHistory \a response.
  */
 void GetResourceConfigHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void GetResourceConfigHistoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::GetResourceConfigHistoryResponsePrivate
+ * \brief The GetResourceConfigHistoryResponsePrivate class provides private implementation for GetResourceConfigHistoryResponse.
  * \internal
  *
- * \class GetResourceConfigHistoryResponsePrivate
- *
- * \brief Private implementation for GetResourceConfigHistoryResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetResourceConfigHistoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetResourceConfigHistoryResponse instance.
+ * Constructs a GetResourceConfigHistoryResponsePrivate object with public implementation \a q.
  */
 GetResourceConfigHistoryResponsePrivate::GetResourceConfigHistoryResponsePrivate(
     GetResourceConfigHistoryResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ GetResourceConfigHistoryResponsePrivate::GetResourceConfigHistoryResponsePrivate
 }
 
 /*!
- * @brief  Parse an ConfigService GetResourceConfigHistoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService GetResourceConfigHistory response element from \a xml.
  */
 void GetResourceConfigHistoryResponsePrivate::parseGetResourceConfigHistoryResponse(QXmlStreamReader &xml)
 {

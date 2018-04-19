@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteDeploymentResponse
- *
  * \brief The DeleteDeploymentResponse class provides an interace for APIGateway DeleteDeployment responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteDeploymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDeploymentResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDeploymentResponse::DeleteDeploymentResponse(
         const DeleteDeploymentRequest &request,
@@ -60,6 +55,9 @@ DeleteDeploymentResponse::DeleteDeploymentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDeploymentRequest * DeleteDeploymentResponse::request() const
 {
     Q_D(const DeleteDeploymentResponse);
@@ -67,9 +65,8 @@ const DeleteDeploymentRequest * DeleteDeploymentResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteDeployment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteDeployment \a response.
  */
 void DeleteDeploymentResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteDeploymentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteDeploymentResponsePrivate
+ * \brief The DeleteDeploymentResponsePrivate class provides private implementation for DeleteDeploymentResponse.
  * \internal
  *
- * \class DeleteDeploymentResponsePrivate
- *
- * \brief Private implementation for DeleteDeploymentResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDeploymentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDeploymentResponse instance.
+ * Constructs a DeleteDeploymentResponsePrivate object with public implementation \a q.
  */
 DeleteDeploymentResponsePrivate::DeleteDeploymentResponsePrivate(
     DeleteDeploymentResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteDeploymentResponsePrivate::DeleteDeploymentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteDeploymentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteDeployment response element from \a xml.
  */
 void DeleteDeploymentResponsePrivate::parseDeleteDeploymentResponse(QXmlStreamReader &xml)
 {

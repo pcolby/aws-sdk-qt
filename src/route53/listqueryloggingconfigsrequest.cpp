@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListQueryLoggingConfigsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListQueryLoggingConfigsRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a ListQueryLoggingConfigsRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 ListQueryLoggingConfigsRequestPrivate::ListQueryLoggingConfigsRequestPrivate(
     const Route53Request::Action action, ListQueryLoggingConfigsRequest * const q)

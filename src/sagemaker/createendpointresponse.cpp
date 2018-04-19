@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::CreateEndpointResponse
- *
  * \brief The CreateEndpointResponse class provides an interace for SageMaker CreateEndpoint responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::createEndpoint
  */
 
 /*!
- * @brief  Constructs a new CreateEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateEndpointResponse::CreateEndpointResponse(
         const CreateEndpointRequest &request,
@@ -55,6 +50,9 @@ CreateEndpointResponse::CreateEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateEndpointRequest * CreateEndpointResponse::request() const
 {
     Q_D(const CreateEndpointResponse);
@@ -62,9 +60,8 @@ const CreateEndpointRequest * CreateEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a SageMaker CreateEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker CreateEndpoint \a response.
  */
 void CreateEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::CreateEndpointResponsePrivate
+ * \brief The CreateEndpointResponsePrivate class provides private implementation for CreateEndpointResponse.
  * \internal
  *
- * \class CreateEndpointResponsePrivate
- *
- * \brief Private implementation for CreateEndpointResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateEndpointResponse instance.
+ * Constructs a CreateEndpointResponsePrivate object with public implementation \a q.
  */
 CreateEndpointResponsePrivate::CreateEndpointResponsePrivate(
     CreateEndpointResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateEndpointResponsePrivate::CreateEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker CreateEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker CreateEndpoint response element from \a xml.
  */
 void CreateEndpointResponsePrivate::parseCreateEndpointResponse(QXmlStreamReader &xml)
 {

@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * ListRootsRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ListRootsRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a ListRootsRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 ListRootsRequestPrivate::ListRootsRequestPrivate(
     const OrganizationsRequest::Action action, ListRootsRequest * const q)

@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeResizeRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeResizeRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeResizeRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeResizeRequestPrivate::DescribeResizeRequestPrivate(
     const RedshiftRequest::Action action, DescribeResizeRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyFpgaImageAttributeResponse
- *
  * \brief The ModifyFpgaImageAttributeResponse class provides an interace for EC2 ModifyFpgaImageAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyFpgaImageAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyFpgaImageAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyFpgaImageAttributeResponse::ModifyFpgaImageAttributeResponse(
         const ModifyFpgaImageAttributeRequest &request,
@@ -59,6 +54,9 @@ ModifyFpgaImageAttributeResponse::ModifyFpgaImageAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyFpgaImageAttributeRequest * ModifyFpgaImageAttributeResponse::request() const
 {
     Q_D(const ModifyFpgaImageAttributeResponse);
@@ -66,9 +64,8 @@ const ModifyFpgaImageAttributeRequest * ModifyFpgaImageAttributeResponse::reques
 }
 
 /*!
- * @brief  Parse a EC2 ModifyFpgaImageAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyFpgaImageAttribute \a response.
  */
 void ModifyFpgaImageAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyFpgaImageAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyFpgaImageAttributeResponsePrivate
+ * \brief The ModifyFpgaImageAttributeResponsePrivate class provides private implementation for ModifyFpgaImageAttributeResponse.
  * \internal
  *
- * \class ModifyFpgaImageAttributeResponsePrivate
- *
- * \brief Private implementation for ModifyFpgaImageAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyFpgaImageAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyFpgaImageAttributeResponse instance.
+ * Constructs a ModifyFpgaImageAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyFpgaImageAttributeResponsePrivate::ModifyFpgaImageAttributeResponsePrivate(
     ModifyFpgaImageAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyFpgaImageAttributeResponsePrivate::ModifyFpgaImageAttributeResponsePrivate
 }
 
 /*!
- * @brief  Parse an EC2 ModifyFpgaImageAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyFpgaImageAttribute response element from \a xml.
  */
 void ModifyFpgaImageAttributeResponsePrivate::parseModifyFpgaImageAttributeResponse(QXmlStreamReader &xml)
 {

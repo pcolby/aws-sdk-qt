@@ -80,7 +80,7 @@ namespace CloudFormation {
  */
 
 /*!
- * Constructs a[n] CloudFormationRequest object for CloudFormation \a action.
+ * Constructs a CloudFormationRequest object for CloudFormation \a action.
  */
 CloudFormationRequest::CloudFormationRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudFormationRequestPrivate(action, this))
@@ -280,8 +280,8 @@ QNetworkRequest CloudFormationRequest::unsignedRequest(const QUrl &endpoint) con
  */
 
 /*!
- * Constructs a CloudFormationRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a CloudFormationRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 CloudFormationRequestPrivate::CloudFormationRequestPrivate(const CloudFormationRequest::Action action, CloudFormationRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

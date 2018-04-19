@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * ConfirmPublicVirtualInterfaceRequest::respons
  */
 
 /*!
- *
- * Constructs a ConfirmPublicVirtualInterfaceRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a ConfirmPublicVirtualInterfaceRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 ConfirmPublicVirtualInterfaceRequestPrivate::ConfirmPublicVirtualInterfaceRequestPrivate(
     const DirectConnectRequest::Action action, ConfirmPublicVirtualInterfaceRequest * const q)

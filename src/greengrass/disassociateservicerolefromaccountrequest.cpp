@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateServiceRoleFromAccountRequest::re
  */
 
 /*!
- *
- * Constructs a DisassociateServiceRoleFromAccountRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateServiceRoleFromAccountRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 DisassociateServiceRoleFromAccountRequestPrivate::DisassociateServiceRoleFromAccountRequestPrivate(
     const GreengrassRequest::Action action, DisassociateServiceRoleFromAccountRequest * const q)

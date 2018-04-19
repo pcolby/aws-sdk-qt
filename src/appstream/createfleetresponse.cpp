@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CreateFleetResponse
- *
  * \brief The CreateFleetResponse class provides an interace for AppStream CreateFleet responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CreateFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateFleetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateFleetResponse::CreateFleetResponse(
         const CreateFleetRequest &request,
@@ -58,6 +53,9 @@ CreateFleetResponse::CreateFleetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateFleetRequest * CreateFleetResponse::request() const
 {
     Q_D(const CreateFleetResponse);
@@ -65,9 +63,8 @@ const CreateFleetRequest * CreateFleetResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream CreateFleet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream CreateFleet \a response.
  */
 void CreateFleetResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateFleetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::CreateFleetResponsePrivate
+ * \brief The CreateFleetResponsePrivate class provides private implementation for CreateFleetResponse.
  * \internal
  *
- * \class CreateFleetResponsePrivate
- *
- * \brief Private implementation for CreateFleetResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFleetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateFleetResponse instance.
+ * Constructs a CreateFleetResponsePrivate object with public implementation \a q.
  */
 CreateFleetResponsePrivate::CreateFleetResponsePrivate(
     CreateFleetResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateFleetResponsePrivate::CreateFleetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream CreateFleetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream CreateFleet response element from \a xml.
  */
 void CreateFleetResponsePrivate::parseCreateFleetResponse(QXmlStreamReader &xml)
 {

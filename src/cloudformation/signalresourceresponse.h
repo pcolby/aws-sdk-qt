@@ -34,10 +34,10 @@ class QTAWS_EXPORT SignalResourceResponse : public CloudFormationResponse {
 public:
     SignalResourceResponse(const SignalResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SignalResourceRequest * request() const;
+    virtual const SignalResourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SignalResourceResponse)

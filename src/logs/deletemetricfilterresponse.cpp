@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteMetricFilterResponse
- *
  * \brief The DeleteMetricFilterResponse class provides an interace for CloudWatchLogs DeleteMetricFilter responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteMetricFilterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteMetricFilterResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteMetricFilterResponse::DeleteMetricFilterResponse(
         const DeleteMetricFilterRequest &request,
@@ -84,6 +79,9 @@ DeleteMetricFilterResponse::DeleteMetricFilterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteMetricFilterRequest * DeleteMetricFilterResponse::request() const
 {
     Q_D(const DeleteMetricFilterResponse);
@@ -91,9 +89,8 @@ const DeleteMetricFilterRequest * DeleteMetricFilterResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DeleteMetricFilter response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DeleteMetricFilter \a response.
  */
 void DeleteMetricFilterResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteMetricFilterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DeleteMetricFilterResponsePrivate
+ * \brief The DeleteMetricFilterResponsePrivate class provides private implementation for DeleteMetricFilterResponse.
  * \internal
  *
- * \class DeleteMetricFilterResponsePrivate
- *
- * \brief Private implementation for DeleteMetricFilterResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMetricFilterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteMetricFilterResponse instance.
+ * Constructs a DeleteMetricFilterResponsePrivate object with public implementation \a q.
  */
 DeleteMetricFilterResponsePrivate::DeleteMetricFilterResponsePrivate(
     DeleteMetricFilterResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteMetricFilterResponsePrivate::DeleteMetricFilterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DeleteMetricFilterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DeleteMetricFilter response element from \a xml.
  */
 void DeleteMetricFilterResponsePrivate::parseDeleteMetricFilterResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::UpdateThreatIntelSetResponse
- *
  * \brief The UpdateThreatIntelSetResponse class provides an interace for GuardDuty UpdateThreatIntelSet responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::updateThreatIntelSet
  */
 
 /*!
- * @brief  Constructs a new UpdateThreatIntelSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateThreatIntelSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateThreatIntelSetResponse::UpdateThreatIntelSetResponse(
         const UpdateThreatIntelSetRequest &request,
@@ -55,6 +50,9 @@ UpdateThreatIntelSetResponse::UpdateThreatIntelSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateThreatIntelSetRequest * UpdateThreatIntelSetResponse::request() const
 {
     Q_D(const UpdateThreatIntelSetResponse);
@@ -62,9 +60,8 @@ const UpdateThreatIntelSetRequest * UpdateThreatIntelSetResponse::request() cons
 }
 
 /*!
- * @brief  Parse a GuardDuty UpdateThreatIntelSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty UpdateThreatIntelSet \a response.
  */
 void UpdateThreatIntelSetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateThreatIntelSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::UpdateThreatIntelSetResponsePrivate
+ * \brief The UpdateThreatIntelSetResponsePrivate class provides private implementation for UpdateThreatIntelSetResponse.
  * \internal
  *
- * \class UpdateThreatIntelSetResponsePrivate
- *
- * \brief Private implementation for UpdateThreatIntelSetResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateThreatIntelSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateThreatIntelSetResponse instance.
+ * Constructs a UpdateThreatIntelSetResponsePrivate object with public implementation \a q.
  */
 UpdateThreatIntelSetResponsePrivate::UpdateThreatIntelSetResponsePrivate(
     UpdateThreatIntelSetResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateThreatIntelSetResponsePrivate::UpdateThreatIntelSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty UpdateThreatIntelSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty UpdateThreatIntelSet response element from \a xml.
  */
 void UpdateThreatIntelSetResponsePrivate::parseUpdateThreatIntelSetResponse(QXmlStreamReader &xml)
 {

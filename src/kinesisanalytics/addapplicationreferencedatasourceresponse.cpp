@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationReferenceDataSourceResponse
- *
  * \brief The AddApplicationReferenceDataSourceResponse class provides an interace for KinesisAnalytics AddApplicationReferenceDataSource responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::addApplicationReferenceDataSource
  */
 
 /*!
- * @brief  Constructs a new AddApplicationReferenceDataSourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddApplicationReferenceDataSourceResponse object for \a reply to \a request, with parent \a parent.
  */
 AddApplicationReferenceDataSourceResponse::AddApplicationReferenceDataSourceResponse(
         const AddApplicationReferenceDataSourceRequest &request,
@@ -55,6 +50,9 @@ AddApplicationReferenceDataSourceResponse::AddApplicationReferenceDataSourceResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddApplicationReferenceDataSourceRequest * AddApplicationReferenceDataSourceResponse::request() const
 {
     Q_D(const AddApplicationReferenceDataSourceResponse);
@@ -62,9 +60,8 @@ const AddApplicationReferenceDataSourceRequest * AddApplicationReferenceDataSour
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics AddApplicationReferenceDataSource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics AddApplicationReferenceDataSource \a response.
  */
 void AddApplicationReferenceDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void AddApplicationReferenceDataSourceResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::AddApplicationReferenceDataSourceResponsePrivate
+ * \brief The AddApplicationReferenceDataSourceResponsePrivate class provides private implementation for AddApplicationReferenceDataSourceResponse.
  * \internal
  *
- * \class AddApplicationReferenceDataSourceResponsePrivate
- *
- * \brief Private implementation for AddApplicationReferenceDataSourceResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddApplicationReferenceDataSourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddApplicationReferenceDataSourceResponse instance.
+ * Constructs a AddApplicationReferenceDataSourceResponsePrivate object with public implementation \a q.
  */
 AddApplicationReferenceDataSourceResponsePrivate::AddApplicationReferenceDataSourceResponsePrivate(
     AddApplicationReferenceDataSourceResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ AddApplicationReferenceDataSourceResponsePrivate::AddApplicationReferenceDataSou
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics AddApplicationReferenceDataSourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics AddApplicationReferenceDataSource response element from \a xml.
  */
 void AddApplicationReferenceDataSourceResponsePrivate::parseAddApplicationReferenceDataSourceResponse(QXmlStreamReader &xml)
 {

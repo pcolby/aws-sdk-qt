@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVolumesResponse
- *
  * \brief The DescribeVolumesResponse class provides an interace for EC2 DescribeVolumes responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVolumesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVolumesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVolumesResponse::DescribeVolumesResponse(
         const DescribeVolumesRequest &request,
@@ -59,6 +54,9 @@ DescribeVolumesResponse::DescribeVolumesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVolumesRequest * DescribeVolumesResponse::request() const
 {
     Q_D(const DescribeVolumesResponse);
@@ -66,9 +64,8 @@ const DescribeVolumesRequest * DescribeVolumesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeVolumes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeVolumes \a response.
  */
 void DescribeVolumesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeVolumesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeVolumesResponsePrivate
+ * \brief The DescribeVolumesResponsePrivate class provides private implementation for DescribeVolumesResponse.
  * \internal
  *
- * \class DescribeVolumesResponsePrivate
- *
- * \brief Private implementation for DescribeVolumesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVolumesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVolumesResponse instance.
+ * Constructs a DescribeVolumesResponsePrivate object with public implementation \a q.
  */
 DescribeVolumesResponsePrivate::DescribeVolumesResponsePrivate(
     DescribeVolumesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeVolumesResponsePrivate::DescribeVolumesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeVolumesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeVolumes response element from \a xml.
  */
 void DescribeVolumesResponsePrivate::parseDescribeVolumesResponse(QXmlStreamReader &xml)
 {

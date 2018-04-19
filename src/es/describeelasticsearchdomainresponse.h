@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeElasticsearchDomainResponse : public ElasticsearchSer
 public:
     DescribeElasticsearchDomainResponse(const DescribeElasticsearchDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeElasticsearchDomainRequest * request() const;
+    virtual const DescribeElasticsearchDomainRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeElasticsearchDomainResponse)

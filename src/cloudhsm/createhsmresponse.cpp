@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::CreateHsmResponse
- *
  * \brief The CreateHsmResponse class provides an interace for CloudHSM CreateHsm responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new CreateHsmResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateHsmResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateHsmResponse::CreateHsmResponse(
         const CreateHsmRequest &request,
@@ -67,6 +62,9 @@ CreateHsmResponse::CreateHsmResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateHsmRequest * CreateHsmResponse::request() const
 {
     Q_D(const CreateHsmResponse);
@@ -74,9 +72,8 @@ const CreateHsmRequest * CreateHsmResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSM CreateHsm response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM CreateHsm \a response.
  */
 void CreateHsmResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void CreateHsmResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::CreateHsmResponsePrivate
+ * \brief The CreateHsmResponsePrivate class provides private implementation for CreateHsmResponse.
  * \internal
  *
- * \class CreateHsmResponsePrivate
- *
- * \brief Private implementation for CreateHsmResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHsmResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateHsmResponse instance.
+ * Constructs a CreateHsmResponsePrivate object with public implementation \a q.
  */
 CreateHsmResponsePrivate::CreateHsmResponsePrivate(
     CreateHsmResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ CreateHsmResponsePrivate::CreateHsmResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM CreateHsmResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM CreateHsm response element from \a xml.
  */
 void CreateHsmResponsePrivate::parseCreateHsmResponse(QXmlStreamReader &xml)
 {

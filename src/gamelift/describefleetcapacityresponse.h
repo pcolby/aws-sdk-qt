@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeFleetCapacityResponse : public GameLiftResponse {
 public:
     DescribeFleetCapacityResponse(const DescribeFleetCapacityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeFleetCapacityRequest * request() const;
+    virtual const DescribeFleetCapacityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeFleetCapacityResponse)

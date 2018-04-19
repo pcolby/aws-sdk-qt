@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DetachVolumeResponse
- *
  * \brief The DetachVolumeResponse class provides an interace for EC2 DetachVolume responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DetachVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachVolumeResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachVolumeResponse::DetachVolumeResponse(
         const DetachVolumeRequest &request,
@@ -59,6 +54,9 @@ DetachVolumeResponse::DetachVolumeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachVolumeRequest * DetachVolumeResponse::request() const
 {
     Q_D(const DetachVolumeResponse);
@@ -66,9 +64,8 @@ const DetachVolumeRequest * DetachVolumeResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DetachVolume response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DetachVolume \a response.
  */
 void DetachVolumeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DetachVolumeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DetachVolumeResponsePrivate
+ * \brief The DetachVolumeResponsePrivate class provides private implementation for DetachVolumeResponse.
  * \internal
  *
- * \class DetachVolumeResponsePrivate
- *
- * \brief Private implementation for DetachVolumeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachVolumeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachVolumeResponse instance.
+ * Constructs a DetachVolumeResponsePrivate object with public implementation \a q.
  */
 DetachVolumeResponsePrivate::DetachVolumeResponsePrivate(
     DetachVolumeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DetachVolumeResponsePrivate::DetachVolumeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DetachVolumeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DetachVolume response element from \a xml.
  */
 void DetachVolumeResponsePrivate::parseDetachVolumeResponse(QXmlStreamReader &xml)
 {

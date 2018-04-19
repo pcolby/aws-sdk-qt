@@ -102,9 +102,8 @@ QtAws::Core::AwsAbstractResponse * ListApplicationVersionsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListApplicationVersionsRequestPrivate object for ServerlessApplicationRepository \a action with,
- * public implementation \a q.
+ * Constructs a ListApplicationVersionsRequestPrivate object for ServerlessApplicationRepository \a action,
+ * with public implementation \a q.
  */
 ListApplicationVersionsRequestPrivate::ListApplicationVersionsRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, ListApplicationVersionsRequest * const q)

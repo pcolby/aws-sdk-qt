@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::ChangeMessageVisibilityBatchResponse
- *
  * \brief The ChangeMessageVisibilityBatchResponse class provides an interace for SQS ChangeMessageVisibilityBatch responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new ChangeMessageVisibilityBatchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ChangeMessageVisibilityBatchResponse object for \a reply to \a request, with parent \a parent.
  */
 ChangeMessageVisibilityBatchResponse::ChangeMessageVisibilityBatchResponse(
         const ChangeMessageVisibilityBatchRequest &request,
@@ -121,6 +116,9 @@ ChangeMessageVisibilityBatchResponse::ChangeMessageVisibilityBatchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ChangeMessageVisibilityBatchRequest * ChangeMessageVisibilityBatchResponse::request() const
 {
     Q_D(const ChangeMessageVisibilityBatchResponse);
@@ -128,9 +126,8 @@ const ChangeMessageVisibilityBatchRequest * ChangeMessageVisibilityBatchResponse
 }
 
 /*!
- * @brief  Parse a SQS ChangeMessageVisibilityBatch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS ChangeMessageVisibilityBatch \a response.
  */
 void ChangeMessageVisibilityBatchResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void ChangeMessageVisibilityBatchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::ChangeMessageVisibilityBatchResponsePrivate
+ * \brief The ChangeMessageVisibilityBatchResponsePrivate class provides private implementation for ChangeMessageVisibilityBatchResponse.
  * \internal
  *
- * \class ChangeMessageVisibilityBatchResponsePrivate
- *
- * \brief Private implementation for ChangeMessageVisibilityBatchResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ChangeMessageVisibilityBatchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ChangeMessageVisibilityBatchResponse instance.
+ * Constructs a ChangeMessageVisibilityBatchResponsePrivate object with public implementation \a q.
  */
 ChangeMessageVisibilityBatchResponsePrivate::ChangeMessageVisibilityBatchResponsePrivate(
     ChangeMessageVisibilityBatchResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ ChangeMessageVisibilityBatchResponsePrivate::ChangeMessageVisibilityBatchRespons
 }
 
 /*!
- * @brief  Parse an SQS ChangeMessageVisibilityBatchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS ChangeMessageVisibilityBatch response element from \a xml.
  */
 void ChangeMessageVisibilityBatchResponsePrivate::parseChangeMessageVisibilityBatchResponse(QXmlStreamReader &xml)
 {

@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DeleteWebACLRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteWebACLRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a DeleteWebACLRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteWebACLRequest * const q)

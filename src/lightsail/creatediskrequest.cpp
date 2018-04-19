@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * CreateDiskRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CreateDiskRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a CreateDiskRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 CreateDiskRequestPrivate::CreateDiskRequestPrivate(
     const LightsailRequest::Action action, CreateDiskRequest * const q)

@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * CreateCertificateAuthorityAuditReportRequest:
  */
 
 /*!
- *
- * Constructs a CreateCertificateAuthorityAuditReportRequestPrivate object for ACMPCA \a action with,
- * public implementation \a q.
+ * Constructs a CreateCertificateAuthorityAuditReportRequestPrivate object for ACMPCA \a action,
+ * with public implementation \a q.
  */
 CreateCertificateAuthorityAuditReportRequestPrivate::CreateCertificateAuthorityAuditReportRequestPrivate(
     const ACMPCARequest::Action action, CreateCertificateAuthorityAuditReportRequest * const q)

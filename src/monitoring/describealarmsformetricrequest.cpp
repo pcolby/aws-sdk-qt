@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAlarmsForMetricRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeAlarmsForMetricRequestPrivate object for CloudWatch \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAlarmsForMetricRequestPrivate object for CloudWatch \a action,
+ * with public implementation \a q.
  */
 DescribeAlarmsForMetricRequestPrivate::DescribeAlarmsForMetricRequestPrivate(
     const CloudWatchRequest::Action action, DescribeAlarmsForMetricRequest * const q)

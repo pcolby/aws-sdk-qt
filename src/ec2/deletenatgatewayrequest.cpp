@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNatGatewayRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteNatGatewayRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNatGatewayRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteNatGatewayRequestPrivate::DeleteNatGatewayRequestPrivate(
     const EC2Request::Action action, DeleteNatGatewayRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CompleteLayerUploadRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a CompleteLayerUploadRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a CompleteLayerUploadRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 CompleteLayerUploadRequestPrivate::CompleteLayerUploadRequestPrivate(
     const ECRRequest::Action action, CompleteLayerUploadRequest * const q)

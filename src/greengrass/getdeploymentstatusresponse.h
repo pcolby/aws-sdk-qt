@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDeploymentStatusResponse : public GreengrassResponse {
 public:
     GetDeploymentStatusResponse(const GetDeploymentStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDeploymentStatusRequest * request() const;
+    virtual const GetDeploymentStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDeploymentStatusResponse)

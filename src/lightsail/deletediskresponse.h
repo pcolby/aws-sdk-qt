@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDiskResponse : public LightsailResponse {
 public:
     DeleteDiskResponse(const DeleteDiskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDiskRequest * request() const;
+    virtual const DeleteDiskRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDiskResponse)

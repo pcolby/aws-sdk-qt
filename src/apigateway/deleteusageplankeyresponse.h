@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteUsagePlanKeyResponse : public APIGatewayResponse {
 public:
     DeleteUsagePlanKeyResponse(const DeleteUsagePlanKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteUsagePlanKeyRequest * request() const;
+    virtual const DeleteUsagePlanKeyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteUsagePlanKeyResponse)

@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * InitiateJobRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a InitiateJobRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a InitiateJobRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 InitiateJobRequestPrivate::InitiateJobRequestPrivate(
     const GlacierRequest::Action action, InitiateJobRequest * const q)

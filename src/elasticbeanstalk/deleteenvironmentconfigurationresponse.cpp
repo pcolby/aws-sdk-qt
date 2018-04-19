@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteEnvironmentConfigurationResponse
- *
  * \brief The DeleteEnvironmentConfigurationResponse class provides an interace for ElasticBeanstalk DeleteEnvironmentConfiguration responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DeleteEnvironmentConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEnvironmentConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEnvironmentConfigurationResponse::DeleteEnvironmentConfigurationResponse(
         const DeleteEnvironmentConfigurationRequest &request,
@@ -77,6 +72,9 @@ DeleteEnvironmentConfigurationResponse::DeleteEnvironmentConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEnvironmentConfigurationRequest * DeleteEnvironmentConfigurationResponse::request() const
 {
     Q_D(const DeleteEnvironmentConfigurationResponse);
@@ -84,9 +82,8 @@ const DeleteEnvironmentConfigurationRequest * DeleteEnvironmentConfigurationResp
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DeleteEnvironmentConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DeleteEnvironmentConfiguration \a response.
  */
 void DeleteEnvironmentConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DeleteEnvironmentConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DeleteEnvironmentConfigurationResponsePrivate
+ * \brief The DeleteEnvironmentConfigurationResponsePrivate class provides private implementation for DeleteEnvironmentConfigurationResponse.
  * \internal
  *
- * \class DeleteEnvironmentConfigurationResponsePrivate
- *
- * \brief Private implementation for DeleteEnvironmentConfigurationResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEnvironmentConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEnvironmentConfigurationResponse instance.
+ * Constructs a DeleteEnvironmentConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteEnvironmentConfigurationResponsePrivate::DeleteEnvironmentConfigurationResponsePrivate(
     DeleteEnvironmentConfigurationResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DeleteEnvironmentConfigurationResponsePrivate::DeleteEnvironmentConfigurationRes
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DeleteEnvironmentConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DeleteEnvironmentConfiguration response element from \a xml.
  */
 void DeleteEnvironmentConfigurationResponsePrivate::parseDeleteEnvironmentConfigurationResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::GetAttributesResponse
- *
  * \brief The GetAttributesResponse class provides an interace for SimpleDB GetAttributes responses.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -52,11 +51,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new GetAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAttributesResponse::GetAttributesResponse(
         const GetAttributesRequest &request,
@@ -68,6 +63,9 @@ GetAttributesResponse::GetAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAttributesRequest * GetAttributesResponse::request() const
 {
     Q_D(const GetAttributesResponse);
@@ -75,9 +73,8 @@ const GetAttributesRequest * GetAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SimpleDB GetAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SimpleDB GetAttributes \a response.
  */
 void GetAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void GetAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SimpleDB::GetAttributesResponsePrivate
+ * \brief The GetAttributesResponsePrivate class provides private implementation for GetAttributesResponse.
  * \internal
  *
- * \class GetAttributesResponsePrivate
- *
- * \brief Private implementation for GetAttributesResponse.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAttributesResponse instance.
+ * Constructs a GetAttributesResponsePrivate object with public implementation \a q.
  */
 GetAttributesResponsePrivate::GetAttributesResponsePrivate(
     GetAttributesResponse * const q) : SimpleDBResponsePrivate(q)
@@ -108,9 +101,7 @@ GetAttributesResponsePrivate::GetAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SimpleDB GetAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SimpleDB GetAttributes response element from \a xml.
  */
 void GetAttributesResponsePrivate::parseGetAttributesResponse(QXmlStreamReader &xml)
 {

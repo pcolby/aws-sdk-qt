@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeMetricCollectionTypesResponse
- *
  * \brief The DescribeMetricCollectionTypesResponse class provides an interace for AutoScaling DescribeMetricCollectionTypes responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeMetricCollectionTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeMetricCollectionTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeMetricCollectionTypesResponse::DescribeMetricCollectionTypesResponse(
         const DescribeMetricCollectionTypesRequest &request,
@@ -60,6 +55,9 @@ DescribeMetricCollectionTypesResponse::DescribeMetricCollectionTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeMetricCollectionTypesRequest * DescribeMetricCollectionTypesResponse::request() const
 {
     Q_D(const DescribeMetricCollectionTypesResponse);
@@ -67,9 +65,8 @@ const DescribeMetricCollectionTypesRequest * DescribeMetricCollectionTypesRespon
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeMetricCollectionTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeMetricCollectionTypes \a response.
  */
 void DescribeMetricCollectionTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeMetricCollectionTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeMetricCollectionTypesResponsePrivate
+ * \brief The DescribeMetricCollectionTypesResponsePrivate class provides private implementation for DescribeMetricCollectionTypesResponse.
  * \internal
  *
- * \class DescribeMetricCollectionTypesResponsePrivate
- *
- * \brief Private implementation for DescribeMetricCollectionTypesResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMetricCollectionTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeMetricCollectionTypesResponse instance.
+ * Constructs a DescribeMetricCollectionTypesResponsePrivate object with public implementation \a q.
  */
 DescribeMetricCollectionTypesResponsePrivate::DescribeMetricCollectionTypesResponsePrivate(
     DescribeMetricCollectionTypesResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeMetricCollectionTypesResponsePrivate::DescribeMetricCollectionTypesRespo
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeMetricCollectionTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeMetricCollectionTypes response element from \a xml.
  */
 void DescribeMetricCollectionTypesResponsePrivate::parseDescribeMetricCollectionTypesResponse(QXmlStreamReader &xml)
 {

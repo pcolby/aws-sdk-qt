@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeStreamRequestPrivate object for DynamoDBStreams \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStreamRequestPrivate object for DynamoDBStreams \a action,
+ * with public implementation \a q.
  */
 DescribeStreamRequestPrivate::DescribeStreamRequestPrivate(
     const DynamoDBStreamsRequest::Action action, DescribeStreamRequest * const q)

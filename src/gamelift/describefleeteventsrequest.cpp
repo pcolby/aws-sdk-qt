@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetEventsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeFleetEventsRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeFleetEventsRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DescribeFleetEventsRequestPrivate::DescribeFleetEventsRequestPrivate(
     const GameLiftRequest::Action action, DescribeFleetEventsRequest * const q)

@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GetKeyPolicyResponse
- *
  * \brief The GetKeyPolicyResponse class provides an interace for KMS GetKeyPolicy responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GetKeyPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetKeyPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetKeyPolicyResponse::GetKeyPolicyResponse(
         const GetKeyPolicyRequest &request,
@@ -154,6 +149,9 @@ GetKeyPolicyResponse::GetKeyPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetKeyPolicyRequest * GetKeyPolicyResponse::request() const
 {
     Q_D(const GetKeyPolicyResponse);
@@ -161,9 +159,8 @@ const GetKeyPolicyRequest * GetKeyPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS GetKeyPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS GetKeyPolicy \a response.
  */
 void GetKeyPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void GetKeyPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::GetKeyPolicyResponsePrivate
+ * \brief The GetKeyPolicyResponsePrivate class provides private implementation for GetKeyPolicyResponse.
  * \internal
  *
- * \class GetKeyPolicyResponsePrivate
- *
- * \brief Private implementation for GetKeyPolicyResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetKeyPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetKeyPolicyResponse instance.
+ * Constructs a GetKeyPolicyResponsePrivate object with public implementation \a q.
  */
 GetKeyPolicyResponsePrivate::GetKeyPolicyResponsePrivate(
     GetKeyPolicyResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ GetKeyPolicyResponsePrivate::GetKeyPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS GetKeyPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS GetKeyPolicy response element from \a xml.
  */
 void GetKeyPolicyResponsePrivate::parseGetKeyPolicyResponse(QXmlStreamReader &xml)
 {

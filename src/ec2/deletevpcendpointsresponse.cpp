@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVpcEndpointsResponse
- *
  * \brief The DeleteVpcEndpointsResponse class provides an interace for EC2 DeleteVpcEndpoints responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcEndpointsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVpcEndpointsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVpcEndpointsResponse::DeleteVpcEndpointsResponse(
         const DeleteVpcEndpointsRequest &request,
@@ -59,6 +54,9 @@ DeleteVpcEndpointsResponse::DeleteVpcEndpointsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVpcEndpointsRequest * DeleteVpcEndpointsResponse::request() const
 {
     Q_D(const DeleteVpcEndpointsResponse);
@@ -66,9 +64,8 @@ const DeleteVpcEndpointsRequest * DeleteVpcEndpointsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteVpcEndpoints response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteVpcEndpoints \a response.
  */
 void DeleteVpcEndpointsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteVpcEndpointsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteVpcEndpointsResponsePrivate
+ * \brief The DeleteVpcEndpointsResponsePrivate class provides private implementation for DeleteVpcEndpointsResponse.
  * \internal
  *
- * \class DeleteVpcEndpointsResponsePrivate
- *
- * \brief Private implementation for DeleteVpcEndpointsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcEndpointsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVpcEndpointsResponse instance.
+ * Constructs a DeleteVpcEndpointsResponsePrivate object with public implementation \a q.
  */
 DeleteVpcEndpointsResponsePrivate::DeleteVpcEndpointsResponsePrivate(
     DeleteVpcEndpointsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteVpcEndpointsResponsePrivate::DeleteVpcEndpointsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteVpcEndpointsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteVpcEndpoints response element from \a xml.
  */
 void DeleteVpcEndpointsResponsePrivate::parseDeleteVpcEndpointsResponse(QXmlStreamReader &xml)
 {

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceDefinitionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateDeviceDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDeviceDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 UpdateDeviceDefinitionRequestPrivate::UpdateDeviceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateDeviceDefinitionRequest * const q)

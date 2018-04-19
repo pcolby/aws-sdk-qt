@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListRulesRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ListRulesRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a ListRulesRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 ListRulesRequestPrivate::ListRulesRequestPrivate(
     const WAFRequest::Action action, ListRulesRequest * const q)

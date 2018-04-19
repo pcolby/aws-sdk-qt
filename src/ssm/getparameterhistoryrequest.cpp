@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * GetParameterHistoryRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetParameterHistoryRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a GetParameterHistoryRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 GetParameterHistoryRequestPrivate::GetParameterHistoryRequestPrivate(
     const SSMRequest::Action action, GetParameterHistoryRequest * const q)

@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * PutApprovalResultRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a PutApprovalResultRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a PutApprovalResultRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 PutApprovalResultRequestPrivate::PutApprovalResultRequestPrivate(
     const CodePipelineRequest::Action action, PutApprovalResultRequest * const q)

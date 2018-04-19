@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AssociateAddressRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a AssociateAddressRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AssociateAddressRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AssociateAddressRequestPrivate::AssociateAddressRequestPrivate(
     const EC2Request::Action action, AssociateAddressRequest * const q)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListV2LoggingLevelsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListV2LoggingLevelsRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListV2LoggingLevelsRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListV2LoggingLevelsRequestPrivate::ListV2LoggingLevelsRequestPrivate(
     const IoTRequest::Action action, ListV2LoggingLevelsRequest * const q)

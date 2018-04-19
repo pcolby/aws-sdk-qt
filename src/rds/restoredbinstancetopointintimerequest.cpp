@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * RestoreDBInstanceToPointInTimeRequest::respon
  */
 
 /*!
- *
- * Constructs a RestoreDBInstanceToPointInTimeRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a RestoreDBInstanceToPointInTimeRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 RestoreDBInstanceToPointInTimeRequestPrivate::RestoreDBInstanceToPointInTimeRequestPrivate(
     const RDSRequest::Action action, RestoreDBInstanceToPointInTimeRequest * const q)

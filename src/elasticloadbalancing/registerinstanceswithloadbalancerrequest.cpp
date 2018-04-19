@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * RegisterInstancesWithLoadBalancerRequest::res
  */
 
 /*!
- *
- * Constructs a RegisterInstancesWithLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a RegisterInstancesWithLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 RegisterInstancesWithLoadBalancerRequestPrivate::RegisterInstancesWithLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, RegisterInstancesWithLoadBalancerRequest * const q)

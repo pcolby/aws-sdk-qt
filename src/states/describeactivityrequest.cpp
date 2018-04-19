@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * DescribeActivityRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeActivityRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a DescribeActivityRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 DescribeActivityRequestPrivate::DescribeActivityRequestPrivate(
     const SFNRequest::Action action, DescribeActivityRequest * const q)

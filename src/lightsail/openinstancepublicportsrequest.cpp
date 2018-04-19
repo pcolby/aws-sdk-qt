@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * OpenInstancePublicPortsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a OpenInstancePublicPortsRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a OpenInstancePublicPortsRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 OpenInstancePublicPortsRequestPrivate::OpenInstancePublicPortsRequestPrivate(
     const LightsailRequest::Action action, OpenInstancePublicPortsRequest * const q)

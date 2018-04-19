@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminUpdateUserAttributesResponse : public CognitoIdentityPro
 public:
     AdminUpdateUserAttributesResponse(const AdminUpdateUserAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminUpdateUserAttributesRequest * request() const;
+    virtual const AdminUpdateUserAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AdminUpdateUserAttributesResponse)

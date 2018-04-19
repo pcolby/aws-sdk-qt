@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListObjectsV2Request::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListObjectsV2RequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a ListObjectsV2RequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 ListObjectsV2RequestPrivate::ListObjectsV2RequestPrivate(
     const S3Request::Action action, ListObjectsV2Request * const q)

@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * GetMergeConflictsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetMergeConflictsRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a GetMergeConflictsRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 GetMergeConflictsRequestPrivate::GetMergeConflictsRequestPrivate(
     const CodeCommitRequest::Action action, GetMergeConflictsRequest * const q)

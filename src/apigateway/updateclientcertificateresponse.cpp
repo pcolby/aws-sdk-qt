@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateClientCertificateResponse
- *
  * \brief The UpdateClientCertificateResponse class provides an interace for APIGateway UpdateClientCertificate responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateClientCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateClientCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateClientCertificateResponse::UpdateClientCertificateResponse(
         const UpdateClientCertificateRequest &request,
@@ -60,6 +55,9 @@ UpdateClientCertificateResponse::UpdateClientCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateClientCertificateRequest * UpdateClientCertificateResponse::request() const
 {
     Q_D(const UpdateClientCertificateResponse);
@@ -67,9 +65,8 @@ const UpdateClientCertificateRequest * UpdateClientCertificateResponse::request(
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateClientCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateClientCertificate \a response.
  */
 void UpdateClientCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateClientCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateClientCertificateResponsePrivate
+ * \brief The UpdateClientCertificateResponsePrivate class provides private implementation for UpdateClientCertificateResponse.
  * \internal
  *
- * \class UpdateClientCertificateResponsePrivate
- *
- * \brief Private implementation for UpdateClientCertificateResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateClientCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateClientCertificateResponse instance.
+ * Constructs a UpdateClientCertificateResponsePrivate object with public implementation \a q.
  */
 UpdateClientCertificateResponsePrivate::UpdateClientCertificateResponsePrivate(
     UpdateClientCertificateResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateClientCertificateResponsePrivate::UpdateClientCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateClientCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateClientCertificate response element from \a xml.
  */
 void UpdateClientCertificateResponsePrivate::parseUpdateClientCertificateResponse(QXmlStreamReader &xml)
 {

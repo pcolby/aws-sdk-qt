@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyIdentityIdFormatRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ModifyIdentityIdFormatRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyIdentityIdFormatRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyIdentityIdFormatRequestPrivate::ModifyIdentityIdFormatRequestPrivate(
     const EC2Request::Action action, ModifyIdentityIdFormatRequest * const q)

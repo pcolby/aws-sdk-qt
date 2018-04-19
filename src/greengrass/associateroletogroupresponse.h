@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateRoleToGroupResponse : public GreengrassResponse {
 public:
     AssociateRoleToGroupResponse(const AssociateRoleToGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateRoleToGroupRequest * request() const;
+    virtual const AssociateRoleToGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateRoleToGroupResponse)

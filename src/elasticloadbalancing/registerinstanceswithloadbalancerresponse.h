@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterInstancesWithLoadBalancerResponse : public ElasticLoa
 public:
     RegisterInstancesWithLoadBalancerResponse(const RegisterInstancesWithLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterInstancesWithLoadBalancerRequest * request() const;
+    virtual const RegisterInstancesWithLoadBalancerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterInstancesWithLoadBalancerResponse)

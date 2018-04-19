@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AssociateSoftwareTokenResponse
- *
  * \brief The AssociateSoftwareTokenResponse class provides an interace for CognitoIdentityProvider AssociateSoftwareToken responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AssociateSoftwareTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateSoftwareTokenResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateSoftwareTokenResponse::AssociateSoftwareTokenResponse(
         const AssociateSoftwareTokenRequest &request,
@@ -65,6 +60,9 @@ AssociateSoftwareTokenResponse::AssociateSoftwareTokenResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateSoftwareTokenRequest * AssociateSoftwareTokenResponse::request() const
 {
     Q_D(const AssociateSoftwareTokenResponse);
@@ -72,9 +70,8 @@ const AssociateSoftwareTokenRequest * AssociateSoftwareTokenResponse::request() 
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AssociateSoftwareToken response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AssociateSoftwareToken \a response.
  */
 void AssociateSoftwareTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AssociateSoftwareTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AssociateSoftwareTokenResponsePrivate
+ * \brief The AssociateSoftwareTokenResponsePrivate class provides private implementation for AssociateSoftwareTokenResponse.
  * \internal
  *
- * \class AssociateSoftwareTokenResponsePrivate
- *
- * \brief Private implementation for AssociateSoftwareTokenResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateSoftwareTokenResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateSoftwareTokenResponse instance.
+ * Constructs a AssociateSoftwareTokenResponsePrivate object with public implementation \a q.
  */
 AssociateSoftwareTokenResponsePrivate::AssociateSoftwareTokenResponsePrivate(
     AssociateSoftwareTokenResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AssociateSoftwareTokenResponsePrivate::AssociateSoftwareTokenResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AssociateSoftwareTokenResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AssociateSoftwareToken response element from \a xml.
  */
 void AssociateSoftwareTokenResponsePrivate::parseAssociateSoftwareTokenResponse(QXmlStreamReader &xml)
 {

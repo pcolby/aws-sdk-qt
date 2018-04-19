@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetKeyPairResponse
- *
  * \brief The GetKeyPairResponse class provides an interace for Lightsail GetKeyPair responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetKeyPairResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetKeyPairResponse object for \a reply to \a request, with parent \a parent.
  */
 GetKeyPairResponse::GetKeyPairResponse(
         const GetKeyPairRequest &request,
@@ -71,6 +66,9 @@ GetKeyPairResponse::GetKeyPairResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetKeyPairRequest * GetKeyPairResponse::request() const
 {
     Q_D(const GetKeyPairResponse);
@@ -78,9 +76,8 @@ const GetKeyPairRequest * GetKeyPairResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetKeyPair response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetKeyPair \a response.
  */
 void GetKeyPairResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetKeyPairResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetKeyPairResponsePrivate
+ * \brief The GetKeyPairResponsePrivate class provides private implementation for GetKeyPairResponse.
  * \internal
  *
- * \class GetKeyPairResponsePrivate
- *
- * \brief Private implementation for GetKeyPairResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetKeyPairResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetKeyPairResponse instance.
+ * Constructs a GetKeyPairResponsePrivate object with public implementation \a q.
  */
 GetKeyPairResponsePrivate::GetKeyPairResponsePrivate(
     GetKeyPairResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetKeyPairResponsePrivate::GetKeyPairResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetKeyPairResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetKeyPair response element from \a xml.
  */
 void GetKeyPairResponsePrivate::parseGetKeyPairResponse(QXmlStreamReader &xml)
 {

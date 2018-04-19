@@ -28,16 +28,13 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::WorkDocsResponse
- *
  * \brief The WorkDocsResponse class provides an interface for WorkDocs responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @brief  Constructs a new WorkDocsResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a WorkDocsResponse object with parent \a parent.
  */
 WorkDocsResponse::WorkDocsResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new WorkDocsResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ WorkDocsResponse::WorkDocsResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WorkDocsResponse object.
- *
+ * \internal
+ * Constructs a WorkDocsResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WorkDocsResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 WorkDocsResponse::WorkDocsResponse(WorkDocsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ WorkDocsResponse::WorkDocsResponse(WorkDocsResponsePrivate * const d, QObject * 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void WorkDocsResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void WorkDocsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkDocs::WorkDocsResponsePrivate
+ * \brief The WorkDocsResponsePrivate class provides private implementation for WorkDocsResponse.
+ * \internal
  *
- * @class  WorkDocsResponsePrivate
- *
- * @brief  Private implementation for WorkDocsResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WorkDocsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public WorkDocsResponse instance.
+ * Constructs a WorkDocsResponsePrivate object with public implementation \a q.
  */
 WorkDocsResponsePrivate::WorkDocsResponsePrivate(
     WorkDocsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

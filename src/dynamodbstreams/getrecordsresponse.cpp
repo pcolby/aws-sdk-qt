@@ -29,10 +29,9 @@ namespace DynamoDBStreams {
 
 /*!
  * \class QtAws::DynamoDBStreams::GetRecordsResponse
- *
  * \brief The GetRecordsResponse class provides an interace for DynamoDBStreams GetRecords responses.
  *
- * \ingroup DynamoDBStreams
+ * \inmodule QtAwsDynamoDBStreams
  *
  *  <fullname>Amazon DynamoDB Streams</fullname>
  * 
@@ -72,11 +71,7 @@ namespace DynamoDBStreams {
  */
 
 /*!
- * @brief  Constructs a new GetRecordsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRecordsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRecordsResponse::GetRecordsResponse(
         const GetRecordsRequest &request,
@@ -88,6 +83,9 @@ GetRecordsResponse::GetRecordsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRecordsRequest * GetRecordsResponse::request() const
 {
     Q_D(const GetRecordsResponse);
@@ -95,9 +93,8 @@ const GetRecordsRequest * GetRecordsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDBStreams GetRecords response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDBStreams GetRecords \a response.
  */
 void GetRecordsResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void GetRecordsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDBStreams::GetRecordsResponsePrivate
+ * \brief The GetRecordsResponsePrivate class provides private implementation for GetRecordsResponse.
  * \internal
  *
- * \class GetRecordsResponsePrivate
- *
- * \brief Private implementation for GetRecordsResponse.
+ * \inmodule QtAwsDynamoDBStreams
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRecordsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRecordsResponse instance.
+ * Constructs a GetRecordsResponsePrivate object with public implementation \a q.
  */
 GetRecordsResponsePrivate::GetRecordsResponsePrivate(
     GetRecordsResponse * const q) : DynamoDBStreamsResponsePrivate(q)
@@ -128,9 +121,7 @@ GetRecordsResponsePrivate::GetRecordsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDBStreams GetRecordsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDBStreams GetRecords response element from \a xml.
  */
 void GetRecordsResponsePrivate::parseGetRecordsResponse(QXmlStreamReader &xml)
 {

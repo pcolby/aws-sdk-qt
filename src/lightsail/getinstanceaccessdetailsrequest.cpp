@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetInstanceAccessDetailsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a GetInstanceAccessDetailsRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetInstanceAccessDetailsRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetInstanceAccessDetailsRequestPrivate::GetInstanceAccessDetailsRequestPrivate(
     const LightsailRequest::Action action, GetInstanceAccessDetailsRequest * const q)

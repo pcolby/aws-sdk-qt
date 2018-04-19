@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListWorkersWithQualificationTypeResponse : public MTurkRespon
 public:
     ListWorkersWithQualificationTypeResponse(const ListWorkersWithQualificationTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListWorkersWithQualificationTypeRequest * request() const;
+    virtual const ListWorkersWithQualificationTypeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListWorkersWithQualificationTypeResponse)

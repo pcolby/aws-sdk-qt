@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketInventoryConfigurationResponse
- *
  * \brief The PutBucketInventoryConfigurationResponse class provides an interace for S3 PutBucketInventoryConfiguration responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketInventoryConfiguration
  */
 
 /*!
- * @brief  Constructs a new PutBucketInventoryConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketInventoryConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketInventoryConfigurationResponse::PutBucketInventoryConfigurationResponse(
         const PutBucketInventoryConfigurationRequest &request,
@@ -55,6 +50,9 @@ PutBucketInventoryConfigurationResponse::PutBucketInventoryConfigurationResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketInventoryConfigurationRequest * PutBucketInventoryConfigurationResponse::request() const
 {
     Q_D(const PutBucketInventoryConfigurationResponse);
@@ -62,9 +60,8 @@ const PutBucketInventoryConfigurationRequest * PutBucketInventoryConfigurationRe
 }
 
 /*!
- * @brief  Parse a S3 PutBucketInventoryConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketInventoryConfiguration \a response.
  */
 void PutBucketInventoryConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketInventoryConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketInventoryConfigurationResponsePrivate
+ * \brief The PutBucketInventoryConfigurationResponsePrivate class provides private implementation for PutBucketInventoryConfigurationResponse.
  * \internal
  *
- * \class PutBucketInventoryConfigurationResponsePrivate
- *
- * \brief Private implementation for PutBucketInventoryConfigurationResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketInventoryConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketInventoryConfigurationResponse instance.
+ * Constructs a PutBucketInventoryConfigurationResponsePrivate object with public implementation \a q.
  */
 PutBucketInventoryConfigurationResponsePrivate::PutBucketInventoryConfigurationResponsePrivate(
     PutBucketInventoryConfigurationResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketInventoryConfigurationResponsePrivate::PutBucketInventoryConfigurationR
 }
 
 /*!
- * @brief  Parse an S3 PutBucketInventoryConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketInventoryConfiguration response element from \a xml.
  */
 void PutBucketInventoryConfigurationResponsePrivate::parsePutBucketInventoryConfigurationResponse(QXmlStreamReader &xml)
 {

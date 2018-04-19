@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreateTriggerResponse
- *
  * \brief The CreateTriggerResponse class provides an interace for Glue CreateTrigger responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreateTriggerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTriggerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTriggerResponse::CreateTriggerResponse(
         const CreateTriggerRequest &request,
@@ -58,6 +53,9 @@ CreateTriggerResponse::CreateTriggerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTriggerRequest * CreateTriggerResponse::request() const
 {
     Q_D(const CreateTriggerResponse);
@@ -65,9 +63,8 @@ const CreateTriggerRequest * CreateTriggerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue CreateTrigger response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue CreateTrigger \a response.
  */
 void CreateTriggerResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateTriggerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::CreateTriggerResponsePrivate
+ * \brief The CreateTriggerResponsePrivate class provides private implementation for CreateTriggerResponse.
  * \internal
  *
- * \class CreateTriggerResponsePrivate
- *
- * \brief Private implementation for CreateTriggerResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTriggerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTriggerResponse instance.
+ * Constructs a CreateTriggerResponsePrivate object with public implementation \a q.
  */
 CreateTriggerResponsePrivate::CreateTriggerResponsePrivate(
     CreateTriggerResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateTriggerResponsePrivate::CreateTriggerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue CreateTriggerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue CreateTrigger response element from \a xml.
  */
 void CreateTriggerResponsePrivate::parseCreateTriggerResponse(QXmlStreamReader &xml)
 {

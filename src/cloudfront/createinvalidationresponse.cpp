@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateInvalidationResponse
- *
  * \brief The CreateInvalidationResponse class provides an interace for CloudFront CreateInvalidation responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateInvalidationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateInvalidationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateInvalidationResponse::CreateInvalidationResponse(
         const CreateInvalidationRequest &request,
@@ -60,6 +55,9 @@ CreateInvalidationResponse::CreateInvalidationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateInvalidationRequest * CreateInvalidationResponse::request() const
 {
     Q_D(const CreateInvalidationResponse);
@@ -67,9 +65,8 @@ const CreateInvalidationRequest * CreateInvalidationResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront CreateInvalidation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront CreateInvalidation \a response.
  */
 void CreateInvalidationResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateInvalidationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::CreateInvalidationResponsePrivate
+ * \brief The CreateInvalidationResponsePrivate class provides private implementation for CreateInvalidationResponse.
  * \internal
  *
- * \class CreateInvalidationResponsePrivate
- *
- * \brief Private implementation for CreateInvalidationResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInvalidationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateInvalidationResponse instance.
+ * Constructs a CreateInvalidationResponsePrivate object with public implementation \a q.
  */
 CreateInvalidationResponsePrivate::CreateInvalidationResponsePrivate(
     CreateInvalidationResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateInvalidationResponsePrivate::CreateInvalidationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront CreateInvalidationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront CreateInvalidation response element from \a xml.
  */
 void CreateInvalidationResponsePrivate::parseCreateInvalidationResponse(QXmlStreamReader &xml)
 {

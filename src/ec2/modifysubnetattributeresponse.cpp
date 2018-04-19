@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifySubnetAttributeResponse
- *
  * \brief The ModifySubnetAttributeResponse class provides an interace for EC2 ModifySubnetAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifySubnetAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifySubnetAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifySubnetAttributeResponse::ModifySubnetAttributeResponse(
         const ModifySubnetAttributeRequest &request,
@@ -59,6 +54,9 @@ ModifySubnetAttributeResponse::ModifySubnetAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifySubnetAttributeRequest * ModifySubnetAttributeResponse::request() const
 {
     Q_D(const ModifySubnetAttributeResponse);
@@ -66,9 +64,8 @@ const ModifySubnetAttributeRequest * ModifySubnetAttributeResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 ModifySubnetAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifySubnetAttribute \a response.
  */
 void ModifySubnetAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifySubnetAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifySubnetAttributeResponsePrivate
+ * \brief The ModifySubnetAttributeResponsePrivate class provides private implementation for ModifySubnetAttributeResponse.
  * \internal
  *
- * \class ModifySubnetAttributeResponsePrivate
- *
- * \brief Private implementation for ModifySubnetAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifySubnetAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifySubnetAttributeResponse instance.
+ * Constructs a ModifySubnetAttributeResponsePrivate object with public implementation \a q.
  */
 ModifySubnetAttributeResponsePrivate::ModifySubnetAttributeResponsePrivate(
     ModifySubnetAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifySubnetAttributeResponsePrivate::ModifySubnetAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifySubnetAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifySubnetAttribute response element from \a xml.
  */
 void ModifySubnetAttributeResponsePrivate::parseModifySubnetAttributeResponse(QXmlStreamReader &xml)
 {

@@ -139,9 +139,8 @@ QtAws::Core::AwsAbstractResponse * DecodeAuthorizationMessageRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DecodeAuthorizationMessageRequestPrivate object for STS \a action with,
- * public implementation \a q.
+ * Constructs a DecodeAuthorizationMessageRequestPrivate object for STS \a action,
+ * with public implementation \a q.
  */
 DecodeAuthorizationMessageRequestPrivate::DecodeAuthorizationMessageRequestPrivate(
     const STSRequest::Action action, DecodeAuthorizationMessageRequest * const q)

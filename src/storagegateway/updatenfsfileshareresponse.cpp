@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateNFSFileShareResponse
- *
  * \brief The UpdateNFSFileShareResponse class provides an interace for StorageGateway UpdateNFSFileShare responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateNFSFileShareResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateNFSFileShareResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateNFSFileShareResponse::UpdateNFSFileShareResponse(
         const UpdateNFSFileShareRequest &request,
@@ -124,6 +119,9 @@ UpdateNFSFileShareResponse::UpdateNFSFileShareResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateNFSFileShareRequest * UpdateNFSFileShareResponse::request() const
 {
     Q_D(const UpdateNFSFileShareResponse);
@@ -131,9 +129,8 @@ const UpdateNFSFileShareRequest * UpdateNFSFileShareResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway UpdateNFSFileShare response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway UpdateNFSFileShare \a response.
  */
 void UpdateNFSFileShareResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void UpdateNFSFileShareResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::UpdateNFSFileShareResponsePrivate
+ * \brief The UpdateNFSFileShareResponsePrivate class provides private implementation for UpdateNFSFileShareResponse.
  * \internal
  *
- * \class UpdateNFSFileShareResponsePrivate
- *
- * \brief Private implementation for UpdateNFSFileShareResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateNFSFileShareResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateNFSFileShareResponse instance.
+ * Constructs a UpdateNFSFileShareResponsePrivate object with public implementation \a q.
  */
 UpdateNFSFileShareResponsePrivate::UpdateNFSFileShareResponsePrivate(
     UpdateNFSFileShareResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ UpdateNFSFileShareResponsePrivate::UpdateNFSFileShareResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway UpdateNFSFileShareResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway UpdateNFSFileShare response element from \a xml.
  */
 void UpdateNFSFileShareResponsePrivate::parseUpdateNFSFileShareResponse(QXmlStreamReader &xml)
 {

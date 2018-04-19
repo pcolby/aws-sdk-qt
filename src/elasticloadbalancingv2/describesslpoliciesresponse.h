@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSSLPoliciesResponse : public ElasticLoadBalancingv2Re
 public:
     DescribeSSLPoliciesResponse(const DescribeSSLPoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSSLPoliciesRequest * request() const;
+    virtual const DescribeSSLPoliciesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSSLPoliciesResponse)

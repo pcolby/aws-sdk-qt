@@ -28,16 +28,13 @@ namespace DynamoDBStreams {
 
 /*!
  * \class QtAws::DynamoDBStreams::DynamoDBStreamsResponse
- *
  * \brief The DynamoDBStreamsResponse class provides an interface for DynamoDBStreams responses.
  *
- * \ingroup DynamoDBStreams
+ * \inmodule QtAwsDynamoDBStreams
  */
 
 /*!
- * @brief  Constructs a new DynamoDBStreamsResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a DynamoDBStreamsResponse object with parent \a parent.
  */
 DynamoDBStreamsResponse::DynamoDBStreamsResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new DynamoDBStreamsResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ DynamoDBStreamsResponse::DynamoDBStreamsResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DynamoDBStreamsResponse object.
- *
+ * \internal
+ * Constructs a DynamoDBStreamsResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DynamoDBStreamsResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 DynamoDBStreamsResponse::DynamoDBStreamsResponse(DynamoDBStreamsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ DynamoDBStreamsResponse::DynamoDBStreamsResponse(DynamoDBStreamsResponsePrivate 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void DynamoDBStreamsResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void DynamoDBStreamsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::DynamoDBStreams::DynamoDBStreamsResponsePrivate
+ * \brief The DynamoDBStreamsResponsePrivate class provides private implementation for DynamoDBStreamsResponse.
+ * \internal
  *
- * @class  DynamoDBStreamsResponsePrivate
- *
- * @brief  Private implementation for DynamoDBStreamsResponse.
+ * \inmodule QtAwsDynamoDBStreams
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DynamoDBStreamsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DynamoDBStreamsResponse instance.
+ * Constructs a DynamoDBStreamsResponsePrivate object with public implementation \a q.
  */
 DynamoDBStreamsResponsePrivate::DynamoDBStreamsResponsePrivate(
     DynamoDBStreamsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

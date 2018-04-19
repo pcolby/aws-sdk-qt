@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * ListUsersRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ListUsersRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a ListUsersRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 ListUsersRequestPrivate::ListUsersRequestPrivate(
     const WorkMailRequest::Action action, ListUsersRequest * const q)

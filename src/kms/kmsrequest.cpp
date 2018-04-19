@@ -74,7 +74,7 @@ namespace KMS {
  */
 
 /*!
- * Constructs a[n] KMSRequest object for KMS \a action.
+ * Constructs a KMSRequest object for KMS \a action.
  */
 KMSRequest::KMSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new KMSRequestPrivate(action, this))
@@ -274,8 +274,8 @@ QNetworkRequest KMSRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a KMSRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a KMSRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 KMSRequestPrivate::KMSRequestPrivate(const KMSRequest::Action action, KMSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

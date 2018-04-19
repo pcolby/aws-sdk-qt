@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteConfigurationRecorderResponse
- *
  * \brief The DeleteConfigurationRecorderResponse class provides an interace for ConfigService DeleteConfigurationRecorder responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationRecorderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteConfigurationRecorderResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteConfigurationRecorderResponse::DeleteConfigurationRecorderResponse(
         const DeleteConfigurationRecorderRequest &request,
@@ -78,6 +73,9 @@ DeleteConfigurationRecorderResponse::DeleteConfigurationRecorderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteConfigurationRecorderRequest * DeleteConfigurationRecorderResponse::request() const
 {
     Q_D(const DeleteConfigurationRecorderResponse);
@@ -85,9 +83,8 @@ const DeleteConfigurationRecorderRequest * DeleteConfigurationRecorderResponse::
 }
 
 /*!
- * @brief  Parse a ConfigService DeleteConfigurationRecorder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DeleteConfigurationRecorder \a response.
  */
 void DeleteConfigurationRecorderResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DeleteConfigurationRecorderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DeleteConfigurationRecorderResponsePrivate
+ * \brief The DeleteConfigurationRecorderResponsePrivate class provides private implementation for DeleteConfigurationRecorderResponse.
  * \internal
  *
- * \class DeleteConfigurationRecorderResponsePrivate
- *
- * \brief Private implementation for DeleteConfigurationRecorderResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationRecorderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteConfigurationRecorderResponse instance.
+ * Constructs a DeleteConfigurationRecorderResponsePrivate object with public implementation \a q.
  */
 DeleteConfigurationRecorderResponsePrivate::DeleteConfigurationRecorderResponsePrivate(
     DeleteConfigurationRecorderResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DeleteConfigurationRecorderResponsePrivate::DeleteConfigurationRecorderResponseP
 }
 
 /*!
- * @brief  Parse an ConfigService DeleteConfigurationRecorderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DeleteConfigurationRecorder response element from \a xml.
  */
 void DeleteConfigurationRecorderResponsePrivate::parseDeleteConfigurationRecorderResponse(QXmlStreamReader &xml)
 {

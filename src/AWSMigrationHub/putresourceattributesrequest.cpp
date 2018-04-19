@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * PutResourceAttributesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a PutResourceAttributesRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a PutResourceAttributesRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 PutResourceAttributesRequestPrivate::PutResourceAttributesRequestPrivate(
     const MigrationHubRequest::Action action, PutResourceAttributesRequest * const q)

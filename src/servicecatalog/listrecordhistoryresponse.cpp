@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListRecordHistoryResponse
- *
  * \brief The ListRecordHistoryResponse class provides an interace for ServiceCatalog ListRecordHistory responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListRecordHistoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRecordHistoryResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRecordHistoryResponse::ListRecordHistoryResponse(
         const ListRecordHistoryRequest &request,
@@ -61,6 +56,9 @@ ListRecordHistoryResponse::ListRecordHistoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRecordHistoryRequest * ListRecordHistoryResponse::request() const
 {
     Q_D(const ListRecordHistoryResponse);
@@ -68,9 +66,8 @@ const ListRecordHistoryRequest * ListRecordHistoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ListRecordHistory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ListRecordHistory \a response.
  */
 void ListRecordHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListRecordHistoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ListRecordHistoryResponsePrivate
+ * \brief The ListRecordHistoryResponsePrivate class provides private implementation for ListRecordHistoryResponse.
  * \internal
  *
- * \class ListRecordHistoryResponsePrivate
- *
- * \brief Private implementation for ListRecordHistoryResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRecordHistoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRecordHistoryResponse instance.
+ * Constructs a ListRecordHistoryResponsePrivate object with public implementation \a q.
  */
 ListRecordHistoryResponsePrivate::ListRecordHistoryResponsePrivate(
     ListRecordHistoryResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ListRecordHistoryResponsePrivate::ListRecordHistoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ListRecordHistoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ListRecordHistory response element from \a xml.
  */
 void ListRecordHistoryResponsePrivate::parseListRecordHistoryResponse(QXmlStreamReader &xml)
 {

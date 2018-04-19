@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteByteMatchSetRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteByteMatchSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a DeleteByteMatchSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 DeleteByteMatchSetRequestPrivate::DeleteByteMatchSetRequestPrivate(
     const WAFRequest::Action action, DeleteByteMatchSetRequest * const q)

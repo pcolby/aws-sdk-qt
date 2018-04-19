@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateAppResponse
- *
  * \brief The UpdateAppResponse class provides an interace for OpsWorks UpdateApp responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateAppResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAppResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAppResponse::UpdateAppResponse(
         const UpdateAppRequest &request,
@@ -161,6 +156,9 @@ UpdateAppResponse::UpdateAppResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAppRequest * UpdateAppResponse::request() const
 {
     Q_D(const UpdateAppResponse);
@@ -168,9 +166,8 @@ const UpdateAppRequest * UpdateAppResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks UpdateApp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks UpdateApp \a response.
  */
 void UpdateAppResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void UpdateAppResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::UpdateAppResponsePrivate
+ * \brief The UpdateAppResponsePrivate class provides private implementation for UpdateAppResponse.
  * \internal
  *
- * \class UpdateAppResponsePrivate
- *
- * \brief Private implementation for UpdateAppResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAppResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAppResponse instance.
+ * Constructs a UpdateAppResponsePrivate object with public implementation \a q.
  */
 UpdateAppResponsePrivate::UpdateAppResponsePrivate(
     UpdateAppResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ UpdateAppResponsePrivate::UpdateAppResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks UpdateAppResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks UpdateApp response element from \a xml.
  */
 void UpdateAppResponsePrivate::parseUpdateAppResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateElasticIpResponse : public OpsWorksResponse {
 public:
     AssociateElasticIpResponse(const AssociateElasticIpRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateElasticIpRequest * request() const;
+    virtual const AssociateElasticIpRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateElasticIpResponse)

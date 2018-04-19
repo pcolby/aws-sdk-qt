@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteIntentRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteIntentRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteIntentRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 DeleteIntentRequestPrivate::DeleteIntentRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteIntentRequest * const q)

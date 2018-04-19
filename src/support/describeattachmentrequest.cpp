@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAttachmentRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeAttachmentRequestPrivate object for Support \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAttachmentRequestPrivate object for Support \a action,
+ * with public implementation \a q.
  */
 DescribeAttachmentRequestPrivate::DescribeAttachmentRequestPrivate(
     const SupportRequest::Action action, DescribeAttachmentRequest * const q)

@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DisableSsoResponse
- *
  * \brief The DisableSsoResponse class provides an interace for DirectoryService DisableSso responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DisableSsoResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableSsoResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableSsoResponse::DisableSsoResponse(
         const DisableSsoRequest &request,
@@ -69,6 +64,9 @@ DisableSsoResponse::DisableSsoResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableSsoRequest * DisableSsoResponse::request() const
 {
     Q_D(const DisableSsoResponse);
@@ -76,9 +74,8 @@ const DisableSsoRequest * DisableSsoResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService DisableSso response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DisableSso \a response.
  */
 void DisableSsoResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DisableSsoResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DisableSsoResponsePrivate
+ * \brief The DisableSsoResponsePrivate class provides private implementation for DisableSsoResponse.
  * \internal
  *
- * \class DisableSsoResponsePrivate
- *
- * \brief Private implementation for DisableSsoResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableSsoResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableSsoResponse instance.
+ * Constructs a DisableSsoResponsePrivate object with public implementation \a q.
  */
 DisableSsoResponsePrivate::DisableSsoResponsePrivate(
     DisableSsoResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DisableSsoResponsePrivate::DisableSsoResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService DisableSsoResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DisableSso response element from \a xml.
  */
 void DisableSsoResponsePrivate::parseDisableSsoResponse(QXmlStreamReader &xml)
 {

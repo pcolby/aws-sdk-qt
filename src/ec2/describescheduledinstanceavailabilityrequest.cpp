@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledInstanceAvailabilityRequest:
  */
 
 /*!
- *
- * Constructs a DescribeScheduledInstanceAvailabilityRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeScheduledInstanceAvailabilityRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeScheduledInstanceAvailabilityRequestPrivate::DescribeScheduledInstanceAvailabilityRequestPrivate(
     const EC2Request::Action action, DescribeScheduledInstanceAvailabilityRequest * const q)

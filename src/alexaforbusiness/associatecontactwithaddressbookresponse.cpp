@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::AssociateContactWithAddressBookResponse
- *
  * \brief The AssociateContactWithAddressBookResponse class provides an interace for AlexaForBusiness AssociateContactWithAddressBook responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new AssociateContactWithAddressBookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateContactWithAddressBookResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateContactWithAddressBookResponse::AssociateContactWithAddressBookResponse(
         const AssociateContactWithAddressBookRequest &request,
@@ -60,6 +55,9 @@ AssociateContactWithAddressBookResponse::AssociateContactWithAddressBookResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateContactWithAddressBookRequest * AssociateContactWithAddressBookResponse::request() const
 {
     Q_D(const AssociateContactWithAddressBookResponse);
@@ -67,9 +65,8 @@ const AssociateContactWithAddressBookRequest * AssociateContactWithAddressBookRe
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness AssociateContactWithAddressBook response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness AssociateContactWithAddressBook \a response.
  */
 void AssociateContactWithAddressBookResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void AssociateContactWithAddressBookResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::AssociateContactWithAddressBookResponsePrivate
+ * \brief The AssociateContactWithAddressBookResponsePrivate class provides private implementation for AssociateContactWithAddressBookResponse.
  * \internal
  *
- * \class AssociateContactWithAddressBookResponsePrivate
- *
- * \brief Private implementation for AssociateContactWithAddressBookResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateContactWithAddressBookResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateContactWithAddressBookResponse instance.
+ * Constructs a AssociateContactWithAddressBookResponsePrivate object with public implementation \a q.
  */
 AssociateContactWithAddressBookResponsePrivate::AssociateContactWithAddressBookResponsePrivate(
     AssociateContactWithAddressBookResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ AssociateContactWithAddressBookResponsePrivate::AssociateContactWithAddressBookR
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness AssociateContactWithAddressBookResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness AssociateContactWithAddressBook response element from \a xml.
  */
 void AssociateContactWithAddressBookResponsePrivate::parseAssociateContactWithAddressBookResponse(QXmlStreamReader &xml)
 {

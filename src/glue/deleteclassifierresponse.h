@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteClassifierResponse : public GlueResponse {
 public:
     DeleteClassifierResponse(const DeleteClassifierRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteClassifierRequest * request() const;
+    virtual const DeleteClassifierRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteClassifierResponse)

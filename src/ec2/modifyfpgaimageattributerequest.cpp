@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyFpgaImageAttributeRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ModifyFpgaImageAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyFpgaImageAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyFpgaImageAttributeRequestPrivate::ModifyFpgaImageAttributeRequestPrivate(
     const EC2Request::Action action, ModifyFpgaImageAttributeRequest * const q)

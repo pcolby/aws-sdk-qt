@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DeleteIndexFieldResponse
- *
  * \brief The DeleteIndexFieldResponse class provides an interace for CloudSearch DeleteIndexField responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DeleteIndexFieldResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteIndexFieldResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteIndexFieldResponse::DeleteIndexFieldResponse(
         const DeleteIndexFieldRequest &request,
@@ -66,6 +61,9 @@ DeleteIndexFieldResponse::DeleteIndexFieldResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteIndexFieldRequest * DeleteIndexFieldResponse::request() const
 {
     Q_D(const DeleteIndexFieldResponse);
@@ -73,9 +71,8 @@ const DeleteIndexFieldRequest * DeleteIndexFieldResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch DeleteIndexField response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DeleteIndexField \a response.
  */
 void DeleteIndexFieldResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteIndexFieldResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DeleteIndexFieldResponsePrivate
+ * \brief The DeleteIndexFieldResponsePrivate class provides private implementation for DeleteIndexFieldResponse.
  * \internal
  *
- * \class DeleteIndexFieldResponsePrivate
- *
- * \brief Private implementation for DeleteIndexFieldResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIndexFieldResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteIndexFieldResponse instance.
+ * Constructs a DeleteIndexFieldResponsePrivate object with public implementation \a q.
  */
 DeleteIndexFieldResponsePrivate::DeleteIndexFieldResponsePrivate(
     DeleteIndexFieldResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteIndexFieldResponsePrivate::DeleteIndexFieldResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DeleteIndexFieldResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DeleteIndexField response element from \a xml.
  */
 void DeleteIndexFieldResponsePrivate::parseDeleteIndexFieldResponse(QXmlStreamReader &xml)
 {

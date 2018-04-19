@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::UpdateProductResponse
- *
  * \brief The UpdateProductResponse class provides an interace for ServiceCatalog UpdateProduct responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new UpdateProductResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateProductResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateProductResponse::UpdateProductResponse(
         const UpdateProductRequest &request,
@@ -61,6 +56,9 @@ UpdateProductResponse::UpdateProductResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateProductRequest * UpdateProductResponse::request() const
 {
     Q_D(const UpdateProductResponse);
@@ -68,9 +66,8 @@ const UpdateProductRequest * UpdateProductResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog UpdateProduct response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog UpdateProduct \a response.
  */
 void UpdateProductResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void UpdateProductResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::UpdateProductResponsePrivate
+ * \brief The UpdateProductResponsePrivate class provides private implementation for UpdateProductResponse.
  * \internal
  *
- * \class UpdateProductResponsePrivate
- *
- * \brief Private implementation for UpdateProductResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateProductResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateProductResponse instance.
+ * Constructs a UpdateProductResponsePrivate object with public implementation \a q.
  */
 UpdateProductResponsePrivate::UpdateProductResponsePrivate(
     UpdateProductResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ UpdateProductResponsePrivate::UpdateProductResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog UpdateProductResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog UpdateProduct response element from \a xml.
  */
 void UpdateProductResponsePrivate::parseUpdateProductResponse(QXmlStreamReader &xml)
 {

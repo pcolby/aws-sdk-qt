@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::InitiateDocumentVersionUploadResponse
- *
  * \brief The InitiateDocumentVersionUploadResponse class provides an interace for WorkDocs InitiateDocumentVersionUpload responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new InitiateDocumentVersionUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a InitiateDocumentVersionUploadResponse object for \a reply to \a request, with parent \a parent.
  */
 InitiateDocumentVersionUploadResponse::InitiateDocumentVersionUploadResponse(
         const InitiateDocumentVersionUploadRequest &request,
@@ -84,6 +79,9 @@ InitiateDocumentVersionUploadResponse::InitiateDocumentVersionUploadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const InitiateDocumentVersionUploadRequest * InitiateDocumentVersionUploadResponse::request() const
 {
     Q_D(const InitiateDocumentVersionUploadResponse);
@@ -91,9 +89,8 @@ const InitiateDocumentVersionUploadRequest * InitiateDocumentVersionUploadRespon
 }
 
 /*!
- * @brief  Parse a WorkDocs InitiateDocumentVersionUpload response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs InitiateDocumentVersionUpload \a response.
  */
 void InitiateDocumentVersionUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void InitiateDocumentVersionUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::InitiateDocumentVersionUploadResponsePrivate
+ * \brief The InitiateDocumentVersionUploadResponsePrivate class provides private implementation for InitiateDocumentVersionUploadResponse.
  * \internal
  *
- * \class InitiateDocumentVersionUploadResponsePrivate
- *
- * \brief Private implementation for InitiateDocumentVersionUploadResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InitiateDocumentVersionUploadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InitiateDocumentVersionUploadResponse instance.
+ * Constructs a InitiateDocumentVersionUploadResponsePrivate object with public implementation \a q.
  */
 InitiateDocumentVersionUploadResponsePrivate::InitiateDocumentVersionUploadResponsePrivate(
     InitiateDocumentVersionUploadResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ InitiateDocumentVersionUploadResponsePrivate::InitiateDocumentVersionUploadRespo
 }
 
 /*!
- * @brief  Parse an WorkDocs InitiateDocumentVersionUploadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs InitiateDocumentVersionUpload response element from \a xml.
  */
 void InitiateDocumentVersionUploadResponsePrivate::parseInitiateDocumentVersionUploadResponse(QXmlStreamReader &xml)
 {

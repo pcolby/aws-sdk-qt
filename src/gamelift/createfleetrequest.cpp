@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * CreateFleetRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateFleetRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a CreateFleetRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 CreateFleetRequestPrivate::CreateFleetRequestPrivate(
     const GameLiftRequest::Action action, CreateFleetRequest * const q)

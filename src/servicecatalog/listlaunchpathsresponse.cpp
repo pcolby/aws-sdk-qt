@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListLaunchPathsResponse
- *
  * \brief The ListLaunchPathsResponse class provides an interace for ServiceCatalog ListLaunchPaths responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListLaunchPathsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListLaunchPathsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListLaunchPathsResponse::ListLaunchPathsResponse(
         const ListLaunchPathsRequest &request,
@@ -61,6 +56,9 @@ ListLaunchPathsResponse::ListLaunchPathsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListLaunchPathsRequest * ListLaunchPathsResponse::request() const
 {
     Q_D(const ListLaunchPathsResponse);
@@ -68,9 +66,8 @@ const ListLaunchPathsRequest * ListLaunchPathsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ListLaunchPaths response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ListLaunchPaths \a response.
  */
 void ListLaunchPathsResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListLaunchPathsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ListLaunchPathsResponsePrivate
+ * \brief The ListLaunchPathsResponsePrivate class provides private implementation for ListLaunchPathsResponse.
  * \internal
  *
- * \class ListLaunchPathsResponsePrivate
- *
- * \brief Private implementation for ListLaunchPathsResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListLaunchPathsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListLaunchPathsResponse instance.
+ * Constructs a ListLaunchPathsResponsePrivate object with public implementation \a q.
  */
 ListLaunchPathsResponsePrivate::ListLaunchPathsResponsePrivate(
     ListLaunchPathsResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ListLaunchPathsResponsePrivate::ListLaunchPathsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ListLaunchPathsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ListLaunchPaths response element from \a xml.
  */
 void ListLaunchPathsResponsePrivate::parseListLaunchPathsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::VerifyTrustResponse
- *
  * \brief The VerifyTrustResponse class provides an interace for DirectoryService VerifyTrust responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new VerifyTrustResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a VerifyTrustResponse object for \a reply to \a request, with parent \a parent.
  */
 VerifyTrustResponse::VerifyTrustResponse(
         const VerifyTrustRequest &request,
@@ -69,6 +64,9 @@ VerifyTrustResponse::VerifyTrustResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const VerifyTrustRequest * VerifyTrustResponse::request() const
 {
     Q_D(const VerifyTrustResponse);
@@ -76,9 +74,8 @@ const VerifyTrustRequest * VerifyTrustResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService VerifyTrust response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService VerifyTrust \a response.
  */
 void VerifyTrustResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void VerifyTrustResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::VerifyTrustResponsePrivate
+ * \brief The VerifyTrustResponsePrivate class provides private implementation for VerifyTrustResponse.
  * \internal
  *
- * \class VerifyTrustResponsePrivate
- *
- * \brief Private implementation for VerifyTrustResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyTrustResponsePrivate object.
- *
- * @param  q  Pointer to this object's public VerifyTrustResponse instance.
+ * Constructs a VerifyTrustResponsePrivate object with public implementation \a q.
  */
 VerifyTrustResponsePrivate::VerifyTrustResponsePrivate(
     VerifyTrustResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ VerifyTrustResponsePrivate::VerifyTrustResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService VerifyTrustResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService VerifyTrust response element from \a xml.
  */
 void VerifyTrustResponsePrivate::parseVerifyTrustResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::AcknowledgeThirdPartyJobResponse
- *
  * \brief The AcknowledgeThirdPartyJobResponse class provides an interace for CodePipeline AcknowledgeThirdPartyJob responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new AcknowledgeThirdPartyJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AcknowledgeThirdPartyJobResponse object for \a reply to \a request, with parent \a parent.
  */
 AcknowledgeThirdPartyJobResponse::AcknowledgeThirdPartyJobResponse(
         const AcknowledgeThirdPartyJobRequest &request,
@@ -218,6 +213,9 @@ AcknowledgeThirdPartyJobResponse::AcknowledgeThirdPartyJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AcknowledgeThirdPartyJobRequest * AcknowledgeThirdPartyJobResponse::request() const
 {
     Q_D(const AcknowledgeThirdPartyJobResponse);
@@ -225,9 +223,8 @@ const AcknowledgeThirdPartyJobRequest * AcknowledgeThirdPartyJobResponse::reques
 }
 
 /*!
- * @brief  Parse a CodePipeline AcknowledgeThirdPartyJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline AcknowledgeThirdPartyJob \a response.
  */
 void AcknowledgeThirdPartyJobResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void AcknowledgeThirdPartyJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::AcknowledgeThirdPartyJobResponsePrivate
+ * \brief The AcknowledgeThirdPartyJobResponsePrivate class provides private implementation for AcknowledgeThirdPartyJobResponse.
  * \internal
  *
- * \class AcknowledgeThirdPartyJobResponsePrivate
- *
- * \brief Private implementation for AcknowledgeThirdPartyJobResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcknowledgeThirdPartyJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AcknowledgeThirdPartyJobResponse instance.
+ * Constructs a AcknowledgeThirdPartyJobResponsePrivate object with public implementation \a q.
  */
 AcknowledgeThirdPartyJobResponsePrivate::AcknowledgeThirdPartyJobResponsePrivate(
     AcknowledgeThirdPartyJobResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ AcknowledgeThirdPartyJobResponsePrivate::AcknowledgeThirdPartyJobResponsePrivate
 }
 
 /*!
- * @brief  Parse an CodePipeline AcknowledgeThirdPartyJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline AcknowledgeThirdPartyJob response element from \a xml.
  */
 void AcknowledgeThirdPartyJobResponsePrivate::parseAcknowledgeThirdPartyJobResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::PutLifecycleHookResponse
- *
  * \brief The PutLifecycleHookResponse class provides an interace for AutoScaling PutLifecycleHook responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new PutLifecycleHookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutLifecycleHookResponse object for \a reply to \a request, with parent \a parent.
  */
 PutLifecycleHookResponse::PutLifecycleHookResponse(
         const PutLifecycleHookRequest &request,
@@ -60,6 +55,9 @@ PutLifecycleHookResponse::PutLifecycleHookResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutLifecycleHookRequest * PutLifecycleHookResponse::request() const
 {
     Q_D(const PutLifecycleHookResponse);
@@ -67,9 +65,8 @@ const PutLifecycleHookRequest * PutLifecycleHookResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling PutLifecycleHook response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling PutLifecycleHook \a response.
  */
 void PutLifecycleHookResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void PutLifecycleHookResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::PutLifecycleHookResponsePrivate
+ * \brief The PutLifecycleHookResponsePrivate class provides private implementation for PutLifecycleHookResponse.
  * \internal
  *
- * \class PutLifecycleHookResponsePrivate
- *
- * \brief Private implementation for PutLifecycleHookResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutLifecycleHookResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutLifecycleHookResponse instance.
+ * Constructs a PutLifecycleHookResponsePrivate object with public implementation \a q.
  */
 PutLifecycleHookResponsePrivate::PutLifecycleHookResponsePrivate(
     PutLifecycleHookResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ PutLifecycleHookResponsePrivate::PutLifecycleHookResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling PutLifecycleHookResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling PutLifecycleHook response element from \a xml.
  */
 void PutLifecycleHookResponsePrivate::parsePutLifecycleHookResponse(QXmlStreamReader &xml)
 {

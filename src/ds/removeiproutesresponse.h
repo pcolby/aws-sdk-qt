@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveIpRoutesResponse : public DirectoryServiceResponse {
 public:
     RemoveIpRoutesResponse(const RemoveIpRoutesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveIpRoutesRequest * request() const;
+    virtual const RemoveIpRoutesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RemoveIpRoutesResponse)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateVpcCidrBlockRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DisassociateVpcCidrBlockRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateVpcCidrBlockRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DisassociateVpcCidrBlockRequestPrivate::DisassociateVpcCidrBlockRequestPrivate(
     const EC2Request::Action action, DisassociateVpcCidrBlockRequest * const q)

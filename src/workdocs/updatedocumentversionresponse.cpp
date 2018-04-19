@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::UpdateDocumentVersionResponse
- *
  * \brief The UpdateDocumentVersionResponse class provides an interace for WorkDocs UpdateDocumentVersion responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new UpdateDocumentVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDocumentVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDocumentVersionResponse::UpdateDocumentVersionResponse(
         const UpdateDocumentVersionRequest &request,
@@ -84,6 +79,9 @@ UpdateDocumentVersionResponse::UpdateDocumentVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDocumentVersionRequest * UpdateDocumentVersionResponse::request() const
 {
     Q_D(const UpdateDocumentVersionResponse);
@@ -91,9 +89,8 @@ const UpdateDocumentVersionRequest * UpdateDocumentVersionResponse::request() co
 }
 
 /*!
- * @brief  Parse a WorkDocs UpdateDocumentVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs UpdateDocumentVersion \a response.
  */
 void UpdateDocumentVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void UpdateDocumentVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::UpdateDocumentVersionResponsePrivate
+ * \brief The UpdateDocumentVersionResponsePrivate class provides private implementation for UpdateDocumentVersionResponse.
  * \internal
  *
- * \class UpdateDocumentVersionResponsePrivate
- *
- * \brief Private implementation for UpdateDocumentVersionResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDocumentVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDocumentVersionResponse instance.
+ * Constructs a UpdateDocumentVersionResponsePrivate object with public implementation \a q.
  */
 UpdateDocumentVersionResponsePrivate::UpdateDocumentVersionResponsePrivate(
     UpdateDocumentVersionResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ UpdateDocumentVersionResponsePrivate::UpdateDocumentVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs UpdateDocumentVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs UpdateDocumentVersion response element from \a xml.
  */
 void UpdateDocumentVersionResponsePrivate::parseUpdateDocumentVersionResponse(QXmlStreamReader &xml)
 {

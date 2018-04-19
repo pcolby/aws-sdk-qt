@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::RemoveListenerCertificatesResponse
- *
  * \brief The RemoveListenerCertificatesResponse class provides an interace for ElasticLoadBalancingv2 RemoveListenerCertificates responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new RemoveListenerCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveListenerCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveListenerCertificatesResponse::RemoveListenerCertificatesResponse(
         const RemoveListenerCertificatesRequest &request,
@@ -123,6 +118,9 @@ RemoveListenerCertificatesResponse::RemoveListenerCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveListenerCertificatesRequest * RemoveListenerCertificatesResponse::request() const
 {
     Q_D(const RemoveListenerCertificatesResponse);
@@ -130,9 +128,8 @@ const RemoveListenerCertificatesRequest * RemoveListenerCertificatesResponse::re
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 RemoveListenerCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 RemoveListenerCertificates \a response.
  */
 void RemoveListenerCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void RemoveListenerCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::RemoveListenerCertificatesResponsePrivate
+ * \brief The RemoveListenerCertificatesResponsePrivate class provides private implementation for RemoveListenerCertificatesResponse.
  * \internal
  *
- * \class RemoveListenerCertificatesResponsePrivate
- *
- * \brief Private implementation for RemoveListenerCertificatesResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveListenerCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveListenerCertificatesResponse instance.
+ * Constructs a RemoveListenerCertificatesResponsePrivate object with public implementation \a q.
  */
 RemoveListenerCertificatesResponsePrivate::RemoveListenerCertificatesResponsePrivate(
     RemoveListenerCertificatesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ RemoveListenerCertificatesResponsePrivate::RemoveListenerCertificatesResponsePri
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 RemoveListenerCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 RemoveListenerCertificates response element from \a xml.
  */
 void RemoveListenerCertificatesResponsePrivate::parseRemoveListenerCertificatesResponse(QXmlStreamReader &xml)
 {

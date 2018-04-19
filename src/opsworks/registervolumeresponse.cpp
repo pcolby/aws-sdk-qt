@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::RegisterVolumeResponse
- *
  * \brief The RegisterVolumeResponse class provides an interace for OpsWorks RegisterVolume responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new RegisterVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterVolumeResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterVolumeResponse::RegisterVolumeResponse(
         const RegisterVolumeRequest &request,
@@ -161,6 +156,9 @@ RegisterVolumeResponse::RegisterVolumeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterVolumeRequest * RegisterVolumeResponse::request() const
 {
     Q_D(const RegisterVolumeResponse);
@@ -168,9 +166,8 @@ const RegisterVolumeRequest * RegisterVolumeResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks RegisterVolume response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks RegisterVolume \a response.
  */
 void RegisterVolumeResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void RegisterVolumeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::RegisterVolumeResponsePrivate
+ * \brief The RegisterVolumeResponsePrivate class provides private implementation for RegisterVolumeResponse.
  * \internal
  *
- * \class RegisterVolumeResponsePrivate
- *
- * \brief Private implementation for RegisterVolumeResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterVolumeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterVolumeResponse instance.
+ * Constructs a RegisterVolumeResponsePrivate object with public implementation \a q.
  */
 RegisterVolumeResponsePrivate::RegisterVolumeResponsePrivate(
     RegisterVolumeResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ RegisterVolumeResponsePrivate::RegisterVolumeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks RegisterVolumeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks RegisterVolume response element from \a xml.
  */
 void RegisterVolumeResponsePrivate::parseRegisterVolumeResponse(QXmlStreamReader &xml)
 {

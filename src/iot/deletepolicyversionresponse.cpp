@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeletePolicyVersionResponse
- *
  * \brief The DeletePolicyVersionResponse class provides an interace for IoT DeletePolicyVersion responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeletePolicyVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeletePolicyVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeletePolicyVersionResponse::DeletePolicyVersionResponse(
         const DeletePolicyVersionRequest &request,
@@ -66,6 +61,9 @@ DeletePolicyVersionResponse::DeletePolicyVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeletePolicyVersionRequest * DeletePolicyVersionResponse::request() const
 {
     Q_D(const DeletePolicyVersionResponse);
@@ -73,9 +71,8 @@ const DeletePolicyVersionRequest * DeletePolicyVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DeletePolicyVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DeletePolicyVersion \a response.
  */
 void DeletePolicyVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeletePolicyVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DeletePolicyVersionResponsePrivate
+ * \brief The DeletePolicyVersionResponsePrivate class provides private implementation for DeletePolicyVersionResponse.
  * \internal
  *
- * \class DeletePolicyVersionResponsePrivate
- *
- * \brief Private implementation for DeletePolicyVersionResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePolicyVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeletePolicyVersionResponse instance.
+ * Constructs a DeletePolicyVersionResponsePrivate object with public implementation \a q.
  */
 DeletePolicyVersionResponsePrivate::DeletePolicyVersionResponsePrivate(
     DeletePolicyVersionResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DeletePolicyVersionResponsePrivate::DeletePolicyVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DeletePolicyVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DeletePolicyVersion response element from \a xml.
  */
 void DeletePolicyVersionResponsePrivate::parseDeletePolicyVersionResponse(QXmlStreamReader &xml)
 {

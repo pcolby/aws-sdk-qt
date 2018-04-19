@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteClusterRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a DeleteClusterRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const DAXRequest::Action action, DeleteClusterRequest * const q)

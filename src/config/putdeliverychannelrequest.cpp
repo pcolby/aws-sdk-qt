@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * PutDeliveryChannelRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a PutDeliveryChannelRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a PutDeliveryChannelRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 PutDeliveryChannelRequestPrivate::PutDeliveryChannelRequestPrivate(
     const ConfigServiceRequest::Action action, PutDeliveryChannelRequest * const q)

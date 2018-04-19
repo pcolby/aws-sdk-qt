@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteVpcPeeringConnectionRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVpcPeeringConnectionRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
     const GameLiftRequest::Action action, DeleteVpcPeeringConnectionRequest * const q)

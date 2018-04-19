@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::AcceptCertificateTransferResponse
- *
  * \brief The AcceptCertificateTransferResponse class provides an interace for IoT AcceptCertificateTransfer responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new AcceptCertificateTransferResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AcceptCertificateTransferResponse object for \a reply to \a request, with parent \a parent.
  */
 AcceptCertificateTransferResponse::AcceptCertificateTransferResponse(
         const AcceptCertificateTransferRequest &request,
@@ -66,6 +61,9 @@ AcceptCertificateTransferResponse::AcceptCertificateTransferResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AcceptCertificateTransferRequest * AcceptCertificateTransferResponse::request() const
 {
     Q_D(const AcceptCertificateTransferResponse);
@@ -73,9 +71,8 @@ const AcceptCertificateTransferRequest * AcceptCertificateTransferResponse::requ
 }
 
 /*!
- * @brief  Parse a IoT AcceptCertificateTransfer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT AcceptCertificateTransfer \a response.
  */
 void AcceptCertificateTransferResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void AcceptCertificateTransferResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::AcceptCertificateTransferResponsePrivate
+ * \brief The AcceptCertificateTransferResponsePrivate class provides private implementation for AcceptCertificateTransferResponse.
  * \internal
  *
- * \class AcceptCertificateTransferResponsePrivate
- *
- * \brief Private implementation for AcceptCertificateTransferResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptCertificateTransferResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AcceptCertificateTransferResponse instance.
+ * Constructs a AcceptCertificateTransferResponsePrivate object with public implementation \a q.
  */
 AcceptCertificateTransferResponsePrivate::AcceptCertificateTransferResponsePrivate(
     AcceptCertificateTransferResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ AcceptCertificateTransferResponsePrivate::AcceptCertificateTransferResponsePriva
 }
 
 /*!
- * @brief  Parse an IoT AcceptCertificateTransferResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT AcceptCertificateTransfer response element from \a xml.
  */
 void AcceptCertificateTransferResponsePrivate::parseAcceptCertificateTransferResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeStackProvisioningParametersResponse
- *
  * \brief The DescribeStackProvisioningParametersResponse class provides an interace for OpsWorks DescribeStackProvisioningParameters responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeStackProvisioningParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStackProvisioningParametersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStackProvisioningParametersResponse::DescribeStackProvisioningParametersResponse(
         const DescribeStackProvisioningParametersRequest &request,
@@ -161,6 +156,9 @@ DescribeStackProvisioningParametersResponse::DescribeStackProvisioningParameters
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStackProvisioningParametersRequest * DescribeStackProvisioningParametersResponse::request() const
 {
     Q_D(const DescribeStackProvisioningParametersResponse);
@@ -168,9 +166,8 @@ const DescribeStackProvisioningParametersRequest * DescribeStackProvisioningPara
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeStackProvisioningParameters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeStackProvisioningParameters \a response.
  */
 void DescribeStackProvisioningParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeStackProvisioningParametersResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeStackProvisioningParametersResponsePrivate
+ * \brief The DescribeStackProvisioningParametersResponsePrivate class provides private implementation for DescribeStackProvisioningParametersResponse.
  * \internal
  *
- * \class DescribeStackProvisioningParametersResponsePrivate
- *
- * \brief Private implementation for DescribeStackProvisioningParametersResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStackProvisioningParametersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStackProvisioningParametersResponse instance.
+ * Constructs a DescribeStackProvisioningParametersResponsePrivate object with public implementation \a q.
  */
 DescribeStackProvisioningParametersResponsePrivate::DescribeStackProvisioningParametersResponsePrivate(
     DescribeStackProvisioningParametersResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeStackProvisioningParametersResponsePrivate::DescribeStackProvisioningPar
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeStackProvisioningParametersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeStackProvisioningParameters response element from \a xml.
  */
 void DescribeStackProvisioningParametersResponsePrivate::parseDescribeStackProvisioningParametersResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace IoTJobsDataPlane {
 
 /*!
  * \class QtAws::IoTJobsDataPlane::GetPendingJobExecutionsResponse
- *
  * \brief The GetPendingJobExecutionsResponse class provides an interace for IoTJobsDataPlane GetPendingJobExecutions responses.
  *
- * \ingroup IoTJobsDataPlane
+ * \inmodule QtAwsIoTJobsDataPlane
  *
  *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
  *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
@@ -53,11 +52,7 @@ namespace IoTJobsDataPlane {
  */
 
 /*!
- * @brief  Constructs a new GetPendingJobExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPendingJobExecutionsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPendingJobExecutionsResponse::GetPendingJobExecutionsResponse(
         const GetPendingJobExecutionsRequest &request,
@@ -69,6 +64,9 @@ GetPendingJobExecutionsResponse::GetPendingJobExecutionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPendingJobExecutionsRequest * GetPendingJobExecutionsResponse::request() const
 {
     Q_D(const GetPendingJobExecutionsResponse);
@@ -76,9 +74,8 @@ const GetPendingJobExecutionsRequest * GetPendingJobExecutionsResponse::request(
 }
 
 /*!
- * @brief  Parse a IoTJobsDataPlane GetPendingJobExecutions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoTJobsDataPlane GetPendingJobExecutions \a response.
  */
 void GetPendingJobExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void GetPendingJobExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoTJobsDataPlane::GetPendingJobExecutionsResponsePrivate
+ * \brief The GetPendingJobExecutionsResponsePrivate class provides private implementation for GetPendingJobExecutionsResponse.
  * \internal
  *
- * \class GetPendingJobExecutionsResponsePrivate
- *
- * \brief Private implementation for GetPendingJobExecutionsResponse.
+ * \inmodule QtAwsIoTJobsDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPendingJobExecutionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPendingJobExecutionsResponse instance.
+ * Constructs a GetPendingJobExecutionsResponsePrivate object with public implementation \a q.
  */
 GetPendingJobExecutionsResponsePrivate::GetPendingJobExecutionsResponsePrivate(
     GetPendingJobExecutionsResponse * const q) : IoTJobsDataPlaneResponsePrivate(q)
@@ -109,9 +102,7 @@ GetPendingJobExecutionsResponsePrivate::GetPendingJobExecutionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoTJobsDataPlane GetPendingJobExecutionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoTJobsDataPlane GetPendingJobExecutions response element from \a xml.
  */
 void GetPendingJobExecutionsResponsePrivate::parseGetPendingJobExecutionsResponse(QXmlStreamReader &xml)
 {

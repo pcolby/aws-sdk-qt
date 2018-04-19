@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::DeleteComputeEnvironmentResponse
- *
  * \brief The DeleteComputeEnvironmentResponse class provides an interace for Batch DeleteComputeEnvironment responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new DeleteComputeEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteComputeEnvironmentResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteComputeEnvironmentResponse::DeleteComputeEnvironmentResponse(
         const DeleteComputeEnvironmentRequest &request,
@@ -69,6 +64,9 @@ DeleteComputeEnvironmentResponse::DeleteComputeEnvironmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteComputeEnvironmentRequest * DeleteComputeEnvironmentResponse::request() const
 {
     Q_D(const DeleteComputeEnvironmentResponse);
@@ -76,9 +74,8 @@ const DeleteComputeEnvironmentRequest * DeleteComputeEnvironmentResponse::reques
 }
 
 /*!
- * @brief  Parse a Batch DeleteComputeEnvironment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch DeleteComputeEnvironment \a response.
  */
 void DeleteComputeEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeleteComputeEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::DeleteComputeEnvironmentResponsePrivate
+ * \brief The DeleteComputeEnvironmentResponsePrivate class provides private implementation for DeleteComputeEnvironmentResponse.
  * \internal
  *
- * \class DeleteComputeEnvironmentResponsePrivate
- *
- * \brief Private implementation for DeleteComputeEnvironmentResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteComputeEnvironmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteComputeEnvironmentResponse instance.
+ * Constructs a DeleteComputeEnvironmentResponsePrivate object with public implementation \a q.
  */
 DeleteComputeEnvironmentResponsePrivate::DeleteComputeEnvironmentResponsePrivate(
     DeleteComputeEnvironmentResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ DeleteComputeEnvironmentResponsePrivate::DeleteComputeEnvironmentResponsePrivate
 }
 
 /*!
- * @brief  Parse an Batch DeleteComputeEnvironmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch DeleteComputeEnvironment response element from \a xml.
  */
 void DeleteComputeEnvironmentResponsePrivate::parseDeleteComputeEnvironmentResponse(QXmlStreamReader &xml)
 {

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceFleetRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ModifyInstanceFleetRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a ModifyInstanceFleetRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 ModifyInstanceFleetRequestPrivate::ModifyInstanceFleetRequestPrivate(
     const EMRRequest::Action action, ModifyInstanceFleetRequest * const q)

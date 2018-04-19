@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::TerminateEnvironmentResponse
- *
  * \brief The TerminateEnvironmentResponse class provides an interace for ElasticBeanstalk TerminateEnvironment responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new TerminateEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TerminateEnvironmentResponse object for \a reply to \a request, with parent \a parent.
  */
 TerminateEnvironmentResponse::TerminateEnvironmentResponse(
         const TerminateEnvironmentRequest &request,
@@ -77,6 +72,9 @@ TerminateEnvironmentResponse::TerminateEnvironmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TerminateEnvironmentRequest * TerminateEnvironmentResponse::request() const
 {
     Q_D(const TerminateEnvironmentResponse);
@@ -84,9 +82,8 @@ const TerminateEnvironmentRequest * TerminateEnvironmentResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk TerminateEnvironment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk TerminateEnvironment \a response.
  */
 void TerminateEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void TerminateEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::TerminateEnvironmentResponsePrivate
+ * \brief The TerminateEnvironmentResponsePrivate class provides private implementation for TerminateEnvironmentResponse.
  * \internal
  *
- * \class TerminateEnvironmentResponsePrivate
- *
- * \brief Private implementation for TerminateEnvironmentResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateEnvironmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TerminateEnvironmentResponse instance.
+ * Constructs a TerminateEnvironmentResponsePrivate object with public implementation \a q.
  */
 TerminateEnvironmentResponsePrivate::TerminateEnvironmentResponsePrivate(
     TerminateEnvironmentResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ TerminateEnvironmentResponsePrivate::TerminateEnvironmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk TerminateEnvironmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk TerminateEnvironment response element from \a xml.
  */
 void TerminateEnvironmentResponsePrivate::parseTerminateEnvironmentResponse(QXmlStreamReader &xml)
 {

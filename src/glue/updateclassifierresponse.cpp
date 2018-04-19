@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateClassifierResponse
- *
  * \brief The UpdateClassifierResponse class provides an interace for Glue UpdateClassifier responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateClassifierResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateClassifierResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateClassifierResponse::UpdateClassifierResponse(
         const UpdateClassifierRequest &request,
@@ -58,6 +53,9 @@ UpdateClassifierResponse::UpdateClassifierResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateClassifierRequest * UpdateClassifierResponse::request() const
 {
     Q_D(const UpdateClassifierResponse);
@@ -65,9 +63,8 @@ const UpdateClassifierRequest * UpdateClassifierResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue UpdateClassifier response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue UpdateClassifier \a response.
  */
 void UpdateClassifierResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateClassifierResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::UpdateClassifierResponsePrivate
+ * \brief The UpdateClassifierResponsePrivate class provides private implementation for UpdateClassifierResponse.
  * \internal
  *
- * \class UpdateClassifierResponsePrivate
- *
- * \brief Private implementation for UpdateClassifierResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateClassifierResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateClassifierResponse instance.
+ * Constructs a UpdateClassifierResponsePrivate object with public implementation \a q.
  */
 UpdateClassifierResponsePrivate::UpdateClassifierResponsePrivate(
     UpdateClassifierResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateClassifierResponsePrivate::UpdateClassifierResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue UpdateClassifierResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue UpdateClassifier response element from \a xml.
  */
 void UpdateClassifierResponsePrivate::parseUpdateClassifierResponse(QXmlStreamReader &xml)
 {

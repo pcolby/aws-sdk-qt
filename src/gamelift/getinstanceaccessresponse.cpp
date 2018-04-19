@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::GetInstanceAccessResponse
- *
  * \brief The GetInstanceAccessResponse class provides an interace for GameLift GetInstanceAccess responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceAccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInstanceAccessResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInstanceAccessResponse::GetInstanceAccessResponse(
         const GetInstanceAccessRequest &request,
@@ -491,6 +486,9 @@ GetInstanceAccessResponse::GetInstanceAccessResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInstanceAccessRequest * GetInstanceAccessResponse::request() const
 {
     Q_D(const GetInstanceAccessResponse);
@@ -498,9 +496,8 @@ const GetInstanceAccessRequest * GetInstanceAccessResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift GetInstanceAccess response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift GetInstanceAccess \a response.
  */
 void GetInstanceAccessResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void GetInstanceAccessResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::GetInstanceAccessResponsePrivate
+ * \brief The GetInstanceAccessResponsePrivate class provides private implementation for GetInstanceAccessResponse.
  * \internal
  *
- * \class GetInstanceAccessResponsePrivate
- *
- * \brief Private implementation for GetInstanceAccessResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceAccessResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInstanceAccessResponse instance.
+ * Constructs a GetInstanceAccessResponsePrivate object with public implementation \a q.
  */
 GetInstanceAccessResponsePrivate::GetInstanceAccessResponsePrivate(
     GetInstanceAccessResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ GetInstanceAccessResponsePrivate::GetInstanceAccessResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift GetInstanceAccessResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift GetInstanceAccess response element from \a xml.
  */
 void GetInstanceAccessResponsePrivate::parseGetInstanceAccessResponse(QXmlStreamReader &xml)
 {

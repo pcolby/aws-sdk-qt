@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::CreateCacheSubnetGroupResponse
- *
  * \brief The CreateCacheSubnetGroupResponse class provides an interace for ElastiCache CreateCacheSubnetGroup responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new CreateCacheSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCacheSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCacheSubnetGroupResponse::CreateCacheSubnetGroupResponse(
         const CreateCacheSubnetGroupRequest &request,
@@ -69,6 +64,9 @@ CreateCacheSubnetGroupResponse::CreateCacheSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCacheSubnetGroupRequest * CreateCacheSubnetGroupResponse::request() const
 {
     Q_D(const CreateCacheSubnetGroupResponse);
@@ -76,9 +74,8 @@ const CreateCacheSubnetGroupRequest * CreateCacheSubnetGroupResponse::request() 
 }
 
 /*!
- * @brief  Parse a ElastiCache CreateCacheSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache CreateCacheSubnetGroup \a response.
  */
 void CreateCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::CreateCacheSubnetGroupResponsePrivate
+ * \brief The CreateCacheSubnetGroupResponsePrivate class provides private implementation for CreateCacheSubnetGroupResponse.
  * \internal
  *
- * \class CreateCacheSubnetGroupResponsePrivate
- *
- * \brief Private implementation for CreateCacheSubnetGroupResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCacheSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCacheSubnetGroupResponse instance.
+ * Constructs a CreateCacheSubnetGroupResponsePrivate object with public implementation \a q.
  */
 CreateCacheSubnetGroupResponsePrivate::CreateCacheSubnetGroupResponsePrivate(
     CreateCacheSubnetGroupResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateCacheSubnetGroupResponsePrivate::CreateCacheSubnetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache CreateCacheSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache CreateCacheSubnetGroup response element from \a xml.
  */
 void CreateCacheSubnetGroupResponsePrivate::parseCreateCacheSubnetGroupResponse(QXmlStreamReader &xml)
 {

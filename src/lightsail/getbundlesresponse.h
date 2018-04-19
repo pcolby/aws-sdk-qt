@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetBundlesResponse : public LightsailResponse {
 public:
     GetBundlesResponse(const GetBundlesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetBundlesRequest * request() const;
+    virtual const GetBundlesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetBundlesResponse)

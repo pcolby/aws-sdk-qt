@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyReservedInstancesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ModifyReservedInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyReservedInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyReservedInstancesRequestPrivate::ModifyReservedInstancesRequestPrivate(
     const EC2Request::Action action, ModifyReservedInstancesRequest * const q)

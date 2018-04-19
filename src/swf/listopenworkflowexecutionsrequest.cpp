@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * ListOpenWorkflowExecutionsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a ListOpenWorkflowExecutionsRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a ListOpenWorkflowExecutionsRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 ListOpenWorkflowExecutionsRequestPrivate::ListOpenWorkflowExecutionsRequestPrivate(
     const SWFRequest::Action action, ListOpenWorkflowExecutionsRequest * const q)

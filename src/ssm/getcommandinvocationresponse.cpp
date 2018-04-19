@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetCommandInvocationResponse
- *
  * \brief The GetCommandInvocationResponse class provides an interace for SSM GetCommandInvocation responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetCommandInvocationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCommandInvocationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCommandInvocationResponse::GetCommandInvocationResponse(
         const GetCommandInvocationRequest &request,
@@ -79,6 +74,9 @@ GetCommandInvocationResponse::GetCommandInvocationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCommandInvocationRequest * GetCommandInvocationResponse::request() const
 {
     Q_D(const GetCommandInvocationResponse);
@@ -86,9 +84,8 @@ const GetCommandInvocationRequest * GetCommandInvocationResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SSM GetCommandInvocation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM GetCommandInvocation \a response.
  */
 void GetCommandInvocationResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void GetCommandInvocationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::GetCommandInvocationResponsePrivate
+ * \brief The GetCommandInvocationResponsePrivate class provides private implementation for GetCommandInvocationResponse.
  * \internal
  *
- * \class GetCommandInvocationResponsePrivate
- *
- * \brief Private implementation for GetCommandInvocationResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCommandInvocationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCommandInvocationResponse instance.
+ * Constructs a GetCommandInvocationResponsePrivate object with public implementation \a q.
  */
 GetCommandInvocationResponsePrivate::GetCommandInvocationResponsePrivate(
     GetCommandInvocationResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ GetCommandInvocationResponsePrivate::GetCommandInvocationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM GetCommandInvocationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM GetCommandInvocation response element from \a xml.
  */
 void GetCommandInvocationResponsePrivate::parseGetCommandInvocationResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::TestMetricFilterResponse
- *
  * \brief The TestMetricFilterResponse class provides an interace for CloudWatchLogs TestMetricFilter responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new TestMetricFilterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TestMetricFilterResponse object for \a reply to \a request, with parent \a parent.
  */
 TestMetricFilterResponse::TestMetricFilterResponse(
         const TestMetricFilterRequest &request,
@@ -84,6 +79,9 @@ TestMetricFilterResponse::TestMetricFilterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TestMetricFilterRequest * TestMetricFilterResponse::request() const
 {
     Q_D(const TestMetricFilterResponse);
@@ -91,9 +89,8 @@ const TestMetricFilterRequest * TestMetricFilterResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs TestMetricFilter response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs TestMetricFilter \a response.
  */
 void TestMetricFilterResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void TestMetricFilterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::TestMetricFilterResponsePrivate
+ * \brief The TestMetricFilterResponsePrivate class provides private implementation for TestMetricFilterResponse.
  * \internal
  *
- * \class TestMetricFilterResponsePrivate
- *
- * \brief Private implementation for TestMetricFilterResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestMetricFilterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TestMetricFilterResponse instance.
+ * Constructs a TestMetricFilterResponsePrivate object with public implementation \a q.
  */
 TestMetricFilterResponsePrivate::TestMetricFilterResponsePrivate(
     TestMetricFilterResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ TestMetricFilterResponsePrivate::TestMetricFilterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs TestMetricFilterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs TestMetricFilter response element from \a xml.
  */
 void TestMetricFilterResponsePrivate::parseTestMetricFilterResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListThingTypesResponse
- *
  * \brief The ListThingTypesResponse class provides an interace for IoT ListThingTypes responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListThingTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListThingTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListThingTypesResponse::ListThingTypesResponse(
         const ListThingTypesRequest &request,
@@ -66,6 +61,9 @@ ListThingTypesResponse::ListThingTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListThingTypesRequest * ListThingTypesResponse::request() const
 {
     Q_D(const ListThingTypesResponse);
@@ -73,9 +71,8 @@ const ListThingTypesRequest * ListThingTypesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListThingTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListThingTypes \a response.
  */
 void ListThingTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListThingTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListThingTypesResponsePrivate
+ * \brief The ListThingTypesResponsePrivate class provides private implementation for ListThingTypesResponse.
  * \internal
  *
- * \class ListThingTypesResponsePrivate
- *
- * \brief Private implementation for ListThingTypesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListThingTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListThingTypesResponse instance.
+ * Constructs a ListThingTypesResponsePrivate object with public implementation \a q.
  */
 ListThingTypesResponsePrivate::ListThingTypesResponsePrivate(
     ListThingTypesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListThingTypesResponsePrivate::ListThingTypesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListThingTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListThingTypes response element from \a xml.
  */
 void ListThingTypesResponsePrivate::parseListThingTypesResponse(QXmlStreamReader &xml)
 {

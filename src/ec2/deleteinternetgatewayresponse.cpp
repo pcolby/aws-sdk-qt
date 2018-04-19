@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteInternetGatewayResponse
- *
  * \brief The DeleteInternetGatewayResponse class provides an interace for EC2 DeleteInternetGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteInternetGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteInternetGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteInternetGatewayResponse::DeleteInternetGatewayResponse(
         const DeleteInternetGatewayRequest &request,
@@ -59,6 +54,9 @@ DeleteInternetGatewayResponse::DeleteInternetGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteInternetGatewayRequest * DeleteInternetGatewayResponse::request() const
 {
     Q_D(const DeleteInternetGatewayResponse);
@@ -66,9 +64,8 @@ const DeleteInternetGatewayRequest * DeleteInternetGatewayResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 DeleteInternetGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteInternetGateway \a response.
  */
 void DeleteInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteInternetGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteInternetGatewayResponsePrivate
+ * \brief The DeleteInternetGatewayResponsePrivate class provides private implementation for DeleteInternetGatewayResponse.
  * \internal
  *
- * \class DeleteInternetGatewayResponsePrivate
- *
- * \brief Private implementation for DeleteInternetGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInternetGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteInternetGatewayResponse instance.
+ * Constructs a DeleteInternetGatewayResponsePrivate object with public implementation \a q.
  */
 DeleteInternetGatewayResponsePrivate::DeleteInternetGatewayResponsePrivate(
     DeleteInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteInternetGatewayResponsePrivate::DeleteInternetGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteInternetGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteInternetGateway response element from \a xml.
  */
 void DeleteInternetGatewayResponsePrivate::parseDeleteInternetGatewayResponse(QXmlStreamReader &xml)
 {

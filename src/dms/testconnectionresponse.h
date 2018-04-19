@@ -34,10 +34,10 @@ class QTAWS_EXPORT TestConnectionResponse : public DatabaseMigrationServiceRespo
 public:
     TestConnectionResponse(const TestConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TestConnectionRequest * request() const;
+    virtual const TestConnectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TestConnectionResponse)

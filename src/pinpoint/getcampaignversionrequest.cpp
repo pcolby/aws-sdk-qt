@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetCampaignVersionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetCampaignVersionRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetCampaignVersionRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetCampaignVersionRequestPrivate::GetCampaignVersionRequestPrivate(
     const PinpointRequest::Action action, GetCampaignVersionRequest * const q)

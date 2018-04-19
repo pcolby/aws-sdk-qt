@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateRuleGroupResponse : public WAFRegionalResponse {
 public:
     UpdateRuleGroupResponse(const UpdateRuleGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateRuleGroupRequest * request() const;
+    virtual const UpdateRuleGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateRuleGroupResponse)

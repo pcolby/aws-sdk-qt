@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSizeConstraintSetRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteSizeConstraintSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSizeConstraintSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 DeleteSizeConstraintSetRequestPrivate::DeleteSizeConstraintSetRequestPrivate(
     const WAFRequest::Action action, DeleteSizeConstraintSetRequest * const q)

@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * RestoreTableFromBackupRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a RestoreTableFromBackupRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a RestoreTableFromBackupRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 RestoreTableFromBackupRequestPrivate::RestoreTableFromBackupRequestPrivate(
     const DynamoDBRequest::Action action, RestoreTableFromBackupRequest * const q)

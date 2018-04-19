@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DeleteRoomResponse
- *
  * \brief The DeleteRoomResponse class provides an interace for AlexaForBusiness DeleteRoom responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DeleteRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRoomResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRoomResponse::DeleteRoomResponse(
         const DeleteRoomRequest &request,
@@ -60,6 +55,9 @@ DeleteRoomResponse::DeleteRoomResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRoomRequest * DeleteRoomResponse::request() const
 {
     Q_D(const DeleteRoomResponse);
@@ -67,9 +65,8 @@ const DeleteRoomRequest * DeleteRoomResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness DeleteRoom response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness DeleteRoom \a response.
  */
 void DeleteRoomResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteRoomResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::DeleteRoomResponsePrivate
+ * \brief The DeleteRoomResponsePrivate class provides private implementation for DeleteRoomResponse.
  * \internal
  *
- * \class DeleteRoomResponsePrivate
- *
- * \brief Private implementation for DeleteRoomResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRoomResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRoomResponse instance.
+ * Constructs a DeleteRoomResponsePrivate object with public implementation \a q.
  */
 DeleteRoomResponsePrivate::DeleteRoomResponsePrivate(
     DeleteRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteRoomResponsePrivate::DeleteRoomResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness DeleteRoomResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness DeleteRoom response element from \a xml.
  */
 void DeleteRoomResponsePrivate::parseDeleteRoomResponse(QXmlStreamReader &xml)
 {

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteClientCertificateRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteClientCertificateRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteClientCertificateRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteClientCertificateRequestPrivate::DeleteClientCertificateRequestPrivate(
     const APIGatewayRequest::Action action, DeleteClientCertificateRequest * const q)

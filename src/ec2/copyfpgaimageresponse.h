@@ -34,10 +34,10 @@ class QTAWS_EXPORT CopyFpgaImageResponse : public EC2Response {
 public:
     CopyFpgaImageResponse(const CopyFpgaImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CopyFpgaImageRequest * request() const;
+    virtual const CopyFpgaImageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CopyFpgaImageResponse)

@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * ListElasticsearchInstanceTypesRequest::respon
  */
 
 /*!
- *
- * Constructs a ListElasticsearchInstanceTypesRequestPrivate object for ElasticsearchService \a action with,
- * public implementation \a q.
+ * Constructs a ListElasticsearchInstanceTypesRequestPrivate object for ElasticsearchService \a action,
+ * with public implementation \a q.
  */
 ListElasticsearchInstanceTypesRequestPrivate::ListElasticsearchInstanceTypesRequestPrivate(
     const ElasticsearchServiceRequest::Action action, ListElasticsearchInstanceTypesRequest * const q)

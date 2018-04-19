@@ -29,10 +29,9 @@ namespace MarketplaceMetering {
 
 /*!
  * \class QtAws::MarketplaceMetering::MeterUsageResponse
- *
  * \brief The MeterUsageResponse class provides an interace for MarketplaceMetering MeterUsage responses.
  *
- * \ingroup MarketplaceMetering
+ * \inmodule QtAwsMarketplaceMetering
  *
  *  <fullname>AWS Marketplace Metering Service</fullname>
  * 
@@ -69,11 +68,7 @@ namespace MarketplaceMetering {
  */
 
 /*!
- * @brief  Constructs a new MeterUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a MeterUsageResponse object for \a reply to \a request, with parent \a parent.
  */
 MeterUsageResponse::MeterUsageResponse(
         const MeterUsageRequest &request,
@@ -85,6 +80,9 @@ MeterUsageResponse::MeterUsageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const MeterUsageRequest * MeterUsageResponse::request() const
 {
     Q_D(const MeterUsageResponse);
@@ -92,9 +90,8 @@ const MeterUsageRequest * MeterUsageResponse::request() const
 }
 
 /*!
- * @brief  Parse a MarketplaceMetering MeterUsage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MarketplaceMetering MeterUsage \a response.
  */
 void MeterUsageResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void MeterUsageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MarketplaceMetering::MeterUsageResponsePrivate
+ * \brief The MeterUsageResponsePrivate class provides private implementation for MeterUsageResponse.
  * \internal
  *
- * \class MeterUsageResponsePrivate
- *
- * \brief Private implementation for MeterUsageResponse.
+ * \inmodule QtAwsMarketplaceMetering
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MeterUsageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MeterUsageResponse instance.
+ * Constructs a MeterUsageResponsePrivate object with public implementation \a q.
  */
 MeterUsageResponsePrivate::MeterUsageResponsePrivate(
     MeterUsageResponse * const q) : MarketplaceMeteringResponsePrivate(q)
@@ -125,9 +118,7 @@ MeterUsageResponsePrivate::MeterUsageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MarketplaceMetering MeterUsageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MarketplaceMetering MeterUsage response element from \a xml.
  */
 void MeterUsageResponsePrivate::parseMeterUsageResponse(QXmlStreamReader &xml)
 {

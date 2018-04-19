@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::PurchaseReservedDBInstancesOfferingResponse
- *
  * \brief The PurchaseReservedDBInstancesOfferingResponse class provides an interace for RDS PurchaseReservedDBInstancesOffering responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new PurchaseReservedDBInstancesOfferingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PurchaseReservedDBInstancesOfferingResponse object for \a reply to \a request, with parent \a parent.
  */
 PurchaseReservedDBInstancesOfferingResponse::PurchaseReservedDBInstancesOfferingResponse(
         const PurchaseReservedDBInstancesOfferingRequest &request,
@@ -119,6 +114,9 @@ PurchaseReservedDBInstancesOfferingResponse::PurchaseReservedDBInstancesOffering
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PurchaseReservedDBInstancesOfferingRequest * PurchaseReservedDBInstancesOfferingResponse::request() const
 {
     Q_D(const PurchaseReservedDBInstancesOfferingResponse);
@@ -126,9 +124,8 @@ const PurchaseReservedDBInstancesOfferingRequest * PurchaseReservedDBInstancesOf
 }
 
 /*!
- * @brief  Parse a RDS PurchaseReservedDBInstancesOffering response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS PurchaseReservedDBInstancesOffering \a response.
  */
 void PurchaseReservedDBInstancesOfferingResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void PurchaseReservedDBInstancesOfferingResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::RDS::PurchaseReservedDBInstancesOfferingResponsePrivate
+ * \brief The PurchaseReservedDBInstancesOfferingResponsePrivate class provides private implementation for PurchaseReservedDBInstancesOfferingResponse.
  * \internal
  *
- * \class PurchaseReservedDBInstancesOfferingResponsePrivate
- *
- * \brief Private implementation for PurchaseReservedDBInstancesOfferingResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseReservedDBInstancesOfferingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PurchaseReservedDBInstancesOfferingResponse instance.
+ * Constructs a PurchaseReservedDBInstancesOfferingResponsePrivate object with public implementation \a q.
  */
 PurchaseReservedDBInstancesOfferingResponsePrivate::PurchaseReservedDBInstancesOfferingResponsePrivate(
     PurchaseReservedDBInstancesOfferingResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ PurchaseReservedDBInstancesOfferingResponsePrivate::PurchaseReservedDBInstancesO
 }
 
 /*!
- * @brief  Parse an RDS PurchaseReservedDBInstancesOfferingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS PurchaseReservedDBInstancesOffering response element from \a xml.
  */
 void PurchaseReservedDBInstancesOfferingResponsePrivate::parsePurchaseReservedDBInstancesOfferingResponse(QXmlStreamReader &xml)
 {

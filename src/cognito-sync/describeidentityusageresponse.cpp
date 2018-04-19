@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::DescribeIdentityUsageResponse
- *
  * \brief The DescribeIdentityUsageResponse class provides an interace for CognitoSync DescribeIdentityUsage responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new DescribeIdentityUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeIdentityUsageResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeIdentityUsageResponse::DescribeIdentityUsageResponse(
         const DescribeIdentityUsageRequest &request,
@@ -75,6 +70,9 @@ DescribeIdentityUsageResponse::DescribeIdentityUsageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeIdentityUsageRequest * DescribeIdentityUsageResponse::request() const
 {
     Q_D(const DescribeIdentityUsageResponse);
@@ -82,9 +80,8 @@ const DescribeIdentityUsageRequest * DescribeIdentityUsageResponse::request() co
 }
 
 /*!
- * @brief  Parse a CognitoSync DescribeIdentityUsage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync DescribeIdentityUsage \a response.
  */
 void DescribeIdentityUsageResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void DescribeIdentityUsageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::DescribeIdentityUsageResponsePrivate
+ * \brief The DescribeIdentityUsageResponsePrivate class provides private implementation for DescribeIdentityUsageResponse.
  * \internal
  *
- * \class DescribeIdentityUsageResponsePrivate
- *
- * \brief Private implementation for DescribeIdentityUsageResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeIdentityUsageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeIdentityUsageResponse instance.
+ * Constructs a DescribeIdentityUsageResponsePrivate object with public implementation \a q.
  */
 DescribeIdentityUsageResponsePrivate::DescribeIdentityUsageResponsePrivate(
     DescribeIdentityUsageResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ DescribeIdentityUsageResponsePrivate::DescribeIdentityUsageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync DescribeIdentityUsageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync DescribeIdentityUsage response element from \a xml.
  */
 void DescribeIdentityUsageResponsePrivate::parseDescribeIdentityUsageResponse(QXmlStreamReader &xml)
 {

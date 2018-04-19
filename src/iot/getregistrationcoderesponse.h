@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetRegistrationCodeResponse : public IoTResponse {
 public:
     GetRegistrationCodeResponse(const GetRegistrationCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetRegistrationCodeRequest * request() const;
+    virtual const GetRegistrationCodeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetRegistrationCodeResponse)

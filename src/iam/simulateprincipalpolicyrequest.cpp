@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * SimulatePrincipalPolicyRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a SimulatePrincipalPolicyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a SimulatePrincipalPolicyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
     const IAMRequest::Action action, SimulatePrincipalPolicyRequest * const q)

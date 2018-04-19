@@ -29,10 +29,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::ExportCertificateResponse
- *
  * \brief The ExportCertificateResponse class provides an interace for ACM ExportCertificate responses.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new ExportCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ExportCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 ExportCertificateResponse::ExportCertificateResponse(
         const ExportCertificateRequest &request,
@@ -64,6 +59,9 @@ ExportCertificateResponse::ExportCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ExportCertificateRequest * ExportCertificateResponse::request() const
 {
     Q_D(const ExportCertificateResponse);
@@ -71,9 +69,8 @@ const ExportCertificateRequest * ExportCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a ACM ExportCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACM ExportCertificate \a response.
  */
 void ExportCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void ExportCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACM::ExportCertificateResponsePrivate
+ * \brief The ExportCertificateResponsePrivate class provides private implementation for ExportCertificateResponse.
  * \internal
  *
- * \class ExportCertificateResponsePrivate
- *
- * \brief Private implementation for ExportCertificateResponse.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExportCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ExportCertificateResponse instance.
+ * Constructs a ExportCertificateResponsePrivate object with public implementation \a q.
  */
 ExportCertificateResponsePrivate::ExportCertificateResponsePrivate(
     ExportCertificateResponse * const q) : ACMResponsePrivate(q)
@@ -104,9 +97,7 @@ ExportCertificateResponsePrivate::ExportCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACM ExportCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACM ExportCertificate response element from \a xml.
  */
 void ExportCertificateResponsePrivate::parseExportCertificateResponse(QXmlStreamReader &xml)
 {

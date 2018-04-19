@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::EnableEnhancedMonitoringResponse
- *
  * \brief The EnableEnhancedMonitoringResponse class provides an interace for Kinesis EnableEnhancedMonitoring responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new EnableEnhancedMonitoringResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableEnhancedMonitoringResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableEnhancedMonitoringResponse::EnableEnhancedMonitoringResponse(
         const EnableEnhancedMonitoringRequest &request,
@@ -58,6 +53,9 @@ EnableEnhancedMonitoringResponse::EnableEnhancedMonitoringResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableEnhancedMonitoringRequest * EnableEnhancedMonitoringResponse::request() const
 {
     Q_D(const EnableEnhancedMonitoringResponse);
@@ -65,9 +63,8 @@ const EnableEnhancedMonitoringRequest * EnableEnhancedMonitoringResponse::reques
 }
 
 /*!
- * @brief  Parse a Kinesis EnableEnhancedMonitoring response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis EnableEnhancedMonitoring \a response.
  */
 void EnableEnhancedMonitoringResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void EnableEnhancedMonitoringResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::EnableEnhancedMonitoringResponsePrivate
+ * \brief The EnableEnhancedMonitoringResponsePrivate class provides private implementation for EnableEnhancedMonitoringResponse.
  * \internal
  *
- * \class EnableEnhancedMonitoringResponsePrivate
- *
- * \brief Private implementation for EnableEnhancedMonitoringResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableEnhancedMonitoringResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableEnhancedMonitoringResponse instance.
+ * Constructs a EnableEnhancedMonitoringResponsePrivate object with public implementation \a q.
  */
 EnableEnhancedMonitoringResponsePrivate::EnableEnhancedMonitoringResponsePrivate(
     EnableEnhancedMonitoringResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ EnableEnhancedMonitoringResponsePrivate::EnableEnhancedMonitoringResponsePrivate
 }
 
 /*!
- * @brief  Parse an Kinesis EnableEnhancedMonitoringResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis EnableEnhancedMonitoring response element from \a xml.
  */
 void EnableEnhancedMonitoringResponsePrivate::parseEnableEnhancedMonitoringResponse(QXmlStreamReader &xml)
 {

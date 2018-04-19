@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateNatGatewayRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateNatGatewayRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateNatGatewayRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateNatGatewayRequestPrivate::CreateNatGatewayRequestPrivate(
     const EC2Request::Action action, CreateNatGatewayRequest * const q)

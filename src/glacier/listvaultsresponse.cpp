@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::ListVaultsResponse
- *
  * \brief The ListVaultsResponse class provides an interace for Glacier ListVaults responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new ListVaultsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListVaultsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListVaultsResponse::ListVaultsResponse(
         const ListVaultsRequest &request,
@@ -93,6 +88,9 @@ ListVaultsResponse::ListVaultsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListVaultsRequest * ListVaultsResponse::request() const
 {
     Q_D(const ListVaultsResponse);
@@ -100,9 +98,8 @@ const ListVaultsRequest * ListVaultsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier ListVaults response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier ListVaults \a response.
  */
 void ListVaultsResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void ListVaultsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::ListVaultsResponsePrivate
+ * \brief The ListVaultsResponsePrivate class provides private implementation for ListVaultsResponse.
  * \internal
  *
- * \class ListVaultsResponsePrivate
- *
- * \brief Private implementation for ListVaultsResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVaultsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListVaultsResponse instance.
+ * Constructs a ListVaultsResponsePrivate object with public implementation \a q.
  */
 ListVaultsResponsePrivate::ListVaultsResponsePrivate(
     ListVaultsResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ ListVaultsResponsePrivate::ListVaultsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier ListVaultsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier ListVaults response element from \a xml.
  */
 void ListVaultsResponsePrivate::parseListVaultsResponse(QXmlStreamReader &xml)
 {

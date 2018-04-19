@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVolumeAttributeResponse
- *
  * \brief The DescribeVolumeAttributeResponse class provides an interace for EC2 DescribeVolumeAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVolumeAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVolumeAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVolumeAttributeResponse::DescribeVolumeAttributeResponse(
         const DescribeVolumeAttributeRequest &request,
@@ -59,6 +54,9 @@ DescribeVolumeAttributeResponse::DescribeVolumeAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVolumeAttributeRequest * DescribeVolumeAttributeResponse::request() const
 {
     Q_D(const DescribeVolumeAttributeResponse);
@@ -66,9 +64,8 @@ const DescribeVolumeAttributeRequest * DescribeVolumeAttributeResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 DescribeVolumeAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeVolumeAttribute \a response.
  */
 void DescribeVolumeAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeVolumeAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeVolumeAttributeResponsePrivate
+ * \brief The DescribeVolumeAttributeResponsePrivate class provides private implementation for DescribeVolumeAttributeResponse.
  * \internal
  *
- * \class DescribeVolumeAttributeResponsePrivate
- *
- * \brief Private implementation for DescribeVolumeAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVolumeAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVolumeAttributeResponse instance.
+ * Constructs a DescribeVolumeAttributeResponsePrivate object with public implementation \a q.
  */
 DescribeVolumeAttributeResponsePrivate::DescribeVolumeAttributeResponsePrivate(
     DescribeVolumeAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeVolumeAttributeResponsePrivate::DescribeVolumeAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeVolumeAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeVolumeAttribute response element from \a xml.
  */
 void DescribeVolumeAttributeResponsePrivate::parseDescribeVolumeAttributeResponse(QXmlStreamReader &xml)
 {

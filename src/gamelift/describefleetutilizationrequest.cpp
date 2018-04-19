@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetUtilizationRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeFleetUtilizationRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeFleetUtilizationRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DescribeFleetUtilizationRequestPrivate::DescribeFleetUtilizationRequestPrivate(
     const GameLiftRequest::Action action, DescribeFleetUtilizationRequest * const q)

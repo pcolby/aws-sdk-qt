@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::MonitorInstancesResponse
- *
  * \brief The MonitorInstancesResponse class provides an interace for EC2 MonitorInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new MonitorInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a MonitorInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 MonitorInstancesResponse::MonitorInstancesResponse(
         const MonitorInstancesRequest &request,
@@ -59,6 +54,9 @@ MonitorInstancesResponse::MonitorInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const MonitorInstancesRequest * MonitorInstancesResponse::request() const
 {
     Q_D(const MonitorInstancesResponse);
@@ -66,9 +64,8 @@ const MonitorInstancesRequest * MonitorInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 MonitorInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 MonitorInstances \a response.
  */
 void MonitorInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void MonitorInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::MonitorInstancesResponsePrivate
+ * \brief The MonitorInstancesResponsePrivate class provides private implementation for MonitorInstancesResponse.
  * \internal
  *
- * \class MonitorInstancesResponsePrivate
- *
- * \brief Private implementation for MonitorInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MonitorInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MonitorInstancesResponse instance.
+ * Constructs a MonitorInstancesResponsePrivate object with public implementation \a q.
  */
 MonitorInstancesResponsePrivate::MonitorInstancesResponsePrivate(
     MonitorInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ MonitorInstancesResponsePrivate::MonitorInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 MonitorInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 MonitorInstances response element from \a xml.
  */
 void MonitorInstancesResponsePrivate::parseMonitorInstancesResponse(QXmlStreamReader &xml)
 {

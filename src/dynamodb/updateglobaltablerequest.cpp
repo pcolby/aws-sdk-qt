@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * UpdateGlobalTableRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateGlobalTableRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a UpdateGlobalTableRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 UpdateGlobalTableRequestPrivate::UpdateGlobalTableRequestPrivate(
     const DynamoDBRequest::Action action, UpdateGlobalTableRequest * const q)

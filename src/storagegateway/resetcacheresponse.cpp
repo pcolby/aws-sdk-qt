@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ResetCacheResponse
- *
  * \brief The ResetCacheResponse class provides an interace for StorageGateway ResetCache responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ResetCacheResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetCacheResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetCacheResponse::ResetCacheResponse(
         const ResetCacheRequest &request,
@@ -124,6 +119,9 @@ ResetCacheResponse::ResetCacheResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetCacheRequest * ResetCacheResponse::request() const
 {
     Q_D(const ResetCacheResponse);
@@ -131,9 +129,8 @@ const ResetCacheRequest * ResetCacheResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway ResetCache response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway ResetCache \a response.
  */
 void ResetCacheResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void ResetCacheResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::ResetCacheResponsePrivate
+ * \brief The ResetCacheResponsePrivate class provides private implementation for ResetCacheResponse.
  * \internal
  *
- * \class ResetCacheResponsePrivate
- *
- * \brief Private implementation for ResetCacheResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetCacheResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetCacheResponse instance.
+ * Constructs a ResetCacheResponsePrivate object with public implementation \a q.
  */
 ResetCacheResponsePrivate::ResetCacheResponsePrivate(
     ResetCacheResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ ResetCacheResponsePrivate::ResetCacheResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway ResetCacheResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway ResetCache response element from \a xml.
  */
 void ResetCacheResponsePrivate::parseResetCacheResponse(QXmlStreamReader &xml)
 {

@@ -72,7 +72,7 @@ namespace Glacier {
  */
 
 /*!
- * Constructs a[n] GlacierRequest object for Glacier \a action.
+ * Constructs a GlacierRequest object for Glacier \a action.
  */
 GlacierRequest::GlacierRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new GlacierRequestPrivate(action, this))
@@ -272,8 +272,8 @@ QNetworkRequest GlacierRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a GlacierRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a GlacierRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 GlacierRequestPrivate::GlacierRequestPrivate(const GlacierRequest::Action action, GlacierRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateAddressRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DisassociateAddressRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateAddressRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DisassociateAddressRequestPrivate::DisassociateAddressRequestPrivate(
     const EC2Request::Action action, DisassociateAddressRequest * const q)

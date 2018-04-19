@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::PutPipelineDefinitionResponse
- *
  * \brief The PutPipelineDefinitionResponse class provides an interace for DataPipeline PutPipelineDefinition responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new PutPipelineDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutPipelineDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 PutPipelineDefinitionResponse::PutPipelineDefinitionResponse(
         const PutPipelineDefinitionRequest &request,
@@ -73,6 +68,9 @@ PutPipelineDefinitionResponse::PutPipelineDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutPipelineDefinitionRequest * PutPipelineDefinitionResponse::request() const
 {
     Q_D(const PutPipelineDefinitionResponse);
@@ -80,9 +78,8 @@ const PutPipelineDefinitionRequest * PutPipelineDefinitionResponse::request() co
 }
 
 /*!
- * @brief  Parse a DataPipeline PutPipelineDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline PutPipelineDefinition \a response.
  */
 void PutPipelineDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void PutPipelineDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::PutPipelineDefinitionResponsePrivate
+ * \brief The PutPipelineDefinitionResponsePrivate class provides private implementation for PutPipelineDefinitionResponse.
  * \internal
  *
- * \class PutPipelineDefinitionResponsePrivate
- *
- * \brief Private implementation for PutPipelineDefinitionResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutPipelineDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutPipelineDefinitionResponse instance.
+ * Constructs a PutPipelineDefinitionResponsePrivate object with public implementation \a q.
  */
 PutPipelineDefinitionResponsePrivate::PutPipelineDefinitionResponsePrivate(
     PutPipelineDefinitionResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ PutPipelineDefinitionResponsePrivate::PutPipelineDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline PutPipelineDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline PutPipelineDefinition response element from \a xml.
  */
 void PutPipelineDefinitionResponsePrivate::parsePutPipelineDefinitionResponse(QXmlStreamReader &xml)
 {

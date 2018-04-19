@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetOTAUpdateResponse : public IoTResponse {
 public:
     GetOTAUpdateResponse(const GetOTAUpdateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetOTAUpdateRequest * request() const;
+    virtual const GetOTAUpdateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetOTAUpdateResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSnapshotScheduleResponse : public StorageGatewayRespons
 public:
     DeleteSnapshotScheduleResponse(const DeleteSnapshotScheduleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSnapshotScheduleRequest * request() const;
+    virtual const DeleteSnapshotScheduleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSnapshotScheduleResponse)

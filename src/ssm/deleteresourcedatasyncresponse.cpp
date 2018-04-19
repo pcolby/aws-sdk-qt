@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeleteResourceDataSyncResponse
- *
  * \brief The DeleteResourceDataSyncResponse class provides an interace for SSM DeleteResourceDataSync responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteResourceDataSyncResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteResourceDataSyncResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteResourceDataSyncResponse::DeleteResourceDataSyncResponse(
         const DeleteResourceDataSyncRequest &request,
@@ -79,6 +74,9 @@ DeleteResourceDataSyncResponse::DeleteResourceDataSyncResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteResourceDataSyncRequest * DeleteResourceDataSyncResponse::request() const
 {
     Q_D(const DeleteResourceDataSyncResponse);
@@ -86,9 +84,8 @@ const DeleteResourceDataSyncRequest * DeleteResourceDataSyncResponse::request() 
 }
 
 /*!
- * @brief  Parse a SSM DeleteResourceDataSync response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DeleteResourceDataSync \a response.
  */
 void DeleteResourceDataSyncResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DeleteResourceDataSyncResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DeleteResourceDataSyncResponsePrivate
+ * \brief The DeleteResourceDataSyncResponsePrivate class provides private implementation for DeleteResourceDataSyncResponse.
  * \internal
  *
- * \class DeleteResourceDataSyncResponsePrivate
- *
- * \brief Private implementation for DeleteResourceDataSyncResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteResourceDataSyncResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteResourceDataSyncResponse instance.
+ * Constructs a DeleteResourceDataSyncResponsePrivate object with public implementation \a q.
  */
 DeleteResourceDataSyncResponsePrivate::DeleteResourceDataSyncResponsePrivate(
     DeleteResourceDataSyncResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DeleteResourceDataSyncResponsePrivate::DeleteResourceDataSyncResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DeleteResourceDataSyncResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DeleteResourceDataSync response element from \a xml.
  */
 void DeleteResourceDataSyncResponsePrivate::parseDeleteResourceDataSyncResponse(QXmlStreamReader &xml)
 {

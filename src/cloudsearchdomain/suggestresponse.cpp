@@ -29,10 +29,9 @@ namespace CloudSearchDomain {
 
 /*!
  * \class QtAws::CloudSearchDomain::SuggestResponse
- *
  * \brief The SuggestResponse class provides an interace for CloudSearchDomain Suggest responses.
  *
- * \ingroup CloudSearchDomain
+ * \inmodule QtAwsCloudSearchDomain
  *
  *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
  * 
@@ -52,11 +51,7 @@ namespace CloudSearchDomain {
  */
 
 /*!
- * @brief  Constructs a new SuggestResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SuggestResponse object for \a reply to \a request, with parent \a parent.
  */
 SuggestResponse::SuggestResponse(
         const SuggestRequest &request,
@@ -68,6 +63,9 @@ SuggestResponse::SuggestResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SuggestRequest * SuggestResponse::request() const
 {
     Q_D(const SuggestResponse);
@@ -75,9 +73,8 @@ const SuggestRequest * SuggestResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearchDomain Suggest response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearchDomain Suggest \a response.
  */
 void SuggestResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void SuggestResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearchDomain::SuggestResponsePrivate
+ * \brief The SuggestResponsePrivate class provides private implementation for SuggestResponse.
  * \internal
  *
- * \class SuggestResponsePrivate
- *
- * \brief Private implementation for SuggestResponse.
+ * \inmodule QtAwsCloudSearchDomain
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SuggestResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SuggestResponse instance.
+ * Constructs a SuggestResponsePrivate object with public implementation \a q.
  */
 SuggestResponsePrivate::SuggestResponsePrivate(
     SuggestResponse * const q) : CloudSearchDomainResponsePrivate(q)
@@ -108,9 +101,7 @@ SuggestResponsePrivate::SuggestResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearchDomain SuggestResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearchDomain Suggest response element from \a xml.
  */
 void SuggestResponsePrivate::parseSuggestResponse(QXmlStreamReader &xml)
 {

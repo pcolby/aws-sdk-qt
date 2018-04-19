@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchCheckLayerAvailabilityResponse : public ECRResponse {
 public:
     BatchCheckLayerAvailabilityResponse(const BatchCheckLayerAvailabilityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchCheckLayerAvailabilityRequest * request() const;
+    virtual const BatchCheckLayerAvailabilityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchCheckLayerAvailabilityResponse)

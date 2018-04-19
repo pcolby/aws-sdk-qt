@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::ActivatePipelineResponse
- *
  * \brief The ActivatePipelineResponse class provides an interace for DataPipeline ActivatePipeline responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new ActivatePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ActivatePipelineResponse object for \a reply to \a request, with parent \a parent.
  */
 ActivatePipelineResponse::ActivatePipelineResponse(
         const ActivatePipelineRequest &request,
@@ -73,6 +68,9 @@ ActivatePipelineResponse::ActivatePipelineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ActivatePipelineRequest * ActivatePipelineResponse::request() const
 {
     Q_D(const ActivatePipelineResponse);
@@ -80,9 +78,8 @@ const ActivatePipelineRequest * ActivatePipelineResponse::request() const
 }
 
 /*!
- * @brief  Parse a DataPipeline ActivatePipeline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline ActivatePipeline \a response.
  */
 void ActivatePipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void ActivatePipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::ActivatePipelineResponsePrivate
+ * \brief The ActivatePipelineResponsePrivate class provides private implementation for ActivatePipelineResponse.
  * \internal
  *
- * \class ActivatePipelineResponsePrivate
- *
- * \brief Private implementation for ActivatePipelineResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ActivatePipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ActivatePipelineResponse instance.
+ * Constructs a ActivatePipelineResponsePrivate object with public implementation \a q.
  */
 ActivatePipelineResponsePrivate::ActivatePipelineResponsePrivate(
     ActivatePipelineResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ ActivatePipelineResponsePrivate::ActivatePipelineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline ActivatePipelineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline ActivatePipeline response element from \a xml.
  */
 void ActivatePipelineResponsePrivate::parseActivatePipelineResponse(QXmlStreamReader &xml)
 {

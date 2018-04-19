@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopApplicationResponse : public KinesisAnalyticsResponse {
 public:
     StopApplicationResponse(const StopApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopApplicationRequest * request() const;
+    virtual const StopApplicationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopApplicationResponse)

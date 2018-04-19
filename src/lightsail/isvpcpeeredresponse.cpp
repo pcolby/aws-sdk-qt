@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::IsVpcPeeredResponse
- *
  * \brief The IsVpcPeeredResponse class provides an interace for Lightsail IsVpcPeered responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new IsVpcPeeredResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a IsVpcPeeredResponse object for \a reply to \a request, with parent \a parent.
  */
 IsVpcPeeredResponse::IsVpcPeeredResponse(
         const IsVpcPeeredRequest &request,
@@ -71,6 +66,9 @@ IsVpcPeeredResponse::IsVpcPeeredResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const IsVpcPeeredRequest * IsVpcPeeredResponse::request() const
 {
     Q_D(const IsVpcPeeredResponse);
@@ -78,9 +76,8 @@ const IsVpcPeeredRequest * IsVpcPeeredResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail IsVpcPeered response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail IsVpcPeered \a response.
  */
 void IsVpcPeeredResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void IsVpcPeeredResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::IsVpcPeeredResponsePrivate
+ * \brief The IsVpcPeeredResponsePrivate class provides private implementation for IsVpcPeeredResponse.
  * \internal
  *
- * \class IsVpcPeeredResponsePrivate
- *
- * \brief Private implementation for IsVpcPeeredResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IsVpcPeeredResponsePrivate object.
- *
- * @param  q  Pointer to this object's public IsVpcPeeredResponse instance.
+ * Constructs a IsVpcPeeredResponsePrivate object with public implementation \a q.
  */
 IsVpcPeeredResponsePrivate::IsVpcPeeredResponsePrivate(
     IsVpcPeeredResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ IsVpcPeeredResponsePrivate::IsVpcPeeredResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail IsVpcPeeredResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail IsVpcPeered response element from \a xml.
  */
 void IsVpcPeeredResponsePrivate::parseIsVpcPeeredResponse(QXmlStreamReader &xml)
 {

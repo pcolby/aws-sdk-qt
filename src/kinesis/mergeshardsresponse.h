@@ -34,10 +34,10 @@ class QTAWS_EXPORT MergeShardsResponse : public KinesisResponse {
 public:
     MergeShardsResponse(const MergeShardsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const MergeShardsRequest * request() const;
+    virtual const MergeShardsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(MergeShardsResponse)

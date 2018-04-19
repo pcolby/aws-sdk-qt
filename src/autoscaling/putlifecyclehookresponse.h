@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutLifecycleHookResponse : public AutoScalingResponse {
 public:
     PutLifecycleHookResponse(const PutLifecycleHookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutLifecycleHookRequest * request() const;
+    virtual const PutLifecycleHookRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutLifecycleHookResponse)

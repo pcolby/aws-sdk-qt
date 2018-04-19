@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::CompleteLifecycleActionResponse
- *
  * \brief The CompleteLifecycleActionResponse class provides an interace for AutoScaling CompleteLifecycleAction responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new CompleteLifecycleActionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CompleteLifecycleActionResponse object for \a reply to \a request, with parent \a parent.
  */
 CompleteLifecycleActionResponse::CompleteLifecycleActionResponse(
         const CompleteLifecycleActionRequest &request,
@@ -60,6 +55,9 @@ CompleteLifecycleActionResponse::CompleteLifecycleActionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CompleteLifecycleActionRequest * CompleteLifecycleActionResponse::request() const
 {
     Q_D(const CompleteLifecycleActionResponse);
@@ -67,9 +65,8 @@ const CompleteLifecycleActionRequest * CompleteLifecycleActionResponse::request(
 }
 
 /*!
- * @brief  Parse a AutoScaling CompleteLifecycleAction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling CompleteLifecycleAction \a response.
  */
 void CompleteLifecycleActionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CompleteLifecycleActionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::CompleteLifecycleActionResponsePrivate
+ * \brief The CompleteLifecycleActionResponsePrivate class provides private implementation for CompleteLifecycleActionResponse.
  * \internal
  *
- * \class CompleteLifecycleActionResponsePrivate
- *
- * \brief Private implementation for CompleteLifecycleActionResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CompleteLifecycleActionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CompleteLifecycleActionResponse instance.
+ * Constructs a CompleteLifecycleActionResponsePrivate object with public implementation \a q.
  */
 CompleteLifecycleActionResponsePrivate::CompleteLifecycleActionResponsePrivate(
     CompleteLifecycleActionResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ CompleteLifecycleActionResponsePrivate::CompleteLifecycleActionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling CompleteLifecycleActionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling CompleteLifecycleAction response element from \a xml.
  */
 void CompleteLifecycleActionResponsePrivate::parseCompleteLifecycleActionResponse(QXmlStreamReader &xml)
 {

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTrustRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteTrustRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTrustRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 DeleteTrustRequestPrivate::DeleteTrustRequestPrivate(
     const DirectoryServiceRequest::Action action, DeleteTrustRequest * const q)

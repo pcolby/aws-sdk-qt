@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * SendMessageBatchRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a SendMessageBatchRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a SendMessageBatchRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 SendMessageBatchRequestPrivate::SendMessageBatchRequestPrivate(
     const SQSRequest::Action action, SendMessageBatchRequest * const q)

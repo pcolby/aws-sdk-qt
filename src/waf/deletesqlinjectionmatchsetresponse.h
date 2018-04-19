@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSqlInjectionMatchSetResponse : public WAFResponse {
 public:
     DeleteSqlInjectionMatchSetResponse(const DeleteSqlInjectionMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSqlInjectionMatchSetRequest * request() const;
+    virtual const DeleteSqlInjectionMatchSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSqlInjectionMatchSetResponse)

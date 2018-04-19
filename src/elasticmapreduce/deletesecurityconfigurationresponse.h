@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSecurityConfigurationResponse : public EMRResponse {
 public:
     DeleteSecurityConfigurationResponse(const DeleteSecurityConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSecurityConfigurationRequest * request() const;
+    virtual const DeleteSecurityConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSecurityConfigurationResponse)

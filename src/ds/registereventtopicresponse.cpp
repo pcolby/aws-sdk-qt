@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::RegisterEventTopicResponse
- *
  * \brief The RegisterEventTopicResponse class provides an interace for DirectoryService RegisterEventTopic responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new RegisterEventTopicResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterEventTopicResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterEventTopicResponse::RegisterEventTopicResponse(
         const RegisterEventTopicRequest &request,
@@ -69,6 +64,9 @@ RegisterEventTopicResponse::RegisterEventTopicResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterEventTopicRequest * RegisterEventTopicResponse::request() const
 {
     Q_D(const RegisterEventTopicResponse);
@@ -76,9 +74,8 @@ const RegisterEventTopicRequest * RegisterEventTopicResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService RegisterEventTopic response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService RegisterEventTopic \a response.
  */
 void RegisterEventTopicResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void RegisterEventTopicResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::RegisterEventTopicResponsePrivate
+ * \brief The RegisterEventTopicResponsePrivate class provides private implementation for RegisterEventTopicResponse.
  * \internal
  *
- * \class RegisterEventTopicResponsePrivate
- *
- * \brief Private implementation for RegisterEventTopicResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterEventTopicResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterEventTopicResponse instance.
+ * Constructs a RegisterEventTopicResponsePrivate object with public implementation \a q.
  */
 RegisterEventTopicResponsePrivate::RegisterEventTopicResponsePrivate(
     RegisterEventTopicResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ RegisterEventTopicResponsePrivate::RegisterEventTopicResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService RegisterEventTopicResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService RegisterEventTopic response element from \a xml.
  */
 void RegisterEventTopicResponsePrivate::parseRegisterEventTopicResponse(QXmlStreamReader &xml)
 {

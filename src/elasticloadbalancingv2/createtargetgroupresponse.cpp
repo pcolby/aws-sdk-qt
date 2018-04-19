@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateTargetGroupResponse
- *
  * \brief The CreateTargetGroupResponse class provides an interace for ElasticLoadBalancingv2 CreateTargetGroup responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new CreateTargetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTargetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTargetGroupResponse::CreateTargetGroupResponse(
         const CreateTargetGroupRequest &request,
@@ -123,6 +118,9 @@ CreateTargetGroupResponse::CreateTargetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTargetGroupRequest * CreateTargetGroupResponse::request() const
 {
     Q_D(const CreateTargetGroupResponse);
@@ -130,9 +128,8 @@ const CreateTargetGroupRequest * CreateTargetGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 CreateTargetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 CreateTargetGroup \a response.
  */
 void CreateTargetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void CreateTargetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::CreateTargetGroupResponsePrivate
+ * \brief The CreateTargetGroupResponsePrivate class provides private implementation for CreateTargetGroupResponse.
  * \internal
  *
- * \class CreateTargetGroupResponsePrivate
- *
- * \brief Private implementation for CreateTargetGroupResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTargetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTargetGroupResponse instance.
+ * Constructs a CreateTargetGroupResponsePrivate object with public implementation \a q.
  */
 CreateTargetGroupResponsePrivate::CreateTargetGroupResponsePrivate(
     CreateTargetGroupResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ CreateTargetGroupResponsePrivate::CreateTargetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 CreateTargetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 CreateTargetGroup response element from \a xml.
  */
 void CreateTargetGroupResponsePrivate::parseCreateTargetGroupResponse(QXmlStreamReader &xml)
 {

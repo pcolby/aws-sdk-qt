@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateReservedInstancesListingResponse : public EC2Response {
 public:
     CreateReservedInstancesListingResponse(const CreateReservedInstancesListingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateReservedInstancesListingRequest * request() const;
+    virtual const CreateReservedInstancesListingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateReservedInstancesListingResponse)

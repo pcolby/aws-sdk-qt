@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * PutItemRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a PutItemRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a PutItemRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 PutItemRequestPrivate::PutItemRequestPrivate(
     const DynamoDBRequest::Action action, PutItemRequest * const q)

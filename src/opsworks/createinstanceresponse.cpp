@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::CreateInstanceResponse
- *
  * \brief The CreateInstanceResponse class provides an interace for OpsWorks CreateInstance responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new CreateInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateInstanceResponse::CreateInstanceResponse(
         const CreateInstanceRequest &request,
@@ -161,6 +156,9 @@ CreateInstanceResponse::CreateInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateInstanceRequest * CreateInstanceResponse::request() const
 {
     Q_D(const CreateInstanceResponse);
@@ -168,9 +166,8 @@ const CreateInstanceRequest * CreateInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks CreateInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks CreateInstance \a response.
  */
 void CreateInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void CreateInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::CreateInstanceResponsePrivate
+ * \brief The CreateInstanceResponsePrivate class provides private implementation for CreateInstanceResponse.
  * \internal
  *
- * \class CreateInstanceResponsePrivate
- *
- * \brief Private implementation for CreateInstanceResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateInstanceResponse instance.
+ * Constructs a CreateInstanceResponsePrivate object with public implementation \a q.
  */
 CreateInstanceResponsePrivate::CreateInstanceResponsePrivate(
     CreateInstanceResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ CreateInstanceResponsePrivate::CreateInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks CreateInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks CreateInstance response element from \a xml.
  */
 void CreateInstanceResponsePrivate::parseCreateInstanceResponse(QXmlStreamReader &xml)
 {

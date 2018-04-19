@@ -29,10 +29,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::CreateApplicationResponse
- *
  * \brief The CreateApplicationResponse class provides an interace for ServerlessApplicationRepository CreateApplication responses.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -60,11 +59,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new CreateApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateApplicationResponse::CreateApplicationResponse(
         const CreateApplicationRequest &request,
@@ -76,6 +71,9 @@ CreateApplicationResponse::CreateApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateApplicationRequest * CreateApplicationResponse::request() const
 {
     Q_D(const CreateApplicationResponse);
@@ -83,9 +81,8 @@ const CreateApplicationRequest * CreateApplicationResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServerlessApplicationRepository CreateApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServerlessApplicationRepository CreateApplication \a response.
  */
 void CreateApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -95,19 +92,15 @@ void CreateApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServerlessApplicationRepository::CreateApplicationResponsePrivate
+ * \brief The CreateApplicationResponsePrivate class provides private implementation for CreateApplicationResponse.
  * \internal
  *
- * \class CreateApplicationResponsePrivate
- *
- * \brief Private implementation for CreateApplicationResponse.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateApplicationResponse instance.
+ * Constructs a CreateApplicationResponsePrivate object with public implementation \a q.
  */
 CreateApplicationResponsePrivate::CreateApplicationResponsePrivate(
     CreateApplicationResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
@@ -116,9 +109,7 @@ CreateApplicationResponsePrivate::CreateApplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServerlessApplicationRepository CreateApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServerlessApplicationRepository CreateApplication response element from \a xml.
  */
 void CreateApplicationResponsePrivate::parseCreateApplicationResponse(QXmlStreamReader &xml)
 {

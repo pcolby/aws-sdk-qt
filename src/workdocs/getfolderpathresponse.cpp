@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::GetFolderPathResponse
- *
  * \brief The GetFolderPathResponse class provides an interace for WorkDocs GetFolderPath responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new GetFolderPathResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFolderPathResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFolderPathResponse::GetFolderPathResponse(
         const GetFolderPathRequest &request,
@@ -84,6 +79,9 @@ GetFolderPathResponse::GetFolderPathResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFolderPathRequest * GetFolderPathResponse::request() const
 {
     Q_D(const GetFolderPathResponse);
@@ -91,9 +89,8 @@ const GetFolderPathRequest * GetFolderPathResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs GetFolderPath response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs GetFolderPath \a response.
  */
 void GetFolderPathResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void GetFolderPathResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::GetFolderPathResponsePrivate
+ * \brief The GetFolderPathResponsePrivate class provides private implementation for GetFolderPathResponse.
  * \internal
  *
- * \class GetFolderPathResponsePrivate
- *
- * \brief Private implementation for GetFolderPathResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFolderPathResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFolderPathResponse instance.
+ * Constructs a GetFolderPathResponsePrivate object with public implementation \a q.
  */
 GetFolderPathResponsePrivate::GetFolderPathResponsePrivate(
     GetFolderPathResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ GetFolderPathResponsePrivate::GetFolderPathResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs GetFolderPathResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs GetFolderPath response element from \a xml.
  */
 void GetFolderPathResponsePrivate::parseGetFolderPathResponse(QXmlStreamReader &xml)
 {

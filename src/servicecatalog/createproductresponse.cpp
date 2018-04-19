@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CreateProductResponse
- *
  * \brief The CreateProductResponse class provides an interace for ServiceCatalog CreateProduct responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CreateProductResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateProductResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateProductResponse::CreateProductResponse(
         const CreateProductRequest &request,
@@ -61,6 +56,9 @@ CreateProductResponse::CreateProductResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateProductRequest * CreateProductResponse::request() const
 {
     Q_D(const CreateProductResponse);
@@ -68,9 +66,8 @@ const CreateProductRequest * CreateProductResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog CreateProduct response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog CreateProduct \a response.
  */
 void CreateProductResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreateProductResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::CreateProductResponsePrivate
+ * \brief The CreateProductResponsePrivate class provides private implementation for CreateProductResponse.
  * \internal
  *
- * \class CreateProductResponsePrivate
- *
- * \brief Private implementation for CreateProductResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProductResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateProductResponse instance.
+ * Constructs a CreateProductResponsePrivate object with public implementation \a q.
  */
 CreateProductResponsePrivate::CreateProductResponsePrivate(
     CreateProductResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ CreateProductResponsePrivate::CreateProductResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog CreateProductResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog CreateProduct response element from \a xml.
  */
 void CreateProductResponsePrivate::parseCreateProductResponse(QXmlStreamReader &xml)
 {

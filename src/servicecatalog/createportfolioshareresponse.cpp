@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CreatePortfolioShareResponse
- *
  * \brief The CreatePortfolioShareResponse class provides an interace for ServiceCatalog CreatePortfolioShare responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CreatePortfolioShareResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePortfolioShareResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePortfolioShareResponse::CreatePortfolioShareResponse(
         const CreatePortfolioShareRequest &request,
@@ -61,6 +56,9 @@ CreatePortfolioShareResponse::CreatePortfolioShareResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePortfolioShareRequest * CreatePortfolioShareResponse::request() const
 {
     Q_D(const CreatePortfolioShareResponse);
@@ -68,9 +66,8 @@ const CreatePortfolioShareRequest * CreatePortfolioShareResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ServiceCatalog CreatePortfolioShare response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog CreatePortfolioShare \a response.
  */
 void CreatePortfolioShareResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreatePortfolioShareResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::CreatePortfolioShareResponsePrivate
+ * \brief The CreatePortfolioShareResponsePrivate class provides private implementation for CreatePortfolioShareResponse.
  * \internal
  *
- * \class CreatePortfolioShareResponsePrivate
- *
- * \brief Private implementation for CreatePortfolioShareResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePortfolioShareResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePortfolioShareResponse instance.
+ * Constructs a CreatePortfolioShareResponsePrivate object with public implementation \a q.
  */
 CreatePortfolioShareResponsePrivate::CreatePortfolioShareResponsePrivate(
     CreatePortfolioShareResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ CreatePortfolioShareResponsePrivate::CreatePortfolioShareResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog CreatePortfolioShareResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog CreatePortfolioShare response element from \a xml.
  */
 void CreatePortfolioShareResponsePrivate::parseCreatePortfolioShareResponse(QXmlStreamReader &xml)
 {

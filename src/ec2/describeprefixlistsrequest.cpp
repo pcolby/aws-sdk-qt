@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribePrefixListsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribePrefixListsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribePrefixListsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribePrefixListsRequestPrivate::DescribePrefixListsRequestPrivate(
     const EC2Request::Action action, DescribePrefixListsRequest * const q)

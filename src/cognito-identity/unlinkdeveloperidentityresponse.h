@@ -34,10 +34,10 @@ class QTAWS_EXPORT UnlinkDeveloperIdentityResponse : public CognitoIdentityRespo
 public:
     UnlinkDeveloperIdentityResponse(const UnlinkDeveloperIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UnlinkDeveloperIdentityRequest * request() const;
+    virtual const UnlinkDeveloperIdentityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UnlinkDeveloperIdentityResponse)

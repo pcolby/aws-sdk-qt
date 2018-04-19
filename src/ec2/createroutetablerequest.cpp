@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateRouteTableRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateRouteTableRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateRouteTableRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateRouteTableRequestPrivate::CreateRouteTableRequestPrivate(
     const EC2Request::Action action, CreateRouteTableRequest * const q)

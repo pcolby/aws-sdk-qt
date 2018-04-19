@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeConfigurationOptionsResponse : public ElasticBeanstal
 public:
     DescribeConfigurationOptionsResponse(const DescribeConfigurationOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeConfigurationOptionsRequest * request() const;
+    virtual const DescribeConfigurationOptionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeConfigurationOptionsResponse)

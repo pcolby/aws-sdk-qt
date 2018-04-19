@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::DescribePipelinesResponse
- *
  * \brief The DescribePipelinesResponse class provides an interace for DataPipeline DescribePipelines responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new DescribePipelinesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePipelinesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePipelinesResponse::DescribePipelinesResponse(
         const DescribePipelinesRequest &request,
@@ -73,6 +68,9 @@ DescribePipelinesResponse::DescribePipelinesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePipelinesRequest * DescribePipelinesResponse::request() const
 {
     Q_D(const DescribePipelinesResponse);
@@ -80,9 +78,8 @@ const DescribePipelinesRequest * DescribePipelinesResponse::request() const
 }
 
 /*!
- * @brief  Parse a DataPipeline DescribePipelines response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline DescribePipelines \a response.
  */
 void DescribePipelinesResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void DescribePipelinesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::DescribePipelinesResponsePrivate
+ * \brief The DescribePipelinesResponsePrivate class provides private implementation for DescribePipelinesResponse.
  * \internal
  *
- * \class DescribePipelinesResponsePrivate
- *
- * \brief Private implementation for DescribePipelinesResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePipelinesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePipelinesResponse instance.
+ * Constructs a DescribePipelinesResponsePrivate object with public implementation \a q.
  */
 DescribePipelinesResponsePrivate::DescribePipelinesResponsePrivate(
     DescribePipelinesResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ DescribePipelinesResponsePrivate::DescribePipelinesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline DescribePipelinesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline DescribePipelines response element from \a xml.
  */
 void DescribePipelinesResponsePrivate::parseDescribePipelinesResponse(QXmlStreamReader &xml)
 {

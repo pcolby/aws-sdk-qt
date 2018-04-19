@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::CreateUserProfileResponse
- *
  * \brief The CreateUserProfileResponse class provides an interace for CodeStar CreateUserProfile responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new CreateUserProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateUserProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateUserProfileResponse::CreateUserProfileResponse(
         const CreateUserProfileRequest &request,
@@ -143,6 +138,9 @@ CreateUserProfileResponse::CreateUserProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateUserProfileRequest * CreateUserProfileResponse::request() const
 {
     Q_D(const CreateUserProfileResponse);
@@ -150,9 +148,8 @@ const CreateUserProfileRequest * CreateUserProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar CreateUserProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar CreateUserProfile \a response.
  */
 void CreateUserProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void CreateUserProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::CreateUserProfileResponsePrivate
+ * \brief The CreateUserProfileResponsePrivate class provides private implementation for CreateUserProfileResponse.
  * \internal
  *
- * \class CreateUserProfileResponsePrivate
- *
- * \brief Private implementation for CreateUserProfileResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateUserProfileResponse instance.
+ * Constructs a CreateUserProfileResponsePrivate object with public implementation \a q.
  */
 CreateUserProfileResponsePrivate::CreateUserProfileResponsePrivate(
     CreateUserProfileResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ CreateUserProfileResponsePrivate::CreateUserProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar CreateUserProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar CreateUserProfile response element from \a xml.
  */
 void CreateUserProfileResponsePrivate::parseCreateUserProfileResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSizeConstraintSetResponse : public WAFRegionalResponse {
 public:
     GetSizeConstraintSetResponse(const GetSizeConstraintSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSizeConstraintSetRequest * request() const;
+    virtual const GetSizeConstraintSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSizeConstraintSetResponse)

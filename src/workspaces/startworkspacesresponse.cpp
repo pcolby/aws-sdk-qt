@@ -29,10 +29,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::StartWorkspacesResponse
- *
  * \brief The StartWorkspacesResponse class provides an interace for WorkSpaces StartWorkspaces responses.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new StartWorkspacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartWorkspacesResponse object for \a reply to \a request, with parent \a parent.
  */
 StartWorkspacesResponse::StartWorkspacesResponse(
         const StartWorkspacesRequest &request,
@@ -58,6 +53,9 @@ StartWorkspacesResponse::StartWorkspacesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartWorkspacesRequest * StartWorkspacesResponse::request() const
 {
     Q_D(const StartWorkspacesResponse);
@@ -65,9 +63,8 @@ const StartWorkspacesRequest * StartWorkspacesResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkSpaces StartWorkspaces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkSpaces StartWorkspaces \a response.
  */
 void StartWorkspacesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StartWorkspacesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkSpaces::StartWorkspacesResponsePrivate
+ * \brief The StartWorkspacesResponsePrivate class provides private implementation for StartWorkspacesResponse.
  * \internal
  *
- * \class StartWorkspacesResponsePrivate
- *
- * \brief Private implementation for StartWorkspacesResponse.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartWorkspacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartWorkspacesResponse instance.
+ * Constructs a StartWorkspacesResponsePrivate object with public implementation \a q.
  */
 StartWorkspacesResponsePrivate::StartWorkspacesResponsePrivate(
     StartWorkspacesResponse * const q) : WorkSpacesResponsePrivate(q)
@@ -98,9 +91,7 @@ StartWorkspacesResponsePrivate::StartWorkspacesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkSpaces StartWorkspacesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkSpaces StartWorkspaces response element from \a xml.
  */
 void StartWorkspacesResponsePrivate::parseStartWorkspacesResponse(QXmlStreamReader &xml)
 {

@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDomainContactPrivacyRequest::response(Q
  */
 
 /*!
- *
- * Constructs a UpdateDomainContactPrivacyRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDomainContactPrivacyRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 UpdateDomainContactPrivacyRequestPrivate::UpdateDomainContactPrivacyRequestPrivate(
     const Route53DomainsRequest::Action action, UpdateDomainContactPrivacyRequest * const q)

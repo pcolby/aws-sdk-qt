@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateEmailChannelRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateEmailChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a UpdateEmailChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 UpdateEmailChannelRequestPrivate::UpdateEmailChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateEmailChannelRequest * const q)

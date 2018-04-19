@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ModifyReplicationGroupShardConfigurationResponse
- *
  * \brief The ModifyReplicationGroupShardConfigurationResponse class provides an interace for ElastiCache ModifyReplicationGroupShardConfiguration responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new ModifyReplicationGroupShardConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyReplicationGroupShardConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyReplicationGroupShardConfigurationResponse::ModifyReplicationGroupShardConfigurationResponse(
         const ModifyReplicationGroupShardConfigurationRequest &request,
@@ -69,6 +64,9 @@ ModifyReplicationGroupShardConfigurationResponse::ModifyReplicationGroupShardCon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyReplicationGroupShardConfigurationRequest * ModifyReplicationGroupShardConfigurationResponse::request() const
 {
     Q_D(const ModifyReplicationGroupShardConfigurationResponse);
@@ -76,9 +74,8 @@ const ModifyReplicationGroupShardConfigurationRequest * ModifyReplicationGroupSh
 }
 
 /*!
- * @brief  Parse a ElastiCache ModifyReplicationGroupShardConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache ModifyReplicationGroupShardConfiguration \a response.
  */
 void ModifyReplicationGroupShardConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ModifyReplicationGroupShardConfigurationResponse::parseSuccess(QIODevice &r
 }
 
 /*!
+ * \class QtAws::ElastiCache::ModifyReplicationGroupShardConfigurationResponsePrivate
+ * \brief The ModifyReplicationGroupShardConfigurationResponsePrivate class provides private implementation for ModifyReplicationGroupShardConfigurationResponse.
  * \internal
  *
- * \class ModifyReplicationGroupShardConfigurationResponsePrivate
- *
- * \brief Private implementation for ModifyReplicationGroupShardConfigurationResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyReplicationGroupShardConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyReplicationGroupShardConfigurationResponse instance.
+ * Constructs a ModifyReplicationGroupShardConfigurationResponsePrivate object with public implementation \a q.
  */
 ModifyReplicationGroupShardConfigurationResponsePrivate::ModifyReplicationGroupShardConfigurationResponsePrivate(
     ModifyReplicationGroupShardConfigurationResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ ModifyReplicationGroupShardConfigurationResponsePrivate::ModifyReplicationGroupS
 }
 
 /*!
- * @brief  Parse an ElastiCache ModifyReplicationGroupShardConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache ModifyReplicationGroupShardConfiguration response element from \a xml.
  */
 void ModifyReplicationGroupShardConfigurationResponsePrivate::parseModifyReplicationGroupShardConfigurationResponse(QXmlStreamReader &xml)
 {

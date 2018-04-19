@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteArchiveResponse : public GlacierResponse {
 public:
     DeleteArchiveResponse(const DeleteArchiveRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteArchiveRequest * request() const;
+    virtual const DeleteArchiveRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteArchiveResponse)

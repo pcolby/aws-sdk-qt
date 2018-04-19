@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeHsmConfigurationsResponse
- *
  * \brief The DescribeHsmConfigurationsResponse class provides an interace for Redshift DescribeHsmConfigurations responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeHsmConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeHsmConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeHsmConfigurationsResponse::DescribeHsmConfigurationsResponse(
         const DescribeHsmConfigurationsRequest &request,
@@ -85,6 +80,9 @@ DescribeHsmConfigurationsResponse::DescribeHsmConfigurationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeHsmConfigurationsRequest * DescribeHsmConfigurationsResponse::request() const
 {
     Q_D(const DescribeHsmConfigurationsResponse);
@@ -92,9 +90,8 @@ const DescribeHsmConfigurationsRequest * DescribeHsmConfigurationsResponse::requ
 }
 
 /*!
- * @brief  Parse a Redshift DescribeHsmConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeHsmConfigurations \a response.
  */
 void DescribeHsmConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeHsmConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeHsmConfigurationsResponsePrivate
+ * \brief The DescribeHsmConfigurationsResponsePrivate class provides private implementation for DescribeHsmConfigurationsResponse.
  * \internal
  *
- * \class DescribeHsmConfigurationsResponsePrivate
- *
- * \brief Private implementation for DescribeHsmConfigurationsResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHsmConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeHsmConfigurationsResponse instance.
+ * Constructs a DescribeHsmConfigurationsResponsePrivate object with public implementation \a q.
  */
 DescribeHsmConfigurationsResponsePrivate::DescribeHsmConfigurationsResponsePrivate(
     DescribeHsmConfigurationsResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeHsmConfigurationsResponsePrivate::DescribeHsmConfigurationsResponsePriva
 }
 
 /*!
- * @brief  Parse an Redshift DescribeHsmConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeHsmConfigurations response element from \a xml.
  */
 void DescribeHsmConfigurationsResponsePrivate::parseDescribeHsmConfigurationsResponse(QXmlStreamReader &xml)
 {

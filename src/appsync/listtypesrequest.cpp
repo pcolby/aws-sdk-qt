@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * ListTypesRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ListTypesRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a ListTypesRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 ListTypesRequestPrivate::ListTypesRequestPrivate(
     const AppSyncRequest::Action action, ListTypesRequest * const q)

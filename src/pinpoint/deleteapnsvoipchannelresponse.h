@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteApnsVoipChannelResponse : public PinpointResponse {
 public:
     DeleteApnsVoipChannelResponse(const DeleteApnsVoipChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteApnsVoipChannelRequest * request() const;
+    virtual const DeleteApnsVoipChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteApnsVoipChannelResponse)

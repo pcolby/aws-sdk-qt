@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteStreamingDistributionRequest::response(
  */
 
 /*!
- *
- * Constructs a DeleteStreamingDistributionRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a DeleteStreamingDistributionRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 DeleteStreamingDistributionRequestPrivate::DeleteStreamingDistributionRequestPrivate(
     const CloudFrontRequest::Action action, DeleteStreamingDistributionRequest * const q)

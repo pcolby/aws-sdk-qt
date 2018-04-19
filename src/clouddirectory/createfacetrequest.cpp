@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * CreateFacetRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateFacetRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a CreateFacetRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 CreateFacetRequestPrivate::CreateFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, CreateFacetRequest * const q)

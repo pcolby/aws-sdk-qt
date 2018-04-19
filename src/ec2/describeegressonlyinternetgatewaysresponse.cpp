@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeEgressOnlyInternetGatewaysResponse
- *
  * \brief The DescribeEgressOnlyInternetGatewaysResponse class provides an interace for EC2 DescribeEgressOnlyInternetGateways responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEgressOnlyInternetGatewaysResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEgressOnlyInternetGatewaysResponse::DescribeEgressOnlyInternetGatewaysResponse(
         const DescribeEgressOnlyInternetGatewaysRequest &request,
@@ -59,6 +54,9 @@ DescribeEgressOnlyInternetGatewaysResponse::DescribeEgressOnlyInternetGatewaysRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEgressOnlyInternetGatewaysRequest * DescribeEgressOnlyInternetGatewaysResponse::request() const
 {
     Q_D(const DescribeEgressOnlyInternetGatewaysResponse);
@@ -66,9 +64,8 @@ const DescribeEgressOnlyInternetGatewaysRequest * DescribeEgressOnlyInternetGate
 }
 
 /*!
- * @brief  Parse a EC2 DescribeEgressOnlyInternetGateways response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeEgressOnlyInternetGateways \a response.
  */
 void DescribeEgressOnlyInternetGatewaysResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeEgressOnlyInternetGatewaysResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::EC2::DescribeEgressOnlyInternetGatewaysResponsePrivate
+ * \brief The DescribeEgressOnlyInternetGatewaysResponsePrivate class provides private implementation for DescribeEgressOnlyInternetGatewaysResponse.
  * \internal
  *
- * \class DescribeEgressOnlyInternetGatewaysResponsePrivate
- *
- * \brief Private implementation for DescribeEgressOnlyInternetGatewaysResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEgressOnlyInternetGatewaysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEgressOnlyInternetGatewaysResponse instance.
+ * Constructs a DescribeEgressOnlyInternetGatewaysResponsePrivate object with public implementation \a q.
  */
 DescribeEgressOnlyInternetGatewaysResponsePrivate::DescribeEgressOnlyInternetGatewaysResponsePrivate(
     DescribeEgressOnlyInternetGatewaysResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeEgressOnlyInternetGatewaysResponsePrivate::DescribeEgressOnlyInternetGat
 }
 
 /*!
- * @brief  Parse an EC2 DescribeEgressOnlyInternetGatewaysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeEgressOnlyInternetGateways response element from \a xml.
  */
 void DescribeEgressOnlyInternetGatewaysResponsePrivate::parseDescribeEgressOnlyInternetGatewaysResponse(QXmlStreamReader &xml)
 {

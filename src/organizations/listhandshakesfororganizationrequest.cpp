@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * ListHandshakesForOrganizationRequest::respons
  */
 
 /*!
- *
- * Constructs a ListHandshakesForOrganizationRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a ListHandshakesForOrganizationRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 ListHandshakesForOrganizationRequestPrivate::ListHandshakesForOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, ListHandshakesForOrganizationRequest * const q)

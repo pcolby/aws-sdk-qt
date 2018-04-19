@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ExecuteChangeSetResponse
- *
  * \brief The ExecuteChangeSetResponse class provides an interace for CloudFormation ExecuteChangeSet responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ExecuteChangeSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ExecuteChangeSetResponse object for \a reply to \a request, with parent \a parent.
  */
 ExecuteChangeSetResponse::ExecuteChangeSetResponse(
         const ExecuteChangeSetRequest &request,
@@ -77,6 +72,9 @@ ExecuteChangeSetResponse::ExecuteChangeSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ExecuteChangeSetRequest * ExecuteChangeSetResponse::request() const
 {
     Q_D(const ExecuteChangeSetResponse);
@@ -84,9 +82,8 @@ const ExecuteChangeSetRequest * ExecuteChangeSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation ExecuteChangeSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation ExecuteChangeSet \a response.
  */
 void ExecuteChangeSetResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ExecuteChangeSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::ExecuteChangeSetResponsePrivate
+ * \brief The ExecuteChangeSetResponsePrivate class provides private implementation for ExecuteChangeSetResponse.
  * \internal
  *
- * \class ExecuteChangeSetResponsePrivate
- *
- * \brief Private implementation for ExecuteChangeSetResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExecuteChangeSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ExecuteChangeSetResponse instance.
+ * Constructs a ExecuteChangeSetResponsePrivate object with public implementation \a q.
  */
 ExecuteChangeSetResponsePrivate::ExecuteChangeSetResponsePrivate(
     ExecuteChangeSetResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ ExecuteChangeSetResponsePrivate::ExecuteChangeSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation ExecuteChangeSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation ExecuteChangeSet response element from \a xml.
  */
 void ExecuteChangeSetResponsePrivate::parseExecuteChangeSetResponse(QXmlStreamReader &xml)
 {

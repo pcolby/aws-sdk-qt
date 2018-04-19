@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetSdkRequest::response(QNetworkReply * const
  */
 
 /*!
- *
- * Constructs a GetSdkRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetSdkRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetSdkRequestPrivate::GetSdkRequestPrivate(
     const APIGatewayRequest::Action action, GetSdkRequest * const q)

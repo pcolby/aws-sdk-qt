@@ -29,10 +29,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetReservationCoverageResponse
- *
  * \brief The GetReservationCoverageResponse class provides an interace for CostExplorer GetReservationCoverage responses.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -52,11 +51,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetReservationCoverageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetReservationCoverageResponse object for \a reply to \a request, with parent \a parent.
  */
 GetReservationCoverageResponse::GetReservationCoverageResponse(
         const GetReservationCoverageRequest &request,
@@ -68,6 +63,9 @@ GetReservationCoverageResponse::GetReservationCoverageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetReservationCoverageRequest * GetReservationCoverageResponse::request() const
 {
     Q_D(const GetReservationCoverageResponse);
@@ -75,9 +73,8 @@ const GetReservationCoverageRequest * GetReservationCoverageResponse::request() 
 }
 
 /*!
- * @brief  Parse a CostExplorer GetReservationCoverage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CostExplorer GetReservationCoverage \a response.
  */
 void GetReservationCoverageResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void GetReservationCoverageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CostExplorer::GetReservationCoverageResponsePrivate
+ * \brief The GetReservationCoverageResponsePrivate class provides private implementation for GetReservationCoverageResponse.
  * \internal
  *
- * \class GetReservationCoverageResponsePrivate
- *
- * \brief Private implementation for GetReservationCoverageResponse.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReservationCoverageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetReservationCoverageResponse instance.
+ * Constructs a GetReservationCoverageResponsePrivate object with public implementation \a q.
  */
 GetReservationCoverageResponsePrivate::GetReservationCoverageResponsePrivate(
     GetReservationCoverageResponse * const q) : CostExplorerResponsePrivate(q)
@@ -108,9 +101,7 @@ GetReservationCoverageResponsePrivate::GetReservationCoverageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CostExplorer GetReservationCoverageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CostExplorer GetReservationCoverage response element from \a xml.
  */
 void GetReservationCoverageResponsePrivate::parseGetReservationCoverageResponse(QXmlStreamReader &xml)
 {

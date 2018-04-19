@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteKeyPairResponse
- *
  * \brief The DeleteKeyPairResponse class provides an interace for EC2 DeleteKeyPair responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteKeyPairResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteKeyPairResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteKeyPairResponse::DeleteKeyPairResponse(
         const DeleteKeyPairRequest &request,
@@ -59,6 +54,9 @@ DeleteKeyPairResponse::DeleteKeyPairResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteKeyPairRequest * DeleteKeyPairResponse::request() const
 {
     Q_D(const DeleteKeyPairResponse);
@@ -66,9 +64,8 @@ const DeleteKeyPairRequest * DeleteKeyPairResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteKeyPair response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteKeyPair \a response.
  */
 void DeleteKeyPairResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteKeyPairResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteKeyPairResponsePrivate
+ * \brief The DeleteKeyPairResponsePrivate class provides private implementation for DeleteKeyPairResponse.
  * \internal
  *
- * \class DeleteKeyPairResponsePrivate
- *
- * \brief Private implementation for DeleteKeyPairResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteKeyPairResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteKeyPairResponse instance.
+ * Constructs a DeleteKeyPairResponsePrivate object with public implementation \a q.
  */
 DeleteKeyPairResponsePrivate::DeleteKeyPairResponsePrivate(
     DeleteKeyPairResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteKeyPairResponsePrivate::DeleteKeyPairResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteKeyPairResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteKeyPair response element from \a xml.
  */
 void DeleteKeyPairResponsePrivate::parseDeleteKeyPairResponse(QXmlStreamReader &xml)
 {

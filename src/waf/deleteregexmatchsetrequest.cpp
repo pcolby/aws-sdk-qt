@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRegexMatchSetRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteRegexMatchSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRegexMatchSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 DeleteRegexMatchSetRequestPrivate::DeleteRegexMatchSetRequestPrivate(
     const WAFRequest::Action action, DeleteRegexMatchSetRequest * const q)

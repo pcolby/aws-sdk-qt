@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * TerminateJobFlowsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a TerminateJobFlowsRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a TerminateJobFlowsRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 TerminateJobFlowsRequestPrivate::TerminateJobFlowsRequestPrivate(
     const EMRRequest::Action action, TerminateJobFlowsRequest * const q)

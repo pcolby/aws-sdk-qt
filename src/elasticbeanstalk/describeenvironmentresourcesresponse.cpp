@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentResourcesResponse
- *
  * \brief The DescribeEnvironmentResourcesResponse class provides an interace for ElasticBeanstalk DescribeEnvironmentResources responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEnvironmentResourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEnvironmentResourcesResponse::DescribeEnvironmentResourcesResponse(
         const DescribeEnvironmentResourcesRequest &request,
@@ -77,6 +72,9 @@ DescribeEnvironmentResourcesResponse::DescribeEnvironmentResourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEnvironmentResourcesRequest * DescribeEnvironmentResourcesResponse::request() const
 {
     Q_D(const DescribeEnvironmentResourcesResponse);
@@ -84,9 +82,8 @@ const DescribeEnvironmentResourcesRequest * DescribeEnvironmentResourcesResponse
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DescribeEnvironmentResources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DescribeEnvironmentResources \a response.
  */
 void DescribeEnvironmentResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribeEnvironmentResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DescribeEnvironmentResourcesResponsePrivate
+ * \brief The DescribeEnvironmentResourcesResponsePrivate class provides private implementation for DescribeEnvironmentResourcesResponse.
  * \internal
  *
- * \class DescribeEnvironmentResourcesResponsePrivate
- *
- * \brief Private implementation for DescribeEnvironmentResourcesResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentResourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEnvironmentResourcesResponse instance.
+ * Constructs a DescribeEnvironmentResourcesResponsePrivate object with public implementation \a q.
  */
 DescribeEnvironmentResourcesResponsePrivate::DescribeEnvironmentResourcesResponsePrivate(
     DescribeEnvironmentResourcesResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribeEnvironmentResourcesResponsePrivate::DescribeEnvironmentResourcesRespons
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DescribeEnvironmentResourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DescribeEnvironmentResources response element from \a xml.
  */
 void DescribeEnvironmentResourcesResponsePrivate::parseDescribeEnvironmentResourcesResponse(QXmlStreamReader &xml)
 {

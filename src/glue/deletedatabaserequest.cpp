@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDatabaseRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteDatabaseRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDatabaseRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 DeleteDatabaseRequestPrivate::DeleteDatabaseRequestPrivate(
     const GlueRequest::Action action, DeleteDatabaseRequest * const q)

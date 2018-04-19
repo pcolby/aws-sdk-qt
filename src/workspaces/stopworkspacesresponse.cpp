@@ -29,10 +29,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::StopWorkspacesResponse
- *
  * \brief The StopWorkspacesResponse class provides an interace for WorkSpaces StopWorkspaces responses.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new StopWorkspacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopWorkspacesResponse object for \a reply to \a request, with parent \a parent.
  */
 StopWorkspacesResponse::StopWorkspacesResponse(
         const StopWorkspacesRequest &request,
@@ -58,6 +53,9 @@ StopWorkspacesResponse::StopWorkspacesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopWorkspacesRequest * StopWorkspacesResponse::request() const
 {
     Q_D(const StopWorkspacesResponse);
@@ -65,9 +63,8 @@ const StopWorkspacesRequest * StopWorkspacesResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkSpaces StopWorkspaces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkSpaces StopWorkspaces \a response.
  */
 void StopWorkspacesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StopWorkspacesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkSpaces::StopWorkspacesResponsePrivate
+ * \brief The StopWorkspacesResponsePrivate class provides private implementation for StopWorkspacesResponse.
  * \internal
  *
- * \class StopWorkspacesResponsePrivate
- *
- * \brief Private implementation for StopWorkspacesResponse.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopWorkspacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopWorkspacesResponse instance.
+ * Constructs a StopWorkspacesResponsePrivate object with public implementation \a q.
  */
 StopWorkspacesResponsePrivate::StopWorkspacesResponsePrivate(
     StopWorkspacesResponse * const q) : WorkSpacesResponsePrivate(q)
@@ -98,9 +91,7 @@ StopWorkspacesResponsePrivate::StopWorkspacesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkSpaces StopWorkspacesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkSpaces StopWorkspaces response element from \a xml.
  */
 void StopWorkspacesResponsePrivate::parseStopWorkspacesResponse(QXmlStreamReader &xml)
 {

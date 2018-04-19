@@ -29,10 +29,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::PutRecordResponse
- *
  * \brief The PutRecordResponse class provides an interace for Firehose PutRecord responses.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -43,11 +42,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new PutRecordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutRecordResponse object for \a reply to \a request, with parent \a parent.
  */
 PutRecordResponse::PutRecordResponse(
         const PutRecordRequest &request,
@@ -59,6 +54,9 @@ PutRecordResponse::PutRecordResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutRecordRequest * PutRecordResponse::request() const
 {
     Q_D(const PutRecordResponse);
@@ -66,9 +64,8 @@ const PutRecordRequest * PutRecordResponse::request() const
 }
 
 /*!
- * @brief  Parse a Firehose PutRecord response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Firehose PutRecord \a response.
  */
 void PutRecordResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void PutRecordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Firehose::PutRecordResponsePrivate
+ * \brief The PutRecordResponsePrivate class provides private implementation for PutRecordResponse.
  * \internal
  *
- * \class PutRecordResponsePrivate
- *
- * \brief Private implementation for PutRecordResponse.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutRecordResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutRecordResponse instance.
+ * Constructs a PutRecordResponsePrivate object with public implementation \a q.
  */
 PutRecordResponsePrivate::PutRecordResponsePrivate(
     PutRecordResponse * const q) : FirehoseResponsePrivate(q)
@@ -99,9 +92,7 @@ PutRecordResponsePrivate::PutRecordResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Firehose PutRecordResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Firehose PutRecord response element from \a xml.
  */
 void PutRecordResponsePrivate::parsePutRecordResponse(QXmlStreamReader &xml)
 {

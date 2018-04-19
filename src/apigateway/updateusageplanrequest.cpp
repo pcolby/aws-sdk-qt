@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateUsagePlanRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a UpdateUsagePlanRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateUsagePlanRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 UpdateUsagePlanRequestPrivate::UpdateUsagePlanRequestPrivate(
     const APIGatewayRequest::Action action, UpdateUsagePlanRequest * const q)

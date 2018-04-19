@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListWorkerBlocksRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListWorkerBlocksRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a ListWorkerBlocksRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 ListWorkerBlocksRequestPrivate::ListWorkerBlocksRequestPrivate(
     const MTurkRequest::Action action, ListWorkerBlocksRequest * const q)

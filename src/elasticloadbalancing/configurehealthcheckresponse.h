@@ -34,10 +34,10 @@ class QTAWS_EXPORT ConfigureHealthCheckResponse : public ElasticLoadBalancingRes
 public:
     ConfigureHealthCheckResponse(const ConfigureHealthCheckRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ConfigureHealthCheckRequest * request() const;
+    virtual const ConfigureHealthCheckRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ConfigureHealthCheckResponse)

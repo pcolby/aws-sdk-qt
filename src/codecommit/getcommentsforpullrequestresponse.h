@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCommentsForPullRequestResponse : public CodeCommitResponse
 public:
     GetCommentsForPullRequestResponse(const GetCommentsForPullRequestRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCommentsForPullRequestRequest * request() const;
+    virtual const GetCommentsForPullRequestRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCommentsForPullRequestResponse)

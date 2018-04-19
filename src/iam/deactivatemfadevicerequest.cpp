@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeactivateMFADeviceRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeactivateMFADeviceRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeactivateMFADeviceRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeactivateMFADeviceRequestPrivate::DeactivateMFADeviceRequestPrivate(
     const IAMRequest::Action action, DeactivateMFADeviceRequest * const q)

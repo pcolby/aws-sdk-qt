@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::RegisterDomainResponse
- *
  * \brief The RegisterDomainResponse class provides an interace for Route53Domains RegisterDomain responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new RegisterDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterDomainResponse::RegisterDomainResponse(
         const RegisterDomainRequest &request,
@@ -56,6 +51,9 @@ RegisterDomainResponse::RegisterDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterDomainRequest * RegisterDomainResponse::request() const
 {
     Q_D(const RegisterDomainResponse);
@@ -63,9 +61,8 @@ const RegisterDomainRequest * RegisterDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53Domains RegisterDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains RegisterDomain \a response.
  */
 void RegisterDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void RegisterDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::RegisterDomainResponsePrivate
+ * \brief The RegisterDomainResponsePrivate class provides private implementation for RegisterDomainResponse.
  * \internal
  *
- * \class RegisterDomainResponsePrivate
- *
- * \brief Private implementation for RegisterDomainResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterDomainResponse instance.
+ * Constructs a RegisterDomainResponsePrivate object with public implementation \a q.
  */
 RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
     RegisterDomainResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ RegisterDomainResponsePrivate::RegisterDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains RegisterDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains RegisterDomain response element from \a xml.
  */
 void RegisterDomainResponsePrivate::parseRegisterDomainResponse(QXmlStreamReader &xml)
 {

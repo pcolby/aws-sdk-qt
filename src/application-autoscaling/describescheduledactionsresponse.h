@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeScheduledActionsResponse : public ApplicationAutoScal
 public:
     DescribeScheduledActionsResponse(const DescribeScheduledActionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeScheduledActionsRequest * request() const;
+    virtual const DescribeScheduledActionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeScheduledActionsResponse)

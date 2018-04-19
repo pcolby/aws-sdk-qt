@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetUserAttributeVerificationCodeResponse
- *
  * \brief The GetUserAttributeVerificationCodeResponse class provides an interace for CognitoIdentityProvider GetUserAttributeVerificationCode responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetUserAttributeVerificationCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetUserAttributeVerificationCodeResponse object for \a reply to \a request, with parent \a parent.
  */
 GetUserAttributeVerificationCodeResponse::GetUserAttributeVerificationCodeResponse(
         const GetUserAttributeVerificationCodeRequest &request,
@@ -65,6 +60,9 @@ GetUserAttributeVerificationCodeResponse::GetUserAttributeVerificationCodeRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetUserAttributeVerificationCodeRequest * GetUserAttributeVerificationCodeResponse::request() const
 {
     Q_D(const GetUserAttributeVerificationCodeResponse);
@@ -72,9 +70,8 @@ const GetUserAttributeVerificationCodeRequest * GetUserAttributeVerificationCode
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider GetUserAttributeVerificationCode response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider GetUserAttributeVerificationCode \a response.
  */
 void GetUserAttributeVerificationCodeResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void GetUserAttributeVerificationCodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::GetUserAttributeVerificationCodeResponsePrivate
+ * \brief The GetUserAttributeVerificationCodeResponsePrivate class provides private implementation for GetUserAttributeVerificationCodeResponse.
  * \internal
  *
- * \class GetUserAttributeVerificationCodeResponsePrivate
- *
- * \brief Private implementation for GetUserAttributeVerificationCodeResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUserAttributeVerificationCodeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetUserAttributeVerificationCodeResponse instance.
+ * Constructs a GetUserAttributeVerificationCodeResponsePrivate object with public implementation \a q.
  */
 GetUserAttributeVerificationCodeResponsePrivate::GetUserAttributeVerificationCodeResponsePrivate(
     GetUserAttributeVerificationCodeResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ GetUserAttributeVerificationCodeResponsePrivate::GetUserAttributeVerificationCod
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider GetUserAttributeVerificationCodeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider GetUserAttributeVerificationCode response element from \a xml.
  */
 void GetUserAttributeVerificationCodeResponsePrivate::parseGetUserAttributeVerificationCodeResponse(QXmlStreamReader &xml)
 {

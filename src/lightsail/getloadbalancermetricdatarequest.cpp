@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetLoadBalancerMetricDataRequest::response(QN
  */
 
 /*!
- *
- * Constructs a GetLoadBalancerMetricDataRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetLoadBalancerMetricDataRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetLoadBalancerMetricDataRequestPrivate::GetLoadBalancerMetricDataRequestPrivate(
     const LightsailRequest::Action action, GetLoadBalancerMetricDataRequest * const q)

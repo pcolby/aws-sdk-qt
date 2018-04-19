@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * StopDeploymentRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a StopDeploymentRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a StopDeploymentRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 StopDeploymentRequestPrivate::StopDeploymentRequestPrivate(
     const CodeDeployRequest::Action action, StopDeploymentRequest * const q)

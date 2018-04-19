@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * ListStackSetOperationsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListStackSetOperationsRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a ListStackSetOperationsRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 ListStackSetOperationsRequestPrivate::ListStackSetOperationsRequestPrivate(
     const CloudFormationRequest::Action action, ListStackSetOperationsRequest * const q)

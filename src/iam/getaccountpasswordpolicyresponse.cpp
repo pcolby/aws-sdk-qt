@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetAccountPasswordPolicyResponse
- *
  * \brief The GetAccountPasswordPolicyResponse class provides an interace for IAM GetAccountPasswordPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetAccountPasswordPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAccountPasswordPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAccountPasswordPolicyResponse::GetAccountPasswordPolicyResponse(
         const GetAccountPasswordPolicyRequest &request,
@@ -120,6 +115,9 @@ GetAccountPasswordPolicyResponse::GetAccountPasswordPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAccountPasswordPolicyRequest * GetAccountPasswordPolicyResponse::request() const
 {
     Q_D(const GetAccountPasswordPolicyResponse);
@@ -127,9 +125,8 @@ const GetAccountPasswordPolicyRequest * GetAccountPasswordPolicyResponse::reques
 }
 
 /*!
- * @brief  Parse a IAM GetAccountPasswordPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetAccountPasswordPolicy \a response.
  */
 void GetAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetAccountPasswordPolicyResponsePrivate
+ * \brief The GetAccountPasswordPolicyResponsePrivate class provides private implementation for GetAccountPasswordPolicyResponse.
  * \internal
  *
- * \class GetAccountPasswordPolicyResponsePrivate
- *
- * \brief Private implementation for GetAccountPasswordPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountPasswordPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAccountPasswordPolicyResponse instance.
+ * Constructs a GetAccountPasswordPolicyResponsePrivate object with public implementation \a q.
  */
 GetAccountPasswordPolicyResponsePrivate::GetAccountPasswordPolicyResponsePrivate(
     GetAccountPasswordPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetAccountPasswordPolicyResponsePrivate::GetAccountPasswordPolicyResponsePrivate
 }
 
 /*!
- * @brief  Parse an IAM GetAccountPasswordPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetAccountPasswordPolicy response element from \a xml.
  */
 void GetAccountPasswordPolicyResponsePrivate::parseGetAccountPasswordPolicyResponse(QXmlStreamReader &xml)
 {

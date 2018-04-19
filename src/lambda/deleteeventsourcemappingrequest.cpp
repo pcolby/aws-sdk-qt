@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSourceMappingRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteEventSourceMappingRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEventSourceMappingRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 DeleteEventSourceMappingRequestPrivate::DeleteEventSourceMappingRequestPrivate(
     const LambdaRequest::Action action, DeleteEventSourceMappingRequest * const q)

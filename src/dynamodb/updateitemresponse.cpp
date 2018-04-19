@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::UpdateItemResponse
- *
  * \brief The UpdateItemResponse class provides an interace for DynamoDB UpdateItem responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new UpdateItemResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateItemResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateItemResponse::UpdateItemResponse(
         const UpdateItemRequest &request,
@@ -74,6 +69,9 @@ UpdateItemResponse::UpdateItemResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateItemRequest * UpdateItemResponse::request() const
 {
     Q_D(const UpdateItemResponse);
@@ -81,9 +79,8 @@ const UpdateItemRequest * UpdateItemResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB UpdateItem response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB UpdateItem \a response.
  */
 void UpdateItemResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void UpdateItemResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::UpdateItemResponsePrivate
+ * \brief The UpdateItemResponsePrivate class provides private implementation for UpdateItemResponse.
  * \internal
  *
- * \class UpdateItemResponsePrivate
- *
- * \brief Private implementation for UpdateItemResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateItemResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateItemResponse instance.
+ * Constructs a UpdateItemResponsePrivate object with public implementation \a q.
  */
 UpdateItemResponsePrivate::UpdateItemResponsePrivate(
     UpdateItemResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ UpdateItemResponsePrivate::UpdateItemResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB UpdateItemResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB UpdateItem response element from \a xml.
  */
 void UpdateItemResponsePrivate::parseUpdateItemResponse(QXmlStreamReader &xml)
 {

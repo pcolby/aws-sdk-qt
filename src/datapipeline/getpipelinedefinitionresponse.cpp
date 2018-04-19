@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::GetPipelineDefinitionResponse
- *
  * \brief The GetPipelineDefinitionResponse class provides an interace for DataPipeline GetPipelineDefinition responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new GetPipelineDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPipelineDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPipelineDefinitionResponse::GetPipelineDefinitionResponse(
         const GetPipelineDefinitionRequest &request,
@@ -73,6 +68,9 @@ GetPipelineDefinitionResponse::GetPipelineDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPipelineDefinitionRequest * GetPipelineDefinitionResponse::request() const
 {
     Q_D(const GetPipelineDefinitionResponse);
@@ -80,9 +78,8 @@ const GetPipelineDefinitionRequest * GetPipelineDefinitionResponse::request() co
 }
 
 /*!
- * @brief  Parse a DataPipeline GetPipelineDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline GetPipelineDefinition \a response.
  */
 void GetPipelineDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void GetPipelineDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::GetPipelineDefinitionResponsePrivate
+ * \brief The GetPipelineDefinitionResponsePrivate class provides private implementation for GetPipelineDefinitionResponse.
  * \internal
  *
- * \class GetPipelineDefinitionResponsePrivate
- *
- * \brief Private implementation for GetPipelineDefinitionResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPipelineDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPipelineDefinitionResponse instance.
+ * Constructs a GetPipelineDefinitionResponsePrivate object with public implementation \a q.
  */
 GetPipelineDefinitionResponsePrivate::GetPipelineDefinitionResponsePrivate(
     GetPipelineDefinitionResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ GetPipelineDefinitionResponsePrivate::GetPipelineDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline GetPipelineDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline GetPipelineDefinition response element from \a xml.
  */
 void GetPipelineDefinitionResponsePrivate::parseGetPipelineDefinitionResponse(QXmlStreamReader &xml)
 {

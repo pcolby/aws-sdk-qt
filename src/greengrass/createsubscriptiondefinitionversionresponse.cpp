@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateSubscriptionDefinitionVersionResponse
- *
  * \brief The CreateSubscriptionDefinitionVersionResponse class provides an interace for Greengrass CreateSubscriptionDefinitionVersion responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateSubscriptionDefinitionVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSubscriptionDefinitionVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSubscriptionDefinitionVersionResponse::CreateSubscriptionDefinitionVersionResponse(
         const CreateSubscriptionDefinitionVersionRequest &request,
@@ -58,6 +53,9 @@ CreateSubscriptionDefinitionVersionResponse::CreateSubscriptionDefinitionVersion
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSubscriptionDefinitionVersionRequest * CreateSubscriptionDefinitionVersionResponse::request() const
 {
     Q_D(const CreateSubscriptionDefinitionVersionResponse);
@@ -65,9 +63,8 @@ const CreateSubscriptionDefinitionVersionRequest * CreateSubscriptionDefinitionV
 }
 
 /*!
- * @brief  Parse a Greengrass CreateSubscriptionDefinitionVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass CreateSubscriptionDefinitionVersion \a response.
  */
 void CreateSubscriptionDefinitionVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateSubscriptionDefinitionVersionResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::Greengrass::CreateSubscriptionDefinitionVersionResponsePrivate
+ * \brief The CreateSubscriptionDefinitionVersionResponsePrivate class provides private implementation for CreateSubscriptionDefinitionVersionResponse.
  * \internal
  *
- * \class CreateSubscriptionDefinitionVersionResponsePrivate
- *
- * \brief Private implementation for CreateSubscriptionDefinitionVersionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSubscriptionDefinitionVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSubscriptionDefinitionVersionResponse instance.
+ * Constructs a CreateSubscriptionDefinitionVersionResponsePrivate object with public implementation \a q.
  */
 CreateSubscriptionDefinitionVersionResponsePrivate::CreateSubscriptionDefinitionVersionResponsePrivate(
     CreateSubscriptionDefinitionVersionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateSubscriptionDefinitionVersionResponsePrivate::CreateSubscriptionDefinition
 }
 
 /*!
- * @brief  Parse an Greengrass CreateSubscriptionDefinitionVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass CreateSubscriptionDefinitionVersion response element from \a xml.
  */
 void CreateSubscriptionDefinitionVersionResponsePrivate::parseCreateSubscriptionDefinitionVersionResponse(QXmlStreamReader &xml)
 {

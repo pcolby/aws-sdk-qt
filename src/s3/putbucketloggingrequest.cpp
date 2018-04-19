@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PutBucketLoggingRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a PutBucketLoggingRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a PutBucketLoggingRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 PutBucketLoggingRequestPrivate::PutBucketLoggingRequestPrivate(
     const S3Request::Action action, PutBucketLoggingRequest * const q)

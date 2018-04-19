@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * QueryRequest::response(QNetworkReply * const 
  */
 
 /*!
- *
- * Constructs a QueryRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a QueryRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 QueryRequestPrivate::QueryRequestPrivate(
     const DynamoDBRequest::Action action, QueryRequest * const q)

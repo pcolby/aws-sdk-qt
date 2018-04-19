@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReplaceNetworkAclAssociationResponse
- *
  * \brief The ReplaceNetworkAclAssociationResponse class provides an interace for EC2 ReplaceNetworkAclAssociation responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReplaceNetworkAclAssociationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReplaceNetworkAclAssociationResponse object for \a reply to \a request, with parent \a parent.
  */
 ReplaceNetworkAclAssociationResponse::ReplaceNetworkAclAssociationResponse(
         const ReplaceNetworkAclAssociationRequest &request,
@@ -59,6 +54,9 @@ ReplaceNetworkAclAssociationResponse::ReplaceNetworkAclAssociationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReplaceNetworkAclAssociationRequest * ReplaceNetworkAclAssociationResponse::request() const
 {
     Q_D(const ReplaceNetworkAclAssociationResponse);
@@ -66,9 +64,8 @@ const ReplaceNetworkAclAssociationRequest * ReplaceNetworkAclAssociationResponse
 }
 
 /*!
- * @brief  Parse a EC2 ReplaceNetworkAclAssociation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ReplaceNetworkAclAssociation \a response.
  */
 void ReplaceNetworkAclAssociationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ReplaceNetworkAclAssociationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ReplaceNetworkAclAssociationResponsePrivate
+ * \brief The ReplaceNetworkAclAssociationResponsePrivate class provides private implementation for ReplaceNetworkAclAssociationResponse.
  * \internal
  *
- * \class ReplaceNetworkAclAssociationResponsePrivate
- *
- * \brief Private implementation for ReplaceNetworkAclAssociationResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReplaceNetworkAclAssociationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReplaceNetworkAclAssociationResponse instance.
+ * Constructs a ReplaceNetworkAclAssociationResponsePrivate object with public implementation \a q.
  */
 ReplaceNetworkAclAssociationResponsePrivate::ReplaceNetworkAclAssociationResponsePrivate(
     ReplaceNetworkAclAssociationResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ReplaceNetworkAclAssociationResponsePrivate::ReplaceNetworkAclAssociationRespons
 }
 
 /*!
- * @brief  Parse an EC2 ReplaceNetworkAclAssociationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ReplaceNetworkAclAssociation response element from \a xml.
  */
 void ReplaceNetworkAclAssociationResponsePrivate::parseReplaceNetworkAclAssociationResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationInstanceRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DeleteReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DeleteReplicationInstanceRequestPrivate::DeleteReplicationInstanceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DeleteReplicationInstanceRequest * const q)

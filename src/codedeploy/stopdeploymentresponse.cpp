@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::StopDeploymentResponse
- *
  * \brief The StopDeploymentResponse class provides an interace for CodeDeploy StopDeployment responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new StopDeploymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopDeploymentResponse object for \a reply to \a request, with parent \a parent.
  */
 StopDeploymentResponse::StopDeploymentResponse(
         const StopDeploymentRequest &request,
@@ -136,6 +131,9 @@ StopDeploymentResponse::StopDeploymentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopDeploymentRequest * StopDeploymentResponse::request() const
 {
     Q_D(const StopDeploymentResponse);
@@ -143,9 +141,8 @@ const StopDeploymentRequest * StopDeploymentResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeDeploy StopDeployment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy StopDeployment \a response.
  */
 void StopDeploymentResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void StopDeploymentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::StopDeploymentResponsePrivate
+ * \brief The StopDeploymentResponsePrivate class provides private implementation for StopDeploymentResponse.
  * \internal
  *
- * \class StopDeploymentResponsePrivate
- *
- * \brief Private implementation for StopDeploymentResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopDeploymentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopDeploymentResponse instance.
+ * Constructs a StopDeploymentResponsePrivate object with public implementation \a q.
  */
 StopDeploymentResponsePrivate::StopDeploymentResponsePrivate(
     StopDeploymentResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ StopDeploymentResponsePrivate::StopDeploymentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy StopDeploymentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy StopDeployment response element from \a xml.
  */
 void StopDeploymentResponsePrivate::parseStopDeploymentResponse(QXmlStreamReader &xml)
 {

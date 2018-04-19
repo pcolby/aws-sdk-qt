@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteNetworkInterfaceResponse
- *
  * \brief The DeleteNetworkInterfaceResponse class provides an interace for EC2 DeleteNetworkInterface responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteNetworkInterfaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNetworkInterfaceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNetworkInterfaceResponse::DeleteNetworkInterfaceResponse(
         const DeleteNetworkInterfaceRequest &request,
@@ -59,6 +54,9 @@ DeleteNetworkInterfaceResponse::DeleteNetworkInterfaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNetworkInterfaceRequest * DeleteNetworkInterfaceResponse::request() const
 {
     Q_D(const DeleteNetworkInterfaceResponse);
@@ -66,9 +64,8 @@ const DeleteNetworkInterfaceRequest * DeleteNetworkInterfaceResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 DeleteNetworkInterface response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteNetworkInterface \a response.
  */
 void DeleteNetworkInterfaceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteNetworkInterfaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteNetworkInterfaceResponsePrivate
+ * \brief The DeleteNetworkInterfaceResponsePrivate class provides private implementation for DeleteNetworkInterfaceResponse.
  * \internal
  *
- * \class DeleteNetworkInterfaceResponsePrivate
- *
- * \brief Private implementation for DeleteNetworkInterfaceResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNetworkInterfaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNetworkInterfaceResponse instance.
+ * Constructs a DeleteNetworkInterfaceResponsePrivate object with public implementation \a q.
  */
 DeleteNetworkInterfaceResponsePrivate::DeleteNetworkInterfaceResponsePrivate(
     DeleteNetworkInterfaceResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteNetworkInterfaceResponsePrivate::DeleteNetworkInterfaceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteNetworkInterfaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteNetworkInterface response element from \a xml.
  */
 void DeleteNetworkInterfaceResponsePrivate::parseDeleteNetworkInterfaceResponse(QXmlStreamReader &xml)
 {

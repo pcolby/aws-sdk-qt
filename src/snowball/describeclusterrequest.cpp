@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeClusterRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a DescribeClusterRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
     const SnowballRequest::Action action, DescribeClusterRequest * const q)

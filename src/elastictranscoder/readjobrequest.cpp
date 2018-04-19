@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ReadJobRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a ReadJobRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a ReadJobRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 ReadJobRequestPrivate::ReadJobRequestPrivate(
     const ElasticTranscoderRequest::Action action, ReadJobRequest * const q)

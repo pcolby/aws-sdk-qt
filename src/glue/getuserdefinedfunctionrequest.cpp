@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetUserDefinedFunctionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a GetUserDefinedFunctionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GetUserDefinedFunctionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GetUserDefinedFunctionRequestPrivate::GetUserDefinedFunctionRequestPrivate(
     const GlueRequest::Action action, GetUserDefinedFunctionRequest * const q)

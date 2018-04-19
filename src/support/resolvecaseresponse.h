@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResolveCaseResponse : public SupportResponse {
 public:
     ResolveCaseResponse(const ResolveCaseRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResolveCaseRequest * request() const;
+    virtual const ResolveCaseRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResolveCaseResponse)

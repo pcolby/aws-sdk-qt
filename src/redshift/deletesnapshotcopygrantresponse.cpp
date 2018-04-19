@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteSnapshotCopyGrantResponse
- *
  * \brief The DeleteSnapshotCopyGrantResponse class provides an interace for Redshift DeleteSnapshotCopyGrant responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteSnapshotCopyGrantResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSnapshotCopyGrantResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSnapshotCopyGrantResponse::DeleteSnapshotCopyGrantResponse(
         const DeleteSnapshotCopyGrantRequest &request,
@@ -85,6 +80,9 @@ DeleteSnapshotCopyGrantResponse::DeleteSnapshotCopyGrantResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSnapshotCopyGrantRequest * DeleteSnapshotCopyGrantResponse::request() const
 {
     Q_D(const DeleteSnapshotCopyGrantResponse);
@@ -92,9 +90,8 @@ const DeleteSnapshotCopyGrantRequest * DeleteSnapshotCopyGrantResponse::request(
 }
 
 /*!
- * @brief  Parse a Redshift DeleteSnapshotCopyGrant response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DeleteSnapshotCopyGrant \a response.
  */
 void DeleteSnapshotCopyGrantResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DeleteSnapshotCopyGrantResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DeleteSnapshotCopyGrantResponsePrivate
+ * \brief The DeleteSnapshotCopyGrantResponsePrivate class provides private implementation for DeleteSnapshotCopyGrantResponse.
  * \internal
  *
- * \class DeleteSnapshotCopyGrantResponsePrivate
- *
- * \brief Private implementation for DeleteSnapshotCopyGrantResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSnapshotCopyGrantResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSnapshotCopyGrantResponse instance.
+ * Constructs a DeleteSnapshotCopyGrantResponsePrivate object with public implementation \a q.
  */
 DeleteSnapshotCopyGrantResponsePrivate::DeleteSnapshotCopyGrantResponsePrivate(
     DeleteSnapshotCopyGrantResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DeleteSnapshotCopyGrantResponsePrivate::DeleteSnapshotCopyGrantResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift DeleteSnapshotCopyGrantResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DeleteSnapshotCopyGrant response element from \a xml.
  */
 void DeleteSnapshotCopyGrantResponsePrivate::parseDeleteSnapshotCopyGrantResponse(QXmlStreamReader &xml)
 {

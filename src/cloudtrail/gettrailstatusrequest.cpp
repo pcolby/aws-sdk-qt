@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * GetTrailStatusRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetTrailStatusRequestPrivate object for CloudTrail \a action with,
- * public implementation \a q.
+ * Constructs a GetTrailStatusRequestPrivate object for CloudTrail \a action,
+ * with public implementation \a q.
  */
 GetTrailStatusRequestPrivate::GetTrailStatusRequestPrivate(
     const CloudTrailRequest::Action action, GetTrailStatusRequest * const q)

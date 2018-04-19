@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ListTopicsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ListTopicsRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a ListTopicsRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 ListTopicsRequestPrivate::ListTopicsRequestPrivate(
     const SNSRequest::Action action, ListTopicsRequest * const q)

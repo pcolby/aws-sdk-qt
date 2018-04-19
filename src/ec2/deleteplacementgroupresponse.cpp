@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeletePlacementGroupResponse
- *
  * \brief The DeletePlacementGroupResponse class provides an interace for EC2 DeletePlacementGroup responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeletePlacementGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeletePlacementGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeletePlacementGroupResponse::DeletePlacementGroupResponse(
         const DeletePlacementGroupRequest &request,
@@ -59,6 +54,9 @@ DeletePlacementGroupResponse::DeletePlacementGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeletePlacementGroupRequest * DeletePlacementGroupResponse::request() const
 {
     Q_D(const DeletePlacementGroupResponse);
@@ -66,9 +64,8 @@ const DeletePlacementGroupRequest * DeletePlacementGroupResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 DeletePlacementGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeletePlacementGroup \a response.
  */
 void DeletePlacementGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeletePlacementGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeletePlacementGroupResponsePrivate
+ * \brief The DeletePlacementGroupResponsePrivate class provides private implementation for DeletePlacementGroupResponse.
  * \internal
  *
- * \class DeletePlacementGroupResponsePrivate
- *
- * \brief Private implementation for DeletePlacementGroupResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePlacementGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeletePlacementGroupResponse instance.
+ * Constructs a DeletePlacementGroupResponsePrivate object with public implementation \a q.
  */
 DeletePlacementGroupResponsePrivate::DeletePlacementGroupResponsePrivate(
     DeletePlacementGroupResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeletePlacementGroupResponsePrivate::DeletePlacementGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeletePlacementGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeletePlacementGroup response element from \a xml.
  */
 void DeletePlacementGroupResponsePrivate::parseDeletePlacementGroupResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteLifecycleHookResponse : public AutoScalingResponse {
 public:
     DeleteLifecycleHookResponse(const DeleteLifecycleHookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteLifecycleHookRequest * request() const;
+    virtual const DeleteLifecycleHookRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteLifecycleHookResponse)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetStatusRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetStatusRequestPrivate object for ImportExport \a action with,
- * public implementation \a q.
+ * Constructs a GetStatusRequestPrivate object for ImportExport \a action,
+ * with public implementation \a q.
  */
 GetStatusRequestPrivate::GetStatusRequestPrivate(
     const ImportExportRequest::Action action, GetStatusRequest * const q)

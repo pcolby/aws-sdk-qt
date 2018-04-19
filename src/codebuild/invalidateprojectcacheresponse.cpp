@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::InvalidateProjectCacheResponse
- *
  * \brief The InvalidateProjectCacheResponse class provides an interace for CodeBuild InvalidateProjectCache responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new InvalidateProjectCacheResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a InvalidateProjectCacheResponse object for \a reply to \a request, with parent \a parent.
  */
 InvalidateProjectCacheResponse::InvalidateProjectCacheResponse(
         const InvalidateProjectCacheRequest &request,
@@ -135,6 +130,9 @@ InvalidateProjectCacheResponse::InvalidateProjectCacheResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const InvalidateProjectCacheRequest * InvalidateProjectCacheResponse::request() const
 {
     Q_D(const InvalidateProjectCacheResponse);
@@ -142,9 +140,8 @@ const InvalidateProjectCacheRequest * InvalidateProjectCacheResponse::request() 
 }
 
 /*!
- * @brief  Parse a CodeBuild InvalidateProjectCache response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild InvalidateProjectCache \a response.
  */
 void InvalidateProjectCacheResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void InvalidateProjectCacheResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::InvalidateProjectCacheResponsePrivate
+ * \brief The InvalidateProjectCacheResponsePrivate class provides private implementation for InvalidateProjectCacheResponse.
  * \internal
  *
- * \class InvalidateProjectCacheResponsePrivate
- *
- * \brief Private implementation for InvalidateProjectCacheResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InvalidateProjectCacheResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InvalidateProjectCacheResponse instance.
+ * Constructs a InvalidateProjectCacheResponsePrivate object with public implementation \a q.
  */
 InvalidateProjectCacheResponsePrivate::InvalidateProjectCacheResponsePrivate(
     InvalidateProjectCacheResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ InvalidateProjectCacheResponsePrivate::InvalidateProjectCacheResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeBuild InvalidateProjectCacheResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild InvalidateProjectCache response element from \a xml.
  */
 void InvalidateProjectCacheResponsePrivate::parseInvalidateProjectCacheResponse(QXmlStreamReader &xml)
 {

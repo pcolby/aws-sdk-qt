@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEgressOnlyInternetGatewaysResponse : public EC2Respon
 public:
     DescribeEgressOnlyInternetGatewaysResponse(const DescribeEgressOnlyInternetGatewaysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEgressOnlyInternetGatewaysRequest * request() const;
+    virtual const DescribeEgressOnlyInternetGatewaysRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEgressOnlyInternetGatewaysResponse)

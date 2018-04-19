@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * RegisterTargetWithMaintenanceWindowRequest::r
  */
 
 /*!
- *
- * Constructs a RegisterTargetWithMaintenanceWindowRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a RegisterTargetWithMaintenanceWindowRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 RegisterTargetWithMaintenanceWindowRequestPrivate::RegisterTargetWithMaintenanceWindowRequestPrivate(
     const SSMRequest::Action action, RegisterTargetWithMaintenanceWindowRequest * const q)

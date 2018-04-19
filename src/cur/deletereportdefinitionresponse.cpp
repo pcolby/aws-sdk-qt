@@ -29,21 +29,16 @@ namespace CostandUsageReportService {
 
 /*!
  * \class QtAws::CostandUsageReportService::DeleteReportDefinitionResponse
- *
  * \brief The DeleteReportDefinitionResponse class provides an interace for CostandUsageReportService DeleteReportDefinition responses.
  *
- * \ingroup CostandUsageReportService
+ * \inmodule QtAwsCostandUsageReportService
  *
  *
  * \sa CostandUsageReportServiceClient::deleteReportDefinition
  */
 
 /*!
- * @brief  Constructs a new DeleteReportDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteReportDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteReportDefinitionResponse::DeleteReportDefinitionResponse(
         const DeleteReportDefinitionRequest &request,
@@ -55,6 +50,9 @@ DeleteReportDefinitionResponse::DeleteReportDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteReportDefinitionRequest * DeleteReportDefinitionResponse::request() const
 {
     Q_D(const DeleteReportDefinitionResponse);
@@ -62,9 +60,8 @@ const DeleteReportDefinitionRequest * DeleteReportDefinitionResponse::request() 
 }
 
 /*!
- * @brief  Parse a CostandUsageReportService DeleteReportDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CostandUsageReportService DeleteReportDefinition \a response.
  */
 void DeleteReportDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteReportDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CostandUsageReportService::DeleteReportDefinitionResponsePrivate
+ * \brief The DeleteReportDefinitionResponsePrivate class provides private implementation for DeleteReportDefinitionResponse.
  * \internal
  *
- * \class DeleteReportDefinitionResponsePrivate
- *
- * \brief Private implementation for DeleteReportDefinitionResponse.
+ * \inmodule QtAwsCostandUsageReportService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReportDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteReportDefinitionResponse instance.
+ * Constructs a DeleteReportDefinitionResponsePrivate object with public implementation \a q.
  */
 DeleteReportDefinitionResponsePrivate::DeleteReportDefinitionResponsePrivate(
     DeleteReportDefinitionResponse * const q) : CostandUsageReportServiceResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteReportDefinitionResponsePrivate::DeleteReportDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CostandUsageReportService DeleteReportDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CostandUsageReportService DeleteReportDefinition response element from \a xml.
  */
 void DeleteReportDefinitionResponsePrivate::parseDeleteReportDefinitionResponse(QXmlStreamReader &xml)
 {

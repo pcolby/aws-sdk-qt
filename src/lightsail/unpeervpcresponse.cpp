@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::UnpeerVpcResponse
- *
  * \brief The UnpeerVpcResponse class provides an interace for Lightsail UnpeerVpc responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new UnpeerVpcResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UnpeerVpcResponse object for \a reply to \a request, with parent \a parent.
  */
 UnpeerVpcResponse::UnpeerVpcResponse(
         const UnpeerVpcRequest &request,
@@ -71,6 +66,9 @@ UnpeerVpcResponse::UnpeerVpcResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UnpeerVpcRequest * UnpeerVpcResponse::request() const
 {
     Q_D(const UnpeerVpcResponse);
@@ -78,9 +76,8 @@ const UnpeerVpcRequest * UnpeerVpcResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail UnpeerVpc response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail UnpeerVpc \a response.
  */
 void UnpeerVpcResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void UnpeerVpcResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::UnpeerVpcResponsePrivate
+ * \brief The UnpeerVpcResponsePrivate class provides private implementation for UnpeerVpcResponse.
  * \internal
  *
- * \class UnpeerVpcResponsePrivate
- *
- * \brief Private implementation for UnpeerVpcResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnpeerVpcResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UnpeerVpcResponse instance.
+ * Constructs a UnpeerVpcResponsePrivate object with public implementation \a q.
  */
 UnpeerVpcResponsePrivate::UnpeerVpcResponsePrivate(
     UnpeerVpcResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ UnpeerVpcResponsePrivate::UnpeerVpcResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail UnpeerVpcResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail UnpeerVpc response element from \a xml.
  */
 void UnpeerVpcResponsePrivate::parseUnpeerVpcResponse(QXmlStreamReader &xml)
 {

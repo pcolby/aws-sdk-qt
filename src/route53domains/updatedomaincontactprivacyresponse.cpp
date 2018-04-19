@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::UpdateDomainContactPrivacyResponse
- *
  * \brief The UpdateDomainContactPrivacyResponse class provides an interace for Route53Domains UpdateDomainContactPrivacy responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new UpdateDomainContactPrivacyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDomainContactPrivacyResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDomainContactPrivacyResponse::UpdateDomainContactPrivacyResponse(
         const UpdateDomainContactPrivacyRequest &request,
@@ -56,6 +51,9 @@ UpdateDomainContactPrivacyResponse::UpdateDomainContactPrivacyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDomainContactPrivacyRequest * UpdateDomainContactPrivacyResponse::request() const
 {
     Q_D(const UpdateDomainContactPrivacyResponse);
@@ -63,9 +61,8 @@ const UpdateDomainContactPrivacyRequest * UpdateDomainContactPrivacyResponse::re
 }
 
 /*!
- * @brief  Parse a Route53Domains UpdateDomainContactPrivacy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains UpdateDomainContactPrivacy \a response.
  */
 void UpdateDomainContactPrivacyResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void UpdateDomainContactPrivacyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::UpdateDomainContactPrivacyResponsePrivate
+ * \brief The UpdateDomainContactPrivacyResponsePrivate class provides private implementation for UpdateDomainContactPrivacyResponse.
  * \internal
  *
- * \class UpdateDomainContactPrivacyResponsePrivate
- *
- * \brief Private implementation for UpdateDomainContactPrivacyResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDomainContactPrivacyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDomainContactPrivacyResponse instance.
+ * Constructs a UpdateDomainContactPrivacyResponsePrivate object with public implementation \a q.
  */
 UpdateDomainContactPrivacyResponsePrivate::UpdateDomainContactPrivacyResponsePrivate(
     UpdateDomainContactPrivacyResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ UpdateDomainContactPrivacyResponsePrivate::UpdateDomainContactPrivacyResponsePri
 }
 
 /*!
- * @brief  Parse an Route53Domains UpdateDomainContactPrivacyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains UpdateDomainContactPrivacy response element from \a xml.
  */
 void UpdateDomainContactPrivacyResponsePrivate::parseUpdateDomainContactPrivacyResponse(QXmlStreamReader &xml)
 {

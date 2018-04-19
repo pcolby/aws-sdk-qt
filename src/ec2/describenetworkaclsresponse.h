@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeNetworkAclsResponse : public EC2Response {
 public:
     DescribeNetworkAclsResponse(const DescribeNetworkAclsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeNetworkAclsRequest * request() const;
+    virtual const DescribeNetworkAclsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeNetworkAclsResponse)

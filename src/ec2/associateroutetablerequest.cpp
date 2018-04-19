@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AssociateRouteTableRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a AssociateRouteTableRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AssociateRouteTableRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AssociateRouteTableRequestPrivate::AssociateRouteTableRequestPrivate(
     const EC2Request::Action action, AssociateRouteTableRequest * const q)

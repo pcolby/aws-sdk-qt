@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetUserAttributeVerificationCodeResponse : public CognitoIden
 public:
     GetUserAttributeVerificationCodeResponse(const GetUserAttributeVerificationCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetUserAttributeVerificationCodeRequest * request() const;
+    virtual const GetUserAttributeVerificationCodeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetUserAttributeVerificationCodeResponse)

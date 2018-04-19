@@ -34,10 +34,10 @@ class QTAWS_EXPORT SearchResourcesResponse : public ResourceGroupsResponse {
 public:
     SearchResourcesResponse(const SearchResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SearchResourcesRequest * request() const;
+    virtual const SearchResourcesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SearchResourcesResponse)

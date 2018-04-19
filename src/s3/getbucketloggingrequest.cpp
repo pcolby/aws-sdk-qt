@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketLoggingRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetBucketLoggingRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketLoggingRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketLoggingRequestPrivate::GetBucketLoggingRequestPrivate(
     const S3Request::Action action, GetBucketLoggingRequest * const q)

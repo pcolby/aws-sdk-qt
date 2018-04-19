@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::UpdateComputeEnvironmentResponse
- *
  * \brief The UpdateComputeEnvironmentResponse class provides an interace for Batch UpdateComputeEnvironment responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new UpdateComputeEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateComputeEnvironmentResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateComputeEnvironmentResponse::UpdateComputeEnvironmentResponse(
         const UpdateComputeEnvironmentRequest &request,
@@ -69,6 +64,9 @@ UpdateComputeEnvironmentResponse::UpdateComputeEnvironmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateComputeEnvironmentRequest * UpdateComputeEnvironmentResponse::request() const
 {
     Q_D(const UpdateComputeEnvironmentResponse);
@@ -76,9 +74,8 @@ const UpdateComputeEnvironmentRequest * UpdateComputeEnvironmentResponse::reques
 }
 
 /*!
- * @brief  Parse a Batch UpdateComputeEnvironment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch UpdateComputeEnvironment \a response.
  */
 void UpdateComputeEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void UpdateComputeEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::UpdateComputeEnvironmentResponsePrivate
+ * \brief The UpdateComputeEnvironmentResponsePrivate class provides private implementation for UpdateComputeEnvironmentResponse.
  * \internal
  *
- * \class UpdateComputeEnvironmentResponsePrivate
- *
- * \brief Private implementation for UpdateComputeEnvironmentResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateComputeEnvironmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateComputeEnvironmentResponse instance.
+ * Constructs a UpdateComputeEnvironmentResponsePrivate object with public implementation \a q.
  */
 UpdateComputeEnvironmentResponsePrivate::UpdateComputeEnvironmentResponsePrivate(
     UpdateComputeEnvironmentResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ UpdateComputeEnvironmentResponsePrivate::UpdateComputeEnvironmentResponsePrivate
 }
 
 /*!
- * @brief  Parse an Batch UpdateComputeEnvironmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch UpdateComputeEnvironment response element from \a xml.
  */
 void UpdateComputeEnvironmentResponsePrivate::parseUpdateComputeEnvironmentResponse(QXmlStreamReader &xml)
 {

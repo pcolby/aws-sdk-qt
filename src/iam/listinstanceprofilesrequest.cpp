@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ListInstanceProfilesRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListInstanceProfilesRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ListInstanceProfilesRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ListInstanceProfilesRequestPrivate::ListInstanceProfilesRequestPrivate(
     const IAMRequest::Action action, ListInstanceProfilesRequest * const q)

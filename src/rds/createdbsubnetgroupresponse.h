@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDBSubnetGroupResponse : public RDSResponse {
 public:
     CreateDBSubnetGroupResponse(const CreateDBSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDBSubnetGroupRequest * request() const;
+    virtual const CreateDBSubnetGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDBSubnetGroupResponse)

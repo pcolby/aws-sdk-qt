@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationPartRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteDocumentationPartRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDocumentationPartRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteDocumentationPartRequestPrivate::DeleteDocumentationPartRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDocumentationPartRequest * const q)

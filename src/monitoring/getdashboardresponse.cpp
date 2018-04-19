@@ -29,10 +29,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::GetDashboardResponse
- *
  * \brief The GetDashboardResponse class provides an interace for CloudWatch GetDashboard responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -53,11 +52,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new GetDashboardResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDashboardResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDashboardResponse::GetDashboardResponse(
         const GetDashboardRequest &request,
@@ -69,6 +64,9 @@ GetDashboardResponse::GetDashboardResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDashboardRequest * GetDashboardResponse::request() const
 {
     Q_D(const GetDashboardResponse);
@@ -76,9 +74,8 @@ const GetDashboardRequest * GetDashboardResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatch GetDashboard response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatch GetDashboard \a response.
  */
 void GetDashboardResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void GetDashboardResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatch::GetDashboardResponsePrivate
+ * \brief The GetDashboardResponsePrivate class provides private implementation for GetDashboardResponse.
  * \internal
  *
- * \class GetDashboardResponsePrivate
- *
- * \brief Private implementation for GetDashboardResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDashboardResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDashboardResponse instance.
+ * Constructs a GetDashboardResponsePrivate object with public implementation \a q.
  */
 GetDashboardResponsePrivate::GetDashboardResponsePrivate(
     GetDashboardResponse * const q) : CloudWatchResponsePrivate(q)
@@ -109,9 +102,7 @@ GetDashboardResponsePrivate::GetDashboardResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatch GetDashboardResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatch GetDashboard response element from \a xml.
  */
 void GetDashboardResponsePrivate::parseGetDashboardResponse(QXmlStreamReader &xml)
 {

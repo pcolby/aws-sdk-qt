@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeActivationsResponse : public SSMResponse {
 public:
     DescribeActivationsResponse(const DescribeActivationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeActivationsRequest * request() const;
+    virtual const DescribeActivationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeActivationsResponse)

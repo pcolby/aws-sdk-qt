@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateGcmChannelResponse
- *
  * \brief The UpdateGcmChannelResponse class provides an interace for Pinpoint UpdateGcmChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateGcmChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateGcmChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateGcmChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateGcmChannelResponse::UpdateGcmChannelResponse(
         const UpdateGcmChannelRequest &request,
@@ -55,6 +50,9 @@ UpdateGcmChannelResponse::UpdateGcmChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateGcmChannelRequest * UpdateGcmChannelResponse::request() const
 {
     Q_D(const UpdateGcmChannelResponse);
@@ -62,9 +60,8 @@ const UpdateGcmChannelRequest * UpdateGcmChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint UpdateGcmChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint UpdateGcmChannel \a response.
  */
 void UpdateGcmChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateGcmChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::UpdateGcmChannelResponsePrivate
+ * \brief The UpdateGcmChannelResponsePrivate class provides private implementation for UpdateGcmChannelResponse.
  * \internal
  *
- * \class UpdateGcmChannelResponsePrivate
- *
- * \brief Private implementation for UpdateGcmChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGcmChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateGcmChannelResponse instance.
+ * Constructs a UpdateGcmChannelResponsePrivate object with public implementation \a q.
  */
 UpdateGcmChannelResponsePrivate::UpdateGcmChannelResponsePrivate(
     UpdateGcmChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateGcmChannelResponsePrivate::UpdateGcmChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint UpdateGcmChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint UpdateGcmChannel response element from \a xml.
  */
 void UpdateGcmChannelResponsePrivate::parseUpdateGcmChannelResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateSoftwareUpdateJobResponse : public GreengrassResponse {
 public:
     CreateSoftwareUpdateJobResponse(const CreateSoftwareUpdateJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateSoftwareUpdateJobRequest * request() const;
+    virtual const CreateSoftwareUpdateJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateSoftwareUpdateJobResponse)

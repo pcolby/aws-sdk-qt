@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBatchPredictionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetBatchPredictionRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a GetBatchPredictionRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 GetBatchPredictionRequestPrivate::GetBatchPredictionRequestPrivate(
     const MachineLearningRequest::Action action, GetBatchPredictionRequest * const q)

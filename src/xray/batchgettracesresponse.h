@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchGetTracesResponse : public XRayResponse {
 public:
     BatchGetTracesResponse(const BatchGetTracesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchGetTracesRequest * request() const;
+    virtual const BatchGetTracesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchGetTracesResponse)

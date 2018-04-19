@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ResetSnapshotAttributeResponse
- *
  * \brief The ResetSnapshotAttributeResponse class provides an interace for EC2 ResetSnapshotAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ResetSnapshotAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetSnapshotAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetSnapshotAttributeResponse::ResetSnapshotAttributeResponse(
         const ResetSnapshotAttributeRequest &request,
@@ -59,6 +54,9 @@ ResetSnapshotAttributeResponse::ResetSnapshotAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetSnapshotAttributeRequest * ResetSnapshotAttributeResponse::request() const
 {
     Q_D(const ResetSnapshotAttributeResponse);
@@ -66,9 +64,8 @@ const ResetSnapshotAttributeRequest * ResetSnapshotAttributeResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 ResetSnapshotAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ResetSnapshotAttribute \a response.
  */
 void ResetSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ResetSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ResetSnapshotAttributeResponsePrivate
+ * \brief The ResetSnapshotAttributeResponsePrivate class provides private implementation for ResetSnapshotAttributeResponse.
  * \internal
  *
- * \class ResetSnapshotAttributeResponsePrivate
- *
- * \brief Private implementation for ResetSnapshotAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetSnapshotAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetSnapshotAttributeResponse instance.
+ * Constructs a ResetSnapshotAttributeResponsePrivate object with public implementation \a q.
  */
 ResetSnapshotAttributeResponsePrivate::ResetSnapshotAttributeResponsePrivate(
     ResetSnapshotAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ResetSnapshotAttributeResponsePrivate::ResetSnapshotAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ResetSnapshotAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ResetSnapshotAttribute response element from \a xml.
  */
 void ResetSnapshotAttributeResponsePrivate::parseResetSnapshotAttributeResponse(QXmlStreamReader &xml)
 {

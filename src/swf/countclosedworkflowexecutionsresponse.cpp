@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::CountClosedWorkflowExecutionsResponse
- *
  * \brief The CountClosedWorkflowExecutionsResponse class provides an interace for SWF CountClosedWorkflowExecutions responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new CountClosedWorkflowExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CountClosedWorkflowExecutionsResponse object for \a reply to \a request, with parent \a parent.
  */
 CountClosedWorkflowExecutionsResponse::CountClosedWorkflowExecutionsResponse(
         const CountClosedWorkflowExecutionsRequest &request,
@@ -71,6 +66,9 @@ CountClosedWorkflowExecutionsResponse::CountClosedWorkflowExecutionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CountClosedWorkflowExecutionsRequest * CountClosedWorkflowExecutionsResponse::request() const
 {
     Q_D(const CountClosedWorkflowExecutionsResponse);
@@ -78,9 +76,8 @@ const CountClosedWorkflowExecutionsRequest * CountClosedWorkflowExecutionsRespon
 }
 
 /*!
- * @brief  Parse a SWF CountClosedWorkflowExecutions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF CountClosedWorkflowExecutions \a response.
  */
 void CountClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void CountClosedWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::CountClosedWorkflowExecutionsResponsePrivate
+ * \brief The CountClosedWorkflowExecutionsResponsePrivate class provides private implementation for CountClosedWorkflowExecutionsResponse.
  * \internal
  *
- * \class CountClosedWorkflowExecutionsResponsePrivate
- *
- * \brief Private implementation for CountClosedWorkflowExecutionsResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CountClosedWorkflowExecutionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CountClosedWorkflowExecutionsResponse instance.
+ * Constructs a CountClosedWorkflowExecutionsResponsePrivate object with public implementation \a q.
  */
 CountClosedWorkflowExecutionsResponsePrivate::CountClosedWorkflowExecutionsResponsePrivate(
     CountClosedWorkflowExecutionsResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ CountClosedWorkflowExecutionsResponsePrivate::CountClosedWorkflowExecutionsRespo
 }
 
 /*!
- * @brief  Parse an SWF CountClosedWorkflowExecutionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF CountClosedWorkflowExecutions response element from \a xml.
  */
 void CountClosedWorkflowExecutionsResponsePrivate::parseCountClosedWorkflowExecutionsResponse(QXmlStreamReader &xml)
 {

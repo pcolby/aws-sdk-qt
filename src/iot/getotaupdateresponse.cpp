@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetOTAUpdateResponse
- *
  * \brief The GetOTAUpdateResponse class provides an interace for IoT GetOTAUpdate responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetOTAUpdateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetOTAUpdateResponse object for \a reply to \a request, with parent \a parent.
  */
 GetOTAUpdateResponse::GetOTAUpdateResponse(
         const GetOTAUpdateRequest &request,
@@ -66,6 +61,9 @@ GetOTAUpdateResponse::GetOTAUpdateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetOTAUpdateRequest * GetOTAUpdateResponse::request() const
 {
     Q_D(const GetOTAUpdateResponse);
@@ -73,9 +71,8 @@ const GetOTAUpdateRequest * GetOTAUpdateResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT GetOTAUpdate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT GetOTAUpdate \a response.
  */
 void GetOTAUpdateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetOTAUpdateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::GetOTAUpdateResponsePrivate
+ * \brief The GetOTAUpdateResponsePrivate class provides private implementation for GetOTAUpdateResponse.
  * \internal
  *
- * \class GetOTAUpdateResponsePrivate
- *
- * \brief Private implementation for GetOTAUpdateResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOTAUpdateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetOTAUpdateResponse instance.
+ * Constructs a GetOTAUpdateResponsePrivate object with public implementation \a q.
  */
 GetOTAUpdateResponsePrivate::GetOTAUpdateResponsePrivate(
     GetOTAUpdateResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ GetOTAUpdateResponsePrivate::GetOTAUpdateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT GetOTAUpdateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT GetOTAUpdate response element from \a xml.
  */
 void GetOTAUpdateResponsePrivate::parseGetOTAUpdateResponse(QXmlStreamReader &xml)
 {

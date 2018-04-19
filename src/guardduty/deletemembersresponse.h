@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteMembersResponse : public GuardDutyResponse {
 public:
     DeleteMembersResponse(const DeleteMembersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteMembersRequest * request() const;
+    virtual const DeleteMembersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteMembersResponse)

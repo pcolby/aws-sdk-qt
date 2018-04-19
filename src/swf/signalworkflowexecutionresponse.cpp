@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::SignalWorkflowExecutionResponse
- *
  * \brief The SignalWorkflowExecutionResponse class provides an interace for SWF SignalWorkflowExecution responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new SignalWorkflowExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SignalWorkflowExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 SignalWorkflowExecutionResponse::SignalWorkflowExecutionResponse(
         const SignalWorkflowExecutionRequest &request,
@@ -71,6 +66,9 @@ SignalWorkflowExecutionResponse::SignalWorkflowExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SignalWorkflowExecutionRequest * SignalWorkflowExecutionResponse::request() const
 {
     Q_D(const SignalWorkflowExecutionResponse);
@@ -78,9 +76,8 @@ const SignalWorkflowExecutionRequest * SignalWorkflowExecutionResponse::request(
 }
 
 /*!
- * @brief  Parse a SWF SignalWorkflowExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF SignalWorkflowExecution \a response.
  */
 void SignalWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void SignalWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::SignalWorkflowExecutionResponsePrivate
+ * \brief The SignalWorkflowExecutionResponsePrivate class provides private implementation for SignalWorkflowExecutionResponse.
  * \internal
  *
- * \class SignalWorkflowExecutionResponsePrivate
- *
- * \brief Private implementation for SignalWorkflowExecutionResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SignalWorkflowExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SignalWorkflowExecutionResponse instance.
+ * Constructs a SignalWorkflowExecutionResponsePrivate object with public implementation \a q.
  */
 SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponsePrivate(
     SignalWorkflowExecutionResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ SignalWorkflowExecutionResponsePrivate::SignalWorkflowExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF SignalWorkflowExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF SignalWorkflowExecution response element from \a xml.
  */
 void SignalWorkflowExecutionResponsePrivate::parseSignalWorkflowExecutionResponse(QXmlStreamReader &xml)
 {

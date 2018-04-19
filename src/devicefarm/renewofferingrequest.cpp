@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * RenewOfferingRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a RenewOfferingRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a RenewOfferingRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 RenewOfferingRequestPrivate::RenewOfferingRequestPrivate(
     const DeviceFarmRequest::Action action, RenewOfferingRequest * const q)

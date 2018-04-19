@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetAssociatedRoleResponse
- *
  * \brief The GetAssociatedRoleResponse class provides an interace for Greengrass GetAssociatedRole responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetAssociatedRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAssociatedRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAssociatedRoleResponse::GetAssociatedRoleResponse(
         const GetAssociatedRoleRequest &request,
@@ -58,6 +53,9 @@ GetAssociatedRoleResponse::GetAssociatedRoleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAssociatedRoleRequest * GetAssociatedRoleResponse::request() const
 {
     Q_D(const GetAssociatedRoleResponse);
@@ -65,9 +63,8 @@ const GetAssociatedRoleRequest * GetAssociatedRoleResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass GetAssociatedRole response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass GetAssociatedRole \a response.
  */
 void GetAssociatedRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetAssociatedRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::GetAssociatedRoleResponsePrivate
+ * \brief The GetAssociatedRoleResponsePrivate class provides private implementation for GetAssociatedRoleResponse.
  * \internal
  *
- * \class GetAssociatedRoleResponsePrivate
- *
- * \brief Private implementation for GetAssociatedRoleResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAssociatedRoleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAssociatedRoleResponse instance.
+ * Constructs a GetAssociatedRoleResponsePrivate object with public implementation \a q.
  */
 GetAssociatedRoleResponsePrivate::GetAssociatedRoleResponsePrivate(
     GetAssociatedRoleResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ GetAssociatedRoleResponsePrivate::GetAssociatedRoleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass GetAssociatedRoleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass GetAssociatedRole response element from \a xml.
  */
 void GetAssociatedRoleResponsePrivate::parseGetAssociatedRoleResponse(QXmlStreamReader &xml)
 {

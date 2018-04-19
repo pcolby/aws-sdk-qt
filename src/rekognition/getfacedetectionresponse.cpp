@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::GetFaceDetectionResponse
- *
  * \brief The GetFaceDetectionResponse class provides an interace for Rekognition GetFaceDetection responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new GetFaceDetectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFaceDetectionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFaceDetectionResponse::GetFaceDetectionResponse(
         const GetFaceDetectionRequest &request,
@@ -56,6 +51,9 @@ GetFaceDetectionResponse::GetFaceDetectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFaceDetectionRequest * GetFaceDetectionResponse::request() const
 {
     Q_D(const GetFaceDetectionResponse);
@@ -63,9 +61,8 @@ const GetFaceDetectionRequest * GetFaceDetectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition GetFaceDetection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition GetFaceDetection \a response.
  */
 void GetFaceDetectionResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetFaceDetectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::GetFaceDetectionResponsePrivate
+ * \brief The GetFaceDetectionResponsePrivate class provides private implementation for GetFaceDetectionResponse.
  * \internal
  *
- * \class GetFaceDetectionResponsePrivate
- *
- * \brief Private implementation for GetFaceDetectionResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFaceDetectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFaceDetectionResponse instance.
+ * Constructs a GetFaceDetectionResponsePrivate object with public implementation \a q.
  */
 GetFaceDetectionResponsePrivate::GetFaceDetectionResponsePrivate(
     GetFaceDetectionResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ GetFaceDetectionResponsePrivate::GetFaceDetectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition GetFaceDetectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition GetFaceDetection response element from \a xml.
  */
 void GetFaceDetectionResponsePrivate::parseGetFaceDetectionResponse(QXmlStreamReader &xml)
 {

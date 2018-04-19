@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeLagsResponse
- *
  * \brief The DescribeLagsResponse class provides an interace for DirectConnect DescribeLags responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeLagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLagsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLagsResponse::DescribeLagsResponse(
         const DescribeLagsRequest &request,
@@ -63,6 +58,9 @@ DescribeLagsResponse::DescribeLagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLagsRequest * DescribeLagsResponse::request() const
 {
     Q_D(const DescribeLagsResponse);
@@ -70,9 +68,8 @@ const DescribeLagsRequest * DescribeLagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect DescribeLags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DescribeLags \a response.
  */
 void DescribeLagsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DescribeLagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::DescribeLagsResponsePrivate
+ * \brief The DescribeLagsResponsePrivate class provides private implementation for DescribeLagsResponse.
  * \internal
  *
- * \class DescribeLagsResponsePrivate
- *
- * \brief Private implementation for DescribeLagsResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLagsResponse instance.
+ * Constructs a DescribeLagsResponsePrivate object with public implementation \a q.
  */
 DescribeLagsResponsePrivate::DescribeLagsResponsePrivate(
     DescribeLagsResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DescribeLagsResponsePrivate::DescribeLagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect DescribeLagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DescribeLags response element from \a xml.
  */
 void DescribeLagsResponsePrivate::parseDescribeLagsResponse(QXmlStreamReader &xml)
 {

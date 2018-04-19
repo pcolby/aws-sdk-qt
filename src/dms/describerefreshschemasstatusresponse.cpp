@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeRefreshSchemasStatusResponse
- *
  * \brief The DescribeRefreshSchemasStatusResponse class provides an interace for DatabaseMigrationService DescribeRefreshSchemasStatus responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeRefreshSchemasStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRefreshSchemasStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRefreshSchemasStatusResponse::DescribeRefreshSchemasStatusResponse(
         const DescribeRefreshSchemasStatusRequest &request,
@@ -66,6 +61,9 @@ DescribeRefreshSchemasStatusResponse::DescribeRefreshSchemasStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRefreshSchemasStatusRequest * DescribeRefreshSchemasStatusResponse::request() const
 {
     Q_D(const DescribeRefreshSchemasStatusResponse);
@@ -73,9 +71,8 @@ const DescribeRefreshSchemasStatusRequest * DescribeRefreshSchemasStatusResponse
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DescribeRefreshSchemasStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DescribeRefreshSchemasStatus \a response.
  */
 void DescribeRefreshSchemasStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeRefreshSchemasStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DescribeRefreshSchemasStatusResponsePrivate
+ * \brief The DescribeRefreshSchemasStatusResponsePrivate class provides private implementation for DescribeRefreshSchemasStatusResponse.
  * \internal
  *
- * \class DescribeRefreshSchemasStatusResponsePrivate
- *
- * \brief Private implementation for DescribeRefreshSchemasStatusResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRefreshSchemasStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRefreshSchemasStatusResponse instance.
+ * Constructs a DescribeRefreshSchemasStatusResponsePrivate object with public implementation \a q.
  */
 DescribeRefreshSchemasStatusResponsePrivate::DescribeRefreshSchemasStatusResponsePrivate(
     DescribeRefreshSchemasStatusResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeRefreshSchemasStatusResponsePrivate::DescribeRefreshSchemasStatusRespons
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DescribeRefreshSchemasStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DescribeRefreshSchemasStatus response element from \a xml.
  */
 void DescribeRefreshSchemasStatusResponsePrivate::parseDescribeRefreshSchemasStatusResponse(QXmlStreamReader &xml)
 {

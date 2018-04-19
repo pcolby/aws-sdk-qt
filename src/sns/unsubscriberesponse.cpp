@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::UnsubscribeResponse
- *
  * \brief The UnsubscribeResponse class provides an interace for SNS Unsubscribe responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new UnsubscribeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UnsubscribeResponse object for \a reply to \a request, with parent \a parent.
  */
 UnsubscribeResponse::UnsubscribeResponse(
         const UnsubscribeRequest &request,
@@ -69,6 +64,9 @@ UnsubscribeResponse::UnsubscribeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UnsubscribeRequest * UnsubscribeResponse::request() const
 {
     Q_D(const UnsubscribeResponse);
@@ -76,9 +74,8 @@ const UnsubscribeRequest * UnsubscribeResponse::request() const
 }
 
 /*!
- * @brief  Parse a SNS Unsubscribe response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS Unsubscribe \a response.
  */
 void UnsubscribeResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void UnsubscribeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::UnsubscribeResponsePrivate
+ * \brief The UnsubscribeResponsePrivate class provides private implementation for UnsubscribeResponse.
  * \internal
  *
- * \class UnsubscribeResponsePrivate
- *
- * \brief Private implementation for UnsubscribeResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnsubscribeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UnsubscribeResponse instance.
+ * Constructs a UnsubscribeResponsePrivate object with public implementation \a q.
  */
 UnsubscribeResponsePrivate::UnsubscribeResponsePrivate(
     UnsubscribeResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ UnsubscribeResponsePrivate::UnsubscribeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS UnsubscribeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS Unsubscribe response element from \a xml.
  */
 void UnsubscribeResponsePrivate::parseUnsubscribeResponse(QXmlStreamReader &xml)
 {

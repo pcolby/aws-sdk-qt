@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListDeviceDefinitionVersionsRequest::response
  */
 
 /*!
- *
- * Constructs a ListDeviceDefinitionVersionsRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a ListDeviceDefinitionVersionsRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 ListDeviceDefinitionVersionsRequestPrivate::ListDeviceDefinitionVersionsRequestPrivate(
     const GreengrassRequest::Action action, ListDeviceDefinitionVersionsRequest * const q)

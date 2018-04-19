@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationOptionsRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeConfigurationOptionsRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DescribeConfigurationOptionsRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DescribeConfigurationOptionsRequestPrivate::DescribeConfigurationOptionsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeConfigurationOptionsRequest * const q)

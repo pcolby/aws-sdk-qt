@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListIndicesRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListIndicesRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListIndicesRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListIndicesRequestPrivate::ListIndicesRequestPrivate(
     const IoTRequest::Action action, ListIndicesRequest * const q)

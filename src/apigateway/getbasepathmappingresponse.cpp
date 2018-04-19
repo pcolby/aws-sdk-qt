@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetBasePathMappingResponse
- *
  * \brief The GetBasePathMappingResponse class provides an interace for APIGateway GetBasePathMapping responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetBasePathMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBasePathMappingResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBasePathMappingResponse::GetBasePathMappingResponse(
         const GetBasePathMappingRequest &request,
@@ -60,6 +55,9 @@ GetBasePathMappingResponse::GetBasePathMappingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBasePathMappingRequest * GetBasePathMappingResponse::request() const
 {
     Q_D(const GetBasePathMappingResponse);
@@ -67,9 +65,8 @@ const GetBasePathMappingRequest * GetBasePathMappingResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetBasePathMapping response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetBasePathMapping \a response.
  */
 void GetBasePathMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetBasePathMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetBasePathMappingResponsePrivate
+ * \brief The GetBasePathMappingResponsePrivate class provides private implementation for GetBasePathMappingResponse.
  * \internal
  *
- * \class GetBasePathMappingResponsePrivate
- *
- * \brief Private implementation for GetBasePathMappingResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBasePathMappingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBasePathMappingResponse instance.
+ * Constructs a GetBasePathMappingResponsePrivate object with public implementation \a q.
  */
 GetBasePathMappingResponsePrivate::GetBasePathMappingResponsePrivate(
     GetBasePathMappingResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetBasePathMappingResponsePrivate::GetBasePathMappingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetBasePathMappingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetBasePathMapping response element from \a xml.
  */
 void GetBasePathMappingResponsePrivate::parseGetBasePathMappingResponse(QXmlStreamReader &xml)
 {

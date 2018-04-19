@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::DeleteUserResponse
- *
  * \brief The DeleteUserResponse class provides an interace for MQ DeleteUser responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteUserResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteUserResponse::DeleteUserResponse(
         const DeleteUserRequest &request,
@@ -57,6 +52,9 @@ DeleteUserResponse::DeleteUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteUserRequest * DeleteUserResponse::request() const
 {
     Q_D(const DeleteUserResponse);
@@ -64,9 +62,8 @@ const DeleteUserRequest * DeleteUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ DeleteUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ DeleteUser \a response.
  */
 void DeleteUserResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DeleteUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::DeleteUserResponsePrivate
+ * \brief The DeleteUserResponsePrivate class provides private implementation for DeleteUserResponse.
  * \internal
  *
- * \class DeleteUserResponsePrivate
- *
- * \brief Private implementation for DeleteUserResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteUserResponse instance.
+ * Constructs a DeleteUserResponsePrivate object with public implementation \a q.
  */
 DeleteUserResponsePrivate::DeleteUserResponsePrivate(
     DeleteUserResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ DeleteUserResponsePrivate::DeleteUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ DeleteUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ DeleteUser response element from \a xml.
  */
 void DeleteUserResponsePrivate::parseDeleteUserResponse(QXmlStreamReader &xml)
 {

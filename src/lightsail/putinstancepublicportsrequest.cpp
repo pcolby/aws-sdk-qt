@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * PutInstancePublicPortsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a PutInstancePublicPortsRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a PutInstancePublicPortsRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 PutInstancePublicPortsRequestPrivate::PutInstancePublicPortsRequestPrivate(
     const LightsailRequest::Action action, PutInstancePublicPortsRequest * const q)

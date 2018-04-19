@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListBonusPaymentsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListBonusPaymentsRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a ListBonusPaymentsRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 ListBonusPaymentsRequestPrivate::ListBonusPaymentsRequestPrivate(
     const MTurkRequest::Action action, ListBonusPaymentsRequest * const q)

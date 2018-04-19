@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteLaunchConfigurationResponse : public AutoScalingRespons
 public:
     DeleteLaunchConfigurationResponse(const DeleteLaunchConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteLaunchConfigurationRequest * request() const;
+    virtual const DeleteLaunchConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteLaunchConfigurationResponse)

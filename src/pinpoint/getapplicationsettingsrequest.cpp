@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetApplicationSettingsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a GetApplicationSettingsRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetApplicationSettingsRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetApplicationSettingsRequestPrivate::GetApplicationSettingsRequestPrivate(
     const PinpointRequest::Action action, GetApplicationSettingsRequest * const q)

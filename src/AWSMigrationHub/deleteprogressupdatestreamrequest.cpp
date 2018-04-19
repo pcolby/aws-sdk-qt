@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteProgressUpdateStreamRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteProgressUpdateStreamRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a DeleteProgressUpdateStreamRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 DeleteProgressUpdateStreamRequestPrivate::DeleteProgressUpdateStreamRequestPrivate(
     const MigrationHubRequest::Action action, DeleteProgressUpdateStreamRequest * const q)

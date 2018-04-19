@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * RejectVpcPeeringConnectionRequest::response(Q
  */
 
 /*!
- *
- * Constructs a RejectVpcPeeringConnectionRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a RejectVpcPeeringConnectionRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 RejectVpcPeeringConnectionRequestPrivate::RejectVpcPeeringConnectionRequestPrivate(
     const EC2Request::Action action, RejectVpcPeeringConnectionRequest * const q)

@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateFleetAttributesResponse
- *
  * \brief The UpdateFleetAttributesResponse class provides an interace for GameLift UpdateFleetAttributes responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateFleetAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateFleetAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateFleetAttributesResponse::UpdateFleetAttributesResponse(
         const UpdateFleetAttributesRequest &request,
@@ -491,6 +486,9 @@ UpdateFleetAttributesResponse::UpdateFleetAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateFleetAttributesRequest * UpdateFleetAttributesResponse::request() const
 {
     Q_D(const UpdateFleetAttributesResponse);
@@ -498,9 +496,8 @@ const UpdateFleetAttributesRequest * UpdateFleetAttributesResponse::request() co
 }
 
 /*!
- * @brief  Parse a GameLift UpdateFleetAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift UpdateFleetAttributes \a response.
  */
 void UpdateFleetAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void UpdateFleetAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::UpdateFleetAttributesResponsePrivate
+ * \brief The UpdateFleetAttributesResponsePrivate class provides private implementation for UpdateFleetAttributesResponse.
  * \internal
  *
- * \class UpdateFleetAttributesResponsePrivate
- *
- * \brief Private implementation for UpdateFleetAttributesResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFleetAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateFleetAttributesResponse instance.
+ * Constructs a UpdateFleetAttributesResponsePrivate object with public implementation \a q.
  */
 UpdateFleetAttributesResponsePrivate::UpdateFleetAttributesResponsePrivate(
     UpdateFleetAttributesResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ UpdateFleetAttributesResponsePrivate::UpdateFleetAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift UpdateFleetAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift UpdateFleetAttributes response element from \a xml.
  */
 void UpdateFleetAttributesResponsePrivate::parseUpdateFleetAttributesResponse(QXmlStreamReader &xml)
 {

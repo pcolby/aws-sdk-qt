@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::PutPermissionResponse
- *
  * \brief The PutPermissionResponse class provides an interace for CloudWatchEvents PutPermission responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new PutPermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutPermissionResponse object for \a reply to \a request, with parent \a parent.
  */
 PutPermissionResponse::PutPermissionResponse(
         const PutPermissionRequest &request,
@@ -78,6 +73,9 @@ PutPermissionResponse::PutPermissionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutPermissionRequest * PutPermissionResponse::request() const
 {
     Q_D(const PutPermissionResponse);
@@ -85,9 +83,8 @@ const PutPermissionRequest * PutPermissionResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents PutPermission response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents PutPermission \a response.
  */
 void PutPermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void PutPermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::PutPermissionResponsePrivate
+ * \brief The PutPermissionResponsePrivate class provides private implementation for PutPermissionResponse.
  * \internal
  *
- * \class PutPermissionResponsePrivate
- *
- * \brief Private implementation for PutPermissionResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutPermissionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutPermissionResponse instance.
+ * Constructs a PutPermissionResponsePrivate object with public implementation \a q.
  */
 PutPermissionResponsePrivate::PutPermissionResponsePrivate(
     PutPermissionResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ PutPermissionResponsePrivate::PutPermissionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents PutPermissionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents PutPermission response element from \a xml.
  */
 void PutPermissionResponsePrivate::parsePutPermissionResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateSqlInjectionMatchSetResponse : public WAFRegionalRespon
 public:
     CreateSqlInjectionMatchSetResponse(const CreateSqlInjectionMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateSqlInjectionMatchSetRequest * request() const;
+    virtual const CreateSqlInjectionMatchSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateSqlInjectionMatchSetResponse)

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateAuthorizerResponse
- *
  * \brief The CreateAuthorizerResponse class provides an interace for APIGateway CreateAuthorizer responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateAuthorizerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAuthorizerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAuthorizerResponse::CreateAuthorizerResponse(
         const CreateAuthorizerRequest &request,
@@ -60,6 +55,9 @@ CreateAuthorizerResponse::CreateAuthorizerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAuthorizerRequest * CreateAuthorizerResponse::request() const
 {
     Q_D(const CreateAuthorizerResponse);
@@ -67,9 +65,8 @@ const CreateAuthorizerRequest * CreateAuthorizerResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway CreateAuthorizer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway CreateAuthorizer \a response.
  */
 void CreateAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::CreateAuthorizerResponsePrivate
+ * \brief The CreateAuthorizerResponsePrivate class provides private implementation for CreateAuthorizerResponse.
  * \internal
  *
- * \class CreateAuthorizerResponsePrivate
- *
- * \brief Private implementation for CreateAuthorizerResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAuthorizerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAuthorizerResponse instance.
+ * Constructs a CreateAuthorizerResponsePrivate object with public implementation \a q.
  */
 CreateAuthorizerResponsePrivate::CreateAuthorizerResponsePrivate(
     CreateAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateAuthorizerResponsePrivate::CreateAuthorizerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway CreateAuthorizerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway CreateAuthorizer response element from \a xml.
  */
 void CreateAuthorizerResponsePrivate::parseCreateAuthorizerResponse(QXmlStreamReader &xml)
 {

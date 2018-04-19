@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * RevokeDBSecurityGroupIngressRequest::response
  */
 
 /*!
- *
- * Constructs a RevokeDBSecurityGroupIngressRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a RevokeDBSecurityGroupIngressRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 RevokeDBSecurityGroupIngressRequestPrivate::RevokeDBSecurityGroupIngressRequestPrivate(
     const RDSRequest::Action action, RevokeDBSecurityGroupIngressRequest * const q)

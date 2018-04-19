@@ -29,10 +29,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::SearchResourcesResponse
- *
  * \brief The SearchResourcesResponse class provides an interace for ResourceGroups SearchResources responses.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -83,11 +82,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new SearchResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SearchResourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 SearchResourcesResponse::SearchResourcesResponse(
         const SearchResourcesRequest &request,
@@ -99,6 +94,9 @@ SearchResourcesResponse::SearchResourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SearchResourcesRequest * SearchResourcesResponse::request() const
 {
     Q_D(const SearchResourcesResponse);
@@ -106,9 +104,8 @@ const SearchResourcesRequest * SearchResourcesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ResourceGroups SearchResources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ResourceGroups SearchResources \a response.
  */
 void SearchResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -118,19 +115,15 @@ void SearchResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ResourceGroups::SearchResourcesResponsePrivate
+ * \brief The SearchResourcesResponsePrivate class provides private implementation for SearchResourcesResponse.
  * \internal
  *
- * \class SearchResourcesResponsePrivate
- *
- * \brief Private implementation for SearchResourcesResponse.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchResourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SearchResourcesResponse instance.
+ * Constructs a SearchResourcesResponsePrivate object with public implementation \a q.
  */
 SearchResourcesResponsePrivate::SearchResourcesResponsePrivate(
     SearchResourcesResponse * const q) : ResourceGroupsResponsePrivate(q)
@@ -139,9 +132,7 @@ SearchResourcesResponsePrivate::SearchResourcesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ResourceGroups SearchResourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ResourceGroups SearchResources response element from \a xml.
  */
 void SearchResourcesResponsePrivate::parseSearchResourcesResponse(QXmlStreamReader &xml)
 {

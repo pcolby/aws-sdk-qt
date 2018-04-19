@@ -28,16 +28,13 @@ namespace LexRuntimeService {
 
 /*!
  * \class QtAws::LexRuntimeService::LexRuntimeServiceResponse
- *
  * \brief The LexRuntimeServiceResponse class provides an interface for LexRuntimeService responses.
  *
- * \ingroup LexRuntimeService
+ * \inmodule QtAwsLexRuntimeService
  */
 
 /*!
- * @brief  Constructs a new LexRuntimeServiceResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a LexRuntimeServiceResponse object with parent \a parent.
  */
 LexRuntimeServiceResponse::LexRuntimeServiceResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new LexRuntimeServiceResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ LexRuntimeServiceResponse::LexRuntimeServiceResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LexRuntimeServiceResponse object.
- *
+ * \internal
+ * Constructs a LexRuntimeServiceResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LexRuntimeServiceResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 LexRuntimeServiceResponse::LexRuntimeServiceResponse(LexRuntimeServiceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ LexRuntimeServiceResponse::LexRuntimeServiceResponse(LexRuntimeServiceResponsePr
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void LexRuntimeServiceResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void LexRuntimeServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::LexRuntimeService::LexRuntimeServiceResponsePrivate
+ * \brief The LexRuntimeServiceResponsePrivate class provides private implementation for LexRuntimeServiceResponse.
+ * \internal
  *
- * @class  LexRuntimeServiceResponsePrivate
- *
- * @brief  Private implementation for LexRuntimeServiceResponse.
+ * \inmodule QtAwsLexRuntimeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LexRuntimeServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public LexRuntimeServiceResponse instance.
+ * Constructs a LexRuntimeServiceResponsePrivate object with public implementation \a q.
  */
 LexRuntimeServiceResponsePrivate::LexRuntimeServiceResponsePrivate(
     LexRuntimeServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

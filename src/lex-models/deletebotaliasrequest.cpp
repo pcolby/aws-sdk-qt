@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBotAliasRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteBotAliasRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBotAliasRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 DeleteBotAliasRequestPrivate::DeleteBotAliasRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteBotAliasRequest * const q)

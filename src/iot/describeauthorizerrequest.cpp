@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAuthorizerRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeAuthorizerRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAuthorizerRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DescribeAuthorizerRequestPrivate::DescribeAuthorizerRequestPrivate(
     const IoTRequest::Action action, DescribeAuthorizerRequest * const q)

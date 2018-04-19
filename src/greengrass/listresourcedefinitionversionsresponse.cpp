@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListResourceDefinitionVersionsResponse
- *
  * \brief The ListResourceDefinitionVersionsResponse class provides an interace for Greengrass ListResourceDefinitionVersions responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListResourceDefinitionVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListResourceDefinitionVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListResourceDefinitionVersionsResponse::ListResourceDefinitionVersionsResponse(
         const ListResourceDefinitionVersionsRequest &request,
@@ -58,6 +53,9 @@ ListResourceDefinitionVersionsResponse::ListResourceDefinitionVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListResourceDefinitionVersionsRequest * ListResourceDefinitionVersionsResponse::request() const
 {
     Q_D(const ListResourceDefinitionVersionsResponse);
@@ -65,9 +63,8 @@ const ListResourceDefinitionVersionsRequest * ListResourceDefinitionVersionsResp
 }
 
 /*!
- * @brief  Parse a Greengrass ListResourceDefinitionVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass ListResourceDefinitionVersions \a response.
  */
 void ListResourceDefinitionVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListResourceDefinitionVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::ListResourceDefinitionVersionsResponsePrivate
+ * \brief The ListResourceDefinitionVersionsResponsePrivate class provides private implementation for ListResourceDefinitionVersionsResponse.
  * \internal
  *
- * \class ListResourceDefinitionVersionsResponsePrivate
- *
- * \brief Private implementation for ListResourceDefinitionVersionsResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceDefinitionVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListResourceDefinitionVersionsResponse instance.
+ * Constructs a ListResourceDefinitionVersionsResponsePrivate object with public implementation \a q.
  */
 ListResourceDefinitionVersionsResponsePrivate::ListResourceDefinitionVersionsResponsePrivate(
     ListResourceDefinitionVersionsResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ ListResourceDefinitionVersionsResponsePrivate::ListResourceDefinitionVersionsRes
 }
 
 /*!
- * @brief  Parse an Greengrass ListResourceDefinitionVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass ListResourceDefinitionVersions response element from \a xml.
  */
 void ListResourceDefinitionVersionsResponsePrivate::parseListResourceDefinitionVersionsResponse(QXmlStreamReader &xml)
 {

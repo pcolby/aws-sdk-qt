@@ -29,10 +29,9 @@ namespace MarketplaceMetering {
 
 /*!
  * \class QtAws::MarketplaceMetering::BatchMeterUsageResponse
- *
  * \brief The BatchMeterUsageResponse class provides an interace for MarketplaceMetering BatchMeterUsage responses.
  *
- * \ingroup MarketplaceMetering
+ * \inmodule QtAwsMarketplaceMetering
  *
  *  <fullname>AWS Marketplace Metering Service</fullname>
  * 
@@ -69,11 +68,7 @@ namespace MarketplaceMetering {
  */
 
 /*!
- * @brief  Constructs a new BatchMeterUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchMeterUsageResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchMeterUsageResponse::BatchMeterUsageResponse(
         const BatchMeterUsageRequest &request,
@@ -85,6 +80,9 @@ BatchMeterUsageResponse::BatchMeterUsageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchMeterUsageRequest * BatchMeterUsageResponse::request() const
 {
     Q_D(const BatchMeterUsageResponse);
@@ -92,9 +90,8 @@ const BatchMeterUsageRequest * BatchMeterUsageResponse::request() const
 }
 
 /*!
- * @brief  Parse a MarketplaceMetering BatchMeterUsage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MarketplaceMetering BatchMeterUsage \a response.
  */
 void BatchMeterUsageResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void BatchMeterUsageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MarketplaceMetering::BatchMeterUsageResponsePrivate
+ * \brief The BatchMeterUsageResponsePrivate class provides private implementation for BatchMeterUsageResponse.
  * \internal
  *
- * \class BatchMeterUsageResponsePrivate
- *
- * \brief Private implementation for BatchMeterUsageResponse.
+ * \inmodule QtAwsMarketplaceMetering
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchMeterUsageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchMeterUsageResponse instance.
+ * Constructs a BatchMeterUsageResponsePrivate object with public implementation \a q.
  */
 BatchMeterUsageResponsePrivate::BatchMeterUsageResponsePrivate(
     BatchMeterUsageResponse * const q) : MarketplaceMeteringResponsePrivate(q)
@@ -125,9 +118,7 @@ BatchMeterUsageResponsePrivate::BatchMeterUsageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MarketplaceMetering BatchMeterUsageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MarketplaceMetering BatchMeterUsage response element from \a xml.
  */
 void BatchMeterUsageResponsePrivate::parseBatchMeterUsageResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::PutIdentityPolicyResponse
- *
  * \brief The PutIdentityPolicyResponse class provides an interace for SES PutIdentityPolicy responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new PutIdentityPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutIdentityPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutIdentityPolicyResponse::PutIdentityPolicyResponse(
         const PutIdentityPolicyRequest &request,
@@ -66,6 +61,9 @@ PutIdentityPolicyResponse::PutIdentityPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutIdentityPolicyRequest * PutIdentityPolicyResponse::request() const
 {
     Q_D(const PutIdentityPolicyResponse);
@@ -73,9 +71,8 @@ const PutIdentityPolicyRequest * PutIdentityPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES PutIdentityPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES PutIdentityPolicy \a response.
  */
 void PutIdentityPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void PutIdentityPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::PutIdentityPolicyResponsePrivate
+ * \brief The PutIdentityPolicyResponsePrivate class provides private implementation for PutIdentityPolicyResponse.
  * \internal
  *
- * \class PutIdentityPolicyResponsePrivate
- *
- * \brief Private implementation for PutIdentityPolicyResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutIdentityPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutIdentityPolicyResponse instance.
+ * Constructs a PutIdentityPolicyResponsePrivate object with public implementation \a q.
  */
 PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponsePrivate(
     PutIdentityPolicyResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES PutIdentityPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES PutIdentityPolicy response element from \a xml.
  */
 void PutIdentityPolicyResponsePrivate::parsePutIdentityPolicyResponse(QXmlStreamReader &xml)
 {

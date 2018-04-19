@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateAdditionalAssignmentsForHITResponse : public MTurkRespo
 public:
     CreateAdditionalAssignmentsForHITResponse(const CreateAdditionalAssignmentsForHITRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateAdditionalAssignmentsForHITRequest * request() const;
+    virtual const CreateAdditionalAssignmentsForHITRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateAdditionalAssignmentsForHITResponse)

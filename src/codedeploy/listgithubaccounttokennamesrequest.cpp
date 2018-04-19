@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * ListGitHubAccountTokenNamesRequest::response(
  */
 
 /*!
- *
- * Constructs a ListGitHubAccountTokenNamesRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a ListGitHubAccountTokenNamesRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 ListGitHubAccountTokenNamesRequestPrivate::ListGitHubAccountTokenNamesRequestPrivate(
     const CodeDeployRequest::Action action, ListGitHubAccountTokenNamesRequest * const q)

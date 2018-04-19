@@ -134,7 +134,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * Constructs a[n] CognitoIdentityProviderRequest object for CognitoIdentityProvider \a action.
+ * Constructs a CognitoIdentityProviderRequest object for CognitoIdentityProvider \a action.
  */
 CognitoIdentityProviderRequest::CognitoIdentityProviderRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CognitoIdentityProviderRequestPrivate(action, this))
@@ -334,8 +334,8 @@ QNetworkRequest CognitoIdentityProviderRequest::unsignedRequest(const QUrl &endp
  */
 
 /*!
- * Constructs a CognitoIdentityProviderRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a CognitoIdentityProviderRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 CognitoIdentityProviderRequestPrivate::CognitoIdentityProviderRequestPrivate(const CognitoIdentityProviderRequest::Action action, CognitoIdentityProviderRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

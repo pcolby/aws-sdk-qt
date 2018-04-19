@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * PutConfigurationAggregatorRequest::response(Q
  */
 
 /*!
- *
- * Constructs a PutConfigurationAggregatorRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a PutConfigurationAggregatorRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 PutConfigurationAggregatorRequestPrivate::PutConfigurationAggregatorRequestPrivate(
     const ConfigServiceRequest::Action action, PutConfigurationAggregatorRequest * const q)

@@ -29,10 +29,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::DescribeBudgetResponse
- *
  * \brief The DescribeBudgetResponse class provides an interace for Budgets DescribeBudget responses.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -77,11 +76,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new DescribeBudgetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeBudgetResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeBudgetResponse::DescribeBudgetResponse(
         const DescribeBudgetRequest &request,
@@ -93,6 +88,9 @@ DescribeBudgetResponse::DescribeBudgetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeBudgetRequest * DescribeBudgetResponse::request() const
 {
     Q_D(const DescribeBudgetResponse);
@@ -100,9 +98,8 @@ const DescribeBudgetRequest * DescribeBudgetResponse::request() const
 }
 
 /*!
- * @brief  Parse a Budgets DescribeBudget response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Budgets DescribeBudget \a response.
  */
 void DescribeBudgetResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DescribeBudgetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Budgets::DescribeBudgetResponsePrivate
+ * \brief The DescribeBudgetResponsePrivate class provides private implementation for DescribeBudgetResponse.
  * \internal
  *
- * \class DescribeBudgetResponsePrivate
- *
- * \brief Private implementation for DescribeBudgetResponse.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBudgetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeBudgetResponse instance.
+ * Constructs a DescribeBudgetResponsePrivate object with public implementation \a q.
  */
 DescribeBudgetResponsePrivate::DescribeBudgetResponsePrivate(
     DescribeBudgetResponse * const q) : BudgetsResponsePrivate(q)
@@ -133,9 +126,7 @@ DescribeBudgetResponsePrivate::DescribeBudgetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Budgets DescribeBudgetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Budgets DescribeBudget response element from \a xml.
  */
 void DescribeBudgetResponsePrivate::parseDescribeBudgetResponse(QXmlStreamReader &xml)
 {

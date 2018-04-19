@@ -41,7 +41,7 @@ namespace KinesisVideoArchivedMedia {
  */
 
 /*!
- * Constructs a[n] KinesisVideoArchivedMediaRequest object for KinesisVideoArchivedMedia \a action.
+ * Constructs a KinesisVideoArchivedMediaRequest object for KinesisVideoArchivedMedia \a action.
  */
 KinesisVideoArchivedMediaRequest::KinesisVideoArchivedMediaRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new KinesisVideoArchivedMediaRequestPrivate(action, this))
@@ -241,8 +241,8 @@ QNetworkRequest KinesisVideoArchivedMediaRequest::unsignedRequest(const QUrl &en
  */
 
 /*!
- * Constructs a KinesisVideoArchivedMediaRequestPrivate object for KinesisVideoArchivedMedia \a action with,
- * public implementation \a q.
+ * Constructs a KinesisVideoArchivedMediaRequestPrivate object for KinesisVideoArchivedMedia \a action,
+ * with public implementation \a q.
  */
 KinesisVideoArchivedMediaRequestPrivate::KinesisVideoArchivedMediaRequestPrivate(const KinesisVideoArchivedMediaRequest::Action action, KinesisVideoArchivedMediaRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

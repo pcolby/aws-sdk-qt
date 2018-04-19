@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::DescribeStreamSummaryResponse
- *
  * \brief The DescribeStreamSummaryResponse class provides an interace for Kinesis DescribeStreamSummary responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new DescribeStreamSummaryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStreamSummaryResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStreamSummaryResponse::DescribeStreamSummaryResponse(
         const DescribeStreamSummaryRequest &request,
@@ -58,6 +53,9 @@ DescribeStreamSummaryResponse::DescribeStreamSummaryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStreamSummaryRequest * DescribeStreamSummaryResponse::request() const
 {
     Q_D(const DescribeStreamSummaryResponse);
@@ -65,9 +63,8 @@ const DescribeStreamSummaryRequest * DescribeStreamSummaryResponse::request() co
 }
 
 /*!
- * @brief  Parse a Kinesis DescribeStreamSummary response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis DescribeStreamSummary \a response.
  */
 void DescribeStreamSummaryResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeStreamSummaryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::DescribeStreamSummaryResponsePrivate
+ * \brief The DescribeStreamSummaryResponsePrivate class provides private implementation for DescribeStreamSummaryResponse.
  * \internal
  *
- * \class DescribeStreamSummaryResponsePrivate
- *
- * \brief Private implementation for DescribeStreamSummaryResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStreamSummaryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStreamSummaryResponse instance.
+ * Constructs a DescribeStreamSummaryResponsePrivate object with public implementation \a q.
  */
 DescribeStreamSummaryResponsePrivate::DescribeStreamSummaryResponsePrivate(
     DescribeStreamSummaryResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeStreamSummaryResponsePrivate::DescribeStreamSummaryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis DescribeStreamSummaryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis DescribeStreamSummary response element from \a xml.
  */
 void DescribeStreamSummaryResponsePrivate::parseDescribeStreamSummaryResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DescribeReportDefinitionsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeReportDefinitionsRequestPrivate object for CostandUsageReportService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeReportDefinitionsRequestPrivate object for CostandUsageReportService \a action,
+ * with public implementation \a q.
  */
 DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate(
     const CostandUsageReportServiceRequest::Action action, DescribeReportDefinitionsRequest * const q)

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateProductFromPortfolioRequest::resp
  */
 
 /*!
- *
- * Constructs a DisassociateProductFromPortfolioRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateProductFromPortfolioRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DisassociateProductFromPortfolioRequestPrivate::DisassociateProductFromPortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, DisassociateProductFromPortfolioRequest * const q)

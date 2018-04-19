@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * PutThirdPartyJobFailureResultRequest::respons
  */
 
 /*!
- *
- * Constructs a PutThirdPartyJobFailureResultRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a PutThirdPartyJobFailureResultRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 PutThirdPartyJobFailureResultRequestPrivate::PutThirdPartyJobFailureResultRequestPrivate(
     const CodePipelineRequest::Action action, PutThirdPartyJobFailureResultRequest * const q)

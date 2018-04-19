@@ -161,9 +161,8 @@ QtAws::Core::AwsAbstractResponse * InvalidateProjectCacheRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a InvalidateProjectCacheRequestPrivate object for CodeBuild \a action with,
- * public implementation \a q.
+ * Constructs a InvalidateProjectCacheRequestPrivate object for CodeBuild \a action,
+ * with public implementation \a q.
  */
 InvalidateProjectCacheRequestPrivate::InvalidateProjectCacheRequestPrivate(
     const CodeBuildRequest::Action action, InvalidateProjectCacheRequest * const q)

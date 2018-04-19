@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateInstanceExportTaskResponse
- *
  * \brief The CreateInstanceExportTaskResponse class provides an interace for EC2 CreateInstanceExportTask responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateInstanceExportTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateInstanceExportTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateInstanceExportTaskResponse::CreateInstanceExportTaskResponse(
         const CreateInstanceExportTaskRequest &request,
@@ -59,6 +54,9 @@ CreateInstanceExportTaskResponse::CreateInstanceExportTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateInstanceExportTaskRequest * CreateInstanceExportTaskResponse::request() const
 {
     Q_D(const CreateInstanceExportTaskResponse);
@@ -66,9 +64,8 @@ const CreateInstanceExportTaskRequest * CreateInstanceExportTaskResponse::reques
 }
 
 /*!
- * @brief  Parse a EC2 CreateInstanceExportTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateInstanceExportTask \a response.
  */
 void CreateInstanceExportTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateInstanceExportTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateInstanceExportTaskResponsePrivate
+ * \brief The CreateInstanceExportTaskResponsePrivate class provides private implementation for CreateInstanceExportTaskResponse.
  * \internal
  *
- * \class CreateInstanceExportTaskResponsePrivate
- *
- * \brief Private implementation for CreateInstanceExportTaskResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInstanceExportTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateInstanceExportTaskResponse instance.
+ * Constructs a CreateInstanceExportTaskResponsePrivate object with public implementation \a q.
  */
 CreateInstanceExportTaskResponsePrivate::CreateInstanceExportTaskResponsePrivate(
     CreateInstanceExportTaskResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateInstanceExportTaskResponsePrivate::CreateInstanceExportTaskResponsePrivate
 }
 
 /*!
- * @brief  Parse an EC2 CreateInstanceExportTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateInstanceExportTask response element from \a xml.
  */
 void CreateInstanceExportTaskResponsePrivate::parseCreateInstanceExportTaskResponse(QXmlStreamReader &xml)
 {

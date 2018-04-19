@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a TagResourceRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a TagResourceRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const CloudDirectoryRequest::Action action, TagResourceRequest * const q)

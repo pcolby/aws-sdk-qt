@@ -34,10 +34,10 @@ class QTAWS_EXPORT UploadArchiveResponse : public GlacierResponse {
 public:
     UploadArchiveResponse(const UploadArchiveRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UploadArchiveRequest * request() const;
+    virtual const UploadArchiveRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UploadArchiveResponse)

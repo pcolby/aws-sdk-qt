@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListParentsResponse
- *
  * \brief The ListParentsResponse class provides an interace for Organizations ListParents responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListParentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListParentsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListParentsResponse::ListParentsResponse(
         const ListParentsRequest &request,
@@ -197,6 +192,9 @@ ListParentsResponse::ListParentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListParentsRequest * ListParentsResponse::request() const
 {
     Q_D(const ListParentsResponse);
@@ -204,9 +202,8 @@ const ListParentsRequest * ListParentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations ListParents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations ListParents \a response.
  */
 void ListParentsResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void ListParentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::ListParentsResponsePrivate
+ * \brief The ListParentsResponsePrivate class provides private implementation for ListParentsResponse.
  * \internal
  *
- * \class ListParentsResponsePrivate
- *
- * \brief Private implementation for ListParentsResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListParentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListParentsResponse instance.
+ * Constructs a ListParentsResponsePrivate object with public implementation \a q.
  */
 ListParentsResponsePrivate::ListParentsResponsePrivate(
     ListParentsResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ ListParentsResponsePrivate::ListParentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations ListParentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations ListParents response element from \a xml.
  */
 void ListParentsResponsePrivate::parseListParentsResponse(QXmlStreamReader &xml)
 {

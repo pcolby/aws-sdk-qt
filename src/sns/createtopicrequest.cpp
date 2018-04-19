@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateTopicRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateTopicRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a CreateTopicRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 CreateTopicRequestPrivate::CreateTopicRequestPrivate(
     const SNSRequest::Action action, CreateTopicRequest * const q)

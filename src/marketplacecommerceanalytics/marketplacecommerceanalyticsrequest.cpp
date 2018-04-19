@@ -41,7 +41,7 @@ namespace MarketplaceCommerceAnalytics {
  */
 
 /*!
- * Constructs a[n] MarketplaceCommerceAnalyticsRequest object for MarketplaceCommerceAnalytics \a action.
+ * Constructs a MarketplaceCommerceAnalyticsRequest object for MarketplaceCommerceAnalytics \a action.
  */
 MarketplaceCommerceAnalyticsRequest::MarketplaceCommerceAnalyticsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MarketplaceCommerceAnalyticsRequestPrivate(action, this))
@@ -241,8 +241,8 @@ QNetworkRequest MarketplaceCommerceAnalyticsRequest::unsignedRequest(const QUrl 
  */
 
 /*!
- * Constructs a MarketplaceCommerceAnalyticsRequestPrivate object for MarketplaceCommerceAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a MarketplaceCommerceAnalyticsRequestPrivate object for MarketplaceCommerceAnalytics \a action,
+ * with public implementation \a q.
  */
 MarketplaceCommerceAnalyticsRequestPrivate::MarketplaceCommerceAnalyticsRequestPrivate(const MarketplaceCommerceAnalyticsRequest::Action action, MarketplaceCommerceAnalyticsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

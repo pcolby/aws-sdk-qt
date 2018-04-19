@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::DeleteUserProfileResponse
- *
  * \brief The DeleteUserProfileResponse class provides an interace for CodeStar DeleteUserProfile responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteUserProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteUserProfileResponse::DeleteUserProfileResponse(
         const DeleteUserProfileRequest &request,
@@ -143,6 +138,9 @@ DeleteUserProfileResponse::DeleteUserProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteUserProfileRequest * DeleteUserProfileResponse::request() const
 {
     Q_D(const DeleteUserProfileResponse);
@@ -150,9 +148,8 @@ const DeleteUserProfileRequest * DeleteUserProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar DeleteUserProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar DeleteUserProfile \a response.
  */
 void DeleteUserProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void DeleteUserProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::DeleteUserProfileResponsePrivate
+ * \brief The DeleteUserProfileResponsePrivate class provides private implementation for DeleteUserProfileResponse.
  * \internal
  *
- * \class DeleteUserProfileResponsePrivate
- *
- * \brief Private implementation for DeleteUserProfileResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteUserProfileResponse instance.
+ * Constructs a DeleteUserProfileResponsePrivate object with public implementation \a q.
  */
 DeleteUserProfileResponsePrivate::DeleteUserProfileResponsePrivate(
     DeleteUserProfileResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ DeleteUserProfileResponsePrivate::DeleteUserProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar DeleteUserProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar DeleteUserProfile response element from \a xml.
  */
 void DeleteUserProfileResponsePrivate::parseDeleteUserProfileResponse(QXmlStreamReader &xml)
 {

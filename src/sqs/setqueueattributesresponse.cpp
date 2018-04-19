@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::SetQueueAttributesResponse
- *
  * \brief The SetQueueAttributesResponse class provides an interace for SQS SetQueueAttributes responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new SetQueueAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetQueueAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 SetQueueAttributesResponse::SetQueueAttributesResponse(
         const SetQueueAttributesRequest &request,
@@ -121,6 +116,9 @@ SetQueueAttributesResponse::SetQueueAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetQueueAttributesRequest * SetQueueAttributesResponse::request() const
 {
     Q_D(const SetQueueAttributesResponse);
@@ -128,9 +126,8 @@ const SetQueueAttributesRequest * SetQueueAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS SetQueueAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS SetQueueAttributes \a response.
  */
 void SetQueueAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void SetQueueAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::SetQueueAttributesResponsePrivate
+ * \brief The SetQueueAttributesResponsePrivate class provides private implementation for SetQueueAttributesResponse.
  * \internal
  *
- * \class SetQueueAttributesResponsePrivate
- *
- * \brief Private implementation for SetQueueAttributesResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetQueueAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetQueueAttributesResponse instance.
+ * Constructs a SetQueueAttributesResponsePrivate object with public implementation \a q.
  */
 SetQueueAttributesResponsePrivate::SetQueueAttributesResponsePrivate(
     SetQueueAttributesResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ SetQueueAttributesResponsePrivate::SetQueueAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS SetQueueAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS SetQueueAttributes response element from \a xml.
  */
 void SetQueueAttributesResponsePrivate::parseSetQueueAttributesResponse(QXmlStreamReader &xml)
 {

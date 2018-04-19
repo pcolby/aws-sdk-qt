@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveResourcePermissionResponse : public WorkDocsResponse {
 public:
     RemoveResourcePermissionResponse(const RemoveResourcePermissionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveResourcePermissionRequest * request() const;
+    virtual const RemoveResourcePermissionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RemoveResourcePermissionResponse)

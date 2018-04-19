@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CopyClusterSnapshotResponse
- *
  * \brief The CopyClusterSnapshotResponse class provides an interace for Redshift CopyClusterSnapshot responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CopyClusterSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopyClusterSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CopyClusterSnapshotResponse::CopyClusterSnapshotResponse(
         const CopyClusterSnapshotRequest &request,
@@ -85,6 +80,9 @@ CopyClusterSnapshotResponse::CopyClusterSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopyClusterSnapshotRequest * CopyClusterSnapshotResponse::request() const
 {
     Q_D(const CopyClusterSnapshotResponse);
@@ -92,9 +90,8 @@ const CopyClusterSnapshotRequest * CopyClusterSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a Redshift CopyClusterSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift CopyClusterSnapshot \a response.
  */
 void CopyClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void CopyClusterSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::CopyClusterSnapshotResponsePrivate
+ * \brief The CopyClusterSnapshotResponsePrivate class provides private implementation for CopyClusterSnapshotResponse.
  * \internal
  *
- * \class CopyClusterSnapshotResponsePrivate
- *
- * \brief Private implementation for CopyClusterSnapshotResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyClusterSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopyClusterSnapshotResponse instance.
+ * Constructs a CopyClusterSnapshotResponsePrivate object with public implementation \a q.
  */
 CopyClusterSnapshotResponsePrivate::CopyClusterSnapshotResponsePrivate(
     CopyClusterSnapshotResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ CopyClusterSnapshotResponsePrivate::CopyClusterSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift CopyClusterSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift CopyClusterSnapshot response element from \a xml.
  */
 void CopyClusterSnapshotResponsePrivate::parseCopyClusterSnapshotResponse(QXmlStreamReader &xml)
 {

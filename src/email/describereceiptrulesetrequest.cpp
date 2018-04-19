@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeReceiptRuleSetRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeReceiptRuleSetRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a DescribeReceiptRuleSetRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 DescribeReceiptRuleSetRequestPrivate::DescribeReceiptRuleSetRequestPrivate(
     const SESRequest::Action action, DescribeReceiptRuleSetRequest * const q)

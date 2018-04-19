@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelConversionTaskResponse
- *
  * \brief The CancelConversionTaskResponse class provides an interace for EC2 CancelConversionTask responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelConversionTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelConversionTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelConversionTaskResponse::CancelConversionTaskResponse(
         const CancelConversionTaskRequest &request,
@@ -59,6 +54,9 @@ CancelConversionTaskResponse::CancelConversionTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelConversionTaskRequest * CancelConversionTaskResponse::request() const
 {
     Q_D(const CancelConversionTaskResponse);
@@ -66,9 +64,8 @@ const CancelConversionTaskRequest * CancelConversionTaskResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 CancelConversionTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CancelConversionTask \a response.
  */
 void CancelConversionTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CancelConversionTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CancelConversionTaskResponsePrivate
+ * \brief The CancelConversionTaskResponsePrivate class provides private implementation for CancelConversionTaskResponse.
  * \internal
  *
- * \class CancelConversionTaskResponsePrivate
- *
- * \brief Private implementation for CancelConversionTaskResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelConversionTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelConversionTaskResponse instance.
+ * Constructs a CancelConversionTaskResponsePrivate object with public implementation \a q.
  */
 CancelConversionTaskResponsePrivate::CancelConversionTaskResponsePrivate(
     CancelConversionTaskResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CancelConversionTaskResponsePrivate::CancelConversionTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CancelConversionTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CancelConversionTask response element from \a xml.
  */
 void CancelConversionTaskResponsePrivate::parseCancelConversionTaskResponse(QXmlStreamReader &xml)
 {

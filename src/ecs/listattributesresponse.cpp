@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::ListAttributesResponse
- *
  * \brief The ListAttributesResponse class provides an interace for ECS ListAttributes responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new ListAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAttributesResponse::ListAttributesResponse(
         const ListAttributesRequest &request,
@@ -72,6 +67,9 @@ ListAttributesResponse::ListAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAttributesRequest * ListAttributesResponse::request() const
 {
     Q_D(const ListAttributesResponse);
@@ -79,9 +77,8 @@ const ListAttributesRequest * ListAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS ListAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS ListAttributes \a response.
  */
 void ListAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void ListAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::ListAttributesResponsePrivate
+ * \brief The ListAttributesResponsePrivate class provides private implementation for ListAttributesResponse.
  * \internal
  *
- * \class ListAttributesResponsePrivate
- *
- * \brief Private implementation for ListAttributesResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAttributesResponse instance.
+ * Constructs a ListAttributesResponsePrivate object with public implementation \a q.
  */
 ListAttributesResponsePrivate::ListAttributesResponsePrivate(
     ListAttributesResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ ListAttributesResponsePrivate::ListAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS ListAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS ListAttributes response element from \a xml.
  */
 void ListAttributesResponsePrivate::parseListAttributesResponse(QXmlStreamReader &xml)
 {

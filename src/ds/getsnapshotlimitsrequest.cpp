@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * GetSnapshotLimitsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetSnapshotLimitsRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a GetSnapshotLimitsRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 GetSnapshotLimitsRequestPrivate::GetSnapshotLimitsRequestPrivate(
     const DirectoryServiceRequest::Action action, GetSnapshotLimitsRequest * const q)

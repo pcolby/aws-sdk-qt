@@ -69,7 +69,7 @@ namespace Lambda {
  */
 
 /*!
- * Constructs a[n] LambdaRequest object for Lambda \a action.
+ * Constructs a LambdaRequest object for Lambda \a action.
  */
 LambdaRequest::LambdaRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new LambdaRequestPrivate(action, this))
@@ -269,8 +269,8 @@ QNetworkRequest LambdaRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a LambdaRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a LambdaRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 LambdaRequestPrivate::LambdaRequestPrivate(const LambdaRequest::Action action, LambdaRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

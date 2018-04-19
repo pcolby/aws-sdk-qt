@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetMembersResponse : public GuardDutyResponse {
 public:
     GetMembersResponse(const GetMembersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetMembersRequest * request() const;
+    virtual const GetMembersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetMembersResponse)

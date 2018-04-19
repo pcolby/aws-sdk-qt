@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeApplicationVersionsResponse : public ElasticBeanstalk
 public:
     DescribeApplicationVersionsResponse(const DescribeApplicationVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeApplicationVersionsRequest * request() const;
+    virtual const DescribeApplicationVersionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeApplicationVersionsResponse)

@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * CreateAccountRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateAccountRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a CreateAccountRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 CreateAccountRequestPrivate::CreateAccountRequestPrivate(
     const OrganizationsRequest::Action action, CreateAccountRequest * const q)

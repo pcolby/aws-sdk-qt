@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreatePartitionResponse
- *
  * \brief The CreatePartitionResponse class provides an interace for Glue CreatePartition responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreatePartitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePartitionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePartitionResponse::CreatePartitionResponse(
         const CreatePartitionRequest &request,
@@ -58,6 +53,9 @@ CreatePartitionResponse::CreatePartitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePartitionRequest * CreatePartitionResponse::request() const
 {
     Q_D(const CreatePartitionResponse);
@@ -65,9 +63,8 @@ const CreatePartitionRequest * CreatePartitionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue CreatePartition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue CreatePartition \a response.
  */
 void CreatePartitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreatePartitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::CreatePartitionResponsePrivate
+ * \brief The CreatePartitionResponsePrivate class provides private implementation for CreatePartitionResponse.
  * \internal
  *
- * \class CreatePartitionResponsePrivate
- *
- * \brief Private implementation for CreatePartitionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePartitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePartitionResponse instance.
+ * Constructs a CreatePartitionResponsePrivate object with public implementation \a q.
  */
 CreatePartitionResponsePrivate::CreatePartitionResponsePrivate(
     CreatePartitionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ CreatePartitionResponsePrivate::CreatePartitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue CreatePartitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue CreatePartition response element from \a xml.
  */
 void CreatePartitionResponsePrivate::parseCreatePartitionResponse(QXmlStreamReader &xml)
 {

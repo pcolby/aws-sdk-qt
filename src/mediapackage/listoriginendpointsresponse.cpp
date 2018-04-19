@@ -29,21 +29,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::ListOriginEndpointsResponse
- *
  * \brief The ListOriginEndpointsResponse class provides an interace for MediaPackage ListOriginEndpoints responses.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::listOriginEndpoints
  */
 
 /*!
- * @brief  Constructs a new ListOriginEndpointsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListOriginEndpointsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListOriginEndpointsResponse::ListOriginEndpointsResponse(
         const ListOriginEndpointsRequest &request,
@@ -55,6 +50,9 @@ ListOriginEndpointsResponse::ListOriginEndpointsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListOriginEndpointsRequest * ListOriginEndpointsResponse::request() const
 {
     Q_D(const ListOriginEndpointsResponse);
@@ -62,9 +60,8 @@ const ListOriginEndpointsRequest * ListOriginEndpointsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaPackage ListOriginEndpoints response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaPackage ListOriginEndpoints \a response.
  */
 void ListOriginEndpointsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListOriginEndpointsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaPackage::ListOriginEndpointsResponsePrivate
+ * \brief The ListOriginEndpointsResponsePrivate class provides private implementation for ListOriginEndpointsResponse.
  * \internal
  *
- * \class ListOriginEndpointsResponsePrivate
- *
- * \brief Private implementation for ListOriginEndpointsResponse.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOriginEndpointsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListOriginEndpointsResponse instance.
+ * Constructs a ListOriginEndpointsResponsePrivate object with public implementation \a q.
  */
 ListOriginEndpointsResponsePrivate::ListOriginEndpointsResponsePrivate(
     ListOriginEndpointsResponse * const q) : MediaPackageResponsePrivate(q)
@@ -95,9 +88,7 @@ ListOriginEndpointsResponsePrivate::ListOriginEndpointsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaPackage ListOriginEndpointsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaPackage ListOriginEndpoints response element from \a xml.
  */
 void ListOriginEndpointsResponsePrivate::parseListOriginEndpointsResponse(QXmlStreamReader &xml)
 {

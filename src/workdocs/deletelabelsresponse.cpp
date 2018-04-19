@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteLabelsResponse
- *
  * \brief The DeleteLabelsResponse class provides an interace for WorkDocs DeleteLabels responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteLabelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLabelsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLabelsResponse::DeleteLabelsResponse(
         const DeleteLabelsRequest &request,
@@ -84,6 +79,9 @@ DeleteLabelsResponse::DeleteLabelsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLabelsRequest * DeleteLabelsResponse::request() const
 {
     Q_D(const DeleteLabelsResponse);
@@ -91,9 +89,8 @@ const DeleteLabelsRequest * DeleteLabelsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs DeleteLabels response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DeleteLabels \a response.
  */
 void DeleteLabelsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteLabelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DeleteLabelsResponsePrivate
+ * \brief The DeleteLabelsResponsePrivate class provides private implementation for DeleteLabelsResponse.
  * \internal
  *
- * \class DeleteLabelsResponsePrivate
- *
- * \brief Private implementation for DeleteLabelsResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLabelsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLabelsResponse instance.
+ * Constructs a DeleteLabelsResponsePrivate object with public implementation \a q.
  */
 DeleteLabelsResponsePrivate::DeleteLabelsResponsePrivate(
     DeleteLabelsResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteLabelsResponsePrivate::DeleteLabelsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DeleteLabelsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DeleteLabels response element from \a xml.
  */
 void DeleteLabelsResponsePrivate::parseDeleteLabelsResponse(QXmlStreamReader &xml)
 {

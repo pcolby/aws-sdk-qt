@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * AddResourcePermissionsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a AddResourcePermissionsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a AddResourcePermissionsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 AddResourcePermissionsRequestPrivate::AddResourcePermissionsRequestPrivate(
     const WorkDocsRequest::Action action, AddResourcePermissionsRequest * const q)

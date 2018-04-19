@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * RestoreObjectRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a RestoreObjectRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a RestoreObjectRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 RestoreObjectRequestPrivate::RestoreObjectRequestPrivate(
     const S3Request::Action action, RestoreObjectRequest * const q)

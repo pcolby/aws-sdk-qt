@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::BuildSuggestersResponse
- *
  * \brief The BuildSuggestersResponse class provides an interace for CloudSearch BuildSuggesters responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new BuildSuggestersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BuildSuggestersResponse object for \a reply to \a request, with parent \a parent.
  */
 BuildSuggestersResponse::BuildSuggestersResponse(
         const BuildSuggestersRequest &request,
@@ -66,6 +61,9 @@ BuildSuggestersResponse::BuildSuggestersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BuildSuggestersRequest * BuildSuggestersResponse::request() const
 {
     Q_D(const BuildSuggestersResponse);
@@ -73,9 +71,8 @@ const BuildSuggestersRequest * BuildSuggestersResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch BuildSuggesters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch BuildSuggesters \a response.
  */
 void BuildSuggestersResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void BuildSuggestersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::BuildSuggestersResponsePrivate
+ * \brief The BuildSuggestersResponsePrivate class provides private implementation for BuildSuggestersResponse.
  * \internal
  *
- * \class BuildSuggestersResponsePrivate
- *
- * \brief Private implementation for BuildSuggestersResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BuildSuggestersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BuildSuggestersResponse instance.
+ * Constructs a BuildSuggestersResponsePrivate object with public implementation \a q.
  */
 BuildSuggestersResponsePrivate::BuildSuggestersResponsePrivate(
     BuildSuggestersResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ BuildSuggestersResponsePrivate::BuildSuggestersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch BuildSuggestersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch BuildSuggesters response element from \a xml.
  */
 void BuildSuggestersResponsePrivate::parseBuildSuggestersResponse(QXmlStreamReader &xml)
 {

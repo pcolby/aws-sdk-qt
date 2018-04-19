@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::ListObjectVersionsResponse
- *
  * \brief The ListObjectVersionsResponse class provides an interace for S3 ListObjectVersions responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::listObjectVersions
  */
 
 /*!
- * @brief  Constructs a new ListObjectVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListObjectVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListObjectVersionsResponse::ListObjectVersionsResponse(
         const ListObjectVersionsRequest &request,
@@ -55,6 +50,9 @@ ListObjectVersionsResponse::ListObjectVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListObjectVersionsRequest * ListObjectVersionsResponse::request() const
 {
     Q_D(const ListObjectVersionsResponse);
@@ -62,9 +60,8 @@ const ListObjectVersionsRequest * ListObjectVersionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 ListObjectVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 ListObjectVersions \a response.
  */
 void ListObjectVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListObjectVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::ListObjectVersionsResponsePrivate
+ * \brief The ListObjectVersionsResponsePrivate class provides private implementation for ListObjectVersionsResponse.
  * \internal
  *
- * \class ListObjectVersionsResponsePrivate
- *
- * \brief Private implementation for ListObjectVersionsResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListObjectVersionsResponse instance.
+ * Constructs a ListObjectVersionsResponsePrivate object with public implementation \a q.
  */
 ListObjectVersionsResponsePrivate::ListObjectVersionsResponsePrivate(
     ListObjectVersionsResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListObjectVersionsResponsePrivate::ListObjectVersionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 ListObjectVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 ListObjectVersions response element from \a xml.
  */
 void ListObjectVersionsResponsePrivate::parseListObjectVersionsResponse(QXmlStreamReader &xml)
 {

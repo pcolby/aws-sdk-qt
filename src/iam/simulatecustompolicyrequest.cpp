@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * SimulateCustomPolicyRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a SimulateCustomPolicyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a SimulateCustomPolicyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 SimulateCustomPolicyRequestPrivate::SimulateCustomPolicyRequestPrivate(
     const IAMRequest::Action action, SimulateCustomPolicyRequest * const q)

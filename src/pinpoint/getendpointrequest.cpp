@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetEndpointRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GetEndpointRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetEndpointRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetEndpointRequestPrivate::GetEndpointRequestPrivate(
     const PinpointRequest::Action action, GetEndpointRequest * const q)

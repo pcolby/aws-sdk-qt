@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DetachClassicLinkVpcResponse
- *
  * \brief The DetachClassicLinkVpcResponse class provides an interace for EC2 DetachClassicLinkVpc responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DetachClassicLinkVpcResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachClassicLinkVpcResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachClassicLinkVpcResponse::DetachClassicLinkVpcResponse(
         const DetachClassicLinkVpcRequest &request,
@@ -59,6 +54,9 @@ DetachClassicLinkVpcResponse::DetachClassicLinkVpcResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachClassicLinkVpcRequest * DetachClassicLinkVpcResponse::request() const
 {
     Q_D(const DetachClassicLinkVpcResponse);
@@ -66,9 +64,8 @@ const DetachClassicLinkVpcRequest * DetachClassicLinkVpcResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 DetachClassicLinkVpc response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DetachClassicLinkVpc \a response.
  */
 void DetachClassicLinkVpcResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DetachClassicLinkVpcResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DetachClassicLinkVpcResponsePrivate
+ * \brief The DetachClassicLinkVpcResponsePrivate class provides private implementation for DetachClassicLinkVpcResponse.
  * \internal
  *
- * \class DetachClassicLinkVpcResponsePrivate
- *
- * \brief Private implementation for DetachClassicLinkVpcResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachClassicLinkVpcResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachClassicLinkVpcResponse instance.
+ * Constructs a DetachClassicLinkVpcResponsePrivate object with public implementation \a q.
  */
 DetachClassicLinkVpcResponsePrivate::DetachClassicLinkVpcResponsePrivate(
     DetachClassicLinkVpcResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DetachClassicLinkVpcResponsePrivate::DetachClassicLinkVpcResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DetachClassicLinkVpcResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DetachClassicLinkVpc response element from \a xml.
  */
 void DetachClassicLinkVpcResponsePrivate::parseDetachClassicLinkVpcResponse(QXmlStreamReader &xml)
 {

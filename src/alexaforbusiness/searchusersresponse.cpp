@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SearchUsersResponse
- *
  * \brief The SearchUsersResponse class provides an interace for AlexaForBusiness SearchUsers responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SearchUsersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SearchUsersResponse object for \a reply to \a request, with parent \a parent.
  */
 SearchUsersResponse::SearchUsersResponse(
         const SearchUsersRequest &request,
@@ -60,6 +55,9 @@ SearchUsersResponse::SearchUsersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SearchUsersRequest * SearchUsersResponse::request() const
 {
     Q_D(const SearchUsersResponse);
@@ -67,9 +65,8 @@ const SearchUsersRequest * SearchUsersResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness SearchUsers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness SearchUsers \a response.
  */
 void SearchUsersResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void SearchUsersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::SearchUsersResponsePrivate
+ * \brief The SearchUsersResponsePrivate class provides private implementation for SearchUsersResponse.
  * \internal
  *
- * \class SearchUsersResponsePrivate
- *
- * \brief Private implementation for SearchUsersResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchUsersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SearchUsersResponse instance.
+ * Constructs a SearchUsersResponsePrivate object with public implementation \a q.
  */
 SearchUsersResponsePrivate::SearchUsersResponsePrivate(
     SearchUsersResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ SearchUsersResponsePrivate::SearchUsersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness SearchUsersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness SearchUsers response element from \a xml.
  */
 void SearchUsersResponsePrivate::parseSearchUsersResponse(QXmlStreamReader &xml)
 {

@@ -28,16 +28,13 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::CodeCommitResponse
- *
  * \brief The CodeCommitResponse class provides an interface for CodeCommit responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @brief  Constructs a new CodeCommitResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CodeCommitResponse object with parent \a parent.
  */
 CodeCommitResponse::CodeCommitResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CodeCommitResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CodeCommitResponse::CodeCommitResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeCommitResponse object.
- *
+ * \internal
+ * Constructs a CodeCommitResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeCommitResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CodeCommitResponse::CodeCommitResponse(CodeCommitResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CodeCommitResponse::CodeCommitResponse(CodeCommitResponsePrivate * const d, QObj
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CodeCommitResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CodeCommitResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeCommit::CodeCommitResponsePrivate
+ * \brief The CodeCommitResponsePrivate class provides private implementation for CodeCommitResponse.
+ * \internal
  *
- * @class  CodeCommitResponsePrivate
- *
- * @brief  Private implementation for CodeCommitResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeCommitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CodeCommitResponse instance.
+ * Constructs a CodeCommitResponsePrivate object with public implementation \a q.
  */
 CodeCommitResponsePrivate::CodeCommitResponsePrivate(
     CodeCommitResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

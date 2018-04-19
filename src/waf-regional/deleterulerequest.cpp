@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRuleRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteRuleRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRuleRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteRuleRequest * const q)

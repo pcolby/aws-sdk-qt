@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::AddAttributesToFindingsResponse
- *
  * \brief The AddAttributesToFindingsResponse class provides an interace for Inspector AddAttributesToFindings responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new AddAttributesToFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddAttributesToFindingsResponse object for \a reply to \a request, with parent \a parent.
  */
 AddAttributesToFindingsResponse::AddAttributesToFindingsResponse(
         const AddAttributesToFindingsRequest &request,
@@ -60,6 +55,9 @@ AddAttributesToFindingsResponse::AddAttributesToFindingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddAttributesToFindingsRequest * AddAttributesToFindingsResponse::request() const
 {
     Q_D(const AddAttributesToFindingsResponse);
@@ -67,9 +65,8 @@ const AddAttributesToFindingsRequest * AddAttributesToFindingsResponse::request(
 }
 
 /*!
- * @brief  Parse a Inspector AddAttributesToFindings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector AddAttributesToFindings \a response.
  */
 void AddAttributesToFindingsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void AddAttributesToFindingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::AddAttributesToFindingsResponsePrivate
+ * \brief The AddAttributesToFindingsResponsePrivate class provides private implementation for AddAttributesToFindingsResponse.
  * \internal
  *
- * \class AddAttributesToFindingsResponsePrivate
- *
- * \brief Private implementation for AddAttributesToFindingsResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddAttributesToFindingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddAttributesToFindingsResponse instance.
+ * Constructs a AddAttributesToFindingsResponsePrivate object with public implementation \a q.
  */
 AddAttributesToFindingsResponsePrivate::AddAttributesToFindingsResponsePrivate(
     AddAttributesToFindingsResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ AddAttributesToFindingsResponsePrivate::AddAttributesToFindingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector AddAttributesToFindingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector AddAttributesToFindings response element from \a xml.
  */
 void AddAttributesToFindingsResponsePrivate::parseAddAttributesToFindingsResponse(QXmlStreamReader &xml)
 {

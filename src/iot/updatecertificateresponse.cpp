@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateCertificateResponse
- *
  * \brief The UpdateCertificateResponse class provides an interace for IoT UpdateCertificate responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateCertificateResponse::UpdateCertificateResponse(
         const UpdateCertificateRequest &request,
@@ -66,6 +61,9 @@ UpdateCertificateResponse::UpdateCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateCertificateRequest * UpdateCertificateResponse::request() const
 {
     Q_D(const UpdateCertificateResponse);
@@ -73,9 +71,8 @@ const UpdateCertificateRequest * UpdateCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT UpdateCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT UpdateCertificate \a response.
  */
 void UpdateCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::UpdateCertificateResponsePrivate
+ * \brief The UpdateCertificateResponsePrivate class provides private implementation for UpdateCertificateResponse.
  * \internal
  *
- * \class UpdateCertificateResponsePrivate
- *
- * \brief Private implementation for UpdateCertificateResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateCertificateResponse instance.
+ * Constructs a UpdateCertificateResponsePrivate object with public implementation \a q.
  */
 UpdateCertificateResponsePrivate::UpdateCertificateResponsePrivate(
     UpdateCertificateResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateCertificateResponsePrivate::UpdateCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT UpdateCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT UpdateCertificate response element from \a xml.
  */
 void UpdateCertificateResponsePrivate::parseUpdateCertificateResponse(QXmlStreamReader &xml)
 {

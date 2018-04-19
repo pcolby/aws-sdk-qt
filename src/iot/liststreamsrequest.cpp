@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListStreamsRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListStreamsRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
     const IoTRequest::Action action, ListStreamsRequest * const q)

@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::GetInstanceResponse
- *
  * \brief The GetInstanceResponse class provides an interace for ServiceDiscovery GetInstance responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInstanceResponse::GetInstanceResponse(
         const GetInstanceRequest &request,
@@ -59,6 +54,9 @@ GetInstanceResponse::GetInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInstanceRequest * GetInstanceResponse::request() const
 {
     Q_D(const GetInstanceResponse);
@@ -66,9 +64,8 @@ const GetInstanceRequest * GetInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery GetInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery GetInstance \a response.
  */
 void GetInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::GetInstanceResponsePrivate
+ * \brief The GetInstanceResponsePrivate class provides private implementation for GetInstanceResponse.
  * \internal
  *
- * \class GetInstanceResponsePrivate
- *
- * \brief Private implementation for GetInstanceResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInstanceResponse instance.
+ * Constructs a GetInstanceResponsePrivate object with public implementation \a q.
  */
 GetInstanceResponsePrivate::GetInstanceResponsePrivate(
     GetInstanceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ GetInstanceResponsePrivate::GetInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery GetInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery GetInstance response element from \a xml.
  */
 void GetInstanceResponsePrivate::parseGetInstanceResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::DeleteVaultAccessPolicyResponse
- *
  * \brief The DeleteVaultAccessPolicyResponse class provides an interace for Glacier DeleteVaultAccessPolicy responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new DeleteVaultAccessPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVaultAccessPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVaultAccessPolicyResponse::DeleteVaultAccessPolicyResponse(
         const DeleteVaultAccessPolicyRequest &request,
@@ -93,6 +88,9 @@ DeleteVaultAccessPolicyResponse::DeleteVaultAccessPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVaultAccessPolicyRequest * DeleteVaultAccessPolicyResponse::request() const
 {
     Q_D(const DeleteVaultAccessPolicyResponse);
@@ -100,9 +98,8 @@ const DeleteVaultAccessPolicyRequest * DeleteVaultAccessPolicyResponse::request(
 }
 
 /*!
- * @brief  Parse a Glacier DeleteVaultAccessPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier DeleteVaultAccessPolicy \a response.
  */
 void DeleteVaultAccessPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DeleteVaultAccessPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::DeleteVaultAccessPolicyResponsePrivate
+ * \brief The DeleteVaultAccessPolicyResponsePrivate class provides private implementation for DeleteVaultAccessPolicyResponse.
  * \internal
  *
- * \class DeleteVaultAccessPolicyResponsePrivate
- *
- * \brief Private implementation for DeleteVaultAccessPolicyResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVaultAccessPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVaultAccessPolicyResponse instance.
+ * Constructs a DeleteVaultAccessPolicyResponsePrivate object with public implementation \a q.
  */
 DeleteVaultAccessPolicyResponsePrivate::DeleteVaultAccessPolicyResponsePrivate(
     DeleteVaultAccessPolicyResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ DeleteVaultAccessPolicyResponsePrivate::DeleteVaultAccessPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier DeleteVaultAccessPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier DeleteVaultAccessPolicy response element from \a xml.
  */
 void DeleteVaultAccessPolicyResponsePrivate::parseDeleteVaultAccessPolicyResponse(QXmlStreamReader &xml)
 {

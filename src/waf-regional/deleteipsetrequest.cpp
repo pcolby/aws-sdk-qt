@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteIPSetRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a DeleteIPSetRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
     const WAFRegionalRequest::Action action, DeleteIPSetRequest * const q)

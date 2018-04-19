@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a CreateConfigurationRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a CreateConfigurationRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 CreateConfigurationRequestPrivate::CreateConfigurationRequestPrivate(
     const MQRequest::Action action, CreateConfigurationRequest * const q)

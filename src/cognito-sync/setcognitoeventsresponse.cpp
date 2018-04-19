@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::SetCognitoEventsResponse
- *
  * \brief The SetCognitoEventsResponse class provides an interace for CognitoSync SetCognitoEvents responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new SetCognitoEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetCognitoEventsResponse object for \a reply to \a request, with parent \a parent.
  */
 SetCognitoEventsResponse::SetCognitoEventsResponse(
         const SetCognitoEventsRequest &request,
@@ -75,6 +70,9 @@ SetCognitoEventsResponse::SetCognitoEventsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetCognitoEventsRequest * SetCognitoEventsResponse::request() const
 {
     Q_D(const SetCognitoEventsResponse);
@@ -82,9 +80,8 @@ const SetCognitoEventsRequest * SetCognitoEventsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoSync SetCognitoEvents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync SetCognitoEvents \a response.
  */
 void SetCognitoEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void SetCognitoEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::SetCognitoEventsResponsePrivate
+ * \brief The SetCognitoEventsResponsePrivate class provides private implementation for SetCognitoEventsResponse.
  * \internal
  *
- * \class SetCognitoEventsResponsePrivate
- *
- * \brief Private implementation for SetCognitoEventsResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetCognitoEventsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetCognitoEventsResponse instance.
+ * Constructs a SetCognitoEventsResponsePrivate object with public implementation \a q.
  */
 SetCognitoEventsResponsePrivate::SetCognitoEventsResponsePrivate(
     SetCognitoEventsResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ SetCognitoEventsResponsePrivate::SetCognitoEventsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync SetCognitoEventsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync SetCognitoEvents response element from \a xml.
  */
 void SetCognitoEventsResponsePrivate::parseSetCognitoEventsResponse(QXmlStreamReader &xml)
 {

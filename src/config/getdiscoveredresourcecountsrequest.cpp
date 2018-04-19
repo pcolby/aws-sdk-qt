@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * GetDiscoveredResourceCountsRequest::response(
  */
 
 /*!
- *
- * Constructs a GetDiscoveredResourceCountsRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a GetDiscoveredResourceCountsRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 GetDiscoveredResourceCountsRequestPrivate::GetDiscoveredResourceCountsRequestPrivate(
     const ConfigServiceRequest::Action action, GetDiscoveredResourceCountsRequest * const q)

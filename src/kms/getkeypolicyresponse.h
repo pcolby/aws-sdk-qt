@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetKeyPolicyResponse : public KMSResponse {
 public:
     GetKeyPolicyResponse(const GetKeyPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetKeyPolicyRequest * request() const;
+    virtual const GetKeyPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetKeyPolicyResponse)

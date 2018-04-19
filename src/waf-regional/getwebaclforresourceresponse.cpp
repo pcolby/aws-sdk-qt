@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetWebACLForResourceResponse
- *
  * \brief The GetWebACLForResourceResponse class provides an interace for WAFRegional GetWebACLForResource responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetWebACLForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetWebACLForResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetWebACLForResourceResponse::GetWebACLForResourceResponse(
         const GetWebACLForResourceRequest &request,
@@ -62,6 +57,9 @@ GetWebACLForResourceResponse::GetWebACLForResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetWebACLForResourceRequest * GetWebACLForResourceResponse::request() const
 {
     Q_D(const GetWebACLForResourceResponse);
@@ -69,9 +67,8 @@ const GetWebACLForResourceRequest * GetWebACLForResourceResponse::request() cons
 }
 
 /*!
- * @brief  Parse a WAFRegional GetWebACLForResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional GetWebACLForResource \a response.
  */
 void GetWebACLForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetWebACLForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::GetWebACLForResourceResponsePrivate
+ * \brief The GetWebACLForResourceResponsePrivate class provides private implementation for GetWebACLForResourceResponse.
  * \internal
  *
- * \class GetWebACLForResourceResponsePrivate
- *
- * \brief Private implementation for GetWebACLForResourceResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetWebACLForResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetWebACLForResourceResponse instance.
+ * Constructs a GetWebACLForResourceResponsePrivate object with public implementation \a q.
  */
 GetWebACLForResourceResponsePrivate::GetWebACLForResourceResponsePrivate(
     GetWebACLForResourceResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ GetWebACLForResourceResponsePrivate::GetWebACLForResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional GetWebACLForResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional GetWebACLForResource response element from \a xml.
  */
 void GetWebACLForResourceResponsePrivate::parseGetWebACLForResourceResponse(QXmlStreamReader &xml)
 {

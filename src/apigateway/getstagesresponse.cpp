@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetStagesResponse
- *
  * \brief The GetStagesResponse class provides an interace for APIGateway GetStages responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetStagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetStagesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetStagesResponse::GetStagesResponse(
         const GetStagesRequest &request,
@@ -60,6 +55,9 @@ GetStagesResponse::GetStagesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetStagesRequest * GetStagesResponse::request() const
 {
     Q_D(const GetStagesResponse);
@@ -67,9 +65,8 @@ const GetStagesRequest * GetStagesResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetStages response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetStages \a response.
  */
 void GetStagesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetStagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetStagesResponsePrivate
+ * \brief The GetStagesResponsePrivate class provides private implementation for GetStagesResponse.
  * \internal
  *
- * \class GetStagesResponsePrivate
- *
- * \brief Private implementation for GetStagesResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetStagesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetStagesResponse instance.
+ * Constructs a GetStagesResponsePrivate object with public implementation \a q.
  */
 GetStagesResponsePrivate::GetStagesResponsePrivate(
     GetStagesResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetStagesResponsePrivate::GetStagesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetStagesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetStages response element from \a xml.
  */
 void GetStagesResponsePrivate::parseGetStagesResponse(QXmlStreamReader &xml)
 {

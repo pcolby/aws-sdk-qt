@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * AssociateConnectionWithLagRequest::response(Q
  */
 
 /*!
- *
- * Constructs a AssociateConnectionWithLagRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a AssociateConnectionWithLagRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 AssociateConnectionWithLagRequestPrivate::AssociateConnectionWithLagRequestPrivate(
     const DirectConnectRequest::Action action, AssociateConnectionWithLagRequest * const q)

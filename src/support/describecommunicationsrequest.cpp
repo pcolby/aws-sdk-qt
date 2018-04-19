@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCommunicationsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeCommunicationsRequestPrivate object for Support \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCommunicationsRequestPrivate object for Support \a action,
+ * with public implementation \a q.
  */
 DescribeCommunicationsRequestPrivate::DescribeCommunicationsRequestPrivate(
     const SupportRequest::Action action, DescribeCommunicationsRequest * const q)

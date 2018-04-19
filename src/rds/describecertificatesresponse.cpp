@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeCertificatesResponse
- *
  * \brief The DescribeCertificatesResponse class provides an interace for RDS DescribeCertificates responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCertificatesResponse::DescribeCertificatesResponse(
         const DescribeCertificatesRequest &request,
@@ -119,6 +114,9 @@ DescribeCertificatesResponse::DescribeCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCertificatesRequest * DescribeCertificatesResponse::request() const
 {
     Q_D(const DescribeCertificatesResponse);
@@ -126,9 +124,8 @@ const DescribeCertificatesRequest * DescribeCertificatesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a RDS DescribeCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeCertificates \a response.
  */
 void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeCertificatesResponsePrivate
+ * \brief The DescribeCertificatesResponsePrivate class provides private implementation for DescribeCertificatesResponse.
  * \internal
  *
- * \class DescribeCertificatesResponsePrivate
- *
- * \brief Private implementation for DescribeCertificatesResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCertificatesResponse instance.
+ * Constructs a DescribeCertificatesResponsePrivate object with public implementation \a q.
  */
 DescribeCertificatesResponsePrivate::DescribeCertificatesResponsePrivate(
     DescribeCertificatesResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeCertificatesResponsePrivate::DescribeCertificatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DescribeCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeCertificates response element from \a xml.
  */
 void DescribeCertificatesResponsePrivate::parseDescribeCertificatesResponse(QXmlStreamReader &xml)
 {

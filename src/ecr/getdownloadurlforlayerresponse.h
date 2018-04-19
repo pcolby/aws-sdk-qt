@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDownloadUrlForLayerResponse : public ECRResponse {
 public:
     GetDownloadUrlForLayerResponse(const GetDownloadUrlForLayerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDownloadUrlForLayerRequest * request() const;
+    virtual const GetDownloadUrlForLayerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDownloadUrlForLayerResponse)

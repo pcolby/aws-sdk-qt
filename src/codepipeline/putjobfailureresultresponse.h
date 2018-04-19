@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutJobFailureResultResponse : public CodePipelineResponse {
 public:
     PutJobFailureResultResponse(const PutJobFailureResultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutJobFailureResultRequest * request() const;
+    virtual const PutJobFailureResultRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutJobFailureResultResponse)

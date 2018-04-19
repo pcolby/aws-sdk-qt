@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ChangePasswordResponse
- *
  * \brief The ChangePasswordResponse class provides an interace for IAM ChangePassword responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ChangePasswordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ChangePasswordResponse object for \a reply to \a request, with parent \a parent.
  */
 ChangePasswordResponse::ChangePasswordResponse(
         const ChangePasswordRequest &request,
@@ -120,6 +115,9 @@ ChangePasswordResponse::ChangePasswordResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ChangePasswordRequest * ChangePasswordResponse::request() const
 {
     Q_D(const ChangePasswordResponse);
@@ -127,9 +125,8 @@ const ChangePasswordRequest * ChangePasswordResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM ChangePassword response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ChangePassword \a response.
  */
 void ChangePasswordResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ChangePasswordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ChangePasswordResponsePrivate
+ * \brief The ChangePasswordResponsePrivate class provides private implementation for ChangePasswordResponse.
  * \internal
  *
- * \class ChangePasswordResponsePrivate
- *
- * \brief Private implementation for ChangePasswordResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ChangePasswordResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ChangePasswordResponse instance.
+ * Constructs a ChangePasswordResponsePrivate object with public implementation \a q.
  */
 ChangePasswordResponsePrivate::ChangePasswordResponsePrivate(
     ChangePasswordResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ChangePasswordResponsePrivate::ChangePasswordResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ChangePasswordResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ChangePassword response element from \a xml.
  */
 void ChangePasswordResponsePrivate::parseChangePasswordResponse(QXmlStreamReader &xml)
 {

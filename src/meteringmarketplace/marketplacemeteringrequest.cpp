@@ -42,7 +42,7 @@ namespace MarketplaceMetering {
  */
 
 /*!
- * Constructs a[n] MarketplaceMeteringRequest object for MarketplaceMetering \a action.
+ * Constructs a MarketplaceMeteringRequest object for MarketplaceMetering \a action.
  */
 MarketplaceMeteringRequest::MarketplaceMeteringRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MarketplaceMeteringRequestPrivate(action, this))
@@ -242,8 +242,8 @@ QNetworkRequest MarketplaceMeteringRequest::unsignedRequest(const QUrl &endpoint
  */
 
 /*!
- * Constructs a MarketplaceMeteringRequestPrivate object for MarketplaceMetering \a action with,
- * public implementation \a q.
+ * Constructs a MarketplaceMeteringRequestPrivate object for MarketplaceMetering \a action,
+ * with public implementation \a q.
  */
 MarketplaceMeteringRequestPrivate::MarketplaceMeteringRequestPrivate(const MarketplaceMeteringRequest::Action action, MarketplaceMeteringRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

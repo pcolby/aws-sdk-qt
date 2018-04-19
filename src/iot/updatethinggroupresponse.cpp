@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateThingGroupResponse
- *
  * \brief The UpdateThingGroupResponse class provides an interace for IoT UpdateThingGroup responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateThingGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateThingGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateThingGroupResponse::UpdateThingGroupResponse(
         const UpdateThingGroupRequest &request,
@@ -66,6 +61,9 @@ UpdateThingGroupResponse::UpdateThingGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateThingGroupRequest * UpdateThingGroupResponse::request() const
 {
     Q_D(const UpdateThingGroupResponse);
@@ -73,9 +71,8 @@ const UpdateThingGroupRequest * UpdateThingGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT UpdateThingGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT UpdateThingGroup \a response.
  */
 void UpdateThingGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateThingGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::UpdateThingGroupResponsePrivate
+ * \brief The UpdateThingGroupResponsePrivate class provides private implementation for UpdateThingGroupResponse.
  * \internal
  *
- * \class UpdateThingGroupResponsePrivate
- *
- * \brief Private implementation for UpdateThingGroupResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateThingGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateThingGroupResponse instance.
+ * Constructs a UpdateThingGroupResponsePrivate object with public implementation \a q.
  */
 UpdateThingGroupResponsePrivate::UpdateThingGroupResponsePrivate(
     UpdateThingGroupResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateThingGroupResponsePrivate::UpdateThingGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT UpdateThingGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT UpdateThingGroup response element from \a xml.
  */
 void UpdateThingGroupResponsePrivate::parseUpdateThingGroupResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DescribeSubscriptionFiltersResponse
- *
  * \brief The DescribeSubscriptionFiltersResponse class provides an interace for CloudWatchLogs DescribeSubscriptionFilters responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DescribeSubscriptionFiltersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSubscriptionFiltersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSubscriptionFiltersResponse::DescribeSubscriptionFiltersResponse(
         const DescribeSubscriptionFiltersRequest &request,
@@ -84,6 +79,9 @@ DescribeSubscriptionFiltersResponse::DescribeSubscriptionFiltersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSubscriptionFiltersRequest * DescribeSubscriptionFiltersResponse::request() const
 {
     Q_D(const DescribeSubscriptionFiltersResponse);
@@ -91,9 +89,8 @@ const DescribeSubscriptionFiltersRequest * DescribeSubscriptionFiltersResponse::
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DescribeSubscriptionFilters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DescribeSubscriptionFilters \a response.
  */
 void DescribeSubscriptionFiltersResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeSubscriptionFiltersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DescribeSubscriptionFiltersResponsePrivate
+ * \brief The DescribeSubscriptionFiltersResponsePrivate class provides private implementation for DescribeSubscriptionFiltersResponse.
  * \internal
  *
- * \class DescribeSubscriptionFiltersResponsePrivate
- *
- * \brief Private implementation for DescribeSubscriptionFiltersResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSubscriptionFiltersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSubscriptionFiltersResponse instance.
+ * Constructs a DescribeSubscriptionFiltersResponsePrivate object with public implementation \a q.
  */
 DescribeSubscriptionFiltersResponsePrivate::DescribeSubscriptionFiltersResponsePrivate(
     DescribeSubscriptionFiltersResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeSubscriptionFiltersResponsePrivate::DescribeSubscriptionFiltersResponseP
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DescribeSubscriptionFiltersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DescribeSubscriptionFilters response element from \a xml.
  */
 void DescribeSubscriptionFiltersResponsePrivate::parseDescribeSubscriptionFiltersResponse(QXmlStreamReader &xml)
 {

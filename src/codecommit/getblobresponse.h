@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetBlobResponse : public CodeCommitResponse {
 public:
     GetBlobResponse(const GetBlobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetBlobRequest * request() const;
+    virtual const GetBlobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetBlobResponse)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListDistributionsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListDistributionsRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a ListDistributionsRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 ListDistributionsRequestPrivate::ListDistributionsRequestPrivate(
     const CloudFrontRequest::Action action, ListDistributionsRequest * const q)

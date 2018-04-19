@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateTerminationProtectionResponse : public CloudFormationRe
 public:
     UpdateTerminationProtectionResponse(const UpdateTerminationProtectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateTerminationProtectionRequest * request() const;
+    virtual const UpdateTerminationProtectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateTerminationProtectionResponse)

@@ -29,10 +29,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::DescribeWorkspacesResponse
- *
  * \brief The DescribeWorkspacesResponse class provides an interace for WorkSpaces DescribeWorkspaces responses.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new DescribeWorkspacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeWorkspacesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeWorkspacesResponse::DescribeWorkspacesResponse(
         const DescribeWorkspacesRequest &request,
@@ -58,6 +53,9 @@ DescribeWorkspacesResponse::DescribeWorkspacesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeWorkspacesRequest * DescribeWorkspacesResponse::request() const
 {
     Q_D(const DescribeWorkspacesResponse);
@@ -65,9 +63,8 @@ const DescribeWorkspacesRequest * DescribeWorkspacesResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkSpaces DescribeWorkspaces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkSpaces DescribeWorkspaces \a response.
  */
 void DescribeWorkspacesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeWorkspacesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkSpaces::DescribeWorkspacesResponsePrivate
+ * \brief The DescribeWorkspacesResponsePrivate class provides private implementation for DescribeWorkspacesResponse.
  * \internal
  *
- * \class DescribeWorkspacesResponsePrivate
- *
- * \brief Private implementation for DescribeWorkspacesResponse.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeWorkspacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeWorkspacesResponse instance.
+ * Constructs a DescribeWorkspacesResponsePrivate object with public implementation \a q.
  */
 DescribeWorkspacesResponsePrivate::DescribeWorkspacesResponsePrivate(
     DescribeWorkspacesResponse * const q) : WorkSpacesResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeWorkspacesResponsePrivate::DescribeWorkspacesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkSpaces DescribeWorkspacesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkSpaces DescribeWorkspaces response element from \a xml.
  */
 void DescribeWorkspacesResponsePrivate::parseDescribeWorkspacesResponse(QXmlStreamReader &xml)
 {

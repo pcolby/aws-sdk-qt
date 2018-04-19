@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateAssessmentTemplateRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateAssessmentTemplateRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a CreateAssessmentTemplateRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 CreateAssessmentTemplateRequestPrivate::CreateAssessmentTemplateRequestPrivate(
     const InspectorRequest::Action action, CreateAssessmentTemplateRequest * const q)

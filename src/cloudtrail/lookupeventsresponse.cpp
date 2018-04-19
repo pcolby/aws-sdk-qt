@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::LookupEventsResponse
- *
  * \brief The LookupEventsResponse class provides an interace for CloudTrail LookupEvents responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new LookupEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a LookupEventsResponse object for \a reply to \a request, with parent \a parent.
  */
 LookupEventsResponse::LookupEventsResponse(
         const LookupEventsRequest &request,
@@ -78,6 +73,9 @@ LookupEventsResponse::LookupEventsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const LookupEventsRequest * LookupEventsResponse::request() const
 {
     Q_D(const LookupEventsResponse);
@@ -85,9 +83,8 @@ const LookupEventsRequest * LookupEventsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail LookupEvents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail LookupEvents \a response.
  */
 void LookupEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void LookupEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::LookupEventsResponsePrivate
+ * \brief The LookupEventsResponsePrivate class provides private implementation for LookupEventsResponse.
  * \internal
  *
- * \class LookupEventsResponsePrivate
- *
- * \brief Private implementation for LookupEventsResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LookupEventsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public LookupEventsResponse instance.
+ * Constructs a LookupEventsResponsePrivate object with public implementation \a q.
  */
 LookupEventsResponsePrivate::LookupEventsResponsePrivate(
     LookupEventsResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ LookupEventsResponsePrivate::LookupEventsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail LookupEventsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail LookupEvents response element from \a xml.
  */
 void LookupEventsResponsePrivate::parseLookupEventsResponse(QXmlStreamReader &xml)
 {

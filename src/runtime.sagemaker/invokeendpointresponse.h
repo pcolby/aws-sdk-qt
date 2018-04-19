@@ -34,10 +34,10 @@ class QTAWS_EXPORT InvokeEndpointResponse : public SageMakerRuntimeResponse {
 public:
     InvokeEndpointResponse(const InvokeEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const InvokeEndpointRequest * request() const;
+    virtual const InvokeEndpointRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(InvokeEndpointResponse)

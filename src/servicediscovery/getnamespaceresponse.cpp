@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::GetNamespaceResponse
- *
  * \brief The GetNamespaceResponse class provides an interace for ServiceDiscovery GetNamespace responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new GetNamespaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetNamespaceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetNamespaceResponse::GetNamespaceResponse(
         const GetNamespaceRequest &request,
@@ -59,6 +54,9 @@ GetNamespaceResponse::GetNamespaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetNamespaceRequest * GetNamespaceResponse::request() const
 {
     Q_D(const GetNamespaceResponse);
@@ -66,9 +64,8 @@ const GetNamespaceRequest * GetNamespaceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery GetNamespace response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery GetNamespace \a response.
  */
 void GetNamespaceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetNamespaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::GetNamespaceResponsePrivate
+ * \brief The GetNamespaceResponsePrivate class provides private implementation for GetNamespaceResponse.
  * \internal
  *
- * \class GetNamespaceResponsePrivate
- *
- * \brief Private implementation for GetNamespaceResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetNamespaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetNamespaceResponse instance.
+ * Constructs a GetNamespaceResponsePrivate object with public implementation \a q.
  */
 GetNamespaceResponsePrivate::GetNamespaceResponsePrivate(
     GetNamespaceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ GetNamespaceResponsePrivate::GetNamespaceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery GetNamespaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery GetNamespace response element from \a xml.
  */
 void GetNamespaceResponsePrivate::parseGetNamespaceResponse(QXmlStreamReader &xml)
 {

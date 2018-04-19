@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StopWorkspacesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a StopWorkspacesRequestPrivate object for WorkSpaces \a action with,
- * public implementation \a q.
+ * Constructs a StopWorkspacesRequestPrivate object for WorkSpaces \a action,
+ * with public implementation \a q.
  */
 StopWorkspacesRequestPrivate::StopWorkspacesRequestPrivate(
     const WorkSpacesRequest::Action action, StopWorkspacesRequest * const q)

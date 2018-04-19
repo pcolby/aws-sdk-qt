@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterInstanceRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeregisterInstanceRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterInstanceRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, DeregisterInstanceRequest * const q)

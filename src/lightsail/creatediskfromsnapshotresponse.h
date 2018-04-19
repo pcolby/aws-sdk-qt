@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDiskFromSnapshotResponse : public LightsailResponse {
 public:
     CreateDiskFromSnapshotResponse(const CreateDiskFromSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDiskFromSnapshotRequest * request() const;
+    virtual const CreateDiskFromSnapshotRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDiskFromSnapshotResponse)

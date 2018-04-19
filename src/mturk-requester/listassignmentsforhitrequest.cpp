@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListAssignmentsForHITRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListAssignmentsForHITRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a ListAssignmentsForHITRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 ListAssignmentsForHITRequestPrivate::ListAssignmentsForHITRequestPrivate(
     const MTurkRequest::Action action, ListAssignmentsForHITRequest * const q)

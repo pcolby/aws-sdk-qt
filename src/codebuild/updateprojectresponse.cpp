@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::UpdateProjectResponse
- *
  * \brief The UpdateProjectResponse class provides an interace for CodeBuild UpdateProject responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new UpdateProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateProjectResponse::UpdateProjectResponse(
         const UpdateProjectRequest &request,
@@ -135,6 +130,9 @@ UpdateProjectResponse::UpdateProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateProjectRequest * UpdateProjectResponse::request() const
 {
     Q_D(const UpdateProjectResponse);
@@ -142,9 +140,8 @@ const UpdateProjectRequest * UpdateProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeBuild UpdateProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild UpdateProject \a response.
  */
 void UpdateProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void UpdateProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::UpdateProjectResponsePrivate
+ * \brief The UpdateProjectResponsePrivate class provides private implementation for UpdateProjectResponse.
  * \internal
  *
- * \class UpdateProjectResponsePrivate
- *
- * \brief Private implementation for UpdateProjectResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateProjectResponse instance.
+ * Constructs a UpdateProjectResponsePrivate object with public implementation \a q.
  */
 UpdateProjectResponsePrivate::UpdateProjectResponsePrivate(
     UpdateProjectResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ UpdateProjectResponsePrivate::UpdateProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeBuild UpdateProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild UpdateProject response element from \a xml.
  */
 void UpdateProjectResponsePrivate::parseUpdateProjectResponse(QXmlStreamReader &xml)
 {

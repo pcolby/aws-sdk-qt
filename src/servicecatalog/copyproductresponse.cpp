@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CopyProductResponse
- *
  * \brief The CopyProductResponse class provides an interace for ServiceCatalog CopyProduct responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CopyProductResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopyProductResponse object for \a reply to \a request, with parent \a parent.
  */
 CopyProductResponse::CopyProductResponse(
         const CopyProductRequest &request,
@@ -61,6 +56,9 @@ CopyProductResponse::CopyProductResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopyProductRequest * CopyProductResponse::request() const
 {
     Q_D(const CopyProductResponse);
@@ -68,9 +66,8 @@ const CopyProductRequest * CopyProductResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog CopyProduct response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog CopyProduct \a response.
  */
 void CopyProductResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CopyProductResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::CopyProductResponsePrivate
+ * \brief The CopyProductResponsePrivate class provides private implementation for CopyProductResponse.
  * \internal
  *
- * \class CopyProductResponsePrivate
- *
- * \brief Private implementation for CopyProductResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyProductResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopyProductResponse instance.
+ * Constructs a CopyProductResponsePrivate object with public implementation \a q.
  */
 CopyProductResponsePrivate::CopyProductResponsePrivate(
     CopyProductResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ CopyProductResponsePrivate::CopyProductResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog CopyProductResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog CopyProduct response element from \a xml.
  */
 void CopyProductResponsePrivate::parseCopyProductResponse(QXmlStreamReader &xml)
 {

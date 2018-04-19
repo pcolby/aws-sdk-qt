@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * CreateRuleRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CreateRuleRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a CreateRuleRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 CreateRuleRequestPrivate::CreateRuleRequestPrivate(
     const WAFRegionalRequest::Action action, CreateRuleRequest * const q)

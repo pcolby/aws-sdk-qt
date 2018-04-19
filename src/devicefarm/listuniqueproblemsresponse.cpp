@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListUniqueProblemsResponse
- *
  * \brief The ListUniqueProblemsResponse class provides an interace for DeviceFarm ListUniqueProblems responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListUniqueProblemsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListUniqueProblemsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListUniqueProblemsResponse::ListUniqueProblemsResponse(
         const ListUniqueProblemsRequest &request,
@@ -57,6 +52,9 @@ ListUniqueProblemsResponse::ListUniqueProblemsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListUniqueProblemsRequest * ListUniqueProblemsResponse::request() const
 {
     Q_D(const ListUniqueProblemsResponse);
@@ -64,9 +62,8 @@ const ListUniqueProblemsRequest * ListUniqueProblemsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm ListUniqueProblems response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm ListUniqueProblems \a response.
  */
 void ListUniqueProblemsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListUniqueProblemsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::ListUniqueProblemsResponsePrivate
+ * \brief The ListUniqueProblemsResponsePrivate class provides private implementation for ListUniqueProblemsResponse.
  * \internal
  *
- * \class ListUniqueProblemsResponsePrivate
- *
- * \brief Private implementation for ListUniqueProblemsResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUniqueProblemsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListUniqueProblemsResponse instance.
+ * Constructs a ListUniqueProblemsResponsePrivate object with public implementation \a q.
  */
 ListUniqueProblemsResponsePrivate::ListUniqueProblemsResponsePrivate(
     ListUniqueProblemsResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ ListUniqueProblemsResponsePrivate::ListUniqueProblemsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm ListUniqueProblemsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm ListUniqueProblems response element from \a xml.
  */
 void ListUniqueProblemsResponsePrivate::parseListUniqueProblemsResponse(QXmlStreamReader &xml)
 {

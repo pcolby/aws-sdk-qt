@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateHostedConnectionResponse : public DirectConnectRespo
 public:
     AssociateHostedConnectionResponse(const AssociateHostedConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateHostedConnectionRequest * request() const;
+    virtual const AssociateHostedConnectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateHostedConnectionResponse)

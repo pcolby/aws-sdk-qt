@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBasePathMappingResponse : public APIGatewayResponse {
 public:
     DeleteBasePathMappingResponse(const DeleteBasePathMappingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBasePathMappingRequest * request() const;
+    virtual const DeleteBasePathMappingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBasePathMappingResponse)

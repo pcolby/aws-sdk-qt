@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::CreateExportTaskResponse
- *
  * \brief The CreateExportTaskResponse class provides an interace for CloudWatchLogs CreateExportTask responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new CreateExportTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateExportTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateExportTaskResponse::CreateExportTaskResponse(
         const CreateExportTaskRequest &request,
@@ -84,6 +79,9 @@ CreateExportTaskResponse::CreateExportTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateExportTaskRequest * CreateExportTaskResponse::request() const
 {
     Q_D(const CreateExportTaskResponse);
@@ -91,9 +89,8 @@ const CreateExportTaskRequest * CreateExportTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs CreateExportTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs CreateExportTask \a response.
  */
 void CreateExportTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void CreateExportTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::CreateExportTaskResponsePrivate
+ * \brief The CreateExportTaskResponsePrivate class provides private implementation for CreateExportTaskResponse.
  * \internal
  *
- * \class CreateExportTaskResponsePrivate
- *
- * \brief Private implementation for CreateExportTaskResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateExportTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateExportTaskResponse instance.
+ * Constructs a CreateExportTaskResponsePrivate object with public implementation \a q.
  */
 CreateExportTaskResponsePrivate::CreateExportTaskResponsePrivate(
     CreateExportTaskResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ CreateExportTaskResponsePrivate::CreateExportTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs CreateExportTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs CreateExportTask response element from \a xml.
  */
 void CreateExportTaskResponsePrivate::parseCreateExportTaskResponse(QXmlStreamReader &xml)
 {

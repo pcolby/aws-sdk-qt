@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListThingRegistrationTaskReportsRequest::resp
  */
 
 /*!
- *
- * Constructs a ListThingRegistrationTaskReportsRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListThingRegistrationTaskReportsRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListThingRegistrationTaskReportsRequestPrivate::ListThingRegistrationTaskReportsRequestPrivate(
     const IoTRequest::Action action, ListThingRegistrationTaskReportsRequest * const q)

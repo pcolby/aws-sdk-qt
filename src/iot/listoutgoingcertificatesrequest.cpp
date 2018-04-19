@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListOutgoingCertificatesRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ListOutgoingCertificatesRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListOutgoingCertificatesRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListOutgoingCertificatesRequestPrivate::ListOutgoingCertificatesRequestPrivate(
     const IoTRequest::Action action, ListOutgoingCertificatesRequest * const q)

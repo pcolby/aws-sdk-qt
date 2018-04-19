@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::ListStateMachinesResponse
- *
  * \brief The ListStateMachinesResponse class provides an interace for SFN ListStateMachines responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new ListStateMachinesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListStateMachinesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListStateMachinesResponse::ListStateMachinesResponse(
         const ListStateMachinesRequest &request,
@@ -74,6 +69,9 @@ ListStateMachinesResponse::ListStateMachinesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListStateMachinesRequest * ListStateMachinesResponse::request() const
 {
     Q_D(const ListStateMachinesResponse);
@@ -81,9 +79,8 @@ const ListStateMachinesRequest * ListStateMachinesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN ListStateMachines response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN ListStateMachines \a response.
  */
 void ListStateMachinesResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void ListStateMachinesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::ListStateMachinesResponsePrivate
+ * \brief The ListStateMachinesResponsePrivate class provides private implementation for ListStateMachinesResponse.
  * \internal
  *
- * \class ListStateMachinesResponsePrivate
- *
- * \brief Private implementation for ListStateMachinesResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStateMachinesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListStateMachinesResponse instance.
+ * Constructs a ListStateMachinesResponsePrivate object with public implementation \a q.
  */
 ListStateMachinesResponsePrivate::ListStateMachinesResponsePrivate(
     ListStateMachinesResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ ListStateMachinesResponsePrivate::ListStateMachinesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN ListStateMachinesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN ListStateMachines response element from \a xml.
  */
 void ListStateMachinesResponsePrivate::parseListStateMachinesResponse(QXmlStreamReader &xml)
 {

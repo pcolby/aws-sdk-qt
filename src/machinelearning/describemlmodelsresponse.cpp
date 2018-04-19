@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DescribeMLModelsResponse
- *
  * \brief The DescribeMLModelsResponse class provides an interace for MachineLearning DescribeMLModels responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::describeMLModels
  */
 
 /*!
- * @brief  Constructs a new DescribeMLModelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeMLModelsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeMLModelsResponse::DescribeMLModelsResponse(
         const DescribeMLModelsRequest &request,
@@ -55,6 +50,9 @@ DescribeMLModelsResponse::DescribeMLModelsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeMLModelsRequest * DescribeMLModelsResponse::request() const
 {
     Q_D(const DescribeMLModelsResponse);
@@ -62,9 +60,8 @@ const DescribeMLModelsRequest * DescribeMLModelsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning DescribeMLModels response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning DescribeMLModels \a response.
  */
 void DescribeMLModelsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeMLModelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::DescribeMLModelsResponsePrivate
+ * \brief The DescribeMLModelsResponsePrivate class provides private implementation for DescribeMLModelsResponse.
  * \internal
  *
- * \class DescribeMLModelsResponsePrivate
- *
- * \brief Private implementation for DescribeMLModelsResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMLModelsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeMLModelsResponse instance.
+ * Constructs a DescribeMLModelsResponsePrivate object with public implementation \a q.
  */
 DescribeMLModelsResponsePrivate::DescribeMLModelsResponsePrivate(
     DescribeMLModelsResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeMLModelsResponsePrivate::DescribeMLModelsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning DescribeMLModelsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning DescribeMLModels response element from \a xml.
  */
 void DescribeMLModelsResponsePrivate::parseDescribeMLModelsResponse(QXmlStreamReader &xml)
 {

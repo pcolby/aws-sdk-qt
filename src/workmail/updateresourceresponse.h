@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateResourceResponse : public WorkMailResponse {
 public:
     UpdateResourceResponse(const UpdateResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateResourceRequest * request() const;
+    virtual const UpdateResourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateResourceResponse)

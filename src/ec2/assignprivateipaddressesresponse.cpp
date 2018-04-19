@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssignPrivateIpAddressesResponse
- *
  * \brief The AssignPrivateIpAddressesResponse class provides an interace for EC2 AssignPrivateIpAddresses responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssignPrivateIpAddressesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssignPrivateIpAddressesResponse object for \a reply to \a request, with parent \a parent.
  */
 AssignPrivateIpAddressesResponse::AssignPrivateIpAddressesResponse(
         const AssignPrivateIpAddressesRequest &request,
@@ -59,6 +54,9 @@ AssignPrivateIpAddressesResponse::AssignPrivateIpAddressesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssignPrivateIpAddressesRequest * AssignPrivateIpAddressesResponse::request() const
 {
     Q_D(const AssignPrivateIpAddressesResponse);
@@ -66,9 +64,8 @@ const AssignPrivateIpAddressesRequest * AssignPrivateIpAddressesResponse::reques
 }
 
 /*!
- * @brief  Parse a EC2 AssignPrivateIpAddresses response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AssignPrivateIpAddresses \a response.
  */
 void AssignPrivateIpAddressesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AssignPrivateIpAddressesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AssignPrivateIpAddressesResponsePrivate
+ * \brief The AssignPrivateIpAddressesResponsePrivate class provides private implementation for AssignPrivateIpAddressesResponse.
  * \internal
  *
- * \class AssignPrivateIpAddressesResponsePrivate
- *
- * \brief Private implementation for AssignPrivateIpAddressesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssignPrivateIpAddressesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssignPrivateIpAddressesResponse instance.
+ * Constructs a AssignPrivateIpAddressesResponsePrivate object with public implementation \a q.
  */
 AssignPrivateIpAddressesResponsePrivate::AssignPrivateIpAddressesResponsePrivate(
     AssignPrivateIpAddressesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AssignPrivateIpAddressesResponsePrivate::AssignPrivateIpAddressesResponsePrivate
 }
 
 /*!
- * @brief  Parse an EC2 AssignPrivateIpAddressesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AssignPrivateIpAddresses response element from \a xml.
  */
 void AssignPrivateIpAddressesResponsePrivate::parseAssignPrivateIpAddressesResponse(QXmlStreamReader &xml)
 {

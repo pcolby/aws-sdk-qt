@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::UpdateApplicationResponse
- *
  * \brief The UpdateApplicationResponse class provides an interace for KinesisAnalytics UpdateApplication responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::updateApplication
  */
 
 /*!
- * @brief  Constructs a new UpdateApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateApplicationResponse::UpdateApplicationResponse(
         const UpdateApplicationRequest &request,
@@ -55,6 +50,9 @@ UpdateApplicationResponse::UpdateApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateApplicationRequest * UpdateApplicationResponse::request() const
 {
     Q_D(const UpdateApplicationResponse);
@@ -62,9 +60,8 @@ const UpdateApplicationRequest * UpdateApplicationResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics UpdateApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics UpdateApplication \a response.
  */
 void UpdateApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::UpdateApplicationResponsePrivate
+ * \brief The UpdateApplicationResponsePrivate class provides private implementation for UpdateApplicationResponse.
  * \internal
  *
- * \class UpdateApplicationResponsePrivate
- *
- * \brief Private implementation for UpdateApplicationResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateApplicationResponse instance.
+ * Constructs a UpdateApplicationResponsePrivate object with public implementation \a q.
  */
 UpdateApplicationResponsePrivate::UpdateApplicationResponsePrivate(
     UpdateApplicationResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateApplicationResponsePrivate::UpdateApplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics UpdateApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics UpdateApplication response element from \a xml.
  */
 void UpdateApplicationResponsePrivate::parseUpdateApplicationResponse(QXmlStreamReader &xml)
 {

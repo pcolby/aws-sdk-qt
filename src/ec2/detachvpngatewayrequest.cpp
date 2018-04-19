@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DetachVpnGatewayRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DetachVpnGatewayRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DetachVpnGatewayRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DetachVpnGatewayRequestPrivate::DetachVpnGatewayRequestPrivate(
     const EC2Request::Action action, DetachVpnGatewayRequest * const q)

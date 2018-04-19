@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateConditionalForwarderRequest::response(Q
  */
 
 /*!
- *
- * Constructs a CreateConditionalForwarderRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a CreateConditionalForwarderRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 CreateConditionalForwarderRequestPrivate::CreateConditionalForwarderRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateConditionalForwarderRequest * const q)

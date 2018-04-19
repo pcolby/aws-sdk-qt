@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateSkillGroupFromRoomRequest::respon
  */
 
 /*!
- *
- * Constructs a DisassociateSkillGroupFromRoomRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateSkillGroupFromRoomRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 DisassociateSkillGroupFromRoomRequestPrivate::DisassociateSkillGroupFromRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, DisassociateSkillGroupFromRoomRequest * const q)

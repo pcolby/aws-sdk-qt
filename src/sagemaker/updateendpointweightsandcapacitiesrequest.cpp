@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointWeightsAndCapacitiesRequest::re
  */
 
 /*!
- *
- * Constructs a UpdateEndpointWeightsAndCapacitiesRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a UpdateEndpointWeightsAndCapacitiesRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 UpdateEndpointWeightsAndCapacitiesRequestPrivate::UpdateEndpointWeightsAndCapacitiesRequestPrivate(
     const SageMakerRequest::Action action, UpdateEndpointWeightsAndCapacitiesRequest * const q)

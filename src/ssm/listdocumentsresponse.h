@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListDocumentsResponse : public SSMResponse {
 public:
     ListDocumentsResponse(const ListDocumentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDocumentsRequest * request() const;
+    virtual const ListDocumentsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListDocumentsResponse)

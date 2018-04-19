@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::TransferDomainResponse
- *
  * \brief The TransferDomainResponse class provides an interace for Route53Domains TransferDomain responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new TransferDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TransferDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 TransferDomainResponse::TransferDomainResponse(
         const TransferDomainRequest &request,
@@ -56,6 +51,9 @@ TransferDomainResponse::TransferDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TransferDomainRequest * TransferDomainResponse::request() const
 {
     Q_D(const TransferDomainResponse);
@@ -63,9 +61,8 @@ const TransferDomainRequest * TransferDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53Domains TransferDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains TransferDomain \a response.
  */
 void TransferDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void TransferDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::TransferDomainResponsePrivate
+ * \brief The TransferDomainResponsePrivate class provides private implementation for TransferDomainResponse.
  * \internal
  *
- * \class TransferDomainResponsePrivate
- *
- * \brief Private implementation for TransferDomainResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TransferDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TransferDomainResponse instance.
+ * Constructs a TransferDomainResponsePrivate object with public implementation \a q.
  */
 TransferDomainResponsePrivate::TransferDomainResponsePrivate(
     TransferDomainResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ TransferDomainResponsePrivate::TransferDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains TransferDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains TransferDomain response element from \a xml.
  */
 void TransferDomainResponsePrivate::parseTransferDomainResponse(QXmlStreamReader &xml)
 {

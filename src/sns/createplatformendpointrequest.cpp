@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformEndpointRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreatePlatformEndpointRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a CreatePlatformEndpointRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 CreatePlatformEndpointRequestPrivate::CreatePlatformEndpointRequestPrivate(
     const SNSRequest::Action action, CreatePlatformEndpointRequest * const q)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ResumeProcessesRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ResumeProcessesRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a ResumeProcessesRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 ResumeProcessesRequestPrivate::ResumeProcessesRequestPrivate(
     const AutoScalingRequest::Action action, ResumeProcessesRequest * const q)

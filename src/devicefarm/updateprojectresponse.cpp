@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::UpdateProjectResponse
- *
  * \brief The UpdateProjectResponse class provides an interace for DeviceFarm UpdateProject responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new UpdateProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateProjectResponse::UpdateProjectResponse(
         const UpdateProjectRequest &request,
@@ -57,6 +52,9 @@ UpdateProjectResponse::UpdateProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateProjectRequest * UpdateProjectResponse::request() const
 {
     Q_D(const UpdateProjectResponse);
@@ -64,9 +62,8 @@ const UpdateProjectRequest * UpdateProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm UpdateProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm UpdateProject \a response.
  */
 void UpdateProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void UpdateProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::UpdateProjectResponsePrivate
+ * \brief The UpdateProjectResponsePrivate class provides private implementation for UpdateProjectResponse.
  * \internal
  *
- * \class UpdateProjectResponsePrivate
- *
- * \brief Private implementation for UpdateProjectResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateProjectResponse instance.
+ * Constructs a UpdateProjectResponsePrivate object with public implementation \a q.
  */
 UpdateProjectResponsePrivate::UpdateProjectResponsePrivate(
     UpdateProjectResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ UpdateProjectResponsePrivate::UpdateProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm UpdateProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm UpdateProject response element from \a xml.
  */
 void UpdateProjectResponsePrivate::parseUpdateProjectResponse(QXmlStreamReader &xml)
 {

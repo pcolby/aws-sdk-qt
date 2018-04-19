@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateRuleResponse
- *
  * \brief The CreateRuleResponse class provides an interace for ElasticLoadBalancingv2 CreateRule responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new CreateRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRuleResponse::CreateRuleResponse(
         const CreateRuleRequest &request,
@@ -123,6 +118,9 @@ CreateRuleResponse::CreateRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRuleRequest * CreateRuleResponse::request() const
 {
     Q_D(const CreateRuleResponse);
@@ -130,9 +128,8 @@ const CreateRuleRequest * CreateRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 CreateRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 CreateRule \a response.
  */
 void CreateRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void CreateRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::CreateRuleResponsePrivate
+ * \brief The CreateRuleResponsePrivate class provides private implementation for CreateRuleResponse.
  * \internal
  *
- * \class CreateRuleResponsePrivate
- *
- * \brief Private implementation for CreateRuleResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRuleResponse instance.
+ * Constructs a CreateRuleResponsePrivate object with public implementation \a q.
  */
 CreateRuleResponsePrivate::CreateRuleResponsePrivate(
     CreateRuleResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ CreateRuleResponsePrivate::CreateRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 CreateRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 CreateRule response element from \a xml.
  */
 void CreateRuleResponsePrivate::parseCreateRuleResponse(QXmlStreamReader &xml)
 {

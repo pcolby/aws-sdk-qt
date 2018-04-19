@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreatePolicyVersionResponse
- *
  * \brief The CreatePolicyVersionResponse class provides an interace for IAM CreatePolicyVersion responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreatePolicyVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePolicyVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePolicyVersionResponse::CreatePolicyVersionResponse(
         const CreatePolicyVersionRequest &request,
@@ -120,6 +115,9 @@ CreatePolicyVersionResponse::CreatePolicyVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePolicyVersionRequest * CreatePolicyVersionResponse::request() const
 {
     Q_D(const CreatePolicyVersionResponse);
@@ -127,9 +125,8 @@ const CreatePolicyVersionRequest * CreatePolicyVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM CreatePolicyVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreatePolicyVersion \a response.
  */
 void CreatePolicyVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreatePolicyVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreatePolicyVersionResponsePrivate
+ * \brief The CreatePolicyVersionResponsePrivate class provides private implementation for CreatePolicyVersionResponse.
  * \internal
  *
- * \class CreatePolicyVersionResponsePrivate
- *
- * \brief Private implementation for CreatePolicyVersionResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePolicyVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePolicyVersionResponse instance.
+ * Constructs a CreatePolicyVersionResponsePrivate object with public implementation \a q.
  */
 CreatePolicyVersionResponsePrivate::CreatePolicyVersionResponsePrivate(
     CreatePolicyVersionResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreatePolicyVersionResponsePrivate::CreatePolicyVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM CreatePolicyVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreatePolicyVersion response element from \a xml.
  */
 void CreatePolicyVersionResponsePrivate::parseCreatePolicyVersionResponse(QXmlStreamReader &xml)
 {

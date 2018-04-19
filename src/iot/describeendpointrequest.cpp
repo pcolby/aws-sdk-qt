@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeEndpointRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEndpointRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DescribeEndpointRequestPrivate::DescribeEndpointRequestPrivate(
     const IoTRequest::Action action, DescribeEndpointRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCheckerIpRangesResponse : public Route53Response {
 public:
     GetCheckerIpRangesResponse(const GetCheckerIpRangesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCheckerIpRangesRequest * request() const;
+    virtual const GetCheckerIpRangesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCheckerIpRangesResponse)

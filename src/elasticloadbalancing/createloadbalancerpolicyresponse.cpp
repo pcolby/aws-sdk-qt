@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::CreateLoadBalancerPolicyResponse
- *
  * \brief The CreateLoadBalancerPolicyResponse class provides an interace for ElasticLoadBalancing CreateLoadBalancerPolicy responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new CreateLoadBalancerPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLoadBalancerPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLoadBalancerPolicyResponse::CreateLoadBalancerPolicyResponse(
         const CreateLoadBalancerPolicyRequest &request,
@@ -83,6 +78,9 @@ CreateLoadBalancerPolicyResponse::CreateLoadBalancerPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLoadBalancerPolicyRequest * CreateLoadBalancerPolicyResponse::request() const
 {
     Q_D(const CreateLoadBalancerPolicyResponse);
@@ -90,9 +88,8 @@ const CreateLoadBalancerPolicyRequest * CreateLoadBalancerPolicyResponse::reques
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing CreateLoadBalancerPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing CreateLoadBalancerPolicy \a response.
  */
 void CreateLoadBalancerPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void CreateLoadBalancerPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::CreateLoadBalancerPolicyResponsePrivate
+ * \brief The CreateLoadBalancerPolicyResponsePrivate class provides private implementation for CreateLoadBalancerPolicyResponse.
  * \internal
  *
- * \class CreateLoadBalancerPolicyResponsePrivate
- *
- * \brief Private implementation for CreateLoadBalancerPolicyResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLoadBalancerPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLoadBalancerPolicyResponse instance.
+ * Constructs a CreateLoadBalancerPolicyResponsePrivate object with public implementation \a q.
  */
 CreateLoadBalancerPolicyResponsePrivate::CreateLoadBalancerPolicyResponsePrivate(
     CreateLoadBalancerPolicyResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ CreateLoadBalancerPolicyResponsePrivate::CreateLoadBalancerPolicyResponsePrivate
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing CreateLoadBalancerPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing CreateLoadBalancerPolicy response element from \a xml.
  */
 void CreateLoadBalancerPolicyResponsePrivate::parseCreateLoadBalancerPolicyResponse(QXmlStreamReader &xml)
 {

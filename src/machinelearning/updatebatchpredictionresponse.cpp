@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::UpdateBatchPredictionResponse
- *
  * \brief The UpdateBatchPredictionResponse class provides an interace for MachineLearning UpdateBatchPrediction responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::updateBatchPrediction
  */
 
 /*!
- * @brief  Constructs a new UpdateBatchPredictionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateBatchPredictionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateBatchPredictionResponse::UpdateBatchPredictionResponse(
         const UpdateBatchPredictionRequest &request,
@@ -55,6 +50,9 @@ UpdateBatchPredictionResponse::UpdateBatchPredictionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateBatchPredictionRequest * UpdateBatchPredictionResponse::request() const
 {
     Q_D(const UpdateBatchPredictionResponse);
@@ -62,9 +60,8 @@ const UpdateBatchPredictionRequest * UpdateBatchPredictionResponse::request() co
 }
 
 /*!
- * @brief  Parse a MachineLearning UpdateBatchPrediction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning UpdateBatchPrediction \a response.
  */
 void UpdateBatchPredictionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateBatchPredictionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::UpdateBatchPredictionResponsePrivate
+ * \brief The UpdateBatchPredictionResponsePrivate class provides private implementation for UpdateBatchPredictionResponse.
  * \internal
  *
- * \class UpdateBatchPredictionResponsePrivate
- *
- * \brief Private implementation for UpdateBatchPredictionResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateBatchPredictionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateBatchPredictionResponse instance.
+ * Constructs a UpdateBatchPredictionResponsePrivate object with public implementation \a q.
  */
 UpdateBatchPredictionResponsePrivate::UpdateBatchPredictionResponsePrivate(
     UpdateBatchPredictionResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateBatchPredictionResponsePrivate::UpdateBatchPredictionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning UpdateBatchPredictionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning UpdateBatchPrediction response element from \a xml.
  */
 void UpdateBatchPredictionResponsePrivate::parseUpdateBatchPredictionResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEnvironmentMembershipsResponse : public Cloud9Respons
 public:
     DescribeEnvironmentMembershipsResponse(const DescribeEnvironmentMembershipsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEnvironmentMembershipsRequest * request() const;
+    virtual const DescribeEnvironmentMembershipsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEnvironmentMembershipsResponse)

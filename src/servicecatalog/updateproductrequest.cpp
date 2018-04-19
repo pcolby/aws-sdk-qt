@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * UpdateProductRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateProductRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a UpdateProductRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 UpdateProductRequestPrivate::UpdateProductRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateProductRequest * const q)

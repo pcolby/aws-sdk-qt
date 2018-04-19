@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * ComposeEnvironmentsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ComposeEnvironmentsRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a ComposeEnvironmentsRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 ComposeEnvironmentsRequestPrivate::ComposeEnvironmentsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, ComposeEnvironmentsRequest * const q)

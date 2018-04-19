@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DescribeMLModelsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeMLModelsRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a DescribeMLModelsRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 DescribeMLModelsRequestPrivate::DescribeMLModelsRequestPrivate(
     const MachineLearningRequest::Action action, DescribeMLModelsRequest * const q)

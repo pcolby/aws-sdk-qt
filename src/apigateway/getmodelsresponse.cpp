@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetModelsResponse
- *
  * \brief The GetModelsResponse class provides an interace for APIGateway GetModels responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetModelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetModelsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetModelsResponse::GetModelsResponse(
         const GetModelsRequest &request,
@@ -60,6 +55,9 @@ GetModelsResponse::GetModelsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetModelsRequest * GetModelsResponse::request() const
 {
     Q_D(const GetModelsResponse);
@@ -67,9 +65,8 @@ const GetModelsRequest * GetModelsResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetModels response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetModels \a response.
  */
 void GetModelsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetModelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetModelsResponsePrivate
+ * \brief The GetModelsResponsePrivate class provides private implementation for GetModelsResponse.
  * \internal
  *
- * \class GetModelsResponsePrivate
- *
- * \brief Private implementation for GetModelsResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetModelsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetModelsResponse instance.
+ * Constructs a GetModelsResponsePrivate object with public implementation \a q.
  */
 GetModelsResponsePrivate::GetModelsResponsePrivate(
     GetModelsResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetModelsResponsePrivate::GetModelsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetModelsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetModels response element from \a xml.
  */
 void GetModelsResponsePrivate::parseGetModelsResponse(QXmlStreamReader &xml)
 {

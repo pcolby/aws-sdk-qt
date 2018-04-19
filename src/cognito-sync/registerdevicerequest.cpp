@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * RegisterDeviceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a RegisterDeviceRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a RegisterDeviceRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 RegisterDeviceRequestPrivate::RegisterDeviceRequestPrivate(
     const CognitoSyncRequest::Action action, RegisterDeviceRequest * const q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateOriginEndpointRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdateOriginEndpointRequestPrivate object for MediaPackage \a action with,
- * public implementation \a q.
+ * Constructs a UpdateOriginEndpointRequestPrivate object for MediaPackage \a action,
+ * with public implementation \a q.
  */
 UpdateOriginEndpointRequestPrivate::UpdateOriginEndpointRequestPrivate(
     const MediaPackageRequest::Action action, UpdateOriginEndpointRequest * const q)

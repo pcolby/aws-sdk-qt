@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetQualificationTypeResponse : public MTurkResponse {
 public:
     GetQualificationTypeResponse(const GetQualificationTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetQualificationTypeRequest * request() const;
+    virtual const GetQualificationTypeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetQualificationTypeResponse)

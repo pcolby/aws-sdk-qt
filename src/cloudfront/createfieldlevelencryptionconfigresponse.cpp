@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateFieldLevelEncryptionConfigResponse
- *
  * \brief The CreateFieldLevelEncryptionConfigResponse class provides an interace for CloudFront CreateFieldLevelEncryptionConfig responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateFieldLevelEncryptionConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateFieldLevelEncryptionConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateFieldLevelEncryptionConfigResponse::CreateFieldLevelEncryptionConfigResponse(
         const CreateFieldLevelEncryptionConfigRequest &request,
@@ -60,6 +55,9 @@ CreateFieldLevelEncryptionConfigResponse::CreateFieldLevelEncryptionConfigRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateFieldLevelEncryptionConfigRequest * CreateFieldLevelEncryptionConfigResponse::request() const
 {
     Q_D(const CreateFieldLevelEncryptionConfigResponse);
@@ -67,9 +65,8 @@ const CreateFieldLevelEncryptionConfigRequest * CreateFieldLevelEncryptionConfig
 }
 
 /*!
- * @brief  Parse a CloudFront CreateFieldLevelEncryptionConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront CreateFieldLevelEncryptionConfig \a response.
  */
 void CreateFieldLevelEncryptionConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateFieldLevelEncryptionConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::CreateFieldLevelEncryptionConfigResponsePrivate
+ * \brief The CreateFieldLevelEncryptionConfigResponsePrivate class provides private implementation for CreateFieldLevelEncryptionConfigResponse.
  * \internal
  *
- * \class CreateFieldLevelEncryptionConfigResponsePrivate
- *
- * \brief Private implementation for CreateFieldLevelEncryptionConfigResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFieldLevelEncryptionConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateFieldLevelEncryptionConfigResponse instance.
+ * Constructs a CreateFieldLevelEncryptionConfigResponsePrivate object with public implementation \a q.
  */
 CreateFieldLevelEncryptionConfigResponsePrivate::CreateFieldLevelEncryptionConfigResponsePrivate(
     CreateFieldLevelEncryptionConfigResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateFieldLevelEncryptionConfigResponsePrivate::CreateFieldLevelEncryptionConfi
 }
 
 /*!
- * @brief  Parse an CloudFront CreateFieldLevelEncryptionConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront CreateFieldLevelEncryptionConfig response element from \a xml.
  */
 void CreateFieldLevelEncryptionConfigResponsePrivate::parseCreateFieldLevelEncryptionConfigResponse(QXmlStreamReader &xml)
 {

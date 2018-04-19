@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * SetVaultAccessPolicyRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a SetVaultAccessPolicyRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a SetVaultAccessPolicyRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 SetVaultAccessPolicyRequestPrivate::SetVaultAccessPolicyRequestPrivate(
     const GlacierRequest::Action action, SetVaultAccessPolicyRequest * const q)

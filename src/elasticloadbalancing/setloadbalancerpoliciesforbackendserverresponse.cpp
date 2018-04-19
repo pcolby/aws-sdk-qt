@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::SetLoadBalancerPoliciesForBackendServerResponse
- *
  * \brief The SetLoadBalancerPoliciesForBackendServerResponse class provides an interace for ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServer responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetLoadBalancerPoliciesForBackendServerResponse object for \a reply to \a request, with parent \a parent.
  */
 SetLoadBalancerPoliciesForBackendServerResponse::SetLoadBalancerPoliciesForBackendServerResponse(
         const SetLoadBalancerPoliciesForBackendServerRequest &request,
@@ -83,6 +78,9 @@ SetLoadBalancerPoliciesForBackendServerResponse::SetLoadBalancerPoliciesForBacke
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetLoadBalancerPoliciesForBackendServerRequest * SetLoadBalancerPoliciesForBackendServerResponse::request() const
 {
     Q_D(const SetLoadBalancerPoliciesForBackendServerResponse);
@@ -90,9 +88,8 @@ const SetLoadBalancerPoliciesForBackendServerRequest * SetLoadBalancerPoliciesFo
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServer \a response.
  */
 void SetLoadBalancerPoliciesForBackendServerResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void SetLoadBalancerPoliciesForBackendServerResponse::parseSuccess(QIODevice &re
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::SetLoadBalancerPoliciesForBackendServerResponsePrivate
+ * \brief The SetLoadBalancerPoliciesForBackendServerResponsePrivate class provides private implementation for SetLoadBalancerPoliciesForBackendServerResponse.
  * \internal
  *
- * \class SetLoadBalancerPoliciesForBackendServerResponsePrivate
- *
- * \brief Private implementation for SetLoadBalancerPoliciesForBackendServerResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetLoadBalancerPoliciesForBackendServerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetLoadBalancerPoliciesForBackendServerResponse instance.
+ * Constructs a SetLoadBalancerPoliciesForBackendServerResponsePrivate object with public implementation \a q.
  */
 SetLoadBalancerPoliciesForBackendServerResponsePrivate::SetLoadBalancerPoliciesForBackendServerResponsePrivate(
     SetLoadBalancerPoliciesForBackendServerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ SetLoadBalancerPoliciesForBackendServerResponsePrivate::SetLoadBalancerPoliciesF
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServer response element from \a xml.
  */
 void SetLoadBalancerPoliciesForBackendServerResponsePrivate::parseSetLoadBalancerPoliciesForBackendServerResponse(QXmlStreamReader &xml)
 {

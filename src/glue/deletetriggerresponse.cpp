@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteTriggerResponse
- *
  * \brief The DeleteTriggerResponse class provides an interace for Glue DeleteTrigger responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteTriggerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTriggerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTriggerResponse::DeleteTriggerResponse(
         const DeleteTriggerRequest &request,
@@ -58,6 +53,9 @@ DeleteTriggerResponse::DeleteTriggerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTriggerRequest * DeleteTriggerResponse::request() const
 {
     Q_D(const DeleteTriggerResponse);
@@ -65,9 +63,8 @@ const DeleteTriggerRequest * DeleteTriggerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue DeleteTrigger response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue DeleteTrigger \a response.
  */
 void DeleteTriggerResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteTriggerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::DeleteTriggerResponsePrivate
+ * \brief The DeleteTriggerResponsePrivate class provides private implementation for DeleteTriggerResponse.
  * \internal
  *
- * \class DeleteTriggerResponsePrivate
- *
- * \brief Private implementation for DeleteTriggerResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTriggerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTriggerResponse instance.
+ * Constructs a DeleteTriggerResponsePrivate object with public implementation \a q.
  */
 DeleteTriggerResponsePrivate::DeleteTriggerResponsePrivate(
     DeleteTriggerResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteTriggerResponsePrivate::DeleteTriggerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue DeleteTriggerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue DeleteTrigger response element from \a xml.
  */
 void DeleteTriggerResponsePrivate::parseDeleteTriggerResponse(QXmlStreamReader &xml)
 {

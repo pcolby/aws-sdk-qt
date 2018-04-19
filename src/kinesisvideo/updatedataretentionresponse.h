@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateDataRetentionResponse : public KinesisVideoResponse {
 public:
     UpdateDataRetentionResponse(const UpdateDataRetentionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateDataRetentionRequest * request() const;
+    virtual const UpdateDataRetentionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateDataRetentionResponse)

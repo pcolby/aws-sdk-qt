@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterEventTopicRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeregisterEventTopicRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterEventTopicRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 DeregisterEventTopicRequestPrivate::DeregisterEventTopicRequestPrivate(
     const DirectoryServiceRequest::Action action, DeregisterEventTopicRequest * const q)

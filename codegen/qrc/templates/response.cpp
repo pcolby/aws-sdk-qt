@@ -11,10 +11,9 @@ namespace {{NameSpaceName}} {
 
 /*!
  * \class QtAws::{{NameSpaceName}}::{{ClassName}}
- *
  * \brief The {{ClassName}} class provides an interace for {{ServiceName}} {{OperationName}} responses.
  *
- * \ingroup {{NameSpaceName}}
+ * \inmodule QtAws{{NameSpaceName}}
  *
 {% for line in ClassDocumentation %}
  * {% if line %} {{ line }}{% endif %}
@@ -24,11 +23,7 @@ namespace {{NameSpaceName}} {
  */
 
 /*!
- * @brief  Constructs a new {{ClassName}} object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a {{ClassName}} object for \a reply to \a request, with parent \a parent.
  */
 {{ClassName}}::{{ClassName}}(
         const {{OperationName}}Request &request,
@@ -40,6 +35,9 @@ namespace {{NameSpaceName}} {
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const {{OperationName}}Request * {{ClassName}}::request() const
 {
     Q_D(const {{ClassName}});
@@ -47,9 +45,8 @@ const {{OperationName}}Request * {{ClassName}}::request() const
 }
 
 /*!
- * @brief  Parse a {{ServiceName}} {{OperationName}} response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful {{ServiceName}} {{OperationName}} \a response.
  */
 void {{ClassName}}::parseSuccess(QIODevice &response)
 {
@@ -59,19 +56,15 @@ void {{ClassName}}::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::{{NameSpaceName}}::{{ClassName}}Private
+ * \brief The {{ClassName}}Private class provides private implementation for {{ClassName}}.
  * \internal
  *
- * \class {{ClassName}}Private
- *
- * \brief Private implementation for {{ClassName}}.
+ * \inmodule QtAws{{NameSpaceName}}
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new {{ClassName}}Private object.
- *
- * @param  q  Pointer to this object's public {{ClassName}} instance.
+ * Constructs a {{ClassName}}Private object with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(
     {{ClassName}} * const q) : {{ServiceName}}ResponsePrivate(q)
@@ -80,9 +73,7 @@ void {{ClassName}}::parseSuccess(QIODevice &response)
 }
 
 /*!
- * @brief  Parse an {{ServiceName}} {{ClassName}} element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a {{ServiceName}} {{OperationName}} response element from \a xml.
  */
 void {{ClassName}}Private::parse{{ClassName}}(QXmlStreamReader &xml)
 {

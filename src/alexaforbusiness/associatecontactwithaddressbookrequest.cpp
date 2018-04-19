@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * AssociateContactWithAddressBookRequest::respo
  */
 
 /*!
- *
- * Constructs a AssociateContactWithAddressBookRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a AssociateContactWithAddressBookRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 AssociateContactWithAddressBookRequestPrivate::AssociateContactWithAddressBookRequestPrivate(
     const AlexaForBusinessRequest::Action action, AssociateContactWithAddressBookRequest * const q)

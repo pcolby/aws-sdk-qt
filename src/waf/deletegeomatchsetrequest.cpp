@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteGeoMatchSetRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteGeoMatchSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a DeleteGeoMatchSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 DeleteGeoMatchSetRequestPrivate::DeleteGeoMatchSetRequestPrivate(
     const WAFRequest::Action action, DeleteGeoMatchSetRequest * const q)

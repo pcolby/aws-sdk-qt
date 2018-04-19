@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListCACertificatesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListCACertificatesRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListCACertificatesRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListCACertificatesRequestPrivate::ListCACertificatesRequestPrivate(
     const IoTRequest::Action action, ListCACertificatesRequest * const q)

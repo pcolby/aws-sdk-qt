@@ -142,9 +142,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventTypesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeEventTypesRequestPrivate object for Health \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventTypesRequestPrivate object for Health \a action,
+ * with public implementation \a q.
  */
 DescribeEventTypesRequestPrivate::DescribeEventTypesRequestPrivate(
     const HealthRequest::Action action, DescribeEventTypesRequest * const q)

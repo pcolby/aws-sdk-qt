@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::UpdateWebhookResponse
- *
  * \brief The UpdateWebhookResponse class provides an interace for CodeBuild UpdateWebhook responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new UpdateWebhookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateWebhookResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateWebhookResponse::UpdateWebhookResponse(
         const UpdateWebhookRequest &request,
@@ -135,6 +130,9 @@ UpdateWebhookResponse::UpdateWebhookResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateWebhookRequest * UpdateWebhookResponse::request() const
 {
     Q_D(const UpdateWebhookResponse);
@@ -142,9 +140,8 @@ const UpdateWebhookRequest * UpdateWebhookResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeBuild UpdateWebhook response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild UpdateWebhook \a response.
  */
 void UpdateWebhookResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void UpdateWebhookResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::UpdateWebhookResponsePrivate
+ * \brief The UpdateWebhookResponsePrivate class provides private implementation for UpdateWebhookResponse.
  * \internal
  *
- * \class UpdateWebhookResponsePrivate
- *
- * \brief Private implementation for UpdateWebhookResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateWebhookResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateWebhookResponse instance.
+ * Constructs a UpdateWebhookResponsePrivate object with public implementation \a q.
  */
 UpdateWebhookResponsePrivate::UpdateWebhookResponsePrivate(
     UpdateWebhookResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ UpdateWebhookResponsePrivate::UpdateWebhookResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeBuild UpdateWebhookResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild UpdateWebhook response element from \a xml.
  */
 void UpdateWebhookResponsePrivate::parseUpdateWebhookResponse(QXmlStreamReader &xml)
 {

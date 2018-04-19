@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCampaignRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteCampaignRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCampaignRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 DeleteCampaignRequestPrivate::DeleteCampaignRequestPrivate(
     const PinpointRequest::Action action, DeleteCampaignRequest * const q)

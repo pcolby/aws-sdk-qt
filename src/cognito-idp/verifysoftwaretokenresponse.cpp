@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::VerifySoftwareTokenResponse
- *
  * \brief The VerifySoftwareTokenResponse class provides an interace for CognitoIdentityProvider VerifySoftwareToken responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new VerifySoftwareTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a VerifySoftwareTokenResponse object for \a reply to \a request, with parent \a parent.
  */
 VerifySoftwareTokenResponse::VerifySoftwareTokenResponse(
         const VerifySoftwareTokenRequest &request,
@@ -65,6 +60,9 @@ VerifySoftwareTokenResponse::VerifySoftwareTokenResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const VerifySoftwareTokenRequest * VerifySoftwareTokenResponse::request() const
 {
     Q_D(const VerifySoftwareTokenResponse);
@@ -72,9 +70,8 @@ const VerifySoftwareTokenRequest * VerifySoftwareTokenResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider VerifySoftwareToken response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider VerifySoftwareToken \a response.
  */
 void VerifySoftwareTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void VerifySoftwareTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::VerifySoftwareTokenResponsePrivate
+ * \brief The VerifySoftwareTokenResponsePrivate class provides private implementation for VerifySoftwareTokenResponse.
  * \internal
  *
- * \class VerifySoftwareTokenResponsePrivate
- *
- * \brief Private implementation for VerifySoftwareTokenResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifySoftwareTokenResponsePrivate object.
- *
- * @param  q  Pointer to this object's public VerifySoftwareTokenResponse instance.
+ * Constructs a VerifySoftwareTokenResponsePrivate object with public implementation \a q.
  */
 VerifySoftwareTokenResponsePrivate::VerifySoftwareTokenResponsePrivate(
     VerifySoftwareTokenResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ VerifySoftwareTokenResponsePrivate::VerifySoftwareTokenResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider VerifySoftwareTokenResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider VerifySoftwareToken response element from \a xml.
  */
 void VerifySoftwareTokenResponsePrivate::parseVerifySoftwareTokenResponse(QXmlStreamReader &xml)
 {

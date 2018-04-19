@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListAttachedUserPoliciesResponse
- *
  * \brief The ListAttachedUserPoliciesResponse class provides an interace for IAM ListAttachedUserPolicies responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListAttachedUserPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAttachedUserPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAttachedUserPoliciesResponse::ListAttachedUserPoliciesResponse(
         const ListAttachedUserPoliciesRequest &request,
@@ -120,6 +115,9 @@ ListAttachedUserPoliciesResponse::ListAttachedUserPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAttachedUserPoliciesRequest * ListAttachedUserPoliciesResponse::request() const
 {
     Q_D(const ListAttachedUserPoliciesResponse);
@@ -127,9 +125,8 @@ const ListAttachedUserPoliciesRequest * ListAttachedUserPoliciesResponse::reques
 }
 
 /*!
- * @brief  Parse a IAM ListAttachedUserPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListAttachedUserPolicies \a response.
  */
 void ListAttachedUserPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListAttachedUserPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListAttachedUserPoliciesResponsePrivate
+ * \brief The ListAttachedUserPoliciesResponsePrivate class provides private implementation for ListAttachedUserPoliciesResponse.
  * \internal
  *
- * \class ListAttachedUserPoliciesResponsePrivate
- *
- * \brief Private implementation for ListAttachedUserPoliciesResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAttachedUserPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAttachedUserPoliciesResponse instance.
+ * Constructs a ListAttachedUserPoliciesResponsePrivate object with public implementation \a q.
  */
 ListAttachedUserPoliciesResponsePrivate::ListAttachedUserPoliciesResponsePrivate(
     ListAttachedUserPoliciesResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListAttachedUserPoliciesResponsePrivate::ListAttachedUserPoliciesResponsePrivate
 }
 
 /*!
- * @brief  Parse an IAM ListAttachedUserPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListAttachedUserPolicies response element from \a xml.
  */
 void ListAttachedUserPoliciesResponsePrivate::parseListAttachedUserPoliciesResponse(QXmlStreamReader &xml)
 {

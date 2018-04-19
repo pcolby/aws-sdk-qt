@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketVersioningResponse
- *
  * \brief The PutBucketVersioningResponse class provides an interace for S3 PutBucketVersioning responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketVersioning
  */
 
 /*!
- * @brief  Constructs a new PutBucketVersioningResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketVersioningResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketVersioningResponse::PutBucketVersioningResponse(
         const PutBucketVersioningRequest &request,
@@ -55,6 +50,9 @@ PutBucketVersioningResponse::PutBucketVersioningResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketVersioningRequest * PutBucketVersioningResponse::request() const
 {
     Q_D(const PutBucketVersioningResponse);
@@ -62,9 +60,8 @@ const PutBucketVersioningRequest * PutBucketVersioningResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 PutBucketVersioning response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketVersioning \a response.
  */
 void PutBucketVersioningResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketVersioningResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketVersioningResponsePrivate
+ * \brief The PutBucketVersioningResponsePrivate class provides private implementation for PutBucketVersioningResponse.
  * \internal
  *
- * \class PutBucketVersioningResponsePrivate
- *
- * \brief Private implementation for PutBucketVersioningResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketVersioningResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketVersioningResponse instance.
+ * Constructs a PutBucketVersioningResponsePrivate object with public implementation \a q.
  */
 PutBucketVersioningResponsePrivate::PutBucketVersioningResponsePrivate(
     PutBucketVersioningResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketVersioningResponsePrivate::PutBucketVersioningResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 PutBucketVersioningResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketVersioning response element from \a xml.
  */
 void PutBucketVersioningResponsePrivate::parsePutBucketVersioningResponse(QXmlStreamReader &xml)
 {

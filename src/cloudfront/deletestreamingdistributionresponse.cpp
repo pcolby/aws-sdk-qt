@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::DeleteStreamingDistributionResponse
- *
  * \brief The DeleteStreamingDistributionResponse class provides an interace for CloudFront DeleteStreamingDistribution responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new DeleteStreamingDistributionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteStreamingDistributionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteStreamingDistributionResponse::DeleteStreamingDistributionResponse(
         const DeleteStreamingDistributionRequest &request,
@@ -60,6 +55,9 @@ DeleteStreamingDistributionResponse::DeleteStreamingDistributionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteStreamingDistributionRequest * DeleteStreamingDistributionResponse::request() const
 {
     Q_D(const DeleteStreamingDistributionResponse);
@@ -67,9 +65,8 @@ const DeleteStreamingDistributionRequest * DeleteStreamingDistributionResponse::
 }
 
 /*!
- * @brief  Parse a CloudFront DeleteStreamingDistribution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront DeleteStreamingDistribution \a response.
  */
 void DeleteStreamingDistributionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteStreamingDistributionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::DeleteStreamingDistributionResponsePrivate
+ * \brief The DeleteStreamingDistributionResponsePrivate class provides private implementation for DeleteStreamingDistributionResponse.
  * \internal
  *
- * \class DeleteStreamingDistributionResponsePrivate
- *
- * \brief Private implementation for DeleteStreamingDistributionResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStreamingDistributionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteStreamingDistributionResponse instance.
+ * Constructs a DeleteStreamingDistributionResponsePrivate object with public implementation \a q.
  */
 DeleteStreamingDistributionResponsePrivate::DeleteStreamingDistributionResponsePrivate(
     DeleteStreamingDistributionResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteStreamingDistributionResponsePrivate::DeleteStreamingDistributionResponseP
 }
 
 /*!
- * @brief  Parse an CloudFront DeleteStreamingDistributionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront DeleteStreamingDistribution response element from \a xml.
  */
 void DeleteStreamingDistributionResponsePrivate::parseDeleteStreamingDistributionResponse(QXmlStreamReader &xml)
 {

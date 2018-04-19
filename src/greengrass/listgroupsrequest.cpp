@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListGroupsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ListGroupsRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a ListGroupsRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 ListGroupsRequestPrivate::ListGroupsRequestPrivate(
     const GreengrassRequest::Action action, ListGroupsRequest * const q)

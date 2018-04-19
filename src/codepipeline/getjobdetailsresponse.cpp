@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::GetJobDetailsResponse
- *
  * \brief The GetJobDetailsResponse class provides an interace for CodePipeline GetJobDetails responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new GetJobDetailsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetJobDetailsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetJobDetailsResponse::GetJobDetailsResponse(
         const GetJobDetailsRequest &request,
@@ -218,6 +213,9 @@ GetJobDetailsResponse::GetJobDetailsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetJobDetailsRequest * GetJobDetailsResponse::request() const
 {
     Q_D(const GetJobDetailsResponse);
@@ -225,9 +223,8 @@ const GetJobDetailsRequest * GetJobDetailsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodePipeline GetJobDetails response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline GetJobDetails \a response.
  */
 void GetJobDetailsResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void GetJobDetailsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::GetJobDetailsResponsePrivate
+ * \brief The GetJobDetailsResponsePrivate class provides private implementation for GetJobDetailsResponse.
  * \internal
  *
- * \class GetJobDetailsResponsePrivate
- *
- * \brief Private implementation for GetJobDetailsResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobDetailsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetJobDetailsResponse instance.
+ * Constructs a GetJobDetailsResponsePrivate object with public implementation \a q.
  */
 GetJobDetailsResponsePrivate::GetJobDetailsResponsePrivate(
     GetJobDetailsResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ GetJobDetailsResponsePrivate::GetJobDetailsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline GetJobDetailsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline GetJobDetails response element from \a xml.
  */
 void GetJobDetailsResponsePrivate::parseGetJobDetailsResponse(QXmlStreamReader &xml)
 {

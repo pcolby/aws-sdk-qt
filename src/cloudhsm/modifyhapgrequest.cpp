@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * ModifyHapgRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ModifyHapgRequestPrivate object for CloudHSM \a action with,
- * public implementation \a q.
+ * Constructs a ModifyHapgRequestPrivate object for CloudHSM \a action,
+ * with public implementation \a q.
  */
 ModifyHapgRequestPrivate::ModifyHapgRequestPrivate(
     const CloudHSMRequest::Action action, ModifyHapgRequest * const q)

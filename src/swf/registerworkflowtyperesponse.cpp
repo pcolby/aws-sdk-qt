@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RegisterWorkflowTypeResponse
- *
  * \brief The RegisterWorkflowTypeResponse class provides an interace for SWF RegisterWorkflowType responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RegisterWorkflowTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterWorkflowTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterWorkflowTypeResponse::RegisterWorkflowTypeResponse(
         const RegisterWorkflowTypeRequest &request,
@@ -71,6 +66,9 @@ RegisterWorkflowTypeResponse::RegisterWorkflowTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterWorkflowTypeRequest * RegisterWorkflowTypeResponse::request() const
 {
     Q_D(const RegisterWorkflowTypeResponse);
@@ -78,9 +76,8 @@ const RegisterWorkflowTypeRequest * RegisterWorkflowTypeResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SWF RegisterWorkflowType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF RegisterWorkflowType \a response.
  */
 void RegisterWorkflowTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void RegisterWorkflowTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::RegisterWorkflowTypeResponsePrivate
+ * \brief The RegisterWorkflowTypeResponsePrivate class provides private implementation for RegisterWorkflowTypeResponse.
  * \internal
  *
- * \class RegisterWorkflowTypeResponsePrivate
- *
- * \brief Private implementation for RegisterWorkflowTypeResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterWorkflowTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterWorkflowTypeResponse instance.
+ * Constructs a RegisterWorkflowTypeResponsePrivate object with public implementation \a q.
  */
 RegisterWorkflowTypeResponsePrivate::RegisterWorkflowTypeResponsePrivate(
     RegisterWorkflowTypeResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ RegisterWorkflowTypeResponsePrivate::RegisterWorkflowTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF RegisterWorkflowTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF RegisterWorkflowType response element from \a xml.
  */
 void RegisterWorkflowTypeResponsePrivate::parseRegisterWorkflowTypeResponse(QXmlStreamReader &xml)
 {

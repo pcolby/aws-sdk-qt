@@ -307,7 +307,7 @@ namespace EC2 {
  */
 
 /*!
- * Constructs a[n] EC2Request object for EC2 \a action.
+ * Constructs a EC2Request object for EC2 \a action.
  */
 EC2Request::EC2Request(const Action action)
     : QtAws::Core::AwsAbstractRequest(new EC2RequestPrivate(action, this))
@@ -507,8 +507,8 @@ QNetworkRequest EC2Request::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a EC2RequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a EC2RequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 EC2RequestPrivate::EC2RequestPrivate(const EC2Request::Action action, EC2Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

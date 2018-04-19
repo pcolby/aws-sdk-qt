@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * UpdateStateMachineRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateStateMachineRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a UpdateStateMachineRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 UpdateStateMachineRequestPrivate::UpdateStateMachineRequestPrivate(
     const SFNRequest::Action action, UpdateStateMachineRequest * const q)

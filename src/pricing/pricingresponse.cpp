@@ -28,16 +28,13 @@ namespace Pricing {
 
 /*!
  * \class QtAws::Pricing::PricingResponse
- *
  * \brief The PricingResponse class provides an interface for Pricing responses.
  *
- * \ingroup Pricing
+ * \inmodule QtAwsPricing
  */
 
 /*!
- * @brief  Constructs a new PricingResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a PricingResponse object with parent \a parent.
  */
 PricingResponse::PricingResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new PricingResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ PricingResponse::PricingResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PricingResponse object.
- *
+ * \internal
+ * Constructs a PricingResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from PricingResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 PricingResponse::PricingResponse(PricingResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ PricingResponse::PricingResponse(PricingResponsePrivate * const d, QObject * con
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void PricingResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void PricingResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Pricing::PricingResponsePrivate
+ * \brief The PricingResponsePrivate class provides private implementation for PricingResponse.
+ * \internal
  *
- * @class  PricingResponsePrivate
- *
- * @brief  Private implementation for PricingResponse.
+ * \inmodule QtAwsPricing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PricingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PricingResponse instance.
+ * Constructs a PricingResponsePrivate object with public implementation \a q.
  */
 PricingResponsePrivate::PricingResponsePrivate(
     PricingResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

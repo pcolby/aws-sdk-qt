@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteServiceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteServiceRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a DeleteServiceRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 DeleteServiceRequestPrivate::DeleteServiceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, DeleteServiceRequest * const q)

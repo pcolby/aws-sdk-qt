@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::TagResourceResponse
- *
  * \brief The TagResourceResponse class provides an interace for DirectConnect TagResource responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new TagResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
@@ -63,6 +58,9 @@ TagResourceResponse::TagResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagResourceRequest * TagResourceResponse::request() const
 {
     Q_D(const TagResourceResponse);
@@ -70,9 +68,8 @@ const TagResourceRequest * TagResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect TagResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::TagResourceResponsePrivate
+ * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \class TagResourceResponsePrivate
- *
- * \brief Private implementation for TagResourceResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagResourceResponse instance.
+ * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
     TagResourceResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ TagResourceResponsePrivate::TagResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect TagResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {

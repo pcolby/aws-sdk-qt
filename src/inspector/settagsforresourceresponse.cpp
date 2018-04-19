@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::SetTagsForResourceResponse
- *
  * \brief The SetTagsForResourceResponse class provides an interace for Inspector SetTagsForResource responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new SetTagsForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetTagsForResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 SetTagsForResourceResponse::SetTagsForResourceResponse(
         const SetTagsForResourceRequest &request,
@@ -60,6 +55,9 @@ SetTagsForResourceResponse::SetTagsForResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetTagsForResourceRequest * SetTagsForResourceResponse::request() const
 {
     Q_D(const SetTagsForResourceResponse);
@@ -67,9 +65,8 @@ const SetTagsForResourceRequest * SetTagsForResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector SetTagsForResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector SetTagsForResource \a response.
  */
 void SetTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void SetTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::SetTagsForResourceResponsePrivate
+ * \brief The SetTagsForResourceResponsePrivate class provides private implementation for SetTagsForResourceResponse.
  * \internal
  *
- * \class SetTagsForResourceResponsePrivate
- *
- * \brief Private implementation for SetTagsForResourceResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetTagsForResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetTagsForResourceResponse instance.
+ * Constructs a SetTagsForResourceResponsePrivate object with public implementation \a q.
  */
 SetTagsForResourceResponsePrivate::SetTagsForResourceResponsePrivate(
     SetTagsForResourceResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ SetTagsForResourceResponsePrivate::SetTagsForResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector SetTagsForResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector SetTagsForResource response element from \a xml.
  */
 void SetTagsForResourceResponsePrivate::parseSetTagsForResourceResponse(QXmlStreamReader &xml)
 {

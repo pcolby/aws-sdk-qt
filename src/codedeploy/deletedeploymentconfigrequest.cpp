@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDeploymentConfigRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteDeploymentConfigRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDeploymentConfigRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 DeleteDeploymentConfigRequestPrivate::DeleteDeploymentConfigRequestPrivate(
     const CodeDeployRequest::Action action, DeleteDeploymentConfigRequest * const q)

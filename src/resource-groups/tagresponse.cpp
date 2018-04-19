@@ -29,10 +29,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::TagResponse
- *
  * \brief The TagResponse class provides an interace for ResourceGroups Tag responses.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -83,11 +82,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new TagResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagResponse object for \a reply to \a request, with parent \a parent.
  */
 TagResponse::TagResponse(
         const TagRequest &request,
@@ -99,6 +94,9 @@ TagResponse::TagResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagRequest * TagResponse::request() const
 {
     Q_D(const TagResponse);
@@ -106,9 +104,8 @@ const TagRequest * TagResponse::request() const
 }
 
 /*!
- * @brief  Parse a ResourceGroups Tag response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ResourceGroups Tag \a response.
  */
 void TagResponse::parseSuccess(QIODevice &response)
 {
@@ -118,19 +115,15 @@ void TagResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ResourceGroups::TagResponsePrivate
+ * \brief The TagResponsePrivate class provides private implementation for TagResponse.
  * \internal
  *
- * \class TagResponsePrivate
- *
- * \brief Private implementation for TagResponse.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagResponse instance.
+ * Constructs a TagResponsePrivate object with public implementation \a q.
  */
 TagResponsePrivate::TagResponsePrivate(
     TagResponse * const q) : ResourceGroupsResponsePrivate(q)
@@ -139,9 +132,7 @@ TagResponsePrivate::TagResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ResourceGroups TagResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ResourceGroups Tag response element from \a xml.
  */
 void TagResponsePrivate::parseTagResponse(QXmlStreamReader &xml)
 {

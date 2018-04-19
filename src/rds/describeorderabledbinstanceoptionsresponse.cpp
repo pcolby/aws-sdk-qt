@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeOrderableDBInstanceOptionsResponse
- *
  * \brief The DescribeOrderableDBInstanceOptionsResponse class provides an interace for RDS DescribeOrderableDBInstanceOptions responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeOrderableDBInstanceOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeOrderableDBInstanceOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeOrderableDBInstanceOptionsResponse::DescribeOrderableDBInstanceOptionsResponse(
         const DescribeOrderableDBInstanceOptionsRequest &request,
@@ -119,6 +114,9 @@ DescribeOrderableDBInstanceOptionsResponse::DescribeOrderableDBInstanceOptionsRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeOrderableDBInstanceOptionsRequest * DescribeOrderableDBInstanceOptionsResponse::request() const
 {
     Q_D(const DescribeOrderableDBInstanceOptionsResponse);
@@ -126,9 +124,8 @@ const DescribeOrderableDBInstanceOptionsRequest * DescribeOrderableDBInstanceOpt
 }
 
 /*!
- * @brief  Parse a RDS DescribeOrderableDBInstanceOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeOrderableDBInstanceOptions \a response.
  */
 void DescribeOrderableDBInstanceOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeOrderableDBInstanceOptionsResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::RDS::DescribeOrderableDBInstanceOptionsResponsePrivate
+ * \brief The DescribeOrderableDBInstanceOptionsResponsePrivate class provides private implementation for DescribeOrderableDBInstanceOptionsResponse.
  * \internal
  *
- * \class DescribeOrderableDBInstanceOptionsResponsePrivate
- *
- * \brief Private implementation for DescribeOrderableDBInstanceOptionsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOrderableDBInstanceOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeOrderableDBInstanceOptionsResponse instance.
+ * Constructs a DescribeOrderableDBInstanceOptionsResponsePrivate object with public implementation \a q.
  */
 DescribeOrderableDBInstanceOptionsResponsePrivate::DescribeOrderableDBInstanceOptionsResponsePrivate(
     DescribeOrderableDBInstanceOptionsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeOrderableDBInstanceOptionsResponsePrivate::DescribeOrderableDBInstanceOp
 }
 
 /*!
- * @brief  Parse an RDS DescribeOrderableDBInstanceOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeOrderableDBInstanceOptions response element from \a xml.
  */
 void DescribeOrderableDBInstanceOptionsResponsePrivate::parseDescribeOrderableDBInstanceOptionsResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeScheduledInstancesRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeScheduledInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeScheduledInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeScheduledInstancesRequestPrivate::DescribeScheduledInstancesRequestPrivate(
     const EC2Request::Action action, DescribeScheduledInstancesRequest * const q)

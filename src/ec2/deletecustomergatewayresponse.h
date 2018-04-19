@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCustomerGatewayResponse : public EC2Response {
 public:
     DeleteCustomerGatewayResponse(const DeleteCustomerGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCustomerGatewayRequest * request() const;
+    virtual const DeleteCustomerGatewayRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCustomerGatewayResponse)

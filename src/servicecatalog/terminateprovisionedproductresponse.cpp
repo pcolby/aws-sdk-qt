@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::TerminateProvisionedProductResponse
- *
  * \brief The TerminateProvisionedProductResponse class provides an interace for ServiceCatalog TerminateProvisionedProduct responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new TerminateProvisionedProductResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TerminateProvisionedProductResponse object for \a reply to \a request, with parent \a parent.
  */
 TerminateProvisionedProductResponse::TerminateProvisionedProductResponse(
         const TerminateProvisionedProductRequest &request,
@@ -61,6 +56,9 @@ TerminateProvisionedProductResponse::TerminateProvisionedProductResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TerminateProvisionedProductRequest * TerminateProvisionedProductResponse::request() const
 {
     Q_D(const TerminateProvisionedProductResponse);
@@ -68,9 +66,8 @@ const TerminateProvisionedProductRequest * TerminateProvisionedProductResponse::
 }
 
 /*!
- * @brief  Parse a ServiceCatalog TerminateProvisionedProduct response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog TerminateProvisionedProduct \a response.
  */
 void TerminateProvisionedProductResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void TerminateProvisionedProductResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::TerminateProvisionedProductResponsePrivate
+ * \brief The TerminateProvisionedProductResponsePrivate class provides private implementation for TerminateProvisionedProductResponse.
  * \internal
  *
- * \class TerminateProvisionedProductResponsePrivate
- *
- * \brief Private implementation for TerminateProvisionedProductResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateProvisionedProductResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TerminateProvisionedProductResponse instance.
+ * Constructs a TerminateProvisionedProductResponsePrivate object with public implementation \a q.
  */
 TerminateProvisionedProductResponsePrivate::TerminateProvisionedProductResponsePrivate(
     TerminateProvisionedProductResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ TerminateProvisionedProductResponsePrivate::TerminateProvisionedProductResponseP
 }
 
 /*!
- * @brief  Parse an ServiceCatalog TerminateProvisionedProductResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog TerminateProvisionedProduct response element from \a xml.
  */
 void TerminateProvisionedProductResponsePrivate::parseTerminateProvisionedProductResponse(QXmlStreamReader &xml)
 {

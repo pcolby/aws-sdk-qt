@@ -28,16 +28,13 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ServiceCatalogResponse
- *
  * \brief The ServiceCatalogResponse class provides an interface for ServiceCatalog responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @brief  Constructs a new ServiceCatalogResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ServiceCatalogResponse object with parent \a parent.
  */
 ServiceCatalogResponse::ServiceCatalogResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ServiceCatalogResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ServiceCatalogResponse::ServiceCatalogResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServiceCatalogResponse object.
- *
+ * \internal
+ * Constructs a ServiceCatalogResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ServiceCatalogResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ServiceCatalogResponse::ServiceCatalogResponse(ServiceCatalogResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ServiceCatalogResponse::ServiceCatalogResponse(ServiceCatalogResponsePrivate * c
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ServiceCatalogResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ServiceCatalogResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ServiceCatalog::ServiceCatalogResponsePrivate
+ * \brief The ServiceCatalogResponsePrivate class provides private implementation for ServiceCatalogResponse.
+ * \internal
  *
- * @class  ServiceCatalogResponsePrivate
- *
- * @brief  Private implementation for ServiceCatalogResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ServiceCatalogResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ServiceCatalogResponse instance.
+ * Constructs a ServiceCatalogResponsePrivate object with public implementation \a q.
  */
 ServiceCatalogResponsePrivate::ServiceCatalogResponsePrivate(
     ServiceCatalogResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -28,16 +28,13 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DirectConnectResponse
- *
  * \brief The DirectConnectResponse class provides an interface for DirectConnect responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @brief  Constructs a new DirectConnectResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a DirectConnectResponse object with parent \a parent.
  */
 DirectConnectResponse::DirectConnectResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new DirectConnectResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ DirectConnectResponse::DirectConnectResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DirectConnectResponse object.
- *
+ * \internal
+ * Constructs a DirectConnectResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DirectConnectResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 DirectConnectResponse::DirectConnectResponse(DirectConnectResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ DirectConnectResponse::DirectConnectResponse(DirectConnectResponsePrivate * cons
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void DirectConnectResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void DirectConnectResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::DirectConnect::DirectConnectResponsePrivate
+ * \brief The DirectConnectResponsePrivate class provides private implementation for DirectConnectResponse.
+ * \internal
  *
- * @class  DirectConnectResponsePrivate
- *
- * @brief  Private implementation for DirectConnectResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DirectConnectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DirectConnectResponse instance.
+ * Constructs a DirectConnectResponsePrivate object with public implementation \a q.
  */
 DirectConnectResponsePrivate::DirectConnectResponsePrivate(
     DirectConnectResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

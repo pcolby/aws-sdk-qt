@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifyClusterParameterGroupResponse
- *
  * \brief The ModifyClusterParameterGroupResponse class provides an interace for Redshift ModifyClusterParameterGroup responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifyClusterParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyClusterParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyClusterParameterGroupResponse::ModifyClusterParameterGroupResponse(
         const ModifyClusterParameterGroupRequest &request,
@@ -85,6 +80,9 @@ ModifyClusterParameterGroupResponse::ModifyClusterParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyClusterParameterGroupRequest * ModifyClusterParameterGroupResponse::request() const
 {
     Q_D(const ModifyClusterParameterGroupResponse);
@@ -92,9 +90,8 @@ const ModifyClusterParameterGroupRequest * ModifyClusterParameterGroupResponse::
 }
 
 /*!
- * @brief  Parse a Redshift ModifyClusterParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift ModifyClusterParameterGroup \a response.
  */
 void ModifyClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void ModifyClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::ModifyClusterParameterGroupResponsePrivate
+ * \brief The ModifyClusterParameterGroupResponsePrivate class provides private implementation for ModifyClusterParameterGroupResponse.
  * \internal
  *
- * \class ModifyClusterParameterGroupResponsePrivate
- *
- * \brief Private implementation for ModifyClusterParameterGroupResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyClusterParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyClusterParameterGroupResponse instance.
+ * Constructs a ModifyClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 ModifyClusterParameterGroupResponsePrivate::ModifyClusterParameterGroupResponsePrivate(
     ModifyClusterParameterGroupResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ ModifyClusterParameterGroupResponsePrivate::ModifyClusterParameterGroupResponseP
 }
 
 /*!
- * @brief  Parse an Redshift ModifyClusterParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift ModifyClusterParameterGroup response element from \a xml.
  */
 void ModifyClusterParameterGroupResponsePrivate::parseModifyClusterParameterGroupResponse(QXmlStreamReader &xml)
 {

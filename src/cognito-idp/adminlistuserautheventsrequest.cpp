@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminListUserAuthEventsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a AdminListUserAuthEventsRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminListUserAuthEventsRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminListUserAuthEventsRequestPrivate::AdminListUserAuthEventsRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminListUserAuthEventsRequest * const q)

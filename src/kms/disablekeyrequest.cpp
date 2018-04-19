@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * DisableKeyRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DisableKeyRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a DisableKeyRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 DisableKeyRequestPrivate::DisableKeyRequestPrivate(
     const KMSRequest::Action action, DisableKeyRequest * const q)

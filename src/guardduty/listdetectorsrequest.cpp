@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListDetectorsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListDetectorsRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a ListDetectorsRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 ListDetectorsRequestPrivate::ListDetectorsRequestPrivate(
     const GuardDutyRequest::Action action, ListDetectorsRequest * const q)

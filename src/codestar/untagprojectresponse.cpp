@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::UntagProjectResponse
- *
  * \brief The UntagProjectResponse class provides an interace for CodeStar UntagProject responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new UntagProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UntagProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 UntagProjectResponse::UntagProjectResponse(
         const UntagProjectRequest &request,
@@ -143,6 +138,9 @@ UntagProjectResponse::UntagProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UntagProjectRequest * UntagProjectResponse::request() const
 {
     Q_D(const UntagProjectResponse);
@@ -150,9 +148,8 @@ const UntagProjectRequest * UntagProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar UntagProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar UntagProject \a response.
  */
 void UntagProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void UntagProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::UntagProjectResponsePrivate
+ * \brief The UntagProjectResponsePrivate class provides private implementation for UntagProjectResponse.
  * \internal
  *
- * \class UntagProjectResponsePrivate
- *
- * \brief Private implementation for UntagProjectResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UntagProjectResponse instance.
+ * Constructs a UntagProjectResponsePrivate object with public implementation \a q.
  */
 UntagProjectResponsePrivate::UntagProjectResponsePrivate(
     UntagProjectResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ UntagProjectResponsePrivate::UntagProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar UntagProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar UntagProject response element from \a xml.
  */
 void UntagProjectResponsePrivate::parseUntagProjectResponse(QXmlStreamReader &xml)
 {

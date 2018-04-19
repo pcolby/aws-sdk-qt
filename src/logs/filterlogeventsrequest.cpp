@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * FilterLogEventsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a FilterLogEventsRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a FilterLogEventsRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 FilterLogEventsRequestPrivate::FilterLogEventsRequestPrivate(
     const CloudWatchLogsRequest::Action action, FilterLogEventsRequest * const q)

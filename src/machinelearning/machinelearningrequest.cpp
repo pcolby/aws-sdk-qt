@@ -67,7 +67,7 @@ namespace MachineLearning {
  */
 
 /*!
- * Constructs a[n] MachineLearningRequest object for MachineLearning \a action.
+ * Constructs a MachineLearningRequest object for MachineLearning \a action.
  */
 MachineLearningRequest::MachineLearningRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MachineLearningRequestPrivate(action, this))
@@ -267,8 +267,8 @@ QNetworkRequest MachineLearningRequest::unsignedRequest(const QUrl &endpoint) co
  */
 
 /*!
- * Constructs a MachineLearningRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a MachineLearningRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 MachineLearningRequestPrivate::MachineLearningRequestPrivate(const MachineLearningRequest::Action action, MachineLearningRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

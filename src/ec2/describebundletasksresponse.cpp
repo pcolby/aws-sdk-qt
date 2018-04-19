@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeBundleTasksResponse
- *
  * \brief The DescribeBundleTasksResponse class provides an interace for EC2 DescribeBundleTasks responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeBundleTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeBundleTasksResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeBundleTasksResponse::DescribeBundleTasksResponse(
         const DescribeBundleTasksRequest &request,
@@ -59,6 +54,9 @@ DescribeBundleTasksResponse::DescribeBundleTasksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeBundleTasksRequest * DescribeBundleTasksResponse::request() const
 {
     Q_D(const DescribeBundleTasksResponse);
@@ -66,9 +64,8 @@ const DescribeBundleTasksRequest * DescribeBundleTasksResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeBundleTasks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeBundleTasks \a response.
  */
 void DescribeBundleTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeBundleTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeBundleTasksResponsePrivate
+ * \brief The DescribeBundleTasksResponsePrivate class provides private implementation for DescribeBundleTasksResponse.
  * \internal
  *
- * \class DescribeBundleTasksResponsePrivate
- *
- * \brief Private implementation for DescribeBundleTasksResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBundleTasksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeBundleTasksResponse instance.
+ * Constructs a DescribeBundleTasksResponsePrivate object with public implementation \a q.
  */
 DescribeBundleTasksResponsePrivate::DescribeBundleTasksResponsePrivate(
     DescribeBundleTasksResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeBundleTasksResponsePrivate::DescribeBundleTasksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeBundleTasksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeBundleTasks response element from \a xml.
  */
 void DescribeBundleTasksResponsePrivate::parseDescribeBundleTasksResponse(QXmlStreamReader &xml)
 {

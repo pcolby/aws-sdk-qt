@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchGetRepositoriesResponse : public CodeCommitResponse {
 public:
     BatchGetRepositoriesResponse(const BatchGetRepositoriesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchGetRepositoriesRequest * request() const;
+    virtual const BatchGetRepositoriesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchGetRepositoriesResponse)

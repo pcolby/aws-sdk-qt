@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBaiduChannelRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteBaiduChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBaiduChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 DeleteBaiduChannelRequestPrivate::DeleteBaiduChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteBaiduChannelRequest * const q)

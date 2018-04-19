@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * UpdatePullRequestTitleRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdatePullRequestTitleRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a UpdatePullRequestTitleRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 UpdatePullRequestTitleRequestPrivate::UpdatePullRequestTitleRequestPrivate(
     const CodeCommitRequest::Action action, UpdatePullRequestTitleRequest * const q)

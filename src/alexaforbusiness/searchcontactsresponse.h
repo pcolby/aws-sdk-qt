@@ -34,10 +34,10 @@ class QTAWS_EXPORT SearchContactsResponse : public AlexaForBusinessResponse {
 public:
     SearchContactsResponse(const SearchContactsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SearchContactsRequest * request() const;
+    virtual const SearchContactsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SearchContactsResponse)

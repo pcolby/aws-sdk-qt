@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::ListBuildsResponse
- *
  * \brief The ListBuildsResponse class provides an interace for GameLift ListBuilds responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new ListBuildsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListBuildsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListBuildsResponse::ListBuildsResponse(
         const ListBuildsRequest &request,
@@ -491,6 +486,9 @@ ListBuildsResponse::ListBuildsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListBuildsRequest * ListBuildsResponse::request() const
 {
     Q_D(const ListBuildsResponse);
@@ -498,9 +496,8 @@ const ListBuildsRequest * ListBuildsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift ListBuilds response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift ListBuilds \a response.
  */
 void ListBuildsResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void ListBuildsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::ListBuildsResponsePrivate
+ * \brief The ListBuildsResponsePrivate class provides private implementation for ListBuildsResponse.
  * \internal
  *
- * \class ListBuildsResponsePrivate
- *
- * \brief Private implementation for ListBuildsResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBuildsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListBuildsResponse instance.
+ * Constructs a ListBuildsResponsePrivate object with public implementation \a q.
  */
 ListBuildsResponsePrivate::ListBuildsResponsePrivate(
     ListBuildsResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ ListBuildsResponsePrivate::ListBuildsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift ListBuildsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift ListBuilds response element from \a xml.
  */
 void ListBuildsResponsePrivate::parseListBuildsResponse(QXmlStreamReader &xml)
 {

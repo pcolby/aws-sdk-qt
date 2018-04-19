@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateCertificateRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateCertificateRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a UpdateCertificateRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 UpdateCertificateRequestPrivate::UpdateCertificateRequestPrivate(
     const IoTRequest::Action action, UpdateCertificateRequest * const q)

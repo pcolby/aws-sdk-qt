@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * SearchProductsAsAdminRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a SearchProductsAsAdminRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a SearchProductsAsAdminRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 SearchProductsAsAdminRequestPrivate::SearchProductsAsAdminRequestPrivate(
     const ServiceCatalogRequest::Action action, SearchProductsAsAdminRequest * const q)

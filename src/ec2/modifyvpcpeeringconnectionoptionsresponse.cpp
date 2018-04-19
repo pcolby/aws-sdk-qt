@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcPeeringConnectionOptionsResponse
- *
  * \brief The ModifyVpcPeeringConnectionOptionsResponse class provides an interace for EC2 ModifyVpcPeeringConnectionOptions responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyVpcPeeringConnectionOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyVpcPeeringConnectionOptionsResponse::ModifyVpcPeeringConnectionOptionsResponse(
         const ModifyVpcPeeringConnectionOptionsRequest &request,
@@ -59,6 +54,9 @@ ModifyVpcPeeringConnectionOptionsResponse::ModifyVpcPeeringConnectionOptionsResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyVpcPeeringConnectionOptionsRequest * ModifyVpcPeeringConnectionOptionsResponse::request() const
 {
     Q_D(const ModifyVpcPeeringConnectionOptionsResponse);
@@ -66,9 +64,8 @@ const ModifyVpcPeeringConnectionOptionsRequest * ModifyVpcPeeringConnectionOptio
 }
 
 /*!
- * @brief  Parse a EC2 ModifyVpcPeeringConnectionOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyVpcPeeringConnectionOptions \a response.
  */
 void ModifyVpcPeeringConnectionOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyVpcPeeringConnectionOptionsResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::EC2::ModifyVpcPeeringConnectionOptionsResponsePrivate
+ * \brief The ModifyVpcPeeringConnectionOptionsResponsePrivate class provides private implementation for ModifyVpcPeeringConnectionOptionsResponse.
  * \internal
  *
- * \class ModifyVpcPeeringConnectionOptionsResponsePrivate
- *
- * \brief Private implementation for ModifyVpcPeeringConnectionOptionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcPeeringConnectionOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyVpcPeeringConnectionOptionsResponse instance.
+ * Constructs a ModifyVpcPeeringConnectionOptionsResponsePrivate object with public implementation \a q.
  */
 ModifyVpcPeeringConnectionOptionsResponsePrivate::ModifyVpcPeeringConnectionOptionsResponsePrivate(
     ModifyVpcPeeringConnectionOptionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyVpcPeeringConnectionOptionsResponsePrivate::ModifyVpcPeeringConnectionOpti
 }
 
 /*!
- * @brief  Parse an EC2 ModifyVpcPeeringConnectionOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyVpcPeeringConnectionOptions response element from \a xml.
  */
 void ModifyVpcPeeringConnectionOptionsResponsePrivate::parseModifyVpcPeeringConnectionOptionsResponse(QXmlStreamReader &xml)
 {

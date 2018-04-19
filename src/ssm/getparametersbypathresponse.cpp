@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetParametersByPathResponse
- *
  * \brief The GetParametersByPathResponse class provides an interace for SSM GetParametersByPath responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetParametersByPathResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetParametersByPathResponse object for \a reply to \a request, with parent \a parent.
  */
 GetParametersByPathResponse::GetParametersByPathResponse(
         const GetParametersByPathRequest &request,
@@ -79,6 +74,9 @@ GetParametersByPathResponse::GetParametersByPathResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetParametersByPathRequest * GetParametersByPathResponse::request() const
 {
     Q_D(const GetParametersByPathResponse);
@@ -86,9 +84,8 @@ const GetParametersByPathRequest * GetParametersByPathResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM GetParametersByPath response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM GetParametersByPath \a response.
  */
 void GetParametersByPathResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void GetParametersByPathResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::GetParametersByPathResponsePrivate
+ * \brief The GetParametersByPathResponsePrivate class provides private implementation for GetParametersByPathResponse.
  * \internal
  *
- * \class GetParametersByPathResponsePrivate
- *
- * \brief Private implementation for GetParametersByPathResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetParametersByPathResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetParametersByPathResponse instance.
+ * Constructs a GetParametersByPathResponsePrivate object with public implementation \a q.
  */
 GetParametersByPathResponsePrivate::GetParametersByPathResponsePrivate(
     GetParametersByPathResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ GetParametersByPathResponsePrivate::GetParametersByPathResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM GetParametersByPathResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM GetParametersByPath response element from \a xml.
  */
 void GetParametersByPathResponsePrivate::parseGetParametersByPathResponse(QXmlStreamReader &xml)
 {

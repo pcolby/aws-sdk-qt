@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifySnapshotAttributeRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ModifySnapshotAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifySnapshotAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifySnapshotAttributeRequestPrivate::ModifySnapshotAttributeRequestPrivate(
     const EC2Request::Action action, ModifySnapshotAttributeRequest * const q)

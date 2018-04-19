@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RunInstancesResponse
- *
  * \brief The RunInstancesResponse class provides an interace for EC2 RunInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RunInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RunInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 RunInstancesResponse::RunInstancesResponse(
         const RunInstancesRequest &request,
@@ -59,6 +54,9 @@ RunInstancesResponse::RunInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RunInstancesRequest * RunInstancesResponse::request() const
 {
     Q_D(const RunInstancesResponse);
@@ -66,9 +64,8 @@ const RunInstancesRequest * RunInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 RunInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 RunInstances \a response.
  */
 void RunInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void RunInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::RunInstancesResponsePrivate
+ * \brief The RunInstancesResponsePrivate class provides private implementation for RunInstancesResponse.
  * \internal
  *
- * \class RunInstancesResponsePrivate
- *
- * \brief Private implementation for RunInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RunInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RunInstancesResponse instance.
+ * Constructs a RunInstancesResponsePrivate object with public implementation \a q.
  */
 RunInstancesResponsePrivate::RunInstancesResponsePrivate(
     RunInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ RunInstancesResponsePrivate::RunInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 RunInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 RunInstances response element from \a xml.
  */
 void RunInstancesResponsePrivate::parseRunInstancesResponse(QXmlStreamReader &xml)
 {

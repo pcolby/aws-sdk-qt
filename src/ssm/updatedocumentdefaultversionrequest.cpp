@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDocumentDefaultVersionRequest::response
  */
 
 /*!
- *
- * Constructs a UpdateDocumentDefaultVersionRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDocumentDefaultVersionRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 UpdateDocumentDefaultVersionRequestPrivate::UpdateDocumentDefaultVersionRequestPrivate(
     const SSMRequest::Action action, UpdateDocumentDefaultVersionRequest * const q)

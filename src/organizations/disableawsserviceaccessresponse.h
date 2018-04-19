@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisableAWSServiceAccessResponse : public OrganizationsRespons
 public:
     DisableAWSServiceAccessResponse(const DisableAWSServiceAccessRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisableAWSServiceAccessRequest * request() const;
+    virtual const DisableAWSServiceAccessRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisableAWSServiceAccessResponse)

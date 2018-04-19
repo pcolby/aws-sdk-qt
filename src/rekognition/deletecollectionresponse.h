@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCollectionResponse : public RekognitionResponse {
 public:
     DeleteCollectionResponse(const DeleteCollectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCollectionRequest * request() const;
+    virtual const DeleteCollectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCollectionResponse)

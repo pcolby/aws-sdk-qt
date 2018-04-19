@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListSizeConstraintSetsResponse : public WAFResponse {
 public:
     ListSizeConstraintSetsResponse(const ListSizeConstraintSetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListSizeConstraintSetsRequest * request() const;
+    virtual const ListSizeConstraintSetsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListSizeConstraintSetsResponse)

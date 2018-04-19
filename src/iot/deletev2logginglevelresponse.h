@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteV2LoggingLevelResponse : public IoTResponse {
 public:
     DeleteV2LoggingLevelResponse(const DeleteV2LoggingLevelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteV2LoggingLevelRequest * request() const;
+    virtual const DeleteV2LoggingLevelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteV2LoggingLevelResponse)

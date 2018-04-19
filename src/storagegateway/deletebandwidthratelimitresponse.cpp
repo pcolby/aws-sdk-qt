@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteBandwidthRateLimitResponse
- *
  * \brief The DeleteBandwidthRateLimitResponse class provides an interace for StorageGateway DeleteBandwidthRateLimit responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteBandwidthRateLimitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBandwidthRateLimitResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBandwidthRateLimitResponse::DeleteBandwidthRateLimitResponse(
         const DeleteBandwidthRateLimitRequest &request,
@@ -124,6 +119,9 @@ DeleteBandwidthRateLimitResponse::DeleteBandwidthRateLimitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBandwidthRateLimitRequest * DeleteBandwidthRateLimitResponse::request() const
 {
     Q_D(const DeleteBandwidthRateLimitResponse);
@@ -131,9 +129,8 @@ const DeleteBandwidthRateLimitRequest * DeleteBandwidthRateLimitResponse::reques
 }
 
 /*!
- * @brief  Parse a StorageGateway DeleteBandwidthRateLimit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DeleteBandwidthRateLimit \a response.
  */
 void DeleteBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DeleteBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DeleteBandwidthRateLimitResponsePrivate
+ * \brief The DeleteBandwidthRateLimitResponsePrivate class provides private implementation for DeleteBandwidthRateLimitResponse.
  * \internal
  *
- * \class DeleteBandwidthRateLimitResponsePrivate
- *
- * \brief Private implementation for DeleteBandwidthRateLimitResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBandwidthRateLimitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBandwidthRateLimitResponse instance.
+ * Constructs a DeleteBandwidthRateLimitResponsePrivate object with public implementation \a q.
  */
 DeleteBandwidthRateLimitResponsePrivate::DeleteBandwidthRateLimitResponsePrivate(
     DeleteBandwidthRateLimitResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DeleteBandwidthRateLimitResponsePrivate::DeleteBandwidthRateLimitResponsePrivate
 }
 
 /*!
- * @brief  Parse an StorageGateway DeleteBandwidthRateLimitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DeleteBandwidthRateLimit response element from \a xml.
  */
 void DeleteBandwidthRateLimitResponsePrivate::parseDeleteBandwidthRateLimitResponse(QXmlStreamReader &xml)
 {

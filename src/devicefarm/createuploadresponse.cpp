@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::CreateUploadResponse
- *
  * \brief The CreateUploadResponse class provides an interace for DeviceFarm CreateUpload responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new CreateUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateUploadResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateUploadResponse::CreateUploadResponse(
         const CreateUploadRequest &request,
@@ -57,6 +52,9 @@ CreateUploadResponse::CreateUploadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateUploadRequest * CreateUploadResponse::request() const
 {
     Q_D(const CreateUploadResponse);
@@ -64,9 +62,8 @@ const CreateUploadRequest * CreateUploadResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm CreateUpload response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm CreateUpload \a response.
  */
 void CreateUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void CreateUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::CreateUploadResponsePrivate
+ * \brief The CreateUploadResponsePrivate class provides private implementation for CreateUploadResponse.
  * \internal
  *
- * \class CreateUploadResponsePrivate
- *
- * \brief Private implementation for CreateUploadResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUploadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateUploadResponse instance.
+ * Constructs a CreateUploadResponsePrivate object with public implementation \a q.
  */
 CreateUploadResponsePrivate::CreateUploadResponsePrivate(
     CreateUploadResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ CreateUploadResponsePrivate::CreateUploadResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm CreateUploadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm CreateUpload response element from \a xml.
  */
 void CreateUploadResponsePrivate::parseCreateUploadResponse(QXmlStreamReader &xml)
 {

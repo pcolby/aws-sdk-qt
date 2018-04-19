@@ -29,10 +29,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::DescribeAlarmHistoryResponse
- *
  * \brief The DescribeAlarmHistoryResponse class provides an interace for CloudWatch DescribeAlarmHistory responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -53,11 +52,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new DescribeAlarmHistoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAlarmHistoryResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAlarmHistoryResponse::DescribeAlarmHistoryResponse(
         const DescribeAlarmHistoryRequest &request,
@@ -69,6 +64,9 @@ DescribeAlarmHistoryResponse::DescribeAlarmHistoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAlarmHistoryRequest * DescribeAlarmHistoryResponse::request() const
 {
     Q_D(const DescribeAlarmHistoryResponse);
@@ -76,9 +74,8 @@ const DescribeAlarmHistoryRequest * DescribeAlarmHistoryResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudWatch DescribeAlarmHistory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatch DescribeAlarmHistory \a response.
  */
 void DescribeAlarmHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeAlarmHistoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatch::DescribeAlarmHistoryResponsePrivate
+ * \brief The DescribeAlarmHistoryResponsePrivate class provides private implementation for DescribeAlarmHistoryResponse.
  * \internal
  *
- * \class DescribeAlarmHistoryResponsePrivate
- *
- * \brief Private implementation for DescribeAlarmHistoryResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAlarmHistoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAlarmHistoryResponse instance.
+ * Constructs a DescribeAlarmHistoryResponsePrivate object with public implementation \a q.
  */
 DescribeAlarmHistoryResponsePrivate::DescribeAlarmHistoryResponsePrivate(
     DescribeAlarmHistoryResponse * const q) : CloudWatchResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeAlarmHistoryResponsePrivate::DescribeAlarmHistoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatch DescribeAlarmHistoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatch DescribeAlarmHistory response element from \a xml.
  */
 void DescribeAlarmHistoryResponsePrivate::parseDescribeAlarmHistoryResponse(QXmlStreamReader &xml)
 {

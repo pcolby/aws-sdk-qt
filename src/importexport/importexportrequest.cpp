@@ -45,7 +45,7 @@ namespace ImportExport {
  */
 
 /*!
- * Constructs a[n] ImportExportRequest object for ImportExport \a action.
+ * Constructs a ImportExportRequest object for ImportExport \a action.
  */
 ImportExportRequest::ImportExportRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ImportExportRequestPrivate(action, this))
@@ -245,8 +245,8 @@ QNetworkRequest ImportExportRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a ImportExportRequestPrivate object for ImportExport \a action with,
- * public implementation \a q.
+ * Constructs a ImportExportRequestPrivate object for ImportExport \a action,
+ * with public implementation \a q.
  */
 ImportExportRequestPrivate::ImportExportRequestPrivate(const ImportExportRequest::Action action, ImportExportRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * CreatePullRequestRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CreatePullRequestRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a CreatePullRequestRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 CreatePullRequestRequestPrivate::CreatePullRequestRequestPrivate(
     const CodeCommitRequest::Action action, CreatePullRequestRequest * const q)

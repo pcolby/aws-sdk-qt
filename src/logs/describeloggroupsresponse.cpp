@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DescribeLogGroupsResponse
- *
  * \brief The DescribeLogGroupsResponse class provides an interace for CloudWatchLogs DescribeLogGroups responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DescribeLogGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLogGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLogGroupsResponse::DescribeLogGroupsResponse(
         const DescribeLogGroupsRequest &request,
@@ -84,6 +79,9 @@ DescribeLogGroupsResponse::DescribeLogGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLogGroupsRequest * DescribeLogGroupsResponse::request() const
 {
     Q_D(const DescribeLogGroupsResponse);
@@ -91,9 +89,8 @@ const DescribeLogGroupsRequest * DescribeLogGroupsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DescribeLogGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DescribeLogGroups \a response.
  */
 void DescribeLogGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeLogGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DescribeLogGroupsResponsePrivate
+ * \brief The DescribeLogGroupsResponsePrivate class provides private implementation for DescribeLogGroupsResponse.
  * \internal
  *
- * \class DescribeLogGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeLogGroupsResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLogGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLogGroupsResponse instance.
+ * Constructs a DescribeLogGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeLogGroupsResponsePrivate::DescribeLogGroupsResponsePrivate(
     DescribeLogGroupsResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeLogGroupsResponsePrivate::DescribeLogGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DescribeLogGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DescribeLogGroups response element from \a xml.
  */
 void DescribeLogGroupsResponsePrivate::parseDescribeLogGroupsResponse(QXmlStreamReader &xml)
 {

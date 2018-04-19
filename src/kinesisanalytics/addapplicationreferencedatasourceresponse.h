@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddApplicationReferenceDataSourceResponse : public KinesisAna
 public:
     AddApplicationReferenceDataSourceResponse(const AddApplicationReferenceDataSourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddApplicationReferenceDataSourceRequest * request() const;
+    virtual const AddApplicationReferenceDataSourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddApplicationReferenceDataSourceResponse)

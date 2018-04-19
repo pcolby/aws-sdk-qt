@@ -28,16 +28,13 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ElastiCacheResponse
- *
  * \brief The ElastiCacheResponse class provides an interface for ElastiCache responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @brief  Constructs a new ElastiCacheResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ElastiCacheResponse object with parent \a parent.
  */
 ElastiCacheResponse::ElastiCacheResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ElastiCacheResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ElastiCacheResponse::ElastiCacheResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElastiCacheResponse object.
- *
+ * \internal
+ * Constructs a ElastiCacheResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElastiCacheResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ElastiCacheResponse::ElastiCacheResponse(ElastiCacheResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ElastiCacheResponse::ElastiCacheResponse(ElastiCacheResponsePrivate * const d, Q
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ElastiCacheResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ElastiCacheResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ElastiCache::ElastiCacheResponsePrivate
+ * \brief The ElastiCacheResponsePrivate class provides private implementation for ElastiCacheResponse.
+ * \internal
  *
- * @class  ElastiCacheResponsePrivate
- *
- * @brief  Private implementation for ElastiCacheResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElastiCacheResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ElastiCacheResponse instance.
+ * Constructs a ElastiCacheResponsePrivate object with public implementation \a q.
  */
 ElastiCacheResponsePrivate::ElastiCacheResponsePrivate(
     ElastiCacheResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeclineInvitationsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeclineInvitationsRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a DeclineInvitationsRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 DeclineInvitationsRequestPrivate::DeclineInvitationsRequestPrivate(
     const GuardDutyRequest::Action action, DeclineInvitationsRequest * const q)

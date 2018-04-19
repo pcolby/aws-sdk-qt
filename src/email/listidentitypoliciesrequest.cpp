@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListIdentityPoliciesRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListIdentityPoliciesRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a ListIdentityPoliciesRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 ListIdentityPoliciesRequestPrivate::ListIdentityPoliciesRequestPrivate(
     const SESRequest::Action action, ListIdentityPoliciesRequest * const q)

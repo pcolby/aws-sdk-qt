@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteDBClusterSnapshotResponse
- *
  * \brief The DeleteDBClusterSnapshotResponse class provides an interace for RDS DeleteDBClusterSnapshot responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteDBClusterSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDBClusterSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDBClusterSnapshotResponse::DeleteDBClusterSnapshotResponse(
         const DeleteDBClusterSnapshotRequest &request,
@@ -119,6 +114,9 @@ DeleteDBClusterSnapshotResponse::DeleteDBClusterSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDBClusterSnapshotRequest * DeleteDBClusterSnapshotResponse::request() const
 {
     Q_D(const DeleteDBClusterSnapshotResponse);
@@ -126,9 +124,8 @@ const DeleteDBClusterSnapshotRequest * DeleteDBClusterSnapshotResponse::request(
 }
 
 /*!
- * @brief  Parse a RDS DeleteDBClusterSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DeleteDBClusterSnapshot \a response.
  */
 void DeleteDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DeleteDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DeleteDBClusterSnapshotResponsePrivate
+ * \brief The DeleteDBClusterSnapshotResponsePrivate class provides private implementation for DeleteDBClusterSnapshotResponse.
  * \internal
  *
- * \class DeleteDBClusterSnapshotResponsePrivate
- *
- * \brief Private implementation for DeleteDBClusterSnapshotResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDBClusterSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDBClusterSnapshotResponse instance.
+ * Constructs a DeleteDBClusterSnapshotResponsePrivate object with public implementation \a q.
  */
 DeleteDBClusterSnapshotResponsePrivate::DeleteDBClusterSnapshotResponsePrivate(
     DeleteDBClusterSnapshotResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DeleteDBClusterSnapshotResponsePrivate::DeleteDBClusterSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DeleteDBClusterSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DeleteDBClusterSnapshot response element from \a xml.
  */
 void DeleteDBClusterSnapshotResponsePrivate::parseDeleteDBClusterSnapshotResponse(QXmlStreamReader &xml)
 {

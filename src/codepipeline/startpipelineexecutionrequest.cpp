@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * StartPipelineExecutionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a StartPipelineExecutionRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a StartPipelineExecutionRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 StartPipelineExecutionRequestPrivate::StartPipelineExecutionRequestPrivate(
     const CodePipelineRequest::Action action, StartPipelineExecutionRequest * const q)

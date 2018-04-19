@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DeleteGeoMatchSetResponse
- *
  * \brief The DeleteGeoMatchSetResponse class provides an interace for WAFRegional DeleteGeoMatchSet responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DeleteGeoMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteGeoMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteGeoMatchSetResponse::DeleteGeoMatchSetResponse(
         const DeleteGeoMatchSetRequest &request,
@@ -62,6 +57,9 @@ DeleteGeoMatchSetResponse::DeleteGeoMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteGeoMatchSetRequest * DeleteGeoMatchSetResponse::request() const
 {
     Q_D(const DeleteGeoMatchSetResponse);
@@ -69,9 +67,8 @@ const DeleteGeoMatchSetRequest * DeleteGeoMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional DeleteGeoMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional DeleteGeoMatchSet \a response.
  */
 void DeleteGeoMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DeleteGeoMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::DeleteGeoMatchSetResponsePrivate
+ * \brief The DeleteGeoMatchSetResponsePrivate class provides private implementation for DeleteGeoMatchSetResponse.
  * \internal
  *
- * \class DeleteGeoMatchSetResponsePrivate
- *
- * \brief Private implementation for DeleteGeoMatchSetResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGeoMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteGeoMatchSetResponse instance.
+ * Constructs a DeleteGeoMatchSetResponsePrivate object with public implementation \a q.
  */
 DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponsePrivate(
     DeleteGeoMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ DeleteGeoMatchSetResponsePrivate::DeleteGeoMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional DeleteGeoMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional DeleteGeoMatchSet response element from \a xml.
  */
 void DeleteGeoMatchSetResponsePrivate::parseDeleteGeoMatchSetResponse(QXmlStreamReader &xml)
 {

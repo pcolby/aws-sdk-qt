@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::GetHostReservationPurchasePreviewResponse
- *
  * \brief The GetHostReservationPurchasePreviewResponse class provides an interace for EC2 GetHostReservationPurchasePreview responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new GetHostReservationPurchasePreviewResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetHostReservationPurchasePreviewResponse object for \a reply to \a request, with parent \a parent.
  */
 GetHostReservationPurchasePreviewResponse::GetHostReservationPurchasePreviewResponse(
         const GetHostReservationPurchasePreviewRequest &request,
@@ -59,6 +54,9 @@ GetHostReservationPurchasePreviewResponse::GetHostReservationPurchasePreviewResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetHostReservationPurchasePreviewRequest * GetHostReservationPurchasePreviewResponse::request() const
 {
     Q_D(const GetHostReservationPurchasePreviewResponse);
@@ -66,9 +64,8 @@ const GetHostReservationPurchasePreviewRequest * GetHostReservationPurchasePrevi
 }
 
 /*!
- * @brief  Parse a EC2 GetHostReservationPurchasePreview response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 GetHostReservationPurchasePreview \a response.
  */
 void GetHostReservationPurchasePreviewResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetHostReservationPurchasePreviewResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::EC2::GetHostReservationPurchasePreviewResponsePrivate
+ * \brief The GetHostReservationPurchasePreviewResponsePrivate class provides private implementation for GetHostReservationPurchasePreviewResponse.
  * \internal
  *
- * \class GetHostReservationPurchasePreviewResponsePrivate
- *
- * \brief Private implementation for GetHostReservationPurchasePreviewResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHostReservationPurchasePreviewResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetHostReservationPurchasePreviewResponse instance.
+ * Constructs a GetHostReservationPurchasePreviewResponsePrivate object with public implementation \a q.
  */
 GetHostReservationPurchasePreviewResponsePrivate::GetHostReservationPurchasePreviewResponsePrivate(
     GetHostReservationPurchasePreviewResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ GetHostReservationPurchasePreviewResponsePrivate::GetHostReservationPurchasePrev
 }
 
 /*!
- * @brief  Parse an EC2 GetHostReservationPurchasePreviewResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 GetHostReservationPurchasePreview response element from \a xml.
  */
 void GetHostReservationPurchasePreviewResponsePrivate::parseGetHostReservationPurchasePreviewResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeTableRestoreStatusResponse
- *
  * \brief The DescribeTableRestoreStatusResponse class provides an interace for Redshift DescribeTableRestoreStatus responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeTableRestoreStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTableRestoreStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTableRestoreStatusResponse::DescribeTableRestoreStatusResponse(
         const DescribeTableRestoreStatusRequest &request,
@@ -85,6 +80,9 @@ DescribeTableRestoreStatusResponse::DescribeTableRestoreStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTableRestoreStatusRequest * DescribeTableRestoreStatusResponse::request() const
 {
     Q_D(const DescribeTableRestoreStatusResponse);
@@ -92,9 +90,8 @@ const DescribeTableRestoreStatusRequest * DescribeTableRestoreStatusResponse::re
 }
 
 /*!
- * @brief  Parse a Redshift DescribeTableRestoreStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeTableRestoreStatus \a response.
  */
 void DescribeTableRestoreStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeTableRestoreStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeTableRestoreStatusResponsePrivate
+ * \brief The DescribeTableRestoreStatusResponsePrivate class provides private implementation for DescribeTableRestoreStatusResponse.
  * \internal
  *
- * \class DescribeTableRestoreStatusResponsePrivate
- *
- * \brief Private implementation for DescribeTableRestoreStatusResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTableRestoreStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTableRestoreStatusResponse instance.
+ * Constructs a DescribeTableRestoreStatusResponsePrivate object with public implementation \a q.
  */
 DescribeTableRestoreStatusResponsePrivate::DescribeTableRestoreStatusResponsePrivate(
     DescribeTableRestoreStatusResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeTableRestoreStatusResponsePrivate::DescribeTableRestoreStatusResponsePri
 }
 
 /*!
- * @brief  Parse an Redshift DescribeTableRestoreStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeTableRestoreStatus response element from \a xml.
  */
 void DescribeTableRestoreStatusResponsePrivate::parseDescribeTableRestoreStatusResponse(QXmlStreamReader &xml)
 {

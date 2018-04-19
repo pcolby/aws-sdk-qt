@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListTargetsForPolicyResponse
- *
  * \brief The ListTargetsForPolicyResponse class provides an interace for IoT ListTargetsForPolicy responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListTargetsForPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTargetsForPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTargetsForPolicyResponse::ListTargetsForPolicyResponse(
         const ListTargetsForPolicyRequest &request,
@@ -66,6 +61,9 @@ ListTargetsForPolicyResponse::ListTargetsForPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTargetsForPolicyRequest * ListTargetsForPolicyResponse::request() const
 {
     Q_D(const ListTargetsForPolicyResponse);
@@ -73,9 +71,8 @@ const ListTargetsForPolicyRequest * ListTargetsForPolicyResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IoT ListTargetsForPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListTargetsForPolicy \a response.
  */
 void ListTargetsForPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListTargetsForPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListTargetsForPolicyResponsePrivate
+ * \brief The ListTargetsForPolicyResponsePrivate class provides private implementation for ListTargetsForPolicyResponse.
  * \internal
  *
- * \class ListTargetsForPolicyResponsePrivate
- *
- * \brief Private implementation for ListTargetsForPolicyResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTargetsForPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTargetsForPolicyResponse instance.
+ * Constructs a ListTargetsForPolicyResponsePrivate object with public implementation \a q.
  */
 ListTargetsForPolicyResponsePrivate::ListTargetsForPolicyResponsePrivate(
     ListTargetsForPolicyResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListTargetsForPolicyResponsePrivate::ListTargetsForPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListTargetsForPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListTargetsForPolicy response element from \a xml.
  */
 void ListTargetsForPolicyResponsePrivate::parseListTargetsForPolicyResponse(QXmlStreamReader &xml)
 {

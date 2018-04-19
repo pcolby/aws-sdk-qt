@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteRolePolicyResponse : public IAMResponse {
 public:
     DeleteRolePolicyResponse(const DeleteRolePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteRolePolicyRequest * request() const;
+    virtual const DeleteRolePolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteRolePolicyResponse)

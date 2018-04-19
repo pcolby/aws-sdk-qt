@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRoomRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a UpdateRoomRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRoomRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 UpdateRoomRequestPrivate::UpdateRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateRoomRequest * const q)

@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::AssociateServiceRoleToAccountResponse
- *
  * \brief The AssociateServiceRoleToAccountResponse class provides an interace for Greengrass AssociateServiceRoleToAccount responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new AssociateServiceRoleToAccountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateServiceRoleToAccountResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateServiceRoleToAccountResponse::AssociateServiceRoleToAccountResponse(
         const AssociateServiceRoleToAccountRequest &request,
@@ -58,6 +53,9 @@ AssociateServiceRoleToAccountResponse::AssociateServiceRoleToAccountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateServiceRoleToAccountRequest * AssociateServiceRoleToAccountResponse::request() const
 {
     Q_D(const AssociateServiceRoleToAccountResponse);
@@ -65,9 +63,8 @@ const AssociateServiceRoleToAccountRequest * AssociateServiceRoleToAccountRespon
 }
 
 /*!
- * @brief  Parse a Greengrass AssociateServiceRoleToAccount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass AssociateServiceRoleToAccount \a response.
  */
 void AssociateServiceRoleToAccountResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void AssociateServiceRoleToAccountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::AssociateServiceRoleToAccountResponsePrivate
+ * \brief The AssociateServiceRoleToAccountResponsePrivate class provides private implementation for AssociateServiceRoleToAccountResponse.
  * \internal
  *
- * \class AssociateServiceRoleToAccountResponsePrivate
- *
- * \brief Private implementation for AssociateServiceRoleToAccountResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateServiceRoleToAccountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateServiceRoleToAccountResponse instance.
+ * Constructs a AssociateServiceRoleToAccountResponsePrivate object with public implementation \a q.
  */
 AssociateServiceRoleToAccountResponsePrivate::AssociateServiceRoleToAccountResponsePrivate(
     AssociateServiceRoleToAccountResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ AssociateServiceRoleToAccountResponsePrivate::AssociateServiceRoleToAccountRespo
 }
 
 /*!
- * @brief  Parse an Greengrass AssociateServiceRoleToAccountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass AssociateServiceRoleToAccount response element from \a xml.
  */
 void AssociateServiceRoleToAccountResponsePrivate::parseAssociateServiceRoleToAccountResponse(QXmlStreamReader &xml)
 {

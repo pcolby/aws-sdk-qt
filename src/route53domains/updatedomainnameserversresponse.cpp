@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::UpdateDomainNameserversResponse
- *
  * \brief The UpdateDomainNameserversResponse class provides an interace for Route53Domains UpdateDomainNameservers responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new UpdateDomainNameserversResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDomainNameserversResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDomainNameserversResponse::UpdateDomainNameserversResponse(
         const UpdateDomainNameserversRequest &request,
@@ -56,6 +51,9 @@ UpdateDomainNameserversResponse::UpdateDomainNameserversResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDomainNameserversRequest * UpdateDomainNameserversResponse::request() const
 {
     Q_D(const UpdateDomainNameserversResponse);
@@ -63,9 +61,8 @@ const UpdateDomainNameserversRequest * UpdateDomainNameserversResponse::request(
 }
 
 /*!
- * @brief  Parse a Route53Domains UpdateDomainNameservers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains UpdateDomainNameservers \a response.
  */
 void UpdateDomainNameserversResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void UpdateDomainNameserversResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::UpdateDomainNameserversResponsePrivate
+ * \brief The UpdateDomainNameserversResponsePrivate class provides private implementation for UpdateDomainNameserversResponse.
  * \internal
  *
- * \class UpdateDomainNameserversResponsePrivate
- *
- * \brief Private implementation for UpdateDomainNameserversResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDomainNameserversResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDomainNameserversResponse instance.
+ * Constructs a UpdateDomainNameserversResponsePrivate object with public implementation \a q.
  */
 UpdateDomainNameserversResponsePrivate::UpdateDomainNameserversResponsePrivate(
     UpdateDomainNameserversResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ UpdateDomainNameserversResponsePrivate::UpdateDomainNameserversResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains UpdateDomainNameserversResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains UpdateDomainNameservers response element from \a xml.
  */
 void UpdateDomainNameserversResponsePrivate::parseUpdateDomainNameserversResponse(QXmlStreamReader &xml)
 {

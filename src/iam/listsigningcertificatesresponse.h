@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListSigningCertificatesResponse : public IAMResponse {
 public:
     ListSigningCertificatesResponse(const ListSigningCertificatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListSigningCertificatesRequest * request() const;
+    virtual const ListSigningCertificatesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListSigningCertificatesResponse)

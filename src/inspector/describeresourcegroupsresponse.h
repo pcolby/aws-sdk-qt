@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeResourceGroupsResponse : public InspectorResponse {
 public:
     DescribeResourceGroupsResponse(const DescribeResourceGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeResourceGroupsRequest * request() const;
+    virtual const DescribeResourceGroupsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeResourceGroupsResponse)

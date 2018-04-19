@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::RestartAppServerResponse
- *
  * \brief The RestartAppServerResponse class provides an interace for ElasticBeanstalk RestartAppServer responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new RestartAppServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestartAppServerResponse object for \a reply to \a request, with parent \a parent.
  */
 RestartAppServerResponse::RestartAppServerResponse(
         const RestartAppServerRequest &request,
@@ -77,6 +72,9 @@ RestartAppServerResponse::RestartAppServerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestartAppServerRequest * RestartAppServerResponse::request() const
 {
     Q_D(const RestartAppServerResponse);
@@ -84,9 +82,8 @@ const RestartAppServerRequest * RestartAppServerResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk RestartAppServer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk RestartAppServer \a response.
  */
 void RestartAppServerResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void RestartAppServerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::RestartAppServerResponsePrivate
+ * \brief The RestartAppServerResponsePrivate class provides private implementation for RestartAppServerResponse.
  * \internal
  *
- * \class RestartAppServerResponsePrivate
- *
- * \brief Private implementation for RestartAppServerResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestartAppServerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestartAppServerResponse instance.
+ * Constructs a RestartAppServerResponsePrivate object with public implementation \a q.
  */
 RestartAppServerResponsePrivate::RestartAppServerResponsePrivate(
     RestartAppServerResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ RestartAppServerResponsePrivate::RestartAppServerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk RestartAppServerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk RestartAppServer response element from \a xml.
  */
 void RestartAppServerResponsePrivate::parseRestartAppServerResponse(QXmlStreamReader &xml)
 {

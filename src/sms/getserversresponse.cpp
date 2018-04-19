@@ -29,21 +29,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::GetServersResponse
- *
  * \brief The GetServersResponse class provides an interace for SMS GetServers responses.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::getServers
  */
 
 /*!
- * @brief  Constructs a new GetServersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetServersResponse object for \a reply to \a request, with parent \a parent.
  */
 GetServersResponse::GetServersResponse(
         const GetServersRequest &request,
@@ -55,6 +50,9 @@ GetServersResponse::GetServersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetServersRequest * GetServersResponse::request() const
 {
     Q_D(const GetServersResponse);
@@ -62,9 +60,8 @@ const GetServersRequest * GetServersResponse::request() const
 }
 
 /*!
- * @brief  Parse a SMS GetServers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SMS GetServers \a response.
  */
 void GetServersResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetServersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SMS::GetServersResponsePrivate
+ * \brief The GetServersResponsePrivate class provides private implementation for GetServersResponse.
  * \internal
  *
- * \class GetServersResponsePrivate
- *
- * \brief Private implementation for GetServersResponse.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetServersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetServersResponse instance.
+ * Constructs a GetServersResponsePrivate object with public implementation \a q.
  */
 GetServersResponsePrivate::GetServersResponsePrivate(
     GetServersResponse * const q) : SMSResponsePrivate(q)
@@ -95,9 +88,7 @@ GetServersResponsePrivate::GetServersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SMS GetServersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SMS GetServers response element from \a xml.
  */
 void GetServersResponsePrivate::parseGetServersResponse(QXmlStreamReader &xml)
 {

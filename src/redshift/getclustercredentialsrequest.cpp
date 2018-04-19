@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * GetClusterCredentialsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetClusterCredentialsRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a GetClusterCredentialsRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 GetClusterCredentialsRequestPrivate::GetClusterCredentialsRequestPrivate(
     const RedshiftRequest::Action action, GetClusterCredentialsRequest * const q)

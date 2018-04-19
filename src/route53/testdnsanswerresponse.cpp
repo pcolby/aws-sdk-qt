@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::TestDNSAnswerResponse
- *
  * \brief The TestDNSAnswerResponse class provides an interace for Route53 TestDNSAnswer responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::testDNSAnswer
  */
 
 /*!
- * @brief  Constructs a new TestDNSAnswerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TestDNSAnswerResponse object for \a reply to \a request, with parent \a parent.
  */
 TestDNSAnswerResponse::TestDNSAnswerResponse(
         const TestDNSAnswerRequest &request,
@@ -55,6 +50,9 @@ TestDNSAnswerResponse::TestDNSAnswerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TestDNSAnswerRequest * TestDNSAnswerResponse::request() const
 {
     Q_D(const TestDNSAnswerResponse);
@@ -62,9 +60,8 @@ const TestDNSAnswerRequest * TestDNSAnswerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 TestDNSAnswer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 TestDNSAnswer \a response.
  */
 void TestDNSAnswerResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void TestDNSAnswerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::TestDNSAnswerResponsePrivate
+ * \brief The TestDNSAnswerResponsePrivate class provides private implementation for TestDNSAnswerResponse.
  * \internal
  *
- * \class TestDNSAnswerResponsePrivate
- *
- * \brief Private implementation for TestDNSAnswerResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestDNSAnswerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TestDNSAnswerResponse instance.
+ * Constructs a TestDNSAnswerResponsePrivate object with public implementation \a q.
  */
 TestDNSAnswerResponsePrivate::TestDNSAnswerResponsePrivate(
     TestDNSAnswerResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ TestDNSAnswerResponsePrivate::TestDNSAnswerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 TestDNSAnswerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 TestDNSAnswer response element from \a xml.
  */
 void TestDNSAnswerResponsePrivate::parseTestDNSAnswerResponse(QXmlStreamReader &xml)
 {

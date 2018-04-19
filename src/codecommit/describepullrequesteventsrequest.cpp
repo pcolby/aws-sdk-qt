@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * DescribePullRequestEventsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribePullRequestEventsRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a DescribePullRequestEventsRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 DescribePullRequestEventsRequestPrivate::DescribePullRequestEventsRequestPrivate(
     const CodeCommitRequest::Action action, DescribePullRequestEventsRequest * const q)

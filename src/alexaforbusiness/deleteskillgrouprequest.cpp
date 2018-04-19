@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSkillGroupRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteSkillGroupRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSkillGroupRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 DeleteSkillGroupRequestPrivate::DeleteSkillGroupRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteSkillGroupRequest * const q)

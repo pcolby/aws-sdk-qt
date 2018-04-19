@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * GetPipelineExecutionRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetPipelineExecutionRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a GetPipelineExecutionRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 GetPipelineExecutionRequestPrivate::GetPipelineExecutionRequestPrivate(
     const CodePipelineRequest::Action action, GetPipelineExecutionRequest * const q)

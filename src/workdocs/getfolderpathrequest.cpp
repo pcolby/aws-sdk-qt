@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * GetFolderPathRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetFolderPathRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a GetFolderPathRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 GetFolderPathRequestPrivate::GetFolderPathRequestPrivate(
     const WorkDocsRequest::Action action, GetFolderPathRequest * const q)

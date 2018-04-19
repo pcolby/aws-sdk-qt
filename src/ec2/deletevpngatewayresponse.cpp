@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVpnGatewayResponse
- *
  * \brief The DeleteVpnGatewayResponse class provides an interace for EC2 DeleteVpnGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpnGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVpnGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVpnGatewayResponse::DeleteVpnGatewayResponse(
         const DeleteVpnGatewayRequest &request,
@@ -59,6 +54,9 @@ DeleteVpnGatewayResponse::DeleteVpnGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVpnGatewayRequest * DeleteVpnGatewayResponse::request() const
 {
     Q_D(const DeleteVpnGatewayResponse);
@@ -66,9 +64,8 @@ const DeleteVpnGatewayRequest * DeleteVpnGatewayResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteVpnGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteVpnGateway \a response.
  */
 void DeleteVpnGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteVpnGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteVpnGatewayResponsePrivate
+ * \brief The DeleteVpnGatewayResponsePrivate class provides private implementation for DeleteVpnGatewayResponse.
  * \internal
  *
- * \class DeleteVpnGatewayResponsePrivate
- *
- * \brief Private implementation for DeleteVpnGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpnGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVpnGatewayResponse instance.
+ * Constructs a DeleteVpnGatewayResponsePrivate object with public implementation \a q.
  */
 DeleteVpnGatewayResponsePrivate::DeleteVpnGatewayResponsePrivate(
     DeleteVpnGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteVpnGatewayResponsePrivate::DeleteVpnGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteVpnGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteVpnGateway response element from \a xml.
  */
 void DeleteVpnGatewayResponsePrivate::parseDeleteVpnGatewayResponse(QXmlStreamReader &xml)
 {

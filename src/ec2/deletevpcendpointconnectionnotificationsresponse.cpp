@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVpcEndpointConnectionNotificationsResponse
- *
  * \brief The DeleteVpcEndpointConnectionNotificationsResponse class provides an interace for EC2 DeleteVpcEndpointConnectionNotifications responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVpcEndpointConnectionNotificationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVpcEndpointConnectionNotificationsResponse::DeleteVpcEndpointConnectionNotificationsResponse(
         const DeleteVpcEndpointConnectionNotificationsRequest &request,
@@ -59,6 +54,9 @@ DeleteVpcEndpointConnectionNotificationsResponse::DeleteVpcEndpointConnectionNot
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVpcEndpointConnectionNotificationsRequest * DeleteVpcEndpointConnectionNotificationsResponse::request() const
 {
     Q_D(const DeleteVpcEndpointConnectionNotificationsResponse);
@@ -66,9 +64,8 @@ const DeleteVpcEndpointConnectionNotificationsRequest * DeleteVpcEndpointConnect
 }
 
 /*!
- * @brief  Parse a EC2 DeleteVpcEndpointConnectionNotifications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteVpcEndpointConnectionNotifications \a response.
  */
 void DeleteVpcEndpointConnectionNotificationsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteVpcEndpointConnectionNotificationsResponse::parseSuccess(QIODevice &r
 }
 
 /*!
+ * \class QtAws::EC2::DeleteVpcEndpointConnectionNotificationsResponsePrivate
+ * \brief The DeleteVpcEndpointConnectionNotificationsResponsePrivate class provides private implementation for DeleteVpcEndpointConnectionNotificationsResponse.
  * \internal
  *
- * \class DeleteVpcEndpointConnectionNotificationsResponsePrivate
- *
- * \brief Private implementation for DeleteVpcEndpointConnectionNotificationsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcEndpointConnectionNotificationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVpcEndpointConnectionNotificationsResponse instance.
+ * Constructs a DeleteVpcEndpointConnectionNotificationsResponsePrivate object with public implementation \a q.
  */
 DeleteVpcEndpointConnectionNotificationsResponsePrivate::DeleteVpcEndpointConnectionNotificationsResponsePrivate(
     DeleteVpcEndpointConnectionNotificationsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteVpcEndpointConnectionNotificationsResponsePrivate::DeleteVpcEndpointConnec
 }
 
 /*!
- * @brief  Parse an EC2 DeleteVpcEndpointConnectionNotificationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteVpcEndpointConnectionNotifications response element from \a xml.
  */
 void DeleteVpcEndpointConnectionNotificationsResponsePrivate::parseDeleteVpcEndpointConnectionNotificationsResponse(QXmlStreamReader &xml)
 {

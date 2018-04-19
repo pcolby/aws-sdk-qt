@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteRolePolicyResponse
- *
  * \brief The DeleteRolePolicyResponse class provides an interace for IAM DeleteRolePolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteRolePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRolePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRolePolicyResponse::DeleteRolePolicyResponse(
         const DeleteRolePolicyRequest &request,
@@ -120,6 +115,9 @@ DeleteRolePolicyResponse::DeleteRolePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRolePolicyRequest * DeleteRolePolicyResponse::request() const
 {
     Q_D(const DeleteRolePolicyResponse);
@@ -127,9 +125,8 @@ const DeleteRolePolicyRequest * DeleteRolePolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM DeleteRolePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteRolePolicy \a response.
  */
 void DeleteRolePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteRolePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteRolePolicyResponsePrivate
+ * \brief The DeleteRolePolicyResponsePrivate class provides private implementation for DeleteRolePolicyResponse.
  * \internal
  *
- * \class DeleteRolePolicyResponsePrivate
- *
- * \brief Private implementation for DeleteRolePolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRolePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRolePolicyResponse instance.
+ * Constructs a DeleteRolePolicyResponsePrivate object with public implementation \a q.
  */
 DeleteRolePolicyResponsePrivate::DeleteRolePolicyResponsePrivate(
     DeleteRolePolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteRolePolicyResponsePrivate::DeleteRolePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeleteRolePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteRolePolicy response element from \a xml.
  */
 void DeleteRolePolicyResponsePrivate::parseDeleteRolePolicyResponse(QXmlStreamReader &xml)
 {

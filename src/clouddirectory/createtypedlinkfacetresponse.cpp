@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::CreateTypedLinkFacetResponse
- *
  * \brief The CreateTypedLinkFacetResponse class provides an interace for CloudDirectory CreateTypedLinkFacet responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new CreateTypedLinkFacetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTypedLinkFacetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTypedLinkFacetResponse::CreateTypedLinkFacetResponse(
         const CreateTypedLinkFacetRequest &request,
@@ -62,6 +57,9 @@ CreateTypedLinkFacetResponse::CreateTypedLinkFacetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTypedLinkFacetRequest * CreateTypedLinkFacetResponse::request() const
 {
     Q_D(const CreateTypedLinkFacetResponse);
@@ -69,9 +67,8 @@ const CreateTypedLinkFacetRequest * CreateTypedLinkFacetResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudDirectory CreateTypedLinkFacet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory CreateTypedLinkFacet \a response.
  */
 void CreateTypedLinkFacetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void CreateTypedLinkFacetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::CreateTypedLinkFacetResponsePrivate
+ * \brief The CreateTypedLinkFacetResponsePrivate class provides private implementation for CreateTypedLinkFacetResponse.
  * \internal
  *
- * \class CreateTypedLinkFacetResponsePrivate
- *
- * \brief Private implementation for CreateTypedLinkFacetResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTypedLinkFacetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTypedLinkFacetResponse instance.
+ * Constructs a CreateTypedLinkFacetResponsePrivate object with public implementation \a q.
  */
 CreateTypedLinkFacetResponsePrivate::CreateTypedLinkFacetResponsePrivate(
     CreateTypedLinkFacetResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ CreateTypedLinkFacetResponsePrivate::CreateTypedLinkFacetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory CreateTypedLinkFacetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory CreateTypedLinkFacet response element from \a xml.
  */
 void CreateTypedLinkFacetResponsePrivate::parseCreateTypedLinkFacetResponse(QXmlStreamReader &xml)
 {

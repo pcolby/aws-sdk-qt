@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListProgressUpdateStreamsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a ListProgressUpdateStreamsRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a ListProgressUpdateStreamsRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 ListProgressUpdateStreamsRequestPrivate::ListProgressUpdateStreamsRequestPrivate(
     const MigrationHubRequest::Action action, ListProgressUpdateStreamsRequest * const q)

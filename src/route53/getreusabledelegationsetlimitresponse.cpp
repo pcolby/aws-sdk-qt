@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetReusableDelegationSetLimitResponse
- *
  * \brief The GetReusableDelegationSetLimitResponse class provides an interace for Route53 GetReusableDelegationSetLimit responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getReusableDelegationSetLimit
  */
 
 /*!
- * @brief  Constructs a new GetReusableDelegationSetLimitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetReusableDelegationSetLimitResponse object for \a reply to \a request, with parent \a parent.
  */
 GetReusableDelegationSetLimitResponse::GetReusableDelegationSetLimitResponse(
         const GetReusableDelegationSetLimitRequest &request,
@@ -55,6 +50,9 @@ GetReusableDelegationSetLimitResponse::GetReusableDelegationSetLimitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetReusableDelegationSetLimitRequest * GetReusableDelegationSetLimitResponse::request() const
 {
     Q_D(const GetReusableDelegationSetLimitResponse);
@@ -62,9 +60,8 @@ const GetReusableDelegationSetLimitRequest * GetReusableDelegationSetLimitRespon
 }
 
 /*!
- * @brief  Parse a Route53 GetReusableDelegationSetLimit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetReusableDelegationSetLimit \a response.
  */
 void GetReusableDelegationSetLimitResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetReusableDelegationSetLimitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetReusableDelegationSetLimitResponsePrivate
+ * \brief The GetReusableDelegationSetLimitResponsePrivate class provides private implementation for GetReusableDelegationSetLimitResponse.
  * \internal
  *
- * \class GetReusableDelegationSetLimitResponsePrivate
- *
- * \brief Private implementation for GetReusableDelegationSetLimitResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReusableDelegationSetLimitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetReusableDelegationSetLimitResponse instance.
+ * Constructs a GetReusableDelegationSetLimitResponsePrivate object with public implementation \a q.
  */
 GetReusableDelegationSetLimitResponsePrivate::GetReusableDelegationSetLimitResponsePrivate(
     GetReusableDelegationSetLimitResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetReusableDelegationSetLimitResponsePrivate::GetReusableDelegationSetLimitRespo
 }
 
 /*!
- * @brief  Parse an Route53 GetReusableDelegationSetLimitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetReusableDelegationSetLimit response element from \a xml.
  */
 void GetReusableDelegationSetLimitResponsePrivate::parseGetReusableDelegationSetLimitResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeleteParametersResponse
- *
  * \brief The DeleteParametersResponse class provides an interace for SSM DeleteParameters responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteParametersResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteParametersResponse::DeleteParametersResponse(
         const DeleteParametersRequest &request,
@@ -79,6 +74,9 @@ DeleteParametersResponse::DeleteParametersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteParametersRequest * DeleteParametersResponse::request() const
 {
     Q_D(const DeleteParametersResponse);
@@ -86,9 +84,8 @@ const DeleteParametersRequest * DeleteParametersResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM DeleteParameters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DeleteParameters \a response.
  */
 void DeleteParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DeleteParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DeleteParametersResponsePrivate
+ * \brief The DeleteParametersResponsePrivate class provides private implementation for DeleteParametersResponse.
  * \internal
  *
- * \class DeleteParametersResponsePrivate
- *
- * \brief Private implementation for DeleteParametersResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteParametersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteParametersResponse instance.
+ * Constructs a DeleteParametersResponsePrivate object with public implementation \a q.
  */
 DeleteParametersResponsePrivate::DeleteParametersResponsePrivate(
     DeleteParametersResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DeleteParametersResponsePrivate::DeleteParametersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DeleteParametersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DeleteParameters response element from \a xml.
  */
 void DeleteParametersResponsePrivate::parseDeleteParametersResponse(QXmlStreamReader &xml)
 {

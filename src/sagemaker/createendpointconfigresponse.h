@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateEndpointConfigResponse : public SageMakerResponse {
 public:
     CreateEndpointConfigResponse(const CreateEndpointConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateEndpointConfigRequest * request() const;
+    virtual const CreateEndpointConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateEndpointConfigResponse)

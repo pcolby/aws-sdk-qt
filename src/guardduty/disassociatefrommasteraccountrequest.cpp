@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateFromMasterAccountRequest::respons
  */
 
 /*!
- *
- * Constructs a DisassociateFromMasterAccountRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateFromMasterAccountRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 DisassociateFromMasterAccountRequestPrivate::DisassociateFromMasterAccountRequestPrivate(
     const GuardDutyRequest::Action action, DisassociateFromMasterAccountRequest * const q)

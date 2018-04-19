@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAddressesResponse : public SnowballResponse {
 public:
     DescribeAddressesResponse(const DescribeAddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAddressesRequest * request() const;
+    virtual const DescribeAddressesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAddressesResponse)

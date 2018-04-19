@@ -29,10 +29,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::DetectKeyPhrasesResponse
- *
  * \brief The DetectKeyPhrasesResponse class provides an interace for Comprehend DetectKeyPhrases responses.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -42,11 +41,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new DetectKeyPhrasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetectKeyPhrasesResponse object for \a reply to \a request, with parent \a parent.
  */
 DetectKeyPhrasesResponse::DetectKeyPhrasesResponse(
         const DetectKeyPhrasesRequest &request,
@@ -58,6 +53,9 @@ DetectKeyPhrasesResponse::DetectKeyPhrasesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetectKeyPhrasesRequest * DetectKeyPhrasesResponse::request() const
 {
     Q_D(const DetectKeyPhrasesResponse);
@@ -65,9 +63,8 @@ const DetectKeyPhrasesRequest * DetectKeyPhrasesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Comprehend DetectKeyPhrases response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Comprehend DetectKeyPhrases \a response.
  */
 void DetectKeyPhrasesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DetectKeyPhrasesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Comprehend::DetectKeyPhrasesResponsePrivate
+ * \brief The DetectKeyPhrasesResponsePrivate class provides private implementation for DetectKeyPhrasesResponse.
  * \internal
  *
- * \class DetectKeyPhrasesResponsePrivate
- *
- * \brief Private implementation for DetectKeyPhrasesResponse.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectKeyPhrasesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetectKeyPhrasesResponse instance.
+ * Constructs a DetectKeyPhrasesResponsePrivate object with public implementation \a q.
  */
 DetectKeyPhrasesResponsePrivate::DetectKeyPhrasesResponsePrivate(
     DetectKeyPhrasesResponse * const q) : ComprehendResponsePrivate(q)
@@ -98,9 +91,7 @@ DetectKeyPhrasesResponsePrivate::DetectKeyPhrasesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Comprehend DetectKeyPhrasesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Comprehend DetectKeyPhrases response element from \a xml.
  */
 void DetectKeyPhrasesResponsePrivate::parseDetectKeyPhrasesResponse(QXmlStreamReader &xml)
 {

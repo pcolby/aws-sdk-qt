@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CancelClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CancelClusterRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a CancelClusterRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 CancelClusterRequestPrivate::CancelClusterRequestPrivate(
     const SnowballRequest::Action action, CancelClusterRequest * const q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListThreatIntelSetsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListThreatIntelSetsRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a ListThreatIntelSetsRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 ListThreatIntelSetsRequestPrivate::ListThreatIntelSetsRequestPrivate(
     const GuardDutyRequest::Action action, ListThreatIntelSetsRequest * const q)

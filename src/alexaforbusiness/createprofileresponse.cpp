@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::CreateProfileResponse
- *
  * \brief The CreateProfileResponse class provides an interace for AlexaForBusiness CreateProfile responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new CreateProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateProfileResponse::CreateProfileResponse(
         const CreateProfileRequest &request,
@@ -60,6 +55,9 @@ CreateProfileResponse::CreateProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateProfileRequest * CreateProfileResponse::request() const
 {
     Q_D(const CreateProfileResponse);
@@ -67,9 +65,8 @@ const CreateProfileRequest * CreateProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness CreateProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness CreateProfile \a response.
  */
 void CreateProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::CreateProfileResponsePrivate
+ * \brief The CreateProfileResponsePrivate class provides private implementation for CreateProfileResponse.
  * \internal
  *
- * \class CreateProfileResponsePrivate
- *
- * \brief Private implementation for CreateProfileResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateProfileResponse instance.
+ * Constructs a CreateProfileResponsePrivate object with public implementation \a q.
  */
 CreateProfileResponsePrivate::CreateProfileResponsePrivate(
     CreateProfileResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateProfileResponsePrivate::CreateProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness CreateProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness CreateProfile response element from \a xml.
  */
 void CreateProfileResponsePrivate::parseCreateProfileResponse(QXmlStreamReader &xml)
 {

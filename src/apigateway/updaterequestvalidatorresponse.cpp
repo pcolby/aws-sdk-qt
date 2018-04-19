@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateRequestValidatorResponse
- *
  * \brief The UpdateRequestValidatorResponse class provides an interace for APIGateway UpdateRequestValidator responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateRequestValidatorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRequestValidatorResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRequestValidatorResponse::UpdateRequestValidatorResponse(
         const UpdateRequestValidatorRequest &request,
@@ -60,6 +55,9 @@ UpdateRequestValidatorResponse::UpdateRequestValidatorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRequestValidatorRequest * UpdateRequestValidatorResponse::request() const
 {
     Q_D(const UpdateRequestValidatorResponse);
@@ -67,9 +65,8 @@ const UpdateRequestValidatorRequest * UpdateRequestValidatorResponse::request() 
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateRequestValidator response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateRequestValidator \a response.
  */
 void UpdateRequestValidatorResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateRequestValidatorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateRequestValidatorResponsePrivate
+ * \brief The UpdateRequestValidatorResponsePrivate class provides private implementation for UpdateRequestValidatorResponse.
  * \internal
  *
- * \class UpdateRequestValidatorResponsePrivate
- *
- * \brief Private implementation for UpdateRequestValidatorResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRequestValidatorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRequestValidatorResponse instance.
+ * Constructs a UpdateRequestValidatorResponsePrivate object with public implementation \a q.
  */
 UpdateRequestValidatorResponsePrivate::UpdateRequestValidatorResponsePrivate(
     UpdateRequestValidatorResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateRequestValidatorResponsePrivate::UpdateRequestValidatorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateRequestValidatorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateRequestValidator response element from \a xml.
  */
 void UpdateRequestValidatorResponsePrivate::parseUpdateRequestValidatorResponse(QXmlStreamReader &xml)
 {

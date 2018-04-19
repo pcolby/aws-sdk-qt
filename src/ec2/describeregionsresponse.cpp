@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeRegionsResponse
- *
  * \brief The DescribeRegionsResponse class provides an interace for EC2 DescribeRegions responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeRegionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRegionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRegionsResponse::DescribeRegionsResponse(
         const DescribeRegionsRequest &request,
@@ -59,6 +54,9 @@ DescribeRegionsResponse::DescribeRegionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRegionsRequest * DescribeRegionsResponse::request() const
 {
     Q_D(const DescribeRegionsResponse);
@@ -66,9 +64,8 @@ const DescribeRegionsRequest * DescribeRegionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeRegions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeRegions \a response.
  */
 void DescribeRegionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeRegionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeRegionsResponsePrivate
+ * \brief The DescribeRegionsResponsePrivate class provides private implementation for DescribeRegionsResponse.
  * \internal
  *
- * \class DescribeRegionsResponsePrivate
- *
- * \brief Private implementation for DescribeRegionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRegionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRegionsResponse instance.
+ * Constructs a DescribeRegionsResponsePrivate object with public implementation \a q.
  */
 DescribeRegionsResponsePrivate::DescribeRegionsResponsePrivate(
     DescribeRegionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeRegionsResponsePrivate::DescribeRegionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeRegionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeRegions response element from \a xml.
  */
 void DescribeRegionsResponsePrivate::parseDescribeRegionsResponse(QXmlStreamReader &xml)
 {

@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRepositoryRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteRepositoryRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRepositoryRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
     const CodeCommitRequest::Action action, DeleteRepositoryRequest * const q)

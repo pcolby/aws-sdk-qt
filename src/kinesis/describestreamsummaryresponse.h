@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeStreamSummaryResponse : public KinesisResponse {
 public:
     DescribeStreamSummaryResponse(const DescribeStreamSummaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeStreamSummaryRequest * request() const;
+    virtual const DescribeStreamSummaryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeStreamSummaryResponse)

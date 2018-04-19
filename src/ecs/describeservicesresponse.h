@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeServicesResponse : public ECSResponse {
 public:
     DescribeServicesResponse(const DescribeServicesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeServicesRequest * request() const;
+    virtual const DescribeServicesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeServicesResponse)

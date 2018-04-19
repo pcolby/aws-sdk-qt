@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReplaceRouteResponse
- *
  * \brief The ReplaceRouteResponse class provides an interace for EC2 ReplaceRoute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReplaceRouteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReplaceRouteResponse object for \a reply to \a request, with parent \a parent.
  */
 ReplaceRouteResponse::ReplaceRouteResponse(
         const ReplaceRouteRequest &request,
@@ -59,6 +54,9 @@ ReplaceRouteResponse::ReplaceRouteResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReplaceRouteRequest * ReplaceRouteResponse::request() const
 {
     Q_D(const ReplaceRouteResponse);
@@ -66,9 +64,8 @@ const ReplaceRouteRequest * ReplaceRouteResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ReplaceRoute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ReplaceRoute \a response.
  */
 void ReplaceRouteResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ReplaceRouteResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ReplaceRouteResponsePrivate
+ * \brief The ReplaceRouteResponsePrivate class provides private implementation for ReplaceRouteResponse.
  * \internal
  *
- * \class ReplaceRouteResponsePrivate
- *
- * \brief Private implementation for ReplaceRouteResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReplaceRouteResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReplaceRouteResponse instance.
+ * Constructs a ReplaceRouteResponsePrivate object with public implementation \a q.
  */
 ReplaceRouteResponsePrivate::ReplaceRouteResponsePrivate(
     ReplaceRouteResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ReplaceRouteResponsePrivate::ReplaceRouteResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ReplaceRouteResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ReplaceRoute response element from \a xml.
  */
 void ReplaceRouteResponsePrivate::parseReplaceRouteResponse(QXmlStreamReader &xml)
 {

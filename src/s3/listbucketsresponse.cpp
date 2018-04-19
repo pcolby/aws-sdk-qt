@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::ListBucketsResponse
- *
  * \brief The ListBucketsResponse class provides an interace for S3 ListBuckets responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::listBuckets
  */
 
 /*!
- * @brief  Constructs a new ListBucketsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListBucketsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListBucketsResponse::ListBucketsResponse(
         const ListBucketsRequest &request,
@@ -55,6 +50,9 @@ ListBucketsResponse::ListBucketsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListBucketsRequest * ListBucketsResponse::request() const
 {
     Q_D(const ListBucketsResponse);
@@ -62,9 +60,8 @@ const ListBucketsRequest * ListBucketsResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 ListBuckets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 ListBuckets \a response.
  */
 void ListBucketsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListBucketsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::ListBucketsResponsePrivate
+ * \brief The ListBucketsResponsePrivate class provides private implementation for ListBucketsResponse.
  * \internal
  *
- * \class ListBucketsResponsePrivate
- *
- * \brief Private implementation for ListBucketsResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBucketsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListBucketsResponse instance.
+ * Constructs a ListBucketsResponsePrivate object with public implementation \a q.
  */
 ListBucketsResponsePrivate::ListBucketsResponsePrivate(
     ListBucketsResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListBucketsResponsePrivate::ListBucketsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 ListBucketsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 ListBuckets response element from \a xml.
  */
 void ListBucketsResponsePrivate::parseListBucketsResponse(QXmlStreamReader &xml)
 {

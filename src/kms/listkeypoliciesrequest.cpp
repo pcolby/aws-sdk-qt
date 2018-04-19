@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * ListKeyPoliciesRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ListKeyPoliciesRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a ListKeyPoliciesRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 ListKeyPoliciesRequestPrivate::ListKeyPoliciesRequestPrivate(
     const KMSRequest::Action action, ListKeyPoliciesRequest * const q)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetIdentityVerificationAttributesRequest::res
  */
 
 /*!
- *
- * Constructs a GetIdentityVerificationAttributesRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a GetIdentityVerificationAttributesRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 GetIdentityVerificationAttributesRequestPrivate::GetIdentityVerificationAttributesRequestPrivate(
     const SESRequest::Action action, GetIdentityVerificationAttributesRequest * const q)

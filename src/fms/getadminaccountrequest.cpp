@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * GetAdminAccountRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetAdminAccountRequestPrivate object for FMS \a action with,
- * public implementation \a q.
+ * Constructs a GetAdminAccountRequestPrivate object for FMS \a action,
+ * with public implementation \a q.
  */
 GetAdminAccountRequestPrivate::GetAdminAccountRequestPrivate(
     const FMSRequest::Action action, GetAdminAccountRequest * const q)

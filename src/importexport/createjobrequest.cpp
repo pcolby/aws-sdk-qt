@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateJobRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a CreateJobRequestPrivate object for ImportExport \a action with,
- * public implementation \a q.
+ * Constructs a CreateJobRequestPrivate object for ImportExport \a action,
+ * with public implementation \a q.
  */
 CreateJobRequestPrivate::CreateJobRequestPrivate(
     const ImportExportRequest::Action action, CreateJobRequest * const q)

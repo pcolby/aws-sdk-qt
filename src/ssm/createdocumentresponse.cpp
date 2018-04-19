@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CreateDocumentResponse
- *
  * \brief The CreateDocumentResponse class provides an interace for SSM CreateDocument responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CreateDocumentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDocumentResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDocumentResponse::CreateDocumentResponse(
         const CreateDocumentRequest &request,
@@ -79,6 +74,9 @@ CreateDocumentResponse::CreateDocumentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDocumentRequest * CreateDocumentResponse::request() const
 {
     Q_D(const CreateDocumentResponse);
@@ -86,9 +84,8 @@ const CreateDocumentRequest * CreateDocumentResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM CreateDocument response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM CreateDocument \a response.
  */
 void CreateDocumentResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void CreateDocumentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::CreateDocumentResponsePrivate
+ * \brief The CreateDocumentResponsePrivate class provides private implementation for CreateDocumentResponse.
  * \internal
  *
- * \class CreateDocumentResponsePrivate
- *
- * \brief Private implementation for CreateDocumentResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDocumentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDocumentResponse instance.
+ * Constructs a CreateDocumentResponsePrivate object with public implementation \a q.
  */
 CreateDocumentResponsePrivate::CreateDocumentResponsePrivate(
     CreateDocumentResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ CreateDocumentResponsePrivate::CreateDocumentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM CreateDocumentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM CreateDocument response element from \a xml.
  */
 void CreateDocumentResponsePrivate::parseCreateDocumentResponse(QXmlStreamReader &xml)
 {

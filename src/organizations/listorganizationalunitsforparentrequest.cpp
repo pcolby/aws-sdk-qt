@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * ListOrganizationalUnitsForParentRequest::resp
  */
 
 /*!
- *
- * Constructs a ListOrganizationalUnitsForParentRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a ListOrganizationalUnitsForParentRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 ListOrganizationalUnitsForParentRequestPrivate::ListOrganizationalUnitsForParentRequestPrivate(
     const OrganizationsRequest::Action action, ListOrganizationalUnitsForParentRequest * const q)

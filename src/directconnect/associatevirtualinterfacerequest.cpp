@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * AssociateVirtualInterfaceRequest::response(QN
  */
 
 /*!
- *
- * Constructs a AssociateVirtualInterfaceRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a AssociateVirtualInterfaceRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 AssociateVirtualInterfaceRequestPrivate::AssociateVirtualInterfaceRequestPrivate(
     const DirectConnectRequest::Action action, AssociateVirtualInterfaceRequest * const q)

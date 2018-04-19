@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateIndexingConfigurationResponse : public IoTResponse {
 public:
     UpdateIndexingConfigurationResponse(const UpdateIndexingConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateIndexingConfigurationRequest * request() const;
+    virtual const UpdateIndexingConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateIndexingConfigurationResponse)

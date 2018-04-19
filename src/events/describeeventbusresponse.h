@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEventBusResponse : public CloudWatchEventsResponse {
 public:
     DescribeEventBusResponse(const DescribeEventBusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEventBusRequest * request() const;
+    virtual const DescribeEventBusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEventBusResponse)

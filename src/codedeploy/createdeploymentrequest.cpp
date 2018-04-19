@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * CreateDeploymentRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateDeploymentRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a CreateDeploymentRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 CreateDeploymentRequestPrivate::CreateDeploymentRequestPrivate(
     const CodeDeployRequest::Action action, CreateDeploymentRequest * const q)

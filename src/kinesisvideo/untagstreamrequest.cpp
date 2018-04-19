@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UntagStreamRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UntagStreamRequestPrivate object for KinesisVideo \a action with,
- * public implementation \a q.
+ * Constructs a UntagStreamRequestPrivate object for KinesisVideo \a action,
+ * with public implementation \a q.
  */
 UntagStreamRequestPrivate::UntagStreamRequestPrivate(
     const KinesisVideoRequest::Action action, UntagStreamRequest * const q)

@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateDeploymentResponse
- *
  * \brief The CreateDeploymentResponse class provides an interace for Greengrass CreateDeployment responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateDeploymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDeploymentResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDeploymentResponse::CreateDeploymentResponse(
         const CreateDeploymentRequest &request,
@@ -58,6 +53,9 @@ CreateDeploymentResponse::CreateDeploymentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDeploymentRequest * CreateDeploymentResponse::request() const
 {
     Q_D(const CreateDeploymentResponse);
@@ -65,9 +63,8 @@ const CreateDeploymentRequest * CreateDeploymentResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass CreateDeployment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass CreateDeployment \a response.
  */
 void CreateDeploymentResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateDeploymentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::CreateDeploymentResponsePrivate
+ * \brief The CreateDeploymentResponsePrivate class provides private implementation for CreateDeploymentResponse.
  * \internal
  *
- * \class CreateDeploymentResponsePrivate
- *
- * \brief Private implementation for CreateDeploymentResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDeploymentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDeploymentResponse instance.
+ * Constructs a CreateDeploymentResponsePrivate object with public implementation \a q.
  */
 CreateDeploymentResponsePrivate::CreateDeploymentResponsePrivate(
     CreateDeploymentResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateDeploymentResponsePrivate::CreateDeploymentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass CreateDeploymentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass CreateDeployment response element from \a xml.
  */
 void CreateDeploymentResponsePrivate::parseCreateDeploymentResponse(QXmlStreamReader &xml)
 {

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetFieldLevelEncryptionProfileRequest::respon
  */
 
 /*!
- *
- * Constructs a GetFieldLevelEncryptionProfileRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a GetFieldLevelEncryptionProfileRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 GetFieldLevelEncryptionProfileRequestPrivate::GetFieldLevelEncryptionProfileRequestPrivate(
     const CloudFrontRequest::Action action, GetFieldLevelEncryptionProfileRequest * const q)

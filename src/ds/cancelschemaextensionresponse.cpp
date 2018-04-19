@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CancelSchemaExtensionResponse
- *
  * \brief The CancelSchemaExtensionResponse class provides an interace for DirectoryService CancelSchemaExtension responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CancelSchemaExtensionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelSchemaExtensionResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelSchemaExtensionResponse::CancelSchemaExtensionResponse(
         const CancelSchemaExtensionRequest &request,
@@ -69,6 +64,9 @@ CancelSchemaExtensionResponse::CancelSchemaExtensionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelSchemaExtensionRequest * CancelSchemaExtensionResponse::request() const
 {
     Q_D(const CancelSchemaExtensionResponse);
@@ -76,9 +74,8 @@ const CancelSchemaExtensionRequest * CancelSchemaExtensionResponse::request() co
 }
 
 /*!
- * @brief  Parse a DirectoryService CancelSchemaExtension response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService CancelSchemaExtension \a response.
  */
 void CancelSchemaExtensionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CancelSchemaExtensionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::CancelSchemaExtensionResponsePrivate
+ * \brief The CancelSchemaExtensionResponsePrivate class provides private implementation for CancelSchemaExtensionResponse.
  * \internal
  *
- * \class CancelSchemaExtensionResponsePrivate
- *
- * \brief Private implementation for CancelSchemaExtensionResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelSchemaExtensionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelSchemaExtensionResponse instance.
+ * Constructs a CancelSchemaExtensionResponsePrivate object with public implementation \a q.
  */
 CancelSchemaExtensionResponsePrivate::CancelSchemaExtensionResponsePrivate(
     CancelSchemaExtensionResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ CancelSchemaExtensionResponsePrivate::CancelSchemaExtensionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService CancelSchemaExtensionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService CancelSchemaExtension response element from \a xml.
  */
 void CancelSchemaExtensionResponsePrivate::parseCancelSchemaExtensionResponse(QXmlStreamReader &xml)
 {

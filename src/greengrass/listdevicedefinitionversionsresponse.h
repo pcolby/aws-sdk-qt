@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListDeviceDefinitionVersionsResponse : public GreengrassRespo
 public:
     ListDeviceDefinitionVersionsResponse(const ListDeviceDefinitionVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDeviceDefinitionVersionsRequest * request() const;
+    virtual const ListDeviceDefinitionVersionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListDeviceDefinitionVersionsResponse)

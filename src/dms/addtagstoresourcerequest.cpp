@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * AddTagsToResourceRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a AddTagsToResourceRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a AddTagsToResourceRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 AddTagsToResourceRequestPrivate::AddTagsToResourceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, AddTagsToResourceRequest * const q)

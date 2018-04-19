@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * ModifyDBParameterGroupRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ModifyDBParameterGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a ModifyDBParameterGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 ModifyDBParameterGroupRequestPrivate::ModifyDBParameterGroupRequestPrivate(
     const RDSRequest::Action action, ModifyDBParameterGroupRequest * const q)

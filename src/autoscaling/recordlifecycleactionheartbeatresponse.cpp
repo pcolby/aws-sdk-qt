@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::RecordLifecycleActionHeartbeatResponse
- *
  * \brief The RecordLifecycleActionHeartbeatResponse class provides an interace for AutoScaling RecordLifecycleActionHeartbeat responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new RecordLifecycleActionHeartbeatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RecordLifecycleActionHeartbeatResponse object for \a reply to \a request, with parent \a parent.
  */
 RecordLifecycleActionHeartbeatResponse::RecordLifecycleActionHeartbeatResponse(
         const RecordLifecycleActionHeartbeatRequest &request,
@@ -60,6 +55,9 @@ RecordLifecycleActionHeartbeatResponse::RecordLifecycleActionHeartbeatResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RecordLifecycleActionHeartbeatRequest * RecordLifecycleActionHeartbeatResponse::request() const
 {
     Q_D(const RecordLifecycleActionHeartbeatResponse);
@@ -67,9 +65,8 @@ const RecordLifecycleActionHeartbeatRequest * RecordLifecycleActionHeartbeatResp
 }
 
 /*!
- * @brief  Parse a AutoScaling RecordLifecycleActionHeartbeat response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling RecordLifecycleActionHeartbeat \a response.
  */
 void RecordLifecycleActionHeartbeatResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void RecordLifecycleActionHeartbeatResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::RecordLifecycleActionHeartbeatResponsePrivate
+ * \brief The RecordLifecycleActionHeartbeatResponsePrivate class provides private implementation for RecordLifecycleActionHeartbeatResponse.
  * \internal
  *
- * \class RecordLifecycleActionHeartbeatResponsePrivate
- *
- * \brief Private implementation for RecordLifecycleActionHeartbeatResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RecordLifecycleActionHeartbeatResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RecordLifecycleActionHeartbeatResponse instance.
+ * Constructs a RecordLifecycleActionHeartbeatResponsePrivate object with public implementation \a q.
  */
 RecordLifecycleActionHeartbeatResponsePrivate::RecordLifecycleActionHeartbeatResponsePrivate(
     RecordLifecycleActionHeartbeatResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ RecordLifecycleActionHeartbeatResponsePrivate::RecordLifecycleActionHeartbeatRes
 }
 
 /*!
- * @brief  Parse an AutoScaling RecordLifecycleActionHeartbeatResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling RecordLifecycleActionHeartbeat response element from \a xml.
  */
 void RecordLifecycleActionHeartbeatResponsePrivate::parseRecordLifecycleActionHeartbeatResponse(QXmlStreamReader &xml)
 {

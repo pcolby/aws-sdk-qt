@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * PutSubscriptionFilterRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a PutSubscriptionFilterRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a PutSubscriptionFilterRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 PutSubscriptionFilterRequestPrivate::PutSubscriptionFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutSubscriptionFilterRequest * const q)

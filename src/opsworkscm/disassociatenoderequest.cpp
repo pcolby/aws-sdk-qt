@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateNodeRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DisassociateNodeRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateNodeRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 DisassociateNodeRequestPrivate::DisassociateNodeRequestPrivate(
     const OpsWorksCMRequest::Action action, DisassociateNodeRequest * const q)

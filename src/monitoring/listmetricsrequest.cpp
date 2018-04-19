@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ListMetricsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListMetricsRequestPrivate object for CloudWatch \a action with,
- * public implementation \a q.
+ * Constructs a ListMetricsRequestPrivate object for CloudWatch \a action,
+ * with public implementation \a q.
  */
 ListMetricsRequestPrivate::ListMetricsRequestPrivate(
     const CloudWatchRequest::Action action, ListMetricsRequest * const q)

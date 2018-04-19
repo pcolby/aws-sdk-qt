@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteProfileResponse : public AlexaForBusinessResponse {
 public:
     DeleteProfileResponse(const DeleteProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteProfileRequest * request() const;
+    virtual const DeleteProfileRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteProfileResponse)

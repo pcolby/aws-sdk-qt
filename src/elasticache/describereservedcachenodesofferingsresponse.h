@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeReservedCacheNodesOfferingsResponse : public ElastiCa
 public:
     DescribeReservedCacheNodesOfferingsResponse(const DescribeReservedCacheNodesOfferingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeReservedCacheNodesOfferingsRequest * request() const;
+    virtual const DescribeReservedCacheNodesOfferingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeReservedCacheNodesOfferingsResponse)

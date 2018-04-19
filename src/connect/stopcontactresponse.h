@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopContactResponse : public ConnectResponse {
 public:
     StopContactResponse(const StopContactRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopContactRequest * request() const;
+    virtual const StopContactRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopContactResponse)

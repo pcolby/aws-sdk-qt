@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDetectorRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteDetectorRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDetectorRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 DeleteDetectorRequestPrivate::DeleteDetectorRequestPrivate(
     const GuardDutyRequest::Action action, DeleteDetectorRequest * const q)

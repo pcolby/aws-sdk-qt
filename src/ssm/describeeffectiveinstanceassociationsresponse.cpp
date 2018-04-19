@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeEffectiveInstanceAssociationsResponse
- *
  * \brief The DescribeEffectiveInstanceAssociationsResponse class provides an interace for SSM DescribeEffectiveInstanceAssociations responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeEffectiveInstanceAssociationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEffectiveInstanceAssociationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEffectiveInstanceAssociationsResponse::DescribeEffectiveInstanceAssociationsResponse(
         const DescribeEffectiveInstanceAssociationsRequest &request,
@@ -79,6 +74,9 @@ DescribeEffectiveInstanceAssociationsResponse::DescribeEffectiveInstanceAssociat
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEffectiveInstanceAssociationsRequest * DescribeEffectiveInstanceAssociationsResponse::request() const
 {
     Q_D(const DescribeEffectiveInstanceAssociationsResponse);
@@ -86,9 +84,8 @@ const DescribeEffectiveInstanceAssociationsRequest * DescribeEffectiveInstanceAs
 }
 
 /*!
- * @brief  Parse a SSM DescribeEffectiveInstanceAssociations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeEffectiveInstanceAssociations \a response.
  */
 void DescribeEffectiveInstanceAssociationsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeEffectiveInstanceAssociationsResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::SSM::DescribeEffectiveInstanceAssociationsResponsePrivate
+ * \brief The DescribeEffectiveInstanceAssociationsResponsePrivate class provides private implementation for DescribeEffectiveInstanceAssociationsResponse.
  * \internal
  *
- * \class DescribeEffectiveInstanceAssociationsResponsePrivate
- *
- * \brief Private implementation for DescribeEffectiveInstanceAssociationsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEffectiveInstanceAssociationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEffectiveInstanceAssociationsResponse instance.
+ * Constructs a DescribeEffectiveInstanceAssociationsResponsePrivate object with public implementation \a q.
  */
 DescribeEffectiveInstanceAssociationsResponsePrivate::DescribeEffectiveInstanceAssociationsResponsePrivate(
     DescribeEffectiveInstanceAssociationsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeEffectiveInstanceAssociationsResponsePrivate::DescribeEffectiveInstanceA
 }
 
 /*!
- * @brief  Parse an SSM DescribeEffectiveInstanceAssociationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeEffectiveInstanceAssociations response element from \a xml.
  */
 void DescribeEffectiveInstanceAssociationsResponsePrivate::parseDescribeEffectiveInstanceAssociationsResponse(QXmlStreamReader &xml)
 {

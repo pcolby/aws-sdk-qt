@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * ReportTaskRunnerHeartbeatRequest::response(QN
  */
 
 /*!
- *
- * Constructs a ReportTaskRunnerHeartbeatRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a ReportTaskRunnerHeartbeatRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 ReportTaskRunnerHeartbeatRequestPrivate::ReportTaskRunnerHeartbeatRequestPrivate(
     const DataPipelineRequest::Action action, ReportTaskRunnerHeartbeatRequest * const q)

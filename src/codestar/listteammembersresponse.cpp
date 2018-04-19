@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::ListTeamMembersResponse
- *
  * \brief The ListTeamMembersResponse class provides an interace for CodeStar ListTeamMembers responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new ListTeamMembersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTeamMembersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTeamMembersResponse::ListTeamMembersResponse(
         const ListTeamMembersRequest &request,
@@ -143,6 +138,9 @@ ListTeamMembersResponse::ListTeamMembersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTeamMembersRequest * ListTeamMembersResponse::request() const
 {
     Q_D(const ListTeamMembersResponse);
@@ -150,9 +148,8 @@ const ListTeamMembersRequest * ListTeamMembersResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar ListTeamMembers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar ListTeamMembers \a response.
  */
 void ListTeamMembersResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void ListTeamMembersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::ListTeamMembersResponsePrivate
+ * \brief The ListTeamMembersResponsePrivate class provides private implementation for ListTeamMembersResponse.
  * \internal
  *
- * \class ListTeamMembersResponsePrivate
- *
- * \brief Private implementation for ListTeamMembersResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTeamMembersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTeamMembersResponse instance.
+ * Constructs a ListTeamMembersResponsePrivate object with public implementation \a q.
  */
 ListTeamMembersResponsePrivate::ListTeamMembersResponsePrivate(
     ListTeamMembersResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ ListTeamMembersResponsePrivate::ListTeamMembersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar ListTeamMembersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar ListTeamMembers response element from \a xml.
  */
 void ListTeamMembersResponsePrivate::parseListTeamMembersResponse(QXmlStreamReader &xml)
 {

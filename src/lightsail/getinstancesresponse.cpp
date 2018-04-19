@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetInstancesResponse
- *
  * \brief The GetInstancesResponse class provides an interace for Lightsail GetInstances responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInstancesResponse::GetInstancesResponse(
         const GetInstancesRequest &request,
@@ -71,6 +66,9 @@ GetInstancesResponse::GetInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInstancesRequest * GetInstancesResponse::request() const
 {
     Q_D(const GetInstancesResponse);
@@ -78,9 +76,8 @@ const GetInstancesRequest * GetInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetInstances \a response.
  */
 void GetInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetInstancesResponsePrivate
+ * \brief The GetInstancesResponsePrivate class provides private implementation for GetInstancesResponse.
  * \internal
  *
- * \class GetInstancesResponsePrivate
- *
- * \brief Private implementation for GetInstancesResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInstancesResponse instance.
+ * Constructs a GetInstancesResponsePrivate object with public implementation \a q.
  */
 GetInstancesResponsePrivate::GetInstancesResponsePrivate(
     GetInstancesResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetInstancesResponsePrivate::GetInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetInstances response element from \a xml.
  */
 void GetInstancesResponsePrivate::parseGetInstancesResponse(QXmlStreamReader &xml)
 {

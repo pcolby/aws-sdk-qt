@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachInstancesToLoadBalancerResponse : public LightsailRespo
 public:
     AttachInstancesToLoadBalancerResponse(const AttachInstancesToLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachInstancesToLoadBalancerRequest * request() const;
+    virtual const AttachInstancesToLoadBalancerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AttachInstancesToLoadBalancerResponse)

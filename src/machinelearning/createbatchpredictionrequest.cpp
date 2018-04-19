@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateBatchPredictionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateBatchPredictionRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a CreateBatchPredictionRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 CreateBatchPredictionRequestPrivate::CreateBatchPredictionRequestPrivate(
     const MachineLearningRequest::Action action, CreateBatchPredictionRequest * const q)

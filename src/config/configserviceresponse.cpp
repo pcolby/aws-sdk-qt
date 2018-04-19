@@ -28,16 +28,13 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::ConfigServiceResponse
- *
  * \brief The ConfigServiceResponse class provides an interface for ConfigService responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @brief  Constructs a new ConfigServiceResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ConfigServiceResponse object with parent \a parent.
  */
 ConfigServiceResponse::ConfigServiceResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ConfigServiceResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ConfigServiceResponse::ConfigServiceResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfigServiceResponse object.
- *
+ * \internal
+ * Constructs a ConfigServiceResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ConfigServiceResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ConfigServiceResponse::ConfigServiceResponse(ConfigServiceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ConfigServiceResponse::ConfigServiceResponse(ConfigServiceResponsePrivate * cons
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ConfigServiceResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ConfigServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ConfigService::ConfigServiceResponsePrivate
+ * \brief The ConfigServiceResponsePrivate class provides private implementation for ConfigServiceResponse.
+ * \internal
  *
- * @class  ConfigServiceResponsePrivate
- *
- * @brief  Private implementation for ConfigServiceResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfigServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ConfigServiceResponse instance.
+ * Constructs a ConfigServiceResponsePrivate object with public implementation \a q.
  */
 ConfigServiceResponsePrivate::ConfigServiceResponsePrivate(
     ConfigServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

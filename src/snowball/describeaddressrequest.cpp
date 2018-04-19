@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAddressRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeAddressRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAddressRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 DescribeAddressRequestPrivate::DescribeAddressRequestPrivate(
     const SnowballRequest::Action action, DescribeAddressRequest * const q)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationInstanceRequest::response(QN
  */
 
 /*!
- *
- * Constructs a ModifyReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a ModifyReplicationInstanceRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 ModifyReplicationInstanceRequestPrivate::ModifyReplicationInstanceRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ModifyReplicationInstanceRequest * const q)

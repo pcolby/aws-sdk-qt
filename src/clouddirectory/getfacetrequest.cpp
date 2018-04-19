@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * GetFacetRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a GetFacetRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a GetFacetRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 GetFacetRequestPrivate::GetFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, GetFacetRequest * const q)

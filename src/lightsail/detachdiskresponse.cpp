@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DetachDiskResponse
- *
  * \brief The DetachDiskResponse class provides an interace for Lightsail DetachDisk responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DetachDiskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachDiskResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachDiskResponse::DetachDiskResponse(
         const DetachDiskRequest &request,
@@ -71,6 +66,9 @@ DetachDiskResponse::DetachDiskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachDiskRequest * DetachDiskResponse::request() const
 {
     Q_D(const DetachDiskResponse);
@@ -78,9 +76,8 @@ const DetachDiskRequest * DetachDiskResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail DetachDisk response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail DetachDisk \a response.
  */
 void DetachDiskResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DetachDiskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::DetachDiskResponsePrivate
+ * \brief The DetachDiskResponsePrivate class provides private implementation for DetachDiskResponse.
  * \internal
  *
- * \class DetachDiskResponsePrivate
- *
- * \brief Private implementation for DetachDiskResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachDiskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachDiskResponse instance.
+ * Constructs a DetachDiskResponsePrivate object with public implementation \a q.
  */
 DetachDiskResponsePrivate::DetachDiskResponsePrivate(
     DetachDiskResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ DetachDiskResponsePrivate::DetachDiskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail DetachDiskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail DetachDisk response element from \a xml.
  */
 void DetachDiskResponsePrivate::parseDetachDiskResponse(QXmlStreamReader &xml)
 {

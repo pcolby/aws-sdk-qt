@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * GetResourceConfigHistoryRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a GetResourceConfigHistoryRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a GetResourceConfigHistoryRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 GetResourceConfigHistoryRequestPrivate::GetResourceConfigHistoryRequestPrivate(
     const ConfigServiceRequest::Action action, GetResourceConfigHistoryRequest * const q)

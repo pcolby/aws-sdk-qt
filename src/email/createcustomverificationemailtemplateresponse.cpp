@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateCustomVerificationEmailTemplateResponse
- *
  * \brief The CreateCustomVerificationEmailTemplateResponse class provides an interace for SES CreateCustomVerificationEmailTemplate responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateCustomVerificationEmailTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCustomVerificationEmailTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCustomVerificationEmailTemplateResponse::CreateCustomVerificationEmailTemplateResponse(
         const CreateCustomVerificationEmailTemplateRequest &request,
@@ -66,6 +61,9 @@ CreateCustomVerificationEmailTemplateResponse::CreateCustomVerificationEmailTemp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCustomVerificationEmailTemplateRequest * CreateCustomVerificationEmailTemplateResponse::request() const
 {
     Q_D(const CreateCustomVerificationEmailTemplateResponse);
@@ -73,9 +71,8 @@ const CreateCustomVerificationEmailTemplateRequest * CreateCustomVerificationEma
 }
 
 /*!
- * @brief  Parse a SES CreateCustomVerificationEmailTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES CreateCustomVerificationEmailTemplate \a response.
  */
 void CreateCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::SES::CreateCustomVerificationEmailTemplateResponsePrivate
+ * \brief The CreateCustomVerificationEmailTemplateResponsePrivate class provides private implementation for CreateCustomVerificationEmailTemplateResponse.
  * \internal
  *
- * \class CreateCustomVerificationEmailTemplateResponsePrivate
- *
- * \brief Private implementation for CreateCustomVerificationEmailTemplateResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCustomVerificationEmailTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCustomVerificationEmailTemplateResponse instance.
+ * Constructs a CreateCustomVerificationEmailTemplateResponsePrivate object with public implementation \a q.
  */
 CreateCustomVerificationEmailTemplateResponsePrivate::CreateCustomVerificationEmailTemplateResponsePrivate(
     CreateCustomVerificationEmailTemplateResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateCustomVerificationEmailTemplateResponsePrivate::CreateCustomVerificationEm
 }
 
 /*!
- * @brief  Parse an SES CreateCustomVerificationEmailTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES CreateCustomVerificationEmailTemplate response element from \a xml.
  */
 void CreateCustomVerificationEmailTemplateResponsePrivate::parseCreateCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteLogStreamResponse
- *
  * \brief The DeleteLogStreamResponse class provides an interace for CloudWatchLogs DeleteLogStream responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteLogStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLogStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLogStreamResponse::DeleteLogStreamResponse(
         const DeleteLogStreamRequest &request,
@@ -84,6 +79,9 @@ DeleteLogStreamResponse::DeleteLogStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLogStreamRequest * DeleteLogStreamResponse::request() const
 {
     Q_D(const DeleteLogStreamResponse);
@@ -91,9 +89,8 @@ const DeleteLogStreamRequest * DeleteLogStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DeleteLogStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DeleteLogStream \a response.
  */
 void DeleteLogStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteLogStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DeleteLogStreamResponsePrivate
+ * \brief The DeleteLogStreamResponsePrivate class provides private implementation for DeleteLogStreamResponse.
  * \internal
  *
- * \class DeleteLogStreamResponsePrivate
- *
- * \brief Private implementation for DeleteLogStreamResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLogStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLogStreamResponse instance.
+ * Constructs a DeleteLogStreamResponsePrivate object with public implementation \a q.
  */
 DeleteLogStreamResponsePrivate::DeleteLogStreamResponsePrivate(
     DeleteLogStreamResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteLogStreamResponsePrivate::DeleteLogStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DeleteLogStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DeleteLogStream response element from \a xml.
  */
 void DeleteLogStreamResponsePrivate::parseDeleteLogStreamResponse(QXmlStreamReader &xml)
 {

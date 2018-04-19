@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::RetrieveTapeArchiveResponse
- *
  * \brief The RetrieveTapeArchiveResponse class provides an interace for StorageGateway RetrieveTapeArchive responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new RetrieveTapeArchiveResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RetrieveTapeArchiveResponse object for \a reply to \a request, with parent \a parent.
  */
 RetrieveTapeArchiveResponse::RetrieveTapeArchiveResponse(
         const RetrieveTapeArchiveRequest &request,
@@ -124,6 +119,9 @@ RetrieveTapeArchiveResponse::RetrieveTapeArchiveResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RetrieveTapeArchiveRequest * RetrieveTapeArchiveResponse::request() const
 {
     Q_D(const RetrieveTapeArchiveResponse);
@@ -131,9 +129,8 @@ const RetrieveTapeArchiveRequest * RetrieveTapeArchiveResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway RetrieveTapeArchive response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway RetrieveTapeArchive \a response.
  */
 void RetrieveTapeArchiveResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void RetrieveTapeArchiveResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::RetrieveTapeArchiveResponsePrivate
+ * \brief The RetrieveTapeArchiveResponsePrivate class provides private implementation for RetrieveTapeArchiveResponse.
  * \internal
  *
- * \class RetrieveTapeArchiveResponsePrivate
- *
- * \brief Private implementation for RetrieveTapeArchiveResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetrieveTapeArchiveResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RetrieveTapeArchiveResponse instance.
+ * Constructs a RetrieveTapeArchiveResponsePrivate object with public implementation \a q.
  */
 RetrieveTapeArchiveResponsePrivate::RetrieveTapeArchiveResponsePrivate(
     RetrieveTapeArchiveResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ RetrieveTapeArchiveResponsePrivate::RetrieveTapeArchiveResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway RetrieveTapeArchiveResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway RetrieveTapeArchive response element from \a xml.
  */
 void RetrieveTapeArchiveResponsePrivate::parseRetrieveTapeArchiveResponse(QXmlStreamReader &xml)
 {

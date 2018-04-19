@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetKeyRotationStatusResponse : public KMSResponse {
 public:
     GetKeyRotationStatusResponse(const GetKeyRotationStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetKeyRotationStatusRequest * request() const;
+    virtual const GetKeyRotationStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetKeyRotationStatusResponse)

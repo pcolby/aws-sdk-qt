@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateSchemaResponse : public CloudDirectoryResponse {
 public:
     UpdateSchemaResponse(const UpdateSchemaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateSchemaRequest * request() const;
+    virtual const UpdateSchemaRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateSchemaResponse)

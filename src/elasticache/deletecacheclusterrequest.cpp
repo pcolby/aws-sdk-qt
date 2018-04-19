@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheClusterRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteCacheClusterRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCacheClusterRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 DeleteCacheClusterRequestPrivate::DeleteCacheClusterRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteCacheClusterRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ReplaceRouteRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ReplaceRouteRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ReplaceRouteRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ReplaceRouteRequestPrivate::ReplaceRouteRequestPrivate(
     const EC2Request::Action action, ReplaceRouteRequest * const q)

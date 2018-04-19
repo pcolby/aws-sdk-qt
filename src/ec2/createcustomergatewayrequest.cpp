@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateCustomerGatewayRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateCustomerGatewayRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateCustomerGatewayRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateCustomerGatewayRequestPrivate::CreateCustomerGatewayRequestPrivate(
     const EC2Request::Action action, CreateCustomerGatewayRequest * const q)

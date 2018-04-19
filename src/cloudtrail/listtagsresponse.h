@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTagsResponse : public CloudTrailResponse {
 public:
     ListTagsResponse(const ListTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTagsRequest * request() const;
+    virtual const ListTagsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListTagsResponse)

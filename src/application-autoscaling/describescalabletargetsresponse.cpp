@@ -29,10 +29,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::DescribeScalableTargetsResponse
- *
  * \brief The DescribeScalableTargetsResponse class provides an interace for ApplicationAutoScaling DescribeScalableTargets responses.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -112,11 +111,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeScalableTargetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeScalableTargetsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeScalableTargetsResponse::DescribeScalableTargetsResponse(
         const DescribeScalableTargetsRequest &request,
@@ -128,6 +123,9 @@ DescribeScalableTargetsResponse::DescribeScalableTargetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeScalableTargetsRequest * DescribeScalableTargetsResponse::request() const
 {
     Q_D(const DescribeScalableTargetsResponse);
@@ -135,9 +133,8 @@ const DescribeScalableTargetsRequest * DescribeScalableTargetsResponse::request(
 }
 
 /*!
- * @brief  Parse a ApplicationAutoScaling DescribeScalableTargets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationAutoScaling DescribeScalableTargets \a response.
  */
 void DescribeScalableTargetsResponse::parseSuccess(QIODevice &response)
 {
@@ -147,19 +144,15 @@ void DescribeScalableTargetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationAutoScaling::DescribeScalableTargetsResponsePrivate
+ * \brief The DescribeScalableTargetsResponsePrivate class provides private implementation for DescribeScalableTargetsResponse.
  * \internal
  *
- * \class DescribeScalableTargetsResponsePrivate
- *
- * \brief Private implementation for DescribeScalableTargetsResponse.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScalableTargetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeScalableTargetsResponse instance.
+ * Constructs a DescribeScalableTargetsResponsePrivate object with public implementation \a q.
  */
 DescribeScalableTargetsResponsePrivate::DescribeScalableTargetsResponsePrivate(
     DescribeScalableTargetsResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
@@ -168,9 +161,7 @@ DescribeScalableTargetsResponsePrivate::DescribeScalableTargetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationAutoScaling DescribeScalableTargetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationAutoScaling DescribeScalableTargets response element from \a xml.
  */
 void DescribeScalableTargetsResponsePrivate::parseDescribeScalableTargetsResponse(QXmlStreamReader &xml)
 {

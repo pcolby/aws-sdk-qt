@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRuleRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteRuleRequestPrivate object for CloudWatchEvents \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRuleRequestPrivate object for CloudWatchEvents \a action,
+ * with public implementation \a q.
  */
 DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
     const CloudWatchEventsRequest::Action action, DeleteRuleRequest * const q)

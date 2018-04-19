@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddTagsToResourceResponse : public DirectoryServiceResponse {
 public:
     AddTagsToResourceResponse(const AddTagsToResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddTagsToResourceRequest * request() const;
+    virtual const AddTagsToResourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddTagsToResourceResponse)

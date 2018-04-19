@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UntagResourceRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a UntagResourceRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const CloudDirectoryRequest::Action action, UntagResourceRequest * const q)

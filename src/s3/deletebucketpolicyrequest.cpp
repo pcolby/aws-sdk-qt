@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketPolicyRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteBucketPolicyRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBucketPolicyRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 DeleteBucketPolicyRequestPrivate::DeleteBucketPolicyRequestPrivate(
     const S3Request::Action action, DeleteBucketPolicyRequest * const q)

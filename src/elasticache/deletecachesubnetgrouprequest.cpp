@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCacheSubnetGroupRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteCacheSubnetGroupRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCacheSubnetGroupRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 DeleteCacheSubnetGroupRequestPrivate::DeleteCacheSubnetGroupRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteCacheSubnetGroupRequest * const q)

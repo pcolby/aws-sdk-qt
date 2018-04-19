@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateCampaignResponse : public PinpointResponse {
 public:
     CreateCampaignResponse(const CreateCampaignRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateCampaignRequest * request() const;
+    virtual const CreateCampaignRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateCampaignResponse)

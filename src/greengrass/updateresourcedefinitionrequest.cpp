@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateResourceDefinitionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateResourceDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a UpdateResourceDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 UpdateResourceDefinitionRequestPrivate::UpdateResourceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateResourceDefinitionRequest * const q)

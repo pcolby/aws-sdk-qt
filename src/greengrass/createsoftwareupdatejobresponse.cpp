@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::CreateSoftwareUpdateJobResponse
- *
  * \brief The CreateSoftwareUpdateJobResponse class provides an interace for Greengrass CreateSoftwareUpdateJob responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new CreateSoftwareUpdateJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSoftwareUpdateJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSoftwareUpdateJobResponse::CreateSoftwareUpdateJobResponse(
         const CreateSoftwareUpdateJobRequest &request,
@@ -58,6 +53,9 @@ CreateSoftwareUpdateJobResponse::CreateSoftwareUpdateJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSoftwareUpdateJobRequest * CreateSoftwareUpdateJobResponse::request() const
 {
     Q_D(const CreateSoftwareUpdateJobResponse);
@@ -65,9 +63,8 @@ const CreateSoftwareUpdateJobRequest * CreateSoftwareUpdateJobResponse::request(
 }
 
 /*!
- * @brief  Parse a Greengrass CreateSoftwareUpdateJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass CreateSoftwareUpdateJob \a response.
  */
 void CreateSoftwareUpdateJobResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateSoftwareUpdateJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::CreateSoftwareUpdateJobResponsePrivate
+ * \brief The CreateSoftwareUpdateJobResponsePrivate class provides private implementation for CreateSoftwareUpdateJobResponse.
  * \internal
  *
- * \class CreateSoftwareUpdateJobResponsePrivate
- *
- * \brief Private implementation for CreateSoftwareUpdateJobResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSoftwareUpdateJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSoftwareUpdateJobResponse instance.
+ * Constructs a CreateSoftwareUpdateJobResponsePrivate object with public implementation \a q.
  */
 CreateSoftwareUpdateJobResponsePrivate::CreateSoftwareUpdateJobResponsePrivate(
     CreateSoftwareUpdateJobResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateSoftwareUpdateJobResponsePrivate::CreateSoftwareUpdateJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass CreateSoftwareUpdateJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass CreateSoftwareUpdateJob response element from \a xml.
  */
 void CreateSoftwareUpdateJobResponsePrivate::parseCreateSoftwareUpdateJobResponse(QXmlStreamReader &xml)
 {

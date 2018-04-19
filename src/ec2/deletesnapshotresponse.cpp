@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteSnapshotResponse
- *
  * \brief The DeleteSnapshotResponse class provides an interace for EC2 DeleteSnapshot responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSnapshotResponse::DeleteSnapshotResponse(
         const DeleteSnapshotRequest &request,
@@ -59,6 +54,9 @@ DeleteSnapshotResponse::DeleteSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSnapshotRequest * DeleteSnapshotResponse::request() const
 {
     Q_D(const DeleteSnapshotResponse);
@@ -66,9 +64,8 @@ const DeleteSnapshotRequest * DeleteSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteSnapshot \a response.
  */
 void DeleteSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteSnapshotResponsePrivate
+ * \brief The DeleteSnapshotResponsePrivate class provides private implementation for DeleteSnapshotResponse.
  * \internal
  *
- * \class DeleteSnapshotResponsePrivate
- *
- * \brief Private implementation for DeleteSnapshotResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSnapshotResponse instance.
+ * Constructs a DeleteSnapshotResponsePrivate object with public implementation \a q.
  */
 DeleteSnapshotResponsePrivate::DeleteSnapshotResponsePrivate(
     DeleteSnapshotResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteSnapshotResponsePrivate::DeleteSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteSnapshot response element from \a xml.
  */
 void DeleteSnapshotResponsePrivate::parseDeleteSnapshotResponse(QXmlStreamReader &xml)
 {

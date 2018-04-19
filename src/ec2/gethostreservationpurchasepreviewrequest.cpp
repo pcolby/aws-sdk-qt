@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetHostReservationPurchasePreviewRequest::res
  */
 
 /*!
- *
- * Constructs a GetHostReservationPurchasePreviewRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a GetHostReservationPurchasePreviewRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 GetHostReservationPurchasePreviewRequestPrivate::GetHostReservationPurchasePreviewRequestPrivate(
     const EC2Request::Action action, GetHostReservationPurchasePreviewRequest * const q)

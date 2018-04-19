@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * DisableAvailabilityZonesForLoadBalancerReques
  */
 
 /*!
- *
- * Constructs a DisableAvailabilityZonesForLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a DisableAvailabilityZonesForLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 DisableAvailabilityZonesForLoadBalancerRequestPrivate::DisableAvailabilityZonesForLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DisableAvailabilityZonesForLoadBalancerRequest * const q)

@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteApplicationRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApplicationRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
     const CodeDeployRequest::Action action, DeleteApplicationRequest * const q)

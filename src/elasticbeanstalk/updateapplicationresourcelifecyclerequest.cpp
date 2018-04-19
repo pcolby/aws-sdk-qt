@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationResourceLifecycleRequest::re
  */
 
 /*!
- *
- * Constructs a UpdateApplicationResourceLifecycleRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a UpdateApplicationResourceLifecycleRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 UpdateApplicationResourceLifecycleRequestPrivate::UpdateApplicationResourceLifecycleRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateApplicationResourceLifecycleRequest * const q)

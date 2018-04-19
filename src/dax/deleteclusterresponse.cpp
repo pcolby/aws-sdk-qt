@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DeleteClusterResponse
- *
  * \brief The DeleteClusterResponse class provides an interace for DAX DeleteCluster responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteClusterResponse::DeleteClusterResponse(
         const DeleteClusterRequest &request,
@@ -59,6 +54,9 @@ DeleteClusterResponse::DeleteClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteClusterRequest * DeleteClusterResponse::request() const
 {
     Q_D(const DeleteClusterResponse);
@@ -66,9 +64,8 @@ const DeleteClusterRequest * DeleteClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a DAX DeleteCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX DeleteCluster \a response.
  */
 void DeleteClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::DeleteClusterResponsePrivate
+ * \brief The DeleteClusterResponsePrivate class provides private implementation for DeleteClusterResponse.
  * \internal
  *
- * \class DeleteClusterResponsePrivate
- *
- * \brief Private implementation for DeleteClusterResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteClusterResponse instance.
+ * Constructs a DeleteClusterResponsePrivate object with public implementation \a q.
  */
 DeleteClusterResponsePrivate::DeleteClusterResponsePrivate(
     DeleteClusterResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteClusterResponsePrivate::DeleteClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX DeleteClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX DeleteCluster response element from \a xml.
  */
 void DeleteClusterResponsePrivate::parseDeleteClusterResponse(QXmlStreamReader &xml)
 {

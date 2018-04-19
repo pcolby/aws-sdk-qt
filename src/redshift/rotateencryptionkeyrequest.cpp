@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * RotateEncryptionKeyRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a RotateEncryptionKeyRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a RotateEncryptionKeyRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 RotateEncryptionKeyRequestPrivate::RotateEncryptionKeyRequestPrivate(
     const RedshiftRequest::Action action, RotateEncryptionKeyRequest * const q)

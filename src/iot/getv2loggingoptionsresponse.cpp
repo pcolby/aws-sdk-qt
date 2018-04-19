@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetV2LoggingOptionsResponse
- *
  * \brief The GetV2LoggingOptionsResponse class provides an interace for IoT GetV2LoggingOptions responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetV2LoggingOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetV2LoggingOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetV2LoggingOptionsResponse::GetV2LoggingOptionsResponse(
         const GetV2LoggingOptionsRequest &request,
@@ -66,6 +61,9 @@ GetV2LoggingOptionsResponse::GetV2LoggingOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetV2LoggingOptionsRequest * GetV2LoggingOptionsResponse::request() const
 {
     Q_D(const GetV2LoggingOptionsResponse);
@@ -73,9 +71,8 @@ const GetV2LoggingOptionsRequest * GetV2LoggingOptionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT GetV2LoggingOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT GetV2LoggingOptions \a response.
  */
 void GetV2LoggingOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetV2LoggingOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::GetV2LoggingOptionsResponsePrivate
+ * \brief The GetV2LoggingOptionsResponsePrivate class provides private implementation for GetV2LoggingOptionsResponse.
  * \internal
  *
- * \class GetV2LoggingOptionsResponsePrivate
- *
- * \brief Private implementation for GetV2LoggingOptionsResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetV2LoggingOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetV2LoggingOptionsResponse instance.
+ * Constructs a GetV2LoggingOptionsResponsePrivate object with public implementation \a q.
  */
 GetV2LoggingOptionsResponsePrivate::GetV2LoggingOptionsResponsePrivate(
     GetV2LoggingOptionsResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ GetV2LoggingOptionsResponsePrivate::GetV2LoggingOptionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT GetV2LoggingOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT GetV2LoggingOptions response element from \a xml.
  */
 void GetV2LoggingOptionsResponsePrivate::parseGetV2LoggingOptionsResponse(QXmlStreamReader &xml)
 {

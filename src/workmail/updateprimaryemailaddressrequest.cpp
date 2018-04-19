@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * UpdatePrimaryEmailAddressRequest::response(QN
  */
 
 /*!
- *
- * Constructs a UpdatePrimaryEmailAddressRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a UpdatePrimaryEmailAddressRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 UpdatePrimaryEmailAddressRequestPrivate::UpdatePrimaryEmailAddressRequestPrivate(
     const WorkMailRequest::Action action, UpdatePrimaryEmailAddressRequest * const q)

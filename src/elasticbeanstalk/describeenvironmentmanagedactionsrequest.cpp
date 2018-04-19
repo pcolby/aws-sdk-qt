@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentManagedActionsRequest::res
  */
 
 /*!
- *
- * Constructs a DescribeEnvironmentManagedActionsRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEnvironmentManagedActionsRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DescribeEnvironmentManagedActionsRequestPrivate::DescribeEnvironmentManagedActionsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeEnvironmentManagedActionsRequest * const q)

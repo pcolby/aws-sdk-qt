@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteFunctionDefinitionResponse : public GreengrassResponse 
 public:
     DeleteFunctionDefinitionResponse(const DeleteFunctionDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteFunctionDefinitionRequest * request() const;
+    virtual const DeleteFunctionDefinitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteFunctionDefinitionResponse)

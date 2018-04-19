@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBranchRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteBranchRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBranchRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 DeleteBranchRequestPrivate::DeleteBranchRequestPrivate(
     const CodeCommitRequest::Action action, DeleteBranchRequest * const q)

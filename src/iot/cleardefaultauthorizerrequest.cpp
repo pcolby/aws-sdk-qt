@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ClearDefaultAuthorizerRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ClearDefaultAuthorizerRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ClearDefaultAuthorizerRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ClearDefaultAuthorizerRequestPrivate::ClearDefaultAuthorizerRequestPrivate(
     const IoTRequest::Action action, ClearDefaultAuthorizerRequest * const q)

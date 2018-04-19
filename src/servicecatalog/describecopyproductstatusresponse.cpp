@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeCopyProductStatusResponse
- *
  * \brief The DescribeCopyProductStatusResponse class provides an interace for ServiceCatalog DescribeCopyProductStatus responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeCopyProductStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCopyProductStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCopyProductStatusResponse::DescribeCopyProductStatusResponse(
         const DescribeCopyProductStatusRequest &request,
@@ -61,6 +56,9 @@ DescribeCopyProductStatusResponse::DescribeCopyProductStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCopyProductStatusRequest * DescribeCopyProductStatusResponse::request() const
 {
     Q_D(const DescribeCopyProductStatusResponse);
@@ -68,9 +66,8 @@ const DescribeCopyProductStatusRequest * DescribeCopyProductStatusResponse::requ
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DescribeCopyProductStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DescribeCopyProductStatus \a response.
  */
 void DescribeCopyProductStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeCopyProductStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DescribeCopyProductStatusResponsePrivate
+ * \brief The DescribeCopyProductStatusResponsePrivate class provides private implementation for DescribeCopyProductStatusResponse.
  * \internal
  *
- * \class DescribeCopyProductStatusResponsePrivate
- *
- * \brief Private implementation for DescribeCopyProductStatusResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCopyProductStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCopyProductStatusResponse instance.
+ * Constructs a DescribeCopyProductStatusResponsePrivate object with public implementation \a q.
  */
 DescribeCopyProductStatusResponsePrivate::DescribeCopyProductStatusResponsePrivate(
     DescribeCopyProductStatusResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeCopyProductStatusResponsePrivate::DescribeCopyProductStatusResponsePriva
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DescribeCopyProductStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DescribeCopyProductStatus response element from \a xml.
  */
 void DescribeCopyProductStatusResponsePrivate::parseDescribeCopyProductStatusResponse(QXmlStreamReader &xml)
 {

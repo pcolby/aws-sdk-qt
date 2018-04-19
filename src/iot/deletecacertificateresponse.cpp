@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteCACertificateResponse
- *
  * \brief The DeleteCACertificateResponse class provides an interace for IoT DeleteCACertificate responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteCACertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCACertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCACertificateResponse::DeleteCACertificateResponse(
         const DeleteCACertificateRequest &request,
@@ -66,6 +61,9 @@ DeleteCACertificateResponse::DeleteCACertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCACertificateRequest * DeleteCACertificateResponse::request() const
 {
     Q_D(const DeleteCACertificateResponse);
@@ -73,9 +71,8 @@ const DeleteCACertificateRequest * DeleteCACertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DeleteCACertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DeleteCACertificate \a response.
  */
 void DeleteCACertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteCACertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DeleteCACertificateResponsePrivate
+ * \brief The DeleteCACertificateResponsePrivate class provides private implementation for DeleteCACertificateResponse.
  * \internal
  *
- * \class DeleteCACertificateResponsePrivate
- *
- * \brief Private implementation for DeleteCACertificateResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCACertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCACertificateResponse instance.
+ * Constructs a DeleteCACertificateResponsePrivate object with public implementation \a q.
  */
 DeleteCACertificateResponsePrivate::DeleteCACertificateResponsePrivate(
     DeleteCACertificateResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteCACertificateResponsePrivate::DeleteCACertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DeleteCACertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DeleteCACertificate response element from \a xml.
  */
 void DeleteCACertificateResponsePrivate::parseDeleteCACertificateResponse(QXmlStreamReader &xml)
 {

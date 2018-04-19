@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::PutLifecycleEventHookExecutionStatusResponse
- *
  * \brief The PutLifecycleEventHookExecutionStatusResponse class provides an interace for CodeDeploy PutLifecycleEventHookExecutionStatus responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new PutLifecycleEventHookExecutionStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutLifecycleEventHookExecutionStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 PutLifecycleEventHookExecutionStatusResponse::PutLifecycleEventHookExecutionStatusResponse(
         const PutLifecycleEventHookExecutionStatusRequest &request,
@@ -136,6 +131,9 @@ PutLifecycleEventHookExecutionStatusResponse::PutLifecycleEventHookExecutionStat
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutLifecycleEventHookExecutionStatusRequest * PutLifecycleEventHookExecutionStatusResponse::request() const
 {
     Q_D(const PutLifecycleEventHookExecutionStatusResponse);
@@ -143,9 +141,8 @@ const PutLifecycleEventHookExecutionStatusRequest * PutLifecycleEventHookExecuti
 }
 
 /*!
- * @brief  Parse a CodeDeploy PutLifecycleEventHookExecutionStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy PutLifecycleEventHookExecutionStatus \a response.
  */
 void PutLifecycleEventHookExecutionStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void PutLifecycleEventHookExecutionStatusResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::CodeDeploy::PutLifecycleEventHookExecutionStatusResponsePrivate
+ * \brief The PutLifecycleEventHookExecutionStatusResponsePrivate class provides private implementation for PutLifecycleEventHookExecutionStatusResponse.
  * \internal
  *
- * \class PutLifecycleEventHookExecutionStatusResponsePrivate
- *
- * \brief Private implementation for PutLifecycleEventHookExecutionStatusResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutLifecycleEventHookExecutionStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutLifecycleEventHookExecutionStatusResponse instance.
+ * Constructs a PutLifecycleEventHookExecutionStatusResponsePrivate object with public implementation \a q.
  */
 PutLifecycleEventHookExecutionStatusResponsePrivate::PutLifecycleEventHookExecutionStatusResponsePrivate(
     PutLifecycleEventHookExecutionStatusResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ PutLifecycleEventHookExecutionStatusResponsePrivate::PutLifecycleEventHookExecut
 }
 
 /*!
- * @brief  Parse an CodeDeploy PutLifecycleEventHookExecutionStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy PutLifecycleEventHookExecutionStatus response element from \a xml.
  */
 void PutLifecycleEventHookExecutionStatusResponsePrivate::parsePutLifecycleEventHookExecutionStatusResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ListExportsResponse
- *
  * \brief The ListExportsResponse class provides an interace for CloudFormation ListExports responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ListExportsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListExportsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListExportsResponse::ListExportsResponse(
         const ListExportsRequest &request,
@@ -77,6 +72,9 @@ ListExportsResponse::ListExportsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListExportsRequest * ListExportsResponse::request() const
 {
     Q_D(const ListExportsResponse);
@@ -84,9 +82,8 @@ const ListExportsRequest * ListExportsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation ListExports response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation ListExports \a response.
  */
 void ListExportsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ListExportsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::ListExportsResponsePrivate
+ * \brief The ListExportsResponsePrivate class provides private implementation for ListExportsResponse.
  * \internal
  *
- * \class ListExportsResponsePrivate
- *
- * \brief Private implementation for ListExportsResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListExportsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListExportsResponse instance.
+ * Constructs a ListExportsResponsePrivate object with public implementation \a q.
  */
 ListExportsResponsePrivate::ListExportsResponsePrivate(
     ListExportsResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ ListExportsResponsePrivate::ListExportsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation ListExportsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation ListExports response element from \a xml.
  */
 void ListExportsResponsePrivate::parseListExportsResponse(QXmlStreamReader &xml)
 {

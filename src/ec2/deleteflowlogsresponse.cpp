@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteFlowLogsResponse
- *
  * \brief The DeleteFlowLogsResponse class provides an interace for EC2 DeleteFlowLogs responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteFlowLogsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteFlowLogsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteFlowLogsResponse::DeleteFlowLogsResponse(
         const DeleteFlowLogsRequest &request,
@@ -59,6 +54,9 @@ DeleteFlowLogsResponse::DeleteFlowLogsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteFlowLogsRequest * DeleteFlowLogsResponse::request() const
 {
     Q_D(const DeleteFlowLogsResponse);
@@ -66,9 +64,8 @@ const DeleteFlowLogsRequest * DeleteFlowLogsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteFlowLogs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteFlowLogs \a response.
  */
 void DeleteFlowLogsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteFlowLogsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteFlowLogsResponsePrivate
+ * \brief The DeleteFlowLogsResponsePrivate class provides private implementation for DeleteFlowLogsResponse.
  * \internal
  *
- * \class DeleteFlowLogsResponsePrivate
- *
- * \brief Private implementation for DeleteFlowLogsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFlowLogsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteFlowLogsResponse instance.
+ * Constructs a DeleteFlowLogsResponsePrivate object with public implementation \a q.
  */
 DeleteFlowLogsResponsePrivate::DeleteFlowLogsResponsePrivate(
     DeleteFlowLogsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteFlowLogsResponsePrivate::DeleteFlowLogsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteFlowLogsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteFlowLogs response element from \a xml.
  */
 void DeleteFlowLogsResponsePrivate::parseDeleteFlowLogsResponse(QXmlStreamReader &xml)
 {

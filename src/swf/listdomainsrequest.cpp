@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * ListDomainsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListDomainsRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a ListDomainsRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 ListDomainsRequestPrivate::ListDomainsRequestPrivate(
     const SWFRequest::Action action, ListDomainsRequest * const q)

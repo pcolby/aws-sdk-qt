@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetInstanceProfileResponse
- *
  * \brief The GetInstanceProfileResponse class provides an interace for DeviceFarm GetInstanceProfile responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInstanceProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInstanceProfileResponse::GetInstanceProfileResponse(
         const GetInstanceProfileRequest &request,
@@ -57,6 +52,9 @@ GetInstanceProfileResponse::GetInstanceProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInstanceProfileRequest * GetInstanceProfileResponse::request() const
 {
     Q_D(const GetInstanceProfileResponse);
@@ -64,9 +62,8 @@ const GetInstanceProfileRequest * GetInstanceProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetInstanceProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetInstanceProfile \a response.
  */
 void GetInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetInstanceProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetInstanceProfileResponsePrivate
+ * \brief The GetInstanceProfileResponsePrivate class provides private implementation for GetInstanceProfileResponse.
  * \internal
  *
- * \class GetInstanceProfileResponsePrivate
- *
- * \brief Private implementation for GetInstanceProfileResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInstanceProfileResponse instance.
+ * Constructs a GetInstanceProfileResponsePrivate object with public implementation \a q.
  */
 GetInstanceProfileResponsePrivate::GetInstanceProfileResponsePrivate(
     GetInstanceProfileResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetInstanceProfileResponsePrivate::GetInstanceProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetInstanceProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetInstanceProfile response element from \a xml.
  */
 void GetInstanceProfileResponsePrivate::parseGetInstanceProfileResponse(QXmlStreamReader &xml)
 {

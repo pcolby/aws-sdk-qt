@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::EnableSsoResponse
- *
  * \brief The EnableSsoResponse class provides an interace for DirectoryService EnableSso responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new EnableSsoResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableSsoResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableSsoResponse::EnableSsoResponse(
         const EnableSsoRequest &request,
@@ -69,6 +64,9 @@ EnableSsoResponse::EnableSsoResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableSsoRequest * EnableSsoResponse::request() const
 {
     Q_D(const EnableSsoResponse);
@@ -76,9 +74,8 @@ const EnableSsoRequest * EnableSsoResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService EnableSso response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService EnableSso \a response.
  */
 void EnableSsoResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void EnableSsoResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::EnableSsoResponsePrivate
+ * \brief The EnableSsoResponsePrivate class provides private implementation for EnableSsoResponse.
  * \internal
  *
- * \class EnableSsoResponsePrivate
- *
- * \brief Private implementation for EnableSsoResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableSsoResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableSsoResponse instance.
+ * Constructs a EnableSsoResponsePrivate object with public implementation \a q.
  */
 EnableSsoResponsePrivate::EnableSsoResponsePrivate(
     EnableSsoResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ EnableSsoResponsePrivate::EnableSsoResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService EnableSsoResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService EnableSso response element from \a xml.
  */
 void EnableSsoResponsePrivate::parseEnableSsoResponse(QXmlStreamReader &xml)
 {

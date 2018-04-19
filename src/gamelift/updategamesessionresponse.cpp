@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateGameSessionResponse
- *
  * \brief The UpdateGameSessionResponse class provides an interace for GameLift UpdateGameSession responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateGameSessionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateGameSessionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateGameSessionResponse::UpdateGameSessionResponse(
         const UpdateGameSessionRequest &request,
@@ -491,6 +486,9 @@ UpdateGameSessionResponse::UpdateGameSessionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateGameSessionRequest * UpdateGameSessionResponse::request() const
 {
     Q_D(const UpdateGameSessionResponse);
@@ -498,9 +496,8 @@ const UpdateGameSessionRequest * UpdateGameSessionResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift UpdateGameSession response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift UpdateGameSession \a response.
  */
 void UpdateGameSessionResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void UpdateGameSessionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::UpdateGameSessionResponsePrivate
+ * \brief The UpdateGameSessionResponsePrivate class provides private implementation for UpdateGameSessionResponse.
  * \internal
  *
- * \class UpdateGameSessionResponsePrivate
- *
- * \brief Private implementation for UpdateGameSessionResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGameSessionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateGameSessionResponse instance.
+ * Constructs a UpdateGameSessionResponsePrivate object with public implementation \a q.
  */
 UpdateGameSessionResponsePrivate::UpdateGameSessionResponsePrivate(
     UpdateGameSessionResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ UpdateGameSessionResponsePrivate::UpdateGameSessionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift UpdateGameSessionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift UpdateGameSession response element from \a xml.
  */
 void UpdateGameSessionResponsePrivate::parseUpdateGameSessionResponse(QXmlStreamReader &xml)
 {

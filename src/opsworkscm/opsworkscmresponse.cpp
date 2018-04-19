@@ -28,16 +28,13 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::OpsWorksCMResponse
- *
  * \brief The OpsWorksCMResponse class provides an interface for OpsWorksCM responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @brief  Constructs a new OpsWorksCMResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a OpsWorksCMResponse object with parent \a parent.
  */
 OpsWorksCMResponse::OpsWorksCMResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new OpsWorksCMResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ OpsWorksCMResponse::OpsWorksCMResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new OpsWorksCMResponse object.
- *
+ * \internal
+ * Constructs a OpsWorksCMResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from OpsWorksCMResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 OpsWorksCMResponse::OpsWorksCMResponse(OpsWorksCMResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ OpsWorksCMResponse::OpsWorksCMResponse(OpsWorksCMResponsePrivate * const d, QObj
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void OpsWorksCMResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void OpsWorksCMResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::OpsWorksCM::OpsWorksCMResponsePrivate
+ * \brief The OpsWorksCMResponsePrivate class provides private implementation for OpsWorksCMResponse.
+ * \internal
  *
- * @class  OpsWorksCMResponsePrivate
- *
- * @brief  Private implementation for OpsWorksCMResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new OpsWorksCMResponsePrivate object.
- *
- * @param  q  Pointer to this object's public OpsWorksCMResponse instance.
+ * Constructs a OpsWorksCMResponsePrivate object with public implementation \a q.
  */
 OpsWorksCMResponsePrivate::OpsWorksCMResponsePrivate(
     OpsWorksCMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

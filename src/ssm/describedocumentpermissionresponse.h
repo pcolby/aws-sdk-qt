@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDocumentPermissionResponse : public SSMResponse {
 public:
     DescribeDocumentPermissionResponse(const DescribeDocumentPermissionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDocumentPermissionRequest * request() const;
+    virtual const DescribeDocumentPermissionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDocumentPermissionResponse)

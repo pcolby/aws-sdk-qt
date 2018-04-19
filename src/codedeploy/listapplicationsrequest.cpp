@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * ListApplicationsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListApplicationsRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a ListApplicationsRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
     const CodeDeployRequest::Action action, ListApplicationsRequest * const q)

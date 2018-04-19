@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResetNetworkInterfaceAttributeResponse : public EC2Response {
 public:
     ResetNetworkInterfaceAttributeResponse(const ResetNetworkInterfaceAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResetNetworkInterfaceAttributeRequest * request() const;
+    virtual const ResetNetworkInterfaceAttributeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResetNetworkInterfaceAttributeResponse)

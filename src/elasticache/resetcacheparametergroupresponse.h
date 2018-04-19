@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResetCacheParameterGroupResponse : public ElastiCacheResponse
 public:
     ResetCacheParameterGroupResponse(const ResetCacheParameterGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResetCacheParameterGroupRequest * request() const;
+    virtual const ResetCacheParameterGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResetCacheParameterGroupResponse)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeImportSnapshotTasksRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeImportSnapshotTasksRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeImportSnapshotTasksRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeImportSnapshotTasksRequestPrivate::DescribeImportSnapshotTasksRequestPrivate(
     const EC2Request::Action action, DescribeImportSnapshotTasksRequest * const q)

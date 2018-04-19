@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeElasticLoadBalancersRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeElasticLoadBalancersRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeElasticLoadBalancersRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeElasticLoadBalancersRequestPrivate::DescribeElasticLoadBalancersRequestPrivate(
     const OpsWorksRequest::Action action, DescribeElasticLoadBalancersRequest * const q)

@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DeleteExpressionResponse
- *
  * \brief The DeleteExpressionResponse class provides an interace for CloudSearch DeleteExpression responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DeleteExpressionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteExpressionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteExpressionResponse::DeleteExpressionResponse(
         const DeleteExpressionRequest &request,
@@ -66,6 +61,9 @@ DeleteExpressionResponse::DeleteExpressionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteExpressionRequest * DeleteExpressionResponse::request() const
 {
     Q_D(const DeleteExpressionResponse);
@@ -73,9 +71,8 @@ const DeleteExpressionRequest * DeleteExpressionResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch DeleteExpression response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DeleteExpression \a response.
  */
 void DeleteExpressionResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteExpressionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DeleteExpressionResponsePrivate
+ * \brief The DeleteExpressionResponsePrivate class provides private implementation for DeleteExpressionResponse.
  * \internal
  *
- * \class DeleteExpressionResponsePrivate
- *
- * \brief Private implementation for DeleteExpressionResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteExpressionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteExpressionResponse instance.
+ * Constructs a DeleteExpressionResponsePrivate object with public implementation \a q.
  */
 DeleteExpressionResponsePrivate::DeleteExpressionResponsePrivate(
     DeleteExpressionResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteExpressionResponsePrivate::DeleteExpressionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DeleteExpressionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DeleteExpression response element from \a xml.
  */
 void DeleteExpressionResponsePrivate::parseDeleteExpressionResponse(QXmlStreamReader &xml)
 {

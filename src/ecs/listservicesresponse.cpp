@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::ListServicesResponse
- *
  * \brief The ListServicesResponse class provides an interace for ECS ListServices responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new ListServicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListServicesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListServicesResponse::ListServicesResponse(
         const ListServicesRequest &request,
@@ -72,6 +67,9 @@ ListServicesResponse::ListServicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListServicesRequest * ListServicesResponse::request() const
 {
     Q_D(const ListServicesResponse);
@@ -79,9 +77,8 @@ const ListServicesRequest * ListServicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS ListServices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS ListServices \a response.
  */
 void ListServicesResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void ListServicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::ListServicesResponsePrivate
+ * \brief The ListServicesResponsePrivate class provides private implementation for ListServicesResponse.
  * \internal
  *
- * \class ListServicesResponsePrivate
- *
- * \brief Private implementation for ListServicesResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListServicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListServicesResponse instance.
+ * Constructs a ListServicesResponsePrivate object with public implementation \a q.
  */
 ListServicesResponsePrivate::ListServicesResponsePrivate(
     ListServicesResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ ListServicesResponsePrivate::ListServicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS ListServicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS ListServices response element from \a xml.
  */
 void ListServicesResponsePrivate::parseListServicesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::ListConfigurationsResponse
- *
  * \brief The ListConfigurationsResponse class provides an interace for ApplicationDiscoveryService ListConfigurations responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new ListConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListConfigurationsResponse::ListConfigurationsResponse(
         const ListConfigurationsRequest &request,
@@ -119,6 +114,9 @@ ListConfigurationsResponse::ListConfigurationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListConfigurationsRequest * ListConfigurationsResponse::request() const
 {
     Q_D(const ListConfigurationsResponse);
@@ -126,9 +124,8 @@ const ListConfigurationsRequest * ListConfigurationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService ListConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService ListConfigurations \a response.
  */
 void ListConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void ListConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::ListConfigurationsResponsePrivate
+ * \brief The ListConfigurationsResponsePrivate class provides private implementation for ListConfigurationsResponse.
  * \internal
  *
- * \class ListConfigurationsResponsePrivate
- *
- * \brief Private implementation for ListConfigurationsResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListConfigurationsResponse instance.
+ * Constructs a ListConfigurationsResponsePrivate object with public implementation \a q.
  */
 ListConfigurationsResponsePrivate::ListConfigurationsResponsePrivate(
     ListConfigurationsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ ListConfigurationsResponsePrivate::ListConfigurationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService ListConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService ListConfigurations response element from \a xml.
  */
 void ListConfigurationsResponsePrivate::parseListConfigurationsResponse(QXmlStreamReader &xml)
 {

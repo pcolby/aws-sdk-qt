@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListReceiptFiltersResponse
- *
  * \brief The ListReceiptFiltersResponse class provides an interace for SES ListReceiptFilters responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListReceiptFiltersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListReceiptFiltersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListReceiptFiltersResponse::ListReceiptFiltersResponse(
         const ListReceiptFiltersRequest &request,
@@ -66,6 +61,9 @@ ListReceiptFiltersResponse::ListReceiptFiltersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListReceiptFiltersRequest * ListReceiptFiltersResponse::request() const
 {
     Q_D(const ListReceiptFiltersResponse);
@@ -73,9 +71,8 @@ const ListReceiptFiltersRequest * ListReceiptFiltersResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES ListReceiptFilters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES ListReceiptFilters \a response.
  */
 void ListReceiptFiltersResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListReceiptFiltersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::ListReceiptFiltersResponsePrivate
+ * \brief The ListReceiptFiltersResponsePrivate class provides private implementation for ListReceiptFiltersResponse.
  * \internal
  *
- * \class ListReceiptFiltersResponsePrivate
- *
- * \brief Private implementation for ListReceiptFiltersResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListReceiptFiltersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListReceiptFiltersResponse instance.
+ * Constructs a ListReceiptFiltersResponsePrivate object with public implementation \a q.
  */
 ListReceiptFiltersResponsePrivate::ListReceiptFiltersResponsePrivate(
     ListReceiptFiltersResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ ListReceiptFiltersResponsePrivate::ListReceiptFiltersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES ListReceiptFiltersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES ListReceiptFilters response element from \a xml.
  */
 void ListReceiptFiltersResponsePrivate::parseListReceiptFiltersResponse(QXmlStreamReader &xml)
 {

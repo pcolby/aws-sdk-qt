@@ -54,7 +54,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * Constructs a[n] CloudWatchEventsRequest object for CloudWatchEvents \a action.
+ * Constructs a CloudWatchEventsRequest object for CloudWatchEvents \a action.
  */
 CloudWatchEventsRequest::CloudWatchEventsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudWatchEventsRequestPrivate(action, this))
@@ -254,8 +254,8 @@ QNetworkRequest CloudWatchEventsRequest::unsignedRequest(const QUrl &endpoint) c
  */
 
 /*!
- * Constructs a CloudWatchEventsRequestPrivate object for CloudWatchEvents \a action with,
- * public implementation \a q.
+ * Constructs a CloudWatchEventsRequestPrivate object for CloudWatchEvents \a action,
+ * with public implementation \a q.
  */
 CloudWatchEventsRequestPrivate::CloudWatchEventsRequestPrivate(const CloudWatchEventsRequest::Action action, CloudWatchEventsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

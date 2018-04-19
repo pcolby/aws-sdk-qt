@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::RejectAssignmentResponse
- *
  * \brief The RejectAssignmentResponse class provides an interace for MTurk RejectAssignment responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::rejectAssignment
  */
 
 /*!
- * @brief  Constructs a new RejectAssignmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RejectAssignmentResponse object for \a reply to \a request, with parent \a parent.
  */
 RejectAssignmentResponse::RejectAssignmentResponse(
         const RejectAssignmentRequest &request,
@@ -55,6 +50,9 @@ RejectAssignmentResponse::RejectAssignmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RejectAssignmentRequest * RejectAssignmentResponse::request() const
 {
     Q_D(const RejectAssignmentResponse);
@@ -62,9 +60,8 @@ const RejectAssignmentRequest * RejectAssignmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk RejectAssignment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk RejectAssignment \a response.
  */
 void RejectAssignmentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void RejectAssignmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::RejectAssignmentResponsePrivate
+ * \brief The RejectAssignmentResponsePrivate class provides private implementation for RejectAssignmentResponse.
  * \internal
  *
- * \class RejectAssignmentResponsePrivate
- *
- * \brief Private implementation for RejectAssignmentResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RejectAssignmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RejectAssignmentResponse instance.
+ * Constructs a RejectAssignmentResponsePrivate object with public implementation \a q.
  */
 RejectAssignmentResponsePrivate::RejectAssignmentResponsePrivate(
     RejectAssignmentResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ RejectAssignmentResponsePrivate::RejectAssignmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk RejectAssignmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk RejectAssignment response element from \a xml.
  */
 void RejectAssignmentResponsePrivate::parseRejectAssignmentResponse(QXmlStreamReader &xml)
 {

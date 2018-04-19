@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::ListTaskDefinitionsResponse
- *
  * \brief The ListTaskDefinitionsResponse class provides an interace for ECS ListTaskDefinitions responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new ListTaskDefinitionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTaskDefinitionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTaskDefinitionsResponse::ListTaskDefinitionsResponse(
         const ListTaskDefinitionsRequest &request,
@@ -72,6 +67,9 @@ ListTaskDefinitionsResponse::ListTaskDefinitionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTaskDefinitionsRequest * ListTaskDefinitionsResponse::request() const
 {
     Q_D(const ListTaskDefinitionsResponse);
@@ -79,9 +77,8 @@ const ListTaskDefinitionsRequest * ListTaskDefinitionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS ListTaskDefinitions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS ListTaskDefinitions \a response.
  */
 void ListTaskDefinitionsResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void ListTaskDefinitionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::ListTaskDefinitionsResponsePrivate
+ * \brief The ListTaskDefinitionsResponsePrivate class provides private implementation for ListTaskDefinitionsResponse.
  * \internal
  *
- * \class ListTaskDefinitionsResponsePrivate
- *
- * \brief Private implementation for ListTaskDefinitionsResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTaskDefinitionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTaskDefinitionsResponse instance.
+ * Constructs a ListTaskDefinitionsResponsePrivate object with public implementation \a q.
  */
 ListTaskDefinitionsResponsePrivate::ListTaskDefinitionsResponsePrivate(
     ListTaskDefinitionsResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ ListTaskDefinitionsResponsePrivate::ListTaskDefinitionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS ListTaskDefinitionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS ListTaskDefinitions response element from \a xml.
  */
 void ListTaskDefinitionsResponsePrivate::parseListTaskDefinitionsResponse(QXmlStreamReader &xml)
 {

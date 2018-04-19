@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetAccountBalanceRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetAccountBalanceRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a GetAccountBalanceRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 GetAccountBalanceRequestPrivate::GetAccountBalanceRequestPrivate(
     const MTurkRequest::Action action, GetAccountBalanceRequest * const q)

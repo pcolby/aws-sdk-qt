@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * AssociateElasticIpRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a AssociateElasticIpRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a AssociateElasticIpRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 AssociateElasticIpRequestPrivate::AssociateElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, AssociateElasticIpRequest * const q)

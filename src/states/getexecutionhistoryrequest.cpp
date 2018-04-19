@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * GetExecutionHistoryRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetExecutionHistoryRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a GetExecutionHistoryRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 GetExecutionHistoryRequestPrivate::GetExecutionHistoryRequestPrivate(
     const SFNRequest::Action action, GetExecutionHistoryRequest * const q)

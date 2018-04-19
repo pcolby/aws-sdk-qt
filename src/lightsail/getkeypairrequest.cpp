@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetKeyPairRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetKeyPairRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetKeyPairRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetKeyPairRequestPrivate::GetKeyPairRequestPrivate(
     const LightsailRequest::Action action, GetKeyPairRequest * const q)

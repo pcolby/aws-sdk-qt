@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateAddressBookResponse : public AlexaForBusinessResponse {
 public:
     CreateAddressBookResponse(const CreateAddressBookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateAddressBookRequest * request() const;
+    virtual const CreateAddressBookRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateAddressBookResponse)

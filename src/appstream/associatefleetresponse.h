@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateFleetResponse : public AppStreamResponse {
 public:
     AssociateFleetResponse(const AssociateFleetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateFleetRequest * request() const;
+    virtual const AssociateFleetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateFleetResponse)

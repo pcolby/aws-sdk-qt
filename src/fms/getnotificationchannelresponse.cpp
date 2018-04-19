@@ -29,10 +29,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::GetNotificationChannelResponse
- *
  * \brief The GetNotificationChannelResponse class provides an interace for FMS GetNotificationChannel responses.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -45,11 +44,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new GetNotificationChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetNotificationChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 GetNotificationChannelResponse::GetNotificationChannelResponse(
         const GetNotificationChannelRequest &request,
@@ -61,6 +56,9 @@ GetNotificationChannelResponse::GetNotificationChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetNotificationChannelRequest * GetNotificationChannelResponse::request() const
 {
     Q_D(const GetNotificationChannelResponse);
@@ -68,9 +66,8 @@ const GetNotificationChannelRequest * GetNotificationChannelResponse::request() 
 }
 
 /*!
- * @brief  Parse a FMS GetNotificationChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful FMS GetNotificationChannel \a response.
  */
 void GetNotificationChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void GetNotificationChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::FMS::GetNotificationChannelResponsePrivate
+ * \brief The GetNotificationChannelResponsePrivate class provides private implementation for GetNotificationChannelResponse.
  * \internal
  *
- * \class GetNotificationChannelResponsePrivate
- *
- * \brief Private implementation for GetNotificationChannelResponse.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetNotificationChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetNotificationChannelResponse instance.
+ * Constructs a GetNotificationChannelResponsePrivate object with public implementation \a q.
  */
 GetNotificationChannelResponsePrivate::GetNotificationChannelResponsePrivate(
     GetNotificationChannelResponse * const q) : FMSResponsePrivate(q)
@@ -101,9 +94,7 @@ GetNotificationChannelResponsePrivate::GetNotificationChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an FMS GetNotificationChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a FMS GetNotificationChannel response element from \a xml.
  */
 void GetNotificationChannelResponsePrivate::parseGetNotificationChannelResponse(QXmlStreamReader &xml)
 {

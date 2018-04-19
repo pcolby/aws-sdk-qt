@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::StartApplicationResponse
- *
  * \brief The StartApplicationResponse class provides an interace for KinesisAnalytics StartApplication responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::startApplication
  */
 
 /*!
- * @brief  Constructs a new StartApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 StartApplicationResponse::StartApplicationResponse(
         const StartApplicationRequest &request,
@@ -55,6 +50,9 @@ StartApplicationResponse::StartApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartApplicationRequest * StartApplicationResponse::request() const
 {
     Q_D(const StartApplicationResponse);
@@ -62,9 +60,8 @@ const StartApplicationRequest * StartApplicationResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics StartApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics StartApplication \a response.
  */
 void StartApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void StartApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::StartApplicationResponsePrivate
+ * \brief The StartApplicationResponsePrivate class provides private implementation for StartApplicationResponse.
  * \internal
  *
- * \class StartApplicationResponsePrivate
- *
- * \brief Private implementation for StartApplicationResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartApplicationResponse instance.
+ * Constructs a StartApplicationResponsePrivate object with public implementation \a q.
  */
 StartApplicationResponsePrivate::StartApplicationResponsePrivate(
     StartApplicationResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ StartApplicationResponsePrivate::StartApplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics StartApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics StartApplication response element from \a xml.
  */
 void StartApplicationResponsePrivate::parseStartApplicationResponse(QXmlStreamReader &xml)
 {

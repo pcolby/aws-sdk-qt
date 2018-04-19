@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CancelRetrievalResponse
- *
  * \brief The CancelRetrievalResponse class provides an interace for StorageGateway CancelRetrieval responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CancelRetrievalResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelRetrievalResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelRetrievalResponse::CancelRetrievalResponse(
         const CancelRetrievalRequest &request,
@@ -124,6 +119,9 @@ CancelRetrievalResponse::CancelRetrievalResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelRetrievalRequest * CancelRetrievalResponse::request() const
 {
     Q_D(const CancelRetrievalResponse);
@@ -131,9 +129,8 @@ const CancelRetrievalRequest * CancelRetrievalResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway CancelRetrieval response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway CancelRetrieval \a response.
  */
 void CancelRetrievalResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void CancelRetrievalResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::CancelRetrievalResponsePrivate
+ * \brief The CancelRetrievalResponsePrivate class provides private implementation for CancelRetrievalResponse.
  * \internal
  *
- * \class CancelRetrievalResponsePrivate
- *
- * \brief Private implementation for CancelRetrievalResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelRetrievalResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelRetrievalResponse instance.
+ * Constructs a CancelRetrievalResponsePrivate object with public implementation \a q.
  */
 CancelRetrievalResponsePrivate::CancelRetrievalResponsePrivate(
     CancelRetrievalResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ CancelRetrievalResponsePrivate::CancelRetrievalResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway CancelRetrievalResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway CancelRetrieval response element from \a xml.
  */
 void CancelRetrievalResponsePrivate::parseCancelRetrievalResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssumeRoleWithWebIdentityResponse : public STSResponse {
 public:
     AssumeRoleWithWebIdentityResponse(const AssumeRoleWithWebIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssumeRoleWithWebIdentityRequest * request() const;
+    virtual const AssumeRoleWithWebIdentityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssumeRoleWithWebIdentityResponse)

@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * ModifyTargetGroupAttributesRequest::response(
  */
 
 /*!
- *
- * Constructs a ModifyTargetGroupAttributesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyTargetGroupAttributesRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 ModifyTargetGroupAttributesRequestPrivate::ModifyTargetGroupAttributesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, ModifyTargetGroupAttributesRequest * const q)

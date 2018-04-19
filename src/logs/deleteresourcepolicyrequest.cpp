@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteResourcePolicyRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteResourcePolicyRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteResourcePolicyRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DeleteResourcePolicyRequestPrivate::DeleteResourcePolicyRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteResourcePolicyRequest * const q)

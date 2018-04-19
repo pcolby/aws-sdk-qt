@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * FailoverDBClusterRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a FailoverDBClusterRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a FailoverDBClusterRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 FailoverDBClusterRequestPrivate::FailoverDBClusterRequestPrivate(
     const RDSRequest::Action action, FailoverDBClusterRequest * const q)

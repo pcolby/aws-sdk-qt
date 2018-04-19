@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateStreamingDistributionWithTagsResponse : public CloudFro
 public:
     CreateStreamingDistributionWithTagsResponse(const CreateStreamingDistributionWithTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateStreamingDistributionWithTagsRequest * request() const;
+    virtual const CreateStreamingDistributionWithTagsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateStreamingDistributionWithTagsResponse)

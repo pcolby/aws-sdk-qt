@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeleteAssociationResponse
- *
  * \brief The DeleteAssociationResponse class provides an interace for SSM DeleteAssociation responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteAssociationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAssociationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAssociationResponse::DeleteAssociationResponse(
         const DeleteAssociationRequest &request,
@@ -79,6 +74,9 @@ DeleteAssociationResponse::DeleteAssociationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAssociationRequest * DeleteAssociationResponse::request() const
 {
     Q_D(const DeleteAssociationResponse);
@@ -86,9 +84,8 @@ const DeleteAssociationRequest * DeleteAssociationResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM DeleteAssociation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DeleteAssociation \a response.
  */
 void DeleteAssociationResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DeleteAssociationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DeleteAssociationResponsePrivate
+ * \brief The DeleteAssociationResponsePrivate class provides private implementation for DeleteAssociationResponse.
  * \internal
  *
- * \class DeleteAssociationResponsePrivate
- *
- * \brief Private implementation for DeleteAssociationResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAssociationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAssociationResponse instance.
+ * Constructs a DeleteAssociationResponsePrivate object with public implementation \a q.
  */
 DeleteAssociationResponsePrivate::DeleteAssociationResponsePrivate(
     DeleteAssociationResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DeleteAssociationResponsePrivate::DeleteAssociationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DeleteAssociationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DeleteAssociation response element from \a xml.
  */
 void DeleteAssociationResponsePrivate::parseDeleteAssociationResponse(QXmlStreamReader &xml)
 {

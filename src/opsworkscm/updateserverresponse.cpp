@@ -29,10 +29,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::UpdateServerResponse
- *
  * \brief The UpdateServerResponse class provides an interace for OpsWorksCM UpdateServer responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -99,11 +98,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new UpdateServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateServerResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateServerResponse::UpdateServerResponse(
         const UpdateServerRequest &request,
@@ -115,6 +110,9 @@ UpdateServerResponse::UpdateServerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateServerRequest * UpdateServerResponse::request() const
 {
     Q_D(const UpdateServerResponse);
@@ -122,9 +120,8 @@ const UpdateServerRequest * UpdateServerResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorksCM UpdateServer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorksCM UpdateServer \a response.
  */
 void UpdateServerResponse::parseSuccess(QIODevice &response)
 {
@@ -134,19 +131,15 @@ void UpdateServerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorksCM::UpdateServerResponsePrivate
+ * \brief The UpdateServerResponsePrivate class provides private implementation for UpdateServerResponse.
  * \internal
  *
- * \class UpdateServerResponsePrivate
- *
- * \brief Private implementation for UpdateServerResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateServerResponse instance.
+ * Constructs a UpdateServerResponsePrivate object with public implementation \a q.
  */
 UpdateServerResponsePrivate::UpdateServerResponsePrivate(
     UpdateServerResponse * const q) : OpsWorksCMResponsePrivate(q)
@@ -155,9 +148,7 @@ UpdateServerResponsePrivate::UpdateServerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorksCM UpdateServerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorksCM UpdateServer response element from \a xml.
  */
 void UpdateServerResponsePrivate::parseUpdateServerResponse(QXmlStreamReader &xml)
 {

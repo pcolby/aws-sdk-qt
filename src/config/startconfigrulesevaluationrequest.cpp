@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * StartConfigRulesEvaluationRequest::response(Q
  */
 
 /*!
- *
- * Constructs a StartConfigRulesEvaluationRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a StartConfigRulesEvaluationRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 StartConfigRulesEvaluationRequestPrivate::StartConfigRulesEvaluationRequestPrivate(
     const ConfigServiceRequest::Action action, StartConfigRulesEvaluationRequest * const q)

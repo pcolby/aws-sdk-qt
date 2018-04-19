@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::UpdateReceiptRuleResponse
- *
  * \brief The UpdateReceiptRuleResponse class provides an interace for SES UpdateReceiptRule responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new UpdateReceiptRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateReceiptRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateReceiptRuleResponse::UpdateReceiptRuleResponse(
         const UpdateReceiptRuleRequest &request,
@@ -66,6 +61,9 @@ UpdateReceiptRuleResponse::UpdateReceiptRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateReceiptRuleRequest * UpdateReceiptRuleResponse::request() const
 {
     Q_D(const UpdateReceiptRuleResponse);
@@ -73,9 +71,8 @@ const UpdateReceiptRuleRequest * UpdateReceiptRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES UpdateReceiptRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES UpdateReceiptRule \a response.
  */
 void UpdateReceiptRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateReceiptRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::UpdateReceiptRuleResponsePrivate
+ * \brief The UpdateReceiptRuleResponsePrivate class provides private implementation for UpdateReceiptRuleResponse.
  * \internal
  *
- * \class UpdateReceiptRuleResponsePrivate
- *
- * \brief Private implementation for UpdateReceiptRuleResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateReceiptRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateReceiptRuleResponse instance.
+ * Constructs a UpdateReceiptRuleResponsePrivate object with public implementation \a q.
  */
 UpdateReceiptRuleResponsePrivate::UpdateReceiptRuleResponsePrivate(
     UpdateReceiptRuleResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateReceiptRuleResponsePrivate::UpdateReceiptRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES UpdateReceiptRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES UpdateReceiptRule response element from \a xml.
  */
 void UpdateReceiptRuleResponsePrivate::parseUpdateReceiptRuleResponse(QXmlStreamReader &xml)
 {

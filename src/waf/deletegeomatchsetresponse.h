@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteGeoMatchSetResponse : public WAFResponse {
 public:
     DeleteGeoMatchSetResponse(const DeleteGeoMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteGeoMatchSetRequest * request() const;
+    virtual const DeleteGeoMatchSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteGeoMatchSetResponse)

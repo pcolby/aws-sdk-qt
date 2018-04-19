@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveTargetsResponse : public CloudWatchEventsResponse {
 public:
     RemoveTargetsResponse(const RemoveTargetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveTargetsRequest * request() const;
+    virtual const RemoveTargetsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RemoveTargetsResponse)

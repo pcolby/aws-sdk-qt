@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetAlarmStateResponse : public CloudWatchResponse {
 public:
     SetAlarmStateResponse(const SetAlarmStateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetAlarmStateRequest * request() const;
+    virtual const SetAlarmStateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetAlarmStateResponse)

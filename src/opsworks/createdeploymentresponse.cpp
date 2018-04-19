@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::CreateDeploymentResponse
- *
  * \brief The CreateDeploymentResponse class provides an interace for OpsWorks CreateDeployment responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new CreateDeploymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDeploymentResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDeploymentResponse::CreateDeploymentResponse(
         const CreateDeploymentRequest &request,
@@ -161,6 +156,9 @@ CreateDeploymentResponse::CreateDeploymentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDeploymentRequest * CreateDeploymentResponse::request() const
 {
     Q_D(const CreateDeploymentResponse);
@@ -168,9 +166,8 @@ const CreateDeploymentRequest * CreateDeploymentResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks CreateDeployment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks CreateDeployment \a response.
  */
 void CreateDeploymentResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void CreateDeploymentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::CreateDeploymentResponsePrivate
+ * \brief The CreateDeploymentResponsePrivate class provides private implementation for CreateDeploymentResponse.
  * \internal
  *
- * \class CreateDeploymentResponsePrivate
- *
- * \brief Private implementation for CreateDeploymentResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDeploymentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDeploymentResponse instance.
+ * Constructs a CreateDeploymentResponsePrivate object with public implementation \a q.
  */
 CreateDeploymentResponsePrivate::CreateDeploymentResponsePrivate(
     CreateDeploymentResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ CreateDeploymentResponsePrivate::CreateDeploymentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks CreateDeploymentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks CreateDeployment response element from \a xml.
  */
 void CreateDeploymentResponsePrivate::parseCreateDeploymentResponse(QXmlStreamReader &xml)
 {

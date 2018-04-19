@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DeleteItemResponse
- *
  * \brief The DeleteItemResponse class provides an interace for DynamoDB DeleteItem responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DeleteItemResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteItemResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteItemResponse::DeleteItemResponse(
         const DeleteItemRequest &request,
@@ -74,6 +69,9 @@ DeleteItemResponse::DeleteItemResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteItemRequest * DeleteItemResponse::request() const
 {
     Q_D(const DeleteItemResponse);
@@ -81,9 +79,8 @@ const DeleteItemRequest * DeleteItemResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB DeleteItem response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB DeleteItem \a response.
  */
 void DeleteItemResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DeleteItemResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::DeleteItemResponsePrivate
+ * \brief The DeleteItemResponsePrivate class provides private implementation for DeleteItemResponse.
  * \internal
  *
- * \class DeleteItemResponsePrivate
- *
- * \brief Private implementation for DeleteItemResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteItemResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteItemResponse instance.
+ * Constructs a DeleteItemResponsePrivate object with public implementation \a q.
  */
 DeleteItemResponsePrivate::DeleteItemResponsePrivate(
     DeleteItemResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ DeleteItemResponsePrivate::DeleteItemResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB DeleteItemResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB DeleteItem response element from \a xml.
  */
 void DeleteItemResponsePrivate::parseDeleteItemResponse(QXmlStreamReader &xml)
 {

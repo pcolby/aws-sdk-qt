@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateRealtimeEndpointRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateRealtimeEndpointRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a CreateRealtimeEndpointRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 CreateRealtimeEndpointRequestPrivate::CreateRealtimeEndpointRequestPrivate(
     const MachineLearningRequest::Action action, CreateRealtimeEndpointRequest * const q)

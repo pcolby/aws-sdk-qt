@@ -135,9 +135,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEnvironmentRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteEnvironmentRequestPrivate object for Cloud9 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEnvironmentRequestPrivate object for Cloud9 \a action,
+ * with public implementation \a q.
  */
 DeleteEnvironmentRequestPrivate::DeleteEnvironmentRequestPrivate(
     const Cloud9Request::Action action, DeleteEnvironmentRequest * const q)

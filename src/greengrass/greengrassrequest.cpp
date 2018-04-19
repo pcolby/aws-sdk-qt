@@ -113,7 +113,7 @@ namespace Greengrass {
  */
 
 /*!
- * Constructs a[n] GreengrassRequest object for Greengrass \a action.
+ * Constructs a GreengrassRequest object for Greengrass \a action.
  */
 GreengrassRequest::GreengrassRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new GreengrassRequestPrivate(action, this))
@@ -313,8 +313,8 @@ QNetworkRequest GreengrassRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a GreengrassRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a GreengrassRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 GreengrassRequestPrivate::GreengrassRequestPrivate(const GreengrassRequest::Action action, GreengrassRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

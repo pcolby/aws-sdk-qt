@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteMetricFilterResponse : public CloudWatchLogsResponse {
 public:
     DeleteMetricFilterResponse(const DeleteMetricFilterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteMetricFilterRequest * request() const;
+    virtual const DeleteMetricFilterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteMetricFilterResponse)

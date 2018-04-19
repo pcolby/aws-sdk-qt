@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeComputeEnvironmentsRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeComputeEnvironmentsRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a DescribeComputeEnvironmentsRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 DescribeComputeEnvironmentsRequestPrivate::DescribeComputeEnvironmentsRequestPrivate(
     const BatchRequest::Action action, DescribeComputeEnvironmentsRequest * const q)

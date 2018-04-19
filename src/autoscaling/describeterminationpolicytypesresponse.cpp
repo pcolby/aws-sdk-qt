@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeTerminationPolicyTypesResponse
- *
  * \brief The DescribeTerminationPolicyTypesResponse class provides an interace for AutoScaling DescribeTerminationPolicyTypes responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeTerminationPolicyTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTerminationPolicyTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTerminationPolicyTypesResponse::DescribeTerminationPolicyTypesResponse(
         const DescribeTerminationPolicyTypesRequest &request,
@@ -60,6 +55,9 @@ DescribeTerminationPolicyTypesResponse::DescribeTerminationPolicyTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTerminationPolicyTypesRequest * DescribeTerminationPolicyTypesResponse::request() const
 {
     Q_D(const DescribeTerminationPolicyTypesResponse);
@@ -67,9 +65,8 @@ const DescribeTerminationPolicyTypesRequest * DescribeTerminationPolicyTypesResp
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeTerminationPolicyTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeTerminationPolicyTypes \a response.
  */
 void DescribeTerminationPolicyTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeTerminationPolicyTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeTerminationPolicyTypesResponsePrivate
+ * \brief The DescribeTerminationPolicyTypesResponsePrivate class provides private implementation for DescribeTerminationPolicyTypesResponse.
  * \internal
  *
- * \class DescribeTerminationPolicyTypesResponsePrivate
- *
- * \brief Private implementation for DescribeTerminationPolicyTypesResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTerminationPolicyTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTerminationPolicyTypesResponse instance.
+ * Constructs a DescribeTerminationPolicyTypesResponsePrivate object with public implementation \a q.
  */
 DescribeTerminationPolicyTypesResponsePrivate::DescribeTerminationPolicyTypesResponsePrivate(
     DescribeTerminationPolicyTypesResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeTerminationPolicyTypesResponsePrivate::DescribeTerminationPolicyTypesRes
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeTerminationPolicyTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeTerminationPolicyTypes response element from \a xml.
  */
 void DescribeTerminationPolicyTypesResponsePrivate::parseDescribeTerminationPolicyTypesResponse(QXmlStreamReader &xml)
 {

@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * DeleteQueueRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteQueueRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteQueueRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 DeleteQueueRequestPrivate::DeleteQueueRequestPrivate(
     const SQSRequest::Action action, DeleteQueueRequest * const q)

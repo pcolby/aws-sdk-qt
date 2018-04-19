@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::AssociateDeviceWithRoomResponse
- *
  * \brief The AssociateDeviceWithRoomResponse class provides an interace for AlexaForBusiness AssociateDeviceWithRoom responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new AssociateDeviceWithRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateDeviceWithRoomResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateDeviceWithRoomResponse::AssociateDeviceWithRoomResponse(
         const AssociateDeviceWithRoomRequest &request,
@@ -60,6 +55,9 @@ AssociateDeviceWithRoomResponse::AssociateDeviceWithRoomResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateDeviceWithRoomRequest * AssociateDeviceWithRoomResponse::request() const
 {
     Q_D(const AssociateDeviceWithRoomResponse);
@@ -67,9 +65,8 @@ const AssociateDeviceWithRoomRequest * AssociateDeviceWithRoomResponse::request(
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness AssociateDeviceWithRoom response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness AssociateDeviceWithRoom \a response.
  */
 void AssociateDeviceWithRoomResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void AssociateDeviceWithRoomResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::AssociateDeviceWithRoomResponsePrivate
+ * \brief The AssociateDeviceWithRoomResponsePrivate class provides private implementation for AssociateDeviceWithRoomResponse.
  * \internal
  *
- * \class AssociateDeviceWithRoomResponsePrivate
- *
- * \brief Private implementation for AssociateDeviceWithRoomResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateDeviceWithRoomResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateDeviceWithRoomResponse instance.
+ * Constructs a AssociateDeviceWithRoomResponsePrivate object with public implementation \a q.
  */
 AssociateDeviceWithRoomResponsePrivate::AssociateDeviceWithRoomResponsePrivate(
     AssociateDeviceWithRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ AssociateDeviceWithRoomResponsePrivate::AssociateDeviceWithRoomResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness AssociateDeviceWithRoomResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness AssociateDeviceWithRoom response element from \a xml.
  */
 void AssociateDeviceWithRoomResponsePrivate::parseAssociateDeviceWithRoomResponse(QXmlStreamReader &xml)
 {

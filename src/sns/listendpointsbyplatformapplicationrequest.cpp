@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ListEndpointsByPlatformApplicationRequest::re
  */
 
 /*!
- *
- * Constructs a ListEndpointsByPlatformApplicationRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a ListEndpointsByPlatformApplicationRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 ListEndpointsByPlatformApplicationRequestPrivate::ListEndpointsByPlatformApplicationRequestPrivate(
     const SNSRequest::Action action, ListEndpointsByPlatformApplicationRequest * const q)

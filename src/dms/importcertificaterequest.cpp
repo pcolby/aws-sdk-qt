@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ImportCertificateRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a ImportCertificateRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 ImportCertificateRequestPrivate::ImportCertificateRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ImportCertificateRequest * const q)

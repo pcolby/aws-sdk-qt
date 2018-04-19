@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * RetryStageExecutionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a RetryStageExecutionRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a RetryStageExecutionRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 RetryStageExecutionRequestPrivate::RetryStageExecutionRequestPrivate(
     const CodePipelineRequest::Action action, RetryStageExecutionRequest * const q)

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * EnableSsoRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a EnableSsoRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a EnableSsoRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 EnableSsoRequestPrivate::EnableSsoRequestPrivate(
     const DirectoryServiceRequest::Action action, EnableSsoRequest * const q)

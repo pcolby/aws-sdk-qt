@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RespondDecisionTaskCompletedResponse
- *
  * \brief The RespondDecisionTaskCompletedResponse class provides an interace for SWF RespondDecisionTaskCompleted responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RespondDecisionTaskCompletedResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RespondDecisionTaskCompletedResponse object for \a reply to \a request, with parent \a parent.
  */
 RespondDecisionTaskCompletedResponse::RespondDecisionTaskCompletedResponse(
         const RespondDecisionTaskCompletedRequest &request,
@@ -71,6 +66,9 @@ RespondDecisionTaskCompletedResponse::RespondDecisionTaskCompletedResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RespondDecisionTaskCompletedRequest * RespondDecisionTaskCompletedResponse::request() const
 {
     Q_D(const RespondDecisionTaskCompletedResponse);
@@ -78,9 +76,8 @@ const RespondDecisionTaskCompletedRequest * RespondDecisionTaskCompletedResponse
 }
 
 /*!
- * @brief  Parse a SWF RespondDecisionTaskCompleted response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF RespondDecisionTaskCompleted \a response.
  */
 void RespondDecisionTaskCompletedResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void RespondDecisionTaskCompletedResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::RespondDecisionTaskCompletedResponsePrivate
+ * \brief The RespondDecisionTaskCompletedResponsePrivate class provides private implementation for RespondDecisionTaskCompletedResponse.
  * \internal
  *
- * \class RespondDecisionTaskCompletedResponsePrivate
- *
- * \brief Private implementation for RespondDecisionTaskCompletedResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RespondDecisionTaskCompletedResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RespondDecisionTaskCompletedResponse instance.
+ * Constructs a RespondDecisionTaskCompletedResponsePrivate object with public implementation \a q.
  */
 RespondDecisionTaskCompletedResponsePrivate::RespondDecisionTaskCompletedResponsePrivate(
     RespondDecisionTaskCompletedResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ RespondDecisionTaskCompletedResponsePrivate::RespondDecisionTaskCompletedRespons
 }
 
 /*!
- * @brief  Parse an SWF RespondDecisionTaskCompletedResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF RespondDecisionTaskCompleted response element from \a xml.
  */
 void RespondDecisionTaskCompletedResponsePrivate::parseRespondDecisionTaskCompletedResponse(QXmlStreamReader &xml)
 {

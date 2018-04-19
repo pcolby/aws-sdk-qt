@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetAssignmentRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetAssignmentRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a GetAssignmentRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 GetAssignmentRequestPrivate::GetAssignmentRequestPrivate(
     const MTurkRequest::Action action, GetAssignmentRequest * const q)

@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRateBasedRuleRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a UpdateRateBasedRuleRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRateBasedRuleRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 UpdateRateBasedRuleRequestPrivate::UpdateRateBasedRuleRequestPrivate(
     const WAFRegionalRequest::Action action, UpdateRateBasedRuleRequest * const q)

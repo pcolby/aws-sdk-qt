@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAliasRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteAliasRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAliasRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
     const GameLiftRequest::Action action, DeleteAliasRequest * const q)

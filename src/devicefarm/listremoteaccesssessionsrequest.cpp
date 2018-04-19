@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListRemoteAccessSessionsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ListRemoteAccessSessionsRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a ListRemoteAccessSessionsRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 ListRemoteAccessSessionsRequestPrivate::ListRemoteAccessSessionsRequestPrivate(
     const DeviceFarmRequest::Action action, ListRemoteAccessSessionsRequest * const q)

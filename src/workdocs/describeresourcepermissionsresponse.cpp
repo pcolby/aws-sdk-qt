@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeResourcePermissionsResponse
- *
  * \brief The DescribeResourcePermissionsResponse class provides an interace for WorkDocs DescribeResourcePermissions responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeResourcePermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeResourcePermissionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeResourcePermissionsResponse::DescribeResourcePermissionsResponse(
         const DescribeResourcePermissionsRequest &request,
@@ -84,6 +79,9 @@ DescribeResourcePermissionsResponse::DescribeResourcePermissionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeResourcePermissionsRequest * DescribeResourcePermissionsResponse::request() const
 {
     Q_D(const DescribeResourcePermissionsResponse);
@@ -91,9 +89,8 @@ const DescribeResourcePermissionsRequest * DescribeResourcePermissionsResponse::
 }
 
 /*!
- * @brief  Parse a WorkDocs DescribeResourcePermissions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DescribeResourcePermissions \a response.
  */
 void DescribeResourcePermissionsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeResourcePermissionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DescribeResourcePermissionsResponsePrivate
+ * \brief The DescribeResourcePermissionsResponsePrivate class provides private implementation for DescribeResourcePermissionsResponse.
  * \internal
  *
- * \class DescribeResourcePermissionsResponsePrivate
- *
- * \brief Private implementation for DescribeResourcePermissionsResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResourcePermissionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeResourcePermissionsResponse instance.
+ * Constructs a DescribeResourcePermissionsResponsePrivate object with public implementation \a q.
  */
 DescribeResourcePermissionsResponsePrivate::DescribeResourcePermissionsResponsePrivate(
     DescribeResourcePermissionsResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeResourcePermissionsResponsePrivate::DescribeResourcePermissionsResponseP
 }
 
 /*!
- * @brief  Parse an WorkDocs DescribeResourcePermissionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DescribeResourcePermissions response element from \a xml.
  */
 void DescribeResourcePermissionsResponsePrivate::parseDescribeResourcePermissionsResponse(QXmlStreamReader &xml)
 {

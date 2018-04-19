@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * PurchaseScheduledInstancesRequest::response(Q
  */
 
 /*!
- *
- * Constructs a PurchaseScheduledInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a PurchaseScheduledInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 PurchaseScheduledInstancesRequestPrivate::PurchaseScheduledInstancesRequestPrivate(
     const EC2Request::Action action, PurchaseScheduledInstancesRequest * const q)

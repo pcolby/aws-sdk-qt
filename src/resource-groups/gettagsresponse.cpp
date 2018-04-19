@@ -29,10 +29,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::GetTagsResponse
- *
  * \brief The GetTagsResponse class provides an interace for ResourceGroups GetTags responses.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -83,11 +82,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new GetTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTagsResponse::GetTagsResponse(
         const GetTagsRequest &request,
@@ -99,6 +94,9 @@ GetTagsResponse::GetTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTagsRequest * GetTagsResponse::request() const
 {
     Q_D(const GetTagsResponse);
@@ -106,9 +104,8 @@ const GetTagsRequest * GetTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ResourceGroups GetTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ResourceGroups GetTags \a response.
  */
 void GetTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -118,19 +115,15 @@ void GetTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ResourceGroups::GetTagsResponsePrivate
+ * \brief The GetTagsResponsePrivate class provides private implementation for GetTagsResponse.
  * \internal
  *
- * \class GetTagsResponsePrivate
- *
- * \brief Private implementation for GetTagsResponse.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTagsResponse instance.
+ * Constructs a GetTagsResponsePrivate object with public implementation \a q.
  */
 GetTagsResponsePrivate::GetTagsResponsePrivate(
     GetTagsResponse * const q) : ResourceGroupsResponsePrivate(q)
@@ -139,9 +132,7 @@ GetTagsResponsePrivate::GetTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ResourceGroups GetTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ResourceGroups GetTags response element from \a xml.
  */
 void GetTagsResponsePrivate::parseGetTagsResponse(QXmlStreamReader &xml)
 {

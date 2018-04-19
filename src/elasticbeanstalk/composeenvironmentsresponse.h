@@ -34,10 +34,10 @@ class QTAWS_EXPORT ComposeEnvironmentsResponse : public ElasticBeanstalkResponse
 public:
     ComposeEnvironmentsResponse(const ComposeEnvironmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ComposeEnvironmentsRequest * request() const;
+    virtual const ComposeEnvironmentsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ComposeEnvironmentsResponse)

@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetFunctionDefinitionVersionResponse
- *
  * \brief The GetFunctionDefinitionVersionResponse class provides an interace for Greengrass GetFunctionDefinitionVersion responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetFunctionDefinitionVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFunctionDefinitionVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFunctionDefinitionVersionResponse::GetFunctionDefinitionVersionResponse(
         const GetFunctionDefinitionVersionRequest &request,
@@ -58,6 +53,9 @@ GetFunctionDefinitionVersionResponse::GetFunctionDefinitionVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFunctionDefinitionVersionRequest * GetFunctionDefinitionVersionResponse::request() const
 {
     Q_D(const GetFunctionDefinitionVersionResponse);
@@ -65,9 +63,8 @@ const GetFunctionDefinitionVersionRequest * GetFunctionDefinitionVersionResponse
 }
 
 /*!
- * @brief  Parse a Greengrass GetFunctionDefinitionVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass GetFunctionDefinitionVersion \a response.
  */
 void GetFunctionDefinitionVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetFunctionDefinitionVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::GetFunctionDefinitionVersionResponsePrivate
+ * \brief The GetFunctionDefinitionVersionResponsePrivate class provides private implementation for GetFunctionDefinitionVersionResponse.
  * \internal
  *
- * \class GetFunctionDefinitionVersionResponsePrivate
- *
- * \brief Private implementation for GetFunctionDefinitionVersionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFunctionDefinitionVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFunctionDefinitionVersionResponse instance.
+ * Constructs a GetFunctionDefinitionVersionResponsePrivate object with public implementation \a q.
  */
 GetFunctionDefinitionVersionResponsePrivate::GetFunctionDefinitionVersionResponsePrivate(
     GetFunctionDefinitionVersionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ GetFunctionDefinitionVersionResponsePrivate::GetFunctionDefinitionVersionRespons
 }
 
 /*!
- * @brief  Parse an Greengrass GetFunctionDefinitionVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass GetFunctionDefinitionVersion response element from \a xml.
  */
 void GetFunctionDefinitionVersionResponsePrivate::parseGetFunctionDefinitionVersionResponse(QXmlStreamReader &xml)
 {

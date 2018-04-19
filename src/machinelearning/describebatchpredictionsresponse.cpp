@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DescribeBatchPredictionsResponse
- *
  * \brief The DescribeBatchPredictionsResponse class provides an interace for MachineLearning DescribeBatchPredictions responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::describeBatchPredictions
  */
 
 /*!
- * @brief  Constructs a new DescribeBatchPredictionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeBatchPredictionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeBatchPredictionsResponse::DescribeBatchPredictionsResponse(
         const DescribeBatchPredictionsRequest &request,
@@ -55,6 +50,9 @@ DescribeBatchPredictionsResponse::DescribeBatchPredictionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeBatchPredictionsRequest * DescribeBatchPredictionsResponse::request() const
 {
     Q_D(const DescribeBatchPredictionsResponse);
@@ -62,9 +60,8 @@ const DescribeBatchPredictionsRequest * DescribeBatchPredictionsResponse::reques
 }
 
 /*!
- * @brief  Parse a MachineLearning DescribeBatchPredictions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning DescribeBatchPredictions \a response.
  */
 void DescribeBatchPredictionsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeBatchPredictionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::DescribeBatchPredictionsResponsePrivate
+ * \brief The DescribeBatchPredictionsResponsePrivate class provides private implementation for DescribeBatchPredictionsResponse.
  * \internal
  *
- * \class DescribeBatchPredictionsResponsePrivate
- *
- * \brief Private implementation for DescribeBatchPredictionsResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBatchPredictionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeBatchPredictionsResponse instance.
+ * Constructs a DescribeBatchPredictionsResponsePrivate object with public implementation \a q.
  */
 DescribeBatchPredictionsResponsePrivate::DescribeBatchPredictionsResponsePrivate(
     DescribeBatchPredictionsResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeBatchPredictionsResponsePrivate::DescribeBatchPredictionsResponsePrivate
 }
 
 /*!
- * @brief  Parse an MachineLearning DescribeBatchPredictionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning DescribeBatchPredictions response element from \a xml.
  */
 void DescribeBatchPredictionsResponsePrivate::parseDescribeBatchPredictionsResponse(QXmlStreamReader &xml)
 {

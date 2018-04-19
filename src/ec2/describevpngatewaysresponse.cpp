@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpnGatewaysResponse
- *
  * \brief The DescribeVpnGatewaysResponse class provides an interace for EC2 DescribeVpnGateways responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpnGatewaysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVpnGatewaysResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVpnGatewaysResponse::DescribeVpnGatewaysResponse(
         const DescribeVpnGatewaysRequest &request,
@@ -59,6 +54,9 @@ DescribeVpnGatewaysResponse::DescribeVpnGatewaysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVpnGatewaysRequest * DescribeVpnGatewaysResponse::request() const
 {
     Q_D(const DescribeVpnGatewaysResponse);
@@ -66,9 +64,8 @@ const DescribeVpnGatewaysRequest * DescribeVpnGatewaysResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeVpnGateways response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeVpnGateways \a response.
  */
 void DescribeVpnGatewaysResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeVpnGatewaysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeVpnGatewaysResponsePrivate
+ * \brief The DescribeVpnGatewaysResponsePrivate class provides private implementation for DescribeVpnGatewaysResponse.
  * \internal
  *
- * \class DescribeVpnGatewaysResponsePrivate
- *
- * \brief Private implementation for DescribeVpnGatewaysResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpnGatewaysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVpnGatewaysResponse instance.
+ * Constructs a DescribeVpnGatewaysResponsePrivate object with public implementation \a q.
  */
 DescribeVpnGatewaysResponsePrivate::DescribeVpnGatewaysResponsePrivate(
     DescribeVpnGatewaysResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeVpnGatewaysResponsePrivate::DescribeVpnGatewaysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeVpnGatewaysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeVpnGateways response element from \a xml.
  */
 void DescribeVpnGatewaysResponsePrivate::parseDescribeVpnGatewaysResponse(QXmlStreamReader &xml)
 {

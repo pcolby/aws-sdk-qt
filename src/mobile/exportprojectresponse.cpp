@@ -29,10 +29,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::ExportProjectResponse
- *
  * \brief The ExportProjectResponse class provides an interace for Mobile ExportProject responses.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -42,11 +41,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new ExportProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ExportProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 ExportProjectResponse::ExportProjectResponse(
         const ExportProjectRequest &request,
@@ -58,6 +53,9 @@ ExportProjectResponse::ExportProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ExportProjectRequest * ExportProjectResponse::request() const
 {
     Q_D(const ExportProjectResponse);
@@ -65,9 +63,8 @@ const ExportProjectRequest * ExportProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a Mobile ExportProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Mobile ExportProject \a response.
  */
 void ExportProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ExportProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Mobile::ExportProjectResponsePrivate
+ * \brief The ExportProjectResponsePrivate class provides private implementation for ExportProjectResponse.
  * \internal
  *
- * \class ExportProjectResponsePrivate
- *
- * \brief Private implementation for ExportProjectResponse.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExportProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ExportProjectResponse instance.
+ * Constructs a ExportProjectResponsePrivate object with public implementation \a q.
  */
 ExportProjectResponsePrivate::ExportProjectResponsePrivate(
     ExportProjectResponse * const q) : MobileResponsePrivate(q)
@@ -98,9 +91,7 @@ ExportProjectResponsePrivate::ExportProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Mobile ExportProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Mobile ExportProject response element from \a xml.
  */
 void ExportProjectResponsePrivate::parseExportProjectResponse(QXmlStreamReader &xml)
 {

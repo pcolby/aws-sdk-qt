@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::ListTagsOfResourceResponse
- *
  * \brief The ListTagsOfResourceResponse class provides an interace for DynamoDB ListTagsOfResource responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new ListTagsOfResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsOfResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsOfResourceResponse::ListTagsOfResourceResponse(
         const ListTagsOfResourceRequest &request,
@@ -74,6 +69,9 @@ ListTagsOfResourceResponse::ListTagsOfResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsOfResourceRequest * ListTagsOfResourceResponse::request() const
 {
     Q_D(const ListTagsOfResourceResponse);
@@ -81,9 +79,8 @@ const ListTagsOfResourceRequest * ListTagsOfResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB ListTagsOfResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB ListTagsOfResource \a response.
  */
 void ListTagsOfResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void ListTagsOfResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::ListTagsOfResourceResponsePrivate
+ * \brief The ListTagsOfResourceResponsePrivate class provides private implementation for ListTagsOfResourceResponse.
  * \internal
  *
- * \class ListTagsOfResourceResponsePrivate
- *
- * \brief Private implementation for ListTagsOfResourceResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsOfResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsOfResourceResponse instance.
+ * Constructs a ListTagsOfResourceResponsePrivate object with public implementation \a q.
  */
 ListTagsOfResourceResponsePrivate::ListTagsOfResourceResponsePrivate(
     ListTagsOfResourceResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ ListTagsOfResourceResponsePrivate::ListTagsOfResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB ListTagsOfResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB ListTagsOfResource response element from \a xml.
  */
 void ListTagsOfResourceResponsePrivate::parseListTagsOfResourceResponse(QXmlStreamReader &xml)
 {

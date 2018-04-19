@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::SetLoadBalancerListenerSSLCertificateResponse
- *
  * \brief The SetLoadBalancerListenerSSLCertificateResponse class provides an interace for ElasticLoadBalancing SetLoadBalancerListenerSSLCertificate responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new SetLoadBalancerListenerSSLCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetLoadBalancerListenerSSLCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 SetLoadBalancerListenerSSLCertificateResponse::SetLoadBalancerListenerSSLCertificateResponse(
         const SetLoadBalancerListenerSSLCertificateRequest &request,
@@ -83,6 +78,9 @@ SetLoadBalancerListenerSSLCertificateResponse::SetLoadBalancerListenerSSLCertifi
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetLoadBalancerListenerSSLCertificateRequest * SetLoadBalancerListenerSSLCertificateResponse::request() const
 {
     Q_D(const SetLoadBalancerListenerSSLCertificateResponse);
@@ -90,9 +88,8 @@ const SetLoadBalancerListenerSSLCertificateRequest * SetLoadBalancerListenerSSLC
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing SetLoadBalancerListenerSSLCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing SetLoadBalancerListenerSSLCertificate \a response.
  */
 void SetLoadBalancerListenerSSLCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void SetLoadBalancerListenerSSLCertificateResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::SetLoadBalancerListenerSSLCertificateResponsePrivate
+ * \brief The SetLoadBalancerListenerSSLCertificateResponsePrivate class provides private implementation for SetLoadBalancerListenerSSLCertificateResponse.
  * \internal
  *
- * \class SetLoadBalancerListenerSSLCertificateResponsePrivate
- *
- * \brief Private implementation for SetLoadBalancerListenerSSLCertificateResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetLoadBalancerListenerSSLCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetLoadBalancerListenerSSLCertificateResponse instance.
+ * Constructs a SetLoadBalancerListenerSSLCertificateResponsePrivate object with public implementation \a q.
  */
 SetLoadBalancerListenerSSLCertificateResponsePrivate::SetLoadBalancerListenerSSLCertificateResponsePrivate(
     SetLoadBalancerListenerSSLCertificateResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ SetLoadBalancerListenerSSLCertificateResponsePrivate::SetLoadBalancerListenerSSL
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing SetLoadBalancerListenerSSLCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing SetLoadBalancerListenerSSLCertificate response element from \a xml.
  */
 void SetLoadBalancerListenerSSLCertificateResponsePrivate::parseSetLoadBalancerListenerSSLCertificateResponse(QXmlStreamReader &xml)
 {

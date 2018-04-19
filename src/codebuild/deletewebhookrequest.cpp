@@ -161,9 +161,8 @@ QtAws::Core::AwsAbstractResponse * DeleteWebhookRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteWebhookRequestPrivate object for CodeBuild \a action with,
- * public implementation \a q.
+ * Constructs a DeleteWebhookRequestPrivate object for CodeBuild \a action,
+ * with public implementation \a q.
  */
 DeleteWebhookRequestPrivate::DeleteWebhookRequestPrivate(
     const CodeBuildRequest::Action action, DeleteWebhookRequest * const q)

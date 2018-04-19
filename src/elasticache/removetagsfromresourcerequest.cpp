@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsFromResourceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a RemoveTagsFromResourceRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsFromResourceRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 RemoveTagsFromResourceRequestPrivate::RemoveTagsFromResourceRequestPrivate(
     const ElastiCacheRequest::Action action, RemoveTagsFromResourceRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * RequestSpotFleetRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a RequestSpotFleetRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a RequestSpotFleetRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 RequestSpotFleetRequestPrivate::RequestSpotFleetRequestPrivate(
     const EC2Request::Action action, RequestSpotFleetRequest * const q)

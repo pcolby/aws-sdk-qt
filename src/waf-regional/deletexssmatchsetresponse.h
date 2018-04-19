@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteXssMatchSetResponse : public WAFRegionalResponse {
 public:
     DeleteXssMatchSetResponse(const DeleteXssMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteXssMatchSetRequest * request() const;
+    virtual const DeleteXssMatchSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteXssMatchSetResponse)

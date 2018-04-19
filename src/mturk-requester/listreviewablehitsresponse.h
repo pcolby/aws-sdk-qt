@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListReviewableHITsResponse : public MTurkResponse {
 public:
     ListReviewableHITsResponse(const ListReviewableHITsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListReviewableHITsRequest * request() const;
+    virtual const ListReviewableHITsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListReviewableHITsResponse)

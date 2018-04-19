@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::SetIdentityPoolConfigurationResponse
- *
  * \brief The SetIdentityPoolConfigurationResponse class provides an interace for CognitoSync SetIdentityPoolConfiguration responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new SetIdentityPoolConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetIdentityPoolConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 SetIdentityPoolConfigurationResponse::SetIdentityPoolConfigurationResponse(
         const SetIdentityPoolConfigurationRequest &request,
@@ -75,6 +70,9 @@ SetIdentityPoolConfigurationResponse::SetIdentityPoolConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetIdentityPoolConfigurationRequest * SetIdentityPoolConfigurationResponse::request() const
 {
     Q_D(const SetIdentityPoolConfigurationResponse);
@@ -82,9 +80,8 @@ const SetIdentityPoolConfigurationRequest * SetIdentityPoolConfigurationResponse
 }
 
 /*!
- * @brief  Parse a CognitoSync SetIdentityPoolConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync SetIdentityPoolConfiguration \a response.
  */
 void SetIdentityPoolConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void SetIdentityPoolConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::SetIdentityPoolConfigurationResponsePrivate
+ * \brief The SetIdentityPoolConfigurationResponsePrivate class provides private implementation for SetIdentityPoolConfigurationResponse.
  * \internal
  *
- * \class SetIdentityPoolConfigurationResponsePrivate
- *
- * \brief Private implementation for SetIdentityPoolConfigurationResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIdentityPoolConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetIdentityPoolConfigurationResponse instance.
+ * Constructs a SetIdentityPoolConfigurationResponsePrivate object with public implementation \a q.
  */
 SetIdentityPoolConfigurationResponsePrivate::SetIdentityPoolConfigurationResponsePrivate(
     SetIdentityPoolConfigurationResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ SetIdentityPoolConfigurationResponsePrivate::SetIdentityPoolConfigurationRespons
 }
 
 /*!
- * @brief  Parse an CognitoSync SetIdentityPoolConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync SetIdentityPoolConfiguration response element from \a xml.
  */
 void SetIdentityPoolConfigurationResponsePrivate::parseSetIdentityPoolConfigurationResponse(QXmlStreamReader &xml)
 {

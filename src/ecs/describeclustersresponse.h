@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeClustersResponse : public ECSResponse {
 public:
     DescribeClustersResponse(const DescribeClustersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeClustersRequest * request() const;
+    virtual const DescribeClustersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeClustersResponse)

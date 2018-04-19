@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ModifyWorkspacePropertiesRequest::response(QN
  */
 
 /*!
- *
- * Constructs a ModifyWorkspacePropertiesRequestPrivate object for WorkSpaces \a action with,
- * public implementation \a q.
+ * Constructs a ModifyWorkspacePropertiesRequestPrivate object for WorkSpaces \a action,
+ * with public implementation \a q.
  */
 ModifyWorkspacePropertiesRequestPrivate::ModifyWorkspacePropertiesRequestPrivate(
     const WorkSpacesRequest::Action action, ModifyWorkspacePropertiesRequest * const q)

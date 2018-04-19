@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * UpgradePublishedSchemaRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpgradePublishedSchemaRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a UpgradePublishedSchemaRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 UpgradePublishedSchemaRequestPrivate::UpgradePublishedSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, UpgradePublishedSchemaRequest * const q)

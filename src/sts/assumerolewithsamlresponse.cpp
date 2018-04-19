@@ -29,10 +29,9 @@ namespace STS {
 
 /*!
  * \class QtAws::STS::AssumeRoleWithSAMLResponse
- *
  * \brief The AssumeRoleWithSAMLResponse class provides an interace for STS AssumeRoleWithSAML responses.
  *
- * \ingroup STS
+ * \inmodule QtAwsSTS
  *
  *  <fullname>AWS Security Token Service</fullname>
  * 
@@ -97,11 +96,7 @@ namespace STS {
  */
 
 /*!
- * @brief  Constructs a new AssumeRoleWithSAMLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssumeRoleWithSAMLResponse object for \a reply to \a request, with parent \a parent.
  */
 AssumeRoleWithSAMLResponse::AssumeRoleWithSAMLResponse(
         const AssumeRoleWithSAMLRequest &request,
@@ -113,6 +108,9 @@ AssumeRoleWithSAMLResponse::AssumeRoleWithSAMLResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssumeRoleWithSAMLRequest * AssumeRoleWithSAMLResponse::request() const
 {
     Q_D(const AssumeRoleWithSAMLResponse);
@@ -120,9 +118,8 @@ const AssumeRoleWithSAMLRequest * AssumeRoleWithSAMLResponse::request() const
 }
 
 /*!
- * @brief  Parse a STS AssumeRoleWithSAML response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful STS AssumeRoleWithSAML \a response.
  */
 void AssumeRoleWithSAMLResponse::parseSuccess(QIODevice &response)
 {
@@ -132,19 +129,15 @@ void AssumeRoleWithSAMLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::STS::AssumeRoleWithSAMLResponsePrivate
+ * \brief The AssumeRoleWithSAMLResponsePrivate class provides private implementation for AssumeRoleWithSAMLResponse.
  * \internal
  *
- * \class AssumeRoleWithSAMLResponsePrivate
- *
- * \brief Private implementation for AssumeRoleWithSAMLResponse.
+ * \inmodule QtAwsSTS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssumeRoleWithSAMLResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssumeRoleWithSAMLResponse instance.
+ * Constructs a AssumeRoleWithSAMLResponsePrivate object with public implementation \a q.
  */
 AssumeRoleWithSAMLResponsePrivate::AssumeRoleWithSAMLResponsePrivate(
     AssumeRoleWithSAMLResponse * const q) : STSResponsePrivate(q)
@@ -153,9 +146,7 @@ AssumeRoleWithSAMLResponsePrivate::AssumeRoleWithSAMLResponsePrivate(
 }
 
 /*!
- * @brief  Parse an STS AssumeRoleWithSAMLResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a STS AssumeRoleWithSAML response element from \a xml.
  */
 void AssumeRoleWithSAMLResponsePrivate::parseAssumeRoleWithSAMLResponse(QXmlStreamReader &xml)
 {

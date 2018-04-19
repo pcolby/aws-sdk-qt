@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a ListTagsRequestPrivate object for CloudHSMV2 \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsRequestPrivate object for CloudHSMV2 \a action,
+ * with public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const CloudHSMV2Request::Action action, ListTagsRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyVpcTenancyResponse
- *
  * \brief The ModifyVpcTenancyResponse class provides an interace for EC2 ModifyVpcTenancy responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyVpcTenancyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyVpcTenancyResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyVpcTenancyResponse::ModifyVpcTenancyResponse(
         const ModifyVpcTenancyRequest &request,
@@ -59,6 +54,9 @@ ModifyVpcTenancyResponse::ModifyVpcTenancyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyVpcTenancyRequest * ModifyVpcTenancyResponse::request() const
 {
     Q_D(const ModifyVpcTenancyResponse);
@@ -66,9 +64,8 @@ const ModifyVpcTenancyRequest * ModifyVpcTenancyResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ModifyVpcTenancy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyVpcTenancy \a response.
  */
 void ModifyVpcTenancyResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyVpcTenancyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifyVpcTenancyResponsePrivate
+ * \brief The ModifyVpcTenancyResponsePrivate class provides private implementation for ModifyVpcTenancyResponse.
  * \internal
  *
- * \class ModifyVpcTenancyResponsePrivate
- *
- * \brief Private implementation for ModifyVpcTenancyResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyVpcTenancyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyVpcTenancyResponse instance.
+ * Constructs a ModifyVpcTenancyResponsePrivate object with public implementation \a q.
  */
 ModifyVpcTenancyResponsePrivate::ModifyVpcTenancyResponsePrivate(
     ModifyVpcTenancyResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyVpcTenancyResponsePrivate::ModifyVpcTenancyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifyVpcTenancyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyVpcTenancy response element from \a xml.
  */
 void ModifyVpcTenancyResponsePrivate::parseModifyVpcTenancyResponse(QXmlStreamReader &xml)
 {

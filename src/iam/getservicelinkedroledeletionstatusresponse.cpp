@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetServiceLinkedRoleDeletionStatusResponse
- *
  * \brief The GetServiceLinkedRoleDeletionStatusResponse class provides an interace for IAM GetServiceLinkedRoleDeletionStatus responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetServiceLinkedRoleDeletionStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 GetServiceLinkedRoleDeletionStatusResponse::GetServiceLinkedRoleDeletionStatusResponse(
         const GetServiceLinkedRoleDeletionStatusRequest &request,
@@ -120,6 +115,9 @@ GetServiceLinkedRoleDeletionStatusResponse::GetServiceLinkedRoleDeletionStatusRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetServiceLinkedRoleDeletionStatusRequest * GetServiceLinkedRoleDeletionStatusResponse::request() const
 {
     Q_D(const GetServiceLinkedRoleDeletionStatusResponse);
@@ -127,9 +125,8 @@ const GetServiceLinkedRoleDeletionStatusRequest * GetServiceLinkedRoleDeletionSt
 }
 
 /*!
- * @brief  Parse a IAM GetServiceLinkedRoleDeletionStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetServiceLinkedRoleDeletionStatus \a response.
  */
 void GetServiceLinkedRoleDeletionStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetServiceLinkedRoleDeletionStatusResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::IAM::GetServiceLinkedRoleDeletionStatusResponsePrivate
+ * \brief The GetServiceLinkedRoleDeletionStatusResponsePrivate class provides private implementation for GetServiceLinkedRoleDeletionStatusResponse.
  * \internal
  *
- * \class GetServiceLinkedRoleDeletionStatusResponsePrivate
- *
- * \brief Private implementation for GetServiceLinkedRoleDeletionStatusResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetServiceLinkedRoleDeletionStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetServiceLinkedRoleDeletionStatusResponse instance.
+ * Constructs a GetServiceLinkedRoleDeletionStatusResponsePrivate object with public implementation \a q.
  */
 GetServiceLinkedRoleDeletionStatusResponsePrivate::GetServiceLinkedRoleDeletionStatusResponsePrivate(
     GetServiceLinkedRoleDeletionStatusResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetServiceLinkedRoleDeletionStatusResponsePrivate::GetServiceLinkedRoleDeletionS
 }
 
 /*!
- * @brief  Parse an IAM GetServiceLinkedRoleDeletionStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetServiceLinkedRoleDeletionStatus response element from \a xml.
  */
 void GetServiceLinkedRoleDeletionStatusResponsePrivate::parseGetServiceLinkedRoleDeletionStatusResponse(QXmlStreamReader &xml)
 {

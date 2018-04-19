@@ -29,10 +29,9 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::UpdateVocabularyResponse
- *
  * \brief The UpdateVocabularyResponse class provides an interace for TranscribeService UpdateVocabulary responses.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  *
@@ -40,11 +39,7 @@ namespace TranscribeService {
  */
 
 /*!
- * @brief  Constructs a new UpdateVocabularyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateVocabularyResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateVocabularyResponse::UpdateVocabularyResponse(
         const UpdateVocabularyRequest &request,
@@ -56,6 +51,9 @@ UpdateVocabularyResponse::UpdateVocabularyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateVocabularyRequest * UpdateVocabularyResponse::request() const
 {
     Q_D(const UpdateVocabularyResponse);
@@ -63,9 +61,8 @@ const UpdateVocabularyRequest * UpdateVocabularyResponse::request() const
 }
 
 /*!
- * @brief  Parse a TranscribeService UpdateVocabulary response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful TranscribeService UpdateVocabulary \a response.
  */
 void UpdateVocabularyResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void UpdateVocabularyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::TranscribeService::UpdateVocabularyResponsePrivate
+ * \brief The UpdateVocabularyResponsePrivate class provides private implementation for UpdateVocabularyResponse.
  * \internal
  *
- * \class UpdateVocabularyResponsePrivate
- *
- * \brief Private implementation for UpdateVocabularyResponse.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateVocabularyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateVocabularyResponse instance.
+ * Constructs a UpdateVocabularyResponsePrivate object with public implementation \a q.
  */
 UpdateVocabularyResponsePrivate::UpdateVocabularyResponsePrivate(
     UpdateVocabularyResponse * const q) : TranscribeServiceResponsePrivate(q)
@@ -96,9 +89,7 @@ UpdateVocabularyResponsePrivate::UpdateVocabularyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an TranscribeService UpdateVocabularyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a TranscribeService UpdateVocabulary response element from \a xml.
  */
 void UpdateVocabularyResponsePrivate::parseUpdateVocabularyResponse(QXmlStreamReader &xml)
 {

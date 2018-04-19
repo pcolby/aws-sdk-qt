@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceDefinitionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteResourceDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a DeleteResourceDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 DeleteResourceDefinitionRequestPrivate::DeleteResourceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteResourceDefinitionRequest * const q)

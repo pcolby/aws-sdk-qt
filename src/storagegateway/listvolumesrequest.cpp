@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * ListVolumesRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListVolumesRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a ListVolumesRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 ListVolumesRequestPrivate::ListVolumesRequestPrivate(
     const StorageGatewayRequest::Action action, ListVolumesRequest * const q)

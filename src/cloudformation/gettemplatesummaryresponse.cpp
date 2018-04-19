@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::GetTemplateSummaryResponse
- *
  * \brief The GetTemplateSummaryResponse class provides an interace for CloudFormation GetTemplateSummary responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new GetTemplateSummaryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTemplateSummaryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTemplateSummaryResponse::GetTemplateSummaryResponse(
         const GetTemplateSummaryRequest &request,
@@ -77,6 +72,9 @@ GetTemplateSummaryResponse::GetTemplateSummaryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTemplateSummaryRequest * GetTemplateSummaryResponse::request() const
 {
     Q_D(const GetTemplateSummaryResponse);
@@ -84,9 +82,8 @@ const GetTemplateSummaryRequest * GetTemplateSummaryResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation GetTemplateSummary response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation GetTemplateSummary \a response.
  */
 void GetTemplateSummaryResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void GetTemplateSummaryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::GetTemplateSummaryResponsePrivate
+ * \brief The GetTemplateSummaryResponsePrivate class provides private implementation for GetTemplateSummaryResponse.
  * \internal
  *
- * \class GetTemplateSummaryResponsePrivate
- *
- * \brief Private implementation for GetTemplateSummaryResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTemplateSummaryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTemplateSummaryResponse instance.
+ * Constructs a GetTemplateSummaryResponsePrivate object with public implementation \a q.
  */
 GetTemplateSummaryResponsePrivate::GetTemplateSummaryResponsePrivate(
     GetTemplateSummaryResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ GetTemplateSummaryResponsePrivate::GetTemplateSummaryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation GetTemplateSummaryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation GetTemplateSummary response element from \a xml.
  */
 void GetTemplateSummaryResponsePrivate::parseGetTemplateSummaryResponse(QXmlStreamReader &xml)
 {

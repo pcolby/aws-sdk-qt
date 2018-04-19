@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAttachedRolePoliciesResponse : public IAMResponse {
 public:
     ListAttachedRolePoliciesResponse(const ListAttachedRolePoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAttachedRolePoliciesRequest * request() const;
+    virtual const ListAttachedRolePoliciesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListAttachedRolePoliciesResponse)

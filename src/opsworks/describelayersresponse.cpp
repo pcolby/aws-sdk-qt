@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeLayersResponse
- *
  * \brief The DescribeLayersResponse class provides an interace for OpsWorks DescribeLayers responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeLayersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLayersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLayersResponse::DescribeLayersResponse(
         const DescribeLayersRequest &request,
@@ -161,6 +156,9 @@ DescribeLayersResponse::DescribeLayersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLayersRequest * DescribeLayersResponse::request() const
 {
     Q_D(const DescribeLayersResponse);
@@ -168,9 +166,8 @@ const DescribeLayersRequest * DescribeLayersResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeLayers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeLayers \a response.
  */
 void DescribeLayersResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeLayersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeLayersResponsePrivate
+ * \brief The DescribeLayersResponsePrivate class provides private implementation for DescribeLayersResponse.
  * \internal
  *
- * \class DescribeLayersResponsePrivate
- *
- * \brief Private implementation for DescribeLayersResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLayersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLayersResponse instance.
+ * Constructs a DescribeLayersResponsePrivate object with public implementation \a q.
  */
 DescribeLayersResponsePrivate::DescribeLayersResponsePrivate(
     DescribeLayersResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeLayersResponsePrivate::DescribeLayersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeLayersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeLayers response element from \a xml.
  */
 void DescribeLayersResponsePrivate::parseDescribeLayersResponse(QXmlStreamReader &xml)
 {

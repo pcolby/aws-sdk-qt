@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::SubmitTaskStateChangeResponse
- *
  * \brief The SubmitTaskStateChangeResponse class provides an interace for ECS SubmitTaskStateChange responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new SubmitTaskStateChangeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SubmitTaskStateChangeResponse object for \a reply to \a request, with parent \a parent.
  */
 SubmitTaskStateChangeResponse::SubmitTaskStateChangeResponse(
         const SubmitTaskStateChangeRequest &request,
@@ -72,6 +67,9 @@ SubmitTaskStateChangeResponse::SubmitTaskStateChangeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SubmitTaskStateChangeRequest * SubmitTaskStateChangeResponse::request() const
 {
     Q_D(const SubmitTaskStateChangeResponse);
@@ -79,9 +77,8 @@ const SubmitTaskStateChangeRequest * SubmitTaskStateChangeResponse::request() co
 }
 
 /*!
- * @brief  Parse a ECS SubmitTaskStateChange response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS SubmitTaskStateChange \a response.
  */
 void SubmitTaskStateChangeResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void SubmitTaskStateChangeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::SubmitTaskStateChangeResponsePrivate
+ * \brief The SubmitTaskStateChangeResponsePrivate class provides private implementation for SubmitTaskStateChangeResponse.
  * \internal
  *
- * \class SubmitTaskStateChangeResponsePrivate
- *
- * \brief Private implementation for SubmitTaskStateChangeResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubmitTaskStateChangeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SubmitTaskStateChangeResponse instance.
+ * Constructs a SubmitTaskStateChangeResponsePrivate object with public implementation \a q.
  */
 SubmitTaskStateChangeResponsePrivate::SubmitTaskStateChangeResponsePrivate(
     SubmitTaskStateChangeResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ SubmitTaskStateChangeResponsePrivate::SubmitTaskStateChangeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS SubmitTaskStateChangeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS SubmitTaskStateChange response element from \a xml.
  */
 void SubmitTaskStateChangeResponsePrivate::parseSubmitTaskStateChangeResponse(QXmlStreamReader &xml)
 {

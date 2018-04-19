@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateVpcEndpointServiceConfigurationResponse : public EC2Res
 public:
     CreateVpcEndpointServiceConfigurationResponse(const CreateVpcEndpointServiceConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateVpcEndpointServiceConfigurationRequest * request() const;
+    virtual const CreateVpcEndpointServiceConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateVpcEndpointServiceConfigurationResponse)

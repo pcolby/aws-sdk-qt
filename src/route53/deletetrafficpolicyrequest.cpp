@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTrafficPolicyRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteTrafficPolicyRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTrafficPolicyRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 DeleteTrafficPolicyRequestPrivate::DeleteTrafficPolicyRequestPrivate(
     const Route53Request::Action action, DeleteTrafficPolicyRequest * const q)

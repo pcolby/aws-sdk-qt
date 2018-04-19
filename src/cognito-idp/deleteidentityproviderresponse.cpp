@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DeleteIdentityProviderResponse
- *
  * \brief The DeleteIdentityProviderResponse class provides an interace for CognitoIdentityProvider DeleteIdentityProvider responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DeleteIdentityProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteIdentityProviderResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteIdentityProviderResponse::DeleteIdentityProviderResponse(
         const DeleteIdentityProviderRequest &request,
@@ -65,6 +60,9 @@ DeleteIdentityProviderResponse::DeleteIdentityProviderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteIdentityProviderRequest * DeleteIdentityProviderResponse::request() const
 {
     Q_D(const DeleteIdentityProviderResponse);
@@ -72,9 +70,8 @@ const DeleteIdentityProviderRequest * DeleteIdentityProviderResponse::request() 
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider DeleteIdentityProvider response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider DeleteIdentityProvider \a response.
  */
 void DeleteIdentityProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void DeleteIdentityProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::DeleteIdentityProviderResponsePrivate
+ * \brief The DeleteIdentityProviderResponsePrivate class provides private implementation for DeleteIdentityProviderResponse.
  * \internal
  *
- * \class DeleteIdentityProviderResponsePrivate
- *
- * \brief Private implementation for DeleteIdentityProviderResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIdentityProviderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteIdentityProviderResponse instance.
+ * Constructs a DeleteIdentityProviderResponsePrivate object with public implementation \a q.
  */
 DeleteIdentityProviderResponsePrivate::DeleteIdentityProviderResponsePrivate(
     DeleteIdentityProviderResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ DeleteIdentityProviderResponsePrivate::DeleteIdentityProviderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider DeleteIdentityProviderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider DeleteIdentityProvider response element from \a xml.
  */
 void DeleteIdentityProviderResponsePrivate::parseDeleteIdentityProviderResponse(QXmlStreamReader &xml)
 {

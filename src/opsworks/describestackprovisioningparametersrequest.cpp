@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStackProvisioningParametersRequest::r
  */
 
 /*!
- *
- * Constructs a DescribeStackProvisioningParametersRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStackProvisioningParametersRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeStackProvisioningParametersRequestPrivate::DescribeStackProvisioningParametersRequestPrivate(
     const OpsWorksRequest::Action action, DescribeStackProvisioningParametersRequest * const q)

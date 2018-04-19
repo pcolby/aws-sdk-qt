@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateVpcLinkResponse
- *
  * \brief The UpdateVpcLinkResponse class provides an interace for APIGateway UpdateVpcLink responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateVpcLinkResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateVpcLinkResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateVpcLinkResponse::UpdateVpcLinkResponse(
         const UpdateVpcLinkRequest &request,
@@ -60,6 +55,9 @@ UpdateVpcLinkResponse::UpdateVpcLinkResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateVpcLinkRequest * UpdateVpcLinkResponse::request() const
 {
     Q_D(const UpdateVpcLinkResponse);
@@ -67,9 +65,8 @@ const UpdateVpcLinkRequest * UpdateVpcLinkResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateVpcLink response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateVpcLink \a response.
  */
 void UpdateVpcLinkResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateVpcLinkResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateVpcLinkResponsePrivate
+ * \brief The UpdateVpcLinkResponsePrivate class provides private implementation for UpdateVpcLinkResponse.
  * \internal
  *
- * \class UpdateVpcLinkResponsePrivate
- *
- * \brief Private implementation for UpdateVpcLinkResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateVpcLinkResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateVpcLinkResponse instance.
+ * Constructs a UpdateVpcLinkResponsePrivate object with public implementation \a q.
  */
 UpdateVpcLinkResponsePrivate::UpdateVpcLinkResponsePrivate(
     UpdateVpcLinkResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateVpcLinkResponsePrivate::UpdateVpcLinkResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateVpcLinkResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateVpcLink response element from \a xml.
  */
 void UpdateVpcLinkResponsePrivate::parseUpdateVpcLinkResponse(QXmlStreamReader &xml)
 {

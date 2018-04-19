@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::SearchProductsAsAdminResponse
- *
  * \brief The SearchProductsAsAdminResponse class provides an interace for ServiceCatalog SearchProductsAsAdmin responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new SearchProductsAsAdminResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SearchProductsAsAdminResponse object for \a reply to \a request, with parent \a parent.
  */
 SearchProductsAsAdminResponse::SearchProductsAsAdminResponse(
         const SearchProductsAsAdminRequest &request,
@@ -61,6 +56,9 @@ SearchProductsAsAdminResponse::SearchProductsAsAdminResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SearchProductsAsAdminRequest * SearchProductsAsAdminResponse::request() const
 {
     Q_D(const SearchProductsAsAdminResponse);
@@ -68,9 +66,8 @@ const SearchProductsAsAdminRequest * SearchProductsAsAdminResponse::request() co
 }
 
 /*!
- * @brief  Parse a ServiceCatalog SearchProductsAsAdmin response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog SearchProductsAsAdmin \a response.
  */
 void SearchProductsAsAdminResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void SearchProductsAsAdminResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::SearchProductsAsAdminResponsePrivate
+ * \brief The SearchProductsAsAdminResponsePrivate class provides private implementation for SearchProductsAsAdminResponse.
  * \internal
  *
- * \class SearchProductsAsAdminResponsePrivate
- *
- * \brief Private implementation for SearchProductsAsAdminResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchProductsAsAdminResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SearchProductsAsAdminResponse instance.
+ * Constructs a SearchProductsAsAdminResponsePrivate object with public implementation \a q.
  */
 SearchProductsAsAdminResponsePrivate::SearchProductsAsAdminResponsePrivate(
     SearchProductsAsAdminResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ SearchProductsAsAdminResponsePrivate::SearchProductsAsAdminResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog SearchProductsAsAdminResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog SearchProductsAsAdmin response element from \a xml.
  */
 void SearchProductsAsAdminResponsePrivate::parseSearchProductsAsAdminResponse(QXmlStreamReader &xml)
 {

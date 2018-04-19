@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * TagStreamRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a TagStreamRequestPrivate object for KinesisVideo \a action with,
- * public implementation \a q.
+ * Constructs a TagStreamRequestPrivate object for KinesisVideo \a action,
+ * with public implementation \a q.
  */
 TagStreamRequestPrivate::TagStreamRequestPrivate(
     const KinesisVideoRequest::Action action, TagStreamRequest * const q)

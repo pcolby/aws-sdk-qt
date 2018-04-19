@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetPartitionsResponse
- *
  * \brief The GetPartitionsResponse class provides an interace for Glue GetPartitions responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetPartitionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPartitionsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPartitionsResponse::GetPartitionsResponse(
         const GetPartitionsRequest &request,
@@ -58,6 +53,9 @@ GetPartitionsResponse::GetPartitionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPartitionsRequest * GetPartitionsResponse::request() const
 {
     Q_D(const GetPartitionsResponse);
@@ -65,9 +63,8 @@ const GetPartitionsRequest * GetPartitionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetPartitions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetPartitions \a response.
  */
 void GetPartitionsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetPartitionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetPartitionsResponsePrivate
+ * \brief The GetPartitionsResponsePrivate class provides private implementation for GetPartitionsResponse.
  * \internal
  *
- * \class GetPartitionsResponsePrivate
- *
- * \brief Private implementation for GetPartitionsResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPartitionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPartitionsResponse instance.
+ * Constructs a GetPartitionsResponsePrivate object with public implementation \a q.
  */
 GetPartitionsResponsePrivate::GetPartitionsResponsePrivate(
     GetPartitionsResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetPartitionsResponsePrivate::GetPartitionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetPartitionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetPartitions response element from \a xml.
  */
 void GetPartitionsResponsePrivate::parseGetPartitionsResponse(QXmlStreamReader &xml)
 {

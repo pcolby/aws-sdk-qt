@@ -34,10 +34,10 @@ class QTAWS_EXPORT EvaluateExpressionResponse : public DataPipelineResponse {
 public:
     EvaluateExpressionResponse(const EvaluateExpressionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EvaluateExpressionRequest * request() const;
+    virtual const EvaluateExpressionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EvaluateExpressionResponse)

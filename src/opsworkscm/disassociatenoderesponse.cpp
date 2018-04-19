@@ -29,10 +29,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DisassociateNodeResponse
- *
  * \brief The DisassociateNodeResponse class provides an interace for OpsWorksCM DisassociateNode responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -99,11 +98,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DisassociateNodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateNodeResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateNodeResponse::DisassociateNodeResponse(
         const DisassociateNodeRequest &request,
@@ -115,6 +110,9 @@ DisassociateNodeResponse::DisassociateNodeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateNodeRequest * DisassociateNodeResponse::request() const
 {
     Q_D(const DisassociateNodeResponse);
@@ -122,9 +120,8 @@ const DisassociateNodeRequest * DisassociateNodeResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorksCM DisassociateNode response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorksCM DisassociateNode \a response.
  */
 void DisassociateNodeResponse::parseSuccess(QIODevice &response)
 {
@@ -134,19 +131,15 @@ void DisassociateNodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorksCM::DisassociateNodeResponsePrivate
+ * \brief The DisassociateNodeResponsePrivate class provides private implementation for DisassociateNodeResponse.
  * \internal
  *
- * \class DisassociateNodeResponsePrivate
- *
- * \brief Private implementation for DisassociateNodeResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateNodeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateNodeResponse instance.
+ * Constructs a DisassociateNodeResponsePrivate object with public implementation \a q.
  */
 DisassociateNodeResponsePrivate::DisassociateNodeResponsePrivate(
     DisassociateNodeResponse * const q) : OpsWorksCMResponsePrivate(q)
@@ -155,9 +148,7 @@ DisassociateNodeResponsePrivate::DisassociateNodeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorksCM DisassociateNodeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorksCM DisassociateNode response element from \a xml.
  */
 void DisassociateNodeResponsePrivate::parseDisassociateNodeResponse(QXmlStreamReader &xml)
 {

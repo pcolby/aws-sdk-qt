@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionDefinitionRequest::response
  */
 
 /*!
- *
- * Constructs a DeleteSubscriptionDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSubscriptionDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteSubscriptionDefinitionRequest * const q)

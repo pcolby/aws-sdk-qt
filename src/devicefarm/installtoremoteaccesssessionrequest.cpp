@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * InstallToRemoteAccessSessionRequest::response
  */
 
 /*!
- *
- * Constructs a InstallToRemoteAccessSessionRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a InstallToRemoteAccessSessionRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 InstallToRemoteAccessSessionRequestPrivate::InstallToRemoteAccessSessionRequestPrivate(
     const DeviceFarmRequest::Action action, InstallToRemoteAccessSessionRequest * const q)

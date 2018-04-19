@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateCertificateFromCsrResponse
- *
  * \brief The CreateCertificateFromCsrResponse class provides an interace for IoT CreateCertificateFromCsr responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateCertificateFromCsrResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCertificateFromCsrResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCertificateFromCsrResponse::CreateCertificateFromCsrResponse(
         const CreateCertificateFromCsrRequest &request,
@@ -66,6 +61,9 @@ CreateCertificateFromCsrResponse::CreateCertificateFromCsrResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCertificateFromCsrRequest * CreateCertificateFromCsrResponse::request() const
 {
     Q_D(const CreateCertificateFromCsrResponse);
@@ -73,9 +71,8 @@ const CreateCertificateFromCsrRequest * CreateCertificateFromCsrResponse::reques
 }
 
 /*!
- * @brief  Parse a IoT CreateCertificateFromCsr response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT CreateCertificateFromCsr \a response.
  */
 void CreateCertificateFromCsrResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateCertificateFromCsrResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::CreateCertificateFromCsrResponsePrivate
+ * \brief The CreateCertificateFromCsrResponsePrivate class provides private implementation for CreateCertificateFromCsrResponse.
  * \internal
  *
- * \class CreateCertificateFromCsrResponsePrivate
- *
- * \brief Private implementation for CreateCertificateFromCsrResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCertificateFromCsrResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCertificateFromCsrResponse instance.
+ * Constructs a CreateCertificateFromCsrResponsePrivate object with public implementation \a q.
  */
 CreateCertificateFromCsrResponsePrivate::CreateCertificateFromCsrResponsePrivate(
     CreateCertificateFromCsrResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateCertificateFromCsrResponsePrivate::CreateCertificateFromCsrResponsePrivate
 }
 
 /*!
- * @brief  Parse an IoT CreateCertificateFromCsrResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT CreateCertificateFromCsr response element from \a xml.
  */
 void CreateCertificateFromCsrResponsePrivate::parseCreateCertificateFromCsrResponse(QXmlStreamReader &xml)
 {

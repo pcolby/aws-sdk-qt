@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * MeterUsageRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a MeterUsageRequestPrivate object for MarketplaceMetering \a action with,
- * public implementation \a q.
+ * Constructs a MeterUsageRequestPrivate object for MarketplaceMetering \a action,
+ * with public implementation \a q.
  */
 MeterUsageRequestPrivate::MeterUsageRequestPrivate(
     const MarketplaceMeteringRequest::Action action, MeterUsageRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetConnectionRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetConnectionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GetConnectionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GetConnectionRequestPrivate::GetConnectionRequestPrivate(
     const GlueRequest::Action action, GetConnectionRequest * const q)

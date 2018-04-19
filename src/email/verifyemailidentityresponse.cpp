@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::VerifyEmailIdentityResponse
- *
  * \brief The VerifyEmailIdentityResponse class provides an interace for SES VerifyEmailIdentity responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new VerifyEmailIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a VerifyEmailIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 VerifyEmailIdentityResponse::VerifyEmailIdentityResponse(
         const VerifyEmailIdentityRequest &request,
@@ -66,6 +61,9 @@ VerifyEmailIdentityResponse::VerifyEmailIdentityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const VerifyEmailIdentityRequest * VerifyEmailIdentityResponse::request() const
 {
     Q_D(const VerifyEmailIdentityResponse);
@@ -73,9 +71,8 @@ const VerifyEmailIdentityRequest * VerifyEmailIdentityResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES VerifyEmailIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES VerifyEmailIdentity \a response.
  */
 void VerifyEmailIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void VerifyEmailIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::VerifyEmailIdentityResponsePrivate
+ * \brief The VerifyEmailIdentityResponsePrivate class provides private implementation for VerifyEmailIdentityResponse.
  * \internal
  *
- * \class VerifyEmailIdentityResponsePrivate
- *
- * \brief Private implementation for VerifyEmailIdentityResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyEmailIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public VerifyEmailIdentityResponse instance.
+ * Constructs a VerifyEmailIdentityResponsePrivate object with public implementation \a q.
  */
 VerifyEmailIdentityResponsePrivate::VerifyEmailIdentityResponsePrivate(
     VerifyEmailIdentityResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ VerifyEmailIdentityResponsePrivate::VerifyEmailIdentityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES VerifyEmailIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES VerifyEmailIdentity response element from \a xml.
  */
 void VerifyEmailIdentityResponsePrivate::parseVerifyEmailIdentityResponse(QXmlStreamReader &xml)
 {

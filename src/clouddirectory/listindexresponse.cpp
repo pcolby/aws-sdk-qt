@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::ListIndexResponse
- *
  * \brief The ListIndexResponse class provides an interace for CloudDirectory ListIndex responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new ListIndexResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListIndexResponse object for \a reply to \a request, with parent \a parent.
  */
 ListIndexResponse::ListIndexResponse(
         const ListIndexRequest &request,
@@ -62,6 +57,9 @@ ListIndexResponse::ListIndexResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListIndexRequest * ListIndexResponse::request() const
 {
     Q_D(const ListIndexResponse);
@@ -69,9 +67,8 @@ const ListIndexRequest * ListIndexResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory ListIndex response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory ListIndex \a response.
  */
 void ListIndexResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListIndexResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::ListIndexResponsePrivate
+ * \brief The ListIndexResponsePrivate class provides private implementation for ListIndexResponse.
  * \internal
  *
- * \class ListIndexResponsePrivate
- *
- * \brief Private implementation for ListIndexResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIndexResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListIndexResponse instance.
+ * Constructs a ListIndexResponsePrivate object with public implementation \a q.
  */
 ListIndexResponsePrivate::ListIndexResponsePrivate(
     ListIndexResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ ListIndexResponsePrivate::ListIndexResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory ListIndexResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory ListIndex response element from \a xml.
  */
 void ListIndexResponsePrivate::parseListIndexResponse(QXmlStreamReader &xml)
 {

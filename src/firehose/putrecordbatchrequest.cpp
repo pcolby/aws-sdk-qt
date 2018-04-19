@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * PutRecordBatchRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a PutRecordBatchRequestPrivate object for Firehose \a action with,
- * public implementation \a q.
+ * Constructs a PutRecordBatchRequestPrivate object for Firehose \a action,
+ * with public implementation \a q.
  */
 PutRecordBatchRequestPrivate::PutRecordBatchRequestPrivate(
     const FirehoseRequest::Action action, PutRecordBatchRequest * const q)

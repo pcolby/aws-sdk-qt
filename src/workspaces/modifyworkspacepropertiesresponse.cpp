@@ -29,10 +29,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::ModifyWorkspacePropertiesResponse
- *
  * \brief The ModifyWorkspacePropertiesResponse class provides an interace for WorkSpaces ModifyWorkspaceProperties responses.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new ModifyWorkspacePropertiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyWorkspacePropertiesResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyWorkspacePropertiesResponse::ModifyWorkspacePropertiesResponse(
         const ModifyWorkspacePropertiesRequest &request,
@@ -58,6 +53,9 @@ ModifyWorkspacePropertiesResponse::ModifyWorkspacePropertiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyWorkspacePropertiesRequest * ModifyWorkspacePropertiesResponse::request() const
 {
     Q_D(const ModifyWorkspacePropertiesResponse);
@@ -65,9 +63,8 @@ const ModifyWorkspacePropertiesRequest * ModifyWorkspacePropertiesResponse::requ
 }
 
 /*!
- * @brief  Parse a WorkSpaces ModifyWorkspaceProperties response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkSpaces ModifyWorkspaceProperties \a response.
  */
 void ModifyWorkspacePropertiesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ModifyWorkspacePropertiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkSpaces::ModifyWorkspacePropertiesResponsePrivate
+ * \brief The ModifyWorkspacePropertiesResponsePrivate class provides private implementation for ModifyWorkspacePropertiesResponse.
  * \internal
  *
- * \class ModifyWorkspacePropertiesResponsePrivate
- *
- * \brief Private implementation for ModifyWorkspacePropertiesResponse.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyWorkspacePropertiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyWorkspacePropertiesResponse instance.
+ * Constructs a ModifyWorkspacePropertiesResponsePrivate object with public implementation \a q.
  */
 ModifyWorkspacePropertiesResponsePrivate::ModifyWorkspacePropertiesResponsePrivate(
     ModifyWorkspacePropertiesResponse * const q) : WorkSpacesResponsePrivate(q)
@@ -98,9 +91,7 @@ ModifyWorkspacePropertiesResponsePrivate::ModifyWorkspacePropertiesResponsePriva
 }
 
 /*!
- * @brief  Parse an WorkSpaces ModifyWorkspacePropertiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkSpaces ModifyWorkspaceProperties response element from \a xml.
  */
 void ModifyWorkspacePropertiesResponsePrivate::parseModifyWorkspacePropertiesResponse(QXmlStreamReader &xml)
 {

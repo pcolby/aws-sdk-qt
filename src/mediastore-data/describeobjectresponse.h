@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeObjectResponse : public MediaStoreDataResponse {
 public:
     DescribeObjectResponse(const DescribeObjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeObjectRequest * request() const;
+    virtual const DescribeObjectRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeObjectResponse)

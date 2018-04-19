@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DeleteDomainEntryResponse
- *
  * \brief The DeleteDomainEntryResponse class provides an interace for Lightsail DeleteDomainEntry responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DeleteDomainEntryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDomainEntryResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDomainEntryResponse::DeleteDomainEntryResponse(
         const DeleteDomainEntryRequest &request,
@@ -71,6 +66,9 @@ DeleteDomainEntryResponse::DeleteDomainEntryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDomainEntryRequest * DeleteDomainEntryResponse::request() const
 {
     Q_D(const DeleteDomainEntryResponse);
@@ -78,9 +76,8 @@ const DeleteDomainEntryRequest * DeleteDomainEntryResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail DeleteDomainEntry response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail DeleteDomainEntry \a response.
  */
 void DeleteDomainEntryResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DeleteDomainEntryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::DeleteDomainEntryResponsePrivate
+ * \brief The DeleteDomainEntryResponsePrivate class provides private implementation for DeleteDomainEntryResponse.
  * \internal
  *
- * \class DeleteDomainEntryResponsePrivate
- *
- * \brief Private implementation for DeleteDomainEntryResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDomainEntryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDomainEntryResponse instance.
+ * Constructs a DeleteDomainEntryResponsePrivate object with public implementation \a q.
  */
 DeleteDomainEntryResponsePrivate::DeleteDomainEntryResponsePrivate(
     DeleteDomainEntryResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ DeleteDomainEntryResponsePrivate::DeleteDomainEntryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail DeleteDomainEntryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail DeleteDomainEntry response element from \a xml.
  */
 void DeleteDomainEntryResponsePrivate::parseDeleteDomainEntryResponse(QXmlStreamReader &xml)
 {

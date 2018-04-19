@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GenerateDataKeyWithoutPlaintextResponse
- *
  * \brief The GenerateDataKeyWithoutPlaintextResponse class provides an interace for KMS GenerateDataKeyWithoutPlaintext responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GenerateDataKeyWithoutPlaintextResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GenerateDataKeyWithoutPlaintextResponse object for \a reply to \a request, with parent \a parent.
  */
 GenerateDataKeyWithoutPlaintextResponse::GenerateDataKeyWithoutPlaintextResponse(
         const GenerateDataKeyWithoutPlaintextRequest &request,
@@ -154,6 +149,9 @@ GenerateDataKeyWithoutPlaintextResponse::GenerateDataKeyWithoutPlaintextResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GenerateDataKeyWithoutPlaintextRequest * GenerateDataKeyWithoutPlaintextResponse::request() const
 {
     Q_D(const GenerateDataKeyWithoutPlaintextResponse);
@@ -161,9 +159,8 @@ const GenerateDataKeyWithoutPlaintextRequest * GenerateDataKeyWithoutPlaintextRe
 }
 
 /*!
- * @brief  Parse a KMS GenerateDataKeyWithoutPlaintext response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS GenerateDataKeyWithoutPlaintext \a response.
  */
 void GenerateDataKeyWithoutPlaintextResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void GenerateDataKeyWithoutPlaintextResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::GenerateDataKeyWithoutPlaintextResponsePrivate
+ * \brief The GenerateDataKeyWithoutPlaintextResponsePrivate class provides private implementation for GenerateDataKeyWithoutPlaintextResponse.
  * \internal
  *
- * \class GenerateDataKeyWithoutPlaintextResponsePrivate
- *
- * \brief Private implementation for GenerateDataKeyWithoutPlaintextResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GenerateDataKeyWithoutPlaintextResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GenerateDataKeyWithoutPlaintextResponse instance.
+ * Constructs a GenerateDataKeyWithoutPlaintextResponsePrivate object with public implementation \a q.
  */
 GenerateDataKeyWithoutPlaintextResponsePrivate::GenerateDataKeyWithoutPlaintextResponsePrivate(
     GenerateDataKeyWithoutPlaintextResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ GenerateDataKeyWithoutPlaintextResponsePrivate::GenerateDataKeyWithoutPlaintextR
 }
 
 /*!
- * @brief  Parse an KMS GenerateDataKeyWithoutPlaintextResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS GenerateDataKeyWithoutPlaintext response element from \a xml.
  */
 void GenerateDataKeyWithoutPlaintextResponsePrivate::parseGenerateDataKeyWithoutPlaintextResponse(QXmlStreamReader &xml)
 {

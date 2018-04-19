@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationAggregatorSourcesStatusR
  */
 
 /*!
- *
- * Constructs a DescribeConfigurationAggregatorSourcesStatusRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeConfigurationAggregatorSourcesStatusRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DescribeConfigurationAggregatorSourcesStatusRequestPrivate::DescribeConfigurationAggregatorSourcesStatusRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigurationAggregatorSourcesStatusRequest * const q)

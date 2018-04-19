@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * StartSchemaCreationRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a StartSchemaCreationRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a StartSchemaCreationRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 StartSchemaCreationRequestPrivate::StartSchemaCreationRequestPrivate(
     const AppSyncRequest::Action action, StartSchemaCreationRequest * const q)

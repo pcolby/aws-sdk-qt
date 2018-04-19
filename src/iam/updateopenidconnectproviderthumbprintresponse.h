@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateOpenIDConnectProviderThumbprintResponse : public IAMRes
 public:
     UpdateOpenIDConnectProviderThumbprintResponse(const UpdateOpenIDConnectProviderThumbprintRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateOpenIDConnectProviderThumbprintRequest * request() const;
+    virtual const UpdateOpenIDConnectProviderThumbprintRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateOpenIDConnectProviderThumbprintResponse)

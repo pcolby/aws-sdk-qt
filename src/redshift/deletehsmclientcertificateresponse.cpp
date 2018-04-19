@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteHsmClientCertificateResponse
- *
  * \brief The DeleteHsmClientCertificateResponse class provides an interace for Redshift DeleteHsmClientCertificate responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteHsmClientCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteHsmClientCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteHsmClientCertificateResponse::DeleteHsmClientCertificateResponse(
         const DeleteHsmClientCertificateRequest &request,
@@ -85,6 +80,9 @@ DeleteHsmClientCertificateResponse::DeleteHsmClientCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteHsmClientCertificateRequest * DeleteHsmClientCertificateResponse::request() const
 {
     Q_D(const DeleteHsmClientCertificateResponse);
@@ -92,9 +90,8 @@ const DeleteHsmClientCertificateRequest * DeleteHsmClientCertificateResponse::re
 }
 
 /*!
- * @brief  Parse a Redshift DeleteHsmClientCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DeleteHsmClientCertificate \a response.
  */
 void DeleteHsmClientCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DeleteHsmClientCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DeleteHsmClientCertificateResponsePrivate
+ * \brief The DeleteHsmClientCertificateResponsePrivate class provides private implementation for DeleteHsmClientCertificateResponse.
  * \internal
  *
- * \class DeleteHsmClientCertificateResponsePrivate
- *
- * \brief Private implementation for DeleteHsmClientCertificateResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHsmClientCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteHsmClientCertificateResponse instance.
+ * Constructs a DeleteHsmClientCertificateResponsePrivate object with public implementation \a q.
  */
 DeleteHsmClientCertificateResponsePrivate::DeleteHsmClientCertificateResponsePrivate(
     DeleteHsmClientCertificateResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DeleteHsmClientCertificateResponsePrivate::DeleteHsmClientCertificateResponsePri
 }
 
 /*!
- * @brief  Parse an Redshift DeleteHsmClientCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DeleteHsmClientCertificate response element from \a xml.
  */
 void DeleteHsmClientCertificateResponsePrivate::parseDeleteHsmClientCertificateResponse(QXmlStreamReader &xml)
 {

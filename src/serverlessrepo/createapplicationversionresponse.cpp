@@ -29,10 +29,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::CreateApplicationVersionResponse
- *
  * \brief The CreateApplicationVersionResponse class provides an interace for ServerlessApplicationRepository CreateApplicationVersion responses.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -60,11 +59,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new CreateApplicationVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateApplicationVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateApplicationVersionResponse::CreateApplicationVersionResponse(
         const CreateApplicationVersionRequest &request,
@@ -76,6 +71,9 @@ CreateApplicationVersionResponse::CreateApplicationVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateApplicationVersionRequest * CreateApplicationVersionResponse::request() const
 {
     Q_D(const CreateApplicationVersionResponse);
@@ -83,9 +81,8 @@ const CreateApplicationVersionRequest * CreateApplicationVersionResponse::reques
 }
 
 /*!
- * @brief  Parse a ServerlessApplicationRepository CreateApplicationVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServerlessApplicationRepository CreateApplicationVersion \a response.
  */
 void CreateApplicationVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -95,19 +92,15 @@ void CreateApplicationVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServerlessApplicationRepository::CreateApplicationVersionResponsePrivate
+ * \brief The CreateApplicationVersionResponsePrivate class provides private implementation for CreateApplicationVersionResponse.
  * \internal
  *
- * \class CreateApplicationVersionResponsePrivate
- *
- * \brief Private implementation for CreateApplicationVersionResponse.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateApplicationVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateApplicationVersionResponse instance.
+ * Constructs a CreateApplicationVersionResponsePrivate object with public implementation \a q.
  */
 CreateApplicationVersionResponsePrivate::CreateApplicationVersionResponsePrivate(
     CreateApplicationVersionResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
@@ -116,9 +109,7 @@ CreateApplicationVersionResponsePrivate::CreateApplicationVersionResponsePrivate
 }
 
 /*!
- * @brief  Parse an ServerlessApplicationRepository CreateApplicationVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServerlessApplicationRepository CreateApplicationVersion response element from \a xml.
  */
 void CreateApplicationVersionResponsePrivate::parseCreateApplicationVersionResponse(QXmlStreamReader &xml)
 {

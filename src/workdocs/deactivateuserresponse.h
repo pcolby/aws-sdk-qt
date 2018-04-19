@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeactivateUserResponse : public WorkDocsResponse {
 public:
     DeactivateUserResponse(const DeactivateUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeactivateUserRequest * request() const;
+    virtual const DeactivateUserRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeactivateUserResponse)

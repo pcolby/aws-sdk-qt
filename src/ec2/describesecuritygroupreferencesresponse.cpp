@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSecurityGroupReferencesResponse
- *
  * \brief The DescribeSecurityGroupReferencesResponse class provides an interace for EC2 DescribeSecurityGroupReferences responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSecurityGroupReferencesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSecurityGroupReferencesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSecurityGroupReferencesResponse::DescribeSecurityGroupReferencesResponse(
         const DescribeSecurityGroupReferencesRequest &request,
@@ -59,6 +54,9 @@ DescribeSecurityGroupReferencesResponse::DescribeSecurityGroupReferencesResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSecurityGroupReferencesRequest * DescribeSecurityGroupReferencesResponse::request() const
 {
     Q_D(const DescribeSecurityGroupReferencesResponse);
@@ -66,9 +64,8 @@ const DescribeSecurityGroupReferencesRequest * DescribeSecurityGroupReferencesRe
 }
 
 /*!
- * @brief  Parse a EC2 DescribeSecurityGroupReferences response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeSecurityGroupReferences \a response.
  */
 void DescribeSecurityGroupReferencesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeSecurityGroupReferencesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeSecurityGroupReferencesResponsePrivate
+ * \brief The DescribeSecurityGroupReferencesResponsePrivate class provides private implementation for DescribeSecurityGroupReferencesResponse.
  * \internal
  *
- * \class DescribeSecurityGroupReferencesResponsePrivate
- *
- * \brief Private implementation for DescribeSecurityGroupReferencesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSecurityGroupReferencesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSecurityGroupReferencesResponse instance.
+ * Constructs a DescribeSecurityGroupReferencesResponsePrivate object with public implementation \a q.
  */
 DescribeSecurityGroupReferencesResponsePrivate::DescribeSecurityGroupReferencesResponsePrivate(
     DescribeSecurityGroupReferencesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeSecurityGroupReferencesResponsePrivate::DescribeSecurityGroupReferencesR
 }
 
 /*!
- * @brief  Parse an EC2 DescribeSecurityGroupReferencesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeSecurityGroupReferences response element from \a xml.
  */
 void DescribeSecurityGroupReferencesResponsePrivate::parseDescribeSecurityGroupReferencesResponse(QXmlStreamReader &xml)
 {

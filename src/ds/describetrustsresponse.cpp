@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeTrustsResponse
- *
  * \brief The DescribeTrustsResponse class provides an interace for DirectoryService DescribeTrusts responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeTrustsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTrustsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTrustsResponse::DescribeTrustsResponse(
         const DescribeTrustsRequest &request,
@@ -69,6 +64,9 @@ DescribeTrustsResponse::DescribeTrustsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTrustsRequest * DescribeTrustsResponse::request() const
 {
     Q_D(const DescribeTrustsResponse);
@@ -76,9 +74,8 @@ const DescribeTrustsRequest * DescribeTrustsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService DescribeTrusts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DescribeTrusts \a response.
  */
 void DescribeTrustsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeTrustsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DescribeTrustsResponsePrivate
+ * \brief The DescribeTrustsResponsePrivate class provides private implementation for DescribeTrustsResponse.
  * \internal
  *
- * \class DescribeTrustsResponsePrivate
- *
- * \brief Private implementation for DescribeTrustsResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTrustsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTrustsResponse instance.
+ * Constructs a DescribeTrustsResponsePrivate object with public implementation \a q.
  */
 DescribeTrustsResponsePrivate::DescribeTrustsResponsePrivate(
     DescribeTrustsResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeTrustsResponsePrivate::DescribeTrustsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService DescribeTrustsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DescribeTrusts response element from \a xml.
  */
 void DescribeTrustsResponsePrivate::parseDescribeTrustsResponse(QXmlStreamReader &xml)
 {

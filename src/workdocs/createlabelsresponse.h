@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateLabelsResponse : public WorkDocsResponse {
 public:
     CreateLabelsResponse(const CreateLabelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateLabelsRequest * request() const;
+    virtual const CreateLabelsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateLabelsResponse)

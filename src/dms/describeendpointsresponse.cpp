@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeEndpointsResponse
- *
  * \brief The DescribeEndpointsResponse class provides an interace for DatabaseMigrationService DescribeEndpoints responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeEndpointsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEndpointsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEndpointsResponse::DescribeEndpointsResponse(
         const DescribeEndpointsRequest &request,
@@ -66,6 +61,9 @@ DescribeEndpointsResponse::DescribeEndpointsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEndpointsRequest * DescribeEndpointsResponse::request() const
 {
     Q_D(const DescribeEndpointsResponse);
@@ -73,9 +71,8 @@ const DescribeEndpointsRequest * DescribeEndpointsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DescribeEndpoints response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DescribeEndpoints \a response.
  */
 void DescribeEndpointsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeEndpointsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DescribeEndpointsResponsePrivate
+ * \brief The DescribeEndpointsResponsePrivate class provides private implementation for DescribeEndpointsResponse.
  * \internal
  *
- * \class DescribeEndpointsResponsePrivate
- *
- * \brief Private implementation for DescribeEndpointsResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEndpointsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEndpointsResponse instance.
+ * Constructs a DescribeEndpointsResponsePrivate object with public implementation \a q.
  */
 DescribeEndpointsResponsePrivate::DescribeEndpointsResponsePrivate(
     DescribeEndpointsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeEndpointsResponsePrivate::DescribeEndpointsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DescribeEndpointsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DescribeEndpoints response element from \a xml.
  */
 void DescribeEndpointsResponsePrivate::parseDescribeEndpointsResponse(QXmlStreamReader &xml)
 {

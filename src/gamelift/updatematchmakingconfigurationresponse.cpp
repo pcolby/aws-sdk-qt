@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::UpdateMatchmakingConfigurationResponse
- *
  * \brief The UpdateMatchmakingConfigurationResponse class provides an interace for GameLift UpdateMatchmakingConfiguration responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new UpdateMatchmakingConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateMatchmakingConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateMatchmakingConfigurationResponse::UpdateMatchmakingConfigurationResponse(
         const UpdateMatchmakingConfigurationRequest &request,
@@ -491,6 +486,9 @@ UpdateMatchmakingConfigurationResponse::UpdateMatchmakingConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateMatchmakingConfigurationRequest * UpdateMatchmakingConfigurationResponse::request() const
 {
     Q_D(const UpdateMatchmakingConfigurationResponse);
@@ -498,9 +496,8 @@ const UpdateMatchmakingConfigurationRequest * UpdateMatchmakingConfigurationResp
 }
 
 /*!
- * @brief  Parse a GameLift UpdateMatchmakingConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift UpdateMatchmakingConfiguration \a response.
  */
 void UpdateMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void UpdateMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::UpdateMatchmakingConfigurationResponsePrivate
+ * \brief The UpdateMatchmakingConfigurationResponsePrivate class provides private implementation for UpdateMatchmakingConfigurationResponse.
  * \internal
  *
- * \class UpdateMatchmakingConfigurationResponsePrivate
- *
- * \brief Private implementation for UpdateMatchmakingConfigurationResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateMatchmakingConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateMatchmakingConfigurationResponse instance.
+ * Constructs a UpdateMatchmakingConfigurationResponsePrivate object with public implementation \a q.
  */
 UpdateMatchmakingConfigurationResponsePrivate::UpdateMatchmakingConfigurationResponsePrivate(
     UpdateMatchmakingConfigurationResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ UpdateMatchmakingConfigurationResponsePrivate::UpdateMatchmakingConfigurationRes
 }
 
 /*!
- * @brief  Parse an GameLift UpdateMatchmakingConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift UpdateMatchmakingConfiguration response element from \a xml.
  */
 void UpdateMatchmakingConfigurationResponsePrivate::parseUpdateMatchmakingConfigurationResponse(QXmlStreamReader &xml)
 {

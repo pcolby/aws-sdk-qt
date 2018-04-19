@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDeploymentsResponse : public OpsWorksResponse {
 public:
     DescribeDeploymentsResponse(const DescribeDeploymentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDeploymentsRequest * request() const;
+    virtual const DescribeDeploymentsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDeploymentsResponse)

@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeregisterRdsDbInstanceResponse
- *
  * \brief The DeregisterRdsDbInstanceResponse class provides an interace for OpsWorks DeregisterRdsDbInstance responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeregisterRdsDbInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterRdsDbInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterRdsDbInstanceResponse::DeregisterRdsDbInstanceResponse(
         const DeregisterRdsDbInstanceRequest &request,
@@ -161,6 +156,9 @@ DeregisterRdsDbInstanceResponse::DeregisterRdsDbInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterRdsDbInstanceRequest * DeregisterRdsDbInstanceResponse::request() const
 {
     Q_D(const DeregisterRdsDbInstanceResponse);
@@ -168,9 +166,8 @@ const DeregisterRdsDbInstanceRequest * DeregisterRdsDbInstanceResponse::request(
 }
 
 /*!
- * @brief  Parse a OpsWorks DeregisterRdsDbInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DeregisterRdsDbInstance \a response.
  */
 void DeregisterRdsDbInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DeregisterRdsDbInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DeregisterRdsDbInstanceResponsePrivate
+ * \brief The DeregisterRdsDbInstanceResponsePrivate class provides private implementation for DeregisterRdsDbInstanceResponse.
  * \internal
  *
- * \class DeregisterRdsDbInstanceResponsePrivate
- *
- * \brief Private implementation for DeregisterRdsDbInstanceResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterRdsDbInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterRdsDbInstanceResponse instance.
+ * Constructs a DeregisterRdsDbInstanceResponsePrivate object with public implementation \a q.
  */
 DeregisterRdsDbInstanceResponsePrivate::DeregisterRdsDbInstanceResponsePrivate(
     DeregisterRdsDbInstanceResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DeregisterRdsDbInstanceResponsePrivate::DeregisterRdsDbInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DeregisterRdsDbInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DeregisterRdsDbInstance response element from \a xml.
  */
 void DeregisterRdsDbInstanceResponsePrivate::parseDeregisterRdsDbInstanceResponse(QXmlStreamReader &xml)
 {

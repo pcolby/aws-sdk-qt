@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeReservedInstancesListingsResponse
- *
  * \brief The DescribeReservedInstancesListingsResponse class provides an interace for EC2 DescribeReservedInstancesListings responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeReservedInstancesListingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeReservedInstancesListingsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeReservedInstancesListingsResponse::DescribeReservedInstancesListingsResponse(
         const DescribeReservedInstancesListingsRequest &request,
@@ -59,6 +54,9 @@ DescribeReservedInstancesListingsResponse::DescribeReservedInstancesListingsResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeReservedInstancesListingsRequest * DescribeReservedInstancesListingsResponse::request() const
 {
     Q_D(const DescribeReservedInstancesListingsResponse);
@@ -66,9 +64,8 @@ const DescribeReservedInstancesListingsRequest * DescribeReservedInstancesListin
 }
 
 /*!
- * @brief  Parse a EC2 DescribeReservedInstancesListings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeReservedInstancesListings \a response.
  */
 void DescribeReservedInstancesListingsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeReservedInstancesListingsResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::EC2::DescribeReservedInstancesListingsResponsePrivate
+ * \brief The DescribeReservedInstancesListingsResponsePrivate class provides private implementation for DescribeReservedInstancesListingsResponse.
  * \internal
  *
- * \class DescribeReservedInstancesListingsResponsePrivate
- *
- * \brief Private implementation for DescribeReservedInstancesListingsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReservedInstancesListingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeReservedInstancesListingsResponse instance.
+ * Constructs a DescribeReservedInstancesListingsResponsePrivate object with public implementation \a q.
  */
 DescribeReservedInstancesListingsResponsePrivate::DescribeReservedInstancesListingsResponsePrivate(
     DescribeReservedInstancesListingsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeReservedInstancesListingsResponsePrivate::DescribeReservedInstancesListi
 }
 
 /*!
- * @brief  Parse an EC2 DescribeReservedInstancesListingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeReservedInstancesListings response element from \a xml.
  */
 void DescribeReservedInstancesListingsResponsePrivate::parseDescribeReservedInstancesListingsResponse(QXmlStreamReader &xml)
 {

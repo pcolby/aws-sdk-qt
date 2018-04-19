@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutLogEventsResponse
- *
  * \brief The PutLogEventsResponse class provides an interace for CloudWatchLogs PutLogEvents responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutLogEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutLogEventsResponse object for \a reply to \a request, with parent \a parent.
  */
 PutLogEventsResponse::PutLogEventsResponse(
         const PutLogEventsRequest &request,
@@ -84,6 +79,9 @@ PutLogEventsResponse::PutLogEventsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutLogEventsRequest * PutLogEventsResponse::request() const
 {
     Q_D(const PutLogEventsResponse);
@@ -91,9 +89,8 @@ const PutLogEventsRequest * PutLogEventsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs PutLogEvents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs PutLogEvents \a response.
  */
 void PutLogEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void PutLogEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::PutLogEventsResponsePrivate
+ * \brief The PutLogEventsResponsePrivate class provides private implementation for PutLogEventsResponse.
  * \internal
  *
- * \class PutLogEventsResponsePrivate
- *
- * \brief Private implementation for PutLogEventsResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutLogEventsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutLogEventsResponse instance.
+ * Constructs a PutLogEventsResponsePrivate object with public implementation \a q.
  */
 PutLogEventsResponsePrivate::PutLogEventsResponsePrivate(
     PutLogEventsResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ PutLogEventsResponsePrivate::PutLogEventsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs PutLogEventsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs PutLogEvents response element from \a xml.
  */
 void PutLogEventsResponsePrivate::parsePutLogEventsResponse(QXmlStreamReader &xml)
 {

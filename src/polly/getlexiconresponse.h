@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetLexiconResponse : public PollyResponse {
 public:
     GetLexiconResponse(const GetLexiconRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetLexiconRequest * request() const;
+    virtual const GetLexiconRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetLexiconResponse)

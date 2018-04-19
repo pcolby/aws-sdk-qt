@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyEventSubscriptionResponse : public RedshiftResponse {
 public:
     ModifyEventSubscriptionResponse(const ModifyEventSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyEventSubscriptionRequest * request() const;
+    virtual const ModifyEventSubscriptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyEventSubscriptionResponse)

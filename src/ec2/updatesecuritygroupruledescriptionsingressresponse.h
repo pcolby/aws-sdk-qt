@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateSecurityGroupRuleDescriptionsIngressResponse : public E
 public:
     UpdateSecurityGroupRuleDescriptionsIngressResponse(const UpdateSecurityGroupRuleDescriptionsIngressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateSecurityGroupRuleDescriptionsIngressRequest * request() const;
+    virtual const UpdateSecurityGroupRuleDescriptionsIngressRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateSecurityGroupRuleDescriptionsIngressResponse)

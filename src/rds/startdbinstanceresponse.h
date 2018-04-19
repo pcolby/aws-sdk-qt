@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartDBInstanceResponse : public RDSResponse {
 public:
     StartDBInstanceResponse(const StartDBInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartDBInstanceRequest * request() const;
+    virtual const StartDBInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartDBInstanceResponse)

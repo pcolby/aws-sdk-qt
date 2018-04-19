@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CreateSnapshotRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateSnapshotRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateSnapshotRequestPrivate::CreateSnapshotRequestPrivate(
     const EC2Request::Action action, CreateSnapshotRequest * const q)

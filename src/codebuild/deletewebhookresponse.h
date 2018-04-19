@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteWebhookResponse : public CodeBuildResponse {
 public:
     DeleteWebhookResponse(const DeleteWebhookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteWebhookRequest * request() const;
+    virtual const DeleteWebhookRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteWebhookResponse)

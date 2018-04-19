@@ -81,7 +81,7 @@ namespace Organizations {
  */
 
 /*!
- * Constructs a[n] OrganizationsRequest object for Organizations \a action.
+ * Constructs a OrganizationsRequest object for Organizations \a action.
  */
 OrganizationsRequest::OrganizationsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new OrganizationsRequestPrivate(action, this))
@@ -281,8 +281,8 @@ QNetworkRequest OrganizationsRequest::unsignedRequest(const QUrl &endpoint) cons
  */
 
 /*!
- * Constructs a OrganizationsRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a OrganizationsRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 OrganizationsRequestPrivate::OrganizationsRequestPrivate(const OrganizationsRequest::Action action, OrganizationsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

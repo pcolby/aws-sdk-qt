@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * UpdateThingShadowRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateThingShadowRequestPrivate object for IoTDataPlane \a action with,
- * public implementation \a q.
+ * Constructs a UpdateThingShadowRequestPrivate object for IoTDataPlane \a action,
+ * with public implementation \a q.
  */
 UpdateThingShadowRequestPrivate::UpdateThingShadowRequestPrivate(
     const IoTDataPlaneRequest::Action action, UpdateThingShadowRequest * const q)

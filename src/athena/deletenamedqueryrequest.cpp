@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNamedQueryRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteNamedQueryRequestPrivate object for Athena \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNamedQueryRequestPrivate object for Athena \a action,
+ * with public implementation \a q.
  */
 DeleteNamedQueryRequestPrivate::DeleteNamedQueryRequestPrivate(
     const AthenaRequest::Action action, DeleteNamedQueryRequest * const q)

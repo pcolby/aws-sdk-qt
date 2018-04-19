@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * GetFolderRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetFolderRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a GetFolderRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 GetFolderRequestPrivate::GetFolderRequestPrivate(
     const WorkDocsRequest::Action action, GetFolderRequest * const q)

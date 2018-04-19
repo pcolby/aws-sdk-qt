@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEnvironmentResourcesResponse : public ElasticBeanstal
 public:
     DescribeEnvironmentResourcesResponse(const DescribeEnvironmentResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEnvironmentResourcesRequest * request() const;
+    virtual const DescribeEnvironmentResourcesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEnvironmentResourcesResponse)

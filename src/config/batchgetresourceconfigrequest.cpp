@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * BatchGetResourceConfigRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a BatchGetResourceConfigRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a BatchGetResourceConfigRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 BatchGetResourceConfigRequestPrivate::BatchGetResourceConfigRequestPrivate(
     const ConfigServiceRequest::Action action, BatchGetResourceConfigRequest * const q)

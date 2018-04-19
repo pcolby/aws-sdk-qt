@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateSnapshotScheduleResponse
- *
  * \brief The UpdateSnapshotScheduleResponse class provides an interace for StorageGateway UpdateSnapshotSchedule responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateSnapshotScheduleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSnapshotScheduleResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSnapshotScheduleResponse::UpdateSnapshotScheduleResponse(
         const UpdateSnapshotScheduleRequest &request,
@@ -124,6 +119,9 @@ UpdateSnapshotScheduleResponse::UpdateSnapshotScheduleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSnapshotScheduleRequest * UpdateSnapshotScheduleResponse::request() const
 {
     Q_D(const UpdateSnapshotScheduleResponse);
@@ -131,9 +129,8 @@ const UpdateSnapshotScheduleRequest * UpdateSnapshotScheduleResponse::request() 
 }
 
 /*!
- * @brief  Parse a StorageGateway UpdateSnapshotSchedule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway UpdateSnapshotSchedule \a response.
  */
 void UpdateSnapshotScheduleResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void UpdateSnapshotScheduleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::UpdateSnapshotScheduleResponsePrivate
+ * \brief The UpdateSnapshotScheduleResponsePrivate class provides private implementation for UpdateSnapshotScheduleResponse.
  * \internal
  *
- * \class UpdateSnapshotScheduleResponsePrivate
- *
- * \brief Private implementation for UpdateSnapshotScheduleResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSnapshotScheduleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSnapshotScheduleResponse instance.
+ * Constructs a UpdateSnapshotScheduleResponsePrivate object with public implementation \a q.
  */
 UpdateSnapshotScheduleResponsePrivate::UpdateSnapshotScheduleResponsePrivate(
     UpdateSnapshotScheduleResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ UpdateSnapshotScheduleResponsePrivate::UpdateSnapshotScheduleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway UpdateSnapshotScheduleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway UpdateSnapshotSchedule response element from \a xml.
  */
 void UpdateSnapshotScheduleResponsePrivate::parseUpdateSnapshotScheduleResponse(QXmlStreamReader &xml)
 {

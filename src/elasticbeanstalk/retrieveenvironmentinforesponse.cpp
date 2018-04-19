@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::RetrieveEnvironmentInfoResponse
- *
  * \brief The RetrieveEnvironmentInfoResponse class provides an interace for ElasticBeanstalk RetrieveEnvironmentInfo responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new RetrieveEnvironmentInfoResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RetrieveEnvironmentInfoResponse object for \a reply to \a request, with parent \a parent.
  */
 RetrieveEnvironmentInfoResponse::RetrieveEnvironmentInfoResponse(
         const RetrieveEnvironmentInfoRequest &request,
@@ -77,6 +72,9 @@ RetrieveEnvironmentInfoResponse::RetrieveEnvironmentInfoResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RetrieveEnvironmentInfoRequest * RetrieveEnvironmentInfoResponse::request() const
 {
     Q_D(const RetrieveEnvironmentInfoResponse);
@@ -84,9 +82,8 @@ const RetrieveEnvironmentInfoRequest * RetrieveEnvironmentInfoResponse::request(
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk RetrieveEnvironmentInfo response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk RetrieveEnvironmentInfo \a response.
  */
 void RetrieveEnvironmentInfoResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void RetrieveEnvironmentInfoResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::RetrieveEnvironmentInfoResponsePrivate
+ * \brief The RetrieveEnvironmentInfoResponsePrivate class provides private implementation for RetrieveEnvironmentInfoResponse.
  * \internal
  *
- * \class RetrieveEnvironmentInfoResponsePrivate
- *
- * \brief Private implementation for RetrieveEnvironmentInfoResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetrieveEnvironmentInfoResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RetrieveEnvironmentInfoResponse instance.
+ * Constructs a RetrieveEnvironmentInfoResponsePrivate object with public implementation \a q.
  */
 RetrieveEnvironmentInfoResponsePrivate::RetrieveEnvironmentInfoResponsePrivate(
     RetrieveEnvironmentInfoResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ RetrieveEnvironmentInfoResponsePrivate::RetrieveEnvironmentInfoResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk RetrieveEnvironmentInfoResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk RetrieveEnvironmentInfo response element from \a xml.
  */
 void RetrieveEnvironmentInfoResponsePrivate::parseRetrieveEnvironmentInfoResponse(QXmlStreamReader &xml)
 {

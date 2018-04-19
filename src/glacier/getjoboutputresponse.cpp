@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::GetJobOutputResponse
- *
  * \brief The GetJobOutputResponse class provides an interace for Glacier GetJobOutput responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new GetJobOutputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetJobOutputResponse object for \a reply to \a request, with parent \a parent.
  */
 GetJobOutputResponse::GetJobOutputResponse(
         const GetJobOutputRequest &request,
@@ -93,6 +88,9 @@ GetJobOutputResponse::GetJobOutputResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetJobOutputRequest * GetJobOutputResponse::request() const
 {
     Q_D(const GetJobOutputResponse);
@@ -100,9 +98,8 @@ const GetJobOutputRequest * GetJobOutputResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier GetJobOutput response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier GetJobOutput \a response.
  */
 void GetJobOutputResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void GetJobOutputResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::GetJobOutputResponsePrivate
+ * \brief The GetJobOutputResponsePrivate class provides private implementation for GetJobOutputResponse.
  * \internal
  *
- * \class GetJobOutputResponsePrivate
- *
- * \brief Private implementation for GetJobOutputResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobOutputResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetJobOutputResponse instance.
+ * Constructs a GetJobOutputResponsePrivate object with public implementation \a q.
  */
 GetJobOutputResponsePrivate::GetJobOutputResponsePrivate(
     GetJobOutputResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ GetJobOutputResponsePrivate::GetJobOutputResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier GetJobOutputResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier GetJobOutput response element from \a xml.
  */
 void GetJobOutputResponsePrivate::parseGetJobOutputResponse(QXmlStreamReader &xml)
 {

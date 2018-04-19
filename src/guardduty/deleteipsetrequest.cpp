@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteIPSetRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteIPSetRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a DeleteIPSetRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 DeleteIPSetRequestPrivate::DeleteIPSetRequestPrivate(
     const GuardDutyRequest::Action action, DeleteIPSetRequest * const q)

@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * RetrieveEnvironmentInfoRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a RetrieveEnvironmentInfoRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a RetrieveEnvironmentInfoRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 RetrieveEnvironmentInfoRequestPrivate::RetrieveEnvironmentInfoRequestPrivate(
     const ElasticBeanstalkRequest::Action action, RetrieveEnvironmentInfoRequest * const q)

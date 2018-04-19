@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreatePullRequestResponse : public CodeCommitResponse {
 public:
     CreatePullRequestResponse(const CreatePullRequestRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreatePullRequestRequest * request() const;
+    virtual const CreatePullRequestRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreatePullRequestResponse)

@@ -45,7 +45,7 @@ namespace Polly {
  */
 
 /*!
- * Constructs a[n] PollyRequest object for Polly \a action.
+ * Constructs a PollyRequest object for Polly \a action.
  */
 PollyRequest::PollyRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new PollyRequestPrivate(action, this))
@@ -245,8 +245,8 @@ QNetworkRequest PollyRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a PollyRequestPrivate object for Polly \a action with,
- * public implementation \a q.
+ * Constructs a PollyRequestPrivate object for Polly \a action,
+ * with public implementation \a q.
  */
 PollyRequestPrivate::PollyRequestPrivate(const PollyRequest::Action action, PollyRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

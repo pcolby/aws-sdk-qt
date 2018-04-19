@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteClusterResponse : public CloudHSMV2Response {
 public:
     DeleteClusterResponse(const DeleteClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteClusterRequest * request() const;
+    virtual const DeleteClusterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteClusterResponse)

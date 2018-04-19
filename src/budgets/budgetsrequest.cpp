@@ -52,7 +52,7 @@ namespace Budgets {
  */
 
 /*!
- * Constructs a[n] BudgetsRequest object for Budgets \a action.
+ * Constructs a BudgetsRequest object for Budgets \a action.
  */
 BudgetsRequest::BudgetsRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new BudgetsRequestPrivate(action, this))
@@ -252,8 +252,8 @@ QNetworkRequest BudgetsRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a BudgetsRequestPrivate object for Budgets \a action with,
- * public implementation \a q.
+ * Constructs a BudgetsRequestPrivate object for Budgets \a action,
+ * with public implementation \a q.
  */
 BudgetsRequestPrivate::BudgetsRequestPrivate(const BudgetsRequest::Action action, BudgetsRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

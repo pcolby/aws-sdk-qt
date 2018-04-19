@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAppsResponse : public PinpointResponse {
 public:
     GetAppsResponse(const GetAppsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAppsRequest * request() const;
+    virtual const GetAppsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetAppsResponse)

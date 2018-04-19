@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAssociationResponse : public SSMResponse {
 public:
     DescribeAssociationResponse(const DescribeAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAssociationRequest * request() const;
+    virtual const DescribeAssociationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAssociationResponse)

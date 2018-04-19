@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ListSigningCertificatesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListSigningCertificatesRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ListSigningCertificatesRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ListSigningCertificatesRequestPrivate::ListSigningCertificatesRequestPrivate(
     const IAMRequest::Action action, ListSigningCertificatesRequest * const q)

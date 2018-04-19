@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::DeleteNamespaceResponse
- *
  * \brief The DeleteNamespaceResponse class provides an interace for ServiceDiscovery DeleteNamespace responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new DeleteNamespaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNamespaceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNamespaceResponse::DeleteNamespaceResponse(
         const DeleteNamespaceRequest &request,
@@ -59,6 +54,9 @@ DeleteNamespaceResponse::DeleteNamespaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNamespaceRequest * DeleteNamespaceResponse::request() const
 {
     Q_D(const DeleteNamespaceResponse);
@@ -66,9 +64,8 @@ const DeleteNamespaceRequest * DeleteNamespaceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery DeleteNamespace response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery DeleteNamespace \a response.
  */
 void DeleteNamespaceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteNamespaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::DeleteNamespaceResponsePrivate
+ * \brief The DeleteNamespaceResponsePrivate class provides private implementation for DeleteNamespaceResponse.
  * \internal
  *
- * \class DeleteNamespaceResponsePrivate
- *
- * \brief Private implementation for DeleteNamespaceResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNamespaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNamespaceResponse instance.
+ * Constructs a DeleteNamespaceResponsePrivate object with public implementation \a q.
  */
 DeleteNamespaceResponsePrivate::DeleteNamespaceResponsePrivate(
     DeleteNamespaceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteNamespaceResponsePrivate::DeleteNamespaceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery DeleteNamespaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery DeleteNamespace response element from \a xml.
  */
 void DeleteNamespaceResponsePrivate::parseDeleteNamespaceResponse(QXmlStreamReader &xml)
 {

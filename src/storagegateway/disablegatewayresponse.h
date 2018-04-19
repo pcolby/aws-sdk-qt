@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisableGatewayResponse : public StorageGatewayResponse {
 public:
     DisableGatewayResponse(const DisableGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisableGatewayRequest * request() const;
+    virtual const DisableGatewayRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisableGatewayResponse)

@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribePlatformVersionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribePlatformVersionRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DescribePlatformVersionRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DescribePlatformVersionRequestPrivate::DescribePlatformVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribePlatformVersionRequest * const q)

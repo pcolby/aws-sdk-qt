@@ -29,10 +29,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::GetQueryResultsResponse
- *
  * \brief The GetQueryResultsResponse class provides an interace for Athena GetQueryResults responses.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -51,11 +50,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new GetQueryResultsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetQueryResultsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetQueryResultsResponse::GetQueryResultsResponse(
         const GetQueryResultsRequest &request,
@@ -67,6 +62,9 @@ GetQueryResultsResponse::GetQueryResultsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetQueryResultsRequest * GetQueryResultsResponse::request() const
 {
     Q_D(const GetQueryResultsResponse);
@@ -74,9 +72,8 @@ const GetQueryResultsRequest * GetQueryResultsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Athena GetQueryResults response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Athena GetQueryResults \a response.
  */
 void GetQueryResultsResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void GetQueryResultsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Athena::GetQueryResultsResponsePrivate
+ * \brief The GetQueryResultsResponsePrivate class provides private implementation for GetQueryResultsResponse.
  * \internal
  *
- * \class GetQueryResultsResponsePrivate
- *
- * \brief Private implementation for GetQueryResultsResponse.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQueryResultsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetQueryResultsResponse instance.
+ * Constructs a GetQueryResultsResponsePrivate object with public implementation \a q.
  */
 GetQueryResultsResponsePrivate::GetQueryResultsResponsePrivate(
     GetQueryResultsResponse * const q) : AthenaResponsePrivate(q)
@@ -107,9 +100,7 @@ GetQueryResultsResponsePrivate::GetQueryResultsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Athena GetQueryResultsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Athena GetQueryResults response element from \a xml.
  */
 void GetQueryResultsResponsePrivate::parseGetQueryResultsResponse(QXmlStreamReader &xml)
 {

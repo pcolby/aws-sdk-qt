@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteStreamResponse
- *
  * \brief The DeleteStreamResponse class provides an interace for IoT DeleteStream responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteStreamResponse::DeleteStreamResponse(
         const DeleteStreamRequest &request,
@@ -66,6 +61,9 @@ DeleteStreamResponse::DeleteStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteStreamRequest * DeleteStreamResponse::request() const
 {
     Q_D(const DeleteStreamResponse);
@@ -73,9 +71,8 @@ const DeleteStreamRequest * DeleteStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DeleteStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DeleteStream \a response.
  */
 void DeleteStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DeleteStreamResponsePrivate
+ * \brief The DeleteStreamResponsePrivate class provides private implementation for DeleteStreamResponse.
  * \internal
  *
- * \class DeleteStreamResponsePrivate
- *
- * \brief Private implementation for DeleteStreamResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteStreamResponse instance.
+ * Constructs a DeleteStreamResponsePrivate object with public implementation \a q.
  */
 DeleteStreamResponsePrivate::DeleteStreamResponsePrivate(
     DeleteStreamResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteStreamResponsePrivate::DeleteStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DeleteStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DeleteStream response element from \a xml.
  */
 void DeleteStreamResponsePrivate::parseDeleteStreamResponse(QXmlStreamReader &xml)
 {

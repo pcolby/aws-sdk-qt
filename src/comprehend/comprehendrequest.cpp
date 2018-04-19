@@ -50,7 +50,7 @@ namespace Comprehend {
  */
 
 /*!
- * Constructs a[n] ComprehendRequest object for Comprehend \a action.
+ * Constructs a ComprehendRequest object for Comprehend \a action.
  */
 ComprehendRequest::ComprehendRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ComprehendRequestPrivate(action, this))
@@ -250,8 +250,8 @@ QNetworkRequest ComprehendRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a ComprehendRequestPrivate object for Comprehend \a action with,
- * public implementation \a q.
+ * Constructs a ComprehendRequestPrivate object for Comprehend \a action,
+ * with public implementation \a q.
  */
 ComprehendRequestPrivate::ComprehendRequestPrivate(const ComprehendRequest::Action action, ComprehendRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

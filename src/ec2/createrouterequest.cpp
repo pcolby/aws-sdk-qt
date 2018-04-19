@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateRouteRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateRouteRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateRouteRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateRouteRequestPrivate::CreateRouteRequestPrivate(
     const EC2Request::Action action, CreateRouteRequest * const q)

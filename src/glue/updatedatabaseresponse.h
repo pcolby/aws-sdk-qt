@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateDatabaseResponse : public GlueResponse {
 public:
     UpdateDatabaseResponse(const UpdateDatabaseRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateDatabaseRequest * request() const;
+    virtual const UpdateDatabaseRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateDatabaseResponse)

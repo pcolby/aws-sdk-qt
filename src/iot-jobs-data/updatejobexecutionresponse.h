@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateJobExecutionResponse : public IoTJobsDataPlaneResponse 
 public:
     UpdateJobExecutionResponse(const UpdateJobExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateJobExecutionRequest * request() const;
+    virtual const UpdateJobExecutionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateJobExecutionResponse)

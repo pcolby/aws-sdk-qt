@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisableVpcClassicLinkResponse : public EC2Response {
 public:
     DisableVpcClassicLinkResponse(const DisableVpcClassicLinkRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisableVpcClassicLinkRequest * request() const;
+    virtual const DisableVpcClassicLinkRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisableVpcClassicLinkResponse)

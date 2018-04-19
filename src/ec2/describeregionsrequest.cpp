@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRegionsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeRegionsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRegionsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeRegionsRequestPrivate::DescribeRegionsRequestPrivate(
     const EC2Request::Action action, DescribeRegionsRequest * const q)

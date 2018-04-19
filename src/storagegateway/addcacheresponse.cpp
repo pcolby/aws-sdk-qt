@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::AddCacheResponse
- *
  * \brief The AddCacheResponse class provides an interace for StorageGateway AddCache responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new AddCacheResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddCacheResponse object for \a reply to \a request, with parent \a parent.
  */
 AddCacheResponse::AddCacheResponse(
         const AddCacheRequest &request,
@@ -124,6 +119,9 @@ AddCacheResponse::AddCacheResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddCacheRequest * AddCacheResponse::request() const
 {
     Q_D(const AddCacheResponse);
@@ -131,9 +129,8 @@ const AddCacheRequest * AddCacheResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway AddCache response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway AddCache \a response.
  */
 void AddCacheResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void AddCacheResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::AddCacheResponsePrivate
+ * \brief The AddCacheResponsePrivate class provides private implementation for AddCacheResponse.
  * \internal
  *
- * \class AddCacheResponsePrivate
- *
- * \brief Private implementation for AddCacheResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddCacheResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddCacheResponse instance.
+ * Constructs a AddCacheResponsePrivate object with public implementation \a q.
  */
 AddCacheResponsePrivate::AddCacheResponsePrivate(
     AddCacheResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ AddCacheResponsePrivate::AddCacheResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway AddCacheResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway AddCache response element from \a xml.
  */
 void AddCacheResponsePrivate::parseAddCacheResponse(QXmlStreamReader &xml)
 {

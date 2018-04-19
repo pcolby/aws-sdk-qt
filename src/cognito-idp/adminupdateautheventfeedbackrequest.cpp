@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminUpdateAuthEventFeedbackRequest::response
  */
 
 /*!
- *
- * Constructs a AdminUpdateAuthEventFeedbackRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminUpdateAuthEventFeedbackRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminUpdateAuthEventFeedbackRequestPrivate::AdminUpdateAuthEventFeedbackRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminUpdateAuthEventFeedbackRequest * const q)

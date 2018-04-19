@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * StopGameSessionPlacementRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a StopGameSessionPlacementRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a StopGameSessionPlacementRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 StopGameSessionPlacementRequestPrivate::StopGameSessionPlacementRequestPrivate(
     const GameLiftRequest::Action action, StopGameSessionPlacementRequest * const q)

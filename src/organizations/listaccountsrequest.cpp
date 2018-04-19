@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * ListAccountsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ListAccountsRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a ListAccountsRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 ListAccountsRequestPrivate::ListAccountsRequestPrivate(
     const OrganizationsRequest::Action action, ListAccountsRequest * const q)

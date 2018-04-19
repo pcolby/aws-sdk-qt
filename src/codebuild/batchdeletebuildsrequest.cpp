@@ -161,9 +161,8 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteBuildsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a BatchDeleteBuildsRequestPrivate object for CodeBuild \a action with,
- * public implementation \a q.
+ * Constructs a BatchDeleteBuildsRequestPrivate object for CodeBuild \a action,
+ * with public implementation \a q.
  */
 BatchDeleteBuildsRequestPrivate::BatchDeleteBuildsRequestPrivate(
     const CodeBuildRequest::Action action, BatchDeleteBuildsRequest * const q)

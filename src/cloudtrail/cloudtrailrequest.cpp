@@ -53,7 +53,7 @@ namespace CloudTrail {
  */
 
 /*!
- * Constructs a[n] CloudTrailRequest object for CloudTrail \a action.
+ * Constructs a CloudTrailRequest object for CloudTrail \a action.
  */
 CloudTrailRequest::CloudTrailRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudTrailRequestPrivate(action, this))
@@ -253,8 +253,8 @@ QNetworkRequest CloudTrailRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CloudTrailRequestPrivate object for CloudTrail \a action with,
- * public implementation \a q.
+ * Constructs a CloudTrailRequestPrivate object for CloudTrail \a action,
+ * with public implementation \a q.
  */
 CloudTrailRequestPrivate::CloudTrailRequestPrivate(const CloudTrailRequest::Action action, CloudTrailRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

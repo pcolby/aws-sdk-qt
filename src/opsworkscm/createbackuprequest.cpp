@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * CreateBackupRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateBackupRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a CreateBackupRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 CreateBackupRequestPrivate::CreateBackupRequestPrivate(
     const OpsWorksCMRequest::Action action, CreateBackupRequest * const q)

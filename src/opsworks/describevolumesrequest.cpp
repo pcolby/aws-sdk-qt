@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumesRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeVolumesRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVolumesRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
     const OpsWorksRequest::Action action, DescribeVolumesRequest * const q)

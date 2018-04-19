@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListClusterJobsResponse : public SnowballResponse {
 public:
     ListClusterJobsResponse(const ListClusterJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListClusterJobsRequest * request() const;
+    virtual const ListClusterJobsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListClusterJobsResponse)

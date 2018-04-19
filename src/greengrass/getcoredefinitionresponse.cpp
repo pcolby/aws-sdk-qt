@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetCoreDefinitionResponse
- *
  * \brief The GetCoreDefinitionResponse class provides an interace for Greengrass GetCoreDefinition responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetCoreDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCoreDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCoreDefinitionResponse::GetCoreDefinitionResponse(
         const GetCoreDefinitionRequest &request,
@@ -58,6 +53,9 @@ GetCoreDefinitionResponse::GetCoreDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCoreDefinitionRequest * GetCoreDefinitionResponse::request() const
 {
     Q_D(const GetCoreDefinitionResponse);
@@ -65,9 +63,8 @@ const GetCoreDefinitionRequest * GetCoreDefinitionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass GetCoreDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass GetCoreDefinition \a response.
  */
 void GetCoreDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetCoreDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::GetCoreDefinitionResponsePrivate
+ * \brief The GetCoreDefinitionResponsePrivate class provides private implementation for GetCoreDefinitionResponse.
  * \internal
  *
- * \class GetCoreDefinitionResponsePrivate
- *
- * \brief Private implementation for GetCoreDefinitionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCoreDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCoreDefinitionResponse instance.
+ * Constructs a GetCoreDefinitionResponsePrivate object with public implementation \a q.
  */
 GetCoreDefinitionResponsePrivate::GetCoreDefinitionResponsePrivate(
     GetCoreDefinitionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ GetCoreDefinitionResponsePrivate::GetCoreDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass GetCoreDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass GetCoreDefinition response element from \a xml.
  */
 void GetCoreDefinitionResponsePrivate::parseGetCoreDefinitionResponse(QXmlStreamReader &xml)
 {

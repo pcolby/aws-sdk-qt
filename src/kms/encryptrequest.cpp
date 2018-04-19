@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * EncryptRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a EncryptRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a EncryptRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 EncryptRequestPrivate::EncryptRequestPrivate(
     const KMSRequest::Action action, EncryptRequest * const q)

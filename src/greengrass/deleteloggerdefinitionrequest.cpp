@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLoggerDefinitionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteLoggerDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLoggerDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 DeleteLoggerDefinitionRequestPrivate::DeleteLoggerDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteLoggerDefinitionRequest * const q)

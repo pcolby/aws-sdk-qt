@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListRecordHistoryRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListRecordHistoryRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ListRecordHistoryRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ListRecordHistoryRequestPrivate::ListRecordHistoryRequestPrivate(
     const ServiceCatalogRequest::Action action, ListRecordHistoryRequest * const q)

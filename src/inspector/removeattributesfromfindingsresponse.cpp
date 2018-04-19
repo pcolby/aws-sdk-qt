@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::RemoveAttributesFromFindingsResponse
- *
  * \brief The RemoveAttributesFromFindingsResponse class provides an interace for Inspector RemoveAttributesFromFindings responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new RemoveAttributesFromFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveAttributesFromFindingsResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveAttributesFromFindingsResponse::RemoveAttributesFromFindingsResponse(
         const RemoveAttributesFromFindingsRequest &request,
@@ -60,6 +55,9 @@ RemoveAttributesFromFindingsResponse::RemoveAttributesFromFindingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveAttributesFromFindingsRequest * RemoveAttributesFromFindingsResponse::request() const
 {
     Q_D(const RemoveAttributesFromFindingsResponse);
@@ -67,9 +65,8 @@ const RemoveAttributesFromFindingsRequest * RemoveAttributesFromFindingsResponse
 }
 
 /*!
- * @brief  Parse a Inspector RemoveAttributesFromFindings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector RemoveAttributesFromFindings \a response.
  */
 void RemoveAttributesFromFindingsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void RemoveAttributesFromFindingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::RemoveAttributesFromFindingsResponsePrivate
+ * \brief The RemoveAttributesFromFindingsResponsePrivate class provides private implementation for RemoveAttributesFromFindingsResponse.
  * \internal
  *
- * \class RemoveAttributesFromFindingsResponsePrivate
- *
- * \brief Private implementation for RemoveAttributesFromFindingsResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveAttributesFromFindingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveAttributesFromFindingsResponse instance.
+ * Constructs a RemoveAttributesFromFindingsResponsePrivate object with public implementation \a q.
  */
 RemoveAttributesFromFindingsResponsePrivate::RemoveAttributesFromFindingsResponsePrivate(
     RemoveAttributesFromFindingsResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ RemoveAttributesFromFindingsResponsePrivate::RemoveAttributesFromFindingsRespons
 }
 
 /*!
- * @brief  Parse an Inspector RemoveAttributesFromFindingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector RemoveAttributesFromFindings response element from \a xml.
  */
 void RemoveAttributesFromFindingsResponsePrivate::parseRemoveAttributesFromFindingsResponse(QXmlStreamReader &xml)
 {

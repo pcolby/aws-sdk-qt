@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetOperationsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetOperationsRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetOperationsRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetOperationsRequestPrivate::GetOperationsRequestPrivate(
     const LightsailRequest::Action action, GetOperationsRequest * const q)

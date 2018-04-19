@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DescribeAssessmentRunsResponse
- *
  * \brief The DescribeAssessmentRunsResponse class provides an interace for Inspector DescribeAssessmentRuns responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DescribeAssessmentRunsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAssessmentRunsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAssessmentRunsResponse::DescribeAssessmentRunsResponse(
         const DescribeAssessmentRunsRequest &request,
@@ -60,6 +55,9 @@ DescribeAssessmentRunsResponse::DescribeAssessmentRunsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAssessmentRunsRequest * DescribeAssessmentRunsResponse::request() const
 {
     Q_D(const DescribeAssessmentRunsResponse);
@@ -67,9 +65,8 @@ const DescribeAssessmentRunsRequest * DescribeAssessmentRunsResponse::request() 
 }
 
 /*!
- * @brief  Parse a Inspector DescribeAssessmentRuns response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector DescribeAssessmentRuns \a response.
  */
 void DescribeAssessmentRunsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeAssessmentRunsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::DescribeAssessmentRunsResponsePrivate
+ * \brief The DescribeAssessmentRunsResponsePrivate class provides private implementation for DescribeAssessmentRunsResponse.
  * \internal
  *
- * \class DescribeAssessmentRunsResponsePrivate
- *
- * \brief Private implementation for DescribeAssessmentRunsResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAssessmentRunsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAssessmentRunsResponse instance.
+ * Constructs a DescribeAssessmentRunsResponsePrivate object with public implementation \a q.
  */
 DescribeAssessmentRunsResponsePrivate::DescribeAssessmentRunsResponsePrivate(
     DescribeAssessmentRunsResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeAssessmentRunsResponsePrivate::DescribeAssessmentRunsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector DescribeAssessmentRunsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector DescribeAssessmentRuns response element from \a xml.
  */
 void DescribeAssessmentRunsResponsePrivate::parseDescribeAssessmentRunsResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetAccountSettingsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetAccountSettingsRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a GetAccountSettingsRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 GetAccountSettingsRequestPrivate::GetAccountSettingsRequestPrivate(
     const LambdaRequest::Action action, GetAccountSettingsRequest * const q)

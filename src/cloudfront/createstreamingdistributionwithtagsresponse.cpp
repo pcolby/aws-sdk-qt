@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateStreamingDistributionWithTagsResponse
- *
  * \brief The CreateStreamingDistributionWithTagsResponse class provides an interace for CloudFront CreateStreamingDistributionWithTags responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateStreamingDistributionWithTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStreamingDistributionWithTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStreamingDistributionWithTagsResponse::CreateStreamingDistributionWithTagsResponse(
         const CreateStreamingDistributionWithTagsRequest &request,
@@ -60,6 +55,9 @@ CreateStreamingDistributionWithTagsResponse::CreateStreamingDistributionWithTags
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStreamingDistributionWithTagsRequest * CreateStreamingDistributionWithTagsResponse::request() const
 {
     Q_D(const CreateStreamingDistributionWithTagsResponse);
@@ -67,9 +65,8 @@ const CreateStreamingDistributionWithTagsRequest * CreateStreamingDistributionWi
 }
 
 /*!
- * @brief  Parse a CloudFront CreateStreamingDistributionWithTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront CreateStreamingDistributionWithTags \a response.
  */
 void CreateStreamingDistributionWithTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateStreamingDistributionWithTagsResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::CloudFront::CreateStreamingDistributionWithTagsResponsePrivate
+ * \brief The CreateStreamingDistributionWithTagsResponsePrivate class provides private implementation for CreateStreamingDistributionWithTagsResponse.
  * \internal
  *
- * \class CreateStreamingDistributionWithTagsResponsePrivate
- *
- * \brief Private implementation for CreateStreamingDistributionWithTagsResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStreamingDistributionWithTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStreamingDistributionWithTagsResponse instance.
+ * Constructs a CreateStreamingDistributionWithTagsResponsePrivate object with public implementation \a q.
  */
 CreateStreamingDistributionWithTagsResponsePrivate::CreateStreamingDistributionWithTagsResponsePrivate(
     CreateStreamingDistributionWithTagsResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateStreamingDistributionWithTagsResponsePrivate::CreateStreamingDistributionW
 }
 
 /*!
- * @brief  Parse an CloudFront CreateStreamingDistributionWithTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront CreateStreamingDistributionWithTags response element from \a xml.
  */
 void CreateStreamingDistributionWithTagsResponsePrivate::parseCreateStreamingDistributionWithTagsResponse(QXmlStreamReader &xml)
 {

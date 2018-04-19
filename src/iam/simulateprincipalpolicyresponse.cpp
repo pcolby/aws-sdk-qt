@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::SimulatePrincipalPolicyResponse
- *
  * \brief The SimulatePrincipalPolicyResponse class provides an interace for IAM SimulatePrincipalPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new SimulatePrincipalPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SimulatePrincipalPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 SimulatePrincipalPolicyResponse::SimulatePrincipalPolicyResponse(
         const SimulatePrincipalPolicyRequest &request,
@@ -120,6 +115,9 @@ SimulatePrincipalPolicyResponse::SimulatePrincipalPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SimulatePrincipalPolicyRequest * SimulatePrincipalPolicyResponse::request() const
 {
     Q_D(const SimulatePrincipalPolicyResponse);
@@ -127,9 +125,8 @@ const SimulatePrincipalPolicyRequest * SimulatePrincipalPolicyResponse::request(
 }
 
 /*!
- * @brief  Parse a IAM SimulatePrincipalPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM SimulatePrincipalPolicy \a response.
  */
 void SimulatePrincipalPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void SimulatePrincipalPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::SimulatePrincipalPolicyResponsePrivate
+ * \brief The SimulatePrincipalPolicyResponsePrivate class provides private implementation for SimulatePrincipalPolicyResponse.
  * \internal
  *
- * \class SimulatePrincipalPolicyResponsePrivate
- *
- * \brief Private implementation for SimulatePrincipalPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SimulatePrincipalPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SimulatePrincipalPolicyResponse instance.
+ * Constructs a SimulatePrincipalPolicyResponsePrivate object with public implementation \a q.
  */
 SimulatePrincipalPolicyResponsePrivate::SimulatePrincipalPolicyResponsePrivate(
     SimulatePrincipalPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ SimulatePrincipalPolicyResponsePrivate::SimulatePrincipalPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM SimulatePrincipalPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM SimulatePrincipalPolicy response element from \a xml.
  */
 void SimulatePrincipalPolicyResponsePrivate::parseSimulatePrincipalPolicyResponse(QXmlStreamReader &xml)
 {

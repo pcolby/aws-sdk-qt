@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * AssociateTagOptionWithResourceRequest::respon
  */
 
 /*!
- *
- * Constructs a AssociateTagOptionWithResourceRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a AssociateTagOptionWithResourceRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 AssociateTagOptionWithResourceRequestPrivate::AssociateTagOptionWithResourceRequestPrivate(
     const ServiceCatalogRequest::Action action, AssociateTagOptionWithResourceRequest * const q)

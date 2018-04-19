@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribePendingMaintenanceActionsResponse : public RDSRespons
 public:
     DescribePendingMaintenanceActionsResponse(const DescribePendingMaintenanceActionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribePendingMaintenanceActionsRequest * request() const;
+    virtual const DescribePendingMaintenanceActionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribePendingMaintenanceActionsResponse)

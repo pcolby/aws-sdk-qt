@@ -169,9 +169,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsForProjectRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListTagsForProjectRequestPrivate object for CodeStar \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsForProjectRequestPrivate object for CodeStar \a action,
+ * with public implementation \a q.
  */
 ListTagsForProjectRequestPrivate::ListTagsForProjectRequestPrivate(
     const CodeStarRequest::Action action, ListTagsForProjectRequest * const q)

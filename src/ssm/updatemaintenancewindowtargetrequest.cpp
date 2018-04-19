@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * UpdateMaintenanceWindowTargetRequest::respons
  */
 
 /*!
- *
- * Constructs a UpdateMaintenanceWindowTargetRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateMaintenanceWindowTargetRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 UpdateMaintenanceWindowTargetRequestPrivate::UpdateMaintenanceWindowTargetRequestPrivate(
     const SSMRequest::Action action, UpdateMaintenanceWindowTargetRequest * const q)

@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * ExportCertificateRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ExportCertificateRequestPrivate object for ACM \a action with,
- * public implementation \a q.
+ * Constructs a ExportCertificateRequestPrivate object for ACM \a action,
+ * with public implementation \a q.
  */
 ExportCertificateRequestPrivate::ExportCertificateRequestPrivate(
     const ACMRequest::Action action, ExportCertificateRequest * const q)

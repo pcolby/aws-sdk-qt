@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::StopLoggingResponse
- *
  * \brief The StopLoggingResponse class provides an interace for CloudTrail StopLogging responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new StopLoggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopLoggingResponse object for \a reply to \a request, with parent \a parent.
  */
 StopLoggingResponse::StopLoggingResponse(
         const StopLoggingRequest &request,
@@ -78,6 +73,9 @@ StopLoggingResponse::StopLoggingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopLoggingRequest * StopLoggingResponse::request() const
 {
     Q_D(const StopLoggingResponse);
@@ -85,9 +83,8 @@ const StopLoggingRequest * StopLoggingResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail StopLogging response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail StopLogging \a response.
  */
 void StopLoggingResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void StopLoggingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::StopLoggingResponsePrivate
+ * \brief The StopLoggingResponsePrivate class provides private implementation for StopLoggingResponse.
  * \internal
  *
- * \class StopLoggingResponsePrivate
- *
- * \brief Private implementation for StopLoggingResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopLoggingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopLoggingResponse instance.
+ * Constructs a StopLoggingResponsePrivate object with public implementation \a q.
  */
 StopLoggingResponsePrivate::StopLoggingResponsePrivate(
     StopLoggingResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ StopLoggingResponsePrivate::StopLoggingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail StopLoggingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail StopLogging response element from \a xml.
  */
 void StopLoggingResponsePrivate::parseStopLoggingResponse(QXmlStreamReader &xml)
 {

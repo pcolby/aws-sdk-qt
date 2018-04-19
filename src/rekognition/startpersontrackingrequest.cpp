@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * StartPersonTrackingRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a StartPersonTrackingRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a StartPersonTrackingRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 StartPersonTrackingRequestPrivate::StartPersonTrackingRequestPrivate(
     const RekognitionRequest::Action action, StartPersonTrackingRequest * const q)

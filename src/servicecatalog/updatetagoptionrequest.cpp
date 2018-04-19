@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * UpdateTagOptionRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a UpdateTagOptionRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a UpdateTagOptionRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 UpdateTagOptionRequestPrivate::UpdateTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateTagOptionRequest * const q)

@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeCommentsResponse
- *
  * \brief The DescribeCommentsResponse class provides an interace for WorkDocs DescribeComments responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeCommentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCommentsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCommentsResponse::DescribeCommentsResponse(
         const DescribeCommentsRequest &request,
@@ -84,6 +79,9 @@ DescribeCommentsResponse::DescribeCommentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCommentsRequest * DescribeCommentsResponse::request() const
 {
     Q_D(const DescribeCommentsResponse);
@@ -91,9 +89,8 @@ const DescribeCommentsRequest * DescribeCommentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs DescribeComments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DescribeComments \a response.
  */
 void DescribeCommentsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeCommentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DescribeCommentsResponsePrivate
+ * \brief The DescribeCommentsResponsePrivate class provides private implementation for DescribeCommentsResponse.
  * \internal
  *
- * \class DescribeCommentsResponsePrivate
- *
- * \brief Private implementation for DescribeCommentsResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCommentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCommentsResponse instance.
+ * Constructs a DescribeCommentsResponsePrivate object with public implementation \a q.
  */
 DescribeCommentsResponsePrivate::DescribeCommentsResponsePrivate(
     DescribeCommentsResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeCommentsResponsePrivate::DescribeCommentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DescribeCommentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DescribeComments response element from \a xml.
  */
 void DescribeCommentsResponsePrivate::parseDescribeCommentsResponse(QXmlStreamReader &xml)
 {

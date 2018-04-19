@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ListVirtualMFADevicesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListVirtualMFADevicesRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ListVirtualMFADevicesRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ListVirtualMFADevicesRequestPrivate::ListVirtualMFADevicesRequestPrivate(
     const IAMRequest::Action action, ListVirtualMFADevicesRequest * const q)

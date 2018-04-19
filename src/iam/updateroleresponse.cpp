@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateRoleResponse
- *
  * \brief The UpdateRoleResponse class provides an interace for IAM UpdateRole responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRoleResponse::UpdateRoleResponse(
         const UpdateRoleRequest &request,
@@ -120,6 +115,9 @@ UpdateRoleResponse::UpdateRoleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRoleRequest * UpdateRoleResponse::request() const
 {
     Q_D(const UpdateRoleResponse);
@@ -127,9 +125,8 @@ const UpdateRoleRequest * UpdateRoleResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM UpdateRole response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateRole \a response.
  */
 void UpdateRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateRoleResponsePrivate
+ * \brief The UpdateRoleResponsePrivate class provides private implementation for UpdateRoleResponse.
  * \internal
  *
- * \class UpdateRoleResponsePrivate
- *
- * \brief Private implementation for UpdateRoleResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRoleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRoleResponse instance.
+ * Constructs a UpdateRoleResponsePrivate object with public implementation \a q.
  */
 UpdateRoleResponsePrivate::UpdateRoleResponsePrivate(
     UpdateRoleResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateRoleResponsePrivate::UpdateRoleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM UpdateRoleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateRole response element from \a xml.
  */
 void UpdateRoleResponsePrivate::parseUpdateRoleResponse(QXmlStreamReader &xml)
 {

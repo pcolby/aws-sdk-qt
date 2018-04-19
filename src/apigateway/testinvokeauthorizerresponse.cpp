@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::TestInvokeAuthorizerResponse
- *
  * \brief The TestInvokeAuthorizerResponse class provides an interace for APIGateway TestInvokeAuthorizer responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new TestInvokeAuthorizerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TestInvokeAuthorizerResponse object for \a reply to \a request, with parent \a parent.
  */
 TestInvokeAuthorizerResponse::TestInvokeAuthorizerResponse(
         const TestInvokeAuthorizerRequest &request,
@@ -60,6 +55,9 @@ TestInvokeAuthorizerResponse::TestInvokeAuthorizerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TestInvokeAuthorizerRequest * TestInvokeAuthorizerResponse::request() const
 {
     Q_D(const TestInvokeAuthorizerResponse);
@@ -67,9 +65,8 @@ const TestInvokeAuthorizerRequest * TestInvokeAuthorizerResponse::request() cons
 }
 
 /*!
- * @brief  Parse a APIGateway TestInvokeAuthorizer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway TestInvokeAuthorizer \a response.
  */
 void TestInvokeAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void TestInvokeAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::TestInvokeAuthorizerResponsePrivate
+ * \brief The TestInvokeAuthorizerResponsePrivate class provides private implementation for TestInvokeAuthorizerResponse.
  * \internal
  *
- * \class TestInvokeAuthorizerResponsePrivate
- *
- * \brief Private implementation for TestInvokeAuthorizerResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestInvokeAuthorizerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TestInvokeAuthorizerResponse instance.
+ * Constructs a TestInvokeAuthorizerResponsePrivate object with public implementation \a q.
  */
 TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponsePrivate(
     TestInvokeAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ TestInvokeAuthorizerResponsePrivate::TestInvokeAuthorizerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway TestInvokeAuthorizerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway TestInvokeAuthorizer response element from \a xml.
  */
 void TestInvokeAuthorizerResponsePrivate::parseTestInvokeAuthorizerResponse(QXmlStreamReader &xml)
 {

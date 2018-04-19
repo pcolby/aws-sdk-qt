@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ListInstanceProfilesForRoleRequest::response(
  */
 
 /*!
- *
- * Constructs a ListInstanceProfilesForRoleRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ListInstanceProfilesForRoleRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ListInstanceProfilesForRoleRequestPrivate::ListInstanceProfilesForRoleRequestPrivate(
     const IAMRequest::Action action, ListInstanceProfilesForRoleRequest * const q)

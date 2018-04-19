@@ -139,9 +139,8 @@ QtAws::Core::AwsAbstractResponse * GetSessionTokenRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetSessionTokenRequestPrivate object for STS \a action with,
- * public implementation \a q.
+ * Constructs a GetSessionTokenRequestPrivate object for STS \a action,
+ * with public implementation \a q.
  */
 GetSessionTokenRequestPrivate::GetSessionTokenRequestPrivate(
     const STSRequest::Action action, GetSessionTokenRequest * const q)

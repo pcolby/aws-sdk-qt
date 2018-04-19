@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::DeleteStreamResponse
- *
  * \brief The DeleteStreamResponse class provides an interace for Kinesis DeleteStream responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new DeleteStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteStreamResponse::DeleteStreamResponse(
         const DeleteStreamRequest &request,
@@ -58,6 +53,9 @@ DeleteStreamResponse::DeleteStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteStreamRequest * DeleteStreamResponse::request() const
 {
     Q_D(const DeleteStreamResponse);
@@ -65,9 +63,8 @@ const DeleteStreamRequest * DeleteStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis DeleteStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis DeleteStream \a response.
  */
 void DeleteStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::DeleteStreamResponsePrivate
+ * \brief The DeleteStreamResponsePrivate class provides private implementation for DeleteStreamResponse.
  * \internal
  *
- * \class DeleteStreamResponsePrivate
- *
- * \brief Private implementation for DeleteStreamResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteStreamResponse instance.
+ * Constructs a DeleteStreamResponsePrivate object with public implementation \a q.
  */
 DeleteStreamResponsePrivate::DeleteStreamResponsePrivate(
     DeleteStreamResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteStreamResponsePrivate::DeleteStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis DeleteStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis DeleteStream response element from \a xml.
  */
 void DeleteStreamResponsePrivate::parseDeleteStreamResponse(QXmlStreamReader &xml)
 {

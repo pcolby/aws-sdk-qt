@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateAdmChannelResponse
- *
  * \brief The UpdateAdmChannelResponse class provides an interace for Pinpoint UpdateAdmChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateAdmChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateAdmChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAdmChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAdmChannelResponse::UpdateAdmChannelResponse(
         const UpdateAdmChannelRequest &request,
@@ -55,6 +50,9 @@ UpdateAdmChannelResponse::UpdateAdmChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAdmChannelRequest * UpdateAdmChannelResponse::request() const
 {
     Q_D(const UpdateAdmChannelResponse);
@@ -62,9 +60,8 @@ const UpdateAdmChannelRequest * UpdateAdmChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint UpdateAdmChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint UpdateAdmChannel \a response.
  */
 void UpdateAdmChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateAdmChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::UpdateAdmChannelResponsePrivate
+ * \brief The UpdateAdmChannelResponsePrivate class provides private implementation for UpdateAdmChannelResponse.
  * \internal
  *
- * \class UpdateAdmChannelResponsePrivate
- *
- * \brief Private implementation for UpdateAdmChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAdmChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAdmChannelResponse instance.
+ * Constructs a UpdateAdmChannelResponsePrivate object with public implementation \a q.
  */
 UpdateAdmChannelResponsePrivate::UpdateAdmChannelResponsePrivate(
     UpdateAdmChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateAdmChannelResponsePrivate::UpdateAdmChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint UpdateAdmChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint UpdateAdmChannel response element from \a xml.
  */
 void UpdateAdmChannelResponsePrivate::parseUpdateAdmChannelResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetReservationPurchaseRecommendationResponse
- *
  * \brief The GetReservationPurchaseRecommendationResponse class provides an interace for CostExplorer GetReservationPurchaseRecommendation responses.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -52,11 +51,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetReservationPurchaseRecommendationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetReservationPurchaseRecommendationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetReservationPurchaseRecommendationResponse::GetReservationPurchaseRecommendationResponse(
         const GetReservationPurchaseRecommendationRequest &request,
@@ -68,6 +63,9 @@ GetReservationPurchaseRecommendationResponse::GetReservationPurchaseRecommendati
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetReservationPurchaseRecommendationRequest * GetReservationPurchaseRecommendationResponse::request() const
 {
     Q_D(const GetReservationPurchaseRecommendationResponse);
@@ -75,9 +73,8 @@ const GetReservationPurchaseRecommendationRequest * GetReservationPurchaseRecomm
 }
 
 /*!
- * @brief  Parse a CostExplorer GetReservationPurchaseRecommendation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CostExplorer GetReservationPurchaseRecommendation \a response.
  */
 void GetReservationPurchaseRecommendationResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void GetReservationPurchaseRecommendationResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::CostExplorer::GetReservationPurchaseRecommendationResponsePrivate
+ * \brief The GetReservationPurchaseRecommendationResponsePrivate class provides private implementation for GetReservationPurchaseRecommendationResponse.
  * \internal
  *
- * \class GetReservationPurchaseRecommendationResponsePrivate
- *
- * \brief Private implementation for GetReservationPurchaseRecommendationResponse.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReservationPurchaseRecommendationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetReservationPurchaseRecommendationResponse instance.
+ * Constructs a GetReservationPurchaseRecommendationResponsePrivate object with public implementation \a q.
  */
 GetReservationPurchaseRecommendationResponsePrivate::GetReservationPurchaseRecommendationResponsePrivate(
     GetReservationPurchaseRecommendationResponse * const q) : CostExplorerResponsePrivate(q)
@@ -108,9 +101,7 @@ GetReservationPurchaseRecommendationResponsePrivate::GetReservationPurchaseRecom
 }
 
 /*!
- * @brief  Parse an CostExplorer GetReservationPurchaseRecommendationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CostExplorer GetReservationPurchaseRecommendation response element from \a xml.
  */
 void GetReservationPurchaseRecommendationResponsePrivate::parseGetReservationPurchaseRecommendationResponse(QXmlStreamReader &xml)
 {

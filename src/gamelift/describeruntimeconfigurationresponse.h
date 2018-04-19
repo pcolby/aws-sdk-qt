@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeRuntimeConfigurationResponse : public GameLiftRespons
 public:
     DescribeRuntimeConfigurationResponse(const DescribeRuntimeConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeRuntimeConfigurationRequest * request() const;
+    virtual const DescribeRuntimeConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeRuntimeConfigurationResponse)

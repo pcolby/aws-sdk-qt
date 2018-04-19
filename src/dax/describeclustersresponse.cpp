@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DescribeClustersResponse
- *
  * \brief The DescribeClustersResponse class provides an interace for DAX DescribeClusters responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DescribeClustersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeClustersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeClustersResponse::DescribeClustersResponse(
         const DescribeClustersRequest &request,
@@ -59,6 +54,9 @@ DescribeClustersResponse::DescribeClustersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeClustersRequest * DescribeClustersResponse::request() const
 {
     Q_D(const DescribeClustersResponse);
@@ -66,9 +64,8 @@ const DescribeClustersRequest * DescribeClustersResponse::request() const
 }
 
 /*!
- * @brief  Parse a DAX DescribeClusters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX DescribeClusters \a response.
  */
 void DescribeClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::DescribeClustersResponsePrivate
+ * \brief The DescribeClustersResponsePrivate class provides private implementation for DescribeClustersResponse.
  * \internal
  *
- * \class DescribeClustersResponsePrivate
- *
- * \brief Private implementation for DescribeClustersResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClustersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeClustersResponse instance.
+ * Constructs a DescribeClustersResponsePrivate object with public implementation \a q.
  */
 DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
     DescribeClustersResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX DescribeClustersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX DescribeClusters response element from \a xml.
  */
 void DescribeClustersResponsePrivate::parseDescribeClustersResponse(QXmlStreamReader &xml)
 {

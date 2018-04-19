@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeConversionTasksResponse
- *
  * \brief The DescribeConversionTasksResponse class provides an interace for EC2 DescribeConversionTasks responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeConversionTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConversionTasksResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConversionTasksResponse::DescribeConversionTasksResponse(
         const DescribeConversionTasksRequest &request,
@@ -59,6 +54,9 @@ DescribeConversionTasksResponse::DescribeConversionTasksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConversionTasksRequest * DescribeConversionTasksResponse::request() const
 {
     Q_D(const DescribeConversionTasksResponse);
@@ -66,9 +64,8 @@ const DescribeConversionTasksRequest * DescribeConversionTasksResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 DescribeConversionTasks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeConversionTasks \a response.
  */
 void DescribeConversionTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeConversionTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeConversionTasksResponsePrivate
+ * \brief The DescribeConversionTasksResponsePrivate class provides private implementation for DescribeConversionTasksResponse.
  * \internal
  *
- * \class DescribeConversionTasksResponsePrivate
- *
- * \brief Private implementation for DescribeConversionTasksResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConversionTasksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConversionTasksResponse instance.
+ * Constructs a DescribeConversionTasksResponsePrivate object with public implementation \a q.
  */
 DescribeConversionTasksResponsePrivate::DescribeConversionTasksResponsePrivate(
     DescribeConversionTasksResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeConversionTasksResponsePrivate::DescribeConversionTasksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeConversionTasksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeConversionTasks response element from \a xml.
  */
 void DescribeConversionTasksResponsePrivate::parseDescribeConversionTasksResponse(QXmlStreamReader &xml)
 {

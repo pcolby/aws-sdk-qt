@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::UpdateAliasResponse
- *
  * \brief The UpdateAliasResponse class provides an interace for Lambda UpdateAlias responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new UpdateAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAliasResponse::UpdateAliasResponse(
         const UpdateAliasRequest &request,
@@ -66,6 +61,9 @@ UpdateAliasResponse::UpdateAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAliasRequest * UpdateAliasResponse::request() const
 {
     Q_D(const UpdateAliasResponse);
@@ -73,9 +71,8 @@ const UpdateAliasRequest * UpdateAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda UpdateAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda UpdateAlias \a response.
  */
 void UpdateAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::UpdateAliasResponsePrivate
+ * \brief The UpdateAliasResponsePrivate class provides private implementation for UpdateAliasResponse.
  * \internal
  *
- * \class UpdateAliasResponsePrivate
- *
- * \brief Private implementation for UpdateAliasResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAliasResponse instance.
+ * Constructs a UpdateAliasResponsePrivate object with public implementation \a q.
  */
 UpdateAliasResponsePrivate::UpdateAliasResponsePrivate(
     UpdateAliasResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateAliasResponsePrivate::UpdateAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda UpdateAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda UpdateAlias response element from \a xml.
  */
 void UpdateAliasResponsePrivate::parseUpdateAliasResponse(QXmlStreamReader &xml)
 {

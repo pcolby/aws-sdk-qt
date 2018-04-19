@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::DisassociateContactFromAddressBookResponse
- *
  * \brief The DisassociateContactFromAddressBookResponse class provides an interace for AlexaForBusiness DisassociateContactFromAddressBook responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new DisassociateContactFromAddressBookResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateContactFromAddressBookResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateContactFromAddressBookResponse::DisassociateContactFromAddressBookResponse(
         const DisassociateContactFromAddressBookRequest &request,
@@ -60,6 +55,9 @@ DisassociateContactFromAddressBookResponse::DisassociateContactFromAddressBookRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateContactFromAddressBookRequest * DisassociateContactFromAddressBookResponse::request() const
 {
     Q_D(const DisassociateContactFromAddressBookResponse);
@@ -67,9 +65,8 @@ const DisassociateContactFromAddressBookRequest * DisassociateContactFromAddress
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness DisassociateContactFromAddressBook response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness DisassociateContactFromAddressBook \a response.
  */
 void DisassociateContactFromAddressBookResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DisassociateContactFromAddressBookResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::DisassociateContactFromAddressBookResponsePrivate
+ * \brief The DisassociateContactFromAddressBookResponsePrivate class provides private implementation for DisassociateContactFromAddressBookResponse.
  * \internal
  *
- * \class DisassociateContactFromAddressBookResponsePrivate
- *
- * \brief Private implementation for DisassociateContactFromAddressBookResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateContactFromAddressBookResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateContactFromAddressBookResponse instance.
+ * Constructs a DisassociateContactFromAddressBookResponsePrivate object with public implementation \a q.
  */
 DisassociateContactFromAddressBookResponsePrivate::DisassociateContactFromAddressBookResponsePrivate(
     DisassociateContactFromAddressBookResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ DisassociateContactFromAddressBookResponsePrivate::DisassociateContactFromAddres
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness DisassociateContactFromAddressBookResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness DisassociateContactFromAddressBook response element from \a xml.
  */
 void DisassociateContactFromAddressBookResponsePrivate::parseDisassociateContactFromAddressBookResponse(QXmlStreamReader &xml)
 {

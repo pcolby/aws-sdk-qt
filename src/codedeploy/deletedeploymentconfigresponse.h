@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDeploymentConfigResponse : public CodeDeployResponse {
 public:
     DeleteDeploymentConfigResponse(const DeleteDeploymentConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDeploymentConfigRequest * request() const;
+    virtual const DeleteDeploymentConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDeploymentConfigResponse)

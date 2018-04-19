@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DeleteReplicationGroupResponse
- *
  * \brief The DeleteReplicationGroupResponse class provides an interace for ElastiCache DeleteReplicationGroup responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DeleteReplicationGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteReplicationGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteReplicationGroupResponse::DeleteReplicationGroupResponse(
         const DeleteReplicationGroupRequest &request,
@@ -69,6 +64,9 @@ DeleteReplicationGroupResponse::DeleteReplicationGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteReplicationGroupRequest * DeleteReplicationGroupResponse::request() const
 {
     Q_D(const DeleteReplicationGroupResponse);
@@ -76,9 +74,8 @@ const DeleteReplicationGroupRequest * DeleteReplicationGroupResponse::request() 
 }
 
 /*!
- * @brief  Parse a ElastiCache DeleteReplicationGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DeleteReplicationGroup \a response.
  */
 void DeleteReplicationGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeleteReplicationGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::DeleteReplicationGroupResponsePrivate
+ * \brief The DeleteReplicationGroupResponsePrivate class provides private implementation for DeleteReplicationGroupResponse.
  * \internal
  *
- * \class DeleteReplicationGroupResponsePrivate
- *
- * \brief Private implementation for DeleteReplicationGroupResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReplicationGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteReplicationGroupResponse instance.
+ * Constructs a DeleteReplicationGroupResponsePrivate object with public implementation \a q.
  */
 DeleteReplicationGroupResponsePrivate::DeleteReplicationGroupResponsePrivate(
     DeleteReplicationGroupResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DeleteReplicationGroupResponsePrivate::DeleteReplicationGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache DeleteReplicationGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DeleteReplicationGroup response element from \a xml.
  */
 void DeleteReplicationGroupResponsePrivate::parseDeleteReplicationGroupResponse(QXmlStreamReader &xml)
 {

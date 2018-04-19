@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::UpdatePolicyResponse
- *
  * \brief The UpdatePolicyResponse class provides an interace for Organizations UpdatePolicy responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new UpdatePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePolicyResponse::UpdatePolicyResponse(
         const UpdatePolicyRequest &request,
@@ -197,6 +192,9 @@ UpdatePolicyResponse::UpdatePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePolicyRequest * UpdatePolicyResponse::request() const
 {
     Q_D(const UpdatePolicyResponse);
@@ -204,9 +202,8 @@ const UpdatePolicyRequest * UpdatePolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations UpdatePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations UpdatePolicy \a response.
  */
 void UpdatePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void UpdatePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::UpdatePolicyResponsePrivate
+ * \brief The UpdatePolicyResponsePrivate class provides private implementation for UpdatePolicyResponse.
  * \internal
  *
- * \class UpdatePolicyResponsePrivate
- *
- * \brief Private implementation for UpdatePolicyResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePolicyResponse instance.
+ * Constructs a UpdatePolicyResponsePrivate object with public implementation \a q.
  */
 UpdatePolicyResponsePrivate::UpdatePolicyResponsePrivate(
     UpdatePolicyResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ UpdatePolicyResponsePrivate::UpdatePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations UpdatePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations UpdatePolicy response element from \a xml.
  */
 void UpdatePolicyResponsePrivate::parseUpdatePolicyResponse(QXmlStreamReader &xml)
 {

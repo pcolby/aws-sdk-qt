@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * UpdateTimeToLiveRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateTimeToLiveRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a UpdateTimeToLiveRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 UpdateTimeToLiveRequestPrivate::UpdateTimeToLiveRequestPrivate(
     const DynamoDBRequest::Action action, UpdateTimeToLiveRequest * const q)

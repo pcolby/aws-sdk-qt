@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspaceBundlesRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeWorkspaceBundlesRequestPrivate object for WorkSpaces \a action with,
- * public implementation \a q.
+ * Constructs a DescribeWorkspaceBundlesRequestPrivate object for WorkSpaces \a action,
+ * with public implementation \a q.
  */
 DescribeWorkspaceBundlesRequestPrivate::DescribeWorkspaceBundlesRequestPrivate(
     const WorkSpacesRequest::Action action, DescribeWorkspaceBundlesRequest * const q)

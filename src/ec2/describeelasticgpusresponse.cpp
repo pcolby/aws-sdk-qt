@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeElasticGpusResponse
- *
  * \brief The DescribeElasticGpusResponse class provides an interace for EC2 DescribeElasticGpus responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeElasticGpusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeElasticGpusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeElasticGpusResponse::DescribeElasticGpusResponse(
         const DescribeElasticGpusRequest &request,
@@ -59,6 +54,9 @@ DescribeElasticGpusResponse::DescribeElasticGpusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeElasticGpusRequest * DescribeElasticGpusResponse::request() const
 {
     Q_D(const DescribeElasticGpusResponse);
@@ -66,9 +64,8 @@ const DescribeElasticGpusRequest * DescribeElasticGpusResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeElasticGpus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeElasticGpus \a response.
  */
 void DescribeElasticGpusResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeElasticGpusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeElasticGpusResponsePrivate
+ * \brief The DescribeElasticGpusResponsePrivate class provides private implementation for DescribeElasticGpusResponse.
  * \internal
  *
- * \class DescribeElasticGpusResponsePrivate
- *
- * \brief Private implementation for DescribeElasticGpusResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeElasticGpusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeElasticGpusResponse instance.
+ * Constructs a DescribeElasticGpusResponsePrivate object with public implementation \a q.
  */
 DescribeElasticGpusResponsePrivate::DescribeElasticGpusResponsePrivate(
     DescribeElasticGpusResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeElasticGpusResponsePrivate::DescribeElasticGpusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeElasticGpusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeElasticGpus response element from \a xml.
  */
 void DescribeElasticGpusResponsePrivate::parseDescribeElasticGpusResponse(QXmlStreamReader &xml)
 {

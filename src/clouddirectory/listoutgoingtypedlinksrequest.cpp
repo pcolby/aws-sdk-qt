@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListOutgoingTypedLinksRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListOutgoingTypedLinksRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a ListOutgoingTypedLinksRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 ListOutgoingTypedLinksRequestPrivate::ListOutgoingTypedLinksRequestPrivate(
     const CloudDirectoryRequest::Action action, ListOutgoingTypedLinksRequest * const q)

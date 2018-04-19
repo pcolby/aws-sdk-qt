@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetIPSetResponse
- *
  * \brief The GetIPSetResponse class provides an interace for WAFRegional GetIPSet responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetIPSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetIPSetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetIPSetResponse::GetIPSetResponse(
         const GetIPSetRequest &request,
@@ -62,6 +57,9 @@ GetIPSetResponse::GetIPSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetIPSetRequest * GetIPSetResponse::request() const
 {
     Q_D(const GetIPSetResponse);
@@ -69,9 +67,8 @@ const GetIPSetRequest * GetIPSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional GetIPSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional GetIPSet \a response.
  */
 void GetIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::GetIPSetResponsePrivate
+ * \brief The GetIPSetResponsePrivate class provides private implementation for GetIPSetResponse.
  * \internal
  *
- * \class GetIPSetResponsePrivate
- *
- * \brief Private implementation for GetIPSetResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIPSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetIPSetResponse instance.
+ * Constructs a GetIPSetResponsePrivate object with public implementation \a q.
  */
 GetIPSetResponsePrivate::GetIPSetResponsePrivate(
     GetIPSetResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ GetIPSetResponsePrivate::GetIPSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional GetIPSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional GetIPSet response element from \a xml.
  */
 void GetIPSetResponsePrivate::parseGetIPSetResponse(QXmlStreamReader &xml)
 {

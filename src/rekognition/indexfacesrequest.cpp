@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * IndexFacesRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a IndexFacesRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a IndexFacesRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 IndexFacesRequestPrivate::IndexFacesRequestPrivate(
     const RekognitionRequest::Action action, IndexFacesRequest * const q)

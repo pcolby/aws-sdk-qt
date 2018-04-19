@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateInputRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateInputRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a UpdateInputRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 UpdateInputRequestPrivate::UpdateInputRequestPrivate(
     const MediaLiveRequest::Action action, UpdateInputRequest * const q)

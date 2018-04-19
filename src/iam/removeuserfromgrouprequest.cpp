@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * RemoveUserFromGroupRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a RemoveUserFromGroupRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a RemoveUserFromGroupRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 RemoveUserFromGroupRequestPrivate::RemoveUserFromGroupRequestPrivate(
     const IAMRequest::Action action, RemoveUserFromGroupRequest * const q)

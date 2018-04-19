@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartBuildResponse : public CodeBuildResponse {
 public:
     StartBuildResponse(const StartBuildRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartBuildRequest * request() const;
+    virtual const StartBuildRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartBuildResponse)

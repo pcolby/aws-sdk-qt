@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetAppsResponse
- *
  * \brief The GetAppsResponse class provides an interace for Pinpoint GetApps responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getApps
  */
 
 /*!
- * @brief  Constructs a new GetAppsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAppsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAppsResponse::GetAppsResponse(
         const GetAppsRequest &request,
@@ -55,6 +50,9 @@ GetAppsResponse::GetAppsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAppsRequest * GetAppsResponse::request() const
 {
     Q_D(const GetAppsResponse);
@@ -62,9 +60,8 @@ const GetAppsRequest * GetAppsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetApps response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetApps \a response.
  */
 void GetAppsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetAppsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetAppsResponsePrivate
+ * \brief The GetAppsResponsePrivate class provides private implementation for GetAppsResponse.
  * \internal
  *
- * \class GetAppsResponsePrivate
- *
- * \brief Private implementation for GetAppsResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAppsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAppsResponse instance.
+ * Constructs a GetAppsResponsePrivate object with public implementation \a q.
  */
 GetAppsResponsePrivate::GetAppsResponsePrivate(
     GetAppsResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetAppsResponsePrivate::GetAppsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetAppsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetApps response element from \a xml.
  */
 void GetAppsResponsePrivate::parseGetAppsResponse(QXmlStreamReader &xml)
 {

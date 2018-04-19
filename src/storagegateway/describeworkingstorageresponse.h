@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeWorkingStorageResponse : public StorageGatewayRespons
 public:
     DescribeWorkingStorageResponse(const DescribeWorkingStorageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeWorkingStorageRequest * request() const;
+    virtual const DescribeWorkingStorageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeWorkingStorageResponse)

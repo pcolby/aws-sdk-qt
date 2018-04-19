@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateConfigurationSetRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateConfigurationSetRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a CreateConfigurationSetRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 CreateConfigurationSetRequestPrivate::CreateConfigurationSetRequestPrivate(
     const SESRequest::Action action, CreateConfigurationSetRequest * const q)

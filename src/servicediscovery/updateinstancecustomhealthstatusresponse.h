@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateInstanceCustomHealthStatusResponse : public ServiceDisc
 public:
     UpdateInstanceCustomHealthStatusResponse(const UpdateInstanceCustomHealthStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateInstanceCustomHealthStatusRequest * request() const;
+    virtual const UpdateInstanceCustomHealthStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateInstanceCustomHealthStatusResponse)

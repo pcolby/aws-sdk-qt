@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RunScheduledInstancesResponse
- *
  * \brief The RunScheduledInstancesResponse class provides an interace for EC2 RunScheduledInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RunScheduledInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RunScheduledInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 RunScheduledInstancesResponse::RunScheduledInstancesResponse(
         const RunScheduledInstancesRequest &request,
@@ -59,6 +54,9 @@ RunScheduledInstancesResponse::RunScheduledInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RunScheduledInstancesRequest * RunScheduledInstancesResponse::request() const
 {
     Q_D(const RunScheduledInstancesResponse);
@@ -66,9 +64,8 @@ const RunScheduledInstancesRequest * RunScheduledInstancesResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 RunScheduledInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 RunScheduledInstances \a response.
  */
 void RunScheduledInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void RunScheduledInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::RunScheduledInstancesResponsePrivate
+ * \brief The RunScheduledInstancesResponsePrivate class provides private implementation for RunScheduledInstancesResponse.
  * \internal
  *
- * \class RunScheduledInstancesResponsePrivate
- *
- * \brief Private implementation for RunScheduledInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RunScheduledInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RunScheduledInstancesResponse instance.
+ * Constructs a RunScheduledInstancesResponsePrivate object with public implementation \a q.
  */
 RunScheduledInstancesResponsePrivate::RunScheduledInstancesResponsePrivate(
     RunScheduledInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ RunScheduledInstancesResponsePrivate::RunScheduledInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 RunScheduledInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 RunScheduledInstances response element from \a xml.
  */
 void RunScheduledInstancesResponsePrivate::parseRunScheduledInstancesResponse(QXmlStreamReader &xml)
 {

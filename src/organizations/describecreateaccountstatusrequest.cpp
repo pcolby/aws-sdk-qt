@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCreateAccountStatusRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeCreateAccountStatusRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCreateAccountStatusRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 DescribeCreateAccountStatusRequestPrivate::DescribeCreateAccountStatusRequestPrivate(
     const OrganizationsRequest::Action action, DescribeCreateAccountStatusRequest * const q)

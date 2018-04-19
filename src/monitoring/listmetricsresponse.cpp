@@ -29,10 +29,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::ListMetricsResponse
- *
  * \brief The ListMetricsResponse class provides an interace for CloudWatch ListMetrics responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -53,11 +52,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new ListMetricsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListMetricsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListMetricsResponse::ListMetricsResponse(
         const ListMetricsRequest &request,
@@ -69,6 +64,9 @@ ListMetricsResponse::ListMetricsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListMetricsRequest * ListMetricsResponse::request() const
 {
     Q_D(const ListMetricsResponse);
@@ -76,9 +74,8 @@ const ListMetricsRequest * ListMetricsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatch ListMetrics response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatch ListMetrics \a response.
  */
 void ListMetricsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListMetricsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatch::ListMetricsResponsePrivate
+ * \brief The ListMetricsResponsePrivate class provides private implementation for ListMetricsResponse.
  * \internal
  *
- * \class ListMetricsResponsePrivate
- *
- * \brief Private implementation for ListMetricsResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListMetricsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListMetricsResponse instance.
+ * Constructs a ListMetricsResponsePrivate object with public implementation \a q.
  */
 ListMetricsResponsePrivate::ListMetricsResponsePrivate(
     ListMetricsResponse * const q) : CloudWatchResponsePrivate(q)
@@ -109,9 +102,7 @@ ListMetricsResponsePrivate::ListMetricsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatch ListMetricsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatch ListMetrics response element from \a xml.
  */
 void ListMetricsResponsePrivate::parseListMetricsResponse(QXmlStreamReader &xml)
 {

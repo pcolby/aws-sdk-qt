@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterActivityTypeResponse : public SWFResponse {
 public:
     RegisterActivityTypeResponse(const RegisterActivityTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterActivityTypeRequest * request() const;
+    virtual const RegisterActivityTypeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterActivityTypeResponse)

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteLoginProfileResponse
- *
  * \brief The DeleteLoginProfileResponse class provides an interace for IAM DeleteLoginProfile responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoginProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLoginProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLoginProfileResponse::DeleteLoginProfileResponse(
         const DeleteLoginProfileRequest &request,
@@ -120,6 +115,9 @@ DeleteLoginProfileResponse::DeleteLoginProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLoginProfileRequest * DeleteLoginProfileResponse::request() const
 {
     Q_D(const DeleteLoginProfileResponse);
@@ -127,9 +125,8 @@ const DeleteLoginProfileRequest * DeleteLoginProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM DeleteLoginProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteLoginProfile \a response.
  */
 void DeleteLoginProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteLoginProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteLoginProfileResponsePrivate
+ * \brief The DeleteLoginProfileResponsePrivate class provides private implementation for DeleteLoginProfileResponse.
  * \internal
  *
- * \class DeleteLoginProfileResponsePrivate
- *
- * \brief Private implementation for DeleteLoginProfileResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoginProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLoginProfileResponse instance.
+ * Constructs a DeleteLoginProfileResponsePrivate object with public implementation \a q.
  */
 DeleteLoginProfileResponsePrivate::DeleteLoginProfileResponsePrivate(
     DeleteLoginProfileResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteLoginProfileResponsePrivate::DeleteLoginProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeleteLoginProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteLoginProfile response element from \a xml.
  */
 void DeleteLoginProfileResponsePrivate::parseDeleteLoginProfileResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetDataEndpointRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetDataEndpointRequestPrivate object for KinesisVideo \a action with,
- * public implementation \a q.
+ * Constructs a GetDataEndpointRequestPrivate object for KinesisVideo \a action,
+ * with public implementation \a q.
  */
 GetDataEndpointRequestPrivate::GetDataEndpointRequestPrivate(
     const KinesisVideoRequest::Action action, GetDataEndpointRequest * const q)

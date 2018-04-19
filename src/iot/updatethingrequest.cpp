@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateThingRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateThingRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a UpdateThingRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 UpdateThingRequestPrivate::UpdateThingRequestPrivate(
     const IoTRequest::Action action, UpdateThingRequest * const q)

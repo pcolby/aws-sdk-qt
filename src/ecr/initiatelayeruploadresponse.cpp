@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::InitiateLayerUploadResponse
- *
  * \brief The InitiateLayerUploadResponse class provides an interace for ECR InitiateLayerUpload responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new InitiateLayerUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a InitiateLayerUploadResponse object for \a reply to \a request, with parent \a parent.
  */
 InitiateLayerUploadResponse::InitiateLayerUploadResponse(
         const InitiateLayerUploadRequest &request,
@@ -59,6 +54,9 @@ InitiateLayerUploadResponse::InitiateLayerUploadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const InitiateLayerUploadRequest * InitiateLayerUploadResponse::request() const
 {
     Q_D(const InitiateLayerUploadResponse);
@@ -66,9 +64,8 @@ const InitiateLayerUploadRequest * InitiateLayerUploadResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR InitiateLayerUpload response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR InitiateLayerUpload \a response.
  */
 void InitiateLayerUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void InitiateLayerUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::InitiateLayerUploadResponsePrivate
+ * \brief The InitiateLayerUploadResponsePrivate class provides private implementation for InitiateLayerUploadResponse.
  * \internal
  *
- * \class InitiateLayerUploadResponsePrivate
- *
- * \brief Private implementation for InitiateLayerUploadResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InitiateLayerUploadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InitiateLayerUploadResponse instance.
+ * Constructs a InitiateLayerUploadResponsePrivate object with public implementation \a q.
  */
 InitiateLayerUploadResponsePrivate::InitiateLayerUploadResponsePrivate(
     InitiateLayerUploadResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ InitiateLayerUploadResponsePrivate::InitiateLayerUploadResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR InitiateLayerUploadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR InitiateLayerUpload response element from \a xml.
  */
 void InitiateLayerUploadResponsePrivate::parseInitiateLayerUploadResponse(QXmlStreamReader &xml)
 {

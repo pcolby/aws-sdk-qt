@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DescribeTasksResponse
- *
  * \brief The DescribeTasksResponse class provides an interace for ECS DescribeTasks responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DescribeTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTasksResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTasksResponse::DescribeTasksResponse(
         const DescribeTasksRequest &request,
@@ -72,6 +67,9 @@ DescribeTasksResponse::DescribeTasksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTasksRequest * DescribeTasksResponse::request() const
 {
     Q_D(const DescribeTasksResponse);
@@ -79,9 +77,8 @@ const DescribeTasksRequest * DescribeTasksResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS DescribeTasks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS DescribeTasks \a response.
  */
 void DescribeTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void DescribeTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::DescribeTasksResponsePrivate
+ * \brief The DescribeTasksResponsePrivate class provides private implementation for DescribeTasksResponse.
  * \internal
  *
- * \class DescribeTasksResponsePrivate
- *
- * \brief Private implementation for DescribeTasksResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTasksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTasksResponse instance.
+ * Constructs a DescribeTasksResponsePrivate object with public implementation \a q.
  */
 DescribeTasksResponsePrivate::DescribeTasksResponsePrivate(
     DescribeTasksResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ DescribeTasksResponsePrivate::DescribeTasksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS DescribeTasksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS DescribeTasks response element from \a xml.
  */
 void DescribeTasksResponsePrivate::parseDescribeTasksResponse(QXmlStreamReader &xml)
 {

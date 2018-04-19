@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionRequest::response(
  */
 
 /*!
- *
- * Constructs a CreateStreamingDistributionRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a CreateStreamingDistributionRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 CreateStreamingDistributionRequestPrivate::CreateStreamingDistributionRequestPrivate(
     const CloudFrontRequest::Action action, CreateStreamingDistributionRequest * const q)

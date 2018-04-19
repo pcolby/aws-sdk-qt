@@ -34,10 +34,10 @@ class QTAWS_EXPORT SearchGameSessionsResponse : public GameLiftResponse {
 public:
     SearchGameSessionsResponse(const SearchGameSessionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SearchGameSessionsRequest * request() const;
+    virtual const SearchGameSessionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SearchGameSessionsResponse)

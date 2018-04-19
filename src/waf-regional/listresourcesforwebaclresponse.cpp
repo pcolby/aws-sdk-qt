@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListResourcesForWebACLResponse
- *
  * \brief The ListResourcesForWebACLResponse class provides an interace for WAFRegional ListResourcesForWebACL responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListResourcesForWebACLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListResourcesForWebACLResponse object for \a reply to \a request, with parent \a parent.
  */
 ListResourcesForWebACLResponse::ListResourcesForWebACLResponse(
         const ListResourcesForWebACLRequest &request,
@@ -62,6 +57,9 @@ ListResourcesForWebACLResponse::ListResourcesForWebACLResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListResourcesForWebACLRequest * ListResourcesForWebACLResponse::request() const
 {
     Q_D(const ListResourcesForWebACLResponse);
@@ -69,9 +67,8 @@ const ListResourcesForWebACLRequest * ListResourcesForWebACLResponse::request() 
 }
 
 /*!
- * @brief  Parse a WAFRegional ListResourcesForWebACL response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional ListResourcesForWebACL \a response.
  */
 void ListResourcesForWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListResourcesForWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::ListResourcesForWebACLResponsePrivate
+ * \brief The ListResourcesForWebACLResponsePrivate class provides private implementation for ListResourcesForWebACLResponse.
  * \internal
  *
- * \class ListResourcesForWebACLResponsePrivate
- *
- * \brief Private implementation for ListResourcesForWebACLResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourcesForWebACLResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListResourcesForWebACLResponse instance.
+ * Constructs a ListResourcesForWebACLResponsePrivate object with public implementation \a q.
  */
 ListResourcesForWebACLResponsePrivate::ListResourcesForWebACLResponsePrivate(
     ListResourcesForWebACLResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ ListResourcesForWebACLResponsePrivate::ListResourcesForWebACLResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional ListResourcesForWebACLResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional ListResourcesForWebACL response element from \a xml.
  */
 void ListResourcesForWebACLResponsePrivate::parseListResourcesForWebACLResponse(QXmlStreamReader &xml)
 {

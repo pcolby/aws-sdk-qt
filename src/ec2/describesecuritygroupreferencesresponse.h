@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSecurityGroupReferencesResponse : public EC2Response 
 public:
     DescribeSecurityGroupReferencesResponse(const DescribeSecurityGroupReferencesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSecurityGroupReferencesRequest * request() const;
+    virtual const DescribeSecurityGroupReferencesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSecurityGroupReferencesResponse)

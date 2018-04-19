@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketLoggingResponse
- *
  * \brief The PutBucketLoggingResponse class provides an interace for S3 PutBucketLogging responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketLogging
  */
 
 /*!
- * @brief  Constructs a new PutBucketLoggingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketLoggingResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketLoggingResponse::PutBucketLoggingResponse(
         const PutBucketLoggingRequest &request,
@@ -55,6 +50,9 @@ PutBucketLoggingResponse::PutBucketLoggingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketLoggingRequest * PutBucketLoggingResponse::request() const
 {
     Q_D(const PutBucketLoggingResponse);
@@ -62,9 +60,8 @@ const PutBucketLoggingRequest * PutBucketLoggingResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 PutBucketLogging response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketLogging \a response.
  */
 void PutBucketLoggingResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketLoggingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketLoggingResponsePrivate
+ * \brief The PutBucketLoggingResponsePrivate class provides private implementation for PutBucketLoggingResponse.
  * \internal
  *
- * \class PutBucketLoggingResponsePrivate
- *
- * \brief Private implementation for PutBucketLoggingResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketLoggingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketLoggingResponse instance.
+ * Constructs a PutBucketLoggingResponsePrivate object with public implementation \a q.
  */
 PutBucketLoggingResponsePrivate::PutBucketLoggingResponsePrivate(
     PutBucketLoggingResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketLoggingResponsePrivate::PutBucketLoggingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 PutBucketLoggingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketLogging response element from \a xml.
  */
 void PutBucketLoggingResponsePrivate::parsePutBucketLoggingResponse(QXmlStreamReader &xml)
 {

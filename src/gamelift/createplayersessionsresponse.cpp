@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::CreatePlayerSessionsResponse
- *
  * \brief The CreatePlayerSessionsResponse class provides an interace for GameLift CreatePlayerSessions responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new CreatePlayerSessionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePlayerSessionsResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePlayerSessionsResponse::CreatePlayerSessionsResponse(
         const CreatePlayerSessionsRequest &request,
@@ -491,6 +486,9 @@ CreatePlayerSessionsResponse::CreatePlayerSessionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePlayerSessionsRequest * CreatePlayerSessionsResponse::request() const
 {
     Q_D(const CreatePlayerSessionsResponse);
@@ -498,9 +496,8 @@ const CreatePlayerSessionsRequest * CreatePlayerSessionsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a GameLift CreatePlayerSessions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift CreatePlayerSessions \a response.
  */
 void CreatePlayerSessionsResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void CreatePlayerSessionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::CreatePlayerSessionsResponsePrivate
+ * \brief The CreatePlayerSessionsResponsePrivate class provides private implementation for CreatePlayerSessionsResponse.
  * \internal
  *
- * \class CreatePlayerSessionsResponsePrivate
- *
- * \brief Private implementation for CreatePlayerSessionsResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePlayerSessionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePlayerSessionsResponse instance.
+ * Constructs a CreatePlayerSessionsResponsePrivate object with public implementation \a q.
  */
 CreatePlayerSessionsResponsePrivate::CreatePlayerSessionsResponsePrivate(
     CreatePlayerSessionsResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ CreatePlayerSessionsResponsePrivate::CreatePlayerSessionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift CreatePlayerSessionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift CreatePlayerSessions response element from \a xml.
  */
 void CreatePlayerSessionsResponsePrivate::parseCreatePlayerSessionsResponse(QXmlStreamReader &xml)
 {

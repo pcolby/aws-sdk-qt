@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateLayerResponse : public OpsWorksResponse {
 public:
     CreateLayerResponse(const CreateLayerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateLayerRequest * request() const;
+    virtual const CreateLayerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateLayerResponse)

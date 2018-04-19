@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeRdsDbInstancesResponse
- *
  * \brief The DescribeRdsDbInstancesResponse class provides an interace for OpsWorks DescribeRdsDbInstances responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeRdsDbInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRdsDbInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRdsDbInstancesResponse::DescribeRdsDbInstancesResponse(
         const DescribeRdsDbInstancesRequest &request,
@@ -161,6 +156,9 @@ DescribeRdsDbInstancesResponse::DescribeRdsDbInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRdsDbInstancesRequest * DescribeRdsDbInstancesResponse::request() const
 {
     Q_D(const DescribeRdsDbInstancesResponse);
@@ -168,9 +166,8 @@ const DescribeRdsDbInstancesRequest * DescribeRdsDbInstancesResponse::request() 
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeRdsDbInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeRdsDbInstances \a response.
  */
 void DescribeRdsDbInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeRdsDbInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeRdsDbInstancesResponsePrivate
+ * \brief The DescribeRdsDbInstancesResponsePrivate class provides private implementation for DescribeRdsDbInstancesResponse.
  * \internal
  *
- * \class DescribeRdsDbInstancesResponsePrivate
- *
- * \brief Private implementation for DescribeRdsDbInstancesResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRdsDbInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRdsDbInstancesResponse instance.
+ * Constructs a DescribeRdsDbInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeRdsDbInstancesResponsePrivate::DescribeRdsDbInstancesResponsePrivate(
     DescribeRdsDbInstancesResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeRdsDbInstancesResponsePrivate::DescribeRdsDbInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeRdsDbInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeRdsDbInstances response element from \a xml.
  */
 void DescribeRdsDbInstancesResponsePrivate::parseDescribeRdsDbInstancesResponse(QXmlStreamReader &xml)
 {

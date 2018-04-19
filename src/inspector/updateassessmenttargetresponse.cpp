@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::UpdateAssessmentTargetResponse
- *
  * \brief The UpdateAssessmentTargetResponse class provides an interace for Inspector UpdateAssessmentTarget responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new UpdateAssessmentTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAssessmentTargetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAssessmentTargetResponse::UpdateAssessmentTargetResponse(
         const UpdateAssessmentTargetRequest &request,
@@ -60,6 +55,9 @@ UpdateAssessmentTargetResponse::UpdateAssessmentTargetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAssessmentTargetRequest * UpdateAssessmentTargetResponse::request() const
 {
     Q_D(const UpdateAssessmentTargetResponse);
@@ -67,9 +65,8 @@ const UpdateAssessmentTargetRequest * UpdateAssessmentTargetResponse::request() 
 }
 
 /*!
- * @brief  Parse a Inspector UpdateAssessmentTarget response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector UpdateAssessmentTarget \a response.
  */
 void UpdateAssessmentTargetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateAssessmentTargetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::UpdateAssessmentTargetResponsePrivate
+ * \brief The UpdateAssessmentTargetResponsePrivate class provides private implementation for UpdateAssessmentTargetResponse.
  * \internal
  *
- * \class UpdateAssessmentTargetResponsePrivate
- *
- * \brief Private implementation for UpdateAssessmentTargetResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAssessmentTargetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAssessmentTargetResponse instance.
+ * Constructs a UpdateAssessmentTargetResponsePrivate object with public implementation \a q.
  */
 UpdateAssessmentTargetResponsePrivate::UpdateAssessmentTargetResponsePrivate(
     UpdateAssessmentTargetResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateAssessmentTargetResponsePrivate::UpdateAssessmentTargetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector UpdateAssessmentTargetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector UpdateAssessmentTarget response element from \a xml.
  */
 void UpdateAssessmentTargetResponsePrivate::parseUpdateAssessmentTargetResponse(QXmlStreamReader &xml)
 {

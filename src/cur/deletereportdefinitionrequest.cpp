@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteReportDefinitionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteReportDefinitionRequestPrivate object for CostandUsageReportService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteReportDefinitionRequestPrivate object for CostandUsageReportService \a action,
+ * with public implementation \a q.
  */
 DeleteReportDefinitionRequestPrivate::DeleteReportDefinitionRequestPrivate(
     const CostandUsageReportServiceRequest::Action action, DeleteReportDefinitionRequest * const q)

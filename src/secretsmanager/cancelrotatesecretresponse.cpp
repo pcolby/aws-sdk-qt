@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::CancelRotateSecretResponse
- *
  * \brief The CancelRotateSecretResponse class provides an interace for SecretsManager CancelRotateSecret responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new CancelRotateSecretResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelRotateSecretResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelRotateSecretResponse::CancelRotateSecretResponse(
         const CancelRotateSecretRequest &request,
@@ -155,6 +150,9 @@ CancelRotateSecretResponse::CancelRotateSecretResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelRotateSecretRequest * CancelRotateSecretResponse::request() const
 {
     Q_D(const CancelRotateSecretResponse);
@@ -162,9 +160,8 @@ const CancelRotateSecretRequest * CancelRotateSecretResponse::request() const
 }
 
 /*!
- * @brief  Parse a SecretsManager CancelRotateSecret response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager CancelRotateSecret \a response.
  */
 void CancelRotateSecretResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void CancelRotateSecretResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::CancelRotateSecretResponsePrivate
+ * \brief The CancelRotateSecretResponsePrivate class provides private implementation for CancelRotateSecretResponse.
  * \internal
  *
- * \class CancelRotateSecretResponsePrivate
- *
- * \brief Private implementation for CancelRotateSecretResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelRotateSecretResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelRotateSecretResponse instance.
+ * Constructs a CancelRotateSecretResponsePrivate object with public implementation \a q.
  */
 CancelRotateSecretResponsePrivate::CancelRotateSecretResponsePrivate(
     CancelRotateSecretResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ CancelRotateSecretResponsePrivate::CancelRotateSecretResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SecretsManager CancelRotateSecretResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager CancelRotateSecret response element from \a xml.
  */
 void CancelRotateSecretResponsePrivate::parseCancelRotateSecretResponse(QXmlStreamReader &xml)
 {

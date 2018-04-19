@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::StopStackResponse
- *
  * \brief The StopStackResponse class provides an interace for OpsWorks StopStack responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new StopStackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopStackResponse object for \a reply to \a request, with parent \a parent.
  */
 StopStackResponse::StopStackResponse(
         const StopStackRequest &request,
@@ -161,6 +156,9 @@ StopStackResponse::StopStackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopStackRequest * StopStackResponse::request() const
 {
     Q_D(const StopStackResponse);
@@ -168,9 +166,8 @@ const StopStackRequest * StopStackResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks StopStack response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks StopStack \a response.
  */
 void StopStackResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void StopStackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::StopStackResponsePrivate
+ * \brief The StopStackResponsePrivate class provides private implementation for StopStackResponse.
  * \internal
  *
- * \class StopStackResponsePrivate
- *
- * \brief Private implementation for StopStackResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopStackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopStackResponse instance.
+ * Constructs a StopStackResponsePrivate object with public implementation \a q.
  */
 StopStackResponsePrivate::StopStackResponsePrivate(
     StopStackResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ StopStackResponsePrivate::StopStackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks StopStackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks StopStack response element from \a xml.
  */
 void StopStackResponsePrivate::parseStopStackResponse(QXmlStreamReader &xml)
 {

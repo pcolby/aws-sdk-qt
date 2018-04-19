@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateDiscoveredResourceResponse : public MigrationHubResp
 public:
     AssociateDiscoveredResourceResponse(const AssociateDiscoveredResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateDiscoveredResourceRequest * request() const;
+    virtual const AssociateDiscoveredResourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateDiscoveredResourceResponse)

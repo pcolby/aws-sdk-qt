@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::RebootReplicationInstanceResponse
- *
  * \brief The RebootReplicationInstanceResponse class provides an interace for DatabaseMigrationService RebootReplicationInstance responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new RebootReplicationInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RebootReplicationInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 RebootReplicationInstanceResponse::RebootReplicationInstanceResponse(
         const RebootReplicationInstanceRequest &request,
@@ -66,6 +61,9 @@ RebootReplicationInstanceResponse::RebootReplicationInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RebootReplicationInstanceRequest * RebootReplicationInstanceResponse::request() const
 {
     Q_D(const RebootReplicationInstanceResponse);
@@ -73,9 +71,8 @@ const RebootReplicationInstanceRequest * RebootReplicationInstanceResponse::requ
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService RebootReplicationInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService RebootReplicationInstance \a response.
  */
 void RebootReplicationInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void RebootReplicationInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::RebootReplicationInstanceResponsePrivate
+ * \brief The RebootReplicationInstanceResponsePrivate class provides private implementation for RebootReplicationInstanceResponse.
  * \internal
  *
- * \class RebootReplicationInstanceResponsePrivate
- *
- * \brief Private implementation for RebootReplicationInstanceResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootReplicationInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RebootReplicationInstanceResponse instance.
+ * Constructs a RebootReplicationInstanceResponsePrivate object with public implementation \a q.
  */
 RebootReplicationInstanceResponsePrivate::RebootReplicationInstanceResponsePrivate(
     RebootReplicationInstanceResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ RebootReplicationInstanceResponsePrivate::RebootReplicationInstanceResponsePriva
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService RebootReplicationInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService RebootReplicationInstance response element from \a xml.
  */
 void RebootReplicationInstanceResponsePrivate::parseRebootReplicationInstanceResponse(QXmlStreamReader &xml)
 {

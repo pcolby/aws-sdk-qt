@@ -29,10 +29,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::ListProgressUpdateStreamsResponse
- *
  * \brief The ListProgressUpdateStreamsResponse class provides an interace for MigrationHub ListProgressUpdateStreams responses.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -41,11 +40,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new ListProgressUpdateStreamsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListProgressUpdateStreamsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListProgressUpdateStreamsResponse::ListProgressUpdateStreamsResponse(
         const ListProgressUpdateStreamsRequest &request,
@@ -57,6 +52,9 @@ ListProgressUpdateStreamsResponse::ListProgressUpdateStreamsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListProgressUpdateStreamsRequest * ListProgressUpdateStreamsResponse::request() const
 {
     Q_D(const ListProgressUpdateStreamsResponse);
@@ -64,9 +62,8 @@ const ListProgressUpdateStreamsRequest * ListProgressUpdateStreamsResponse::requ
 }
 
 /*!
- * @brief  Parse a MigrationHub ListProgressUpdateStreams response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MigrationHub ListProgressUpdateStreams \a response.
  */
 void ListProgressUpdateStreamsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListProgressUpdateStreamsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MigrationHub::ListProgressUpdateStreamsResponsePrivate
+ * \brief The ListProgressUpdateStreamsResponsePrivate class provides private implementation for ListProgressUpdateStreamsResponse.
  * \internal
  *
- * \class ListProgressUpdateStreamsResponsePrivate
- *
- * \brief Private implementation for ListProgressUpdateStreamsResponse.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListProgressUpdateStreamsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListProgressUpdateStreamsResponse instance.
+ * Constructs a ListProgressUpdateStreamsResponsePrivate object with public implementation \a q.
  */
 ListProgressUpdateStreamsResponsePrivate::ListProgressUpdateStreamsResponsePrivate(
     ListProgressUpdateStreamsResponse * const q) : MigrationHubResponsePrivate(q)
@@ -97,9 +90,7 @@ ListProgressUpdateStreamsResponsePrivate::ListProgressUpdateStreamsResponsePriva
 }
 
 /*!
- * @brief  Parse an MigrationHub ListProgressUpdateStreamsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MigrationHub ListProgressUpdateStreams response element from \a xml.
  */
 void ListProgressUpdateStreamsResponsePrivate::parseListProgressUpdateStreamsResponse(QXmlStreamReader &xml)
 {

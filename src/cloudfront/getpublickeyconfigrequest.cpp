@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetPublicKeyConfigRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetPublicKeyConfigRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a GetPublicKeyConfigRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 GetPublicKeyConfigRequestPrivate::GetPublicKeyConfigRequestPrivate(
     const CloudFrontRequest::Action action, GetPublicKeyConfigRequest * const q)

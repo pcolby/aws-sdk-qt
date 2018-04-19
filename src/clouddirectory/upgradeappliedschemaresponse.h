@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpgradeAppliedSchemaResponse : public CloudDirectoryResponse 
 public:
     UpgradeAppliedSchemaResponse(const UpgradeAppliedSchemaRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpgradeAppliedSchemaRequest * request() const;
+    virtual const UpgradeAppliedSchemaRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpgradeAppliedSchemaResponse)

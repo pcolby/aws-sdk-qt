@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * AddThingToThingGroupRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a AddThingToThingGroupRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a AddThingToThingGroupRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 AddThingToThingGroupRequestPrivate::AddThingToThingGroupRequestPrivate(
     const IoTRequest::Action action, AddThingToThingGroupRequest * const q)

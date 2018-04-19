@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTrailRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteTrailRequestPrivate object for CloudTrail \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTrailRequestPrivate object for CloudTrail \a action,
+ * with public implementation \a q.
  */
 DeleteTrailRequestPrivate::DeleteTrailRequestPrivate(
     const CloudTrailRequest::Action action, DeleteTrailRequest * const q)

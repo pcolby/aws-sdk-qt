@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListInputsResponse : public MediaLiveResponse {
 public:
     ListInputsResponse(const ListInputsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListInputsRequest * request() const;
+    virtual const ListInputsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListInputsResponse)

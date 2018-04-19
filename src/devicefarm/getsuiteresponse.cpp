@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetSuiteResponse
- *
  * \brief The GetSuiteResponse class provides an interace for DeviceFarm GetSuite responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetSuiteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSuiteResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSuiteResponse::GetSuiteResponse(
         const GetSuiteRequest &request,
@@ -57,6 +52,9 @@ GetSuiteResponse::GetSuiteResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSuiteRequest * GetSuiteResponse::request() const
 {
     Q_D(const GetSuiteResponse);
@@ -64,9 +62,8 @@ const GetSuiteRequest * GetSuiteResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetSuite response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetSuite \a response.
  */
 void GetSuiteResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetSuiteResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetSuiteResponsePrivate
+ * \brief The GetSuiteResponsePrivate class provides private implementation for GetSuiteResponse.
  * \internal
  *
- * \class GetSuiteResponsePrivate
- *
- * \brief Private implementation for GetSuiteResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSuiteResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSuiteResponse instance.
+ * Constructs a GetSuiteResponsePrivate object with public implementation \a q.
  */
 GetSuiteResponsePrivate::GetSuiteResponsePrivate(
     GetSuiteResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetSuiteResponsePrivate::GetSuiteResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetSuiteResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetSuite response element from \a xml.
  */
 void GetSuiteResponsePrivate::parseGetSuiteResponse(QXmlStreamReader &xml)
 {

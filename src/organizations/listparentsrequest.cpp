@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * ListParentsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListParentsRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a ListParentsRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 ListParentsRequestPrivate::ListParentsRequestPrivate(
     const OrganizationsRequest::Action action, ListParentsRequest * const q)

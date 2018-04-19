@@ -161,9 +161,8 @@ QtAws::Core::AwsAbstractResponse * StopBuildRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a StopBuildRequestPrivate object for CodeBuild \a action with,
- * public implementation \a q.
+ * Constructs a StopBuildRequestPrivate object for CodeBuild \a action,
+ * with public implementation \a q.
  */
 StopBuildRequestPrivate::StopBuildRequestPrivate(
     const CodeBuildRequest::Action action, StopBuildRequest * const q)

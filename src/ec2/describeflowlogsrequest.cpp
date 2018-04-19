@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeFlowLogsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeFlowLogsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeFlowLogsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeFlowLogsRequestPrivate::DescribeFlowLogsRequestPrivate(
     const EC2Request::Action action, DescribeFlowLogsRequest * const q)

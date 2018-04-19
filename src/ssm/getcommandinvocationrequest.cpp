@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * GetCommandInvocationRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetCommandInvocationRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a GetCommandInvocationRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 GetCommandInvocationRequestPrivate::GetCommandInvocationRequestPrivate(
     const SSMRequest::Action action, GetCommandInvocationRequest * const q)

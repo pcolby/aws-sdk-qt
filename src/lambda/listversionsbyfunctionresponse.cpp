@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::ListVersionsByFunctionResponse
- *
  * \brief The ListVersionsByFunctionResponse class provides an interace for Lambda ListVersionsByFunction responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new ListVersionsByFunctionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListVersionsByFunctionResponse object for \a reply to \a request, with parent \a parent.
  */
 ListVersionsByFunctionResponse::ListVersionsByFunctionResponse(
         const ListVersionsByFunctionRequest &request,
@@ -66,6 +61,9 @@ ListVersionsByFunctionResponse::ListVersionsByFunctionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListVersionsByFunctionRequest * ListVersionsByFunctionResponse::request() const
 {
     Q_D(const ListVersionsByFunctionResponse);
@@ -73,9 +71,8 @@ const ListVersionsByFunctionRequest * ListVersionsByFunctionResponse::request() 
 }
 
 /*!
- * @brief  Parse a Lambda ListVersionsByFunction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda ListVersionsByFunction \a response.
  */
 void ListVersionsByFunctionResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListVersionsByFunctionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::ListVersionsByFunctionResponsePrivate
+ * \brief The ListVersionsByFunctionResponsePrivate class provides private implementation for ListVersionsByFunctionResponse.
  * \internal
  *
- * \class ListVersionsByFunctionResponsePrivate
- *
- * \brief Private implementation for ListVersionsByFunctionResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVersionsByFunctionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListVersionsByFunctionResponse instance.
+ * Constructs a ListVersionsByFunctionResponsePrivate object with public implementation \a q.
  */
 ListVersionsByFunctionResponsePrivate::ListVersionsByFunctionResponsePrivate(
     ListVersionsByFunctionResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ ListVersionsByFunctionResponsePrivate::ListVersionsByFunctionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda ListVersionsByFunctionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda ListVersionsByFunction response element from \a xml.
  */
 void ListVersionsByFunctionResponsePrivate::parseListVersionsByFunctionResponse(QXmlStreamReader &xml)
 {

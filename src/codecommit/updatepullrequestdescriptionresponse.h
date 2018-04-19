@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdatePullRequestDescriptionResponse : public CodeCommitRespo
 public:
     UpdatePullRequestDescriptionResponse(const UpdatePullRequestDescriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdatePullRequestDescriptionRequest * request() const;
+    virtual const UpdatePullRequestDescriptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdatePullRequestDescriptionResponse)

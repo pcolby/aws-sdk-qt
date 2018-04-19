@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssignIpv6AddressesResponse : public EC2Response {
 public:
     AssignIpv6AddressesResponse(const AssignIpv6AddressesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssignIpv6AddressesRequest * request() const;
+    virtual const AssignIpv6AddressesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssignIpv6AddressesResponse)

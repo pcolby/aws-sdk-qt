@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ListChangeSetsResponse
- *
  * \brief The ListChangeSetsResponse class provides an interace for CloudFormation ListChangeSets responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ListChangeSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListChangeSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListChangeSetsResponse::ListChangeSetsResponse(
         const ListChangeSetsRequest &request,
@@ -77,6 +72,9 @@ ListChangeSetsResponse::ListChangeSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListChangeSetsRequest * ListChangeSetsResponse::request() const
 {
     Q_D(const ListChangeSetsResponse);
@@ -84,9 +82,8 @@ const ListChangeSetsRequest * ListChangeSetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation ListChangeSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation ListChangeSets \a response.
  */
 void ListChangeSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ListChangeSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::ListChangeSetsResponsePrivate
+ * \brief The ListChangeSetsResponsePrivate class provides private implementation for ListChangeSetsResponse.
  * \internal
  *
- * \class ListChangeSetsResponsePrivate
- *
- * \brief Private implementation for ListChangeSetsResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListChangeSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListChangeSetsResponse instance.
+ * Constructs a ListChangeSetsResponsePrivate object with public implementation \a q.
  */
 ListChangeSetsResponsePrivate::ListChangeSetsResponsePrivate(
     ListChangeSetsResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ ListChangeSetsResponsePrivate::ListChangeSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation ListChangeSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation ListChangeSets response element from \a xml.
  */
 void ListChangeSetsResponsePrivate::parseListChangeSetsResponse(QXmlStreamReader &xml)
 {

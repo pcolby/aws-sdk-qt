@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GlobalSignOutResponse
- *
  * \brief The GlobalSignOutResponse class provides an interace for CognitoIdentityProvider GlobalSignOut responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GlobalSignOutResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GlobalSignOutResponse object for \a reply to \a request, with parent \a parent.
  */
 GlobalSignOutResponse::GlobalSignOutResponse(
         const GlobalSignOutRequest &request,
@@ -65,6 +60,9 @@ GlobalSignOutResponse::GlobalSignOutResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GlobalSignOutRequest * GlobalSignOutResponse::request() const
 {
     Q_D(const GlobalSignOutResponse);
@@ -72,9 +70,8 @@ const GlobalSignOutRequest * GlobalSignOutResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider GlobalSignOut response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider GlobalSignOut \a response.
  */
 void GlobalSignOutResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void GlobalSignOutResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::GlobalSignOutResponsePrivate
+ * \brief The GlobalSignOutResponsePrivate class provides private implementation for GlobalSignOutResponse.
  * \internal
  *
- * \class GlobalSignOutResponsePrivate
- *
- * \brief Private implementation for GlobalSignOutResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GlobalSignOutResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GlobalSignOutResponse instance.
+ * Constructs a GlobalSignOutResponsePrivate object with public implementation \a q.
  */
 GlobalSignOutResponsePrivate::GlobalSignOutResponsePrivate(
     GlobalSignOutResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ GlobalSignOutResponsePrivate::GlobalSignOutResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider GlobalSignOutResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider GlobalSignOut response element from \a xml.
  */
 void GlobalSignOutResponsePrivate::parseGlobalSignOutResponse(QXmlStreamReader &xml)
 {

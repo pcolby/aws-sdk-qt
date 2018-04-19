@@ -29,10 +29,9 @@ namespace AutoScalingPlans {
 
 /*!
  * \class QtAws::AutoScalingPlans::DeleteScalingPlanResponse
- *
  * \brief The DeleteScalingPlanResponse class provides an interace for AutoScalingPlans DeleteScalingPlan responses.
  *
- * \ingroup AutoScalingPlans
+ * \inmodule QtAwsAutoScalingPlans
  *
  *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
  *  scaling for your scalable
@@ -48,11 +47,7 @@ namespace AutoScalingPlans {
  */
 
 /*!
- * @brief  Constructs a new DeleteScalingPlanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteScalingPlanResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteScalingPlanResponse::DeleteScalingPlanResponse(
         const DeleteScalingPlanRequest &request,
@@ -64,6 +59,9 @@ DeleteScalingPlanResponse::DeleteScalingPlanResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteScalingPlanRequest * DeleteScalingPlanResponse::request() const
 {
     Q_D(const DeleteScalingPlanResponse);
@@ -71,9 +69,8 @@ const DeleteScalingPlanRequest * DeleteScalingPlanResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScalingPlans DeleteScalingPlan response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScalingPlans DeleteScalingPlan \a response.
  */
 void DeleteScalingPlanResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void DeleteScalingPlanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScalingPlans::DeleteScalingPlanResponsePrivate
+ * \brief The DeleteScalingPlanResponsePrivate class provides private implementation for DeleteScalingPlanResponse.
  * \internal
  *
- * \class DeleteScalingPlanResponsePrivate
- *
- * \brief Private implementation for DeleteScalingPlanResponse.
+ * \inmodule QtAwsAutoScalingPlans
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteScalingPlanResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteScalingPlanResponse instance.
+ * Constructs a DeleteScalingPlanResponsePrivate object with public implementation \a q.
  */
 DeleteScalingPlanResponsePrivate::DeleteScalingPlanResponsePrivate(
     DeleteScalingPlanResponse * const q) : AutoScalingPlansResponsePrivate(q)
@@ -104,9 +97,7 @@ DeleteScalingPlanResponsePrivate::DeleteScalingPlanResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScalingPlans DeleteScalingPlanResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScalingPlans DeleteScalingPlan response element from \a xml.
  */
 void DeleteScalingPlanResponsePrivate::parseDeleteScalingPlanResponse(QXmlStreamReader &xml)
 {

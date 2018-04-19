@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchGetItemResponse : public DynamoDBResponse {
 public:
     BatchGetItemResponse(const BatchGetItemRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchGetItemRequest * request() const;
+    virtual const BatchGetItemRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchGetItemResponse)

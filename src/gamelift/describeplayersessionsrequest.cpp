@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DescribePlayerSessionsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribePlayerSessionsRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DescribePlayerSessionsRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DescribePlayerSessionsRequestPrivate::DescribePlayerSessionsRequestPrivate(
     const GameLiftRequest::Action action, DescribePlayerSessionsRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateCacheClusterResponse : public ElastiCacheResponse {
 public:
     CreateCacheClusterResponse(const CreateCacheClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateCacheClusterRequest * request() const;
+    virtual const CreateCacheClusterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateCacheClusterResponse)

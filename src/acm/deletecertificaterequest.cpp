@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteCertificateRequestPrivate object for ACM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCertificateRequestPrivate object for ACM \a action,
+ * with public implementation \a q.
  */
 DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
     const ACMRequest::Action action, DeleteCertificateRequest * const q)

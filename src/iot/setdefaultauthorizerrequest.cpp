@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SetDefaultAuthorizerRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a SetDefaultAuthorizerRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a SetDefaultAuthorizerRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 SetDefaultAuthorizerRequestPrivate::SetDefaultAuthorizerRequestPrivate(
     const IoTRequest::Action action, SetDefaultAuthorizerRequest * const q)

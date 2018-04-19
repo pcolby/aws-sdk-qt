@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetTypeResponse : public AppSyncResponse {
 public:
     GetTypeResponse(const GetTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetTypeRequest * request() const;
+    virtual const GetTypeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetTypeResponse)

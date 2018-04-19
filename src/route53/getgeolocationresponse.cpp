@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetGeoLocationResponse
- *
  * \brief The GetGeoLocationResponse class provides an interace for Route53 GetGeoLocation responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getGeoLocation
  */
 
 /*!
- * @brief  Constructs a new GetGeoLocationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetGeoLocationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetGeoLocationResponse::GetGeoLocationResponse(
         const GetGeoLocationRequest &request,
@@ -55,6 +50,9 @@ GetGeoLocationResponse::GetGeoLocationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetGeoLocationRequest * GetGeoLocationResponse::request() const
 {
     Q_D(const GetGeoLocationResponse);
@@ -62,9 +60,8 @@ const GetGeoLocationRequest * GetGeoLocationResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 GetGeoLocation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetGeoLocation \a response.
  */
 void GetGeoLocationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetGeoLocationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetGeoLocationResponsePrivate
+ * \brief The GetGeoLocationResponsePrivate class provides private implementation for GetGeoLocationResponse.
  * \internal
  *
- * \class GetGeoLocationResponsePrivate
- *
- * \brief Private implementation for GetGeoLocationResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGeoLocationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetGeoLocationResponse instance.
+ * Constructs a GetGeoLocationResponsePrivate object with public implementation \a q.
  */
 GetGeoLocationResponsePrivate::GetGeoLocationResponsePrivate(
     GetGeoLocationResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetGeoLocationResponsePrivate::GetGeoLocationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 GetGeoLocationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetGeoLocation response element from \a xml.
  */
 void GetGeoLocationResponsePrivate::parseGetGeoLocationResponse(QXmlStreamReader &xml)
 {

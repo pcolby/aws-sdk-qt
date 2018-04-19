@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteDestinationResponse
- *
  * \brief The DeleteDestinationResponse class provides an interace for CloudWatchLogs DeleteDestination responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteDestinationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDestinationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDestinationResponse::DeleteDestinationResponse(
         const DeleteDestinationRequest &request,
@@ -84,6 +79,9 @@ DeleteDestinationResponse::DeleteDestinationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDestinationRequest * DeleteDestinationResponse::request() const
 {
     Q_D(const DeleteDestinationResponse);
@@ -91,9 +89,8 @@ const DeleteDestinationRequest * DeleteDestinationResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DeleteDestination response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DeleteDestination \a response.
  */
 void DeleteDestinationResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteDestinationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DeleteDestinationResponsePrivate
+ * \brief The DeleteDestinationResponsePrivate class provides private implementation for DeleteDestinationResponse.
  * \internal
  *
- * \class DeleteDestinationResponsePrivate
- *
- * \brief Private implementation for DeleteDestinationResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDestinationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDestinationResponse instance.
+ * Constructs a DeleteDestinationResponsePrivate object with public implementation \a q.
  */
 DeleteDestinationResponsePrivate::DeleteDestinationResponsePrivate(
     DeleteDestinationResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteDestinationResponsePrivate::DeleteDestinationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DeleteDestinationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DeleteDestination response element from \a xml.
  */
 void DeleteDestinationResponsePrivate::parseDeleteDestinationResponse(QXmlStreamReader &xml)
 {

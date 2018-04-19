@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::GetConsoleScreenshotResponse
- *
  * \brief The GetConsoleScreenshotResponse class provides an interace for EC2 GetConsoleScreenshot responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new GetConsoleScreenshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetConsoleScreenshotResponse object for \a reply to \a request, with parent \a parent.
  */
 GetConsoleScreenshotResponse::GetConsoleScreenshotResponse(
         const GetConsoleScreenshotRequest &request,
@@ -59,6 +54,9 @@ GetConsoleScreenshotResponse::GetConsoleScreenshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetConsoleScreenshotRequest * GetConsoleScreenshotResponse::request() const
 {
     Q_D(const GetConsoleScreenshotResponse);
@@ -66,9 +64,8 @@ const GetConsoleScreenshotRequest * GetConsoleScreenshotResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 GetConsoleScreenshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 GetConsoleScreenshot \a response.
  */
 void GetConsoleScreenshotResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetConsoleScreenshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::GetConsoleScreenshotResponsePrivate
+ * \brief The GetConsoleScreenshotResponsePrivate class provides private implementation for GetConsoleScreenshotResponse.
  * \internal
  *
- * \class GetConsoleScreenshotResponsePrivate
- *
- * \brief Private implementation for GetConsoleScreenshotResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConsoleScreenshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetConsoleScreenshotResponse instance.
+ * Constructs a GetConsoleScreenshotResponsePrivate object with public implementation \a q.
  */
 GetConsoleScreenshotResponsePrivate::GetConsoleScreenshotResponsePrivate(
     GetConsoleScreenshotResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ GetConsoleScreenshotResponsePrivate::GetConsoleScreenshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 GetConsoleScreenshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 GetConsoleScreenshot response element from \a xml.
  */
 void GetConsoleScreenshotResponsePrivate::parseGetConsoleScreenshotResponse(QXmlStreamReader &xml)
 {

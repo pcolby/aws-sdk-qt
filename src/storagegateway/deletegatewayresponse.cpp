@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteGatewayResponse
- *
  * \brief The DeleteGatewayResponse class provides an interace for StorageGateway DeleteGateway responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteGatewayResponse::DeleteGatewayResponse(
         const DeleteGatewayRequest &request,
@@ -124,6 +119,9 @@ DeleteGatewayResponse::DeleteGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteGatewayRequest * DeleteGatewayResponse::request() const
 {
     Q_D(const DeleteGatewayResponse);
@@ -131,9 +129,8 @@ const DeleteGatewayRequest * DeleteGatewayResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway DeleteGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DeleteGateway \a response.
  */
 void DeleteGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DeleteGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DeleteGatewayResponsePrivate
+ * \brief The DeleteGatewayResponsePrivate class provides private implementation for DeleteGatewayResponse.
  * \internal
  *
- * \class DeleteGatewayResponsePrivate
- *
- * \brief Private implementation for DeleteGatewayResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteGatewayResponse instance.
+ * Constructs a DeleteGatewayResponsePrivate object with public implementation \a q.
  */
 DeleteGatewayResponsePrivate::DeleteGatewayResponsePrivate(
     DeleteGatewayResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DeleteGatewayResponsePrivate::DeleteGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DeleteGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DeleteGateway response element from \a xml.
  */
 void DeleteGatewayResponsePrivate::parseDeleteGatewayResponse(QXmlStreamReader &xml)
 {

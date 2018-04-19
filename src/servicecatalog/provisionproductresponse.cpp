@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ProvisionProductResponse
- *
  * \brief The ProvisionProductResponse class provides an interace for ServiceCatalog ProvisionProduct responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ProvisionProductResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ProvisionProductResponse object for \a reply to \a request, with parent \a parent.
  */
 ProvisionProductResponse::ProvisionProductResponse(
         const ProvisionProductRequest &request,
@@ -61,6 +56,9 @@ ProvisionProductResponse::ProvisionProductResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ProvisionProductRequest * ProvisionProductResponse::request() const
 {
     Q_D(const ProvisionProductResponse);
@@ -68,9 +66,8 @@ const ProvisionProductRequest * ProvisionProductResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ProvisionProduct response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ProvisionProduct \a response.
  */
 void ProvisionProductResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ProvisionProductResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ProvisionProductResponsePrivate
+ * \brief The ProvisionProductResponsePrivate class provides private implementation for ProvisionProductResponse.
  * \internal
  *
- * \class ProvisionProductResponsePrivate
- *
- * \brief Private implementation for ProvisionProductResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ProvisionProductResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ProvisionProductResponse instance.
+ * Constructs a ProvisionProductResponsePrivate object with public implementation \a q.
  */
 ProvisionProductResponsePrivate::ProvisionProductResponsePrivate(
     ProvisionProductResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ProvisionProductResponsePrivate::ProvisionProductResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ProvisionProductResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ProvisionProduct response element from \a xml.
  */
 void ProvisionProductResponsePrivate::parseProvisionProductResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SearchContactsResponse
- *
  * \brief The SearchContactsResponse class provides an interace for AlexaForBusiness SearchContacts responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SearchContactsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SearchContactsResponse object for \a reply to \a request, with parent \a parent.
  */
 SearchContactsResponse::SearchContactsResponse(
         const SearchContactsRequest &request,
@@ -60,6 +55,9 @@ SearchContactsResponse::SearchContactsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SearchContactsRequest * SearchContactsResponse::request() const
 {
     Q_D(const SearchContactsResponse);
@@ -67,9 +65,8 @@ const SearchContactsRequest * SearchContactsResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness SearchContacts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness SearchContacts \a response.
  */
 void SearchContactsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void SearchContactsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::SearchContactsResponsePrivate
+ * \brief The SearchContactsResponsePrivate class provides private implementation for SearchContactsResponse.
  * \internal
  *
- * \class SearchContactsResponsePrivate
- *
- * \brief Private implementation for SearchContactsResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchContactsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SearchContactsResponse instance.
+ * Constructs a SearchContactsResponsePrivate object with public implementation \a q.
  */
 SearchContactsResponsePrivate::SearchContactsResponsePrivate(
     SearchContactsResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ SearchContactsResponsePrivate::SearchContactsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness SearchContactsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness SearchContacts response element from \a xml.
  */
 void SearchContactsResponsePrivate::parseSearchContactsResponse(QXmlStreamReader &xml)
 {

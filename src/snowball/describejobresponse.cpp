@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::DescribeJobResponse
- *
  * \brief The DescribeJobResponse class provides an interace for Snowball DescribeJob responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeJobResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeJobResponse::DescribeJobResponse(
         const DescribeJobRequest &request,
@@ -61,6 +56,9 @@ DescribeJobResponse::DescribeJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeJobRequest * DescribeJobResponse::request() const
 {
     Q_D(const DescribeJobResponse);
@@ -68,9 +66,8 @@ const DescribeJobRequest * DescribeJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball DescribeJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball DescribeJob \a response.
  */
 void DescribeJobResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::DescribeJobResponsePrivate
+ * \brief The DescribeJobResponsePrivate class provides private implementation for DescribeJobResponse.
  * \internal
  *
- * \class DescribeJobResponsePrivate
- *
- * \brief Private implementation for DescribeJobResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeJobResponse instance.
+ * Constructs a DescribeJobResponsePrivate object with public implementation \a q.
  */
 DescribeJobResponsePrivate::DescribeJobResponsePrivate(
     DescribeJobResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeJobResponsePrivate::DescribeJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball DescribeJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball DescribeJob response element from \a xml.
  */
 void DescribeJobResponsePrivate::parseDescribeJobResponse(QXmlStreamReader &xml)
 {

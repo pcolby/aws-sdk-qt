@@ -34,10 +34,10 @@ class QTAWS_EXPORT CopyProductResponse : public ServiceCatalogResponse {
 public:
     CopyProductResponse(const CopyProductRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CopyProductRequest * request() const;
+    virtual const CopyProductRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CopyProductResponse)

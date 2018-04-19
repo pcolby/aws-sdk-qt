@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableRadiusResponse : public DirectoryServiceResponse {
 public:
     EnableRadiusResponse(const EnableRadiusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableRadiusRequest * request() const;
+    virtual const EnableRadiusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EnableRadiusResponse)

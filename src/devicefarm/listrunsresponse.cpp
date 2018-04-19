@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListRunsResponse
- *
  * \brief The ListRunsResponse class provides an interace for DeviceFarm ListRuns responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListRunsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRunsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRunsResponse::ListRunsResponse(
         const ListRunsRequest &request,
@@ -57,6 +52,9 @@ ListRunsResponse::ListRunsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRunsRequest * ListRunsResponse::request() const
 {
     Q_D(const ListRunsResponse);
@@ -64,9 +62,8 @@ const ListRunsRequest * ListRunsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm ListRuns response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm ListRuns \a response.
  */
 void ListRunsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListRunsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::ListRunsResponsePrivate
+ * \brief The ListRunsResponsePrivate class provides private implementation for ListRunsResponse.
  * \internal
  *
- * \class ListRunsResponsePrivate
- *
- * \brief Private implementation for ListRunsResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRunsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRunsResponse instance.
+ * Constructs a ListRunsResponsePrivate object with public implementation \a q.
  */
 ListRunsResponsePrivate::ListRunsResponsePrivate(
     ListRunsResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ ListRunsResponsePrivate::ListRunsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm ListRunsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm ListRuns response element from \a xml.
  */
 void ListRunsResponsePrivate::parseListRunsResponse(QXmlStreamReader &xml)
 {

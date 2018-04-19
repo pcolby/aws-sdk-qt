@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::PutMailboxPermissionsResponse
- *
  * \brief The PutMailboxPermissionsResponse class provides an interace for WorkMail PutMailboxPermissions responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new PutMailboxPermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutMailboxPermissionsResponse object for \a reply to \a request, with parent \a parent.
  */
 PutMailboxPermissionsResponse::PutMailboxPermissionsResponse(
         const PutMailboxPermissionsRequest &request,
@@ -88,6 +83,9 @@ PutMailboxPermissionsResponse::PutMailboxPermissionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutMailboxPermissionsRequest * PutMailboxPermissionsResponse::request() const
 {
     Q_D(const PutMailboxPermissionsResponse);
@@ -95,9 +93,8 @@ const PutMailboxPermissionsRequest * PutMailboxPermissionsResponse::request() co
 }
 
 /*!
- * @brief  Parse a WorkMail PutMailboxPermissions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail PutMailboxPermissions \a response.
  */
 void PutMailboxPermissionsResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void PutMailboxPermissionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::PutMailboxPermissionsResponsePrivate
+ * \brief The PutMailboxPermissionsResponsePrivate class provides private implementation for PutMailboxPermissionsResponse.
  * \internal
  *
- * \class PutMailboxPermissionsResponsePrivate
- *
- * \brief Private implementation for PutMailboxPermissionsResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutMailboxPermissionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutMailboxPermissionsResponse instance.
+ * Constructs a PutMailboxPermissionsResponsePrivate object with public implementation \a q.
  */
 PutMailboxPermissionsResponsePrivate::PutMailboxPermissionsResponsePrivate(
     PutMailboxPermissionsResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ PutMailboxPermissionsResponsePrivate::PutMailboxPermissionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail PutMailboxPermissionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail PutMailboxPermissions response element from \a xml.
  */
 void PutMailboxPermissionsResponsePrivate::parsePutMailboxPermissionsResponse(QXmlStreamReader &xml)
 {

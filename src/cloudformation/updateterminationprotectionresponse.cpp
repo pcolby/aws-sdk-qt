@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::UpdateTerminationProtectionResponse
- *
  * \brief The UpdateTerminationProtectionResponse class provides an interace for CloudFormation UpdateTerminationProtection responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new UpdateTerminationProtectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTerminationProtectionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTerminationProtectionResponse::UpdateTerminationProtectionResponse(
         const UpdateTerminationProtectionRequest &request,
@@ -77,6 +72,9 @@ UpdateTerminationProtectionResponse::UpdateTerminationProtectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTerminationProtectionRequest * UpdateTerminationProtectionResponse::request() const
 {
     Q_D(const UpdateTerminationProtectionResponse);
@@ -84,9 +82,8 @@ const UpdateTerminationProtectionRequest * UpdateTerminationProtectionResponse::
 }
 
 /*!
- * @brief  Parse a CloudFormation UpdateTerminationProtection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation UpdateTerminationProtection \a response.
  */
 void UpdateTerminationProtectionResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void UpdateTerminationProtectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::UpdateTerminationProtectionResponsePrivate
+ * \brief The UpdateTerminationProtectionResponsePrivate class provides private implementation for UpdateTerminationProtectionResponse.
  * \internal
  *
- * \class UpdateTerminationProtectionResponsePrivate
- *
- * \brief Private implementation for UpdateTerminationProtectionResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTerminationProtectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTerminationProtectionResponse instance.
+ * Constructs a UpdateTerminationProtectionResponsePrivate object with public implementation \a q.
  */
 UpdateTerminationProtectionResponsePrivate::UpdateTerminationProtectionResponsePrivate(
     UpdateTerminationProtectionResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ UpdateTerminationProtectionResponsePrivate::UpdateTerminationProtectionResponseP
 }
 
 /*!
- * @brief  Parse an CloudFormation UpdateTerminationProtectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation UpdateTerminationProtection response element from \a xml.
  */
 void UpdateTerminationProtectionResponsePrivate::parseUpdateTerminationProtectionResponse(QXmlStreamReader &xml)
 {

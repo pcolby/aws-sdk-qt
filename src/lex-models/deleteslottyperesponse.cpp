@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteSlotTypeResponse
- *
  * \brief The DeleteSlotTypeResponse class provides an interace for LexModelBuildingService DeleteSlotType responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteSlotTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSlotTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSlotTypeResponse::DeleteSlotTypeResponse(
         const DeleteSlotTypeRequest &request,
@@ -59,6 +54,9 @@ DeleteSlotTypeResponse::DeleteSlotTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSlotTypeRequest * DeleteSlotTypeResponse::request() const
 {
     Q_D(const DeleteSlotTypeResponse);
@@ -66,9 +64,8 @@ const DeleteSlotTypeRequest * DeleteSlotTypeResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService DeleteSlotType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService DeleteSlotType \a response.
  */
 void DeleteSlotTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteSlotTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::DeleteSlotTypeResponsePrivate
+ * \brief The DeleteSlotTypeResponsePrivate class provides private implementation for DeleteSlotTypeResponse.
  * \internal
  *
- * \class DeleteSlotTypeResponsePrivate
- *
- * \brief Private implementation for DeleteSlotTypeResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSlotTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSlotTypeResponse instance.
+ * Constructs a DeleteSlotTypeResponsePrivate object with public implementation \a q.
  */
 DeleteSlotTypeResponsePrivate::DeleteSlotTypeResponsePrivate(
     DeleteSlotTypeResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteSlotTypeResponsePrivate::DeleteSlotTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService DeleteSlotTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService DeleteSlotType response element from \a xml.
  */
 void DeleteSlotTypeResponsePrivate::parseDeleteSlotTypeResponse(QXmlStreamReader &xml)
 {

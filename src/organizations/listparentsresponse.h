@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListParentsResponse : public OrganizationsResponse {
 public:
     ListParentsResponse(const ListParentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListParentsRequest * request() const;
+    virtual const ListParentsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListParentsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListEventSourceMappingsResponse : public LambdaResponse {
 public:
     ListEventSourceMappingsResponse(const ListEventSourceMappingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListEventSourceMappingsRequest * request() const;
+    virtual const ListEventSourceMappingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListEventSourceMappingsResponse)

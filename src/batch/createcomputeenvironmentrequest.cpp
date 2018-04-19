@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateComputeEnvironmentRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateComputeEnvironmentRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a CreateComputeEnvironmentRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 CreateComputeEnvironmentRequestPrivate::CreateComputeEnvironmentRequestPrivate(
     const BatchRequest::Action action, CreateComputeEnvironmentRequest * const q)

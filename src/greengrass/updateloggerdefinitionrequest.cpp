@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateLoggerDefinitionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateLoggerDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a UpdateLoggerDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 UpdateLoggerDefinitionRequestPrivate::UpdateLoggerDefinitionRequestPrivate(
     const GreengrassRequest::Action action, UpdateLoggerDefinitionRequest * const q)

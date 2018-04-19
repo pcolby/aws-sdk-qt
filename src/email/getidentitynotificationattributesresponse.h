@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetIdentityNotificationAttributesResponse : public SESRespons
 public:
     GetIdentityNotificationAttributesResponse(const GetIdentityNotificationAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetIdentityNotificationAttributesRequest * request() const;
+    virtual const GetIdentityNotificationAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetIdentityNotificationAttributesResponse)

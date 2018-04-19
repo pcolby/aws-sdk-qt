@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRdsDbInstanceRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a UpdateRdsDbInstanceRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRdsDbInstanceRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 UpdateRdsDbInstanceRequestPrivate::UpdateRdsDbInstanceRequestPrivate(
     const OpsWorksRequest::Action action, UpdateRdsDbInstanceRequest * const q)

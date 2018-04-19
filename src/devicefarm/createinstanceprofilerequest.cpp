@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceProfileRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateInstanceProfileRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a CreateInstanceProfileRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 CreateInstanceProfileRequestPrivate::CreateInstanceProfileRequestPrivate(
     const DeviceFarmRequest::Action action, CreateInstanceProfileRequest * const q)

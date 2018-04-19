@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDataRetentionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a UpdateDataRetentionRequestPrivate object for KinesisVideo \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDataRetentionRequestPrivate object for KinesisVideo \a action,
+ * with public implementation \a q.
  */
 UpdateDataRetentionRequestPrivate::UpdateDataRetentionRequestPrivate(
     const KinesisVideoRequest::Action action, UpdateDataRetentionRequest * const q)

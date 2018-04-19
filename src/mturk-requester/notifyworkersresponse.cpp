@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::NotifyWorkersResponse
- *
  * \brief The NotifyWorkersResponse class provides an interace for MTurk NotifyWorkers responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::notifyWorkers
  */
 
 /*!
- * @brief  Constructs a new NotifyWorkersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a NotifyWorkersResponse object for \a reply to \a request, with parent \a parent.
  */
 NotifyWorkersResponse::NotifyWorkersResponse(
         const NotifyWorkersRequest &request,
@@ -55,6 +50,9 @@ NotifyWorkersResponse::NotifyWorkersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const NotifyWorkersRequest * NotifyWorkersResponse::request() const
 {
     Q_D(const NotifyWorkersResponse);
@@ -62,9 +60,8 @@ const NotifyWorkersRequest * NotifyWorkersResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk NotifyWorkers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk NotifyWorkers \a response.
  */
 void NotifyWorkersResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void NotifyWorkersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::NotifyWorkersResponsePrivate
+ * \brief The NotifyWorkersResponsePrivate class provides private implementation for NotifyWorkersResponse.
  * \internal
  *
- * \class NotifyWorkersResponsePrivate
- *
- * \brief Private implementation for NotifyWorkersResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new NotifyWorkersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public NotifyWorkersResponse instance.
+ * Constructs a NotifyWorkersResponsePrivate object with public implementation \a q.
  */
 NotifyWorkersResponsePrivate::NotifyWorkersResponsePrivate(
     NotifyWorkersResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ NotifyWorkersResponsePrivate::NotifyWorkersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk NotifyWorkersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk NotifyWorkers response element from \a xml.
  */
 void NotifyWorkersResponsePrivate::parseNotifyWorkersResponse(QXmlStreamReader &xml)
 {

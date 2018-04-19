@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSchemaRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteSchemaRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSchemaRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 DeleteSchemaRequestPrivate::DeleteSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, DeleteSchemaRequest * const q)

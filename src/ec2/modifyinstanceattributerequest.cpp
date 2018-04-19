@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceAttributeRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ModifyInstanceAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyInstanceAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyInstanceAttributeRequestPrivate::ModifyInstanceAttributeRequestPrivate(
     const EC2Request::Action action, ModifyInstanceAttributeRequest * const q)

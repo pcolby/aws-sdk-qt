@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DeletePlatformVersionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeletePlatformVersionRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DeletePlatformVersionRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DeletePlatformVersionRequestPrivate::DeletePlatformVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeletePlatformVersionRequest * const q)

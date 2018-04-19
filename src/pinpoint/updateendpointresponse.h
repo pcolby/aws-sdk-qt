@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateEndpointResponse : public PinpointResponse {
 public:
     UpdateEndpointResponse(const UpdateEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateEndpointRequest * request() const;
+    virtual const UpdateEndpointRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateEndpointResponse)

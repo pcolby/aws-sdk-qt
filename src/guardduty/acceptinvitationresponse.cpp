@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::AcceptInvitationResponse
- *
  * \brief The AcceptInvitationResponse class provides an interace for GuardDuty AcceptInvitation responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::acceptInvitation
  */
 
 /*!
- * @brief  Constructs a new AcceptInvitationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AcceptInvitationResponse object for \a reply to \a request, with parent \a parent.
  */
 AcceptInvitationResponse::AcceptInvitationResponse(
         const AcceptInvitationRequest &request,
@@ -55,6 +50,9 @@ AcceptInvitationResponse::AcceptInvitationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AcceptInvitationRequest * AcceptInvitationResponse::request() const
 {
     Q_D(const AcceptInvitationResponse);
@@ -62,9 +60,8 @@ const AcceptInvitationRequest * AcceptInvitationResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty AcceptInvitation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty AcceptInvitation \a response.
  */
 void AcceptInvitationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void AcceptInvitationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::AcceptInvitationResponsePrivate
+ * \brief The AcceptInvitationResponsePrivate class provides private implementation for AcceptInvitationResponse.
  * \internal
  *
- * \class AcceptInvitationResponsePrivate
- *
- * \brief Private implementation for AcceptInvitationResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptInvitationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AcceptInvitationResponse instance.
+ * Constructs a AcceptInvitationResponsePrivate object with public implementation \a q.
  */
 AcceptInvitationResponsePrivate::AcceptInvitationResponsePrivate(
     AcceptInvitationResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ AcceptInvitationResponsePrivate::AcceptInvitationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty AcceptInvitationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty AcceptInvitation response element from \a xml.
  */
 void AcceptInvitationResponsePrivate::parseAcceptInvitationResponse(QXmlStreamReader &xml)
 {

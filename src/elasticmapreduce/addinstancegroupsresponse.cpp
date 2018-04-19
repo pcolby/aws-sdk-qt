@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::AddInstanceGroupsResponse
- *
  * \brief The AddInstanceGroupsResponse class provides an interace for EMR AddInstanceGroups responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new AddInstanceGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddInstanceGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 AddInstanceGroupsResponse::AddInstanceGroupsResponse(
         const AddInstanceGroupsRequest &request,
@@ -58,6 +53,9 @@ AddInstanceGroupsResponse::AddInstanceGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddInstanceGroupsRequest * AddInstanceGroupsResponse::request() const
 {
     Q_D(const AddInstanceGroupsResponse);
@@ -65,9 +63,8 @@ const AddInstanceGroupsRequest * AddInstanceGroupsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR AddInstanceGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR AddInstanceGroups \a response.
  */
 void AddInstanceGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void AddInstanceGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::AddInstanceGroupsResponsePrivate
+ * \brief The AddInstanceGroupsResponsePrivate class provides private implementation for AddInstanceGroupsResponse.
  * \internal
  *
- * \class AddInstanceGroupsResponsePrivate
- *
- * \brief Private implementation for AddInstanceGroupsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddInstanceGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddInstanceGroupsResponse instance.
+ * Constructs a AddInstanceGroupsResponsePrivate object with public implementation \a q.
  */
 AddInstanceGroupsResponsePrivate::AddInstanceGroupsResponsePrivate(
     AddInstanceGroupsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ AddInstanceGroupsResponsePrivate::AddInstanceGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR AddInstanceGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR AddInstanceGroups response element from \a xml.
  */
 void AddInstanceGroupsResponsePrivate::parseAddInstanceGroupsResponse(QXmlStreamReader &xml)
 {

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateRoomRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CreateRoomRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a CreateRoomRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 CreateRoomRequestPrivate::CreateRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, CreateRoomRequest * const q)

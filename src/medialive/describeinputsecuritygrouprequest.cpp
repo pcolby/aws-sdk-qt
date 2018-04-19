@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInputSecurityGroupRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeInputSecurityGroupRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInputSecurityGroupRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 DescribeInputSecurityGroupRequestPrivate::DescribeInputSecurityGroupRequestPrivate(
     const MediaLiveRequest::Action action, DescribeInputSecurityGroupRequest * const q)

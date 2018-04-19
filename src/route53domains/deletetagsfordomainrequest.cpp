@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsForDomainRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteTagsForDomainRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTagsForDomainRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 DeleteTagsForDomainRequestPrivate::DeleteTagsForDomainRequestPrivate(
     const Route53DomainsRequest::Action action, DeleteTagsForDomainRequest * const q)

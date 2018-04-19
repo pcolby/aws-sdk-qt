@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDataSourcesRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeDataSourcesRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDataSourcesRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 DescribeDataSourcesRequestPrivate::DescribeDataSourcesRequestPrivate(
     const MachineLearningRequest::Action action, DescribeDataSourcesRequest * const q)

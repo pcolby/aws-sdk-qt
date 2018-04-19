@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyTargetGroupAttributesResponse : public ElasticLoadBalan
 public:
     ModifyTargetGroupAttributesResponse(const ModifyTargetGroupAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyTargetGroupAttributesRequest * request() const;
+    virtual const ModifyTargetGroupAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyTargetGroupAttributesResponse)

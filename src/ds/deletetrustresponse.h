@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteTrustResponse : public DirectoryServiceResponse {
 public:
     DeleteTrustResponse(const DeleteTrustRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteTrustRequest * request() const;
+    virtual const DeleteTrustRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteTrustResponse)

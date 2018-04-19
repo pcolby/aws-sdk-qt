@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * RegisterEventTopicRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a RegisterEventTopicRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a RegisterEventTopicRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 RegisterEventTopicRequestPrivate::RegisterEventTopicRequestPrivate(
     const DirectoryServiceRequest::Action action, RegisterEventTopicRequest * const q)

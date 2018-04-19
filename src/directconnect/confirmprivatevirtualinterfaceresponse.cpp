@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::ConfirmPrivateVirtualInterfaceResponse
- *
  * \brief The ConfirmPrivateVirtualInterfaceResponse class provides an interace for DirectConnect ConfirmPrivateVirtualInterface responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new ConfirmPrivateVirtualInterfaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ConfirmPrivateVirtualInterfaceResponse object for \a reply to \a request, with parent \a parent.
  */
 ConfirmPrivateVirtualInterfaceResponse::ConfirmPrivateVirtualInterfaceResponse(
         const ConfirmPrivateVirtualInterfaceRequest &request,
@@ -63,6 +58,9 @@ ConfirmPrivateVirtualInterfaceResponse::ConfirmPrivateVirtualInterfaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ConfirmPrivateVirtualInterfaceRequest * ConfirmPrivateVirtualInterfaceResponse::request() const
 {
     Q_D(const ConfirmPrivateVirtualInterfaceResponse);
@@ -70,9 +68,8 @@ const ConfirmPrivateVirtualInterfaceRequest * ConfirmPrivateVirtualInterfaceResp
 }
 
 /*!
- * @brief  Parse a DirectConnect ConfirmPrivateVirtualInterface response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect ConfirmPrivateVirtualInterface \a response.
  */
 void ConfirmPrivateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void ConfirmPrivateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::ConfirmPrivateVirtualInterfaceResponsePrivate
+ * \brief The ConfirmPrivateVirtualInterfaceResponsePrivate class provides private implementation for ConfirmPrivateVirtualInterfaceResponse.
  * \internal
  *
- * \class ConfirmPrivateVirtualInterfaceResponsePrivate
- *
- * \brief Private implementation for ConfirmPrivateVirtualInterfaceResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmPrivateVirtualInterfaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ConfirmPrivateVirtualInterfaceResponse instance.
+ * Constructs a ConfirmPrivateVirtualInterfaceResponsePrivate object with public implementation \a q.
  */
 ConfirmPrivateVirtualInterfaceResponsePrivate::ConfirmPrivateVirtualInterfaceResponsePrivate(
     ConfirmPrivateVirtualInterfaceResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ ConfirmPrivateVirtualInterfaceResponsePrivate::ConfirmPrivateVirtualInterfaceRes
 }
 
 /*!
- * @brief  Parse an DirectConnect ConfirmPrivateVirtualInterfaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect ConfirmPrivateVirtualInterface response element from \a xml.
  */
 void ConfirmPrivateVirtualInterfaceResponsePrivate::parseConfirmPrivateVirtualInterfaceResponse(QXmlStreamReader &xml)
 {

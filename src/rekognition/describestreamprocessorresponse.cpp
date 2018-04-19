@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DescribeStreamProcessorResponse
- *
  * \brief The DescribeStreamProcessorResponse class provides an interace for Rekognition DescribeStreamProcessor responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DescribeStreamProcessorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStreamProcessorResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStreamProcessorResponse::DescribeStreamProcessorResponse(
         const DescribeStreamProcessorRequest &request,
@@ -56,6 +51,9 @@ DescribeStreamProcessorResponse::DescribeStreamProcessorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStreamProcessorRequest * DescribeStreamProcessorResponse::request() const
 {
     Q_D(const DescribeStreamProcessorResponse);
@@ -63,9 +61,8 @@ const DescribeStreamProcessorRequest * DescribeStreamProcessorResponse::request(
 }
 
 /*!
- * @brief  Parse a Rekognition DescribeStreamProcessor response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition DescribeStreamProcessor \a response.
  */
 void DescribeStreamProcessorResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DescribeStreamProcessorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::DescribeStreamProcessorResponsePrivate
+ * \brief The DescribeStreamProcessorResponsePrivate class provides private implementation for DescribeStreamProcessorResponse.
  * \internal
  *
- * \class DescribeStreamProcessorResponsePrivate
- *
- * \brief Private implementation for DescribeStreamProcessorResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStreamProcessorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStreamProcessorResponse instance.
+ * Constructs a DescribeStreamProcessorResponsePrivate object with public implementation \a q.
  */
 DescribeStreamProcessorResponsePrivate::DescribeStreamProcessorResponsePrivate(
     DescribeStreamProcessorResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ DescribeStreamProcessorResponsePrivate::DescribeStreamProcessorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition DescribeStreamProcessorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition DescribeStreamProcessor response element from \a xml.
  */
 void DescribeStreamProcessorResponsePrivate::parseDescribeStreamProcessorResponse(QXmlStreamReader &xml)
 {

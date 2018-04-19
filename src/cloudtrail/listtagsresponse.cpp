@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::ListTagsResponse
- *
  * \brief The ListTagsResponse class provides an interace for CloudTrail ListTags responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new ListTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsResponse::ListTagsResponse(
         const ListTagsRequest &request,
@@ -78,6 +73,9 @@ ListTagsResponse::ListTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsRequest * ListTagsResponse::request() const
 {
     Q_D(const ListTagsResponse);
@@ -85,9 +83,8 @@ const ListTagsRequest * ListTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail ListTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail ListTags \a response.
  */
 void ListTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::ListTagsResponsePrivate
+ * \brief The ListTagsResponsePrivate class provides private implementation for ListTagsResponse.
  * \internal
  *
- * \class ListTagsResponsePrivate
- *
- * \brief Private implementation for ListTagsResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsResponse instance.
+ * Constructs a ListTagsResponsePrivate object with public implementation \a q.
  */
 ListTagsResponsePrivate::ListTagsResponsePrivate(
     ListTagsResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ ListTagsResponsePrivate::ListTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail ListTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail ListTags response element from \a xml.
  */
 void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
 {

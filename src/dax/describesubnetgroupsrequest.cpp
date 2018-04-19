@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSubnetGroupsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeSubnetGroupsRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSubnetGroupsRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 DescribeSubnetGroupsRequestPrivate::DescribeSubnetGroupsRequestPrivate(
     const DAXRequest::Action action, DescribeSubnetGroupsRequest * const q)

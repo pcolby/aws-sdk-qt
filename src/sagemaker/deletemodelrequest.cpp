@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteModelRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteModelRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a DeleteModelRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 DeleteModelRequestPrivate::DeleteModelRequestPrivate(
     const SageMakerRequest::Action action, DeleteModelRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSlotTypeRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteSlotTypeRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSlotTypeRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 DeleteSlotTypeRequestPrivate::DeleteSlotTypeRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteSlotTypeRequest * const q)

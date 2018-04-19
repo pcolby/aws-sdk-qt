@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeScalingParametersResponse : public CloudSearchRespons
 public:
     DescribeScalingParametersResponse(const DescribeScalingParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeScalingParametersRequest * request() const;
+    virtual const DescribeScalingParametersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeScalingParametersResponse)

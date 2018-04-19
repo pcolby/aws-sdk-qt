@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AttachVolumeRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a AttachVolumeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AttachVolumeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AttachVolumeRequestPrivate::AttachVolumeRequestPrivate(
     const EC2Request::Action action, AttachVolumeRequest * const q)

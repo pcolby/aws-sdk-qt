@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancersRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a AttachLoadBalancersRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a AttachLoadBalancersRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 AttachLoadBalancersRequestPrivate::AttachLoadBalancersRequestPrivate(
     const AutoScalingRequest::Action action, AttachLoadBalancersRequest * const q)

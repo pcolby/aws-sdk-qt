@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::DescribeFleetsResponse
- *
  * \brief The DescribeFleetsResponse class provides an interace for AppStream DescribeFleets responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new DescribeFleetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeFleetsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeFleetsResponse::DescribeFleetsResponse(
         const DescribeFleetsRequest &request,
@@ -58,6 +53,9 @@ DescribeFleetsResponse::DescribeFleetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeFleetsRequest * DescribeFleetsResponse::request() const
 {
     Q_D(const DescribeFleetsResponse);
@@ -65,9 +63,8 @@ const DescribeFleetsRequest * DescribeFleetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream DescribeFleets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream DescribeFleets \a response.
  */
 void DescribeFleetsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeFleetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::DescribeFleetsResponsePrivate
+ * \brief The DescribeFleetsResponsePrivate class provides private implementation for DescribeFleetsResponse.
  * \internal
  *
- * \class DescribeFleetsResponsePrivate
- *
- * \brief Private implementation for DescribeFleetsResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFleetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeFleetsResponse instance.
+ * Constructs a DescribeFleetsResponsePrivate object with public implementation \a q.
  */
 DescribeFleetsResponsePrivate::DescribeFleetsResponsePrivate(
     DescribeFleetsResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeFleetsResponsePrivate::DescribeFleetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream DescribeFleetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream DescribeFleets response element from \a xml.
  */
 void DescribeFleetsResponsePrivate::parseDescribeFleetsResponse(QXmlStreamReader &xml)
 {

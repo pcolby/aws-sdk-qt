@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateCustomVerificationEmailTemplateRequest:
  */
 
 /*!
- *
- * Constructs a CreateCustomVerificationEmailTemplateRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a CreateCustomVerificationEmailTemplateRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 CreateCustomVerificationEmailTemplateRequestPrivate::CreateCustomVerificationEmailTemplateRequestPrivate(
     const SESRequest::Action action, CreateCustomVerificationEmailTemplateRequest * const q)

@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::ApplySecurityGroupsToLoadBalancerResponse
- *
  * \brief The ApplySecurityGroupsToLoadBalancerResponse class provides an interace for ElasticLoadBalancing ApplySecurityGroupsToLoadBalancer responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new ApplySecurityGroupsToLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ApplySecurityGroupsToLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 ApplySecurityGroupsToLoadBalancerResponse::ApplySecurityGroupsToLoadBalancerResponse(
         const ApplySecurityGroupsToLoadBalancerRequest &request,
@@ -83,6 +78,9 @@ ApplySecurityGroupsToLoadBalancerResponse::ApplySecurityGroupsToLoadBalancerResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ApplySecurityGroupsToLoadBalancerRequest * ApplySecurityGroupsToLoadBalancerResponse::request() const
 {
     Q_D(const ApplySecurityGroupsToLoadBalancerResponse);
@@ -90,9 +88,8 @@ const ApplySecurityGroupsToLoadBalancerRequest * ApplySecurityGroupsToLoadBalanc
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing ApplySecurityGroupsToLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing ApplySecurityGroupsToLoadBalancer \a response.
  */
 void ApplySecurityGroupsToLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void ApplySecurityGroupsToLoadBalancerResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::ApplySecurityGroupsToLoadBalancerResponsePrivate
+ * \brief The ApplySecurityGroupsToLoadBalancerResponsePrivate class provides private implementation for ApplySecurityGroupsToLoadBalancerResponse.
  * \internal
  *
- * \class ApplySecurityGroupsToLoadBalancerResponsePrivate
- *
- * \brief Private implementation for ApplySecurityGroupsToLoadBalancerResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplySecurityGroupsToLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ApplySecurityGroupsToLoadBalancerResponse instance.
+ * Constructs a ApplySecurityGroupsToLoadBalancerResponsePrivate object with public implementation \a q.
  */
 ApplySecurityGroupsToLoadBalancerResponsePrivate::ApplySecurityGroupsToLoadBalancerResponsePrivate(
     ApplySecurityGroupsToLoadBalancerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ ApplySecurityGroupsToLoadBalancerResponsePrivate::ApplySecurityGroupsToLoadBalan
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing ApplySecurityGroupsToLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing ApplySecurityGroupsToLoadBalancer response element from \a xml.
  */
 void ApplySecurityGroupsToLoadBalancerResponsePrivate::parseApplySecurityGroupsToLoadBalancerResponse(QXmlStreamReader &xml)
 {

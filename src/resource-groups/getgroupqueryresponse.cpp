@@ -29,10 +29,9 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::GetGroupQueryResponse
- *
  * \brief The GetGroupQueryResponse class provides an interace for ResourceGroups GetGroupQuery responses.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  *
  *  <fullname>AWS Resource Groups</fullname>
  * 
@@ -83,11 +82,7 @@ namespace ResourceGroups {
  */
 
 /*!
- * @brief  Constructs a new GetGroupQueryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetGroupQueryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetGroupQueryResponse::GetGroupQueryResponse(
         const GetGroupQueryRequest &request,
@@ -99,6 +94,9 @@ GetGroupQueryResponse::GetGroupQueryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetGroupQueryRequest * GetGroupQueryResponse::request() const
 {
     Q_D(const GetGroupQueryResponse);
@@ -106,9 +104,8 @@ const GetGroupQueryRequest * GetGroupQueryResponse::request() const
 }
 
 /*!
- * @brief  Parse a ResourceGroups GetGroupQuery response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ResourceGroups GetGroupQuery \a response.
  */
 void GetGroupQueryResponse::parseSuccess(QIODevice &response)
 {
@@ -118,19 +115,15 @@ void GetGroupQueryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ResourceGroups::GetGroupQueryResponsePrivate
+ * \brief The GetGroupQueryResponsePrivate class provides private implementation for GetGroupQueryResponse.
  * \internal
  *
- * \class GetGroupQueryResponsePrivate
- *
- * \brief Private implementation for GetGroupQueryResponse.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGroupQueryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetGroupQueryResponse instance.
+ * Constructs a GetGroupQueryResponsePrivate object with public implementation \a q.
  */
 GetGroupQueryResponsePrivate::GetGroupQueryResponsePrivate(
     GetGroupQueryResponse * const q) : ResourceGroupsResponsePrivate(q)
@@ -139,9 +132,7 @@ GetGroupQueryResponsePrivate::GetGroupQueryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ResourceGroups GetGroupQueryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ResourceGroups GetGroupQuery response element from \a xml.
  */
 void GetGroupQueryResponsePrivate::parseGetGroupQueryResponse(QXmlStreamReader &xml)
 {

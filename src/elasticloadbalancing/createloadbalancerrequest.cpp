@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * CreateLoadBalancerRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a CreateLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 CreateLoadBalancerRequestPrivate::CreateLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, CreateLoadBalancerRequest * const q)

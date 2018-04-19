@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DeleteAnalysisSchemeResponse
- *
  * \brief The DeleteAnalysisSchemeResponse class provides an interace for CloudSearch DeleteAnalysisScheme responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DeleteAnalysisSchemeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAnalysisSchemeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAnalysisSchemeResponse::DeleteAnalysisSchemeResponse(
         const DeleteAnalysisSchemeRequest &request,
@@ -66,6 +61,9 @@ DeleteAnalysisSchemeResponse::DeleteAnalysisSchemeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAnalysisSchemeRequest * DeleteAnalysisSchemeResponse::request() const
 {
     Q_D(const DeleteAnalysisSchemeResponse);
@@ -73,9 +71,8 @@ const DeleteAnalysisSchemeRequest * DeleteAnalysisSchemeResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudSearch DeleteAnalysisScheme response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DeleteAnalysisScheme \a response.
  */
 void DeleteAnalysisSchemeResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteAnalysisSchemeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DeleteAnalysisSchemeResponsePrivate
+ * \brief The DeleteAnalysisSchemeResponsePrivate class provides private implementation for DeleteAnalysisSchemeResponse.
  * \internal
  *
- * \class DeleteAnalysisSchemeResponsePrivate
- *
- * \brief Private implementation for DeleteAnalysisSchemeResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAnalysisSchemeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAnalysisSchemeResponse instance.
+ * Constructs a DeleteAnalysisSchemeResponsePrivate object with public implementation \a q.
  */
 DeleteAnalysisSchemeResponsePrivate::DeleteAnalysisSchemeResponsePrivate(
     DeleteAnalysisSchemeResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteAnalysisSchemeResponsePrivate::DeleteAnalysisSchemeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DeleteAnalysisSchemeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DeleteAnalysisScheme response element from \a xml.
  */
 void DeleteAnalysisSchemeResponsePrivate::parseDeleteAnalysisSchemeResponse(QXmlStreamReader &xml)
 {

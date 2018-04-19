@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::ListEventSubscriptionsResponse
- *
  * \brief The ListEventSubscriptionsResponse class provides an interace for Inspector ListEventSubscriptions responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new ListEventSubscriptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListEventSubscriptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListEventSubscriptionsResponse::ListEventSubscriptionsResponse(
         const ListEventSubscriptionsRequest &request,
@@ -60,6 +55,9 @@ ListEventSubscriptionsResponse::ListEventSubscriptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListEventSubscriptionsRequest * ListEventSubscriptionsResponse::request() const
 {
     Q_D(const ListEventSubscriptionsResponse);
@@ -67,9 +65,8 @@ const ListEventSubscriptionsRequest * ListEventSubscriptionsResponse::request() 
 }
 
 /*!
- * @brief  Parse a Inspector ListEventSubscriptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector ListEventSubscriptions \a response.
  */
 void ListEventSubscriptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListEventSubscriptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::ListEventSubscriptionsResponsePrivate
+ * \brief The ListEventSubscriptionsResponsePrivate class provides private implementation for ListEventSubscriptionsResponse.
  * \internal
  *
- * \class ListEventSubscriptionsResponsePrivate
- *
- * \brief Private implementation for ListEventSubscriptionsResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEventSubscriptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListEventSubscriptionsResponse instance.
+ * Constructs a ListEventSubscriptionsResponsePrivate object with public implementation \a q.
  */
 ListEventSubscriptionsResponsePrivate::ListEventSubscriptionsResponsePrivate(
     ListEventSubscriptionsResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ ListEventSubscriptionsResponsePrivate::ListEventSubscriptionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector ListEventSubscriptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector ListEventSubscriptions response element from \a xml.
  */
 void ListEventSubscriptionsResponsePrivate::parseListEventSubscriptionsResponse(QXmlStreamReader &xml)
 {

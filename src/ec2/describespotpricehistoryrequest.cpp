@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotPriceHistoryRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeSpotPriceHistoryRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSpotPriceHistoryRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeSpotPriceHistoryRequestPrivate::DescribeSpotPriceHistoryRequestPrivate(
     const EC2Request::Action action, DescribeSpotPriceHistoryRequest * const q)

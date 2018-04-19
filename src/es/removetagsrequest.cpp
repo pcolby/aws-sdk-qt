@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a RemoveTagsRequestPrivate object for ElasticsearchService \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsRequestPrivate object for ElasticsearchService \a action,
+ * with public implementation \a q.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const ElasticsearchServiceRequest::Action action, RemoveTagsRequest * const q)

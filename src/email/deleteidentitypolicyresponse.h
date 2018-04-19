@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteIdentityPolicyResponse : public SESResponse {
 public:
     DeleteIdentityPolicyResponse(const DeleteIdentityPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteIdentityPolicyRequest * request() const;
+    virtual const DeleteIdentityPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteIdentityPolicyResponse)

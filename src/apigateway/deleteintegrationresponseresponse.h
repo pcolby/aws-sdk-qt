@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteIntegrationResponseResponse : public APIGatewayResponse
 public:
     DeleteIntegrationResponseResponse(const DeleteIntegrationResponseRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteIntegrationResponseRequest * request() const;
+    virtual const DeleteIntegrationResponseRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteIntegrationResponseResponse)

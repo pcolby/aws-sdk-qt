@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketMetricsConfigurationRequest::respons
  */
 
 /*!
- *
- * Constructs a GetBucketMetricsConfigurationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketMetricsConfigurationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketMetricsConfigurationRequestPrivate::GetBucketMetricsConfigurationRequestPrivate(
     const S3Request::Action action, GetBucketMetricsConfigurationRequest * const q)

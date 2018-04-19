@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * AddCommunicationToCaseRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a AddCommunicationToCaseRequestPrivate object for Support \a action with,
- * public implementation \a q.
+ * Constructs a AddCommunicationToCaseRequestPrivate object for Support \a action,
+ * with public implementation \a q.
  */
 AddCommunicationToCaseRequestPrivate::AddCommunicationToCaseRequestPrivate(
     const SupportRequest::Action action, AddCommunicationToCaseRequest * const q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * AddApplicationInputRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a AddApplicationInputRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a AddApplicationInputRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 AddApplicationInputRequestPrivate::AddApplicationInputRequestPrivate(
     const KinesisAnalyticsRequest::Action action, AddApplicationInputRequest * const q)

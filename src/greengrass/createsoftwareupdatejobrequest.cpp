@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateSoftwareUpdateJobRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CreateSoftwareUpdateJobRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a CreateSoftwareUpdateJobRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 CreateSoftwareUpdateJobRequestPrivate::CreateSoftwareUpdateJobRequestPrivate(
     const GreengrassRequest::Action action, CreateSoftwareUpdateJobRequest * const q)

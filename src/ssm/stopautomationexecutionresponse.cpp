@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::StopAutomationExecutionResponse
- *
  * \brief The StopAutomationExecutionResponse class provides an interace for SSM StopAutomationExecution responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new StopAutomationExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopAutomationExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 StopAutomationExecutionResponse::StopAutomationExecutionResponse(
         const StopAutomationExecutionRequest &request,
@@ -79,6 +74,9 @@ StopAutomationExecutionResponse::StopAutomationExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopAutomationExecutionRequest * StopAutomationExecutionResponse::request() const
 {
     Q_D(const StopAutomationExecutionResponse);
@@ -86,9 +84,8 @@ const StopAutomationExecutionRequest * StopAutomationExecutionResponse::request(
 }
 
 /*!
- * @brief  Parse a SSM StopAutomationExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM StopAutomationExecution \a response.
  */
 void StopAutomationExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void StopAutomationExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::StopAutomationExecutionResponsePrivate
+ * \brief The StopAutomationExecutionResponsePrivate class provides private implementation for StopAutomationExecutionResponse.
  * \internal
  *
- * \class StopAutomationExecutionResponsePrivate
- *
- * \brief Private implementation for StopAutomationExecutionResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopAutomationExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopAutomationExecutionResponse instance.
+ * Constructs a StopAutomationExecutionResponsePrivate object with public implementation \a q.
  */
 StopAutomationExecutionResponsePrivate::StopAutomationExecutionResponsePrivate(
     StopAutomationExecutionResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ StopAutomationExecutionResponsePrivate::StopAutomationExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM StopAutomationExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM StopAutomationExecution response element from \a xml.
  */
 void StopAutomationExecutionResponsePrivate::parseStopAutomationExecutionResponse(QXmlStreamReader &xml)
 {

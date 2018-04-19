@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketAclRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetBucketAclRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketAclRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketAclRequestPrivate::GetBucketAclRequestPrivate(
     const S3Request::Action action, GetBucketAclRequest * const q)

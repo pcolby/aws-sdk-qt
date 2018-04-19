@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreateBGPPeerResponse
- *
  * \brief The CreateBGPPeerResponse class provides an interace for DirectConnect CreateBGPPeer responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreateBGPPeerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateBGPPeerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateBGPPeerResponse::CreateBGPPeerResponse(
         const CreateBGPPeerRequest &request,
@@ -63,6 +58,9 @@ CreateBGPPeerResponse::CreateBGPPeerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateBGPPeerRequest * CreateBGPPeerResponse::request() const
 {
     Q_D(const CreateBGPPeerResponse);
@@ -70,9 +68,8 @@ const CreateBGPPeerRequest * CreateBGPPeerResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect CreateBGPPeer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect CreateBGPPeer \a response.
  */
 void CreateBGPPeerResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void CreateBGPPeerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::CreateBGPPeerResponsePrivate
+ * \brief The CreateBGPPeerResponsePrivate class provides private implementation for CreateBGPPeerResponse.
  * \internal
  *
- * \class CreateBGPPeerResponsePrivate
- *
- * \brief Private implementation for CreateBGPPeerResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBGPPeerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateBGPPeerResponse instance.
+ * Constructs a CreateBGPPeerResponsePrivate object with public implementation \a q.
  */
 CreateBGPPeerResponsePrivate::CreateBGPPeerResponsePrivate(
     CreateBGPPeerResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ CreateBGPPeerResponsePrivate::CreateBGPPeerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect CreateBGPPeerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect CreateBGPPeer response element from \a xml.
  */
 void CreateBGPPeerResponsePrivate::parseCreateBGPPeerResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteClusterSubnetGroupResponse : public RedshiftResponse {
 public:
     DeleteClusterSubnetGroupResponse(const DeleteClusterSubnetGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteClusterSubnetGroupRequest * request() const;
+    virtual const DeleteClusterSubnetGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteClusterSubnetGroupResponse)

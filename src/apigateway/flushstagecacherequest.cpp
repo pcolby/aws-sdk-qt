@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * FlushStageCacheRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a FlushStageCacheRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a FlushStageCacheRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 FlushStageCacheRequestPrivate::FlushStageCacheRequestPrivate(
     const APIGatewayRequest::Action action, FlushStageCacheRequest * const q)

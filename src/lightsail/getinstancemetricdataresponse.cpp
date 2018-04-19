@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetInstanceMetricDataResponse
- *
  * \brief The GetInstanceMetricDataResponse class provides an interace for Lightsail GetInstanceMetricData responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetInstanceMetricDataResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInstanceMetricDataResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInstanceMetricDataResponse::GetInstanceMetricDataResponse(
         const GetInstanceMetricDataRequest &request,
@@ -71,6 +66,9 @@ GetInstanceMetricDataResponse::GetInstanceMetricDataResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInstanceMetricDataRequest * GetInstanceMetricDataResponse::request() const
 {
     Q_D(const GetInstanceMetricDataResponse);
@@ -78,9 +76,8 @@ const GetInstanceMetricDataRequest * GetInstanceMetricDataResponse::request() co
 }
 
 /*!
- * @brief  Parse a Lightsail GetInstanceMetricData response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetInstanceMetricData \a response.
  */
 void GetInstanceMetricDataResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetInstanceMetricDataResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetInstanceMetricDataResponsePrivate
+ * \brief The GetInstanceMetricDataResponsePrivate class provides private implementation for GetInstanceMetricDataResponse.
  * \internal
  *
- * \class GetInstanceMetricDataResponsePrivate
- *
- * \brief Private implementation for GetInstanceMetricDataResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInstanceMetricDataResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInstanceMetricDataResponse instance.
+ * Constructs a GetInstanceMetricDataResponsePrivate object with public implementation \a q.
  */
 GetInstanceMetricDataResponsePrivate::GetInstanceMetricDataResponsePrivate(
     GetInstanceMetricDataResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetInstanceMetricDataResponsePrivate::GetInstanceMetricDataResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetInstanceMetricDataResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetInstanceMetricData response element from \a xml.
  */
 void GetInstanceMetricDataResponsePrivate::parseGetInstanceMetricDataResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateBudgetResponse : public BudgetsResponse {
 public:
     CreateBudgetResponse(const CreateBudgetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateBudgetRequest * request() const;
+    virtual const CreateBudgetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateBudgetResponse)

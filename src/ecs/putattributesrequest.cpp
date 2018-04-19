@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * PutAttributesRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a PutAttributesRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a PutAttributesRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 PutAttributesRequestPrivate::PutAttributesRequestPrivate(
     const ECSRequest::Action action, PutAttributesRequest * const q)

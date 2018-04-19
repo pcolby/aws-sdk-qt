@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStacksRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeStacksRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStacksRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
     const OpsWorksRequest::Action action, DescribeStacksRequest * const q)

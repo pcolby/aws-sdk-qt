@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateDeviceResponse
- *
  * \brief The UpdateDeviceResponse class provides an interace for AlexaForBusiness UpdateDevice responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateDeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDeviceResponse::UpdateDeviceResponse(
         const UpdateDeviceRequest &request,
@@ -60,6 +55,9 @@ UpdateDeviceResponse::UpdateDeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDeviceRequest * UpdateDeviceResponse::request() const
 {
     Q_D(const UpdateDeviceResponse);
@@ -67,9 +65,8 @@ const UpdateDeviceRequest * UpdateDeviceResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness UpdateDevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness UpdateDevice \a response.
  */
 void UpdateDeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateDeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::UpdateDeviceResponsePrivate
+ * \brief The UpdateDeviceResponsePrivate class provides private implementation for UpdateDeviceResponse.
  * \internal
  *
- * \class UpdateDeviceResponsePrivate
- *
- * \brief Private implementation for UpdateDeviceResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDeviceResponse instance.
+ * Constructs a UpdateDeviceResponsePrivate object with public implementation \a q.
  */
 UpdateDeviceResponsePrivate::UpdateDeviceResponsePrivate(
     UpdateDeviceResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateDeviceResponsePrivate::UpdateDeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness UpdateDeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness UpdateDevice response element from \a xml.
  */
 void UpdateDeviceResponsePrivate::parseUpdateDeviceResponse(QXmlStreamReader &xml)
 {

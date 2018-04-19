@@ -58,7 +58,7 @@ namespace DataPipeline {
  */
 
 /*!
- * Constructs a[n] DataPipelineRequest object for DataPipeline \a action.
+ * Constructs a DataPipelineRequest object for DataPipeline \a action.
  */
 DataPipelineRequest::DataPipelineRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DataPipelineRequestPrivate(action, this))
@@ -258,8 +258,8 @@ QNetworkRequest DataPipelineRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a DataPipelineRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a DataPipelineRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 DataPipelineRequestPrivate::DataPipelineRequestPrivate(const DataPipelineRequest::Action action, DataPipelineRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

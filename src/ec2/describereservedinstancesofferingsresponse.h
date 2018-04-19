@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeReservedInstancesOfferingsResponse : public EC2Respon
 public:
     DescribeReservedInstancesOfferingsResponse(const DescribeReservedInstancesOfferingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeReservedInstancesOfferingsRequest * request() const;
+    virtual const DescribeReservedInstancesOfferingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeReservedInstancesOfferingsResponse)

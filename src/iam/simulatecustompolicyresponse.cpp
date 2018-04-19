@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::SimulateCustomPolicyResponse
- *
  * \brief The SimulateCustomPolicyResponse class provides an interace for IAM SimulateCustomPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new SimulateCustomPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SimulateCustomPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 SimulateCustomPolicyResponse::SimulateCustomPolicyResponse(
         const SimulateCustomPolicyRequest &request,
@@ -120,6 +115,9 @@ SimulateCustomPolicyResponse::SimulateCustomPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SimulateCustomPolicyRequest * SimulateCustomPolicyResponse::request() const
 {
     Q_D(const SimulateCustomPolicyResponse);
@@ -127,9 +125,8 @@ const SimulateCustomPolicyRequest * SimulateCustomPolicyResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IAM SimulateCustomPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM SimulateCustomPolicy \a response.
  */
 void SimulateCustomPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void SimulateCustomPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::SimulateCustomPolicyResponsePrivate
+ * \brief The SimulateCustomPolicyResponsePrivate class provides private implementation for SimulateCustomPolicyResponse.
  * \internal
  *
- * \class SimulateCustomPolicyResponsePrivate
- *
- * \brief Private implementation for SimulateCustomPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SimulateCustomPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SimulateCustomPolicyResponse instance.
+ * Constructs a SimulateCustomPolicyResponsePrivate object with public implementation \a q.
  */
 SimulateCustomPolicyResponsePrivate::SimulateCustomPolicyResponsePrivate(
     SimulateCustomPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ SimulateCustomPolicyResponsePrivate::SimulateCustomPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM SimulateCustomPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM SimulateCustomPolicy response element from \a xml.
  */
 void SimulateCustomPolicyResponsePrivate::parseSimulateCustomPolicyResponse(QXmlStreamReader &xml)
 {

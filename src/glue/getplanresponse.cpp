@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetPlanResponse
- *
  * \brief The GetPlanResponse class provides an interace for Glue GetPlan responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetPlanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPlanResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPlanResponse::GetPlanResponse(
         const GetPlanRequest &request,
@@ -58,6 +53,9 @@ GetPlanResponse::GetPlanResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPlanRequest * GetPlanResponse::request() const
 {
     Q_D(const GetPlanResponse);
@@ -65,9 +63,8 @@ const GetPlanRequest * GetPlanResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetPlan response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetPlan \a response.
  */
 void GetPlanResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetPlanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetPlanResponsePrivate
+ * \brief The GetPlanResponsePrivate class provides private implementation for GetPlanResponse.
  * \internal
  *
- * \class GetPlanResponsePrivate
- *
- * \brief Private implementation for GetPlanResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPlanResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPlanResponse instance.
+ * Constructs a GetPlanResponsePrivate object with public implementation \a q.
  */
 GetPlanResponsePrivate::GetPlanResponsePrivate(
     GetPlanResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetPlanResponsePrivate::GetPlanResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetPlanResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetPlan response element from \a xml.
  */
 void GetPlanResponsePrivate::parseGetPlanResponse(QXmlStreamReader &xml)
 {

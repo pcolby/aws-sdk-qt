@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSpotFleetInstancesResponse
- *
  * \brief The DescribeSpotFleetInstancesResponse class provides an interace for EC2 DescribeSpotFleetInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSpotFleetInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSpotFleetInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSpotFleetInstancesResponse::DescribeSpotFleetInstancesResponse(
         const DescribeSpotFleetInstancesRequest &request,
@@ -59,6 +54,9 @@ DescribeSpotFleetInstancesResponse::DescribeSpotFleetInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSpotFleetInstancesRequest * DescribeSpotFleetInstancesResponse::request() const
 {
     Q_D(const DescribeSpotFleetInstancesResponse);
@@ -66,9 +64,8 @@ const DescribeSpotFleetInstancesRequest * DescribeSpotFleetInstancesResponse::re
 }
 
 /*!
- * @brief  Parse a EC2 DescribeSpotFleetInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeSpotFleetInstances \a response.
  */
 void DescribeSpotFleetInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeSpotFleetInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeSpotFleetInstancesResponsePrivate
+ * \brief The DescribeSpotFleetInstancesResponsePrivate class provides private implementation for DescribeSpotFleetInstancesResponse.
  * \internal
  *
- * \class DescribeSpotFleetInstancesResponsePrivate
- *
- * \brief Private implementation for DescribeSpotFleetInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSpotFleetInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSpotFleetInstancesResponse instance.
+ * Constructs a DescribeSpotFleetInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeSpotFleetInstancesResponsePrivate::DescribeSpotFleetInstancesResponsePrivate(
     DescribeSpotFleetInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeSpotFleetInstancesResponsePrivate::DescribeSpotFleetInstancesResponsePri
 }
 
 /*!
- * @brief  Parse an EC2 DescribeSpotFleetInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeSpotFleetInstances response element from \a xml.
  */
 void DescribeSpotFleetInstancesResponsePrivate::parseDescribeSpotFleetInstancesResponse(QXmlStreamReader &xml)
 {

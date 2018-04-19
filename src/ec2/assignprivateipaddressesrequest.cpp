@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AssignPrivateIpAddressesRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a AssignPrivateIpAddressesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AssignPrivateIpAddressesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AssignPrivateIpAddressesRequestPrivate::AssignPrivateIpAddressesRequestPrivate(
     const EC2Request::Action action, AssignPrivateIpAddressesRequest * const q)

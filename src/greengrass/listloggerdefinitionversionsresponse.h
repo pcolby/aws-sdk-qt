@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListLoggerDefinitionVersionsResponse : public GreengrassRespo
 public:
     ListLoggerDefinitionVersionsResponse(const ListLoggerDefinitionVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListLoggerDefinitionVersionsRequest * request() const;
+    virtual const ListLoggerDefinitionVersionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListLoggerDefinitionVersionsResponse)

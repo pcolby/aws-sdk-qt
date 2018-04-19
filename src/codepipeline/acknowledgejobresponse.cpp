@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::AcknowledgeJobResponse
- *
  * \brief The AcknowledgeJobResponse class provides an interace for CodePipeline AcknowledgeJob responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new AcknowledgeJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AcknowledgeJobResponse object for \a reply to \a request, with parent \a parent.
  */
 AcknowledgeJobResponse::AcknowledgeJobResponse(
         const AcknowledgeJobRequest &request,
@@ -218,6 +213,9 @@ AcknowledgeJobResponse::AcknowledgeJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AcknowledgeJobRequest * AcknowledgeJobResponse::request() const
 {
     Q_D(const AcknowledgeJobResponse);
@@ -225,9 +223,8 @@ const AcknowledgeJobRequest * AcknowledgeJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodePipeline AcknowledgeJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline AcknowledgeJob \a response.
  */
 void AcknowledgeJobResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void AcknowledgeJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::AcknowledgeJobResponsePrivate
+ * \brief The AcknowledgeJobResponsePrivate class provides private implementation for AcknowledgeJobResponse.
  * \internal
  *
- * \class AcknowledgeJobResponsePrivate
- *
- * \brief Private implementation for AcknowledgeJobResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcknowledgeJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AcknowledgeJobResponse instance.
+ * Constructs a AcknowledgeJobResponsePrivate object with public implementation \a q.
  */
 AcknowledgeJobResponsePrivate::AcknowledgeJobResponsePrivate(
     AcknowledgeJobResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ AcknowledgeJobResponsePrivate::AcknowledgeJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline AcknowledgeJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline AcknowledgeJob response element from \a xml.
  */
 void AcknowledgeJobResponsePrivate::parseAcknowledgeJobResponse(QXmlStreamReader &xml)
 {

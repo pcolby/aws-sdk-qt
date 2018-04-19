@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::GetEventSelectorsResponse
- *
  * \brief The GetEventSelectorsResponse class provides an interace for CloudTrail GetEventSelectors responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new GetEventSelectorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetEventSelectorsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetEventSelectorsResponse::GetEventSelectorsResponse(
         const GetEventSelectorsRequest &request,
@@ -78,6 +73,9 @@ GetEventSelectorsResponse::GetEventSelectorsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetEventSelectorsRequest * GetEventSelectorsResponse::request() const
 {
     Q_D(const GetEventSelectorsResponse);
@@ -85,9 +83,8 @@ const GetEventSelectorsRequest * GetEventSelectorsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail GetEventSelectors response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail GetEventSelectors \a response.
  */
 void GetEventSelectorsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void GetEventSelectorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::GetEventSelectorsResponsePrivate
+ * \brief The GetEventSelectorsResponsePrivate class provides private implementation for GetEventSelectorsResponse.
  * \internal
  *
- * \class GetEventSelectorsResponsePrivate
- *
- * \brief Private implementation for GetEventSelectorsResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEventSelectorsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetEventSelectorsResponse instance.
+ * Constructs a GetEventSelectorsResponsePrivate object with public implementation \a q.
  */
 GetEventSelectorsResponsePrivate::GetEventSelectorsResponsePrivate(
     GetEventSelectorsResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ GetEventSelectorsResponsePrivate::GetEventSelectorsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail GetEventSelectorsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail GetEventSelectors response element from \a xml.
  */
 void GetEventSelectorsResponsePrivate::parseGetEventSelectorsResponse(QXmlStreamReader &xml)
 {

@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * CountPendingDecisionTasksRequest::response(QN
  */
 
 /*!
- *
- * Constructs a CountPendingDecisionTasksRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a CountPendingDecisionTasksRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 CountPendingDecisionTasksRequestPrivate::CountPendingDecisionTasksRequestPrivate(
     const SWFRequest::Action action, CountPendingDecisionTasksRequest * const q)

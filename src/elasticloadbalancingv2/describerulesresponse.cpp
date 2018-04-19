@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeRulesResponse
- *
  * \brief The DescribeRulesResponse class provides an interace for ElasticLoadBalancingv2 DescribeRules responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeRulesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRulesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRulesResponse::DescribeRulesResponse(
         const DescribeRulesRequest &request,
@@ -123,6 +118,9 @@ DescribeRulesResponse::DescribeRulesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRulesRequest * DescribeRulesResponse::request() const
 {
     Q_D(const DescribeRulesResponse);
@@ -130,9 +128,8 @@ const DescribeRulesRequest * DescribeRulesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DescribeRules response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DescribeRules \a response.
  */
 void DescribeRulesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeRulesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DescribeRulesResponsePrivate
+ * \brief The DescribeRulesResponsePrivate class provides private implementation for DescribeRulesResponse.
  * \internal
  *
- * \class DescribeRulesResponsePrivate
- *
- * \brief Private implementation for DescribeRulesResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRulesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRulesResponse instance.
+ * Constructs a DescribeRulesResponsePrivate object with public implementation \a q.
  */
 DescribeRulesResponsePrivate::DescribeRulesResponsePrivate(
     DescribeRulesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeRulesResponsePrivate::DescribeRulesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DescribeRulesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DescribeRules response element from \a xml.
  */
 void DescribeRulesResponsePrivate::parseDescribeRulesResponse(QXmlStreamReader &xml)
 {

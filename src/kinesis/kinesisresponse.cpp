@@ -28,16 +28,13 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::KinesisResponse
- *
  * \brief The KinesisResponse class provides an interface for Kinesis responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @brief  Constructs a new KinesisResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a KinesisResponse object with parent \a parent.
  */
 KinesisResponse::KinesisResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new KinesisResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ KinesisResponse::KinesisResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisResponse object.
- *
+ * \internal
+ * Constructs a KinesisResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 KinesisResponse::KinesisResponse(KinesisResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ KinesisResponse::KinesisResponse(KinesisResponsePrivate * const d, QObject * con
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void KinesisResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void KinesisResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Kinesis::KinesisResponsePrivate
+ * \brief The KinesisResponsePrivate class provides private implementation for KinesisResponse.
+ * \internal
  *
- * @class  KinesisResponsePrivate
- *
- * @brief  Private implementation for KinesisResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new KinesisResponsePrivate object.
- *
- * @param  q  Pointer to this object's public KinesisResponse instance.
+ * Constructs a KinesisResponsePrivate object with public implementation \a q.
  */
 KinesisResponsePrivate::KinesisResponsePrivate(
     KinesisResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

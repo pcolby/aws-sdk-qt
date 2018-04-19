@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::UpdateUserProfileResponse
- *
  * \brief The UpdateUserProfileResponse class provides an interace for CodeStar UpdateUserProfile responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new UpdateUserProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateUserProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateUserProfileResponse::UpdateUserProfileResponse(
         const UpdateUserProfileRequest &request,
@@ -143,6 +138,9 @@ UpdateUserProfileResponse::UpdateUserProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateUserProfileRequest * UpdateUserProfileResponse::request() const
 {
     Q_D(const UpdateUserProfileResponse);
@@ -150,9 +148,8 @@ const UpdateUserProfileRequest * UpdateUserProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar UpdateUserProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar UpdateUserProfile \a response.
  */
 void UpdateUserProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void UpdateUserProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::UpdateUserProfileResponsePrivate
+ * \brief The UpdateUserProfileResponsePrivate class provides private implementation for UpdateUserProfileResponse.
  * \internal
  *
- * \class UpdateUserProfileResponsePrivate
- *
- * \brief Private implementation for UpdateUserProfileResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUserProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateUserProfileResponse instance.
+ * Constructs a UpdateUserProfileResponsePrivate object with public implementation \a q.
  */
 UpdateUserProfileResponsePrivate::UpdateUserProfileResponsePrivate(
     UpdateUserProfileResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ UpdateUserProfileResponsePrivate::UpdateUserProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar UpdateUserProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar UpdateUserProfile response element from \a xml.
  */
 void UpdateUserProfileResponsePrivate::parseUpdateUserProfileResponse(QXmlStreamReader &xml)
 {

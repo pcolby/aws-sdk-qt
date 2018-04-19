@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteEventSubscriptionResponse
- *
  * \brief The DeleteEventSubscriptionResponse class provides an interace for RDS DeleteEventSubscription responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteEventSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEventSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEventSubscriptionResponse::DeleteEventSubscriptionResponse(
         const DeleteEventSubscriptionRequest &request,
@@ -119,6 +114,9 @@ DeleteEventSubscriptionResponse::DeleteEventSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEventSubscriptionRequest * DeleteEventSubscriptionResponse::request() const
 {
     Q_D(const DeleteEventSubscriptionResponse);
@@ -126,9 +124,8 @@ const DeleteEventSubscriptionRequest * DeleteEventSubscriptionResponse::request(
 }
 
 /*!
- * @brief  Parse a RDS DeleteEventSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DeleteEventSubscription \a response.
  */
 void DeleteEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DeleteEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DeleteEventSubscriptionResponsePrivate
+ * \brief The DeleteEventSubscriptionResponsePrivate class provides private implementation for DeleteEventSubscriptionResponse.
  * \internal
  *
- * \class DeleteEventSubscriptionResponsePrivate
- *
- * \brief Private implementation for DeleteEventSubscriptionResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEventSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEventSubscriptionResponse instance.
+ * Constructs a DeleteEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 DeleteEventSubscriptionResponsePrivate::DeleteEventSubscriptionResponsePrivate(
     DeleteEventSubscriptionResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DeleteEventSubscriptionResponsePrivate::DeleteEventSubscriptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DeleteEventSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DeleteEventSubscription response element from \a xml.
  */
 void DeleteEventSubscriptionResponsePrivate::parseDeleteEventSubscriptionResponse(QXmlStreamReader &xml)
 {

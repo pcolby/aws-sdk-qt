@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * DomainMetadataRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DomainMetadataRequestPrivate object for SimpleDB \a action with,
- * public implementation \a q.
+ * Constructs a DomainMetadataRequestPrivate object for SimpleDB \a action,
+ * with public implementation \a q.
  */
 DomainMetadataRequestPrivate::DomainMetadataRequestPrivate(
     const SimpleDBRequest::Action action, DomainMetadataRequest * const q)

@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * DescribeContinuousBackupsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeContinuousBackupsRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a DescribeContinuousBackupsRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 DescribeContinuousBackupsRequestPrivate::DescribeContinuousBackupsRequestPrivate(
     const DynamoDBRequest::Action action, DescribeContinuousBackupsRequest * const q)

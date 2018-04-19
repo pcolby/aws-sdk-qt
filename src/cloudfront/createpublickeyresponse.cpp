@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreatePublicKeyResponse
- *
  * \brief The CreatePublicKeyResponse class provides an interace for CloudFront CreatePublicKey responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreatePublicKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePublicKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePublicKeyResponse::CreatePublicKeyResponse(
         const CreatePublicKeyRequest &request,
@@ -60,6 +55,9 @@ CreatePublicKeyResponse::CreatePublicKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePublicKeyRequest * CreatePublicKeyResponse::request() const
 {
     Q_D(const CreatePublicKeyResponse);
@@ -67,9 +65,8 @@ const CreatePublicKeyRequest * CreatePublicKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront CreatePublicKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront CreatePublicKey \a response.
  */
 void CreatePublicKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreatePublicKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::CreatePublicKeyResponsePrivate
+ * \brief The CreatePublicKeyResponsePrivate class provides private implementation for CreatePublicKeyResponse.
  * \internal
  *
- * \class CreatePublicKeyResponsePrivate
- *
- * \brief Private implementation for CreatePublicKeyResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePublicKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePublicKeyResponse instance.
+ * Constructs a CreatePublicKeyResponsePrivate object with public implementation \a q.
  */
 CreatePublicKeyResponsePrivate::CreatePublicKeyResponsePrivate(
     CreatePublicKeyResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ CreatePublicKeyResponsePrivate::CreatePublicKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront CreatePublicKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront CreatePublicKey response element from \a xml.
  */
 void CreatePublicKeyResponsePrivate::parseCreatePublicKeyResponse(QXmlStreamReader &xml)
 {

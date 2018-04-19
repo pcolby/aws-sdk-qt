@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetRequestValidatorResponse
- *
  * \brief The GetRequestValidatorResponse class provides an interace for APIGateway GetRequestValidator responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetRequestValidatorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRequestValidatorResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRequestValidatorResponse::GetRequestValidatorResponse(
         const GetRequestValidatorRequest &request,
@@ -60,6 +55,9 @@ GetRequestValidatorResponse::GetRequestValidatorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRequestValidatorRequest * GetRequestValidatorResponse::request() const
 {
     Q_D(const GetRequestValidatorResponse);
@@ -67,9 +65,8 @@ const GetRequestValidatorRequest * GetRequestValidatorResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetRequestValidator response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetRequestValidator \a response.
  */
 void GetRequestValidatorResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetRequestValidatorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetRequestValidatorResponsePrivate
+ * \brief The GetRequestValidatorResponsePrivate class provides private implementation for GetRequestValidatorResponse.
  * \internal
  *
- * \class GetRequestValidatorResponsePrivate
- *
- * \brief Private implementation for GetRequestValidatorResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRequestValidatorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRequestValidatorResponse instance.
+ * Constructs a GetRequestValidatorResponsePrivate object with public implementation \a q.
  */
 GetRequestValidatorResponsePrivate::GetRequestValidatorResponsePrivate(
     GetRequestValidatorResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetRequestValidatorResponsePrivate::GetRequestValidatorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetRequestValidatorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetRequestValidator response element from \a xml.
  */
 void GetRequestValidatorResponsePrivate::parseGetRequestValidatorResponse(QXmlStreamReader &xml)
 {

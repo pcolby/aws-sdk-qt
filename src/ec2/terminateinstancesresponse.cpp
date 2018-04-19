@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::TerminateInstancesResponse
- *
  * \brief The TerminateInstancesResponse class provides an interace for EC2 TerminateInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new TerminateInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TerminateInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 TerminateInstancesResponse::TerminateInstancesResponse(
         const TerminateInstancesRequest &request,
@@ -59,6 +54,9 @@ TerminateInstancesResponse::TerminateInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TerminateInstancesRequest * TerminateInstancesResponse::request() const
 {
     Q_D(const TerminateInstancesResponse);
@@ -66,9 +64,8 @@ const TerminateInstancesRequest * TerminateInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 TerminateInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 TerminateInstances \a response.
  */
 void TerminateInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void TerminateInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::TerminateInstancesResponsePrivate
+ * \brief The TerminateInstancesResponsePrivate class provides private implementation for TerminateInstancesResponse.
  * \internal
  *
- * \class TerminateInstancesResponsePrivate
- *
- * \brief Private implementation for TerminateInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TerminateInstancesResponse instance.
+ * Constructs a TerminateInstancesResponsePrivate object with public implementation \a q.
  */
 TerminateInstancesResponsePrivate::TerminateInstancesResponsePrivate(
     TerminateInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ TerminateInstancesResponsePrivate::TerminateInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 TerminateInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 TerminateInstances response element from \a xml.
  */
 void TerminateInstancesResponsePrivate::parseTerminateInstancesResponse(QXmlStreamReader &xml)
 {

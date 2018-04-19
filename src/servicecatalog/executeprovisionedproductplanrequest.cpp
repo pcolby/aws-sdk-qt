@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ExecuteProvisionedProductPlanRequest::respons
  */
 
 /*!
- *
- * Constructs a ExecuteProvisionedProductPlanRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ExecuteProvisionedProductPlanRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ExecuteProvisionedProductPlanRequestPrivate::ExecuteProvisionedProductPlanRequestPrivate(
     const ServiceCatalogRequest::Action action, ExecuteProvisionedProductPlanRequest * const q)

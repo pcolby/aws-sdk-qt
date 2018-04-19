@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteLexiconResponse : public PollyResponse {
 public:
     DeleteLexiconResponse(const DeleteLexiconRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteLexiconRequest * request() const;
+    virtual const DeleteLexiconRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteLexiconResponse)

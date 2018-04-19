@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateChannelRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateChannelRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a UpdateChannelRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 UpdateChannelRequestPrivate::UpdateChannelRequestPrivate(
     const MediaLiveRequest::Action action, UpdateChannelRequest * const q)

@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::UpdateTrailResponse
- *
  * \brief The UpdateTrailResponse class provides an interace for CloudTrail UpdateTrail responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new UpdateTrailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTrailResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTrailResponse::UpdateTrailResponse(
         const UpdateTrailRequest &request,
@@ -78,6 +73,9 @@ UpdateTrailResponse::UpdateTrailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTrailRequest * UpdateTrailResponse::request() const
 {
     Q_D(const UpdateTrailResponse);
@@ -85,9 +83,8 @@ const UpdateTrailRequest * UpdateTrailResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail UpdateTrail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail UpdateTrail \a response.
  */
 void UpdateTrailResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void UpdateTrailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::UpdateTrailResponsePrivate
+ * \brief The UpdateTrailResponsePrivate class provides private implementation for UpdateTrailResponse.
  * \internal
  *
- * \class UpdateTrailResponsePrivate
- *
- * \brief Private implementation for UpdateTrailResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTrailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTrailResponse instance.
+ * Constructs a UpdateTrailResponsePrivate object with public implementation \a q.
  */
 UpdateTrailResponsePrivate::UpdateTrailResponsePrivate(
     UpdateTrailResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ UpdateTrailResponsePrivate::UpdateTrailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail UpdateTrailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail UpdateTrail response element from \a xml.
  */
 void UpdateTrailResponsePrivate::parseUpdateTrailResponse(QXmlStreamReader &xml)
 {

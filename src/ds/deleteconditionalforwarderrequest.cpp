@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteConditionalForwarderRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteConditionalForwarderRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteConditionalForwarderRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 DeleteConditionalForwarderRequestPrivate::DeleteConditionalForwarderRequestPrivate(
     const DirectoryServiceRequest::Action action, DeleteConditionalForwarderRequest * const q)

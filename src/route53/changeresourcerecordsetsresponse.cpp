@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ChangeResourceRecordSetsResponse
- *
  * \brief The ChangeResourceRecordSetsResponse class provides an interace for Route53 ChangeResourceRecordSets responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::changeResourceRecordSets
  */
 
 /*!
- * @brief  Constructs a new ChangeResourceRecordSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ChangeResourceRecordSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ChangeResourceRecordSetsResponse::ChangeResourceRecordSetsResponse(
         const ChangeResourceRecordSetsRequest &request,
@@ -55,6 +50,9 @@ ChangeResourceRecordSetsResponse::ChangeResourceRecordSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ChangeResourceRecordSetsRequest * ChangeResourceRecordSetsResponse::request() const
 {
     Q_D(const ChangeResourceRecordSetsResponse);
@@ -62,9 +60,8 @@ const ChangeResourceRecordSetsRequest * ChangeResourceRecordSetsResponse::reques
 }
 
 /*!
- * @brief  Parse a Route53 ChangeResourceRecordSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 ChangeResourceRecordSets \a response.
  */
 void ChangeResourceRecordSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ChangeResourceRecordSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::ChangeResourceRecordSetsResponsePrivate
+ * \brief The ChangeResourceRecordSetsResponsePrivate class provides private implementation for ChangeResourceRecordSetsResponse.
  * \internal
  *
- * \class ChangeResourceRecordSetsResponsePrivate
- *
- * \brief Private implementation for ChangeResourceRecordSetsResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ChangeResourceRecordSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ChangeResourceRecordSetsResponse instance.
+ * Constructs a ChangeResourceRecordSetsResponsePrivate object with public implementation \a q.
  */
 ChangeResourceRecordSetsResponsePrivate::ChangeResourceRecordSetsResponsePrivate(
     ChangeResourceRecordSetsResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ ChangeResourceRecordSetsResponsePrivate::ChangeResourceRecordSetsResponsePrivate
 }
 
 /*!
- * @brief  Parse an Route53 ChangeResourceRecordSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 ChangeResourceRecordSets response element from \a xml.
  */
 void ChangeResourceRecordSetsResponsePrivate::parseChangeResourceRecordSetsResponse(QXmlStreamReader &xml)
 {

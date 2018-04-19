@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DeleteKeyPairResponse
- *
  * \brief The DeleteKeyPairResponse class provides an interace for Lightsail DeleteKeyPair responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DeleteKeyPairResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteKeyPairResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteKeyPairResponse::DeleteKeyPairResponse(
         const DeleteKeyPairRequest &request,
@@ -71,6 +66,9 @@ DeleteKeyPairResponse::DeleteKeyPairResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteKeyPairRequest * DeleteKeyPairResponse::request() const
 {
     Q_D(const DeleteKeyPairResponse);
@@ -78,9 +76,8 @@ const DeleteKeyPairRequest * DeleteKeyPairResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail DeleteKeyPair response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail DeleteKeyPair \a response.
  */
 void DeleteKeyPairResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DeleteKeyPairResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::DeleteKeyPairResponsePrivate
+ * \brief The DeleteKeyPairResponsePrivate class provides private implementation for DeleteKeyPairResponse.
  * \internal
  *
- * \class DeleteKeyPairResponsePrivate
- *
- * \brief Private implementation for DeleteKeyPairResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteKeyPairResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteKeyPairResponse instance.
+ * Constructs a DeleteKeyPairResponsePrivate object with public implementation \a q.
  */
 DeleteKeyPairResponsePrivate::DeleteKeyPairResponsePrivate(
     DeleteKeyPairResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ DeleteKeyPairResponsePrivate::DeleteKeyPairResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail DeleteKeyPairResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail DeleteKeyPair response element from \a xml.
  */
 void DeleteKeyPairResponsePrivate::parseDeleteKeyPairResponse(QXmlStreamReader &xml)
 {

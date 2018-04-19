@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::BatchDeletePartitionResponse
- *
  * \brief The BatchDeletePartitionResponse class provides an interace for Glue BatchDeletePartition responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new BatchDeletePartitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchDeletePartitionResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchDeletePartitionResponse::BatchDeletePartitionResponse(
         const BatchDeletePartitionRequest &request,
@@ -58,6 +53,9 @@ BatchDeletePartitionResponse::BatchDeletePartitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchDeletePartitionRequest * BatchDeletePartitionResponse::request() const
 {
     Q_D(const BatchDeletePartitionResponse);
@@ -65,9 +63,8 @@ const BatchDeletePartitionRequest * BatchDeletePartitionResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Glue BatchDeletePartition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue BatchDeletePartition \a response.
  */
 void BatchDeletePartitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void BatchDeletePartitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::BatchDeletePartitionResponsePrivate
+ * \brief The BatchDeletePartitionResponsePrivate class provides private implementation for BatchDeletePartitionResponse.
  * \internal
  *
- * \class BatchDeletePartitionResponsePrivate
- *
- * \brief Private implementation for BatchDeletePartitionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeletePartitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchDeletePartitionResponse instance.
+ * Constructs a BatchDeletePartitionResponsePrivate object with public implementation \a q.
  */
 BatchDeletePartitionResponsePrivate::BatchDeletePartitionResponsePrivate(
     BatchDeletePartitionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ BatchDeletePartitionResponsePrivate::BatchDeletePartitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue BatchDeletePartitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue BatchDeletePartition response element from \a xml.
  */
 void BatchDeletePartitionResponsePrivate::parseBatchDeletePartitionResponse(QXmlStreamReader &xml)
 {

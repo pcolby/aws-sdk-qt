@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AssociateSubnetCidrBlockRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a AssociateSubnetCidrBlockRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AssociateSubnetCidrBlockRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AssociateSubnetCidrBlockRequestPrivate::AssociateSubnetCidrBlockRequestPrivate(
     const EC2Request::Action action, AssociateSubnetCidrBlockRequest * const q)

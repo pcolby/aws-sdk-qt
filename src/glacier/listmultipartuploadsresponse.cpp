@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::ListMultipartUploadsResponse
- *
  * \brief The ListMultipartUploadsResponse class provides an interace for Glacier ListMultipartUploads responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new ListMultipartUploadsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListMultipartUploadsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListMultipartUploadsResponse::ListMultipartUploadsResponse(
         const ListMultipartUploadsRequest &request,
@@ -93,6 +88,9 @@ ListMultipartUploadsResponse::ListMultipartUploadsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListMultipartUploadsRequest * ListMultipartUploadsResponse::request() const
 {
     Q_D(const ListMultipartUploadsResponse);
@@ -100,9 +98,8 @@ const ListMultipartUploadsRequest * ListMultipartUploadsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Glacier ListMultipartUploads response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier ListMultipartUploads \a response.
  */
 void ListMultipartUploadsResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void ListMultipartUploadsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::ListMultipartUploadsResponsePrivate
+ * \brief The ListMultipartUploadsResponsePrivate class provides private implementation for ListMultipartUploadsResponse.
  * \internal
  *
- * \class ListMultipartUploadsResponsePrivate
- *
- * \brief Private implementation for ListMultipartUploadsResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListMultipartUploadsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListMultipartUploadsResponse instance.
+ * Constructs a ListMultipartUploadsResponsePrivate object with public implementation \a q.
  */
 ListMultipartUploadsResponsePrivate::ListMultipartUploadsResponsePrivate(
     ListMultipartUploadsResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ ListMultipartUploadsResponsePrivate::ListMultipartUploadsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier ListMultipartUploadsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier ListMultipartUploads response element from \a xml.
  */
 void ListMultipartUploadsResponsePrivate::parseListMultipartUploadsResponse(QXmlStreamReader &xml)
 {

@@ -110,7 +110,7 @@ namespace Lightsail {
  */
 
 /*!
- * Constructs a[n] LightsailRequest object for Lightsail \a action.
+ * Constructs a LightsailRequest object for Lightsail \a action.
  */
 LightsailRequest::LightsailRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new LightsailRequestPrivate(action, this))
@@ -310,8 +310,8 @@ QNetworkRequest LightsailRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a LightsailRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a LightsailRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 LightsailRequestPrivate::LightsailRequestPrivate(const LightsailRequest::Action action, LightsailRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

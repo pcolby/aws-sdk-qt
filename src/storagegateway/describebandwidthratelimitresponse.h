@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeBandwidthRateLimitResponse : public StorageGatewayRes
 public:
     DescribeBandwidthRateLimitResponse(const DescribeBandwidthRateLimitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeBandwidthRateLimitRequest * request() const;
+    virtual const DescribeBandwidthRateLimitRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeBandwidthRateLimitResponse)

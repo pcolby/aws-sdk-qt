@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateServerCertificateRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateServerCertificateRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateServerCertificateRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateServerCertificateRequestPrivate::UpdateServerCertificateRequestPrivate(
     const IAMRequest::Action action, UpdateServerCertificateRequest * const q)

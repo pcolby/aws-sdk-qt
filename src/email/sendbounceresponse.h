@@ -34,10 +34,10 @@ class QTAWS_EXPORT SendBounceResponse : public SESResponse {
 public:
     SendBounceResponse(const SendBounceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SendBounceRequest * request() const;
+    virtual const SendBounceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SendBounceResponse)

@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListBrokersRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListBrokersRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a ListBrokersRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 ListBrokersRequestPrivate::ListBrokersRequestPrivate(
     const MQRequest::Action action, ListBrokersRequest * const q)

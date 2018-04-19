@@ -29,10 +29,9 @@ namespace CloudSearchDomain {
 
 /*!
  * \class QtAws::CloudSearchDomain::SearchResponse
- *
  * \brief The SearchResponse class provides an interace for CloudSearchDomain Search responses.
  *
- * \ingroup CloudSearchDomain
+ * \inmodule QtAwsCloudSearchDomain
  *
  *  You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents.
  * 
@@ -52,11 +51,7 @@ namespace CloudSearchDomain {
  */
 
 /*!
- * @brief  Constructs a new SearchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SearchResponse object for \a reply to \a request, with parent \a parent.
  */
 SearchResponse::SearchResponse(
         const SearchRequest &request,
@@ -68,6 +63,9 @@ SearchResponse::SearchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SearchRequest * SearchResponse::request() const
 {
     Q_D(const SearchResponse);
@@ -75,9 +73,8 @@ const SearchRequest * SearchResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearchDomain Search response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearchDomain Search \a response.
  */
 void SearchResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void SearchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearchDomain::SearchResponsePrivate
+ * \brief The SearchResponsePrivate class provides private implementation for SearchResponse.
  * \internal
  *
- * \class SearchResponsePrivate
- *
- * \brief Private implementation for SearchResponse.
+ * \inmodule QtAwsCloudSearchDomain
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SearchResponse instance.
+ * Constructs a SearchResponsePrivate object with public implementation \a q.
  */
 SearchResponsePrivate::SearchResponsePrivate(
     SearchResponse * const q) : CloudSearchDomainResponsePrivate(q)
@@ -108,9 +101,7 @@ SearchResponsePrivate::SearchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearchDomain SearchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearchDomain Search response element from \a xml.
  */
 void SearchResponsePrivate::parseSearchResponse(QXmlStreamReader &xml)
 {

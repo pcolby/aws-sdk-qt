@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * AddJobFlowStepsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a AddJobFlowStepsRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a AddJobFlowStepsRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 AddJobFlowStepsRequestPrivate::AddJobFlowStepsRequestPrivate(
     const EMRRequest::Action action, AddJobFlowStepsRequest * const q)

@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * PutMetricFilterRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a PutMetricFilterRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a PutMetricFilterRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 PutMetricFilterRequestPrivate::PutMetricFilterRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutMetricFilterRequest * const q)

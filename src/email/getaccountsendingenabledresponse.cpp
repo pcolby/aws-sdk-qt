@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetAccountSendingEnabledResponse
- *
  * \brief The GetAccountSendingEnabledResponse class provides an interace for SES GetAccountSendingEnabled responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetAccountSendingEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAccountSendingEnabledResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAccountSendingEnabledResponse::GetAccountSendingEnabledResponse(
         const GetAccountSendingEnabledRequest &request,
@@ -66,6 +61,9 @@ GetAccountSendingEnabledResponse::GetAccountSendingEnabledResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAccountSendingEnabledRequest * GetAccountSendingEnabledResponse::request() const
 {
     Q_D(const GetAccountSendingEnabledResponse);
@@ -73,9 +71,8 @@ const GetAccountSendingEnabledRequest * GetAccountSendingEnabledResponse::reques
 }
 
 /*!
- * @brief  Parse a SES GetAccountSendingEnabled response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES GetAccountSendingEnabled \a response.
  */
 void GetAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetAccountSendingEnabledResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::GetAccountSendingEnabledResponsePrivate
+ * \brief The GetAccountSendingEnabledResponsePrivate class provides private implementation for GetAccountSendingEnabledResponse.
  * \internal
  *
- * \class GetAccountSendingEnabledResponsePrivate
- *
- * \brief Private implementation for GetAccountSendingEnabledResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountSendingEnabledResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAccountSendingEnabledResponse instance.
+ * Constructs a GetAccountSendingEnabledResponsePrivate object with public implementation \a q.
  */
 GetAccountSendingEnabledResponsePrivate::GetAccountSendingEnabledResponsePrivate(
     GetAccountSendingEnabledResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ GetAccountSendingEnabledResponsePrivate::GetAccountSendingEnabledResponsePrivate
 }
 
 /*!
- * @brief  Parse an SES GetAccountSendingEnabledResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES GetAccountSendingEnabled response element from \a xml.
  */
 void GetAccountSendingEnabledResponsePrivate::parseGetAccountSendingEnabledResponse(QXmlStreamReader &xml)
 {

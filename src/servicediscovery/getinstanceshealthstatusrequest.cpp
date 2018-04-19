@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetInstancesHealthStatusRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a GetInstancesHealthStatusRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a GetInstancesHealthStatusRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 GetInstancesHealthStatusRequestPrivate::GetInstancesHealthStatusRequestPrivate(
     const ServiceDiscoveryRequest::Action action, GetInstancesHealthStatusRequest * const q)

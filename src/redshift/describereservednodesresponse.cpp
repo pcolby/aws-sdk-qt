@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeReservedNodesResponse
- *
  * \brief The DescribeReservedNodesResponse class provides an interace for Redshift DescribeReservedNodes responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeReservedNodesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeReservedNodesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeReservedNodesResponse::DescribeReservedNodesResponse(
         const DescribeReservedNodesRequest &request,
@@ -85,6 +80,9 @@ DescribeReservedNodesResponse::DescribeReservedNodesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeReservedNodesRequest * DescribeReservedNodesResponse::request() const
 {
     Q_D(const DescribeReservedNodesResponse);
@@ -92,9 +90,8 @@ const DescribeReservedNodesRequest * DescribeReservedNodesResponse::request() co
 }
 
 /*!
- * @brief  Parse a Redshift DescribeReservedNodes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeReservedNodes \a response.
  */
 void DescribeReservedNodesResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeReservedNodesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeReservedNodesResponsePrivate
+ * \brief The DescribeReservedNodesResponsePrivate class provides private implementation for DescribeReservedNodesResponse.
  * \internal
  *
- * \class DescribeReservedNodesResponsePrivate
- *
- * \brief Private implementation for DescribeReservedNodesResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReservedNodesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeReservedNodesResponse instance.
+ * Constructs a DescribeReservedNodesResponsePrivate object with public implementation \a q.
  */
 DescribeReservedNodesResponsePrivate::DescribeReservedNodesResponsePrivate(
     DescribeReservedNodesResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeReservedNodesResponsePrivate::DescribeReservedNodesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift DescribeReservedNodesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeReservedNodes response element from \a xml.
  */
 void DescribeReservedNodesResponsePrivate::parseDescribeReservedNodesResponse(QXmlStreamReader &xml)
 {

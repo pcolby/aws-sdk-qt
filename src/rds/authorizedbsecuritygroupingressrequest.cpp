@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * AuthorizeDBSecurityGroupIngressRequest::respo
  */
 
 /*!
- *
- * Constructs a AuthorizeDBSecurityGroupIngressRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a AuthorizeDBSecurityGroupIngressRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 AuthorizeDBSecurityGroupIngressRequestPrivate::AuthorizeDBSecurityGroupIngressRequestPrivate(
     const RDSRequest::Action action, AuthorizeDBSecurityGroupIngressRequest * const q)

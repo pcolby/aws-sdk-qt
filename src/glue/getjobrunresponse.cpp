@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetJobRunResponse
- *
  * \brief The GetJobRunResponse class provides an interace for Glue GetJobRun responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetJobRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetJobRunResponse object for \a reply to \a request, with parent \a parent.
  */
 GetJobRunResponse::GetJobRunResponse(
         const GetJobRunRequest &request,
@@ -58,6 +53,9 @@ GetJobRunResponse::GetJobRunResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetJobRunRequest * GetJobRunResponse::request() const
 {
     Q_D(const GetJobRunResponse);
@@ -65,9 +63,8 @@ const GetJobRunRequest * GetJobRunResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetJobRun response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetJobRun \a response.
  */
 void GetJobRunResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetJobRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetJobRunResponsePrivate
+ * \brief The GetJobRunResponsePrivate class provides private implementation for GetJobRunResponse.
  * \internal
  *
- * \class GetJobRunResponsePrivate
- *
- * \brief Private implementation for GetJobRunResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobRunResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetJobRunResponse instance.
+ * Constructs a GetJobRunResponsePrivate object with public implementation \a q.
  */
 GetJobRunResponsePrivate::GetJobRunResponsePrivate(
     GetJobRunResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetJobRunResponsePrivate::GetJobRunResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetJobRunResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetJobRun response element from \a xml.
  */
 void GetJobRunResponsePrivate::parseGetJobRunResponse(QXmlStreamReader &xml)
 {

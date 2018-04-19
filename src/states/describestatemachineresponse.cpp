@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::DescribeStateMachineResponse
- *
  * \brief The DescribeStateMachineResponse class provides an interace for SFN DescribeStateMachine responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new DescribeStateMachineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStateMachineResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStateMachineResponse::DescribeStateMachineResponse(
         const DescribeStateMachineRequest &request,
@@ -74,6 +69,9 @@ DescribeStateMachineResponse::DescribeStateMachineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStateMachineRequest * DescribeStateMachineResponse::request() const
 {
     Q_D(const DescribeStateMachineResponse);
@@ -81,9 +79,8 @@ const DescribeStateMachineRequest * DescribeStateMachineResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SFN DescribeStateMachine response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN DescribeStateMachine \a response.
  */
 void DescribeStateMachineResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DescribeStateMachineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::DescribeStateMachineResponsePrivate
+ * \brief The DescribeStateMachineResponsePrivate class provides private implementation for DescribeStateMachineResponse.
  * \internal
  *
- * \class DescribeStateMachineResponsePrivate
- *
- * \brief Private implementation for DescribeStateMachineResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStateMachineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStateMachineResponse instance.
+ * Constructs a DescribeStateMachineResponsePrivate object with public implementation \a q.
  */
 DescribeStateMachineResponsePrivate::DescribeStateMachineResponsePrivate(
     DescribeStateMachineResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ DescribeStateMachineResponsePrivate::DescribeStateMachineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN DescribeStateMachineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN DescribeStateMachine response element from \a xml.
  */
 void DescribeStateMachineResponsePrivate::parseDescribeStateMachineResponse(QXmlStreamReader &xml)
 {

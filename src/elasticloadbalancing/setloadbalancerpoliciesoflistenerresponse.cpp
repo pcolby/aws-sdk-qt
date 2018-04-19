@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::SetLoadBalancerPoliciesOfListenerResponse
- *
  * \brief The SetLoadBalancerPoliciesOfListenerResponse class provides an interace for ElasticLoadBalancing SetLoadBalancerPoliciesOfListener responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetLoadBalancerPoliciesOfListenerResponse object for \a reply to \a request, with parent \a parent.
  */
 SetLoadBalancerPoliciesOfListenerResponse::SetLoadBalancerPoliciesOfListenerResponse(
         const SetLoadBalancerPoliciesOfListenerRequest &request,
@@ -83,6 +78,9 @@ SetLoadBalancerPoliciesOfListenerResponse::SetLoadBalancerPoliciesOfListenerResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetLoadBalancerPoliciesOfListenerRequest * SetLoadBalancerPoliciesOfListenerResponse::request() const
 {
     Q_D(const SetLoadBalancerPoliciesOfListenerResponse);
@@ -90,9 +88,8 @@ const SetLoadBalancerPoliciesOfListenerRequest * SetLoadBalancerPoliciesOfListen
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing SetLoadBalancerPoliciesOfListener response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing SetLoadBalancerPoliciesOfListener \a response.
  */
 void SetLoadBalancerPoliciesOfListenerResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void SetLoadBalancerPoliciesOfListenerResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::SetLoadBalancerPoliciesOfListenerResponsePrivate
+ * \brief The SetLoadBalancerPoliciesOfListenerResponsePrivate class provides private implementation for SetLoadBalancerPoliciesOfListenerResponse.
  * \internal
  *
- * \class SetLoadBalancerPoliciesOfListenerResponsePrivate
- *
- * \brief Private implementation for SetLoadBalancerPoliciesOfListenerResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetLoadBalancerPoliciesOfListenerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetLoadBalancerPoliciesOfListenerResponse instance.
+ * Constructs a SetLoadBalancerPoliciesOfListenerResponsePrivate object with public implementation \a q.
  */
 SetLoadBalancerPoliciesOfListenerResponsePrivate::SetLoadBalancerPoliciesOfListenerResponsePrivate(
     SetLoadBalancerPoliciesOfListenerResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ SetLoadBalancerPoliciesOfListenerResponsePrivate::SetLoadBalancerPoliciesOfListe
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing SetLoadBalancerPoliciesOfListenerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing SetLoadBalancerPoliciesOfListener response element from \a xml.
  */
 void SetLoadBalancerPoliciesOfListenerResponsePrivate::parseSetLoadBalancerPoliciesOfListenerResponse(QXmlStreamReader &xml)
 {

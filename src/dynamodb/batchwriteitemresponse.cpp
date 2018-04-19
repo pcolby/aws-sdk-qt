@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::BatchWriteItemResponse
- *
  * \brief The BatchWriteItemResponse class provides an interace for DynamoDB BatchWriteItem responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new BatchWriteItemResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchWriteItemResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchWriteItemResponse::BatchWriteItemResponse(
         const BatchWriteItemRequest &request,
@@ -74,6 +69,9 @@ BatchWriteItemResponse::BatchWriteItemResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchWriteItemRequest * BatchWriteItemResponse::request() const
 {
     Q_D(const BatchWriteItemResponse);
@@ -81,9 +79,8 @@ const BatchWriteItemRequest * BatchWriteItemResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB BatchWriteItem response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB BatchWriteItem \a response.
  */
 void BatchWriteItemResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void BatchWriteItemResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::BatchWriteItemResponsePrivate
+ * \brief The BatchWriteItemResponsePrivate class provides private implementation for BatchWriteItemResponse.
  * \internal
  *
- * \class BatchWriteItemResponsePrivate
- *
- * \brief Private implementation for BatchWriteItemResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchWriteItemResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchWriteItemResponse instance.
+ * Constructs a BatchWriteItemResponsePrivate object with public implementation \a q.
  */
 BatchWriteItemResponsePrivate::BatchWriteItemResponsePrivate(
     BatchWriteItemResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ BatchWriteItemResponsePrivate::BatchWriteItemResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB BatchWriteItemResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB BatchWriteItem response element from \a xml.
  */
 void BatchWriteItemResponsePrivate::parseBatchWriteItemResponse(QXmlStreamReader &xml)
 {

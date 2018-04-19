@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceGroupsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ModifyInstanceGroupsRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a ModifyInstanceGroupsRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 ModifyInstanceGroupsRequestPrivate::ModifyInstanceGroupsRequestPrivate(
     const EMRRequest::Action action, ModifyInstanceGroupsRequest * const q)

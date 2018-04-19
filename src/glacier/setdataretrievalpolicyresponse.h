@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetDataRetrievalPolicyResponse : public GlacierResponse {
 public:
     SetDataRetrievalPolicyResponse(const SetDataRetrievalPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetDataRetrievalPolicyRequest * request() const;
+    virtual const SetDataRetrievalPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetDataRetrievalPolicyResponse)

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListRolesResponse
- *
  * \brief The ListRolesResponse class provides an interace for IAM ListRoles responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListRolesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRolesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRolesResponse::ListRolesResponse(
         const ListRolesRequest &request,
@@ -120,6 +115,9 @@ ListRolesResponse::ListRolesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRolesRequest * ListRolesResponse::request() const
 {
     Q_D(const ListRolesResponse);
@@ -127,9 +125,8 @@ const ListRolesRequest * ListRolesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM ListRoles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListRoles \a response.
  */
 void ListRolesResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListRolesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListRolesResponsePrivate
+ * \brief The ListRolesResponsePrivate class provides private implementation for ListRolesResponse.
  * \internal
  *
- * \class ListRolesResponsePrivate
- *
- * \brief Private implementation for ListRolesResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRolesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRolesResponse instance.
+ * Constructs a ListRolesResponsePrivate object with public implementation \a q.
  */
 ListRolesResponsePrivate::ListRolesResponsePrivate(
     ListRolesResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListRolesResponsePrivate::ListRolesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListRolesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListRoles response element from \a xml.
  */
 void ListRolesResponsePrivate::parseListRolesResponse(QXmlStreamReader &xml)
 {

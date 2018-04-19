@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdatePullRequestStatusResponse
- *
  * \brief The UpdatePullRequestStatusResponse class provides an interace for CodeCommit UpdatePullRequestStatus responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdatePullRequestStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePullRequestStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePullRequestStatusResponse::UpdatePullRequestStatusResponse(
         const UpdatePullRequestStatusRequest &request,
@@ -245,6 +240,9 @@ UpdatePullRequestStatusResponse::UpdatePullRequestStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePullRequestStatusRequest * UpdatePullRequestStatusResponse::request() const
 {
     Q_D(const UpdatePullRequestStatusResponse);
@@ -252,9 +250,8 @@ const UpdatePullRequestStatusRequest * UpdatePullRequestStatusResponse::request(
 }
 
 /*!
- * @brief  Parse a CodeCommit UpdatePullRequestStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit UpdatePullRequestStatus \a response.
  */
 void UpdatePullRequestStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void UpdatePullRequestStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::UpdatePullRequestStatusResponsePrivate
+ * \brief The UpdatePullRequestStatusResponsePrivate class provides private implementation for UpdatePullRequestStatusResponse.
  * \internal
  *
- * \class UpdatePullRequestStatusResponsePrivate
- *
- * \brief Private implementation for UpdatePullRequestStatusResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePullRequestStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePullRequestStatusResponse instance.
+ * Constructs a UpdatePullRequestStatusResponsePrivate object with public implementation \a q.
  */
 UpdatePullRequestStatusResponsePrivate::UpdatePullRequestStatusResponsePrivate(
     UpdatePullRequestStatusResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ UpdatePullRequestStatusResponsePrivate::UpdatePullRequestStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit UpdatePullRequestStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit UpdatePullRequestStatus response element from \a xml.
  */
 void UpdatePullRequestStatusResponsePrivate::parseUpdatePullRequestStatusResponse(QXmlStreamReader &xml)
 {

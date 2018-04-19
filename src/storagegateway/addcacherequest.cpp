@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * AddCacheRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a AddCacheRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a AddCacheRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 AddCacheRequestPrivate::AddCacheRequestPrivate(
     const StorageGatewayRequest::Action action, AddCacheRequest * const q)

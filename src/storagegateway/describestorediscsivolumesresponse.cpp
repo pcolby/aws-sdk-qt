@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeStorediSCSIVolumesResponse
- *
  * \brief The DescribeStorediSCSIVolumesResponse class provides an interace for StorageGateway DescribeStorediSCSIVolumes responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeStorediSCSIVolumesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStorediSCSIVolumesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStorediSCSIVolumesResponse::DescribeStorediSCSIVolumesResponse(
         const DescribeStorediSCSIVolumesRequest &request,
@@ -124,6 +119,9 @@ DescribeStorediSCSIVolumesResponse::DescribeStorediSCSIVolumesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStorediSCSIVolumesRequest * DescribeStorediSCSIVolumesResponse::request() const
 {
     Q_D(const DescribeStorediSCSIVolumesResponse);
@@ -131,9 +129,8 @@ const DescribeStorediSCSIVolumesRequest * DescribeStorediSCSIVolumesResponse::re
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeStorediSCSIVolumes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeStorediSCSIVolumes \a response.
  */
 void DescribeStorediSCSIVolumesResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeStorediSCSIVolumesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeStorediSCSIVolumesResponsePrivate
+ * \brief The DescribeStorediSCSIVolumesResponsePrivate class provides private implementation for DescribeStorediSCSIVolumesResponse.
  * \internal
  *
- * \class DescribeStorediSCSIVolumesResponsePrivate
- *
- * \brief Private implementation for DescribeStorediSCSIVolumesResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStorediSCSIVolumesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStorediSCSIVolumesResponse instance.
+ * Constructs a DescribeStorediSCSIVolumesResponsePrivate object with public implementation \a q.
  */
 DescribeStorediSCSIVolumesResponsePrivate::DescribeStorediSCSIVolumesResponsePrivate(
     DescribeStorediSCSIVolumesResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeStorediSCSIVolumesResponsePrivate::DescribeStorediSCSIVolumesResponsePri
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeStorediSCSIVolumesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeStorediSCSIVolumes response element from \a xml.
  */
 void DescribeStorediSCSIVolumesResponsePrivate::parseDescribeStorediSCSIVolumesResponse(QXmlStreamReader &xml)
 {

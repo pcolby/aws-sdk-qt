@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::ExpireSessionResponse
- *
  * \brief The ExpireSessionResponse class provides an interace for AppStream ExpireSession responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new ExpireSessionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ExpireSessionResponse object for \a reply to \a request, with parent \a parent.
  */
 ExpireSessionResponse::ExpireSessionResponse(
         const ExpireSessionRequest &request,
@@ -58,6 +53,9 @@ ExpireSessionResponse::ExpireSessionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ExpireSessionRequest * ExpireSessionResponse::request() const
 {
     Q_D(const ExpireSessionResponse);
@@ -65,9 +63,8 @@ const ExpireSessionRequest * ExpireSessionResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream ExpireSession response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream ExpireSession \a response.
  */
 void ExpireSessionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ExpireSessionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::ExpireSessionResponsePrivate
+ * \brief The ExpireSessionResponsePrivate class provides private implementation for ExpireSessionResponse.
  * \internal
  *
- * \class ExpireSessionResponsePrivate
- *
- * \brief Private implementation for ExpireSessionResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExpireSessionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ExpireSessionResponse instance.
+ * Constructs a ExpireSessionResponsePrivate object with public implementation \a q.
  */
 ExpireSessionResponsePrivate::ExpireSessionResponsePrivate(
     ExpireSessionResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ ExpireSessionResponsePrivate::ExpireSessionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream ExpireSessionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream ExpireSession response element from \a xml.
  */
 void ExpireSessionResponsePrivate::parseExpireSessionResponse(QXmlStreamReader &xml)
 {

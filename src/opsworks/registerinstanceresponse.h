@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterInstanceResponse : public OpsWorksResponse {
 public:
     RegisterInstanceResponse(const RegisterInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterInstanceRequest * request() const;
+    virtual const RegisterInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterInstanceResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchDeleteAttributesResponse : public SimpleDBResponse {
 public:
     BatchDeleteAttributesResponse(const BatchDeleteAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchDeleteAttributesRequest * request() const;
+    virtual const BatchDeleteAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchDeleteAttributesResponse)

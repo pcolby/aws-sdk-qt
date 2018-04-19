@@ -34,10 +34,10 @@ class QTAWS_EXPORT SubmitJobResponse : public BatchResponse {
 public:
     SubmitJobResponse(const SubmitJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SubmitJobRequest * request() const;
+    virtual const SubmitJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SubmitJobResponse)

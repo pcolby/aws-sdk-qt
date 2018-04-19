@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeInstanceStatusResponse : public EC2Response {
 public:
     DescribeInstanceStatusResponse(const DescribeInstanceStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeInstanceStatusRequest * request() const;
+    virtual const DescribeInstanceStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeInstanceStatusResponse)

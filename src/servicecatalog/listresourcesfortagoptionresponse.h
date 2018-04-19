@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListResourcesForTagOptionResponse : public ServiceCatalogResp
 public:
     ListResourcesForTagOptionResponse(const ListResourcesForTagOptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListResourcesForTagOptionRequest * request() const;
+    virtual const ListResourcesForTagOptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListResourcesForTagOptionResponse)

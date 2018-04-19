@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * CreateNamedQueryRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateNamedQueryRequestPrivate object for Athena \a action with,
- * public implementation \a q.
+ * Constructs a CreateNamedQueryRequestPrivate object for Athena \a action,
+ * with public implementation \a q.
  */
 CreateNamedQueryRequestPrivate::CreateNamedQueryRequestPrivate(
     const AthenaRequest::Action action, CreateNamedQueryRequest * const q)

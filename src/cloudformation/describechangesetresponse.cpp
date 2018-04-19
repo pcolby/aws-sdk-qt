@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::DescribeChangeSetResponse
- *
  * \brief The DescribeChangeSetResponse class provides an interace for CloudFormation DescribeChangeSet responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new DescribeChangeSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeChangeSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeChangeSetResponse::DescribeChangeSetResponse(
         const DescribeChangeSetRequest &request,
@@ -77,6 +72,9 @@ DescribeChangeSetResponse::DescribeChangeSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeChangeSetRequest * DescribeChangeSetResponse::request() const
 {
     Q_D(const DescribeChangeSetResponse);
@@ -84,9 +82,8 @@ const DescribeChangeSetRequest * DescribeChangeSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation DescribeChangeSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation DescribeChangeSet \a response.
  */
 void DescribeChangeSetResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribeChangeSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::DescribeChangeSetResponsePrivate
+ * \brief The DescribeChangeSetResponsePrivate class provides private implementation for DescribeChangeSetResponse.
  * \internal
  *
- * \class DescribeChangeSetResponsePrivate
- *
- * \brief Private implementation for DescribeChangeSetResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeChangeSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeChangeSetResponse instance.
+ * Constructs a DescribeChangeSetResponsePrivate object with public implementation \a q.
  */
 DescribeChangeSetResponsePrivate::DescribeChangeSetResponsePrivate(
     DescribeChangeSetResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribeChangeSetResponsePrivate::DescribeChangeSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation DescribeChangeSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation DescribeChangeSet response element from \a xml.
  */
 void DescribeChangeSetResponsePrivate::parseDescribeChangeSetResponse(QXmlStreamReader &xml)
 {

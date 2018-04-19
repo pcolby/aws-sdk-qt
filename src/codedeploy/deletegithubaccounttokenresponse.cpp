@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::DeleteGitHubAccountTokenResponse
- *
  * \brief The DeleteGitHubAccountTokenResponse class provides an interace for CodeDeploy DeleteGitHubAccountToken responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new DeleteGitHubAccountTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteGitHubAccountTokenResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteGitHubAccountTokenResponse::DeleteGitHubAccountTokenResponse(
         const DeleteGitHubAccountTokenRequest &request,
@@ -136,6 +131,9 @@ DeleteGitHubAccountTokenResponse::DeleteGitHubAccountTokenResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteGitHubAccountTokenRequest * DeleteGitHubAccountTokenResponse::request() const
 {
     Q_D(const DeleteGitHubAccountTokenResponse);
@@ -143,9 +141,8 @@ const DeleteGitHubAccountTokenRequest * DeleteGitHubAccountTokenResponse::reques
 }
 
 /*!
- * @brief  Parse a CodeDeploy DeleteGitHubAccountToken response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy DeleteGitHubAccountToken \a response.
  */
 void DeleteGitHubAccountTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void DeleteGitHubAccountTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::DeleteGitHubAccountTokenResponsePrivate
+ * \brief The DeleteGitHubAccountTokenResponsePrivate class provides private implementation for DeleteGitHubAccountTokenResponse.
  * \internal
  *
- * \class DeleteGitHubAccountTokenResponsePrivate
- *
- * \brief Private implementation for DeleteGitHubAccountTokenResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGitHubAccountTokenResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteGitHubAccountTokenResponse instance.
+ * Constructs a DeleteGitHubAccountTokenResponsePrivate object with public implementation \a q.
  */
 DeleteGitHubAccountTokenResponsePrivate::DeleteGitHubAccountTokenResponsePrivate(
     DeleteGitHubAccountTokenResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ DeleteGitHubAccountTokenResponsePrivate::DeleteGitHubAccountTokenResponsePrivate
 }
 
 /*!
- * @brief  Parse an CodeDeploy DeleteGitHubAccountTokenResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy DeleteGitHubAccountToken response element from \a xml.
  */
 void DeleteGitHubAccountTokenResponsePrivate::parseDeleteGitHubAccountTokenResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointServicePermissionsRequest::r
  */
 
 /*!
- *
- * Constructs a ModifyVpcEndpointServicePermissionsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyVpcEndpointServicePermissionsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyVpcEndpointServicePermissionsRequestPrivate::ModifyVpcEndpointServicePermissionsRequestPrivate(
     const EC2Request::Action action, ModifyVpcEndpointServicePermissionsRequest * const q)

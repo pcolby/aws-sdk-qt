@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * AssociateMemberToGroupRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a AssociateMemberToGroupRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a AssociateMemberToGroupRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 AssociateMemberToGroupRequestPrivate::AssociateMemberToGroupRequestPrivate(
     const WorkMailRequest::Action action, AssociateMemberToGroupRequest * const q)

@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DeprecateWorkflowTypeRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeprecateWorkflowTypeRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a DeprecateWorkflowTypeRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 DeprecateWorkflowTypeRequestPrivate::DeprecateWorkflowTypeRequestPrivate(
     const SWFRequest::Action action, DeprecateWorkflowTypeRequest * const q)

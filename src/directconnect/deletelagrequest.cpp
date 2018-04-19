@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLagRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a DeleteLagRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLagRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 DeleteLagRequestPrivate::DeleteLagRequestPrivate(
     const DirectConnectRequest::Action action, DeleteLagRequest * const q)

@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::ListUsersResponse
- *
  * \brief The ListUsersResponse class provides an interace for MQ ListUsers responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new ListUsersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListUsersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListUsersResponse::ListUsersResponse(
         const ListUsersRequest &request,
@@ -57,6 +52,9 @@ ListUsersResponse::ListUsersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListUsersRequest * ListUsersResponse::request() const
 {
     Q_D(const ListUsersResponse);
@@ -64,9 +62,8 @@ const ListUsersRequest * ListUsersResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ ListUsers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ ListUsers \a response.
  */
 void ListUsersResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListUsersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::ListUsersResponsePrivate
+ * \brief The ListUsersResponsePrivate class provides private implementation for ListUsersResponse.
  * \internal
  *
- * \class ListUsersResponsePrivate
- *
- * \brief Private implementation for ListUsersResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUsersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListUsersResponse instance.
+ * Constructs a ListUsersResponsePrivate object with public implementation \a q.
  */
 ListUsersResponsePrivate::ListUsersResponsePrivate(
     ListUsersResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ ListUsersResponsePrivate::ListUsersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ ListUsersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ ListUsers response element from \a xml.
  */
 void ListUsersResponsePrivate::parseListUsersResponse(QXmlStreamReader &xml)
 {

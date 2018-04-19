@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionConcurrencyRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DeleteFunctionConcurrencyRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a DeleteFunctionConcurrencyRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 DeleteFunctionConcurrencyRequestPrivate::DeleteFunctionConcurrencyRequestPrivate(
     const LambdaRequest::Action action, DeleteFunctionConcurrencyRequest * const q)

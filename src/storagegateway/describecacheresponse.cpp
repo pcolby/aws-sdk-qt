@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeCacheResponse
- *
  * \brief The DescribeCacheResponse class provides an interace for StorageGateway DescribeCache responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeCacheResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCacheResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCacheResponse::DescribeCacheResponse(
         const DescribeCacheRequest &request,
@@ -124,6 +119,9 @@ DescribeCacheResponse::DescribeCacheResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCacheRequest * DescribeCacheResponse::request() const
 {
     Q_D(const DescribeCacheResponse);
@@ -131,9 +129,8 @@ const DescribeCacheRequest * DescribeCacheResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeCache response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeCache \a response.
  */
 void DescribeCacheResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeCacheResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeCacheResponsePrivate
+ * \brief The DescribeCacheResponsePrivate class provides private implementation for DescribeCacheResponse.
  * \internal
  *
- * \class DescribeCacheResponsePrivate
- *
- * \brief Private implementation for DescribeCacheResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCacheResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCacheResponse instance.
+ * Constructs a DescribeCacheResponsePrivate object with public implementation \a q.
  */
 DescribeCacheResponsePrivate::DescribeCacheResponsePrivate(
     DescribeCacheResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeCacheResponsePrivate::DescribeCacheResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeCacheResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeCache response element from \a xml.
  */
 void DescribeCacheResponsePrivate::parseDescribeCacheResponse(QXmlStreamReader &xml)
 {

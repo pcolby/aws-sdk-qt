@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeFleetsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeFleetsRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a DescribeFleetsRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 DescribeFleetsRequestPrivate::DescribeFleetsRequestPrivate(
     const AppStreamRequest::Action action, DescribeFleetsRequest * const q)

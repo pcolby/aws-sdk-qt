@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDataSourceFromRDSResponse : public MachineLearningRespo
 public:
     CreateDataSourceFromRDSResponse(const CreateDataSourceFromRDSRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDataSourceFromRDSRequest * request() const;
+    virtual const CreateDataSourceFromRDSRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDataSourceFromRDSResponse)

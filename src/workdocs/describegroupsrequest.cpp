@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeGroupsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeGroupsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeGroupsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DescribeGroupsRequestPrivate::DescribeGroupsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeGroupsRequest * const q)

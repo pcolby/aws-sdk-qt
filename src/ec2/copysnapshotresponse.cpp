@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CopySnapshotResponse
- *
  * \brief The CopySnapshotResponse class provides an interace for EC2 CopySnapshot responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CopySnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopySnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CopySnapshotResponse::CopySnapshotResponse(
         const CopySnapshotRequest &request,
@@ -59,6 +54,9 @@ CopySnapshotResponse::CopySnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopySnapshotRequest * CopySnapshotResponse::request() const
 {
     Q_D(const CopySnapshotResponse);
@@ -66,9 +64,8 @@ const CopySnapshotRequest * CopySnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CopySnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CopySnapshot \a response.
  */
 void CopySnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CopySnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CopySnapshotResponsePrivate
+ * \brief The CopySnapshotResponsePrivate class provides private implementation for CopySnapshotResponse.
  * \internal
  *
- * \class CopySnapshotResponsePrivate
- *
- * \brief Private implementation for CopySnapshotResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopySnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopySnapshotResponse instance.
+ * Constructs a CopySnapshotResponsePrivate object with public implementation \a q.
  */
 CopySnapshotResponsePrivate::CopySnapshotResponsePrivate(
     CopySnapshotResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CopySnapshotResponsePrivate::CopySnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CopySnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CopySnapshot response element from \a xml.
  */
 void CopySnapshotResponsePrivate::parseCopySnapshotResponse(QXmlStreamReader &xml)
 {

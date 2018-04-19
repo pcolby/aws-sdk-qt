@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StartCrawlerScheduleResponse
- *
  * \brief The StartCrawlerScheduleResponse class provides an interace for Glue StartCrawlerSchedule responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StartCrawlerScheduleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartCrawlerScheduleResponse object for \a reply to \a request, with parent \a parent.
  */
 StartCrawlerScheduleResponse::StartCrawlerScheduleResponse(
         const StartCrawlerScheduleRequest &request,
@@ -58,6 +53,9 @@ StartCrawlerScheduleResponse::StartCrawlerScheduleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartCrawlerScheduleRequest * StartCrawlerScheduleResponse::request() const
 {
     Q_D(const StartCrawlerScheduleResponse);
@@ -65,9 +63,8 @@ const StartCrawlerScheduleRequest * StartCrawlerScheduleResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Glue StartCrawlerSchedule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue StartCrawlerSchedule \a response.
  */
 void StartCrawlerScheduleResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StartCrawlerScheduleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::StartCrawlerScheduleResponsePrivate
+ * \brief The StartCrawlerScheduleResponsePrivate class provides private implementation for StartCrawlerScheduleResponse.
  * \internal
  *
- * \class StartCrawlerScheduleResponsePrivate
- *
- * \brief Private implementation for StartCrawlerScheduleResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartCrawlerScheduleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartCrawlerScheduleResponse instance.
+ * Constructs a StartCrawlerScheduleResponsePrivate object with public implementation \a q.
  */
 StartCrawlerScheduleResponsePrivate::StartCrawlerScheduleResponsePrivate(
     StartCrawlerScheduleResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ StartCrawlerScheduleResponsePrivate::StartCrawlerScheduleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue StartCrawlerScheduleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue StartCrawlerSchedule response element from \a xml.
  */
 void StartCrawlerScheduleResponsePrivate::parseStartCrawlerScheduleResponse(QXmlStreamReader &xml)
 {

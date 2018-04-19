@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListVirtualMFADevicesResponse : public IAMResponse {
 public:
     ListVirtualMFADevicesResponse(const ListVirtualMFADevicesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListVirtualMFADevicesRequest * request() const;
+    virtual const ListVirtualMFADevicesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListVirtualMFADevicesResponse)

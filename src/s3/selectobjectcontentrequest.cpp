@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * SelectObjectContentRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a SelectObjectContentRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a SelectObjectContentRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 SelectObjectContentRequestPrivate::SelectObjectContentRequestPrivate(
     const S3Request::Action action, SelectObjectContentRequest * const q)

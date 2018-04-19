@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListTagsForResourceRequestPrivate object for CloudHSM \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsForResourceRequestPrivate object for CloudHSM \a action,
+ * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const CloudHSMRequest::Action action, ListTagsForResourceRequest * const q)

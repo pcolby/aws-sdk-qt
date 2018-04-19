@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancerTlsCertificateRequest::resp
  */
 
 /*!
- *
- * Constructs a AttachLoadBalancerTlsCertificateRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a AttachLoadBalancerTlsCertificateRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 AttachLoadBalancerTlsCertificateRequestPrivate::AttachLoadBalancerTlsCertificateRequestPrivate(
     const LightsailRequest::Action action, AttachLoadBalancerTlsCertificateRequest * const q)

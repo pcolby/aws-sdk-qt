@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteCommentResponse
- *
  * \brief The DeleteCommentResponse class provides an interace for WorkDocs DeleteComment responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteCommentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCommentResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCommentResponse::DeleteCommentResponse(
         const DeleteCommentRequest &request,
@@ -84,6 +79,9 @@ DeleteCommentResponse::DeleteCommentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCommentRequest * DeleteCommentResponse::request() const
 {
     Q_D(const DeleteCommentResponse);
@@ -91,9 +89,8 @@ const DeleteCommentRequest * DeleteCommentResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs DeleteComment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DeleteComment \a response.
  */
 void DeleteCommentResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteCommentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DeleteCommentResponsePrivate
+ * \brief The DeleteCommentResponsePrivate class provides private implementation for DeleteCommentResponse.
  * \internal
  *
- * \class DeleteCommentResponsePrivate
- *
- * \brief Private implementation for DeleteCommentResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCommentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCommentResponse instance.
+ * Constructs a DeleteCommentResponsePrivate object with public implementation \a q.
  */
 DeleteCommentResponsePrivate::DeleteCommentResponsePrivate(
     DeleteCommentResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteCommentResponsePrivate::DeleteCommentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DeleteCommentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DeleteComment response element from \a xml.
  */
 void DeleteCommentResponsePrivate::parseDeleteCommentResponse(QXmlStreamReader &xml)
 {

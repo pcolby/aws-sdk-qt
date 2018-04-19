@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetSecurityGroupsResponse
- *
  * \brief The SetSecurityGroupsResponse class provides an interace for ElasticLoadBalancingv2 SetSecurityGroups responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new SetSecurityGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetSecurityGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 SetSecurityGroupsResponse::SetSecurityGroupsResponse(
         const SetSecurityGroupsRequest &request,
@@ -123,6 +118,9 @@ SetSecurityGroupsResponse::SetSecurityGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetSecurityGroupsRequest * SetSecurityGroupsResponse::request() const
 {
     Q_D(const SetSecurityGroupsResponse);
@@ -130,9 +128,8 @@ const SetSecurityGroupsRequest * SetSecurityGroupsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 SetSecurityGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 SetSecurityGroups \a response.
  */
 void SetSecurityGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void SetSecurityGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::SetSecurityGroupsResponsePrivate
+ * \brief The SetSecurityGroupsResponsePrivate class provides private implementation for SetSecurityGroupsResponse.
  * \internal
  *
- * \class SetSecurityGroupsResponsePrivate
- *
- * \brief Private implementation for SetSecurityGroupsResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetSecurityGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetSecurityGroupsResponse instance.
+ * Constructs a SetSecurityGroupsResponsePrivate object with public implementation \a q.
  */
 SetSecurityGroupsResponsePrivate::SetSecurityGroupsResponsePrivate(
     SetSecurityGroupsResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ SetSecurityGroupsResponsePrivate::SetSecurityGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 SetSecurityGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 SetSecurityGroups response element from \a xml.
  */
 void SetSecurityGroupsResponsePrivate::parseSetSecurityGroupsResponse(QXmlStreamReader &xml)
 {

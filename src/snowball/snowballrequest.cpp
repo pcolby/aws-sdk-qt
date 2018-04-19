@@ -56,7 +56,7 @@ namespace Snowball {
  */
 
 /*!
- * Constructs a[n] SnowballRequest object for Snowball \a action.
+ * Constructs a SnowballRequest object for Snowball \a action.
  */
 SnowballRequest::SnowballRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SnowballRequestPrivate(action, this))
@@ -256,8 +256,8 @@ QNetworkRequest SnowballRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a SnowballRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a SnowballRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 SnowballRequestPrivate::SnowballRequestPrivate(const SnowballRequest::Action action, SnowballRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

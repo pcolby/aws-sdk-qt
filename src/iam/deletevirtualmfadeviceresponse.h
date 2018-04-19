@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteVirtualMFADeviceResponse : public IAMResponse {
 public:
     DeleteVirtualMFADeviceResponse(const DeleteVirtualMFADeviceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteVirtualMFADeviceRequest * request() const;
+    virtual const DeleteVirtualMFADeviceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteVirtualMFADeviceResponse)

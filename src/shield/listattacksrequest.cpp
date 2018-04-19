@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListAttacksRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListAttacksRequestPrivate object for Shield \a action with,
- * public implementation \a q.
+ * Constructs a ListAttacksRequestPrivate object for Shield \a action,
+ * with public implementation \a q.
  */
 ListAttacksRequestPrivate::ListAttacksRequestPrivate(
     const ShieldRequest::Action action, ListAttacksRequest * const q)

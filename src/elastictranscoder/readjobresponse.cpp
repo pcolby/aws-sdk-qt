@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ReadJobResponse
- *
  * \brief The ReadJobResponse class provides an interace for ElasticTranscoder ReadJob responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new ReadJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReadJobResponse object for \a reply to \a request, with parent \a parent.
  */
 ReadJobResponse::ReadJobResponse(
         const ReadJobRequest &request,
@@ -58,6 +53,9 @@ ReadJobResponse::ReadJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReadJobRequest * ReadJobResponse::request() const
 {
     Q_D(const ReadJobResponse);
@@ -65,9 +63,8 @@ const ReadJobRequest * ReadJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder ReadJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder ReadJob \a response.
  */
 void ReadJobResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ReadJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::ReadJobResponsePrivate
+ * \brief The ReadJobResponsePrivate class provides private implementation for ReadJobResponse.
  * \internal
  *
- * \class ReadJobResponsePrivate
- *
- * \brief Private implementation for ReadJobResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReadJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReadJobResponse instance.
+ * Constructs a ReadJobResponsePrivate object with public implementation \a q.
  */
 ReadJobResponsePrivate::ReadJobResponsePrivate(
     ReadJobResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ ReadJobResponsePrivate::ReadJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder ReadJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder ReadJob response element from \a xml.
  */
 void ReadJobResponsePrivate::parseReadJobResponse(QXmlStreamReader &xml)
 {

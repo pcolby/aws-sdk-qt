@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::FailoverDBClusterResponse
- *
  * \brief The FailoverDBClusterResponse class provides an interace for RDS FailoverDBCluster responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new FailoverDBClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a FailoverDBClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 FailoverDBClusterResponse::FailoverDBClusterResponse(
         const FailoverDBClusterRequest &request,
@@ -119,6 +114,9 @@ FailoverDBClusterResponse::FailoverDBClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const FailoverDBClusterRequest * FailoverDBClusterResponse::request() const
 {
     Q_D(const FailoverDBClusterResponse);
@@ -126,9 +124,8 @@ const FailoverDBClusterRequest * FailoverDBClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS FailoverDBCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS FailoverDBCluster \a response.
  */
 void FailoverDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void FailoverDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::FailoverDBClusterResponsePrivate
+ * \brief The FailoverDBClusterResponsePrivate class provides private implementation for FailoverDBClusterResponse.
  * \internal
  *
- * \class FailoverDBClusterResponsePrivate
- *
- * \brief Private implementation for FailoverDBClusterResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FailoverDBClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public FailoverDBClusterResponse instance.
+ * Constructs a FailoverDBClusterResponsePrivate object with public implementation \a q.
  */
 FailoverDBClusterResponsePrivate::FailoverDBClusterResponsePrivate(
     FailoverDBClusterResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ FailoverDBClusterResponsePrivate::FailoverDBClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS FailoverDBClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS FailoverDBCluster response element from \a xml.
  */
 void FailoverDBClusterResponsePrivate::parseFailoverDBClusterResponse(QXmlStreamReader &xml)
 {

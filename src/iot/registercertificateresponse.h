@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterCertificateResponse : public IoTResponse {
 public:
     RegisterCertificateResponse(const RegisterCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterCertificateRequest * request() const;
+    virtual const RegisterCertificateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterCertificateResponse)

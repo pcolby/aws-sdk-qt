@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DeleteDiskResponse
- *
  * \brief The DeleteDiskResponse class provides an interace for Lightsail DeleteDisk responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DeleteDiskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDiskResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDiskResponse::DeleteDiskResponse(
         const DeleteDiskRequest &request,
@@ -71,6 +66,9 @@ DeleteDiskResponse::DeleteDiskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDiskRequest * DeleteDiskResponse::request() const
 {
     Q_D(const DeleteDiskResponse);
@@ -78,9 +76,8 @@ const DeleteDiskRequest * DeleteDiskResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail DeleteDisk response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail DeleteDisk \a response.
  */
 void DeleteDiskResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DeleteDiskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::DeleteDiskResponsePrivate
+ * \brief The DeleteDiskResponsePrivate class provides private implementation for DeleteDiskResponse.
  * \internal
  *
- * \class DeleteDiskResponsePrivate
- *
- * \brief Private implementation for DeleteDiskResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDiskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDiskResponse instance.
+ * Constructs a DeleteDiskResponsePrivate object with public implementation \a q.
  */
 DeleteDiskResponsePrivate::DeleteDiskResponsePrivate(
     DeleteDiskResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ DeleteDiskResponsePrivate::DeleteDiskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail DeleteDiskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail DeleteDisk response element from \a xml.
  */
 void DeleteDiskResponsePrivate::parseDeleteDiskResponse(QXmlStreamReader &xml)
 {

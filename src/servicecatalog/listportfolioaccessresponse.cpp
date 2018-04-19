@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListPortfolioAccessResponse
- *
  * \brief The ListPortfolioAccessResponse class provides an interace for ServiceCatalog ListPortfolioAccess responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListPortfolioAccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPortfolioAccessResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPortfolioAccessResponse::ListPortfolioAccessResponse(
         const ListPortfolioAccessRequest &request,
@@ -61,6 +56,9 @@ ListPortfolioAccessResponse::ListPortfolioAccessResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPortfolioAccessRequest * ListPortfolioAccessResponse::request() const
 {
     Q_D(const ListPortfolioAccessResponse);
@@ -68,9 +66,8 @@ const ListPortfolioAccessRequest * ListPortfolioAccessResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ListPortfolioAccess response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ListPortfolioAccess \a response.
  */
 void ListPortfolioAccessResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListPortfolioAccessResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ListPortfolioAccessResponsePrivate
+ * \brief The ListPortfolioAccessResponsePrivate class provides private implementation for ListPortfolioAccessResponse.
  * \internal
  *
- * \class ListPortfolioAccessResponsePrivate
- *
- * \brief Private implementation for ListPortfolioAccessResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPortfolioAccessResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPortfolioAccessResponse instance.
+ * Constructs a ListPortfolioAccessResponsePrivate object with public implementation \a q.
  */
 ListPortfolioAccessResponsePrivate::ListPortfolioAccessResponsePrivate(
     ListPortfolioAccessResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ListPortfolioAccessResponsePrivate::ListPortfolioAccessResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ListPortfolioAccessResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ListPortfolioAccess response element from \a xml.
  */
 void ListPortfolioAccessResponsePrivate::parseListPortfolioAccessResponse(QXmlStreamReader &xml)
 {

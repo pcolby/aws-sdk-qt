@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAccountPasswordPolicyRequest::response(
  */
 
 /*!
- *
- * Constructs a UpdateAccountPasswordPolicyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAccountPasswordPolicyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateAccountPasswordPolicyRequestPrivate::UpdateAccountPasswordPolicyRequestPrivate(
     const IAMRequest::Action action, UpdateAccountPasswordPolicyRequest * const q)

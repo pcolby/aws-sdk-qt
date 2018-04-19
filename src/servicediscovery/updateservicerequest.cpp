@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * UpdateServiceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateServiceRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a UpdateServiceRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 UpdateServiceRequestPrivate::UpdateServiceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, UpdateServiceRequest * const q)

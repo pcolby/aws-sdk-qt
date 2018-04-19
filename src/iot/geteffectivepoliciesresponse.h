@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetEffectivePoliciesResponse : public IoTResponse {
 public:
     GetEffectivePoliciesResponse(const GetEffectivePoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetEffectivePoliciesRequest * request() const;
+    virtual const GetEffectivePoliciesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetEffectivePoliciesResponse)

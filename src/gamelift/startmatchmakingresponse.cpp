@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::StartMatchmakingResponse
- *
  * \brief The StartMatchmakingResponse class provides an interace for GameLift StartMatchmaking responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new StartMatchmakingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartMatchmakingResponse object for \a reply to \a request, with parent \a parent.
  */
 StartMatchmakingResponse::StartMatchmakingResponse(
         const StartMatchmakingRequest &request,
@@ -491,6 +486,9 @@ StartMatchmakingResponse::StartMatchmakingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartMatchmakingRequest * StartMatchmakingResponse::request() const
 {
     Q_D(const StartMatchmakingResponse);
@@ -498,9 +496,8 @@ const StartMatchmakingRequest * StartMatchmakingResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift StartMatchmaking response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift StartMatchmaking \a response.
  */
 void StartMatchmakingResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void StartMatchmakingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::StartMatchmakingResponsePrivate
+ * \brief The StartMatchmakingResponsePrivate class provides private implementation for StartMatchmakingResponse.
  * \internal
  *
- * \class StartMatchmakingResponsePrivate
- *
- * \brief Private implementation for StartMatchmakingResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartMatchmakingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartMatchmakingResponse instance.
+ * Constructs a StartMatchmakingResponsePrivate object with public implementation \a q.
  */
 StartMatchmakingResponsePrivate::StartMatchmakingResponsePrivate(
     StartMatchmakingResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ StartMatchmakingResponsePrivate::StartMatchmakingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift StartMatchmakingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift StartMatchmaking response element from \a xml.
  */
 void StartMatchmakingResponsePrivate::parseStartMatchmakingResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEmailChannelRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteEmailChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEmailChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 DeleteEmailChannelRequestPrivate::DeleteEmailChannelRequestPrivate(
     const PinpointRequest::Action action, DeleteEmailChannelRequest * const q)

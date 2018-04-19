@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListCertificatesResponse
- *
  * \brief The ListCertificatesResponse class provides an interace for IoT ListCertificates responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCertificatesResponse::ListCertificatesResponse(
         const ListCertificatesRequest &request,
@@ -66,6 +61,9 @@ ListCertificatesResponse::ListCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCertificatesRequest * ListCertificatesResponse::request() const
 {
     Q_D(const ListCertificatesResponse);
@@ -73,9 +71,8 @@ const ListCertificatesRequest * ListCertificatesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListCertificates \a response.
  */
 void ListCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListCertificatesResponsePrivate
+ * \brief The ListCertificatesResponsePrivate class provides private implementation for ListCertificatesResponse.
  * \internal
  *
- * \class ListCertificatesResponsePrivate
- *
- * \brief Private implementation for ListCertificatesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCertificatesResponse instance.
+ * Constructs a ListCertificatesResponsePrivate object with public implementation \a q.
  */
 ListCertificatesResponsePrivate::ListCertificatesResponsePrivate(
     ListCertificatesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListCertificatesResponsePrivate::ListCertificatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListCertificates response element from \a xml.
  */
 void ListCertificatesResponsePrivate::parseListCertificatesResponse(QXmlStreamReader &xml)
 {

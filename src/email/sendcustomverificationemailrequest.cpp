@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SendCustomVerificationEmailRequest::response(
  */
 
 /*!
- *
- * Constructs a SendCustomVerificationEmailRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a SendCustomVerificationEmailRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 SendCustomVerificationEmailRequestPrivate::SendCustomVerificationEmailRequestPrivate(
     const SESRequest::Action action, SendCustomVerificationEmailRequest * const q)

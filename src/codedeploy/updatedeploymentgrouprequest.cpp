@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDeploymentGroupRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a UpdateDeploymentGroupRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDeploymentGroupRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 UpdateDeploymentGroupRequestPrivate::UpdateDeploymentGroupRequestPrivate(
     const CodeDeployRequest::Action action, UpdateDeploymentGroupRequest * const q)

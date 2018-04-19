@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLogStreamRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteLogStreamRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLogStreamRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DeleteLogStreamRequestPrivate::DeleteLogStreamRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteLogStreamRequest * const q)

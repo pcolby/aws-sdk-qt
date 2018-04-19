@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListTrafficPolicyInstancesByHostedZoneResponse
- *
  * \brief The ListTrafficPolicyInstancesByHostedZoneResponse class provides an interace for Route53 ListTrafficPolicyInstancesByHostedZone responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listTrafficPolicyInstancesByHostedZone
  */
 
 /*!
- * @brief  Constructs a new ListTrafficPolicyInstancesByHostedZoneResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTrafficPolicyInstancesByHostedZoneResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTrafficPolicyInstancesByHostedZoneResponse::ListTrafficPolicyInstancesByHostedZoneResponse(
         const ListTrafficPolicyInstancesByHostedZoneRequest &request,
@@ -55,6 +50,9 @@ ListTrafficPolicyInstancesByHostedZoneResponse::ListTrafficPolicyInstancesByHost
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTrafficPolicyInstancesByHostedZoneRequest * ListTrafficPolicyInstancesByHostedZoneResponse::request() const
 {
     Q_D(const ListTrafficPolicyInstancesByHostedZoneResponse);
@@ -62,9 +60,8 @@ const ListTrafficPolicyInstancesByHostedZoneRequest * ListTrafficPolicyInstances
 }
 
 /*!
- * @brief  Parse a Route53 ListTrafficPolicyInstancesByHostedZone response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 ListTrafficPolicyInstancesByHostedZone \a response.
  */
 void ListTrafficPolicyInstancesByHostedZoneResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListTrafficPolicyInstancesByHostedZoneResponse::parseSuccess(QIODevice &res
 }
 
 /*!
+ * \class QtAws::Route53::ListTrafficPolicyInstancesByHostedZoneResponsePrivate
+ * \brief The ListTrafficPolicyInstancesByHostedZoneResponsePrivate class provides private implementation for ListTrafficPolicyInstancesByHostedZoneResponse.
  * \internal
  *
- * \class ListTrafficPolicyInstancesByHostedZoneResponsePrivate
- *
- * \brief Private implementation for ListTrafficPolicyInstancesByHostedZoneResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTrafficPolicyInstancesByHostedZoneResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTrafficPolicyInstancesByHostedZoneResponse instance.
+ * Constructs a ListTrafficPolicyInstancesByHostedZoneResponsePrivate object with public implementation \a q.
  */
 ListTrafficPolicyInstancesByHostedZoneResponsePrivate::ListTrafficPolicyInstancesByHostedZoneResponsePrivate(
     ListTrafficPolicyInstancesByHostedZoneResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListTrafficPolicyInstancesByHostedZoneResponsePrivate::ListTrafficPolicyInstance
 }
 
 /*!
- * @brief  Parse an Route53 ListTrafficPolicyInstancesByHostedZoneResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 ListTrafficPolicyInstancesByHostedZone response element from \a xml.
  */
 void ListTrafficPolicyInstancesByHostedZoneResponsePrivate::parseListTrafficPolicyInstancesByHostedZoneResponse(QXmlStreamReader &xml)
 {

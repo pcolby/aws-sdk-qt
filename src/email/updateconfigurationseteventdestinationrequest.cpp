@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetEventDestinationRequest
  */
 
 /*!
- *
- * Constructs a UpdateConfigurationSetEventDestinationRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a UpdateConfigurationSetEventDestinationRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 UpdateConfigurationSetEventDestinationRequestPrivate::UpdateConfigurationSetEventDestinationRequestPrivate(
     const SESRequest::Action action, UpdateConfigurationSetEventDestinationRequest * const q)

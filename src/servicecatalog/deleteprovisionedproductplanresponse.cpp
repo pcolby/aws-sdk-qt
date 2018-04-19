@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DeleteProvisionedProductPlanResponse
- *
  * \brief The DeleteProvisionedProductPlanResponse class provides an interace for ServiceCatalog DeleteProvisionedProductPlan responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DeleteProvisionedProductPlanResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteProvisionedProductPlanResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteProvisionedProductPlanResponse::DeleteProvisionedProductPlanResponse(
         const DeleteProvisionedProductPlanRequest &request,
@@ -61,6 +56,9 @@ DeleteProvisionedProductPlanResponse::DeleteProvisionedProductPlanResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteProvisionedProductPlanRequest * DeleteProvisionedProductPlanResponse::request() const
 {
     Q_D(const DeleteProvisionedProductPlanResponse);
@@ -68,9 +66,8 @@ const DeleteProvisionedProductPlanRequest * DeleteProvisionedProductPlanResponse
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DeleteProvisionedProductPlan response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DeleteProvisionedProductPlan \a response.
  */
 void DeleteProvisionedProductPlanResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeleteProvisionedProductPlanResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DeleteProvisionedProductPlanResponsePrivate
+ * \brief The DeleteProvisionedProductPlanResponsePrivate class provides private implementation for DeleteProvisionedProductPlanResponse.
  * \internal
  *
- * \class DeleteProvisionedProductPlanResponsePrivate
- *
- * \brief Private implementation for DeleteProvisionedProductPlanResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProvisionedProductPlanResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteProvisionedProductPlanResponse instance.
+ * Constructs a DeleteProvisionedProductPlanResponsePrivate object with public implementation \a q.
  */
 DeleteProvisionedProductPlanResponsePrivate::DeleteProvisionedProductPlanResponsePrivate(
     DeleteProvisionedProductPlanResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DeleteProvisionedProductPlanResponsePrivate::DeleteProvisionedProductPlanRespons
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DeleteProvisionedProductPlanResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DeleteProvisionedProductPlan response element from \a xml.
  */
 void DeleteProvisionedProductPlanResponsePrivate::parseDeleteProvisionedProductPlanResponse(QXmlStreamReader &xml)
 {

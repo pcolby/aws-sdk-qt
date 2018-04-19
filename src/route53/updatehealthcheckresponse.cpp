@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::UpdateHealthCheckResponse
- *
  * \brief The UpdateHealthCheckResponse class provides an interace for Route53 UpdateHealthCheck responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::updateHealthCheck
  */
 
 /*!
- * @brief  Constructs a new UpdateHealthCheckResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateHealthCheckResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateHealthCheckResponse::UpdateHealthCheckResponse(
         const UpdateHealthCheckRequest &request,
@@ -55,6 +50,9 @@ UpdateHealthCheckResponse::UpdateHealthCheckResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateHealthCheckRequest * UpdateHealthCheckResponse::request() const
 {
     Q_D(const UpdateHealthCheckResponse);
@@ -62,9 +60,8 @@ const UpdateHealthCheckRequest * UpdateHealthCheckResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 UpdateHealthCheck response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 UpdateHealthCheck \a response.
  */
 void UpdateHealthCheckResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateHealthCheckResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::UpdateHealthCheckResponsePrivate
+ * \brief The UpdateHealthCheckResponsePrivate class provides private implementation for UpdateHealthCheckResponse.
  * \internal
  *
- * \class UpdateHealthCheckResponsePrivate
- *
- * \brief Private implementation for UpdateHealthCheckResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateHealthCheckResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateHealthCheckResponse instance.
+ * Constructs a UpdateHealthCheckResponsePrivate object with public implementation \a q.
  */
 UpdateHealthCheckResponsePrivate::UpdateHealthCheckResponsePrivate(
     UpdateHealthCheckResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateHealthCheckResponsePrivate::UpdateHealthCheckResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 UpdateHealthCheckResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 UpdateHealthCheck response element from \a xml.
  */
 void UpdateHealthCheckResponsePrivate::parseUpdateHealthCheckResponse(QXmlStreamReader &xml)
 {

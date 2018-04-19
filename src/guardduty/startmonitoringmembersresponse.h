@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartMonitoringMembersResponse : public GuardDutyResponse {
 public:
     StartMonitoringMembersResponse(const StartMonitoringMembersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartMonitoringMembersRequest * request() const;
+    virtual const StartMonitoringMembersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartMonitoringMembersResponse)

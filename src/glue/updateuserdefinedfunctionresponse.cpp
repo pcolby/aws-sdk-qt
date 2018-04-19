@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateUserDefinedFunctionResponse
- *
  * \brief The UpdateUserDefinedFunctionResponse class provides an interace for Glue UpdateUserDefinedFunction responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateUserDefinedFunctionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateUserDefinedFunctionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateUserDefinedFunctionResponse::UpdateUserDefinedFunctionResponse(
         const UpdateUserDefinedFunctionRequest &request,
@@ -58,6 +53,9 @@ UpdateUserDefinedFunctionResponse::UpdateUserDefinedFunctionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateUserDefinedFunctionRequest * UpdateUserDefinedFunctionResponse::request() const
 {
     Q_D(const UpdateUserDefinedFunctionResponse);
@@ -65,9 +63,8 @@ const UpdateUserDefinedFunctionRequest * UpdateUserDefinedFunctionResponse::requ
 }
 
 /*!
- * @brief  Parse a Glue UpdateUserDefinedFunction response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue UpdateUserDefinedFunction \a response.
  */
 void UpdateUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateUserDefinedFunctionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::UpdateUserDefinedFunctionResponsePrivate
+ * \brief The UpdateUserDefinedFunctionResponsePrivate class provides private implementation for UpdateUserDefinedFunctionResponse.
  * \internal
  *
- * \class UpdateUserDefinedFunctionResponsePrivate
- *
- * \brief Private implementation for UpdateUserDefinedFunctionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUserDefinedFunctionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateUserDefinedFunctionResponse instance.
+ * Constructs a UpdateUserDefinedFunctionResponsePrivate object with public implementation \a q.
  */
 UpdateUserDefinedFunctionResponsePrivate::UpdateUserDefinedFunctionResponsePrivate(
     UpdateUserDefinedFunctionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateUserDefinedFunctionResponsePrivate::UpdateUserDefinedFunctionResponsePriva
 }
 
 /*!
- * @brief  Parse an Glue UpdateUserDefinedFunctionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue UpdateUserDefinedFunction response element from \a xml.
  */
 void UpdateUserDefinedFunctionResponsePrivate::parseUpdateUserDefinedFunctionResponse(QXmlStreamReader &xml)
 {

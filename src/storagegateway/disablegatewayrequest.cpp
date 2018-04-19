@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DisableGatewayRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DisableGatewayRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DisableGatewayRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DisableGatewayRequestPrivate::DisableGatewayRequestPrivate(
     const StorageGatewayRequest::Action action, DisableGatewayRequest * const q)

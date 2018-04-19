@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ReorderReceiptRuleSetResponse
- *
  * \brief The ReorderReceiptRuleSetResponse class provides an interace for SES ReorderReceiptRuleSet responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ReorderReceiptRuleSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReorderReceiptRuleSetResponse object for \a reply to \a request, with parent \a parent.
  */
 ReorderReceiptRuleSetResponse::ReorderReceiptRuleSetResponse(
         const ReorderReceiptRuleSetRequest &request,
@@ -66,6 +61,9 @@ ReorderReceiptRuleSetResponse::ReorderReceiptRuleSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReorderReceiptRuleSetRequest * ReorderReceiptRuleSetResponse::request() const
 {
     Q_D(const ReorderReceiptRuleSetResponse);
@@ -73,9 +71,8 @@ const ReorderReceiptRuleSetRequest * ReorderReceiptRuleSetResponse::request() co
 }
 
 /*!
- * @brief  Parse a SES ReorderReceiptRuleSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES ReorderReceiptRuleSet \a response.
  */
 void ReorderReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ReorderReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::ReorderReceiptRuleSetResponsePrivate
+ * \brief The ReorderReceiptRuleSetResponsePrivate class provides private implementation for ReorderReceiptRuleSetResponse.
  * \internal
  *
- * \class ReorderReceiptRuleSetResponsePrivate
- *
- * \brief Private implementation for ReorderReceiptRuleSetResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReorderReceiptRuleSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReorderReceiptRuleSetResponse instance.
+ * Constructs a ReorderReceiptRuleSetResponsePrivate object with public implementation \a q.
  */
 ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponsePrivate(
     ReorderReceiptRuleSetResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ ReorderReceiptRuleSetResponsePrivate::ReorderReceiptRuleSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES ReorderReceiptRuleSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES ReorderReceiptRuleSet response element from \a xml.
  */
 void ReorderReceiptRuleSetResponsePrivate::parseReorderReceiptRuleSetResponse(QXmlStreamReader &xml)
 {

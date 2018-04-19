@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * UnlinkDeveloperIdentityRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UnlinkDeveloperIdentityRequestPrivate object for CognitoIdentity \a action with,
- * public implementation \a q.
+ * Constructs a UnlinkDeveloperIdentityRequestPrivate object for CognitoIdentity \a action,
+ * with public implementation \a q.
  */
 UnlinkDeveloperIdentityRequestPrivate::UnlinkDeveloperIdentityRequestPrivate(
     const CognitoIdentityRequest::Action action, UnlinkDeveloperIdentityRequest * const q)

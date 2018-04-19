@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateResourceDefinitionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateResourceDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a CreateResourceDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 CreateResourceDefinitionRequestPrivate::CreateResourceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, CreateResourceDefinitionRequest * const q)

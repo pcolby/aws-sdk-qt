@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DeleteScalingPolicyRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteScalingPolicyRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteScalingPolicyRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DeleteScalingPolicyRequestPrivate::DeleteScalingPolicyRequestPrivate(
     const GameLiftRequest::Action action, DeleteScalingPolicyRequest * const q)

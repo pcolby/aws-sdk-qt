@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::AcceptHandshakeResponse
- *
  * \brief The AcceptHandshakeResponse class provides an interace for Organizations AcceptHandshake responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new AcceptHandshakeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AcceptHandshakeResponse object for \a reply to \a request, with parent \a parent.
  */
 AcceptHandshakeResponse::AcceptHandshakeResponse(
         const AcceptHandshakeRequest &request,
@@ -197,6 +192,9 @@ AcceptHandshakeResponse::AcceptHandshakeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AcceptHandshakeRequest * AcceptHandshakeResponse::request() const
 {
     Q_D(const AcceptHandshakeResponse);
@@ -204,9 +202,8 @@ const AcceptHandshakeRequest * AcceptHandshakeResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations AcceptHandshake response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations AcceptHandshake \a response.
  */
 void AcceptHandshakeResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void AcceptHandshakeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::AcceptHandshakeResponsePrivate
+ * \brief The AcceptHandshakeResponsePrivate class provides private implementation for AcceptHandshakeResponse.
  * \internal
  *
- * \class AcceptHandshakeResponsePrivate
- *
- * \brief Private implementation for AcceptHandshakeResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptHandshakeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AcceptHandshakeResponse instance.
+ * Constructs a AcceptHandshakeResponsePrivate object with public implementation \a q.
  */
 AcceptHandshakeResponsePrivate::AcceptHandshakeResponsePrivate(
     AcceptHandshakeResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ AcceptHandshakeResponsePrivate::AcceptHandshakeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations AcceptHandshakeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations AcceptHandshake response element from \a xml.
  */
 void AcceptHandshakeResponsePrivate::parseAcceptHandshakeResponse(QXmlStreamReader &xml)
 {

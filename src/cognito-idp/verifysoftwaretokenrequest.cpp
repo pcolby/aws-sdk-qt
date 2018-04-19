@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * VerifySoftwareTokenRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a VerifySoftwareTokenRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a VerifySoftwareTokenRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 VerifySoftwareTokenRequestPrivate::VerifySoftwareTokenRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, VerifySoftwareTokenRequest * const q)

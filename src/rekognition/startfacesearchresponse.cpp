@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartFaceSearchResponse
- *
  * \brief The StartFaceSearchResponse class provides an interace for Rekognition StartFaceSearch responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartFaceSearchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartFaceSearchResponse object for \a reply to \a request, with parent \a parent.
  */
 StartFaceSearchResponse::StartFaceSearchResponse(
         const StartFaceSearchRequest &request,
@@ -56,6 +51,9 @@ StartFaceSearchResponse::StartFaceSearchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartFaceSearchRequest * StartFaceSearchResponse::request() const
 {
     Q_D(const StartFaceSearchResponse);
@@ -63,9 +61,8 @@ const StartFaceSearchRequest * StartFaceSearchResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition StartFaceSearch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition StartFaceSearch \a response.
  */
 void StartFaceSearchResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void StartFaceSearchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::StartFaceSearchResponsePrivate
+ * \brief The StartFaceSearchResponsePrivate class provides private implementation for StartFaceSearchResponse.
  * \internal
  *
- * \class StartFaceSearchResponsePrivate
- *
- * \brief Private implementation for StartFaceSearchResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartFaceSearchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartFaceSearchResponse instance.
+ * Constructs a StartFaceSearchResponsePrivate object with public implementation \a q.
  */
 StartFaceSearchResponsePrivate::StartFaceSearchResponsePrivate(
     StartFaceSearchResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ StartFaceSearchResponsePrivate::StartFaceSearchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition StartFaceSearchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition StartFaceSearch response element from \a xml.
  */
 void StartFaceSearchResponsePrivate::parseStartFaceSearchResponse(QXmlStreamReader &xml)
 {

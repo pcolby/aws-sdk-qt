@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetRateBasedRuleManagedKeysResponse
- *
  * \brief The GetRateBasedRuleManagedKeysResponse class provides an interace for WAFRegional GetRateBasedRuleManagedKeys responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetRateBasedRuleManagedKeysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRateBasedRuleManagedKeysResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRateBasedRuleManagedKeysResponse::GetRateBasedRuleManagedKeysResponse(
         const GetRateBasedRuleManagedKeysRequest &request,
@@ -62,6 +57,9 @@ GetRateBasedRuleManagedKeysResponse::GetRateBasedRuleManagedKeysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRateBasedRuleManagedKeysRequest * GetRateBasedRuleManagedKeysResponse::request() const
 {
     Q_D(const GetRateBasedRuleManagedKeysResponse);
@@ -69,9 +67,8 @@ const GetRateBasedRuleManagedKeysRequest * GetRateBasedRuleManagedKeysResponse::
 }
 
 /*!
- * @brief  Parse a WAFRegional GetRateBasedRuleManagedKeys response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional GetRateBasedRuleManagedKeys \a response.
  */
 void GetRateBasedRuleManagedKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetRateBasedRuleManagedKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::GetRateBasedRuleManagedKeysResponsePrivate
+ * \brief The GetRateBasedRuleManagedKeysResponsePrivate class provides private implementation for GetRateBasedRuleManagedKeysResponse.
  * \internal
  *
- * \class GetRateBasedRuleManagedKeysResponsePrivate
- *
- * \brief Private implementation for GetRateBasedRuleManagedKeysResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRateBasedRuleManagedKeysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRateBasedRuleManagedKeysResponse instance.
+ * Constructs a GetRateBasedRuleManagedKeysResponsePrivate object with public implementation \a q.
  */
 GetRateBasedRuleManagedKeysResponsePrivate::GetRateBasedRuleManagedKeysResponsePrivate(
     GetRateBasedRuleManagedKeysResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ GetRateBasedRuleManagedKeysResponsePrivate::GetRateBasedRuleManagedKeysResponseP
 }
 
 /*!
- * @brief  Parse an WAFRegional GetRateBasedRuleManagedKeysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional GetRateBasedRuleManagedKeys response element from \a xml.
  */
 void GetRateBasedRuleManagedKeysResponsePrivate::parseGetRateBasedRuleManagedKeysResponse(QXmlStreamReader &xml)
 {

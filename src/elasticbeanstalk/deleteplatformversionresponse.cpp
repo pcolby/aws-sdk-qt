@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DeletePlatformVersionResponse
- *
  * \brief The DeletePlatformVersionResponse class provides an interace for ElasticBeanstalk DeletePlatformVersion responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DeletePlatformVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeletePlatformVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeletePlatformVersionResponse::DeletePlatformVersionResponse(
         const DeletePlatformVersionRequest &request,
@@ -77,6 +72,9 @@ DeletePlatformVersionResponse::DeletePlatformVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeletePlatformVersionRequest * DeletePlatformVersionResponse::request() const
 {
     Q_D(const DeletePlatformVersionResponse);
@@ -84,9 +82,8 @@ const DeletePlatformVersionRequest * DeletePlatformVersionResponse::request() co
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DeletePlatformVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DeletePlatformVersion \a response.
  */
 void DeletePlatformVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DeletePlatformVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DeletePlatformVersionResponsePrivate
+ * \brief The DeletePlatformVersionResponsePrivate class provides private implementation for DeletePlatformVersionResponse.
  * \internal
  *
- * \class DeletePlatformVersionResponsePrivate
- *
- * \brief Private implementation for DeletePlatformVersionResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePlatformVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeletePlatformVersionResponse instance.
+ * Constructs a DeletePlatformVersionResponsePrivate object with public implementation \a q.
  */
 DeletePlatformVersionResponsePrivate::DeletePlatformVersionResponsePrivate(
     DeletePlatformVersionResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DeletePlatformVersionResponsePrivate::DeletePlatformVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DeletePlatformVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DeletePlatformVersion response element from \a xml.
  */
 void DeletePlatformVersionResponsePrivate::parseDeletePlatformVersionResponse(QXmlStreamReader &xml)
 {

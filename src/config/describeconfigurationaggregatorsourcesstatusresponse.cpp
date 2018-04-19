@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationAggregatorSourcesStatusResponse
- *
  * \brief The DescribeConfigurationAggregatorSourcesStatusResponse class provides an interace for ConfigService DescribeConfigurationAggregatorSourcesStatus responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationAggregatorSourcesStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConfigurationAggregatorSourcesStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConfigurationAggregatorSourcesStatusResponse::DescribeConfigurationAggregatorSourcesStatusResponse(
         const DescribeConfigurationAggregatorSourcesStatusRequest &request,
@@ -78,6 +73,9 @@ DescribeConfigurationAggregatorSourcesStatusResponse::DescribeConfigurationAggre
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConfigurationAggregatorSourcesStatusRequest * DescribeConfigurationAggregatorSourcesStatusResponse::request() const
 {
     Q_D(const DescribeConfigurationAggregatorSourcesStatusResponse);
@@ -85,9 +83,8 @@ const DescribeConfigurationAggregatorSourcesStatusRequest * DescribeConfiguratio
 }
 
 /*!
- * @brief  Parse a ConfigService DescribeConfigurationAggregatorSourcesStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribeConfigurationAggregatorSourcesStatus \a response.
  */
 void DescribeConfigurationAggregatorSourcesStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeConfigurationAggregatorSourcesStatusResponse::parseSuccess(QIODevic
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribeConfigurationAggregatorSourcesStatusResponsePrivate
+ * \brief The DescribeConfigurationAggregatorSourcesStatusResponsePrivate class provides private implementation for DescribeConfigurationAggregatorSourcesStatusResponse.
  * \internal
  *
- * \class DescribeConfigurationAggregatorSourcesStatusResponsePrivate
- *
- * \brief Private implementation for DescribeConfigurationAggregatorSourcesStatusResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationAggregatorSourcesStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConfigurationAggregatorSourcesStatusResponse instance.
+ * Constructs a DescribeConfigurationAggregatorSourcesStatusResponsePrivate object with public implementation \a q.
  */
 DescribeConfigurationAggregatorSourcesStatusResponsePrivate::DescribeConfigurationAggregatorSourcesStatusResponsePrivate(
     DescribeConfigurationAggregatorSourcesStatusResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeConfigurationAggregatorSourcesStatusResponsePrivate::DescribeConfigurati
 }
 
 /*!
- * @brief  Parse an ConfigService DescribeConfigurationAggregatorSourcesStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribeConfigurationAggregatorSourcesStatus response element from \a xml.
  */
 void DescribeConfigurationAggregatorSourcesStatusResponsePrivate::parseDescribeConfigurationAggregatorSourcesStatusResponse(QXmlStreamReader &xml)
 {

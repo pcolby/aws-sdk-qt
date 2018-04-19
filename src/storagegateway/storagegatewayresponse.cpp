@@ -28,16 +28,13 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::StorageGatewayResponse
- *
  * \brief The StorageGatewayResponse class provides an interface for StorageGateway responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @brief  Constructs a new StorageGatewayResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a StorageGatewayResponse object with parent \a parent.
  */
 StorageGatewayResponse::StorageGatewayResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new StorageGatewayResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ StorageGatewayResponse::StorageGatewayResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StorageGatewayResponse object.
- *
+ * \internal
+ * Constructs a StorageGatewayResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from StorageGatewayResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 StorageGatewayResponse::StorageGatewayResponse(StorageGatewayResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ StorageGatewayResponse::StorageGatewayResponse(StorageGatewayResponsePrivate * c
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void StorageGatewayResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void StorageGatewayResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::StorageGateway::StorageGatewayResponsePrivate
+ * \brief The StorageGatewayResponsePrivate class provides private implementation for StorageGatewayResponse.
+ * \internal
  *
- * @class  StorageGatewayResponsePrivate
- *
- * @brief  Private implementation for StorageGatewayResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StorageGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StorageGatewayResponse instance.
+ * Constructs a StorageGatewayResponsePrivate object with public implementation \a q.
  */
 StorageGatewayResponsePrivate::StorageGatewayResponsePrivate(
     StorageGatewayResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutReportDefinitionResponse : public CostandUsageReportServic
 public:
     PutReportDefinitionResponse(const PutReportDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutReportDefinitionRequest * request() const;
+    virtual const PutReportDefinitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutReportDefinitionResponse)

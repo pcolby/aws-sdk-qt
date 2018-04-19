@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeChapCredentialsResponse
- *
  * \brief The DescribeChapCredentialsResponse class provides an interace for StorageGateway DescribeChapCredentials responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeChapCredentialsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeChapCredentialsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeChapCredentialsResponse::DescribeChapCredentialsResponse(
         const DescribeChapCredentialsRequest &request,
@@ -124,6 +119,9 @@ DescribeChapCredentialsResponse::DescribeChapCredentialsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeChapCredentialsRequest * DescribeChapCredentialsResponse::request() const
 {
     Q_D(const DescribeChapCredentialsResponse);
@@ -131,9 +129,8 @@ const DescribeChapCredentialsRequest * DescribeChapCredentialsResponse::request(
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeChapCredentials response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeChapCredentials \a response.
  */
 void DescribeChapCredentialsResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeChapCredentialsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeChapCredentialsResponsePrivate
+ * \brief The DescribeChapCredentialsResponsePrivate class provides private implementation for DescribeChapCredentialsResponse.
  * \internal
  *
- * \class DescribeChapCredentialsResponsePrivate
- *
- * \brief Private implementation for DescribeChapCredentialsResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeChapCredentialsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeChapCredentialsResponse instance.
+ * Constructs a DescribeChapCredentialsResponsePrivate object with public implementation \a q.
  */
 DescribeChapCredentialsResponsePrivate::DescribeChapCredentialsResponsePrivate(
     DescribeChapCredentialsResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeChapCredentialsResponsePrivate::DescribeChapCredentialsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeChapCredentialsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeChapCredentials response element from \a xml.
  */
 void DescribeChapCredentialsResponsePrivate::parseDescribeChapCredentialsResponse(QXmlStreamReader &xml)
 {

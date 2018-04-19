@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateNetworkInterfaceResponse
- *
  * \brief The CreateNetworkInterfaceResponse class provides an interace for EC2 CreateNetworkInterface responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateNetworkInterfaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateNetworkInterfaceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateNetworkInterfaceResponse::CreateNetworkInterfaceResponse(
         const CreateNetworkInterfaceRequest &request,
@@ -59,6 +54,9 @@ CreateNetworkInterfaceResponse::CreateNetworkInterfaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateNetworkInterfaceRequest * CreateNetworkInterfaceResponse::request() const
 {
     Q_D(const CreateNetworkInterfaceResponse);
@@ -66,9 +64,8 @@ const CreateNetworkInterfaceRequest * CreateNetworkInterfaceResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 CreateNetworkInterface response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateNetworkInterface \a response.
  */
 void CreateNetworkInterfaceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateNetworkInterfaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateNetworkInterfaceResponsePrivate
+ * \brief The CreateNetworkInterfaceResponsePrivate class provides private implementation for CreateNetworkInterfaceResponse.
  * \internal
  *
- * \class CreateNetworkInterfaceResponsePrivate
- *
- * \brief Private implementation for CreateNetworkInterfaceResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNetworkInterfaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateNetworkInterfaceResponse instance.
+ * Constructs a CreateNetworkInterfaceResponsePrivate object with public implementation \a q.
  */
 CreateNetworkInterfaceResponsePrivate::CreateNetworkInterfaceResponsePrivate(
     CreateNetworkInterfaceResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateNetworkInterfaceResponsePrivate::CreateNetworkInterfaceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateNetworkInterfaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateNetworkInterface response element from \a xml.
  */
 void CreateNetworkInterfaceResponsePrivate::parseCreateNetworkInterfaceResponse(QXmlStreamReader &xml)
 {

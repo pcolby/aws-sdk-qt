@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::DeleteFunctionConcurrencyResponse
- *
  * \brief The DeleteFunctionConcurrencyResponse class provides an interace for Lambda DeleteFunctionConcurrency responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new DeleteFunctionConcurrencyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteFunctionConcurrencyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteFunctionConcurrencyResponse::DeleteFunctionConcurrencyResponse(
         const DeleteFunctionConcurrencyRequest &request,
@@ -66,6 +61,9 @@ DeleteFunctionConcurrencyResponse::DeleteFunctionConcurrencyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteFunctionConcurrencyRequest * DeleteFunctionConcurrencyResponse::request() const
 {
     Q_D(const DeleteFunctionConcurrencyResponse);
@@ -73,9 +71,8 @@ const DeleteFunctionConcurrencyRequest * DeleteFunctionConcurrencyResponse::requ
 }
 
 /*!
- * @brief  Parse a Lambda DeleteFunctionConcurrency response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda DeleteFunctionConcurrency \a response.
  */
 void DeleteFunctionConcurrencyResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteFunctionConcurrencyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::DeleteFunctionConcurrencyResponsePrivate
+ * \brief The DeleteFunctionConcurrencyResponsePrivate class provides private implementation for DeleteFunctionConcurrencyResponse.
  * \internal
  *
- * \class DeleteFunctionConcurrencyResponsePrivate
- *
- * \brief Private implementation for DeleteFunctionConcurrencyResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFunctionConcurrencyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteFunctionConcurrencyResponse instance.
+ * Constructs a DeleteFunctionConcurrencyResponsePrivate object with public implementation \a q.
  */
 DeleteFunctionConcurrencyResponsePrivate::DeleteFunctionConcurrencyResponsePrivate(
     DeleteFunctionConcurrencyResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteFunctionConcurrencyResponsePrivate::DeleteFunctionConcurrencyResponsePriva
 }
 
 /*!
- * @brief  Parse an Lambda DeleteFunctionConcurrencyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda DeleteFunctionConcurrency response element from \a xml.
  */
 void DeleteFunctionConcurrencyResponsePrivate::parseDeleteFunctionConcurrencyResponse(QXmlStreamReader &xml)
 {

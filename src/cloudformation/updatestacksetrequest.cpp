@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * UpdateStackSetRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdateStackSetRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a UpdateStackSetRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 UpdateStackSetRequestPrivate::UpdateStackSetRequestPrivate(
     const CloudFormationRequest::Action action, UpdateStackSetRequest * const q)

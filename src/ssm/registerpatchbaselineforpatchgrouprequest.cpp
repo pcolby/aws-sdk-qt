@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * RegisterPatchBaselineForPatchGroupRequest::re
  */
 
 /*!
- *
- * Constructs a RegisterPatchBaselineForPatchGroupRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a RegisterPatchBaselineForPatchGroupRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 RegisterPatchBaselineForPatchGroupRequestPrivate::RegisterPatchBaselineForPatchGroupRequestPrivate(
     const SSMRequest::Action action, RegisterPatchBaselineForPatchGroupRequest * const q)

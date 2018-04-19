@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListShardsResponse : public KinesisResponse {
 public:
     ListShardsResponse(const ListShardsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListShardsRequest * request() const;
+    virtual const ListShardsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListShardsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateExportTaskResponse : public CloudWatchLogsResponse {
 public:
     CreateExportTaskResponse(const CreateExportTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateExportTaskRequest * request() const;
+    virtual const CreateExportTaskRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateExportTaskResponse)

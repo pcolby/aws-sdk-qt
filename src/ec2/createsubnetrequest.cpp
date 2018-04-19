@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateSubnetRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateSubnetRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateSubnetRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateSubnetRequestPrivate::CreateSubnetRequestPrivate(
     const EC2Request::Action action, CreateSubnetRequest * const q)

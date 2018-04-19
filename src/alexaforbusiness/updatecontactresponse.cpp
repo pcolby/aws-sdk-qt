@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateContactResponse
- *
  * \brief The UpdateContactResponse class provides an interace for AlexaForBusiness UpdateContact responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateContactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateContactResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateContactResponse::UpdateContactResponse(
         const UpdateContactRequest &request,
@@ -60,6 +55,9 @@ UpdateContactResponse::UpdateContactResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateContactRequest * UpdateContactResponse::request() const
 {
     Q_D(const UpdateContactResponse);
@@ -67,9 +65,8 @@ const UpdateContactRequest * UpdateContactResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness UpdateContact response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness UpdateContact \a response.
  */
 void UpdateContactResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateContactResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::UpdateContactResponsePrivate
+ * \brief The UpdateContactResponsePrivate class provides private implementation for UpdateContactResponse.
  * \internal
  *
- * \class UpdateContactResponsePrivate
- *
- * \brief Private implementation for UpdateContactResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateContactResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateContactResponse instance.
+ * Constructs a UpdateContactResponsePrivate object with public implementation \a q.
  */
 UpdateContactResponsePrivate::UpdateContactResponsePrivate(
     UpdateContactResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateContactResponsePrivate::UpdateContactResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness UpdateContactResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness UpdateContact response element from \a xml.
  */
 void UpdateContactResponsePrivate::parseUpdateContactResponse(QXmlStreamReader &xml)
 {

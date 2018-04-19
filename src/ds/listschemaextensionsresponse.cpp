@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::ListSchemaExtensionsResponse
- *
  * \brief The ListSchemaExtensionsResponse class provides an interace for DirectoryService ListSchemaExtensions responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new ListSchemaExtensionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSchemaExtensionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSchemaExtensionsResponse::ListSchemaExtensionsResponse(
         const ListSchemaExtensionsRequest &request,
@@ -69,6 +64,9 @@ ListSchemaExtensionsResponse::ListSchemaExtensionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSchemaExtensionsRequest * ListSchemaExtensionsResponse::request() const
 {
     Q_D(const ListSchemaExtensionsResponse);
@@ -76,9 +74,8 @@ const ListSchemaExtensionsRequest * ListSchemaExtensionsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a DirectoryService ListSchemaExtensions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService ListSchemaExtensions \a response.
  */
 void ListSchemaExtensionsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ListSchemaExtensionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::ListSchemaExtensionsResponsePrivate
+ * \brief The ListSchemaExtensionsResponsePrivate class provides private implementation for ListSchemaExtensionsResponse.
  * \internal
  *
- * \class ListSchemaExtensionsResponsePrivate
- *
- * \brief Private implementation for ListSchemaExtensionsResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSchemaExtensionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSchemaExtensionsResponse instance.
+ * Constructs a ListSchemaExtensionsResponsePrivate object with public implementation \a q.
  */
 ListSchemaExtensionsResponsePrivate::ListSchemaExtensionsResponsePrivate(
     ListSchemaExtensionsResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ ListSchemaExtensionsResponsePrivate::ListSchemaExtensionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService ListSchemaExtensionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService ListSchemaExtensions response element from \a xml.
  */
 void ListSchemaExtensionsResponsePrivate::parseListSchemaExtensionsResponse(QXmlStreamReader &xml)
 {

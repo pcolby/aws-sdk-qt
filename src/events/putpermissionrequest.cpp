@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * PutPermissionRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a PutPermissionRequestPrivate object for CloudWatchEvents \a action with,
- * public implementation \a q.
+ * Constructs a PutPermissionRequestPrivate object for CloudWatchEvents \a action,
+ * with public implementation \a q.
  */
 PutPermissionRequestPrivate::PutPermissionRequestPrivate(
     const CloudWatchEventsRequest::Action action, PutPermissionRequest * const q)

@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteBotAliasResponse
- *
  * \brief The DeleteBotAliasResponse class provides an interace for LexModelBuildingService DeleteBotAlias responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteBotAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBotAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBotAliasResponse::DeleteBotAliasResponse(
         const DeleteBotAliasRequest &request,
@@ -59,6 +54,9 @@ DeleteBotAliasResponse::DeleteBotAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBotAliasRequest * DeleteBotAliasResponse::request() const
 {
     Q_D(const DeleteBotAliasResponse);
@@ -66,9 +64,8 @@ const DeleteBotAliasRequest * DeleteBotAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService DeleteBotAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService DeleteBotAlias \a response.
  */
 void DeleteBotAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteBotAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::DeleteBotAliasResponsePrivate
+ * \brief The DeleteBotAliasResponsePrivate class provides private implementation for DeleteBotAliasResponse.
  * \internal
  *
- * \class DeleteBotAliasResponsePrivate
- *
- * \brief Private implementation for DeleteBotAliasResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBotAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBotAliasResponse instance.
+ * Constructs a DeleteBotAliasResponsePrivate object with public implementation \a q.
  */
 DeleteBotAliasResponsePrivate::DeleteBotAliasResponsePrivate(
     DeleteBotAliasResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteBotAliasResponsePrivate::DeleteBotAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService DeleteBotAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService DeleteBotAlias response element from \a xml.
  */
 void DeleteBotAliasResponsePrivate::parseDeleteBotAliasResponse(QXmlStreamReader &xml)
 {

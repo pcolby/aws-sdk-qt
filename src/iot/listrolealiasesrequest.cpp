@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListRoleAliasesRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ListRoleAliasesRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListRoleAliasesRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListRoleAliasesRequestPrivate::ListRoleAliasesRequestPrivate(
     const IoTRequest::Action action, ListRoleAliasesRequest * const q)

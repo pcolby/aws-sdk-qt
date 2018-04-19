@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartPersonTrackingResponse
- *
  * \brief The StartPersonTrackingResponse class provides an interace for Rekognition StartPersonTracking responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartPersonTrackingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartPersonTrackingResponse object for \a reply to \a request, with parent \a parent.
  */
 StartPersonTrackingResponse::StartPersonTrackingResponse(
         const StartPersonTrackingRequest &request,
@@ -56,6 +51,9 @@ StartPersonTrackingResponse::StartPersonTrackingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartPersonTrackingRequest * StartPersonTrackingResponse::request() const
 {
     Q_D(const StartPersonTrackingResponse);
@@ -63,9 +61,8 @@ const StartPersonTrackingRequest * StartPersonTrackingResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition StartPersonTracking response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition StartPersonTracking \a response.
  */
 void StartPersonTrackingResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void StartPersonTrackingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::StartPersonTrackingResponsePrivate
+ * \brief The StartPersonTrackingResponsePrivate class provides private implementation for StartPersonTrackingResponse.
  * \internal
  *
- * \class StartPersonTrackingResponsePrivate
- *
- * \brief Private implementation for StartPersonTrackingResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartPersonTrackingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartPersonTrackingResponse instance.
+ * Constructs a StartPersonTrackingResponsePrivate object with public implementation \a q.
  */
 StartPersonTrackingResponsePrivate::StartPersonTrackingResponsePrivate(
     StartPersonTrackingResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ StartPersonTrackingResponsePrivate::StartPersonTrackingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition StartPersonTrackingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition StartPersonTracking response element from \a xml.
  */
 void StartPersonTrackingResponsePrivate::parseStartPersonTrackingResponse(QXmlStreamReader &xml)
 {

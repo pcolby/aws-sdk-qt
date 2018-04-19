@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachTypedLinkResponse : public CloudDirectoryResponse {
 public:
     DetachTypedLinkResponse(const DetachTypedLinkRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachTypedLinkRequest * request() const;
+    virtual const DetachTypedLinkRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DetachTypedLinkResponse)

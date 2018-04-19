@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DetectLabelsResponse
- *
  * \brief The DetectLabelsResponse class provides an interace for Rekognition DetectLabels responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DetectLabelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetectLabelsResponse object for \a reply to \a request, with parent \a parent.
  */
 DetectLabelsResponse::DetectLabelsResponse(
         const DetectLabelsRequest &request,
@@ -56,6 +51,9 @@ DetectLabelsResponse::DetectLabelsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetectLabelsRequest * DetectLabelsResponse::request() const
 {
     Q_D(const DetectLabelsResponse);
@@ -63,9 +61,8 @@ const DetectLabelsRequest * DetectLabelsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition DetectLabels response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition DetectLabels \a response.
  */
 void DetectLabelsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DetectLabelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::DetectLabelsResponsePrivate
+ * \brief The DetectLabelsResponsePrivate class provides private implementation for DetectLabelsResponse.
  * \internal
  *
- * \class DetectLabelsResponsePrivate
- *
- * \brief Private implementation for DetectLabelsResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectLabelsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetectLabelsResponse instance.
+ * Constructs a DetectLabelsResponsePrivate object with public implementation \a q.
  */
 DetectLabelsResponsePrivate::DetectLabelsResponsePrivate(
     DetectLabelsResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ DetectLabelsResponsePrivate::DetectLabelsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition DetectLabelsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition DetectLabels response element from \a xml.
  */
 void DetectLabelsResponsePrivate::parseDetectLabelsResponse(QXmlStreamReader &xml)
 {

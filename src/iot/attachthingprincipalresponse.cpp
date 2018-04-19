@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::AttachThingPrincipalResponse
- *
  * \brief The AttachThingPrincipalResponse class provides an interace for IoT AttachThingPrincipal responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new AttachThingPrincipalResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachThingPrincipalResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachThingPrincipalResponse::AttachThingPrincipalResponse(
         const AttachThingPrincipalRequest &request,
@@ -66,6 +61,9 @@ AttachThingPrincipalResponse::AttachThingPrincipalResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachThingPrincipalRequest * AttachThingPrincipalResponse::request() const
 {
     Q_D(const AttachThingPrincipalResponse);
@@ -73,9 +71,8 @@ const AttachThingPrincipalRequest * AttachThingPrincipalResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IoT AttachThingPrincipal response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT AttachThingPrincipal \a response.
  */
 void AttachThingPrincipalResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void AttachThingPrincipalResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::AttachThingPrincipalResponsePrivate
+ * \brief The AttachThingPrincipalResponsePrivate class provides private implementation for AttachThingPrincipalResponse.
  * \internal
  *
- * \class AttachThingPrincipalResponsePrivate
- *
- * \brief Private implementation for AttachThingPrincipalResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachThingPrincipalResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachThingPrincipalResponse instance.
+ * Constructs a AttachThingPrincipalResponsePrivate object with public implementation \a q.
  */
 AttachThingPrincipalResponsePrivate::AttachThingPrincipalResponsePrivate(
     AttachThingPrincipalResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ AttachThingPrincipalResponsePrivate::AttachThingPrincipalResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT AttachThingPrincipalResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT AttachThingPrincipal response element from \a xml.
  */
 void AttachThingPrincipalResponsePrivate::parseAttachThingPrincipalResponse(QXmlStreamReader &xml)
 {

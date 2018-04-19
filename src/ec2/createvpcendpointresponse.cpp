@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVpcEndpointResponse
- *
  * \brief The CreateVpcEndpointResponse class provides an interace for EC2 CreateVpcEndpoint responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVpcEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateVpcEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateVpcEndpointResponse::CreateVpcEndpointResponse(
         const CreateVpcEndpointRequest &request,
@@ -59,6 +54,9 @@ CreateVpcEndpointResponse::CreateVpcEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateVpcEndpointRequest * CreateVpcEndpointResponse::request() const
 {
     Q_D(const CreateVpcEndpointResponse);
@@ -66,9 +64,8 @@ const CreateVpcEndpointRequest * CreateVpcEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateVpcEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateVpcEndpoint \a response.
  */
 void CreateVpcEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateVpcEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateVpcEndpointResponsePrivate
+ * \brief The CreateVpcEndpointResponsePrivate class provides private implementation for CreateVpcEndpointResponse.
  * \internal
  *
- * \class CreateVpcEndpointResponsePrivate
- *
- * \brief Private implementation for CreateVpcEndpointResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpcEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateVpcEndpointResponse instance.
+ * Constructs a CreateVpcEndpointResponsePrivate object with public implementation \a q.
  */
 CreateVpcEndpointResponsePrivate::CreateVpcEndpointResponsePrivate(
     CreateVpcEndpointResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateVpcEndpointResponsePrivate::CreateVpcEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateVpcEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateVpcEndpoint response element from \a xml.
  */
 void CreateVpcEndpointResponsePrivate::parseCreateVpcEndpointResponse(QXmlStreamReader &xml)
 {

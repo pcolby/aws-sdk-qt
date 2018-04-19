@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateConfigurationSetTrackingOptionsResponse : public SESRes
 public:
     UpdateConfigurationSetTrackingOptionsResponse(const UpdateConfigurationSetTrackingOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateConfigurationSetTrackingOptionsRequest * request() const;
+    virtual const UpdateConfigurationSetTrackingOptionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateConfigurationSetTrackingOptionsResponse)

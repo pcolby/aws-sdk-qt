@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateGeoMatchSetResponse : public WAFResponse {
 public:
     UpdateGeoMatchSetResponse(const UpdateGeoMatchSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateGeoMatchSetRequest * request() const;
+    virtual const UpdateGeoMatchSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateGeoMatchSetResponse)

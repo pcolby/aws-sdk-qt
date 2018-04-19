@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeMaintenanceWindowTasksResponse
- *
  * \brief The DescribeMaintenanceWindowTasksResponse class provides an interace for SSM DescribeMaintenanceWindowTasks responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeMaintenanceWindowTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeMaintenanceWindowTasksResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeMaintenanceWindowTasksResponse::DescribeMaintenanceWindowTasksResponse(
         const DescribeMaintenanceWindowTasksRequest &request,
@@ -79,6 +74,9 @@ DescribeMaintenanceWindowTasksResponse::DescribeMaintenanceWindowTasksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeMaintenanceWindowTasksRequest * DescribeMaintenanceWindowTasksResponse::request() const
 {
     Q_D(const DescribeMaintenanceWindowTasksResponse);
@@ -86,9 +84,8 @@ const DescribeMaintenanceWindowTasksRequest * DescribeMaintenanceWindowTasksResp
 }
 
 /*!
- * @brief  Parse a SSM DescribeMaintenanceWindowTasks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeMaintenanceWindowTasks \a response.
  */
 void DescribeMaintenanceWindowTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeMaintenanceWindowTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeMaintenanceWindowTasksResponsePrivate
+ * \brief The DescribeMaintenanceWindowTasksResponsePrivate class provides private implementation for DescribeMaintenanceWindowTasksResponse.
  * \internal
  *
- * \class DescribeMaintenanceWindowTasksResponsePrivate
- *
- * \brief Private implementation for DescribeMaintenanceWindowTasksResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMaintenanceWindowTasksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeMaintenanceWindowTasksResponse instance.
+ * Constructs a DescribeMaintenanceWindowTasksResponsePrivate object with public implementation \a q.
  */
 DescribeMaintenanceWindowTasksResponsePrivate::DescribeMaintenanceWindowTasksResponsePrivate(
     DescribeMaintenanceWindowTasksResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeMaintenanceWindowTasksResponsePrivate::DescribeMaintenanceWindowTasksRes
 }
 
 /*!
- * @brief  Parse an SSM DescribeMaintenanceWindowTasksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeMaintenanceWindowTasks response element from \a xml.
  */
 void DescribeMaintenanceWindowTasksResponsePrivate::parseDescribeMaintenanceWindowTasksResponse(QXmlStreamReader &xml)
 {

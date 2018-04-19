@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupCertificateConfigurationRequest::r
  */
 
 /*!
- *
- * Constructs a UpdateGroupCertificateConfigurationRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a UpdateGroupCertificateConfigurationRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 UpdateGroupCertificateConfigurationRequestPrivate::UpdateGroupCertificateConfigurationRequestPrivate(
     const GreengrassRequest::Action action, UpdateGroupCertificateConfigurationRequest * const q)

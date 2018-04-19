@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a ListJobsRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a ListJobsRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const DeviceFarmRequest::Action action, ListJobsRequest * const q)

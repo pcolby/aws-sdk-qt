@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListObjectVersionsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListObjectVersionsRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a ListObjectVersionsRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 ListObjectVersionsRequestPrivate::ListObjectVersionsRequestPrivate(
     const S3Request::Action action, ListObjectVersionsRequest * const q)

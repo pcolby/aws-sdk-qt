@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateFindingsFeedbackResponse : public GuardDutyResponse {
 public:
     UpdateFindingsFeedbackResponse(const UpdateFindingsFeedbackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateFindingsFeedbackRequest * request() const;
+    virtual const UpdateFindingsFeedbackRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateFindingsFeedbackResponse)

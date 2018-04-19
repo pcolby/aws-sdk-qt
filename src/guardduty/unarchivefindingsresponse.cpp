@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::UnarchiveFindingsResponse
- *
  * \brief The UnarchiveFindingsResponse class provides an interace for GuardDuty UnarchiveFindings responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::unarchiveFindings
  */
 
 /*!
- * @brief  Constructs a new UnarchiveFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UnarchiveFindingsResponse object for \a reply to \a request, with parent \a parent.
  */
 UnarchiveFindingsResponse::UnarchiveFindingsResponse(
         const UnarchiveFindingsRequest &request,
@@ -55,6 +50,9 @@ UnarchiveFindingsResponse::UnarchiveFindingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UnarchiveFindingsRequest * UnarchiveFindingsResponse::request() const
 {
     Q_D(const UnarchiveFindingsResponse);
@@ -62,9 +60,8 @@ const UnarchiveFindingsRequest * UnarchiveFindingsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty UnarchiveFindings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty UnarchiveFindings \a response.
  */
 void UnarchiveFindingsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UnarchiveFindingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::UnarchiveFindingsResponsePrivate
+ * \brief The UnarchiveFindingsResponsePrivate class provides private implementation for UnarchiveFindingsResponse.
  * \internal
  *
- * \class UnarchiveFindingsResponsePrivate
- *
- * \brief Private implementation for UnarchiveFindingsResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnarchiveFindingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UnarchiveFindingsResponse instance.
+ * Constructs a UnarchiveFindingsResponsePrivate object with public implementation \a q.
  */
 UnarchiveFindingsResponsePrivate::UnarchiveFindingsResponsePrivate(
     UnarchiveFindingsResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ UnarchiveFindingsResponsePrivate::UnarchiveFindingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty UnarchiveFindingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty UnarchiveFindings response element from \a xml.
  */
 void UnarchiveFindingsResponsePrivate::parseUnarchiveFindingsResponse(QXmlStreamReader &xml)
 {

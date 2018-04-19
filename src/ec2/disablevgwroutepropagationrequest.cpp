@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DisableVgwRoutePropagationRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DisableVgwRoutePropagationRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DisableVgwRoutePropagationRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DisableVgwRoutePropagationRequestPrivate::DisableVgwRoutePropagationRequestPrivate(
     const EC2Request::Action action, DisableVgwRoutePropagationRequest * const q)

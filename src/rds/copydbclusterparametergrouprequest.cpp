@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CopyDBClusterParameterGroupRequest::response(
  */
 
 /*!
- *
- * Constructs a CopyDBClusterParameterGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CopyDBClusterParameterGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CopyDBClusterParameterGroupRequestPrivate::CopyDBClusterParameterGroupRequestPrivate(
     const RDSRequest::Action action, CopyDBClusterParameterGroupRequest * const q)

@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCollectionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteCollectionRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCollectionRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 DeleteCollectionRequestPrivate::DeleteCollectionRequestPrivate(
     const RekognitionRequest::Action action, DeleteCollectionRequest * const q)

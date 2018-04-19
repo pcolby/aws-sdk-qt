@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * GetUICustomizationRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetUICustomizationRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a GetUICustomizationRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 GetUICustomizationRequestPrivate::GetUICustomizationRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, GetUICustomizationRequest * const q)

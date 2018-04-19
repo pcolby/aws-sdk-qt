@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketAclResponse
- *
  * \brief The PutBucketAclResponse class provides an interace for S3 PutBucketAcl responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketAcl
  */
 
 /*!
- * @brief  Constructs a new PutBucketAclResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketAclResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketAclResponse::PutBucketAclResponse(
         const PutBucketAclRequest &request,
@@ -55,6 +50,9 @@ PutBucketAclResponse::PutBucketAclResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketAclRequest * PutBucketAclResponse::request() const
 {
     Q_D(const PutBucketAclResponse);
@@ -62,9 +60,8 @@ const PutBucketAclRequest * PutBucketAclResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 PutBucketAcl response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketAcl \a response.
  */
 void PutBucketAclResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketAclResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketAclResponsePrivate
+ * \brief The PutBucketAclResponsePrivate class provides private implementation for PutBucketAclResponse.
  * \internal
  *
- * \class PutBucketAclResponsePrivate
- *
- * \brief Private implementation for PutBucketAclResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketAclResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketAclResponse instance.
+ * Constructs a PutBucketAclResponsePrivate object with public implementation \a q.
  */
 PutBucketAclResponsePrivate::PutBucketAclResponsePrivate(
     PutBucketAclResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketAclResponsePrivate::PutBucketAclResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 PutBucketAclResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketAcl response element from \a xml.
  */
 void PutBucketAclResponsePrivate::parsePutBucketAclResponse(QXmlStreamReader &xml)
 {

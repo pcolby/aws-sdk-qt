@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteQueryLoggingConfigResponse : public Route53Response {
 public:
     DeleteQueryLoggingConfigResponse(const DeleteQueryLoggingConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteQueryLoggingConfigRequest * request() const;
+    virtual const DeleteQueryLoggingConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteQueryLoggingConfigResponse)

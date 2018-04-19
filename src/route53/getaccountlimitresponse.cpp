@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetAccountLimitResponse
- *
  * \brief The GetAccountLimitResponse class provides an interace for Route53 GetAccountLimit responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getAccountLimit
  */
 
 /*!
- * @brief  Constructs a new GetAccountLimitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAccountLimitResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAccountLimitResponse::GetAccountLimitResponse(
         const GetAccountLimitRequest &request,
@@ -55,6 +50,9 @@ GetAccountLimitResponse::GetAccountLimitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAccountLimitRequest * GetAccountLimitResponse::request() const
 {
     Q_D(const GetAccountLimitResponse);
@@ -62,9 +60,8 @@ const GetAccountLimitRequest * GetAccountLimitResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 GetAccountLimit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetAccountLimit \a response.
  */
 void GetAccountLimitResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetAccountLimitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetAccountLimitResponsePrivate
+ * \brief The GetAccountLimitResponsePrivate class provides private implementation for GetAccountLimitResponse.
  * \internal
  *
- * \class GetAccountLimitResponsePrivate
- *
- * \brief Private implementation for GetAccountLimitResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountLimitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAccountLimitResponse instance.
+ * Constructs a GetAccountLimitResponsePrivate object with public implementation \a q.
  */
 GetAccountLimitResponsePrivate::GetAccountLimitResponsePrivate(
     GetAccountLimitResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetAccountLimitResponsePrivate::GetAccountLimitResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 GetAccountLimitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetAccountLimit response element from \a xml.
  */
 void GetAccountLimitResponsePrivate::parseGetAccountLimitResponse(QXmlStreamReader &xml)
 {

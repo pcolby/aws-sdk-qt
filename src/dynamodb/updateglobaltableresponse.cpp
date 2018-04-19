@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::UpdateGlobalTableResponse
- *
  * \brief The UpdateGlobalTableResponse class provides an interace for DynamoDB UpdateGlobalTable responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new UpdateGlobalTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateGlobalTableResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateGlobalTableResponse::UpdateGlobalTableResponse(
         const UpdateGlobalTableRequest &request,
@@ -74,6 +69,9 @@ UpdateGlobalTableResponse::UpdateGlobalTableResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateGlobalTableRequest * UpdateGlobalTableResponse::request() const
 {
     Q_D(const UpdateGlobalTableResponse);
@@ -81,9 +79,8 @@ const UpdateGlobalTableRequest * UpdateGlobalTableResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB UpdateGlobalTable response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB UpdateGlobalTable \a response.
  */
 void UpdateGlobalTableResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void UpdateGlobalTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::UpdateGlobalTableResponsePrivate
+ * \brief The UpdateGlobalTableResponsePrivate class provides private implementation for UpdateGlobalTableResponse.
  * \internal
  *
- * \class UpdateGlobalTableResponsePrivate
- *
- * \brief Private implementation for UpdateGlobalTableResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGlobalTableResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateGlobalTableResponse instance.
+ * Constructs a UpdateGlobalTableResponsePrivate object with public implementation \a q.
  */
 UpdateGlobalTableResponsePrivate::UpdateGlobalTableResponsePrivate(
     UpdateGlobalTableResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ UpdateGlobalTableResponsePrivate::UpdateGlobalTableResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB UpdateGlobalTableResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB UpdateGlobalTable response element from \a xml.
  */
 void UpdateGlobalTableResponsePrivate::parseUpdateGlobalTableResponse(QXmlStreamReader &xml)
 {

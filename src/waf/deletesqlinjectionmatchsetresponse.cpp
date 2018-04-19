@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeleteSqlInjectionMatchSetResponse
- *
  * \brief The DeleteSqlInjectionMatchSetResponse class provides an interace for WAF DeleteSqlInjectionMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeleteSqlInjectionMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSqlInjectionMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSqlInjectionMatchSetResponse::DeleteSqlInjectionMatchSetResponse(
         const DeleteSqlInjectionMatchSetRequest &request,
@@ -60,6 +55,9 @@ DeleteSqlInjectionMatchSetResponse::DeleteSqlInjectionMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSqlInjectionMatchSetRequest * DeleteSqlInjectionMatchSetResponse::request() const
 {
     Q_D(const DeleteSqlInjectionMatchSetResponse);
@@ -67,9 +65,8 @@ const DeleteSqlInjectionMatchSetRequest * DeleteSqlInjectionMatchSetResponse::re
 }
 
 /*!
- * @brief  Parse a WAF DeleteSqlInjectionMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF DeleteSqlInjectionMatchSet \a response.
  */
 void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::DeleteSqlInjectionMatchSetResponsePrivate
+ * \brief The DeleteSqlInjectionMatchSetResponsePrivate class provides private implementation for DeleteSqlInjectionMatchSetResponse.
  * \internal
  *
- * \class DeleteSqlInjectionMatchSetResponsePrivate
- *
- * \brief Private implementation for DeleteSqlInjectionMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSqlInjectionMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSqlInjectionMatchSetResponse instance.
+ * Constructs a DeleteSqlInjectionMatchSetResponsePrivate object with public implementation \a q.
  */
 DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponsePrivate(
     DeleteSqlInjectionMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetResponsePri
 }
 
 /*!
- * @brief  Parse an WAF DeleteSqlInjectionMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF DeleteSqlInjectionMatchSet response element from \a xml.
  */
 void DeleteSqlInjectionMatchSetResponsePrivate::parseDeleteSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {

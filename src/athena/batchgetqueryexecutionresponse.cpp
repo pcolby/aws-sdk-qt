@@ -29,10 +29,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::BatchGetQueryExecutionResponse
- *
  * \brief The BatchGetQueryExecutionResponse class provides an interace for Athena BatchGetQueryExecution responses.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -51,11 +50,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new BatchGetQueryExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetQueryExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetQueryExecutionResponse::BatchGetQueryExecutionResponse(
         const BatchGetQueryExecutionRequest &request,
@@ -67,6 +62,9 @@ BatchGetQueryExecutionResponse::BatchGetQueryExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetQueryExecutionRequest * BatchGetQueryExecutionResponse::request() const
 {
     Q_D(const BatchGetQueryExecutionResponse);
@@ -74,9 +72,8 @@ const BatchGetQueryExecutionRequest * BatchGetQueryExecutionResponse::request() 
 }
 
 /*!
- * @brief  Parse a Athena BatchGetQueryExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Athena BatchGetQueryExecution \a response.
  */
 void BatchGetQueryExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void BatchGetQueryExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Athena::BatchGetQueryExecutionResponsePrivate
+ * \brief The BatchGetQueryExecutionResponsePrivate class provides private implementation for BatchGetQueryExecutionResponse.
  * \internal
  *
- * \class BatchGetQueryExecutionResponsePrivate
- *
- * \brief Private implementation for BatchGetQueryExecutionResponse.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetQueryExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetQueryExecutionResponse instance.
+ * Constructs a BatchGetQueryExecutionResponsePrivate object with public implementation \a q.
  */
 BatchGetQueryExecutionResponsePrivate::BatchGetQueryExecutionResponsePrivate(
     BatchGetQueryExecutionResponse * const q) : AthenaResponsePrivate(q)
@@ -107,9 +100,7 @@ BatchGetQueryExecutionResponsePrivate::BatchGetQueryExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Athena BatchGetQueryExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Athena BatchGetQueryExecution response element from \a xml.
  */
 void BatchGetQueryExecutionResponsePrivate::parseBatchGetQueryExecutionResponse(QXmlStreamReader &xml)
 {

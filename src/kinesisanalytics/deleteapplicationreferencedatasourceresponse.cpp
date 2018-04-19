@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationReferenceDataSourceResponse
- *
  * \brief The DeleteApplicationReferenceDataSourceResponse class provides an interace for KinesisAnalytics DeleteApplicationReferenceDataSource responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::deleteApplicationReferenceDataSource
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationReferenceDataSourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteApplicationReferenceDataSourceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteApplicationReferenceDataSourceResponse::DeleteApplicationReferenceDataSourceResponse(
         const DeleteApplicationReferenceDataSourceRequest &request,
@@ -55,6 +50,9 @@ DeleteApplicationReferenceDataSourceResponse::DeleteApplicationReferenceDataSour
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteApplicationReferenceDataSourceRequest * DeleteApplicationReferenceDataSourceResponse::request() const
 {
     Q_D(const DeleteApplicationReferenceDataSourceResponse);
@@ -62,9 +60,8 @@ const DeleteApplicationReferenceDataSourceRequest * DeleteApplicationReferenceDa
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics DeleteApplicationReferenceDataSource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics DeleteApplicationReferenceDataSource \a response.
  */
 void DeleteApplicationReferenceDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteApplicationReferenceDataSourceResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::DeleteApplicationReferenceDataSourceResponsePrivate
+ * \brief The DeleteApplicationReferenceDataSourceResponsePrivate class provides private implementation for DeleteApplicationReferenceDataSourceResponse.
  * \internal
  *
- * \class DeleteApplicationReferenceDataSourceResponsePrivate
- *
- * \brief Private implementation for DeleteApplicationReferenceDataSourceResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationReferenceDataSourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteApplicationReferenceDataSourceResponse instance.
+ * Constructs a DeleteApplicationReferenceDataSourceResponsePrivate object with public implementation \a q.
  */
 DeleteApplicationReferenceDataSourceResponsePrivate::DeleteApplicationReferenceDataSourceResponsePrivate(
     DeleteApplicationReferenceDataSourceResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteApplicationReferenceDataSourceResponsePrivate::DeleteApplicationReferenceD
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics DeleteApplicationReferenceDataSourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics DeleteApplicationReferenceDataSource response element from \a xml.
  */
 void DeleteApplicationReferenceDataSourceResponsePrivate::parseDeleteApplicationReferenceDataSourceResponse(QXmlStreamReader &xml)
 {

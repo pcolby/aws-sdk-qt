@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::RestoreObjectResponse
- *
  * \brief The RestoreObjectResponse class provides an interace for S3 RestoreObject responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::restoreObject
  */
 
 /*!
- * @brief  Constructs a new RestoreObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreObjectResponse::RestoreObjectResponse(
         const RestoreObjectRequest &request,
@@ -55,6 +50,9 @@ RestoreObjectResponse::RestoreObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreObjectRequest * RestoreObjectResponse::request() const
 {
     Q_D(const RestoreObjectResponse);
@@ -62,9 +60,8 @@ const RestoreObjectRequest * RestoreObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 RestoreObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 RestoreObject \a response.
  */
 void RestoreObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void RestoreObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::RestoreObjectResponsePrivate
+ * \brief The RestoreObjectResponsePrivate class provides private implementation for RestoreObjectResponse.
  * \internal
  *
- * \class RestoreObjectResponsePrivate
- *
- * \brief Private implementation for RestoreObjectResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreObjectResponse instance.
+ * Constructs a RestoreObjectResponsePrivate object with public implementation \a q.
  */
 RestoreObjectResponsePrivate::RestoreObjectResponsePrivate(
     RestoreObjectResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ RestoreObjectResponsePrivate::RestoreObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 RestoreObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 RestoreObject response element from \a xml.
  */
 void RestoreObjectResponsePrivate::parseRestoreObjectResponse(QXmlStreamReader &xml)
 {

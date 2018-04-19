@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCopyProductStatusRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeCopyProductStatusRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCopyProductStatusRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DescribeCopyProductStatusRequestPrivate::DescribeCopyProductStatusRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeCopyProductStatusRequest * const q)

@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::LookupPolicyResponse
- *
  * \brief The LookupPolicyResponse class provides an interace for CloudDirectory LookupPolicy responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new LookupPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a LookupPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 LookupPolicyResponse::LookupPolicyResponse(
         const LookupPolicyRequest &request,
@@ -62,6 +57,9 @@ LookupPolicyResponse::LookupPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const LookupPolicyRequest * LookupPolicyResponse::request() const
 {
     Q_D(const LookupPolicyResponse);
@@ -69,9 +67,8 @@ const LookupPolicyRequest * LookupPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory LookupPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory LookupPolicy \a response.
  */
 void LookupPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void LookupPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::LookupPolicyResponsePrivate
+ * \brief The LookupPolicyResponsePrivate class provides private implementation for LookupPolicyResponse.
  * \internal
  *
- * \class LookupPolicyResponsePrivate
- *
- * \brief Private implementation for LookupPolicyResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LookupPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public LookupPolicyResponse instance.
+ * Constructs a LookupPolicyResponsePrivate object with public implementation \a q.
  */
 LookupPolicyResponsePrivate::LookupPolicyResponsePrivate(
     LookupPolicyResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ LookupPolicyResponsePrivate::LookupPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory LookupPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory LookupPolicy response element from \a xml.
  */
 void LookupPolicyResponsePrivate::parseLookupPolicyResponse(QXmlStreamReader &xml)
 {

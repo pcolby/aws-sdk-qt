@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::BatchCreatePartitionResponse
- *
  * \brief The BatchCreatePartitionResponse class provides an interace for Glue BatchCreatePartition responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new BatchCreatePartitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchCreatePartitionResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchCreatePartitionResponse::BatchCreatePartitionResponse(
         const BatchCreatePartitionRequest &request,
@@ -58,6 +53,9 @@ BatchCreatePartitionResponse::BatchCreatePartitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchCreatePartitionRequest * BatchCreatePartitionResponse::request() const
 {
     Q_D(const BatchCreatePartitionResponse);
@@ -65,9 +63,8 @@ const BatchCreatePartitionRequest * BatchCreatePartitionResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Glue BatchCreatePartition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue BatchCreatePartition \a response.
  */
 void BatchCreatePartitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void BatchCreatePartitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::BatchCreatePartitionResponsePrivate
+ * \brief The BatchCreatePartitionResponsePrivate class provides private implementation for BatchCreatePartitionResponse.
  * \internal
  *
- * \class BatchCreatePartitionResponsePrivate
- *
- * \brief Private implementation for BatchCreatePartitionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchCreatePartitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchCreatePartitionResponse instance.
+ * Constructs a BatchCreatePartitionResponsePrivate object with public implementation \a q.
  */
 BatchCreatePartitionResponsePrivate::BatchCreatePartitionResponsePrivate(
     BatchCreatePartitionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ BatchCreatePartitionResponsePrivate::BatchCreatePartitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue BatchCreatePartitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue BatchCreatePartition response element from \a xml.
  */
 void BatchCreatePartitionResponsePrivate::parseBatchCreatePartitionResponse(QXmlStreamReader &xml)
 {

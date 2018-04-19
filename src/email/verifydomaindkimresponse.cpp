@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::VerifyDomainDkimResponse
- *
  * \brief The VerifyDomainDkimResponse class provides an interace for SES VerifyDomainDkim responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new VerifyDomainDkimResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a VerifyDomainDkimResponse object for \a reply to \a request, with parent \a parent.
  */
 VerifyDomainDkimResponse::VerifyDomainDkimResponse(
         const VerifyDomainDkimRequest &request,
@@ -66,6 +61,9 @@ VerifyDomainDkimResponse::VerifyDomainDkimResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const VerifyDomainDkimRequest * VerifyDomainDkimResponse::request() const
 {
     Q_D(const VerifyDomainDkimResponse);
@@ -73,9 +71,8 @@ const VerifyDomainDkimRequest * VerifyDomainDkimResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES VerifyDomainDkim response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES VerifyDomainDkim \a response.
  */
 void VerifyDomainDkimResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void VerifyDomainDkimResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::VerifyDomainDkimResponsePrivate
+ * \brief The VerifyDomainDkimResponsePrivate class provides private implementation for VerifyDomainDkimResponse.
  * \internal
  *
- * \class VerifyDomainDkimResponsePrivate
- *
- * \brief Private implementation for VerifyDomainDkimResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new VerifyDomainDkimResponsePrivate object.
- *
- * @param  q  Pointer to this object's public VerifyDomainDkimResponse instance.
+ * Constructs a VerifyDomainDkimResponsePrivate object with public implementation \a q.
  */
 VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponsePrivate(
     VerifyDomainDkimResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ VerifyDomainDkimResponsePrivate::VerifyDomainDkimResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES VerifyDomainDkimResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES VerifyDomainDkim response element from \a xml.
  */
 void VerifyDomainDkimResponsePrivate::parseVerifyDomainDkimResponse(QXmlStreamReader &xml)
 {

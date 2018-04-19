@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetExecutionHistoryResponse : public SFNResponse {
 public:
     GetExecutionHistoryResponse(const GetExecutionHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetExecutionHistoryRequest * request() const;
+    virtual const GetExecutionHistoryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetExecutionHistoryResponse)

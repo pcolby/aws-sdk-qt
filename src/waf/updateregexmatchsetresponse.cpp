@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateRegexMatchSetResponse
- *
  * \brief The UpdateRegexMatchSetResponse class provides an interace for WAF UpdateRegexMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateRegexMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRegexMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRegexMatchSetResponse::UpdateRegexMatchSetResponse(
         const UpdateRegexMatchSetRequest &request,
@@ -60,6 +55,9 @@ UpdateRegexMatchSetResponse::UpdateRegexMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRegexMatchSetRequest * UpdateRegexMatchSetResponse::request() const
 {
     Q_D(const UpdateRegexMatchSetResponse);
@@ -67,9 +65,8 @@ const UpdateRegexMatchSetRequest * UpdateRegexMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF UpdateRegexMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF UpdateRegexMatchSet \a response.
  */
 void UpdateRegexMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateRegexMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::UpdateRegexMatchSetResponsePrivate
+ * \brief The UpdateRegexMatchSetResponsePrivate class provides private implementation for UpdateRegexMatchSetResponse.
  * \internal
  *
- * \class UpdateRegexMatchSetResponsePrivate
- *
- * \brief Private implementation for UpdateRegexMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRegexMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRegexMatchSetResponse instance.
+ * Constructs a UpdateRegexMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateRegexMatchSetResponsePrivate::UpdateRegexMatchSetResponsePrivate(
     UpdateRegexMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateRegexMatchSetResponsePrivate::UpdateRegexMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF UpdateRegexMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF UpdateRegexMatchSet response element from \a xml.
  */
 void UpdateRegexMatchSetResponsePrivate::parseUpdateRegexMatchSetResponse(QXmlStreamReader &xml)
 {

@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTrustedAdvisorCheckSummariesRequest::
  */
 
 /*!
- *
- * Constructs a DescribeTrustedAdvisorCheckSummariesRequestPrivate object for Support \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTrustedAdvisorCheckSummariesRequestPrivate object for Support \a action,
+ * with public implementation \a q.
  */
 DescribeTrustedAdvisorCheckSummariesRequestPrivate::DescribeTrustedAdvisorCheckSummariesRequestPrivate(
     const SupportRequest::Action action, DescribeTrustedAdvisorCheckSummariesRequest * const q)

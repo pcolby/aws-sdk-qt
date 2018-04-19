@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * StartThingRegistrationTaskRequest::response(Q
  */
 
 /*!
- *
- * Constructs a StartThingRegistrationTaskRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a StartThingRegistrationTaskRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 StartThingRegistrationTaskRequestPrivate::StartThingRegistrationTaskRequestPrivate(
     const IoTRequest::Action action, StartThingRegistrationTaskRequest * const q)

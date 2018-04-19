@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * SetAlarmStateRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a SetAlarmStateRequestPrivate object for CloudWatch \a action with,
- * public implementation \a q.
+ * Constructs a SetAlarmStateRequestPrivate object for CloudWatch \a action,
+ * with public implementation \a q.
  */
 SetAlarmStateRequestPrivate::SetAlarmStateRequestPrivate(
     const CloudWatchRequest::Action action, SetAlarmStateRequest * const q)

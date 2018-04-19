@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::DeleteSecretResponse
- *
  * \brief The DeleteSecretResponse class provides an interace for SecretsManager DeleteSecret responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new DeleteSecretResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSecretResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSecretResponse::DeleteSecretResponse(
         const DeleteSecretRequest &request,
@@ -155,6 +150,9 @@ DeleteSecretResponse::DeleteSecretResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSecretRequest * DeleteSecretResponse::request() const
 {
     Q_D(const DeleteSecretResponse);
@@ -162,9 +160,8 @@ const DeleteSecretRequest * DeleteSecretResponse::request() const
 }
 
 /*!
- * @brief  Parse a SecretsManager DeleteSecret response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager DeleteSecret \a response.
  */
 void DeleteSecretResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void DeleteSecretResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::DeleteSecretResponsePrivate
+ * \brief The DeleteSecretResponsePrivate class provides private implementation for DeleteSecretResponse.
  * \internal
  *
- * \class DeleteSecretResponsePrivate
- *
- * \brief Private implementation for DeleteSecretResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSecretResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSecretResponse instance.
+ * Constructs a DeleteSecretResponsePrivate object with public implementation \a q.
  */
 DeleteSecretResponsePrivate::DeleteSecretResponsePrivate(
     DeleteSecretResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ DeleteSecretResponsePrivate::DeleteSecretResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SecretsManager DeleteSecretResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager DeleteSecret response element from \a xml.
  */
 void DeleteSecretResponsePrivate::parseDeleteSecretResponse(QXmlStreamReader &xml)
 {

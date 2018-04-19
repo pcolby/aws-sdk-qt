@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSpotDatafeedSubscriptionResponse
- *
  * \brief The DescribeSpotDatafeedSubscriptionResponse class provides an interace for EC2 DescribeSpotDatafeedSubscription responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSpotDatafeedSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSpotDatafeedSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSpotDatafeedSubscriptionResponse::DescribeSpotDatafeedSubscriptionResponse(
         const DescribeSpotDatafeedSubscriptionRequest &request,
@@ -59,6 +54,9 @@ DescribeSpotDatafeedSubscriptionResponse::DescribeSpotDatafeedSubscriptionRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSpotDatafeedSubscriptionRequest * DescribeSpotDatafeedSubscriptionResponse::request() const
 {
     Q_D(const DescribeSpotDatafeedSubscriptionResponse);
@@ -66,9 +64,8 @@ const DescribeSpotDatafeedSubscriptionRequest * DescribeSpotDatafeedSubscription
 }
 
 /*!
- * @brief  Parse a EC2 DescribeSpotDatafeedSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeSpotDatafeedSubscription \a response.
  */
 void DescribeSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeSpotDatafeedSubscriptionResponsePrivate
+ * \brief The DescribeSpotDatafeedSubscriptionResponsePrivate class provides private implementation for DescribeSpotDatafeedSubscriptionResponse.
  * \internal
  *
- * \class DescribeSpotDatafeedSubscriptionResponsePrivate
- *
- * \brief Private implementation for DescribeSpotDatafeedSubscriptionResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSpotDatafeedSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSpotDatafeedSubscriptionResponse instance.
+ * Constructs a DescribeSpotDatafeedSubscriptionResponsePrivate object with public implementation \a q.
  */
 DescribeSpotDatafeedSubscriptionResponsePrivate::DescribeSpotDatafeedSubscriptionResponsePrivate(
     DescribeSpotDatafeedSubscriptionResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeSpotDatafeedSubscriptionResponsePrivate::DescribeSpotDatafeedSubscriptio
 }
 
 /*!
- * @brief  Parse an EC2 DescribeSpotDatafeedSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeSpotDatafeedSubscription response element from \a xml.
  */
 void DescribeSpotDatafeedSubscriptionResponsePrivate::parseDescribeSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml)
 {

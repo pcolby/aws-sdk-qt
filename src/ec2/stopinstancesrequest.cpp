@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * StopInstancesRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a StopInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a StopInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 StopInstancesRequestPrivate::StopInstancesRequestPrivate(
     const EC2Request::Action action, StopInstancesRequest * const q)

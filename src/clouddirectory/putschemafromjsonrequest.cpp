@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * PutSchemaFromJsonRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a PutSchemaFromJsonRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a PutSchemaFromJsonRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 PutSchemaFromJsonRequestPrivate::PutSchemaFromJsonRequestPrivate(
     const CloudDirectoryRequest::Action action, PutSchemaFromJsonRequest * const q)

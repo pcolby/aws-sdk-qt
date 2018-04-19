@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * IssueCertificateRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a IssueCertificateRequestPrivate object for ACMPCA \a action with,
- * public implementation \a q.
+ * Constructs a IssueCertificateRequestPrivate object for ACMPCA \a action,
+ * with public implementation \a q.
  */
 IssueCertificateRequestPrivate::IssueCertificateRequestPrivate(
     const ACMPCARequest::Action action, IssueCertificateRequest * const q)

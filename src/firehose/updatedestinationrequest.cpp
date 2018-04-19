@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDestinationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateDestinationRequestPrivate object for Firehose \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDestinationRequestPrivate object for Firehose \a action,
+ * with public implementation \a q.
  */
 UpdateDestinationRequestPrivate::UpdateDestinationRequestPrivate(
     const FirehoseRequest::Action action, UpdateDestinationRequest * const q)

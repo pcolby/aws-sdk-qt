@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ModifyDocumentPermissionResponse
- *
  * \brief The ModifyDocumentPermissionResponse class provides an interace for SSM ModifyDocumentPermission responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ModifyDocumentPermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyDocumentPermissionResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyDocumentPermissionResponse::ModifyDocumentPermissionResponse(
         const ModifyDocumentPermissionRequest &request,
@@ -79,6 +74,9 @@ ModifyDocumentPermissionResponse::ModifyDocumentPermissionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyDocumentPermissionRequest * ModifyDocumentPermissionResponse::request() const
 {
     Q_D(const ModifyDocumentPermissionResponse);
@@ -86,9 +84,8 @@ const ModifyDocumentPermissionRequest * ModifyDocumentPermissionResponse::reques
 }
 
 /*!
- * @brief  Parse a SSM ModifyDocumentPermission response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM ModifyDocumentPermission \a response.
  */
 void ModifyDocumentPermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void ModifyDocumentPermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::ModifyDocumentPermissionResponsePrivate
+ * \brief The ModifyDocumentPermissionResponsePrivate class provides private implementation for ModifyDocumentPermissionResponse.
  * \internal
  *
- * \class ModifyDocumentPermissionResponsePrivate
- *
- * \brief Private implementation for ModifyDocumentPermissionResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDocumentPermissionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyDocumentPermissionResponse instance.
+ * Constructs a ModifyDocumentPermissionResponsePrivate object with public implementation \a q.
  */
 ModifyDocumentPermissionResponsePrivate::ModifyDocumentPermissionResponsePrivate(
     ModifyDocumentPermissionResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ ModifyDocumentPermissionResponsePrivate::ModifyDocumentPermissionResponsePrivate
 }
 
 /*!
- * @brief  Parse an SSM ModifyDocumentPermissionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM ModifyDocumentPermission response element from \a xml.
  */
 void ModifyDocumentPermissionResponsePrivate::parseModifyDocumentPermissionResponse(QXmlStreamReader &xml)
 {

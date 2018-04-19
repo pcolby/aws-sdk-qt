@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::UpdateTagOptionResponse
- *
  * \brief The UpdateTagOptionResponse class provides an interace for ServiceCatalog UpdateTagOption responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new UpdateTagOptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTagOptionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTagOptionResponse::UpdateTagOptionResponse(
         const UpdateTagOptionRequest &request,
@@ -61,6 +56,9 @@ UpdateTagOptionResponse::UpdateTagOptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTagOptionRequest * UpdateTagOptionResponse::request() const
 {
     Q_D(const UpdateTagOptionResponse);
@@ -68,9 +66,8 @@ const UpdateTagOptionRequest * UpdateTagOptionResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog UpdateTagOption response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog UpdateTagOption \a response.
  */
 void UpdateTagOptionResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void UpdateTagOptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::UpdateTagOptionResponsePrivate
+ * \brief The UpdateTagOptionResponsePrivate class provides private implementation for UpdateTagOptionResponse.
  * \internal
  *
- * \class UpdateTagOptionResponsePrivate
- *
- * \brief Private implementation for UpdateTagOptionResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTagOptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTagOptionResponse instance.
+ * Constructs a UpdateTagOptionResponsePrivate object with public implementation \a q.
  */
 UpdateTagOptionResponsePrivate::UpdateTagOptionResponsePrivate(
     UpdateTagOptionResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ UpdateTagOptionResponsePrivate::UpdateTagOptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog UpdateTagOptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog UpdateTagOption response element from \a xml.
  */
 void UpdateTagOptionResponsePrivate::parseUpdateTagOptionResponse(QXmlStreamReader &xml)
 {

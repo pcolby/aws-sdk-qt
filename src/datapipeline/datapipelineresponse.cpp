@@ -28,16 +28,13 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::DataPipelineResponse
- *
  * \brief The DataPipelineResponse class provides an interface for DataPipeline responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @brief  Constructs a new DataPipelineResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a DataPipelineResponse object with parent \a parent.
  */
 DataPipelineResponse::DataPipelineResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new DataPipelineResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ DataPipelineResponse::DataPipelineResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DataPipelineResponse object.
- *
+ * \internal
+ * Constructs a DataPipelineResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DataPipelineResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 DataPipelineResponse::DataPipelineResponse(DataPipelineResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ DataPipelineResponse::DataPipelineResponse(DataPipelineResponsePrivate * const d
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void DataPipelineResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void DataPipelineResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::DataPipeline::DataPipelineResponsePrivate
+ * \brief The DataPipelineResponsePrivate class provides private implementation for DataPipelineResponse.
+ * \internal
  *
- * @class  DataPipelineResponsePrivate
- *
- * @brief  Private implementation for DataPipelineResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DataPipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DataPipelineResponse instance.
+ * Constructs a DataPipelineResponsePrivate object with public implementation \a q.
  */
 DataPipelineResponsePrivate::DataPipelineResponsePrivate(
     DataPipelineResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdateDefaultBranchResponse
- *
  * \brief The UpdateDefaultBranchResponse class provides an interace for CodeCommit UpdateDefaultBranch responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdateDefaultBranchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDefaultBranchResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDefaultBranchResponse::UpdateDefaultBranchResponse(
         const UpdateDefaultBranchRequest &request,
@@ -245,6 +240,9 @@ UpdateDefaultBranchResponse::UpdateDefaultBranchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDefaultBranchRequest * UpdateDefaultBranchResponse::request() const
 {
     Q_D(const UpdateDefaultBranchResponse);
@@ -252,9 +250,8 @@ const UpdateDefaultBranchRequest * UpdateDefaultBranchResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit UpdateDefaultBranch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit UpdateDefaultBranch \a response.
  */
 void UpdateDefaultBranchResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void UpdateDefaultBranchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::UpdateDefaultBranchResponsePrivate
+ * \brief The UpdateDefaultBranchResponsePrivate class provides private implementation for UpdateDefaultBranchResponse.
  * \internal
  *
- * \class UpdateDefaultBranchResponsePrivate
- *
- * \brief Private implementation for UpdateDefaultBranchResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDefaultBranchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDefaultBranchResponse instance.
+ * Constructs a UpdateDefaultBranchResponsePrivate object with public implementation \a q.
  */
 UpdateDefaultBranchResponsePrivate::UpdateDefaultBranchResponsePrivate(
     UpdateDefaultBranchResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ UpdateDefaultBranchResponsePrivate::UpdateDefaultBranchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit UpdateDefaultBranchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit UpdateDefaultBranch response element from \a xml.
  */
 void UpdateDefaultBranchResponsePrivate::parseUpdateDefaultBranchResponse(QXmlStreamReader &xml)
 {

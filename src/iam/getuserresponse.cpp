@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetUserResponse
- *
  * \brief The GetUserResponse class provides an interace for IAM GetUser responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetUserResponse object for \a reply to \a request, with parent \a parent.
  */
 GetUserResponse::GetUserResponse(
         const GetUserRequest &request,
@@ -120,6 +115,9 @@ GetUserResponse::GetUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetUserRequest * GetUserResponse::request() const
 {
     Q_D(const GetUserResponse);
@@ -127,9 +125,8 @@ const GetUserRequest * GetUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetUser \a response.
  */
 void GetUserResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetUserResponsePrivate
+ * \brief The GetUserResponsePrivate class provides private implementation for GetUserResponse.
  * \internal
  *
- * \class GetUserResponsePrivate
- *
- * \brief Private implementation for GetUserResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetUserResponse instance.
+ * Constructs a GetUserResponsePrivate object with public implementation \a q.
  */
 GetUserResponsePrivate::GetUserResponsePrivate(
     GetUserResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetUserResponsePrivate::GetUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetUser response element from \a xml.
  */
 void GetUserResponsePrivate::parseGetUserResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ChangeTagsForResourceResponse : public Route53Response {
 public:
     ChangeTagsForResourceResponse(const ChangeTagsForResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ChangeTagsForResourceRequest * request() const;
+    virtual const ChangeTagsForResourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ChangeTagsForResourceResponse)

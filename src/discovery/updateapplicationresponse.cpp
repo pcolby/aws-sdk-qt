@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::UpdateApplicationResponse
- *
  * \brief The UpdateApplicationResponse class provides an interace for ApplicationDiscoveryService UpdateApplication responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new UpdateApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateApplicationResponse::UpdateApplicationResponse(
         const UpdateApplicationRequest &request,
@@ -119,6 +114,9 @@ UpdateApplicationResponse::UpdateApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateApplicationRequest * UpdateApplicationResponse::request() const
 {
     Q_D(const UpdateApplicationResponse);
@@ -126,9 +124,8 @@ const UpdateApplicationRequest * UpdateApplicationResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService UpdateApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService UpdateApplication \a response.
  */
 void UpdateApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void UpdateApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::UpdateApplicationResponsePrivate
+ * \brief The UpdateApplicationResponsePrivate class provides private implementation for UpdateApplicationResponse.
  * \internal
  *
- * \class UpdateApplicationResponsePrivate
- *
- * \brief Private implementation for UpdateApplicationResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateApplicationResponse instance.
+ * Constructs a UpdateApplicationResponsePrivate object with public implementation \a q.
  */
 UpdateApplicationResponsePrivate::UpdateApplicationResponsePrivate(
     UpdateApplicationResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ UpdateApplicationResponsePrivate::UpdateApplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService UpdateApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService UpdateApplication response element from \a xml.
  */
 void UpdateApplicationResponsePrivate::parseUpdateApplicationResponse(QXmlStreamReader &xml)
 {

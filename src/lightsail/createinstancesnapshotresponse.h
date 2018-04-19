@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateInstanceSnapshotResponse : public LightsailResponse {
 public:
     CreateInstanceSnapshotResponse(const CreateInstanceSnapshotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateInstanceSnapshotRequest * request() const;
+    virtual const CreateInstanceSnapshotRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateInstanceSnapshotResponse)

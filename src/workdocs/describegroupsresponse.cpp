@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeGroupsResponse
- *
  * \brief The DescribeGroupsResponse class provides an interace for WorkDocs DescribeGroups responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeGroupsResponse::DescribeGroupsResponse(
         const DescribeGroupsRequest &request,
@@ -84,6 +79,9 @@ DescribeGroupsResponse::DescribeGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeGroupsRequest * DescribeGroupsResponse::request() const
 {
     Q_D(const DescribeGroupsResponse);
@@ -91,9 +89,8 @@ const DescribeGroupsRequest * DescribeGroupsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs DescribeGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DescribeGroups \a response.
  */
 void DescribeGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DescribeGroupsResponsePrivate
+ * \brief The DescribeGroupsResponsePrivate class provides private implementation for DescribeGroupsResponse.
  * \internal
  *
- * \class DescribeGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeGroupsResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeGroupsResponse instance.
+ * Constructs a DescribeGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeGroupsResponsePrivate::DescribeGroupsResponsePrivate(
     DescribeGroupsResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeGroupsResponsePrivate::DescribeGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DescribeGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DescribeGroups response element from \a xml.
  */
 void DescribeGroupsResponsePrivate::parseDescribeGroupsResponse(QXmlStreamReader &xml)
 {

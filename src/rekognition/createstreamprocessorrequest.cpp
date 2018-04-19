@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * CreateStreamProcessorRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateStreamProcessorRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a CreateStreamProcessorRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 CreateStreamProcessorRequestPrivate::CreateStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, CreateStreamProcessorRequest * const q)

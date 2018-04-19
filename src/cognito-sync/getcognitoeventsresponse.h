@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCognitoEventsResponse : public CognitoSyncResponse {
 public:
     GetCognitoEventsResponse(const GetCognitoEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCognitoEventsRequest * request() const;
+    virtual const GetCognitoEventsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCognitoEventsResponse)

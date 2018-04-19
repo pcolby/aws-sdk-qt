@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::FilterLogEventsResponse
- *
  * \brief The FilterLogEventsResponse class provides an interace for CloudWatchLogs FilterLogEvents responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new FilterLogEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a FilterLogEventsResponse object for \a reply to \a request, with parent \a parent.
  */
 FilterLogEventsResponse::FilterLogEventsResponse(
         const FilterLogEventsRequest &request,
@@ -84,6 +79,9 @@ FilterLogEventsResponse::FilterLogEventsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const FilterLogEventsRequest * FilterLogEventsResponse::request() const
 {
     Q_D(const FilterLogEventsResponse);
@@ -91,9 +89,8 @@ const FilterLogEventsRequest * FilterLogEventsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs FilterLogEvents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs FilterLogEvents \a response.
  */
 void FilterLogEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void FilterLogEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::FilterLogEventsResponsePrivate
+ * \brief The FilterLogEventsResponsePrivate class provides private implementation for FilterLogEventsResponse.
  * \internal
  *
- * \class FilterLogEventsResponsePrivate
- *
- * \brief Private implementation for FilterLogEventsResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new FilterLogEventsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public FilterLogEventsResponse instance.
+ * Constructs a FilterLogEventsResponsePrivate object with public implementation \a q.
  */
 FilterLogEventsResponsePrivate::FilterLogEventsResponsePrivate(
     FilterLogEventsResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ FilterLogEventsResponsePrivate::FilterLogEventsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs FilterLogEventsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs FilterLogEvents response element from \a xml.
  */
 void FilterLogEventsResponsePrivate::parseFilterLogEventsResponse(QXmlStreamReader &xml)
 {

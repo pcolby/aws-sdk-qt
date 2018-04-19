@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateRepositoryDescriptionResponse : public CodeCommitRespon
 public:
     UpdateRepositoryDescriptionResponse(const UpdateRepositoryDescriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateRepositoryDescriptionRequest * request() const;
+    virtual const UpdateRepositoryDescriptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateRepositoryDescriptionResponse)

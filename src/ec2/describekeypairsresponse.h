@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeKeyPairsResponse : public EC2Response {
 public:
     DescribeKeyPairsResponse(const DescribeKeyPairsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeKeyPairsRequest * request() const;
+    virtual const DescribeKeyPairsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeKeyPairsResponse)

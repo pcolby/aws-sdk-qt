@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * UpdateTerminationProtectionRequest::response(
  */
 
 /*!
- *
- * Constructs a UpdateTerminationProtectionRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a UpdateTerminationProtectionRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 UpdateTerminationProtectionRequestPrivate::UpdateTerminationProtectionRequestPrivate(
     const CloudFormationRequest::Action action, UpdateTerminationProtectionRequest * const q)

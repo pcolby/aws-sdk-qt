@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterSubnetGroupRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ModifyClusterSubnetGroupRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a ModifyClusterSubnetGroupRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 ModifyClusterSubnetGroupRequestPrivate::ModifyClusterSubnetGroupRequestPrivate(
     const RedshiftRequest::Action action, ModifyClusterSubnetGroupRequest * const q)

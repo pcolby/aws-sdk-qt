@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateOpenIDConnectProviderThumbprintRequest:
  */
 
 /*!
- *
- * Constructs a UpdateOpenIDConnectProviderThumbprintRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateOpenIDConnectProviderThumbprintRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProviderThumbprintRequestPrivate(
     const IAMRequest::Action action, UpdateOpenIDConnectProviderThumbprintRequest * const q)

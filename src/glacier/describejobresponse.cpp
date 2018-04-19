@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::DescribeJobResponse
- *
  * \brief The DescribeJobResponse class provides an interace for Glacier DescribeJob responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new DescribeJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeJobResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeJobResponse::DescribeJobResponse(
         const DescribeJobRequest &request,
@@ -93,6 +88,9 @@ DescribeJobResponse::DescribeJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeJobRequest * DescribeJobResponse::request() const
 {
     Q_D(const DescribeJobResponse);
@@ -100,9 +98,8 @@ const DescribeJobRequest * DescribeJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier DescribeJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier DescribeJob \a response.
  */
 void DescribeJobResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DescribeJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::DescribeJobResponsePrivate
+ * \brief The DescribeJobResponsePrivate class provides private implementation for DescribeJobResponse.
  * \internal
  *
- * \class DescribeJobResponsePrivate
- *
- * \brief Private implementation for DescribeJobResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeJobResponse instance.
+ * Constructs a DescribeJobResponsePrivate object with public implementation \a q.
  */
 DescribeJobResponsePrivate::DescribeJobResponsePrivate(
     DescribeJobResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ DescribeJobResponsePrivate::DescribeJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier DescribeJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier DescribeJob response element from \a xml.
  */
 void DescribeJobResponsePrivate::parseDescribeJobResponse(QXmlStreamReader &xml)
 {

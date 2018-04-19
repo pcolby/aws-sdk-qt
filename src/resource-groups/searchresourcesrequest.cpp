@@ -125,9 +125,8 @@ QtAws::Core::AwsAbstractResponse * SearchResourcesRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a SearchResourcesRequestPrivate object for ResourceGroups \a action with,
- * public implementation \a q.
+ * Constructs a SearchResourcesRequestPrivate object for ResourceGroups \a action,
+ * with public implementation \a q.
  */
 SearchResourcesRequestPrivate::SearchResourcesRequestPrivate(
     const ResourceGroupsRequest::Action action, SearchResourcesRequest * const q)

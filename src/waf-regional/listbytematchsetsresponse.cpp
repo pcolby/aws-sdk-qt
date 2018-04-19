@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListByteMatchSetsResponse
- *
  * \brief The ListByteMatchSetsResponse class provides an interace for WAFRegional ListByteMatchSets responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListByteMatchSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListByteMatchSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListByteMatchSetsResponse::ListByteMatchSetsResponse(
         const ListByteMatchSetsRequest &request,
@@ -62,6 +57,9 @@ ListByteMatchSetsResponse::ListByteMatchSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListByteMatchSetsRequest * ListByteMatchSetsResponse::request() const
 {
     Q_D(const ListByteMatchSetsResponse);
@@ -69,9 +67,8 @@ const ListByteMatchSetsRequest * ListByteMatchSetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional ListByteMatchSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional ListByteMatchSets \a response.
  */
 void ListByteMatchSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListByteMatchSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::ListByteMatchSetsResponsePrivate
+ * \brief The ListByteMatchSetsResponsePrivate class provides private implementation for ListByteMatchSetsResponse.
  * \internal
  *
- * \class ListByteMatchSetsResponsePrivate
- *
- * \brief Private implementation for ListByteMatchSetsResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListByteMatchSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListByteMatchSetsResponse instance.
+ * Constructs a ListByteMatchSetsResponsePrivate object with public implementation \a q.
  */
 ListByteMatchSetsResponsePrivate::ListByteMatchSetsResponsePrivate(
     ListByteMatchSetsResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ ListByteMatchSetsResponsePrivate::ListByteMatchSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional ListByteMatchSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional ListByteMatchSets response element from \a xml.
  */
 void ListByteMatchSetsResponsePrivate::parseListByteMatchSetsResponse(QXmlStreamReader &xml)
 {

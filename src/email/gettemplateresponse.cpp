@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetTemplateResponse
- *
  * \brief The GetTemplateResponse class provides an interace for SES GetTemplate responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTemplateResponse::GetTemplateResponse(
         const GetTemplateRequest &request,
@@ -66,6 +61,9 @@ GetTemplateResponse::GetTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTemplateRequest * GetTemplateResponse::request() const
 {
     Q_D(const GetTemplateResponse);
@@ -73,9 +71,8 @@ const GetTemplateRequest * GetTemplateResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES GetTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES GetTemplate \a response.
  */
 void GetTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::GetTemplateResponsePrivate
+ * \brief The GetTemplateResponsePrivate class provides private implementation for GetTemplateResponse.
  * \internal
  *
- * \class GetTemplateResponsePrivate
- *
- * \brief Private implementation for GetTemplateResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTemplateResponse instance.
+ * Constructs a GetTemplateResponsePrivate object with public implementation \a q.
  */
 GetTemplateResponsePrivate::GetTemplateResponsePrivate(
     GetTemplateResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ GetTemplateResponsePrivate::GetTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES GetTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES GetTemplate response element from \a xml.
  */
 void GetTemplateResponsePrivate::parseGetTemplateResponse(QXmlStreamReader &xml)
 {

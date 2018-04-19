@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateReceiptRuleSetResponse
- *
  * \brief The CreateReceiptRuleSetResponse class provides an interace for SES CreateReceiptRuleSet responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateReceiptRuleSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateReceiptRuleSetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateReceiptRuleSetResponse::CreateReceiptRuleSetResponse(
         const CreateReceiptRuleSetRequest &request,
@@ -66,6 +61,9 @@ CreateReceiptRuleSetResponse::CreateReceiptRuleSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateReceiptRuleSetRequest * CreateReceiptRuleSetResponse::request() const
 {
     Q_D(const CreateReceiptRuleSetResponse);
@@ -73,9 +71,8 @@ const CreateReceiptRuleSetRequest * CreateReceiptRuleSetResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SES CreateReceiptRuleSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES CreateReceiptRuleSet \a response.
  */
 void CreateReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateReceiptRuleSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::CreateReceiptRuleSetResponsePrivate
+ * \brief The CreateReceiptRuleSetResponsePrivate class provides private implementation for CreateReceiptRuleSetResponse.
  * \internal
  *
- * \class CreateReceiptRuleSetResponsePrivate
- *
- * \brief Private implementation for CreateReceiptRuleSetResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReceiptRuleSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateReceiptRuleSetResponse instance.
+ * Constructs a CreateReceiptRuleSetResponsePrivate object with public implementation \a q.
  */
 CreateReceiptRuleSetResponsePrivate::CreateReceiptRuleSetResponsePrivate(
     CreateReceiptRuleSetResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateReceiptRuleSetResponsePrivate::CreateReceiptRuleSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES CreateReceiptRuleSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES CreateReceiptRuleSet response element from \a xml.
  */
 void CreateReceiptRuleSetResponsePrivate::parseCreateReceiptRuleSetResponse(QXmlStreamReader &xml)
 {

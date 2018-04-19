@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCommentsForComparedCommitResponse : public CodeCommitRespo
 public:
     GetCommentsForComparedCommitResponse(const GetCommentsForComparedCommitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCommentsForComparedCommitRequest * request() const;
+    virtual const GetCommentsForComparedCommitRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCommentsForComparedCommitResponse)

@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStreamProcessorRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeStreamProcessorRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStreamProcessorRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 DescribeStreamProcessorRequestPrivate::DescribeStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, DescribeStreamProcessorRequest * const q)

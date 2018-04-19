@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * SignalResourceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a SignalResourceRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a SignalResourceRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 SignalResourceRequestPrivate::SignalResourceRequestPrivate(
     const CloudFormationRequest::Action action, SignalResourceRequest * const q)

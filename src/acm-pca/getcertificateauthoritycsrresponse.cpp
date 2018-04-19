@@ -29,10 +29,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::GetCertificateAuthorityCsrResponse
- *
  * \brief The GetCertificateAuthorityCsrResponse class provides an interace for ACMPCA GetCertificateAuthorityCsr responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -69,11 +68,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new GetCertificateAuthorityCsrResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCertificateAuthorityCsrResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCertificateAuthorityCsrResponse::GetCertificateAuthorityCsrResponse(
         const GetCertificateAuthorityCsrRequest &request,
@@ -85,6 +80,9 @@ GetCertificateAuthorityCsrResponse::GetCertificateAuthorityCsrResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCertificateAuthorityCsrRequest * GetCertificateAuthorityCsrResponse::request() const
 {
     Q_D(const GetCertificateAuthorityCsrResponse);
@@ -92,9 +90,8 @@ const GetCertificateAuthorityCsrRequest * GetCertificateAuthorityCsrResponse::re
 }
 
 /*!
- * @brief  Parse a ACMPCA GetCertificateAuthorityCsr response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACMPCA GetCertificateAuthorityCsr \a response.
  */
 void GetCertificateAuthorityCsrResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void GetCertificateAuthorityCsrResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACMPCA::GetCertificateAuthorityCsrResponsePrivate
+ * \brief The GetCertificateAuthorityCsrResponsePrivate class provides private implementation for GetCertificateAuthorityCsrResponse.
  * \internal
  *
- * \class GetCertificateAuthorityCsrResponsePrivate
- *
- * \brief Private implementation for GetCertificateAuthorityCsrResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCertificateAuthorityCsrResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCertificateAuthorityCsrResponse instance.
+ * Constructs a GetCertificateAuthorityCsrResponsePrivate object with public implementation \a q.
  */
 GetCertificateAuthorityCsrResponsePrivate::GetCertificateAuthorityCsrResponsePrivate(
     GetCertificateAuthorityCsrResponse * const q) : ACMPCAResponsePrivate(q)
@@ -125,9 +118,7 @@ GetCertificateAuthorityCsrResponsePrivate::GetCertificateAuthorityCsrResponsePri
 }
 
 /*!
- * @brief  Parse an ACMPCA GetCertificateAuthorityCsrResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACMPCA GetCertificateAuthorityCsr response element from \a xml.
  */
 void GetCertificateAuthorityCsrResponsePrivate::parseGetCertificateAuthorityCsrResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddUploadBufferResponse : public StorageGatewayResponse {
 public:
     AddUploadBufferResponse(const AddUploadBufferRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddUploadBufferRequest * request() const;
+    virtual const AddUploadBufferRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddUploadBufferResponse)

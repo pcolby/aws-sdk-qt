@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateRoleDescriptionResponse
- *
  * \brief The UpdateRoleDescriptionResponse class provides an interace for IAM UpdateRoleDescription responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateRoleDescriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRoleDescriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRoleDescriptionResponse::UpdateRoleDescriptionResponse(
         const UpdateRoleDescriptionRequest &request,
@@ -120,6 +115,9 @@ UpdateRoleDescriptionResponse::UpdateRoleDescriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRoleDescriptionRequest * UpdateRoleDescriptionResponse::request() const
 {
     Q_D(const UpdateRoleDescriptionResponse);
@@ -127,9 +125,8 @@ const UpdateRoleDescriptionRequest * UpdateRoleDescriptionResponse::request() co
 }
 
 /*!
- * @brief  Parse a IAM UpdateRoleDescription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateRoleDescription \a response.
  */
 void UpdateRoleDescriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateRoleDescriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateRoleDescriptionResponsePrivate
+ * \brief The UpdateRoleDescriptionResponsePrivate class provides private implementation for UpdateRoleDescriptionResponse.
  * \internal
  *
- * \class UpdateRoleDescriptionResponsePrivate
- *
- * \brief Private implementation for UpdateRoleDescriptionResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRoleDescriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRoleDescriptionResponse instance.
+ * Constructs a UpdateRoleDescriptionResponsePrivate object with public implementation \a q.
  */
 UpdateRoleDescriptionResponsePrivate::UpdateRoleDescriptionResponsePrivate(
     UpdateRoleDescriptionResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateRoleDescriptionResponsePrivate::UpdateRoleDescriptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM UpdateRoleDescriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateRoleDescription response element from \a xml.
  */
 void UpdateRoleDescriptionResponsePrivate::parseUpdateRoleDescriptionResponse(QXmlStreamReader &xml)
 {

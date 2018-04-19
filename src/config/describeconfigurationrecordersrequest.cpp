@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigurationRecordersRequest::respon
  */
 
 /*!
- *
- * Constructs a DescribeConfigurationRecordersRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeConfigurationRecordersRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DescribeConfigurationRecordersRequestPrivate::DescribeConfigurationRecordersRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigurationRecordersRequest * const q)

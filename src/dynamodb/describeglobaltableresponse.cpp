@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DescribeGlobalTableResponse
- *
  * \brief The DescribeGlobalTableResponse class provides an interace for DynamoDB DescribeGlobalTable responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DescribeGlobalTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeGlobalTableResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeGlobalTableResponse::DescribeGlobalTableResponse(
         const DescribeGlobalTableRequest &request,
@@ -74,6 +69,9 @@ DescribeGlobalTableResponse::DescribeGlobalTableResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeGlobalTableRequest * DescribeGlobalTableResponse::request() const
 {
     Q_D(const DescribeGlobalTableResponse);
@@ -81,9 +79,8 @@ const DescribeGlobalTableRequest * DescribeGlobalTableResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB DescribeGlobalTable response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB DescribeGlobalTable \a response.
  */
 void DescribeGlobalTableResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DescribeGlobalTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::DescribeGlobalTableResponsePrivate
+ * \brief The DescribeGlobalTableResponsePrivate class provides private implementation for DescribeGlobalTableResponse.
  * \internal
  *
- * \class DescribeGlobalTableResponsePrivate
- *
- * \brief Private implementation for DescribeGlobalTableResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeGlobalTableResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeGlobalTableResponse instance.
+ * Constructs a DescribeGlobalTableResponsePrivate object with public implementation \a q.
  */
 DescribeGlobalTableResponsePrivate::DescribeGlobalTableResponsePrivate(
     DescribeGlobalTableResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ DescribeGlobalTableResponsePrivate::DescribeGlobalTableResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB DescribeGlobalTableResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB DescribeGlobalTable response element from \a xml.
  */
 void DescribeGlobalTableResponsePrivate::parseDescribeGlobalTableResponse(QXmlStreamReader &xml)
 {

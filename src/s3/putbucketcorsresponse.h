@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutBucketCorsResponse : public S3Response {
 public:
     PutBucketCorsResponse(const PutBucketCorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutBucketCorsRequest * request() const;
+    virtual const PutBucketCorsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutBucketCorsResponse)

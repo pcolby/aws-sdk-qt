@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DescribeComplianceByConfigRuleRequest::respon
  */
 
 /*!
- *
- * Constructs a DescribeComplianceByConfigRuleRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeComplianceByConfigRuleRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DescribeComplianceByConfigRuleRequestPrivate::DescribeComplianceByConfigRuleRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeComplianceByConfigRuleRequest * const q)

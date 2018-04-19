@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeComplianceByResourceResponse
- *
  * \brief The DescribeComplianceByResourceResponse class provides an interace for ConfigService DescribeComplianceByResource responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeComplianceByResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeComplianceByResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeComplianceByResourceResponse::DescribeComplianceByResourceResponse(
         const DescribeComplianceByResourceRequest &request,
@@ -78,6 +73,9 @@ DescribeComplianceByResourceResponse::DescribeComplianceByResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeComplianceByResourceRequest * DescribeComplianceByResourceResponse::request() const
 {
     Q_D(const DescribeComplianceByResourceResponse);
@@ -85,9 +83,8 @@ const DescribeComplianceByResourceRequest * DescribeComplianceByResourceResponse
 }
 
 /*!
- * @brief  Parse a ConfigService DescribeComplianceByResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribeComplianceByResource \a response.
  */
 void DescribeComplianceByResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeComplianceByResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribeComplianceByResourceResponsePrivate
+ * \brief The DescribeComplianceByResourceResponsePrivate class provides private implementation for DescribeComplianceByResourceResponse.
  * \internal
  *
- * \class DescribeComplianceByResourceResponsePrivate
- *
- * \brief Private implementation for DescribeComplianceByResourceResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeComplianceByResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeComplianceByResourceResponse instance.
+ * Constructs a DescribeComplianceByResourceResponsePrivate object with public implementation \a q.
  */
 DescribeComplianceByResourceResponsePrivate::DescribeComplianceByResourceResponsePrivate(
     DescribeComplianceByResourceResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeComplianceByResourceResponsePrivate::DescribeComplianceByResourceRespons
 }
 
 /*!
- * @brief  Parse an ConfigService DescribeComplianceByResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribeComplianceByResource response element from \a xml.
  */
 void DescribeComplianceByResourceResponsePrivate::parseDescribeComplianceByResourceResponse(QXmlStreamReader &xml)
 {

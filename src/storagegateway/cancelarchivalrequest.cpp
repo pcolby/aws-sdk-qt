@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * CancelArchivalRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CancelArchivalRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a CancelArchivalRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 CancelArchivalRequestPrivate::CancelArchivalRequestPrivate(
     const StorageGatewayRequest::Action action, CancelArchivalRequest * const q)

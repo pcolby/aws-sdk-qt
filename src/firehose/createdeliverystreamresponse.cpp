@@ -29,10 +29,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::CreateDeliveryStreamResponse
- *
  * \brief The CreateDeliveryStreamResponse class provides an interace for Firehose CreateDeliveryStream responses.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -43,11 +42,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new CreateDeliveryStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDeliveryStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDeliveryStreamResponse::CreateDeliveryStreamResponse(
         const CreateDeliveryStreamRequest &request,
@@ -59,6 +54,9 @@ CreateDeliveryStreamResponse::CreateDeliveryStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDeliveryStreamRequest * CreateDeliveryStreamResponse::request() const
 {
     Q_D(const CreateDeliveryStreamResponse);
@@ -66,9 +64,8 @@ const CreateDeliveryStreamRequest * CreateDeliveryStreamResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Firehose CreateDeliveryStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Firehose CreateDeliveryStream \a response.
  */
 void CreateDeliveryStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateDeliveryStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Firehose::CreateDeliveryStreamResponsePrivate
+ * \brief The CreateDeliveryStreamResponsePrivate class provides private implementation for CreateDeliveryStreamResponse.
  * \internal
  *
- * \class CreateDeliveryStreamResponsePrivate
- *
- * \brief Private implementation for CreateDeliveryStreamResponse.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDeliveryStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDeliveryStreamResponse instance.
+ * Constructs a CreateDeliveryStreamResponsePrivate object with public implementation \a q.
  */
 CreateDeliveryStreamResponsePrivate::CreateDeliveryStreamResponsePrivate(
     CreateDeliveryStreamResponse * const q) : FirehoseResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateDeliveryStreamResponsePrivate::CreateDeliveryStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Firehose CreateDeliveryStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Firehose CreateDeliveryStream response element from \a xml.
  */
 void CreateDeliveryStreamResponsePrivate::parseCreateDeliveryStreamResponse(QXmlStreamReader &xml)
 {

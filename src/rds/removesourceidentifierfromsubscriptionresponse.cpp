@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RemoveSourceIdentifierFromSubscriptionResponse
- *
  * \brief The RemoveSourceIdentifierFromSubscriptionResponse class provides an interace for RDS RemoveSourceIdentifierFromSubscription responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RemoveSourceIdentifierFromSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveSourceIdentifierFromSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveSourceIdentifierFromSubscriptionResponse::RemoveSourceIdentifierFromSubscriptionResponse(
         const RemoveSourceIdentifierFromSubscriptionRequest &request,
@@ -119,6 +114,9 @@ RemoveSourceIdentifierFromSubscriptionResponse::RemoveSourceIdentifierFromSubscr
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveSourceIdentifierFromSubscriptionRequest * RemoveSourceIdentifierFromSubscriptionResponse::request() const
 {
     Q_D(const RemoveSourceIdentifierFromSubscriptionResponse);
@@ -126,9 +124,8 @@ const RemoveSourceIdentifierFromSubscriptionRequest * RemoveSourceIdentifierFrom
 }
 
 /*!
- * @brief  Parse a RDS RemoveSourceIdentifierFromSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS RemoveSourceIdentifierFromSubscription \a response.
  */
 void RemoveSourceIdentifierFromSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void RemoveSourceIdentifierFromSubscriptionResponse::parseSuccess(QIODevice &res
 }
 
 /*!
+ * \class QtAws::RDS::RemoveSourceIdentifierFromSubscriptionResponsePrivate
+ * \brief The RemoveSourceIdentifierFromSubscriptionResponsePrivate class provides private implementation for RemoveSourceIdentifierFromSubscriptionResponse.
  * \internal
  *
- * \class RemoveSourceIdentifierFromSubscriptionResponsePrivate
- *
- * \brief Private implementation for RemoveSourceIdentifierFromSubscriptionResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveSourceIdentifierFromSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveSourceIdentifierFromSubscriptionResponse instance.
+ * Constructs a RemoveSourceIdentifierFromSubscriptionResponsePrivate object with public implementation \a q.
  */
 RemoveSourceIdentifierFromSubscriptionResponsePrivate::RemoveSourceIdentifierFromSubscriptionResponsePrivate(
     RemoveSourceIdentifierFromSubscriptionResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ RemoveSourceIdentifierFromSubscriptionResponsePrivate::RemoveSourceIdentifierFro
 }
 
 /*!
- * @brief  Parse an RDS RemoveSourceIdentifierFromSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS RemoveSourceIdentifierFromSubscription response element from \a xml.
  */
 void RemoveSourceIdentifierFromSubscriptionResponsePrivate::parseRemoveSourceIdentifierFromSubscriptionResponse(QXmlStreamReader &xml)
 {

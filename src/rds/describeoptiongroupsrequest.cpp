@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeOptionGroupsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeOptionGroupsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeOptionGroupsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeOptionGroupsRequestPrivate::DescribeOptionGroupsRequestPrivate(
     const RDSRequest::Action action, DescribeOptionGroupsRequest * const q)

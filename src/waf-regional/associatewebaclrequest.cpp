@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * AssociateWebACLRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a AssociateWebACLRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a AssociateWebACLRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 AssociateWebACLRequestPrivate::AssociateWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, AssociateWebACLRequest * const q)

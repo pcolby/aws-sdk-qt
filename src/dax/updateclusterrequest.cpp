@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * UpdateClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateClusterRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a UpdateClusterRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 UpdateClusterRequestPrivate::UpdateClusterRequestPrivate(
     const DAXRequest::Action action, UpdateClusterRequest * const q)

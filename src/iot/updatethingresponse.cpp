@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateThingResponse
- *
  * \brief The UpdateThingResponse class provides an interace for IoT UpdateThing responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateThingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateThingResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateThingResponse::UpdateThingResponse(
         const UpdateThingRequest &request,
@@ -66,6 +61,9 @@ UpdateThingResponse::UpdateThingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateThingRequest * UpdateThingResponse::request() const
 {
     Q_D(const UpdateThingResponse);
@@ -73,9 +71,8 @@ const UpdateThingRequest * UpdateThingResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT UpdateThing response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT UpdateThing \a response.
  */
 void UpdateThingResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateThingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::UpdateThingResponsePrivate
+ * \brief The UpdateThingResponsePrivate class provides private implementation for UpdateThingResponse.
  * \internal
  *
- * \class UpdateThingResponsePrivate
- *
- * \brief Private implementation for UpdateThingResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateThingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateThingResponse instance.
+ * Constructs a UpdateThingResponsePrivate object with public implementation \a q.
  */
 UpdateThingResponsePrivate::UpdateThingResponsePrivate(
     UpdateThingResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateThingResponsePrivate::UpdateThingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT UpdateThingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT UpdateThing response element from \a xml.
  */
 void UpdateThingResponsePrivate::parseUpdateThingResponse(QXmlStreamReader &xml)
 {

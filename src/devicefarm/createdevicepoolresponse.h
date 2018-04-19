@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDevicePoolResponse : public DeviceFarmResponse {
 public:
     CreateDevicePoolResponse(const CreateDevicePoolRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDevicePoolRequest * request() const;
+    virtual const CreateDevicePoolRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDevicePoolResponse)

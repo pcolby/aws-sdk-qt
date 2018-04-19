@@ -34,10 +34,10 @@ class QTAWS_EXPORT RetryStageExecutionResponse : public CodePipelineResponse {
 public:
     RetryStageExecutionResponse(const RetryStageExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RetryStageExecutionRequest * request() const;
+    virtual const RetryStageExecutionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RetryStageExecutionResponse)

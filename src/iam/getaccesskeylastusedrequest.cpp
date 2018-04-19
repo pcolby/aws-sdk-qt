@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * GetAccessKeyLastUsedRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetAccessKeyLastUsedRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a GetAccessKeyLastUsedRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 GetAccessKeyLastUsedRequestPrivate::GetAccessKeyLastUsedRequestPrivate(
     const IAMRequest::Action action, GetAccessKeyLastUsedRequest * const q)

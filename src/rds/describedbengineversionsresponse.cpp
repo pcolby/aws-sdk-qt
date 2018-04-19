@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBEngineVersionsResponse
- *
  * \brief The DescribeDBEngineVersionsResponse class provides an interace for RDS DescribeDBEngineVersions responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBEngineVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDBEngineVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDBEngineVersionsResponse::DescribeDBEngineVersionsResponse(
         const DescribeDBEngineVersionsRequest &request,
@@ -119,6 +114,9 @@ DescribeDBEngineVersionsResponse::DescribeDBEngineVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDBEngineVersionsRequest * DescribeDBEngineVersionsResponse::request() const
 {
     Q_D(const DescribeDBEngineVersionsResponse);
@@ -126,9 +124,8 @@ const DescribeDBEngineVersionsRequest * DescribeDBEngineVersionsResponse::reques
 }
 
 /*!
- * @brief  Parse a RDS DescribeDBEngineVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeDBEngineVersions \a response.
  */
 void DescribeDBEngineVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeDBEngineVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeDBEngineVersionsResponsePrivate
+ * \brief The DescribeDBEngineVersionsResponsePrivate class provides private implementation for DescribeDBEngineVersionsResponse.
  * \internal
  *
- * \class DescribeDBEngineVersionsResponsePrivate
- *
- * \brief Private implementation for DescribeDBEngineVersionsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBEngineVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDBEngineVersionsResponse instance.
+ * Constructs a DescribeDBEngineVersionsResponsePrivate object with public implementation \a q.
  */
 DescribeDBEngineVersionsResponsePrivate::DescribeDBEngineVersionsResponsePrivate(
     DescribeDBEngineVersionsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeDBEngineVersionsResponsePrivate::DescribeDBEngineVersionsResponsePrivate
 }
 
 /*!
- * @brief  Parse an RDS DescribeDBEngineVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeDBEngineVersions response element from \a xml.
  */
 void DescribeDBEngineVersionsResponsePrivate::parseDescribeDBEngineVersionsResponse(QXmlStreamReader &xml)
 {

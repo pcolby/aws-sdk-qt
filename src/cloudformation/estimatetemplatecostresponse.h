@@ -34,10 +34,10 @@ class QTAWS_EXPORT EstimateTemplateCostResponse : public CloudFormationResponse 
 public:
     EstimateTemplateCostResponse(const EstimateTemplateCostRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EstimateTemplateCostRequest * request() const;
+    virtual const EstimateTemplateCostRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EstimateTemplateCostResponse)

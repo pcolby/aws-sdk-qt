@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateThingResponse
- *
  * \brief The CreateThingResponse class provides an interace for IoT CreateThing responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateThingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateThingResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateThingResponse::CreateThingResponse(
         const CreateThingRequest &request,
@@ -66,6 +61,9 @@ CreateThingResponse::CreateThingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateThingRequest * CreateThingResponse::request() const
 {
     Q_D(const CreateThingResponse);
@@ -73,9 +71,8 @@ const CreateThingRequest * CreateThingResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT CreateThing response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT CreateThing \a response.
  */
 void CreateThingResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateThingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::CreateThingResponsePrivate
+ * \brief The CreateThingResponsePrivate class provides private implementation for CreateThingResponse.
  * \internal
  *
- * \class CreateThingResponsePrivate
- *
- * \brief Private implementation for CreateThingResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateThingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateThingResponse instance.
+ * Constructs a CreateThingResponsePrivate object with public implementation \a q.
  */
 CreateThingResponsePrivate::CreateThingResponsePrivate(
     CreateThingResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateThingResponsePrivate::CreateThingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT CreateThingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT CreateThing response element from \a xml.
  */
 void CreateThingResponsePrivate::parseCreateThingResponse(QXmlStreamReader &xml)
 {

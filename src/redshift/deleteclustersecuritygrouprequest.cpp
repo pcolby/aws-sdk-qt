@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterSecurityGroupRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteClusterSecurityGroupRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteClusterSecurityGroupRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DeleteClusterSecurityGroupRequestPrivate::DeleteClusterSecurityGroupRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterSecurityGroupRequest * const q)

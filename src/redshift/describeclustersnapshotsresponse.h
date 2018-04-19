@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeClusterSnapshotsResponse : public RedshiftResponse {
 public:
     DescribeClusterSnapshotsResponse(const DescribeClusterSnapshotsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeClusterSnapshotsRequest * request() const;
+    virtual const DescribeClusterSnapshotsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeClusterSnapshotsResponse)

@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::TagResourceResponse
- *
  * \brief The TagResourceResponse class provides an interace for KMS TagResource responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new TagResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
@@ -154,6 +149,9 @@ TagResourceResponse::TagResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagResourceRequest * TagResourceResponse::request() const
 {
     Q_D(const TagResourceResponse);
@@ -161,9 +159,8 @@ const TagResourceRequest * TagResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS TagResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::TagResourceResponsePrivate
+ * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \class TagResourceResponsePrivate
- *
- * \brief Private implementation for TagResourceResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagResourceResponse instance.
+ * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
     TagResourceResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ TagResourceResponsePrivate::TagResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS TagResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {

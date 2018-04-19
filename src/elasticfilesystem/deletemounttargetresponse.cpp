@@ -29,10 +29,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::DeleteMountTargetResponse
- *
  * \brief The DeleteMountTargetResponse class provides an interace for EFS DeleteMountTarget responses.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -45,11 +44,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new DeleteMountTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteMountTargetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteMountTargetResponse::DeleteMountTargetResponse(
         const DeleteMountTargetRequest &request,
@@ -61,6 +56,9 @@ DeleteMountTargetResponse::DeleteMountTargetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteMountTargetRequest * DeleteMountTargetResponse::request() const
 {
     Q_D(const DeleteMountTargetResponse);
@@ -68,9 +66,8 @@ const DeleteMountTargetRequest * DeleteMountTargetResponse::request() const
 }
 
 /*!
- * @brief  Parse a EFS DeleteMountTarget response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EFS DeleteMountTarget \a response.
  */
 void DeleteMountTargetResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeleteMountTargetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EFS::DeleteMountTargetResponsePrivate
+ * \brief The DeleteMountTargetResponsePrivate class provides private implementation for DeleteMountTargetResponse.
  * \internal
  *
- * \class DeleteMountTargetResponsePrivate
- *
- * \brief Private implementation for DeleteMountTargetResponse.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMountTargetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteMountTargetResponse instance.
+ * Constructs a DeleteMountTargetResponsePrivate object with public implementation \a q.
  */
 DeleteMountTargetResponsePrivate::DeleteMountTargetResponsePrivate(
     DeleteMountTargetResponse * const q) : EFSResponsePrivate(q)
@@ -101,9 +94,7 @@ DeleteMountTargetResponsePrivate::DeleteMountTargetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EFS DeleteMountTargetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EFS DeleteMountTarget response element from \a xml.
  */
 void DeleteMountTargetResponsePrivate::parseDeleteMountTargetResponse(QXmlStreamReader &xml)
 {

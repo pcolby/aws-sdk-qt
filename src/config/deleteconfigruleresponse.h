@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteConfigRuleResponse : public ConfigServiceResponse {
 public:
     DeleteConfigRuleResponse(const DeleteConfigRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteConfigRuleRequest * request() const;
+    virtual const DeleteConfigRuleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteConfigRuleResponse)

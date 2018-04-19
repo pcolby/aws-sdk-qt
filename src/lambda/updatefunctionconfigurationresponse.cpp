@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::UpdateFunctionConfigurationResponse
- *
  * \brief The UpdateFunctionConfigurationResponse class provides an interace for Lambda UpdateFunctionConfiguration responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new UpdateFunctionConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateFunctionConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateFunctionConfigurationResponse::UpdateFunctionConfigurationResponse(
         const UpdateFunctionConfigurationRequest &request,
@@ -66,6 +61,9 @@ UpdateFunctionConfigurationResponse::UpdateFunctionConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateFunctionConfigurationRequest * UpdateFunctionConfigurationResponse::request() const
 {
     Q_D(const UpdateFunctionConfigurationResponse);
@@ -73,9 +71,8 @@ const UpdateFunctionConfigurationRequest * UpdateFunctionConfigurationResponse::
 }
 
 /*!
- * @brief  Parse a Lambda UpdateFunctionConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda UpdateFunctionConfiguration \a response.
  */
 void UpdateFunctionConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateFunctionConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::UpdateFunctionConfigurationResponsePrivate
+ * \brief The UpdateFunctionConfigurationResponsePrivate class provides private implementation for UpdateFunctionConfigurationResponse.
  * \internal
  *
- * \class UpdateFunctionConfigurationResponsePrivate
- *
- * \brief Private implementation for UpdateFunctionConfigurationResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateFunctionConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateFunctionConfigurationResponse instance.
+ * Constructs a UpdateFunctionConfigurationResponsePrivate object with public implementation \a q.
  */
 UpdateFunctionConfigurationResponsePrivate::UpdateFunctionConfigurationResponsePrivate(
     UpdateFunctionConfigurationResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateFunctionConfigurationResponsePrivate::UpdateFunctionConfigurationResponseP
 }
 
 /*!
- * @brief  Parse an Lambda UpdateFunctionConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda UpdateFunctionConfiguration response element from \a xml.
  */
 void UpdateFunctionConfigurationResponsePrivate::parseUpdateFunctionConfigurationResponse(QXmlStreamReader &xml)
 {

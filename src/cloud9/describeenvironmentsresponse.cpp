@@ -29,10 +29,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::DescribeEnvironmentsResponse
- *
  * \brief The DescribeEnvironmentsResponse class provides an interace for Cloud9 DescribeEnvironments responses.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -93,11 +92,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEnvironmentsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEnvironmentsResponse::DescribeEnvironmentsResponse(
         const DescribeEnvironmentsRequest &request,
@@ -109,6 +104,9 @@ DescribeEnvironmentsResponse::DescribeEnvironmentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEnvironmentsRequest * DescribeEnvironmentsResponse::request() const
 {
     Q_D(const DescribeEnvironmentsResponse);
@@ -116,9 +114,8 @@ const DescribeEnvironmentsRequest * DescribeEnvironmentsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Cloud9 DescribeEnvironments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Cloud9 DescribeEnvironments \a response.
  */
 void DescribeEnvironmentsResponse::parseSuccess(QIODevice &response)
 {
@@ -128,19 +125,15 @@ void DescribeEnvironmentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Cloud9::DescribeEnvironmentsResponsePrivate
+ * \brief The DescribeEnvironmentsResponsePrivate class provides private implementation for DescribeEnvironmentsResponse.
  * \internal
  *
- * \class DescribeEnvironmentsResponsePrivate
- *
- * \brief Private implementation for DescribeEnvironmentsResponse.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEnvironmentsResponse instance.
+ * Constructs a DescribeEnvironmentsResponsePrivate object with public implementation \a q.
  */
 DescribeEnvironmentsResponsePrivate::DescribeEnvironmentsResponsePrivate(
     DescribeEnvironmentsResponse * const q) : Cloud9ResponsePrivate(q)
@@ -149,9 +142,7 @@ DescribeEnvironmentsResponsePrivate::DescribeEnvironmentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Cloud9 DescribeEnvironmentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Cloud9 DescribeEnvironments response element from \a xml.
  */
 void DescribeEnvironmentsResponsePrivate::parseDescribeEnvironmentsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DeleteResourceDefinitionResponse
- *
  * \brief The DeleteResourceDefinitionResponse class provides an interace for Greengrass DeleteResourceDefinition responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DeleteResourceDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteResourceDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteResourceDefinitionResponse::DeleteResourceDefinitionResponse(
         const DeleteResourceDefinitionRequest &request,
@@ -58,6 +53,9 @@ DeleteResourceDefinitionResponse::DeleteResourceDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteResourceDefinitionRequest * DeleteResourceDefinitionResponse::request() const
 {
     Q_D(const DeleteResourceDefinitionResponse);
@@ -65,9 +63,8 @@ const DeleteResourceDefinitionRequest * DeleteResourceDefinitionResponse::reques
 }
 
 /*!
- * @brief  Parse a Greengrass DeleteResourceDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass DeleteResourceDefinition \a response.
  */
 void DeleteResourceDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteResourceDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::DeleteResourceDefinitionResponsePrivate
+ * \brief The DeleteResourceDefinitionResponsePrivate class provides private implementation for DeleteResourceDefinitionResponse.
  * \internal
  *
- * \class DeleteResourceDefinitionResponsePrivate
- *
- * \brief Private implementation for DeleteResourceDefinitionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteResourceDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteResourceDefinitionResponse instance.
+ * Constructs a DeleteResourceDefinitionResponsePrivate object with public implementation \a q.
  */
 DeleteResourceDefinitionResponsePrivate::DeleteResourceDefinitionResponsePrivate(
     DeleteResourceDefinitionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteResourceDefinitionResponsePrivate::DeleteResourceDefinitionResponsePrivate
 }
 
 /*!
- * @brief  Parse an Greengrass DeleteResourceDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass DeleteResourceDefinition response element from \a xml.
  */
 void DeleteResourceDefinitionResponsePrivate::parseDeleteResourceDefinitionResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteClusterParameterGroupResponse
- *
  * \brief The DeleteClusterParameterGroupResponse class provides an interace for Redshift DeleteClusterParameterGroup responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteClusterParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteClusterParameterGroupResponse::DeleteClusterParameterGroupResponse(
         const DeleteClusterParameterGroupRequest &request,
@@ -85,6 +80,9 @@ DeleteClusterParameterGroupResponse::DeleteClusterParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteClusterParameterGroupRequest * DeleteClusterParameterGroupResponse::request() const
 {
     Q_D(const DeleteClusterParameterGroupResponse);
@@ -92,9 +90,8 @@ const DeleteClusterParameterGroupRequest * DeleteClusterParameterGroupResponse::
 }
 
 /*!
- * @brief  Parse a Redshift DeleteClusterParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DeleteClusterParameterGroup \a response.
  */
 void DeleteClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DeleteClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DeleteClusterParameterGroupResponsePrivate
+ * \brief The DeleteClusterParameterGroupResponsePrivate class provides private implementation for DeleteClusterParameterGroupResponse.
  * \internal
  *
- * \class DeleteClusterParameterGroupResponsePrivate
- *
- * \brief Private implementation for DeleteClusterParameterGroupResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteClusterParameterGroupResponse instance.
+ * Constructs a DeleteClusterParameterGroupResponsePrivate object with public implementation \a q.
  */
 DeleteClusterParameterGroupResponsePrivate::DeleteClusterParameterGroupResponsePrivate(
     DeleteClusterParameterGroupResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DeleteClusterParameterGroupResponsePrivate::DeleteClusterParameterGroupResponseP
 }
 
 /*!
- * @brief  Parse an Redshift DeleteClusterParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DeleteClusterParameterGroup response element from \a xml.
  */
 void DeleteClusterParameterGroupResponsePrivate::parseDeleteClusterParameterGroupResponse(QXmlStreamReader &xml)
 {

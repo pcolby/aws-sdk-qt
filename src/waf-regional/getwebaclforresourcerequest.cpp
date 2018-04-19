@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * GetWebACLForResourceRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetWebACLForResourceRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a GetWebACLForResourceRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 GetWebACLForResourceRequestPrivate::GetWebACLForResourceRequestPrivate(
     const WAFRegionalRequest::Action action, GetWebACLForResourceRequest * const q)

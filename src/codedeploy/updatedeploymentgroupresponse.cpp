@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::UpdateDeploymentGroupResponse
- *
  * \brief The UpdateDeploymentGroupResponse class provides an interace for CodeDeploy UpdateDeploymentGroup responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new UpdateDeploymentGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDeploymentGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDeploymentGroupResponse::UpdateDeploymentGroupResponse(
         const UpdateDeploymentGroupRequest &request,
@@ -136,6 +131,9 @@ UpdateDeploymentGroupResponse::UpdateDeploymentGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDeploymentGroupRequest * UpdateDeploymentGroupResponse::request() const
 {
     Q_D(const UpdateDeploymentGroupResponse);
@@ -143,9 +141,8 @@ const UpdateDeploymentGroupRequest * UpdateDeploymentGroupResponse::request() co
 }
 
 /*!
- * @brief  Parse a CodeDeploy UpdateDeploymentGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy UpdateDeploymentGroup \a response.
  */
 void UpdateDeploymentGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void UpdateDeploymentGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::UpdateDeploymentGroupResponsePrivate
+ * \brief The UpdateDeploymentGroupResponsePrivate class provides private implementation for UpdateDeploymentGroupResponse.
  * \internal
  *
- * \class UpdateDeploymentGroupResponsePrivate
- *
- * \brief Private implementation for UpdateDeploymentGroupResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDeploymentGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDeploymentGroupResponse instance.
+ * Constructs a UpdateDeploymentGroupResponsePrivate object with public implementation \a q.
  */
 UpdateDeploymentGroupResponsePrivate::UpdateDeploymentGroupResponsePrivate(
     UpdateDeploymentGroupResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ UpdateDeploymentGroupResponsePrivate::UpdateDeploymentGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy UpdateDeploymentGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy UpdateDeploymentGroup response element from \a xml.
  */
 void UpdateDeploymentGroupResponsePrivate::parseUpdateDeploymentGroupResponse(QXmlStreamReader &xml)
 {

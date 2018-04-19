@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteEnvironmentResponse : public Cloud9Response {
 public:
     DeleteEnvironmentResponse(const DeleteEnvironmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteEnvironmentRequest * request() const;
+    virtual const DeleteEnvironmentRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteEnvironmentResponse)

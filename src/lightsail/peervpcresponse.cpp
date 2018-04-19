@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::PeerVpcResponse
- *
  * \brief The PeerVpcResponse class provides an interace for Lightsail PeerVpc responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new PeerVpcResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PeerVpcResponse object for \a reply to \a request, with parent \a parent.
  */
 PeerVpcResponse::PeerVpcResponse(
         const PeerVpcRequest &request,
@@ -71,6 +66,9 @@ PeerVpcResponse::PeerVpcResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PeerVpcRequest * PeerVpcResponse::request() const
 {
     Q_D(const PeerVpcResponse);
@@ -78,9 +76,8 @@ const PeerVpcRequest * PeerVpcResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail PeerVpc response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail PeerVpc \a response.
  */
 void PeerVpcResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void PeerVpcResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::PeerVpcResponsePrivate
+ * \brief The PeerVpcResponsePrivate class provides private implementation for PeerVpcResponse.
  * \internal
  *
- * \class PeerVpcResponsePrivate
- *
- * \brief Private implementation for PeerVpcResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PeerVpcResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PeerVpcResponse instance.
+ * Constructs a PeerVpcResponsePrivate object with public implementation \a q.
  */
 PeerVpcResponsePrivate::PeerVpcResponsePrivate(
     PeerVpcResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ PeerVpcResponsePrivate::PeerVpcResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail PeerVpcResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail PeerVpc response element from \a xml.
  */
 void PeerVpcResponsePrivate::parsePeerVpcResponse(QXmlStreamReader &xml)
 {

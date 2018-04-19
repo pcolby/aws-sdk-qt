@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListServerNeighborsResponse : public ApplicationDiscoveryServ
 public:
     ListServerNeighborsResponse(const ListServerNeighborsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListServerNeighborsRequest * request() const;
+    virtual const ListServerNeighborsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListServerNeighborsResponse)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketNotificationConfigurationRequest::re
  */
 
 /*!
- *
- * Constructs a GetBucketNotificationConfigurationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketNotificationConfigurationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketNotificationConfigurationRequestPrivate::GetBucketNotificationConfigurationRequestPrivate(
     const S3Request::Action action, GetBucketNotificationConfigurationRequest * const q)

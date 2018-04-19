@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DisassociateProductFromPortfolioResponse
- *
  * \brief The DisassociateProductFromPortfolioResponse class provides an interace for ServiceCatalog DisassociateProductFromPortfolio responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DisassociateProductFromPortfolioResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateProductFromPortfolioResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateProductFromPortfolioResponse::DisassociateProductFromPortfolioResponse(
         const DisassociateProductFromPortfolioRequest &request,
@@ -61,6 +56,9 @@ DisassociateProductFromPortfolioResponse::DisassociateProductFromPortfolioRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateProductFromPortfolioRequest * DisassociateProductFromPortfolioResponse::request() const
 {
     Q_D(const DisassociateProductFromPortfolioResponse);
@@ -68,9 +66,8 @@ const DisassociateProductFromPortfolioRequest * DisassociateProductFromPortfolio
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DisassociateProductFromPortfolio response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DisassociateProductFromPortfolio \a response.
  */
 void DisassociateProductFromPortfolioResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DisassociateProductFromPortfolioResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DisassociateProductFromPortfolioResponsePrivate
+ * \brief The DisassociateProductFromPortfolioResponsePrivate class provides private implementation for DisassociateProductFromPortfolioResponse.
  * \internal
  *
- * \class DisassociateProductFromPortfolioResponsePrivate
- *
- * \brief Private implementation for DisassociateProductFromPortfolioResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateProductFromPortfolioResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateProductFromPortfolioResponse instance.
+ * Constructs a DisassociateProductFromPortfolioResponsePrivate object with public implementation \a q.
  */
 DisassociateProductFromPortfolioResponsePrivate::DisassociateProductFromPortfolioResponsePrivate(
     DisassociateProductFromPortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DisassociateProductFromPortfolioResponsePrivate::DisassociateProductFromPortfoli
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DisassociateProductFromPortfolioResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DisassociateProductFromPortfolio response element from \a xml.
  */
 void DisassociateProductFromPortfolioResponsePrivate::parseDisassociateProductFromPortfolioResponse(QXmlStreamReader &xml)
 {

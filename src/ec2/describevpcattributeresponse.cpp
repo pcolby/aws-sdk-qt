@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcAttributeResponse
- *
  * \brief The DescribeVpcAttributeResponse class provides an interace for EC2 DescribeVpcAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVpcAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVpcAttributeResponse::DescribeVpcAttributeResponse(
         const DescribeVpcAttributeRequest &request,
@@ -59,6 +54,9 @@ DescribeVpcAttributeResponse::DescribeVpcAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVpcAttributeRequest * DescribeVpcAttributeResponse::request() const
 {
     Q_D(const DescribeVpcAttributeResponse);
@@ -66,9 +64,8 @@ const DescribeVpcAttributeRequest * DescribeVpcAttributeResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 DescribeVpcAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeVpcAttribute \a response.
  */
 void DescribeVpcAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeVpcAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeVpcAttributeResponsePrivate
+ * \brief The DescribeVpcAttributeResponsePrivate class provides private implementation for DescribeVpcAttributeResponse.
  * \internal
  *
- * \class DescribeVpcAttributeResponsePrivate
- *
- * \brief Private implementation for DescribeVpcAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVpcAttributeResponse instance.
+ * Constructs a DescribeVpcAttributeResponsePrivate object with public implementation \a q.
  */
 DescribeVpcAttributeResponsePrivate::DescribeVpcAttributeResponsePrivate(
     DescribeVpcAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeVpcAttributeResponsePrivate::DescribeVpcAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeVpcAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeVpcAttribute response element from \a xml.
  */
 void DescribeVpcAttributeResponsePrivate::parseDescribeVpcAttributeResponse(QXmlStreamReader &xml)
 {

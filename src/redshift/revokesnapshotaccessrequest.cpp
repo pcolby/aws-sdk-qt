@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * RevokeSnapshotAccessRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a RevokeSnapshotAccessRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a RevokeSnapshotAccessRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 RevokeSnapshotAccessRequestPrivate::RevokeSnapshotAccessRequestPrivate(
     const RedshiftRequest::Action action, RevokeSnapshotAccessRequest * const q)

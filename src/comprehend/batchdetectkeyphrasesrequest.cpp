@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * BatchDetectKeyPhrasesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a BatchDetectKeyPhrasesRequestPrivate object for Comprehend \a action with,
- * public implementation \a q.
+ * Constructs a BatchDetectKeyPhrasesRequestPrivate object for Comprehend \a action,
+ * with public implementation \a q.
  */
 BatchDetectKeyPhrasesRequestPrivate::BatchDetectKeyPhrasesRequestPrivate(
     const ComprehendRequest::Action action, BatchDetectKeyPhrasesRequest * const q)

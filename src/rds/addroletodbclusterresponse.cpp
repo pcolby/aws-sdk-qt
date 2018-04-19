@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::AddRoleToDBClusterResponse
- *
  * \brief The AddRoleToDBClusterResponse class provides an interace for RDS AddRoleToDBCluster responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new AddRoleToDBClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddRoleToDBClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 AddRoleToDBClusterResponse::AddRoleToDBClusterResponse(
         const AddRoleToDBClusterRequest &request,
@@ -119,6 +114,9 @@ AddRoleToDBClusterResponse::AddRoleToDBClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddRoleToDBClusterRequest * AddRoleToDBClusterResponse::request() const
 {
     Q_D(const AddRoleToDBClusterResponse);
@@ -126,9 +124,8 @@ const AddRoleToDBClusterRequest * AddRoleToDBClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS AddRoleToDBCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS AddRoleToDBCluster \a response.
  */
 void AddRoleToDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void AddRoleToDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::AddRoleToDBClusterResponsePrivate
+ * \brief The AddRoleToDBClusterResponsePrivate class provides private implementation for AddRoleToDBClusterResponse.
  * \internal
  *
- * \class AddRoleToDBClusterResponsePrivate
- *
- * \brief Private implementation for AddRoleToDBClusterResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddRoleToDBClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddRoleToDBClusterResponse instance.
+ * Constructs a AddRoleToDBClusterResponsePrivate object with public implementation \a q.
  */
 AddRoleToDBClusterResponsePrivate::AddRoleToDBClusterResponsePrivate(
     AddRoleToDBClusterResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ AddRoleToDBClusterResponsePrivate::AddRoleToDBClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS AddRoleToDBClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS AddRoleToDBCluster response element from \a xml.
  */
 void AddRoleToDBClusterResponsePrivate::parseAddRoleToDBClusterResponse(QXmlStreamReader &xml)
 {

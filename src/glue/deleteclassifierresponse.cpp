@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteClassifierResponse
- *
  * \brief The DeleteClassifierResponse class provides an interace for Glue DeleteClassifier responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteClassifierResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteClassifierResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteClassifierResponse::DeleteClassifierResponse(
         const DeleteClassifierRequest &request,
@@ -58,6 +53,9 @@ DeleteClassifierResponse::DeleteClassifierResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteClassifierRequest * DeleteClassifierResponse::request() const
 {
     Q_D(const DeleteClassifierResponse);
@@ -65,9 +63,8 @@ const DeleteClassifierRequest * DeleteClassifierResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue DeleteClassifier response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue DeleteClassifier \a response.
  */
 void DeleteClassifierResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteClassifierResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::DeleteClassifierResponsePrivate
+ * \brief The DeleteClassifierResponsePrivate class provides private implementation for DeleteClassifierResponse.
  * \internal
  *
- * \class DeleteClassifierResponsePrivate
- *
- * \brief Private implementation for DeleteClassifierResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClassifierResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteClassifierResponse instance.
+ * Constructs a DeleteClassifierResponsePrivate object with public implementation \a q.
  */
 DeleteClassifierResponsePrivate::DeleteClassifierResponsePrivate(
     DeleteClassifierResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteClassifierResponsePrivate::DeleteClassifierResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue DeleteClassifierResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue DeleteClassifier response element from \a xml.
  */
 void DeleteClassifierResponsePrivate::parseDeleteClassifierResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNotebookInstanceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteNotebookInstanceRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNotebookInstanceRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 DeleteNotebookInstanceRequestPrivate::DeleteNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, DeleteNotebookInstanceRequest * const q)

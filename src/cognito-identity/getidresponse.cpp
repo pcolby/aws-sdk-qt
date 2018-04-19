@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::GetIdResponse
- *
  * \brief The GetIdResponse class provides an interace for CognitoIdentity GetId responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new GetIdResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetIdResponse object for \a reply to \a request, with parent \a parent.
  */
 GetIdResponse::GetIdResponse(
         const GetIdRequest &request,
@@ -93,6 +88,9 @@ GetIdResponse::GetIdResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetIdRequest * GetIdResponse::request() const
 {
     Q_D(const GetIdResponse);
@@ -100,9 +98,8 @@ const GetIdRequest * GetIdResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentity GetId response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity GetId \a response.
  */
 void GetIdResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void GetIdResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::GetIdResponsePrivate
+ * \brief The GetIdResponsePrivate class provides private implementation for GetIdResponse.
  * \internal
  *
- * \class GetIdResponsePrivate
- *
- * \brief Private implementation for GetIdResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetIdResponse instance.
+ * Constructs a GetIdResponsePrivate object with public implementation \a q.
  */
 GetIdResponsePrivate::GetIdResponsePrivate(
     GetIdResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ GetIdResponsePrivate::GetIdResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentity GetIdResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity GetId response element from \a xml.
  */
 void GetIdResponsePrivate::parseGetIdResponse(QXmlStreamReader &xml)
 {

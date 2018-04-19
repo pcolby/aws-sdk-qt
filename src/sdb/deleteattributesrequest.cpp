@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAttributesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteAttributesRequestPrivate object for SimpleDB \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAttributesRequestPrivate object for SimpleDB \a action,
+ * with public implementation \a q.
  */
 DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
     const SimpleDBRequest::Action action, DeleteAttributesRequest * const q)

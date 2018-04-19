@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * ListTargetsForPolicyRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListTargetsForPolicyRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a ListTargetsForPolicyRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 ListTargetsForPolicyRequestPrivate::ListTargetsForPolicyRequestPrivate(
     const OrganizationsRequest::Action action, ListTargetsForPolicyRequest * const q)

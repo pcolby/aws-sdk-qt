@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StopStreamProcessorResponse
- *
  * \brief The StopStreamProcessorResponse class provides an interace for Rekognition StopStreamProcessor responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StopStreamProcessorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopStreamProcessorResponse object for \a reply to \a request, with parent \a parent.
  */
 StopStreamProcessorResponse::StopStreamProcessorResponse(
         const StopStreamProcessorRequest &request,
@@ -56,6 +51,9 @@ StopStreamProcessorResponse::StopStreamProcessorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopStreamProcessorRequest * StopStreamProcessorResponse::request() const
 {
     Q_D(const StopStreamProcessorResponse);
@@ -63,9 +61,8 @@ const StopStreamProcessorRequest * StopStreamProcessorResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition StopStreamProcessor response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition StopStreamProcessor \a response.
  */
 void StopStreamProcessorResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void StopStreamProcessorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::StopStreamProcessorResponsePrivate
+ * \brief The StopStreamProcessorResponsePrivate class provides private implementation for StopStreamProcessorResponse.
  * \internal
  *
- * \class StopStreamProcessorResponsePrivate
- *
- * \brief Private implementation for StopStreamProcessorResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopStreamProcessorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopStreamProcessorResponse instance.
+ * Constructs a StopStreamProcessorResponsePrivate object with public implementation \a q.
  */
 StopStreamProcessorResponsePrivate::StopStreamProcessorResponsePrivate(
     StopStreamProcessorResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ StopStreamProcessorResponsePrivate::StopStreamProcessorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition StopStreamProcessorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition StopStreamProcessor response element from \a xml.
  */
 void StopStreamProcessorResponsePrivate::parseStopStreamProcessorResponse(QXmlStreamReader &xml)
 {

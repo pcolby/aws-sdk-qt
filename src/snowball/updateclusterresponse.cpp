@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::UpdateClusterResponse
- *
  * \brief The UpdateClusterResponse class provides an interace for Snowball UpdateCluster responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new UpdateClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateClusterResponse::UpdateClusterResponse(
         const UpdateClusterRequest &request,
@@ -61,6 +56,9 @@ UpdateClusterResponse::UpdateClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateClusterRequest * UpdateClusterResponse::request() const
 {
     Q_D(const UpdateClusterResponse);
@@ -68,9 +66,8 @@ const UpdateClusterRequest * UpdateClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball UpdateCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball UpdateCluster \a response.
  */
 void UpdateClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void UpdateClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::UpdateClusterResponsePrivate
+ * \brief The UpdateClusterResponsePrivate class provides private implementation for UpdateClusterResponse.
  * \internal
  *
- * \class UpdateClusterResponsePrivate
- *
- * \brief Private implementation for UpdateClusterResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateClusterResponse instance.
+ * Constructs a UpdateClusterResponsePrivate object with public implementation \a q.
  */
 UpdateClusterResponsePrivate::UpdateClusterResponsePrivate(
     UpdateClusterResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ UpdateClusterResponsePrivate::UpdateClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball UpdateClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball UpdateCluster response element from \a xml.
  */
 void UpdateClusterResponsePrivate::parseUpdateClusterResponse(QXmlStreamReader &xml)
 {

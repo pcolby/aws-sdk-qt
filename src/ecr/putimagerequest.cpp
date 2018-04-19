@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * PutImageRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a PutImageRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a PutImageRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 PutImageRequestPrivate::PutImageRequestPrivate(
     const ECRRequest::Action action, PutImageRequest * const q)

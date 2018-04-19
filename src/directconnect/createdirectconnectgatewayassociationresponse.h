@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDirectConnectGatewayAssociationResponse : public Direct
 public:
     CreateDirectConnectGatewayAssociationResponse(const CreateDirectConnectGatewayAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDirectConnectGatewayAssociationRequest * request() const;
+    virtual const CreateDirectConnectGatewayAssociationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDirectConnectGatewayAssociationResponse)

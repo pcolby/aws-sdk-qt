@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::AllocateStaticIpResponse
- *
  * \brief The AllocateStaticIpResponse class provides an interace for Lightsail AllocateStaticIp responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new AllocateStaticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AllocateStaticIpResponse object for \a reply to \a request, with parent \a parent.
  */
 AllocateStaticIpResponse::AllocateStaticIpResponse(
         const AllocateStaticIpRequest &request,
@@ -71,6 +66,9 @@ AllocateStaticIpResponse::AllocateStaticIpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AllocateStaticIpRequest * AllocateStaticIpResponse::request() const
 {
     Q_D(const AllocateStaticIpResponse);
@@ -78,9 +76,8 @@ const AllocateStaticIpRequest * AllocateStaticIpResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail AllocateStaticIp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail AllocateStaticIp \a response.
  */
 void AllocateStaticIpResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void AllocateStaticIpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::AllocateStaticIpResponsePrivate
+ * \brief The AllocateStaticIpResponsePrivate class provides private implementation for AllocateStaticIpResponse.
  * \internal
  *
- * \class AllocateStaticIpResponsePrivate
- *
- * \brief Private implementation for AllocateStaticIpResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AllocateStaticIpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AllocateStaticIpResponse instance.
+ * Constructs a AllocateStaticIpResponsePrivate object with public implementation \a q.
  */
 AllocateStaticIpResponsePrivate::AllocateStaticIpResponsePrivate(
     AllocateStaticIpResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ AllocateStaticIpResponsePrivate::AllocateStaticIpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail AllocateStaticIpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail AllocateStaticIp response element from \a xml.
  */
 void AllocateStaticIpResponsePrivate::parseAllocateStaticIpResponse(QXmlStreamReader &xml)
 {

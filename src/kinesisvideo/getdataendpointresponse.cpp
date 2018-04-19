@@ -29,21 +29,16 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::GetDataEndpointResponse
- *
  * \brief The GetDataEndpointResponse class provides an interace for KinesisVideo GetDataEndpoint responses.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  *
  *
  * \sa KinesisVideoClient::getDataEndpoint
  */
 
 /*!
- * @brief  Constructs a new GetDataEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDataEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDataEndpointResponse::GetDataEndpointResponse(
         const GetDataEndpointRequest &request,
@@ -55,6 +50,9 @@ GetDataEndpointResponse::GetDataEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDataEndpointRequest * GetDataEndpointResponse::request() const
 {
     Q_D(const GetDataEndpointResponse);
@@ -62,9 +60,8 @@ const GetDataEndpointRequest * GetDataEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisVideo GetDataEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisVideo GetDataEndpoint \a response.
  */
 void GetDataEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetDataEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisVideo::GetDataEndpointResponsePrivate
+ * \brief The GetDataEndpointResponsePrivate class provides private implementation for GetDataEndpointResponse.
  * \internal
  *
- * \class GetDataEndpointResponsePrivate
- *
- * \brief Private implementation for GetDataEndpointResponse.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDataEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDataEndpointResponse instance.
+ * Constructs a GetDataEndpointResponsePrivate object with public implementation \a q.
  */
 GetDataEndpointResponsePrivate::GetDataEndpointResponsePrivate(
     GetDataEndpointResponse * const q) : KinesisVideoResponsePrivate(q)
@@ -95,9 +88,7 @@ GetDataEndpointResponsePrivate::GetDataEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisVideo GetDataEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisVideo GetDataEndpoint response element from \a xml.
  */
 void GetDataEndpointResponsePrivate::parseGetDataEndpointResponse(QXmlStreamReader &xml)
 {

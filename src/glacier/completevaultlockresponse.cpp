@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::CompleteVaultLockResponse
- *
  * \brief The CompleteVaultLockResponse class provides an interace for Glacier CompleteVaultLock responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new CompleteVaultLockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CompleteVaultLockResponse object for \a reply to \a request, with parent \a parent.
  */
 CompleteVaultLockResponse::CompleteVaultLockResponse(
         const CompleteVaultLockRequest &request,
@@ -93,6 +88,9 @@ CompleteVaultLockResponse::CompleteVaultLockResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CompleteVaultLockRequest * CompleteVaultLockResponse::request() const
 {
     Q_D(const CompleteVaultLockResponse);
@@ -100,9 +98,8 @@ const CompleteVaultLockRequest * CompleteVaultLockResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier CompleteVaultLock response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier CompleteVaultLock \a response.
  */
 void CompleteVaultLockResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void CompleteVaultLockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::CompleteVaultLockResponsePrivate
+ * \brief The CompleteVaultLockResponsePrivate class provides private implementation for CompleteVaultLockResponse.
  * \internal
  *
- * \class CompleteVaultLockResponsePrivate
- *
- * \brief Private implementation for CompleteVaultLockResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CompleteVaultLockResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CompleteVaultLockResponse instance.
+ * Constructs a CompleteVaultLockResponsePrivate object with public implementation \a q.
  */
 CompleteVaultLockResponsePrivate::CompleteVaultLockResponsePrivate(
     CompleteVaultLockResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ CompleteVaultLockResponsePrivate::CompleteVaultLockResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier CompleteVaultLockResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier CompleteVaultLock response element from \a xml.
  */
 void CompleteVaultLockResponsePrivate::parseCompleteVaultLockResponse(QXmlStreamReader &xml)
 {

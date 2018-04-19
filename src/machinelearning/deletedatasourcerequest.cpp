@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDataSourceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteDataSourceRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDataSourceRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 DeleteDataSourceRequestPrivate::DeleteDataSourceRequestPrivate(
     const MachineLearningRequest::Action action, DeleteDataSourceRequest * const q)

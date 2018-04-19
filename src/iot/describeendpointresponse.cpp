@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeEndpointResponse
- *
  * \brief The DescribeEndpointResponse class provides an interace for IoT DescribeEndpoint responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEndpointResponse::DescribeEndpointResponse(
         const DescribeEndpointRequest &request,
@@ -66,6 +61,9 @@ DescribeEndpointResponse::DescribeEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEndpointRequest * DescribeEndpointResponse::request() const
 {
     Q_D(const DescribeEndpointResponse);
@@ -73,9 +71,8 @@ const DescribeEndpointRequest * DescribeEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DescribeEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DescribeEndpoint \a response.
  */
 void DescribeEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DescribeEndpointResponsePrivate
+ * \brief The DescribeEndpointResponsePrivate class provides private implementation for DescribeEndpointResponse.
  * \internal
  *
- * \class DescribeEndpointResponsePrivate
- *
- * \brief Private implementation for DescribeEndpointResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEndpointResponse instance.
+ * Constructs a DescribeEndpointResponsePrivate object with public implementation \a q.
  */
 DescribeEndpointResponsePrivate::DescribeEndpointResponsePrivate(
     DescribeEndpointResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeEndpointResponsePrivate::DescribeEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DescribeEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DescribeEndpoint response element from \a xml.
  */
 void DescribeEndpointResponsePrivate::parseDescribeEndpointResponse(QXmlStreamReader &xml)
 {

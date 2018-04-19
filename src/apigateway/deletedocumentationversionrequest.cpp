@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentationVersionRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteDocumentationVersionRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDocumentationVersionRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteDocumentationVersionRequestPrivate::DeleteDocumentationVersionRequestPrivate(
     const APIGatewayRequest::Action action, DeleteDocumentationVersionRequest * const q)

@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DeleteHostedZoneResponse
- *
  * \brief The DeleteHostedZoneResponse class provides an interace for Route53 DeleteHostedZone responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::deleteHostedZone
  */
 
 /*!
- * @brief  Constructs a new DeleteHostedZoneResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteHostedZoneResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteHostedZoneResponse::DeleteHostedZoneResponse(
         const DeleteHostedZoneRequest &request,
@@ -55,6 +50,9 @@ DeleteHostedZoneResponse::DeleteHostedZoneResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteHostedZoneRequest * DeleteHostedZoneResponse::request() const
 {
     Q_D(const DeleteHostedZoneResponse);
@@ -62,9 +60,8 @@ const DeleteHostedZoneRequest * DeleteHostedZoneResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 DeleteHostedZone response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 DeleteHostedZone \a response.
  */
 void DeleteHostedZoneResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteHostedZoneResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::DeleteHostedZoneResponsePrivate
+ * \brief The DeleteHostedZoneResponsePrivate class provides private implementation for DeleteHostedZoneResponse.
  * \internal
  *
- * \class DeleteHostedZoneResponsePrivate
- *
- * \brief Private implementation for DeleteHostedZoneResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHostedZoneResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteHostedZoneResponse instance.
+ * Constructs a DeleteHostedZoneResponsePrivate object with public implementation \a q.
  */
 DeleteHostedZoneResponsePrivate::DeleteHostedZoneResponsePrivate(
     DeleteHostedZoneResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteHostedZoneResponsePrivate::DeleteHostedZoneResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 DeleteHostedZoneResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 DeleteHostedZone response element from \a xml.
  */
 void DeleteHostedZoneResponsePrivate::parseDeleteHostedZoneResponse(QXmlStreamReader &xml)
 {

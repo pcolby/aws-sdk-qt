@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetAccountLimitRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetAccountLimitRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a GetAccountLimitRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 GetAccountLimitRequestPrivate::GetAccountLimitRequestPrivate(
     const Route53Request::Action action, GetAccountLimitRequest * const q)

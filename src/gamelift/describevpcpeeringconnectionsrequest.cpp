@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcPeeringConnectionsRequest::respons
  */
 
 /*!
- *
- * Constructs a DescribeVpcPeeringConnectionsRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVpcPeeringConnectionsRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DescribeVpcPeeringConnectionsRequestPrivate::DescribeVpcPeeringConnectionsRequestPrivate(
     const GameLiftRequest::Action action, DescribeVpcPeeringConnectionsRequest * const q)

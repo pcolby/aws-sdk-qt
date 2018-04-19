@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedCacheNodesOfferingsRequest::r
  */
 
 /*!
- *
- * Constructs a DescribeReservedCacheNodesOfferingsRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a DescribeReservedCacheNodesOfferingsRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 DescribeReservedCacheNodesOfferingsRequestPrivate::DescribeReservedCacheNodesOfferingsRequestPrivate(
     const ElastiCacheRequest::Action action, DescribeReservedCacheNodesOfferingsRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListEnvironmentsResponse : public Cloud9Response {
 public:
     ListEnvironmentsResponse(const ListEnvironmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListEnvironmentsRequest * request() const;
+    virtual const ListEnvironmentsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListEnvironmentsResponse)

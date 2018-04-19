@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * RequestSpotInstancesRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a RequestSpotInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a RequestSpotInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 RequestSpotInstancesRequestPrivate::RequestSpotInstancesRequestPrivate(
     const EC2Request::Action action, RequestSpotInstancesRequest * const q)

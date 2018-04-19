@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::AddJobFlowStepsResponse
- *
  * \brief The AddJobFlowStepsResponse class provides an interace for EMR AddJobFlowSteps responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new AddJobFlowStepsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddJobFlowStepsResponse object for \a reply to \a request, with parent \a parent.
  */
 AddJobFlowStepsResponse::AddJobFlowStepsResponse(
         const AddJobFlowStepsRequest &request,
@@ -58,6 +53,9 @@ AddJobFlowStepsResponse::AddJobFlowStepsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddJobFlowStepsRequest * AddJobFlowStepsResponse::request() const
 {
     Q_D(const AddJobFlowStepsResponse);
@@ -65,9 +63,8 @@ const AddJobFlowStepsRequest * AddJobFlowStepsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR AddJobFlowSteps response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR AddJobFlowSteps \a response.
  */
 void AddJobFlowStepsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void AddJobFlowStepsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::AddJobFlowStepsResponsePrivate
+ * \brief The AddJobFlowStepsResponsePrivate class provides private implementation for AddJobFlowStepsResponse.
  * \internal
  *
- * \class AddJobFlowStepsResponsePrivate
- *
- * \brief Private implementation for AddJobFlowStepsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddJobFlowStepsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddJobFlowStepsResponse instance.
+ * Constructs a AddJobFlowStepsResponsePrivate object with public implementation \a q.
  */
 AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponsePrivate(
     AddJobFlowStepsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ AddJobFlowStepsResponsePrivate::AddJobFlowStepsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR AddJobFlowStepsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR AddJobFlowSteps response element from \a xml.
  */
 void AddJobFlowStepsResponsePrivate::parseAddJobFlowStepsResponse(QXmlStreamReader &xml)
 {

@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * DescribeNodeAssociationStatusRequest::respons
  */
 
 /*!
- *
- * Constructs a DescribeNodeAssociationStatusRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeNodeAssociationStatusRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusRequestPrivate(
     const OpsWorksCMRequest::Action action, DescribeNodeAssociationStatusRequest * const q)

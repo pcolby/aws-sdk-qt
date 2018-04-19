@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketPolicyResponse
- *
  * \brief The DeleteBucketPolicyResponse class provides an interace for S3 DeleteBucketPolicy responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketPolicy
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBucketPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBucketPolicyResponse::DeleteBucketPolicyResponse(
         const DeleteBucketPolicyRequest &request,
@@ -55,6 +50,9 @@ DeleteBucketPolicyResponse::DeleteBucketPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBucketPolicyRequest * DeleteBucketPolicyResponse::request() const
 {
     Q_D(const DeleteBucketPolicyResponse);
@@ -62,9 +60,8 @@ const DeleteBucketPolicyRequest * DeleteBucketPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 DeleteBucketPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 DeleteBucketPolicy \a response.
  */
 void DeleteBucketPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteBucketPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::DeleteBucketPolicyResponsePrivate
+ * \brief The DeleteBucketPolicyResponsePrivate class provides private implementation for DeleteBucketPolicyResponse.
  * \internal
  *
- * \class DeleteBucketPolicyResponsePrivate
- *
- * \brief Private implementation for DeleteBucketPolicyResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBucketPolicyResponse instance.
+ * Constructs a DeleteBucketPolicyResponsePrivate object with public implementation \a q.
  */
 DeleteBucketPolicyResponsePrivate::DeleteBucketPolicyResponsePrivate(
     DeleteBucketPolicyResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteBucketPolicyResponsePrivate::DeleteBucketPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 DeleteBucketPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 DeleteBucketPolicy response element from \a xml.
  */
 void DeleteBucketPolicyResponsePrivate::parseDeleteBucketPolicyResponse(QXmlStreamReader &xml)
 {

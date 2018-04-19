@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeAdjustmentTypesResponse
- *
  * \brief The DescribeAdjustmentTypesResponse class provides an interace for AutoScaling DescribeAdjustmentTypes responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeAdjustmentTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAdjustmentTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAdjustmentTypesResponse::DescribeAdjustmentTypesResponse(
         const DescribeAdjustmentTypesRequest &request,
@@ -60,6 +55,9 @@ DescribeAdjustmentTypesResponse::DescribeAdjustmentTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAdjustmentTypesRequest * DescribeAdjustmentTypesResponse::request() const
 {
     Q_D(const DescribeAdjustmentTypesResponse);
@@ -67,9 +65,8 @@ const DescribeAdjustmentTypesRequest * DescribeAdjustmentTypesResponse::request(
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeAdjustmentTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeAdjustmentTypes \a response.
  */
 void DescribeAdjustmentTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeAdjustmentTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeAdjustmentTypesResponsePrivate
+ * \brief The DescribeAdjustmentTypesResponsePrivate class provides private implementation for DescribeAdjustmentTypesResponse.
  * \internal
  *
- * \class DescribeAdjustmentTypesResponsePrivate
- *
- * \brief Private implementation for DescribeAdjustmentTypesResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAdjustmentTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAdjustmentTypesResponse instance.
+ * Constructs a DescribeAdjustmentTypesResponsePrivate object with public implementation \a q.
  */
 DescribeAdjustmentTypesResponsePrivate::DescribeAdjustmentTypesResponsePrivate(
     DescribeAdjustmentTypesResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeAdjustmentTypesResponsePrivate::DescribeAdjustmentTypesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeAdjustmentTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeAdjustmentTypes response element from \a xml.
  */
 void DescribeAdjustmentTypesResponsePrivate::parseDescribeAdjustmentTypesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DescribeExportTasksResponse
- *
  * \brief The DescribeExportTasksResponse class provides an interace for ApplicationDiscoveryService DescribeExportTasks responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeExportTasksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeExportTasksResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeExportTasksResponse::DescribeExportTasksResponse(
         const DescribeExportTasksRequest &request,
@@ -119,6 +114,9 @@ DescribeExportTasksResponse::DescribeExportTasksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeExportTasksRequest * DescribeExportTasksResponse::request() const
 {
     Q_D(const DescribeExportTasksResponse);
@@ -126,9 +124,8 @@ const DescribeExportTasksRequest * DescribeExportTasksResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService DescribeExportTasks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService DescribeExportTasks \a response.
  */
 void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeExportTasksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::DescribeExportTasksResponsePrivate
+ * \brief The DescribeExportTasksResponsePrivate class provides private implementation for DescribeExportTasksResponse.
  * \internal
  *
- * \class DescribeExportTasksResponsePrivate
- *
- * \brief Private implementation for DescribeExportTasksResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeExportTasksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeExportTasksResponse instance.
+ * Constructs a DescribeExportTasksResponsePrivate object with public implementation \a q.
  */
 DescribeExportTasksResponsePrivate::DescribeExportTasksResponsePrivate(
     DescribeExportTasksResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeExportTasksResponsePrivate::DescribeExportTasksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService DescribeExportTasksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService DescribeExportTasks response element from \a xml.
  */
 void DescribeExportTasksResponsePrivate::parseDescribeExportTasksResponse(QXmlStreamReader &xml)
 {

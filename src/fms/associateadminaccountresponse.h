@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateAdminAccountResponse : public FMSResponse {
 public:
     AssociateAdminAccountResponse(const AssociateAdminAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateAdminAccountRequest * request() const;
+    virtual const AssociateAdminAccountRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateAdminAccountResponse)

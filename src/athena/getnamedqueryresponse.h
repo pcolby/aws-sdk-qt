@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetNamedQueryResponse : public AthenaResponse {
 public:
     GetNamedQueryResponse(const GetNamedQueryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetNamedQueryRequest * request() const;
+    virtual const GetNamedQueryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetNamedQueryResponse)

@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::ListCollectionsResponse
- *
  * \brief The ListCollectionsResponse class provides an interace for Rekognition ListCollections responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new ListCollectionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCollectionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCollectionsResponse::ListCollectionsResponse(
         const ListCollectionsRequest &request,
@@ -56,6 +51,9 @@ ListCollectionsResponse::ListCollectionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCollectionsRequest * ListCollectionsResponse::request() const
 {
     Q_D(const ListCollectionsResponse);
@@ -63,9 +61,8 @@ const ListCollectionsRequest * ListCollectionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition ListCollections response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition ListCollections \a response.
  */
 void ListCollectionsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListCollectionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::ListCollectionsResponsePrivate
+ * \brief The ListCollectionsResponsePrivate class provides private implementation for ListCollectionsResponse.
  * \internal
  *
- * \class ListCollectionsResponsePrivate
- *
- * \brief Private implementation for ListCollectionsResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCollectionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCollectionsResponse instance.
+ * Constructs a ListCollectionsResponsePrivate object with public implementation \a q.
  */
 ListCollectionsResponsePrivate::ListCollectionsResponsePrivate(
     ListCollectionsResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ ListCollectionsResponsePrivate::ListCollectionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition ListCollectionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition ListCollections response element from \a xml.
  */
 void ListCollectionsResponsePrivate::parseListCollectionsResponse(QXmlStreamReader &xml)
 {

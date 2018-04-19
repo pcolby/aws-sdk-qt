@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInstancePatchStatesForPatchGroupReque
  */
 
 /*!
- *
- * Constructs a DescribeInstancePatchStatesForPatchGroupRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInstancePatchStatesForPatchGroupRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeInstancePatchStatesForPatchGroupRequestPrivate::DescribeInstancePatchStatesForPatchGroupRequestPrivate(
     const SSMRequest::Action action, DescribeInstancePatchStatesForPatchGroupRequest * const q)

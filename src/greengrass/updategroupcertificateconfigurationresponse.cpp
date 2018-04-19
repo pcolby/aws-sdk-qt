@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateGroupCertificateConfigurationResponse
- *
  * \brief The UpdateGroupCertificateConfigurationResponse class provides an interace for Greengrass UpdateGroupCertificateConfiguration responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateGroupCertificateConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateGroupCertificateConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateGroupCertificateConfigurationResponse::UpdateGroupCertificateConfigurationResponse(
         const UpdateGroupCertificateConfigurationRequest &request,
@@ -58,6 +53,9 @@ UpdateGroupCertificateConfigurationResponse::UpdateGroupCertificateConfiguration
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateGroupCertificateConfigurationRequest * UpdateGroupCertificateConfigurationResponse::request() const
 {
     Q_D(const UpdateGroupCertificateConfigurationResponse);
@@ -65,9 +63,8 @@ const UpdateGroupCertificateConfigurationRequest * UpdateGroupCertificateConfigu
 }
 
 /*!
- * @brief  Parse a Greengrass UpdateGroupCertificateConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass UpdateGroupCertificateConfiguration \a response.
  */
 void UpdateGroupCertificateConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateGroupCertificateConfigurationResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::Greengrass::UpdateGroupCertificateConfigurationResponsePrivate
+ * \brief The UpdateGroupCertificateConfigurationResponsePrivate class provides private implementation for UpdateGroupCertificateConfigurationResponse.
  * \internal
  *
- * \class UpdateGroupCertificateConfigurationResponsePrivate
- *
- * \brief Private implementation for UpdateGroupCertificateConfigurationResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGroupCertificateConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateGroupCertificateConfigurationResponse instance.
+ * Constructs a UpdateGroupCertificateConfigurationResponsePrivate object with public implementation \a q.
  */
 UpdateGroupCertificateConfigurationResponsePrivate::UpdateGroupCertificateConfigurationResponsePrivate(
     UpdateGroupCertificateConfigurationResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateGroupCertificateConfigurationResponsePrivate::UpdateGroupCertificateConfig
 }
 
 /*!
- * @brief  Parse an Greengrass UpdateGroupCertificateConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass UpdateGroupCertificateConfiguration response element from \a xml.
  */
 void UpdateGroupCertificateConfigurationResponsePrivate::parseUpdateGroupCertificateConfigurationResponse(QXmlStreamReader &xml)
 {

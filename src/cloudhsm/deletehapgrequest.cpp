@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * DeleteHapgRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteHapgRequestPrivate object for CloudHSM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteHapgRequestPrivate object for CloudHSM \a action,
+ * with public implementation \a q.
  */
 DeleteHapgRequestPrivate::DeleteHapgRequestPrivate(
     const CloudHSMRequest::Action action, DeleteHapgRequest * const q)

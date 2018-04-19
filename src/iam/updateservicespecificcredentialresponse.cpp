@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateServiceSpecificCredentialResponse
- *
  * \brief The UpdateServiceSpecificCredentialResponse class provides an interace for IAM UpdateServiceSpecificCredential responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateServiceSpecificCredentialResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateServiceSpecificCredentialResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateServiceSpecificCredentialResponse::UpdateServiceSpecificCredentialResponse(
         const UpdateServiceSpecificCredentialRequest &request,
@@ -120,6 +115,9 @@ UpdateServiceSpecificCredentialResponse::UpdateServiceSpecificCredentialResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateServiceSpecificCredentialRequest * UpdateServiceSpecificCredentialResponse::request() const
 {
     Q_D(const UpdateServiceSpecificCredentialResponse);
@@ -127,9 +125,8 @@ const UpdateServiceSpecificCredentialRequest * UpdateServiceSpecificCredentialRe
 }
 
 /*!
- * @brief  Parse a IAM UpdateServiceSpecificCredential response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateServiceSpecificCredential \a response.
  */
 void UpdateServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateServiceSpecificCredentialResponsePrivate
+ * \brief The UpdateServiceSpecificCredentialResponsePrivate class provides private implementation for UpdateServiceSpecificCredentialResponse.
  * \internal
  *
- * \class UpdateServiceSpecificCredentialResponsePrivate
- *
- * \brief Private implementation for UpdateServiceSpecificCredentialResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateServiceSpecificCredentialResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateServiceSpecificCredentialResponse instance.
+ * Constructs a UpdateServiceSpecificCredentialResponsePrivate object with public implementation \a q.
  */
 UpdateServiceSpecificCredentialResponsePrivate::UpdateServiceSpecificCredentialResponsePrivate(
     UpdateServiceSpecificCredentialResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateServiceSpecificCredentialResponsePrivate::UpdateServiceSpecificCredentialR
 }
 
 /*!
- * @brief  Parse an IAM UpdateServiceSpecificCredentialResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateServiceSpecificCredential response element from \a xml.
  */
 void UpdateServiceSpecificCredentialResponsePrivate::parseUpdateServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {

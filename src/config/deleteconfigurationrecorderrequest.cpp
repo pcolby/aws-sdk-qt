@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationRecorderRequest::response(
  */
 
 /*!
- *
- * Constructs a DeleteConfigurationRecorderRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteConfigurationRecorderRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DeleteConfigurationRecorderRequestPrivate::DeleteConfigurationRecorderRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteConfigurationRecorderRequest * const q)

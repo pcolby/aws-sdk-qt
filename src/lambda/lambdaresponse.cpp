@@ -28,16 +28,13 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::LambdaResponse
- *
  * \brief The LambdaResponse class provides an interface for Lambda responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @brief  Constructs a new LambdaResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a LambdaResponse object with parent \a parent.
  */
 LambdaResponse::LambdaResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new LambdaResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ LambdaResponse::LambdaResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LambdaResponse object.
- *
+ * \internal
+ * Constructs a LambdaResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LambdaResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 LambdaResponse::LambdaResponse(LambdaResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ LambdaResponse::LambdaResponse(LambdaResponsePrivate * const d, QObject * const 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void LambdaResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void LambdaResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Lambda::LambdaResponsePrivate
+ * \brief The LambdaResponsePrivate class provides private implementation for LambdaResponse.
+ * \internal
  *
- * @class  LambdaResponsePrivate
- *
- * @brief  Private implementation for LambdaResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LambdaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public LambdaResponse instance.
+ * Constructs a LambdaResponsePrivate object with public implementation \a q.
  */
 LambdaResponsePrivate::LambdaResponsePrivate(
     LambdaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

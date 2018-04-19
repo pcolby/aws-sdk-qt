@@ -34,10 +34,10 @@ class QTAWS_EXPORT TerminateProvisionedProductResponse : public ServiceCatalogRe
 public:
     TerminateProvisionedProductResponse(const TerminateProvisionedProductRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TerminateProvisionedProductRequest * request() const;
+    virtual const TerminateProvisionedProductRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TerminateProvisionedProductResponse)

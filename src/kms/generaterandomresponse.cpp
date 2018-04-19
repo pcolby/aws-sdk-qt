@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GenerateRandomResponse
- *
  * \brief The GenerateRandomResponse class provides an interace for KMS GenerateRandom responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GenerateRandomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GenerateRandomResponse object for \a reply to \a request, with parent \a parent.
  */
 GenerateRandomResponse::GenerateRandomResponse(
         const GenerateRandomRequest &request,
@@ -154,6 +149,9 @@ GenerateRandomResponse::GenerateRandomResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GenerateRandomRequest * GenerateRandomResponse::request() const
 {
     Q_D(const GenerateRandomResponse);
@@ -161,9 +159,8 @@ const GenerateRandomRequest * GenerateRandomResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS GenerateRandom response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS GenerateRandom \a response.
  */
 void GenerateRandomResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void GenerateRandomResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::GenerateRandomResponsePrivate
+ * \brief The GenerateRandomResponsePrivate class provides private implementation for GenerateRandomResponse.
  * \internal
  *
- * \class GenerateRandomResponsePrivate
- *
- * \brief Private implementation for GenerateRandomResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GenerateRandomResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GenerateRandomResponse instance.
+ * Constructs a GenerateRandomResponsePrivate object with public implementation \a q.
  */
 GenerateRandomResponsePrivate::GenerateRandomResponsePrivate(
     GenerateRandomResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ GenerateRandomResponsePrivate::GenerateRandomResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS GenerateRandomResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS GenerateRandom response element from \a xml.
  */
 void GenerateRandomResponsePrivate::parseGenerateRandomResponse(QXmlStreamReader &xml)
 {

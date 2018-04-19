@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::DescribeStackSetResponse
- *
  * \brief The DescribeStackSetResponse class provides an interace for CloudFormation DescribeStackSet responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new DescribeStackSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStackSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStackSetResponse::DescribeStackSetResponse(
         const DescribeStackSetRequest &request,
@@ -77,6 +72,9 @@ DescribeStackSetResponse::DescribeStackSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStackSetRequest * DescribeStackSetResponse::request() const
 {
     Q_D(const DescribeStackSetResponse);
@@ -84,9 +82,8 @@ const DescribeStackSetRequest * DescribeStackSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation DescribeStackSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation DescribeStackSet \a response.
  */
 void DescribeStackSetResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribeStackSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::DescribeStackSetResponsePrivate
+ * \brief The DescribeStackSetResponsePrivate class provides private implementation for DescribeStackSetResponse.
  * \internal
  *
- * \class DescribeStackSetResponsePrivate
- *
- * \brief Private implementation for DescribeStackSetResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStackSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStackSetResponse instance.
+ * Constructs a DescribeStackSetResponsePrivate object with public implementation \a q.
  */
 DescribeStackSetResponsePrivate::DescribeStackSetResponsePrivate(
     DescribeStackSetResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribeStackSetResponsePrivate::DescribeStackSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation DescribeStackSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation DescribeStackSet response element from \a xml.
  */
 void DescribeStackSetResponsePrivate::parseDescribeStackSetResponse(QXmlStreamReader &xml)
 {

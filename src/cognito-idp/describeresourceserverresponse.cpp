@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DescribeResourceServerResponse
- *
  * \brief The DescribeResourceServerResponse class provides an interace for CognitoIdentityProvider DescribeResourceServer responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DescribeResourceServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeResourceServerResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeResourceServerResponse::DescribeResourceServerResponse(
         const DescribeResourceServerRequest &request,
@@ -65,6 +60,9 @@ DescribeResourceServerResponse::DescribeResourceServerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeResourceServerRequest * DescribeResourceServerResponse::request() const
 {
     Q_D(const DescribeResourceServerResponse);
@@ -72,9 +70,8 @@ const DescribeResourceServerRequest * DescribeResourceServerResponse::request() 
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider DescribeResourceServer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider DescribeResourceServer \a response.
  */
 void DescribeResourceServerResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void DescribeResourceServerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::DescribeResourceServerResponsePrivate
+ * \brief The DescribeResourceServerResponsePrivate class provides private implementation for DescribeResourceServerResponse.
  * \internal
  *
- * \class DescribeResourceServerResponsePrivate
- *
- * \brief Private implementation for DescribeResourceServerResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResourceServerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeResourceServerResponse instance.
+ * Constructs a DescribeResourceServerResponsePrivate object with public implementation \a q.
  */
 DescribeResourceServerResponsePrivate::DescribeResourceServerResponsePrivate(
     DescribeResourceServerResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ DescribeResourceServerResponsePrivate::DescribeResourceServerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider DescribeResourceServerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider DescribeResourceServer response element from \a xml.
  */
 void DescribeResourceServerResponsePrivate::parseDescribeResourceServerResponse(QXmlStreamReader &xml)
 {

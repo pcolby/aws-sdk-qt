@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeOptionGroupOptionsResponse : public RDSResponse {
 public:
     DescribeOptionGroupOptionsResponse(const DescribeOptionGroupOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeOptionGroupOptionsRequest * request() const;
+    virtual const DescribeOptionGroupOptionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeOptionGroupOptionsResponse)

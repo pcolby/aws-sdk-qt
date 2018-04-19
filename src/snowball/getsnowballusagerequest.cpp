@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * GetSnowballUsageRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetSnowballUsageRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a GetSnowballUsageRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 GetSnowballUsageRequestPrivate::GetSnowballUsageRequestPrivate(
     const SnowballRequest::Action action, GetSnowballUsageRequest * const q)

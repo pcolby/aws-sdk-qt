@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::DescribeVaultResponse
- *
  * \brief The DescribeVaultResponse class provides an interace for Glacier DescribeVault responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new DescribeVaultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVaultResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVaultResponse::DescribeVaultResponse(
         const DescribeVaultRequest &request,
@@ -93,6 +88,9 @@ DescribeVaultResponse::DescribeVaultResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVaultRequest * DescribeVaultResponse::request() const
 {
     Q_D(const DescribeVaultResponse);
@@ -100,9 +98,8 @@ const DescribeVaultRequest * DescribeVaultResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier DescribeVault response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier DescribeVault \a response.
  */
 void DescribeVaultResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DescribeVaultResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::DescribeVaultResponsePrivate
+ * \brief The DescribeVaultResponsePrivate class provides private implementation for DescribeVaultResponse.
  * \internal
  *
- * \class DescribeVaultResponsePrivate
- *
- * \brief Private implementation for DescribeVaultResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVaultResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVaultResponse instance.
+ * Constructs a DescribeVaultResponsePrivate object with public implementation \a q.
  */
 DescribeVaultResponsePrivate::DescribeVaultResponsePrivate(
     DescribeVaultResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ DescribeVaultResponsePrivate::DescribeVaultResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier DescribeVaultResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier DescribeVault response element from \a xml.
  */
 void DescribeVaultResponsePrivate::parseDescribeVaultResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetHITResponse
- *
  * \brief The GetHITResponse class provides an interace for MTurk GetHIT responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getHIT
  */
 
 /*!
- * @brief  Constructs a new GetHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetHITResponse object for \a reply to \a request, with parent \a parent.
  */
 GetHITResponse::GetHITResponse(
         const GetHITRequest &request,
@@ -55,6 +50,9 @@ GetHITResponse::GetHITResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetHITRequest * GetHITResponse::request() const
 {
     Q_D(const GetHITResponse);
@@ -62,9 +60,8 @@ const GetHITRequest * GetHITResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk GetHIT response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk GetHIT \a response.
  */
 void GetHITResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetHITResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::GetHITResponsePrivate
+ * \brief The GetHITResponsePrivate class provides private implementation for GetHITResponse.
  * \internal
  *
- * \class GetHITResponsePrivate
- *
- * \brief Private implementation for GetHITResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHITResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetHITResponse instance.
+ * Constructs a GetHITResponsePrivate object with public implementation \a q.
  */
 GetHITResponsePrivate::GetHITResponsePrivate(
     GetHITResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ GetHITResponsePrivate::GetHITResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk GetHITResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk GetHIT response element from \a xml.
  */
 void GetHITResponsePrivate::parseGetHITResponse(QXmlStreamReader &xml)
 {

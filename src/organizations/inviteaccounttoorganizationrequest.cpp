@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * InviteAccountToOrganizationRequest::response(
  */
 
 /*!
- *
- * Constructs a InviteAccountToOrganizationRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a InviteAccountToOrganizationRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 InviteAccountToOrganizationRequestPrivate::InviteAccountToOrganizationRequestPrivate(
     const OrganizationsRequest::Action action, InviteAccountToOrganizationRequest * const q)

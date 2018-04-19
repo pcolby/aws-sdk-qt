@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDomainEntryResponse : public LightsailResponse {
 public:
     DeleteDomainEntryResponse(const DeleteDomainEntryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDomainEntryRequest * request() const;
+    virtual const DeleteDomainEntryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDomainEntryResponse)

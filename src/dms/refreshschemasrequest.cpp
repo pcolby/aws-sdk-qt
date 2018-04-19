@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * RefreshSchemasRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a RefreshSchemasRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a RefreshSchemasRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 RefreshSchemasRequestPrivate::RefreshSchemasRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, RefreshSchemasRequest * const q)

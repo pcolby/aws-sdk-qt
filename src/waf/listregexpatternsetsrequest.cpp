@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListRegexPatternSetsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListRegexPatternSetsRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a ListRegexPatternSetsRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 ListRegexPatternSetsRequestPrivate::ListRegexPatternSetsRequestPrivate(
     const WAFRequest::Action action, ListRegexPatternSetsRequest * const q)

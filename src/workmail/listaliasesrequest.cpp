@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * ListAliasesRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListAliasesRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a ListAliasesRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 ListAliasesRequestPrivate::ListAliasesRequestPrivate(
     const WorkMailRequest::Action action, ListAliasesRequest * const q)

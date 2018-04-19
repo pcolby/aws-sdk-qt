@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateSnapshotFromVolumeRecoveryPointResponse
- *
  * \brief The CreateSnapshotFromVolumeRecoveryPointResponse class provides an interace for StorageGateway CreateSnapshotFromVolumeRecoveryPoint responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSnapshotFromVolumeRecoveryPointResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSnapshotFromVolumeRecoveryPointResponse::CreateSnapshotFromVolumeRecoveryPointResponse(
         const CreateSnapshotFromVolumeRecoveryPointRequest &request,
@@ -124,6 +119,9 @@ CreateSnapshotFromVolumeRecoveryPointResponse::CreateSnapshotFromVolumeRecoveryP
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSnapshotFromVolumeRecoveryPointRequest * CreateSnapshotFromVolumeRecoveryPointResponse::request() const
 {
     Q_D(const CreateSnapshotFromVolumeRecoveryPointResponse);
@@ -131,9 +129,8 @@ const CreateSnapshotFromVolumeRecoveryPointRequest * CreateSnapshotFromVolumeRec
 }
 
 /*!
- * @brief  Parse a StorageGateway CreateSnapshotFromVolumeRecoveryPoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway CreateSnapshotFromVolumeRecoveryPoint \a response.
  */
 void CreateSnapshotFromVolumeRecoveryPointResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void CreateSnapshotFromVolumeRecoveryPointResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::StorageGateway::CreateSnapshotFromVolumeRecoveryPointResponsePrivate
+ * \brief The CreateSnapshotFromVolumeRecoveryPointResponsePrivate class provides private implementation for CreateSnapshotFromVolumeRecoveryPointResponse.
  * \internal
  *
- * \class CreateSnapshotFromVolumeRecoveryPointResponsePrivate
- *
- * \brief Private implementation for CreateSnapshotFromVolumeRecoveryPointResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSnapshotFromVolumeRecoveryPointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSnapshotFromVolumeRecoveryPointResponse instance.
+ * Constructs a CreateSnapshotFromVolumeRecoveryPointResponsePrivate object with public implementation \a q.
  */
 CreateSnapshotFromVolumeRecoveryPointResponsePrivate::CreateSnapshotFromVolumeRecoveryPointResponsePrivate(
     CreateSnapshotFromVolumeRecoveryPointResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ CreateSnapshotFromVolumeRecoveryPointResponsePrivate::CreateSnapshotFromVolumeRe
 }
 
 /*!
- * @brief  Parse an StorageGateway CreateSnapshotFromVolumeRecoveryPointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway CreateSnapshotFromVolumeRecoveryPoint response element from \a xml.
  */
 void CreateSnapshotFromVolumeRecoveryPointResponsePrivate::parseCreateSnapshotFromVolumeRecoveryPointResponse(QXmlStreamReader &xml)
 {

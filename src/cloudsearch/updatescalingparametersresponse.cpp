@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::UpdateScalingParametersResponse
- *
  * \brief The UpdateScalingParametersResponse class provides an interace for CloudSearch UpdateScalingParameters responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new UpdateScalingParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateScalingParametersResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateScalingParametersResponse::UpdateScalingParametersResponse(
         const UpdateScalingParametersRequest &request,
@@ -66,6 +61,9 @@ UpdateScalingParametersResponse::UpdateScalingParametersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateScalingParametersRequest * UpdateScalingParametersResponse::request() const
 {
     Q_D(const UpdateScalingParametersResponse);
@@ -73,9 +71,8 @@ const UpdateScalingParametersRequest * UpdateScalingParametersResponse::request(
 }
 
 /*!
- * @brief  Parse a CloudSearch UpdateScalingParameters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch UpdateScalingParameters \a response.
  */
 void UpdateScalingParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateScalingParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::UpdateScalingParametersResponsePrivate
+ * \brief The UpdateScalingParametersResponsePrivate class provides private implementation for UpdateScalingParametersResponse.
  * \internal
  *
- * \class UpdateScalingParametersResponsePrivate
- *
- * \brief Private implementation for UpdateScalingParametersResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateScalingParametersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateScalingParametersResponse instance.
+ * Constructs a UpdateScalingParametersResponsePrivate object with public implementation \a q.
  */
 UpdateScalingParametersResponsePrivate::UpdateScalingParametersResponsePrivate(
     UpdateScalingParametersResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateScalingParametersResponsePrivate::UpdateScalingParametersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch UpdateScalingParametersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch UpdateScalingParameters response element from \a xml.
  */
 void UpdateScalingParametersResponsePrivate::parseUpdateScalingParametersResponse(QXmlStreamReader &xml)
 {

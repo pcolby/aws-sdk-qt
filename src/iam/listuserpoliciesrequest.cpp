@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ListUserPoliciesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListUserPoliciesRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ListUserPoliciesRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ListUserPoliciesRequestPrivate::ListUserPoliciesRequestPrivate(
     const IAMRequest::Action action, ListUserPoliciesRequest * const q)

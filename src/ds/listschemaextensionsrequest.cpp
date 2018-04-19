@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ListSchemaExtensionsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListSchemaExtensionsRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a ListSchemaExtensionsRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 ListSchemaExtensionsRequestPrivate::ListSchemaExtensionsRequestPrivate(
     const DirectoryServiceRequest::Action action, ListSchemaExtensionsRequest * const q)

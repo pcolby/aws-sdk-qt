@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::PutNotificationConfigurationResponse
- *
  * \brief The PutNotificationConfigurationResponse class provides an interace for AutoScaling PutNotificationConfiguration responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new PutNotificationConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutNotificationConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 PutNotificationConfigurationResponse::PutNotificationConfigurationResponse(
         const PutNotificationConfigurationRequest &request,
@@ -60,6 +55,9 @@ PutNotificationConfigurationResponse::PutNotificationConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutNotificationConfigurationRequest * PutNotificationConfigurationResponse::request() const
 {
     Q_D(const PutNotificationConfigurationResponse);
@@ -67,9 +65,8 @@ const PutNotificationConfigurationRequest * PutNotificationConfigurationResponse
 }
 
 /*!
- * @brief  Parse a AutoScaling PutNotificationConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling PutNotificationConfiguration \a response.
  */
 void PutNotificationConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void PutNotificationConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::PutNotificationConfigurationResponsePrivate
+ * \brief The PutNotificationConfigurationResponsePrivate class provides private implementation for PutNotificationConfigurationResponse.
  * \internal
  *
- * \class PutNotificationConfigurationResponsePrivate
- *
- * \brief Private implementation for PutNotificationConfigurationResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutNotificationConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutNotificationConfigurationResponse instance.
+ * Constructs a PutNotificationConfigurationResponsePrivate object with public implementation \a q.
  */
 PutNotificationConfigurationResponsePrivate::PutNotificationConfigurationResponsePrivate(
     PutNotificationConfigurationResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ PutNotificationConfigurationResponsePrivate::PutNotificationConfigurationRespons
 }
 
 /*!
- * @brief  Parse an AutoScaling PutNotificationConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling PutNotificationConfiguration response element from \a xml.
  */
 void PutNotificationConfigurationResponsePrivate::parsePutNotificationConfigurationResponse(QXmlStreamReader &xml)
 {

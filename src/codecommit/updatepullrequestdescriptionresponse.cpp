@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdatePullRequestDescriptionResponse
- *
  * \brief The UpdatePullRequestDescriptionResponse class provides an interace for CodeCommit UpdatePullRequestDescription responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdatePullRequestDescriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePullRequestDescriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePullRequestDescriptionResponse::UpdatePullRequestDescriptionResponse(
         const UpdatePullRequestDescriptionRequest &request,
@@ -245,6 +240,9 @@ UpdatePullRequestDescriptionResponse::UpdatePullRequestDescriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePullRequestDescriptionRequest * UpdatePullRequestDescriptionResponse::request() const
 {
     Q_D(const UpdatePullRequestDescriptionResponse);
@@ -252,9 +250,8 @@ const UpdatePullRequestDescriptionRequest * UpdatePullRequestDescriptionResponse
 }
 
 /*!
- * @brief  Parse a CodeCommit UpdatePullRequestDescription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit UpdatePullRequestDescription \a response.
  */
 void UpdatePullRequestDescriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void UpdatePullRequestDescriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::UpdatePullRequestDescriptionResponsePrivate
+ * \brief The UpdatePullRequestDescriptionResponsePrivate class provides private implementation for UpdatePullRequestDescriptionResponse.
  * \internal
  *
- * \class UpdatePullRequestDescriptionResponsePrivate
- *
- * \brief Private implementation for UpdatePullRequestDescriptionResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePullRequestDescriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePullRequestDescriptionResponse instance.
+ * Constructs a UpdatePullRequestDescriptionResponsePrivate object with public implementation \a q.
  */
 UpdatePullRequestDescriptionResponsePrivate::UpdatePullRequestDescriptionResponsePrivate(
     UpdatePullRequestDescriptionResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ UpdatePullRequestDescriptionResponsePrivate::UpdatePullRequestDescriptionRespons
 }
 
 /*!
- * @brief  Parse an CodeCommit UpdatePullRequestDescriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit UpdatePullRequestDescription response element from \a xml.
  */
 void UpdatePullRequestDescriptionResponsePrivate::parseUpdatePullRequestDescriptionResponse(QXmlStreamReader &xml)
 {

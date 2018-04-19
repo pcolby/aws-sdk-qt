@@ -125,9 +125,8 @@ QtAws::Core::AwsAbstractResponse * UntagRequest::response(QNetworkReply * const 
  */
 
 /*!
- *
- * Constructs a UntagRequestPrivate object for ResourceGroups \a action with,
- * public implementation \a q.
+ * Constructs a UntagRequestPrivate object for ResourceGroups \a action,
+ * with public implementation \a q.
  */
 UntagRequestPrivate::UntagRequestPrivate(
     const ResourceGroupsRequest::Action action, UntagRequest * const q)

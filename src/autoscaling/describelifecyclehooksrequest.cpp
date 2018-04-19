@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DescribeLifecycleHooksRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeLifecycleHooksRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DescribeLifecycleHooksRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DescribeLifecycleHooksRequestPrivate::DescribeLifecycleHooksRequestPrivate(
     const AutoScalingRequest::Action action, DescribeLifecycleHooksRequest * const q)

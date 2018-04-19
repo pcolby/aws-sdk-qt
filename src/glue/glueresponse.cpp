@@ -28,16 +28,13 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GlueResponse
- *
  * \brief The GlueResponse class provides an interface for Glue responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @brief  Constructs a new GlueResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a GlueResponse object with parent \a parent.
  */
 GlueResponse::GlueResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new GlueResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ GlueResponse::GlueResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GlueResponse object.
- *
+ * \internal
+ * Constructs a GlueResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GlueResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 GlueResponse::GlueResponse(GlueResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ GlueResponse::GlueResponse(GlueResponsePrivate * const d, QObject * const parent
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void GlueResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void GlueResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Glue::GlueResponsePrivate
+ * \brief The GlueResponsePrivate class provides private implementation for GlueResponse.
+ * \internal
  *
- * @class  GlueResponsePrivate
- *
- * @brief  Private implementation for GlueResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GlueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GlueResponse instance.
+ * Constructs a GlueResponsePrivate object with public implementation \a q.
  */
 GlueResponsePrivate::GlueResponsePrivate(
     GlueResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

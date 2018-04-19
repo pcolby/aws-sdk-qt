@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateProductFromPortfolioResponse : public ServiceCata
 public:
     DisassociateProductFromPortfolioResponse(const DisassociateProductFromPortfolioRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateProductFromPortfolioRequest * request() const;
+    virtual const DisassociateProductFromPortfolioRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateProductFromPortfolioResponse)

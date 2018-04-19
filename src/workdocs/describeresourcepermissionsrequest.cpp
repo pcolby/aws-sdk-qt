@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeResourcePermissionsRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeResourcePermissionsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeResourcePermissionsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DescribeResourcePermissionsRequestPrivate::DescribeResourcePermissionsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeResourcePermissionsRequest * const q)

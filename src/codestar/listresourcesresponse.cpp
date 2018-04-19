@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::ListResourcesResponse
- *
  * \brief The ListResourcesResponse class provides an interace for CodeStar ListResources responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new ListResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListResourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListResourcesResponse::ListResourcesResponse(
         const ListResourcesRequest &request,
@@ -143,6 +138,9 @@ ListResourcesResponse::ListResourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListResourcesRequest * ListResourcesResponse::request() const
 {
     Q_D(const ListResourcesResponse);
@@ -150,9 +148,8 @@ const ListResourcesRequest * ListResourcesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar ListResources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar ListResources \a response.
  */
 void ListResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void ListResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::ListResourcesResponsePrivate
+ * \brief The ListResourcesResponsePrivate class provides private implementation for ListResourcesResponse.
  * \internal
  *
- * \class ListResourcesResponsePrivate
- *
- * \brief Private implementation for ListResourcesResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListResourcesResponse instance.
+ * Constructs a ListResourcesResponsePrivate object with public implementation \a q.
  */
 ListResourcesResponsePrivate::ListResourcesResponsePrivate(
     ListResourcesResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ ListResourcesResponsePrivate::ListResourcesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar ListResourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar ListResources response element from \a xml.
  */
 void ListResourcesResponsePrivate::parseListResourcesResponse(QXmlStreamReader &xml)
 {

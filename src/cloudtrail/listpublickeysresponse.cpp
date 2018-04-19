@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::ListPublicKeysResponse
- *
  * \brief The ListPublicKeysResponse class provides an interace for CloudTrail ListPublicKeys responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new ListPublicKeysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPublicKeysResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPublicKeysResponse::ListPublicKeysResponse(
         const ListPublicKeysRequest &request,
@@ -78,6 +73,9 @@ ListPublicKeysResponse::ListPublicKeysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPublicKeysRequest * ListPublicKeysResponse::request() const
 {
     Q_D(const ListPublicKeysResponse);
@@ -85,9 +83,8 @@ const ListPublicKeysRequest * ListPublicKeysResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail ListPublicKeys response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail ListPublicKeys \a response.
  */
 void ListPublicKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void ListPublicKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::ListPublicKeysResponsePrivate
+ * \brief The ListPublicKeysResponsePrivate class provides private implementation for ListPublicKeysResponse.
  * \internal
  *
- * \class ListPublicKeysResponsePrivate
- *
- * \brief Private implementation for ListPublicKeysResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPublicKeysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPublicKeysResponse instance.
+ * Constructs a ListPublicKeysResponsePrivate object with public implementation \a q.
  */
 ListPublicKeysResponsePrivate::ListPublicKeysResponsePrivate(
     ListPublicKeysResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ ListPublicKeysResponsePrivate::ListPublicKeysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail ListPublicKeysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail ListPublicKeys response element from \a xml.
  */
 void ListPublicKeysResponsePrivate::parseListPublicKeysResponse(QXmlStreamReader &xml)
 {

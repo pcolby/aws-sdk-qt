@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeActivationsResponse
- *
  * \brief The DescribeActivationsResponse class provides an interace for SSM DescribeActivations responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeActivationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeActivationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeActivationsResponse::DescribeActivationsResponse(
         const DescribeActivationsRequest &request,
@@ -79,6 +74,9 @@ DescribeActivationsResponse::DescribeActivationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeActivationsRequest * DescribeActivationsResponse::request() const
 {
     Q_D(const DescribeActivationsResponse);
@@ -86,9 +84,8 @@ const DescribeActivationsRequest * DescribeActivationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM DescribeActivations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeActivations \a response.
  */
 void DescribeActivationsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeActivationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeActivationsResponsePrivate
+ * \brief The DescribeActivationsResponsePrivate class provides private implementation for DescribeActivationsResponse.
  * \internal
  *
- * \class DescribeActivationsResponsePrivate
- *
- * \brief Private implementation for DescribeActivationsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeActivationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeActivationsResponse instance.
+ * Constructs a DescribeActivationsResponsePrivate object with public implementation \a q.
  */
 DescribeActivationsResponsePrivate::DescribeActivationsResponsePrivate(
     DescribeActivationsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeActivationsResponsePrivate::DescribeActivationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DescribeActivationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeActivations response element from \a xml.
  */
 void DescribeActivationsResponsePrivate::parseDescribeActivationsResponse(QXmlStreamReader &xml)
 {

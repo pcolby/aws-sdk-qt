@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetEventDestinationRequest
  */
 
 /*!
- *
- * Constructs a DeleteConfigurationSetEventDestinationRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a DeleteConfigurationSetEventDestinationRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 DeleteConfigurationSetEventDestinationRequestPrivate::DeleteConfigurationSetEventDestinationRequestPrivate(
     const SESRequest::Action action, DeleteConfigurationSetEventDestinationRequest * const q)

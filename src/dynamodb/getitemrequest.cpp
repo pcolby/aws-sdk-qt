@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * GetItemRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a GetItemRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a GetItemRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 GetItemRequestPrivate::GetItemRequestPrivate(
     const DynamoDBRequest::Action action, GetItemRequest * const q)

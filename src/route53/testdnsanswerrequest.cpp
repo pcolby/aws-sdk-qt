@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * TestDNSAnswerRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a TestDNSAnswerRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a TestDNSAnswerRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 TestDNSAnswerRequestPrivate::TestDNSAnswerRequestPrivate(
     const Route53Request::Action action, TestDNSAnswerRequest * const q)

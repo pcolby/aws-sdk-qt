@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreateClassifierResponse
- *
  * \brief The CreateClassifierResponse class provides an interace for Glue CreateClassifier responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreateClassifierResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateClassifierResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateClassifierResponse::CreateClassifierResponse(
         const CreateClassifierRequest &request,
@@ -58,6 +53,9 @@ CreateClassifierResponse::CreateClassifierResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateClassifierRequest * CreateClassifierResponse::request() const
 {
     Q_D(const CreateClassifierResponse);
@@ -65,9 +63,8 @@ const CreateClassifierRequest * CreateClassifierResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue CreateClassifier response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue CreateClassifier \a response.
  */
 void CreateClassifierResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateClassifierResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::CreateClassifierResponsePrivate
+ * \brief The CreateClassifierResponsePrivate class provides private implementation for CreateClassifierResponse.
  * \internal
  *
- * \class CreateClassifierResponsePrivate
- *
- * \brief Private implementation for CreateClassifierResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClassifierResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateClassifierResponse instance.
+ * Constructs a CreateClassifierResponsePrivate object with public implementation \a q.
  */
 CreateClassifierResponsePrivate::CreateClassifierResponsePrivate(
     CreateClassifierResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateClassifierResponsePrivate::CreateClassifierResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue CreateClassifierResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue CreateClassifier response element from \a xml.
  */
 void CreateClassifierResponsePrivate::parseCreateClassifierResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateTemplateResponse : public SESResponse {
 public:
     UpdateTemplateResponse(const UpdateTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateTemplateRequest * request() const;
+    virtual const UpdateTemplateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateTemplateResponse)

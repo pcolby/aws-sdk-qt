@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListMFADevicesResponse
- *
  * \brief The ListMFADevicesResponse class provides an interace for IAM ListMFADevices responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListMFADevicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListMFADevicesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListMFADevicesResponse::ListMFADevicesResponse(
         const ListMFADevicesRequest &request,
@@ -120,6 +115,9 @@ ListMFADevicesResponse::ListMFADevicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListMFADevicesRequest * ListMFADevicesResponse::request() const
 {
     Q_D(const ListMFADevicesResponse);
@@ -127,9 +125,8 @@ const ListMFADevicesRequest * ListMFADevicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM ListMFADevices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListMFADevices \a response.
  */
 void ListMFADevicesResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListMFADevicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListMFADevicesResponsePrivate
+ * \brief The ListMFADevicesResponsePrivate class provides private implementation for ListMFADevicesResponse.
  * \internal
  *
- * \class ListMFADevicesResponsePrivate
- *
- * \brief Private implementation for ListMFADevicesResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListMFADevicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListMFADevicesResponse instance.
+ * Constructs a ListMFADevicesResponsePrivate object with public implementation \a q.
  */
 ListMFADevicesResponsePrivate::ListMFADevicesResponsePrivate(
     ListMFADevicesResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListMFADevicesResponsePrivate::ListMFADevicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListMFADevicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListMFADevices response element from \a xml.
  */
 void ListMFADevicesResponsePrivate::parseListMFADevicesResponse(QXmlStreamReader &xml)
 {

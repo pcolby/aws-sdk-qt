@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateFieldLevelEncryptionProfileRequest::res
  */
 
 /*!
- *
- * Constructs a UpdateFieldLevelEncryptionProfileRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a UpdateFieldLevelEncryptionProfileRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 UpdateFieldLevelEncryptionProfileRequestPrivate::UpdateFieldLevelEncryptionProfileRequestPrivate(
     const CloudFrontRequest::Action action, UpdateFieldLevelEncryptionProfileRequest * const q)

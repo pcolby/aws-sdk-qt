@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeregisterTaskDefinitionResponse : public ECSResponse {
 public:
     DeregisterTaskDefinitionResponse(const DeregisterTaskDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeregisterTaskDefinitionRequest * request() const;
+    virtual const DeregisterTaskDefinitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeregisterTaskDefinitionResponse)

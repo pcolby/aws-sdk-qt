@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListNotebookInstanceLifecycleConfigsResponse : public SageMak
 public:
     ListNotebookInstanceLifecycleConfigsResponse(const ListNotebookInstanceLifecycleConfigsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListNotebookInstanceLifecycleConfigsRequest * request() const;
+    virtual const ListNotebookInstanceLifecycleConfigsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListNotebookInstanceLifecycleConfigsResponse)

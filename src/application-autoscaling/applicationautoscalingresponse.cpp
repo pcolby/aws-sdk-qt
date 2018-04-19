@@ -28,16 +28,13 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::ApplicationAutoScalingResponse
- *
  * \brief The ApplicationAutoScalingResponse class provides an interface for ApplicationAutoScaling responses.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @brief  Constructs a new ApplicationAutoScalingResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ApplicationAutoScalingResponse object with parent \a parent.
  */
 ApplicationAutoScalingResponse::ApplicationAutoScalingResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ApplicationAutoScalingResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ApplicationAutoScalingResponse::ApplicationAutoScalingResponse(QObject * const p
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplicationAutoScalingResponse object.
- *
+ * \internal
+ * Constructs a ApplicationAutoScalingResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ApplicationAutoScalingResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ApplicationAutoScalingResponse::ApplicationAutoScalingResponse(ApplicationAutoScalingResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ApplicationAutoScalingResponse::ApplicationAutoScalingResponse(ApplicationAutoSc
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ApplicationAutoScalingResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ApplicationAutoScalingResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationAutoScaling::ApplicationAutoScalingResponsePrivate
+ * \brief The ApplicationAutoScalingResponsePrivate class provides private implementation for ApplicationAutoScalingResponse.
+ * \internal
  *
- * @class  ApplicationAutoScalingResponsePrivate
- *
- * @brief  Private implementation for ApplicationAutoScalingResponse.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplicationAutoScalingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ApplicationAutoScalingResponse instance.
+ * Constructs a ApplicationAutoScalingResponsePrivate object with public implementation \a q.
  */
 ApplicationAutoScalingResponsePrivate::ApplicationAutoScalingResponsePrivate(
     ApplicationAutoScalingResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::CreatePrivateVirtualInterfaceResponse
- *
  * \brief The CreatePrivateVirtualInterfaceResponse class provides an interace for DirectConnect CreatePrivateVirtualInterface responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new CreatePrivateVirtualInterfaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePrivateVirtualInterfaceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePrivateVirtualInterfaceResponse::CreatePrivateVirtualInterfaceResponse(
         const CreatePrivateVirtualInterfaceRequest &request,
@@ -63,6 +58,9 @@ CreatePrivateVirtualInterfaceResponse::CreatePrivateVirtualInterfaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePrivateVirtualInterfaceRequest * CreatePrivateVirtualInterfaceResponse::request() const
 {
     Q_D(const CreatePrivateVirtualInterfaceResponse);
@@ -70,9 +68,8 @@ const CreatePrivateVirtualInterfaceRequest * CreatePrivateVirtualInterfaceRespon
 }
 
 /*!
- * @brief  Parse a DirectConnect CreatePrivateVirtualInterface response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect CreatePrivateVirtualInterface \a response.
  */
 void CreatePrivateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void CreatePrivateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::CreatePrivateVirtualInterfaceResponsePrivate
+ * \brief The CreatePrivateVirtualInterfaceResponsePrivate class provides private implementation for CreatePrivateVirtualInterfaceResponse.
  * \internal
  *
- * \class CreatePrivateVirtualInterfaceResponsePrivate
- *
- * \brief Private implementation for CreatePrivateVirtualInterfaceResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePrivateVirtualInterfaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePrivateVirtualInterfaceResponse instance.
+ * Constructs a CreatePrivateVirtualInterfaceResponsePrivate object with public implementation \a q.
  */
 CreatePrivateVirtualInterfaceResponsePrivate::CreatePrivateVirtualInterfaceResponsePrivate(
     CreatePrivateVirtualInterfaceResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ CreatePrivateVirtualInterfaceResponsePrivate::CreatePrivateVirtualInterfaceRespo
 }
 
 /*!
- * @brief  Parse an DirectConnect CreatePrivateVirtualInterfaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect CreatePrivateVirtualInterface response element from \a xml.
  */
 void CreatePrivateVirtualInterfaceResponsePrivate::parseCreatePrivateVirtualInterfaceResponse(QXmlStreamReader &xml)
 {

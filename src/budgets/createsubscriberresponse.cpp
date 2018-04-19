@@ -29,10 +29,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::CreateSubscriberResponse
- *
  * \brief The CreateSubscriberResponse class provides an interace for Budgets CreateSubscriber responses.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -77,11 +76,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new CreateSubscriberResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSubscriberResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSubscriberResponse::CreateSubscriberResponse(
         const CreateSubscriberRequest &request,
@@ -93,6 +88,9 @@ CreateSubscriberResponse::CreateSubscriberResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSubscriberRequest * CreateSubscriberResponse::request() const
 {
     Q_D(const CreateSubscriberResponse);
@@ -100,9 +98,8 @@ const CreateSubscriberRequest * CreateSubscriberResponse::request() const
 }
 
 /*!
- * @brief  Parse a Budgets CreateSubscriber response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Budgets CreateSubscriber \a response.
  */
 void CreateSubscriberResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void CreateSubscriberResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Budgets::CreateSubscriberResponsePrivate
+ * \brief The CreateSubscriberResponsePrivate class provides private implementation for CreateSubscriberResponse.
  * \internal
  *
- * \class CreateSubscriberResponsePrivate
- *
- * \brief Private implementation for CreateSubscriberResponse.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSubscriberResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSubscriberResponse instance.
+ * Constructs a CreateSubscriberResponsePrivate object with public implementation \a q.
  */
 CreateSubscriberResponsePrivate::CreateSubscriberResponsePrivate(
     CreateSubscriberResponse * const q) : BudgetsResponsePrivate(q)
@@ -133,9 +126,7 @@ CreateSubscriberResponsePrivate::CreateSubscriberResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Budgets CreateSubscriberResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Budgets CreateSubscriber response element from \a xml.
  */
 void CreateSubscriberResponsePrivate::parseCreateSubscriberResponse(QXmlStreamReader &xml)
 {

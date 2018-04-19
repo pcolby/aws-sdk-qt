@@ -29,10 +29,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::CreateProtectionResponse
- *
  * \brief The CreateProtectionResponse class provides an interace for Shield CreateProtection responses.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -45,11 +44,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new CreateProtectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateProtectionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateProtectionResponse::CreateProtectionResponse(
         const CreateProtectionRequest &request,
@@ -61,6 +56,9 @@ CreateProtectionResponse::CreateProtectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateProtectionRequest * CreateProtectionResponse::request() const
 {
     Q_D(const CreateProtectionResponse);
@@ -68,9 +66,8 @@ const CreateProtectionRequest * CreateProtectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Shield CreateProtection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Shield CreateProtection \a response.
  */
 void CreateProtectionResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreateProtectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Shield::CreateProtectionResponsePrivate
+ * \brief The CreateProtectionResponsePrivate class provides private implementation for CreateProtectionResponse.
  * \internal
  *
- * \class CreateProtectionResponsePrivate
- *
- * \brief Private implementation for CreateProtectionResponse.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProtectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateProtectionResponse instance.
+ * Constructs a CreateProtectionResponsePrivate object with public implementation \a q.
  */
 CreateProtectionResponsePrivate::CreateProtectionResponsePrivate(
     CreateProtectionResponse * const q) : ShieldResponsePrivate(q)
@@ -101,9 +94,7 @@ CreateProtectionResponsePrivate::CreateProtectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Shield CreateProtectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Shield CreateProtection response element from \a xml.
  */
 void CreateProtectionResponsePrivate::parseCreateProtectionResponse(QXmlStreamReader &xml)
 {

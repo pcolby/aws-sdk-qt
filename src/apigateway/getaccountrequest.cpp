@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetAccountRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetAccountRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetAccountRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetAccountRequestPrivate::GetAccountRequestPrivate(
     const APIGatewayRequest::Action action, GetAccountRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT MergePullRequestByFastForwardResponse : public CodeCommitResp
 public:
     MergePullRequestByFastForwardResponse(const MergePullRequestByFastForwardRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const MergePullRequestByFastForwardRequest * request() const;
+    virtual const MergePullRequestByFastForwardRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(MergePullRequestByFastForwardResponse)

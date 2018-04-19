@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateChapCredentialsResponse
- *
  * \brief The UpdateChapCredentialsResponse class provides an interace for StorageGateway UpdateChapCredentials responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateChapCredentialsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateChapCredentialsResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateChapCredentialsResponse::UpdateChapCredentialsResponse(
         const UpdateChapCredentialsRequest &request,
@@ -124,6 +119,9 @@ UpdateChapCredentialsResponse::UpdateChapCredentialsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateChapCredentialsRequest * UpdateChapCredentialsResponse::request() const
 {
     Q_D(const UpdateChapCredentialsResponse);
@@ -131,9 +129,8 @@ const UpdateChapCredentialsRequest * UpdateChapCredentialsResponse::request() co
 }
 
 /*!
- * @brief  Parse a StorageGateway UpdateChapCredentials response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway UpdateChapCredentials \a response.
  */
 void UpdateChapCredentialsResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void UpdateChapCredentialsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::UpdateChapCredentialsResponsePrivate
+ * \brief The UpdateChapCredentialsResponsePrivate class provides private implementation for UpdateChapCredentialsResponse.
  * \internal
  *
- * \class UpdateChapCredentialsResponsePrivate
- *
- * \brief Private implementation for UpdateChapCredentialsResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateChapCredentialsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateChapCredentialsResponse instance.
+ * Constructs a UpdateChapCredentialsResponsePrivate object with public implementation \a q.
  */
 UpdateChapCredentialsResponsePrivate::UpdateChapCredentialsResponsePrivate(
     UpdateChapCredentialsResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ UpdateChapCredentialsResponsePrivate::UpdateChapCredentialsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway UpdateChapCredentialsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway UpdateChapCredentials response element from \a xml.
  */
 void UpdateChapCredentialsResponsePrivate::parseUpdateChapCredentialsResponse(QXmlStreamReader &xml)
 {

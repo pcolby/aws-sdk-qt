@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResetJobBookmarkResponse : public GlueResponse {
 public:
     ResetJobBookmarkResponse(const ResetJobBookmarkRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResetJobBookmarkRequest * request() const;
+    virtual const ResetJobBookmarkRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResetJobBookmarkResponse)

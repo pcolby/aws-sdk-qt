@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelBundleTaskResponse
- *
  * \brief The CancelBundleTaskResponse class provides an interace for EC2 CancelBundleTask responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelBundleTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelBundleTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelBundleTaskResponse::CancelBundleTaskResponse(
         const CancelBundleTaskRequest &request,
@@ -59,6 +54,9 @@ CancelBundleTaskResponse::CancelBundleTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelBundleTaskRequest * CancelBundleTaskResponse::request() const
 {
     Q_D(const CancelBundleTaskResponse);
@@ -66,9 +64,8 @@ const CancelBundleTaskRequest * CancelBundleTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CancelBundleTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CancelBundleTask \a response.
  */
 void CancelBundleTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CancelBundleTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CancelBundleTaskResponsePrivate
+ * \brief The CancelBundleTaskResponsePrivate class provides private implementation for CancelBundleTaskResponse.
  * \internal
  *
- * \class CancelBundleTaskResponsePrivate
- *
- * \brief Private implementation for CancelBundleTaskResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelBundleTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelBundleTaskResponse instance.
+ * Constructs a CancelBundleTaskResponsePrivate object with public implementation \a q.
  */
 CancelBundleTaskResponsePrivate::CancelBundleTaskResponsePrivate(
     CancelBundleTaskResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CancelBundleTaskResponsePrivate::CancelBundleTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CancelBundleTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CancelBundleTask response element from \a xml.
  */
 void CancelBundleTaskResponsePrivate::parseCancelBundleTaskResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::DetachLoadBalancerFromSubnetsResponse
- *
  * \brief The DetachLoadBalancerFromSubnetsResponse class provides an interace for ElasticLoadBalancing DetachLoadBalancerFromSubnets responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new DetachLoadBalancerFromSubnetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachLoadBalancerFromSubnetsResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachLoadBalancerFromSubnetsResponse::DetachLoadBalancerFromSubnetsResponse(
         const DetachLoadBalancerFromSubnetsRequest &request,
@@ -83,6 +78,9 @@ DetachLoadBalancerFromSubnetsResponse::DetachLoadBalancerFromSubnetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachLoadBalancerFromSubnetsRequest * DetachLoadBalancerFromSubnetsResponse::request() const
 {
     Q_D(const DetachLoadBalancerFromSubnetsResponse);
@@ -90,9 +88,8 @@ const DetachLoadBalancerFromSubnetsRequest * DetachLoadBalancerFromSubnetsRespon
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing DetachLoadBalancerFromSubnets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing DetachLoadBalancerFromSubnets \a response.
  */
 void DetachLoadBalancerFromSubnetsResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void DetachLoadBalancerFromSubnetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::DetachLoadBalancerFromSubnetsResponsePrivate
+ * \brief The DetachLoadBalancerFromSubnetsResponsePrivate class provides private implementation for DetachLoadBalancerFromSubnetsResponse.
  * \internal
  *
- * \class DetachLoadBalancerFromSubnetsResponsePrivate
- *
- * \brief Private implementation for DetachLoadBalancerFromSubnetsResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachLoadBalancerFromSubnetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachLoadBalancerFromSubnetsResponse instance.
+ * Constructs a DetachLoadBalancerFromSubnetsResponsePrivate object with public implementation \a q.
  */
 DetachLoadBalancerFromSubnetsResponsePrivate::DetachLoadBalancerFromSubnetsResponsePrivate(
     DetachLoadBalancerFromSubnetsResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ DetachLoadBalancerFromSubnetsResponsePrivate::DetachLoadBalancerFromSubnetsRespo
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing DetachLoadBalancerFromSubnetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing DetachLoadBalancerFromSubnets response element from \a xml.
  */
 void DetachLoadBalancerFromSubnetsResponsePrivate::parseDetachLoadBalancerFromSubnetsResponse(QXmlStreamReader &xml)
 {

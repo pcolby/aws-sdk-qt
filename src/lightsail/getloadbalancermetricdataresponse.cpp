@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetLoadBalancerMetricDataResponse
- *
  * \brief The GetLoadBalancerMetricDataResponse class provides an interace for Lightsail GetLoadBalancerMetricData responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetLoadBalancerMetricDataResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetLoadBalancerMetricDataResponse object for \a reply to \a request, with parent \a parent.
  */
 GetLoadBalancerMetricDataResponse::GetLoadBalancerMetricDataResponse(
         const GetLoadBalancerMetricDataRequest &request,
@@ -71,6 +66,9 @@ GetLoadBalancerMetricDataResponse::GetLoadBalancerMetricDataResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetLoadBalancerMetricDataRequest * GetLoadBalancerMetricDataResponse::request() const
 {
     Q_D(const GetLoadBalancerMetricDataResponse);
@@ -78,9 +76,8 @@ const GetLoadBalancerMetricDataRequest * GetLoadBalancerMetricDataResponse::requ
 }
 
 /*!
- * @brief  Parse a Lightsail GetLoadBalancerMetricData response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetLoadBalancerMetricData \a response.
  */
 void GetLoadBalancerMetricDataResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetLoadBalancerMetricDataResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetLoadBalancerMetricDataResponsePrivate
+ * \brief The GetLoadBalancerMetricDataResponsePrivate class provides private implementation for GetLoadBalancerMetricDataResponse.
  * \internal
  *
- * \class GetLoadBalancerMetricDataResponsePrivate
- *
- * \brief Private implementation for GetLoadBalancerMetricDataResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLoadBalancerMetricDataResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetLoadBalancerMetricDataResponse instance.
+ * Constructs a GetLoadBalancerMetricDataResponsePrivate object with public implementation \a q.
  */
 GetLoadBalancerMetricDataResponsePrivate::GetLoadBalancerMetricDataResponsePrivate(
     GetLoadBalancerMetricDataResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetLoadBalancerMetricDataResponsePrivate::GetLoadBalancerMetricDataResponsePriva
 }
 
 /*!
- * @brief  Parse an Lightsail GetLoadBalancerMetricDataResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetLoadBalancerMetricData response element from \a xml.
  */
 void GetLoadBalancerMetricDataResponsePrivate::parseGetLoadBalancerMetricDataResponse(QXmlStreamReader &xml)
 {

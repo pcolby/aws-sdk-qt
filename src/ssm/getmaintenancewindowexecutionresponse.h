@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetMaintenanceWindowExecutionResponse : public SSMResponse {
 public:
     GetMaintenanceWindowExecutionResponse(const GetMaintenanceWindowExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetMaintenanceWindowExecutionRequest * request() const;
+    virtual const GetMaintenanceWindowExecutionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetMaintenanceWindowExecutionResponse)

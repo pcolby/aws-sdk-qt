@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::RemoveTagsFromVaultResponse
- *
  * \brief The RemoveTagsFromVaultResponse class provides an interace for Glacier RemoveTagsFromVault responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromVaultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveTagsFromVaultResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveTagsFromVaultResponse::RemoveTagsFromVaultResponse(
         const RemoveTagsFromVaultRequest &request,
@@ -93,6 +88,9 @@ RemoveTagsFromVaultResponse::RemoveTagsFromVaultResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveTagsFromVaultRequest * RemoveTagsFromVaultResponse::request() const
 {
     Q_D(const RemoveTagsFromVaultResponse);
@@ -100,9 +98,8 @@ const RemoveTagsFromVaultRequest * RemoveTagsFromVaultResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier RemoveTagsFromVault response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier RemoveTagsFromVault \a response.
  */
 void RemoveTagsFromVaultResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void RemoveTagsFromVaultResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::RemoveTagsFromVaultResponsePrivate
+ * \brief The RemoveTagsFromVaultResponsePrivate class provides private implementation for RemoveTagsFromVaultResponse.
  * \internal
  *
- * \class RemoveTagsFromVaultResponsePrivate
- *
- * \brief Private implementation for RemoveTagsFromVaultResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromVaultResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveTagsFromVaultResponse instance.
+ * Constructs a RemoveTagsFromVaultResponsePrivate object with public implementation \a q.
  */
 RemoveTagsFromVaultResponsePrivate::RemoveTagsFromVaultResponsePrivate(
     RemoveTagsFromVaultResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ RemoveTagsFromVaultResponsePrivate::RemoveTagsFromVaultResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier RemoveTagsFromVaultResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier RemoveTagsFromVault response element from \a xml.
  */
 void RemoveTagsFromVaultResponsePrivate::parseRemoveTagsFromVaultResponse(QXmlStreamReader &xml)
 {

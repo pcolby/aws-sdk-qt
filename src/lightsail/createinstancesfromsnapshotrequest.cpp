@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * CreateInstancesFromSnapshotRequest::response(
  */
 
 /*!
- *
- * Constructs a CreateInstancesFromSnapshotRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a CreateInstancesFromSnapshotRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 CreateInstancesFromSnapshotRequestPrivate::CreateInstancesFromSnapshotRequestPrivate(
     const LightsailRequest::Action action, CreateInstancesFromSnapshotRequest * const q)

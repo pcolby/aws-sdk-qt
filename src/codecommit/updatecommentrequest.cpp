@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * UpdateCommentRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UpdateCommentRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a UpdateCommentRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 UpdateCommentRequestPrivate::UpdateCommentRequestPrivate(
     const CodeCommitRequest::Action action, UpdateCommentRequest * const q)

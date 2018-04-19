@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ListInstanceProfilesResponse
- *
  * \brief The ListInstanceProfilesResponse class provides an interace for DeviceFarm ListInstanceProfiles responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ListInstanceProfilesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListInstanceProfilesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListInstanceProfilesResponse::ListInstanceProfilesResponse(
         const ListInstanceProfilesRequest &request,
@@ -57,6 +52,9 @@ ListInstanceProfilesResponse::ListInstanceProfilesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListInstanceProfilesRequest * ListInstanceProfilesResponse::request() const
 {
     Q_D(const ListInstanceProfilesResponse);
@@ -64,9 +62,8 @@ const ListInstanceProfilesRequest * ListInstanceProfilesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a DeviceFarm ListInstanceProfiles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm ListInstanceProfiles \a response.
  */
 void ListInstanceProfilesResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListInstanceProfilesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::ListInstanceProfilesResponsePrivate
+ * \brief The ListInstanceProfilesResponsePrivate class provides private implementation for ListInstanceProfilesResponse.
  * \internal
  *
- * \class ListInstanceProfilesResponsePrivate
- *
- * \brief Private implementation for ListInstanceProfilesResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInstanceProfilesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListInstanceProfilesResponse instance.
+ * Constructs a ListInstanceProfilesResponsePrivate object with public implementation \a q.
  */
 ListInstanceProfilesResponsePrivate::ListInstanceProfilesResponsePrivate(
     ListInstanceProfilesResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ ListInstanceProfilesResponsePrivate::ListInstanceProfilesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm ListInstanceProfilesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm ListInstanceProfiles response element from \a xml.
  */
 void ListInstanceProfilesResponsePrivate::parseListInstanceProfilesResponse(QXmlStreamReader &xml)
 {

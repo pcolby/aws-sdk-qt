@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::StopRemoteAccessSessionResponse
- *
  * \brief The StopRemoteAccessSessionResponse class provides an interace for DeviceFarm StopRemoteAccessSession responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new StopRemoteAccessSessionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopRemoteAccessSessionResponse object for \a reply to \a request, with parent \a parent.
  */
 StopRemoteAccessSessionResponse::StopRemoteAccessSessionResponse(
         const StopRemoteAccessSessionRequest &request,
@@ -57,6 +52,9 @@ StopRemoteAccessSessionResponse::StopRemoteAccessSessionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopRemoteAccessSessionRequest * StopRemoteAccessSessionResponse::request() const
 {
     Q_D(const StopRemoteAccessSessionResponse);
@@ -64,9 +62,8 @@ const StopRemoteAccessSessionRequest * StopRemoteAccessSessionResponse::request(
 }
 
 /*!
- * @brief  Parse a DeviceFarm StopRemoteAccessSession response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm StopRemoteAccessSession \a response.
  */
 void StopRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void StopRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::StopRemoteAccessSessionResponsePrivate
+ * \brief The StopRemoteAccessSessionResponsePrivate class provides private implementation for StopRemoteAccessSessionResponse.
  * \internal
  *
- * \class StopRemoteAccessSessionResponsePrivate
- *
- * \brief Private implementation for StopRemoteAccessSessionResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopRemoteAccessSessionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopRemoteAccessSessionResponse instance.
+ * Constructs a StopRemoteAccessSessionResponsePrivate object with public implementation \a q.
  */
 StopRemoteAccessSessionResponsePrivate::StopRemoteAccessSessionResponsePrivate(
     StopRemoteAccessSessionResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ StopRemoteAccessSessionResponsePrivate::StopRemoteAccessSessionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm StopRemoteAccessSessionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm StopRemoteAccessSession response element from \a xml.
  */
 void StopRemoteAccessSessionResponsePrivate::parseStopRemoteAccessSessionResponse(QXmlStreamReader &xml)
 {

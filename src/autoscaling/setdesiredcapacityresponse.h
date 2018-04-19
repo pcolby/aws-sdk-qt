@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetDesiredCapacityResponse : public AutoScalingResponse {
 public:
     SetDesiredCapacityResponse(const SetDesiredCapacityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetDesiredCapacityRequest * request() const;
+    virtual const SetDesiredCapacityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetDesiredCapacityResponse)

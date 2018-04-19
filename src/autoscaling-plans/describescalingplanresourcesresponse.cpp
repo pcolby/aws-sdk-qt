@@ -29,10 +29,9 @@ namespace AutoScalingPlans {
 
 /*!
  * \class QtAws::AutoScalingPlans::DescribeScalingPlanResourcesResponse
- *
  * \brief The DescribeScalingPlanResourcesResponse class provides an interace for AutoScalingPlans DescribeScalingPlanResources responses.
  *
- * \ingroup AutoScalingPlans
+ * \inmodule QtAwsAutoScalingPlans
  *
  *  Use AWS Auto Scaling to quickly discover all the scalable AWS resources for your application and configure dynamic
  *  scaling for your scalable
@@ -48,11 +47,7 @@ namespace AutoScalingPlans {
  */
 
 /*!
- * @brief  Constructs a new DescribeScalingPlanResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeScalingPlanResourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeScalingPlanResourcesResponse::DescribeScalingPlanResourcesResponse(
         const DescribeScalingPlanResourcesRequest &request,
@@ -64,6 +59,9 @@ DescribeScalingPlanResourcesResponse::DescribeScalingPlanResourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeScalingPlanResourcesRequest * DescribeScalingPlanResourcesResponse::request() const
 {
     Q_D(const DescribeScalingPlanResourcesResponse);
@@ -71,9 +69,8 @@ const DescribeScalingPlanResourcesRequest * DescribeScalingPlanResourcesResponse
 }
 
 /*!
- * @brief  Parse a AutoScalingPlans DescribeScalingPlanResources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScalingPlans DescribeScalingPlanResources \a response.
  */
 void DescribeScalingPlanResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void DescribeScalingPlanResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScalingPlans::DescribeScalingPlanResourcesResponsePrivate
+ * \brief The DescribeScalingPlanResourcesResponsePrivate class provides private implementation for DescribeScalingPlanResourcesResponse.
  * \internal
  *
- * \class DescribeScalingPlanResourcesResponsePrivate
- *
- * \brief Private implementation for DescribeScalingPlanResourcesResponse.
+ * \inmodule QtAwsAutoScalingPlans
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScalingPlanResourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeScalingPlanResourcesResponse instance.
+ * Constructs a DescribeScalingPlanResourcesResponsePrivate object with public implementation \a q.
  */
 DescribeScalingPlanResourcesResponsePrivate::DescribeScalingPlanResourcesResponsePrivate(
     DescribeScalingPlanResourcesResponse * const q) : AutoScalingPlansResponsePrivate(q)
@@ -104,9 +97,7 @@ DescribeScalingPlanResourcesResponsePrivate::DescribeScalingPlanResourcesRespons
 }
 
 /*!
- * @brief  Parse an AutoScalingPlans DescribeScalingPlanResourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScalingPlans DescribeScalingPlanResources response element from \a xml.
  */
 void DescribeScalingPlanResourcesResponsePrivate::parseDescribeScalingPlanResourcesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeOptionGroupsResponse
- *
  * \brief The DescribeOptionGroupsResponse class provides an interace for RDS DescribeOptionGroups responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeOptionGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeOptionGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeOptionGroupsResponse::DescribeOptionGroupsResponse(
         const DescribeOptionGroupsRequest &request,
@@ -119,6 +114,9 @@ DescribeOptionGroupsResponse::DescribeOptionGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeOptionGroupsRequest * DescribeOptionGroupsResponse::request() const
 {
     Q_D(const DescribeOptionGroupsResponse);
@@ -126,9 +124,8 @@ const DescribeOptionGroupsRequest * DescribeOptionGroupsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a RDS DescribeOptionGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeOptionGroups \a response.
  */
 void DescribeOptionGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeOptionGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeOptionGroupsResponsePrivate
+ * \brief The DescribeOptionGroupsResponsePrivate class provides private implementation for DescribeOptionGroupsResponse.
  * \internal
  *
- * \class DescribeOptionGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeOptionGroupsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOptionGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeOptionGroupsResponse instance.
+ * Constructs a DescribeOptionGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeOptionGroupsResponsePrivate::DescribeOptionGroupsResponsePrivate(
     DescribeOptionGroupsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeOptionGroupsResponsePrivate::DescribeOptionGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DescribeOptionGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeOptionGroups response element from \a xml.
  */
 void DescribeOptionGroupsResponsePrivate::parseDescribeOptionGroupsResponse(QXmlStreamReader &xml)
 {

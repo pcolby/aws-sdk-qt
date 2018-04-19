@@ -29,10 +29,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::BatchDeleteAttributesResponse
- *
  * \brief The BatchDeleteAttributesResponse class provides an interace for SimpleDB BatchDeleteAttributes responses.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -52,11 +51,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new BatchDeleteAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchDeleteAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchDeleteAttributesResponse::BatchDeleteAttributesResponse(
         const BatchDeleteAttributesRequest &request,
@@ -68,6 +63,9 @@ BatchDeleteAttributesResponse::BatchDeleteAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchDeleteAttributesRequest * BatchDeleteAttributesResponse::request() const
 {
     Q_D(const BatchDeleteAttributesResponse);
@@ -75,9 +73,8 @@ const BatchDeleteAttributesRequest * BatchDeleteAttributesResponse::request() co
 }
 
 /*!
- * @brief  Parse a SimpleDB BatchDeleteAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SimpleDB BatchDeleteAttributes \a response.
  */
 void BatchDeleteAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void BatchDeleteAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SimpleDB::BatchDeleteAttributesResponsePrivate
+ * \brief The BatchDeleteAttributesResponsePrivate class provides private implementation for BatchDeleteAttributesResponse.
  * \internal
  *
- * \class BatchDeleteAttributesResponsePrivate
- *
- * \brief Private implementation for BatchDeleteAttributesResponse.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDeleteAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchDeleteAttributesResponse instance.
+ * Constructs a BatchDeleteAttributesResponsePrivate object with public implementation \a q.
  */
 BatchDeleteAttributesResponsePrivate::BatchDeleteAttributesResponsePrivate(
     BatchDeleteAttributesResponse * const q) : SimpleDBResponsePrivate(q)
@@ -108,9 +101,7 @@ BatchDeleteAttributesResponsePrivate::BatchDeleteAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SimpleDB BatchDeleteAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SimpleDB BatchDeleteAttributes response element from \a xml.
  */
 void BatchDeleteAttributesResponsePrivate::parseBatchDeleteAttributesResponse(QXmlStreamReader &xml)
 {

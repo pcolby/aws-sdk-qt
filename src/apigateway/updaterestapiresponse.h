@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateRestApiResponse : public APIGatewayResponse {
 public:
     UpdateRestApiResponse(const UpdateRestApiRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateRestApiRequest * request() const;
+    virtual const UpdateRestApiRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateRestApiResponse)

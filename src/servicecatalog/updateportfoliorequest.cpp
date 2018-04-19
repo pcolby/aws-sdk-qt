@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * UpdatePortfolioRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a UpdatePortfolioRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a UpdatePortfolioRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 UpdatePortfolioRequestPrivate::UpdatePortfolioRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdatePortfolioRequest * const q)

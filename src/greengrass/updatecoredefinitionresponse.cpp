@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateCoreDefinitionResponse
- *
  * \brief The UpdateCoreDefinitionResponse class provides an interace for Greengrass UpdateCoreDefinition responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateCoreDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateCoreDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateCoreDefinitionResponse::UpdateCoreDefinitionResponse(
         const UpdateCoreDefinitionRequest &request,
@@ -58,6 +53,9 @@ UpdateCoreDefinitionResponse::UpdateCoreDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateCoreDefinitionRequest * UpdateCoreDefinitionResponse::request() const
 {
     Q_D(const UpdateCoreDefinitionResponse);
@@ -65,9 +63,8 @@ const UpdateCoreDefinitionRequest * UpdateCoreDefinitionResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Greengrass UpdateCoreDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass UpdateCoreDefinition \a response.
  */
 void UpdateCoreDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateCoreDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::UpdateCoreDefinitionResponsePrivate
+ * \brief The UpdateCoreDefinitionResponsePrivate class provides private implementation for UpdateCoreDefinitionResponse.
  * \internal
  *
- * \class UpdateCoreDefinitionResponsePrivate
- *
- * \brief Private implementation for UpdateCoreDefinitionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCoreDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateCoreDefinitionResponse instance.
+ * Constructs a UpdateCoreDefinitionResponsePrivate object with public implementation \a q.
  */
 UpdateCoreDefinitionResponsePrivate::UpdateCoreDefinitionResponsePrivate(
     UpdateCoreDefinitionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateCoreDefinitionResponsePrivate::UpdateCoreDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass UpdateCoreDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass UpdateCoreDefinition response element from \a xml.
  */
 void UpdateCoreDefinitionResponsePrivate::parseUpdateCoreDefinitionResponse(QXmlStreamReader &xml)
 {

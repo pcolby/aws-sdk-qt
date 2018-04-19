@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::DescribeApplicationResponse
- *
  * \brief The DescribeApplicationResponse class provides an interace for KinesisAnalytics DescribeApplication responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::describeApplication
  */
 
 /*!
- * @brief  Constructs a new DescribeApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeApplicationResponse::DescribeApplicationResponse(
         const DescribeApplicationRequest &request,
@@ -55,6 +50,9 @@ DescribeApplicationResponse::DescribeApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeApplicationRequest * DescribeApplicationResponse::request() const
 {
     Q_D(const DescribeApplicationResponse);
@@ -62,9 +60,8 @@ const DescribeApplicationRequest * DescribeApplicationResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics DescribeApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics DescribeApplication \a response.
  */
 void DescribeApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::DescribeApplicationResponsePrivate
+ * \brief The DescribeApplicationResponsePrivate class provides private implementation for DescribeApplicationResponse.
  * \internal
  *
- * \class DescribeApplicationResponsePrivate
- *
- * \brief Private implementation for DescribeApplicationResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeApplicationResponse instance.
+ * Constructs a DescribeApplicationResponsePrivate object with public implementation \a q.
  */
 DescribeApplicationResponsePrivate::DescribeApplicationResponsePrivate(
     DescribeApplicationResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeApplicationResponsePrivate::DescribeApplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics DescribeApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics DescribeApplication response element from \a xml.
  */
 void DescribeApplicationResponsePrivate::parseDescribeApplicationResponse(QXmlStreamReader &xml)
 {

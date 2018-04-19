@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::CreateLogStreamResponse
- *
  * \brief The CreateLogStreamResponse class provides an interace for CloudWatchLogs CreateLogStream responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new CreateLogStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLogStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLogStreamResponse::CreateLogStreamResponse(
         const CreateLogStreamRequest &request,
@@ -84,6 +79,9 @@ CreateLogStreamResponse::CreateLogStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLogStreamRequest * CreateLogStreamResponse::request() const
 {
     Q_D(const CreateLogStreamResponse);
@@ -91,9 +89,8 @@ const CreateLogStreamRequest * CreateLogStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs CreateLogStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs CreateLogStream \a response.
  */
 void CreateLogStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void CreateLogStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::CreateLogStreamResponsePrivate
+ * \brief The CreateLogStreamResponsePrivate class provides private implementation for CreateLogStreamResponse.
  * \internal
  *
- * \class CreateLogStreamResponsePrivate
- *
- * \brief Private implementation for CreateLogStreamResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLogStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLogStreamResponse instance.
+ * Constructs a CreateLogStreamResponsePrivate object with public implementation \a q.
  */
 CreateLogStreamResponsePrivate::CreateLogStreamResponsePrivate(
     CreateLogStreamResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ CreateLogStreamResponsePrivate::CreateLogStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs CreateLogStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs CreateLogStream response element from \a xml.
  */
 void CreateLogStreamResponsePrivate::parseCreateLogStreamResponse(QXmlStreamReader &xml)
 {

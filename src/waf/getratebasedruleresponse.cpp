@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetRateBasedRuleResponse
- *
  * \brief The GetRateBasedRuleResponse class provides an interace for WAF GetRateBasedRule responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetRateBasedRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRateBasedRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRateBasedRuleResponse::GetRateBasedRuleResponse(
         const GetRateBasedRuleRequest &request,
@@ -60,6 +55,9 @@ GetRateBasedRuleResponse::GetRateBasedRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRateBasedRuleRequest * GetRateBasedRuleResponse::request() const
 {
     Q_D(const GetRateBasedRuleResponse);
@@ -67,9 +65,8 @@ const GetRateBasedRuleRequest * GetRateBasedRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF GetRateBasedRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF GetRateBasedRule \a response.
  */
 void GetRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::GetRateBasedRuleResponsePrivate
+ * \brief The GetRateBasedRuleResponsePrivate class provides private implementation for GetRateBasedRuleResponse.
  * \internal
  *
- * \class GetRateBasedRuleResponsePrivate
- *
- * \brief Private implementation for GetRateBasedRuleResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRateBasedRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRateBasedRuleResponse instance.
+ * Constructs a GetRateBasedRuleResponsePrivate object with public implementation \a q.
  */
 GetRateBasedRuleResponsePrivate::GetRateBasedRuleResponsePrivate(
     GetRateBasedRuleResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ GetRateBasedRuleResponsePrivate::GetRateBasedRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF GetRateBasedRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF GetRateBasedRule response element from \a xml.
  */
 void GetRateBasedRuleResponsePrivate::parseGetRateBasedRuleResponse(QXmlStreamReader &xml)
 {

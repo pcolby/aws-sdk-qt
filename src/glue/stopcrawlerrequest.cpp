@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StopCrawlerRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a StopCrawlerRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a StopCrawlerRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 StopCrawlerRequestPrivate::StopCrawlerRequestPrivate(
     const GlueRequest::Action action, StopCrawlerRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DetectSentimentRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DetectSentimentRequestPrivate object for Comprehend \a action with,
- * public implementation \a q.
+ * Constructs a DetectSentimentRequestPrivate object for Comprehend \a action,
+ * with public implementation \a q.
  */
 DetectSentimentRequestPrivate::DetectSentimentRequestPrivate(
     const ComprehendRequest::Action action, DetectSentimentRequest * const q)

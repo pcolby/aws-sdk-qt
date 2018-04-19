@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListDeviceDefinitionsResponse
- *
  * \brief The ListDeviceDefinitionsResponse class provides an interace for Greengrass ListDeviceDefinitions responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListDeviceDefinitionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDeviceDefinitionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDeviceDefinitionsResponse::ListDeviceDefinitionsResponse(
         const ListDeviceDefinitionsRequest &request,
@@ -58,6 +53,9 @@ ListDeviceDefinitionsResponse::ListDeviceDefinitionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDeviceDefinitionsRequest * ListDeviceDefinitionsResponse::request() const
 {
     Q_D(const ListDeviceDefinitionsResponse);
@@ -65,9 +63,8 @@ const ListDeviceDefinitionsRequest * ListDeviceDefinitionsResponse::request() co
 }
 
 /*!
- * @brief  Parse a Greengrass ListDeviceDefinitions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass ListDeviceDefinitions \a response.
  */
 void ListDeviceDefinitionsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListDeviceDefinitionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::ListDeviceDefinitionsResponsePrivate
+ * \brief The ListDeviceDefinitionsResponsePrivate class provides private implementation for ListDeviceDefinitionsResponse.
  * \internal
  *
- * \class ListDeviceDefinitionsResponsePrivate
- *
- * \brief Private implementation for ListDeviceDefinitionsResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeviceDefinitionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDeviceDefinitionsResponse instance.
+ * Constructs a ListDeviceDefinitionsResponsePrivate object with public implementation \a q.
  */
 ListDeviceDefinitionsResponsePrivate::ListDeviceDefinitionsResponsePrivate(
     ListDeviceDefinitionsResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ ListDeviceDefinitionsResponsePrivate::ListDeviceDefinitionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass ListDeviceDefinitionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass ListDeviceDefinitions response element from \a xml.
  */
 void ListDeviceDefinitionsResponsePrivate::parseListDeviceDefinitionsResponse(QXmlStreamReader &xml)
 {

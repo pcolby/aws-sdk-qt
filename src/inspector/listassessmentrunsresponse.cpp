@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::ListAssessmentRunsResponse
- *
  * \brief The ListAssessmentRunsResponse class provides an interace for Inspector ListAssessmentRuns responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new ListAssessmentRunsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAssessmentRunsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAssessmentRunsResponse::ListAssessmentRunsResponse(
         const ListAssessmentRunsRequest &request,
@@ -60,6 +55,9 @@ ListAssessmentRunsResponse::ListAssessmentRunsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAssessmentRunsRequest * ListAssessmentRunsResponse::request() const
 {
     Q_D(const ListAssessmentRunsResponse);
@@ -67,9 +65,8 @@ const ListAssessmentRunsRequest * ListAssessmentRunsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector ListAssessmentRuns response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector ListAssessmentRuns \a response.
  */
 void ListAssessmentRunsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListAssessmentRunsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::ListAssessmentRunsResponsePrivate
+ * \brief The ListAssessmentRunsResponsePrivate class provides private implementation for ListAssessmentRunsResponse.
  * \internal
  *
- * \class ListAssessmentRunsResponsePrivate
- *
- * \brief Private implementation for ListAssessmentRunsResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssessmentRunsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAssessmentRunsResponse instance.
+ * Constructs a ListAssessmentRunsResponsePrivate object with public implementation \a q.
  */
 ListAssessmentRunsResponsePrivate::ListAssessmentRunsResponsePrivate(
     ListAssessmentRunsResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ ListAssessmentRunsResponsePrivate::ListAssessmentRunsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector ListAssessmentRunsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector ListAssessmentRuns response element from \a xml.
  */
 void ListAssessmentRunsResponsePrivate::parseListAssessmentRunsResponse(QXmlStreamReader &xml)
 {

@@ -28,16 +28,13 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::MobileResponse
- *
  * \brief The MobileResponse class provides an interface for Mobile responses.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @brief  Constructs a new MobileResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MobileResponse object with parent \a parent.
  */
 MobileResponse::MobileResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MobileResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MobileResponse::MobileResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MobileResponse object.
- *
+ * \internal
+ * Constructs a MobileResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MobileResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MobileResponse::MobileResponse(MobileResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MobileResponse::MobileResponse(MobileResponsePrivate * const d, QObject * const 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MobileResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MobileResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Mobile::MobileResponsePrivate
+ * \brief The MobileResponsePrivate class provides private implementation for MobileResponse.
+ * \internal
  *
- * @class  MobileResponsePrivate
- *
- * @brief  Private implementation for MobileResponse.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MobileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MobileResponse instance.
+ * Constructs a MobileResponsePrivate object with public implementation \a q.
  */
 MobileResponsePrivate::MobileResponsePrivate(
     MobileResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

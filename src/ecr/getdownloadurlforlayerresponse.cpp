@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::GetDownloadUrlForLayerResponse
- *
  * \brief The GetDownloadUrlForLayerResponse class provides an interace for ECR GetDownloadUrlForLayer responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new GetDownloadUrlForLayerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDownloadUrlForLayerResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDownloadUrlForLayerResponse::GetDownloadUrlForLayerResponse(
         const GetDownloadUrlForLayerRequest &request,
@@ -59,6 +54,9 @@ GetDownloadUrlForLayerResponse::GetDownloadUrlForLayerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDownloadUrlForLayerRequest * GetDownloadUrlForLayerResponse::request() const
 {
     Q_D(const GetDownloadUrlForLayerResponse);
@@ -66,9 +64,8 @@ const GetDownloadUrlForLayerRequest * GetDownloadUrlForLayerResponse::request() 
 }
 
 /*!
- * @brief  Parse a ECR GetDownloadUrlForLayer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR GetDownloadUrlForLayer \a response.
  */
 void GetDownloadUrlForLayerResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetDownloadUrlForLayerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::GetDownloadUrlForLayerResponsePrivate
+ * \brief The GetDownloadUrlForLayerResponsePrivate class provides private implementation for GetDownloadUrlForLayerResponse.
  * \internal
  *
- * \class GetDownloadUrlForLayerResponsePrivate
- *
- * \brief Private implementation for GetDownloadUrlForLayerResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDownloadUrlForLayerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDownloadUrlForLayerResponse instance.
+ * Constructs a GetDownloadUrlForLayerResponsePrivate object with public implementation \a q.
  */
 GetDownloadUrlForLayerResponsePrivate::GetDownloadUrlForLayerResponsePrivate(
     GetDownloadUrlForLayerResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ GetDownloadUrlForLayerResponsePrivate::GetDownloadUrlForLayerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR GetDownloadUrlForLayerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR GetDownloadUrlForLayer response element from \a xml.
  */
 void GetDownloadUrlForLayerResponsePrivate::parseGetDownloadUrlForLayerResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT InitiateJobResponse : public GlacierResponse {
 public:
     InitiateJobResponse(const InitiateJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const InitiateJobRequest * request() const;
+    virtual const InitiateJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(InitiateJobResponse)

@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeRaidArraysResponse
- *
  * \brief The DescribeRaidArraysResponse class provides an interace for OpsWorks DescribeRaidArrays responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeRaidArraysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRaidArraysResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRaidArraysResponse::DescribeRaidArraysResponse(
         const DescribeRaidArraysRequest &request,
@@ -161,6 +156,9 @@ DescribeRaidArraysResponse::DescribeRaidArraysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRaidArraysRequest * DescribeRaidArraysResponse::request() const
 {
     Q_D(const DescribeRaidArraysResponse);
@@ -168,9 +166,8 @@ const DescribeRaidArraysRequest * DescribeRaidArraysResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeRaidArrays response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeRaidArrays \a response.
  */
 void DescribeRaidArraysResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeRaidArraysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeRaidArraysResponsePrivate
+ * \brief The DescribeRaidArraysResponsePrivate class provides private implementation for DescribeRaidArraysResponse.
  * \internal
  *
- * \class DescribeRaidArraysResponsePrivate
- *
- * \brief Private implementation for DescribeRaidArraysResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRaidArraysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRaidArraysResponse instance.
+ * Constructs a DescribeRaidArraysResponsePrivate object with public implementation \a q.
  */
 DescribeRaidArraysResponsePrivate::DescribeRaidArraysResponsePrivate(
     DescribeRaidArraysResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeRaidArraysResponsePrivate::DescribeRaidArraysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeRaidArraysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeRaidArrays response element from \a xml.
  */
 void DescribeRaidArraysResponsePrivate::parseDescribeRaidArraysResponse(QXmlStreamReader &xml)
 {

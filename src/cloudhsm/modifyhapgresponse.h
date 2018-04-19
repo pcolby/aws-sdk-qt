@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyHapgResponse : public CloudHSMResponse {
 public:
     ModifyHapgResponse(const ModifyHapgRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyHapgRequest * request() const;
+    virtual const ModifyHapgRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyHapgResponse)

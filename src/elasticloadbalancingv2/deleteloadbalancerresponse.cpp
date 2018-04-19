@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteLoadBalancerResponse
- *
  * \brief The DeleteLoadBalancerResponse class provides an interace for ElasticLoadBalancingv2 DeleteLoadBalancer responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLoadBalancerResponse::DeleteLoadBalancerResponse(
         const DeleteLoadBalancerRequest &request,
@@ -123,6 +118,9 @@ DeleteLoadBalancerResponse::DeleteLoadBalancerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLoadBalancerRequest * DeleteLoadBalancerResponse::request() const
 {
     Q_D(const DeleteLoadBalancerResponse);
@@ -130,9 +128,8 @@ const DeleteLoadBalancerRequest * DeleteLoadBalancerResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DeleteLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DeleteLoadBalancer \a response.
  */
 void DeleteLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DeleteLoadBalancerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DeleteLoadBalancerResponsePrivate
+ * \brief The DeleteLoadBalancerResponsePrivate class provides private implementation for DeleteLoadBalancerResponse.
  * \internal
  *
- * \class DeleteLoadBalancerResponsePrivate
- *
- * \brief Private implementation for DeleteLoadBalancerResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLoadBalancerResponse instance.
+ * Constructs a DeleteLoadBalancerResponsePrivate object with public implementation \a q.
  */
 DeleteLoadBalancerResponsePrivate::DeleteLoadBalancerResponsePrivate(
     DeleteLoadBalancerResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DeleteLoadBalancerResponsePrivate::DeleteLoadBalancerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DeleteLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DeleteLoadBalancer response element from \a xml.
  */
 void DeleteLoadBalancerResponsePrivate::parseDeleteLoadBalancerResponse(QXmlStreamReader &xml)
 {

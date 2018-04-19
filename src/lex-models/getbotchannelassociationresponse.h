@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetBotChannelAssociationResponse : public LexModelBuildingSer
 public:
     GetBotChannelAssociationResponse(const GetBotChannelAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetBotChannelAssociationRequest * request() const;
+    virtual const GetBotChannelAssociationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetBotChannelAssociationResponse)

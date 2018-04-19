@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::ListBrokersResponse
- *
  * \brief The ListBrokersResponse class provides an interace for MQ ListBrokers responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new ListBrokersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListBrokersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListBrokersResponse::ListBrokersResponse(
         const ListBrokersRequest &request,
@@ -57,6 +52,9 @@ ListBrokersResponse::ListBrokersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListBrokersRequest * ListBrokersResponse::request() const
 {
     Q_D(const ListBrokersResponse);
@@ -64,9 +62,8 @@ const ListBrokersRequest * ListBrokersResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ ListBrokers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ ListBrokers \a response.
  */
 void ListBrokersResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListBrokersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::ListBrokersResponsePrivate
+ * \brief The ListBrokersResponsePrivate class provides private implementation for ListBrokersResponse.
  * \internal
  *
- * \class ListBrokersResponsePrivate
- *
- * \brief Private implementation for ListBrokersResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBrokersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListBrokersResponse instance.
+ * Constructs a ListBrokersResponsePrivate object with public implementation \a q.
  */
 ListBrokersResponsePrivate::ListBrokersResponsePrivate(
     ListBrokersResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ ListBrokersResponsePrivate::ListBrokersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ ListBrokersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ ListBrokers response element from \a xml.
  */
 void ListBrokersResponsePrivate::parseListBrokersResponse(QXmlStreamReader &xml)
 {

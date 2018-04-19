@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetChangeTokenRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a GetChangeTokenRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 GetChangeTokenRequestPrivate::GetChangeTokenRequestPrivate(
     const WAFRequest::Action action, GetChangeTokenRequest * const q)

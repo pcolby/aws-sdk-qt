@@ -29,10 +29,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::UpdateSubscriberResponse
- *
  * \brief The UpdateSubscriberResponse class provides an interace for Budgets UpdateSubscriber responses.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -77,11 +76,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new UpdateSubscriberResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSubscriberResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSubscriberResponse::UpdateSubscriberResponse(
         const UpdateSubscriberRequest &request,
@@ -93,6 +88,9 @@ UpdateSubscriberResponse::UpdateSubscriberResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSubscriberRequest * UpdateSubscriberResponse::request() const
 {
     Q_D(const UpdateSubscriberResponse);
@@ -100,9 +98,8 @@ const UpdateSubscriberRequest * UpdateSubscriberResponse::request() const
 }
 
 /*!
- * @brief  Parse a Budgets UpdateSubscriber response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Budgets UpdateSubscriber \a response.
  */
 void UpdateSubscriberResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void UpdateSubscriberResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Budgets::UpdateSubscriberResponsePrivate
+ * \brief The UpdateSubscriberResponsePrivate class provides private implementation for UpdateSubscriberResponse.
  * \internal
  *
- * \class UpdateSubscriberResponsePrivate
- *
- * \brief Private implementation for UpdateSubscriberResponse.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSubscriberResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSubscriberResponse instance.
+ * Constructs a UpdateSubscriberResponsePrivate object with public implementation \a q.
  */
 UpdateSubscriberResponsePrivate::UpdateSubscriberResponsePrivate(
     UpdateSubscriberResponse * const q) : BudgetsResponsePrivate(q)
@@ -133,9 +126,7 @@ UpdateSubscriberResponsePrivate::UpdateSubscriberResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Budgets UpdateSubscriberResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Budgets UpdateSubscriber response element from \a xml.
  */
 void UpdateSubscriberResponsePrivate::parseUpdateSubscriberResponse(QXmlStreamReader &xml)
 {

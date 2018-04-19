@@ -28,16 +28,13 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::WorkMailResponse
- *
  * \brief The WorkMailResponse class provides an interface for WorkMail responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @brief  Constructs a new WorkMailResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a WorkMailResponse object with parent \a parent.
  */
 WorkMailResponse::WorkMailResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new WorkMailResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ WorkMailResponse::WorkMailResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WorkMailResponse object.
- *
+ * \internal
+ * Constructs a WorkMailResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WorkMailResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 WorkMailResponse::WorkMailResponse(WorkMailResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ WorkMailResponse::WorkMailResponse(WorkMailResponsePrivate * const d, QObject * 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void WorkMailResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void WorkMailResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkMail::WorkMailResponsePrivate
+ * \brief The WorkMailResponsePrivate class provides private implementation for WorkMailResponse.
+ * \internal
  *
- * @class  WorkMailResponsePrivate
- *
- * @brief  Private implementation for WorkMailResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WorkMailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public WorkMailResponse instance.
+ * Constructs a WorkMailResponsePrivate object with public implementation \a q.
  */
 WorkMailResponsePrivate::WorkMailResponsePrivate(
     WorkMailResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

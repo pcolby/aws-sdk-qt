@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetGroupRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteSubnetGroupRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSubnetGroupRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 DeleteSubnetGroupRequestPrivate::DeleteSubnetGroupRequestPrivate(
     const DAXRequest::Action action, DeleteSubnetGroupRequest * const q)

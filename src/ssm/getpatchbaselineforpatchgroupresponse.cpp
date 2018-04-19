@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetPatchBaselineForPatchGroupResponse
- *
  * \brief The GetPatchBaselineForPatchGroupResponse class provides an interace for SSM GetPatchBaselineForPatchGroup responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetPatchBaselineForPatchGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPatchBaselineForPatchGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPatchBaselineForPatchGroupResponse::GetPatchBaselineForPatchGroupResponse(
         const GetPatchBaselineForPatchGroupRequest &request,
@@ -79,6 +74,9 @@ GetPatchBaselineForPatchGroupResponse::GetPatchBaselineForPatchGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPatchBaselineForPatchGroupRequest * GetPatchBaselineForPatchGroupResponse::request() const
 {
     Q_D(const GetPatchBaselineForPatchGroupResponse);
@@ -86,9 +84,8 @@ const GetPatchBaselineForPatchGroupRequest * GetPatchBaselineForPatchGroupRespon
 }
 
 /*!
- * @brief  Parse a SSM GetPatchBaselineForPatchGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM GetPatchBaselineForPatchGroup \a response.
  */
 void GetPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void GetPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::GetPatchBaselineForPatchGroupResponsePrivate
+ * \brief The GetPatchBaselineForPatchGroupResponsePrivate class provides private implementation for GetPatchBaselineForPatchGroupResponse.
  * \internal
  *
- * \class GetPatchBaselineForPatchGroupResponsePrivate
- *
- * \brief Private implementation for GetPatchBaselineForPatchGroupResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPatchBaselineForPatchGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPatchBaselineForPatchGroupResponse instance.
+ * Constructs a GetPatchBaselineForPatchGroupResponsePrivate object with public implementation \a q.
  */
 GetPatchBaselineForPatchGroupResponsePrivate::GetPatchBaselineForPatchGroupResponsePrivate(
     GetPatchBaselineForPatchGroupResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ GetPatchBaselineForPatchGroupResponsePrivate::GetPatchBaselineForPatchGroupRespo
 }
 
 /*!
- * @brief  Parse an SSM GetPatchBaselineForPatchGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM GetPatchBaselineForPatchGroup response element from \a xml.
  */
 void GetPatchBaselineForPatchGroupResponsePrivate::parseGetPatchBaselineForPatchGroupResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetXssMatchSetResponse
- *
  * \brief The GetXssMatchSetResponse class provides an interace for WAF GetXssMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetXssMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetXssMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetXssMatchSetResponse::GetXssMatchSetResponse(
         const GetXssMatchSetRequest &request,
@@ -60,6 +55,9 @@ GetXssMatchSetResponse::GetXssMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetXssMatchSetRequest * GetXssMatchSetResponse::request() const
 {
     Q_D(const GetXssMatchSetResponse);
@@ -67,9 +65,8 @@ const GetXssMatchSetRequest * GetXssMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF GetXssMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF GetXssMatchSet \a response.
  */
 void GetXssMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetXssMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::GetXssMatchSetResponsePrivate
+ * \brief The GetXssMatchSetResponsePrivate class provides private implementation for GetXssMatchSetResponse.
  * \internal
  *
- * \class GetXssMatchSetResponsePrivate
- *
- * \brief Private implementation for GetXssMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetXssMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetXssMatchSetResponse instance.
+ * Constructs a GetXssMatchSetResponsePrivate object with public implementation \a q.
  */
 GetXssMatchSetResponsePrivate::GetXssMatchSetResponsePrivate(
     GetXssMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ GetXssMatchSetResponsePrivate::GetXssMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF GetXssMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF GetXssMatchSet response element from \a xml.
  */
 void GetXssMatchSetResponsePrivate::parseGetXssMatchSetResponse(QXmlStreamReader &xml)
 {

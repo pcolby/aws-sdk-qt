@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::DeleteBranchResponse
- *
  * \brief The DeleteBranchResponse class provides an interace for CodeCommit DeleteBranch responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new DeleteBranchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBranchResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBranchResponse::DeleteBranchResponse(
         const DeleteBranchRequest &request,
@@ -245,6 +240,9 @@ DeleteBranchResponse::DeleteBranchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBranchRequest * DeleteBranchResponse::request() const
 {
     Q_D(const DeleteBranchResponse);
@@ -252,9 +250,8 @@ const DeleteBranchRequest * DeleteBranchResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit DeleteBranch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit DeleteBranch \a response.
  */
 void DeleteBranchResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void DeleteBranchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::DeleteBranchResponsePrivate
+ * \brief The DeleteBranchResponsePrivate class provides private implementation for DeleteBranchResponse.
  * \internal
  *
- * \class DeleteBranchResponsePrivate
- *
- * \brief Private implementation for DeleteBranchResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBranchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBranchResponse instance.
+ * Constructs a DeleteBranchResponsePrivate object with public implementation \a q.
  */
 DeleteBranchResponsePrivate::DeleteBranchResponsePrivate(
     DeleteBranchResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ DeleteBranchResponsePrivate::DeleteBranchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit DeleteBranchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit DeleteBranch response element from \a xml.
  */
 void DeleteBranchResponsePrivate::parseDeleteBranchResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT RebootWorkspacesResponse : public WorkSpacesResponse {
 public:
     RebootWorkspacesResponse(const RebootWorkspacesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RebootWorkspacesRequest * request() const;
+    virtual const RebootWorkspacesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RebootWorkspacesResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetLaunchTemplateDataResponse : public EC2Response {
 public:
     GetLaunchTemplateDataResponse(const GetLaunchTemplateDataRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetLaunchTemplateDataRequest * request() const;
+    virtual const GetLaunchTemplateDataRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetLaunchTemplateDataResponse)

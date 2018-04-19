@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateMicrosoftADResponse : public DirectoryServiceResponse {
 public:
     CreateMicrosoftADResponse(const CreateMicrosoftADRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateMicrosoftADRequest * request() const;
+    virtual const CreateMicrosoftADRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateMicrosoftADResponse)

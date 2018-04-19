@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::StopMatchmakingResponse
- *
  * \brief The StopMatchmakingResponse class provides an interace for GameLift StopMatchmaking responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new StopMatchmakingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopMatchmakingResponse object for \a reply to \a request, with parent \a parent.
  */
 StopMatchmakingResponse::StopMatchmakingResponse(
         const StopMatchmakingRequest &request,
@@ -491,6 +486,9 @@ StopMatchmakingResponse::StopMatchmakingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopMatchmakingRequest * StopMatchmakingResponse::request() const
 {
     Q_D(const StopMatchmakingResponse);
@@ -498,9 +496,8 @@ const StopMatchmakingRequest * StopMatchmakingResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift StopMatchmaking response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift StopMatchmaking \a response.
  */
 void StopMatchmakingResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void StopMatchmakingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::StopMatchmakingResponsePrivate
+ * \brief The StopMatchmakingResponsePrivate class provides private implementation for StopMatchmakingResponse.
  * \internal
  *
- * \class StopMatchmakingResponsePrivate
- *
- * \brief Private implementation for StopMatchmakingResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopMatchmakingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopMatchmakingResponse instance.
+ * Constructs a StopMatchmakingResponsePrivate object with public implementation \a q.
  */
 StopMatchmakingResponsePrivate::StopMatchmakingResponsePrivate(
     StopMatchmakingResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ StopMatchmakingResponsePrivate::StopMatchmakingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift StopMatchmakingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift StopMatchmaking response element from \a xml.
  */
 void StopMatchmakingResponsePrivate::parseStopMatchmakingResponse(QXmlStreamReader &xml)
 {

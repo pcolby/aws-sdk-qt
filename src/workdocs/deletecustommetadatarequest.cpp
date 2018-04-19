@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomMetadataRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteCustomMetadataRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCustomMetadataRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DeleteCustomMetadataRequestPrivate::DeleteCustomMetadataRequestPrivate(
     const WorkDocsRequest::Action action, DeleteCustomMetadataRequest * const q)

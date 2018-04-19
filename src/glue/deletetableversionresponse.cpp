@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteTableVersionResponse
- *
  * \brief The DeleteTableVersionResponse class provides an interace for Glue DeleteTableVersion responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteTableVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTableVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTableVersionResponse::DeleteTableVersionResponse(
         const DeleteTableVersionRequest &request,
@@ -58,6 +53,9 @@ DeleteTableVersionResponse::DeleteTableVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTableVersionRequest * DeleteTableVersionResponse::request() const
 {
     Q_D(const DeleteTableVersionResponse);
@@ -65,9 +63,8 @@ const DeleteTableVersionRequest * DeleteTableVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue DeleteTableVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue DeleteTableVersion \a response.
  */
 void DeleteTableVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteTableVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::DeleteTableVersionResponsePrivate
+ * \brief The DeleteTableVersionResponsePrivate class provides private implementation for DeleteTableVersionResponse.
  * \internal
  *
- * \class DeleteTableVersionResponsePrivate
- *
- * \brief Private implementation for DeleteTableVersionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTableVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTableVersionResponse instance.
+ * Constructs a DeleteTableVersionResponsePrivate object with public implementation \a q.
  */
 DeleteTableVersionResponsePrivate::DeleteTableVersionResponsePrivate(
     DeleteTableVersionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteTableVersionResponsePrivate::DeleteTableVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue DeleteTableVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue DeleteTableVersion response element from \a xml.
  */
 void DeleteTableVersionResponsePrivate::parseDeleteTableVersionResponse(QXmlStreamReader &xml)
 {

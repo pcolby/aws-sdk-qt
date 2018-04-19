@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * UpdatePolicyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UpdatePolicyRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a UpdatePolicyRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 UpdatePolicyRequestPrivate::UpdatePolicyRequestPrivate(
     const OrganizationsRequest::Action action, UpdatePolicyRequest * const q)

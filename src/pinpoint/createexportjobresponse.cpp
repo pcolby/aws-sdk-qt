@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::CreateExportJobResponse
- *
  * \brief The CreateExportJobResponse class provides an interace for Pinpoint CreateExportJob responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::createExportJob
  */
 
 /*!
- * @brief  Constructs a new CreateExportJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateExportJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateExportJobResponse::CreateExportJobResponse(
         const CreateExportJobRequest &request,
@@ -55,6 +50,9 @@ CreateExportJobResponse::CreateExportJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateExportJobRequest * CreateExportJobResponse::request() const
 {
     Q_D(const CreateExportJobResponse);
@@ -62,9 +60,8 @@ const CreateExportJobRequest * CreateExportJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint CreateExportJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint CreateExportJob \a response.
  */
 void CreateExportJobResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateExportJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::CreateExportJobResponsePrivate
+ * \brief The CreateExportJobResponsePrivate class provides private implementation for CreateExportJobResponse.
  * \internal
  *
- * \class CreateExportJobResponsePrivate
- *
- * \brief Private implementation for CreateExportJobResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateExportJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateExportJobResponse instance.
+ * Constructs a CreateExportJobResponsePrivate object with public implementation \a q.
  */
 CreateExportJobResponsePrivate::CreateExportJobResponsePrivate(
     CreateExportJobResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateExportJobResponsePrivate::CreateExportJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint CreateExportJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint CreateExportJob response element from \a xml.
  */
 void CreateExportJobResponsePrivate::parseCreateExportJobResponse(QXmlStreamReader &xml)
 {

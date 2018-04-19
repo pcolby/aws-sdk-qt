@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DescribeDestinationsResponse
- *
  * \brief The DescribeDestinationsResponse class provides an interace for CloudWatchLogs DescribeDestinations responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DescribeDestinationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDestinationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDestinationsResponse::DescribeDestinationsResponse(
         const DescribeDestinationsRequest &request,
@@ -84,6 +79,9 @@ DescribeDestinationsResponse::DescribeDestinationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDestinationsRequest * DescribeDestinationsResponse::request() const
 {
     Q_D(const DescribeDestinationsResponse);
@@ -91,9 +89,8 @@ const DescribeDestinationsRequest * DescribeDestinationsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DescribeDestinations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DescribeDestinations \a response.
  */
 void DescribeDestinationsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeDestinationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DescribeDestinationsResponsePrivate
+ * \brief The DescribeDestinationsResponsePrivate class provides private implementation for DescribeDestinationsResponse.
  * \internal
  *
- * \class DescribeDestinationsResponsePrivate
- *
- * \brief Private implementation for DescribeDestinationsResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDestinationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDestinationsResponse instance.
+ * Constructs a DescribeDestinationsResponsePrivate object with public implementation \a q.
  */
 DescribeDestinationsResponsePrivate::DescribeDestinationsResponsePrivate(
     DescribeDestinationsResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeDestinationsResponsePrivate::DescribeDestinationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DescribeDestinationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DescribeDestinations response element from \a xml.
  */
 void DescribeDestinationsResponsePrivate::parseDescribeDestinationsResponse(QXmlStreamReader &xml)
 {

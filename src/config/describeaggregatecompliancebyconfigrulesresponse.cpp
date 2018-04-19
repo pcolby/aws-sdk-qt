@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeAggregateComplianceByConfigRulesResponse
- *
  * \brief The DescribeAggregateComplianceByConfigRulesResponse class provides an interace for ConfigService DescribeAggregateComplianceByConfigRules responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeAggregateComplianceByConfigRulesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAggregateComplianceByConfigRulesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAggregateComplianceByConfigRulesResponse::DescribeAggregateComplianceByConfigRulesResponse(
         const DescribeAggregateComplianceByConfigRulesRequest &request,
@@ -78,6 +73,9 @@ DescribeAggregateComplianceByConfigRulesResponse::DescribeAggregateComplianceByC
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAggregateComplianceByConfigRulesRequest * DescribeAggregateComplianceByConfigRulesResponse::request() const
 {
     Q_D(const DescribeAggregateComplianceByConfigRulesResponse);
@@ -85,9 +83,8 @@ const DescribeAggregateComplianceByConfigRulesRequest * DescribeAggregateComplia
 }
 
 /*!
- * @brief  Parse a ConfigService DescribeAggregateComplianceByConfigRules response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribeAggregateComplianceByConfigRules \a response.
  */
 void DescribeAggregateComplianceByConfigRulesResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeAggregateComplianceByConfigRulesResponse::parseSuccess(QIODevice &r
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribeAggregateComplianceByConfigRulesResponsePrivate
+ * \brief The DescribeAggregateComplianceByConfigRulesResponsePrivate class provides private implementation for DescribeAggregateComplianceByConfigRulesResponse.
  * \internal
  *
- * \class DescribeAggregateComplianceByConfigRulesResponsePrivate
- *
- * \brief Private implementation for DescribeAggregateComplianceByConfigRulesResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAggregateComplianceByConfigRulesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAggregateComplianceByConfigRulesResponse instance.
+ * Constructs a DescribeAggregateComplianceByConfigRulesResponsePrivate object with public implementation \a q.
  */
 DescribeAggregateComplianceByConfigRulesResponsePrivate::DescribeAggregateComplianceByConfigRulesResponsePrivate(
     DescribeAggregateComplianceByConfigRulesResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeAggregateComplianceByConfigRulesResponsePrivate::DescribeAggregateCompli
 }
 
 /*!
- * @brief  Parse an ConfigService DescribeAggregateComplianceByConfigRulesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribeAggregateComplianceByConfigRules response element from \a xml.
  */
 void DescribeAggregateComplianceByConfigRulesResponsePrivate::parseDescribeAggregateComplianceByConfigRulesResponse(QXmlStreamReader &xml)
 {

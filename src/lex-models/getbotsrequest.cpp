@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetBotsRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a GetBotsRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a GetBotsRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 GetBotsRequestPrivate::GetBotsRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, GetBotsRequest * const q)

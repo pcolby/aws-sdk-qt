@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetOperationResponse
- *
  * \brief The GetOperationResponse class provides an interace for Lightsail GetOperation responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetOperationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetOperationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetOperationResponse::GetOperationResponse(
         const GetOperationRequest &request,
@@ -71,6 +66,9 @@ GetOperationResponse::GetOperationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetOperationRequest * GetOperationResponse::request() const
 {
     Q_D(const GetOperationResponse);
@@ -78,9 +76,8 @@ const GetOperationRequest * GetOperationResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetOperation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetOperation \a response.
  */
 void GetOperationResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetOperationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetOperationResponsePrivate
+ * \brief The GetOperationResponsePrivate class provides private implementation for GetOperationResponse.
  * \internal
  *
- * \class GetOperationResponsePrivate
- *
- * \brief Private implementation for GetOperationResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOperationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetOperationResponse instance.
+ * Constructs a GetOperationResponsePrivate object with public implementation \a q.
  */
 GetOperationResponsePrivate::GetOperationResponsePrivate(
     GetOperationResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetOperationResponsePrivate::GetOperationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetOperationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetOperation response element from \a xml.
  */
 void GetOperationResponsePrivate::parseGetOperationResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ResetDeploymentsResponse
- *
  * \brief The ResetDeploymentsResponse class provides an interace for Greengrass ResetDeployments responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ResetDeploymentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetDeploymentsResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetDeploymentsResponse::ResetDeploymentsResponse(
         const ResetDeploymentsRequest &request,
@@ -58,6 +53,9 @@ ResetDeploymentsResponse::ResetDeploymentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetDeploymentsRequest * ResetDeploymentsResponse::request() const
 {
     Q_D(const ResetDeploymentsResponse);
@@ -65,9 +63,8 @@ const ResetDeploymentsRequest * ResetDeploymentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass ResetDeployments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass ResetDeployments \a response.
  */
 void ResetDeploymentsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ResetDeploymentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::ResetDeploymentsResponsePrivate
+ * \brief The ResetDeploymentsResponsePrivate class provides private implementation for ResetDeploymentsResponse.
  * \internal
  *
- * \class ResetDeploymentsResponsePrivate
- *
- * \brief Private implementation for ResetDeploymentsResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetDeploymentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetDeploymentsResponse instance.
+ * Constructs a ResetDeploymentsResponsePrivate object with public implementation \a q.
  */
 ResetDeploymentsResponsePrivate::ResetDeploymentsResponsePrivate(
     ResetDeploymentsResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ ResetDeploymentsResponsePrivate::ResetDeploymentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass ResetDeploymentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass ResetDeployments response element from \a xml.
  */
 void ResetDeploymentsResponsePrivate::parseResetDeploymentsResponse(QXmlStreamReader &xml)
 {

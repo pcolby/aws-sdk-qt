@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateResourceServerResponse
- *
  * \brief The CreateResourceServerResponse class provides an interace for CognitoIdentityProvider CreateResourceServer responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateResourceServerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateResourceServerResponse::CreateResourceServerResponse(
         const CreateResourceServerRequest &request,
@@ -65,6 +60,9 @@ CreateResourceServerResponse::CreateResourceServerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateResourceServerRequest * CreateResourceServerResponse::request() const
 {
     Q_D(const CreateResourceServerResponse);
@@ -72,9 +70,8 @@ const CreateResourceServerRequest * CreateResourceServerResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider CreateResourceServer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider CreateResourceServer \a response.
  */
 void CreateResourceServerResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void CreateResourceServerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::CreateResourceServerResponsePrivate
+ * \brief The CreateResourceServerResponsePrivate class provides private implementation for CreateResourceServerResponse.
  * \internal
  *
- * \class CreateResourceServerResponsePrivate
- *
- * \brief Private implementation for CreateResourceServerResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceServerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateResourceServerResponse instance.
+ * Constructs a CreateResourceServerResponsePrivate object with public implementation \a q.
  */
 CreateResourceServerResponsePrivate::CreateResourceServerResponsePrivate(
     CreateResourceServerResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ CreateResourceServerResponsePrivate::CreateResourceServerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider CreateResourceServerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider CreateResourceServer response element from \a xml.
  */
 void CreateResourceServerResponsePrivate::parseCreateResourceServerResponse(QXmlStreamReader &xml)
 {

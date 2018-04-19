@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListUserImportJobsResponse : public CognitoIdentityProviderRe
 public:
     ListUserImportJobsResponse(const ListUserImportJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListUserImportJobsRequest * request() const;
+    virtual const ListUserImportJobsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListUserImportJobsResponse)

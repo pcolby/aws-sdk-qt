@@ -34,10 +34,10 @@ class QTAWS_EXPORT RebootClusterResponse : public RedshiftResponse {
 public:
     RebootClusterResponse(const RebootClusterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RebootClusterRequest * request() const;
+    virtual const RebootClusterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RebootClusterResponse)

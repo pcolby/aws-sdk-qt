@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteVocabularyResponse : public TranscribeServiceResponse {
 public:
     DeleteVocabularyResponse(const DeleteVocabularyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteVocabularyRequest * request() const;
+    virtual const DeleteVocabularyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteVocabularyResponse)

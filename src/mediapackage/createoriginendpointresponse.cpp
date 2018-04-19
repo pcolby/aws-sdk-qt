@@ -29,21 +29,16 @@ namespace MediaPackage {
 
 /*!
  * \class QtAws::MediaPackage::CreateOriginEndpointResponse
- *
  * \brief The CreateOriginEndpointResponse class provides an interace for MediaPackage CreateOriginEndpoint responses.
  *
- * \ingroup MediaPackage
+ * \inmodule QtAwsMediaPackage
  *
  *
  * \sa MediaPackageClient::createOriginEndpoint
  */
 
 /*!
- * @brief  Constructs a new CreateOriginEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateOriginEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateOriginEndpointResponse::CreateOriginEndpointResponse(
         const CreateOriginEndpointRequest &request,
@@ -55,6 +50,9 @@ CreateOriginEndpointResponse::CreateOriginEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateOriginEndpointRequest * CreateOriginEndpointResponse::request() const
 {
     Q_D(const CreateOriginEndpointResponse);
@@ -62,9 +60,8 @@ const CreateOriginEndpointRequest * CreateOriginEndpointResponse::request() cons
 }
 
 /*!
- * @brief  Parse a MediaPackage CreateOriginEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaPackage CreateOriginEndpoint \a response.
  */
 void CreateOriginEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateOriginEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaPackage::CreateOriginEndpointResponsePrivate
+ * \brief The CreateOriginEndpointResponsePrivate class provides private implementation for CreateOriginEndpointResponse.
  * \internal
  *
- * \class CreateOriginEndpointResponsePrivate
- *
- * \brief Private implementation for CreateOriginEndpointResponse.
+ * \inmodule QtAwsMediaPackage
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOriginEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateOriginEndpointResponse instance.
+ * Constructs a CreateOriginEndpointResponsePrivate object with public implementation \a q.
  */
 CreateOriginEndpointResponsePrivate::CreateOriginEndpointResponsePrivate(
     CreateOriginEndpointResponse * const q) : MediaPackageResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateOriginEndpointResponsePrivate::CreateOriginEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaPackage CreateOriginEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaPackage CreateOriginEndpoint response element from \a xml.
  */
 void CreateOriginEndpointResponsePrivate::parseCreateOriginEndpointResponse(QXmlStreamReader &xml)
 {

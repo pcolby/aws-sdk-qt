@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketEncryptionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetBucketEncryptionRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketEncryptionRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketEncryptionRequestPrivate::GetBucketEncryptionRequestPrivate(
     const S3Request::Action action, GetBucketEncryptionRequest * const q)

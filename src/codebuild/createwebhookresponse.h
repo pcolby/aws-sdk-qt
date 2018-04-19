@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateWebhookResponse : public CodeBuildResponse {
 public:
     CreateWebhookResponse(const CreateWebhookRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateWebhookRequest * request() const;
+    virtual const CreateWebhookRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateWebhookResponse)

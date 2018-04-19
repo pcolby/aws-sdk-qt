@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ListRolesRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ListRolesRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ListRolesRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ListRolesRequestPrivate::ListRolesRequestPrivate(
     const IAMRequest::Action action, ListRolesRequest * const q)

@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetTrafficPolicyInstanceCountResponse
- *
  * \brief The GetTrafficPolicyInstanceCountResponse class provides an interace for Route53 GetTrafficPolicyInstanceCount responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getTrafficPolicyInstanceCount
  */
 
 /*!
- * @brief  Constructs a new GetTrafficPolicyInstanceCountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTrafficPolicyInstanceCountResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTrafficPolicyInstanceCountResponse::GetTrafficPolicyInstanceCountResponse(
         const GetTrafficPolicyInstanceCountRequest &request,
@@ -55,6 +50,9 @@ GetTrafficPolicyInstanceCountResponse::GetTrafficPolicyInstanceCountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTrafficPolicyInstanceCountRequest * GetTrafficPolicyInstanceCountResponse::request() const
 {
     Q_D(const GetTrafficPolicyInstanceCountResponse);
@@ -62,9 +60,8 @@ const GetTrafficPolicyInstanceCountRequest * GetTrafficPolicyInstanceCountRespon
 }
 
 /*!
- * @brief  Parse a Route53 GetTrafficPolicyInstanceCount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetTrafficPolicyInstanceCount \a response.
  */
 void GetTrafficPolicyInstanceCountResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetTrafficPolicyInstanceCountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetTrafficPolicyInstanceCountResponsePrivate
+ * \brief The GetTrafficPolicyInstanceCountResponsePrivate class provides private implementation for GetTrafficPolicyInstanceCountResponse.
  * \internal
  *
- * \class GetTrafficPolicyInstanceCountResponsePrivate
- *
- * \brief Private implementation for GetTrafficPolicyInstanceCountResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTrafficPolicyInstanceCountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTrafficPolicyInstanceCountResponse instance.
+ * Constructs a GetTrafficPolicyInstanceCountResponsePrivate object with public implementation \a q.
  */
 GetTrafficPolicyInstanceCountResponsePrivate::GetTrafficPolicyInstanceCountResponsePrivate(
     GetTrafficPolicyInstanceCountResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetTrafficPolicyInstanceCountResponsePrivate::GetTrafficPolicyInstanceCountRespo
 }
 
 /*!
- * @brief  Parse an Route53 GetTrafficPolicyInstanceCountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetTrafficPolicyInstanceCount response element from \a xml.
  */
 void GetTrafficPolicyInstanceCountResponsePrivate::parseGetTrafficPolicyInstanceCountResponse(QXmlStreamReader &xml)
 {

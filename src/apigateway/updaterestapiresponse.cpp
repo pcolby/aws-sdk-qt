@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateRestApiResponse
- *
  * \brief The UpdateRestApiResponse class provides an interace for APIGateway UpdateRestApi responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateRestApiResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRestApiResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRestApiResponse::UpdateRestApiResponse(
         const UpdateRestApiRequest &request,
@@ -60,6 +55,9 @@ UpdateRestApiResponse::UpdateRestApiResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRestApiRequest * UpdateRestApiResponse::request() const
 {
     Q_D(const UpdateRestApiResponse);
@@ -67,9 +65,8 @@ const UpdateRestApiRequest * UpdateRestApiResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateRestApi response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateRestApi \a response.
  */
 void UpdateRestApiResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateRestApiResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateRestApiResponsePrivate
+ * \brief The UpdateRestApiResponsePrivate class provides private implementation for UpdateRestApiResponse.
  * \internal
  *
- * \class UpdateRestApiResponsePrivate
- *
- * \brief Private implementation for UpdateRestApiResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRestApiResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRestApiResponse instance.
+ * Constructs a UpdateRestApiResponsePrivate object with public implementation \a q.
  */
 UpdateRestApiResponsePrivate::UpdateRestApiResponsePrivate(
     UpdateRestApiResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateRestApiResponsePrivate::UpdateRestApiResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateRestApiResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateRestApi response element from \a xml.
  */
 void UpdateRestApiResponsePrivate::parseUpdateRestApiResponse(QXmlStreamReader &xml)
 {

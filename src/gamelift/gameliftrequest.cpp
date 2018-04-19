@@ -104,7 +104,7 @@ namespace GameLift {
  */
 
 /*!
- * Constructs a[n] GameLiftRequest object for GameLift \a action.
+ * Constructs a GameLiftRequest object for GameLift \a action.
  */
 GameLiftRequest::GameLiftRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new GameLiftRequestPrivate(action, this))
@@ -304,8 +304,8 @@ QNetworkRequest GameLiftRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a GameLiftRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a GameLiftRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 GameLiftRequestPrivate::GameLiftRequestPrivate(const GameLiftRequest::Action action, GameLiftRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

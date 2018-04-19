@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DescribeGroupResponse
- *
  * \brief The DescribeGroupResponse class provides an interace for WorkMail DescribeGroup responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DescribeGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeGroupResponse::DescribeGroupResponse(
         const DescribeGroupRequest &request,
@@ -88,6 +83,9 @@ DescribeGroupResponse::DescribeGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeGroupRequest * DescribeGroupResponse::request() const
 {
     Q_D(const DescribeGroupResponse);
@@ -95,9 +93,8 @@ const DescribeGroupRequest * DescribeGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail DescribeGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail DescribeGroup \a response.
  */
 void DescribeGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DescribeGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::DescribeGroupResponsePrivate
+ * \brief The DescribeGroupResponsePrivate class provides private implementation for DescribeGroupResponse.
  * \internal
  *
- * \class DescribeGroupResponsePrivate
- *
- * \brief Private implementation for DescribeGroupResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeGroupResponse instance.
+ * Constructs a DescribeGroupResponsePrivate object with public implementation \a q.
  */
 DescribeGroupResponsePrivate::DescribeGroupResponsePrivate(
     DescribeGroupResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ DescribeGroupResponsePrivate::DescribeGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail DescribeGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail DescribeGroup response element from \a xml.
  */
 void DescribeGroupResponsePrivate::parseDescribeGroupResponse(QXmlStreamReader &xml)
 {

@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEcsClustersRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeEcsClustersRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEcsClustersRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeEcsClustersRequestPrivate::DescribeEcsClustersRequestPrivate(
     const OpsWorksRequest::Action action, DescribeEcsClustersRequest * const q)

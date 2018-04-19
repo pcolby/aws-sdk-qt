@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCommitResponse : public CodeCommitResponse {
 public:
     GetCommitResponse(const GetCommitRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCommitRequest * request() const;
+    virtual const GetCommitRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCommitResponse)

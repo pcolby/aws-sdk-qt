@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDomainRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteDomainRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDomainRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
     const LightsailRequest::Action action, DeleteDomainRequest * const q)

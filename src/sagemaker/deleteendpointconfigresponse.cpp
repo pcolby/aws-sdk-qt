@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DeleteEndpointConfigResponse
- *
  * \brief The DeleteEndpointConfigResponse class provides an interace for SageMaker DeleteEndpointConfig responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::deleteEndpointConfig
  */
 
 /*!
- * @brief  Constructs a new DeleteEndpointConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEndpointConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEndpointConfigResponse::DeleteEndpointConfigResponse(
         const DeleteEndpointConfigRequest &request,
@@ -55,6 +50,9 @@ DeleteEndpointConfigResponse::DeleteEndpointConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEndpointConfigRequest * DeleteEndpointConfigResponse::request() const
 {
     Q_D(const DeleteEndpointConfigResponse);
@@ -62,9 +60,8 @@ const DeleteEndpointConfigRequest * DeleteEndpointConfigResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SageMaker DeleteEndpointConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker DeleteEndpointConfig \a response.
  */
 void DeleteEndpointConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteEndpointConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::DeleteEndpointConfigResponsePrivate
+ * \brief The DeleteEndpointConfigResponsePrivate class provides private implementation for DeleteEndpointConfigResponse.
  * \internal
  *
- * \class DeleteEndpointConfigResponsePrivate
- *
- * \brief Private implementation for DeleteEndpointConfigResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEndpointConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEndpointConfigResponse instance.
+ * Constructs a DeleteEndpointConfigResponsePrivate object with public implementation \a q.
  */
 DeleteEndpointConfigResponsePrivate::DeleteEndpointConfigResponsePrivate(
     DeleteEndpointConfigResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteEndpointConfigResponsePrivate::DeleteEndpointConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker DeleteEndpointConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker DeleteEndpointConfig response element from \a xml.
  */
 void DeleteEndpointConfigResponsePrivate::parseDeleteEndpointConfigResponse(QXmlStreamReader &xml)
 {

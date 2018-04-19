@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * ListGraphqlApisRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ListGraphqlApisRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a ListGraphqlApisRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 ListGraphqlApisRequestPrivate::ListGraphqlApisRequestPrivate(
     const AppSyncRequest::Action action, ListGraphqlApisRequest * const q)

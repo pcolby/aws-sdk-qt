@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeregisterTargetsResponse : public ElasticLoadBalancingv2Resp
 public:
     DeregisterTargetsResponse(const DeregisterTargetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeregisterTargetsRequest * request() const;
+    virtual const DeregisterTargetsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeregisterTargetsResponse)

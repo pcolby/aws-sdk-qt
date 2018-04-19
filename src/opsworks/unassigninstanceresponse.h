@@ -34,10 +34,10 @@ class QTAWS_EXPORT UnassignInstanceResponse : public OpsWorksResponse {
 public:
     UnassignInstanceResponse(const UnassignInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UnassignInstanceRequest * request() const;
+    virtual const UnassignInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UnassignInstanceResponse)

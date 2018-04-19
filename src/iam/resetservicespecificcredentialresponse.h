@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResetServiceSpecificCredentialResponse : public IAMResponse {
 public:
     ResetServiceSpecificCredentialResponse(const ResetServiceSpecificCredentialRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResetServiceSpecificCredentialRequest * request() const;
+    virtual const ResetServiceSpecificCredentialRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResetServiceSpecificCredentialResponse)

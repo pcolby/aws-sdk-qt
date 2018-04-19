@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateGatewaySoftwareNowResponse
- *
  * \brief The UpdateGatewaySoftwareNowResponse class provides an interace for StorageGateway UpdateGatewaySoftwareNow responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateGatewaySoftwareNowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateGatewaySoftwareNowResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateGatewaySoftwareNowResponse::UpdateGatewaySoftwareNowResponse(
         const UpdateGatewaySoftwareNowRequest &request,
@@ -124,6 +119,9 @@ UpdateGatewaySoftwareNowResponse::UpdateGatewaySoftwareNowResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateGatewaySoftwareNowRequest * UpdateGatewaySoftwareNowResponse::request() const
 {
     Q_D(const UpdateGatewaySoftwareNowResponse);
@@ -131,9 +129,8 @@ const UpdateGatewaySoftwareNowRequest * UpdateGatewaySoftwareNowResponse::reques
 }
 
 /*!
- * @brief  Parse a StorageGateway UpdateGatewaySoftwareNow response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway UpdateGatewaySoftwareNow \a response.
  */
 void UpdateGatewaySoftwareNowResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void UpdateGatewaySoftwareNowResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::UpdateGatewaySoftwareNowResponsePrivate
+ * \brief The UpdateGatewaySoftwareNowResponsePrivate class provides private implementation for UpdateGatewaySoftwareNowResponse.
  * \internal
  *
- * \class UpdateGatewaySoftwareNowResponsePrivate
- *
- * \brief Private implementation for UpdateGatewaySoftwareNowResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGatewaySoftwareNowResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateGatewaySoftwareNowResponse instance.
+ * Constructs a UpdateGatewaySoftwareNowResponsePrivate object with public implementation \a q.
  */
 UpdateGatewaySoftwareNowResponsePrivate::UpdateGatewaySoftwareNowResponsePrivate(
     UpdateGatewaySoftwareNowResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ UpdateGatewaySoftwareNowResponsePrivate::UpdateGatewaySoftwareNowResponsePrivate
 }
 
 /*!
- * @brief  Parse an StorageGateway UpdateGatewaySoftwareNowResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway UpdateGatewaySoftwareNow response element from \a xml.
  */
 void UpdateGatewaySoftwareNowResponsePrivate::parseUpdateGatewaySoftwareNowResponse(QXmlStreamReader &xml)
 {

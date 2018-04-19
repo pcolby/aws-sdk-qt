@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AddClientIDToOpenIDConnectProviderResponse
- *
  * \brief The AddClientIDToOpenIDConnectProviderResponse class provides an interace for IAM AddClientIDToOpenIDConnectProvider responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AddClientIDToOpenIDConnectProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddClientIDToOpenIDConnectProviderResponse object for \a reply to \a request, with parent \a parent.
  */
 AddClientIDToOpenIDConnectProviderResponse::AddClientIDToOpenIDConnectProviderResponse(
         const AddClientIDToOpenIDConnectProviderRequest &request,
@@ -120,6 +115,9 @@ AddClientIDToOpenIDConnectProviderResponse::AddClientIDToOpenIDConnectProviderRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddClientIDToOpenIDConnectProviderRequest * AddClientIDToOpenIDConnectProviderResponse::request() const
 {
     Q_D(const AddClientIDToOpenIDConnectProviderResponse);
@@ -127,9 +125,8 @@ const AddClientIDToOpenIDConnectProviderRequest * AddClientIDToOpenIDConnectProv
 }
 
 /*!
- * @brief  Parse a IAM AddClientIDToOpenIDConnectProvider response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM AddClientIDToOpenIDConnectProvider \a response.
  */
 void AddClientIDToOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void AddClientIDToOpenIDConnectProviderResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::IAM::AddClientIDToOpenIDConnectProviderResponsePrivate
+ * \brief The AddClientIDToOpenIDConnectProviderResponsePrivate class provides private implementation for AddClientIDToOpenIDConnectProviderResponse.
  * \internal
  *
- * \class AddClientIDToOpenIDConnectProviderResponsePrivate
- *
- * \brief Private implementation for AddClientIDToOpenIDConnectProviderResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddClientIDToOpenIDConnectProviderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddClientIDToOpenIDConnectProviderResponse instance.
+ * Constructs a AddClientIDToOpenIDConnectProviderResponsePrivate object with public implementation \a q.
  */
 AddClientIDToOpenIDConnectProviderResponsePrivate::AddClientIDToOpenIDConnectProviderResponsePrivate(
     AddClientIDToOpenIDConnectProviderResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ AddClientIDToOpenIDConnectProviderResponsePrivate::AddClientIDToOpenIDConnectPro
 }
 
 /*!
- * @brief  Parse an IAM AddClientIDToOpenIDConnectProviderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM AddClientIDToOpenIDConnectProvider response element from \a xml.
  */
 void AddClientIDToOpenIDConnectProviderResponsePrivate::parseAddClientIDToOpenIDConnectProviderResponse(QXmlStreamReader &xml)
 {

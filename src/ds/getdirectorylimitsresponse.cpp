@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::GetDirectoryLimitsResponse
- *
  * \brief The GetDirectoryLimitsResponse class provides an interace for DirectoryService GetDirectoryLimits responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new GetDirectoryLimitsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDirectoryLimitsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDirectoryLimitsResponse::GetDirectoryLimitsResponse(
         const GetDirectoryLimitsRequest &request,
@@ -69,6 +64,9 @@ GetDirectoryLimitsResponse::GetDirectoryLimitsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDirectoryLimitsRequest * GetDirectoryLimitsResponse::request() const
 {
     Q_D(const GetDirectoryLimitsResponse);
@@ -76,9 +74,8 @@ const GetDirectoryLimitsRequest * GetDirectoryLimitsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService GetDirectoryLimits response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService GetDirectoryLimits \a response.
  */
 void GetDirectoryLimitsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void GetDirectoryLimitsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::GetDirectoryLimitsResponsePrivate
+ * \brief The GetDirectoryLimitsResponsePrivate class provides private implementation for GetDirectoryLimitsResponse.
  * \internal
  *
- * \class GetDirectoryLimitsResponsePrivate
- *
- * \brief Private implementation for GetDirectoryLimitsResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDirectoryLimitsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDirectoryLimitsResponse instance.
+ * Constructs a GetDirectoryLimitsResponsePrivate object with public implementation \a q.
  */
 GetDirectoryLimitsResponsePrivate::GetDirectoryLimitsResponsePrivate(
     GetDirectoryLimitsResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ GetDirectoryLimitsResponsePrivate::GetDirectoryLimitsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService GetDirectoryLimitsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService GetDirectoryLimits response element from \a xml.
  */
 void GetDirectoryLimitsResponsePrivate::parseGetDirectoryLimitsResponse(QXmlStreamReader &xml)
 {

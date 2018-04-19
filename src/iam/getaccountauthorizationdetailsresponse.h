@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAccountAuthorizationDetailsResponse : public IAMResponse {
 public:
     GetAccountAuthorizationDetailsResponse(const GetAccountAuthorizationDetailsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAccountAuthorizationDetailsRequest * request() const;
+    virtual const GetAccountAuthorizationDetailsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetAccountAuthorizationDetailsResponse)

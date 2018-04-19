@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::UpdateExpirationForHITResponse
- *
  * \brief The UpdateExpirationForHITResponse class provides an interace for MTurk UpdateExpirationForHIT responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::updateExpirationForHIT
  */
 
 /*!
- * @brief  Constructs a new UpdateExpirationForHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateExpirationForHITResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateExpirationForHITResponse::UpdateExpirationForHITResponse(
         const UpdateExpirationForHITRequest &request,
@@ -55,6 +50,9 @@ UpdateExpirationForHITResponse::UpdateExpirationForHITResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateExpirationForHITRequest * UpdateExpirationForHITResponse::request() const
 {
     Q_D(const UpdateExpirationForHITResponse);
@@ -62,9 +60,8 @@ const UpdateExpirationForHITRequest * UpdateExpirationForHITResponse::request() 
 }
 
 /*!
- * @brief  Parse a MTurk UpdateExpirationForHIT response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk UpdateExpirationForHIT \a response.
  */
 void UpdateExpirationForHITResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateExpirationForHITResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::UpdateExpirationForHITResponsePrivate
+ * \brief The UpdateExpirationForHITResponsePrivate class provides private implementation for UpdateExpirationForHITResponse.
  * \internal
  *
- * \class UpdateExpirationForHITResponsePrivate
- *
- * \brief Private implementation for UpdateExpirationForHITResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateExpirationForHITResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateExpirationForHITResponse instance.
+ * Constructs a UpdateExpirationForHITResponsePrivate object with public implementation \a q.
  */
 UpdateExpirationForHITResponsePrivate::UpdateExpirationForHITResponsePrivate(
     UpdateExpirationForHITResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateExpirationForHITResponsePrivate::UpdateExpirationForHITResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk UpdateExpirationForHITResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk UpdateExpirationForHIT response element from \a xml.
  */
 void UpdateExpirationForHITResponsePrivate::parseUpdateExpirationForHITResponse(QXmlStreamReader &xml)
 {

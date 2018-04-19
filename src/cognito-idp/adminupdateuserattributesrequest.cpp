@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminUpdateUserAttributesRequest::response(QN
  */
 
 /*!
- *
- * Constructs a AdminUpdateUserAttributesRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminUpdateUserAttributesRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminUpdateUserAttributesRequestPrivate::AdminUpdateUserAttributesRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminUpdateUserAttributesRequest * const q)

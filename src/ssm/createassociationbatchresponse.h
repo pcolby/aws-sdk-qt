@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateAssociationBatchResponse : public SSMResponse {
 public:
     CreateAssociationBatchResponse(const CreateAssociationBatchRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateAssociationBatchRequest * request() const;
+    virtual const CreateAssociationBatchRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateAssociationBatchResponse)

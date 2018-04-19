@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeleteNotificationConfigurationResponse
- *
  * \brief The DeleteNotificationConfigurationResponse class provides an interace for AutoScaling DeleteNotificationConfiguration responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteNotificationConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNotificationConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNotificationConfigurationResponse::DeleteNotificationConfigurationResponse(
         const DeleteNotificationConfigurationRequest &request,
@@ -60,6 +55,9 @@ DeleteNotificationConfigurationResponse::DeleteNotificationConfigurationResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNotificationConfigurationRequest * DeleteNotificationConfigurationResponse::request() const
 {
     Q_D(const DeleteNotificationConfigurationResponse);
@@ -67,9 +65,8 @@ const DeleteNotificationConfigurationRequest * DeleteNotificationConfigurationRe
 }
 
 /*!
- * @brief  Parse a AutoScaling DeleteNotificationConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DeleteNotificationConfiguration \a response.
  */
 void DeleteNotificationConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteNotificationConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DeleteNotificationConfigurationResponsePrivate
+ * \brief The DeleteNotificationConfigurationResponsePrivate class provides private implementation for DeleteNotificationConfigurationResponse.
  * \internal
  *
- * \class DeleteNotificationConfigurationResponsePrivate
- *
- * \brief Private implementation for DeleteNotificationConfigurationResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNotificationConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNotificationConfigurationResponse instance.
+ * Constructs a DeleteNotificationConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteNotificationConfigurationResponsePrivate::DeleteNotificationConfigurationResponsePrivate(
     DeleteNotificationConfigurationResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteNotificationConfigurationResponsePrivate::DeleteNotificationConfigurationR
 }
 
 /*!
- * @brief  Parse an AutoScaling DeleteNotificationConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DeleteNotificationConfiguration response element from \a xml.
  */
 void DeleteNotificationConfigurationResponsePrivate::parseDeleteNotificationConfigurationResponse(QXmlStreamReader &xml)
 {

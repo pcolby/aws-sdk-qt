@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteIndexFieldResponse : public CloudSearchResponse {
 public:
     DeleteIndexFieldResponse(const DeleteIndexFieldRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteIndexFieldRequest * request() const;
+    virtual const DeleteIndexFieldRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteIndexFieldResponse)

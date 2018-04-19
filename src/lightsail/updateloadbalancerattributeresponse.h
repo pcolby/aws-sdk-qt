@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateLoadBalancerAttributeResponse : public LightsailRespons
 public:
     UpdateLoadBalancerAttributeResponse(const UpdateLoadBalancerAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateLoadBalancerAttributeRequest * request() const;
+    virtual const UpdateLoadBalancerAttributeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateLoadBalancerAttributeResponse)

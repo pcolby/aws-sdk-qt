@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DefineIndexFieldResponse
- *
  * \brief The DefineIndexFieldResponse class provides an interace for CloudSearch DefineIndexField responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DefineIndexFieldResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DefineIndexFieldResponse object for \a reply to \a request, with parent \a parent.
  */
 DefineIndexFieldResponse::DefineIndexFieldResponse(
         const DefineIndexFieldRequest &request,
@@ -66,6 +61,9 @@ DefineIndexFieldResponse::DefineIndexFieldResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DefineIndexFieldRequest * DefineIndexFieldResponse::request() const
 {
     Q_D(const DefineIndexFieldResponse);
@@ -73,9 +71,8 @@ const DefineIndexFieldRequest * DefineIndexFieldResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch DefineIndexField response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DefineIndexField \a response.
  */
 void DefineIndexFieldResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DefineIndexFieldResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DefineIndexFieldResponsePrivate
+ * \brief The DefineIndexFieldResponsePrivate class provides private implementation for DefineIndexFieldResponse.
  * \internal
  *
- * \class DefineIndexFieldResponsePrivate
- *
- * \brief Private implementation for DefineIndexFieldResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DefineIndexFieldResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DefineIndexFieldResponse instance.
+ * Constructs a DefineIndexFieldResponsePrivate object with public implementation \a q.
  */
 DefineIndexFieldResponsePrivate::DefineIndexFieldResponsePrivate(
     DefineIndexFieldResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DefineIndexFieldResponsePrivate::DefineIndexFieldResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DefineIndexFieldResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DefineIndexField response element from \a xml.
  */
 void DefineIndexFieldResponsePrivate::parseDefineIndexFieldResponse(QXmlStreamReader &xml)
 {

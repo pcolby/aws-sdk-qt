@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetDataflowGraphResponse
- *
  * \brief The GetDataflowGraphResponse class provides an interace for Glue GetDataflowGraph responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetDataflowGraphResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDataflowGraphResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDataflowGraphResponse::GetDataflowGraphResponse(
         const GetDataflowGraphRequest &request,
@@ -58,6 +53,9 @@ GetDataflowGraphResponse::GetDataflowGraphResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDataflowGraphRequest * GetDataflowGraphResponse::request() const
 {
     Q_D(const GetDataflowGraphResponse);
@@ -65,9 +63,8 @@ const GetDataflowGraphRequest * GetDataflowGraphResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetDataflowGraph response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetDataflowGraph \a response.
  */
 void GetDataflowGraphResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetDataflowGraphResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetDataflowGraphResponsePrivate
+ * \brief The GetDataflowGraphResponsePrivate class provides private implementation for GetDataflowGraphResponse.
  * \internal
  *
- * \class GetDataflowGraphResponsePrivate
- *
- * \brief Private implementation for GetDataflowGraphResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDataflowGraphResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDataflowGraphResponse instance.
+ * Constructs a GetDataflowGraphResponsePrivate object with public implementation \a q.
  */
 GetDataflowGraphResponsePrivate::GetDataflowGraphResponsePrivate(
     GetDataflowGraphResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetDataflowGraphResponsePrivate::GetDataflowGraphResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetDataflowGraphResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetDataflowGraph response element from \a xml.
  */
 void GetDataflowGraphResponsePrivate::parseGetDataflowGraphResponse(QXmlStreamReader &xml)
 {

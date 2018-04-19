@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DeleteSubnetGroupResponse
- *
  * \brief The DeleteSubnetGroupResponse class provides an interace for DAX DeleteSubnetGroup responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DeleteSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSubnetGroupResponse::DeleteSubnetGroupResponse(
         const DeleteSubnetGroupRequest &request,
@@ -59,6 +54,9 @@ DeleteSubnetGroupResponse::DeleteSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSubnetGroupRequest * DeleteSubnetGroupResponse::request() const
 {
     Q_D(const DeleteSubnetGroupResponse);
@@ -66,9 +64,8 @@ const DeleteSubnetGroupRequest * DeleteSubnetGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a DAX DeleteSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX DeleteSubnetGroup \a response.
  */
 void DeleteSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::DeleteSubnetGroupResponsePrivate
+ * \brief The DeleteSubnetGroupResponsePrivate class provides private implementation for DeleteSubnetGroupResponse.
  * \internal
  *
- * \class DeleteSubnetGroupResponsePrivate
- *
- * \brief Private implementation for DeleteSubnetGroupResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSubnetGroupResponse instance.
+ * Constructs a DeleteSubnetGroupResponsePrivate object with public implementation \a q.
  */
 DeleteSubnetGroupResponsePrivate::DeleteSubnetGroupResponsePrivate(
     DeleteSubnetGroupResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteSubnetGroupResponsePrivate::DeleteSubnetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX DeleteSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX DeleteSubnetGroup response element from \a xml.
  */
 void DeleteSubnetGroupResponsePrivate::parseDeleteSubnetGroupResponse(QXmlStreamReader &xml)
 {

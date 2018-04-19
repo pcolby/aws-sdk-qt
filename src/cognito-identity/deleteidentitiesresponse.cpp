@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::DeleteIdentitiesResponse
- *
  * \brief The DeleteIdentitiesResponse class provides an interace for CognitoIdentity DeleteIdentities responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new DeleteIdentitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteIdentitiesResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteIdentitiesResponse::DeleteIdentitiesResponse(
         const DeleteIdentitiesRequest &request,
@@ -93,6 +88,9 @@ DeleteIdentitiesResponse::DeleteIdentitiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteIdentitiesRequest * DeleteIdentitiesResponse::request() const
 {
     Q_D(const DeleteIdentitiesResponse);
@@ -100,9 +98,8 @@ const DeleteIdentitiesRequest * DeleteIdentitiesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentity DeleteIdentities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity DeleteIdentities \a response.
  */
 void DeleteIdentitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DeleteIdentitiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::DeleteIdentitiesResponsePrivate
+ * \brief The DeleteIdentitiesResponsePrivate class provides private implementation for DeleteIdentitiesResponse.
  * \internal
  *
- * \class DeleteIdentitiesResponsePrivate
- *
- * \brief Private implementation for DeleteIdentitiesResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIdentitiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteIdentitiesResponse instance.
+ * Constructs a DeleteIdentitiesResponsePrivate object with public implementation \a q.
  */
 DeleteIdentitiesResponsePrivate::DeleteIdentitiesResponsePrivate(
     DeleteIdentitiesResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ DeleteIdentitiesResponsePrivate::DeleteIdentitiesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentity DeleteIdentitiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity DeleteIdentities response element from \a xml.
  */
 void DeleteIdentitiesResponsePrivate::parseDeleteIdentitiesResponse(QXmlStreamReader &xml)
 {

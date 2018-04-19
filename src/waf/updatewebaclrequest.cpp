@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateWebACLRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UpdateWebACLRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a UpdateWebACLRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
     const WAFRequest::Action action, UpdateWebACLRequest * const q)

@@ -29,10 +29,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::StartTopicsDetectionJobResponse
- *
  * \brief The StartTopicsDetectionJobResponse class provides an interace for Comprehend StartTopicsDetectionJob responses.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -42,11 +41,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new StartTopicsDetectionJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartTopicsDetectionJobResponse object for \a reply to \a request, with parent \a parent.
  */
 StartTopicsDetectionJobResponse::StartTopicsDetectionJobResponse(
         const StartTopicsDetectionJobRequest &request,
@@ -58,6 +53,9 @@ StartTopicsDetectionJobResponse::StartTopicsDetectionJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartTopicsDetectionJobRequest * StartTopicsDetectionJobResponse::request() const
 {
     Q_D(const StartTopicsDetectionJobResponse);
@@ -65,9 +63,8 @@ const StartTopicsDetectionJobRequest * StartTopicsDetectionJobResponse::request(
 }
 
 /*!
- * @brief  Parse a Comprehend StartTopicsDetectionJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Comprehend StartTopicsDetectionJob \a response.
  */
 void StartTopicsDetectionJobResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StartTopicsDetectionJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Comprehend::StartTopicsDetectionJobResponsePrivate
+ * \brief The StartTopicsDetectionJobResponsePrivate class provides private implementation for StartTopicsDetectionJobResponse.
  * \internal
  *
- * \class StartTopicsDetectionJobResponsePrivate
- *
- * \brief Private implementation for StartTopicsDetectionJobResponse.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartTopicsDetectionJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartTopicsDetectionJobResponse instance.
+ * Constructs a StartTopicsDetectionJobResponsePrivate object with public implementation \a q.
  */
 StartTopicsDetectionJobResponsePrivate::StartTopicsDetectionJobResponsePrivate(
     StartTopicsDetectionJobResponse * const q) : ComprehendResponsePrivate(q)
@@ -98,9 +91,7 @@ StartTopicsDetectionJobResponsePrivate::StartTopicsDetectionJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Comprehend StartTopicsDetectionJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Comprehend StartTopicsDetectionJob response element from \a xml.
  */
 void StartTopicsDetectionJobResponsePrivate::parseStartTopicsDetectionJobResponse(QXmlStreamReader &xml)
 {

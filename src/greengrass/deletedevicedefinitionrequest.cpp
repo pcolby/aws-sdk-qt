@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDeviceDefinitionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteDeviceDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDeviceDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 DeleteDeviceDefinitionRequestPrivate::DeleteDeviceDefinitionRequestPrivate(
     const GreengrassRequest::Action action, DeleteDeviceDefinitionRequest * const q)

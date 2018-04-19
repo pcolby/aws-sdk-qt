@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartMatchBackfillResponse : public GameLiftResponse {
 public:
     StartMatchBackfillResponse(const StartMatchBackfillRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartMatchBackfillRequest * request() const;
+    virtual const StartMatchBackfillRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartMatchBackfillResponse)

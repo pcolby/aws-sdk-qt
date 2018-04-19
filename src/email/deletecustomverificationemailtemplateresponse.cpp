@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DeleteCustomVerificationEmailTemplateResponse
- *
  * \brief The DeleteCustomVerificationEmailTemplateResponse class provides an interace for SES DeleteCustomVerificationEmailTemplate responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DeleteCustomVerificationEmailTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCustomVerificationEmailTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCustomVerificationEmailTemplateResponse::DeleteCustomVerificationEmailTemplateResponse(
         const DeleteCustomVerificationEmailTemplateRequest &request,
@@ -66,6 +61,9 @@ DeleteCustomVerificationEmailTemplateResponse::DeleteCustomVerificationEmailTemp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCustomVerificationEmailTemplateRequest * DeleteCustomVerificationEmailTemplateResponse::request() const
 {
     Q_D(const DeleteCustomVerificationEmailTemplateResponse);
@@ -73,9 +71,8 @@ const DeleteCustomVerificationEmailTemplateRequest * DeleteCustomVerificationEma
 }
 
 /*!
- * @brief  Parse a SES DeleteCustomVerificationEmailTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES DeleteCustomVerificationEmailTemplate \a response.
  */
 void DeleteCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::SES::DeleteCustomVerificationEmailTemplateResponsePrivate
+ * \brief The DeleteCustomVerificationEmailTemplateResponsePrivate class provides private implementation for DeleteCustomVerificationEmailTemplateResponse.
  * \internal
  *
- * \class DeleteCustomVerificationEmailTemplateResponsePrivate
- *
- * \brief Private implementation for DeleteCustomVerificationEmailTemplateResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCustomVerificationEmailTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCustomVerificationEmailTemplateResponse instance.
+ * Constructs a DeleteCustomVerificationEmailTemplateResponsePrivate object with public implementation \a q.
  */
 DeleteCustomVerificationEmailTemplateResponsePrivate::DeleteCustomVerificationEmailTemplateResponsePrivate(
     DeleteCustomVerificationEmailTemplateResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteCustomVerificationEmailTemplateResponsePrivate::DeleteCustomVerificationEm
 }
 
 /*!
- * @brief  Parse an SES DeleteCustomVerificationEmailTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES DeleteCustomVerificationEmailTemplate response element from \a xml.
  */
 void DeleteCustomVerificationEmailTemplateResponsePrivate::parseDeleteCustomVerificationEmailTemplateResponse(QXmlStreamReader &xml)
 {

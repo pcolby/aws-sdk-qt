@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::RevokeGrantResponse
- *
  * \brief The RevokeGrantResponse class provides an interace for KMS RevokeGrant responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new RevokeGrantResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RevokeGrantResponse object for \a reply to \a request, with parent \a parent.
  */
 RevokeGrantResponse::RevokeGrantResponse(
         const RevokeGrantRequest &request,
@@ -154,6 +149,9 @@ RevokeGrantResponse::RevokeGrantResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RevokeGrantRequest * RevokeGrantResponse::request() const
 {
     Q_D(const RevokeGrantResponse);
@@ -161,9 +159,8 @@ const RevokeGrantRequest * RevokeGrantResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS RevokeGrant response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS RevokeGrant \a response.
  */
 void RevokeGrantResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void RevokeGrantResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::RevokeGrantResponsePrivate
+ * \brief The RevokeGrantResponsePrivate class provides private implementation for RevokeGrantResponse.
  * \internal
  *
- * \class RevokeGrantResponsePrivate
- *
- * \brief Private implementation for RevokeGrantResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeGrantResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RevokeGrantResponse instance.
+ * Constructs a RevokeGrantResponsePrivate object with public implementation \a q.
  */
 RevokeGrantResponsePrivate::RevokeGrantResponsePrivate(
     RevokeGrantResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ RevokeGrantResponsePrivate::RevokeGrantResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS RevokeGrantResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS RevokeGrant response element from \a xml.
  */
 void RevokeGrantResponsePrivate::parseRevokeGrantResponse(QXmlStreamReader &xml)
 {

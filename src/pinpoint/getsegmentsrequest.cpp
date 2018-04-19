@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetSegmentsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GetSegmentsRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetSegmentsRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetSegmentsRequestPrivate::GetSegmentsRequestPrivate(
     const PinpointRequest::Action action, GetSegmentsRequest * const q)

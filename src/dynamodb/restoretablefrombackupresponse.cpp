@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::RestoreTableFromBackupResponse
- *
  * \brief The RestoreTableFromBackupResponse class provides an interace for DynamoDB RestoreTableFromBackup responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new RestoreTableFromBackupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreTableFromBackupResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreTableFromBackupResponse::RestoreTableFromBackupResponse(
         const RestoreTableFromBackupRequest &request,
@@ -74,6 +69,9 @@ RestoreTableFromBackupResponse::RestoreTableFromBackupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreTableFromBackupRequest * RestoreTableFromBackupResponse::request() const
 {
     Q_D(const RestoreTableFromBackupResponse);
@@ -81,9 +79,8 @@ const RestoreTableFromBackupRequest * RestoreTableFromBackupResponse::request() 
 }
 
 /*!
- * @brief  Parse a DynamoDB RestoreTableFromBackup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB RestoreTableFromBackup \a response.
  */
 void RestoreTableFromBackupResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void RestoreTableFromBackupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::RestoreTableFromBackupResponsePrivate
+ * \brief The RestoreTableFromBackupResponsePrivate class provides private implementation for RestoreTableFromBackupResponse.
  * \internal
  *
- * \class RestoreTableFromBackupResponsePrivate
- *
- * \brief Private implementation for RestoreTableFromBackupResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreTableFromBackupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreTableFromBackupResponse instance.
+ * Constructs a RestoreTableFromBackupResponsePrivate object with public implementation \a q.
  */
 RestoreTableFromBackupResponsePrivate::RestoreTableFromBackupResponsePrivate(
     RestoreTableFromBackupResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ RestoreTableFromBackupResponsePrivate::RestoreTableFromBackupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB RestoreTableFromBackupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB RestoreTableFromBackup response element from \a xml.
  */
 void RestoreTableFromBackupResponsePrivate::parseRestoreTableFromBackupResponse(QXmlStreamReader &xml)
 {

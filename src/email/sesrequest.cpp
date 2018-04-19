@@ -109,7 +109,7 @@ namespace SES {
  */
 
 /*!
- * Constructs a[n] SESRequest object for SES \a action.
+ * Constructs a SESRequest object for SES \a action.
  */
 SESRequest::SESRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SESRequestPrivate(action, this))
@@ -309,8 +309,8 @@ QNetworkRequest SESRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a SESRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a SESRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 SESRequestPrivate::SESRequestPrivate(const SESRequest::Action action, SESRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

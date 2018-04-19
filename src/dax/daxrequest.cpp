@@ -60,7 +60,7 @@ namespace DAX {
  */
 
 /*!
- * Constructs a[n] DAXRequest object for DAX \a action.
+ * Constructs a DAXRequest object for DAX \a action.
  */
 DAXRequest::DAXRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DAXRequestPrivate(action, this))
@@ -260,8 +260,8 @@ QNetworkRequest DAXRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a DAXRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a DAXRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 DAXRequestPrivate::DAXRequestPrivate(const DAXRequest::Action action, DAXRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

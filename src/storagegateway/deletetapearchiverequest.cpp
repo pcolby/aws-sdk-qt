@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTapeArchiveRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteTapeArchiveRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTapeArchiveRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DeleteTapeArchiveRequestPrivate::DeleteTapeArchiveRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteTapeArchiveRequest * const q)

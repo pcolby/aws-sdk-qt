@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListReviewableHITsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListReviewableHITsRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a ListReviewableHITsRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
     const MTurkRequest::Action action, ListReviewableHITsRequest * const q)

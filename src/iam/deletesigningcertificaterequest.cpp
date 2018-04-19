@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSigningCertificateRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteSigningCertificateRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSigningCertificateRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteSigningCertificateRequestPrivate::DeleteSigningCertificateRequestPrivate(
     const IAMRequest::Action action, DeleteSigningCertificateRequest * const q)

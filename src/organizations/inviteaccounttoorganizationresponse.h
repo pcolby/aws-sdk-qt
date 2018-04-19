@@ -34,10 +34,10 @@ class QTAWS_EXPORT InviteAccountToOrganizationResponse : public OrganizationsRes
 public:
     InviteAccountToOrganizationResponse(const InviteAccountToOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const InviteAccountToOrganizationRequest * request() const;
+    virtual const InviteAccountToOrganizationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(InviteAccountToOrganizationResponse)

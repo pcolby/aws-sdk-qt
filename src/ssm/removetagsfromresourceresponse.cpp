@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::RemoveTagsFromResourceResponse
- *
  * \brief The RemoveTagsFromResourceResponse class provides an interace for SSM RemoveTagsFromResource responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveTagsFromResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
         const RemoveTagsFromResourceRequest &request,
@@ -79,6 +74,9 @@ RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() const
 {
     Q_D(const RemoveTagsFromResourceResponse);
@@ -86,9 +84,8 @@ const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() 
 }
 
 /*!
- * @brief  Parse a SSM RemoveTagsFromResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM RemoveTagsFromResource \a response.
  */
 void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void RemoveTagsFromResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::RemoveTagsFromResourceResponsePrivate
+ * \brief The RemoveTagsFromResourceResponsePrivate class provides private implementation for RemoveTagsFromResourceResponse.
  * \internal
  *
- * \class RemoveTagsFromResourceResponsePrivate
- *
- * \brief Private implementation for RemoveTagsFromResourceResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveTagsFromResourceResponse instance.
+ * Constructs a RemoveTagsFromResourceResponsePrivate object with public implementation \a q.
  */
 RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
     RemoveTagsFromResourceResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ RemoveTagsFromResourceResponsePrivate::RemoveTagsFromResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM RemoveTagsFromResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM RemoveTagsFromResource response element from \a xml.
  */
 void RemoveTagsFromResourceResponsePrivate::parseRemoveTagsFromResourceResponse(QXmlStreamReader &xml)
 {

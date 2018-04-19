@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SendBounceRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a SendBounceRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a SendBounceRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 SendBounceRequestPrivate::SendBounceRequestPrivate(
     const SESRequest::Action action, SendBounceRequest * const q)

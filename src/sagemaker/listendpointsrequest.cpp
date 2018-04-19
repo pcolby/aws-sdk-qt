@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListEndpointsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListEndpointsRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a ListEndpointsRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 ListEndpointsRequestPrivate::ListEndpointsRequestPrivate(
     const SageMakerRequest::Action action, ListEndpointsRequest * const q)

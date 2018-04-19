@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::GetItemResponse
- *
  * \brief The GetItemResponse class provides an interace for DynamoDB GetItem responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new GetItemResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetItemResponse object for \a reply to \a request, with parent \a parent.
  */
 GetItemResponse::GetItemResponse(
         const GetItemRequest &request,
@@ -74,6 +69,9 @@ GetItemResponse::GetItemResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetItemRequest * GetItemResponse::request() const
 {
     Q_D(const GetItemResponse);
@@ -81,9 +79,8 @@ const GetItemRequest * GetItemResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB GetItem response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB GetItem \a response.
  */
 void GetItemResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void GetItemResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::GetItemResponsePrivate
+ * \brief The GetItemResponsePrivate class provides private implementation for GetItemResponse.
  * \internal
  *
- * \class GetItemResponsePrivate
- *
- * \brief Private implementation for GetItemResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetItemResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetItemResponse instance.
+ * Constructs a GetItemResponsePrivate object with public implementation \a q.
  */
 GetItemResponsePrivate::GetItemResponsePrivate(
     GetItemResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ GetItemResponsePrivate::GetItemResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB GetItemResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB GetItem response element from \a xml.
  */
 void GetItemResponsePrivate::parseGetItemResponse(QXmlStreamReader &xml)
 {

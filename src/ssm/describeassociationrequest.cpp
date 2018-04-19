@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAssociationRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeAssociationRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAssociationRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeAssociationRequestPrivate::DescribeAssociationRequestPrivate(
     const SSMRequest::Action action, DescribeAssociationRequest * const q)

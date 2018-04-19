@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateEventSubscriptionResponse
- *
  * \brief The CreateEventSubscriptionResponse class provides an interace for RDS CreateEventSubscription responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateEventSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateEventSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateEventSubscriptionResponse::CreateEventSubscriptionResponse(
         const CreateEventSubscriptionRequest &request,
@@ -119,6 +114,9 @@ CreateEventSubscriptionResponse::CreateEventSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateEventSubscriptionRequest * CreateEventSubscriptionResponse::request() const
 {
     Q_D(const CreateEventSubscriptionResponse);
@@ -126,9 +124,8 @@ const CreateEventSubscriptionRequest * CreateEventSubscriptionResponse::request(
 }
 
 /*!
- * @brief  Parse a RDS CreateEventSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CreateEventSubscription \a response.
  */
 void CreateEventSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CreateEventSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CreateEventSubscriptionResponsePrivate
+ * \brief The CreateEventSubscriptionResponsePrivate class provides private implementation for CreateEventSubscriptionResponse.
  * \internal
  *
- * \class CreateEventSubscriptionResponsePrivate
- *
- * \brief Private implementation for CreateEventSubscriptionResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEventSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateEventSubscriptionResponse instance.
+ * Constructs a CreateEventSubscriptionResponsePrivate object with public implementation \a q.
  */
 CreateEventSubscriptionResponsePrivate::CreateEventSubscriptionResponsePrivate(
     CreateEventSubscriptionResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CreateEventSubscriptionResponsePrivate::CreateEventSubscriptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CreateEventSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CreateEventSubscription response element from \a xml.
  */
 void CreateEventSubscriptionResponsePrivate::parseCreateEventSubscriptionResponse(QXmlStreamReader &xml)
 {

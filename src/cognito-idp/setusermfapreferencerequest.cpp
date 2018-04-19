@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * SetUserMFAPreferenceRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a SetUserMFAPreferenceRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a SetUserMFAPreferenceRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 SetUserMFAPreferenceRequestPrivate::SetUserMFAPreferenceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetUserMFAPreferenceRequest * const q)

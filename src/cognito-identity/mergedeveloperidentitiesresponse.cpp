@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::MergeDeveloperIdentitiesResponse
- *
  * \brief The MergeDeveloperIdentitiesResponse class provides an interace for CognitoIdentity MergeDeveloperIdentities responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new MergeDeveloperIdentitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a MergeDeveloperIdentitiesResponse object for \a reply to \a request, with parent \a parent.
  */
 MergeDeveloperIdentitiesResponse::MergeDeveloperIdentitiesResponse(
         const MergeDeveloperIdentitiesRequest &request,
@@ -93,6 +88,9 @@ MergeDeveloperIdentitiesResponse::MergeDeveloperIdentitiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const MergeDeveloperIdentitiesRequest * MergeDeveloperIdentitiesResponse::request() const
 {
     Q_D(const MergeDeveloperIdentitiesResponse);
@@ -100,9 +98,8 @@ const MergeDeveloperIdentitiesRequest * MergeDeveloperIdentitiesResponse::reques
 }
 
 /*!
- * @brief  Parse a CognitoIdentity MergeDeveloperIdentities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity MergeDeveloperIdentities \a response.
  */
 void MergeDeveloperIdentitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void MergeDeveloperIdentitiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::MergeDeveloperIdentitiesResponsePrivate
+ * \brief The MergeDeveloperIdentitiesResponsePrivate class provides private implementation for MergeDeveloperIdentitiesResponse.
  * \internal
  *
- * \class MergeDeveloperIdentitiesResponsePrivate
- *
- * \brief Private implementation for MergeDeveloperIdentitiesResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MergeDeveloperIdentitiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MergeDeveloperIdentitiesResponse instance.
+ * Constructs a MergeDeveloperIdentitiesResponsePrivate object with public implementation \a q.
  */
 MergeDeveloperIdentitiesResponsePrivate::MergeDeveloperIdentitiesResponsePrivate(
     MergeDeveloperIdentitiesResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ MergeDeveloperIdentitiesResponsePrivate::MergeDeveloperIdentitiesResponsePrivate
 }
 
 /*!
- * @brief  Parse an CognitoIdentity MergeDeveloperIdentitiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity MergeDeveloperIdentities response element from \a xml.
  */
 void MergeDeveloperIdentitiesResponsePrivate::parseMergeDeveloperIdentitiesResponse(QXmlStreamReader &xml)
 {

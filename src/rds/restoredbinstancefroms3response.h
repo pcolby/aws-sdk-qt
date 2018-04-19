@@ -34,10 +34,10 @@ class QTAWS_EXPORT RestoreDBInstanceFromS3Response : public RDSResponse {
 public:
     RestoreDBInstanceFromS3Response(const RestoreDBInstanceFromS3Request &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RestoreDBInstanceFromS3Request * request() const;
+    virtual const RestoreDBInstanceFromS3Request * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RestoreDBInstanceFromS3Response)

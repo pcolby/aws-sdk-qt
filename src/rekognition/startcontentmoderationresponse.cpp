@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::StartContentModerationResponse
- *
  * \brief The StartContentModerationResponse class provides an interace for Rekognition StartContentModeration responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new StartContentModerationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartContentModerationResponse object for \a reply to \a request, with parent \a parent.
  */
 StartContentModerationResponse::StartContentModerationResponse(
         const StartContentModerationRequest &request,
@@ -56,6 +51,9 @@ StartContentModerationResponse::StartContentModerationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartContentModerationRequest * StartContentModerationResponse::request() const
 {
     Q_D(const StartContentModerationResponse);
@@ -63,9 +61,8 @@ const StartContentModerationRequest * StartContentModerationResponse::request() 
 }
 
 /*!
- * @brief  Parse a Rekognition StartContentModeration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition StartContentModeration \a response.
  */
 void StartContentModerationResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void StartContentModerationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::StartContentModerationResponsePrivate
+ * \brief The StartContentModerationResponsePrivate class provides private implementation for StartContentModerationResponse.
  * \internal
  *
- * \class StartContentModerationResponsePrivate
- *
- * \brief Private implementation for StartContentModerationResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartContentModerationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartContentModerationResponse instance.
+ * Constructs a StartContentModerationResponsePrivate object with public implementation \a q.
  */
 StartContentModerationResponsePrivate::StartContentModerationResponsePrivate(
     StartContentModerationResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ StartContentModerationResponsePrivate::StartContentModerationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition StartContentModerationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition StartContentModeration response element from \a xml.
  */
 void StartContentModerationResponsePrivate::parseStartContentModerationResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcClassicLinkDnsSupportResponse
- *
  * \brief The DescribeVpcClassicLinkDnsSupportResponse class provides an interace for EC2 DescribeVpcClassicLinkDnsSupport responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVpcClassicLinkDnsSupportResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVpcClassicLinkDnsSupportResponse::DescribeVpcClassicLinkDnsSupportResponse(
         const DescribeVpcClassicLinkDnsSupportRequest &request,
@@ -59,6 +54,9 @@ DescribeVpcClassicLinkDnsSupportResponse::DescribeVpcClassicLinkDnsSupportRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVpcClassicLinkDnsSupportRequest * DescribeVpcClassicLinkDnsSupportResponse::request() const
 {
     Q_D(const DescribeVpcClassicLinkDnsSupportResponse);
@@ -66,9 +64,8 @@ const DescribeVpcClassicLinkDnsSupportRequest * DescribeVpcClassicLinkDnsSupport
 }
 
 /*!
- * @brief  Parse a EC2 DescribeVpcClassicLinkDnsSupport response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeVpcClassicLinkDnsSupport \a response.
  */
 void DescribeVpcClassicLinkDnsSupportResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeVpcClassicLinkDnsSupportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeVpcClassicLinkDnsSupportResponsePrivate
+ * \brief The DescribeVpcClassicLinkDnsSupportResponsePrivate class provides private implementation for DescribeVpcClassicLinkDnsSupportResponse.
  * \internal
  *
- * \class DescribeVpcClassicLinkDnsSupportResponsePrivate
- *
- * \brief Private implementation for DescribeVpcClassicLinkDnsSupportResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcClassicLinkDnsSupportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVpcClassicLinkDnsSupportResponse instance.
+ * Constructs a DescribeVpcClassicLinkDnsSupportResponsePrivate object with public implementation \a q.
  */
 DescribeVpcClassicLinkDnsSupportResponsePrivate::DescribeVpcClassicLinkDnsSupportResponsePrivate(
     DescribeVpcClassicLinkDnsSupportResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeVpcClassicLinkDnsSupportResponsePrivate::DescribeVpcClassicLinkDnsSuppor
 }
 
 /*!
- * @brief  Parse an EC2 DescribeVpcClassicLinkDnsSupportResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeVpcClassicLinkDnsSupport response element from \a xml.
  */
 void DescribeVpcClassicLinkDnsSupportResponsePrivate::parseDescribeVpcClassicLinkDnsSupportResponse(QXmlStreamReader &xml)
 {

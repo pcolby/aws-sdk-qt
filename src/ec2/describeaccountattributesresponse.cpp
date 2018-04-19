@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeAccountAttributesResponse
- *
  * \brief The DescribeAccountAttributesResponse class provides an interace for EC2 DescribeAccountAttributes responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAccountAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
         const DescribeAccountAttributesRequest &request,
@@ -59,6 +54,9 @@ DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::request() const
 {
     Q_D(const DescribeAccountAttributesResponse);
@@ -66,9 +64,8 @@ const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::requ
 }
 
 /*!
- * @brief  Parse a EC2 DescribeAccountAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeAccountAttributes \a response.
  */
 void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeAccountAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeAccountAttributesResponsePrivate
+ * \brief The DescribeAccountAttributesResponsePrivate class provides private implementation for DescribeAccountAttributesResponse.
  * \internal
  *
- * \class DescribeAccountAttributesResponsePrivate
- *
- * \brief Private implementation for DescribeAccountAttributesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAccountAttributesResponse instance.
+ * Constructs a DescribeAccountAttributesResponsePrivate object with public implementation \a q.
  */
 DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePrivate(
     DescribeAccountAttributesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponsePriva
 }
 
 /*!
- * @brief  Parse an EC2 DescribeAccountAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeAccountAttributes response element from \a xml.
  */
 void DescribeAccountAttributesResponsePrivate::parseDescribeAccountAttributesResponse(QXmlStreamReader &xml)
 {

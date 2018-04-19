@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteAuthorizerResponse
- *
  * \brief The DeleteAuthorizerResponse class provides an interace for APIGateway DeleteAuthorizer responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteAuthorizerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAuthorizerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAuthorizerResponse::DeleteAuthorizerResponse(
         const DeleteAuthorizerRequest &request,
@@ -60,6 +55,9 @@ DeleteAuthorizerResponse::DeleteAuthorizerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAuthorizerRequest * DeleteAuthorizerResponse::request() const
 {
     Q_D(const DeleteAuthorizerResponse);
@@ -67,9 +65,8 @@ const DeleteAuthorizerRequest * DeleteAuthorizerResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteAuthorizer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteAuthorizer \a response.
  */
 void DeleteAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteAuthorizerResponsePrivate
+ * \brief The DeleteAuthorizerResponsePrivate class provides private implementation for DeleteAuthorizerResponse.
  * \internal
  *
- * \class DeleteAuthorizerResponsePrivate
- *
- * \brief Private implementation for DeleteAuthorizerResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAuthorizerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAuthorizerResponse instance.
+ * Constructs a DeleteAuthorizerResponsePrivate object with public implementation \a q.
  */
 DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponsePrivate(
     DeleteAuthorizerResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteAuthorizerResponsePrivate::DeleteAuthorizerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteAuthorizerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteAuthorizer response element from \a xml.
  */
 void DeleteAuthorizerResponsePrivate::parseDeleteAuthorizerResponse(QXmlStreamReader &xml)
 {

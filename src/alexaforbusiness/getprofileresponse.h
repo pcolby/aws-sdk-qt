@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetProfileResponse : public AlexaForBusinessResponse {
 public:
     GetProfileResponse(const GetProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetProfileRequest * request() const;
+    virtual const GetProfileRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetProfileResponse)

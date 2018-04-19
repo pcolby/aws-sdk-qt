@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeReplicationInstanceTaskLogsResponse : public Database
 public:
     DescribeReplicationInstanceTaskLogsResponse(const DescribeReplicationInstanceTaskLogsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeReplicationInstanceTaskLogsRequest * request() const;
+    virtual const DescribeReplicationInstanceTaskLogsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeReplicationInstanceTaskLogsResponse)

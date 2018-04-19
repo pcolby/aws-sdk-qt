@@ -29,10 +29,9 @@ namespace ResourceGroupsTaggingAPI {
 
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::GetTagKeysResponse
- *
  * \brief The GetTagKeysResponse class provides an interace for ResourceGroupsTaggingAPI GetTagKeys responses.
  *
- * \ingroup ResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  *
  *  <fullname>Resource Groups Tagging API</fullname>
  * 
@@ -94,11 +93,7 @@ namespace ResourceGroupsTaggingAPI {
  */
 
 /*!
- * @brief  Constructs a new GetTagKeysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTagKeysResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTagKeysResponse::GetTagKeysResponse(
         const GetTagKeysRequest &request,
@@ -110,6 +105,9 @@ GetTagKeysResponse::GetTagKeysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTagKeysRequest * GetTagKeysResponse::request() const
 {
     Q_D(const GetTagKeysResponse);
@@ -117,9 +115,8 @@ const GetTagKeysRequest * GetTagKeysResponse::request() const
 }
 
 /*!
- * @brief  Parse a ResourceGroupsTaggingAPI GetTagKeys response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ResourceGroupsTaggingAPI GetTagKeys \a response.
  */
 void GetTagKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -129,19 +126,15 @@ void GetTagKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ResourceGroupsTaggingAPI::GetTagKeysResponsePrivate
+ * \brief The GetTagKeysResponsePrivate class provides private implementation for GetTagKeysResponse.
  * \internal
  *
- * \class GetTagKeysResponsePrivate
- *
- * \brief Private implementation for GetTagKeysResponse.
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTagKeysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTagKeysResponse instance.
+ * Constructs a GetTagKeysResponsePrivate object with public implementation \a q.
  */
 GetTagKeysResponsePrivate::GetTagKeysResponsePrivate(
     GetTagKeysResponse * const q) : ResourceGroupsTaggingAPIResponsePrivate(q)
@@ -150,9 +143,7 @@ GetTagKeysResponsePrivate::GetTagKeysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ResourceGroupsTaggingAPI GetTagKeysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ResourceGroupsTaggingAPI GetTagKeys response element from \a xml.
  */
 void GetTagKeysResponsePrivate::parseGetTagKeysResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListFindingsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ListFindingsRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a ListFindingsRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 ListFindingsRequestPrivate::ListFindingsRequestPrivate(
     const GuardDutyRequest::Action action, ListFindingsRequest * const q)

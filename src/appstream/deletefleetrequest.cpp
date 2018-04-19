@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteFleetRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteFleetRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a DeleteFleetRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 DeleteFleetRequestPrivate::DeleteFleetRequestPrivate(
     const AppStreamRequest::Action action, DeleteFleetRequest * const q)

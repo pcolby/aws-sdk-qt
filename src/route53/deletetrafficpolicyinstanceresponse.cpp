@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::DeleteTrafficPolicyInstanceResponse
- *
  * \brief The DeleteTrafficPolicyInstanceResponse class provides an interace for Route53 DeleteTrafficPolicyInstance responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::deleteTrafficPolicyInstance
  */
 
 /*!
- * @brief  Constructs a new DeleteTrafficPolicyInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTrafficPolicyInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTrafficPolicyInstanceResponse::DeleteTrafficPolicyInstanceResponse(
         const DeleteTrafficPolicyInstanceRequest &request,
@@ -55,6 +50,9 @@ DeleteTrafficPolicyInstanceResponse::DeleteTrafficPolicyInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTrafficPolicyInstanceRequest * DeleteTrafficPolicyInstanceResponse::request() const
 {
     Q_D(const DeleteTrafficPolicyInstanceResponse);
@@ -62,9 +60,8 @@ const DeleteTrafficPolicyInstanceRequest * DeleteTrafficPolicyInstanceResponse::
 }
 
 /*!
- * @brief  Parse a Route53 DeleteTrafficPolicyInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 DeleteTrafficPolicyInstance \a response.
  */
 void DeleteTrafficPolicyInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteTrafficPolicyInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::DeleteTrafficPolicyInstanceResponsePrivate
+ * \brief The DeleteTrafficPolicyInstanceResponsePrivate class provides private implementation for DeleteTrafficPolicyInstanceResponse.
  * \internal
  *
- * \class DeleteTrafficPolicyInstanceResponsePrivate
- *
- * \brief Private implementation for DeleteTrafficPolicyInstanceResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTrafficPolicyInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTrafficPolicyInstanceResponse instance.
+ * Constructs a DeleteTrafficPolicyInstanceResponsePrivate object with public implementation \a q.
  */
 DeleteTrafficPolicyInstanceResponsePrivate::DeleteTrafficPolicyInstanceResponsePrivate(
     DeleteTrafficPolicyInstanceResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteTrafficPolicyInstanceResponsePrivate::DeleteTrafficPolicyInstanceResponseP
 }
 
 /*!
- * @brief  Parse an Route53 DeleteTrafficPolicyInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 DeleteTrafficPolicyInstance response element from \a xml.
  */
 void DeleteTrafficPolicyInstanceResponsePrivate::parseDeleteTrafficPolicyInstanceResponse(QXmlStreamReader &xml)
 {

@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * ListFleetsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ListFleetsRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a ListFleetsRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 ListFleetsRequestPrivate::ListFleetsRequestPrivate(
     const GameLiftRequest::Action action, ListFleetsRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetServiceGraphResponse : public XRayResponse {
 public:
     GetServiceGraphResponse(const GetServiceGraphRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetServiceGraphRequest * request() const;
+    virtual const GetServiceGraphRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetServiceGraphResponse)

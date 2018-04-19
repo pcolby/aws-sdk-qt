@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::StartStackResponse
- *
  * \brief The StartStackResponse class provides an interace for OpsWorks StartStack responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new StartStackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartStackResponse object for \a reply to \a request, with parent \a parent.
  */
 StartStackResponse::StartStackResponse(
         const StartStackRequest &request,
@@ -161,6 +156,9 @@ StartStackResponse::StartStackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartStackRequest * StartStackResponse::request() const
 {
     Q_D(const StartStackResponse);
@@ -168,9 +166,8 @@ const StartStackRequest * StartStackResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks StartStack response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks StartStack \a response.
  */
 void StartStackResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void StartStackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::StartStackResponsePrivate
+ * \brief The StartStackResponsePrivate class provides private implementation for StartStackResponse.
  * \internal
  *
- * \class StartStackResponsePrivate
- *
- * \brief Private implementation for StartStackResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartStackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartStackResponse instance.
+ * Constructs a StartStackResponsePrivate object with public implementation \a q.
  */
 StartStackResponsePrivate::StartStackResponsePrivate(
     StartStackResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ StartStackResponsePrivate::StartStackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks StartStackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks StartStack response element from \a xml.
  */
 void StartStackResponsePrivate::parseStartStackResponse(QXmlStreamReader &xml)
 {

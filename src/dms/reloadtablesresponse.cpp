@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::ReloadTablesResponse
- *
  * \brief The ReloadTablesResponse class provides an interace for DatabaseMigrationService ReloadTables responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new ReloadTablesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReloadTablesResponse object for \a reply to \a request, with parent \a parent.
  */
 ReloadTablesResponse::ReloadTablesResponse(
         const ReloadTablesRequest &request,
@@ -66,6 +61,9 @@ ReloadTablesResponse::ReloadTablesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReloadTablesRequest * ReloadTablesResponse::request() const
 {
     Q_D(const ReloadTablesResponse);
@@ -73,9 +71,8 @@ const ReloadTablesRequest * ReloadTablesResponse::request() const
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService ReloadTables response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService ReloadTables \a response.
  */
 void ReloadTablesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ReloadTablesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::ReloadTablesResponsePrivate
+ * \brief The ReloadTablesResponsePrivate class provides private implementation for ReloadTablesResponse.
  * \internal
  *
- * \class ReloadTablesResponsePrivate
- *
- * \brief Private implementation for ReloadTablesResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReloadTablesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReloadTablesResponse instance.
+ * Constructs a ReloadTablesResponsePrivate object with public implementation \a q.
  */
 ReloadTablesResponsePrivate::ReloadTablesResponsePrivate(
     ReloadTablesResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ ReloadTablesResponsePrivate::ReloadTablesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService ReloadTablesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService ReloadTables response element from \a xml.
  */
 void ReloadTablesResponsePrivate::parseReloadTablesResponse(QXmlStreamReader &xml)
 {

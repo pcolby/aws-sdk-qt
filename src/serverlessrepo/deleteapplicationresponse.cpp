@@ -29,10 +29,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::DeleteApplicationResponse
- *
  * \brief The DeleteApplicationResponse class provides an interace for ServerlessApplicationRepository DeleteApplication responses.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -60,11 +59,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new DeleteApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteApplicationResponse::DeleteApplicationResponse(
         const DeleteApplicationRequest &request,
@@ -76,6 +71,9 @@ DeleteApplicationResponse::DeleteApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteApplicationRequest * DeleteApplicationResponse::request() const
 {
     Q_D(const DeleteApplicationResponse);
@@ -83,9 +81,8 @@ const DeleteApplicationRequest * DeleteApplicationResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServerlessApplicationRepository DeleteApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServerlessApplicationRepository DeleteApplication \a response.
  */
 void DeleteApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -95,19 +92,15 @@ void DeleteApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServerlessApplicationRepository::DeleteApplicationResponsePrivate
+ * \brief The DeleteApplicationResponsePrivate class provides private implementation for DeleteApplicationResponse.
  * \internal
  *
- * \class DeleteApplicationResponsePrivate
- *
- * \brief Private implementation for DeleteApplicationResponse.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteApplicationResponse instance.
+ * Constructs a DeleteApplicationResponsePrivate object with public implementation \a q.
  */
 DeleteApplicationResponsePrivate::DeleteApplicationResponsePrivate(
     DeleteApplicationResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
@@ -116,9 +109,7 @@ DeleteApplicationResponsePrivate::DeleteApplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServerlessApplicationRepository DeleteApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServerlessApplicationRepository DeleteApplication response element from \a xml.
  */
 void DeleteApplicationResponsePrivate::parseDeleteApplicationResponse(QXmlStreamReader &xml)
 {

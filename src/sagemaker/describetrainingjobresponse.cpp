@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DescribeTrainingJobResponse
- *
  * \brief The DescribeTrainingJobResponse class provides an interace for SageMaker DescribeTrainingJob responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::describeTrainingJob
  */
 
 /*!
- * @brief  Constructs a new DescribeTrainingJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTrainingJobResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTrainingJobResponse::DescribeTrainingJobResponse(
         const DescribeTrainingJobRequest &request,
@@ -55,6 +50,9 @@ DescribeTrainingJobResponse::DescribeTrainingJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTrainingJobRequest * DescribeTrainingJobResponse::request() const
 {
     Q_D(const DescribeTrainingJobResponse);
@@ -62,9 +60,8 @@ const DescribeTrainingJobRequest * DescribeTrainingJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a SageMaker DescribeTrainingJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker DescribeTrainingJob \a response.
  */
 void DescribeTrainingJobResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeTrainingJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::DescribeTrainingJobResponsePrivate
+ * \brief The DescribeTrainingJobResponsePrivate class provides private implementation for DescribeTrainingJobResponse.
  * \internal
  *
- * \class DescribeTrainingJobResponsePrivate
- *
- * \brief Private implementation for DescribeTrainingJobResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTrainingJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTrainingJobResponse instance.
+ * Constructs a DescribeTrainingJobResponsePrivate object with public implementation \a q.
  */
 DescribeTrainingJobResponsePrivate::DescribeTrainingJobResponsePrivate(
     DescribeTrainingJobResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeTrainingJobResponsePrivate::DescribeTrainingJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker DescribeTrainingJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker DescribeTrainingJob response element from \a xml.
  */
 void DescribeTrainingJobResponsePrivate::parseDescribeTrainingJobResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointsBatchRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdateEndpointsBatchRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a UpdateEndpointsBatchRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 UpdateEndpointsBatchRequestPrivate::UpdateEndpointsBatchRequestPrivate(
     const PinpointRequest::Action action, UpdateEndpointsBatchRequest * const q)

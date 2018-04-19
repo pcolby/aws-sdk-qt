@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteClientCertificateResponse
- *
  * \brief The DeleteClientCertificateResponse class provides an interace for APIGateway DeleteClientCertificate responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteClientCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteClientCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteClientCertificateResponse::DeleteClientCertificateResponse(
         const DeleteClientCertificateRequest &request,
@@ -60,6 +55,9 @@ DeleteClientCertificateResponse::DeleteClientCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteClientCertificateRequest * DeleteClientCertificateResponse::request() const
 {
     Q_D(const DeleteClientCertificateResponse);
@@ -67,9 +65,8 @@ const DeleteClientCertificateRequest * DeleteClientCertificateResponse::request(
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteClientCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteClientCertificate \a response.
  */
 void DeleteClientCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteClientCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteClientCertificateResponsePrivate
+ * \brief The DeleteClientCertificateResponsePrivate class provides private implementation for DeleteClientCertificateResponse.
  * \internal
  *
- * \class DeleteClientCertificateResponsePrivate
- *
- * \brief Private implementation for DeleteClientCertificateResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClientCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteClientCertificateResponse instance.
+ * Constructs a DeleteClientCertificateResponsePrivate object with public implementation \a q.
  */
 DeleteClientCertificateResponsePrivate::DeleteClientCertificateResponsePrivate(
     DeleteClientCertificateResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteClientCertificateResponsePrivate::DeleteClientCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteClientCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteClientCertificate response element from \a xml.
  */
 void DeleteClientCertificateResponsePrivate::parseDeleteClientCertificateResponse(QXmlStreamReader &xml)
 {

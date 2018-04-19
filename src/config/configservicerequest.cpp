@@ -79,7 +79,7 @@ namespace ConfigService {
  */
 
 /*!
- * Constructs a[n] ConfigServiceRequest object for ConfigService \a action.
+ * Constructs a ConfigServiceRequest object for ConfigService \a action.
  */
 ConfigServiceRequest::ConfigServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ConfigServiceRequestPrivate(action, this))
@@ -279,8 +279,8 @@ QNetworkRequest ConfigServiceRequest::unsignedRequest(const QUrl &endpoint) cons
  */
 
 /*!
- * Constructs a ConfigServiceRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a ConfigServiceRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 ConfigServiceRequestPrivate::ConfigServiceRequestPrivate(const ConfigServiceRequest::Action action, ConfigServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

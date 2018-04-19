@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * SendTaskHeartbeatRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a SendTaskHeartbeatRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a SendTaskHeartbeatRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 SendTaskHeartbeatRequestPrivate::SendTaskHeartbeatRequestPrivate(
     const SFNRequest::Action action, SendTaskHeartbeatRequest * const q)

@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteTopicRuleResponse
- *
  * \brief The DeleteTopicRuleResponse class provides an interace for IoT DeleteTopicRule responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteTopicRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTopicRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTopicRuleResponse::DeleteTopicRuleResponse(
         const DeleteTopicRuleRequest &request,
@@ -66,6 +61,9 @@ DeleteTopicRuleResponse::DeleteTopicRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTopicRuleRequest * DeleteTopicRuleResponse::request() const
 {
     Q_D(const DeleteTopicRuleResponse);
@@ -73,9 +71,8 @@ const DeleteTopicRuleRequest * DeleteTopicRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DeleteTopicRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DeleteTopicRule \a response.
  */
 void DeleteTopicRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteTopicRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DeleteTopicRuleResponsePrivate
+ * \brief The DeleteTopicRuleResponsePrivate class provides private implementation for DeleteTopicRuleResponse.
  * \internal
  *
- * \class DeleteTopicRuleResponsePrivate
- *
- * \brief Private implementation for DeleteTopicRuleResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTopicRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTopicRuleResponse instance.
+ * Constructs a DeleteTopicRuleResponsePrivate object with public implementation \a q.
  */
 DeleteTopicRuleResponsePrivate::DeleteTopicRuleResponsePrivate(
     DeleteTopicRuleResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteTopicRuleResponsePrivate::DeleteTopicRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DeleteTopicRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DeleteTopicRule response element from \a xml.
  */
 void DeleteTopicRuleResponsePrivate::parseDeleteTopicRuleResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::CreateLaunchConfigurationResponse
- *
  * \brief The CreateLaunchConfigurationResponse class provides an interace for AutoScaling CreateLaunchConfiguration responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new CreateLaunchConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLaunchConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLaunchConfigurationResponse::CreateLaunchConfigurationResponse(
         const CreateLaunchConfigurationRequest &request,
@@ -60,6 +55,9 @@ CreateLaunchConfigurationResponse::CreateLaunchConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLaunchConfigurationRequest * CreateLaunchConfigurationResponse::request() const
 {
     Q_D(const CreateLaunchConfigurationResponse);
@@ -67,9 +65,8 @@ const CreateLaunchConfigurationRequest * CreateLaunchConfigurationResponse::requ
 }
 
 /*!
- * @brief  Parse a AutoScaling CreateLaunchConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling CreateLaunchConfiguration \a response.
  */
 void CreateLaunchConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateLaunchConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::CreateLaunchConfigurationResponsePrivate
+ * \brief The CreateLaunchConfigurationResponsePrivate class provides private implementation for CreateLaunchConfigurationResponse.
  * \internal
  *
- * \class CreateLaunchConfigurationResponsePrivate
- *
- * \brief Private implementation for CreateLaunchConfigurationResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLaunchConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLaunchConfigurationResponse instance.
+ * Constructs a CreateLaunchConfigurationResponsePrivate object with public implementation \a q.
  */
 CreateLaunchConfigurationResponsePrivate::CreateLaunchConfigurationResponsePrivate(
     CreateLaunchConfigurationResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateLaunchConfigurationResponsePrivate::CreateLaunchConfigurationResponsePriva
 }
 
 /*!
- * @brief  Parse an AutoScaling CreateLaunchConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling CreateLaunchConfiguration response element from \a xml.
  */
 void CreateLaunchConfigurationResponsePrivate::parseCreateLaunchConfigurationResponse(QXmlStreamReader &xml)
 {

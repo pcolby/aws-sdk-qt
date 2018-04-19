@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::GetAssessmentReportResponse
- *
  * \brief The GetAssessmentReportResponse class provides an interace for Inspector GetAssessmentReport responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new GetAssessmentReportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAssessmentReportResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAssessmentReportResponse::GetAssessmentReportResponse(
         const GetAssessmentReportRequest &request,
@@ -60,6 +55,9 @@ GetAssessmentReportResponse::GetAssessmentReportResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAssessmentReportRequest * GetAssessmentReportResponse::request() const
 {
     Q_D(const GetAssessmentReportResponse);
@@ -67,9 +65,8 @@ const GetAssessmentReportRequest * GetAssessmentReportResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector GetAssessmentReport response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector GetAssessmentReport \a response.
  */
 void GetAssessmentReportResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetAssessmentReportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::GetAssessmentReportResponsePrivate
+ * \brief The GetAssessmentReportResponsePrivate class provides private implementation for GetAssessmentReportResponse.
  * \internal
  *
- * \class GetAssessmentReportResponsePrivate
- *
- * \brief Private implementation for GetAssessmentReportResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAssessmentReportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAssessmentReportResponse instance.
+ * Constructs a GetAssessmentReportResponsePrivate object with public implementation \a q.
  */
 GetAssessmentReportResponsePrivate::GetAssessmentReportResponsePrivate(
     GetAssessmentReportResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ GetAssessmentReportResponsePrivate::GetAssessmentReportResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector GetAssessmentReportResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector GetAssessmentReport response element from \a xml.
  */
 void GetAssessmentReportResponsePrivate::parseGetAssessmentReportResponse(QXmlStreamReader &xml)
 {

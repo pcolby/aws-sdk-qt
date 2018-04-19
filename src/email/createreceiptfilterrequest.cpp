@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateReceiptFilterRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a CreateReceiptFilterRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a CreateReceiptFilterRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 CreateReceiptFilterRequestPrivate::CreateReceiptFilterRequestPrivate(
     const SESRequest::Action action, CreateReceiptFilterRequest * const q)

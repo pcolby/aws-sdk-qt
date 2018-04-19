@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::GetStackPolicyResponse
- *
  * \brief The GetStackPolicyResponse class provides an interace for CloudFormation GetStackPolicy responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new GetStackPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetStackPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetStackPolicyResponse::GetStackPolicyResponse(
         const GetStackPolicyRequest &request,
@@ -77,6 +72,9 @@ GetStackPolicyResponse::GetStackPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetStackPolicyRequest * GetStackPolicyResponse::request() const
 {
     Q_D(const GetStackPolicyResponse);
@@ -84,9 +82,8 @@ const GetStackPolicyRequest * GetStackPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation GetStackPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation GetStackPolicy \a response.
  */
 void GetStackPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void GetStackPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::GetStackPolicyResponsePrivate
+ * \brief The GetStackPolicyResponsePrivate class provides private implementation for GetStackPolicyResponse.
  * \internal
  *
- * \class GetStackPolicyResponsePrivate
- *
- * \brief Private implementation for GetStackPolicyResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetStackPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetStackPolicyResponse instance.
+ * Constructs a GetStackPolicyResponsePrivate object with public implementation \a q.
  */
 GetStackPolicyResponsePrivate::GetStackPolicyResponsePrivate(
     GetStackPolicyResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ GetStackPolicyResponsePrivate::GetStackPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation GetStackPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation GetStackPolicy response element from \a xml.
  */
 void GetStackPolicyResponsePrivate::parseGetStackPolicyResponse(QXmlStreamReader &xml)
 {

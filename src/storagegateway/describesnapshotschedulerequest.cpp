@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotScheduleRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeSnapshotScheduleRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSnapshotScheduleRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DescribeSnapshotScheduleRequestPrivate::DescribeSnapshotScheduleRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeSnapshotScheduleRequest * const q)

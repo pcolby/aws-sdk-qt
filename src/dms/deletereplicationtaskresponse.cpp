@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteReplicationTaskResponse
- *
  * \brief The DeleteReplicationTaskResponse class provides an interace for DatabaseMigrationService DeleteReplicationTask responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DeleteReplicationTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteReplicationTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteReplicationTaskResponse::DeleteReplicationTaskResponse(
         const DeleteReplicationTaskRequest &request,
@@ -66,6 +61,9 @@ DeleteReplicationTaskResponse::DeleteReplicationTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteReplicationTaskRequest * DeleteReplicationTaskResponse::request() const
 {
     Q_D(const DeleteReplicationTaskResponse);
@@ -73,9 +71,8 @@ const DeleteReplicationTaskRequest * DeleteReplicationTaskResponse::request() co
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DeleteReplicationTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DeleteReplicationTask \a response.
  */
 void DeleteReplicationTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteReplicationTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationTaskResponsePrivate
+ * \brief The DeleteReplicationTaskResponsePrivate class provides private implementation for DeleteReplicationTaskResponse.
  * \internal
  *
- * \class DeleteReplicationTaskResponsePrivate
- *
- * \brief Private implementation for DeleteReplicationTaskResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReplicationTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteReplicationTaskResponse instance.
+ * Constructs a DeleteReplicationTaskResponsePrivate object with public implementation \a q.
  */
 DeleteReplicationTaskResponsePrivate::DeleteReplicationTaskResponsePrivate(
     DeleteReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteReplicationTaskResponsePrivate::DeleteReplicationTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DeleteReplicationTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DeleteReplicationTask response element from \a xml.
  */
 void DeleteReplicationTaskResponsePrivate::parseDeleteReplicationTaskResponse(QXmlStreamReader &xml)
 {

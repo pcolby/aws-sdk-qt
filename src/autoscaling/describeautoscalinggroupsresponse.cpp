@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeAutoScalingGroupsResponse
- *
  * \brief The DescribeAutoScalingGroupsResponse class provides an interace for AutoScaling DescribeAutoScalingGroups responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeAutoScalingGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAutoScalingGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAutoScalingGroupsResponse::DescribeAutoScalingGroupsResponse(
         const DescribeAutoScalingGroupsRequest &request,
@@ -60,6 +55,9 @@ DescribeAutoScalingGroupsResponse::DescribeAutoScalingGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAutoScalingGroupsRequest * DescribeAutoScalingGroupsResponse::request() const
 {
     Q_D(const DescribeAutoScalingGroupsResponse);
@@ -67,9 +65,8 @@ const DescribeAutoScalingGroupsRequest * DescribeAutoScalingGroupsResponse::requ
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeAutoScalingGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeAutoScalingGroups \a response.
  */
 void DescribeAutoScalingGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeAutoScalingGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeAutoScalingGroupsResponsePrivate
+ * \brief The DescribeAutoScalingGroupsResponsePrivate class provides private implementation for DescribeAutoScalingGroupsResponse.
  * \internal
  *
- * \class DescribeAutoScalingGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeAutoScalingGroupsResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAutoScalingGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAutoScalingGroupsResponse instance.
+ * Constructs a DescribeAutoScalingGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeAutoScalingGroupsResponsePrivate::DescribeAutoScalingGroupsResponsePrivate(
     DescribeAutoScalingGroupsResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeAutoScalingGroupsResponsePrivate::DescribeAutoScalingGroupsResponsePriva
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeAutoScalingGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeAutoScalingGroups response element from \a xml.
  */
 void DescribeAutoScalingGroupsResponsePrivate::parseDescribeAutoScalingGroupsResponse(QXmlStreamReader &xml)
 {

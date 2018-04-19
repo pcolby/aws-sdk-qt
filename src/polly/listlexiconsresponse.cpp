@@ -29,10 +29,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::ListLexiconsResponse
- *
  * \brief The ListLexiconsResponse class provides an interace for Polly ListLexicons responses.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -46,11 +45,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new ListLexiconsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListLexiconsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListLexiconsResponse::ListLexiconsResponse(
         const ListLexiconsRequest &request,
@@ -62,6 +57,9 @@ ListLexiconsResponse::ListLexiconsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListLexiconsRequest * ListLexiconsResponse::request() const
 {
     Q_D(const ListLexiconsResponse);
@@ -69,9 +67,8 @@ const ListLexiconsRequest * ListLexiconsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Polly ListLexicons response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Polly ListLexicons \a response.
  */
 void ListLexiconsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListLexiconsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Polly::ListLexiconsResponsePrivate
+ * \brief The ListLexiconsResponsePrivate class provides private implementation for ListLexiconsResponse.
  * \internal
  *
- * \class ListLexiconsResponsePrivate
- *
- * \brief Private implementation for ListLexiconsResponse.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListLexiconsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListLexiconsResponse instance.
+ * Constructs a ListLexiconsResponsePrivate object with public implementation \a q.
  */
 ListLexiconsResponsePrivate::ListLexiconsResponsePrivate(
     ListLexiconsResponse * const q) : PollyResponsePrivate(q)
@@ -102,9 +95,7 @@ ListLexiconsResponsePrivate::ListLexiconsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Polly ListLexiconsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Polly ListLexicons response element from \a xml.
  */
 void ListLexiconsResponsePrivate::parseListLexiconsResponse(QXmlStreamReader &xml)
 {

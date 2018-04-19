@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeletePlacementGroupResponse : public EC2Response {
 public:
     DeletePlacementGroupResponse(const DeletePlacementGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeletePlacementGroupRequest * request() const;
+    virtual const DeletePlacementGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeletePlacementGroupResponse)

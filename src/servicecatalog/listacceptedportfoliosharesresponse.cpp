@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListAcceptedPortfolioSharesResponse
- *
  * \brief The ListAcceptedPortfolioSharesResponse class provides an interace for ServiceCatalog ListAcceptedPortfolioShares responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListAcceptedPortfolioSharesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAcceptedPortfolioSharesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAcceptedPortfolioSharesResponse::ListAcceptedPortfolioSharesResponse(
         const ListAcceptedPortfolioSharesRequest &request,
@@ -61,6 +56,9 @@ ListAcceptedPortfolioSharesResponse::ListAcceptedPortfolioSharesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAcceptedPortfolioSharesRequest * ListAcceptedPortfolioSharesResponse::request() const
 {
     Q_D(const ListAcceptedPortfolioSharesResponse);
@@ -68,9 +66,8 @@ const ListAcceptedPortfolioSharesRequest * ListAcceptedPortfolioSharesResponse::
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ListAcceptedPortfolioShares response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ListAcceptedPortfolioShares \a response.
  */
 void ListAcceptedPortfolioSharesResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListAcceptedPortfolioSharesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ListAcceptedPortfolioSharesResponsePrivate
+ * \brief The ListAcceptedPortfolioSharesResponsePrivate class provides private implementation for ListAcceptedPortfolioSharesResponse.
  * \internal
  *
- * \class ListAcceptedPortfolioSharesResponsePrivate
- *
- * \brief Private implementation for ListAcceptedPortfolioSharesResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAcceptedPortfolioSharesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAcceptedPortfolioSharesResponse instance.
+ * Constructs a ListAcceptedPortfolioSharesResponsePrivate object with public implementation \a q.
  */
 ListAcceptedPortfolioSharesResponsePrivate::ListAcceptedPortfolioSharesResponsePrivate(
     ListAcceptedPortfolioSharesResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ListAcceptedPortfolioSharesResponsePrivate::ListAcceptedPortfolioSharesResponseP
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ListAcceptedPortfolioSharesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ListAcceptedPortfolioShares response element from \a xml.
  */
 void ListAcceptedPortfolioSharesResponsePrivate::parseListAcceptedPortfolioSharesResponse(QXmlStreamReader &xml)
 {

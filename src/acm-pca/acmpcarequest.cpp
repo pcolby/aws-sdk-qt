@@ -55,7 +55,7 @@ namespace ACMPCA {
  */
 
 /*!
- * Constructs a[n] ACMPCARequest object for ACMPCA \a action.
+ * Constructs a ACMPCARequest object for ACMPCA \a action.
  */
 ACMPCARequest::ACMPCARequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ACMPCARequestPrivate(action, this))
@@ -255,8 +255,8 @@ QNetworkRequest ACMPCARequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a ACMPCARequestPrivate object for ACMPCA \a action with,
- * public implementation \a q.
+ * Constructs a ACMPCARequestPrivate object for ACMPCA \a action,
+ * with public implementation \a q.
  */
 ACMPCARequestPrivate::ACMPCARequestPrivate(const ACMPCARequest::Action action, ACMPCARequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

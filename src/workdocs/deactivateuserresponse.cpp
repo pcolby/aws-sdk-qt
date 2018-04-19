@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeactivateUserResponse
- *
  * \brief The DeactivateUserResponse class provides an interace for WorkDocs DeactivateUser responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeactivateUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeactivateUserResponse object for \a reply to \a request, with parent \a parent.
  */
 DeactivateUserResponse::DeactivateUserResponse(
         const DeactivateUserRequest &request,
@@ -84,6 +79,9 @@ DeactivateUserResponse::DeactivateUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeactivateUserRequest * DeactivateUserResponse::request() const
 {
     Q_D(const DeactivateUserResponse);
@@ -91,9 +89,8 @@ const DeactivateUserRequest * DeactivateUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs DeactivateUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DeactivateUser \a response.
  */
 void DeactivateUserResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeactivateUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DeactivateUserResponsePrivate
+ * \brief The DeactivateUserResponsePrivate class provides private implementation for DeactivateUserResponse.
  * \internal
  *
- * \class DeactivateUserResponsePrivate
- *
- * \brief Private implementation for DeactivateUserResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeactivateUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeactivateUserResponse instance.
+ * Constructs a DeactivateUserResponsePrivate object with public implementation \a q.
  */
 DeactivateUserResponsePrivate::DeactivateUserResponsePrivate(
     DeactivateUserResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeactivateUserResponsePrivate::DeactivateUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DeactivateUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DeactivateUser response element from \a xml.
  */
 void DeactivateUserResponsePrivate::parseDeactivateUserResponse(QXmlStreamReader &xml)
 {

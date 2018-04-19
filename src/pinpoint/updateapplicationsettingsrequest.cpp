@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationSettingsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a UpdateApplicationSettingsRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a UpdateApplicationSettingsRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 UpdateApplicationSettingsRequestPrivate::UpdateApplicationSettingsRequestPrivate(
     const PinpointRequest::Action action, UpdateApplicationSettingsRequest * const q)

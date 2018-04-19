@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DetectLabelsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DetectLabelsRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a DetectLabelsRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 DetectLabelsRequestPrivate::DetectLabelsRequestPrivate(
     const RekognitionRequest::Action action, DetectLabelsRequest * const q)

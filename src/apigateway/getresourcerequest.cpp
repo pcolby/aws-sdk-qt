@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetResourceRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GetResourceRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetResourceRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetResourceRequestPrivate::GetResourceRequestPrivate(
     const APIGatewayRequest::Action action, GetResourceRequest * const q)

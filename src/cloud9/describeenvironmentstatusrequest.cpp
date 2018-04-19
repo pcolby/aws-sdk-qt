@@ -135,9 +135,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentStatusRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeEnvironmentStatusRequestPrivate object for Cloud9 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEnvironmentStatusRequestPrivate object for Cloud9 \a action,
+ * with public implementation \a q.
  */
 DescribeEnvironmentStatusRequestPrivate::DescribeEnvironmentStatusRequestPrivate(
     const Cloud9Request::Action action, DescribeEnvironmentStatusRequest * const q)

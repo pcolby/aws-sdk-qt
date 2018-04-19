@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateMultipartUploadResponse : public S3Response {
 public:
     CreateMultipartUploadResponse(const CreateMultipartUploadRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateMultipartUploadRequest * request() const;
+    virtual const CreateMultipartUploadRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateMultipartUploadResponse)

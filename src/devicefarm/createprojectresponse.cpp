@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::CreateProjectResponse
- *
  * \brief The CreateProjectResponse class provides an interace for DeviceFarm CreateProject responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new CreateProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateProjectResponse::CreateProjectResponse(
         const CreateProjectRequest &request,
@@ -57,6 +52,9 @@ CreateProjectResponse::CreateProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateProjectRequest * CreateProjectResponse::request() const
 {
     Q_D(const CreateProjectResponse);
@@ -64,9 +62,8 @@ const CreateProjectRequest * CreateProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm CreateProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm CreateProject \a response.
  */
 void CreateProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void CreateProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::CreateProjectResponsePrivate
+ * \brief The CreateProjectResponsePrivate class provides private implementation for CreateProjectResponse.
  * \internal
  *
- * \class CreateProjectResponsePrivate
- *
- * \brief Private implementation for CreateProjectResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateProjectResponse instance.
+ * Constructs a CreateProjectResponsePrivate object with public implementation \a q.
  */
 CreateProjectResponsePrivate::CreateProjectResponsePrivate(
     CreateProjectResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ CreateProjectResponsePrivate::CreateProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm CreateProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm CreateProject response element from \a xml.
  */
 void CreateProjectResponsePrivate::parseCreateProjectResponse(QXmlStreamReader &xml)
 {

@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * StartExportTaskRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a StartExportTaskRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a StartExportTaskRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 StartExportTaskRequestPrivate::StartExportTaskRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, StartExportTaskRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StopFleetRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a StopFleetRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a StopFleetRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 StopFleetRequestPrivate::StopFleetRequestPrivate(
     const AppStreamRequest::Action action, StopFleetRequest * const q)

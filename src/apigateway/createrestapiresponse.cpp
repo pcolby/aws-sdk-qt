@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateRestApiResponse
- *
  * \brief The CreateRestApiResponse class provides an interace for APIGateway CreateRestApi responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateRestApiResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRestApiResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRestApiResponse::CreateRestApiResponse(
         const CreateRestApiRequest &request,
@@ -60,6 +55,9 @@ CreateRestApiResponse::CreateRestApiResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRestApiRequest * CreateRestApiResponse::request() const
 {
     Q_D(const CreateRestApiResponse);
@@ -67,9 +65,8 @@ const CreateRestApiRequest * CreateRestApiResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway CreateRestApi response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway CreateRestApi \a response.
  */
 void CreateRestApiResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateRestApiResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::CreateRestApiResponsePrivate
+ * \brief The CreateRestApiResponsePrivate class provides private implementation for CreateRestApiResponse.
  * \internal
  *
- * \class CreateRestApiResponsePrivate
- *
- * \brief Private implementation for CreateRestApiResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRestApiResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRestApiResponse instance.
+ * Constructs a CreateRestApiResponsePrivate object with public implementation \a q.
  */
 CreateRestApiResponsePrivate::CreateRestApiResponsePrivate(
     CreateRestApiResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateRestApiResponsePrivate::CreateRestApiResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway CreateRestApiResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway CreateRestApi response element from \a xml.
  */
 void CreateRestApiResponsePrivate::parseCreateRestApiResponse(QXmlStreamReader &xml)
 {

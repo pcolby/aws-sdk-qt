@@ -29,10 +29,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::DescribeCertificateAuthorityAuditReportResponse
- *
  * \brief The DescribeCertificateAuthorityAuditReportResponse class provides an interace for ACMPCA DescribeCertificateAuthorityAuditReport responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -69,11 +68,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new DescribeCertificateAuthorityAuditReportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCertificateAuthorityAuditReportResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCertificateAuthorityAuditReportResponse::DescribeCertificateAuthorityAuditReportResponse(
         const DescribeCertificateAuthorityAuditReportRequest &request,
@@ -85,6 +80,9 @@ DescribeCertificateAuthorityAuditReportResponse::DescribeCertificateAuthorityAud
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCertificateAuthorityAuditReportRequest * DescribeCertificateAuthorityAuditReportResponse::request() const
 {
     Q_D(const DescribeCertificateAuthorityAuditReportResponse);
@@ -92,9 +90,8 @@ const DescribeCertificateAuthorityAuditReportRequest * DescribeCertificateAuthor
 }
 
 /*!
- * @brief  Parse a ACMPCA DescribeCertificateAuthorityAuditReport response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACMPCA DescribeCertificateAuthorityAuditReport \a response.
  */
 void DescribeCertificateAuthorityAuditReportResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeCertificateAuthorityAuditReportResponse::parseSuccess(QIODevice &re
 }
 
 /*!
+ * \class QtAws::ACMPCA::DescribeCertificateAuthorityAuditReportResponsePrivate
+ * \brief The DescribeCertificateAuthorityAuditReportResponsePrivate class provides private implementation for DescribeCertificateAuthorityAuditReportResponse.
  * \internal
  *
- * \class DescribeCertificateAuthorityAuditReportResponsePrivate
- *
- * \brief Private implementation for DescribeCertificateAuthorityAuditReportResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCertificateAuthorityAuditReportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCertificateAuthorityAuditReportResponse instance.
+ * Constructs a DescribeCertificateAuthorityAuditReportResponsePrivate object with public implementation \a q.
  */
 DescribeCertificateAuthorityAuditReportResponsePrivate::DescribeCertificateAuthorityAuditReportResponsePrivate(
     DescribeCertificateAuthorityAuditReportResponse * const q) : ACMPCAResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeCertificateAuthorityAuditReportResponsePrivate::DescribeCertificateAutho
 }
 
 /*!
- * @brief  Parse an ACMPCA DescribeCertificateAuthorityAuditReportResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACMPCA DescribeCertificateAuthorityAuditReport response element from \a xml.
  */
 void DescribeCertificateAuthorityAuditReportResponsePrivate::parseDescribeCertificateAuthorityAuditReportResponse(QXmlStreamReader &xml)
 {

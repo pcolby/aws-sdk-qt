@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StopCrawlerScheduleResponse
- *
  * \brief The StopCrawlerScheduleResponse class provides an interace for Glue StopCrawlerSchedule responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StopCrawlerScheduleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopCrawlerScheduleResponse object for \a reply to \a request, with parent \a parent.
  */
 StopCrawlerScheduleResponse::StopCrawlerScheduleResponse(
         const StopCrawlerScheduleRequest &request,
@@ -58,6 +53,9 @@ StopCrawlerScheduleResponse::StopCrawlerScheduleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopCrawlerScheduleRequest * StopCrawlerScheduleResponse::request() const
 {
     Q_D(const StopCrawlerScheduleResponse);
@@ -65,9 +63,8 @@ const StopCrawlerScheduleRequest * StopCrawlerScheduleResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue StopCrawlerSchedule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue StopCrawlerSchedule \a response.
  */
 void StopCrawlerScheduleResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StopCrawlerScheduleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::StopCrawlerScheduleResponsePrivate
+ * \brief The StopCrawlerScheduleResponsePrivate class provides private implementation for StopCrawlerScheduleResponse.
  * \internal
  *
- * \class StopCrawlerScheduleResponsePrivate
- *
- * \brief Private implementation for StopCrawlerScheduleResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopCrawlerScheduleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopCrawlerScheduleResponse instance.
+ * Constructs a StopCrawlerScheduleResponsePrivate object with public implementation \a q.
  */
 StopCrawlerScheduleResponsePrivate::StopCrawlerScheduleResponsePrivate(
     StopCrawlerScheduleResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ StopCrawlerScheduleResponsePrivate::StopCrawlerScheduleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue StopCrawlerScheduleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue StopCrawlerSchedule response element from \a xml.
  */
 void StopCrawlerScheduleResponsePrivate::parseStopCrawlerScheduleResponse(QXmlStreamReader &xml)
 {

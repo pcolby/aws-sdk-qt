@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetIndexingConfigurationResponse
- *
  * \brief The GetIndexingConfigurationResponse class provides an interace for IoT GetIndexingConfiguration responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetIndexingConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetIndexingConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetIndexingConfigurationResponse::GetIndexingConfigurationResponse(
         const GetIndexingConfigurationRequest &request,
@@ -66,6 +61,9 @@ GetIndexingConfigurationResponse::GetIndexingConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetIndexingConfigurationRequest * GetIndexingConfigurationResponse::request() const
 {
     Q_D(const GetIndexingConfigurationResponse);
@@ -73,9 +71,8 @@ const GetIndexingConfigurationRequest * GetIndexingConfigurationResponse::reques
 }
 
 /*!
- * @brief  Parse a IoT GetIndexingConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT GetIndexingConfiguration \a response.
  */
 void GetIndexingConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetIndexingConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::GetIndexingConfigurationResponsePrivate
+ * \brief The GetIndexingConfigurationResponsePrivate class provides private implementation for GetIndexingConfigurationResponse.
  * \internal
  *
- * \class GetIndexingConfigurationResponsePrivate
- *
- * \brief Private implementation for GetIndexingConfigurationResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIndexingConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetIndexingConfigurationResponse instance.
+ * Constructs a GetIndexingConfigurationResponsePrivate object with public implementation \a q.
  */
 GetIndexingConfigurationResponsePrivate::GetIndexingConfigurationResponsePrivate(
     GetIndexingConfigurationResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ GetIndexingConfigurationResponsePrivate::GetIndexingConfigurationResponsePrivate
 }
 
 /*!
- * @brief  Parse an IoT GetIndexingConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT GetIndexingConfiguration response element from \a xml.
  */
 void GetIndexingConfigurationResponsePrivate::parseGetIndexingConfigurationResponse(QXmlStreamReader &xml)
 {

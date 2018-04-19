@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteServiceSpecificCredentialResponse
- *
  * \brief The DeleteServiceSpecificCredentialResponse class provides an interace for IAM DeleteServiceSpecificCredential responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteServiceSpecificCredentialResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteServiceSpecificCredentialResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteServiceSpecificCredentialResponse::DeleteServiceSpecificCredentialResponse(
         const DeleteServiceSpecificCredentialRequest &request,
@@ -120,6 +115,9 @@ DeleteServiceSpecificCredentialResponse::DeleteServiceSpecificCredentialResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteServiceSpecificCredentialRequest * DeleteServiceSpecificCredentialResponse::request() const
 {
     Q_D(const DeleteServiceSpecificCredentialResponse);
@@ -127,9 +125,8 @@ const DeleteServiceSpecificCredentialRequest * DeleteServiceSpecificCredentialRe
 }
 
 /*!
- * @brief  Parse a IAM DeleteServiceSpecificCredential response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteServiceSpecificCredential \a response.
  */
 void DeleteServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteServiceSpecificCredentialResponsePrivate
+ * \brief The DeleteServiceSpecificCredentialResponsePrivate class provides private implementation for DeleteServiceSpecificCredentialResponse.
  * \internal
  *
- * \class DeleteServiceSpecificCredentialResponsePrivate
- *
- * \brief Private implementation for DeleteServiceSpecificCredentialResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServiceSpecificCredentialResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteServiceSpecificCredentialResponse instance.
+ * Constructs a DeleteServiceSpecificCredentialResponsePrivate object with public implementation \a q.
  */
 DeleteServiceSpecificCredentialResponsePrivate::DeleteServiceSpecificCredentialResponsePrivate(
     DeleteServiceSpecificCredentialResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteServiceSpecificCredentialResponsePrivate::DeleteServiceSpecificCredentialR
 }
 
 /*!
- * @brief  Parse an IAM DeleteServiceSpecificCredentialResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteServiceSpecificCredential response element from \a xml.
  */
 void DeleteServiceSpecificCredentialResponsePrivate::parseDeleteServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {

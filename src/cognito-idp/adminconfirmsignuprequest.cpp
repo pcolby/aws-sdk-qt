@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminConfirmSignUpRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a AdminConfirmSignUpRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminConfirmSignUpRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminConfirmSignUpRequestPrivate::AdminConfirmSignUpRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminConfirmSignUpRequest * const q)

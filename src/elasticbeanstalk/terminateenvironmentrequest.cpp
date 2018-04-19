@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * TerminateEnvironmentRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a TerminateEnvironmentRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a TerminateEnvironmentRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 TerminateEnvironmentRequestPrivate::TerminateEnvironmentRequestPrivate(
     const ElasticBeanstalkRequest::Action action, TerminateEnvironmentRequest * const q)

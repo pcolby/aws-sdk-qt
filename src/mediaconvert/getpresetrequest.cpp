@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetPresetRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetPresetRequestPrivate object for MediaConvert \a action with,
- * public implementation \a q.
+ * Constructs a GetPresetRequestPrivate object for MediaConvert \a action,
+ * with public implementation \a q.
  */
 GetPresetRequestPrivate::GetPresetRequestPrivate(
     const MediaConvertRequest::Action action, GetPresetRequest * const q)

@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DetachFromIndexRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DetachFromIndexRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a DetachFromIndexRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 DetachFromIndexRequestPrivate::DetachFromIndexRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachFromIndexRequest * const q)

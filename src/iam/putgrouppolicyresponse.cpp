@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::PutGroupPolicyResponse
- *
  * \brief The PutGroupPolicyResponse class provides an interace for IAM PutGroupPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new PutGroupPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutGroupPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutGroupPolicyResponse::PutGroupPolicyResponse(
         const PutGroupPolicyRequest &request,
@@ -120,6 +115,9 @@ PutGroupPolicyResponse::PutGroupPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutGroupPolicyRequest * PutGroupPolicyResponse::request() const
 {
     Q_D(const PutGroupPolicyResponse);
@@ -127,9 +125,8 @@ const PutGroupPolicyRequest * PutGroupPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM PutGroupPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM PutGroupPolicy \a response.
  */
 void PutGroupPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void PutGroupPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::PutGroupPolicyResponsePrivate
+ * \brief The PutGroupPolicyResponsePrivate class provides private implementation for PutGroupPolicyResponse.
  * \internal
  *
- * \class PutGroupPolicyResponsePrivate
- *
- * \brief Private implementation for PutGroupPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutGroupPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutGroupPolicyResponse instance.
+ * Constructs a PutGroupPolicyResponsePrivate object with public implementation \a q.
  */
 PutGroupPolicyResponsePrivate::PutGroupPolicyResponsePrivate(
     PutGroupPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ PutGroupPolicyResponsePrivate::PutGroupPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM PutGroupPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM PutGroupPolicy response element from \a xml.
  */
 void PutGroupPolicyResponsePrivate::parsePutGroupPolicyResponse(QXmlStreamReader &xml)
 {

@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * ValidatePipelineDefinitionRequest::response(Q
  */
 
 /*!
- *
- * Constructs a ValidatePipelineDefinitionRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a ValidatePipelineDefinitionRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 ValidatePipelineDefinitionRequestPrivate::ValidatePipelineDefinitionRequestPrivate(
     const DataPipelineRequest::Action action, ValidatePipelineDefinitionRequest * const q)

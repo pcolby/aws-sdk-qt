@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * GetCertificateAuthorityCsrRequest::response(Q
  */
 
 /*!
- *
- * Constructs a GetCertificateAuthorityCsrRequestPrivate object for ACMPCA \a action with,
- * public implementation \a q.
+ * Constructs a GetCertificateAuthorityCsrRequestPrivate object for ACMPCA \a action,
+ * with public implementation \a q.
  */
 GetCertificateAuthorityCsrRequestPrivate::GetCertificateAuthorityCsrRequestPrivate(
     const ACMPCARequest::Action action, GetCertificateAuthorityCsrRequest * const q)

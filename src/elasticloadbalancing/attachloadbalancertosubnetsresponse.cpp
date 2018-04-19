@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::AttachLoadBalancerToSubnetsResponse
- *
  * \brief The AttachLoadBalancerToSubnetsResponse class provides an interace for ElasticLoadBalancing AttachLoadBalancerToSubnets responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new AttachLoadBalancerToSubnetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachLoadBalancerToSubnetsResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachLoadBalancerToSubnetsResponse::AttachLoadBalancerToSubnetsResponse(
         const AttachLoadBalancerToSubnetsRequest &request,
@@ -83,6 +78,9 @@ AttachLoadBalancerToSubnetsResponse::AttachLoadBalancerToSubnetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachLoadBalancerToSubnetsRequest * AttachLoadBalancerToSubnetsResponse::request() const
 {
     Q_D(const AttachLoadBalancerToSubnetsResponse);
@@ -90,9 +88,8 @@ const AttachLoadBalancerToSubnetsRequest * AttachLoadBalancerToSubnetsResponse::
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing AttachLoadBalancerToSubnets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing AttachLoadBalancerToSubnets \a response.
  */
 void AttachLoadBalancerToSubnetsResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void AttachLoadBalancerToSubnetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::AttachLoadBalancerToSubnetsResponsePrivate
+ * \brief The AttachLoadBalancerToSubnetsResponsePrivate class provides private implementation for AttachLoadBalancerToSubnetsResponse.
  * \internal
  *
- * \class AttachLoadBalancerToSubnetsResponsePrivate
- *
- * \brief Private implementation for AttachLoadBalancerToSubnetsResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachLoadBalancerToSubnetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachLoadBalancerToSubnetsResponse instance.
+ * Constructs a AttachLoadBalancerToSubnetsResponsePrivate object with public implementation \a q.
  */
 AttachLoadBalancerToSubnetsResponsePrivate::AttachLoadBalancerToSubnetsResponsePrivate(
     AttachLoadBalancerToSubnetsResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ AttachLoadBalancerToSubnetsResponsePrivate::AttachLoadBalancerToSubnetsResponseP
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing AttachLoadBalancerToSubnetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing AttachLoadBalancerToSubnets response element from \a xml.
  */
 void AttachLoadBalancerToSubnetsResponsePrivate::parseAttachLoadBalancerToSubnetsResponse(QXmlStreamReader &xml)
 {

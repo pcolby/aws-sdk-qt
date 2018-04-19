@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * ListResourcesRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListResourcesRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a ListResourcesRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 ListResourcesRequestPrivate::ListResourcesRequestPrivate(
     const WorkMailRequest::Action action, ListResourcesRequest * const q)

@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * GetContextKeysForPrincipalPolicyRequest::resp
  */
 
 /*!
- *
- * Constructs a GetContextKeysForPrincipalPolicyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a GetContextKeysForPrincipalPolicyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 GetContextKeysForPrincipalPolicyRequestPrivate::GetContextKeysForPrincipalPolicyRequestPrivate(
     const IAMRequest::Action action, GetContextKeysForPrincipalPolicyRequest * const q)

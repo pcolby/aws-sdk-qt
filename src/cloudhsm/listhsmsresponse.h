@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListHsmsResponse : public CloudHSMResponse {
 public:
     ListHsmsResponse(const ListHsmsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListHsmsRequest * request() const;
+    virtual const ListHsmsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListHsmsResponse)

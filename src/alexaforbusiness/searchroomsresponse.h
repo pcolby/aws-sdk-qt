@@ -34,10 +34,10 @@ class QTAWS_EXPORT SearchRoomsResponse : public AlexaForBusinessResponse {
 public:
     SearchRoomsResponse(const SearchRoomsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SearchRoomsRequest * request() const;
+    virtual const SearchRoomsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SearchRoomsResponse)

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AttachRolePolicyResponse
- *
  * \brief The AttachRolePolicyResponse class provides an interace for IAM AttachRolePolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AttachRolePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachRolePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachRolePolicyResponse::AttachRolePolicyResponse(
         const AttachRolePolicyRequest &request,
@@ -120,6 +115,9 @@ AttachRolePolicyResponse::AttachRolePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachRolePolicyRequest * AttachRolePolicyResponse::request() const
 {
     Q_D(const AttachRolePolicyResponse);
@@ -127,9 +125,8 @@ const AttachRolePolicyRequest * AttachRolePolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM AttachRolePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM AttachRolePolicy \a response.
  */
 void AttachRolePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void AttachRolePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::AttachRolePolicyResponsePrivate
+ * \brief The AttachRolePolicyResponsePrivate class provides private implementation for AttachRolePolicyResponse.
  * \internal
  *
- * \class AttachRolePolicyResponsePrivate
- *
- * \brief Private implementation for AttachRolePolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachRolePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachRolePolicyResponse instance.
+ * Constructs a AttachRolePolicyResponsePrivate object with public implementation \a q.
  */
 AttachRolePolicyResponsePrivate::AttachRolePolicyResponsePrivate(
     AttachRolePolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ AttachRolePolicyResponsePrivate::AttachRolePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM AttachRolePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM AttachRolePolicy response element from \a xml.
  */
 void AttachRolePolicyResponsePrivate::parseAttachRolePolicyResponse(QXmlStreamReader &xml)
 {

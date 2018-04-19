@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCustomActionTypeRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteCustomActionTypeRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCustomActionTypeRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 DeleteCustomActionTypeRequestPrivate::DeleteCustomActionTypeRequestPrivate(
     const CodePipelineRequest::Action action, DeleteCustomActionTypeRequest * const q)

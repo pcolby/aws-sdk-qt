@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateProductWithPortfolioResponse : public ServiceCatalog
 public:
     AssociateProductWithPortfolioResponse(const AssociateProductWithPortfolioRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateProductWithPortfolioRequest * request() const;
+    virtual const AssociateProductWithPortfolioRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateProductWithPortfolioResponse)

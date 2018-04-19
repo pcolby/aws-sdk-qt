@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeReservedDBInstancesResponse : public RDSResponse {
 public:
     DescribeReservedDBInstancesResponse(const DescribeReservedDBInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeReservedDBInstancesRequest * request() const;
+    virtual const DescribeReservedDBInstancesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeReservedDBInstancesResponse)

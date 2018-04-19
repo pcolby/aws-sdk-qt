@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateTagsResponse
- *
  * \brief The CreateTagsResponse class provides an interace for EC2 CreateTags responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTagsResponse::CreateTagsResponse(
         const CreateTagsRequest &request,
@@ -59,6 +54,9 @@ CreateTagsResponse::CreateTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTagsRequest * CreateTagsResponse::request() const
 {
     Q_D(const CreateTagsResponse);
@@ -66,9 +64,8 @@ const CreateTagsRequest * CreateTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateTags \a response.
  */
 void CreateTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateTagsResponsePrivate
+ * \brief The CreateTagsResponsePrivate class provides private implementation for CreateTagsResponse.
  * \internal
  *
- * \class CreateTagsResponsePrivate
- *
- * \brief Private implementation for CreateTagsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTagsResponse instance.
+ * Constructs a CreateTagsResponsePrivate object with public implementation \a q.
  */
 CreateTagsResponsePrivate::CreateTagsResponsePrivate(
     CreateTagsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateTagsResponsePrivate::CreateTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateTags response element from \a xml.
  */
 void CreateTagsResponsePrivate::parseCreateTagsResponse(QXmlStreamReader &xml)
 {

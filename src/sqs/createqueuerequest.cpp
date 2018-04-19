@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * CreateQueueRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateQueueRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a CreateQueueRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 CreateQueueRequestPrivate::CreateQueueRequestPrivate(
     const SQSRequest::Action action, CreateQueueRequest * const q)

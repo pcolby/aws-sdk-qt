@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * GetBlobRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a GetBlobRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a GetBlobRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 GetBlobRequestPrivate::GetBlobRequestPrivate(
     const CodeCommitRequest::Action action, GetBlobRequest * const q)

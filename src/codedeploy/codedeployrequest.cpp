@@ -79,7 +79,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * Constructs a[n] CodeDeployRequest object for CodeDeploy \a action.
+ * Constructs a CodeDeployRequest object for CodeDeploy \a action.
  */
 CodeDeployRequest::CodeDeployRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CodeDeployRequestPrivate(action, this))
@@ -279,8 +279,8 @@ QNetworkRequest CodeDeployRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CodeDeployRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a CodeDeployRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 CodeDeployRequestPrivate::CodeDeployRequestPrivate(const CodeDeployRequest::Action action, CodeDeployRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

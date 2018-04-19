@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAddressBookRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateAddressBookRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAddressBookRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 UpdateAddressBookRequestPrivate::UpdateAddressBookRequestPrivate(
     const AlexaForBusinessRequest::Action action, UpdateAddressBookRequest * const q)

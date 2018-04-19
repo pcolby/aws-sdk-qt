@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeInstancesHealthResponse
- *
  * \brief The DescribeInstancesHealthResponse class provides an interace for ElasticBeanstalk DescribeInstancesHealth responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstancesHealthResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeInstancesHealthResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeInstancesHealthResponse::DescribeInstancesHealthResponse(
         const DescribeInstancesHealthRequest &request,
@@ -77,6 +72,9 @@ DescribeInstancesHealthResponse::DescribeInstancesHealthResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeInstancesHealthRequest * DescribeInstancesHealthResponse::request() const
 {
     Q_D(const DescribeInstancesHealthResponse);
@@ -84,9 +82,8 @@ const DescribeInstancesHealthRequest * DescribeInstancesHealthResponse::request(
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DescribeInstancesHealth response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DescribeInstancesHealth \a response.
  */
 void DescribeInstancesHealthResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribeInstancesHealthResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DescribeInstancesHealthResponsePrivate
+ * \brief The DescribeInstancesHealthResponsePrivate class provides private implementation for DescribeInstancesHealthResponse.
  * \internal
  *
- * \class DescribeInstancesHealthResponsePrivate
- *
- * \brief Private implementation for DescribeInstancesHealthResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstancesHealthResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeInstancesHealthResponse instance.
+ * Constructs a DescribeInstancesHealthResponsePrivate object with public implementation \a q.
  */
 DescribeInstancesHealthResponsePrivate::DescribeInstancesHealthResponsePrivate(
     DescribeInstancesHealthResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribeInstancesHealthResponsePrivate::DescribeInstancesHealthResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DescribeInstancesHealthResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DescribeInstancesHealth response element from \a xml.
  */
 void DescribeInstancesHealthResponsePrivate::parseDescribeInstancesHealthResponse(QXmlStreamReader &xml)
 {

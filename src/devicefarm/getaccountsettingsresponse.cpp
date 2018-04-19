@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetAccountSettingsResponse
- *
  * \brief The GetAccountSettingsResponse class provides an interace for DeviceFarm GetAccountSettings responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetAccountSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAccountSettingsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAccountSettingsResponse::GetAccountSettingsResponse(
         const GetAccountSettingsRequest &request,
@@ -57,6 +52,9 @@ GetAccountSettingsResponse::GetAccountSettingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAccountSettingsRequest * GetAccountSettingsResponse::request() const
 {
     Q_D(const GetAccountSettingsResponse);
@@ -64,9 +62,8 @@ const GetAccountSettingsRequest * GetAccountSettingsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetAccountSettings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetAccountSettings \a response.
  */
 void GetAccountSettingsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetAccountSettingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetAccountSettingsResponsePrivate
+ * \brief The GetAccountSettingsResponsePrivate class provides private implementation for GetAccountSettingsResponse.
  * \internal
  *
- * \class GetAccountSettingsResponsePrivate
- *
- * \brief Private implementation for GetAccountSettingsResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountSettingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAccountSettingsResponse instance.
+ * Constructs a GetAccountSettingsResponsePrivate object with public implementation \a q.
  */
 GetAccountSettingsResponsePrivate::GetAccountSettingsResponsePrivate(
     GetAccountSettingsResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetAccountSettingsResponsePrivate::GetAccountSettingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetAccountSettingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetAccountSettings response element from \a xml.
  */
 void GetAccountSettingsResponsePrivate::parseGetAccountSettingsResponse(QXmlStreamReader &xml)
 {

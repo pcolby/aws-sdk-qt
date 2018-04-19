@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListSizeConstraintSetsResponse
- *
  * \brief The ListSizeConstraintSetsResponse class provides an interace for WAF ListSizeConstraintSets responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListSizeConstraintSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSizeConstraintSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSizeConstraintSetsResponse::ListSizeConstraintSetsResponse(
         const ListSizeConstraintSetsRequest &request,
@@ -60,6 +55,9 @@ ListSizeConstraintSetsResponse::ListSizeConstraintSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSizeConstraintSetsRequest * ListSizeConstraintSetsResponse::request() const
 {
     Q_D(const ListSizeConstraintSetsResponse);
@@ -67,9 +65,8 @@ const ListSizeConstraintSetsRequest * ListSizeConstraintSetsResponse::request() 
 }
 
 /*!
- * @brief  Parse a WAF ListSizeConstraintSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF ListSizeConstraintSets \a response.
  */
 void ListSizeConstraintSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListSizeConstraintSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::ListSizeConstraintSetsResponsePrivate
+ * \brief The ListSizeConstraintSetsResponsePrivate class provides private implementation for ListSizeConstraintSetsResponse.
  * \internal
  *
- * \class ListSizeConstraintSetsResponsePrivate
- *
- * \brief Private implementation for ListSizeConstraintSetsResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSizeConstraintSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSizeConstraintSetsResponse instance.
+ * Constructs a ListSizeConstraintSetsResponsePrivate object with public implementation \a q.
  */
 ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponsePrivate(
     ListSizeConstraintSetsResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF ListSizeConstraintSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF ListSizeConstraintSets response element from \a xml.
  */
 void ListSizeConstraintSetsResponsePrivate::parseListSizeConstraintSetsResponse(QXmlStreamReader &xml)
 {

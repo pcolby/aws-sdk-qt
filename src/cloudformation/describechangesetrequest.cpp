@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribeChangeSetRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribeChangeSetRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a DescribeChangeSetRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 DescribeChangeSetRequestPrivate::DescribeChangeSetRequestPrivate(
     const CloudFormationRequest::Action action, DescribeChangeSetRequest * const q)

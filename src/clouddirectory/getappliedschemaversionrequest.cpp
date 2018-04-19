@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * GetAppliedSchemaVersionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a GetAppliedSchemaVersionRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a GetAppliedSchemaVersionRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 GetAppliedSchemaVersionRequestPrivate::GetAppliedSchemaVersionRequestPrivate(
     const CloudDirectoryRequest::Action action, GetAppliedSchemaVersionRequest * const q)

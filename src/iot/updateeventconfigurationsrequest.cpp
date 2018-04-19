@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateEventConfigurationsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a UpdateEventConfigurationsRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a UpdateEventConfigurationsRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 UpdateEventConfigurationsRequestPrivate::UpdateEventConfigurationsRequestPrivate(
     const IoTRequest::Action action, UpdateEventConfigurationsRequest * const q)

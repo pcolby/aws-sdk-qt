@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * GetApplicationRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetApplicationRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a GetApplicationRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 GetApplicationRequestPrivate::GetApplicationRequestPrivate(
     const CodeDeployRequest::Action action, GetApplicationRequest * const q)

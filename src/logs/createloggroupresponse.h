@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateLogGroupResponse : public CloudWatchLogsResponse {
 public:
     CreateLogGroupResponse(const CreateLogGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateLogGroupRequest * request() const;
+    virtual const CreateLogGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateLogGroupResponse)

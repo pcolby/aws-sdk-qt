@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * RevokeSecurityGroupIngressRequest::response(Q
  */
 
 /*!
- *
- * Constructs a RevokeSecurityGroupIngressRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a RevokeSecurityGroupIngressRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 RevokeSecurityGroupIngressRequestPrivate::RevokeSecurityGroupIngressRequestPrivate(
     const EC2Request::Action action, RevokeSecurityGroupIngressRequest * const q)

@@ -29,10 +29,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::PutAttributesResponse
- *
  * \brief The PutAttributesResponse class provides an interace for SimpleDB PutAttributes responses.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -52,11 +51,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new PutAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 PutAttributesResponse::PutAttributesResponse(
         const PutAttributesRequest &request,
@@ -68,6 +63,9 @@ PutAttributesResponse::PutAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutAttributesRequest * PutAttributesResponse::request() const
 {
     Q_D(const PutAttributesResponse);
@@ -75,9 +73,8 @@ const PutAttributesRequest * PutAttributesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SimpleDB PutAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SimpleDB PutAttributes \a response.
  */
 void PutAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void PutAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SimpleDB::PutAttributesResponsePrivate
+ * \brief The PutAttributesResponsePrivate class provides private implementation for PutAttributesResponse.
  * \internal
  *
- * \class PutAttributesResponsePrivate
- *
- * \brief Private implementation for PutAttributesResponse.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutAttributesResponse instance.
+ * Constructs a PutAttributesResponsePrivate object with public implementation \a q.
  */
 PutAttributesResponsePrivate::PutAttributesResponsePrivate(
     PutAttributesResponse * const q) : SimpleDBResponsePrivate(q)
@@ -108,9 +101,7 @@ PutAttributesResponsePrivate::PutAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SimpleDB PutAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SimpleDB PutAttributes response element from \a xml.
  */
 void PutAttributesResponsePrivate::parsePutAttributesResponse(QXmlStreamReader &xml)
 {

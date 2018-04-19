@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DeletePendingAggregationRequestRequest::respo
  */
 
 /*!
- *
- * Constructs a DeletePendingAggregationRequestRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DeletePendingAggregationRequestRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DeletePendingAggregationRequestRequestPrivate::DeletePendingAggregationRequestRequestPrivate(
     const ConfigServiceRequest::Action action, DeletePendingAggregationRequestRequest * const q)

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeleteProvisionedProductPlanRequest::response
  */
 
 /*!
- *
- * Constructs a DeleteProvisionedProductPlanRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DeleteProvisionedProductPlanRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DeleteProvisionedProductPlanRequestPrivate::DeleteProvisionedProductPlanRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteProvisionedProductPlanRequest * const q)

@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::CreateLogGroupResponse
- *
  * \brief The CreateLogGroupResponse class provides an interace for CloudWatchLogs CreateLogGroup responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new CreateLogGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLogGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLogGroupResponse::CreateLogGroupResponse(
         const CreateLogGroupRequest &request,
@@ -84,6 +79,9 @@ CreateLogGroupResponse::CreateLogGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLogGroupRequest * CreateLogGroupResponse::request() const
 {
     Q_D(const CreateLogGroupResponse);
@@ -91,9 +89,8 @@ const CreateLogGroupRequest * CreateLogGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs CreateLogGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs CreateLogGroup \a response.
  */
 void CreateLogGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void CreateLogGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::CreateLogGroupResponsePrivate
+ * \brief The CreateLogGroupResponsePrivate class provides private implementation for CreateLogGroupResponse.
  * \internal
  *
- * \class CreateLogGroupResponsePrivate
- *
- * \brief Private implementation for CreateLogGroupResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLogGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLogGroupResponse instance.
+ * Constructs a CreateLogGroupResponsePrivate object with public implementation \a q.
  */
 CreateLogGroupResponsePrivate::CreateLogGroupResponsePrivate(
     CreateLogGroupResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ CreateLogGroupResponsePrivate::CreateLogGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs CreateLogGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs CreateLogGroup response element from \a xml.
  */
 void CreateLogGroupResponsePrivate::parseCreateLogGroupResponse(QXmlStreamReader &xml)
 {

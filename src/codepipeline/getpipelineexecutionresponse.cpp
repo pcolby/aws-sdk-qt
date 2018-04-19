@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::GetPipelineExecutionResponse
- *
  * \brief The GetPipelineExecutionResponse class provides an interace for CodePipeline GetPipelineExecution responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new GetPipelineExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPipelineExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPipelineExecutionResponse::GetPipelineExecutionResponse(
         const GetPipelineExecutionRequest &request,
@@ -218,6 +213,9 @@ GetPipelineExecutionResponse::GetPipelineExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPipelineExecutionRequest * GetPipelineExecutionResponse::request() const
 {
     Q_D(const GetPipelineExecutionResponse);
@@ -225,9 +223,8 @@ const GetPipelineExecutionRequest * GetPipelineExecutionResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CodePipeline GetPipelineExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline GetPipelineExecution \a response.
  */
 void GetPipelineExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void GetPipelineExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::GetPipelineExecutionResponsePrivate
+ * \brief The GetPipelineExecutionResponsePrivate class provides private implementation for GetPipelineExecutionResponse.
  * \internal
  *
- * \class GetPipelineExecutionResponsePrivate
- *
- * \brief Private implementation for GetPipelineExecutionResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPipelineExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPipelineExecutionResponse instance.
+ * Constructs a GetPipelineExecutionResponsePrivate object with public implementation \a q.
  */
 GetPipelineExecutionResponsePrivate::GetPipelineExecutionResponsePrivate(
     GetPipelineExecutionResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ GetPipelineExecutionResponsePrivate::GetPipelineExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline GetPipelineExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline GetPipelineExecution response element from \a xml.
  */
 void GetPipelineExecutionResponsePrivate::parseGetPipelineExecutionResponse(QXmlStreamReader &xml)
 {

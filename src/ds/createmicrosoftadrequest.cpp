@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateMicrosoftADRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CreateMicrosoftADRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a CreateMicrosoftADRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 CreateMicrosoftADRequestPrivate::CreateMicrosoftADRequestPrivate(
     const DirectoryServiceRequest::Action action, CreateMicrosoftADRequest * const q)

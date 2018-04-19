@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::SetTaskStatusResponse
- *
  * \brief The SetTaskStatusResponse class provides an interace for DataPipeline SetTaskStatus responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new SetTaskStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetTaskStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 SetTaskStatusResponse::SetTaskStatusResponse(
         const SetTaskStatusRequest &request,
@@ -73,6 +68,9 @@ SetTaskStatusResponse::SetTaskStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetTaskStatusRequest * SetTaskStatusResponse::request() const
 {
     Q_D(const SetTaskStatusResponse);
@@ -80,9 +78,8 @@ const SetTaskStatusRequest * SetTaskStatusResponse::request() const
 }
 
 /*!
- * @brief  Parse a DataPipeline SetTaskStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline SetTaskStatus \a response.
  */
 void SetTaskStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void SetTaskStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::SetTaskStatusResponsePrivate
+ * \brief The SetTaskStatusResponsePrivate class provides private implementation for SetTaskStatusResponse.
  * \internal
  *
- * \class SetTaskStatusResponsePrivate
- *
- * \brief Private implementation for SetTaskStatusResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetTaskStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetTaskStatusResponse instance.
+ * Constructs a SetTaskStatusResponsePrivate object with public implementation \a q.
  */
 SetTaskStatusResponsePrivate::SetTaskStatusResponsePrivate(
     SetTaskStatusResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ SetTaskStatusResponsePrivate::SetTaskStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline SetTaskStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline SetTaskStatus response element from \a xml.
  */
 void SetTaskStatusResponsePrivate::parseSetTaskStatusResponse(QXmlStreamReader &xml)
 {

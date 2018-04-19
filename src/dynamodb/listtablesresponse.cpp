@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::ListTablesResponse
- *
  * \brief The ListTablesResponse class provides an interace for DynamoDB ListTables responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new ListTablesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTablesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTablesResponse::ListTablesResponse(
         const ListTablesRequest &request,
@@ -74,6 +69,9 @@ ListTablesResponse::ListTablesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTablesRequest * ListTablesResponse::request() const
 {
     Q_D(const ListTablesResponse);
@@ -81,9 +79,8 @@ const ListTablesRequest * ListTablesResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB ListTables response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB ListTables \a response.
  */
 void ListTablesResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void ListTablesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::ListTablesResponsePrivate
+ * \brief The ListTablesResponsePrivate class provides private implementation for ListTablesResponse.
  * \internal
  *
- * \class ListTablesResponsePrivate
- *
- * \brief Private implementation for ListTablesResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTablesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTablesResponse instance.
+ * Constructs a ListTablesResponsePrivate object with public implementation \a q.
  */
 ListTablesResponsePrivate::ListTablesResponsePrivate(
     ListTablesResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ ListTablesResponsePrivate::ListTablesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB ListTablesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB ListTables response element from \a xml.
  */
 void ListTablesResponsePrivate::parseListTablesResponse(QXmlStreamReader &xml)
 {

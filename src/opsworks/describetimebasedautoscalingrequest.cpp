@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTimeBasedAutoScalingRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeTimeBasedAutoScalingRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTimeBasedAutoScalingRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeTimeBasedAutoScalingRequestPrivate::DescribeTimeBasedAutoScalingRequestPrivate(
     const OpsWorksRequest::Action action, DescribeTimeBasedAutoScalingRequest * const q)

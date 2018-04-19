@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteUtterancesResponse : public LexModelBuildingServiceResp
 public:
     DeleteUtterancesResponse(const DeleteUtterancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteUtterancesRequest * request() const;
+    virtual const DeleteUtterancesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteUtterancesResponse)

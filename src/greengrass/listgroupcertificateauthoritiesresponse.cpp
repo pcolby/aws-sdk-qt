@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListGroupCertificateAuthoritiesResponse
- *
  * \brief The ListGroupCertificateAuthoritiesResponse class provides an interace for Greengrass ListGroupCertificateAuthorities responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListGroupCertificateAuthoritiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGroupCertificateAuthoritiesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGroupCertificateAuthoritiesResponse::ListGroupCertificateAuthoritiesResponse(
         const ListGroupCertificateAuthoritiesRequest &request,
@@ -58,6 +53,9 @@ ListGroupCertificateAuthoritiesResponse::ListGroupCertificateAuthoritiesResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGroupCertificateAuthoritiesRequest * ListGroupCertificateAuthoritiesResponse::request() const
 {
     Q_D(const ListGroupCertificateAuthoritiesResponse);
@@ -65,9 +63,8 @@ const ListGroupCertificateAuthoritiesRequest * ListGroupCertificateAuthoritiesRe
 }
 
 /*!
- * @brief  Parse a Greengrass ListGroupCertificateAuthorities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass ListGroupCertificateAuthorities \a response.
  */
 void ListGroupCertificateAuthoritiesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListGroupCertificateAuthoritiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::ListGroupCertificateAuthoritiesResponsePrivate
+ * \brief The ListGroupCertificateAuthoritiesResponsePrivate class provides private implementation for ListGroupCertificateAuthoritiesResponse.
  * \internal
  *
- * \class ListGroupCertificateAuthoritiesResponsePrivate
- *
- * \brief Private implementation for ListGroupCertificateAuthoritiesResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupCertificateAuthoritiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGroupCertificateAuthoritiesResponse instance.
+ * Constructs a ListGroupCertificateAuthoritiesResponsePrivate object with public implementation \a q.
  */
 ListGroupCertificateAuthoritiesResponsePrivate::ListGroupCertificateAuthoritiesResponsePrivate(
     ListGroupCertificateAuthoritiesResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ ListGroupCertificateAuthoritiesResponsePrivate::ListGroupCertificateAuthoritiesR
 }
 
 /*!
- * @brief  Parse an Greengrass ListGroupCertificateAuthoritiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass ListGroupCertificateAuthorities response element from \a xml.
  */
 void ListGroupCertificateAuthoritiesResponsePrivate::parseListGroupCertificateAuthoritiesResponse(QXmlStreamReader &xml)
 {

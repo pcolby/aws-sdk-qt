@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::ListIPSetsResponse
- *
  * \brief The ListIPSetsResponse class provides an interace for GuardDuty ListIPSets responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::listIPSets
  */
 
 /*!
- * @brief  Constructs a new ListIPSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListIPSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListIPSetsResponse::ListIPSetsResponse(
         const ListIPSetsRequest &request,
@@ -55,6 +50,9 @@ ListIPSetsResponse::ListIPSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListIPSetsRequest * ListIPSetsResponse::request() const
 {
     Q_D(const ListIPSetsResponse);
@@ -62,9 +60,8 @@ const ListIPSetsRequest * ListIPSetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty ListIPSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty ListIPSets \a response.
  */
 void ListIPSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListIPSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::ListIPSetsResponsePrivate
+ * \brief The ListIPSetsResponsePrivate class provides private implementation for ListIPSetsResponse.
  * \internal
  *
- * \class ListIPSetsResponsePrivate
- *
- * \brief Private implementation for ListIPSetsResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIPSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListIPSetsResponse instance.
+ * Constructs a ListIPSetsResponsePrivate object with public implementation \a q.
  */
 ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
     ListIPSetsResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ ListIPSetsResponsePrivate::ListIPSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty ListIPSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty ListIPSets response element from \a xml.
  */
 void ListIPSetsResponsePrivate::parseListIPSetsResponse(QXmlStreamReader &xml)
 {

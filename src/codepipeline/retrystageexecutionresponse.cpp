@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::RetryStageExecutionResponse
- *
  * \brief The RetryStageExecutionResponse class provides an interace for CodePipeline RetryStageExecution responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new RetryStageExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RetryStageExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 RetryStageExecutionResponse::RetryStageExecutionResponse(
         const RetryStageExecutionRequest &request,
@@ -218,6 +213,9 @@ RetryStageExecutionResponse::RetryStageExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RetryStageExecutionRequest * RetryStageExecutionResponse::request() const
 {
     Q_D(const RetryStageExecutionResponse);
@@ -225,9 +223,8 @@ const RetryStageExecutionRequest * RetryStageExecutionResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodePipeline RetryStageExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline RetryStageExecution \a response.
  */
 void RetryStageExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void RetryStageExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::RetryStageExecutionResponsePrivate
+ * \brief The RetryStageExecutionResponsePrivate class provides private implementation for RetryStageExecutionResponse.
  * \internal
  *
- * \class RetryStageExecutionResponsePrivate
- *
- * \brief Private implementation for RetryStageExecutionResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetryStageExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RetryStageExecutionResponse instance.
+ * Constructs a RetryStageExecutionResponsePrivate object with public implementation \a q.
  */
 RetryStageExecutionResponsePrivate::RetryStageExecutionResponsePrivate(
     RetryStageExecutionResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ RetryStageExecutionResponsePrivate::RetryStageExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline RetryStageExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline RetryStageExecution response element from \a xml.
  */
 void RetryStageExecutionResponsePrivate::parseRetryStageExecutionResponse(QXmlStreamReader &xml)
 {

@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * ResetCacheRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ResetCacheRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a ResetCacheRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 ResetCacheRequestPrivate::ResetCacheRequestPrivate(
     const StorageGatewayRequest::Action action, ResetCacheRequest * const q)

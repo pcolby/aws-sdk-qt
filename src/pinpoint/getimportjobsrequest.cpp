@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetImportJobsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetImportJobsRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetImportJobsRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetImportJobsRequestPrivate::GetImportJobsRequestPrivate(
     const PinpointRequest::Action action, GetImportJobsRequest * const q)

@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::DeleteJobQueueResponse
- *
  * \brief The DeleteJobQueueResponse class provides an interace for Batch DeleteJobQueue responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new DeleteJobQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteJobQueueResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteJobQueueResponse::DeleteJobQueueResponse(
         const DeleteJobQueueRequest &request,
@@ -69,6 +64,9 @@ DeleteJobQueueResponse::DeleteJobQueueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteJobQueueRequest * DeleteJobQueueResponse::request() const
 {
     Q_D(const DeleteJobQueueResponse);
@@ -76,9 +74,8 @@ const DeleteJobQueueRequest * DeleteJobQueueResponse::request() const
 }
 
 /*!
- * @brief  Parse a Batch DeleteJobQueue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch DeleteJobQueue \a response.
  */
 void DeleteJobQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeleteJobQueueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::DeleteJobQueueResponsePrivate
+ * \brief The DeleteJobQueueResponsePrivate class provides private implementation for DeleteJobQueueResponse.
  * \internal
  *
- * \class DeleteJobQueueResponsePrivate
- *
- * \brief Private implementation for DeleteJobQueueResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteJobQueueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteJobQueueResponse instance.
+ * Constructs a DeleteJobQueueResponsePrivate object with public implementation \a q.
  */
 DeleteJobQueueResponsePrivate::DeleteJobQueueResponsePrivate(
     DeleteJobQueueResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ DeleteJobQueueResponsePrivate::DeleteJobQueueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Batch DeleteJobQueueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch DeleteJobQueue response element from \a xml.
  */
 void DeleteJobQueueResponsePrivate::parseDeleteJobQueueResponse(QXmlStreamReader &xml)
 {

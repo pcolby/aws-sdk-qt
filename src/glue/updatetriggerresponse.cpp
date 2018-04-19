@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateTriggerResponse
- *
  * \brief The UpdateTriggerResponse class provides an interace for Glue UpdateTrigger responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateTriggerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTriggerResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTriggerResponse::UpdateTriggerResponse(
         const UpdateTriggerRequest &request,
@@ -58,6 +53,9 @@ UpdateTriggerResponse::UpdateTriggerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTriggerRequest * UpdateTriggerResponse::request() const
 {
     Q_D(const UpdateTriggerResponse);
@@ -65,9 +63,8 @@ const UpdateTriggerRequest * UpdateTriggerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue UpdateTrigger response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue UpdateTrigger \a response.
  */
 void UpdateTriggerResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateTriggerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::UpdateTriggerResponsePrivate
+ * \brief The UpdateTriggerResponsePrivate class provides private implementation for UpdateTriggerResponse.
  * \internal
  *
- * \class UpdateTriggerResponsePrivate
- *
- * \brief Private implementation for UpdateTriggerResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTriggerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTriggerResponse instance.
+ * Constructs a UpdateTriggerResponsePrivate object with public implementation \a q.
  */
 UpdateTriggerResponsePrivate::UpdateTriggerResponsePrivate(
     UpdateTriggerResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateTriggerResponsePrivate::UpdateTriggerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue UpdateTriggerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue UpdateTrigger response element from \a xml.
  */
 void UpdateTriggerResponsePrivate::parseUpdateTriggerResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::SendMessageResponse
- *
  * \brief The SendMessageResponse class provides an interace for SQS SendMessage responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new SendMessageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendMessageResponse object for \a reply to \a request, with parent \a parent.
  */
 SendMessageResponse::SendMessageResponse(
         const SendMessageRequest &request,
@@ -121,6 +116,9 @@ SendMessageResponse::SendMessageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendMessageRequest * SendMessageResponse::request() const
 {
     Q_D(const SendMessageResponse);
@@ -128,9 +126,8 @@ const SendMessageRequest * SendMessageResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS SendMessage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS SendMessage \a response.
  */
 void SendMessageResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void SendMessageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::SendMessageResponsePrivate
+ * \brief The SendMessageResponsePrivate class provides private implementation for SendMessageResponse.
  * \internal
  *
- * \class SendMessageResponsePrivate
- *
- * \brief Private implementation for SendMessageResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendMessageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendMessageResponse instance.
+ * Constructs a SendMessageResponsePrivate object with public implementation \a q.
  */
 SendMessageResponsePrivate::SendMessageResponsePrivate(
     SendMessageResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ SendMessageResponsePrivate::SendMessageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS SendMessageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS SendMessage response element from \a xml.
  */
 void SendMessageResponsePrivate::parseSendMessageResponse(QXmlStreamReader &xml)
 {

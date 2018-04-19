@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DiscoverInputSchemaRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DiscoverInputSchemaRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a DiscoverInputSchemaRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 DiscoverInputSchemaRequestPrivate::DiscoverInputSchemaRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DiscoverInputSchemaRequest * const q)

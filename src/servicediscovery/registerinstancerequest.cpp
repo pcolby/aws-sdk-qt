@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * RegisterInstanceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a RegisterInstanceRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a RegisterInstanceRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, RegisterInstanceRequest * const q)

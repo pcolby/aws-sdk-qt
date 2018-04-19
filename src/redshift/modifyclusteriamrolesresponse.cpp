@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifyClusterIamRolesResponse
- *
  * \brief The ModifyClusterIamRolesResponse class provides an interace for Redshift ModifyClusterIamRoles responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifyClusterIamRolesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyClusterIamRolesResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyClusterIamRolesResponse::ModifyClusterIamRolesResponse(
         const ModifyClusterIamRolesRequest &request,
@@ -85,6 +80,9 @@ ModifyClusterIamRolesResponse::ModifyClusterIamRolesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyClusterIamRolesRequest * ModifyClusterIamRolesResponse::request() const
 {
     Q_D(const ModifyClusterIamRolesResponse);
@@ -92,9 +90,8 @@ const ModifyClusterIamRolesRequest * ModifyClusterIamRolesResponse::request() co
 }
 
 /*!
- * @brief  Parse a Redshift ModifyClusterIamRoles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift ModifyClusterIamRoles \a response.
  */
 void ModifyClusterIamRolesResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void ModifyClusterIamRolesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::ModifyClusterIamRolesResponsePrivate
+ * \brief The ModifyClusterIamRolesResponsePrivate class provides private implementation for ModifyClusterIamRolesResponse.
  * \internal
  *
- * \class ModifyClusterIamRolesResponsePrivate
- *
- * \brief Private implementation for ModifyClusterIamRolesResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyClusterIamRolesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyClusterIamRolesResponse instance.
+ * Constructs a ModifyClusterIamRolesResponsePrivate object with public implementation \a q.
  */
 ModifyClusterIamRolesResponsePrivate::ModifyClusterIamRolesResponsePrivate(
     ModifyClusterIamRolesResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ ModifyClusterIamRolesResponsePrivate::ModifyClusterIamRolesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift ModifyClusterIamRolesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift ModifyClusterIamRoles response element from \a xml.
  */
 void ModifyClusterIamRolesResponsePrivate::parseModifyClusterIamRolesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::UpdateTemplateResponse
- *
  * \brief The UpdateTemplateResponse class provides an interace for SES UpdateTemplate responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new UpdateTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTemplateResponse::UpdateTemplateResponse(
         const UpdateTemplateRequest &request,
@@ -66,6 +61,9 @@ UpdateTemplateResponse::UpdateTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTemplateRequest * UpdateTemplateResponse::request() const
 {
     Q_D(const UpdateTemplateResponse);
@@ -73,9 +71,8 @@ const UpdateTemplateRequest * UpdateTemplateResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES UpdateTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES UpdateTemplate \a response.
  */
 void UpdateTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::UpdateTemplateResponsePrivate
+ * \brief The UpdateTemplateResponsePrivate class provides private implementation for UpdateTemplateResponse.
  * \internal
  *
- * \class UpdateTemplateResponsePrivate
- *
- * \brief Private implementation for UpdateTemplateResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTemplateResponse instance.
+ * Constructs a UpdateTemplateResponsePrivate object with public implementation \a q.
  */
 UpdateTemplateResponsePrivate::UpdateTemplateResponsePrivate(
     UpdateTemplateResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateTemplateResponsePrivate::UpdateTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES UpdateTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES UpdateTemplate response element from \a xml.
  */
 void UpdateTemplateResponsePrivate::parseUpdateTemplateResponse(QXmlStreamReader &xml)
 {

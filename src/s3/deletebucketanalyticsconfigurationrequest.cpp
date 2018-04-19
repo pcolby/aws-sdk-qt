@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBucketAnalyticsConfigurationRequest::re
  */
 
 /*!
- *
- * Constructs a DeleteBucketAnalyticsConfigurationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBucketAnalyticsConfigurationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 DeleteBucketAnalyticsConfigurationRequestPrivate::DeleteBucketAnalyticsConfigurationRequestPrivate(
     const S3Request::Action action, DeleteBucketAnalyticsConfigurationRequest * const q)

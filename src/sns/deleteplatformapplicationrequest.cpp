@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeletePlatformApplicationRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DeletePlatformApplicationRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a DeletePlatformApplicationRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 DeletePlatformApplicationRequestPrivate::DeletePlatformApplicationRequestPrivate(
     const SNSRequest::Action action, DeletePlatformApplicationRequest * const q)

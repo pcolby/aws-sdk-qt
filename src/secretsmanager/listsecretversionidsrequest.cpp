@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * ListSecretVersionIdsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListSecretVersionIdsRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a ListSecretVersionIdsRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 ListSecretVersionIdsRequestPrivate::ListSecretVersionIdsRequestPrivate(
     const SecretsManagerRequest::Action action, ListSecretVersionIdsRequest * const q)

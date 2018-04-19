@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CancelReservedInstancesListingRequest::respon
  */
 
 /*!
- *
- * Constructs a CancelReservedInstancesListingRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CancelReservedInstancesListingRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CancelReservedInstancesListingRequestPrivate::CancelReservedInstancesListingRequestPrivate(
     const EC2Request::Action action, CancelReservedInstancesListingRequest * const q)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * SetInstanceProtectionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a SetInstanceProtectionRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a SetInstanceProtectionRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 SetInstanceProtectionRequestPrivate::SetInstanceProtectionRequestPrivate(
     const AutoScalingRequest::Action action, SetInstanceProtectionRequest * const q)

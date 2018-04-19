@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CopyDBClusterSnapshotResponse
- *
  * \brief The CopyDBClusterSnapshotResponse class provides an interace for RDS CopyDBClusterSnapshot responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CopyDBClusterSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopyDBClusterSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CopyDBClusterSnapshotResponse::CopyDBClusterSnapshotResponse(
         const CopyDBClusterSnapshotRequest &request,
@@ -119,6 +114,9 @@ CopyDBClusterSnapshotResponse::CopyDBClusterSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopyDBClusterSnapshotRequest * CopyDBClusterSnapshotResponse::request() const
 {
     Q_D(const CopyDBClusterSnapshotResponse);
@@ -126,9 +124,8 @@ const CopyDBClusterSnapshotRequest * CopyDBClusterSnapshotResponse::request() co
 }
 
 /*!
- * @brief  Parse a RDS CopyDBClusterSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CopyDBClusterSnapshot \a response.
  */
 void CopyDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CopyDBClusterSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CopyDBClusterSnapshotResponsePrivate
+ * \brief The CopyDBClusterSnapshotResponsePrivate class provides private implementation for CopyDBClusterSnapshotResponse.
  * \internal
  *
- * \class CopyDBClusterSnapshotResponsePrivate
- *
- * \brief Private implementation for CopyDBClusterSnapshotResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopyDBClusterSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopyDBClusterSnapshotResponse instance.
+ * Constructs a CopyDBClusterSnapshotResponsePrivate object with public implementation \a q.
  */
 CopyDBClusterSnapshotResponsePrivate::CopyDBClusterSnapshotResponsePrivate(
     CopyDBClusterSnapshotResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CopyDBClusterSnapshotResponsePrivate::CopyDBClusterSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CopyDBClusterSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CopyDBClusterSnapshot response element from \a xml.
  */
 void CopyDBClusterSnapshotResponsePrivate::parseCopyDBClusterSnapshotResponse(QXmlStreamReader &xml)
 {

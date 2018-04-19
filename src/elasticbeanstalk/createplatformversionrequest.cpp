@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * CreatePlatformVersionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreatePlatformVersionRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a CreatePlatformVersionRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 CreatePlatformVersionRequestPrivate::CreatePlatformVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CreatePlatformVersionRequest * const q)

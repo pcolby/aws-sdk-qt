@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSmsChannelResponse : public PinpointResponse {
 public:
     GetSmsChannelResponse(const GetSmsChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSmsChannelRequest * request() const;
+    virtual const GetSmsChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSmsChannelResponse)

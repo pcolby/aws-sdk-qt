@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::RemoveTagsResponse
- *
  * \brief The RemoveTagsResponse class provides an interace for DataPipeline RemoveTags responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveTagsResponse::RemoveTagsResponse(
         const RemoveTagsRequest &request,
@@ -73,6 +68,9 @@ RemoveTagsResponse::RemoveTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveTagsRequest * RemoveTagsResponse::request() const
 {
     Q_D(const RemoveTagsResponse);
@@ -80,9 +78,8 @@ const RemoveTagsRequest * RemoveTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DataPipeline RemoveTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline RemoveTags \a response.
  */
 void RemoveTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void RemoveTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::RemoveTagsResponsePrivate
+ * \brief The RemoveTagsResponsePrivate class provides private implementation for RemoveTagsResponse.
  * \internal
  *
- * \class RemoveTagsResponsePrivate
- *
- * \brief Private implementation for RemoveTagsResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveTagsResponse instance.
+ * Constructs a RemoveTagsResponsePrivate object with public implementation \a q.
  */
 RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
     RemoveTagsResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ RemoveTagsResponsePrivate::RemoveTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline RemoveTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline RemoveTags response element from \a xml.
  */
 void RemoveTagsResponsePrivate::parseRemoveTagsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CancelCertificateTransferResponse
- *
  * \brief The CancelCertificateTransferResponse class provides an interace for IoT CancelCertificateTransfer responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CancelCertificateTransferResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelCertificateTransferResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelCertificateTransferResponse::CancelCertificateTransferResponse(
         const CancelCertificateTransferRequest &request,
@@ -66,6 +61,9 @@ CancelCertificateTransferResponse::CancelCertificateTransferResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelCertificateTransferRequest * CancelCertificateTransferResponse::request() const
 {
     Q_D(const CancelCertificateTransferResponse);
@@ -73,9 +71,8 @@ const CancelCertificateTransferRequest * CancelCertificateTransferResponse::requ
 }
 
 /*!
- * @brief  Parse a IoT CancelCertificateTransfer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT CancelCertificateTransfer \a response.
  */
 void CancelCertificateTransferResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CancelCertificateTransferResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::CancelCertificateTransferResponsePrivate
+ * \brief The CancelCertificateTransferResponsePrivate class provides private implementation for CancelCertificateTransferResponse.
  * \internal
  *
- * \class CancelCertificateTransferResponsePrivate
- *
- * \brief Private implementation for CancelCertificateTransferResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelCertificateTransferResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelCertificateTransferResponse instance.
+ * Constructs a CancelCertificateTransferResponsePrivate object with public implementation \a q.
  */
 CancelCertificateTransferResponsePrivate::CancelCertificateTransferResponsePrivate(
     CancelCertificateTransferResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ CancelCertificateTransferResponsePrivate::CancelCertificateTransferResponsePriva
 }
 
 /*!
- * @brief  Parse an IoT CancelCertificateTransferResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT CancelCertificateTransfer response element from \a xml.
  */
 void CancelCertificateTransferResponsePrivate::parseCancelCertificateTransferResponse(QXmlStreamReader &xml)
 {

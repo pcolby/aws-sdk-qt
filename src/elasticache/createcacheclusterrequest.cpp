@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateCacheClusterRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateCacheClusterRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a CreateCacheClusterRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 CreateCacheClusterRequestPrivate::CreateCacheClusterRequestPrivate(
     const ElastiCacheRequest::Action action, CreateCacheClusterRequest * const q)

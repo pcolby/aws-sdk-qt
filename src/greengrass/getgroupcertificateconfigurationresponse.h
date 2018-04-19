@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetGroupCertificateConfigurationResponse : public GreengrassR
 public:
     GetGroupCertificateConfigurationResponse(const GetGroupCertificateConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetGroupCertificateConfigurationRequest * request() const;
+    virtual const GetGroupCertificateConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetGroupCertificateConfigurationResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateFunctionCodeResponse : public LambdaResponse {
 public:
     UpdateFunctionCodeResponse(const UpdateFunctionCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateFunctionCodeRequest * request() const;
+    virtual const UpdateFunctionCodeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateFunctionCodeResponse)

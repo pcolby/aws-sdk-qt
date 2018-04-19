@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DeregisterTaskDefinitionResponse
- *
  * \brief The DeregisterTaskDefinitionResponse class provides an interace for ECS DeregisterTaskDefinition responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DeregisterTaskDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterTaskDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterTaskDefinitionResponse::DeregisterTaskDefinitionResponse(
         const DeregisterTaskDefinitionRequest &request,
@@ -72,6 +67,9 @@ DeregisterTaskDefinitionResponse::DeregisterTaskDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterTaskDefinitionRequest * DeregisterTaskDefinitionResponse::request() const
 {
     Q_D(const DeregisterTaskDefinitionResponse);
@@ -79,9 +77,8 @@ const DeregisterTaskDefinitionRequest * DeregisterTaskDefinitionResponse::reques
 }
 
 /*!
- * @brief  Parse a ECS DeregisterTaskDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS DeregisterTaskDefinition \a response.
  */
 void DeregisterTaskDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void DeregisterTaskDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::DeregisterTaskDefinitionResponsePrivate
+ * \brief The DeregisterTaskDefinitionResponsePrivate class provides private implementation for DeregisterTaskDefinitionResponse.
  * \internal
  *
- * \class DeregisterTaskDefinitionResponsePrivate
- *
- * \brief Private implementation for DeregisterTaskDefinitionResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterTaskDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterTaskDefinitionResponse instance.
+ * Constructs a DeregisterTaskDefinitionResponsePrivate object with public implementation \a q.
  */
 DeregisterTaskDefinitionResponsePrivate::DeregisterTaskDefinitionResponsePrivate(
     DeregisterTaskDefinitionResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ DeregisterTaskDefinitionResponsePrivate::DeregisterTaskDefinitionResponsePrivate
 }
 
 /*!
- * @brief  Parse an ECS DeregisterTaskDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS DeregisterTaskDefinition response element from \a xml.
  */
 void DeregisterTaskDefinitionResponsePrivate::parseDeregisterTaskDefinitionResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetGroupPolicyResponse
- *
  * \brief The GetGroupPolicyResponse class provides an interace for IAM GetGroupPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetGroupPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetGroupPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetGroupPolicyResponse::GetGroupPolicyResponse(
         const GetGroupPolicyRequest &request,
@@ -120,6 +115,9 @@ GetGroupPolicyResponse::GetGroupPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetGroupPolicyRequest * GetGroupPolicyResponse::request() const
 {
     Q_D(const GetGroupPolicyResponse);
@@ -127,9 +125,8 @@ const GetGroupPolicyRequest * GetGroupPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetGroupPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetGroupPolicy \a response.
  */
 void GetGroupPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetGroupPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetGroupPolicyResponsePrivate
+ * \brief The GetGroupPolicyResponsePrivate class provides private implementation for GetGroupPolicyResponse.
  * \internal
  *
- * \class GetGroupPolicyResponsePrivate
- *
- * \brief Private implementation for GetGroupPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGroupPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetGroupPolicyResponse instance.
+ * Constructs a GetGroupPolicyResponsePrivate object with public implementation \a q.
  */
 GetGroupPolicyResponsePrivate::GetGroupPolicyResponsePrivate(
     GetGroupPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetGroupPolicyResponsePrivate::GetGroupPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetGroupPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetGroupPolicy response element from \a xml.
  */
 void GetGroupPolicyResponsePrivate::parseGetGroupPolicyResponse(QXmlStreamReader &xml)
 {

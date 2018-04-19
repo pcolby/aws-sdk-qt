@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateFleetRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DisassociateFleetRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateFleetRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 DisassociateFleetRequestPrivate::DisassociateFleetRequestPrivate(
     const AppStreamRequest::Action action, DisassociateFleetRequest * const q)

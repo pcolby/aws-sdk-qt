@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationSetSendingEnabledRequest::
  */
 
 /*!
- *
- * Constructs a UpdateConfigurationSetSendingEnabledRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a UpdateConfigurationSetSendingEnabledRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 UpdateConfigurationSetSendingEnabledRequestPrivate::UpdateConfigurationSetSendingEnabledRequestPrivate(
     const SESRequest::Action action, UpdateConfigurationSetSendingEnabledRequest * const q)

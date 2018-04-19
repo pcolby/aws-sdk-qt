@@ -29,10 +29,9 @@ namespace CloudHSMV2 {
 
 /*!
  * \class QtAws::CloudHSMV2::TagResourceResponse
- *
  * \brief The TagResourceResponse class provides an interace for CloudHSMV2 TagResource responses.
  *
- * \ingroup CloudHSMV2
+ * \inmodule QtAwsCloudHSMV2
  *
  *  For more information about AWS CloudHSM, see <a href="http://aws.amazon.com/cloudhsm/">AWS CloudHSM</a> and the <a
  *  href="http://docs.aws.amazon.com/cloudhsm/latest/userguide/">AWS CloudHSM User
@@ -41,11 +40,7 @@ namespace CloudHSMV2 {
  */
 
 /*!
- * @brief  Constructs a new TagResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
@@ -57,6 +52,9 @@ TagResourceResponse::TagResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagResourceRequest * TagResourceResponse::request() const
 {
     Q_D(const TagResourceResponse);
@@ -64,9 +62,8 @@ const TagResourceRequest * TagResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSMV2 TagResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSMV2 TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSMV2::TagResourceResponsePrivate
+ * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \class TagResourceResponsePrivate
- *
- * \brief Private implementation for TagResourceResponse.
+ * \inmodule QtAwsCloudHSMV2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagResourceResponse instance.
+ * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
     TagResourceResponse * const q) : CloudHSMV2ResponsePrivate(q)
@@ -97,9 +90,7 @@ TagResourceResponsePrivate::TagResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSMV2 TagResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSMV2 TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::DeleteSubscriptionResponse
- *
  * \brief The DeleteSubscriptionResponse class provides an interace for Shield DeleteSubscription responses.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -45,11 +44,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new DeleteSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSubscriptionResponse::DeleteSubscriptionResponse(
         const DeleteSubscriptionRequest &request,
@@ -61,6 +56,9 @@ DeleteSubscriptionResponse::DeleteSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSubscriptionRequest * DeleteSubscriptionResponse::request() const
 {
     Q_D(const DeleteSubscriptionResponse);
@@ -68,9 +66,8 @@ const DeleteSubscriptionRequest * DeleteSubscriptionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Shield DeleteSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Shield DeleteSubscription \a response.
  */
 void DeleteSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeleteSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Shield::DeleteSubscriptionResponsePrivate
+ * \brief The DeleteSubscriptionResponsePrivate class provides private implementation for DeleteSubscriptionResponse.
  * \internal
  *
- * \class DeleteSubscriptionResponsePrivate
- *
- * \brief Private implementation for DeleteSubscriptionResponse.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSubscriptionResponse instance.
+ * Constructs a DeleteSubscriptionResponsePrivate object with public implementation \a q.
  */
 DeleteSubscriptionResponsePrivate::DeleteSubscriptionResponsePrivate(
     DeleteSubscriptionResponse * const q) : ShieldResponsePrivate(q)
@@ -101,9 +94,7 @@ DeleteSubscriptionResponsePrivate::DeleteSubscriptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Shield DeleteSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Shield DeleteSubscription response element from \a xml.
  */
 void DeleteSubscriptionResponsePrivate::parseDeleteSubscriptionResponse(QXmlStreamReader &xml)
 {

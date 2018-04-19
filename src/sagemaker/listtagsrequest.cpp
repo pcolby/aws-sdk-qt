@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a ListTagsRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const SageMakerRequest::Action action, ListTagsRequest * const q)

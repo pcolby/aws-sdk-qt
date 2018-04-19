@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteCertificateResponse
- *
  * \brief The DeleteCertificateResponse class provides an interace for DatabaseMigrationService DeleteCertificate responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DeleteCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCertificateResponse::DeleteCertificateResponse(
         const DeleteCertificateRequest &request,
@@ -66,6 +61,9 @@ DeleteCertificateResponse::DeleteCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCertificateRequest * DeleteCertificateResponse::request() const
 {
     Q_D(const DeleteCertificateResponse);
@@ -73,9 +71,8 @@ const DeleteCertificateRequest * DeleteCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DeleteCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DeleteCertificate \a response.
  */
 void DeleteCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DeleteCertificateResponsePrivate
+ * \brief The DeleteCertificateResponsePrivate class provides private implementation for DeleteCertificateResponse.
  * \internal
  *
- * \class DeleteCertificateResponsePrivate
- *
- * \brief Private implementation for DeleteCertificateResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCertificateResponse instance.
+ * Constructs a DeleteCertificateResponsePrivate object with public implementation \a q.
  */
 DeleteCertificateResponsePrivate::DeleteCertificateResponsePrivate(
     DeleteCertificateResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteCertificateResponsePrivate::DeleteCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DeleteCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DeleteCertificate response element from \a xml.
  */
 void DeleteCertificateResponsePrivate::parseDeleteCertificateResponse(QXmlStreamReader &xml)
 {

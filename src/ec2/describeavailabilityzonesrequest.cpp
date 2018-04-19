@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailabilityZonesRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeAvailabilityZonesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAvailabilityZonesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeAvailabilityZonesRequestPrivate::DescribeAvailabilityZonesRequestPrivate(
     const EC2Request::Action action, DescribeAvailabilityZonesRequest * const q)

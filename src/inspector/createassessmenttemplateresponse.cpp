@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::CreateAssessmentTemplateResponse
- *
  * \brief The CreateAssessmentTemplateResponse class provides an interace for Inspector CreateAssessmentTemplate responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new CreateAssessmentTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAssessmentTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAssessmentTemplateResponse::CreateAssessmentTemplateResponse(
         const CreateAssessmentTemplateRequest &request,
@@ -60,6 +55,9 @@ CreateAssessmentTemplateResponse::CreateAssessmentTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAssessmentTemplateRequest * CreateAssessmentTemplateResponse::request() const
 {
     Q_D(const CreateAssessmentTemplateResponse);
@@ -67,9 +65,8 @@ const CreateAssessmentTemplateRequest * CreateAssessmentTemplateResponse::reques
 }
 
 /*!
- * @brief  Parse a Inspector CreateAssessmentTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector CreateAssessmentTemplate \a response.
  */
 void CreateAssessmentTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateAssessmentTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::CreateAssessmentTemplateResponsePrivate
+ * \brief The CreateAssessmentTemplateResponsePrivate class provides private implementation for CreateAssessmentTemplateResponse.
  * \internal
  *
- * \class CreateAssessmentTemplateResponsePrivate
- *
- * \brief Private implementation for CreateAssessmentTemplateResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAssessmentTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAssessmentTemplateResponse instance.
+ * Constructs a CreateAssessmentTemplateResponsePrivate object with public implementation \a q.
  */
 CreateAssessmentTemplateResponsePrivate::CreateAssessmentTemplateResponsePrivate(
     CreateAssessmentTemplateResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateAssessmentTemplateResponsePrivate::CreateAssessmentTemplateResponsePrivate
 }
 
 /*!
- * @brief  Parse an Inspector CreateAssessmentTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector CreateAssessmentTemplate response element from \a xml.
  */
 void CreateAssessmentTemplateResponsePrivate::parseCreateAssessmentTemplateResponse(QXmlStreamReader &xml)
 {

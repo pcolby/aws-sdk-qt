@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * TestRoleRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a TestRoleRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a TestRoleRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 TestRoleRequestPrivate::TestRoleRequestPrivate(
     const ElasticTranscoderRequest::Action action, TestRoleRequest * const q)

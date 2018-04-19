@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateAliasResponse : public DirectoryServiceResponse {
 public:
     CreateAliasResponse(const CreateAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateAliasRequest * request() const;
+    virtual const CreateAliasRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateAliasResponse)

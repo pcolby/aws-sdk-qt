@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListProvisioningArtifactsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a ListProvisioningArtifactsRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ListProvisioningArtifactsRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ListProvisioningArtifactsRequestPrivate::ListProvisioningArtifactsRequestPrivate(
     const ServiceCatalogRequest::Action action, ListProvisioningArtifactsRequest * const q)

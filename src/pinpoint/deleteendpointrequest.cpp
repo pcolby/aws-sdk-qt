@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteEndpointRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEndpointRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const PinpointRequest::Action action, DeleteEndpointRequest * const q)

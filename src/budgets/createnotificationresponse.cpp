@@ -29,10 +29,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::CreateNotificationResponse
- *
  * \brief The CreateNotificationResponse class provides an interace for Budgets CreateNotification responses.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -77,11 +76,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new CreateNotificationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateNotificationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateNotificationResponse::CreateNotificationResponse(
         const CreateNotificationRequest &request,
@@ -93,6 +88,9 @@ CreateNotificationResponse::CreateNotificationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateNotificationRequest * CreateNotificationResponse::request() const
 {
     Q_D(const CreateNotificationResponse);
@@ -100,9 +98,8 @@ const CreateNotificationRequest * CreateNotificationResponse::request() const
 }
 
 /*!
- * @brief  Parse a Budgets CreateNotification response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Budgets CreateNotification \a response.
  */
 void CreateNotificationResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void CreateNotificationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Budgets::CreateNotificationResponsePrivate
+ * \brief The CreateNotificationResponsePrivate class provides private implementation for CreateNotificationResponse.
  * \internal
  *
- * \class CreateNotificationResponsePrivate
- *
- * \brief Private implementation for CreateNotificationResponse.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNotificationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateNotificationResponse instance.
+ * Constructs a CreateNotificationResponsePrivate object with public implementation \a q.
  */
 CreateNotificationResponsePrivate::CreateNotificationResponsePrivate(
     CreateNotificationResponse * const q) : BudgetsResponsePrivate(q)
@@ -133,9 +126,7 @@ CreateNotificationResponsePrivate::CreateNotificationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Budgets CreateNotificationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Budgets CreateNotification response element from \a xml.
  */
 void CreateNotificationResponsePrivate::parseCreateNotificationResponse(QXmlStreamReader &xml)
 {

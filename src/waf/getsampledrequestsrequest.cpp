@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetSampledRequestsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetSampledRequestsRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a GetSampledRequestsRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 GetSampledRequestsRequestPrivate::GetSampledRequestsRequestPrivate(
     const WAFRequest::Action action, GetSampledRequestsRequest * const q)

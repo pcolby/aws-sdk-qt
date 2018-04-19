@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::DescribeAccountLimitsResponse
- *
  * \brief The DescribeAccountLimitsResponse class provides an interace for CloudFormation DescribeAccountLimits responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountLimitsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAccountLimitsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAccountLimitsResponse::DescribeAccountLimitsResponse(
         const DescribeAccountLimitsRequest &request,
@@ -77,6 +72,9 @@ DescribeAccountLimitsResponse::DescribeAccountLimitsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAccountLimitsRequest * DescribeAccountLimitsResponse::request() const
 {
     Q_D(const DescribeAccountLimitsResponse);
@@ -84,9 +82,8 @@ const DescribeAccountLimitsRequest * DescribeAccountLimitsResponse::request() co
 }
 
 /*!
- * @brief  Parse a CloudFormation DescribeAccountLimits response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation DescribeAccountLimits \a response.
  */
 void DescribeAccountLimitsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribeAccountLimitsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::DescribeAccountLimitsResponsePrivate
+ * \brief The DescribeAccountLimitsResponsePrivate class provides private implementation for DescribeAccountLimitsResponse.
  * \internal
  *
- * \class DescribeAccountLimitsResponsePrivate
- *
- * \brief Private implementation for DescribeAccountLimitsResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountLimitsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAccountLimitsResponse instance.
+ * Constructs a DescribeAccountLimitsResponsePrivate object with public implementation \a q.
  */
 DescribeAccountLimitsResponsePrivate::DescribeAccountLimitsResponsePrivate(
     DescribeAccountLimitsResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribeAccountLimitsResponsePrivate::DescribeAccountLimitsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation DescribeAccountLimitsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation DescribeAccountLimits response element from \a xml.
  */
 void DescribeAccountLimitsResponsePrivate::parseDescribeAccountLimitsResponse(QXmlStreamReader &xml)
 {

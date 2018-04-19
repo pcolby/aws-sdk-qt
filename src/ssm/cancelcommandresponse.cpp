@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::CancelCommandResponse
- *
  * \brief The CancelCommandResponse class provides an interace for SSM CancelCommand responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new CancelCommandResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelCommandResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelCommandResponse::CancelCommandResponse(
         const CancelCommandRequest &request,
@@ -79,6 +74,9 @@ CancelCommandResponse::CancelCommandResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelCommandRequest * CancelCommandResponse::request() const
 {
     Q_D(const CancelCommandResponse);
@@ -86,9 +84,8 @@ const CancelCommandRequest * CancelCommandResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM CancelCommand response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM CancelCommand \a response.
  */
 void CancelCommandResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void CancelCommandResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::CancelCommandResponsePrivate
+ * \brief The CancelCommandResponsePrivate class provides private implementation for CancelCommandResponse.
  * \internal
  *
- * \class CancelCommandResponsePrivate
- *
- * \brief Private implementation for CancelCommandResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelCommandResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelCommandResponse instance.
+ * Constructs a CancelCommandResponsePrivate object with public implementation \a q.
  */
 CancelCommandResponsePrivate::CancelCommandResponsePrivate(
     CancelCommandResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ CancelCommandResponsePrivate::CancelCommandResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM CancelCommandResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM CancelCommand response element from \a xml.
  */
 void CancelCommandResponsePrivate::parseCancelCommandResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcEndpointsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeVpcEndpointsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVpcEndpointsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeVpcEndpointsRequestPrivate::DescribeVpcEndpointsRequestPrivate(
     const EC2Request::Action action, DescribeVpcEndpointsRequest * const q)

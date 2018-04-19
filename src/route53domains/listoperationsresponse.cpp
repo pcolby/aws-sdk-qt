@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::ListOperationsResponse
- *
  * \brief The ListOperationsResponse class provides an interace for Route53Domains ListOperations responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new ListOperationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListOperationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListOperationsResponse::ListOperationsResponse(
         const ListOperationsRequest &request,
@@ -56,6 +51,9 @@ ListOperationsResponse::ListOperationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListOperationsRequest * ListOperationsResponse::request() const
 {
     Q_D(const ListOperationsResponse);
@@ -63,9 +61,8 @@ const ListOperationsRequest * ListOperationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53Domains ListOperations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains ListOperations \a response.
  */
 void ListOperationsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListOperationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::ListOperationsResponsePrivate
+ * \brief The ListOperationsResponsePrivate class provides private implementation for ListOperationsResponse.
  * \internal
  *
- * \class ListOperationsResponsePrivate
- *
- * \brief Private implementation for ListOperationsResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOperationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListOperationsResponse instance.
+ * Constructs a ListOperationsResponsePrivate object with public implementation \a q.
  */
 ListOperationsResponsePrivate::ListOperationsResponsePrivate(
     ListOperationsResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ ListOperationsResponsePrivate::ListOperationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains ListOperationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains ListOperations response element from \a xml.
  */
 void ListOperationsResponsePrivate::parseListOperationsResponse(QXmlStreamReader &xml)
 {

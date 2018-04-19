@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * SearchRequest::response(QNetworkReply * const
  */
 
 /*!
- *
- * Constructs a SearchRequestPrivate object for CloudSearchDomain \a action with,
- * public implementation \a q.
+ * Constructs a SearchRequestPrivate object for CloudSearchDomain \a action,
+ * with public implementation \a q.
  */
 SearchRequestPrivate::SearchRequestPrivate(
     const CloudSearchDomainRequest::Action action, SearchRequest * const q)

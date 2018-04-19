@@ -34,8 +34,8 @@ public:
 
     Route53ResponsePrivate(Route53Response * const q);
 
-    void parseErrorResponse(QXmlStreamReader &xml);
-    void parseResponseMetadata(QXmlStreamReader &xml);
+    //void parseErrorResponse(QXmlStreamReader &xml);
+    //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(Route53Response)

@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::GetDomainDetailResponse
- *
  * \brief The GetDomainDetailResponse class provides an interace for Route53Domains GetDomainDetail responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new GetDomainDetailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDomainDetailResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDomainDetailResponse::GetDomainDetailResponse(
         const GetDomainDetailRequest &request,
@@ -56,6 +51,9 @@ GetDomainDetailResponse::GetDomainDetailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDomainDetailRequest * GetDomainDetailResponse::request() const
 {
     Q_D(const GetDomainDetailResponse);
@@ -63,9 +61,8 @@ const GetDomainDetailRequest * GetDomainDetailResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53Domains GetDomainDetail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains GetDomainDetail \a response.
  */
 void GetDomainDetailResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetDomainDetailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::GetDomainDetailResponsePrivate
+ * \brief The GetDomainDetailResponsePrivate class provides private implementation for GetDomainDetailResponse.
  * \internal
  *
- * \class GetDomainDetailResponsePrivate
- *
- * \brief Private implementation for GetDomainDetailResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDomainDetailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDomainDetailResponse instance.
+ * Constructs a GetDomainDetailResponsePrivate object with public implementation \a q.
  */
 GetDomainDetailResponsePrivate::GetDomainDetailResponsePrivate(
     GetDomainDetailResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ GetDomainDetailResponsePrivate::GetDomainDetailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains GetDomainDetailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains GetDomainDetail response element from \a xml.
  */
 void GetDomainDetailResponsePrivate::parseGetDomainDetailResponse(QXmlStreamReader &xml)
 {

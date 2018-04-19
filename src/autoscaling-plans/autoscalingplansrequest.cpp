@@ -43,7 +43,7 @@ namespace AutoScalingPlans {
  */
 
 /*!
- * Constructs a[n] AutoScalingPlansRequest object for AutoScalingPlans \a action.
+ * Constructs a AutoScalingPlansRequest object for AutoScalingPlans \a action.
  */
 AutoScalingPlansRequest::AutoScalingPlansRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AutoScalingPlansRequestPrivate(action, this))
@@ -243,8 +243,8 @@ QNetworkRequest AutoScalingPlansRequest::unsignedRequest(const QUrl &endpoint) c
  */
 
 /*!
- * Constructs a AutoScalingPlansRequestPrivate object for AutoScalingPlans \a action with,
- * public implementation \a q.
+ * Constructs a AutoScalingPlansRequestPrivate object for AutoScalingPlans \a action,
+ * with public implementation \a q.
  */
 AutoScalingPlansRequestPrivate::AutoScalingPlansRequestPrivate(const AutoScalingPlansRequest::Action action, AutoScalingPlansRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

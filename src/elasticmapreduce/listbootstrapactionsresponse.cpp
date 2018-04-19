@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ListBootstrapActionsResponse
- *
  * \brief The ListBootstrapActionsResponse class provides an interace for EMR ListBootstrapActions responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ListBootstrapActionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListBootstrapActionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListBootstrapActionsResponse::ListBootstrapActionsResponse(
         const ListBootstrapActionsRequest &request,
@@ -58,6 +53,9 @@ ListBootstrapActionsResponse::ListBootstrapActionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListBootstrapActionsRequest * ListBootstrapActionsResponse::request() const
 {
     Q_D(const ListBootstrapActionsResponse);
@@ -65,9 +63,8 @@ const ListBootstrapActionsRequest * ListBootstrapActionsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EMR ListBootstrapActions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR ListBootstrapActions \a response.
  */
 void ListBootstrapActionsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListBootstrapActionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::ListBootstrapActionsResponsePrivate
+ * \brief The ListBootstrapActionsResponsePrivate class provides private implementation for ListBootstrapActionsResponse.
  * \internal
  *
- * \class ListBootstrapActionsResponsePrivate
- *
- * \brief Private implementation for ListBootstrapActionsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBootstrapActionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListBootstrapActionsResponse instance.
+ * Constructs a ListBootstrapActionsResponsePrivate object with public implementation \a q.
  */
 ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponsePrivate(
     ListBootstrapActionsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ ListBootstrapActionsResponsePrivate::ListBootstrapActionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR ListBootstrapActionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR ListBootstrapActions response element from \a xml.
  */
 void ListBootstrapActionsResponsePrivate::parseListBootstrapActionsResponse(QXmlStreamReader &xml)
 {

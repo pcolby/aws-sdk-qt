@@ -56,7 +56,7 @@ namespace CognitoSync {
  */
 
 /*!
- * Constructs a[n] CognitoSyncRequest object for CognitoSync \a action.
+ * Constructs a CognitoSyncRequest object for CognitoSync \a action.
  */
 CognitoSyncRequest::CognitoSyncRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CognitoSyncRequestPrivate(action, this))
@@ -256,8 +256,8 @@ QNetworkRequest CognitoSyncRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CognitoSyncRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a CognitoSyncRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 CognitoSyncRequestPrivate::CognitoSyncRequestPrivate(const CognitoSyncRequest::Action action, CognitoSyncRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

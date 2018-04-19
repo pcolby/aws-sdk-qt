@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::CreateAppResponse
- *
  * \brief The CreateAppResponse class provides an interace for Pinpoint CreateApp responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::createApp
  */
 
 /*!
- * @brief  Constructs a new CreateAppResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAppResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAppResponse::CreateAppResponse(
         const CreateAppRequest &request,
@@ -55,6 +50,9 @@ CreateAppResponse::CreateAppResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAppRequest * CreateAppResponse::request() const
 {
     Q_D(const CreateAppResponse);
@@ -62,9 +60,8 @@ const CreateAppRequest * CreateAppResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint CreateApp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint CreateApp \a response.
  */
 void CreateAppResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateAppResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::CreateAppResponsePrivate
+ * \brief The CreateAppResponsePrivate class provides private implementation for CreateAppResponse.
  * \internal
  *
- * \class CreateAppResponsePrivate
- *
- * \brief Private implementation for CreateAppResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAppResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAppResponse instance.
+ * Constructs a CreateAppResponsePrivate object with public implementation \a q.
  */
 CreateAppResponsePrivate::CreateAppResponsePrivate(
     CreateAppResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateAppResponsePrivate::CreateAppResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint CreateAppResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint CreateApp response element from \a xml.
  */
 void CreateAppResponsePrivate::parseCreateAppResponse(QXmlStreamReader &xml)
 {

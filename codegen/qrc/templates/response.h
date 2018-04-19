@@ -16,10 +16,10 @@ class QTAWS_EXPORT {{ClassName}} : public {{ServiceName}}Response {
 public:
     {{ClassName}}(const {{OperationName}}Request &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const {{OperationName}}Request * request() const;
+    virtual const {{OperationName}}Request * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE({{ClassName}})

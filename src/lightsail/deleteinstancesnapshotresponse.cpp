@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DeleteInstanceSnapshotResponse
- *
  * \brief The DeleteInstanceSnapshotResponse class provides an interace for Lightsail DeleteInstanceSnapshot responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DeleteInstanceSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteInstanceSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteInstanceSnapshotResponse::DeleteInstanceSnapshotResponse(
         const DeleteInstanceSnapshotRequest &request,
@@ -71,6 +66,9 @@ DeleteInstanceSnapshotResponse::DeleteInstanceSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteInstanceSnapshotRequest * DeleteInstanceSnapshotResponse::request() const
 {
     Q_D(const DeleteInstanceSnapshotResponse);
@@ -78,9 +76,8 @@ const DeleteInstanceSnapshotRequest * DeleteInstanceSnapshotResponse::request() 
 }
 
 /*!
- * @brief  Parse a Lightsail DeleteInstanceSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail DeleteInstanceSnapshot \a response.
  */
 void DeleteInstanceSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DeleteInstanceSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::DeleteInstanceSnapshotResponsePrivate
+ * \brief The DeleteInstanceSnapshotResponsePrivate class provides private implementation for DeleteInstanceSnapshotResponse.
  * \internal
  *
- * \class DeleteInstanceSnapshotResponsePrivate
- *
- * \brief Private implementation for DeleteInstanceSnapshotResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInstanceSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteInstanceSnapshotResponse instance.
+ * Constructs a DeleteInstanceSnapshotResponsePrivate object with public implementation \a q.
  */
 DeleteInstanceSnapshotResponsePrivate::DeleteInstanceSnapshotResponsePrivate(
     DeleteInstanceSnapshotResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ DeleteInstanceSnapshotResponsePrivate::DeleteInstanceSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail DeleteInstanceSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail DeleteInstanceSnapshot response element from \a xml.
  */
 void DeleteInstanceSnapshotResponsePrivate::parseDeleteInstanceSnapshotResponse(QXmlStreamReader &xml)
 {

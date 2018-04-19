@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * ListVolumeRecoveryPointsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ListVolumeRecoveryPointsRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a ListVolumeRecoveryPointsRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 ListVolumeRecoveryPointsRequestPrivate::ListVolumeRecoveryPointsRequestPrivate(
     const StorageGatewayRequest::Action action, ListVolumeRecoveryPointsRequest * const q)

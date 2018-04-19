@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * ListStreamProcessorsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListStreamProcessorsRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a ListStreamProcessorsRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 ListStreamProcessorsRequestPrivate::ListStreamProcessorsRequestPrivate(
     const RekognitionRequest::Action action, ListStreamProcessorsRequest * const q)

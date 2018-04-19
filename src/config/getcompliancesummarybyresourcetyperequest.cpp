@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * GetComplianceSummaryByResourceTypeRequest::re
  */
 
 /*!
- *
- * Constructs a GetComplianceSummaryByResourceTypeRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a GetComplianceSummaryByResourceTypeRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 GetComplianceSummaryByResourceTypeRequestPrivate::GetComplianceSummaryByResourceTypeRequestPrivate(
     const ConfigServiceRequest::Action action, GetComplianceSummaryByResourceTypeRequest * const q)

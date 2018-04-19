@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetPermissionPolicyResponse : public WAFRegionalResponse {
 public:
     GetPermissionPolicyResponse(const GetPermissionPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetPermissionPolicyRequest * request() const;
+    virtual const GetPermissionPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetPermissionPolicyResponse)

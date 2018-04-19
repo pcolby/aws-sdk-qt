@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::CreateConstraintResponse
- *
  * \brief The CreateConstraintResponse class provides an interace for ServiceCatalog CreateConstraint responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new CreateConstraintResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateConstraintResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateConstraintResponse::CreateConstraintResponse(
         const CreateConstraintRequest &request,
@@ -61,6 +56,9 @@ CreateConstraintResponse::CreateConstraintResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateConstraintRequest * CreateConstraintResponse::request() const
 {
     Q_D(const CreateConstraintResponse);
@@ -68,9 +66,8 @@ const CreateConstraintRequest * CreateConstraintResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog CreateConstraint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog CreateConstraint \a response.
  */
 void CreateConstraintResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreateConstraintResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::CreateConstraintResponsePrivate
+ * \brief The CreateConstraintResponsePrivate class provides private implementation for CreateConstraintResponse.
  * \internal
  *
- * \class CreateConstraintResponsePrivate
- *
- * \brief Private implementation for CreateConstraintResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConstraintResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateConstraintResponse instance.
+ * Constructs a CreateConstraintResponsePrivate object with public implementation \a q.
  */
 CreateConstraintResponsePrivate::CreateConstraintResponsePrivate(
     CreateConstraintResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ CreateConstraintResponsePrivate::CreateConstraintResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog CreateConstraintResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog CreateConstraint response element from \a xml.
  */
 void CreateConstraintResponsePrivate::parseCreateConstraintResponse(QXmlStreamReader &xml)
 {

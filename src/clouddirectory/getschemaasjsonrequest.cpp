@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * GetSchemaAsJsonRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetSchemaAsJsonRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a GetSchemaAsJsonRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 GetSchemaAsJsonRequestPrivate::GetSchemaAsJsonRequestPrivate(
     const CloudDirectoryRequest::Action action, GetSchemaAsJsonRequest * const q)

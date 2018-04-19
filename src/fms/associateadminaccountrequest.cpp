@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * AssociateAdminAccountRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a AssociateAdminAccountRequestPrivate object for FMS \a action with,
- * public implementation \a q.
+ * Constructs a AssociateAdminAccountRequestPrivate object for FMS \a action,
+ * with public implementation \a q.
  */
 AssociateAdminAccountRequestPrivate::AssociateAdminAccountRequestPrivate(
     const FMSRequest::Action action, AssociateAdminAccountRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetTopicRuleResponse : public IoTResponse {
 public:
     GetTopicRuleResponse(const GetTopicRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetTopicRuleRequest * request() const;
+    virtual const GetTopicRuleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetTopicRuleResponse)

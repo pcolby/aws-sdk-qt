@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListRuleGroupsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListRuleGroupsRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a ListRuleGroupsRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 ListRuleGroupsRequestPrivate::ListRuleGroupsRequestPrivate(
     const WAFRegionalRequest::Action action, ListRuleGroupsRequest * const q)

@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * PutParameterRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a PutParameterRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a PutParameterRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 PutParameterRequestPrivate::PutParameterRequestPrivate(
     const SSMRequest::Action action, PutParameterRequest * const q)

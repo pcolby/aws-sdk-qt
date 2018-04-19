@@ -29,10 +29,9 @@ namespace Pricing {
 
 /*!
  * \class QtAws::Pricing::DescribeServicesResponse
- *
  * \brief The DescribeServicesResponse class provides an interace for Pricing DescribeServices responses.
  *
- * \ingroup Pricing
+ * \inmodule QtAwsPricing
  *
  *  AWS Price List Service API (AWS Price List Service) is a centralized and convenient way to programmatically query Amazon
  *  Web Services for services, products, and pricing information. The AWS Price List Service uses standardized product
@@ -65,11 +64,7 @@ namespace Pricing {
  */
 
 /*!
- * @brief  Constructs a new DescribeServicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeServicesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeServicesResponse::DescribeServicesResponse(
         const DescribeServicesRequest &request,
@@ -81,6 +76,9 @@ DescribeServicesResponse::DescribeServicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeServicesRequest * DescribeServicesResponse::request() const
 {
     Q_D(const DescribeServicesResponse);
@@ -88,9 +86,8 @@ const DescribeServicesRequest * DescribeServicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pricing DescribeServices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pricing DescribeServices \a response.
  */
 void DescribeServicesResponse::parseSuccess(QIODevice &response)
 {
@@ -100,19 +97,15 @@ void DescribeServicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pricing::DescribeServicesResponsePrivate
+ * \brief The DescribeServicesResponsePrivate class provides private implementation for DescribeServicesResponse.
  * \internal
  *
- * \class DescribeServicesResponsePrivate
- *
- * \brief Private implementation for DescribeServicesResponse.
+ * \inmodule QtAwsPricing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeServicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeServicesResponse instance.
+ * Constructs a DescribeServicesResponsePrivate object with public implementation \a q.
  */
 DescribeServicesResponsePrivate::DescribeServicesResponsePrivate(
     DescribeServicesResponse * const q) : PricingResponsePrivate(q)
@@ -121,9 +114,7 @@ DescribeServicesResponsePrivate::DescribeServicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pricing DescribeServicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pricing DescribeServices response element from \a xml.
  */
 void DescribeServicesResponsePrivate::parseDescribeServicesResponse(QXmlStreamReader &xml)
 {

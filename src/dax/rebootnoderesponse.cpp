@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::RebootNodeResponse
- *
  * \brief The RebootNodeResponse class provides an interace for DAX RebootNode responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new RebootNodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RebootNodeResponse object for \a reply to \a request, with parent \a parent.
  */
 RebootNodeResponse::RebootNodeResponse(
         const RebootNodeRequest &request,
@@ -59,6 +54,9 @@ RebootNodeResponse::RebootNodeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RebootNodeRequest * RebootNodeResponse::request() const
 {
     Q_D(const RebootNodeResponse);
@@ -66,9 +64,8 @@ const RebootNodeRequest * RebootNodeResponse::request() const
 }
 
 /*!
- * @brief  Parse a DAX RebootNode response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX RebootNode \a response.
  */
 void RebootNodeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void RebootNodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::RebootNodeResponsePrivate
+ * \brief The RebootNodeResponsePrivate class provides private implementation for RebootNodeResponse.
  * \internal
  *
- * \class RebootNodeResponsePrivate
- *
- * \brief Private implementation for RebootNodeResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootNodeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RebootNodeResponse instance.
+ * Constructs a RebootNodeResponsePrivate object with public implementation \a q.
  */
 RebootNodeResponsePrivate::RebootNodeResponsePrivate(
     RebootNodeResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ RebootNodeResponsePrivate::RebootNodeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX RebootNodeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX RebootNode response element from \a xml.
  */
 void RebootNodeResponsePrivate::parseRebootNodeResponse(QXmlStreamReader &xml)
 {

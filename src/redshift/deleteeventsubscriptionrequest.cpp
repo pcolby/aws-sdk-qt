@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteEventSubscriptionRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEventSubscriptionRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const RedshiftRequest::Action action, DeleteEventSubscriptionRequest * const q)

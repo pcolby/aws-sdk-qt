@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListProvisioningArtifactsResponse
- *
  * \brief The ListProvisioningArtifactsResponse class provides an interace for ServiceCatalog ListProvisioningArtifacts responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListProvisioningArtifactsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListProvisioningArtifactsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListProvisioningArtifactsResponse::ListProvisioningArtifactsResponse(
         const ListProvisioningArtifactsRequest &request,
@@ -61,6 +56,9 @@ ListProvisioningArtifactsResponse::ListProvisioningArtifactsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListProvisioningArtifactsRequest * ListProvisioningArtifactsResponse::request() const
 {
     Q_D(const ListProvisioningArtifactsResponse);
@@ -68,9 +66,8 @@ const ListProvisioningArtifactsRequest * ListProvisioningArtifactsResponse::requ
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ListProvisioningArtifacts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ListProvisioningArtifacts \a response.
  */
 void ListProvisioningArtifactsResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListProvisioningArtifactsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ListProvisioningArtifactsResponsePrivate
+ * \brief The ListProvisioningArtifactsResponsePrivate class provides private implementation for ListProvisioningArtifactsResponse.
  * \internal
  *
- * \class ListProvisioningArtifactsResponsePrivate
- *
- * \brief Private implementation for ListProvisioningArtifactsResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListProvisioningArtifactsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListProvisioningArtifactsResponse instance.
+ * Constructs a ListProvisioningArtifactsResponsePrivate object with public implementation \a q.
  */
 ListProvisioningArtifactsResponsePrivate::ListProvisioningArtifactsResponsePrivate(
     ListProvisioningArtifactsResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ListProvisioningArtifactsResponsePrivate::ListProvisioningArtifactsResponsePriva
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ListProvisioningArtifactsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ListProvisioningArtifacts response element from \a xml.
  */
 void ListProvisioningArtifactsResponsePrivate::parseListProvisioningArtifactsResponse(QXmlStreamReader &xml)
 {

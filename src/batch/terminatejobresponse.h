@@ -34,10 +34,10 @@ class QTAWS_EXPORT TerminateJobResponse : public BatchResponse {
 public:
     TerminateJobResponse(const TerminateJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TerminateJobRequest * request() const;
+    virtual const TerminateJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TerminateJobResponse)

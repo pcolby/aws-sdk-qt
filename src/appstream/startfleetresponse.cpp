@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::StartFleetResponse
- *
  * \brief The StartFleetResponse class provides an interace for AppStream StartFleet responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new StartFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartFleetResponse object for \a reply to \a request, with parent \a parent.
  */
 StartFleetResponse::StartFleetResponse(
         const StartFleetRequest &request,
@@ -58,6 +53,9 @@ StartFleetResponse::StartFleetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartFleetRequest * StartFleetResponse::request() const
 {
     Q_D(const StartFleetResponse);
@@ -65,9 +63,8 @@ const StartFleetRequest * StartFleetResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream StartFleet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream StartFleet \a response.
  */
 void StartFleetResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StartFleetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::StartFleetResponsePrivate
+ * \brief The StartFleetResponsePrivate class provides private implementation for StartFleetResponse.
  * \internal
  *
- * \class StartFleetResponsePrivate
- *
- * \brief Private implementation for StartFleetResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartFleetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartFleetResponse instance.
+ * Constructs a StartFleetResponsePrivate object with public implementation \a q.
  */
 StartFleetResponsePrivate::StartFleetResponsePrivate(
     StartFleetResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ StartFleetResponsePrivate::StartFleetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream StartFleetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream StartFleet response element from \a xml.
  */
 void StartFleetResponsePrivate::parseStartFleetResponse(QXmlStreamReader &xml)
 {

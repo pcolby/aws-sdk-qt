@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminListUserAuthEventsResponse
- *
  * \brief The AdminListUserAuthEventsResponse class provides an interace for CognitoIdentityProvider AdminListUserAuthEvents responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminListUserAuthEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminListUserAuthEventsResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminListUserAuthEventsResponse::AdminListUserAuthEventsResponse(
         const AdminListUserAuthEventsRequest &request,
@@ -65,6 +60,9 @@ AdminListUserAuthEventsResponse::AdminListUserAuthEventsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminListUserAuthEventsRequest * AdminListUserAuthEventsResponse::request() const
 {
     Q_D(const AdminListUserAuthEventsResponse);
@@ -72,9 +70,8 @@ const AdminListUserAuthEventsRequest * AdminListUserAuthEventsResponse::request(
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminListUserAuthEvents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminListUserAuthEvents \a response.
  */
 void AdminListUserAuthEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminListUserAuthEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminListUserAuthEventsResponsePrivate
+ * \brief The AdminListUserAuthEventsResponsePrivate class provides private implementation for AdminListUserAuthEventsResponse.
  * \internal
  *
- * \class AdminListUserAuthEventsResponsePrivate
- *
- * \brief Private implementation for AdminListUserAuthEventsResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminListUserAuthEventsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminListUserAuthEventsResponse instance.
+ * Constructs a AdminListUserAuthEventsResponsePrivate object with public implementation \a q.
  */
 AdminListUserAuthEventsResponsePrivate::AdminListUserAuthEventsResponsePrivate(
     AdminListUserAuthEventsResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminListUserAuthEventsResponsePrivate::AdminListUserAuthEventsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminListUserAuthEventsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminListUserAuthEvents response element from \a xml.
  */
 void AdminListUserAuthEventsResponsePrivate::parseAdminListUserAuthEventsResponse(QXmlStreamReader &xml)
 {

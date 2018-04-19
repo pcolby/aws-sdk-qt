@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DetachStaticIpRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DetachStaticIpRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a DetachStaticIpRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 DetachStaticIpRequestPrivate::DetachStaticIpRequestPrivate(
     const LightsailRequest::Action action, DetachStaticIpRequest * const q)

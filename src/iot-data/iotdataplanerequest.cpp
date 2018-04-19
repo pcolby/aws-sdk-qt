@@ -43,7 +43,7 @@ namespace IoTDataPlane {
  */
 
 /*!
- * Constructs a[n] IoTDataPlaneRequest object for IoTDataPlane \a action.
+ * Constructs a IoTDataPlaneRequest object for IoTDataPlane \a action.
  */
 IoTDataPlaneRequest::IoTDataPlaneRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new IoTDataPlaneRequestPrivate(action, this))
@@ -243,8 +243,8 @@ QNetworkRequest IoTDataPlaneRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a IoTDataPlaneRequestPrivate object for IoTDataPlane \a action with,
- * public implementation \a q.
+ * Constructs a IoTDataPlaneRequestPrivate object for IoTDataPlane \a action,
+ * with public implementation \a q.
  */
 IoTDataPlaneRequestPrivate::IoTDataPlaneRequestPrivate(const IoTDataPlaneRequest::Action action, IoTDataPlaneRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

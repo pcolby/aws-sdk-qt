@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListHostedZonesByNameRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListHostedZonesByNameRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a ListHostedZonesByNameRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 ListHostedZonesByNameRequestPrivate::ListHostedZonesByNameRequestPrivate(
     const Route53Request::Action action, ListHostedZonesByNameRequest * const q)

@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteConfigurationTemplateResponse
- *
  * \brief The DeleteConfigurationTemplateResponse class provides an interace for ElasticBeanstalk DeleteConfigurationTemplate responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DeleteConfigurationTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteConfigurationTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteConfigurationTemplateResponse::DeleteConfigurationTemplateResponse(
         const DeleteConfigurationTemplateRequest &request,
@@ -77,6 +72,9 @@ DeleteConfigurationTemplateResponse::DeleteConfigurationTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteConfigurationTemplateRequest * DeleteConfigurationTemplateResponse::request() const
 {
     Q_D(const DeleteConfigurationTemplateResponse);
@@ -84,9 +82,8 @@ const DeleteConfigurationTemplateRequest * DeleteConfigurationTemplateResponse::
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DeleteConfigurationTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DeleteConfigurationTemplate \a response.
  */
 void DeleteConfigurationTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DeleteConfigurationTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DeleteConfigurationTemplateResponsePrivate
+ * \brief The DeleteConfigurationTemplateResponsePrivate class provides private implementation for DeleteConfigurationTemplateResponse.
  * \internal
  *
- * \class DeleteConfigurationTemplateResponsePrivate
- *
- * \brief Private implementation for DeleteConfigurationTemplateResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConfigurationTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteConfigurationTemplateResponse instance.
+ * Constructs a DeleteConfigurationTemplateResponsePrivate object with public implementation \a q.
  */
 DeleteConfigurationTemplateResponsePrivate::DeleteConfigurationTemplateResponsePrivate(
     DeleteConfigurationTemplateResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DeleteConfigurationTemplateResponsePrivate::DeleteConfigurationTemplateResponseP
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DeleteConfigurationTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DeleteConfigurationTemplate response element from \a xml.
  */
 void DeleteConfigurationTemplateResponsePrivate::parseDeleteConfigurationTemplateResponse(QXmlStreamReader &xml)
 {

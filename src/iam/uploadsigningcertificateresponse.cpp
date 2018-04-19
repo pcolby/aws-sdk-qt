@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UploadSigningCertificateResponse
- *
  * \brief The UploadSigningCertificateResponse class provides an interace for IAM UploadSigningCertificate responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UploadSigningCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UploadSigningCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 UploadSigningCertificateResponse::UploadSigningCertificateResponse(
         const UploadSigningCertificateRequest &request,
@@ -120,6 +115,9 @@ UploadSigningCertificateResponse::UploadSigningCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UploadSigningCertificateRequest * UploadSigningCertificateResponse::request() const
 {
     Q_D(const UploadSigningCertificateResponse);
@@ -127,9 +125,8 @@ const UploadSigningCertificateRequest * UploadSigningCertificateResponse::reques
 }
 
 /*!
- * @brief  Parse a IAM UploadSigningCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UploadSigningCertificate \a response.
  */
 void UploadSigningCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UploadSigningCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UploadSigningCertificateResponsePrivate
+ * \brief The UploadSigningCertificateResponsePrivate class provides private implementation for UploadSigningCertificateResponse.
  * \internal
  *
- * \class UploadSigningCertificateResponsePrivate
- *
- * \brief Private implementation for UploadSigningCertificateResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadSigningCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UploadSigningCertificateResponse instance.
+ * Constructs a UploadSigningCertificateResponsePrivate object with public implementation \a q.
  */
 UploadSigningCertificateResponsePrivate::UploadSigningCertificateResponsePrivate(
     UploadSigningCertificateResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UploadSigningCertificateResponsePrivate::UploadSigningCertificateResponsePrivate
 }
 
 /*!
- * @brief  Parse an IAM UploadSigningCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UploadSigningCertificate response element from \a xml.
  */
 void UploadSigningCertificateResponsePrivate::parseUploadSigningCertificateResponse(QXmlStreamReader &xml)
 {

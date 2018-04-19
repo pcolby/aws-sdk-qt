@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDBSnapshotRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteDBSnapshotRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDBSnapshotRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DeleteDBSnapshotRequestPrivate::DeleteDBSnapshotRequestPrivate(
     const RDSRequest::Action action, DeleteDBSnapshotRequest * const q)

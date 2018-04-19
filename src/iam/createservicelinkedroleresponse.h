@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateServiceLinkedRoleResponse : public IAMResponse {
 public:
     CreateServiceLinkedRoleResponse(const CreateServiceLinkedRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateServiceLinkedRoleRequest * request() const;
+    virtual const CreateServiceLinkedRoleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateServiceLinkedRoleResponse)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * StopTrainingJobRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a StopTrainingJobRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a StopTrainingJobRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 StopTrainingJobRequestPrivate::StopTrainingJobRequestPrivate(
     const SageMakerRequest::Action action, StopTrainingJobRequest * const q)

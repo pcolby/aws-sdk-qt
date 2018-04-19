@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetPendingJobExecutionsResponse : public IoTJobsDataPlaneResp
 public:
     GetPendingJobExecutionsResponse(const GetPendingJobExecutionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetPendingJobExecutionsRequest * request() const;
+    virtual const GetPendingJobExecutionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetPendingJobExecutionsResponse)

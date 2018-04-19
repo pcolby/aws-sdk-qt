@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::ListTagsForResourceResponse
- *
  * \brief The ListTagsForResourceResponse class provides an interace for ElasticBeanstalk ListTagsForResource responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new ListTagsForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsForResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsForResourceResponse::ListTagsForResourceResponse(
         const ListTagsForResourceRequest &request,
@@ -77,6 +72,9 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 {
     Q_D(const ListTagsForResourceResponse);
@@ -84,9 +82,8 @@ const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk ListTagsForResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk ListTagsForResource \a response.
  */
 void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ListTagsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::ListTagsForResourceResponsePrivate
+ * \brief The ListTagsForResourceResponsePrivate class provides private implementation for ListTagsForResourceResponse.
  * \internal
  *
- * \class ListTagsForResourceResponsePrivate
- *
- * \brief Private implementation for ListTagsForResourceResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsForResourceResponse instance.
+ * Constructs a ListTagsForResourceResponsePrivate object with public implementation \a q.
  */
 ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
     ListTagsForResourceResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ ListTagsForResourceResponsePrivate::ListTagsForResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk ListTagsForResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk ListTagsForResource response element from \a xml.
  */
 void ListTagsForResourceResponsePrivate::parseListTagsForResourceResponse(QXmlStreamReader &xml)
 {

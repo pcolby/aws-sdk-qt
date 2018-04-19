@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::DeleteDeploymentGroupResponse
- *
  * \brief The DeleteDeploymentGroupResponse class provides an interace for CodeDeploy DeleteDeploymentGroup responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new DeleteDeploymentGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDeploymentGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDeploymentGroupResponse::DeleteDeploymentGroupResponse(
         const DeleteDeploymentGroupRequest &request,
@@ -136,6 +131,9 @@ DeleteDeploymentGroupResponse::DeleteDeploymentGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDeploymentGroupRequest * DeleteDeploymentGroupResponse::request() const
 {
     Q_D(const DeleteDeploymentGroupResponse);
@@ -143,9 +141,8 @@ const DeleteDeploymentGroupRequest * DeleteDeploymentGroupResponse::request() co
 }
 
 /*!
- * @brief  Parse a CodeDeploy DeleteDeploymentGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy DeleteDeploymentGroup \a response.
  */
 void DeleteDeploymentGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void DeleteDeploymentGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::DeleteDeploymentGroupResponsePrivate
+ * \brief The DeleteDeploymentGroupResponsePrivate class provides private implementation for DeleteDeploymentGroupResponse.
  * \internal
  *
- * \class DeleteDeploymentGroupResponsePrivate
- *
- * \brief Private implementation for DeleteDeploymentGroupResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDeploymentGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDeploymentGroupResponse instance.
+ * Constructs a DeleteDeploymentGroupResponsePrivate object with public implementation \a q.
  */
 DeleteDeploymentGroupResponsePrivate::DeleteDeploymentGroupResponsePrivate(
     DeleteDeploymentGroupResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ DeleteDeploymentGroupResponsePrivate::DeleteDeploymentGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy DeleteDeploymentGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy DeleteDeploymentGroup response element from \a xml.
  */
 void DeleteDeploymentGroupResponsePrivate::parseDeleteDeploymentGroupResponse(QXmlStreamReader &xml)
 {

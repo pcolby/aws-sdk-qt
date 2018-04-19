@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::ValidateConfigurationSettingsResponse
- *
  * \brief The ValidateConfigurationSettingsResponse class provides an interace for ElasticBeanstalk ValidateConfigurationSettings responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new ValidateConfigurationSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ValidateConfigurationSettingsResponse object for \a reply to \a request, with parent \a parent.
  */
 ValidateConfigurationSettingsResponse::ValidateConfigurationSettingsResponse(
         const ValidateConfigurationSettingsRequest &request,
@@ -77,6 +72,9 @@ ValidateConfigurationSettingsResponse::ValidateConfigurationSettingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ValidateConfigurationSettingsRequest * ValidateConfigurationSettingsResponse::request() const
 {
     Q_D(const ValidateConfigurationSettingsResponse);
@@ -84,9 +82,8 @@ const ValidateConfigurationSettingsRequest * ValidateConfigurationSettingsRespon
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk ValidateConfigurationSettings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk ValidateConfigurationSettings \a response.
  */
 void ValidateConfigurationSettingsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ValidateConfigurationSettingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::ValidateConfigurationSettingsResponsePrivate
+ * \brief The ValidateConfigurationSettingsResponsePrivate class provides private implementation for ValidateConfigurationSettingsResponse.
  * \internal
  *
- * \class ValidateConfigurationSettingsResponsePrivate
- *
- * \brief Private implementation for ValidateConfigurationSettingsResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ValidateConfigurationSettingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ValidateConfigurationSettingsResponse instance.
+ * Constructs a ValidateConfigurationSettingsResponsePrivate object with public implementation \a q.
  */
 ValidateConfigurationSettingsResponsePrivate::ValidateConfigurationSettingsResponsePrivate(
     ValidateConfigurationSettingsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ ValidateConfigurationSettingsResponsePrivate::ValidateConfigurationSettingsRespo
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk ValidateConfigurationSettingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk ValidateConfigurationSettings response element from \a xml.
  */
 void ValidateConfigurationSettingsResponsePrivate::parseValidateConfigurationSettingsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UpdateElasticIpResponse
- *
  * \brief The UpdateElasticIpResponse class provides an interace for OpsWorks UpdateElasticIp responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UpdateElasticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateElasticIpResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateElasticIpResponse::UpdateElasticIpResponse(
         const UpdateElasticIpRequest &request,
@@ -161,6 +156,9 @@ UpdateElasticIpResponse::UpdateElasticIpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateElasticIpRequest * UpdateElasticIpResponse::request() const
 {
     Q_D(const UpdateElasticIpResponse);
@@ -168,9 +166,8 @@ const UpdateElasticIpRequest * UpdateElasticIpResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks UpdateElasticIp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks UpdateElasticIp \a response.
  */
 void UpdateElasticIpResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void UpdateElasticIpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::UpdateElasticIpResponsePrivate
+ * \brief The UpdateElasticIpResponsePrivate class provides private implementation for UpdateElasticIpResponse.
  * \internal
  *
- * \class UpdateElasticIpResponsePrivate
- *
- * \brief Private implementation for UpdateElasticIpResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateElasticIpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateElasticIpResponse instance.
+ * Constructs a UpdateElasticIpResponsePrivate object with public implementation \a q.
  */
 UpdateElasticIpResponsePrivate::UpdateElasticIpResponsePrivate(
     UpdateElasticIpResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ UpdateElasticIpResponsePrivate::UpdateElasticIpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks UpdateElasticIpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks UpdateElasticIp response element from \a xml.
  */
 void UpdateElasticIpResponsePrivate::parseUpdateElasticIpResponse(QXmlStreamReader &xml)
 {

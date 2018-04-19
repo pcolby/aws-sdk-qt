@@ -29,21 +29,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::GetReplicationJobsResponse
- *
  * \brief The GetReplicationJobsResponse class provides an interace for SMS GetReplicationJobs responses.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::getReplicationJobs
  */
 
 /*!
- * @brief  Constructs a new GetReplicationJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetReplicationJobsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetReplicationJobsResponse::GetReplicationJobsResponse(
         const GetReplicationJobsRequest &request,
@@ -55,6 +50,9 @@ GetReplicationJobsResponse::GetReplicationJobsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetReplicationJobsRequest * GetReplicationJobsResponse::request() const
 {
     Q_D(const GetReplicationJobsResponse);
@@ -62,9 +60,8 @@ const GetReplicationJobsRequest * GetReplicationJobsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SMS GetReplicationJobs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SMS GetReplicationJobs \a response.
  */
 void GetReplicationJobsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetReplicationJobsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SMS::GetReplicationJobsResponsePrivate
+ * \brief The GetReplicationJobsResponsePrivate class provides private implementation for GetReplicationJobsResponse.
  * \internal
  *
- * \class GetReplicationJobsResponsePrivate
- *
- * \brief Private implementation for GetReplicationJobsResponse.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReplicationJobsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetReplicationJobsResponse instance.
+ * Constructs a GetReplicationJobsResponsePrivate object with public implementation \a q.
  */
 GetReplicationJobsResponsePrivate::GetReplicationJobsResponsePrivate(
     GetReplicationJobsResponse * const q) : SMSResponsePrivate(q)
@@ -95,9 +88,7 @@ GetReplicationJobsResponsePrivate::GetReplicationJobsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SMS GetReplicationJobsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SMS GetReplicationJobs response element from \a xml.
  */
 void GetReplicationJobsResponsePrivate::parseGetReplicationJobsResponse(QXmlStreamReader &xml)
 {

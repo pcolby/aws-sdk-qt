@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateSampleFindingsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a CreateSampleFindingsRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a CreateSampleFindingsRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 CreateSampleFindingsRequestPrivate::CreateSampleFindingsRequestPrivate(
     const GuardDutyRequest::Action action, CreateSampleFindingsRequest * const q)

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteInstanceProfileResponse
- *
  * \brief The DeleteInstanceProfileResponse class provides an interace for IAM DeleteInstanceProfile responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteInstanceProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteInstanceProfileResponse::DeleteInstanceProfileResponse(
         const DeleteInstanceProfileRequest &request,
@@ -120,6 +115,9 @@ DeleteInstanceProfileResponse::DeleteInstanceProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteInstanceProfileRequest * DeleteInstanceProfileResponse::request() const
 {
     Q_D(const DeleteInstanceProfileResponse);
@@ -127,9 +125,8 @@ const DeleteInstanceProfileRequest * DeleteInstanceProfileResponse::request() co
 }
 
 /*!
- * @brief  Parse a IAM DeleteInstanceProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteInstanceProfile \a response.
  */
 void DeleteInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteInstanceProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteInstanceProfileResponsePrivate
+ * \brief The DeleteInstanceProfileResponsePrivate class provides private implementation for DeleteInstanceProfileResponse.
  * \internal
  *
- * \class DeleteInstanceProfileResponsePrivate
- *
- * \brief Private implementation for DeleteInstanceProfileResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInstanceProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteInstanceProfileResponse instance.
+ * Constructs a DeleteInstanceProfileResponsePrivate object with public implementation \a q.
  */
 DeleteInstanceProfileResponsePrivate::DeleteInstanceProfileResponsePrivate(
     DeleteInstanceProfileResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteInstanceProfileResponsePrivate::DeleteInstanceProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeleteInstanceProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteInstanceProfile response element from \a xml.
  */
 void DeleteInstanceProfileResponsePrivate::parseDeleteInstanceProfileResponse(QXmlStreamReader &xml)
 {

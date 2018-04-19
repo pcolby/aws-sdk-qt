@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DetachUserPolicyRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DetachUserPolicyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DetachUserPolicyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DetachUserPolicyRequestPrivate::DetachUserPolicyRequestPrivate(
     const IAMRequest::Action action, DetachUserPolicyRequest * const q)

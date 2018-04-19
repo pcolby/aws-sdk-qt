@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * BatchDeleteImageRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a BatchDeleteImageRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a BatchDeleteImageRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 BatchDeleteImageRequestPrivate::BatchDeleteImageRequestPrivate(
     const ECRRequest::Action action, BatchDeleteImageRequest * const q)

@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * GetCommentsForComparedCommitRequest::response
  */
 
 /*!
- *
- * Constructs a GetCommentsForComparedCommitRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a GetCommentsForComparedCommitRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 GetCommentsForComparedCommitRequestPrivate::GetCommentsForComparedCommitRequestPrivate(
     const CodeCommitRequest::Action action, GetCommentsForComparedCommitRequest * const q)

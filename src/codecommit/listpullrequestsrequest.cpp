@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * ListPullRequestsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListPullRequestsRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a ListPullRequestsRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 ListPullRequestsRequestPrivate::ListPullRequestsRequestPrivate(
     const CodeCommitRequest::Action action, ListPullRequestsRequest * const q)

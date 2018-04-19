@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * GetHostnameSuggestionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetHostnameSuggestionRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a GetHostnameSuggestionRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 GetHostnameSuggestionRequestPrivate::GetHostnameSuggestionRequestPrivate(
     const OpsWorksRequest::Action action, GetHostnameSuggestionRequest * const q)

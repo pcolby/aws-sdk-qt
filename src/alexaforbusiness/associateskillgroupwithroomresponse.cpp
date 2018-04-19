@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::AssociateSkillGroupWithRoomResponse
- *
  * \brief The AssociateSkillGroupWithRoomResponse class provides an interace for AlexaForBusiness AssociateSkillGroupWithRoom responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new AssociateSkillGroupWithRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateSkillGroupWithRoomResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateSkillGroupWithRoomResponse::AssociateSkillGroupWithRoomResponse(
         const AssociateSkillGroupWithRoomRequest &request,
@@ -60,6 +55,9 @@ AssociateSkillGroupWithRoomResponse::AssociateSkillGroupWithRoomResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateSkillGroupWithRoomRequest * AssociateSkillGroupWithRoomResponse::request() const
 {
     Q_D(const AssociateSkillGroupWithRoomResponse);
@@ -67,9 +65,8 @@ const AssociateSkillGroupWithRoomRequest * AssociateSkillGroupWithRoomResponse::
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness AssociateSkillGroupWithRoom response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness AssociateSkillGroupWithRoom \a response.
  */
 void AssociateSkillGroupWithRoomResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void AssociateSkillGroupWithRoomResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::AssociateSkillGroupWithRoomResponsePrivate
+ * \brief The AssociateSkillGroupWithRoomResponsePrivate class provides private implementation for AssociateSkillGroupWithRoomResponse.
  * \internal
  *
- * \class AssociateSkillGroupWithRoomResponsePrivate
- *
- * \brief Private implementation for AssociateSkillGroupWithRoomResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateSkillGroupWithRoomResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateSkillGroupWithRoomResponse instance.
+ * Constructs a AssociateSkillGroupWithRoomResponsePrivate object with public implementation \a q.
  */
 AssociateSkillGroupWithRoomResponsePrivate::AssociateSkillGroupWithRoomResponsePrivate(
     AssociateSkillGroupWithRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ AssociateSkillGroupWithRoomResponsePrivate::AssociateSkillGroupWithRoomResponseP
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness AssociateSkillGroupWithRoomResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness AssociateSkillGroupWithRoom response element from \a xml.
  */
 void AssociateSkillGroupWithRoomResponsePrivate::parseAssociateSkillGroupWithRoomResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetApnsVoipSandboxChannelRequest::response(QN
  */
 
 /*!
- *
- * Constructs a GetApnsVoipSandboxChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetApnsVoipSandboxChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetApnsVoipSandboxChannelRequestPrivate::GetApnsVoipSandboxChannelRequestPrivate(
     const PinpointRequest::Action action, GetApnsVoipSandboxChannelRequest * const q)

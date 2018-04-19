@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::OptInPhoneNumberResponse
- *
  * \brief The OptInPhoneNumberResponse class provides an interace for SNS OptInPhoneNumber responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new OptInPhoneNumberResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a OptInPhoneNumberResponse object for \a reply to \a request, with parent \a parent.
  */
 OptInPhoneNumberResponse::OptInPhoneNumberResponse(
         const OptInPhoneNumberRequest &request,
@@ -69,6 +64,9 @@ OptInPhoneNumberResponse::OptInPhoneNumberResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const OptInPhoneNumberRequest * OptInPhoneNumberResponse::request() const
 {
     Q_D(const OptInPhoneNumberResponse);
@@ -76,9 +74,8 @@ const OptInPhoneNumberRequest * OptInPhoneNumberResponse::request() const
 }
 
 /*!
- * @brief  Parse a SNS OptInPhoneNumber response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS OptInPhoneNumber \a response.
  */
 void OptInPhoneNumberResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void OptInPhoneNumberResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::OptInPhoneNumberResponsePrivate
+ * \brief The OptInPhoneNumberResponsePrivate class provides private implementation for OptInPhoneNumberResponse.
  * \internal
  *
- * \class OptInPhoneNumberResponsePrivate
- *
- * \brief Private implementation for OptInPhoneNumberResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new OptInPhoneNumberResponsePrivate object.
- *
- * @param  q  Pointer to this object's public OptInPhoneNumberResponse instance.
+ * Constructs a OptInPhoneNumberResponsePrivate object with public implementation \a q.
  */
 OptInPhoneNumberResponsePrivate::OptInPhoneNumberResponsePrivate(
     OptInPhoneNumberResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ OptInPhoneNumberResponsePrivate::OptInPhoneNumberResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS OptInPhoneNumberResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS OptInPhoneNumber response element from \a xml.
  */
 void OptInPhoneNumberResponsePrivate::parseOptInPhoneNumberResponse(QXmlStreamReader &xml)
 {

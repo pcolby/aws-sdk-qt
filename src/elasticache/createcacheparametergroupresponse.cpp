@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::CreateCacheParameterGroupResponse
- *
  * \brief The CreateCacheParameterGroupResponse class provides an interace for ElastiCache CreateCacheParameterGroup responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new CreateCacheParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCacheParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCacheParameterGroupResponse::CreateCacheParameterGroupResponse(
         const CreateCacheParameterGroupRequest &request,
@@ -69,6 +64,9 @@ CreateCacheParameterGroupResponse::CreateCacheParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCacheParameterGroupRequest * CreateCacheParameterGroupResponse::request() const
 {
     Q_D(const CreateCacheParameterGroupResponse);
@@ -76,9 +74,8 @@ const CreateCacheParameterGroupRequest * CreateCacheParameterGroupResponse::requ
 }
 
 /*!
- * @brief  Parse a ElastiCache CreateCacheParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache CreateCacheParameterGroup \a response.
  */
 void CreateCacheParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateCacheParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::CreateCacheParameterGroupResponsePrivate
+ * \brief The CreateCacheParameterGroupResponsePrivate class provides private implementation for CreateCacheParameterGroupResponse.
  * \internal
  *
- * \class CreateCacheParameterGroupResponsePrivate
- *
- * \brief Private implementation for CreateCacheParameterGroupResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCacheParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCacheParameterGroupResponse instance.
+ * Constructs a CreateCacheParameterGroupResponsePrivate object with public implementation \a q.
  */
 CreateCacheParameterGroupResponsePrivate::CreateCacheParameterGroupResponsePrivate(
     CreateCacheParameterGroupResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateCacheParameterGroupResponsePrivate::CreateCacheParameterGroupResponsePriva
 }
 
 /*!
- * @brief  Parse an ElastiCache CreateCacheParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache CreateCacheParameterGroup response element from \a xml.
  */
 void CreateCacheParameterGroupResponsePrivate::parseCreateCacheParameterGroupResponse(QXmlStreamReader &xml)
 {

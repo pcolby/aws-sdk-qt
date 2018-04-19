@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::UpdateNetworkProfileResponse
- *
  * \brief The UpdateNetworkProfileResponse class provides an interace for DeviceFarm UpdateNetworkProfile responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new UpdateNetworkProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateNetworkProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateNetworkProfileResponse::UpdateNetworkProfileResponse(
         const UpdateNetworkProfileRequest &request,
@@ -57,6 +52,9 @@ UpdateNetworkProfileResponse::UpdateNetworkProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateNetworkProfileRequest * UpdateNetworkProfileResponse::request() const
 {
     Q_D(const UpdateNetworkProfileResponse);
@@ -64,9 +62,8 @@ const UpdateNetworkProfileRequest * UpdateNetworkProfileResponse::request() cons
 }
 
 /*!
- * @brief  Parse a DeviceFarm UpdateNetworkProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm UpdateNetworkProfile \a response.
  */
 void UpdateNetworkProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void UpdateNetworkProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::UpdateNetworkProfileResponsePrivate
+ * \brief The UpdateNetworkProfileResponsePrivate class provides private implementation for UpdateNetworkProfileResponse.
  * \internal
  *
- * \class UpdateNetworkProfileResponsePrivate
- *
- * \brief Private implementation for UpdateNetworkProfileResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateNetworkProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateNetworkProfileResponse instance.
+ * Constructs a UpdateNetworkProfileResponsePrivate object with public implementation \a q.
  */
 UpdateNetworkProfileResponsePrivate::UpdateNetworkProfileResponsePrivate(
     UpdateNetworkProfileResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ UpdateNetworkProfileResponsePrivate::UpdateNetworkProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm UpdateNetworkProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm UpdateNetworkProfile response element from \a xml.
  */
 void UpdateNetworkProfileResponsePrivate::parseUpdateNetworkProfileResponse(QXmlStreamReader &xml)
 {

@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteProjectRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteProjectRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a DeleteProjectRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 DeleteProjectRequestPrivate::DeleteProjectRequestPrivate(
     const DeviceFarmRequest::Action action, DeleteProjectRequest * const q)

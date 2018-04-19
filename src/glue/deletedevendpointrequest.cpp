@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDevEndpointRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteDevEndpointRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDevEndpointRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 DeleteDevEndpointRequestPrivate::DeleteDevEndpointRequestPrivate(
     const GlueRequest::Action action, DeleteDevEndpointRequest * const q)

@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventSubscriptionsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeEventSubscriptionsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventSubscriptionsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPrivate(
     const RDSRequest::Action action, DescribeEventSubscriptionsRequest * const q)

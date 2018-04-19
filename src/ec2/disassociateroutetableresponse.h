@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateRouteTableResponse : public EC2Response {
 public:
     DisassociateRouteTableResponse(const DisassociateRouteTableRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateRouteTableRequest * request() const;
+    virtual const DisassociateRouteTableRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateRouteTableResponse)

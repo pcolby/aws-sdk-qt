@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveAttributesFromFindingsResponse : public InspectorRespon
 public:
     RemoveAttributesFromFindingsResponse(const RemoveAttributesFromFindingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveAttributesFromFindingsRequest * request() const;
+    virtual const RemoveAttributesFromFindingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RemoveAttributesFromFindingsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEventAggregatesResponse : public HealthResponse {
 public:
     DescribeEventAggregatesResponse(const DescribeEventAggregatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEventAggregatesRequest * request() const;
+    virtual const DescribeEventAggregatesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEventAggregatesResponse)

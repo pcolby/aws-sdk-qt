@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * RebootInstancesRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a RebootInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a RebootInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 RebootInstancesRequestPrivate::RebootInstancesRequestPrivate(
     const EC2Request::Action action, RebootInstancesRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteInterconnectResponse : public DirectConnectResponse {
 public:
     DeleteInterconnectResponse(const DeleteInterconnectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteInterconnectRequest * request() const;
+    virtual const DeleteInterconnectRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteInterconnectResponse)

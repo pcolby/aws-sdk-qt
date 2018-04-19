@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * SetPermissionRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a SetPermissionRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a SetPermissionRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 SetPermissionRequestPrivate::SetPermissionRequestPrivate(
     const OpsWorksRequest::Action action, SetPermissionRequest * const q)

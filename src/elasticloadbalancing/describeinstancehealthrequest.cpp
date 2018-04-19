@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * DescribeInstanceHealthRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeInstanceHealthRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a DescribeInstanceHealthRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 DescribeInstanceHealthRequestPrivate::DescribeInstanceHealthRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DescribeInstanceHealthRequest * const q)

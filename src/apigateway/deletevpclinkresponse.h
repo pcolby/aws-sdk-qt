@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteVpcLinkResponse : public APIGatewayResponse {
 public:
     DeleteVpcLinkResponse(const DeleteVpcLinkRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteVpcLinkRequest * request() const;
+    virtual const DeleteVpcLinkRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteVpcLinkResponse)

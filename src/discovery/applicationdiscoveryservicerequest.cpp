@@ -58,7 +58,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * Constructs a[n] ApplicationDiscoveryServiceRequest object for ApplicationDiscoveryService \a action.
+ * Constructs a ApplicationDiscoveryServiceRequest object for ApplicationDiscoveryService \a action.
  */
 ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ApplicationDiscoveryServiceRequestPrivate(action, this))
@@ -258,8 +258,8 @@ QNetworkRequest ApplicationDiscoveryServiceRequest::unsignedRequest(const QUrl &
  */
 
 /*!
- * Constructs a ApplicationDiscoveryServiceRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a ApplicationDiscoveryServiceRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 ApplicationDiscoveryServiceRequestPrivate::ApplicationDiscoveryServiceRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action, ApplicationDiscoveryServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

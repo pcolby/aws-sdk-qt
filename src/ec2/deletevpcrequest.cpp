@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a DeleteVpcRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVpcRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteVpcRequestPrivate::DeleteVpcRequestPrivate(
     const EC2Request::Action action, DeleteVpcRequest * const q)

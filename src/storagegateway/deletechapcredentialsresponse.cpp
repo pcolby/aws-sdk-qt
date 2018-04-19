@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteChapCredentialsResponse
- *
  * \brief The DeleteChapCredentialsResponse class provides an interace for StorageGateway DeleteChapCredentials responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteChapCredentialsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteChapCredentialsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteChapCredentialsResponse::DeleteChapCredentialsResponse(
         const DeleteChapCredentialsRequest &request,
@@ -124,6 +119,9 @@ DeleteChapCredentialsResponse::DeleteChapCredentialsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteChapCredentialsRequest * DeleteChapCredentialsResponse::request() const
 {
     Q_D(const DeleteChapCredentialsResponse);
@@ -131,9 +129,8 @@ const DeleteChapCredentialsRequest * DeleteChapCredentialsResponse::request() co
 }
 
 /*!
- * @brief  Parse a StorageGateway DeleteChapCredentials response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DeleteChapCredentials \a response.
  */
 void DeleteChapCredentialsResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DeleteChapCredentialsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DeleteChapCredentialsResponsePrivate
+ * \brief The DeleteChapCredentialsResponsePrivate class provides private implementation for DeleteChapCredentialsResponse.
  * \internal
  *
- * \class DeleteChapCredentialsResponsePrivate
- *
- * \brief Private implementation for DeleteChapCredentialsResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteChapCredentialsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteChapCredentialsResponse instance.
+ * Constructs a DeleteChapCredentialsResponsePrivate object with public implementation \a q.
  */
 DeleteChapCredentialsResponsePrivate::DeleteChapCredentialsResponsePrivate(
     DeleteChapCredentialsResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DeleteChapCredentialsResponsePrivate::DeleteChapCredentialsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DeleteChapCredentialsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DeleteChapCredentials response element from \a xml.
  */
 void DeleteChapCredentialsResponsePrivate::parseDeleteChapCredentialsResponse(QXmlStreamReader &xml)
 {

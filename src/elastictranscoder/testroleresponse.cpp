@@ -29,10 +29,9 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::TestRoleResponse
- *
  * \brief The TestRoleResponse class provides an interace for ElasticTranscoder TestRole responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  *
  *  <fullname>AWS Elastic Transcoder Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace ElasticTranscoder {
  */
 
 /*!
- * @brief  Constructs a new TestRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TestRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 TestRoleResponse::TestRoleResponse(
         const TestRoleRequest &request,
@@ -58,6 +53,9 @@ TestRoleResponse::TestRoleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TestRoleRequest * TestRoleResponse::request() const
 {
     Q_D(const TestRoleResponse);
@@ -65,9 +63,8 @@ const TestRoleRequest * TestRoleResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticTranscoder TestRole response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticTranscoder TestRole \a response.
  */
 void TestRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void TestRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticTranscoder::TestRoleResponsePrivate
+ * \brief The TestRoleResponsePrivate class provides private implementation for TestRoleResponse.
  * \internal
  *
- * \class TestRoleResponsePrivate
- *
- * \brief Private implementation for TestRoleResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TestRoleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TestRoleResponse instance.
+ * Constructs a TestRoleResponsePrivate object with public implementation \a q.
  */
 TestRoleResponsePrivate::TestRoleResponsePrivate(
     TestRoleResponse * const q) : ElasticTranscoderResponsePrivate(q)
@@ -98,9 +91,7 @@ TestRoleResponsePrivate::TestRoleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticTranscoder TestRoleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticTranscoder TestRole response element from \a xml.
  */
 void TestRoleResponsePrivate::parseTestRoleResponse(QXmlStreamReader &xml)
 {

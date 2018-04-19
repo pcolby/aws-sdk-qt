@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DescribeNFSFileSharesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeNFSFileSharesRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DescribeNFSFileSharesRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DescribeNFSFileSharesRequestPrivate::DescribeNFSFileSharesRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeNFSFileSharesRequest * const q)

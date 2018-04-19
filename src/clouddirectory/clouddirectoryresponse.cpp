@@ -28,16 +28,13 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::CloudDirectoryResponse
- *
  * \brief The CloudDirectoryResponse class provides an interface for CloudDirectory responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @brief  Constructs a new CloudDirectoryResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CloudDirectoryResponse object with parent \a parent.
  */
 CloudDirectoryResponse::CloudDirectoryResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CloudDirectoryResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CloudDirectoryResponse::CloudDirectoryResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudDirectoryResponse object.
- *
+ * \internal
+ * Constructs a CloudDirectoryResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudDirectoryResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CloudDirectoryResponse::CloudDirectoryResponse(CloudDirectoryResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CloudDirectoryResponse::CloudDirectoryResponse(CloudDirectoryResponsePrivate * c
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CloudDirectoryResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CloudDirectoryResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudDirectory::CloudDirectoryResponsePrivate
+ * \brief The CloudDirectoryResponsePrivate class provides private implementation for CloudDirectoryResponse.
+ * \internal
  *
- * @class  CloudDirectoryResponsePrivate
- *
- * @brief  Private implementation for CloudDirectoryResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudDirectoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloudDirectoryResponse instance.
+ * Constructs a CloudDirectoryResponsePrivate object with public implementation \a q.
  */
 CloudDirectoryResponsePrivate::CloudDirectoryResponsePrivate(
     CloudDirectoryResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

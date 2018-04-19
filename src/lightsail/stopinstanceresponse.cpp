@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::StopInstanceResponse
- *
  * \brief The StopInstanceResponse class provides an interace for Lightsail StopInstance responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new StopInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 StopInstanceResponse::StopInstanceResponse(
         const StopInstanceRequest &request,
@@ -71,6 +66,9 @@ StopInstanceResponse::StopInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopInstanceRequest * StopInstanceResponse::request() const
 {
     Q_D(const StopInstanceResponse);
@@ -78,9 +76,8 @@ const StopInstanceRequest * StopInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail StopInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail StopInstance \a response.
  */
 void StopInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void StopInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::StopInstanceResponsePrivate
+ * \brief The StopInstanceResponsePrivate class provides private implementation for StopInstanceResponse.
  * \internal
  *
- * \class StopInstanceResponsePrivate
- *
- * \brief Private implementation for StopInstanceResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopInstanceResponse instance.
+ * Constructs a StopInstanceResponsePrivate object with public implementation \a q.
  */
 StopInstanceResponsePrivate::StopInstanceResponsePrivate(
     StopInstanceResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ StopInstanceResponsePrivate::StopInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail StopInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail StopInstance response element from \a xml.
  */
 void StopInstanceResponsePrivate::parseStopInstanceResponse(QXmlStreamReader &xml)
 {

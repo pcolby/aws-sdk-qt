@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateWebACLRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DisassociateWebACLRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateWebACLRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 DisassociateWebACLRequestPrivate::DisassociateWebACLRequestPrivate(
     const WAFRegionalRequest::Action action, DisassociateWebACLRequest * const q)

@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::GetOpenIdTokenResponse
- *
  * \brief The GetOpenIdTokenResponse class provides an interace for CognitoIdentity GetOpenIdToken responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new GetOpenIdTokenResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetOpenIdTokenResponse object for \a reply to \a request, with parent \a parent.
  */
 GetOpenIdTokenResponse::GetOpenIdTokenResponse(
         const GetOpenIdTokenRequest &request,
@@ -93,6 +88,9 @@ GetOpenIdTokenResponse::GetOpenIdTokenResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetOpenIdTokenRequest * GetOpenIdTokenResponse::request() const
 {
     Q_D(const GetOpenIdTokenResponse);
@@ -100,9 +98,8 @@ const GetOpenIdTokenRequest * GetOpenIdTokenResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentity GetOpenIdToken response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity GetOpenIdToken \a response.
  */
 void GetOpenIdTokenResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void GetOpenIdTokenResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::GetOpenIdTokenResponsePrivate
+ * \brief The GetOpenIdTokenResponsePrivate class provides private implementation for GetOpenIdTokenResponse.
  * \internal
  *
- * \class GetOpenIdTokenResponsePrivate
- *
- * \brief Private implementation for GetOpenIdTokenResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOpenIdTokenResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetOpenIdTokenResponse instance.
+ * Constructs a GetOpenIdTokenResponsePrivate object with public implementation \a q.
  */
 GetOpenIdTokenResponsePrivate::GetOpenIdTokenResponsePrivate(
     GetOpenIdTokenResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ GetOpenIdTokenResponsePrivate::GetOpenIdTokenResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentity GetOpenIdTokenResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity GetOpenIdToken response element from \a xml.
  */
 void GetOpenIdTokenResponsePrivate::parseGetOpenIdTokenResponse(QXmlStreamReader &xml)
 {

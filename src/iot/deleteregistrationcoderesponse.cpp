@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteRegistrationCodeResponse
- *
  * \brief The DeleteRegistrationCodeResponse class provides an interace for IoT DeleteRegistrationCode responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteRegistrationCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRegistrationCodeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRegistrationCodeResponse::DeleteRegistrationCodeResponse(
         const DeleteRegistrationCodeRequest &request,
@@ -66,6 +61,9 @@ DeleteRegistrationCodeResponse::DeleteRegistrationCodeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRegistrationCodeRequest * DeleteRegistrationCodeResponse::request() const
 {
     Q_D(const DeleteRegistrationCodeResponse);
@@ -73,9 +71,8 @@ const DeleteRegistrationCodeRequest * DeleteRegistrationCodeResponse::request() 
 }
 
 /*!
- * @brief  Parse a IoT DeleteRegistrationCode response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DeleteRegistrationCode \a response.
  */
 void DeleteRegistrationCodeResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteRegistrationCodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DeleteRegistrationCodeResponsePrivate
+ * \brief The DeleteRegistrationCodeResponsePrivate class provides private implementation for DeleteRegistrationCodeResponse.
  * \internal
  *
- * \class DeleteRegistrationCodeResponsePrivate
- *
- * \brief Private implementation for DeleteRegistrationCodeResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRegistrationCodeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRegistrationCodeResponse instance.
+ * Constructs a DeleteRegistrationCodeResponsePrivate object with public implementation \a q.
  */
 DeleteRegistrationCodeResponsePrivate::DeleteRegistrationCodeResponsePrivate(
     DeleteRegistrationCodeResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteRegistrationCodeResponsePrivate::DeleteRegistrationCodeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DeleteRegistrationCodeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DeleteRegistrationCode response element from \a xml.
  */
 void DeleteRegistrationCodeResponsePrivate::parseDeleteRegistrationCodeResponse(QXmlStreamReader &xml)
 {

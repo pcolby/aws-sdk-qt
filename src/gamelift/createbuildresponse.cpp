@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::CreateBuildResponse
- *
  * \brief The CreateBuildResponse class provides an interace for GameLift CreateBuild responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new CreateBuildResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateBuildResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateBuildResponse::CreateBuildResponse(
         const CreateBuildRequest &request,
@@ -491,6 +486,9 @@ CreateBuildResponse::CreateBuildResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateBuildRequest * CreateBuildResponse::request() const
 {
     Q_D(const CreateBuildResponse);
@@ -498,9 +496,8 @@ const CreateBuildRequest * CreateBuildResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift CreateBuild response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift CreateBuild \a response.
  */
 void CreateBuildResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void CreateBuildResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::CreateBuildResponsePrivate
+ * \brief The CreateBuildResponsePrivate class provides private implementation for CreateBuildResponse.
  * \internal
  *
- * \class CreateBuildResponsePrivate
- *
- * \brief Private implementation for CreateBuildResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBuildResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateBuildResponse instance.
+ * Constructs a CreateBuildResponsePrivate object with public implementation \a q.
  */
 CreateBuildResponsePrivate::CreateBuildResponsePrivate(
     CreateBuildResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ CreateBuildResponsePrivate::CreateBuildResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift CreateBuildResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift CreateBuild response element from \a xml.
  */
 void CreateBuildResponsePrivate::parseCreateBuildResponse(QXmlStreamReader &xml)
 {

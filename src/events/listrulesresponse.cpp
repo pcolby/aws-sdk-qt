@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::ListRulesResponse
- *
  * \brief The ListRulesResponse class provides an interace for CloudWatchEvents ListRules responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new ListRulesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRulesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRulesResponse::ListRulesResponse(
         const ListRulesRequest &request,
@@ -78,6 +73,9 @@ ListRulesResponse::ListRulesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRulesRequest * ListRulesResponse::request() const
 {
     Q_D(const ListRulesResponse);
@@ -85,9 +83,8 @@ const ListRulesRequest * ListRulesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents ListRules response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents ListRules \a response.
  */
 void ListRulesResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void ListRulesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::ListRulesResponsePrivate
+ * \brief The ListRulesResponsePrivate class provides private implementation for ListRulesResponse.
  * \internal
  *
- * \class ListRulesResponsePrivate
- *
- * \brief Private implementation for ListRulesResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRulesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRulesResponse instance.
+ * Constructs a ListRulesResponsePrivate object with public implementation \a q.
  */
 ListRulesResponsePrivate::ListRulesResponsePrivate(
     ListRulesResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ ListRulesResponsePrivate::ListRulesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents ListRulesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents ListRules response element from \a xml.
  */
 void ListRulesResponsePrivate::parseListRulesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ModifyCacheSubnetGroupResponse
- *
  * \brief The ModifyCacheSubnetGroupResponse class provides an interace for ElastiCache ModifyCacheSubnetGroup responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new ModifyCacheSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyCacheSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyCacheSubnetGroupResponse::ModifyCacheSubnetGroupResponse(
         const ModifyCacheSubnetGroupRequest &request,
@@ -69,6 +64,9 @@ ModifyCacheSubnetGroupResponse::ModifyCacheSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyCacheSubnetGroupRequest * ModifyCacheSubnetGroupResponse::request() const
 {
     Q_D(const ModifyCacheSubnetGroupResponse);
@@ -76,9 +74,8 @@ const ModifyCacheSubnetGroupRequest * ModifyCacheSubnetGroupResponse::request() 
 }
 
 /*!
- * @brief  Parse a ElastiCache ModifyCacheSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache ModifyCacheSubnetGroup \a response.
  */
 void ModifyCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ModifyCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::ModifyCacheSubnetGroupResponsePrivate
+ * \brief The ModifyCacheSubnetGroupResponsePrivate class provides private implementation for ModifyCacheSubnetGroupResponse.
  * \internal
  *
- * \class ModifyCacheSubnetGroupResponsePrivate
- *
- * \brief Private implementation for ModifyCacheSubnetGroupResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyCacheSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyCacheSubnetGroupResponse instance.
+ * Constructs a ModifyCacheSubnetGroupResponsePrivate object with public implementation \a q.
  */
 ModifyCacheSubnetGroupResponsePrivate::ModifyCacheSubnetGroupResponsePrivate(
     ModifyCacheSubnetGroupResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ ModifyCacheSubnetGroupResponsePrivate::ModifyCacheSubnetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache ModifyCacheSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache ModifyCacheSubnetGroup response element from \a xml.
  */
 void ModifyCacheSubnetGroupResponsePrivate::parseModifyCacheSubnetGroupResponse(QXmlStreamReader &xml)
 {

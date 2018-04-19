@@ -29,10 +29,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::BatchDetectEntitiesResponse
- *
  * \brief The BatchDetectEntitiesResponse class provides an interace for Comprehend BatchDetectEntities responses.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -42,11 +41,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new BatchDetectEntitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchDetectEntitiesResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchDetectEntitiesResponse::BatchDetectEntitiesResponse(
         const BatchDetectEntitiesRequest &request,
@@ -58,6 +53,9 @@ BatchDetectEntitiesResponse::BatchDetectEntitiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchDetectEntitiesRequest * BatchDetectEntitiesResponse::request() const
 {
     Q_D(const BatchDetectEntitiesResponse);
@@ -65,9 +63,8 @@ const BatchDetectEntitiesRequest * BatchDetectEntitiesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Comprehend BatchDetectEntities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Comprehend BatchDetectEntities \a response.
  */
 void BatchDetectEntitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void BatchDetectEntitiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Comprehend::BatchDetectEntitiesResponsePrivate
+ * \brief The BatchDetectEntitiesResponsePrivate class provides private implementation for BatchDetectEntitiesResponse.
  * \internal
  *
- * \class BatchDetectEntitiesResponsePrivate
- *
- * \brief Private implementation for BatchDetectEntitiesResponse.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDetectEntitiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchDetectEntitiesResponse instance.
+ * Constructs a BatchDetectEntitiesResponsePrivate object with public implementation \a q.
  */
 BatchDetectEntitiesResponsePrivate::BatchDetectEntitiesResponsePrivate(
     BatchDetectEntitiesResponse * const q) : ComprehendResponsePrivate(q)
@@ -98,9 +91,7 @@ BatchDetectEntitiesResponsePrivate::BatchDetectEntitiesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Comprehend BatchDetectEntitiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Comprehend BatchDetectEntities response element from \a xml.
  */
 void BatchDetectEntitiesResponsePrivate::parseBatchDetectEntitiesResponse(QXmlStreamReader &xml)
 {

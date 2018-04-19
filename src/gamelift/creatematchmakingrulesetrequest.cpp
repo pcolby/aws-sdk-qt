@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * CreateMatchmakingRuleSetRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateMatchmakingRuleSetRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a CreateMatchmakingRuleSetRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 CreateMatchmakingRuleSetRequestPrivate::CreateMatchmakingRuleSetRequestPrivate(
     const GameLiftRequest::Action action, CreateMatchmakingRuleSetRequest * const q)

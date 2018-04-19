@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeAssociationResponse
- *
  * \brief The DescribeAssociationResponse class provides an interace for SSM DescribeAssociation responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeAssociationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAssociationResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAssociationResponse::DescribeAssociationResponse(
         const DescribeAssociationRequest &request,
@@ -79,6 +74,9 @@ DescribeAssociationResponse::DescribeAssociationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAssociationRequest * DescribeAssociationResponse::request() const
 {
     Q_D(const DescribeAssociationResponse);
@@ -86,9 +84,8 @@ const DescribeAssociationRequest * DescribeAssociationResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM DescribeAssociation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeAssociation \a response.
  */
 void DescribeAssociationResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeAssociationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeAssociationResponsePrivate
+ * \brief The DescribeAssociationResponsePrivate class provides private implementation for DescribeAssociationResponse.
  * \internal
  *
- * \class DescribeAssociationResponsePrivate
- *
- * \brief Private implementation for DescribeAssociationResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAssociationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAssociationResponse instance.
+ * Constructs a DescribeAssociationResponsePrivate object with public implementation \a q.
  */
 DescribeAssociationResponsePrivate::DescribeAssociationResponsePrivate(
     DescribeAssociationResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeAssociationResponsePrivate::DescribeAssociationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DescribeAssociationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeAssociation response element from \a xml.
  */
 void DescribeAssociationResponsePrivate::parseDescribeAssociationResponse(QXmlStreamReader &xml)
 {

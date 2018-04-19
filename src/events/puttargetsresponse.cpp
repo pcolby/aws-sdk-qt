@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::PutTargetsResponse
- *
  * \brief The PutTargetsResponse class provides an interace for CloudWatchEvents PutTargets responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new PutTargetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutTargetsResponse object for \a reply to \a request, with parent \a parent.
  */
 PutTargetsResponse::PutTargetsResponse(
         const PutTargetsRequest &request,
@@ -78,6 +73,9 @@ PutTargetsResponse::PutTargetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutTargetsRequest * PutTargetsResponse::request() const
 {
     Q_D(const PutTargetsResponse);
@@ -85,9 +83,8 @@ const PutTargetsRequest * PutTargetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents PutTargets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents PutTargets \a response.
  */
 void PutTargetsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void PutTargetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::PutTargetsResponsePrivate
+ * \brief The PutTargetsResponsePrivate class provides private implementation for PutTargetsResponse.
  * \internal
  *
- * \class PutTargetsResponsePrivate
- *
- * \brief Private implementation for PutTargetsResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutTargetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutTargetsResponse instance.
+ * Constructs a PutTargetsResponsePrivate object with public implementation \a q.
  */
 PutTargetsResponsePrivate::PutTargetsResponsePrivate(
     PutTargetsResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ PutTargetsResponsePrivate::PutTargetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents PutTargetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents PutTargets response element from \a xml.
  */
 void PutTargetsResponsePrivate::parsePutTargetsResponse(QXmlStreamReader &xml)
 {

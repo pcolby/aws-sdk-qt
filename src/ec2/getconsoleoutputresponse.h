@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetConsoleOutputResponse : public EC2Response {
 public:
     GetConsoleOutputResponse(const GetConsoleOutputRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetConsoleOutputRequest * request() const;
+    virtual const GetConsoleOutputRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetConsoleOutputResponse)

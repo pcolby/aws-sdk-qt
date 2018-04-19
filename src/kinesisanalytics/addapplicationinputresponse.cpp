@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationInputResponse
- *
  * \brief The AddApplicationInputResponse class provides an interace for KinesisAnalytics AddApplicationInput responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::addApplicationInput
  */
 
 /*!
- * @brief  Constructs a new AddApplicationInputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddApplicationInputResponse object for \a reply to \a request, with parent \a parent.
  */
 AddApplicationInputResponse::AddApplicationInputResponse(
         const AddApplicationInputRequest &request,
@@ -55,6 +50,9 @@ AddApplicationInputResponse::AddApplicationInputResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddApplicationInputRequest * AddApplicationInputResponse::request() const
 {
     Q_D(const AddApplicationInputResponse);
@@ -62,9 +60,8 @@ const AddApplicationInputRequest * AddApplicationInputResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics AddApplicationInput response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics AddApplicationInput \a response.
  */
 void AddApplicationInputResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void AddApplicationInputResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::AddApplicationInputResponsePrivate
+ * \brief The AddApplicationInputResponsePrivate class provides private implementation for AddApplicationInputResponse.
  * \internal
  *
- * \class AddApplicationInputResponsePrivate
- *
- * \brief Private implementation for AddApplicationInputResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddApplicationInputResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddApplicationInputResponse instance.
+ * Constructs a AddApplicationInputResponsePrivate object with public implementation \a q.
  */
 AddApplicationInputResponsePrivate::AddApplicationInputResponsePrivate(
     AddApplicationInputResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ AddApplicationInputResponsePrivate::AddApplicationInputResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics AddApplicationInputResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics AddApplicationInput response element from \a xml.
  */
 void AddApplicationInputResponsePrivate::parseAddApplicationInputResponse(QXmlStreamReader &xml)
 {

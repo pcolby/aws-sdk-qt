@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateRuleGroupResponse : public WAFResponse {
 public:
     CreateRuleGroupResponse(const CreateRuleGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateRuleGroupRequest * request() const;
+    virtual const CreateRuleGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateRuleGroupResponse)

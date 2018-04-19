@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * DescribeOrganizationRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeOrganizationRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a DescribeOrganizationRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 DescribeOrganizationRequestPrivate::DescribeOrganizationRequestPrivate(
     const WorkMailRequest::Action action, DescribeOrganizationRequest * const q)

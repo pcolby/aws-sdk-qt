@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::GetContentModerationResponse
- *
  * \brief The GetContentModerationResponse class provides an interace for Rekognition GetContentModeration responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new GetContentModerationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetContentModerationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetContentModerationResponse::GetContentModerationResponse(
         const GetContentModerationRequest &request,
@@ -56,6 +51,9 @@ GetContentModerationResponse::GetContentModerationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetContentModerationRequest * GetContentModerationResponse::request() const
 {
     Q_D(const GetContentModerationResponse);
@@ -63,9 +61,8 @@ const GetContentModerationRequest * GetContentModerationResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Rekognition GetContentModeration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition GetContentModeration \a response.
  */
 void GetContentModerationResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetContentModerationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::GetContentModerationResponsePrivate
+ * \brief The GetContentModerationResponsePrivate class provides private implementation for GetContentModerationResponse.
  * \internal
  *
- * \class GetContentModerationResponsePrivate
- *
- * \brief Private implementation for GetContentModerationResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetContentModerationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetContentModerationResponse instance.
+ * Constructs a GetContentModerationResponsePrivate object with public implementation \a q.
  */
 GetContentModerationResponsePrivate::GetContentModerationResponsePrivate(
     GetContentModerationResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ GetContentModerationResponsePrivate::GetContentModerationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition GetContentModerationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition GetContentModeration response element from \a xml.
  */
 void GetContentModerationResponsePrivate::parseGetContentModerationResponse(QXmlStreamReader &xml)
 {

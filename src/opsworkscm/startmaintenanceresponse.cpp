@@ -29,10 +29,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::StartMaintenanceResponse
- *
  * \brief The StartMaintenanceResponse class provides an interace for OpsWorksCM StartMaintenance responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -99,11 +98,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new StartMaintenanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartMaintenanceResponse object for \a reply to \a request, with parent \a parent.
  */
 StartMaintenanceResponse::StartMaintenanceResponse(
         const StartMaintenanceRequest &request,
@@ -115,6 +110,9 @@ StartMaintenanceResponse::StartMaintenanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartMaintenanceRequest * StartMaintenanceResponse::request() const
 {
     Q_D(const StartMaintenanceResponse);
@@ -122,9 +120,8 @@ const StartMaintenanceRequest * StartMaintenanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorksCM StartMaintenance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorksCM StartMaintenance \a response.
  */
 void StartMaintenanceResponse::parseSuccess(QIODevice &response)
 {
@@ -134,19 +131,15 @@ void StartMaintenanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorksCM::StartMaintenanceResponsePrivate
+ * \brief The StartMaintenanceResponsePrivate class provides private implementation for StartMaintenanceResponse.
  * \internal
  *
- * \class StartMaintenanceResponsePrivate
- *
- * \brief Private implementation for StartMaintenanceResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartMaintenanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartMaintenanceResponse instance.
+ * Constructs a StartMaintenanceResponsePrivate object with public implementation \a q.
  */
 StartMaintenanceResponsePrivate::StartMaintenanceResponsePrivate(
     StartMaintenanceResponse * const q) : OpsWorksCMResponsePrivate(q)
@@ -155,9 +148,7 @@ StartMaintenanceResponsePrivate::StartMaintenanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorksCM StartMaintenanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorksCM StartMaintenance response element from \a xml.
  */
 void StartMaintenanceResponsePrivate::parseStartMaintenanceResponse(QXmlStreamReader &xml)
 {

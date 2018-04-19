@@ -29,10 +29,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::BatchDetectSentimentResponse
- *
  * \brief The BatchDetectSentimentResponse class provides an interace for Comprehend BatchDetectSentiment responses.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -42,11 +41,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new BatchDetectSentimentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchDetectSentimentResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchDetectSentimentResponse::BatchDetectSentimentResponse(
         const BatchDetectSentimentRequest &request,
@@ -58,6 +53,9 @@ BatchDetectSentimentResponse::BatchDetectSentimentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchDetectSentimentRequest * BatchDetectSentimentResponse::request() const
 {
     Q_D(const BatchDetectSentimentResponse);
@@ -65,9 +63,8 @@ const BatchDetectSentimentRequest * BatchDetectSentimentResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Comprehend BatchDetectSentiment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Comprehend BatchDetectSentiment \a response.
  */
 void BatchDetectSentimentResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void BatchDetectSentimentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Comprehend::BatchDetectSentimentResponsePrivate
+ * \brief The BatchDetectSentimentResponsePrivate class provides private implementation for BatchDetectSentimentResponse.
  * \internal
  *
- * \class BatchDetectSentimentResponsePrivate
- *
- * \brief Private implementation for BatchDetectSentimentResponse.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchDetectSentimentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchDetectSentimentResponse instance.
+ * Constructs a BatchDetectSentimentResponsePrivate object with public implementation \a q.
  */
 BatchDetectSentimentResponsePrivate::BatchDetectSentimentResponsePrivate(
     BatchDetectSentimentResponse * const q) : ComprehendResponsePrivate(q)
@@ -98,9 +91,7 @@ BatchDetectSentimentResponsePrivate::BatchDetectSentimentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Comprehend BatchDetectSentimentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Comprehend BatchDetectSentiment response element from \a xml.
  */
 void BatchDetectSentimentResponsePrivate::parseBatchDetectSentimentResponse(QXmlStreamReader &xml)
 {

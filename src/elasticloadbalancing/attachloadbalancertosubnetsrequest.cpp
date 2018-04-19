@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * AttachLoadBalancerToSubnetsRequest::response(
  */
 
 /*!
- *
- * Constructs a AttachLoadBalancerToSubnetsRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a AttachLoadBalancerToSubnetsRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 AttachLoadBalancerToSubnetsRequestPrivate::AttachLoadBalancerToSubnetsRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, AttachLoadBalancerToSubnetsRequest * const q)

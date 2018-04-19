@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetLaunchTemplateDataRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetLaunchTemplateDataRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a GetLaunchTemplateDataRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 GetLaunchTemplateDataRequestPrivate::GetLaunchTemplateDataRequestPrivate(
     const EC2Request::Action action, GetLaunchTemplateDataRequest * const q)

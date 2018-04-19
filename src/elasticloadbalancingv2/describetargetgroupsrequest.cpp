@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTargetGroupsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeTargetGroupsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTargetGroupsRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 DescribeTargetGroupsRequestPrivate::DescribeTargetGroupsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeTargetGroupsRequest * const q)

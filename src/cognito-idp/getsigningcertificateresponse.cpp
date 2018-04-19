@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetSigningCertificateResponse
- *
  * \brief The GetSigningCertificateResponse class provides an interace for CognitoIdentityProvider GetSigningCertificate responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetSigningCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSigningCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSigningCertificateResponse::GetSigningCertificateResponse(
         const GetSigningCertificateRequest &request,
@@ -65,6 +60,9 @@ GetSigningCertificateResponse::GetSigningCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSigningCertificateRequest * GetSigningCertificateResponse::request() const
 {
     Q_D(const GetSigningCertificateResponse);
@@ -72,9 +70,8 @@ const GetSigningCertificateRequest * GetSigningCertificateResponse::request() co
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider GetSigningCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider GetSigningCertificate \a response.
  */
 void GetSigningCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void GetSigningCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::GetSigningCertificateResponsePrivate
+ * \brief The GetSigningCertificateResponsePrivate class provides private implementation for GetSigningCertificateResponse.
  * \internal
  *
- * \class GetSigningCertificateResponsePrivate
- *
- * \brief Private implementation for GetSigningCertificateResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSigningCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSigningCertificateResponse instance.
+ * Constructs a GetSigningCertificateResponsePrivate object with public implementation \a q.
  */
 GetSigningCertificateResponsePrivate::GetSigningCertificateResponsePrivate(
     GetSigningCertificateResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ GetSigningCertificateResponsePrivate::GetSigningCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider GetSigningCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider GetSigningCertificate response element from \a xml.
  */
 void GetSigningCertificateResponsePrivate::parseGetSigningCertificateResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeEventsRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventsRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 DescribeEventsRequestPrivate::DescribeEventsRequestPrivate(
     const DAXRequest::Action action, DescribeEventsRequest * const q)

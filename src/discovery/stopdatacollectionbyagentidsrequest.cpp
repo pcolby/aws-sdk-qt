@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * StopDataCollectionByAgentIdsRequest::response
  */
 
 /*!
- *
- * Constructs a StopDataCollectionByAgentIdsRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a StopDataCollectionByAgentIdsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 StopDataCollectionByAgentIdsRequestPrivate::StopDataCollectionByAgentIdsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, StopDataCollectionByAgentIdsRequest * const q)

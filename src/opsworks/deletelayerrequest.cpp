@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLayerRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteLayerRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLayerRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DeleteLayerRequestPrivate::DeleteLayerRequestPrivate(
     const OpsWorksRequest::Action action, DeleteLayerRequest * const q)

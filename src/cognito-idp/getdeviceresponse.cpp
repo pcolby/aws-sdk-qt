@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetDeviceResponse
- *
  * \brief The GetDeviceResponse class provides an interace for CognitoIdentityProvider GetDevice responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetDeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDeviceResponse::GetDeviceResponse(
         const GetDeviceRequest &request,
@@ -65,6 +60,9 @@ GetDeviceResponse::GetDeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDeviceRequest * GetDeviceResponse::request() const
 {
     Q_D(const GetDeviceResponse);
@@ -72,9 +70,8 @@ const GetDeviceRequest * GetDeviceResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider GetDevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider GetDevice \a response.
  */
 void GetDeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void GetDeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::GetDeviceResponsePrivate
+ * \brief The GetDeviceResponsePrivate class provides private implementation for GetDeviceResponse.
  * \internal
  *
- * \class GetDeviceResponsePrivate
- *
- * \brief Private implementation for GetDeviceResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDeviceResponse instance.
+ * Constructs a GetDeviceResponsePrivate object with public implementation \a q.
  */
 GetDeviceResponsePrivate::GetDeviceResponsePrivate(
     GetDeviceResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ GetDeviceResponsePrivate::GetDeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider GetDeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider GetDevice response element from \a xml.
  */
 void GetDeviceResponsePrivate::parseGetDeviceResponse(QXmlStreamReader &xml)
 {

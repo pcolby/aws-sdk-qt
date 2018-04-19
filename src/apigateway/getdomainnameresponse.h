@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDomainNameResponse : public APIGatewayResponse {
 public:
     GetDomainNameResponse(const GetDomainNameRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDomainNameRequest * request() const;
+    virtual const GetDomainNameRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDomainNameResponse)

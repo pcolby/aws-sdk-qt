@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDocumentRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteDocumentRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDocumentRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DeleteDocumentRequestPrivate::DeleteDocumentRequestPrivate(
     const WorkDocsRequest::Action action, DeleteDocumentRequest * const q)

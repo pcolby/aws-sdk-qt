@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * GetOnPremisesInstanceRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetOnPremisesInstanceRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a GetOnPremisesInstanceRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 GetOnPremisesInstanceRequestPrivate::GetOnPremisesInstanceRequestPrivate(
     const CodeDeployRequest::Action action, GetOnPremisesInstanceRequest * const q)

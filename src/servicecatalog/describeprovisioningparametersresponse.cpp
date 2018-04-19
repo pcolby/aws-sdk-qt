@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeProvisioningParametersResponse
- *
  * \brief The DescribeProvisioningParametersResponse class provides an interace for ServiceCatalog DescribeProvisioningParameters responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeProvisioningParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeProvisioningParametersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeProvisioningParametersResponse::DescribeProvisioningParametersResponse(
         const DescribeProvisioningParametersRequest &request,
@@ -61,6 +56,9 @@ DescribeProvisioningParametersResponse::DescribeProvisioningParametersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeProvisioningParametersRequest * DescribeProvisioningParametersResponse::request() const
 {
     Q_D(const DescribeProvisioningParametersResponse);
@@ -68,9 +66,8 @@ const DescribeProvisioningParametersRequest * DescribeProvisioningParametersResp
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DescribeProvisioningParameters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DescribeProvisioningParameters \a response.
  */
 void DescribeProvisioningParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeProvisioningParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DescribeProvisioningParametersResponsePrivate
+ * \brief The DescribeProvisioningParametersResponsePrivate class provides private implementation for DescribeProvisioningParametersResponse.
  * \internal
  *
- * \class DescribeProvisioningParametersResponsePrivate
- *
- * \brief Private implementation for DescribeProvisioningParametersResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProvisioningParametersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeProvisioningParametersResponse instance.
+ * Constructs a DescribeProvisioningParametersResponsePrivate object with public implementation \a q.
  */
 DescribeProvisioningParametersResponsePrivate::DescribeProvisioningParametersResponsePrivate(
     DescribeProvisioningParametersResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeProvisioningParametersResponsePrivate::DescribeProvisioningParametersRes
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DescribeProvisioningParametersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DescribeProvisioningParameters response element from \a xml.
  */
 void DescribeProvisioningParametersResponsePrivate::parseDescribeProvisioningParametersResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::StartStreamEncryptionResponse
- *
  * \brief The StartStreamEncryptionResponse class provides an interace for Kinesis StartStreamEncryption responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new StartStreamEncryptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartStreamEncryptionResponse object for \a reply to \a request, with parent \a parent.
  */
 StartStreamEncryptionResponse::StartStreamEncryptionResponse(
         const StartStreamEncryptionRequest &request,
@@ -58,6 +53,9 @@ StartStreamEncryptionResponse::StartStreamEncryptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartStreamEncryptionRequest * StartStreamEncryptionResponse::request() const
 {
     Q_D(const StartStreamEncryptionResponse);
@@ -65,9 +63,8 @@ const StartStreamEncryptionRequest * StartStreamEncryptionResponse::request() co
 }
 
 /*!
- * @brief  Parse a Kinesis StartStreamEncryption response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis StartStreamEncryption \a response.
  */
 void StartStreamEncryptionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StartStreamEncryptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::StartStreamEncryptionResponsePrivate
+ * \brief The StartStreamEncryptionResponsePrivate class provides private implementation for StartStreamEncryptionResponse.
  * \internal
  *
- * \class StartStreamEncryptionResponsePrivate
- *
- * \brief Private implementation for StartStreamEncryptionResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartStreamEncryptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartStreamEncryptionResponse instance.
+ * Constructs a StartStreamEncryptionResponsePrivate object with public implementation \a q.
  */
 StartStreamEncryptionResponsePrivate::StartStreamEncryptionResponsePrivate(
     StartStreamEncryptionResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ StartStreamEncryptionResponsePrivate::StartStreamEncryptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis StartStreamEncryptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis StartStreamEncryption response element from \a xml.
  */
 void StartStreamEncryptionResponsePrivate::parseStartStreamEncryptionResponse(QXmlStreamReader &xml)
 {

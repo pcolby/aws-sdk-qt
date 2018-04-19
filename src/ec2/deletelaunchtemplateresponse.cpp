@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteLaunchTemplateResponse
- *
  * \brief The DeleteLaunchTemplateResponse class provides an interace for EC2 DeleteLaunchTemplate responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteLaunchTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLaunchTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLaunchTemplateResponse::DeleteLaunchTemplateResponse(
         const DeleteLaunchTemplateRequest &request,
@@ -59,6 +54,9 @@ DeleteLaunchTemplateResponse::DeleteLaunchTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLaunchTemplateRequest * DeleteLaunchTemplateResponse::request() const
 {
     Q_D(const DeleteLaunchTemplateResponse);
@@ -66,9 +64,8 @@ const DeleteLaunchTemplateRequest * DeleteLaunchTemplateResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 DeleteLaunchTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteLaunchTemplate \a response.
  */
 void DeleteLaunchTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteLaunchTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteLaunchTemplateResponsePrivate
+ * \brief The DeleteLaunchTemplateResponsePrivate class provides private implementation for DeleteLaunchTemplateResponse.
  * \internal
  *
- * \class DeleteLaunchTemplateResponsePrivate
- *
- * \brief Private implementation for DeleteLaunchTemplateResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLaunchTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLaunchTemplateResponse instance.
+ * Constructs a DeleteLaunchTemplateResponsePrivate object with public implementation \a q.
  */
 DeleteLaunchTemplateResponsePrivate::DeleteLaunchTemplateResponsePrivate(
     DeleteLaunchTemplateResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteLaunchTemplateResponsePrivate::DeleteLaunchTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteLaunchTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteLaunchTemplate response element from \a xml.
  */
 void DeleteLaunchTemplateResponsePrivate::parseDeleteLaunchTemplateResponse(QXmlStreamReader &xml)
 {

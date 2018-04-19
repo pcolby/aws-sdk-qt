@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateResolverResponse : public AppSyncResponse {
 public:
     CreateResolverResponse(const CreateResolverRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateResolverRequest * request() const;
+    virtual const CreateResolverRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateResolverResponse)

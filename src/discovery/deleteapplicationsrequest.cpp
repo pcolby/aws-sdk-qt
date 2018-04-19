@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteApplicationsRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApplicationsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 DeleteApplicationsRequestPrivate::DeleteApplicationsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DeleteApplicationsRequest * const q)

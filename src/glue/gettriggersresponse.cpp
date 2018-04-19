@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetTriggersResponse
- *
  * \brief The GetTriggersResponse class provides an interace for Glue GetTriggers responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetTriggersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTriggersResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTriggersResponse::GetTriggersResponse(
         const GetTriggersRequest &request,
@@ -58,6 +53,9 @@ GetTriggersResponse::GetTriggersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTriggersRequest * GetTriggersResponse::request() const
 {
     Q_D(const GetTriggersResponse);
@@ -65,9 +63,8 @@ const GetTriggersRequest * GetTriggersResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetTriggers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetTriggers \a response.
  */
 void GetTriggersResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetTriggersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetTriggersResponsePrivate
+ * \brief The GetTriggersResponsePrivate class provides private implementation for GetTriggersResponse.
  * \internal
  *
- * \class GetTriggersResponsePrivate
- *
- * \brief Private implementation for GetTriggersResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTriggersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTriggersResponse instance.
+ * Constructs a GetTriggersResponsePrivate object with public implementation \a q.
  */
 GetTriggersResponsePrivate::GetTriggersResponsePrivate(
     GetTriggersResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetTriggersResponsePrivate::GetTriggersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetTriggersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetTriggers response element from \a xml.
  */
 void GetTriggersResponsePrivate::parseGetTriggersResponse(QXmlStreamReader &xml)
 {

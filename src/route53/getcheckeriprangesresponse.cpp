@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetCheckerIpRangesResponse
- *
  * \brief The GetCheckerIpRangesResponse class provides an interace for Route53 GetCheckerIpRanges responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getCheckerIpRanges
  */
 
 /*!
- * @brief  Constructs a new GetCheckerIpRangesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCheckerIpRangesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCheckerIpRangesResponse::GetCheckerIpRangesResponse(
         const GetCheckerIpRangesRequest &request,
@@ -55,6 +50,9 @@ GetCheckerIpRangesResponse::GetCheckerIpRangesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCheckerIpRangesRequest * GetCheckerIpRangesResponse::request() const
 {
     Q_D(const GetCheckerIpRangesResponse);
@@ -62,9 +60,8 @@ const GetCheckerIpRangesRequest * GetCheckerIpRangesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 GetCheckerIpRanges response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetCheckerIpRanges \a response.
  */
 void GetCheckerIpRangesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetCheckerIpRangesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetCheckerIpRangesResponsePrivate
+ * \brief The GetCheckerIpRangesResponsePrivate class provides private implementation for GetCheckerIpRangesResponse.
  * \internal
  *
- * \class GetCheckerIpRangesResponsePrivate
- *
- * \brief Private implementation for GetCheckerIpRangesResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCheckerIpRangesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCheckerIpRangesResponse instance.
+ * Constructs a GetCheckerIpRangesResponsePrivate object with public implementation \a q.
  */
 GetCheckerIpRangesResponsePrivate::GetCheckerIpRangesResponsePrivate(
     GetCheckerIpRangesResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetCheckerIpRangesResponsePrivate::GetCheckerIpRangesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 GetCheckerIpRangesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetCheckerIpRanges response element from \a xml.
  */
 void GetCheckerIpRangesResponsePrivate::parseGetCheckerIpRangesResponse(QXmlStreamReader &xml)
 {

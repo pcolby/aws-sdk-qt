@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListVersionsByFunctionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListVersionsByFunctionRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a ListVersionsByFunctionRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 ListVersionsByFunctionRequestPrivate::ListVersionsByFunctionRequestPrivate(
     const LambdaRequest::Action action, ListVersionsByFunctionRequest * const q)

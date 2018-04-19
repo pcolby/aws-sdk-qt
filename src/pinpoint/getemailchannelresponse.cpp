@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetEmailChannelResponse
- *
  * \brief The GetEmailChannelResponse class provides an interace for Pinpoint GetEmailChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getEmailChannel
  */
 
 /*!
- * @brief  Constructs a new GetEmailChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetEmailChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 GetEmailChannelResponse::GetEmailChannelResponse(
         const GetEmailChannelRequest &request,
@@ -55,6 +50,9 @@ GetEmailChannelResponse::GetEmailChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetEmailChannelRequest * GetEmailChannelResponse::request() const
 {
     Q_D(const GetEmailChannelResponse);
@@ -62,9 +60,8 @@ const GetEmailChannelRequest * GetEmailChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetEmailChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetEmailChannel \a response.
  */
 void GetEmailChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetEmailChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetEmailChannelResponsePrivate
+ * \brief The GetEmailChannelResponsePrivate class provides private implementation for GetEmailChannelResponse.
  * \internal
  *
- * \class GetEmailChannelResponsePrivate
- *
- * \brief Private implementation for GetEmailChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEmailChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetEmailChannelResponse instance.
+ * Constructs a GetEmailChannelResponsePrivate object with public implementation \a q.
  */
 GetEmailChannelResponsePrivate::GetEmailChannelResponsePrivate(
     GetEmailChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetEmailChannelResponsePrivate::GetEmailChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetEmailChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetEmailChannel response element from \a xml.
  */
 void GetEmailChannelResponsePrivate::parseGetEmailChannelResponse(QXmlStreamReader &xml)
 {

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * UpdateProvisioningArtifactRequest::response(Q
  */
 
 /*!
- *
- * Constructs a UpdateProvisioningArtifactRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a UpdateProvisioningArtifactRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 UpdateProvisioningArtifactRequestPrivate::UpdateProvisioningArtifactRequestPrivate(
     const ServiceCatalogRequest::Action action, UpdateProvisioningArtifactRequest * const q)

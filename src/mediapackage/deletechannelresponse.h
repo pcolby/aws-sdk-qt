@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteChannelResponse : public MediaPackageResponse {
 public:
     DeleteChannelResponse(const DeleteChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteChannelRequest * request() const;
+    virtual const DeleteChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteChannelResponse)

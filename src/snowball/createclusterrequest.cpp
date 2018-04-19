@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateClusterRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a CreateClusterRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const SnowballRequest::Action action, CreateClusterRequest * const q)

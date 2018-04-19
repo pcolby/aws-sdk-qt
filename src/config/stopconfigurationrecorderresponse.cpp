@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::StopConfigurationRecorderResponse
- *
  * \brief The StopConfigurationRecorderResponse class provides an interace for ConfigService StopConfigurationRecorder responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new StopConfigurationRecorderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopConfigurationRecorderResponse object for \a reply to \a request, with parent \a parent.
  */
 StopConfigurationRecorderResponse::StopConfigurationRecorderResponse(
         const StopConfigurationRecorderRequest &request,
@@ -78,6 +73,9 @@ StopConfigurationRecorderResponse::StopConfigurationRecorderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopConfigurationRecorderRequest * StopConfigurationRecorderResponse::request() const
 {
     Q_D(const StopConfigurationRecorderResponse);
@@ -85,9 +83,8 @@ const StopConfigurationRecorderRequest * StopConfigurationRecorderResponse::requ
 }
 
 /*!
- * @brief  Parse a ConfigService StopConfigurationRecorder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService StopConfigurationRecorder \a response.
  */
 void StopConfigurationRecorderResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void StopConfigurationRecorderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::StopConfigurationRecorderResponsePrivate
+ * \brief The StopConfigurationRecorderResponsePrivate class provides private implementation for StopConfigurationRecorderResponse.
  * \internal
  *
- * \class StopConfigurationRecorderResponsePrivate
- *
- * \brief Private implementation for StopConfigurationRecorderResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopConfigurationRecorderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopConfigurationRecorderResponse instance.
+ * Constructs a StopConfigurationRecorderResponsePrivate object with public implementation \a q.
  */
 StopConfigurationRecorderResponsePrivate::StopConfigurationRecorderResponsePrivate(
     StopConfigurationRecorderResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ StopConfigurationRecorderResponsePrivate::StopConfigurationRecorderResponsePriva
 }
 
 /*!
- * @brief  Parse an ConfigService StopConfigurationRecorderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService StopConfigurationRecorder response element from \a xml.
  */
 void StopConfigurationRecorderResponsePrivate::parseStopConfigurationRecorderResponse(QXmlStreamReader &xml)
 {

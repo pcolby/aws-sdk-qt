@@ -28,16 +28,13 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceResponse
- *
  * \brief The DatabaseMigrationServiceResponse class provides an interface for DatabaseMigrationService responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @brief  Constructs a new DatabaseMigrationServiceResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a DatabaseMigrationServiceResponse object with parent \a parent.
  */
 DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new DatabaseMigrationServiceResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(QObject * con
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DatabaseMigrationServiceResponse object.
- *
+ * \internal
+ * Constructs a DatabaseMigrationServiceResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DatabaseMigrationServiceResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(DatabaseMigrationServiceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(DatabaseMigra
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void DatabaseMigrationServiceResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void DatabaseMigrationServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceResponsePrivate
+ * \brief The DatabaseMigrationServiceResponsePrivate class provides private implementation for DatabaseMigrationServiceResponse.
+ * \internal
  *
- * @class  DatabaseMigrationServiceResponsePrivate
- *
- * @brief  Private implementation for DatabaseMigrationServiceResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DatabaseMigrationServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DatabaseMigrationServiceResponse instance.
+ * Constructs a DatabaseMigrationServiceResponsePrivate object with public implementation \a q.
  */
 DatabaseMigrationServiceResponsePrivate::DatabaseMigrationServiceResponsePrivate(
     DatabaseMigrationServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

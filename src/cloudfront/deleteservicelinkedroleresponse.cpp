@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::DeleteServiceLinkedRoleResponse
- *
  * \brief The DeleteServiceLinkedRoleResponse class provides an interace for CloudFront DeleteServiceLinkedRole responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new DeleteServiceLinkedRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteServiceLinkedRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteServiceLinkedRoleResponse::DeleteServiceLinkedRoleResponse(
         const DeleteServiceLinkedRoleRequest &request,
@@ -60,6 +55,9 @@ DeleteServiceLinkedRoleResponse::DeleteServiceLinkedRoleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteServiceLinkedRoleRequest * DeleteServiceLinkedRoleResponse::request() const
 {
     Q_D(const DeleteServiceLinkedRoleResponse);
@@ -67,9 +65,8 @@ const DeleteServiceLinkedRoleRequest * DeleteServiceLinkedRoleResponse::request(
 }
 
 /*!
- * @brief  Parse a CloudFront DeleteServiceLinkedRole response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront DeleteServiceLinkedRole \a response.
  */
 void DeleteServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteServiceLinkedRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::DeleteServiceLinkedRoleResponsePrivate
+ * \brief The DeleteServiceLinkedRoleResponsePrivate class provides private implementation for DeleteServiceLinkedRoleResponse.
  * \internal
  *
- * \class DeleteServiceLinkedRoleResponsePrivate
- *
- * \brief Private implementation for DeleteServiceLinkedRoleResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServiceLinkedRoleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteServiceLinkedRoleResponse instance.
+ * Constructs a DeleteServiceLinkedRoleResponsePrivate object with public implementation \a q.
  */
 DeleteServiceLinkedRoleResponsePrivate::DeleteServiceLinkedRoleResponsePrivate(
     DeleteServiceLinkedRoleResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteServiceLinkedRoleResponsePrivate::DeleteServiceLinkedRoleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront DeleteServiceLinkedRoleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront DeleteServiceLinkedRole response element from \a xml.
  */
 void DeleteServiceLinkedRoleResponsePrivate::parseDeleteServiceLinkedRoleResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateEndpointRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdateEndpointRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a UpdateEndpointRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 UpdateEndpointRequestPrivate::UpdateEndpointRequestPrivate(
     const PinpointRequest::Action action, UpdateEndpointRequest * const q)

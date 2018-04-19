@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetContactReachabilityStatusRequest::response
  */
 
 /*!
- *
- * Constructs a GetContactReachabilityStatusRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a GetContactReachabilityStatusRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 GetContactReachabilityStatusRequestPrivate::GetContactReachabilityStatusRequestPrivate(
     const Route53DomainsRequest::Action action, GetContactReachabilityStatusRequest * const q)

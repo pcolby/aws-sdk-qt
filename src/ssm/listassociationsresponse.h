@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAssociationsResponse : public SSMResponse {
 public:
     ListAssociationsResponse(const ListAssociationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAssociationsRequest * request() const;
+    virtual const ListAssociationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListAssociationsResponse)

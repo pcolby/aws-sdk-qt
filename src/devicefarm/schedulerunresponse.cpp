@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::ScheduleRunResponse
- *
  * \brief The ScheduleRunResponse class provides an interace for DeviceFarm ScheduleRun responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new ScheduleRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ScheduleRunResponse object for \a reply to \a request, with parent \a parent.
  */
 ScheduleRunResponse::ScheduleRunResponse(
         const ScheduleRunRequest &request,
@@ -57,6 +52,9 @@ ScheduleRunResponse::ScheduleRunResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ScheduleRunRequest * ScheduleRunResponse::request() const
 {
     Q_D(const ScheduleRunResponse);
@@ -64,9 +62,8 @@ const ScheduleRunRequest * ScheduleRunResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm ScheduleRun response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm ScheduleRun \a response.
  */
 void ScheduleRunResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ScheduleRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::ScheduleRunResponsePrivate
+ * \brief The ScheduleRunResponsePrivate class provides private implementation for ScheduleRunResponse.
  * \internal
  *
- * \class ScheduleRunResponsePrivate
- *
- * \brief Private implementation for ScheduleRunResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ScheduleRunResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ScheduleRunResponse instance.
+ * Constructs a ScheduleRunResponsePrivate object with public implementation \a q.
  */
 ScheduleRunResponsePrivate::ScheduleRunResponsePrivate(
     ScheduleRunResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ ScheduleRunResponsePrivate::ScheduleRunResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm ScheduleRunResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm ScheduleRun response element from \a xml.
  */
 void ScheduleRunResponsePrivate::parseScheduleRunResponse(QXmlStreamReader &xml)
 {

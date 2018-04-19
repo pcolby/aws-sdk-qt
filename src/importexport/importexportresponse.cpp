@@ -28,16 +28,13 @@ namespace ImportExport {
 
 /*!
  * \class QtAws::ImportExport::ImportExportResponse
- *
  * \brief The ImportExportResponse class provides an interface for ImportExport responses.
  *
- * \ingroup ImportExport
+ * \inmodule QtAwsImportExport
  */
 
 /*!
- * @brief  Constructs a new ImportExportResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ImportExportResponse object with parent \a parent.
  */
 ImportExportResponse::ImportExportResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ImportExportResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ImportExportResponse::ImportExportResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportExportResponse object.
- *
+ * \internal
+ * Constructs a ImportExportResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ImportExportResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ImportExportResponse::ImportExportResponse(ImportExportResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ImportExportResponse::ImportExportResponse(ImportExportResponsePrivate * const d
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ImportExportResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ImportExportResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ImportExport::ImportExportResponsePrivate
+ * \brief The ImportExportResponsePrivate class provides private implementation for ImportExportResponse.
+ * \internal
  *
- * @class  ImportExportResponsePrivate
- *
- * @brief  Private implementation for ImportExportResponse.
+ * \inmodule QtAwsImportExport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportExportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportExportResponse instance.
+ * Constructs a ImportExportResponsePrivate object with public implementation \a q.
  */
 ImportExportResponsePrivate::ImportExportResponsePrivate(
     ImportExportResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

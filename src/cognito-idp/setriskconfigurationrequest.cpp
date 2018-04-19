@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * SetRiskConfigurationRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a SetRiskConfigurationRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a SetRiskConfigurationRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 SetRiskConfigurationRequestPrivate::SetRiskConfigurationRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, SetRiskConfigurationRequest * const q)

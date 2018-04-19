@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * UnassignPrivateIpAddressesRequest::response(Q
  */
 
 /*!
- *
- * Constructs a UnassignPrivateIpAddressesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a UnassignPrivateIpAddressesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 UnassignPrivateIpAddressesRequestPrivate::UnassignPrivateIpAddressesRequestPrivate(
     const EC2Request::Action action, UnassignPrivateIpAddressesRequest * const q)

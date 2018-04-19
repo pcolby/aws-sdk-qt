@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DeleteConditionalForwarderResponse
- *
  * \brief The DeleteConditionalForwarderResponse class provides an interace for DirectoryService DeleteConditionalForwarder responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DeleteConditionalForwarderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteConditionalForwarderResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteConditionalForwarderResponse::DeleteConditionalForwarderResponse(
         const DeleteConditionalForwarderRequest &request,
@@ -69,6 +64,9 @@ DeleteConditionalForwarderResponse::DeleteConditionalForwarderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteConditionalForwarderRequest * DeleteConditionalForwarderResponse::request() const
 {
     Q_D(const DeleteConditionalForwarderResponse);
@@ -76,9 +74,8 @@ const DeleteConditionalForwarderRequest * DeleteConditionalForwarderResponse::re
 }
 
 /*!
- * @brief  Parse a DirectoryService DeleteConditionalForwarder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DeleteConditionalForwarder \a response.
  */
 void DeleteConditionalForwarderResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeleteConditionalForwarderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DeleteConditionalForwarderResponsePrivate
+ * \brief The DeleteConditionalForwarderResponsePrivate class provides private implementation for DeleteConditionalForwarderResponse.
  * \internal
  *
- * \class DeleteConditionalForwarderResponsePrivate
- *
- * \brief Private implementation for DeleteConditionalForwarderResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConditionalForwarderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteConditionalForwarderResponse instance.
+ * Constructs a DeleteConditionalForwarderResponsePrivate object with public implementation \a q.
  */
 DeleteConditionalForwarderResponsePrivate::DeleteConditionalForwarderResponsePrivate(
     DeleteConditionalForwarderResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DeleteConditionalForwarderResponsePrivate::DeleteConditionalForwarderResponsePri
 }
 
 /*!
- * @brief  Parse an DirectoryService DeleteConditionalForwarderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DeleteConditionalForwarder response element from \a xml.
  */
 void DeleteConditionalForwarderResponsePrivate::parseDeleteConditionalForwarderResponse(QXmlStreamReader &xml)
 {

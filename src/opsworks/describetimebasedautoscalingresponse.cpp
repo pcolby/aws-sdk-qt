@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeTimeBasedAutoScalingResponse
- *
  * \brief The DescribeTimeBasedAutoScalingResponse class provides an interace for OpsWorks DescribeTimeBasedAutoScaling responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeTimeBasedAutoScalingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTimeBasedAutoScalingResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTimeBasedAutoScalingResponse::DescribeTimeBasedAutoScalingResponse(
         const DescribeTimeBasedAutoScalingRequest &request,
@@ -161,6 +156,9 @@ DescribeTimeBasedAutoScalingResponse::DescribeTimeBasedAutoScalingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTimeBasedAutoScalingRequest * DescribeTimeBasedAutoScalingResponse::request() const
 {
     Q_D(const DescribeTimeBasedAutoScalingResponse);
@@ -168,9 +166,8 @@ const DescribeTimeBasedAutoScalingRequest * DescribeTimeBasedAutoScalingResponse
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeTimeBasedAutoScaling response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeTimeBasedAutoScaling \a response.
  */
 void DescribeTimeBasedAutoScalingResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeTimeBasedAutoScalingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeTimeBasedAutoScalingResponsePrivate
+ * \brief The DescribeTimeBasedAutoScalingResponsePrivate class provides private implementation for DescribeTimeBasedAutoScalingResponse.
  * \internal
  *
- * \class DescribeTimeBasedAutoScalingResponsePrivate
- *
- * \brief Private implementation for DescribeTimeBasedAutoScalingResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTimeBasedAutoScalingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTimeBasedAutoScalingResponse instance.
+ * Constructs a DescribeTimeBasedAutoScalingResponsePrivate object with public implementation \a q.
  */
 DescribeTimeBasedAutoScalingResponsePrivate::DescribeTimeBasedAutoScalingResponsePrivate(
     DescribeTimeBasedAutoScalingResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeTimeBasedAutoScalingResponsePrivate::DescribeTimeBasedAutoScalingRespons
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeTimeBasedAutoScalingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeTimeBasedAutoScaling response element from \a xml.
  */
 void DescribeTimeBasedAutoScalingResponsePrivate::parseDescribeTimeBasedAutoScalingResponse(QXmlStreamReader &xml)
 {

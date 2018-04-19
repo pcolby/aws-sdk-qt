@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * CreateVirtualMFADeviceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateVirtualMFADeviceRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a CreateVirtualMFADeviceRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 CreateVirtualMFADeviceRequestPrivate::CreateVirtualMFADeviceRequestPrivate(
     const IAMRequest::Action action, CreateVirtualMFADeviceRequest * const q)

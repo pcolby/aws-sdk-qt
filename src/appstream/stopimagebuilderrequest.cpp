@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StopImageBuilderRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a StopImageBuilderRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a StopImageBuilderRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 StopImageBuilderRequestPrivate::StopImageBuilderRequestPrivate(
     const AppStreamRequest::Action action, StopImageBuilderRequest * const q)

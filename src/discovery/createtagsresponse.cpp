@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::CreateTagsResponse
- *
  * \brief The CreateTagsResponse class provides an interace for ApplicationDiscoveryService CreateTags responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new CreateTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTagsResponse::CreateTagsResponse(
         const CreateTagsRequest &request,
@@ -119,6 +114,9 @@ CreateTagsResponse::CreateTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTagsRequest * CreateTagsResponse::request() const
 {
     Q_D(const CreateTagsResponse);
@@ -126,9 +124,8 @@ const CreateTagsRequest * CreateTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService CreateTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService CreateTags \a response.
  */
 void CreateTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CreateTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::CreateTagsResponsePrivate
+ * \brief The CreateTagsResponsePrivate class provides private implementation for CreateTagsResponse.
  * \internal
  *
- * \class CreateTagsResponsePrivate
- *
- * \brief Private implementation for CreateTagsResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTagsResponse instance.
+ * Constructs a CreateTagsResponsePrivate object with public implementation \a q.
  */
 CreateTagsResponsePrivate::CreateTagsResponsePrivate(
     CreateTagsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ CreateTagsResponsePrivate::CreateTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService CreateTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService CreateTags response element from \a xml.
  */
 void CreateTagsResponsePrivate::parseCreateTagsResponse(QXmlStreamReader &xml)
 {

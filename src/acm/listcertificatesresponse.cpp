@@ -29,10 +29,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::ListCertificatesResponse
- *
  * \brief The ListCertificatesResponse class provides an interace for ACM ListCertificates responses.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new ListCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCertificatesResponse::ListCertificatesResponse(
         const ListCertificatesRequest &request,
@@ -64,6 +59,9 @@ ListCertificatesResponse::ListCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCertificatesRequest * ListCertificatesResponse::request() const
 {
     Q_D(const ListCertificatesResponse);
@@ -71,9 +69,8 @@ const ListCertificatesRequest * ListCertificatesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ACM ListCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACM ListCertificates \a response.
  */
 void ListCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void ListCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACM::ListCertificatesResponsePrivate
+ * \brief The ListCertificatesResponsePrivate class provides private implementation for ListCertificatesResponse.
  * \internal
  *
- * \class ListCertificatesResponsePrivate
- *
- * \brief Private implementation for ListCertificatesResponse.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCertificatesResponse instance.
+ * Constructs a ListCertificatesResponsePrivate object with public implementation \a q.
  */
 ListCertificatesResponsePrivate::ListCertificatesResponsePrivate(
     ListCertificatesResponse * const q) : ACMResponsePrivate(q)
@@ -104,9 +97,7 @@ ListCertificatesResponsePrivate::ListCertificatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACM ListCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACM ListCertificates response element from \a xml.
  */
 void ListCertificatesResponsePrivate::parseListCertificatesResponse(QXmlStreamReader &xml)
 {

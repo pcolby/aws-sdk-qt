@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateSnapshotCopyGrantResponse
- *
  * \brief The CreateSnapshotCopyGrantResponse class provides an interace for Redshift CreateSnapshotCopyGrant responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateSnapshotCopyGrantResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSnapshotCopyGrantResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSnapshotCopyGrantResponse::CreateSnapshotCopyGrantResponse(
         const CreateSnapshotCopyGrantRequest &request,
@@ -85,6 +80,9 @@ CreateSnapshotCopyGrantResponse::CreateSnapshotCopyGrantResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSnapshotCopyGrantRequest * CreateSnapshotCopyGrantResponse::request() const
 {
     Q_D(const CreateSnapshotCopyGrantResponse);
@@ -92,9 +90,8 @@ const CreateSnapshotCopyGrantRequest * CreateSnapshotCopyGrantResponse::request(
 }
 
 /*!
- * @brief  Parse a Redshift CreateSnapshotCopyGrant response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift CreateSnapshotCopyGrant \a response.
  */
 void CreateSnapshotCopyGrantResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void CreateSnapshotCopyGrantResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::CreateSnapshotCopyGrantResponsePrivate
+ * \brief The CreateSnapshotCopyGrantResponsePrivate class provides private implementation for CreateSnapshotCopyGrantResponse.
  * \internal
  *
- * \class CreateSnapshotCopyGrantResponsePrivate
- *
- * \brief Private implementation for CreateSnapshotCopyGrantResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSnapshotCopyGrantResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSnapshotCopyGrantResponse instance.
+ * Constructs a CreateSnapshotCopyGrantResponsePrivate object with public implementation \a q.
  */
 CreateSnapshotCopyGrantResponsePrivate::CreateSnapshotCopyGrantResponsePrivate(
     CreateSnapshotCopyGrantResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ CreateSnapshotCopyGrantResponsePrivate::CreateSnapshotCopyGrantResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift CreateSnapshotCopyGrantResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift CreateSnapshotCopyGrant response element from \a xml.
  */
 void CreateSnapshotCopyGrantResponsePrivate::parseCreateSnapshotCopyGrantResponse(QXmlStreamReader &xml)
 {

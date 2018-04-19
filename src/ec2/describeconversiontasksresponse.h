@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeConversionTasksResponse : public EC2Response {
 public:
     DescribeConversionTasksResponse(const DescribeConversionTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeConversionTasksRequest * request() const;
+    virtual const DescribeConversionTasksRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeConversionTasksResponse)

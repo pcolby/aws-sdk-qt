@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateCreatedArtifactRequest::response(
  */
 
 /*!
- *
- * Constructs a DisassociateCreatedArtifactRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateCreatedArtifactRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 DisassociateCreatedArtifactRequestPrivate::DisassociateCreatedArtifactRequestPrivate(
     const MigrationHubRequest::Action action, DisassociateCreatedArtifactRequest * const q)

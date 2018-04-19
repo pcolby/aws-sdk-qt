@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::SearchProductsResponse
- *
  * \brief The SearchProductsResponse class provides an interace for ServiceCatalog SearchProducts responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new SearchProductsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SearchProductsResponse object for \a reply to \a request, with parent \a parent.
  */
 SearchProductsResponse::SearchProductsResponse(
         const SearchProductsRequest &request,
@@ -61,6 +56,9 @@ SearchProductsResponse::SearchProductsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SearchProductsRequest * SearchProductsResponse::request() const
 {
     Q_D(const SearchProductsResponse);
@@ -68,9 +66,8 @@ const SearchProductsRequest * SearchProductsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog SearchProducts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog SearchProducts \a response.
  */
 void SearchProductsResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void SearchProductsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::SearchProductsResponsePrivate
+ * \brief The SearchProductsResponsePrivate class provides private implementation for SearchProductsResponse.
  * \internal
  *
- * \class SearchProductsResponsePrivate
- *
- * \brief Private implementation for SearchProductsResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchProductsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SearchProductsResponse instance.
+ * Constructs a SearchProductsResponsePrivate object with public implementation \a q.
  */
 SearchProductsResponsePrivate::SearchProductsResponsePrivate(
     SearchProductsResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ SearchProductsResponsePrivate::SearchProductsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog SearchProductsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog SearchProducts response element from \a xml.
  */
 void SearchProductsResponsePrivate::parseSearchProductsResponse(QXmlStreamReader &xml)
 {

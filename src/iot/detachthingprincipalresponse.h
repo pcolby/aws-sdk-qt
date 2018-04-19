@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachThingPrincipalResponse : public IoTResponse {
 public:
     DetachThingPrincipalResponse(const DetachThingPrincipalRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachThingPrincipalRequest * request() const;
+    virtual const DetachThingPrincipalRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DetachThingPrincipalResponse)

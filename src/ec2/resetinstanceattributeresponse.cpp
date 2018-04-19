@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ResetInstanceAttributeResponse
- *
  * \brief The ResetInstanceAttributeResponse class provides an interace for EC2 ResetInstanceAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ResetInstanceAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetInstanceAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetInstanceAttributeResponse::ResetInstanceAttributeResponse(
         const ResetInstanceAttributeRequest &request,
@@ -59,6 +54,9 @@ ResetInstanceAttributeResponse::ResetInstanceAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetInstanceAttributeRequest * ResetInstanceAttributeResponse::request() const
 {
     Q_D(const ResetInstanceAttributeResponse);
@@ -66,9 +64,8 @@ const ResetInstanceAttributeRequest * ResetInstanceAttributeResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 ResetInstanceAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ResetInstanceAttribute \a response.
  */
 void ResetInstanceAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ResetInstanceAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ResetInstanceAttributeResponsePrivate
+ * \brief The ResetInstanceAttributeResponsePrivate class provides private implementation for ResetInstanceAttributeResponse.
  * \internal
  *
- * \class ResetInstanceAttributeResponsePrivate
- *
- * \brief Private implementation for ResetInstanceAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetInstanceAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetInstanceAttributeResponse instance.
+ * Constructs a ResetInstanceAttributeResponsePrivate object with public implementation \a q.
  */
 ResetInstanceAttributeResponsePrivate::ResetInstanceAttributeResponsePrivate(
     ResetInstanceAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ResetInstanceAttributeResponsePrivate::ResetInstanceAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ResetInstanceAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ResetInstanceAttribute response element from \a xml.
  */
 void ResetInstanceAttributeResponsePrivate::parseResetInstanceAttributeResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifyInstanceCreditSpecificationResponse
- *
  * \brief The ModifyInstanceCreditSpecificationResponse class provides an interace for EC2 ModifyInstanceCreditSpecification responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyInstanceCreditSpecificationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyInstanceCreditSpecificationResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyInstanceCreditSpecificationResponse::ModifyInstanceCreditSpecificationResponse(
         const ModifyInstanceCreditSpecificationRequest &request,
@@ -59,6 +54,9 @@ ModifyInstanceCreditSpecificationResponse::ModifyInstanceCreditSpecificationResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyInstanceCreditSpecificationRequest * ModifyInstanceCreditSpecificationResponse::request() const
 {
     Q_D(const ModifyInstanceCreditSpecificationResponse);
@@ -66,9 +64,8 @@ const ModifyInstanceCreditSpecificationRequest * ModifyInstanceCreditSpecificati
 }
 
 /*!
- * @brief  Parse a EC2 ModifyInstanceCreditSpecification response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifyInstanceCreditSpecification \a response.
  */
 void ModifyInstanceCreditSpecificationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifyInstanceCreditSpecificationResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::EC2::ModifyInstanceCreditSpecificationResponsePrivate
+ * \brief The ModifyInstanceCreditSpecificationResponsePrivate class provides private implementation for ModifyInstanceCreditSpecificationResponse.
  * \internal
  *
- * \class ModifyInstanceCreditSpecificationResponsePrivate
- *
- * \brief Private implementation for ModifyInstanceCreditSpecificationResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyInstanceCreditSpecificationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyInstanceCreditSpecificationResponse instance.
+ * Constructs a ModifyInstanceCreditSpecificationResponsePrivate object with public implementation \a q.
  */
 ModifyInstanceCreditSpecificationResponsePrivate::ModifyInstanceCreditSpecificationResponsePrivate(
     ModifyInstanceCreditSpecificationResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifyInstanceCreditSpecificationResponsePrivate::ModifyInstanceCreditSpecificat
 }
 
 /*!
- * @brief  Parse an EC2 ModifyInstanceCreditSpecificationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifyInstanceCreditSpecification response element from \a xml.
  */
 void ModifyInstanceCreditSpecificationResponsePrivate::parseModifyInstanceCreditSpecificationResponse(QXmlStreamReader &xml)
 {

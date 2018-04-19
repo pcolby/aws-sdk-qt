@@ -91,7 +91,7 @@ namespace AutoScaling {
  */
 
 /*!
- * Constructs a[n] AutoScalingRequest object for AutoScaling \a action.
+ * Constructs a AutoScalingRequest object for AutoScaling \a action.
  */
 AutoScalingRequest::AutoScalingRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AutoScalingRequestPrivate(action, this))
@@ -291,8 +291,8 @@ QNetworkRequest AutoScalingRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a AutoScalingRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a AutoScalingRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 AutoScalingRequestPrivate::AutoScalingRequestPrivate(const AutoScalingRequest::Action action, AutoScalingRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

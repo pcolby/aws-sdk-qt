@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DeleteDataSourceResponse
- *
  * \brief The DeleteDataSourceResponse class provides an interace for MachineLearning DeleteDataSource responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::deleteDataSource
  */
 
 /*!
- * @brief  Constructs a new DeleteDataSourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDataSourceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDataSourceResponse::DeleteDataSourceResponse(
         const DeleteDataSourceRequest &request,
@@ -55,6 +50,9 @@ DeleteDataSourceResponse::DeleteDataSourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
 {
     Q_D(const DeleteDataSourceResponse);
@@ -62,9 +60,8 @@ const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning DeleteDataSource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning DeleteDataSource \a response.
  */
 void DeleteDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteDataSourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::DeleteDataSourceResponsePrivate
+ * \brief The DeleteDataSourceResponsePrivate class provides private implementation for DeleteDataSourceResponse.
  * \internal
  *
- * \class DeleteDataSourceResponsePrivate
- *
- * \brief Private implementation for DeleteDataSourceResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDataSourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDataSourceResponse instance.
+ * Constructs a DeleteDataSourceResponsePrivate object with public implementation \a q.
  */
 DeleteDataSourceResponsePrivate::DeleteDataSourceResponsePrivate(
     DeleteDataSourceResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteDataSourceResponsePrivate::DeleteDataSourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning DeleteDataSourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning DeleteDataSource response element from \a xml.
  */
 void DeleteDataSourceResponsePrivate::parseDeleteDataSourceResponse(QXmlStreamReader &xml)
 {

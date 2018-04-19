@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * UpdateFleetAttributesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a UpdateFleetAttributesRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a UpdateFleetAttributesRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 UpdateFleetAttributesRequestPrivate::UpdateFleetAttributesRequestPrivate(
     const GameLiftRequest::Action action, UpdateFleetAttributesRequest * const q)

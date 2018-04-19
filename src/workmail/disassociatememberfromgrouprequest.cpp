@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateMemberFromGroupRequest::response(
  */
 
 /*!
- *
- * Constructs a DisassociateMemberFromGroupRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateMemberFromGroupRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 DisassociateMemberFromGroupRequestPrivate::DisassociateMemberFromGroupRequestPrivate(
     const WorkMailRequest::Action action, DisassociateMemberFromGroupRequest * const q)

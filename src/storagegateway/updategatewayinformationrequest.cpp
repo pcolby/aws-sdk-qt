@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * UpdateGatewayInformationRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateGatewayInformationRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateGatewayInformationRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 UpdateGatewayInformationRequestPrivate::UpdateGatewayInformationRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateGatewayInformationRequest * const q)

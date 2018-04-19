@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::PutMethodResponse
- *
  * \brief The PutMethodResponse class provides an interace for APIGateway PutMethod responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new PutMethodResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutMethodResponse object for \a reply to \a request, with parent \a parent.
  */
 PutMethodResponse::PutMethodResponse(
         const PutMethodRequest &request,
@@ -60,6 +55,9 @@ PutMethodResponse::PutMethodResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutMethodRequest * PutMethodResponse::request() const
 {
     Q_D(const PutMethodResponse);
@@ -67,9 +65,8 @@ const PutMethodRequest * PutMethodResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway PutMethod response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway PutMethod \a response.
  */
 void PutMethodResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void PutMethodResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::PutMethodResponsePrivate
+ * \brief The PutMethodResponsePrivate class provides private implementation for PutMethodResponse.
  * \internal
  *
- * \class PutMethodResponsePrivate
- *
- * \brief Private implementation for PutMethodResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutMethodResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutMethodResponse instance.
+ * Constructs a PutMethodResponsePrivate object with public implementation \a q.
  */
 PutMethodResponsePrivate::PutMethodResponsePrivate(
     PutMethodResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ PutMethodResponsePrivate::PutMethodResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway PutMethodResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway PutMethod response element from \a xml.
  */
 void PutMethodResponsePrivate::parsePutMethodResponse(QXmlStreamReader &xml)
 {

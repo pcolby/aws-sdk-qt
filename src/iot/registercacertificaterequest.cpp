@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * RegisterCACertificateRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a RegisterCACertificateRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a RegisterCACertificateRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 RegisterCACertificateRequestPrivate::RegisterCACertificateRequestPrivate(
     const IoTRequest::Action action, RegisterCACertificateRequest * const q)

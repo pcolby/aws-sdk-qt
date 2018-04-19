@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::StopInstanceResponse
- *
  * \brief The StopInstanceResponse class provides an interace for OpsWorks StopInstance responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new StopInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 StopInstanceResponse::StopInstanceResponse(
         const StopInstanceRequest &request,
@@ -161,6 +156,9 @@ StopInstanceResponse::StopInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopInstanceRequest * StopInstanceResponse::request() const
 {
     Q_D(const StopInstanceResponse);
@@ -168,9 +166,8 @@ const StopInstanceRequest * StopInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks StopInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks StopInstance \a response.
  */
 void StopInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void StopInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::StopInstanceResponsePrivate
+ * \brief The StopInstanceResponsePrivate class provides private implementation for StopInstanceResponse.
  * \internal
  *
- * \class StopInstanceResponsePrivate
- *
- * \brief Private implementation for StopInstanceResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopInstanceResponse instance.
+ * Constructs a StopInstanceResponsePrivate object with public implementation \a q.
  */
 StopInstanceResponsePrivate::StopInstanceResponsePrivate(
     StopInstanceResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ StopInstanceResponsePrivate::StopInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks StopInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks StopInstance response element from \a xml.
  */
 void StopInstanceResponsePrivate::parseStopInstanceResponse(QXmlStreamReader &xml)
 {

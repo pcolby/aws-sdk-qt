@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * PutLogEventsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a PutLogEventsRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a PutLogEventsRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 PutLogEventsRequestPrivate::PutLogEventsRequestPrivate(
     const CloudWatchLogsRequest::Action action, PutLogEventsRequest * const q)

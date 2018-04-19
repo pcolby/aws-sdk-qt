@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminListUserAuthEventsResponse : public CognitoIdentityProvi
 public:
     AdminListUserAuthEventsResponse(const AdminListUserAuthEventsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminListUserAuthEventsRequest * request() const;
+    virtual const AdminListUserAuthEventsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AdminListUserAuthEventsResponse)

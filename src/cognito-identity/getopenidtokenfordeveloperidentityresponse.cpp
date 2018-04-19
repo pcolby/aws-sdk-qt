@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::GetOpenIdTokenForDeveloperIdentityResponse
- *
  * \brief The GetOpenIdTokenForDeveloperIdentityResponse class provides an interace for CognitoIdentity GetOpenIdTokenForDeveloperIdentity responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new GetOpenIdTokenForDeveloperIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetOpenIdTokenForDeveloperIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 GetOpenIdTokenForDeveloperIdentityResponse::GetOpenIdTokenForDeveloperIdentityResponse(
         const GetOpenIdTokenForDeveloperIdentityRequest &request,
@@ -93,6 +88,9 @@ GetOpenIdTokenForDeveloperIdentityResponse::GetOpenIdTokenForDeveloperIdentityRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetOpenIdTokenForDeveloperIdentityRequest * GetOpenIdTokenForDeveloperIdentityResponse::request() const
 {
     Q_D(const GetOpenIdTokenForDeveloperIdentityResponse);
@@ -100,9 +98,8 @@ const GetOpenIdTokenForDeveloperIdentityRequest * GetOpenIdTokenForDeveloperIden
 }
 
 /*!
- * @brief  Parse a CognitoIdentity GetOpenIdTokenForDeveloperIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity GetOpenIdTokenForDeveloperIdentity \a response.
  */
 void GetOpenIdTokenForDeveloperIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void GetOpenIdTokenForDeveloperIdentityResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::GetOpenIdTokenForDeveloperIdentityResponsePrivate
+ * \brief The GetOpenIdTokenForDeveloperIdentityResponsePrivate class provides private implementation for GetOpenIdTokenForDeveloperIdentityResponse.
  * \internal
  *
- * \class GetOpenIdTokenForDeveloperIdentityResponsePrivate
- *
- * \brief Private implementation for GetOpenIdTokenForDeveloperIdentityResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOpenIdTokenForDeveloperIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetOpenIdTokenForDeveloperIdentityResponse instance.
+ * Constructs a GetOpenIdTokenForDeveloperIdentityResponsePrivate object with public implementation \a q.
  */
 GetOpenIdTokenForDeveloperIdentityResponsePrivate::GetOpenIdTokenForDeveloperIdentityResponsePrivate(
     GetOpenIdTokenForDeveloperIdentityResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ GetOpenIdTokenForDeveloperIdentityResponsePrivate::GetOpenIdTokenForDeveloperIde
 }
 
 /*!
- * @brief  Parse an CognitoIdentity GetOpenIdTokenForDeveloperIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity GetOpenIdTokenForDeveloperIdentity response element from \a xml.
  */
 void GetOpenIdTokenForDeveloperIdentityResponsePrivate::parseGetOpenIdTokenForDeveloperIdentityResponse(QXmlStreamReader &xml)
 {

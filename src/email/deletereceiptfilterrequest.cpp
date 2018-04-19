@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteReceiptFilterRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteReceiptFilterRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a DeleteReceiptFilterRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 DeleteReceiptFilterRequestPrivate::DeleteReceiptFilterRequestPrivate(
     const SESRequest::Action action, DeleteReceiptFilterRequest * const q)

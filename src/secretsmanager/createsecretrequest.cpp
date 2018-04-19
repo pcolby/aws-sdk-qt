@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * CreateSecretRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateSecretRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a CreateSecretRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 CreateSecretRequestPrivate::CreateSecretRequestPrivate(
     const SecretsManagerRequest::Action action, CreateSecretRequest * const q)

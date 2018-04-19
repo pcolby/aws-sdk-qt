@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * ListVolumeInitiatorsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListVolumeInitiatorsRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a ListVolumeInitiatorsRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 ListVolumeInitiatorsRequestPrivate::ListVolumeInitiatorsRequestPrivate(
     const StorageGatewayRequest::Action action, ListVolumeInitiatorsRequest * const q)

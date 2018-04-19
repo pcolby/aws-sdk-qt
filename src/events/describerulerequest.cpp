@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRuleRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeRuleRequestPrivate object for CloudWatchEvents \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRuleRequestPrivate object for CloudWatchEvents \a action,
+ * with public implementation \a q.
  */
 DescribeRuleRequestPrivate::DescribeRuleRequestPrivate(
     const CloudWatchEventsRequest::Action action, DescribeRuleRequest * const q)

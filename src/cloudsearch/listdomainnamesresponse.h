@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListDomainNamesResponse : public CloudSearchResponse {
 public:
     ListDomainNamesResponse(const ListDomainNamesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDomainNamesRequest * request() const;
+    virtual const ListDomainNamesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListDomainNamesResponse)

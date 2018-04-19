@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * AddWorkingStorageRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a AddWorkingStorageRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a AddWorkingStorageRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 AddWorkingStorageRequestPrivate::AddWorkingStorageRequestPrivate(
     const StorageGatewayRequest::Action action, AddWorkingStorageRequest * const q)

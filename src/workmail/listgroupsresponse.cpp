@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListGroupsResponse
- *
  * \brief The ListGroupsResponse class provides an interace for WorkMail ListGroups responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListGroupsResponse::ListGroupsResponse(
         const ListGroupsRequest &request,
@@ -88,6 +83,9 @@ ListGroupsResponse::ListGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListGroupsRequest * ListGroupsResponse::request() const
 {
     Q_D(const ListGroupsResponse);
@@ -95,9 +93,8 @@ const ListGroupsRequest * ListGroupsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail ListGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail ListGroups \a response.
  */
 void ListGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void ListGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::ListGroupsResponsePrivate
+ * \brief The ListGroupsResponsePrivate class provides private implementation for ListGroupsResponse.
  * \internal
  *
- * \class ListGroupsResponsePrivate
- *
- * \brief Private implementation for ListGroupsResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListGroupsResponse instance.
+ * Constructs a ListGroupsResponsePrivate object with public implementation \a q.
  */
 ListGroupsResponsePrivate::ListGroupsResponsePrivate(
     ListGroupsResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ ListGroupsResponsePrivate::ListGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail ListGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail ListGroups response element from \a xml.
  */
 void ListGroupsResponsePrivate::parseListGroupsResponse(QXmlStreamReader &xml)
 {

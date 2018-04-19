@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateDiskFromSnapshotResponse
- *
  * \brief The CreateDiskFromSnapshotResponse class provides an interace for Lightsail CreateDiskFromSnapshot responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateDiskFromSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDiskFromSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDiskFromSnapshotResponse::CreateDiskFromSnapshotResponse(
         const CreateDiskFromSnapshotRequest &request,
@@ -71,6 +66,9 @@ CreateDiskFromSnapshotResponse::CreateDiskFromSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDiskFromSnapshotRequest * CreateDiskFromSnapshotResponse::request() const
 {
     Q_D(const CreateDiskFromSnapshotResponse);
@@ -78,9 +76,8 @@ const CreateDiskFromSnapshotRequest * CreateDiskFromSnapshotResponse::request() 
 }
 
 /*!
- * @brief  Parse a Lightsail CreateDiskFromSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail CreateDiskFromSnapshot \a response.
  */
 void CreateDiskFromSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void CreateDiskFromSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::CreateDiskFromSnapshotResponsePrivate
+ * \brief The CreateDiskFromSnapshotResponsePrivate class provides private implementation for CreateDiskFromSnapshotResponse.
  * \internal
  *
- * \class CreateDiskFromSnapshotResponsePrivate
- *
- * \brief Private implementation for CreateDiskFromSnapshotResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDiskFromSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDiskFromSnapshotResponse instance.
+ * Constructs a CreateDiskFromSnapshotResponsePrivate object with public implementation \a q.
  */
 CreateDiskFromSnapshotResponsePrivate::CreateDiskFromSnapshotResponsePrivate(
     CreateDiskFromSnapshotResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ CreateDiskFromSnapshotResponsePrivate::CreateDiskFromSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail CreateDiskFromSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail CreateDiskFromSnapshot response element from \a xml.
  */
 void CreateDiskFromSnapshotResponsePrivate::parseCreateDiskFromSnapshotResponse(QXmlStreamReader &xml)
 {

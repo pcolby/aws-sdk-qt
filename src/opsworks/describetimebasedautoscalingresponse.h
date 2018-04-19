@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTimeBasedAutoScalingResponse : public OpsWorksRespons
 public:
     DescribeTimeBasedAutoScalingResponse(const DescribeTimeBasedAutoScalingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTimeBasedAutoScalingRequest * request() const;
+    virtual const DescribeTimeBasedAutoScalingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTimeBasedAutoScalingResponse)

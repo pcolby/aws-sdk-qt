@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::OpenInstancePublicPortsResponse
- *
  * \brief The OpenInstancePublicPortsResponse class provides an interace for Lightsail OpenInstancePublicPorts responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new OpenInstancePublicPortsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a OpenInstancePublicPortsResponse object for \a reply to \a request, with parent \a parent.
  */
 OpenInstancePublicPortsResponse::OpenInstancePublicPortsResponse(
         const OpenInstancePublicPortsRequest &request,
@@ -71,6 +66,9 @@ OpenInstancePublicPortsResponse::OpenInstancePublicPortsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const OpenInstancePublicPortsRequest * OpenInstancePublicPortsResponse::request() const
 {
     Q_D(const OpenInstancePublicPortsResponse);
@@ -78,9 +76,8 @@ const OpenInstancePublicPortsRequest * OpenInstancePublicPortsResponse::request(
 }
 
 /*!
- * @brief  Parse a Lightsail OpenInstancePublicPorts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail OpenInstancePublicPorts \a response.
  */
 void OpenInstancePublicPortsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void OpenInstancePublicPortsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::OpenInstancePublicPortsResponsePrivate
+ * \brief The OpenInstancePublicPortsResponsePrivate class provides private implementation for OpenInstancePublicPortsResponse.
  * \internal
  *
- * \class OpenInstancePublicPortsResponsePrivate
- *
- * \brief Private implementation for OpenInstancePublicPortsResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new OpenInstancePublicPortsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public OpenInstancePublicPortsResponse instance.
+ * Constructs a OpenInstancePublicPortsResponsePrivate object with public implementation \a q.
  */
 OpenInstancePublicPortsResponsePrivate::OpenInstancePublicPortsResponsePrivate(
     OpenInstancePublicPortsResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ OpenInstancePublicPortsResponsePrivate::OpenInstancePublicPortsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail OpenInstancePublicPortsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail OpenInstancePublicPorts response element from \a xml.
  */
 void OpenInstancePublicPortsResponsePrivate::parseOpenInstancePublicPortsResponse(QXmlStreamReader &xml)
 {

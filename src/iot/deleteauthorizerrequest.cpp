@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAuthorizerRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteAuthorizerRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAuthorizerRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DeleteAuthorizerRequestPrivate::DeleteAuthorizerRequestPrivate(
     const IoTRequest::Action action, DeleteAuthorizerRequest * const q)

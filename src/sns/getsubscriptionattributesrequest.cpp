@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * GetSubscriptionAttributesRequest::response(QN
  */
 
 /*!
- *
- * Constructs a GetSubscriptionAttributesRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a GetSubscriptionAttributesRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 GetSubscriptionAttributesRequestPrivate::GetSubscriptionAttributesRequestPrivate(
     const SNSRequest::Action action, GetSubscriptionAttributesRequest * const q)

@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::UpdateBrokerResponse
- *
  * \brief The UpdateBrokerResponse class provides an interace for MQ UpdateBroker responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new UpdateBrokerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateBrokerResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateBrokerResponse::UpdateBrokerResponse(
         const UpdateBrokerRequest &request,
@@ -57,6 +52,9 @@ UpdateBrokerResponse::UpdateBrokerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateBrokerRequest * UpdateBrokerResponse::request() const
 {
     Q_D(const UpdateBrokerResponse);
@@ -64,9 +62,8 @@ const UpdateBrokerRequest * UpdateBrokerResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ UpdateBroker response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ UpdateBroker \a response.
  */
 void UpdateBrokerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void UpdateBrokerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::UpdateBrokerResponsePrivate
+ * \brief The UpdateBrokerResponsePrivate class provides private implementation for UpdateBrokerResponse.
  * \internal
  *
- * \class UpdateBrokerResponsePrivate
- *
- * \brief Private implementation for UpdateBrokerResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateBrokerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateBrokerResponse instance.
+ * Constructs a UpdateBrokerResponsePrivate object with public implementation \a q.
  */
 UpdateBrokerResponsePrivate::UpdateBrokerResponsePrivate(
     UpdateBrokerResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ UpdateBrokerResponsePrivate::UpdateBrokerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ UpdateBrokerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ UpdateBroker response element from \a xml.
  */
 void UpdateBrokerResponsePrivate::parseUpdateBrokerResponse(QXmlStreamReader &xml)
 {

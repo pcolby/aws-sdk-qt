@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RegisterActivityTypeResponse
- *
  * \brief The RegisterActivityTypeResponse class provides an interace for SWF RegisterActivityType responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RegisterActivityTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterActivityTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterActivityTypeResponse::RegisterActivityTypeResponse(
         const RegisterActivityTypeRequest &request,
@@ -71,6 +66,9 @@ RegisterActivityTypeResponse::RegisterActivityTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterActivityTypeRequest * RegisterActivityTypeResponse::request() const
 {
     Q_D(const RegisterActivityTypeResponse);
@@ -78,9 +76,8 @@ const RegisterActivityTypeRequest * RegisterActivityTypeResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SWF RegisterActivityType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF RegisterActivityType \a response.
  */
 void RegisterActivityTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void RegisterActivityTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::RegisterActivityTypeResponsePrivate
+ * \brief The RegisterActivityTypeResponsePrivate class provides private implementation for RegisterActivityTypeResponse.
  * \internal
  *
- * \class RegisterActivityTypeResponsePrivate
- *
- * \brief Private implementation for RegisterActivityTypeResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterActivityTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterActivityTypeResponse instance.
+ * Constructs a RegisterActivityTypeResponsePrivate object with public implementation \a q.
  */
 RegisterActivityTypeResponsePrivate::RegisterActivityTypeResponsePrivate(
     RegisterActivityTypeResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ RegisterActivityTypeResponsePrivate::RegisterActivityTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF RegisterActivityTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF RegisterActivityType response element from \a xml.
  */
 void RegisterActivityTypeResponsePrivate::parseRegisterActivityTypeResponse(QXmlStreamReader &xml)
 {

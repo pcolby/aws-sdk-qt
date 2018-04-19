@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * InitiateAuthRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a InitiateAuthRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a InitiateAuthRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 InitiateAuthRequestPrivate::InitiateAuthRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, InitiateAuthRequest * const q)

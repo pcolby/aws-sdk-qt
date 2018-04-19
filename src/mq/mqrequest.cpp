@@ -56,7 +56,7 @@ namespace MQ {
  */
 
 /*!
- * Constructs a[n] MQRequest object for MQ \a action.
+ * Constructs a MQRequest object for MQ \a action.
  */
 MQRequest::MQRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MQRequestPrivate(action, this))
@@ -256,8 +256,8 @@ QNetworkRequest MQRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a MQRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a MQRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 MQRequestPrivate::MQRequestPrivate(const MQRequest::Action action, MQRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

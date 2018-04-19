@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEgressOnlyInternetGatewayRequest::respo
  */
 
 /*!
- *
- * Constructs a DeleteEgressOnlyInternetGatewayRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEgressOnlyInternetGatewayRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteEgressOnlyInternetGatewayRequestPrivate::DeleteEgressOnlyInternetGatewayRequestPrivate(
     const EC2Request::Action action, DeleteEgressOnlyInternetGatewayRequest * const q)

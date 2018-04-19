@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::LookupDeveloperIdentityResponse
- *
  * \brief The LookupDeveloperIdentityResponse class provides an interace for CognitoIdentity LookupDeveloperIdentity responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new LookupDeveloperIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a LookupDeveloperIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 LookupDeveloperIdentityResponse::LookupDeveloperIdentityResponse(
         const LookupDeveloperIdentityRequest &request,
@@ -93,6 +88,9 @@ LookupDeveloperIdentityResponse::LookupDeveloperIdentityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const LookupDeveloperIdentityRequest * LookupDeveloperIdentityResponse::request() const
 {
     Q_D(const LookupDeveloperIdentityResponse);
@@ -100,9 +98,8 @@ const LookupDeveloperIdentityRequest * LookupDeveloperIdentityResponse::request(
 }
 
 /*!
- * @brief  Parse a CognitoIdentity LookupDeveloperIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity LookupDeveloperIdentity \a response.
  */
 void LookupDeveloperIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void LookupDeveloperIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::LookupDeveloperIdentityResponsePrivate
+ * \brief The LookupDeveloperIdentityResponsePrivate class provides private implementation for LookupDeveloperIdentityResponse.
  * \internal
  *
- * \class LookupDeveloperIdentityResponsePrivate
- *
- * \brief Private implementation for LookupDeveloperIdentityResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new LookupDeveloperIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public LookupDeveloperIdentityResponse instance.
+ * Constructs a LookupDeveloperIdentityResponsePrivate object with public implementation \a q.
  */
 LookupDeveloperIdentityResponsePrivate::LookupDeveloperIdentityResponsePrivate(
     LookupDeveloperIdentityResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ LookupDeveloperIdentityResponsePrivate::LookupDeveloperIdentityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentity LookupDeveloperIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity LookupDeveloperIdentity response element from \a xml.
  */
 void LookupDeveloperIdentityResponsePrivate::parseLookupDeveloperIdentityResponse(QXmlStreamReader &xml)
 {

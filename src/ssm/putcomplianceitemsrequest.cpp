@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * PutComplianceItemsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a PutComplianceItemsRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a PutComplianceItemsRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 PutComplianceItemsRequestPrivate::PutComplianceItemsRequestPrivate(
     const SSMRequest::Action action, PutComplianceItemsRequest * const q)

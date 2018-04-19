@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::CreateServiceResponse
- *
  * \brief The CreateServiceResponse class provides an interace for ServiceDiscovery CreateService responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new CreateServiceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateServiceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateServiceResponse::CreateServiceResponse(
         const CreateServiceRequest &request,
@@ -59,6 +54,9 @@ CreateServiceResponse::CreateServiceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateServiceRequest * CreateServiceResponse::request() const
 {
     Q_D(const CreateServiceResponse);
@@ -66,9 +64,8 @@ const CreateServiceRequest * CreateServiceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery CreateService response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery CreateService \a response.
  */
 void CreateServiceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateServiceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::CreateServiceResponsePrivate
+ * \brief The CreateServiceResponsePrivate class provides private implementation for CreateServiceResponse.
  * \internal
  *
- * \class CreateServiceResponsePrivate
- *
- * \brief Private implementation for CreateServiceResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateServiceResponse instance.
+ * Constructs a CreateServiceResponsePrivate object with public implementation \a q.
  */
 CreateServiceResponsePrivate::CreateServiceResponsePrivate(
     CreateServiceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateServiceResponsePrivate::CreateServiceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery CreateServiceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery CreateService response element from \a xml.
  */
 void CreateServiceResponsePrivate::parseCreateServiceResponse(QXmlStreamReader &xml)
 {

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTriggerRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteTriggerRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTriggerRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 DeleteTriggerRequestPrivate::DeleteTriggerRequestPrivate(
     const GlueRequest::Action action, DeleteTriggerRequest * const q)

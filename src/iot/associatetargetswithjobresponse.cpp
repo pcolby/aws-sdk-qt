@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::AssociateTargetsWithJobResponse
- *
  * \brief The AssociateTargetsWithJobResponse class provides an interace for IoT AssociateTargetsWithJob responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new AssociateTargetsWithJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateTargetsWithJobResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateTargetsWithJobResponse::AssociateTargetsWithJobResponse(
         const AssociateTargetsWithJobRequest &request,
@@ -66,6 +61,9 @@ AssociateTargetsWithJobResponse::AssociateTargetsWithJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateTargetsWithJobRequest * AssociateTargetsWithJobResponse::request() const
 {
     Q_D(const AssociateTargetsWithJobResponse);
@@ -73,9 +71,8 @@ const AssociateTargetsWithJobRequest * AssociateTargetsWithJobResponse::request(
 }
 
 /*!
- * @brief  Parse a IoT AssociateTargetsWithJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT AssociateTargetsWithJob \a response.
  */
 void AssociateTargetsWithJobResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void AssociateTargetsWithJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::AssociateTargetsWithJobResponsePrivate
+ * \brief The AssociateTargetsWithJobResponsePrivate class provides private implementation for AssociateTargetsWithJobResponse.
  * \internal
  *
- * \class AssociateTargetsWithJobResponsePrivate
- *
- * \brief Private implementation for AssociateTargetsWithJobResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateTargetsWithJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateTargetsWithJobResponse instance.
+ * Constructs a AssociateTargetsWithJobResponsePrivate object with public implementation \a q.
  */
 AssociateTargetsWithJobResponsePrivate::AssociateTargetsWithJobResponsePrivate(
     AssociateTargetsWithJobResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ AssociateTargetsWithJobResponsePrivate::AssociateTargetsWithJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT AssociateTargetsWithJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT AssociateTargetsWithJob response element from \a xml.
  */
 void AssociateTargetsWithJobResponsePrivate::parseAssociateTargetsWithJobResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * SendTestEventNotificationRequest::response(QN
  */
 
 /*!
- *
- * Constructs a SendTestEventNotificationRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a SendTestEventNotificationRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 SendTestEventNotificationRequestPrivate::SendTestEventNotificationRequestPrivate(
     const MTurkRequest::Action action, SendTestEventNotificationRequest * const q)

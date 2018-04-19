@@ -29,10 +29,9 @@ namespace CloudTrail {
 
 /*!
  * \class QtAws::CloudTrail::DescribeTrailsResponse
- *
  * \brief The DescribeTrailsResponse class provides an interace for CloudTrail DescribeTrails responses.
  *
- * \ingroup CloudTrail
+ * \inmodule QtAwsCloudTrail
  *
  *  <fullname>AWS CloudTrail</fullname>
  * 
@@ -62,11 +61,7 @@ namespace CloudTrail {
  */
 
 /*!
- * @brief  Constructs a new DescribeTrailsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTrailsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTrailsResponse::DescribeTrailsResponse(
         const DescribeTrailsRequest &request,
@@ -78,6 +73,9 @@ DescribeTrailsResponse::DescribeTrailsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTrailsRequest * DescribeTrailsResponse::request() const
 {
     Q_D(const DescribeTrailsResponse);
@@ -85,9 +83,8 @@ const DescribeTrailsRequest * DescribeTrailsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudTrail DescribeTrails response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudTrail DescribeTrails \a response.
  */
 void DescribeTrailsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeTrailsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudTrail::DescribeTrailsResponsePrivate
+ * \brief The DescribeTrailsResponsePrivate class provides private implementation for DescribeTrailsResponse.
  * \internal
  *
- * \class DescribeTrailsResponsePrivate
- *
- * \brief Private implementation for DescribeTrailsResponse.
+ * \inmodule QtAwsCloudTrail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTrailsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTrailsResponse instance.
+ * Constructs a DescribeTrailsResponsePrivate object with public implementation \a q.
  */
 DescribeTrailsResponsePrivate::DescribeTrailsResponsePrivate(
     DescribeTrailsResponse * const q) : CloudTrailResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeTrailsResponsePrivate::DescribeTrailsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudTrail DescribeTrailsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudTrail DescribeTrails response element from \a xml.
  */
 void DescribeTrailsResponsePrivate::parseDescribeTrailsResponse(QXmlStreamReader &xml)
 {

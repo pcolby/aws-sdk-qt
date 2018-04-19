@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * RestoreTableToPointInTimeRequest::response(QN
  */
 
 /*!
- *
- * Constructs a RestoreTableToPointInTimeRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a RestoreTableToPointInTimeRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 RestoreTableToPointInTimeRequestPrivate::RestoreTableToPointInTimeRequestPrivate(
     const DynamoDBRequest::Action action, RestoreTableToPointInTimeRequest * const q)

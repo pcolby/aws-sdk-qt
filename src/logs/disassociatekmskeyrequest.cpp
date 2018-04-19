@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateKmsKeyRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DisassociateKmsKeyRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateKmsKeyRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DisassociateKmsKeyRequestPrivate::DisassociateKmsKeyRequestPrivate(
     const CloudWatchLogsRequest::Action action, DisassociateKmsKeyRequest * const q)

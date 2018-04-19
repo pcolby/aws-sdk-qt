@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetIPSetResponse
- *
  * \brief The GetIPSetResponse class provides an interace for GuardDuty GetIPSet responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getIPSet
  */
 
 /*!
- * @brief  Constructs a new GetIPSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetIPSetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetIPSetResponse::GetIPSetResponse(
         const GetIPSetRequest &request,
@@ -55,6 +50,9 @@ GetIPSetResponse::GetIPSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetIPSetRequest * GetIPSetResponse::request() const
 {
     Q_D(const GetIPSetResponse);
@@ -62,9 +60,8 @@ const GetIPSetRequest * GetIPSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty GetIPSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty GetIPSet \a response.
  */
 void GetIPSetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetIPSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::GetIPSetResponsePrivate
+ * \brief The GetIPSetResponsePrivate class provides private implementation for GetIPSetResponse.
  * \internal
  *
- * \class GetIPSetResponsePrivate
- *
- * \brief Private implementation for GetIPSetResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIPSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetIPSetResponse instance.
+ * Constructs a GetIPSetResponsePrivate object with public implementation \a q.
  */
 GetIPSetResponsePrivate::GetIPSetResponsePrivate(
     GetIPSetResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ GetIPSetResponsePrivate::GetIPSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty GetIPSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty GetIPSet response element from \a xml.
  */
 void GetIPSetResponsePrivate::parseGetIPSetResponse(QXmlStreamReader &xml)
 {

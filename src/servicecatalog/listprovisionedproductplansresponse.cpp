@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::ListProvisionedProductPlansResponse
- *
  * \brief The ListProvisionedProductPlansResponse class provides an interace for ServiceCatalog ListProvisionedProductPlans responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new ListProvisionedProductPlansResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListProvisionedProductPlansResponse object for \a reply to \a request, with parent \a parent.
  */
 ListProvisionedProductPlansResponse::ListProvisionedProductPlansResponse(
         const ListProvisionedProductPlansRequest &request,
@@ -61,6 +56,9 @@ ListProvisionedProductPlansResponse::ListProvisionedProductPlansResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListProvisionedProductPlansRequest * ListProvisionedProductPlansResponse::request() const
 {
     Q_D(const ListProvisionedProductPlansResponse);
@@ -68,9 +66,8 @@ const ListProvisionedProductPlansRequest * ListProvisionedProductPlansResponse::
 }
 
 /*!
- * @brief  Parse a ServiceCatalog ListProvisionedProductPlans response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog ListProvisionedProductPlans \a response.
  */
 void ListProvisionedProductPlansResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListProvisionedProductPlansResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::ListProvisionedProductPlansResponsePrivate
+ * \brief The ListProvisionedProductPlansResponsePrivate class provides private implementation for ListProvisionedProductPlansResponse.
  * \internal
  *
- * \class ListProvisionedProductPlansResponsePrivate
- *
- * \brief Private implementation for ListProvisionedProductPlansResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListProvisionedProductPlansResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListProvisionedProductPlansResponse instance.
+ * Constructs a ListProvisionedProductPlansResponsePrivate object with public implementation \a q.
  */
 ListProvisionedProductPlansResponsePrivate::ListProvisionedProductPlansResponsePrivate(
     ListProvisionedProductPlansResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ ListProvisionedProductPlansResponsePrivate::ListProvisionedProductPlansResponseP
 }
 
 /*!
- * @brief  Parse an ServiceCatalog ListProvisionedProductPlansResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog ListProvisionedProductPlans response element from \a xml.
  */
 void ListProvisionedProductPlansResponsePrivate::parseListProvisionedProductPlansResponse(QXmlStreamReader &xml)
 {

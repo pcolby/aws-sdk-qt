@@ -28,16 +28,13 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::PinpointResponse
- *
  * \brief The PinpointResponse class provides an interface for Pinpoint responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @brief  Constructs a new PinpointResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a PinpointResponse object with parent \a parent.
  */
 PinpointResponse::PinpointResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new PinpointResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ PinpointResponse::PinpointResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PinpointResponse object.
- *
+ * \internal
+ * Constructs a PinpointResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from PinpointResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 PinpointResponse::PinpointResponse(PinpointResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ PinpointResponse::PinpointResponse(PinpointResponsePrivate * const d, QObject * 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void PinpointResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void PinpointResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Pinpoint::PinpointResponsePrivate
+ * \brief The PinpointResponsePrivate class provides private implementation for PinpointResponse.
+ * \internal
  *
- * @class  PinpointResponsePrivate
- *
- * @brief  Private implementation for PinpointResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PinpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PinpointResponse instance.
+ * Constructs a PinpointResponsePrivate object with public implementation \a q.
  */
 PinpointResponsePrivate::PinpointResponsePrivate(
     PinpointResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

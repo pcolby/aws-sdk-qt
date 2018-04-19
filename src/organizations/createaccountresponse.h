@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateAccountResponse : public OrganizationsResponse {
 public:
     CreateAccountResponse(const CreateAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateAccountRequest * request() const;
+    virtual const CreateAccountRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateAccountResponse)

@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::UpdateDocumentResponse
- *
  * \brief The UpdateDocumentResponse class provides an interace for WorkDocs UpdateDocument responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new UpdateDocumentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDocumentResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDocumentResponse::UpdateDocumentResponse(
         const UpdateDocumentRequest &request,
@@ -84,6 +79,9 @@ UpdateDocumentResponse::UpdateDocumentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDocumentRequest * UpdateDocumentResponse::request() const
 {
     Q_D(const UpdateDocumentResponse);
@@ -91,9 +89,8 @@ const UpdateDocumentRequest * UpdateDocumentResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs UpdateDocument response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs UpdateDocument \a response.
  */
 void UpdateDocumentResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void UpdateDocumentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::UpdateDocumentResponsePrivate
+ * \brief The UpdateDocumentResponsePrivate class provides private implementation for UpdateDocumentResponse.
  * \internal
  *
- * \class UpdateDocumentResponsePrivate
- *
- * \brief Private implementation for UpdateDocumentResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDocumentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDocumentResponse instance.
+ * Constructs a UpdateDocumentResponsePrivate object with public implementation \a q.
  */
 UpdateDocumentResponsePrivate::UpdateDocumentResponsePrivate(
     UpdateDocumentResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ UpdateDocumentResponsePrivate::UpdateDocumentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs UpdateDocumentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs UpdateDocument response element from \a xml.
  */
 void UpdateDocumentResponsePrivate::parseUpdateDocumentResponse(QXmlStreamReader &xml)
 {

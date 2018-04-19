@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteAssessmentTemplateResponse : public InspectorResponse {
 public:
     DeleteAssessmentTemplateResponse(const DeleteAssessmentTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAssessmentTemplateRequest * request() const;
+    virtual const DeleteAssessmentTemplateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteAssessmentTemplateResponse)

@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateCrawlerResponse
- *
  * \brief The UpdateCrawlerResponse class provides an interace for Glue UpdateCrawler responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateCrawlerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateCrawlerResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateCrawlerResponse::UpdateCrawlerResponse(
         const UpdateCrawlerRequest &request,
@@ -58,6 +53,9 @@ UpdateCrawlerResponse::UpdateCrawlerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateCrawlerRequest * UpdateCrawlerResponse::request() const
 {
     Q_D(const UpdateCrawlerResponse);
@@ -65,9 +63,8 @@ const UpdateCrawlerRequest * UpdateCrawlerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue UpdateCrawler response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue UpdateCrawler \a response.
  */
 void UpdateCrawlerResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateCrawlerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::UpdateCrawlerResponsePrivate
+ * \brief The UpdateCrawlerResponsePrivate class provides private implementation for UpdateCrawlerResponse.
  * \internal
  *
- * \class UpdateCrawlerResponsePrivate
- *
- * \brief Private implementation for UpdateCrawlerResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCrawlerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateCrawlerResponse instance.
+ * Constructs a UpdateCrawlerResponsePrivate object with public implementation \a q.
  */
 UpdateCrawlerResponsePrivate::UpdateCrawlerResponsePrivate(
     UpdateCrawlerResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateCrawlerResponsePrivate::UpdateCrawlerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue UpdateCrawlerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue UpdateCrawler response element from \a xml.
  */
 void UpdateCrawlerResponsePrivate::parseUpdateCrawlerResponse(QXmlStreamReader &xml)
 {

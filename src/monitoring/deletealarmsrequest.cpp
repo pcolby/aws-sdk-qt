@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAlarmsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteAlarmsRequestPrivate object for CloudWatch \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAlarmsRequestPrivate object for CloudWatch \a action,
+ * with public implementation \a q.
  */
 DeleteAlarmsRequestPrivate::DeleteAlarmsRequestPrivate(
     const CloudWatchRequest::Action action, DeleteAlarmsRequest * const q)

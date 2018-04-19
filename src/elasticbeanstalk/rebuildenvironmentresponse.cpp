@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::RebuildEnvironmentResponse
- *
  * \brief The RebuildEnvironmentResponse class provides an interace for ElasticBeanstalk RebuildEnvironment responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new RebuildEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RebuildEnvironmentResponse object for \a reply to \a request, with parent \a parent.
  */
 RebuildEnvironmentResponse::RebuildEnvironmentResponse(
         const RebuildEnvironmentRequest &request,
@@ -77,6 +72,9 @@ RebuildEnvironmentResponse::RebuildEnvironmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RebuildEnvironmentRequest * RebuildEnvironmentResponse::request() const
 {
     Q_D(const RebuildEnvironmentResponse);
@@ -84,9 +82,8 @@ const RebuildEnvironmentRequest * RebuildEnvironmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk RebuildEnvironment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk RebuildEnvironment \a response.
  */
 void RebuildEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void RebuildEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::RebuildEnvironmentResponsePrivate
+ * \brief The RebuildEnvironmentResponsePrivate class provides private implementation for RebuildEnvironmentResponse.
  * \internal
  *
- * \class RebuildEnvironmentResponsePrivate
- *
- * \brief Private implementation for RebuildEnvironmentResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebuildEnvironmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RebuildEnvironmentResponse instance.
+ * Constructs a RebuildEnvironmentResponsePrivate object with public implementation \a q.
  */
 RebuildEnvironmentResponsePrivate::RebuildEnvironmentResponsePrivate(
     RebuildEnvironmentResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ RebuildEnvironmentResponsePrivate::RebuildEnvironmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk RebuildEnvironmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk RebuildEnvironment response element from \a xml.
  */
 void RebuildEnvironmentResponsePrivate::parseRebuildEnvironmentResponse(QXmlStreamReader &xml)
 {

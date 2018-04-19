@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::AddTagsResponse
- *
  * \brief The AddTagsResponse class provides an interace for EMR AddTags responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new AddTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 AddTagsResponse::AddTagsResponse(
         const AddTagsRequest &request,
@@ -58,6 +53,9 @@ AddTagsResponse::AddTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddTagsRequest * AddTagsResponse::request() const
 {
     Q_D(const AddTagsResponse);
@@ -65,9 +63,8 @@ const AddTagsRequest * AddTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR AddTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR AddTags \a response.
  */
 void AddTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void AddTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::AddTagsResponsePrivate
+ * \brief The AddTagsResponsePrivate class provides private implementation for AddTagsResponse.
  * \internal
  *
- * \class AddTagsResponsePrivate
- *
- * \brief Private implementation for AddTagsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddTagsResponse instance.
+ * Constructs a AddTagsResponsePrivate object with public implementation \a q.
  */
 AddTagsResponsePrivate::AddTagsResponsePrivate(
     AddTagsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ AddTagsResponsePrivate::AddTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR AddTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR AddTags response element from \a xml.
  */
 void AddTagsResponsePrivate::parseAddTagsResponse(QXmlStreamReader &xml)
 {

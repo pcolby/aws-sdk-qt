@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StartJobRunRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a StartJobRunRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a StartJobRunRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 StartJobRunRequestPrivate::StartJobRunRequestPrivate(
     const GlueRequest::Action action, StartJobRunRequest * const q)

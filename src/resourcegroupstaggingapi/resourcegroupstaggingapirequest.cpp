@@ -44,7 +44,7 @@ namespace ResourceGroupsTaggingAPI {
  */
 
 /*!
- * Constructs a[n] ResourceGroupsTaggingAPIRequest object for ResourceGroupsTaggingAPI \a action.
+ * Constructs a ResourceGroupsTaggingAPIRequest object for ResourceGroupsTaggingAPI \a action.
  */
 ResourceGroupsTaggingAPIRequest::ResourceGroupsTaggingAPIRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ResourceGroupsTaggingAPIRequestPrivate(action, this))
@@ -244,8 +244,8 @@ QNetworkRequest ResourceGroupsTaggingAPIRequest::unsignedRequest(const QUrl &end
  */
 
 /*!
- * Constructs a ResourceGroupsTaggingAPIRequestPrivate object for ResourceGroupsTaggingAPI \a action with,
- * public implementation \a q.
+ * Constructs a ResourceGroupsTaggingAPIRequestPrivate object for ResourceGroupsTaggingAPI \a action,
+ * with public implementation \a q.
  */
 ResourceGroupsTaggingAPIRequestPrivate::ResourceGroupsTaggingAPIRequestPrivate(const ResourceGroupsTaggingAPIRequest::Action action, ResourceGroupsTaggingAPIRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetRunResponse
- *
  * \brief The GetRunResponse class provides an interace for DeviceFarm GetRun responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetRunResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRunResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRunResponse::GetRunResponse(
         const GetRunRequest &request,
@@ -57,6 +52,9 @@ GetRunResponse::GetRunResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRunRequest * GetRunResponse::request() const
 {
     Q_D(const GetRunResponse);
@@ -64,9 +62,8 @@ const GetRunRequest * GetRunResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetRun response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetRun \a response.
  */
 void GetRunResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetRunResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetRunResponsePrivate
+ * \brief The GetRunResponsePrivate class provides private implementation for GetRunResponse.
  * \internal
  *
- * \class GetRunResponsePrivate
- *
- * \brief Private implementation for GetRunResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRunResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRunResponse instance.
+ * Constructs a GetRunResponsePrivate object with public implementation \a q.
  */
 GetRunResponsePrivate::GetRunResponsePrivate(
     GetRunResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetRunResponsePrivate::GetRunResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetRunResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetRun response element from \a xml.
  */
 void GetRunResponsePrivate::parseGetRunResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListIPSetsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ListIPSetsRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a ListIPSetsRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 ListIPSetsRequestPrivate::ListIPSetsRequestPrivate(
     const GuardDutyRequest::Action action, ListIPSetsRequest * const q)

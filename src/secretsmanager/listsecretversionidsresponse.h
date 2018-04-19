@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListSecretVersionIdsResponse : public SecretsManagerResponse 
 public:
     ListSecretVersionIdsResponse(const ListSecretVersionIdsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListSecretVersionIdsRequest * request() const;
+    virtual const ListSecretVersionIdsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListSecretVersionIdsResponse)

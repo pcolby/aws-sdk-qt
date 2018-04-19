@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DeleteTagsResponse
- *
  * \brief The DeleteTagsResponse class provides an interace for AutoScaling DeleteTags responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeleteTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTagsResponse::DeleteTagsResponse(
         const DeleteTagsRequest &request,
@@ -60,6 +55,9 @@ DeleteTagsResponse::DeleteTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTagsRequest * DeleteTagsResponse::request() const
 {
     Q_D(const DeleteTagsResponse);
@@ -67,9 +65,8 @@ const DeleteTagsRequest * DeleteTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling DeleteTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DeleteTags \a response.
  */
 void DeleteTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DeleteTagsResponsePrivate
+ * \brief The DeleteTagsResponsePrivate class provides private implementation for DeleteTagsResponse.
  * \internal
  *
- * \class DeleteTagsResponsePrivate
- *
- * \brief Private implementation for DeleteTagsResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTagsResponse instance.
+ * Constructs a DeleteTagsResponsePrivate object with public implementation \a q.
  */
 DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
     DeleteTagsResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling DeleteTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DeleteTags response element from \a xml.
  */
 void DeleteTagsResponsePrivate::parseDeleteTagsResponse(QXmlStreamReader &xml)
 {

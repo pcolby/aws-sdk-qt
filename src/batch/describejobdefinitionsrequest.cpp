@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeJobDefinitionsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeJobDefinitionsRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a DescribeJobDefinitionsRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 DescribeJobDefinitionsRequestPrivate::DescribeJobDefinitionsRequestPrivate(
     const BatchRequest::Action action, DescribeJobDefinitionsRequest * const q)

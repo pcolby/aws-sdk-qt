@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::GetKeyRotationStatusResponse
- *
  * \brief The GetKeyRotationStatusResponse class provides an interace for KMS GetKeyRotationStatus responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new GetKeyRotationStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetKeyRotationStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 GetKeyRotationStatusResponse::GetKeyRotationStatusResponse(
         const GetKeyRotationStatusRequest &request,
@@ -154,6 +149,9 @@ GetKeyRotationStatusResponse::GetKeyRotationStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetKeyRotationStatusRequest * GetKeyRotationStatusResponse::request() const
 {
     Q_D(const GetKeyRotationStatusResponse);
@@ -161,9 +159,8 @@ const GetKeyRotationStatusRequest * GetKeyRotationStatusResponse::request() cons
 }
 
 /*!
- * @brief  Parse a KMS GetKeyRotationStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS GetKeyRotationStatus \a response.
  */
 void GetKeyRotationStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void GetKeyRotationStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::GetKeyRotationStatusResponsePrivate
+ * \brief The GetKeyRotationStatusResponsePrivate class provides private implementation for GetKeyRotationStatusResponse.
  * \internal
  *
- * \class GetKeyRotationStatusResponsePrivate
- *
- * \brief Private implementation for GetKeyRotationStatusResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetKeyRotationStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetKeyRotationStatusResponse instance.
+ * Constructs a GetKeyRotationStatusResponsePrivate object with public implementation \a q.
  */
 GetKeyRotationStatusResponsePrivate::GetKeyRotationStatusResponsePrivate(
     GetKeyRotationStatusResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ GetKeyRotationStatusResponsePrivate::GetKeyRotationStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS GetKeyRotationStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS GetKeyRotationStatus response element from \a xml.
  */
 void GetKeyRotationStatusResponsePrivate::parseGetKeyRotationStatusResponse(QXmlStreamReader &xml)
 {

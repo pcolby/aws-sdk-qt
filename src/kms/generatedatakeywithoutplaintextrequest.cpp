@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * GenerateDataKeyWithoutPlaintextRequest::respo
  */
 
 /*!
- *
- * Constructs a GenerateDataKeyWithoutPlaintextRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a GenerateDataKeyWithoutPlaintextRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 GenerateDataKeyWithoutPlaintextRequestPrivate::GenerateDataKeyWithoutPlaintextRequestPrivate(
     const KMSRequest::Action action, GenerateDataKeyWithoutPlaintextRequest * const q)

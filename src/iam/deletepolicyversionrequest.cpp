@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeletePolicyVersionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeletePolicyVersionRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeletePolicyVersionRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeletePolicyVersionRequestPrivate::DeletePolicyVersionRequestPrivate(
     const IAMRequest::Action action, DeletePolicyVersionRequest * const q)

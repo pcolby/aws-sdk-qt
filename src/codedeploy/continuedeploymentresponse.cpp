@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ContinueDeploymentResponse
- *
  * \brief The ContinueDeploymentResponse class provides an interace for CodeDeploy ContinueDeployment responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ContinueDeploymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ContinueDeploymentResponse object for \a reply to \a request, with parent \a parent.
  */
 ContinueDeploymentResponse::ContinueDeploymentResponse(
         const ContinueDeploymentRequest &request,
@@ -136,6 +131,9 @@ ContinueDeploymentResponse::ContinueDeploymentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ContinueDeploymentRequest * ContinueDeploymentResponse::request() const
 {
     Q_D(const ContinueDeploymentResponse);
@@ -143,9 +141,8 @@ const ContinueDeploymentRequest * ContinueDeploymentResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeDeploy ContinueDeployment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy ContinueDeployment \a response.
  */
 void ContinueDeploymentResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void ContinueDeploymentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::ContinueDeploymentResponsePrivate
+ * \brief The ContinueDeploymentResponsePrivate class provides private implementation for ContinueDeploymentResponse.
  * \internal
  *
- * \class ContinueDeploymentResponsePrivate
- *
- * \brief Private implementation for ContinueDeploymentResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ContinueDeploymentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ContinueDeploymentResponse instance.
+ * Constructs a ContinueDeploymentResponsePrivate object with public implementation \a q.
  */
 ContinueDeploymentResponsePrivate::ContinueDeploymentResponsePrivate(
     ContinueDeploymentResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ ContinueDeploymentResponsePrivate::ContinueDeploymentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy ContinueDeploymentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy ContinueDeployment response element from \a xml.
  */
 void ContinueDeploymentResponsePrivate::parseContinueDeploymentResponse(QXmlStreamReader &xml)
 {

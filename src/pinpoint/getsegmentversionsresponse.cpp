@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetSegmentVersionsResponse
- *
  * \brief The GetSegmentVersionsResponse class provides an interace for Pinpoint GetSegmentVersions responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getSegmentVersions
  */
 
 /*!
- * @brief  Constructs a new GetSegmentVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSegmentVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSegmentVersionsResponse::GetSegmentVersionsResponse(
         const GetSegmentVersionsRequest &request,
@@ -55,6 +50,9 @@ GetSegmentVersionsResponse::GetSegmentVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSegmentVersionsRequest * GetSegmentVersionsResponse::request() const
 {
     Q_D(const GetSegmentVersionsResponse);
@@ -62,9 +60,8 @@ const GetSegmentVersionsRequest * GetSegmentVersionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetSegmentVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetSegmentVersions \a response.
  */
 void GetSegmentVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetSegmentVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetSegmentVersionsResponsePrivate
+ * \brief The GetSegmentVersionsResponsePrivate class provides private implementation for GetSegmentVersionsResponse.
  * \internal
  *
- * \class GetSegmentVersionsResponsePrivate
- *
- * \brief Private implementation for GetSegmentVersionsResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSegmentVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSegmentVersionsResponse instance.
+ * Constructs a GetSegmentVersionsResponsePrivate object with public implementation \a q.
  */
 GetSegmentVersionsResponsePrivate::GetSegmentVersionsResponsePrivate(
     GetSegmentVersionsResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetSegmentVersionsResponsePrivate::GetSegmentVersionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetSegmentVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetSegmentVersions response element from \a xml.
  */
 void GetSegmentVersionsResponsePrivate::parseGetSegmentVersionsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribePermissionsResponse
- *
  * \brief The DescribePermissionsResponse class provides an interace for OpsWorks DescribePermissions responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribePermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePermissionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePermissionsResponse::DescribePermissionsResponse(
         const DescribePermissionsRequest &request,
@@ -161,6 +156,9 @@ DescribePermissionsResponse::DescribePermissionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePermissionsRequest * DescribePermissionsResponse::request() const
 {
     Q_D(const DescribePermissionsResponse);
@@ -168,9 +166,8 @@ const DescribePermissionsRequest * DescribePermissionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribePermissions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribePermissions \a response.
  */
 void DescribePermissionsResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribePermissionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribePermissionsResponsePrivate
+ * \brief The DescribePermissionsResponsePrivate class provides private implementation for DescribePermissionsResponse.
  * \internal
  *
- * \class DescribePermissionsResponsePrivate
- *
- * \brief Private implementation for DescribePermissionsResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePermissionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePermissionsResponse instance.
+ * Constructs a DescribePermissionsResponsePrivate object with public implementation \a q.
  */
 DescribePermissionsResponsePrivate::DescribePermissionsResponsePrivate(
     DescribePermissionsResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribePermissionsResponsePrivate::DescribePermissionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribePermissionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribePermissions response element from \a xml.
  */
 void DescribePermissionsResponsePrivate::parseDescribePermissionsResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutObjectResponse
- *
  * \brief The PutObjectResponse class provides an interace for S3 PutObject responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putObject
  */
 
 /*!
- * @brief  Constructs a new PutObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 PutObjectResponse::PutObjectResponse(
         const PutObjectRequest &request,
@@ -55,6 +50,9 @@ PutObjectResponse::PutObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutObjectRequest * PutObjectResponse::request() const
 {
     Q_D(const PutObjectResponse);
@@ -62,9 +60,8 @@ const PutObjectRequest * PutObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 PutObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutObject \a response.
  */
 void PutObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutObjectResponsePrivate
+ * \brief The PutObjectResponsePrivate class provides private implementation for PutObjectResponse.
  * \internal
  *
- * \class PutObjectResponsePrivate
- *
- * \brief Private implementation for PutObjectResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutObjectResponse instance.
+ * Constructs a PutObjectResponsePrivate object with public implementation \a q.
  */
 PutObjectResponsePrivate::PutObjectResponsePrivate(
     PutObjectResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutObjectResponsePrivate::PutObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 PutObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutObject response element from \a xml.
  */
 void PutObjectResponsePrivate::parsePutObjectResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DetachElasticLoadBalancerResponse
- *
  * \brief The DetachElasticLoadBalancerResponse class provides an interace for OpsWorks DetachElasticLoadBalancer responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DetachElasticLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachElasticLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachElasticLoadBalancerResponse::DetachElasticLoadBalancerResponse(
         const DetachElasticLoadBalancerRequest &request,
@@ -161,6 +156,9 @@ DetachElasticLoadBalancerResponse::DetachElasticLoadBalancerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachElasticLoadBalancerRequest * DetachElasticLoadBalancerResponse::request() const
 {
     Q_D(const DetachElasticLoadBalancerResponse);
@@ -168,9 +166,8 @@ const DetachElasticLoadBalancerRequest * DetachElasticLoadBalancerResponse::requ
 }
 
 /*!
- * @brief  Parse a OpsWorks DetachElasticLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DetachElasticLoadBalancer \a response.
  */
 void DetachElasticLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DetachElasticLoadBalancerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DetachElasticLoadBalancerResponsePrivate
+ * \brief The DetachElasticLoadBalancerResponsePrivate class provides private implementation for DetachElasticLoadBalancerResponse.
  * \internal
  *
- * \class DetachElasticLoadBalancerResponsePrivate
- *
- * \brief Private implementation for DetachElasticLoadBalancerResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachElasticLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachElasticLoadBalancerResponse instance.
+ * Constructs a DetachElasticLoadBalancerResponsePrivate object with public implementation \a q.
  */
 DetachElasticLoadBalancerResponsePrivate::DetachElasticLoadBalancerResponsePrivate(
     DetachElasticLoadBalancerResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DetachElasticLoadBalancerResponsePrivate::DetachElasticLoadBalancerResponsePriva
 }
 
 /*!
- * @brief  Parse an OpsWorks DetachElasticLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DetachElasticLoadBalancer response element from \a xml.
  */
 void DetachElasticLoadBalancerResponsePrivate::parseDetachElasticLoadBalancerResponse(QXmlStreamReader &xml)
 {

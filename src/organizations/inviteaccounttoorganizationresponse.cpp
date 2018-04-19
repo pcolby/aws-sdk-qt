@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::InviteAccountToOrganizationResponse
- *
  * \brief The InviteAccountToOrganizationResponse class provides an interace for Organizations InviteAccountToOrganization responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new InviteAccountToOrganizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a InviteAccountToOrganizationResponse object for \a reply to \a request, with parent \a parent.
  */
 InviteAccountToOrganizationResponse::InviteAccountToOrganizationResponse(
         const InviteAccountToOrganizationRequest &request,
@@ -197,6 +192,9 @@ InviteAccountToOrganizationResponse::InviteAccountToOrganizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const InviteAccountToOrganizationRequest * InviteAccountToOrganizationResponse::request() const
 {
     Q_D(const InviteAccountToOrganizationResponse);
@@ -204,9 +202,8 @@ const InviteAccountToOrganizationRequest * InviteAccountToOrganizationResponse::
 }
 
 /*!
- * @brief  Parse a Organizations InviteAccountToOrganization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations InviteAccountToOrganization \a response.
  */
 void InviteAccountToOrganizationResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void InviteAccountToOrganizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::InviteAccountToOrganizationResponsePrivate
+ * \brief The InviteAccountToOrganizationResponsePrivate class provides private implementation for InviteAccountToOrganizationResponse.
  * \internal
  *
- * \class InviteAccountToOrganizationResponsePrivate
- *
- * \brief Private implementation for InviteAccountToOrganizationResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InviteAccountToOrganizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InviteAccountToOrganizationResponse instance.
+ * Constructs a InviteAccountToOrganizationResponsePrivate object with public implementation \a q.
  */
 InviteAccountToOrganizationResponsePrivate::InviteAccountToOrganizationResponsePrivate(
     InviteAccountToOrganizationResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ InviteAccountToOrganizationResponsePrivate::InviteAccountToOrganizationResponseP
 }
 
 /*!
- * @brief  Parse an Organizations InviteAccountToOrganizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations InviteAccountToOrganization response element from \a xml.
  */
 void InviteAccountToOrganizationResponsePrivate::parseInviteAccountToOrganizationResponse(QXmlStreamReader &xml)
 {

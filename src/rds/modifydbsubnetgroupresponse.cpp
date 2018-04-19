@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBSubnetGroupResponse
- *
  * \brief The ModifyDBSubnetGroupResponse class provides an interace for RDS ModifyDBSubnetGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyDBSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyDBSubnetGroupResponse::ModifyDBSubnetGroupResponse(
         const ModifyDBSubnetGroupRequest &request,
@@ -119,6 +114,9 @@ ModifyDBSubnetGroupResponse::ModifyDBSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyDBSubnetGroupRequest * ModifyDBSubnetGroupResponse::request() const
 {
     Q_D(const ModifyDBSubnetGroupResponse);
@@ -126,9 +124,8 @@ const ModifyDBSubnetGroupRequest * ModifyDBSubnetGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS ModifyDBSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS ModifyDBSubnetGroup \a response.
  */
 void ModifyDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void ModifyDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::ModifyDBSubnetGroupResponsePrivate
+ * \brief The ModifyDBSubnetGroupResponsePrivate class provides private implementation for ModifyDBSubnetGroupResponse.
  * \internal
  *
- * \class ModifyDBSubnetGroupResponsePrivate
- *
- * \brief Private implementation for ModifyDBSubnetGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyDBSubnetGroupResponse instance.
+ * Constructs a ModifyDBSubnetGroupResponsePrivate object with public implementation \a q.
  */
 ModifyDBSubnetGroupResponsePrivate::ModifyDBSubnetGroupResponsePrivate(
     ModifyDBSubnetGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ ModifyDBSubnetGroupResponsePrivate::ModifyDBSubnetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS ModifyDBSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS ModifyDBSubnetGroup response element from \a xml.
  */
 void ModifyDBSubnetGroupResponsePrivate::parseModifyDBSubnetGroupResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::StopApplicationResponse
- *
  * \brief The StopApplicationResponse class provides an interace for KinesisAnalytics StopApplication responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::stopApplication
  */
 
 /*!
- * @brief  Constructs a new StopApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 StopApplicationResponse::StopApplicationResponse(
         const StopApplicationRequest &request,
@@ -55,6 +50,9 @@ StopApplicationResponse::StopApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopApplicationRequest * StopApplicationResponse::request() const
 {
     Q_D(const StopApplicationResponse);
@@ -62,9 +60,8 @@ const StopApplicationRequest * StopApplicationResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics StopApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics StopApplication \a response.
  */
 void StopApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void StopApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::StopApplicationResponsePrivate
+ * \brief The StopApplicationResponsePrivate class provides private implementation for StopApplicationResponse.
  * \internal
  *
- * \class StopApplicationResponsePrivate
- *
- * \brief Private implementation for StopApplicationResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopApplicationResponse instance.
+ * Constructs a StopApplicationResponsePrivate object with public implementation \a q.
  */
 StopApplicationResponsePrivate::StopApplicationResponsePrivate(
     StopApplicationResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ StopApplicationResponsePrivate::StopApplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics StopApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics StopApplication response element from \a xml.
  */
 void StopApplicationResponsePrivate::parseStopApplicationResponse(QXmlStreamReader &xml)
 {

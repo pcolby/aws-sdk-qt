@@ -10,16 +10,13 @@ namespace {{NameSpaceName}} {
 
 /*!
  * \class QtAws::{{NameSpaceName}}::{{ClassName}}
- *
  * \brief The {{ClassName}} class provides an interface for {{ServiceName}} responses.
  *
- * \ingroup {{NameSpaceName}}
+ * \inmodule QtAws{{NameSpaceName}}
  */
 
 /*!
- * @brief  Constructs a new {{ClassName}} object.
- *
- * @param  parent   This object's parent.
+ * Constructs a {{ClassName}} object with parent \a parent.
  */
 {{ClassName}}::{{ClassName}}(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new {{ClassName}}Private(this), parent)
@@ -28,16 +25,12 @@ namespace {{NameSpaceName}} {
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new {{ClassName}} object.
- *
+ * \internal
+ * Constructs a {{ClassName}} object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from {{ClassName}}Private.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 {{ClassName}}::{{ClassName}}({{ClassName}}Private * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -46,9 +39,7 @@ namespace {{NameSpaceName}} {
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void {{ClassName}}::parseFailure(QIODevice &response)
 {
@@ -67,19 +58,15 @@ void {{ClassName}}::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::{{NameSpaceName}}::{{ClassName}}Private
+ * \brief The {{ClassName}}Private class provides private implementation for {{ClassName}}.
+ * \internal
  *
- * @class  {{ClassName}}Private
- *
- * @brief  Private implementation for {{ClassName}}.
+ * \inmodule QtAws{{NameSpaceName}}
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new {{ClassName}}Private object.
- *
- * @param  q  Pointer to this object's public {{ClassName}} instance.
+ * Constructs a {{ClassName}}Private object with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(
     {{ClassName}} * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

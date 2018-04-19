@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::StartPipelineExecutionResponse
- *
  * \brief The StartPipelineExecutionResponse class provides an interace for CodePipeline StartPipelineExecution responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new StartPipelineExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartPipelineExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 StartPipelineExecutionResponse::StartPipelineExecutionResponse(
         const StartPipelineExecutionRequest &request,
@@ -218,6 +213,9 @@ StartPipelineExecutionResponse::StartPipelineExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartPipelineExecutionRequest * StartPipelineExecutionResponse::request() const
 {
     Q_D(const StartPipelineExecutionResponse);
@@ -225,9 +223,8 @@ const StartPipelineExecutionRequest * StartPipelineExecutionResponse::request() 
 }
 
 /*!
- * @brief  Parse a CodePipeline StartPipelineExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline StartPipelineExecution \a response.
  */
 void StartPipelineExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void StartPipelineExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::StartPipelineExecutionResponsePrivate
+ * \brief The StartPipelineExecutionResponsePrivate class provides private implementation for StartPipelineExecutionResponse.
  * \internal
  *
- * \class StartPipelineExecutionResponsePrivate
- *
- * \brief Private implementation for StartPipelineExecutionResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartPipelineExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartPipelineExecutionResponse instance.
+ * Constructs a StartPipelineExecutionResponsePrivate object with public implementation \a q.
  */
 StartPipelineExecutionResponsePrivate::StartPipelineExecutionResponsePrivate(
     StartPipelineExecutionResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ StartPipelineExecutionResponsePrivate::StartPipelineExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline StartPipelineExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline StartPipelineExecution response element from \a xml.
  */
 void StartPipelineExecutionResponsePrivate::parseStartPipelineExecutionResponse(QXmlStreamReader &xml)
 {

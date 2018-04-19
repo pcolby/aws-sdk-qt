@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeTagsRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTagsRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const DirectConnectRequest::Action action, DescribeTagsRequest * const q)

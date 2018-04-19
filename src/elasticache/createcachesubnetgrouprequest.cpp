@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateCacheSubnetGroupRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateCacheSubnetGroupRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a CreateCacheSubnetGroupRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 CreateCacheSubnetGroupRequestPrivate::CreateCacheSubnetGroupRequestPrivate(
     const ElastiCacheRequest::Action action, CreateCacheSubnetGroupRequest * const q)

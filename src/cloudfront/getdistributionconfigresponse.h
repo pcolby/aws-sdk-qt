@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDistributionConfigResponse : public CloudFrontResponse {
 public:
     GetDistributionConfigResponse(const GetDistributionConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDistributionConfigRequest * request() const;
+    virtual const GetDistributionConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDistributionConfigResponse)

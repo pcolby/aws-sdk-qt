@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::SetTimeBasedAutoScalingResponse
- *
  * \brief The SetTimeBasedAutoScalingResponse class provides an interace for OpsWorks SetTimeBasedAutoScaling responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new SetTimeBasedAutoScalingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetTimeBasedAutoScalingResponse object for \a reply to \a request, with parent \a parent.
  */
 SetTimeBasedAutoScalingResponse::SetTimeBasedAutoScalingResponse(
         const SetTimeBasedAutoScalingRequest &request,
@@ -161,6 +156,9 @@ SetTimeBasedAutoScalingResponse::SetTimeBasedAutoScalingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetTimeBasedAutoScalingRequest * SetTimeBasedAutoScalingResponse::request() const
 {
     Q_D(const SetTimeBasedAutoScalingResponse);
@@ -168,9 +166,8 @@ const SetTimeBasedAutoScalingRequest * SetTimeBasedAutoScalingResponse::request(
 }
 
 /*!
- * @brief  Parse a OpsWorks SetTimeBasedAutoScaling response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks SetTimeBasedAutoScaling \a response.
  */
 void SetTimeBasedAutoScalingResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void SetTimeBasedAutoScalingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::SetTimeBasedAutoScalingResponsePrivate
+ * \brief The SetTimeBasedAutoScalingResponsePrivate class provides private implementation for SetTimeBasedAutoScalingResponse.
  * \internal
  *
- * \class SetTimeBasedAutoScalingResponsePrivate
- *
- * \brief Private implementation for SetTimeBasedAutoScalingResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetTimeBasedAutoScalingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetTimeBasedAutoScalingResponse instance.
+ * Constructs a SetTimeBasedAutoScalingResponsePrivate object with public implementation \a q.
  */
 SetTimeBasedAutoScalingResponsePrivate::SetTimeBasedAutoScalingResponsePrivate(
     SetTimeBasedAutoScalingResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ SetTimeBasedAutoScalingResponsePrivate::SetTimeBasedAutoScalingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks SetTimeBasedAutoScalingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks SetTimeBasedAutoScaling response element from \a xml.
  */
 void SetTimeBasedAutoScalingResponsePrivate::parseSetTimeBasedAutoScalingResponse(QXmlStreamReader &xml)
 {

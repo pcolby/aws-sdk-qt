@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::RestoreFromSnapshotResponse
- *
  * \brief The RestoreFromSnapshotResponse class provides an interace for DirectoryService RestoreFromSnapshot responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new RestoreFromSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreFromSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreFromSnapshotResponse::RestoreFromSnapshotResponse(
         const RestoreFromSnapshotRequest &request,
@@ -69,6 +64,9 @@ RestoreFromSnapshotResponse::RestoreFromSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreFromSnapshotRequest * RestoreFromSnapshotResponse::request() const
 {
     Q_D(const RestoreFromSnapshotResponse);
@@ -76,9 +74,8 @@ const RestoreFromSnapshotRequest * RestoreFromSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService RestoreFromSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService RestoreFromSnapshot \a response.
  */
 void RestoreFromSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void RestoreFromSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::RestoreFromSnapshotResponsePrivate
+ * \brief The RestoreFromSnapshotResponsePrivate class provides private implementation for RestoreFromSnapshotResponse.
  * \internal
  *
- * \class RestoreFromSnapshotResponsePrivate
- *
- * \brief Private implementation for RestoreFromSnapshotResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreFromSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreFromSnapshotResponse instance.
+ * Constructs a RestoreFromSnapshotResponsePrivate object with public implementation \a q.
  */
 RestoreFromSnapshotResponsePrivate::RestoreFromSnapshotResponsePrivate(
     RestoreFromSnapshotResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ RestoreFromSnapshotResponsePrivate::RestoreFromSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService RestoreFromSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService RestoreFromSnapshot response element from \a xml.
  */
 void RestoreFromSnapshotResponsePrivate::parseRestoreFromSnapshotResponse(QXmlStreamReader &xml)
 {

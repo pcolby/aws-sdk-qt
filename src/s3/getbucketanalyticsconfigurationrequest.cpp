@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketAnalyticsConfigurationRequest::respo
  */
 
 /*!
- *
- * Constructs a GetBucketAnalyticsConfigurationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketAnalyticsConfigurationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketAnalyticsConfigurationRequestPrivate::GetBucketAnalyticsConfigurationRequestPrivate(
     const S3Request::Action action, GetBucketAnalyticsConfigurationRequest * const q)

@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetBlueprintsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetBlueprintsRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetBlueprintsRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetBlueprintsRequestPrivate::GetBlueprintsRequestPrivate(
     const LightsailRequest::Action action, GetBlueprintsRequest * const q)

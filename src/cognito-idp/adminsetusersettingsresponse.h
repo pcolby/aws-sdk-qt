@@ -34,10 +34,10 @@ class QTAWS_EXPORT AdminSetUserSettingsResponse : public CognitoIdentityProvider
 public:
     AdminSetUserSettingsResponse(const AdminSetUserSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AdminSetUserSettingsRequest * request() const;
+    virtual const AdminSetUserSettingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AdminSetUserSettingsResponse)

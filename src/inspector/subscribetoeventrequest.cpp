@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * SubscribeToEventRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a SubscribeToEventRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a SubscribeToEventRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 SubscribeToEventRequestPrivate::SubscribeToEventRequestPrivate(
     const InspectorRequest::Action action, SubscribeToEventRequest * const q)

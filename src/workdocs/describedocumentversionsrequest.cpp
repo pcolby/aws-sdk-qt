@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDocumentVersionsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeDocumentVersionsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDocumentVersionsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DescribeDocumentVersionsRequestPrivate::DescribeDocumentVersionsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeDocumentVersionsRequest * const q)

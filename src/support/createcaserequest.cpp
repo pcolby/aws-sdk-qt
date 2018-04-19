@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * CreateCaseRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CreateCaseRequestPrivate object for Support \a action with,
- * public implementation \a q.
+ * Constructs a CreateCaseRequestPrivate object for Support \a action,
+ * with public implementation \a q.
  */
 CreateCaseRequestPrivate::CreateCaseRequestPrivate(
     const SupportRequest::Action action, CreateCaseRequest * const q)

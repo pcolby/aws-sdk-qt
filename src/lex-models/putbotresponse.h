@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutBotResponse : public LexModelBuildingServiceResponse {
 public:
     PutBotResponse(const PutBotRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutBotRequest * request() const;
+    virtual const PutBotRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutBotResponse)

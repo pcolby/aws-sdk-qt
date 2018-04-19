@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::RetrieveDomainAuthCodeResponse
- *
  * \brief The RetrieveDomainAuthCodeResponse class provides an interace for Route53Domains RetrieveDomainAuthCode responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new RetrieveDomainAuthCodeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RetrieveDomainAuthCodeResponse object for \a reply to \a request, with parent \a parent.
  */
 RetrieveDomainAuthCodeResponse::RetrieveDomainAuthCodeResponse(
         const RetrieveDomainAuthCodeRequest &request,
@@ -56,6 +51,9 @@ RetrieveDomainAuthCodeResponse::RetrieveDomainAuthCodeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RetrieveDomainAuthCodeRequest * RetrieveDomainAuthCodeResponse::request() const
 {
     Q_D(const RetrieveDomainAuthCodeResponse);
@@ -63,9 +61,8 @@ const RetrieveDomainAuthCodeRequest * RetrieveDomainAuthCodeResponse::request() 
 }
 
 /*!
- * @brief  Parse a Route53Domains RetrieveDomainAuthCode response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains RetrieveDomainAuthCode \a response.
  */
 void RetrieveDomainAuthCodeResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void RetrieveDomainAuthCodeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::RetrieveDomainAuthCodeResponsePrivate
+ * \brief The RetrieveDomainAuthCodeResponsePrivate class provides private implementation for RetrieveDomainAuthCodeResponse.
  * \internal
  *
- * \class RetrieveDomainAuthCodeResponsePrivate
- *
- * \brief Private implementation for RetrieveDomainAuthCodeResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetrieveDomainAuthCodeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RetrieveDomainAuthCodeResponse instance.
+ * Constructs a RetrieveDomainAuthCodeResponsePrivate object with public implementation \a q.
  */
 RetrieveDomainAuthCodeResponsePrivate::RetrieveDomainAuthCodeResponsePrivate(
     RetrieveDomainAuthCodeResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ RetrieveDomainAuthCodeResponsePrivate::RetrieveDomainAuthCodeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains RetrieveDomainAuthCodeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains RetrieveDomainAuthCode response element from \a xml.
  */
 void RetrieveDomainAuthCodeResponsePrivate::parseRetrieveDomainAuthCodeResponse(QXmlStreamReader &xml)
 {

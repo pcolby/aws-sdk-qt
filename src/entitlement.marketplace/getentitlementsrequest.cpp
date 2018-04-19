@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * GetEntitlementsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetEntitlementsRequestPrivate object for MarketplaceEntitlementService \a action with,
- * public implementation \a q.
+ * Constructs a GetEntitlementsRequestPrivate object for MarketplaceEntitlementService \a action,
+ * with public implementation \a q.
  */
 GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
     const MarketplaceEntitlementServiceRequest::Action action, GetEntitlementsRequest * const q)

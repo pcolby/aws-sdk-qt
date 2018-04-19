@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcEndpointConnectionNotificationsResponse
- *
  * \brief The DescribeVpcEndpointConnectionNotificationsResponse class provides an interace for EC2 DescribeVpcEndpointConnectionNotifications responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcEndpointConnectionNotificationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVpcEndpointConnectionNotificationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVpcEndpointConnectionNotificationsResponse::DescribeVpcEndpointConnectionNotificationsResponse(
         const DescribeVpcEndpointConnectionNotificationsRequest &request,
@@ -59,6 +54,9 @@ DescribeVpcEndpointConnectionNotificationsResponse::DescribeVpcEndpointConnectio
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVpcEndpointConnectionNotificationsRequest * DescribeVpcEndpointConnectionNotificationsResponse::request() const
 {
     Q_D(const DescribeVpcEndpointConnectionNotificationsResponse);
@@ -66,9 +64,8 @@ const DescribeVpcEndpointConnectionNotificationsRequest * DescribeVpcEndpointCon
 }
 
 /*!
- * @brief  Parse a EC2 DescribeVpcEndpointConnectionNotifications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeVpcEndpointConnectionNotifications \a response.
  */
 void DescribeVpcEndpointConnectionNotificationsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeVpcEndpointConnectionNotificationsResponse::parseSuccess(QIODevice 
 }
 
 /*!
+ * \class QtAws::EC2::DescribeVpcEndpointConnectionNotificationsResponsePrivate
+ * \brief The DescribeVpcEndpointConnectionNotificationsResponsePrivate class provides private implementation for DescribeVpcEndpointConnectionNotificationsResponse.
  * \internal
  *
- * \class DescribeVpcEndpointConnectionNotificationsResponsePrivate
- *
- * \brief Private implementation for DescribeVpcEndpointConnectionNotificationsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcEndpointConnectionNotificationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVpcEndpointConnectionNotificationsResponse instance.
+ * Constructs a DescribeVpcEndpointConnectionNotificationsResponsePrivate object with public implementation \a q.
  */
 DescribeVpcEndpointConnectionNotificationsResponsePrivate::DescribeVpcEndpointConnectionNotificationsResponsePrivate(
     DescribeVpcEndpointConnectionNotificationsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeVpcEndpointConnectionNotificationsResponsePrivate::DescribeVpcEndpointCo
 }
 
 /*!
- * @brief  Parse an EC2 DescribeVpcEndpointConnectionNotificationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeVpcEndpointConnectionNotifications response element from \a xml.
  */
 void DescribeVpcEndpointConnectionNotificationsResponsePrivate::parseDescribeVpcEndpointConnectionNotificationsResponse(QXmlStreamReader &xml)
 {

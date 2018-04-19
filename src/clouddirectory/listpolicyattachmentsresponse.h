@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListPolicyAttachmentsResponse : public CloudDirectoryResponse
 public:
     ListPolicyAttachmentsResponse(const ListPolicyAttachmentsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListPolicyAttachmentsRequest * request() const;
+    virtual const ListPolicyAttachmentsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListPolicyAttachmentsResponse)

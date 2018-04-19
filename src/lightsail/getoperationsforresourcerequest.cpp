@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetOperationsForResourceRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a GetOperationsForResourceRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetOperationsForResourceRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetOperationsForResourceRequestPrivate::GetOperationsForResourceRequestPrivate(
     const LightsailRequest::Action action, GetOperationsForResourceRequest * const q)

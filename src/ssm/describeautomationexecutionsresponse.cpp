@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeAutomationExecutionsResponse
- *
  * \brief The DescribeAutomationExecutionsResponse class provides an interace for SSM DescribeAutomationExecutions responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeAutomationExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAutomationExecutionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAutomationExecutionsResponse::DescribeAutomationExecutionsResponse(
         const DescribeAutomationExecutionsRequest &request,
@@ -79,6 +74,9 @@ DescribeAutomationExecutionsResponse::DescribeAutomationExecutionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAutomationExecutionsRequest * DescribeAutomationExecutionsResponse::request() const
 {
     Q_D(const DescribeAutomationExecutionsResponse);
@@ -86,9 +84,8 @@ const DescribeAutomationExecutionsRequest * DescribeAutomationExecutionsResponse
 }
 
 /*!
- * @brief  Parse a SSM DescribeAutomationExecutions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeAutomationExecutions \a response.
  */
 void DescribeAutomationExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeAutomationExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeAutomationExecutionsResponsePrivate
+ * \brief The DescribeAutomationExecutionsResponsePrivate class provides private implementation for DescribeAutomationExecutionsResponse.
  * \internal
  *
- * \class DescribeAutomationExecutionsResponsePrivate
- *
- * \brief Private implementation for DescribeAutomationExecutionsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAutomationExecutionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAutomationExecutionsResponse instance.
+ * Constructs a DescribeAutomationExecutionsResponsePrivate object with public implementation \a q.
  */
 DescribeAutomationExecutionsResponsePrivate::DescribeAutomationExecutionsResponsePrivate(
     DescribeAutomationExecutionsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeAutomationExecutionsResponsePrivate::DescribeAutomationExecutionsRespons
 }
 
 /*!
- * @brief  Parse an SSM DescribeAutomationExecutionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeAutomationExecutions response element from \a xml.
  */
 void DescribeAutomationExecutionsResponsePrivate::parseDescribeAutomationExecutionsResponse(QXmlStreamReader &xml)
 {

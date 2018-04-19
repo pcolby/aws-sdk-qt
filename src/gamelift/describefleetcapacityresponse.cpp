@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeFleetCapacityResponse
- *
  * \brief The DescribeFleetCapacityResponse class provides an interace for GameLift DescribeFleetCapacity responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeFleetCapacityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeFleetCapacityResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeFleetCapacityResponse::DescribeFleetCapacityResponse(
         const DescribeFleetCapacityRequest &request,
@@ -491,6 +486,9 @@ DescribeFleetCapacityResponse::DescribeFleetCapacityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeFleetCapacityRequest * DescribeFleetCapacityResponse::request() const
 {
     Q_D(const DescribeFleetCapacityResponse);
@@ -498,9 +496,8 @@ const DescribeFleetCapacityRequest * DescribeFleetCapacityResponse::request() co
 }
 
 /*!
- * @brief  Parse a GameLift DescribeFleetCapacity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DescribeFleetCapacity \a response.
  */
 void DescribeFleetCapacityResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DescribeFleetCapacityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DescribeFleetCapacityResponsePrivate
+ * \brief The DescribeFleetCapacityResponsePrivate class provides private implementation for DescribeFleetCapacityResponse.
  * \internal
  *
- * \class DescribeFleetCapacityResponsePrivate
- *
- * \brief Private implementation for DescribeFleetCapacityResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFleetCapacityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeFleetCapacityResponse instance.
+ * Constructs a DescribeFleetCapacityResponsePrivate object with public implementation \a q.
  */
 DescribeFleetCapacityResponsePrivate::DescribeFleetCapacityResponsePrivate(
     DescribeFleetCapacityResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DescribeFleetCapacityResponsePrivate::DescribeFleetCapacityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift DescribeFleetCapacityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DescribeFleetCapacity response element from \a xml.
  */
 void DescribeFleetCapacityResponsePrivate::parseDescribeFleetCapacityResponse(QXmlStreamReader &xml)
 {

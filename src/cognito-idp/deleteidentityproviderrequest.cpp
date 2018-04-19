@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * DeleteIdentityProviderRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteIdentityProviderRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a DeleteIdentityProviderRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 DeleteIdentityProviderRequestPrivate::DeleteIdentityProviderRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteIdentityProviderRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeFpgaImagesResponse
- *
  * \brief The DescribeFpgaImagesResponse class provides an interace for EC2 DescribeFpgaImages responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeFpgaImagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeFpgaImagesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeFpgaImagesResponse::DescribeFpgaImagesResponse(
         const DescribeFpgaImagesRequest &request,
@@ -59,6 +54,9 @@ DescribeFpgaImagesResponse::DescribeFpgaImagesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeFpgaImagesRequest * DescribeFpgaImagesResponse::request() const
 {
     Q_D(const DescribeFpgaImagesResponse);
@@ -66,9 +64,8 @@ const DescribeFpgaImagesRequest * DescribeFpgaImagesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeFpgaImages response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeFpgaImages \a response.
  */
 void DescribeFpgaImagesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeFpgaImagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeFpgaImagesResponsePrivate
+ * \brief The DescribeFpgaImagesResponsePrivate class provides private implementation for DescribeFpgaImagesResponse.
  * \internal
  *
- * \class DescribeFpgaImagesResponsePrivate
- *
- * \brief Private implementation for DescribeFpgaImagesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFpgaImagesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeFpgaImagesResponse instance.
+ * Constructs a DescribeFpgaImagesResponsePrivate object with public implementation \a q.
  */
 DescribeFpgaImagesResponsePrivate::DescribeFpgaImagesResponsePrivate(
     DescribeFpgaImagesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeFpgaImagesResponsePrivate::DescribeFpgaImagesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeFpgaImagesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeFpgaImages response element from \a xml.
  */
 void DescribeFpgaImagesResponsePrivate::parseDescribeFpgaImagesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::ListServerNeighborsResponse
- *
  * \brief The ListServerNeighborsResponse class provides an interace for ApplicationDiscoveryService ListServerNeighbors responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new ListServerNeighborsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListServerNeighborsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListServerNeighborsResponse::ListServerNeighborsResponse(
         const ListServerNeighborsRequest &request,
@@ -119,6 +114,9 @@ ListServerNeighborsResponse::ListServerNeighborsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListServerNeighborsRequest * ListServerNeighborsResponse::request() const
 {
     Q_D(const ListServerNeighborsResponse);
@@ -126,9 +124,8 @@ const ListServerNeighborsRequest * ListServerNeighborsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService ListServerNeighbors response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService ListServerNeighbors \a response.
  */
 void ListServerNeighborsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void ListServerNeighborsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::ListServerNeighborsResponsePrivate
+ * \brief The ListServerNeighborsResponsePrivate class provides private implementation for ListServerNeighborsResponse.
  * \internal
  *
- * \class ListServerNeighborsResponsePrivate
- *
- * \brief Private implementation for ListServerNeighborsResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListServerNeighborsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListServerNeighborsResponse instance.
+ * Constructs a ListServerNeighborsResponsePrivate object with public implementation \a q.
  */
 ListServerNeighborsResponsePrivate::ListServerNeighborsResponsePrivate(
     ListServerNeighborsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ ListServerNeighborsResponsePrivate::ListServerNeighborsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService ListServerNeighborsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService ListServerNeighbors response element from \a xml.
  */
 void ListServerNeighborsResponsePrivate::parseListServerNeighborsResponse(QXmlStreamReader &xml)
 {

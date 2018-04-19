@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateStreamResponse : public KinesisVideoResponse {
 public:
     CreateStreamResponse(const CreateStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateStreamRequest * request() const;
+    virtual const CreateStreamRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateStreamResponse)

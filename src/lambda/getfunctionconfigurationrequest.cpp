@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetFunctionConfigurationRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a GetFunctionConfigurationRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a GetFunctionConfigurationRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 GetFunctionConfigurationRequestPrivate::GetFunctionConfigurationRequestPrivate(
     const LambdaRequest::Action action, GetFunctionConfigurationRequest * const q)

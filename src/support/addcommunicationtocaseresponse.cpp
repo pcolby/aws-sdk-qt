@@ -29,10 +29,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::AddCommunicationToCaseResponse
- *
  * \brief The AddCommunicationToCaseResponse class provides an interace for Support AddCommunicationToCase responses.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -107,11 +106,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new AddCommunicationToCaseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddCommunicationToCaseResponse object for \a reply to \a request, with parent \a parent.
  */
 AddCommunicationToCaseResponse::AddCommunicationToCaseResponse(
         const AddCommunicationToCaseRequest &request,
@@ -123,6 +118,9 @@ AddCommunicationToCaseResponse::AddCommunicationToCaseResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddCommunicationToCaseRequest * AddCommunicationToCaseResponse::request() const
 {
     Q_D(const AddCommunicationToCaseResponse);
@@ -130,9 +128,8 @@ const AddCommunicationToCaseRequest * AddCommunicationToCaseResponse::request() 
 }
 
 /*!
- * @brief  Parse a Support AddCommunicationToCase response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Support AddCommunicationToCase \a response.
  */
 void AddCommunicationToCaseResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void AddCommunicationToCaseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Support::AddCommunicationToCaseResponsePrivate
+ * \brief The AddCommunicationToCaseResponsePrivate class provides private implementation for AddCommunicationToCaseResponse.
  * \internal
  *
- * \class AddCommunicationToCaseResponsePrivate
- *
- * \brief Private implementation for AddCommunicationToCaseResponse.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddCommunicationToCaseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddCommunicationToCaseResponse instance.
+ * Constructs a AddCommunicationToCaseResponsePrivate object with public implementation \a q.
  */
 AddCommunicationToCaseResponsePrivate::AddCommunicationToCaseResponsePrivate(
     AddCommunicationToCaseResponse * const q) : SupportResponsePrivate(q)
@@ -163,9 +156,7 @@ AddCommunicationToCaseResponsePrivate::AddCommunicationToCaseResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Support AddCommunicationToCaseResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Support AddCommunicationToCase response element from \a xml.
  */
 void AddCommunicationToCaseResponsePrivate::parseAddCommunicationToCaseResponse(QXmlStreamReader &xml)
 {

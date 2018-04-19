@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * BatchGetOnPremisesInstancesRequest::response(
  */
 
 /*!
- *
- * Constructs a BatchGetOnPremisesInstancesRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a BatchGetOnPremisesInstancesRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 BatchGetOnPremisesInstancesRequestPrivate::BatchGetOnPremisesInstancesRequestPrivate(
     const CodeDeployRequest::Action action, BatchGetOnPremisesInstancesRequest * const q)

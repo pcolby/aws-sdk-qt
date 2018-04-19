@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateConfigurationTemplateResponse : public ElasticBeanstalk
 public:
     CreateConfigurationTemplateResponse(const CreateConfigurationTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateConfigurationTemplateRequest * request() const;
+    virtual const CreateConfigurationTemplateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateConfigurationTemplateResponse)

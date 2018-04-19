@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEndpointRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteEndpointRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEndpointRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 DeleteEndpointRequestPrivate::DeleteEndpointRequestPrivate(
     const SageMakerRequest::Action action, DeleteEndpointRequest * const q)

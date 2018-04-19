@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListPortfolioAccessRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListPortfolioAccessRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ListPortfolioAccessRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ListPortfolioAccessRequestPrivate::ListPortfolioAccessRequestPrivate(
     const ServiceCatalogRequest::Action action, ListPortfolioAccessRequest * const q)

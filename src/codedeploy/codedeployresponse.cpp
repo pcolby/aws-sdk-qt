@@ -28,16 +28,13 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::CodeDeployResponse
- *
  * \brief The CodeDeployResponse class provides an interface for CodeDeploy responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @brief  Constructs a new CodeDeployResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CodeDeployResponse object with parent \a parent.
  */
 CodeDeployResponse::CodeDeployResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CodeDeployResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CodeDeployResponse::CodeDeployResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeDeployResponse object.
- *
+ * \internal
+ * Constructs a CodeDeployResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeDeployResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CodeDeployResponse::CodeDeployResponse(CodeDeployResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CodeDeployResponse::CodeDeployResponse(CodeDeployResponsePrivate * const d, QObj
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CodeDeployResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CodeDeployResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CodeDeploy::CodeDeployResponsePrivate
+ * \brief The CodeDeployResponsePrivate class provides private implementation for CodeDeployResponse.
+ * \internal
  *
- * @class  CodeDeployResponsePrivate
- *
- * @brief  Private implementation for CodeDeployResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodeDeployResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CodeDeployResponse instance.
+ * Constructs a CodeDeployResponsePrivate object with public implementation \a q.
  */
 CodeDeployResponsePrivate::CodeDeployResponsePrivate(
     CodeDeployResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

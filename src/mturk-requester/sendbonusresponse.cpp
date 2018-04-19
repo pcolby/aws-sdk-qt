@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::SendBonusResponse
- *
  * \brief The SendBonusResponse class provides an interace for MTurk SendBonus responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::sendBonus
  */
 
 /*!
- * @brief  Constructs a new SendBonusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendBonusResponse object for \a reply to \a request, with parent \a parent.
  */
 SendBonusResponse::SendBonusResponse(
         const SendBonusRequest &request,
@@ -55,6 +50,9 @@ SendBonusResponse::SendBonusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendBonusRequest * SendBonusResponse::request() const
 {
     Q_D(const SendBonusResponse);
@@ -62,9 +60,8 @@ const SendBonusRequest * SendBonusResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk SendBonus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk SendBonus \a response.
  */
 void SendBonusResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void SendBonusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::SendBonusResponsePrivate
+ * \brief The SendBonusResponsePrivate class provides private implementation for SendBonusResponse.
  * \internal
  *
- * \class SendBonusResponsePrivate
- *
- * \brief Private implementation for SendBonusResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendBonusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendBonusResponse instance.
+ * Constructs a SendBonusResponsePrivate object with public implementation \a q.
  */
 SendBonusResponsePrivate::SendBonusResponsePrivate(
     SendBonusResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ SendBonusResponsePrivate::SendBonusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk SendBonusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk SendBonus response element from \a xml.
  */
 void SendBonusResponsePrivate::parseSendBonusResponse(QXmlStreamReader &xml)
 {

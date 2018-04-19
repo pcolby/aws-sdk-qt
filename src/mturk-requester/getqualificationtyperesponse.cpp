@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetQualificationTypeResponse
- *
  * \brief The GetQualificationTypeResponse class provides an interace for MTurk GetQualificationType responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getQualificationType
  */
 
 /*!
- * @brief  Constructs a new GetQualificationTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetQualificationTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 GetQualificationTypeResponse::GetQualificationTypeResponse(
         const GetQualificationTypeRequest &request,
@@ -55,6 +50,9 @@ GetQualificationTypeResponse::GetQualificationTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetQualificationTypeRequest * GetQualificationTypeResponse::request() const
 {
     Q_D(const GetQualificationTypeResponse);
@@ -62,9 +60,8 @@ const GetQualificationTypeRequest * GetQualificationTypeResponse::request() cons
 }
 
 /*!
- * @brief  Parse a MTurk GetQualificationType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk GetQualificationType \a response.
  */
 void GetQualificationTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetQualificationTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::GetQualificationTypeResponsePrivate
+ * \brief The GetQualificationTypeResponsePrivate class provides private implementation for GetQualificationTypeResponse.
  * \internal
  *
- * \class GetQualificationTypeResponsePrivate
- *
- * \brief Private implementation for GetQualificationTypeResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQualificationTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetQualificationTypeResponse instance.
+ * Constructs a GetQualificationTypeResponsePrivate object with public implementation \a q.
  */
 GetQualificationTypeResponsePrivate::GetQualificationTypeResponsePrivate(
     GetQualificationTypeResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ GetQualificationTypeResponsePrivate::GetQualificationTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk GetQualificationTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk GetQualificationType response element from \a xml.
  */
 void GetQualificationTypeResponsePrivate::parseGetQualificationTypeResponse(QXmlStreamReader &xml)
 {

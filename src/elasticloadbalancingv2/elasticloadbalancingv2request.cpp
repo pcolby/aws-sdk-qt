@@ -73,7 +73,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * Constructs a[n] ElasticLoadBalancingv2Request object for ElasticLoadBalancingv2 \a action.
+ * Constructs a ElasticLoadBalancingv2Request object for ElasticLoadBalancingv2 \a action.
  */
 ElasticLoadBalancingv2Request::ElasticLoadBalancingv2Request(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ElasticLoadBalancingv2RequestPrivate(action, this))
@@ -273,8 +273,8 @@ QNetworkRequest ElasticLoadBalancingv2Request::unsignedRequest(const QUrl &endpo
  */
 
 /*!
- * Constructs a ElasticLoadBalancingv2RequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a ElasticLoadBalancingv2RequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 ElasticLoadBalancingv2RequestPrivate::ElasticLoadBalancingv2RequestPrivate(const ElasticLoadBalancingv2Request::Action action, ElasticLoadBalancingv2Request * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

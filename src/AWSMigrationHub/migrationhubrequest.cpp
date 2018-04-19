@@ -55,7 +55,7 @@ namespace MigrationHub {
  */
 
 /*!
- * Constructs a[n] MigrationHubRequest object for MigrationHub \a action.
+ * Constructs a MigrationHubRequest object for MigrationHub \a action.
  */
 MigrationHubRequest::MigrationHubRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MigrationHubRequestPrivate(action, this))
@@ -255,8 +255,8 @@ QNetworkRequest MigrationHubRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a MigrationHubRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a MigrationHubRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 MigrationHubRequestPrivate::MigrationHubRequestPrivate(const MigrationHubRequest::Action action, MigrationHubRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

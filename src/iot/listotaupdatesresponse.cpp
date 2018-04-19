@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListOTAUpdatesResponse
- *
  * \brief The ListOTAUpdatesResponse class provides an interace for IoT ListOTAUpdates responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListOTAUpdatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListOTAUpdatesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListOTAUpdatesResponse::ListOTAUpdatesResponse(
         const ListOTAUpdatesRequest &request,
@@ -66,6 +61,9 @@ ListOTAUpdatesResponse::ListOTAUpdatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListOTAUpdatesRequest * ListOTAUpdatesResponse::request() const
 {
     Q_D(const ListOTAUpdatesResponse);
@@ -73,9 +71,8 @@ const ListOTAUpdatesRequest * ListOTAUpdatesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListOTAUpdates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListOTAUpdates \a response.
  */
 void ListOTAUpdatesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListOTAUpdatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListOTAUpdatesResponsePrivate
+ * \brief The ListOTAUpdatesResponsePrivate class provides private implementation for ListOTAUpdatesResponse.
  * \internal
  *
- * \class ListOTAUpdatesResponsePrivate
- *
- * \brief Private implementation for ListOTAUpdatesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListOTAUpdatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListOTAUpdatesResponse instance.
+ * Constructs a ListOTAUpdatesResponsePrivate object with public implementation \a q.
  */
 ListOTAUpdatesResponsePrivate::ListOTAUpdatesResponsePrivate(
     ListOTAUpdatesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListOTAUpdatesResponsePrivate::ListOTAUpdatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListOTAUpdatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListOTAUpdates response element from \a xml.
  */
 void ListOTAUpdatesResponsePrivate::parseListOTAUpdatesResponse(QXmlStreamReader &xml)
 {

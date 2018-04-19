@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ModifySnapshotAttributeResponse
- *
  * \brief The ModifySnapshotAttributeResponse class provides an interace for EC2 ModifySnapshotAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ModifySnapshotAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifySnapshotAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifySnapshotAttributeResponse::ModifySnapshotAttributeResponse(
         const ModifySnapshotAttributeRequest &request,
@@ -59,6 +54,9 @@ ModifySnapshotAttributeResponse::ModifySnapshotAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifySnapshotAttributeRequest * ModifySnapshotAttributeResponse::request() const
 {
     Q_D(const ModifySnapshotAttributeResponse);
@@ -66,9 +64,8 @@ const ModifySnapshotAttributeRequest * ModifySnapshotAttributeResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 ModifySnapshotAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ModifySnapshotAttribute \a response.
  */
 void ModifySnapshotAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ModifySnapshotAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ModifySnapshotAttributeResponsePrivate
+ * \brief The ModifySnapshotAttributeResponsePrivate class provides private implementation for ModifySnapshotAttributeResponse.
  * \internal
  *
- * \class ModifySnapshotAttributeResponsePrivate
- *
- * \brief Private implementation for ModifySnapshotAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifySnapshotAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifySnapshotAttributeResponse instance.
+ * Constructs a ModifySnapshotAttributeResponsePrivate object with public implementation \a q.
  */
 ModifySnapshotAttributeResponsePrivate::ModifySnapshotAttributeResponsePrivate(
     ModifySnapshotAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ModifySnapshotAttributeResponsePrivate::ModifySnapshotAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ModifySnapshotAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ModifySnapshotAttribute response element from \a xml.
  */
 void ModifySnapshotAttributeResponsePrivate::parseModifySnapshotAttributeResponse(QXmlStreamReader &xml)
 {

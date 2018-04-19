@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * DetachPolicyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DetachPolicyRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a DetachPolicyRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 DetachPolicyRequestPrivate::DetachPolicyRequestPrivate(
     const OrganizationsRequest::Action action, DetachPolicyRequest * const q)

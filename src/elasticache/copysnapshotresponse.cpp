@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::CopySnapshotResponse
- *
  * \brief The CopySnapshotResponse class provides an interace for ElastiCache CopySnapshot responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new CopySnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CopySnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CopySnapshotResponse::CopySnapshotResponse(
         const CopySnapshotRequest &request,
@@ -69,6 +64,9 @@ CopySnapshotResponse::CopySnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CopySnapshotRequest * CopySnapshotResponse::request() const
 {
     Q_D(const CopySnapshotResponse);
@@ -76,9 +74,8 @@ const CopySnapshotRequest * CopySnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElastiCache CopySnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache CopySnapshot \a response.
  */
 void CopySnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CopySnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::CopySnapshotResponsePrivate
+ * \brief The CopySnapshotResponsePrivate class provides private implementation for CopySnapshotResponse.
  * \internal
  *
- * \class CopySnapshotResponsePrivate
- *
- * \brief Private implementation for CopySnapshotResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CopySnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CopySnapshotResponse instance.
+ * Constructs a CopySnapshotResponsePrivate object with public implementation \a q.
  */
 CopySnapshotResponsePrivate::CopySnapshotResponsePrivate(
     CopySnapshotResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ CopySnapshotResponsePrivate::CopySnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache CopySnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache CopySnapshot response element from \a xml.
  */
 void CopySnapshotResponsePrivate::parseCopySnapshotResponse(QXmlStreamReader &xml)
 {

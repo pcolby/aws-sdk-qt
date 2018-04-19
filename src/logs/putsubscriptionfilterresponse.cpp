@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutSubscriptionFilterResponse
- *
  * \brief The PutSubscriptionFilterResponse class provides an interace for CloudWatchLogs PutSubscriptionFilter responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutSubscriptionFilterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutSubscriptionFilterResponse object for \a reply to \a request, with parent \a parent.
  */
 PutSubscriptionFilterResponse::PutSubscriptionFilterResponse(
         const PutSubscriptionFilterRequest &request,
@@ -84,6 +79,9 @@ PutSubscriptionFilterResponse::PutSubscriptionFilterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutSubscriptionFilterRequest * PutSubscriptionFilterResponse::request() const
 {
     Q_D(const PutSubscriptionFilterResponse);
@@ -91,9 +89,8 @@ const PutSubscriptionFilterRequest * PutSubscriptionFilterResponse::request() co
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs PutSubscriptionFilter response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs PutSubscriptionFilter \a response.
  */
 void PutSubscriptionFilterResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void PutSubscriptionFilterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::PutSubscriptionFilterResponsePrivate
+ * \brief The PutSubscriptionFilterResponsePrivate class provides private implementation for PutSubscriptionFilterResponse.
  * \internal
  *
- * \class PutSubscriptionFilterResponsePrivate
- *
- * \brief Private implementation for PutSubscriptionFilterResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutSubscriptionFilterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutSubscriptionFilterResponse instance.
+ * Constructs a PutSubscriptionFilterResponsePrivate object with public implementation \a q.
  */
 PutSubscriptionFilterResponsePrivate::PutSubscriptionFilterResponsePrivate(
     PutSubscriptionFilterResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ PutSubscriptionFilterResponsePrivate::PutSubscriptionFilterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs PutSubscriptionFilterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs PutSubscriptionFilter response element from \a xml.
  */
 void PutSubscriptionFilterResponsePrivate::parsePutSubscriptionFilterResponse(QXmlStreamReader &xml)
 {

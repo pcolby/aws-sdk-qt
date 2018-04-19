@@ -29,10 +29,9 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::DeleteVocabularyResponse
- *
  * \brief The DeleteVocabularyResponse class provides an interace for TranscribeService DeleteVocabulary responses.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  *
@@ -40,11 +39,7 @@ namespace TranscribeService {
  */
 
 /*!
- * @brief  Constructs a new DeleteVocabularyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVocabularyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVocabularyResponse::DeleteVocabularyResponse(
         const DeleteVocabularyRequest &request,
@@ -56,6 +51,9 @@ DeleteVocabularyResponse::DeleteVocabularyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVocabularyRequest * DeleteVocabularyResponse::request() const
 {
     Q_D(const DeleteVocabularyResponse);
@@ -63,9 +61,8 @@ const DeleteVocabularyRequest * DeleteVocabularyResponse::request() const
 }
 
 /*!
- * @brief  Parse a TranscribeService DeleteVocabulary response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful TranscribeService DeleteVocabulary \a response.
  */
 void DeleteVocabularyResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DeleteVocabularyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::TranscribeService::DeleteVocabularyResponsePrivate
+ * \brief The DeleteVocabularyResponsePrivate class provides private implementation for DeleteVocabularyResponse.
  * \internal
  *
- * \class DeleteVocabularyResponsePrivate
- *
- * \brief Private implementation for DeleteVocabularyResponse.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVocabularyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVocabularyResponse instance.
+ * Constructs a DeleteVocabularyResponsePrivate object with public implementation \a q.
  */
 DeleteVocabularyResponsePrivate::DeleteVocabularyResponsePrivate(
     DeleteVocabularyResponse * const q) : TranscribeServiceResponsePrivate(q)
@@ -96,9 +89,7 @@ DeleteVocabularyResponsePrivate::DeleteVocabularyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an TranscribeService DeleteVocabularyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a TranscribeService DeleteVocabulary response element from \a xml.
  */
 void DeleteVocabularyResponsePrivate::parseDeleteVocabularyResponse(QXmlStreamReader &xml)
 {

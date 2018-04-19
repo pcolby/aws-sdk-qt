@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * ListJobsRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a ListJobsRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a ListJobsRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 ListJobsRequestPrivate::ListJobsRequestPrivate(
     const GlacierRequest::Action action, ListJobsRequest * const q)

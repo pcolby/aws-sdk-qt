@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DescribeScalingProcessTypesResponse
- *
  * \brief The DescribeScalingProcessTypesResponse class provides an interace for AutoScaling DescribeScalingProcessTypes responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeScalingProcessTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeScalingProcessTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeScalingProcessTypesResponse::DescribeScalingProcessTypesResponse(
         const DescribeScalingProcessTypesRequest &request,
@@ -60,6 +55,9 @@ DescribeScalingProcessTypesResponse::DescribeScalingProcessTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeScalingProcessTypesRequest * DescribeScalingProcessTypesResponse::request() const
 {
     Q_D(const DescribeScalingProcessTypesResponse);
@@ -67,9 +65,8 @@ const DescribeScalingProcessTypesRequest * DescribeScalingProcessTypesResponse::
 }
 
 /*!
- * @brief  Parse a AutoScaling DescribeScalingProcessTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DescribeScalingProcessTypes \a response.
  */
 void DescribeScalingProcessTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeScalingProcessTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DescribeScalingProcessTypesResponsePrivate
+ * \brief The DescribeScalingProcessTypesResponsePrivate class provides private implementation for DescribeScalingProcessTypesResponse.
  * \internal
  *
- * \class DescribeScalingProcessTypesResponsePrivate
- *
- * \brief Private implementation for DescribeScalingProcessTypesResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScalingProcessTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeScalingProcessTypesResponse instance.
+ * Constructs a DescribeScalingProcessTypesResponsePrivate object with public implementation \a q.
  */
 DescribeScalingProcessTypesResponsePrivate::DescribeScalingProcessTypesResponsePrivate(
     DescribeScalingProcessTypesResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeScalingProcessTypesResponsePrivate::DescribeScalingProcessTypesResponseP
 }
 
 /*!
- * @brief  Parse an AutoScaling DescribeScalingProcessTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DescribeScalingProcessTypes response element from \a xml.
  */
 void DescribeScalingProcessTypesResponsePrivate::parseDescribeScalingProcessTypesResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT SendTestEventNotificationResponse : public MTurkResponse {
 public:
     SendTestEventNotificationResponse(const SendTestEventNotificationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SendTestEventNotificationRequest * request() const;
+    virtual const SendTestEventNotificationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SendTestEventNotificationResponse)

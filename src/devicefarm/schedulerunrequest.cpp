@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ScheduleRunRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ScheduleRunRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a ScheduleRunRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 ScheduleRunRequestPrivate::ScheduleRunRequestPrivate(
     const DeviceFarmRequest::Action action, ScheduleRunRequest * const q)

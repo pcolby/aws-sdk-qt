@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DeleteRegexPatternSetResponse
- *
  * \brief The DeleteRegexPatternSetResponse class provides an interace for WAFRegional DeleteRegexPatternSet responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DeleteRegexPatternSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRegexPatternSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRegexPatternSetResponse::DeleteRegexPatternSetResponse(
         const DeleteRegexPatternSetRequest &request,
@@ -62,6 +57,9 @@ DeleteRegexPatternSetResponse::DeleteRegexPatternSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRegexPatternSetRequest * DeleteRegexPatternSetResponse::request() const
 {
     Q_D(const DeleteRegexPatternSetResponse);
@@ -69,9 +67,8 @@ const DeleteRegexPatternSetRequest * DeleteRegexPatternSetResponse::request() co
 }
 
 /*!
- * @brief  Parse a WAFRegional DeleteRegexPatternSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional DeleteRegexPatternSet \a response.
  */
 void DeleteRegexPatternSetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DeleteRegexPatternSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::DeleteRegexPatternSetResponsePrivate
+ * \brief The DeleteRegexPatternSetResponsePrivate class provides private implementation for DeleteRegexPatternSetResponse.
  * \internal
  *
- * \class DeleteRegexPatternSetResponsePrivate
- *
- * \brief Private implementation for DeleteRegexPatternSetResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRegexPatternSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRegexPatternSetResponse instance.
+ * Constructs a DeleteRegexPatternSetResponsePrivate object with public implementation \a q.
  */
 DeleteRegexPatternSetResponsePrivate::DeleteRegexPatternSetResponsePrivate(
     DeleteRegexPatternSetResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ DeleteRegexPatternSetResponsePrivate::DeleteRegexPatternSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional DeleteRegexPatternSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional DeleteRegexPatternSet response element from \a xml.
  */
 void DeleteRegexPatternSetResponsePrivate::parseDeleteRegexPatternSetResponse(QXmlStreamReader &xml)
 {

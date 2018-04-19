@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyTargetGroupAttributesResponse
- *
  * \brief The ModifyTargetGroupAttributesResponse class provides an interace for ElasticLoadBalancingv2 ModifyTargetGroupAttributes responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new ModifyTargetGroupAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyTargetGroupAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyTargetGroupAttributesResponse::ModifyTargetGroupAttributesResponse(
         const ModifyTargetGroupAttributesRequest &request,
@@ -123,6 +118,9 @@ ModifyTargetGroupAttributesResponse::ModifyTargetGroupAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyTargetGroupAttributesRequest * ModifyTargetGroupAttributesResponse::request() const
 {
     Q_D(const ModifyTargetGroupAttributesResponse);
@@ -130,9 +128,8 @@ const ModifyTargetGroupAttributesRequest * ModifyTargetGroupAttributesResponse::
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 ModifyTargetGroupAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 ModifyTargetGroupAttributes \a response.
  */
 void ModifyTargetGroupAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void ModifyTargetGroupAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::ModifyTargetGroupAttributesResponsePrivate
+ * \brief The ModifyTargetGroupAttributesResponsePrivate class provides private implementation for ModifyTargetGroupAttributesResponse.
  * \internal
  *
- * \class ModifyTargetGroupAttributesResponsePrivate
- *
- * \brief Private implementation for ModifyTargetGroupAttributesResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyTargetGroupAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyTargetGroupAttributesResponse instance.
+ * Constructs a ModifyTargetGroupAttributesResponsePrivate object with public implementation \a q.
  */
 ModifyTargetGroupAttributesResponsePrivate::ModifyTargetGroupAttributesResponsePrivate(
     ModifyTargetGroupAttributesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ ModifyTargetGroupAttributesResponsePrivate::ModifyTargetGroupAttributesResponseP
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 ModifyTargetGroupAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 ModifyTargetGroupAttributes response element from \a xml.
  */
 void ModifyTargetGroupAttributesResponsePrivate::parseModifyTargetGroupAttributesResponse(QXmlStreamReader &xml)
 {

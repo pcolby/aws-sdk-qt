@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCelebrityRecognitionResponse : public RekognitionResponse 
 public:
     GetCelebrityRecognitionResponse(const GetCelebrityRecognitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCelebrityRecognitionRequest * request() const;
+    virtual const GetCelebrityRecognitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCelebrityRecognitionResponse)

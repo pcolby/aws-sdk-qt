@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::PutInventoryResponse
- *
  * \brief The PutInventoryResponse class provides an interace for SSM PutInventory responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new PutInventoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutInventoryResponse object for \a reply to \a request, with parent \a parent.
  */
 PutInventoryResponse::PutInventoryResponse(
         const PutInventoryRequest &request,
@@ -79,6 +74,9 @@ PutInventoryResponse::PutInventoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutInventoryRequest * PutInventoryResponse::request() const
 {
     Q_D(const PutInventoryResponse);
@@ -86,9 +84,8 @@ const PutInventoryRequest * PutInventoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM PutInventory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM PutInventory \a response.
  */
 void PutInventoryResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void PutInventoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::PutInventoryResponsePrivate
+ * \brief The PutInventoryResponsePrivate class provides private implementation for PutInventoryResponse.
  * \internal
  *
- * \class PutInventoryResponsePrivate
- *
- * \brief Private implementation for PutInventoryResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutInventoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutInventoryResponse instance.
+ * Constructs a PutInventoryResponsePrivate object with public implementation \a q.
  */
 PutInventoryResponsePrivate::PutInventoryResponsePrivate(
     PutInventoryResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ PutInventoryResponsePrivate::PutInventoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM PutInventoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM PutInventory response element from \a xml.
  */
 void PutInventoryResponsePrivate::parsePutInventoryResponse(QXmlStreamReader &xml)
 {

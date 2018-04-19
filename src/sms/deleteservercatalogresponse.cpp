@@ -29,21 +29,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::DeleteServerCatalogResponse
- *
  * \brief The DeleteServerCatalogResponse class provides an interace for SMS DeleteServerCatalog responses.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::deleteServerCatalog
  */
 
 /*!
- * @brief  Constructs a new DeleteServerCatalogResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteServerCatalogResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteServerCatalogResponse::DeleteServerCatalogResponse(
         const DeleteServerCatalogRequest &request,
@@ -55,6 +50,9 @@ DeleteServerCatalogResponse::DeleteServerCatalogResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteServerCatalogRequest * DeleteServerCatalogResponse::request() const
 {
     Q_D(const DeleteServerCatalogResponse);
@@ -62,9 +60,8 @@ const DeleteServerCatalogRequest * DeleteServerCatalogResponse::request() const
 }
 
 /*!
- * @brief  Parse a SMS DeleteServerCatalog response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SMS DeleteServerCatalog \a response.
  */
 void DeleteServerCatalogResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteServerCatalogResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SMS::DeleteServerCatalogResponsePrivate
+ * \brief The DeleteServerCatalogResponsePrivate class provides private implementation for DeleteServerCatalogResponse.
  * \internal
  *
- * \class DeleteServerCatalogResponsePrivate
- *
- * \brief Private implementation for DeleteServerCatalogResponse.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteServerCatalogResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteServerCatalogResponse instance.
+ * Constructs a DeleteServerCatalogResponsePrivate object with public implementation \a q.
  */
 DeleteServerCatalogResponsePrivate::DeleteServerCatalogResponsePrivate(
     DeleteServerCatalogResponse * const q) : SMSResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteServerCatalogResponsePrivate::DeleteServerCatalogResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SMS DeleteServerCatalogResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SMS DeleteServerCatalog response element from \a xml.
  */
 void DeleteServerCatalogResponsePrivate::parseDeleteServerCatalogResponse(QXmlStreamReader &xml)
 {

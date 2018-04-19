@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutRecordResponse : public KinesisResponse {
 public:
     PutRecordResponse(const PutRecordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutRecordRequest * request() const;
+    virtual const PutRecordRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutRecordResponse)

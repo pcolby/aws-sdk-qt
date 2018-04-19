@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::UpdatePrimaryEmailAddressResponse
- *
  * \brief The UpdatePrimaryEmailAddressResponse class provides an interace for WorkMail UpdatePrimaryEmailAddress responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new UpdatePrimaryEmailAddressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePrimaryEmailAddressResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePrimaryEmailAddressResponse::UpdatePrimaryEmailAddressResponse(
         const UpdatePrimaryEmailAddressRequest &request,
@@ -88,6 +83,9 @@ UpdatePrimaryEmailAddressResponse::UpdatePrimaryEmailAddressResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePrimaryEmailAddressRequest * UpdatePrimaryEmailAddressResponse::request() const
 {
     Q_D(const UpdatePrimaryEmailAddressResponse);
@@ -95,9 +93,8 @@ const UpdatePrimaryEmailAddressRequest * UpdatePrimaryEmailAddressResponse::requ
 }
 
 /*!
- * @brief  Parse a WorkMail UpdatePrimaryEmailAddress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail UpdatePrimaryEmailAddress \a response.
  */
 void UpdatePrimaryEmailAddressResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void UpdatePrimaryEmailAddressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::UpdatePrimaryEmailAddressResponsePrivate
+ * \brief The UpdatePrimaryEmailAddressResponsePrivate class provides private implementation for UpdatePrimaryEmailAddressResponse.
  * \internal
  *
- * \class UpdatePrimaryEmailAddressResponsePrivate
- *
- * \brief Private implementation for UpdatePrimaryEmailAddressResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePrimaryEmailAddressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePrimaryEmailAddressResponse instance.
+ * Constructs a UpdatePrimaryEmailAddressResponsePrivate object with public implementation \a q.
  */
 UpdatePrimaryEmailAddressResponsePrivate::UpdatePrimaryEmailAddressResponsePrivate(
     UpdatePrimaryEmailAddressResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ UpdatePrimaryEmailAddressResponsePrivate::UpdatePrimaryEmailAddressResponsePriva
 }
 
 /*!
- * @brief  Parse an WorkMail UpdatePrimaryEmailAddressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail UpdatePrimaryEmailAddress response element from \a xml.
  */
 void UpdatePrimaryEmailAddressResponsePrivate::parseUpdatePrimaryEmailAddressResponse(QXmlStreamReader &xml)
 {

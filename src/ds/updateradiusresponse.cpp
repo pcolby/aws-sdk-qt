@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::UpdateRadiusResponse
- *
  * \brief The UpdateRadiusResponse class provides an interace for DirectoryService UpdateRadius responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new UpdateRadiusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRadiusResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRadiusResponse::UpdateRadiusResponse(
         const UpdateRadiusRequest &request,
@@ -69,6 +64,9 @@ UpdateRadiusResponse::UpdateRadiusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRadiusRequest * UpdateRadiusResponse::request() const
 {
     Q_D(const UpdateRadiusResponse);
@@ -76,9 +74,8 @@ const UpdateRadiusRequest * UpdateRadiusResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService UpdateRadius response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService UpdateRadius \a response.
  */
 void UpdateRadiusResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void UpdateRadiusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::UpdateRadiusResponsePrivate
+ * \brief The UpdateRadiusResponsePrivate class provides private implementation for UpdateRadiusResponse.
  * \internal
  *
- * \class UpdateRadiusResponsePrivate
- *
- * \brief Private implementation for UpdateRadiusResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRadiusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRadiusResponse instance.
+ * Constructs a UpdateRadiusResponsePrivate object with public implementation \a q.
  */
 UpdateRadiusResponsePrivate::UpdateRadiusResponsePrivate(
     UpdateRadiusResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ UpdateRadiusResponsePrivate::UpdateRadiusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService UpdateRadiusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService UpdateRadius response element from \a xml.
  */
 void UpdateRadiusResponsePrivate::parseUpdateRadiusResponse(QXmlStreamReader &xml)
 {

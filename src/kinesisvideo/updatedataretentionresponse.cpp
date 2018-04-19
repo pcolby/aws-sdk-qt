@@ -29,21 +29,16 @@ namespace KinesisVideo {
 
 /*!
  * \class QtAws::KinesisVideo::UpdateDataRetentionResponse
- *
  * \brief The UpdateDataRetentionResponse class provides an interace for KinesisVideo UpdateDataRetention responses.
  *
- * \ingroup KinesisVideo
+ * \inmodule QtAwsKinesisVideo
  *
  *
  * \sa KinesisVideoClient::updateDataRetention
  */
 
 /*!
- * @brief  Constructs a new UpdateDataRetentionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDataRetentionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDataRetentionResponse::UpdateDataRetentionResponse(
         const UpdateDataRetentionRequest &request,
@@ -55,6 +50,9 @@ UpdateDataRetentionResponse::UpdateDataRetentionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDataRetentionRequest * UpdateDataRetentionResponse::request() const
 {
     Q_D(const UpdateDataRetentionResponse);
@@ -62,9 +60,8 @@ const UpdateDataRetentionRequest * UpdateDataRetentionResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisVideo UpdateDataRetention response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisVideo UpdateDataRetention \a response.
  */
 void UpdateDataRetentionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateDataRetentionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisVideo::UpdateDataRetentionResponsePrivate
+ * \brief The UpdateDataRetentionResponsePrivate class provides private implementation for UpdateDataRetentionResponse.
  * \internal
  *
- * \class UpdateDataRetentionResponsePrivate
- *
- * \brief Private implementation for UpdateDataRetentionResponse.
+ * \inmodule QtAwsKinesisVideo
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDataRetentionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDataRetentionResponse instance.
+ * Constructs a UpdateDataRetentionResponsePrivate object with public implementation \a q.
  */
 UpdateDataRetentionResponsePrivate::UpdateDataRetentionResponsePrivate(
     UpdateDataRetentionResponse * const q) : KinesisVideoResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateDataRetentionResponsePrivate::UpdateDataRetentionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisVideo UpdateDataRetentionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisVideo UpdateDataRetention response element from \a xml.
  */
 void UpdateDataRetentionResponsePrivate::parseUpdateDataRetentionResponse(QXmlStreamReader &xml)
 {

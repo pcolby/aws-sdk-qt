@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::ListInputSecurityGroupsResponse
- *
  * \brief The ListInputSecurityGroupsResponse class provides an interace for MediaLive ListInputSecurityGroups responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::listInputSecurityGroups
  */
 
 /*!
- * @brief  Constructs a new ListInputSecurityGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListInputSecurityGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListInputSecurityGroupsResponse::ListInputSecurityGroupsResponse(
         const ListInputSecurityGroupsRequest &request,
@@ -55,6 +50,9 @@ ListInputSecurityGroupsResponse::ListInputSecurityGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListInputSecurityGroupsRequest * ListInputSecurityGroupsResponse::request() const
 {
     Q_D(const ListInputSecurityGroupsResponse);
@@ -62,9 +60,8 @@ const ListInputSecurityGroupsRequest * ListInputSecurityGroupsResponse::request(
 }
 
 /*!
- * @brief  Parse a MediaLive ListInputSecurityGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive ListInputSecurityGroups \a response.
  */
 void ListInputSecurityGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListInputSecurityGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::ListInputSecurityGroupsResponsePrivate
+ * \brief The ListInputSecurityGroupsResponsePrivate class provides private implementation for ListInputSecurityGroupsResponse.
  * \internal
  *
- * \class ListInputSecurityGroupsResponsePrivate
- *
- * \brief Private implementation for ListInputSecurityGroupsResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInputSecurityGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListInputSecurityGroupsResponse instance.
+ * Constructs a ListInputSecurityGroupsResponsePrivate object with public implementation \a q.
  */
 ListInputSecurityGroupsResponsePrivate::ListInputSecurityGroupsResponsePrivate(
     ListInputSecurityGroupsResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ ListInputSecurityGroupsResponsePrivate::ListInputSecurityGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive ListInputSecurityGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive ListInputSecurityGroups response element from \a xml.
  */
 void ListInputSecurityGroupsResponsePrivate::parseListInputSecurityGroupsResponse(QXmlStreamReader &xml)
 {

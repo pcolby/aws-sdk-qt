@@ -34,10 +34,10 @@ class QTAWS_EXPORT CountPendingActivityTasksResponse : public SWFResponse {
 public:
     CountPendingActivityTasksResponse(const CountPendingActivityTasksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CountPendingActivityTasksRequest * request() const;
+    virtual const CountPendingActivityTasksRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CountPendingActivityTasksResponse)

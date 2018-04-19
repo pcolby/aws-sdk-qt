@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCorsPolicyRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteCorsPolicyRequestPrivate object for MediaStore \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCorsPolicyRequestPrivate object for MediaStore \a action,
+ * with public implementation \a q.
  */
 DeleteCorsPolicyRequestPrivate::DeleteCorsPolicyRequestPrivate(
     const MediaStoreRequest::Action action, DeleteCorsPolicyRequest * const q)

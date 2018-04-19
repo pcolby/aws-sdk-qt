@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::StartNotebookInstanceResponse
- *
  * \brief The StartNotebookInstanceResponse class provides an interace for SageMaker StartNotebookInstance responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::startNotebookInstance
  */
 
 /*!
- * @brief  Constructs a new StartNotebookInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartNotebookInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 StartNotebookInstanceResponse::StartNotebookInstanceResponse(
         const StartNotebookInstanceRequest &request,
@@ -55,6 +50,9 @@ StartNotebookInstanceResponse::StartNotebookInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartNotebookInstanceRequest * StartNotebookInstanceResponse::request() const
 {
     Q_D(const StartNotebookInstanceResponse);
@@ -62,9 +60,8 @@ const StartNotebookInstanceRequest * StartNotebookInstanceResponse::request() co
 }
 
 /*!
- * @brief  Parse a SageMaker StartNotebookInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker StartNotebookInstance \a response.
  */
 void StartNotebookInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void StartNotebookInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::StartNotebookInstanceResponsePrivate
+ * \brief The StartNotebookInstanceResponsePrivate class provides private implementation for StartNotebookInstanceResponse.
  * \internal
  *
- * \class StartNotebookInstanceResponsePrivate
- *
- * \brief Private implementation for StartNotebookInstanceResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartNotebookInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartNotebookInstanceResponse instance.
+ * Constructs a StartNotebookInstanceResponsePrivate object with public implementation \a q.
  */
 StartNotebookInstanceResponsePrivate::StartNotebookInstanceResponsePrivate(
     StartNotebookInstanceResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ StartNotebookInstanceResponsePrivate::StartNotebookInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker StartNotebookInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker StartNotebookInstance response element from \a xml.
  */
 void StartNotebookInstanceResponsePrivate::parseStartNotebookInstanceResponse(QXmlStreamReader &xml)
 {

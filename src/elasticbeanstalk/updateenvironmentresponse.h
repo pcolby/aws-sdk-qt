@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateEnvironmentResponse : public ElasticBeanstalkResponse {
 public:
     UpdateEnvironmentResponse(const UpdateEnvironmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateEnvironmentRequest * request() const;
+    virtual const UpdateEnvironmentRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateEnvironmentResponse)

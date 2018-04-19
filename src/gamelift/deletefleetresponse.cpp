@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteFleetResponse
- *
  * \brief The DeleteFleetResponse class provides an interace for GameLift DeleteFleet responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteFleetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteFleetResponse::DeleteFleetResponse(
         const DeleteFleetRequest &request,
@@ -491,6 +486,9 @@ DeleteFleetResponse::DeleteFleetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteFleetRequest * DeleteFleetResponse::request() const
 {
     Q_D(const DeleteFleetResponse);
@@ -498,9 +496,8 @@ const DeleteFleetRequest * DeleteFleetResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift DeleteFleet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DeleteFleet \a response.
  */
 void DeleteFleetResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DeleteFleetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DeleteFleetResponsePrivate
+ * \brief The DeleteFleetResponsePrivate class provides private implementation for DeleteFleetResponse.
  * \internal
  *
- * \class DeleteFleetResponsePrivate
- *
- * \brief Private implementation for DeleteFleetResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteFleetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteFleetResponse instance.
+ * Constructs a DeleteFleetResponsePrivate object with public implementation \a q.
  */
 DeleteFleetResponsePrivate::DeleteFleetResponsePrivate(
     DeleteFleetResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DeleteFleetResponsePrivate::DeleteFleetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift DeleteFleetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DeleteFleet response element from \a xml.
  */
 void DeleteFleetResponsePrivate::parseDeleteFleetResponse(QXmlStreamReader &xml)
 {

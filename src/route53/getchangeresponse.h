@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetChangeResponse : public Route53Response {
 public:
     GetChangeResponse(const GetChangeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetChangeRequest * request() const;
+    virtual const GetChangeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetChangeResponse)

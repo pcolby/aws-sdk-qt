@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStacksRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeStacksRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStacksRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 DescribeStacksRequestPrivate::DescribeStacksRequestPrivate(
     const AppStreamRequest::Action action, DescribeStacksRequest * const q)

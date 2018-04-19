@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeReplicationGroupsResponse
- *
  * \brief The DescribeReplicationGroupsResponse class provides an interace for ElastiCache DescribeReplicationGroups responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeReplicationGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeReplicationGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeReplicationGroupsResponse::DescribeReplicationGroupsResponse(
         const DescribeReplicationGroupsRequest &request,
@@ -69,6 +64,9 @@ DescribeReplicationGroupsResponse::DescribeReplicationGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeReplicationGroupsRequest * DescribeReplicationGroupsResponse::request() const
 {
     Q_D(const DescribeReplicationGroupsResponse);
@@ -76,9 +74,8 @@ const DescribeReplicationGroupsRequest * DescribeReplicationGroupsResponse::requ
 }
 
 /*!
- * @brief  Parse a ElastiCache DescribeReplicationGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DescribeReplicationGroups \a response.
  */
 void DescribeReplicationGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeReplicationGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::DescribeReplicationGroupsResponsePrivate
+ * \brief The DescribeReplicationGroupsResponsePrivate class provides private implementation for DescribeReplicationGroupsResponse.
  * \internal
  *
- * \class DescribeReplicationGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeReplicationGroupsResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReplicationGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeReplicationGroupsResponse instance.
+ * Constructs a DescribeReplicationGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeReplicationGroupsResponsePrivate::DescribeReplicationGroupsResponsePrivate(
     DescribeReplicationGroupsResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeReplicationGroupsResponsePrivate::DescribeReplicationGroupsResponsePriva
 }
 
 /*!
- * @brief  Parse an ElastiCache DescribeReplicationGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DescribeReplicationGroups response element from \a xml.
  */
 void DescribeReplicationGroupsResponsePrivate::parseDescribeReplicationGroupsResponse(QXmlStreamReader &xml)
 {

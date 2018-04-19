@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutResourcePolicyResponse
- *
  * \brief The PutResourcePolicyResponse class provides an interace for CloudWatchLogs PutResourcePolicy responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutResourcePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutResourcePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutResourcePolicyResponse::PutResourcePolicyResponse(
         const PutResourcePolicyRequest &request,
@@ -84,6 +79,9 @@ PutResourcePolicyResponse::PutResourcePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutResourcePolicyRequest * PutResourcePolicyResponse::request() const
 {
     Q_D(const PutResourcePolicyResponse);
@@ -91,9 +89,8 @@ const PutResourcePolicyRequest * PutResourcePolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs PutResourcePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs PutResourcePolicy \a response.
  */
 void PutResourcePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void PutResourcePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::PutResourcePolicyResponsePrivate
+ * \brief The PutResourcePolicyResponsePrivate class provides private implementation for PutResourcePolicyResponse.
  * \internal
  *
- * \class PutResourcePolicyResponsePrivate
- *
- * \brief Private implementation for PutResourcePolicyResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutResourcePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutResourcePolicyResponse instance.
+ * Constructs a PutResourcePolicyResponsePrivate object with public implementation \a q.
  */
 PutResourcePolicyResponsePrivate::PutResourcePolicyResponsePrivate(
     PutResourcePolicyResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ PutResourcePolicyResponsePrivate::PutResourcePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs PutResourcePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs PutResourcePolicy response element from \a xml.
  */
 void PutResourcePolicyResponsePrivate::parsePutResourcePolicyResponse(QXmlStreamReader &xml)
 {

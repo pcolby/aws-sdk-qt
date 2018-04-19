@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateDeviceDefinitionVersionRequest::respons
  */
 
 /*!
- *
- * Constructs a CreateDeviceDefinitionVersionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a CreateDeviceDefinitionVersionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 CreateDeviceDefinitionVersionRequestPrivate::CreateDeviceDefinitionVersionRequestPrivate(
     const GreengrassRequest::Action action, CreateDeviceDefinitionVersionRequest * const q)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetAssessmentReportRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetAssessmentReportRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a GetAssessmentReportRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 GetAssessmentReportRequestPrivate::GetAssessmentReportRequestPrivate(
     const InspectorRequest::Action action, GetAssessmentReportRequest * const q)

@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * AddTagsToOnPremisesInstancesRequest::response
  */
 
 /*!
- *
- * Constructs a AddTagsToOnPremisesInstancesRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a AddTagsToOnPremisesInstancesRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 AddTagsToOnPremisesInstancesRequestPrivate::AddTagsToOnPremisesInstancesRequestPrivate(
     const CodeDeployRequest::Action action, AddTagsToOnPremisesInstancesRequest * const q)

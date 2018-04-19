@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * ListTasksRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ListTasksRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a ListTasksRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 ListTasksRequestPrivate::ListTasksRequestPrivate(
     const ECSRequest::Action action, ListTasksRequest * const q)

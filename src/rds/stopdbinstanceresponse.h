@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopDBInstanceResponse : public RDSResponse {
 public:
     StopDBInstanceResponse(const StopDBInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopDBInstanceRequest * request() const;
+    virtual const StopDBInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopDBInstanceResponse)

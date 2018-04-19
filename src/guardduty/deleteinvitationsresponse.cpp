@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DeleteInvitationsResponse
- *
  * \brief The DeleteInvitationsResponse class provides an interace for GuardDuty DeleteInvitations responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::deleteInvitations
  */
 
 /*!
- * @brief  Constructs a new DeleteInvitationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteInvitationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteInvitationsResponse::DeleteInvitationsResponse(
         const DeleteInvitationsRequest &request,
@@ -55,6 +50,9 @@ DeleteInvitationsResponse::DeleteInvitationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteInvitationsRequest * DeleteInvitationsResponse::request() const
 {
     Q_D(const DeleteInvitationsResponse);
@@ -62,9 +60,8 @@ const DeleteInvitationsRequest * DeleteInvitationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty DeleteInvitations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty DeleteInvitations \a response.
  */
 void DeleteInvitationsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteInvitationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::DeleteInvitationsResponsePrivate
+ * \brief The DeleteInvitationsResponsePrivate class provides private implementation for DeleteInvitationsResponse.
  * \internal
  *
- * \class DeleteInvitationsResponsePrivate
- *
- * \brief Private implementation for DeleteInvitationsResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInvitationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteInvitationsResponse instance.
+ * Constructs a DeleteInvitationsResponsePrivate object with public implementation \a q.
  */
 DeleteInvitationsResponsePrivate::DeleteInvitationsResponsePrivate(
     DeleteInvitationsResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteInvitationsResponsePrivate::DeleteInvitationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty DeleteInvitationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty DeleteInvitations response element from \a xml.
  */
 void DeleteInvitationsResponsePrivate::parseDeleteInvitationsResponse(QXmlStreamReader &xml)
 {

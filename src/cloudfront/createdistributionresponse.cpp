@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateDistributionResponse
- *
  * \brief The CreateDistributionResponse class provides an interace for CloudFront CreateDistribution responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateDistributionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDistributionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDistributionResponse::CreateDistributionResponse(
         const CreateDistributionRequest &request,
@@ -60,6 +55,9 @@ CreateDistributionResponse::CreateDistributionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDistributionRequest * CreateDistributionResponse::request() const
 {
     Q_D(const CreateDistributionResponse);
@@ -67,9 +65,8 @@ const CreateDistributionRequest * CreateDistributionResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront CreateDistribution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront CreateDistribution \a response.
  */
 void CreateDistributionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateDistributionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::CreateDistributionResponsePrivate
+ * \brief The CreateDistributionResponsePrivate class provides private implementation for CreateDistributionResponse.
  * \internal
  *
- * \class CreateDistributionResponsePrivate
- *
- * \brief Private implementation for CreateDistributionResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDistributionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDistributionResponse instance.
+ * Constructs a CreateDistributionResponsePrivate object with public implementation \a q.
  */
 CreateDistributionResponsePrivate::CreateDistributionResponsePrivate(
     CreateDistributionResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateDistributionResponsePrivate::CreateDistributionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront CreateDistributionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront CreateDistribution response element from \a xml.
  */
 void CreateDistributionResponsePrivate::parseCreateDistributionResponse(QXmlStreamReader &xml)
 {

@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * DeleteServerRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteServerRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteServerRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 DeleteServerRequestPrivate::DeleteServerRequestPrivate(
     const OpsWorksCMRequest::Action action, DeleteServerRequest * const q)

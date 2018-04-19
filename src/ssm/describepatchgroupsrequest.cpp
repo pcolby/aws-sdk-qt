@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribePatchGroupsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribePatchGroupsRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribePatchGroupsRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribePatchGroupsRequestPrivate::DescribePatchGroupsRequestPrivate(
     const SSMRequest::Action action, DescribePatchGroupsRequest * const q)

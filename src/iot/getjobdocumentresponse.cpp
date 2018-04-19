@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetJobDocumentResponse
- *
  * \brief The GetJobDocumentResponse class provides an interace for IoT GetJobDocument responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetJobDocumentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetJobDocumentResponse object for \a reply to \a request, with parent \a parent.
  */
 GetJobDocumentResponse::GetJobDocumentResponse(
         const GetJobDocumentRequest &request,
@@ -66,6 +61,9 @@ GetJobDocumentResponse::GetJobDocumentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetJobDocumentRequest * GetJobDocumentResponse::request() const
 {
     Q_D(const GetJobDocumentResponse);
@@ -73,9 +71,8 @@ const GetJobDocumentRequest * GetJobDocumentResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT GetJobDocument response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT GetJobDocument \a response.
  */
 void GetJobDocumentResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetJobDocumentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::GetJobDocumentResponsePrivate
+ * \brief The GetJobDocumentResponsePrivate class provides private implementation for GetJobDocumentResponse.
  * \internal
  *
- * \class GetJobDocumentResponsePrivate
- *
- * \brief Private implementation for GetJobDocumentResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobDocumentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetJobDocumentResponse instance.
+ * Constructs a GetJobDocumentResponsePrivate object with public implementation \a q.
  */
 GetJobDocumentResponsePrivate::GetJobDocumentResponsePrivate(
     GetJobDocumentResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ GetJobDocumentResponsePrivate::GetJobDocumentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT GetJobDocumentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT GetJobDocument response element from \a xml.
  */
 void GetJobDocumentResponsePrivate::parseGetJobDocumentResponse(QXmlStreamReader &xml)
 {

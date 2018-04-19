@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteFunctionRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteFunctionRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a DeleteFunctionRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 DeleteFunctionRequestPrivate::DeleteFunctionRequestPrivate(
     const LambdaRequest::Action action, DeleteFunctionRequest * const q)

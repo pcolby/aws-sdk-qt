@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * CreateSubscriberRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateSubscriberRequestPrivate object for Budgets \a action with,
- * public implementation \a q.
+ * Constructs a CreateSubscriberRequestPrivate object for Budgets \a action,
+ * with public implementation \a q.
  */
 CreateSubscriberRequestPrivate::CreateSubscriberRequestPrivate(
     const BudgetsRequest::Action action, CreateSubscriberRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreatePlatformEndpointResponse : public SNSResponse {
 public:
     CreatePlatformEndpointResponse(const CreatePlatformEndpointRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreatePlatformEndpointRequest * request() const;
+    virtual const CreatePlatformEndpointRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreatePlatformEndpointResponse)

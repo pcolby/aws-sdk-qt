@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::CreatePublicDnsNamespaceResponse
- *
  * \brief The CreatePublicDnsNamespaceResponse class provides an interace for ServiceDiscovery CreatePublicDnsNamespace responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new CreatePublicDnsNamespaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePublicDnsNamespaceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePublicDnsNamespaceResponse::CreatePublicDnsNamespaceResponse(
         const CreatePublicDnsNamespaceRequest &request,
@@ -59,6 +54,9 @@ CreatePublicDnsNamespaceResponse::CreatePublicDnsNamespaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePublicDnsNamespaceRequest * CreatePublicDnsNamespaceResponse::request() const
 {
     Q_D(const CreatePublicDnsNamespaceResponse);
@@ -66,9 +64,8 @@ const CreatePublicDnsNamespaceRequest * CreatePublicDnsNamespaceResponse::reques
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery CreatePublicDnsNamespace response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery CreatePublicDnsNamespace \a response.
  */
 void CreatePublicDnsNamespaceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreatePublicDnsNamespaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::CreatePublicDnsNamespaceResponsePrivate
+ * \brief The CreatePublicDnsNamespaceResponsePrivate class provides private implementation for CreatePublicDnsNamespaceResponse.
  * \internal
  *
- * \class CreatePublicDnsNamespaceResponsePrivate
- *
- * \brief Private implementation for CreatePublicDnsNamespaceResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePublicDnsNamespaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePublicDnsNamespaceResponse instance.
+ * Constructs a CreatePublicDnsNamespaceResponsePrivate object with public implementation \a q.
  */
 CreatePublicDnsNamespaceResponsePrivate::CreatePublicDnsNamespaceResponsePrivate(
     CreatePublicDnsNamespaceResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ CreatePublicDnsNamespaceResponsePrivate::CreatePublicDnsNamespaceResponsePrivate
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery CreatePublicDnsNamespaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery CreatePublicDnsNamespace response element from \a xml.
  */
 void CreatePublicDnsNamespaceResponsePrivate::parseCreatePublicDnsNamespaceResponse(QXmlStreamReader &xml)
 {

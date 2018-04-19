@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * CreateBuildRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateBuildRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a CreateBuildRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 CreateBuildRequestPrivate::CreateBuildRequestPrivate(
     const GameLiftRequest::Action action, CreateBuildRequest * const q)

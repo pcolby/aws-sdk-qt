@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * BatchStopJobRunRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a BatchStopJobRunRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a BatchStopJobRunRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 BatchStopJobRunRequestPrivate::BatchStopJobRunRequestPrivate(
     const GlueRequest::Action action, BatchStopJobRunRequest * const q)

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::AddRoleToInstanceProfileResponse
- *
  * \brief The AddRoleToInstanceProfileResponse class provides an interace for IAM AddRoleToInstanceProfile responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new AddRoleToInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddRoleToInstanceProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 AddRoleToInstanceProfileResponse::AddRoleToInstanceProfileResponse(
         const AddRoleToInstanceProfileRequest &request,
@@ -120,6 +115,9 @@ AddRoleToInstanceProfileResponse::AddRoleToInstanceProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddRoleToInstanceProfileRequest * AddRoleToInstanceProfileResponse::request() const
 {
     Q_D(const AddRoleToInstanceProfileResponse);
@@ -127,9 +125,8 @@ const AddRoleToInstanceProfileRequest * AddRoleToInstanceProfileResponse::reques
 }
 
 /*!
- * @brief  Parse a IAM AddRoleToInstanceProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM AddRoleToInstanceProfile \a response.
  */
 void AddRoleToInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void AddRoleToInstanceProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::AddRoleToInstanceProfileResponsePrivate
+ * \brief The AddRoleToInstanceProfileResponsePrivate class provides private implementation for AddRoleToInstanceProfileResponse.
  * \internal
  *
- * \class AddRoleToInstanceProfileResponsePrivate
- *
- * \brief Private implementation for AddRoleToInstanceProfileResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddRoleToInstanceProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddRoleToInstanceProfileResponse instance.
+ * Constructs a AddRoleToInstanceProfileResponsePrivate object with public implementation \a q.
  */
 AddRoleToInstanceProfileResponsePrivate::AddRoleToInstanceProfileResponsePrivate(
     AddRoleToInstanceProfileResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ AddRoleToInstanceProfileResponsePrivate::AddRoleToInstanceProfileResponsePrivate
 }
 
 /*!
- * @brief  Parse an IAM AddRoleToInstanceProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM AddRoleToInstanceProfile response element from \a xml.
  */
 void AddRoleToInstanceProfileResponsePrivate::parseAddRoleToInstanceProfileResponse(QXmlStreamReader &xml)
 {

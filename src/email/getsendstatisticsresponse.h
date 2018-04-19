@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSendStatisticsResponse : public SESResponse {
 public:
     GetSendStatisticsResponse(const GetSendStatisticsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSendStatisticsRequest * request() const;
+    virtual const GetSendStatisticsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSendStatisticsResponse)

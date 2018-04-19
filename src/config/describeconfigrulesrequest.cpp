@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigRulesRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeConfigRulesRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeConfigRulesRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DescribeConfigRulesRequestPrivate::DescribeConfigRulesRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigRulesRequest * const q)

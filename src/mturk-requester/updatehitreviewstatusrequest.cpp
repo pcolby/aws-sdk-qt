@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateHITReviewStatusRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a UpdateHITReviewStatusRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a UpdateHITReviewStatusRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 UpdateHITReviewStatusRequestPrivate::UpdateHITReviewStatusRequestPrivate(
     const MTurkRequest::Action action, UpdateHITReviewStatusRequest * const q)

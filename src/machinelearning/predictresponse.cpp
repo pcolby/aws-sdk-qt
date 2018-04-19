@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::PredictResponse
- *
  * \brief The PredictResponse class provides an interace for MachineLearning Predict responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::predict
  */
 
 /*!
- * @brief  Constructs a new PredictResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PredictResponse object for \a reply to \a request, with parent \a parent.
  */
 PredictResponse::PredictResponse(
         const PredictRequest &request,
@@ -55,6 +50,9 @@ PredictResponse::PredictResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PredictRequest * PredictResponse::request() const
 {
     Q_D(const PredictResponse);
@@ -62,9 +60,8 @@ const PredictRequest * PredictResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning Predict response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning Predict \a response.
  */
 void PredictResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PredictResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::PredictResponsePrivate
+ * \brief The PredictResponsePrivate class provides private implementation for PredictResponse.
  * \internal
  *
- * \class PredictResponsePrivate
- *
- * \brief Private implementation for PredictResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PredictResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PredictResponse instance.
+ * Constructs a PredictResponsePrivate object with public implementation \a q.
  */
 PredictResponsePrivate::PredictResponsePrivate(
     PredictResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ PredictResponsePrivate::PredictResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning PredictResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning Predict response element from \a xml.
  */
 void PredictResponsePrivate::parsePredictResponse(QXmlStreamReader &xml)
 {

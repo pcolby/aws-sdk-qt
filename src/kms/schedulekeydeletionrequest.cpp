@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * ScheduleKeyDeletionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ScheduleKeyDeletionRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a ScheduleKeyDeletionRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 ScheduleKeyDeletionRequestPrivate::ScheduleKeyDeletionRequestPrivate(
     const KMSRequest::Action action, ScheduleKeyDeletionRequest * const q)

@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::GetLoggingOptionsResponse
- *
  * \brief The GetLoggingOptionsResponse class provides an interace for IoT GetLoggingOptions responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new GetLoggingOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetLoggingOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetLoggingOptionsResponse::GetLoggingOptionsResponse(
         const GetLoggingOptionsRequest &request,
@@ -66,6 +61,9 @@ GetLoggingOptionsResponse::GetLoggingOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetLoggingOptionsRequest * GetLoggingOptionsResponse::request() const
 {
     Q_D(const GetLoggingOptionsResponse);
@@ -73,9 +71,8 @@ const GetLoggingOptionsRequest * GetLoggingOptionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT GetLoggingOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT GetLoggingOptions \a response.
  */
 void GetLoggingOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetLoggingOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::GetLoggingOptionsResponsePrivate
+ * \brief The GetLoggingOptionsResponsePrivate class provides private implementation for GetLoggingOptionsResponse.
  * \internal
  *
- * \class GetLoggingOptionsResponsePrivate
- *
- * \brief Private implementation for GetLoggingOptionsResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLoggingOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetLoggingOptionsResponse instance.
+ * Constructs a GetLoggingOptionsResponsePrivate object with public implementation \a q.
  */
 GetLoggingOptionsResponsePrivate::GetLoggingOptionsResponsePrivate(
     GetLoggingOptionsResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ GetLoggingOptionsResponsePrivate::GetLoggingOptionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT GetLoggingOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT GetLoggingOptions response element from \a xml.
  */
 void GetLoggingOptionsResponsePrivate::parseGetLoggingOptionsResponse(QXmlStreamReader &xml)
 {

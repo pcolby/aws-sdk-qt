@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetMLModelResponse : public MachineLearningResponse {
 public:
     GetMLModelResponse(const GetMLModelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetMLModelRequest * request() const;
+    virtual const GetMLModelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetMLModelResponse)

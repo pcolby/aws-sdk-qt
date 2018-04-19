@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * ListFileSharesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ListFileSharesRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a ListFileSharesRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 ListFileSharesRequestPrivate::ListFileSharesRequestPrivate(
     const StorageGatewayRequest::Action action, ListFileSharesRequest * const q)

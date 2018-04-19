@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetResourcesResponse
- *
  * \brief The GetResourcesResponse class provides an interace for APIGateway GetResources responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetResourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetResourcesResponse::GetResourcesResponse(
         const GetResourcesRequest &request,
@@ -60,6 +55,9 @@ GetResourcesResponse::GetResourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetResourcesRequest * GetResourcesResponse::request() const
 {
     Q_D(const GetResourcesResponse);
@@ -67,9 +65,8 @@ const GetResourcesRequest * GetResourcesResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetResources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetResources \a response.
  */
 void GetResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetResourcesResponsePrivate
+ * \brief The GetResourcesResponsePrivate class provides private implementation for GetResourcesResponse.
  * \internal
  *
- * \class GetResourcesResponsePrivate
- *
- * \brief Private implementation for GetResourcesResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetResourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetResourcesResponse instance.
+ * Constructs a GetResourcesResponsePrivate object with public implementation \a q.
  */
 GetResourcesResponsePrivate::GetResourcesResponsePrivate(
     GetResourcesResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetResourcesResponsePrivate::GetResourcesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetResourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetResources response element from \a xml.
  */
 void GetResourcesResponsePrivate::parseGetResourcesResponse(QXmlStreamReader &xml)
 {

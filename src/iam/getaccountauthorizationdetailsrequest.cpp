@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * GetAccountAuthorizationDetailsRequest::respon
  */
 
 /*!
- *
- * Constructs a GetAccountAuthorizationDetailsRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a GetAccountAuthorizationDetailsRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 GetAccountAuthorizationDetailsRequestPrivate::GetAccountAuthorizationDetailsRequestPrivate(
     const IAMRequest::Action action, GetAccountAuthorizationDetailsRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteLifecyclePolicyResponse : public ECRResponse {
 public:
     DeleteLifecyclePolicyResponse(const DeleteLifecyclePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteLifecyclePolicyRequest * request() const;
+    virtual const DeleteLifecyclePolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteLifecyclePolicyResponse)

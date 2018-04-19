@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * PutLifecycleHookRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a PutLifecycleHookRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a PutLifecycleHookRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 PutLifecycleHookRequestPrivate::PutLifecycleHookRequestPrivate(
     const AutoScalingRequest::Action action, PutLifecycleHookRequest * const q)

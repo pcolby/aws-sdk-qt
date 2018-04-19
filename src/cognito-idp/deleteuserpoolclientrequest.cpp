@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * DeleteUserPoolClientRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteUserPoolClientRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a DeleteUserPoolClientRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 DeleteUserPoolClientRequestPrivate::DeleteUserPoolClientRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, DeleteUserPoolClientRequest * const q)

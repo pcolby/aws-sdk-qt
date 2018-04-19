@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::ListShardsResponse
- *
  * \brief The ListShardsResponse class provides an interace for Kinesis ListShards responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new ListShardsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListShardsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListShardsResponse::ListShardsResponse(
         const ListShardsRequest &request,
@@ -58,6 +53,9 @@ ListShardsResponse::ListShardsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListShardsRequest * ListShardsResponse::request() const
 {
     Q_D(const ListShardsResponse);
@@ -65,9 +63,8 @@ const ListShardsRequest * ListShardsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis ListShards response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis ListShards \a response.
  */
 void ListShardsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListShardsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::ListShardsResponsePrivate
+ * \brief The ListShardsResponsePrivate class provides private implementation for ListShardsResponse.
  * \internal
  *
- * \class ListShardsResponsePrivate
- *
- * \brief Private implementation for ListShardsResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListShardsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListShardsResponse instance.
+ * Constructs a ListShardsResponsePrivate object with public implementation \a q.
  */
 ListShardsResponsePrivate::ListShardsResponsePrivate(
     ListShardsResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ ListShardsResponsePrivate::ListShardsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis ListShardsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis ListShards response element from \a xml.
  */
 void ListShardsResponsePrivate::parseListShardsResponse(QXmlStreamReader &xml)
 {

@@ -33,11 +33,11 @@ public:
     ConfirmSignUpRequest(const ConfirmSignUpRequest &other);
     ConfirmSignUpRequest();
 
-    virtual bool isValid() const;
+    virtual bool isValid() const override;
 
 
 protected:
-    virtual QtAws::Core::AwsAbstractResponse * response(QNetworkReply * const reply) const;
+    virtual QtAws::Core::AwsAbstractResponse * response(QNetworkReply * const reply) const override;
 
 private:
     Q_DECLARE_PRIVATE(ConfirmSignUpRequest)

@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetOperationsForResourceResponse
- *
  * \brief The GetOperationsForResourceResponse class provides an interace for Lightsail GetOperationsForResource responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetOperationsForResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetOperationsForResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 GetOperationsForResourceResponse::GetOperationsForResourceResponse(
         const GetOperationsForResourceRequest &request,
@@ -71,6 +66,9 @@ GetOperationsForResourceResponse::GetOperationsForResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetOperationsForResourceRequest * GetOperationsForResourceResponse::request() const
 {
     Q_D(const GetOperationsForResourceResponse);
@@ -78,9 +76,8 @@ const GetOperationsForResourceRequest * GetOperationsForResourceResponse::reques
 }
 
 /*!
- * @brief  Parse a Lightsail GetOperationsForResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetOperationsForResource \a response.
  */
 void GetOperationsForResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetOperationsForResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetOperationsForResourceResponsePrivate
+ * \brief The GetOperationsForResourceResponsePrivate class provides private implementation for GetOperationsForResourceResponse.
  * \internal
  *
- * \class GetOperationsForResourceResponsePrivate
- *
- * \brief Private implementation for GetOperationsForResourceResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOperationsForResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetOperationsForResourceResponse instance.
+ * Constructs a GetOperationsForResourceResponsePrivate object with public implementation \a q.
  */
 GetOperationsForResourceResponsePrivate::GetOperationsForResourceResponsePrivate(
     GetOperationsForResourceResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetOperationsForResourceResponsePrivate::GetOperationsForResourceResponsePrivate
 }
 
 /*!
- * @brief  Parse an Lightsail GetOperationsForResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetOperationsForResource response element from \a xml.
  */
 void GetOperationsForResourceResponsePrivate::parseGetOperationsForResourceResponse(QXmlStreamReader &xml)
 {

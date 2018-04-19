@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVTLDevicesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeVTLDevicesRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVTLDevicesRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DescribeVTLDevicesRequestPrivate::DescribeVTLDevicesRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeVTLDevicesRequest * const q)

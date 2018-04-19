@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentManagedActionHistoryResponse
- *
  * \brief The DescribeEnvironmentManagedActionHistoryResponse class provides an interace for ElasticBeanstalk DescribeEnvironmentManagedActionHistory responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEnvironmentManagedActionHistoryResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEnvironmentManagedActionHistoryResponse::DescribeEnvironmentManagedActionHistoryResponse(
         const DescribeEnvironmentManagedActionHistoryRequest &request,
@@ -77,6 +72,9 @@ DescribeEnvironmentManagedActionHistoryResponse::DescribeEnvironmentManagedActio
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEnvironmentManagedActionHistoryRequest * DescribeEnvironmentManagedActionHistoryResponse::request() const
 {
     Q_D(const DescribeEnvironmentManagedActionHistoryResponse);
@@ -84,9 +82,8 @@ const DescribeEnvironmentManagedActionHistoryRequest * DescribeEnvironmentManage
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DescribeEnvironmentManagedActionHistory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DescribeEnvironmentManagedActionHistory \a response.
  */
 void DescribeEnvironmentManagedActionHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribeEnvironmentManagedActionHistoryResponse::parseSuccess(QIODevice &re
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DescribeEnvironmentManagedActionHistoryResponsePrivate
+ * \brief The DescribeEnvironmentManagedActionHistoryResponsePrivate class provides private implementation for DescribeEnvironmentManagedActionHistoryResponse.
  * \internal
  *
- * \class DescribeEnvironmentManagedActionHistoryResponsePrivate
- *
- * \brief Private implementation for DescribeEnvironmentManagedActionHistoryResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentManagedActionHistoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEnvironmentManagedActionHistoryResponse instance.
+ * Constructs a DescribeEnvironmentManagedActionHistoryResponsePrivate object with public implementation \a q.
  */
 DescribeEnvironmentManagedActionHistoryResponsePrivate::DescribeEnvironmentManagedActionHistoryResponsePrivate(
     DescribeEnvironmentManagedActionHistoryResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribeEnvironmentManagedActionHistoryResponsePrivate::DescribeEnvironmentManag
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DescribeEnvironmentManagedActionHistoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DescribeEnvironmentManagedActionHistory response element from \a xml.
  */
 void DescribeEnvironmentManagedActionHistoryResponsePrivate::parseDescribeEnvironmentManagedActionHistoryResponse(QXmlStreamReader &xml)
 {

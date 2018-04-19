@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::DeleteJobTemplateResponse
- *
  * \brief The DeleteJobTemplateResponse class provides an interace for MediaConvert DeleteJobTemplate responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::deleteJobTemplate
  */
 
 /*!
- * @brief  Constructs a new DeleteJobTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteJobTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteJobTemplateResponse::DeleteJobTemplateResponse(
         const DeleteJobTemplateRequest &request,
@@ -55,6 +50,9 @@ DeleteJobTemplateResponse::DeleteJobTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteJobTemplateRequest * DeleteJobTemplateResponse::request() const
 {
     Q_D(const DeleteJobTemplateResponse);
@@ -62,9 +60,8 @@ const DeleteJobTemplateRequest * DeleteJobTemplateResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert DeleteJobTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert DeleteJobTemplate \a response.
  */
 void DeleteJobTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteJobTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::DeleteJobTemplateResponsePrivate
+ * \brief The DeleteJobTemplateResponsePrivate class provides private implementation for DeleteJobTemplateResponse.
  * \internal
  *
- * \class DeleteJobTemplateResponsePrivate
- *
- * \brief Private implementation for DeleteJobTemplateResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteJobTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteJobTemplateResponse instance.
+ * Constructs a DeleteJobTemplateResponsePrivate object with public implementation \a q.
  */
 DeleteJobTemplateResponsePrivate::DeleteJobTemplateResponsePrivate(
     DeleteJobTemplateResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteJobTemplateResponsePrivate::DeleteJobTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert DeleteJobTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert DeleteJobTemplate response element from \a xml.
  */
 void DeleteJobTemplateResponsePrivate::parseDeleteJobTemplateResponse(QXmlStreamReader &xml)
 {

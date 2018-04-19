@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * RemoveIpRoutesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a RemoveIpRoutesRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a RemoveIpRoutesRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 RemoveIpRoutesRequestPrivate::RemoveIpRoutesRequestPrivate(
     const DirectoryServiceRequest::Action action, RemoveIpRoutesRequest * const q)

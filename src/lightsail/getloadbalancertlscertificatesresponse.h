@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetLoadBalancerTlsCertificatesResponse : public LightsailResp
 public:
     GetLoadBalancerTlsCertificatesResponse(const GetLoadBalancerTlsCertificatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetLoadBalancerTlsCertificatesRequest * request() const;
+    virtual const GetLoadBalancerTlsCertificatesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetLoadBalancerTlsCertificatesResponse)

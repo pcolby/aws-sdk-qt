@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * GetCurrentUserRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetCurrentUserRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a GetCurrentUserRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 GetCurrentUserRequestPrivate::GetCurrentUserRequestPrivate(
     const WorkDocsRequest::Action action, GetCurrentUserRequest * const q)

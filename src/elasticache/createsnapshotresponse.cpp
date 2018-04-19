@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::CreateSnapshotResponse
- *
  * \brief The CreateSnapshotResponse class provides an interace for ElastiCache CreateSnapshot responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new CreateSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSnapshotResponse::CreateSnapshotResponse(
         const CreateSnapshotRequest &request,
@@ -69,6 +64,9 @@ CreateSnapshotResponse::CreateSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSnapshotRequest * CreateSnapshotResponse::request() const
 {
     Q_D(const CreateSnapshotResponse);
@@ -76,9 +74,8 @@ const CreateSnapshotRequest * CreateSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElastiCache CreateSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache CreateSnapshot \a response.
  */
 void CreateSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::CreateSnapshotResponsePrivate
+ * \brief The CreateSnapshotResponsePrivate class provides private implementation for CreateSnapshotResponse.
  * \internal
  *
- * \class CreateSnapshotResponsePrivate
- *
- * \brief Private implementation for CreateSnapshotResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSnapshotResponse instance.
+ * Constructs a CreateSnapshotResponsePrivate object with public implementation \a q.
  */
 CreateSnapshotResponsePrivate::CreateSnapshotResponsePrivate(
     CreateSnapshotResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateSnapshotResponsePrivate::CreateSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache CreateSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache CreateSnapshot response element from \a xml.
  */
 void CreateSnapshotResponsePrivate::parseCreateSnapshotResponse(QXmlStreamReader &xml)
 {

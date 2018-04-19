@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * PutIntegrationRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a PutIntegrationRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a PutIntegrationRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 PutIntegrationRequestPrivate::PutIntegrationRequestPrivate(
     const APIGatewayRequest::Action action, PutIntegrationRequest * const q)

@@ -29,10 +29,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::ListEnvironmentsResponse
- *
  * \brief The ListEnvironmentsResponse class provides an interace for Cloud9 ListEnvironments responses.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -93,11 +92,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new ListEnvironmentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListEnvironmentsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListEnvironmentsResponse::ListEnvironmentsResponse(
         const ListEnvironmentsRequest &request,
@@ -109,6 +104,9 @@ ListEnvironmentsResponse::ListEnvironmentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListEnvironmentsRequest * ListEnvironmentsResponse::request() const
 {
     Q_D(const ListEnvironmentsResponse);
@@ -116,9 +114,8 @@ const ListEnvironmentsRequest * ListEnvironmentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Cloud9 ListEnvironments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Cloud9 ListEnvironments \a response.
  */
 void ListEnvironmentsResponse::parseSuccess(QIODevice &response)
 {
@@ -128,19 +125,15 @@ void ListEnvironmentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Cloud9::ListEnvironmentsResponsePrivate
+ * \brief The ListEnvironmentsResponsePrivate class provides private implementation for ListEnvironmentsResponse.
  * \internal
  *
- * \class ListEnvironmentsResponsePrivate
- *
- * \brief Private implementation for ListEnvironmentsResponse.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListEnvironmentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListEnvironmentsResponse instance.
+ * Constructs a ListEnvironmentsResponsePrivate object with public implementation \a q.
  */
 ListEnvironmentsResponsePrivate::ListEnvironmentsResponsePrivate(
     ListEnvironmentsResponse * const q) : Cloud9ResponsePrivate(q)
@@ -149,9 +142,7 @@ ListEnvironmentsResponsePrivate::ListEnvironmentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Cloud9 ListEnvironmentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Cloud9 ListEnvironments response element from \a xml.
  */
 void ListEnvironmentsResponsePrivate::parseListEnvironmentsResponse(QXmlStreamReader &xml)
 {

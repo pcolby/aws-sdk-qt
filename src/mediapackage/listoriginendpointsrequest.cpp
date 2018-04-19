@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListOriginEndpointsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListOriginEndpointsRequestPrivate object for MediaPackage \a action with,
- * public implementation \a q.
+ * Constructs a ListOriginEndpointsRequestPrivate object for MediaPackage \a action,
+ * with public implementation \a q.
  */
 ListOriginEndpointsRequestPrivate::ListOriginEndpointsRequestPrivate(
     const MediaPackageRequest::Action action, ListOriginEndpointsRequest * const q)

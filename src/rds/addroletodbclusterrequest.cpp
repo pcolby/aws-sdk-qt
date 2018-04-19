@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * AddRoleToDBClusterRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a AddRoleToDBClusterRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a AddRoleToDBClusterRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 AddRoleToDBClusterRequestPrivate::AddRoleToDBClusterRequestPrivate(
     const RDSRequest::Action action, AddRoleToDBClusterRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDimensionValuesResponse : public CostExplorerResponse {
 public:
     GetDimensionValuesResponse(const GetDimensionValuesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDimensionValuesRequest * request() const;
+    virtual const GetDimensionValuesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDimensionValuesResponse)

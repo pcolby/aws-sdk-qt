@@ -29,10 +29,9 @@ namespace ElasticLoadBalancing {
 
 /*!
  * \class QtAws::ElasticLoadBalancing::CreateLoadBalancerListenersResponse
- *
  * \brief The CreateLoadBalancerListenersResponse class provides an interace for ElasticLoadBalancing CreateLoadBalancerListeners responses.
  *
- * \ingroup ElasticLoadBalancing
+ * \inmodule QtAwsElasticLoadBalancing
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -67,11 +66,7 @@ namespace ElasticLoadBalancing {
  */
 
 /*!
- * @brief  Constructs a new CreateLoadBalancerListenersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLoadBalancerListenersResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLoadBalancerListenersResponse::CreateLoadBalancerListenersResponse(
         const CreateLoadBalancerListenersRequest &request,
@@ -83,6 +78,9 @@ CreateLoadBalancerListenersResponse::CreateLoadBalancerListenersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLoadBalancerListenersRequest * CreateLoadBalancerListenersResponse::request() const
 {
     Q_D(const CreateLoadBalancerListenersResponse);
@@ -90,9 +88,8 @@ const CreateLoadBalancerListenersRequest * CreateLoadBalancerListenersResponse::
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancing CreateLoadBalancerListeners response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancing CreateLoadBalancerListeners \a response.
  */
 void CreateLoadBalancerListenersResponse::parseSuccess(QIODevice &response)
 {
@@ -102,19 +99,15 @@ void CreateLoadBalancerListenersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancing::CreateLoadBalancerListenersResponsePrivate
+ * \brief The CreateLoadBalancerListenersResponsePrivate class provides private implementation for CreateLoadBalancerListenersResponse.
  * \internal
  *
- * \class CreateLoadBalancerListenersResponsePrivate
- *
- * \brief Private implementation for CreateLoadBalancerListenersResponse.
+ * \inmodule QtAwsElasticLoadBalancing
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLoadBalancerListenersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLoadBalancerListenersResponse instance.
+ * Constructs a CreateLoadBalancerListenersResponsePrivate object with public implementation \a q.
  */
 CreateLoadBalancerListenersResponsePrivate::CreateLoadBalancerListenersResponsePrivate(
     CreateLoadBalancerListenersResponse * const q) : ElasticLoadBalancingResponsePrivate(q)
@@ -123,9 +116,7 @@ CreateLoadBalancerListenersResponsePrivate::CreateLoadBalancerListenersResponseP
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancing CreateLoadBalancerListenersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancing CreateLoadBalancerListeners response element from \a xml.
  */
 void CreateLoadBalancerListenersResponsePrivate::parseCreateLoadBalancerListenersResponse(QXmlStreamReader &xml)
 {

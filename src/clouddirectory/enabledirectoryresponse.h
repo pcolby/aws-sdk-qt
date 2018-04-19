@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableDirectoryResponse : public CloudDirectoryResponse {
 public:
     EnableDirectoryResponse(const EnableDirectoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableDirectoryRequest * request() const;
+    virtual const EnableDirectoryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EnableDirectoryResponse)

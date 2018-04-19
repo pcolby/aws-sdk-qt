@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::DeprecateActivityTypeResponse
- *
  * \brief The DeprecateActivityTypeResponse class provides an interace for SWF DeprecateActivityType responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new DeprecateActivityTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeprecateActivityTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeprecateActivityTypeResponse::DeprecateActivityTypeResponse(
         const DeprecateActivityTypeRequest &request,
@@ -71,6 +66,9 @@ DeprecateActivityTypeResponse::DeprecateActivityTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeprecateActivityTypeRequest * DeprecateActivityTypeResponse::request() const
 {
     Q_D(const DeprecateActivityTypeResponse);
@@ -78,9 +76,8 @@ const DeprecateActivityTypeRequest * DeprecateActivityTypeResponse::request() co
 }
 
 /*!
- * @brief  Parse a SWF DeprecateActivityType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF DeprecateActivityType \a response.
  */
 void DeprecateActivityTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DeprecateActivityTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::DeprecateActivityTypeResponsePrivate
+ * \brief The DeprecateActivityTypeResponsePrivate class provides private implementation for DeprecateActivityTypeResponse.
  * \internal
  *
- * \class DeprecateActivityTypeResponsePrivate
- *
- * \brief Private implementation for DeprecateActivityTypeResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeprecateActivityTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeprecateActivityTypeResponse instance.
+ * Constructs a DeprecateActivityTypeResponsePrivate object with public implementation \a q.
  */
 DeprecateActivityTypeResponsePrivate::DeprecateActivityTypeResponsePrivate(
     DeprecateActivityTypeResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ DeprecateActivityTypeResponsePrivate::DeprecateActivityTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF DeprecateActivityTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF DeprecateActivityType response element from \a xml.
  */
 void DeprecateActivityTypeResponsePrivate::parseDeprecateActivityTypeResponse(QXmlStreamReader &xml)
 {

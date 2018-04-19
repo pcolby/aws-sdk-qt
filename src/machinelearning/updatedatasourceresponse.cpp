@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::UpdateDataSourceResponse
- *
  * \brief The UpdateDataSourceResponse class provides an interace for MachineLearning UpdateDataSource responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::updateDataSource
  */
 
 /*!
- * @brief  Constructs a new UpdateDataSourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDataSourceResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDataSourceResponse::UpdateDataSourceResponse(
         const UpdateDataSourceRequest &request,
@@ -55,6 +50,9 @@ UpdateDataSourceResponse::UpdateDataSourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDataSourceRequest * UpdateDataSourceResponse::request() const
 {
     Q_D(const UpdateDataSourceResponse);
@@ -62,9 +60,8 @@ const UpdateDataSourceRequest * UpdateDataSourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning UpdateDataSource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning UpdateDataSource \a response.
  */
 void UpdateDataSourceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateDataSourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::UpdateDataSourceResponsePrivate
+ * \brief The UpdateDataSourceResponsePrivate class provides private implementation for UpdateDataSourceResponse.
  * \internal
  *
- * \class UpdateDataSourceResponsePrivate
- *
- * \brief Private implementation for UpdateDataSourceResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDataSourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDataSourceResponse instance.
+ * Constructs a UpdateDataSourceResponsePrivate object with public implementation \a q.
  */
 UpdateDataSourceResponsePrivate::UpdateDataSourceResponsePrivate(
     UpdateDataSourceResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateDataSourceResponsePrivate::UpdateDataSourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning UpdateDataSourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning UpdateDataSource response element from \a xml.
  */
 void UpdateDataSourceResponsePrivate::parseUpdateDataSourceResponse(QXmlStreamReader &xml)
 {

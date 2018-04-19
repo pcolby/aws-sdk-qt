@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachInstancesFromLoadBalancerResponse : public LightsailRes
 public:
     DetachInstancesFromLoadBalancerResponse(const DetachInstancesFromLoadBalancerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachInstancesFromLoadBalancerRequest * request() const;
+    virtual const DetachInstancesFromLoadBalancerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DetachInstancesFromLoadBalancerResponse)

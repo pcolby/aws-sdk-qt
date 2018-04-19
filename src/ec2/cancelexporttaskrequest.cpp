@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CancelExportTaskRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CancelExportTaskRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CancelExportTaskRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
     const EC2Request::Action action, CancelExportTaskRequest * const q)

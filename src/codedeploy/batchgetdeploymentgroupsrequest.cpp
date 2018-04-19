@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * BatchGetDeploymentGroupsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a BatchGetDeploymentGroupsRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a BatchGetDeploymentGroupsRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 BatchGetDeploymentGroupsRequestPrivate::BatchGetDeploymentGroupsRequestPrivate(
     const CodeDeployRequest::Action action, BatchGetDeploymentGroupsRequest * const q)

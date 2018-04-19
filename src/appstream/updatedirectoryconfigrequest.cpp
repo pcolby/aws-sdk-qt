@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDirectoryConfigRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a UpdateDirectoryConfigRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDirectoryConfigRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 UpdateDirectoryConfigRequestPrivate::UpdateDirectoryConfigRequestPrivate(
     const AppStreamRequest::Action action, UpdateDirectoryConfigRequest * const q)

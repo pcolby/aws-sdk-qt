@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * AuthorizeClusterSecurityGroupIngressRequest::
  */
 
 /*!
- *
- * Constructs a AuthorizeClusterSecurityGroupIngressRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a AuthorizeClusterSecurityGroupIngressRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 AuthorizeClusterSecurityGroupIngressRequestPrivate::AuthorizeClusterSecurityGroupIngressRequestPrivate(
     const RedshiftRequest::Action action, AuthorizeClusterSecurityGroupIngressRequest * const q)

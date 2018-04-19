@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::CreateFolderResponse
- *
  * \brief The CreateFolderResponse class provides an interace for WorkDocs CreateFolder responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new CreateFolderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateFolderResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateFolderResponse::CreateFolderResponse(
         const CreateFolderRequest &request,
@@ -84,6 +79,9 @@ CreateFolderResponse::CreateFolderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateFolderRequest * CreateFolderResponse::request() const
 {
     Q_D(const CreateFolderResponse);
@@ -91,9 +89,8 @@ const CreateFolderRequest * CreateFolderResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs CreateFolder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs CreateFolder \a response.
  */
 void CreateFolderResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void CreateFolderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::CreateFolderResponsePrivate
+ * \brief The CreateFolderResponsePrivate class provides private implementation for CreateFolderResponse.
  * \internal
  *
- * \class CreateFolderResponsePrivate
- *
- * \brief Private implementation for CreateFolderResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFolderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateFolderResponse instance.
+ * Constructs a CreateFolderResponsePrivate object with public implementation \a q.
  */
 CreateFolderResponsePrivate::CreateFolderResponsePrivate(
     CreateFolderResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ CreateFolderResponsePrivate::CreateFolderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs CreateFolderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs CreateFolder response element from \a xml.
  */
 void CreateFolderResponsePrivate::parseCreateFolderResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateDeploymentResponse
- *
  * \brief The UpdateDeploymentResponse class provides an interace for APIGateway UpdateDeployment responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateDeploymentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDeploymentResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDeploymentResponse::UpdateDeploymentResponse(
         const UpdateDeploymentRequest &request,
@@ -60,6 +55,9 @@ UpdateDeploymentResponse::UpdateDeploymentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDeploymentRequest * UpdateDeploymentResponse::request() const
 {
     Q_D(const UpdateDeploymentResponse);
@@ -67,9 +65,8 @@ const UpdateDeploymentRequest * UpdateDeploymentResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateDeployment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateDeployment \a response.
  */
 void UpdateDeploymentResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateDeploymentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateDeploymentResponsePrivate
+ * \brief The UpdateDeploymentResponsePrivate class provides private implementation for UpdateDeploymentResponse.
  * \internal
  *
- * \class UpdateDeploymentResponsePrivate
- *
- * \brief Private implementation for UpdateDeploymentResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDeploymentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDeploymentResponse instance.
+ * Constructs a UpdateDeploymentResponsePrivate object with public implementation \a q.
  */
 UpdateDeploymentResponsePrivate::UpdateDeploymentResponsePrivate(
     UpdateDeploymentResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateDeploymentResponsePrivate::UpdateDeploymentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateDeploymentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateDeployment response element from \a xml.
  */
 void UpdateDeploymentResponsePrivate::parseUpdateDeploymentResponse(QXmlStreamReader &xml)
 {

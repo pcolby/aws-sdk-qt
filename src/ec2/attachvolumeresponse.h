@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachVolumeResponse : public EC2Response {
 public:
     AttachVolumeResponse(const AttachVolumeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachVolumeRequest * request() const;
+    virtual const AttachVolumeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AttachVolumeResponse)

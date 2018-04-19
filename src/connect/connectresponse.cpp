@@ -28,16 +28,13 @@ namespace Connect {
 
 /*!
  * \class QtAws::Connect::ConnectResponse
- *
  * \brief The ConnectResponse class provides an interface for Connect responses.
  *
- * \ingroup Connect
+ * \inmodule QtAwsConnect
  */
 
 /*!
- * @brief  Constructs a new ConnectResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ConnectResponse object with parent \a parent.
  */
 ConnectResponse::ConnectResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ConnectResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ConnectResponse::ConnectResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConnectResponse object.
- *
+ * \internal
+ * Constructs a ConnectResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ConnectResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ConnectResponse::ConnectResponse(ConnectResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ConnectResponse::ConnectResponse(ConnectResponsePrivate * const d, QObject * con
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ConnectResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ConnectResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Connect::ConnectResponsePrivate
+ * \brief The ConnectResponsePrivate class provides private implementation for ConnectResponse.
+ * \internal
  *
- * @class  ConnectResponsePrivate
- *
- * @brief  Private implementation for ConnectResponse.
+ * \inmodule QtAwsConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConnectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ConnectResponse instance.
+ * Constructs a ConnectResponsePrivate object with public implementation \a q.
  */
 ConnectResponsePrivate::ConnectResponsePrivate(
     ConnectResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

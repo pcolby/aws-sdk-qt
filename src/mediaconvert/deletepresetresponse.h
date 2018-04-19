@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeletePresetResponse : public MediaConvertResponse {
 public:
     DeletePresetResponse(const DeletePresetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeletePresetRequest * request() const;
+    virtual const DeletePresetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeletePresetResponse)

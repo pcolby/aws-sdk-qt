@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::GetJobTemplateResponse
- *
  * \brief The GetJobTemplateResponse class provides an interace for MediaConvert GetJobTemplate responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::getJobTemplate
  */
 
 /*!
- * @brief  Constructs a new GetJobTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetJobTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 GetJobTemplateResponse::GetJobTemplateResponse(
         const GetJobTemplateRequest &request,
@@ -55,6 +50,9 @@ GetJobTemplateResponse::GetJobTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetJobTemplateRequest * GetJobTemplateResponse::request() const
 {
     Q_D(const GetJobTemplateResponse);
@@ -62,9 +60,8 @@ const GetJobTemplateRequest * GetJobTemplateResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert GetJobTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert GetJobTemplate \a response.
  */
 void GetJobTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetJobTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::GetJobTemplateResponsePrivate
+ * \brief The GetJobTemplateResponsePrivate class provides private implementation for GetJobTemplateResponse.
  * \internal
  *
- * \class GetJobTemplateResponsePrivate
- *
- * \brief Private implementation for GetJobTemplateResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetJobTemplateResponse instance.
+ * Constructs a GetJobTemplateResponsePrivate object with public implementation \a q.
  */
 GetJobTemplateResponsePrivate::GetJobTemplateResponsePrivate(
     GetJobTemplateResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ GetJobTemplateResponsePrivate::GetJobTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert GetJobTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert GetJobTemplate response element from \a xml.
  */
 void GetJobTemplateResponsePrivate::parseGetJobTemplateResponse(QXmlStreamReader &xml)
 {

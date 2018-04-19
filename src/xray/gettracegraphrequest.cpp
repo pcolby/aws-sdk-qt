@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetTraceGraphRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetTraceGraphRequestPrivate object for XRay \a action with,
- * public implementation \a q.
+ * Constructs a GetTraceGraphRequestPrivate object for XRay \a action,
+ * with public implementation \a q.
  */
 GetTraceGraphRequestPrivate::GetTraceGraphRequestPrivate(
     const XRayRequest::Action action, GetTraceGraphRequest * const q)

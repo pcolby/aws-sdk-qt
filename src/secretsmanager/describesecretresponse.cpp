@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::DescribeSecretResponse
- *
  * \brief The DescribeSecretResponse class provides an interace for SecretsManager DescribeSecret responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new DescribeSecretResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSecretResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSecretResponse::DescribeSecretResponse(
         const DescribeSecretRequest &request,
@@ -155,6 +150,9 @@ DescribeSecretResponse::DescribeSecretResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSecretRequest * DescribeSecretResponse::request() const
 {
     Q_D(const DescribeSecretResponse);
@@ -162,9 +160,8 @@ const DescribeSecretRequest * DescribeSecretResponse::request() const
 }
 
 /*!
- * @brief  Parse a SecretsManager DescribeSecret response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager DescribeSecret \a response.
  */
 void DescribeSecretResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void DescribeSecretResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::DescribeSecretResponsePrivate
+ * \brief The DescribeSecretResponsePrivate class provides private implementation for DescribeSecretResponse.
  * \internal
  *
- * \class DescribeSecretResponsePrivate
- *
- * \brief Private implementation for DescribeSecretResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSecretResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSecretResponse instance.
+ * Constructs a DescribeSecretResponsePrivate object with public implementation \a q.
  */
 DescribeSecretResponsePrivate::DescribeSecretResponsePrivate(
     DescribeSecretResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ DescribeSecretResponsePrivate::DescribeSecretResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SecretsManager DescribeSecretResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager DescribeSecret response element from \a xml.
  */
 void DescribeSecretResponsePrivate::parseDescribeSecretResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::CreateTapesResponse
- *
  * \brief The CreateTapesResponse class provides an interace for StorageGateway CreateTapes responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateTapesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTapesResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTapesResponse::CreateTapesResponse(
         const CreateTapesRequest &request,
@@ -124,6 +119,9 @@ CreateTapesResponse::CreateTapesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTapesRequest * CreateTapesResponse::request() const
 {
     Q_D(const CreateTapesResponse);
@@ -131,9 +129,8 @@ const CreateTapesRequest * CreateTapesResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway CreateTapes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway CreateTapes \a response.
  */
 void CreateTapesResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void CreateTapesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::CreateTapesResponsePrivate
+ * \brief The CreateTapesResponsePrivate class provides private implementation for CreateTapesResponse.
  * \internal
  *
- * \class CreateTapesResponsePrivate
- *
- * \brief Private implementation for CreateTapesResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTapesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTapesResponse instance.
+ * Constructs a CreateTapesResponsePrivate object with public implementation \a q.
  */
 CreateTapesResponsePrivate::CreateTapesResponsePrivate(
     CreateTapesResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ CreateTapesResponsePrivate::CreateTapesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway CreateTapesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway CreateTapes response element from \a xml.
  */
 void CreateTapesResponsePrivate::parseCreateTapesResponse(QXmlStreamReader &xml)
 {

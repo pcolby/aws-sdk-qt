@@ -29,10 +29,9 @@ namespace Athena {
 
 /*!
  * \class QtAws::Athena::ListQueryExecutionsResponse
- *
  * \brief The ListQueryExecutionsResponse class provides an interace for Athena ListQueryExecutions responses.
  *
- * \ingroup Athena
+ * \inmodule QtAwsAthena
  *
  *  Amazon Athena is an interactive query service that lets you use standard SQL to analyze data directly in Amazon S3. You
  *  can point Athena at your data in Amazon S3 and run ad-hoc queries and get results in seconds. Athena is serverless, so
@@ -51,11 +50,7 @@ namespace Athena {
  */
 
 /*!
- * @brief  Constructs a new ListQueryExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListQueryExecutionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListQueryExecutionsResponse::ListQueryExecutionsResponse(
         const ListQueryExecutionsRequest &request,
@@ -67,6 +62,9 @@ ListQueryExecutionsResponse::ListQueryExecutionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListQueryExecutionsRequest * ListQueryExecutionsResponse::request() const
 {
     Q_D(const ListQueryExecutionsResponse);
@@ -74,9 +72,8 @@ const ListQueryExecutionsRequest * ListQueryExecutionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Athena ListQueryExecutions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Athena ListQueryExecutions \a response.
  */
 void ListQueryExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void ListQueryExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Athena::ListQueryExecutionsResponsePrivate
+ * \brief The ListQueryExecutionsResponsePrivate class provides private implementation for ListQueryExecutionsResponse.
  * \internal
  *
- * \class ListQueryExecutionsResponsePrivate
- *
- * \brief Private implementation for ListQueryExecutionsResponse.
+ * \inmodule QtAwsAthena
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListQueryExecutionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListQueryExecutionsResponse instance.
+ * Constructs a ListQueryExecutionsResponsePrivate object with public implementation \a q.
  */
 ListQueryExecutionsResponsePrivate::ListQueryExecutionsResponsePrivate(
     ListQueryExecutionsResponse * const q) : AthenaResponsePrivate(q)
@@ -107,9 +100,7 @@ ListQueryExecutionsResponsePrivate::ListQueryExecutionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Athena ListQueryExecutionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Athena ListQueryExecutions response element from \a xml.
  */
 void ListQueryExecutionsResponsePrivate::parseListQueryExecutionsResponse(QXmlStreamReader &xml)
 {

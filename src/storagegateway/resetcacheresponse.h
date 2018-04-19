@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResetCacheResponse : public StorageGatewayResponse {
 public:
     ResetCacheResponse(const ResetCacheRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResetCacheRequest * request() const;
+    virtual const ResetCacheRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResetCacheResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT RebootReplicationInstanceResponse : public DatabaseMigrationS
 public:
     RebootReplicationInstanceResponse(const RebootReplicationInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RebootReplicationInstanceRequest * request() const;
+    virtual const RebootReplicationInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RebootReplicationInstanceResponse)

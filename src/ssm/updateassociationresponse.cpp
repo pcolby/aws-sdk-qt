@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdateAssociationResponse
- *
  * \brief The UpdateAssociationResponse class provides an interace for SSM UpdateAssociation responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdateAssociationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAssociationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAssociationResponse::UpdateAssociationResponse(
         const UpdateAssociationRequest &request,
@@ -79,6 +74,9 @@ UpdateAssociationResponse::UpdateAssociationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAssociationRequest * UpdateAssociationResponse::request() const
 {
     Q_D(const UpdateAssociationResponse);
@@ -86,9 +84,8 @@ const UpdateAssociationRequest * UpdateAssociationResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM UpdateAssociation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM UpdateAssociation \a response.
  */
 void UpdateAssociationResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void UpdateAssociationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::UpdateAssociationResponsePrivate
+ * \brief The UpdateAssociationResponsePrivate class provides private implementation for UpdateAssociationResponse.
  * \internal
  *
- * \class UpdateAssociationResponsePrivate
- *
- * \brief Private implementation for UpdateAssociationResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAssociationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAssociationResponse instance.
+ * Constructs a UpdateAssociationResponsePrivate object with public implementation \a q.
  */
 UpdateAssociationResponsePrivate::UpdateAssociationResponsePrivate(
     UpdateAssociationResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ UpdateAssociationResponsePrivate::UpdateAssociationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM UpdateAssociationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM UpdateAssociation response element from \a xml.
  */
 void UpdateAssociationResponsePrivate::parseUpdateAssociationResponse(QXmlStreamReader &xml)
 {

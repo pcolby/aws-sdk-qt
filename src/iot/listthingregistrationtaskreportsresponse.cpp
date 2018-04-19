@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListThingRegistrationTaskReportsResponse
- *
  * \brief The ListThingRegistrationTaskReportsResponse class provides an interace for IoT ListThingRegistrationTaskReports responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListThingRegistrationTaskReportsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListThingRegistrationTaskReportsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListThingRegistrationTaskReportsResponse::ListThingRegistrationTaskReportsResponse(
         const ListThingRegistrationTaskReportsRequest &request,
@@ -66,6 +61,9 @@ ListThingRegistrationTaskReportsResponse::ListThingRegistrationTaskReportsRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListThingRegistrationTaskReportsRequest * ListThingRegistrationTaskReportsResponse::request() const
 {
     Q_D(const ListThingRegistrationTaskReportsResponse);
@@ -73,9 +71,8 @@ const ListThingRegistrationTaskReportsRequest * ListThingRegistrationTaskReports
 }
 
 /*!
- * @brief  Parse a IoT ListThingRegistrationTaskReports response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListThingRegistrationTaskReports \a response.
  */
 void ListThingRegistrationTaskReportsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListThingRegistrationTaskReportsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListThingRegistrationTaskReportsResponsePrivate
+ * \brief The ListThingRegistrationTaskReportsResponsePrivate class provides private implementation for ListThingRegistrationTaskReportsResponse.
  * \internal
  *
- * \class ListThingRegistrationTaskReportsResponsePrivate
- *
- * \brief Private implementation for ListThingRegistrationTaskReportsResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListThingRegistrationTaskReportsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListThingRegistrationTaskReportsResponse instance.
+ * Constructs a ListThingRegistrationTaskReportsResponsePrivate object with public implementation \a q.
  */
 ListThingRegistrationTaskReportsResponsePrivate::ListThingRegistrationTaskReportsResponsePrivate(
     ListThingRegistrationTaskReportsResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListThingRegistrationTaskReportsResponsePrivate::ListThingRegistrationTaskReport
 }
 
 /*!
- * @brief  Parse an IoT ListThingRegistrationTaskReportsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListThingRegistrationTaskReports response element from \a xml.
  */
 void ListThingRegistrationTaskReportsResponsePrivate::parseListThingRegistrationTaskReportsResponse(QXmlStreamReader &xml)
 {

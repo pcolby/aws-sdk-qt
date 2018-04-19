@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * InvokeEndpointRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a InvokeEndpointRequestPrivate object for SageMakerRuntime \a action with,
- * public implementation \a q.
+ * Constructs a InvokeEndpointRequestPrivate object for SageMakerRuntime \a action,
+ * with public implementation \a q.
  */
 InvokeEndpointRequestPrivate::InvokeEndpointRequestPrivate(
     const SageMakerRuntimeRequest::Action action, InvokeEndpointRequest * const q)

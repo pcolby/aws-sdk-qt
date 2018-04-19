@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListOperationsResponse : public Route53DomainsResponse {
 public:
     ListOperationsResponse(const ListOperationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListOperationsRequest * request() const;
+    virtual const ListOperationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListOperationsResponse)

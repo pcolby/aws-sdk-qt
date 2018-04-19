@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::RegisterCertificateResponse
- *
  * \brief The RegisterCertificateResponse class provides an interace for IoT RegisterCertificate responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new RegisterCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterCertificateResponse::RegisterCertificateResponse(
         const RegisterCertificateRequest &request,
@@ -66,6 +61,9 @@ RegisterCertificateResponse::RegisterCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterCertificateRequest * RegisterCertificateResponse::request() const
 {
     Q_D(const RegisterCertificateResponse);
@@ -73,9 +71,8 @@ const RegisterCertificateRequest * RegisterCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT RegisterCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT RegisterCertificate \a response.
  */
 void RegisterCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void RegisterCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::RegisterCertificateResponsePrivate
+ * \brief The RegisterCertificateResponsePrivate class provides private implementation for RegisterCertificateResponse.
  * \internal
  *
- * \class RegisterCertificateResponsePrivate
- *
- * \brief Private implementation for RegisterCertificateResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterCertificateResponse instance.
+ * Constructs a RegisterCertificateResponsePrivate object with public implementation \a q.
  */
 RegisterCertificateResponsePrivate::RegisterCertificateResponsePrivate(
     RegisterCertificateResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ RegisterCertificateResponsePrivate::RegisterCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT RegisterCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT RegisterCertificate response element from \a xml.
  */
 void RegisterCertificateResponsePrivate::parseRegisterCertificateResponse(QXmlStreamReader &xml)
 {

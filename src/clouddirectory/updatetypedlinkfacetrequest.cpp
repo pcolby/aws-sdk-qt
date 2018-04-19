@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * UpdateTypedLinkFacetRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdateTypedLinkFacetRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a UpdateTypedLinkFacetRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 UpdateTypedLinkFacetRequestPrivate::UpdateTypedLinkFacetRequestPrivate(
     const CloudDirectoryRequest::Action action, UpdateTypedLinkFacetRequest * const q)

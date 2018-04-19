@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVPCAssociationAuthorizationRequest::res
  */
 
 /*!
- *
- * Constructs a DeleteVPCAssociationAuthorizationRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVPCAssociationAuthorizationRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 DeleteVPCAssociationAuthorizationRequestPrivate::DeleteVPCAssociationAuthorizationRequestPrivate(
     const Route53Request::Action action, DeleteVPCAssociationAuthorizationRequest * const q)

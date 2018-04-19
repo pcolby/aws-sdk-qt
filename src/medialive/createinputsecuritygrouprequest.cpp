@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateInputSecurityGroupRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateInputSecurityGroupRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a CreateInputSecurityGroupRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 CreateInputSecurityGroupRequestPrivate::CreateInputSecurityGroupRequestPrivate(
     const MediaLiveRequest::Action action, CreateInputSecurityGroupRequest * const q)

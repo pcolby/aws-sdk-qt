@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * RestoreDBInstanceFromDBSnapshotRequest::respo
  */
 
 /*!
- *
- * Constructs a RestoreDBInstanceFromDBSnapshotRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a RestoreDBInstanceFromDBSnapshotRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 RestoreDBInstanceFromDBSnapshotRequestPrivate::RestoreDBInstanceFromDBSnapshotRequestPrivate(
     const RDSRequest::Action action, RestoreDBInstanceFromDBSnapshotRequest * const q)

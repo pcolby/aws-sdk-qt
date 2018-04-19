@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeNetworkInterfacePermissionsResponse
- *
  * \brief The DescribeNetworkInterfacePermissionsResponse class provides an interace for EC2 DescribeNetworkInterfacePermissions responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeNetworkInterfacePermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeNetworkInterfacePermissionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeNetworkInterfacePermissionsResponse::DescribeNetworkInterfacePermissionsResponse(
         const DescribeNetworkInterfacePermissionsRequest &request,
@@ -59,6 +54,9 @@ DescribeNetworkInterfacePermissionsResponse::DescribeNetworkInterfacePermissions
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeNetworkInterfacePermissionsRequest * DescribeNetworkInterfacePermissionsResponse::request() const
 {
     Q_D(const DescribeNetworkInterfacePermissionsResponse);
@@ -66,9 +64,8 @@ const DescribeNetworkInterfacePermissionsRequest * DescribeNetworkInterfacePermi
 }
 
 /*!
- * @brief  Parse a EC2 DescribeNetworkInterfacePermissions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeNetworkInterfacePermissions \a response.
  */
 void DescribeNetworkInterfacePermissionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeNetworkInterfacePermissionsResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::EC2::DescribeNetworkInterfacePermissionsResponsePrivate
+ * \brief The DescribeNetworkInterfacePermissionsResponsePrivate class provides private implementation for DescribeNetworkInterfacePermissionsResponse.
  * \internal
  *
- * \class DescribeNetworkInterfacePermissionsResponsePrivate
- *
- * \brief Private implementation for DescribeNetworkInterfacePermissionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNetworkInterfacePermissionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeNetworkInterfacePermissionsResponse instance.
+ * Constructs a DescribeNetworkInterfacePermissionsResponsePrivate object with public implementation \a q.
  */
 DescribeNetworkInterfacePermissionsResponsePrivate::DescribeNetworkInterfacePermissionsResponsePrivate(
     DescribeNetworkInterfacePermissionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeNetworkInterfacePermissionsResponsePrivate::DescribeNetworkInterfacePerm
 }
 
 /*!
- * @brief  Parse an EC2 DescribeNetworkInterfacePermissionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeNetworkInterfacePermissions response element from \a xml.
  */
 void DescribeNetworkInterfacePermissionsResponsePrivate::parseDescribeNetworkInterfacePermissionsResponse(QXmlStreamReader &xml)
 {

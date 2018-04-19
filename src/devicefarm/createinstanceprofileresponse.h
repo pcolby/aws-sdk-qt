@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateInstanceProfileResponse : public DeviceFarmResponse {
 public:
     CreateInstanceProfileResponse(const CreateInstanceProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateInstanceProfileRequest * request() const;
+    virtual const CreateInstanceProfileRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateInstanceProfileResponse)

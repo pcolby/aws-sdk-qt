@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ListPhoneNumbersOptedOutRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ListPhoneNumbersOptedOutRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a ListPhoneNumbersOptedOutRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 ListPhoneNumbersOptedOutRequestPrivate::ListPhoneNumbersOptedOutRequestPrivate(
     const SNSRequest::Action action, ListPhoneNumbersOptedOutRequest * const q)

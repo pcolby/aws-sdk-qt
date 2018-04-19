@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::RemoveFacetFromObjectResponse
- *
  * \brief The RemoveFacetFromObjectResponse class provides an interace for CloudDirectory RemoveFacetFromObject responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new RemoveFacetFromObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveFacetFromObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveFacetFromObjectResponse::RemoveFacetFromObjectResponse(
         const RemoveFacetFromObjectRequest &request,
@@ -62,6 +57,9 @@ RemoveFacetFromObjectResponse::RemoveFacetFromObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveFacetFromObjectRequest * RemoveFacetFromObjectResponse::request() const
 {
     Q_D(const RemoveFacetFromObjectResponse);
@@ -69,9 +67,8 @@ const RemoveFacetFromObjectRequest * RemoveFacetFromObjectResponse::request() co
 }
 
 /*!
- * @brief  Parse a CloudDirectory RemoveFacetFromObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory RemoveFacetFromObject \a response.
  */
 void RemoveFacetFromObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void RemoveFacetFromObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::RemoveFacetFromObjectResponsePrivate
+ * \brief The RemoveFacetFromObjectResponsePrivate class provides private implementation for RemoveFacetFromObjectResponse.
  * \internal
  *
- * \class RemoveFacetFromObjectResponsePrivate
- *
- * \brief Private implementation for RemoveFacetFromObjectResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveFacetFromObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveFacetFromObjectResponse instance.
+ * Constructs a RemoveFacetFromObjectResponsePrivate object with public implementation \a q.
  */
 RemoveFacetFromObjectResponsePrivate::RemoveFacetFromObjectResponsePrivate(
     RemoveFacetFromObjectResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ RemoveFacetFromObjectResponsePrivate::RemoveFacetFromObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory RemoveFacetFromObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory RemoveFacetFromObject response element from \a xml.
  */
 void RemoveFacetFromObjectResponsePrivate::parseRemoveFacetFromObjectResponse(QXmlStreamReader &xml)
 {

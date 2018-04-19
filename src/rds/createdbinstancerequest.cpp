@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CreateDBInstanceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateDBInstanceRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CreateDBInstanceRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CreateDBInstanceRequestPrivate::CreateDBInstanceRequestPrivate(
     const RDSRequest::Action action, CreateDBInstanceRequest * const q)

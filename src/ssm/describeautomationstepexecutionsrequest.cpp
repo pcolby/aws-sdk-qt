@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAutomationStepExecutionsRequest::resp
  */
 
 /*!
- *
- * Constructs a DescribeAutomationStepExecutionsRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAutomationStepExecutionsRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeAutomationStepExecutionsRequestPrivate::DescribeAutomationStepExecutionsRequestPrivate(
     const SSMRequest::Action action, DescribeAutomationStepExecutionsRequest * const q)

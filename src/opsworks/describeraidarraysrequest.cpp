@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRaidArraysRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeRaidArraysRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRaidArraysRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DescribeRaidArraysRequestPrivate::DescribeRaidArraysRequestPrivate(
     const OpsWorksRequest::Action action, DescribeRaidArraysRequest * const q)

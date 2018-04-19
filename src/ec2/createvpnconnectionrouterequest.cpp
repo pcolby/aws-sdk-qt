@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateVpnConnectionRouteRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateVpnConnectionRouteRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateVpnConnectionRouteRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateVpnConnectionRouteRequestPrivate::CreateVpnConnectionRouteRequestPrivate(
     const EC2Request::Action action, CreateVpnConnectionRouteRequest * const q)

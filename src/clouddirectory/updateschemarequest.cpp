@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSchemaRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UpdateSchemaRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSchemaRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 UpdateSchemaRequestPrivate::UpdateSchemaRequestPrivate(
     const CloudDirectoryRequest::Action action, UpdateSchemaRequest * const q)

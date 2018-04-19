@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeSSLPoliciesResponse
- *
  * \brief The DescribeSSLPoliciesResponse class provides an interace for ElasticLoadBalancingv2 DescribeSSLPolicies responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSSLPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSSLPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSSLPoliciesResponse::DescribeSSLPoliciesResponse(
         const DescribeSSLPoliciesRequest &request,
@@ -123,6 +118,9 @@ DescribeSSLPoliciesResponse::DescribeSSLPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSSLPoliciesRequest * DescribeSSLPoliciesResponse::request() const
 {
     Q_D(const DescribeSSLPoliciesResponse);
@@ -130,9 +128,8 @@ const DescribeSSLPoliciesRequest * DescribeSSLPoliciesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DescribeSSLPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DescribeSSLPolicies \a response.
  */
 void DescribeSSLPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeSSLPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DescribeSSLPoliciesResponsePrivate
+ * \brief The DescribeSSLPoliciesResponsePrivate class provides private implementation for DescribeSSLPoliciesResponse.
  * \internal
  *
- * \class DescribeSSLPoliciesResponsePrivate
- *
- * \brief Private implementation for DescribeSSLPoliciesResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSSLPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSSLPoliciesResponse instance.
+ * Constructs a DescribeSSLPoliciesResponsePrivate object with public implementation \a q.
  */
 DescribeSSLPoliciesResponsePrivate::DescribeSSLPoliciesResponsePrivate(
     DescribeSSLPoliciesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeSSLPoliciesResponsePrivate::DescribeSSLPoliciesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DescribeSSLPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DescribeSSLPolicies response element from \a xml.
  */
 void DescribeSSLPoliciesResponsePrivate::parseDescribeSSLPoliciesResponse(QXmlStreamReader &xml)
 {

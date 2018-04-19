@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::UntagQueueResponse
- *
  * \brief The UntagQueueResponse class provides an interace for SQS UntagQueue responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new UntagQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UntagQueueResponse object for \a reply to \a request, with parent \a parent.
  */
 UntagQueueResponse::UntagQueueResponse(
         const UntagQueueRequest &request,
@@ -121,6 +116,9 @@ UntagQueueResponse::UntagQueueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UntagQueueRequest * UntagQueueResponse::request() const
 {
     Q_D(const UntagQueueResponse);
@@ -128,9 +126,8 @@ const UntagQueueRequest * UntagQueueResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS UntagQueue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS UntagQueue \a response.
  */
 void UntagQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void UntagQueueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::UntagQueueResponsePrivate
+ * \brief The UntagQueueResponsePrivate class provides private implementation for UntagQueueResponse.
  * \internal
  *
- * \class UntagQueueResponsePrivate
- *
- * \brief Private implementation for UntagQueueResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagQueueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UntagQueueResponse instance.
+ * Constructs a UntagQueueResponsePrivate object with public implementation \a q.
  */
 UntagQueueResponsePrivate::UntagQueueResponsePrivate(
     UntagQueueResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ UntagQueueResponsePrivate::UntagQueueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS UntagQueueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS UntagQueue response element from \a xml.
  */
 void UntagQueueResponsePrivate::parseUntagQueueResponse(QXmlStreamReader &xml)
 {

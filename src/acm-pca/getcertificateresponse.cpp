@@ -29,10 +29,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::GetCertificateResponse
- *
  * \brief The GetCertificateResponse class provides an interace for ACMPCA GetCertificate responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -69,11 +68,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new GetCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCertificateResponse::GetCertificateResponse(
         const GetCertificateRequest &request,
@@ -85,6 +80,9 @@ GetCertificateResponse::GetCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCertificateRequest * GetCertificateResponse::request() const
 {
     Q_D(const GetCertificateResponse);
@@ -92,9 +90,8 @@ const GetCertificateRequest * GetCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a ACMPCA GetCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACMPCA GetCertificate \a response.
  */
 void GetCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void GetCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACMPCA::GetCertificateResponsePrivate
+ * \brief The GetCertificateResponsePrivate class provides private implementation for GetCertificateResponse.
  * \internal
  *
- * \class GetCertificateResponsePrivate
- *
- * \brief Private implementation for GetCertificateResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCertificateResponse instance.
+ * Constructs a GetCertificateResponsePrivate object with public implementation \a q.
  */
 GetCertificateResponsePrivate::GetCertificateResponsePrivate(
     GetCertificateResponse * const q) : ACMPCAResponsePrivate(q)
@@ -125,9 +118,7 @@ GetCertificateResponsePrivate::GetCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACMPCA GetCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACMPCA GetCertificate response element from \a xml.
  */
 void GetCertificateResponsePrivate::parseGetCertificateResponse(QXmlStreamReader &xml)
 {

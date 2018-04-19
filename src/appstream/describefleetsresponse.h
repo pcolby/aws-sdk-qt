@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeFleetsResponse : public AppStreamResponse {
 public:
     DescribeFleetsResponse(const DescribeFleetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeFleetsRequest * request() const;
+    virtual const DescribeFleetsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeFleetsResponse)

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeleteFileSystemRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteFileSystemRequestPrivate object for EFS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteFileSystemRequestPrivate object for EFS \a action,
+ * with public implementation \a q.
  */
 DeleteFileSystemRequestPrivate::DeleteFileSystemRequestPrivate(
     const EFSRequest::Action action, DeleteFileSystemRequest * const q)

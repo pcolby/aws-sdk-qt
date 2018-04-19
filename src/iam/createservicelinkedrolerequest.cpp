@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * CreateServiceLinkedRoleRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CreateServiceLinkedRoleRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a CreateServiceLinkedRoleRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 CreateServiceLinkedRoleRequestPrivate::CreateServiceLinkedRoleRequestPrivate(
     const IAMRequest::Action action, CreateServiceLinkedRoleRequest * const q)

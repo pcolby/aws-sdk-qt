@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * EnablePolicyTypeRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a EnablePolicyTypeRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a EnablePolicyTypeRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 EnablePolicyTypeRequestPrivate::EnablePolicyTypeRequestPrivate(
     const OrganizationsRequest::Action action, EnablePolicyTypeRequest * const q)

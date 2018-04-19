@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeRiskConfigurationResponse : public CognitoIdentityPro
 public:
     DescribeRiskConfigurationResponse(const DescribeRiskConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeRiskConfigurationRequest * request() const;
+    virtual const DescribeRiskConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeRiskConfigurationResponse)

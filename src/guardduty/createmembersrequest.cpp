@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateMembersRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateMembersRequestPrivate object for GuardDuty \a action with,
- * public implementation \a q.
+ * Constructs a CreateMembersRequestPrivate object for GuardDuty \a action,
+ * with public implementation \a q.
  */
 CreateMembersRequestPrivate::CreateMembersRequestPrivate(
     const GuardDutyRequest::Action action, CreateMembersRequest * const q)

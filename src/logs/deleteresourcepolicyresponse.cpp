@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::DeleteResourcePolicyResponse
- *
  * \brief The DeleteResourcePolicyResponse class provides an interace for CloudWatchLogs DeleteResourcePolicy responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new DeleteResourcePolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteResourcePolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteResourcePolicyResponse::DeleteResourcePolicyResponse(
         const DeleteResourcePolicyRequest &request,
@@ -84,6 +79,9 @@ DeleteResourcePolicyResponse::DeleteResourcePolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteResourcePolicyRequest * DeleteResourcePolicyResponse::request() const
 {
     Q_D(const DeleteResourcePolicyResponse);
@@ -91,9 +89,8 @@ const DeleteResourcePolicyRequest * DeleteResourcePolicyResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs DeleteResourcePolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs DeleteResourcePolicy \a response.
  */
 void DeleteResourcePolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteResourcePolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::DeleteResourcePolicyResponsePrivate
+ * \brief The DeleteResourcePolicyResponsePrivate class provides private implementation for DeleteResourcePolicyResponse.
  * \internal
  *
- * \class DeleteResourcePolicyResponsePrivate
- *
- * \brief Private implementation for DeleteResourcePolicyResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteResourcePolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteResourcePolicyResponse instance.
+ * Constructs a DeleteResourcePolicyResponsePrivate object with public implementation \a q.
  */
 DeleteResourcePolicyResponsePrivate::DeleteResourcePolicyResponsePrivate(
     DeleteResourcePolicyResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteResourcePolicyResponsePrivate::DeleteResourcePolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs DeleteResourcePolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs DeleteResourcePolicy response element from \a xml.
  */
 void DeleteResourcePolicyResponsePrivate::parseDeleteResourcePolicyResponse(QXmlStreamReader &xml)
 {

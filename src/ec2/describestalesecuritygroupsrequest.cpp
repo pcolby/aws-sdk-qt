@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStaleSecurityGroupsRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeStaleSecurityGroupsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStaleSecurityGroupsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeStaleSecurityGroupsRequestPrivate::DescribeStaleSecurityGroupsRequestPrivate(
     const EC2Request::Action action, DescribeStaleSecurityGroupsRequest * const q)

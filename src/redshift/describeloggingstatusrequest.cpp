@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeLoggingStatusRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeLoggingStatusRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeLoggingStatusRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeLoggingStatusRequestPrivate::DescribeLoggingStatusRequestPrivate(
     const RedshiftRequest::Action action, DescribeLoggingStatusRequest * const q)

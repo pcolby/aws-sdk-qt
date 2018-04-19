@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::RemoveRoleFromDBClusterResponse
- *
  * \brief The RemoveRoleFromDBClusterResponse class provides an interace for RDS RemoveRoleFromDBCluster responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new RemoveRoleFromDBClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveRoleFromDBClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveRoleFromDBClusterResponse::RemoveRoleFromDBClusterResponse(
         const RemoveRoleFromDBClusterRequest &request,
@@ -119,6 +114,9 @@ RemoveRoleFromDBClusterResponse::RemoveRoleFromDBClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveRoleFromDBClusterRequest * RemoveRoleFromDBClusterResponse::request() const
 {
     Q_D(const RemoveRoleFromDBClusterResponse);
@@ -126,9 +124,8 @@ const RemoveRoleFromDBClusterRequest * RemoveRoleFromDBClusterResponse::request(
 }
 
 /*!
- * @brief  Parse a RDS RemoveRoleFromDBCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS RemoveRoleFromDBCluster \a response.
  */
 void RemoveRoleFromDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void RemoveRoleFromDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::RemoveRoleFromDBClusterResponsePrivate
+ * \brief The RemoveRoleFromDBClusterResponsePrivate class provides private implementation for RemoveRoleFromDBClusterResponse.
  * \internal
  *
- * \class RemoveRoleFromDBClusterResponsePrivate
- *
- * \brief Private implementation for RemoveRoleFromDBClusterResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveRoleFromDBClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveRoleFromDBClusterResponse instance.
+ * Constructs a RemoveRoleFromDBClusterResponsePrivate object with public implementation \a q.
  */
 RemoveRoleFromDBClusterResponsePrivate::RemoveRoleFromDBClusterResponsePrivate(
     RemoveRoleFromDBClusterResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ RemoveRoleFromDBClusterResponsePrivate::RemoveRoleFromDBClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS RemoveRoleFromDBClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS RemoveRoleFromDBCluster response element from \a xml.
  */
 void RemoveRoleFromDBClusterResponsePrivate::parseRemoveRoleFromDBClusterResponse(QXmlStreamReader &xml)
 {

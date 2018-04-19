@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DetachTypedLinkResponse
- *
  * \brief The DetachTypedLinkResponse class provides an interace for CloudDirectory DetachTypedLink responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DetachTypedLinkResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachTypedLinkResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachTypedLinkResponse::DetachTypedLinkResponse(
         const DetachTypedLinkRequest &request,
@@ -62,6 +57,9 @@ DetachTypedLinkResponse::DetachTypedLinkResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachTypedLinkRequest * DetachTypedLinkResponse::request() const
 {
     Q_D(const DetachTypedLinkResponse);
@@ -69,9 +67,8 @@ const DetachTypedLinkRequest * DetachTypedLinkResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory DetachTypedLink response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory DetachTypedLink \a response.
  */
 void DetachTypedLinkResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DetachTypedLinkResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::DetachTypedLinkResponsePrivate
+ * \brief The DetachTypedLinkResponsePrivate class provides private implementation for DetachTypedLinkResponse.
  * \internal
  *
- * \class DetachTypedLinkResponsePrivate
- *
- * \brief Private implementation for DetachTypedLinkResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachTypedLinkResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachTypedLinkResponse instance.
+ * Constructs a DetachTypedLinkResponsePrivate object with public implementation \a q.
  */
 DetachTypedLinkResponsePrivate::DetachTypedLinkResponsePrivate(
     DetachTypedLinkResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ DetachTypedLinkResponsePrivate::DetachTypedLinkResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory DetachTypedLinkResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory DetachTypedLink response element from \a xml.
  */
 void DetachTypedLinkResponsePrivate::parseDetachTypedLinkResponse(QXmlStreamReader &xml)
 {

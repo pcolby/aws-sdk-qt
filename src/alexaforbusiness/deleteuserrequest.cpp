@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteUserRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteUserRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a DeleteUserRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 DeleteUserRequestPrivate::DeleteUserRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteUserRequest * const q)

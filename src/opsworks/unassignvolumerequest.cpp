@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * UnassignVolumeRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UnassignVolumeRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a UnassignVolumeRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 UnassignVolumeRequestPrivate::UnassignVolumeRequestPrivate(
     const OpsWorksRequest::Action action, UnassignVolumeRequest * const q)

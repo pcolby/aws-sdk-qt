@@ -57,7 +57,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * Constructs a[n] CognitoIdentityRequest object for CognitoIdentity \a action.
+ * Constructs a CognitoIdentityRequest object for CognitoIdentity \a action.
  */
 CognitoIdentityRequest::CognitoIdentityRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CognitoIdentityRequestPrivate(action, this))
@@ -257,8 +257,8 @@ QNetworkRequest CognitoIdentityRequest::unsignedRequest(const QUrl &endpoint) co
  */
 
 /*!
- * Constructs a CognitoIdentityRequestPrivate object for CognitoIdentity \a action with,
- * public implementation \a q.
+ * Constructs a CognitoIdentityRequestPrivate object for CognitoIdentity \a action,
+ * with public implementation \a q.
  */
 CognitoIdentityRequestPrivate::CognitoIdentityRequestPrivate(const CognitoIdentityRequest::Action action, CognitoIdentityRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

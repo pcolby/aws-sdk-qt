@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBClusterResponse
- *
  * \brief The CreateDBClusterResponse class provides an interace for RDS CreateDBCluster responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDBClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDBClusterResponse::CreateDBClusterResponse(
         const CreateDBClusterRequest &request,
@@ -119,6 +114,9 @@ CreateDBClusterResponse::CreateDBClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDBClusterRequest * CreateDBClusterResponse::request() const
 {
     Q_D(const CreateDBClusterResponse);
@@ -126,9 +124,8 @@ const CreateDBClusterRequest * CreateDBClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS CreateDBCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CreateDBCluster \a response.
  */
 void CreateDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CreateDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CreateDBClusterResponsePrivate
+ * \brief The CreateDBClusterResponsePrivate class provides private implementation for CreateDBClusterResponse.
  * \internal
  *
- * \class CreateDBClusterResponsePrivate
- *
- * \brief Private implementation for CreateDBClusterResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDBClusterResponse instance.
+ * Constructs a CreateDBClusterResponsePrivate object with public implementation \a q.
  */
 CreateDBClusterResponsePrivate::CreateDBClusterResponsePrivate(
     CreateDBClusterResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CreateDBClusterResponsePrivate::CreateDBClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CreateDBClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CreateDBCluster response element from \a xml.
  */
 void CreateDBClusterResponsePrivate::parseCreateDBClusterResponse(QXmlStreamReader &xml)
 {

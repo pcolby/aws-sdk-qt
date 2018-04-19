@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::ReleaseStaticIpResponse
- *
  * \brief The ReleaseStaticIpResponse class provides an interace for Lightsail ReleaseStaticIp responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new ReleaseStaticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReleaseStaticIpResponse object for \a reply to \a request, with parent \a parent.
  */
 ReleaseStaticIpResponse::ReleaseStaticIpResponse(
         const ReleaseStaticIpRequest &request,
@@ -71,6 +66,9 @@ ReleaseStaticIpResponse::ReleaseStaticIpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReleaseStaticIpRequest * ReleaseStaticIpResponse::request() const
 {
     Q_D(const ReleaseStaticIpResponse);
@@ -78,9 +76,8 @@ const ReleaseStaticIpRequest * ReleaseStaticIpResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail ReleaseStaticIp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail ReleaseStaticIp \a response.
  */
 void ReleaseStaticIpResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void ReleaseStaticIpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::ReleaseStaticIpResponsePrivate
+ * \brief The ReleaseStaticIpResponsePrivate class provides private implementation for ReleaseStaticIpResponse.
  * \internal
  *
- * \class ReleaseStaticIpResponsePrivate
- *
- * \brief Private implementation for ReleaseStaticIpResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReleaseStaticIpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReleaseStaticIpResponse instance.
+ * Constructs a ReleaseStaticIpResponsePrivate object with public implementation \a q.
  */
 ReleaseStaticIpResponsePrivate::ReleaseStaticIpResponsePrivate(
     ReleaseStaticIpResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ ReleaseStaticIpResponsePrivate::ReleaseStaticIpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail ReleaseStaticIpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail ReleaseStaticIp response element from \a xml.
  */
 void ReleaseStaticIpResponsePrivate::parseReleaseStaticIpResponse(QXmlStreamReader &xml)
 {

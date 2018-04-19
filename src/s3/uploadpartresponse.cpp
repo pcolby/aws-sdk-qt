@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::UploadPartResponse
- *
  * \brief The UploadPartResponse class provides an interace for S3 UploadPart responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::uploadPart
  */
 
 /*!
- * @brief  Constructs a new UploadPartResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UploadPartResponse object for \a reply to \a request, with parent \a parent.
  */
 UploadPartResponse::UploadPartResponse(
         const UploadPartRequest &request,
@@ -55,6 +50,9 @@ UploadPartResponse::UploadPartResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UploadPartRequest * UploadPartResponse::request() const
 {
     Q_D(const UploadPartResponse);
@@ -62,9 +60,8 @@ const UploadPartRequest * UploadPartResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 UploadPart response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 UploadPart \a response.
  */
 void UploadPartResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UploadPartResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::UploadPartResponsePrivate
+ * \brief The UploadPartResponsePrivate class provides private implementation for UploadPartResponse.
  * \internal
  *
- * \class UploadPartResponsePrivate
- *
- * \brief Private implementation for UploadPartResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadPartResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UploadPartResponse instance.
+ * Constructs a UploadPartResponsePrivate object with public implementation \a q.
  */
 UploadPartResponsePrivate::UploadPartResponsePrivate(
     UploadPartResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ UploadPartResponsePrivate::UploadPartResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 UploadPartResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 UploadPart response element from \a xml.
  */
 void UploadPartResponsePrivate::parseUploadPartResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteChapCredentialsResponse : public StorageGatewayResponse
 public:
     DeleteChapCredentialsResponse(const DeleteChapCredentialsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteChapCredentialsRequest * request() const;
+    virtual const DeleteChapCredentialsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteChapCredentialsResponse)

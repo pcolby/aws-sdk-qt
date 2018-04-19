@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAvailabilityOptionsRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeAvailabilityOptionsRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAvailabilityOptionsRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DescribeAvailabilityOptionsRequestPrivate::DescribeAvailabilityOptionsRequestPrivate(
     const CloudSearchRequest::Action action, DescribeAvailabilityOptionsRequest * const q)

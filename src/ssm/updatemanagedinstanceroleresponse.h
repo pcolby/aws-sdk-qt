@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateManagedInstanceRoleResponse : public SSMResponse {
 public:
     UpdateManagedInstanceRoleResponse(const UpdateManagedInstanceRoleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateManagedInstanceRoleRequest * request() const;
+    virtual const UpdateManagedInstanceRoleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateManagedInstanceRoleResponse)

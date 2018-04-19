@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeLoadBalancerAttributesResponse
- *
  * \brief The DescribeLoadBalancerAttributesResponse class provides an interace for ElasticLoadBalancingv2 DescribeLoadBalancerAttributes responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeLoadBalancerAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLoadBalancerAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLoadBalancerAttributesResponse::DescribeLoadBalancerAttributesResponse(
         const DescribeLoadBalancerAttributesRequest &request,
@@ -123,6 +118,9 @@ DescribeLoadBalancerAttributesResponse::DescribeLoadBalancerAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLoadBalancerAttributesRequest * DescribeLoadBalancerAttributesResponse::request() const
 {
     Q_D(const DescribeLoadBalancerAttributesResponse);
@@ -130,9 +128,8 @@ const DescribeLoadBalancerAttributesRequest * DescribeLoadBalancerAttributesResp
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DescribeLoadBalancerAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DescribeLoadBalancerAttributes \a response.
  */
 void DescribeLoadBalancerAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeLoadBalancerAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DescribeLoadBalancerAttributesResponsePrivate
+ * \brief The DescribeLoadBalancerAttributesResponsePrivate class provides private implementation for DescribeLoadBalancerAttributesResponse.
  * \internal
  *
- * \class DescribeLoadBalancerAttributesResponsePrivate
- *
- * \brief Private implementation for DescribeLoadBalancerAttributesResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLoadBalancerAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLoadBalancerAttributesResponse instance.
+ * Constructs a DescribeLoadBalancerAttributesResponsePrivate object with public implementation \a q.
  */
 DescribeLoadBalancerAttributesResponsePrivate::DescribeLoadBalancerAttributesResponsePrivate(
     DescribeLoadBalancerAttributesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeLoadBalancerAttributesResponsePrivate::DescribeLoadBalancerAttributesRes
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DescribeLoadBalancerAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DescribeLoadBalancerAttributes response element from \a xml.
  */
 void DescribeLoadBalancerAttributesResponsePrivate::parseDescribeLoadBalancerAttributesResponse(QXmlStreamReader &xml)
 {

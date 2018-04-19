@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::CreateCampaignResponse
- *
  * \brief The CreateCampaignResponse class provides an interace for Pinpoint CreateCampaign responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::createCampaign
  */
 
 /*!
- * @brief  Constructs a new CreateCampaignResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCampaignResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCampaignResponse::CreateCampaignResponse(
         const CreateCampaignRequest &request,
@@ -55,6 +50,9 @@ CreateCampaignResponse::CreateCampaignResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCampaignRequest * CreateCampaignResponse::request() const
 {
     Q_D(const CreateCampaignResponse);
@@ -62,9 +60,8 @@ const CreateCampaignRequest * CreateCampaignResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint CreateCampaign response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint CreateCampaign \a response.
  */
 void CreateCampaignResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateCampaignResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::CreateCampaignResponsePrivate
+ * \brief The CreateCampaignResponsePrivate class provides private implementation for CreateCampaignResponse.
  * \internal
  *
- * \class CreateCampaignResponsePrivate
- *
- * \brief Private implementation for CreateCampaignResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCampaignResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCampaignResponse instance.
+ * Constructs a CreateCampaignResponsePrivate object with public implementation \a q.
  */
 CreateCampaignResponsePrivate::CreateCampaignResponsePrivate(
     CreateCampaignResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateCampaignResponsePrivate::CreateCampaignResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint CreateCampaignResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint CreateCampaign response element from \a xml.
  */
 void CreateCampaignResponsePrivate::parseCreateCampaignResponse(QXmlStreamReader &xml)
 {

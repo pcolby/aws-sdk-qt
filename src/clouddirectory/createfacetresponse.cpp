@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::CreateFacetResponse
- *
  * \brief The CreateFacetResponse class provides an interace for CloudDirectory CreateFacet responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new CreateFacetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateFacetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateFacetResponse::CreateFacetResponse(
         const CreateFacetRequest &request,
@@ -62,6 +57,9 @@ CreateFacetResponse::CreateFacetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateFacetRequest * CreateFacetResponse::request() const
 {
     Q_D(const CreateFacetResponse);
@@ -69,9 +67,8 @@ const CreateFacetRequest * CreateFacetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory CreateFacet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory CreateFacet \a response.
  */
 void CreateFacetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void CreateFacetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::CreateFacetResponsePrivate
+ * \brief The CreateFacetResponsePrivate class provides private implementation for CreateFacetResponse.
  * \internal
  *
- * \class CreateFacetResponsePrivate
- *
- * \brief Private implementation for CreateFacetResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFacetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateFacetResponse instance.
+ * Constructs a CreateFacetResponsePrivate object with public implementation \a q.
  */
 CreateFacetResponsePrivate::CreateFacetResponsePrivate(
     CreateFacetResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ CreateFacetResponsePrivate::CreateFacetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory CreateFacetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory CreateFacet response element from \a xml.
  */
 void CreateFacetResponsePrivate::parseCreateFacetResponse(QXmlStreamReader &xml)
 {

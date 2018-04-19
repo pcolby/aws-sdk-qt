@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * UploadArchiveRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UploadArchiveRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a UploadArchiveRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 UploadArchiveRequestPrivate::UploadArchiveRequestPrivate(
     const GlacierRequest::Action action, UploadArchiveRequest * const q)

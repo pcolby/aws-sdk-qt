@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * AssociateDeviceWithRoomRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a AssociateDeviceWithRoomRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a AssociateDeviceWithRoomRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 AssociateDeviceWithRoomRequestPrivate::AssociateDeviceWithRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, AssociateDeviceWithRoomRequest * const q)

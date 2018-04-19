@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateClassifierResponse : public GlueResponse {
 public:
     CreateClassifierResponse(const CreateClassifierRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateClassifierRequest * request() const;
+    virtual const CreateClassifierRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateClassifierResponse)

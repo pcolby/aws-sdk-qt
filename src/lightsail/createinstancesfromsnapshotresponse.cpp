@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::CreateInstancesFromSnapshotResponse
- *
  * \brief The CreateInstancesFromSnapshotResponse class provides an interace for Lightsail CreateInstancesFromSnapshot responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new CreateInstancesFromSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateInstancesFromSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateInstancesFromSnapshotResponse::CreateInstancesFromSnapshotResponse(
         const CreateInstancesFromSnapshotRequest &request,
@@ -71,6 +66,9 @@ CreateInstancesFromSnapshotResponse::CreateInstancesFromSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateInstancesFromSnapshotRequest * CreateInstancesFromSnapshotResponse::request() const
 {
     Q_D(const CreateInstancesFromSnapshotResponse);
@@ -78,9 +76,8 @@ const CreateInstancesFromSnapshotRequest * CreateInstancesFromSnapshotResponse::
 }
 
 /*!
- * @brief  Parse a Lightsail CreateInstancesFromSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail CreateInstancesFromSnapshot \a response.
  */
 void CreateInstancesFromSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void CreateInstancesFromSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::CreateInstancesFromSnapshotResponsePrivate
+ * \brief The CreateInstancesFromSnapshotResponsePrivate class provides private implementation for CreateInstancesFromSnapshotResponse.
  * \internal
  *
- * \class CreateInstancesFromSnapshotResponsePrivate
- *
- * \brief Private implementation for CreateInstancesFromSnapshotResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInstancesFromSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateInstancesFromSnapshotResponse instance.
+ * Constructs a CreateInstancesFromSnapshotResponsePrivate object with public implementation \a q.
  */
 CreateInstancesFromSnapshotResponsePrivate::CreateInstancesFromSnapshotResponsePrivate(
     CreateInstancesFromSnapshotResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ CreateInstancesFromSnapshotResponsePrivate::CreateInstancesFromSnapshotResponseP
 }
 
 /*!
- * @brief  Parse an Lightsail CreateInstancesFromSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail CreateInstancesFromSnapshot response element from \a xml.
  */
 void CreateInstancesFromSnapshotResponsePrivate::parseCreateInstancesFromSnapshotResponse(QXmlStreamReader &xml)
 {

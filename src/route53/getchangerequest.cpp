@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetChangeRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetChangeRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a GetChangeRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 GetChangeRequestPrivate::GetChangeRequestPrivate(
     const Route53Request::Action action, GetChangeRequest * const q)

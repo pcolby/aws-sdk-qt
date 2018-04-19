@@ -29,10 +29,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::DescribeScalingPoliciesResponse
- *
  * \brief The DescribeScalingPoliciesResponse class provides an interace for ApplicationAutoScaling DescribeScalingPolicies responses.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -112,11 +111,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DescribeScalingPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeScalingPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeScalingPoliciesResponse::DescribeScalingPoliciesResponse(
         const DescribeScalingPoliciesRequest &request,
@@ -128,6 +123,9 @@ DescribeScalingPoliciesResponse::DescribeScalingPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeScalingPoliciesRequest * DescribeScalingPoliciesResponse::request() const
 {
     Q_D(const DescribeScalingPoliciesResponse);
@@ -135,9 +133,8 @@ const DescribeScalingPoliciesRequest * DescribeScalingPoliciesResponse::request(
 }
 
 /*!
- * @brief  Parse a ApplicationAutoScaling DescribeScalingPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationAutoScaling DescribeScalingPolicies \a response.
  */
 void DescribeScalingPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -147,19 +144,15 @@ void DescribeScalingPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationAutoScaling::DescribeScalingPoliciesResponsePrivate
+ * \brief The DescribeScalingPoliciesResponsePrivate class provides private implementation for DescribeScalingPoliciesResponse.
  * \internal
  *
- * \class DescribeScalingPoliciesResponsePrivate
- *
- * \brief Private implementation for DescribeScalingPoliciesResponse.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScalingPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeScalingPoliciesResponse instance.
+ * Constructs a DescribeScalingPoliciesResponsePrivate object with public implementation \a q.
  */
 DescribeScalingPoliciesResponsePrivate::DescribeScalingPoliciesResponsePrivate(
     DescribeScalingPoliciesResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
@@ -168,9 +161,7 @@ DescribeScalingPoliciesResponsePrivate::DescribeScalingPoliciesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationAutoScaling DescribeScalingPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationAutoScaling DescribeScalingPolicies response element from \a xml.
  */
 void DescribeScalingPoliciesResponsePrivate::parseDescribeScalingPoliciesResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResumeProcessesResponse : public AutoScalingResponse {
 public:
     ResumeProcessesResponse(const ResumeProcessesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResumeProcessesRequest * request() const;
+    virtual const ResumeProcessesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResumeProcessesResponse)

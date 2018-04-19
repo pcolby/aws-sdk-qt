@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * RegisterApplicationRevisionRequest::response(
  */
 
 /*!
- *
- * Constructs a RegisterApplicationRevisionRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a RegisterApplicationRevisionRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 RegisterApplicationRevisionRequestPrivate::RegisterApplicationRevisionRequestPrivate(
     const CodeDeployRequest::Action action, RegisterApplicationRevisionRequest * const q)

@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBSnapshotResponse
- *
  * \brief The ModifyDBSnapshotResponse class provides an interace for RDS ModifyDBSnapshot responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyDBSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyDBSnapshotResponse::ModifyDBSnapshotResponse(
         const ModifyDBSnapshotRequest &request,
@@ -119,6 +114,9 @@ ModifyDBSnapshotResponse::ModifyDBSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyDBSnapshotRequest * ModifyDBSnapshotResponse::request() const
 {
     Q_D(const ModifyDBSnapshotResponse);
@@ -126,9 +124,8 @@ const ModifyDBSnapshotRequest * ModifyDBSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS ModifyDBSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS ModifyDBSnapshot \a response.
  */
 void ModifyDBSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void ModifyDBSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::ModifyDBSnapshotResponsePrivate
+ * \brief The ModifyDBSnapshotResponsePrivate class provides private implementation for ModifyDBSnapshotResponse.
  * \internal
  *
- * \class ModifyDBSnapshotResponsePrivate
- *
- * \brief Private implementation for ModifyDBSnapshotResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyDBSnapshotResponse instance.
+ * Constructs a ModifyDBSnapshotResponsePrivate object with public implementation \a q.
  */
 ModifyDBSnapshotResponsePrivate::ModifyDBSnapshotResponsePrivate(
     ModifyDBSnapshotResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ ModifyDBSnapshotResponsePrivate::ModifyDBSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS ModifyDBSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS ModifyDBSnapshot response element from \a xml.
  */
 void ModifyDBSnapshotResponsePrivate::parseModifyDBSnapshotResponse(QXmlStreamReader &xml)
 {

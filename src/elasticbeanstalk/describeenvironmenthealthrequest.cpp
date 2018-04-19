@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEnvironmentHealthRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeEnvironmentHealthRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEnvironmentHealthRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DescribeEnvironmentHealthRequestPrivate::DescribeEnvironmentHealthRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeEnvironmentHealthRequest * const q)

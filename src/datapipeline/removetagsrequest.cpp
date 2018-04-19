@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * RemoveTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a RemoveTagsRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a RemoveTagsRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 RemoveTagsRequestPrivate::RemoveTagsRequestPrivate(
     const DataPipelineRequest::Action action, RemoveTagsRequest * const q)

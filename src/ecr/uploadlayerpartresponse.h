@@ -34,10 +34,10 @@ class QTAWS_EXPORT UploadLayerPartResponse : public ECRResponse {
 public:
     UploadLayerPartResponse(const UploadLayerPartRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UploadLayerPartRequest * request() const;
+    virtual const UploadLayerPartRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UploadLayerPartResponse)

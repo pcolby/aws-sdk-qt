@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * EnableVgwRoutePropagationRequest::response(QN
  */
 
 /*!
- *
- * Constructs a EnableVgwRoutePropagationRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a EnableVgwRoutePropagationRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 EnableVgwRoutePropagationRequestPrivate::EnableVgwRoutePropagationRequestPrivate(
     const EC2Request::Action action, EnableVgwRoutePropagationRequest * const q)

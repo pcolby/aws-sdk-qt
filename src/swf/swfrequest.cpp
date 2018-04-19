@@ -70,7 +70,7 @@ namespace SWF {
  */
 
 /*!
- * Constructs a[n] SWFRequest object for SWF \a action.
+ * Constructs a SWFRequest object for SWF \a action.
  */
 SWFRequest::SWFRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SWFRequestPrivate(action, this))
@@ -270,8 +270,8 @@ QNetworkRequest SWFRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a SWFRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a SWFRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 SWFRequestPrivate::SWFRequestPrivate(const SWFRequest::Action action, SWFRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

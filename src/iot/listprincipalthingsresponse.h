@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListPrincipalThingsResponse : public IoTResponse {
 public:
     ListPrincipalThingsResponse(const ListPrincipalThingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListPrincipalThingsRequest * request() const;
+    virtual const ListPrincipalThingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListPrincipalThingsResponse)

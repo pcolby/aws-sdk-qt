@@ -34,10 +34,10 @@ class QTAWS_EXPORT ScheduleRunResponse : public DeviceFarmResponse {
 public:
     ScheduleRunResponse(const ScheduleRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ScheduleRunRequest * request() const;
+    virtual const ScheduleRunRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ScheduleRunResponse)

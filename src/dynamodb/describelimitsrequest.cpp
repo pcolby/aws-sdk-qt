@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeLimitsRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a DescribeLimitsRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
     const DynamoDBRequest::Action action, DescribeLimitsRequest * const q)

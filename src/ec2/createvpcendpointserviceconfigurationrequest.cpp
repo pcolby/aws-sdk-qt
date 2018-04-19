@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateVpcEndpointServiceConfigurationRequest:
  */
 
 /*!
- *
- * Constructs a CreateVpcEndpointServiceConfigurationRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateVpcEndpointServiceConfigurationRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateVpcEndpointServiceConfigurationRequestPrivate::CreateVpcEndpointServiceConfigurationRequestPrivate(
     const EC2Request::Action action, CreateVpcEndpointServiceConfigurationRequest * const q)

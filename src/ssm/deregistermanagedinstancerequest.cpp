@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterManagedInstanceRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DeregisterManagedInstanceRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterManagedInstanceRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DeregisterManagedInstanceRequestPrivate::DeregisterManagedInstanceRequestPrivate(
     const SSMRequest::Action action, DeregisterManagedInstanceRequest * const q)

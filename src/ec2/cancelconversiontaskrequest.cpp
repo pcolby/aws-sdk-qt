@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CancelConversionTaskRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a CancelConversionTaskRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CancelConversionTaskRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CancelConversionTaskRequestPrivate::CancelConversionTaskRequestPrivate(
     const EC2Request::Action action, CancelConversionTaskRequest * const q)

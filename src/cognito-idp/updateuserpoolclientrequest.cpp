@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * UpdateUserPoolClientRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdateUserPoolClientRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a UpdateUserPoolClientRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 UpdateUserPoolClientRequestPrivate::UpdateUserPoolClientRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateUserPoolClientRequest * const q)

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * RevokeCacheSecurityGroupIngressRequest::respo
  */
 
 /*!
- *
- * Constructs a RevokeCacheSecurityGroupIngressRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a RevokeCacheSecurityGroupIngressRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 RevokeCacheSecurityGroupIngressRequestPrivate::RevokeCacheSecurityGroupIngressRequestPrivate(
     const ElastiCacheRequest::Action action, RevokeCacheSecurityGroupIngressRequest * const q)

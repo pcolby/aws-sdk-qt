@@ -34,10 +34,10 @@ class QTAWS_EXPORT ContinueUpdateRollbackResponse : public CloudFormationRespons
 public:
     ContinueUpdateRollbackResponse(const ContinueUpdateRollbackRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ContinueUpdateRollbackRequest * request() const;
+    virtual const ContinueUpdateRollbackRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ContinueUpdateRollbackResponse)

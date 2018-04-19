@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteGroupRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteGroupRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a DeleteGroupRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 DeleteGroupRequestPrivate::DeleteGroupRequestPrivate(
     const GreengrassRequest::Action action, DeleteGroupRequest * const q)

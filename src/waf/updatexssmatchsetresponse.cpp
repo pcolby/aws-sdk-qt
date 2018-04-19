@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateXssMatchSetResponse
- *
  * \brief The UpdateXssMatchSetResponse class provides an interace for WAF UpdateXssMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateXssMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateXssMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateXssMatchSetResponse::UpdateXssMatchSetResponse(
         const UpdateXssMatchSetRequest &request,
@@ -60,6 +55,9 @@ UpdateXssMatchSetResponse::UpdateXssMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateXssMatchSetRequest * UpdateXssMatchSetResponse::request() const
 {
     Q_D(const UpdateXssMatchSetResponse);
@@ -67,9 +65,8 @@ const UpdateXssMatchSetRequest * UpdateXssMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF UpdateXssMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF UpdateXssMatchSet \a response.
  */
 void UpdateXssMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateXssMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::UpdateXssMatchSetResponsePrivate
+ * \brief The UpdateXssMatchSetResponsePrivate class provides private implementation for UpdateXssMatchSetResponse.
  * \internal
  *
- * \class UpdateXssMatchSetResponsePrivate
- *
- * \brief Private implementation for UpdateXssMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateXssMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateXssMatchSetResponse instance.
+ * Constructs a UpdateXssMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateXssMatchSetResponsePrivate::UpdateXssMatchSetResponsePrivate(
     UpdateXssMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateXssMatchSetResponsePrivate::UpdateXssMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF UpdateXssMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF UpdateXssMatchSet response element from \a xml.
  */
 void UpdateXssMatchSetResponsePrivate::parseUpdateXssMatchSetResponse(QXmlStreamReader &xml)
 {

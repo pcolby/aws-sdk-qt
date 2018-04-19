@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RevokeSnapshotAccessResponse
- *
  * \brief The RevokeSnapshotAccessResponse class provides an interace for Redshift RevokeSnapshotAccess responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new RevokeSnapshotAccessResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RevokeSnapshotAccessResponse object for \a reply to \a request, with parent \a parent.
  */
 RevokeSnapshotAccessResponse::RevokeSnapshotAccessResponse(
         const RevokeSnapshotAccessRequest &request,
@@ -85,6 +80,9 @@ RevokeSnapshotAccessResponse::RevokeSnapshotAccessResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RevokeSnapshotAccessRequest * RevokeSnapshotAccessResponse::request() const
 {
     Q_D(const RevokeSnapshotAccessResponse);
@@ -92,9 +90,8 @@ const RevokeSnapshotAccessRequest * RevokeSnapshotAccessResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Redshift RevokeSnapshotAccess response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift RevokeSnapshotAccess \a response.
  */
 void RevokeSnapshotAccessResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void RevokeSnapshotAccessResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::RevokeSnapshotAccessResponsePrivate
+ * \brief The RevokeSnapshotAccessResponsePrivate class provides private implementation for RevokeSnapshotAccessResponse.
  * \internal
  *
- * \class RevokeSnapshotAccessResponsePrivate
- *
- * \brief Private implementation for RevokeSnapshotAccessResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeSnapshotAccessResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RevokeSnapshotAccessResponse instance.
+ * Constructs a RevokeSnapshotAccessResponsePrivate object with public implementation \a q.
  */
 RevokeSnapshotAccessResponsePrivate::RevokeSnapshotAccessResponsePrivate(
     RevokeSnapshotAccessResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ RevokeSnapshotAccessResponsePrivate::RevokeSnapshotAccessResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift RevokeSnapshotAccessResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift RevokeSnapshotAccess response element from \a xml.
  */
 void RevokeSnapshotAccessResponsePrivate::parseRevokeSnapshotAccessResponse(QXmlStreamReader &xml)
 {

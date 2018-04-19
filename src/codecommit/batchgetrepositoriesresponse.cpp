@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::BatchGetRepositoriesResponse
- *
  * \brief The BatchGetRepositoriesResponse class provides an interace for CodeCommit BatchGetRepositories responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new BatchGetRepositoriesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetRepositoriesResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetRepositoriesResponse::BatchGetRepositoriesResponse(
         const BatchGetRepositoriesRequest &request,
@@ -245,6 +240,9 @@ BatchGetRepositoriesResponse::BatchGetRepositoriesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetRepositoriesRequest * BatchGetRepositoriesResponse::request() const
 {
     Q_D(const BatchGetRepositoriesResponse);
@@ -252,9 +250,8 @@ const BatchGetRepositoriesRequest * BatchGetRepositoriesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CodeCommit BatchGetRepositories response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit BatchGetRepositories \a response.
  */
 void BatchGetRepositoriesResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void BatchGetRepositoriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::BatchGetRepositoriesResponsePrivate
+ * \brief The BatchGetRepositoriesResponsePrivate class provides private implementation for BatchGetRepositoriesResponse.
  * \internal
  *
- * \class BatchGetRepositoriesResponsePrivate
- *
- * \brief Private implementation for BatchGetRepositoriesResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetRepositoriesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetRepositoriesResponse instance.
+ * Constructs a BatchGetRepositoriesResponsePrivate object with public implementation \a q.
  */
 BatchGetRepositoriesResponsePrivate::BatchGetRepositoriesResponsePrivate(
     BatchGetRepositoriesResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ BatchGetRepositoriesResponsePrivate::BatchGetRepositoriesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit BatchGetRepositoriesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit BatchGetRepositories response element from \a xml.
  */
 void BatchGetRepositoriesResponsePrivate::parseBatchGetRepositoriesResponse(QXmlStreamReader &xml)
 {

@@ -28,16 +28,13 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::WAFRegionalResponse
- *
  * \brief The WAFRegionalResponse class provides an interface for WAFRegional responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @brief  Constructs a new WAFRegionalResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a WAFRegionalResponse object with parent \a parent.
  */
 WAFRegionalResponse::WAFRegionalResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new WAFRegionalResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ WAFRegionalResponse::WAFRegionalResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WAFRegionalResponse object.
- *
+ * \internal
+ * Constructs a WAFRegionalResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WAFRegionalResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 WAFRegionalResponse::WAFRegionalResponse(WAFRegionalResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ WAFRegionalResponse::WAFRegionalResponse(WAFRegionalResponsePrivate * const d, Q
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void WAFRegionalResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void WAFRegionalResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::WAFRegional::WAFRegionalResponsePrivate
+ * \brief The WAFRegionalResponsePrivate class provides private implementation for WAFRegionalResponse.
+ * \internal
  *
- * @class  WAFRegionalResponsePrivate
- *
- * @brief  Private implementation for WAFRegionalResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WAFRegionalResponsePrivate object.
- *
- * @param  q  Pointer to this object's public WAFRegionalResponse instance.
+ * Constructs a WAFRegionalResponsePrivate object with public implementation \a q.
  */
 WAFRegionalResponsePrivate::WAFRegionalResponsePrivate(
     WAFRegionalResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

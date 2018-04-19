@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeBuildResponse
- *
  * \brief The DescribeBuildResponse class provides an interace for GameLift DescribeBuild responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeBuildResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeBuildResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeBuildResponse::DescribeBuildResponse(
         const DescribeBuildRequest &request,
@@ -491,6 +486,9 @@ DescribeBuildResponse::DescribeBuildResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeBuildRequest * DescribeBuildResponse::request() const
 {
     Q_D(const DescribeBuildResponse);
@@ -498,9 +496,8 @@ const DescribeBuildRequest * DescribeBuildResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift DescribeBuild response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DescribeBuild \a response.
  */
 void DescribeBuildResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DescribeBuildResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DescribeBuildResponsePrivate
+ * \brief The DescribeBuildResponsePrivate class provides private implementation for DescribeBuildResponse.
  * \internal
  *
- * \class DescribeBuildResponsePrivate
- *
- * \brief Private implementation for DescribeBuildResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBuildResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeBuildResponse instance.
+ * Constructs a DescribeBuildResponsePrivate object with public implementation \a q.
  */
 DescribeBuildResponsePrivate::DescribeBuildResponsePrivate(
     DescribeBuildResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DescribeBuildResponsePrivate::DescribeBuildResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift DescribeBuildResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DescribeBuild response element from \a xml.
  */
 void DescribeBuildResponsePrivate::parseDescribeBuildResponse(QXmlStreamReader &xml)
 {

@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationAggregatorRequest::respons
  */
 
 /*!
- *
- * Constructs a DeleteConfigurationAggregatorRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteConfigurationAggregatorRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DeleteConfigurationAggregatorRequestPrivate::DeleteConfigurationAggregatorRequestPrivate(
     const ConfigServiceRequest::Action action, DeleteConfigurationAggregatorRequest * const q)

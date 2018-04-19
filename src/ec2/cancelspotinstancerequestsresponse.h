@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelSpotInstanceRequestsResponse : public EC2Response {
 public:
     CancelSpotInstanceRequestsResponse(const CancelSpotInstanceRequestsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelSpotInstanceRequestsRequest * request() const;
+    virtual const CancelSpotInstanceRequestsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CancelSpotInstanceRequestsResponse)

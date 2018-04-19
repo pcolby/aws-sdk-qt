@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSpotDatafeedSubscriptionRequest::respon
  */
 
 /*!
- *
- * Constructs a DeleteSpotDatafeedSubscriptionRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSpotDatafeedSubscriptionRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteSpotDatafeedSubscriptionRequestPrivate::DeleteSpotDatafeedSubscriptionRequestPrivate(
     const EC2Request::Action action, DeleteSpotDatafeedSubscriptionRequest * const q)

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * RejectPortfolioShareRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a RejectPortfolioShareRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a RejectPortfolioShareRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 RejectPortfolioShareRequestPrivate::RejectPortfolioShareRequestPrivate(
     const ServiceCatalogRequest::Action action, RejectPortfolioShareRequest * const q)

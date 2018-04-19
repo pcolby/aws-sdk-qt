@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateHITRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a CreateHITRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a CreateHITRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 CreateHITRequestPrivate::CreateHITRequestPrivate(
     const MTurkRequest::Action action, CreateHITRequest * const q)

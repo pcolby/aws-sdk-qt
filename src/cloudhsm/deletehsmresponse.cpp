@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::DeleteHsmResponse
- *
  * \brief The DeleteHsmResponse class provides an interace for CloudHSM DeleteHsm responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteHsmResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteHsmResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteHsmResponse::DeleteHsmResponse(
         const DeleteHsmRequest &request,
@@ -67,6 +62,9 @@ DeleteHsmResponse::DeleteHsmResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteHsmRequest * DeleteHsmResponse::request() const
 {
     Q_D(const DeleteHsmResponse);
@@ -74,9 +72,8 @@ const DeleteHsmRequest * DeleteHsmResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSM DeleteHsm response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM DeleteHsm \a response.
  */
 void DeleteHsmResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void DeleteHsmResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::DeleteHsmResponsePrivate
+ * \brief The DeleteHsmResponsePrivate class provides private implementation for DeleteHsmResponse.
  * \internal
  *
- * \class DeleteHsmResponsePrivate
- *
- * \brief Private implementation for DeleteHsmResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHsmResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteHsmResponse instance.
+ * Constructs a DeleteHsmResponsePrivate object with public implementation \a q.
  */
 DeleteHsmResponsePrivate::DeleteHsmResponsePrivate(
     DeleteHsmResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ DeleteHsmResponsePrivate::DeleteHsmResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM DeleteHsmResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM DeleteHsm response element from \a xml.
  */
 void DeleteHsmResponsePrivate::parseDeleteHsmResponse(QXmlStreamReader &xml)
 {

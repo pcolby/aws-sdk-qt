@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * UpdatePatchBaselineRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a UpdatePatchBaselineRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a UpdatePatchBaselineRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 UpdatePatchBaselineRequestPrivate::UpdatePatchBaselineRequestPrivate(
     const SSMRequest::Action action, UpdatePatchBaselineRequest * const q)

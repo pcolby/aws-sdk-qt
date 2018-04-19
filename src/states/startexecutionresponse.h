@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartExecutionResponse : public SFNResponse {
 public:
     StartExecutionResponse(const StartExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartExecutionRequest * request() const;
+    virtual const StartExecutionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartExecutionResponse)

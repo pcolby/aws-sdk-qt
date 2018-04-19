@@ -29,10 +29,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::ListApplicationVersionsResponse
- *
  * \brief The ListApplicationVersionsResponse class provides an interace for ServerlessApplicationRepository ListApplicationVersions responses.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -60,11 +59,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new ListApplicationVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListApplicationVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListApplicationVersionsResponse::ListApplicationVersionsResponse(
         const ListApplicationVersionsRequest &request,
@@ -76,6 +71,9 @@ ListApplicationVersionsResponse::ListApplicationVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListApplicationVersionsRequest * ListApplicationVersionsResponse::request() const
 {
     Q_D(const ListApplicationVersionsResponse);
@@ -83,9 +81,8 @@ const ListApplicationVersionsRequest * ListApplicationVersionsResponse::request(
 }
 
 /*!
- * @brief  Parse a ServerlessApplicationRepository ListApplicationVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServerlessApplicationRepository ListApplicationVersions \a response.
  */
 void ListApplicationVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -95,19 +92,15 @@ void ListApplicationVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServerlessApplicationRepository::ListApplicationVersionsResponsePrivate
+ * \brief The ListApplicationVersionsResponsePrivate class provides private implementation for ListApplicationVersionsResponse.
  * \internal
  *
- * \class ListApplicationVersionsResponsePrivate
- *
- * \brief Private implementation for ListApplicationVersionsResponse.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListApplicationVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListApplicationVersionsResponse instance.
+ * Constructs a ListApplicationVersionsResponsePrivate object with public implementation \a q.
  */
 ListApplicationVersionsResponsePrivate::ListApplicationVersionsResponsePrivate(
     ListApplicationVersionsResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
@@ -116,9 +109,7 @@ ListApplicationVersionsResponsePrivate::ListApplicationVersionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServerlessApplicationRepository ListApplicationVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServerlessApplicationRepository ListApplicationVersions response element from \a xml.
  */
 void ListApplicationVersionsResponsePrivate::parseListApplicationVersionsResponse(QXmlStreamReader &xml)
 {

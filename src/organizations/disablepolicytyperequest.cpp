@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * DisablePolicyTypeRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DisablePolicyTypeRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a DisablePolicyTypeRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 DisablePolicyTypeRequestPrivate::DisablePolicyTypeRequestPrivate(
     const OrganizationsRequest::Action action, DisablePolicyTypeRequest * const q)

@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeTagsRequestPrivate object for ApplicationDiscoveryService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTagsRequestPrivate object for ApplicationDiscoveryService \a action,
+ * with public implementation \a q.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const ApplicationDiscoveryServiceRequest::Action action, DescribeTagsRequest * const q)

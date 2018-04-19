@@ -34,10 +34,10 @@ class QTAWS_EXPORT RevokeInvitationResponse : public AlexaForBusinessResponse {
 public:
     RevokeInvitationResponse(const RevokeInvitationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RevokeInvitationRequest * request() const;
+    virtual const RevokeInvitationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RevokeInvitationResponse)

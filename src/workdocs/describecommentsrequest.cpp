@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCommentsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeCommentsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCommentsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DescribeCommentsRequestPrivate::DescribeCommentsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeCommentsRequest * const q)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStepRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeStepRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStepRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 DescribeStepRequestPrivate::DescribeStepRequestPrivate(
     const EMRRequest::Action action, DescribeStepRequest * const q)

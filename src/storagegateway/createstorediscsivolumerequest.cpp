@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * CreateStorediSCSIVolumeRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a CreateStorediSCSIVolumeRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a CreateStorediSCSIVolumeRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 CreateStorediSCSIVolumeRequestPrivate::CreateStorediSCSIVolumeRequestPrivate(
     const StorageGatewayRequest::Action action, CreateStorediSCSIVolumeRequest * const q)

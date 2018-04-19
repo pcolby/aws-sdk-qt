@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SendTemplatedEmailRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a SendTemplatedEmailRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a SendTemplatedEmailRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 SendTemplatedEmailRequestPrivate::SendTemplatedEmailRequestPrivate(
     const SESRequest::Action action, SendTemplatedEmailRequest * const q)

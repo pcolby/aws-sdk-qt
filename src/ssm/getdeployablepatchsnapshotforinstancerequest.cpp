@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * GetDeployablePatchSnapshotForInstanceRequest:
  */
 
 /*!
- *
- * Constructs a GetDeployablePatchSnapshotForInstanceRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a GetDeployablePatchSnapshotForInstanceRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 GetDeployablePatchSnapshotForInstanceRequestPrivate::GetDeployablePatchSnapshotForInstanceRequestPrivate(
     const SSMRequest::Action action, GetDeployablePatchSnapshotForInstanceRequest * const q)

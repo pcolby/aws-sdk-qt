@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeParameterGroupsResponse : public DAXResponse {
 public:
     DescribeParameterGroupsResponse(const DescribeParameterGroupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeParameterGroupsRequest * request() const;
+    virtual const DescribeParameterGroupsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeParameterGroupsResponse)

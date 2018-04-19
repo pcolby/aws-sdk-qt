@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetReservedInstancesExchangeQuoteRequest::res
  */
 
 /*!
- *
- * Constructs a GetReservedInstancesExchangeQuoteRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a GetReservedInstancesExchangeQuoteRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 GetReservedInstancesExchangeQuoteRequestPrivate::GetReservedInstancesExchangeQuoteRequestPrivate(
     const EC2Request::Action action, GetReservedInstancesExchangeQuoteRequest * const q)

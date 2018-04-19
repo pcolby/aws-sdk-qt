@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::DescribeEndpointsResponse
- *
  * \brief The DescribeEndpointsResponse class provides an interace for MediaConvert DescribeEndpoints responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::describeEndpoints
  */
 
 /*!
- * @brief  Constructs a new DescribeEndpointsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEndpointsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEndpointsResponse::DescribeEndpointsResponse(
         const DescribeEndpointsRequest &request,
@@ -55,6 +50,9 @@ DescribeEndpointsResponse::DescribeEndpointsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEndpointsRequest * DescribeEndpointsResponse::request() const
 {
     Q_D(const DescribeEndpointsResponse);
@@ -62,9 +60,8 @@ const DescribeEndpointsRequest * DescribeEndpointsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert DescribeEndpoints response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert DescribeEndpoints \a response.
  */
 void DescribeEndpointsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeEndpointsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::DescribeEndpointsResponsePrivate
+ * \brief The DescribeEndpointsResponsePrivate class provides private implementation for DescribeEndpointsResponse.
  * \internal
  *
- * \class DescribeEndpointsResponsePrivate
- *
- * \brief Private implementation for DescribeEndpointsResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEndpointsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEndpointsResponse instance.
+ * Constructs a DescribeEndpointsResponsePrivate object with public implementation \a q.
  */
 DescribeEndpointsResponsePrivate::DescribeEndpointsResponsePrivate(
     DescribeEndpointsResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeEndpointsResponsePrivate::DescribeEndpointsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert DescribeEndpointsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert DescribeEndpoints response element from \a xml.
  */
 void DescribeEndpointsResponsePrivate::parseDescribeEndpointsResponse(QXmlStreamReader &xml)
 {

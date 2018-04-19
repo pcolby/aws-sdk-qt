@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * ValidateMatchmakingRuleSetRequest::response(Q
  */
 
 /*!
- *
- * Constructs a ValidateMatchmakingRuleSetRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a ValidateMatchmakingRuleSetRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 ValidateMatchmakingRuleSetRequestPrivate::ValidateMatchmakingRuleSetRequestPrivate(
     const GameLiftRequest::Action action, ValidateMatchmakingRuleSetRequest * const q)

@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTimeToLiveRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeTimeToLiveRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTimeToLiveRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 DescribeTimeToLiveRequestPrivate::DescribeTimeToLiveRequestPrivate(
     const DynamoDBRequest::Action action, DescribeTimeToLiveRequest * const q)

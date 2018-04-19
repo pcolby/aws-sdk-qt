@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetProjectResponse : public DeviceFarmResponse {
 public:
     GetProjectResponse(const GetProjectRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetProjectRequest * request() const;
+    virtual const GetProjectRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetProjectResponse)

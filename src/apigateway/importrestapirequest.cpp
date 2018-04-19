@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ImportRestApiRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ImportRestApiRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a ImportRestApiRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 ImportRestApiRequestPrivate::ImportRestApiRequestPrivate(
     const APIGatewayRequest::Action action, ImportRestApiRequest * const q)

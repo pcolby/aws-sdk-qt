@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::DeleteRepositoryResponse
- *
  * \brief The DeleteRepositoryResponse class provides an interace for CodeCommit DeleteRepository responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new DeleteRepositoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRepositoryResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRepositoryResponse::DeleteRepositoryResponse(
         const DeleteRepositoryRequest &request,
@@ -245,6 +240,9 @@ DeleteRepositoryResponse::DeleteRepositoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRepositoryRequest * DeleteRepositoryResponse::request() const
 {
     Q_D(const DeleteRepositoryResponse);
@@ -252,9 +250,8 @@ const DeleteRepositoryRequest * DeleteRepositoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit DeleteRepository response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit DeleteRepository \a response.
  */
 void DeleteRepositoryResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void DeleteRepositoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::DeleteRepositoryResponsePrivate
+ * \brief The DeleteRepositoryResponsePrivate class provides private implementation for DeleteRepositoryResponse.
  * \internal
  *
- * \class DeleteRepositoryResponsePrivate
- *
- * \brief Private implementation for DeleteRepositoryResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRepositoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRepositoryResponse instance.
+ * Constructs a DeleteRepositoryResponsePrivate object with public implementation \a q.
  */
 DeleteRepositoryResponsePrivate::DeleteRepositoryResponsePrivate(
     DeleteRepositoryResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ DeleteRepositoryResponsePrivate::DeleteRepositoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit DeleteRepositoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit DeleteRepository response element from \a xml.
  */
 void DeleteRepositoryResponsePrivate::parseDeleteRepositoryResponse(QXmlStreamReader &xml)
 {

@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * PutConfigurationRecorderRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a PutConfigurationRecorderRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a PutConfigurationRecorderRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 PutConfigurationRecorderRequestPrivate::PutConfigurationRecorderRequestPrivate(
     const ConfigServiceRequest::Action action, PutConfigurationRecorderRequest * const q)

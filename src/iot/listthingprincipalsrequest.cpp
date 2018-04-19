@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListThingPrincipalsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListThingPrincipalsRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListThingPrincipalsRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListThingPrincipalsRequestPrivate::ListThingPrincipalsRequestPrivate(
     const IoTRequest::Action action, ListThingPrincipalsRequest * const q)

@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::ListResourceDelegatesResponse
- *
  * \brief The ListResourceDelegatesResponse class provides an interace for WorkMail ListResourceDelegates responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new ListResourceDelegatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListResourceDelegatesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListResourceDelegatesResponse::ListResourceDelegatesResponse(
         const ListResourceDelegatesRequest &request,
@@ -88,6 +83,9 @@ ListResourceDelegatesResponse::ListResourceDelegatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListResourceDelegatesRequest * ListResourceDelegatesResponse::request() const
 {
     Q_D(const ListResourceDelegatesResponse);
@@ -95,9 +93,8 @@ const ListResourceDelegatesRequest * ListResourceDelegatesResponse::request() co
 }
 
 /*!
- * @brief  Parse a WorkMail ListResourceDelegates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail ListResourceDelegates \a response.
  */
 void ListResourceDelegatesResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void ListResourceDelegatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::ListResourceDelegatesResponsePrivate
+ * \brief The ListResourceDelegatesResponsePrivate class provides private implementation for ListResourceDelegatesResponse.
  * \internal
  *
- * \class ListResourceDelegatesResponsePrivate
- *
- * \brief Private implementation for ListResourceDelegatesResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceDelegatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListResourceDelegatesResponse instance.
+ * Constructs a ListResourceDelegatesResponsePrivate object with public implementation \a q.
  */
 ListResourceDelegatesResponsePrivate::ListResourceDelegatesResponsePrivate(
     ListResourceDelegatesResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ ListResourceDelegatesResponsePrivate::ListResourceDelegatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail ListResourceDelegatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail ListResourceDelegates response element from \a xml.
  */
 void ListResourceDelegatesResponsePrivate::parseListResourceDelegatesResponse(QXmlStreamReader &xml)
 {

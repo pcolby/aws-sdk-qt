@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::GetMethodResponse
- *
  * \brief The GetMethodResponse class provides an interace for APIGateway GetMethod responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new GetMethodResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetMethodResponse object for \a reply to \a request, with parent \a parent.
  */
 GetMethodResponse::GetMethodResponse(
         const GetMethodRequest &request,
@@ -60,6 +55,9 @@ GetMethodResponse::GetMethodResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetMethodRequest * GetMethodResponse::request() const
 {
     Q_D(const GetMethodResponse);
@@ -67,9 +65,8 @@ const GetMethodRequest * GetMethodResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway GetMethod response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway GetMethod \a response.
  */
 void GetMethodResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetMethodResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::GetMethodResponsePrivate
+ * \brief The GetMethodResponsePrivate class provides private implementation for GetMethodResponse.
  * \internal
  *
- * \class GetMethodResponsePrivate
- *
- * \brief Private implementation for GetMethodResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMethodResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetMethodResponse instance.
+ * Constructs a GetMethodResponsePrivate object with public implementation \a q.
  */
 GetMethodResponsePrivate::GetMethodResponsePrivate(
     GetMethodResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ GetMethodResponsePrivate::GetMethodResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway GetMethodResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway GetMethod response element from \a xml.
  */
 void GetMethodResponsePrivate::parseGetMethodResponse(QXmlStreamReader &xml)
 {

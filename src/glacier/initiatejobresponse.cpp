@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::InitiateJobResponse
- *
  * \brief The InitiateJobResponse class provides an interace for Glacier InitiateJob responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new InitiateJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a InitiateJobResponse object for \a reply to \a request, with parent \a parent.
  */
 InitiateJobResponse::InitiateJobResponse(
         const InitiateJobRequest &request,
@@ -93,6 +88,9 @@ InitiateJobResponse::InitiateJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const InitiateJobRequest * InitiateJobResponse::request() const
 {
     Q_D(const InitiateJobResponse);
@@ -100,9 +98,8 @@ const InitiateJobRequest * InitiateJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier InitiateJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier InitiateJob \a response.
  */
 void InitiateJobResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void InitiateJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::InitiateJobResponsePrivate
+ * \brief The InitiateJobResponsePrivate class provides private implementation for InitiateJobResponse.
  * \internal
  *
- * \class InitiateJobResponsePrivate
- *
- * \brief Private implementation for InitiateJobResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InitiateJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InitiateJobResponse instance.
+ * Constructs a InitiateJobResponsePrivate object with public implementation \a q.
  */
 InitiateJobResponsePrivate::InitiateJobResponsePrivate(
     InitiateJobResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ InitiateJobResponsePrivate::InitiateJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier InitiateJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier InitiateJob response element from \a xml.
  */
 void InitiateJobResponsePrivate::parseInitiateJobResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteUserProfileResponse : public CodeStarResponse {
 public:
     DeleteUserProfileResponse(const DeleteUserProfileRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteUserProfileRequest * request() const;
+    virtual const DeleteUserProfileRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteUserProfileResponse)

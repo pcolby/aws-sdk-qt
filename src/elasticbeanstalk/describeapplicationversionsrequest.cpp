@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribeApplicationVersionsRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeApplicationVersionsRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DescribeApplicationVersionsRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DescribeApplicationVersionsRequestPrivate::DescribeApplicationVersionsRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DescribeApplicationVersionsRequest * const q)

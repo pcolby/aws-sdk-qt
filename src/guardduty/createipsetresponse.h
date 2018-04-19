@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateIPSetResponse : public GuardDutyResponse {
 public:
     CreateIPSetResponse(const CreateIPSetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateIPSetRequest * request() const;
+    virtual const CreateIPSetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateIPSetResponse)

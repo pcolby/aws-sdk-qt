@@ -29,10 +29,9 @@ namespace ResourceGroupsTaggingAPI {
 
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::TagResourcesResponse
- *
  * \brief The TagResourcesResponse class provides an interace for ResourceGroupsTaggingAPI TagResources responses.
  *
- * \ingroup ResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  *
  *  <fullname>Resource Groups Tagging API</fullname>
  * 
@@ -94,11 +93,7 @@ namespace ResourceGroupsTaggingAPI {
  */
 
 /*!
- * @brief  Constructs a new TagResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagResourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 TagResourcesResponse::TagResourcesResponse(
         const TagResourcesRequest &request,
@@ -110,6 +105,9 @@ TagResourcesResponse::TagResourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagResourcesRequest * TagResourcesResponse::request() const
 {
     Q_D(const TagResourcesResponse);
@@ -117,9 +115,8 @@ const TagResourcesRequest * TagResourcesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ResourceGroupsTaggingAPI TagResources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ResourceGroupsTaggingAPI TagResources \a response.
  */
 void TagResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -129,19 +126,15 @@ void TagResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ResourceGroupsTaggingAPI::TagResourcesResponsePrivate
+ * \brief The TagResourcesResponsePrivate class provides private implementation for TagResourcesResponse.
  * \internal
  *
- * \class TagResourcesResponsePrivate
- *
- * \brief Private implementation for TagResourcesResponse.
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagResourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagResourcesResponse instance.
+ * Constructs a TagResourcesResponsePrivate object with public implementation \a q.
  */
 TagResourcesResponsePrivate::TagResourcesResponsePrivate(
     TagResourcesResponse * const q) : ResourceGroupsTaggingAPIResponsePrivate(q)
@@ -150,9 +143,7 @@ TagResourcesResponsePrivate::TagResourcesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ResourceGroupsTaggingAPI TagResourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ResourceGroupsTaggingAPI TagResources response element from \a xml.
  */
 void TagResourcesResponsePrivate::parseTagResourcesResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SetIdentityFeedbackForwardingEnabledRequest::
  */
 
 /*!
- *
- * Constructs a SetIdentityFeedbackForwardingEnabledRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a SetIdentityFeedbackForwardingEnabledRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 SetIdentityFeedbackForwardingEnabledRequestPrivate::SetIdentityFeedbackForwardingEnabledRequestPrivate(
     const SESRequest::Action action, SetIdentityFeedbackForwardingEnabledRequest * const q)

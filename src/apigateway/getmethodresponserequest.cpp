@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetMethodResponseRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetMethodResponseRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetMethodResponseRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetMethodResponseRequestPrivate::GetMethodResponseRequestPrivate(
     const APIGatewayRequest::Action action, GetMethodResponseRequest * const q)

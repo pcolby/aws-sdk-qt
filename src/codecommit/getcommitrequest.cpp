@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * GetCommitRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetCommitRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a GetCommitRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 GetCommitRequestPrivate::GetCommitRequestPrivate(
     const CodeCommitRequest::Action action, GetCommitRequest * const q)

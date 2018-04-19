@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::UpdateEvaluationResponse
- *
  * \brief The UpdateEvaluationResponse class provides an interace for MachineLearning UpdateEvaluation responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::updateEvaluation
  */
 
 /*!
- * @brief  Constructs a new UpdateEvaluationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateEvaluationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateEvaluationResponse::UpdateEvaluationResponse(
         const UpdateEvaluationRequest &request,
@@ -55,6 +50,9 @@ UpdateEvaluationResponse::UpdateEvaluationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateEvaluationRequest * UpdateEvaluationResponse::request() const
 {
     Q_D(const UpdateEvaluationResponse);
@@ -62,9 +60,8 @@ const UpdateEvaluationRequest * UpdateEvaluationResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning UpdateEvaluation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning UpdateEvaluation \a response.
  */
 void UpdateEvaluationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateEvaluationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::UpdateEvaluationResponsePrivate
+ * \brief The UpdateEvaluationResponsePrivate class provides private implementation for UpdateEvaluationResponse.
  * \internal
  *
- * \class UpdateEvaluationResponsePrivate
- *
- * \brief Private implementation for UpdateEvaluationResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEvaluationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateEvaluationResponse instance.
+ * Constructs a UpdateEvaluationResponsePrivate object with public implementation \a q.
  */
 UpdateEvaluationResponsePrivate::UpdateEvaluationResponsePrivate(
     UpdateEvaluationResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateEvaluationResponsePrivate::UpdateEvaluationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning UpdateEvaluationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning UpdateEvaluation response element from \a xml.
  */
 void UpdateEvaluationResponsePrivate::parseUpdateEvaluationResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartTopicsDetectionJobResponse : public ComprehendResponse {
 public:
     StartTopicsDetectionJobResponse(const StartTopicsDetectionJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartTopicsDetectionJobRequest * request() const;
+    virtual const StartTopicsDetectionJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartTopicsDetectionJobResponse)

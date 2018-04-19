@@ -34,10 +34,10 @@ class QTAWS_EXPORT ReplaceIamInstanceProfileAssociationResponse : public EC2Resp
 public:
     ReplaceIamInstanceProfileAssociationResponse(const ReplaceIamInstanceProfileAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ReplaceIamInstanceProfileAssociationRequest * request() const;
+    virtual const ReplaceIamInstanceProfileAssociationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ReplaceIamInstanceProfileAssociationResponse)

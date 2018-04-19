@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::TagResourceResponse
- *
  * \brief The TagResourceResponse class provides an interace for DynamoDB TagResource responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new TagResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TagResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
@@ -74,6 +69,9 @@ TagResourceResponse::TagResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TagResourceRequest * TagResourceResponse::request() const
 {
     Q_D(const TagResourceResponse);
@@ -81,9 +79,8 @@ const TagResourceRequest * TagResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB TagResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB TagResource \a response.
  */
 void TagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void TagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::TagResourceResponsePrivate
+ * \brief The TagResourceResponsePrivate class provides private implementation for TagResourceResponse.
  * \internal
  *
- * \class TagResourceResponsePrivate
- *
- * \brief Private implementation for TagResourceResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TagResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TagResourceResponse instance.
+ * Constructs a TagResourceResponsePrivate object with public implementation \a q.
  */
 TagResourceResponsePrivate::TagResourceResponsePrivate(
     TagResourceResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ TagResourceResponsePrivate::TagResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB TagResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB TagResource response element from \a xml.
  */
 void TagResourceResponsePrivate::parseTagResourceResponse(QXmlStreamReader &xml)
 {

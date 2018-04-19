@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * RebootCacheClusterRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a RebootCacheClusterRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a RebootCacheClusterRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 RebootCacheClusterRequestPrivate::RebootCacheClusterRequestPrivate(
     const ElastiCacheRequest::Action action, RebootCacheClusterRequest * const q)

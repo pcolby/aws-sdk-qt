@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::CreateAddressResponse
- *
  * \brief The CreateAddressResponse class provides an interace for Snowball CreateAddress responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new CreateAddressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAddressResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAddressResponse::CreateAddressResponse(
         const CreateAddressRequest &request,
@@ -61,6 +56,9 @@ CreateAddressResponse::CreateAddressResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAddressRequest * CreateAddressResponse::request() const
 {
     Q_D(const CreateAddressResponse);
@@ -68,9 +66,8 @@ const CreateAddressRequest * CreateAddressResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball CreateAddress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball CreateAddress \a response.
  */
 void CreateAddressResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreateAddressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::CreateAddressResponsePrivate
+ * \brief The CreateAddressResponsePrivate class provides private implementation for CreateAddressResponse.
  * \internal
  *
- * \class CreateAddressResponsePrivate
- *
- * \brief Private implementation for CreateAddressResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAddressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAddressResponse instance.
+ * Constructs a CreateAddressResponsePrivate object with public implementation \a q.
  */
 CreateAddressResponsePrivate::CreateAddressResponsePrivate(
     CreateAddressResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ CreateAddressResponsePrivate::CreateAddressResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball CreateAddressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball CreateAddress response element from \a xml.
  */
 void CreateAddressResponsePrivate::parseCreateAddressResponse(QXmlStreamReader &xml)
 {

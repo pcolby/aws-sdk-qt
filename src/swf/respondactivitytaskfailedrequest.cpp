@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * RespondActivityTaskFailedRequest::response(QN
  */
 
 /*!
- *
- * Constructs a RespondActivityTaskFailedRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a RespondActivityTaskFailedRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 RespondActivityTaskFailedRequestPrivate::RespondActivityTaskFailedRequestPrivate(
     const SWFRequest::Action action, RespondActivityTaskFailedRequest * const q)

@@ -29,21 +29,16 @@ namespace KinesisAnalytics {
 
 /*!
  * \class QtAws::KinesisAnalytics::DiscoverInputSchemaResponse
- *
  * \brief The DiscoverInputSchemaResponse class provides an interace for KinesisAnalytics DiscoverInputSchema responses.
  *
- * \ingroup KinesisAnalytics
+ * \inmodule QtAwsKinesisAnalytics
  *
  *
  * \sa KinesisAnalyticsClient::discoverInputSchema
  */
 
 /*!
- * @brief  Constructs a new DiscoverInputSchemaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DiscoverInputSchemaResponse object for \a reply to \a request, with parent \a parent.
  */
 DiscoverInputSchemaResponse::DiscoverInputSchemaResponse(
         const DiscoverInputSchemaRequest &request,
@@ -55,6 +50,9 @@ DiscoverInputSchemaResponse::DiscoverInputSchemaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DiscoverInputSchemaRequest * DiscoverInputSchemaResponse::request() const
 {
     Q_D(const DiscoverInputSchemaResponse);
@@ -62,9 +60,8 @@ const DiscoverInputSchemaRequest * DiscoverInputSchemaResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisAnalytics DiscoverInputSchema response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisAnalytics DiscoverInputSchema \a response.
  */
 void DiscoverInputSchemaResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DiscoverInputSchemaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisAnalytics::DiscoverInputSchemaResponsePrivate
+ * \brief The DiscoverInputSchemaResponsePrivate class provides private implementation for DiscoverInputSchemaResponse.
  * \internal
  *
- * \class DiscoverInputSchemaResponsePrivate
- *
- * \brief Private implementation for DiscoverInputSchemaResponse.
+ * \inmodule QtAwsKinesisAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DiscoverInputSchemaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DiscoverInputSchemaResponse instance.
+ * Constructs a DiscoverInputSchemaResponsePrivate object with public implementation \a q.
  */
 DiscoverInputSchemaResponsePrivate::DiscoverInputSchemaResponsePrivate(
     DiscoverInputSchemaResponse * const q) : KinesisAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ DiscoverInputSchemaResponsePrivate::DiscoverInputSchemaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisAnalytics DiscoverInputSchemaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisAnalytics DiscoverInputSchema response element from \a xml.
  */
 void DiscoverInputSchemaResponsePrivate::parseDiscoverInputSchemaResponse(QXmlStreamReader &xml)
 {

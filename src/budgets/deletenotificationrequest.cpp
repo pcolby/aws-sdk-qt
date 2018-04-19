@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteNotificationRequestPrivate object for Budgets \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNotificationRequestPrivate object for Budgets \a action,
+ * with public implementation \a q.
  */
 DeleteNotificationRequestPrivate::DeleteNotificationRequestPrivate(
     const BudgetsRequest::Action action, DeleteNotificationRequest * const q)

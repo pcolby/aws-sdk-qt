@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteResourceServerResponse : public CognitoIdentityProvider
 public:
     DeleteResourceServerResponse(const DeleteResourceServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteResourceServerRequest * request() const;
+    virtual const DeleteResourceServerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteResourceServerResponse)

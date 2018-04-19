@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::CreateJobResponse
- *
  * \brief The CreateJobResponse class provides an interace for Snowball CreateJob responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new CreateJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateJobResponse::CreateJobResponse(
         const CreateJobRequest &request,
@@ -61,6 +56,9 @@ CreateJobResponse::CreateJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateJobRequest * CreateJobResponse::request() const
 {
     Q_D(const CreateJobResponse);
@@ -68,9 +66,8 @@ const CreateJobRequest * CreateJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball CreateJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball CreateJob \a response.
  */
 void CreateJobResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreateJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::CreateJobResponsePrivate
+ * \brief The CreateJobResponsePrivate class provides private implementation for CreateJobResponse.
  * \internal
  *
- * \class CreateJobResponsePrivate
- *
- * \brief Private implementation for CreateJobResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateJobResponse instance.
+ * Constructs a CreateJobResponsePrivate object with public implementation \a q.
  */
 CreateJobResponsePrivate::CreateJobResponsePrivate(
     CreateJobResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ CreateJobResponsePrivate::CreateJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball CreateJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball CreateJob response element from \a xml.
  */
 void CreateJobResponsePrivate::parseCreateJobResponse(QXmlStreamReader &xml)
 {

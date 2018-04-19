@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * DescribeClustersRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeClustersRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeClustersRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
     const ECSRequest::Action action, DescribeClustersRequest * const q)

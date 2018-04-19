@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateFunctionRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CreateFunctionRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a CreateFunctionRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 CreateFunctionRequestPrivate::CreateFunctionRequestPrivate(
     const LambdaRequest::Action action, CreateFunctionRequest * const q)

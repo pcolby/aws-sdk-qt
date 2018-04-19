@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVpcClassicLinkDnsSupportRequest::resp
  */
 
 /*!
- *
- * Constructs a DescribeVpcClassicLinkDnsSupportRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVpcClassicLinkDnsSupportRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeVpcClassicLinkDnsSupportRequestPrivate::DescribeVpcClassicLinkDnsSupportRequestPrivate(
     const EC2Request::Action action, DescribeVpcClassicLinkDnsSupportRequest * const q)

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteAccessKeyResponse
- *
  * \brief The DeleteAccessKeyResponse class provides an interace for IAM DeleteAccessKey responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteAccessKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAccessKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAccessKeyResponse::DeleteAccessKeyResponse(
         const DeleteAccessKeyRequest &request,
@@ -120,6 +115,9 @@ DeleteAccessKeyResponse::DeleteAccessKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAccessKeyRequest * DeleteAccessKeyResponse::request() const
 {
     Q_D(const DeleteAccessKeyResponse);
@@ -127,9 +125,8 @@ const DeleteAccessKeyRequest * DeleteAccessKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM DeleteAccessKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteAccessKey \a response.
  */
 void DeleteAccessKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteAccessKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteAccessKeyResponsePrivate
+ * \brief The DeleteAccessKeyResponsePrivate class provides private implementation for DeleteAccessKeyResponse.
  * \internal
  *
- * \class DeleteAccessKeyResponsePrivate
- *
- * \brief Private implementation for DeleteAccessKeyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAccessKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAccessKeyResponse instance.
+ * Constructs a DeleteAccessKeyResponsePrivate object with public implementation \a q.
  */
 DeleteAccessKeyResponsePrivate::DeleteAccessKeyResponsePrivate(
     DeleteAccessKeyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteAccessKeyResponsePrivate::DeleteAccessKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeleteAccessKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteAccessKey response element from \a xml.
  */
 void DeleteAccessKeyResponsePrivate::parseDeleteAccessKeyResponse(QXmlStreamReader &xml)
 {

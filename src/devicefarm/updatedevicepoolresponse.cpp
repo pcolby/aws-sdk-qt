@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::UpdateDevicePoolResponse
- *
  * \brief The UpdateDevicePoolResponse class provides an interace for DeviceFarm UpdateDevicePool responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new UpdateDevicePoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDevicePoolResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDevicePoolResponse::UpdateDevicePoolResponse(
         const UpdateDevicePoolRequest &request,
@@ -57,6 +52,9 @@ UpdateDevicePoolResponse::UpdateDevicePoolResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDevicePoolRequest * UpdateDevicePoolResponse::request() const
 {
     Q_D(const UpdateDevicePoolResponse);
@@ -64,9 +62,8 @@ const UpdateDevicePoolRequest * UpdateDevicePoolResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm UpdateDevicePool response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm UpdateDevicePool \a response.
  */
 void UpdateDevicePoolResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void UpdateDevicePoolResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::UpdateDevicePoolResponsePrivate
+ * \brief The UpdateDevicePoolResponsePrivate class provides private implementation for UpdateDevicePoolResponse.
  * \internal
  *
- * \class UpdateDevicePoolResponsePrivate
- *
- * \brief Private implementation for UpdateDevicePoolResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDevicePoolResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDevicePoolResponse instance.
+ * Constructs a UpdateDevicePoolResponsePrivate object with public implementation \a q.
  */
 UpdateDevicePoolResponsePrivate::UpdateDevicePoolResponsePrivate(
     UpdateDevicePoolResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ UpdateDevicePoolResponsePrivate::UpdateDevicePoolResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm UpdateDevicePoolResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm UpdateDevicePool response element from \a xml.
  */
 void UpdateDevicePoolResponsePrivate::parseUpdateDevicePoolResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::DomainMetadataResponse
- *
  * \brief The DomainMetadataResponse class provides an interace for SimpleDB DomainMetadata responses.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -52,11 +51,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new DomainMetadataResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DomainMetadataResponse object for \a reply to \a request, with parent \a parent.
  */
 DomainMetadataResponse::DomainMetadataResponse(
         const DomainMetadataRequest &request,
@@ -68,6 +63,9 @@ DomainMetadataResponse::DomainMetadataResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DomainMetadataRequest * DomainMetadataResponse::request() const
 {
     Q_D(const DomainMetadataResponse);
@@ -75,9 +73,8 @@ const DomainMetadataRequest * DomainMetadataResponse::request() const
 }
 
 /*!
- * @brief  Parse a SimpleDB DomainMetadata response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SimpleDB DomainMetadata \a response.
  */
 void DomainMetadataResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void DomainMetadataResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SimpleDB::DomainMetadataResponsePrivate
+ * \brief The DomainMetadataResponsePrivate class provides private implementation for DomainMetadataResponse.
  * \internal
  *
- * \class DomainMetadataResponsePrivate
- *
- * \brief Private implementation for DomainMetadataResponse.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DomainMetadataResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DomainMetadataResponse instance.
+ * Constructs a DomainMetadataResponsePrivate object with public implementation \a q.
  */
 DomainMetadataResponsePrivate::DomainMetadataResponsePrivate(
     DomainMetadataResponse * const q) : SimpleDBResponsePrivate(q)
@@ -108,9 +101,7 @@ DomainMetadataResponsePrivate::DomainMetadataResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SimpleDB DomainMetadataResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SimpleDB DomainMetadata response element from \a xml.
  */
 void DomainMetadataResponsePrivate::parseDomainMetadataResponse(QXmlStreamReader &xml)
 {

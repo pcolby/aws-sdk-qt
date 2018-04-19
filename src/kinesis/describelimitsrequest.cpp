@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeLimitsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeLimitsRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a DescribeLimitsRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 DescribeLimitsRequestPrivate::DescribeLimitsRequestPrivate(
     const KinesisRequest::Action action, DescribeLimitsRequest * const q)

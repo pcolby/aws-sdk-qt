@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteEnvironmentConfigurationResponse : public ElasticBeanst
 public:
     DeleteEnvironmentConfigurationResponse(const DeleteEnvironmentConfigurationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteEnvironmentConfigurationRequest * request() const;
+    virtual const DeleteEnvironmentConfigurationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteEnvironmentConfigurationResponse)

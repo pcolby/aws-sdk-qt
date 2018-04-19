@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::RebootClusterResponse
- *
  * \brief The RebootClusterResponse class provides an interace for Redshift RebootCluster responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new RebootClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RebootClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 RebootClusterResponse::RebootClusterResponse(
         const RebootClusterRequest &request,
@@ -85,6 +80,9 @@ RebootClusterResponse::RebootClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RebootClusterRequest * RebootClusterResponse::request() const
 {
     Q_D(const RebootClusterResponse);
@@ -92,9 +90,8 @@ const RebootClusterRequest * RebootClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a Redshift RebootCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift RebootCluster \a response.
  */
 void RebootClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void RebootClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::RebootClusterResponsePrivate
+ * \brief The RebootClusterResponsePrivate class provides private implementation for RebootClusterResponse.
  * \internal
  *
- * \class RebootClusterResponsePrivate
- *
- * \brief Private implementation for RebootClusterResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RebootClusterResponse instance.
+ * Constructs a RebootClusterResponsePrivate object with public implementation \a q.
  */
 RebootClusterResponsePrivate::RebootClusterResponsePrivate(
     RebootClusterResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ RebootClusterResponsePrivate::RebootClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift RebootClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift RebootCluster response element from \a xml.
  */
 void RebootClusterResponsePrivate::parseRebootClusterResponse(QXmlStreamReader &xml)
 {

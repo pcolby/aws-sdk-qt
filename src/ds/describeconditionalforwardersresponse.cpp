@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeConditionalForwardersResponse
- *
  * \brief The DescribeConditionalForwardersResponse class provides an interace for DirectoryService DescribeConditionalForwarders responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConditionalForwardersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConditionalForwardersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConditionalForwardersResponse::DescribeConditionalForwardersResponse(
         const DescribeConditionalForwardersRequest &request,
@@ -69,6 +64,9 @@ DescribeConditionalForwardersResponse::DescribeConditionalForwardersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConditionalForwardersRequest * DescribeConditionalForwardersResponse::request() const
 {
     Q_D(const DescribeConditionalForwardersResponse);
@@ -76,9 +74,8 @@ const DescribeConditionalForwardersRequest * DescribeConditionalForwardersRespon
 }
 
 /*!
- * @brief  Parse a DirectoryService DescribeConditionalForwarders response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DescribeConditionalForwarders \a response.
  */
 void DescribeConditionalForwardersResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeConditionalForwardersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DescribeConditionalForwardersResponsePrivate
+ * \brief The DescribeConditionalForwardersResponsePrivate class provides private implementation for DescribeConditionalForwardersResponse.
  * \internal
  *
- * \class DescribeConditionalForwardersResponsePrivate
- *
- * \brief Private implementation for DescribeConditionalForwardersResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConditionalForwardersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConditionalForwardersResponse instance.
+ * Constructs a DescribeConditionalForwardersResponsePrivate object with public implementation \a q.
  */
 DescribeConditionalForwardersResponsePrivate::DescribeConditionalForwardersResponsePrivate(
     DescribeConditionalForwardersResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeConditionalForwardersResponsePrivate::DescribeConditionalForwardersRespo
 }
 
 /*!
- * @brief  Parse an DirectoryService DescribeConditionalForwardersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DescribeConditionalForwarders response element from \a xml.
  */
 void DescribeConditionalForwardersResponsePrivate::parseDescribeConditionalForwardersResponse(QXmlStreamReader &xml)
 {

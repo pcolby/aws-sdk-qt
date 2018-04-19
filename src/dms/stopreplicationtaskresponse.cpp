@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::StopReplicationTaskResponse
- *
  * \brief The StopReplicationTaskResponse class provides an interace for DatabaseMigrationService StopReplicationTask responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new StopReplicationTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopReplicationTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 StopReplicationTaskResponse::StopReplicationTaskResponse(
         const StopReplicationTaskRequest &request,
@@ -66,6 +61,9 @@ StopReplicationTaskResponse::StopReplicationTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopReplicationTaskRequest * StopReplicationTaskResponse::request() const
 {
     Q_D(const StopReplicationTaskResponse);
@@ -73,9 +71,8 @@ const StopReplicationTaskRequest * StopReplicationTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService StopReplicationTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService StopReplicationTask \a response.
  */
 void StopReplicationTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void StopReplicationTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::StopReplicationTaskResponsePrivate
+ * \brief The StopReplicationTaskResponsePrivate class provides private implementation for StopReplicationTaskResponse.
  * \internal
  *
- * \class StopReplicationTaskResponsePrivate
- *
- * \brief Private implementation for StopReplicationTaskResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopReplicationTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopReplicationTaskResponse instance.
+ * Constructs a StopReplicationTaskResponsePrivate object with public implementation \a q.
  */
 StopReplicationTaskResponsePrivate::StopReplicationTaskResponsePrivate(
     StopReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ StopReplicationTaskResponsePrivate::StopReplicationTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService StopReplicationTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService StopReplicationTask response element from \a xml.
  */
 void StopReplicationTaskResponsePrivate::parseStopReplicationTaskResponse(QXmlStreamReader &xml)
 {

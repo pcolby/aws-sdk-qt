@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsForDomainRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListTagsForDomainRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsForDomainRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 ListTagsForDomainRequestPrivate::ListTagsForDomainRequestPrivate(
     const Route53DomainsRequest::Action action, ListTagsForDomainRequest * const q)

@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * StartUserImportJobRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a StartUserImportJobRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a StartUserImportJobRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 StartUserImportJobRequestPrivate::StartUserImportJobRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, StartUserImportJobRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateBuildResponse : public GameLiftResponse {
 public:
     CreateBuildResponse(const CreateBuildRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateBuildRequest * request() const;
+    virtual const CreateBuildRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateBuildResponse)

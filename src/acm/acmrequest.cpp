@@ -51,7 +51,7 @@ namespace ACM {
  */
 
 /*!
- * Constructs a[n] ACMRequest object for ACM \a action.
+ * Constructs a ACMRequest object for ACM \a action.
  */
 ACMRequest::ACMRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ACMRequestPrivate(action, this))
@@ -251,8 +251,8 @@ QNetworkRequest ACMRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a ACMRequestPrivate object for ACM \a action with,
- * public implementation \a q.
+ * Constructs a ACMRequestPrivate object for ACM \a action,
+ * with public implementation \a q.
  */
 ACMRequestPrivate::ACMRequestPrivate(const ACMRequest::Action action, ACMRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

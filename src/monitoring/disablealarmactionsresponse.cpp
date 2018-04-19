@@ -29,10 +29,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::DisableAlarmActionsResponse
- *
  * \brief The DisableAlarmActionsResponse class provides an interace for CloudWatch DisableAlarmActions responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -53,11 +52,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new DisableAlarmActionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableAlarmActionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableAlarmActionsResponse::DisableAlarmActionsResponse(
         const DisableAlarmActionsRequest &request,
@@ -69,6 +64,9 @@ DisableAlarmActionsResponse::DisableAlarmActionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableAlarmActionsRequest * DisableAlarmActionsResponse::request() const
 {
     Q_D(const DisableAlarmActionsResponse);
@@ -76,9 +74,8 @@ const DisableAlarmActionsRequest * DisableAlarmActionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatch DisableAlarmActions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatch DisableAlarmActions \a response.
  */
 void DisableAlarmActionsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DisableAlarmActionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatch::DisableAlarmActionsResponsePrivate
+ * \brief The DisableAlarmActionsResponsePrivate class provides private implementation for DisableAlarmActionsResponse.
  * \internal
  *
- * \class DisableAlarmActionsResponsePrivate
- *
- * \brief Private implementation for DisableAlarmActionsResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableAlarmActionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableAlarmActionsResponse instance.
+ * Constructs a DisableAlarmActionsResponsePrivate object with public implementation \a q.
  */
 DisableAlarmActionsResponsePrivate::DisableAlarmActionsResponsePrivate(
     DisableAlarmActionsResponse * const q) : CloudWatchResponsePrivate(q)
@@ -109,9 +102,7 @@ DisableAlarmActionsResponsePrivate::DisableAlarmActionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatch DisableAlarmActionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatch DisableAlarmActions response element from \a xml.
  */
 void DisableAlarmActionsResponsePrivate::parseDisableAlarmActionsResponse(QXmlStreamReader &xml)
 {

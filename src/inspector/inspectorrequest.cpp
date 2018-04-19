@@ -72,7 +72,7 @@ namespace Inspector {
  */
 
 /*!
- * Constructs a[n] InspectorRequest object for Inspector \a action.
+ * Constructs a InspectorRequest object for Inspector \a action.
  */
 InspectorRequest::InspectorRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new InspectorRequestPrivate(action, this))
@@ -272,8 +272,8 @@ QNetworkRequest InspectorRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a InspectorRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a InspectorRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 InspectorRequestPrivate::InspectorRequestPrivate(const InspectorRequest::Action action, InspectorRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

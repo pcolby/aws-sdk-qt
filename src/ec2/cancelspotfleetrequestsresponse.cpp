@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CancelSpotFleetRequestsResponse
- *
  * \brief The CancelSpotFleetRequestsResponse class provides an interace for EC2 CancelSpotFleetRequests responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CancelSpotFleetRequestsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelSpotFleetRequestsResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelSpotFleetRequestsResponse::CancelSpotFleetRequestsResponse(
         const CancelSpotFleetRequestsRequest &request,
@@ -59,6 +54,9 @@ CancelSpotFleetRequestsResponse::CancelSpotFleetRequestsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelSpotFleetRequestsRequest * CancelSpotFleetRequestsResponse::request() const
 {
     Q_D(const CancelSpotFleetRequestsResponse);
@@ -66,9 +64,8 @@ const CancelSpotFleetRequestsRequest * CancelSpotFleetRequestsResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 CancelSpotFleetRequests response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CancelSpotFleetRequests \a response.
  */
 void CancelSpotFleetRequestsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CancelSpotFleetRequestsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CancelSpotFleetRequestsResponsePrivate
+ * \brief The CancelSpotFleetRequestsResponsePrivate class provides private implementation for CancelSpotFleetRequestsResponse.
  * \internal
  *
- * \class CancelSpotFleetRequestsResponsePrivate
- *
- * \brief Private implementation for CancelSpotFleetRequestsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelSpotFleetRequestsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelSpotFleetRequestsResponse instance.
+ * Constructs a CancelSpotFleetRequestsResponsePrivate object with public implementation \a q.
  */
 CancelSpotFleetRequestsResponsePrivate::CancelSpotFleetRequestsResponsePrivate(
     CancelSpotFleetRequestsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CancelSpotFleetRequestsResponsePrivate::CancelSpotFleetRequestsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CancelSpotFleetRequestsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CancelSpotFleetRequests response element from \a xml.
  */
 void CancelSpotFleetRequestsResponsePrivate::parseCancelSpotFleetRequestsResponse(QXmlStreamReader &xml)
 {

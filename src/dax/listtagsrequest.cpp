@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a ListTagsRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const DAXRequest::Action action, ListTagsRequest * const q)

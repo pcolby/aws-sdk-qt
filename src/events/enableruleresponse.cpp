@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::EnableRuleResponse
- *
  * \brief The EnableRuleResponse class provides an interace for CloudWatchEvents EnableRule responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new EnableRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableRuleResponse::EnableRuleResponse(
         const EnableRuleRequest &request,
@@ -78,6 +73,9 @@ EnableRuleResponse::EnableRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableRuleRequest * EnableRuleResponse::request() const
 {
     Q_D(const EnableRuleResponse);
@@ -85,9 +83,8 @@ const EnableRuleRequest * EnableRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents EnableRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents EnableRule \a response.
  */
 void EnableRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void EnableRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::EnableRuleResponsePrivate
+ * \brief The EnableRuleResponsePrivate class provides private implementation for EnableRuleResponse.
  * \internal
  *
- * \class EnableRuleResponsePrivate
- *
- * \brief Private implementation for EnableRuleResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableRuleResponse instance.
+ * Constructs a EnableRuleResponsePrivate object with public implementation \a q.
  */
 EnableRuleResponsePrivate::EnableRuleResponsePrivate(
     EnableRuleResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ EnableRuleResponsePrivate::EnableRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents EnableRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents EnableRule response element from \a xml.
  */
 void EnableRuleResponsePrivate::parseEnableRuleResponse(QXmlStreamReader &xml)
 {

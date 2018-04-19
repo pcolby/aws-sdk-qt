@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListRegexMatchSetsResponse
- *
  * \brief The ListRegexMatchSetsResponse class provides an interace for WAF ListRegexMatchSets responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListRegexMatchSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRegexMatchSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRegexMatchSetsResponse::ListRegexMatchSetsResponse(
         const ListRegexMatchSetsRequest &request,
@@ -60,6 +55,9 @@ ListRegexMatchSetsResponse::ListRegexMatchSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRegexMatchSetsRequest * ListRegexMatchSetsResponse::request() const
 {
     Q_D(const ListRegexMatchSetsResponse);
@@ -67,9 +65,8 @@ const ListRegexMatchSetsRequest * ListRegexMatchSetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF ListRegexMatchSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF ListRegexMatchSets \a response.
  */
 void ListRegexMatchSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListRegexMatchSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::ListRegexMatchSetsResponsePrivate
+ * \brief The ListRegexMatchSetsResponsePrivate class provides private implementation for ListRegexMatchSetsResponse.
  * \internal
  *
- * \class ListRegexMatchSetsResponsePrivate
- *
- * \brief Private implementation for ListRegexMatchSetsResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRegexMatchSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRegexMatchSetsResponse instance.
+ * Constructs a ListRegexMatchSetsResponsePrivate object with public implementation \a q.
  */
 ListRegexMatchSetsResponsePrivate::ListRegexMatchSetsResponsePrivate(
     ListRegexMatchSetsResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ ListRegexMatchSetsResponsePrivate::ListRegexMatchSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF ListRegexMatchSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF ListRegexMatchSets response element from \a xml.
  */
 void ListRegexMatchSetsResponsePrivate::parseListRegexMatchSetsResponse(QXmlStreamReader &xml)
 {

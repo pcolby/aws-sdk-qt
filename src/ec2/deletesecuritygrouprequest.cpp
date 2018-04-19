@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSecurityGroupRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteSecurityGroupRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSecurityGroupRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteSecurityGroupRequestPrivate::DeleteSecurityGroupRequestPrivate(
     const EC2Request::Action action, DeleteSecurityGroupRequest * const q)

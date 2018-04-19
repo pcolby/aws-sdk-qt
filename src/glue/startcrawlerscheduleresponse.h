@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartCrawlerScheduleResponse : public GlueResponse {
 public:
     StartCrawlerScheduleResponse(const StartCrawlerScheduleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartCrawlerScheduleRequest * request() const;
+    virtual const StartCrawlerScheduleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartCrawlerScheduleResponse)

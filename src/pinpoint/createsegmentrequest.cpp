@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateSegmentRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateSegmentRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a CreateSegmentRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 CreateSegmentRequestPrivate::CreateSegmentRequestPrivate(
     const PinpointRequest::Action action, CreateSegmentRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetRateBasedRuleResponse : public WAFResponse {
 public:
     GetRateBasedRuleResponse(const GetRateBasedRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetRateBasedRuleRequest * request() const;
+    virtual const GetRateBasedRuleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetRateBasedRuleResponse)

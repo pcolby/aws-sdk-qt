@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteConstraintResponse : public ServiceCatalogResponse {
 public:
     DeleteConstraintResponse(const DeleteConstraintRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteConstraintRequest * request() const;
+    virtual const DeleteConstraintRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteConstraintResponse)

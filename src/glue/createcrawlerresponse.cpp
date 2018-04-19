@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreateCrawlerResponse
- *
  * \brief The CreateCrawlerResponse class provides an interace for Glue CreateCrawler responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreateCrawlerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCrawlerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCrawlerResponse::CreateCrawlerResponse(
         const CreateCrawlerRequest &request,
@@ -58,6 +53,9 @@ CreateCrawlerResponse::CreateCrawlerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCrawlerRequest * CreateCrawlerResponse::request() const
 {
     Q_D(const CreateCrawlerResponse);
@@ -65,9 +63,8 @@ const CreateCrawlerRequest * CreateCrawlerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue CreateCrawler response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue CreateCrawler \a response.
  */
 void CreateCrawlerResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateCrawlerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::CreateCrawlerResponsePrivate
+ * \brief The CreateCrawlerResponsePrivate class provides private implementation for CreateCrawlerResponse.
  * \internal
  *
- * \class CreateCrawlerResponsePrivate
- *
- * \brief Private implementation for CreateCrawlerResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCrawlerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCrawlerResponse instance.
+ * Constructs a CreateCrawlerResponsePrivate object with public implementation \a q.
  */
 CreateCrawlerResponsePrivate::CreateCrawlerResponsePrivate(
     CreateCrawlerResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateCrawlerResponsePrivate::CreateCrawlerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue CreateCrawlerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue CreateCrawler response element from \a xml.
  */
 void CreateCrawlerResponsePrivate::parseCreateCrawlerResponse(QXmlStreamReader &xml)
 {

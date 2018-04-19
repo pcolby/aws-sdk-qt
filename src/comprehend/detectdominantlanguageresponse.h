@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetectDominantLanguageResponse : public ComprehendResponse {
 public:
     DetectDominantLanguageResponse(const DetectDominantLanguageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetectDominantLanguageRequest * request() const;
+    virtual const DetectDominantLanguageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DetectDominantLanguageResponse)

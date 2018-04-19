@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::DescribeRuleResponse
- *
  * \brief The DescribeRuleResponse class provides an interace for CloudWatchEvents DescribeRule responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new DescribeRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRuleResponse::DescribeRuleResponse(
         const DescribeRuleRequest &request,
@@ -78,6 +73,9 @@ DescribeRuleResponse::DescribeRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRuleRequest * DescribeRuleResponse::request() const
 {
     Q_D(const DescribeRuleResponse);
@@ -85,9 +83,8 @@ const DescribeRuleRequest * DescribeRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents DescribeRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents DescribeRule \a response.
  */
 void DescribeRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::DescribeRuleResponsePrivate
+ * \brief The DescribeRuleResponsePrivate class provides private implementation for DescribeRuleResponse.
  * \internal
  *
- * \class DescribeRuleResponsePrivate
- *
- * \brief Private implementation for DescribeRuleResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRuleResponse instance.
+ * Constructs a DescribeRuleResponsePrivate object with public implementation \a q.
  */
 DescribeRuleResponsePrivate::DescribeRuleResponsePrivate(
     DescribeRuleResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeRuleResponsePrivate::DescribeRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents DescribeRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents DescribeRule response element from \a xml.
  */
 void DescribeRuleResponsePrivate::parseDescribeRuleResponse(QXmlStreamReader &xml)
 {

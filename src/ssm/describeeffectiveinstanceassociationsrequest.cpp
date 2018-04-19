@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEffectiveInstanceAssociationsRequest:
  */
 
 /*!
- *
- * Constructs a DescribeEffectiveInstanceAssociationsRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEffectiveInstanceAssociationsRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeEffectiveInstanceAssociationsRequestPrivate::DescribeEffectiveInstanceAssociationsRequestPrivate(
     const SSMRequest::Action action, DescribeEffectiveInstanceAssociationsRequest * const q)

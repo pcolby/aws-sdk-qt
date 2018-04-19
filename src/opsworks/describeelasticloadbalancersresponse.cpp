@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeElasticLoadBalancersResponse
- *
  * \brief The DescribeElasticLoadBalancersResponse class provides an interace for OpsWorks DescribeElasticLoadBalancers responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeElasticLoadBalancersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeElasticLoadBalancersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeElasticLoadBalancersResponse::DescribeElasticLoadBalancersResponse(
         const DescribeElasticLoadBalancersRequest &request,
@@ -161,6 +156,9 @@ DescribeElasticLoadBalancersResponse::DescribeElasticLoadBalancersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeElasticLoadBalancersRequest * DescribeElasticLoadBalancersResponse::request() const
 {
     Q_D(const DescribeElasticLoadBalancersResponse);
@@ -168,9 +166,8 @@ const DescribeElasticLoadBalancersRequest * DescribeElasticLoadBalancersResponse
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeElasticLoadBalancers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeElasticLoadBalancers \a response.
  */
 void DescribeElasticLoadBalancersResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeElasticLoadBalancersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeElasticLoadBalancersResponsePrivate
+ * \brief The DescribeElasticLoadBalancersResponsePrivate class provides private implementation for DescribeElasticLoadBalancersResponse.
  * \internal
  *
- * \class DescribeElasticLoadBalancersResponsePrivate
- *
- * \brief Private implementation for DescribeElasticLoadBalancersResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeElasticLoadBalancersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeElasticLoadBalancersResponse instance.
+ * Constructs a DescribeElasticLoadBalancersResponsePrivate object with public implementation \a q.
  */
 DescribeElasticLoadBalancersResponsePrivate::DescribeElasticLoadBalancersResponsePrivate(
     DescribeElasticLoadBalancersResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeElasticLoadBalancersResponsePrivate::DescribeElasticLoadBalancersRespons
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeElasticLoadBalancersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeElasticLoadBalancers response element from \a xml.
  */
 void DescribeElasticLoadBalancersResponsePrivate::parseDescribeElasticLoadBalancersResponse(QXmlStreamReader &xml)
 {

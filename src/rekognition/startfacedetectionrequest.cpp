@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * StartFaceDetectionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a StartFaceDetectionRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a StartFaceDetectionRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 StartFaceDetectionRequestPrivate::StartFaceDetectionRequestPrivate(
     const RekognitionRequest::Action action, StartFaceDetectionRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSecurityGroupResponse : public EC2Response {
 public:
     DeleteSecurityGroupResponse(const DeleteSecurityGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSecurityGroupRequest * request() const;
+    virtual const DeleteSecurityGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSecurityGroupResponse)

@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRepositoryNameRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdateRepositoryNameRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRepositoryNameRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 UpdateRepositoryNameRequestPrivate::UpdateRepositoryNameRequestPrivate(
     const CodeCommitRequest::Action action, UpdateRepositoryNameRequest * const q)

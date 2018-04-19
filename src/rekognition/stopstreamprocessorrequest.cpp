@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * StopStreamProcessorRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a StopStreamProcessorRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a StopStreamProcessorRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 StopStreamProcessorRequestPrivate::StopStreamProcessorRequestPrivate(
     const RekognitionRequest::Action action, StopStreamProcessorRequest * const q)

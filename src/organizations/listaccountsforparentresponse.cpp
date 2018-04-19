@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListAccountsForParentResponse
- *
  * \brief The ListAccountsForParentResponse class provides an interace for Organizations ListAccountsForParent responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListAccountsForParentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAccountsForParentResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAccountsForParentResponse::ListAccountsForParentResponse(
         const ListAccountsForParentRequest &request,
@@ -197,6 +192,9 @@ ListAccountsForParentResponse::ListAccountsForParentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAccountsForParentRequest * ListAccountsForParentResponse::request() const
 {
     Q_D(const ListAccountsForParentResponse);
@@ -204,9 +202,8 @@ const ListAccountsForParentRequest * ListAccountsForParentResponse::request() co
 }
 
 /*!
- * @brief  Parse a Organizations ListAccountsForParent response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations ListAccountsForParent \a response.
  */
 void ListAccountsForParentResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void ListAccountsForParentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::ListAccountsForParentResponsePrivate
+ * \brief The ListAccountsForParentResponsePrivate class provides private implementation for ListAccountsForParentResponse.
  * \internal
  *
- * \class ListAccountsForParentResponsePrivate
- *
- * \brief Private implementation for ListAccountsForParentResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAccountsForParentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAccountsForParentResponse instance.
+ * Constructs a ListAccountsForParentResponsePrivate object with public implementation \a q.
  */
 ListAccountsForParentResponsePrivate::ListAccountsForParentResponsePrivate(
     ListAccountsForParentResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ ListAccountsForParentResponsePrivate::ListAccountsForParentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations ListAccountsForParentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations ListAccountsForParent response element from \a xml.
  */
 void ListAccountsForParentResponsePrivate::parseListAccountsForParentResponse(QXmlStreamReader &xml)
 {

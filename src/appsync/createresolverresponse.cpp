@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::CreateResolverResponse
- *
  * \brief The CreateResolverResponse class provides an interace for AppSync CreateResolver responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new CreateResolverResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateResolverResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateResolverResponse::CreateResolverResponse(
         const CreateResolverRequest &request,
@@ -56,6 +51,9 @@ CreateResolverResponse::CreateResolverResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateResolverRequest * CreateResolverResponse::request() const
 {
     Q_D(const CreateResolverResponse);
@@ -63,9 +61,8 @@ const CreateResolverRequest * CreateResolverResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync CreateResolver response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync CreateResolver \a response.
  */
 void CreateResolverResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void CreateResolverResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::CreateResolverResponsePrivate
+ * \brief The CreateResolverResponsePrivate class provides private implementation for CreateResolverResponse.
  * \internal
  *
- * \class CreateResolverResponsePrivate
- *
- * \brief Private implementation for CreateResolverResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResolverResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateResolverResponse instance.
+ * Constructs a CreateResolverResponsePrivate object with public implementation \a q.
  */
 CreateResolverResponsePrivate::CreateResolverResponsePrivate(
     CreateResolverResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ CreateResolverResponsePrivate::CreateResolverResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync CreateResolverResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync CreateResolver response element from \a xml.
  */
 void CreateResolverResponsePrivate::parseCreateResolverResponse(QXmlStreamReader &xml)
 {

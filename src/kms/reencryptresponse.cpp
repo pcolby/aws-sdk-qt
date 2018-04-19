@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ReEncryptResponse
- *
  * \brief The ReEncryptResponse class provides an interace for KMS ReEncrypt responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ReEncryptResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReEncryptResponse object for \a reply to \a request, with parent \a parent.
  */
 ReEncryptResponse::ReEncryptResponse(
         const ReEncryptRequest &request,
@@ -154,6 +149,9 @@ ReEncryptResponse::ReEncryptResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReEncryptRequest * ReEncryptResponse::request() const
 {
     Q_D(const ReEncryptResponse);
@@ -161,9 +159,8 @@ const ReEncryptRequest * ReEncryptResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS ReEncrypt response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS ReEncrypt \a response.
  */
 void ReEncryptResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void ReEncryptResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::ReEncryptResponsePrivate
+ * \brief The ReEncryptResponsePrivate class provides private implementation for ReEncryptResponse.
  * \internal
  *
- * \class ReEncryptResponsePrivate
- *
- * \brief Private implementation for ReEncryptResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReEncryptResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReEncryptResponse instance.
+ * Constructs a ReEncryptResponsePrivate object with public implementation \a q.
  */
 ReEncryptResponsePrivate::ReEncryptResponsePrivate(
     ReEncryptResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ ReEncryptResponsePrivate::ReEncryptResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS ReEncryptResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS ReEncrypt response element from \a xml.
  */
 void ReEncryptResponsePrivate::parseReEncryptResponse(QXmlStreamReader &xml)
 {

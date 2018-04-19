@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CopyDBSnapshotRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CopyDBSnapshotRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CopyDBSnapshotRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CopyDBSnapshotRequestPrivate::CopyDBSnapshotRequestPrivate(
     const RDSRequest::Action action, CopyDBSnapshotRequest * const q)

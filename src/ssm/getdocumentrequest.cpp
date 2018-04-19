@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * GetDocumentRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GetDocumentRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a GetDocumentRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 GetDocumentRequestPrivate::GetDocumentRequestPrivate(
     const SSMRequest::Action action, GetDocumentRequest * const q)

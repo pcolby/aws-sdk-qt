@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CancelSpotInstanceRequestsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a CancelSpotInstanceRequestsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CancelSpotInstanceRequestsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CancelSpotInstanceRequestsRequestPrivate::CancelSpotInstanceRequestsRequestPrivate(
     const EC2Request::Action action, CancelSpotInstanceRequestsRequest * const q)

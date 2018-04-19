@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachStaticIpResponse : public LightsailResponse {
 public:
     AttachStaticIpResponse(const AttachStaticIpRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachStaticIpRequest * request() const;
+    virtual const AttachStaticIpRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AttachStaticIpResponse)

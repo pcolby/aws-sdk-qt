@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetFacetResponse
- *
  * \brief The GetFacetResponse class provides an interace for CloudDirectory GetFacet responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetFacetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetFacetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetFacetResponse::GetFacetResponse(
         const GetFacetRequest &request,
@@ -62,6 +57,9 @@ GetFacetResponse::GetFacetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetFacetRequest * GetFacetResponse::request() const
 {
     Q_D(const GetFacetResponse);
@@ -69,9 +67,8 @@ const GetFacetRequest * GetFacetResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory GetFacet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory GetFacet \a response.
  */
 void GetFacetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetFacetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::GetFacetResponsePrivate
+ * \brief The GetFacetResponsePrivate class provides private implementation for GetFacetResponse.
  * \internal
  *
- * \class GetFacetResponsePrivate
- *
- * \brief Private implementation for GetFacetResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetFacetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetFacetResponse instance.
+ * Constructs a GetFacetResponsePrivate object with public implementation \a q.
  */
 GetFacetResponsePrivate::GetFacetResponsePrivate(
     GetFacetResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ GetFacetResponsePrivate::GetFacetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory GetFacetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory GetFacet response element from \a xml.
  */
 void GetFacetResponsePrivate::parseGetFacetResponse(QXmlStreamReader &xml)
 {

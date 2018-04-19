@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * RegisterCrossAccountAccessRoleRequest::respon
  */
 
 /*!
- *
- * Constructs a RegisterCrossAccountAccessRoleRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a RegisterCrossAccountAccessRoleRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequestPrivate(
     const InspectorRequest::Action action, RegisterCrossAccountAccessRoleRequest * const q)

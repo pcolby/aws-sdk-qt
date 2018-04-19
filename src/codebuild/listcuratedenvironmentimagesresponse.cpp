@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::ListCuratedEnvironmentImagesResponse
- *
  * \brief The ListCuratedEnvironmentImagesResponse class provides an interace for CodeBuild ListCuratedEnvironmentImages responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new ListCuratedEnvironmentImagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCuratedEnvironmentImagesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCuratedEnvironmentImagesResponse::ListCuratedEnvironmentImagesResponse(
         const ListCuratedEnvironmentImagesRequest &request,
@@ -135,6 +130,9 @@ ListCuratedEnvironmentImagesResponse::ListCuratedEnvironmentImagesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCuratedEnvironmentImagesRequest * ListCuratedEnvironmentImagesResponse::request() const
 {
     Q_D(const ListCuratedEnvironmentImagesResponse);
@@ -142,9 +140,8 @@ const ListCuratedEnvironmentImagesRequest * ListCuratedEnvironmentImagesResponse
 }
 
 /*!
- * @brief  Parse a CodeBuild ListCuratedEnvironmentImages response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild ListCuratedEnvironmentImages \a response.
  */
 void ListCuratedEnvironmentImagesResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void ListCuratedEnvironmentImagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::ListCuratedEnvironmentImagesResponsePrivate
+ * \brief The ListCuratedEnvironmentImagesResponsePrivate class provides private implementation for ListCuratedEnvironmentImagesResponse.
  * \internal
  *
- * \class ListCuratedEnvironmentImagesResponsePrivate
- *
- * \brief Private implementation for ListCuratedEnvironmentImagesResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCuratedEnvironmentImagesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCuratedEnvironmentImagesResponse instance.
+ * Constructs a ListCuratedEnvironmentImagesResponsePrivate object with public implementation \a q.
  */
 ListCuratedEnvironmentImagesResponsePrivate::ListCuratedEnvironmentImagesResponsePrivate(
     ListCuratedEnvironmentImagesResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ ListCuratedEnvironmentImagesResponsePrivate::ListCuratedEnvironmentImagesRespons
 }
 
 /*!
- * @brief  Parse an CodeBuild ListCuratedEnvironmentImagesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild ListCuratedEnvironmentImages response element from \a xml.
  */
 void ListCuratedEnvironmentImagesResponsePrivate::parseListCuratedEnvironmentImagesResponse(QXmlStreamReader &xml)
 {

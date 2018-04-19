@@ -34,10 +34,10 @@ class QTAWS_EXPORT SearchIndexResponse : public IoTResponse {
 public:
     SearchIndexResponse(const SearchIndexRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SearchIndexRequest * request() const;
+    virtual const SearchIndexRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SearchIndexResponse)

@@ -29,10 +29,9 @@ namespace ImportExport {
 
 /*!
  * \class QtAws::ImportExport::CancelJobResponse
- *
  * \brief The CancelJobResponse class provides an interace for ImportExport CancelJob responses.
  *
- * \ingroup ImportExport
+ * \inmodule QtAwsImportExport
  *
  *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
  *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
@@ -42,11 +41,7 @@ namespace ImportExport {
  */
 
 /*!
- * @brief  Constructs a new CancelJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelJobResponse::CancelJobResponse(
         const CancelJobRequest &request,
@@ -58,6 +53,9 @@ CancelJobResponse::CancelJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelJobRequest * CancelJobResponse::request() const
 {
     Q_D(const CancelJobResponse);
@@ -65,9 +63,8 @@ const CancelJobRequest * CancelJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a ImportExport CancelJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ImportExport CancelJob \a response.
  */
 void CancelJobResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CancelJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ImportExport::CancelJobResponsePrivate
+ * \brief The CancelJobResponsePrivate class provides private implementation for CancelJobResponse.
  * \internal
  *
- * \class CancelJobResponsePrivate
- *
- * \brief Private implementation for CancelJobResponse.
+ * \inmodule QtAwsImportExport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelJobResponse instance.
+ * Constructs a CancelJobResponsePrivate object with public implementation \a q.
  */
 CancelJobResponsePrivate::CancelJobResponsePrivate(
     CancelJobResponse * const q) : ImportExportResponsePrivate(q)
@@ -98,9 +91,7 @@ CancelJobResponsePrivate::CancelJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ImportExport CancelJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ImportExport CancelJob response element from \a xml.
  */
 void CancelJobResponsePrivate::parseCancelJobResponse(QXmlStreamReader &xml)
 {

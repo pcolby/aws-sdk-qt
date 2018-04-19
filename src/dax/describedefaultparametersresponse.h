@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDefaultParametersResponse : public DAXResponse {
 public:
     DescribeDefaultParametersResponse(const DescribeDefaultParametersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDefaultParametersRequest * request() const;
+    virtual const DescribeDefaultParametersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDefaultParametersResponse)

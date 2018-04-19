@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::CreateClusterSubnetGroupResponse
- *
  * \brief The CreateClusterSubnetGroupResponse class provides an interace for Redshift CreateClusterSubnetGroup responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new CreateClusterSubnetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateClusterSubnetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateClusterSubnetGroupResponse::CreateClusterSubnetGroupResponse(
         const CreateClusterSubnetGroupRequest &request,
@@ -85,6 +80,9 @@ CreateClusterSubnetGroupResponse::CreateClusterSubnetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateClusterSubnetGroupRequest * CreateClusterSubnetGroupResponse::request() const
 {
     Q_D(const CreateClusterSubnetGroupResponse);
@@ -92,9 +90,8 @@ const CreateClusterSubnetGroupRequest * CreateClusterSubnetGroupResponse::reques
 }
 
 /*!
- * @brief  Parse a Redshift CreateClusterSubnetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift CreateClusterSubnetGroup \a response.
  */
 void CreateClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void CreateClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::CreateClusterSubnetGroupResponsePrivate
+ * \brief The CreateClusterSubnetGroupResponsePrivate class provides private implementation for CreateClusterSubnetGroupResponse.
  * \internal
  *
- * \class CreateClusterSubnetGroupResponsePrivate
- *
- * \brief Private implementation for CreateClusterSubnetGroupResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateClusterSubnetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateClusterSubnetGroupResponse instance.
+ * Constructs a CreateClusterSubnetGroupResponsePrivate object with public implementation \a q.
  */
 CreateClusterSubnetGroupResponsePrivate::CreateClusterSubnetGroupResponsePrivate(
     CreateClusterSubnetGroupResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ CreateClusterSubnetGroupResponsePrivate::CreateClusterSubnetGroupResponsePrivate
 }
 
 /*!
- * @brief  Parse an Redshift CreateClusterSubnetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift CreateClusterSubnetGroup response element from \a xml.
  */
 void CreateClusterSubnetGroupResponsePrivate::parseCreateClusterSubnetGroupResponse(QXmlStreamReader &xml)
 {

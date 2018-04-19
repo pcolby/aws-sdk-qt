@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeConfigRuleEvaluationStatusResponse : public ConfigSer
 public:
     DescribeConfigRuleEvaluationStatusResponse(const DescribeConfigRuleEvaluationStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeConfigRuleEvaluationStatusRequest * request() const;
+    virtual const DescribeConfigRuleEvaluationStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeConfigRuleEvaluationStatusResponse)

@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListArtifactsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ListArtifactsRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a ListArtifactsRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 ListArtifactsRequestPrivate::ListArtifactsRequestPrivate(
     const DeviceFarmRequest::Action action, ListArtifactsRequest * const q)

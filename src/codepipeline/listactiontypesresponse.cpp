@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::ListActionTypesResponse
- *
  * \brief The ListActionTypesResponse class provides an interace for CodePipeline ListActionTypes responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new ListActionTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListActionTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListActionTypesResponse::ListActionTypesResponse(
         const ListActionTypesRequest &request,
@@ -218,6 +213,9 @@ ListActionTypesResponse::ListActionTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListActionTypesRequest * ListActionTypesResponse::request() const
 {
     Q_D(const ListActionTypesResponse);
@@ -225,9 +223,8 @@ const ListActionTypesRequest * ListActionTypesResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodePipeline ListActionTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline ListActionTypes \a response.
  */
 void ListActionTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void ListActionTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::ListActionTypesResponsePrivate
+ * \brief The ListActionTypesResponsePrivate class provides private implementation for ListActionTypesResponse.
  * \internal
  *
- * \class ListActionTypesResponsePrivate
- *
- * \brief Private implementation for ListActionTypesResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListActionTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListActionTypesResponse instance.
+ * Constructs a ListActionTypesResponsePrivate object with public implementation \a q.
  */
 ListActionTypesResponsePrivate::ListActionTypesResponsePrivate(
     ListActionTypesResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ ListActionTypesResponsePrivate::ListActionTypesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline ListActionTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline ListActionTypes response element from \a xml.
  */
 void ListActionTypesResponsePrivate::parseListActionTypesResponse(QXmlStreamReader &xml)
 {

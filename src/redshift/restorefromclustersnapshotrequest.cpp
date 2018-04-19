@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * RestoreFromClusterSnapshotRequest::response(Q
  */
 
 /*!
- *
- * Constructs a RestoreFromClusterSnapshotRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a RestoreFromClusterSnapshotRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 RestoreFromClusterSnapshotRequestPrivate::RestoreFromClusterSnapshotRequestPrivate(
     const RedshiftRequest::Action action, RestoreFromClusterSnapshotRequest * const q)

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListUsersResponse
- *
  * \brief The ListUsersResponse class provides an interace for IAM ListUsers responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListUsersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListUsersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListUsersResponse::ListUsersResponse(
         const ListUsersRequest &request,
@@ -120,6 +115,9 @@ ListUsersResponse::ListUsersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListUsersRequest * ListUsersResponse::request() const
 {
     Q_D(const ListUsersResponse);
@@ -127,9 +125,8 @@ const ListUsersRequest * ListUsersResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM ListUsers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListUsers \a response.
  */
 void ListUsersResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListUsersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListUsersResponsePrivate
+ * \brief The ListUsersResponsePrivate class provides private implementation for ListUsersResponse.
  * \internal
  *
- * \class ListUsersResponsePrivate
- *
- * \brief Private implementation for ListUsersResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListUsersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListUsersResponse instance.
+ * Constructs a ListUsersResponsePrivate object with public implementation \a q.
  */
 ListUsersResponsePrivate::ListUsersResponsePrivate(
     ListUsersResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListUsersResponsePrivate::ListUsersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM ListUsersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListUsers response element from \a xml.
  */
 void ListUsersResponsePrivate::parseListUsersResponse(QXmlStreamReader &xml)
 {

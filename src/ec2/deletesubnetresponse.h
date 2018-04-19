@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSubnetResponse : public EC2Response {
 public:
     DeleteSubnetResponse(const DeleteSubnetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSubnetRequest * request() const;
+    virtual const DeleteSubnetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSubnetResponse)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * TerminateInstancesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a TerminateInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a TerminateInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 TerminateInstancesRequestPrivate::TerminateInstancesRequestPrivate(
     const EC2Request::Action action, TerminateInstancesRequest * const q)

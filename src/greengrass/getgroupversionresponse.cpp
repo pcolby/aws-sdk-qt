@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetGroupVersionResponse
- *
  * \brief The GetGroupVersionResponse class provides an interace for Greengrass GetGroupVersion responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetGroupVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetGroupVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetGroupVersionResponse::GetGroupVersionResponse(
         const GetGroupVersionRequest &request,
@@ -58,6 +53,9 @@ GetGroupVersionResponse::GetGroupVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetGroupVersionRequest * GetGroupVersionResponse::request() const
 {
     Q_D(const GetGroupVersionResponse);
@@ -65,9 +63,8 @@ const GetGroupVersionRequest * GetGroupVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass GetGroupVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass GetGroupVersion \a response.
  */
 void GetGroupVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetGroupVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::GetGroupVersionResponsePrivate
+ * \brief The GetGroupVersionResponsePrivate class provides private implementation for GetGroupVersionResponse.
  * \internal
  *
- * \class GetGroupVersionResponsePrivate
- *
- * \brief Private implementation for GetGroupVersionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGroupVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetGroupVersionResponse instance.
+ * Constructs a GetGroupVersionResponsePrivate object with public implementation \a q.
  */
 GetGroupVersionResponsePrivate::GetGroupVersionResponsePrivate(
     GetGroupVersionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ GetGroupVersionResponsePrivate::GetGroupVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass GetGroupVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass GetGroupVersion response element from \a xml.
  */
 void GetGroupVersionResponsePrivate::parseGetGroupVersionResponse(QXmlStreamReader &xml)
 {

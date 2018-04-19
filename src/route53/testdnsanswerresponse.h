@@ -34,10 +34,10 @@ class QTAWS_EXPORT TestDNSAnswerResponse : public Route53Response {
 public:
     TestDNSAnswerResponse(const TestDNSAnswerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TestDNSAnswerRequest * request() const;
+    virtual const TestDNSAnswerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TestDNSAnswerResponse)

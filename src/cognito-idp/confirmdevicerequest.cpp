@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * ConfirmDeviceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ConfirmDeviceRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a ConfirmDeviceRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 ConfirmDeviceRequestPrivate::ConfirmDeviceRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ConfirmDeviceRequest * const q)

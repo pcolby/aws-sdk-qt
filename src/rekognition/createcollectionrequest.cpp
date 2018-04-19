@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * CreateCollectionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateCollectionRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a CreateCollectionRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 CreateCollectionRequestPrivate::CreateCollectionRequestPrivate(
     const RekognitionRequest::Action action, CreateCollectionRequest * const q)

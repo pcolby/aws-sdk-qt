@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * GetBulkPublishDetailsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetBulkPublishDetailsRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a GetBulkPublishDetailsRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 GetBulkPublishDetailsRequestPrivate::GetBulkPublishDetailsRequestPrivate(
     const CognitoSyncRequest::Action action, GetBulkPublishDetailsRequest * const q)

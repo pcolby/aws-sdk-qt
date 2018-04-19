@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * RegisterJobDefinitionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a RegisterJobDefinitionRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a RegisterJobDefinitionRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 RegisterJobDefinitionRequestPrivate::RegisterJobDefinitionRequestPrivate(
     const BatchRequest::Action action, RegisterJobDefinitionRequest * const q)

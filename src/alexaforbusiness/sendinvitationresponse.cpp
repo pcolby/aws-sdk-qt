@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::SendInvitationResponse
- *
  * \brief The SendInvitationResponse class provides an interace for AlexaForBusiness SendInvitation responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new SendInvitationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendInvitationResponse object for \a reply to \a request, with parent \a parent.
  */
 SendInvitationResponse::SendInvitationResponse(
         const SendInvitationRequest &request,
@@ -60,6 +55,9 @@ SendInvitationResponse::SendInvitationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendInvitationRequest * SendInvitationResponse::request() const
 {
     Q_D(const SendInvitationResponse);
@@ -67,9 +65,8 @@ const SendInvitationRequest * SendInvitationResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness SendInvitation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness SendInvitation \a response.
  */
 void SendInvitationResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void SendInvitationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::SendInvitationResponsePrivate
+ * \brief The SendInvitationResponsePrivate class provides private implementation for SendInvitationResponse.
  * \internal
  *
- * \class SendInvitationResponsePrivate
- *
- * \brief Private implementation for SendInvitationResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendInvitationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendInvitationResponse instance.
+ * Constructs a SendInvitationResponsePrivate object with public implementation \a q.
  */
 SendInvitationResponsePrivate::SendInvitationResponsePrivate(
     SendInvitationResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ SendInvitationResponsePrivate::SendInvitationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness SendInvitationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness SendInvitation response element from \a xml.
  */
 void SendInvitationResponsePrivate::parseSendInvitationResponse(QXmlStreamReader &xml)
 {

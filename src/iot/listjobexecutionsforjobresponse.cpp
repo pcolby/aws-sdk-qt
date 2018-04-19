@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListJobExecutionsForJobResponse
- *
  * \brief The ListJobExecutionsForJobResponse class provides an interace for IoT ListJobExecutionsForJob responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListJobExecutionsForJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListJobExecutionsForJobResponse object for \a reply to \a request, with parent \a parent.
  */
 ListJobExecutionsForJobResponse::ListJobExecutionsForJobResponse(
         const ListJobExecutionsForJobRequest &request,
@@ -66,6 +61,9 @@ ListJobExecutionsForJobResponse::ListJobExecutionsForJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListJobExecutionsForJobRequest * ListJobExecutionsForJobResponse::request() const
 {
     Q_D(const ListJobExecutionsForJobResponse);
@@ -73,9 +71,8 @@ const ListJobExecutionsForJobRequest * ListJobExecutionsForJobResponse::request(
 }
 
 /*!
- * @brief  Parse a IoT ListJobExecutionsForJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListJobExecutionsForJob \a response.
  */
 void ListJobExecutionsForJobResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListJobExecutionsForJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListJobExecutionsForJobResponsePrivate
+ * \brief The ListJobExecutionsForJobResponsePrivate class provides private implementation for ListJobExecutionsForJobResponse.
  * \internal
  *
- * \class ListJobExecutionsForJobResponsePrivate
- *
- * \brief Private implementation for ListJobExecutionsForJobResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobExecutionsForJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListJobExecutionsForJobResponse instance.
+ * Constructs a ListJobExecutionsForJobResponsePrivate object with public implementation \a q.
  */
 ListJobExecutionsForJobResponsePrivate::ListJobExecutionsForJobResponsePrivate(
     ListJobExecutionsForJobResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListJobExecutionsForJobResponsePrivate::ListJobExecutionsForJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListJobExecutionsForJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListJobExecutionsForJob response element from \a xml.
  */
 void ListJobExecutionsForJobResponsePrivate::parseListJobExecutionsForJobResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetSubscriptionDefinitionResponse
- *
  * \brief The GetSubscriptionDefinitionResponse class provides an interace for Greengrass GetSubscriptionDefinition responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetSubscriptionDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSubscriptionDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSubscriptionDefinitionResponse::GetSubscriptionDefinitionResponse(
         const GetSubscriptionDefinitionRequest &request,
@@ -58,6 +53,9 @@ GetSubscriptionDefinitionResponse::GetSubscriptionDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSubscriptionDefinitionRequest * GetSubscriptionDefinitionResponse::request() const
 {
     Q_D(const GetSubscriptionDefinitionResponse);
@@ -65,9 +63,8 @@ const GetSubscriptionDefinitionRequest * GetSubscriptionDefinitionResponse::requ
 }
 
 /*!
- * @brief  Parse a Greengrass GetSubscriptionDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass GetSubscriptionDefinition \a response.
  */
 void GetSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::GetSubscriptionDefinitionResponsePrivate
+ * \brief The GetSubscriptionDefinitionResponsePrivate class provides private implementation for GetSubscriptionDefinitionResponse.
  * \internal
  *
- * \class GetSubscriptionDefinitionResponsePrivate
- *
- * \brief Private implementation for GetSubscriptionDefinitionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSubscriptionDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSubscriptionDefinitionResponse instance.
+ * Constructs a GetSubscriptionDefinitionResponsePrivate object with public implementation \a q.
  */
 GetSubscriptionDefinitionResponsePrivate::GetSubscriptionDefinitionResponsePrivate(
     GetSubscriptionDefinitionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ GetSubscriptionDefinitionResponsePrivate::GetSubscriptionDefinitionResponsePriva
 }
 
 /*!
- * @brief  Parse an Greengrass GetSubscriptionDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass GetSubscriptionDefinition response element from \a xml.
  */
 void GetSubscriptionDefinitionResponsePrivate::parseGetSubscriptionDefinitionResponse(QXmlStreamReader &xml)
 {

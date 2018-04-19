@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::UpdateContainerInstancesStateResponse
- *
  * \brief The UpdateContainerInstancesStateResponse class provides an interace for ECS UpdateContainerInstancesState responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new UpdateContainerInstancesStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateContainerInstancesStateResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateContainerInstancesStateResponse::UpdateContainerInstancesStateResponse(
         const UpdateContainerInstancesStateRequest &request,
@@ -72,6 +67,9 @@ UpdateContainerInstancesStateResponse::UpdateContainerInstancesStateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateContainerInstancesStateRequest * UpdateContainerInstancesStateResponse::request() const
 {
     Q_D(const UpdateContainerInstancesStateResponse);
@@ -79,9 +77,8 @@ const UpdateContainerInstancesStateRequest * UpdateContainerInstancesStateRespon
 }
 
 /*!
- * @brief  Parse a ECS UpdateContainerInstancesState response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS UpdateContainerInstancesState \a response.
  */
 void UpdateContainerInstancesStateResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void UpdateContainerInstancesStateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::UpdateContainerInstancesStateResponsePrivate
+ * \brief The UpdateContainerInstancesStateResponsePrivate class provides private implementation for UpdateContainerInstancesStateResponse.
  * \internal
  *
- * \class UpdateContainerInstancesStateResponsePrivate
- *
- * \brief Private implementation for UpdateContainerInstancesStateResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateContainerInstancesStateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateContainerInstancesStateResponse instance.
+ * Constructs a UpdateContainerInstancesStateResponsePrivate object with public implementation \a q.
  */
 UpdateContainerInstancesStateResponsePrivate::UpdateContainerInstancesStateResponsePrivate(
     UpdateContainerInstancesStateResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ UpdateContainerInstancesStateResponsePrivate::UpdateContainerInstancesStateRespo
 }
 
 /*!
- * @brief  Parse an ECS UpdateContainerInstancesStateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS UpdateContainerInstancesState response element from \a xml.
  */
 void UpdateContainerInstancesStateResponsePrivate::parseUpdateContainerInstancesStateResponse(QXmlStreamReader &xml)
 {

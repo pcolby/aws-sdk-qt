@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * GetObjectRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetObjectRequestPrivate object for MediaStoreData \a action with,
- * public implementation \a q.
+ * Constructs a GetObjectRequestPrivate object for MediaStoreData \a action,
+ * with public implementation \a q.
  */
 GetObjectRequestPrivate::GetObjectRequestPrivate(
     const MediaStoreDataRequest::Action action, GetObjectRequest * const q)

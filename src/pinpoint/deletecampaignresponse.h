@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCampaignResponse : public PinpointResponse {
 public:
     DeleteCampaignResponse(const DeleteCampaignRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCampaignRequest * request() const;
+    virtual const DeleteCampaignRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCampaignResponse)

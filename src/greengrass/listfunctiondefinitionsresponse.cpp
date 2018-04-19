@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListFunctionDefinitionsResponse
- *
  * \brief The ListFunctionDefinitionsResponse class provides an interace for Greengrass ListFunctionDefinitions responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListFunctionDefinitionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListFunctionDefinitionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListFunctionDefinitionsResponse::ListFunctionDefinitionsResponse(
         const ListFunctionDefinitionsRequest &request,
@@ -58,6 +53,9 @@ ListFunctionDefinitionsResponse::ListFunctionDefinitionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListFunctionDefinitionsRequest * ListFunctionDefinitionsResponse::request() const
 {
     Q_D(const ListFunctionDefinitionsResponse);
@@ -65,9 +63,8 @@ const ListFunctionDefinitionsRequest * ListFunctionDefinitionsResponse::request(
 }
 
 /*!
- * @brief  Parse a Greengrass ListFunctionDefinitions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass ListFunctionDefinitions \a response.
  */
 void ListFunctionDefinitionsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListFunctionDefinitionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::ListFunctionDefinitionsResponsePrivate
+ * \brief The ListFunctionDefinitionsResponsePrivate class provides private implementation for ListFunctionDefinitionsResponse.
  * \internal
  *
- * \class ListFunctionDefinitionsResponsePrivate
- *
- * \brief Private implementation for ListFunctionDefinitionsResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFunctionDefinitionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListFunctionDefinitionsResponse instance.
+ * Constructs a ListFunctionDefinitionsResponsePrivate object with public implementation \a q.
  */
 ListFunctionDefinitionsResponsePrivate::ListFunctionDefinitionsResponsePrivate(
     ListFunctionDefinitionsResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ ListFunctionDefinitionsResponsePrivate::ListFunctionDefinitionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass ListFunctionDefinitionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass ListFunctionDefinitions response element from \a xml.
  */
 void ListFunctionDefinitionsResponsePrivate::parseListFunctionDefinitionsResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetHealthCheckLastFailureReasonResponse
- *
  * \brief The GetHealthCheckLastFailureReasonResponse class provides an interace for Route53 GetHealthCheckLastFailureReason responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getHealthCheckLastFailureReason
  */
 
 /*!
- * @brief  Constructs a new GetHealthCheckLastFailureReasonResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetHealthCheckLastFailureReasonResponse object for \a reply to \a request, with parent \a parent.
  */
 GetHealthCheckLastFailureReasonResponse::GetHealthCheckLastFailureReasonResponse(
         const GetHealthCheckLastFailureReasonRequest &request,
@@ -55,6 +50,9 @@ GetHealthCheckLastFailureReasonResponse::GetHealthCheckLastFailureReasonResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetHealthCheckLastFailureReasonRequest * GetHealthCheckLastFailureReasonResponse::request() const
 {
     Q_D(const GetHealthCheckLastFailureReasonResponse);
@@ -62,9 +60,8 @@ const GetHealthCheckLastFailureReasonRequest * GetHealthCheckLastFailureReasonRe
 }
 
 /*!
- * @brief  Parse a Route53 GetHealthCheckLastFailureReason response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetHealthCheckLastFailureReason \a response.
  */
 void GetHealthCheckLastFailureReasonResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetHealthCheckLastFailureReasonResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetHealthCheckLastFailureReasonResponsePrivate
+ * \brief The GetHealthCheckLastFailureReasonResponsePrivate class provides private implementation for GetHealthCheckLastFailureReasonResponse.
  * \internal
  *
- * \class GetHealthCheckLastFailureReasonResponsePrivate
- *
- * \brief Private implementation for GetHealthCheckLastFailureReasonResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetHealthCheckLastFailureReasonResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetHealthCheckLastFailureReasonResponse instance.
+ * Constructs a GetHealthCheckLastFailureReasonResponsePrivate object with public implementation \a q.
  */
 GetHealthCheckLastFailureReasonResponsePrivate::GetHealthCheckLastFailureReasonResponsePrivate(
     GetHealthCheckLastFailureReasonResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetHealthCheckLastFailureReasonResponsePrivate::GetHealthCheckLastFailureReasonR
 }
 
 /*!
- * @brief  Parse an Route53 GetHealthCheckLastFailureReasonResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetHealthCheckLastFailureReason response element from \a xml.
  */
 void GetHealthCheckLastFailureReasonResponsePrivate::parseGetHealthCheckLastFailureReasonResponse(QXmlStreamReader &xml)
 {

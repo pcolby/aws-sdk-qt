@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateRateBasedRuleResponse
- *
  * \brief The UpdateRateBasedRuleResponse class provides an interace for WAF UpdateRateBasedRule responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateRateBasedRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRateBasedRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRateBasedRuleResponse::UpdateRateBasedRuleResponse(
         const UpdateRateBasedRuleRequest &request,
@@ -60,6 +55,9 @@ UpdateRateBasedRuleResponse::UpdateRateBasedRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRateBasedRuleRequest * UpdateRateBasedRuleResponse::request() const
 {
     Q_D(const UpdateRateBasedRuleResponse);
@@ -67,9 +65,8 @@ const UpdateRateBasedRuleRequest * UpdateRateBasedRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF UpdateRateBasedRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF UpdateRateBasedRule \a response.
  */
 void UpdateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::UpdateRateBasedRuleResponsePrivate
+ * \brief The UpdateRateBasedRuleResponsePrivate class provides private implementation for UpdateRateBasedRuleResponse.
  * \internal
  *
- * \class UpdateRateBasedRuleResponsePrivate
- *
- * \brief Private implementation for UpdateRateBasedRuleResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRateBasedRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRateBasedRuleResponse instance.
+ * Constructs a UpdateRateBasedRuleResponsePrivate object with public implementation \a q.
  */
 UpdateRateBasedRuleResponsePrivate::UpdateRateBasedRuleResponsePrivate(
     UpdateRateBasedRuleResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateRateBasedRuleResponsePrivate::UpdateRateBasedRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF UpdateRateBasedRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF UpdateRateBasedRule response element from \a xml.
  */
 void UpdateRateBasedRuleResponsePrivate::parseUpdateRateBasedRuleResponse(QXmlStreamReader &xml)
 {

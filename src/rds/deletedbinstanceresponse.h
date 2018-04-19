@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDBInstanceResponse : public RDSResponse {
 public:
     DeleteDBInstanceResponse(const DeleteDBInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDBInstanceRequest * request() const;
+    virtual const DeleteDBInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDBInstanceResponse)

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteGroupPolicyResponse
- *
  * \brief The DeleteGroupPolicyResponse class provides an interace for IAM DeleteGroupPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteGroupPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteGroupPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteGroupPolicyResponse::DeleteGroupPolicyResponse(
         const DeleteGroupPolicyRequest &request,
@@ -120,6 +115,9 @@ DeleteGroupPolicyResponse::DeleteGroupPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteGroupPolicyRequest * DeleteGroupPolicyResponse::request() const
 {
     Q_D(const DeleteGroupPolicyResponse);
@@ -127,9 +125,8 @@ const DeleteGroupPolicyRequest * DeleteGroupPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM DeleteGroupPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteGroupPolicy \a response.
  */
 void DeleteGroupPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteGroupPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteGroupPolicyResponsePrivate
+ * \brief The DeleteGroupPolicyResponsePrivate class provides private implementation for DeleteGroupPolicyResponse.
  * \internal
  *
- * \class DeleteGroupPolicyResponsePrivate
- *
- * \brief Private implementation for DeleteGroupPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGroupPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteGroupPolicyResponse instance.
+ * Constructs a DeleteGroupPolicyResponsePrivate object with public implementation \a q.
  */
 DeleteGroupPolicyResponsePrivate::DeleteGroupPolicyResponsePrivate(
     DeleteGroupPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteGroupPolicyResponsePrivate::DeleteGroupPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeleteGroupPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteGroupPolicy response element from \a xml.
  */
 void DeleteGroupPolicyResponsePrivate::parseDeleteGroupPolicyResponse(QXmlStreamReader &xml)
 {

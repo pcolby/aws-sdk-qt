@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * SetTimeBasedAutoScalingRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a SetTimeBasedAutoScalingRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a SetTimeBasedAutoScalingRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 SetTimeBasedAutoScalingRequestPrivate::SetTimeBasedAutoScalingRequestPrivate(
     const OpsWorksRequest::Action action, SetTimeBasedAutoScalingRequest * const q)

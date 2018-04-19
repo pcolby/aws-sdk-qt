@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::GetLaunchTemplateDataResponse
- *
  * \brief The GetLaunchTemplateDataResponse class provides an interace for EC2 GetLaunchTemplateData responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new GetLaunchTemplateDataResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetLaunchTemplateDataResponse object for \a reply to \a request, with parent \a parent.
  */
 GetLaunchTemplateDataResponse::GetLaunchTemplateDataResponse(
         const GetLaunchTemplateDataRequest &request,
@@ -59,6 +54,9 @@ GetLaunchTemplateDataResponse::GetLaunchTemplateDataResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetLaunchTemplateDataRequest * GetLaunchTemplateDataResponse::request() const
 {
     Q_D(const GetLaunchTemplateDataResponse);
@@ -66,9 +64,8 @@ const GetLaunchTemplateDataRequest * GetLaunchTemplateDataResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 GetLaunchTemplateData response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 GetLaunchTemplateData \a response.
  */
 void GetLaunchTemplateDataResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetLaunchTemplateDataResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::GetLaunchTemplateDataResponsePrivate
+ * \brief The GetLaunchTemplateDataResponsePrivate class provides private implementation for GetLaunchTemplateDataResponse.
  * \internal
  *
- * \class GetLaunchTemplateDataResponsePrivate
- *
- * \brief Private implementation for GetLaunchTemplateDataResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetLaunchTemplateDataResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetLaunchTemplateDataResponse instance.
+ * Constructs a GetLaunchTemplateDataResponsePrivate object with public implementation \a q.
  */
 GetLaunchTemplateDataResponsePrivate::GetLaunchTemplateDataResponsePrivate(
     GetLaunchTemplateDataResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ GetLaunchTemplateDataResponsePrivate::GetLaunchTemplateDataResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 GetLaunchTemplateDataResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 GetLaunchTemplateData response element from \a xml.
  */
 void GetLaunchTemplateDataResponsePrivate::parseGetLaunchTemplateDataResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::AttachElasticLoadBalancerResponse
- *
  * \brief The AttachElasticLoadBalancerResponse class provides an interace for OpsWorks AttachElasticLoadBalancer responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new AttachElasticLoadBalancerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachElasticLoadBalancerResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachElasticLoadBalancerResponse::AttachElasticLoadBalancerResponse(
         const AttachElasticLoadBalancerRequest &request,
@@ -161,6 +156,9 @@ AttachElasticLoadBalancerResponse::AttachElasticLoadBalancerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachElasticLoadBalancerRequest * AttachElasticLoadBalancerResponse::request() const
 {
     Q_D(const AttachElasticLoadBalancerResponse);
@@ -168,9 +166,8 @@ const AttachElasticLoadBalancerRequest * AttachElasticLoadBalancerResponse::requ
 }
 
 /*!
- * @brief  Parse a OpsWorks AttachElasticLoadBalancer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks AttachElasticLoadBalancer \a response.
  */
 void AttachElasticLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void AttachElasticLoadBalancerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::AttachElasticLoadBalancerResponsePrivate
+ * \brief The AttachElasticLoadBalancerResponsePrivate class provides private implementation for AttachElasticLoadBalancerResponse.
  * \internal
  *
- * \class AttachElasticLoadBalancerResponsePrivate
- *
- * \brief Private implementation for AttachElasticLoadBalancerResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachElasticLoadBalancerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachElasticLoadBalancerResponse instance.
+ * Constructs a AttachElasticLoadBalancerResponsePrivate object with public implementation \a q.
  */
 AttachElasticLoadBalancerResponsePrivate::AttachElasticLoadBalancerResponsePrivate(
     AttachElasticLoadBalancerResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ AttachElasticLoadBalancerResponsePrivate::AttachElasticLoadBalancerResponsePriva
 }
 
 /*!
- * @brief  Parse an OpsWorks AttachElasticLoadBalancerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks AttachElasticLoadBalancer response element from \a xml.
  */
 void AttachElasticLoadBalancerResponsePrivate::parseAttachElasticLoadBalancerResponse(QXmlStreamReader &xml)
 {

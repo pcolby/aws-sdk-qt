@@ -34,10 +34,10 @@ class QTAWS_EXPORT ConfirmConnectionResponse : public DirectConnectResponse {
 public:
     ConfirmConnectionResponse(const ConfirmConnectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ConfirmConnectionRequest * request() const;
+    virtual const ConfirmConnectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ConfirmConnectionResponse)

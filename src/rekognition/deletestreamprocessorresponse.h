@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteStreamProcessorResponse : public RekognitionResponse {
 public:
     DeleteStreamProcessorResponse(const DeleteStreamProcessorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteStreamProcessorRequest * request() const;
+    virtual const DeleteStreamProcessorRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteStreamProcessorResponse)

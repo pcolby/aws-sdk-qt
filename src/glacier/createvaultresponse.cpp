@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::CreateVaultResponse
- *
  * \brief The CreateVaultResponse class provides an interace for Glacier CreateVault responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new CreateVaultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateVaultResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateVaultResponse::CreateVaultResponse(
         const CreateVaultRequest &request,
@@ -93,6 +88,9 @@ CreateVaultResponse::CreateVaultResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateVaultRequest * CreateVaultResponse::request() const
 {
     Q_D(const CreateVaultResponse);
@@ -100,9 +98,8 @@ const CreateVaultRequest * CreateVaultResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier CreateVault response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier CreateVault \a response.
  */
 void CreateVaultResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void CreateVaultResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::CreateVaultResponsePrivate
+ * \brief The CreateVaultResponsePrivate class provides private implementation for CreateVaultResponse.
  * \internal
  *
- * \class CreateVaultResponsePrivate
- *
- * \brief Private implementation for CreateVaultResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVaultResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateVaultResponse instance.
+ * Constructs a CreateVaultResponsePrivate object with public implementation \a q.
  */
 CreateVaultResponsePrivate::CreateVaultResponsePrivate(
     CreateVaultResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ CreateVaultResponsePrivate::CreateVaultResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier CreateVaultResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier CreateVault response element from \a xml.
  */
 void CreateVaultResponsePrivate::parseCreateVaultResponse(QXmlStreamReader &xml)
 {

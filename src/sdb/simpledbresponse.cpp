@@ -28,16 +28,13 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::SimpleDBResponse
- *
  * \brief The SimpleDBResponse class provides an interface for SimpleDB responses.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @brief  Constructs a new SimpleDBResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a SimpleDBResponse object with parent \a parent.
  */
 SimpleDBResponse::SimpleDBResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new SimpleDBResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ SimpleDBResponse::SimpleDBResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SimpleDBResponse object.
- *
+ * \internal
+ * Constructs a SimpleDBResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SimpleDBResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 SimpleDBResponse::SimpleDBResponse(SimpleDBResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ SimpleDBResponse::SimpleDBResponse(SimpleDBResponsePrivate * const d, QObject * 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void SimpleDBResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void SimpleDBResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::SimpleDB::SimpleDBResponsePrivate
+ * \brief The SimpleDBResponsePrivate class provides private implementation for SimpleDBResponse.
+ * \internal
  *
- * @class  SimpleDBResponsePrivate
- *
- * @brief  Private implementation for SimpleDBResponse.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SimpleDBResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SimpleDBResponse instance.
+ * Constructs a SimpleDBResponsePrivate object with public implementation \a q.
  */
 SimpleDBResponsePrivate::SimpleDBResponsePrivate(
     SimpleDBResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

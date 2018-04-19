@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateDocumentationPartResponse
- *
  * \brief The CreateDocumentationPartResponse class provides an interace for APIGateway CreateDocumentationPart responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateDocumentationPartResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDocumentationPartResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDocumentationPartResponse::CreateDocumentationPartResponse(
         const CreateDocumentationPartRequest &request,
@@ -60,6 +55,9 @@ CreateDocumentationPartResponse::CreateDocumentationPartResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDocumentationPartRequest * CreateDocumentationPartResponse::request() const
 {
     Q_D(const CreateDocumentationPartResponse);
@@ -67,9 +65,8 @@ const CreateDocumentationPartRequest * CreateDocumentationPartResponse::request(
 }
 
 /*!
- * @brief  Parse a APIGateway CreateDocumentationPart response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway CreateDocumentationPart \a response.
  */
 void CreateDocumentationPartResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateDocumentationPartResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::CreateDocumentationPartResponsePrivate
+ * \brief The CreateDocumentationPartResponsePrivate class provides private implementation for CreateDocumentationPartResponse.
  * \internal
  *
- * \class CreateDocumentationPartResponsePrivate
- *
- * \brief Private implementation for CreateDocumentationPartResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDocumentationPartResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDocumentationPartResponse instance.
+ * Constructs a CreateDocumentationPartResponsePrivate object with public implementation \a q.
  */
 CreateDocumentationPartResponsePrivate::CreateDocumentationPartResponsePrivate(
     CreateDocumentationPartResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateDocumentationPartResponsePrivate::CreateDocumentationPartResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway CreateDocumentationPartResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway CreateDocumentationPart response element from \a xml.
  */
 void CreateDocumentationPartResponsePrivate::parseCreateDocumentationPartResponse(QXmlStreamReader &xml)
 {

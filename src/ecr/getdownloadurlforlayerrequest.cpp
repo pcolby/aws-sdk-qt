@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * GetDownloadUrlForLayerRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a GetDownloadUrlForLayerRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a GetDownloadUrlForLayerRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 GetDownloadUrlForLayerRequestPrivate::GetDownloadUrlForLayerRequestPrivate(
     const ECRRequest::Action action, GetDownloadUrlForLayerRequest * const q)

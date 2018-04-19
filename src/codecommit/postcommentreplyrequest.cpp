@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * PostCommentReplyRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a PostCommentReplyRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a PostCommentReplyRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 PostCommentReplyRequestPrivate::PostCommentReplyRequestPrivate(
     const CodeCommitRequest::Action action, PostCommentReplyRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteNetworkAclEntryResponse
- *
  * \brief The DeleteNetworkAclEntryResponse class provides an interace for EC2 DeleteNetworkAclEntry responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteNetworkAclEntryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNetworkAclEntryResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNetworkAclEntryResponse::DeleteNetworkAclEntryResponse(
         const DeleteNetworkAclEntryRequest &request,
@@ -59,6 +54,9 @@ DeleteNetworkAclEntryResponse::DeleteNetworkAclEntryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNetworkAclEntryRequest * DeleteNetworkAclEntryResponse::request() const
 {
     Q_D(const DeleteNetworkAclEntryResponse);
@@ -66,9 +64,8 @@ const DeleteNetworkAclEntryRequest * DeleteNetworkAclEntryResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 DeleteNetworkAclEntry response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteNetworkAclEntry \a response.
  */
 void DeleteNetworkAclEntryResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteNetworkAclEntryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteNetworkAclEntryResponsePrivate
+ * \brief The DeleteNetworkAclEntryResponsePrivate class provides private implementation for DeleteNetworkAclEntryResponse.
  * \internal
  *
- * \class DeleteNetworkAclEntryResponsePrivate
- *
- * \brief Private implementation for DeleteNetworkAclEntryResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNetworkAclEntryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNetworkAclEntryResponse instance.
+ * Constructs a DeleteNetworkAclEntryResponsePrivate object with public implementation \a q.
  */
 DeleteNetworkAclEntryResponsePrivate::DeleteNetworkAclEntryResponsePrivate(
     DeleteNetworkAclEntryResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteNetworkAclEntryResponsePrivate::DeleteNetworkAclEntryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteNetworkAclEntryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteNetworkAclEntry response element from \a xml.
  */
 void DeleteNetworkAclEntryResponsePrivate::parseDeleteNetworkAclEntryResponse(QXmlStreamReader &xml)
 {

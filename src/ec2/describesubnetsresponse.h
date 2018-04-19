@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSubnetsResponse : public EC2Response {
 public:
     DescribeSubnetsResponse(const DescribeSubnetsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSubnetsRequest * request() const;
+    virtual const DescribeSubnetsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSubnetsResponse)

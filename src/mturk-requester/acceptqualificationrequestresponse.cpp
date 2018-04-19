@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::AcceptQualificationRequestResponse
- *
  * \brief The AcceptQualificationRequestResponse class provides an interace for MTurk AcceptQualificationRequest responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::acceptQualificationRequest
  */
 
 /*!
- * @brief  Constructs a new AcceptQualificationRequestResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AcceptQualificationRequestResponse object for \a reply to \a request, with parent \a parent.
  */
 AcceptQualificationRequestResponse::AcceptQualificationRequestResponse(
         const AcceptQualificationRequestRequest &request,
@@ -55,6 +50,9 @@ AcceptQualificationRequestResponse::AcceptQualificationRequestResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AcceptQualificationRequestRequest * AcceptQualificationRequestResponse::request() const
 {
     Q_D(const AcceptQualificationRequestResponse);
@@ -62,9 +60,8 @@ const AcceptQualificationRequestRequest * AcceptQualificationRequestResponse::re
 }
 
 /*!
- * @brief  Parse a MTurk AcceptQualificationRequest response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk AcceptQualificationRequest \a response.
  */
 void AcceptQualificationRequestResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void AcceptQualificationRequestResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::AcceptQualificationRequestResponsePrivate
+ * \brief The AcceptQualificationRequestResponsePrivate class provides private implementation for AcceptQualificationRequestResponse.
  * \internal
  *
- * \class AcceptQualificationRequestResponsePrivate
- *
- * \brief Private implementation for AcceptQualificationRequestResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptQualificationRequestResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AcceptQualificationRequestResponse instance.
+ * Constructs a AcceptQualificationRequestResponsePrivate object with public implementation \a q.
  */
 AcceptQualificationRequestResponsePrivate::AcceptQualificationRequestResponsePrivate(
     AcceptQualificationRequestResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ AcceptQualificationRequestResponsePrivate::AcceptQualificationRequestResponsePri
 }
 
 /*!
- * @brief  Parse an MTurk AcceptQualificationRequestResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk AcceptQualificationRequest response element from \a xml.
  */
 void AcceptQualificationRequestResponsePrivate::parseAcceptQualificationRequestResponse(QXmlStreamReader &xml)
 {

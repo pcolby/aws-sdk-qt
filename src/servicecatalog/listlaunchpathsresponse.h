@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListLaunchPathsResponse : public ServiceCatalogResponse {
 public:
     ListLaunchPathsResponse(const ListLaunchPathsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListLaunchPathsRequest * request() const;
+    virtual const ListLaunchPathsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListLaunchPathsResponse)

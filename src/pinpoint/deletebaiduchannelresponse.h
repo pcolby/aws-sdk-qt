@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBaiduChannelResponse : public PinpointResponse {
 public:
     DeleteBaiduChannelResponse(const DeleteBaiduChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBaiduChannelRequest * request() const;
+    virtual const DeleteBaiduChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBaiduChannelResponse)

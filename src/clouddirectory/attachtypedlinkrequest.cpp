@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * AttachTypedLinkRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a AttachTypedLinkRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a AttachTypedLinkRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 AttachTypedLinkRequestPrivate::AttachTypedLinkRequestPrivate(
     const CloudDirectoryRequest::Action action, AttachTypedLinkRequest * const q)

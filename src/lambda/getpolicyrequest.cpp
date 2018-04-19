@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetPolicyRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetPolicyRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a GetPolicyRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 GetPolicyRequestPrivate::GetPolicyRequestPrivate(
     const LambdaRequest::Action action, GetPolicyRequest * const q)

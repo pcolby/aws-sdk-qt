@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeCacheEngineVersionsResponse : public ElastiCacheRespo
 public:
     DescribeCacheEngineVersionsResponse(const DescribeCacheEngineVersionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeCacheEngineVersionsRequest * request() const;
+    virtual const DescribeCacheEngineVersionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeCacheEngineVersionsResponse)

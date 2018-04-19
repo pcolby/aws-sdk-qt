@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteSegmentResponse
- *
  * \brief The DeleteSegmentResponse class provides an interace for Pinpoint DeleteSegment responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteSegment
  */
 
 /*!
- * @brief  Constructs a new DeleteSegmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSegmentResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSegmentResponse::DeleteSegmentResponse(
         const DeleteSegmentRequest &request,
@@ -55,6 +50,9 @@ DeleteSegmentResponse::DeleteSegmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSegmentRequest * DeleteSegmentResponse::request() const
 {
     Q_D(const DeleteSegmentResponse);
@@ -62,9 +60,8 @@ const DeleteSegmentRequest * DeleteSegmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint DeleteSegment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint DeleteSegment \a response.
  */
 void DeleteSegmentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteSegmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::DeleteSegmentResponsePrivate
+ * \brief The DeleteSegmentResponsePrivate class provides private implementation for DeleteSegmentResponse.
  * \internal
  *
- * \class DeleteSegmentResponsePrivate
- *
- * \brief Private implementation for DeleteSegmentResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSegmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSegmentResponse instance.
+ * Constructs a DeleteSegmentResponsePrivate object with public implementation \a q.
  */
 DeleteSegmentResponsePrivate::DeleteSegmentResponsePrivate(
     DeleteSegmentResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteSegmentResponsePrivate::DeleteSegmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint DeleteSegmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint DeleteSegment response element from \a xml.
  */
 void DeleteSegmentResponsePrivate::parseDeleteSegmentResponse(QXmlStreamReader &xml)
 {

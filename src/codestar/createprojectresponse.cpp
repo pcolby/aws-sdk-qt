@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::CreateProjectResponse
- *
  * \brief The CreateProjectResponse class provides an interace for CodeStar CreateProject responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new CreateProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateProjectResponse::CreateProjectResponse(
         const CreateProjectRequest &request,
@@ -143,6 +138,9 @@ CreateProjectResponse::CreateProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateProjectRequest * CreateProjectResponse::request() const
 {
     Q_D(const CreateProjectResponse);
@@ -150,9 +148,8 @@ const CreateProjectRequest * CreateProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar CreateProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar CreateProject \a response.
  */
 void CreateProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void CreateProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::CreateProjectResponsePrivate
+ * \brief The CreateProjectResponsePrivate class provides private implementation for CreateProjectResponse.
  * \internal
  *
- * \class CreateProjectResponsePrivate
- *
- * \brief Private implementation for CreateProjectResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateProjectResponse instance.
+ * Constructs a CreateProjectResponsePrivate object with public implementation \a q.
  */
 CreateProjectResponsePrivate::CreateProjectResponsePrivate(
     CreateProjectResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ CreateProjectResponsePrivate::CreateProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar CreateProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar CreateProject response element from \a xml.
  */
 void CreateProjectResponsePrivate::parseCreateProjectResponse(QXmlStreamReader &xml)
 {

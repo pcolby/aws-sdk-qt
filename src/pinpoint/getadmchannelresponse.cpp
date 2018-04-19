@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetAdmChannelResponse
- *
  * \brief The GetAdmChannelResponse class provides an interace for Pinpoint GetAdmChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getAdmChannel
  */
 
 /*!
- * @brief  Constructs a new GetAdmChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAdmChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAdmChannelResponse::GetAdmChannelResponse(
         const GetAdmChannelRequest &request,
@@ -55,6 +50,9 @@ GetAdmChannelResponse::GetAdmChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAdmChannelRequest * GetAdmChannelResponse::request() const
 {
     Q_D(const GetAdmChannelResponse);
@@ -62,9 +60,8 @@ const GetAdmChannelRequest * GetAdmChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetAdmChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetAdmChannel \a response.
  */
 void GetAdmChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetAdmChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetAdmChannelResponsePrivate
+ * \brief The GetAdmChannelResponsePrivate class provides private implementation for GetAdmChannelResponse.
  * \internal
  *
- * \class GetAdmChannelResponsePrivate
- *
- * \brief Private implementation for GetAdmChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAdmChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAdmChannelResponse instance.
+ * Constructs a GetAdmChannelResponsePrivate object with public implementation \a q.
  */
 GetAdmChannelResponsePrivate::GetAdmChannelResponsePrivate(
     GetAdmChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetAdmChannelResponsePrivate::GetAdmChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetAdmChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetAdmChannel response element from \a xml.
  */
 void GetAdmChannelResponsePrivate::parseGetAdmChannelResponse(QXmlStreamReader &xml)
 {

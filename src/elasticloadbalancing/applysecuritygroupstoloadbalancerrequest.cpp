@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * ApplySecurityGroupsToLoadBalancerRequest::res
  */
 
 /*!
- *
- * Constructs a ApplySecurityGroupsToLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a ApplySecurityGroupsToLoadBalancerRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 ApplySecurityGroupsToLoadBalancerRequestPrivate::ApplySecurityGroupsToLoadBalancerRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, ApplySecurityGroupsToLoadBalancerRequest * const q)

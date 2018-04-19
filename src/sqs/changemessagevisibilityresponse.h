@@ -34,10 +34,10 @@ class QTAWS_EXPORT ChangeMessageVisibilityResponse : public SQSResponse {
 public:
     ChangeMessageVisibilityResponse(const ChangeMessageVisibilityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ChangeMessageVisibilityRequest * request() const;
+    virtual const ChangeMessageVisibilityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ChangeMessageVisibilityResponse)

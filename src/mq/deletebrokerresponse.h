@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBrokerResponse : public MQResponse {
 public:
     DeleteBrokerResponse(const DeleteBrokerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBrokerRequest * request() const;
+    virtual const DeleteBrokerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBrokerResponse)

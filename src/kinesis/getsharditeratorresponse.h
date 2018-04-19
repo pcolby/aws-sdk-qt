@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetShardIteratorResponse : public KinesisResponse {
 public:
     GetShardIteratorResponse(const GetShardIteratorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetShardIteratorRequest * request() const;
+    virtual const GetShardIteratorRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetShardIteratorResponse)

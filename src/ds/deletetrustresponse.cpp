@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DeleteTrustResponse
- *
  * \brief The DeleteTrustResponse class provides an interace for DirectoryService DeleteTrust responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DeleteTrustResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTrustResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTrustResponse::DeleteTrustResponse(
         const DeleteTrustRequest &request,
@@ -69,6 +64,9 @@ DeleteTrustResponse::DeleteTrustResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTrustRequest * DeleteTrustResponse::request() const
 {
     Q_D(const DeleteTrustResponse);
@@ -76,9 +74,8 @@ const DeleteTrustRequest * DeleteTrustResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService DeleteTrust response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DeleteTrust \a response.
  */
 void DeleteTrustResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeleteTrustResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DeleteTrustResponsePrivate
+ * \brief The DeleteTrustResponsePrivate class provides private implementation for DeleteTrustResponse.
  * \internal
  *
- * \class DeleteTrustResponsePrivate
- *
- * \brief Private implementation for DeleteTrustResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTrustResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTrustResponse instance.
+ * Constructs a DeleteTrustResponsePrivate object with public implementation \a q.
  */
 DeleteTrustResponsePrivate::DeleteTrustResponsePrivate(
     DeleteTrustResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DeleteTrustResponsePrivate::DeleteTrustResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService DeleteTrustResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DeleteTrust response element from \a xml.
  */
 void DeleteTrustResponsePrivate::parseDeleteTrustResponse(QXmlStreamReader &xml)
 {

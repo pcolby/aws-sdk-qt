@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ChangeResourceRecordSetsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ChangeResourceRecordSetsRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a ChangeResourceRecordSetsRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 ChangeResourceRecordSetsRequestPrivate::ChangeResourceRecordSetsRequestPrivate(
     const Route53Request::Action action, ChangeResourceRecordSetsRequest * const q)

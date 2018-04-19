@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::DeleteGroupResponse
- *
  * \brief The DeleteGroupResponse class provides an interace for Greengrass DeleteGroup responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new DeleteGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteGroupResponse::DeleteGroupResponse(
         const DeleteGroupRequest &request,
@@ -58,6 +53,9 @@ DeleteGroupResponse::DeleteGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteGroupRequest * DeleteGroupResponse::request() const
 {
     Q_D(const DeleteGroupResponse);
@@ -65,9 +63,8 @@ const DeleteGroupRequest * DeleteGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass DeleteGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass DeleteGroup \a response.
  */
 void DeleteGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::DeleteGroupResponsePrivate
+ * \brief The DeleteGroupResponsePrivate class provides private implementation for DeleteGroupResponse.
  * \internal
  *
- * \class DeleteGroupResponsePrivate
- *
- * \brief Private implementation for DeleteGroupResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteGroupResponse instance.
+ * Constructs a DeleteGroupResponsePrivate object with public implementation \a q.
  */
 DeleteGroupResponsePrivate::DeleteGroupResponsePrivate(
     DeleteGroupResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteGroupResponsePrivate::DeleteGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass DeleteGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass DeleteGroup response element from \a xml.
  */
 void DeleteGroupResponsePrivate::parseDeleteGroupResponse(QXmlStreamReader &xml)
 {

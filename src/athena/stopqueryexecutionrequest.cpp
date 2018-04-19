@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * StopQueryExecutionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a StopQueryExecutionRequestPrivate object for Athena \a action with,
- * public implementation \a q.
+ * Constructs a StopQueryExecutionRequestPrivate object for Athena \a action,
+ * with public implementation \a q.
  */
 StopQueryExecutionRequestPrivate::StopQueryExecutionRequestPrivate(
     const AthenaRequest::Action action, StopQueryExecutionRequest * const q)

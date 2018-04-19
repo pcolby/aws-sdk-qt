@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateTeamMemberResponse : public CodeStarResponse {
 public:
     DisassociateTeamMemberResponse(const DisassociateTeamMemberRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateTeamMemberRequest * request() const;
+    virtual const DisassociateTeamMemberRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateTeamMemberResponse)

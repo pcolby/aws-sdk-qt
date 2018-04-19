@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::SetInstanceHealthResponse
- *
  * \brief The SetInstanceHealthResponse class provides an interace for AutoScaling SetInstanceHealth responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new SetInstanceHealthResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetInstanceHealthResponse object for \a reply to \a request, with parent \a parent.
  */
 SetInstanceHealthResponse::SetInstanceHealthResponse(
         const SetInstanceHealthRequest &request,
@@ -60,6 +55,9 @@ SetInstanceHealthResponse::SetInstanceHealthResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetInstanceHealthRequest * SetInstanceHealthResponse::request() const
 {
     Q_D(const SetInstanceHealthResponse);
@@ -67,9 +65,8 @@ const SetInstanceHealthRequest * SetInstanceHealthResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling SetInstanceHealth response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling SetInstanceHealth \a response.
  */
 void SetInstanceHealthResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void SetInstanceHealthResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::SetInstanceHealthResponsePrivate
+ * \brief The SetInstanceHealthResponsePrivate class provides private implementation for SetInstanceHealthResponse.
  * \internal
  *
- * \class SetInstanceHealthResponsePrivate
- *
- * \brief Private implementation for SetInstanceHealthResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetInstanceHealthResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetInstanceHealthResponse instance.
+ * Constructs a SetInstanceHealthResponsePrivate object with public implementation \a q.
  */
 SetInstanceHealthResponsePrivate::SetInstanceHealthResponsePrivate(
     SetInstanceHealthResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ SetInstanceHealthResponsePrivate::SetInstanceHealthResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling SetInstanceHealthResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling SetInstanceHealth response element from \a xml.
  */
 void SetInstanceHealthResponsePrivate::parseSetInstanceHealthResponse(QXmlStreamReader &xml)
 {

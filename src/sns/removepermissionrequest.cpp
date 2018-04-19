@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * RemovePermissionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a RemovePermissionRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a RemovePermissionRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 RemovePermissionRequestPrivate::RemovePermissionRequestPrivate(
     const SNSRequest::Action action, RemovePermissionRequest * const q)

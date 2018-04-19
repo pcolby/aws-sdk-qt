@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListHostedZonesByNameResponse
- *
  * \brief The ListHostedZonesByNameResponse class provides an interace for Route53 ListHostedZonesByName responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listHostedZonesByName
  */
 
 /*!
- * @brief  Constructs a new ListHostedZonesByNameResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListHostedZonesByNameResponse object for \a reply to \a request, with parent \a parent.
  */
 ListHostedZonesByNameResponse::ListHostedZonesByNameResponse(
         const ListHostedZonesByNameRequest &request,
@@ -55,6 +50,9 @@ ListHostedZonesByNameResponse::ListHostedZonesByNameResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListHostedZonesByNameRequest * ListHostedZonesByNameResponse::request() const
 {
     Q_D(const ListHostedZonesByNameResponse);
@@ -62,9 +60,8 @@ const ListHostedZonesByNameRequest * ListHostedZonesByNameResponse::request() co
 }
 
 /*!
- * @brief  Parse a Route53 ListHostedZonesByName response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 ListHostedZonesByName \a response.
  */
 void ListHostedZonesByNameResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListHostedZonesByNameResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::ListHostedZonesByNameResponsePrivate
+ * \brief The ListHostedZonesByNameResponsePrivate class provides private implementation for ListHostedZonesByNameResponse.
  * \internal
  *
- * \class ListHostedZonesByNameResponsePrivate
- *
- * \brief Private implementation for ListHostedZonesByNameResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListHostedZonesByNameResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListHostedZonesByNameResponse instance.
+ * Constructs a ListHostedZonesByNameResponsePrivate object with public implementation \a q.
  */
 ListHostedZonesByNameResponsePrivate::ListHostedZonesByNameResponsePrivate(
     ListHostedZonesByNameResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListHostedZonesByNameResponsePrivate::ListHostedZonesByNameResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 ListHostedZonesByNameResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 ListHostedZonesByName response element from \a xml.
  */
 void ListHostedZonesByNameResponsePrivate::parseListHostedZonesByNameResponse(QXmlStreamReader &xml)
 {

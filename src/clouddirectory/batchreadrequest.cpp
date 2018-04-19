@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * BatchReadRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a BatchReadRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a BatchReadRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 BatchReadRequestPrivate::BatchReadRequestPrivate(
     const CloudDirectoryRequest::Action action, BatchReadRequest * const q)

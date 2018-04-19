@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEffectivePatchesForPatchBaselineReque
  */
 
 /*!
- *
- * Constructs a DescribeEffectivePatchesForPatchBaselineRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEffectivePatchesForPatchBaselineRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeEffectivePatchesForPatchBaselineRequestPrivate::DescribeEffectivePatchesForPatchBaselineRequestPrivate(
     const SSMRequest::Action action, DescribeEffectivePatchesForPatchBaselineRequest * const q)

@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a RegisterDomainRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a RegisterDomainRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
     const Route53DomainsRequest::Action action, RegisterDomainRequest * const q)

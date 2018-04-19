@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::RegisterTaskDefinitionResponse
- *
  * \brief The RegisterTaskDefinitionResponse class provides an interace for ECS RegisterTaskDefinition responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new RegisterTaskDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterTaskDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterTaskDefinitionResponse::RegisterTaskDefinitionResponse(
         const RegisterTaskDefinitionRequest &request,
@@ -72,6 +67,9 @@ RegisterTaskDefinitionResponse::RegisterTaskDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterTaskDefinitionRequest * RegisterTaskDefinitionResponse::request() const
 {
     Q_D(const RegisterTaskDefinitionResponse);
@@ -79,9 +77,8 @@ const RegisterTaskDefinitionRequest * RegisterTaskDefinitionResponse::request() 
 }
 
 /*!
- * @brief  Parse a ECS RegisterTaskDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS RegisterTaskDefinition \a response.
  */
 void RegisterTaskDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void RegisterTaskDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::RegisterTaskDefinitionResponsePrivate
+ * \brief The RegisterTaskDefinitionResponsePrivate class provides private implementation for RegisterTaskDefinitionResponse.
  * \internal
  *
- * \class RegisterTaskDefinitionResponsePrivate
- *
- * \brief Private implementation for RegisterTaskDefinitionResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterTaskDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterTaskDefinitionResponse instance.
+ * Constructs a RegisterTaskDefinitionResponsePrivate object with public implementation \a q.
  */
 RegisterTaskDefinitionResponsePrivate::RegisterTaskDefinitionResponsePrivate(
     RegisterTaskDefinitionResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ RegisterTaskDefinitionResponsePrivate::RegisterTaskDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS RegisterTaskDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS RegisterTaskDefinition response element from \a xml.
  */
 void RegisterTaskDefinitionResponsePrivate::parseRegisterTaskDefinitionResponse(QXmlStreamReader &xml)
 {

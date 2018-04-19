@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ConfirmSubscriptionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ConfirmSubscriptionRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a ConfirmSubscriptionRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 ConfirmSubscriptionRequestPrivate::ConfirmSubscriptionRequestPrivate(
     const SNSRequest::Action action, ConfirmSubscriptionRequest * const q)

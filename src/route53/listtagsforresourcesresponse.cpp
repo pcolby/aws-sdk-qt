@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::ListTagsForResourcesResponse
- *
  * \brief The ListTagsForResourcesResponse class provides an interace for Route53 ListTagsForResources responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::listTagsForResources
  */
 
 /*!
- * @brief  Constructs a new ListTagsForResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsForResourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsForResourcesResponse::ListTagsForResourcesResponse(
         const ListTagsForResourcesRequest &request,
@@ -55,6 +50,9 @@ ListTagsForResourcesResponse::ListTagsForResourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsForResourcesRequest * ListTagsForResourcesResponse::request() const
 {
     Q_D(const ListTagsForResourcesResponse);
@@ -62,9 +60,8 @@ const ListTagsForResourcesRequest * ListTagsForResourcesResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Route53 ListTagsForResources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 ListTagsForResources \a response.
  */
 void ListTagsForResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListTagsForResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::ListTagsForResourcesResponsePrivate
+ * \brief The ListTagsForResourcesResponsePrivate class provides private implementation for ListTagsForResourcesResponse.
  * \internal
  *
- * \class ListTagsForResourcesResponsePrivate
- *
- * \brief Private implementation for ListTagsForResourcesResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsForResourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsForResourcesResponse instance.
+ * Constructs a ListTagsForResourcesResponsePrivate object with public implementation \a q.
  */
 ListTagsForResourcesResponsePrivate::ListTagsForResourcesResponsePrivate(
     ListTagsForResourcesResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListTagsForResourcesResponsePrivate::ListTagsForResourcesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 ListTagsForResourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 ListTagsForResources response element from \a xml.
  */
 void ListTagsForResourcesResponsePrivate::parseListTagsForResourcesResponse(QXmlStreamReader &xml)
 {

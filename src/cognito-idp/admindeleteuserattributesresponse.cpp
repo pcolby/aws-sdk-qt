@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminDeleteUserAttributesResponse
- *
  * \brief The AdminDeleteUserAttributesResponse class provides an interace for CognitoIdentityProvider AdminDeleteUserAttributes responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminDeleteUserAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminDeleteUserAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminDeleteUserAttributesResponse::AdminDeleteUserAttributesResponse(
         const AdminDeleteUserAttributesRequest &request,
@@ -65,6 +60,9 @@ AdminDeleteUserAttributesResponse::AdminDeleteUserAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminDeleteUserAttributesRequest * AdminDeleteUserAttributesResponse::request() const
 {
     Q_D(const AdminDeleteUserAttributesResponse);
@@ -72,9 +70,8 @@ const AdminDeleteUserAttributesRequest * AdminDeleteUserAttributesResponse::requ
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminDeleteUserAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminDeleteUserAttributes \a response.
  */
 void AdminDeleteUserAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminDeleteUserAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminDeleteUserAttributesResponsePrivate
+ * \brief The AdminDeleteUserAttributesResponsePrivate class provides private implementation for AdminDeleteUserAttributesResponse.
  * \internal
  *
- * \class AdminDeleteUserAttributesResponsePrivate
- *
- * \brief Private implementation for AdminDeleteUserAttributesResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminDeleteUserAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminDeleteUserAttributesResponse instance.
+ * Constructs a AdminDeleteUserAttributesResponsePrivate object with public implementation \a q.
  */
 AdminDeleteUserAttributesResponsePrivate::AdminDeleteUserAttributesResponsePrivate(
     AdminDeleteUserAttributesResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminDeleteUserAttributesResponsePrivate::AdminDeleteUserAttributesResponsePriva
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminDeleteUserAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminDeleteUserAttributes response element from \a xml.
  */
 void AdminDeleteUserAttributesResponsePrivate::parseAdminDeleteUserAttributesResponse(QXmlStreamReader &xml)
 {

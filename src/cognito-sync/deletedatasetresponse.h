@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDatasetResponse : public CognitoSyncResponse {
 public:
     DeleteDatasetResponse(const DeleteDatasetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDatasetRequest * request() const;
+    virtual const DeleteDatasetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDatasetResponse)

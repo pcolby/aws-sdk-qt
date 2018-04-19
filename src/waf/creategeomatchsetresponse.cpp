@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::CreateGeoMatchSetResponse
- *
  * \brief The CreateGeoMatchSetResponse class provides an interace for WAF CreateGeoMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new CreateGeoMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateGeoMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateGeoMatchSetResponse::CreateGeoMatchSetResponse(
         const CreateGeoMatchSetRequest &request,
@@ -60,6 +55,9 @@ CreateGeoMatchSetResponse::CreateGeoMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateGeoMatchSetRequest * CreateGeoMatchSetResponse::request() const
 {
     Q_D(const CreateGeoMatchSetResponse);
@@ -67,9 +65,8 @@ const CreateGeoMatchSetRequest * CreateGeoMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF CreateGeoMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF CreateGeoMatchSet \a response.
  */
 void CreateGeoMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateGeoMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::CreateGeoMatchSetResponsePrivate
+ * \brief The CreateGeoMatchSetResponsePrivate class provides private implementation for CreateGeoMatchSetResponse.
  * \internal
  *
- * \class CreateGeoMatchSetResponsePrivate
- *
- * \brief Private implementation for CreateGeoMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGeoMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateGeoMatchSetResponse instance.
+ * Constructs a CreateGeoMatchSetResponsePrivate object with public implementation \a q.
  */
 CreateGeoMatchSetResponsePrivate::CreateGeoMatchSetResponsePrivate(
     CreateGeoMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateGeoMatchSetResponsePrivate::CreateGeoMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF CreateGeoMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF CreateGeoMatchSet response element from \a xml.
  */
 void CreateGeoMatchSetResponsePrivate::parseCreateGeoMatchSetResponse(QXmlStreamReader &xml)
 {

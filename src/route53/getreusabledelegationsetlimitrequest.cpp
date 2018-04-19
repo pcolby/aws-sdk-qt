@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetReusableDelegationSetLimitRequest::respons
  */
 
 /*!
- *
- * Constructs a GetReusableDelegationSetLimitRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a GetReusableDelegationSetLimitRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 GetReusableDelegationSetLimitRequestPrivate::GetReusableDelegationSetLimitRequestPrivate(
     const Route53Request::Action action, GetReusableDelegationSetLimitRequest * const q)

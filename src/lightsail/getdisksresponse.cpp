@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetDisksResponse
- *
  * \brief The GetDisksResponse class provides an interace for Lightsail GetDisks responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetDisksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDisksResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDisksResponse::GetDisksResponse(
         const GetDisksRequest &request,
@@ -71,6 +66,9 @@ GetDisksResponse::GetDisksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDisksRequest * GetDisksResponse::request() const
 {
     Q_D(const GetDisksResponse);
@@ -78,9 +76,8 @@ const GetDisksRequest * GetDisksResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetDisks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetDisks \a response.
  */
 void GetDisksResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetDisksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetDisksResponsePrivate
+ * \brief The GetDisksResponsePrivate class provides private implementation for GetDisksResponse.
  * \internal
  *
- * \class GetDisksResponsePrivate
- *
- * \brief Private implementation for GetDisksResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDisksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDisksResponse instance.
+ * Constructs a GetDisksResponsePrivate object with public implementation \a q.
  */
 GetDisksResponsePrivate::GetDisksResponsePrivate(
     GetDisksResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetDisksResponsePrivate::GetDisksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetDisksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetDisks response element from \a xml.
  */
 void GetDisksResponsePrivate::parseGetDisksResponse(QXmlStreamReader &xml)
 {

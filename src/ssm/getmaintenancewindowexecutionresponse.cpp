@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetMaintenanceWindowExecutionResponse
- *
  * \brief The GetMaintenanceWindowExecutionResponse class provides an interace for SSM GetMaintenanceWindowExecution responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetMaintenanceWindowExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetMaintenanceWindowExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 GetMaintenanceWindowExecutionResponse::GetMaintenanceWindowExecutionResponse(
         const GetMaintenanceWindowExecutionRequest &request,
@@ -79,6 +74,9 @@ GetMaintenanceWindowExecutionResponse::GetMaintenanceWindowExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetMaintenanceWindowExecutionRequest * GetMaintenanceWindowExecutionResponse::request() const
 {
     Q_D(const GetMaintenanceWindowExecutionResponse);
@@ -86,9 +84,8 @@ const GetMaintenanceWindowExecutionRequest * GetMaintenanceWindowExecutionRespon
 }
 
 /*!
- * @brief  Parse a SSM GetMaintenanceWindowExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM GetMaintenanceWindowExecution \a response.
  */
 void GetMaintenanceWindowExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void GetMaintenanceWindowExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::GetMaintenanceWindowExecutionResponsePrivate
+ * \brief The GetMaintenanceWindowExecutionResponsePrivate class provides private implementation for GetMaintenanceWindowExecutionResponse.
  * \internal
  *
- * \class GetMaintenanceWindowExecutionResponsePrivate
- *
- * \brief Private implementation for GetMaintenanceWindowExecutionResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMaintenanceWindowExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetMaintenanceWindowExecutionResponse instance.
+ * Constructs a GetMaintenanceWindowExecutionResponsePrivate object with public implementation \a q.
  */
 GetMaintenanceWindowExecutionResponsePrivate::GetMaintenanceWindowExecutionResponsePrivate(
     GetMaintenanceWindowExecutionResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ GetMaintenanceWindowExecutionResponsePrivate::GetMaintenanceWindowExecutionRespo
 }
 
 /*!
- * @brief  Parse an SSM GetMaintenanceWindowExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM GetMaintenanceWindowExecution response element from \a xml.
  */
 void GetMaintenanceWindowExecutionResponsePrivate::parseGetMaintenanceWindowExecutionResponse(QXmlStreamReader &xml)
 {

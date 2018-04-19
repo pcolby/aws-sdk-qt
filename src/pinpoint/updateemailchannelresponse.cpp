@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateEmailChannelResponse
- *
  * \brief The UpdateEmailChannelResponse class provides an interace for Pinpoint UpdateEmailChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateEmailChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateEmailChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateEmailChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateEmailChannelResponse::UpdateEmailChannelResponse(
         const UpdateEmailChannelRequest &request,
@@ -55,6 +50,9 @@ UpdateEmailChannelResponse::UpdateEmailChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateEmailChannelRequest * UpdateEmailChannelResponse::request() const
 {
     Q_D(const UpdateEmailChannelResponse);
@@ -62,9 +60,8 @@ const UpdateEmailChannelRequest * UpdateEmailChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint UpdateEmailChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint UpdateEmailChannel \a response.
  */
 void UpdateEmailChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateEmailChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::UpdateEmailChannelResponsePrivate
+ * \brief The UpdateEmailChannelResponsePrivate class provides private implementation for UpdateEmailChannelResponse.
  * \internal
  *
- * \class UpdateEmailChannelResponsePrivate
- *
- * \brief Private implementation for UpdateEmailChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEmailChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateEmailChannelResponse instance.
+ * Constructs a UpdateEmailChannelResponsePrivate object with public implementation \a q.
  */
 UpdateEmailChannelResponsePrivate::UpdateEmailChannelResponsePrivate(
     UpdateEmailChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateEmailChannelResponsePrivate::UpdateEmailChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint UpdateEmailChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint UpdateEmailChannel response element from \a xml.
  */
 void UpdateEmailChannelResponsePrivate::parseUpdateEmailChannelResponse(QXmlStreamReader &xml)
 {

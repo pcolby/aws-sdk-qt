@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * ResendConfirmationCodeRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ResendConfirmationCodeRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a ResendConfirmationCodeRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 ResendConfirmationCodeRequestPrivate::ResendConfirmationCodeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, ResendConfirmationCodeRequest * const q)

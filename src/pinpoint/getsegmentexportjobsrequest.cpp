@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetSegmentExportJobsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetSegmentExportJobsRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetSegmentExportJobsRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetSegmentExportJobsRequestPrivate::GetSegmentExportJobsRequestPrivate(
     const PinpointRequest::Action action, GetSegmentExportJobsRequest * const q)

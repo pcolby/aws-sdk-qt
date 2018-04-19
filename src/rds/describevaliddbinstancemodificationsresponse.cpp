@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeValidDBInstanceModificationsResponse
- *
  * \brief The DescribeValidDBInstanceModificationsResponse class provides an interace for RDS DescribeValidDBInstanceModifications responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeValidDBInstanceModificationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeValidDBInstanceModificationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeValidDBInstanceModificationsResponse::DescribeValidDBInstanceModificationsResponse(
         const DescribeValidDBInstanceModificationsRequest &request,
@@ -119,6 +114,9 @@ DescribeValidDBInstanceModificationsResponse::DescribeValidDBInstanceModificatio
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeValidDBInstanceModificationsRequest * DescribeValidDBInstanceModificationsResponse::request() const
 {
     Q_D(const DescribeValidDBInstanceModificationsResponse);
@@ -126,9 +124,8 @@ const DescribeValidDBInstanceModificationsRequest * DescribeValidDBInstanceModif
 }
 
 /*!
- * @brief  Parse a RDS DescribeValidDBInstanceModifications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeValidDBInstanceModifications \a response.
  */
 void DescribeValidDBInstanceModificationsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeValidDBInstanceModificationsResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::RDS::DescribeValidDBInstanceModificationsResponsePrivate
+ * \brief The DescribeValidDBInstanceModificationsResponsePrivate class provides private implementation for DescribeValidDBInstanceModificationsResponse.
  * \internal
  *
- * \class DescribeValidDBInstanceModificationsResponsePrivate
- *
- * \brief Private implementation for DescribeValidDBInstanceModificationsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeValidDBInstanceModificationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeValidDBInstanceModificationsResponse instance.
+ * Constructs a DescribeValidDBInstanceModificationsResponsePrivate object with public implementation \a q.
  */
 DescribeValidDBInstanceModificationsResponsePrivate::DescribeValidDBInstanceModificationsResponsePrivate(
     DescribeValidDBInstanceModificationsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeValidDBInstanceModificationsResponsePrivate::DescribeValidDBInstanceModi
 }
 
 /*!
- * @brief  Parse an RDS DescribeValidDBInstanceModificationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeValidDBInstanceModifications response element from \a xml.
  */
 void DescribeValidDBInstanceModificationsResponsePrivate::parseDescribeValidDBInstanceModificationsResponse(QXmlStreamReader &xml)
 {

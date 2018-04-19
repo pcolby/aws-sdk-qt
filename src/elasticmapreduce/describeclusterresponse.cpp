@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::DescribeClusterResponse
- *
  * \brief The DescribeClusterResponse class provides an interace for EMR DescribeCluster responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new DescribeClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeClusterResponse::DescribeClusterResponse(
         const DescribeClusterRequest &request,
@@ -58,6 +53,9 @@ DescribeClusterResponse::DescribeClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeClusterRequest * DescribeClusterResponse::request() const
 {
     Q_D(const DescribeClusterResponse);
@@ -65,9 +63,8 @@ const DescribeClusterRequest * DescribeClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR DescribeCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR DescribeCluster \a response.
  */
 void DescribeClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::DescribeClusterResponsePrivate
+ * \brief The DescribeClusterResponsePrivate class provides private implementation for DescribeClusterResponse.
  * \internal
  *
- * \class DescribeClusterResponsePrivate
- *
- * \brief Private implementation for DescribeClusterResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeClusterResponse instance.
+ * Constructs a DescribeClusterResponsePrivate object with public implementation \a q.
  */
 DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
     DescribeClusterResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeClusterResponsePrivate::DescribeClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR DescribeClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR DescribeCluster response element from \a xml.
  */
 void DescribeClusterResponsePrivate::parseDescribeClusterResponse(QXmlStreamReader &xml)
 {

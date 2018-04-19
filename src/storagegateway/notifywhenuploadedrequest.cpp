@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * NotifyWhenUploadedRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a NotifyWhenUploadedRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a NotifyWhenUploadedRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 NotifyWhenUploadedRequestPrivate::NotifyWhenUploadedRequestPrivate(
     const StorageGatewayRequest::Action action, NotifyWhenUploadedRequest * const q)

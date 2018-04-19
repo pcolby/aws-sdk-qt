@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateDistributionWithTagsResponse : public CloudFrontRespons
 public:
     CreateDistributionWithTagsResponse(const CreateDistributionWithTagsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateDistributionWithTagsRequest * request() const;
+    virtual const CreateDistributionWithTagsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateDistributionWithTagsResponse)

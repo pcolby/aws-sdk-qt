@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::ListDeploymentGroupsResponse
- *
  * \brief The ListDeploymentGroupsResponse class provides an interace for CodeDeploy ListDeploymentGroups responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new ListDeploymentGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDeploymentGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDeploymentGroupsResponse::ListDeploymentGroupsResponse(
         const ListDeploymentGroupsRequest &request,
@@ -136,6 +131,9 @@ ListDeploymentGroupsResponse::ListDeploymentGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDeploymentGroupsRequest * ListDeploymentGroupsResponse::request() const
 {
     Q_D(const ListDeploymentGroupsResponse);
@@ -143,9 +141,8 @@ const ListDeploymentGroupsRequest * ListDeploymentGroupsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CodeDeploy ListDeploymentGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy ListDeploymentGroups \a response.
  */
 void ListDeploymentGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void ListDeploymentGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::ListDeploymentGroupsResponsePrivate
+ * \brief The ListDeploymentGroupsResponsePrivate class provides private implementation for ListDeploymentGroupsResponse.
  * \internal
  *
- * \class ListDeploymentGroupsResponsePrivate
- *
- * \brief Private implementation for ListDeploymentGroupsResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeploymentGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDeploymentGroupsResponse instance.
+ * Constructs a ListDeploymentGroupsResponsePrivate object with public implementation \a q.
  */
 ListDeploymentGroupsResponsePrivate::ListDeploymentGroupsResponsePrivate(
     ListDeploymentGroupsResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ ListDeploymentGroupsResponsePrivate::ListDeploymentGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeDeploy ListDeploymentGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy ListDeploymentGroups response element from \a xml.
  */
 void ListDeploymentGroupsResponsePrivate::parseListDeploymentGroupsResponse(QXmlStreamReader &xml)
 {

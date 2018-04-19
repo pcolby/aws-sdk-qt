@@ -70,7 +70,7 @@ namespace DynamoDB {
  */
 
 /*!
- * Constructs a[n] DynamoDBRequest object for DynamoDB \a action.
+ * Constructs a DynamoDBRequest object for DynamoDB \a action.
  */
 DynamoDBRequest::DynamoDBRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new DynamoDBRequestPrivate(action, this))
@@ -270,8 +270,8 @@ QNetworkRequest DynamoDBRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a DynamoDBRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a DynamoDBRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 DynamoDBRequestPrivate::DynamoDBRequestPrivate(const DynamoDBRequest::Action action, DynamoDBRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetLoadBalancerPoliciesForBackendServerResponse : public Elas
 public:
     SetLoadBalancerPoliciesForBackendServerResponse(const SetLoadBalancerPoliciesForBackendServerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetLoadBalancerPoliciesForBackendServerRequest * request() const;
+    virtual const SetLoadBalancerPoliciesForBackendServerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetLoadBalancerPoliciesForBackendServerResponse)

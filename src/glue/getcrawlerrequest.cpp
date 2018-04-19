@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetCrawlerRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetCrawlerRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GetCrawlerRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GetCrawlerRequestPrivate::GetCrawlerRequestPrivate(
     const GlueRequest::Action action, GetCrawlerRequest * const q)

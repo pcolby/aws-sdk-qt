@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketVersioningResponse
- *
  * \brief The GetBucketVersioningResponse class provides an interace for S3 GetBucketVersioning responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketVersioning
  */
 
 /*!
- * @brief  Constructs a new GetBucketVersioningResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBucketVersioningResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBucketVersioningResponse::GetBucketVersioningResponse(
         const GetBucketVersioningRequest &request,
@@ -55,6 +50,9 @@ GetBucketVersioningResponse::GetBucketVersioningResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBucketVersioningRequest * GetBucketVersioningResponse::request() const
 {
     Q_D(const GetBucketVersioningResponse);
@@ -62,9 +60,8 @@ const GetBucketVersioningRequest * GetBucketVersioningResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 GetBucketVersioning response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetBucketVersioning \a response.
  */
 void GetBucketVersioningResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBucketVersioningResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetBucketVersioningResponsePrivate
+ * \brief The GetBucketVersioningResponsePrivate class provides private implementation for GetBucketVersioningResponse.
  * \internal
  *
- * \class GetBucketVersioningResponsePrivate
- *
- * \brief Private implementation for GetBucketVersioningResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketVersioningResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBucketVersioningResponse instance.
+ * Constructs a GetBucketVersioningResponsePrivate object with public implementation \a q.
  */
 GetBucketVersioningResponsePrivate::GetBucketVersioningResponsePrivate(
     GetBucketVersioningResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBucketVersioningResponsePrivate::GetBucketVersioningResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 GetBucketVersioningResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetBucketVersioning response element from \a xml.
  */
 void GetBucketVersioningResponsePrivate::parseGetBucketVersioningResponse(QXmlStreamReader &xml)
 {

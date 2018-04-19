@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSampledRequestsResponse : public WAFResponse {
 public:
     GetSampledRequestsResponse(const GetSampledRequestsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSampledRequestsRequest * request() const;
+    virtual const GetSampledRequestsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSampledRequestsResponse)

@@ -29,10 +29,9 @@ namespace CloudHSM {
 
 /*!
  * \class QtAws::CloudHSM::CreateHapgResponse
- *
  * \brief The CreateHapgResponse class provides an interace for CloudHSM CreateHapg responses.
  *
- * \ingroup CloudHSM
+ * \inmodule QtAwsCloudHSM
  *
  *  <fullname>AWS CloudHSM Service</fullname>
  * 
@@ -51,11 +50,7 @@ namespace CloudHSM {
  */
 
 /*!
- * @brief  Constructs a new CreateHapgResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateHapgResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateHapgResponse::CreateHapgResponse(
         const CreateHapgRequest &request,
@@ -67,6 +62,9 @@ CreateHapgResponse::CreateHapgResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateHapgRequest * CreateHapgResponse::request() const
 {
     Q_D(const CreateHapgResponse);
@@ -74,9 +72,8 @@ const CreateHapgRequest * CreateHapgResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudHSM CreateHapg response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudHSM CreateHapg \a response.
  */
 void CreateHapgResponse::parseSuccess(QIODevice &response)
 {
@@ -86,19 +83,15 @@ void CreateHapgResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudHSM::CreateHapgResponsePrivate
+ * \brief The CreateHapgResponsePrivate class provides private implementation for CreateHapgResponse.
  * \internal
  *
- * \class CreateHapgResponsePrivate
- *
- * \brief Private implementation for CreateHapgResponse.
+ * \inmodule QtAwsCloudHSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHapgResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateHapgResponse instance.
+ * Constructs a CreateHapgResponsePrivate object with public implementation \a q.
  */
 CreateHapgResponsePrivate::CreateHapgResponsePrivate(
     CreateHapgResponse * const q) : CloudHSMResponsePrivate(q)
@@ -107,9 +100,7 @@ CreateHapgResponsePrivate::CreateHapgResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudHSM CreateHapgResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudHSM CreateHapg response element from \a xml.
  */
 void CreateHapgResponsePrivate::parseCreateHapgResponse(QXmlStreamReader &xml)
 {

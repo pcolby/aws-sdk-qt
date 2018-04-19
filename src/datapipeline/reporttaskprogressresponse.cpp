@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::ReportTaskProgressResponse
- *
  * \brief The ReportTaskProgressResponse class provides an interace for DataPipeline ReportTaskProgress responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new ReportTaskProgressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReportTaskProgressResponse object for \a reply to \a request, with parent \a parent.
  */
 ReportTaskProgressResponse::ReportTaskProgressResponse(
         const ReportTaskProgressRequest &request,
@@ -73,6 +68,9 @@ ReportTaskProgressResponse::ReportTaskProgressResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReportTaskProgressRequest * ReportTaskProgressResponse::request() const
 {
     Q_D(const ReportTaskProgressResponse);
@@ -80,9 +78,8 @@ const ReportTaskProgressRequest * ReportTaskProgressResponse::request() const
 }
 
 /*!
- * @brief  Parse a DataPipeline ReportTaskProgress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline ReportTaskProgress \a response.
  */
 void ReportTaskProgressResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void ReportTaskProgressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::ReportTaskProgressResponsePrivate
+ * \brief The ReportTaskProgressResponsePrivate class provides private implementation for ReportTaskProgressResponse.
  * \internal
  *
- * \class ReportTaskProgressResponsePrivate
- *
- * \brief Private implementation for ReportTaskProgressResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReportTaskProgressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReportTaskProgressResponse instance.
+ * Constructs a ReportTaskProgressResponsePrivate object with public implementation \a q.
  */
 ReportTaskProgressResponsePrivate::ReportTaskProgressResponsePrivate(
     ReportTaskProgressResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ ReportTaskProgressResponsePrivate::ReportTaskProgressResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline ReportTaskProgressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline ReportTaskProgress response element from \a xml.
  */
 void ReportTaskProgressResponsePrivate::parseReportTaskProgressResponse(QXmlStreamReader &xml)
 {

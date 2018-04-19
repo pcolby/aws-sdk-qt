@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * SendBonusRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a SendBonusRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a SendBonusRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 SendBonusRequestPrivate::SendBonusRequestPrivate(
     const MTurkRequest::Action action, SendBonusRequest * const q)

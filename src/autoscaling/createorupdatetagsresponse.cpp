@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::CreateOrUpdateTagsResponse
- *
  * \brief The CreateOrUpdateTagsResponse class provides an interace for AutoScaling CreateOrUpdateTags responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new CreateOrUpdateTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateOrUpdateTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateOrUpdateTagsResponse::CreateOrUpdateTagsResponse(
         const CreateOrUpdateTagsRequest &request,
@@ -60,6 +55,9 @@ CreateOrUpdateTagsResponse::CreateOrUpdateTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateOrUpdateTagsRequest * CreateOrUpdateTagsResponse::request() const
 {
     Q_D(const CreateOrUpdateTagsResponse);
@@ -67,9 +65,8 @@ const CreateOrUpdateTagsRequest * CreateOrUpdateTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling CreateOrUpdateTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling CreateOrUpdateTags \a response.
  */
 void CreateOrUpdateTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateOrUpdateTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::CreateOrUpdateTagsResponsePrivate
+ * \brief The CreateOrUpdateTagsResponsePrivate class provides private implementation for CreateOrUpdateTagsResponse.
  * \internal
  *
- * \class CreateOrUpdateTagsResponsePrivate
- *
- * \brief Private implementation for CreateOrUpdateTagsResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateOrUpdateTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateOrUpdateTagsResponse instance.
+ * Constructs a CreateOrUpdateTagsResponsePrivate object with public implementation \a q.
  */
 CreateOrUpdateTagsResponsePrivate::CreateOrUpdateTagsResponsePrivate(
     CreateOrUpdateTagsResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateOrUpdateTagsResponsePrivate::CreateOrUpdateTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling CreateOrUpdateTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling CreateOrUpdateTags response element from \a xml.
  */
 void CreateOrUpdateTagsResponsePrivate::parseCreateOrUpdateTagsResponse(QXmlStreamReader &xml)
 {

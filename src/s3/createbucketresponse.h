@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateBucketResponse : public S3Response {
 public:
     CreateBucketResponse(const CreateBucketRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateBucketRequest * request() const;
+    virtual const CreateBucketRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateBucketResponse)

@@ -29,10 +29,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::ListProtectionsResponse
- *
  * \brief The ListProtectionsResponse class provides an interace for Shield ListProtections responses.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -45,11 +44,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new ListProtectionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListProtectionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListProtectionsResponse::ListProtectionsResponse(
         const ListProtectionsRequest &request,
@@ -61,6 +56,9 @@ ListProtectionsResponse::ListProtectionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListProtectionsRequest * ListProtectionsResponse::request() const
 {
     Q_D(const ListProtectionsResponse);
@@ -68,9 +66,8 @@ const ListProtectionsRequest * ListProtectionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Shield ListProtections response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Shield ListProtections \a response.
  */
 void ListProtectionsResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void ListProtectionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Shield::ListProtectionsResponsePrivate
+ * \brief The ListProtectionsResponsePrivate class provides private implementation for ListProtectionsResponse.
  * \internal
  *
- * \class ListProtectionsResponsePrivate
- *
- * \brief Private implementation for ListProtectionsResponse.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListProtectionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListProtectionsResponse instance.
+ * Constructs a ListProtectionsResponsePrivate object with public implementation \a q.
  */
 ListProtectionsResponsePrivate::ListProtectionsResponsePrivate(
     ListProtectionsResponse * const q) : ShieldResponsePrivate(q)
@@ -101,9 +94,7 @@ ListProtectionsResponsePrivate::ListProtectionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Shield ListProtectionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Shield ListProtections response element from \a xml.
  */
 void ListProtectionsResponsePrivate::parseListProtectionsResponse(QXmlStreamReader &xml)
 {

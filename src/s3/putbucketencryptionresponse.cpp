@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketEncryptionResponse
- *
  * \brief The PutBucketEncryptionResponse class provides an interace for S3 PutBucketEncryption responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketEncryption
  */
 
 /*!
- * @brief  Constructs a new PutBucketEncryptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketEncryptionResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketEncryptionResponse::PutBucketEncryptionResponse(
         const PutBucketEncryptionRequest &request,
@@ -55,6 +50,9 @@ PutBucketEncryptionResponse::PutBucketEncryptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketEncryptionRequest * PutBucketEncryptionResponse::request() const
 {
     Q_D(const PutBucketEncryptionResponse);
@@ -62,9 +60,8 @@ const PutBucketEncryptionRequest * PutBucketEncryptionResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 PutBucketEncryption response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketEncryption \a response.
  */
 void PutBucketEncryptionResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketEncryptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketEncryptionResponsePrivate
+ * \brief The PutBucketEncryptionResponsePrivate class provides private implementation for PutBucketEncryptionResponse.
  * \internal
  *
- * \class PutBucketEncryptionResponsePrivate
- *
- * \brief Private implementation for PutBucketEncryptionResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketEncryptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketEncryptionResponse instance.
+ * Constructs a PutBucketEncryptionResponsePrivate object with public implementation \a q.
  */
 PutBucketEncryptionResponsePrivate::PutBucketEncryptionResponsePrivate(
     PutBucketEncryptionResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketEncryptionResponsePrivate::PutBucketEncryptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 PutBucketEncryptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketEncryption response element from \a xml.
  */
 void PutBucketEncryptionResponsePrivate::parsePutBucketEncryptionResponse(QXmlStreamReader &xml)
 {

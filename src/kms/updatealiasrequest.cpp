@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAliasRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateAliasRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAliasRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
     const KMSRequest::Action action, UpdateAliasRequest * const q)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotDatafeedSubscriptionRequest::resp
  */
 
 /*!
- *
- * Constructs a DescribeSpotDatafeedSubscriptionRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSpotDatafeedSubscriptionRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeSpotDatafeedSubscriptionRequestPrivate::DescribeSpotDatafeedSubscriptionRequestPrivate(
     const EC2Request::Action action, DescribeSpotDatafeedSubscriptionRequest * const q)

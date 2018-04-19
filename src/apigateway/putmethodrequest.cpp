@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * PutMethodRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a PutMethodRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a PutMethodRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 PutMethodRequestPrivate::PutMethodRequestPrivate(
     const APIGatewayRequest::Action action, PutMethodRequest * const q)

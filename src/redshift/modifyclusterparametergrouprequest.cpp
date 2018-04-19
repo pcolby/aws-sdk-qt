@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * ModifyClusterParameterGroupRequest::response(
  */
 
 /*!
- *
- * Constructs a ModifyClusterParameterGroupRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a ModifyClusterParameterGroupRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 ModifyClusterParameterGroupRequestPrivate::ModifyClusterParameterGroupRequestPrivate(
     const RedshiftRequest::Action action, ModifyClusterParameterGroupRequest * const q)

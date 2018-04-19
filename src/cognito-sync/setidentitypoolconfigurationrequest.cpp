@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * SetIdentityPoolConfigurationRequest::response
  */
 
 /*!
- *
- * Constructs a SetIdentityPoolConfigurationRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a SetIdentityPoolConfigurationRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 SetIdentityPoolConfigurationRequestPrivate::SetIdentityPoolConfigurationRequestPrivate(
     const CognitoSyncRequest::Action action, SetIdentityPoolConfigurationRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateWebACLResponse : public WAFRegionalResponse {
 public:
     DisassociateWebACLResponse(const DisassociateWebACLRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateWebACLRequest * request() const;
+    virtual const DisassociateWebACLRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateWebACLResponse)

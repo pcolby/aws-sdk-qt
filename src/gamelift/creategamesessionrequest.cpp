@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * CreateGameSessionRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CreateGameSessionRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a CreateGameSessionRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 CreateGameSessionRequestPrivate::CreateGameSessionRequestPrivate(
     const GameLiftRequest::Action action, CreateGameSessionRequest * const q)

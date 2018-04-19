@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ReplaceIamInstanceProfileAssociationRequest::
  */
 
 /*!
- *
- * Constructs a ReplaceIamInstanceProfileAssociationRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ReplaceIamInstanceProfileAssociationRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ReplaceIamInstanceProfileAssociationRequestPrivate::ReplaceIamInstanceProfileAssociationRequestPrivate(
     const EC2Request::Action action, ReplaceIamInstanceProfileAssociationRequest * const q)

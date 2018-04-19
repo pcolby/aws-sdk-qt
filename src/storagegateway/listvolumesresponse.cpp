@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListVolumesResponse
- *
  * \brief The ListVolumesResponse class provides an interace for StorageGateway ListVolumes responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListVolumesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListVolumesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListVolumesResponse::ListVolumesResponse(
         const ListVolumesRequest &request,
@@ -124,6 +119,9 @@ ListVolumesResponse::ListVolumesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListVolumesRequest * ListVolumesResponse::request() const
 {
     Q_D(const ListVolumesResponse);
@@ -131,9 +129,8 @@ const ListVolumesRequest * ListVolumesResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway ListVolumes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway ListVolumes \a response.
  */
 void ListVolumesResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void ListVolumesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::ListVolumesResponsePrivate
+ * \brief The ListVolumesResponsePrivate class provides private implementation for ListVolumesResponse.
  * \internal
  *
- * \class ListVolumesResponsePrivate
- *
- * \brief Private implementation for ListVolumesResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVolumesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListVolumesResponse instance.
+ * Constructs a ListVolumesResponsePrivate object with public implementation \a q.
  */
 ListVolumesResponsePrivate::ListVolumesResponsePrivate(
     ListVolumesResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ ListVolumesResponsePrivate::ListVolumesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway ListVolumesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway ListVolumes response element from \a xml.
  */
 void ListVolumesResponsePrivate::parseListVolumesResponse(QXmlStreamReader &xml)
 {

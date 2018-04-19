@@ -29,10 +29,9 @@ namespace ACM {
 
 /*!
  * \class QtAws::ACM::RequestCertificateResponse
- *
  * \brief The RequestCertificateResponse class provides an interace for ACM RequestCertificate responses.
  *
- * \ingroup ACM
+ * \inmodule QtAwsACM
  *
  *  <fullname>AWS Certificate Manager</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ACM {
  */
 
 /*!
- * @brief  Constructs a new RequestCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RequestCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 RequestCertificateResponse::RequestCertificateResponse(
         const RequestCertificateRequest &request,
@@ -64,6 +59,9 @@ RequestCertificateResponse::RequestCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RequestCertificateRequest * RequestCertificateResponse::request() const
 {
     Q_D(const RequestCertificateResponse);
@@ -71,9 +69,8 @@ const RequestCertificateRequest * RequestCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a ACM RequestCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACM RequestCertificate \a response.
  */
 void RequestCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void RequestCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACM::RequestCertificateResponsePrivate
+ * \brief The RequestCertificateResponsePrivate class provides private implementation for RequestCertificateResponse.
  * \internal
  *
- * \class RequestCertificateResponsePrivate
- *
- * \brief Private implementation for RequestCertificateResponse.
+ * \inmodule QtAwsACM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RequestCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RequestCertificateResponse instance.
+ * Constructs a RequestCertificateResponsePrivate object with public implementation \a q.
  */
 RequestCertificateResponsePrivate::RequestCertificateResponsePrivate(
     RequestCertificateResponse * const q) : ACMResponsePrivate(q)
@@ -104,9 +97,7 @@ RequestCertificateResponsePrivate::RequestCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACM RequestCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACM RequestCertificate response element from \a xml.
  */
 void RequestCertificateResponsePrivate::parseRequestCertificateResponse(QXmlStreamReader &xml)
 {

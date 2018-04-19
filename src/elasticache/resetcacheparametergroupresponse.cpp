@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::ResetCacheParameterGroupResponse
- *
  * \brief The ResetCacheParameterGroupResponse class provides an interace for ElastiCache ResetCacheParameterGroup responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new ResetCacheParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetCacheParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetCacheParameterGroupResponse::ResetCacheParameterGroupResponse(
         const ResetCacheParameterGroupRequest &request,
@@ -69,6 +64,9 @@ ResetCacheParameterGroupResponse::ResetCacheParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetCacheParameterGroupRequest * ResetCacheParameterGroupResponse::request() const
 {
     Q_D(const ResetCacheParameterGroupResponse);
@@ -76,9 +74,8 @@ const ResetCacheParameterGroupRequest * ResetCacheParameterGroupResponse::reques
 }
 
 /*!
- * @brief  Parse a ElastiCache ResetCacheParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache ResetCacheParameterGroup \a response.
  */
 void ResetCacheParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void ResetCacheParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::ResetCacheParameterGroupResponsePrivate
+ * \brief The ResetCacheParameterGroupResponsePrivate class provides private implementation for ResetCacheParameterGroupResponse.
  * \internal
  *
- * \class ResetCacheParameterGroupResponsePrivate
- *
- * \brief Private implementation for ResetCacheParameterGroupResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetCacheParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetCacheParameterGroupResponse instance.
+ * Constructs a ResetCacheParameterGroupResponsePrivate object with public implementation \a q.
  */
 ResetCacheParameterGroupResponsePrivate::ResetCacheParameterGroupResponsePrivate(
     ResetCacheParameterGroupResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ ResetCacheParameterGroupResponsePrivate::ResetCacheParameterGroupResponsePrivate
 }
 
 /*!
- * @brief  Parse an ElastiCache ResetCacheParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache ResetCacheParameterGroup response element from \a xml.
  */
 void ResetCacheParameterGroupResponsePrivate::parseResetCacheParameterGroupResponse(QXmlStreamReader &xml)
 {

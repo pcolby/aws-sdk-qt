@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyReplicationGroupResponse : public ElastiCacheResponse {
 public:
     ModifyReplicationGroupResponse(const ModifyReplicationGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyReplicationGroupRequest * request() const;
+    virtual const ModifyReplicationGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyReplicationGroupResponse)

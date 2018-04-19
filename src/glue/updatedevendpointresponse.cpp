@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateDevEndpointResponse
- *
  * \brief The UpdateDevEndpointResponse class provides an interace for Glue UpdateDevEndpoint responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateDevEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDevEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDevEndpointResponse::UpdateDevEndpointResponse(
         const UpdateDevEndpointRequest &request,
@@ -58,6 +53,9 @@ UpdateDevEndpointResponse::UpdateDevEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDevEndpointRequest * UpdateDevEndpointResponse::request() const
 {
     Q_D(const UpdateDevEndpointResponse);
@@ -65,9 +63,8 @@ const UpdateDevEndpointRequest * UpdateDevEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue UpdateDevEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue UpdateDevEndpoint \a response.
  */
 void UpdateDevEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateDevEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::UpdateDevEndpointResponsePrivate
+ * \brief The UpdateDevEndpointResponsePrivate class provides private implementation for UpdateDevEndpointResponse.
  * \internal
  *
- * \class UpdateDevEndpointResponsePrivate
- *
- * \brief Private implementation for UpdateDevEndpointResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDevEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDevEndpointResponse instance.
+ * Constructs a UpdateDevEndpointResponsePrivate object with public implementation \a q.
  */
 UpdateDevEndpointResponsePrivate::UpdateDevEndpointResponsePrivate(
     UpdateDevEndpointResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateDevEndpointResponsePrivate::UpdateDevEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue UpdateDevEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue UpdateDevEndpoint response element from \a xml.
  */
 void UpdateDevEndpointResponsePrivate::parseUpdateDevEndpointResponse(QXmlStreamReader &xml)
 {

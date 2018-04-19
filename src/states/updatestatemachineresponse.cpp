@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::UpdateStateMachineResponse
- *
  * \brief The UpdateStateMachineResponse class provides an interace for SFN UpdateStateMachine responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new UpdateStateMachineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateStateMachineResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateStateMachineResponse::UpdateStateMachineResponse(
         const UpdateStateMachineRequest &request,
@@ -74,6 +69,9 @@ UpdateStateMachineResponse::UpdateStateMachineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateStateMachineRequest * UpdateStateMachineResponse::request() const
 {
     Q_D(const UpdateStateMachineResponse);
@@ -81,9 +79,8 @@ const UpdateStateMachineRequest * UpdateStateMachineResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN UpdateStateMachine response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN UpdateStateMachine \a response.
  */
 void UpdateStateMachineResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void UpdateStateMachineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::UpdateStateMachineResponsePrivate
+ * \brief The UpdateStateMachineResponsePrivate class provides private implementation for UpdateStateMachineResponse.
  * \internal
  *
- * \class UpdateStateMachineResponsePrivate
- *
- * \brief Private implementation for UpdateStateMachineResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateStateMachineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateStateMachineResponse instance.
+ * Constructs a UpdateStateMachineResponsePrivate object with public implementation \a q.
  */
 UpdateStateMachineResponsePrivate::UpdateStateMachineResponsePrivate(
     UpdateStateMachineResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ UpdateStateMachineResponsePrivate::UpdateStateMachineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN UpdateStateMachineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN UpdateStateMachine response element from \a xml.
  */
 void UpdateStateMachineResponsePrivate::parseUpdateStateMachineResponse(QXmlStreamReader &xml)
 {

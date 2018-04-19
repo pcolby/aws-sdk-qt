@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DefineExpressionResponse
- *
  * \brief The DefineExpressionResponse class provides an interace for CloudSearch DefineExpression responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DefineExpressionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DefineExpressionResponse object for \a reply to \a request, with parent \a parent.
  */
 DefineExpressionResponse::DefineExpressionResponse(
         const DefineExpressionRequest &request,
@@ -66,6 +61,9 @@ DefineExpressionResponse::DefineExpressionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DefineExpressionRequest * DefineExpressionResponse::request() const
 {
     Q_D(const DefineExpressionResponse);
@@ -73,9 +71,8 @@ const DefineExpressionRequest * DefineExpressionResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch DefineExpression response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DefineExpression \a response.
  */
 void DefineExpressionResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DefineExpressionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DefineExpressionResponsePrivate
+ * \brief The DefineExpressionResponsePrivate class provides private implementation for DefineExpressionResponse.
  * \internal
  *
- * \class DefineExpressionResponsePrivate
- *
- * \brief Private implementation for DefineExpressionResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DefineExpressionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DefineExpressionResponse instance.
+ * Constructs a DefineExpressionResponsePrivate object with public implementation \a q.
  */
 DefineExpressionResponsePrivate::DefineExpressionResponsePrivate(
     DefineExpressionResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DefineExpressionResponsePrivate::DefineExpressionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DefineExpressionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DefineExpression response element from \a xml.
  */
 void DefineExpressionResponsePrivate::parseDefineExpressionResponse(QXmlStreamReader &xml)
 {

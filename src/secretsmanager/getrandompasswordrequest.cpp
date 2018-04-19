@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * GetRandomPasswordRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetRandomPasswordRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a GetRandomPasswordRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 GetRandomPasswordRequestPrivate::GetRandomPasswordRequestPrivate(
     const SecretsManagerRequest::Action action, GetRandomPasswordRequest * const q)

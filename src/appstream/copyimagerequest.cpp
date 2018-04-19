@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CopyImageRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a CopyImageRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a CopyImageRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 CopyImageRequestPrivate::CopyImageRequestPrivate(
     const AppStreamRequest::Action action, CopyImageRequest * const q)

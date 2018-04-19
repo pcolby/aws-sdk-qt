@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::RetireGrantResponse
- *
  * \brief The RetireGrantResponse class provides an interace for KMS RetireGrant responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new RetireGrantResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RetireGrantResponse object for \a reply to \a request, with parent \a parent.
  */
 RetireGrantResponse::RetireGrantResponse(
         const RetireGrantRequest &request,
@@ -154,6 +149,9 @@ RetireGrantResponse::RetireGrantResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RetireGrantRequest * RetireGrantResponse::request() const
 {
     Q_D(const RetireGrantResponse);
@@ -161,9 +159,8 @@ const RetireGrantRequest * RetireGrantResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS RetireGrant response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS RetireGrant \a response.
  */
 void RetireGrantResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void RetireGrantResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::RetireGrantResponsePrivate
+ * \brief The RetireGrantResponsePrivate class provides private implementation for RetireGrantResponse.
  * \internal
  *
- * \class RetireGrantResponsePrivate
- *
- * \brief Private implementation for RetireGrantResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RetireGrantResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RetireGrantResponse instance.
+ * Constructs a RetireGrantResponsePrivate object with public implementation \a q.
  */
 RetireGrantResponsePrivate::RetireGrantResponsePrivate(
     RetireGrantResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ RetireGrantResponsePrivate::RetireGrantResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS RetireGrantResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS RetireGrant response element from \a xml.
  */
 void RetireGrantResponsePrivate::parseRetireGrantResponse(QXmlStreamReader &xml)
 {

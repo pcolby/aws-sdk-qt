@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveUserFromGroupResponse : public IAMResponse {
 public:
     RemoveUserFromGroupResponse(const RemoveUserFromGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveUserFromGroupRequest * request() const;
+    virtual const RemoveUserFromGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RemoveUserFromGroupResponse)

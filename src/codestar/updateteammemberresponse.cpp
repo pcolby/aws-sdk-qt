@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::UpdateTeamMemberResponse
- *
  * \brief The UpdateTeamMemberResponse class provides an interace for CodeStar UpdateTeamMember responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new UpdateTeamMemberResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTeamMemberResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTeamMemberResponse::UpdateTeamMemberResponse(
         const UpdateTeamMemberRequest &request,
@@ -143,6 +138,9 @@ UpdateTeamMemberResponse::UpdateTeamMemberResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTeamMemberRequest * UpdateTeamMemberResponse::request() const
 {
     Q_D(const UpdateTeamMemberResponse);
@@ -150,9 +148,8 @@ const UpdateTeamMemberRequest * UpdateTeamMemberResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar UpdateTeamMember response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar UpdateTeamMember \a response.
  */
 void UpdateTeamMemberResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void UpdateTeamMemberResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::UpdateTeamMemberResponsePrivate
+ * \brief The UpdateTeamMemberResponsePrivate class provides private implementation for UpdateTeamMemberResponse.
  * \internal
  *
- * \class UpdateTeamMemberResponsePrivate
- *
- * \brief Private implementation for UpdateTeamMemberResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTeamMemberResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTeamMemberResponse instance.
+ * Constructs a UpdateTeamMemberResponsePrivate object with public implementation \a q.
  */
 UpdateTeamMemberResponsePrivate::UpdateTeamMemberResponsePrivate(
     UpdateTeamMemberResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ UpdateTeamMemberResponsePrivate::UpdateTeamMemberResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar UpdateTeamMemberResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar UpdateTeamMember response element from \a xml.
  */
 void UpdateTeamMemberResponsePrivate::parseUpdateTeamMemberResponse(QXmlStreamReader &xml)
 {

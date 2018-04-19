@@ -34,10 +34,10 @@ class QTAWS_EXPORT SimulatePrincipalPolicyResponse : public IAMResponse {
 public:
     SimulatePrincipalPolicyResponse(const SimulatePrincipalPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SimulatePrincipalPolicyRequest * request() const;
+    virtual const SimulatePrincipalPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SimulatePrincipalPolicyResponse)

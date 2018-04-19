@@ -29,10 +29,9 @@ namespace Snowball {
 
 /*!
  * \class QtAws::Snowball::DescribeAddressResponse
- *
  * \brief The DescribeAddressResponse class provides an interace for Snowball DescribeAddress responses.
  *
- * \ingroup Snowball
+ * \inmodule QtAwsSnowball
  *
  *  AWS Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data
  *  between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snowball commands described
@@ -45,11 +44,7 @@ namespace Snowball {
  */
 
 /*!
- * @brief  Constructs a new DescribeAddressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAddressResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAddressResponse::DescribeAddressResponse(
         const DescribeAddressRequest &request,
@@ -61,6 +56,9 @@ DescribeAddressResponse::DescribeAddressResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAddressRequest * DescribeAddressResponse::request() const
 {
     Q_D(const DescribeAddressResponse);
@@ -68,9 +66,8 @@ const DescribeAddressRequest * DescribeAddressResponse::request() const
 }
 
 /*!
- * @brief  Parse a Snowball DescribeAddress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Snowball DescribeAddress \a response.
  */
 void DescribeAddressResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeAddressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Snowball::DescribeAddressResponsePrivate
+ * \brief The DescribeAddressResponsePrivate class provides private implementation for DescribeAddressResponse.
  * \internal
  *
- * \class DescribeAddressResponsePrivate
- *
- * \brief Private implementation for DescribeAddressResponse.
+ * \inmodule QtAwsSnowball
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAddressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAddressResponse instance.
+ * Constructs a DescribeAddressResponsePrivate object with public implementation \a q.
  */
 DescribeAddressResponsePrivate::DescribeAddressResponsePrivate(
     DescribeAddressResponse * const q) : SnowballResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeAddressResponsePrivate::DescribeAddressResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Snowball DescribeAddressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Snowball DescribeAddress response element from \a xml.
  */
 void DescribeAddressResponsePrivate::parseDescribeAddressResponse(QXmlStreamReader &xml)
 {

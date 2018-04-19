@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DescribeConfigRulesResponse
- *
  * \brief The DescribeConfigRulesResponse class provides an interace for ConfigService DescribeConfigRules responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigRulesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConfigRulesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConfigRulesResponse::DescribeConfigRulesResponse(
         const DescribeConfigRulesRequest &request,
@@ -78,6 +73,9 @@ DescribeConfigRulesResponse::DescribeConfigRulesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConfigRulesRequest * DescribeConfigRulesResponse::request() const
 {
     Q_D(const DescribeConfigRulesResponse);
@@ -85,9 +83,8 @@ const DescribeConfigRulesRequest * DescribeConfigRulesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ConfigService DescribeConfigRules response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DescribeConfigRules \a response.
  */
 void DescribeConfigRulesResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DescribeConfigRulesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DescribeConfigRulesResponsePrivate
+ * \brief The DescribeConfigRulesResponsePrivate class provides private implementation for DescribeConfigRulesResponse.
  * \internal
  *
- * \class DescribeConfigRulesResponsePrivate
- *
- * \brief Private implementation for DescribeConfigRulesResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigRulesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConfigRulesResponse instance.
+ * Constructs a DescribeConfigRulesResponsePrivate object with public implementation \a q.
  */
 DescribeConfigRulesResponsePrivate::DescribeConfigRulesResponsePrivate(
     DescribeConfigRulesResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DescribeConfigRulesResponsePrivate::DescribeConfigRulesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ConfigService DescribeConfigRulesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DescribeConfigRules response element from \a xml.
  */
 void DescribeConfigRulesResponsePrivate::parseDescribeConfigRulesResponse(QXmlStreamReader &xml)
 {

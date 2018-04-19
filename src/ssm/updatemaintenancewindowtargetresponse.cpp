@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdateMaintenanceWindowTargetResponse
- *
  * \brief The UpdateMaintenanceWindowTargetResponse class provides an interace for SSM UpdateMaintenanceWindowTarget responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdateMaintenanceWindowTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateMaintenanceWindowTargetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateMaintenanceWindowTargetResponse::UpdateMaintenanceWindowTargetResponse(
         const UpdateMaintenanceWindowTargetRequest &request,
@@ -79,6 +74,9 @@ UpdateMaintenanceWindowTargetResponse::UpdateMaintenanceWindowTargetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateMaintenanceWindowTargetRequest * UpdateMaintenanceWindowTargetResponse::request() const
 {
     Q_D(const UpdateMaintenanceWindowTargetResponse);
@@ -86,9 +84,8 @@ const UpdateMaintenanceWindowTargetRequest * UpdateMaintenanceWindowTargetRespon
 }
 
 /*!
- * @brief  Parse a SSM UpdateMaintenanceWindowTarget response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM UpdateMaintenanceWindowTarget \a response.
  */
 void UpdateMaintenanceWindowTargetResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void UpdateMaintenanceWindowTargetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::UpdateMaintenanceWindowTargetResponsePrivate
+ * \brief The UpdateMaintenanceWindowTargetResponsePrivate class provides private implementation for UpdateMaintenanceWindowTargetResponse.
  * \internal
  *
- * \class UpdateMaintenanceWindowTargetResponsePrivate
- *
- * \brief Private implementation for UpdateMaintenanceWindowTargetResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateMaintenanceWindowTargetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateMaintenanceWindowTargetResponse instance.
+ * Constructs a UpdateMaintenanceWindowTargetResponsePrivate object with public implementation \a q.
  */
 UpdateMaintenanceWindowTargetResponsePrivate::UpdateMaintenanceWindowTargetResponsePrivate(
     UpdateMaintenanceWindowTargetResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ UpdateMaintenanceWindowTargetResponsePrivate::UpdateMaintenanceWindowTargetRespo
 }
 
 /*!
- * @brief  Parse an SSM UpdateMaintenanceWindowTargetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM UpdateMaintenanceWindowTarget response element from \a xml.
  */
 void UpdateMaintenanceWindowTargetResponsePrivate::parseUpdateMaintenanceWindowTargetResponse(QXmlStreamReader &xml)
 {

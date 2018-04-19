@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeEventSubscriptionsResponse
- *
  * \brief The DescribeEventSubscriptionsResponse class provides an interace for DatabaseMigrationService DescribeEventSubscriptions responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventSubscriptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEventSubscriptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEventSubscriptionsResponse::DescribeEventSubscriptionsResponse(
         const DescribeEventSubscriptionsRequest &request,
@@ -66,6 +61,9 @@ DescribeEventSubscriptionsResponse::DescribeEventSubscriptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEventSubscriptionsRequest * DescribeEventSubscriptionsResponse::request() const
 {
     Q_D(const DescribeEventSubscriptionsResponse);
@@ -73,9 +71,8 @@ const DescribeEventSubscriptionsRequest * DescribeEventSubscriptionsResponse::re
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DescribeEventSubscriptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DescribeEventSubscriptions \a response.
  */
 void DescribeEventSubscriptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeEventSubscriptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DescribeEventSubscriptionsResponsePrivate
+ * \brief The DescribeEventSubscriptionsResponsePrivate class provides private implementation for DescribeEventSubscriptionsResponse.
  * \internal
  *
- * \class DescribeEventSubscriptionsResponsePrivate
- *
- * \brief Private implementation for DescribeEventSubscriptionsResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventSubscriptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEventSubscriptionsResponse instance.
+ * Constructs a DescribeEventSubscriptionsResponsePrivate object with public implementation \a q.
  */
 DescribeEventSubscriptionsResponsePrivate::DescribeEventSubscriptionsResponsePrivate(
     DescribeEventSubscriptionsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeEventSubscriptionsResponsePrivate::DescribeEventSubscriptionsResponsePri
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DescribeEventSubscriptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DescribeEventSubscriptions response element from \a xml.
  */
 void DescribeEventSubscriptionsResponsePrivate::parseDescribeEventSubscriptionsResponse(QXmlStreamReader &xml)
 {

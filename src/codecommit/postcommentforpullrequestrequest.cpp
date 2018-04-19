@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * PostCommentForPullRequestRequest::response(QN
  */
 
 /*!
- *
- * Constructs a PostCommentForPullRequestRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a PostCommentForPullRequestRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 PostCommentForPullRequestRequestPrivate::PostCommentForPullRequestRequestPrivate(
     const CodeCommitRequest::Action action, PostCommentForPullRequestRequest * const q)

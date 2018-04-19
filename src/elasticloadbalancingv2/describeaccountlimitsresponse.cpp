@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeAccountLimitsResponse
- *
  * \brief The DescribeAccountLimitsResponse class provides an interace for ElasticLoadBalancingv2 DescribeAccountLimits responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeAccountLimitsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAccountLimitsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAccountLimitsResponse::DescribeAccountLimitsResponse(
         const DescribeAccountLimitsRequest &request,
@@ -123,6 +118,9 @@ DescribeAccountLimitsResponse::DescribeAccountLimitsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAccountLimitsRequest * DescribeAccountLimitsResponse::request() const
 {
     Q_D(const DescribeAccountLimitsResponse);
@@ -130,9 +128,8 @@ const DescribeAccountLimitsRequest * DescribeAccountLimitsResponse::request() co
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DescribeAccountLimits response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DescribeAccountLimits \a response.
  */
 void DescribeAccountLimitsResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeAccountLimitsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DescribeAccountLimitsResponsePrivate
+ * \brief The DescribeAccountLimitsResponsePrivate class provides private implementation for DescribeAccountLimitsResponse.
  * \internal
  *
- * \class DescribeAccountLimitsResponsePrivate
- *
- * \brief Private implementation for DescribeAccountLimitsResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAccountLimitsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAccountLimitsResponse instance.
+ * Constructs a DescribeAccountLimitsResponsePrivate object with public implementation \a q.
  */
 DescribeAccountLimitsResponsePrivate::DescribeAccountLimitsResponsePrivate(
     DescribeAccountLimitsResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeAccountLimitsResponsePrivate::DescribeAccountLimitsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DescribeAccountLimitsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DescribeAccountLimits response element from \a xml.
  */
 void DescribeAccountLimitsResponsePrivate::parseDescribeAccountLimitsResponse(QXmlStreamReader &xml)
 {

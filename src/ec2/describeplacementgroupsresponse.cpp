@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribePlacementGroupsResponse
- *
  * \brief The DescribePlacementGroupsResponse class provides an interace for EC2 DescribePlacementGroups responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribePlacementGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePlacementGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePlacementGroupsResponse::DescribePlacementGroupsResponse(
         const DescribePlacementGroupsRequest &request,
@@ -59,6 +54,9 @@ DescribePlacementGroupsResponse::DescribePlacementGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePlacementGroupsRequest * DescribePlacementGroupsResponse::request() const
 {
     Q_D(const DescribePlacementGroupsResponse);
@@ -66,9 +64,8 @@ const DescribePlacementGroupsRequest * DescribePlacementGroupsResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 DescribePlacementGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribePlacementGroups \a response.
  */
 void DescribePlacementGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribePlacementGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribePlacementGroupsResponsePrivate
+ * \brief The DescribePlacementGroupsResponsePrivate class provides private implementation for DescribePlacementGroupsResponse.
  * \internal
  *
- * \class DescribePlacementGroupsResponsePrivate
- *
- * \brief Private implementation for DescribePlacementGroupsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePlacementGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePlacementGroupsResponse instance.
+ * Constructs a DescribePlacementGroupsResponsePrivate object with public implementation \a q.
  */
 DescribePlacementGroupsResponsePrivate::DescribePlacementGroupsResponsePrivate(
     DescribePlacementGroupsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribePlacementGroupsResponsePrivate::DescribePlacementGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribePlacementGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribePlacementGroups response element from \a xml.
  */
 void DescribePlacementGroupsResponsePrivate::parseDescribePlacementGroupsResponse(QXmlStreamReader &xml)
 {

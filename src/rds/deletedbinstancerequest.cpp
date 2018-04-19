@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DeleteDBInstanceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteDBInstanceRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteDBInstanceRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DeleteDBInstanceRequestPrivate::DeleteDBInstanceRequestPrivate(
     const RDSRequest::Action action, DeleteDBInstanceRequest * const q)

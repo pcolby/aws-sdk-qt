@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetDistributionConfigRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetDistributionConfigRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a GetDistributionConfigRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 GetDistributionConfigRequestPrivate::GetDistributionConfigRequestPrivate(
     const CloudFrontRequest::Action action, GetDistributionConfigRequest * const q)

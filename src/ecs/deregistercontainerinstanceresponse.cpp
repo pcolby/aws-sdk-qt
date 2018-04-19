@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DeregisterContainerInstanceResponse
- *
  * \brief The DeregisterContainerInstanceResponse class provides an interace for ECS DeregisterContainerInstance responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DeregisterContainerInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterContainerInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterContainerInstanceResponse::DeregisterContainerInstanceResponse(
         const DeregisterContainerInstanceRequest &request,
@@ -72,6 +67,9 @@ DeregisterContainerInstanceResponse::DeregisterContainerInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterContainerInstanceRequest * DeregisterContainerInstanceResponse::request() const
 {
     Q_D(const DeregisterContainerInstanceResponse);
@@ -79,9 +77,8 @@ const DeregisterContainerInstanceRequest * DeregisterContainerInstanceResponse::
 }
 
 /*!
- * @brief  Parse a ECS DeregisterContainerInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS DeregisterContainerInstance \a response.
  */
 void DeregisterContainerInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void DeregisterContainerInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::DeregisterContainerInstanceResponsePrivate
+ * \brief The DeregisterContainerInstanceResponsePrivate class provides private implementation for DeregisterContainerInstanceResponse.
  * \internal
  *
- * \class DeregisterContainerInstanceResponsePrivate
- *
- * \brief Private implementation for DeregisterContainerInstanceResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterContainerInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterContainerInstanceResponse instance.
+ * Constructs a DeregisterContainerInstanceResponsePrivate object with public implementation \a q.
  */
 DeregisterContainerInstanceResponsePrivate::DeregisterContainerInstanceResponsePrivate(
     DeregisterContainerInstanceResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ DeregisterContainerInstanceResponsePrivate::DeregisterContainerInstanceResponseP
 }
 
 /*!
- * @brief  Parse an ECS DeregisterContainerInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS DeregisterContainerInstance response element from \a xml.
  */
 void DeregisterContainerInstanceResponsePrivate::parseDeregisterContainerInstanceResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListStreamsResponse
- *
  * \brief The ListStreamsResponse class provides an interace for IoT ListStreams responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListStreamsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListStreamsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListStreamsResponse::ListStreamsResponse(
         const ListStreamsRequest &request,
@@ -66,6 +61,9 @@ ListStreamsResponse::ListStreamsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListStreamsRequest * ListStreamsResponse::request() const
 {
     Q_D(const ListStreamsResponse);
@@ -73,9 +71,8 @@ const ListStreamsRequest * ListStreamsResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListStreams response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListStreams \a response.
  */
 void ListStreamsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListStreamsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListStreamsResponsePrivate
+ * \brief The ListStreamsResponsePrivate class provides private implementation for ListStreamsResponse.
  * \internal
  *
- * \class ListStreamsResponsePrivate
- *
- * \brief Private implementation for ListStreamsResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListStreamsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListStreamsResponse instance.
+ * Constructs a ListStreamsResponsePrivate object with public implementation \a q.
  */
 ListStreamsResponsePrivate::ListStreamsResponsePrivate(
     ListStreamsResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListStreamsResponsePrivate::ListStreamsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListStreamsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListStreams response element from \a xml.
  */
 void ListStreamsResponsePrivate::parseListStreamsResponse(QXmlStreamReader &xml)
 {

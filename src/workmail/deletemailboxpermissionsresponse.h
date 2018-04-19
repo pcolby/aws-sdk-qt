@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteMailboxPermissionsResponse : public WorkMailResponse {
 public:
     DeleteMailboxPermissionsResponse(const DeleteMailboxPermissionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteMailboxPermissionsRequest * request() const;
+    virtual const DeleteMailboxPermissionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteMailboxPermissionsResponse)

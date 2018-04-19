@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::UpdateManagedInstanceRoleResponse
- *
  * \brief The UpdateManagedInstanceRoleResponse class provides an interace for SSM UpdateManagedInstanceRole responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new UpdateManagedInstanceRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateManagedInstanceRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateManagedInstanceRoleResponse::UpdateManagedInstanceRoleResponse(
         const UpdateManagedInstanceRoleRequest &request,
@@ -79,6 +74,9 @@ UpdateManagedInstanceRoleResponse::UpdateManagedInstanceRoleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateManagedInstanceRoleRequest * UpdateManagedInstanceRoleResponse::request() const
 {
     Q_D(const UpdateManagedInstanceRoleResponse);
@@ -86,9 +84,8 @@ const UpdateManagedInstanceRoleRequest * UpdateManagedInstanceRoleResponse::requ
 }
 
 /*!
- * @brief  Parse a SSM UpdateManagedInstanceRole response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM UpdateManagedInstanceRole \a response.
  */
 void UpdateManagedInstanceRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void UpdateManagedInstanceRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::UpdateManagedInstanceRoleResponsePrivate
+ * \brief The UpdateManagedInstanceRoleResponsePrivate class provides private implementation for UpdateManagedInstanceRoleResponse.
  * \internal
  *
- * \class UpdateManagedInstanceRoleResponsePrivate
- *
- * \brief Private implementation for UpdateManagedInstanceRoleResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateManagedInstanceRoleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateManagedInstanceRoleResponse instance.
+ * Constructs a UpdateManagedInstanceRoleResponsePrivate object with public implementation \a q.
  */
 UpdateManagedInstanceRoleResponsePrivate::UpdateManagedInstanceRoleResponsePrivate(
     UpdateManagedInstanceRoleResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ UpdateManagedInstanceRoleResponsePrivate::UpdateManagedInstanceRoleResponsePriva
 }
 
 /*!
- * @brief  Parse an SSM UpdateManagedInstanceRoleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM UpdateManagedInstanceRole response element from \a xml.
  */
 void UpdateManagedInstanceRoleResponsePrivate::parseUpdateManagedInstanceRoleResponse(QXmlStreamReader &xml)
 {

@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * UpdateKeyDescriptionRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdateKeyDescriptionRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a UpdateKeyDescriptionRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 UpdateKeyDescriptionRequestPrivate::UpdateKeyDescriptionRequestPrivate(
     const KMSRequest::Action action, UpdateKeyDescriptionRequest * const q)

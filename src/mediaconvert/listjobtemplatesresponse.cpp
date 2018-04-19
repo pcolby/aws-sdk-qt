@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::ListJobTemplatesResponse
- *
  * \brief The ListJobTemplatesResponse class provides an interace for MediaConvert ListJobTemplates responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::listJobTemplates
  */
 
 /*!
- * @brief  Constructs a new ListJobTemplatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListJobTemplatesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListJobTemplatesResponse::ListJobTemplatesResponse(
         const ListJobTemplatesRequest &request,
@@ -55,6 +50,9 @@ ListJobTemplatesResponse::ListJobTemplatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListJobTemplatesRequest * ListJobTemplatesResponse::request() const
 {
     Q_D(const ListJobTemplatesResponse);
@@ -62,9 +60,8 @@ const ListJobTemplatesRequest * ListJobTemplatesResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert ListJobTemplates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert ListJobTemplates \a response.
  */
 void ListJobTemplatesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListJobTemplatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::ListJobTemplatesResponsePrivate
+ * \brief The ListJobTemplatesResponsePrivate class provides private implementation for ListJobTemplatesResponse.
  * \internal
  *
- * \class ListJobTemplatesResponsePrivate
- *
- * \brief Private implementation for ListJobTemplatesResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobTemplatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListJobTemplatesResponse instance.
+ * Constructs a ListJobTemplatesResponsePrivate object with public implementation \a q.
  */
 ListJobTemplatesResponsePrivate::ListJobTemplatesResponsePrivate(
     ListJobTemplatesResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ ListJobTemplatesResponsePrivate::ListJobTemplatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert ListJobTemplatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert ListJobTemplates response element from \a xml.
  */
 void ListJobTemplatesResponsePrivate::parseListJobTemplatesResponse(QXmlStreamReader &xml)
 {

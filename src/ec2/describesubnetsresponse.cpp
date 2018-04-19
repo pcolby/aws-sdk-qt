@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeSubnetsResponse
- *
  * \brief The DescribeSubnetsResponse class provides an interace for EC2 DescribeSubnets responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeSubnetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSubnetsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSubnetsResponse::DescribeSubnetsResponse(
         const DescribeSubnetsRequest &request,
@@ -59,6 +54,9 @@ DescribeSubnetsResponse::DescribeSubnetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSubnetsRequest * DescribeSubnetsResponse::request() const
 {
     Q_D(const DescribeSubnetsResponse);
@@ -66,9 +64,8 @@ const DescribeSubnetsRequest * DescribeSubnetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeSubnets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeSubnets \a response.
  */
 void DescribeSubnetsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeSubnetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeSubnetsResponsePrivate
+ * \brief The DescribeSubnetsResponsePrivate class provides private implementation for DescribeSubnetsResponse.
  * \internal
  *
- * \class DescribeSubnetsResponsePrivate
- *
- * \brief Private implementation for DescribeSubnetsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSubnetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSubnetsResponse instance.
+ * Constructs a DescribeSubnetsResponsePrivate object with public implementation \a q.
  */
 DescribeSubnetsResponsePrivate::DescribeSubnetsResponsePrivate(
     DescribeSubnetsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeSubnetsResponsePrivate::DescribeSubnetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeSubnetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeSubnets response element from \a xml.
  */
 void DescribeSubnetsResponsePrivate::parseDescribeSubnetsResponse(QXmlStreamReader &xml)
 {

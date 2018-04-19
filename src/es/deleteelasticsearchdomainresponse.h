@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteElasticsearchDomainResponse : public ElasticsearchServi
 public:
     DeleteElasticsearchDomainResponse(const DeleteElasticsearchDomainRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteElasticsearchDomainRequest * request() const;
+    virtual const DeleteElasticsearchDomainRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteElasticsearchDomainResponse)

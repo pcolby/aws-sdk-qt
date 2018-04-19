@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::CreateBranchResponse
- *
  * \brief The CreateBranchResponse class provides an interace for CodeCommit CreateBranch responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new CreateBranchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateBranchResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateBranchResponse::CreateBranchResponse(
         const CreateBranchRequest &request,
@@ -245,6 +240,9 @@ CreateBranchResponse::CreateBranchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateBranchRequest * CreateBranchResponse::request() const
 {
     Q_D(const CreateBranchResponse);
@@ -252,9 +250,8 @@ const CreateBranchRequest * CreateBranchResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit CreateBranch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit CreateBranch \a response.
  */
 void CreateBranchResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void CreateBranchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::CreateBranchResponsePrivate
+ * \brief The CreateBranchResponsePrivate class provides private implementation for CreateBranchResponse.
  * \internal
  *
- * \class CreateBranchResponsePrivate
- *
- * \brief Private implementation for CreateBranchResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBranchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateBranchResponse instance.
+ * Constructs a CreateBranchResponsePrivate object with public implementation \a q.
  */
 CreateBranchResponsePrivate::CreateBranchResponsePrivate(
     CreateBranchResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ CreateBranchResponsePrivate::CreateBranchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit CreateBranchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit CreateBranch response element from \a xml.
  */
 void CreateBranchResponsePrivate::parseCreateBranchResponse(QXmlStreamReader &xml)
 {

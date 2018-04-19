@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStorediSCSIVolumesRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeStorediSCSIVolumesRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStorediSCSIVolumesRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DescribeStorediSCSIVolumesRequestPrivate::DescribeStorediSCSIVolumesRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeStorediSCSIVolumesRequest * const q)

@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::DeleteUserPoolDomainResponse
- *
  * \brief The DeleteUserPoolDomainResponse class provides an interace for CognitoIdentityProvider DeleteUserPoolDomain responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new DeleteUserPoolDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteUserPoolDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteUserPoolDomainResponse::DeleteUserPoolDomainResponse(
         const DeleteUserPoolDomainRequest &request,
@@ -65,6 +60,9 @@ DeleteUserPoolDomainResponse::DeleteUserPoolDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteUserPoolDomainRequest * DeleteUserPoolDomainResponse::request() const
 {
     Q_D(const DeleteUserPoolDomainResponse);
@@ -72,9 +70,8 @@ const DeleteUserPoolDomainRequest * DeleteUserPoolDomainResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider DeleteUserPoolDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider DeleteUserPoolDomain \a response.
  */
 void DeleteUserPoolDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void DeleteUserPoolDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::DeleteUserPoolDomainResponsePrivate
+ * \brief The DeleteUserPoolDomainResponsePrivate class provides private implementation for DeleteUserPoolDomainResponse.
  * \internal
  *
- * \class DeleteUserPoolDomainResponsePrivate
- *
- * \brief Private implementation for DeleteUserPoolDomainResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteUserPoolDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteUserPoolDomainResponse instance.
+ * Constructs a DeleteUserPoolDomainResponsePrivate object with public implementation \a q.
  */
 DeleteUserPoolDomainResponsePrivate::DeleteUserPoolDomainResponsePrivate(
     DeleteUserPoolDomainResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ DeleteUserPoolDomainResponsePrivate::DeleteUserPoolDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider DeleteUserPoolDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider DeleteUserPoolDomain response element from \a xml.
  */
 void DeleteUserPoolDomainResponsePrivate::parseDeleteUserPoolDomainResponse(QXmlStreamReader &xml)
 {

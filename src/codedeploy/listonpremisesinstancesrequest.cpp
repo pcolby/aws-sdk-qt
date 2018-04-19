@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * ListOnPremisesInstancesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListOnPremisesInstancesRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a ListOnPremisesInstancesRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 ListOnPremisesInstancesRequestPrivate::ListOnPremisesInstancesRequestPrivate(
     const CodeDeployRequest::Action action, ListOnPremisesInstancesRequest * const q)

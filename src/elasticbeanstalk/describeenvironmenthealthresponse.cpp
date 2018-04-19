@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentHealthResponse
- *
  * \brief The DescribeEnvironmentHealthResponse class provides an interace for ElasticBeanstalk DescribeEnvironmentHealth responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentHealthResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEnvironmentHealthResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEnvironmentHealthResponse::DescribeEnvironmentHealthResponse(
         const DescribeEnvironmentHealthRequest &request,
@@ -77,6 +72,9 @@ DescribeEnvironmentHealthResponse::DescribeEnvironmentHealthResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEnvironmentHealthRequest * DescribeEnvironmentHealthResponse::request() const
 {
     Q_D(const DescribeEnvironmentHealthResponse);
@@ -84,9 +82,8 @@ const DescribeEnvironmentHealthRequest * DescribeEnvironmentHealthResponse::requ
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DescribeEnvironmentHealth response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DescribeEnvironmentHealth \a response.
  */
 void DescribeEnvironmentHealthResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribeEnvironmentHealthResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DescribeEnvironmentHealthResponsePrivate
+ * \brief The DescribeEnvironmentHealthResponsePrivate class provides private implementation for DescribeEnvironmentHealthResponse.
  * \internal
  *
- * \class DescribeEnvironmentHealthResponsePrivate
- *
- * \brief Private implementation for DescribeEnvironmentHealthResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentHealthResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEnvironmentHealthResponse instance.
+ * Constructs a DescribeEnvironmentHealthResponsePrivate object with public implementation \a q.
  */
 DescribeEnvironmentHealthResponsePrivate::DescribeEnvironmentHealthResponsePrivate(
     DescribeEnvironmentHealthResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribeEnvironmentHealthResponsePrivate::DescribeEnvironmentHealthResponsePriva
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DescribeEnvironmentHealthResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DescribeEnvironmentHealth response element from \a xml.
  */
 void DescribeEnvironmentHealthResponsePrivate::parseDescribeEnvironmentHealthResponse(QXmlStreamReader &xml)
 {

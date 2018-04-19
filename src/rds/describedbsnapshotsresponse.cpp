@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DescribeDBSnapshotsResponse
- *
  * \brief The DescribeDBSnapshotsResponse class provides an interace for RDS DescribeDBSnapshots responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DescribeDBSnapshotsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDBSnapshotsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDBSnapshotsResponse::DescribeDBSnapshotsResponse(
         const DescribeDBSnapshotsRequest &request,
@@ -119,6 +114,9 @@ DescribeDBSnapshotsResponse::DescribeDBSnapshotsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDBSnapshotsRequest * DescribeDBSnapshotsResponse::request() const
 {
     Q_D(const DescribeDBSnapshotsResponse);
@@ -126,9 +124,8 @@ const DescribeDBSnapshotsRequest * DescribeDBSnapshotsResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS DescribeDBSnapshots response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DescribeDBSnapshots \a response.
  */
 void DescribeDBSnapshotsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DescribeDBSnapshotsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DescribeDBSnapshotsResponsePrivate
+ * \brief The DescribeDBSnapshotsResponsePrivate class provides private implementation for DescribeDBSnapshotsResponse.
  * \internal
  *
- * \class DescribeDBSnapshotsResponsePrivate
- *
- * \brief Private implementation for DescribeDBSnapshotsResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDBSnapshotsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDBSnapshotsResponse instance.
+ * Constructs a DescribeDBSnapshotsResponsePrivate object with public implementation \a q.
  */
 DescribeDBSnapshotsResponsePrivate::DescribeDBSnapshotsResponsePrivate(
     DescribeDBSnapshotsResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DescribeDBSnapshotsResponsePrivate::DescribeDBSnapshotsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DescribeDBSnapshotsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DescribeDBSnapshots response element from \a xml.
  */
 void DescribeDBSnapshotsResponsePrivate::parseDescribeDBSnapshotsResponse(QXmlStreamReader &xml)
 {

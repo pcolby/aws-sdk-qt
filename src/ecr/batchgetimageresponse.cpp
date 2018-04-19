@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::BatchGetImageResponse
- *
  * \brief The BatchGetImageResponse class provides an interace for ECR BatchGetImage responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new BatchGetImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetImageResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetImageResponse::BatchGetImageResponse(
         const BatchGetImageRequest &request,
@@ -59,6 +54,9 @@ BatchGetImageResponse::BatchGetImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetImageRequest * BatchGetImageResponse::request() const
 {
     Q_D(const BatchGetImageResponse);
@@ -66,9 +64,8 @@ const BatchGetImageRequest * BatchGetImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR BatchGetImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR BatchGetImage \a response.
  */
 void BatchGetImageResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void BatchGetImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::BatchGetImageResponsePrivate
+ * \brief The BatchGetImageResponsePrivate class provides private implementation for BatchGetImageResponse.
  * \internal
  *
- * \class BatchGetImageResponsePrivate
- *
- * \brief Private implementation for BatchGetImageResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetImageResponse instance.
+ * Constructs a BatchGetImageResponsePrivate object with public implementation \a q.
  */
 BatchGetImageResponsePrivate::BatchGetImageResponsePrivate(
     BatchGetImageResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ BatchGetImageResponsePrivate::BatchGetImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR BatchGetImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR BatchGetImage response element from \a xml.
  */
 void BatchGetImageResponsePrivate::parseBatchGetImageResponse(QXmlStreamReader &xml)
 {

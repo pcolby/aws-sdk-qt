@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDeviceInstanceRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdateDeviceInstanceRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDeviceInstanceRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 UpdateDeviceInstanceRequestPrivate::UpdateDeviceInstanceRequestPrivate(
     const DeviceFarmRequest::Action action, UpdateDeviceInstanceRequest * const q)

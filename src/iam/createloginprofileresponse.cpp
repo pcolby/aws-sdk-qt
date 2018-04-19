@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateLoginProfileResponse
- *
  * \brief The CreateLoginProfileResponse class provides an interace for IAM CreateLoginProfile responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateLoginProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateLoginProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateLoginProfileResponse::CreateLoginProfileResponse(
         const CreateLoginProfileRequest &request,
@@ -120,6 +115,9 @@ CreateLoginProfileResponse::CreateLoginProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateLoginProfileRequest * CreateLoginProfileResponse::request() const
 {
     Q_D(const CreateLoginProfileResponse);
@@ -127,9 +125,8 @@ const CreateLoginProfileRequest * CreateLoginProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM CreateLoginProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreateLoginProfile \a response.
  */
 void CreateLoginProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreateLoginProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreateLoginProfileResponsePrivate
+ * \brief The CreateLoginProfileResponsePrivate class provides private implementation for CreateLoginProfileResponse.
  * \internal
  *
- * \class CreateLoginProfileResponsePrivate
- *
- * \brief Private implementation for CreateLoginProfileResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateLoginProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateLoginProfileResponse instance.
+ * Constructs a CreateLoginProfileResponsePrivate object with public implementation \a q.
  */
 CreateLoginProfileResponsePrivate::CreateLoginProfileResponsePrivate(
     CreateLoginProfileResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreateLoginProfileResponsePrivate::CreateLoginProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM CreateLoginProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreateLoginProfile response element from \a xml.
  */
 void CreateLoginProfileResponsePrivate::parseCreateLoginProfileResponse(QXmlStreamReader &xml)
 {

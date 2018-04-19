@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateQueueResponse : public MediaConvertResponse {
 public:
     UpdateQueueResponse(const UpdateQueueRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateQueueRequest * request() const;
+    virtual const UpdateQueueRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateQueueResponse)

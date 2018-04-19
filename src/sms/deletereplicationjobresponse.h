@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteReplicationJobResponse : public SMSResponse {
 public:
     DeleteReplicationJobResponse(const DeleteReplicationJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteReplicationJobRequest * request() const;
+    virtual const DeleteReplicationJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteReplicationJobResponse)

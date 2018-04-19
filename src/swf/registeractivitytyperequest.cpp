@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * RegisterActivityTypeRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a RegisterActivityTypeRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a RegisterActivityTypeRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
     const SWFRequest::Action action, RegisterActivityTypeRequest * const q)

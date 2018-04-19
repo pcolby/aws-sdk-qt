@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ConfirmProductInstanceResponse
- *
  * \brief The ConfirmProductInstanceResponse class provides an interace for EC2 ConfirmProductInstance responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ConfirmProductInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ConfirmProductInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 ConfirmProductInstanceResponse::ConfirmProductInstanceResponse(
         const ConfirmProductInstanceRequest &request,
@@ -59,6 +54,9 @@ ConfirmProductInstanceResponse::ConfirmProductInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ConfirmProductInstanceRequest * ConfirmProductInstanceResponse::request() const
 {
     Q_D(const ConfirmProductInstanceResponse);
@@ -66,9 +64,8 @@ const ConfirmProductInstanceRequest * ConfirmProductInstanceResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 ConfirmProductInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ConfirmProductInstance \a response.
  */
 void ConfirmProductInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ConfirmProductInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ConfirmProductInstanceResponsePrivate
+ * \brief The ConfirmProductInstanceResponsePrivate class provides private implementation for ConfirmProductInstanceResponse.
  * \internal
  *
- * \class ConfirmProductInstanceResponsePrivate
- *
- * \brief Private implementation for ConfirmProductInstanceResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmProductInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ConfirmProductInstanceResponse instance.
+ * Constructs a ConfirmProductInstanceResponsePrivate object with public implementation \a q.
  */
 ConfirmProductInstanceResponsePrivate::ConfirmProductInstanceResponsePrivate(
     ConfirmProductInstanceResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ConfirmProductInstanceResponsePrivate::ConfirmProductInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ConfirmProductInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ConfirmProductInstance response element from \a xml.
  */
 void ConfirmProductInstanceResponsePrivate::parseConfirmProductInstanceResponse(QXmlStreamReader &xml)
 {

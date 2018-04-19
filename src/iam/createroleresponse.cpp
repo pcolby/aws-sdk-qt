@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateRoleResponse
- *
  * \brief The CreateRoleResponse class provides an interace for IAM CreateRole responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRoleResponse::CreateRoleResponse(
         const CreateRoleRequest &request,
@@ -120,6 +115,9 @@ CreateRoleResponse::CreateRoleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRoleRequest * CreateRoleResponse::request() const
 {
     Q_D(const CreateRoleResponse);
@@ -127,9 +125,8 @@ const CreateRoleRequest * CreateRoleResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM CreateRole response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreateRole \a response.
  */
 void CreateRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreateRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreateRoleResponsePrivate
+ * \brief The CreateRoleResponsePrivate class provides private implementation for CreateRoleResponse.
  * \internal
  *
- * \class CreateRoleResponsePrivate
- *
- * \brief Private implementation for CreateRoleResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRoleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRoleResponse instance.
+ * Constructs a CreateRoleResponsePrivate object with public implementation \a q.
  */
 CreateRoleResponsePrivate::CreateRoleResponsePrivate(
     CreateRoleResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreateRoleResponsePrivate::CreateRoleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM CreateRoleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreateRole response element from \a xml.
  */
 void CreateRoleResponsePrivate::parseCreateRoleResponse(QXmlStreamReader &xml)
 {

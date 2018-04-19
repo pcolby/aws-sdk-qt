@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetIdentityMailFromDomainAttributesResponse
- *
  * \brief The GetIdentityMailFromDomainAttributesResponse class provides an interace for SES GetIdentityMailFromDomainAttributes responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityMailFromDomainAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetIdentityMailFromDomainAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetIdentityMailFromDomainAttributesResponse::GetIdentityMailFromDomainAttributesResponse(
         const GetIdentityMailFromDomainAttributesRequest &request,
@@ -66,6 +61,9 @@ GetIdentityMailFromDomainAttributesResponse::GetIdentityMailFromDomainAttributes
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetIdentityMailFromDomainAttributesRequest * GetIdentityMailFromDomainAttributesResponse::request() const
 {
     Q_D(const GetIdentityMailFromDomainAttributesResponse);
@@ -73,9 +71,8 @@ const GetIdentityMailFromDomainAttributesRequest * GetIdentityMailFromDomainAttr
 }
 
 /*!
- * @brief  Parse a SES GetIdentityMailFromDomainAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES GetIdentityMailFromDomainAttributes \a response.
  */
 void GetIdentityMailFromDomainAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetIdentityMailFromDomainAttributesResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::SES::GetIdentityMailFromDomainAttributesResponsePrivate
+ * \brief The GetIdentityMailFromDomainAttributesResponsePrivate class provides private implementation for GetIdentityMailFromDomainAttributesResponse.
  * \internal
  *
- * \class GetIdentityMailFromDomainAttributesResponsePrivate
- *
- * \brief Private implementation for GetIdentityMailFromDomainAttributesResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityMailFromDomainAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetIdentityMailFromDomainAttributesResponse instance.
+ * Constructs a GetIdentityMailFromDomainAttributesResponsePrivate object with public implementation \a q.
  */
 GetIdentityMailFromDomainAttributesResponsePrivate::GetIdentityMailFromDomainAttributesResponsePrivate(
     GetIdentityMailFromDomainAttributesResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ GetIdentityMailFromDomainAttributesResponsePrivate::GetIdentityMailFromDomainAtt
 }
 
 /*!
- * @brief  Parse an SES GetIdentityMailFromDomainAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES GetIdentityMailFromDomainAttributes response element from \a xml.
  */
 void GetIdentityMailFromDomainAttributesResponsePrivate::parseGetIdentityMailFromDomainAttributesResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetIdentityPoliciesResponse
- *
  * \brief The GetIdentityPoliciesResponse class provides an interace for SES GetIdentityPolicies responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetIdentityPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetIdentityPoliciesResponse::GetIdentityPoliciesResponse(
         const GetIdentityPoliciesRequest &request,
@@ -66,6 +61,9 @@ GetIdentityPoliciesResponse::GetIdentityPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetIdentityPoliciesRequest * GetIdentityPoliciesResponse::request() const
 {
     Q_D(const GetIdentityPoliciesResponse);
@@ -73,9 +71,8 @@ const GetIdentityPoliciesRequest * GetIdentityPoliciesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES GetIdentityPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES GetIdentityPolicies \a response.
  */
 void GetIdentityPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetIdentityPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::GetIdentityPoliciesResponsePrivate
+ * \brief The GetIdentityPoliciesResponsePrivate class provides private implementation for GetIdentityPoliciesResponse.
  * \internal
  *
- * \class GetIdentityPoliciesResponsePrivate
- *
- * \brief Private implementation for GetIdentityPoliciesResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetIdentityPoliciesResponse instance.
+ * Constructs a GetIdentityPoliciesResponsePrivate object with public implementation \a q.
  */
 GetIdentityPoliciesResponsePrivate::GetIdentityPoliciesResponsePrivate(
     GetIdentityPoliciesResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ GetIdentityPoliciesResponsePrivate::GetIdentityPoliciesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES GetIdentityPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES GetIdentityPolicies response element from \a xml.
  */
 void GetIdentityPoliciesResponsePrivate::parseGetIdentityPoliciesResponse(QXmlStreamReader &xml)
 {

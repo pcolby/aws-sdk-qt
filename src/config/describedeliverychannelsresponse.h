@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeDeliveryChannelsResponse : public ConfigServiceRespon
 public:
     DescribeDeliveryChannelsResponse(const DescribeDeliveryChannelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeDeliveryChannelsRequest * request() const;
+    virtual const DescribeDeliveryChannelsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeDeliveryChannelsResponse)

@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DeleteHsmConfigurationResponse
- *
  * \brief The DeleteHsmConfigurationResponse class provides an interace for Redshift DeleteHsmConfiguration responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DeleteHsmConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteHsmConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteHsmConfigurationResponse::DeleteHsmConfigurationResponse(
         const DeleteHsmConfigurationRequest &request,
@@ -85,6 +80,9 @@ DeleteHsmConfigurationResponse::DeleteHsmConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteHsmConfigurationRequest * DeleteHsmConfigurationResponse::request() const
 {
     Q_D(const DeleteHsmConfigurationResponse);
@@ -92,9 +90,8 @@ const DeleteHsmConfigurationRequest * DeleteHsmConfigurationResponse::request() 
 }
 
 /*!
- * @brief  Parse a Redshift DeleteHsmConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DeleteHsmConfiguration \a response.
  */
 void DeleteHsmConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DeleteHsmConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DeleteHsmConfigurationResponsePrivate
+ * \brief The DeleteHsmConfigurationResponsePrivate class provides private implementation for DeleteHsmConfigurationResponse.
  * \internal
  *
- * \class DeleteHsmConfigurationResponsePrivate
- *
- * \brief Private implementation for DeleteHsmConfigurationResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHsmConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteHsmConfigurationResponse instance.
+ * Constructs a DeleteHsmConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteHsmConfigurationResponsePrivate::DeleteHsmConfigurationResponsePrivate(
     DeleteHsmConfigurationResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DeleteHsmConfigurationResponsePrivate::DeleteHsmConfigurationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift DeleteHsmConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DeleteHsmConfiguration response element from \a xml.
  */
 void DeleteHsmConfigurationResponsePrivate::parseDeleteHsmConfigurationResponse(QXmlStreamReader &xml)
 {

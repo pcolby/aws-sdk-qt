@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketNotificationConfigurationResponse
- *
  * \brief The GetBucketNotificationConfigurationResponse class provides an interace for S3 GetBucketNotificationConfiguration responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketNotificationConfiguration
  */
 
 /*!
- * @brief  Constructs a new GetBucketNotificationConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBucketNotificationConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBucketNotificationConfigurationResponse::GetBucketNotificationConfigurationResponse(
         const GetBucketNotificationConfigurationRequest &request,
@@ -55,6 +50,9 @@ GetBucketNotificationConfigurationResponse::GetBucketNotificationConfigurationRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBucketNotificationConfigurationRequest * GetBucketNotificationConfigurationResponse::request() const
 {
     Q_D(const GetBucketNotificationConfigurationResponse);
@@ -62,9 +60,8 @@ const GetBucketNotificationConfigurationRequest * GetBucketNotificationConfigura
 }
 
 /*!
- * @brief  Parse a S3 GetBucketNotificationConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetBucketNotificationConfiguration \a response.
  */
 void GetBucketNotificationConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBucketNotificationConfigurationResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::S3::GetBucketNotificationConfigurationResponsePrivate
+ * \brief The GetBucketNotificationConfigurationResponsePrivate class provides private implementation for GetBucketNotificationConfigurationResponse.
  * \internal
  *
- * \class GetBucketNotificationConfigurationResponsePrivate
- *
- * \brief Private implementation for GetBucketNotificationConfigurationResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketNotificationConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBucketNotificationConfigurationResponse instance.
+ * Constructs a GetBucketNotificationConfigurationResponsePrivate object with public implementation \a q.
  */
 GetBucketNotificationConfigurationResponsePrivate::GetBucketNotificationConfigurationResponsePrivate(
     GetBucketNotificationConfigurationResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBucketNotificationConfigurationResponsePrivate::GetBucketNotificationConfigur
 }
 
 /*!
- * @brief  Parse an S3 GetBucketNotificationConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetBucketNotificationConfiguration response element from \a xml.
  */
 void GetBucketNotificationConfigurationResponsePrivate::parseGetBucketNotificationConfigurationResponse(QXmlStreamReader &xml)
 {

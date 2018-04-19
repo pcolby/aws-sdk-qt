@@ -29,10 +29,9 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::GetTraceSummariesResponse
- *
  * \brief The GetTraceSummariesResponse class provides an interace for XRay GetTraceSummaries responses.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  *
  *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  *
@@ -40,11 +39,7 @@ namespace XRay {
  */
 
 /*!
- * @brief  Constructs a new GetTraceSummariesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTraceSummariesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTraceSummariesResponse::GetTraceSummariesResponse(
         const GetTraceSummariesRequest &request,
@@ -56,6 +51,9 @@ GetTraceSummariesResponse::GetTraceSummariesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTraceSummariesRequest * GetTraceSummariesResponse::request() const
 {
     Q_D(const GetTraceSummariesResponse);
@@ -63,9 +61,8 @@ const GetTraceSummariesRequest * GetTraceSummariesResponse::request() const
 }
 
 /*!
- * @brief  Parse a XRay GetTraceSummaries response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful XRay GetTraceSummaries \a response.
  */
 void GetTraceSummariesResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetTraceSummariesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::XRay::GetTraceSummariesResponsePrivate
+ * \brief The GetTraceSummariesResponsePrivate class provides private implementation for GetTraceSummariesResponse.
  * \internal
  *
- * \class GetTraceSummariesResponsePrivate
- *
- * \brief Private implementation for GetTraceSummariesResponse.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTraceSummariesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTraceSummariesResponse instance.
+ * Constructs a GetTraceSummariesResponsePrivate object with public implementation \a q.
  */
 GetTraceSummariesResponsePrivate::GetTraceSummariesResponsePrivate(
     GetTraceSummariesResponse * const q) : XRayResponsePrivate(q)
@@ -96,9 +89,7 @@ GetTraceSummariesResponsePrivate::GetTraceSummariesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an XRay GetTraceSummariesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a XRay GetTraceSummaries response element from \a xml.
  */
 void GetTraceSummariesResponsePrivate::parseGetTraceSummariesResponse(QXmlStreamReader &xml)
 {

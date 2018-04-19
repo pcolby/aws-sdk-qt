@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateVpnConnectionRouteResponse : public EC2Response {
 public:
     CreateVpnConnectionRouteResponse(const CreateVpnConnectionRouteRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateVpnConnectionRouteRequest * request() const;
+    virtual const CreateVpnConnectionRouteRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateVpnConnectionRouteResponse)

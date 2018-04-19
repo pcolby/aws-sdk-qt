@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateVpnConnectionResponse
- *
  * \brief The CreateVpnConnectionResponse class provides an interace for EC2 CreateVpnConnection responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateVpnConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateVpnConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateVpnConnectionResponse::CreateVpnConnectionResponse(
         const CreateVpnConnectionRequest &request,
@@ -59,6 +54,9 @@ CreateVpnConnectionResponse::CreateVpnConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateVpnConnectionRequest * CreateVpnConnectionResponse::request() const
 {
     Q_D(const CreateVpnConnectionResponse);
@@ -66,9 +64,8 @@ const CreateVpnConnectionRequest * CreateVpnConnectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateVpnConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateVpnConnection \a response.
  */
 void CreateVpnConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateVpnConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateVpnConnectionResponsePrivate
+ * \brief The CreateVpnConnectionResponsePrivate class provides private implementation for CreateVpnConnectionResponse.
  * \internal
  *
- * \class CreateVpnConnectionResponsePrivate
- *
- * \brief Private implementation for CreateVpnConnectionResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVpnConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateVpnConnectionResponse instance.
+ * Constructs a CreateVpnConnectionResponsePrivate object with public implementation \a q.
  */
 CreateVpnConnectionResponsePrivate::CreateVpnConnectionResponsePrivate(
     CreateVpnConnectionResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateVpnConnectionResponsePrivate::CreateVpnConnectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateVpnConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateVpnConnection response element from \a xml.
  */
 void CreateVpnConnectionResponsePrivate::parseCreateVpnConnectionResponse(QXmlStreamReader &xml)
 {

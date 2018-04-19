@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListLocalDisksResponse
- *
  * \brief The ListLocalDisksResponse class provides an interace for StorageGateway ListLocalDisks responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListLocalDisksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListLocalDisksResponse object for \a reply to \a request, with parent \a parent.
  */
 ListLocalDisksResponse::ListLocalDisksResponse(
         const ListLocalDisksRequest &request,
@@ -124,6 +119,9 @@ ListLocalDisksResponse::ListLocalDisksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListLocalDisksRequest * ListLocalDisksResponse::request() const
 {
     Q_D(const ListLocalDisksResponse);
@@ -131,9 +129,8 @@ const ListLocalDisksRequest * ListLocalDisksResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway ListLocalDisks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway ListLocalDisks \a response.
  */
 void ListLocalDisksResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void ListLocalDisksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::ListLocalDisksResponsePrivate
+ * \brief The ListLocalDisksResponsePrivate class provides private implementation for ListLocalDisksResponse.
  * \internal
  *
- * \class ListLocalDisksResponsePrivate
- *
- * \brief Private implementation for ListLocalDisksResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListLocalDisksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListLocalDisksResponse instance.
+ * Constructs a ListLocalDisksResponsePrivate object with public implementation \a q.
  */
 ListLocalDisksResponsePrivate::ListLocalDisksResponsePrivate(
     ListLocalDisksResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ ListLocalDisksResponsePrivate::ListLocalDisksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway ListLocalDisksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway ListLocalDisks response element from \a xml.
  */
 void ListLocalDisksResponsePrivate::parseListLocalDisksResponse(QXmlStreamReader &xml)
 {

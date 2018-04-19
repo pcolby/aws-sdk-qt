@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::InvokeAsyncResponse
- *
  * \brief The InvokeAsyncResponse class provides an interace for Lambda InvokeAsync responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new InvokeAsyncResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a InvokeAsyncResponse object for \a reply to \a request, with parent \a parent.
  */
 InvokeAsyncResponse::InvokeAsyncResponse(
         const InvokeAsyncRequest &request,
@@ -66,6 +61,9 @@ InvokeAsyncResponse::InvokeAsyncResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const InvokeAsyncRequest * InvokeAsyncResponse::request() const
 {
     Q_D(const InvokeAsyncResponse);
@@ -73,9 +71,8 @@ const InvokeAsyncRequest * InvokeAsyncResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda InvokeAsync response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda InvokeAsync \a response.
  */
 void InvokeAsyncResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void InvokeAsyncResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::InvokeAsyncResponsePrivate
+ * \brief The InvokeAsyncResponsePrivate class provides private implementation for InvokeAsyncResponse.
  * \internal
  *
- * \class InvokeAsyncResponsePrivate
- *
- * \brief Private implementation for InvokeAsyncResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InvokeAsyncResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InvokeAsyncResponse instance.
+ * Constructs a InvokeAsyncResponsePrivate object with public implementation \a q.
  */
 InvokeAsyncResponsePrivate::InvokeAsyncResponsePrivate(
     InvokeAsyncResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ InvokeAsyncResponsePrivate::InvokeAsyncResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda InvokeAsyncResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda InvokeAsync response element from \a xml.
  */
 void InvokeAsyncResponsePrivate::parseInvokeAsyncResponse(QXmlStreamReader &xml)
 {

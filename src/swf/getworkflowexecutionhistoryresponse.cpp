@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::GetWorkflowExecutionHistoryResponse
- *
  * \brief The GetWorkflowExecutionHistoryResponse class provides an interace for SWF GetWorkflowExecutionHistory responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new GetWorkflowExecutionHistoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetWorkflowExecutionHistoryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetWorkflowExecutionHistoryResponse::GetWorkflowExecutionHistoryResponse(
         const GetWorkflowExecutionHistoryRequest &request,
@@ -71,6 +66,9 @@ GetWorkflowExecutionHistoryResponse::GetWorkflowExecutionHistoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetWorkflowExecutionHistoryRequest * GetWorkflowExecutionHistoryResponse::request() const
 {
     Q_D(const GetWorkflowExecutionHistoryResponse);
@@ -78,9 +76,8 @@ const GetWorkflowExecutionHistoryRequest * GetWorkflowExecutionHistoryResponse::
 }
 
 /*!
- * @brief  Parse a SWF GetWorkflowExecutionHistory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF GetWorkflowExecutionHistory \a response.
  */
 void GetWorkflowExecutionHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetWorkflowExecutionHistoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::GetWorkflowExecutionHistoryResponsePrivate
+ * \brief The GetWorkflowExecutionHistoryResponsePrivate class provides private implementation for GetWorkflowExecutionHistoryResponse.
  * \internal
  *
- * \class GetWorkflowExecutionHistoryResponsePrivate
- *
- * \brief Private implementation for GetWorkflowExecutionHistoryResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetWorkflowExecutionHistoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetWorkflowExecutionHistoryResponse instance.
+ * Constructs a GetWorkflowExecutionHistoryResponsePrivate object with public implementation \a q.
  */
 GetWorkflowExecutionHistoryResponsePrivate::GetWorkflowExecutionHistoryResponsePrivate(
     GetWorkflowExecutionHistoryResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ GetWorkflowExecutionHistoryResponsePrivate::GetWorkflowExecutionHistoryResponseP
 }
 
 /*!
- * @brief  Parse an SWF GetWorkflowExecutionHistoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF GetWorkflowExecutionHistory response element from \a xml.
  */
 void GetWorkflowExecutionHistoryResponsePrivate::parseGetWorkflowExecutionHistoryResponse(QXmlStreamReader &xml)
 {

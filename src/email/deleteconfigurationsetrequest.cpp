@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteConfigurationSetRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteConfigurationSetRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a DeleteConfigurationSetRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 DeleteConfigurationSetRequestPrivate::DeleteConfigurationSetRequestPrivate(
     const SESRequest::Action action, DeleteConfigurationSetRequest * const q)

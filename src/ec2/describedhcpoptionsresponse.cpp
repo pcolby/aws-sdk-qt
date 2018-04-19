@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeDhcpOptionsResponse
- *
  * \brief The DescribeDhcpOptionsResponse class provides an interace for EC2 DescribeDhcpOptions responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeDhcpOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDhcpOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDhcpOptionsResponse::DescribeDhcpOptionsResponse(
         const DescribeDhcpOptionsRequest &request,
@@ -59,6 +54,9 @@ DescribeDhcpOptionsResponse::DescribeDhcpOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDhcpOptionsRequest * DescribeDhcpOptionsResponse::request() const
 {
     Q_D(const DescribeDhcpOptionsResponse);
@@ -66,9 +64,8 @@ const DescribeDhcpOptionsRequest * DescribeDhcpOptionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeDhcpOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeDhcpOptions \a response.
  */
 void DescribeDhcpOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeDhcpOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeDhcpOptionsResponsePrivate
+ * \brief The DescribeDhcpOptionsResponsePrivate class provides private implementation for DescribeDhcpOptionsResponse.
  * \internal
  *
- * \class DescribeDhcpOptionsResponsePrivate
- *
- * \brief Private implementation for DescribeDhcpOptionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDhcpOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDhcpOptionsResponse instance.
+ * Constructs a DescribeDhcpOptionsResponsePrivate object with public implementation \a q.
  */
 DescribeDhcpOptionsResponsePrivate::DescribeDhcpOptionsResponsePrivate(
     DescribeDhcpOptionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeDhcpOptionsResponsePrivate::DescribeDhcpOptionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeDhcpOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeDhcpOptions response element from \a xml.
  */
 void DescribeDhcpOptionsResponsePrivate::parseDescribeDhcpOptionsResponse(QXmlStreamReader &xml)
 {

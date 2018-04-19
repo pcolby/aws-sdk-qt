@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDocumentPermissionRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeDocumentPermissionRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDocumentPermissionRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeDocumentPermissionRequestPrivate::DescribeDocumentPermissionRequestPrivate(
     const SSMRequest::Action action, DescribeDocumentPermissionRequest * const q)

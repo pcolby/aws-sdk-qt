@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateAssociationStatusResponse : public SSMResponse {
 public:
     UpdateAssociationStatusResponse(const UpdateAssociationStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateAssociationStatusRequest * request() const;
+    virtual const UpdateAssociationStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateAssociationStatusResponse)

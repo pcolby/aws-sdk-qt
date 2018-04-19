@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNetworkAclEntryRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteNetworkAclEntryRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNetworkAclEntryRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteNetworkAclEntryRequestPrivate::DeleteNetworkAclEntryRequestPrivate(
     const EC2Request::Action action, DeleteNetworkAclEntryRequest * const q)

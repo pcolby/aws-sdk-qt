@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTypeRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteTypeRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTypeRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 DeleteTypeRequestPrivate::DeleteTypeRequestPrivate(
     const AppSyncRequest::Action action, DeleteTypeRequest * const q)

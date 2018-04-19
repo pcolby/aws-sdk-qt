@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * ImportCertificateAuthorityCertificateRequest:
  */
 
 /*!
- *
- * Constructs a ImportCertificateAuthorityCertificateRequestPrivate object for ACMPCA \a action with,
- * public implementation \a q.
+ * Constructs a ImportCertificateAuthorityCertificateRequestPrivate object for ACMPCA \a action,
+ * with public implementation \a q.
  */
 ImportCertificateAuthorityCertificateRequestPrivate::ImportCertificateAuthorityCertificateRequestPrivate(
     const ACMPCARequest::Action action, ImportCertificateAuthorityCertificateRequest * const q)

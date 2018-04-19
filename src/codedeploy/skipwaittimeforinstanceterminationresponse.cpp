@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::SkipWaitTimeForInstanceTerminationResponse
- *
  * \brief The SkipWaitTimeForInstanceTerminationResponse class provides an interace for CodeDeploy SkipWaitTimeForInstanceTermination responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new SkipWaitTimeForInstanceTerminationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SkipWaitTimeForInstanceTerminationResponse object for \a reply to \a request, with parent \a parent.
  */
 SkipWaitTimeForInstanceTerminationResponse::SkipWaitTimeForInstanceTerminationResponse(
         const SkipWaitTimeForInstanceTerminationRequest &request,
@@ -136,6 +131,9 @@ SkipWaitTimeForInstanceTerminationResponse::SkipWaitTimeForInstanceTerminationRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SkipWaitTimeForInstanceTerminationRequest * SkipWaitTimeForInstanceTerminationResponse::request() const
 {
     Q_D(const SkipWaitTimeForInstanceTerminationResponse);
@@ -143,9 +141,8 @@ const SkipWaitTimeForInstanceTerminationRequest * SkipWaitTimeForInstanceTermina
 }
 
 /*!
- * @brief  Parse a CodeDeploy SkipWaitTimeForInstanceTermination response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy SkipWaitTimeForInstanceTermination \a response.
  */
 void SkipWaitTimeForInstanceTerminationResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void SkipWaitTimeForInstanceTerminationResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::CodeDeploy::SkipWaitTimeForInstanceTerminationResponsePrivate
+ * \brief The SkipWaitTimeForInstanceTerminationResponsePrivate class provides private implementation for SkipWaitTimeForInstanceTerminationResponse.
  * \internal
  *
- * \class SkipWaitTimeForInstanceTerminationResponsePrivate
- *
- * \brief Private implementation for SkipWaitTimeForInstanceTerminationResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SkipWaitTimeForInstanceTerminationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SkipWaitTimeForInstanceTerminationResponse instance.
+ * Constructs a SkipWaitTimeForInstanceTerminationResponsePrivate object with public implementation \a q.
  */
 SkipWaitTimeForInstanceTerminationResponsePrivate::SkipWaitTimeForInstanceTerminationResponsePrivate(
     SkipWaitTimeForInstanceTerminationResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ SkipWaitTimeForInstanceTerminationResponsePrivate::SkipWaitTimeForInstanceTermin
 }
 
 /*!
- * @brief  Parse an CodeDeploy SkipWaitTimeForInstanceTerminationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy SkipWaitTimeForInstanceTermination response element from \a xml.
  */
 void SkipWaitTimeForInstanceTerminationResponsePrivate::parseSkipWaitTimeForInstanceTerminationResponse(QXmlStreamReader &xml)
 {

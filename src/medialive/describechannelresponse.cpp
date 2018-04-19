@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::DescribeChannelResponse
- *
  * \brief The DescribeChannelResponse class provides an interace for MediaLive DescribeChannel responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::describeChannel
  */
 
 /*!
- * @brief  Constructs a new DescribeChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeChannelResponse::DescribeChannelResponse(
         const DescribeChannelRequest &request,
@@ -55,6 +50,9 @@ DescribeChannelResponse::DescribeChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeChannelRequest * DescribeChannelResponse::request() const
 {
     Q_D(const DescribeChannelResponse);
@@ -62,9 +60,8 @@ const DescribeChannelRequest * DescribeChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaLive DescribeChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive DescribeChannel \a response.
  */
 void DescribeChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::DescribeChannelResponsePrivate
+ * \brief The DescribeChannelResponsePrivate class provides private implementation for DescribeChannelResponse.
  * \internal
  *
- * \class DescribeChannelResponsePrivate
- *
- * \brief Private implementation for DescribeChannelResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeChannelResponse instance.
+ * Constructs a DescribeChannelResponsePrivate object with public implementation \a q.
  */
 DescribeChannelResponsePrivate::DescribeChannelResponsePrivate(
     DescribeChannelResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeChannelResponsePrivate::DescribeChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive DescribeChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive DescribeChannel response element from \a xml.
  */
 void DescribeChannelResponsePrivate::parseDescribeChannelResponse(QXmlStreamReader &xml)
 {

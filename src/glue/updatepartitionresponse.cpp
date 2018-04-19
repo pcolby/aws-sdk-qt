@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdatePartitionResponse
- *
  * \brief The UpdatePartitionResponse class provides an interace for Glue UpdatePartition responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdatePartitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdatePartitionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdatePartitionResponse::UpdatePartitionResponse(
         const UpdatePartitionRequest &request,
@@ -58,6 +53,9 @@ UpdatePartitionResponse::UpdatePartitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdatePartitionRequest * UpdatePartitionResponse::request() const
 {
     Q_D(const UpdatePartitionResponse);
@@ -65,9 +63,8 @@ const UpdatePartitionRequest * UpdatePartitionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue UpdatePartition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue UpdatePartition \a response.
  */
 void UpdatePartitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdatePartitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::UpdatePartitionResponsePrivate
+ * \brief The UpdatePartitionResponsePrivate class provides private implementation for UpdatePartitionResponse.
  * \internal
  *
- * \class UpdatePartitionResponsePrivate
- *
- * \brief Private implementation for UpdatePartitionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdatePartitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdatePartitionResponse instance.
+ * Constructs a UpdatePartitionResponsePrivate object with public implementation \a q.
  */
 UpdatePartitionResponsePrivate::UpdatePartitionResponsePrivate(
     UpdatePartitionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdatePartitionResponsePrivate::UpdatePartitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue UpdatePartitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue UpdatePartition response element from \a xml.
  */
 void UpdatePartitionResponsePrivate::parseUpdatePartitionResponse(QXmlStreamReader &xml)
 {

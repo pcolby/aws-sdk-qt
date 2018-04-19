@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DetachInstancesRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DetachInstancesRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DetachInstancesRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DetachInstancesRequestPrivate::DetachInstancesRequestPrivate(
     const AutoScalingRequest::Action action, DetachInstancesRequest * const q)

@@ -29,10 +29,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::DeleteContainerResponse
- *
  * \brief The DeleteContainerResponse class provides an interace for MediaStore DeleteContainer responses.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -41,11 +40,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new DeleteContainerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteContainerResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteContainerResponse::DeleteContainerResponse(
         const DeleteContainerRequest &request,
@@ -57,6 +52,9 @@ DeleteContainerResponse::DeleteContainerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteContainerRequest * DeleteContainerResponse::request() const
 {
     Q_D(const DeleteContainerResponse);
@@ -64,9 +62,8 @@ const DeleteContainerRequest * DeleteContainerResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaStore DeleteContainer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaStore DeleteContainer \a response.
  */
 void DeleteContainerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DeleteContainerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaStore::DeleteContainerResponsePrivate
+ * \brief The DeleteContainerResponsePrivate class provides private implementation for DeleteContainerResponse.
  * \internal
  *
- * \class DeleteContainerResponsePrivate
- *
- * \brief Private implementation for DeleteContainerResponse.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteContainerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteContainerResponse instance.
+ * Constructs a DeleteContainerResponsePrivate object with public implementation \a q.
  */
 DeleteContainerResponsePrivate::DeleteContainerResponsePrivate(
     DeleteContainerResponse * const q) : MediaStoreResponsePrivate(q)
@@ -97,9 +90,7 @@ DeleteContainerResponsePrivate::DeleteContainerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaStore DeleteContainerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaStore DeleteContainer response element from \a xml.
  */
 void DeleteContainerResponsePrivate::parseDeleteContainerResponse(QXmlStreamReader &xml)
 {

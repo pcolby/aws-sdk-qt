@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * RespondToAuthChallengeRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a RespondToAuthChallengeRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a RespondToAuthChallengeRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 RespondToAuthChallengeRequestPrivate::RespondToAuthChallengeRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, RespondToAuthChallengeRequest * const q)

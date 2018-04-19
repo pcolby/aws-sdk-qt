@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * GetConfigRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a GetConfigRequestPrivate object for CloudHSM \a action with,
- * public implementation \a q.
+ * Constructs a GetConfigRequestPrivate object for CloudHSM \a action,
+ * with public implementation \a q.
  */
 GetConfigRequestPrivate::GetConfigRequestPrivate(
     const CloudHSMRequest::Action action, GetConfigRequest * const q)

@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateInstanceProfileResponse
- *
  * \brief The CreateInstanceProfileResponse class provides an interace for IAM CreateInstanceProfile responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateInstanceProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateInstanceProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateInstanceProfileResponse::CreateInstanceProfileResponse(
         const CreateInstanceProfileRequest &request,
@@ -120,6 +115,9 @@ CreateInstanceProfileResponse::CreateInstanceProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateInstanceProfileRequest * CreateInstanceProfileResponse::request() const
 {
     Q_D(const CreateInstanceProfileResponse);
@@ -127,9 +125,8 @@ const CreateInstanceProfileRequest * CreateInstanceProfileResponse::request() co
 }
 
 /*!
- * @brief  Parse a IAM CreateInstanceProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreateInstanceProfile \a response.
  */
 void CreateInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreateInstanceProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreateInstanceProfileResponsePrivate
+ * \brief The CreateInstanceProfileResponsePrivate class provides private implementation for CreateInstanceProfileResponse.
  * \internal
  *
- * \class CreateInstanceProfileResponsePrivate
- *
- * \brief Private implementation for CreateInstanceProfileResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInstanceProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateInstanceProfileResponse instance.
+ * Constructs a CreateInstanceProfileResponsePrivate object with public implementation \a q.
  */
 CreateInstanceProfileResponsePrivate::CreateInstanceProfileResponsePrivate(
     CreateInstanceProfileResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreateInstanceProfileResponsePrivate::CreateInstanceProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM CreateInstanceProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreateInstanceProfile response element from \a xml.
  */
 void CreateInstanceProfileResponsePrivate::parseCreateInstanceProfileResponse(QXmlStreamReader &xml)
 {

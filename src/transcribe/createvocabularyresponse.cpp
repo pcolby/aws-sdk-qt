@@ -29,10 +29,9 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::CreateVocabularyResponse
- *
  * \brief The CreateVocabularyResponse class provides an interace for TranscribeService CreateVocabulary responses.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  *
@@ -40,11 +39,7 @@ namespace TranscribeService {
  */
 
 /*!
- * @brief  Constructs a new CreateVocabularyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateVocabularyResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateVocabularyResponse::CreateVocabularyResponse(
         const CreateVocabularyRequest &request,
@@ -56,6 +51,9 @@ CreateVocabularyResponse::CreateVocabularyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateVocabularyRequest * CreateVocabularyResponse::request() const
 {
     Q_D(const CreateVocabularyResponse);
@@ -63,9 +61,8 @@ const CreateVocabularyRequest * CreateVocabularyResponse::request() const
 }
 
 /*!
- * @brief  Parse a TranscribeService CreateVocabulary response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful TranscribeService CreateVocabulary \a response.
  */
 void CreateVocabularyResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void CreateVocabularyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::TranscribeService::CreateVocabularyResponsePrivate
+ * \brief The CreateVocabularyResponsePrivate class provides private implementation for CreateVocabularyResponse.
  * \internal
  *
- * \class CreateVocabularyResponsePrivate
- *
- * \brief Private implementation for CreateVocabularyResponse.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateVocabularyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateVocabularyResponse instance.
+ * Constructs a CreateVocabularyResponsePrivate object with public implementation \a q.
  */
 CreateVocabularyResponsePrivate::CreateVocabularyResponsePrivate(
     CreateVocabularyResponse * const q) : TranscribeServiceResponsePrivate(q)
@@ -96,9 +89,7 @@ CreateVocabularyResponsePrivate::CreateVocabularyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an TranscribeService CreateVocabularyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a TranscribeService CreateVocabulary response element from \a xml.
  */
 void CreateVocabularyResponsePrivate::parseCreateVocabularyResponse(QXmlStreamReader &xml)
 {

@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * GetPipelineStateRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetPipelineStateRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a GetPipelineStateRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 GetPipelineStateRequestPrivate::GetPipelineStateRequestPrivate(
     const CodePipelineRequest::Action action, GetPipelineStateRequest * const q)

@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::GetConsoleOutputResponse
- *
  * \brief The GetConsoleOutputResponse class provides an interace for EC2 GetConsoleOutput responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new GetConsoleOutputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetConsoleOutputResponse object for \a reply to \a request, with parent \a parent.
  */
 GetConsoleOutputResponse::GetConsoleOutputResponse(
         const GetConsoleOutputRequest &request,
@@ -59,6 +54,9 @@ GetConsoleOutputResponse::GetConsoleOutputResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetConsoleOutputRequest * GetConsoleOutputResponse::request() const
 {
     Q_D(const GetConsoleOutputResponse);
@@ -66,9 +64,8 @@ const GetConsoleOutputRequest * GetConsoleOutputResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 GetConsoleOutput response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 GetConsoleOutput \a response.
  */
 void GetConsoleOutputResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetConsoleOutputResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::GetConsoleOutputResponsePrivate
+ * \brief The GetConsoleOutputResponsePrivate class provides private implementation for GetConsoleOutputResponse.
  * \internal
  *
- * \class GetConsoleOutputResponsePrivate
- *
- * \brief Private implementation for GetConsoleOutputResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetConsoleOutputResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetConsoleOutputResponse instance.
+ * Constructs a GetConsoleOutputResponsePrivate object with public implementation \a q.
  */
 GetConsoleOutputResponsePrivate::GetConsoleOutputResponsePrivate(
     GetConsoleOutputResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ GetConsoleOutputResponsePrivate::GetConsoleOutputResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 GetConsoleOutputResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 GetConsoleOutput response element from \a xml.
  */
 void GetConsoleOutputResponsePrivate::parseGetConsoleOutputResponse(QXmlStreamReader &xml)
 {

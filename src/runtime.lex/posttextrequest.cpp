@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * PostTextRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a PostTextRequestPrivate object for LexRuntimeService \a action with,
- * public implementation \a q.
+ * Constructs a PostTextRequestPrivate object for LexRuntimeService \a action,
+ * with public implementation \a q.
  */
 PostTextRequestPrivate::PostTextRequestPrivate(
     const LexRuntimeServiceRequest::Action action, PostTextRequest * const q)

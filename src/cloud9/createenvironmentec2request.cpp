@@ -135,9 +135,8 @@ QtAws::Core::AwsAbstractResponse * CreateEnvironmentEC2Request::response(QNetwor
  */
 
 /*!
- *
- * Constructs a CreateEnvironmentEC2RequestPrivate object for Cloud9 \a action with,
- * public implementation \a q.
+ * Constructs a CreateEnvironmentEC2RequestPrivate object for Cloud9 \a action,
+ * with public implementation \a q.
  */
 CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
     const Cloud9Request::Action action, CreateEnvironmentEC2Request * const q)

@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::CreateCustomActionTypeResponse
- *
  * \brief The CreateCustomActionTypeResponse class provides an interace for CodePipeline CreateCustomActionType responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new CreateCustomActionTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCustomActionTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCustomActionTypeResponse::CreateCustomActionTypeResponse(
         const CreateCustomActionTypeRequest &request,
@@ -218,6 +213,9 @@ CreateCustomActionTypeResponse::CreateCustomActionTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCustomActionTypeRequest * CreateCustomActionTypeResponse::request() const
 {
     Q_D(const CreateCustomActionTypeResponse);
@@ -225,9 +223,8 @@ const CreateCustomActionTypeRequest * CreateCustomActionTypeResponse::request() 
 }
 
 /*!
- * @brief  Parse a CodePipeline CreateCustomActionType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline CreateCustomActionType \a response.
  */
 void CreateCustomActionTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void CreateCustomActionTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::CreateCustomActionTypeResponsePrivate
+ * \brief The CreateCustomActionTypeResponsePrivate class provides private implementation for CreateCustomActionTypeResponse.
  * \internal
  *
- * \class CreateCustomActionTypeResponsePrivate
- *
- * \brief Private implementation for CreateCustomActionTypeResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCustomActionTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCustomActionTypeResponse instance.
+ * Constructs a CreateCustomActionTypeResponsePrivate object with public implementation \a q.
  */
 CreateCustomActionTypeResponsePrivate::CreateCustomActionTypeResponsePrivate(
     CreateCustomActionTypeResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ CreateCustomActionTypeResponsePrivate::CreateCustomActionTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline CreateCustomActionTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline CreateCustomActionType response element from \a xml.
  */
 void CreateCustomActionTypeResponsePrivate::parseCreateCustomActionTypeResponse(QXmlStreamReader &xml)
 {

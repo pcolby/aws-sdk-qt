@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * GetKeyRotationStatusRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetKeyRotationStatusRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a GetKeyRotationStatusRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 GetKeyRotationStatusRequestPrivate::GetKeyRotationStatusRequestPrivate(
     const KMSRequest::Action action, GetKeyRotationStatusRequest * const q)

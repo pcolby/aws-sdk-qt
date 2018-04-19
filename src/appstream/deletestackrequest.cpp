@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteStackRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteStackRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a DeleteStackRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 DeleteStackRequestPrivate::DeleteStackRequestPrivate(
     const AppStreamRequest::Action action, DeleteStackRequest * const q)

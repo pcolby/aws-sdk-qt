@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeStateMachineForExecutionResponse : public SFNResponse
 public:
     DescribeStateMachineForExecutionResponse(const DescribeStateMachineForExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeStateMachineForExecutionRequest * request() const;
+    virtual const DescribeStateMachineForExecutionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeStateMachineForExecutionResponse)

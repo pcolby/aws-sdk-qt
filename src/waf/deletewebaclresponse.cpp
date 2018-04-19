@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::DeleteWebACLResponse
- *
  * \brief The DeleteWebACLResponse class provides an interace for WAF DeleteWebACL responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new DeleteWebACLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteWebACLResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteWebACLResponse::DeleteWebACLResponse(
         const DeleteWebACLRequest &request,
@@ -60,6 +55,9 @@ DeleteWebACLResponse::DeleteWebACLResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteWebACLRequest * DeleteWebACLResponse::request() const
 {
     Q_D(const DeleteWebACLResponse);
@@ -67,9 +65,8 @@ const DeleteWebACLRequest * DeleteWebACLResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF DeleteWebACL response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF DeleteWebACL \a response.
  */
 void DeleteWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::DeleteWebACLResponsePrivate
+ * \brief The DeleteWebACLResponsePrivate class provides private implementation for DeleteWebACLResponse.
  * \internal
  *
- * \class DeleteWebACLResponsePrivate
- *
- * \brief Private implementation for DeleteWebACLResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteWebACLResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteWebACLResponse instance.
+ * Constructs a DeleteWebACLResponsePrivate object with public implementation \a q.
  */
 DeleteWebACLResponsePrivate::DeleteWebACLResponsePrivate(
     DeleteWebACLResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteWebACLResponsePrivate::DeleteWebACLResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF DeleteWebACLResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF DeleteWebACL response element from \a xml.
  */
 void DeleteWebACLResponsePrivate::parseDeleteWebACLResponse(QXmlStreamReader &xml)
 {

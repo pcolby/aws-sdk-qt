@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::StopNotebookInstanceResponse
- *
  * \brief The StopNotebookInstanceResponse class provides an interace for SageMaker StopNotebookInstance responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::stopNotebookInstance
  */
 
 /*!
- * @brief  Constructs a new StopNotebookInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopNotebookInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 StopNotebookInstanceResponse::StopNotebookInstanceResponse(
         const StopNotebookInstanceRequest &request,
@@ -55,6 +50,9 @@ StopNotebookInstanceResponse::StopNotebookInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopNotebookInstanceRequest * StopNotebookInstanceResponse::request() const
 {
     Q_D(const StopNotebookInstanceResponse);
@@ -62,9 +60,8 @@ const StopNotebookInstanceRequest * StopNotebookInstanceResponse::request() cons
 }
 
 /*!
- * @brief  Parse a SageMaker StopNotebookInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker StopNotebookInstance \a response.
  */
 void StopNotebookInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void StopNotebookInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::StopNotebookInstanceResponsePrivate
+ * \brief The StopNotebookInstanceResponsePrivate class provides private implementation for StopNotebookInstanceResponse.
  * \internal
  *
- * \class StopNotebookInstanceResponsePrivate
- *
- * \brief Private implementation for StopNotebookInstanceResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopNotebookInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopNotebookInstanceResponse instance.
+ * Constructs a StopNotebookInstanceResponsePrivate object with public implementation \a q.
  */
 StopNotebookInstanceResponsePrivate::StopNotebookInstanceResponsePrivate(
     StopNotebookInstanceResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ StopNotebookInstanceResponsePrivate::StopNotebookInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker StopNotebookInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker StopNotebookInstance response element from \a xml.
  */
 void StopNotebookInstanceResponsePrivate::parseStopNotebookInstanceResponse(QXmlStreamReader &xml)
 {

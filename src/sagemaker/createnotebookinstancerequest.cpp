@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateNotebookInstanceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateNotebookInstanceRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a CreateNotebookInstanceRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 CreateNotebookInstanceRequestPrivate::CreateNotebookInstanceRequestPrivate(
     const SageMakerRequest::Action action, CreateNotebookInstanceRequest * const q)

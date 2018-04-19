@@ -29,10 +29,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::DescribeProjectResponse
- *
  * \brief The DescribeProjectResponse class provides an interace for Mobile DescribeProject responses.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -42,11 +41,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new DescribeProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeProjectResponse::DescribeProjectResponse(
         const DescribeProjectRequest &request,
@@ -58,6 +53,9 @@ DescribeProjectResponse::DescribeProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeProjectRequest * DescribeProjectResponse::request() const
 {
     Q_D(const DescribeProjectResponse);
@@ -65,9 +63,8 @@ const DescribeProjectRequest * DescribeProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a Mobile DescribeProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Mobile DescribeProject \a response.
  */
 void DescribeProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Mobile::DescribeProjectResponsePrivate
+ * \brief The DescribeProjectResponsePrivate class provides private implementation for DescribeProjectResponse.
  * \internal
  *
- * \class DescribeProjectResponsePrivate
- *
- * \brief Private implementation for DescribeProjectResponse.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeProjectResponse instance.
+ * Constructs a DescribeProjectResponsePrivate object with public implementation \a q.
  */
 DescribeProjectResponsePrivate::DescribeProjectResponsePrivate(
     DescribeProjectResponse * const q) : MobileResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeProjectResponsePrivate::DescribeProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Mobile DescribeProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Mobile DescribeProject response element from \a xml.
  */
 void DescribeProjectResponsePrivate::parseDescribeProjectResponse(QXmlStreamReader &xml)
 {

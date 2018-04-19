@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketResponse
- *
  * \brief The DeleteBucketResponse class provides an interace for S3 DeleteBucket responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucket
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBucketResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBucketResponse::DeleteBucketResponse(
         const DeleteBucketRequest &request,
@@ -55,6 +50,9 @@ DeleteBucketResponse::DeleteBucketResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBucketRequest * DeleteBucketResponse::request() const
 {
     Q_D(const DeleteBucketResponse);
@@ -62,9 +60,8 @@ const DeleteBucketRequest * DeleteBucketResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 DeleteBucket response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 DeleteBucket \a response.
  */
 void DeleteBucketResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteBucketResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::DeleteBucketResponsePrivate
+ * \brief The DeleteBucketResponsePrivate class provides private implementation for DeleteBucketResponse.
  * \internal
  *
- * \class DeleteBucketResponsePrivate
- *
- * \brief Private implementation for DeleteBucketResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBucketResponse instance.
+ * Constructs a DeleteBucketResponsePrivate object with public implementation \a q.
  */
 DeleteBucketResponsePrivate::DeleteBucketResponsePrivate(
     DeleteBucketResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteBucketResponsePrivate::DeleteBucketResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 DeleteBucketResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 DeleteBucket response element from \a xml.
  */
 void DeleteBucketResponsePrivate::parseDeleteBucketResponse(QXmlStreamReader &xml)
 {

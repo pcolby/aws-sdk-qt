@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCommentRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteCommentRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCommentRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DeleteCommentRequestPrivate::DeleteCommentRequestPrivate(
     const WorkDocsRequest::Action action, DeleteCommentRequest * const q)

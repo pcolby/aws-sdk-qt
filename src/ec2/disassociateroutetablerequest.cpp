@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateRouteTableRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DisassociateRouteTableRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateRouteTableRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DisassociateRouteTableRequestPrivate::DisassociateRouteTableRequestPrivate(
     const EC2Request::Action action, DisassociateRouteTableRequest * const q)

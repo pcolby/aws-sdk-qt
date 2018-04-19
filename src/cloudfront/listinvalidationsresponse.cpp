@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListInvalidationsResponse
- *
  * \brief The ListInvalidationsResponse class provides an interace for CloudFront ListInvalidations responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListInvalidationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListInvalidationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListInvalidationsResponse::ListInvalidationsResponse(
         const ListInvalidationsRequest &request,
@@ -60,6 +55,9 @@ ListInvalidationsResponse::ListInvalidationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListInvalidationsRequest * ListInvalidationsResponse::request() const
 {
     Q_D(const ListInvalidationsResponse);
@@ -67,9 +65,8 @@ const ListInvalidationsRequest * ListInvalidationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFront ListInvalidations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront ListInvalidations \a response.
  */
 void ListInvalidationsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListInvalidationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::ListInvalidationsResponsePrivate
+ * \brief The ListInvalidationsResponsePrivate class provides private implementation for ListInvalidationsResponse.
  * \internal
  *
- * \class ListInvalidationsResponsePrivate
- *
- * \brief Private implementation for ListInvalidationsResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInvalidationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListInvalidationsResponse instance.
+ * Constructs a ListInvalidationsResponsePrivate object with public implementation \a q.
  */
 ListInvalidationsResponsePrivate::ListInvalidationsResponsePrivate(
     ListInvalidationsResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ ListInvalidationsResponsePrivate::ListInvalidationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFront ListInvalidationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront ListInvalidations response element from \a xml.
  */
 void ListInvalidationsResponsePrivate::parseListInvalidationsResponse(QXmlStreamReader &xml)
 {

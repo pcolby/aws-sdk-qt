@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * RegisterTargetsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a RegisterTargetsRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a RegisterTargetsRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 RegisterTargetsRequestPrivate::RegisterTargetsRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, RegisterTargetsRequest * const q)

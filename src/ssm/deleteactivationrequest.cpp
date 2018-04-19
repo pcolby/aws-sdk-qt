@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DeleteActivationRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteActivationRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteActivationRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DeleteActivationRequestPrivate::DeleteActivationRequestPrivate(
     const SSMRequest::Action action, DeleteActivationRequest * const q)

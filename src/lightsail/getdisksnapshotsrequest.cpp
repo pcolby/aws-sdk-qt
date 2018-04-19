@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetDiskSnapshotsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetDiskSnapshotsRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetDiskSnapshotsRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetDiskSnapshotsRequestPrivate::GetDiskSnapshotsRequestPrivate(
     const LightsailRequest::Action action, GetDiskSnapshotsRequest * const q)

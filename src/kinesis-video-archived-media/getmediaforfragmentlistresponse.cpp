@@ -29,21 +29,16 @@ namespace KinesisVideoArchivedMedia {
 
 /*!
  * \class QtAws::KinesisVideoArchivedMedia::GetMediaForFragmentListResponse
- *
  * \brief The GetMediaForFragmentListResponse class provides an interace for KinesisVideoArchivedMedia GetMediaForFragmentList responses.
  *
- * \ingroup KinesisVideoArchivedMedia
+ * \inmodule QtAwsKinesisVideoArchivedMedia
  *
  *
  * \sa KinesisVideoArchivedMediaClient::getMediaForFragmentList
  */
 
 /*!
- * @brief  Constructs a new GetMediaForFragmentListResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetMediaForFragmentListResponse object for \a reply to \a request, with parent \a parent.
  */
 GetMediaForFragmentListResponse::GetMediaForFragmentListResponse(
         const GetMediaForFragmentListRequest &request,
@@ -55,6 +50,9 @@ GetMediaForFragmentListResponse::GetMediaForFragmentListResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetMediaForFragmentListRequest * GetMediaForFragmentListResponse::request() const
 {
     Q_D(const GetMediaForFragmentListResponse);
@@ -62,9 +60,8 @@ const GetMediaForFragmentListRequest * GetMediaForFragmentListResponse::request(
 }
 
 /*!
- * @brief  Parse a KinesisVideoArchivedMedia GetMediaForFragmentList response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisVideoArchivedMedia GetMediaForFragmentList \a response.
  */
 void GetMediaForFragmentListResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetMediaForFragmentListResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisVideoArchivedMedia::GetMediaForFragmentListResponsePrivate
+ * \brief The GetMediaForFragmentListResponsePrivate class provides private implementation for GetMediaForFragmentListResponse.
  * \internal
  *
- * \class GetMediaForFragmentListResponsePrivate
- *
- * \brief Private implementation for GetMediaForFragmentListResponse.
+ * \inmodule QtAwsKinesisVideoArchivedMedia
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMediaForFragmentListResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetMediaForFragmentListResponse instance.
+ * Constructs a GetMediaForFragmentListResponsePrivate object with public implementation \a q.
  */
 GetMediaForFragmentListResponsePrivate::GetMediaForFragmentListResponsePrivate(
     GetMediaForFragmentListResponse * const q) : KinesisVideoArchivedMediaResponsePrivate(q)
@@ -95,9 +88,7 @@ GetMediaForFragmentListResponsePrivate::GetMediaForFragmentListResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisVideoArchivedMedia GetMediaForFragmentListResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisVideoArchivedMedia GetMediaForFragmentList response element from \a xml.
  */
 void GetMediaForFragmentListResponsePrivate::parseGetMediaForFragmentListResponse(QXmlStreamReader &xml)
 {

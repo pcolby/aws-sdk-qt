@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListResourceDataSyncResponse : public SSMResponse {
 public:
     ListResourceDataSyncResponse(const ListResourceDataSyncRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListResourceDataSyncRequest * request() const;
+    virtual const ListResourceDataSyncRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListResourceDataSyncResponse)

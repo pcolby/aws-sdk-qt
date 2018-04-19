@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::RequestCancelWorkflowExecutionResponse
- *
  * \brief The RequestCancelWorkflowExecutionResponse class provides an interace for SWF RequestCancelWorkflowExecution responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new RequestCancelWorkflowExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RequestCancelWorkflowExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 RequestCancelWorkflowExecutionResponse::RequestCancelWorkflowExecutionResponse(
         const RequestCancelWorkflowExecutionRequest &request,
@@ -71,6 +66,9 @@ RequestCancelWorkflowExecutionResponse::RequestCancelWorkflowExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RequestCancelWorkflowExecutionRequest * RequestCancelWorkflowExecutionResponse::request() const
 {
     Q_D(const RequestCancelWorkflowExecutionResponse);
@@ -78,9 +76,8 @@ const RequestCancelWorkflowExecutionRequest * RequestCancelWorkflowExecutionResp
 }
 
 /*!
- * @brief  Parse a SWF RequestCancelWorkflowExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF RequestCancelWorkflowExecution \a response.
  */
 void RequestCancelWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void RequestCancelWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::RequestCancelWorkflowExecutionResponsePrivate
+ * \brief The RequestCancelWorkflowExecutionResponsePrivate class provides private implementation for RequestCancelWorkflowExecutionResponse.
  * \internal
  *
- * \class RequestCancelWorkflowExecutionResponsePrivate
- *
- * \brief Private implementation for RequestCancelWorkflowExecutionResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RequestCancelWorkflowExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RequestCancelWorkflowExecutionResponse instance.
+ * Constructs a RequestCancelWorkflowExecutionResponsePrivate object with public implementation \a q.
  */
 RequestCancelWorkflowExecutionResponsePrivate::RequestCancelWorkflowExecutionResponsePrivate(
     RequestCancelWorkflowExecutionResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ RequestCancelWorkflowExecutionResponsePrivate::RequestCancelWorkflowExecutionRes
 }
 
 /*!
- * @brief  Parse an SWF RequestCancelWorkflowExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF RequestCancelWorkflowExecution response element from \a xml.
  */
 void RequestCancelWorkflowExecutionResponsePrivate::parseRequestCancelWorkflowExecutionResponse(QXmlStreamReader &xml)
 {

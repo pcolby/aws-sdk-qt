@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::AcceptMatchResponse
- *
  * \brief The AcceptMatchResponse class provides an interace for GameLift AcceptMatch responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new AcceptMatchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AcceptMatchResponse object for \a reply to \a request, with parent \a parent.
  */
 AcceptMatchResponse::AcceptMatchResponse(
         const AcceptMatchRequest &request,
@@ -491,6 +486,9 @@ AcceptMatchResponse::AcceptMatchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AcceptMatchRequest * AcceptMatchResponse::request() const
 {
     Q_D(const AcceptMatchResponse);
@@ -498,9 +496,8 @@ const AcceptMatchRequest * AcceptMatchResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift AcceptMatch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift AcceptMatch \a response.
  */
 void AcceptMatchResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void AcceptMatchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::AcceptMatchResponsePrivate
+ * \brief The AcceptMatchResponsePrivate class provides private implementation for AcceptMatchResponse.
  * \internal
  *
- * \class AcceptMatchResponsePrivate
- *
- * \brief Private implementation for AcceptMatchResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptMatchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AcceptMatchResponse instance.
+ * Constructs a AcceptMatchResponsePrivate object with public implementation \a q.
  */
 AcceptMatchResponsePrivate::AcceptMatchResponsePrivate(
     AcceptMatchResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ AcceptMatchResponsePrivate::AcceptMatchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift AcceptMatchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift AcceptMatch response element from \a xml.
  */
 void AcceptMatchResponsePrivate::parseAcceptMatchResponse(QXmlStreamReader &xml)
 {

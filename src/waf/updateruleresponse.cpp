@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateRuleResponse
- *
  * \brief The UpdateRuleResponse class provides an interace for WAF UpdateRule responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRuleResponse::UpdateRuleResponse(
         const UpdateRuleRequest &request,
@@ -60,6 +55,9 @@ UpdateRuleResponse::UpdateRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRuleRequest * UpdateRuleResponse::request() const
 {
     Q_D(const UpdateRuleResponse);
@@ -67,9 +65,8 @@ const UpdateRuleRequest * UpdateRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF UpdateRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF UpdateRule \a response.
  */
 void UpdateRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::UpdateRuleResponsePrivate
+ * \brief The UpdateRuleResponsePrivate class provides private implementation for UpdateRuleResponse.
  * \internal
  *
- * \class UpdateRuleResponsePrivate
- *
- * \brief Private implementation for UpdateRuleResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRuleResponse instance.
+ * Constructs a UpdateRuleResponsePrivate object with public implementation \a q.
  */
 UpdateRuleResponsePrivate::UpdateRuleResponsePrivate(
     UpdateRuleResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateRuleResponsePrivate::UpdateRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF UpdateRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF UpdateRule response element from \a xml.
  */
 void UpdateRuleResponsePrivate::parseUpdateRuleResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateIndexingConfigurationRequest::response(
  */
 
 /*!
- *
- * Constructs a UpdateIndexingConfigurationRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a UpdateIndexingConfigurationRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 UpdateIndexingConfigurationRequestPrivate::UpdateIndexingConfigurationRequestPrivate(
     const IoTRequest::Action action, UpdateIndexingConfigurationRequest * const q)

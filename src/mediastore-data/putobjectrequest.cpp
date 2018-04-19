@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * PutObjectRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a PutObjectRequestPrivate object for MediaStoreData \a action with,
- * public implementation \a q.
+ * Constructs a PutObjectRequestPrivate object for MediaStoreData \a action,
+ * with public implementation \a q.
  */
 PutObjectRequestPrivate::PutObjectRequestPrivate(
     const MediaStoreDataRequest::Action action, PutObjectRequest * const q)

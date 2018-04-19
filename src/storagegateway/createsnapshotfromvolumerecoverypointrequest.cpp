@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * CreateSnapshotFromVolumeRecoveryPointRequest:
  */
 
 /*!
- *
- * Constructs a CreateSnapshotFromVolumeRecoveryPointRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a CreateSnapshotFromVolumeRecoveryPointRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 CreateSnapshotFromVolumeRecoveryPointRequestPrivate::CreateSnapshotFromVolumeRecoveryPointRequestPrivate(
     const StorageGatewayRequest::Action action, CreateSnapshotFromVolumeRecoveryPointRequest * const q)

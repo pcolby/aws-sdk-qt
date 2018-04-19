@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::DescribeStepResponse
- *
  * \brief The DescribeStepResponse class provides an interace for EMR DescribeStep responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new DescribeStepResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStepResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStepResponse::DescribeStepResponse(
         const DescribeStepRequest &request,
@@ -58,6 +53,9 @@ DescribeStepResponse::DescribeStepResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStepRequest * DescribeStepResponse::request() const
 {
     Q_D(const DescribeStepResponse);
@@ -65,9 +63,8 @@ const DescribeStepRequest * DescribeStepResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR DescribeStep response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR DescribeStep \a response.
  */
 void DescribeStepResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeStepResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::DescribeStepResponsePrivate
+ * \brief The DescribeStepResponsePrivate class provides private implementation for DescribeStepResponse.
  * \internal
  *
- * \class DescribeStepResponsePrivate
- *
- * \brief Private implementation for DescribeStepResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStepResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStepResponse instance.
+ * Constructs a DescribeStepResponsePrivate object with public implementation \a q.
  */
 DescribeStepResponsePrivate::DescribeStepResponsePrivate(
     DescribeStepResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeStepResponsePrivate::DescribeStepResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR DescribeStepResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR DescribeStep response element from \a xml.
  */
 void DescribeStepResponsePrivate::parseDescribeStepResponse(QXmlStreamReader &xml)
 {

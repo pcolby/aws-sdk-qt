@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyInstanceCreditSpecificationRequest::res
  */
 
 /*!
- *
- * Constructs a ModifyInstanceCreditSpecificationRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyInstanceCreditSpecificationRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyInstanceCreditSpecificationRequestPrivate::ModifyInstanceCreditSpecificationRequestPrivate(
     const EC2Request::Action action, ModifyInstanceCreditSpecificationRequest * const q)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationPartsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetDocumentationPartsRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetDocumentationPartsRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetDocumentationPartsRequestPrivate::GetDocumentationPartsRequestPrivate(
     const APIGatewayRequest::Action action, GetDocumentationPartsRequest * const q)

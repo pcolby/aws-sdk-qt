@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribePatchBaselinesResponse
- *
  * \brief The DescribePatchBaselinesResponse class provides an interace for SSM DescribePatchBaselines responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribePatchBaselinesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePatchBaselinesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePatchBaselinesResponse::DescribePatchBaselinesResponse(
         const DescribePatchBaselinesRequest &request,
@@ -79,6 +74,9 @@ DescribePatchBaselinesResponse::DescribePatchBaselinesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePatchBaselinesRequest * DescribePatchBaselinesResponse::request() const
 {
     Q_D(const DescribePatchBaselinesResponse);
@@ -86,9 +84,8 @@ const DescribePatchBaselinesRequest * DescribePatchBaselinesResponse::request() 
 }
 
 /*!
- * @brief  Parse a SSM DescribePatchBaselines response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribePatchBaselines \a response.
  */
 void DescribePatchBaselinesResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribePatchBaselinesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribePatchBaselinesResponsePrivate
+ * \brief The DescribePatchBaselinesResponsePrivate class provides private implementation for DescribePatchBaselinesResponse.
  * \internal
  *
- * \class DescribePatchBaselinesResponsePrivate
- *
- * \brief Private implementation for DescribePatchBaselinesResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePatchBaselinesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePatchBaselinesResponse instance.
+ * Constructs a DescribePatchBaselinesResponsePrivate object with public implementation \a q.
  */
 DescribePatchBaselinesResponsePrivate::DescribePatchBaselinesResponsePrivate(
     DescribePatchBaselinesResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribePatchBaselinesResponsePrivate::DescribePatchBaselinesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DescribePatchBaselinesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribePatchBaselines response element from \a xml.
  */
 void DescribePatchBaselinesResponsePrivate::parseDescribePatchBaselinesResponse(QXmlStreamReader &xml)
 {

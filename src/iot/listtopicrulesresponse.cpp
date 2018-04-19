@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListTopicRulesResponse
- *
  * \brief The ListTopicRulesResponse class provides an interace for IoT ListTopicRules responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListTopicRulesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTopicRulesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTopicRulesResponse::ListTopicRulesResponse(
         const ListTopicRulesRequest &request,
@@ -66,6 +61,9 @@ ListTopicRulesResponse::ListTopicRulesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTopicRulesRequest * ListTopicRulesResponse::request() const
 {
     Q_D(const ListTopicRulesResponse);
@@ -73,9 +71,8 @@ const ListTopicRulesRequest * ListTopicRulesResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListTopicRules response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListTopicRules \a response.
  */
 void ListTopicRulesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListTopicRulesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListTopicRulesResponsePrivate
+ * \brief The ListTopicRulesResponsePrivate class provides private implementation for ListTopicRulesResponse.
  * \internal
  *
- * \class ListTopicRulesResponsePrivate
- *
- * \brief Private implementation for ListTopicRulesResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTopicRulesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTopicRulesResponse instance.
+ * Constructs a ListTopicRulesResponsePrivate object with public implementation \a q.
  */
 ListTopicRulesResponsePrivate::ListTopicRulesResponsePrivate(
     ListTopicRulesResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListTopicRulesResponsePrivate::ListTopicRulesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListTopicRulesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListTopicRules response element from \a xml.
  */
 void ListTopicRulesResponsePrivate::parseListTopicRulesResponse(QXmlStreamReader &xml)
 {

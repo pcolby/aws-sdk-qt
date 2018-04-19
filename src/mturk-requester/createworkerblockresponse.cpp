@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::CreateWorkerBlockResponse
- *
  * \brief The CreateWorkerBlockResponse class provides an interace for MTurk CreateWorkerBlock responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::createWorkerBlock
  */
 
 /*!
- * @brief  Constructs a new CreateWorkerBlockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateWorkerBlockResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateWorkerBlockResponse::CreateWorkerBlockResponse(
         const CreateWorkerBlockRequest &request,
@@ -55,6 +50,9 @@ CreateWorkerBlockResponse::CreateWorkerBlockResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateWorkerBlockRequest * CreateWorkerBlockResponse::request() const
 {
     Q_D(const CreateWorkerBlockResponse);
@@ -62,9 +60,8 @@ const CreateWorkerBlockRequest * CreateWorkerBlockResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk CreateWorkerBlock response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk CreateWorkerBlock \a response.
  */
 void CreateWorkerBlockResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateWorkerBlockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::CreateWorkerBlockResponsePrivate
+ * \brief The CreateWorkerBlockResponsePrivate class provides private implementation for CreateWorkerBlockResponse.
  * \internal
  *
- * \class CreateWorkerBlockResponsePrivate
- *
- * \brief Private implementation for CreateWorkerBlockResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateWorkerBlockResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateWorkerBlockResponse instance.
+ * Constructs a CreateWorkerBlockResponsePrivate object with public implementation \a q.
  */
 CreateWorkerBlockResponsePrivate::CreateWorkerBlockResponsePrivate(
     CreateWorkerBlockResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateWorkerBlockResponsePrivate::CreateWorkerBlockResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk CreateWorkerBlockResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk CreateWorkerBlock response element from \a xml.
  */
 void CreateWorkerBlockResponsePrivate::parseCreateWorkerBlockResponse(QXmlStreamReader &xml)
 {

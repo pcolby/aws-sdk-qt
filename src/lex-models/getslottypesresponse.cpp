@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::GetSlotTypesResponse
- *
  * \brief The GetSlotTypesResponse class provides an interace for LexModelBuildingService GetSlotTypes responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new GetSlotTypesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSlotTypesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSlotTypesResponse::GetSlotTypesResponse(
         const GetSlotTypesRequest &request,
@@ -59,6 +54,9 @@ GetSlotTypesResponse::GetSlotTypesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSlotTypesRequest * GetSlotTypesResponse::request() const
 {
     Q_D(const GetSlotTypesResponse);
@@ -66,9 +64,8 @@ const GetSlotTypesRequest * GetSlotTypesResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService GetSlotTypes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService GetSlotTypes \a response.
  */
 void GetSlotTypesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void GetSlotTypesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::GetSlotTypesResponsePrivate
+ * \brief The GetSlotTypesResponsePrivate class provides private implementation for GetSlotTypesResponse.
  * \internal
  *
- * \class GetSlotTypesResponsePrivate
- *
- * \brief Private implementation for GetSlotTypesResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSlotTypesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSlotTypesResponse instance.
+ * Constructs a GetSlotTypesResponsePrivate object with public implementation \a q.
  */
 GetSlotTypesResponsePrivate::GetSlotTypesResponsePrivate(
     GetSlotTypesResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ GetSlotTypesResponsePrivate::GetSlotTypesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService GetSlotTypesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService GetSlotTypes response element from \a xml.
  */
 void GetSlotTypesResponsePrivate::parseGetSlotTypesResponse(QXmlStreamReader &xml)
 {

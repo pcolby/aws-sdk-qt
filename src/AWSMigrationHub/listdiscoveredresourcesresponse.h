@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListDiscoveredResourcesResponse : public MigrationHubResponse
 public:
     ListDiscoveredResourcesResponse(const ListDiscoveredResourcesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListDiscoveredResourcesRequest * request() const;
+    virtual const ListDiscoveredResourcesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListDiscoveredResourcesResponse)

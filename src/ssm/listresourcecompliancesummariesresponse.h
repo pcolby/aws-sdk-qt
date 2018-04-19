@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListResourceComplianceSummariesResponse : public SSMResponse 
 public:
     ListResourceComplianceSummariesResponse(const ListResourceComplianceSummariesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListResourceComplianceSummariesRequest * request() const;
+    virtual const ListResourceComplianceSummariesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListResourceComplianceSummariesResponse)

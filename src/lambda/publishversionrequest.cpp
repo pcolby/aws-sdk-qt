@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * PublishVersionRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a PublishVersionRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a PublishVersionRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 PublishVersionRequestPrivate::PublishVersionRequestPrivate(
     const LambdaRequest::Action action, PublishVersionRequest * const q)

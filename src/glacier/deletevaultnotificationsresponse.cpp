@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::DeleteVaultNotificationsResponse
- *
  * \brief The DeleteVaultNotificationsResponse class provides an interace for Glacier DeleteVaultNotifications responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new DeleteVaultNotificationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVaultNotificationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVaultNotificationsResponse::DeleteVaultNotificationsResponse(
         const DeleteVaultNotificationsRequest &request,
@@ -93,6 +88,9 @@ DeleteVaultNotificationsResponse::DeleteVaultNotificationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVaultNotificationsRequest * DeleteVaultNotificationsResponse::request() const
 {
     Q_D(const DeleteVaultNotificationsResponse);
@@ -100,9 +98,8 @@ const DeleteVaultNotificationsRequest * DeleteVaultNotificationsResponse::reques
 }
 
 /*!
- * @brief  Parse a Glacier DeleteVaultNotifications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier DeleteVaultNotifications \a response.
  */
 void DeleteVaultNotificationsResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DeleteVaultNotificationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::DeleteVaultNotificationsResponsePrivate
+ * \brief The DeleteVaultNotificationsResponsePrivate class provides private implementation for DeleteVaultNotificationsResponse.
  * \internal
  *
- * \class DeleteVaultNotificationsResponsePrivate
- *
- * \brief Private implementation for DeleteVaultNotificationsResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVaultNotificationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVaultNotificationsResponse instance.
+ * Constructs a DeleteVaultNotificationsResponsePrivate object with public implementation \a q.
  */
 DeleteVaultNotificationsResponsePrivate::DeleteVaultNotificationsResponsePrivate(
     DeleteVaultNotificationsResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ DeleteVaultNotificationsResponsePrivate::DeleteVaultNotificationsResponsePrivate
 }
 
 /*!
- * @brief  Parse an Glacier DeleteVaultNotificationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier DeleteVaultNotifications response element from \a xml.
  */
 void DeleteVaultNotificationsResponsePrivate::parseDeleteVaultNotificationsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::UntagLogGroupResponse
- *
  * \brief The UntagLogGroupResponse class provides an interace for CloudWatchLogs UntagLogGroup responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new UntagLogGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UntagLogGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 UntagLogGroupResponse::UntagLogGroupResponse(
         const UntagLogGroupRequest &request,
@@ -84,6 +79,9 @@ UntagLogGroupResponse::UntagLogGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UntagLogGroupRequest * UntagLogGroupResponse::request() const
 {
     Q_D(const UntagLogGroupResponse);
@@ -91,9 +89,8 @@ const UntagLogGroupRequest * UntagLogGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs UntagLogGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs UntagLogGroup \a response.
  */
 void UntagLogGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void UntagLogGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::UntagLogGroupResponsePrivate
+ * \brief The UntagLogGroupResponsePrivate class provides private implementation for UntagLogGroupResponse.
  * \internal
  *
- * \class UntagLogGroupResponsePrivate
- *
- * \brief Private implementation for UntagLogGroupResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagLogGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UntagLogGroupResponse instance.
+ * Constructs a UntagLogGroupResponsePrivate object with public implementation \a q.
  */
 UntagLogGroupResponsePrivate::UntagLogGroupResponsePrivate(
     UntagLogGroupResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ UntagLogGroupResponsePrivate::UntagLogGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs UntagLogGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs UntagLogGroup response element from \a xml.
  */
 void UntagLogGroupResponsePrivate::parseUntagLogGroupResponse(QXmlStreamReader &xml)
 {

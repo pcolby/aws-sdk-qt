@@ -29,10 +29,9 @@ namespace Budgets {
 
 /*!
  * \class QtAws::Budgets::DeleteNotificationResponse
- *
  * \brief The DeleteNotificationResponse class provides an interace for Budgets DeleteNotification responses.
  *
- * \ingroup Budgets
+ * \inmodule QtAwsBudgets
  *
  *  Budgets enable you to plan your service usage, service costs, and your RI utilization. You can also track how close your
  *  plan is to your budgeted amount or to the free tier limits. Budgets provide you with a quick way to see your
@@ -77,11 +76,7 @@ namespace Budgets {
  */
 
 /*!
- * @brief  Constructs a new DeleteNotificationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteNotificationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteNotificationResponse::DeleteNotificationResponse(
         const DeleteNotificationRequest &request,
@@ -93,6 +88,9 @@ DeleteNotificationResponse::DeleteNotificationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteNotificationRequest * DeleteNotificationResponse::request() const
 {
     Q_D(const DeleteNotificationResponse);
@@ -100,9 +98,8 @@ const DeleteNotificationRequest * DeleteNotificationResponse::request() const
 }
 
 /*!
- * @brief  Parse a Budgets DeleteNotification response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Budgets DeleteNotification \a response.
  */
 void DeleteNotificationResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DeleteNotificationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Budgets::DeleteNotificationResponsePrivate
+ * \brief The DeleteNotificationResponsePrivate class provides private implementation for DeleteNotificationResponse.
  * \internal
  *
- * \class DeleteNotificationResponsePrivate
- *
- * \brief Private implementation for DeleteNotificationResponse.
+ * \inmodule QtAwsBudgets
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteNotificationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteNotificationResponse instance.
+ * Constructs a DeleteNotificationResponsePrivate object with public implementation \a q.
  */
 DeleteNotificationResponsePrivate::DeleteNotificationResponsePrivate(
     DeleteNotificationResponse * const q) : BudgetsResponsePrivate(q)
@@ -133,9 +126,7 @@ DeleteNotificationResponsePrivate::DeleteNotificationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Budgets DeleteNotificationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Budgets DeleteNotification response element from \a xml.
  */
 void DeleteNotificationResponsePrivate::parseDeleteNotificationResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateTemplateRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a UpdateTemplateRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a UpdateTemplateRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 UpdateTemplateRequestPrivate::UpdateTemplateRequestPrivate(
     const SESRequest::Action action, UpdateTemplateRequest * const q)

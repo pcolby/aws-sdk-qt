@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AttachClassicLinkVpcResponse
- *
  * \brief The AttachClassicLinkVpcResponse class provides an interace for EC2 AttachClassicLinkVpc responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AttachClassicLinkVpcResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachClassicLinkVpcResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachClassicLinkVpcResponse::AttachClassicLinkVpcResponse(
         const AttachClassicLinkVpcRequest &request,
@@ -59,6 +54,9 @@ AttachClassicLinkVpcResponse::AttachClassicLinkVpcResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachClassicLinkVpcRequest * AttachClassicLinkVpcResponse::request() const
 {
     Q_D(const AttachClassicLinkVpcResponse);
@@ -66,9 +64,8 @@ const AttachClassicLinkVpcRequest * AttachClassicLinkVpcResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 AttachClassicLinkVpc response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AttachClassicLinkVpc \a response.
  */
 void AttachClassicLinkVpcResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AttachClassicLinkVpcResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AttachClassicLinkVpcResponsePrivate
+ * \brief The AttachClassicLinkVpcResponsePrivate class provides private implementation for AttachClassicLinkVpcResponse.
  * \internal
  *
- * \class AttachClassicLinkVpcResponsePrivate
- *
- * \brief Private implementation for AttachClassicLinkVpcResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachClassicLinkVpcResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachClassicLinkVpcResponse instance.
+ * Constructs a AttachClassicLinkVpcResponsePrivate object with public implementation \a q.
  */
 AttachClassicLinkVpcResponsePrivate::AttachClassicLinkVpcResponsePrivate(
     AttachClassicLinkVpcResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AttachClassicLinkVpcResponsePrivate::AttachClassicLinkVpcResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 AttachClassicLinkVpcResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AttachClassicLinkVpc response element from \a xml.
  */
 void AttachClassicLinkVpcResponsePrivate::parseAttachClassicLinkVpcResponse(QXmlStreamReader &xml)
 {

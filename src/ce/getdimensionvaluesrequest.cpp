@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * GetDimensionValuesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetDimensionValuesRequestPrivate object for CostExplorer \a action with,
- * public implementation \a q.
+ * Constructs a GetDimensionValuesRequestPrivate object for CostExplorer \a action,
+ * with public implementation \a q.
  */
 GetDimensionValuesRequestPrivate::GetDimensionValuesRequestPrivate(
     const CostExplorerRequest::Action action, GetDimensionValuesRequest * const q)

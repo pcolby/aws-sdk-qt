@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * UpdateCertificateOptionsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateCertificateOptionsRequestPrivate object for ACM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateCertificateOptionsRequestPrivate object for ACM \a action,
+ * with public implementation \a q.
  */
 UpdateCertificateOptionsRequestPrivate::UpdateCertificateOptionsRequestPrivate(
     const ACMRequest::Action action, UpdateCertificateOptionsRequest * const q)

@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUICustomizationResponse
- *
  * \brief The SetUICustomizationResponse class provides an interace for CognitoIdentityProvider SetUICustomization responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new SetUICustomizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetUICustomizationResponse object for \a reply to \a request, with parent \a parent.
  */
 SetUICustomizationResponse::SetUICustomizationResponse(
         const SetUICustomizationRequest &request,
@@ -65,6 +60,9 @@ SetUICustomizationResponse::SetUICustomizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetUICustomizationRequest * SetUICustomizationResponse::request() const
 {
     Q_D(const SetUICustomizationResponse);
@@ -72,9 +70,8 @@ const SetUICustomizationRequest * SetUICustomizationResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider SetUICustomization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider SetUICustomization \a response.
  */
 void SetUICustomizationResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void SetUICustomizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::SetUICustomizationResponsePrivate
+ * \brief The SetUICustomizationResponsePrivate class provides private implementation for SetUICustomizationResponse.
  * \internal
  *
- * \class SetUICustomizationResponsePrivate
- *
- * \brief Private implementation for SetUICustomizationResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetUICustomizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetUICustomizationResponse instance.
+ * Constructs a SetUICustomizationResponsePrivate object with public implementation \a q.
  */
 SetUICustomizationResponsePrivate::SetUICustomizationResponsePrivate(
     SetUICustomizationResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ SetUICustomizationResponsePrivate::SetUICustomizationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider SetUICustomizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider SetUICustomization response element from \a xml.
  */
 void SetUICustomizationResponsePrivate::parseSetUICustomizationResponse(QXmlStreamReader &xml)
 {

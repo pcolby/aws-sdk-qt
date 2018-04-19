@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribePrincipalIdFormatResponse
- *
  * \brief The DescribePrincipalIdFormatResponse class provides an interace for EC2 DescribePrincipalIdFormat responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribePrincipalIdFormatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePrincipalIdFormatResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePrincipalIdFormatResponse::DescribePrincipalIdFormatResponse(
         const DescribePrincipalIdFormatRequest &request,
@@ -59,6 +54,9 @@ DescribePrincipalIdFormatResponse::DescribePrincipalIdFormatResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePrincipalIdFormatRequest * DescribePrincipalIdFormatResponse::request() const
 {
     Q_D(const DescribePrincipalIdFormatResponse);
@@ -66,9 +64,8 @@ const DescribePrincipalIdFormatRequest * DescribePrincipalIdFormatResponse::requ
 }
 
 /*!
- * @brief  Parse a EC2 DescribePrincipalIdFormat response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribePrincipalIdFormat \a response.
  */
 void DescribePrincipalIdFormatResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribePrincipalIdFormatResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribePrincipalIdFormatResponsePrivate
+ * \brief The DescribePrincipalIdFormatResponsePrivate class provides private implementation for DescribePrincipalIdFormatResponse.
  * \internal
  *
- * \class DescribePrincipalIdFormatResponsePrivate
- *
- * \brief Private implementation for DescribePrincipalIdFormatResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePrincipalIdFormatResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePrincipalIdFormatResponse instance.
+ * Constructs a DescribePrincipalIdFormatResponsePrivate object with public implementation \a q.
  */
 DescribePrincipalIdFormatResponsePrivate::DescribePrincipalIdFormatResponsePrivate(
     DescribePrincipalIdFormatResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribePrincipalIdFormatResponsePrivate::DescribePrincipalIdFormatResponsePriva
 }
 
 /*!
- * @brief  Parse an EC2 DescribePrincipalIdFormatResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribePrincipalIdFormat response element from \a xml.
  */
 void DescribePrincipalIdFormatResponsePrivate::parseDescribePrincipalIdFormatResponse(QXmlStreamReader &xml)
 {

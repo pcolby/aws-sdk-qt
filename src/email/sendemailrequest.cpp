@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SendEmailRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a SendEmailRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a SendEmailRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 SendEmailRequestPrivate::SendEmailRequestPrivate(
     const SESRequest::Action action, SendEmailRequest * const q)

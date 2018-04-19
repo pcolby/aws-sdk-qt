@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * StartInstancesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a StartInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a StartInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 StartInstancesRequestPrivate::StartInstancesRequestPrivate(
     const EC2Request::Action action, StartInstancesRequest * const q)

@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::IncreaseStreamRetentionPeriodResponse
- *
  * \brief The IncreaseStreamRetentionPeriodResponse class provides an interace for Kinesis IncreaseStreamRetentionPeriod responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new IncreaseStreamRetentionPeriodResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a IncreaseStreamRetentionPeriodResponse object for \a reply to \a request, with parent \a parent.
  */
 IncreaseStreamRetentionPeriodResponse::IncreaseStreamRetentionPeriodResponse(
         const IncreaseStreamRetentionPeriodRequest &request,
@@ -58,6 +53,9 @@ IncreaseStreamRetentionPeriodResponse::IncreaseStreamRetentionPeriodResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const IncreaseStreamRetentionPeriodRequest * IncreaseStreamRetentionPeriodResponse::request() const
 {
     Q_D(const IncreaseStreamRetentionPeriodResponse);
@@ -65,9 +63,8 @@ const IncreaseStreamRetentionPeriodRequest * IncreaseStreamRetentionPeriodRespon
 }
 
 /*!
- * @brief  Parse a Kinesis IncreaseStreamRetentionPeriod response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis IncreaseStreamRetentionPeriod \a response.
  */
 void IncreaseStreamRetentionPeriodResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void IncreaseStreamRetentionPeriodResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::IncreaseStreamRetentionPeriodResponsePrivate
+ * \brief The IncreaseStreamRetentionPeriodResponsePrivate class provides private implementation for IncreaseStreamRetentionPeriodResponse.
  * \internal
  *
- * \class IncreaseStreamRetentionPeriodResponsePrivate
- *
- * \brief Private implementation for IncreaseStreamRetentionPeriodResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IncreaseStreamRetentionPeriodResponsePrivate object.
- *
- * @param  q  Pointer to this object's public IncreaseStreamRetentionPeriodResponse instance.
+ * Constructs a IncreaseStreamRetentionPeriodResponsePrivate object with public implementation \a q.
  */
 IncreaseStreamRetentionPeriodResponsePrivate::IncreaseStreamRetentionPeriodResponsePrivate(
     IncreaseStreamRetentionPeriodResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ IncreaseStreamRetentionPeriodResponsePrivate::IncreaseStreamRetentionPeriodRespo
 }
 
 /*!
- * @brief  Parse an Kinesis IncreaseStreamRetentionPeriodResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis IncreaseStreamRetentionPeriod response element from \a xml.
  */
 void IncreaseStreamRetentionPeriodResponsePrivate::parseIncreaseStreamRetentionPeriodResponse(QXmlStreamReader &xml)
 {

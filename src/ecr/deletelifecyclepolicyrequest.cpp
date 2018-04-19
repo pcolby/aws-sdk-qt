@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecyclePolicyRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteLifecyclePolicyRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLifecyclePolicyRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 DeleteLifecyclePolicyRequestPrivate::DeleteLifecyclePolicyRequestPrivate(
     const ECRRequest::Action action, DeleteLifecyclePolicyRequest * const q)

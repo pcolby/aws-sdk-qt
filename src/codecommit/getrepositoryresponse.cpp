@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetRepositoryResponse
- *
  * \brief The GetRepositoryResponse class provides an interace for CodeCommit GetRepository responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetRepositoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRepositoryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRepositoryResponse::GetRepositoryResponse(
         const GetRepositoryRequest &request,
@@ -245,6 +240,9 @@ GetRepositoryResponse::GetRepositoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRepositoryRequest * GetRepositoryResponse::request() const
 {
     Q_D(const GetRepositoryResponse);
@@ -252,9 +250,8 @@ const GetRepositoryRequest * GetRepositoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit GetRepository response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit GetRepository \a response.
  */
 void GetRepositoryResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void GetRepositoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::GetRepositoryResponsePrivate
+ * \brief The GetRepositoryResponsePrivate class provides private implementation for GetRepositoryResponse.
  * \internal
  *
- * \class GetRepositoryResponsePrivate
- *
- * \brief Private implementation for GetRepositoryResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRepositoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRepositoryResponse instance.
+ * Constructs a GetRepositoryResponsePrivate object with public implementation \a q.
  */
 GetRepositoryResponsePrivate::GetRepositoryResponsePrivate(
     GetRepositoryResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ GetRepositoryResponsePrivate::GetRepositoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit GetRepositoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit GetRepository response element from \a xml.
  */
 void GetRepositoryResponsePrivate::parseGetRepositoryResponse(QXmlStreamReader &xml)
 {

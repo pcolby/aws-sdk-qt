@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBackupRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteBackupRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBackupRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 DeleteBackupRequestPrivate::DeleteBackupRequestPrivate(
     const OpsWorksCMRequest::Action action, DeleteBackupRequest * const q)

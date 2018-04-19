@@ -34,10 +34,10 @@ class QTAWS_EXPORT NotifyWorkersResponse : public MTurkResponse {
 public:
     NotifyWorkersResponse(const NotifyWorkersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const NotifyWorkersRequest * request() const;
+    virtual const NotifyWorkersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(NotifyWorkersResponse)

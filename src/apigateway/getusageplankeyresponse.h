@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetUsagePlanKeyResponse : public APIGatewayResponse {
 public:
     GetUsagePlanKeyResponse(const GetUsagePlanKeyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetUsagePlanKeyRequest * request() const;
+    virtual const GetUsagePlanKeyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetUsagePlanKeyResponse)

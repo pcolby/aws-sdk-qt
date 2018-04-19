@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEndpointsRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribeEndpointsRequestPrivate object for MediaConvert \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEndpointsRequestPrivate object for MediaConvert \a action,
+ * with public implementation \a q.
  */
 DescribeEndpointsRequestPrivate::DescribeEndpointsRequestPrivate(
     const MediaConvertRequest::Action action, DescribeEndpointsRequest * const q)

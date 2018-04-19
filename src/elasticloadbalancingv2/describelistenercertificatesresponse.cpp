@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeListenerCertificatesResponse
- *
  * \brief The DescribeListenerCertificatesResponse class provides an interace for ElasticLoadBalancingv2 DescribeListenerCertificates responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeListenerCertificatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeListenerCertificatesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeListenerCertificatesResponse::DescribeListenerCertificatesResponse(
         const DescribeListenerCertificatesRequest &request,
@@ -123,6 +118,9 @@ DescribeListenerCertificatesResponse::DescribeListenerCertificatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeListenerCertificatesRequest * DescribeListenerCertificatesResponse::request() const
 {
     Q_D(const DescribeListenerCertificatesResponse);
@@ -130,9 +128,8 @@ const DescribeListenerCertificatesRequest * DescribeListenerCertificatesResponse
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 DescribeListenerCertificates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 DescribeListenerCertificates \a response.
  */
 void DescribeListenerCertificatesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeListenerCertificatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::DescribeListenerCertificatesResponsePrivate
+ * \brief The DescribeListenerCertificatesResponsePrivate class provides private implementation for DescribeListenerCertificatesResponse.
  * \internal
  *
- * \class DescribeListenerCertificatesResponsePrivate
- *
- * \brief Private implementation for DescribeListenerCertificatesResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeListenerCertificatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeListenerCertificatesResponse instance.
+ * Constructs a DescribeListenerCertificatesResponsePrivate object with public implementation \a q.
  */
 DescribeListenerCertificatesResponsePrivate::DescribeListenerCertificatesResponsePrivate(
     DescribeListenerCertificatesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeListenerCertificatesResponsePrivate::DescribeListenerCertificatesRespons
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 DescribeListenerCertificatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 DescribeListenerCertificates response element from \a xml.
  */
 void DescribeListenerCertificatesResponsePrivate::parseDescribeListenerCertificatesResponse(QXmlStreamReader &xml)
 {

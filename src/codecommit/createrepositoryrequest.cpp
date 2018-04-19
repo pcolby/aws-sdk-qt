@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * CreateRepositoryRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateRepositoryRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a CreateRepositoryRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 CreateRepositoryRequestPrivate::CreateRepositoryRequestPrivate(
     const CodeCommitRequest::Action action, CreateRepositoryRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeElasticsearchInstanceTypeLimitsResponse : public Elas
 public:
     DescribeElasticsearchInstanceTypeLimitsResponse(const DescribeElasticsearchInstanceTypeLimitsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeElasticsearchInstanceTypeLimitsRequest * request() const;
+    virtual const DescribeElasticsearchInstanceTypeLimitsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeElasticsearchInstanceTypeLimitsResponse)

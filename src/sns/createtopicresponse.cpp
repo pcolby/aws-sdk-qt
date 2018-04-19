@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::CreateTopicResponse
- *
  * \brief The CreateTopicResponse class provides an interace for SNS CreateTopic responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new CreateTopicResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTopicResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTopicResponse::CreateTopicResponse(
         const CreateTopicRequest &request,
@@ -69,6 +64,9 @@ CreateTopicResponse::CreateTopicResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTopicRequest * CreateTopicResponse::request() const
 {
     Q_D(const CreateTopicResponse);
@@ -76,9 +74,8 @@ const CreateTopicRequest * CreateTopicResponse::request() const
 }
 
 /*!
- * @brief  Parse a SNS CreateTopic response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS CreateTopic \a response.
  */
 void CreateTopicResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateTopicResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::CreateTopicResponsePrivate
+ * \brief The CreateTopicResponsePrivate class provides private implementation for CreateTopicResponse.
  * \internal
  *
- * \class CreateTopicResponsePrivate
- *
- * \brief Private implementation for CreateTopicResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTopicResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTopicResponse instance.
+ * Constructs a CreateTopicResponsePrivate object with public implementation \a q.
  */
 CreateTopicResponsePrivate::CreateTopicResponsePrivate(
     CreateTopicResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateTopicResponsePrivate::CreateTopicResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS CreateTopicResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS CreateTopic response element from \a xml.
  */
 void CreateTopicResponsePrivate::parseCreateTopicResponse(QXmlStreamReader &xml)
 {

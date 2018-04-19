@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * DeleteElasticsearchDomainRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DeleteElasticsearchDomainRequestPrivate object for ElasticsearchService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteElasticsearchDomainRequestPrivate object for ElasticsearchService \a action,
+ * with public implementation \a q.
  */
 DeleteElasticsearchDomainRequestPrivate::DeleteElasticsearchDomainRequestPrivate(
     const ElasticsearchServiceRequest::Action action, DeleteElasticsearchDomainRequest * const q)

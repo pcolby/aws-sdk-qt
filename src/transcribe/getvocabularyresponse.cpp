@@ -29,10 +29,9 @@ namespace TranscribeService {
 
 /*!
  * \class QtAws::TranscribeService::GetVocabularyResponse
- *
  * \brief The GetVocabularyResponse class provides an interace for TranscribeService GetVocabulary responses.
  *
- * \ingroup TranscribeService
+ * \inmodule QtAwsTranscribeService
  *
  *  Operations and objects for transcribing speech to
  *
@@ -40,11 +39,7 @@ namespace TranscribeService {
  */
 
 /*!
- * @brief  Constructs a new GetVocabularyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetVocabularyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetVocabularyResponse::GetVocabularyResponse(
         const GetVocabularyRequest &request,
@@ -56,6 +51,9 @@ GetVocabularyResponse::GetVocabularyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetVocabularyRequest * GetVocabularyResponse::request() const
 {
     Q_D(const GetVocabularyResponse);
@@ -63,9 +61,8 @@ const GetVocabularyRequest * GetVocabularyResponse::request() const
 }
 
 /*!
- * @brief  Parse a TranscribeService GetVocabulary response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful TranscribeService GetVocabulary \a response.
  */
 void GetVocabularyResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetVocabularyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::TranscribeService::GetVocabularyResponsePrivate
+ * \brief The GetVocabularyResponsePrivate class provides private implementation for GetVocabularyResponse.
  * \internal
  *
- * \class GetVocabularyResponsePrivate
- *
- * \brief Private implementation for GetVocabularyResponse.
+ * \inmodule QtAwsTranscribeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetVocabularyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetVocabularyResponse instance.
+ * Constructs a GetVocabularyResponsePrivate object with public implementation \a q.
  */
 GetVocabularyResponsePrivate::GetVocabularyResponsePrivate(
     GetVocabularyResponse * const q) : TranscribeServiceResponsePrivate(q)
@@ -96,9 +89,7 @@ GetVocabularyResponsePrivate::GetVocabularyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an TranscribeService GetVocabularyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a TranscribeService GetVocabulary response element from \a xml.
  */
 void GetVocabularyResponsePrivate::parseGetVocabularyResponse(QXmlStreamReader &xml)
 {

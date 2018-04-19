@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDistributionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateDistributionRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDistributionRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 UpdateDistributionRequestPrivate::UpdateDistributionRequestPrivate(
     const CloudFrontRequest::Action action, UpdateDistributionRequest * const q)

@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * UpdateElasticsearchDomainConfigRequest::respo
  */
 
 /*!
- *
- * Constructs a UpdateElasticsearchDomainConfigRequestPrivate object for ElasticsearchService \a action with,
- * public implementation \a q.
+ * Constructs a UpdateElasticsearchDomainConfigRequestPrivate object for ElasticsearchService \a action,
+ * with public implementation \a q.
  */
 UpdateElasticsearchDomainConfigRequestPrivate::UpdateElasticsearchDomainConfigRequestPrivate(
     const ElasticsearchServiceRequest::Action action, UpdateElasticsearchDomainConfigRequest * const q)

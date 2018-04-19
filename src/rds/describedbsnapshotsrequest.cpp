@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDBSnapshotsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeDBSnapshotsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDBSnapshotsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeDBSnapshotsRequestPrivate::DescribeDBSnapshotsRequestPrivate(
     const RDSRequest::Action action, DescribeDBSnapshotsRequest * const q)

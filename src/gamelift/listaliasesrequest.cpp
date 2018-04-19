@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * ListAliasesRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListAliasesRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a ListAliasesRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 ListAliasesRequestPrivate::ListAliasesRequestPrivate(
     const GameLiftRequest::Action action, ListAliasesRequest * const q)

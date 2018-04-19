@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateFlowLogsResponse
- *
  * \brief The CreateFlowLogsResponse class provides an interace for EC2 CreateFlowLogs responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateFlowLogsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateFlowLogsResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateFlowLogsResponse::CreateFlowLogsResponse(
         const CreateFlowLogsRequest &request,
@@ -59,6 +54,9 @@ CreateFlowLogsResponse::CreateFlowLogsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateFlowLogsRequest * CreateFlowLogsResponse::request() const
 {
     Q_D(const CreateFlowLogsResponse);
@@ -66,9 +64,8 @@ const CreateFlowLogsRequest * CreateFlowLogsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateFlowLogs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateFlowLogs \a response.
  */
 void CreateFlowLogsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateFlowLogsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateFlowLogsResponsePrivate
+ * \brief The CreateFlowLogsResponsePrivate class provides private implementation for CreateFlowLogsResponse.
  * \internal
  *
- * \class CreateFlowLogsResponsePrivate
- *
- * \brief Private implementation for CreateFlowLogsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateFlowLogsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateFlowLogsResponse instance.
+ * Constructs a CreateFlowLogsResponsePrivate object with public implementation \a q.
  */
 CreateFlowLogsResponsePrivate::CreateFlowLogsResponsePrivate(
     CreateFlowLogsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateFlowLogsResponsePrivate::CreateFlowLogsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateFlowLogsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateFlowLogs response element from \a xml.
  */
 void CreateFlowLogsResponsePrivate::parseCreateFlowLogsResponse(QXmlStreamReader &xml)
 {

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListJobsByStatusRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListJobsByStatusRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a ListJobsByStatusRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 ListJobsByStatusRequestPrivate::ListJobsByStatusRequestPrivate(
     const ElasticTranscoderRequest::Action action, ListJobsByStatusRequest * const q)

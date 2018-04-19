@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAccountSummaryResponse : public IAMResponse {
 public:
     GetAccountSummaryResponse(const GetAccountSummaryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAccountSummaryRequest * request() const;
+    virtual const GetAccountSummaryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetAccountSummaryResponse)

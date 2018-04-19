@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetChangeResponse
- *
  * \brief The GetChangeResponse class provides an interace for Route53 GetChange responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getChange
  */
 
 /*!
- * @brief  Constructs a new GetChangeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetChangeResponse object for \a reply to \a request, with parent \a parent.
  */
 GetChangeResponse::GetChangeResponse(
         const GetChangeRequest &request,
@@ -55,6 +50,9 @@ GetChangeResponse::GetChangeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetChangeRequest * GetChangeResponse::request() const
 {
     Q_D(const GetChangeResponse);
@@ -62,9 +60,8 @@ const GetChangeRequest * GetChangeResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 GetChange response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetChange \a response.
  */
 void GetChangeResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetChangeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetChangeResponsePrivate
+ * \brief The GetChangeResponsePrivate class provides private implementation for GetChangeResponse.
  * \internal
  *
- * \class GetChangeResponsePrivate
- *
- * \brief Private implementation for GetChangeResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetChangeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetChangeResponse instance.
+ * Constructs a GetChangeResponsePrivate object with public implementation \a q.
  */
 GetChangeResponsePrivate::GetChangeResponsePrivate(
     GetChangeResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetChangeResponsePrivate::GetChangeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 GetChangeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetChange response element from \a xml.
  */
 void GetChangeResponsePrivate::parseGetChangeResponse(QXmlStreamReader &xml)
 {

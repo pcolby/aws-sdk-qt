@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteAppResponse : public OpsWorksResponse {
 public:
     DeleteAppResponse(const DeleteAppRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAppRequest * request() const;
+    virtual const DeleteAppRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteAppResponse)

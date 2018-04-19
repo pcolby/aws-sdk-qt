@@ -29,10 +29,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::GetPolicyResponse
- *
  * \brief The GetPolicyResponse class provides an interace for FMS GetPolicy responses.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -45,11 +44,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new GetPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPolicyResponse::GetPolicyResponse(
         const GetPolicyRequest &request,
@@ -61,6 +56,9 @@ GetPolicyResponse::GetPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPolicyRequest * GetPolicyResponse::request() const
 {
     Q_D(const GetPolicyResponse);
@@ -68,9 +66,8 @@ const GetPolicyRequest * GetPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a FMS GetPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful FMS GetPolicy \a response.
  */
 void GetPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void GetPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::FMS::GetPolicyResponsePrivate
+ * \brief The GetPolicyResponsePrivate class provides private implementation for GetPolicyResponse.
  * \internal
  *
- * \class GetPolicyResponsePrivate
- *
- * \brief Private implementation for GetPolicyResponse.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPolicyResponse instance.
+ * Constructs a GetPolicyResponsePrivate object with public implementation \a q.
  */
 GetPolicyResponsePrivate::GetPolicyResponsePrivate(
     GetPolicyResponse * const q) : FMSResponsePrivate(q)
@@ -101,9 +94,7 @@ GetPolicyResponsePrivate::GetPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an FMS GetPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a FMS GetPolicy response element from \a xml.
  */
 void GetPolicyResponsePrivate::parseGetPolicyResponse(QXmlStreamReader &xml)
 {

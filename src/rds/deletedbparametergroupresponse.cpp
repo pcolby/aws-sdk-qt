@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteDBParameterGroupResponse
- *
  * \brief The DeleteDBParameterGroupResponse class provides an interace for RDS DeleteDBParameterGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteDBParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDBParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDBParameterGroupResponse::DeleteDBParameterGroupResponse(
         const DeleteDBParameterGroupRequest &request,
@@ -119,6 +114,9 @@ DeleteDBParameterGroupResponse::DeleteDBParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDBParameterGroupRequest * DeleteDBParameterGroupResponse::request() const
 {
     Q_D(const DeleteDBParameterGroupResponse);
@@ -126,9 +124,8 @@ const DeleteDBParameterGroupRequest * DeleteDBParameterGroupResponse::request() 
 }
 
 /*!
- * @brief  Parse a RDS DeleteDBParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DeleteDBParameterGroup \a response.
  */
 void DeleteDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DeleteDBParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DeleteDBParameterGroupResponsePrivate
+ * \brief The DeleteDBParameterGroupResponsePrivate class provides private implementation for DeleteDBParameterGroupResponse.
  * \internal
  *
- * \class DeleteDBParameterGroupResponsePrivate
- *
- * \brief Private implementation for DeleteDBParameterGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDBParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDBParameterGroupResponse instance.
+ * Constructs a DeleteDBParameterGroupResponsePrivate object with public implementation \a q.
  */
 DeleteDBParameterGroupResponsePrivate::DeleteDBParameterGroupResponsePrivate(
     DeleteDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DeleteDBParameterGroupResponsePrivate::DeleteDBParameterGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DeleteDBParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DeleteDBParameterGroup response element from \a xml.
  */
 void DeleteDBParameterGroupResponsePrivate::parseDeleteDBParameterGroupResponse(QXmlStreamReader &xml)
 {

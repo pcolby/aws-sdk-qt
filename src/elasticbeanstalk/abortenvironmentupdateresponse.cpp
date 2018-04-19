@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::AbortEnvironmentUpdateResponse
- *
  * \brief The AbortEnvironmentUpdateResponse class provides an interace for ElasticBeanstalk AbortEnvironmentUpdate responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new AbortEnvironmentUpdateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AbortEnvironmentUpdateResponse object for \a reply to \a request, with parent \a parent.
  */
 AbortEnvironmentUpdateResponse::AbortEnvironmentUpdateResponse(
         const AbortEnvironmentUpdateRequest &request,
@@ -77,6 +72,9 @@ AbortEnvironmentUpdateResponse::AbortEnvironmentUpdateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AbortEnvironmentUpdateRequest * AbortEnvironmentUpdateResponse::request() const
 {
     Q_D(const AbortEnvironmentUpdateResponse);
@@ -84,9 +82,8 @@ const AbortEnvironmentUpdateRequest * AbortEnvironmentUpdateResponse::request() 
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk AbortEnvironmentUpdate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk AbortEnvironmentUpdate \a response.
  */
 void AbortEnvironmentUpdateResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void AbortEnvironmentUpdateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::AbortEnvironmentUpdateResponsePrivate
+ * \brief The AbortEnvironmentUpdateResponsePrivate class provides private implementation for AbortEnvironmentUpdateResponse.
  * \internal
  *
- * \class AbortEnvironmentUpdateResponsePrivate
- *
- * \brief Private implementation for AbortEnvironmentUpdateResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AbortEnvironmentUpdateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AbortEnvironmentUpdateResponse instance.
+ * Constructs a AbortEnvironmentUpdateResponsePrivate object with public implementation \a q.
  */
 AbortEnvironmentUpdateResponsePrivate::AbortEnvironmentUpdateResponsePrivate(
     AbortEnvironmentUpdateResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ AbortEnvironmentUpdateResponsePrivate::AbortEnvironmentUpdateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk AbortEnvironmentUpdateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk AbortEnvironmentUpdate response element from \a xml.
  */
 void AbortEnvironmentUpdateResponsePrivate::parseAbortEnvironmentUpdateResponse(QXmlStreamReader &xml)
 {

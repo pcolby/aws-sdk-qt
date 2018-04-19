@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateFolderResponse : public WorkDocsResponse {
 public:
     CreateFolderResponse(const CreateFolderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateFolderRequest * request() const;
+    virtual const CreateFolderRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateFolderResponse)

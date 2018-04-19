@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetSegmentsResponse
- *
  * \brief The GetSegmentsResponse class provides an interace for Pinpoint GetSegments responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getSegments
  */
 
 /*!
- * @brief  Constructs a new GetSegmentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSegmentsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSegmentsResponse::GetSegmentsResponse(
         const GetSegmentsRequest &request,
@@ -55,6 +50,9 @@ GetSegmentsResponse::GetSegmentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSegmentsRequest * GetSegmentsResponse::request() const
 {
     Q_D(const GetSegmentsResponse);
@@ -62,9 +60,8 @@ const GetSegmentsRequest * GetSegmentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetSegments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetSegments \a response.
  */
 void GetSegmentsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetSegmentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetSegmentsResponsePrivate
+ * \brief The GetSegmentsResponsePrivate class provides private implementation for GetSegmentsResponse.
  * \internal
  *
- * \class GetSegmentsResponsePrivate
- *
- * \brief Private implementation for GetSegmentsResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSegmentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSegmentsResponse instance.
+ * Constructs a GetSegmentsResponsePrivate object with public implementation \a q.
  */
 GetSegmentsResponsePrivate::GetSegmentsResponsePrivate(
     GetSegmentsResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetSegmentsResponsePrivate::GetSegmentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetSegmentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetSegments response element from \a xml.
  */
 void GetSegmentsResponsePrivate::parseGetSegmentsResponse(QXmlStreamReader &xml)
 {

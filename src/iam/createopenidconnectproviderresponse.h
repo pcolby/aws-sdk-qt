@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateOpenIDConnectProviderResponse : public IAMResponse {
 public:
     CreateOpenIDConnectProviderResponse(const CreateOpenIDConnectProviderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateOpenIDConnectProviderRequest * request() const;
+    virtual const CreateOpenIDConnectProviderRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateOpenIDConnectProviderResponse)

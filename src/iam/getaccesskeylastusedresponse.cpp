@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetAccessKeyLastUsedResponse
- *
  * \brief The GetAccessKeyLastUsedResponse class provides an interace for IAM GetAccessKeyLastUsed responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetAccessKeyLastUsedResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAccessKeyLastUsedResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAccessKeyLastUsedResponse::GetAccessKeyLastUsedResponse(
         const GetAccessKeyLastUsedRequest &request,
@@ -120,6 +115,9 @@ GetAccessKeyLastUsedResponse::GetAccessKeyLastUsedResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAccessKeyLastUsedRequest * GetAccessKeyLastUsedResponse::request() const
 {
     Q_D(const GetAccessKeyLastUsedResponse);
@@ -127,9 +125,8 @@ const GetAccessKeyLastUsedRequest * GetAccessKeyLastUsedResponse::request() cons
 }
 
 /*!
- * @brief  Parse a IAM GetAccessKeyLastUsed response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetAccessKeyLastUsed \a response.
  */
 void GetAccessKeyLastUsedResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetAccessKeyLastUsedResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetAccessKeyLastUsedResponsePrivate
+ * \brief The GetAccessKeyLastUsedResponsePrivate class provides private implementation for GetAccessKeyLastUsedResponse.
  * \internal
  *
- * \class GetAccessKeyLastUsedResponsePrivate
- *
- * \brief Private implementation for GetAccessKeyLastUsedResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccessKeyLastUsedResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAccessKeyLastUsedResponse instance.
+ * Constructs a GetAccessKeyLastUsedResponsePrivate object with public implementation \a q.
  */
 GetAccessKeyLastUsedResponsePrivate::GetAccessKeyLastUsedResponsePrivate(
     GetAccessKeyLastUsedResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetAccessKeyLastUsedResponsePrivate::GetAccessKeyLastUsedResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetAccessKeyLastUsedResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetAccessKeyLastUsed response element from \a xml.
  */
 void GetAccessKeyLastUsedResponsePrivate::parseGetAccessKeyLastUsedResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetHostedZoneCountRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetHostedZoneCountRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a GetHostedZoneCountRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 GetHostedZoneCountRequestPrivate::GetHostedZoneCountRequestPrivate(
     const Route53Request::Action action, GetHostedZoneCountRequest * const q)

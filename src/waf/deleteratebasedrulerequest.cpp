@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRateBasedRuleRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteRateBasedRuleRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRateBasedRuleRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 DeleteRateBasedRuleRequestPrivate::DeleteRateBasedRuleRequestPrivate(
     const WAFRequest::Action action, DeleteRateBasedRuleRequest * const q)

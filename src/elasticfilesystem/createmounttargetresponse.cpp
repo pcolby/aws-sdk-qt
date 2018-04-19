@@ -29,10 +29,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::CreateMountTargetResponse
- *
  * \brief The CreateMountTargetResponse class provides an interace for EFS CreateMountTarget responses.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -45,11 +44,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new CreateMountTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateMountTargetResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateMountTargetResponse::CreateMountTargetResponse(
         const CreateMountTargetRequest &request,
@@ -61,6 +56,9 @@ CreateMountTargetResponse::CreateMountTargetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateMountTargetRequest * CreateMountTargetResponse::request() const
 {
     Q_D(const CreateMountTargetResponse);
@@ -68,9 +66,8 @@ const CreateMountTargetRequest * CreateMountTargetResponse::request() const
 }
 
 /*!
- * @brief  Parse a EFS CreateMountTarget response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EFS CreateMountTarget \a response.
  */
 void CreateMountTargetResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void CreateMountTargetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EFS::CreateMountTargetResponsePrivate
+ * \brief The CreateMountTargetResponsePrivate class provides private implementation for CreateMountTargetResponse.
  * \internal
  *
- * \class CreateMountTargetResponsePrivate
- *
- * \brief Private implementation for CreateMountTargetResponse.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateMountTargetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateMountTargetResponse instance.
+ * Constructs a CreateMountTargetResponsePrivate object with public implementation \a q.
  */
 CreateMountTargetResponsePrivate::CreateMountTargetResponsePrivate(
     CreateMountTargetResponse * const q) : EFSResponsePrivate(q)
@@ -101,9 +94,7 @@ CreateMountTargetResponsePrivate::CreateMountTargetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EFS CreateMountTargetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EFS CreateMountTarget response element from \a xml.
  */
 void CreateMountTargetResponsePrivate::parseCreateMountTargetResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::ListImagesResponse
- *
  * \brief The ListImagesResponse class provides an interace for ECR ListImages responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new ListImagesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListImagesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListImagesResponse::ListImagesResponse(
         const ListImagesRequest &request,
@@ -59,6 +54,9 @@ ListImagesResponse::ListImagesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListImagesRequest * ListImagesResponse::request() const
 {
     Q_D(const ListImagesResponse);
@@ -66,9 +64,8 @@ const ListImagesRequest * ListImagesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR ListImages response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR ListImages \a response.
  */
 void ListImagesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ListImagesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::ListImagesResponsePrivate
+ * \brief The ListImagesResponsePrivate class provides private implementation for ListImagesResponse.
  * \internal
  *
- * \class ListImagesResponsePrivate
- *
- * \brief Private implementation for ListImagesResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListImagesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListImagesResponse instance.
+ * Constructs a ListImagesResponsePrivate object with public implementation \a q.
  */
 ListImagesResponsePrivate::ListImagesResponsePrivate(
     ListImagesResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ ListImagesResponsePrivate::ListImagesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR ListImagesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR ListImages response element from \a xml.
  */
 void ListImagesResponsePrivate::parseListImagesResponse(QXmlStreamReader &xml)
 {

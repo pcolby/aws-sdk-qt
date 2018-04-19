@@ -34,10 +34,10 @@ class QTAWS_EXPORT RespondActivityTaskFailedResponse : public SWFResponse {
 public:
     RespondActivityTaskFailedResponse(const RespondActivityTaskFailedRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RespondActivityTaskFailedRequest * request() const;
+    virtual const RespondActivityTaskFailedRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RespondActivityTaskFailedResponse)

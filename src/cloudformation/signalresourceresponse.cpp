@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::SignalResourceResponse
- *
  * \brief The SignalResourceResponse class provides an interace for CloudFormation SignalResource responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new SignalResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SignalResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 SignalResourceResponse::SignalResourceResponse(
         const SignalResourceRequest &request,
@@ -77,6 +72,9 @@ SignalResourceResponse::SignalResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SignalResourceRequest * SignalResourceResponse::request() const
 {
     Q_D(const SignalResourceResponse);
@@ -84,9 +82,8 @@ const SignalResourceRequest * SignalResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation SignalResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation SignalResource \a response.
  */
 void SignalResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void SignalResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::SignalResourceResponsePrivate
+ * \brief The SignalResourceResponsePrivate class provides private implementation for SignalResourceResponse.
  * \internal
  *
- * \class SignalResourceResponsePrivate
- *
- * \brief Private implementation for SignalResourceResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SignalResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SignalResourceResponse instance.
+ * Constructs a SignalResourceResponsePrivate object with public implementation \a q.
  */
 SignalResourceResponsePrivate::SignalResourceResponsePrivate(
     SignalResourceResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ SignalResourceResponsePrivate::SignalResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation SignalResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation SignalResource response element from \a xml.
  */
 void SignalResourceResponsePrivate::parseSignalResourceResponse(QXmlStreamReader &xml)
 {

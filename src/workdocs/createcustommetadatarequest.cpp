@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * CreateCustomMetadataRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a CreateCustomMetadataRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a CreateCustomMetadataRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 CreateCustomMetadataRequestPrivate::CreateCustomMetadataRequestPrivate(
     const WorkDocsRequest::Action action, CreateCustomMetadataRequest * const q)

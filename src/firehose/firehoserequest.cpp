@@ -46,7 +46,7 @@ namespace Firehose {
  */
 
 /*!
- * Constructs a[n] FirehoseRequest object for Firehose \a action.
+ * Constructs a FirehoseRequest object for Firehose \a action.
  */
 FirehoseRequest::FirehoseRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new FirehoseRequestPrivate(action, this))
@@ -246,8 +246,8 @@ QNetworkRequest FirehoseRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a FirehoseRequestPrivate object for Firehose \a action with,
- * public implementation \a q.
+ * Constructs a FirehoseRequestPrivate object for Firehose \a action,
+ * with public implementation \a q.
  */
 FirehoseRequestPrivate::FirehoseRequestPrivate(const FirehoseRequest::Action action, FirehoseRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

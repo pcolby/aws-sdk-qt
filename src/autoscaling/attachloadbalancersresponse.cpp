@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::AttachLoadBalancersResponse
- *
  * \brief The AttachLoadBalancersResponse class provides an interace for AutoScaling AttachLoadBalancers responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new AttachLoadBalancersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachLoadBalancersResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachLoadBalancersResponse::AttachLoadBalancersResponse(
         const AttachLoadBalancersRequest &request,
@@ -60,6 +55,9 @@ AttachLoadBalancersResponse::AttachLoadBalancersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachLoadBalancersRequest * AttachLoadBalancersResponse::request() const
 {
     Q_D(const AttachLoadBalancersResponse);
@@ -67,9 +65,8 @@ const AttachLoadBalancersRequest * AttachLoadBalancersResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling AttachLoadBalancers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling AttachLoadBalancers \a response.
  */
 void AttachLoadBalancersResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void AttachLoadBalancersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::AttachLoadBalancersResponsePrivate
+ * \brief The AttachLoadBalancersResponsePrivate class provides private implementation for AttachLoadBalancersResponse.
  * \internal
  *
- * \class AttachLoadBalancersResponsePrivate
- *
- * \brief Private implementation for AttachLoadBalancersResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachLoadBalancersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachLoadBalancersResponse instance.
+ * Constructs a AttachLoadBalancersResponsePrivate object with public implementation \a q.
  */
 AttachLoadBalancersResponsePrivate::AttachLoadBalancersResponsePrivate(
     AttachLoadBalancersResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ AttachLoadBalancersResponsePrivate::AttachLoadBalancersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling AttachLoadBalancersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling AttachLoadBalancers response element from \a xml.
  */
 void AttachLoadBalancersResponsePrivate::parseAttachLoadBalancersResponse(QXmlStreamReader &xml)
 {

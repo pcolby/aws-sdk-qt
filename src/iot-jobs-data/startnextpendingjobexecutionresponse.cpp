@@ -29,10 +29,9 @@ namespace IoTJobsDataPlane {
 
 /*!
  * \class QtAws::IoTJobsDataPlane::StartNextPendingJobExecutionResponse
- *
  * \brief The StartNextPendingJobExecutionResponse class provides an interace for IoTJobsDataPlane StartNextPendingJobExecution responses.
  *
- * \ingroup IoTJobsDataPlane
+ * \inmodule QtAwsIoTJobsDataPlane
  *
  *  AWS IoT Jobs is a service that allows you to define a set of jobs — remote operations that are sent to and executed on
  *  one or more devices connected to AWS IoT. For example, you can define a job that instructs a set of devices to download
@@ -53,11 +52,7 @@ namespace IoTJobsDataPlane {
  */
 
 /*!
- * @brief  Constructs a new StartNextPendingJobExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartNextPendingJobExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 StartNextPendingJobExecutionResponse::StartNextPendingJobExecutionResponse(
         const StartNextPendingJobExecutionRequest &request,
@@ -69,6 +64,9 @@ StartNextPendingJobExecutionResponse::StartNextPendingJobExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartNextPendingJobExecutionRequest * StartNextPendingJobExecutionResponse::request() const
 {
     Q_D(const StartNextPendingJobExecutionResponse);
@@ -76,9 +74,8 @@ const StartNextPendingJobExecutionRequest * StartNextPendingJobExecutionResponse
 }
 
 /*!
- * @brief  Parse a IoTJobsDataPlane StartNextPendingJobExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoTJobsDataPlane StartNextPendingJobExecution \a response.
  */
 void StartNextPendingJobExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void StartNextPendingJobExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoTJobsDataPlane::StartNextPendingJobExecutionResponsePrivate
+ * \brief The StartNextPendingJobExecutionResponsePrivate class provides private implementation for StartNextPendingJobExecutionResponse.
  * \internal
  *
- * \class StartNextPendingJobExecutionResponsePrivate
- *
- * \brief Private implementation for StartNextPendingJobExecutionResponse.
+ * \inmodule QtAwsIoTJobsDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartNextPendingJobExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartNextPendingJobExecutionResponse instance.
+ * Constructs a StartNextPendingJobExecutionResponsePrivate object with public implementation \a q.
  */
 StartNextPendingJobExecutionResponsePrivate::StartNextPendingJobExecutionResponsePrivate(
     StartNextPendingJobExecutionResponse * const q) : IoTJobsDataPlaneResponsePrivate(q)
@@ -109,9 +102,7 @@ StartNextPendingJobExecutionResponsePrivate::StartNextPendingJobExecutionRespons
 }
 
 /*!
- * @brief  Parse an IoTJobsDataPlane StartNextPendingJobExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoTJobsDataPlane StartNextPendingJobExecution response element from \a xml.
  */
 void StartNextPendingJobExecutionResponsePrivate::parseStartNextPendingJobExecutionResponse(QXmlStreamReader &xml)
 {

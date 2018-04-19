@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateSoftwareTokenResponse : public CognitoIdentityProvid
 public:
     AssociateSoftwareTokenResponse(const AssociateSoftwareTokenRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateSoftwareTokenRequest * request() const;
+    virtual const AssociateSoftwareTokenRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateSoftwareTokenResponse)

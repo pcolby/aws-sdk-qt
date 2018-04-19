@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * DescribeGroupRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DescribeGroupRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a DescribeGroupRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 DescribeGroupRequestPrivate::DescribeGroupRequestPrivate(
     const WorkMailRequest::Action action, DescribeGroupRequest * const q)

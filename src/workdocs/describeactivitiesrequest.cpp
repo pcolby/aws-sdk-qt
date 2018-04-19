@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeActivitiesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeActivitiesRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeActivitiesRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DescribeActivitiesRequestPrivate::DescribeActivitiesRequestPrivate(
     const WorkDocsRequest::Action action, DescribeActivitiesRequest * const q)

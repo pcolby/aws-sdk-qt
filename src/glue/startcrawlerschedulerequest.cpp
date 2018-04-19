@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StartCrawlerScheduleRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a StartCrawlerScheduleRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a StartCrawlerScheduleRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 StartCrawlerScheduleRequestPrivate::StartCrawlerScheduleRequestPrivate(
     const GlueRequest::Action action, StartCrawlerScheduleRequest * const q)

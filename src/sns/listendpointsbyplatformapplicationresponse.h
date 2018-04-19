@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListEndpointsByPlatformApplicationResponse : public SNSRespon
 public:
     ListEndpointsByPlatformApplicationResponse(const ListEndpointsByPlatformApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListEndpointsByPlatformApplicationRequest * request() const;
+    virtual const ListEndpointsByPlatformApplicationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListEndpointsByPlatformApplicationResponse)

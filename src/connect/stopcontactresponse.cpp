@@ -29,10 +29,9 @@ namespace Connect {
 
 /*!
  * \class QtAws::Connect::StopContactResponse
- *
  * \brief The StopContactResponse class provides an interace for Connect StopContact responses.
  *
- * \ingroup Connect
+ * \inmodule QtAwsConnect
  *
  *  The Amazon Connect API Reference provides descriptions, syntax, and usage examples for each of the Amazon Connect
  *  actions, data types, parameters, and errors. Amazon Connect is a cloud-based contact center solution that makes it easy
@@ -42,11 +41,7 @@ namespace Connect {
  */
 
 /*!
- * @brief  Constructs a new StopContactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopContactResponse object for \a reply to \a request, with parent \a parent.
  */
 StopContactResponse::StopContactResponse(
         const StopContactRequest &request,
@@ -58,6 +53,9 @@ StopContactResponse::StopContactResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopContactRequest * StopContactResponse::request() const
 {
     Q_D(const StopContactResponse);
@@ -65,9 +63,8 @@ const StopContactRequest * StopContactResponse::request() const
 }
 
 /*!
- * @brief  Parse a Connect StopContact response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Connect StopContact \a response.
  */
 void StopContactResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StopContactResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Connect::StopContactResponsePrivate
+ * \brief The StopContactResponsePrivate class provides private implementation for StopContactResponse.
  * \internal
  *
- * \class StopContactResponsePrivate
- *
- * \brief Private implementation for StopContactResponse.
+ * \inmodule QtAwsConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopContactResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopContactResponse instance.
+ * Constructs a StopContactResponsePrivate object with public implementation \a q.
  */
 StopContactResponsePrivate::StopContactResponsePrivate(
     StopContactResponse * const q) : ConnectResponsePrivate(q)
@@ -98,9 +91,7 @@ StopContactResponsePrivate::StopContactResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Connect StopContactResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Connect StopContact response element from \a xml.
  */
 void StopContactResponsePrivate::parseStopContactResponse(QXmlStreamReader &xml)
 {

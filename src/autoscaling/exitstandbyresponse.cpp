@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::ExitStandbyResponse
- *
  * \brief The ExitStandbyResponse class provides an interace for AutoScaling ExitStandby responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new ExitStandbyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ExitStandbyResponse object for \a reply to \a request, with parent \a parent.
  */
 ExitStandbyResponse::ExitStandbyResponse(
         const ExitStandbyRequest &request,
@@ -60,6 +55,9 @@ ExitStandbyResponse::ExitStandbyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ExitStandbyRequest * ExitStandbyResponse::request() const
 {
     Q_D(const ExitStandbyResponse);
@@ -67,9 +65,8 @@ const ExitStandbyRequest * ExitStandbyResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling ExitStandby response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling ExitStandby \a response.
  */
 void ExitStandbyResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ExitStandbyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::ExitStandbyResponsePrivate
+ * \brief The ExitStandbyResponsePrivate class provides private implementation for ExitStandbyResponse.
  * \internal
  *
- * \class ExitStandbyResponsePrivate
- *
- * \brief Private implementation for ExitStandbyResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExitStandbyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ExitStandbyResponse instance.
+ * Constructs a ExitStandbyResponsePrivate object with public implementation \a q.
  */
 ExitStandbyResponsePrivate::ExitStandbyResponsePrivate(
     ExitStandbyResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ ExitStandbyResponsePrivate::ExitStandbyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling ExitStandbyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling ExitStandby response element from \a xml.
  */
 void ExitStandbyResponsePrivate::parseExitStandbyResponse(QXmlStreamReader &xml)
 {

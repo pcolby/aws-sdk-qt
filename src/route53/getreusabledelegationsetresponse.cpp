@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::GetReusableDelegationSetResponse
- *
  * \brief The GetReusableDelegationSetResponse class provides an interace for Route53 GetReusableDelegationSet responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::getReusableDelegationSet
  */
 
 /*!
- * @brief  Constructs a new GetReusableDelegationSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetReusableDelegationSetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetReusableDelegationSetResponse::GetReusableDelegationSetResponse(
         const GetReusableDelegationSetRequest &request,
@@ -55,6 +50,9 @@ GetReusableDelegationSetResponse::GetReusableDelegationSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetReusableDelegationSetRequest * GetReusableDelegationSetResponse::request() const
 {
     Q_D(const GetReusableDelegationSetResponse);
@@ -62,9 +60,8 @@ const GetReusableDelegationSetRequest * GetReusableDelegationSetResponse::reques
 }
 
 /*!
- * @brief  Parse a Route53 GetReusableDelegationSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 GetReusableDelegationSet \a response.
  */
 void GetReusableDelegationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetReusableDelegationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::GetReusableDelegationSetResponsePrivate
+ * \brief The GetReusableDelegationSetResponsePrivate class provides private implementation for GetReusableDelegationSetResponse.
  * \internal
  *
- * \class GetReusableDelegationSetResponsePrivate
- *
- * \brief Private implementation for GetReusableDelegationSetResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetReusableDelegationSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetReusableDelegationSetResponse instance.
+ * Constructs a GetReusableDelegationSetResponsePrivate object with public implementation \a q.
  */
 GetReusableDelegationSetResponsePrivate::GetReusableDelegationSetResponsePrivate(
     GetReusableDelegationSetResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetReusableDelegationSetResponsePrivate::GetReusableDelegationSetResponsePrivate
 }
 
 /*!
- * @brief  Parse an Route53 GetReusableDelegationSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 GetReusableDelegationSet response element from \a xml.
  */
 void GetReusableDelegationSetResponsePrivate::parseGetReusableDelegationSetResponse(QXmlStreamReader &xml)
 {

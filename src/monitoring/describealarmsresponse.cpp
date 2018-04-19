@@ -29,10 +29,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::DescribeAlarmsResponse
- *
  * \brief The DescribeAlarmsResponse class provides an interace for CloudWatch DescribeAlarms responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -53,11 +52,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new DescribeAlarmsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAlarmsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAlarmsResponse::DescribeAlarmsResponse(
         const DescribeAlarmsRequest &request,
@@ -69,6 +64,9 @@ DescribeAlarmsResponse::DescribeAlarmsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAlarmsRequest * DescribeAlarmsResponse::request() const
 {
     Q_D(const DescribeAlarmsResponse);
@@ -76,9 +74,8 @@ const DescribeAlarmsRequest * DescribeAlarmsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatch DescribeAlarms response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatch DescribeAlarms \a response.
  */
 void DescribeAlarmsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeAlarmsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatch::DescribeAlarmsResponsePrivate
+ * \brief The DescribeAlarmsResponsePrivate class provides private implementation for DescribeAlarmsResponse.
  * \internal
  *
- * \class DescribeAlarmsResponsePrivate
- *
- * \brief Private implementation for DescribeAlarmsResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAlarmsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAlarmsResponse instance.
+ * Constructs a DescribeAlarmsResponsePrivate object with public implementation \a q.
  */
 DescribeAlarmsResponsePrivate::DescribeAlarmsResponsePrivate(
     DescribeAlarmsResponse * const q) : CloudWatchResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeAlarmsResponsePrivate::DescribeAlarmsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatch DescribeAlarmsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatch DescribeAlarms response element from \a xml.
  */
 void DescribeAlarmsResponsePrivate::parseDescribeAlarmsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteIntegrationResponse
- *
  * \brief The DeleteIntegrationResponse class provides an interace for APIGateway DeleteIntegration responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteIntegrationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteIntegrationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteIntegrationResponse::DeleteIntegrationResponse(
         const DeleteIntegrationRequest &request,
@@ -60,6 +55,9 @@ DeleteIntegrationResponse::DeleteIntegrationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteIntegrationRequest * DeleteIntegrationResponse::request() const
 {
     Q_D(const DeleteIntegrationResponse);
@@ -67,9 +65,8 @@ const DeleteIntegrationRequest * DeleteIntegrationResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteIntegration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteIntegration \a response.
  */
 void DeleteIntegrationResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteIntegrationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteIntegrationResponsePrivate
+ * \brief The DeleteIntegrationResponsePrivate class provides private implementation for DeleteIntegrationResponse.
  * \internal
  *
- * \class DeleteIntegrationResponsePrivate
- *
- * \brief Private implementation for DeleteIntegrationResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIntegrationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteIntegrationResponse instance.
+ * Constructs a DeleteIntegrationResponsePrivate object with public implementation \a q.
  */
 DeleteIntegrationResponsePrivate::DeleteIntegrationResponsePrivate(
     DeleteIntegrationResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteIntegrationResponsePrivate::DeleteIntegrationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteIntegrationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteIntegration response element from \a xml.
  */
 void DeleteIntegrationResponsePrivate::parseDeleteIntegrationResponse(QXmlStreamReader &xml)
 {

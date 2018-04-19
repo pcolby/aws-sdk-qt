@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * CompleteVaultLockRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CompleteVaultLockRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a CompleteVaultLockRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 CompleteVaultLockRequestPrivate::CompleteVaultLockRequestPrivate(
     const GlacierRequest::Action action, CompleteVaultLockRequest * const q)

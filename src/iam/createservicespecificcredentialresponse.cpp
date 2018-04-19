@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::CreateServiceSpecificCredentialResponse
- *
  * \brief The CreateServiceSpecificCredentialResponse class provides an interace for IAM CreateServiceSpecificCredential responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new CreateServiceSpecificCredentialResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateServiceSpecificCredentialResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateServiceSpecificCredentialResponse::CreateServiceSpecificCredentialResponse(
         const CreateServiceSpecificCredentialRequest &request,
@@ -120,6 +115,9 @@ CreateServiceSpecificCredentialResponse::CreateServiceSpecificCredentialResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateServiceSpecificCredentialRequest * CreateServiceSpecificCredentialResponse::request() const
 {
     Q_D(const CreateServiceSpecificCredentialResponse);
@@ -127,9 +125,8 @@ const CreateServiceSpecificCredentialRequest * CreateServiceSpecificCredentialRe
 }
 
 /*!
- * @brief  Parse a IAM CreateServiceSpecificCredential response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM CreateServiceSpecificCredential \a response.
  */
 void CreateServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void CreateServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::CreateServiceSpecificCredentialResponsePrivate
+ * \brief The CreateServiceSpecificCredentialResponsePrivate class provides private implementation for CreateServiceSpecificCredentialResponse.
  * \internal
  *
- * \class CreateServiceSpecificCredentialResponsePrivate
- *
- * \brief Private implementation for CreateServiceSpecificCredentialResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateServiceSpecificCredentialResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateServiceSpecificCredentialResponse instance.
+ * Constructs a CreateServiceSpecificCredentialResponsePrivate object with public implementation \a q.
  */
 CreateServiceSpecificCredentialResponsePrivate::CreateServiceSpecificCredentialResponsePrivate(
     CreateServiceSpecificCredentialResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ CreateServiceSpecificCredentialResponsePrivate::CreateServiceSpecificCredentialR
 }
 
 /*!
- * @brief  Parse an IAM CreateServiceSpecificCredentialResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM CreateServiceSpecificCredential response element from \a xml.
  */
 void CreateServiceSpecificCredentialResponsePrivate::parseCreateServiceSpecificCredentialResponse(QXmlStreamReader &xml)
 {

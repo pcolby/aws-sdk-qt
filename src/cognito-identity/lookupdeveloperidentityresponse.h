@@ -34,10 +34,10 @@ class QTAWS_EXPORT LookupDeveloperIdentityResponse : public CognitoIdentityRespo
 public:
     LookupDeveloperIdentityResponse(const LookupDeveloperIdentityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const LookupDeveloperIdentityRequest * request() const;
+    virtual const LookupDeveloperIdentityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(LookupDeveloperIdentityResponse)

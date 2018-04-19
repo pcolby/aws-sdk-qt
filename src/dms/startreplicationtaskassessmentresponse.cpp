@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentResponse
- *
  * \brief The StartReplicationTaskAssessmentResponse class provides an interace for DatabaseMigrationService StartReplicationTaskAssessment responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new StartReplicationTaskAssessmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartReplicationTaskAssessmentResponse object for \a reply to \a request, with parent \a parent.
  */
 StartReplicationTaskAssessmentResponse::StartReplicationTaskAssessmentResponse(
         const StartReplicationTaskAssessmentRequest &request,
@@ -66,6 +61,9 @@ StartReplicationTaskAssessmentResponse::StartReplicationTaskAssessmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartReplicationTaskAssessmentRequest * StartReplicationTaskAssessmentResponse::request() const
 {
     Q_D(const StartReplicationTaskAssessmentResponse);
@@ -73,9 +71,8 @@ const StartReplicationTaskAssessmentRequest * StartReplicationTaskAssessmentResp
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService StartReplicationTaskAssessment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService StartReplicationTaskAssessment \a response.
  */
 void StartReplicationTaskAssessmentResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void StartReplicationTaskAssessmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentResponsePrivate
+ * \brief The StartReplicationTaskAssessmentResponsePrivate class provides private implementation for StartReplicationTaskAssessmentResponse.
  * \internal
  *
- * \class StartReplicationTaskAssessmentResponsePrivate
- *
- * \brief Private implementation for StartReplicationTaskAssessmentResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartReplicationTaskAssessmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartReplicationTaskAssessmentResponse instance.
+ * Constructs a StartReplicationTaskAssessmentResponsePrivate object with public implementation \a q.
  */
 StartReplicationTaskAssessmentResponsePrivate::StartReplicationTaskAssessmentResponsePrivate(
     StartReplicationTaskAssessmentResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ StartReplicationTaskAssessmentResponsePrivate::StartReplicationTaskAssessmentRes
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService StartReplicationTaskAssessmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService StartReplicationTaskAssessment response element from \a xml.
  */
 void StartReplicationTaskAssessmentResponsePrivate::parseStartReplicationTaskAssessmentResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateAddressResponse : public EC2Response {
 public:
     DisassociateAddressResponse(const DisassociateAddressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateAddressRequest * request() const;
+    virtual const DisassociateAddressRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateAddressResponse)

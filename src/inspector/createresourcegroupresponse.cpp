@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::CreateResourceGroupResponse
- *
  * \brief The CreateResourceGroupResponse class provides an interace for Inspector CreateResourceGroup responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new CreateResourceGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateResourceGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateResourceGroupResponse::CreateResourceGroupResponse(
         const CreateResourceGroupRequest &request,
@@ -60,6 +55,9 @@ CreateResourceGroupResponse::CreateResourceGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateResourceGroupRequest * CreateResourceGroupResponse::request() const
 {
     Q_D(const CreateResourceGroupResponse);
@@ -67,9 +65,8 @@ const CreateResourceGroupRequest * CreateResourceGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector CreateResourceGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector CreateResourceGroup \a response.
  */
 void CreateResourceGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateResourceGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::CreateResourceGroupResponsePrivate
+ * \brief The CreateResourceGroupResponsePrivate class provides private implementation for CreateResourceGroupResponse.
  * \internal
  *
- * \class CreateResourceGroupResponsePrivate
- *
- * \brief Private implementation for CreateResourceGroupResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateResourceGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateResourceGroupResponse instance.
+ * Constructs a CreateResourceGroupResponsePrivate object with public implementation \a q.
  */
 CreateResourceGroupResponsePrivate::CreateResourceGroupResponsePrivate(
     CreateResourceGroupResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateResourceGroupResponsePrivate::CreateResourceGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector CreateResourceGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector CreateResourceGroup response element from \a xml.
  */
 void CreateResourceGroupResponsePrivate::parseCreateResourceGroupResponse(QXmlStreamReader &xml)
 {

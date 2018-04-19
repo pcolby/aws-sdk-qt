@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteApplicationRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApplicationRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 DeleteApplicationRequestPrivate::DeleteApplicationRequestPrivate(
     const ElasticBeanstalkRequest::Action action, DeleteApplicationRequest * const q)

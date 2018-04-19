@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::CreateDBSnapshotResponse
- *
  * \brief The CreateDBSnapshotResponse class provides an interace for RDS CreateDBSnapshot responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new CreateDBSnapshotResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDBSnapshotResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDBSnapshotResponse::CreateDBSnapshotResponse(
         const CreateDBSnapshotRequest &request,
@@ -119,6 +114,9 @@ CreateDBSnapshotResponse::CreateDBSnapshotResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDBSnapshotRequest * CreateDBSnapshotResponse::request() const
 {
     Q_D(const CreateDBSnapshotResponse);
@@ -126,9 +124,8 @@ const CreateDBSnapshotRequest * CreateDBSnapshotResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS CreateDBSnapshot response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS CreateDBSnapshot \a response.
  */
 void CreateDBSnapshotResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void CreateDBSnapshotResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::CreateDBSnapshotResponsePrivate
+ * \brief The CreateDBSnapshotResponsePrivate class provides private implementation for CreateDBSnapshotResponse.
  * \internal
  *
- * \class CreateDBSnapshotResponsePrivate
- *
- * \brief Private implementation for CreateDBSnapshotResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDBSnapshotResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDBSnapshotResponse instance.
+ * Constructs a CreateDBSnapshotResponsePrivate object with public implementation \a q.
  */
 CreateDBSnapshotResponsePrivate::CreateDBSnapshotResponsePrivate(
     CreateDBSnapshotResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ CreateDBSnapshotResponsePrivate::CreateDBSnapshotResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS CreateDBSnapshotResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS CreateDBSnapshot response element from \a xml.
  */
 void CreateDBSnapshotResponsePrivate::parseCreateDBSnapshotResponse(QXmlStreamReader &xml)
 {

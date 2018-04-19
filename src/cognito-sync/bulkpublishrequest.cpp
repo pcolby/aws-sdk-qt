@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * BulkPublishRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a BulkPublishRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a BulkPublishRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 BulkPublishRequestPrivate::BulkPublishRequestPrivate(
     const CognitoSyncRequest::Action action, BulkPublishRequest * const q)

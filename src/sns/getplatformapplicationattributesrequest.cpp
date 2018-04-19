@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * GetPlatformApplicationAttributesRequest::resp
  */
 
 /*!
- *
- * Constructs a GetPlatformApplicationAttributesRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a GetPlatformApplicationAttributesRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 GetPlatformApplicationAttributesRequestPrivate::GetPlatformApplicationAttributesRequestPrivate(
     const SNSRequest::Action action, GetPlatformApplicationAttributesRequest * const q)

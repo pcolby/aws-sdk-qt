@@ -29,10 +29,9 @@ namespace SWF {
 
 /*!
  * \class QtAws::SWF::PollForActivityTaskResponse
- *
  * \brief The PollForActivityTaskResponse class provides an interace for SWF PollForActivityTask responses.
  *
- * \ingroup SWF
+ * \inmodule QtAwsSWF
  *
  *  <fullname>Amazon Simple Workflow Service</fullname>
  * 
@@ -55,11 +54,7 @@ namespace SWF {
  */
 
 /*!
- * @brief  Constructs a new PollForActivityTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PollForActivityTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 PollForActivityTaskResponse::PollForActivityTaskResponse(
         const PollForActivityTaskRequest &request,
@@ -71,6 +66,9 @@ PollForActivityTaskResponse::PollForActivityTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PollForActivityTaskRequest * PollForActivityTaskResponse::request() const
 {
     Q_D(const PollForActivityTaskResponse);
@@ -78,9 +76,8 @@ const PollForActivityTaskRequest * PollForActivityTaskResponse::request() const
 }
 
 /*!
- * @brief  Parse a SWF PollForActivityTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SWF PollForActivityTask \a response.
  */
 void PollForActivityTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void PollForActivityTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SWF::PollForActivityTaskResponsePrivate
+ * \brief The PollForActivityTaskResponsePrivate class provides private implementation for PollForActivityTaskResponse.
  * \internal
  *
- * \class PollForActivityTaskResponsePrivate
- *
- * \brief Private implementation for PollForActivityTaskResponse.
+ * \inmodule QtAwsSWF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PollForActivityTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PollForActivityTaskResponse instance.
+ * Constructs a PollForActivityTaskResponsePrivate object with public implementation \a q.
  */
 PollForActivityTaskResponsePrivate::PollForActivityTaskResponsePrivate(
     PollForActivityTaskResponse * const q) : SWFResponsePrivate(q)
@@ -111,9 +104,7 @@ PollForActivityTaskResponsePrivate::PollForActivityTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SWF PollForActivityTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SWF PollForActivityTask response element from \a xml.
  */
 void PollForActivityTaskResponsePrivate::parsePollForActivityTaskResponse(QXmlStreamReader &xml)
 {

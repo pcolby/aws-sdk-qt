@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * UpdateGraphqlApiRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateGraphqlApiRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a UpdateGraphqlApiRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 UpdateGraphqlApiRequestPrivate::UpdateGraphqlApiRequestPrivate(
     const AppSyncRequest::Action action, UpdateGraphqlApiRequest * const q)

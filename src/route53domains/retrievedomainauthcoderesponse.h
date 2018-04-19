@@ -34,10 +34,10 @@ class QTAWS_EXPORT RetrieveDomainAuthCodeResponse : public Route53DomainsRespons
 public:
     RetrieveDomainAuthCodeResponse(const RetrieveDomainAuthCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RetrieveDomainAuthCodeRequest * request() const;
+    virtual const RetrieveDomainAuthCodeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RetrieveDomainAuthCodeResponse)

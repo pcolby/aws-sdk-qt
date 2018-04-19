@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedInstancesOfferingsRequest::re
  */
 
 /*!
- *
- * Constructs a DescribeReservedInstancesOfferingsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeReservedInstancesOfferingsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeReservedInstancesOfferingsRequestPrivate::DescribeReservedInstancesOfferingsRequestPrivate(
     const EC2Request::Action action, DescribeReservedInstancesOfferingsRequest * const q)

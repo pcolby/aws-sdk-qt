@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::CreateBotVersionResponse
- *
  * \brief The CreateBotVersionResponse class provides an interace for LexModelBuildingService CreateBotVersion responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new CreateBotVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateBotVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateBotVersionResponse::CreateBotVersionResponse(
         const CreateBotVersionRequest &request,
@@ -59,6 +54,9 @@ CreateBotVersionResponse::CreateBotVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateBotVersionRequest * CreateBotVersionResponse::request() const
 {
     Q_D(const CreateBotVersionResponse);
@@ -66,9 +64,8 @@ const CreateBotVersionRequest * CreateBotVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService CreateBotVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService CreateBotVersion \a response.
  */
 void CreateBotVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateBotVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::CreateBotVersionResponsePrivate
+ * \brief The CreateBotVersionResponsePrivate class provides private implementation for CreateBotVersionResponse.
  * \internal
  *
- * \class CreateBotVersionResponsePrivate
- *
- * \brief Private implementation for CreateBotVersionResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBotVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateBotVersionResponse instance.
+ * Constructs a CreateBotVersionResponsePrivate object with public implementation \a q.
  */
 CreateBotVersionResponsePrivate::CreateBotVersionResponsePrivate(
     CreateBotVersionResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateBotVersionResponsePrivate::CreateBotVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService CreateBotVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService CreateBotVersion response element from \a xml.
  */
 void CreateBotVersionResponsePrivate::parseCreateBotVersionResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::RevokeCertificateResponse
- *
  * \brief The RevokeCertificateResponse class provides an interace for ACMPCA RevokeCertificate responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -69,11 +68,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new RevokeCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RevokeCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 RevokeCertificateResponse::RevokeCertificateResponse(
         const RevokeCertificateRequest &request,
@@ -85,6 +80,9 @@ RevokeCertificateResponse::RevokeCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RevokeCertificateRequest * RevokeCertificateResponse::request() const
 {
     Q_D(const RevokeCertificateResponse);
@@ -92,9 +90,8 @@ const RevokeCertificateRequest * RevokeCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a ACMPCA RevokeCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACMPCA RevokeCertificate \a response.
  */
 void RevokeCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void RevokeCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACMPCA::RevokeCertificateResponsePrivate
+ * \brief The RevokeCertificateResponsePrivate class provides private implementation for RevokeCertificateResponse.
  * \internal
  *
- * \class RevokeCertificateResponsePrivate
- *
- * \brief Private implementation for RevokeCertificateResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RevokeCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RevokeCertificateResponse instance.
+ * Constructs a RevokeCertificateResponsePrivate object with public implementation \a q.
  */
 RevokeCertificateResponsePrivate::RevokeCertificateResponsePrivate(
     RevokeCertificateResponse * const q) : ACMPCAResponsePrivate(q)
@@ -125,9 +118,7 @@ RevokeCertificateResponsePrivate::RevokeCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ACMPCA RevokeCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACMPCA RevokeCertificate response element from \a xml.
  */
 void RevokeCertificateResponsePrivate::parseRevokeCertificateResponse(QXmlStreamReader &xml)
 {

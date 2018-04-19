@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetCampaignsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetCampaignsRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetCampaignsRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetCampaignsRequestPrivate::GetCampaignsRequestPrivate(
     const PinpointRequest::Action action, GetCampaignsRequest * const q)

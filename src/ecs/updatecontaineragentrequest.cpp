@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * UpdateContainerAgentRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a UpdateContainerAgentRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a UpdateContainerAgentRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 UpdateContainerAgentRequestPrivate::UpdateContainerAgentRequestPrivate(
     const ECSRequest::Action action, UpdateContainerAgentRequest * const q)

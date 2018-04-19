@@ -34,10 +34,10 @@ class QTAWS_EXPORT SignalWorkflowExecutionResponse : public SWFResponse {
 public:
     SignalWorkflowExecutionResponse(const SignalWorkflowExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SignalWorkflowExecutionRequest * request() const;
+    virtual const SignalWorkflowExecutionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SignalWorkflowExecutionResponse)

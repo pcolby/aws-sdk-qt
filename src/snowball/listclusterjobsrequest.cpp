@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListClusterJobsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ListClusterJobsRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a ListClusterJobsRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 ListClusterJobsRequestPrivate::ListClusterJobsRequestPrivate(
     const SnowballRequest::Action action, ListClusterJobsRequest * const q)

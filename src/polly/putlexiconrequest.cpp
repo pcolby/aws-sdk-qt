@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * PutLexiconRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a PutLexiconRequestPrivate object for Polly \a action with,
- * public implementation \a q.
+ * Constructs a PutLexiconRequestPrivate object for Polly \a action,
+ * with public implementation \a q.
  */
 PutLexiconRequestPrivate::PutLexiconRequestPrivate(
     const PollyRequest::Action action, PutLexiconRequest * const q)

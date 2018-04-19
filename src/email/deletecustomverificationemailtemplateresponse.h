@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCustomVerificationEmailTemplateResponse : public SESRes
 public:
     DeleteCustomVerificationEmailTemplateResponse(const DeleteCustomVerificationEmailTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCustomVerificationEmailTemplateRequest * request() const;
+    virtual const DeleteCustomVerificationEmailTemplateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCustomVerificationEmailTemplateResponse)

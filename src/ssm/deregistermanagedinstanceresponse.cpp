@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeregisterManagedInstanceResponse
- *
  * \brief The DeregisterManagedInstanceResponse class provides an interace for SSM DeregisterManagedInstance responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeregisterManagedInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterManagedInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterManagedInstanceResponse::DeregisterManagedInstanceResponse(
         const DeregisterManagedInstanceRequest &request,
@@ -79,6 +74,9 @@ DeregisterManagedInstanceResponse::DeregisterManagedInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterManagedInstanceRequest * DeregisterManagedInstanceResponse::request() const
 {
     Q_D(const DeregisterManagedInstanceResponse);
@@ -86,9 +84,8 @@ const DeregisterManagedInstanceRequest * DeregisterManagedInstanceResponse::requ
 }
 
 /*!
- * @brief  Parse a SSM DeregisterManagedInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DeregisterManagedInstance \a response.
  */
 void DeregisterManagedInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DeregisterManagedInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DeregisterManagedInstanceResponsePrivate
+ * \brief The DeregisterManagedInstanceResponsePrivate class provides private implementation for DeregisterManagedInstanceResponse.
  * \internal
  *
- * \class DeregisterManagedInstanceResponsePrivate
- *
- * \brief Private implementation for DeregisterManagedInstanceResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterManagedInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterManagedInstanceResponse instance.
+ * Constructs a DeregisterManagedInstanceResponsePrivate object with public implementation \a q.
  */
 DeregisterManagedInstanceResponsePrivate::DeregisterManagedInstanceResponsePrivate(
     DeregisterManagedInstanceResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DeregisterManagedInstanceResponsePrivate::DeregisterManagedInstanceResponsePriva
 }
 
 /*!
- * @brief  Parse an SSM DeregisterManagedInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DeregisterManagedInstance response element from \a xml.
  */
 void DeregisterManagedInstanceResponsePrivate::parseDeregisterManagedInstanceResponse(QXmlStreamReader &xml)
 {

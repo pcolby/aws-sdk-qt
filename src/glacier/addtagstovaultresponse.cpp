@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::AddTagsToVaultResponse
- *
  * \brief The AddTagsToVaultResponse class provides an interace for Glacier AddTagsToVault responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new AddTagsToVaultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddTagsToVaultResponse object for \a reply to \a request, with parent \a parent.
  */
 AddTagsToVaultResponse::AddTagsToVaultResponse(
         const AddTagsToVaultRequest &request,
@@ -93,6 +88,9 @@ AddTagsToVaultResponse::AddTagsToVaultResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddTagsToVaultRequest * AddTagsToVaultResponse::request() const
 {
     Q_D(const AddTagsToVaultResponse);
@@ -100,9 +98,8 @@ const AddTagsToVaultRequest * AddTagsToVaultResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier AddTagsToVault response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier AddTagsToVault \a response.
  */
 void AddTagsToVaultResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void AddTagsToVaultResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::AddTagsToVaultResponsePrivate
+ * \brief The AddTagsToVaultResponsePrivate class provides private implementation for AddTagsToVaultResponse.
  * \internal
  *
- * \class AddTagsToVaultResponsePrivate
- *
- * \brief Private implementation for AddTagsToVaultResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsToVaultResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddTagsToVaultResponse instance.
+ * Constructs a AddTagsToVaultResponsePrivate object with public implementation \a q.
  */
 AddTagsToVaultResponsePrivate::AddTagsToVaultResponsePrivate(
     AddTagsToVaultResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ AddTagsToVaultResponsePrivate::AddTagsToVaultResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier AddTagsToVaultResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier AddTagsToVault response element from \a xml.
  */
 void AddTagsToVaultResponsePrivate::parseAddTagsToVaultResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DescribeTaskDefinitionResponse
- *
  * \brief The DescribeTaskDefinitionResponse class provides an interace for ECS DescribeTaskDefinition responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DescribeTaskDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTaskDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTaskDefinitionResponse::DescribeTaskDefinitionResponse(
         const DescribeTaskDefinitionRequest &request,
@@ -72,6 +67,9 @@ DescribeTaskDefinitionResponse::DescribeTaskDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTaskDefinitionRequest * DescribeTaskDefinitionResponse::request() const
 {
     Q_D(const DescribeTaskDefinitionResponse);
@@ -79,9 +77,8 @@ const DescribeTaskDefinitionRequest * DescribeTaskDefinitionResponse::request() 
 }
 
 /*!
- * @brief  Parse a ECS DescribeTaskDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS DescribeTaskDefinition \a response.
  */
 void DescribeTaskDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void DescribeTaskDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::DescribeTaskDefinitionResponsePrivate
+ * \brief The DescribeTaskDefinitionResponsePrivate class provides private implementation for DescribeTaskDefinitionResponse.
  * \internal
  *
- * \class DescribeTaskDefinitionResponsePrivate
- *
- * \brief Private implementation for DescribeTaskDefinitionResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTaskDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTaskDefinitionResponse instance.
+ * Constructs a DescribeTaskDefinitionResponsePrivate object with public implementation \a q.
  */
 DescribeTaskDefinitionResponsePrivate::DescribeTaskDefinitionResponsePrivate(
     DescribeTaskDefinitionResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ DescribeTaskDefinitionResponsePrivate::DescribeTaskDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS DescribeTaskDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS DescribeTaskDefinition response element from \a xml.
  */
 void DescribeTaskDefinitionResponsePrivate::parseDescribeTaskDefinitionResponse(QXmlStreamReader &xml)
 {

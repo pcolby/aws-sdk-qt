@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UploadSSHPublicKeyRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UploadSSHPublicKeyRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UploadSSHPublicKeyRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UploadSSHPublicKeyRequestPrivate::UploadSSHPublicKeyRequestPrivate(
     const IAMRequest::Action action, UploadSSHPublicKeyRequest * const q)

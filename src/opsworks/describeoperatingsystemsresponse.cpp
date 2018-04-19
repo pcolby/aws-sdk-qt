@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeOperatingSystemsResponse
- *
  * \brief The DescribeOperatingSystemsResponse class provides an interace for OpsWorks DescribeOperatingSystems responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeOperatingSystemsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeOperatingSystemsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeOperatingSystemsResponse::DescribeOperatingSystemsResponse(
         const DescribeOperatingSystemsRequest &request,
@@ -161,6 +156,9 @@ DescribeOperatingSystemsResponse::DescribeOperatingSystemsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeOperatingSystemsRequest * DescribeOperatingSystemsResponse::request() const
 {
     Q_D(const DescribeOperatingSystemsResponse);
@@ -168,9 +166,8 @@ const DescribeOperatingSystemsRequest * DescribeOperatingSystemsResponse::reques
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeOperatingSystems response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeOperatingSystems \a response.
  */
 void DescribeOperatingSystemsResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeOperatingSystemsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeOperatingSystemsResponsePrivate
+ * \brief The DescribeOperatingSystemsResponsePrivate class provides private implementation for DescribeOperatingSystemsResponse.
  * \internal
  *
- * \class DescribeOperatingSystemsResponsePrivate
- *
- * \brief Private implementation for DescribeOperatingSystemsResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOperatingSystemsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeOperatingSystemsResponse instance.
+ * Constructs a DescribeOperatingSystemsResponsePrivate object with public implementation \a q.
  */
 DescribeOperatingSystemsResponsePrivate::DescribeOperatingSystemsResponsePrivate(
     DescribeOperatingSystemsResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeOperatingSystemsResponsePrivate::DescribeOperatingSystemsResponsePrivate
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeOperatingSystemsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeOperatingSystems response element from \a xml.
  */
 void DescribeOperatingSystemsResponsePrivate::parseDescribeOperatingSystemsResponse(QXmlStreamReader &xml)
 {

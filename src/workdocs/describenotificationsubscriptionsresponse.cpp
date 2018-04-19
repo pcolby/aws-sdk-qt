@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DescribeNotificationSubscriptionsResponse
- *
  * \brief The DescribeNotificationSubscriptionsResponse class provides an interace for WorkDocs DescribeNotificationSubscriptions responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DescribeNotificationSubscriptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeNotificationSubscriptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeNotificationSubscriptionsResponse::DescribeNotificationSubscriptionsResponse(
         const DescribeNotificationSubscriptionsRequest &request,
@@ -84,6 +79,9 @@ DescribeNotificationSubscriptionsResponse::DescribeNotificationSubscriptionsResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeNotificationSubscriptionsRequest * DescribeNotificationSubscriptionsResponse::request() const
 {
     Q_D(const DescribeNotificationSubscriptionsResponse);
@@ -91,9 +89,8 @@ const DescribeNotificationSubscriptionsRequest * DescribeNotificationSubscriptio
 }
 
 /*!
- * @brief  Parse a WorkDocs DescribeNotificationSubscriptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DescribeNotificationSubscriptions \a response.
  */
 void DescribeNotificationSubscriptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DescribeNotificationSubscriptionsResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::WorkDocs::DescribeNotificationSubscriptionsResponsePrivate
+ * \brief The DescribeNotificationSubscriptionsResponsePrivate class provides private implementation for DescribeNotificationSubscriptionsResponse.
  * \internal
  *
- * \class DescribeNotificationSubscriptionsResponsePrivate
- *
- * \brief Private implementation for DescribeNotificationSubscriptionsResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNotificationSubscriptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeNotificationSubscriptionsResponse instance.
+ * Constructs a DescribeNotificationSubscriptionsResponsePrivate object with public implementation \a q.
  */
 DescribeNotificationSubscriptionsResponsePrivate::DescribeNotificationSubscriptionsResponsePrivate(
     DescribeNotificationSubscriptionsResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DescribeNotificationSubscriptionsResponsePrivate::DescribeNotificationSubscripti
 }
 
 /*!
- * @brief  Parse an WorkDocs DescribeNotificationSubscriptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DescribeNotificationSubscriptions response element from \a xml.
  */
 void DescribeNotificationSubscriptionsResponsePrivate::parseDescribeNotificationSubscriptionsResponse(QXmlStreamReader &xml)
 {

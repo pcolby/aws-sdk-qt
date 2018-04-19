@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateRegexPatternSetResponse
- *
  * \brief The UpdateRegexPatternSetResponse class provides an interace for WAF UpdateRegexPatternSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateRegexPatternSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRegexPatternSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRegexPatternSetResponse::UpdateRegexPatternSetResponse(
         const UpdateRegexPatternSetRequest &request,
@@ -60,6 +55,9 @@ UpdateRegexPatternSetResponse::UpdateRegexPatternSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRegexPatternSetRequest * UpdateRegexPatternSetResponse::request() const
 {
     Q_D(const UpdateRegexPatternSetResponse);
@@ -67,9 +65,8 @@ const UpdateRegexPatternSetRequest * UpdateRegexPatternSetResponse::request() co
 }
 
 /*!
- * @brief  Parse a WAF UpdateRegexPatternSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF UpdateRegexPatternSet \a response.
  */
 void UpdateRegexPatternSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateRegexPatternSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::UpdateRegexPatternSetResponsePrivate
+ * \brief The UpdateRegexPatternSetResponsePrivate class provides private implementation for UpdateRegexPatternSetResponse.
  * \internal
  *
- * \class UpdateRegexPatternSetResponsePrivate
- *
- * \brief Private implementation for UpdateRegexPatternSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRegexPatternSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRegexPatternSetResponse instance.
+ * Constructs a UpdateRegexPatternSetResponsePrivate object with public implementation \a q.
  */
 UpdateRegexPatternSetResponsePrivate::UpdateRegexPatternSetResponsePrivate(
     UpdateRegexPatternSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateRegexPatternSetResponsePrivate::UpdateRegexPatternSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF UpdateRegexPatternSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF UpdateRegexPatternSet response element from \a xml.
  */
 void UpdateRegexPatternSetResponsePrivate::parseUpdateRegexPatternSetResponse(QXmlStreamReader &xml)
 {

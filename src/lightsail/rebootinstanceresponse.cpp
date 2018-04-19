@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::RebootInstanceResponse
- *
  * \brief The RebootInstanceResponse class provides an interace for Lightsail RebootInstance responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new RebootInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RebootInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 RebootInstanceResponse::RebootInstanceResponse(
         const RebootInstanceRequest &request,
@@ -71,6 +66,9 @@ RebootInstanceResponse::RebootInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RebootInstanceRequest * RebootInstanceResponse::request() const
 {
     Q_D(const RebootInstanceResponse);
@@ -78,9 +76,8 @@ const RebootInstanceRequest * RebootInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail RebootInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail RebootInstance \a response.
  */
 void RebootInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void RebootInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::RebootInstanceResponsePrivate
+ * \brief The RebootInstanceResponsePrivate class provides private implementation for RebootInstanceResponse.
  * \internal
  *
- * \class RebootInstanceResponsePrivate
- *
- * \brief Private implementation for RebootInstanceResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RebootInstanceResponse instance.
+ * Constructs a RebootInstanceResponsePrivate object with public implementation \a q.
  */
 RebootInstanceResponsePrivate::RebootInstanceResponsePrivate(
     RebootInstanceResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ RebootInstanceResponsePrivate::RebootInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail RebootInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail RebootInstance response element from \a xml.
  */
 void RebootInstanceResponsePrivate::parseRebootInstanceResponse(QXmlStreamReader &xml)
 {

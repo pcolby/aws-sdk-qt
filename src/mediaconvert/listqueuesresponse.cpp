@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::ListQueuesResponse
- *
  * \brief The ListQueuesResponse class provides an interace for MediaConvert ListQueues responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::listQueues
  */
 
 /*!
- * @brief  Constructs a new ListQueuesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListQueuesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListQueuesResponse::ListQueuesResponse(
         const ListQueuesRequest &request,
@@ -55,6 +50,9 @@ ListQueuesResponse::ListQueuesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListQueuesRequest * ListQueuesResponse::request() const
 {
     Q_D(const ListQueuesResponse);
@@ -62,9 +60,8 @@ const ListQueuesRequest * ListQueuesResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert ListQueues response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert ListQueues \a response.
  */
 void ListQueuesResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListQueuesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::ListQueuesResponsePrivate
+ * \brief The ListQueuesResponsePrivate class provides private implementation for ListQueuesResponse.
  * \internal
  *
- * \class ListQueuesResponsePrivate
- *
- * \brief Private implementation for ListQueuesResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListQueuesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListQueuesResponse instance.
+ * Constructs a ListQueuesResponsePrivate object with public implementation \a q.
  */
 ListQueuesResponsePrivate::ListQueuesResponsePrivate(
     ListQueuesResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ ListQueuesResponsePrivate::ListQueuesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert ListQueuesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert ListQueues response element from \a xml.
  */
 void ListQueuesResponsePrivate::parseListQueuesResponse(QXmlStreamReader &xml)
 {

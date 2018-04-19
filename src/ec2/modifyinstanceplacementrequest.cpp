@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyInstancePlacementRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ModifyInstancePlacementRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyInstancePlacementRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyInstancePlacementRequestPrivate::ModifyInstancePlacementRequestPrivate(
     const EC2Request::Action action, ModifyInstancePlacementRequest * const q)

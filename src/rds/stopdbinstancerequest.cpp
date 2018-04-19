@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * StopDBInstanceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a StopDBInstanceRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a StopDBInstanceRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 StopDBInstanceRequestPrivate::StopDBInstanceRequestPrivate(
     const RDSRequest::Action action, StopDBInstanceRequest * const q)

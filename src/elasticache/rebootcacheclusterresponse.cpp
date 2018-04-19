@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::RebootCacheClusterResponse
- *
  * \brief The RebootCacheClusterResponse class provides an interace for ElastiCache RebootCacheCluster responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new RebootCacheClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RebootCacheClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 RebootCacheClusterResponse::RebootCacheClusterResponse(
         const RebootCacheClusterRequest &request,
@@ -69,6 +64,9 @@ RebootCacheClusterResponse::RebootCacheClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RebootCacheClusterRequest * RebootCacheClusterResponse::request() const
 {
     Q_D(const RebootCacheClusterResponse);
@@ -76,9 +74,8 @@ const RebootCacheClusterRequest * RebootCacheClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElastiCache RebootCacheCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache RebootCacheCluster \a response.
  */
 void RebootCacheClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void RebootCacheClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::RebootCacheClusterResponsePrivate
+ * \brief The RebootCacheClusterResponsePrivate class provides private implementation for RebootCacheClusterResponse.
  * \internal
  *
- * \class RebootCacheClusterResponsePrivate
- *
- * \brief Private implementation for RebootCacheClusterResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootCacheClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RebootCacheClusterResponse instance.
+ * Constructs a RebootCacheClusterResponsePrivate object with public implementation \a q.
  */
 RebootCacheClusterResponsePrivate::RebootCacheClusterResponsePrivate(
     RebootCacheClusterResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ RebootCacheClusterResponsePrivate::RebootCacheClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache RebootCacheClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache RebootCacheCluster response element from \a xml.
  */
 void RebootCacheClusterResponsePrivate::parseRebootCacheClusterResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace MediaStoreData {
 
 /*!
  * \class QtAws::MediaStoreData::ListItemsResponse
- *
  * \brief The ListItemsResponse class provides an interace for MediaStoreData ListItems responses.
  *
- * \ingroup MediaStoreData
+ * \inmodule QtAwsMediaStoreData
  *
  *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
  *  fundamental entities that are stored in AWS Elemental
@@ -41,11 +40,7 @@ namespace MediaStoreData {
  */
 
 /*!
- * @brief  Constructs a new ListItemsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListItemsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListItemsResponse::ListItemsResponse(
         const ListItemsRequest &request,
@@ -57,6 +52,9 @@ ListItemsResponse::ListItemsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListItemsRequest * ListItemsResponse::request() const
 {
     Q_D(const ListItemsResponse);
@@ -64,9 +62,8 @@ const ListItemsRequest * ListItemsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaStoreData ListItems response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaStoreData ListItems \a response.
  */
 void ListItemsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListItemsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaStoreData::ListItemsResponsePrivate
+ * \brief The ListItemsResponsePrivate class provides private implementation for ListItemsResponse.
  * \internal
  *
- * \class ListItemsResponsePrivate
- *
- * \brief Private implementation for ListItemsResponse.
+ * \inmodule QtAwsMediaStoreData
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListItemsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListItemsResponse instance.
+ * Constructs a ListItemsResponsePrivate object with public implementation \a q.
  */
 ListItemsResponsePrivate::ListItemsResponsePrivate(
     ListItemsResponse * const q) : MediaStoreDataResponsePrivate(q)
@@ -97,9 +90,7 @@ ListItemsResponsePrivate::ListItemsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaStoreData ListItemsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaStoreData ListItems response element from \a xml.
  */
 void ListItemsResponsePrivate::parseListItemsResponse(QXmlStreamReader &xml)
 {

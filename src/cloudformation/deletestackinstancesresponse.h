@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteStackInstancesResponse : public CloudFormationResponse 
 public:
     DeleteStackInstancesResponse(const DeleteStackInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteStackInstancesRequest * request() const;
+    virtual const DeleteStackInstancesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteStackInstancesResponse)

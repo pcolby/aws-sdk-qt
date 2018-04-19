@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteVpcPeeringAuthorizationResponse
- *
  * \brief The DeleteVpcPeeringAuthorizationResponse class provides an interace for GameLift DeleteVpcPeeringAuthorization responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcPeeringAuthorizationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVpcPeeringAuthorizationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVpcPeeringAuthorizationResponse::DeleteVpcPeeringAuthorizationResponse(
         const DeleteVpcPeeringAuthorizationRequest &request,
@@ -491,6 +486,9 @@ DeleteVpcPeeringAuthorizationResponse::DeleteVpcPeeringAuthorizationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVpcPeeringAuthorizationRequest * DeleteVpcPeeringAuthorizationResponse::request() const
 {
     Q_D(const DeleteVpcPeeringAuthorizationResponse);
@@ -498,9 +496,8 @@ const DeleteVpcPeeringAuthorizationRequest * DeleteVpcPeeringAuthorizationRespon
 }
 
 /*!
- * @brief  Parse a GameLift DeleteVpcPeeringAuthorization response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DeleteVpcPeeringAuthorization \a response.
  */
 void DeleteVpcPeeringAuthorizationResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DeleteVpcPeeringAuthorizationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DeleteVpcPeeringAuthorizationResponsePrivate
+ * \brief The DeleteVpcPeeringAuthorizationResponsePrivate class provides private implementation for DeleteVpcPeeringAuthorizationResponse.
  * \internal
  *
- * \class DeleteVpcPeeringAuthorizationResponsePrivate
- *
- * \brief Private implementation for DeleteVpcPeeringAuthorizationResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcPeeringAuthorizationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVpcPeeringAuthorizationResponse instance.
+ * Constructs a DeleteVpcPeeringAuthorizationResponsePrivate object with public implementation \a q.
  */
 DeleteVpcPeeringAuthorizationResponsePrivate::DeleteVpcPeeringAuthorizationResponsePrivate(
     DeleteVpcPeeringAuthorizationResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DeleteVpcPeeringAuthorizationResponsePrivate::DeleteVpcPeeringAuthorizationRespo
 }
 
 /*!
- * @brief  Parse an GameLift DeleteVpcPeeringAuthorizationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DeleteVpcPeeringAuthorization response element from \a xml.
  */
 void DeleteVpcPeeringAuthorizationResponsePrivate::parseDeleteVpcPeeringAuthorizationResponse(QXmlStreamReader &xml)
 {

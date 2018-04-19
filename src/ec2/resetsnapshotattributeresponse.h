@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResetSnapshotAttributeResponse : public EC2Response {
 public:
     ResetSnapshotAttributeResponse(const ResetSnapshotAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResetSnapshotAttributeRequest * request() const;
+    virtual const ResetSnapshotAttributeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResetSnapshotAttributeResponse)

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * GetTopicAttributesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetTopicAttributesRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a GetTopicAttributesRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 GetTopicAttributesRequestPrivate::GetTopicAttributesRequestPrivate(
     const SNSRequest::Action action, GetTopicAttributesRequest * const q)

@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::ListClustersResponse
- *
  * \brief The ListClustersResponse class provides an interace for ECS ListClusters responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new ListClustersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListClustersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListClustersResponse::ListClustersResponse(
         const ListClustersRequest &request,
@@ -72,6 +67,9 @@ ListClustersResponse::ListClustersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListClustersRequest * ListClustersResponse::request() const
 {
     Q_D(const ListClustersResponse);
@@ -79,9 +77,8 @@ const ListClustersRequest * ListClustersResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS ListClusters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS ListClusters \a response.
  */
 void ListClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void ListClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::ListClustersResponsePrivate
+ * \brief The ListClustersResponsePrivate class provides private implementation for ListClustersResponse.
  * \internal
  *
- * \class ListClustersResponsePrivate
- *
- * \brief Private implementation for ListClustersResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListClustersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListClustersResponse instance.
+ * Constructs a ListClustersResponsePrivate object with public implementation \a q.
  */
 ListClustersResponsePrivate::ListClustersResponsePrivate(
     ListClustersResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ ListClustersResponsePrivate::ListClustersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS ListClustersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS ListClusters response element from \a xml.
  */
 void ListClustersResponsePrivate::parseListClustersResponse(QXmlStreamReader &xml)
 {

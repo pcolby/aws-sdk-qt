@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateClassifierRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateClassifierRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a CreateClassifierRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 CreateClassifierRequestPrivate::CreateClassifierRequestPrivate(
     const GlueRequest::Action action, CreateClassifierRequest * const q)

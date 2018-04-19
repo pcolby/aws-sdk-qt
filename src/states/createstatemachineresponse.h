@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateStateMachineResponse : public SFNResponse {
 public:
     CreateStateMachineResponse(const CreateStateMachineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateStateMachineRequest * request() const;
+    virtual const CreateStateMachineRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateStateMachineResponse)

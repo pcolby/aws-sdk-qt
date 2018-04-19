@@ -28,16 +28,13 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::ElasticsearchServiceResponse
- *
  * \brief The ElasticsearchServiceResponse class provides an interface for ElasticsearchService responses.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @brief  Constructs a new ElasticsearchServiceResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ElasticsearchServiceResponse object with parent \a parent.
  */
 ElasticsearchServiceResponse::ElasticsearchServiceResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ElasticsearchServiceResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ElasticsearchServiceResponse::ElasticsearchServiceResponse(QObject * const paren
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticsearchServiceResponse object.
- *
+ * \internal
+ * Constructs a ElasticsearchServiceResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElasticsearchServiceResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ElasticsearchServiceResponse::ElasticsearchServiceResponse(ElasticsearchServiceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ElasticsearchServiceResponse::ElasticsearchServiceResponse(ElasticsearchServiceR
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ElasticsearchServiceResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ElasticsearchServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticsearchService::ElasticsearchServiceResponsePrivate
+ * \brief The ElasticsearchServiceResponsePrivate class provides private implementation for ElasticsearchServiceResponse.
+ * \internal
  *
- * @class  ElasticsearchServiceResponsePrivate
- *
- * @brief  Private implementation for ElasticsearchServiceResponse.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticsearchServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ElasticsearchServiceResponse instance.
+ * Constructs a ElasticsearchServiceResponsePrivate object with public implementation \a q.
  */
 ElasticsearchServiceResponsePrivate::ElasticsearchServiceResponsePrivate(
     ElasticsearchServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

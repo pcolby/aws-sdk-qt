@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListFunctionDefinitionsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a ListFunctionDefinitionsRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a ListFunctionDefinitionsRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 ListFunctionDefinitionsRequestPrivate::ListFunctionDefinitionsRequestPrivate(
     const GreengrassRequest::Action action, ListFunctionDefinitionsRequest * const q)

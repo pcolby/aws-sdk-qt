@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DeleteReplicationGroupRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteReplicationGroupRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a DeleteReplicationGroupRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 DeleteReplicationGroupRequestPrivate::DeleteReplicationGroupRequestPrivate(
     const ElastiCacheRequest::Action action, DeleteReplicationGroupRequest * const q)

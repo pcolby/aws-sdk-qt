@@ -34,10 +34,10 @@ class QTAWS_EXPORT RegisterContainerInstanceResponse : public ECSResponse {
 public:
     RegisterContainerInstanceResponse(const RegisterContainerInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RegisterContainerInstanceRequest * request() const;
+    virtual const RegisterContainerInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RegisterContainerInstanceResponse)

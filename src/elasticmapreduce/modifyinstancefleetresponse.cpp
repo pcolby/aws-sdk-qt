@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ModifyInstanceFleetResponse
- *
  * \brief The ModifyInstanceFleetResponse class provides an interace for EMR ModifyInstanceFleet responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ModifyInstanceFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyInstanceFleetResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyInstanceFleetResponse::ModifyInstanceFleetResponse(
         const ModifyInstanceFleetRequest &request,
@@ -58,6 +53,9 @@ ModifyInstanceFleetResponse::ModifyInstanceFleetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyInstanceFleetRequest * ModifyInstanceFleetResponse::request() const
 {
     Q_D(const ModifyInstanceFleetResponse);
@@ -65,9 +63,8 @@ const ModifyInstanceFleetRequest * ModifyInstanceFleetResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR ModifyInstanceFleet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR ModifyInstanceFleet \a response.
  */
 void ModifyInstanceFleetResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ModifyInstanceFleetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::ModifyInstanceFleetResponsePrivate
+ * \brief The ModifyInstanceFleetResponsePrivate class provides private implementation for ModifyInstanceFleetResponse.
  * \internal
  *
- * \class ModifyInstanceFleetResponsePrivate
- *
- * \brief Private implementation for ModifyInstanceFleetResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyInstanceFleetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyInstanceFleetResponse instance.
+ * Constructs a ModifyInstanceFleetResponsePrivate object with public implementation \a q.
  */
 ModifyInstanceFleetResponsePrivate::ModifyInstanceFleetResponsePrivate(
     ModifyInstanceFleetResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ ModifyInstanceFleetResponsePrivate::ModifyInstanceFleetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR ModifyInstanceFleetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR ModifyInstanceFleet response element from \a xml.
  */
 void ModifyInstanceFleetResponsePrivate::parseModifyInstanceFleetResponse(QXmlStreamReader &xml)
 {

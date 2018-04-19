@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::RegisterTargetWithMaintenanceWindowResponse
- *
  * \brief The RegisterTargetWithMaintenanceWindowResponse class provides an interace for SSM RegisterTargetWithMaintenanceWindow responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new RegisterTargetWithMaintenanceWindowResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterTargetWithMaintenanceWindowResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterTargetWithMaintenanceWindowResponse::RegisterTargetWithMaintenanceWindowResponse(
         const RegisterTargetWithMaintenanceWindowRequest &request,
@@ -79,6 +74,9 @@ RegisterTargetWithMaintenanceWindowResponse::RegisterTargetWithMaintenanceWindow
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterTargetWithMaintenanceWindowRequest * RegisterTargetWithMaintenanceWindowResponse::request() const
 {
     Q_D(const RegisterTargetWithMaintenanceWindowResponse);
@@ -86,9 +84,8 @@ const RegisterTargetWithMaintenanceWindowRequest * RegisterTargetWithMaintenance
 }
 
 /*!
- * @brief  Parse a SSM RegisterTargetWithMaintenanceWindow response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM RegisterTargetWithMaintenanceWindow \a response.
  */
 void RegisterTargetWithMaintenanceWindowResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void RegisterTargetWithMaintenanceWindowResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::SSM::RegisterTargetWithMaintenanceWindowResponsePrivate
+ * \brief The RegisterTargetWithMaintenanceWindowResponsePrivate class provides private implementation for RegisterTargetWithMaintenanceWindowResponse.
  * \internal
  *
- * \class RegisterTargetWithMaintenanceWindowResponsePrivate
- *
- * \brief Private implementation for RegisterTargetWithMaintenanceWindowResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterTargetWithMaintenanceWindowResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterTargetWithMaintenanceWindowResponse instance.
+ * Constructs a RegisterTargetWithMaintenanceWindowResponsePrivate object with public implementation \a q.
  */
 RegisterTargetWithMaintenanceWindowResponsePrivate::RegisterTargetWithMaintenanceWindowResponsePrivate(
     RegisterTargetWithMaintenanceWindowResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ RegisterTargetWithMaintenanceWindowResponsePrivate::RegisterTargetWithMaintenanc
 }
 
 /*!
- * @brief  Parse an SSM RegisterTargetWithMaintenanceWindowResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM RegisterTargetWithMaintenanceWindow response element from \a xml.
  */
 void RegisterTargetWithMaintenanceWindowResponsePrivate::parseRegisterTargetWithMaintenanceWindowResponse(QXmlStreamReader &xml)
 {

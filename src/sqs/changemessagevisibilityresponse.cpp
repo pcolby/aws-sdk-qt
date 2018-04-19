@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::ChangeMessageVisibilityResponse
- *
  * \brief The ChangeMessageVisibilityResponse class provides an interace for SQS ChangeMessageVisibility responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new ChangeMessageVisibilityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ChangeMessageVisibilityResponse object for \a reply to \a request, with parent \a parent.
  */
 ChangeMessageVisibilityResponse::ChangeMessageVisibilityResponse(
         const ChangeMessageVisibilityRequest &request,
@@ -121,6 +116,9 @@ ChangeMessageVisibilityResponse::ChangeMessageVisibilityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ChangeMessageVisibilityRequest * ChangeMessageVisibilityResponse::request() const
 {
     Q_D(const ChangeMessageVisibilityResponse);
@@ -128,9 +126,8 @@ const ChangeMessageVisibilityRequest * ChangeMessageVisibilityResponse::request(
 }
 
 /*!
- * @brief  Parse a SQS ChangeMessageVisibility response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS ChangeMessageVisibility \a response.
  */
 void ChangeMessageVisibilityResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void ChangeMessageVisibilityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::ChangeMessageVisibilityResponsePrivate
+ * \brief The ChangeMessageVisibilityResponsePrivate class provides private implementation for ChangeMessageVisibilityResponse.
  * \internal
  *
- * \class ChangeMessageVisibilityResponsePrivate
- *
- * \brief Private implementation for ChangeMessageVisibilityResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ChangeMessageVisibilityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ChangeMessageVisibilityResponse instance.
+ * Constructs a ChangeMessageVisibilityResponsePrivate object with public implementation \a q.
  */
 ChangeMessageVisibilityResponsePrivate::ChangeMessageVisibilityResponsePrivate(
     ChangeMessageVisibilityResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ ChangeMessageVisibilityResponsePrivate::ChangeMessageVisibilityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS ChangeMessageVisibilityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS ChangeMessageVisibility response element from \a xml.
  */
 void ChangeMessageVisibilityResponsePrivate::parseChangeMessageVisibilityResponse(QXmlStreamReader &xml)
 {

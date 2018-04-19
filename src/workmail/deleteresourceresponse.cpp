@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DeleteResourceResponse
- *
  * \brief The DeleteResourceResponse class provides an interace for WorkMail DeleteResource responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DeleteResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteResourceResponse::DeleteResourceResponse(
         const DeleteResourceRequest &request,
@@ -88,6 +83,9 @@ DeleteResourceResponse::DeleteResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteResourceRequest * DeleteResourceResponse::request() const
 {
     Q_D(const DeleteResourceResponse);
@@ -95,9 +93,8 @@ const DeleteResourceRequest * DeleteResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail DeleteResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail DeleteResource \a response.
  */
 void DeleteResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DeleteResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::DeleteResourceResponsePrivate
+ * \brief The DeleteResourceResponsePrivate class provides private implementation for DeleteResourceResponse.
  * \internal
  *
- * \class DeleteResourceResponsePrivate
- *
- * \brief Private implementation for DeleteResourceResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteResourceResponse instance.
+ * Constructs a DeleteResourceResponsePrivate object with public implementation \a q.
  */
 DeleteResourceResponsePrivate::DeleteResourceResponsePrivate(
     DeleteResourceResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ DeleteResourceResponsePrivate::DeleteResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail DeleteResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail DeleteResource response element from \a xml.
  */
 void DeleteResourceResponsePrivate::parseDeleteResourceResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateDetectorResponse : public GuardDutyResponse {
 public:
     UpdateDetectorResponse(const UpdateDetectorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateDetectorRequest * request() const;
+    virtual const UpdateDetectorRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateDetectorResponse)

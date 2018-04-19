@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DetachInternetGatewayResponse
- *
  * \brief The DetachInternetGatewayResponse class provides an interace for EC2 DetachInternetGateway responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DetachInternetGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachInternetGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachInternetGatewayResponse::DetachInternetGatewayResponse(
         const DetachInternetGatewayRequest &request,
@@ -59,6 +54,9 @@ DetachInternetGatewayResponse::DetachInternetGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachInternetGatewayRequest * DetachInternetGatewayResponse::request() const
 {
     Q_D(const DetachInternetGatewayResponse);
@@ -66,9 +64,8 @@ const DetachInternetGatewayRequest * DetachInternetGatewayResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 DetachInternetGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DetachInternetGateway \a response.
  */
 void DetachInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DetachInternetGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DetachInternetGatewayResponsePrivate
+ * \brief The DetachInternetGatewayResponsePrivate class provides private implementation for DetachInternetGatewayResponse.
  * \internal
  *
- * \class DetachInternetGatewayResponsePrivate
- *
- * \brief Private implementation for DetachInternetGatewayResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachInternetGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachInternetGatewayResponse instance.
+ * Constructs a DetachInternetGatewayResponsePrivate object with public implementation \a q.
  */
 DetachInternetGatewayResponsePrivate::DetachInternetGatewayResponsePrivate(
     DetachInternetGatewayResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DetachInternetGatewayResponsePrivate::DetachInternetGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DetachInternetGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DetachInternetGateway response element from \a xml.
  */
 void DetachInternetGatewayResponsePrivate::parseDetachInternetGatewayResponse(QXmlStreamReader &xml)
 {

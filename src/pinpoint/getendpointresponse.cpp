@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetEndpointResponse
- *
  * \brief The GetEndpointResponse class provides an interace for Pinpoint GetEndpoint responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getEndpoint
  */
 
 /*!
- * @brief  Constructs a new GetEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 GetEndpointResponse::GetEndpointResponse(
         const GetEndpointRequest &request,
@@ -55,6 +50,9 @@ GetEndpointResponse::GetEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetEndpointRequest * GetEndpointResponse::request() const
 {
     Q_D(const GetEndpointResponse);
@@ -62,9 +60,8 @@ const GetEndpointRequest * GetEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetEndpoint \a response.
  */
 void GetEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetEndpointResponsePrivate
+ * \brief The GetEndpointResponsePrivate class provides private implementation for GetEndpointResponse.
  * \internal
  *
- * \class GetEndpointResponsePrivate
- *
- * \brief Private implementation for GetEndpointResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetEndpointResponse instance.
+ * Constructs a GetEndpointResponsePrivate object with public implementation \a q.
  */
 GetEndpointResponsePrivate::GetEndpointResponsePrivate(
     GetEndpointResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetEndpointResponsePrivate::GetEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetEndpoint response element from \a xml.
  */
 void GetEndpointResponsePrivate::parseGetEndpointResponse(QXmlStreamReader &xml)
 {

@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * DescribeLoadBalancerPoliciesRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeLoadBalancerPoliciesRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a DescribeLoadBalancerPoliciesRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 DescribeLoadBalancerPoliciesRequestPrivate::DescribeLoadBalancerPoliciesRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, DescribeLoadBalancerPoliciesRequest * const q)

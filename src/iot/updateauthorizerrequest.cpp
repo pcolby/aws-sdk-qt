@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAuthorizerRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateAuthorizerRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAuthorizerRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 UpdateAuthorizerRequestPrivate::UpdateAuthorizerRequestPrivate(
     const IoTRequest::Action action, UpdateAuthorizerRequest * const q)

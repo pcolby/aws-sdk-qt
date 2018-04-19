@@ -50,7 +50,7 @@ namespace Athena {
  */
 
 /*!
- * Constructs a[n] AthenaRequest object for Athena \a action.
+ * Constructs a AthenaRequest object for Athena \a action.
  */
 AthenaRequest::AthenaRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new AthenaRequestPrivate(action, this))
@@ -250,8 +250,8 @@ QNetworkRequest AthenaRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a AthenaRequestPrivate object for Athena \a action with,
- * public implementation \a q.
+ * Constructs a AthenaRequestPrivate object for Athena \a action,
+ * with public implementation \a q.
  */
 AthenaRequestPrivate::AthenaRequestPrivate(const AthenaRequest::Action action, AthenaRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

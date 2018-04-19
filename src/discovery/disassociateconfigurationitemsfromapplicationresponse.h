@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateConfigurationItemsFromApplicationResponse : publi
 public:
     DisassociateConfigurationItemsFromApplicationResponse(const DisassociateConfigurationItemsFromApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateConfigurationItemsFromApplicationRequest * request() const;
+    virtual const DisassociateConfigurationItemsFromApplicationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateConfigurationItemsFromApplicationResponse)

@@ -28,16 +28,13 @@ namespace MediaStoreData {
 
 /*!
  * \class QtAws::MediaStoreData::MediaStoreDataResponse
- *
  * \brief The MediaStoreDataResponse class provides an interface for MediaStoreData responses.
  *
- * \ingroup MediaStoreData
+ * \inmodule QtAwsMediaStoreData
  */
 
 /*!
- * @brief  Constructs a new MediaStoreDataResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MediaStoreDataResponse object with parent \a parent.
  */
 MediaStoreDataResponse::MediaStoreDataResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MediaStoreDataResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MediaStoreDataResponse::MediaStoreDataResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaStoreDataResponse object.
- *
+ * \internal
+ * Constructs a MediaStoreDataResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaStoreDataResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MediaStoreDataResponse::MediaStoreDataResponse(MediaStoreDataResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MediaStoreDataResponse::MediaStoreDataResponse(MediaStoreDataResponsePrivate * c
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MediaStoreDataResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MediaStoreDataResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MediaStoreData::MediaStoreDataResponsePrivate
+ * \brief The MediaStoreDataResponsePrivate class provides private implementation for MediaStoreDataResponse.
+ * \internal
  *
- * @class  MediaStoreDataResponsePrivate
- *
- * @brief  Private implementation for MediaStoreDataResponse.
+ * \inmodule QtAwsMediaStoreData
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MediaStoreDataResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MediaStoreDataResponse instance.
+ * Constructs a MediaStoreDataResponsePrivate object with public implementation \a q.
  */
 MediaStoreDataResponsePrivate::MediaStoreDataResponsePrivate(
     MediaStoreDataResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

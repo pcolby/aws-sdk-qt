@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDBClusterSnapshotAttributesRequest::r
  */
 
 /*!
- *
- * Constructs a DescribeDBClusterSnapshotAttributesRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDBClusterSnapshotAttributesRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeDBClusterSnapshotAttributesRequestPrivate::DescribeDBClusterSnapshotAttributesRequestPrivate(
     const RDSRequest::Action action, DescribeDBClusterSnapshotAttributesRequest * const q)

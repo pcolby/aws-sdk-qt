@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateMountTargetResponse : public EFSResponse {
 public:
     CreateMountTargetResponse(const CreateMountTargetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateMountTargetRequest * request() const;
+    virtual const CreateMountTargetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateMountTargetResponse)

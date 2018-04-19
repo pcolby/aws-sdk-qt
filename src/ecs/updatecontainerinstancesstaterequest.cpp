@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * UpdateContainerInstancesStateRequest::respons
  */
 
 /*!
- *
- * Constructs a UpdateContainerInstancesStateRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a UpdateContainerInstancesStateRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateRequestPrivate(
     const ECSRequest::Action action, UpdateContainerInstancesStateRequest * const q)

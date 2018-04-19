@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * StartReplicationTaskRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a StartReplicationTaskRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a StartReplicationTaskRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 StartReplicationTaskRequestPrivate::StartReplicationTaskRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, StartReplicationTaskRequest * const q)

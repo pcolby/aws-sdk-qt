@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DescribeDomainControllersResponse
- *
  * \brief The DescribeDomainControllersResponse class provides an interace for DirectoryService DescribeDomainControllers responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DescribeDomainControllersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDomainControllersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDomainControllersResponse::DescribeDomainControllersResponse(
         const DescribeDomainControllersRequest &request,
@@ -69,6 +64,9 @@ DescribeDomainControllersResponse::DescribeDomainControllersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDomainControllersRequest * DescribeDomainControllersResponse::request() const
 {
     Q_D(const DescribeDomainControllersResponse);
@@ -76,9 +74,8 @@ const DescribeDomainControllersRequest * DescribeDomainControllersResponse::requ
 }
 
 /*!
- * @brief  Parse a DirectoryService DescribeDomainControllers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DescribeDomainControllers \a response.
  */
 void DescribeDomainControllersResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeDomainControllersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DescribeDomainControllersResponsePrivate
+ * \brief The DescribeDomainControllersResponsePrivate class provides private implementation for DescribeDomainControllersResponse.
  * \internal
  *
- * \class DescribeDomainControllersResponsePrivate
- *
- * \brief Private implementation for DescribeDomainControllersResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDomainControllersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDomainControllersResponse instance.
+ * Constructs a DescribeDomainControllersResponsePrivate object with public implementation \a q.
  */
 DescribeDomainControllersResponsePrivate::DescribeDomainControllersResponsePrivate(
     DescribeDomainControllersResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeDomainControllersResponsePrivate::DescribeDomainControllersResponsePriva
 }
 
 /*!
- * @brief  Parse an DirectoryService DescribeDomainControllersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DescribeDomainControllers response element from \a xml.
  */
 void DescribeDomainControllersResponsePrivate::parseDescribeDomainControllersResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::AddTagsToResourceResponse
- *
  * \brief The AddTagsToResourceResponse class provides an interace for ElastiCache AddTagsToResource responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new AddTagsToResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddTagsToResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 AddTagsToResourceResponse::AddTagsToResourceResponse(
         const AddTagsToResourceRequest &request,
@@ -69,6 +64,9 @@ AddTagsToResourceResponse::AddTagsToResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
 {
     Q_D(const AddTagsToResourceResponse);
@@ -76,9 +74,8 @@ const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElastiCache AddTagsToResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache AddTagsToResource \a response.
  */
 void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::AddTagsToResourceResponsePrivate
+ * \brief The AddTagsToResourceResponsePrivate class provides private implementation for AddTagsToResourceResponse.
  * \internal
  *
- * \class AddTagsToResourceResponsePrivate
- *
- * \brief Private implementation for AddTagsToResourceResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsToResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddTagsToResourceResponse instance.
+ * Constructs a AddTagsToResourceResponsePrivate object with public implementation \a q.
  */
 AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
     AddTagsToResourceResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ AddTagsToResourceResponsePrivate::AddTagsToResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache AddTagsToResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache AddTagsToResource response element from \a xml.
  */
 void AddTagsToResourceResponsePrivate::parseAddTagsToResourceResponse(QXmlStreamReader &xml)
 {

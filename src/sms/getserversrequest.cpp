@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetServersRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetServersRequestPrivate object for SMS \a action with,
- * public implementation \a q.
+ * Constructs a GetServersRequestPrivate object for SMS \a action,
+ * with public implementation \a q.
  */
 GetServersRequestPrivate::GetServersRequestPrivate(
     const SMSRequest::Action action, GetServersRequest * const q)

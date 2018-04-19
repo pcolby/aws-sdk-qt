@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::DeleteAliasResponse
- *
  * \brief The DeleteAliasResponse class provides an interace for KMS DeleteAlias responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new DeleteAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAliasResponse::DeleteAliasResponse(
         const DeleteAliasRequest &request,
@@ -154,6 +149,9 @@ DeleteAliasResponse::DeleteAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAliasRequest * DeleteAliasResponse::request() const
 {
     Q_D(const DeleteAliasResponse);
@@ -161,9 +159,8 @@ const DeleteAliasRequest * DeleteAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS DeleteAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS DeleteAlias \a response.
  */
 void DeleteAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void DeleteAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::DeleteAliasResponsePrivate
+ * \brief The DeleteAliasResponsePrivate class provides private implementation for DeleteAliasResponse.
  * \internal
  *
- * \class DeleteAliasResponsePrivate
- *
- * \brief Private implementation for DeleteAliasResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAliasResponse instance.
+ * Constructs a DeleteAliasResponsePrivate object with public implementation \a q.
  */
 DeleteAliasResponsePrivate::DeleteAliasResponsePrivate(
     DeleteAliasResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ DeleteAliasResponsePrivate::DeleteAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS DeleteAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS DeleteAlias response element from \a xml.
  */
 void DeleteAliasResponsePrivate::parseDeleteAliasResponse(QXmlStreamReader &xml)
 {

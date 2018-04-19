@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * ListGrantsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ListGrantsRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a ListGrantsRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 ListGrantsRequestPrivate::ListGrantsRequestPrivate(
     const KMSRequest::Action action, ListGrantsRequest * const q)

@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminAddUserToGroupResponse
- *
  * \brief The AdminAddUserToGroupResponse class provides an interace for CognitoIdentityProvider AdminAddUserToGroup responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminAddUserToGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminAddUserToGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminAddUserToGroupResponse::AdminAddUserToGroupResponse(
         const AdminAddUserToGroupRequest &request,
@@ -65,6 +60,9 @@ AdminAddUserToGroupResponse::AdminAddUserToGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminAddUserToGroupRequest * AdminAddUserToGroupResponse::request() const
 {
     Q_D(const AdminAddUserToGroupResponse);
@@ -72,9 +70,8 @@ const AdminAddUserToGroupRequest * AdminAddUserToGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminAddUserToGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminAddUserToGroup \a response.
  */
 void AdminAddUserToGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminAddUserToGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminAddUserToGroupResponsePrivate
+ * \brief The AdminAddUserToGroupResponsePrivate class provides private implementation for AdminAddUserToGroupResponse.
  * \internal
  *
- * \class AdminAddUserToGroupResponsePrivate
- *
- * \brief Private implementation for AdminAddUserToGroupResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminAddUserToGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminAddUserToGroupResponse instance.
+ * Constructs a AdminAddUserToGroupResponsePrivate object with public implementation \a q.
  */
 AdminAddUserToGroupResponsePrivate::AdminAddUserToGroupResponsePrivate(
     AdminAddUserToGroupResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminAddUserToGroupResponsePrivate::AdminAddUserToGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminAddUserToGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminAddUserToGroup response element from \a xml.
  */
 void AdminAddUserToGroupResponsePrivate::parseAdminAddUserToGroupResponse(QXmlStreamReader &xml)
 {

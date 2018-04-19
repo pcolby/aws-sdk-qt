@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAccountLimitsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DescribeAccountLimitsRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAccountLimitsRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 DescribeAccountLimitsRequestPrivate::DescribeAccountLimitsRequestPrivate(
     const CloudFormationRequest::Action action, DescribeAccountLimitsRequest * const q)

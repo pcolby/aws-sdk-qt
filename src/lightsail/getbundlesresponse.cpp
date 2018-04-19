@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetBundlesResponse
- *
  * \brief The GetBundlesResponse class provides an interace for Lightsail GetBundles responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetBundlesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBundlesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBundlesResponse::GetBundlesResponse(
         const GetBundlesRequest &request,
@@ -71,6 +66,9 @@ GetBundlesResponse::GetBundlesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBundlesRequest * GetBundlesResponse::request() const
 {
     Q_D(const GetBundlesResponse);
@@ -78,9 +76,8 @@ const GetBundlesRequest * GetBundlesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetBundles response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetBundles \a response.
  */
 void GetBundlesResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetBundlesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetBundlesResponsePrivate
+ * \brief The GetBundlesResponsePrivate class provides private implementation for GetBundlesResponse.
  * \internal
  *
- * \class GetBundlesResponsePrivate
- *
- * \brief Private implementation for GetBundlesResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBundlesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBundlesResponse instance.
+ * Constructs a GetBundlesResponsePrivate object with public implementation \a q.
  */
 GetBundlesResponsePrivate::GetBundlesResponsePrivate(
     GetBundlesResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetBundlesResponsePrivate::GetBundlesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetBundlesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetBundles response element from \a xml.
  */
 void GetBundlesResponsePrivate::parseGetBundlesResponse(QXmlStreamReader &xml)
 {

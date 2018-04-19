@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::PutSecretValueResponse
- *
  * \brief The PutSecretValueResponse class provides an interace for SecretsManager PutSecretValue responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new PutSecretValueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutSecretValueResponse object for \a reply to \a request, with parent \a parent.
  */
 PutSecretValueResponse::PutSecretValueResponse(
         const PutSecretValueRequest &request,
@@ -155,6 +150,9 @@ PutSecretValueResponse::PutSecretValueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutSecretValueRequest * PutSecretValueResponse::request() const
 {
     Q_D(const PutSecretValueResponse);
@@ -162,9 +160,8 @@ const PutSecretValueRequest * PutSecretValueResponse::request() const
 }
 
 /*!
- * @brief  Parse a SecretsManager PutSecretValue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager PutSecretValue \a response.
  */
 void PutSecretValueResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void PutSecretValueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::PutSecretValueResponsePrivate
+ * \brief The PutSecretValueResponsePrivate class provides private implementation for PutSecretValueResponse.
  * \internal
  *
- * \class PutSecretValueResponsePrivate
- *
- * \brief Private implementation for PutSecretValueResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutSecretValueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutSecretValueResponse instance.
+ * Constructs a PutSecretValueResponsePrivate object with public implementation \a q.
  */
 PutSecretValueResponsePrivate::PutSecretValueResponsePrivate(
     PutSecretValueResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ PutSecretValueResponsePrivate::PutSecretValueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SecretsManager PutSecretValueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager PutSecretValue response element from \a xml.
  */
 void PutSecretValueResponsePrivate::parsePutSecretValueResponse(QXmlStreamReader &xml)
 {

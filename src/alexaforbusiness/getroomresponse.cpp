@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::GetRoomResponse
- *
  * \brief The GetRoomResponse class provides an interace for AlexaForBusiness GetRoom responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new GetRoomResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetRoomResponse object for \a reply to \a request, with parent \a parent.
  */
 GetRoomResponse::GetRoomResponse(
         const GetRoomRequest &request,
@@ -60,6 +55,9 @@ GetRoomResponse::GetRoomResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetRoomRequest * GetRoomResponse::request() const
 {
     Q_D(const GetRoomResponse);
@@ -67,9 +65,8 @@ const GetRoomRequest * GetRoomResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness GetRoom response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness GetRoom \a response.
  */
 void GetRoomResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetRoomResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::GetRoomResponsePrivate
+ * \brief The GetRoomResponsePrivate class provides private implementation for GetRoomResponse.
  * \internal
  *
- * \class GetRoomResponsePrivate
- *
- * \brief Private implementation for GetRoomResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetRoomResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetRoomResponse instance.
+ * Constructs a GetRoomResponsePrivate object with public implementation \a q.
  */
 GetRoomResponsePrivate::GetRoomResponsePrivate(
     GetRoomResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ GetRoomResponsePrivate::GetRoomResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness GetRoomResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness GetRoom response element from \a xml.
  */
 void GetRoomResponsePrivate::parseGetRoomResponse(QXmlStreamReader &xml)
 {

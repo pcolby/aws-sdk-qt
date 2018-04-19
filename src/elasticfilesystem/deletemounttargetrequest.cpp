@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeleteMountTargetRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteMountTargetRequestPrivate object for EFS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteMountTargetRequestPrivate object for EFS \a action,
+ * with public implementation \a q.
  */
 DeleteMountTargetRequestPrivate::DeleteMountTargetRequestPrivate(
     const EFSRequest::Action action, DeleteMountTargetRequest * const q)

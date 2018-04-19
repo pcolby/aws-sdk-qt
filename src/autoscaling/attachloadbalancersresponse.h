@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachLoadBalancersResponse : public AutoScalingResponse {
 public:
     AttachLoadBalancersResponse(const AttachLoadBalancersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachLoadBalancersRequest * request() const;
+    virtual const AttachLoadBalancersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AttachLoadBalancersResponse)

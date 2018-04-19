@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDocumentResponse : public SSMResponse {
 public:
     DeleteDocumentResponse(const DeleteDocumentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDocumentRequest * request() const;
+    virtual const DeleteDocumentRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDocumentResponse)

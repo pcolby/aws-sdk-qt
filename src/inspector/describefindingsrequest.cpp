@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DescribeFindingsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeFindingsRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a DescribeFindingsRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 DescribeFindingsRequestPrivate::DescribeFindingsRequestPrivate(
     const InspectorRequest::Action action, DescribeFindingsRequest * const q)

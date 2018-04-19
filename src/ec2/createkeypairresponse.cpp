@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateKeyPairResponse
- *
  * \brief The CreateKeyPairResponse class provides an interace for EC2 CreateKeyPair responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateKeyPairResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateKeyPairResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateKeyPairResponse::CreateKeyPairResponse(
         const CreateKeyPairRequest &request,
@@ -59,6 +54,9 @@ CreateKeyPairResponse::CreateKeyPairResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateKeyPairRequest * CreateKeyPairResponse::request() const
 {
     Q_D(const CreateKeyPairResponse);
@@ -66,9 +64,8 @@ const CreateKeyPairRequest * CreateKeyPairResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateKeyPair response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateKeyPair \a response.
  */
 void CreateKeyPairResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateKeyPairResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateKeyPairResponsePrivate
+ * \brief The CreateKeyPairResponsePrivate class provides private implementation for CreateKeyPairResponse.
  * \internal
  *
- * \class CreateKeyPairResponsePrivate
- *
- * \brief Private implementation for CreateKeyPairResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateKeyPairResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateKeyPairResponse instance.
+ * Constructs a CreateKeyPairResponsePrivate object with public implementation \a q.
  */
 CreateKeyPairResponsePrivate::CreateKeyPairResponsePrivate(
     CreateKeyPairResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateKeyPairResponsePrivate::CreateKeyPairResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateKeyPairResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateKeyPair response element from \a xml.
  */
 void CreateKeyPairResponsePrivate::parseCreateKeyPairResponse(QXmlStreamReader &xml)
 {

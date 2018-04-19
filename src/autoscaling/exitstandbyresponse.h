@@ -34,10 +34,10 @@ class QTAWS_EXPORT ExitStandbyResponse : public AutoScalingResponse {
 public:
     ExitStandbyResponse(const ExitStandbyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ExitStandbyRequest * request() const;
+    virtual const ExitStandbyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ExitStandbyResponse)

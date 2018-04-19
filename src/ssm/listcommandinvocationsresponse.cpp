@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListCommandInvocationsResponse
- *
  * \brief The ListCommandInvocationsResponse class provides an interace for SSM ListCommandInvocations responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListCommandInvocationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCommandInvocationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCommandInvocationsResponse::ListCommandInvocationsResponse(
         const ListCommandInvocationsRequest &request,
@@ -79,6 +74,9 @@ ListCommandInvocationsResponse::ListCommandInvocationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCommandInvocationsRequest * ListCommandInvocationsResponse::request() const
 {
     Q_D(const ListCommandInvocationsResponse);
@@ -86,9 +84,8 @@ const ListCommandInvocationsRequest * ListCommandInvocationsResponse::request() 
 }
 
 /*!
- * @brief  Parse a SSM ListCommandInvocations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM ListCommandInvocations \a response.
  */
 void ListCommandInvocationsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void ListCommandInvocationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::ListCommandInvocationsResponsePrivate
+ * \brief The ListCommandInvocationsResponsePrivate class provides private implementation for ListCommandInvocationsResponse.
  * \internal
  *
- * \class ListCommandInvocationsResponsePrivate
- *
- * \brief Private implementation for ListCommandInvocationsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCommandInvocationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCommandInvocationsResponse instance.
+ * Constructs a ListCommandInvocationsResponsePrivate object with public implementation \a q.
  */
 ListCommandInvocationsResponsePrivate::ListCommandInvocationsResponsePrivate(
     ListCommandInvocationsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ ListCommandInvocationsResponsePrivate::ListCommandInvocationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM ListCommandInvocationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM ListCommandInvocations response element from \a xml.
  */
 void ListCommandInvocationsResponsePrivate::parseListCommandInvocationsResponse(QXmlStreamReader &xml)
 {

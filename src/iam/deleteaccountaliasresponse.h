@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteAccountAliasResponse : public IAMResponse {
 public:
     DeleteAccountAliasResponse(const DeleteAccountAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAccountAliasRequest * request() const;
+    virtual const DeleteAccountAliasRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteAccountAliasResponse)

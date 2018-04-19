@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeProvisioningArtifactResponse
- *
  * \brief The DescribeProvisioningArtifactResponse class provides an interace for ServiceCatalog DescribeProvisioningArtifact responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeProvisioningArtifactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeProvisioningArtifactResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeProvisioningArtifactResponse::DescribeProvisioningArtifactResponse(
         const DescribeProvisioningArtifactRequest &request,
@@ -61,6 +56,9 @@ DescribeProvisioningArtifactResponse::DescribeProvisioningArtifactResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeProvisioningArtifactRequest * DescribeProvisioningArtifactResponse::request() const
 {
     Q_D(const DescribeProvisioningArtifactResponse);
@@ -68,9 +66,8 @@ const DescribeProvisioningArtifactRequest * DescribeProvisioningArtifactResponse
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DescribeProvisioningArtifact response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DescribeProvisioningArtifact \a response.
  */
 void DescribeProvisioningArtifactResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeProvisioningArtifactResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DescribeProvisioningArtifactResponsePrivate
+ * \brief The DescribeProvisioningArtifactResponsePrivate class provides private implementation for DescribeProvisioningArtifactResponse.
  * \internal
  *
- * \class DescribeProvisioningArtifactResponsePrivate
- *
- * \brief Private implementation for DescribeProvisioningArtifactResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProvisioningArtifactResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeProvisioningArtifactResponse instance.
+ * Constructs a DescribeProvisioningArtifactResponsePrivate object with public implementation \a q.
  */
 DescribeProvisioningArtifactResponsePrivate::DescribeProvisioningArtifactResponsePrivate(
     DescribeProvisioningArtifactResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeProvisioningArtifactResponsePrivate::DescribeProvisioningArtifactRespons
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DescribeProvisioningArtifactResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DescribeProvisioningArtifact response element from \a xml.
  */
 void DescribeProvisioningArtifactResponsePrivate::parseDescribeProvisioningArtifactResponse(QXmlStreamReader &xml)
 {

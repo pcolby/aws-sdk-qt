@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::ConfirmConnectionResponse
- *
  * \brief The ConfirmConnectionResponse class provides an interace for DirectConnect ConfirmConnection responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new ConfirmConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ConfirmConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 ConfirmConnectionResponse::ConfirmConnectionResponse(
         const ConfirmConnectionRequest &request,
@@ -63,6 +58,9 @@ ConfirmConnectionResponse::ConfirmConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ConfirmConnectionRequest * ConfirmConnectionResponse::request() const
 {
     Q_D(const ConfirmConnectionResponse);
@@ -70,9 +68,8 @@ const ConfirmConnectionRequest * ConfirmConnectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect ConfirmConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect ConfirmConnection \a response.
  */
 void ConfirmConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void ConfirmConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::ConfirmConnectionResponsePrivate
+ * \brief The ConfirmConnectionResponsePrivate class provides private implementation for ConfirmConnectionResponse.
  * \internal
  *
- * \class ConfirmConnectionResponsePrivate
- *
- * \brief Private implementation for ConfirmConnectionResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ConfirmConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ConfirmConnectionResponse instance.
+ * Constructs a ConfirmConnectionResponsePrivate object with public implementation \a q.
  */
 ConfirmConnectionResponsePrivate::ConfirmConnectionResponsePrivate(
     ConfirmConnectionResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ ConfirmConnectionResponsePrivate::ConfirmConnectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect ConfirmConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect ConfirmConnection response element from \a xml.
  */
 void ConfirmConnectionResponsePrivate::parseConfirmConnectionResponse(QXmlStreamReader &xml)
 {

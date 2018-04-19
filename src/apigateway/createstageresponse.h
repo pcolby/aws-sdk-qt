@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateStageResponse : public APIGatewayResponse {
 public:
     CreateStageResponse(const CreateStageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateStageRequest * request() const;
+    virtual const CreateStageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateStageResponse)

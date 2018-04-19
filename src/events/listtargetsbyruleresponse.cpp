@@ -29,10 +29,9 @@ namespace CloudWatchEvents {
 
 /*!
  * \class QtAws::CloudWatchEvents::ListTargetsByRuleResponse
- *
  * \brief The ListTargetsByRuleResponse class provides an interace for CloudWatchEvents ListTargetsByRule responses.
  *
- * \ingroup CloudWatchEvents
+ * \inmodule QtAwsCloudWatchEvents
  *
  *  Amazon CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state,
  *  they automatically send events into an event stream. You can create rules that match selected events in the stream and
@@ -62,11 +61,7 @@ namespace CloudWatchEvents {
  */
 
 /*!
- * @brief  Constructs a new ListTargetsByRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTargetsByRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTargetsByRuleResponse::ListTargetsByRuleResponse(
         const ListTargetsByRuleRequest &request,
@@ -78,6 +73,9 @@ ListTargetsByRuleResponse::ListTargetsByRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTargetsByRuleRequest * ListTargetsByRuleResponse::request() const
 {
     Q_D(const ListTargetsByRuleResponse);
@@ -85,9 +83,8 @@ const ListTargetsByRuleRequest * ListTargetsByRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchEvents ListTargetsByRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchEvents ListTargetsByRule \a response.
  */
 void ListTargetsByRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void ListTargetsByRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchEvents::ListTargetsByRuleResponsePrivate
+ * \brief The ListTargetsByRuleResponsePrivate class provides private implementation for ListTargetsByRuleResponse.
  * \internal
  *
- * \class ListTargetsByRuleResponsePrivate
- *
- * \brief Private implementation for ListTargetsByRuleResponse.
+ * \inmodule QtAwsCloudWatchEvents
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTargetsByRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTargetsByRuleResponse instance.
+ * Constructs a ListTargetsByRuleResponsePrivate object with public implementation \a q.
  */
 ListTargetsByRuleResponsePrivate::ListTargetsByRuleResponsePrivate(
     ListTargetsByRuleResponse * const q) : CloudWatchEventsResponsePrivate(q)
@@ -118,9 +111,7 @@ ListTargetsByRuleResponsePrivate::ListTargetsByRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchEvents ListTargetsByRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchEvents ListTargetsByRule response element from \a xml.
  */
 void ListTargetsByRuleResponsePrivate::parseListTargetsByRuleResponse(QXmlStreamReader &xml)
 {

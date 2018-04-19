@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetTestResponse : public DeviceFarmResponse {
 public:
     GetTestResponse(const GetTestRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetTestRequest * request() const;
+    virtual const GetTestRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetTestResponse)

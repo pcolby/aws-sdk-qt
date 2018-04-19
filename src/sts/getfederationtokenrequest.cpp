@@ -139,9 +139,8 @@ QtAws::Core::AwsAbstractResponse * GetFederationTokenRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetFederationTokenRequestPrivate object for STS \a action with,
- * public implementation \a q.
+ * Constructs a GetFederationTokenRequestPrivate object for STS \a action,
+ * with public implementation \a q.
  */
 GetFederationTokenRequestPrivate::GetFederationTokenRequestPrivate(
     const STSRequest::Action action, GetFederationTokenRequest * const q)

@@ -28,16 +28,13 @@ namespace MarketplaceMetering {
 
 /*!
  * \class QtAws::MarketplaceMetering::MarketplaceMeteringResponse
- *
  * \brief The MarketplaceMeteringResponse class provides an interface for MarketplaceMetering responses.
  *
- * \ingroup MarketplaceMetering
+ * \inmodule QtAwsMarketplaceMetering
  */
 
 /*!
- * @brief  Constructs a new MarketplaceMeteringResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MarketplaceMeteringResponse object with parent \a parent.
  */
 MarketplaceMeteringResponse::MarketplaceMeteringResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MarketplaceMeteringResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MarketplaceMeteringResponse::MarketplaceMeteringResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MarketplaceMeteringResponse object.
- *
+ * \internal
+ * Constructs a MarketplaceMeteringResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MarketplaceMeteringResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MarketplaceMeteringResponse::MarketplaceMeteringResponse(MarketplaceMeteringResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MarketplaceMeteringResponse::MarketplaceMeteringResponse(MarketplaceMeteringResp
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MarketplaceMeteringResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MarketplaceMeteringResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MarketplaceMetering::MarketplaceMeteringResponsePrivate
+ * \brief The MarketplaceMeteringResponsePrivate class provides private implementation for MarketplaceMeteringResponse.
+ * \internal
  *
- * @class  MarketplaceMeteringResponsePrivate
- *
- * @brief  Private implementation for MarketplaceMeteringResponse.
+ * \inmodule QtAwsMarketplaceMetering
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MarketplaceMeteringResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MarketplaceMeteringResponse instance.
+ * Constructs a MarketplaceMeteringResponsePrivate object with public implementation \a q.
  */
 MarketplaceMeteringResponsePrivate::MarketplaceMeteringResponsePrivate(
     MarketplaceMeteringResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

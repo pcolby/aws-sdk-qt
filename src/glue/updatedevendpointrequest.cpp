@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDevEndpointRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateDevEndpointRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDevEndpointRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 UpdateDevEndpointRequestPrivate::UpdateDevEndpointRequestPrivate(
     const GlueRequest::Action action, UpdateDevEndpointRequest * const q)

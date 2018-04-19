@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ResetDBParameterGroupResponse
- *
  * \brief The ResetDBParameterGroupResponse class provides an interace for RDS ResetDBParameterGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ResetDBParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetDBParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetDBParameterGroupResponse::ResetDBParameterGroupResponse(
         const ResetDBParameterGroupRequest &request,
@@ -119,6 +114,9 @@ ResetDBParameterGroupResponse::ResetDBParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetDBParameterGroupRequest * ResetDBParameterGroupResponse::request() const
 {
     Q_D(const ResetDBParameterGroupResponse);
@@ -126,9 +124,8 @@ const ResetDBParameterGroupRequest * ResetDBParameterGroupResponse::request() co
 }
 
 /*!
- * @brief  Parse a RDS ResetDBParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS ResetDBParameterGroup \a response.
  */
 void ResetDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void ResetDBParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::ResetDBParameterGroupResponsePrivate
+ * \brief The ResetDBParameterGroupResponsePrivate class provides private implementation for ResetDBParameterGroupResponse.
  * \internal
  *
- * \class ResetDBParameterGroupResponsePrivate
- *
- * \brief Private implementation for ResetDBParameterGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetDBParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetDBParameterGroupResponse instance.
+ * Constructs a ResetDBParameterGroupResponsePrivate object with public implementation \a q.
  */
 ResetDBParameterGroupResponsePrivate::ResetDBParameterGroupResponsePrivate(
     ResetDBParameterGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ ResetDBParameterGroupResponsePrivate::ResetDBParameterGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS ResetDBParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS ResetDBParameterGroup response element from \a xml.
  */
 void ResetDBParameterGroupResponsePrivate::parseResetDBParameterGroupResponse(QXmlStreamReader &xml)
 {

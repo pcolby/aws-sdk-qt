@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * CreateDiskFromSnapshotRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateDiskFromSnapshotRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a CreateDiskFromSnapshotRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 CreateDiskFromSnapshotRequestPrivate::CreateDiskFromSnapshotRequestPrivate(
     const LightsailRequest::Action action, CreateDiskFromSnapshotRequest * const q)

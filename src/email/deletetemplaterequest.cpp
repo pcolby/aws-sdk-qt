@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTemplateRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteTemplateRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTemplateRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 DeleteTemplateRequestPrivate::DeleteTemplateRequestPrivate(
     const SESRequest::Action action, DeleteTemplateRequest * const q)

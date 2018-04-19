@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ExpireSessionRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ExpireSessionRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a ExpireSessionRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 ExpireSessionRequestPrivate::ExpireSessionRequestPrivate(
     const AppStreamRequest::Action action, ExpireSessionRequest * const q)

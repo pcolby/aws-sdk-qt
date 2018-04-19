@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateCrawlerScheduleResponse
- *
  * \brief The UpdateCrawlerScheduleResponse class provides an interace for Glue UpdateCrawlerSchedule responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateCrawlerScheduleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateCrawlerScheduleResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateCrawlerScheduleResponse::UpdateCrawlerScheduleResponse(
         const UpdateCrawlerScheduleRequest &request,
@@ -58,6 +53,9 @@ UpdateCrawlerScheduleResponse::UpdateCrawlerScheduleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateCrawlerScheduleRequest * UpdateCrawlerScheduleResponse::request() const
 {
     Q_D(const UpdateCrawlerScheduleResponse);
@@ -65,9 +63,8 @@ const UpdateCrawlerScheduleRequest * UpdateCrawlerScheduleResponse::request() co
 }
 
 /*!
- * @brief  Parse a Glue UpdateCrawlerSchedule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue UpdateCrawlerSchedule \a response.
  */
 void UpdateCrawlerScheduleResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateCrawlerScheduleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::UpdateCrawlerScheduleResponsePrivate
+ * \brief The UpdateCrawlerScheduleResponsePrivate class provides private implementation for UpdateCrawlerScheduleResponse.
  * \internal
  *
- * \class UpdateCrawlerScheduleResponsePrivate
- *
- * \brief Private implementation for UpdateCrawlerScheduleResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCrawlerScheduleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateCrawlerScheduleResponse instance.
+ * Constructs a UpdateCrawlerScheduleResponsePrivate object with public implementation \a q.
  */
 UpdateCrawlerScheduleResponsePrivate::UpdateCrawlerScheduleResponsePrivate(
     UpdateCrawlerScheduleResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateCrawlerScheduleResponsePrivate::UpdateCrawlerScheduleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue UpdateCrawlerScheduleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue UpdateCrawlerSchedule response element from \a xml.
  */
 void UpdateCrawlerScheduleResponsePrivate::parseUpdateCrawlerScheduleResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::PutFileResponse
- *
  * \brief The PutFileResponse class provides an interace for CodeCommit PutFile responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new PutFileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutFileResponse object for \a reply to \a request, with parent \a parent.
  */
 PutFileResponse::PutFileResponse(
         const PutFileRequest &request,
@@ -245,6 +240,9 @@ PutFileResponse::PutFileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutFileRequest * PutFileResponse::request() const
 {
     Q_D(const PutFileResponse);
@@ -252,9 +250,8 @@ const PutFileRequest * PutFileResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit PutFile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit PutFile \a response.
  */
 void PutFileResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void PutFileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::PutFileResponsePrivate
+ * \brief The PutFileResponsePrivate class provides private implementation for PutFileResponse.
  * \internal
  *
- * \class PutFileResponsePrivate
- *
- * \brief Private implementation for PutFileResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutFileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutFileResponse instance.
+ * Constructs a PutFileResponsePrivate object with public implementation \a q.
  */
 PutFileResponsePrivate::PutFileResponsePrivate(
     PutFileResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ PutFileResponsePrivate::PutFileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit PutFileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit PutFile response element from \a xml.
  */
 void PutFileResponsePrivate::parsePutFileResponse(QXmlStreamReader &xml)
 {

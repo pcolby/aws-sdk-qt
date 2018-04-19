@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::DeleteMessageBatchResponse
- *
  * \brief The DeleteMessageBatchResponse class provides an interace for SQS DeleteMessageBatch responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new DeleteMessageBatchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteMessageBatchResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteMessageBatchResponse::DeleteMessageBatchResponse(
         const DeleteMessageBatchRequest &request,
@@ -121,6 +116,9 @@ DeleteMessageBatchResponse::DeleteMessageBatchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteMessageBatchRequest * DeleteMessageBatchResponse::request() const
 {
     Q_D(const DeleteMessageBatchResponse);
@@ -128,9 +126,8 @@ const DeleteMessageBatchRequest * DeleteMessageBatchResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS DeleteMessageBatch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS DeleteMessageBatch \a response.
  */
 void DeleteMessageBatchResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void DeleteMessageBatchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::DeleteMessageBatchResponsePrivate
+ * \brief The DeleteMessageBatchResponsePrivate class provides private implementation for DeleteMessageBatchResponse.
  * \internal
  *
- * \class DeleteMessageBatchResponsePrivate
- *
- * \brief Private implementation for DeleteMessageBatchResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMessageBatchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteMessageBatchResponse instance.
+ * Constructs a DeleteMessageBatchResponsePrivate object with public implementation \a q.
  */
 DeleteMessageBatchResponsePrivate::DeleteMessageBatchResponsePrivate(
     DeleteMessageBatchResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ DeleteMessageBatchResponsePrivate::DeleteMessageBatchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS DeleteMessageBatchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS DeleteMessageBatch response element from \a xml.
  */
 void DeleteMessageBatchResponsePrivate::parseDeleteMessageBatchResponse(QXmlStreamReader &xml)
 {

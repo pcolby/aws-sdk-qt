@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelHandshakeResponse : public OrganizationsResponse {
 public:
     CancelHandshakeResponse(const CancelHandshakeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelHandshakeRequest * request() const;
+    virtual const CancelHandshakeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CancelHandshakeResponse)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * UpdateAliasRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateAliasRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a UpdateAliasRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 UpdateAliasRequestPrivate::UpdateAliasRequestPrivate(
     const LambdaRequest::Action action, UpdateAliasRequest * const q)

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * GetNotificationChannelRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a GetNotificationChannelRequestPrivate object for FMS \a action with,
- * public implementation \a q.
+ * Constructs a GetNotificationChannelRequestPrivate object for FMS \a action,
+ * with public implementation \a q.
  */
 GetNotificationChannelRequestPrivate::GetNotificationChannelRequestPrivate(
     const FMSRequest::Action action, GetNotificationChannelRequest * const q)

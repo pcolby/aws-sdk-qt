@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateCampaignResponse
- *
  * \brief The UpdateCampaignResponse class provides an interace for Pinpoint UpdateCampaign responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateCampaign
  */
 
 /*!
- * @brief  Constructs a new UpdateCampaignResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateCampaignResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateCampaignResponse::UpdateCampaignResponse(
         const UpdateCampaignRequest &request,
@@ -55,6 +50,9 @@ UpdateCampaignResponse::UpdateCampaignResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateCampaignRequest * UpdateCampaignResponse::request() const
 {
     Q_D(const UpdateCampaignResponse);
@@ -62,9 +60,8 @@ const UpdateCampaignRequest * UpdateCampaignResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint UpdateCampaign response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint UpdateCampaign \a response.
  */
 void UpdateCampaignResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateCampaignResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::UpdateCampaignResponsePrivate
+ * \brief The UpdateCampaignResponsePrivate class provides private implementation for UpdateCampaignResponse.
  * \internal
  *
- * \class UpdateCampaignResponsePrivate
- *
- * \brief Private implementation for UpdateCampaignResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCampaignResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateCampaignResponse instance.
+ * Constructs a UpdateCampaignResponsePrivate object with public implementation \a q.
  */
 UpdateCampaignResponsePrivate::UpdateCampaignResponsePrivate(
     UpdateCampaignResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateCampaignResponsePrivate::UpdateCampaignResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint UpdateCampaignResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint UpdateCampaign response element from \a xml.
  */
 void UpdateCampaignResponsePrivate::parseUpdateCampaignResponse(QXmlStreamReader &xml)
 {

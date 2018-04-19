@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminDisableProviderForUserResponse
- *
  * \brief The AdminDisableProviderForUserResponse class provides an interace for CognitoIdentityProvider AdminDisableProviderForUser responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminDisableProviderForUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminDisableProviderForUserResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminDisableProviderForUserResponse::AdminDisableProviderForUserResponse(
         const AdminDisableProviderForUserRequest &request,
@@ -65,6 +60,9 @@ AdminDisableProviderForUserResponse::AdminDisableProviderForUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminDisableProviderForUserRequest * AdminDisableProviderForUserResponse::request() const
 {
     Q_D(const AdminDisableProviderForUserResponse);
@@ -72,9 +70,8 @@ const AdminDisableProviderForUserRequest * AdminDisableProviderForUserResponse::
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminDisableProviderForUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminDisableProviderForUser \a response.
  */
 void AdminDisableProviderForUserResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminDisableProviderForUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminDisableProviderForUserResponsePrivate
+ * \brief The AdminDisableProviderForUserResponsePrivate class provides private implementation for AdminDisableProviderForUserResponse.
  * \internal
  *
- * \class AdminDisableProviderForUserResponsePrivate
- *
- * \brief Private implementation for AdminDisableProviderForUserResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminDisableProviderForUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminDisableProviderForUserResponse instance.
+ * Constructs a AdminDisableProviderForUserResponsePrivate object with public implementation \a q.
  */
 AdminDisableProviderForUserResponsePrivate::AdminDisableProviderForUserResponsePrivate(
     AdminDisableProviderForUserResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminDisableProviderForUserResponsePrivate::AdminDisableProviderForUserResponseP
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminDisableProviderForUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminDisableProviderForUser response element from \a xml.
  */
 void AdminDisableProviderForUserResponsePrivate::parseAdminDisableProviderForUserResponse(QXmlStreamReader &xml)
 {

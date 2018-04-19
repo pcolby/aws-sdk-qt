@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDifferencesResponse : public CodeCommitResponse {
 public:
     GetDifferencesResponse(const GetDifferencesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDifferencesRequest * request() const;
+    virtual const GetDifferencesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDifferencesResponse)

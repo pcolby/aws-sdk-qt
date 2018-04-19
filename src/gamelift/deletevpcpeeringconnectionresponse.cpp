@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteVpcPeeringConnectionResponse
- *
  * \brief The DeleteVpcPeeringConnectionResponse class provides an interace for GameLift DeleteVpcPeeringConnection responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteVpcPeeringConnectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVpcPeeringConnectionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVpcPeeringConnectionResponse::DeleteVpcPeeringConnectionResponse(
         const DeleteVpcPeeringConnectionRequest &request,
@@ -491,6 +486,9 @@ DeleteVpcPeeringConnectionResponse::DeleteVpcPeeringConnectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVpcPeeringConnectionRequest * DeleteVpcPeeringConnectionResponse::request() const
 {
     Q_D(const DeleteVpcPeeringConnectionResponse);
@@ -498,9 +496,8 @@ const DeleteVpcPeeringConnectionRequest * DeleteVpcPeeringConnectionResponse::re
 }
 
 /*!
- * @brief  Parse a GameLift DeleteVpcPeeringConnection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DeleteVpcPeeringConnection \a response.
  */
 void DeleteVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DeleteVpcPeeringConnectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DeleteVpcPeeringConnectionResponsePrivate
+ * \brief The DeleteVpcPeeringConnectionResponsePrivate class provides private implementation for DeleteVpcPeeringConnectionResponse.
  * \internal
  *
- * \class DeleteVpcPeeringConnectionResponsePrivate
- *
- * \brief Private implementation for DeleteVpcPeeringConnectionResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVpcPeeringConnectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVpcPeeringConnectionResponse instance.
+ * Constructs a DeleteVpcPeeringConnectionResponsePrivate object with public implementation \a q.
  */
 DeleteVpcPeeringConnectionResponsePrivate::DeleteVpcPeeringConnectionResponsePrivate(
     DeleteVpcPeeringConnectionResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DeleteVpcPeeringConnectionResponsePrivate::DeleteVpcPeeringConnectionResponsePri
 }
 
 /*!
- * @brief  Parse an GameLift DeleteVpcPeeringConnectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DeleteVpcPeeringConnection response element from \a xml.
  */
 void DeleteVpcPeeringConnectionResponsePrivate::parseDeleteVpcPeeringConnectionResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * InvokeAsyncRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a InvokeAsyncRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a InvokeAsyncRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 InvokeAsyncRequestPrivate::InvokeAsyncRequestPrivate(
     const LambdaRequest::Action action, InvokeAsyncRequest * const q)

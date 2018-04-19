@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventSubscriptionsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeEventSubscriptionsRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventSubscriptionsRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPrivate(
     const RedshiftRequest::Action action, DescribeEventSubscriptionsRequest * const q)

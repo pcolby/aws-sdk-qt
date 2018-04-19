@@ -29,10 +29,9 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::CreatePipelineResponse
- *
  * \brief The CreatePipelineResponse class provides an interace for CodePipeline CreatePipeline responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  *
  *  <fullname>AWS CodePipeline</fullname>
  * 
@@ -202,11 +201,7 @@ namespace CodePipeline {
  */
 
 /*!
- * @brief  Constructs a new CreatePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePipelineResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePipelineResponse::CreatePipelineResponse(
         const CreatePipelineRequest &request,
@@ -218,6 +213,9 @@ CreatePipelineResponse::CreatePipelineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePipelineRequest * CreatePipelineResponse::request() const
 {
     Q_D(const CreatePipelineResponse);
@@ -225,9 +223,8 @@ const CreatePipelineRequest * CreatePipelineResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodePipeline CreatePipeline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodePipeline CreatePipeline \a response.
  */
 void CreatePipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -237,19 +234,15 @@ void CreatePipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodePipeline::CreatePipelineResponsePrivate
+ * \brief The CreatePipelineResponsePrivate class provides private implementation for CreatePipelineResponse.
  * \internal
  *
- * \class CreatePipelineResponsePrivate
- *
- * \brief Private implementation for CreatePipelineResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePipelineResponse instance.
+ * Constructs a CreatePipelineResponsePrivate object with public implementation \a q.
  */
 CreatePipelineResponsePrivate::CreatePipelineResponsePrivate(
     CreatePipelineResponse * const q) : CodePipelineResponsePrivate(q)
@@ -258,9 +251,7 @@ CreatePipelineResponsePrivate::CreatePipelineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodePipeline CreatePipelineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodePipeline CreatePipeline response element from \a xml.
  */
 void CreatePipelineResponsePrivate::parseCreatePipelineResponse(QXmlStreamReader &xml)
 {

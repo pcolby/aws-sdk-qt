@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * ReportTaskProgressRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ReportTaskProgressRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a ReportTaskProgressRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 ReportTaskProgressRequestPrivate::ReportTaskProgressRequestPrivate(
     const DataPipelineRequest::Action action, ReportTaskProgressRequest * const q)

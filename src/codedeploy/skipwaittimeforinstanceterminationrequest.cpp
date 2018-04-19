@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * SkipWaitTimeForInstanceTerminationRequest::re
  */
 
 /*!
- *
- * Constructs a SkipWaitTimeForInstanceTerminationRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a SkipWaitTimeForInstanceTerminationRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 SkipWaitTimeForInstanceTerminationRequestPrivate::SkipWaitTimeForInstanceTerminationRequestPrivate(
     const CodeDeployRequest::Action action, SkipWaitTimeForInstanceTerminationRequest * const q)

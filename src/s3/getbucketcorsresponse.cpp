@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketCorsResponse
- *
  * \brief The GetBucketCorsResponse class provides an interace for S3 GetBucketCors responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketCors
  */
 
 /*!
- * @brief  Constructs a new GetBucketCorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBucketCorsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBucketCorsResponse::GetBucketCorsResponse(
         const GetBucketCorsRequest &request,
@@ -55,6 +50,9 @@ GetBucketCorsResponse::GetBucketCorsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBucketCorsRequest * GetBucketCorsResponse::request() const
 {
     Q_D(const GetBucketCorsResponse);
@@ -62,9 +60,8 @@ const GetBucketCorsRequest * GetBucketCorsResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 GetBucketCors response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetBucketCors \a response.
  */
 void GetBucketCorsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBucketCorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetBucketCorsResponsePrivate
+ * \brief The GetBucketCorsResponsePrivate class provides private implementation for GetBucketCorsResponse.
  * \internal
  *
- * \class GetBucketCorsResponsePrivate
- *
- * \brief Private implementation for GetBucketCorsResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketCorsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBucketCorsResponse instance.
+ * Constructs a GetBucketCorsResponsePrivate object with public implementation \a q.
  */
 GetBucketCorsResponsePrivate::GetBucketCorsResponsePrivate(
     GetBucketCorsResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBucketCorsResponsePrivate::GetBucketCorsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 GetBucketCorsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetBucketCors response element from \a xml.
  */
 void GetBucketCorsResponsePrivate::parseGetBucketCorsResponse(QXmlStreamReader &xml)
 {

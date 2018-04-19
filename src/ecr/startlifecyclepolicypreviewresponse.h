@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartLifecyclePolicyPreviewResponse : public ECRResponse {
 public:
     StartLifecyclePolicyPreviewResponse(const StartLifecyclePolicyPreviewRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartLifecyclePolicyPreviewRequest * request() const;
+    virtual const StartLifecyclePolicyPreviewRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartLifecyclePolicyPreviewResponse)

@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * RegisterEcsClusterRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a RegisterEcsClusterRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a RegisterEcsClusterRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 RegisterEcsClusterRequestPrivate::RegisterEcsClusterRequestPrivate(
     const OpsWorksRequest::Action action, RegisterEcsClusterRequest * const q)

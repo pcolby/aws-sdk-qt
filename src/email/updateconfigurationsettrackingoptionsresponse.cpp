@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::UpdateConfigurationSetTrackingOptionsResponse
- *
  * \brief The UpdateConfigurationSetTrackingOptionsResponse class provides an interace for SES UpdateConfigurationSetTrackingOptions responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new UpdateConfigurationSetTrackingOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateConfigurationSetTrackingOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateConfigurationSetTrackingOptionsResponse::UpdateConfigurationSetTrackingOptionsResponse(
         const UpdateConfigurationSetTrackingOptionsRequest &request,
@@ -66,6 +61,9 @@ UpdateConfigurationSetTrackingOptionsResponse::UpdateConfigurationSetTrackingOpt
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateConfigurationSetTrackingOptionsRequest * UpdateConfigurationSetTrackingOptionsResponse::request() const
 {
     Q_D(const UpdateConfigurationSetTrackingOptionsResponse);
@@ -73,9 +71,8 @@ const UpdateConfigurationSetTrackingOptionsRequest * UpdateConfigurationSetTrack
 }
 
 /*!
- * @brief  Parse a SES UpdateConfigurationSetTrackingOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES UpdateConfigurationSetTrackingOptions \a response.
  */
 void UpdateConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::SES::UpdateConfigurationSetTrackingOptionsResponsePrivate
+ * \brief The UpdateConfigurationSetTrackingOptionsResponsePrivate class provides private implementation for UpdateConfigurationSetTrackingOptionsResponse.
  * \internal
  *
- * \class UpdateConfigurationSetTrackingOptionsResponsePrivate
- *
- * \brief Private implementation for UpdateConfigurationSetTrackingOptionsResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConfigurationSetTrackingOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateConfigurationSetTrackingOptionsResponse instance.
+ * Constructs a UpdateConfigurationSetTrackingOptionsResponsePrivate object with public implementation \a q.
  */
 UpdateConfigurationSetTrackingOptionsResponsePrivate::UpdateConfigurationSetTrackingOptionsResponsePrivate(
     UpdateConfigurationSetTrackingOptionsResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateConfigurationSetTrackingOptionsResponsePrivate::UpdateConfigurationSetTrac
 }
 
 /*!
- * @brief  Parse an SES UpdateConfigurationSetTrackingOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES UpdateConfigurationSetTrackingOptions response element from \a xml.
  */
 void UpdateConfigurationSetTrackingOptionsResponsePrivate::parseUpdateConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml)
 {

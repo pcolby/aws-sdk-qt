@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetInvitationsCountResponse
- *
  * \brief The GetInvitationsCountResponse class provides an interace for GuardDuty GetInvitationsCount responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getInvitationsCount
  */
 
 /*!
- * @brief  Constructs a new GetInvitationsCountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInvitationsCountResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInvitationsCountResponse::GetInvitationsCountResponse(
         const GetInvitationsCountRequest &request,
@@ -55,6 +50,9 @@ GetInvitationsCountResponse::GetInvitationsCountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInvitationsCountRequest * GetInvitationsCountResponse::request() const
 {
     Q_D(const GetInvitationsCountResponse);
@@ -62,9 +60,8 @@ const GetInvitationsCountRequest * GetInvitationsCountResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty GetInvitationsCount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty GetInvitationsCount \a response.
  */
 void GetInvitationsCountResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetInvitationsCountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::GetInvitationsCountResponsePrivate
+ * \brief The GetInvitationsCountResponsePrivate class provides private implementation for GetInvitationsCountResponse.
  * \internal
  *
- * \class GetInvitationsCountResponsePrivate
- *
- * \brief Private implementation for GetInvitationsCountResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInvitationsCountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInvitationsCountResponse instance.
+ * Constructs a GetInvitationsCountResponsePrivate object with public implementation \a q.
  */
 GetInvitationsCountResponsePrivate::GetInvitationsCountResponsePrivate(
     GetInvitationsCountResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ GetInvitationsCountResponsePrivate::GetInvitationsCountResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty GetInvitationsCountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty GetInvitationsCount response element from \a xml.
  */
 void GetInvitationsCountResponsePrivate::parseGetInvitationsCountResponse(QXmlStreamReader &xml)
 {

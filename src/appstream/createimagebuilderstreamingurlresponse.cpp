@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CreateImageBuilderStreamingURLResponse
- *
  * \brief The CreateImageBuilderStreamingURLResponse class provides an interace for AppStream CreateImageBuilderStreamingURL responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CreateImageBuilderStreamingURLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateImageBuilderStreamingURLResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateImageBuilderStreamingURLResponse::CreateImageBuilderStreamingURLResponse(
         const CreateImageBuilderStreamingURLRequest &request,
@@ -58,6 +53,9 @@ CreateImageBuilderStreamingURLResponse::CreateImageBuilderStreamingURLResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateImageBuilderStreamingURLRequest * CreateImageBuilderStreamingURLResponse::request() const
 {
     Q_D(const CreateImageBuilderStreamingURLResponse);
@@ -65,9 +63,8 @@ const CreateImageBuilderStreamingURLRequest * CreateImageBuilderStreamingURLResp
 }
 
 /*!
- * @brief  Parse a AppStream CreateImageBuilderStreamingURL response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream CreateImageBuilderStreamingURL \a response.
  */
 void CreateImageBuilderStreamingURLResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateImageBuilderStreamingURLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::CreateImageBuilderStreamingURLResponsePrivate
+ * \brief The CreateImageBuilderStreamingURLResponsePrivate class provides private implementation for CreateImageBuilderStreamingURLResponse.
  * \internal
  *
- * \class CreateImageBuilderStreamingURLResponsePrivate
- *
- * \brief Private implementation for CreateImageBuilderStreamingURLResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateImageBuilderStreamingURLResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateImageBuilderStreamingURLResponse instance.
+ * Constructs a CreateImageBuilderStreamingURLResponsePrivate object with public implementation \a q.
  */
 CreateImageBuilderStreamingURLResponsePrivate::CreateImageBuilderStreamingURLResponsePrivate(
     CreateImageBuilderStreamingURLResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateImageBuilderStreamingURLResponsePrivate::CreateImageBuilderStreamingURLRes
 }
 
 /*!
- * @brief  Parse an AppStream CreateImageBuilderStreamingURLResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream CreateImageBuilderStreamingURL response element from \a xml.
  */
 void CreateImageBuilderStreamingURLResponsePrivate::parseCreateImageBuilderStreamingURLResponse(QXmlStreamReader &xml)
 {

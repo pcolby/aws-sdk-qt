@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateQualificationTypeRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a UpdateQualificationTypeRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a UpdateQualificationTypeRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 UpdateQualificationTypeRequestPrivate::UpdateQualificationTypeRequestPrivate(
     const MTurkRequest::Action action, UpdateQualificationTypeRequest * const q)

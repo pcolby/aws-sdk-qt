@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ResetServiceSpecificCredentialRequest::respon
  */
 
 /*!
- *
- * Constructs a ResetServiceSpecificCredentialRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ResetServiceSpecificCredentialRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ResetServiceSpecificCredentialRequestPrivate::ResetServiceSpecificCredentialRequestPrivate(
     const IAMRequest::Action action, ResetServiceSpecificCredentialRequest * const q)

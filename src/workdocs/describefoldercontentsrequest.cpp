@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeFolderContentsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeFolderContentsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeFolderContentsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DescribeFolderContentsRequestPrivate::DescribeFolderContentsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeFolderContentsRequest * const q)

@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * BatchGetTracesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a BatchGetTracesRequestPrivate object for XRay \a action with,
- * public implementation \a q.
+ * Constructs a BatchGetTracesRequestPrivate object for XRay \a action,
+ * with public implementation \a q.
  */
 BatchGetTracesRequestPrivate::BatchGetTracesRequestPrivate(
     const XRayRequest::Action action, BatchGetTracesRequest * const q)

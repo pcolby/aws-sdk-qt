@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSSLPoliciesRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeSSLPoliciesRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSSLPoliciesRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 DescribeSSLPoliciesRequestPrivate::DescribeSSLPoliciesRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DescribeSSLPoliciesRequest * const q)

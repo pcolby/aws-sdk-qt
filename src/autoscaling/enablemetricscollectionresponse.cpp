@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::EnableMetricsCollectionResponse
- *
  * \brief The EnableMetricsCollectionResponse class provides an interace for AutoScaling EnableMetricsCollection responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new EnableMetricsCollectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableMetricsCollectionResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableMetricsCollectionResponse::EnableMetricsCollectionResponse(
         const EnableMetricsCollectionRequest &request,
@@ -60,6 +55,9 @@ EnableMetricsCollectionResponse::EnableMetricsCollectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableMetricsCollectionRequest * EnableMetricsCollectionResponse::request() const
 {
     Q_D(const EnableMetricsCollectionResponse);
@@ -67,9 +65,8 @@ const EnableMetricsCollectionRequest * EnableMetricsCollectionResponse::request(
 }
 
 /*!
- * @brief  Parse a AutoScaling EnableMetricsCollection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling EnableMetricsCollection \a response.
  */
 void EnableMetricsCollectionResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void EnableMetricsCollectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::EnableMetricsCollectionResponsePrivate
+ * \brief The EnableMetricsCollectionResponsePrivate class provides private implementation for EnableMetricsCollectionResponse.
  * \internal
  *
- * \class EnableMetricsCollectionResponsePrivate
- *
- * \brief Private implementation for EnableMetricsCollectionResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableMetricsCollectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableMetricsCollectionResponse instance.
+ * Constructs a EnableMetricsCollectionResponsePrivate object with public implementation \a q.
  */
 EnableMetricsCollectionResponsePrivate::EnableMetricsCollectionResponsePrivate(
     EnableMetricsCollectionResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ EnableMetricsCollectionResponsePrivate::EnableMetricsCollectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling EnableMetricsCollectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling EnableMetricsCollection response element from \a xml.
  */
 void EnableMetricsCollectionResponsePrivate::parseEnableMetricsCollectionResponse(QXmlStreamReader &xml)
 {

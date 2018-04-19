@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * UpdateBandwidthRateLimitRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateBandwidthRateLimitRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateBandwidthRateLimitRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 UpdateBandwidthRateLimitRequestPrivate::UpdateBandwidthRateLimitRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateBandwidthRateLimitRequest * const q)

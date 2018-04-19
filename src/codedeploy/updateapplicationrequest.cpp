@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * UpdateApplicationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateApplicationRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a UpdateApplicationRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 UpdateApplicationRequestPrivate::UpdateApplicationRequestPrivate(
     const CodeDeployRequest::Action action, UpdateApplicationRequest * const q)

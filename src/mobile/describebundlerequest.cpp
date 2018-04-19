@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeBundleRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeBundleRequestPrivate object for Mobile \a action with,
- * public implementation \a q.
+ * Constructs a DescribeBundleRequestPrivate object for Mobile \a action,
+ * with public implementation \a q.
  */
 DescribeBundleRequestPrivate::DescribeBundleRequestPrivate(
     const MobileRequest::Action action, DescribeBundleRequest * const q)

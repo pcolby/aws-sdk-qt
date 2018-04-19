@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CopyObjectRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CopyObjectRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a CopyObjectRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 CopyObjectRequestPrivate::CopyObjectRequestPrivate(
     const S3Request::Action action, CopyObjectRequest * const q)

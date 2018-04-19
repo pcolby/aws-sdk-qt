@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeResourcePoliciesResponse : public CloudWatchLogsRespo
 public:
     DescribeResourcePoliciesResponse(const DescribeResourcePoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeResourcePoliciesRequest * request() const;
+    virtual const DescribeResourcePoliciesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeResourcePoliciesResponse)

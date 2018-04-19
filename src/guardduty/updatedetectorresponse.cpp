@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::UpdateDetectorResponse
- *
  * \brief The UpdateDetectorResponse class provides an interace for GuardDuty UpdateDetector responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::updateDetector
  */
 
 /*!
- * @brief  Constructs a new UpdateDetectorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDetectorResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDetectorResponse::UpdateDetectorResponse(
         const UpdateDetectorRequest &request,
@@ -55,6 +50,9 @@ UpdateDetectorResponse::UpdateDetectorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDetectorRequest * UpdateDetectorResponse::request() const
 {
     Q_D(const UpdateDetectorResponse);
@@ -62,9 +60,8 @@ const UpdateDetectorRequest * UpdateDetectorResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty UpdateDetector response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty UpdateDetector \a response.
  */
 void UpdateDetectorResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateDetectorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::UpdateDetectorResponsePrivate
+ * \brief The UpdateDetectorResponsePrivate class provides private implementation for UpdateDetectorResponse.
  * \internal
  *
- * \class UpdateDetectorResponsePrivate
- *
- * \brief Private implementation for UpdateDetectorResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDetectorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDetectorResponse instance.
+ * Constructs a UpdateDetectorResponsePrivate object with public implementation \a q.
  */
 UpdateDetectorResponsePrivate::UpdateDetectorResponsePrivate(
     UpdateDetectorResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateDetectorResponsePrivate::UpdateDetectorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty UpdateDetectorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty UpdateDetector response element from \a xml.
  */
 void UpdateDetectorResponsePrivate::parseUpdateDetectorResponse(QXmlStreamReader &xml)
 {

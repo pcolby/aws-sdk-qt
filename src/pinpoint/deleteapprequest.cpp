@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAppRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a DeleteAppRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAppRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 DeleteAppRequestPrivate::DeleteAppRequestPrivate(
     const PinpointRequest::Action action, DeleteAppRequest * const q)

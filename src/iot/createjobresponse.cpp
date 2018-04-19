@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateJobResponse
- *
  * \brief The CreateJobResponse class provides an interace for IoT CreateJob responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateJobResponse::CreateJobResponse(
         const CreateJobRequest &request,
@@ -66,6 +61,9 @@ CreateJobResponse::CreateJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateJobRequest * CreateJobResponse::request() const
 {
     Q_D(const CreateJobResponse);
@@ -73,9 +71,8 @@ const CreateJobRequest * CreateJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT CreateJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT CreateJob \a response.
  */
 void CreateJobResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::CreateJobResponsePrivate
+ * \brief The CreateJobResponsePrivate class provides private implementation for CreateJobResponse.
  * \internal
  *
- * \class CreateJobResponsePrivate
- *
- * \brief Private implementation for CreateJobResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateJobResponse instance.
+ * Constructs a CreateJobResponsePrivate object with public implementation \a q.
  */
 CreateJobResponsePrivate::CreateJobResponsePrivate(
     CreateJobResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateJobResponsePrivate::CreateJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT CreateJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT CreateJob response element from \a xml.
  */
 void CreateJobResponsePrivate::parseCreateJobResponse(QXmlStreamReader &xml)
 {

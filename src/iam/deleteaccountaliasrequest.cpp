@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAccountAliasRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteAccountAliasRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAccountAliasRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteAccountAliasRequestPrivate::DeleteAccountAliasRequestPrivate(
     const IAMRequest::Action action, DeleteAccountAliasRequest * const q)

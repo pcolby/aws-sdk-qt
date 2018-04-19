@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResetImageAttributeResponse : public EC2Response {
 public:
     ResetImageAttributeResponse(const ResetImageAttributeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResetImageAttributeRequest * request() const;
+    virtual const ResetImageAttributeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResetImageAttributeResponse)

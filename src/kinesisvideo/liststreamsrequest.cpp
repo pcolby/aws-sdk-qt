@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListStreamsRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ListStreamsRequestPrivate object for KinesisVideo \a action with,
- * public implementation \a q.
+ * Constructs a ListStreamsRequestPrivate object for KinesisVideo \a action,
+ * with public implementation \a q.
  */
 ListStreamsRequestPrivate::ListStreamsRequestPrivate(
     const KinesisVideoRequest::Action action, ListStreamsRequest * const q)

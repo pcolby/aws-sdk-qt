@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::UpdateDatabaseResponse
- *
  * \brief The UpdateDatabaseResponse class provides an interace for Glue UpdateDatabase responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new UpdateDatabaseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDatabaseResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDatabaseResponse::UpdateDatabaseResponse(
         const UpdateDatabaseRequest &request,
@@ -58,6 +53,9 @@ UpdateDatabaseResponse::UpdateDatabaseResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDatabaseRequest * UpdateDatabaseResponse::request() const
 {
     Q_D(const UpdateDatabaseResponse);
@@ -65,9 +63,8 @@ const UpdateDatabaseRequest * UpdateDatabaseResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue UpdateDatabase response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue UpdateDatabase \a response.
  */
 void UpdateDatabaseResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateDatabaseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::UpdateDatabaseResponsePrivate
+ * \brief The UpdateDatabaseResponsePrivate class provides private implementation for UpdateDatabaseResponse.
  * \internal
  *
- * \class UpdateDatabaseResponsePrivate
- *
- * \brief Private implementation for UpdateDatabaseResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDatabaseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDatabaseResponse instance.
+ * Constructs a UpdateDatabaseResponsePrivate object with public implementation \a q.
  */
 UpdateDatabaseResponsePrivate::UpdateDatabaseResponsePrivate(
     UpdateDatabaseResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateDatabaseResponsePrivate::UpdateDatabaseResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue UpdateDatabaseResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue UpdateDatabase response element from \a xml.
  */
 void UpdateDatabaseResponsePrivate::parseUpdateDatabaseResponse(QXmlStreamReader &xml)
 {

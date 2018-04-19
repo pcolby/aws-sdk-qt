@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetEmailChannelRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetEmailChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetEmailChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetEmailChannelRequestPrivate::GetEmailChannelRequestPrivate(
     const PinpointRequest::Action action, GetEmailChannelRequest * const q)

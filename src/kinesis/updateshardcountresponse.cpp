@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::UpdateShardCountResponse
- *
  * \brief The UpdateShardCountResponse class provides an interace for Kinesis UpdateShardCount responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new UpdateShardCountResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateShardCountResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateShardCountResponse::UpdateShardCountResponse(
         const UpdateShardCountRequest &request,
@@ -58,6 +53,9 @@ UpdateShardCountResponse::UpdateShardCountResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateShardCountRequest * UpdateShardCountResponse::request() const
 {
     Q_D(const UpdateShardCountResponse);
@@ -65,9 +63,8 @@ const UpdateShardCountRequest * UpdateShardCountResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis UpdateShardCount response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis UpdateShardCount \a response.
  */
 void UpdateShardCountResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateShardCountResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::UpdateShardCountResponsePrivate
+ * \brief The UpdateShardCountResponsePrivate class provides private implementation for UpdateShardCountResponse.
  * \internal
  *
- * \class UpdateShardCountResponsePrivate
- *
- * \brief Private implementation for UpdateShardCountResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateShardCountResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateShardCountResponse instance.
+ * Constructs a UpdateShardCountResponsePrivate object with public implementation \a q.
  */
 UpdateShardCountResponsePrivate::UpdateShardCountResponsePrivate(
     UpdateShardCountResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateShardCountResponsePrivate::UpdateShardCountResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis UpdateShardCountResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis UpdateShardCount response element from \a xml.
  */
 void UpdateShardCountResponsePrivate::parseUpdateShardCountResponse(QXmlStreamReader &xml)
 {

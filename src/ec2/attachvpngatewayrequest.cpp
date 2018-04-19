@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AttachVpnGatewayRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a AttachVpnGatewayRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AttachVpnGatewayRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AttachVpnGatewayRequestPrivate::AttachVpnGatewayRequestPrivate(
     const EC2Request::Action action, AttachVpnGatewayRequest * const q)

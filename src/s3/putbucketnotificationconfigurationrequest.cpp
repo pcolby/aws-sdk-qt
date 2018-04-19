@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PutBucketNotificationConfigurationRequest::re
  */
 
 /*!
- *
- * Constructs a PutBucketNotificationConfigurationRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a PutBucketNotificationConfigurationRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 PutBucketNotificationConfigurationRequestPrivate::PutBucketNotificationConfigurationRequestPrivate(
     const S3Request::Action action, PutBucketNotificationConfigurationRequest * const q)

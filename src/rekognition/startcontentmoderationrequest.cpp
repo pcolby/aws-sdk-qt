@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * StartContentModerationRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a StartContentModerationRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a StartContentModerationRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 StartContentModerationRequestPrivate::StartContentModerationRequestPrivate(
     const RekognitionRequest::Action action, StartContentModerationRequest * const q)

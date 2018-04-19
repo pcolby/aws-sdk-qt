@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ListImportsResponse
- *
  * \brief The ListImportsResponse class provides an interace for CloudFormation ListImports responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ListImportsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListImportsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListImportsResponse::ListImportsResponse(
         const ListImportsRequest &request,
@@ -77,6 +72,9 @@ ListImportsResponse::ListImportsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListImportsRequest * ListImportsResponse::request() const
 {
     Q_D(const ListImportsResponse);
@@ -84,9 +82,8 @@ const ListImportsRequest * ListImportsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation ListImports response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation ListImports \a response.
  */
 void ListImportsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ListImportsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::ListImportsResponsePrivate
+ * \brief The ListImportsResponsePrivate class provides private implementation for ListImportsResponse.
  * \internal
  *
- * \class ListImportsResponsePrivate
- *
- * \brief Private implementation for ListImportsResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListImportsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListImportsResponse instance.
+ * Constructs a ListImportsResponsePrivate object with public implementation \a q.
  */
 ListImportsResponsePrivate::ListImportsResponsePrivate(
     ListImportsResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ ListImportsResponsePrivate::ListImportsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation ListImportsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation ListImports response element from \a xml.
  */
 void ListImportsResponsePrivate::parseListImportsResponse(QXmlStreamReader &xml)
 {

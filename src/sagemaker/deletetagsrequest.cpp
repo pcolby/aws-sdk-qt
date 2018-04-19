@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteTagsRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTagsRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 DeleteTagsRequestPrivate::DeleteTagsRequestPrivate(
     const SageMakerRequest::Action action, DeleteTagsRequest * const q)

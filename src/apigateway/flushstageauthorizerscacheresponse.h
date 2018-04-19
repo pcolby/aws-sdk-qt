@@ -34,10 +34,10 @@ class QTAWS_EXPORT FlushStageAuthorizersCacheResponse : public APIGatewayRespons
 public:
     FlushStageAuthorizersCacheResponse(const FlushStageAuthorizersCacheRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const FlushStageAuthorizersCacheRequest * request() const;
+    virtual const FlushStageAuthorizersCacheRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(FlushStageAuthorizersCacheResponse)

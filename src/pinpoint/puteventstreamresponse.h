@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutEventStreamResponse : public PinpointResponse {
 public:
     PutEventStreamResponse(const PutEventStreamRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutEventStreamRequest * request() const;
+    virtual const PutEventStreamRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutEventStreamResponse)

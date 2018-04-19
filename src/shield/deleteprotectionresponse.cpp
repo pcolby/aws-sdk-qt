@@ -29,10 +29,9 @@ namespace Shield {
 
 /*!
  * \class QtAws::Shield::DeleteProtectionResponse
- *
  * \brief The DeleteProtectionResponse class provides an interace for Shield DeleteProtection responses.
  *
- * \ingroup Shield
+ * \inmodule QtAwsShield
  *
  *  <fullname>AWS Shield Advanced</fullname>
  * 
@@ -45,11 +44,7 @@ namespace Shield {
  */
 
 /*!
- * @brief  Constructs a new DeleteProtectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteProtectionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteProtectionResponse::DeleteProtectionResponse(
         const DeleteProtectionRequest &request,
@@ -61,6 +56,9 @@ DeleteProtectionResponse::DeleteProtectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteProtectionRequest * DeleteProtectionResponse::request() const
 {
     Q_D(const DeleteProtectionResponse);
@@ -68,9 +66,8 @@ const DeleteProtectionRequest * DeleteProtectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Shield DeleteProtection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Shield DeleteProtection \a response.
  */
 void DeleteProtectionResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeleteProtectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Shield::DeleteProtectionResponsePrivate
+ * \brief The DeleteProtectionResponsePrivate class provides private implementation for DeleteProtectionResponse.
  * \internal
  *
- * \class DeleteProtectionResponsePrivate
- *
- * \brief Private implementation for DeleteProtectionResponse.
+ * \inmodule QtAwsShield
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProtectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteProtectionResponse instance.
+ * Constructs a DeleteProtectionResponsePrivate object with public implementation \a q.
  */
 DeleteProtectionResponsePrivate::DeleteProtectionResponsePrivate(
     DeleteProtectionResponse * const q) : ShieldResponsePrivate(q)
@@ -101,9 +94,7 @@ DeleteProtectionResponsePrivate::DeleteProtectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Shield DeleteProtectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Shield DeleteProtection response element from \a xml.
  */
 void DeleteProtectionResponsePrivate::parseDeleteProtectionResponse(QXmlStreamReader &xml)
 {

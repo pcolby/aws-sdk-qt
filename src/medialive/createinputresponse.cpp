@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::CreateInputResponse
- *
  * \brief The CreateInputResponse class provides an interace for MediaLive CreateInput responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::createInput
  */
 
 /*!
- * @brief  Constructs a new CreateInputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateInputResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateInputResponse::CreateInputResponse(
         const CreateInputRequest &request,
@@ -55,6 +50,9 @@ CreateInputResponse::CreateInputResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateInputRequest * CreateInputResponse::request() const
 {
     Q_D(const CreateInputResponse);
@@ -62,9 +60,8 @@ const CreateInputRequest * CreateInputResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaLive CreateInput response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive CreateInput \a response.
  */
 void CreateInputResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateInputResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::CreateInputResponsePrivate
+ * \brief The CreateInputResponsePrivate class provides private implementation for CreateInputResponse.
  * \internal
  *
- * \class CreateInputResponsePrivate
- *
- * \brief Private implementation for CreateInputResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateInputResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateInputResponse instance.
+ * Constructs a CreateInputResponsePrivate object with public implementation \a q.
  */
 CreateInputResponsePrivate::CreateInputResponsePrivate(
     CreateInputResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateInputResponsePrivate::CreateInputResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive CreateInputResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive CreateInput response element from \a xml.
  */
 void CreateInputResponsePrivate::parseCreateInputResponse(QXmlStreamReader &xml)
 {

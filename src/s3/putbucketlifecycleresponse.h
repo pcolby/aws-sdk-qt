@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutBucketLifecycleResponse : public S3Response {
 public:
     PutBucketLifecycleResponse(const PutBucketLifecycleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutBucketLifecycleRequest * request() const;
+    virtual const PutBucketLifecycleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutBucketLifecycleResponse)

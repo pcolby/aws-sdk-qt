@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeSeverityLevelsResponse : public SupportResponse {
 public:
     DescribeSeverityLevelsResponse(const DescribeSeverityLevelsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeSeverityLevelsRequest * request() const;
+    virtual const DescribeSeverityLevelsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeSeverityLevelsResponse)

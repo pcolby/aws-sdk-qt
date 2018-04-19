@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCloudFrontOriginAccessIdentityRequest::
  */
 
 /*!
- *
- * Constructs a DeleteCloudFrontOriginAccessIdentityRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCloudFrontOriginAccessIdentityRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 DeleteCloudFrontOriginAccessIdentityRequestPrivate::DeleteCloudFrontOriginAccessIdentityRequestPrivate(
     const CloudFrontRequest::Action action, DeleteCloudFrontOriginAccessIdentityRequest * const q)

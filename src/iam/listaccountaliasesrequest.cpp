@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ListAccountAliasesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListAccountAliasesRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ListAccountAliasesRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ListAccountAliasesRequestPrivate::ListAccountAliasesRequestPrivate(
     const IAMRequest::Action action, ListAccountAliasesRequest * const q)

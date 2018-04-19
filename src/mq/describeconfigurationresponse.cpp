@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::DescribeConfigurationResponse
- *
  * \brief The DescribeConfigurationResponse class provides an interace for MQ DescribeConfiguration responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConfigurationResponse::DescribeConfigurationResponse(
         const DescribeConfigurationRequest &request,
@@ -57,6 +52,9 @@ DescribeConfigurationResponse::DescribeConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConfigurationRequest * DescribeConfigurationResponse::request() const
 {
     Q_D(const DescribeConfigurationResponse);
@@ -64,9 +62,8 @@ const DescribeConfigurationRequest * DescribeConfigurationResponse::request() co
 }
 
 /*!
- * @brief  Parse a MQ DescribeConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ DescribeConfiguration \a response.
  */
 void DescribeConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DescribeConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::DescribeConfigurationResponsePrivate
+ * \brief The DescribeConfigurationResponsePrivate class provides private implementation for DescribeConfigurationResponse.
  * \internal
  *
- * \class DescribeConfigurationResponsePrivate
- *
- * \brief Private implementation for DescribeConfigurationResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConfigurationResponse instance.
+ * Constructs a DescribeConfigurationResponsePrivate object with public implementation \a q.
  */
 DescribeConfigurationResponsePrivate::DescribeConfigurationResponsePrivate(
     DescribeConfigurationResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ DescribeConfigurationResponsePrivate::DescribeConfigurationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ DescribeConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ DescribeConfiguration response element from \a xml.
  */
 void DescribeConfigurationResponsePrivate::parseDescribeConfigurationResponse(QXmlStreamReader &xml)
 {

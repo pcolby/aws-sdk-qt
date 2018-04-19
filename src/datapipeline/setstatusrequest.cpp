@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * SetStatusRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a SetStatusRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a SetStatusRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 SetStatusRequestPrivate::SetStatusRequestPrivate(
     const DataPipelineRequest::Action action, SetStatusRequest * const q)

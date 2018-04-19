@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::StopStreamEncryptionResponse
- *
  * \brief The StopStreamEncryptionResponse class provides an interace for Kinesis StopStreamEncryption responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new StopStreamEncryptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopStreamEncryptionResponse object for \a reply to \a request, with parent \a parent.
  */
 StopStreamEncryptionResponse::StopStreamEncryptionResponse(
         const StopStreamEncryptionRequest &request,
@@ -58,6 +53,9 @@ StopStreamEncryptionResponse::StopStreamEncryptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopStreamEncryptionRequest * StopStreamEncryptionResponse::request() const
 {
     Q_D(const StopStreamEncryptionResponse);
@@ -65,9 +63,8 @@ const StopStreamEncryptionRequest * StopStreamEncryptionResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Kinesis StopStreamEncryption response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis StopStreamEncryption \a response.
  */
 void StopStreamEncryptionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StopStreamEncryptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::StopStreamEncryptionResponsePrivate
+ * \brief The StopStreamEncryptionResponsePrivate class provides private implementation for StopStreamEncryptionResponse.
  * \internal
  *
- * \class StopStreamEncryptionResponsePrivate
- *
- * \brief Private implementation for StopStreamEncryptionResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopStreamEncryptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopStreamEncryptionResponse instance.
+ * Constructs a StopStreamEncryptionResponsePrivate object with public implementation \a q.
  */
 StopStreamEncryptionResponsePrivate::StopStreamEncryptionResponsePrivate(
     StopStreamEncryptionResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ StopStreamEncryptionResponsePrivate::StopStreamEncryptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis StopStreamEncryptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis StopStreamEncryption response element from \a xml.
  */
 void StopStreamEncryptionResponsePrivate::parseStopStreamEncryptionResponse(QXmlStreamReader &xml)
 {

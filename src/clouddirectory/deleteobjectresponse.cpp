@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::DeleteObjectResponse
- *
  * \brief The DeleteObjectResponse class provides an interace for CloudDirectory DeleteObject responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new DeleteObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteObjectResponse::DeleteObjectResponse(
         const DeleteObjectRequest &request,
@@ -62,6 +57,9 @@ DeleteObjectResponse::DeleteObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteObjectRequest * DeleteObjectResponse::request() const
 {
     Q_D(const DeleteObjectResponse);
@@ -69,9 +67,8 @@ const DeleteObjectRequest * DeleteObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory DeleteObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory DeleteObject \a response.
  */
 void DeleteObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DeleteObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::DeleteObjectResponsePrivate
+ * \brief The DeleteObjectResponsePrivate class provides private implementation for DeleteObjectResponse.
  * \internal
  *
- * \class DeleteObjectResponsePrivate
- *
- * \brief Private implementation for DeleteObjectResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteObjectResponse instance.
+ * Constructs a DeleteObjectResponsePrivate object with public implementation \a q.
  */
 DeleteObjectResponsePrivate::DeleteObjectResponsePrivate(
     DeleteObjectResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ DeleteObjectResponsePrivate::DeleteObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory DeleteObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory DeleteObject response element from \a xml.
  */
 void DeleteObjectResponsePrivate::parseDeleteObjectResponse(QXmlStreamReader &xml)
 {

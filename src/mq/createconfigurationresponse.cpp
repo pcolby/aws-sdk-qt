@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::CreateConfigurationResponse
- *
  * \brief The CreateConfigurationResponse class provides an interace for MQ CreateConfiguration responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new CreateConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateConfigurationResponse::CreateConfigurationResponse(
         const CreateConfigurationRequest &request,
@@ -57,6 +52,9 @@ CreateConfigurationResponse::CreateConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateConfigurationRequest * CreateConfigurationResponse::request() const
 {
     Q_D(const CreateConfigurationResponse);
@@ -64,9 +62,8 @@ const CreateConfigurationRequest * CreateConfigurationResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ CreateConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ CreateConfiguration \a response.
  */
 void CreateConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void CreateConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::CreateConfigurationResponsePrivate
+ * \brief The CreateConfigurationResponsePrivate class provides private implementation for CreateConfigurationResponse.
  * \internal
  *
- * \class CreateConfigurationResponsePrivate
- *
- * \brief Private implementation for CreateConfigurationResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateConfigurationResponse instance.
+ * Constructs a CreateConfigurationResponsePrivate object with public implementation \a q.
  */
 CreateConfigurationResponsePrivate::CreateConfigurationResponsePrivate(
     CreateConfigurationResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ CreateConfigurationResponsePrivate::CreateConfigurationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ CreateConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ CreateConfiguration response element from \a xml.
  */
 void CreateConfigurationResponsePrivate::parseCreateConfigurationResponse(QXmlStreamReader &xml)
 {

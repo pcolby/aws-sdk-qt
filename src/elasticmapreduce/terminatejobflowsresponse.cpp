@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::TerminateJobFlowsResponse
- *
  * \brief The TerminateJobFlowsResponse class provides an interace for EMR TerminateJobFlows responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new TerminateJobFlowsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TerminateJobFlowsResponse object for \a reply to \a request, with parent \a parent.
  */
 TerminateJobFlowsResponse::TerminateJobFlowsResponse(
         const TerminateJobFlowsRequest &request,
@@ -58,6 +53,9 @@ TerminateJobFlowsResponse::TerminateJobFlowsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TerminateJobFlowsRequest * TerminateJobFlowsResponse::request() const
 {
     Q_D(const TerminateJobFlowsResponse);
@@ -65,9 +63,8 @@ const TerminateJobFlowsRequest * TerminateJobFlowsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR TerminateJobFlows response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR TerminateJobFlows \a response.
  */
 void TerminateJobFlowsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void TerminateJobFlowsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::TerminateJobFlowsResponsePrivate
+ * \brief The TerminateJobFlowsResponsePrivate class provides private implementation for TerminateJobFlowsResponse.
  * \internal
  *
- * \class TerminateJobFlowsResponsePrivate
- *
- * \brief Private implementation for TerminateJobFlowsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateJobFlowsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TerminateJobFlowsResponse instance.
+ * Constructs a TerminateJobFlowsResponsePrivate object with public implementation \a q.
  */
 TerminateJobFlowsResponsePrivate::TerminateJobFlowsResponsePrivate(
     TerminateJobFlowsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ TerminateJobFlowsResponsePrivate::TerminateJobFlowsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR TerminateJobFlowsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR TerminateJobFlows response element from \a xml.
  */
 void TerminateJobFlowsResponsePrivate::parseTerminateJobFlowsResponse(QXmlStreamReader &xml)
 {

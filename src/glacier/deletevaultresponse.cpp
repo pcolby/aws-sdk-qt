@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::DeleteVaultResponse
- *
  * \brief The DeleteVaultResponse class provides an interace for Glacier DeleteVault responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new DeleteVaultResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVaultResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVaultResponse::DeleteVaultResponse(
         const DeleteVaultRequest &request,
@@ -93,6 +88,9 @@ DeleteVaultResponse::DeleteVaultResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVaultRequest * DeleteVaultResponse::request() const
 {
     Q_D(const DeleteVaultResponse);
@@ -100,9 +98,8 @@ const DeleteVaultRequest * DeleteVaultResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier DeleteVault response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier DeleteVault \a response.
  */
 void DeleteVaultResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void DeleteVaultResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::DeleteVaultResponsePrivate
+ * \brief The DeleteVaultResponsePrivate class provides private implementation for DeleteVaultResponse.
  * \internal
  *
- * \class DeleteVaultResponsePrivate
- *
- * \brief Private implementation for DeleteVaultResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVaultResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVaultResponse instance.
+ * Constructs a DeleteVaultResponsePrivate object with public implementation \a q.
  */
 DeleteVaultResponsePrivate::DeleteVaultResponsePrivate(
     DeleteVaultResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ DeleteVaultResponsePrivate::DeleteVaultResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier DeleteVaultResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier DeleteVault response element from \a xml.
  */
 void DeleteVaultResponsePrivate::parseDeleteVaultResponse(QXmlStreamReader &xml)
 {

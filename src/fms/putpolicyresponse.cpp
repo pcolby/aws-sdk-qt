@@ -29,10 +29,9 @@ namespace FMS {
 
 /*!
  * \class QtAws::FMS::PutPolicyResponse
- *
  * \brief The PutPolicyResponse class provides an interace for FMS PutPolicy responses.
  *
- * \ingroup FMS
+ * \inmodule QtAwsFMS
  *
  *  <fullname>AWS Firewall Manager</fullname>
  * 
@@ -45,11 +44,7 @@ namespace FMS {
  */
 
 /*!
- * @brief  Constructs a new PutPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutPolicyResponse::PutPolicyResponse(
         const PutPolicyRequest &request,
@@ -61,6 +56,9 @@ PutPolicyResponse::PutPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutPolicyRequest * PutPolicyResponse::request() const
 {
     Q_D(const PutPolicyResponse);
@@ -68,9 +66,8 @@ const PutPolicyRequest * PutPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a FMS PutPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful FMS PutPolicy \a response.
  */
 void PutPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void PutPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::FMS::PutPolicyResponsePrivate
+ * \brief The PutPolicyResponsePrivate class provides private implementation for PutPolicyResponse.
  * \internal
  *
- * \class PutPolicyResponsePrivate
- *
- * \brief Private implementation for PutPolicyResponse.
+ * \inmodule QtAwsFMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutPolicyResponse instance.
+ * Constructs a PutPolicyResponsePrivate object with public implementation \a q.
  */
 PutPolicyResponsePrivate::PutPolicyResponsePrivate(
     PutPolicyResponse * const q) : FMSResponsePrivate(q)
@@ -101,9 +94,7 @@ PutPolicyResponsePrivate::PutPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an FMS PutPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a FMS PutPolicy response element from \a xml.
  */
 void PutPolicyResponsePrivate::parsePutPolicyResponse(QXmlStreamReader &xml)
 {

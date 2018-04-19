@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::ListWebACLsResponse
- *
  * \brief The ListWebACLsResponse class provides an interace for WAF ListWebACLs responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new ListWebACLsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListWebACLsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListWebACLsResponse::ListWebACLsResponse(
         const ListWebACLsRequest &request,
@@ -60,6 +55,9 @@ ListWebACLsResponse::ListWebACLsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListWebACLsRequest * ListWebACLsResponse::request() const
 {
     Q_D(const ListWebACLsResponse);
@@ -67,9 +65,8 @@ const ListWebACLsRequest * ListWebACLsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF ListWebACLs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF ListWebACLs \a response.
  */
 void ListWebACLsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListWebACLsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::ListWebACLsResponsePrivate
+ * \brief The ListWebACLsResponsePrivate class provides private implementation for ListWebACLsResponse.
  * \internal
  *
- * \class ListWebACLsResponsePrivate
- *
- * \brief Private implementation for ListWebACLsResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListWebACLsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListWebACLsResponse instance.
+ * Constructs a ListWebACLsResponsePrivate object with public implementation \a q.
  */
 ListWebACLsResponsePrivate::ListWebACLsResponsePrivate(
     ListWebACLsResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ ListWebACLsResponsePrivate::ListWebACLsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF ListWebACLsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF ListWebACLs response element from \a xml.
  */
 void ListWebACLsResponsePrivate::parseListWebACLsResponse(QXmlStreamReader &xml)
 {

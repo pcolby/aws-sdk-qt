@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListSubscribedRuleGroupsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ListSubscribedRuleGroupsRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a ListSubscribedRuleGroupsRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 ListSubscribedRuleGroupsRequestPrivate::ListSubscribedRuleGroupsRequestPrivate(
     const WAFRequest::Action action, ListSubscribedRuleGroupsRequest * const q)

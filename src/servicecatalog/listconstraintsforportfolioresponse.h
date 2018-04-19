@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListConstraintsForPortfolioResponse : public ServiceCatalogRe
 public:
     ListConstraintsForPortfolioResponse(const ListConstraintsForPortfolioRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListConstraintsForPortfolioRequest * request() const;
+    virtual const ListConstraintsForPortfolioRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListConstraintsForPortfolioResponse)

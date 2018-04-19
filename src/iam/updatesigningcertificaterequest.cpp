@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSigningCertificateRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateSigningCertificateRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSigningCertificateRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateSigningCertificateRequestPrivate::UpdateSigningCertificateRequestPrivate(
     const IAMRequest::Action action, UpdateSigningCertificateRequest * const q)

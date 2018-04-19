@@ -34,10 +34,10 @@ class QTAWS_EXPORT AttachClassicLinkVpcResponse : public EC2Response {
 public:
     AttachClassicLinkVpcResponse(const AttachClassicLinkVpcRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AttachClassicLinkVpcRequest * request() const;
+    virtual const AttachClassicLinkVpcRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AttachClassicLinkVpcResponse)

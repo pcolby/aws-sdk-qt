@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateDataSourceResponse : public AppSyncResponse {
 public:
     UpdateDataSourceResponse(const UpdateDataSourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateDataSourceRequest * request() const;
+    virtual const UpdateDataSourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateDataSourceResponse)

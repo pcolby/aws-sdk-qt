@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DisassociateElasticIpResponse
- *
  * \brief The DisassociateElasticIpResponse class provides an interace for OpsWorks DisassociateElasticIp responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DisassociateElasticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateElasticIpResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateElasticIpResponse::DisassociateElasticIpResponse(
         const DisassociateElasticIpRequest &request,
@@ -161,6 +156,9 @@ DisassociateElasticIpResponse::DisassociateElasticIpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateElasticIpRequest * DisassociateElasticIpResponse::request() const
 {
     Q_D(const DisassociateElasticIpResponse);
@@ -168,9 +166,8 @@ const DisassociateElasticIpRequest * DisassociateElasticIpResponse::request() co
 }
 
 /*!
- * @brief  Parse a OpsWorks DisassociateElasticIp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DisassociateElasticIp \a response.
  */
 void DisassociateElasticIpResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DisassociateElasticIpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DisassociateElasticIpResponsePrivate
+ * \brief The DisassociateElasticIpResponsePrivate class provides private implementation for DisassociateElasticIpResponse.
  * \internal
  *
- * \class DisassociateElasticIpResponsePrivate
- *
- * \brief Private implementation for DisassociateElasticIpResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateElasticIpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateElasticIpResponse instance.
+ * Constructs a DisassociateElasticIpResponsePrivate object with public implementation \a q.
  */
 DisassociateElasticIpResponsePrivate::DisassociateElasticIpResponsePrivate(
     DisassociateElasticIpResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DisassociateElasticIpResponsePrivate::DisassociateElasticIpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DisassociateElasticIpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DisassociateElasticIp response element from \a xml.
  */
 void DisassociateElasticIpResponsePrivate::parseDisassociateElasticIpResponse(QXmlStreamReader &xml)
 {

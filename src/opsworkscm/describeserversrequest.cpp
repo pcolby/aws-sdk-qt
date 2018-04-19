@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * DescribeServersRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeServersRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeServersRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 DescribeServersRequestPrivate::DescribeServersRequestPrivate(
     const OpsWorksCMRequest::Action action, DescribeServersRequest * const q)

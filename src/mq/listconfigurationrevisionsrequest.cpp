@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationRevisionsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a ListConfigurationRevisionsRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a ListConfigurationRevisionsRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 ListConfigurationRevisionsRequestPrivate::ListConfigurationRevisionsRequestPrivate(
     const MQRequest::Action action, ListConfigurationRevisionsRequest * const q)

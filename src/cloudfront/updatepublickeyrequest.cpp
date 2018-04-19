@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdatePublicKeyRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a UpdatePublicKeyRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a UpdatePublicKeyRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 UpdatePublicKeyRequestPrivate::UpdatePublicKeyRequestPrivate(
     const CloudFrontRequest::Action action, UpdatePublicKeyRequest * const q)

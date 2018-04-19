@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * RestoreServerRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a RestoreServerRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a RestoreServerRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 RestoreServerRequestPrivate::RestoreServerRequestPrivate(
     const OpsWorksCMRequest::Action action, RestoreServerRequest * const q)

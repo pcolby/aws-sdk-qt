@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * AttachInternetGatewayRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a AttachInternetGatewayRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a AttachInternetGatewayRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 AttachInternetGatewayRequestPrivate::AttachInternetGatewayRequestPrivate(
     const EC2Request::Action action, AttachInternetGatewayRequest * const q)

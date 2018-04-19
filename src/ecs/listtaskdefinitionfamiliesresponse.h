@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListTaskDefinitionFamiliesResponse : public ECSResponse {
 public:
     ListTaskDefinitionFamiliesResponse(const ListTaskDefinitionFamiliesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListTaskDefinitionFamiliesRequest * request() const;
+    virtual const ListTaskDefinitionFamiliesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListTaskDefinitionFamiliesResponse)

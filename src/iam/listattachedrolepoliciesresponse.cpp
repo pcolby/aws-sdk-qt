@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListAttachedRolePoliciesResponse
- *
  * \brief The ListAttachedRolePoliciesResponse class provides an interace for IAM ListAttachedRolePolicies responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListAttachedRolePoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAttachedRolePoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAttachedRolePoliciesResponse::ListAttachedRolePoliciesResponse(
         const ListAttachedRolePoliciesRequest &request,
@@ -120,6 +115,9 @@ ListAttachedRolePoliciesResponse::ListAttachedRolePoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAttachedRolePoliciesRequest * ListAttachedRolePoliciesResponse::request() const
 {
     Q_D(const ListAttachedRolePoliciesResponse);
@@ -127,9 +125,8 @@ const ListAttachedRolePoliciesRequest * ListAttachedRolePoliciesResponse::reques
 }
 
 /*!
- * @brief  Parse a IAM ListAttachedRolePolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListAttachedRolePolicies \a response.
  */
 void ListAttachedRolePoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListAttachedRolePoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListAttachedRolePoliciesResponsePrivate
+ * \brief The ListAttachedRolePoliciesResponsePrivate class provides private implementation for ListAttachedRolePoliciesResponse.
  * \internal
  *
- * \class ListAttachedRolePoliciesResponsePrivate
- *
- * \brief Private implementation for ListAttachedRolePoliciesResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAttachedRolePoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAttachedRolePoliciesResponse instance.
+ * Constructs a ListAttachedRolePoliciesResponsePrivate object with public implementation \a q.
  */
 ListAttachedRolePoliciesResponsePrivate::ListAttachedRolePoliciesResponsePrivate(
     ListAttachedRolePoliciesResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListAttachedRolePoliciesResponsePrivate::ListAttachedRolePoliciesResponsePrivate
 }
 
 /*!
- * @brief  Parse an IAM ListAttachedRolePoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListAttachedRolePolicies response element from \a xml.
  */
 void ListAttachedRolePoliciesResponsePrivate::parseListAttachedRolePoliciesResponse(QXmlStreamReader &xml)
 {

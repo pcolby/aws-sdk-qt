@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeScheduledInstancesResponse : public EC2Response {
 public:
     DescribeScheduledInstancesResponse(const DescribeScheduledInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeScheduledInstancesRequest * request() const;
+    virtual const DescribeScheduledInstancesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeScheduledInstancesResponse)

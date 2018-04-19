@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminResetUserPasswordResponse
- *
  * \brief The AdminResetUserPasswordResponse class provides an interace for CognitoIdentityProvider AdminResetUserPassword responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminResetUserPasswordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminResetUserPasswordResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminResetUserPasswordResponse::AdminResetUserPasswordResponse(
         const AdminResetUserPasswordRequest &request,
@@ -65,6 +60,9 @@ AdminResetUserPasswordResponse::AdminResetUserPasswordResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminResetUserPasswordRequest * AdminResetUserPasswordResponse::request() const
 {
     Q_D(const AdminResetUserPasswordResponse);
@@ -72,9 +70,8 @@ const AdminResetUserPasswordRequest * AdminResetUserPasswordResponse::request() 
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminResetUserPassword response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminResetUserPassword \a response.
  */
 void AdminResetUserPasswordResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminResetUserPasswordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminResetUserPasswordResponsePrivate
+ * \brief The AdminResetUserPasswordResponsePrivate class provides private implementation for AdminResetUserPasswordResponse.
  * \internal
  *
- * \class AdminResetUserPasswordResponsePrivate
- *
- * \brief Private implementation for AdminResetUserPasswordResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminResetUserPasswordResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminResetUserPasswordResponse instance.
+ * Constructs a AdminResetUserPasswordResponsePrivate object with public implementation \a q.
  */
 AdminResetUserPasswordResponsePrivate::AdminResetUserPasswordResponsePrivate(
     AdminResetUserPasswordResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminResetUserPasswordResponsePrivate::AdminResetUserPasswordResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminResetUserPasswordResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminResetUserPassword response element from \a xml.
  */
 void AdminResetUserPasswordResponsePrivate::parseAdminResetUserPasswordResponse(QXmlStreamReader &xml)
 {

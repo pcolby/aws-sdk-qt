@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ExitStandbyRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a ExitStandbyRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a ExitStandbyRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 ExitStandbyRequestPrivate::ExitStandbyRequestPrivate(
     const AutoScalingRequest::Action action, ExitStandbyRequest * const q)

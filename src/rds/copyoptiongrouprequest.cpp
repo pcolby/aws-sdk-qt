@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CopyOptionGroupRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a CopyOptionGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CopyOptionGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CopyOptionGroupRequestPrivate::CopyOptionGroupRequestPrivate(
     const RDSRequest::Action action, CopyOptionGroupRequest * const q)

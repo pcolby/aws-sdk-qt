@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * CreateServerRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateServerRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a CreateServerRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 CreateServerRequestPrivate::CreateServerRequestPrivate(
     const OpsWorksCMRequest::Action action, CreateServerRequest * const q)

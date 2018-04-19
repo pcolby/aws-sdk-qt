@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ImportInstanceResponse
- *
  * \brief The ImportInstanceResponse class provides an interace for EC2 ImportInstance responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ImportInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportInstanceResponse::ImportInstanceResponse(
         const ImportInstanceRequest &request,
@@ -59,6 +54,9 @@ ImportInstanceResponse::ImportInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportInstanceRequest * ImportInstanceResponse::request() const
 {
     Q_D(const ImportInstanceResponse);
@@ -66,9 +64,8 @@ const ImportInstanceRequest * ImportInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ImportInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ImportInstance \a response.
  */
 void ImportInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ImportInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ImportInstanceResponsePrivate
+ * \brief The ImportInstanceResponsePrivate class provides private implementation for ImportInstanceResponse.
  * \internal
  *
- * \class ImportInstanceResponsePrivate
- *
- * \brief Private implementation for ImportInstanceResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportInstanceResponse instance.
+ * Constructs a ImportInstanceResponsePrivate object with public implementation \a q.
  */
 ImportInstanceResponsePrivate::ImportInstanceResponsePrivate(
     ImportInstanceResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ImportInstanceResponsePrivate::ImportInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ImportInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ImportInstance response element from \a xml.
  */
 void ImportInstanceResponsePrivate::parseImportInstanceResponse(QXmlStreamReader &xml)
 {

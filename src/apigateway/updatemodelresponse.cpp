@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::UpdateModelResponse
- *
  * \brief The UpdateModelResponse class provides an interace for APIGateway UpdateModel responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateModelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateModelResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateModelResponse::UpdateModelResponse(
         const UpdateModelRequest &request,
@@ -60,6 +55,9 @@ UpdateModelResponse::UpdateModelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateModelRequest * UpdateModelResponse::request() const
 {
     Q_D(const UpdateModelResponse);
@@ -67,9 +65,8 @@ const UpdateModelRequest * UpdateModelResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway UpdateModel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway UpdateModel \a response.
  */
 void UpdateModelResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateModelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::UpdateModelResponsePrivate
+ * \brief The UpdateModelResponsePrivate class provides private implementation for UpdateModelResponse.
  * \internal
  *
- * \class UpdateModelResponsePrivate
- *
- * \brief Private implementation for UpdateModelResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateModelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateModelResponse instance.
+ * Constructs a UpdateModelResponsePrivate object with public implementation \a q.
  */
 UpdateModelResponsePrivate::UpdateModelResponsePrivate(
     UpdateModelResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateModelResponsePrivate::UpdateModelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway UpdateModelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway UpdateModel response element from \a xml.
  */
 void UpdateModelResponsePrivate::parseUpdateModelResponse(QXmlStreamReader &xml)
 {

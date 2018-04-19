@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::StartImageBuilderResponse
- *
  * \brief The StartImageBuilderResponse class provides an interace for AppStream StartImageBuilder responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new StartImageBuilderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartImageBuilderResponse object for \a reply to \a request, with parent \a parent.
  */
 StartImageBuilderResponse::StartImageBuilderResponse(
         const StartImageBuilderRequest &request,
@@ -58,6 +53,9 @@ StartImageBuilderResponse::StartImageBuilderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartImageBuilderRequest * StartImageBuilderResponse::request() const
 {
     Q_D(const StartImageBuilderResponse);
@@ -65,9 +63,8 @@ const StartImageBuilderRequest * StartImageBuilderResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream StartImageBuilder response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream StartImageBuilder \a response.
  */
 void StartImageBuilderResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StartImageBuilderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::StartImageBuilderResponsePrivate
+ * \brief The StartImageBuilderResponsePrivate class provides private implementation for StartImageBuilderResponse.
  * \internal
  *
- * \class StartImageBuilderResponsePrivate
- *
- * \brief Private implementation for StartImageBuilderResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartImageBuilderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartImageBuilderResponse instance.
+ * Constructs a StartImageBuilderResponsePrivate object with public implementation \a q.
  */
 StartImageBuilderResponsePrivate::StartImageBuilderResponsePrivate(
     StartImageBuilderResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ StartImageBuilderResponsePrivate::StartImageBuilderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream StartImageBuilderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream StartImageBuilder response element from \a xml.
  */
 void StartImageBuilderResponsePrivate::parseStartImageBuilderResponse(QXmlStreamReader &xml)
 {

@@ -63,7 +63,7 @@ namespace CloudSearch {
  */
 
 /*!
- * Constructs a[n] CloudSearchRequest object for CloudSearch \a action.
+ * Constructs a CloudSearchRequest object for CloudSearch \a action.
  */
 CloudSearchRequest::CloudSearchRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new CloudSearchRequestPrivate(action, this))
@@ -263,8 +263,8 @@ QNetworkRequest CloudSearchRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a CloudSearchRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a CloudSearchRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 CloudSearchRequestPrivate::CloudSearchRequestPrivate(const CloudSearchRequest::Action action, CloudSearchRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

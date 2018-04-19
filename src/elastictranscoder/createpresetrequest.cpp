@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreatePresetRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreatePresetRequestPrivate object for ElasticTranscoder \a action with,
- * public implementation \a q.
+ * Constructs a CreatePresetRequestPrivate object for ElasticTranscoder \a action,
+ * with public implementation \a q.
  */
 CreatePresetRequestPrivate::CreatePresetRequestPrivate(
     const ElasticTranscoderRequest::Action action, CreatePresetRequest * const q)

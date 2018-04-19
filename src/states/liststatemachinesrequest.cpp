@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * ListStateMachinesRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListStateMachinesRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a ListStateMachinesRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
     const SFNRequest::Action action, ListStateMachinesRequest * const q)

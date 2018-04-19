@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ForgetDeviceResponse
- *
  * \brief The ForgetDeviceResponse class provides an interace for CognitoIdentityProvider ForgetDevice responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ForgetDeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ForgetDeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 ForgetDeviceResponse::ForgetDeviceResponse(
         const ForgetDeviceRequest &request,
@@ -65,6 +60,9 @@ ForgetDeviceResponse::ForgetDeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ForgetDeviceRequest * ForgetDeviceResponse::request() const
 {
     Q_D(const ForgetDeviceResponse);
@@ -72,9 +70,8 @@ const ForgetDeviceRequest * ForgetDeviceResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider ForgetDevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider ForgetDevice \a response.
  */
 void ForgetDeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void ForgetDeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::ForgetDeviceResponsePrivate
+ * \brief The ForgetDeviceResponsePrivate class provides private implementation for ForgetDeviceResponse.
  * \internal
  *
- * \class ForgetDeviceResponsePrivate
- *
- * \brief Private implementation for ForgetDeviceResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ForgetDeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ForgetDeviceResponse instance.
+ * Constructs a ForgetDeviceResponsePrivate object with public implementation \a q.
  */
 ForgetDeviceResponsePrivate::ForgetDeviceResponsePrivate(
     ForgetDeviceResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ ForgetDeviceResponsePrivate::ForgetDeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider ForgetDeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider ForgetDevice response element from \a xml.
  */
 void ForgetDeviceResponsePrivate::parseForgetDeviceResponse(QXmlStreamReader &xml)
 {

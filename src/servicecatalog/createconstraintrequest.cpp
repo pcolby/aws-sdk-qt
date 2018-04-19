@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * CreateConstraintRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateConstraintRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a CreateConstraintRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 CreateConstraintRequestPrivate::CreateConstraintRequestPrivate(
     const ServiceCatalogRequest::Action action, CreateConstraintRequest * const q)

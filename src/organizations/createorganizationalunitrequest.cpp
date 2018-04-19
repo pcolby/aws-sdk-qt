@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * CreateOrganizationalUnitRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateOrganizationalUnitRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a CreateOrganizationalUnitRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 CreateOrganizationalUnitRequestPrivate::CreateOrganizationalUnitRequestPrivate(
     const OrganizationsRequest::Action action, CreateOrganizationalUnitRequest * const q)

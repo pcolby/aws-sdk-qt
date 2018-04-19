@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeGameSessionQueuesResponse
- *
  * \brief The DescribeGameSessionQueuesResponse class provides an interace for GameLift DescribeGameSessionQueues responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeGameSessionQueuesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeGameSessionQueuesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeGameSessionQueuesResponse::DescribeGameSessionQueuesResponse(
         const DescribeGameSessionQueuesRequest &request,
@@ -491,6 +486,9 @@ DescribeGameSessionQueuesResponse::DescribeGameSessionQueuesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeGameSessionQueuesRequest * DescribeGameSessionQueuesResponse::request() const
 {
     Q_D(const DescribeGameSessionQueuesResponse);
@@ -498,9 +496,8 @@ const DescribeGameSessionQueuesRequest * DescribeGameSessionQueuesResponse::requ
 }
 
 /*!
- * @brief  Parse a GameLift DescribeGameSessionQueues response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DescribeGameSessionQueues \a response.
  */
 void DescribeGameSessionQueuesResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DescribeGameSessionQueuesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DescribeGameSessionQueuesResponsePrivate
+ * \brief The DescribeGameSessionQueuesResponsePrivate class provides private implementation for DescribeGameSessionQueuesResponse.
  * \internal
  *
- * \class DescribeGameSessionQueuesResponsePrivate
- *
- * \brief Private implementation for DescribeGameSessionQueuesResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeGameSessionQueuesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeGameSessionQueuesResponse instance.
+ * Constructs a DescribeGameSessionQueuesResponsePrivate object with public implementation \a q.
  */
 DescribeGameSessionQueuesResponsePrivate::DescribeGameSessionQueuesResponsePrivate(
     DescribeGameSessionQueuesResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DescribeGameSessionQueuesResponsePrivate::DescribeGameSessionQueuesResponsePriva
 }
 
 /*!
- * @brief  Parse an GameLift DescribeGameSessionQueuesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DescribeGameSessionQueues response element from \a xml.
  */
 void DescribeGameSessionQueuesResponsePrivate::parseDescribeGameSessionQueuesResponse(QXmlStreamReader &xml)
 {

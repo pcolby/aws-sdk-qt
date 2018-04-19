@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::ListConfigurationsResponse
- *
  * \brief The ListConfigurationsResponse class provides an interace for MQ ListConfigurations responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new ListConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListConfigurationsResponse::ListConfigurationsResponse(
         const ListConfigurationsRequest &request,
@@ -57,6 +52,9 @@ ListConfigurationsResponse::ListConfigurationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListConfigurationsRequest * ListConfigurationsResponse::request() const
 {
     Q_D(const ListConfigurationsResponse);
@@ -64,9 +62,8 @@ const ListConfigurationsRequest * ListConfigurationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ ListConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ ListConfigurations \a response.
  */
 void ListConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void ListConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::ListConfigurationsResponsePrivate
+ * \brief The ListConfigurationsResponsePrivate class provides private implementation for ListConfigurationsResponse.
  * \internal
  *
- * \class ListConfigurationsResponsePrivate
- *
- * \brief Private implementation for ListConfigurationsResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListConfigurationsResponse instance.
+ * Constructs a ListConfigurationsResponsePrivate object with public implementation \a q.
  */
 ListConfigurationsResponsePrivate::ListConfigurationsResponsePrivate(
     ListConfigurationsResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ ListConfigurationsResponsePrivate::ListConfigurationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ ListConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ ListConfigurations response element from \a xml.
  */
 void ListConfigurationsResponsePrivate::parseListConfigurationsResponse(QXmlStreamReader &xml)
 {

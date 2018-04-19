@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::ListDeploymentsResponse
- *
  * \brief The ListDeploymentsResponse class provides an interace for Greengrass ListDeployments responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new ListDeploymentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDeploymentsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDeploymentsResponse::ListDeploymentsResponse(
         const ListDeploymentsRequest &request,
@@ -58,6 +53,9 @@ ListDeploymentsResponse::ListDeploymentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDeploymentsRequest * ListDeploymentsResponse::request() const
 {
     Q_D(const ListDeploymentsResponse);
@@ -65,9 +63,8 @@ const ListDeploymentsRequest * ListDeploymentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass ListDeployments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass ListDeployments \a response.
  */
 void ListDeploymentsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListDeploymentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::ListDeploymentsResponsePrivate
+ * \brief The ListDeploymentsResponsePrivate class provides private implementation for ListDeploymentsResponse.
  * \internal
  *
- * \class ListDeploymentsResponsePrivate
- *
- * \brief Private implementation for ListDeploymentsResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDeploymentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDeploymentsResponse instance.
+ * Constructs a ListDeploymentsResponsePrivate object with public implementation \a q.
  */
 ListDeploymentsResponsePrivate::ListDeploymentsResponsePrivate(
     ListDeploymentsResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ ListDeploymentsResponsePrivate::ListDeploymentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass ListDeploymentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass ListDeployments response element from \a xml.
  */
 void ListDeploymentsResponsePrivate::parseListDeploymentsResponse(QXmlStreamReader &xml)
 {

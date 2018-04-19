@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListTagsForResourceRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsForResourceRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ElasticBeanstalkRequest::Action action, ListTagsForResourceRequest * const q)

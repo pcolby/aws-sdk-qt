@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::SetLoggingOptionsResponse
- *
  * \brief The SetLoggingOptionsResponse class provides an interace for IoT SetLoggingOptions responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new SetLoggingOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetLoggingOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 SetLoggingOptionsResponse::SetLoggingOptionsResponse(
         const SetLoggingOptionsRequest &request,
@@ -66,6 +61,9 @@ SetLoggingOptionsResponse::SetLoggingOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetLoggingOptionsRequest * SetLoggingOptionsResponse::request() const
 {
     Q_D(const SetLoggingOptionsResponse);
@@ -73,9 +71,8 @@ const SetLoggingOptionsRequest * SetLoggingOptionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT SetLoggingOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT SetLoggingOptions \a response.
  */
 void SetLoggingOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SetLoggingOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::SetLoggingOptionsResponsePrivate
+ * \brief The SetLoggingOptionsResponsePrivate class provides private implementation for SetLoggingOptionsResponse.
  * \internal
  *
- * \class SetLoggingOptionsResponsePrivate
- *
- * \brief Private implementation for SetLoggingOptionsResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetLoggingOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetLoggingOptionsResponse instance.
+ * Constructs a SetLoggingOptionsResponsePrivate object with public implementation \a q.
  */
 SetLoggingOptionsResponsePrivate::SetLoggingOptionsResponsePrivate(
     SetLoggingOptionsResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ SetLoggingOptionsResponsePrivate::SetLoggingOptionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT SetLoggingOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT SetLoggingOptions response element from \a xml.
  */
 void SetLoggingOptionsResponsePrivate::parseSetLoggingOptionsResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumesRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeVolumesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVolumesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeVolumesRequestPrivate::DescribeVolumesRequestPrivate(
     const EC2Request::Action action, DescribeVolumesRequest * const q)

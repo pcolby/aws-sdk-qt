@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * GetJobOutputRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetJobOutputRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a GetJobOutputRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 GetJobOutputRequestPrivate::GetJobOutputRequestPrivate(
     const GlacierRequest::Action action, GetJobOutputRequest * const q)

@@ -28,16 +28,13 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeviceFarmResponse
- *
  * \brief The DeviceFarmResponse class provides an interface for DeviceFarm responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @brief  Constructs a new DeviceFarmResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a DeviceFarmResponse object with parent \a parent.
  */
 DeviceFarmResponse::DeviceFarmResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new DeviceFarmResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ DeviceFarmResponse::DeviceFarmResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeviceFarmResponse object.
- *
+ * \internal
+ * Constructs a DeviceFarmResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DeviceFarmResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 DeviceFarmResponse::DeviceFarmResponse(DeviceFarmResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ DeviceFarmResponse::DeviceFarmResponse(DeviceFarmResponsePrivate * const d, QObj
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void DeviceFarmResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void DeviceFarmResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::DeviceFarm::DeviceFarmResponsePrivate
+ * \brief The DeviceFarmResponsePrivate class provides private implementation for DeviceFarmResponse.
+ * \internal
  *
- * @class  DeviceFarmResponsePrivate
- *
- * @brief  Private implementation for DeviceFarmResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeviceFarmResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeviceFarmResponse instance.
+ * Constructs a DeviceFarmResponsePrivate object with public implementation \a q.
  */
 DeviceFarmResponsePrivate::DeviceFarmResponsePrivate(
     DeviceFarmResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

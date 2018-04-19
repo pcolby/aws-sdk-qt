@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * StopUserImportJobRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a StopUserImportJobRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a StopUserImportJobRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 StopUserImportJobRequestPrivate::StopUserImportJobRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, StopUserImportJobRequest * const q)

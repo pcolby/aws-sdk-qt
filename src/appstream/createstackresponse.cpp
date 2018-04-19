@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::CreateStackResponse
- *
  * \brief The CreateStackResponse class provides an interace for AppStream CreateStack responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new CreateStackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStackResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStackResponse::CreateStackResponse(
         const CreateStackRequest &request,
@@ -58,6 +53,9 @@ CreateStackResponse::CreateStackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStackRequest * CreateStackResponse::request() const
 {
     Q_D(const CreateStackResponse);
@@ -65,9 +63,8 @@ const CreateStackRequest * CreateStackResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream CreateStack response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream CreateStack \a response.
  */
 void CreateStackResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateStackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::CreateStackResponsePrivate
+ * \brief The CreateStackResponsePrivate class provides private implementation for CreateStackResponse.
  * \internal
  *
- * \class CreateStackResponsePrivate
- *
- * \brief Private implementation for CreateStackResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStackResponse instance.
+ * Constructs a CreateStackResponsePrivate object with public implementation \a q.
  */
 CreateStackResponsePrivate::CreateStackResponsePrivate(
     CreateStackResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateStackResponsePrivate::CreateStackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream CreateStackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream CreateStack response element from \a xml.
  */
 void CreateStackResponsePrivate::parseCreateStackResponse(QXmlStreamReader &xml)
 {

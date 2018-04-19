@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeHsmClientCertificatesRequest::respons
  */
 
 /*!
- *
- * Constructs a DescribeHsmClientCertificatesRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeHsmClientCertificatesRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeHsmClientCertificatesRequestPrivate::DescribeHsmClientCertificatesRequestPrivate(
     const RedshiftRequest::Action action, DescribeHsmClientCertificatesRequest * const q)

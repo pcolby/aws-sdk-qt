@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResendContactReachabilityEmailResponse : public Route53Domain
 public:
     ResendContactReachabilityEmailResponse(const ResendContactReachabilityEmailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResendContactReachabilityEmailRequest * request() const;
+    virtual const ResendContactReachabilityEmailRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResendContactReachabilityEmailResponse)

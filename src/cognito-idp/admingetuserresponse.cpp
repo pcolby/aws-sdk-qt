@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminGetUserResponse
- *
  * \brief The AdminGetUserResponse class provides an interace for CognitoIdentityProvider AdminGetUser responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminGetUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminGetUserResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminGetUserResponse::AdminGetUserResponse(
         const AdminGetUserRequest &request,
@@ -65,6 +60,9 @@ AdminGetUserResponse::AdminGetUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminGetUserRequest * AdminGetUserResponse::request() const
 {
     Q_D(const AdminGetUserResponse);
@@ -72,9 +70,8 @@ const AdminGetUserRequest * AdminGetUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminGetUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminGetUser \a response.
  */
 void AdminGetUserResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminGetUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminGetUserResponsePrivate
+ * \brief The AdminGetUserResponsePrivate class provides private implementation for AdminGetUserResponse.
  * \internal
  *
- * \class AdminGetUserResponsePrivate
- *
- * \brief Private implementation for AdminGetUserResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminGetUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminGetUserResponse instance.
+ * Constructs a AdminGetUserResponsePrivate object with public implementation \a q.
  */
 AdminGetUserResponsePrivate::AdminGetUserResponsePrivate(
     AdminGetUserResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminGetUserResponsePrivate::AdminGetUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminGetUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminGetUser response element from \a xml.
  */
 void AdminGetUserResponsePrivate::parseAdminGetUserResponse(QXmlStreamReader &xml)
 {

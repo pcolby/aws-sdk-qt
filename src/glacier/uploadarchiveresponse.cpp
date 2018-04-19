@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::UploadArchiveResponse
- *
  * \brief The UploadArchiveResponse class provides an interace for Glacier UploadArchive responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new UploadArchiveResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UploadArchiveResponse object for \a reply to \a request, with parent \a parent.
  */
 UploadArchiveResponse::UploadArchiveResponse(
         const UploadArchiveRequest &request,
@@ -93,6 +88,9 @@ UploadArchiveResponse::UploadArchiveResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UploadArchiveRequest * UploadArchiveResponse::request() const
 {
     Q_D(const UploadArchiveResponse);
@@ -100,9 +98,8 @@ const UploadArchiveRequest * UploadArchiveResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier UploadArchive response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier UploadArchive \a response.
  */
 void UploadArchiveResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void UploadArchiveResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::UploadArchiveResponsePrivate
+ * \brief The UploadArchiveResponsePrivate class provides private implementation for UploadArchiveResponse.
  * \internal
  *
- * \class UploadArchiveResponsePrivate
- *
- * \brief Private implementation for UploadArchiveResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadArchiveResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UploadArchiveResponse instance.
+ * Constructs a UploadArchiveResponsePrivate object with public implementation \a q.
  */
 UploadArchiveResponsePrivate::UploadArchiveResponsePrivate(
     UploadArchiveResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ UploadArchiveResponsePrivate::UploadArchiveResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier UploadArchiveResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier UploadArchive response element from \a xml.
  */
 void UploadArchiveResponsePrivate::parseUploadArchiveResponse(QXmlStreamReader &xml)
 {

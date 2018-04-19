@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ReleaseHostsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ReleaseHostsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ReleaseHostsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ReleaseHostsRequestPrivate::ReleaseHostsRequestPrivate(
     const EC2Request::Action action, ReleaseHostsRequest * const q)

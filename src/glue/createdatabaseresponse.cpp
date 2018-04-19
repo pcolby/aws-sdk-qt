@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreateDatabaseResponse
- *
  * \brief The CreateDatabaseResponse class provides an interace for Glue CreateDatabase responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreateDatabaseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDatabaseResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDatabaseResponse::CreateDatabaseResponse(
         const CreateDatabaseRequest &request,
@@ -58,6 +53,9 @@ CreateDatabaseResponse::CreateDatabaseResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDatabaseRequest * CreateDatabaseResponse::request() const
 {
     Q_D(const CreateDatabaseResponse);
@@ -65,9 +63,8 @@ const CreateDatabaseRequest * CreateDatabaseResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue CreateDatabase response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue CreateDatabase \a response.
  */
 void CreateDatabaseResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateDatabaseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::CreateDatabaseResponsePrivate
+ * \brief The CreateDatabaseResponsePrivate class provides private implementation for CreateDatabaseResponse.
  * \internal
  *
- * \class CreateDatabaseResponsePrivate
- *
- * \brief Private implementation for CreateDatabaseResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDatabaseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDatabaseResponse instance.
+ * Constructs a CreateDatabaseResponsePrivate object with public implementation \a q.
  */
 CreateDatabaseResponsePrivate::CreateDatabaseResponsePrivate(
     CreateDatabaseResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateDatabaseResponsePrivate::CreateDatabaseResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue CreateDatabaseResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue CreateDatabase response element from \a xml.
  */
 void CreateDatabaseResponsePrivate::parseCreateDatabaseResponse(QXmlStreamReader &xml)
 {

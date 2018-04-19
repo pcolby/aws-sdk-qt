@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::ListContainerInstancesResponse
- *
  * \brief The ListContainerInstancesResponse class provides an interace for ECS ListContainerInstances responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new ListContainerInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListContainerInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListContainerInstancesResponse::ListContainerInstancesResponse(
         const ListContainerInstancesRequest &request,
@@ -72,6 +67,9 @@ ListContainerInstancesResponse::ListContainerInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListContainerInstancesRequest * ListContainerInstancesResponse::request() const
 {
     Q_D(const ListContainerInstancesResponse);
@@ -79,9 +77,8 @@ const ListContainerInstancesRequest * ListContainerInstancesResponse::request() 
 }
 
 /*!
- * @brief  Parse a ECS ListContainerInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS ListContainerInstances \a response.
  */
 void ListContainerInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void ListContainerInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::ListContainerInstancesResponsePrivate
+ * \brief The ListContainerInstancesResponsePrivate class provides private implementation for ListContainerInstancesResponse.
  * \internal
  *
- * \class ListContainerInstancesResponsePrivate
- *
- * \brief Private implementation for ListContainerInstancesResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListContainerInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListContainerInstancesResponse instance.
+ * Constructs a ListContainerInstancesResponsePrivate object with public implementation \a q.
  */
 ListContainerInstancesResponsePrivate::ListContainerInstancesResponsePrivate(
     ListContainerInstancesResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ ListContainerInstancesResponsePrivate::ListContainerInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS ListContainerInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS ListContainerInstances response element from \a xml.
  */
 void ListContainerInstancesResponsePrivate::parseListContainerInstancesResponse(QXmlStreamReader &xml)
 {

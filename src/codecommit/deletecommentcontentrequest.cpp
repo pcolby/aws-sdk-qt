@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCommentContentRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteCommentContentRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCommentContentRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 DeleteCommentContentRequestPrivate::DeleteCommentContentRequestPrivate(
     const CodeCommitRequest::Action action, DeleteCommentContentRequest * const q)

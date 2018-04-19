@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVolumeRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteVolumeRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVolumeRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DeleteVolumeRequestPrivate::DeleteVolumeRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteVolumeRequest * const q)

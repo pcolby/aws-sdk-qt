@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DeleteParameterGroupResponse
- *
  * \brief The DeleteParameterGroupResponse class provides an interace for DAX DeleteParameterGroup responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DeleteParameterGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteParameterGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteParameterGroupResponse::DeleteParameterGroupResponse(
         const DeleteParameterGroupRequest &request,
@@ -59,6 +54,9 @@ DeleteParameterGroupResponse::DeleteParameterGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteParameterGroupRequest * DeleteParameterGroupResponse::request() const
 {
     Q_D(const DeleteParameterGroupResponse);
@@ -66,9 +64,8 @@ const DeleteParameterGroupRequest * DeleteParameterGroupResponse::request() cons
 }
 
 /*!
- * @brief  Parse a DAX DeleteParameterGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX DeleteParameterGroup \a response.
  */
 void DeleteParameterGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteParameterGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::DeleteParameterGroupResponsePrivate
+ * \brief The DeleteParameterGroupResponsePrivate class provides private implementation for DeleteParameterGroupResponse.
  * \internal
  *
- * \class DeleteParameterGroupResponsePrivate
- *
- * \brief Private implementation for DeleteParameterGroupResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteParameterGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteParameterGroupResponse instance.
+ * Constructs a DeleteParameterGroupResponsePrivate object with public implementation \a q.
  */
 DeleteParameterGroupResponsePrivate::DeleteParameterGroupResponsePrivate(
     DeleteParameterGroupResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteParameterGroupResponsePrivate::DeleteParameterGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX DeleteParameterGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX DeleteParameterGroup response element from \a xml.
  */
 void DeleteParameterGroupResponsePrivate::parseDeleteParameterGroupResponse(QXmlStreamReader &xml)
 {

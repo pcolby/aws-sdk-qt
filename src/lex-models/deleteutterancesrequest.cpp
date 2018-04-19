@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteUtterancesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteUtterancesRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteUtterancesRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 DeleteUtterancesRequestPrivate::DeleteUtterancesRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteUtterancesRequest * const q)

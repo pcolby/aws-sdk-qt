@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAutoScalingNotificationTypesResponse : public AutoSca
 public:
     DescribeAutoScalingNotificationTypesResponse(const DescribeAutoScalingNotificationTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAutoScalingNotificationTypesRequest * request() const;
+    virtual const DescribeAutoScalingNotificationTypesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAutoScalingNotificationTypesResponse)

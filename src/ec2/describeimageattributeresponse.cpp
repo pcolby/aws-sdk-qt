@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeImageAttributeResponse
- *
  * \brief The DescribeImageAttributeResponse class provides an interace for EC2 DescribeImageAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeImageAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeImageAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeImageAttributeResponse::DescribeImageAttributeResponse(
         const DescribeImageAttributeRequest &request,
@@ -59,6 +54,9 @@ DescribeImageAttributeResponse::DescribeImageAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeImageAttributeRequest * DescribeImageAttributeResponse::request() const
 {
     Q_D(const DescribeImageAttributeResponse);
@@ -66,9 +64,8 @@ const DescribeImageAttributeRequest * DescribeImageAttributeResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 DescribeImageAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeImageAttribute \a response.
  */
 void DescribeImageAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeImageAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeImageAttributeResponsePrivate
+ * \brief The DescribeImageAttributeResponsePrivate class provides private implementation for DescribeImageAttributeResponse.
  * \internal
  *
- * \class DescribeImageAttributeResponsePrivate
- *
- * \brief Private implementation for DescribeImageAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeImageAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeImageAttributeResponse instance.
+ * Constructs a DescribeImageAttributeResponsePrivate object with public implementation \a q.
  */
 DescribeImageAttributeResponsePrivate::DescribeImageAttributeResponsePrivate(
     DescribeImageAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeImageAttributeResponsePrivate::DescribeImageAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeImageAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeImageAttribute response element from \a xml.
  */
 void DescribeImageAttributeResponsePrivate::parseDescribeImageAttributeResponse(QXmlStreamReader &xml)
 {

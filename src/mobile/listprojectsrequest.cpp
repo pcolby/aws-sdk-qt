@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListProjectsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a ListProjectsRequestPrivate object for Mobile \a action with,
- * public implementation \a q.
+ * Constructs a ListProjectsRequestPrivate object for Mobile \a action,
+ * with public implementation \a q.
  */
 ListProjectsRequestPrivate::ListProjectsRequestPrivate(
     const MobileRequest::Action action, ListProjectsRequest * const q)

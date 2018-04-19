@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeScalingParametersResponse
- *
  * \brief The DescribeScalingParametersResponse class provides an interace for CloudSearch DescribeScalingParameters responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeScalingParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeScalingParametersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeScalingParametersResponse::DescribeScalingParametersResponse(
         const DescribeScalingParametersRequest &request,
@@ -66,6 +61,9 @@ DescribeScalingParametersResponse::DescribeScalingParametersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeScalingParametersRequest * DescribeScalingParametersResponse::request() const
 {
     Q_D(const DescribeScalingParametersResponse);
@@ -73,9 +71,8 @@ const DescribeScalingParametersRequest * DescribeScalingParametersResponse::requ
 }
 
 /*!
- * @brief  Parse a CloudSearch DescribeScalingParameters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DescribeScalingParameters \a response.
  */
 void DescribeScalingParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeScalingParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DescribeScalingParametersResponsePrivate
+ * \brief The DescribeScalingParametersResponsePrivate class provides private implementation for DescribeScalingParametersResponse.
  * \internal
  *
- * \class DescribeScalingParametersResponsePrivate
- *
- * \brief Private implementation for DescribeScalingParametersResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeScalingParametersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeScalingParametersResponse instance.
+ * Constructs a DescribeScalingParametersResponsePrivate object with public implementation \a q.
  */
 DescribeScalingParametersResponsePrivate::DescribeScalingParametersResponsePrivate(
     DescribeScalingParametersResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeScalingParametersResponsePrivate::DescribeScalingParametersResponsePriva
 }
 
 /*!
- * @brief  Parse an CloudSearch DescribeScalingParametersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DescribeScalingParameters response element from \a xml.
  */
 void DescribeScalingParametersResponsePrivate::parseDescribeScalingParametersResponse(QXmlStreamReader &xml)
 {

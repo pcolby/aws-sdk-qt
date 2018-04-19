@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::EnableDirectoryResponse
- *
  * \brief The EnableDirectoryResponse class provides an interace for CloudDirectory EnableDirectory responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new EnableDirectoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableDirectoryResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableDirectoryResponse::EnableDirectoryResponse(
         const EnableDirectoryRequest &request,
@@ -62,6 +57,9 @@ EnableDirectoryResponse::EnableDirectoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableDirectoryRequest * EnableDirectoryResponse::request() const
 {
     Q_D(const EnableDirectoryResponse);
@@ -69,9 +67,8 @@ const EnableDirectoryRequest * EnableDirectoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory EnableDirectory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory EnableDirectory \a response.
  */
 void EnableDirectoryResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void EnableDirectoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::EnableDirectoryResponsePrivate
+ * \brief The EnableDirectoryResponsePrivate class provides private implementation for EnableDirectoryResponse.
  * \internal
  *
- * \class EnableDirectoryResponsePrivate
- *
- * \brief Private implementation for EnableDirectoryResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableDirectoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableDirectoryResponse instance.
+ * Constructs a EnableDirectoryResponsePrivate object with public implementation \a q.
  */
 EnableDirectoryResponsePrivate::EnableDirectoryResponsePrivate(
     EnableDirectoryResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ EnableDirectoryResponsePrivate::EnableDirectoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory EnableDirectoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory EnableDirectory response element from \a xml.
  */
 void EnableDirectoryResponsePrivate::parseEnableDirectoryResponse(QXmlStreamReader &xml)
 {

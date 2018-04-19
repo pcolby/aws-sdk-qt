@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeleteThingShadowRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteThingShadowRequestPrivate object for IoTDataPlane \a action with,
- * public implementation \a q.
+ * Constructs a DeleteThingShadowRequestPrivate object for IoTDataPlane \a action,
+ * with public implementation \a q.
  */
 DeleteThingShadowRequestPrivate::DeleteThingShadowRequestPrivate(
     const IoTDataPlaneRequest::Action action, DeleteThingShadowRequest * const q)

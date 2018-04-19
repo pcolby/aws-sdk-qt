@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::ListInvitationsResponse
- *
  * \brief The ListInvitationsResponse class provides an interace for GuardDuty ListInvitations responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::listInvitations
  */
 
 /*!
- * @brief  Constructs a new ListInvitationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListInvitationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListInvitationsResponse::ListInvitationsResponse(
         const ListInvitationsRequest &request,
@@ -55,6 +50,9 @@ ListInvitationsResponse::ListInvitationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListInvitationsRequest * ListInvitationsResponse::request() const
 {
     Q_D(const ListInvitationsResponse);
@@ -62,9 +60,8 @@ const ListInvitationsRequest * ListInvitationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty ListInvitations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty ListInvitations \a response.
  */
 void ListInvitationsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListInvitationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::ListInvitationsResponsePrivate
+ * \brief The ListInvitationsResponsePrivate class provides private implementation for ListInvitationsResponse.
  * \internal
  *
- * \class ListInvitationsResponsePrivate
- *
- * \brief Private implementation for ListInvitationsResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListInvitationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListInvitationsResponse instance.
+ * Constructs a ListInvitationsResponsePrivate object with public implementation \a q.
  */
 ListInvitationsResponsePrivate::ListInvitationsResponsePrivate(
     ListInvitationsResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ ListInvitationsResponsePrivate::ListInvitationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty ListInvitationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty ListInvitations response element from \a xml.
  */
 void ListInvitationsResponsePrivate::parseListInvitationsResponse(QXmlStreamReader &xml)
 {

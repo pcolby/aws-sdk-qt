@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeEffectivePatchesForPatchBaselineResponse : public SSM
 public:
     DescribeEffectivePatchesForPatchBaselineResponse(const DescribeEffectivePatchesForPatchBaselineRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeEffectivePatchesForPatchBaselineRequest * request() const;
+    virtual const DescribeEffectivePatchesForPatchBaselineRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeEffectivePatchesForPatchBaselineResponse)

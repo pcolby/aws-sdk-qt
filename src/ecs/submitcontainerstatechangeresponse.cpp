@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::SubmitContainerStateChangeResponse
- *
  * \brief The SubmitContainerStateChangeResponse class provides an interace for ECS SubmitContainerStateChange responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new SubmitContainerStateChangeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SubmitContainerStateChangeResponse object for \a reply to \a request, with parent \a parent.
  */
 SubmitContainerStateChangeResponse::SubmitContainerStateChangeResponse(
         const SubmitContainerStateChangeRequest &request,
@@ -72,6 +67,9 @@ SubmitContainerStateChangeResponse::SubmitContainerStateChangeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SubmitContainerStateChangeRequest * SubmitContainerStateChangeResponse::request() const
 {
     Q_D(const SubmitContainerStateChangeResponse);
@@ -79,9 +77,8 @@ const SubmitContainerStateChangeRequest * SubmitContainerStateChangeResponse::re
 }
 
 /*!
- * @brief  Parse a ECS SubmitContainerStateChange response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS SubmitContainerStateChange \a response.
  */
 void SubmitContainerStateChangeResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void SubmitContainerStateChangeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::SubmitContainerStateChangeResponsePrivate
+ * \brief The SubmitContainerStateChangeResponsePrivate class provides private implementation for SubmitContainerStateChangeResponse.
  * \internal
  *
- * \class SubmitContainerStateChangeResponsePrivate
- *
- * \brief Private implementation for SubmitContainerStateChangeResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubmitContainerStateChangeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SubmitContainerStateChangeResponse instance.
+ * Constructs a SubmitContainerStateChangeResponsePrivate object with public implementation \a q.
  */
 SubmitContainerStateChangeResponsePrivate::SubmitContainerStateChangeResponsePrivate(
     SubmitContainerStateChangeResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ SubmitContainerStateChangeResponsePrivate::SubmitContainerStateChangeResponsePri
 }
 
 /*!
- * @brief  Parse an ECS SubmitContainerStateChangeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS SubmitContainerStateChange response element from \a xml.
  */
 void SubmitContainerStateChangeResponsePrivate::parseSubmitContainerStateChangeResponse(QXmlStreamReader &xml)
 {

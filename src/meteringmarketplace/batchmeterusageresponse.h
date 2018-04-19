@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchMeterUsageResponse : public MarketplaceMeteringResponse 
 public:
     BatchMeterUsageResponse(const BatchMeterUsageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchMeterUsageRequest * request() const;
+    virtual const BatchMeterUsageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchMeterUsageResponse)

@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::DeleteRealtimeEndpointResponse
- *
  * \brief The DeleteRealtimeEndpointResponse class provides an interace for MachineLearning DeleteRealtimeEndpoint responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::deleteRealtimeEndpoint
  */
 
 /*!
- * @brief  Constructs a new DeleteRealtimeEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRealtimeEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRealtimeEndpointResponse::DeleteRealtimeEndpointResponse(
         const DeleteRealtimeEndpointRequest &request,
@@ -55,6 +50,9 @@ DeleteRealtimeEndpointResponse::DeleteRealtimeEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRealtimeEndpointRequest * DeleteRealtimeEndpointResponse::request() const
 {
     Q_D(const DeleteRealtimeEndpointResponse);
@@ -62,9 +60,8 @@ const DeleteRealtimeEndpointRequest * DeleteRealtimeEndpointResponse::request() 
 }
 
 /*!
- * @brief  Parse a MachineLearning DeleteRealtimeEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning DeleteRealtimeEndpoint \a response.
  */
 void DeleteRealtimeEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteRealtimeEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::DeleteRealtimeEndpointResponsePrivate
+ * \brief The DeleteRealtimeEndpointResponsePrivate class provides private implementation for DeleteRealtimeEndpointResponse.
  * \internal
  *
- * \class DeleteRealtimeEndpointResponsePrivate
- *
- * \brief Private implementation for DeleteRealtimeEndpointResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRealtimeEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRealtimeEndpointResponse instance.
+ * Constructs a DeleteRealtimeEndpointResponsePrivate object with public implementation \a q.
  */
 DeleteRealtimeEndpointResponsePrivate::DeleteRealtimeEndpointResponsePrivate(
     DeleteRealtimeEndpointResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteRealtimeEndpointResponsePrivate::DeleteRealtimeEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning DeleteRealtimeEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning DeleteRealtimeEndpoint response element from \a xml.
  */
 void DeleteRealtimeEndpointResponsePrivate::parseDeleteRealtimeEndpointResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::CreateServiceResponse
- *
  * \brief The CreateServiceResponse class provides an interace for ECS CreateService responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new CreateServiceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateServiceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateServiceResponse::CreateServiceResponse(
         const CreateServiceRequest &request,
@@ -72,6 +67,9 @@ CreateServiceResponse::CreateServiceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateServiceRequest * CreateServiceResponse::request() const
 {
     Q_D(const CreateServiceResponse);
@@ -79,9 +77,8 @@ const CreateServiceRequest * CreateServiceResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS CreateService response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS CreateService \a response.
  */
 void CreateServiceResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void CreateServiceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::CreateServiceResponsePrivate
+ * \brief The CreateServiceResponsePrivate class provides private implementation for CreateServiceResponse.
  * \internal
  *
- * \class CreateServiceResponsePrivate
- *
- * \brief Private implementation for CreateServiceResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateServiceResponse instance.
+ * Constructs a CreateServiceResponsePrivate object with public implementation \a q.
  */
 CreateServiceResponsePrivate::CreateServiceResponsePrivate(
     CreateServiceResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ CreateServiceResponsePrivate::CreateServiceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS CreateServiceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS CreateService response element from \a xml.
  */
 void CreateServiceResponsePrivate::parseCreateServiceResponse(QXmlStreamReader &xml)
 {

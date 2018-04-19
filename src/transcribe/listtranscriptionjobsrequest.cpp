@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * ListTranscriptionJobsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListTranscriptionJobsRequestPrivate object for TranscribeService \a action with,
- * public implementation \a q.
+ * Constructs a ListTranscriptionJobsRequestPrivate object for TranscribeService \a action,
+ * with public implementation \a q.
  */
 ListTranscriptionJobsRequestPrivate::ListTranscriptionJobsRequestPrivate(
     const TranscribeServiceRequest::Action action, ListTranscriptionJobsRequest * const q)

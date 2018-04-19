@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSessionsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeSessionsRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSessionsRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 DescribeSessionsRequestPrivate::DescribeSessionsRequestPrivate(
     const AppStreamRequest::Action action, DescribeSessionsRequest * const q)

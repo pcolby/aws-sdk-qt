@@ -34,10 +34,10 @@ class QTAWS_EXPORT CancelCommandResponse : public SSMResponse {
 public:
     CancelCommandResponse(const CancelCommandRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CancelCommandRequest * request() const;
+    virtual const CancelCommandRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CancelCommandResponse)

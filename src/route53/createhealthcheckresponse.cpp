@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::CreateHealthCheckResponse
- *
  * \brief The CreateHealthCheckResponse class provides an interace for Route53 CreateHealthCheck responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::createHealthCheck
  */
 
 /*!
- * @brief  Constructs a new CreateHealthCheckResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateHealthCheckResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateHealthCheckResponse::CreateHealthCheckResponse(
         const CreateHealthCheckRequest &request,
@@ -55,6 +50,9 @@ CreateHealthCheckResponse::CreateHealthCheckResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateHealthCheckRequest * CreateHealthCheckResponse::request() const
 {
     Q_D(const CreateHealthCheckResponse);
@@ -62,9 +60,8 @@ const CreateHealthCheckRequest * CreateHealthCheckResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53 CreateHealthCheck response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 CreateHealthCheck \a response.
  */
 void CreateHealthCheckResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateHealthCheckResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::CreateHealthCheckResponsePrivate
+ * \brief The CreateHealthCheckResponsePrivate class provides private implementation for CreateHealthCheckResponse.
  * \internal
  *
- * \class CreateHealthCheckResponsePrivate
- *
- * \brief Private implementation for CreateHealthCheckResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateHealthCheckResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateHealthCheckResponse instance.
+ * Constructs a CreateHealthCheckResponsePrivate object with public implementation \a q.
  */
 CreateHealthCheckResponsePrivate::CreateHealthCheckResponsePrivate(
     CreateHealthCheckResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateHealthCheckResponsePrivate::CreateHealthCheckResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 CreateHealthCheckResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 CreateHealthCheck response element from \a xml.
  */
 void CreateHealthCheckResponsePrivate::parseCreateHealthCheckResponse(QXmlStreamReader &xml)
 {

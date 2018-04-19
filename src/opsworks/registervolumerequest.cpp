@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * RegisterVolumeRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a RegisterVolumeRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a RegisterVolumeRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 RegisterVolumeRequestPrivate::RegisterVolumeRequestPrivate(
     const OpsWorksRequest::Action action, RegisterVolumeRequest * const q)

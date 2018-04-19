@@ -34,10 +34,10 @@ class QTAWS_EXPORT ImportServerCatalogResponse : public SMSResponse {
 public:
     ImportServerCatalogResponse(const ImportServerCatalogRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ImportServerCatalogRequest * request() const;
+    virtual const ImportServerCatalogRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ImportServerCatalogResponse)

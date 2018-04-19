@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * DetachObjectRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DetachObjectRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a DetachObjectRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 DetachObjectRequestPrivate::DetachObjectRequestPrivate(
     const CloudDirectoryRequest::Action action, DetachObjectRequest * const q)

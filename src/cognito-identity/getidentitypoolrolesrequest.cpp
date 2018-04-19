@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * GetIdentityPoolRolesRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetIdentityPoolRolesRequestPrivate object for CognitoIdentity \a action with,
- * public implementation \a q.
+ * Constructs a GetIdentityPoolRolesRequestPrivate object for CognitoIdentity \a action,
+ * with public implementation \a q.
  */
 GetIdentityPoolRolesRequestPrivate::GetIdentityPoolRolesRequestPrivate(
     const CognitoIdentityRequest::Action action, GetIdentityPoolRolesRequest * const q)

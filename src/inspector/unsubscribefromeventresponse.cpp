@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::UnsubscribeFromEventResponse
- *
  * \brief The UnsubscribeFromEventResponse class provides an interace for Inspector UnsubscribeFromEvent responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new UnsubscribeFromEventResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UnsubscribeFromEventResponse object for \a reply to \a request, with parent \a parent.
  */
 UnsubscribeFromEventResponse::UnsubscribeFromEventResponse(
         const UnsubscribeFromEventRequest &request,
@@ -60,6 +55,9 @@ UnsubscribeFromEventResponse::UnsubscribeFromEventResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UnsubscribeFromEventRequest * UnsubscribeFromEventResponse::request() const
 {
     Q_D(const UnsubscribeFromEventResponse);
@@ -67,9 +65,8 @@ const UnsubscribeFromEventRequest * UnsubscribeFromEventResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Inspector UnsubscribeFromEvent response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector UnsubscribeFromEvent \a response.
  */
 void UnsubscribeFromEventResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UnsubscribeFromEventResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::UnsubscribeFromEventResponsePrivate
+ * \brief The UnsubscribeFromEventResponsePrivate class provides private implementation for UnsubscribeFromEventResponse.
  * \internal
  *
- * \class UnsubscribeFromEventResponsePrivate
- *
- * \brief Private implementation for UnsubscribeFromEventResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnsubscribeFromEventResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UnsubscribeFromEventResponse instance.
+ * Constructs a UnsubscribeFromEventResponsePrivate object with public implementation \a q.
  */
 UnsubscribeFromEventResponsePrivate::UnsubscribeFromEventResponsePrivate(
     UnsubscribeFromEventResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ UnsubscribeFromEventResponsePrivate::UnsubscribeFromEventResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector UnsubscribeFromEventResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector UnsubscribeFromEvent response element from \a xml.
  */
 void UnsubscribeFromEventResponsePrivate::parseUnsubscribeFromEventResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::DeleteDocumentResponse
- *
  * \brief The DeleteDocumentResponse class provides an interace for WorkDocs DeleteDocument responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new DeleteDocumentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDocumentResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDocumentResponse::DeleteDocumentResponse(
         const DeleteDocumentRequest &request,
@@ -84,6 +79,9 @@ DeleteDocumentResponse::DeleteDocumentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDocumentRequest * DeleteDocumentResponse::request() const
 {
     Q_D(const DeleteDocumentResponse);
@@ -91,9 +89,8 @@ const DeleteDocumentRequest * DeleteDocumentResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs DeleteDocument response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs DeleteDocument \a response.
  */
 void DeleteDocumentResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void DeleteDocumentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::DeleteDocumentResponsePrivate
+ * \brief The DeleteDocumentResponsePrivate class provides private implementation for DeleteDocumentResponse.
  * \internal
  *
- * \class DeleteDocumentResponsePrivate
- *
- * \brief Private implementation for DeleteDocumentResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDocumentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDocumentResponse instance.
+ * Constructs a DeleteDocumentResponsePrivate object with public implementation \a q.
  */
 DeleteDocumentResponsePrivate::DeleteDocumentResponsePrivate(
     DeleteDocumentResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ DeleteDocumentResponsePrivate::DeleteDocumentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs DeleteDocumentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs DeleteDocument response element from \a xml.
  */
 void DeleteDocumentResponsePrivate::parseDeleteDocumentResponse(QXmlStreamReader &xml)
 {

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateAdminAccountRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DisassociateAdminAccountRequestPrivate object for FMS \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateAdminAccountRequestPrivate object for FMS \a action,
+ * with public implementation \a q.
  */
 DisassociateAdminAccountRequestPrivate::DisassociateAdminAccountRequestPrivate(
     const FMSRequest::Action action, DisassociateAdminAccountRequest * const q)

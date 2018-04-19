@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeWorkspacesConnectionStatusRequest::re
  */
 
 /*!
- *
- * Constructs a DescribeWorkspacesConnectionStatusRequestPrivate object for WorkSpaces \a action with,
- * public implementation \a q.
+ * Constructs a DescribeWorkspacesConnectionStatusRequestPrivate object for WorkSpaces \a action,
+ * with public implementation \a q.
  */
 DescribeWorkspacesConnectionStatusRequestPrivate::DescribeWorkspacesConnectionStatusRequestPrivate(
     const WorkSpacesRequest::Action action, DescribeWorkspacesConnectionStatusRequest * const q)

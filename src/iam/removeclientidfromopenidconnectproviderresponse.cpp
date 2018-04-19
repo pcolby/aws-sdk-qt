@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::RemoveClientIDFromOpenIDConnectProviderResponse
- *
  * \brief The RemoveClientIDFromOpenIDConnectProviderResponse class provides an interace for IAM RemoveClientIDFromOpenIDConnectProvider responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new RemoveClientIDFromOpenIDConnectProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveClientIDFromOpenIDConnectProviderResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveClientIDFromOpenIDConnectProviderResponse::RemoveClientIDFromOpenIDConnectProviderResponse(
         const RemoveClientIDFromOpenIDConnectProviderRequest &request,
@@ -120,6 +115,9 @@ RemoveClientIDFromOpenIDConnectProviderResponse::RemoveClientIDFromOpenIDConnect
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveClientIDFromOpenIDConnectProviderRequest * RemoveClientIDFromOpenIDConnectProviderResponse::request() const
 {
     Q_D(const RemoveClientIDFromOpenIDConnectProviderResponse);
@@ -127,9 +125,8 @@ const RemoveClientIDFromOpenIDConnectProviderRequest * RemoveClientIDFromOpenIDC
 }
 
 /*!
- * @brief  Parse a IAM RemoveClientIDFromOpenIDConnectProvider response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM RemoveClientIDFromOpenIDConnectProvider \a response.
  */
 void RemoveClientIDFromOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void RemoveClientIDFromOpenIDConnectProviderResponse::parseSuccess(QIODevice &re
 }
 
 /*!
+ * \class QtAws::IAM::RemoveClientIDFromOpenIDConnectProviderResponsePrivate
+ * \brief The RemoveClientIDFromOpenIDConnectProviderResponsePrivate class provides private implementation for RemoveClientIDFromOpenIDConnectProviderResponse.
  * \internal
  *
- * \class RemoveClientIDFromOpenIDConnectProviderResponsePrivate
- *
- * \brief Private implementation for RemoveClientIDFromOpenIDConnectProviderResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveClientIDFromOpenIDConnectProviderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveClientIDFromOpenIDConnectProviderResponse instance.
+ * Constructs a RemoveClientIDFromOpenIDConnectProviderResponsePrivate object with public implementation \a q.
  */
 RemoveClientIDFromOpenIDConnectProviderResponsePrivate::RemoveClientIDFromOpenIDConnectProviderResponsePrivate(
     RemoveClientIDFromOpenIDConnectProviderResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ RemoveClientIDFromOpenIDConnectProviderResponsePrivate::RemoveClientIDFromOpenID
 }
 
 /*!
- * @brief  Parse an IAM RemoveClientIDFromOpenIDConnectProviderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM RemoveClientIDFromOpenIDConnectProvider response element from \a xml.
  */
 void RemoveClientIDFromOpenIDConnectProviderResponsePrivate::parseRemoveClientIDFromOpenIDConnectProviderResponse(QXmlStreamReader &xml)
 {

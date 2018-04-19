@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDevicePoolCompatibilityResponse : public DeviceFarmRespons
 public:
     GetDevicePoolCompatibilityResponse(const GetDevicePoolCompatibilityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDevicePoolCompatibilityRequest * request() const;
+    virtual const GetDevicePoolCompatibilityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDevicePoolCompatibilityResponse)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListModelsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ListModelsRequestPrivate object for SageMaker \a action with,
- * public implementation \a q.
+ * Constructs a ListModelsRequestPrivate object for SageMaker \a action,
+ * with public implementation \a q.
  */
 ListModelsRequestPrivate::ListModelsRequestPrivate(
     const SageMakerRequest::Action action, ListModelsRequest * const q)

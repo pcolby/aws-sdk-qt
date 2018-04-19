@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateIPSetRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateIPSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a UpdateIPSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 UpdateIPSetRequestPrivate::UpdateIPSetRequestPrivate(
     const WAFRequest::Action action, UpdateIPSetRequest * const q)

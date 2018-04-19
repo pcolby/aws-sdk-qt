@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDataSourceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateDataSourceRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDataSourceRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
     const AppSyncRequest::Action action, UpdateDataSourceRequest * const q)

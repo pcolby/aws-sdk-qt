@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCostAndUsageResponse : public CostExplorerResponse {
 public:
     GetCostAndUsageResponse(const GetCostAndUsageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCostAndUsageRequest * request() const;
+    virtual const GetCostAndUsageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCostAndUsageResponse)

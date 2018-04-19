@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::DetachInstancesResponse
- *
  * \brief The DetachInstancesResponse class provides an interace for AutoScaling DetachInstances responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DetachInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachInstancesResponse::DetachInstancesResponse(
         const DetachInstancesRequest &request,
@@ -60,6 +55,9 @@ DetachInstancesResponse::DetachInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachInstancesRequest * DetachInstancesResponse::request() const
 {
     Q_D(const DetachInstancesResponse);
@@ -67,9 +65,8 @@ const DetachInstancesRequest * DetachInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling DetachInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling DetachInstances \a response.
  */
 void DetachInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DetachInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::DetachInstancesResponsePrivate
+ * \brief The DetachInstancesResponsePrivate class provides private implementation for DetachInstancesResponse.
  * \internal
  *
- * \class DetachInstancesResponsePrivate
- *
- * \brief Private implementation for DetachInstancesResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachInstancesResponse instance.
+ * Constructs a DetachInstancesResponsePrivate object with public implementation \a q.
  */
 DetachInstancesResponsePrivate::DetachInstancesResponsePrivate(
     DetachInstancesResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ DetachInstancesResponsePrivate::DetachInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling DetachInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling DetachInstances response element from \a xml.
  */
 void DetachInstancesResponsePrivate::parseDetachInstancesResponse(QXmlStreamReader &xml)
 {

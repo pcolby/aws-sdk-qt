@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListCloudFrontOriginAccessIdentitiesResponse
- *
  * \brief The ListCloudFrontOriginAccessIdentitiesResponse class provides an interace for CloudFront ListCloudFrontOriginAccessIdentities responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListCloudFrontOriginAccessIdentitiesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListCloudFrontOriginAccessIdentitiesResponse::ListCloudFrontOriginAccessIdentitiesResponse(
         const ListCloudFrontOriginAccessIdentitiesRequest &request,
@@ -60,6 +55,9 @@ ListCloudFrontOriginAccessIdentitiesResponse::ListCloudFrontOriginAccessIdentiti
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListCloudFrontOriginAccessIdentitiesRequest * ListCloudFrontOriginAccessIdentitiesResponse::request() const
 {
     Q_D(const ListCloudFrontOriginAccessIdentitiesResponse);
@@ -67,9 +65,8 @@ const ListCloudFrontOriginAccessIdentitiesRequest * ListCloudFrontOriginAccessId
 }
 
 /*!
- * @brief  Parse a CloudFront ListCloudFrontOriginAccessIdentities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront ListCloudFrontOriginAccessIdentities \a response.
  */
 void ListCloudFrontOriginAccessIdentitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListCloudFrontOriginAccessIdentitiesResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::CloudFront::ListCloudFrontOriginAccessIdentitiesResponsePrivate
+ * \brief The ListCloudFrontOriginAccessIdentitiesResponsePrivate class provides private implementation for ListCloudFrontOriginAccessIdentitiesResponse.
  * \internal
  *
- * \class ListCloudFrontOriginAccessIdentitiesResponsePrivate
- *
- * \brief Private implementation for ListCloudFrontOriginAccessIdentitiesResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListCloudFrontOriginAccessIdentitiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListCloudFrontOriginAccessIdentitiesResponse instance.
+ * Constructs a ListCloudFrontOriginAccessIdentitiesResponsePrivate object with public implementation \a q.
  */
 ListCloudFrontOriginAccessIdentitiesResponsePrivate::ListCloudFrontOriginAccessIdentitiesResponsePrivate(
     ListCloudFrontOriginAccessIdentitiesResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ ListCloudFrontOriginAccessIdentitiesResponsePrivate::ListCloudFrontOriginAccessI
 }
 
 /*!
- * @brief  Parse an CloudFront ListCloudFrontOriginAccessIdentitiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront ListCloudFrontOriginAccessIdentities response element from \a xml.
  */
 void ListCloudFrontOriginAccessIdentitiesResponsePrivate::parseListCloudFrontOriginAccessIdentitiesResponse(QXmlStreamReader &xml)
 {

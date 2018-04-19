@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTapesRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DescribeTapesRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTapesRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DescribeTapesRequestPrivate::DescribeTapesRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeTapesRequest * const q)

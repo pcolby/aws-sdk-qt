@@ -28,16 +28,13 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::RekognitionResponse
- *
  * \brief The RekognitionResponse class provides an interface for Rekognition responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @brief  Constructs a new RekognitionResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a RekognitionResponse object with parent \a parent.
  */
 RekognitionResponse::RekognitionResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new RekognitionResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ RekognitionResponse::RekognitionResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RekognitionResponse object.
- *
+ * \internal
+ * Constructs a RekognitionResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from RekognitionResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 RekognitionResponse::RekognitionResponse(RekognitionResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ RekognitionResponse::RekognitionResponse(RekognitionResponsePrivate * const d, Q
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void RekognitionResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void RekognitionResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Rekognition::RekognitionResponsePrivate
+ * \brief The RekognitionResponsePrivate class provides private implementation for RekognitionResponse.
+ * \internal
  *
- * @class  RekognitionResponsePrivate
- *
- * @brief  Private implementation for RekognitionResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RekognitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RekognitionResponse instance.
+ * Constructs a RekognitionResponsePrivate object with public implementation \a q.
  */
 RekognitionResponsePrivate::RekognitionResponsePrivate(
     RekognitionResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminListGroupsForUserRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a AdminListGroupsForUserRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminListGroupsForUserRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminListGroupsForUserRequestPrivate::AdminListGroupsForUserRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminListGroupsForUserRequest * const q)

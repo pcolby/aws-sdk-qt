@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::CreatePresignedNotebookInstanceUrlResponse
- *
  * \brief The CreatePresignedNotebookInstanceUrlResponse class provides an interace for SageMaker CreatePresignedNotebookInstanceUrl responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::createPresignedNotebookInstanceUrl
  */
 
 /*!
- * @brief  Constructs a new CreatePresignedNotebookInstanceUrlResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePresignedNotebookInstanceUrlResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePresignedNotebookInstanceUrlResponse::CreatePresignedNotebookInstanceUrlResponse(
         const CreatePresignedNotebookInstanceUrlRequest &request,
@@ -55,6 +50,9 @@ CreatePresignedNotebookInstanceUrlResponse::CreatePresignedNotebookInstanceUrlRe
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePresignedNotebookInstanceUrlRequest * CreatePresignedNotebookInstanceUrlResponse::request() const
 {
     Q_D(const CreatePresignedNotebookInstanceUrlResponse);
@@ -62,9 +60,8 @@ const CreatePresignedNotebookInstanceUrlRequest * CreatePresignedNotebookInstanc
 }
 
 /*!
- * @brief  Parse a SageMaker CreatePresignedNotebookInstanceUrl response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker CreatePresignedNotebookInstanceUrl \a response.
  */
 void CreatePresignedNotebookInstanceUrlResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreatePresignedNotebookInstanceUrlResponse::parseSuccess(QIODevice &respons
 }
 
 /*!
+ * \class QtAws::SageMaker::CreatePresignedNotebookInstanceUrlResponsePrivate
+ * \brief The CreatePresignedNotebookInstanceUrlResponsePrivate class provides private implementation for CreatePresignedNotebookInstanceUrlResponse.
  * \internal
  *
- * \class CreatePresignedNotebookInstanceUrlResponsePrivate
- *
- * \brief Private implementation for CreatePresignedNotebookInstanceUrlResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePresignedNotebookInstanceUrlResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePresignedNotebookInstanceUrlResponse instance.
+ * Constructs a CreatePresignedNotebookInstanceUrlResponsePrivate object with public implementation \a q.
  */
 CreatePresignedNotebookInstanceUrlResponsePrivate::CreatePresignedNotebookInstanceUrlResponsePrivate(
     CreatePresignedNotebookInstanceUrlResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ CreatePresignedNotebookInstanceUrlResponsePrivate::CreatePresignedNotebookInstan
 }
 
 /*!
- * @brief  Parse an SageMaker CreatePresignedNotebookInstanceUrlResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker CreatePresignedNotebookInstanceUrl response element from \a xml.
  */
 void CreatePresignedNotebookInstanceUrlResponsePrivate::parseCreatePresignedNotebookInstanceUrlResponse(QXmlStreamReader &xml)
 {

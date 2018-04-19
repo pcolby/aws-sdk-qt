@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::GetBlueprintsResponse
- *
  * \brief The GetBlueprintsResponse class provides an interace for Lightsail GetBlueprints responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new GetBlueprintsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBlueprintsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBlueprintsResponse::GetBlueprintsResponse(
         const GetBlueprintsRequest &request,
@@ -71,6 +66,9 @@ GetBlueprintsResponse::GetBlueprintsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBlueprintsRequest * GetBlueprintsResponse::request() const
 {
     Q_D(const GetBlueprintsResponse);
@@ -78,9 +76,8 @@ const GetBlueprintsRequest * GetBlueprintsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lightsail GetBlueprints response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail GetBlueprints \a response.
  */
 void GetBlueprintsResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void GetBlueprintsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::GetBlueprintsResponsePrivate
+ * \brief The GetBlueprintsResponsePrivate class provides private implementation for GetBlueprintsResponse.
  * \internal
  *
- * \class GetBlueprintsResponsePrivate
- *
- * \brief Private implementation for GetBlueprintsResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBlueprintsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBlueprintsResponse instance.
+ * Constructs a GetBlueprintsResponsePrivate object with public implementation \a q.
  */
 GetBlueprintsResponsePrivate::GetBlueprintsResponsePrivate(
     GetBlueprintsResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ GetBlueprintsResponsePrivate::GetBlueprintsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail GetBlueprintsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail GetBlueprints response element from \a xml.
  */
 void GetBlueprintsResponsePrivate::parseGetBlueprintsResponse(QXmlStreamReader &xml)
 {

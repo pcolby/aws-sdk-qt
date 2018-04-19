@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AcceptReservedInstancesExchangeQuoteResponse
- *
  * \brief The AcceptReservedInstancesExchangeQuoteResponse class provides an interace for EC2 AcceptReservedInstancesExchangeQuote responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AcceptReservedInstancesExchangeQuoteResponse object for \a reply to \a request, with parent \a parent.
  */
 AcceptReservedInstancesExchangeQuoteResponse::AcceptReservedInstancesExchangeQuoteResponse(
         const AcceptReservedInstancesExchangeQuoteRequest &request,
@@ -59,6 +54,9 @@ AcceptReservedInstancesExchangeQuoteResponse::AcceptReservedInstancesExchangeQuo
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AcceptReservedInstancesExchangeQuoteRequest * AcceptReservedInstancesExchangeQuoteResponse::request() const
 {
     Q_D(const AcceptReservedInstancesExchangeQuoteResponse);
@@ -66,9 +64,8 @@ const AcceptReservedInstancesExchangeQuoteRequest * AcceptReservedInstancesExcha
 }
 
 /*!
- * @brief  Parse a EC2 AcceptReservedInstancesExchangeQuote response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AcceptReservedInstancesExchangeQuote \a response.
  */
 void AcceptReservedInstancesExchangeQuoteResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AcceptReservedInstancesExchangeQuoteResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::EC2::AcceptReservedInstancesExchangeQuoteResponsePrivate
+ * \brief The AcceptReservedInstancesExchangeQuoteResponsePrivate class provides private implementation for AcceptReservedInstancesExchangeQuoteResponse.
  * \internal
  *
- * \class AcceptReservedInstancesExchangeQuoteResponsePrivate
- *
- * \brief Private implementation for AcceptReservedInstancesExchangeQuoteResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AcceptReservedInstancesExchangeQuoteResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AcceptReservedInstancesExchangeQuoteResponse instance.
+ * Constructs a AcceptReservedInstancesExchangeQuoteResponsePrivate object with public implementation \a q.
  */
 AcceptReservedInstancesExchangeQuoteResponsePrivate::AcceptReservedInstancesExchangeQuoteResponsePrivate(
     AcceptReservedInstancesExchangeQuoteResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AcceptReservedInstancesExchangeQuoteResponsePrivate::AcceptReservedInstancesExch
 }
 
 /*!
- * @brief  Parse an EC2 AcceptReservedInstancesExchangeQuoteResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AcceptReservedInstancesExchangeQuote response element from \a xml.
  */
 void AcceptReservedInstancesExchangeQuoteResponsePrivate::parseAcceptReservedInstancesExchangeQuoteResponse(QXmlStreamReader &xml)
 {

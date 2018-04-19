@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetSegmentVersionRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a GetSegmentVersionRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetSegmentVersionRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetSegmentVersionRequestPrivate::GetSegmentVersionRequestPrivate(
     const PinpointRequest::Action action, GetSegmentVersionRequest * const q)

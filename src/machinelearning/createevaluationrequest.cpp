@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * CreateEvaluationRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CreateEvaluationRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a CreateEvaluationRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 CreateEvaluationRequestPrivate::CreateEvaluationRequestPrivate(
     const MachineLearningRequest::Action action, CreateEvaluationRequest * const q)

@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::StopStackSetOperationResponse
- *
  * \brief The StopStackSetOperationResponse class provides an interace for CloudFormation StopStackSetOperation responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new StopStackSetOperationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopStackSetOperationResponse object for \a reply to \a request, with parent \a parent.
  */
 StopStackSetOperationResponse::StopStackSetOperationResponse(
         const StopStackSetOperationRequest &request,
@@ -77,6 +72,9 @@ StopStackSetOperationResponse::StopStackSetOperationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopStackSetOperationRequest * StopStackSetOperationResponse::request() const
 {
     Q_D(const StopStackSetOperationResponse);
@@ -84,9 +82,8 @@ const StopStackSetOperationRequest * StopStackSetOperationResponse::request() co
 }
 
 /*!
- * @brief  Parse a CloudFormation StopStackSetOperation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation StopStackSetOperation \a response.
  */
 void StopStackSetOperationResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void StopStackSetOperationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::StopStackSetOperationResponsePrivate
+ * \brief The StopStackSetOperationResponsePrivate class provides private implementation for StopStackSetOperationResponse.
  * \internal
  *
- * \class StopStackSetOperationResponsePrivate
- *
- * \brief Private implementation for StopStackSetOperationResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopStackSetOperationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopStackSetOperationResponse instance.
+ * Constructs a StopStackSetOperationResponsePrivate object with public implementation \a q.
  */
 StopStackSetOperationResponsePrivate::StopStackSetOperationResponsePrivate(
     StopStackSetOperationResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ StopStackSetOperationResponsePrivate::StopStackSetOperationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation StopStackSetOperationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation StopStackSetOperation response element from \a xml.
  */
 void StopStackSetOperationResponsePrivate::parseStopStackSetOperationResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DescribeChannelRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeChannelRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a DescribeChannelRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 DescribeChannelRequestPrivate::DescribeChannelRequestPrivate(
     const MediaLiveRequest::Action action, DescribeChannelRequest * const q)

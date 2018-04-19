@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * UpdateVocabularyRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateVocabularyRequestPrivate object for TranscribeService \a action with,
- * public implementation \a q.
+ * Constructs a UpdateVocabularyRequestPrivate object for TranscribeService \a action,
+ * with public implementation \a q.
  */
 UpdateVocabularyRequestPrivate::UpdateVocabularyRequestPrivate(
     const TranscribeServiceRequest::Action action, UpdateVocabularyRequest * const q)

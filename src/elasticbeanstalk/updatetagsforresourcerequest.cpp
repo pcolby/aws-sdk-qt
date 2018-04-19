@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * UpdateTagsForResourceRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a UpdateTagsForResourceRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a UpdateTagsForResourceRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 UpdateTagsForResourceRequestPrivate::UpdateTagsForResourceRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateTagsForResourceRequest * const q)

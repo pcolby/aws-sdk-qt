@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DescribeServicesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeServicesRequestPrivate object for Support \a action with,
- * public implementation \a q.
+ * Constructs a DescribeServicesRequestPrivate object for Support \a action,
+ * with public implementation \a q.
  */
 DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
     const SupportRequest::Action action, DescribeServicesRequest * const q)

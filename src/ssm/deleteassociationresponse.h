@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteAssociationResponse : public SSMResponse {
 public:
     DeleteAssociationResponse(const DeleteAssociationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteAssociationRequest * request() const;
+    virtual const DeleteAssociationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteAssociationResponse)

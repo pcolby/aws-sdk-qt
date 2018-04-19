@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateLoginProfileResponse
- *
  * \brief The UpdateLoginProfileResponse class provides an interace for IAM UpdateLoginProfile responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateLoginProfileResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateLoginProfileResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateLoginProfileResponse::UpdateLoginProfileResponse(
         const UpdateLoginProfileRequest &request,
@@ -120,6 +115,9 @@ UpdateLoginProfileResponse::UpdateLoginProfileResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateLoginProfileRequest * UpdateLoginProfileResponse::request() const
 {
     Q_D(const UpdateLoginProfileResponse);
@@ -127,9 +125,8 @@ const UpdateLoginProfileRequest * UpdateLoginProfileResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM UpdateLoginProfile response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateLoginProfile \a response.
  */
 void UpdateLoginProfileResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateLoginProfileResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateLoginProfileResponsePrivate
+ * \brief The UpdateLoginProfileResponsePrivate class provides private implementation for UpdateLoginProfileResponse.
  * \internal
  *
- * \class UpdateLoginProfileResponsePrivate
- *
- * \brief Private implementation for UpdateLoginProfileResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateLoginProfileResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateLoginProfileResponse instance.
+ * Constructs a UpdateLoginProfileResponsePrivate object with public implementation \a q.
  */
 UpdateLoginProfileResponsePrivate::UpdateLoginProfileResponsePrivate(
     UpdateLoginProfileResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateLoginProfileResponsePrivate::UpdateLoginProfileResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM UpdateLoginProfileResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateLoginProfile response element from \a xml.
  */
 void UpdateLoginProfileResponsePrivate::parseUpdateLoginProfileResponse(QXmlStreamReader &xml)
 {

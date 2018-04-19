@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::CreateTrustResponse
- *
  * \brief The CreateTrustResponse class provides an interace for DirectoryService CreateTrust responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new CreateTrustResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateTrustResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateTrustResponse::CreateTrustResponse(
         const CreateTrustRequest &request,
@@ -69,6 +64,9 @@ CreateTrustResponse::CreateTrustResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateTrustRequest * CreateTrustResponse::request() const
 {
     Q_D(const CreateTrustResponse);
@@ -76,9 +74,8 @@ const CreateTrustRequest * CreateTrustResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService CreateTrust response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService CreateTrust \a response.
  */
 void CreateTrustResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateTrustResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::CreateTrustResponsePrivate
+ * \brief The CreateTrustResponsePrivate class provides private implementation for CreateTrustResponse.
  * \internal
  *
- * \class CreateTrustResponsePrivate
- *
- * \brief Private implementation for CreateTrustResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateTrustResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateTrustResponse instance.
+ * Constructs a CreateTrustResponsePrivate object with public implementation \a q.
  */
 CreateTrustResponsePrivate::CreateTrustResponsePrivate(
     CreateTrustResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateTrustResponsePrivate::CreateTrustResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService CreateTrustResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService CreateTrust response element from \a xml.
  */
 void CreateTrustResponsePrivate::parseCreateTrustResponse(QXmlStreamReader &xml)
 {

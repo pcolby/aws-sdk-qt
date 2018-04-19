@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribePatchBaselinesRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribePatchBaselinesRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribePatchBaselinesRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribePatchBaselinesRequestPrivate::DescribePatchBaselinesRequestPrivate(
     const SSMRequest::Action action, DescribePatchBaselinesRequest * const q)

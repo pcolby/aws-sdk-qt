@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateConfigurationItemsToApplicationResponse : public App
 public:
     AssociateConfigurationItemsToApplicationResponse(const AssociateConfigurationItemsToApplicationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateConfigurationItemsToApplicationRequest * request() const;
+    virtual const AssociateConfigurationItemsToApplicationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateConfigurationItemsToApplicationResponse)

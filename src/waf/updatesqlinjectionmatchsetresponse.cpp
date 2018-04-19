@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::UpdateSqlInjectionMatchSetResponse
- *
  * \brief The UpdateSqlInjectionMatchSetResponse class provides an interace for WAF UpdateSqlInjectionMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new UpdateSqlInjectionMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSqlInjectionMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSqlInjectionMatchSetResponse::UpdateSqlInjectionMatchSetResponse(
         const UpdateSqlInjectionMatchSetRequest &request,
@@ -60,6 +55,9 @@ UpdateSqlInjectionMatchSetResponse::UpdateSqlInjectionMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSqlInjectionMatchSetRequest * UpdateSqlInjectionMatchSetResponse::request() const
 {
     Q_D(const UpdateSqlInjectionMatchSetResponse);
@@ -67,9 +65,8 @@ const UpdateSqlInjectionMatchSetRequest * UpdateSqlInjectionMatchSetResponse::re
 }
 
 /*!
- * @brief  Parse a WAF UpdateSqlInjectionMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF UpdateSqlInjectionMatchSet \a response.
  */
 void UpdateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::UpdateSqlInjectionMatchSetResponsePrivate
+ * \brief The UpdateSqlInjectionMatchSetResponsePrivate class provides private implementation for UpdateSqlInjectionMatchSetResponse.
  * \internal
  *
- * \class UpdateSqlInjectionMatchSetResponsePrivate
- *
- * \brief Private implementation for UpdateSqlInjectionMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSqlInjectionMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSqlInjectionMatchSetResponse instance.
+ * Constructs a UpdateSqlInjectionMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetResponsePrivate(
     UpdateSqlInjectionMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetResponsePri
 }
 
 /*!
- * @brief  Parse an WAF UpdateSqlInjectionMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF UpdateSqlInjectionMatchSet response element from \a xml.
  */
 void UpdateSqlInjectionMatchSetResponsePrivate::parseUpdateSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Translate {
 
 /*!
  * \class QtAws::Translate::TranslateTextResponse
- *
  * \brief The TranslateTextResponse class provides an interace for Translate TranslateText responses.
  *
- * \ingroup Translate
+ * \inmodule QtAwsTranslate
  *
  *  Provides translation between English and one of six languages, or between one of the six languages and
  *
@@ -40,11 +39,7 @@ namespace Translate {
  */
 
 /*!
- * @brief  Constructs a new TranslateTextResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TranslateTextResponse object for \a reply to \a request, with parent \a parent.
  */
 TranslateTextResponse::TranslateTextResponse(
         const TranslateTextRequest &request,
@@ -56,6 +51,9 @@ TranslateTextResponse::TranslateTextResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TranslateTextRequest * TranslateTextResponse::request() const
 {
     Q_D(const TranslateTextResponse);
@@ -63,9 +61,8 @@ const TranslateTextRequest * TranslateTextResponse::request() const
 }
 
 /*!
- * @brief  Parse a Translate TranslateText response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Translate TranslateText \a response.
  */
 void TranslateTextResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void TranslateTextResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Translate::TranslateTextResponsePrivate
+ * \brief The TranslateTextResponsePrivate class provides private implementation for TranslateTextResponse.
  * \internal
  *
- * \class TranslateTextResponsePrivate
- *
- * \brief Private implementation for TranslateTextResponse.
+ * \inmodule QtAwsTranslate
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TranslateTextResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TranslateTextResponse instance.
+ * Constructs a TranslateTextResponsePrivate object with public implementation \a q.
  */
 TranslateTextResponsePrivate::TranslateTextResponsePrivate(
     TranslateTextResponse * const q) : TranslateResponsePrivate(q)
@@ -96,9 +89,7 @@ TranslateTextResponsePrivate::TranslateTextResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Translate TranslateTextResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Translate TranslateText response element from \a xml.
  */
 void TranslateTextResponsePrivate::parseTranslateTextResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::UntagResourceResponse
- *
  * \brief The UntagResourceResponse class provides an interace for KMS UntagResource responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new UntagResourceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UntagResourceResponse object for \a reply to \a request, with parent \a parent.
  */
 UntagResourceResponse::UntagResourceResponse(
         const UntagResourceRequest &request,
@@ -154,6 +149,9 @@ UntagResourceResponse::UntagResourceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UntagResourceRequest * UntagResourceResponse::request() const
 {
     Q_D(const UntagResourceResponse);
@@ -161,9 +159,8 @@ const UntagResourceRequest * UntagResourceResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS UntagResource response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS UntagResource \a response.
  */
 void UntagResourceResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void UntagResourceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::UntagResourceResponsePrivate
+ * \brief The UntagResourceResponsePrivate class provides private implementation for UntagResourceResponse.
  * \internal
  *
- * \class UntagResourceResponsePrivate
- *
- * \brief Private implementation for UntagResourceResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagResourceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UntagResourceResponse instance.
+ * Constructs a UntagResourceResponsePrivate object with public implementation \a q.
  */
 UntagResourceResponsePrivate::UntagResourceResponsePrivate(
     UntagResourceResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ UntagResourceResponsePrivate::UntagResourceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS UntagResourceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS UntagResource response element from \a xml.
  */
 void UntagResourceResponsePrivate::parseUntagResourceResponse(QXmlStreamReader &xml)
 {

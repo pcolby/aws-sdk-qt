@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeEC2InstanceLimitsResponse
- *
  * \brief The DescribeEC2InstanceLimitsResponse class provides an interace for GameLift DescribeEC2InstanceLimits responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeEC2InstanceLimitsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEC2InstanceLimitsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEC2InstanceLimitsResponse::DescribeEC2InstanceLimitsResponse(
         const DescribeEC2InstanceLimitsRequest &request,
@@ -491,6 +486,9 @@ DescribeEC2InstanceLimitsResponse::DescribeEC2InstanceLimitsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEC2InstanceLimitsRequest * DescribeEC2InstanceLimitsResponse::request() const
 {
     Q_D(const DescribeEC2InstanceLimitsResponse);
@@ -498,9 +496,8 @@ const DescribeEC2InstanceLimitsRequest * DescribeEC2InstanceLimitsResponse::requ
 }
 
 /*!
- * @brief  Parse a GameLift DescribeEC2InstanceLimits response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DescribeEC2InstanceLimits \a response.
  */
 void DescribeEC2InstanceLimitsResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DescribeEC2InstanceLimitsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DescribeEC2InstanceLimitsResponsePrivate
+ * \brief The DescribeEC2InstanceLimitsResponsePrivate class provides private implementation for DescribeEC2InstanceLimitsResponse.
  * \internal
  *
- * \class DescribeEC2InstanceLimitsResponsePrivate
- *
- * \brief Private implementation for DescribeEC2InstanceLimitsResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEC2InstanceLimitsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEC2InstanceLimitsResponse instance.
+ * Constructs a DescribeEC2InstanceLimitsResponsePrivate object with public implementation \a q.
  */
 DescribeEC2InstanceLimitsResponsePrivate::DescribeEC2InstanceLimitsResponsePrivate(
     DescribeEC2InstanceLimitsResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DescribeEC2InstanceLimitsResponsePrivate::DescribeEC2InstanceLimitsResponsePriva
 }
 
 /*!
- * @brief  Parse an GameLift DescribeEC2InstanceLimitsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DescribeEC2InstanceLimits response element from \a xml.
  */
 void DescribeEC2InstanceLimitsResponsePrivate::parseDescribeEC2InstanceLimitsResponse(QXmlStreamReader &xml)
 {

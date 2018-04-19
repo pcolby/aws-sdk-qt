@@ -34,10 +34,10 @@ class QTAWS_EXPORT EncryptResponse : public KMSResponse {
 public:
     EncryptResponse(const EncryptRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EncryptRequest * request() const;
+    virtual const EncryptRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EncryptResponse)

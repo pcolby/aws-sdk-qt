@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddApplicationOutputResponse : public KinesisAnalyticsRespons
 public:
     AddApplicationOutputResponse(const AddApplicationOutputRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddApplicationOutputRequest * request() const;
+    virtual const AddApplicationOutputRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddApplicationOutputResponse)

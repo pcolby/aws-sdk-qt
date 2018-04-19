@@ -29,10 +29,9 @@ namespace DataPipeline {
 
 /*!
  * \class QtAws::DataPipeline::DeactivatePipelineResponse
- *
  * \brief The DeactivatePipelineResponse class provides an interace for DataPipeline DeactivatePipeline responses.
  *
- * \ingroup DataPipeline
+ * \inmodule QtAwsDataPipeline
  *
  *  AWS Data Pipeline configures and manages a data-driven workflow called a pipeline. AWS Data Pipeline handles the details
  *  of scheduling and ensuring that data dependencies are met so that your application can focus on processing the
@@ -57,11 +56,7 @@ namespace DataPipeline {
  */
 
 /*!
- * @brief  Constructs a new DeactivatePipelineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeactivatePipelineResponse object for \a reply to \a request, with parent \a parent.
  */
 DeactivatePipelineResponse::DeactivatePipelineResponse(
         const DeactivatePipelineRequest &request,
@@ -73,6 +68,9 @@ DeactivatePipelineResponse::DeactivatePipelineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeactivatePipelineRequest * DeactivatePipelineResponse::request() const
 {
     Q_D(const DeactivatePipelineResponse);
@@ -80,9 +78,8 @@ const DeactivatePipelineRequest * DeactivatePipelineResponse::request() const
 }
 
 /*!
- * @brief  Parse a DataPipeline DeactivatePipeline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DataPipeline DeactivatePipeline \a response.
  */
 void DeactivatePipelineResponse::parseSuccess(QIODevice &response)
 {
@@ -92,19 +89,15 @@ void DeactivatePipelineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DataPipeline::DeactivatePipelineResponsePrivate
+ * \brief The DeactivatePipelineResponsePrivate class provides private implementation for DeactivatePipelineResponse.
  * \internal
  *
- * \class DeactivatePipelineResponsePrivate
- *
- * \brief Private implementation for DeactivatePipelineResponse.
+ * \inmodule QtAwsDataPipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeactivatePipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeactivatePipelineResponse instance.
+ * Constructs a DeactivatePipelineResponsePrivate object with public implementation \a q.
  */
 DeactivatePipelineResponsePrivate::DeactivatePipelineResponsePrivate(
     DeactivatePipelineResponse * const q) : DataPipelineResponsePrivate(q)
@@ -113,9 +106,7 @@ DeactivatePipelineResponsePrivate::DeactivatePipelineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DataPipeline DeactivatePipelineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DataPipeline DeactivatePipeline response element from \a xml.
  */
 void DeactivatePipelineResponsePrivate::parseDeactivatePipelineResponse(QXmlStreamReader &xml)
 {

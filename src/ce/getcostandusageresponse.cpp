@@ -29,10 +29,9 @@ namespace CostExplorer {
 
 /*!
  * \class QtAws::CostExplorer::GetCostAndUsageResponse
- *
  * \brief The GetCostAndUsageResponse class provides an interace for CostExplorer GetCostAndUsage responses.
  *
- * \ingroup CostExplorer
+ * \inmodule QtAwsCostExplorer
  *
  *  The Cost Explorer API allows you to programmatically query your cost and usage data. You can query for aggregated data
  *  such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily
@@ -52,11 +51,7 @@ namespace CostExplorer {
  */
 
 /*!
- * @brief  Constructs a new GetCostAndUsageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCostAndUsageResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCostAndUsageResponse::GetCostAndUsageResponse(
         const GetCostAndUsageRequest &request,
@@ -68,6 +63,9 @@ GetCostAndUsageResponse::GetCostAndUsageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCostAndUsageRequest * GetCostAndUsageResponse::request() const
 {
     Q_D(const GetCostAndUsageResponse);
@@ -75,9 +73,8 @@ const GetCostAndUsageRequest * GetCostAndUsageResponse::request() const
 }
 
 /*!
- * @brief  Parse a CostExplorer GetCostAndUsage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CostExplorer GetCostAndUsage \a response.
  */
 void GetCostAndUsageResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void GetCostAndUsageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CostExplorer::GetCostAndUsageResponsePrivate
+ * \brief The GetCostAndUsageResponsePrivate class provides private implementation for GetCostAndUsageResponse.
  * \internal
  *
- * \class GetCostAndUsageResponsePrivate
- *
- * \brief Private implementation for GetCostAndUsageResponse.
+ * \inmodule QtAwsCostExplorer
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCostAndUsageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCostAndUsageResponse instance.
+ * Constructs a GetCostAndUsageResponsePrivate object with public implementation \a q.
  */
 GetCostAndUsageResponsePrivate::GetCostAndUsageResponsePrivate(
     GetCostAndUsageResponse * const q) : CostExplorerResponsePrivate(q)
@@ -108,9 +101,7 @@ GetCostAndUsageResponsePrivate::GetCostAndUsageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CostExplorer GetCostAndUsageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CostExplorer GetCostAndUsage response element from \a xml.
  */
 void GetCostAndUsageResponsePrivate::parseGetCostAndUsageResponse(QXmlStreamReader &xml)
 {

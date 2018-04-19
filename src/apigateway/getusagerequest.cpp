@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetUsageRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a GetUsageRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetUsageRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetUsageRequestPrivate::GetUsageRequestPrivate(
     const APIGatewayRequest::Action action, GetUsageRequest * const q)

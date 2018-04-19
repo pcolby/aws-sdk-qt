@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SetIdentityHeadersInNotificationsEnabledReque
  */
 
 /*!
- *
- * Constructs a SetIdentityHeadersInNotificationsEnabledRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a SetIdentityHeadersInNotificationsEnabledRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNotificationsEnabledRequestPrivate(
     const SESRequest::Action action, SetIdentityHeadersInNotificationsEnabledRequest * const q)

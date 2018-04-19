@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::CreateEvaluationResponse
- *
  * \brief The CreateEvaluationResponse class provides an interace for MachineLearning CreateEvaluation responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::createEvaluation
  */
 
 /*!
- * @brief  Constructs a new CreateEvaluationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateEvaluationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateEvaluationResponse::CreateEvaluationResponse(
         const CreateEvaluationRequest &request,
@@ -55,6 +50,9 @@ CreateEvaluationResponse::CreateEvaluationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateEvaluationRequest * CreateEvaluationResponse::request() const
 {
     Q_D(const CreateEvaluationResponse);
@@ -62,9 +60,8 @@ const CreateEvaluationRequest * CreateEvaluationResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning CreateEvaluation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning CreateEvaluation \a response.
  */
 void CreateEvaluationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateEvaluationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::CreateEvaluationResponsePrivate
+ * \brief The CreateEvaluationResponsePrivate class provides private implementation for CreateEvaluationResponse.
  * \internal
  *
- * \class CreateEvaluationResponsePrivate
- *
- * \brief Private implementation for CreateEvaluationResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateEvaluationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateEvaluationResponse instance.
+ * Constructs a CreateEvaluationResponsePrivate object with public implementation \a q.
  */
 CreateEvaluationResponsePrivate::CreateEvaluationResponsePrivate(
     CreateEvaluationResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateEvaluationResponsePrivate::CreateEvaluationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning CreateEvaluationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning CreateEvaluation response element from \a xml.
  */
 void CreateEvaluationResponsePrivate::parseCreateEvaluationResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::CreateCacheClusterResponse
- *
  * \brief The CreateCacheClusterResponse class provides an interace for ElastiCache CreateCacheCluster responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new CreateCacheClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCacheClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCacheClusterResponse::CreateCacheClusterResponse(
         const CreateCacheClusterRequest &request,
@@ -69,6 +64,9 @@ CreateCacheClusterResponse::CreateCacheClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCacheClusterRequest * CreateCacheClusterResponse::request() const
 {
     Q_D(const CreateCacheClusterResponse);
@@ -76,9 +74,8 @@ const CreateCacheClusterRequest * CreateCacheClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElastiCache CreateCacheCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache CreateCacheCluster \a response.
  */
 void CreateCacheClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreateCacheClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::CreateCacheClusterResponsePrivate
+ * \brief The CreateCacheClusterResponsePrivate class provides private implementation for CreateCacheClusterResponse.
  * \internal
  *
- * \class CreateCacheClusterResponsePrivate
- *
- * \brief Private implementation for CreateCacheClusterResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCacheClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCacheClusterResponse instance.
+ * Constructs a CreateCacheClusterResponsePrivate object with public implementation \a q.
  */
 CreateCacheClusterResponsePrivate::CreateCacheClusterResponsePrivate(
     CreateCacheClusterResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ CreateCacheClusterResponsePrivate::CreateCacheClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache CreateCacheClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache CreateCacheCluster response element from \a xml.
  */
 void CreateCacheClusterResponsePrivate::parseCreateCacheClusterResponse(QXmlStreamReader &xml)
 {

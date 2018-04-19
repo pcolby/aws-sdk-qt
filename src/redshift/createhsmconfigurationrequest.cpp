@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * CreateHsmConfigurationRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a CreateHsmConfigurationRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a CreateHsmConfigurationRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 CreateHsmConfigurationRequestPrivate::CreateHsmConfigurationRequestPrivate(
     const RedshiftRequest::Action action, CreateHsmConfigurationRequest * const q)

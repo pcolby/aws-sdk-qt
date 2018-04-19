@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutDestinationResponse
- *
  * \brief The PutDestinationResponse class provides an interace for CloudWatchLogs PutDestination responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutDestinationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutDestinationResponse object for \a reply to \a request, with parent \a parent.
  */
 PutDestinationResponse::PutDestinationResponse(
         const PutDestinationRequest &request,
@@ -84,6 +79,9 @@ PutDestinationResponse::PutDestinationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutDestinationRequest * PutDestinationResponse::request() const
 {
     Q_D(const PutDestinationResponse);
@@ -91,9 +89,8 @@ const PutDestinationRequest * PutDestinationResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs PutDestination response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs PutDestination \a response.
  */
 void PutDestinationResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void PutDestinationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::PutDestinationResponsePrivate
+ * \brief The PutDestinationResponsePrivate class provides private implementation for PutDestinationResponse.
  * \internal
  *
- * \class PutDestinationResponsePrivate
- *
- * \brief Private implementation for PutDestinationResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutDestinationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutDestinationResponse instance.
+ * Constructs a PutDestinationResponsePrivate object with public implementation \a q.
  */
 PutDestinationResponsePrivate::PutDestinationResponsePrivate(
     PutDestinationResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ PutDestinationResponsePrivate::PutDestinationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs PutDestinationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs PutDestination response element from \a xml.
  */
 void PutDestinationResponsePrivate::parsePutDestinationResponse(QXmlStreamReader &xml)
 {

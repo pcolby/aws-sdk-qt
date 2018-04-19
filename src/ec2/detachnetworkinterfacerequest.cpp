@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DetachNetworkInterfaceRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DetachNetworkInterfaceRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DetachNetworkInterfaceRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DetachNetworkInterfaceRequestPrivate::DetachNetworkInterfaceRequestPrivate(
     const EC2Request::Action action, DetachNetworkInterfaceRequest * const q)

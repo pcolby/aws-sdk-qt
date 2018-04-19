@@ -34,10 +34,10 @@ class QTAWS_EXPORT AcknowledgeThirdPartyJobResponse : public CodePipelineRespons
 public:
     AcknowledgeThirdPartyJobResponse(const AcknowledgeThirdPartyJobRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AcknowledgeThirdPartyJobRequest * request() const;
+    virtual const AcknowledgeThirdPartyJobRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AcknowledgeThirdPartyJobResponse)

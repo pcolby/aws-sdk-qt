@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTrustsResponse : public DirectoryServiceResponse {
 public:
     DescribeTrustsResponse(const DescribeTrustsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTrustsRequest * request() const;
+    virtual const DescribeTrustsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTrustsResponse)

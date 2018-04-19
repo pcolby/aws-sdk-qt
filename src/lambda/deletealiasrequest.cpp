@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAliasRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteAliasRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAliasRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
     const LambdaRequest::Action action, DeleteAliasRequest * const q)

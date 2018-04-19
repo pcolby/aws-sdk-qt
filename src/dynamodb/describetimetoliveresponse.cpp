@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::DescribeTimeToLiveResponse
- *
  * \brief The DescribeTimeToLiveResponse class provides an interace for DynamoDB DescribeTimeToLive responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new DescribeTimeToLiveResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTimeToLiveResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTimeToLiveResponse::DescribeTimeToLiveResponse(
         const DescribeTimeToLiveRequest &request,
@@ -74,6 +69,9 @@ DescribeTimeToLiveResponse::DescribeTimeToLiveResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTimeToLiveRequest * DescribeTimeToLiveResponse::request() const
 {
     Q_D(const DescribeTimeToLiveResponse);
@@ -81,9 +79,8 @@ const DescribeTimeToLiveRequest * DescribeTimeToLiveResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB DescribeTimeToLive response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB DescribeTimeToLive \a response.
  */
 void DescribeTimeToLiveResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void DescribeTimeToLiveResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::DescribeTimeToLiveResponsePrivate
+ * \brief The DescribeTimeToLiveResponsePrivate class provides private implementation for DescribeTimeToLiveResponse.
  * \internal
  *
- * \class DescribeTimeToLiveResponsePrivate
- *
- * \brief Private implementation for DescribeTimeToLiveResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTimeToLiveResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTimeToLiveResponse instance.
+ * Constructs a DescribeTimeToLiveResponsePrivate object with public implementation \a q.
  */
 DescribeTimeToLiveResponsePrivate::DescribeTimeToLiveResponsePrivate(
     DescribeTimeToLiveResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ DescribeTimeToLiveResponsePrivate::DescribeTimeToLiveResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB DescribeTimeToLiveResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB DescribeTimeToLive response element from \a xml.
  */
 void DescribeTimeToLiveResponsePrivate::parseDescribeTimeToLiveResponse(QXmlStreamReader &xml)
 {

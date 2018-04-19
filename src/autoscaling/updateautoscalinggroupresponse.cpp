@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::UpdateAutoScalingGroupResponse
- *
  * \brief The UpdateAutoScalingGroupResponse class provides an interace for AutoScaling UpdateAutoScalingGroup responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new UpdateAutoScalingGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAutoScalingGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAutoScalingGroupResponse::UpdateAutoScalingGroupResponse(
         const UpdateAutoScalingGroupRequest &request,
@@ -60,6 +55,9 @@ UpdateAutoScalingGroupResponse::UpdateAutoScalingGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAutoScalingGroupRequest * UpdateAutoScalingGroupResponse::request() const
 {
     Q_D(const UpdateAutoScalingGroupResponse);
@@ -67,9 +65,8 @@ const UpdateAutoScalingGroupRequest * UpdateAutoScalingGroupResponse::request() 
 }
 
 /*!
- * @brief  Parse a AutoScaling UpdateAutoScalingGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling UpdateAutoScalingGroup \a response.
  */
 void UpdateAutoScalingGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateAutoScalingGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::UpdateAutoScalingGroupResponsePrivate
+ * \brief The UpdateAutoScalingGroupResponsePrivate class provides private implementation for UpdateAutoScalingGroupResponse.
  * \internal
  *
- * \class UpdateAutoScalingGroupResponsePrivate
- *
- * \brief Private implementation for UpdateAutoScalingGroupResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAutoScalingGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAutoScalingGroupResponse instance.
+ * Constructs a UpdateAutoScalingGroupResponsePrivate object with public implementation \a q.
  */
 UpdateAutoScalingGroupResponsePrivate::UpdateAutoScalingGroupResponsePrivate(
     UpdateAutoScalingGroupResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateAutoScalingGroupResponsePrivate::UpdateAutoScalingGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling UpdateAutoScalingGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling UpdateAutoScalingGroup response element from \a xml.
  */
 void UpdateAutoScalingGroupResponsePrivate::parseUpdateAutoScalingGroupResponse(QXmlStreamReader &xml)
 {

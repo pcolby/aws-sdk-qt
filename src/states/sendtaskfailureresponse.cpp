@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::SendTaskFailureResponse
- *
  * \brief The SendTaskFailureResponse class provides an interace for SFN SendTaskFailure responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new SendTaskFailureResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendTaskFailureResponse object for \a reply to \a request, with parent \a parent.
  */
 SendTaskFailureResponse::SendTaskFailureResponse(
         const SendTaskFailureRequest &request,
@@ -74,6 +69,9 @@ SendTaskFailureResponse::SendTaskFailureResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendTaskFailureRequest * SendTaskFailureResponse::request() const
 {
     Q_D(const SendTaskFailureResponse);
@@ -81,9 +79,8 @@ const SendTaskFailureRequest * SendTaskFailureResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN SendTaskFailure response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN SendTaskFailure \a response.
  */
 void SendTaskFailureResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void SendTaskFailureResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::SendTaskFailureResponsePrivate
+ * \brief The SendTaskFailureResponsePrivate class provides private implementation for SendTaskFailureResponse.
  * \internal
  *
- * \class SendTaskFailureResponsePrivate
- *
- * \brief Private implementation for SendTaskFailureResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendTaskFailureResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendTaskFailureResponse instance.
+ * Constructs a SendTaskFailureResponsePrivate object with public implementation \a q.
  */
 SendTaskFailureResponsePrivate::SendTaskFailureResponsePrivate(
     SendTaskFailureResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ SendTaskFailureResponsePrivate::SendTaskFailureResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN SendTaskFailureResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN SendTaskFailure response element from \a xml.
  */
 void SendTaskFailureResponsePrivate::parseSendTaskFailureResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * PredictRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a PredictRequestPrivate object for MachineLearning \a action with,
- * public implementation \a q.
+ * Constructs a PredictRequestPrivate object for MachineLearning \a action,
+ * with public implementation \a q.
  */
 PredictRequestPrivate::PredictRequestPrivate(
     const MachineLearningRequest::Action action, PredictRequest * const q)

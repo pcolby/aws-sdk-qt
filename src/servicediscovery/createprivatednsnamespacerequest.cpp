@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreatePrivateDnsNamespaceRequest::response(QN
  */
 
 /*!
- *
- * Constructs a CreatePrivateDnsNamespaceRequestPrivate object for ServiceDiscovery \a action with,
- * public implementation \a q.
+ * Constructs a CreatePrivateDnsNamespaceRequestPrivate object for ServiceDiscovery \a action,
+ * with public implementation \a q.
  */
 CreatePrivateDnsNamespaceRequestPrivate::CreatePrivateDnsNamespaceRequestPrivate(
     const ServiceDiscoveryRequest::Action action, CreatePrivateDnsNamespaceRequest * const q)

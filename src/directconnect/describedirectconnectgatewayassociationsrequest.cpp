@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDirectConnectGatewayAssociationsReque
  */
 
 /*!
- *
- * Constructs a DescribeDirectConnectGatewayAssociationsRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDirectConnectGatewayAssociationsRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 DescribeDirectConnectGatewayAssociationsRequestPrivate::DescribeDirectConnectGatewayAssociationsRequestPrivate(
     const DirectConnectRequest::Action action, DescribeDirectConnectGatewayAssociationsRequest * const q)

@@ -49,7 +49,7 @@ namespace KinesisVideo {
  */
 
 /*!
- * Constructs a[n] KinesisVideoRequest object for KinesisVideo \a action.
+ * Constructs a KinesisVideoRequest object for KinesisVideo \a action.
  */
 KinesisVideoRequest::KinesisVideoRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new KinesisVideoRequestPrivate(action, this))
@@ -249,8 +249,8 @@ QNetworkRequest KinesisVideoRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a KinesisVideoRequestPrivate object for KinesisVideo \a action with,
- * public implementation \a q.
+ * Constructs a KinesisVideoRequestPrivate object for KinesisVideo \a action,
+ * with public implementation \a q.
  */
 KinesisVideoRequestPrivate::KinesisVideoRequestPrivate(const KinesisVideoRequest::Action action, KinesisVideoRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

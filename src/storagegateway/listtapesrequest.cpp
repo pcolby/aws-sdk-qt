@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * ListTapesRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a ListTapesRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a ListTapesRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 ListTapesRequestPrivate::ListTapesRequestPrivate(
     const StorageGatewayRequest::Action action, ListTapesRequest * const q)

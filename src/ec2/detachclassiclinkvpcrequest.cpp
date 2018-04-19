@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DetachClassicLinkVpcRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DetachClassicLinkVpcRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DetachClassicLinkVpcRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DetachClassicLinkVpcRequestPrivate::DetachClassicLinkVpcRequestPrivate(
     const EC2Request::Action action, DetachClassicLinkVpcRequest * const q)

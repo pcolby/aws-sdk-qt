@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * StartGatewayRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a StartGatewayRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a StartGatewayRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 StartGatewayRequestPrivate::StartGatewayRequestPrivate(
     const StorageGatewayRequest::Action action, StartGatewayRequest * const q)

@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::DeleteRemoteAccessSessionResponse
- *
  * \brief The DeleteRemoteAccessSessionResponse class provides an interace for DeviceFarm DeleteRemoteAccessSession responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new DeleteRemoteAccessSessionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRemoteAccessSessionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRemoteAccessSessionResponse::DeleteRemoteAccessSessionResponse(
         const DeleteRemoteAccessSessionRequest &request,
@@ -57,6 +52,9 @@ DeleteRemoteAccessSessionResponse::DeleteRemoteAccessSessionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRemoteAccessSessionRequest * DeleteRemoteAccessSessionResponse::request() const
 {
     Q_D(const DeleteRemoteAccessSessionResponse);
@@ -64,9 +62,8 @@ const DeleteRemoteAccessSessionRequest * DeleteRemoteAccessSessionResponse::requ
 }
 
 /*!
- * @brief  Parse a DeviceFarm DeleteRemoteAccessSession response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm DeleteRemoteAccessSession \a response.
  */
 void DeleteRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DeleteRemoteAccessSessionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::DeleteRemoteAccessSessionResponsePrivate
+ * \brief The DeleteRemoteAccessSessionResponsePrivate class provides private implementation for DeleteRemoteAccessSessionResponse.
  * \internal
  *
- * \class DeleteRemoteAccessSessionResponsePrivate
- *
- * \brief Private implementation for DeleteRemoteAccessSessionResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRemoteAccessSessionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRemoteAccessSessionResponse instance.
+ * Constructs a DeleteRemoteAccessSessionResponsePrivate object with public implementation \a q.
  */
 DeleteRemoteAccessSessionResponsePrivate::DeleteRemoteAccessSessionResponsePrivate(
     DeleteRemoteAccessSessionResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ DeleteRemoteAccessSessionResponsePrivate::DeleteRemoteAccessSessionResponsePriva
 }
 
 /*!
- * @brief  Parse an DeviceFarm DeleteRemoteAccessSessionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm DeleteRemoteAccessSession response element from \a xml.
  */
 void DeleteRemoteAccessSessionResponsePrivate::parseDeleteRemoteAccessSessionResponse(QXmlStreamReader &xml)
 {

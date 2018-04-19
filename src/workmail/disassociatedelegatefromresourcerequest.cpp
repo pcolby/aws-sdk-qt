@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateDelegateFromResourceRequest::resp
  */
 
 /*!
- *
- * Constructs a DisassociateDelegateFromResourceRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateDelegateFromResourceRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 DisassociateDelegateFromResourceRequestPrivate::DisassociateDelegateFromResourceRequestPrivate(
     const WorkMailRequest::Action action, DisassociateDelegateFromResourceRequest * const q)

@@ -29,10 +29,9 @@ namespace AppSync {
 
 /*!
  * \class QtAws::AppSync::ListApiKeysResponse
- *
  * \brief The ListApiKeysResponse class provides an interace for AppSync ListApiKeys responses.
  *
- * \ingroup AppSync
+ * \inmodule QtAwsAppSync
  *
  *  AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your
  *
@@ -40,11 +39,7 @@ namespace AppSync {
  */
 
 /*!
- * @brief  Constructs a new ListApiKeysResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListApiKeysResponse object for \a reply to \a request, with parent \a parent.
  */
 ListApiKeysResponse::ListApiKeysResponse(
         const ListApiKeysRequest &request,
@@ -56,6 +51,9 @@ ListApiKeysResponse::ListApiKeysResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListApiKeysRequest * ListApiKeysResponse::request() const
 {
     Q_D(const ListApiKeysResponse);
@@ -63,9 +61,8 @@ const ListApiKeysRequest * ListApiKeysResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppSync ListApiKeys response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppSync ListApiKeys \a response.
  */
 void ListApiKeysResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void ListApiKeysResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppSync::ListApiKeysResponsePrivate
+ * \brief The ListApiKeysResponsePrivate class provides private implementation for ListApiKeysResponse.
  * \internal
  *
- * \class ListApiKeysResponsePrivate
- *
- * \brief Private implementation for ListApiKeysResponse.
+ * \inmodule QtAwsAppSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListApiKeysResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListApiKeysResponse instance.
+ * Constructs a ListApiKeysResponsePrivate object with public implementation \a q.
  */
 ListApiKeysResponsePrivate::ListApiKeysResponsePrivate(
     ListApiKeysResponse * const q) : AppSyncResponsePrivate(q)
@@ -96,9 +89,7 @@ ListApiKeysResponsePrivate::ListApiKeysResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppSync ListApiKeysResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppSync ListApiKeys response element from \a xml.
  */
 void ListApiKeysResponsePrivate::parseListApiKeysResponse(QXmlStreamReader &xml)
 {

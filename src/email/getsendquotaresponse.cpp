@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetSendQuotaResponse
- *
  * \brief The GetSendQuotaResponse class provides an interace for SES GetSendQuota responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetSendQuotaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSendQuotaResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSendQuotaResponse::GetSendQuotaResponse(
         const GetSendQuotaRequest &request,
@@ -66,6 +61,9 @@ GetSendQuotaResponse::GetSendQuotaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSendQuotaRequest * GetSendQuotaResponse::request() const
 {
     Q_D(const GetSendQuotaResponse);
@@ -73,9 +71,8 @@ const GetSendQuotaRequest * GetSendQuotaResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES GetSendQuota response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES GetSendQuota \a response.
  */
 void GetSendQuotaResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetSendQuotaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::GetSendQuotaResponsePrivate
+ * \brief The GetSendQuotaResponsePrivate class provides private implementation for GetSendQuotaResponse.
  * \internal
  *
- * \class GetSendQuotaResponsePrivate
- *
- * \brief Private implementation for GetSendQuotaResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSendQuotaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSendQuotaResponse instance.
+ * Constructs a GetSendQuotaResponsePrivate object with public implementation \a q.
  */
 GetSendQuotaResponsePrivate::GetSendQuotaResponsePrivate(
     GetSendQuotaResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ GetSendQuotaResponsePrivate::GetSendQuotaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES GetSendQuotaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES GetSendQuota response element from \a xml.
  */
 void GetSendQuotaResponsePrivate::parseGetSendQuotaResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetCSVHeaderResponse
- *
  * \brief The GetCSVHeaderResponse class provides an interace for CognitoIdentityProvider GetCSVHeader responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetCSVHeaderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCSVHeaderResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCSVHeaderResponse::GetCSVHeaderResponse(
         const GetCSVHeaderRequest &request,
@@ -65,6 +60,9 @@ GetCSVHeaderResponse::GetCSVHeaderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCSVHeaderRequest * GetCSVHeaderResponse::request() const
 {
     Q_D(const GetCSVHeaderResponse);
@@ -72,9 +70,8 @@ const GetCSVHeaderRequest * GetCSVHeaderResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider GetCSVHeader response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider GetCSVHeader \a response.
  */
 void GetCSVHeaderResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void GetCSVHeaderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::GetCSVHeaderResponsePrivate
+ * \brief The GetCSVHeaderResponsePrivate class provides private implementation for GetCSVHeaderResponse.
  * \internal
  *
- * \class GetCSVHeaderResponsePrivate
- *
- * \brief Private implementation for GetCSVHeaderResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCSVHeaderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCSVHeaderResponse instance.
+ * Constructs a GetCSVHeaderResponsePrivate object with public implementation \a q.
  */
 GetCSVHeaderResponsePrivate::GetCSVHeaderResponsePrivate(
     GetCSVHeaderResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ GetCSVHeaderResponsePrivate::GetCSVHeaderResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider GetCSVHeaderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider GetCSVHeader response element from \a xml.
  */
 void GetCSVHeaderResponsePrivate::parseGetCSVHeaderResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace MediaStore {
 
 /*!
  * \class QtAws::MediaStore::DescribeContainerResponse
- *
  * \brief The DescribeContainerResponse class provides an interace for MediaStore DescribeContainer responses.
  *
- * \ingroup MediaStore
+ * \inmodule QtAwsMediaStore
  *
  *  An AWS Elemental MediaStore container is a namespace that holds folders and objects. You use a container endpoint to
  *  create, read, and delete objects.
@@ -41,11 +40,7 @@ namespace MediaStore {
  */
 
 /*!
- * @brief  Constructs a new DescribeContainerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeContainerResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeContainerResponse::DescribeContainerResponse(
         const DescribeContainerRequest &request,
@@ -57,6 +52,9 @@ DescribeContainerResponse::DescribeContainerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeContainerRequest * DescribeContainerResponse::request() const
 {
     Q_D(const DescribeContainerResponse);
@@ -64,9 +62,8 @@ const DescribeContainerRequest * DescribeContainerResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaStore DescribeContainer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaStore DescribeContainer \a response.
  */
 void DescribeContainerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DescribeContainerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaStore::DescribeContainerResponsePrivate
+ * \brief The DescribeContainerResponsePrivate class provides private implementation for DescribeContainerResponse.
  * \internal
  *
- * \class DescribeContainerResponsePrivate
- *
- * \brief Private implementation for DescribeContainerResponse.
+ * \inmodule QtAwsMediaStore
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeContainerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeContainerResponse instance.
+ * Constructs a DescribeContainerResponsePrivate object with public implementation \a q.
  */
 DescribeContainerResponsePrivate::DescribeContainerResponsePrivate(
     DescribeContainerResponse * const q) : MediaStoreResponsePrivate(q)
@@ -97,9 +90,7 @@ DescribeContainerResponsePrivate::DescribeContainerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaStore DescribeContainerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaStore DescribeContainer response element from \a xml.
  */
 void DescribeContainerResponsePrivate::parseDescribeContainerResponse(QXmlStreamReader &xml)
 {

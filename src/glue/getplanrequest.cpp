@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetPlanRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a GetPlanRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GetPlanRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GetPlanRequestPrivate::GetPlanRequestPrivate(
     const GlueRequest::Action action, GetPlanRequest * const q)

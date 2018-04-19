@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DeleteOTAUpdateResponse
- *
  * \brief The DeleteOTAUpdateResponse class provides an interace for IoT DeleteOTAUpdate responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DeleteOTAUpdateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteOTAUpdateResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteOTAUpdateResponse::DeleteOTAUpdateResponse(
         const DeleteOTAUpdateRequest &request,
@@ -66,6 +61,9 @@ DeleteOTAUpdateResponse::DeleteOTAUpdateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteOTAUpdateRequest * DeleteOTAUpdateResponse::request() const
 {
     Q_D(const DeleteOTAUpdateResponse);
@@ -73,9 +71,8 @@ const DeleteOTAUpdateRequest * DeleteOTAUpdateResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DeleteOTAUpdate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DeleteOTAUpdate \a response.
  */
 void DeleteOTAUpdateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteOTAUpdateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DeleteOTAUpdateResponsePrivate
+ * \brief The DeleteOTAUpdateResponsePrivate class provides private implementation for DeleteOTAUpdateResponse.
  * \internal
  *
- * \class DeleteOTAUpdateResponsePrivate
- *
- * \brief Private implementation for DeleteOTAUpdateResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteOTAUpdateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteOTAUpdateResponse instance.
+ * Constructs a DeleteOTAUpdateResponsePrivate object with public implementation \a q.
  */
 DeleteOTAUpdateResponsePrivate::DeleteOTAUpdateResponsePrivate(
     DeleteOTAUpdateResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteOTAUpdateResponsePrivate::DeleteOTAUpdateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DeleteOTAUpdateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DeleteOTAUpdate response element from \a xml.
  */
 void DeleteOTAUpdateResponsePrivate::parseDeleteOTAUpdateResponse(QXmlStreamReader &xml)
 {

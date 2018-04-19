@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeInstanceCreditSpecificationsResponse
- *
  * \brief The DescribeInstanceCreditSpecificationsResponse class provides an interace for EC2 DescribeInstanceCreditSpecifications responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstanceCreditSpecificationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeInstanceCreditSpecificationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeInstanceCreditSpecificationsResponse::DescribeInstanceCreditSpecificationsResponse(
         const DescribeInstanceCreditSpecificationsRequest &request,
@@ -59,6 +54,9 @@ DescribeInstanceCreditSpecificationsResponse::DescribeInstanceCreditSpecificatio
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeInstanceCreditSpecificationsRequest * DescribeInstanceCreditSpecificationsResponse::request() const
 {
     Q_D(const DescribeInstanceCreditSpecificationsResponse);
@@ -66,9 +64,8 @@ const DescribeInstanceCreditSpecificationsRequest * DescribeInstanceCreditSpecif
 }
 
 /*!
- * @brief  Parse a EC2 DescribeInstanceCreditSpecifications response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeInstanceCreditSpecifications \a response.
  */
 void DescribeInstanceCreditSpecificationsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeInstanceCreditSpecificationsResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::EC2::DescribeInstanceCreditSpecificationsResponsePrivate
+ * \brief The DescribeInstanceCreditSpecificationsResponsePrivate class provides private implementation for DescribeInstanceCreditSpecificationsResponse.
  * \internal
  *
- * \class DescribeInstanceCreditSpecificationsResponsePrivate
- *
- * \brief Private implementation for DescribeInstanceCreditSpecificationsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstanceCreditSpecificationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeInstanceCreditSpecificationsResponse instance.
+ * Constructs a DescribeInstanceCreditSpecificationsResponsePrivate object with public implementation \a q.
  */
 DescribeInstanceCreditSpecificationsResponsePrivate::DescribeInstanceCreditSpecificationsResponsePrivate(
     DescribeInstanceCreditSpecificationsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeInstanceCreditSpecificationsResponsePrivate::DescribeInstanceCreditSpeci
 }
 
 /*!
- * @brief  Parse an EC2 DescribeInstanceCreditSpecificationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeInstanceCreditSpecifications response element from \a xml.
  */
 void DescribeInstanceCreditSpecificationsResponsePrivate::parseDescribeInstanceCreditSpecificationsResponse(QXmlStreamReader &xml)
 {

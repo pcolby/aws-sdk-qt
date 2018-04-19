@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::SetDefaultPolicyVersionResponse
- *
  * \brief The SetDefaultPolicyVersionResponse class provides an interace for IAM SetDefaultPolicyVersion responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new SetDefaultPolicyVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetDefaultPolicyVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 SetDefaultPolicyVersionResponse::SetDefaultPolicyVersionResponse(
         const SetDefaultPolicyVersionRequest &request,
@@ -120,6 +115,9 @@ SetDefaultPolicyVersionResponse::SetDefaultPolicyVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetDefaultPolicyVersionRequest * SetDefaultPolicyVersionResponse::request() const
 {
     Q_D(const SetDefaultPolicyVersionResponse);
@@ -127,9 +125,8 @@ const SetDefaultPolicyVersionRequest * SetDefaultPolicyVersionResponse::request(
 }
 
 /*!
- * @brief  Parse a IAM SetDefaultPolicyVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM SetDefaultPolicyVersion \a response.
  */
 void SetDefaultPolicyVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void SetDefaultPolicyVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::SetDefaultPolicyVersionResponsePrivate
+ * \brief The SetDefaultPolicyVersionResponsePrivate class provides private implementation for SetDefaultPolicyVersionResponse.
  * \internal
  *
- * \class SetDefaultPolicyVersionResponsePrivate
- *
- * \brief Private implementation for SetDefaultPolicyVersionResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetDefaultPolicyVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetDefaultPolicyVersionResponse instance.
+ * Constructs a SetDefaultPolicyVersionResponsePrivate object with public implementation \a q.
  */
 SetDefaultPolicyVersionResponsePrivate::SetDefaultPolicyVersionResponsePrivate(
     SetDefaultPolicyVersionResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ SetDefaultPolicyVersionResponsePrivate::SetDefaultPolicyVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM SetDefaultPolicyVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM SetDefaultPolicyVersion response element from \a xml.
  */
 void SetDefaultPolicyVersionResponsePrivate::parseSetDefaultPolicyVersionResponse(QXmlStreamReader &xml)
 {

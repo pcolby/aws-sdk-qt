@@ -29,10 +29,9 @@ namespace ElasticsearchService {
 
 /*!
  * \class QtAws::ElasticsearchService::ListTagsResponse
- *
  * \brief The ListTagsResponse class provides an interace for ElasticsearchService ListTags responses.
  *
- * \ingroup ElasticsearchService
+ * \inmodule QtAwsElasticsearchService
  *
  *  <fullname>Amazon Elasticsearch Configuration Service</fullname>
  * 
@@ -48,11 +47,7 @@ namespace ElasticsearchService {
  */
 
 /*!
- * @brief  Constructs a new ListTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTagsResponse::ListTagsResponse(
         const ListTagsRequest &request,
@@ -64,6 +59,9 @@ ListTagsResponse::ListTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTagsRequest * ListTagsResponse::request() const
 {
     Q_D(const ListTagsResponse);
@@ -71,9 +69,8 @@ const ListTagsRequest * ListTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticsearchService ListTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticsearchService ListTags \a response.
  */
 void ListTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -83,19 +80,15 @@ void ListTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticsearchService::ListTagsResponsePrivate
+ * \brief The ListTagsResponsePrivate class provides private implementation for ListTagsResponse.
  * \internal
  *
- * \class ListTagsResponsePrivate
- *
- * \brief Private implementation for ListTagsResponse.
+ * \inmodule QtAwsElasticsearchService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTagsResponse instance.
+ * Constructs a ListTagsResponsePrivate object with public implementation \a q.
  */
 ListTagsResponsePrivate::ListTagsResponsePrivate(
     ListTagsResponse * const q) : ElasticsearchServiceResponsePrivate(q)
@@ -104,9 +97,7 @@ ListTagsResponsePrivate::ListTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticsearchService ListTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticsearchService ListTags response element from \a xml.
  */
 void ListTagsResponsePrivate::parseListTagsResponse(QXmlStreamReader &xml)
 {

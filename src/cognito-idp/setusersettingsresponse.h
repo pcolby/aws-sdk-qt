@@ -34,10 +34,10 @@ class QTAWS_EXPORT SetUserSettingsResponse : public CognitoIdentityProviderRespo
 public:
     SetUserSettingsResponse(const SetUserSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const SetUserSettingsRequest * request() const;
+    virtual const SetUserSettingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(SetUserSettingsResponse)

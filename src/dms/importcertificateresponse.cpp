@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::ImportCertificateResponse
- *
  * \brief The ImportCertificateResponse class provides an interace for DatabaseMigrationService ImportCertificate responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new ImportCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportCertificateResponse::ImportCertificateResponse(
         const ImportCertificateRequest &request,
@@ -66,6 +61,9 @@ ImportCertificateResponse::ImportCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportCertificateRequest * ImportCertificateResponse::request() const
 {
     Q_D(const ImportCertificateResponse);
@@ -73,9 +71,8 @@ const ImportCertificateRequest * ImportCertificateResponse::request() const
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService ImportCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService ImportCertificate \a response.
  */
 void ImportCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ImportCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::ImportCertificateResponsePrivate
+ * \brief The ImportCertificateResponsePrivate class provides private implementation for ImportCertificateResponse.
  * \internal
  *
- * \class ImportCertificateResponsePrivate
- *
- * \brief Private implementation for ImportCertificateResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportCertificateResponse instance.
+ * Constructs a ImportCertificateResponsePrivate object with public implementation \a q.
  */
 ImportCertificateResponsePrivate::ImportCertificateResponsePrivate(
     ImportCertificateResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ ImportCertificateResponsePrivate::ImportCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService ImportCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService ImportCertificate response element from \a xml.
  */
 void ImportCertificateResponsePrivate::parseImportCertificateResponse(QXmlStreamReader &xml)
 {

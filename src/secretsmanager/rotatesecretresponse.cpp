@@ -29,10 +29,9 @@ namespace SecretsManager {
 
 /*!
  * \class QtAws::SecretsManager::RotateSecretResponse
- *
  * \brief The RotateSecretResponse class provides an interace for SecretsManager RotateSecret responses.
  *
- * \ingroup SecretsManager
+ * \inmodule QtAwsSecretsManager
  *
  *  <fullname>AWS Secrets Manager API Reference</fullname>
  * 
@@ -139,11 +138,7 @@ namespace SecretsManager {
  */
 
 /*!
- * @brief  Constructs a new RotateSecretResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RotateSecretResponse object for \a reply to \a request, with parent \a parent.
  */
 RotateSecretResponse::RotateSecretResponse(
         const RotateSecretRequest &request,
@@ -155,6 +150,9 @@ RotateSecretResponse::RotateSecretResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RotateSecretRequest * RotateSecretResponse::request() const
 {
     Q_D(const RotateSecretResponse);
@@ -162,9 +160,8 @@ const RotateSecretRequest * RotateSecretResponse::request() const
 }
 
 /*!
- * @brief  Parse a SecretsManager RotateSecret response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SecretsManager RotateSecret \a response.
  */
 void RotateSecretResponse::parseSuccess(QIODevice &response)
 {
@@ -174,19 +171,15 @@ void RotateSecretResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SecretsManager::RotateSecretResponsePrivate
+ * \brief The RotateSecretResponsePrivate class provides private implementation for RotateSecretResponse.
  * \internal
  *
- * \class RotateSecretResponsePrivate
- *
- * \brief Private implementation for RotateSecretResponse.
+ * \inmodule QtAwsSecretsManager
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RotateSecretResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RotateSecretResponse instance.
+ * Constructs a RotateSecretResponsePrivate object with public implementation \a q.
  */
 RotateSecretResponsePrivate::RotateSecretResponsePrivate(
     RotateSecretResponse * const q) : SecretsManagerResponsePrivate(q)
@@ -195,9 +188,7 @@ RotateSecretResponsePrivate::RotateSecretResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SecretsManager RotateSecretResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SecretsManager RotateSecret response element from \a xml.
  */
 void RotateSecretResponsePrivate::parseRotateSecretResponse(QXmlStreamReader &xml)
 {

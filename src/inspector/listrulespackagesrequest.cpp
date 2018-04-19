@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListRulesPackagesRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListRulesPackagesRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a ListRulesPackagesRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 ListRulesPackagesRequestPrivate::ListRulesPackagesRequestPrivate(
     const InspectorRequest::Action action, ListRulesPackagesRequest * const q)

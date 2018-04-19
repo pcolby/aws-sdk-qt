@@ -271,9 +271,8 @@ QtAws::Core::AwsAbstractResponse * GetDifferencesRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetDifferencesRequestPrivate object for CodeCommit \a action with,
- * public implementation \a q.
+ * Constructs a GetDifferencesRequestPrivate object for CodeCommit \a action,
+ * with public implementation \a q.
  */
 GetDifferencesRequestPrivate::GetDifferencesRequestPrivate(
     const CodeCommitRequest::Action action, GetDifferencesRequest * const q)

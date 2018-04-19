@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::PutSchemaFromJsonResponse
- *
  * \brief The PutSchemaFromJsonResponse class provides an interace for CloudDirectory PutSchemaFromJson responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new PutSchemaFromJsonResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutSchemaFromJsonResponse object for \a reply to \a request, with parent \a parent.
  */
 PutSchemaFromJsonResponse::PutSchemaFromJsonResponse(
         const PutSchemaFromJsonRequest &request,
@@ -62,6 +57,9 @@ PutSchemaFromJsonResponse::PutSchemaFromJsonResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutSchemaFromJsonRequest * PutSchemaFromJsonResponse::request() const
 {
     Q_D(const PutSchemaFromJsonResponse);
@@ -69,9 +67,8 @@ const PutSchemaFromJsonRequest * PutSchemaFromJsonResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory PutSchemaFromJson response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory PutSchemaFromJson \a response.
  */
 void PutSchemaFromJsonResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void PutSchemaFromJsonResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::PutSchemaFromJsonResponsePrivate
+ * \brief The PutSchemaFromJsonResponsePrivate class provides private implementation for PutSchemaFromJsonResponse.
  * \internal
  *
- * \class PutSchemaFromJsonResponsePrivate
- *
- * \brief Private implementation for PutSchemaFromJsonResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutSchemaFromJsonResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutSchemaFromJsonResponse instance.
+ * Constructs a PutSchemaFromJsonResponsePrivate object with public implementation \a q.
  */
 PutSchemaFromJsonResponsePrivate::PutSchemaFromJsonResponsePrivate(
     PutSchemaFromJsonResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ PutSchemaFromJsonResponsePrivate::PutSchemaFromJsonResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory PutSchemaFromJsonResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory PutSchemaFromJson response element from \a xml.
  */
 void PutSchemaFromJsonResponsePrivate::parsePutSchemaFromJsonResponse(QXmlStreamReader &xml)
 {

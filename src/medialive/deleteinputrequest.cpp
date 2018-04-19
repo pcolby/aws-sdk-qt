@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteInputRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteInputRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a DeleteInputRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 DeleteInputRequestPrivate::DeleteInputRequestPrivate(
     const MediaLiveRequest::Action action, DeleteInputRequest * const q)

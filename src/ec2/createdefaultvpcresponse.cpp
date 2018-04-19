@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateDefaultVpcResponse
- *
  * \brief The CreateDefaultVpcResponse class provides an interace for EC2 CreateDefaultVpc responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateDefaultVpcResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDefaultVpcResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDefaultVpcResponse::CreateDefaultVpcResponse(
         const CreateDefaultVpcRequest &request,
@@ -59,6 +54,9 @@ CreateDefaultVpcResponse::CreateDefaultVpcResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDefaultVpcRequest * CreateDefaultVpcResponse::request() const
 {
     Q_D(const CreateDefaultVpcResponse);
@@ -66,9 +64,8 @@ const CreateDefaultVpcRequest * CreateDefaultVpcResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateDefaultVpc response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateDefaultVpc \a response.
  */
 void CreateDefaultVpcResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateDefaultVpcResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateDefaultVpcResponsePrivate
+ * \brief The CreateDefaultVpcResponsePrivate class provides private implementation for CreateDefaultVpcResponse.
  * \internal
  *
- * \class CreateDefaultVpcResponsePrivate
- *
- * \brief Private implementation for CreateDefaultVpcResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDefaultVpcResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDefaultVpcResponse instance.
+ * Constructs a CreateDefaultVpcResponsePrivate object with public implementation \a q.
  */
 CreateDefaultVpcResponsePrivate::CreateDefaultVpcResponsePrivate(
     CreateDefaultVpcResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateDefaultVpcResponsePrivate::CreateDefaultVpcResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateDefaultVpcResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateDefaultVpc response element from \a xml.
  */
 void CreateDefaultVpcResponsePrivate::parseCreateDefaultVpcResponse(QXmlStreamReader &xml)
 {

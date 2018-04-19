@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTagsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeTagsRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTagsRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
     const RedshiftRequest::Action action, DescribeTagsRequest * const q)

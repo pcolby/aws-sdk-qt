@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::ListServiceSpecificCredentialsResponse
- *
  * \brief The ListServiceSpecificCredentialsResponse class provides an interace for IAM ListServiceSpecificCredentials responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new ListServiceSpecificCredentialsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListServiceSpecificCredentialsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListServiceSpecificCredentialsResponse::ListServiceSpecificCredentialsResponse(
         const ListServiceSpecificCredentialsRequest &request,
@@ -120,6 +115,9 @@ ListServiceSpecificCredentialsResponse::ListServiceSpecificCredentialsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListServiceSpecificCredentialsRequest * ListServiceSpecificCredentialsResponse::request() const
 {
     Q_D(const ListServiceSpecificCredentialsResponse);
@@ -127,9 +125,8 @@ const ListServiceSpecificCredentialsRequest * ListServiceSpecificCredentialsResp
 }
 
 /*!
- * @brief  Parse a IAM ListServiceSpecificCredentials response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM ListServiceSpecificCredentials \a response.
  */
 void ListServiceSpecificCredentialsResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void ListServiceSpecificCredentialsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::ListServiceSpecificCredentialsResponsePrivate
+ * \brief The ListServiceSpecificCredentialsResponsePrivate class provides private implementation for ListServiceSpecificCredentialsResponse.
  * \internal
  *
- * \class ListServiceSpecificCredentialsResponsePrivate
- *
- * \brief Private implementation for ListServiceSpecificCredentialsResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListServiceSpecificCredentialsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListServiceSpecificCredentialsResponse instance.
+ * Constructs a ListServiceSpecificCredentialsResponsePrivate object with public implementation \a q.
  */
 ListServiceSpecificCredentialsResponsePrivate::ListServiceSpecificCredentialsResponsePrivate(
     ListServiceSpecificCredentialsResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ ListServiceSpecificCredentialsResponsePrivate::ListServiceSpecificCredentialsRes
 }
 
 /*!
- * @brief  Parse an IAM ListServiceSpecificCredentialsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM ListServiceSpecificCredentials response element from \a xml.
  */
 void ListServiceSpecificCredentialsResponsePrivate::parseListServiceSpecificCredentialsResponse(QXmlStreamReader &xml)
 {

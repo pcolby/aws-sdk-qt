@@ -29,10 +29,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::CreateServerResponse
- *
  * \brief The CreateServerResponse class provides an interace for OpsWorksCM CreateServer responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -99,11 +98,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new CreateServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateServerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateServerResponse::CreateServerResponse(
         const CreateServerRequest &request,
@@ -115,6 +110,9 @@ CreateServerResponse::CreateServerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateServerRequest * CreateServerResponse::request() const
 {
     Q_D(const CreateServerResponse);
@@ -122,9 +120,8 @@ const CreateServerRequest * CreateServerResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorksCM CreateServer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorksCM CreateServer \a response.
  */
 void CreateServerResponse::parseSuccess(QIODevice &response)
 {
@@ -134,19 +131,15 @@ void CreateServerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorksCM::CreateServerResponsePrivate
+ * \brief The CreateServerResponsePrivate class provides private implementation for CreateServerResponse.
  * \internal
  *
- * \class CreateServerResponsePrivate
- *
- * \brief Private implementation for CreateServerResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateServerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateServerResponse instance.
+ * Constructs a CreateServerResponsePrivate object with public implementation \a q.
  */
 CreateServerResponsePrivate::CreateServerResponsePrivate(
     CreateServerResponse * const q) : OpsWorksCMResponsePrivate(q)
@@ -155,9 +148,7 @@ CreateServerResponsePrivate::CreateServerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorksCM CreateServerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorksCM CreateServer response element from \a xml.
  */
 void CreateServerResponsePrivate::parseCreateServerResponse(QXmlStreamReader &xml)
 {

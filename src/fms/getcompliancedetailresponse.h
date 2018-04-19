@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetComplianceDetailResponse : public FMSResponse {
 public:
     GetComplianceDetailResponse(const GetComplianceDetailRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetComplianceDetailRequest * request() const;
+    virtual const GetComplianceDetailRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetComplianceDetailResponse)

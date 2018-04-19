@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DeleteTagOptionResponse
- *
  * \brief The DeleteTagOptionResponse class provides an interace for ServiceCatalog DeleteTagOption responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DeleteTagOptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTagOptionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTagOptionResponse::DeleteTagOptionResponse(
         const DeleteTagOptionRequest &request,
@@ -61,6 +56,9 @@ DeleteTagOptionResponse::DeleteTagOptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTagOptionRequest * DeleteTagOptionResponse::request() const
 {
     Q_D(const DeleteTagOptionResponse);
@@ -68,9 +66,8 @@ const DeleteTagOptionRequest * DeleteTagOptionResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DeleteTagOption response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DeleteTagOption \a response.
  */
 void DeleteTagOptionResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeleteTagOptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DeleteTagOptionResponsePrivate
+ * \brief The DeleteTagOptionResponsePrivate class provides private implementation for DeleteTagOptionResponse.
  * \internal
  *
- * \class DeleteTagOptionResponsePrivate
- *
- * \brief Private implementation for DeleteTagOptionResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTagOptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTagOptionResponse instance.
+ * Constructs a DeleteTagOptionResponsePrivate object with public implementation \a q.
  */
 DeleteTagOptionResponsePrivate::DeleteTagOptionResponsePrivate(
     DeleteTagOptionResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DeleteTagOptionResponsePrivate::DeleteTagOptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DeleteTagOptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DeleteTagOption response element from \a xml.
  */
 void DeleteTagOptionResponsePrivate::parseDeleteTagOptionResponse(QXmlStreamReader &xml)
 {

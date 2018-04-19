@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteVpcEndpointServiceConfigurationsResponse : public EC2Re
 public:
     DeleteVpcEndpointServiceConfigurationsResponse(const DeleteVpcEndpointServiceConfigurationsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteVpcEndpointServiceConfigurationsRequest * request() const;
+    virtual const DeleteVpcEndpointServiceConfigurationsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteVpcEndpointServiceConfigurationsResponse)

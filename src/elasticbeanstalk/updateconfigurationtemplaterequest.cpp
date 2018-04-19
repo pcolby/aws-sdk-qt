@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * UpdateConfigurationTemplateRequest::response(
  */
 
 /*!
- *
- * Constructs a UpdateConfigurationTemplateRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a UpdateConfigurationTemplateRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 UpdateConfigurationTemplateRequestPrivate::UpdateConfigurationTemplateRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateConfigurationTemplateRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetAdminAccountResponse : public FMSResponse {
 public:
     GetAdminAccountResponse(const GetAdminAccountRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetAdminAccountRequest * request() const;
+    virtual const GetAdminAccountRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetAdminAccountResponse)

@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::ValidateTemplateResponse
- *
  * \brief The ValidateTemplateResponse class provides an interace for CloudFormation ValidateTemplate responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new ValidateTemplateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ValidateTemplateResponse object for \a reply to \a request, with parent \a parent.
  */
 ValidateTemplateResponse::ValidateTemplateResponse(
         const ValidateTemplateRequest &request,
@@ -77,6 +72,9 @@ ValidateTemplateResponse::ValidateTemplateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ValidateTemplateRequest * ValidateTemplateResponse::request() const
 {
     Q_D(const ValidateTemplateResponse);
@@ -84,9 +82,8 @@ const ValidateTemplateRequest * ValidateTemplateResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation ValidateTemplate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation ValidateTemplate \a response.
  */
 void ValidateTemplateResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void ValidateTemplateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::ValidateTemplateResponsePrivate
+ * \brief The ValidateTemplateResponsePrivate class provides private implementation for ValidateTemplateResponse.
  * \internal
  *
- * \class ValidateTemplateResponsePrivate
- *
- * \brief Private implementation for ValidateTemplateResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ValidateTemplateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ValidateTemplateResponse instance.
+ * Constructs a ValidateTemplateResponsePrivate object with public implementation \a q.
  */
 ValidateTemplateResponsePrivate::ValidateTemplateResponsePrivate(
     ValidateTemplateResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ ValidateTemplateResponsePrivate::ValidateTemplateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation ValidateTemplateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation ValidateTemplate response element from \a xml.
  */
 void ValidateTemplateResponsePrivate::parseValidateTemplateResponse(QXmlStreamReader &xml)
 {

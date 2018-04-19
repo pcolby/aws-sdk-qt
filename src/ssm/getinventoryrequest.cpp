@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * GetInventoryRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a GetInventoryRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a GetInventoryRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 GetInventoryRequestPrivate::GetInventoryRequestPrivate(
     const SSMRequest::Action action, GetInventoryRequest * const q)

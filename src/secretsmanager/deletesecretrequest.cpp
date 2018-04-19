@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSecretRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteSecretRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSecretRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 DeleteSecretRequestPrivate::DeleteSecretRequestPrivate(
     const SecretsManagerRequest::Action action, DeleteSecretRequest * const q)

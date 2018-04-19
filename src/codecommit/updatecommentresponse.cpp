@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::UpdateCommentResponse
- *
  * \brief The UpdateCommentResponse class provides an interace for CodeCommit UpdateComment responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new UpdateCommentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateCommentResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateCommentResponse::UpdateCommentResponse(
         const UpdateCommentRequest &request,
@@ -245,6 +240,9 @@ UpdateCommentResponse::UpdateCommentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateCommentRequest * UpdateCommentResponse::request() const
 {
     Q_D(const UpdateCommentResponse);
@@ -252,9 +250,8 @@ const UpdateCommentRequest * UpdateCommentResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit UpdateComment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit UpdateComment \a response.
  */
 void UpdateCommentResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void UpdateCommentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::UpdateCommentResponsePrivate
+ * \brief The UpdateCommentResponsePrivate class provides private implementation for UpdateCommentResponse.
  * \internal
  *
- * \class UpdateCommentResponsePrivate
- *
- * \brief Private implementation for UpdateCommentResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCommentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateCommentResponse instance.
+ * Constructs a UpdateCommentResponsePrivate object with public implementation \a q.
  */
 UpdateCommentResponsePrivate::UpdateCommentResponsePrivate(
     UpdateCommentResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ UpdateCommentResponsePrivate::UpdateCommentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit UpdateCommentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit UpdateComment response element from \a xml.
  */
 void UpdateCommentResponsePrivate::parseUpdateCommentResponse(QXmlStreamReader &xml)
 {

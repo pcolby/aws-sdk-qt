@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::BatchGetResourceConfigResponse
- *
  * \brief The BatchGetResourceConfigResponse class provides an interace for ConfigService BatchGetResourceConfig responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new BatchGetResourceConfigResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetResourceConfigResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetResourceConfigResponse::BatchGetResourceConfigResponse(
         const BatchGetResourceConfigRequest &request,
@@ -78,6 +73,9 @@ BatchGetResourceConfigResponse::BatchGetResourceConfigResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetResourceConfigRequest * BatchGetResourceConfigResponse::request() const
 {
     Q_D(const BatchGetResourceConfigResponse);
@@ -85,9 +83,8 @@ const BatchGetResourceConfigRequest * BatchGetResourceConfigResponse::request() 
 }
 
 /*!
- * @brief  Parse a ConfigService BatchGetResourceConfig response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService BatchGetResourceConfig \a response.
  */
 void BatchGetResourceConfigResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void BatchGetResourceConfigResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::BatchGetResourceConfigResponsePrivate
+ * \brief The BatchGetResourceConfigResponsePrivate class provides private implementation for BatchGetResourceConfigResponse.
  * \internal
  *
- * \class BatchGetResourceConfigResponsePrivate
- *
- * \brief Private implementation for BatchGetResourceConfigResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetResourceConfigResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetResourceConfigResponse instance.
+ * Constructs a BatchGetResourceConfigResponsePrivate object with public implementation \a q.
  */
 BatchGetResourceConfigResponsePrivate::BatchGetResourceConfigResponsePrivate(
     BatchGetResourceConfigResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ BatchGetResourceConfigResponsePrivate::BatchGetResourceConfigResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ConfigService BatchGetResourceConfigResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService BatchGetResourceConfig response element from \a xml.
  */
 void BatchGetResourceConfigResponsePrivate::parseBatchGetResourceConfigResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::BatchGetOnPremisesInstancesResponse
- *
  * \brief The BatchGetOnPremisesInstancesResponse class provides an interace for CodeDeploy BatchGetOnPremisesInstances responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new BatchGetOnPremisesInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetOnPremisesInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetOnPremisesInstancesResponse::BatchGetOnPremisesInstancesResponse(
         const BatchGetOnPremisesInstancesRequest &request,
@@ -136,6 +131,9 @@ BatchGetOnPremisesInstancesResponse::BatchGetOnPremisesInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetOnPremisesInstancesRequest * BatchGetOnPremisesInstancesResponse::request() const
 {
     Q_D(const BatchGetOnPremisesInstancesResponse);
@@ -143,9 +141,8 @@ const BatchGetOnPremisesInstancesRequest * BatchGetOnPremisesInstancesResponse::
 }
 
 /*!
- * @brief  Parse a CodeDeploy BatchGetOnPremisesInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy BatchGetOnPremisesInstances \a response.
  */
 void BatchGetOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void BatchGetOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::BatchGetOnPremisesInstancesResponsePrivate
+ * \brief The BatchGetOnPremisesInstancesResponsePrivate class provides private implementation for BatchGetOnPremisesInstancesResponse.
  * \internal
  *
- * \class BatchGetOnPremisesInstancesResponsePrivate
- *
- * \brief Private implementation for BatchGetOnPremisesInstancesResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetOnPremisesInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetOnPremisesInstancesResponse instance.
+ * Constructs a BatchGetOnPremisesInstancesResponsePrivate object with public implementation \a q.
  */
 BatchGetOnPremisesInstancesResponsePrivate::BatchGetOnPremisesInstancesResponsePrivate(
     BatchGetOnPremisesInstancesResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ BatchGetOnPremisesInstancesResponsePrivate::BatchGetOnPremisesInstancesResponseP
 }
 
 /*!
- * @brief  Parse an CodeDeploy BatchGetOnPremisesInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy BatchGetOnPremisesInstances response element from \a xml.
  */
 void BatchGetOnPremisesInstancesResponsePrivate::parseBatchGetOnPremisesInstancesResponse(QXmlStreamReader &xml)
 {

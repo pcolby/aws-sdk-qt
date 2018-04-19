@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::SetLocalConsolePasswordResponse
- *
  * \brief The SetLocalConsolePasswordResponse class provides an interace for StorageGateway SetLocalConsolePassword responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new SetLocalConsolePasswordResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetLocalConsolePasswordResponse object for \a reply to \a request, with parent \a parent.
  */
 SetLocalConsolePasswordResponse::SetLocalConsolePasswordResponse(
         const SetLocalConsolePasswordRequest &request,
@@ -124,6 +119,9 @@ SetLocalConsolePasswordResponse::SetLocalConsolePasswordResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetLocalConsolePasswordRequest * SetLocalConsolePasswordResponse::request() const
 {
     Q_D(const SetLocalConsolePasswordResponse);
@@ -131,9 +129,8 @@ const SetLocalConsolePasswordRequest * SetLocalConsolePasswordResponse::request(
 }
 
 /*!
- * @brief  Parse a StorageGateway SetLocalConsolePassword response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway SetLocalConsolePassword \a response.
  */
 void SetLocalConsolePasswordResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void SetLocalConsolePasswordResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::SetLocalConsolePasswordResponsePrivate
+ * \brief The SetLocalConsolePasswordResponsePrivate class provides private implementation for SetLocalConsolePasswordResponse.
  * \internal
  *
- * \class SetLocalConsolePasswordResponsePrivate
- *
- * \brief Private implementation for SetLocalConsolePasswordResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetLocalConsolePasswordResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetLocalConsolePasswordResponse instance.
+ * Constructs a SetLocalConsolePasswordResponsePrivate object with public implementation \a q.
  */
 SetLocalConsolePasswordResponsePrivate::SetLocalConsolePasswordResponsePrivate(
     SetLocalConsolePasswordResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ SetLocalConsolePasswordResponsePrivate::SetLocalConsolePasswordResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway SetLocalConsolePasswordResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway SetLocalConsolePassword response element from \a xml.
  */
 void SetLocalConsolePasswordResponsePrivate::parseSetLocalConsolePasswordResponse(QXmlStreamReader &xml)
 {

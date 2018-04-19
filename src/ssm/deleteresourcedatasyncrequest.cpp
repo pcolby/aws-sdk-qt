@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DeleteResourceDataSyncRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteResourceDataSyncRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteResourceDataSyncRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DeleteResourceDataSyncRequestPrivate::DeleteResourceDataSyncRequestPrivate(
     const SSMRequest::Action action, DeleteResourceDataSyncRequest * const q)

@@ -40,7 +40,7 @@ namespace MarketplaceEntitlementService {
  */
 
 /*!
- * Constructs a[n] MarketplaceEntitlementServiceRequest object for MarketplaceEntitlementService \a action.
+ * Constructs a MarketplaceEntitlementServiceRequest object for MarketplaceEntitlementService \a action.
  */
 MarketplaceEntitlementServiceRequest::MarketplaceEntitlementServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MarketplaceEntitlementServiceRequestPrivate(action, this))
@@ -240,8 +240,8 @@ QNetworkRequest MarketplaceEntitlementServiceRequest::unsignedRequest(const QUrl
  */
 
 /*!
- * Constructs a MarketplaceEntitlementServiceRequestPrivate object for MarketplaceEntitlementService \a action with,
- * public implementation \a q.
+ * Constructs a MarketplaceEntitlementServiceRequestPrivate object for MarketplaceEntitlementService \a action,
+ * with public implementation \a q.
  */
 MarketplaceEntitlementServiceRequestPrivate::MarketplaceEntitlementServiceRequestPrivate(const MarketplaceEntitlementServiceRequest::Action action, MarketplaceEntitlementServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

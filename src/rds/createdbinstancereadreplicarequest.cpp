@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * CreateDBInstanceReadReplicaRequest::response(
  */
 
 /*!
- *
- * Constructs a CreateDBInstanceReadReplicaRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a CreateDBInstanceReadReplicaRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 CreateDBInstanceReadReplicaRequestPrivate::CreateDBInstanceReadReplicaRequestPrivate(
     const RDSRequest::Action action, CreateDBInstanceReadReplicaRequest * const q)

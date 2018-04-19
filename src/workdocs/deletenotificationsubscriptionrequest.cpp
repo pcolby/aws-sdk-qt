@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteNotificationSubscriptionRequest::respon
  */
 
 /*!
- *
- * Constructs a DeleteNotificationSubscriptionRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteNotificationSubscriptionRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DeleteNotificationSubscriptionRequestPrivate::DeleteNotificationSubscriptionRequestPrivate(
     const WorkDocsRequest::Action action, DeleteNotificationSubscriptionRequest * const q)

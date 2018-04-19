@@ -29,10 +29,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::GetApplicationResponse
- *
  * \brief The GetApplicationResponse class provides an interace for ServerlessApplicationRepository GetApplication responses.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -60,11 +59,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new GetApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetApplicationResponse::GetApplicationResponse(
         const GetApplicationRequest &request,
@@ -76,6 +71,9 @@ GetApplicationResponse::GetApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetApplicationRequest * GetApplicationResponse::request() const
 {
     Q_D(const GetApplicationResponse);
@@ -83,9 +81,8 @@ const GetApplicationRequest * GetApplicationResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServerlessApplicationRepository GetApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServerlessApplicationRepository GetApplication \a response.
  */
 void GetApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -95,19 +92,15 @@ void GetApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServerlessApplicationRepository::GetApplicationResponsePrivate
+ * \brief The GetApplicationResponsePrivate class provides private implementation for GetApplicationResponse.
  * \internal
  *
- * \class GetApplicationResponsePrivate
- *
- * \brief Private implementation for GetApplicationResponse.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetApplicationResponse instance.
+ * Constructs a GetApplicationResponsePrivate object with public implementation \a q.
  */
 GetApplicationResponsePrivate::GetApplicationResponsePrivate(
     GetApplicationResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
@@ -116,9 +109,7 @@ GetApplicationResponsePrivate::GetApplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServerlessApplicationRepository GetApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServerlessApplicationRepository GetApplication response element from \a xml.
  */
 void GetApplicationResponsePrivate::parseGetApplicationResponse(QXmlStreamReader &xml)
 {

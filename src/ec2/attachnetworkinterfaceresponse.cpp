@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AttachNetworkInterfaceResponse
- *
  * \brief The AttachNetworkInterfaceResponse class provides an interace for EC2 AttachNetworkInterface responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AttachNetworkInterfaceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachNetworkInterfaceResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachNetworkInterfaceResponse::AttachNetworkInterfaceResponse(
         const AttachNetworkInterfaceRequest &request,
@@ -59,6 +54,9 @@ AttachNetworkInterfaceResponse::AttachNetworkInterfaceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachNetworkInterfaceRequest * AttachNetworkInterfaceResponse::request() const
 {
     Q_D(const AttachNetworkInterfaceResponse);
@@ -66,9 +64,8 @@ const AttachNetworkInterfaceRequest * AttachNetworkInterfaceResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 AttachNetworkInterface response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AttachNetworkInterface \a response.
  */
 void AttachNetworkInterfaceResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AttachNetworkInterfaceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AttachNetworkInterfaceResponsePrivate
+ * \brief The AttachNetworkInterfaceResponsePrivate class provides private implementation for AttachNetworkInterfaceResponse.
  * \internal
  *
- * \class AttachNetworkInterfaceResponsePrivate
- *
- * \brief Private implementation for AttachNetworkInterfaceResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachNetworkInterfaceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachNetworkInterfaceResponse instance.
+ * Constructs a AttachNetworkInterfaceResponsePrivate object with public implementation \a q.
  */
 AttachNetworkInterfaceResponsePrivate::AttachNetworkInterfaceResponsePrivate(
     AttachNetworkInterfaceResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AttachNetworkInterfaceResponsePrivate::AttachNetworkInterfaceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 AttachNetworkInterfaceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AttachNetworkInterface response element from \a xml.
  */
 void AttachNetworkInterfaceResponsePrivate::parseAttachNetworkInterfaceResponse(QXmlStreamReader &xml)
 {

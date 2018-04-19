@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * PutFunctionConcurrencyRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a PutFunctionConcurrencyRequestPrivate object for Lambda \a action with,
- * public implementation \a q.
+ * Constructs a PutFunctionConcurrencyRequestPrivate object for Lambda \a action,
+ * with public implementation \a q.
  */
 PutFunctionConcurrencyRequestPrivate::PutFunctionConcurrencyRequestPrivate(
     const LambdaRequest::Action action, PutFunctionConcurrencyRequest * const q)

@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::PutPermissionPolicyResponse
- *
  * \brief The PutPermissionPolicyResponse class provides an interace for WAF PutPermissionPolicy responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new PutPermissionPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutPermissionPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutPermissionPolicyResponse::PutPermissionPolicyResponse(
         const PutPermissionPolicyRequest &request,
@@ -60,6 +55,9 @@ PutPermissionPolicyResponse::PutPermissionPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutPermissionPolicyRequest * PutPermissionPolicyResponse::request() const
 {
     Q_D(const PutPermissionPolicyResponse);
@@ -67,9 +65,8 @@ const PutPermissionPolicyRequest * PutPermissionPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF PutPermissionPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF PutPermissionPolicy \a response.
  */
 void PutPermissionPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void PutPermissionPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::PutPermissionPolicyResponsePrivate
+ * \brief The PutPermissionPolicyResponsePrivate class provides private implementation for PutPermissionPolicyResponse.
  * \internal
  *
- * \class PutPermissionPolicyResponsePrivate
- *
- * \brief Private implementation for PutPermissionPolicyResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutPermissionPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutPermissionPolicyResponse instance.
+ * Constructs a PutPermissionPolicyResponsePrivate object with public implementation \a q.
  */
 PutPermissionPolicyResponsePrivate::PutPermissionPolicyResponsePrivate(
     PutPermissionPolicyResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ PutPermissionPolicyResponsePrivate::PutPermissionPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF PutPermissionPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF PutPermissionPolicy response element from \a xml.
  */
 void PutPermissionPolicyResponsePrivate::parsePutPermissionPolicyResponse(QXmlStreamReader &xml)
 {

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRequestValidatorRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DeleteRequestValidatorRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRequestValidatorRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 DeleteRequestValidatorRequestPrivate::DeleteRequestValidatorRequestPrivate(
     const APIGatewayRequest::Action action, DeleteRequestValidatorRequest * const q)

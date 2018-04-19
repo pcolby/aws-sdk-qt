@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::DeleteBucketCorsResponse
- *
  * \brief The DeleteBucketCorsResponse class provides an interace for S3 DeleteBucketCors responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::deleteBucketCors
  */
 
 /*!
- * @brief  Constructs a new DeleteBucketCorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteBucketCorsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteBucketCorsResponse::DeleteBucketCorsResponse(
         const DeleteBucketCorsRequest &request,
@@ -55,6 +50,9 @@ DeleteBucketCorsResponse::DeleteBucketCorsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteBucketCorsRequest * DeleteBucketCorsResponse::request() const
 {
     Q_D(const DeleteBucketCorsResponse);
@@ -62,9 +60,8 @@ const DeleteBucketCorsRequest * DeleteBucketCorsResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 DeleteBucketCors response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 DeleteBucketCors \a response.
  */
 void DeleteBucketCorsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteBucketCorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::DeleteBucketCorsResponsePrivate
+ * \brief The DeleteBucketCorsResponsePrivate class provides private implementation for DeleteBucketCorsResponse.
  * \internal
  *
- * \class DeleteBucketCorsResponsePrivate
- *
- * \brief Private implementation for DeleteBucketCorsResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteBucketCorsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteBucketCorsResponse instance.
+ * Constructs a DeleteBucketCorsResponsePrivate object with public implementation \a q.
  */
 DeleteBucketCorsResponsePrivate::DeleteBucketCorsResponsePrivate(
     DeleteBucketCorsResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteBucketCorsResponsePrivate::DeleteBucketCorsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 DeleteBucketCorsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 DeleteBucketCors response element from \a xml.
  */
 void DeleteBucketCorsResponsePrivate::parseDeleteBucketCorsResponse(QXmlStreamReader &xml)
 {

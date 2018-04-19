@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeBandwidthRateLimitResponse
- *
  * \brief The DescribeBandwidthRateLimitResponse class provides an interace for StorageGateway DescribeBandwidthRateLimit responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeBandwidthRateLimitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeBandwidthRateLimitResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeBandwidthRateLimitResponse::DescribeBandwidthRateLimitResponse(
         const DescribeBandwidthRateLimitRequest &request,
@@ -124,6 +119,9 @@ DescribeBandwidthRateLimitResponse::DescribeBandwidthRateLimitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeBandwidthRateLimitRequest * DescribeBandwidthRateLimitResponse::request() const
 {
     Q_D(const DescribeBandwidthRateLimitResponse);
@@ -131,9 +129,8 @@ const DescribeBandwidthRateLimitRequest * DescribeBandwidthRateLimitResponse::re
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeBandwidthRateLimit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeBandwidthRateLimit \a response.
  */
 void DescribeBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeBandwidthRateLimitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeBandwidthRateLimitResponsePrivate
+ * \brief The DescribeBandwidthRateLimitResponsePrivate class provides private implementation for DescribeBandwidthRateLimitResponse.
  * \internal
  *
- * \class DescribeBandwidthRateLimitResponsePrivate
- *
- * \brief Private implementation for DescribeBandwidthRateLimitResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeBandwidthRateLimitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeBandwidthRateLimitResponse instance.
+ * Constructs a DescribeBandwidthRateLimitResponsePrivate object with public implementation \a q.
  */
 DescribeBandwidthRateLimitResponsePrivate::DescribeBandwidthRateLimitResponsePrivate(
     DescribeBandwidthRateLimitResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeBandwidthRateLimitResponsePrivate::DescribeBandwidthRateLimitResponsePri
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeBandwidthRateLimitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeBandwidthRateLimit response element from \a xml.
  */
 void DescribeBandwidthRateLimitResponsePrivate::parseDescribeBandwidthRateLimitResponse(QXmlStreamReader &xml)
 {

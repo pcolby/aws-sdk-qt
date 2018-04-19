@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListSkillsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a ListSkillsRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a ListSkillsRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 ListSkillsRequestPrivate::ListSkillsRequestPrivate(
     const AlexaForBusinessRequest::Action action, ListSkillsRequest * const q)

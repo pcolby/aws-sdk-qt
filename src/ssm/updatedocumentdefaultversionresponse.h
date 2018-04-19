@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateDocumentDefaultVersionResponse : public SSMResponse {
 public:
     UpdateDocumentDefaultVersionResponse(const UpdateDocumentDefaultVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateDocumentDefaultVersionRequest * request() const;
+    virtual const UpdateDocumentDefaultVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateDocumentDefaultVersionResponse)

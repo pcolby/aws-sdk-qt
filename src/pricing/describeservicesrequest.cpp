@@ -107,9 +107,8 @@ QtAws::Core::AwsAbstractResponse * DescribeServicesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DescribeServicesRequestPrivate object for Pricing \a action with,
- * public implementation \a q.
+ * Constructs a DescribeServicesRequestPrivate object for Pricing \a action,
+ * with public implementation \a q.
  */
 DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
     const PricingRequest::Action action, DescribeServicesRequest * const q)

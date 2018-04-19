@@ -51,7 +51,7 @@ namespace FMS {
  */
 
 /*!
- * Constructs a[n] FMSRequest object for FMS \a action.
+ * Constructs a FMSRequest object for FMS \a action.
  */
 FMSRequest::FMSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new FMSRequestPrivate(action, this))
@@ -251,8 +251,8 @@ QNetworkRequest FMSRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a FMSRequestPrivate object for FMS \a action with,
- * public implementation \a q.
+ * Constructs a FMSRequestPrivate object for FMS \a action,
+ * with public implementation \a q.
  */
 FMSRequestPrivate::FMSRequestPrivate(const FMSRequest::Action action, FMSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

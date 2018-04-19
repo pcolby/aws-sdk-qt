@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopRunResponse : public DeviceFarmResponse {
 public:
     StopRunResponse(const StopRunRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopRunRequest * request() const;
+    virtual const StopRunRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopRunResponse)

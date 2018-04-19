@@ -29,10 +29,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::UpdateEnvironmentResponse
- *
  * \brief The UpdateEnvironmentResponse class provides an interace for Cloud9 UpdateEnvironment responses.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -93,11 +92,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new UpdateEnvironmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateEnvironmentResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateEnvironmentResponse::UpdateEnvironmentResponse(
         const UpdateEnvironmentRequest &request,
@@ -109,6 +104,9 @@ UpdateEnvironmentResponse::UpdateEnvironmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateEnvironmentRequest * UpdateEnvironmentResponse::request() const
 {
     Q_D(const UpdateEnvironmentResponse);
@@ -116,9 +114,8 @@ const UpdateEnvironmentRequest * UpdateEnvironmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a Cloud9 UpdateEnvironment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Cloud9 UpdateEnvironment \a response.
  */
 void UpdateEnvironmentResponse::parseSuccess(QIODevice &response)
 {
@@ -128,19 +125,15 @@ void UpdateEnvironmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Cloud9::UpdateEnvironmentResponsePrivate
+ * \brief The UpdateEnvironmentResponsePrivate class provides private implementation for UpdateEnvironmentResponse.
  * \internal
  *
- * \class UpdateEnvironmentResponsePrivate
- *
- * \brief Private implementation for UpdateEnvironmentResponse.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEnvironmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateEnvironmentResponse instance.
+ * Constructs a UpdateEnvironmentResponsePrivate object with public implementation \a q.
  */
 UpdateEnvironmentResponsePrivate::UpdateEnvironmentResponsePrivate(
     UpdateEnvironmentResponse * const q) : Cloud9ResponsePrivate(q)
@@ -149,9 +142,7 @@ UpdateEnvironmentResponsePrivate::UpdateEnvironmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Cloud9 UpdateEnvironmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Cloud9 UpdateEnvironment response element from \a xml.
  */
 void UpdateEnvironmentResponsePrivate::parseUpdateEnvironmentResponse(QXmlStreamReader &xml)
 {

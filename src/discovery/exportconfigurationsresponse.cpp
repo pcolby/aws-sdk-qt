@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::ExportConfigurationsResponse
- *
  * \brief The ExportConfigurationsResponse class provides an interace for ApplicationDiscoveryService ExportConfigurations responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new ExportConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ExportConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ExportConfigurationsResponse::ExportConfigurationsResponse(
         const ExportConfigurationsRequest &request,
@@ -119,6 +114,9 @@ ExportConfigurationsResponse::ExportConfigurationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ExportConfigurationsRequest * ExportConfigurationsResponse::request() const
 {
     Q_D(const ExportConfigurationsResponse);
@@ -126,9 +124,8 @@ const ExportConfigurationsRequest * ExportConfigurationsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService ExportConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService ExportConfigurations \a response.
  */
 void ExportConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void ExportConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::ExportConfigurationsResponsePrivate
+ * \brief The ExportConfigurationsResponsePrivate class provides private implementation for ExportConfigurationsResponse.
  * \internal
  *
- * \class ExportConfigurationsResponsePrivate
- *
- * \brief Private implementation for ExportConfigurationsResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ExportConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ExportConfigurationsResponse instance.
+ * Constructs a ExportConfigurationsResponsePrivate object with public implementation \a q.
  */
 ExportConfigurationsResponsePrivate::ExportConfigurationsResponsePrivate(
     ExportConfigurationsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ ExportConfigurationsResponsePrivate::ExportConfigurationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService ExportConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService ExportConfigurations response element from \a xml.
  */
 void ExportConfigurationsResponsePrivate::parseExportConfigurationsResponse(QXmlStreamReader &xml)
 {

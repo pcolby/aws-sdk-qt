@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetRegionsResponse : public LightsailResponse {
 public:
     GetRegionsResponse(const GetRegionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetRegionsRequest * request() const;
+    virtual const GetRegionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetRegionsResponse)

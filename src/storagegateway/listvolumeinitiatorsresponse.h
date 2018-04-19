@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListVolumeInitiatorsResponse : public StorageGatewayResponse 
 public:
     ListVolumeInitiatorsResponse(const ListVolumeInitiatorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListVolumeInitiatorsRequest * request() const;
+    virtual const ListVolumeInitiatorsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListVolumeInitiatorsResponse)

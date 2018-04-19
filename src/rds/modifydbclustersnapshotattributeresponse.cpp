@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBClusterSnapshotAttributeResponse
- *
  * \brief The ModifyDBClusterSnapshotAttributeResponse class provides an interace for RDS ModifyDBClusterSnapshotAttribute responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBClusterSnapshotAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyDBClusterSnapshotAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyDBClusterSnapshotAttributeResponse::ModifyDBClusterSnapshotAttributeResponse(
         const ModifyDBClusterSnapshotAttributeRequest &request,
@@ -119,6 +114,9 @@ ModifyDBClusterSnapshotAttributeResponse::ModifyDBClusterSnapshotAttributeRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyDBClusterSnapshotAttributeRequest * ModifyDBClusterSnapshotAttributeResponse::request() const
 {
     Q_D(const ModifyDBClusterSnapshotAttributeResponse);
@@ -126,9 +124,8 @@ const ModifyDBClusterSnapshotAttributeRequest * ModifyDBClusterSnapshotAttribute
 }
 
 /*!
- * @brief  Parse a RDS ModifyDBClusterSnapshotAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS ModifyDBClusterSnapshotAttribute \a response.
  */
 void ModifyDBClusterSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void ModifyDBClusterSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::ModifyDBClusterSnapshotAttributeResponsePrivate
+ * \brief The ModifyDBClusterSnapshotAttributeResponsePrivate class provides private implementation for ModifyDBClusterSnapshotAttributeResponse.
  * \internal
  *
- * \class ModifyDBClusterSnapshotAttributeResponsePrivate
- *
- * \brief Private implementation for ModifyDBClusterSnapshotAttributeResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBClusterSnapshotAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyDBClusterSnapshotAttributeResponse instance.
+ * Constructs a ModifyDBClusterSnapshotAttributeResponsePrivate object with public implementation \a q.
  */
 ModifyDBClusterSnapshotAttributeResponsePrivate::ModifyDBClusterSnapshotAttributeResponsePrivate(
     ModifyDBClusterSnapshotAttributeResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ ModifyDBClusterSnapshotAttributeResponsePrivate::ModifyDBClusterSnapshotAttribut
 }
 
 /*!
- * @brief  Parse an RDS ModifyDBClusterSnapshotAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS ModifyDBClusterSnapshotAttribute response element from \a xml.
  */
 void ModifyDBClusterSnapshotAttributeResponsePrivate::parseModifyDBClusterSnapshotAttributeResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::AttachObjectResponse
- *
  * \brief The AttachObjectResponse class provides an interace for CloudDirectory AttachObject responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new AttachObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AttachObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 AttachObjectResponse::AttachObjectResponse(
         const AttachObjectRequest &request,
@@ -62,6 +57,9 @@ AttachObjectResponse::AttachObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AttachObjectRequest * AttachObjectResponse::request() const
 {
     Q_D(const AttachObjectResponse);
@@ -69,9 +67,8 @@ const AttachObjectRequest * AttachObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory AttachObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory AttachObject \a response.
  */
 void AttachObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void AttachObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::AttachObjectResponsePrivate
+ * \brief The AttachObjectResponsePrivate class provides private implementation for AttachObjectResponse.
  * \internal
  *
- * \class AttachObjectResponsePrivate
- *
- * \brief Private implementation for AttachObjectResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AttachObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AttachObjectResponse instance.
+ * Constructs a AttachObjectResponsePrivate object with public implementation \a q.
  */
 AttachObjectResponsePrivate::AttachObjectResponsePrivate(
     AttachObjectResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ AttachObjectResponsePrivate::AttachObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory AttachObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory AttachObject response element from \a xml.
  */
 void AttachObjectResponsePrivate::parseAttachObjectResponse(QXmlStreamReader &xml)
 {

@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * RebootClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a RebootClusterRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a RebootClusterRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 RebootClusterRequestPrivate::RebootClusterRequestPrivate(
     const RedshiftRequest::Action action, RebootClusterRequest * const q)

@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DescribeParametersRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeParametersRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DescribeParametersRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DescribeParametersRequestPrivate::DescribeParametersRequestPrivate(
     const SSMRequest::Action action, DescribeParametersRequest * const q)

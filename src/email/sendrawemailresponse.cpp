@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SendRawEmailResponse
- *
  * \brief The SendRawEmailResponse class provides an interace for SES SendRawEmail responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SendRawEmailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendRawEmailResponse object for \a reply to \a request, with parent \a parent.
  */
 SendRawEmailResponse::SendRawEmailResponse(
         const SendRawEmailRequest &request,
@@ -66,6 +61,9 @@ SendRawEmailResponse::SendRawEmailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendRawEmailRequest * SendRawEmailResponse::request() const
 {
     Q_D(const SendRawEmailResponse);
@@ -73,9 +71,8 @@ const SendRawEmailRequest * SendRawEmailResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES SendRawEmail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SendRawEmail \a response.
  */
 void SendRawEmailResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SendRawEmailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::SendRawEmailResponsePrivate
+ * \brief The SendRawEmailResponsePrivate class provides private implementation for SendRawEmailResponse.
  * \internal
  *
- * \class SendRawEmailResponsePrivate
- *
- * \brief Private implementation for SendRawEmailResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendRawEmailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendRawEmailResponse instance.
+ * Constructs a SendRawEmailResponsePrivate object with public implementation \a q.
  */
 SendRawEmailResponsePrivate::SendRawEmailResponsePrivate(
     SendRawEmailResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SendRawEmailResponsePrivate::SendRawEmailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES SendRawEmailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SendRawEmail response element from \a xml.
  */
 void SendRawEmailResponsePrivate::parseSendRawEmailResponse(QXmlStreamReader &xml)
 {

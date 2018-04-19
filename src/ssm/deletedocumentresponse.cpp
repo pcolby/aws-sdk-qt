@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DeleteDocumentResponse
- *
  * \brief The DeleteDocumentResponse class provides an interace for SSM DeleteDocument responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DeleteDocumentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDocumentResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDocumentResponse::DeleteDocumentResponse(
         const DeleteDocumentRequest &request,
@@ -79,6 +74,9 @@ DeleteDocumentResponse::DeleteDocumentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDocumentRequest * DeleteDocumentResponse::request() const
 {
     Q_D(const DeleteDocumentResponse);
@@ -86,9 +84,8 @@ const DeleteDocumentRequest * DeleteDocumentResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM DeleteDocument response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DeleteDocument \a response.
  */
 void DeleteDocumentResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DeleteDocumentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DeleteDocumentResponsePrivate
+ * \brief The DeleteDocumentResponsePrivate class provides private implementation for DeleteDocumentResponse.
  * \internal
  *
- * \class DeleteDocumentResponsePrivate
- *
- * \brief Private implementation for DeleteDocumentResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDocumentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDocumentResponse instance.
+ * Constructs a DeleteDocumentResponsePrivate object with public implementation \a q.
  */
 DeleteDocumentResponsePrivate::DeleteDocumentResponsePrivate(
     DeleteDocumentResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DeleteDocumentResponsePrivate::DeleteDocumentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DeleteDocumentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DeleteDocument response element from \a xml.
  */
 void DeleteDocumentResponsePrivate::parseDeleteDocumentResponse(QXmlStreamReader &xml)
 {

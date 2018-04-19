@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * SendTaskSuccessRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a SendTaskSuccessRequestPrivate object for SFN \a action with,
- * public implementation \a q.
+ * Constructs a SendTaskSuccessRequestPrivate object for SFN \a action,
+ * with public implementation \a q.
  */
 SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
     const SFNRequest::Action action, SendTaskSuccessRequest * const q)

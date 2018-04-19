@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * UploadLayerPartRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a UploadLayerPartRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a UploadLayerPartRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 UploadLayerPartRequestPrivate::UploadLayerPartRequestPrivate(
     const ECRRequest::Action action, UploadLayerPartRequest * const q)

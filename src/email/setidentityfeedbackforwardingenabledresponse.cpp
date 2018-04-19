@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SetIdentityFeedbackForwardingEnabledResponse
- *
  * \brief The SetIdentityFeedbackForwardingEnabledResponse class provides an interace for SES SetIdentityFeedbackForwardingEnabled responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetIdentityFeedbackForwardingEnabledResponse object for \a reply to \a request, with parent \a parent.
  */
 SetIdentityFeedbackForwardingEnabledResponse::SetIdentityFeedbackForwardingEnabledResponse(
         const SetIdentityFeedbackForwardingEnabledRequest &request,
@@ -66,6 +61,9 @@ SetIdentityFeedbackForwardingEnabledResponse::SetIdentityFeedbackForwardingEnabl
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetIdentityFeedbackForwardingEnabledRequest * SetIdentityFeedbackForwardingEnabledResponse::request() const
 {
     Q_D(const SetIdentityFeedbackForwardingEnabledResponse);
@@ -73,9 +71,8 @@ const SetIdentityFeedbackForwardingEnabledRequest * SetIdentityFeedbackForwardin
 }
 
 /*!
- * @brief  Parse a SES SetIdentityFeedbackForwardingEnabled response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SetIdentityFeedbackForwardingEnabled \a response.
  */
 void SetIdentityFeedbackForwardingEnabledResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SetIdentityFeedbackForwardingEnabledResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::SES::SetIdentityFeedbackForwardingEnabledResponsePrivate
+ * \brief The SetIdentityFeedbackForwardingEnabledResponsePrivate class provides private implementation for SetIdentityFeedbackForwardingEnabledResponse.
  * \internal
  *
- * \class SetIdentityFeedbackForwardingEnabledResponsePrivate
- *
- * \brief Private implementation for SetIdentityFeedbackForwardingEnabledResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIdentityFeedbackForwardingEnabledResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetIdentityFeedbackForwardingEnabledResponse instance.
+ * Constructs a SetIdentityFeedbackForwardingEnabledResponsePrivate object with public implementation \a q.
  */
 SetIdentityFeedbackForwardingEnabledResponsePrivate::SetIdentityFeedbackForwardingEnabledResponsePrivate(
     SetIdentityFeedbackForwardingEnabledResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SetIdentityFeedbackForwardingEnabledResponsePrivate::SetIdentityFeedbackForwardi
 }
 
 /*!
- * @brief  Parse an SES SetIdentityFeedbackForwardingEnabledResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SetIdentityFeedbackForwardingEnabled response element from \a xml.
  */
 void SetIdentityFeedbackForwardingEnabledResponsePrivate::parseSetIdentityFeedbackForwardingEnabledResponse(QXmlStreamReader &xml)
 {

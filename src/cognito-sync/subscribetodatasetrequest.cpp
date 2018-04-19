@@ -101,9 +101,8 @@ QtAws::Core::AwsAbstractResponse * SubscribeToDatasetRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a SubscribeToDatasetRequestPrivate object for CognitoSync \a action with,
- * public implementation \a q.
+ * Constructs a SubscribeToDatasetRequestPrivate object for CognitoSync \a action,
+ * with public implementation \a q.
  */
 SubscribeToDatasetRequestPrivate::SubscribeToDatasetRequestPrivate(
     const CognitoSyncRequest::Action action, SubscribeToDatasetRequest * const q)

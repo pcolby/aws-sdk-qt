@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeProductAsAdminResponse : public ServiceCatalogRespons
 public:
     DescribeProductAsAdminResponse(const DescribeProductAsAdminRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeProductAsAdminRequest * request() const;
+    virtual const DescribeProductAsAdminRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeProductAsAdminResponse)

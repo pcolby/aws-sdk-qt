@@ -34,10 +34,10 @@ class QTAWS_EXPORT LeaveOrganizationResponse : public OrganizationsResponse {
 public:
     LeaveOrganizationResponse(const LeaveOrganizationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const LeaveOrganizationRequest * request() const;
+    virtual const LeaveOrganizationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(LeaveOrganizationResponse)

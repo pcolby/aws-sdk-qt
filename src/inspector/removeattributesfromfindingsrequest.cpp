@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * RemoveAttributesFromFindingsRequest::response
  */
 
 /*!
- *
- * Constructs a RemoveAttributesFromFindingsRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a RemoveAttributesFromFindingsRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 RemoveAttributesFromFindingsRequestPrivate::RemoveAttributesFromFindingsRequestPrivate(
     const InspectorRequest::Action action, RemoveAttributesFromFindingsRequest * const q)

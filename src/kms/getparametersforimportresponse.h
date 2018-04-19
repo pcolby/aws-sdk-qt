@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetParametersForImportResponse : public KMSResponse {
 public:
     GetParametersForImportResponse(const GetParametersForImportRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetParametersForImportRequest * request() const;
+    virtual const GetParametersForImportRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetParametersForImportResponse)

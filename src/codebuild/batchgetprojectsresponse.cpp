@@ -29,10 +29,9 @@ namespace CodeBuild {
 
 /*!
  * \class QtAws::CodeBuild::BatchGetProjectsResponse
- *
  * \brief The BatchGetProjectsResponse class provides an interace for CodeBuild BatchGetProjects responses.
  *
- * \ingroup CodeBuild
+ * \inmodule QtAwsCodeBuild
  *
  *  <fullname>AWS CodeBuild</fullname>
  * 
@@ -119,11 +118,7 @@ namespace CodeBuild {
  */
 
 /*!
- * @brief  Constructs a new BatchGetProjectsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a BatchGetProjectsResponse object for \a reply to \a request, with parent \a parent.
  */
 BatchGetProjectsResponse::BatchGetProjectsResponse(
         const BatchGetProjectsRequest &request,
@@ -135,6 +130,9 @@ BatchGetProjectsResponse::BatchGetProjectsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const BatchGetProjectsRequest * BatchGetProjectsResponse::request() const
 {
     Q_D(const BatchGetProjectsResponse);
@@ -142,9 +140,8 @@ const BatchGetProjectsRequest * BatchGetProjectsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeBuild BatchGetProjects response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeBuild BatchGetProjects \a response.
  */
 void BatchGetProjectsResponse::parseSuccess(QIODevice &response)
 {
@@ -154,19 +151,15 @@ void BatchGetProjectsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeBuild::BatchGetProjectsResponsePrivate
+ * \brief The BatchGetProjectsResponsePrivate class provides private implementation for BatchGetProjectsResponse.
  * \internal
  *
- * \class BatchGetProjectsResponsePrivate
- *
- * \brief Private implementation for BatchGetProjectsResponse.
+ * \inmodule QtAwsCodeBuild
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new BatchGetProjectsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public BatchGetProjectsResponse instance.
+ * Constructs a BatchGetProjectsResponsePrivate object with public implementation \a q.
  */
 BatchGetProjectsResponsePrivate::BatchGetProjectsResponsePrivate(
     BatchGetProjectsResponse * const q) : CodeBuildResponsePrivate(q)
@@ -175,9 +168,7 @@ BatchGetProjectsResponsePrivate::BatchGetProjectsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeBuild BatchGetProjectsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeBuild BatchGetProjects response element from \a xml.
  */
 void BatchGetProjectsResponsePrivate::parseBatchGetProjectsResponse(QXmlStreamReader &xml)
 {

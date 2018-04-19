@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::EnableKeyResponse
- *
  * \brief The EnableKeyResponse class provides an interace for KMS EnableKey responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new EnableKeyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableKeyResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableKeyResponse::EnableKeyResponse(
         const EnableKeyRequest &request,
@@ -154,6 +149,9 @@ EnableKeyResponse::EnableKeyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableKeyRequest * EnableKeyResponse::request() const
 {
     Q_D(const EnableKeyResponse);
@@ -161,9 +159,8 @@ const EnableKeyRequest * EnableKeyResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS EnableKey response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS EnableKey \a response.
  */
 void EnableKeyResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void EnableKeyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::EnableKeyResponsePrivate
+ * \brief The EnableKeyResponsePrivate class provides private implementation for EnableKeyResponse.
  * \internal
  *
- * \class EnableKeyResponsePrivate
- *
- * \brief Private implementation for EnableKeyResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableKeyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableKeyResponse instance.
+ * Constructs a EnableKeyResponsePrivate object with public implementation \a q.
  */
 EnableKeyResponsePrivate::EnableKeyResponsePrivate(
     EnableKeyResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ EnableKeyResponsePrivate::EnableKeyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS EnableKeyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS EnableKey response element from \a xml.
  */
 void EnableKeyResponsePrivate::parseEnableKeyResponse(QXmlStreamReader &xml)
 {

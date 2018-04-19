@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteRoomRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a DeleteRoomRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a DeleteRoomRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 DeleteRoomRequestPrivate::DeleteRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, DeleteRoomRequest * const q)

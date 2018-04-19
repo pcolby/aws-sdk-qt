@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLoadBalancerRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteLoadBalancerRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLoadBalancerRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 DeleteLoadBalancerRequestPrivate::DeleteLoadBalancerRequestPrivate(
     const LightsailRequest::Action action, DeleteLoadBalancerRequest * const q)

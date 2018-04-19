@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSubscriptionRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DeleteSubscriptionRequestPrivate object for Shield \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSubscriptionRequestPrivate object for Shield \a action,
+ * with public implementation \a q.
  */
 DeleteSubscriptionRequestPrivate::DeleteSubscriptionRequestPrivate(
     const ShieldRequest::Action action, DeleteSubscriptionRequest * const q)

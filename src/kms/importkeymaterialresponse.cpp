@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ImportKeyMaterialResponse
- *
  * \brief The ImportKeyMaterialResponse class provides an interace for KMS ImportKeyMaterial responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ImportKeyMaterialResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportKeyMaterialResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportKeyMaterialResponse::ImportKeyMaterialResponse(
         const ImportKeyMaterialRequest &request,
@@ -154,6 +149,9 @@ ImportKeyMaterialResponse::ImportKeyMaterialResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportKeyMaterialRequest * ImportKeyMaterialResponse::request() const
 {
     Q_D(const ImportKeyMaterialResponse);
@@ -161,9 +159,8 @@ const ImportKeyMaterialRequest * ImportKeyMaterialResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS ImportKeyMaterial response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS ImportKeyMaterial \a response.
  */
 void ImportKeyMaterialResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void ImportKeyMaterialResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::ImportKeyMaterialResponsePrivate
+ * \brief The ImportKeyMaterialResponsePrivate class provides private implementation for ImportKeyMaterialResponse.
  * \internal
  *
- * \class ImportKeyMaterialResponsePrivate
- *
- * \brief Private implementation for ImportKeyMaterialResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportKeyMaterialResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportKeyMaterialResponse instance.
+ * Constructs a ImportKeyMaterialResponsePrivate object with public implementation \a q.
  */
 ImportKeyMaterialResponsePrivate::ImportKeyMaterialResponsePrivate(
     ImportKeyMaterialResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ ImportKeyMaterialResponsePrivate::ImportKeyMaterialResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS ImportKeyMaterialResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS ImportKeyMaterial response element from \a xml.
  */
 void ImportKeyMaterialResponsePrivate::parseImportKeyMaterialResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeDeploymentsResponse
- *
  * \brief The DescribeDeploymentsResponse class provides an interace for OpsWorks DescribeDeployments responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeDeploymentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeDeploymentsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeDeploymentsResponse::DescribeDeploymentsResponse(
         const DescribeDeploymentsRequest &request,
@@ -161,6 +156,9 @@ DescribeDeploymentsResponse::DescribeDeploymentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeDeploymentsRequest * DescribeDeploymentsResponse::request() const
 {
     Q_D(const DescribeDeploymentsResponse);
@@ -168,9 +166,8 @@ const DescribeDeploymentsRequest * DescribeDeploymentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeDeployments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeDeployments \a response.
  */
 void DescribeDeploymentsResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeDeploymentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeDeploymentsResponsePrivate
+ * \brief The DescribeDeploymentsResponsePrivate class provides private implementation for DescribeDeploymentsResponse.
  * \internal
  *
- * \class DescribeDeploymentsResponsePrivate
- *
- * \brief Private implementation for DescribeDeploymentsResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeDeploymentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeDeploymentsResponse instance.
+ * Constructs a DescribeDeploymentsResponsePrivate object with public implementation \a q.
  */
 DescribeDeploymentsResponsePrivate::DescribeDeploymentsResponsePrivate(
     DescribeDeploymentsResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeDeploymentsResponsePrivate::DescribeDeploymentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeDeploymentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeDeployments response element from \a xml.
  */
 void DescribeDeploymentsResponsePrivate::parseDescribeDeploymentsResponse(QXmlStreamReader &xml)
 {

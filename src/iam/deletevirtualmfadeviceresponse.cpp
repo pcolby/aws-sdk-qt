@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteVirtualMFADeviceResponse
- *
  * \brief The DeleteVirtualMFADeviceResponse class provides an interace for IAM DeleteVirtualMFADevice responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteVirtualMFADeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVirtualMFADeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVirtualMFADeviceResponse::DeleteVirtualMFADeviceResponse(
         const DeleteVirtualMFADeviceRequest &request,
@@ -120,6 +115,9 @@ DeleteVirtualMFADeviceResponse::DeleteVirtualMFADeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVirtualMFADeviceRequest * DeleteVirtualMFADeviceResponse::request() const
 {
     Q_D(const DeleteVirtualMFADeviceResponse);
@@ -127,9 +125,8 @@ const DeleteVirtualMFADeviceRequest * DeleteVirtualMFADeviceResponse::request() 
 }
 
 /*!
- * @brief  Parse a IAM DeleteVirtualMFADevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteVirtualMFADevice \a response.
  */
 void DeleteVirtualMFADeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteVirtualMFADeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteVirtualMFADeviceResponsePrivate
+ * \brief The DeleteVirtualMFADeviceResponsePrivate class provides private implementation for DeleteVirtualMFADeviceResponse.
  * \internal
  *
- * \class DeleteVirtualMFADeviceResponsePrivate
- *
- * \brief Private implementation for DeleteVirtualMFADeviceResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVirtualMFADeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVirtualMFADeviceResponse instance.
+ * Constructs a DeleteVirtualMFADeviceResponsePrivate object with public implementation \a q.
  */
 DeleteVirtualMFADeviceResponsePrivate::DeleteVirtualMFADeviceResponsePrivate(
     DeleteVirtualMFADeviceResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteVirtualMFADeviceResponsePrivate::DeleteVirtualMFADeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeleteVirtualMFADeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteVirtualMFADevice response element from \a xml.
  */
 void DeleteVirtualMFADeviceResponsePrivate::parseDeleteVirtualMFADeviceResponse(QXmlStreamReader &xml)
 {

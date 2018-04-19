@@ -29,10 +29,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeSeverityLevelsResponse
- *
  * \brief The DescribeSeverityLevelsResponse class provides an interace for Support DescribeSeverityLevels responses.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -107,11 +106,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeSeverityLevelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSeverityLevelsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSeverityLevelsResponse::DescribeSeverityLevelsResponse(
         const DescribeSeverityLevelsRequest &request,
@@ -123,6 +118,9 @@ DescribeSeverityLevelsResponse::DescribeSeverityLevelsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSeverityLevelsRequest * DescribeSeverityLevelsResponse::request() const
 {
     Q_D(const DescribeSeverityLevelsResponse);
@@ -130,9 +128,8 @@ const DescribeSeverityLevelsRequest * DescribeSeverityLevelsResponse::request() 
 }
 
 /*!
- * @brief  Parse a Support DescribeSeverityLevels response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Support DescribeSeverityLevels \a response.
  */
 void DescribeSeverityLevelsResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeSeverityLevelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Support::DescribeSeverityLevelsResponsePrivate
+ * \brief The DescribeSeverityLevelsResponsePrivate class provides private implementation for DescribeSeverityLevelsResponse.
  * \internal
  *
- * \class DescribeSeverityLevelsResponsePrivate
- *
- * \brief Private implementation for DescribeSeverityLevelsResponse.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSeverityLevelsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSeverityLevelsResponse instance.
+ * Constructs a DescribeSeverityLevelsResponsePrivate object with public implementation \a q.
  */
 DescribeSeverityLevelsResponsePrivate::DescribeSeverityLevelsResponsePrivate(
     DescribeSeverityLevelsResponse * const q) : SupportResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeSeverityLevelsResponsePrivate::DescribeSeverityLevelsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Support DescribeSeverityLevelsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Support DescribeSeverityLevels response element from \a xml.
  */
 void DescribeSeverityLevelsResponsePrivate::parseDescribeSeverityLevelsResponse(QXmlStreamReader &xml)
 {

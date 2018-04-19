@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteRoomSkillParameterResponse : public AlexaForBusinessRes
 public:
     DeleteRoomSkillParameterResponse(const DeleteRoomSkillParameterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteRoomSkillParameterRequest * request() const;
+    virtual const DeleteRoomSkillParameterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteRoomSkillParameterResponse)

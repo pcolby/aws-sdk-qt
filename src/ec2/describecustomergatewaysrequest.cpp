@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeCustomerGatewaysRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeCustomerGatewaysRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeCustomerGatewaysRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeCustomerGatewaysRequestPrivate::DescribeCustomerGatewaysRequestPrivate(
     const EC2Request::Action action, DescribeCustomerGatewaysRequest * const q)

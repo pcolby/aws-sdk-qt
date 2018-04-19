@@ -49,7 +49,7 @@ namespace SimpleDB {
  */
 
 /*!
- * Constructs a[n] SimpleDBRequest object for SimpleDB \a action.
+ * Constructs a SimpleDBRequest object for SimpleDB \a action.
  */
 SimpleDBRequest::SimpleDBRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new SimpleDBRequestPrivate(action, this))
@@ -249,8 +249,8 @@ QNetworkRequest SimpleDBRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a SimpleDBRequestPrivate object for SimpleDB \a action with,
- * public implementation \a q.
+ * Constructs a SimpleDBRequestPrivate object for SimpleDB \a action,
+ * with public implementation \a q.
  */
 SimpleDBRequestPrivate::SimpleDBRequestPrivate(const SimpleDBRequest::Action action, SimpleDBRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

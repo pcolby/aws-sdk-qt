@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUserMFAPreferenceResponse
- *
  * \brief The SetUserMFAPreferenceResponse class provides an interace for CognitoIdentityProvider SetUserMFAPreference responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new SetUserMFAPreferenceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetUserMFAPreferenceResponse object for \a reply to \a request, with parent \a parent.
  */
 SetUserMFAPreferenceResponse::SetUserMFAPreferenceResponse(
         const SetUserMFAPreferenceRequest &request,
@@ -65,6 +60,9 @@ SetUserMFAPreferenceResponse::SetUserMFAPreferenceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetUserMFAPreferenceRequest * SetUserMFAPreferenceResponse::request() const
 {
     Q_D(const SetUserMFAPreferenceResponse);
@@ -72,9 +70,8 @@ const SetUserMFAPreferenceRequest * SetUserMFAPreferenceResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider SetUserMFAPreference response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider SetUserMFAPreference \a response.
  */
 void SetUserMFAPreferenceResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void SetUserMFAPreferenceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::SetUserMFAPreferenceResponsePrivate
+ * \brief The SetUserMFAPreferenceResponsePrivate class provides private implementation for SetUserMFAPreferenceResponse.
  * \internal
  *
- * \class SetUserMFAPreferenceResponsePrivate
- *
- * \brief Private implementation for SetUserMFAPreferenceResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetUserMFAPreferenceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetUserMFAPreferenceResponse instance.
+ * Constructs a SetUserMFAPreferenceResponsePrivate object with public implementation \a q.
  */
 SetUserMFAPreferenceResponsePrivate::SetUserMFAPreferenceResponsePrivate(
     SetUserMFAPreferenceResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ SetUserMFAPreferenceResponsePrivate::SetUserMFAPreferenceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider SetUserMFAPreferenceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider SetUserMFAPreference response element from \a xml.
  */
 void SetUserMFAPreferenceResponsePrivate::parseSetUserMFAPreferenceResponse(QXmlStreamReader &xml)
 {

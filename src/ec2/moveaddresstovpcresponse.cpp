@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::MoveAddressToVpcResponse
- *
  * \brief The MoveAddressToVpcResponse class provides an interace for EC2 MoveAddressToVpc responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new MoveAddressToVpcResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a MoveAddressToVpcResponse object for \a reply to \a request, with parent \a parent.
  */
 MoveAddressToVpcResponse::MoveAddressToVpcResponse(
         const MoveAddressToVpcRequest &request,
@@ -59,6 +54,9 @@ MoveAddressToVpcResponse::MoveAddressToVpcResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const MoveAddressToVpcRequest * MoveAddressToVpcResponse::request() const
 {
     Q_D(const MoveAddressToVpcResponse);
@@ -66,9 +64,8 @@ const MoveAddressToVpcRequest * MoveAddressToVpcResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 MoveAddressToVpc response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 MoveAddressToVpc \a response.
  */
 void MoveAddressToVpcResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void MoveAddressToVpcResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::MoveAddressToVpcResponsePrivate
+ * \brief The MoveAddressToVpcResponsePrivate class provides private implementation for MoveAddressToVpcResponse.
  * \internal
  *
- * \class MoveAddressToVpcResponsePrivate
- *
- * \brief Private implementation for MoveAddressToVpcResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MoveAddressToVpcResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MoveAddressToVpcResponse instance.
+ * Constructs a MoveAddressToVpcResponsePrivate object with public implementation \a q.
  */
 MoveAddressToVpcResponsePrivate::MoveAddressToVpcResponsePrivate(
     MoveAddressToVpcResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ MoveAddressToVpcResponsePrivate::MoveAddressToVpcResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 MoveAddressToVpcResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 MoveAddressToVpc response element from \a xml.
  */
 void MoveAddressToVpcResponsePrivate::parseMoveAddressToVpcResponse(QXmlStreamReader &xml)
 {

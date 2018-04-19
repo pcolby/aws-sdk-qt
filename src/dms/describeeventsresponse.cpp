@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeEventsResponse
- *
  * \brief The DescribeEventsResponse class provides an interace for DatabaseMigrationService DescribeEvents responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEventsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEventsResponse::DescribeEventsResponse(
         const DescribeEventsRequest &request,
@@ -66,6 +61,9 @@ DescribeEventsResponse::DescribeEventsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEventsRequest * DescribeEventsResponse::request() const
 {
     Q_D(const DescribeEventsResponse);
@@ -73,9 +71,8 @@ const DescribeEventsRequest * DescribeEventsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DescribeEvents response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DescribeEvents \a response.
  */
 void DescribeEventsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeEventsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DescribeEventsResponsePrivate
+ * \brief The DescribeEventsResponsePrivate class provides private implementation for DescribeEventsResponse.
  * \internal
  *
- * \class DescribeEventsResponsePrivate
- *
- * \brief Private implementation for DescribeEventsResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEventsResponse instance.
+ * Constructs a DescribeEventsResponsePrivate object with public implementation \a q.
  */
 DescribeEventsResponsePrivate::DescribeEventsResponsePrivate(
     DescribeEventsResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeEventsResponsePrivate::DescribeEventsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DescribeEventsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DescribeEvents response element from \a xml.
  */
 void DescribeEventsResponsePrivate::parseDescribeEventsResponse(QXmlStreamReader &xml)
 {

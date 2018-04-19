@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetVpcLinksRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GetVpcLinksRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetVpcLinksRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetVpcLinksRequestPrivate::GetVpcLinksRequestPrivate(
     const APIGatewayRequest::Action action, GetVpcLinksRequest * const q)

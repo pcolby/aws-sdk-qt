@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReportInstanceStatusResponse
- *
  * \brief The ReportInstanceStatusResponse class provides an interace for EC2 ReportInstanceStatus responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReportInstanceStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReportInstanceStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 ReportInstanceStatusResponse::ReportInstanceStatusResponse(
         const ReportInstanceStatusRequest &request,
@@ -59,6 +54,9 @@ ReportInstanceStatusResponse::ReportInstanceStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReportInstanceStatusRequest * ReportInstanceStatusResponse::request() const
 {
     Q_D(const ReportInstanceStatusResponse);
@@ -66,9 +64,8 @@ const ReportInstanceStatusRequest * ReportInstanceStatusResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EC2 ReportInstanceStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ReportInstanceStatus \a response.
  */
 void ReportInstanceStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ReportInstanceStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ReportInstanceStatusResponsePrivate
+ * \brief The ReportInstanceStatusResponsePrivate class provides private implementation for ReportInstanceStatusResponse.
  * \internal
  *
- * \class ReportInstanceStatusResponsePrivate
- *
- * \brief Private implementation for ReportInstanceStatusResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReportInstanceStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReportInstanceStatusResponse instance.
+ * Constructs a ReportInstanceStatusResponsePrivate object with public implementation \a q.
  */
 ReportInstanceStatusResponsePrivate::ReportInstanceStatusResponsePrivate(
     ReportInstanceStatusResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ReportInstanceStatusResponsePrivate::ReportInstanceStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ReportInstanceStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ReportInstanceStatus response element from \a xml.
  */
 void ReportInstanceStatusResponsePrivate::parseReportInstanceStatusResponse(QXmlStreamReader &xml)
 {

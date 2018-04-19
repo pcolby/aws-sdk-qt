@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetQueueAttributesResponse : public SQSResponse {
 public:
     GetQueueAttributesResponse(const GetQueueAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetQueueAttributesRequest * request() const;
+    virtual const GetQueueAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetQueueAttributesResponse)

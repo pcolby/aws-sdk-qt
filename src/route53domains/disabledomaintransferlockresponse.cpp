@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::DisableDomainTransferLockResponse
- *
  * \brief The DisableDomainTransferLockResponse class provides an interace for Route53Domains DisableDomainTransferLock responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new DisableDomainTransferLockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisableDomainTransferLockResponse object for \a reply to \a request, with parent \a parent.
  */
 DisableDomainTransferLockResponse::DisableDomainTransferLockResponse(
         const DisableDomainTransferLockRequest &request,
@@ -56,6 +51,9 @@ DisableDomainTransferLockResponse::DisableDomainTransferLockResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisableDomainTransferLockRequest * DisableDomainTransferLockResponse::request() const
 {
     Q_D(const DisableDomainTransferLockResponse);
@@ -63,9 +61,8 @@ const DisableDomainTransferLockRequest * DisableDomainTransferLockResponse::requ
 }
 
 /*!
- * @brief  Parse a Route53Domains DisableDomainTransferLock response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains DisableDomainTransferLock \a response.
  */
 void DisableDomainTransferLockResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DisableDomainTransferLockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::DisableDomainTransferLockResponsePrivate
+ * \brief The DisableDomainTransferLockResponsePrivate class provides private implementation for DisableDomainTransferLockResponse.
  * \internal
  *
- * \class DisableDomainTransferLockResponsePrivate
- *
- * \brief Private implementation for DisableDomainTransferLockResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisableDomainTransferLockResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisableDomainTransferLockResponse instance.
+ * Constructs a DisableDomainTransferLockResponsePrivate object with public implementation \a q.
  */
 DisableDomainTransferLockResponsePrivate::DisableDomainTransferLockResponsePrivate(
     DisableDomainTransferLockResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ DisableDomainTransferLockResponsePrivate::DisableDomainTransferLockResponsePriva
 }
 
 /*!
- * @brief  Parse an Route53Domains DisableDomainTransferLockResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains DisableDomainTransferLock response element from \a xml.
  */
 void DisableDomainTransferLockResponsePrivate::parseDisableDomainTransferLockResponse(QXmlStreamReader &xml)
 {

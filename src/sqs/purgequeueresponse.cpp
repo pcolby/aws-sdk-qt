@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::PurgeQueueResponse
- *
  * \brief The PurgeQueueResponse class provides an interace for SQS PurgeQueue responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new PurgeQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PurgeQueueResponse object for \a reply to \a request, with parent \a parent.
  */
 PurgeQueueResponse::PurgeQueueResponse(
         const PurgeQueueRequest &request,
@@ -121,6 +116,9 @@ PurgeQueueResponse::PurgeQueueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PurgeQueueRequest * PurgeQueueResponse::request() const
 {
     Q_D(const PurgeQueueResponse);
@@ -128,9 +126,8 @@ const PurgeQueueRequest * PurgeQueueResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS PurgeQueue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS PurgeQueue \a response.
  */
 void PurgeQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void PurgeQueueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::PurgeQueueResponsePrivate
+ * \brief The PurgeQueueResponsePrivate class provides private implementation for PurgeQueueResponse.
  * \internal
  *
- * \class PurgeQueueResponsePrivate
- *
- * \brief Private implementation for PurgeQueueResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurgeQueueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PurgeQueueResponse instance.
+ * Constructs a PurgeQueueResponsePrivate object with public implementation \a q.
  */
 PurgeQueueResponsePrivate::PurgeQueueResponsePrivate(
     PurgeQueueResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ PurgeQueueResponsePrivate::PurgeQueueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS PurgeQueueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS PurgeQueue response element from \a xml.
  */
 void PurgeQueueResponsePrivate::parsePurgeQueueResponse(QXmlStreamReader &xml)
 {

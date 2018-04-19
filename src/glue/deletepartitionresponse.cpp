@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeletePartitionResponse
- *
  * \brief The DeletePartitionResponse class provides an interace for Glue DeletePartition responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeletePartitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeletePartitionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeletePartitionResponse::DeletePartitionResponse(
         const DeletePartitionRequest &request,
@@ -58,6 +53,9 @@ DeletePartitionResponse::DeletePartitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeletePartitionRequest * DeletePartitionResponse::request() const
 {
     Q_D(const DeletePartitionResponse);
@@ -65,9 +63,8 @@ const DeletePartitionRequest * DeletePartitionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue DeletePartition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue DeletePartition \a response.
  */
 void DeletePartitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeletePartitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::DeletePartitionResponsePrivate
+ * \brief The DeletePartitionResponsePrivate class provides private implementation for DeletePartitionResponse.
  * \internal
  *
- * \class DeletePartitionResponsePrivate
- *
- * \brief Private implementation for DeletePartitionResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePartitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeletePartitionResponse instance.
+ * Constructs a DeletePartitionResponsePrivate object with public implementation \a q.
  */
 DeletePartitionResponsePrivate::DeletePartitionResponsePrivate(
     DeletePartitionResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ DeletePartitionResponsePrivate::DeletePartitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue DeletePartitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue DeletePartition response element from \a xml.
  */
 void DeletePartitionResponsePrivate::parseDeletePartitionResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetIdResponse : public CognitoIdentityResponse {
 public:
     GetIdResponse(const GetIdRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetIdRequest * request() const;
+    virtual const GetIdRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetIdResponse)

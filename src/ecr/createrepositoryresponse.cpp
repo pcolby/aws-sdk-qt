@@ -29,10 +29,9 @@ namespace ECR {
 
 /*!
  * \class QtAws::ECR::CreateRepositoryResponse
- *
  * \brief The CreateRepositoryResponse class provides an interace for ECR CreateRepository responses.
  *
- * \ingroup ECR
+ * \inmodule QtAwsECR
  *
  *  Amazon Elastic Container Registry (Amazon ECR) is a managed Docker registry service. Customers can use the familiar
  *  Docker CLI to push, pull, and manage images. Amazon ECR provides a secure, scalable, and reliable registry. Amazon ECR
@@ -43,11 +42,7 @@ namespace ECR {
  */
 
 /*!
- * @brief  Constructs a new CreateRepositoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRepositoryResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRepositoryResponse::CreateRepositoryResponse(
         const CreateRepositoryRequest &request,
@@ -59,6 +54,9 @@ CreateRepositoryResponse::CreateRepositoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRepositoryRequest * CreateRepositoryResponse::request() const
 {
     Q_D(const CreateRepositoryResponse);
@@ -66,9 +64,8 @@ const CreateRepositoryRequest * CreateRepositoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECR CreateRepository response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECR CreateRepository \a response.
  */
 void CreateRepositoryResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateRepositoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECR::CreateRepositoryResponsePrivate
+ * \brief The CreateRepositoryResponsePrivate class provides private implementation for CreateRepositoryResponse.
  * \internal
  *
- * \class CreateRepositoryResponsePrivate
- *
- * \brief Private implementation for CreateRepositoryResponse.
+ * \inmodule QtAwsECR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRepositoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRepositoryResponse instance.
+ * Constructs a CreateRepositoryResponsePrivate object with public implementation \a q.
  */
 CreateRepositoryResponsePrivate::CreateRepositoryResponsePrivate(
     CreateRepositoryResponse * const q) : ECRResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateRepositoryResponsePrivate::CreateRepositoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECR CreateRepositoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECR CreateRepository response element from \a xml.
  */
 void CreateRepositoryResponsePrivate::parseCreateRepositoryResponse(QXmlStreamReader &xml)
 {

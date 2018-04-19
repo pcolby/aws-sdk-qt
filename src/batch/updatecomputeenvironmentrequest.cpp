@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * UpdateComputeEnvironmentRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a UpdateComputeEnvironmentRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a UpdateComputeEnvironmentRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 UpdateComputeEnvironmentRequestPrivate::UpdateComputeEnvironmentRequestPrivate(
     const BatchRequest::Action action, UpdateComputeEnvironmentRequest * const q)

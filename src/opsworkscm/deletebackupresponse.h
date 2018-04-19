@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBackupResponse : public OpsWorksCMResponse {
 public:
     DeleteBackupResponse(const DeleteBackupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBackupRequest * request() const;
+    virtual const DeleteBackupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBackupResponse)

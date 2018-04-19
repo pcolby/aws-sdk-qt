@@ -29,10 +29,9 @@ namespace Firehose {
 
 /*!
  * \class QtAws::Firehose::UpdateDestinationResponse
- *
  * \brief The UpdateDestinationResponse class provides an interace for Firehose UpdateDestination responses.
  *
- * \ingroup Firehose
+ * \inmodule QtAwsFirehose
  *
  *  <fullname>Amazon Kinesis Firehose API Reference</fullname>
  * 
@@ -43,11 +42,7 @@ namespace Firehose {
  */
 
 /*!
- * @brief  Constructs a new UpdateDestinationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateDestinationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateDestinationResponse::UpdateDestinationResponse(
         const UpdateDestinationRequest &request,
@@ -59,6 +54,9 @@ UpdateDestinationResponse::UpdateDestinationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateDestinationRequest * UpdateDestinationResponse::request() const
 {
     Q_D(const UpdateDestinationResponse);
@@ -66,9 +64,8 @@ const UpdateDestinationRequest * UpdateDestinationResponse::request() const
 }
 
 /*!
- * @brief  Parse a Firehose UpdateDestination response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Firehose UpdateDestination \a response.
  */
 void UpdateDestinationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void UpdateDestinationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Firehose::UpdateDestinationResponsePrivate
+ * \brief The UpdateDestinationResponsePrivate class provides private implementation for UpdateDestinationResponse.
  * \internal
  *
- * \class UpdateDestinationResponsePrivate
- *
- * \brief Private implementation for UpdateDestinationResponse.
+ * \inmodule QtAwsFirehose
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateDestinationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateDestinationResponse instance.
+ * Constructs a UpdateDestinationResponsePrivate object with public implementation \a q.
  */
 UpdateDestinationResponsePrivate::UpdateDestinationResponsePrivate(
     UpdateDestinationResponse * const q) : FirehoseResponsePrivate(q)
@@ -99,9 +92,7 @@ UpdateDestinationResponsePrivate::UpdateDestinationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Firehose UpdateDestinationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Firehose UpdateDestination response element from \a xml.
  */
 void UpdateDestinationResponsePrivate::parseUpdateDestinationResponse(QXmlStreamReader &xml)
 {

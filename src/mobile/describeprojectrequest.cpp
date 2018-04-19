@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DescribeProjectRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DescribeProjectRequestPrivate object for Mobile \a action with,
- * public implementation \a q.
+ * Constructs a DescribeProjectRequestPrivate object for Mobile \a action,
+ * with public implementation \a q.
  */
 DescribeProjectRequestPrivate::DescribeProjectRequestPrivate(
     const MobileRequest::Action action, DescribeProjectRequest * const q)

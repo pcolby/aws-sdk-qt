@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::GetContactReachabilityStatusResponse
- *
  * \brief The GetContactReachabilityStatusResponse class provides an interace for Route53Domains GetContactReachabilityStatus responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new GetContactReachabilityStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetContactReachabilityStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 GetContactReachabilityStatusResponse::GetContactReachabilityStatusResponse(
         const GetContactReachabilityStatusRequest &request,
@@ -56,6 +51,9 @@ GetContactReachabilityStatusResponse::GetContactReachabilityStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetContactReachabilityStatusRequest * GetContactReachabilityStatusResponse::request() const
 {
     Q_D(const GetContactReachabilityStatusResponse);
@@ -63,9 +61,8 @@ const GetContactReachabilityStatusRequest * GetContactReachabilityStatusResponse
 }
 
 /*!
- * @brief  Parse a Route53Domains GetContactReachabilityStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains GetContactReachabilityStatus \a response.
  */
 void GetContactReachabilityStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void GetContactReachabilityStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::GetContactReachabilityStatusResponsePrivate
+ * \brief The GetContactReachabilityStatusResponsePrivate class provides private implementation for GetContactReachabilityStatusResponse.
  * \internal
  *
- * \class GetContactReachabilityStatusResponsePrivate
- *
- * \brief Private implementation for GetContactReachabilityStatusResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetContactReachabilityStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetContactReachabilityStatusResponse instance.
+ * Constructs a GetContactReachabilityStatusResponsePrivate object with public implementation \a q.
  */
 GetContactReachabilityStatusResponsePrivate::GetContactReachabilityStatusResponsePrivate(
     GetContactReachabilityStatusResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ GetContactReachabilityStatusResponsePrivate::GetContactReachabilityStatusRespons
 }
 
 /*!
- * @brief  Parse an Route53Domains GetContactReachabilityStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains GetContactReachabilityStatus response element from \a xml.
  */
 void GetContactReachabilityStatusResponsePrivate::parseGetContactReachabilityStatusResponse(QXmlStreamReader &xml)
 {

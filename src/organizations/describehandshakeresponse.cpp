@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DescribeHandshakeResponse
- *
  * \brief The DescribeHandshakeResponse class provides an interace for Organizations DescribeHandshake responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DescribeHandshakeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeHandshakeResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeHandshakeResponse::DescribeHandshakeResponse(
         const DescribeHandshakeRequest &request,
@@ -197,6 +192,9 @@ DescribeHandshakeResponse::DescribeHandshakeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeHandshakeRequest * DescribeHandshakeResponse::request() const
 {
     Q_D(const DescribeHandshakeResponse);
@@ -204,9 +202,8 @@ const DescribeHandshakeRequest * DescribeHandshakeResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations DescribeHandshake response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations DescribeHandshake \a response.
  */
 void DescribeHandshakeResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void DescribeHandshakeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::DescribeHandshakeResponsePrivate
+ * \brief The DescribeHandshakeResponsePrivate class provides private implementation for DescribeHandshakeResponse.
  * \internal
  *
- * \class DescribeHandshakeResponsePrivate
- *
- * \brief Private implementation for DescribeHandshakeResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHandshakeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeHandshakeResponse instance.
+ * Constructs a DescribeHandshakeResponsePrivate object with public implementation \a q.
  */
 DescribeHandshakeResponsePrivate::DescribeHandshakeResponsePrivate(
     DescribeHandshakeResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ DescribeHandshakeResponsePrivate::DescribeHandshakeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations DescribeHandshakeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations DescribeHandshake response element from \a xml.
  */
 void DescribeHandshakeResponsePrivate::parseDescribeHandshakeResponse(QXmlStreamReader &xml)
 {

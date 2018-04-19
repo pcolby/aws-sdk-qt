@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SendBounceResponse
- *
  * \brief The SendBounceResponse class provides an interace for SES SendBounce responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SendBounceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendBounceResponse object for \a reply to \a request, with parent \a parent.
  */
 SendBounceResponse::SendBounceResponse(
         const SendBounceRequest &request,
@@ -66,6 +61,9 @@ SendBounceResponse::SendBounceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendBounceRequest * SendBounceResponse::request() const
 {
     Q_D(const SendBounceResponse);
@@ -73,9 +71,8 @@ const SendBounceRequest * SendBounceResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES SendBounce response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SendBounce \a response.
  */
 void SendBounceResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SendBounceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::SendBounceResponsePrivate
+ * \brief The SendBounceResponsePrivate class provides private implementation for SendBounceResponse.
  * \internal
  *
- * \class SendBounceResponsePrivate
- *
- * \brief Private implementation for SendBounceResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendBounceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendBounceResponse instance.
+ * Constructs a SendBounceResponsePrivate object with public implementation \a q.
  */
 SendBounceResponsePrivate::SendBounceResponsePrivate(
     SendBounceResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SendBounceResponsePrivate::SendBounceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES SendBounceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SendBounce response element from \a xml.
  */
 void SendBounceResponsePrivate::parseSendBounceResponse(QXmlStreamReader &xml)
 {

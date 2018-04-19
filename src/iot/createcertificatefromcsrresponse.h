@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateCertificateFromCsrResponse : public IoTResponse {
 public:
     CreateCertificateFromCsrResponse(const CreateCertificateFromCsrRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateCertificateFromCsrRequest * request() const;
+    virtual const CreateCertificateFromCsrRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateCertificateFromCsrResponse)

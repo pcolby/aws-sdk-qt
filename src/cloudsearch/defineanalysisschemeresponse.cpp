@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DefineAnalysisSchemeResponse
- *
  * \brief The DefineAnalysisSchemeResponse class provides an interace for CloudSearch DefineAnalysisScheme responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DefineAnalysisSchemeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DefineAnalysisSchemeResponse object for \a reply to \a request, with parent \a parent.
  */
 DefineAnalysisSchemeResponse::DefineAnalysisSchemeResponse(
         const DefineAnalysisSchemeRequest &request,
@@ -66,6 +61,9 @@ DefineAnalysisSchemeResponse::DefineAnalysisSchemeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DefineAnalysisSchemeRequest * DefineAnalysisSchemeResponse::request() const
 {
     Q_D(const DefineAnalysisSchemeResponse);
@@ -73,9 +71,8 @@ const DefineAnalysisSchemeRequest * DefineAnalysisSchemeResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudSearch DefineAnalysisScheme response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DefineAnalysisScheme \a response.
  */
 void DefineAnalysisSchemeResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DefineAnalysisSchemeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DefineAnalysisSchemeResponsePrivate
+ * \brief The DefineAnalysisSchemeResponsePrivate class provides private implementation for DefineAnalysisSchemeResponse.
  * \internal
  *
- * \class DefineAnalysisSchemeResponsePrivate
- *
- * \brief Private implementation for DefineAnalysisSchemeResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DefineAnalysisSchemeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DefineAnalysisSchemeResponse instance.
+ * Constructs a DefineAnalysisSchemeResponsePrivate object with public implementation \a q.
  */
 DefineAnalysisSchemeResponsePrivate::DefineAnalysisSchemeResponsePrivate(
     DefineAnalysisSchemeResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DefineAnalysisSchemeResponsePrivate::DefineAnalysisSchemeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DefineAnalysisSchemeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DefineAnalysisScheme response element from \a xml.
  */
 void DefineAnalysisSchemeResponsePrivate::parseDefineAnalysisSchemeResponse(QXmlStreamReader &xml)
 {

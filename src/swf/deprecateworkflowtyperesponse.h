@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeprecateWorkflowTypeResponse : public SWFResponse {
 public:
     DeprecateWorkflowTypeResponse(const DeprecateWorkflowTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeprecateWorkflowTypeRequest * request() const;
+    virtual const DeprecateWorkflowTypeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeprecateWorkflowTypeResponse)

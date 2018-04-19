@@ -29,10 +29,9 @@ namespace MigrationHub {
 
 /*!
  * \class QtAws::MigrationHub::NotifyMigrationTaskStateResponse
- *
  * \brief The NotifyMigrationTaskStateResponse class provides an interace for MigrationHub NotifyMigrationTaskState responses.
  *
- * \ingroup MigrationHub
+ * \inmodule QtAwsMigrationHub
  *
  *  The AWS Migration Hub API methods help to obtain server and application migration status and integrate your
  *  resource-specific migration tool by providing a programmatic interface to Migration Hub.
@@ -41,11 +40,7 @@ namespace MigrationHub {
  */
 
 /*!
- * @brief  Constructs a new NotifyMigrationTaskStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a NotifyMigrationTaskStateResponse object for \a reply to \a request, with parent \a parent.
  */
 NotifyMigrationTaskStateResponse::NotifyMigrationTaskStateResponse(
         const NotifyMigrationTaskStateRequest &request,
@@ -57,6 +52,9 @@ NotifyMigrationTaskStateResponse::NotifyMigrationTaskStateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const NotifyMigrationTaskStateRequest * NotifyMigrationTaskStateResponse::request() const
 {
     Q_D(const NotifyMigrationTaskStateResponse);
@@ -64,9 +62,8 @@ const NotifyMigrationTaskStateRequest * NotifyMigrationTaskStateResponse::reques
 }
 
 /*!
- * @brief  Parse a MigrationHub NotifyMigrationTaskState response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MigrationHub NotifyMigrationTaskState \a response.
  */
 void NotifyMigrationTaskStateResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void NotifyMigrationTaskStateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MigrationHub::NotifyMigrationTaskStateResponsePrivate
+ * \brief The NotifyMigrationTaskStateResponsePrivate class provides private implementation for NotifyMigrationTaskStateResponse.
  * \internal
  *
- * \class NotifyMigrationTaskStateResponsePrivate
- *
- * \brief Private implementation for NotifyMigrationTaskStateResponse.
+ * \inmodule QtAwsMigrationHub
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new NotifyMigrationTaskStateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public NotifyMigrationTaskStateResponse instance.
+ * Constructs a NotifyMigrationTaskStateResponsePrivate object with public implementation \a q.
  */
 NotifyMigrationTaskStateResponsePrivate::NotifyMigrationTaskStateResponsePrivate(
     NotifyMigrationTaskStateResponse * const q) : MigrationHubResponsePrivate(q)
@@ -97,9 +90,7 @@ NotifyMigrationTaskStateResponsePrivate::NotifyMigrationTaskStateResponsePrivate
 }
 
 /*!
- * @brief  Parse an MigrationHub NotifyMigrationTaskStateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MigrationHub NotifyMigrationTaskState response element from \a xml.
  */
 void NotifyMigrationTaskStateResponsePrivate::parseNotifyMigrationTaskStateResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CodeCommit {
 
 /*!
  * \class QtAws::CodeCommit::GetMergeConflictsResponse
- *
  * \brief The GetMergeConflictsResponse class provides an interace for CodeCommit GetMergeConflicts responses.
  *
- * \ingroup CodeCommit
+ * \inmodule QtAwsCodeCommit
  *
  *  <fullname>AWS CodeCommit</fullname>
  * 
@@ -229,11 +228,7 @@ namespace CodeCommit {
  */
 
 /*!
- * @brief  Constructs a new GetMergeConflictsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetMergeConflictsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetMergeConflictsResponse::GetMergeConflictsResponse(
         const GetMergeConflictsRequest &request,
@@ -245,6 +240,9 @@ GetMergeConflictsResponse::GetMergeConflictsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetMergeConflictsRequest * GetMergeConflictsResponse::request() const
 {
     Q_D(const GetMergeConflictsResponse);
@@ -252,9 +250,8 @@ const GetMergeConflictsRequest * GetMergeConflictsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeCommit GetMergeConflicts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeCommit GetMergeConflicts \a response.
  */
 void GetMergeConflictsResponse::parseSuccess(QIODevice &response)
 {
@@ -264,19 +261,15 @@ void GetMergeConflictsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeCommit::GetMergeConflictsResponsePrivate
+ * \brief The GetMergeConflictsResponsePrivate class provides private implementation for GetMergeConflictsResponse.
  * \internal
  *
- * \class GetMergeConflictsResponsePrivate
- *
- * \brief Private implementation for GetMergeConflictsResponse.
+ * \inmodule QtAwsCodeCommit
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetMergeConflictsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetMergeConflictsResponse instance.
+ * Constructs a GetMergeConflictsResponsePrivate object with public implementation \a q.
  */
 GetMergeConflictsResponsePrivate::GetMergeConflictsResponsePrivate(
     GetMergeConflictsResponse * const q) : CodeCommitResponsePrivate(q)
@@ -285,9 +278,7 @@ GetMergeConflictsResponsePrivate::GetMergeConflictsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeCommit GetMergeConflictsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeCommit GetMergeConflicts response element from \a xml.
  */
 void GetMergeConflictsResponsePrivate::parseGetMergeConflictsResponse(QXmlStreamReader &xml)
 {

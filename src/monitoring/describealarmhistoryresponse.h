@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAlarmHistoryResponse : public CloudWatchResponse {
 public:
     DescribeAlarmHistoryResponse(const DescribeAlarmHistoryRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAlarmHistoryRequest * request() const;
+    virtual const DescribeAlarmHistoryRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAlarmHistoryResponse)

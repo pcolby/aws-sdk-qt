@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::CreateSegmentResponse
- *
  * \brief The CreateSegmentResponse class provides an interace for Pinpoint CreateSegment responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::createSegment
  */
 
 /*!
- * @brief  Constructs a new CreateSegmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSegmentResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSegmentResponse::CreateSegmentResponse(
         const CreateSegmentRequest &request,
@@ -55,6 +50,9 @@ CreateSegmentResponse::CreateSegmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSegmentRequest * CreateSegmentResponse::request() const
 {
     Q_D(const CreateSegmentResponse);
@@ -62,9 +60,8 @@ const CreateSegmentRequest * CreateSegmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint CreateSegment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint CreateSegment \a response.
  */
 void CreateSegmentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateSegmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::CreateSegmentResponsePrivate
+ * \brief The CreateSegmentResponsePrivate class provides private implementation for CreateSegmentResponse.
  * \internal
  *
- * \class CreateSegmentResponsePrivate
- *
- * \brief Private implementation for CreateSegmentResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSegmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSegmentResponse instance.
+ * Constructs a CreateSegmentResponsePrivate object with public implementation \a q.
  */
 CreateSegmentResponsePrivate::CreateSegmentResponsePrivate(
     CreateSegmentResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateSegmentResponsePrivate::CreateSegmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint CreateSegmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint CreateSegment response element from \a xml.
  */
 void CreateSegmentResponsePrivate::parseCreateSegmentResponse(QXmlStreamReader &xml)
 {

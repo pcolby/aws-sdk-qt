@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::CreateRealtimeEndpointResponse
- *
  * \brief The CreateRealtimeEndpointResponse class provides an interace for MachineLearning CreateRealtimeEndpoint responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::createRealtimeEndpoint
  */
 
 /*!
- * @brief  Constructs a new CreateRealtimeEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateRealtimeEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateRealtimeEndpointResponse::CreateRealtimeEndpointResponse(
         const CreateRealtimeEndpointRequest &request,
@@ -55,6 +50,9 @@ CreateRealtimeEndpointResponse::CreateRealtimeEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateRealtimeEndpointRequest * CreateRealtimeEndpointResponse::request() const
 {
     Q_D(const CreateRealtimeEndpointResponse);
@@ -62,9 +60,8 @@ const CreateRealtimeEndpointRequest * CreateRealtimeEndpointResponse::request() 
 }
 
 /*!
- * @brief  Parse a MachineLearning CreateRealtimeEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning CreateRealtimeEndpoint \a response.
  */
 void CreateRealtimeEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateRealtimeEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::CreateRealtimeEndpointResponsePrivate
+ * \brief The CreateRealtimeEndpointResponsePrivate class provides private implementation for CreateRealtimeEndpointResponse.
  * \internal
  *
- * \class CreateRealtimeEndpointResponsePrivate
- *
- * \brief Private implementation for CreateRealtimeEndpointResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateRealtimeEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateRealtimeEndpointResponse instance.
+ * Constructs a CreateRealtimeEndpointResponsePrivate object with public implementation \a q.
  */
 CreateRealtimeEndpointResponsePrivate::CreateRealtimeEndpointResponsePrivate(
     CreateRealtimeEndpointResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateRealtimeEndpointResponsePrivate::CreateRealtimeEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning CreateRealtimeEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning CreateRealtimeEndpoint response element from \a xml.
  */
 void CreateRealtimeEndpointResponsePrivate::parseCreateRealtimeEndpointResponse(QXmlStreamReader &xml)
 {

@@ -180,9 +180,8 @@ QtAws::Core::AwsAbstractResponse * ListResourceTagsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListResourceTagsRequestPrivate object for KMS \a action with,
- * public implementation \a q.
+ * Constructs a ListResourceTagsRequestPrivate object for KMS \a action,
+ * with public implementation \a q.
  */
 ListResourceTagsRequestPrivate::ListResourceTagsRequestPrivate(
     const KMSRequest::Action action, ListResourceTagsRequest * const q)

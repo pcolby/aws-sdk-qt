@@ -135,9 +135,8 @@ QtAws::Core::AwsAbstractResponse * ListEnvironmentsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListEnvironmentsRequestPrivate object for Cloud9 \a action with,
- * public implementation \a q.
+ * Constructs a ListEnvironmentsRequestPrivate object for Cloud9 \a action,
+ * with public implementation \a q.
  */
 ListEnvironmentsRequestPrivate::ListEnvironmentsRequestPrivate(
     const Cloud9Request::Action action, ListEnvironmentsRequest * const q)

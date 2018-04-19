@@ -29,10 +29,9 @@ namespace ServiceDiscovery {
 
 /*!
  * \class QtAws::ServiceDiscovery::ListServicesResponse
- *
  * \brief The ListServicesResponse class provides an interace for ServiceDiscovery ListServices responses.
  *
- * \ingroup ServiceDiscovery
+ * \inmodule QtAwsServiceDiscovery
  *
  *  Amazon Route 53 auto naming lets you configure public or private namespaces that your microservice applications run in.
  *  When instances of the service become available, you can call the auto naming API to register the instance, and Route 53
@@ -43,11 +42,7 @@ namespace ServiceDiscovery {
  */
 
 /*!
- * @brief  Constructs a new ListServicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListServicesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListServicesResponse::ListServicesResponse(
         const ListServicesRequest &request,
@@ -59,6 +54,9 @@ ListServicesResponse::ListServicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListServicesRequest * ListServicesResponse::request() const
 {
     Q_D(const ListServicesResponse);
@@ -66,9 +64,8 @@ const ListServicesRequest * ListServicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceDiscovery ListServices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceDiscovery ListServices \a response.
  */
 void ListServicesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ListServicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceDiscovery::ListServicesResponsePrivate
+ * \brief The ListServicesResponsePrivate class provides private implementation for ListServicesResponse.
  * \internal
  *
- * \class ListServicesResponsePrivate
- *
- * \brief Private implementation for ListServicesResponse.
+ * \inmodule QtAwsServiceDiscovery
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListServicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListServicesResponse instance.
+ * Constructs a ListServicesResponsePrivate object with public implementation \a q.
  */
 ListServicesResponsePrivate::ListServicesResponsePrivate(
     ListServicesResponse * const q) : ServiceDiscoveryResponsePrivate(q)
@@ -99,9 +92,7 @@ ListServicesResponsePrivate::ListServicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceDiscovery ListServicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceDiscovery ListServices response element from \a xml.
  */
 void ListServicesResponsePrivate::parseListServicesResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::DeleteHITResponse
- *
  * \brief The DeleteHITResponse class provides an interace for MTurk DeleteHIT responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::deleteHIT
  */
 
 /*!
- * @brief  Constructs a new DeleteHITResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteHITResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteHITResponse::DeleteHITResponse(
         const DeleteHITRequest &request,
@@ -55,6 +50,9 @@ DeleteHITResponse::DeleteHITResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteHITRequest * DeleteHITResponse::request() const
 {
     Q_D(const DeleteHITResponse);
@@ -62,9 +60,8 @@ const DeleteHITRequest * DeleteHITResponse::request() const
 }
 
 /*!
- * @brief  Parse a MTurk DeleteHIT response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk DeleteHIT \a response.
  */
 void DeleteHITResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteHITResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::DeleteHITResponsePrivate
+ * \brief The DeleteHITResponsePrivate class provides private implementation for DeleteHITResponse.
  * \internal
  *
- * \class DeleteHITResponsePrivate
- *
- * \brief Private implementation for DeleteHITResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteHITResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteHITResponse instance.
+ * Constructs a DeleteHITResponsePrivate object with public implementation \a q.
  */
 DeleteHITResponsePrivate::DeleteHITResponsePrivate(
     DeleteHITResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteHITResponsePrivate::DeleteHITResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk DeleteHITResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk DeleteHIT response element from \a xml.
  */
 void DeleteHITResponsePrivate::parseDeleteHITResponse(QXmlStreamReader &xml)
 {

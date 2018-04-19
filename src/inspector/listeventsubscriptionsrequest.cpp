@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ListEventSubscriptionsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a ListEventSubscriptionsRequestPrivate object for Inspector \a action with,
- * public implementation \a q.
+ * Constructs a ListEventSubscriptionsRequestPrivate object for Inspector \a action,
+ * with public implementation \a q.
  */
 ListEventSubscriptionsRequestPrivate::ListEventSubscriptionsRequestPrivate(
     const InspectorRequest::Action action, ListEventSubscriptionsRequest * const q)

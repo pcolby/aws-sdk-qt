@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBucketCorsRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetBucketCorsRequestPrivate object for S3 \a action with,
- * public implementation \a q.
+ * Constructs a GetBucketCorsRequestPrivate object for S3 \a action,
+ * with public implementation \a q.
  */
 GetBucketCorsRequestPrivate::GetBucketCorsRequestPrivate(
     const S3Request::Action action, GetBucketCorsRequest * const q)

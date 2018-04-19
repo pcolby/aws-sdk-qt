@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::UpdateContainerAgentResponse
- *
  * \brief The UpdateContainerAgentResponse class provides an interace for ECS UpdateContainerAgent responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new UpdateContainerAgentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateContainerAgentResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateContainerAgentResponse::UpdateContainerAgentResponse(
         const UpdateContainerAgentRequest &request,
@@ -72,6 +67,9 @@ UpdateContainerAgentResponse::UpdateContainerAgentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateContainerAgentRequest * UpdateContainerAgentResponse::request() const
 {
     Q_D(const UpdateContainerAgentResponse);
@@ -79,9 +77,8 @@ const UpdateContainerAgentRequest * UpdateContainerAgentResponse::request() cons
 }
 
 /*!
- * @brief  Parse a ECS UpdateContainerAgent response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS UpdateContainerAgent \a response.
  */
 void UpdateContainerAgentResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void UpdateContainerAgentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::UpdateContainerAgentResponsePrivate
+ * \brief The UpdateContainerAgentResponsePrivate class provides private implementation for UpdateContainerAgentResponse.
  * \internal
  *
- * \class UpdateContainerAgentResponsePrivate
- *
- * \brief Private implementation for UpdateContainerAgentResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateContainerAgentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateContainerAgentResponse instance.
+ * Constructs a UpdateContainerAgentResponsePrivate object with public implementation \a q.
  */
 UpdateContainerAgentResponsePrivate::UpdateContainerAgentResponsePrivate(
     UpdateContainerAgentResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ UpdateContainerAgentResponsePrivate::UpdateContainerAgentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS UpdateContainerAgentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS UpdateContainerAgent response element from \a xml.
  */
 void UpdateContainerAgentResponsePrivate::parseUpdateContainerAgentResponse(QXmlStreamReader &xml)
 {

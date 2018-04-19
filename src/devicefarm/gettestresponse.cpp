@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetTestResponse
- *
  * \brief The GetTestResponse class provides an interace for DeviceFarm GetTest responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetTestResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTestResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTestResponse::GetTestResponse(
         const GetTestRequest &request,
@@ -57,6 +52,9 @@ GetTestResponse::GetTestResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTestRequest * GetTestResponse::request() const
 {
     Q_D(const GetTestResponse);
@@ -64,9 +62,8 @@ const GetTestRequest * GetTestResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetTest response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetTest \a response.
  */
 void GetTestResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetTestResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetTestResponsePrivate
+ * \brief The GetTestResponsePrivate class provides private implementation for GetTestResponse.
  * \internal
  *
- * \class GetTestResponsePrivate
- *
- * \brief Private implementation for GetTestResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTestResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTestResponse instance.
+ * Constructs a GetTestResponsePrivate object with public implementation \a q.
  */
 GetTestResponsePrivate::GetTestResponsePrivate(
     GetTestResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetTestResponsePrivate::GetTestResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetTestResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetTest response element from \a xml.
  */
 void GetTestResponsePrivate::parseGetTestResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateConfigurationSetEventDestinationResponse
- *
  * \brief The CreateConfigurationSetEventDestinationResponse class provides an interace for SES CreateConfigurationSetEventDestination responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateConfigurationSetEventDestinationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateConfigurationSetEventDestinationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateConfigurationSetEventDestinationResponse::CreateConfigurationSetEventDestinationResponse(
         const CreateConfigurationSetEventDestinationRequest &request,
@@ -66,6 +61,9 @@ CreateConfigurationSetEventDestinationResponse::CreateConfigurationSetEventDesti
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateConfigurationSetEventDestinationRequest * CreateConfigurationSetEventDestinationResponse::request() const
 {
     Q_D(const CreateConfigurationSetEventDestinationResponse);
@@ -73,9 +71,8 @@ const CreateConfigurationSetEventDestinationRequest * CreateConfigurationSetEven
 }
 
 /*!
- * @brief  Parse a SES CreateConfigurationSetEventDestination response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES CreateConfigurationSetEventDestination \a response.
  */
 void CreateConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &res
 }
 
 /*!
+ * \class QtAws::SES::CreateConfigurationSetEventDestinationResponsePrivate
+ * \brief The CreateConfigurationSetEventDestinationResponsePrivate class provides private implementation for CreateConfigurationSetEventDestinationResponse.
  * \internal
  *
- * \class CreateConfigurationSetEventDestinationResponsePrivate
- *
- * \brief Private implementation for CreateConfigurationSetEventDestinationResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConfigurationSetEventDestinationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateConfigurationSetEventDestinationResponse instance.
+ * Constructs a CreateConfigurationSetEventDestinationResponsePrivate object with public implementation \a q.
  */
 CreateConfigurationSetEventDestinationResponsePrivate::CreateConfigurationSetEventDestinationResponsePrivate(
     CreateConfigurationSetEventDestinationResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateConfigurationSetEventDestinationResponsePrivate::CreateConfigurationSetEve
 }
 
 /*!
- * @brief  Parse an SES CreateConfigurationSetEventDestinationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES CreateConfigurationSetEventDestination response element from \a xml.
  */
 void CreateConfigurationSetEventDestinationResponsePrivate::parseCreateConfigurationSetEventDestinationResponse(QXmlStreamReader &xml)
 {

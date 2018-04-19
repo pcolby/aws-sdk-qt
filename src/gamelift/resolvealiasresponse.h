@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResolveAliasResponse : public GameLiftResponse {
 public:
     ResolveAliasResponse(const ResolveAliasRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResolveAliasRequest * request() const;
+    virtual const ResolveAliasRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResolveAliasResponse)

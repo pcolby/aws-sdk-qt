@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateNetworkInterfacePermissionResponse : public EC2Response
 public:
     CreateNetworkInterfacePermissionResponse(const CreateNetworkInterfacePermissionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateNetworkInterfacePermissionRequest * request() const;
+    virtual const CreateNetworkInterfacePermissionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateNetworkInterfacePermissionResponse)

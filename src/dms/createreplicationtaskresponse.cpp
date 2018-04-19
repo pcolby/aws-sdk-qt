@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::CreateReplicationTaskResponse
- *
  * \brief The CreateReplicationTaskResponse class provides an interace for DatabaseMigrationService CreateReplicationTask responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new CreateReplicationTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateReplicationTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateReplicationTaskResponse::CreateReplicationTaskResponse(
         const CreateReplicationTaskRequest &request,
@@ -66,6 +61,9 @@ CreateReplicationTaskResponse::CreateReplicationTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateReplicationTaskRequest * CreateReplicationTaskResponse::request() const
 {
     Q_D(const CreateReplicationTaskResponse);
@@ -73,9 +71,8 @@ const CreateReplicationTaskRequest * CreateReplicationTaskResponse::request() co
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService CreateReplicationTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService CreateReplicationTask \a response.
  */
 void CreateReplicationTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateReplicationTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::CreateReplicationTaskResponsePrivate
+ * \brief The CreateReplicationTaskResponsePrivate class provides private implementation for CreateReplicationTaskResponse.
  * \internal
  *
- * \class CreateReplicationTaskResponsePrivate
- *
- * \brief Private implementation for CreateReplicationTaskResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateReplicationTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateReplicationTaskResponse instance.
+ * Constructs a CreateReplicationTaskResponsePrivate object with public implementation \a q.
  */
 CreateReplicationTaskResponsePrivate::CreateReplicationTaskResponsePrivate(
     CreateReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateReplicationTaskResponsePrivate::CreateReplicationTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService CreateReplicationTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService CreateReplicationTask response element from \a xml.
  */
 void CreateReplicationTaskResponsePrivate::parseCreateReplicationTaskResponse(QXmlStreamReader &xml)
 {

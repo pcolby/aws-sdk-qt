@@ -34,10 +34,10 @@ class QTAWS_EXPORT NotifyWhenUploadedResponse : public StorageGatewayResponse {
 public:
     NotifyWhenUploadedResponse(const NotifyWhenUploadedRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const NotifyWhenUploadedRequest * request() const;
+    virtual const NotifyWhenUploadedRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(NotifyWhenUploadedResponse)

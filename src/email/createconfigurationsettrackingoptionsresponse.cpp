@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::CreateConfigurationSetTrackingOptionsResponse
- *
  * \brief The CreateConfigurationSetTrackingOptionsResponse class provides an interace for SES CreateConfigurationSetTrackingOptions responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new CreateConfigurationSetTrackingOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateConfigurationSetTrackingOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateConfigurationSetTrackingOptionsResponse::CreateConfigurationSetTrackingOptionsResponse(
         const CreateConfigurationSetTrackingOptionsRequest &request,
@@ -66,6 +61,9 @@ CreateConfigurationSetTrackingOptionsResponse::CreateConfigurationSetTrackingOpt
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateConfigurationSetTrackingOptionsRequest * CreateConfigurationSetTrackingOptionsResponse::request() const
 {
     Q_D(const CreateConfigurationSetTrackingOptionsResponse);
@@ -73,9 +71,8 @@ const CreateConfigurationSetTrackingOptionsRequest * CreateConfigurationSetTrack
 }
 
 /*!
- * @brief  Parse a SES CreateConfigurationSetTrackingOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES CreateConfigurationSetTrackingOptions \a response.
  */
 void CreateConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::SES::CreateConfigurationSetTrackingOptionsResponsePrivate
+ * \brief The CreateConfigurationSetTrackingOptionsResponsePrivate class provides private implementation for CreateConfigurationSetTrackingOptionsResponse.
  * \internal
  *
- * \class CreateConfigurationSetTrackingOptionsResponsePrivate
- *
- * \brief Private implementation for CreateConfigurationSetTrackingOptionsResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateConfigurationSetTrackingOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateConfigurationSetTrackingOptionsResponse instance.
+ * Constructs a CreateConfigurationSetTrackingOptionsResponsePrivate object with public implementation \a q.
  */
 CreateConfigurationSetTrackingOptionsResponsePrivate::CreateConfigurationSetTrackingOptionsResponsePrivate(
     CreateConfigurationSetTrackingOptionsResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateConfigurationSetTrackingOptionsResponsePrivate::CreateConfigurationSetTrac
 }
 
 /*!
- * @brief  Parse an SES CreateConfigurationSetTrackingOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES CreateConfigurationSetTrackingOptions response element from \a xml.
  */
 void CreateConfigurationSetTrackingOptionsResponsePrivate::parseCreateConfigurationSetTrackingOptionsResponse(QXmlStreamReader &xml)
 {

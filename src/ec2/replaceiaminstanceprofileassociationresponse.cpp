@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ReplaceIamInstanceProfileAssociationResponse
- *
  * \brief The ReplaceIamInstanceProfileAssociationResponse class provides an interace for EC2 ReplaceIamInstanceProfileAssociation responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ReplaceIamInstanceProfileAssociationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ReplaceIamInstanceProfileAssociationResponse object for \a reply to \a request, with parent \a parent.
  */
 ReplaceIamInstanceProfileAssociationResponse::ReplaceIamInstanceProfileAssociationResponse(
         const ReplaceIamInstanceProfileAssociationRequest &request,
@@ -59,6 +54,9 @@ ReplaceIamInstanceProfileAssociationResponse::ReplaceIamInstanceProfileAssociati
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ReplaceIamInstanceProfileAssociationRequest * ReplaceIamInstanceProfileAssociationResponse::request() const
 {
     Q_D(const ReplaceIamInstanceProfileAssociationResponse);
@@ -66,9 +64,8 @@ const ReplaceIamInstanceProfileAssociationRequest * ReplaceIamInstanceProfileAss
 }
 
 /*!
- * @brief  Parse a EC2 ReplaceIamInstanceProfileAssociation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ReplaceIamInstanceProfileAssociation \a response.
  */
 void ReplaceIamInstanceProfileAssociationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ReplaceIamInstanceProfileAssociationResponse::parseSuccess(QIODevice &respo
 }
 
 /*!
+ * \class QtAws::EC2::ReplaceIamInstanceProfileAssociationResponsePrivate
+ * \brief The ReplaceIamInstanceProfileAssociationResponsePrivate class provides private implementation for ReplaceIamInstanceProfileAssociationResponse.
  * \internal
  *
- * \class ReplaceIamInstanceProfileAssociationResponsePrivate
- *
- * \brief Private implementation for ReplaceIamInstanceProfileAssociationResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ReplaceIamInstanceProfileAssociationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ReplaceIamInstanceProfileAssociationResponse instance.
+ * Constructs a ReplaceIamInstanceProfileAssociationResponsePrivate object with public implementation \a q.
  */
 ReplaceIamInstanceProfileAssociationResponsePrivate::ReplaceIamInstanceProfileAssociationResponsePrivate(
     ReplaceIamInstanceProfileAssociationResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ReplaceIamInstanceProfileAssociationResponsePrivate::ReplaceIamInstanceProfileAs
 }
 
 /*!
- * @brief  Parse an EC2 ReplaceIamInstanceProfileAssociationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ReplaceIamInstanceProfileAssociation response element from \a xml.
  */
 void ReplaceIamInstanceProfileAssociationResponsePrivate::parseReplaceIamInstanceProfileAssociationResponse(QXmlStreamReader &xml)
 {

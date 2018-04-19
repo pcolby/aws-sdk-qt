@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDefaultParametersRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeDefaultParametersRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDefaultParametersRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 DescribeDefaultParametersRequestPrivate::DescribeDefaultParametersRequestPrivate(
     const DAXRequest::Action action, DescribeDefaultParametersRequest * const q)

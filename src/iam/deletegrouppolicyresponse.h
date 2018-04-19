@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteGroupPolicyResponse : public IAMResponse {
 public:
     DeleteGroupPolicyResponse(const DeleteGroupPolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteGroupPolicyRequest * request() const;
+    virtual const DeleteGroupPolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteGroupPolicyResponse)

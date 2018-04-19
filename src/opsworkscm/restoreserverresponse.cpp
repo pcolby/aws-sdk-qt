@@ -29,10 +29,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::RestoreServerResponse
- *
  * \brief The RestoreServerResponse class provides an interace for OpsWorksCM RestoreServer responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -99,11 +98,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new RestoreServerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RestoreServerResponse object for \a reply to \a request, with parent \a parent.
  */
 RestoreServerResponse::RestoreServerResponse(
         const RestoreServerRequest &request,
@@ -115,6 +110,9 @@ RestoreServerResponse::RestoreServerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RestoreServerRequest * RestoreServerResponse::request() const
 {
     Q_D(const RestoreServerResponse);
@@ -122,9 +120,8 @@ const RestoreServerRequest * RestoreServerResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorksCM RestoreServer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorksCM RestoreServer \a response.
  */
 void RestoreServerResponse::parseSuccess(QIODevice &response)
 {
@@ -134,19 +131,15 @@ void RestoreServerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorksCM::RestoreServerResponsePrivate
+ * \brief The RestoreServerResponsePrivate class provides private implementation for RestoreServerResponse.
  * \internal
  *
- * \class RestoreServerResponsePrivate
- *
- * \brief Private implementation for RestoreServerResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RestoreServerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RestoreServerResponse instance.
+ * Constructs a RestoreServerResponsePrivate object with public implementation \a q.
  */
 RestoreServerResponsePrivate::RestoreServerResponsePrivate(
     RestoreServerResponse * const q) : OpsWorksCMResponsePrivate(q)
@@ -155,9 +148,7 @@ RestoreServerResponsePrivate::RestoreServerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorksCM RestoreServerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorksCM RestoreServer response element from \a xml.
  */
 void RestoreServerResponsePrivate::parseRestoreServerResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::DescribeLimitsResponse
- *
  * \brief The DescribeLimitsResponse class provides an interace for Kinesis DescribeLimits responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new DescribeLimitsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLimitsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLimitsResponse::DescribeLimitsResponse(
         const DescribeLimitsRequest &request,
@@ -58,6 +53,9 @@ DescribeLimitsResponse::DescribeLimitsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLimitsRequest * DescribeLimitsResponse::request() const
 {
     Q_D(const DescribeLimitsResponse);
@@ -65,9 +63,8 @@ const DescribeLimitsRequest * DescribeLimitsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis DescribeLimits response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis DescribeLimits \a response.
  */
 void DescribeLimitsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeLimitsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::DescribeLimitsResponsePrivate
+ * \brief The DescribeLimitsResponsePrivate class provides private implementation for DescribeLimitsResponse.
  * \internal
  *
- * \class DescribeLimitsResponsePrivate
- *
- * \brief Private implementation for DescribeLimitsResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLimitsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLimitsResponse instance.
+ * Constructs a DescribeLimitsResponsePrivate object with public implementation \a q.
  */
 DescribeLimitsResponsePrivate::DescribeLimitsResponsePrivate(
     DescribeLimitsResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeLimitsResponsePrivate::DescribeLimitsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis DescribeLimitsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis DescribeLimits response element from \a xml.
  */
 void DescribeLimitsResponsePrivate::parseDescribeLimitsResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ModifyReplicationTaskRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ModifyReplicationTaskRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a ModifyReplicationTaskRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 ModifyReplicationTaskRequestPrivate::ModifyReplicationTaskRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, ModifyReplicationTaskRequest * const q)

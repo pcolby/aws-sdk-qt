@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetImportResponse : public LexModelBuildingServiceResponse {
 public:
     GetImportResponse(const GetImportRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetImportRequest * request() const;
+    virtual const GetImportRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetImportResponse)

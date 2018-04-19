@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::CreateDistributionWithTagsResponse
- *
  * \brief The CreateDistributionWithTagsResponse class provides an interace for CloudFront CreateDistributionWithTags responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new CreateDistributionWithTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDistributionWithTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDistributionWithTagsResponse::CreateDistributionWithTagsResponse(
         const CreateDistributionWithTagsRequest &request,
@@ -60,6 +55,9 @@ CreateDistributionWithTagsResponse::CreateDistributionWithTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDistributionWithTagsRequest * CreateDistributionWithTagsResponse::request() const
 {
     Q_D(const CreateDistributionWithTagsResponse);
@@ -67,9 +65,8 @@ const CreateDistributionWithTagsRequest * CreateDistributionWithTagsResponse::re
 }
 
 /*!
- * @brief  Parse a CloudFront CreateDistributionWithTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront CreateDistributionWithTags \a response.
  */
 void CreateDistributionWithTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateDistributionWithTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::CreateDistributionWithTagsResponsePrivate
+ * \brief The CreateDistributionWithTagsResponsePrivate class provides private implementation for CreateDistributionWithTagsResponse.
  * \internal
  *
- * \class CreateDistributionWithTagsResponsePrivate
- *
- * \brief Private implementation for CreateDistributionWithTagsResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDistributionWithTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDistributionWithTagsResponse instance.
+ * Constructs a CreateDistributionWithTagsResponsePrivate object with public implementation \a q.
  */
 CreateDistributionWithTagsResponsePrivate::CreateDistributionWithTagsResponsePrivate(
     CreateDistributionWithTagsResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateDistributionWithTagsResponsePrivate::CreateDistributionWithTagsResponsePri
 }
 
 /*!
- * @brief  Parse an CloudFront CreateDistributionWithTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront CreateDistributionWithTags response element from \a xml.
  */
 void CreateDistributionWithTagsResponsePrivate::parseCreateDistributionWithTagsResponse(QXmlStreamReader &xml)
 {

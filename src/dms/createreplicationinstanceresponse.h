@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateReplicationInstanceResponse : public DatabaseMigrationS
 public:
     CreateReplicationInstanceResponse(const CreateReplicationInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateReplicationInstanceRequest * request() const;
+    virtual const CreateReplicationInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateReplicationInstanceResponse)

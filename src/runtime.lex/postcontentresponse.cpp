@@ -29,10 +29,9 @@ namespace LexRuntimeService {
 
 /*!
  * \class QtAws::LexRuntimeService::PostContentResponse
- *
  * \brief The PostContentResponse class provides an interace for LexRuntimeService PostContent responses.
  *
- * \ingroup LexRuntimeService
+ * \inmodule QtAwsLexRuntimeService
  *
  *  Amazon Lex provides both build and runtime endpoints. Each endpoint provides a set of operations (API). Your
  *  conversational bot uses the runtime API to understand user utterances (user input text or voice). For example, suppose a
@@ -46,11 +45,7 @@ namespace LexRuntimeService {
  */
 
 /*!
- * @brief  Constructs a new PostContentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PostContentResponse object for \a reply to \a request, with parent \a parent.
  */
 PostContentResponse::PostContentResponse(
         const PostContentRequest &request,
@@ -62,6 +57,9 @@ PostContentResponse::PostContentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PostContentRequest * PostContentResponse::request() const
 {
     Q_D(const PostContentResponse);
@@ -69,9 +67,8 @@ const PostContentRequest * PostContentResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexRuntimeService PostContent response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexRuntimeService PostContent \a response.
  */
 void PostContentResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void PostContentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexRuntimeService::PostContentResponsePrivate
+ * \brief The PostContentResponsePrivate class provides private implementation for PostContentResponse.
  * \internal
  *
- * \class PostContentResponsePrivate
- *
- * \brief Private implementation for PostContentResponse.
+ * \inmodule QtAwsLexRuntimeService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PostContentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PostContentResponse instance.
+ * Constructs a PostContentResponsePrivate object with public implementation \a q.
  */
 PostContentResponsePrivate::PostContentResponsePrivate(
     PostContentResponse * const q) : LexRuntimeServiceResponsePrivate(q)
@@ -102,9 +95,7 @@ PostContentResponsePrivate::PostContentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexRuntimeService PostContentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexRuntimeService PostContent response element from \a xml.
  */
 void PostContentResponsePrivate::parsePostContentResponse(QXmlStreamReader &xml)
 {

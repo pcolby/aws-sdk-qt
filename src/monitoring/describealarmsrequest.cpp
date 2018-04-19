@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAlarmsRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeAlarmsRequestPrivate object for CloudWatch \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAlarmsRequestPrivate object for CloudWatch \a action,
+ * with public implementation \a q.
  */
 DescribeAlarmsRequestPrivate::DescribeAlarmsRequestPrivate(
     const CloudWatchRequest::Action action, DescribeAlarmsRequest * const q)

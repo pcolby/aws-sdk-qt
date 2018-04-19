@@ -28,16 +28,13 @@ namespace ResourceGroups {
 
 /*!
  * \class QtAws::ResourceGroups::ResourceGroupsResponse
- *
  * \brief The ResourceGroupsResponse class provides an interface for ResourceGroups responses.
  *
- * \ingroup ResourceGroups
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @brief  Constructs a new ResourceGroupsResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ResourceGroupsResponse object with parent \a parent.
  */
 ResourceGroupsResponse::ResourceGroupsResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ResourceGroupsResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ResourceGroupsResponse::ResourceGroupsResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResourceGroupsResponse object.
- *
+ * \internal
+ * Constructs a ResourceGroupsResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ResourceGroupsResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ResourceGroupsResponse::ResourceGroupsResponse(ResourceGroupsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ResourceGroupsResponse::ResourceGroupsResponse(ResourceGroupsResponsePrivate * c
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ResourceGroupsResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ResourceGroupsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ResourceGroups::ResourceGroupsResponsePrivate
+ * \brief The ResourceGroupsResponsePrivate class provides private implementation for ResourceGroupsResponse.
+ * \internal
  *
- * @class  ResourceGroupsResponsePrivate
- *
- * @brief  Private implementation for ResourceGroupsResponse.
+ * \inmodule QtAwsResourceGroups
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResourceGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResourceGroupsResponse instance.
+ * Constructs a ResourceGroupsResponsePrivate object with public implementation \a q.
  */
 ResourceGroupsResponsePrivate::ResourceGroupsResponsePrivate(
     ResourceGroupsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

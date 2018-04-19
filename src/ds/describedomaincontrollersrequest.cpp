@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDomainControllersRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeDomainControllersRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDomainControllersRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 DescribeDomainControllersRequestPrivate::DescribeDomainControllersRequestPrivate(
     const DirectoryServiceRequest::Action action, DescribeDomainControllersRequest * const q)

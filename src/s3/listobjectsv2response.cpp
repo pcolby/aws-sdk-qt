@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::ListObjectsV2Response
- *
  * \brief The ListObjectsV2Response class provides an interace for S3 ListObjectsV2 responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::listObjectsV2
  */
 
 /*!
- * @brief  Constructs a new ListObjectsV2Response object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListObjectsV2Response object for \a reply to \a request, with parent \a parent.
  */
 ListObjectsV2Response::ListObjectsV2Response(
         const ListObjectsV2Request &request,
@@ -55,6 +50,9 @@ ListObjectsV2Response::ListObjectsV2Response(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListObjectsV2Request * ListObjectsV2Response::request() const
 {
     Q_D(const ListObjectsV2Response);
@@ -62,9 +60,8 @@ const ListObjectsV2Request * ListObjectsV2Response::request() const
 }
 
 /*!
- * @brief  Parse a S3 ListObjectsV2 response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 ListObjectsV2 \a response.
  */
 void ListObjectsV2Response::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListObjectsV2Response::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::ListObjectsV2ResponsePrivate
+ * \brief The ListObjectsV2ResponsePrivate class provides private implementation for ListObjectsV2Response.
  * \internal
  *
- * \class ListObjectsV2ResponsePrivate
- *
- * \brief Private implementation for ListObjectsV2Response.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListObjectsV2ResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListObjectsV2Response instance.
+ * Constructs a ListObjectsV2ResponsePrivate object with public implementation \a q.
  */
 ListObjectsV2ResponsePrivate::ListObjectsV2ResponsePrivate(
     ListObjectsV2Response * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListObjectsV2ResponsePrivate::ListObjectsV2ResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 ListObjectsV2Response element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 ListObjectsV2 response element from \a xml.
  */
 void ListObjectsV2ResponsePrivate::parseListObjectsV2Response(QXmlStreamReader &xml)
 {

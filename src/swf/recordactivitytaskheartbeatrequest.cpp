@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * RecordActivityTaskHeartbeatRequest::response(
  */
 
 /*!
- *
- * Constructs a RecordActivityTaskHeartbeatRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a RecordActivityTaskHeartbeatRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 RecordActivityTaskHeartbeatRequestPrivate::RecordActivityTaskHeartbeatRequestPrivate(
     const SWFRequest::Action action, RecordActivityTaskHeartbeatRequest * const q)

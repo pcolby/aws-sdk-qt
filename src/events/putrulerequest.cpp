@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * PutRuleRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a PutRuleRequestPrivate object for CloudWatchEvents \a action with,
- * public implementation \a q.
+ * Constructs a PutRuleRequestPrivate object for CloudWatchEvents \a action,
+ * with public implementation \a q.
  */
 PutRuleRequestPrivate::PutRuleRequestPrivate(
     const CloudWatchEventsRequest::Action action, PutRuleRequest * const q)

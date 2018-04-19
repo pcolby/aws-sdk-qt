@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DetachLoadBalancersRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DetachLoadBalancersRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DetachLoadBalancersRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DetachLoadBalancersRequestPrivate::DetachLoadBalancersRequestPrivate(
     const AutoScalingRequest::Action action, DetachLoadBalancersRequest * const q)

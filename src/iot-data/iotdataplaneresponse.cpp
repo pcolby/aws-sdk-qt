@@ -28,16 +28,13 @@ namespace IoTDataPlane {
 
 /*!
  * \class QtAws::IoTDataPlane::IoTDataPlaneResponse
- *
  * \brief The IoTDataPlaneResponse class provides an interface for IoTDataPlane responses.
  *
- * \ingroup IoTDataPlane
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @brief  Constructs a new IoTDataPlaneResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a IoTDataPlaneResponse object with parent \a parent.
  */
 IoTDataPlaneResponse::IoTDataPlaneResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new IoTDataPlaneResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ IoTDataPlaneResponse::IoTDataPlaneResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IoTDataPlaneResponse object.
- *
+ * \internal
+ * Constructs a IoTDataPlaneResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoTDataPlaneResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 IoTDataPlaneResponse::IoTDataPlaneResponse(IoTDataPlaneResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ IoTDataPlaneResponse::IoTDataPlaneResponse(IoTDataPlaneResponsePrivate * const d
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void IoTDataPlaneResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void IoTDataPlaneResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::IoTDataPlane::IoTDataPlaneResponsePrivate
+ * \brief The IoTDataPlaneResponsePrivate class provides private implementation for IoTDataPlaneResponse.
+ * \internal
  *
- * @class  IoTDataPlaneResponsePrivate
- *
- * @brief  Private implementation for IoTDataPlaneResponse.
+ * \inmodule QtAwsIoTDataPlane
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IoTDataPlaneResponsePrivate object.
- *
- * @param  q  Pointer to this object's public IoTDataPlaneResponse instance.
+ * Constructs a IoTDataPlaneResponsePrivate object with public implementation \a q.
  */
 IoTDataPlaneResponsePrivate::IoTDataPlaneResponsePrivate(
     IoTDataPlaneResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

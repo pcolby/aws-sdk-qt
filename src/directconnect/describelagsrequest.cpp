@@ -89,9 +89,8 @@ QtAws::Core::AwsAbstractResponse * DescribeLagsRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeLagsRequestPrivate object for DirectConnect \a action with,
- * public implementation \a q.
+ * Constructs a DescribeLagsRequestPrivate object for DirectConnect \a action,
+ * with public implementation \a q.
  */
 DescribeLagsRequestPrivate::DescribeLagsRequestPrivate(
     const DirectConnectRequest::Action action, DescribeLagsRequest * const q)

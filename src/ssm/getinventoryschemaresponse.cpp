@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetInventorySchemaResponse
- *
  * \brief The GetInventorySchemaResponse class provides an interace for SSM GetInventorySchema responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetInventorySchemaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetInventorySchemaResponse object for \a reply to \a request, with parent \a parent.
  */
 GetInventorySchemaResponse::GetInventorySchemaResponse(
         const GetInventorySchemaRequest &request,
@@ -79,6 +74,9 @@ GetInventorySchemaResponse::GetInventorySchemaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetInventorySchemaRequest * GetInventorySchemaResponse::request() const
 {
     Q_D(const GetInventorySchemaResponse);
@@ -86,9 +84,8 @@ const GetInventorySchemaRequest * GetInventorySchemaResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM GetInventorySchema response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM GetInventorySchema \a response.
  */
 void GetInventorySchemaResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void GetInventorySchemaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::GetInventorySchemaResponsePrivate
+ * \brief The GetInventorySchemaResponsePrivate class provides private implementation for GetInventorySchemaResponse.
  * \internal
  *
- * \class GetInventorySchemaResponsePrivate
- *
- * \brief Private implementation for GetInventorySchemaResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetInventorySchemaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetInventorySchemaResponse instance.
+ * Constructs a GetInventorySchemaResponsePrivate object with public implementation \a q.
  */
 GetInventorySchemaResponsePrivate::GetInventorySchemaResponsePrivate(
     GetInventorySchemaResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ GetInventorySchemaResponsePrivate::GetInventorySchemaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM GetInventorySchemaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM GetInventorySchema response element from \a xml.
  */
 void GetInventorySchemaResponsePrivate::parseGetInventorySchemaResponse(QXmlStreamReader &xml)
 {

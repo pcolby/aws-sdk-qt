@@ -34,10 +34,10 @@ class QTAWS_EXPORT CompleteLifecycleActionResponse : public AutoScalingResponse 
 public:
     CompleteLifecycleActionResponse(const CompleteLifecycleActionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CompleteLifecycleActionRequest * request() const;
+    virtual const CompleteLifecycleActionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CompleteLifecycleActionResponse)

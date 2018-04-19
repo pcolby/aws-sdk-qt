@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAssessmentTemplatesResponse : public InspectorResponse {
 public:
     ListAssessmentTemplatesResponse(const ListAssessmentTemplatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAssessmentTemplatesRequest * request() const;
+    virtual const ListAssessmentTemplatesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListAssessmentTemplatesResponse)

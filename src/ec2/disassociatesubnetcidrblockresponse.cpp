@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DisassociateSubnetCidrBlockResponse
- *
  * \brief The DisassociateSubnetCidrBlockResponse class provides an interace for EC2 DisassociateSubnetCidrBlock responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DisassociateSubnetCidrBlockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateSubnetCidrBlockResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateSubnetCidrBlockResponse::DisassociateSubnetCidrBlockResponse(
         const DisassociateSubnetCidrBlockRequest &request,
@@ -59,6 +54,9 @@ DisassociateSubnetCidrBlockResponse::DisassociateSubnetCidrBlockResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateSubnetCidrBlockRequest * DisassociateSubnetCidrBlockResponse::request() const
 {
     Q_D(const DisassociateSubnetCidrBlockResponse);
@@ -66,9 +64,8 @@ const DisassociateSubnetCidrBlockRequest * DisassociateSubnetCidrBlockResponse::
 }
 
 /*!
- * @brief  Parse a EC2 DisassociateSubnetCidrBlock response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DisassociateSubnetCidrBlock \a response.
  */
 void DisassociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DisassociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DisassociateSubnetCidrBlockResponsePrivate
+ * \brief The DisassociateSubnetCidrBlockResponsePrivate class provides private implementation for DisassociateSubnetCidrBlockResponse.
  * \internal
  *
- * \class DisassociateSubnetCidrBlockResponsePrivate
- *
- * \brief Private implementation for DisassociateSubnetCidrBlockResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateSubnetCidrBlockResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateSubnetCidrBlockResponse instance.
+ * Constructs a DisassociateSubnetCidrBlockResponsePrivate object with public implementation \a q.
  */
 DisassociateSubnetCidrBlockResponsePrivate::DisassociateSubnetCidrBlockResponsePrivate(
     DisassociateSubnetCidrBlockResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DisassociateSubnetCidrBlockResponsePrivate::DisassociateSubnetCidrBlockResponseP
 }
 
 /*!
- * @brief  Parse an EC2 DisassociateSubnetCidrBlockResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DisassociateSubnetCidrBlock response element from \a xml.
  */
 void DisassociateSubnetCidrBlockResponsePrivate::parseDisassociateSubnetCidrBlockResponse(QXmlStreamReader &xml)
 {

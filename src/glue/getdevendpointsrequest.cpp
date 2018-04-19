@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetDevEndpointsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetDevEndpointsRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GetDevEndpointsRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GetDevEndpointsRequestPrivate::GetDevEndpointsRequestPrivate(
     const GlueRequest::Action action, GetDevEndpointsRequest * const q)

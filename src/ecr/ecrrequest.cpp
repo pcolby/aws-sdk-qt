@@ -61,7 +61,7 @@ namespace ECR {
  */
 
 /*!
- * Constructs a[n] ECRRequest object for ECR \a action.
+ * Constructs a ECRRequest object for ECR \a action.
  */
 ECRRequest::ECRRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ECRRequestPrivate(action, this))
@@ -261,8 +261,8 @@ QNetworkRequest ECRRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a ECRRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a ECRRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 ECRRequestPrivate::ECRRequestPrivate(const ECRRequest::Action action, ECRRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

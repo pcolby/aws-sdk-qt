@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * PutEventsRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a PutEventsRequestPrivate object for MobileAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a PutEventsRequestPrivate object for MobileAnalytics \a action,
+ * with public implementation \a q.
  */
 PutEventsRequestPrivate::PutEventsRequestPrivate(
     const MobileAnalyticsRequest::Action action, PutEventsRequest * const q)

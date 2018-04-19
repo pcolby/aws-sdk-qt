@@ -34,10 +34,10 @@ class QTAWS_EXPORT ConfirmForgotPasswordResponse : public CognitoIdentityProvide
 public:
     ConfirmForgotPasswordResponse(const ConfirmForgotPasswordRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ConfirmForgotPasswordRequest * request() const;
+    virtual const ConfirmForgotPasswordRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ConfirmForgotPasswordResponse)

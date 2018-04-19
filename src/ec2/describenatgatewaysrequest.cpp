@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeNatGatewaysRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeNatGatewaysRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeNatGatewaysRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeNatGatewaysRequestPrivate::DescribeNatGatewaysRequestPrivate(
     const EC2Request::Action action, DescribeNatGatewaysRequest * const q)

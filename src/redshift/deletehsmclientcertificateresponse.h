@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteHsmClientCertificateResponse : public RedshiftResponse 
 public:
     DeleteHsmClientCertificateResponse(const DeleteHsmClientCertificateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteHsmClientCertificateRequest * request() const;
+    virtual const DeleteHsmClientCertificateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteHsmClientCertificateResponse)

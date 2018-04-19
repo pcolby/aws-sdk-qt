@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetDataSourceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a GetDataSourceRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a GetDataSourceRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 GetDataSourceRequestPrivate::GetDataSourceRequestPrivate(
     const AppSyncRequest::Action action, GetDataSourceRequest * const q)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SetReceiptRulePositionRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a SetReceiptRulePositionRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a SetReceiptRulePositionRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 SetReceiptRulePositionRequestPrivate::SetReceiptRulePositionRequestPrivate(
     const SESRequest::Action action, SetReceiptRulePositionRequest * const q)

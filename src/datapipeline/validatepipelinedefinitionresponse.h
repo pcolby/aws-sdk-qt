@@ -34,10 +34,10 @@ class QTAWS_EXPORT ValidatePipelineDefinitionResponse : public DataPipelineRespo
 public:
     ValidatePipelineDefinitionResponse(const ValidatePipelineDefinitionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ValidatePipelineDefinitionRequest * request() const;
+    virtual const ValidatePipelineDefinitionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ValidatePipelineDefinitionResponse)

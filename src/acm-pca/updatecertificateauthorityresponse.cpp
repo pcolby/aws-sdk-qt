@@ -29,10 +29,9 @@ namespace ACMPCA {
 
 /*!
  * \class QtAws::ACMPCA::UpdateCertificateAuthorityResponse
- *
  * \brief The UpdateCertificateAuthorityResponse class provides an interace for ACMPCA UpdateCertificateAuthority responses.
  *
- * \ingroup ACMPCA
+ * \inmodule QtAwsACMPCA
  *
  *  You can use the ACM PCA API to create a private certificate authority (CA). You must first call the
  *  <a>CreateCertificateAuthority</a> function. If successful, the function returns an Amazon Resource Name (ARN) for your
@@ -69,11 +68,7 @@ namespace ACMPCA {
  */
 
 /*!
- * @brief  Constructs a new UpdateCertificateAuthorityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateCertificateAuthorityResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateCertificateAuthorityResponse::UpdateCertificateAuthorityResponse(
         const UpdateCertificateAuthorityRequest &request,
@@ -85,6 +80,9 @@ UpdateCertificateAuthorityResponse::UpdateCertificateAuthorityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateCertificateAuthorityRequest * UpdateCertificateAuthorityResponse::request() const
 {
     Q_D(const UpdateCertificateAuthorityResponse);
@@ -92,9 +90,8 @@ const UpdateCertificateAuthorityRequest * UpdateCertificateAuthorityResponse::re
 }
 
 /*!
- * @brief  Parse a ACMPCA UpdateCertificateAuthority response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ACMPCA UpdateCertificateAuthority \a response.
  */
 void UpdateCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void UpdateCertificateAuthorityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ACMPCA::UpdateCertificateAuthorityResponsePrivate
+ * \brief The UpdateCertificateAuthorityResponsePrivate class provides private implementation for UpdateCertificateAuthorityResponse.
  * \internal
  *
- * \class UpdateCertificateAuthorityResponsePrivate
- *
- * \brief Private implementation for UpdateCertificateAuthorityResponse.
+ * \inmodule QtAwsACMPCA
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateCertificateAuthorityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateCertificateAuthorityResponse instance.
+ * Constructs a UpdateCertificateAuthorityResponsePrivate object with public implementation \a q.
  */
 UpdateCertificateAuthorityResponsePrivate::UpdateCertificateAuthorityResponsePrivate(
     UpdateCertificateAuthorityResponse * const q) : ACMPCAResponsePrivate(q)
@@ -125,9 +118,7 @@ UpdateCertificateAuthorityResponsePrivate::UpdateCertificateAuthorityResponsePri
 }
 
 /*!
- * @brief  Parse an ACMPCA UpdateCertificateAuthorityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ACMPCA UpdateCertificateAuthority response element from \a xml.
  */
 void UpdateCertificateAuthorityResponsePrivate::parseUpdateCertificateAuthorityResponse(QXmlStreamReader &xml)
 {

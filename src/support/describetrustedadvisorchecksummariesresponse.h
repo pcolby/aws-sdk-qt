@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTrustedAdvisorCheckSummariesResponse : public Support
 public:
     DescribeTrustedAdvisorCheckSummariesResponse(const DescribeTrustedAdvisorCheckSummariesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTrustedAdvisorCheckSummariesRequest * request() const;
+    virtual const DescribeTrustedAdvisorCheckSummariesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTrustedAdvisorCheckSummariesResponse)

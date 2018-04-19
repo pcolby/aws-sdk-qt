@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::UpdateChannelResponse
- *
  * \brief The UpdateChannelResponse class provides an interace for MediaLive UpdateChannel responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::updateChannel
  */
 
 /*!
- * @brief  Constructs a new UpdateChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateChannelResponse::UpdateChannelResponse(
         const UpdateChannelRequest &request,
@@ -55,6 +50,9 @@ UpdateChannelResponse::UpdateChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateChannelRequest * UpdateChannelResponse::request() const
 {
     Q_D(const UpdateChannelResponse);
@@ -62,9 +60,8 @@ const UpdateChannelRequest * UpdateChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaLive UpdateChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive UpdateChannel \a response.
  */
 void UpdateChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::UpdateChannelResponsePrivate
+ * \brief The UpdateChannelResponsePrivate class provides private implementation for UpdateChannelResponse.
  * \internal
  *
- * \class UpdateChannelResponsePrivate
- *
- * \brief Private implementation for UpdateChannelResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateChannelResponse instance.
+ * Constructs a UpdateChannelResponsePrivate object with public implementation \a q.
  */
 UpdateChannelResponsePrivate::UpdateChannelResponsePrivate(
     UpdateChannelResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateChannelResponsePrivate::UpdateChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive UpdateChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive UpdateChannel response element from \a xml.
  */
 void UpdateChannelResponsePrivate::parseUpdateChannelResponse(QXmlStreamReader &xml)
 {

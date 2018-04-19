@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteObjectTaggingResponse : public S3Response {
 public:
     DeleteObjectTaggingResponse(const DeleteObjectTaggingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteObjectTaggingRequest * request() const;
+    virtual const DeleteObjectTaggingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteObjectTaggingResponse)

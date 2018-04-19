@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetChangeTokenStatusRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetChangeTokenStatusRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a GetChangeTokenStatusRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 GetChangeTokenStatusRequestPrivate::GetChangeTokenStatusRequestPrivate(
     const WAFRequest::Action action, GetChangeTokenStatusRequest * const q)

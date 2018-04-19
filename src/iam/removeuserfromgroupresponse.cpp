@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::RemoveUserFromGroupResponse
- *
  * \brief The RemoveUserFromGroupResponse class provides an interace for IAM RemoveUserFromGroup responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new RemoveUserFromGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveUserFromGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveUserFromGroupResponse::RemoveUserFromGroupResponse(
         const RemoveUserFromGroupRequest &request,
@@ -120,6 +115,9 @@ RemoveUserFromGroupResponse::RemoveUserFromGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveUserFromGroupRequest * RemoveUserFromGroupResponse::request() const
 {
     Q_D(const RemoveUserFromGroupResponse);
@@ -127,9 +125,8 @@ const RemoveUserFromGroupRequest * RemoveUserFromGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM RemoveUserFromGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM RemoveUserFromGroup \a response.
  */
 void RemoveUserFromGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void RemoveUserFromGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::RemoveUserFromGroupResponsePrivate
+ * \brief The RemoveUserFromGroupResponsePrivate class provides private implementation for RemoveUserFromGroupResponse.
  * \internal
  *
- * \class RemoveUserFromGroupResponsePrivate
- *
- * \brief Private implementation for RemoveUserFromGroupResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveUserFromGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveUserFromGroupResponse instance.
+ * Constructs a RemoveUserFromGroupResponsePrivate object with public implementation \a q.
  */
 RemoveUserFromGroupResponsePrivate::RemoveUserFromGroupResponsePrivate(
     RemoveUserFromGroupResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ RemoveUserFromGroupResponsePrivate::RemoveUserFromGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM RemoveUserFromGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM RemoveUserFromGroup response element from \a xml.
  */
 void RemoveUserFromGroupResponsePrivate::parseRemoveUserFromGroupResponse(QXmlStreamReader &xml)
 {

@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterFromSnapshotRequest::response
  */
 
 /*!
- *
- * Constructs a RestoreDBClusterFromSnapshotRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a RestoreDBClusterFromSnapshotRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 RestoreDBClusterFromSnapshotRequestPrivate::RestoreDBClusterFromSnapshotRequestPrivate(
     const RDSRequest::Action action, RestoreDBClusterFromSnapshotRequest * const q)

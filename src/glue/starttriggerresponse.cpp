@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StartTriggerResponse
- *
  * \brief The StartTriggerResponse class provides an interace for Glue StartTrigger responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StartTriggerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartTriggerResponse object for \a reply to \a request, with parent \a parent.
  */
 StartTriggerResponse::StartTriggerResponse(
         const StartTriggerRequest &request,
@@ -58,6 +53,9 @@ StartTriggerResponse::StartTriggerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartTriggerRequest * StartTriggerResponse::request() const
 {
     Q_D(const StartTriggerResponse);
@@ -65,9 +63,8 @@ const StartTriggerRequest * StartTriggerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue StartTrigger response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue StartTrigger \a response.
  */
 void StartTriggerResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StartTriggerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::StartTriggerResponsePrivate
+ * \brief The StartTriggerResponsePrivate class provides private implementation for StartTriggerResponse.
  * \internal
  *
- * \class StartTriggerResponsePrivate
- *
- * \brief Private implementation for StartTriggerResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartTriggerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartTriggerResponse instance.
+ * Constructs a StartTriggerResponsePrivate object with public implementation \a q.
  */
 StartTriggerResponsePrivate::StartTriggerResponsePrivate(
     StartTriggerResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ StartTriggerResponsePrivate::StartTriggerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue StartTriggerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue StartTrigger response element from \a xml.
  */
 void StartTriggerResponsePrivate::parseStartTriggerResponse(QXmlStreamReader &xml)
 {

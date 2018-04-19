@@ -28,16 +28,13 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::Route53DomainsResponse
- *
  * \brief The Route53DomainsResponse class provides an interface for Route53Domains responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @brief  Constructs a new Route53DomainsResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a Route53DomainsResponse object with parent \a parent.
  */
 Route53DomainsResponse::Route53DomainsResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new Route53DomainsResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ Route53DomainsResponse::Route53DomainsResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new Route53DomainsResponse object.
- *
+ * \internal
+ * Constructs a Route53DomainsResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from Route53DomainsResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 Route53DomainsResponse::Route53DomainsResponse(Route53DomainsResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ Route53DomainsResponse::Route53DomainsResponse(Route53DomainsResponsePrivate * c
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void Route53DomainsResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void Route53DomainsResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::Route53Domains::Route53DomainsResponsePrivate
+ * \brief The Route53DomainsResponsePrivate class provides private implementation for Route53DomainsResponse.
+ * \internal
  *
- * @class  Route53DomainsResponsePrivate
- *
- * @brief  Private implementation for Route53DomainsResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new Route53DomainsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public Route53DomainsResponse instance.
+ * Constructs a Route53DomainsResponsePrivate object with public implementation \a q.
  */
 Route53DomainsResponsePrivate::Route53DomainsResponsePrivate(
     Route53DomainsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

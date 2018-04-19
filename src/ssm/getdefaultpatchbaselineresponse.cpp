@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::GetDefaultPatchBaselineResponse
- *
  * \brief The GetDefaultPatchBaselineResponse class provides an interace for SSM GetDefaultPatchBaseline responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new GetDefaultPatchBaselineResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDefaultPatchBaselineResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDefaultPatchBaselineResponse::GetDefaultPatchBaselineResponse(
         const GetDefaultPatchBaselineRequest &request,
@@ -79,6 +74,9 @@ GetDefaultPatchBaselineResponse::GetDefaultPatchBaselineResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDefaultPatchBaselineRequest * GetDefaultPatchBaselineResponse::request() const
 {
     Q_D(const GetDefaultPatchBaselineResponse);
@@ -86,9 +84,8 @@ const GetDefaultPatchBaselineRequest * GetDefaultPatchBaselineResponse::request(
 }
 
 /*!
- * @brief  Parse a SSM GetDefaultPatchBaseline response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM GetDefaultPatchBaseline \a response.
  */
 void GetDefaultPatchBaselineResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void GetDefaultPatchBaselineResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::GetDefaultPatchBaselineResponsePrivate
+ * \brief The GetDefaultPatchBaselineResponsePrivate class provides private implementation for GetDefaultPatchBaselineResponse.
  * \internal
  *
- * \class GetDefaultPatchBaselineResponsePrivate
- *
- * \brief Private implementation for GetDefaultPatchBaselineResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDefaultPatchBaselineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDefaultPatchBaselineResponse instance.
+ * Constructs a GetDefaultPatchBaselineResponsePrivate object with public implementation \a q.
  */
 GetDefaultPatchBaselineResponsePrivate::GetDefaultPatchBaselineResponsePrivate(
     GetDefaultPatchBaselineResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ GetDefaultPatchBaselineResponsePrivate::GetDefaultPatchBaselineResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM GetDefaultPatchBaselineResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM GetDefaultPatchBaseline response element from \a xml.
  */
 void GetDefaultPatchBaselineResponsePrivate::parseGetDefaultPatchBaselineResponse(QXmlStreamReader &xml)
 {

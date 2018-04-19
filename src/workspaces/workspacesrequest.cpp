@@ -53,7 +53,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * Constructs a[n] WorkSpacesRequest object for WorkSpaces \a action.
+ * Constructs a WorkSpacesRequest object for WorkSpaces \a action.
  */
 WorkSpacesRequest::WorkSpacesRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new WorkSpacesRequestPrivate(action, this))
@@ -253,8 +253,8 @@ QNetworkRequest WorkSpacesRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a WorkSpacesRequestPrivate object for WorkSpaces \a action with,
- * public implementation \a q.
+ * Constructs a WorkSpacesRequestPrivate object for WorkSpaces \a action,
+ * with public implementation \a q.
  */
 WorkSpacesRequestPrivate::WorkSpacesRequestPrivate(const WorkSpacesRequest::Action action, WorkSpacesRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

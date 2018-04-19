@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::SwapEnvironmentCNAMEsResponse
- *
  * \brief The SwapEnvironmentCNAMEsResponse class provides an interace for ElasticBeanstalk SwapEnvironmentCNAMEs responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new SwapEnvironmentCNAMEsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SwapEnvironmentCNAMEsResponse object for \a reply to \a request, with parent \a parent.
  */
 SwapEnvironmentCNAMEsResponse::SwapEnvironmentCNAMEsResponse(
         const SwapEnvironmentCNAMEsRequest &request,
@@ -77,6 +72,9 @@ SwapEnvironmentCNAMEsResponse::SwapEnvironmentCNAMEsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SwapEnvironmentCNAMEsRequest * SwapEnvironmentCNAMEsResponse::request() const
 {
     Q_D(const SwapEnvironmentCNAMEsResponse);
@@ -84,9 +82,8 @@ const SwapEnvironmentCNAMEsRequest * SwapEnvironmentCNAMEsResponse::request() co
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk SwapEnvironmentCNAMEs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk SwapEnvironmentCNAMEs \a response.
  */
 void SwapEnvironmentCNAMEsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void SwapEnvironmentCNAMEsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::SwapEnvironmentCNAMEsResponsePrivate
+ * \brief The SwapEnvironmentCNAMEsResponsePrivate class provides private implementation for SwapEnvironmentCNAMEsResponse.
  * \internal
  *
- * \class SwapEnvironmentCNAMEsResponsePrivate
- *
- * \brief Private implementation for SwapEnvironmentCNAMEsResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SwapEnvironmentCNAMEsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SwapEnvironmentCNAMEsResponse instance.
+ * Constructs a SwapEnvironmentCNAMEsResponsePrivate object with public implementation \a q.
  */
 SwapEnvironmentCNAMEsResponsePrivate::SwapEnvironmentCNAMEsResponsePrivate(
     SwapEnvironmentCNAMEsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ SwapEnvironmentCNAMEsResponsePrivate::SwapEnvironmentCNAMEsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk SwapEnvironmentCNAMEsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk SwapEnvironmentCNAMEs response element from \a xml.
  */
 void SwapEnvironmentCNAMEsResponsePrivate::parseSwapEnvironmentCNAMEsResponse(QXmlStreamReader &xml)
 {

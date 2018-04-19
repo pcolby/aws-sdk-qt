@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GenerateDataSetRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GenerateDataSetRequestPrivate object for MarketplaceCommerceAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a GenerateDataSetRequestPrivate object for MarketplaceCommerceAnalytics \a action,
+ * with public implementation \a q.
  */
 GenerateDataSetRequestPrivate::GenerateDataSetRequestPrivate(
     const MarketplaceCommerceAnalyticsRequest::Action action, GenerateDataSetRequest * const q)

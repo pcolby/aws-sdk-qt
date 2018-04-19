@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribePlacementGroupsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribePlacementGroupsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribePlacementGroupsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribePlacementGroupsRequestPrivate::DescribePlacementGroupsRequestPrivate(
     const EC2Request::Action action, DescribePlacementGroupsRequest * const q)

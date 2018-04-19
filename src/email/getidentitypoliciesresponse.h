@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetIdentityPoliciesResponse : public SESResponse {
 public:
     GetIdentityPoliciesResponse(const GetIdentityPoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetIdentityPoliciesRequest * request() const;
+    virtual const GetIdentityPoliciesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetIdentityPoliciesResponse)

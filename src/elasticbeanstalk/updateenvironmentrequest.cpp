@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * UpdateEnvironmentRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a UpdateEnvironmentRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a UpdateEnvironmentRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 UpdateEnvironmentRequestPrivate::UpdateEnvironmentRequestPrivate(
     const ElasticBeanstalkRequest::Action action, UpdateEnvironmentRequest * const q)

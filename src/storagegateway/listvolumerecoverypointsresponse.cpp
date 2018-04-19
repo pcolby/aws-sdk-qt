@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ListVolumeRecoveryPointsResponse
- *
  * \brief The ListVolumeRecoveryPointsResponse class provides an interace for StorageGateway ListVolumeRecoveryPoints responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ListVolumeRecoveryPointsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListVolumeRecoveryPointsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListVolumeRecoveryPointsResponse::ListVolumeRecoveryPointsResponse(
         const ListVolumeRecoveryPointsRequest &request,
@@ -124,6 +119,9 @@ ListVolumeRecoveryPointsResponse::ListVolumeRecoveryPointsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListVolumeRecoveryPointsRequest * ListVolumeRecoveryPointsResponse::request() const
 {
     Q_D(const ListVolumeRecoveryPointsResponse);
@@ -131,9 +129,8 @@ const ListVolumeRecoveryPointsRequest * ListVolumeRecoveryPointsResponse::reques
 }
 
 /*!
- * @brief  Parse a StorageGateway ListVolumeRecoveryPoints response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway ListVolumeRecoveryPoints \a response.
  */
 void ListVolumeRecoveryPointsResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void ListVolumeRecoveryPointsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::ListVolumeRecoveryPointsResponsePrivate
+ * \brief The ListVolumeRecoveryPointsResponsePrivate class provides private implementation for ListVolumeRecoveryPointsResponse.
  * \internal
  *
- * \class ListVolumeRecoveryPointsResponsePrivate
- *
- * \brief Private implementation for ListVolumeRecoveryPointsResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListVolumeRecoveryPointsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListVolumeRecoveryPointsResponse instance.
+ * Constructs a ListVolumeRecoveryPointsResponsePrivate object with public implementation \a q.
  */
 ListVolumeRecoveryPointsResponsePrivate::ListVolumeRecoveryPointsResponsePrivate(
     ListVolumeRecoveryPointsResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ ListVolumeRecoveryPointsResponsePrivate::ListVolumeRecoveryPointsResponsePrivate
 }
 
 /*!
- * @brief  Parse an StorageGateway ListVolumeRecoveryPointsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway ListVolumeRecoveryPoints response element from \a xml.
  */
 void ListVolumeRecoveryPointsResponsePrivate::parseListVolumeRecoveryPointsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::ListV2LoggingLevelsResponse
- *
  * \brief The ListV2LoggingLevelsResponse class provides an interace for IoT ListV2LoggingLevels responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new ListV2LoggingLevelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListV2LoggingLevelsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListV2LoggingLevelsResponse::ListV2LoggingLevelsResponse(
         const ListV2LoggingLevelsRequest &request,
@@ -66,6 +61,9 @@ ListV2LoggingLevelsResponse::ListV2LoggingLevelsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListV2LoggingLevelsRequest * ListV2LoggingLevelsResponse::request() const
 {
     Q_D(const ListV2LoggingLevelsResponse);
@@ -73,9 +71,8 @@ const ListV2LoggingLevelsRequest * ListV2LoggingLevelsResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT ListV2LoggingLevels response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT ListV2LoggingLevels \a response.
  */
 void ListV2LoggingLevelsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListV2LoggingLevelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::ListV2LoggingLevelsResponsePrivate
+ * \brief The ListV2LoggingLevelsResponsePrivate class provides private implementation for ListV2LoggingLevelsResponse.
  * \internal
  *
- * \class ListV2LoggingLevelsResponsePrivate
- *
- * \brief Private implementation for ListV2LoggingLevelsResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListV2LoggingLevelsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListV2LoggingLevelsResponse instance.
+ * Constructs a ListV2LoggingLevelsResponsePrivate object with public implementation \a q.
  */
 ListV2LoggingLevelsResponsePrivate::ListV2LoggingLevelsResponsePrivate(
     ListV2LoggingLevelsResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ ListV2LoggingLevelsResponsePrivate::ListV2LoggingLevelsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT ListV2LoggingLevelsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT ListV2LoggingLevels response element from \a xml.
  */
 void ListV2LoggingLevelsResponsePrivate::parseListV2LoggingLevelsResponse(QXmlStreamReader &xml)
 {

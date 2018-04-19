@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSmsChannelRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateSmsChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSmsChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 UpdateSmsChannelRequestPrivate::UpdateSmsChannelRequestPrivate(
     const PinpointRequest::Action action, UpdateSmsChannelRequest * const q)

@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::UpdateVTLDeviceTypeResponse
- *
  * \brief The UpdateVTLDeviceTypeResponse class provides an interace for StorageGateway UpdateVTLDeviceType responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new UpdateVTLDeviceTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateVTLDeviceTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateVTLDeviceTypeResponse::UpdateVTLDeviceTypeResponse(
         const UpdateVTLDeviceTypeRequest &request,
@@ -124,6 +119,9 @@ UpdateVTLDeviceTypeResponse::UpdateVTLDeviceTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateVTLDeviceTypeRequest * UpdateVTLDeviceTypeResponse::request() const
 {
     Q_D(const UpdateVTLDeviceTypeResponse);
@@ -131,9 +129,8 @@ const UpdateVTLDeviceTypeRequest * UpdateVTLDeviceTypeResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway UpdateVTLDeviceType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway UpdateVTLDeviceType \a response.
  */
 void UpdateVTLDeviceTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void UpdateVTLDeviceTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::UpdateVTLDeviceTypeResponsePrivate
+ * \brief The UpdateVTLDeviceTypeResponsePrivate class provides private implementation for UpdateVTLDeviceTypeResponse.
  * \internal
  *
- * \class UpdateVTLDeviceTypeResponsePrivate
- *
- * \brief Private implementation for UpdateVTLDeviceTypeResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateVTLDeviceTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateVTLDeviceTypeResponse instance.
+ * Constructs a UpdateVTLDeviceTypeResponsePrivate object with public implementation \a q.
  */
 UpdateVTLDeviceTypeResponsePrivate::UpdateVTLDeviceTypeResponsePrivate(
     UpdateVTLDeviceTypeResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ UpdateVTLDeviceTypeResponsePrivate::UpdateVTLDeviceTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway UpdateVTLDeviceTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway UpdateVTLDeviceType response element from \a xml.
  */
 void UpdateVTLDeviceTypeResponsePrivate::parseUpdateVTLDeviceTypeResponse(QXmlStreamReader &xml)
 {

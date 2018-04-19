@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateDeviceFromRoomRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DisassociateDeviceFromRoomRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateDeviceFromRoomRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 DisassociateDeviceFromRoomRequestPrivate::DisassociateDeviceFromRoomRequestPrivate(
     const AlexaForBusinessRequest::Action action, DisassociateDeviceFromRoomRequest * const q)

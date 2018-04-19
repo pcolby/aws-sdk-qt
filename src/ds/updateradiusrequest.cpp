@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRadiusRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UpdateRadiusRequestPrivate object for DirectoryService \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRadiusRequestPrivate object for DirectoryService \a action,
+ * with public implementation \a q.
  */
 UpdateRadiusRequestPrivate::UpdateRadiusRequestPrivate(
     const DirectoryServiceRequest::Action action, UpdateRadiusRequest * const q)

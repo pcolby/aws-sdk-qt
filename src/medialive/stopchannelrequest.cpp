@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * StopChannelRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a StopChannelRequestPrivate object for MediaLive \a action with,
- * public implementation \a q.
+ * Constructs a StopChannelRequestPrivate object for MediaLive \a action,
+ * with public implementation \a q.
  */
 StopChannelRequestPrivate::StopChannelRequestPrivate(
     const MediaLiveRequest::Action action, StopChannelRequest * const q)

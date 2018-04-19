@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSnapshotCopyGrantsRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeSnapshotCopyGrantsRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSnapshotCopyGrantsRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeSnapshotCopyGrantsRequestPrivate::DescribeSnapshotCopyGrantsRequestPrivate(
     const RedshiftRequest::Action action, DescribeSnapshotCopyGrantsRequest * const q)

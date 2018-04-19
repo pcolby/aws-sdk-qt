@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SetIdentityMailFromDomainResponse
- *
  * \brief The SetIdentityMailFromDomainResponse class provides an interace for SES SetIdentityMailFromDomain responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SetIdentityMailFromDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetIdentityMailFromDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 SetIdentityMailFromDomainResponse::SetIdentityMailFromDomainResponse(
         const SetIdentityMailFromDomainRequest &request,
@@ -66,6 +61,9 @@ SetIdentityMailFromDomainResponse::SetIdentityMailFromDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetIdentityMailFromDomainRequest * SetIdentityMailFromDomainResponse::request() const
 {
     Q_D(const SetIdentityMailFromDomainResponse);
@@ -73,9 +71,8 @@ const SetIdentityMailFromDomainRequest * SetIdentityMailFromDomainResponse::requ
 }
 
 /*!
- * @brief  Parse a SES SetIdentityMailFromDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SetIdentityMailFromDomain \a response.
  */
 void SetIdentityMailFromDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SetIdentityMailFromDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::SetIdentityMailFromDomainResponsePrivate
+ * \brief The SetIdentityMailFromDomainResponsePrivate class provides private implementation for SetIdentityMailFromDomainResponse.
  * \internal
  *
- * \class SetIdentityMailFromDomainResponsePrivate
- *
- * \brief Private implementation for SetIdentityMailFromDomainResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetIdentityMailFromDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetIdentityMailFromDomainResponse instance.
+ * Constructs a SetIdentityMailFromDomainResponsePrivate object with public implementation \a q.
  */
 SetIdentityMailFromDomainResponsePrivate::SetIdentityMailFromDomainResponsePrivate(
     SetIdentityMailFromDomainResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SetIdentityMailFromDomainResponsePrivate::SetIdentityMailFromDomainResponsePriva
 }
 
 /*!
- * @brief  Parse an SES SetIdentityMailFromDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SetIdentityMailFromDomain response element from \a xml.
  */
 void SetIdentityMailFromDomainResponsePrivate::parseSetIdentityMailFromDomainResponse(QXmlStreamReader &xml)
 {

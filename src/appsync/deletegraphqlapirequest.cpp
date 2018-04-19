@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DeleteGraphqlApiRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteGraphqlApiRequestPrivate object for AppSync \a action with,
- * public implementation \a q.
+ * Constructs a DeleteGraphqlApiRequestPrivate object for AppSync \a action,
+ * with public implementation \a q.
  */
 DeleteGraphqlApiRequestPrivate::DeleteGraphqlApiRequestPrivate(
     const AppSyncRequest::Action action, DeleteGraphqlApiRequest * const q)

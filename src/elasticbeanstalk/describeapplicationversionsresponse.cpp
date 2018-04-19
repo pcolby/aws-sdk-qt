@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeApplicationVersionsResponse
- *
  * \brief The DescribeApplicationVersionsResponse class provides an interace for ElasticBeanstalk DescribeApplicationVersions responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeApplicationVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeApplicationVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeApplicationVersionsResponse::DescribeApplicationVersionsResponse(
         const DescribeApplicationVersionsRequest &request,
@@ -77,6 +72,9 @@ DescribeApplicationVersionsResponse::DescribeApplicationVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeApplicationVersionsRequest * DescribeApplicationVersionsResponse::request() const
 {
     Q_D(const DescribeApplicationVersionsResponse);
@@ -84,9 +82,8 @@ const DescribeApplicationVersionsRequest * DescribeApplicationVersionsResponse::
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DescribeApplicationVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DescribeApplicationVersions \a response.
  */
 void DescribeApplicationVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribeApplicationVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DescribeApplicationVersionsResponsePrivate
+ * \brief The DescribeApplicationVersionsResponsePrivate class provides private implementation for DescribeApplicationVersionsResponse.
  * \internal
  *
- * \class DescribeApplicationVersionsResponsePrivate
- *
- * \brief Private implementation for DescribeApplicationVersionsResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeApplicationVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeApplicationVersionsResponse instance.
+ * Constructs a DescribeApplicationVersionsResponsePrivate object with public implementation \a q.
  */
 DescribeApplicationVersionsResponsePrivate::DescribeApplicationVersionsResponsePrivate(
     DescribeApplicationVersionsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribeApplicationVersionsResponsePrivate::DescribeApplicationVersionsResponseP
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DescribeApplicationVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DescribeApplicationVersions response element from \a xml.
  */
 void DescribeApplicationVersionsResponsePrivate::parseDescribeApplicationVersionsResponse(QXmlStreamReader &xml)
 {

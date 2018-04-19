@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::PurchaseOfferingResponse
- *
  * \brief The PurchaseOfferingResponse class provides an interace for DeviceFarm PurchaseOffering responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new PurchaseOfferingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PurchaseOfferingResponse object for \a reply to \a request, with parent \a parent.
  */
 PurchaseOfferingResponse::PurchaseOfferingResponse(
         const PurchaseOfferingRequest &request,
@@ -57,6 +52,9 @@ PurchaseOfferingResponse::PurchaseOfferingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PurchaseOfferingRequest * PurchaseOfferingResponse::request() const
 {
     Q_D(const PurchaseOfferingResponse);
@@ -64,9 +62,8 @@ const PurchaseOfferingRequest * PurchaseOfferingResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm PurchaseOffering response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm PurchaseOffering \a response.
  */
 void PurchaseOfferingResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void PurchaseOfferingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::PurchaseOfferingResponsePrivate
+ * \brief The PurchaseOfferingResponsePrivate class provides private implementation for PurchaseOfferingResponse.
  * \internal
  *
- * \class PurchaseOfferingResponsePrivate
- *
- * \brief Private implementation for PurchaseOfferingResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseOfferingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PurchaseOfferingResponse instance.
+ * Constructs a PurchaseOfferingResponsePrivate object with public implementation \a q.
  */
 PurchaseOfferingResponsePrivate::PurchaseOfferingResponsePrivate(
     PurchaseOfferingResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ PurchaseOfferingResponsePrivate::PurchaseOfferingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm PurchaseOfferingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm PurchaseOffering response element from \a xml.
  */
 void PurchaseOfferingResponsePrivate::parsePurchaseOfferingResponse(QXmlStreamReader &xml)
 {

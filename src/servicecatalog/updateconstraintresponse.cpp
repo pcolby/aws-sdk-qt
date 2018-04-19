@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::UpdateConstraintResponse
- *
  * \brief The UpdateConstraintResponse class provides an interace for ServiceCatalog UpdateConstraint responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new UpdateConstraintResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateConstraintResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateConstraintResponse::UpdateConstraintResponse(
         const UpdateConstraintRequest &request,
@@ -61,6 +56,9 @@ UpdateConstraintResponse::UpdateConstraintResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateConstraintRequest * UpdateConstraintResponse::request() const
 {
     Q_D(const UpdateConstraintResponse);
@@ -68,9 +66,8 @@ const UpdateConstraintRequest * UpdateConstraintResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog UpdateConstraint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog UpdateConstraint \a response.
  */
 void UpdateConstraintResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void UpdateConstraintResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::UpdateConstraintResponsePrivate
+ * \brief The UpdateConstraintResponsePrivate class provides private implementation for UpdateConstraintResponse.
  * \internal
  *
- * \class UpdateConstraintResponsePrivate
- *
- * \brief Private implementation for UpdateConstraintResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateConstraintResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateConstraintResponse instance.
+ * Constructs a UpdateConstraintResponsePrivate object with public implementation \a q.
  */
 UpdateConstraintResponsePrivate::UpdateConstraintResponsePrivate(
     UpdateConstraintResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ UpdateConstraintResponsePrivate::UpdateConstraintResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog UpdateConstraintResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog UpdateConstraint response element from \a xml.
  */
 void UpdateConstraintResponsePrivate::parseUpdateConstraintResponse(QXmlStreamReader &xml)
 {

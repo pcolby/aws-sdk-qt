@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteEventSubscriptionRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DeleteEventSubscriptionRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteEventSubscriptionRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DeleteEventSubscriptionRequestPrivate::DeleteEventSubscriptionRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DeleteEventSubscriptionRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT InstallToRemoteAccessSessionResponse : public DeviceFarmRespo
 public:
     InstallToRemoteAccessSessionResponse(const InstallToRemoteAccessSessionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const InstallToRemoteAccessSessionRequest * request() const;
+    virtual const InstallToRemoteAccessSessionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(InstallToRemoteAccessSessionResponse)

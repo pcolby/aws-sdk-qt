@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DetachPolicyResponse
- *
  * \brief The DetachPolicyResponse class provides an interace for IoT DetachPolicy responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DetachPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetachPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 DetachPolicyResponse::DetachPolicyResponse(
         const DetachPolicyRequest &request,
@@ -66,6 +61,9 @@ DetachPolicyResponse::DetachPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetachPolicyRequest * DetachPolicyResponse::request() const
 {
     Q_D(const DetachPolicyResponse);
@@ -73,9 +71,8 @@ const DetachPolicyRequest * DetachPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DetachPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DetachPolicy \a response.
  */
 void DetachPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DetachPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DetachPolicyResponsePrivate
+ * \brief The DetachPolicyResponsePrivate class provides private implementation for DetachPolicyResponse.
  * \internal
  *
- * \class DetachPolicyResponsePrivate
- *
- * \brief Private implementation for DetachPolicyResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetachPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetachPolicyResponse instance.
+ * Constructs a DetachPolicyResponsePrivate object with public implementation \a q.
  */
 DetachPolicyResponsePrivate::DetachPolicyResponsePrivate(
     DetachPolicyResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DetachPolicyResponsePrivate::DetachPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DetachPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DetachPolicy response element from \a xml.
  */
 void DetachPolicyResponsePrivate::parseDetachPolicyResponse(QXmlStreamReader &xml)
 {

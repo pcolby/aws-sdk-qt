@@ -29,10 +29,9 @@ namespace CognitoSync {
 
 /*!
  * \class QtAws::CognitoSync::UnsubscribeFromDatasetResponse
- *
  * \brief The UnsubscribeFromDatasetResponse class provides an interace for CognitoSync UnsubscribeFromDataset responses.
  *
- * \ingroup CognitoSync
+ * \inmodule QtAwsCognitoSync
  *
  *  <fullname>Amazon Cognito Sync</fullname>
  * 
@@ -59,11 +58,7 @@ namespace CognitoSync {
  */
 
 /*!
- * @brief  Constructs a new UnsubscribeFromDatasetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UnsubscribeFromDatasetResponse object for \a reply to \a request, with parent \a parent.
  */
 UnsubscribeFromDatasetResponse::UnsubscribeFromDatasetResponse(
         const UnsubscribeFromDatasetRequest &request,
@@ -75,6 +70,9 @@ UnsubscribeFromDatasetResponse::UnsubscribeFromDatasetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UnsubscribeFromDatasetRequest * UnsubscribeFromDatasetResponse::request() const
 {
     Q_D(const UnsubscribeFromDatasetResponse);
@@ -82,9 +80,8 @@ const UnsubscribeFromDatasetRequest * UnsubscribeFromDatasetResponse::request() 
 }
 
 /*!
- * @brief  Parse a CognitoSync UnsubscribeFromDataset response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoSync UnsubscribeFromDataset \a response.
  */
 void UnsubscribeFromDatasetResponse::parseSuccess(QIODevice &response)
 {
@@ -94,19 +91,15 @@ void UnsubscribeFromDatasetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoSync::UnsubscribeFromDatasetResponsePrivate
+ * \brief The UnsubscribeFromDatasetResponsePrivate class provides private implementation for UnsubscribeFromDatasetResponse.
  * \internal
  *
- * \class UnsubscribeFromDatasetResponsePrivate
- *
- * \brief Private implementation for UnsubscribeFromDatasetResponse.
+ * \inmodule QtAwsCognitoSync
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnsubscribeFromDatasetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UnsubscribeFromDatasetResponse instance.
+ * Constructs a UnsubscribeFromDatasetResponsePrivate object with public implementation \a q.
  */
 UnsubscribeFromDatasetResponsePrivate::UnsubscribeFromDatasetResponsePrivate(
     UnsubscribeFromDatasetResponse * const q) : CognitoSyncResponsePrivate(q)
@@ -115,9 +108,7 @@ UnsubscribeFromDatasetResponsePrivate::UnsubscribeFromDatasetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoSync UnsubscribeFromDatasetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoSync UnsubscribeFromDataset response element from \a xml.
  */
 void UnsubscribeFromDatasetResponsePrivate::parseUnsubscribeFromDatasetResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * AssociateVPCWithHostedZoneRequest::response(Q
  */
 
 /*!
- *
- * Constructs a AssociateVPCWithHostedZoneRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a AssociateVPCWithHostedZoneRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 AssociateVPCWithHostedZoneRequestPrivate::AssociateVPCWithHostedZoneRequestPrivate(
     const Route53Request::Action action, AssociateVPCWithHostedZoneRequest * const q)

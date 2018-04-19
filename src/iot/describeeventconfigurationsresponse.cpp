@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeEventConfigurationsResponse
- *
  * \brief The DescribeEventConfigurationsResponse class provides an interace for IoT DescribeEventConfigurations responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeEventConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEventConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEventConfigurationsResponse::DescribeEventConfigurationsResponse(
         const DescribeEventConfigurationsRequest &request,
@@ -66,6 +61,9 @@ DescribeEventConfigurationsResponse::DescribeEventConfigurationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEventConfigurationsRequest * DescribeEventConfigurationsResponse::request() const
 {
     Q_D(const DescribeEventConfigurationsResponse);
@@ -73,9 +71,8 @@ const DescribeEventConfigurationsRequest * DescribeEventConfigurationsResponse::
 }
 
 /*!
- * @brief  Parse a IoT DescribeEventConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DescribeEventConfigurations \a response.
  */
 void DescribeEventConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeEventConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DescribeEventConfigurationsResponsePrivate
+ * \brief The DescribeEventConfigurationsResponsePrivate class provides private implementation for DescribeEventConfigurationsResponse.
  * \internal
  *
- * \class DescribeEventConfigurationsResponsePrivate
- *
- * \brief Private implementation for DescribeEventConfigurationsResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEventConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEventConfigurationsResponse instance.
+ * Constructs a DescribeEventConfigurationsResponsePrivate object with public implementation \a q.
  */
 DescribeEventConfigurationsResponsePrivate::DescribeEventConfigurationsResponsePrivate(
     DescribeEventConfigurationsResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeEventConfigurationsResponsePrivate::DescribeEventConfigurationsResponseP
 }
 
 /*!
- * @brief  Parse an IoT DescribeEventConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DescribeEventConfigurations response element from \a xml.
  */
 void DescribeEventConfigurationsResponsePrivate::parseDescribeEventConfigurationsResponse(QXmlStreamReader &xml)
 {

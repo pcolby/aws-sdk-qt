@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateInstanceExportTaskRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateInstanceExportTaskRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateInstanceExportTaskRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateInstanceExportTaskRequestPrivate::CreateInstanceExportTaskRequestPrivate(
     const EC2Request::Action action, CreateInstanceExportTaskRequest * const q)

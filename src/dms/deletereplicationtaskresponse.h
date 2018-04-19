@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteReplicationTaskResponse : public DatabaseMigrationServi
 public:
     DeleteReplicationTaskResponse(const DeleteReplicationTaskRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteReplicationTaskRequest * request() const;
+    virtual const DeleteReplicationTaskRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteReplicationTaskResponse)

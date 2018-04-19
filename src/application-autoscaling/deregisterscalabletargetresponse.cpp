@@ -29,10 +29,9 @@ namespace ApplicationAutoScaling {
 
 /*!
  * \class QtAws::ApplicationAutoScaling::DeregisterScalableTargetResponse
- *
  * \brief The DeregisterScalableTargetResponse class provides an interace for ApplicationAutoScaling DeregisterScalableTarget responses.
  *
- * \ingroup ApplicationAutoScaling
+ * \inmodule QtAwsApplicationAutoScaling
  *
  *  With Application Auto Scaling, you can configure automatic scaling for your scalable AWS resources. You can use
  *  Application Auto Scaling to accomplish the following
@@ -112,11 +111,7 @@ namespace ApplicationAutoScaling {
  */
 
 /*!
- * @brief  Constructs a new DeregisterScalableTargetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterScalableTargetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterScalableTargetResponse::DeregisterScalableTargetResponse(
         const DeregisterScalableTargetRequest &request,
@@ -128,6 +123,9 @@ DeregisterScalableTargetResponse::DeregisterScalableTargetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterScalableTargetRequest * DeregisterScalableTargetResponse::request() const
 {
     Q_D(const DeregisterScalableTargetResponse);
@@ -135,9 +133,8 @@ const DeregisterScalableTargetRequest * DeregisterScalableTargetResponse::reques
 }
 
 /*!
- * @brief  Parse a ApplicationAutoScaling DeregisterScalableTarget response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationAutoScaling DeregisterScalableTarget \a response.
  */
 void DeregisterScalableTargetResponse::parseSuccess(QIODevice &response)
 {
@@ -147,19 +144,15 @@ void DeregisterScalableTargetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationAutoScaling::DeregisterScalableTargetResponsePrivate
+ * \brief The DeregisterScalableTargetResponsePrivate class provides private implementation for DeregisterScalableTargetResponse.
  * \internal
  *
- * \class DeregisterScalableTargetResponsePrivate
- *
- * \brief Private implementation for DeregisterScalableTargetResponse.
+ * \inmodule QtAwsApplicationAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterScalableTargetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterScalableTargetResponse instance.
+ * Constructs a DeregisterScalableTargetResponsePrivate object with public implementation \a q.
  */
 DeregisterScalableTargetResponsePrivate::DeregisterScalableTargetResponsePrivate(
     DeregisterScalableTargetResponse * const q) : ApplicationAutoScalingResponsePrivate(q)
@@ -168,9 +161,7 @@ DeregisterScalableTargetResponsePrivate::DeregisterScalableTargetResponsePrivate
 }
 
 /*!
- * @brief  Parse an ApplicationAutoScaling DeregisterScalableTargetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationAutoScaling DeregisterScalableTarget response element from \a xml.
  */
 void DeregisterScalableTargetResponsePrivate::parseDeregisterScalableTargetResponse(QXmlStreamReader &xml)
 {

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * GetClassifiersRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a GetClassifiersRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a GetClassifiersRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 GetClassifiersRequestPrivate::GetClassifiersRequestPrivate(
     const GlueRequest::Action action, GetClassifiersRequest * const q)

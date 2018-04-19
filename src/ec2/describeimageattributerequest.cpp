@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeImageAttributeRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeImageAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeImageAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeImageAttributeRequestPrivate::DescribeImageAttributeRequestPrivate(
     const EC2Request::Action action, DescribeImageAttributeRequest * const q)

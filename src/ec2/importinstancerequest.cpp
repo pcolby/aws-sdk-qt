@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ImportInstanceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ImportInstanceRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ImportInstanceRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ImportInstanceRequestPrivate::ImportInstanceRequestPrivate(
     const EC2Request::Action action, ImportInstanceRequest * const q)

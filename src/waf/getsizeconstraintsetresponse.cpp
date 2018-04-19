@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetSizeConstraintSetResponse
- *
  * \brief The GetSizeConstraintSetResponse class provides an interace for WAF GetSizeConstraintSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetSizeConstraintSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSizeConstraintSetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSizeConstraintSetResponse::GetSizeConstraintSetResponse(
         const GetSizeConstraintSetRequest &request,
@@ -60,6 +55,9 @@ GetSizeConstraintSetResponse::GetSizeConstraintSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSizeConstraintSetRequest * GetSizeConstraintSetResponse::request() const
 {
     Q_D(const GetSizeConstraintSetResponse);
@@ -67,9 +65,8 @@ const GetSizeConstraintSetRequest * GetSizeConstraintSetResponse::request() cons
 }
 
 /*!
- * @brief  Parse a WAF GetSizeConstraintSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF GetSizeConstraintSet \a response.
  */
 void GetSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetSizeConstraintSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::GetSizeConstraintSetResponsePrivate
+ * \brief The GetSizeConstraintSetResponsePrivate class provides private implementation for GetSizeConstraintSetResponse.
  * \internal
  *
- * \class GetSizeConstraintSetResponsePrivate
- *
- * \brief Private implementation for GetSizeConstraintSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSizeConstraintSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSizeConstraintSetResponse instance.
+ * Constructs a GetSizeConstraintSetResponsePrivate object with public implementation \a q.
  */
 GetSizeConstraintSetResponsePrivate::GetSizeConstraintSetResponsePrivate(
     GetSizeConstraintSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ GetSizeConstraintSetResponsePrivate::GetSizeConstraintSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF GetSizeConstraintSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF GetSizeConstraintSet response element from \a xml.
  */
 void GetSizeConstraintSetResponsePrivate::parseGetSizeConstraintSetResponse(QXmlStreamReader &xml)
 {

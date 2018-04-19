@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcPeeringConnectionOptionsRequest::res
  */
 
 /*!
- *
- * Constructs a ModifyVpcPeeringConnectionOptionsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyVpcPeeringConnectionOptionsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyVpcPeeringConnectionOptionsRequestPrivate::ModifyVpcPeeringConnectionOptionsRequestPrivate(
     const EC2Request::Action action, ModifyVpcPeeringConnectionOptionsRequest * const q)

@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsForResourceRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a ListTagsForResourceRequestPrivate object for ElastiCache \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsForResourceRequestPrivate object for ElastiCache \a action,
+ * with public implementation \a q.
  */
 ListTagsForResourceRequestPrivate::ListTagsForResourceRequestPrivate(
     const ElastiCacheRequest::Action action, ListTagsForResourceRequest * const q)

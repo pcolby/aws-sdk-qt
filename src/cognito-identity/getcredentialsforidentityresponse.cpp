@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::GetCredentialsForIdentityResponse
- *
  * \brief The GetCredentialsForIdentityResponse class provides an interace for CognitoIdentity GetCredentialsForIdentity responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new GetCredentialsForIdentityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCredentialsForIdentityResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCredentialsForIdentityResponse::GetCredentialsForIdentityResponse(
         const GetCredentialsForIdentityRequest &request,
@@ -93,6 +88,9 @@ GetCredentialsForIdentityResponse::GetCredentialsForIdentityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCredentialsForIdentityRequest * GetCredentialsForIdentityResponse::request() const
 {
     Q_D(const GetCredentialsForIdentityResponse);
@@ -100,9 +98,8 @@ const GetCredentialsForIdentityRequest * GetCredentialsForIdentityResponse::requ
 }
 
 /*!
- * @brief  Parse a CognitoIdentity GetCredentialsForIdentity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity GetCredentialsForIdentity \a response.
  */
 void GetCredentialsForIdentityResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void GetCredentialsForIdentityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::GetCredentialsForIdentityResponsePrivate
+ * \brief The GetCredentialsForIdentityResponsePrivate class provides private implementation for GetCredentialsForIdentityResponse.
  * \internal
  *
- * \class GetCredentialsForIdentityResponsePrivate
- *
- * \brief Private implementation for GetCredentialsForIdentityResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCredentialsForIdentityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCredentialsForIdentityResponse instance.
+ * Constructs a GetCredentialsForIdentityResponsePrivate object with public implementation \a q.
  */
 GetCredentialsForIdentityResponsePrivate::GetCredentialsForIdentityResponsePrivate(
     GetCredentialsForIdentityResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ GetCredentialsForIdentityResponsePrivate::GetCredentialsForIdentityResponsePriva
 }
 
 /*!
- * @brief  Parse an CognitoIdentity GetCredentialsForIdentityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity GetCredentialsForIdentity response element from \a xml.
  */
 void GetCredentialsForIdentityResponsePrivate::parseGetCredentialsForIdentityResponse(QXmlStreamReader &xml)
 {

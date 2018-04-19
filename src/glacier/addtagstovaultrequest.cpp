@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * AddTagsToVaultRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a AddTagsToVaultRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a AddTagsToVaultRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 AddTagsToVaultRequestPrivate::AddTagsToVaultRequestPrivate(
     const GlacierRequest::Action action, AddTagsToVaultRequest * const q)

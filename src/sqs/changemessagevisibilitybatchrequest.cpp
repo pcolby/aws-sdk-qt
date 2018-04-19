@@ -147,9 +147,8 @@ QtAws::Core::AwsAbstractResponse * ChangeMessageVisibilityBatchRequest::response
  */
 
 /*!
- *
- * Constructs a ChangeMessageVisibilityBatchRequestPrivate object for SQS \a action with,
- * public implementation \a q.
+ * Constructs a ChangeMessageVisibilityBatchRequestPrivate object for SQS \a action,
+ * with public implementation \a q.
  */
 ChangeMessageVisibilityBatchRequestPrivate::ChangeMessageVisibilityBatchRequestPrivate(
     const SQSRequest::Action action, ChangeMessageVisibilityBatchRequest * const q)

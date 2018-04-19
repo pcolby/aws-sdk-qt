@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::CreatePlatformApplicationResponse
- *
  * \brief The CreatePlatformApplicationResponse class provides an interace for SNS CreatePlatformApplication responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new CreatePlatformApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePlatformApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePlatformApplicationResponse::CreatePlatformApplicationResponse(
         const CreatePlatformApplicationRequest &request,
@@ -69,6 +64,9 @@ CreatePlatformApplicationResponse::CreatePlatformApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePlatformApplicationRequest * CreatePlatformApplicationResponse::request() const
 {
     Q_D(const CreatePlatformApplicationResponse);
@@ -76,9 +74,8 @@ const CreatePlatformApplicationRequest * CreatePlatformApplicationResponse::requ
 }
 
 /*!
- * @brief  Parse a SNS CreatePlatformApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS CreatePlatformApplication \a response.
  */
 void CreatePlatformApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void CreatePlatformApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::CreatePlatformApplicationResponsePrivate
+ * \brief The CreatePlatformApplicationResponsePrivate class provides private implementation for CreatePlatformApplicationResponse.
  * \internal
  *
- * \class CreatePlatformApplicationResponsePrivate
- *
- * \brief Private implementation for CreatePlatformApplicationResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePlatformApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePlatformApplicationResponse instance.
+ * Constructs a CreatePlatformApplicationResponsePrivate object with public implementation \a q.
  */
 CreatePlatformApplicationResponsePrivate::CreatePlatformApplicationResponsePrivate(
     CreatePlatformApplicationResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ CreatePlatformApplicationResponsePrivate::CreatePlatformApplicationResponsePriva
 }
 
 /*!
- * @brief  Parse an SNS CreatePlatformApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS CreatePlatformApplication response element from \a xml.
  */
 void CreatePlatformApplicationResponsePrivate::parseCreatePlatformApplicationResponse(QXmlStreamReader &xml)
 {

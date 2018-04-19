@@ -28,16 +28,13 @@ namespace SageMakerRuntime {
 
 /*!
  * \class QtAws::SageMakerRuntime::SageMakerRuntimeResponse
- *
  * \brief The SageMakerRuntimeResponse class provides an interface for SageMakerRuntime responses.
  *
- * \ingroup SageMakerRuntime
+ * \inmodule QtAwsSageMakerRuntime
  */
 
 /*!
- * @brief  Constructs a new SageMakerRuntimeResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a SageMakerRuntimeResponse object with parent \a parent.
  */
 SageMakerRuntimeResponse::SageMakerRuntimeResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new SageMakerRuntimeResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ SageMakerRuntimeResponse::SageMakerRuntimeResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SageMakerRuntimeResponse object.
- *
+ * \internal
+ * Constructs a SageMakerRuntimeResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SageMakerRuntimeResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 SageMakerRuntimeResponse::SageMakerRuntimeResponse(SageMakerRuntimeResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ SageMakerRuntimeResponse::SageMakerRuntimeResponse(SageMakerRuntimeResponsePriva
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void SageMakerRuntimeResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void SageMakerRuntimeResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::SageMakerRuntime::SageMakerRuntimeResponsePrivate
+ * \brief The SageMakerRuntimeResponsePrivate class provides private implementation for SageMakerRuntimeResponse.
+ * \internal
  *
- * @class  SageMakerRuntimeResponsePrivate
- *
- * @brief  Private implementation for SageMakerRuntimeResponse.
+ * \inmodule QtAwsSageMakerRuntime
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SageMakerRuntimeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SageMakerRuntimeResponse instance.
+ * Constructs a SageMakerRuntimeResponsePrivate object with public implementation \a q.
  */
 SageMakerRuntimeResponsePrivate::SageMakerRuntimeResponsePrivate(
     SageMakerRuntimeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

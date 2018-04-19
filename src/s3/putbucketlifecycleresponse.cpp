@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::PutBucketLifecycleResponse
- *
  * \brief The PutBucketLifecycleResponse class provides an interace for S3 PutBucketLifecycle responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::putBucketLifecycle
  */
 
 /*!
- * @brief  Constructs a new PutBucketLifecycleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutBucketLifecycleResponse object for \a reply to \a request, with parent \a parent.
  */
 PutBucketLifecycleResponse::PutBucketLifecycleResponse(
         const PutBucketLifecycleRequest &request,
@@ -55,6 +50,9 @@ PutBucketLifecycleResponse::PutBucketLifecycleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutBucketLifecycleRequest * PutBucketLifecycleResponse::request() const
 {
     Q_D(const PutBucketLifecycleResponse);
@@ -62,9 +60,8 @@ const PutBucketLifecycleRequest * PutBucketLifecycleResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 PutBucketLifecycle response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 PutBucketLifecycle \a response.
  */
 void PutBucketLifecycleResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void PutBucketLifecycleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::PutBucketLifecycleResponsePrivate
+ * \brief The PutBucketLifecycleResponsePrivate class provides private implementation for PutBucketLifecycleResponse.
  * \internal
  *
- * \class PutBucketLifecycleResponsePrivate
- *
- * \brief Private implementation for PutBucketLifecycleResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutBucketLifecycleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutBucketLifecycleResponse instance.
+ * Constructs a PutBucketLifecycleResponsePrivate object with public implementation \a q.
  */
 PutBucketLifecycleResponsePrivate::PutBucketLifecycleResponsePrivate(
     PutBucketLifecycleResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ PutBucketLifecycleResponsePrivate::PutBucketLifecycleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 PutBucketLifecycleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 PutBucketLifecycle response element from \a xml.
  */
 void PutBucketLifecycleResponsePrivate::parsePutBucketLifecycleResponse(QXmlStreamReader &xml)
 {

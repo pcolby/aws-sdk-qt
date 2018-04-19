@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteLaunchTemplateResponse : public EC2Response {
 public:
     DeleteLaunchTemplateResponse(const DeleteLaunchTemplateRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteLaunchTemplateRequest * request() const;
+    virtual const DeleteLaunchTemplateRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteLaunchTemplateResponse)

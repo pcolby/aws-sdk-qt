@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateClusterRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a CreateClusterRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const RedshiftRequest::Action action, CreateClusterRequest * const q)

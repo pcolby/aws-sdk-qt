@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DetectModerationLabelsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DetectModerationLabelsRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a DetectModerationLabelsRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 DetectModerationLabelsRequestPrivate::DetectModerationLabelsRequestPrivate(
     const RekognitionRequest::Action action, DetectModerationLabelsRequest * const q)

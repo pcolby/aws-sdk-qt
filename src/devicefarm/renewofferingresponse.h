@@ -34,10 +34,10 @@ class QTAWS_EXPORT RenewOfferingResponse : public DeviceFarmResponse {
 public:
     RenewOfferingResponse(const RenewOfferingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RenewOfferingRequest * request() const;
+    virtual const RenewOfferingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RenewOfferingResponse)

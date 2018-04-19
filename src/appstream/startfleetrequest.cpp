@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StartFleetRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a StartFleetRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a StartFleetRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 StartFleetRequestPrivate::StartFleetRequestPrivate(
     const AppStreamRequest::Action action, StartFleetRequest * const q)

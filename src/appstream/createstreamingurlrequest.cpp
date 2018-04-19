@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingURLRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateStreamingURLRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a CreateStreamingURLRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 CreateStreamingURLRequestPrivate::CreateStreamingURLRequestPrivate(
     const AppStreamRequest::Action action, CreateStreamingURLRequest * const q)

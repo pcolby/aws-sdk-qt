@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateKeysAndCertificateResponse
- *
  * \brief The CreateKeysAndCertificateResponse class provides an interace for IoT CreateKeysAndCertificate responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateKeysAndCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateKeysAndCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateKeysAndCertificateResponse::CreateKeysAndCertificateResponse(
         const CreateKeysAndCertificateRequest &request,
@@ -66,6 +61,9 @@ CreateKeysAndCertificateResponse::CreateKeysAndCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateKeysAndCertificateRequest * CreateKeysAndCertificateResponse::request() const
 {
     Q_D(const CreateKeysAndCertificateResponse);
@@ -73,9 +71,8 @@ const CreateKeysAndCertificateRequest * CreateKeysAndCertificateResponse::reques
 }
 
 /*!
- * @brief  Parse a IoT CreateKeysAndCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT CreateKeysAndCertificate \a response.
  */
 void CreateKeysAndCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateKeysAndCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::CreateKeysAndCertificateResponsePrivate
+ * \brief The CreateKeysAndCertificateResponsePrivate class provides private implementation for CreateKeysAndCertificateResponse.
  * \internal
  *
- * \class CreateKeysAndCertificateResponsePrivate
- *
- * \brief Private implementation for CreateKeysAndCertificateResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateKeysAndCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateKeysAndCertificateResponse instance.
+ * Constructs a CreateKeysAndCertificateResponsePrivate object with public implementation \a q.
  */
 CreateKeysAndCertificateResponsePrivate::CreateKeysAndCertificateResponsePrivate(
     CreateKeysAndCertificateResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateKeysAndCertificateResponsePrivate::CreateKeysAndCertificateResponsePrivate
 }
 
 /*!
- * @brief  Parse an IoT CreateKeysAndCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT CreateKeysAndCertificate response element from \a xml.
  */
 void CreateKeysAndCertificateResponsePrivate::parseCreateKeysAndCertificateResponse(QXmlStreamReader &xml)
 {

@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * CopyClusterSnapshotRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a CopyClusterSnapshotRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a CopyClusterSnapshotRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 CopyClusterSnapshotRequestPrivate::CopyClusterSnapshotRequestPrivate(
     const RedshiftRequest::Action action, CopyClusterSnapshotRequest * const q)

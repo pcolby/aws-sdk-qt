@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteDhcpOptionsResponse : public EC2Response {
 public:
     DeleteDhcpOptionsResponse(const DeleteDhcpOptionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteDhcpOptionsRequest * request() const;
+    virtual const DeleteDhcpOptionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteDhcpOptionsResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListBootstrapActionsResponse : public EMRResponse {
 public:
     ListBootstrapActionsResponse(const ListBootstrapActionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListBootstrapActionsRequest * request() const;
+    virtual const ListBootstrapActionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListBootstrapActionsResponse)

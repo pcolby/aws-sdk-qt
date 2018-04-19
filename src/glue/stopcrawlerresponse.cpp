@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::StopCrawlerResponse
- *
  * \brief The StopCrawlerResponse class provides an interace for Glue StopCrawler responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new StopCrawlerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopCrawlerResponse object for \a reply to \a request, with parent \a parent.
  */
 StopCrawlerResponse::StopCrawlerResponse(
         const StopCrawlerRequest &request,
@@ -58,6 +53,9 @@ StopCrawlerResponse::StopCrawlerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopCrawlerRequest * StopCrawlerResponse::request() const
 {
     Q_D(const StopCrawlerResponse);
@@ -65,9 +63,8 @@ const StopCrawlerRequest * StopCrawlerResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue StopCrawler response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue StopCrawler \a response.
  */
 void StopCrawlerResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void StopCrawlerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::StopCrawlerResponsePrivate
+ * \brief The StopCrawlerResponsePrivate class provides private implementation for StopCrawlerResponse.
  * \internal
  *
- * \class StopCrawlerResponsePrivate
- *
- * \brief Private implementation for StopCrawlerResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopCrawlerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopCrawlerResponse instance.
+ * Constructs a StopCrawlerResponsePrivate object with public implementation \a q.
  */
 StopCrawlerResponsePrivate::StopCrawlerResponsePrivate(
     StopCrawlerResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ StopCrawlerResponsePrivate::StopCrawlerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue StopCrawlerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue StopCrawler response element from \a xml.
  */
 void StopCrawlerResponsePrivate::parseStopCrawlerResponse(QXmlStreamReader &xml)
 {

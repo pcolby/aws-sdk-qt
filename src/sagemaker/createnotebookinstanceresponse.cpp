@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::CreateNotebookInstanceResponse
- *
  * \brief The CreateNotebookInstanceResponse class provides an interace for SageMaker CreateNotebookInstance responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::createNotebookInstance
  */
 
 /*!
- * @brief  Constructs a new CreateNotebookInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateNotebookInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateNotebookInstanceResponse::CreateNotebookInstanceResponse(
         const CreateNotebookInstanceRequest &request,
@@ -55,6 +50,9 @@ CreateNotebookInstanceResponse::CreateNotebookInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateNotebookInstanceRequest * CreateNotebookInstanceResponse::request() const
 {
     Q_D(const CreateNotebookInstanceResponse);
@@ -62,9 +60,8 @@ const CreateNotebookInstanceRequest * CreateNotebookInstanceResponse::request() 
 }
 
 /*!
- * @brief  Parse a SageMaker CreateNotebookInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker CreateNotebookInstance \a response.
  */
 void CreateNotebookInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateNotebookInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::CreateNotebookInstanceResponsePrivate
+ * \brief The CreateNotebookInstanceResponsePrivate class provides private implementation for CreateNotebookInstanceResponse.
  * \internal
  *
- * \class CreateNotebookInstanceResponsePrivate
- *
- * \brief Private implementation for CreateNotebookInstanceResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNotebookInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateNotebookInstanceResponse instance.
+ * Constructs a CreateNotebookInstanceResponsePrivate object with public implementation \a q.
  */
 CreateNotebookInstanceResponsePrivate::CreateNotebookInstanceResponsePrivate(
     CreateNotebookInstanceResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateNotebookInstanceResponsePrivate::CreateNotebookInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker CreateNotebookInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker CreateNotebookInstance response element from \a xml.
  */
 void CreateNotebookInstanceResponsePrivate::parseCreateNotebookInstanceResponse(QXmlStreamReader &xml)
 {

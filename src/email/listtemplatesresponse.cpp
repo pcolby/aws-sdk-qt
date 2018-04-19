@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListTemplatesResponse
- *
  * \brief The ListTemplatesResponse class provides an interace for SES ListTemplates responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListTemplatesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTemplatesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTemplatesResponse::ListTemplatesResponse(
         const ListTemplatesRequest &request,
@@ -66,6 +61,9 @@ ListTemplatesResponse::ListTemplatesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTemplatesRequest * ListTemplatesResponse::request() const
 {
     Q_D(const ListTemplatesResponse);
@@ -73,9 +71,8 @@ const ListTemplatesRequest * ListTemplatesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES ListTemplates response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES ListTemplates \a response.
  */
 void ListTemplatesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListTemplatesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::ListTemplatesResponsePrivate
+ * \brief The ListTemplatesResponsePrivate class provides private implementation for ListTemplatesResponse.
  * \internal
  *
- * \class ListTemplatesResponsePrivate
- *
- * \brief Private implementation for ListTemplatesResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTemplatesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTemplatesResponse instance.
+ * Constructs a ListTemplatesResponsePrivate object with public implementation \a q.
  */
 ListTemplatesResponsePrivate::ListTemplatesResponsePrivate(
     ListTemplatesResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ ListTemplatesResponsePrivate::ListTemplatesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES ListTemplatesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES ListTemplates response element from \a xml.
  */
 void ListTemplatesResponsePrivate::parseListTemplatesResponse(QXmlStreamReader &xml)
 {

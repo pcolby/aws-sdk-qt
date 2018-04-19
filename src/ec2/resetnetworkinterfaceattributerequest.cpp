@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ResetNetworkInterfaceAttributeRequest::respon
  */
 
 /*!
- *
- * Constructs a ResetNetworkInterfaceAttributeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ResetNetworkInterfaceAttributeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ResetNetworkInterfaceAttributeRequestPrivate::ResetNetworkInterfaceAttributeRequestPrivate(
     const EC2Request::Action action, ResetNetworkInterfaceAttributeRequest * const q)

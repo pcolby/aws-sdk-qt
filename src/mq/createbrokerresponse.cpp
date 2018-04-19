@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::CreateBrokerResponse
- *
  * \brief The CreateBrokerResponse class provides an interace for MQ CreateBroker responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new CreateBrokerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateBrokerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateBrokerResponse::CreateBrokerResponse(
         const CreateBrokerRequest &request,
@@ -57,6 +52,9 @@ CreateBrokerResponse::CreateBrokerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateBrokerRequest * CreateBrokerResponse::request() const
 {
     Q_D(const CreateBrokerResponse);
@@ -64,9 +62,8 @@ const CreateBrokerRequest * CreateBrokerResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ CreateBroker response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ CreateBroker \a response.
  */
 void CreateBrokerResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void CreateBrokerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::CreateBrokerResponsePrivate
+ * \brief The CreateBrokerResponsePrivate class provides private implementation for CreateBrokerResponse.
  * \internal
  *
- * \class CreateBrokerResponsePrivate
- *
- * \brief Private implementation for CreateBrokerResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBrokerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateBrokerResponse instance.
+ * Constructs a CreateBrokerResponsePrivate object with public implementation \a q.
  */
 CreateBrokerResponsePrivate::CreateBrokerResponsePrivate(
     CreateBrokerResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ CreateBrokerResponsePrivate::CreateBrokerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ CreateBrokerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ CreateBroker response element from \a xml.
  */
 void CreateBrokerResponsePrivate::parseCreateBrokerResponse(QXmlStreamReader &xml)
 {

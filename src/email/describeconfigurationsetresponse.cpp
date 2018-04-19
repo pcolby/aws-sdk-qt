@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::DescribeConfigurationSetResponse
- *
  * \brief The DescribeConfigurationSetResponse class provides an interace for SES DescribeConfigurationSet responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConfigurationSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConfigurationSetResponse::DescribeConfigurationSetResponse(
         const DescribeConfigurationSetRequest &request,
@@ -66,6 +61,9 @@ DescribeConfigurationSetResponse::DescribeConfigurationSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConfigurationSetRequest * DescribeConfigurationSetResponse::request() const
 {
     Q_D(const DescribeConfigurationSetResponse);
@@ -73,9 +71,8 @@ const DescribeConfigurationSetRequest * DescribeConfigurationSetResponse::reques
 }
 
 /*!
- * @brief  Parse a SES DescribeConfigurationSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES DescribeConfigurationSet \a response.
  */
 void DescribeConfigurationSetResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeConfigurationSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::DescribeConfigurationSetResponsePrivate
+ * \brief The DescribeConfigurationSetResponsePrivate class provides private implementation for DescribeConfigurationSetResponse.
  * \internal
  *
- * \class DescribeConfigurationSetResponsePrivate
- *
- * \brief Private implementation for DescribeConfigurationSetResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConfigurationSetResponse instance.
+ * Constructs a DescribeConfigurationSetResponsePrivate object with public implementation \a q.
  */
 DescribeConfigurationSetResponsePrivate::DescribeConfigurationSetResponsePrivate(
     DescribeConfigurationSetResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeConfigurationSetResponsePrivate::DescribeConfigurationSetResponsePrivate
 }
 
 /*!
- * @brief  Parse an SES DescribeConfigurationSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES DescribeConfigurationSet response element from \a xml.
  */
 void DescribeConfigurationSetResponsePrivate::parseDescribeConfigurationSetResponse(QXmlStreamReader &xml)
 {

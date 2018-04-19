@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DeleteMatchmakingConfigurationResponse
- *
  * \brief The DeleteMatchmakingConfigurationResponse class provides an interace for GameLift DeleteMatchmakingConfiguration responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DeleteMatchmakingConfigurationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteMatchmakingConfigurationResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteMatchmakingConfigurationResponse::DeleteMatchmakingConfigurationResponse(
         const DeleteMatchmakingConfigurationRequest &request,
@@ -491,6 +486,9 @@ DeleteMatchmakingConfigurationResponse::DeleteMatchmakingConfigurationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteMatchmakingConfigurationRequest * DeleteMatchmakingConfigurationResponse::request() const
 {
     Q_D(const DeleteMatchmakingConfigurationResponse);
@@ -498,9 +496,8 @@ const DeleteMatchmakingConfigurationRequest * DeleteMatchmakingConfigurationResp
 }
 
 /*!
- * @brief  Parse a GameLift DeleteMatchmakingConfiguration response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DeleteMatchmakingConfiguration \a response.
  */
 void DeleteMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DeleteMatchmakingConfigurationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DeleteMatchmakingConfigurationResponsePrivate
+ * \brief The DeleteMatchmakingConfigurationResponsePrivate class provides private implementation for DeleteMatchmakingConfigurationResponse.
  * \internal
  *
- * \class DeleteMatchmakingConfigurationResponsePrivate
- *
- * \brief Private implementation for DeleteMatchmakingConfigurationResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteMatchmakingConfigurationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteMatchmakingConfigurationResponse instance.
+ * Constructs a DeleteMatchmakingConfigurationResponsePrivate object with public implementation \a q.
  */
 DeleteMatchmakingConfigurationResponsePrivate::DeleteMatchmakingConfigurationResponsePrivate(
     DeleteMatchmakingConfigurationResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DeleteMatchmakingConfigurationResponsePrivate::DeleteMatchmakingConfigurationRes
 }
 
 /*!
- * @brief  Parse an GameLift DeleteMatchmakingConfigurationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DeleteMatchmakingConfiguration response element from \a xml.
  */
 void DeleteMatchmakingConfigurationResponsePrivate::parseDeleteMatchmakingConfigurationResponse(QXmlStreamReader &xml)
 {

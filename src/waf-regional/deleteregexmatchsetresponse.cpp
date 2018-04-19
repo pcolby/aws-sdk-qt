@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::DeleteRegexMatchSetResponse
- *
  * \brief The DeleteRegexMatchSetResponse class provides an interace for WAFRegional DeleteRegexMatchSet responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new DeleteRegexMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteRegexMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteRegexMatchSetResponse::DeleteRegexMatchSetResponse(
         const DeleteRegexMatchSetRequest &request,
@@ -62,6 +57,9 @@ DeleteRegexMatchSetResponse::DeleteRegexMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteRegexMatchSetRequest * DeleteRegexMatchSetResponse::request() const
 {
     Q_D(const DeleteRegexMatchSetResponse);
@@ -69,9 +67,8 @@ const DeleteRegexMatchSetRequest * DeleteRegexMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional DeleteRegexMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional DeleteRegexMatchSet \a response.
  */
 void DeleteRegexMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DeleteRegexMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::DeleteRegexMatchSetResponsePrivate
+ * \brief The DeleteRegexMatchSetResponsePrivate class provides private implementation for DeleteRegexMatchSetResponse.
  * \internal
  *
- * \class DeleteRegexMatchSetResponsePrivate
- *
- * \brief Private implementation for DeleteRegexMatchSetResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteRegexMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteRegexMatchSetResponse instance.
+ * Constructs a DeleteRegexMatchSetResponsePrivate object with public implementation \a q.
  */
 DeleteRegexMatchSetResponsePrivate::DeleteRegexMatchSetResponsePrivate(
     DeleteRegexMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ DeleteRegexMatchSetResponsePrivate::DeleteRegexMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional DeleteRegexMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional DeleteRegexMatchSet response element from \a xml.
  */
 void DeleteRegexMatchSetResponsePrivate::parseDeleteRegexMatchSetResponse(QXmlStreamReader &xml)
 {

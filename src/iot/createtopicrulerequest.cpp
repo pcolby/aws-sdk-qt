@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateTopicRuleRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a CreateTopicRuleRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a CreateTopicRuleRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 CreateTopicRuleRequestPrivate::CreateTopicRuleRequestPrivate(
     const IoTRequest::Action action, CreateTopicRuleRequest * const q)

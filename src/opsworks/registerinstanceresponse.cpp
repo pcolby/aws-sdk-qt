@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::RegisterInstanceResponse
- *
  * \brief The RegisterInstanceResponse class provides an interace for OpsWorks RegisterInstance responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new RegisterInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterInstanceResponse::RegisterInstanceResponse(
         const RegisterInstanceRequest &request,
@@ -161,6 +156,9 @@ RegisterInstanceResponse::RegisterInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterInstanceRequest * RegisterInstanceResponse::request() const
 {
     Q_D(const RegisterInstanceResponse);
@@ -168,9 +166,8 @@ const RegisterInstanceRequest * RegisterInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks RegisterInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks RegisterInstance \a response.
  */
 void RegisterInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void RegisterInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::RegisterInstanceResponsePrivate
+ * \brief The RegisterInstanceResponsePrivate class provides private implementation for RegisterInstanceResponse.
  * \internal
  *
- * \class RegisterInstanceResponsePrivate
- *
- * \brief Private implementation for RegisterInstanceResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterInstanceResponse instance.
+ * Constructs a RegisterInstanceResponsePrivate object with public implementation \a q.
  */
 RegisterInstanceResponsePrivate::RegisterInstanceResponsePrivate(
     RegisterInstanceResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ RegisterInstanceResponsePrivate::RegisterInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks RegisterInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks RegisterInstance response element from \a xml.
  */
 void RegisterInstanceResponsePrivate::parseRegisterInstanceResponse(QXmlStreamReader &xml)
 {

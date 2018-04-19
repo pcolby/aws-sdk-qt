@@ -34,10 +34,10 @@ class QTAWS_EXPORT InvokeResponse : public LambdaResponse {
 public:
     InvokeResponse(const InvokeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const InvokeRequest * request() const;
+    virtual const InvokeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(InvokeResponse)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAnalysisSchemeRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DeleteAnalysisSchemeRequestPrivate object for CloudSearch \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAnalysisSchemeRequestPrivate object for CloudSearch \a action,
+ * with public implementation \a q.
  */
 DeleteAnalysisSchemeRequestPrivate::DeleteAnalysisSchemeRequestPrivate(
     const CloudSearchRequest::Action action, DeleteAnalysisSchemeRequest * const q)

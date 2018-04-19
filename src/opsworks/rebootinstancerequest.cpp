@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * RebootInstanceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a RebootInstanceRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a RebootInstanceRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
     const OpsWorksRequest::Action action, RebootInstanceRequest * const q)

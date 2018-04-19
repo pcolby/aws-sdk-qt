@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DescribeTagOptionResponse
- *
  * \brief The DescribeTagOptionResponse class provides an interace for ServiceCatalog DescribeTagOption responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DescribeTagOptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeTagOptionResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeTagOptionResponse::DescribeTagOptionResponse(
         const DescribeTagOptionRequest &request,
@@ -61,6 +56,9 @@ DescribeTagOptionResponse::DescribeTagOptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeTagOptionRequest * DescribeTagOptionResponse::request() const
 {
     Q_D(const DescribeTagOptionResponse);
@@ -68,9 +66,8 @@ const DescribeTagOptionRequest * DescribeTagOptionResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DescribeTagOption response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DescribeTagOption \a response.
  */
 void DescribeTagOptionResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeTagOptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DescribeTagOptionResponsePrivate
+ * \brief The DescribeTagOptionResponsePrivate class provides private implementation for DescribeTagOptionResponse.
  * \internal
  *
- * \class DescribeTagOptionResponsePrivate
- *
- * \brief Private implementation for DescribeTagOptionResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeTagOptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeTagOptionResponse instance.
+ * Constructs a DescribeTagOptionResponsePrivate object with public implementation \a q.
  */
 DescribeTagOptionResponsePrivate::DescribeTagOptionResponsePrivate(
     DescribeTagOptionResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeTagOptionResponsePrivate::DescribeTagOptionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DescribeTagOptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DescribeTagOption response element from \a xml.
  */
 void DescribeTagOptionResponsePrivate::parseDescribeTagOptionResponse(QXmlStreamReader &xml)
 {

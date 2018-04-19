@@ -29,21 +29,16 @@ namespace MediaLive {
 
 /*!
  * \class QtAws::MediaLive::DescribeInputResponse
- *
  * \brief The DescribeInputResponse class provides an interace for MediaLive DescribeInput responses.
  *
- * \ingroup MediaLive
+ * \inmodule QtAwsMediaLive
  *
  *
  * \sa MediaLiveClient::describeInput
  */
 
 /*!
- * @brief  Constructs a new DescribeInputResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeInputResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeInputResponse::DescribeInputResponse(
         const DescribeInputRequest &request,
@@ -55,6 +50,9 @@ DescribeInputResponse::DescribeInputResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeInputRequest * DescribeInputResponse::request() const
 {
     Q_D(const DescribeInputResponse);
@@ -62,9 +60,8 @@ const DescribeInputRequest * DescribeInputResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaLive DescribeInput response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaLive DescribeInput \a response.
  */
 void DescribeInputResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DescribeInputResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaLive::DescribeInputResponsePrivate
+ * \brief The DescribeInputResponsePrivate class provides private implementation for DescribeInputResponse.
  * \internal
  *
- * \class DescribeInputResponsePrivate
- *
- * \brief Private implementation for DescribeInputResponse.
+ * \inmodule QtAwsMediaLive
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInputResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeInputResponse instance.
+ * Constructs a DescribeInputResponsePrivate object with public implementation \a q.
  */
 DescribeInputResponsePrivate::DescribeInputResponsePrivate(
     DescribeInputResponse * const q) : MediaLiveResponsePrivate(q)
@@ -95,9 +88,7 @@ DescribeInputResponsePrivate::DescribeInputResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaLive DescribeInputResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaLive DescribeInput response element from \a xml.
  */
 void DescribeInputResponsePrivate::parseDescribeInputResponse(QXmlStreamReader &xml)
 {

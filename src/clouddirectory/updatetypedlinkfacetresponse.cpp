@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::UpdateTypedLinkFacetResponse
- *
  * \brief The UpdateTypedLinkFacetResponse class provides an interace for CloudDirectory UpdateTypedLinkFacet responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new UpdateTypedLinkFacetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateTypedLinkFacetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateTypedLinkFacetResponse::UpdateTypedLinkFacetResponse(
         const UpdateTypedLinkFacetRequest &request,
@@ -62,6 +57,9 @@ UpdateTypedLinkFacetResponse::UpdateTypedLinkFacetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateTypedLinkFacetRequest * UpdateTypedLinkFacetResponse::request() const
 {
     Q_D(const UpdateTypedLinkFacetResponse);
@@ -69,9 +67,8 @@ const UpdateTypedLinkFacetRequest * UpdateTypedLinkFacetResponse::request() cons
 }
 
 /*!
- * @brief  Parse a CloudDirectory UpdateTypedLinkFacet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory UpdateTypedLinkFacet \a response.
  */
 void UpdateTypedLinkFacetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void UpdateTypedLinkFacetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::UpdateTypedLinkFacetResponsePrivate
+ * \brief The UpdateTypedLinkFacetResponsePrivate class provides private implementation for UpdateTypedLinkFacetResponse.
  * \internal
  *
- * \class UpdateTypedLinkFacetResponsePrivate
- *
- * \brief Private implementation for UpdateTypedLinkFacetResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateTypedLinkFacetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateTypedLinkFacetResponse instance.
+ * Constructs a UpdateTypedLinkFacetResponsePrivate object with public implementation \a q.
  */
 UpdateTypedLinkFacetResponsePrivate::UpdateTypedLinkFacetResponsePrivate(
     UpdateTypedLinkFacetResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ UpdateTypedLinkFacetResponsePrivate::UpdateTypedLinkFacetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory UpdateTypedLinkFacetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory UpdateTypedLinkFacet response element from \a xml.
  */
 void UpdateTypedLinkFacetResponsePrivate::parseUpdateTypedLinkFacetResponse(QXmlStreamReader &xml)
 {

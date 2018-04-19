@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DeleteLagResponse
- *
  * \brief The DeleteLagResponse class provides an interace for DirectConnect DeleteLag responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DeleteLagResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteLagResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteLagResponse::DeleteLagResponse(
         const DeleteLagRequest &request,
@@ -63,6 +58,9 @@ DeleteLagResponse::DeleteLagResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteLagRequest * DeleteLagResponse::request() const
 {
     Q_D(const DeleteLagResponse);
@@ -70,9 +68,8 @@ const DeleteLagRequest * DeleteLagResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect DeleteLag response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DeleteLag \a response.
  */
 void DeleteLagResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DeleteLagResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::DeleteLagResponsePrivate
+ * \brief The DeleteLagResponsePrivate class provides private implementation for DeleteLagResponse.
  * \internal
  *
- * \class DeleteLagResponsePrivate
- *
- * \brief Private implementation for DeleteLagResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteLagResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteLagResponse instance.
+ * Constructs a DeleteLagResponsePrivate object with public implementation \a q.
  */
 DeleteLagResponsePrivate::DeleteLagResponsePrivate(
     DeleteLagResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DeleteLagResponsePrivate::DeleteLagResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect DeleteLagResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DeleteLag response element from \a xml.
  */
 void DeleteLagResponsePrivate::parseDeleteLagResponse(QXmlStreamReader &xml)
 {

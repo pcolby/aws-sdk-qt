@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * ResetPasswordRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a ResetPasswordRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a ResetPasswordRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 ResetPasswordRequestPrivate::ResetPasswordRequestPrivate(
     const WorkMailRequest::Action action, ResetPasswordRequest * const q)

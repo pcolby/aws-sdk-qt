@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeIndexRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DescribeIndexRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DescribeIndexRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DescribeIndexRequestPrivate::DescribeIndexRequestPrivate(
     const IoTRequest::Action action, DescribeIndexRequest * const q)

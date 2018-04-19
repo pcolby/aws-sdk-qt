@@ -34,10 +34,10 @@ class QTAWS_EXPORT RevokeDBSecurityGroupIngressResponse : public RDSResponse {
 public:
     RevokeDBSecurityGroupIngressResponse(const RevokeDBSecurityGroupIngressRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RevokeDBSecurityGroupIngressRequest * request() const;
+    virtual const RevokeDBSecurityGroupIngressRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RevokeDBSecurityGroupIngressResponse)

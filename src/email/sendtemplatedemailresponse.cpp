@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SendTemplatedEmailResponse
- *
  * \brief The SendTemplatedEmailResponse class provides an interace for SES SendTemplatedEmail responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SendTemplatedEmailResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SendTemplatedEmailResponse object for \a reply to \a request, with parent \a parent.
  */
 SendTemplatedEmailResponse::SendTemplatedEmailResponse(
         const SendTemplatedEmailRequest &request,
@@ -66,6 +61,9 @@ SendTemplatedEmailResponse::SendTemplatedEmailResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SendTemplatedEmailRequest * SendTemplatedEmailResponse::request() const
 {
     Q_D(const SendTemplatedEmailResponse);
@@ -73,9 +71,8 @@ const SendTemplatedEmailRequest * SendTemplatedEmailResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES SendTemplatedEmail response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SendTemplatedEmail \a response.
  */
 void SendTemplatedEmailResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SendTemplatedEmailResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::SendTemplatedEmailResponsePrivate
+ * \brief The SendTemplatedEmailResponsePrivate class provides private implementation for SendTemplatedEmailResponse.
  * \internal
  *
- * \class SendTemplatedEmailResponsePrivate
- *
- * \brief Private implementation for SendTemplatedEmailResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SendTemplatedEmailResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SendTemplatedEmailResponse instance.
+ * Constructs a SendTemplatedEmailResponsePrivate object with public implementation \a q.
  */
 SendTemplatedEmailResponsePrivate::SendTemplatedEmailResponsePrivate(
     SendTemplatedEmailResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SendTemplatedEmailResponsePrivate::SendTemplatedEmailResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES SendTemplatedEmailResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SendTemplatedEmail response element from \a xml.
  */
 void SendTemplatedEmailResponsePrivate::parseSendTemplatedEmailResponse(QXmlStreamReader &xml)
 {

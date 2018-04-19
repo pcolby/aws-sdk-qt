@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListComplianceSummariesResponse
- *
  * \brief The ListComplianceSummariesResponse class provides an interace for SSM ListComplianceSummaries responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListComplianceSummariesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListComplianceSummariesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListComplianceSummariesResponse::ListComplianceSummariesResponse(
         const ListComplianceSummariesRequest &request,
@@ -79,6 +74,9 @@ ListComplianceSummariesResponse::ListComplianceSummariesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListComplianceSummariesRequest * ListComplianceSummariesResponse::request() const
 {
     Q_D(const ListComplianceSummariesResponse);
@@ -86,9 +84,8 @@ const ListComplianceSummariesRequest * ListComplianceSummariesResponse::request(
 }
 
 /*!
- * @brief  Parse a SSM ListComplianceSummaries response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM ListComplianceSummaries \a response.
  */
 void ListComplianceSummariesResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void ListComplianceSummariesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::ListComplianceSummariesResponsePrivate
+ * \brief The ListComplianceSummariesResponsePrivate class provides private implementation for ListComplianceSummariesResponse.
  * \internal
  *
- * \class ListComplianceSummariesResponsePrivate
- *
- * \brief Private implementation for ListComplianceSummariesResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListComplianceSummariesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListComplianceSummariesResponse instance.
+ * Constructs a ListComplianceSummariesResponsePrivate object with public implementation \a q.
  */
 ListComplianceSummariesResponsePrivate::ListComplianceSummariesResponsePrivate(
     ListComplianceSummariesResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ ListComplianceSummariesResponsePrivate::ListComplianceSummariesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM ListComplianceSummariesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM ListComplianceSummaries response element from \a xml.
  */
 void ListComplianceSummariesResponsePrivate::parseListComplianceSummariesResponse(QXmlStreamReader &xml)
 {

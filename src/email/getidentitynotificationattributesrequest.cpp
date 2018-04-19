@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetIdentityNotificationAttributesRequest::res
  */
 
 /*!
- *
- * Constructs a GetIdentityNotificationAttributesRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a GetIdentityNotificationAttributesRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 GetIdentityNotificationAttributesRequestPrivate::GetIdentityNotificationAttributesRequestPrivate(
     const SESRequest::Action action, GetIdentityNotificationAttributesRequest * const q)

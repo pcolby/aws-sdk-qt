@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetImportJobsResponse
- *
  * \brief The GetImportJobsResponse class provides an interace for Pinpoint GetImportJobs responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getImportJobs
  */
 
 /*!
- * @brief  Constructs a new GetImportJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetImportJobsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetImportJobsResponse::GetImportJobsResponse(
         const GetImportJobsRequest &request,
@@ -55,6 +50,9 @@ GetImportJobsResponse::GetImportJobsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetImportJobsRequest * GetImportJobsResponse::request() const
 {
     Q_D(const GetImportJobsResponse);
@@ -62,9 +60,8 @@ const GetImportJobsRequest * GetImportJobsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetImportJobs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetImportJobs \a response.
  */
 void GetImportJobsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetImportJobsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetImportJobsResponsePrivate
+ * \brief The GetImportJobsResponsePrivate class provides private implementation for GetImportJobsResponse.
  * \internal
  *
- * \class GetImportJobsResponsePrivate
- *
- * \brief Private implementation for GetImportJobsResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetImportJobsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetImportJobsResponse instance.
+ * Constructs a GetImportJobsResponsePrivate object with public implementation \a q.
  */
 GetImportJobsResponsePrivate::GetImportJobsResponsePrivate(
     GetImportJobsResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetImportJobsResponsePrivate::GetImportJobsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetImportJobsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetImportJobs response element from \a xml.
  */
 void GetImportJobsResponsePrivate::parseGetImportJobsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetSampledRequestsResponse
- *
  * \brief The GetSampledRequestsResponse class provides an interace for WAF GetSampledRequests responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetSampledRequestsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSampledRequestsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSampledRequestsResponse::GetSampledRequestsResponse(
         const GetSampledRequestsRequest &request,
@@ -60,6 +55,9 @@ GetSampledRequestsResponse::GetSampledRequestsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSampledRequestsRequest * GetSampledRequestsResponse::request() const
 {
     Q_D(const GetSampledRequestsResponse);
@@ -67,9 +65,8 @@ const GetSampledRequestsRequest * GetSampledRequestsResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF GetSampledRequests response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF GetSampledRequests \a response.
  */
 void GetSampledRequestsResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetSampledRequestsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::GetSampledRequestsResponsePrivate
+ * \brief The GetSampledRequestsResponsePrivate class provides private implementation for GetSampledRequestsResponse.
  * \internal
  *
- * \class GetSampledRequestsResponsePrivate
- *
- * \brief Private implementation for GetSampledRequestsResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSampledRequestsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSampledRequestsResponse instance.
+ * Constructs a GetSampledRequestsResponsePrivate object with public implementation \a q.
  */
 GetSampledRequestsResponsePrivate::GetSampledRequestsResponsePrivate(
     GetSampledRequestsResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ GetSampledRequestsResponsePrivate::GetSampledRequestsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF GetSampledRequestsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF GetSampledRequests response element from \a xml.
  */
 void GetSampledRequestsResponsePrivate::parseGetSampledRequestsResponse(QXmlStreamReader &xml)
 {

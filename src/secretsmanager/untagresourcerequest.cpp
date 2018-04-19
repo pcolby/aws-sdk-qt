@@ -181,9 +181,8 @@ QtAws::Core::AwsAbstractResponse * UntagResourceRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a UntagResourceRequestPrivate object for SecretsManager \a action with,
- * public implementation \a q.
+ * Constructs a UntagResourceRequestPrivate object for SecretsManager \a action,
+ * with public implementation \a q.
  */
 UntagResourceRequestPrivate::UntagResourceRequestPrivate(
     const SecretsManagerRequest::Action action, UntagResourceRequest * const q)

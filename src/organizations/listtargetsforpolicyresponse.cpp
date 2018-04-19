@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::ListTargetsForPolicyResponse
- *
  * \brief The ListTargetsForPolicyResponse class provides an interace for Organizations ListTargetsForPolicy responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new ListTargetsForPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListTargetsForPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 ListTargetsForPolicyResponse::ListTargetsForPolicyResponse(
         const ListTargetsForPolicyRequest &request,
@@ -197,6 +192,9 @@ ListTargetsForPolicyResponse::ListTargetsForPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListTargetsForPolicyRequest * ListTargetsForPolicyResponse::request() const
 {
     Q_D(const ListTargetsForPolicyResponse);
@@ -204,9 +202,8 @@ const ListTargetsForPolicyRequest * ListTargetsForPolicyResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Organizations ListTargetsForPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations ListTargetsForPolicy \a response.
  */
 void ListTargetsForPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void ListTargetsForPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::ListTargetsForPolicyResponsePrivate
+ * \brief The ListTargetsForPolicyResponsePrivate class provides private implementation for ListTargetsForPolicyResponse.
  * \internal
  *
- * \class ListTargetsForPolicyResponsePrivate
- *
- * \brief Private implementation for ListTargetsForPolicyResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListTargetsForPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListTargetsForPolicyResponse instance.
+ * Constructs a ListTargetsForPolicyResponsePrivate object with public implementation \a q.
  */
 ListTargetsForPolicyResponsePrivate::ListTargetsForPolicyResponsePrivate(
     ListTargetsForPolicyResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ ListTargetsForPolicyResponsePrivate::ListTargetsForPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations ListTargetsForPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations ListTargetsForPolicy response element from \a xml.
  */
 void ListTargetsForPolicyResponsePrivate::parseListTargetsForPolicyResponse(QXmlStreamReader &xml)
 {

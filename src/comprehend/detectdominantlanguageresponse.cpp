@@ -29,10 +29,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::DetectDominantLanguageResponse
- *
  * \brief The DetectDominantLanguageResponse class provides an interace for Comprehend DetectDominantLanguage responses.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -42,11 +41,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new DetectDominantLanguageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetectDominantLanguageResponse object for \a reply to \a request, with parent \a parent.
  */
 DetectDominantLanguageResponse::DetectDominantLanguageResponse(
         const DetectDominantLanguageRequest &request,
@@ -58,6 +53,9 @@ DetectDominantLanguageResponse::DetectDominantLanguageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetectDominantLanguageRequest * DetectDominantLanguageResponse::request() const
 {
     Q_D(const DetectDominantLanguageResponse);
@@ -65,9 +63,8 @@ const DetectDominantLanguageRequest * DetectDominantLanguageResponse::request() 
 }
 
 /*!
- * @brief  Parse a Comprehend DetectDominantLanguage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Comprehend DetectDominantLanguage \a response.
  */
 void DetectDominantLanguageResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DetectDominantLanguageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Comprehend::DetectDominantLanguageResponsePrivate
+ * \brief The DetectDominantLanguageResponsePrivate class provides private implementation for DetectDominantLanguageResponse.
  * \internal
  *
- * \class DetectDominantLanguageResponsePrivate
- *
- * \brief Private implementation for DetectDominantLanguageResponse.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectDominantLanguageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetectDominantLanguageResponse instance.
+ * Constructs a DetectDominantLanguageResponsePrivate object with public implementation \a q.
  */
 DetectDominantLanguageResponsePrivate::DetectDominantLanguageResponsePrivate(
     DetectDominantLanguageResponse * const q) : ComprehendResponsePrivate(q)
@@ -98,9 +91,7 @@ DetectDominantLanguageResponsePrivate::DetectDominantLanguageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Comprehend DetectDominantLanguageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Comprehend DetectDominantLanguage response element from \a xml.
  */
 void DetectDominantLanguageResponsePrivate::parseDetectDominantLanguageResponse(QXmlStreamReader &xml)
 {

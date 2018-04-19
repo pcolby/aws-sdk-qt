@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddSourceIdentifierToSubscriptionResponse : public RDSRespons
 public:
     AddSourceIdentifierToSubscriptionResponse(const AddSourceIdentifierToSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddSourceIdentifierToSubscriptionRequest * request() const;
+    virtual const AddSourceIdentifierToSubscriptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddSourceIdentifierToSubscriptionResponse)

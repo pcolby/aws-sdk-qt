@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * PublishRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a PublishRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a PublishRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 PublishRequestPrivate::PublishRequestPrivate(
     const SNSRequest::Action action, PublishRequest * const q)

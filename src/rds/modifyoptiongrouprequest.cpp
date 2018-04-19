@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * ModifyOptionGroupRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ModifyOptionGroupRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a ModifyOptionGroupRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 ModifyOptionGroupRequestPrivate::ModifyOptionGroupRequestPrivate(
     const RDSRequest::Action action, ModifyOptionGroupRequest * const q)

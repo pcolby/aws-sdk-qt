@@ -29,10 +29,9 @@ namespace DirectConnect {
 
 /*!
  * \class QtAws::DirectConnect::DescribeLocationsResponse
- *
  * \brief The DescribeLocationsResponse class provides an interace for DirectConnect DescribeLocations responses.
  *
- * \ingroup DirectConnect
+ * \inmodule QtAwsDirectConnect
  *
  *  AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard 1 gigabit or 10 gigabit
  *  Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router.
@@ -47,11 +46,7 @@ namespace DirectConnect {
  */
 
 /*!
- * @brief  Constructs a new DescribeLocationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeLocationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeLocationsResponse::DescribeLocationsResponse(
         const DescribeLocationsRequest &request,
@@ -63,6 +58,9 @@ DescribeLocationsResponse::DescribeLocationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeLocationsRequest * DescribeLocationsResponse::request() const
 {
     Q_D(const DescribeLocationsResponse);
@@ -70,9 +68,8 @@ const DescribeLocationsRequest * DescribeLocationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectConnect DescribeLocations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectConnect DescribeLocations \a response.
  */
 void DescribeLocationsResponse::parseSuccess(QIODevice &response)
 {
@@ -82,19 +79,15 @@ void DescribeLocationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectConnect::DescribeLocationsResponsePrivate
+ * \brief The DescribeLocationsResponsePrivate class provides private implementation for DescribeLocationsResponse.
  * \internal
  *
- * \class DescribeLocationsResponsePrivate
- *
- * \brief Private implementation for DescribeLocationsResponse.
+ * \inmodule QtAwsDirectConnect
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeLocationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeLocationsResponse instance.
+ * Constructs a DescribeLocationsResponsePrivate object with public implementation \a q.
  */
 DescribeLocationsResponsePrivate::DescribeLocationsResponsePrivate(
     DescribeLocationsResponse * const q) : DirectConnectResponsePrivate(q)
@@ -103,9 +96,7 @@ DescribeLocationsResponsePrivate::DescribeLocationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectConnect DescribeLocationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectConnect DescribeLocations response element from \a xml.
  */
 void DescribeLocationsResponsePrivate::parseDescribeLocationsResponse(QXmlStreamReader &xml)
 {

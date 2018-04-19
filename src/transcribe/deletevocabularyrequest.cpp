@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVocabularyRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteVocabularyRequestPrivate object for TranscribeService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVocabularyRequestPrivate object for TranscribeService \a action,
+ * with public implementation \a q.
  */
 DeleteVocabularyRequestPrivate::DeleteVocabularyRequestPrivate(
     const TranscribeServiceRequest::Action action, DeleteVocabularyRequest * const q)

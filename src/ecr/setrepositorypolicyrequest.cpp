@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * SetRepositoryPolicyRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a SetRepositoryPolicyRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a SetRepositoryPolicyRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 SetRepositoryPolicyRequestPrivate::SetRepositoryPolicyRequestPrivate(
     const ECRRequest::Action action, SetRepositoryPolicyRequest * const q)

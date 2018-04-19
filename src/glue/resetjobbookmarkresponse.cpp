@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::ResetJobBookmarkResponse
- *
  * \brief The ResetJobBookmarkResponse class provides an interace for Glue ResetJobBookmark responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new ResetJobBookmarkResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetJobBookmarkResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetJobBookmarkResponse::ResetJobBookmarkResponse(
         const ResetJobBookmarkRequest &request,
@@ -58,6 +53,9 @@ ResetJobBookmarkResponse::ResetJobBookmarkResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetJobBookmarkRequest * ResetJobBookmarkResponse::request() const
 {
     Q_D(const ResetJobBookmarkResponse);
@@ -65,9 +63,8 @@ const ResetJobBookmarkRequest * ResetJobBookmarkResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue ResetJobBookmark response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue ResetJobBookmark \a response.
  */
 void ResetJobBookmarkResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ResetJobBookmarkResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::ResetJobBookmarkResponsePrivate
+ * \brief The ResetJobBookmarkResponsePrivate class provides private implementation for ResetJobBookmarkResponse.
  * \internal
  *
- * \class ResetJobBookmarkResponsePrivate
- *
- * \brief Private implementation for ResetJobBookmarkResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetJobBookmarkResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetJobBookmarkResponse instance.
+ * Constructs a ResetJobBookmarkResponsePrivate object with public implementation \a q.
  */
 ResetJobBookmarkResponsePrivate::ResetJobBookmarkResponsePrivate(
     ResetJobBookmarkResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ ResetJobBookmarkResponsePrivate::ResetJobBookmarkResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue ResetJobBookmarkResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue ResetJobBookmark response element from \a xml.
  */
 void ResetJobBookmarkResponsePrivate::parseResetJobBookmarkResponse(QXmlStreamReader &xml)
 {

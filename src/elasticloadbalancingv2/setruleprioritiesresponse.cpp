@@ -29,10 +29,9 @@ namespace ElasticLoadBalancingv2 {
 
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetRulePrioritiesResponse
- *
  * \brief The SetRulePrioritiesResponse class provides an interace for ElasticLoadBalancingv2 SetRulePriorities responses.
  *
- * \ingroup ElasticLoadBalancingv2
+ * \inmodule QtAwsElasticLoadBalancingv2
  *
  *  <fullname>Elastic Load Balancing</fullname>
  * 
@@ -107,11 +106,7 @@ namespace ElasticLoadBalancingv2 {
  */
 
 /*!
- * @brief  Constructs a new SetRulePrioritiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetRulePrioritiesResponse object for \a reply to \a request, with parent \a parent.
  */
 SetRulePrioritiesResponse::SetRulePrioritiesResponse(
         const SetRulePrioritiesRequest &request,
@@ -123,6 +118,9 @@ SetRulePrioritiesResponse::SetRulePrioritiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetRulePrioritiesRequest * SetRulePrioritiesResponse::request() const
 {
     Q_D(const SetRulePrioritiesResponse);
@@ -130,9 +128,8 @@ const SetRulePrioritiesRequest * SetRulePrioritiesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ElasticLoadBalancingv2 SetRulePriorities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticLoadBalancingv2 SetRulePriorities \a response.
  */
 void SetRulePrioritiesResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void SetRulePrioritiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticLoadBalancingv2::SetRulePrioritiesResponsePrivate
+ * \brief The SetRulePrioritiesResponsePrivate class provides private implementation for SetRulePrioritiesResponse.
  * \internal
  *
- * \class SetRulePrioritiesResponsePrivate
- *
- * \brief Private implementation for SetRulePrioritiesResponse.
+ * \inmodule QtAwsElasticLoadBalancingv2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetRulePrioritiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetRulePrioritiesResponse instance.
+ * Constructs a SetRulePrioritiesResponsePrivate object with public implementation \a q.
  */
 SetRulePrioritiesResponsePrivate::SetRulePrioritiesResponsePrivate(
     SetRulePrioritiesResponse * const q) : ElasticLoadBalancingv2ResponsePrivate(q)
@@ -163,9 +156,7 @@ SetRulePrioritiesResponsePrivate::SetRulePrioritiesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticLoadBalancingv2 SetRulePrioritiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticLoadBalancingv2 SetRulePriorities response element from \a xml.
  */
 void SetRulePrioritiesResponsePrivate::parseSetRulePrioritiesResponse(QXmlStreamReader &xml)
 {

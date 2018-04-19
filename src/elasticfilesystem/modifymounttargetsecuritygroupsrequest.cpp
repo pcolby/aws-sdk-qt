@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ModifyMountTargetSecurityGroupsRequest::respo
  */
 
 /*!
- *
- * Constructs a ModifyMountTargetSecurityGroupsRequestPrivate object for EFS \a action with,
- * public implementation \a q.
+ * Constructs a ModifyMountTargetSecurityGroupsRequestPrivate object for EFS \a action,
+ * with public implementation \a q.
  */
 ModifyMountTargetSecurityGroupsRequestPrivate::ModifyMountTargetSecurityGroupsRequestPrivate(
     const EFSRequest::Action action, ModifyMountTargetSecurityGroupsRequest * const q)

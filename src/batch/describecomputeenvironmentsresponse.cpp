@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::DescribeComputeEnvironmentsResponse
- *
  * \brief The DescribeComputeEnvironmentsResponse class provides an interace for Batch DescribeComputeEnvironments responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new DescribeComputeEnvironmentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeComputeEnvironmentsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeComputeEnvironmentsResponse::DescribeComputeEnvironmentsResponse(
         const DescribeComputeEnvironmentsRequest &request,
@@ -69,6 +64,9 @@ DescribeComputeEnvironmentsResponse::DescribeComputeEnvironmentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeComputeEnvironmentsRequest * DescribeComputeEnvironmentsResponse::request() const
 {
     Q_D(const DescribeComputeEnvironmentsResponse);
@@ -76,9 +74,8 @@ const DescribeComputeEnvironmentsRequest * DescribeComputeEnvironmentsResponse::
 }
 
 /*!
- * @brief  Parse a Batch DescribeComputeEnvironments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch DescribeComputeEnvironments \a response.
  */
 void DescribeComputeEnvironmentsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeComputeEnvironmentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::DescribeComputeEnvironmentsResponsePrivate
+ * \brief The DescribeComputeEnvironmentsResponsePrivate class provides private implementation for DescribeComputeEnvironmentsResponse.
  * \internal
  *
- * \class DescribeComputeEnvironmentsResponsePrivate
- *
- * \brief Private implementation for DescribeComputeEnvironmentsResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeComputeEnvironmentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeComputeEnvironmentsResponse instance.
+ * Constructs a DescribeComputeEnvironmentsResponsePrivate object with public implementation \a q.
  */
 DescribeComputeEnvironmentsResponsePrivate::DescribeComputeEnvironmentsResponsePrivate(
     DescribeComputeEnvironmentsResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeComputeEnvironmentsResponsePrivate::DescribeComputeEnvironmentsResponseP
 }
 
 /*!
- * @brief  Parse an Batch DescribeComputeEnvironmentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch DescribeComputeEnvironments response element from \a xml.
  */
 void DescribeComputeEnvironmentsResponsePrivate::parseDescribeComputeEnvironmentsResponse(QXmlStreamReader &xml)
 {

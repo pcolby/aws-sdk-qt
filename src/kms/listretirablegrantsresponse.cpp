@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListRetirableGrantsResponse
- *
  * \brief The ListRetirableGrantsResponse class provides an interace for KMS ListRetirableGrants responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListRetirableGrantsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListRetirableGrantsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListRetirableGrantsResponse::ListRetirableGrantsResponse(
         const ListRetirableGrantsRequest &request,
@@ -154,6 +149,9 @@ ListRetirableGrantsResponse::ListRetirableGrantsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListRetirableGrantsRequest * ListRetirableGrantsResponse::request() const
 {
     Q_D(const ListRetirableGrantsResponse);
@@ -161,9 +159,8 @@ const ListRetirableGrantsRequest * ListRetirableGrantsResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS ListRetirableGrants response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS ListRetirableGrants \a response.
  */
 void ListRetirableGrantsResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void ListRetirableGrantsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::ListRetirableGrantsResponsePrivate
+ * \brief The ListRetirableGrantsResponsePrivate class provides private implementation for ListRetirableGrantsResponse.
  * \internal
  *
- * \class ListRetirableGrantsResponsePrivate
- *
- * \brief Private implementation for ListRetirableGrantsResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListRetirableGrantsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListRetirableGrantsResponse instance.
+ * Constructs a ListRetirableGrantsResponsePrivate object with public implementation \a q.
  */
 ListRetirableGrantsResponsePrivate::ListRetirableGrantsResponsePrivate(
     ListRetirableGrantsResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ ListRetirableGrantsResponsePrivate::ListRetirableGrantsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS ListRetirableGrantsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS ListRetirableGrants response element from \a xml.
  */
 void ListRetirableGrantsResponsePrivate::parseListRetirableGrantsResponse(QXmlStreamReader &xml)
 {

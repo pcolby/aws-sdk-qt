@@ -29,10 +29,9 @@ namespace SQS {
 
 /*!
  * \class QtAws::SQS::AddPermissionResponse
- *
  * \brief The AddPermissionResponse class provides an interace for SQS AddPermission responses.
  *
- * \ingroup SQS
+ * \inmodule QtAwsSQS
  *
  *  Welcome to the <i>Amazon Simple Queue Service API
  * 
@@ -105,11 +104,7 @@ namespace SQS {
  */
 
 /*!
- * @brief  Constructs a new AddPermissionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddPermissionResponse object for \a reply to \a request, with parent \a parent.
  */
 AddPermissionResponse::AddPermissionResponse(
         const AddPermissionRequest &request,
@@ -121,6 +116,9 @@ AddPermissionResponse::AddPermissionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddPermissionRequest * AddPermissionResponse::request() const
 {
     Q_D(const AddPermissionResponse);
@@ -128,9 +126,8 @@ const AddPermissionRequest * AddPermissionResponse::request() const
 }
 
 /*!
- * @brief  Parse a SQS AddPermission response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SQS AddPermission \a response.
  */
 void AddPermissionResponse::parseSuccess(QIODevice &response)
 {
@@ -140,19 +137,15 @@ void AddPermissionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SQS::AddPermissionResponsePrivate
+ * \brief The AddPermissionResponsePrivate class provides private implementation for AddPermissionResponse.
  * \internal
  *
- * \class AddPermissionResponsePrivate
- *
- * \brief Private implementation for AddPermissionResponse.
+ * \inmodule QtAwsSQS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddPermissionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddPermissionResponse instance.
+ * Constructs a AddPermissionResponsePrivate object with public implementation \a q.
  */
 AddPermissionResponsePrivate::AddPermissionResponsePrivate(
     AddPermissionResponse * const q) : SQSResponsePrivate(q)
@@ -161,9 +154,7 @@ AddPermissionResponsePrivate::AddPermissionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SQS AddPermissionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SQS AddPermission response element from \a xml.
  */
 void AddPermissionResponsePrivate::parseAddPermissionResponse(QXmlStreamReader &xml)
 {

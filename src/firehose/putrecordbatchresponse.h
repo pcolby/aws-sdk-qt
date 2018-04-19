@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutRecordBatchResponse : public FirehoseResponse {
 public:
     PutRecordBatchResponse(const PutRecordBatchRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutRecordBatchRequest * request() const;
+    virtual const PutRecordBatchRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutRecordBatchResponse)

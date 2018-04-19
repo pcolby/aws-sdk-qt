@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetDatabaseResponse
- *
  * \brief The GetDatabaseResponse class provides an interace for Glue GetDatabase responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetDatabaseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDatabaseResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDatabaseResponse::GetDatabaseResponse(
         const GetDatabaseRequest &request,
@@ -58,6 +53,9 @@ GetDatabaseResponse::GetDatabaseResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDatabaseRequest * GetDatabaseResponse::request() const
 {
     Q_D(const GetDatabaseResponse);
@@ -65,9 +63,8 @@ const GetDatabaseRequest * GetDatabaseResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetDatabase response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetDatabase \a response.
  */
 void GetDatabaseResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetDatabaseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetDatabaseResponsePrivate
+ * \brief The GetDatabaseResponsePrivate class provides private implementation for GetDatabaseResponse.
  * \internal
  *
- * \class GetDatabaseResponsePrivate
- *
- * \brief Private implementation for GetDatabaseResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDatabaseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDatabaseResponse instance.
+ * Constructs a GetDatabaseResponsePrivate object with public implementation \a q.
  */
 GetDatabaseResponsePrivate::GetDatabaseResponsePrivate(
     GetDatabaseResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetDatabaseResponsePrivate::GetDatabaseResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetDatabaseResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetDatabase response element from \a xml.
  */
 void GetDatabaseResponsePrivate::parseGetDatabaseResponse(QXmlStreamReader &xml)
 {

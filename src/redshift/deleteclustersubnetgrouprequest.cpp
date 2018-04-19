@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterSubnetGroupRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteClusterSubnetGroupRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DeleteClusterSubnetGroupRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DeleteClusterSubnetGroupRequestPrivate::DeleteClusterSubnetGroupRequestPrivate(
     const RedshiftRequest::Action action, DeleteClusterSubnetGroupRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT ResendConfirmationCodeResponse : public CognitoIdentityProvid
 public:
     ResendConfirmationCodeResponse(const ResendConfirmationCodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ResendConfirmationCodeRequest * request() const;
+    virtual const ResendConfirmationCodeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ResendConfirmationCodeResponse)

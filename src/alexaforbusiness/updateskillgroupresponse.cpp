@@ -29,10 +29,9 @@ namespace AlexaForBusiness {
 
 /*!
  * \class QtAws::AlexaForBusiness::UpdateSkillGroupResponse
- *
  * \brief The UpdateSkillGroupResponse class provides an interace for AlexaForBusiness UpdateSkillGroup responses.
  *
- * \ingroup AlexaForBusiness
+ * \inmodule QtAwsAlexaForBusiness
  *
  *  Alexa for Business makes it easy for you to use Alexa in your organization. Alexa for Business gives you the tools you
  *  need to manage Alexa devices, enroll your users, and assign skills, at scale. You can build your own context-aware voice
@@ -44,11 +43,7 @@ namespace AlexaForBusiness {
  */
 
 /*!
- * @brief  Constructs a new UpdateSkillGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSkillGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSkillGroupResponse::UpdateSkillGroupResponse(
         const UpdateSkillGroupRequest &request,
@@ -60,6 +55,9 @@ UpdateSkillGroupResponse::UpdateSkillGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSkillGroupRequest * UpdateSkillGroupResponse::request() const
 {
     Q_D(const UpdateSkillGroupResponse);
@@ -67,9 +65,8 @@ const UpdateSkillGroupRequest * UpdateSkillGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a AlexaForBusiness UpdateSkillGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AlexaForBusiness UpdateSkillGroup \a response.
  */
 void UpdateSkillGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void UpdateSkillGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AlexaForBusiness::UpdateSkillGroupResponsePrivate
+ * \brief The UpdateSkillGroupResponsePrivate class provides private implementation for UpdateSkillGroupResponse.
  * \internal
  *
- * \class UpdateSkillGroupResponsePrivate
- *
- * \brief Private implementation for UpdateSkillGroupResponse.
+ * \inmodule QtAwsAlexaForBusiness
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSkillGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSkillGroupResponse instance.
+ * Constructs a UpdateSkillGroupResponsePrivate object with public implementation \a q.
  */
 UpdateSkillGroupResponsePrivate::UpdateSkillGroupResponsePrivate(
     UpdateSkillGroupResponse * const q) : AlexaForBusinessResponsePrivate(q)
@@ -100,9 +93,7 @@ UpdateSkillGroupResponsePrivate::UpdateSkillGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AlexaForBusiness UpdateSkillGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AlexaForBusiness UpdateSkillGroup response element from \a xml.
  */
 void UpdateSkillGroupResponsePrivate::parseUpdateSkillGroupResponse(QXmlStreamReader &xml)
 {

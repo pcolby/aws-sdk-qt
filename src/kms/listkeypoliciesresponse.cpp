@@ -29,10 +29,9 @@ namespace KMS {
 
 /*!
  * \class QtAws::KMS::ListKeyPoliciesResponse
- *
  * \brief The ListKeyPoliciesResponse class provides an interace for KMS ListKeyPolicies responses.
  *
- * \ingroup KMS
+ * \inmodule QtAwsKMS
  *
  *  <fullname>AWS Key Management Service</fullname>
  * 
@@ -138,11 +137,7 @@ namespace KMS {
  */
 
 /*!
- * @brief  Constructs a new ListKeyPoliciesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListKeyPoliciesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListKeyPoliciesResponse::ListKeyPoliciesResponse(
         const ListKeyPoliciesRequest &request,
@@ -154,6 +149,9 @@ ListKeyPoliciesResponse::ListKeyPoliciesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListKeyPoliciesRequest * ListKeyPoliciesResponse::request() const
 {
     Q_D(const ListKeyPoliciesResponse);
@@ -161,9 +159,8 @@ const ListKeyPoliciesRequest * ListKeyPoliciesResponse::request() const
 }
 
 /*!
- * @brief  Parse a KMS ListKeyPolicies response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KMS ListKeyPolicies \a response.
  */
 void ListKeyPoliciesResponse::parseSuccess(QIODevice &response)
 {
@@ -173,19 +170,15 @@ void ListKeyPoliciesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KMS::ListKeyPoliciesResponsePrivate
+ * \brief The ListKeyPoliciesResponsePrivate class provides private implementation for ListKeyPoliciesResponse.
  * \internal
  *
- * \class ListKeyPoliciesResponsePrivate
- *
- * \brief Private implementation for ListKeyPoliciesResponse.
+ * \inmodule QtAwsKMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListKeyPoliciesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListKeyPoliciesResponse instance.
+ * Constructs a ListKeyPoliciesResponsePrivate object with public implementation \a q.
  */
 ListKeyPoliciesResponsePrivate::ListKeyPoliciesResponsePrivate(
     ListKeyPoliciesResponse * const q) : KMSResponsePrivate(q)
@@ -194,9 +187,7 @@ ListKeyPoliciesResponsePrivate::ListKeyPoliciesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KMS ListKeyPoliciesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KMS ListKeyPolicies response element from \a xml.
  */
 void ListKeyPoliciesResponsePrivate::parseListKeyPoliciesResponse(QXmlStreamReader &xml)
 {

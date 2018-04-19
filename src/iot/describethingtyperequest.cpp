@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeThingTypeRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribeThingTypeRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a DescribeThingTypeRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 DescribeThingTypeRequestPrivate::DescribeThingTypeRequestPrivate(
     const IoTRequest::Action action, DescribeThingTypeRequest * const q)

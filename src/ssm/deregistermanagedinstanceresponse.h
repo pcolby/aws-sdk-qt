@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeregisterManagedInstanceResponse : public SSMResponse {
 public:
     DeregisterManagedInstanceResponse(const DeregisterManagedInstanceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeregisterManagedInstanceRequest * request() const;
+    virtual const DeregisterManagedInstanceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeregisterManagedInstanceResponse)

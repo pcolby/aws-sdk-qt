@@ -130,7 +130,7 @@ namespace RDS {
  */
 
 /*!
- * Constructs a[n] RDSRequest object for RDS \a action.
+ * Constructs a RDSRequest object for RDS \a action.
  */
 RDSRequest::RDSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new RDSRequestPrivate(action, this))
@@ -330,8 +330,8 @@ QNetworkRequest RDSRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a RDSRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a RDSRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 RDSRequestPrivate::RDSRequestPrivate(const RDSRequest::Action action, RDSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

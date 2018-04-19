@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterPatchBaselineForPatchGroupRequest::
  */
 
 /*!
- *
- * Constructs a DeregisterPatchBaselineForPatchGroupRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterPatchBaselineForPatchGroupRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DeregisterPatchBaselineForPatchGroupRequestPrivate::DeregisterPatchBaselineForPatchGroupRequestPrivate(
     const SSMRequest::Action action, DeregisterPatchBaselineForPatchGroupRequest * const q)

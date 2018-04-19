@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeReservedDBInstancesRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeReservedDBInstancesRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeReservedDBInstancesRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeReservedDBInstancesRequestPrivate::DescribeReservedDBInstancesRequestPrivate(
     const RDSRequest::Action action, DescribeReservedDBInstancesRequest * const q)

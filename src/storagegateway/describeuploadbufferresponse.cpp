@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeUploadBufferResponse
- *
  * \brief The DescribeUploadBufferResponse class provides an interace for StorageGateway DescribeUploadBuffer responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeUploadBufferResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeUploadBufferResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeUploadBufferResponse::DescribeUploadBufferResponse(
         const DescribeUploadBufferRequest &request,
@@ -124,6 +119,9 @@ DescribeUploadBufferResponse::DescribeUploadBufferResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeUploadBufferRequest * DescribeUploadBufferResponse::request() const
 {
     Q_D(const DescribeUploadBufferResponse);
@@ -131,9 +129,8 @@ const DescribeUploadBufferRequest * DescribeUploadBufferResponse::request() cons
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeUploadBuffer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeUploadBuffer \a response.
  */
 void DescribeUploadBufferResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeUploadBufferResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeUploadBufferResponsePrivate
+ * \brief The DescribeUploadBufferResponsePrivate class provides private implementation for DescribeUploadBufferResponse.
  * \internal
  *
- * \class DescribeUploadBufferResponsePrivate
- *
- * \brief Private implementation for DescribeUploadBufferResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUploadBufferResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeUploadBufferResponse instance.
+ * Constructs a DescribeUploadBufferResponsePrivate object with public implementation \a q.
  */
 DescribeUploadBufferResponsePrivate::DescribeUploadBufferResponsePrivate(
     DescribeUploadBufferResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeUploadBufferResponsePrivate::DescribeUploadBufferResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeUploadBufferResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeUploadBuffer response element from \a xml.
  */
 void DescribeUploadBufferResponsePrivate::parseDescribeUploadBufferResponse(QXmlStreamReader &xml)
 {

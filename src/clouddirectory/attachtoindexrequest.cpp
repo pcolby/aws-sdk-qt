@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * AttachToIndexRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a AttachToIndexRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a AttachToIndexRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 AttachToIndexRequestPrivate::AttachToIndexRequestPrivate(
     const CloudDirectoryRequest::Action action, AttachToIndexRequest * const q)

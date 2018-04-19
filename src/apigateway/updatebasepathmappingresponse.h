@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateBasePathMappingResponse : public APIGatewayResponse {
 public:
     UpdateBasePathMappingResponse(const UpdateBasePathMappingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateBasePathMappingRequest * request() const;
+    virtual const UpdateBasePathMappingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateBasePathMappingResponse)

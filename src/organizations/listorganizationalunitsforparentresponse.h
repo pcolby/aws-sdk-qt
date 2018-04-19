@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListOrganizationalUnitsForParentResponse : public Organizatio
 public:
     ListOrganizationalUnitsForParentResponse(const ListOrganizationalUnitsForParentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListOrganizationalUnitsForParentRequest * request() const;
+    virtual const ListOrganizationalUnitsForParentRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListOrganizationalUnitsForParentResponse)

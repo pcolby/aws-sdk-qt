@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::SetDataRetrievalPolicyResponse
- *
  * \brief The SetDataRetrievalPolicyResponse class provides an interace for Glacier SetDataRetrievalPolicy responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new SetDataRetrievalPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetDataRetrievalPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 SetDataRetrievalPolicyResponse::SetDataRetrievalPolicyResponse(
         const SetDataRetrievalPolicyRequest &request,
@@ -93,6 +88,9 @@ SetDataRetrievalPolicyResponse::SetDataRetrievalPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetDataRetrievalPolicyRequest * SetDataRetrievalPolicyResponse::request() const
 {
     Q_D(const SetDataRetrievalPolicyResponse);
@@ -100,9 +98,8 @@ const SetDataRetrievalPolicyRequest * SetDataRetrievalPolicyResponse::request() 
 }
 
 /*!
- * @brief  Parse a Glacier SetDataRetrievalPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier SetDataRetrievalPolicy \a response.
  */
 void SetDataRetrievalPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void SetDataRetrievalPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::SetDataRetrievalPolicyResponsePrivate
+ * \brief The SetDataRetrievalPolicyResponsePrivate class provides private implementation for SetDataRetrievalPolicyResponse.
  * \internal
  *
- * \class SetDataRetrievalPolicyResponsePrivate
- *
- * \brief Private implementation for SetDataRetrievalPolicyResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetDataRetrievalPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetDataRetrievalPolicyResponse instance.
+ * Constructs a SetDataRetrievalPolicyResponsePrivate object with public implementation \a q.
  */
 SetDataRetrievalPolicyResponsePrivate::SetDataRetrievalPolicyResponsePrivate(
     SetDataRetrievalPolicyResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ SetDataRetrievalPolicyResponsePrivate::SetDataRetrievalPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier SetDataRetrievalPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier SetDataRetrievalPolicy response element from \a xml.
  */
 void SetDataRetrievalPolicyResponsePrivate::parseSetDataRetrievalPolicyResponse(QXmlStreamReader &xml)
 {

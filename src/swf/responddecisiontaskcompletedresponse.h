@@ -34,10 +34,10 @@ class QTAWS_EXPORT RespondDecisionTaskCompletedResponse : public SWFResponse {
 public:
     RespondDecisionTaskCompletedResponse(const RespondDecisionTaskCompletedRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RespondDecisionTaskCompletedRequest * request() const;
+    virtual const RespondDecisionTaskCompletedRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RespondDecisionTaskCompletedResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetSlotTypeResponse : public LexModelBuildingServiceResponse 
 public:
     GetSlotTypeResponse(const GetSlotTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetSlotTypeRequest * request() const;
+    virtual const GetSlotTypeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetSlotTypeResponse)

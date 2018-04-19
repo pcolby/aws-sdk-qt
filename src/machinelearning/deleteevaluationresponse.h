@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteEvaluationResponse : public MachineLearningResponse {
 public:
     DeleteEvaluationResponse(const DeleteEvaluationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteEvaluationRequest * request() const;
+    virtual const DeleteEvaluationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteEvaluationResponse)

@@ -141,9 +141,8 @@ QtAws::Core::AwsAbstractResponse * UpdateServerRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a UpdateServerRequestPrivate object for OpsWorksCM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateServerRequestPrivate object for OpsWorksCM \a action,
+ * with public implementation \a q.
  */
 UpdateServerRequestPrivate::UpdateServerRequestPrivate(
     const OpsWorksCMRequest::Action action, UpdateServerRequest * const q)

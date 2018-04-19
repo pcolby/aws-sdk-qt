@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeNetworkInterfacesResponse
- *
  * \brief The DescribeNetworkInterfacesResponse class provides an interace for EC2 DescribeNetworkInterfaces responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeNetworkInterfacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeNetworkInterfacesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeNetworkInterfacesResponse::DescribeNetworkInterfacesResponse(
         const DescribeNetworkInterfacesRequest &request,
@@ -59,6 +54,9 @@ DescribeNetworkInterfacesResponse::DescribeNetworkInterfacesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeNetworkInterfacesRequest * DescribeNetworkInterfacesResponse::request() const
 {
     Q_D(const DescribeNetworkInterfacesResponse);
@@ -66,9 +64,8 @@ const DescribeNetworkInterfacesRequest * DescribeNetworkInterfacesResponse::requ
 }
 
 /*!
- * @brief  Parse a EC2 DescribeNetworkInterfaces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeNetworkInterfaces \a response.
  */
 void DescribeNetworkInterfacesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeNetworkInterfacesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeNetworkInterfacesResponsePrivate
+ * \brief The DescribeNetworkInterfacesResponsePrivate class provides private implementation for DescribeNetworkInterfacesResponse.
  * \internal
  *
- * \class DescribeNetworkInterfacesResponsePrivate
- *
- * \brief Private implementation for DescribeNetworkInterfacesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeNetworkInterfacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeNetworkInterfacesResponse instance.
+ * Constructs a DescribeNetworkInterfacesResponsePrivate object with public implementation \a q.
  */
 DescribeNetworkInterfacesResponsePrivate::DescribeNetworkInterfacesResponsePrivate(
     DescribeNetworkInterfacesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeNetworkInterfacesResponsePrivate::DescribeNetworkInterfacesResponsePriva
 }
 
 /*!
- * @brief  Parse an EC2 DescribeNetworkInterfacesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeNetworkInterfaces response element from \a xml.
  */
 void DescribeNetworkInterfacesResponsePrivate::parseDescribeNetworkInterfacesResponse(QXmlStreamReader &xml)
 {

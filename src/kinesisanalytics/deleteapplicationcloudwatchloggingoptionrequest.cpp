@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationCloudWatchLoggingOptionReque
  */
 
 /*!
- *
- * Constructs a DeleteApplicationCloudWatchLoggingOptionRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApplicationCloudWatchLoggingOptionRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 DeleteApplicationCloudWatchLoggingOptionRequestPrivate::DeleteApplicationCloudWatchLoggingOptionRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationCloudWatchLoggingOptionRequest * const q)

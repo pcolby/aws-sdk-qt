@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeprecateThingTypeResponse : public IoTResponse {
 public:
     DeprecateThingTypeResponse(const DeprecateThingTypeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeprecateThingTypeRequest * request() const;
+    virtual const DeprecateThingTypeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeprecateThingTypeResponse)

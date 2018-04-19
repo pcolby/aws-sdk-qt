@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::CreateImportJobResponse
- *
  * \brief The CreateImportJobResponse class provides an interace for Pinpoint CreateImportJob responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::createImportJob
  */
 
 /*!
- * @brief  Constructs a new CreateImportJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateImportJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateImportJobResponse::CreateImportJobResponse(
         const CreateImportJobRequest &request,
@@ -55,6 +50,9 @@ CreateImportJobResponse::CreateImportJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateImportJobRequest * CreateImportJobResponse::request() const
 {
     Q_D(const CreateImportJobResponse);
@@ -62,9 +60,8 @@ const CreateImportJobRequest * CreateImportJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint CreateImportJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint CreateImportJob \a response.
  */
 void CreateImportJobResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateImportJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::CreateImportJobResponsePrivate
+ * \brief The CreateImportJobResponsePrivate class provides private implementation for CreateImportJobResponse.
  * \internal
  *
- * \class CreateImportJobResponsePrivate
- *
- * \brief Private implementation for CreateImportJobResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateImportJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateImportJobResponse instance.
+ * Constructs a CreateImportJobResponsePrivate object with public implementation \a q.
  */
 CreateImportJobResponsePrivate::CreateImportJobResponsePrivate(
     CreateImportJobResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateImportJobResponsePrivate::CreateImportJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint CreateImportJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint CreateImportJob response element from \a xml.
  */
 void CreateImportJobResponsePrivate::parseCreateImportJobResponse(QXmlStreamReader &xml)
 {

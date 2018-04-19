@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::CancelStepsResponse
- *
  * \brief The CancelStepsResponse class provides an interace for EMR CancelSteps responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new CancelStepsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelStepsResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelStepsResponse::CancelStepsResponse(
         const CancelStepsRequest &request,
@@ -58,6 +53,9 @@ CancelStepsResponse::CancelStepsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelStepsRequest * CancelStepsResponse::request() const
 {
     Q_D(const CancelStepsResponse);
@@ -65,9 +63,8 @@ const CancelStepsRequest * CancelStepsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR CancelSteps response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR CancelSteps \a response.
  */
 void CancelStepsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CancelStepsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::CancelStepsResponsePrivate
+ * \brief The CancelStepsResponsePrivate class provides private implementation for CancelStepsResponse.
  * \internal
  *
- * \class CancelStepsResponsePrivate
- *
- * \brief Private implementation for CancelStepsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelStepsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelStepsResponse instance.
+ * Constructs a CancelStepsResponsePrivate object with public implementation \a q.
  */
 CancelStepsResponsePrivate::CancelStepsResponsePrivate(
     CancelStepsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ CancelStepsResponsePrivate::CancelStepsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR CancelStepsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR CancelSteps response element from \a xml.
  */
 void CancelStepsResponsePrivate::parseCancelStepsResponse(QXmlStreamReader &xml)
 {

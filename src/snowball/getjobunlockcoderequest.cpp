@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * GetJobUnlockCodeRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a GetJobUnlockCodeRequestPrivate object for Snowball \a action with,
- * public implementation \a q.
+ * Constructs a GetJobUnlockCodeRequestPrivate object for Snowball \a action,
+ * with public implementation \a q.
  */
 GetJobUnlockCodeRequestPrivate::GetJobUnlockCodeRequestPrivate(
     const SnowballRequest::Action action, GetJobUnlockCodeRequest * const q)

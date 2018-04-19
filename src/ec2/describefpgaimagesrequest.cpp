@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeFpgaImagesRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a DescribeFpgaImagesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeFpgaImagesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeFpgaImagesRequestPrivate::DescribeFpgaImagesRequestPrivate(
     const EC2Request::Action action, DescribeFpgaImagesRequest * const q)

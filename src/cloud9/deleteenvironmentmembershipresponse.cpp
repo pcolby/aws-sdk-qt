@@ -29,10 +29,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::DeleteEnvironmentMembershipResponse
- *
  * \brief The DeleteEnvironmentMembershipResponse class provides an interace for Cloud9 DeleteEnvironmentMembership responses.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -93,11 +92,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new DeleteEnvironmentMembershipResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEnvironmentMembershipResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEnvironmentMembershipResponse::DeleteEnvironmentMembershipResponse(
         const DeleteEnvironmentMembershipRequest &request,
@@ -109,6 +104,9 @@ DeleteEnvironmentMembershipResponse::DeleteEnvironmentMembershipResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEnvironmentMembershipRequest * DeleteEnvironmentMembershipResponse::request() const
 {
     Q_D(const DeleteEnvironmentMembershipResponse);
@@ -116,9 +114,8 @@ const DeleteEnvironmentMembershipRequest * DeleteEnvironmentMembershipResponse::
 }
 
 /*!
- * @brief  Parse a Cloud9 DeleteEnvironmentMembership response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Cloud9 DeleteEnvironmentMembership \a response.
  */
 void DeleteEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
 {
@@ -128,19 +125,15 @@ void DeleteEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Cloud9::DeleteEnvironmentMembershipResponsePrivate
+ * \brief The DeleteEnvironmentMembershipResponsePrivate class provides private implementation for DeleteEnvironmentMembershipResponse.
  * \internal
  *
- * \class DeleteEnvironmentMembershipResponsePrivate
- *
- * \brief Private implementation for DeleteEnvironmentMembershipResponse.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEnvironmentMembershipResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEnvironmentMembershipResponse instance.
+ * Constructs a DeleteEnvironmentMembershipResponsePrivate object with public implementation \a q.
  */
 DeleteEnvironmentMembershipResponsePrivate::DeleteEnvironmentMembershipResponsePrivate(
     DeleteEnvironmentMembershipResponse * const q) : Cloud9ResponsePrivate(q)
@@ -149,9 +142,7 @@ DeleteEnvironmentMembershipResponsePrivate::DeleteEnvironmentMembershipResponseP
 }
 
 /*!
- * @brief  Parse an Cloud9 DeleteEnvironmentMembershipResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Cloud9 DeleteEnvironmentMembership response element from \a xml.
  */
 void DeleteEnvironmentMembershipResponsePrivate::parseDeleteEnvironmentMembershipResponse(QXmlStreamReader &xml)
 {

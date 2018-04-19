@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateTapesResponse : public StorageGatewayResponse {
 public:
     CreateTapesResponse(const CreateTapesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateTapesRequest * request() const;
+    virtual const CreateTapesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateTapesResponse)

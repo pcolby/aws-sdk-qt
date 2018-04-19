@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * DeletePipelineRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeletePipelineRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a DeletePipelineRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 DeletePipelineRequestPrivate::DeletePipelineRequestPrivate(
     const DataPipelineRequest::Action action, DeletePipelineRequest * const q)

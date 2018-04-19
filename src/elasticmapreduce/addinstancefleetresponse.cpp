@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::AddInstanceFleetResponse
- *
  * \brief The AddInstanceFleetResponse class provides an interace for EMR AddInstanceFleet responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new AddInstanceFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddInstanceFleetResponse object for \a reply to \a request, with parent \a parent.
  */
 AddInstanceFleetResponse::AddInstanceFleetResponse(
         const AddInstanceFleetRequest &request,
@@ -58,6 +53,9 @@ AddInstanceFleetResponse::AddInstanceFleetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddInstanceFleetRequest * AddInstanceFleetResponse::request() const
 {
     Q_D(const AddInstanceFleetResponse);
@@ -65,9 +63,8 @@ const AddInstanceFleetRequest * AddInstanceFleetResponse::request() const
 }
 
 /*!
- * @brief  Parse a EMR AddInstanceFleet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR AddInstanceFleet \a response.
  */
 void AddInstanceFleetResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void AddInstanceFleetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::AddInstanceFleetResponsePrivate
+ * \brief The AddInstanceFleetResponsePrivate class provides private implementation for AddInstanceFleetResponse.
  * \internal
  *
- * \class AddInstanceFleetResponsePrivate
- *
- * \brief Private implementation for AddInstanceFleetResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddInstanceFleetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddInstanceFleetResponse instance.
+ * Constructs a AddInstanceFleetResponsePrivate object with public implementation \a q.
  */
 AddInstanceFleetResponsePrivate::AddInstanceFleetResponsePrivate(
     AddInstanceFleetResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ AddInstanceFleetResponsePrivate::AddInstanceFleetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR AddInstanceFleetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR AddInstanceFleet response element from \a xml.
  */
 void AddInstanceFleetResponsePrivate::parseAddInstanceFleetResponse(QXmlStreamReader &xml)
 {

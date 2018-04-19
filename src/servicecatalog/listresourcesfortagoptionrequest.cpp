@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListResourcesForTagOptionRequest::response(QN
  */
 
 /*!
- *
- * Constructs a ListResourcesForTagOptionRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a ListResourcesForTagOptionRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 ListResourcesForTagOptionRequestPrivate::ListResourcesForTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, ListResourcesForTagOptionRequest * const q)

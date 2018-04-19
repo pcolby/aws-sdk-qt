@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetDiscoveredResourceCountsResponse
- *
  * \brief The GetDiscoveredResourceCountsResponse class provides an interace for ConfigService GetDiscoveredResourceCounts responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetDiscoveredResourceCountsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDiscoveredResourceCountsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDiscoveredResourceCountsResponse::GetDiscoveredResourceCountsResponse(
         const GetDiscoveredResourceCountsRequest &request,
@@ -78,6 +73,9 @@ GetDiscoveredResourceCountsResponse::GetDiscoveredResourceCountsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDiscoveredResourceCountsRequest * GetDiscoveredResourceCountsResponse::request() const
 {
     Q_D(const GetDiscoveredResourceCountsResponse);
@@ -85,9 +83,8 @@ const GetDiscoveredResourceCountsRequest * GetDiscoveredResourceCountsResponse::
 }
 
 /*!
- * @brief  Parse a ConfigService GetDiscoveredResourceCounts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService GetDiscoveredResourceCounts \a response.
  */
 void GetDiscoveredResourceCountsResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void GetDiscoveredResourceCountsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::GetDiscoveredResourceCountsResponsePrivate
+ * \brief The GetDiscoveredResourceCountsResponsePrivate class provides private implementation for GetDiscoveredResourceCountsResponse.
  * \internal
  *
- * \class GetDiscoveredResourceCountsResponsePrivate
- *
- * \brief Private implementation for GetDiscoveredResourceCountsResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDiscoveredResourceCountsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDiscoveredResourceCountsResponse instance.
+ * Constructs a GetDiscoveredResourceCountsResponsePrivate object with public implementation \a q.
  */
 GetDiscoveredResourceCountsResponsePrivate::GetDiscoveredResourceCountsResponsePrivate(
     GetDiscoveredResourceCountsResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ GetDiscoveredResourceCountsResponsePrivate::GetDiscoveredResourceCountsResponseP
 }
 
 /*!
- * @brief  Parse an ConfigService GetDiscoveredResourceCountsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService GetDiscoveredResourceCounts response element from \a xml.
  */
 void GetDiscoveredResourceCountsResponsePrivate::parseGetDiscoveredResourceCountsResponse(QXmlStreamReader &xml)
 {

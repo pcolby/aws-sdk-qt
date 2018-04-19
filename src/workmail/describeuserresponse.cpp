@@ -29,10 +29,9 @@ namespace WorkMail {
 
 /*!
  * \class QtAws::WorkMail::DescribeUserResponse
- *
  * \brief The DescribeUserResponse class provides an interace for WorkMail DescribeUser responses.
  *
- * \ingroup WorkMail
+ * \inmodule QtAwsWorkMail
  *
  *  Amazon WorkMail is a secure, managed business email and calendaring service with support for existing desktop and mobile
  *  email clients. You can access your email, contacts, and calendars using Microsoft Outlook, your browser, or their native
@@ -72,11 +71,7 @@ namespace WorkMail {
  */
 
 /*!
- * @brief  Constructs a new DescribeUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeUserResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeUserResponse::DescribeUserResponse(
         const DescribeUserRequest &request,
@@ -88,6 +83,9 @@ DescribeUserResponse::DescribeUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeUserRequest * DescribeUserResponse::request() const
 {
     Q_D(const DescribeUserResponse);
@@ -95,9 +93,8 @@ const DescribeUserRequest * DescribeUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkMail DescribeUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkMail DescribeUser \a response.
  */
 void DescribeUserResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DescribeUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkMail::DescribeUserResponsePrivate
+ * \brief The DescribeUserResponsePrivate class provides private implementation for DescribeUserResponse.
  * \internal
  *
- * \class DescribeUserResponsePrivate
- *
- * \brief Private implementation for DescribeUserResponse.
+ * \inmodule QtAwsWorkMail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeUserResponse instance.
+ * Constructs a DescribeUserResponsePrivate object with public implementation \a q.
  */
 DescribeUserResponsePrivate::DescribeUserResponsePrivate(
     DescribeUserResponse * const q) : WorkMailResponsePrivate(q)
@@ -128,9 +121,7 @@ DescribeUserResponsePrivate::DescribeUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkMail DescribeUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkMail DescribeUser response element from \a xml.
  */
 void DescribeUserResponsePrivate::parseDescribeUserResponse(QXmlStreamReader &xml)
 {

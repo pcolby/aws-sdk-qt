@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DetectTextResponse
- *
  * \brief The DetectTextResponse class provides an interace for Rekognition DetectText responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DetectTextResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetectTextResponse object for \a reply to \a request, with parent \a parent.
  */
 DetectTextResponse::DetectTextResponse(
         const DetectTextRequest &request,
@@ -56,6 +51,9 @@ DetectTextResponse::DetectTextResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetectTextRequest * DetectTextResponse::request() const
 {
     Q_D(const DetectTextResponse);
@@ -63,9 +61,8 @@ const DetectTextRequest * DetectTextResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition DetectText response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition DetectText \a response.
  */
 void DetectTextResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DetectTextResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::DetectTextResponsePrivate
+ * \brief The DetectTextResponsePrivate class provides private implementation for DetectTextResponse.
  * \internal
  *
- * \class DetectTextResponsePrivate
- *
- * \brief Private implementation for DetectTextResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectTextResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetectTextResponse instance.
+ * Constructs a DetectTextResponsePrivate object with public implementation \a q.
  */
 DetectTextResponsePrivate::DetectTextResponsePrivate(
     DetectTextResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ DetectTextResponsePrivate::DetectTextResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition DetectTextResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition DetectText response element from \a xml.
  */
 void DetectTextResponsePrivate::parseDetectTextResponse(QXmlStreamReader &xml)
 {

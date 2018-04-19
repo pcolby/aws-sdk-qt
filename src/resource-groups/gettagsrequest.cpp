@@ -125,9 +125,8 @@ QtAws::Core::AwsAbstractResponse * GetTagsRequest::response(QNetworkReply * cons
  */
 
 /*!
- *
- * Constructs a GetTagsRequestPrivate object for ResourceGroups \a action with,
- * public implementation \a q.
+ * Constructs a GetTagsRequestPrivate object for ResourceGroups \a action,
+ * with public implementation \a q.
  */
 GetTagsRequestPrivate::GetTagsRequestPrivate(
     const ResourceGroupsRequest::Action action, GetTagsRequest * const q)

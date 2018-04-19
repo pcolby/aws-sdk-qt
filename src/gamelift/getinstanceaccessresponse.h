@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetInstanceAccessResponse : public GameLiftResponse {
 public:
     GetInstanceAccessResponse(const GetInstanceAccessRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetInstanceAccessRequest * request() const;
+    virtual const GetInstanceAccessRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetInstanceAccessResponse)

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListSubscriptionDefinitionVersionsRequest::re
  */
 
 /*!
- *
- * Constructs a ListSubscriptionDefinitionVersionsRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a ListSubscriptionDefinitionVersionsRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 ListSubscriptionDefinitionVersionsRequestPrivate::ListSubscriptionDefinitionVersionsRequestPrivate(
     const GreengrassRequest::Action action, ListSubscriptionDefinitionVersionsRequest * const q)

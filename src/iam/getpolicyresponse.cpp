@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetPolicyResponse
- *
  * \brief The GetPolicyResponse class provides an interace for IAM GetPolicy responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPolicyResponse::GetPolicyResponse(
         const GetPolicyRequest &request,
@@ -120,6 +115,9 @@ GetPolicyResponse::GetPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPolicyRequest * GetPolicyResponse::request() const
 {
     Q_D(const GetPolicyResponse);
@@ -127,9 +125,8 @@ const GetPolicyRequest * GetPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM GetPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetPolicy \a response.
  */
 void GetPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetPolicyResponsePrivate
+ * \brief The GetPolicyResponsePrivate class provides private implementation for GetPolicyResponse.
  * \internal
  *
- * \class GetPolicyResponsePrivate
- *
- * \brief Private implementation for GetPolicyResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPolicyResponse instance.
+ * Constructs a GetPolicyResponsePrivate object with public implementation \a q.
  */
 GetPolicyResponsePrivate::GetPolicyResponsePrivate(
     GetPolicyResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetPolicyResponsePrivate::GetPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM GetPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetPolicy response element from \a xml.
  */
 void GetPolicyResponsePrivate::parseGetPolicyResponse(QXmlStreamReader &xml)
 {

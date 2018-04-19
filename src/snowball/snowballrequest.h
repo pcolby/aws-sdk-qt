@@ -68,7 +68,7 @@ public:
     void setAction(const Action action);
     void setApiVersion(const QString &version);
 
-    virtual bool operator==(const SnowballRequest &other) const;
+    virtual bool operator==(const SnowballRequest &other) const override;
 
 
 protected:
@@ -83,7 +83,7 @@ protected:
     void setParameter(const QString &name, const QVariant &value);
     void setParameters(const QVariantMap &parameters);
 
-    virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const;
+    virtual QNetworkRequest unsignedRequest(const QUrl &endpoint) const override;
 
 private:
     Q_DECLARE_PRIVATE(SnowballRequest)

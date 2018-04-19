@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetTablesResponse
- *
  * \brief The GetTablesResponse class provides an interace for Glue GetTables responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetTablesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetTablesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetTablesResponse::GetTablesResponse(
         const GetTablesRequest &request,
@@ -58,6 +53,9 @@ GetTablesResponse::GetTablesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetTablesRequest * GetTablesResponse::request() const
 {
     Q_D(const GetTablesResponse);
@@ -65,9 +63,8 @@ const GetTablesRequest * GetTablesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetTables response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetTables \a response.
  */
 void GetTablesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetTablesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetTablesResponsePrivate
+ * \brief The GetTablesResponsePrivate class provides private implementation for GetTablesResponse.
  * \internal
  *
- * \class GetTablesResponsePrivate
- *
- * \brief Private implementation for GetTablesResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetTablesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetTablesResponse instance.
+ * Constructs a GetTablesResponsePrivate object with public implementation \a q.
  */
 GetTablesResponsePrivate::GetTablesResponsePrivate(
     GetTablesResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetTablesResponsePrivate::GetTablesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetTablesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetTables response element from \a xml.
  */
 void GetTablesResponsePrivate::parseGetTablesResponse(QXmlStreamReader &xml)
 {

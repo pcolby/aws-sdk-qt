@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * DescribeStackEventsRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeStackEventsRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a DescribeStackEventsRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 DescribeStackEventsRequestPrivate::DescribeStackEventsRequestPrivate(
     const CloudFormationRequest::Action action, DescribeStackEventsRequest * const q)

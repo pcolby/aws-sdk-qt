@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::DeleteApnsChannelResponse
- *
  * \brief The DeleteApnsChannelResponse class provides an interace for Pinpoint DeleteApnsChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::deleteApnsChannel
  */
 
 /*!
- * @brief  Constructs a new DeleteApnsChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteApnsChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteApnsChannelResponse::DeleteApnsChannelResponse(
         const DeleteApnsChannelRequest &request,
@@ -55,6 +50,9 @@ DeleteApnsChannelResponse::DeleteApnsChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteApnsChannelRequest * DeleteApnsChannelResponse::request() const
 {
     Q_D(const DeleteApnsChannelResponse);
@@ -62,9 +60,8 @@ const DeleteApnsChannelRequest * DeleteApnsChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint DeleteApnsChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint DeleteApnsChannel \a response.
  */
 void DeleteApnsChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteApnsChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::DeleteApnsChannelResponsePrivate
+ * \brief The DeleteApnsChannelResponsePrivate class provides private implementation for DeleteApnsChannelResponse.
  * \internal
  *
- * \class DeleteApnsChannelResponsePrivate
- *
- * \brief Private implementation for DeleteApnsChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteApnsChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteApnsChannelResponse instance.
+ * Constructs a DeleteApnsChannelResponsePrivate object with public implementation \a q.
  */
 DeleteApnsChannelResponsePrivate::DeleteApnsChannelResponsePrivate(
     DeleteApnsChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteApnsChannelResponsePrivate::DeleteApnsChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint DeleteApnsChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint DeleteApnsChannel response element from \a xml.
  */
 void DeleteApnsChannelResponsePrivate::parseDeleteApnsChannelResponse(QXmlStreamReader &xml)
 {

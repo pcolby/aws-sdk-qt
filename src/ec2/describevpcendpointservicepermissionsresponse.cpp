@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeVpcEndpointServicePermissionsResponse
- *
  * \brief The DescribeVpcEndpointServicePermissionsResponse class provides an interace for EC2 DescribeVpcEndpointServicePermissions responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeVpcEndpointServicePermissionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVpcEndpointServicePermissionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVpcEndpointServicePermissionsResponse::DescribeVpcEndpointServicePermissionsResponse(
         const DescribeVpcEndpointServicePermissionsRequest &request,
@@ -59,6 +54,9 @@ DescribeVpcEndpointServicePermissionsResponse::DescribeVpcEndpointServicePermiss
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVpcEndpointServicePermissionsRequest * DescribeVpcEndpointServicePermissionsResponse::request() const
 {
     Q_D(const DescribeVpcEndpointServicePermissionsResponse);
@@ -66,9 +64,8 @@ const DescribeVpcEndpointServicePermissionsRequest * DescribeVpcEndpointServiceP
 }
 
 /*!
- * @brief  Parse a EC2 DescribeVpcEndpointServicePermissions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeVpcEndpointServicePermissions \a response.
  */
 void DescribeVpcEndpointServicePermissionsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeVpcEndpointServicePermissionsResponse::parseSuccess(QIODevice &resp
 }
 
 /*!
+ * \class QtAws::EC2::DescribeVpcEndpointServicePermissionsResponsePrivate
+ * \brief The DescribeVpcEndpointServicePermissionsResponsePrivate class provides private implementation for DescribeVpcEndpointServicePermissionsResponse.
  * \internal
  *
- * \class DescribeVpcEndpointServicePermissionsResponsePrivate
- *
- * \brief Private implementation for DescribeVpcEndpointServicePermissionsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVpcEndpointServicePermissionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVpcEndpointServicePermissionsResponse instance.
+ * Constructs a DescribeVpcEndpointServicePermissionsResponsePrivate object with public implementation \a q.
  */
 DescribeVpcEndpointServicePermissionsResponsePrivate::DescribeVpcEndpointServicePermissionsResponsePrivate(
     DescribeVpcEndpointServicePermissionsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeVpcEndpointServicePermissionsResponsePrivate::DescribeVpcEndpointService
 }
 
 /*!
- * @brief  Parse an EC2 DescribeVpcEndpointServicePermissionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeVpcEndpointServicePermissions response element from \a xml.
  */
 void DescribeVpcEndpointServicePermissionsResponsePrivate::parseDescribeVpcEndpointServicePermissionsResponse(QXmlStreamReader &xml)
 {

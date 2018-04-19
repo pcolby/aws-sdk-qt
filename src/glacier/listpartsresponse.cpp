@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::ListPartsResponse
- *
  * \brief The ListPartsResponse class provides an interace for Glacier ListParts responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new ListPartsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPartsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPartsResponse::ListPartsResponse(
         const ListPartsRequest &request,
@@ -93,6 +88,9 @@ ListPartsResponse::ListPartsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPartsRequest * ListPartsResponse::request() const
 {
     Q_D(const ListPartsResponse);
@@ -100,9 +98,8 @@ const ListPartsRequest * ListPartsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glacier ListParts response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier ListParts \a response.
  */
 void ListPartsResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void ListPartsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::ListPartsResponsePrivate
+ * \brief The ListPartsResponsePrivate class provides private implementation for ListPartsResponse.
  * \internal
  *
- * \class ListPartsResponsePrivate
- *
- * \brief Private implementation for ListPartsResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPartsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPartsResponse instance.
+ * Constructs a ListPartsResponsePrivate object with public implementation \a q.
  */
 ListPartsResponsePrivate::ListPartsResponsePrivate(
     ListPartsResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ ListPartsResponsePrivate::ListPartsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier ListPartsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier ListParts response element from \a xml.
  */
 void ListPartsResponsePrivate::parseListPartsResponse(QXmlStreamReader &xml)
 {

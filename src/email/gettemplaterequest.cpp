@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetTemplateRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a GetTemplateRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a GetTemplateRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 GetTemplateRequestPrivate::GetTemplateRequestPrivate(
     const SESRequest::Action action, GetTemplateRequest * const q)

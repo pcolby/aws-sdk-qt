@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::RegisterCACertificateResponse
- *
  * \brief The RegisterCACertificateResponse class provides an interace for IoT RegisterCACertificate responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new RegisterCACertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterCACertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterCACertificateResponse::RegisterCACertificateResponse(
         const RegisterCACertificateRequest &request,
@@ -66,6 +61,9 @@ RegisterCACertificateResponse::RegisterCACertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterCACertificateRequest * RegisterCACertificateResponse::request() const
 {
     Q_D(const RegisterCACertificateResponse);
@@ -73,9 +71,8 @@ const RegisterCACertificateRequest * RegisterCACertificateResponse::request() co
 }
 
 /*!
- * @brief  Parse a IoT RegisterCACertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT RegisterCACertificate \a response.
  */
 void RegisterCACertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void RegisterCACertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::RegisterCACertificateResponsePrivate
+ * \brief The RegisterCACertificateResponsePrivate class provides private implementation for RegisterCACertificateResponse.
  * \internal
  *
- * \class RegisterCACertificateResponsePrivate
- *
- * \brief Private implementation for RegisterCACertificateResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterCACertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterCACertificateResponse instance.
+ * Constructs a RegisterCACertificateResponsePrivate object with public implementation \a q.
  */
 RegisterCACertificateResponsePrivate::RegisterCACertificateResponsePrivate(
     RegisterCACertificateResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ RegisterCACertificateResponsePrivate::RegisterCACertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT RegisterCACertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT RegisterCACertificate response element from \a xml.
  */
 void RegisterCACertificateResponsePrivate::parseRegisterCACertificateResponse(QXmlStreamReader &xml)
 {

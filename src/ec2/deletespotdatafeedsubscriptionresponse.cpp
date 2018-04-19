@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteSpotDatafeedSubscriptionResponse
- *
  * \brief The DeleteSpotDatafeedSubscriptionResponse class provides an interace for EC2 DeleteSpotDatafeedSubscription responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteSpotDatafeedSubscriptionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteSpotDatafeedSubscriptionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteSpotDatafeedSubscriptionResponse::DeleteSpotDatafeedSubscriptionResponse(
         const DeleteSpotDatafeedSubscriptionRequest &request,
@@ -59,6 +54,9 @@ DeleteSpotDatafeedSubscriptionResponse::DeleteSpotDatafeedSubscriptionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteSpotDatafeedSubscriptionRequest * DeleteSpotDatafeedSubscriptionResponse::request() const
 {
     Q_D(const DeleteSpotDatafeedSubscriptionResponse);
@@ -66,9 +64,8 @@ const DeleteSpotDatafeedSubscriptionRequest * DeleteSpotDatafeedSubscriptionResp
 }
 
 /*!
- * @brief  Parse a EC2 DeleteSpotDatafeedSubscription response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteSpotDatafeedSubscription \a response.
  */
 void DeleteSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteSpotDatafeedSubscriptionResponsePrivate
+ * \brief The DeleteSpotDatafeedSubscriptionResponsePrivate class provides private implementation for DeleteSpotDatafeedSubscriptionResponse.
  * \internal
  *
- * \class DeleteSpotDatafeedSubscriptionResponsePrivate
- *
- * \brief Private implementation for DeleteSpotDatafeedSubscriptionResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteSpotDatafeedSubscriptionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteSpotDatafeedSubscriptionResponse instance.
+ * Constructs a DeleteSpotDatafeedSubscriptionResponsePrivate object with public implementation \a q.
  */
 DeleteSpotDatafeedSubscriptionResponsePrivate::DeleteSpotDatafeedSubscriptionResponsePrivate(
     DeleteSpotDatafeedSubscriptionResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteSpotDatafeedSubscriptionResponsePrivate::DeleteSpotDatafeedSubscriptionRes
 }
 
 /*!
- * @brief  Parse an EC2 DeleteSpotDatafeedSubscriptionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteSpotDatafeedSubscription response element from \a xml.
  */
 void DeleteSpotDatafeedSubscriptionResponsePrivate::parseDeleteSpotDatafeedSubscriptionResponse(QXmlStreamReader &xml)
 {

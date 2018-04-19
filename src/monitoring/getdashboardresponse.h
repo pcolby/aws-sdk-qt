@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetDashboardResponse : public CloudWatchResponse {
 public:
     GetDashboardResponse(const GetDashboardRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetDashboardRequest * request() const;
+    virtual const GetDashboardRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetDashboardResponse)

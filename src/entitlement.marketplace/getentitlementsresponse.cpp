@@ -29,10 +29,9 @@ namespace MarketplaceEntitlementService {
 
 /*!
  * \class QtAws::MarketplaceEntitlementService::GetEntitlementsResponse
- *
  * \brief The GetEntitlementsResponse class provides an interace for MarketplaceEntitlementService GetEntitlements responses.
  *
- * \ingroup MarketplaceEntitlementService
+ * \inmodule QtAwsMarketplaceEntitlementService
  *
  *  <fullname>AWS Marketplace Entitlement Service</fullname>
  * 
@@ -56,11 +55,7 @@ namespace MarketplaceEntitlementService {
  */
 
 /*!
- * @brief  Constructs a new GetEntitlementsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetEntitlementsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetEntitlementsResponse::GetEntitlementsResponse(
         const GetEntitlementsRequest &request,
@@ -72,6 +67,9 @@ GetEntitlementsResponse::GetEntitlementsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetEntitlementsRequest * GetEntitlementsResponse::request() const
 {
     Q_D(const GetEntitlementsResponse);
@@ -79,9 +77,8 @@ const GetEntitlementsRequest * GetEntitlementsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MarketplaceEntitlementService GetEntitlements response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MarketplaceEntitlementService GetEntitlements \a response.
  */
 void GetEntitlementsResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void GetEntitlementsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MarketplaceEntitlementService::GetEntitlementsResponsePrivate
+ * \brief The GetEntitlementsResponsePrivate class provides private implementation for GetEntitlementsResponse.
  * \internal
  *
- * \class GetEntitlementsResponsePrivate
- *
- * \brief Private implementation for GetEntitlementsResponse.
+ * \inmodule QtAwsMarketplaceEntitlementService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEntitlementsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetEntitlementsResponse instance.
+ * Constructs a GetEntitlementsResponsePrivate object with public implementation \a q.
  */
 GetEntitlementsResponsePrivate::GetEntitlementsResponsePrivate(
     GetEntitlementsResponse * const q) : MarketplaceEntitlementServiceResponsePrivate(q)
@@ -112,9 +105,7 @@ GetEntitlementsResponsePrivate::GetEntitlementsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MarketplaceEntitlementService GetEntitlementsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MarketplaceEntitlementService GetEntitlements response element from \a xml.
  */
 void GetEntitlementsResponsePrivate::parseGetEntitlementsResponse(QXmlStreamReader &xml)
 {

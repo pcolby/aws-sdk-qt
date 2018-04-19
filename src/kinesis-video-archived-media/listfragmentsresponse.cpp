@@ -29,21 +29,16 @@ namespace KinesisVideoArchivedMedia {
 
 /*!
  * \class QtAws::KinesisVideoArchivedMedia::ListFragmentsResponse
- *
  * \brief The ListFragmentsResponse class provides an interace for KinesisVideoArchivedMedia ListFragments responses.
  *
- * \ingroup KinesisVideoArchivedMedia
+ * \inmodule QtAwsKinesisVideoArchivedMedia
  *
  *
  * \sa KinesisVideoArchivedMediaClient::listFragments
  */
 
 /*!
- * @brief  Constructs a new ListFragmentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListFragmentsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListFragmentsResponse::ListFragmentsResponse(
         const ListFragmentsRequest &request,
@@ -55,6 +50,9 @@ ListFragmentsResponse::ListFragmentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListFragmentsRequest * ListFragmentsResponse::request() const
 {
     Q_D(const ListFragmentsResponse);
@@ -62,9 +60,8 @@ const ListFragmentsRequest * ListFragmentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a KinesisVideoArchivedMedia ListFragments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful KinesisVideoArchivedMedia ListFragments \a response.
  */
 void ListFragmentsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListFragmentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::KinesisVideoArchivedMedia::ListFragmentsResponsePrivate
+ * \brief The ListFragmentsResponsePrivate class provides private implementation for ListFragmentsResponse.
  * \internal
  *
- * \class ListFragmentsResponsePrivate
- *
- * \brief Private implementation for ListFragmentsResponse.
+ * \inmodule QtAwsKinesisVideoArchivedMedia
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListFragmentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListFragmentsResponse instance.
+ * Constructs a ListFragmentsResponsePrivate object with public implementation \a q.
  */
 ListFragmentsResponsePrivate::ListFragmentsResponsePrivate(
     ListFragmentsResponse * const q) : KinesisVideoArchivedMediaResponsePrivate(q)
@@ -95,9 +88,7 @@ ListFragmentsResponsePrivate::ListFragmentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an KinesisVideoArchivedMedia ListFragmentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a KinesisVideoArchivedMedia ListFragments response element from \a xml.
  */
 void ListFragmentsResponsePrivate::parseListFragmentsResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT AssociateVPCWithHostedZoneResponse : public Route53Response {
 public:
     AssociateVPCWithHostedZoneResponse(const AssociateVPCWithHostedZoneRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AssociateVPCWithHostedZoneRequest * request() const;
+    virtual const AssociateVPCWithHostedZoneRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AssociateVPCWithHostedZoneResponse)

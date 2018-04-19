@@ -29,10 +29,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::DescribeAttachmentResponse
- *
  * \brief The DescribeAttachmentResponse class provides an interace for Support DescribeAttachment responses.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -107,11 +106,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new DescribeAttachmentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAttachmentResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAttachmentResponse::DescribeAttachmentResponse(
         const DescribeAttachmentRequest &request,
@@ -123,6 +118,9 @@ DescribeAttachmentResponse::DescribeAttachmentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAttachmentRequest * DescribeAttachmentResponse::request() const
 {
     Q_D(const DescribeAttachmentResponse);
@@ -130,9 +128,8 @@ const DescribeAttachmentRequest * DescribeAttachmentResponse::request() const
 }
 
 /*!
- * @brief  Parse a Support DescribeAttachment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Support DescribeAttachment \a response.
  */
 void DescribeAttachmentResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void DescribeAttachmentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Support::DescribeAttachmentResponsePrivate
+ * \brief The DescribeAttachmentResponsePrivate class provides private implementation for DescribeAttachmentResponse.
  * \internal
  *
- * \class DescribeAttachmentResponsePrivate
- *
- * \brief Private implementation for DescribeAttachmentResponse.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAttachmentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAttachmentResponse instance.
+ * Constructs a DescribeAttachmentResponsePrivate object with public implementation \a q.
  */
 DescribeAttachmentResponsePrivate::DescribeAttachmentResponsePrivate(
     DescribeAttachmentResponse * const q) : SupportResponsePrivate(q)
@@ -163,9 +156,7 @@ DescribeAttachmentResponsePrivate::DescribeAttachmentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Support DescribeAttachmentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Support DescribeAttachment response element from \a xml.
  */
 void DescribeAttachmentResponsePrivate::parseDescribeAttachmentResponse(QXmlStreamReader &xml)
 {

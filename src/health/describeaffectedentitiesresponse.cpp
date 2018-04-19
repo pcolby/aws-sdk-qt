@@ -29,10 +29,9 @@ namespace Health {
 
 /*!
  * \class QtAws::Health::DescribeAffectedEntitiesResponse
- *
  * \brief The DescribeAffectedEntitiesResponse class provides an interace for Health DescribeAffectedEntities responses.
  *
- * \ingroup Health
+ * \inmodule QtAwsHealth
  *
  *  <fullname>AWS Health</fullname>
  * 
@@ -100,11 +99,7 @@ namespace Health {
  */
 
 /*!
- * @brief  Constructs a new DescribeAffectedEntitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAffectedEntitiesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAffectedEntitiesResponse::DescribeAffectedEntitiesResponse(
         const DescribeAffectedEntitiesRequest &request,
@@ -116,6 +111,9 @@ DescribeAffectedEntitiesResponse::DescribeAffectedEntitiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAffectedEntitiesRequest * DescribeAffectedEntitiesResponse::request() const
 {
     Q_D(const DescribeAffectedEntitiesResponse);
@@ -123,9 +121,8 @@ const DescribeAffectedEntitiesRequest * DescribeAffectedEntitiesResponse::reques
 }
 
 /*!
- * @brief  Parse a Health DescribeAffectedEntities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Health DescribeAffectedEntities \a response.
  */
 void DescribeAffectedEntitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -135,19 +132,15 @@ void DescribeAffectedEntitiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Health::DescribeAffectedEntitiesResponsePrivate
+ * \brief The DescribeAffectedEntitiesResponsePrivate class provides private implementation for DescribeAffectedEntitiesResponse.
  * \internal
  *
- * \class DescribeAffectedEntitiesResponsePrivate
- *
- * \brief Private implementation for DescribeAffectedEntitiesResponse.
+ * \inmodule QtAwsHealth
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAffectedEntitiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAffectedEntitiesResponse instance.
+ * Constructs a DescribeAffectedEntitiesResponsePrivate object with public implementation \a q.
  */
 DescribeAffectedEntitiesResponsePrivate::DescribeAffectedEntitiesResponsePrivate(
     DescribeAffectedEntitiesResponse * const q) : HealthResponsePrivate(q)
@@ -156,9 +149,7 @@ DescribeAffectedEntitiesResponsePrivate::DescribeAffectedEntitiesResponsePrivate
 }
 
 /*!
- * @brief  Parse an Health DescribeAffectedEntitiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Health DescribeAffectedEntities response element from \a xml.
  */
 void DescribeAffectedEntitiesResponsePrivate::parseDescribeAffectedEntitiesResponse(QXmlStreamReader &xml)
 {

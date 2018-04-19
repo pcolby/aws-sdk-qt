@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * UpdateDeploymentRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a UpdateDeploymentRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateDeploymentRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 UpdateDeploymentRequestPrivate::UpdateDeploymentRequestPrivate(
     const APIGatewayRequest::Action action, UpdateDeploymentRequest * const q)

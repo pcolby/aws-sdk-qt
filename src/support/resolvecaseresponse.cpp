@@ -29,10 +29,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::ResolveCaseResponse
- *
  * \brief The ResolveCaseResponse class provides an interace for Support ResolveCase responses.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -107,11 +106,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new ResolveCaseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResolveCaseResponse object for \a reply to \a request, with parent \a parent.
  */
 ResolveCaseResponse::ResolveCaseResponse(
         const ResolveCaseRequest &request,
@@ -123,6 +118,9 @@ ResolveCaseResponse::ResolveCaseResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResolveCaseRequest * ResolveCaseResponse::request() const
 {
     Q_D(const ResolveCaseResponse);
@@ -130,9 +128,8 @@ const ResolveCaseRequest * ResolveCaseResponse::request() const
 }
 
 /*!
- * @brief  Parse a Support ResolveCase response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Support ResolveCase \a response.
  */
 void ResolveCaseResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void ResolveCaseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Support::ResolveCaseResponsePrivate
+ * \brief The ResolveCaseResponsePrivate class provides private implementation for ResolveCaseResponse.
  * \internal
  *
- * \class ResolveCaseResponsePrivate
- *
- * \brief Private implementation for ResolveCaseResponse.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResolveCaseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResolveCaseResponse instance.
+ * Constructs a ResolveCaseResponsePrivate object with public implementation \a q.
  */
 ResolveCaseResponsePrivate::ResolveCaseResponsePrivate(
     ResolveCaseResponse * const q) : SupportResponsePrivate(q)
@@ -163,9 +156,7 @@ ResolveCaseResponsePrivate::ResolveCaseResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Support ResolveCaseResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Support ResolveCase response element from \a xml.
  */
 void ResolveCaseResponsePrivate::parseResolveCaseResponse(QXmlStreamReader &xml)
 {

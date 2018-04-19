@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetCommandInvocationResponse : public SSMResponse {
 public:
     GetCommandInvocationResponse(const GetCommandInvocationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetCommandInvocationRequest * request() const;
+    virtual const GetCommandInvocationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetCommandInvocationResponse)

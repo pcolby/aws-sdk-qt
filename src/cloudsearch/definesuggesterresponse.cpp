@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DefineSuggesterResponse
- *
  * \brief The DefineSuggesterResponse class provides an interace for CloudSearch DefineSuggester responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DefineSuggesterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DefineSuggesterResponse object for \a reply to \a request, with parent \a parent.
  */
 DefineSuggesterResponse::DefineSuggesterResponse(
         const DefineSuggesterRequest &request,
@@ -66,6 +61,9 @@ DefineSuggesterResponse::DefineSuggesterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DefineSuggesterRequest * DefineSuggesterResponse::request() const
 {
     Q_D(const DefineSuggesterResponse);
@@ -73,9 +71,8 @@ const DefineSuggesterRequest * DefineSuggesterResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch DefineSuggester response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DefineSuggester \a response.
  */
 void DefineSuggesterResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DefineSuggesterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DefineSuggesterResponsePrivate
+ * \brief The DefineSuggesterResponsePrivate class provides private implementation for DefineSuggesterResponse.
  * \internal
  *
- * \class DefineSuggesterResponsePrivate
- *
- * \brief Private implementation for DefineSuggesterResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DefineSuggesterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DefineSuggesterResponse instance.
+ * Constructs a DefineSuggesterResponsePrivate object with public implementation \a q.
  */
 DefineSuggesterResponsePrivate::DefineSuggesterResponsePrivate(
     DefineSuggesterResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DefineSuggesterResponsePrivate::DefineSuggesterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DefineSuggesterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DefineSuggester response element from \a xml.
  */
 void DefineSuggesterResponsePrivate::parseDefineSuggesterResponse(QXmlStreamReader &xml)
 {

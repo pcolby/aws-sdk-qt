@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::SetReceiptRulePositionResponse
- *
  * \brief The SetReceiptRulePositionResponse class provides an interace for SES SetReceiptRulePosition responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new SetReceiptRulePositionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetReceiptRulePositionResponse object for \a reply to \a request, with parent \a parent.
  */
 SetReceiptRulePositionResponse::SetReceiptRulePositionResponse(
         const SetReceiptRulePositionRequest &request,
@@ -66,6 +61,9 @@ SetReceiptRulePositionResponse::SetReceiptRulePositionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetReceiptRulePositionRequest * SetReceiptRulePositionResponse::request() const
 {
     Q_D(const SetReceiptRulePositionResponse);
@@ -73,9 +71,8 @@ const SetReceiptRulePositionRequest * SetReceiptRulePositionResponse::request() 
 }
 
 /*!
- * @brief  Parse a SES SetReceiptRulePosition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES SetReceiptRulePosition \a response.
  */
 void SetReceiptRulePositionResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SetReceiptRulePositionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::SetReceiptRulePositionResponsePrivate
+ * \brief The SetReceiptRulePositionResponsePrivate class provides private implementation for SetReceiptRulePositionResponse.
  * \internal
  *
- * \class SetReceiptRulePositionResponsePrivate
- *
- * \brief Private implementation for SetReceiptRulePositionResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetReceiptRulePositionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetReceiptRulePositionResponse instance.
+ * Constructs a SetReceiptRulePositionResponsePrivate object with public implementation \a q.
  */
 SetReceiptRulePositionResponsePrivate::SetReceiptRulePositionResponsePrivate(
     SetReceiptRulePositionResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ SetReceiptRulePositionResponsePrivate::SetReceiptRulePositionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES SetReceiptRulePositionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES SetReceiptRulePosition response element from \a xml.
  */
 void SetReceiptRulePositionResponsePrivate::parseSetReceiptRulePositionResponse(QXmlStreamReader &xml)
 {

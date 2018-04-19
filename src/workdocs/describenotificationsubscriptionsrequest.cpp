@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DescribeNotificationSubscriptionsRequest::res
  */
 
 /*!
- *
- * Constructs a DescribeNotificationSubscriptionsRequestPrivate object for WorkDocs \a action with,
- * public implementation \a q.
+ * Constructs a DescribeNotificationSubscriptionsRequestPrivate object for WorkDocs \a action,
+ * with public implementation \a q.
  */
 DescribeNotificationSubscriptionsRequestPrivate::DescribeNotificationSubscriptionsRequestPrivate(
     const WorkDocsRequest::Action action, DescribeNotificationSubscriptionsRequest * const q)

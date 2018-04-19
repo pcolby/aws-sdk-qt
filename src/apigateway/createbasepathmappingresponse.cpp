@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::CreateBasePathMappingResponse
- *
  * \brief The CreateBasePathMappingResponse class provides an interace for APIGateway CreateBasePathMapping responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new CreateBasePathMappingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateBasePathMappingResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateBasePathMappingResponse::CreateBasePathMappingResponse(
         const CreateBasePathMappingRequest &request,
@@ -60,6 +55,9 @@ CreateBasePathMappingResponse::CreateBasePathMappingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateBasePathMappingRequest * CreateBasePathMappingResponse::request() const
 {
     Q_D(const CreateBasePathMappingResponse);
@@ -67,9 +65,8 @@ const CreateBasePathMappingRequest * CreateBasePathMappingResponse::request() co
 }
 
 /*!
- * @brief  Parse a APIGateway CreateBasePathMapping response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway CreateBasePathMapping \a response.
  */
 void CreateBasePathMappingResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void CreateBasePathMappingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::CreateBasePathMappingResponsePrivate
+ * \brief The CreateBasePathMappingResponsePrivate class provides private implementation for CreateBasePathMappingResponse.
  * \internal
  *
- * \class CreateBasePathMappingResponsePrivate
- *
- * \brief Private implementation for CreateBasePathMappingResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateBasePathMappingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateBasePathMappingResponse instance.
+ * Constructs a CreateBasePathMappingResponsePrivate object with public implementation \a q.
  */
 CreateBasePathMappingResponsePrivate::CreateBasePathMappingResponsePrivate(
     CreateBasePathMappingResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ CreateBasePathMappingResponsePrivate::CreateBasePathMappingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway CreateBasePathMappingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway CreateBasePathMapping response element from \a xml.
  */
 void CreateBasePathMappingResponsePrivate::parseCreateBasePathMappingResponse(QXmlStreamReader &xml)
 {

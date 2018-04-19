@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * RemoveRoleFromInstanceProfileRequest::respons
  */
 
 /*!
- *
- * Constructs a RemoveRoleFromInstanceProfileRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a RemoveRoleFromInstanceProfileRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 RemoveRoleFromInstanceProfileRequestPrivate::RemoveRoleFromInstanceProfileRequestPrivate(
     const IAMRequest::Action action, RemoveRoleFromInstanceProfileRequest * const q)

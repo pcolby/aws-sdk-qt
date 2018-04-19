@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribePermissionsResponse : public OpsWorksResponse {
 public:
     DescribePermissionsResponse(const DescribePermissionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribePermissionsRequest * request() const;
+    virtual const DescribePermissionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribePermissionsResponse)

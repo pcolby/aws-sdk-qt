@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::AddWorkingStorageResponse
- *
  * \brief The AddWorkingStorageResponse class provides an interace for StorageGateway AddWorkingStorage responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new AddWorkingStorageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddWorkingStorageResponse object for \a reply to \a request, with parent \a parent.
  */
 AddWorkingStorageResponse::AddWorkingStorageResponse(
         const AddWorkingStorageRequest &request,
@@ -124,6 +119,9 @@ AddWorkingStorageResponse::AddWorkingStorageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddWorkingStorageRequest * AddWorkingStorageResponse::request() const
 {
     Q_D(const AddWorkingStorageResponse);
@@ -131,9 +129,8 @@ const AddWorkingStorageRequest * AddWorkingStorageResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway AddWorkingStorage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway AddWorkingStorage \a response.
  */
 void AddWorkingStorageResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void AddWorkingStorageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::AddWorkingStorageResponsePrivate
+ * \brief The AddWorkingStorageResponsePrivate class provides private implementation for AddWorkingStorageResponse.
  * \internal
  *
- * \class AddWorkingStorageResponsePrivate
- *
- * \brief Private implementation for AddWorkingStorageResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddWorkingStorageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddWorkingStorageResponse instance.
+ * Constructs a AddWorkingStorageResponsePrivate object with public implementation \a q.
  */
 AddWorkingStorageResponsePrivate::AddWorkingStorageResponsePrivate(
     AddWorkingStorageResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ AddWorkingStorageResponsePrivate::AddWorkingStorageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway AddWorkingStorageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway AddWorkingStorage response element from \a xml.
  */
 void AddWorkingStorageResponsePrivate::parseAddWorkingStorageResponse(QXmlStreamReader &xml)
 {

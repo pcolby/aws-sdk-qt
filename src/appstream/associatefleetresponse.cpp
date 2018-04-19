@@ -29,10 +29,9 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::AssociateFleetResponse
- *
  * \brief The AssociateFleetResponse class provides an interace for AppStream AssociateFleet responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  *
  *  <fullname>Amazon AppStream 2.0</fullname>
  * 
@@ -42,11 +41,7 @@ namespace AppStream {
  */
 
 /*!
- * @brief  Constructs a new AssociateFleetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateFleetResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateFleetResponse::AssociateFleetResponse(
         const AssociateFleetRequest &request,
@@ -58,6 +53,9 @@ AssociateFleetResponse::AssociateFleetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateFleetRequest * AssociateFleetResponse::request() const
 {
     Q_D(const AssociateFleetResponse);
@@ -65,9 +63,8 @@ const AssociateFleetRequest * AssociateFleetResponse::request() const
 }
 
 /*!
- * @brief  Parse a AppStream AssociateFleet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AppStream AssociateFleet \a response.
  */
 void AssociateFleetResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void AssociateFleetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AppStream::AssociateFleetResponsePrivate
+ * \brief The AssociateFleetResponsePrivate class provides private implementation for AssociateFleetResponse.
  * \internal
  *
- * \class AssociateFleetResponsePrivate
- *
- * \brief Private implementation for AssociateFleetResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateFleetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateFleetResponse instance.
+ * Constructs a AssociateFleetResponsePrivate object with public implementation \a q.
  */
 AssociateFleetResponsePrivate::AssociateFleetResponsePrivate(
     AssociateFleetResponse * const q) : AppStreamResponsePrivate(q)
@@ -98,9 +91,7 @@ AssociateFleetResponsePrivate::AssociateFleetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AppStream AssociateFleetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AppStream AssociateFleet response element from \a xml.
  */
 void AssociateFleetResponsePrivate::parseAssociateFleetResponse(QXmlStreamReader &xml)
 {

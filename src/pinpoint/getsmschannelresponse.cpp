@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::GetSmsChannelResponse
- *
  * \brief The GetSmsChannelResponse class provides an interace for Pinpoint GetSmsChannel responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::getSmsChannel
  */
 
 /*!
- * @brief  Constructs a new GetSmsChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSmsChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSmsChannelResponse::GetSmsChannelResponse(
         const GetSmsChannelRequest &request,
@@ -55,6 +50,9 @@ GetSmsChannelResponse::GetSmsChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSmsChannelRequest * GetSmsChannelResponse::request() const
 {
     Q_D(const GetSmsChannelResponse);
@@ -62,9 +60,8 @@ const GetSmsChannelRequest * GetSmsChannelResponse::request() const
 }
 
 /*!
- * @brief  Parse a Pinpoint GetSmsChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint GetSmsChannel \a response.
  */
 void GetSmsChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetSmsChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::GetSmsChannelResponsePrivate
+ * \brief The GetSmsChannelResponsePrivate class provides private implementation for GetSmsChannelResponse.
  * \internal
  *
- * \class GetSmsChannelResponsePrivate
- *
- * \brief Private implementation for GetSmsChannelResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSmsChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSmsChannelResponse instance.
+ * Constructs a GetSmsChannelResponsePrivate object with public implementation \a q.
  */
 GetSmsChannelResponsePrivate::GetSmsChannelResponsePrivate(
     GetSmsChannelResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ GetSmsChannelResponsePrivate::GetSmsChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint GetSmsChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint GetSmsChannel response element from \a xml.
  */
 void GetSmsChannelResponsePrivate::parseGetSmsChannelResponse(QXmlStreamReader &xml)
 {

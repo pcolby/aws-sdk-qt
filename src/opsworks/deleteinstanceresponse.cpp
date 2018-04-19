@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DeleteInstanceResponse
- *
  * \brief The DeleteInstanceResponse class provides an interace for OpsWorks DeleteInstance responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DeleteInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteInstanceResponse::DeleteInstanceResponse(
         const DeleteInstanceRequest &request,
@@ -161,6 +156,9 @@ DeleteInstanceResponse::DeleteInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteInstanceRequest * DeleteInstanceResponse::request() const
 {
     Q_D(const DeleteInstanceResponse);
@@ -168,9 +166,8 @@ const DeleteInstanceRequest * DeleteInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DeleteInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DeleteInstance \a response.
  */
 void DeleteInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DeleteInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DeleteInstanceResponsePrivate
+ * \brief The DeleteInstanceResponsePrivate class provides private implementation for DeleteInstanceResponse.
  * \internal
  *
- * \class DeleteInstanceResponsePrivate
- *
- * \brief Private implementation for DeleteInstanceResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteInstanceResponse instance.
+ * Constructs a DeleteInstanceResponsePrivate object with public implementation \a q.
  */
 DeleteInstanceResponsePrivate::DeleteInstanceResponsePrivate(
     DeleteInstanceResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DeleteInstanceResponsePrivate::DeleteInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DeleteInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DeleteInstance response element from \a xml.
  */
 void DeleteInstanceResponsePrivate::parseDeleteInstanceResponse(QXmlStreamReader &xml)
 {

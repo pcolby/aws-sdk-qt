@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeLimitsResponse : public KinesisResponse {
 public:
     DescribeLimitsResponse(const DescribeLimitsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeLimitsRequest * request() const;
+    virtual const DescribeLimitsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeLimitsResponse)

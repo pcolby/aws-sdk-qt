@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::GetEvaluationResponse
- *
  * \brief The GetEvaluationResponse class provides an interace for MachineLearning GetEvaluation responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::getEvaluation
  */
 
 /*!
- * @brief  Constructs a new GetEvaluationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetEvaluationResponse object for \a reply to \a request, with parent \a parent.
  */
 GetEvaluationResponse::GetEvaluationResponse(
         const GetEvaluationRequest &request,
@@ -55,6 +50,9 @@ GetEvaluationResponse::GetEvaluationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetEvaluationRequest * GetEvaluationResponse::request() const
 {
     Q_D(const GetEvaluationResponse);
@@ -62,9 +60,8 @@ const GetEvaluationRequest * GetEvaluationResponse::request() const
 }
 
 /*!
- * @brief  Parse a MachineLearning GetEvaluation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning GetEvaluation \a response.
  */
 void GetEvaluationResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetEvaluationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::GetEvaluationResponsePrivate
+ * \brief The GetEvaluationResponsePrivate class provides private implementation for GetEvaluationResponse.
  * \internal
  *
- * \class GetEvaluationResponsePrivate
- *
- * \brief Private implementation for GetEvaluationResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetEvaluationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetEvaluationResponse instance.
+ * Constructs a GetEvaluationResponsePrivate object with public implementation \a q.
  */
 GetEvaluationResponsePrivate::GetEvaluationResponsePrivate(
     GetEvaluationResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ GetEvaluationResponsePrivate::GetEvaluationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning GetEvaluationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning GetEvaluation response element from \a xml.
  */
 void GetEvaluationResponsePrivate::parseGetEvaluationResponse(QXmlStreamReader &xml)
 {

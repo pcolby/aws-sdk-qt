@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteCrawlerResponse : public GlueResponse {
 public:
     DeleteCrawlerResponse(const DeleteCrawlerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteCrawlerRequest * request() const;
+    virtual const DeleteCrawlerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteCrawlerResponse)

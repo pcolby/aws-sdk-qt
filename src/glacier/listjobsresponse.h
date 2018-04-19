@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListJobsResponse : public GlacierResponse {
 public:
     ListJobsResponse(const ListJobsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListJobsRequest * request() const;
+    virtual const ListJobsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListJobsResponse)

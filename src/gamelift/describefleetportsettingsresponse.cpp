@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::DescribeFleetPortSettingsResponse
- *
  * \brief The DescribeFleetPortSettingsResponse class provides an interace for GameLift DescribeFleetPortSettings responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new DescribeFleetPortSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeFleetPortSettingsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeFleetPortSettingsResponse::DescribeFleetPortSettingsResponse(
         const DescribeFleetPortSettingsRequest &request,
@@ -491,6 +486,9 @@ DescribeFleetPortSettingsResponse::DescribeFleetPortSettingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeFleetPortSettingsRequest * DescribeFleetPortSettingsResponse::request() const
 {
     Q_D(const DescribeFleetPortSettingsResponse);
@@ -498,9 +496,8 @@ const DescribeFleetPortSettingsRequest * DescribeFleetPortSettingsResponse::requ
 }
 
 /*!
- * @brief  Parse a GameLift DescribeFleetPortSettings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift DescribeFleetPortSettings \a response.
  */
 void DescribeFleetPortSettingsResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void DescribeFleetPortSettingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::DescribeFleetPortSettingsResponsePrivate
+ * \brief The DescribeFleetPortSettingsResponsePrivate class provides private implementation for DescribeFleetPortSettingsResponse.
  * \internal
  *
- * \class DescribeFleetPortSettingsResponsePrivate
- *
- * \brief Private implementation for DescribeFleetPortSettingsResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFleetPortSettingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeFleetPortSettingsResponse instance.
+ * Constructs a DescribeFleetPortSettingsResponsePrivate object with public implementation \a q.
  */
 DescribeFleetPortSettingsResponsePrivate::DescribeFleetPortSettingsResponsePrivate(
     DescribeFleetPortSettingsResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ DescribeFleetPortSettingsResponsePrivate::DescribeFleetPortSettingsResponsePriva
 }
 
 /*!
- * @brief  Parse an GameLift DescribeFleetPortSettingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift DescribeFleetPortSettings response element from \a xml.
  */
 void DescribeFleetPortSettingsResponsePrivate::parseDescribeFleetPortSettingsResponse(QXmlStreamReader &xml)
 {

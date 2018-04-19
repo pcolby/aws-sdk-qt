@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::RemoveThingFromThingGroupResponse
- *
  * \brief The RemoveThingFromThingGroupResponse class provides an interace for IoT RemoveThingFromThingGroup responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new RemoveThingFromThingGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveThingFromThingGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveThingFromThingGroupResponse::RemoveThingFromThingGroupResponse(
         const RemoveThingFromThingGroupRequest &request,
@@ -66,6 +61,9 @@ RemoveThingFromThingGroupResponse::RemoveThingFromThingGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveThingFromThingGroupRequest * RemoveThingFromThingGroupResponse::request() const
 {
     Q_D(const RemoveThingFromThingGroupResponse);
@@ -73,9 +71,8 @@ const RemoveThingFromThingGroupRequest * RemoveThingFromThingGroupResponse::requ
 }
 
 /*!
- * @brief  Parse a IoT RemoveThingFromThingGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT RemoveThingFromThingGroup \a response.
  */
 void RemoveThingFromThingGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void RemoveThingFromThingGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::RemoveThingFromThingGroupResponsePrivate
+ * \brief The RemoveThingFromThingGroupResponsePrivate class provides private implementation for RemoveThingFromThingGroupResponse.
  * \internal
  *
- * \class RemoveThingFromThingGroupResponsePrivate
- *
- * \brief Private implementation for RemoveThingFromThingGroupResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveThingFromThingGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveThingFromThingGroupResponse instance.
+ * Constructs a RemoveThingFromThingGroupResponsePrivate object with public implementation \a q.
  */
 RemoveThingFromThingGroupResponsePrivate::RemoveThingFromThingGroupResponsePrivate(
     RemoveThingFromThingGroupResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ RemoveThingFromThingGroupResponsePrivate::RemoveThingFromThingGroupResponsePriva
 }
 
 /*!
- * @brief  Parse an IoT RemoveThingFromThingGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT RemoveThingFromThingGroup response element from \a xml.
  */
 void RemoveThingFromThingGroupResponsePrivate::parseRemoveThingFromThingGroupResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::ListAliasesResponse
- *
  * \brief The ListAliasesResponse class provides an interace for Lambda ListAliases responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new ListAliasesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAliasesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAliasesResponse::ListAliasesResponse(
         const ListAliasesRequest &request,
@@ -66,6 +61,9 @@ ListAliasesResponse::ListAliasesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAliasesRequest * ListAliasesResponse::request() const
 {
     Q_D(const ListAliasesResponse);
@@ -73,9 +71,8 @@ const ListAliasesRequest * ListAliasesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda ListAliases response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda ListAliases \a response.
  */
 void ListAliasesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListAliasesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::ListAliasesResponsePrivate
+ * \brief The ListAliasesResponsePrivate class provides private implementation for ListAliasesResponse.
  * \internal
  *
- * \class ListAliasesResponsePrivate
- *
- * \brief Private implementation for ListAliasesResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAliasesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAliasesResponse instance.
+ * Constructs a ListAliasesResponsePrivate object with public implementation \a q.
  */
 ListAliasesResponsePrivate::ListAliasesResponsePrivate(
     ListAliasesResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ ListAliasesResponsePrivate::ListAliasesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda ListAliasesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda ListAliases response element from \a xml.
  */
 void ListAliasesResponsePrivate::parseListAliasesResponse(QXmlStreamReader &xml)
 {

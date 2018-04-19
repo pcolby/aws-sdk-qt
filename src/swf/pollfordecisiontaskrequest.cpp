@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * PollForDecisionTaskRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a PollForDecisionTaskRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a PollForDecisionTaskRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 PollForDecisionTaskRequestPrivate::PollForDecisionTaskRequestPrivate(
     const SWFRequest::Action action, PollForDecisionTaskRequest * const q)

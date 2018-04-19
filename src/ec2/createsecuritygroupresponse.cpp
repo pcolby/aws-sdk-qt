@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateSecurityGroupResponse
- *
  * \brief The CreateSecurityGroupResponse class provides an interace for EC2 CreateSecurityGroup responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateSecurityGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSecurityGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSecurityGroupResponse::CreateSecurityGroupResponse(
         const CreateSecurityGroupRequest &request,
@@ -59,6 +54,9 @@ CreateSecurityGroupResponse::CreateSecurityGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSecurityGroupRequest * CreateSecurityGroupResponse::request() const
 {
     Q_D(const CreateSecurityGroupResponse);
@@ -66,9 +64,8 @@ const CreateSecurityGroupRequest * CreateSecurityGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateSecurityGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateSecurityGroup \a response.
  */
 void CreateSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateSecurityGroupResponsePrivate
+ * \brief The CreateSecurityGroupResponsePrivate class provides private implementation for CreateSecurityGroupResponse.
  * \internal
  *
- * \class CreateSecurityGroupResponsePrivate
- *
- * \brief Private implementation for CreateSecurityGroupResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSecurityGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSecurityGroupResponse instance.
+ * Constructs a CreateSecurityGroupResponsePrivate object with public implementation \a q.
  */
 CreateSecurityGroupResponsePrivate::CreateSecurityGroupResponsePrivate(
     CreateSecurityGroupResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateSecurityGroupResponsePrivate::CreateSecurityGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateSecurityGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateSecurityGroup response element from \a xml.
  */
 void CreateSecurityGroupResponsePrivate::parseCreateSecurityGroupResponse(QXmlStreamReader &xml)
 {

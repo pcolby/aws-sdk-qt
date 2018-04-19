@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAggregationAuthorizationsRequest::res
  */
 
 /*!
- *
- * Constructs a DescribeAggregationAuthorizationsRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAggregationAuthorizationsRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DescribeAggregationAuthorizationsRequestPrivate::DescribeAggregationAuthorizationsRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeAggregationAuthorizationsRequest * const q)

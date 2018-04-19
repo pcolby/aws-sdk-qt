@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteFieldLevelEncryptionConfigRequest::resp
  */
 
 /*!
- *
- * Constructs a DeleteFieldLevelEncryptionConfigRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a DeleteFieldLevelEncryptionConfigRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 DeleteFieldLevelEncryptionConfigRequestPrivate::DeleteFieldLevelEncryptionConfigRequestPrivate(
     const CloudFrontRequest::Action action, DeleteFieldLevelEncryptionConfigRequest * const q)

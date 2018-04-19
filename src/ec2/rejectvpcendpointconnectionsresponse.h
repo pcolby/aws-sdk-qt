@@ -34,10 +34,10 @@ class QTAWS_EXPORT RejectVpcEndpointConnectionsResponse : public EC2Response {
 public:
     RejectVpcEndpointConnectionsResponse(const RejectVpcEndpointConnectionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RejectVpcEndpointConnectionsRequest * request() const;
+    virtual const RejectVpcEndpointConnectionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RejectVpcEndpointConnectionsResponse)

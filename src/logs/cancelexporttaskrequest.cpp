@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * CancelExportTaskRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a CancelExportTaskRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a CancelExportTaskRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 CancelExportTaskRequestPrivate::CancelExportTaskRequestPrivate(
     const CloudWatchLogsRequest::Action action, CancelExportTaskRequest * const q)

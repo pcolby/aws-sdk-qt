@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeNetworkInterfacesRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeNetworkInterfacesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeNetworkInterfacesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeNetworkInterfacesRequestPrivate::DescribeNetworkInterfacesRequestPrivate(
     const EC2Request::Action action, DescribeNetworkInterfacesRequest * const q)

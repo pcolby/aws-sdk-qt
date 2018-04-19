@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::AbortMultipartUploadResponse
- *
  * \brief The AbortMultipartUploadResponse class provides an interace for Glacier AbortMultipartUpload responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new AbortMultipartUploadResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AbortMultipartUploadResponse object for \a reply to \a request, with parent \a parent.
  */
 AbortMultipartUploadResponse::AbortMultipartUploadResponse(
         const AbortMultipartUploadRequest &request,
@@ -93,6 +88,9 @@ AbortMultipartUploadResponse::AbortMultipartUploadResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AbortMultipartUploadRequest * AbortMultipartUploadResponse::request() const
 {
     Q_D(const AbortMultipartUploadResponse);
@@ -100,9 +98,8 @@ const AbortMultipartUploadRequest * AbortMultipartUploadResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Glacier AbortMultipartUpload response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier AbortMultipartUpload \a response.
  */
 void AbortMultipartUploadResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void AbortMultipartUploadResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::AbortMultipartUploadResponsePrivate
+ * \brief The AbortMultipartUploadResponsePrivate class provides private implementation for AbortMultipartUploadResponse.
  * \internal
  *
- * \class AbortMultipartUploadResponsePrivate
- *
- * \brief Private implementation for AbortMultipartUploadResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AbortMultipartUploadResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AbortMultipartUploadResponse instance.
+ * Constructs a AbortMultipartUploadResponsePrivate object with public implementation \a q.
  */
 AbortMultipartUploadResponsePrivate::AbortMultipartUploadResponsePrivate(
     AbortMultipartUploadResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ AbortMultipartUploadResponsePrivate::AbortMultipartUploadResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier AbortMultipartUploadResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier AbortMultipartUpload response element from \a xml.
  */
 void AbortMultipartUploadResponsePrivate::parseAbortMultipartUploadResponse(QXmlStreamReader &xml)
 {

@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * PutNotificationChannelRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a PutNotificationChannelRequestPrivate object for FMS \a action with,
- * public implementation \a q.
+ * Constructs a PutNotificationChannelRequestPrivate object for FMS \a action,
+ * with public implementation \a q.
  */
 PutNotificationChannelRequestPrivate::PutNotificationChannelRequestPrivate(
     const FMSRequest::Action action, PutNotificationChannelRequest * const q)

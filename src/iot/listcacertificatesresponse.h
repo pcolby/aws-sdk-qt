@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListCACertificatesResponse : public IoTResponse {
 public:
     ListCACertificatesResponse(const ListCACertificatesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListCACertificatesRequest * request() const;
+    virtual const ListCACertificatesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListCACertificatesResponse)

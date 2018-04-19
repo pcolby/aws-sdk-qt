@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteHsmRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a DeleteHsmRequestPrivate object for CloudHSMV2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteHsmRequestPrivate object for CloudHSMV2 \a action,
+ * with public implementation \a q.
  */
 DeleteHsmRequestPrivate::DeleteHsmRequestPrivate(
     const CloudHSMV2Request::Action action, DeleteHsmRequest * const q)

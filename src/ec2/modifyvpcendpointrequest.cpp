@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * ModifyVpcEndpointRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ModifyVpcEndpointRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a ModifyVpcEndpointRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 ModifyVpcEndpointRequestPrivate::ModifyVpcEndpointRequestPrivate(
     const EC2Request::Action action, ModifyVpcEndpointRequest * const q)

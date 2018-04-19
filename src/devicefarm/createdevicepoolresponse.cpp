@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::CreateDevicePoolResponse
- *
  * \brief The CreateDevicePoolResponse class provides an interace for DeviceFarm CreateDevicePool responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new CreateDevicePoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDevicePoolResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDevicePoolResponse::CreateDevicePoolResponse(
         const CreateDevicePoolRequest &request,
@@ -57,6 +52,9 @@ CreateDevicePoolResponse::CreateDevicePoolResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDevicePoolRequest * CreateDevicePoolResponse::request() const
 {
     Q_D(const CreateDevicePoolResponse);
@@ -64,9 +62,8 @@ const CreateDevicePoolRequest * CreateDevicePoolResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm CreateDevicePool response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm CreateDevicePool \a response.
  */
 void CreateDevicePoolResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void CreateDevicePoolResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::CreateDevicePoolResponsePrivate
+ * \brief The CreateDevicePoolResponsePrivate class provides private implementation for CreateDevicePoolResponse.
  * \internal
  *
- * \class CreateDevicePoolResponsePrivate
- *
- * \brief Private implementation for CreateDevicePoolResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDevicePoolResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDevicePoolResponse instance.
+ * Constructs a CreateDevicePoolResponsePrivate object with public implementation \a q.
  */
 CreateDevicePoolResponsePrivate::CreateDevicePoolResponsePrivate(
     CreateDevicePoolResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ CreateDevicePoolResponsePrivate::CreateDevicePoolResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm CreateDevicePoolResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm CreateDevicePool response element from \a xml.
  */
 void CreateDevicePoolResponsePrivate::parseCreateDevicePoolResponse(QXmlStreamReader &xml)
 {

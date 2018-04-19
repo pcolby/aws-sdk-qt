@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListIncomingTypedLinksResponse : public CloudDirectoryRespons
 public:
     ListIncomingTypedLinksResponse(const ListIncomingTypedLinksRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListIncomingTypedLinksRequest * request() const;
+    virtual const ListIncomingTypedLinksRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListIncomingTypedLinksResponse)

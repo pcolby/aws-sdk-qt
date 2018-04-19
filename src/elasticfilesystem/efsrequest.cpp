@@ -50,7 +50,7 @@ namespace EFS {
  */
 
 /*!
- * Constructs a[n] EFSRequest object for EFS \a action.
+ * Constructs a EFSRequest object for EFS \a action.
  */
 EFSRequest::EFSRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new EFSRequestPrivate(action, this))
@@ -250,8 +250,8 @@ QNetworkRequest EFSRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a EFSRequestPrivate object for EFS \a action with,
- * public implementation \a q.
+ * Constructs a EFSRequestPrivate object for EFS \a action,
+ * with public implementation \a q.
  */
 EFSRequestPrivate::EFSRequestPrivate(const EFSRequest::Action action, EFSRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

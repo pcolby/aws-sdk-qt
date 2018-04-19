@@ -125,9 +125,8 @@ QtAws::Core::AwsAbstractResponse * CreateGroupRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateGroupRequestPrivate object for ResourceGroups \a action with,
- * public implementation \a q.
+ * Constructs a CreateGroupRequestPrivate object for ResourceGroups \a action,
+ * with public implementation \a q.
  */
 CreateGroupRequestPrivate::CreateGroupRequestPrivate(
     const ResourceGroupsRequest::Action action, CreateGroupRequest * const q)

@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * RebootBrokerRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a RebootBrokerRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a RebootBrokerRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 RebootBrokerRequestPrivate::RebootBrokerRequestPrivate(
     const MQRequest::Action action, RebootBrokerRequest * const q)

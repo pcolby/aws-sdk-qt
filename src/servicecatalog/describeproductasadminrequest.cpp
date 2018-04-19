@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeProductAsAdminRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeProductAsAdminRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DescribeProductAsAdminRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DescribeProductAsAdminRequestPrivate::DescribeProductAsAdminRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeProductAsAdminRequest * const q)

@@ -100,9 +100,8 @@ QtAws::Core::AwsAbstractResponse * CreateBackupRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateBackupRequestPrivate object for DynamoDB \a action with,
- * public implementation \a q.
+ * Constructs a CreateBackupRequestPrivate object for DynamoDB \a action,
+ * with public implementation \a q.
  */
 CreateBackupRequestPrivate::CreateBackupRequestPrivate(
     const DynamoDBRequest::Action action, CreateBackupRequest * const q)

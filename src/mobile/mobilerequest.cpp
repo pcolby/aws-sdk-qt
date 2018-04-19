@@ -48,7 +48,7 @@ namespace Mobile {
  */
 
 /*!
- * Constructs a[n] MobileRequest object for Mobile \a action.
+ * Constructs a MobileRequest object for Mobile \a action.
  */
 MobileRequest::MobileRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new MobileRequestPrivate(action, this))
@@ -248,8 +248,8 @@ QNetworkRequest MobileRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a MobileRequestPrivate object for Mobile \a action with,
- * public implementation \a q.
+ * Constructs a MobileRequestPrivate object for Mobile \a action,
+ * with public implementation \a q.
  */
 MobileRequestPrivate::MobileRequestPrivate(const MobileRequest::Action action, MobileRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

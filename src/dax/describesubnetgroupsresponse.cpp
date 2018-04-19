@@ -29,10 +29,9 @@ namespace DAX {
 
 /*!
  * \class QtAws::DAX::DescribeSubnetGroupsResponse
- *
  * \brief The DescribeSubnetGroupsResponse class provides an interace for DAX DescribeSubnetGroups responses.
  *
- * \ingroup DAX
+ * \inmodule QtAwsDAX
  *
  *  DAX is a managed caching service engineered for Amazon DynamoDB. DAX dramatically speeds up database reads by caching
  *  frequently-accessed data from DynamoDB, so applications can access that data with sub-millisecond latency. You can
@@ -43,11 +42,7 @@ namespace DAX {
  */
 
 /*!
- * @brief  Constructs a new DescribeSubnetGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSubnetGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSubnetGroupsResponse::DescribeSubnetGroupsResponse(
         const DescribeSubnetGroupsRequest &request,
@@ -59,6 +54,9 @@ DescribeSubnetGroupsResponse::DescribeSubnetGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSubnetGroupsRequest * DescribeSubnetGroupsResponse::request() const
 {
     Q_D(const DescribeSubnetGroupsResponse);
@@ -66,9 +64,8 @@ const DescribeSubnetGroupsRequest * DescribeSubnetGroupsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a DAX DescribeSubnetGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DAX DescribeSubnetGroups \a response.
  */
 void DescribeSubnetGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeSubnetGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DAX::DescribeSubnetGroupsResponsePrivate
+ * \brief The DescribeSubnetGroupsResponsePrivate class provides private implementation for DescribeSubnetGroupsResponse.
  * \internal
  *
- * \class DescribeSubnetGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeSubnetGroupsResponse.
+ * \inmodule QtAwsDAX
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSubnetGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSubnetGroupsResponse instance.
+ * Constructs a DescribeSubnetGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeSubnetGroupsResponsePrivate::DescribeSubnetGroupsResponsePrivate(
     DescribeSubnetGroupsResponse * const q) : DAXResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeSubnetGroupsResponsePrivate::DescribeSubnetGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DAX DescribeSubnetGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DAX DescribeSubnetGroups response element from \a xml.
  */
 void DescribeSubnetGroupsResponsePrivate::parseDescribeSubnetGroupsResponse(QXmlStreamReader &xml)
 {

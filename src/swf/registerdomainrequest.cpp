@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * RegisterDomainRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a RegisterDomainRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a RegisterDomainRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 RegisterDomainRequestPrivate::RegisterDomainRequestPrivate(
     const SWFRequest::Action action, RegisterDomainRequest * const q)

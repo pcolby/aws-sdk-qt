@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * UpdateNFSFileShareRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateNFSFileShareRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a UpdateNFSFileShareRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 UpdateNFSFileShareRequestPrivate::UpdateNFSFileShareRequestPrivate(
     const StorageGatewayRequest::Action action, UpdateNFSFileShareRequest * const q)

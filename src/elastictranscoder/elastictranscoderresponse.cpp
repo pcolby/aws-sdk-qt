@@ -28,16 +28,13 @@ namespace ElasticTranscoder {
 
 /*!
  * \class QtAws::ElasticTranscoder::ElasticTranscoderResponse
- *
  * \brief The ElasticTranscoderResponse class provides an interface for ElasticTranscoder responses.
  *
- * \ingroup ElasticTranscoder
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @brief  Constructs a new ElasticTranscoderResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ElasticTranscoderResponse object with parent \a parent.
  */
 ElasticTranscoderResponse::ElasticTranscoderResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ElasticTranscoderResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ElasticTranscoderResponse::ElasticTranscoderResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticTranscoderResponse object.
- *
+ * \internal
+ * Constructs a ElasticTranscoderResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElasticTranscoderResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ElasticTranscoderResponse::ElasticTranscoderResponse(ElasticTranscoderResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ElasticTranscoderResponse::ElasticTranscoderResponse(ElasticTranscoderResponsePr
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ElasticTranscoderResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ElasticTranscoderResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ElasticTranscoder::ElasticTranscoderResponsePrivate
+ * \brief The ElasticTranscoderResponsePrivate class provides private implementation for ElasticTranscoderResponse.
+ * \internal
  *
- * @class  ElasticTranscoderResponsePrivate
- *
- * @brief  Private implementation for ElasticTranscoderResponse.
+ * \inmodule QtAwsElasticTranscoder
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ElasticTranscoderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ElasticTranscoderResponse instance.
+ * Constructs a ElasticTranscoderResponsePrivate object with public implementation \a q.
  */
 ElasticTranscoderResponsePrivate::ElasticTranscoderResponsePrivate(
     ElasticTranscoderResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

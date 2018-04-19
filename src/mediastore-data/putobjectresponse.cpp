@@ -29,10 +29,9 @@ namespace MediaStoreData {
 
 /*!
  * \class QtAws::MediaStoreData::PutObjectResponse
- *
  * \brief The PutObjectResponse class provides an interace for MediaStoreData PutObject responses.
  *
- * \ingroup MediaStoreData
+ * \inmodule QtAwsMediaStoreData
  *
  *  An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the
  *  fundamental entities that are stored in AWS Elemental
@@ -41,11 +40,7 @@ namespace MediaStoreData {
  */
 
 /*!
- * @brief  Constructs a new PutObjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutObjectResponse object for \a reply to \a request, with parent \a parent.
  */
 PutObjectResponse::PutObjectResponse(
         const PutObjectRequest &request,
@@ -57,6 +52,9 @@ PutObjectResponse::PutObjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutObjectRequest * PutObjectResponse::request() const
 {
     Q_D(const PutObjectResponse);
@@ -64,9 +62,8 @@ const PutObjectRequest * PutObjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaStoreData PutObject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaStoreData PutObject \a response.
  */
 void PutObjectResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void PutObjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaStoreData::PutObjectResponsePrivate
+ * \brief The PutObjectResponsePrivate class provides private implementation for PutObjectResponse.
  * \internal
  *
- * \class PutObjectResponsePrivate
- *
- * \brief Private implementation for PutObjectResponse.
+ * \inmodule QtAwsMediaStoreData
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutObjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutObjectResponse instance.
+ * Constructs a PutObjectResponsePrivate object with public implementation \a q.
  */
 PutObjectResponsePrivate::PutObjectResponsePrivate(
     PutObjectResponse * const q) : MediaStoreDataResponsePrivate(q)
@@ -97,9 +90,7 @@ PutObjectResponsePrivate::PutObjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaStoreData PutObjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaStoreData PutObject response element from \a xml.
  */
 void PutObjectResponsePrivate::parsePutObjectResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeResizeResponse
- *
  * \brief The DescribeResizeResponse class provides an interace for Redshift DescribeResize responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeResizeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeResizeResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeResizeResponse::DescribeResizeResponse(
         const DescribeResizeRequest &request,
@@ -85,6 +80,9 @@ DescribeResizeResponse::DescribeResizeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeResizeRequest * DescribeResizeResponse::request() const
 {
     Q_D(const DescribeResizeResponse);
@@ -92,9 +90,8 @@ const DescribeResizeRequest * DescribeResizeResponse::request() const
 }
 
 /*!
- * @brief  Parse a Redshift DescribeResize response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeResize \a response.
  */
 void DescribeResizeResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeResizeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeResizeResponsePrivate
+ * \brief The DescribeResizeResponsePrivate class provides private implementation for DescribeResizeResponse.
  * \internal
  *
- * \class DescribeResizeResponsePrivate
- *
- * \brief Private implementation for DescribeResizeResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeResizeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeResizeResponse instance.
+ * Constructs a DescribeResizeResponsePrivate object with public implementation \a q.
  */
 DescribeResizeResponsePrivate::DescribeResizeResponsePrivate(
     DescribeResizeResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeResizeResponsePrivate::DescribeResizeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift DescribeResizeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeResize response element from \a xml.
  */
 void DescribeResizeResponsePrivate::parseDescribeResizeResponse(QXmlStreamReader &xml)
 {

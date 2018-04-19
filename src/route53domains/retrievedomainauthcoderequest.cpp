@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * RetrieveDomainAuthCodeRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a RetrieveDomainAuthCodeRequestPrivate object for Route53Domains \a action with,
- * public implementation \a q.
+ * Constructs a RetrieveDomainAuthCodeRequestPrivate object for Route53Domains \a action,
+ * with public implementation \a q.
  */
 RetrieveDomainAuthCodeRequestPrivate::RetrieveDomainAuthCodeRequestPrivate(
     const Route53DomainsRequest::Action action, RetrieveDomainAuthCodeRequest * const q)

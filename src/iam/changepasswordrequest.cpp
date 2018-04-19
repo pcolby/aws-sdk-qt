@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * ChangePasswordRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a ChangePasswordRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a ChangePasswordRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
     const IAMRequest::Action action, ChangePasswordRequest * const q)

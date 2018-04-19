@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateGroupResponse
- *
  * \brief The UpdateGroupResponse class provides an interace for CognitoIdentityProvider UpdateGroup responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new UpdateGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateGroupResponse::UpdateGroupResponse(
         const UpdateGroupRequest &request,
@@ -65,6 +60,9 @@ UpdateGroupResponse::UpdateGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateGroupRequest * UpdateGroupResponse::request() const
 {
     Q_D(const UpdateGroupResponse);
@@ -72,9 +70,8 @@ const UpdateGroupRequest * UpdateGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider UpdateGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider UpdateGroup \a response.
  */
 void UpdateGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void UpdateGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::UpdateGroupResponsePrivate
+ * \brief The UpdateGroupResponsePrivate class provides private implementation for UpdateGroupResponse.
  * \internal
  *
- * \class UpdateGroupResponsePrivate
- *
- * \brief Private implementation for UpdateGroupResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateGroupResponse instance.
+ * Constructs a UpdateGroupResponsePrivate object with public implementation \a q.
  */
 UpdateGroupResponsePrivate::UpdateGroupResponsePrivate(
     UpdateGroupResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ UpdateGroupResponsePrivate::UpdateGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider UpdateGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider UpdateGroup response element from \a xml.
  */
 void UpdateGroupResponsePrivate::parseUpdateGroupResponse(QXmlStreamReader &xml)
 {

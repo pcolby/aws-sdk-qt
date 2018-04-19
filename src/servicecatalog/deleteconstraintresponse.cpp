@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DeleteConstraintResponse
- *
  * \brief The DeleteConstraintResponse class provides an interace for ServiceCatalog DeleteConstraint responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DeleteConstraintResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteConstraintResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteConstraintResponse::DeleteConstraintResponse(
         const DeleteConstraintRequest &request,
@@ -61,6 +56,9 @@ DeleteConstraintResponse::DeleteConstraintResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteConstraintRequest * DeleteConstraintResponse::request() const
 {
     Q_D(const DeleteConstraintResponse);
@@ -68,9 +66,8 @@ const DeleteConstraintRequest * DeleteConstraintResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DeleteConstraint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DeleteConstraint \a response.
  */
 void DeleteConstraintResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeleteConstraintResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DeleteConstraintResponsePrivate
+ * \brief The DeleteConstraintResponsePrivate class provides private implementation for DeleteConstraintResponse.
  * \internal
  *
- * \class DeleteConstraintResponsePrivate
- *
- * \brief Private implementation for DeleteConstraintResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteConstraintResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteConstraintResponse instance.
+ * Constructs a DeleteConstraintResponsePrivate object with public implementation \a q.
  */
 DeleteConstraintResponsePrivate::DeleteConstraintResponsePrivate(
     DeleteConstraintResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DeleteConstraintResponsePrivate::DeleteConstraintResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DeleteConstraintResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DeleteConstraint response element from \a xml.
  */
 void DeleteConstraintResponsePrivate::parseDeleteConstraintResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace SNS {
 
 /*!
  * \class QtAws::SNS::SetEndpointAttributesResponse
- *
  * \brief The SetEndpointAttributesResponse class provides an interace for SNS SetEndpointAttributes responses.
  *
- * \ingroup SNS
+ * \inmodule QtAwsSNS
  *
  *  <fullname>Amazon Simple Notification Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace SNS {
  */
 
 /*!
- * @brief  Constructs a new SetEndpointAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetEndpointAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 SetEndpointAttributesResponse::SetEndpointAttributesResponse(
         const SetEndpointAttributesRequest &request,
@@ -69,6 +64,9 @@ SetEndpointAttributesResponse::SetEndpointAttributesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetEndpointAttributesRequest * SetEndpointAttributesResponse::request() const
 {
     Q_D(const SetEndpointAttributesResponse);
@@ -76,9 +74,8 @@ const SetEndpointAttributesRequest * SetEndpointAttributesResponse::request() co
 }
 
 /*!
- * @brief  Parse a SNS SetEndpointAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SNS SetEndpointAttributes \a response.
  */
 void SetEndpointAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void SetEndpointAttributesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SNS::SetEndpointAttributesResponsePrivate
+ * \brief The SetEndpointAttributesResponsePrivate class provides private implementation for SetEndpointAttributesResponse.
  * \internal
  *
- * \class SetEndpointAttributesResponsePrivate
- *
- * \brief Private implementation for SetEndpointAttributesResponse.
+ * \inmodule QtAwsSNS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetEndpointAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetEndpointAttributesResponse instance.
+ * Constructs a SetEndpointAttributesResponsePrivate object with public implementation \a q.
  */
 SetEndpointAttributesResponsePrivate::SetEndpointAttributesResponsePrivate(
     SetEndpointAttributesResponse * const q) : SNSResponsePrivate(q)
@@ -109,9 +102,7 @@ SetEndpointAttributesResponsePrivate::SetEndpointAttributesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SNS SetEndpointAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SNS SetEndpointAttributes response element from \a xml.
  */
 void SetEndpointAttributesResponsePrivate::parseSetEndpointAttributesResponse(QXmlStreamReader &xml)
 {

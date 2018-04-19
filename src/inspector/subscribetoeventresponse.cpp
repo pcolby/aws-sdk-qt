@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::SubscribeToEventResponse
- *
  * \brief The SubscribeToEventResponse class provides an interace for Inspector SubscribeToEvent responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new SubscribeToEventResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SubscribeToEventResponse object for \a reply to \a request, with parent \a parent.
  */
 SubscribeToEventResponse::SubscribeToEventResponse(
         const SubscribeToEventRequest &request,
@@ -60,6 +55,9 @@ SubscribeToEventResponse::SubscribeToEventResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SubscribeToEventRequest * SubscribeToEventResponse::request() const
 {
     Q_D(const SubscribeToEventResponse);
@@ -67,9 +65,8 @@ const SubscribeToEventRequest * SubscribeToEventResponse::request() const
 }
 
 /*!
- * @brief  Parse a Inspector SubscribeToEvent response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector SubscribeToEvent \a response.
  */
 void SubscribeToEventResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void SubscribeToEventResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::SubscribeToEventResponsePrivate
+ * \brief The SubscribeToEventResponsePrivate class provides private implementation for SubscribeToEventResponse.
  * \internal
  *
- * \class SubscribeToEventResponsePrivate
- *
- * \brief Private implementation for SubscribeToEventResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SubscribeToEventResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SubscribeToEventResponse instance.
+ * Constructs a SubscribeToEventResponsePrivate object with public implementation \a q.
  */
 SubscribeToEventResponsePrivate::SubscribeToEventResponsePrivate(
     SubscribeToEventResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ SubscribeToEventResponsePrivate::SubscribeToEventResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Inspector SubscribeToEventResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector SubscribeToEvent response element from \a xml.
  */
 void SubscribeToEventResponsePrivate::parseSubscribeToEventResponse(QXmlStreamReader &xml)
 {

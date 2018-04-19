@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DescribeObjectRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeObjectRequestPrivate object for MediaStoreData \a action with,
- * public implementation \a q.
+ * Constructs a DescribeObjectRequestPrivate object for MediaStoreData \a action,
+ * with public implementation \a q.
  */
 DescribeObjectRequestPrivate::DescribeObjectRequestPrivate(
     const MediaStoreDataRequest::Action action, DescribeObjectRequest * const q)

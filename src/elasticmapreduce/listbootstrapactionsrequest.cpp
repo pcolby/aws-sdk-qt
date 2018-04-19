@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * ListBootstrapActionsRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListBootstrapActionsRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a ListBootstrapActionsRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 ListBootstrapActionsRequestPrivate::ListBootstrapActionsRequestPrivate(
     const EMRRequest::Action action, ListBootstrapActionsRequest * const q)

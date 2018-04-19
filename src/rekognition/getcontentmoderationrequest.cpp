@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * GetContentModerationRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a GetContentModerationRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a GetContentModerationRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 GetContentModerationRequestPrivate::GetContentModerationRequestPrivate(
     const RekognitionRequest::Action action, GetContentModerationRequest * const q)

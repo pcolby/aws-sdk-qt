@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::TerminateJobResponse
- *
  * \brief The TerminateJobResponse class provides an interace for Batch TerminateJob responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new TerminateJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a TerminateJobResponse object for \a reply to \a request, with parent \a parent.
  */
 TerminateJobResponse::TerminateJobResponse(
         const TerminateJobRequest &request,
@@ -69,6 +64,9 @@ TerminateJobResponse::TerminateJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const TerminateJobRequest * TerminateJobResponse::request() const
 {
     Q_D(const TerminateJobResponse);
@@ -76,9 +74,8 @@ const TerminateJobRequest * TerminateJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Batch TerminateJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch TerminateJob \a response.
  */
 void TerminateJobResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void TerminateJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::TerminateJobResponsePrivate
+ * \brief The TerminateJobResponsePrivate class provides private implementation for TerminateJobResponse.
  * \internal
  *
- * \class TerminateJobResponsePrivate
- *
- * \brief Private implementation for TerminateJobResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new TerminateJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public TerminateJobResponse instance.
+ * Constructs a TerminateJobResponsePrivate object with public implementation \a q.
  */
 TerminateJobResponsePrivate::TerminateJobResponsePrivate(
     TerminateJobResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ TerminateJobResponsePrivate::TerminateJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Batch TerminateJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch TerminateJob response element from \a xml.
  */
 void TerminateJobResponsePrivate::parseTerminateJobResponse(QXmlStreamReader &xml)
 {

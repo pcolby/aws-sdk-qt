@@ -244,9 +244,8 @@ QtAws::Core::AwsAbstractResponse * PutActionRevisionRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a PutActionRevisionRequestPrivate object for CodePipeline \a action with,
- * public implementation \a q.
+ * Constructs a PutActionRevisionRequestPrivate object for CodePipeline \a action,
+ * with public implementation \a q.
  */
 PutActionRevisionRequestPrivate::PutActionRevisionRequestPrivate(
     const CodePipelineRequest::Action action, PutActionRevisionRequest * const q)

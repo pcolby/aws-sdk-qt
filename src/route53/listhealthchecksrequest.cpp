@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * ListHealthChecksRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ListHealthChecksRequestPrivate object for Route53 \a action with,
- * public implementation \a q.
+ * Constructs a ListHealthChecksRequestPrivate object for Route53 \a action,
+ * with public implementation \a q.
  */
 ListHealthChecksRequestPrivate::ListHealthChecksRequestPrivate(
     const Route53Request::Action action, ListHealthChecksRequest * const q)

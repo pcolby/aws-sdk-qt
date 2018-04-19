@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListArtifactsResponse : public DeviceFarmResponse {
 public:
     ListArtifactsResponse(const ListArtifactsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListArtifactsRequest * request() const;
+    virtual const ListArtifactsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListArtifactsResponse)

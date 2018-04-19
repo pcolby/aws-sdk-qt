@@ -34,10 +34,10 @@ class QTAWS_EXPORT DisassociateNodeResponse : public OpsWorksCMResponse {
 public:
     DisassociateNodeResponse(const DisassociateNodeRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DisassociateNodeRequest * request() const;
+    virtual const DisassociateNodeRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DisassociateNodeResponse)

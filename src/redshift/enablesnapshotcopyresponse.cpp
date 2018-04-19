@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::EnableSnapshotCopyResponse
- *
  * \brief The EnableSnapshotCopyResponse class provides an interace for Redshift EnableSnapshotCopy responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new EnableSnapshotCopyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableSnapshotCopyResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableSnapshotCopyResponse::EnableSnapshotCopyResponse(
         const EnableSnapshotCopyRequest &request,
@@ -85,6 +80,9 @@ EnableSnapshotCopyResponse::EnableSnapshotCopyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableSnapshotCopyRequest * EnableSnapshotCopyResponse::request() const
 {
     Q_D(const EnableSnapshotCopyResponse);
@@ -92,9 +90,8 @@ const EnableSnapshotCopyRequest * EnableSnapshotCopyResponse::request() const
 }
 
 /*!
- * @brief  Parse a Redshift EnableSnapshotCopy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift EnableSnapshotCopy \a response.
  */
 void EnableSnapshotCopyResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void EnableSnapshotCopyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::EnableSnapshotCopyResponsePrivate
+ * \brief The EnableSnapshotCopyResponsePrivate class provides private implementation for EnableSnapshotCopyResponse.
  * \internal
  *
- * \class EnableSnapshotCopyResponsePrivate
- *
- * \brief Private implementation for EnableSnapshotCopyResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableSnapshotCopyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableSnapshotCopyResponse instance.
+ * Constructs a EnableSnapshotCopyResponsePrivate object with public implementation \a q.
  */
 EnableSnapshotCopyResponsePrivate::EnableSnapshotCopyResponsePrivate(
     EnableSnapshotCopyResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ EnableSnapshotCopyResponsePrivate::EnableSnapshotCopyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift EnableSnapshotCopyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift EnableSnapshotCopy response element from \a xml.
  */
 void EnableSnapshotCopyResponsePrivate::parseEnableSnapshotCopyResponse(QXmlStreamReader &xml)
 {

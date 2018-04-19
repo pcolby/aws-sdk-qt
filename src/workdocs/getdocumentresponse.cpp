@@ -29,10 +29,9 @@ namespace WorkDocs {
 
 /*!
  * \class QtAws::WorkDocs::GetDocumentResponse
- *
  * \brief The GetDocumentResponse class provides an interace for WorkDocs GetDocument responses.
  *
- * \ingroup WorkDocs
+ * \inmodule QtAwsWorkDocs
  *
  *  The WorkDocs API is designed for the following use
  * 
@@ -68,11 +67,7 @@ namespace WorkDocs {
  */
 
 /*!
- * @brief  Constructs a new GetDocumentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDocumentResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDocumentResponse::GetDocumentResponse(
         const GetDocumentRequest &request,
@@ -84,6 +79,9 @@ GetDocumentResponse::GetDocumentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDocumentRequest * GetDocumentResponse::request() const
 {
     Q_D(const GetDocumentResponse);
@@ -91,9 +89,8 @@ const GetDocumentRequest * GetDocumentResponse::request() const
 }
 
 /*!
- * @brief  Parse a WorkDocs GetDocument response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkDocs GetDocument \a response.
  */
 void GetDocumentResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void GetDocumentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkDocs::GetDocumentResponsePrivate
+ * \brief The GetDocumentResponsePrivate class provides private implementation for GetDocumentResponse.
  * \internal
  *
- * \class GetDocumentResponsePrivate
- *
- * \brief Private implementation for GetDocumentResponse.
+ * \inmodule QtAwsWorkDocs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDocumentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDocumentResponse instance.
+ * Constructs a GetDocumentResponsePrivate object with public implementation \a q.
  */
 GetDocumentResponsePrivate::GetDocumentResponsePrivate(
     GetDocumentResponse * const q) : WorkDocsResponsePrivate(q)
@@ -124,9 +117,7 @@ GetDocumentResponsePrivate::GetDocumentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WorkDocs GetDocumentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkDocs GetDocument response element from \a xml.
  */
 void GetDocumentResponsePrivate::parseGetDocumentResponse(QXmlStreamReader &xml)
 {

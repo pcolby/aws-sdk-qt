@@ -29,21 +29,16 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::CreateDataSourceFromRDSResponse
- *
  * \brief The CreateDataSourceFromRDSResponse class provides an interace for MachineLearning CreateDataSourceFromRDS responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  *
  *
  * \sa MachineLearningClient::createDataSourceFromRDS
  */
 
 /*!
- * @brief  Constructs a new CreateDataSourceFromRDSResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateDataSourceFromRDSResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateDataSourceFromRDSResponse::CreateDataSourceFromRDSResponse(
         const CreateDataSourceFromRDSRequest &request,
@@ -55,6 +50,9 @@ CreateDataSourceFromRDSResponse::CreateDataSourceFromRDSResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateDataSourceFromRDSRequest * CreateDataSourceFromRDSResponse::request() const
 {
     Q_D(const CreateDataSourceFromRDSResponse);
@@ -62,9 +60,8 @@ const CreateDataSourceFromRDSRequest * CreateDataSourceFromRDSResponse::request(
 }
 
 /*!
- * @brief  Parse a MachineLearning CreateDataSourceFromRDS response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MachineLearning CreateDataSourceFromRDS \a response.
  */
 void CreateDataSourceFromRDSResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateDataSourceFromRDSResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MachineLearning::CreateDataSourceFromRDSResponsePrivate
+ * \brief The CreateDataSourceFromRDSResponsePrivate class provides private implementation for CreateDataSourceFromRDSResponse.
  * \internal
  *
- * \class CreateDataSourceFromRDSResponsePrivate
- *
- * \brief Private implementation for CreateDataSourceFromRDSResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateDataSourceFromRDSResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateDataSourceFromRDSResponse instance.
+ * Constructs a CreateDataSourceFromRDSResponsePrivate object with public implementation \a q.
  */
 CreateDataSourceFromRDSResponsePrivate::CreateDataSourceFromRDSResponsePrivate(
     CreateDataSourceFromRDSResponse * const q) : MachineLearningResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateDataSourceFromRDSResponsePrivate::CreateDataSourceFromRDSResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MachineLearning CreateDataSourceFromRDSResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MachineLearning CreateDataSourceFromRDS response element from \a xml.
  */
 void CreateDataSourceFromRDSResponsePrivate::parseCreateDataSourceFromRDSResponse(QXmlStreamReader &xml)
 {

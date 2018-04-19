@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminAddUserToGroupRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a AdminAddUserToGroupRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminAddUserToGroupRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminAddUserToGroupRequestPrivate::AdminAddUserToGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminAddUserToGroupRequest * const q)

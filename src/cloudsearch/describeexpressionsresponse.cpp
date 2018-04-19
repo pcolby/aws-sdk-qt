@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DescribeExpressionsResponse
- *
  * \brief The DescribeExpressionsResponse class provides an interace for CloudSearch DescribeExpressions responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DescribeExpressionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeExpressionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeExpressionsResponse::DescribeExpressionsResponse(
         const DescribeExpressionsRequest &request,
@@ -66,6 +61,9 @@ DescribeExpressionsResponse::DescribeExpressionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeExpressionsRequest * DescribeExpressionsResponse::request() const
 {
     Q_D(const DescribeExpressionsResponse);
@@ -73,9 +71,8 @@ const DescribeExpressionsRequest * DescribeExpressionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch DescribeExpressions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DescribeExpressions \a response.
  */
 void DescribeExpressionsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeExpressionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DescribeExpressionsResponsePrivate
+ * \brief The DescribeExpressionsResponsePrivate class provides private implementation for DescribeExpressionsResponse.
  * \internal
  *
- * \class DescribeExpressionsResponsePrivate
- *
- * \brief Private implementation for DescribeExpressionsResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeExpressionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeExpressionsResponse instance.
+ * Constructs a DescribeExpressionsResponsePrivate object with public implementation \a q.
  */
 DescribeExpressionsResponsePrivate::DescribeExpressionsResponsePrivate(
     DescribeExpressionsResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeExpressionsResponsePrivate::DescribeExpressionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DescribeExpressionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DescribeExpressions response element from \a xml.
  */
 void DescribeExpressionsResponsePrivate::parseDescribeExpressionsResponse(QXmlStreamReader &xml)
 {

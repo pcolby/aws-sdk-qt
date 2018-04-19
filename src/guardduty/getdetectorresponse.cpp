@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetDetectorResponse
- *
  * \brief The GetDetectorResponse class provides an interace for GuardDuty GetDetector responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getDetector
  */
 
 /*!
- * @brief  Constructs a new GetDetectorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDetectorResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDetectorResponse::GetDetectorResponse(
         const GetDetectorRequest &request,
@@ -55,6 +50,9 @@ GetDetectorResponse::GetDetectorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDetectorRequest * GetDetectorResponse::request() const
 {
     Q_D(const GetDetectorResponse);
@@ -62,9 +60,8 @@ const GetDetectorRequest * GetDetectorResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty GetDetector response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty GetDetector \a response.
  */
 void GetDetectorResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetDetectorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::GetDetectorResponsePrivate
+ * \brief The GetDetectorResponsePrivate class provides private implementation for GetDetectorResponse.
  * \internal
  *
- * \class GetDetectorResponsePrivate
- *
- * \brief Private implementation for GetDetectorResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDetectorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDetectorResponse instance.
+ * Constructs a GetDetectorResponsePrivate object with public implementation \a q.
  */
 GetDetectorResponsePrivate::GetDetectorResponsePrivate(
     GetDetectorResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ GetDetectorResponsePrivate::GetDetectorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty GetDetectorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty GetDetector response element from \a xml.
  */
 void GetDetectorResponsePrivate::parseGetDetectorResponse(QXmlStreamReader &xml)
 {

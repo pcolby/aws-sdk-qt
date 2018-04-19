@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminUserGlobalSignOutResponse
- *
  * \brief The AdminUserGlobalSignOutResponse class provides an interace for CognitoIdentityProvider AdminUserGlobalSignOut responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new AdminUserGlobalSignOutResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AdminUserGlobalSignOutResponse object for \a reply to \a request, with parent \a parent.
  */
 AdminUserGlobalSignOutResponse::AdminUserGlobalSignOutResponse(
         const AdminUserGlobalSignOutRequest &request,
@@ -65,6 +60,9 @@ AdminUserGlobalSignOutResponse::AdminUserGlobalSignOutResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AdminUserGlobalSignOutRequest * AdminUserGlobalSignOutResponse::request() const
 {
     Q_D(const AdminUserGlobalSignOutResponse);
@@ -72,9 +70,8 @@ const AdminUserGlobalSignOutRequest * AdminUserGlobalSignOutResponse::request() 
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider AdminUserGlobalSignOut response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider AdminUserGlobalSignOut \a response.
  */
 void AdminUserGlobalSignOutResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void AdminUserGlobalSignOutResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::AdminUserGlobalSignOutResponsePrivate
+ * \brief The AdminUserGlobalSignOutResponsePrivate class provides private implementation for AdminUserGlobalSignOutResponse.
  * \internal
  *
- * \class AdminUserGlobalSignOutResponsePrivate
- *
- * \brief Private implementation for AdminUserGlobalSignOutResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AdminUserGlobalSignOutResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AdminUserGlobalSignOutResponse instance.
+ * Constructs a AdminUserGlobalSignOutResponsePrivate object with public implementation \a q.
  */
 AdminUserGlobalSignOutResponsePrivate::AdminUserGlobalSignOutResponsePrivate(
     AdminUserGlobalSignOutResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ AdminUserGlobalSignOutResponsePrivate::AdminUserGlobalSignOutResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider AdminUserGlobalSignOutResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider AdminUserGlobalSignOut response element from \a xml.
  */
 void AdminUserGlobalSignOutResponsePrivate::parseAdminUserGlobalSignOutResponse(QXmlStreamReader &xml)
 {

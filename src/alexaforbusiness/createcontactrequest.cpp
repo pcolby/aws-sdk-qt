@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateContactRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateContactRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a CreateContactRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 CreateContactRequestPrivate::CreateContactRequestPrivate(
     const AlexaForBusinessRequest::Action action, CreateContactRequest * const q)

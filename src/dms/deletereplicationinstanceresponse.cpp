@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteReplicationInstanceResponse
- *
  * \brief The DeleteReplicationInstanceResponse class provides an interace for DatabaseMigrationService DeleteReplicationInstance responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DeleteReplicationInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteReplicationInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteReplicationInstanceResponse::DeleteReplicationInstanceResponse(
         const DeleteReplicationInstanceRequest &request,
@@ -66,6 +61,9 @@ DeleteReplicationInstanceResponse::DeleteReplicationInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteReplicationInstanceRequest * DeleteReplicationInstanceResponse::request() const
 {
     Q_D(const DeleteReplicationInstanceResponse);
@@ -73,9 +71,8 @@ const DeleteReplicationInstanceRequest * DeleteReplicationInstanceResponse::requ
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DeleteReplicationInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DeleteReplicationInstance \a response.
  */
 void DeleteReplicationInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteReplicationInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DeleteReplicationInstanceResponsePrivate
+ * \brief The DeleteReplicationInstanceResponsePrivate class provides private implementation for DeleteReplicationInstanceResponse.
  * \internal
  *
- * \class DeleteReplicationInstanceResponsePrivate
- *
- * \brief Private implementation for DeleteReplicationInstanceResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteReplicationInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteReplicationInstanceResponse instance.
+ * Constructs a DeleteReplicationInstanceResponsePrivate object with public implementation \a q.
  */
 DeleteReplicationInstanceResponsePrivate::DeleteReplicationInstanceResponsePrivate(
     DeleteReplicationInstanceResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteReplicationInstanceResponsePrivate::DeleteReplicationInstanceResponsePriva
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DeleteReplicationInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DeleteReplicationInstance response element from \a xml.
  */
 void DeleteReplicationInstanceResponsePrivate::parseDeleteReplicationInstanceResponse(QXmlStreamReader &xml)
 {

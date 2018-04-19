@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeRouteTablesResponse
- *
  * \brief The DescribeRouteTablesResponse class provides an interace for EC2 DescribeRouteTables responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeRouteTablesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeRouteTablesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeRouteTablesResponse::DescribeRouteTablesResponse(
         const DescribeRouteTablesRequest &request,
@@ -59,6 +54,9 @@ DescribeRouteTablesResponse::DescribeRouteTablesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeRouteTablesRequest * DescribeRouteTablesResponse::request() const
 {
     Q_D(const DescribeRouteTablesResponse);
@@ -66,9 +64,8 @@ const DescribeRouteTablesRequest * DescribeRouteTablesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeRouteTables response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeRouteTables \a response.
  */
 void DescribeRouteTablesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeRouteTablesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeRouteTablesResponsePrivate
+ * \brief The DescribeRouteTablesResponsePrivate class provides private implementation for DescribeRouteTablesResponse.
  * \internal
  *
- * \class DescribeRouteTablesResponsePrivate
- *
- * \brief Private implementation for DescribeRouteTablesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeRouteTablesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeRouteTablesResponse instance.
+ * Constructs a DescribeRouteTablesResponsePrivate object with public implementation \a q.
  */
 DescribeRouteTablesResponsePrivate::DescribeRouteTablesResponsePrivate(
     DescribeRouteTablesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeRouteTablesResponsePrivate::DescribeRouteTablesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeRouteTablesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeRouteTables response element from \a xml.
  */
 void DescribeRouteTablesResponsePrivate::parseDescribeRouteTablesResponse(QXmlStreamReader &xml)
 {

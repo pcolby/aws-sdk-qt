@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVpnConnectionsRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a DescribeVpnConnectionsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVpnConnectionsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeVpnConnectionsRequestPrivate::DescribeVpnConnectionsRequestPrivate(
     const EC2Request::Action action, DescribeVpnConnectionsRequest * const q)

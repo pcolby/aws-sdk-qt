@@ -109,9 +109,8 @@ QtAws::Core::AwsAbstractResponse * SetLoadBalancerListenerSSLCertificateRequest:
  */
 
 /*!
- *
- * Constructs a SetLoadBalancerListenerSSLCertificateRequestPrivate object for ElasticLoadBalancing \a action with,
- * public implementation \a q.
+ * Constructs a SetLoadBalancerListenerSSLCertificateRequestPrivate object for ElasticLoadBalancing \a action,
+ * with public implementation \a q.
  */
 SetLoadBalancerListenerSSLCertificateRequestPrivate::SetLoadBalancerListenerSSLCertificateRequestPrivate(
     const ElasticLoadBalancingRequest::Action action, SetLoadBalancerListenerSSLCertificateRequest * const q)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * CreateEndpointRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CreateEndpointRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a CreateEndpointRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 CreateEndpointRequestPrivate::CreateEndpointRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, CreateEndpointRequest * const q)

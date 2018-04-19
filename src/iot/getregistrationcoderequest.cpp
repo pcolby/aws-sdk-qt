@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * GetRegistrationCodeRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a GetRegistrationCodeRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a GetRegistrationCodeRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 GetRegistrationCodeRequestPrivate::GetRegistrationCodeRequestPrivate(
     const IoTRequest::Action action, GetRegistrationCodeRequest * const q)

@@ -29,10 +29,9 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::DescribeWorkspaceDirectoriesResponse
- *
  * \brief The DescribeWorkspaceDirectoriesResponse class provides an interace for WorkSpaces DescribeWorkspaceDirectories responses.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  *
  *  <fullname>Amazon WorkSpaces Service</fullname>
  * 
@@ -42,11 +41,7 @@ namespace WorkSpaces {
  */
 
 /*!
- * @brief  Constructs a new DescribeWorkspaceDirectoriesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeWorkspaceDirectoriesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeWorkspaceDirectoriesResponse::DescribeWorkspaceDirectoriesResponse(
         const DescribeWorkspaceDirectoriesRequest &request,
@@ -58,6 +53,9 @@ DescribeWorkspaceDirectoriesResponse::DescribeWorkspaceDirectoriesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeWorkspaceDirectoriesRequest * DescribeWorkspaceDirectoriesResponse::request() const
 {
     Q_D(const DescribeWorkspaceDirectoriesResponse);
@@ -65,9 +63,8 @@ const DescribeWorkspaceDirectoriesRequest * DescribeWorkspaceDirectoriesResponse
 }
 
 /*!
- * @brief  Parse a WorkSpaces DescribeWorkspaceDirectories response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WorkSpaces DescribeWorkspaceDirectories \a response.
  */
 void DescribeWorkspaceDirectoriesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DescribeWorkspaceDirectoriesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WorkSpaces::DescribeWorkspaceDirectoriesResponsePrivate
+ * \brief The DescribeWorkspaceDirectoriesResponsePrivate class provides private implementation for DescribeWorkspaceDirectoriesResponse.
  * \internal
  *
- * \class DescribeWorkspaceDirectoriesResponsePrivate
- *
- * \brief Private implementation for DescribeWorkspaceDirectoriesResponse.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeWorkspaceDirectoriesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeWorkspaceDirectoriesResponse instance.
+ * Constructs a DescribeWorkspaceDirectoriesResponsePrivate object with public implementation \a q.
  */
 DescribeWorkspaceDirectoriesResponsePrivate::DescribeWorkspaceDirectoriesResponsePrivate(
     DescribeWorkspaceDirectoriesResponse * const q) : WorkSpacesResponsePrivate(q)
@@ -98,9 +91,7 @@ DescribeWorkspaceDirectoriesResponsePrivate::DescribeWorkspaceDirectoriesRespons
 }
 
 /*!
- * @brief  Parse an WorkSpaces DescribeWorkspaceDirectoriesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WorkSpaces DescribeWorkspaceDirectories response element from \a xml.
  */
 void DescribeWorkspaceDirectoriesResponsePrivate::parseDescribeWorkspaceDirectoriesResponse(QXmlStreamReader &xml)
 {

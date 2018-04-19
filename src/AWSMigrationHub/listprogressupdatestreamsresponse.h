@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListProgressUpdateStreamsResponse : public MigrationHubRespon
 public:
     ListProgressUpdateStreamsResponse(const ListProgressUpdateStreamsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListProgressUpdateStreamsRequest * request() const;
+    virtual const ListProgressUpdateStreamsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListProgressUpdateStreamsResponse)

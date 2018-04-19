@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetKeyPairResponse : public LightsailResponse {
 public:
     GetKeyPairResponse(const GetKeyPairRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetKeyPairRequest * request() const;
+    virtual const GetKeyPairRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetKeyPairResponse)

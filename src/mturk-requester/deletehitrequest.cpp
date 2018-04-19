@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteHITRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a DeleteHITRequestPrivate object for MTurk \a action with,
- * public implementation \a q.
+ * Constructs a DeleteHITRequestPrivate object for MTurk \a action,
+ * with public implementation \a q.
  */
 DeleteHITRequestPrivate::DeleteHITRequestPrivate(
     const MTurkRequest::Action action, DeleteHITRequest * const q)

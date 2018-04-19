@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::RemoveTagsFromOnPremisesInstancesResponse
- *
  * \brief The RemoveTagsFromOnPremisesInstancesResponse class provides an interace for CodeDeploy RemoveTagsFromOnPremisesInstances responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new RemoveTagsFromOnPremisesInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RemoveTagsFromOnPremisesInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 RemoveTagsFromOnPremisesInstancesResponse::RemoveTagsFromOnPremisesInstancesResponse(
         const RemoveTagsFromOnPremisesInstancesRequest &request,
@@ -136,6 +131,9 @@ RemoveTagsFromOnPremisesInstancesResponse::RemoveTagsFromOnPremisesInstancesResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RemoveTagsFromOnPremisesInstancesRequest * RemoveTagsFromOnPremisesInstancesResponse::request() const
 {
     Q_D(const RemoveTagsFromOnPremisesInstancesResponse);
@@ -143,9 +141,8 @@ const RemoveTagsFromOnPremisesInstancesRequest * RemoveTagsFromOnPremisesInstanc
 }
 
 /*!
- * @brief  Parse a CodeDeploy RemoveTagsFromOnPremisesInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy RemoveTagsFromOnPremisesInstances \a response.
  */
 void RemoveTagsFromOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void RemoveTagsFromOnPremisesInstancesResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::CodeDeploy::RemoveTagsFromOnPremisesInstancesResponsePrivate
+ * \brief The RemoveTagsFromOnPremisesInstancesResponsePrivate class provides private implementation for RemoveTagsFromOnPremisesInstancesResponse.
  * \internal
  *
- * \class RemoveTagsFromOnPremisesInstancesResponsePrivate
- *
- * \brief Private implementation for RemoveTagsFromOnPremisesInstancesResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RemoveTagsFromOnPremisesInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RemoveTagsFromOnPremisesInstancesResponse instance.
+ * Constructs a RemoveTagsFromOnPremisesInstancesResponsePrivate object with public implementation \a q.
  */
 RemoveTagsFromOnPremisesInstancesResponsePrivate::RemoveTagsFromOnPremisesInstancesResponsePrivate(
     RemoveTagsFromOnPremisesInstancesResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ RemoveTagsFromOnPremisesInstancesResponsePrivate::RemoveTagsFromOnPremisesInstan
 }
 
 /*!
- * @brief  Parse an CodeDeploy RemoveTagsFromOnPremisesInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy RemoveTagsFromOnPremisesInstances response element from \a xml.
  */
 void RemoveTagsFromOnPremisesInstancesResponsePrivate::parseRemoveTagsFromOnPremisesInstancesResponse(QXmlStreamReader &xml)
 {

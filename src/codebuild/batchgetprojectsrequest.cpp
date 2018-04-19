@@ -161,9 +161,8 @@ QtAws::Core::AwsAbstractResponse * BatchGetProjectsRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a BatchGetProjectsRequestPrivate object for CodeBuild \a action with,
- * public implementation \a q.
+ * Constructs a BatchGetProjectsRequestPrivate object for CodeBuild \a action,
+ * with public implementation \a q.
  */
 BatchGetProjectsRequestPrivate::BatchGetProjectsRequestPrivate(
     const CodeBuildRequest::Action action, BatchGetProjectsRequest * const q)

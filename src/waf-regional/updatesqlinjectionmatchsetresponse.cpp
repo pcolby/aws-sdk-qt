@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::UpdateSqlInjectionMatchSetResponse
- *
  * \brief The UpdateSqlInjectionMatchSetResponse class provides an interace for WAFRegional UpdateSqlInjectionMatchSet responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new UpdateSqlInjectionMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateSqlInjectionMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateSqlInjectionMatchSetResponse::UpdateSqlInjectionMatchSetResponse(
         const UpdateSqlInjectionMatchSetRequest &request,
@@ -62,6 +57,9 @@ UpdateSqlInjectionMatchSetResponse::UpdateSqlInjectionMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateSqlInjectionMatchSetRequest * UpdateSqlInjectionMatchSetResponse::request() const
 {
     Q_D(const UpdateSqlInjectionMatchSetResponse);
@@ -69,9 +67,8 @@ const UpdateSqlInjectionMatchSetRequest * UpdateSqlInjectionMatchSetResponse::re
 }
 
 /*!
- * @brief  Parse a WAFRegional UpdateSqlInjectionMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional UpdateSqlInjectionMatchSet \a response.
  */
 void UpdateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void UpdateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::UpdateSqlInjectionMatchSetResponsePrivate
+ * \brief The UpdateSqlInjectionMatchSetResponsePrivate class provides private implementation for UpdateSqlInjectionMatchSetResponse.
  * \internal
  *
- * \class UpdateSqlInjectionMatchSetResponsePrivate
- *
- * \brief Private implementation for UpdateSqlInjectionMatchSetResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateSqlInjectionMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateSqlInjectionMatchSetResponse instance.
+ * Constructs a UpdateSqlInjectionMatchSetResponsePrivate object with public implementation \a q.
  */
 UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetResponsePrivate(
     UpdateSqlInjectionMatchSetResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ UpdateSqlInjectionMatchSetResponsePrivate::UpdateSqlInjectionMatchSetResponsePri
 }
 
 /*!
- * @brief  Parse an WAFRegional UpdateSqlInjectionMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional UpdateSqlInjectionMatchSet response element from \a xml.
  */
 void UpdateSqlInjectionMatchSetResponsePrivate::parseUpdateSqlInjectionMatchSetResponse(QXmlStreamReader &xml)
 {

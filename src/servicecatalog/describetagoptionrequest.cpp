@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTagOptionRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DescribeTagOptionRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTagOptionRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DescribeTagOptionRequestPrivate::DescribeTagOptionRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeTagOptionRequest * const q)

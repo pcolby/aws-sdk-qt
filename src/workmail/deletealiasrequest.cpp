@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAliasRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a DeleteAliasRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAliasRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 DeleteAliasRequestPrivate::DeleteAliasRequestPrivate(
     const WorkMailRequest::Action action, DeleteAliasRequest * const q)

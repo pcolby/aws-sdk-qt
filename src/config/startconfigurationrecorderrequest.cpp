@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * StartConfigurationRecorderRequest::response(Q
  */
 
 /*!
- *
- * Constructs a StartConfigurationRecorderRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a StartConfigurationRecorderRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 StartConfigurationRecorderRequestPrivate::StartConfigurationRecorderRequestPrivate(
     const ConfigServiceRequest::Action action, StartConfigurationRecorderRequest * const q)

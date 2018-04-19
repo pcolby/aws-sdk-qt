@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::DeclineInvitationsResponse
- *
  * \brief The DeclineInvitationsResponse class provides an interace for GuardDuty DeclineInvitations responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::declineInvitations
  */
 
 /*!
- * @brief  Constructs a new DeclineInvitationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeclineInvitationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeclineInvitationsResponse::DeclineInvitationsResponse(
         const DeclineInvitationsRequest &request,
@@ -55,6 +50,9 @@ DeclineInvitationsResponse::DeclineInvitationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeclineInvitationsRequest * DeclineInvitationsResponse::request() const
 {
     Q_D(const DeclineInvitationsResponse);
@@ -62,9 +60,8 @@ const DeclineInvitationsRequest * DeclineInvitationsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty DeclineInvitations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty DeclineInvitations \a response.
  */
 void DeclineInvitationsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeclineInvitationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::DeclineInvitationsResponsePrivate
+ * \brief The DeclineInvitationsResponsePrivate class provides private implementation for DeclineInvitationsResponse.
  * \internal
  *
- * \class DeclineInvitationsResponsePrivate
- *
- * \brief Private implementation for DeclineInvitationsResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeclineInvitationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeclineInvitationsResponse instance.
+ * Constructs a DeclineInvitationsResponsePrivate object with public implementation \a q.
  */
 DeclineInvitationsResponsePrivate::DeclineInvitationsResponsePrivate(
     DeclineInvitationsResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ DeclineInvitationsResponsePrivate::DeclineInvitationsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty DeclineInvitationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty DeclineInvitations response element from \a xml.
  */
 void DeclineInvitationsResponsePrivate::parseDeclineInvitationsResponse(QXmlStreamReader &xml)
 {

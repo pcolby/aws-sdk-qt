@@ -28,16 +28,13 @@ namespace CodePipeline {
 
 /*!
  * \class QtAws::CodePipeline::CodePipelineResponse
- *
  * \brief The CodePipelineResponse class provides an interface for CodePipeline responses.
  *
- * \ingroup CodePipeline
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @brief  Constructs a new CodePipelineResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CodePipelineResponse object with parent \a parent.
  */
 CodePipelineResponse::CodePipelineResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CodePipelineResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CodePipelineResponse::CodePipelineResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodePipelineResponse object.
- *
+ * \internal
+ * Constructs a CodePipelineResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodePipelineResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CodePipelineResponse::CodePipelineResponse(CodePipelineResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CodePipelineResponse::CodePipelineResponse(CodePipelineResponsePrivate * const d
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CodePipelineResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CodePipelineResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CodePipeline::CodePipelineResponsePrivate
+ * \brief The CodePipelineResponsePrivate class provides private implementation for CodePipelineResponse.
+ * \internal
  *
- * @class  CodePipelineResponsePrivate
- *
- * @brief  Private implementation for CodePipelineResponse.
+ * \inmodule QtAwsCodePipeline
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CodePipelineResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CodePipelineResponse instance.
+ * Constructs a CodePipelineResponsePrivate object with public implementation \a q.
  */
 CodePipelineResponsePrivate::CodePipelineResponsePrivate(
     CodePipelineResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

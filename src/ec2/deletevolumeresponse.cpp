@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DeleteVolumeResponse
- *
  * \brief The DeleteVolumeResponse class provides an interace for EC2 DeleteVolume responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DeleteVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVolumeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVolumeResponse::DeleteVolumeResponse(
         const DeleteVolumeRequest &request,
@@ -59,6 +54,9 @@ DeleteVolumeResponse::DeleteVolumeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVolumeRequest * DeleteVolumeResponse::request() const
 {
     Q_D(const DeleteVolumeResponse);
@@ -66,9 +64,8 @@ const DeleteVolumeRequest * DeleteVolumeResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DeleteVolume response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DeleteVolume \a response.
  */
 void DeleteVolumeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteVolumeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DeleteVolumeResponsePrivate
+ * \brief The DeleteVolumeResponsePrivate class provides private implementation for DeleteVolumeResponse.
  * \internal
  *
- * \class DeleteVolumeResponsePrivate
- *
- * \brief Private implementation for DeleteVolumeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVolumeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVolumeResponse instance.
+ * Constructs a DeleteVolumeResponsePrivate object with public implementation \a q.
  */
 DeleteVolumeResponsePrivate::DeleteVolumeResponsePrivate(
     DeleteVolumeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteVolumeResponsePrivate::DeleteVolumeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DeleteVolumeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DeleteVolume response element from \a xml.
  */
 void DeleteVolumeResponsePrivate::parseDeleteVolumeResponse(QXmlStreamReader &xml)
 {

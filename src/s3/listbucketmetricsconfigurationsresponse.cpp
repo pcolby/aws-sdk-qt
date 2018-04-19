@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::ListBucketMetricsConfigurationsResponse
- *
  * \brief The ListBucketMetricsConfigurationsResponse class provides an interace for S3 ListBucketMetricsConfigurations responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::listBucketMetricsConfigurations
  */
 
 /*!
- * @brief  Constructs a new ListBucketMetricsConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListBucketMetricsConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListBucketMetricsConfigurationsResponse::ListBucketMetricsConfigurationsResponse(
         const ListBucketMetricsConfigurationsRequest &request,
@@ -55,6 +50,9 @@ ListBucketMetricsConfigurationsResponse::ListBucketMetricsConfigurationsResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListBucketMetricsConfigurationsRequest * ListBucketMetricsConfigurationsResponse::request() const
 {
     Q_D(const ListBucketMetricsConfigurationsResponse);
@@ -62,9 +60,8 @@ const ListBucketMetricsConfigurationsRequest * ListBucketMetricsConfigurationsRe
 }
 
 /*!
- * @brief  Parse a S3 ListBucketMetricsConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 ListBucketMetricsConfigurations \a response.
  */
 void ListBucketMetricsConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListBucketMetricsConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::ListBucketMetricsConfigurationsResponsePrivate
+ * \brief The ListBucketMetricsConfigurationsResponsePrivate class provides private implementation for ListBucketMetricsConfigurationsResponse.
  * \internal
  *
- * \class ListBucketMetricsConfigurationsResponsePrivate
- *
- * \brief Private implementation for ListBucketMetricsConfigurationsResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListBucketMetricsConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListBucketMetricsConfigurationsResponse instance.
+ * Constructs a ListBucketMetricsConfigurationsResponsePrivate object with public implementation \a q.
  */
 ListBucketMetricsConfigurationsResponsePrivate::ListBucketMetricsConfigurationsResponsePrivate(
     ListBucketMetricsConfigurationsResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ ListBucketMetricsConfigurationsResponsePrivate::ListBucketMetricsConfigurationsR
 }
 
 /*!
- * @brief  Parse an S3 ListBucketMetricsConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 ListBucketMetricsConfigurations response element from \a xml.
  */
 void ListBucketMetricsConfigurationsResponsePrivate::parseListBucketMetricsConfigurationsResponse(QXmlStreamReader &xml)
 {

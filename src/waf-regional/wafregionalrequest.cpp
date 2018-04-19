@@ -112,7 +112,7 @@ namespace WAFRegional {
  */
 
 /*!
- * Constructs a[n] WAFRegionalRequest object for WAFRegional \a action.
+ * Constructs a WAFRegionalRequest object for WAFRegional \a action.
  */
 WAFRegionalRequest::WAFRegionalRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new WAFRegionalRequestPrivate(action, this))
@@ -312,8 +312,8 @@ QNetworkRequest WAFRegionalRequest::unsignedRequest(const QUrl &endpoint) const
  */
 
 /*!
- * Constructs a WAFRegionalRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a WAFRegionalRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 WAFRegionalRequestPrivate::WAFRegionalRequestPrivate(const WAFRegionalRequest::Action action, WAFRegionalRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

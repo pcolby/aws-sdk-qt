@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBudgetResponse : public BudgetsResponse {
 public:
     DeleteBudgetResponse(const DeleteBudgetRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBudgetRequest * request() const;
+    virtual const DeleteBudgetRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBudgetResponse)

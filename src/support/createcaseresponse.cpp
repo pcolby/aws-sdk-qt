@@ -29,10 +29,9 @@ namespace Support {
 
 /*!
  * \class QtAws::Support::CreateCaseResponse
- *
  * \brief The CreateCaseResponse class provides an interace for Support CreateCase responses.
  *
- * \ingroup Support
+ * \inmodule QtAwsSupport
  *
  *  <fullname>AWS Support</fullname>
  * 
@@ -107,11 +106,7 @@ namespace Support {
  */
 
 /*!
- * @brief  Constructs a new CreateCaseResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateCaseResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateCaseResponse::CreateCaseResponse(
         const CreateCaseRequest &request,
@@ -123,6 +118,9 @@ CreateCaseResponse::CreateCaseResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateCaseRequest * CreateCaseResponse::request() const
 {
     Q_D(const CreateCaseResponse);
@@ -130,9 +128,8 @@ const CreateCaseRequest * CreateCaseResponse::request() const
 }
 
 /*!
- * @brief  Parse a Support CreateCase response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Support CreateCase \a response.
  */
 void CreateCaseResponse::parseSuccess(QIODevice &response)
 {
@@ -142,19 +139,15 @@ void CreateCaseResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Support::CreateCaseResponsePrivate
+ * \brief The CreateCaseResponsePrivate class provides private implementation for CreateCaseResponse.
  * \internal
  *
- * \class CreateCaseResponsePrivate
- *
- * \brief Private implementation for CreateCaseResponse.
+ * \inmodule QtAwsSupport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateCaseResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateCaseResponse instance.
+ * Constructs a CreateCaseResponsePrivate object with public implementation \a q.
  */
 CreateCaseResponsePrivate::CreateCaseResponsePrivate(
     CreateCaseResponse * const q) : SupportResponsePrivate(q)
@@ -163,9 +156,7 @@ CreateCaseResponsePrivate::CreateCaseResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Support CreateCaseResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Support CreateCase response element from \a xml.
  */
 void CreateCaseResponsePrivate::parseCreateCaseResponse(QXmlStreamReader &xml)
 {

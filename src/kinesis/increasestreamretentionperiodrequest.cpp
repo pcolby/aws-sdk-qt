@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * IncreaseStreamRetentionPeriodRequest::respons
  */
 
 /*!
- *
- * Constructs a IncreaseStreamRetentionPeriodRequestPrivate object for Kinesis \a action with,
- * public implementation \a q.
+ * Constructs a IncreaseStreamRetentionPeriodRequestPrivate object for Kinesis \a action,
+ * with public implementation \a q.
  */
 IncreaseStreamRetentionPeriodRequestPrivate::IncreaseStreamRetentionPeriodRequestPrivate(
     const KinesisRequest::Action action, IncreaseStreamRetentionPeriodRequest * const q)

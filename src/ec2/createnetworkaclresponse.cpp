@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::CreateNetworkAclResponse
- *
  * \brief The CreateNetworkAclResponse class provides an interace for EC2 CreateNetworkAcl responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new CreateNetworkAclResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateNetworkAclResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateNetworkAclResponse::CreateNetworkAclResponse(
         const CreateNetworkAclRequest &request,
@@ -59,6 +54,9 @@ CreateNetworkAclResponse::CreateNetworkAclResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateNetworkAclRequest * CreateNetworkAclResponse::request() const
 {
     Q_D(const CreateNetworkAclResponse);
@@ -66,9 +64,8 @@ const CreateNetworkAclRequest * CreateNetworkAclResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 CreateNetworkAcl response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 CreateNetworkAcl \a response.
  */
 void CreateNetworkAclResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void CreateNetworkAclResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::CreateNetworkAclResponsePrivate
+ * \brief The CreateNetworkAclResponsePrivate class provides private implementation for CreateNetworkAclResponse.
  * \internal
  *
- * \class CreateNetworkAclResponsePrivate
- *
- * \brief Private implementation for CreateNetworkAclResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateNetworkAclResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateNetworkAclResponse instance.
+ * Constructs a CreateNetworkAclResponsePrivate object with public implementation \a q.
  */
 CreateNetworkAclResponsePrivate::CreateNetworkAclResponsePrivate(
     CreateNetworkAclResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ CreateNetworkAclResponsePrivate::CreateNetworkAclResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 CreateNetworkAclResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 CreateNetworkAcl response element from \a xml.
  */
 void CreateNetworkAclResponsePrivate::parseCreateNetworkAclResponse(QXmlStreamReader &xml)
 {

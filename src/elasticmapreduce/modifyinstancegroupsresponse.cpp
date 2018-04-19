@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::ModifyInstanceGroupsResponse
- *
  * \brief The ModifyInstanceGroupsResponse class provides an interace for EMR ModifyInstanceGroups responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new ModifyInstanceGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyInstanceGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyInstanceGroupsResponse::ModifyInstanceGroupsResponse(
         const ModifyInstanceGroupsRequest &request,
@@ -58,6 +53,9 @@ ModifyInstanceGroupsResponse::ModifyInstanceGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyInstanceGroupsRequest * ModifyInstanceGroupsResponse::request() const
 {
     Q_D(const ModifyInstanceGroupsResponse);
@@ -65,9 +63,8 @@ const ModifyInstanceGroupsRequest * ModifyInstanceGroupsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EMR ModifyInstanceGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR ModifyInstanceGroups \a response.
  */
 void ModifyInstanceGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ModifyInstanceGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::ModifyInstanceGroupsResponsePrivate
+ * \brief The ModifyInstanceGroupsResponsePrivate class provides private implementation for ModifyInstanceGroupsResponse.
  * \internal
  *
- * \class ModifyInstanceGroupsResponsePrivate
- *
- * \brief Private implementation for ModifyInstanceGroupsResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyInstanceGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyInstanceGroupsResponse instance.
+ * Constructs a ModifyInstanceGroupsResponsePrivate object with public implementation \a q.
  */
 ModifyInstanceGroupsResponsePrivate::ModifyInstanceGroupsResponsePrivate(
     ModifyInstanceGroupsResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ ModifyInstanceGroupsResponsePrivate::ModifyInstanceGroupsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR ModifyInstanceGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR ModifyInstanceGroups response element from \a xml.
  */
 void ModifyInstanceGroupsResponsePrivate::parseModifyInstanceGroupsResponse(QXmlStreamReader &xml)
 {

@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateScriptRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a CreateScriptRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a CreateScriptRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 CreateScriptRequestPrivate::CreateScriptRequestPrivate(
     const GlueRequest::Action action, CreateScriptRequest * const q)

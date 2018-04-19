@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteVpnGatewayResponse : public EC2Response {
 public:
     DeleteVpnGatewayResponse(const DeleteVpnGatewayRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteVpnGatewayRequest * request() const;
+    virtual const DeleteVpnGatewayRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteVpnGatewayResponse)

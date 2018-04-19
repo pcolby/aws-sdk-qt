@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListOfferingPromotionsResponse : public DeviceFarmResponse {
 public:
     ListOfferingPromotionsResponse(const ListOfferingPromotionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListOfferingPromotionsRequest * request() const;
+    virtual const ListOfferingPromotionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListOfferingPromotionsResponse)

@@ -29,10 +29,9 @@ namespace CloudWatch {
 
 /*!
  * \class QtAws::CloudWatch::PutMetricDataResponse
- *
  * \brief The PutMetricDataResponse class provides an interace for CloudWatch PutMetricData responses.
  *
- * \ingroup CloudWatch
+ * \inmodule QtAwsCloudWatch
  *
  *  Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
  *  You can use CloudWatch to collect and track metrics, which are the variables you want to measure for your resources and
@@ -53,11 +52,7 @@ namespace CloudWatch {
  */
 
 /*!
- * @brief  Constructs a new PutMetricDataResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutMetricDataResponse object for \a reply to \a request, with parent \a parent.
  */
 PutMetricDataResponse::PutMetricDataResponse(
         const PutMetricDataRequest &request,
@@ -69,6 +64,9 @@ PutMetricDataResponse::PutMetricDataResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutMetricDataRequest * PutMetricDataResponse::request() const
 {
     Q_D(const PutMetricDataResponse);
@@ -76,9 +74,8 @@ const PutMetricDataRequest * PutMetricDataResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatch PutMetricData response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatch PutMetricData \a response.
  */
 void PutMetricDataResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void PutMetricDataResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatch::PutMetricDataResponsePrivate
+ * \brief The PutMetricDataResponsePrivate class provides private implementation for PutMetricDataResponse.
  * \internal
  *
- * \class PutMetricDataResponsePrivate
- *
- * \brief Private implementation for PutMetricDataResponse.
+ * \inmodule QtAwsCloudWatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutMetricDataResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutMetricDataResponse instance.
+ * Constructs a PutMetricDataResponsePrivate object with public implementation \a q.
  */
 PutMetricDataResponsePrivate::PutMetricDataResponsePrivate(
     PutMetricDataResponse * const q) : CloudWatchResponsePrivate(q)
@@ -109,9 +102,7 @@ PutMetricDataResponsePrivate::PutMetricDataResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatch PutMetricDataResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatch PutMetricData response element from \a xml.
  */
 void PutMetricDataResponsePrivate::parsePutMetricDataResponse(QXmlStreamReader &xml)
 {

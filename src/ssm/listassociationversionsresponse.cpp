@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListAssociationVersionsResponse
- *
  * \brief The ListAssociationVersionsResponse class provides an interace for SSM ListAssociationVersions responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListAssociationVersionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListAssociationVersionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListAssociationVersionsResponse::ListAssociationVersionsResponse(
         const ListAssociationVersionsRequest &request,
@@ -79,6 +74,9 @@ ListAssociationVersionsResponse::ListAssociationVersionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListAssociationVersionsRequest * ListAssociationVersionsResponse::request() const
 {
     Q_D(const ListAssociationVersionsResponse);
@@ -86,9 +84,8 @@ const ListAssociationVersionsRequest * ListAssociationVersionsResponse::request(
 }
 
 /*!
- * @brief  Parse a SSM ListAssociationVersions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM ListAssociationVersions \a response.
  */
 void ListAssociationVersionsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void ListAssociationVersionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::ListAssociationVersionsResponsePrivate
+ * \brief The ListAssociationVersionsResponsePrivate class provides private implementation for ListAssociationVersionsResponse.
  * \internal
  *
- * \class ListAssociationVersionsResponsePrivate
- *
- * \brief Private implementation for ListAssociationVersionsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListAssociationVersionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListAssociationVersionsResponse instance.
+ * Constructs a ListAssociationVersionsResponsePrivate object with public implementation \a q.
  */
 ListAssociationVersionsResponsePrivate::ListAssociationVersionsResponsePrivate(
     ListAssociationVersionsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ ListAssociationVersionsResponsePrivate::ListAssociationVersionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM ListAssociationVersionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM ListAssociationVersions response element from \a xml.
  */
 void ListAssociationVersionsResponsePrivate::parseListAssociationVersionsResponse(QXmlStreamReader &xml)
 {

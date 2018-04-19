@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetMediaForFragmentListRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a GetMediaForFragmentListRequestPrivate object for KinesisVideoArchivedMedia \a action with,
- * public implementation \a q.
+ * Constructs a GetMediaForFragmentListRequestPrivate object for KinesisVideoArchivedMedia \a action,
+ * with public implementation \a q.
  */
 GetMediaForFragmentListRequestPrivate::GetMediaForFragmentListRequestPrivate(
     const KinesisVideoArchivedMediaRequest::Action action, GetMediaForFragmentListRequest * const q)

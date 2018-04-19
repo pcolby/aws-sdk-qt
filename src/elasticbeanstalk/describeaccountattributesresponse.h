@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAccountAttributesResponse : public ElasticBeanstalkRe
 public:
     DescribeAccountAttributesResponse(const DescribeAccountAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAccountAttributesRequest * request() const;
+    virtual const DescribeAccountAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAccountAttributesResponse)

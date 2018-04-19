@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * AdminRemoveUserFromGroupRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a AdminRemoveUserFromGroupRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a AdminRemoveUserFromGroupRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 AdminRemoveUserFromGroupRequestPrivate::AdminRemoveUserFromGroupRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, AdminRemoveUserFromGroupRequest * const q)

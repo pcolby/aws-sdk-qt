@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * AssociateDiscoveredResourceRequest::response(
  */
 
 /*!
- *
- * Constructs a AssociateDiscoveredResourceRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a AssociateDiscoveredResourceRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 AssociateDiscoveredResourceRequestPrivate::AssociateDiscoveredResourceRequestPrivate(
     const MigrationHubRequest::Action action, AssociateDiscoveredResourceRequest * const q)

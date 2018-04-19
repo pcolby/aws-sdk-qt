@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::StopExecutionResponse
- *
  * \brief The StopExecutionResponse class provides an interace for SFN StopExecution responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new StopExecutionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StopExecutionResponse object for \a reply to \a request, with parent \a parent.
  */
 StopExecutionResponse::StopExecutionResponse(
         const StopExecutionRequest &request,
@@ -74,6 +69,9 @@ StopExecutionResponse::StopExecutionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StopExecutionRequest * StopExecutionResponse::request() const
 {
     Q_D(const StopExecutionResponse);
@@ -81,9 +79,8 @@ const StopExecutionRequest * StopExecutionResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN StopExecution response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN StopExecution \a response.
  */
 void StopExecutionResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void StopExecutionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::StopExecutionResponsePrivate
+ * \brief The StopExecutionResponsePrivate class provides private implementation for StopExecutionResponse.
  * \internal
  *
- * \class StopExecutionResponsePrivate
- *
- * \brief Private implementation for StopExecutionResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StopExecutionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StopExecutionResponse instance.
+ * Constructs a StopExecutionResponsePrivate object with public implementation \a q.
  */
 StopExecutionResponsePrivate::StopExecutionResponsePrivate(
     StopExecutionResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ StopExecutionResponsePrivate::StopExecutionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN StopExecutionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN StopExecution response element from \a xml.
  */
 void StopExecutionResponsePrivate::parseStopExecutionResponse(QXmlStreamReader &xml)
 {

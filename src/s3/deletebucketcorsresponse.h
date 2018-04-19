@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteBucketCorsResponse : public S3Response {
 public:
     DeleteBucketCorsResponse(const DeleteBucketCorsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteBucketCorsRequest * request() const;
+    virtual const DeleteBucketCorsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteBucketCorsResponse)

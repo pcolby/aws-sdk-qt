@@ -29,10 +29,9 @@ namespace ECS {
 
 /*!
  * \class QtAws::ECS::DeleteClusterResponse
- *
  * \brief The DeleteClusterResponse class provides an interace for ECS DeleteCluster responses.
  *
- * \ingroup ECS
+ * \inmodule QtAwsECS
  *
  *  Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it
  *  easy to run, stop, and manage Docker containers on a cluster. You can host your cluster on a serverless infrastructure
@@ -56,11 +55,7 @@ namespace ECS {
  */
 
 /*!
- * @brief  Constructs a new DeleteClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteClusterResponse::DeleteClusterResponse(
         const DeleteClusterRequest &request,
@@ -72,6 +67,9 @@ DeleteClusterResponse::DeleteClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteClusterRequest * DeleteClusterResponse::request() const
 {
     Q_D(const DeleteClusterResponse);
@@ -79,9 +77,8 @@ const DeleteClusterRequest * DeleteClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a ECS DeleteCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ECS DeleteCluster \a response.
  */
 void DeleteClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -91,19 +88,15 @@ void DeleteClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ECS::DeleteClusterResponsePrivate
+ * \brief The DeleteClusterResponsePrivate class provides private implementation for DeleteClusterResponse.
  * \internal
  *
- * \class DeleteClusterResponsePrivate
- *
- * \brief Private implementation for DeleteClusterResponse.
+ * \inmodule QtAwsECS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteClusterResponse instance.
+ * Constructs a DeleteClusterResponsePrivate object with public implementation \a q.
  */
 DeleteClusterResponsePrivate::DeleteClusterResponsePrivate(
     DeleteClusterResponse * const q) : ECSResponsePrivate(q)
@@ -112,9 +105,7 @@ DeleteClusterResponsePrivate::DeleteClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ECS DeleteClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ECS DeleteCluster response element from \a xml.
  */
 void DeleteClusterResponsePrivate::parseDeleteClusterResponse(QXmlStreamReader &xml)
 {

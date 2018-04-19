@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * OptInPhoneNumberRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a OptInPhoneNumberRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a OptInPhoneNumberRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 OptInPhoneNumberRequestPrivate::OptInPhoneNumberRequestPrivate(
     const SNSRequest::Action action, OptInPhoneNumberRequest * const q)

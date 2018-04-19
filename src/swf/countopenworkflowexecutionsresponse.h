@@ -34,10 +34,10 @@ class QTAWS_EXPORT CountOpenWorkflowExecutionsResponse : public SWFResponse {
 public:
     CountOpenWorkflowExecutionsResponse(const CountOpenWorkflowExecutionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CountOpenWorkflowExecutionsRequest * request() const;
+    virtual const CountOpenWorkflowExecutionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CountOpenWorkflowExecutionsResponse)

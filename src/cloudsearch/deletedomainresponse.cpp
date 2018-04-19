@@ -29,10 +29,9 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::DeleteDomainResponse
- *
  * \brief The DeleteDomainResponse class provides an interace for CloudSearch DeleteDomain responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  *
  *  <fullname>Amazon CloudSearch Configuration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace CloudSearch {
  */
 
 /*!
- * @brief  Constructs a new DeleteDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDomainResponse::DeleteDomainResponse(
         const DeleteDomainRequest &request,
@@ -66,6 +61,9 @@ DeleteDomainResponse::DeleteDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDomainRequest * DeleteDomainResponse::request() const
 {
     Q_D(const DeleteDomainResponse);
@@ -73,9 +71,8 @@ const DeleteDomainRequest * DeleteDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudSearch DeleteDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudSearch DeleteDomain \a response.
  */
 void DeleteDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudSearch::DeleteDomainResponsePrivate
+ * \brief The DeleteDomainResponsePrivate class provides private implementation for DeleteDomainResponse.
  * \internal
  *
- * \class DeleteDomainResponsePrivate
- *
- * \brief Private implementation for DeleteDomainResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDomainResponse instance.
+ * Constructs a DeleteDomainResponsePrivate object with public implementation \a q.
  */
 DeleteDomainResponsePrivate::DeleteDomainResponsePrivate(
     DeleteDomainResponse * const q) : CloudSearchResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteDomainResponsePrivate::DeleteDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudSearch DeleteDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudSearch DeleteDomain response element from \a xml.
  */
 void DeleteDomainResponsePrivate::parseDeleteDomainResponse(QXmlStreamReader &xml)
 {

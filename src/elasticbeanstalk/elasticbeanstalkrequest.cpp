@@ -83,7 +83,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * Constructs a[n] ElasticBeanstalkRequest object for ElasticBeanstalk \a action.
+ * Constructs a ElasticBeanstalkRequest object for ElasticBeanstalk \a action.
  */
 ElasticBeanstalkRequest::ElasticBeanstalkRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new ElasticBeanstalkRequestPrivate(action, this))
@@ -283,8 +283,8 @@ QNetworkRequest ElasticBeanstalkRequest::unsignedRequest(const QUrl &endpoint) c
  */
 
 /*!
- * Constructs a ElasticBeanstalkRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a ElasticBeanstalkRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 ElasticBeanstalkRequestPrivate::ElasticBeanstalkRequestPrivate(const ElasticBeanstalkRequest::Action action, ElasticBeanstalkRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

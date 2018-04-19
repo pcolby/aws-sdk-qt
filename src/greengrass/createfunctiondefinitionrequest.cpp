@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateFunctionDefinitionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateFunctionDefinitionRequestPrivate object for Greengrass \a action with,
- * public implementation \a q.
+ * Constructs a CreateFunctionDefinitionRequestPrivate object for Greengrass \a action,
+ * with public implementation \a q.
  */
 CreateFunctionDefinitionRequestPrivate::CreateFunctionDefinitionRequestPrivate(
     const GreengrassRequest::Action action, CreateFunctionDefinitionRequest * const q)

@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::StartImportResponse
- *
  * \brief The StartImportResponse class provides an interace for LexModelBuildingService StartImport responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new StartImportResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a StartImportResponse object for \a reply to \a request, with parent \a parent.
  */
 StartImportResponse::StartImportResponse(
         const StartImportRequest &request,
@@ -59,6 +54,9 @@ StartImportResponse::StartImportResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const StartImportRequest * StartImportResponse::request() const
 {
     Q_D(const StartImportResponse);
@@ -66,9 +64,8 @@ const StartImportRequest * StartImportResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService StartImport response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService StartImport \a response.
  */
 void StartImportResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void StartImportResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::StartImportResponsePrivate
+ * \brief The StartImportResponsePrivate class provides private implementation for StartImportResponse.
  * \internal
  *
- * \class StartImportResponsePrivate
- *
- * \brief Private implementation for StartImportResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new StartImportResponsePrivate object.
- *
- * @param  q  Pointer to this object's public StartImportResponse instance.
+ * Constructs a StartImportResponsePrivate object with public implementation \a q.
  */
 StartImportResponsePrivate::StartImportResponsePrivate(
     StartImportResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ StartImportResponsePrivate::StartImportResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService StartImportResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService StartImport response element from \a xml.
  */
 void StartImportResponsePrivate::parseStartImportResponse(QXmlStreamReader &xml)
 {

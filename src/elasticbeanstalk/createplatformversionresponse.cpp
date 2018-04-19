@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::CreatePlatformVersionResponse
- *
  * \brief The CreatePlatformVersionResponse class provides an interace for ElasticBeanstalk CreatePlatformVersion responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new CreatePlatformVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreatePlatformVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 CreatePlatformVersionResponse::CreatePlatformVersionResponse(
         const CreatePlatformVersionRequest &request,
@@ -77,6 +72,9 @@ CreatePlatformVersionResponse::CreatePlatformVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreatePlatformVersionRequest * CreatePlatformVersionResponse::request() const
 {
     Q_D(const CreatePlatformVersionResponse);
@@ -84,9 +82,8 @@ const CreatePlatformVersionRequest * CreatePlatformVersionResponse::request() co
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk CreatePlatformVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk CreatePlatformVersion \a response.
  */
 void CreatePlatformVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void CreatePlatformVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::CreatePlatformVersionResponsePrivate
+ * \brief The CreatePlatformVersionResponsePrivate class provides private implementation for CreatePlatformVersionResponse.
  * \internal
  *
- * \class CreatePlatformVersionResponsePrivate
- *
- * \brief Private implementation for CreatePlatformVersionResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreatePlatformVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreatePlatformVersionResponse instance.
+ * Constructs a CreatePlatformVersionResponsePrivate object with public implementation \a q.
  */
 CreatePlatformVersionResponsePrivate::CreatePlatformVersionResponsePrivate(
     CreatePlatformVersionResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ CreatePlatformVersionResponsePrivate::CreatePlatformVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk CreatePlatformVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk CreatePlatformVersion response element from \a xml.
  */
 void CreatePlatformVersionResponsePrivate::parseCreatePlatformVersionResponse(QXmlStreamReader &xml)
 {

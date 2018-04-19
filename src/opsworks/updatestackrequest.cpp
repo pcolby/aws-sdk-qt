@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * UpdateStackRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateStackRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a UpdateStackRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 UpdateStackRequestPrivate::UpdateStackRequestPrivate(
     const OpsWorksRequest::Action action, UpdateStackRequest * const q)

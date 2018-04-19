@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * RemoveSourceIdentifierFromSubscriptionRequest
  */
 
 /*!
- *
- * Constructs a RemoveSourceIdentifierFromSubscriptionRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a RemoveSourceIdentifierFromSubscriptionRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 RemoveSourceIdentifierFromSubscriptionRequestPrivate::RemoveSourceIdentifierFromSubscriptionRequestPrivate(
     const RDSRequest::Action action, RemoveSourceIdentifierFromSubscriptionRequest * const q)

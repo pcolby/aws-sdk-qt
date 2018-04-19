@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeTargetHealthResponse : public ElasticLoadBalancingv2R
 public:
     DescribeTargetHealthResponse(const DescribeTargetHealthRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeTargetHealthRequest * request() const;
+    virtual const DescribeTargetHealthRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeTargetHealthResponse)

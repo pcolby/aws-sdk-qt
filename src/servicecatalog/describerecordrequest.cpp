@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRecordRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeRecordRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRecordRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DescribeRecordRequestPrivate::DescribeRecordRequestPrivate(
     const ServiceCatalogRequest::Action action, DescribeRecordRequest * const q)

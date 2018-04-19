@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeInstanceStatusResponse
- *
  * \brief The DescribeInstanceStatusResponse class provides an interace for EC2 DescribeInstanceStatus responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstanceStatusResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeInstanceStatusResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeInstanceStatusResponse::DescribeInstanceStatusResponse(
         const DescribeInstanceStatusRequest &request,
@@ -59,6 +54,9 @@ DescribeInstanceStatusResponse::DescribeInstanceStatusResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeInstanceStatusRequest * DescribeInstanceStatusResponse::request() const
 {
     Q_D(const DescribeInstanceStatusResponse);
@@ -66,9 +64,8 @@ const DescribeInstanceStatusRequest * DescribeInstanceStatusResponse::request() 
 }
 
 /*!
- * @brief  Parse a EC2 DescribeInstanceStatus response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeInstanceStatus \a response.
  */
 void DescribeInstanceStatusResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeInstanceStatusResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeInstanceStatusResponsePrivate
+ * \brief The DescribeInstanceStatusResponsePrivate class provides private implementation for DescribeInstanceStatusResponse.
  * \internal
  *
- * \class DescribeInstanceStatusResponsePrivate
- *
- * \brief Private implementation for DescribeInstanceStatusResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstanceStatusResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeInstanceStatusResponse instance.
+ * Constructs a DescribeInstanceStatusResponsePrivate object with public implementation \a q.
  */
 DescribeInstanceStatusResponsePrivate::DescribeInstanceStatusResponsePrivate(
     DescribeInstanceStatusResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeInstanceStatusResponsePrivate::DescribeInstanceStatusResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeInstanceStatusResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeInstanceStatus response element from \a xml.
  */
 void DescribeInstanceStatusResponsePrivate::parseDescribeInstanceStatusResponse(QXmlStreamReader &xml)
 {

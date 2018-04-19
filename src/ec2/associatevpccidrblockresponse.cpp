@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::AssociateVpcCidrBlockResponse
- *
  * \brief The AssociateVpcCidrBlockResponse class provides an interace for EC2 AssociateVpcCidrBlock responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new AssociateVpcCidrBlockResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateVpcCidrBlockResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateVpcCidrBlockResponse::AssociateVpcCidrBlockResponse(
         const AssociateVpcCidrBlockRequest &request,
@@ -59,6 +54,9 @@ AssociateVpcCidrBlockResponse::AssociateVpcCidrBlockResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateVpcCidrBlockRequest * AssociateVpcCidrBlockResponse::request() const
 {
     Q_D(const AssociateVpcCidrBlockResponse);
@@ -66,9 +64,8 @@ const AssociateVpcCidrBlockRequest * AssociateVpcCidrBlockResponse::request() co
 }
 
 /*!
- * @brief  Parse a EC2 AssociateVpcCidrBlock response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 AssociateVpcCidrBlock \a response.
  */
 void AssociateVpcCidrBlockResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void AssociateVpcCidrBlockResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::AssociateVpcCidrBlockResponsePrivate
+ * \brief The AssociateVpcCidrBlockResponsePrivate class provides private implementation for AssociateVpcCidrBlockResponse.
  * \internal
  *
- * \class AssociateVpcCidrBlockResponsePrivate
- *
- * \brief Private implementation for AssociateVpcCidrBlockResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateVpcCidrBlockResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateVpcCidrBlockResponse instance.
+ * Constructs a AssociateVpcCidrBlockResponsePrivate object with public implementation \a q.
  */
 AssociateVpcCidrBlockResponsePrivate::AssociateVpcCidrBlockResponsePrivate(
     AssociateVpcCidrBlockResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ AssociateVpcCidrBlockResponsePrivate::AssociateVpcCidrBlockResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 AssociateVpcCidrBlockResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 AssociateVpcCidrBlock response element from \a xml.
  */
 void AssociateVpcCidrBlockResponsePrivate::parseAssociateVpcCidrBlockResponse(QXmlStreamReader &xml)
 {

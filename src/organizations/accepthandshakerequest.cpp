@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * AcceptHandshakeRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a AcceptHandshakeRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a AcceptHandshakeRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 AcceptHandshakeRequestPrivate::AcceptHandshakeRequestPrivate(
     const OrganizationsRequest::Action action, AcceptHandshakeRequest * const q)

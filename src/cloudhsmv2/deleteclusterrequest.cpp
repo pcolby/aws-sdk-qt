@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DeleteClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a DeleteClusterRequestPrivate object for CloudHSMV2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteClusterRequestPrivate object for CloudHSMV2 \a action,
+ * with public implementation \a q.
  */
 DeleteClusterRequestPrivate::DeleteClusterRequestPrivate(
     const CloudHSMV2Request::Action action, DeleteClusterRequest * const q)

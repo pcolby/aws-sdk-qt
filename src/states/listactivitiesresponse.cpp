@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::ListActivitiesResponse
- *
  * \brief The ListActivitiesResponse class provides an interace for SFN ListActivities responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new ListActivitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListActivitiesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListActivitiesResponse::ListActivitiesResponse(
         const ListActivitiesRequest &request,
@@ -74,6 +69,9 @@ ListActivitiesResponse::ListActivitiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListActivitiesRequest * ListActivitiesResponse::request() const
 {
     Q_D(const ListActivitiesResponse);
@@ -81,9 +79,8 @@ const ListActivitiesRequest * ListActivitiesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN ListActivities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN ListActivities \a response.
  */
 void ListActivitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void ListActivitiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::ListActivitiesResponsePrivate
+ * \brief The ListActivitiesResponsePrivate class provides private implementation for ListActivitiesResponse.
  * \internal
  *
- * \class ListActivitiesResponsePrivate
- *
- * \brief Private implementation for ListActivitiesResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListActivitiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListActivitiesResponse instance.
+ * Constructs a ListActivitiesResponsePrivate object with public implementation \a q.
  */
 ListActivitiesResponsePrivate::ListActivitiesResponsePrivate(
     ListActivitiesResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ ListActivitiesResponsePrivate::ListActivitiesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN ListActivitiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN ListActivities response element from \a xml.
  */
 void ListActivitiesResponsePrivate::parseListActivitiesResponse(QXmlStreamReader &xml)
 {

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * SendUsersMessagesRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a SendUsersMessagesRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a SendUsersMessagesRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 SendUsersMessagesRequestPrivate::SendUsersMessagesRequestPrivate(
     const PinpointRequest::Action action, SendUsersMessagesRequest * const q)

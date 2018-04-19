@@ -34,8 +34,8 @@ public:
 
     KinesisResponsePrivate(KinesisResponse * const q);
 
-    void parseErrorResponse(QXmlStreamReader &xml);
-    void parseResponseMetadata(QXmlStreamReader &xml);
+    //void parseErrorResponse(QXmlStreamReader &xml);
+    //void parseResponseMetadata(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC(KinesisResponse)

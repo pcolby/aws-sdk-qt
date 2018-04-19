@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DetachInternetGatewayRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DetachInternetGatewayRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DetachInternetGatewayRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DetachInternetGatewayRequestPrivate::DetachInternetGatewayRequestPrivate(
     const EC2Request::Action action, DetachInternetGatewayRequest * const q)

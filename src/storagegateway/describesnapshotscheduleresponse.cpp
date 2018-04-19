@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DescribeSnapshotScheduleResponse
- *
  * \brief The DescribeSnapshotScheduleResponse class provides an interace for StorageGateway DescribeSnapshotSchedule responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DescribeSnapshotScheduleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeSnapshotScheduleResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeSnapshotScheduleResponse::DescribeSnapshotScheduleResponse(
         const DescribeSnapshotScheduleRequest &request,
@@ -124,6 +119,9 @@ DescribeSnapshotScheduleResponse::DescribeSnapshotScheduleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeSnapshotScheduleRequest * DescribeSnapshotScheduleResponse::request() const
 {
     Q_D(const DescribeSnapshotScheduleResponse);
@@ -131,9 +129,8 @@ const DescribeSnapshotScheduleRequest * DescribeSnapshotScheduleResponse::reques
 }
 
 /*!
- * @brief  Parse a StorageGateway DescribeSnapshotSchedule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DescribeSnapshotSchedule \a response.
  */
 void DescribeSnapshotScheduleResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DescribeSnapshotScheduleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DescribeSnapshotScheduleResponsePrivate
+ * \brief The DescribeSnapshotScheduleResponsePrivate class provides private implementation for DescribeSnapshotScheduleResponse.
  * \internal
  *
- * \class DescribeSnapshotScheduleResponsePrivate
- *
- * \brief Private implementation for DescribeSnapshotScheduleResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeSnapshotScheduleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeSnapshotScheduleResponse instance.
+ * Constructs a DescribeSnapshotScheduleResponsePrivate object with public implementation \a q.
  */
 DescribeSnapshotScheduleResponsePrivate::DescribeSnapshotScheduleResponsePrivate(
     DescribeSnapshotScheduleResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DescribeSnapshotScheduleResponsePrivate::DescribeSnapshotScheduleResponsePrivate
 }
 
 /*!
- * @brief  Parse an StorageGateway DescribeSnapshotScheduleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DescribeSnapshotSchedule response element from \a xml.
  */
 void DescribeSnapshotScheduleResponsePrivate::parseDescribeSnapshotScheduleResponse(QXmlStreamReader &xml)
 {

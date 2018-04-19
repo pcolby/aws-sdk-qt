@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::GetJobResponse
- *
  * \brief The GetJobResponse class provides an interace for DeviceFarm GetJob responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new GetJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetJobResponse object for \a reply to \a request, with parent \a parent.
  */
 GetJobResponse::GetJobResponse(
         const GetJobRequest &request,
@@ -57,6 +52,9 @@ GetJobResponse::GetJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetJobRequest * GetJobResponse::request() const
 {
     Q_D(const GetJobResponse);
@@ -64,9 +62,8 @@ const GetJobRequest * GetJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm GetJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm GetJob \a response.
  */
 void GetJobResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void GetJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::GetJobResponsePrivate
+ * \brief The GetJobResponsePrivate class provides private implementation for GetJobResponse.
  * \internal
  *
- * \class GetJobResponsePrivate
- *
- * \brief Private implementation for GetJobResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetJobResponse instance.
+ * Constructs a GetJobResponsePrivate object with public implementation \a q.
  */
 GetJobResponsePrivate::GetJobResponsePrivate(
     GetJobResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ GetJobResponsePrivate::GetJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm GetJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm GetJob response element from \a xml.
  */
 void GetJobResponsePrivate::parseGetJobResponse(QXmlStreamReader &xml)
 {

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DetachNetworkInterfaceResponse : public EC2Response {
 public:
     DetachNetworkInterfaceResponse(const DetachNetworkInterfaceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DetachNetworkInterfaceRequest * request() const;
+    virtual const DetachNetworkInterfaceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DetachNetworkInterfaceResponse)

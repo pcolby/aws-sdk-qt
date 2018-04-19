@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RebootInstancesResponse
- *
  * \brief The RebootInstancesResponse class provides an interace for EC2 RebootInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RebootInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RebootInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 RebootInstancesResponse::RebootInstancesResponse(
         const RebootInstancesRequest &request,
@@ -59,6 +54,9 @@ RebootInstancesResponse::RebootInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RebootInstancesRequest * RebootInstancesResponse::request() const
 {
     Q_D(const RebootInstancesResponse);
@@ -66,9 +64,8 @@ const RebootInstancesRequest * RebootInstancesResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 RebootInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 RebootInstances \a response.
  */
 void RebootInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void RebootInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::RebootInstancesResponsePrivate
+ * \brief The RebootInstancesResponsePrivate class provides private implementation for RebootInstancesResponse.
  * \internal
  *
- * \class RebootInstancesResponsePrivate
- *
- * \brief Private implementation for RebootInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RebootInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RebootInstancesResponse instance.
+ * Constructs a RebootInstancesResponsePrivate object with public implementation \a q.
  */
 RebootInstancesResponsePrivate::RebootInstancesResponsePrivate(
     RebootInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ RebootInstancesResponsePrivate::RebootInstancesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 RebootInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 RebootInstances response element from \a xml.
  */
 void RebootInstancesResponsePrivate::parseRebootInstancesResponse(QXmlStreamReader &xml)
 {

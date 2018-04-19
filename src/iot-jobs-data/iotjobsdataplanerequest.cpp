@@ -43,7 +43,7 @@ namespace IoTJobsDataPlane {
  */
 
 /*!
- * Constructs a[n] IoTJobsDataPlaneRequest object for IoTJobsDataPlane \a action.
+ * Constructs a IoTJobsDataPlaneRequest object for IoTJobsDataPlane \a action.
  */
 IoTJobsDataPlaneRequest::IoTJobsDataPlaneRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new IoTJobsDataPlaneRequestPrivate(action, this))
@@ -243,8 +243,8 @@ QNetworkRequest IoTJobsDataPlaneRequest::unsignedRequest(const QUrl &endpoint) c
  */
 
 /*!
- * Constructs a IoTJobsDataPlaneRequestPrivate object for IoTJobsDataPlane \a action with,
- * public implementation \a q.
+ * Constructs a IoTJobsDataPlaneRequestPrivate object for IoTJobsDataPlane \a action,
+ * with public implementation \a q.
  */
 IoTJobsDataPlaneRequestPrivate::IoTJobsDataPlaneRequestPrivate(const IoTJobsDataPlaneRequest::Action action, IoTJobsDataPlaneRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

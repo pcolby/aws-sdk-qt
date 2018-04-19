@@ -28,16 +28,13 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::MTurkResponse
- *
  * \brief The MTurkResponse class provides an interface for MTurk responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @brief  Constructs a new MTurkResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MTurkResponse object with parent \a parent.
  */
 MTurkResponse::MTurkResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MTurkResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MTurkResponse::MTurkResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MTurkResponse object.
- *
+ * \internal
+ * Constructs a MTurkResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MTurkResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MTurkResponse::MTurkResponse(MTurkResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MTurkResponse::MTurkResponse(MTurkResponsePrivate * const d, QObject * const par
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MTurkResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MTurkResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MTurk::MTurkResponsePrivate
+ * \brief The MTurkResponsePrivate class provides private implementation for MTurkResponse.
+ * \internal
  *
- * @class  MTurkResponsePrivate
- *
- * @brief  Private implementation for MTurkResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MTurkResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MTurkResponse instance.
+ * Constructs a MTurkResponsePrivate object with public implementation \a q.
  */
 MTurkResponsePrivate::MTurkResponsePrivate(
     MTurkResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

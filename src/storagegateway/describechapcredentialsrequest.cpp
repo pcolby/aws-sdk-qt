@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DescribeChapCredentialsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeChapCredentialsRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DescribeChapCredentialsRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DescribeChapCredentialsRequestPrivate::DescribeChapCredentialsRequestPrivate(
     const StorageGatewayRequest::Action action, DescribeChapCredentialsRequest * const q)

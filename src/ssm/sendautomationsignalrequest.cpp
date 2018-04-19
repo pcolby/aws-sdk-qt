@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * SendAutomationSignalRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a SendAutomationSignalRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a SendAutomationSignalRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 SendAutomationSignalRequestPrivate::SendAutomationSignalRequestPrivate(
     const SSMRequest::Action action, SendAutomationSignalRequest * const q)

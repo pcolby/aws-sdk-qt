@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::ModifyReplicationTaskResponse
- *
  * \brief The ModifyReplicationTaskResponse class provides an interace for DatabaseMigrationService ModifyReplicationTask responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new ModifyReplicationTaskResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyReplicationTaskResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyReplicationTaskResponse::ModifyReplicationTaskResponse(
         const ModifyReplicationTaskRequest &request,
@@ -66,6 +61,9 @@ ModifyReplicationTaskResponse::ModifyReplicationTaskResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyReplicationTaskRequest * ModifyReplicationTaskResponse::request() const
 {
     Q_D(const ModifyReplicationTaskResponse);
@@ -73,9 +71,8 @@ const ModifyReplicationTaskRequest * ModifyReplicationTaskResponse::request() co
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService ModifyReplicationTask response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService ModifyReplicationTask \a response.
  */
 void ModifyReplicationTaskResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ModifyReplicationTaskResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::ModifyReplicationTaskResponsePrivate
+ * \brief The ModifyReplicationTaskResponsePrivate class provides private implementation for ModifyReplicationTaskResponse.
  * \internal
  *
- * \class ModifyReplicationTaskResponsePrivate
- *
- * \brief Private implementation for ModifyReplicationTaskResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyReplicationTaskResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyReplicationTaskResponse instance.
+ * Constructs a ModifyReplicationTaskResponsePrivate object with public implementation \a q.
  */
 ModifyReplicationTaskResponsePrivate::ModifyReplicationTaskResponsePrivate(
     ModifyReplicationTaskResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ ModifyReplicationTaskResponsePrivate::ModifyReplicationTaskResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService ModifyReplicationTaskResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService ModifyReplicationTask response element from \a xml.
  */
 void ModifyReplicationTaskResponsePrivate::parseModifyReplicationTaskResponse(QXmlStreamReader &xml)
 {

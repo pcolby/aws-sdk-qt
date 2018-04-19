@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * CreateApplicationVersionRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a CreateApplicationVersionRequestPrivate object for ElasticBeanstalk \a action with,
- * public implementation \a q.
+ * Constructs a CreateApplicationVersionRequestPrivate object for ElasticBeanstalk \a action,
+ * with public implementation \a q.
  */
 CreateApplicationVersionRequestPrivate::CreateApplicationVersionRequestPrivate(
     const ElasticBeanstalkRequest::Action action, CreateApplicationVersionRequest * const q)

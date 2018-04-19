@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteJobResponse
- *
  * \brief The DeleteJobResponse class provides an interace for Glue DeleteJob responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteJobResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteJobResponse::DeleteJobResponse(
         const DeleteJobRequest &request,
@@ -58,6 +53,9 @@ DeleteJobResponse::DeleteJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteJobRequest * DeleteJobResponse::request() const
 {
     Q_D(const DeleteJobResponse);
@@ -65,9 +63,8 @@ const DeleteJobRequest * DeleteJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue DeleteJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue DeleteJob \a response.
  */
 void DeleteJobResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::DeleteJobResponsePrivate
+ * \brief The DeleteJobResponsePrivate class provides private implementation for DeleteJobResponse.
  * \internal
  *
- * \class DeleteJobResponsePrivate
- *
- * \brief Private implementation for DeleteJobResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteJobResponse instance.
+ * Constructs a DeleteJobResponsePrivate object with public implementation \a q.
  */
 DeleteJobResponsePrivate::DeleteJobResponsePrivate(
     DeleteJobResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteJobResponsePrivate::DeleteJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue DeleteJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue DeleteJob response element from \a xml.
  */
 void DeleteJobResponsePrivate::parseDeleteJobResponse(QXmlStreamReader &xml)
 {

@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * CreateIPSetRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a CreateIPSetRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a CreateIPSetRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 CreateIPSetRequestPrivate::CreateIPSetRequestPrivate(
     const WAFRegionalRequest::Action action, CreateIPSetRequest * const q)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * RecordLifecycleActionHeartbeatRequest::respon
  */
 
 /*!
- *
- * Constructs a RecordLifecycleActionHeartbeatRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a RecordLifecycleActionHeartbeatRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 RecordLifecycleActionHeartbeatRequestPrivate::RecordLifecycleActionHeartbeatRequestPrivate(
     const AutoScalingRequest::Action action, RecordLifecycleActionHeartbeatRequest * const q)

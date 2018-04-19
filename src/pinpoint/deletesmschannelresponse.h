@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteSmsChannelResponse : public PinpointResponse {
 public:
     DeleteSmsChannelResponse(const DeleteSmsChannelRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteSmsChannelRequest * request() const;
+    virtual const DeleteSmsChannelRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteSmsChannelResponse)

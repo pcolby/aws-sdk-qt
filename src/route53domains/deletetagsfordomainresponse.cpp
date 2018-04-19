@@ -29,10 +29,9 @@ namespace Route53Domains {
 
 /*!
  * \class QtAws::Route53Domains::DeleteTagsForDomainResponse
- *
  * \brief The DeleteTagsForDomainResponse class provides an interace for Route53Domains DeleteTagsForDomain responses.
  *
- * \ingroup Route53Domains
+ * \inmodule QtAwsRoute53Domains
  *
  *  Amazon Route 53 API actions let you register domain names and perform related
  *
@@ -40,11 +39,7 @@ namespace Route53Domains {
  */
 
 /*!
- * @brief  Constructs a new DeleteTagsForDomainResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTagsForDomainResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTagsForDomainResponse::DeleteTagsForDomainResponse(
         const DeleteTagsForDomainRequest &request,
@@ -56,6 +51,9 @@ DeleteTagsForDomainResponse::DeleteTagsForDomainResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTagsForDomainRequest * DeleteTagsForDomainResponse::request() const
 {
     Q_D(const DeleteTagsForDomainResponse);
@@ -63,9 +61,8 @@ const DeleteTagsForDomainRequest * DeleteTagsForDomainResponse::request() const
 }
 
 /*!
- * @brief  Parse a Route53Domains DeleteTagsForDomain response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53Domains DeleteTagsForDomain \a response.
  */
 void DeleteTagsForDomainResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DeleteTagsForDomainResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53Domains::DeleteTagsForDomainResponsePrivate
+ * \brief The DeleteTagsForDomainResponsePrivate class provides private implementation for DeleteTagsForDomainResponse.
  * \internal
  *
- * \class DeleteTagsForDomainResponsePrivate
- *
- * \brief Private implementation for DeleteTagsForDomainResponse.
+ * \inmodule QtAwsRoute53Domains
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTagsForDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTagsForDomainResponse instance.
+ * Constructs a DeleteTagsForDomainResponsePrivate object with public implementation \a q.
  */
 DeleteTagsForDomainResponsePrivate::DeleteTagsForDomainResponsePrivate(
     DeleteTagsForDomainResponse * const q) : Route53DomainsResponsePrivate(q)
@@ -96,9 +89,7 @@ DeleteTagsForDomainResponsePrivate::DeleteTagsForDomainResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53Domains DeleteTagsForDomainResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53Domains DeleteTagsForDomain response element from \a xml.
  */
 void DeleteTagsForDomainResponsePrivate::parseDeleteTagsForDomainResponse(QXmlStreamReader &xml)
 {

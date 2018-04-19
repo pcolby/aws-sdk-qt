@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::DeregisterEventTopicResponse
- *
  * \brief The DeregisterEventTopicResponse class provides an interace for DirectoryService DeregisterEventTopic responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new DeregisterEventTopicResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeregisterEventTopicResponse object for \a reply to \a request, with parent \a parent.
  */
 DeregisterEventTopicResponse::DeregisterEventTopicResponse(
         const DeregisterEventTopicRequest &request,
@@ -69,6 +64,9 @@ DeregisterEventTopicResponse::DeregisterEventTopicResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeregisterEventTopicRequest * DeregisterEventTopicResponse::request() const
 {
     Q_D(const DeregisterEventTopicResponse);
@@ -76,9 +74,8 @@ const DeregisterEventTopicRequest * DeregisterEventTopicResponse::request() cons
 }
 
 /*!
- * @brief  Parse a DirectoryService DeregisterEventTopic response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService DeregisterEventTopic \a response.
  */
 void DeregisterEventTopicResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DeregisterEventTopicResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::DeregisterEventTopicResponsePrivate
+ * \brief The DeregisterEventTopicResponsePrivate class provides private implementation for DeregisterEventTopicResponse.
  * \internal
  *
- * \class DeregisterEventTopicResponsePrivate
- *
- * \brief Private implementation for DeregisterEventTopicResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeregisterEventTopicResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeregisterEventTopicResponse instance.
+ * Constructs a DeregisterEventTopicResponsePrivate object with public implementation \a q.
  */
 DeregisterEventTopicResponsePrivate::DeregisterEventTopicResponsePrivate(
     DeregisterEventTopicResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ DeregisterEventTopicResponsePrivate::DeregisterEventTopicResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService DeregisterEventTopicResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService DeregisterEventTopic response element from \a xml.
  */
 void DeregisterEventTopicResponsePrivate::parseDeregisterEventTopicResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DetachVolumeRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DetachVolumeRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DetachVolumeRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DetachVolumeRequestPrivate::DetachVolumeRequestPrivate(
     const EC2Request::Action action, DetachVolumeRequest * const q)

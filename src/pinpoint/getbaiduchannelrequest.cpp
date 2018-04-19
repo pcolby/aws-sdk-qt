@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * GetBaiduChannelRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a GetBaiduChannelRequestPrivate object for Pinpoint \a action with,
- * public implementation \a q.
+ * Constructs a GetBaiduChannelRequestPrivate object for Pinpoint \a action,
+ * with public implementation \a q.
  */
 GetBaiduChannelRequestPrivate::GetBaiduChannelRequestPrivate(
     const PinpointRequest::Action action, GetBaiduChannelRequest * const q)

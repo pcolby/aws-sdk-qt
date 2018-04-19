@@ -34,10 +34,10 @@ class QTAWS_EXPORT RespondActivityTaskCanceledResponse : public SWFResponse {
 public:
     RespondActivityTaskCanceledResponse(const RespondActivityTaskCanceledRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RespondActivityTaskCanceledRequest * request() const;
+    virtual const RespondActivityTaskCanceledRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RespondActivityTaskCanceledResponse)

@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::DisassociateQualificationFromWorkerResponse
- *
  * \brief The DisassociateQualificationFromWorkerResponse class provides an interace for MTurk DisassociateQualificationFromWorker responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::disassociateQualificationFromWorker
  */
 
 /*!
- * @brief  Constructs a new DisassociateQualificationFromWorkerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateQualificationFromWorkerResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateQualificationFromWorkerResponse::DisassociateQualificationFromWorkerResponse(
         const DisassociateQualificationFromWorkerRequest &request,
@@ -55,6 +50,9 @@ DisassociateQualificationFromWorkerResponse::DisassociateQualificationFromWorker
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateQualificationFromWorkerRequest * DisassociateQualificationFromWorkerResponse::request() const
 {
     Q_D(const DisassociateQualificationFromWorkerResponse);
@@ -62,9 +60,8 @@ const DisassociateQualificationFromWorkerRequest * DisassociateQualificationFrom
 }
 
 /*!
- * @brief  Parse a MTurk DisassociateQualificationFromWorker response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk DisassociateQualificationFromWorker \a response.
  */
 void DisassociateQualificationFromWorkerResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DisassociateQualificationFromWorkerResponse::parseSuccess(QIODevice &respon
 }
 
 /*!
+ * \class QtAws::MTurk::DisassociateQualificationFromWorkerResponsePrivate
+ * \brief The DisassociateQualificationFromWorkerResponsePrivate class provides private implementation for DisassociateQualificationFromWorkerResponse.
  * \internal
  *
- * \class DisassociateQualificationFromWorkerResponsePrivate
- *
- * \brief Private implementation for DisassociateQualificationFromWorkerResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateQualificationFromWorkerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateQualificationFromWorkerResponse instance.
+ * Constructs a DisassociateQualificationFromWorkerResponsePrivate object with public implementation \a q.
  */
 DisassociateQualificationFromWorkerResponsePrivate::DisassociateQualificationFromWorkerResponsePrivate(
     DisassociateQualificationFromWorkerResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ DisassociateQualificationFromWorkerResponsePrivate::DisassociateQualificationFro
 }
 
 /*!
- * @brief  Parse an MTurk DisassociateQualificationFromWorkerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk DisassociateQualificationFromWorker response element from \a xml.
  */
 void DisassociateQualificationFromWorkerResponsePrivate::parseDisassociateQualificationFromWorkerResponse(QXmlStreamReader &xml)
 {

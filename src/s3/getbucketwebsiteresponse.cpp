@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::GetBucketWebsiteResponse
- *
  * \brief The GetBucketWebsiteResponse class provides an interace for S3 GetBucketWebsite responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::getBucketWebsite
  */
 
 /*!
- * @brief  Constructs a new GetBucketWebsiteResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetBucketWebsiteResponse object for \a reply to \a request, with parent \a parent.
  */
 GetBucketWebsiteResponse::GetBucketWebsiteResponse(
         const GetBucketWebsiteRequest &request,
@@ -55,6 +50,9 @@ GetBucketWebsiteResponse::GetBucketWebsiteResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetBucketWebsiteRequest * GetBucketWebsiteResponse::request() const
 {
     Q_D(const GetBucketWebsiteResponse);
@@ -62,9 +60,8 @@ const GetBucketWebsiteRequest * GetBucketWebsiteResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 GetBucketWebsite response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 GetBucketWebsite \a response.
  */
 void GetBucketWebsiteResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetBucketWebsiteResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::GetBucketWebsiteResponsePrivate
+ * \brief The GetBucketWebsiteResponsePrivate class provides private implementation for GetBucketWebsiteResponse.
  * \internal
  *
- * \class GetBucketWebsiteResponsePrivate
- *
- * \brief Private implementation for GetBucketWebsiteResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetBucketWebsiteResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetBucketWebsiteResponse instance.
+ * Constructs a GetBucketWebsiteResponsePrivate object with public implementation \a q.
  */
 GetBucketWebsiteResponsePrivate::GetBucketWebsiteResponsePrivate(
     GetBucketWebsiteResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ GetBucketWebsiteResponsePrivate::GetBucketWebsiteResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 GetBucketWebsiteResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 GetBucketWebsite response element from \a xml.
  */
 void GetBucketWebsiteResponsePrivate::parseGetBucketWebsiteResponse(QXmlStreamReader &xml)
 {

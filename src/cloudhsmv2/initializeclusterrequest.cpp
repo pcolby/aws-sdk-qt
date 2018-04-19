@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * InitializeClusterRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a InitializeClusterRequestPrivate object for CloudHSMV2 \a action with,
- * public implementation \a q.
+ * Constructs a InitializeClusterRequestPrivate object for CloudHSMV2 \a action,
+ * with public implementation \a q.
  */
 InitializeClusterRequestPrivate::InitializeClusterRequestPrivate(
     const CloudHSMV2Request::Action action, InitializeClusterRequest * const q)

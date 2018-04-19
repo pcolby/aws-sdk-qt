@@ -29,10 +29,9 @@ namespace DynamoDBStreams {
 
 /*!
  * \class QtAws::DynamoDBStreams::DescribeStreamResponse
- *
  * \brief The DescribeStreamResponse class provides an interace for DynamoDBStreams DescribeStream responses.
  *
- * \ingroup DynamoDBStreams
+ * \inmodule QtAwsDynamoDBStreams
  *
  *  <fullname>Amazon DynamoDB Streams</fullname>
  * 
@@ -72,11 +71,7 @@ namespace DynamoDBStreams {
  */
 
 /*!
- * @brief  Constructs a new DescribeStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStreamResponse::DescribeStreamResponse(
         const DescribeStreamRequest &request,
@@ -88,6 +83,9 @@ DescribeStreamResponse::DescribeStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStreamRequest * DescribeStreamResponse::request() const
 {
     Q_D(const DescribeStreamResponse);
@@ -95,9 +93,8 @@ const DescribeStreamRequest * DescribeStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDBStreams DescribeStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDBStreams DescribeStream \a response.
  */
 void DescribeStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -107,19 +104,15 @@ void DescribeStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDBStreams::DescribeStreamResponsePrivate
+ * \brief The DescribeStreamResponsePrivate class provides private implementation for DescribeStreamResponse.
  * \internal
  *
- * \class DescribeStreamResponsePrivate
- *
- * \brief Private implementation for DescribeStreamResponse.
+ * \inmodule QtAwsDynamoDBStreams
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStreamResponse instance.
+ * Constructs a DescribeStreamResponsePrivate object with public implementation \a q.
  */
 DescribeStreamResponsePrivate::DescribeStreamResponsePrivate(
     DescribeStreamResponse * const q) : DynamoDBStreamsResponsePrivate(q)
@@ -128,9 +121,7 @@ DescribeStreamResponsePrivate::DescribeStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDBStreams DescribeStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDBStreams DescribeStream response element from \a xml.
  */
 void DescribeStreamResponsePrivate::parseDescribeStreamResponse(QXmlStreamReader &xml)
 {

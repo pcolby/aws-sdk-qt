@@ -29,10 +29,9 @@ namespace ResourceGroupsTaggingAPI {
 
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::UntagResourcesResponse
- *
  * \brief The UntagResourcesResponse class provides an interace for ResourceGroupsTaggingAPI UntagResources responses.
  *
- * \ingroup ResourceGroupsTaggingAPI
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  *
  *  <fullname>Resource Groups Tagging API</fullname>
  * 
@@ -94,11 +93,7 @@ namespace ResourceGroupsTaggingAPI {
  */
 
 /*!
- * @brief  Constructs a new UntagResourcesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UntagResourcesResponse object for \a reply to \a request, with parent \a parent.
  */
 UntagResourcesResponse::UntagResourcesResponse(
         const UntagResourcesRequest &request,
@@ -110,6 +105,9 @@ UntagResourcesResponse::UntagResourcesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UntagResourcesRequest * UntagResourcesResponse::request() const
 {
     Q_D(const UntagResourcesResponse);
@@ -117,9 +115,8 @@ const UntagResourcesRequest * UntagResourcesResponse::request() const
 }
 
 /*!
- * @brief  Parse a ResourceGroupsTaggingAPI UntagResources response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ResourceGroupsTaggingAPI UntagResources \a response.
  */
 void UntagResourcesResponse::parseSuccess(QIODevice &response)
 {
@@ -129,19 +126,15 @@ void UntagResourcesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ResourceGroupsTaggingAPI::UntagResourcesResponsePrivate
+ * \brief The UntagResourcesResponsePrivate class provides private implementation for UntagResourcesResponse.
  * \internal
  *
- * \class UntagResourcesResponsePrivate
- *
- * \brief Private implementation for UntagResourcesResponse.
+ * \inmodule QtAwsResourceGroupsTaggingAPI
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UntagResourcesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UntagResourcesResponse instance.
+ * Constructs a UntagResourcesResponsePrivate object with public implementation \a q.
  */
 UntagResourcesResponsePrivate::UntagResourcesResponsePrivate(
     UntagResourcesResponse * const q) : ResourceGroupsTaggingAPIResponsePrivate(q)
@@ -150,9 +143,7 @@ UntagResourcesResponsePrivate::UntagResourcesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ResourceGroupsTaggingAPI UntagResourcesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ResourceGroupsTaggingAPI UntagResources response element from \a xml.
  */
 void UntagResourcesResponsePrivate::parseUntagResourcesResponse(QXmlStreamReader &xml)
 {

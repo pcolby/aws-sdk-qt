@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * ModifyDBSnapshotRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ModifyDBSnapshotRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a ModifyDBSnapshotRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 ModifyDBSnapshotRequestPrivate::ModifyDBSnapshotRequestPrivate(
     const RDSRequest::Action action, ModifyDBSnapshotRequest * const q)

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetRoomSkillParameterRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetRoomSkillParameterRequestPrivate object for AlexaForBusiness \a action with,
- * public implementation \a q.
+ * Constructs a GetRoomSkillParameterRequestPrivate object for AlexaForBusiness \a action,
+ * with public implementation \a q.
  */
 GetRoomSkillParameterRequestPrivate::GetRoomSkillParameterRequestPrivate(
     const AlexaForBusinessRequest::Action action, GetRoomSkillParameterRequest * const q)

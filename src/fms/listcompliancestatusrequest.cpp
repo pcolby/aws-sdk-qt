@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * ListComplianceStatusRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListComplianceStatusRequestPrivate object for FMS \a action with,
- * public implementation \a q.
+ * Constructs a ListComplianceStatusRequestPrivate object for FMS \a action,
+ * with public implementation \a q.
  */
 ListComplianceStatusRequestPrivate::ListComplianceStatusRequestPrivate(
     const FMSRequest::Action action, ListComplianceStatusRequest * const q)

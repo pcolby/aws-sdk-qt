@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DescribeUserRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DescribeUserRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a DescribeUserRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 DescribeUserRequestPrivate::DescribeUserRequestPrivate(
     const MQRequest::Action action, DescribeUserRequest * const q)

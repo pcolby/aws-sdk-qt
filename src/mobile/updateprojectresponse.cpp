@@ -29,10 +29,9 @@ namespace Mobile {
 
 /*!
  * \class QtAws::Mobile::UpdateProjectResponse
- *
  * \brief The UpdateProjectResponse class provides an interace for Mobile UpdateProject responses.
  *
- * \ingroup Mobile
+ * \inmodule QtAwsMobile
  *
  *  AWS Mobile Service provides mobile app and website developers with capabilities required to configure AWS resources and
  *  bootstrap their developer desktop projects with the necessary SDKs, constants, tools and samples to make use of those
@@ -42,11 +41,7 @@ namespace Mobile {
  */
 
 /*!
- * @brief  Constructs a new UpdateProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateProjectResponse::UpdateProjectResponse(
         const UpdateProjectRequest &request,
@@ -58,6 +53,9 @@ UpdateProjectResponse::UpdateProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateProjectRequest * UpdateProjectResponse::request() const
 {
     Q_D(const UpdateProjectResponse);
@@ -65,9 +63,8 @@ const UpdateProjectRequest * UpdateProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a Mobile UpdateProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Mobile UpdateProject \a response.
  */
 void UpdateProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Mobile::UpdateProjectResponsePrivate
+ * \brief The UpdateProjectResponsePrivate class provides private implementation for UpdateProjectResponse.
  * \internal
  *
- * \class UpdateProjectResponsePrivate
- *
- * \brief Private implementation for UpdateProjectResponse.
+ * \inmodule QtAwsMobile
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateProjectResponse instance.
+ * Constructs a UpdateProjectResponsePrivate object with public implementation \a q.
  */
 UpdateProjectResponsePrivate::UpdateProjectResponsePrivate(
     UpdateProjectResponse * const q) : MobileResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateProjectResponsePrivate::UpdateProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Mobile UpdateProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Mobile UpdateProject response element from \a xml.
  */
 void UpdateProjectResponsePrivate::parseUpdateProjectResponse(QXmlStreamReader &xml)
 {

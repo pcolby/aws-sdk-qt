@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DisassociateElasticIpRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DisassociateElasticIpRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DisassociateElasticIpRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DisassociateElasticIpRequestPrivate::DisassociateElasticIpRequestPrivate(
     const OpsWorksRequest::Action action, DisassociateElasticIpRequest * const q)

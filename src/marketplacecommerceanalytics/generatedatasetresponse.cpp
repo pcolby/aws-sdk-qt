@@ -29,21 +29,16 @@ namespace MarketplaceCommerceAnalytics {
 
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::GenerateDataSetResponse
- *
  * \brief The GenerateDataSetResponse class provides an interace for MarketplaceCommerceAnalytics GenerateDataSet responses.
  *
- * \ingroup MarketplaceCommerceAnalytics
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  *
  *
  * \sa MarketplaceCommerceAnalyticsClient::generateDataSet
  */
 
 /*!
- * @brief  Constructs a new GenerateDataSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GenerateDataSetResponse object for \a reply to \a request, with parent \a parent.
  */
 GenerateDataSetResponse::GenerateDataSetResponse(
         const GenerateDataSetRequest &request,
@@ -55,6 +50,9 @@ GenerateDataSetResponse::GenerateDataSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GenerateDataSetRequest * GenerateDataSetResponse::request() const
 {
     Q_D(const GenerateDataSetResponse);
@@ -62,9 +60,8 @@ const GenerateDataSetRequest * GenerateDataSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a MarketplaceCommerceAnalytics GenerateDataSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MarketplaceCommerceAnalytics GenerateDataSet \a response.
  */
 void GenerateDataSetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GenerateDataSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MarketplaceCommerceAnalytics::GenerateDataSetResponsePrivate
+ * \brief The GenerateDataSetResponsePrivate class provides private implementation for GenerateDataSetResponse.
  * \internal
  *
- * \class GenerateDataSetResponsePrivate
- *
- * \brief Private implementation for GenerateDataSetResponse.
+ * \inmodule QtAwsMarketplaceCommerceAnalytics
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GenerateDataSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GenerateDataSetResponse instance.
+ * Constructs a GenerateDataSetResponsePrivate object with public implementation \a q.
  */
 GenerateDataSetResponsePrivate::GenerateDataSetResponsePrivate(
     GenerateDataSetResponse * const q) : MarketplaceCommerceAnalyticsResponsePrivate(q)
@@ -95,9 +88,7 @@ GenerateDataSetResponsePrivate::GenerateDataSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MarketplaceCommerceAnalytics GenerateDataSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MarketplaceCommerceAnalytics GenerateDataSet response element from \a xml.
  */
 void GenerateDataSetResponsePrivate::parseGenerateDataSetResponse(QXmlStreamReader &xml)
 {

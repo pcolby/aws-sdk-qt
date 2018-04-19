@@ -91,9 +91,8 @@ QtAws::Core::AwsAbstractResponse * UpdateIdentityProviderRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a UpdateIdentityProviderRequestPrivate object for CognitoIdentityProvider \a action with,
- * public implementation \a q.
+ * Constructs a UpdateIdentityProviderRequestPrivate object for CognitoIdentityProvider \a action,
+ * with public implementation \a q.
  */
 UpdateIdentityProviderRequestPrivate::UpdateIdentityProviderRequestPrivate(
     const CognitoIdentityProviderRequest::Action action, UpdateIdentityProviderRequest * const q)

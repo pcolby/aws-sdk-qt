@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeAvailablePatchesResponse
- *
  * \brief The DescribeAvailablePatchesResponse class provides an interace for SSM DescribeAvailablePatches responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeAvailablePatchesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAvailablePatchesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAvailablePatchesResponse::DescribeAvailablePatchesResponse(
         const DescribeAvailablePatchesRequest &request,
@@ -79,6 +74,9 @@ DescribeAvailablePatchesResponse::DescribeAvailablePatchesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAvailablePatchesRequest * DescribeAvailablePatchesResponse::request() const
 {
     Q_D(const DescribeAvailablePatchesResponse);
@@ -86,9 +84,8 @@ const DescribeAvailablePatchesRequest * DescribeAvailablePatchesResponse::reques
 }
 
 /*!
- * @brief  Parse a SSM DescribeAvailablePatches response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeAvailablePatches \a response.
  */
 void DescribeAvailablePatchesResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeAvailablePatchesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeAvailablePatchesResponsePrivate
+ * \brief The DescribeAvailablePatchesResponsePrivate class provides private implementation for DescribeAvailablePatchesResponse.
  * \internal
  *
- * \class DescribeAvailablePatchesResponsePrivate
- *
- * \brief Private implementation for DescribeAvailablePatchesResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAvailablePatchesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAvailablePatchesResponse instance.
+ * Constructs a DescribeAvailablePatchesResponsePrivate object with public implementation \a q.
  */
 DescribeAvailablePatchesResponsePrivate::DescribeAvailablePatchesResponsePrivate(
     DescribeAvailablePatchesResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeAvailablePatchesResponsePrivate::DescribeAvailablePatchesResponsePrivate
 }
 
 /*!
- * @brief  Parse an SSM DescribeAvailablePatchesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeAvailablePatches response element from \a xml.
  */
 void DescribeAvailablePatchesResponsePrivate::parseDescribeAvailablePatchesResponse(QXmlStreamReader &xml)
 {

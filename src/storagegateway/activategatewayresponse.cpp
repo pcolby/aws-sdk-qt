@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::ActivateGatewayResponse
- *
  * \brief The ActivateGatewayResponse class provides an interace for StorageGateway ActivateGateway responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new ActivateGatewayResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ActivateGatewayResponse object for \a reply to \a request, with parent \a parent.
  */
 ActivateGatewayResponse::ActivateGatewayResponse(
         const ActivateGatewayRequest &request,
@@ -124,6 +119,9 @@ ActivateGatewayResponse::ActivateGatewayResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ActivateGatewayRequest * ActivateGatewayResponse::request() const
 {
     Q_D(const ActivateGatewayResponse);
@@ -131,9 +129,8 @@ const ActivateGatewayRequest * ActivateGatewayResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway ActivateGateway response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway ActivateGateway \a response.
  */
 void ActivateGatewayResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void ActivateGatewayResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::ActivateGatewayResponsePrivate
+ * \brief The ActivateGatewayResponsePrivate class provides private implementation for ActivateGatewayResponse.
  * \internal
  *
- * \class ActivateGatewayResponsePrivate
- *
- * \brief Private implementation for ActivateGatewayResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ActivateGatewayResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ActivateGatewayResponse instance.
+ * Constructs a ActivateGatewayResponsePrivate object with public implementation \a q.
  */
 ActivateGatewayResponsePrivate::ActivateGatewayResponsePrivate(
     ActivateGatewayResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ ActivateGatewayResponsePrivate::ActivateGatewayResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway ActivateGatewayResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway ActivateGateway response element from \a xml.
  */
 void ActivateGatewayResponsePrivate::parseActivateGatewayResponse(QXmlStreamReader &xml)
 {

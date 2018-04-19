@@ -29,10 +29,9 @@ namespace Glacier {
 
 /*!
  * \class QtAws::Glacier::ListProvisionedCapacityResponse
- *
  * \brief The ListProvisionedCapacityResponse class provides an interace for Glacier ListProvisionedCapacity responses.
  *
- * \ingroup Glacier
+ * \inmodule QtAwsGlacier
  *
  *  Amazon Glacier is a storage solution for "cold
  * 
@@ -77,11 +76,7 @@ namespace Glacier {
  */
 
 /*!
- * @brief  Constructs a new ListProvisionedCapacityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListProvisionedCapacityResponse object for \a reply to \a request, with parent \a parent.
  */
 ListProvisionedCapacityResponse::ListProvisionedCapacityResponse(
         const ListProvisionedCapacityRequest &request,
@@ -93,6 +88,9 @@ ListProvisionedCapacityResponse::ListProvisionedCapacityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListProvisionedCapacityRequest * ListProvisionedCapacityResponse::request() const
 {
     Q_D(const ListProvisionedCapacityResponse);
@@ -100,9 +98,8 @@ const ListProvisionedCapacityRequest * ListProvisionedCapacityResponse::request(
 }
 
 /*!
- * @brief  Parse a Glacier ListProvisionedCapacity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glacier ListProvisionedCapacity \a response.
  */
 void ListProvisionedCapacityResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void ListProvisionedCapacityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glacier::ListProvisionedCapacityResponsePrivate
+ * \brief The ListProvisionedCapacityResponsePrivate class provides private implementation for ListProvisionedCapacityResponse.
  * \internal
  *
- * \class ListProvisionedCapacityResponsePrivate
- *
- * \brief Private implementation for ListProvisionedCapacityResponse.
+ * \inmodule QtAwsGlacier
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListProvisionedCapacityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListProvisionedCapacityResponse instance.
+ * Constructs a ListProvisionedCapacityResponsePrivate object with public implementation \a q.
  */
 ListProvisionedCapacityResponsePrivate::ListProvisionedCapacityResponsePrivate(
     ListProvisionedCapacityResponse * const q) : GlacierResponsePrivate(q)
@@ -133,9 +126,7 @@ ListProvisionedCapacityResponsePrivate::ListProvisionedCapacityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glacier ListProvisionedCapacityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glacier ListProvisionedCapacity response element from \a xml.
  */
 void ListProvisionedCapacityResponsePrivate::parseListProvisionedCapacityResponse(QXmlStreamReader &xml)
 {

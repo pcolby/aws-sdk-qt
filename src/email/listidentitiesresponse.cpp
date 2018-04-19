@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::ListIdentitiesResponse
- *
  * \brief The ListIdentitiesResponse class provides an interace for SES ListIdentities responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new ListIdentitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListIdentitiesResponse object for \a reply to \a request, with parent \a parent.
  */
 ListIdentitiesResponse::ListIdentitiesResponse(
         const ListIdentitiesRequest &request,
@@ -66,6 +61,9 @@ ListIdentitiesResponse::ListIdentitiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListIdentitiesRequest * ListIdentitiesResponse::request() const
 {
     Q_D(const ListIdentitiesResponse);
@@ -73,9 +71,8 @@ const ListIdentitiesRequest * ListIdentitiesResponse::request() const
 }
 
 /*!
- * @brief  Parse a SES ListIdentities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES ListIdentities \a response.
  */
 void ListIdentitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void ListIdentitiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SES::ListIdentitiesResponsePrivate
+ * \brief The ListIdentitiesResponsePrivate class provides private implementation for ListIdentitiesResponse.
  * \internal
  *
- * \class ListIdentitiesResponsePrivate
- *
- * \brief Private implementation for ListIdentitiesResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListIdentitiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListIdentitiesResponse instance.
+ * Constructs a ListIdentitiesResponsePrivate object with public implementation \a q.
  */
 ListIdentitiesResponsePrivate::ListIdentitiesResponsePrivate(
     ListIdentitiesResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ ListIdentitiesResponsePrivate::ListIdentitiesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SES ListIdentitiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES ListIdentities response element from \a xml.
  */
 void ListIdentitiesResponsePrivate::parseListIdentitiesResponse(QXmlStreamReader &xml)
 {

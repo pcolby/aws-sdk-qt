@@ -29,10 +29,9 @@ namespace XRay {
 
 /*!
  * \class QtAws::XRay::PutTraceSegmentsResponse
- *
  * \brief The PutTraceSegmentsResponse class provides an interace for XRay PutTraceSegments responses.
  *
- * \ingroup XRay
+ * \inmodule QtAwsXRay
  *
  *  AWS X-Ray provides APIs for managing debug traces and retrieving service maps and other data created by processing those
  *
@@ -40,11 +39,7 @@ namespace XRay {
  */
 
 /*!
- * @brief  Constructs a new PutTraceSegmentsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutTraceSegmentsResponse object for \a reply to \a request, with parent \a parent.
  */
 PutTraceSegmentsResponse::PutTraceSegmentsResponse(
         const PutTraceSegmentsRequest &request,
@@ -56,6 +51,9 @@ PutTraceSegmentsResponse::PutTraceSegmentsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutTraceSegmentsRequest * PutTraceSegmentsResponse::request() const
 {
     Q_D(const PutTraceSegmentsResponse);
@@ -63,9 +61,8 @@ const PutTraceSegmentsRequest * PutTraceSegmentsResponse::request() const
 }
 
 /*!
- * @brief  Parse a XRay PutTraceSegments response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful XRay PutTraceSegments \a response.
  */
 void PutTraceSegmentsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void PutTraceSegmentsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::XRay::PutTraceSegmentsResponsePrivate
+ * \brief The PutTraceSegmentsResponsePrivate class provides private implementation for PutTraceSegmentsResponse.
  * \internal
  *
- * \class PutTraceSegmentsResponsePrivate
- *
- * \brief Private implementation for PutTraceSegmentsResponse.
+ * \inmodule QtAwsXRay
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutTraceSegmentsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutTraceSegmentsResponse instance.
+ * Constructs a PutTraceSegmentsResponsePrivate object with public implementation \a q.
  */
 PutTraceSegmentsResponsePrivate::PutTraceSegmentsResponsePrivate(
     PutTraceSegmentsResponse * const q) : XRayResponsePrivate(q)
@@ -96,9 +89,7 @@ PutTraceSegmentsResponsePrivate::PutTraceSegmentsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an XRay PutTraceSegmentsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a XRay PutTraceSegments response element from \a xml.
  */
 void PutTraceSegmentsResponsePrivate::parsePutTraceSegmentsResponse(QXmlStreamReader &xml)
 {

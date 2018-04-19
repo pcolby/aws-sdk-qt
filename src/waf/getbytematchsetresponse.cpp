@@ -29,10 +29,9 @@ namespace WAF {
 
 /*!
  * \class QtAws::WAF::GetByteMatchSetResponse
- *
  * \brief The GetByteMatchSetResponse class provides an interace for WAF GetByteMatchSet responses.
  *
- * \ingroup WAF
+ * \inmodule QtAwsWAF
  *
  *  This is the <i>AWS WAF API Reference</i> for using AWS WAF with Amazon CloudFront. The AWS WAF actions and data types
  *  listed in the reference are available for protecting Amazon CloudFront distributions. You can use these actions and data
@@ -44,11 +43,7 @@ namespace WAF {
  */
 
 /*!
- * @brief  Constructs a new GetByteMatchSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetByteMatchSetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetByteMatchSetResponse::GetByteMatchSetResponse(
         const GetByteMatchSetRequest &request,
@@ -60,6 +55,9 @@ GetByteMatchSetResponse::GetByteMatchSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetByteMatchSetRequest * GetByteMatchSetResponse::request() const
 {
     Q_D(const GetByteMatchSetResponse);
@@ -67,9 +65,8 @@ const GetByteMatchSetRequest * GetByteMatchSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAF GetByteMatchSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAF GetByteMatchSet \a response.
  */
 void GetByteMatchSetResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void GetByteMatchSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAF::GetByteMatchSetResponsePrivate
+ * \brief The GetByteMatchSetResponsePrivate class provides private implementation for GetByteMatchSetResponse.
  * \internal
  *
- * \class GetByteMatchSetResponsePrivate
- *
- * \brief Private implementation for GetByteMatchSetResponse.
+ * \inmodule QtAwsWAF
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetByteMatchSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetByteMatchSetResponse instance.
+ * Constructs a GetByteMatchSetResponsePrivate object with public implementation \a q.
  */
 GetByteMatchSetResponsePrivate::GetByteMatchSetResponsePrivate(
     GetByteMatchSetResponse * const q) : WAFResponsePrivate(q)
@@ -100,9 +93,7 @@ GetByteMatchSetResponsePrivate::GetByteMatchSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAF GetByteMatchSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAF GetByteMatchSet response element from \a xml.
  */
 void GetByteMatchSetResponsePrivate::parseGetByteMatchSetResponse(QXmlStreamReader &xml)
 {

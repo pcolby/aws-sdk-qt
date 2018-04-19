@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateEgressOnlyInternetGatewayRequest::respo
  */
 
 /*!
- *
- * Constructs a CreateEgressOnlyInternetGatewayRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateEgressOnlyInternetGatewayRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateEgressOnlyInternetGatewayRequestPrivate::CreateEgressOnlyInternetGatewayRequestPrivate(
     const EC2Request::Action action, CreateEgressOnlyInternetGatewayRequest * const q)

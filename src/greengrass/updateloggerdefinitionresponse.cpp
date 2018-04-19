@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::UpdateLoggerDefinitionResponse
- *
  * \brief The UpdateLoggerDefinitionResponse class provides an interace for Greengrass UpdateLoggerDefinition responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new UpdateLoggerDefinitionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateLoggerDefinitionResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateLoggerDefinitionResponse::UpdateLoggerDefinitionResponse(
         const UpdateLoggerDefinitionRequest &request,
@@ -58,6 +53,9 @@ UpdateLoggerDefinitionResponse::UpdateLoggerDefinitionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateLoggerDefinitionRequest * UpdateLoggerDefinitionResponse::request() const
 {
     Q_D(const UpdateLoggerDefinitionResponse);
@@ -65,9 +63,8 @@ const UpdateLoggerDefinitionRequest * UpdateLoggerDefinitionResponse::request() 
 }
 
 /*!
- * @brief  Parse a Greengrass UpdateLoggerDefinition response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass UpdateLoggerDefinition \a response.
  */
 void UpdateLoggerDefinitionResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void UpdateLoggerDefinitionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::UpdateLoggerDefinitionResponsePrivate
+ * \brief The UpdateLoggerDefinitionResponsePrivate class provides private implementation for UpdateLoggerDefinitionResponse.
  * \internal
  *
- * \class UpdateLoggerDefinitionResponsePrivate
- *
- * \brief Private implementation for UpdateLoggerDefinitionResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateLoggerDefinitionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateLoggerDefinitionResponse instance.
+ * Constructs a UpdateLoggerDefinitionResponsePrivate object with public implementation \a q.
  */
 UpdateLoggerDefinitionResponsePrivate::UpdateLoggerDefinitionResponsePrivate(
     UpdateLoggerDefinitionResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ UpdateLoggerDefinitionResponsePrivate::UpdateLoggerDefinitionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass UpdateLoggerDefinitionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass UpdateLoggerDefinition response element from \a xml.
  */
 void UpdateLoggerDefinitionResponsePrivate::parseUpdateLoggerDefinitionResponse(QXmlStreamReader &xml)
 {

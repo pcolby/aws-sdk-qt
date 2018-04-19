@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ResetNetworkInterfaceAttributeResponse
- *
  * \brief The ResetNetworkInterfaceAttributeResponse class provides an interace for EC2 ResetNetworkInterfaceAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ResetNetworkInterfaceAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetNetworkInterfaceAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetNetworkInterfaceAttributeResponse::ResetNetworkInterfaceAttributeResponse(
         const ResetNetworkInterfaceAttributeRequest &request,
@@ -59,6 +54,9 @@ ResetNetworkInterfaceAttributeResponse::ResetNetworkInterfaceAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetNetworkInterfaceAttributeRequest * ResetNetworkInterfaceAttributeResponse::request() const
 {
     Q_D(const ResetNetworkInterfaceAttributeResponse);
@@ -66,9 +64,8 @@ const ResetNetworkInterfaceAttributeRequest * ResetNetworkInterfaceAttributeResp
 }
 
 /*!
- * @brief  Parse a EC2 ResetNetworkInterfaceAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ResetNetworkInterfaceAttribute \a response.
  */
 void ResetNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ResetNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ResetNetworkInterfaceAttributeResponsePrivate
+ * \brief The ResetNetworkInterfaceAttributeResponsePrivate class provides private implementation for ResetNetworkInterfaceAttributeResponse.
  * \internal
  *
- * \class ResetNetworkInterfaceAttributeResponsePrivate
- *
- * \brief Private implementation for ResetNetworkInterfaceAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetNetworkInterfaceAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetNetworkInterfaceAttributeResponse instance.
+ * Constructs a ResetNetworkInterfaceAttributeResponsePrivate object with public implementation \a q.
  */
 ResetNetworkInterfaceAttributeResponsePrivate::ResetNetworkInterfaceAttributeResponsePrivate(
     ResetNetworkInterfaceAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ResetNetworkInterfaceAttributeResponsePrivate::ResetNetworkInterfaceAttributeRes
 }
 
 /*!
- * @brief  Parse an EC2 ResetNetworkInterfaceAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ResetNetworkInterfaceAttribute response element from \a xml.
  */
 void ResetNetworkInterfaceAttributeResponsePrivate::parseResetNetworkInterfaceAttributeResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::GetAccountSettingsResponse
- *
  * \brief The GetAccountSettingsResponse class provides an interace for Lambda GetAccountSettings responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new GetAccountSettingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetAccountSettingsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetAccountSettingsResponse::GetAccountSettingsResponse(
         const GetAccountSettingsRequest &request,
@@ -66,6 +61,9 @@ GetAccountSettingsResponse::GetAccountSettingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetAccountSettingsRequest * GetAccountSettingsResponse::request() const
 {
     Q_D(const GetAccountSettingsResponse);
@@ -73,9 +71,8 @@ const GetAccountSettingsRequest * GetAccountSettingsResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda GetAccountSettings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda GetAccountSettings \a response.
  */
 void GetAccountSettingsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetAccountSettingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::GetAccountSettingsResponsePrivate
+ * \brief The GetAccountSettingsResponsePrivate class provides private implementation for GetAccountSettingsResponse.
  * \internal
  *
- * \class GetAccountSettingsResponsePrivate
- *
- * \brief Private implementation for GetAccountSettingsResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetAccountSettingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetAccountSettingsResponse instance.
+ * Constructs a GetAccountSettingsResponsePrivate object with public implementation \a q.
  */
 GetAccountSettingsResponsePrivate::GetAccountSettingsResponsePrivate(
     GetAccountSettingsResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ GetAccountSettingsResponsePrivate::GetAccountSettingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda GetAccountSettingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda GetAccountSettings response element from \a xml.
  */
 void GetAccountSettingsResponsePrivate::parseGetAccountSettingsResponse(QXmlStreamReader &xml)
 {

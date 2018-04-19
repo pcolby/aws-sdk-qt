@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * ListConfigurationsRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a ListConfigurationsRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a ListConfigurationsRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 ListConfigurationsRequestPrivate::ListConfigurationsRequestPrivate(
     const MQRequest::Action action, ListConfigurationsRequest * const q)

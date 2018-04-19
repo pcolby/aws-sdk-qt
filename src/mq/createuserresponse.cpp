@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::CreateUserResponse
- *
  * \brief The CreateUserResponse class provides an interace for MQ CreateUser responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new CreateUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateUserResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateUserResponse::CreateUserResponse(
         const CreateUserRequest &request,
@@ -57,6 +52,9 @@ CreateUserResponse::CreateUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateUserRequest * CreateUserResponse::request() const
 {
     Q_D(const CreateUserResponse);
@@ -64,9 +62,8 @@ const CreateUserRequest * CreateUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a MQ CreateUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ CreateUser \a response.
  */
 void CreateUserResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void CreateUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::CreateUserResponsePrivate
+ * \brief The CreateUserResponsePrivate class provides private implementation for CreateUserResponse.
  * \internal
  *
- * \class CreateUserResponsePrivate
- *
- * \brief Private implementation for CreateUserResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateUserResponse instance.
+ * Constructs a CreateUserResponsePrivate object with public implementation \a q.
  */
 CreateUserResponsePrivate::CreateUserResponsePrivate(
     CreateUserResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ CreateUserResponsePrivate::CreateUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MQ CreateUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ CreateUser response element from \a xml.
  */
 void CreateUserResponsePrivate::parseCreateUserResponse(QXmlStreamReader &xml)
 {

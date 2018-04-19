@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::ListDetectorsResponse
- *
  * \brief The ListDetectorsResponse class provides an interace for GuardDuty ListDetectors responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::listDetectors
  */
 
 /*!
- * @brief  Constructs a new ListDetectorsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDetectorsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDetectorsResponse::ListDetectorsResponse(
         const ListDetectorsRequest &request,
@@ -55,6 +50,9 @@ ListDetectorsResponse::ListDetectorsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDetectorsRequest * ListDetectorsResponse::request() const
 {
     Q_D(const ListDetectorsResponse);
@@ -62,9 +60,8 @@ const ListDetectorsRequest * ListDetectorsResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty ListDetectors response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty ListDetectors \a response.
  */
 void ListDetectorsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListDetectorsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::ListDetectorsResponsePrivate
+ * \brief The ListDetectorsResponsePrivate class provides private implementation for ListDetectorsResponse.
  * \internal
  *
- * \class ListDetectorsResponsePrivate
- *
- * \brief Private implementation for ListDetectorsResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDetectorsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDetectorsResponse instance.
+ * Constructs a ListDetectorsResponsePrivate object with public implementation \a q.
  */
 ListDetectorsResponsePrivate::ListDetectorsResponsePrivate(
     ListDetectorsResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ ListDetectorsResponsePrivate::ListDetectorsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty ListDetectorsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty ListDetectors response element from \a xml.
  */
 void ListDetectorsResponsePrivate::parseListDetectorsResponse(QXmlStreamReader &xml)
 {

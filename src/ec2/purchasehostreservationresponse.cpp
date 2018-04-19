@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::PurchaseHostReservationResponse
- *
  * \brief The PurchaseHostReservationResponse class provides an interace for EC2 PurchaseHostReservation responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new PurchaseHostReservationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PurchaseHostReservationResponse object for \a reply to \a request, with parent \a parent.
  */
 PurchaseHostReservationResponse::PurchaseHostReservationResponse(
         const PurchaseHostReservationRequest &request,
@@ -59,6 +54,9 @@ PurchaseHostReservationResponse::PurchaseHostReservationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PurchaseHostReservationRequest * PurchaseHostReservationResponse::request() const
 {
     Q_D(const PurchaseHostReservationResponse);
@@ -66,9 +64,8 @@ const PurchaseHostReservationRequest * PurchaseHostReservationResponse::request(
 }
 
 /*!
- * @brief  Parse a EC2 PurchaseHostReservation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 PurchaseHostReservation \a response.
  */
 void PurchaseHostReservationResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void PurchaseHostReservationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::PurchaseHostReservationResponsePrivate
+ * \brief The PurchaseHostReservationResponsePrivate class provides private implementation for PurchaseHostReservationResponse.
  * \internal
  *
- * \class PurchaseHostReservationResponsePrivate
- *
- * \brief Private implementation for PurchaseHostReservationResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PurchaseHostReservationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PurchaseHostReservationResponse instance.
+ * Constructs a PurchaseHostReservationResponsePrivate object with public implementation \a q.
  */
 PurchaseHostReservationResponsePrivate::PurchaseHostReservationResponsePrivate(
     PurchaseHostReservationResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ PurchaseHostReservationResponsePrivate::PurchaseHostReservationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 PurchaseHostReservationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 PurchaseHostReservation response element from \a xml.
  */
 void PurchaseHostReservationResponsePrivate::parsePurchaseHostReservationResponse(QXmlStreamReader &xml)
 {

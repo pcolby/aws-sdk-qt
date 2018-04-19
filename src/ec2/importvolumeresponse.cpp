@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ImportVolumeResponse
- *
  * \brief The ImportVolumeResponse class provides an interace for EC2 ImportVolume responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ImportVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ImportVolumeResponse object for \a reply to \a request, with parent \a parent.
  */
 ImportVolumeResponse::ImportVolumeResponse(
         const ImportVolumeRequest &request,
@@ -59,6 +54,9 @@ ImportVolumeResponse::ImportVolumeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ImportVolumeRequest * ImportVolumeResponse::request() const
 {
     Q_D(const ImportVolumeResponse);
@@ -66,9 +64,8 @@ const ImportVolumeRequest * ImportVolumeResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ImportVolume response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ImportVolume \a response.
  */
 void ImportVolumeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ImportVolumeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ImportVolumeResponsePrivate
+ * \brief The ImportVolumeResponsePrivate class provides private implementation for ImportVolumeResponse.
  * \internal
  *
- * \class ImportVolumeResponsePrivate
- *
- * \brief Private implementation for ImportVolumeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ImportVolumeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ImportVolumeResponse instance.
+ * Constructs a ImportVolumeResponsePrivate object with public implementation \a q.
  */
 ImportVolumeResponsePrivate::ImportVolumeResponsePrivate(
     ImportVolumeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ImportVolumeResponsePrivate::ImportVolumeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ImportVolumeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ImportVolume response element from \a xml.
  */
 void ImportVolumeResponsePrivate::parseImportVolumeResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Greengrass {
 
 /*!
  * \class QtAws::Greengrass::GetGroupResponse
- *
  * \brief The GetGroupResponse class provides an interace for Greengrass GetGroup responses.
  *
- * \ingroup Greengrass
+ * \inmodule QtAwsGreengrass
  *
  *  AWS Greengrass seamlessly extends AWS onto physical devices so they can act locally on the data they generate, while
  *  still using the cloud for management, analytics, and durable storage. AWS Greengrass ensures your devices can respond
@@ -42,11 +41,7 @@ namespace Greengrass {
  */
 
 /*!
- * @brief  Constructs a new GetGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 GetGroupResponse::GetGroupResponse(
         const GetGroupRequest &request,
@@ -58,6 +53,9 @@ GetGroupResponse::GetGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetGroupRequest * GetGroupResponse::request() const
 {
     Q_D(const GetGroupResponse);
@@ -65,9 +63,8 @@ const GetGroupRequest * GetGroupResponse::request() const
 }
 
 /*!
- * @brief  Parse a Greengrass GetGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Greengrass GetGroup \a response.
  */
 void GetGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Greengrass::GetGroupResponsePrivate
+ * \brief The GetGroupResponsePrivate class provides private implementation for GetGroupResponse.
  * \internal
  *
- * \class GetGroupResponsePrivate
- *
- * \brief Private implementation for GetGroupResponse.
+ * \inmodule QtAwsGreengrass
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetGroupResponse instance.
+ * Constructs a GetGroupResponsePrivate object with public implementation \a q.
  */
 GetGroupResponsePrivate::GetGroupResponsePrivate(
     GetGroupResponse * const q) : GreengrassResponsePrivate(q)
@@ -98,9 +91,7 @@ GetGroupResponsePrivate::GetGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Greengrass GetGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Greengrass GetGroup response element from \a xml.
  */
 void GetGroupResponsePrivate::parseGetGroupResponse(QXmlStreamReader &xml)
 {

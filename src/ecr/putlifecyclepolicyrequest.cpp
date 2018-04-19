@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * PutLifecyclePolicyRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a PutLifecyclePolicyRequestPrivate object for ECR \a action with,
- * public implementation \a q.
+ * Constructs a PutLifecyclePolicyRequestPrivate object for ECR \a action,
+ * with public implementation \a q.
  */
 PutLifecyclePolicyRequestPrivate::PutLifecyclePolicyRequestPrivate(
     const ECRRequest::Action action, PutLifecyclePolicyRequest * const q)

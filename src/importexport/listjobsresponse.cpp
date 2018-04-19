@@ -29,10 +29,9 @@ namespace ImportExport {
 
 /*!
  * \class QtAws::ImportExport::ListJobsResponse
- *
  * \brief The ListJobsResponse class provides an interace for ImportExport ListJobs responses.
  *
- * \ingroup ImportExport
+ * \inmodule QtAwsImportExport
  *
  *  <fullname>AWS Import/Export Service</fullname> AWS Import/Export accelerates transferring large amounts of data between
  *  the AWS cloud and portable storage devices that you mail to us. AWS Import/Export transfers data directly onto and off
@@ -42,11 +41,7 @@ namespace ImportExport {
  */
 
 /*!
- * @brief  Constructs a new ListJobsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListJobsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListJobsResponse::ListJobsResponse(
         const ListJobsRequest &request,
@@ -58,6 +53,9 @@ ListJobsResponse::ListJobsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListJobsRequest * ListJobsResponse::request() const
 {
     Q_D(const ListJobsResponse);
@@ -65,9 +63,8 @@ const ListJobsRequest * ListJobsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ImportExport ListJobs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ImportExport ListJobs \a response.
  */
 void ListJobsResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void ListJobsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ImportExport::ListJobsResponsePrivate
+ * \brief The ListJobsResponsePrivate class provides private implementation for ListJobsResponse.
  * \internal
  *
- * \class ListJobsResponsePrivate
- *
- * \brief Private implementation for ListJobsResponse.
+ * \inmodule QtAwsImportExport
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListJobsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListJobsResponse instance.
+ * Constructs a ListJobsResponsePrivate object with public implementation \a q.
  */
 ListJobsResponsePrivate::ListJobsResponsePrivate(
     ListJobsResponse * const q) : ImportExportResponsePrivate(q)
@@ -98,9 +91,7 @@ ListJobsResponsePrivate::ListJobsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ImportExport ListJobsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ImportExport ListJobs response element from \a xml.
  */
 void ListJobsResponsePrivate::parseListJobsResponse(QXmlStreamReader &xml)
 {

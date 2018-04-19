@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeAggregateIdFormatResponse
- *
  * \brief The DescribeAggregateIdFormatResponse class provides an interace for EC2 DescribeAggregateIdFormat responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeAggregateIdFormatResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeAggregateIdFormatResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeAggregateIdFormatResponse::DescribeAggregateIdFormatResponse(
         const DescribeAggregateIdFormatRequest &request,
@@ -59,6 +54,9 @@ DescribeAggregateIdFormatResponse::DescribeAggregateIdFormatResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeAggregateIdFormatRequest * DescribeAggregateIdFormatResponse::request() const
 {
     Q_D(const DescribeAggregateIdFormatResponse);
@@ -66,9 +64,8 @@ const DescribeAggregateIdFormatRequest * DescribeAggregateIdFormatResponse::requ
 }
 
 /*!
- * @brief  Parse a EC2 DescribeAggregateIdFormat response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeAggregateIdFormat \a response.
  */
 void DescribeAggregateIdFormatResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeAggregateIdFormatResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeAggregateIdFormatResponsePrivate
+ * \brief The DescribeAggregateIdFormatResponsePrivate class provides private implementation for DescribeAggregateIdFormatResponse.
  * \internal
  *
- * \class DescribeAggregateIdFormatResponsePrivate
- *
- * \brief Private implementation for DescribeAggregateIdFormatResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeAggregateIdFormatResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeAggregateIdFormatResponse instance.
+ * Constructs a DescribeAggregateIdFormatResponsePrivate object with public implementation \a q.
  */
 DescribeAggregateIdFormatResponsePrivate::DescribeAggregateIdFormatResponsePrivate(
     DescribeAggregateIdFormatResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeAggregateIdFormatResponsePrivate::DescribeAggregateIdFormatResponsePriva
 }
 
 /*!
- * @brief  Parse an EC2 DescribeAggregateIdFormatResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeAggregateIdFormat response element from \a xml.
  */
 void DescribeAggregateIdFormatResponsePrivate::parseDescribeAggregateIdFormatResponse(QXmlStreamReader &xml)
 {

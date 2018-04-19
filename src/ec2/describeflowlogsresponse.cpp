@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeFlowLogsResponse
- *
  * \brief The DescribeFlowLogsResponse class provides an interace for EC2 DescribeFlowLogs responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeFlowLogsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeFlowLogsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeFlowLogsResponse::DescribeFlowLogsResponse(
         const DescribeFlowLogsRequest &request,
@@ -59,6 +54,9 @@ DescribeFlowLogsResponse::DescribeFlowLogsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeFlowLogsRequest * DescribeFlowLogsResponse::request() const
 {
     Q_D(const DescribeFlowLogsResponse);
@@ -66,9 +64,8 @@ const DescribeFlowLogsRequest * DescribeFlowLogsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 DescribeFlowLogs response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeFlowLogs \a response.
  */
 void DescribeFlowLogsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeFlowLogsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeFlowLogsResponsePrivate
+ * \brief The DescribeFlowLogsResponsePrivate class provides private implementation for DescribeFlowLogsResponse.
  * \internal
  *
- * \class DescribeFlowLogsResponsePrivate
- *
- * \brief Private implementation for DescribeFlowLogsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFlowLogsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeFlowLogsResponse instance.
+ * Constructs a DescribeFlowLogsResponsePrivate object with public implementation \a q.
  */
 DescribeFlowLogsResponsePrivate::DescribeFlowLogsResponsePrivate(
     DescribeFlowLogsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeFlowLogsResponsePrivate::DescribeFlowLogsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 DescribeFlowLogsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeFlowLogs response element from \a xml.
  */
 void DescribeFlowLogsResponsePrivate::parseDescribeFlowLogsResponse(QXmlStreamReader &xml)
 {

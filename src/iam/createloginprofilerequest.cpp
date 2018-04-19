@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * CreateLoginProfileRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateLoginProfileRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a CreateLoginProfileRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 CreateLoginProfileRequestPrivate::CreateLoginProfileRequestPrivate(
     const IAMRequest::Action action, CreateLoginProfileRequest * const q)

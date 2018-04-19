@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutThirdPartyJobSuccessResultResponse : public CodePipelineRe
 public:
     PutThirdPartyJobSuccessResultResponse(const PutThirdPartyJobSuccessResultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutThirdPartyJobSuccessResultRequest * request() const;
+    virtual const PutThirdPartyJobSuccessResultRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutThirdPartyJobSuccessResultResponse)

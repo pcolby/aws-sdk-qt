@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLifecycleHookRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteLifecycleHookRequestPrivate object for AutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLifecycleHookRequestPrivate object for AutoScaling \a action,
+ * with public implementation \a q.
  */
 DeleteLifecycleHookRequestPrivate::DeleteLifecycleHookRequestPrivate(
     const AutoScalingRequest::Action action, DeleteLifecycleHookRequest * const q)

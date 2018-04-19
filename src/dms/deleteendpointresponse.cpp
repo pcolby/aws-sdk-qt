@@ -29,10 +29,9 @@ namespace DatabaseMigrationService {
 
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteEndpointResponse
- *
  * \brief The DeleteEndpointResponse class provides an interace for DatabaseMigrationService DeleteEndpoint responses.
  *
- * \ingroup DatabaseMigrationService
+ * \inmodule QtAwsDatabaseMigrationService
  *
  *  <fullname>AWS Database Migration Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace DatabaseMigrationService {
  */
 
 /*!
- * @brief  Constructs a new DeleteEndpointResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteEndpointResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteEndpointResponse::DeleteEndpointResponse(
         const DeleteEndpointRequest &request,
@@ -66,6 +61,9 @@ DeleteEndpointResponse::DeleteEndpointResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteEndpointRequest * DeleteEndpointResponse::request() const
 {
     Q_D(const DeleteEndpointResponse);
@@ -73,9 +71,8 @@ const DeleteEndpointRequest * DeleteEndpointResponse::request() const
 }
 
 /*!
- * @brief  Parse a DatabaseMigrationService DeleteEndpoint response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DatabaseMigrationService DeleteEndpoint \a response.
  */
 void DeleteEndpointResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteEndpointResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DatabaseMigrationService::DeleteEndpointResponsePrivate
+ * \brief The DeleteEndpointResponsePrivate class provides private implementation for DeleteEndpointResponse.
  * \internal
  *
- * \class DeleteEndpointResponsePrivate
- *
- * \brief Private implementation for DeleteEndpointResponse.
+ * \inmodule QtAwsDatabaseMigrationService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteEndpointResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteEndpointResponse instance.
+ * Constructs a DeleteEndpointResponsePrivate object with public implementation \a q.
  */
 DeleteEndpointResponsePrivate::DeleteEndpointResponsePrivate(
     DeleteEndpointResponse * const q) : DatabaseMigrationServiceResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteEndpointResponsePrivate::DeleteEndpointResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DatabaseMigrationService DeleteEndpointResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DatabaseMigrationService DeleteEndpoint response element from \a xml.
  */
 void DeleteEndpointResponsePrivate::parseDeleteEndpointResponse(QXmlStreamReader &xml)
 {

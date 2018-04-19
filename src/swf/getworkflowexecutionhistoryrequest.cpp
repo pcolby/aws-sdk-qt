@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetWorkflowExecutionHistoryRequest::response(
  */
 
 /*!
- *
- * Constructs a GetWorkflowExecutionHistoryRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a GetWorkflowExecutionHistoryRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 GetWorkflowExecutionHistoryRequestPrivate::GetWorkflowExecutionHistoryRequestPrivate(
     const SWFRequest::Action action, GetWorkflowExecutionHistoryRequest * const q)

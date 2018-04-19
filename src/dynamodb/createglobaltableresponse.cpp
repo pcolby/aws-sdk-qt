@@ -29,10 +29,9 @@ namespace DynamoDB {
 
 /*!
  * \class QtAws::DynamoDB::CreateGlobalTableResponse
- *
  * \brief The CreateGlobalTableResponse class provides an interace for DynamoDB CreateGlobalTable responses.
  *
- * \ingroup DynamoDB
+ * \inmodule QtAwsDynamoDB
  *
  *  <fullname>Amazon DynamoDB</fullname>
  * 
@@ -58,11 +57,7 @@ namespace DynamoDB {
  */
 
 /*!
- * @brief  Constructs a new CreateGlobalTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateGlobalTableResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateGlobalTableResponse::CreateGlobalTableResponse(
         const CreateGlobalTableRequest &request,
@@ -74,6 +69,9 @@ CreateGlobalTableResponse::CreateGlobalTableResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateGlobalTableRequest * CreateGlobalTableResponse::request() const
 {
     Q_D(const CreateGlobalTableResponse);
@@ -81,9 +79,8 @@ const CreateGlobalTableRequest * CreateGlobalTableResponse::request() const
 }
 
 /*!
- * @brief  Parse a DynamoDB CreateGlobalTable response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DynamoDB CreateGlobalTable \a response.
  */
 void CreateGlobalTableResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void CreateGlobalTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DynamoDB::CreateGlobalTableResponsePrivate
+ * \brief The CreateGlobalTableResponsePrivate class provides private implementation for CreateGlobalTableResponse.
  * \internal
  *
- * \class CreateGlobalTableResponsePrivate
- *
- * \brief Private implementation for CreateGlobalTableResponse.
+ * \inmodule QtAwsDynamoDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateGlobalTableResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateGlobalTableResponse instance.
+ * Constructs a CreateGlobalTableResponsePrivate object with public implementation \a q.
  */
 CreateGlobalTableResponsePrivate::CreateGlobalTableResponsePrivate(
     CreateGlobalTableResponse * const q) : DynamoDBResponsePrivate(q)
@@ -114,9 +107,7 @@ CreateGlobalTableResponsePrivate::CreateGlobalTableResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DynamoDB CreateGlobalTableResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DynamoDB CreateGlobalTable response element from \a xml.
  */
 void CreateGlobalTableResponsePrivate::parseCreateGlobalTableResponse(QXmlStreamReader &xml)
 {

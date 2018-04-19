@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * RunInstancesRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a RunInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a RunInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 RunInstancesRequestPrivate::RunInstancesRequestPrivate(
     const EC2Request::Action action, RunInstancesRequest * const q)

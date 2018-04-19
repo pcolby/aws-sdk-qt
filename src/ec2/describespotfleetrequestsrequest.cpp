@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSpotFleetRequestsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeSpotFleetRequestsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSpotFleetRequestsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeSpotFleetRequestsRequestPrivate::DescribeSpotFleetRequestsRequestPrivate(
     const EC2Request::Action action, DescribeSpotFleetRequestsRequest * const q)

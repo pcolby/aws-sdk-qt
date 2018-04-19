@@ -34,10 +34,10 @@ class QTAWS_EXPORT StopStreamProcessorResponse : public RekognitionResponse {
 public:
     StopStreamProcessorResponse(const StopStreamProcessorRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StopStreamProcessorRequest * request() const;
+    virtual const StopStreamProcessorRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StopStreamProcessorResponse)

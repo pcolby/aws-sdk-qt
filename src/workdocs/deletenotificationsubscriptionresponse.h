@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteNotificationSubscriptionResponse : public WorkDocsRespo
 public:
     DeleteNotificationSubscriptionResponse(const DeleteNotificationSubscriptionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteNotificationSubscriptionRequest * request() const;
+    virtual const DeleteNotificationSubscriptionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteNotificationSubscriptionResponse)

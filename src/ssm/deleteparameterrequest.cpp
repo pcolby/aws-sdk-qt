@@ -105,9 +105,8 @@ QtAws::Core::AwsAbstractResponse * DeleteParameterRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a DeleteParameterRequestPrivate object for SSM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteParameterRequestPrivate object for SSM \a action,
+ * with public implementation \a q.
  */
 DeleteParameterRequestPrivate::DeleteParameterRequestPrivate(
     const SSMRequest::Action action, DeleteParameterRequest * const q)

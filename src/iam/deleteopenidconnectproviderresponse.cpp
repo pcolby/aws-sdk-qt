@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeleteOpenIDConnectProviderResponse
- *
  * \brief The DeleteOpenIDConnectProviderResponse class provides an interace for IAM DeleteOpenIDConnectProvider responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeleteOpenIDConnectProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteOpenIDConnectProviderResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteOpenIDConnectProviderResponse::DeleteOpenIDConnectProviderResponse(
         const DeleteOpenIDConnectProviderRequest &request,
@@ -120,6 +115,9 @@ DeleteOpenIDConnectProviderResponse::DeleteOpenIDConnectProviderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteOpenIDConnectProviderRequest * DeleteOpenIDConnectProviderResponse::request() const
 {
     Q_D(const DeleteOpenIDConnectProviderResponse);
@@ -127,9 +125,8 @@ const DeleteOpenIDConnectProviderRequest * DeleteOpenIDConnectProviderResponse::
 }
 
 /*!
- * @brief  Parse a IAM DeleteOpenIDConnectProvider response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeleteOpenIDConnectProvider \a response.
  */
 void DeleteOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeleteOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeleteOpenIDConnectProviderResponsePrivate
+ * \brief The DeleteOpenIDConnectProviderResponsePrivate class provides private implementation for DeleteOpenIDConnectProviderResponse.
  * \internal
  *
- * \class DeleteOpenIDConnectProviderResponsePrivate
- *
- * \brief Private implementation for DeleteOpenIDConnectProviderResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteOpenIDConnectProviderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteOpenIDConnectProviderResponse instance.
+ * Constructs a DeleteOpenIDConnectProviderResponsePrivate object with public implementation \a q.
  */
 DeleteOpenIDConnectProviderResponsePrivate::DeleteOpenIDConnectProviderResponsePrivate(
     DeleteOpenIDConnectProviderResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeleteOpenIDConnectProviderResponsePrivate::DeleteOpenIDConnectProviderResponseP
 }
 
 /*!
- * @brief  Parse an IAM DeleteOpenIDConnectProviderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeleteOpenIDConnectProvider response element from \a xml.
  */
 void DeleteOpenIDConnectProviderResponsePrivate::parseDeleteOpenIDConnectProviderResponse(QXmlStreamReader &xml)
 {

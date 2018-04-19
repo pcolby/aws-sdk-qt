@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeClusterSubnetGroupsResponse
- *
  * \brief The DescribeClusterSubnetGroupsResponse class provides an interace for Redshift DescribeClusterSubnetGroups responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeClusterSubnetGroupsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeClusterSubnetGroupsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeClusterSubnetGroupsResponse::DescribeClusterSubnetGroupsResponse(
         const DescribeClusterSubnetGroupsRequest &request,
@@ -85,6 +80,9 @@ DescribeClusterSubnetGroupsResponse::DescribeClusterSubnetGroupsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeClusterSubnetGroupsRequest * DescribeClusterSubnetGroupsResponse::request() const
 {
     Q_D(const DescribeClusterSubnetGroupsResponse);
@@ -92,9 +90,8 @@ const DescribeClusterSubnetGroupsRequest * DescribeClusterSubnetGroupsResponse::
 }
 
 /*!
- * @brief  Parse a Redshift DescribeClusterSubnetGroups response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeClusterSubnetGroups \a response.
  */
 void DescribeClusterSubnetGroupsResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeClusterSubnetGroupsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeClusterSubnetGroupsResponsePrivate
+ * \brief The DescribeClusterSubnetGroupsResponsePrivate class provides private implementation for DescribeClusterSubnetGroupsResponse.
  * \internal
  *
- * \class DescribeClusterSubnetGroupsResponsePrivate
- *
- * \brief Private implementation for DescribeClusterSubnetGroupsResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClusterSubnetGroupsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeClusterSubnetGroupsResponse instance.
+ * Constructs a DescribeClusterSubnetGroupsResponsePrivate object with public implementation \a q.
  */
 DescribeClusterSubnetGroupsResponsePrivate::DescribeClusterSubnetGroupsResponsePrivate(
     DescribeClusterSubnetGroupsResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeClusterSubnetGroupsResponsePrivate::DescribeClusterSubnetGroupsResponseP
 }
 
 /*!
- * @brief  Parse an Redshift DescribeClusterSubnetGroupsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeClusterSubnetGroups response element from \a xml.
  */
 void DescribeClusterSubnetGroupsResponsePrivate::parseDescribeClusterSubnetGroupsResponse(QXmlStreamReader &xml)
 {

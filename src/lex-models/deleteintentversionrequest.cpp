@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteIntentVersionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DeleteIntentVersionRequestPrivate object for LexModelBuildingService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteIntentVersionRequestPrivate object for LexModelBuildingService \a action,
+ * with public implementation \a q.
  */
 DeleteIntentVersionRequestPrivate::DeleteIntentVersionRequestPrivate(
     const LexModelBuildingServiceRequest::Action action, DeleteIntentVersionRequest * const q)

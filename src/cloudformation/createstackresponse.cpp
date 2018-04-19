@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::CreateStackResponse
- *
  * \brief The CreateStackResponse class provides an interace for CloudFormation CreateStack responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new CreateStackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateStackResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateStackResponse::CreateStackResponse(
         const CreateStackRequest &request,
@@ -77,6 +72,9 @@ CreateStackResponse::CreateStackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateStackRequest * CreateStackResponse::request() const
 {
     Q_D(const CreateStackResponse);
@@ -84,9 +82,8 @@ const CreateStackRequest * CreateStackResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation CreateStack response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation CreateStack \a response.
  */
 void CreateStackResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void CreateStackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::CreateStackResponsePrivate
+ * \brief The CreateStackResponsePrivate class provides private implementation for CreateStackResponse.
  * \internal
  *
- * \class CreateStackResponsePrivate
- *
- * \brief Private implementation for CreateStackResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateStackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateStackResponse instance.
+ * Constructs a CreateStackResponsePrivate object with public implementation \a q.
  */
 CreateStackResponsePrivate::CreateStackResponsePrivate(
     CreateStackResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ CreateStackResponsePrivate::CreateStackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation CreateStackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation CreateStack response element from \a xml.
  */
 void CreateStackResponsePrivate::parseCreateStackResponse(QXmlStreamReader &xml)
 {

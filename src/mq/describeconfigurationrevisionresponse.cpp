@@ -29,10 +29,9 @@ namespace MQ {
 
 /*!
  * \class QtAws::MQ::DescribeConfigurationRevisionResponse
- *
  * \brief The DescribeConfigurationRevisionResponse class provides an interace for MQ DescribeConfigurationRevision responses.
  *
- * \ingroup MQ
+ * \inmodule QtAwsMQ
  *
  *  Amazon MQ is a managed message broker service for Apache ActiveMQ that makes it easy to set up and operate message
  *  brokers in the cloud. A message broker allows software applications and components to communicate using various
@@ -41,11 +40,7 @@ namespace MQ {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationRevisionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConfigurationRevisionResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConfigurationRevisionResponse::DescribeConfigurationRevisionResponse(
         const DescribeConfigurationRevisionRequest &request,
@@ -57,6 +52,9 @@ DescribeConfigurationRevisionResponse::DescribeConfigurationRevisionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConfigurationRevisionRequest * DescribeConfigurationRevisionResponse::request() const
 {
     Q_D(const DescribeConfigurationRevisionResponse);
@@ -64,9 +62,8 @@ const DescribeConfigurationRevisionRequest * DescribeConfigurationRevisionRespon
 }
 
 /*!
- * @brief  Parse a MQ DescribeConfigurationRevision response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MQ DescribeConfigurationRevision \a response.
  */
 void DescribeConfigurationRevisionResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void DescribeConfigurationRevisionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MQ::DescribeConfigurationRevisionResponsePrivate
+ * \brief The DescribeConfigurationRevisionResponsePrivate class provides private implementation for DescribeConfigurationRevisionResponse.
  * \internal
  *
- * \class DescribeConfigurationRevisionResponsePrivate
- *
- * \brief Private implementation for DescribeConfigurationRevisionResponse.
+ * \inmodule QtAwsMQ
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationRevisionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConfigurationRevisionResponse instance.
+ * Constructs a DescribeConfigurationRevisionResponsePrivate object with public implementation \a q.
  */
 DescribeConfigurationRevisionResponsePrivate::DescribeConfigurationRevisionResponsePrivate(
     DescribeConfigurationRevisionResponse * const q) : MQResponsePrivate(q)
@@ -97,9 +90,7 @@ DescribeConfigurationRevisionResponsePrivate::DescribeConfigurationRevisionRespo
 }
 
 /*!
- * @brief  Parse an MQ DescribeConfigurationRevisionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MQ DescribeConfigurationRevision response element from \a xml.
  */
 void DescribeConfigurationRevisionResponsePrivate::parseDescribeConfigurationRevisionResponse(QXmlStreamReader &xml)
 {

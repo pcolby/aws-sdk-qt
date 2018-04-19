@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateAuthEventFeedbackResponse
- *
  * \brief The UpdateAuthEventFeedbackResponse class provides an interace for CognitoIdentityProvider UpdateAuthEventFeedback responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new UpdateAuthEventFeedbackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateAuthEventFeedbackResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateAuthEventFeedbackResponse::UpdateAuthEventFeedbackResponse(
         const UpdateAuthEventFeedbackRequest &request,
@@ -65,6 +60,9 @@ UpdateAuthEventFeedbackResponse::UpdateAuthEventFeedbackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateAuthEventFeedbackRequest * UpdateAuthEventFeedbackResponse::request() const
 {
     Q_D(const UpdateAuthEventFeedbackResponse);
@@ -72,9 +70,8 @@ const UpdateAuthEventFeedbackRequest * UpdateAuthEventFeedbackResponse::request(
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider UpdateAuthEventFeedback response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider UpdateAuthEventFeedback \a response.
  */
 void UpdateAuthEventFeedbackResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void UpdateAuthEventFeedbackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::UpdateAuthEventFeedbackResponsePrivate
+ * \brief The UpdateAuthEventFeedbackResponsePrivate class provides private implementation for UpdateAuthEventFeedbackResponse.
  * \internal
  *
- * \class UpdateAuthEventFeedbackResponsePrivate
- *
- * \brief Private implementation for UpdateAuthEventFeedbackResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateAuthEventFeedbackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateAuthEventFeedbackResponse instance.
+ * Constructs a UpdateAuthEventFeedbackResponsePrivate object with public implementation \a q.
  */
 UpdateAuthEventFeedbackResponsePrivate::UpdateAuthEventFeedbackResponsePrivate(
     UpdateAuthEventFeedbackResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ UpdateAuthEventFeedbackResponsePrivate::UpdateAuthEventFeedbackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider UpdateAuthEventFeedbackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider UpdateAuthEventFeedback response element from \a xml.
  */
 void UpdateAuthEventFeedbackResponsePrivate::parseUpdateAuthEventFeedbackResponse(QXmlStreamReader &xml)
 {

@@ -517,9 +517,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEC2InstanceLimitsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a DescribeEC2InstanceLimitsRequestPrivate object for GameLift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEC2InstanceLimitsRequestPrivate object for GameLift \a action,
+ * with public implementation \a q.
  */
 DescribeEC2InstanceLimitsRequestPrivate::DescribeEC2InstanceLimitsRequestPrivate(
     const GameLiftRequest::Action action, DescribeEC2InstanceLimitsRequest * const q)

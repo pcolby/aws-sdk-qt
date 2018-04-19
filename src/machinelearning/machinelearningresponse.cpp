@@ -28,16 +28,13 @@ namespace MachineLearning {
 
 /*!
  * \class QtAws::MachineLearning::MachineLearningResponse
- *
  * \brief The MachineLearningResponse class provides an interface for MachineLearning responses.
  *
- * \ingroup MachineLearning
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @brief  Constructs a new MachineLearningResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a MachineLearningResponse object with parent \a parent.
  */
 MachineLearningResponse::MachineLearningResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new MachineLearningResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ MachineLearningResponse::MachineLearningResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MachineLearningResponse object.
- *
+ * \internal
+ * Constructs a MachineLearningResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MachineLearningResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 MachineLearningResponse::MachineLearningResponse(MachineLearningResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ MachineLearningResponse::MachineLearningResponse(MachineLearningResponsePrivate 
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void MachineLearningResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void MachineLearningResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::MachineLearning::MachineLearningResponsePrivate
+ * \brief The MachineLearningResponsePrivate class provides private implementation for MachineLearningResponse.
+ * \internal
  *
- * @class  MachineLearningResponsePrivate
- *
- * @brief  Private implementation for MachineLearningResponse.
+ * \inmodule QtAwsMachineLearning
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new MachineLearningResponsePrivate object.
- *
- * @param  q  Pointer to this object's public MachineLearningResponse instance.
+ * Constructs a MachineLearningResponsePrivate object with public implementation \a q.
  */
 MachineLearningResponsePrivate::MachineLearningResponsePrivate(
     MachineLearningResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

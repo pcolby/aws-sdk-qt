@@ -29,10 +29,9 @@ namespace LexModelBuildingService {
 
 /*!
  * \class QtAws::LexModelBuildingService::DeleteIntentVersionResponse
- *
  * \brief The DeleteIntentVersionResponse class provides an interace for LexModelBuildingService DeleteIntentVersion responses.
  *
- * \ingroup LexModelBuildingService
+ * \inmodule QtAwsLexModelBuildingService
  *
  *  <fullname>Amazon Lex Build-Time Actions</fullname>
  * 
@@ -43,11 +42,7 @@ namespace LexModelBuildingService {
  */
 
 /*!
- * @brief  Constructs a new DeleteIntentVersionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteIntentVersionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteIntentVersionResponse::DeleteIntentVersionResponse(
         const DeleteIntentVersionRequest &request,
@@ -59,6 +54,9 @@ DeleteIntentVersionResponse::DeleteIntentVersionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteIntentVersionRequest * DeleteIntentVersionResponse::request() const
 {
     Q_D(const DeleteIntentVersionResponse);
@@ -66,9 +64,8 @@ const DeleteIntentVersionRequest * DeleteIntentVersionResponse::request() const
 }
 
 /*!
- * @brief  Parse a LexModelBuildingService DeleteIntentVersion response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful LexModelBuildingService DeleteIntentVersion \a response.
  */
 void DeleteIntentVersionResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DeleteIntentVersionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::LexModelBuildingService::DeleteIntentVersionResponsePrivate
+ * \brief The DeleteIntentVersionResponsePrivate class provides private implementation for DeleteIntentVersionResponse.
  * \internal
  *
- * \class DeleteIntentVersionResponsePrivate
- *
- * \brief Private implementation for DeleteIntentVersionResponse.
+ * \inmodule QtAwsLexModelBuildingService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteIntentVersionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteIntentVersionResponse instance.
+ * Constructs a DeleteIntentVersionResponsePrivate object with public implementation \a q.
  */
 DeleteIntentVersionResponsePrivate::DeleteIntentVersionResponsePrivate(
     DeleteIntentVersionResponse * const q) : LexModelBuildingServiceResponsePrivate(q)
@@ -99,9 +92,7 @@ DeleteIntentVersionResponsePrivate::DeleteIntentVersionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an LexModelBuildingService DeleteIntentVersionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a LexModelBuildingService DeleteIntentVersion response element from \a xml.
  */
 void DeleteIntentVersionResponsePrivate::parseDeleteIntentVersionResponse(QXmlStreamReader &xml)
 {

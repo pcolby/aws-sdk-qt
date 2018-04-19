@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * AssociateKmsKeyRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a AssociateKmsKeyRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a AssociateKmsKeyRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 AssociateKmsKeyRequestPrivate::AssociateKmsKeyRequestPrivate(
     const CloudWatchLogsRequest::Action action, AssociateKmsKeyRequest * const q)

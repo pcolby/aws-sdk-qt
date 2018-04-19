@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::PutAutoScalingPolicyResponse
- *
  * \brief The PutAutoScalingPolicyResponse class provides an interace for EMR PutAutoScalingPolicy responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new PutAutoScalingPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutAutoScalingPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 PutAutoScalingPolicyResponse::PutAutoScalingPolicyResponse(
         const PutAutoScalingPolicyRequest &request,
@@ -58,6 +53,9 @@ PutAutoScalingPolicyResponse::PutAutoScalingPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutAutoScalingPolicyRequest * PutAutoScalingPolicyResponse::request() const
 {
     Q_D(const PutAutoScalingPolicyResponse);
@@ -65,9 +63,8 @@ const PutAutoScalingPolicyRequest * PutAutoScalingPolicyResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EMR PutAutoScalingPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR PutAutoScalingPolicy \a response.
  */
 void PutAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void PutAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::PutAutoScalingPolicyResponsePrivate
+ * \brief The PutAutoScalingPolicyResponsePrivate class provides private implementation for PutAutoScalingPolicyResponse.
  * \internal
  *
- * \class PutAutoScalingPolicyResponsePrivate
- *
- * \brief Private implementation for PutAutoScalingPolicyResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutAutoScalingPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutAutoScalingPolicyResponse instance.
+ * Constructs a PutAutoScalingPolicyResponsePrivate object with public implementation \a q.
  */
 PutAutoScalingPolicyResponsePrivate::PutAutoScalingPolicyResponsePrivate(
     PutAutoScalingPolicyResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ PutAutoScalingPolicyResponsePrivate::PutAutoScalingPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR PutAutoScalingPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR PutAutoScalingPolicy response element from \a xml.
  */
 void PutAutoScalingPolicyResponsePrivate::parsePutAutoScalingPolicyResponse(QXmlStreamReader &xml)
 {

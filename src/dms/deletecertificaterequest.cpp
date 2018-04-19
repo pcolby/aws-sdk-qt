@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DeleteCertificateRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteCertificateRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DeleteCertificateRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DeleteCertificateRequestPrivate::DeleteCertificateRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DeleteCertificateRequest * const q)

@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeletePresetRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeletePresetRequestPrivate object for MediaConvert \a action with,
- * public implementation \a q.
+ * Constructs a DeletePresetRequestPrivate object for MediaConvert \a action,
+ * with public implementation \a q.
  */
 DeletePresetRequestPrivate::DeletePresetRequestPrivate(
     const MediaConvertRequest::Action action, DeletePresetRequest * const q)

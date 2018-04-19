@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * SetEndpointAttributesRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a SetEndpointAttributesRequestPrivate object for SNS \a action with,
- * public implementation \a q.
+ * Constructs a SetEndpointAttributesRequestPrivate object for SNS \a action,
+ * with public implementation \a q.
  */
 SetEndpointAttributesRequestPrivate::SetEndpointAttributesRequestPrivate(
     const SNSRequest::Action action, SetEndpointAttributesRequest * const q)

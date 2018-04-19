@@ -34,10 +34,10 @@ class QTAWS_EXPORT ActivateUserResponse : public WorkDocsResponse {
 public:
     ActivateUserResponse(const ActivateUserRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ActivateUserRequest * request() const;
+    virtual const ActivateUserRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ActivateUserResponse)

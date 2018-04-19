@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateContinuousBackupsResponse : public DynamoDBResponse {
 public:
     UpdateContinuousBackupsResponse(const UpdateContinuousBackupsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateContinuousBackupsRequest * request() const;
+    virtual const UpdateContinuousBackupsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateContinuousBackupsResponse)

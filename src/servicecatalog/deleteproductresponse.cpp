@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DeleteProductResponse
- *
  * \brief The DeleteProductResponse class provides an interace for ServiceCatalog DeleteProduct responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DeleteProductResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteProductResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteProductResponse::DeleteProductResponse(
         const DeleteProductRequest &request,
@@ -61,6 +56,9 @@ DeleteProductResponse::DeleteProductResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteProductRequest * DeleteProductResponse::request() const
 {
     Q_D(const DeleteProductResponse);
@@ -68,9 +66,8 @@ const DeleteProductRequest * DeleteProductResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DeleteProduct response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DeleteProduct \a response.
  */
 void DeleteProductResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeleteProductResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DeleteProductResponsePrivate
+ * \brief The DeleteProductResponsePrivate class provides private implementation for DeleteProductResponse.
  * \internal
  *
- * \class DeleteProductResponsePrivate
- *
- * \brief Private implementation for DeleteProductResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProductResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteProductResponse instance.
+ * Constructs a DeleteProductResponsePrivate object with public implementation \a q.
  */
 DeleteProductResponsePrivate::DeleteProductResponsePrivate(
     DeleteProductResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DeleteProductResponsePrivate::DeleteProductResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DeleteProductResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DeleteProduct response element from \a xml.
  */
 void DeleteProductResponsePrivate::parseDeleteProductResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace CognitoIdentity {
 
 /*!
  * \class QtAws::CognitoIdentity::UpdateIdentityPoolResponse
- *
  * \brief The UpdateIdentityPoolResponse class provides an interace for CognitoIdentity UpdateIdentityPool responses.
  *
- * \ingroup CognitoIdentity
+ * \inmodule QtAwsCognitoIdentity
  *
  *  <fullname>Amazon Cognito</fullname>
  * 
@@ -77,11 +76,7 @@ namespace CognitoIdentity {
  */
 
 /*!
- * @brief  Constructs a new UpdateIdentityPoolResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateIdentityPoolResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateIdentityPoolResponse::UpdateIdentityPoolResponse(
         const UpdateIdentityPoolRequest &request,
@@ -93,6 +88,9 @@ UpdateIdentityPoolResponse::UpdateIdentityPoolResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateIdentityPoolRequest * UpdateIdentityPoolResponse::request() const
 {
     Q_D(const UpdateIdentityPoolResponse);
@@ -100,9 +98,8 @@ const UpdateIdentityPoolRequest * UpdateIdentityPoolResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentity UpdateIdentityPool response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentity UpdateIdentityPool \a response.
  */
 void UpdateIdentityPoolResponse::parseSuccess(QIODevice &response)
 {
@@ -112,19 +109,15 @@ void UpdateIdentityPoolResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentity::UpdateIdentityPoolResponsePrivate
+ * \brief The UpdateIdentityPoolResponsePrivate class provides private implementation for UpdateIdentityPoolResponse.
  * \internal
  *
- * \class UpdateIdentityPoolResponsePrivate
- *
- * \brief Private implementation for UpdateIdentityPoolResponse.
+ * \inmodule QtAwsCognitoIdentity
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateIdentityPoolResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateIdentityPoolResponse instance.
+ * Constructs a UpdateIdentityPoolResponsePrivate object with public implementation \a q.
  */
 UpdateIdentityPoolResponsePrivate::UpdateIdentityPoolResponsePrivate(
     UpdateIdentityPoolResponse * const q) : CognitoIdentityResponsePrivate(q)
@@ -133,9 +126,7 @@ UpdateIdentityPoolResponsePrivate::UpdateIdentityPoolResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentity UpdateIdentityPoolResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentity UpdateIdentityPool response element from \a xml.
  */
 void UpdateIdentityPoolResponsePrivate::parseUpdateIdentityPoolResponse(QXmlStreamReader &xml)
 {

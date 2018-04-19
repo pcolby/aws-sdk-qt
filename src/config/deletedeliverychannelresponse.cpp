@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::DeleteDeliveryChannelResponse
- *
  * \brief The DeleteDeliveryChannelResponse class provides an interace for ConfigService DeleteDeliveryChannel responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new DeleteDeliveryChannelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDeliveryChannelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDeliveryChannelResponse::DeleteDeliveryChannelResponse(
         const DeleteDeliveryChannelRequest &request,
@@ -78,6 +73,9 @@ DeleteDeliveryChannelResponse::DeleteDeliveryChannelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDeliveryChannelRequest * DeleteDeliveryChannelResponse::request() const
 {
     Q_D(const DeleteDeliveryChannelResponse);
@@ -85,9 +83,8 @@ const DeleteDeliveryChannelRequest * DeleteDeliveryChannelResponse::request() co
 }
 
 /*!
- * @brief  Parse a ConfigService DeleteDeliveryChannel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService DeleteDeliveryChannel \a response.
  */
 void DeleteDeliveryChannelResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void DeleteDeliveryChannelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::DeleteDeliveryChannelResponsePrivate
+ * \brief The DeleteDeliveryChannelResponsePrivate class provides private implementation for DeleteDeliveryChannelResponse.
  * \internal
  *
- * \class DeleteDeliveryChannelResponsePrivate
- *
- * \brief Private implementation for DeleteDeliveryChannelResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDeliveryChannelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDeliveryChannelResponse instance.
+ * Constructs a DeleteDeliveryChannelResponsePrivate object with public implementation \a q.
  */
 DeleteDeliveryChannelResponsePrivate::DeleteDeliveryChannelResponsePrivate(
     DeleteDeliveryChannelResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ DeleteDeliveryChannelResponsePrivate::DeleteDeliveryChannelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ConfigService DeleteDeliveryChannelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService DeleteDeliveryChannel response element from \a xml.
  */
 void DeleteDeliveryChannelResponsePrivate::parseDeleteDeliveryChannelResponse(QXmlStreamReader &xml)
 {

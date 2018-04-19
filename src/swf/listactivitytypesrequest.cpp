@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * ListActivityTypesRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a ListActivityTypesRequestPrivate object for SWF \a action with,
- * public implementation \a q.
+ * Constructs a ListActivityTypesRequestPrivate object for SWF \a action,
+ * with public implementation \a q.
  */
 ListActivityTypesRequestPrivate::ListActivityTypesRequestPrivate(
     const SWFRequest::Action action, ListActivityTypesRequest * const q)

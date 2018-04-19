@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * DescribeSubscribersForNotificationRequest::re
  */
 
 /*!
- *
- * Constructs a DescribeSubscribersForNotificationRequestPrivate object for Budgets \a action with,
- * public implementation \a q.
+ * Constructs a DescribeSubscribersForNotificationRequestPrivate object for Budgets \a action,
+ * with public implementation \a q.
  */
 DescribeSubscribersForNotificationRequestPrivate::DescribeSubscribersForNotificationRequestPrivate(
     const BudgetsRequest::Action action, DescribeSubscribersForNotificationRequest * const q)

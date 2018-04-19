@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::ModifyClusterResponse
- *
  * \brief The ModifyClusterResponse class provides an interace for Redshift ModifyCluster responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new ModifyClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyClusterResponse::ModifyClusterResponse(
         const ModifyClusterRequest &request,
@@ -85,6 +80,9 @@ ModifyClusterResponse::ModifyClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyClusterRequest * ModifyClusterResponse::request() const
 {
     Q_D(const ModifyClusterResponse);
@@ -92,9 +90,8 @@ const ModifyClusterRequest * ModifyClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a Redshift ModifyCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift ModifyCluster \a response.
  */
 void ModifyClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void ModifyClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::ModifyClusterResponsePrivate
+ * \brief The ModifyClusterResponsePrivate class provides private implementation for ModifyClusterResponse.
  * \internal
  *
- * \class ModifyClusterResponsePrivate
- *
- * \brief Private implementation for ModifyClusterResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyClusterResponse instance.
+ * Constructs a ModifyClusterResponsePrivate object with public implementation \a q.
  */
 ModifyClusterResponsePrivate::ModifyClusterResponsePrivate(
     ModifyClusterResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ ModifyClusterResponsePrivate::ModifyClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift ModifyClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift ModifyCluster response element from \a xml.
  */
 void ModifyClusterResponsePrivate::parseModifyClusterResponse(QXmlStreamReader &xml)
 {

@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * GetDevicePoolCompatibilityRequest::response(Q
  */
 
 /*!
- *
- * Constructs a GetDevicePoolCompatibilityRequestPrivate object for DeviceFarm \a action with,
- * public implementation \a q.
+ * Constructs a GetDevicePoolCompatibilityRequestPrivate object for DeviceFarm \a action,
+ * with public implementation \a q.
  */
 GetDevicePoolCompatibilityRequestPrivate::GetDevicePoolCompatibilityRequestPrivate(
     const DeviceFarmRequest::Action action, GetDevicePoolCompatibilityRequest * const q)

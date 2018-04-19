@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * SearchProvisionedProductsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a SearchProvisionedProductsRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a SearchProvisionedProductsRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 SearchProvisionedProductsRequestPrivate::SearchProvisionedProductsRequestPrivate(
     const ServiceCatalogRequest::Action action, SearchProvisionedProductsRequest * const q)

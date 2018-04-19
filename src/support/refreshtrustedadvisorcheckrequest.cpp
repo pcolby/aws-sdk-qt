@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * RefreshTrustedAdvisorCheckRequest::response(Q
  */
 
 /*!
- *
- * Constructs a RefreshTrustedAdvisorCheckRequestPrivate object for Support \a action with,
- * public implementation \a q.
+ * Constructs a RefreshTrustedAdvisorCheckRequestPrivate object for Support \a action,
+ * with public implementation \a q.
  */
 RefreshTrustedAdvisorCheckRequestPrivate::RefreshTrustedAdvisorCheckRequestPrivate(
     const SupportRequest::Action action, RefreshTrustedAdvisorCheckRequest * const q)

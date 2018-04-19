@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetRegexPatternSetRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a GetRegexPatternSetRequestPrivate object for WAF \a action with,
- * public implementation \a q.
+ * Constructs a GetRegexPatternSetRequestPrivate object for WAF \a action,
+ * with public implementation \a q.
  */
 GetRegexPatternSetRequestPrivate::GetRegexPatternSetRequestPrivate(
     const WAFRequest::Action action, GetRegexPatternSetRequest * const q)

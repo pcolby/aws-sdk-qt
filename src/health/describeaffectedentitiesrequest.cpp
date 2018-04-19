@@ -142,9 +142,8 @@ QtAws::Core::AwsAbstractResponse * DescribeAffectedEntitiesRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DescribeAffectedEntitiesRequestPrivate object for Health \a action with,
- * public implementation \a q.
+ * Constructs a DescribeAffectedEntitiesRequestPrivate object for Health \a action,
+ * with public implementation \a q.
  */
 DescribeAffectedEntitiesRequestPrivate::DescribeAffectedEntitiesRequestPrivate(
     const HealthRequest::Action action, DescribeAffectedEntitiesRequest * const q)

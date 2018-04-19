@@ -29,10 +29,9 @@ namespace Cloud9 {
 
 /*!
  * \class QtAws::Cloud9::DescribeEnvironmentMembershipsResponse
- *
  * \brief The DescribeEnvironmentMembershipsResponse class provides an interace for Cloud9 DescribeEnvironmentMemberships responses.
  *
- * \ingroup Cloud9
+ * \inmodule QtAwsCloud9
  *
  *  <fullname>AWS Cloud9</fullname>
  * 
@@ -93,11 +92,7 @@ namespace Cloud9 {
  */
 
 /*!
- * @brief  Constructs a new DescribeEnvironmentMembershipsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeEnvironmentMembershipsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeEnvironmentMembershipsResponse::DescribeEnvironmentMembershipsResponse(
         const DescribeEnvironmentMembershipsRequest &request,
@@ -109,6 +104,9 @@ DescribeEnvironmentMembershipsResponse::DescribeEnvironmentMembershipsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeEnvironmentMembershipsRequest * DescribeEnvironmentMembershipsResponse::request() const
 {
     Q_D(const DescribeEnvironmentMembershipsResponse);
@@ -116,9 +114,8 @@ const DescribeEnvironmentMembershipsRequest * DescribeEnvironmentMembershipsResp
 }
 
 /*!
- * @brief  Parse a Cloud9 DescribeEnvironmentMemberships response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Cloud9 DescribeEnvironmentMemberships \a response.
  */
 void DescribeEnvironmentMembershipsResponse::parseSuccess(QIODevice &response)
 {
@@ -128,19 +125,15 @@ void DescribeEnvironmentMembershipsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Cloud9::DescribeEnvironmentMembershipsResponsePrivate
+ * \brief The DescribeEnvironmentMembershipsResponsePrivate class provides private implementation for DescribeEnvironmentMembershipsResponse.
  * \internal
  *
- * \class DescribeEnvironmentMembershipsResponsePrivate
- *
- * \brief Private implementation for DescribeEnvironmentMembershipsResponse.
+ * \inmodule QtAwsCloud9
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeEnvironmentMembershipsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeEnvironmentMembershipsResponse instance.
+ * Constructs a DescribeEnvironmentMembershipsResponsePrivate object with public implementation \a q.
  */
 DescribeEnvironmentMembershipsResponsePrivate::DescribeEnvironmentMembershipsResponsePrivate(
     DescribeEnvironmentMembershipsResponse * const q) : Cloud9ResponsePrivate(q)
@@ -149,9 +142,7 @@ DescribeEnvironmentMembershipsResponsePrivate::DescribeEnvironmentMembershipsRes
 }
 
 /*!
- * @brief  Parse an Cloud9 DescribeEnvironmentMembershipsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Cloud9 DescribeEnvironmentMemberships response element from \a xml.
  */
 void DescribeEnvironmentMembershipsResponsePrivate::parseDescribeEnvironmentMembershipsResponse(QXmlStreamReader &xml)
 {

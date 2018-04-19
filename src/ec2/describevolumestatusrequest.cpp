@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeVolumeStatusRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeVolumeStatusRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeVolumeStatusRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeVolumeStatusRequestPrivate::DescribeVolumeStatusRequestPrivate(
     const EC2Request::Action action, DescribeVolumeStatusRequest * const q)

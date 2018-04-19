@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::AssociateWebACLResponse
- *
  * \brief The AssociateWebACLResponse class provides an interace for WAFRegional AssociateWebACL responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new AssociateWebACLResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AssociateWebACLResponse object for \a reply to \a request, with parent \a parent.
  */
 AssociateWebACLResponse::AssociateWebACLResponse(
         const AssociateWebACLRequest &request,
@@ -62,6 +57,9 @@ AssociateWebACLResponse::AssociateWebACLResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AssociateWebACLRequest * AssociateWebACLResponse::request() const
 {
     Q_D(const AssociateWebACLResponse);
@@ -69,9 +67,8 @@ const AssociateWebACLRequest * AssociateWebACLResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional AssociateWebACL response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional AssociateWebACL \a response.
  */
 void AssociateWebACLResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void AssociateWebACLResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::AssociateWebACLResponsePrivate
+ * \brief The AssociateWebACLResponsePrivate class provides private implementation for AssociateWebACLResponse.
  * \internal
  *
- * \class AssociateWebACLResponsePrivate
- *
- * \brief Private implementation for AssociateWebACLResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AssociateWebACLResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AssociateWebACLResponse instance.
+ * Constructs a AssociateWebACLResponsePrivate object with public implementation \a q.
  */
 AssociateWebACLResponsePrivate::AssociateWebACLResponsePrivate(
     AssociateWebACLResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ AssociateWebACLResponsePrivate::AssociateWebACLResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional AssociateWebACLResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional AssociateWebACL response element from \a xml.
  */
 void AssociateWebACLResponsePrivate::parseAssociateWebACLResponse(QXmlStreamReader &xml)
 {

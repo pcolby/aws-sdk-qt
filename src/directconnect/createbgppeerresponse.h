@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateBGPPeerResponse : public DirectConnectResponse {
 public:
     CreateBGPPeerResponse(const CreateBGPPeerRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateBGPPeerRequest * request() const;
+    virtual const CreateBGPPeerRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateBGPPeerResponse)

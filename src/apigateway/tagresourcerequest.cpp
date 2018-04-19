@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a TagResourceRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a TagResourceRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const APIGatewayRequest::Action action, TagResourceRequest * const q)

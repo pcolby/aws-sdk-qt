@@ -103,9 +103,8 @@ QtAws::Core::AwsAbstractResponse * CancelUpdateStackRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CancelUpdateStackRequestPrivate object for CloudFormation \a action with,
- * public implementation \a q.
+ * Constructs a CancelUpdateStackRequestPrivate object for CloudFormation \a action,
+ * with public implementation \a q.
  */
 CancelUpdateStackRequestPrivate::CancelUpdateStackRequestPrivate(
     const CloudFormationRequest::Action action, CancelUpdateStackRequest * const q)

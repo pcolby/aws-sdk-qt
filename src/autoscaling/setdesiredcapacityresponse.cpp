@@ -29,10 +29,9 @@ namespace AutoScaling {
 
 /*!
  * \class QtAws::AutoScaling::SetDesiredCapacityResponse
- *
  * \brief The SetDesiredCapacityResponse class provides an interace for AutoScaling SetDesiredCapacity responses.
  *
- * \ingroup AutoScaling
+ * \inmodule QtAwsAutoScaling
  *
  *  <fullname>Amazon EC2 Auto Scaling</fullname>
  * 
@@ -44,11 +43,7 @@ namespace AutoScaling {
  */
 
 /*!
- * @brief  Constructs a new SetDesiredCapacityResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetDesiredCapacityResponse object for \a reply to \a request, with parent \a parent.
  */
 SetDesiredCapacityResponse::SetDesiredCapacityResponse(
         const SetDesiredCapacityRequest &request,
@@ -60,6 +55,9 @@ SetDesiredCapacityResponse::SetDesiredCapacityResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetDesiredCapacityRequest * SetDesiredCapacityResponse::request() const
 {
     Q_D(const SetDesiredCapacityResponse);
@@ -67,9 +65,8 @@ const SetDesiredCapacityRequest * SetDesiredCapacityResponse::request() const
 }
 
 /*!
- * @brief  Parse a AutoScaling SetDesiredCapacity response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful AutoScaling SetDesiredCapacity \a response.
  */
 void SetDesiredCapacityResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void SetDesiredCapacityResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::AutoScaling::SetDesiredCapacityResponsePrivate
+ * \brief The SetDesiredCapacityResponsePrivate class provides private implementation for SetDesiredCapacityResponse.
  * \internal
  *
- * \class SetDesiredCapacityResponsePrivate
- *
- * \brief Private implementation for SetDesiredCapacityResponse.
+ * \inmodule QtAwsAutoScaling
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetDesiredCapacityResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetDesiredCapacityResponse instance.
+ * Constructs a SetDesiredCapacityResponsePrivate object with public implementation \a q.
  */
 SetDesiredCapacityResponsePrivate::SetDesiredCapacityResponsePrivate(
     SetDesiredCapacityResponse * const q) : AutoScalingResponsePrivate(q)
@@ -100,9 +93,7 @@ SetDesiredCapacityResponsePrivate::SetDesiredCapacityResponsePrivate(
 }
 
 /*!
- * @brief  Parse an AutoScaling SetDesiredCapacityResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a AutoScaling SetDesiredCapacity response element from \a xml.
  */
 void SetDesiredCapacityResponsePrivate::parseSetDesiredCapacityResponse(QXmlStreamReader &xml)
 {

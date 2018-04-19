@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::DescribeStacksResponse
- *
  * \brief The DescribeStacksResponse class provides an interace for OpsWorks DescribeStacks responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new DescribeStacksResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeStacksResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeStacksResponse::DescribeStacksResponse(
         const DescribeStacksRequest &request,
@@ -161,6 +156,9 @@ DescribeStacksResponse::DescribeStacksResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeStacksRequest * DescribeStacksResponse::request() const
 {
     Q_D(const DescribeStacksResponse);
@@ -168,9 +166,8 @@ const DescribeStacksRequest * DescribeStacksResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks DescribeStacks response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks DescribeStacks \a response.
  */
 void DescribeStacksResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void DescribeStacksResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::DescribeStacksResponsePrivate
+ * \brief The DescribeStacksResponsePrivate class provides private implementation for DescribeStacksResponse.
  * \internal
  *
- * \class DescribeStacksResponsePrivate
- *
- * \brief Private implementation for DescribeStacksResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeStacksResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeStacksResponse instance.
+ * Constructs a DescribeStacksResponsePrivate object with public implementation \a q.
  */
 DescribeStacksResponsePrivate::DescribeStacksResponsePrivate(
     DescribeStacksResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ DescribeStacksResponsePrivate::DescribeStacksResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks DescribeStacksResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks DescribeStacks response element from \a xml.
  */
 void DescribeStacksResponsePrivate::parseDescribeStacksResponse(QXmlStreamReader &xml)
 {

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * ListCertificatesByCARequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a ListCertificatesByCARequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a ListCertificatesByCARequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 ListCertificatesByCARequestPrivate::ListCertificatesByCARequestPrivate(
     const IoTRequest::Action action, ListCertificatesByCARequest * const q)

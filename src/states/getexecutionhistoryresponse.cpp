@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::GetExecutionHistoryResponse
- *
  * \brief The GetExecutionHistoryResponse class provides an interace for SFN GetExecutionHistory responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new GetExecutionHistoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetExecutionHistoryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetExecutionHistoryResponse::GetExecutionHistoryResponse(
         const GetExecutionHistoryRequest &request,
@@ -74,6 +69,9 @@ GetExecutionHistoryResponse::GetExecutionHistoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetExecutionHistoryRequest * GetExecutionHistoryResponse::request() const
 {
     Q_D(const GetExecutionHistoryResponse);
@@ -81,9 +79,8 @@ const GetExecutionHistoryRequest * GetExecutionHistoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN GetExecutionHistory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN GetExecutionHistory \a response.
  */
 void GetExecutionHistoryResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void GetExecutionHistoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::GetExecutionHistoryResponsePrivate
+ * \brief The GetExecutionHistoryResponsePrivate class provides private implementation for GetExecutionHistoryResponse.
  * \internal
  *
- * \class GetExecutionHistoryResponsePrivate
- *
- * \brief Private implementation for GetExecutionHistoryResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetExecutionHistoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetExecutionHistoryResponse instance.
+ * Constructs a GetExecutionHistoryResponsePrivate object with public implementation \a q.
  */
 GetExecutionHistoryResponsePrivate::GetExecutionHistoryResponsePrivate(
     GetExecutionHistoryResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ GetExecutionHistoryResponsePrivate::GetExecutionHistoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN GetExecutionHistoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN GetExecutionHistory response element from \a xml.
  */
 void GetExecutionHistoryResponsePrivate::parseGetExecutionHistoryResponse(QXmlStreamReader &xml)
 {

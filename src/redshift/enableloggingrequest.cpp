@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * EnableLoggingRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a EnableLoggingRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a EnableLoggingRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 EnableLoggingRequestPrivate::EnableLoggingRequestPrivate(
     const RedshiftRequest::Action action, EnableLoggingRequest * const q)

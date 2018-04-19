@@ -41,7 +41,7 @@ namespace LexRuntimeService {
  */
 
 /*!
- * Constructs a[n] LexRuntimeServiceRequest object for LexRuntimeService \a action.
+ * Constructs a LexRuntimeServiceRequest object for LexRuntimeService \a action.
  */
 LexRuntimeServiceRequest::LexRuntimeServiceRequest(const Action action)
     : QtAws::Core::AwsAbstractRequest(new LexRuntimeServiceRequestPrivate(action, this))
@@ -241,8 +241,8 @@ QNetworkRequest LexRuntimeServiceRequest::unsignedRequest(const QUrl &endpoint) 
  */
 
 /*!
- * Constructs a LexRuntimeServiceRequestPrivate object for LexRuntimeService \a action with,
- * public implementation \a q.
+ * Constructs a LexRuntimeServiceRequestPrivate object for LexRuntimeService \a action,
+ * with public implementation \a q.
  */
 LexRuntimeServiceRequestPrivate::LexRuntimeServiceRequestPrivate(const LexRuntimeServiceRequest::Action action, LexRuntimeServiceRequest * const q)
     : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))

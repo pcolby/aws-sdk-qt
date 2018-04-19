@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::UpdateNumberOfDomainControllersResponse
- *
  * \brief The UpdateNumberOfDomainControllersResponse class provides an interace for DirectoryService UpdateNumberOfDomainControllers responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new UpdateNumberOfDomainControllersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateNumberOfDomainControllersResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateNumberOfDomainControllersResponse::UpdateNumberOfDomainControllersResponse(
         const UpdateNumberOfDomainControllersRequest &request,
@@ -69,6 +64,9 @@ UpdateNumberOfDomainControllersResponse::UpdateNumberOfDomainControllersResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateNumberOfDomainControllersRequest * UpdateNumberOfDomainControllersResponse::request() const
 {
     Q_D(const UpdateNumberOfDomainControllersResponse);
@@ -76,9 +74,8 @@ const UpdateNumberOfDomainControllersRequest * UpdateNumberOfDomainControllersRe
 }
 
 /*!
- * @brief  Parse a DirectoryService UpdateNumberOfDomainControllers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService UpdateNumberOfDomainControllers \a response.
  */
 void UpdateNumberOfDomainControllersResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void UpdateNumberOfDomainControllersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::UpdateNumberOfDomainControllersResponsePrivate
+ * \brief The UpdateNumberOfDomainControllersResponsePrivate class provides private implementation for UpdateNumberOfDomainControllersResponse.
  * \internal
  *
- * \class UpdateNumberOfDomainControllersResponsePrivate
- *
- * \brief Private implementation for UpdateNumberOfDomainControllersResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateNumberOfDomainControllersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateNumberOfDomainControllersResponse instance.
+ * Constructs a UpdateNumberOfDomainControllersResponsePrivate object with public implementation \a q.
  */
 UpdateNumberOfDomainControllersResponsePrivate::UpdateNumberOfDomainControllersResponsePrivate(
     UpdateNumberOfDomainControllersResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ UpdateNumberOfDomainControllersResponsePrivate::UpdateNumberOfDomainControllersR
 }
 
 /*!
- * @brief  Parse an DirectoryService UpdateNumberOfDomainControllersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService UpdateNumberOfDomainControllers response element from \a xml.
  */
 void UpdateNumberOfDomainControllersResponsePrivate::parseUpdateNumberOfDomainControllersResponse(QXmlStreamReader &xml)
 {

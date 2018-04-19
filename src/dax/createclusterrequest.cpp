@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateClusterRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CreateClusterRequestPrivate object for DAX \a action with,
- * public implementation \a q.
+ * Constructs a CreateClusterRequestPrivate object for DAX \a action,
+ * with public implementation \a q.
  */
 CreateClusterRequestPrivate::CreateClusterRequestPrivate(
     const DAXRequest::Action action, CreateClusterRequest * const q)

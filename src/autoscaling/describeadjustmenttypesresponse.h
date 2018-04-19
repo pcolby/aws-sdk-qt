@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeAdjustmentTypesResponse : public AutoScalingResponse 
 public:
     DescribeAdjustmentTypesResponse(const DescribeAdjustmentTypesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeAdjustmentTypesRequest * request() const;
+    virtual const DescribeAdjustmentTypesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeAdjustmentTypesResponse)

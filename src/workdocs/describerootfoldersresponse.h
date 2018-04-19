@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeRootFoldersResponse : public WorkDocsResponse {
 public:
     DescribeRootFoldersResponse(const DescribeRootFoldersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeRootFoldersRequest * request() const;
+    virtual const DescribeRootFoldersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeRootFoldersResponse)

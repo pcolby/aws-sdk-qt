@@ -34,10 +34,10 @@ class QTAWS_EXPORT UploadPartCopyResponse : public S3Response {
 public:
     UploadPartCopyResponse(const UploadPartCopyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UploadPartCopyRequest * request() const;
+    virtual const UploadPartCopyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UploadPartCopyResponse)

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CreateTagsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a CreateTagsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CreateTagsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CreateTagsRequestPrivate::CreateTagsRequestPrivate(
     const EC2Request::Action action, CreateTagsRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateDestinationResponse : public FirehoseResponse {
 public:
     UpdateDestinationResponse(const UpdateDestinationRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateDestinationRequest * request() const;
+    virtual const UpdateDestinationRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateDestinationResponse)

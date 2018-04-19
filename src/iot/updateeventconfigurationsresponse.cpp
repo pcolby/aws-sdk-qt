@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::UpdateEventConfigurationsResponse
- *
  * \brief The UpdateEventConfigurationsResponse class provides an interace for IoT UpdateEventConfigurations responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new UpdateEventConfigurationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateEventConfigurationsResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateEventConfigurationsResponse::UpdateEventConfigurationsResponse(
         const UpdateEventConfigurationsRequest &request,
@@ -66,6 +61,9 @@ UpdateEventConfigurationsResponse::UpdateEventConfigurationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateEventConfigurationsRequest * UpdateEventConfigurationsResponse::request() const
 {
     Q_D(const UpdateEventConfigurationsResponse);
@@ -73,9 +71,8 @@ const UpdateEventConfigurationsRequest * UpdateEventConfigurationsResponse::requ
 }
 
 /*!
- * @brief  Parse a IoT UpdateEventConfigurations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT UpdateEventConfigurations \a response.
  */
 void UpdateEventConfigurationsResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void UpdateEventConfigurationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::UpdateEventConfigurationsResponsePrivate
+ * \brief The UpdateEventConfigurationsResponsePrivate class provides private implementation for UpdateEventConfigurationsResponse.
  * \internal
  *
- * \class UpdateEventConfigurationsResponsePrivate
- *
- * \brief Private implementation for UpdateEventConfigurationsResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEventConfigurationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateEventConfigurationsResponse instance.
+ * Constructs a UpdateEventConfigurationsResponsePrivate object with public implementation \a q.
  */
 UpdateEventConfigurationsResponsePrivate::UpdateEventConfigurationsResponsePrivate(
     UpdateEventConfigurationsResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ UpdateEventConfigurationsResponsePrivate::UpdateEventConfigurationsResponsePriva
 }
 
 /*!
- * @brief  Parse an IoT UpdateEventConfigurationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT UpdateEventConfigurations response element from \a xml.
  */
 void UpdateEventConfigurationsResponsePrivate::parseUpdateEventConfigurationsResponse(QXmlStreamReader &xml)
 {

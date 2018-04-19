@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UpdateUserResponse
- *
  * \brief The UpdateUserResponse class provides an interace for IAM UpdateUser responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UpdateUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateUserResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateUserResponse::UpdateUserResponse(
         const UpdateUserRequest &request,
@@ -120,6 +115,9 @@ UpdateUserResponse::UpdateUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateUserRequest * UpdateUserResponse::request() const
 {
     Q_D(const UpdateUserResponse);
@@ -127,9 +125,8 @@ const UpdateUserRequest * UpdateUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM UpdateUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UpdateUser \a response.
  */
 void UpdateUserResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UpdateUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UpdateUserResponsePrivate
+ * \brief The UpdateUserResponsePrivate class provides private implementation for UpdateUserResponse.
  * \internal
  *
- * \class UpdateUserResponsePrivate
- *
- * \brief Private implementation for UpdateUserResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateUserResponse instance.
+ * Constructs a UpdateUserResponsePrivate object with public implementation \a q.
  */
 UpdateUserResponsePrivate::UpdateUserResponsePrivate(
     UpdateUserResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UpdateUserResponsePrivate::UpdateUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM UpdateUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UpdateUser response element from \a xml.
  */
 void UpdateUserResponsePrivate::parseUpdateUserResponse(QXmlStreamReader &xml)
 {

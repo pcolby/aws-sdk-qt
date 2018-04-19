@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::GetPermissionPolicyResponse
- *
  * \brief The GetPermissionPolicyResponse class provides an interace for WAFRegional GetPermissionPolicy responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new GetPermissionPolicyResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetPermissionPolicyResponse object for \a reply to \a request, with parent \a parent.
  */
 GetPermissionPolicyResponse::GetPermissionPolicyResponse(
         const GetPermissionPolicyRequest &request,
@@ -62,6 +57,9 @@ GetPermissionPolicyResponse::GetPermissionPolicyResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetPermissionPolicyRequest * GetPermissionPolicyResponse::request() const
 {
     Q_D(const GetPermissionPolicyResponse);
@@ -69,9 +67,8 @@ const GetPermissionPolicyRequest * GetPermissionPolicyResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional GetPermissionPolicy response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional GetPermissionPolicy \a response.
  */
 void GetPermissionPolicyResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetPermissionPolicyResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::GetPermissionPolicyResponsePrivate
+ * \brief The GetPermissionPolicyResponsePrivate class provides private implementation for GetPermissionPolicyResponse.
  * \internal
  *
- * \class GetPermissionPolicyResponsePrivate
- *
- * \brief Private implementation for GetPermissionPolicyResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetPermissionPolicyResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetPermissionPolicyResponse instance.
+ * Constructs a GetPermissionPolicyResponsePrivate object with public implementation \a q.
  */
 GetPermissionPolicyResponsePrivate::GetPermissionPolicyResponsePrivate(
     GetPermissionPolicyResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ GetPermissionPolicyResponsePrivate::GetPermissionPolicyResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional GetPermissionPolicyResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional GetPermissionPolicy response element from \a xml.
  */
 void GetPermissionPolicyResponsePrivate::parseGetPermissionPolicyResponse(QXmlStreamReader &xml)
 {

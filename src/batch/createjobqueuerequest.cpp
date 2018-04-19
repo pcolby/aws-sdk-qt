@@ -95,9 +95,8 @@ QtAws::Core::AwsAbstractResponse * CreateJobQueueRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a CreateJobQueueRequestPrivate object for Batch \a action with,
- * public implementation \a q.
+ * Constructs a CreateJobQueueRequestPrivate object for Batch \a action,
+ * with public implementation \a q.
  */
 CreateJobQueueRequestPrivate::CreateJobQueueRequestPrivate(
     const BatchRequest::Action action, CreateJobQueueRequest * const q)

@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * DescribeRefreshSchemasStatusRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeRefreshSchemasStatusRequestPrivate object for DatabaseMigrationService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeRefreshSchemasStatusRequestPrivate object for DatabaseMigrationService \a action,
+ * with public implementation \a q.
  */
 DescribeRefreshSchemasStatusRequestPrivate::DescribeRefreshSchemasStatusRequestPrivate(
     const DatabaseMigrationServiceRequest::Action action, DescribeRefreshSchemasStatusRequest * const q)

@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::GetThreatIntelSetResponse
- *
  * \brief The GetThreatIntelSetResponse class provides an interace for GuardDuty GetThreatIntelSet responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::getThreatIntelSet
  */
 
 /*!
- * @brief  Constructs a new GetThreatIntelSetResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetThreatIntelSetResponse object for \a reply to \a request, with parent \a parent.
  */
 GetThreatIntelSetResponse::GetThreatIntelSetResponse(
         const GetThreatIntelSetRequest &request,
@@ -55,6 +50,9 @@ GetThreatIntelSetResponse::GetThreatIntelSetResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetThreatIntelSetRequest * GetThreatIntelSetResponse::request() const
 {
     Q_D(const GetThreatIntelSetResponse);
@@ -62,9 +60,8 @@ const GetThreatIntelSetRequest * GetThreatIntelSetResponse::request() const
 }
 
 /*!
- * @brief  Parse a GuardDuty GetThreatIntelSet response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty GetThreatIntelSet \a response.
  */
 void GetThreatIntelSetResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetThreatIntelSetResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::GetThreatIntelSetResponsePrivate
+ * \brief The GetThreatIntelSetResponsePrivate class provides private implementation for GetThreatIntelSetResponse.
  * \internal
  *
- * \class GetThreatIntelSetResponsePrivate
- *
- * \brief Private implementation for GetThreatIntelSetResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetThreatIntelSetResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetThreatIntelSetResponse instance.
+ * Constructs a GetThreatIntelSetResponsePrivate object with public implementation \a q.
  */
 GetThreatIntelSetResponsePrivate::GetThreatIntelSetResponsePrivate(
     GetThreatIntelSetResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ GetThreatIntelSetResponsePrivate::GetThreatIntelSetResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty GetThreatIntelSetResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty GetThreatIntelSet response element from \a xml.
  */
 void GetThreatIntelSetResponsePrivate::parseGetThreatIntelSetResponse(QXmlStreamReader &xml)
 {

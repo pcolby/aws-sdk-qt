@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeEventCategoriesRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeEventCategoriesRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeEventCategoriesRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeEventCategoriesRequestPrivate::DescribeEventCategoriesRequestPrivate(
     const RDSRequest::Action action, DescribeEventCategoriesRequest * const q)

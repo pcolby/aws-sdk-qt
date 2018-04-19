@@ -81,9 +81,8 @@ QtAws::Core::AwsAbstractResponse * DeleteApplicationReferenceDataSourceRequest::
  */
 
 /*!
- *
- * Constructs a DeleteApplicationReferenceDataSourceRequestPrivate object for KinesisAnalytics \a action with,
- * public implementation \a q.
+ * Constructs a DeleteApplicationReferenceDataSourceRequestPrivate object for KinesisAnalytics \a action,
+ * with public implementation \a q.
  */
 DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDataSourceRequestPrivate(
     const KinesisAnalyticsRequest::Action action, DeleteApplicationReferenceDataSourceRequest * const q)

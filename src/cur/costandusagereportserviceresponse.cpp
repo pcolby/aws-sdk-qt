@@ -28,16 +28,13 @@ namespace CostandUsageReportService {
 
 /*!
  * \class QtAws::CostandUsageReportService::CostandUsageReportServiceResponse
- *
  * \brief The CostandUsageReportServiceResponse class provides an interface for CostandUsageReportService responses.
  *
- * \ingroup CostandUsageReportService
+ * \inmodule QtAwsCostandUsageReportService
  */
 
 /*!
- * @brief  Constructs a new CostandUsageReportServiceResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CostandUsageReportServiceResponse object with parent \a parent.
  */
 CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CostandUsageReportServiceResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(QObject * c
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CostandUsageReportServiceResponse object.
- *
+ * \internal
+ * Constructs a CostandUsageReportServiceResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CostandUsageReportServiceResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(CostandUsageReportServiceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(CostandUsag
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CostandUsageReportServiceResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CostandUsageReportServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CostandUsageReportService::CostandUsageReportServiceResponsePrivate
+ * \brief The CostandUsageReportServiceResponsePrivate class provides private implementation for CostandUsageReportServiceResponse.
+ * \internal
  *
- * @class  CostandUsageReportServiceResponsePrivate
- *
- * @brief  Private implementation for CostandUsageReportServiceResponse.
+ * \inmodule QtAwsCostandUsageReportService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CostandUsageReportServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CostandUsageReportServiceResponse instance.
+ * Constructs a CostandUsageReportServiceResponsePrivate object with public implementation \a q.
  */
 CostandUsageReportServiceResponsePrivate::CostandUsageReportServiceResponsePrivate(
     CostandUsageReportServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

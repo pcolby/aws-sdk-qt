@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSubnetRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a DeleteSubnetRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSubnetRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteSubnetRequestPrivate::DeleteSubnetRequestPrivate(
     const EC2Request::Action action, DeleteSubnetRequest * const q)

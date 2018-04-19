@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * ListPolicyAttachmentsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a ListPolicyAttachmentsRequestPrivate object for CloudDirectory \a action with,
- * public implementation \a q.
+ * Constructs a ListPolicyAttachmentsRequestPrivate object for CloudDirectory \a action,
+ * with public implementation \a q.
  */
 ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
     const CloudDirectoryRequest::Action action, ListPolicyAttachmentsRequest * const q)

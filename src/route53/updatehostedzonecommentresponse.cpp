@@ -29,21 +29,16 @@ namespace Route53 {
 
 /*!
  * \class QtAws::Route53::UpdateHostedZoneCommentResponse
- *
  * \brief The UpdateHostedZoneCommentResponse class provides an interace for Route53 UpdateHostedZoneComment responses.
  *
- * \ingroup Route53
+ * \inmodule QtAwsRoute53
  *
  *
  * \sa Route53Client::updateHostedZoneComment
  */
 
 /*!
- * @brief  Constructs a new UpdateHostedZoneCommentResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateHostedZoneCommentResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateHostedZoneCommentResponse::UpdateHostedZoneCommentResponse(
         const UpdateHostedZoneCommentRequest &request,
@@ -55,6 +50,9 @@ UpdateHostedZoneCommentResponse::UpdateHostedZoneCommentResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateHostedZoneCommentRequest * UpdateHostedZoneCommentResponse::request() const
 {
     Q_D(const UpdateHostedZoneCommentResponse);
@@ -62,9 +60,8 @@ const UpdateHostedZoneCommentRequest * UpdateHostedZoneCommentResponse::request(
 }
 
 /*!
- * @brief  Parse a Route53 UpdateHostedZoneComment response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Route53 UpdateHostedZoneComment \a response.
  */
 void UpdateHostedZoneCommentResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateHostedZoneCommentResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Route53::UpdateHostedZoneCommentResponsePrivate
+ * \brief The UpdateHostedZoneCommentResponsePrivate class provides private implementation for UpdateHostedZoneCommentResponse.
  * \internal
  *
- * \class UpdateHostedZoneCommentResponsePrivate
- *
- * \brief Private implementation for UpdateHostedZoneCommentResponse.
+ * \inmodule QtAwsRoute53
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateHostedZoneCommentResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateHostedZoneCommentResponse instance.
+ * Constructs a UpdateHostedZoneCommentResponsePrivate object with public implementation \a q.
  */
 UpdateHostedZoneCommentResponsePrivate::UpdateHostedZoneCommentResponsePrivate(
     UpdateHostedZoneCommentResponse * const q) : Route53ResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateHostedZoneCommentResponsePrivate::UpdateHostedZoneCommentResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Route53 UpdateHostedZoneCommentResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Route53 UpdateHostedZoneComment response element from \a xml.
  */
 void UpdateHostedZoneCommentResponsePrivate::parseUpdateHostedZoneCommentResponse(QXmlStreamReader &xml)
 {

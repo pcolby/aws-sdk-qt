@@ -29,10 +29,9 @@ namespace Lightsail {
 
 /*!
  * \class QtAws::Lightsail::DownloadDefaultKeyPairResponse
- *
  * \brief The DownloadDefaultKeyPairResponse class provides an interace for Lightsail DownloadDefaultKeyPair responses.
  *
- * \ingroup Lightsail
+ * \inmodule QtAwsLightsail
  *
  *  Amazon Lightsail is the easiest way to get started with AWS for developers who just need virtual private servers.
  *  Lightsail includes everything you need to launch your project quickly - a virtual machine, SSD-based storage, data
@@ -55,11 +54,7 @@ namespace Lightsail {
  */
 
 /*!
- * @brief  Constructs a new DownloadDefaultKeyPairResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DownloadDefaultKeyPairResponse object for \a reply to \a request, with parent \a parent.
  */
 DownloadDefaultKeyPairResponse::DownloadDefaultKeyPairResponse(
         const DownloadDefaultKeyPairRequest &request,
@@ -71,6 +66,9 @@ DownloadDefaultKeyPairResponse::DownloadDefaultKeyPairResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DownloadDefaultKeyPairRequest * DownloadDefaultKeyPairResponse::request() const
 {
     Q_D(const DownloadDefaultKeyPairResponse);
@@ -78,9 +76,8 @@ const DownloadDefaultKeyPairRequest * DownloadDefaultKeyPairResponse::request() 
 }
 
 /*!
- * @brief  Parse a Lightsail DownloadDefaultKeyPair response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lightsail DownloadDefaultKeyPair \a response.
  */
 void DownloadDefaultKeyPairResponse::parseSuccess(QIODevice &response)
 {
@@ -90,19 +87,15 @@ void DownloadDefaultKeyPairResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lightsail::DownloadDefaultKeyPairResponsePrivate
+ * \brief The DownloadDefaultKeyPairResponsePrivate class provides private implementation for DownloadDefaultKeyPairResponse.
  * \internal
  *
- * \class DownloadDefaultKeyPairResponsePrivate
- *
- * \brief Private implementation for DownloadDefaultKeyPairResponse.
+ * \inmodule QtAwsLightsail
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DownloadDefaultKeyPairResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DownloadDefaultKeyPairResponse instance.
+ * Constructs a DownloadDefaultKeyPairResponsePrivate object with public implementation \a q.
  */
 DownloadDefaultKeyPairResponsePrivate::DownloadDefaultKeyPairResponsePrivate(
     DownloadDefaultKeyPairResponse * const q) : LightsailResponsePrivate(q)
@@ -111,9 +104,7 @@ DownloadDefaultKeyPairResponsePrivate::DownloadDefaultKeyPairResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lightsail DownloadDefaultKeyPairResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lightsail DownloadDefaultKeyPair response element from \a xml.
  */
 void DownloadDefaultKeyPairResponsePrivate::parseDownloadDefaultKeyPairResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::GetCrawlersResponse
- *
  * \brief The GetCrawlersResponse class provides an interace for Glue GetCrawlers responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new GetCrawlersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetCrawlersResponse object for \a reply to \a request, with parent \a parent.
  */
 GetCrawlersResponse::GetCrawlersResponse(
         const GetCrawlersRequest &request,
@@ -58,6 +53,9 @@ GetCrawlersResponse::GetCrawlersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetCrawlersRequest * GetCrawlersResponse::request() const
 {
     Q_D(const GetCrawlersResponse);
@@ -65,9 +63,8 @@ const GetCrawlersRequest * GetCrawlersResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue GetCrawlers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue GetCrawlers \a response.
  */
 void GetCrawlersResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void GetCrawlersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::GetCrawlersResponsePrivate
+ * \brief The GetCrawlersResponsePrivate class provides private implementation for GetCrawlersResponse.
  * \internal
  *
- * \class GetCrawlersResponsePrivate
- *
- * \brief Private implementation for GetCrawlersResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetCrawlersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetCrawlersResponse instance.
+ * Constructs a GetCrawlersResponsePrivate object with public implementation \a q.
  */
 GetCrawlersResponsePrivate::GetCrawlersResponsePrivate(
     GetCrawlersResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ GetCrawlersResponsePrivate::GetCrawlersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue GetCrawlersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue GetCrawlers response element from \a xml.
  */
 void GetCrawlersResponsePrivate::parseGetCrawlersResponse(QXmlStreamReader &xml)
 {

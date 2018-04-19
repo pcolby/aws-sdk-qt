@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeLoadBalancerPoliciesResponse : public ElasticLoadBala
 public:
     DescribeLoadBalancerPoliciesResponse(const DescribeLoadBalancerPoliciesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeLoadBalancerPoliciesRequest * request() const;
+    virtual const DescribeLoadBalancerPoliciesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeLoadBalancerPoliciesResponse)

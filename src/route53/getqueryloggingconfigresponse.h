@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetQueryLoggingConfigResponse : public Route53Response {
 public:
     GetQueryLoggingConfigResponse(const GetQueryLoggingConfigRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetQueryLoggingConfigRequest * request() const;
+    virtual const GetQueryLoggingConfigRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetQueryLoggingConfigResponse)

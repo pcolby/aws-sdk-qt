@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DeleteProvisioningArtifactResponse
- *
  * \brief The DeleteProvisioningArtifactResponse class provides an interace for ServiceCatalog DeleteProvisioningArtifact responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DeleteProvisioningArtifactResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteProvisioningArtifactResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteProvisioningArtifactResponse::DeleteProvisioningArtifactResponse(
         const DeleteProvisioningArtifactRequest &request,
@@ -61,6 +56,9 @@ DeleteProvisioningArtifactResponse::DeleteProvisioningArtifactResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteProvisioningArtifactRequest * DeleteProvisioningArtifactResponse::request() const
 {
     Q_D(const DeleteProvisioningArtifactResponse);
@@ -68,9 +66,8 @@ const DeleteProvisioningArtifactRequest * DeleteProvisioningArtifactResponse::re
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DeleteProvisioningArtifact response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DeleteProvisioningArtifact \a response.
  */
 void DeleteProvisioningArtifactResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeleteProvisioningArtifactResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DeleteProvisioningArtifactResponsePrivate
+ * \brief The DeleteProvisioningArtifactResponsePrivate class provides private implementation for DeleteProvisioningArtifactResponse.
  * \internal
  *
- * \class DeleteProvisioningArtifactResponsePrivate
- *
- * \brief Private implementation for DeleteProvisioningArtifactResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteProvisioningArtifactResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteProvisioningArtifactResponse instance.
+ * Constructs a DeleteProvisioningArtifactResponsePrivate object with public implementation \a q.
  */
 DeleteProvisioningArtifactResponsePrivate::DeleteProvisioningArtifactResponsePrivate(
     DeleteProvisioningArtifactResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DeleteProvisioningArtifactResponsePrivate::DeleteProvisioningArtifactResponsePri
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DeleteProvisioningArtifactResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DeleteProvisioningArtifact response element from \a xml.
  */
 void DeleteProvisioningArtifactResponsePrivate::parseDeleteProvisioningArtifactResponse(QXmlStreamReader &xml)
 {

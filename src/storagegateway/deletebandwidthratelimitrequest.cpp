@@ -150,9 +150,8 @@ QtAws::Core::AwsAbstractResponse * DeleteBandwidthRateLimitRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a DeleteBandwidthRateLimitRequestPrivate object for StorageGateway \a action with,
- * public implementation \a q.
+ * Constructs a DeleteBandwidthRateLimitRequestPrivate object for StorageGateway \a action,
+ * with public implementation \a q.
  */
 DeleteBandwidthRateLimitRequestPrivate::DeleteBandwidthRateLimitRequestPrivate(
     const StorageGatewayRequest::Action action, DeleteBandwidthRateLimitRequest * const q)

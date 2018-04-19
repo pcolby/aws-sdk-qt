@@ -29,21 +29,16 @@ namespace MTurk {
 
 /*!
  * \class QtAws::MTurk::GetQualificationScoreResponse
- *
  * \brief The GetQualificationScoreResponse class provides an interace for MTurk GetQualificationScore responses.
  *
- * \ingroup MTurk
+ * \inmodule QtAwsMTurk
  *
  *
  * \sa MTurkClient::getQualificationScore
  */
 
 /*!
- * @brief  Constructs a new GetQualificationScoreResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetQualificationScoreResponse object for \a reply to \a request, with parent \a parent.
  */
 GetQualificationScoreResponse::GetQualificationScoreResponse(
         const GetQualificationScoreRequest &request,
@@ -55,6 +50,9 @@ GetQualificationScoreResponse::GetQualificationScoreResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetQualificationScoreRequest * GetQualificationScoreResponse::request() const
 {
     Q_D(const GetQualificationScoreResponse);
@@ -62,9 +60,8 @@ const GetQualificationScoreRequest * GetQualificationScoreResponse::request() co
 }
 
 /*!
- * @brief  Parse a MTurk GetQualificationScore response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MTurk GetQualificationScore \a response.
  */
 void GetQualificationScoreResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void GetQualificationScoreResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MTurk::GetQualificationScoreResponsePrivate
+ * \brief The GetQualificationScoreResponsePrivate class provides private implementation for GetQualificationScoreResponse.
  * \internal
  *
- * \class GetQualificationScoreResponsePrivate
- *
- * \brief Private implementation for GetQualificationScoreResponse.
+ * \inmodule QtAwsMTurk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetQualificationScoreResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetQualificationScoreResponse instance.
+ * Constructs a GetQualificationScoreResponsePrivate object with public implementation \a q.
  */
 GetQualificationScoreResponsePrivate::GetQualificationScoreResponsePrivate(
     GetQualificationScoreResponse * const q) : MTurkResponsePrivate(q)
@@ -95,9 +88,7 @@ GetQualificationScoreResponsePrivate::GetQualificationScoreResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MTurk GetQualificationScoreResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MTurk GetQualificationScore response element from \a xml.
  */
 void GetQualificationScoreResponsePrivate::parseGetQualificationScoreResponse(QXmlStreamReader &xml)
 {

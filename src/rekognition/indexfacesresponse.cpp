@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::IndexFacesResponse
- *
  * \brief The IndexFacesResponse class provides an interace for Rekognition IndexFaces responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new IndexFacesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a IndexFacesResponse object for \a reply to \a request, with parent \a parent.
  */
 IndexFacesResponse::IndexFacesResponse(
         const IndexFacesRequest &request,
@@ -56,6 +51,9 @@ IndexFacesResponse::IndexFacesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const IndexFacesRequest * IndexFacesResponse::request() const
 {
     Q_D(const IndexFacesResponse);
@@ -63,9 +61,8 @@ const IndexFacesRequest * IndexFacesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition IndexFaces response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition IndexFaces \a response.
  */
 void IndexFacesResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void IndexFacesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::IndexFacesResponsePrivate
+ * \brief The IndexFacesResponsePrivate class provides private implementation for IndexFacesResponse.
  * \internal
  *
- * \class IndexFacesResponsePrivate
- *
- * \brief Private implementation for IndexFacesResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new IndexFacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public IndexFacesResponse instance.
+ * Constructs a IndexFacesResponsePrivate object with public implementation \a q.
  */
 IndexFacesResponsePrivate::IndexFacesResponsePrivate(
     IndexFacesResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ IndexFacesResponsePrivate::IndexFacesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition IndexFacesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition IndexFaces response element from \a xml.
  */
 void IndexFacesResponsePrivate::parseIndexFacesResponse(QXmlStreamReader &xml)
 {

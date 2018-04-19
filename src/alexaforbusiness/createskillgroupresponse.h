@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateSkillGroupResponse : public AlexaForBusinessResponse {
 public:
     CreateSkillGroupResponse(const CreateSkillGroupRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateSkillGroupRequest * request() const;
+    virtual const CreateSkillGroupRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateSkillGroupResponse)

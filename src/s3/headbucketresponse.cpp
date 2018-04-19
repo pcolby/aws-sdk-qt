@@ -29,21 +29,16 @@ namespace S3 {
 
 /*!
  * \class QtAws::S3::HeadBucketResponse
- *
  * \brief The HeadBucketResponse class provides an interace for S3 HeadBucket responses.
  *
- * \ingroup S3
+ * \inmodule QtAwsS3
  *
  *
  * \sa S3Client::headBucket
  */
 
 /*!
- * @brief  Constructs a new HeadBucketResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a HeadBucketResponse object for \a reply to \a request, with parent \a parent.
  */
 HeadBucketResponse::HeadBucketResponse(
         const HeadBucketRequest &request,
@@ -55,6 +50,9 @@ HeadBucketResponse::HeadBucketResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const HeadBucketRequest * HeadBucketResponse::request() const
 {
     Q_D(const HeadBucketResponse);
@@ -62,9 +60,8 @@ const HeadBucketRequest * HeadBucketResponse::request() const
 }
 
 /*!
- * @brief  Parse a S3 HeadBucket response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful S3 HeadBucket \a response.
  */
 void HeadBucketResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void HeadBucketResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::S3::HeadBucketResponsePrivate
+ * \brief The HeadBucketResponsePrivate class provides private implementation for HeadBucketResponse.
  * \internal
  *
- * \class HeadBucketResponsePrivate
- *
- * \brief Private implementation for HeadBucketResponse.
+ * \inmodule QtAwsS3
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new HeadBucketResponsePrivate object.
- *
- * @param  q  Pointer to this object's public HeadBucketResponse instance.
+ * Constructs a HeadBucketResponsePrivate object with public implementation \a q.
  */
 HeadBucketResponsePrivate::HeadBucketResponsePrivate(
     HeadBucketResponse * const q) : S3ResponsePrivate(q)
@@ -95,9 +88,7 @@ HeadBucketResponsePrivate::HeadBucketResponsePrivate(
 }
 
 /*!
- * @brief  Parse an S3 HeadBucketResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a S3 HeadBucket response element from \a xml.
  */
 void HeadBucketResponsePrivate::parseHeadBucketResponse(QXmlStreamReader &xml)
 {

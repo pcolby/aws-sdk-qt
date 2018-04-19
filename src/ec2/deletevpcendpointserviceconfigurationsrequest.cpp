@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcEndpointServiceConfigurationsRequest
  */
 
 /*!
- *
- * Constructs a DeleteVpcEndpointServiceConfigurationsRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVpcEndpointServiceConfigurationsRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteVpcEndpointServiceConfigurationsRequestPrivate::DeleteVpcEndpointServiceConfigurationsRequestPrivate(
     const EC2Request::Action action, DeleteVpcEndpointServiceConfigurationsRequest * const q)

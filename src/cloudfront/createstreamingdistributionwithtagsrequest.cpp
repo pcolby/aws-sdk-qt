@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateStreamingDistributionWithTagsRequest::r
  */
 
 /*!
- *
- * Constructs a CreateStreamingDistributionWithTagsRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a CreateStreamingDistributionWithTagsRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 CreateStreamingDistributionWithTagsRequestPrivate::CreateStreamingDistributionWithTagsRequestPrivate(
     const CloudFrontRequest::Action action, CreateStreamingDistributionWithTagsRequest * const q)

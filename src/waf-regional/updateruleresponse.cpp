@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::UpdateRuleResponse
- *
  * \brief The UpdateRuleResponse class provides an interace for WAFRegional UpdateRule responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new UpdateRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateRuleResponse::UpdateRuleResponse(
         const UpdateRuleRequest &request,
@@ -62,6 +57,9 @@ UpdateRuleResponse::UpdateRuleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateRuleRequest * UpdateRuleResponse::request() const
 {
     Q_D(const UpdateRuleResponse);
@@ -69,9 +67,8 @@ const UpdateRuleRequest * UpdateRuleResponse::request() const
 }
 
 /*!
- * @brief  Parse a WAFRegional UpdateRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional UpdateRule \a response.
  */
 void UpdateRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void UpdateRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::UpdateRuleResponsePrivate
+ * \brief The UpdateRuleResponsePrivate class provides private implementation for UpdateRuleResponse.
  * \internal
  *
- * \class UpdateRuleResponsePrivate
- *
- * \brief Private implementation for UpdateRuleResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateRuleResponse instance.
+ * Constructs a UpdateRuleResponsePrivate object with public implementation \a q.
  */
 UpdateRuleResponsePrivate::UpdateRuleResponsePrivate(
     UpdateRuleResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ UpdateRuleResponsePrivate::UpdateRuleResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional UpdateRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional UpdateRule response element from \a xml.
  */
 void UpdateRuleResponsePrivate::parseUpdateRuleResponse(QXmlStreamReader &xml)
 {

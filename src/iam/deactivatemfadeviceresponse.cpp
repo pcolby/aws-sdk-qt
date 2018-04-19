@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::DeactivateMFADeviceResponse
- *
  * \brief The DeactivateMFADeviceResponse class provides an interace for IAM DeactivateMFADevice responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new DeactivateMFADeviceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeactivateMFADeviceResponse object for \a reply to \a request, with parent \a parent.
  */
 DeactivateMFADeviceResponse::DeactivateMFADeviceResponse(
         const DeactivateMFADeviceRequest &request,
@@ -120,6 +115,9 @@ DeactivateMFADeviceResponse::DeactivateMFADeviceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeactivateMFADeviceRequest * DeactivateMFADeviceResponse::request() const
 {
     Q_D(const DeactivateMFADeviceResponse);
@@ -127,9 +125,8 @@ const DeactivateMFADeviceRequest * DeactivateMFADeviceResponse::request() const
 }
 
 /*!
- * @brief  Parse a IAM DeactivateMFADevice response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM DeactivateMFADevice \a response.
  */
 void DeactivateMFADeviceResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void DeactivateMFADeviceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::DeactivateMFADeviceResponsePrivate
+ * \brief The DeactivateMFADeviceResponsePrivate class provides private implementation for DeactivateMFADeviceResponse.
  * \internal
  *
- * \class DeactivateMFADeviceResponsePrivate
- *
- * \brief Private implementation for DeactivateMFADeviceResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeactivateMFADeviceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeactivateMFADeviceResponse instance.
+ * Constructs a DeactivateMFADeviceResponsePrivate object with public implementation \a q.
  */
 DeactivateMFADeviceResponsePrivate::DeactivateMFADeviceResponsePrivate(
     DeactivateMFADeviceResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ DeactivateMFADeviceResponsePrivate::DeactivateMFADeviceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM DeactivateMFADeviceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM DeactivateMFADevice response element from \a xml.
  */
 void DeactivateMFADeviceResponsePrivate::parseDeactivateMFADeviceResponse(QXmlStreamReader &xml)
 {

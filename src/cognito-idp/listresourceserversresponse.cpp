@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::ListResourceServersResponse
- *
  * \brief The ListResourceServersResponse class provides an interace for CognitoIdentityProvider ListResourceServers responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new ListResourceServersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListResourceServersResponse object for \a reply to \a request, with parent \a parent.
  */
 ListResourceServersResponse::ListResourceServersResponse(
         const ListResourceServersRequest &request,
@@ -65,6 +60,9 @@ ListResourceServersResponse::ListResourceServersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListResourceServersRequest * ListResourceServersResponse::request() const
 {
     Q_D(const ListResourceServersResponse);
@@ -72,9 +70,8 @@ const ListResourceServersRequest * ListResourceServersResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider ListResourceServers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider ListResourceServers \a response.
  */
 void ListResourceServersResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void ListResourceServersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::ListResourceServersResponsePrivate
+ * \brief The ListResourceServersResponsePrivate class provides private implementation for ListResourceServersResponse.
  * \internal
  *
- * \class ListResourceServersResponsePrivate
- *
- * \brief Private implementation for ListResourceServersResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListResourceServersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListResourceServersResponse instance.
+ * Constructs a ListResourceServersResponsePrivate object with public implementation \a q.
  */
 ListResourceServersResponsePrivate::ListResourceServersResponsePrivate(
     ListResourceServersResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ ListResourceServersResponsePrivate::ListResourceServersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider ListResourceServersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider ListResourceServers response element from \a xml.
  */
 void ListResourceServersResponsePrivate::parseListResourceServersResponse(QXmlStreamReader &xml)
 {

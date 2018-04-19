@@ -29,10 +29,9 @@ namespace SFN {
 
 /*!
  * \class QtAws::SFN::ListExecutionsResponse
- *
  * \brief The ListExecutionsResponse class provides an interace for SFN ListExecutions responses.
  *
- * \ingroup SFN
+ * \inmodule QtAwsSFN
  *
  *  <fullname>AWS Step Functions</fullname>
  * 
@@ -58,11 +57,7 @@ namespace SFN {
  */
 
 /*!
- * @brief  Constructs a new ListExecutionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListExecutionsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListExecutionsResponse::ListExecutionsResponse(
         const ListExecutionsRequest &request,
@@ -74,6 +69,9 @@ ListExecutionsResponse::ListExecutionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListExecutionsRequest * ListExecutionsResponse::request() const
 {
     Q_D(const ListExecutionsResponse);
@@ -81,9 +79,8 @@ const ListExecutionsRequest * ListExecutionsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SFN ListExecutions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SFN ListExecutions \a response.
  */
 void ListExecutionsResponse::parseSuccess(QIODevice &response)
 {
@@ -93,19 +90,15 @@ void ListExecutionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SFN::ListExecutionsResponsePrivate
+ * \brief The ListExecutionsResponsePrivate class provides private implementation for ListExecutionsResponse.
  * \internal
  *
- * \class ListExecutionsResponsePrivate
- *
- * \brief Private implementation for ListExecutionsResponse.
+ * \inmodule QtAwsSFN
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListExecutionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListExecutionsResponse instance.
+ * Constructs a ListExecutionsResponsePrivate object with public implementation \a q.
  */
 ListExecutionsResponsePrivate::ListExecutionsResponsePrivate(
     ListExecutionsResponse * const q) : SFNResponsePrivate(q)
@@ -114,9 +107,7 @@ ListExecutionsResponsePrivate::ListExecutionsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SFN ListExecutionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SFN ListExecutions response element from \a xml.
  */
 void ListExecutionsResponsePrivate::parseListExecutionsResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DeleteVpcPeeringConnectionRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteVpcPeeringConnectionRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteVpcPeeringConnectionRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DeleteVpcPeeringConnectionRequestPrivate::DeleteVpcPeeringConnectionRequestPrivate(
     const EC2Request::Action action, DeleteVpcPeeringConnectionRequest * const q)

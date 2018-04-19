@@ -29,10 +29,9 @@ namespace StorageGateway {
 
 /*!
  * \class QtAws::StorageGateway::DeleteVolumeResponse
- *
  * \brief The DeleteVolumeResponse class provides an interace for StorageGateway DeleteVolume responses.
  *
- * \ingroup StorageGateway
+ * \inmodule QtAwsStorageGateway
  *
  *  <fullname>AWS Storage Gateway Service</fullname>
  * 
@@ -108,11 +107,7 @@ namespace StorageGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteVolumeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteVolumeResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteVolumeResponse::DeleteVolumeResponse(
         const DeleteVolumeRequest &request,
@@ -124,6 +119,9 @@ DeleteVolumeResponse::DeleteVolumeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteVolumeRequest * DeleteVolumeResponse::request() const
 {
     Q_D(const DeleteVolumeResponse);
@@ -131,9 +129,8 @@ const DeleteVolumeRequest * DeleteVolumeResponse::request() const
 }
 
 /*!
- * @brief  Parse a StorageGateway DeleteVolume response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful StorageGateway DeleteVolume \a response.
  */
 void DeleteVolumeResponse::parseSuccess(QIODevice &response)
 {
@@ -143,19 +140,15 @@ void DeleteVolumeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::StorageGateway::DeleteVolumeResponsePrivate
+ * \brief The DeleteVolumeResponsePrivate class provides private implementation for DeleteVolumeResponse.
  * \internal
  *
- * \class DeleteVolumeResponsePrivate
- *
- * \brief Private implementation for DeleteVolumeResponse.
+ * \inmodule QtAwsStorageGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteVolumeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteVolumeResponse instance.
+ * Constructs a DeleteVolumeResponsePrivate object with public implementation \a q.
  */
 DeleteVolumeResponsePrivate::DeleteVolumeResponsePrivate(
     DeleteVolumeResponse * const q) : StorageGatewayResponsePrivate(q)
@@ -164,9 +157,7 @@ DeleteVolumeResponsePrivate::DeleteVolumeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an StorageGateway DeleteVolumeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a StorageGateway DeleteVolume response element from \a xml.
  */
 void DeleteVolumeResponsePrivate::parseDeleteVolumeResponse(QXmlStreamReader &xml)
 {

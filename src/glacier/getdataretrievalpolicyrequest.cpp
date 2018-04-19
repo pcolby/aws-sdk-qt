@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * GetDataRetrievalPolicyRequest::response(QNetw
  */
 
 /*!
- *
- * Constructs a GetDataRetrievalPolicyRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a GetDataRetrievalPolicyRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 GetDataRetrievalPolicyRequestPrivate::GetDataRetrievalPolicyRequestPrivate(
     const GlacierRequest::Action action, GetDataRetrievalPolicyRequest * const q)

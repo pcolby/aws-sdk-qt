@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetBundlesRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetBundlesRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetBundlesRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetBundlesRequestPrivate::GetBundlesRequestPrivate(
     const LightsailRequest::Action action, GetBundlesRequest * const q)

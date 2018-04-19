@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * DescribeConfigRuleEvaluationStatusRequest::re
  */
 
 /*!
- *
- * Constructs a DescribeConfigRuleEvaluationStatusRequestPrivate object for ConfigService \a action with,
- * public implementation \a q.
+ * Constructs a DescribeConfigRuleEvaluationStatusRequestPrivate object for ConfigService \a action,
+ * with public implementation \a q.
  */
 DescribeConfigRuleEvaluationStatusRequestPrivate::DescribeConfigRuleEvaluationStatusRequestPrivate(
     const ConfigServiceRequest::Action action, DescribeConfigRuleEvaluationStatusRequest * const q)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT EnableMetricsCollectionResponse : public AutoScalingResponse 
 public:
     EnableMetricsCollectionResponse(const EnableMetricsCollectionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const EnableMetricsCollectionRequest * request() const;
+    virtual const EnableMetricsCollectionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(EnableMetricsCollectionResponse)

@@ -28,16 +28,13 @@ namespace WorkSpaces {
 
 /*!
  * \class QtAws::WorkSpaces::WorkSpacesResponse
- *
  * \brief The WorkSpacesResponse class provides an interface for WorkSpaces responses.
  *
- * \ingroup WorkSpaces
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @brief  Constructs a new WorkSpacesResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a WorkSpacesResponse object with parent \a parent.
  */
 WorkSpacesResponse::WorkSpacesResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new WorkSpacesResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ WorkSpacesResponse::WorkSpacesResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WorkSpacesResponse object.
- *
+ * \internal
+ * Constructs a WorkSpacesResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WorkSpacesResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 WorkSpacesResponse::WorkSpacesResponse(WorkSpacesResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ WorkSpacesResponse::WorkSpacesResponse(WorkSpacesResponsePrivate * const d, QObj
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void WorkSpacesResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void WorkSpacesResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::WorkSpaces::WorkSpacesResponsePrivate
+ * \brief The WorkSpacesResponsePrivate class provides private implementation for WorkSpacesResponse.
+ * \internal
  *
- * @class  WorkSpacesResponsePrivate
- *
- * @brief  Private implementation for WorkSpacesResponse.
+ * \inmodule QtAwsWorkSpaces
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new WorkSpacesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public WorkSpacesResponse instance.
+ * Constructs a WorkSpacesResponsePrivate object with public implementation \a q.
  */
 WorkSpacesResponsePrivate::WorkSpacesResponsePrivate(
     WorkSpacesResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

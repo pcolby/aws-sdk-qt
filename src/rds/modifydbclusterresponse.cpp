@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::ModifyDBClusterResponse
- *
  * \brief The ModifyDBClusterResponse class provides an interace for RDS ModifyDBCluster responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new ModifyDBClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ModifyDBClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 ModifyDBClusterResponse::ModifyDBClusterResponse(
         const ModifyDBClusterRequest &request,
@@ -119,6 +114,9 @@ ModifyDBClusterResponse::ModifyDBClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ModifyDBClusterRequest * ModifyDBClusterResponse::request() const
 {
     Q_D(const ModifyDBClusterResponse);
@@ -126,9 +124,8 @@ const ModifyDBClusterRequest * ModifyDBClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS ModifyDBCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS ModifyDBCluster \a response.
  */
 void ModifyDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void ModifyDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::ModifyDBClusterResponsePrivate
+ * \brief The ModifyDBClusterResponsePrivate class provides private implementation for ModifyDBClusterResponse.
  * \internal
  *
- * \class ModifyDBClusterResponsePrivate
- *
- * \brief Private implementation for ModifyDBClusterResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ModifyDBClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ModifyDBClusterResponse instance.
+ * Constructs a ModifyDBClusterResponsePrivate object with public implementation \a q.
  */
 ModifyDBClusterResponsePrivate::ModifyDBClusterResponsePrivate(
     ModifyDBClusterResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ ModifyDBClusterResponsePrivate::ModifyDBClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS ModifyDBClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS ModifyDBCluster response element from \a xml.
  */
 void ModifyDBClusterResponsePrivate::parseModifyDBClusterResponse(QXmlStreamReader &xml)
 {

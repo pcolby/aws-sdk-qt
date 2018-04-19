@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateReceiptRuleResponse : public SESResponse {
 public:
     UpdateReceiptRuleResponse(const UpdateReceiptRuleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateReceiptRuleRequest * request() const;
+    virtual const UpdateReceiptRuleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateReceiptRuleResponse)

@@ -29,10 +29,9 @@ namespace ConfigService {
 
 /*!
  * \class QtAws::ConfigService::GetComplianceDetailsByConfigRuleResponse
- *
  * \brief The GetComplianceDetailsByConfigRuleResponse class provides an interace for ConfigService GetComplianceDetailsByConfigRule responses.
  *
- * \ingroup ConfigService
+ * \inmodule QtAwsConfigService
  *
  *  <fullname>AWS Config</fullname>
  * 
@@ -62,11 +61,7 @@ namespace ConfigService {
  */
 
 /*!
- * @brief  Constructs a new GetComplianceDetailsByConfigRuleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetComplianceDetailsByConfigRuleResponse object for \a reply to \a request, with parent \a parent.
  */
 GetComplianceDetailsByConfigRuleResponse::GetComplianceDetailsByConfigRuleResponse(
         const GetComplianceDetailsByConfigRuleRequest &request,
@@ -78,6 +73,9 @@ GetComplianceDetailsByConfigRuleResponse::GetComplianceDetailsByConfigRuleRespon
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetComplianceDetailsByConfigRuleRequest * GetComplianceDetailsByConfigRuleResponse::request() const
 {
     Q_D(const GetComplianceDetailsByConfigRuleResponse);
@@ -85,9 +83,8 @@ const GetComplianceDetailsByConfigRuleRequest * GetComplianceDetailsByConfigRule
 }
 
 /*!
- * @brief  Parse a ConfigService GetComplianceDetailsByConfigRule response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ConfigService GetComplianceDetailsByConfigRule \a response.
  */
 void GetComplianceDetailsByConfigRuleResponse::parseSuccess(QIODevice &response)
 {
@@ -97,19 +94,15 @@ void GetComplianceDetailsByConfigRuleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ConfigService::GetComplianceDetailsByConfigRuleResponsePrivate
+ * \brief The GetComplianceDetailsByConfigRuleResponsePrivate class provides private implementation for GetComplianceDetailsByConfigRuleResponse.
  * \internal
  *
- * \class GetComplianceDetailsByConfigRuleResponsePrivate
- *
- * \brief Private implementation for GetComplianceDetailsByConfigRuleResponse.
+ * \inmodule QtAwsConfigService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetComplianceDetailsByConfigRuleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetComplianceDetailsByConfigRuleResponse instance.
+ * Constructs a GetComplianceDetailsByConfigRuleResponsePrivate object with public implementation \a q.
  */
 GetComplianceDetailsByConfigRuleResponsePrivate::GetComplianceDetailsByConfigRuleResponsePrivate(
     GetComplianceDetailsByConfigRuleResponse * const q) : ConfigServiceResponsePrivate(q)
@@ -118,9 +111,7 @@ GetComplianceDetailsByConfigRuleResponsePrivate::GetComplianceDetailsByConfigRul
 }
 
 /*!
- * @brief  Parse an ConfigService GetComplianceDetailsByConfigRuleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ConfigService GetComplianceDetailsByConfigRule response element from \a xml.
  */
 void GetComplianceDetailsByConfigRuleResponsePrivate::parseGetComplianceDetailsByConfigRuleResponse(QXmlStreamReader &xml)
 {

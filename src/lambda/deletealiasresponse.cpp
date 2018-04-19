@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::DeleteAliasResponse
- *
  * \brief The DeleteAliasResponse class provides an interace for Lambda DeleteAlias responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new DeleteAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteAliasResponse::DeleteAliasResponse(
         const DeleteAliasRequest &request,
@@ -66,6 +61,9 @@ DeleteAliasResponse::DeleteAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteAliasRequest * DeleteAliasResponse::request() const
 {
     Q_D(const DeleteAliasResponse);
@@ -73,9 +71,8 @@ const DeleteAliasRequest * DeleteAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda DeleteAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda DeleteAlias \a response.
  */
 void DeleteAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DeleteAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::DeleteAliasResponsePrivate
+ * \brief The DeleteAliasResponsePrivate class provides private implementation for DeleteAliasResponse.
  * \internal
  *
- * \class DeleteAliasResponsePrivate
- *
- * \brief Private implementation for DeleteAliasResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteAliasResponse instance.
+ * Constructs a DeleteAliasResponsePrivate object with public implementation \a q.
  */
 DeleteAliasResponsePrivate::DeleteAliasResponsePrivate(
     DeleteAliasResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ DeleteAliasResponsePrivate::DeleteAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda DeleteAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda DeleteAlias response element from \a xml.
  */
 void DeleteAliasResponsePrivate::parseDeleteAliasResponse(QXmlStreamReader &xml)
 {

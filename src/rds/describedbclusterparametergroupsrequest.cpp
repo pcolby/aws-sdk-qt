@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDBClusterParameterGroupsRequest::resp
  */
 
 /*!
- *
- * Constructs a DescribeDBClusterParameterGroupsRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDBClusterParameterGroupsRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeDBClusterParameterGroupsRequestPrivate::DescribeDBClusterParameterGroupsRequestPrivate(
     const RDSRequest::Action action, DescribeDBClusterParameterGroupsRequest * const q)

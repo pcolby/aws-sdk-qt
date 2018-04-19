@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * DeleteInstanceProfileRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a DeleteInstanceProfileRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a DeleteInstanceProfileRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 DeleteInstanceProfileRequestPrivate::DeleteInstanceProfileRequestPrivate(
     const IAMRequest::Action action, DeleteInstanceProfileRequest * const q)

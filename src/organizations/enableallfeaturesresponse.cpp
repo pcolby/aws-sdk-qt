@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::EnableAllFeaturesResponse
- *
  * \brief The EnableAllFeaturesResponse class provides an interace for Organizations EnableAllFeatures responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new EnableAllFeaturesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a EnableAllFeaturesResponse object for \a reply to \a request, with parent \a parent.
  */
 EnableAllFeaturesResponse::EnableAllFeaturesResponse(
         const EnableAllFeaturesRequest &request,
@@ -197,6 +192,9 @@ EnableAllFeaturesResponse::EnableAllFeaturesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const EnableAllFeaturesRequest * EnableAllFeaturesResponse::request() const
 {
     Q_D(const EnableAllFeaturesResponse);
@@ -204,9 +202,8 @@ const EnableAllFeaturesRequest * EnableAllFeaturesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Organizations EnableAllFeatures response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations EnableAllFeatures \a response.
  */
 void EnableAllFeaturesResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void EnableAllFeaturesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::EnableAllFeaturesResponsePrivate
+ * \brief The EnableAllFeaturesResponsePrivate class provides private implementation for EnableAllFeaturesResponse.
  * \internal
  *
- * \class EnableAllFeaturesResponsePrivate
- *
- * \brief Private implementation for EnableAllFeaturesResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new EnableAllFeaturesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public EnableAllFeaturesResponse instance.
+ * Constructs a EnableAllFeaturesResponsePrivate object with public implementation \a q.
  */
 EnableAllFeaturesResponsePrivate::EnableAllFeaturesResponsePrivate(
     EnableAllFeaturesResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ EnableAllFeaturesResponsePrivate::EnableAllFeaturesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Organizations EnableAllFeaturesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations EnableAllFeatures response element from \a xml.
  */
 void EnableAllFeaturesResponsePrivate::parseEnableAllFeaturesResponse(QXmlStreamReader &xml)
 {

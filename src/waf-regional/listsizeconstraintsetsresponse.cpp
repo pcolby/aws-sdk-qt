@@ -29,10 +29,9 @@ namespace WAFRegional {
 
 /*!
  * \class QtAws::WAFRegional::ListSizeConstraintSetsResponse
- *
  * \brief The ListSizeConstraintSetsResponse class provides an interace for WAFRegional ListSizeConstraintSets responses.
  *
- * \ingroup WAFRegional
+ * \inmodule QtAwsWAFRegional
  *
  *  This is the <i>AWS WAF Regional API Reference</i> for using AWS WAF with Elastic Load Balancing (ELB) Application Load
  *  Balancers. The AWS WAF actions and data types listed in the reference are available for protecting Application Load
@@ -46,11 +45,7 @@ namespace WAFRegional {
  */
 
 /*!
- * @brief  Constructs a new ListSizeConstraintSetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListSizeConstraintSetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListSizeConstraintSetsResponse::ListSizeConstraintSetsResponse(
         const ListSizeConstraintSetsRequest &request,
@@ -62,6 +57,9 @@ ListSizeConstraintSetsResponse::ListSizeConstraintSetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListSizeConstraintSetsRequest * ListSizeConstraintSetsResponse::request() const
 {
     Q_D(const ListSizeConstraintSetsResponse);
@@ -69,9 +67,8 @@ const ListSizeConstraintSetsRequest * ListSizeConstraintSetsResponse::request() 
 }
 
 /*!
- * @brief  Parse a WAFRegional ListSizeConstraintSets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful WAFRegional ListSizeConstraintSets \a response.
  */
 void ListSizeConstraintSetsResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void ListSizeConstraintSetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::WAFRegional::ListSizeConstraintSetsResponsePrivate
+ * \brief The ListSizeConstraintSetsResponsePrivate class provides private implementation for ListSizeConstraintSetsResponse.
  * \internal
  *
- * \class ListSizeConstraintSetsResponsePrivate
- *
- * \brief Private implementation for ListSizeConstraintSetsResponse.
+ * \inmodule QtAwsWAFRegional
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListSizeConstraintSetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListSizeConstraintSetsResponse instance.
+ * Constructs a ListSizeConstraintSetsResponsePrivate object with public implementation \a q.
  */
 ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponsePrivate(
     ListSizeConstraintSetsResponse * const q) : WAFRegionalResponsePrivate(q)
@@ -102,9 +95,7 @@ ListSizeConstraintSetsResponsePrivate::ListSizeConstraintSetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an WAFRegional ListSizeConstraintSetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a WAFRegional ListSizeConstraintSets response element from \a xml.
  */
 void ListSizeConstraintSetsResponsePrivate::parseListSizeConstraintSetsResponse(QXmlStreamReader &xml)
 {

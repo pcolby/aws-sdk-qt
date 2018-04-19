@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeHostReservationsResponse
- *
  * \brief The DescribeHostReservationsResponse class provides an interace for EC2 DescribeHostReservations responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeHostReservationsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeHostReservationsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeHostReservationsResponse::DescribeHostReservationsResponse(
         const DescribeHostReservationsRequest &request,
@@ -59,6 +54,9 @@ DescribeHostReservationsResponse::DescribeHostReservationsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeHostReservationsRequest * DescribeHostReservationsResponse::request() const
 {
     Q_D(const DescribeHostReservationsResponse);
@@ -66,9 +64,8 @@ const DescribeHostReservationsRequest * DescribeHostReservationsResponse::reques
 }
 
 /*!
- * @brief  Parse a EC2 DescribeHostReservations response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeHostReservations \a response.
  */
 void DescribeHostReservationsResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeHostReservationsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeHostReservationsResponsePrivate
+ * \brief The DescribeHostReservationsResponsePrivate class provides private implementation for DescribeHostReservationsResponse.
  * \internal
  *
- * \class DescribeHostReservationsResponsePrivate
- *
- * \brief Private implementation for DescribeHostReservationsResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeHostReservationsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeHostReservationsResponse instance.
+ * Constructs a DescribeHostReservationsResponsePrivate object with public implementation \a q.
  */
 DescribeHostReservationsResponsePrivate::DescribeHostReservationsResponsePrivate(
     DescribeHostReservationsResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeHostReservationsResponsePrivate::DescribeHostReservationsResponsePrivate
 }
 
 /*!
- * @brief  Parse an EC2 DescribeHostReservationsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeHostReservations response element from \a xml.
  */
 void DescribeHostReservationsResponsePrivate::parseDescribeHostReservationsResponse(QXmlStreamReader &xml)
 {

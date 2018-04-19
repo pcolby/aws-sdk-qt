@@ -29,10 +29,9 @@ namespace Organizations {
 
 /*!
  * \class QtAws::Organizations::DescribeOrganizationalUnitResponse
- *
  * \brief The DescribeOrganizationalUnitResponse class provides an interace for Organizations DescribeOrganizationalUnit responses.
  *
- * \ingroup Organizations
+ * \inmodule QtAwsOrganizations
  *
  *  <fullname>AWS Organizations API Reference</fullname>
  * 
@@ -181,11 +180,7 @@ namespace Organizations {
  */
 
 /*!
- * @brief  Constructs a new DescribeOrganizationalUnitResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeOrganizationalUnitResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeOrganizationalUnitResponse::DescribeOrganizationalUnitResponse(
         const DescribeOrganizationalUnitRequest &request,
@@ -197,6 +192,9 @@ DescribeOrganizationalUnitResponse::DescribeOrganizationalUnitResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeOrganizationalUnitRequest * DescribeOrganizationalUnitResponse::request() const
 {
     Q_D(const DescribeOrganizationalUnitResponse);
@@ -204,9 +202,8 @@ const DescribeOrganizationalUnitRequest * DescribeOrganizationalUnitResponse::re
 }
 
 /*!
- * @brief  Parse a Organizations DescribeOrganizationalUnit response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Organizations DescribeOrganizationalUnit \a response.
  */
 void DescribeOrganizationalUnitResponse::parseSuccess(QIODevice &response)
 {
@@ -216,19 +213,15 @@ void DescribeOrganizationalUnitResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Organizations::DescribeOrganizationalUnitResponsePrivate
+ * \brief The DescribeOrganizationalUnitResponsePrivate class provides private implementation for DescribeOrganizationalUnitResponse.
  * \internal
  *
- * \class DescribeOrganizationalUnitResponsePrivate
- *
- * \brief Private implementation for DescribeOrganizationalUnitResponse.
+ * \inmodule QtAwsOrganizations
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeOrganizationalUnitResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeOrganizationalUnitResponse instance.
+ * Constructs a DescribeOrganizationalUnitResponsePrivate object with public implementation \a q.
  */
 DescribeOrganizationalUnitResponsePrivate::DescribeOrganizationalUnitResponsePrivate(
     DescribeOrganizationalUnitResponse * const q) : OrganizationsResponsePrivate(q)
@@ -237,9 +230,7 @@ DescribeOrganizationalUnitResponsePrivate::DescribeOrganizationalUnitResponsePri
 }
 
 /*!
- * @brief  Parse an Organizations DescribeOrganizationalUnitResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Organizations DescribeOrganizationalUnit response element from \a xml.
  */
 void DescribeOrganizationalUnitResponsePrivate::parseDescribeOrganizationalUnitResponse(QXmlStreamReader &xml)
 {

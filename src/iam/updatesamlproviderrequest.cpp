@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateSAMLProviderRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a UpdateSAMLProviderRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateSAMLProviderRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateSAMLProviderRequestPrivate::UpdateSAMLProviderRequestPrivate(
     const IAMRequest::Action action, UpdateSAMLProviderRequest * const q)

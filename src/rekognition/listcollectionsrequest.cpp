@@ -82,9 +82,8 @@ QtAws::Core::AwsAbstractResponse * ListCollectionsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a ListCollectionsRequestPrivate object for Rekognition \a action with,
- * public implementation \a q.
+ * Constructs a ListCollectionsRequestPrivate object for Rekognition \a action,
+ * with public implementation \a q.
  */
 ListCollectionsRequestPrivate::ListCollectionsRequestPrivate(
     const RekognitionRequest::Action action, ListCollectionsRequest * const q)

@@ -99,9 +99,8 @@ QtAws::Core::AwsAbstractResponse * ActivatePipelineRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a ActivatePipelineRequestPrivate object for DataPipeline \a action with,
- * public implementation \a q.
+ * Constructs a ActivatePipelineRequestPrivate object for DataPipeline \a action,
+ * with public implementation \a q.
  */
 ActivatePipelineRequestPrivate::ActivatePipelineRequestPrivate(
     const DataPipelineRequest::Action action, ActivatePipelineRequest * const q)

@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateRoleDescriptionRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a UpdateRoleDescriptionRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateRoleDescriptionRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateRoleDescriptionRequestPrivate::UpdateRoleDescriptionRequestPrivate(
     const IAMRequest::Action action, UpdateRoleDescriptionRequest * const q)

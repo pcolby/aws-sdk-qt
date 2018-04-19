@@ -34,10 +34,10 @@ class QTAWS_EXPORT TerminateEnvironmentResponse : public ElasticBeanstalkRespons
 public:
     TerminateEnvironmentResponse(const TerminateEnvironmentRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const TerminateEnvironmentRequest * request() const;
+    virtual const TerminateEnvironmentRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(TerminateEnvironmentResponse)

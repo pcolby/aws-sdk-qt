@@ -34,10 +34,10 @@ class QTAWS_EXPORT AddTagsToVaultResponse : public GlacierResponse {
 public:
     AddTagsToVaultResponse(const AddTagsToVaultRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const AddTagsToVaultRequest * request() const;
+    virtual const AddTagsToVaultRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(AddTagsToVaultResponse)

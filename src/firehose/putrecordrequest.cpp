@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * PutRecordRequest::response(QNetworkReply * co
  */
 
 /*!
- *
- * Constructs a PutRecordRequestPrivate object for Firehose \a action with,
- * public implementation \a q.
+ * Constructs a PutRecordRequestPrivate object for Firehose \a action,
+ * with public implementation \a q.
  */
 PutRecordRequestPrivate::PutRecordRequestPrivate(
     const FirehoseRequest::Action action, PutRecordRequest * const q)

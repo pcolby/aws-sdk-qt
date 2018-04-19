@@ -29,10 +29,9 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::DeleteTagsResponse
- *
  * \brief The DeleteTagsResponse class provides an interace for ApplicationDiscoveryService DeleteTags responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  *
  *  <fullname>AWS Application Discovery Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace ApplicationDiscoveryService {
  */
 
 /*!
- * @brief  Constructs a new DeleteTagsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTagsResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTagsResponse::DeleteTagsResponse(
         const DeleteTagsRequest &request,
@@ -119,6 +114,9 @@ DeleteTagsResponse::DeleteTagsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTagsRequest * DeleteTagsResponse::request() const
 {
     Q_D(const DeleteTagsResponse);
@@ -126,9 +124,8 @@ const DeleteTagsRequest * DeleteTagsResponse::request() const
 }
 
 /*!
- * @brief  Parse a ApplicationDiscoveryService DeleteTags response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ApplicationDiscoveryService DeleteTags \a response.
  */
 void DeleteTagsResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DeleteTagsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ApplicationDiscoveryService::DeleteTagsResponsePrivate
+ * \brief The DeleteTagsResponsePrivate class provides private implementation for DeleteTagsResponse.
  * \internal
  *
- * \class DeleteTagsResponsePrivate
- *
- * \brief Private implementation for DeleteTagsResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTagsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTagsResponse instance.
+ * Constructs a DeleteTagsResponsePrivate object with public implementation \a q.
  */
 DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
     DeleteTagsResponse * const q) : ApplicationDiscoveryServiceResponsePrivate(q)
@@ -159,9 +152,7 @@ DeleteTagsResponsePrivate::DeleteTagsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ApplicationDiscoveryService DeleteTagsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ApplicationDiscoveryService DeleteTags response element from \a xml.
  */
 void DeleteTagsResponsePrivate::parseDeleteTagsResponse(QXmlStreamReader &xml)
 {

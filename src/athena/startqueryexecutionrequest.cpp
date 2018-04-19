@@ -93,9 +93,8 @@ QtAws::Core::AwsAbstractResponse * StartQueryExecutionRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a StartQueryExecutionRequestPrivate object for Athena \a action with,
- * public implementation \a q.
+ * Constructs a StartQueryExecutionRequestPrivate object for Athena \a action,
+ * with public implementation \a q.
  */
 StartQueryExecutionRequestPrivate::StartQueryExecutionRequestPrivate(
     const AthenaRequest::Action action, StartQueryExecutionRequest * const q)

@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::DeleteTableResponse
- *
  * \brief The DeleteTableResponse class provides an interace for Glue DeleteTable responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new DeleteTableResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteTableResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteTableResponse::DeleteTableResponse(
         const DeleteTableRequest &request,
@@ -58,6 +53,9 @@ DeleteTableResponse::DeleteTableResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteTableRequest * DeleteTableResponse::request() const
 {
     Q_D(const DeleteTableResponse);
@@ -65,9 +63,8 @@ const DeleteTableRequest * DeleteTableResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue DeleteTable response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue DeleteTable \a response.
  */
 void DeleteTableResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DeleteTableResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::DeleteTableResponsePrivate
+ * \brief The DeleteTableResponsePrivate class provides private implementation for DeleteTableResponse.
  * \internal
  *
- * \class DeleteTableResponsePrivate
- *
- * \brief Private implementation for DeleteTableResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteTableResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteTableResponse instance.
+ * Constructs a DeleteTableResponsePrivate object with public implementation \a q.
  */
 DeleteTableResponsePrivate::DeleteTableResponsePrivate(
     DeleteTableResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ DeleteTableResponsePrivate::DeleteTableResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue DeleteTableResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue DeleteTable response element from \a xml.
  */
 void DeleteTableResponsePrivate::parseDeleteTableResponse(QXmlStreamReader &xml)
 {

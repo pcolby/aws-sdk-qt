@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::SignUpResponse
- *
  * \brief The SignUpResponse class provides an interace for CognitoIdentityProvider SignUp responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new SignUpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SignUpResponse object for \a reply to \a request, with parent \a parent.
  */
 SignUpResponse::SignUpResponse(
         const SignUpRequest &request,
@@ -65,6 +60,9 @@ SignUpResponse::SignUpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SignUpRequest * SignUpResponse::request() const
 {
     Q_D(const SignUpResponse);
@@ -72,9 +70,8 @@ const SignUpRequest * SignUpResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider SignUp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider SignUp \a response.
  */
 void SignUpResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void SignUpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::SignUpResponsePrivate
+ * \brief The SignUpResponsePrivate class provides private implementation for SignUpResponse.
  * \internal
  *
- * \class SignUpResponsePrivate
- *
- * \brief Private implementation for SignUpResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SignUpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SignUpResponse instance.
+ * Constructs a SignUpResponsePrivate object with public implementation \a q.
  */
 SignUpResponsePrivate::SignUpResponsePrivate(
     SignUpResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ SignUpResponsePrivate::SignUpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider SignUpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider SignUp response element from \a xml.
  */
 void SignUpResponsePrivate::parseSignUpResponse(QXmlStreamReader &xml)
 {

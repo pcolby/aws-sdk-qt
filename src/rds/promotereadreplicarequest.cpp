@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * PromoteReadReplicaRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a PromoteReadReplicaRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a PromoteReadReplicaRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 PromoteReadReplicaRequestPrivate::PromoteReadReplicaRequestPrivate(
     const RDSRequest::Action action, PromoteReadReplicaRequest * const q)

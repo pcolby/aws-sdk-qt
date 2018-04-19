@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * DescribeBrokerRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DescribeBrokerRequestPrivate object for MQ \a action with,
- * public implementation \a q.
+ * Constructs a DescribeBrokerRequestPrivate object for MQ \a action,
+ * with public implementation \a q.
  */
 DescribeBrokerRequestPrivate::DescribeBrokerRequestPrivate(
     const MQRequest::Action action, DescribeBrokerRequest * const q)

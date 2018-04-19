@@ -87,9 +87,8 @@ QtAws::Core::AwsAbstractResponse * DeleteProvisioningArtifactRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DeleteProvisioningArtifactRequestPrivate object for ServiceCatalog \a action with,
- * public implementation \a q.
+ * Constructs a DeleteProvisioningArtifactRequestPrivate object for ServiceCatalog \a action,
+ * with public implementation \a q.
  */
 DeleteProvisioningArtifactRequestPrivate::DeleteProvisioningArtifactRequestPrivate(
     const ServiceCatalogRequest::Action action, DeleteProvisioningArtifactRequest * const q)

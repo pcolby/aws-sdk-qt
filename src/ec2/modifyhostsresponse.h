@@ -34,10 +34,10 @@ class QTAWS_EXPORT ModifyHostsResponse : public EC2Response {
 public:
     ModifyHostsResponse(const ModifyHostsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ModifyHostsRequest * request() const;
+    virtual const ModifyHostsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ModifyHostsResponse)

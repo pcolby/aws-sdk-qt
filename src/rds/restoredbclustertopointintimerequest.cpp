@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * RestoreDBClusterToPointInTimeRequest::respons
  */
 
 /*!
- *
- * Constructs a RestoreDBClusterToPointInTimeRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a RestoreDBClusterToPointInTimeRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeRequestPrivate(
     const RDSRequest::Action action, RestoreDBClusterToPointInTimeRequest * const q)

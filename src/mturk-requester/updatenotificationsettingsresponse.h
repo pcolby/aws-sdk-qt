@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateNotificationSettingsResponse : public MTurkResponse {
 public:
     UpdateNotificationSettingsResponse(const UpdateNotificationSettingsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateNotificationSettingsRequest * request() const;
+    virtual const UpdateNotificationSettingsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateNotificationSettingsResponse)

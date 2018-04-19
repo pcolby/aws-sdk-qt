@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::UploadServerCertificateResponse
- *
  * \brief The UploadServerCertificateResponse class provides an interace for IAM UploadServerCertificate responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new UploadServerCertificateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UploadServerCertificateResponse object for \a reply to \a request, with parent \a parent.
  */
 UploadServerCertificateResponse::UploadServerCertificateResponse(
         const UploadServerCertificateRequest &request,
@@ -120,6 +115,9 @@ UploadServerCertificateResponse::UploadServerCertificateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UploadServerCertificateRequest * UploadServerCertificateResponse::request() const
 {
     Q_D(const UploadServerCertificateResponse);
@@ -127,9 +125,8 @@ const UploadServerCertificateRequest * UploadServerCertificateResponse::request(
 }
 
 /*!
- * @brief  Parse a IAM UploadServerCertificate response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM UploadServerCertificate \a response.
  */
 void UploadServerCertificateResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void UploadServerCertificateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::UploadServerCertificateResponsePrivate
+ * \brief The UploadServerCertificateResponsePrivate class provides private implementation for UploadServerCertificateResponse.
  * \internal
  *
- * \class UploadServerCertificateResponsePrivate
- *
- * \brief Private implementation for UploadServerCertificateResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UploadServerCertificateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UploadServerCertificateResponse instance.
+ * Constructs a UploadServerCertificateResponsePrivate object with public implementation \a q.
  */
 UploadServerCertificateResponsePrivate::UploadServerCertificateResponsePrivate(
     UploadServerCertificateResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ UploadServerCertificateResponsePrivate::UploadServerCertificateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IAM UploadServerCertificateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM UploadServerCertificate response element from \a xml.
  */
 void UploadServerCertificateResponsePrivate::parseUploadServerCertificateResponse(QXmlStreamReader &xml)
 {

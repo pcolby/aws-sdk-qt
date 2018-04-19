@@ -29,10 +29,9 @@ namespace Kinesis {
 
 /*!
  * \class QtAws::Kinesis::AddTagsToStreamResponse
- *
  * \brief The AddTagsToStreamResponse class provides an interace for Kinesis AddTagsToStream responses.
  *
- * \ingroup Kinesis
+ * \inmodule QtAwsKinesis
  *
  *  <fullname>Amazon Kinesis Data Streams Service API Reference</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Kinesis {
  */
 
 /*!
- * @brief  Constructs a new AddTagsToStreamResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AddTagsToStreamResponse object for \a reply to \a request, with parent \a parent.
  */
 AddTagsToStreamResponse::AddTagsToStreamResponse(
         const AddTagsToStreamRequest &request,
@@ -58,6 +53,9 @@ AddTagsToStreamResponse::AddTagsToStreamResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AddTagsToStreamRequest * AddTagsToStreamResponse::request() const
 {
     Q_D(const AddTagsToStreamResponse);
@@ -65,9 +63,8 @@ const AddTagsToStreamRequest * AddTagsToStreamResponse::request() const
 }
 
 /*!
- * @brief  Parse a Kinesis AddTagsToStream response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Kinesis AddTagsToStream \a response.
  */
 void AddTagsToStreamResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void AddTagsToStreamResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Kinesis::AddTagsToStreamResponsePrivate
+ * \brief The AddTagsToStreamResponsePrivate class provides private implementation for AddTagsToStreamResponse.
  * \internal
  *
- * \class AddTagsToStreamResponsePrivate
- *
- * \brief Private implementation for AddTagsToStreamResponse.
+ * \inmodule QtAwsKinesis
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AddTagsToStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AddTagsToStreamResponse instance.
+ * Constructs a AddTagsToStreamResponsePrivate object with public implementation \a q.
  */
 AddTagsToStreamResponsePrivate::AddTagsToStreamResponsePrivate(
     AddTagsToStreamResponse * const q) : KinesisResponsePrivate(q)
@@ -98,9 +91,7 @@ AddTagsToStreamResponsePrivate::AddTagsToStreamResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Kinesis AddTagsToStreamResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Kinesis AddTagsToStream response element from \a xml.
  */
 void AddTagsToStreamResponsePrivate::parseAddTagsToStreamResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * CopyFpgaImageRequest::response(QNetworkReply 
  */
 
 /*!
- *
- * Constructs a CopyFpgaImageRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a CopyFpgaImageRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 CopyFpgaImageRequestPrivate::CopyFpgaImageRequestPrivate(
     const EC2Request::Action action, CopyFpgaImageRequest * const q)

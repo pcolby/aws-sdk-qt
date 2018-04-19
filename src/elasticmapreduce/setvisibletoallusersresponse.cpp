@@ -29,10 +29,9 @@ namespace EMR {
 
 /*!
  * \class QtAws::EMR::SetVisibleToAllUsersResponse
- *
  * \brief The SetVisibleToAllUsersResponse class provides an interace for EMR SetVisibleToAllUsers responses.
  *
- * \ingroup EMR
+ * \inmodule QtAwsEMR
  *
  *  Amazon EMR is a web service that makes it easy to process large amounts of data efficiently. Amazon EMR uses Hadoop
  *  processing combined with several AWS products to do tasks such as web indexing, data mining, log file analysis, machine
@@ -42,11 +41,7 @@ namespace EMR {
  */
 
 /*!
- * @brief  Constructs a new SetVisibleToAllUsersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SetVisibleToAllUsersResponse object for \a reply to \a request, with parent \a parent.
  */
 SetVisibleToAllUsersResponse::SetVisibleToAllUsersResponse(
         const SetVisibleToAllUsersRequest &request,
@@ -58,6 +53,9 @@ SetVisibleToAllUsersResponse::SetVisibleToAllUsersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SetVisibleToAllUsersRequest * SetVisibleToAllUsersResponse::request() const
 {
     Q_D(const SetVisibleToAllUsersResponse);
@@ -65,9 +63,8 @@ const SetVisibleToAllUsersRequest * SetVisibleToAllUsersResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EMR SetVisibleToAllUsers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EMR SetVisibleToAllUsers \a response.
  */
 void SetVisibleToAllUsersResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void SetVisibleToAllUsersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EMR::SetVisibleToAllUsersResponsePrivate
+ * \brief The SetVisibleToAllUsersResponsePrivate class provides private implementation for SetVisibleToAllUsersResponse.
  * \internal
  *
- * \class SetVisibleToAllUsersResponsePrivate
- *
- * \brief Private implementation for SetVisibleToAllUsersResponse.
+ * \inmodule QtAwsEMR
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SetVisibleToAllUsersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SetVisibleToAllUsersResponse instance.
+ * Constructs a SetVisibleToAllUsersResponsePrivate object with public implementation \a q.
  */
 SetVisibleToAllUsersResponsePrivate::SetVisibleToAllUsersResponsePrivate(
     SetVisibleToAllUsersResponse * const q) : EMRResponsePrivate(q)
@@ -98,9 +91,7 @@ SetVisibleToAllUsersResponsePrivate::SetVisibleToAllUsersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EMR SetVisibleToAllUsersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EMR SetVisibleToAllUsers response element from \a xml.
  */
 void SetVisibleToAllUsersResponsePrivate::parseSetVisibleToAllUsersResponse(QXmlStreamReader &xml)
 {

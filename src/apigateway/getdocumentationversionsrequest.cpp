@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * GetDocumentationVersionsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a GetDocumentationVersionsRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a GetDocumentationVersionsRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 GetDocumentationVersionsRequestPrivate::GetDocumentationVersionsRequestPrivate(
     const APIGatewayRequest::Action action, GetDocumentationVersionsRequest * const q)

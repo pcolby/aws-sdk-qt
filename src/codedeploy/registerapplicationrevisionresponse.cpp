@@ -29,10 +29,9 @@ namespace CodeDeploy {
 
 /*!
  * \class QtAws::CodeDeploy::RegisterApplicationRevisionResponse
- *
  * \brief The RegisterApplicationRevisionResponse class provides an interace for CodeDeploy RegisterApplicationRevision responses.
  *
- * \ingroup CodeDeploy
+ * \inmodule QtAwsCodeDeploy
  *
  *  <fullname>AWS CodeDeploy</fullname>
  * 
@@ -120,11 +119,7 @@ namespace CodeDeploy {
  */
 
 /*!
- * @brief  Constructs a new RegisterApplicationRevisionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterApplicationRevisionResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterApplicationRevisionResponse::RegisterApplicationRevisionResponse(
         const RegisterApplicationRevisionRequest &request,
@@ -136,6 +131,9 @@ RegisterApplicationRevisionResponse::RegisterApplicationRevisionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterApplicationRevisionRequest * RegisterApplicationRevisionResponse::request() const
 {
     Q_D(const RegisterApplicationRevisionResponse);
@@ -143,9 +141,8 @@ const RegisterApplicationRevisionRequest * RegisterApplicationRevisionResponse::
 }
 
 /*!
- * @brief  Parse a CodeDeploy RegisterApplicationRevision response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeDeploy RegisterApplicationRevision \a response.
  */
 void RegisterApplicationRevisionResponse::parseSuccess(QIODevice &response)
 {
@@ -155,19 +152,15 @@ void RegisterApplicationRevisionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeDeploy::RegisterApplicationRevisionResponsePrivate
+ * \brief The RegisterApplicationRevisionResponsePrivate class provides private implementation for RegisterApplicationRevisionResponse.
  * \internal
  *
- * \class RegisterApplicationRevisionResponsePrivate
- *
- * \brief Private implementation for RegisterApplicationRevisionResponse.
+ * \inmodule QtAwsCodeDeploy
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterApplicationRevisionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterApplicationRevisionResponse instance.
+ * Constructs a RegisterApplicationRevisionResponsePrivate object with public implementation \a q.
  */
 RegisterApplicationRevisionResponsePrivate::RegisterApplicationRevisionResponsePrivate(
     RegisterApplicationRevisionResponse * const q) : CodeDeployResponsePrivate(q)
@@ -176,9 +169,7 @@ RegisterApplicationRevisionResponsePrivate::RegisterApplicationRevisionResponseP
 }
 
 /*!
- * @brief  Parse an CodeDeploy RegisterApplicationRevisionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeDeploy RegisterApplicationRevision response element from \a xml.
  */
 void RegisterApplicationRevisionResponsePrivate::parseRegisterApplicationRevisionResponse(QXmlStreamReader &xml)
 {

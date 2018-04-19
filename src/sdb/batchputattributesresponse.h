@@ -34,10 +34,10 @@ class QTAWS_EXPORT BatchPutAttributesResponse : public SimpleDBResponse {
 public:
     BatchPutAttributesResponse(const BatchPutAttributesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const BatchPutAttributesRequest * request() const;
+    virtual const BatchPutAttributesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(BatchPutAttributesResponse)

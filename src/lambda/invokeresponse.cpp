@@ -29,10 +29,9 @@ namespace Lambda {
 
 /*!
  * \class QtAws::Lambda::InvokeResponse
- *
  * \brief The InvokeResponse class provides an interace for Lambda Invoke responses.
  *
- * \ingroup Lambda
+ * \inmodule QtAwsLambda
  *
  *  <fullname>AWS Lambda</fullname>
  * 
@@ -50,11 +49,7 @@ namespace Lambda {
  */
 
 /*!
- * @brief  Constructs a new InvokeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a InvokeResponse object for \a reply to \a request, with parent \a parent.
  */
 InvokeResponse::InvokeResponse(
         const InvokeRequest &request,
@@ -66,6 +61,9 @@ InvokeResponse::InvokeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const InvokeRequest * InvokeResponse::request() const
 {
     Q_D(const InvokeResponse);
@@ -73,9 +71,8 @@ const InvokeRequest * InvokeResponse::request() const
 }
 
 /*!
- * @brief  Parse a Lambda Invoke response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Lambda Invoke \a response.
  */
 void InvokeResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void InvokeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Lambda::InvokeResponsePrivate
+ * \brief The InvokeResponsePrivate class provides private implementation for InvokeResponse.
  * \internal
  *
- * \class InvokeResponsePrivate
- *
- * \brief Private implementation for InvokeResponse.
+ * \inmodule QtAwsLambda
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new InvokeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public InvokeResponse instance.
+ * Constructs a InvokeResponsePrivate object with public implementation \a q.
  */
 InvokeResponsePrivate::InvokeResponsePrivate(
     InvokeResponse * const q) : LambdaResponsePrivate(q)
@@ -106,9 +99,7 @@ InvokeResponsePrivate::InvokeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Lambda InvokeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Lambda Invoke response element from \a xml.
  */
 void InvokeResponsePrivate::parseInvokeResponse(QXmlStreamReader &xml)
 {

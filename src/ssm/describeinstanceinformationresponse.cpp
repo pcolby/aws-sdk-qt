@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribeInstanceInformationResponse
- *
  * \brief The DescribeInstanceInformationResponse class provides an interace for SSM DescribeInstanceInformation responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribeInstanceInformationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeInstanceInformationResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeInstanceInformationResponse::DescribeInstanceInformationResponse(
         const DescribeInstanceInformationRequest &request,
@@ -79,6 +74,9 @@ DescribeInstanceInformationResponse::DescribeInstanceInformationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeInstanceInformationRequest * DescribeInstanceInformationResponse::request() const
 {
     Q_D(const DescribeInstanceInformationResponse);
@@ -86,9 +84,8 @@ const DescribeInstanceInformationRequest * DescribeInstanceInformationResponse::
 }
 
 /*!
- * @brief  Parse a SSM DescribeInstanceInformation response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribeInstanceInformation \a response.
  */
 void DescribeInstanceInformationResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribeInstanceInformationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribeInstanceInformationResponsePrivate
+ * \brief The DescribeInstanceInformationResponsePrivate class provides private implementation for DescribeInstanceInformationResponse.
  * \internal
  *
- * \class DescribeInstanceInformationResponsePrivate
- *
- * \brief Private implementation for DescribeInstanceInformationResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeInstanceInformationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeInstanceInformationResponse instance.
+ * Constructs a DescribeInstanceInformationResponsePrivate object with public implementation \a q.
  */
 DescribeInstanceInformationResponsePrivate::DescribeInstanceInformationResponsePrivate(
     DescribeInstanceInformationResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribeInstanceInformationResponsePrivate::DescribeInstanceInformationResponseP
 }
 
 /*!
- * @brief  Parse an SSM DescribeInstanceInformationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribeInstanceInformation response element from \a xml.
  */
 void DescribeInstanceInformationResponsePrivate::parseDescribeInstanceInformationResponse(QXmlStreamReader &xml)
 {

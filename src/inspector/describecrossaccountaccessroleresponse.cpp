@@ -29,10 +29,9 @@ namespace Inspector {
 
 /*!
  * \class QtAws::Inspector::DescribeCrossAccountAccessRoleResponse
- *
  * \brief The DescribeCrossAccountAccessRoleResponse class provides an interace for Inspector DescribeCrossAccountAccessRole responses.
  *
- * \ingroup Inspector
+ * \inmodule QtAwsInspector
  *
  *  <fullname>Amazon Inspector</fullname>
  * 
@@ -44,11 +43,7 @@ namespace Inspector {
  */
 
 /*!
- * @brief  Constructs a new DescribeCrossAccountAccessRoleResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCrossAccountAccessRoleResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCrossAccountAccessRoleResponse::DescribeCrossAccountAccessRoleResponse(
         const DescribeCrossAccountAccessRoleRequest &request,
@@ -60,6 +55,9 @@ DescribeCrossAccountAccessRoleResponse::DescribeCrossAccountAccessRoleResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCrossAccountAccessRoleRequest * DescribeCrossAccountAccessRoleResponse::request() const
 {
     Q_D(const DescribeCrossAccountAccessRoleResponse);
@@ -67,9 +65,8 @@ const DescribeCrossAccountAccessRoleRequest * DescribeCrossAccountAccessRoleResp
 }
 
 /*!
- * @brief  Parse a Inspector DescribeCrossAccountAccessRole response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Inspector DescribeCrossAccountAccessRole \a response.
  */
 void DescribeCrossAccountAccessRoleResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DescribeCrossAccountAccessRoleResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Inspector::DescribeCrossAccountAccessRoleResponsePrivate
+ * \brief The DescribeCrossAccountAccessRoleResponsePrivate class provides private implementation for DescribeCrossAccountAccessRoleResponse.
  * \internal
  *
- * \class DescribeCrossAccountAccessRoleResponsePrivate
- *
- * \brief Private implementation for DescribeCrossAccountAccessRoleResponse.
+ * \inmodule QtAwsInspector
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCrossAccountAccessRoleResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCrossAccountAccessRoleResponse instance.
+ * Constructs a DescribeCrossAccountAccessRoleResponsePrivate object with public implementation \a q.
  */
 DescribeCrossAccountAccessRoleResponsePrivate::DescribeCrossAccountAccessRoleResponsePrivate(
     DescribeCrossAccountAccessRoleResponse * const q) : InspectorResponsePrivate(q)
@@ -100,9 +93,7 @@ DescribeCrossAccountAccessRoleResponsePrivate::DescribeCrossAccountAccessRoleRes
 }
 
 /*!
- * @brief  Parse an Inspector DescribeCrossAccountAccessRoleResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Inspector DescribeCrossAccountAccessRole response element from \a xml.
  */
 void DescribeCrossAccountAccessRoleResponsePrivate::parseDescribeCrossAccountAccessRoleResponse(QXmlStreamReader &xml)
 {

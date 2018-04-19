@@ -29,10 +29,9 @@ namespace ServiceCatalog {
 
 /*!
  * \class QtAws::ServiceCatalog::DeletePortfolioResponse
- *
  * \brief The DeletePortfolioResponse class provides an interace for ServiceCatalog DeletePortfolio responses.
  *
- * \ingroup ServiceCatalog
+ * \inmodule QtAwsServiceCatalog
  *
  *  <fullname>AWS Service Catalog</fullname>
  * 
@@ -45,11 +44,7 @@ namespace ServiceCatalog {
  */
 
 /*!
- * @brief  Constructs a new DeletePortfolioResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeletePortfolioResponse object for \a reply to \a request, with parent \a parent.
  */
 DeletePortfolioResponse::DeletePortfolioResponse(
         const DeletePortfolioRequest &request,
@@ -61,6 +56,9 @@ DeletePortfolioResponse::DeletePortfolioResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeletePortfolioRequest * DeletePortfolioResponse::request() const
 {
     Q_D(const DeletePortfolioResponse);
@@ -68,9 +66,8 @@ const DeletePortfolioRequest * DeletePortfolioResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServiceCatalog DeletePortfolio response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServiceCatalog DeletePortfolio \a response.
  */
 void DeletePortfolioResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DeletePortfolioResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServiceCatalog::DeletePortfolioResponsePrivate
+ * \brief The DeletePortfolioResponsePrivate class provides private implementation for DeletePortfolioResponse.
  * \internal
  *
- * \class DeletePortfolioResponsePrivate
- *
- * \brief Private implementation for DeletePortfolioResponse.
+ * \inmodule QtAwsServiceCatalog
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeletePortfolioResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeletePortfolioResponse instance.
+ * Constructs a DeletePortfolioResponsePrivate object with public implementation \a q.
  */
 DeletePortfolioResponsePrivate::DeletePortfolioResponsePrivate(
     DeletePortfolioResponse * const q) : ServiceCatalogResponsePrivate(q)
@@ -101,9 +94,7 @@ DeletePortfolioResponsePrivate::DeletePortfolioResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServiceCatalog DeletePortfolioResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServiceCatalog DeletePortfolio response element from \a xml.
  */
 void DeletePortfolioResponsePrivate::parseDeletePortfolioResponse(QXmlStreamReader &xml)
 {

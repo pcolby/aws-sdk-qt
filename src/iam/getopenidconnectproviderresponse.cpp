@@ -29,10 +29,9 @@ namespace IAM {
 
 /*!
  * \class QtAws::IAM::GetOpenIDConnectProviderResponse
- *
  * \brief The GetOpenIDConnectProviderResponse class provides an interace for IAM GetOpenIDConnectProvider responses.
  *
- * \ingroup IAM
+ * \inmodule QtAwsIAM
  *
  *  <fullname>AWS Identity and Access Management</fullname>
  * 
@@ -104,11 +103,7 @@ namespace IAM {
  */
 
 /*!
- * @brief  Constructs a new GetOpenIDConnectProviderResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetOpenIDConnectProviderResponse object for \a reply to \a request, with parent \a parent.
  */
 GetOpenIDConnectProviderResponse::GetOpenIDConnectProviderResponse(
         const GetOpenIDConnectProviderRequest &request,
@@ -120,6 +115,9 @@ GetOpenIDConnectProviderResponse::GetOpenIDConnectProviderResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetOpenIDConnectProviderRequest * GetOpenIDConnectProviderResponse::request() const
 {
     Q_D(const GetOpenIDConnectProviderResponse);
@@ -127,9 +125,8 @@ const GetOpenIDConnectProviderRequest * GetOpenIDConnectProviderResponse::reques
 }
 
 /*!
- * @brief  Parse a IAM GetOpenIDConnectProvider response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IAM GetOpenIDConnectProvider \a response.
  */
 void GetOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 {
@@ -139,19 +136,15 @@ void GetOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IAM::GetOpenIDConnectProviderResponsePrivate
+ * \brief The GetOpenIDConnectProviderResponsePrivate class provides private implementation for GetOpenIDConnectProviderResponse.
  * \internal
  *
- * \class GetOpenIDConnectProviderResponsePrivate
- *
- * \brief Private implementation for GetOpenIDConnectProviderResponse.
+ * \inmodule QtAwsIAM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetOpenIDConnectProviderResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetOpenIDConnectProviderResponse instance.
+ * Constructs a GetOpenIDConnectProviderResponsePrivate object with public implementation \a q.
  */
 GetOpenIDConnectProviderResponsePrivate::GetOpenIDConnectProviderResponsePrivate(
     GetOpenIDConnectProviderResponse * const q) : IAMResponsePrivate(q)
@@ -160,9 +153,7 @@ GetOpenIDConnectProviderResponsePrivate::GetOpenIDConnectProviderResponsePrivate
 }
 
 /*!
- * @brief  Parse an IAM GetOpenIDConnectProviderResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IAM GetOpenIDConnectProvider response element from \a xml.
  */
 void GetOpenIDConnectProviderResponsePrivate::parseGetOpenIDConnectProviderResponse(QXmlStreamReader &xml)
 {

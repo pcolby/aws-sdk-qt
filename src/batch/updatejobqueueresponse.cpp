@@ -29,10 +29,9 @@ namespace Batch {
 
 /*!
  * \class QtAws::Batch::UpdateJobQueueResponse
- *
  * \brief The UpdateJobQueueResponse class provides an interace for Batch UpdateJobQueue responses.
  *
- * \ingroup Batch
+ * \inmodule QtAwsBatch
  *
  *  AWS Batch enables you to run batch computing workloads on the AWS Cloud. Batch computing is a common way for developers,
  *  scientists, and engineers to access large amounts of compute resources, and AWS Batch removes the undifferentiated heavy
@@ -53,11 +52,7 @@ namespace Batch {
  */
 
 /*!
- * @brief  Constructs a new UpdateJobQueueResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateJobQueueResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateJobQueueResponse::UpdateJobQueueResponse(
         const UpdateJobQueueRequest &request,
@@ -69,6 +64,9 @@ UpdateJobQueueResponse::UpdateJobQueueResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateJobQueueRequest * UpdateJobQueueResponse::request() const
 {
     Q_D(const UpdateJobQueueResponse);
@@ -76,9 +74,8 @@ const UpdateJobQueueRequest * UpdateJobQueueResponse::request() const
 }
 
 /*!
- * @brief  Parse a Batch UpdateJobQueue response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Batch UpdateJobQueue \a response.
  */
 void UpdateJobQueueResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void UpdateJobQueueResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Batch::UpdateJobQueueResponsePrivate
+ * \brief The UpdateJobQueueResponsePrivate class provides private implementation for UpdateJobQueueResponse.
  * \internal
  *
- * \class UpdateJobQueueResponsePrivate
- *
- * \brief Private implementation for UpdateJobQueueResponse.
+ * \inmodule QtAwsBatch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateJobQueueResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateJobQueueResponse instance.
+ * Constructs a UpdateJobQueueResponsePrivate object with public implementation \a q.
  */
 UpdateJobQueueResponsePrivate::UpdateJobQueueResponsePrivate(
     UpdateJobQueueResponse * const q) : BatchResponsePrivate(q)
@@ -109,9 +102,7 @@ UpdateJobQueueResponsePrivate::UpdateJobQueueResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Batch UpdateJobQueueResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Batch UpdateJobQueue response element from \a xml.
  */
 void UpdateJobQueueResponsePrivate::parseUpdateJobQueueResponse(QXmlStreamReader &xml)
 {

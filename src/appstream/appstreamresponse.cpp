@@ -28,16 +28,13 @@ namespace AppStream {
 
 /*!
  * \class QtAws::AppStream::AppStreamResponse
- *
  * \brief The AppStreamResponse class provides an interface for AppStream responses.
  *
- * \ingroup AppStream
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @brief  Constructs a new AppStreamResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a AppStreamResponse object with parent \a parent.
  */
 AppStreamResponse::AppStreamResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new AppStreamResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ AppStreamResponse::AppStreamResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AppStreamResponse object.
- *
+ * \internal
+ * Constructs a AppStreamResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AppStreamResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 AppStreamResponse::AppStreamResponse(AppStreamResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ AppStreamResponse::AppStreamResponse(AppStreamResponsePrivate * const d, QObject
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void AppStreamResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void AppStreamResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::AppStream::AppStreamResponsePrivate
+ * \brief The AppStreamResponsePrivate class provides private implementation for AppStreamResponse.
+ * \internal
  *
- * @class  AppStreamResponsePrivate
- *
- * @brief  Private implementation for AppStreamResponse.
+ * \inmodule QtAwsAppStream
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AppStreamResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AppStreamResponse instance.
+ * Constructs a AppStreamResponsePrivate object with public implementation \a q.
  */
 AppStreamResponsePrivate::AppStreamResponsePrivate(
     AppStreamResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

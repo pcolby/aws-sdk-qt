@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeImageBuildersResponse : public AppStreamResponse {
 public:
     DescribeImageBuildersResponse(const DescribeImageBuildersRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeImageBuildersRequest * request() const;
+    virtual const DescribeImageBuildersRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeImageBuildersResponse)

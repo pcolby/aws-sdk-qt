@@ -104,9 +104,8 @@ QtAws::Core::AwsAbstractResponse * ListTagsRequest::response(QNetworkReply * con
  */
 
 /*!
- *
- * Constructs a ListTagsRequestPrivate object for CloudTrail \a action with,
- * public implementation \a q.
+ * Constructs a ListTagsRequestPrivate object for CloudTrail \a action,
+ * with public implementation \a q.
  */
 ListTagsRequestPrivate::ListTagsRequestPrivate(
     const CloudTrailRequest::Action action, ListTagsRequest * const q)

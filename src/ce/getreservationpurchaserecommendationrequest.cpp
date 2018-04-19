@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * GetReservationPurchaseRecommendationRequest::
  */
 
 /*!
- *
- * Constructs a GetReservationPurchaseRecommendationRequestPrivate object for CostExplorer \a action with,
- * public implementation \a q.
+ * Constructs a GetReservationPurchaseRecommendationRequestPrivate object for CostExplorer \a action,
+ * with public implementation \a q.
  */
 GetReservationPurchaseRecommendationRequestPrivate::GetReservationPurchaseRecommendationRequestPrivate(
     const CostExplorerRequest::Action action, GetReservationPurchaseRecommendationRequest * const q)

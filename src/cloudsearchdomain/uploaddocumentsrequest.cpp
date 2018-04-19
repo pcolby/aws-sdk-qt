@@ -94,9 +94,8 @@ QtAws::Core::AwsAbstractResponse * UploadDocumentsRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a UploadDocumentsRequestPrivate object for CloudSearchDomain \a action with,
- * public implementation \a q.
+ * Constructs a UploadDocumentsRequestPrivate object for CloudSearchDomain \a action,
+ * with public implementation \a q.
  */
 UploadDocumentsRequestPrivate::UploadDocumentsRequestPrivate(
     const CloudSearchDomainRequest::Action action, UploadDocumentsRequest * const q)

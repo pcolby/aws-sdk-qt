@@ -154,9 +154,8 @@ QtAws::Core::AwsAbstractResponse * DescribeScalableTargetsRequest::response(QNet
  */
 
 /*!
- *
- * Constructs a DescribeScalableTargetsRequestPrivate object for ApplicationAutoScaling \a action with,
- * public implementation \a q.
+ * Constructs a DescribeScalableTargetsRequestPrivate object for ApplicationAutoScaling \a action,
+ * with public implementation \a q.
  */
 DescribeScalableTargetsRequestPrivate::DescribeScalableTargetsRequestPrivate(
     const ApplicationAutoScalingRequest::Action action, DescribeScalableTargetsRequest * const q)

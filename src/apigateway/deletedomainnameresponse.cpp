@@ -29,10 +29,9 @@ namespace APIGateway {
 
 /*!
  * \class QtAws::APIGateway::DeleteDomainNameResponse
- *
  * \brief The DeleteDomainNameResponse class provides an interace for APIGateway DeleteDomainName responses.
  *
- * \ingroup APIGateway
+ * \inmodule QtAwsAPIGateway
  *
  *  <fullname>Amazon API Gateway</fullname>
  * 
@@ -44,11 +43,7 @@ namespace APIGateway {
  */
 
 /*!
- * @brief  Constructs a new DeleteDomainNameResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDomainNameResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDomainNameResponse::DeleteDomainNameResponse(
         const DeleteDomainNameRequest &request,
@@ -60,6 +55,9 @@ DeleteDomainNameResponse::DeleteDomainNameResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDomainNameRequest * DeleteDomainNameResponse::request() const
 {
     Q_D(const DeleteDomainNameResponse);
@@ -67,9 +65,8 @@ const DeleteDomainNameRequest * DeleteDomainNameResponse::request() const
 }
 
 /*!
- * @brief  Parse a APIGateway DeleteDomainName response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful APIGateway DeleteDomainName \a response.
  */
 void DeleteDomainNameResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void DeleteDomainNameResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::APIGateway::DeleteDomainNameResponsePrivate
+ * \brief The DeleteDomainNameResponsePrivate class provides private implementation for DeleteDomainNameResponse.
  * \internal
  *
- * \class DeleteDomainNameResponsePrivate
- *
- * \brief Private implementation for DeleteDomainNameResponse.
+ * \inmodule QtAwsAPIGateway
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDomainNameResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDomainNameResponse instance.
+ * Constructs a DeleteDomainNameResponsePrivate object with public implementation \a q.
  */
 DeleteDomainNameResponsePrivate::DeleteDomainNameResponsePrivate(
     DeleteDomainNameResponse * const q) : APIGatewayResponsePrivate(q)
@@ -100,9 +93,7 @@ DeleteDomainNameResponsePrivate::DeleteDomainNameResponsePrivate(
 }
 
 /*!
- * @brief  Parse an APIGateway DeleteDomainNameResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a APIGateway DeleteDomainName response element from \a xml.
  */
 void DeleteDomainNameResponsePrivate::parseDeleteDomainNameResponse(QXmlStreamReader &xml)
 {

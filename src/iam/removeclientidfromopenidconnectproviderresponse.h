@@ -34,10 +34,10 @@ class QTAWS_EXPORT RemoveClientIDFromOpenIDConnectProviderResponse : public IAMR
 public:
     RemoveClientIDFromOpenIDConnectProviderResponse(const RemoveClientIDFromOpenIDConnectProviderRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RemoveClientIDFromOpenIDConnectProviderRequest * request() const;
+    virtual const RemoveClientIDFromOpenIDConnectProviderRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RemoveClientIDFromOpenIDConnectProviderResponse)

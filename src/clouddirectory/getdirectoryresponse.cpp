@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::GetDirectoryResponse
- *
  * \brief The GetDirectoryResponse class provides an interace for CloudDirectory GetDirectory responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new GetDirectoryResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetDirectoryResponse object for \a reply to \a request, with parent \a parent.
  */
 GetDirectoryResponse::GetDirectoryResponse(
         const GetDirectoryRequest &request,
@@ -62,6 +57,9 @@ GetDirectoryResponse::GetDirectoryResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetDirectoryRequest * GetDirectoryResponse::request() const
 {
     Q_D(const GetDirectoryResponse);
@@ -69,9 +67,8 @@ const GetDirectoryRequest * GetDirectoryResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudDirectory GetDirectory response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory GetDirectory \a response.
  */
 void GetDirectoryResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void GetDirectoryResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::GetDirectoryResponsePrivate
+ * \brief The GetDirectoryResponsePrivate class provides private implementation for GetDirectoryResponse.
  * \internal
  *
- * \class GetDirectoryResponsePrivate
- *
- * \brief Private implementation for GetDirectoryResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetDirectoryResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetDirectoryResponse instance.
+ * Constructs a GetDirectoryResponsePrivate object with public implementation \a q.
  */
 GetDirectoryResponsePrivate::GetDirectoryResponsePrivate(
     GetDirectoryResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ GetDirectoryResponsePrivate::GetDirectoryResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory GetDirectoryResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory GetDirectory response element from \a xml.
  */
 void GetDirectoryResponsePrivate::parseGetDirectoryResponse(QXmlStreamReader &xml)
 {

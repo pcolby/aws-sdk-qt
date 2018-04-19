@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * CreateBasePathMappingRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateBasePathMappingRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a CreateBasePathMappingRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 CreateBasePathMappingRequestPrivate::CreateBasePathMappingRequestPrivate(
     const APIGatewayRequest::Action action, CreateBasePathMappingRequest * const q)

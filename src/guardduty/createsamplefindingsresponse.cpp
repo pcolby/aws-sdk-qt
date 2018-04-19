@@ -29,21 +29,16 @@ namespace GuardDuty {
 
 /*!
  * \class QtAws::GuardDuty::CreateSampleFindingsResponse
- *
  * \brief The CreateSampleFindingsResponse class provides an interace for GuardDuty CreateSampleFindings responses.
  *
- * \ingroup GuardDuty
+ * \inmodule QtAwsGuardDuty
  *
  *
  * \sa GuardDutyClient::createSampleFindings
  */
 
 /*!
- * @brief  Constructs a new CreateSampleFindingsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateSampleFindingsResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateSampleFindingsResponse::CreateSampleFindingsResponse(
         const CreateSampleFindingsRequest &request,
@@ -55,6 +50,9 @@ CreateSampleFindingsResponse::CreateSampleFindingsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateSampleFindingsRequest * CreateSampleFindingsResponse::request() const
 {
     Q_D(const CreateSampleFindingsResponse);
@@ -62,9 +60,8 @@ const CreateSampleFindingsRequest * CreateSampleFindingsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a GuardDuty CreateSampleFindings response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GuardDuty CreateSampleFindings \a response.
  */
 void CreateSampleFindingsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CreateSampleFindingsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GuardDuty::CreateSampleFindingsResponsePrivate
+ * \brief The CreateSampleFindingsResponsePrivate class provides private implementation for CreateSampleFindingsResponse.
  * \internal
  *
- * \class CreateSampleFindingsResponsePrivate
- *
- * \brief Private implementation for CreateSampleFindingsResponse.
+ * \inmodule QtAwsGuardDuty
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateSampleFindingsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateSampleFindingsResponse instance.
+ * Constructs a CreateSampleFindingsResponsePrivate object with public implementation \a q.
  */
 CreateSampleFindingsResponsePrivate::CreateSampleFindingsResponsePrivate(
     CreateSampleFindingsResponse * const q) : GuardDutyResponsePrivate(q)
@@ -95,9 +88,7 @@ CreateSampleFindingsResponsePrivate::CreateSampleFindingsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GuardDuty CreateSampleFindingsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GuardDuty CreateSampleFindings response element from \a xml.
  */
 void CreateSampleFindingsResponsePrivate::parseCreateSampleFindingsResponse(QXmlStreamReader &xml)
 {

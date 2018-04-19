@@ -149,9 +149,8 @@ QtAws::Core::AwsAbstractResponse * DeleteTargetGroupRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteTargetGroupRequestPrivate object for ElasticLoadBalancingv2 \a action with,
- * public implementation \a q.
+ * Constructs a DeleteTargetGroupRequestPrivate object for ElasticLoadBalancingv2 \a action,
+ * with public implementation \a q.
  */
 DeleteTargetGroupRequestPrivate::DeleteTargetGroupRequestPrivate(
     const ElasticLoadBalancingv2Request::Action action, DeleteTargetGroupRequest * const q)

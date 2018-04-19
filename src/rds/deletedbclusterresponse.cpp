@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteDBClusterResponse
- *
  * \brief The DeleteDBClusterResponse class provides an interace for RDS DeleteDBCluster responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteDBClusterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDBClusterResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDBClusterResponse::DeleteDBClusterResponse(
         const DeleteDBClusterRequest &request,
@@ -119,6 +114,9 @@ DeleteDBClusterResponse::DeleteDBClusterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDBClusterRequest * DeleteDBClusterResponse::request() const
 {
     Q_D(const DeleteDBClusterResponse);
@@ -126,9 +124,8 @@ const DeleteDBClusterRequest * DeleteDBClusterResponse::request() const
 }
 
 /*!
- * @brief  Parse a RDS DeleteDBCluster response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DeleteDBCluster \a response.
  */
 void DeleteDBClusterResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DeleteDBClusterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DeleteDBClusterResponsePrivate
+ * \brief The DeleteDBClusterResponsePrivate class provides private implementation for DeleteDBClusterResponse.
  * \internal
  *
- * \class DeleteDBClusterResponsePrivate
- *
- * \brief Private implementation for DeleteDBClusterResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDBClusterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDBClusterResponse instance.
+ * Constructs a DeleteDBClusterResponsePrivate object with public implementation \a q.
  */
 DeleteDBClusterResponsePrivate::DeleteDBClusterResponsePrivate(
     DeleteDBClusterResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DeleteDBClusterResponsePrivate::DeleteDBClusterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DeleteDBClusterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DeleteDBCluster response element from \a xml.
  */
 void DeleteDBClusterResponsePrivate::parseDeleteDBClusterResponse(QXmlStreamReader &xml)
 {

@@ -29,21 +29,16 @@ namespace Pinpoint {
 
 /*!
  * \class QtAws::Pinpoint::UpdateEndpointsBatchResponse
- *
  * \brief The UpdateEndpointsBatchResponse class provides an interace for Pinpoint UpdateEndpointsBatch responses.
  *
- * \ingroup Pinpoint
+ * \inmodule QtAwsPinpoint
  *
  *
  * \sa PinpointClient::updateEndpointsBatch
  */
 
 /*!
- * @brief  Constructs a new UpdateEndpointsBatchResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateEndpointsBatchResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateEndpointsBatchResponse::UpdateEndpointsBatchResponse(
         const UpdateEndpointsBatchRequest &request,
@@ -55,6 +50,9 @@ UpdateEndpointsBatchResponse::UpdateEndpointsBatchResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateEndpointsBatchRequest * UpdateEndpointsBatchResponse::request() const
 {
     Q_D(const UpdateEndpointsBatchResponse);
@@ -62,9 +60,8 @@ const UpdateEndpointsBatchRequest * UpdateEndpointsBatchResponse::request() cons
 }
 
 /*!
- * @brief  Parse a Pinpoint UpdateEndpointsBatch response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Pinpoint UpdateEndpointsBatch \a response.
  */
 void UpdateEndpointsBatchResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void UpdateEndpointsBatchResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Pinpoint::UpdateEndpointsBatchResponsePrivate
+ * \brief The UpdateEndpointsBatchResponsePrivate class provides private implementation for UpdateEndpointsBatchResponse.
  * \internal
  *
- * \class UpdateEndpointsBatchResponsePrivate
- *
- * \brief Private implementation for UpdateEndpointsBatchResponse.
+ * \inmodule QtAwsPinpoint
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateEndpointsBatchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateEndpointsBatchResponse instance.
+ * Constructs a UpdateEndpointsBatchResponsePrivate object with public implementation \a q.
  */
 UpdateEndpointsBatchResponsePrivate::UpdateEndpointsBatchResponsePrivate(
     UpdateEndpointsBatchResponse * const q) : PinpointResponsePrivate(q)
@@ -95,9 +88,7 @@ UpdateEndpointsBatchResponsePrivate::UpdateEndpointsBatchResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Pinpoint UpdateEndpointsBatchResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Pinpoint UpdateEndpointsBatch response element from \a xml.
  */
 void UpdateEndpointsBatchResponsePrivate::parseUpdateEndpointsBatchResponse(QXmlStreamReader &xml)
 {

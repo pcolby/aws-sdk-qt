@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeNodeAssociationStatusResponse : public OpsWorksCMResp
 public:
     DescribeNodeAssociationStatusResponse(const DescribeNodeAssociationStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeNodeAssociationStatusRequest * request() const;
+    virtual const DescribeNodeAssociationStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeNodeAssociationStatusResponse)

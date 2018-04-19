@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::RegisterImageResponse
- *
  * \brief The RegisterImageResponse class provides an interace for EC2 RegisterImage responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new RegisterImageResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterImageResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterImageResponse::RegisterImageResponse(
         const RegisterImageRequest &request,
@@ -59,6 +54,9 @@ RegisterImageResponse::RegisterImageResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterImageRequest * RegisterImageResponse::request() const
 {
     Q_D(const RegisterImageResponse);
@@ -66,9 +64,8 @@ const RegisterImageRequest * RegisterImageResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 RegisterImage response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 RegisterImage \a response.
  */
 void RegisterImageResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void RegisterImageResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::RegisterImageResponsePrivate
+ * \brief The RegisterImageResponsePrivate class provides private implementation for RegisterImageResponse.
  * \internal
  *
- * \class RegisterImageResponsePrivate
- *
- * \brief Private implementation for RegisterImageResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterImageResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterImageResponse instance.
+ * Constructs a RegisterImageResponsePrivate object with public implementation \a q.
  */
 RegisterImageResponsePrivate::RegisterImageResponsePrivate(
     RegisterImageResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ RegisterImageResponsePrivate::RegisterImageResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 RegisterImageResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 RegisterImage response element from \a xml.
  */
 void RegisterImageResponsePrivate::parseRegisterImageResponse(QXmlStreamReader &xml)
 {

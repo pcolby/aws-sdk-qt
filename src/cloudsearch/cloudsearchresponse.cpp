@@ -28,16 +28,13 @@ namespace CloudSearch {
 
 /*!
  * \class QtAws::CloudSearch::CloudSearchResponse
- *
  * \brief The CloudSearchResponse class provides an interface for CloudSearch responses.
  *
- * \ingroup CloudSearch
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @brief  Constructs a new CloudSearchResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CloudSearchResponse object with parent \a parent.
  */
 CloudSearchResponse::CloudSearchResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CloudSearchResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CloudSearchResponse::CloudSearchResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudSearchResponse object.
- *
+ * \internal
+ * Constructs a CloudSearchResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudSearchResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CloudSearchResponse::CloudSearchResponse(CloudSearchResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CloudSearchResponse::CloudSearchResponse(CloudSearchResponsePrivate * const d, Q
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CloudSearchResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CloudSearchResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearch::CloudSearchResponsePrivate
+ * \brief The CloudSearchResponsePrivate class provides private implementation for CloudSearchResponse.
+ * \internal
  *
- * @class  CloudSearchResponsePrivate
- *
- * @brief  Private implementation for CloudSearchResponse.
+ * \inmodule QtAwsCloudSearch
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudSearchResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloudSearchResponse instance.
+ * Constructs a CloudSearchResponsePrivate object with public implementation \a q.
  */
 CloudSearchResponsePrivate::CloudSearchResponsePrivate(
     CloudSearchResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

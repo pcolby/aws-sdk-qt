@@ -29,10 +29,9 @@ namespace ServerlessApplicationRepository {
 
 /*!
  * \class QtAws::ServerlessApplicationRepository::UpdateApplicationResponse
- *
  * \brief The UpdateApplicationResponse class provides an interace for ServerlessApplicationRepository UpdateApplication responses.
  *
- * \ingroup ServerlessApplicationRepository
+ * \inmodule QtAwsServerlessApplicationRepository
  *
  *  The AWS Serverless Application Repository makes it easy for developers and enterprises to quickly find and deploy
  *  serverless applications in the AWS Cloud. For more information about serverless applications, see Serverless Computing
@@ -60,11 +59,7 @@ namespace ServerlessApplicationRepository {
  */
 
 /*!
- * @brief  Constructs a new UpdateApplicationResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpdateApplicationResponse object for \a reply to \a request, with parent \a parent.
  */
 UpdateApplicationResponse::UpdateApplicationResponse(
         const UpdateApplicationRequest &request,
@@ -76,6 +71,9 @@ UpdateApplicationResponse::UpdateApplicationResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpdateApplicationRequest * UpdateApplicationResponse::request() const
 {
     Q_D(const UpdateApplicationResponse);
@@ -83,9 +81,8 @@ const UpdateApplicationRequest * UpdateApplicationResponse::request() const
 }
 
 /*!
- * @brief  Parse a ServerlessApplicationRepository UpdateApplication response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ServerlessApplicationRepository UpdateApplication \a response.
  */
 void UpdateApplicationResponse::parseSuccess(QIODevice &response)
 {
@@ -95,19 +92,15 @@ void UpdateApplicationResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ServerlessApplicationRepository::UpdateApplicationResponsePrivate
+ * \brief The UpdateApplicationResponsePrivate class provides private implementation for UpdateApplicationResponse.
  * \internal
  *
- * \class UpdateApplicationResponsePrivate
- *
- * \brief Private implementation for UpdateApplicationResponse.
+ * \inmodule QtAwsServerlessApplicationRepository
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpdateApplicationResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpdateApplicationResponse instance.
+ * Constructs a UpdateApplicationResponsePrivate object with public implementation \a q.
  */
 UpdateApplicationResponsePrivate::UpdateApplicationResponsePrivate(
     UpdateApplicationResponse * const q) : ServerlessApplicationRepositoryResponsePrivate(q)
@@ -116,9 +109,7 @@ UpdateApplicationResponsePrivate::UpdateApplicationResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ServerlessApplicationRepository UpdateApplicationResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ServerlessApplicationRepository UpdateApplication response element from \a xml.
  */
 void UpdateApplicationResponsePrivate::parseUpdateApplicationResponse(QXmlStreamReader &xml)
 {

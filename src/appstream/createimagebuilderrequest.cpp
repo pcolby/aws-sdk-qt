@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * CreateImageBuilderRequest::response(QNetworkR
  */
 
 /*!
- *
- * Constructs a CreateImageBuilderRequestPrivate object for AppStream \a action with,
- * public implementation \a q.
+ * Constructs a CreateImageBuilderRequestPrivate object for AppStream \a action,
+ * with public implementation \a q.
  */
 CreateImageBuilderRequestPrivate::CreateImageBuilderRequestPrivate(
     const AppStreamRequest::Action action, CreateImageBuilderRequest * const q)

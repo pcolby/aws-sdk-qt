@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * SetIdentityNotificationTopicRequest::response
  */
 
 /*!
- *
- * Constructs a SetIdentityNotificationTopicRequestPrivate object for SES \a action with,
- * public implementation \a q.
+ * Constructs a SetIdentityNotificationTopicRequestPrivate object for SES \a action,
+ * with public implementation \a q.
  */
 SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestPrivate(
     const SESRequest::Action action, SetIdentityNotificationTopicRequest * const q)

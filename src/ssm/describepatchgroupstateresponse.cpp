@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::DescribePatchGroupStateResponse
- *
  * \brief The DescribePatchGroupStateResponse class provides an interace for SSM DescribePatchGroupState responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new DescribePatchGroupStateResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribePatchGroupStateResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribePatchGroupStateResponse::DescribePatchGroupStateResponse(
         const DescribePatchGroupStateRequest &request,
@@ -79,6 +74,9 @@ DescribePatchGroupStateResponse::DescribePatchGroupStateResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribePatchGroupStateRequest * DescribePatchGroupStateResponse::request() const
 {
     Q_D(const DescribePatchGroupStateResponse);
@@ -86,9 +84,8 @@ const DescribePatchGroupStateRequest * DescribePatchGroupStateResponse::request(
 }
 
 /*!
- * @brief  Parse a SSM DescribePatchGroupState response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM DescribePatchGroupState \a response.
  */
 void DescribePatchGroupStateResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void DescribePatchGroupStateResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::DescribePatchGroupStateResponsePrivate
+ * \brief The DescribePatchGroupStateResponsePrivate class provides private implementation for DescribePatchGroupStateResponse.
  * \internal
  *
- * \class DescribePatchGroupStateResponsePrivate
- *
- * \brief Private implementation for DescribePatchGroupStateResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribePatchGroupStateResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribePatchGroupStateResponse instance.
+ * Constructs a DescribePatchGroupStateResponsePrivate object with public implementation \a q.
  */
 DescribePatchGroupStateResponsePrivate::DescribePatchGroupStateResponsePrivate(
     DescribePatchGroupStateResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ DescribePatchGroupStateResponsePrivate::DescribePatchGroupStateResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM DescribePatchGroupStateResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM DescribePatchGroupState response element from \a xml.
  */
 void DescribePatchGroupStateResponsePrivate::parseDescribePatchGroupStateResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::RegisterElasticIpResponse
- *
  * \brief The RegisterElasticIpResponse class provides an interace for OpsWorks RegisterElasticIp responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new RegisterElasticIpResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RegisterElasticIpResponse object for \a reply to \a request, with parent \a parent.
  */
 RegisterElasticIpResponse::RegisterElasticIpResponse(
         const RegisterElasticIpRequest &request,
@@ -161,6 +156,9 @@ RegisterElasticIpResponse::RegisterElasticIpResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RegisterElasticIpRequest * RegisterElasticIpResponse::request() const
 {
     Q_D(const RegisterElasticIpResponse);
@@ -168,9 +166,8 @@ const RegisterElasticIpRequest * RegisterElasticIpResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks RegisterElasticIp response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks RegisterElasticIp \a response.
  */
 void RegisterElasticIpResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void RegisterElasticIpResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::RegisterElasticIpResponsePrivate
+ * \brief The RegisterElasticIpResponsePrivate class provides private implementation for RegisterElasticIpResponse.
  * \internal
  *
- * \class RegisterElasticIpResponsePrivate
- *
- * \brief Private implementation for RegisterElasticIpResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RegisterElasticIpResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RegisterElasticIpResponse instance.
+ * Constructs a RegisterElasticIpResponsePrivate object with public implementation \a q.
  */
 RegisterElasticIpResponsePrivate::RegisterElasticIpResponsePrivate(
     RegisterElasticIpResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ RegisterElasticIpResponsePrivate::RegisterElasticIpResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks RegisterElasticIpResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks RegisterElasticIp response element from \a xml.
  */
 void RegisterElasticIpResponsePrivate::parseRegisterElasticIpResponse(QXmlStreamReader &xml)
 {

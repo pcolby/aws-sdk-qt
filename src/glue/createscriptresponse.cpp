@@ -29,10 +29,9 @@ namespace Glue {
 
 /*!
  * \class QtAws::Glue::CreateScriptResponse
- *
  * \brief The CreateScriptResponse class provides an interace for Glue CreateScript responses.
  *
- * \ingroup Glue
+ * \inmodule QtAwsGlue
  *
  *  <fullname>AWS Glue</fullname>
  * 
@@ -42,11 +41,7 @@ namespace Glue {
  */
 
 /*!
- * @brief  Constructs a new CreateScriptResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateScriptResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateScriptResponse::CreateScriptResponse(
         const CreateScriptRequest &request,
@@ -58,6 +53,9 @@ CreateScriptResponse::CreateScriptResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateScriptRequest * CreateScriptResponse::request() const
 {
     Q_D(const CreateScriptResponse);
@@ -65,9 +63,8 @@ const CreateScriptRequest * CreateScriptResponse::request() const
 }
 
 /*!
- * @brief  Parse a Glue CreateScript response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Glue CreateScript \a response.
  */
 void CreateScriptResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void CreateScriptResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Glue::CreateScriptResponsePrivate
+ * \brief The CreateScriptResponsePrivate class provides private implementation for CreateScriptResponse.
  * \internal
  *
- * \class CreateScriptResponsePrivate
- *
- * \brief Private implementation for CreateScriptResponse.
+ * \inmodule QtAwsGlue
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateScriptResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateScriptResponse instance.
+ * Constructs a CreateScriptResponsePrivate object with public implementation \a q.
  */
 CreateScriptResponsePrivate::CreateScriptResponsePrivate(
     CreateScriptResponse * const q) : GlueResponsePrivate(q)
@@ -98,9 +91,7 @@ CreateScriptResponsePrivate::CreateScriptResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Glue CreateScriptResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Glue CreateScript response element from \a xml.
  */
 void CreateScriptResponsePrivate::parseCreateScriptResponse(QXmlStreamReader &xml)
 {

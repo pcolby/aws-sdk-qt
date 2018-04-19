@@ -169,9 +169,8 @@ QtAws::Core::AwsAbstractResponse * DescribeUserProfileRequest::response(QNetwork
  */
 
 /*!
- *
- * Constructs a DescribeUserProfileRequestPrivate object for CodeStar \a action with,
- * public implementation \a q.
+ * Constructs a DescribeUserProfileRequestPrivate object for CodeStar \a action,
+ * with public implementation \a q.
  */
 DescribeUserProfileRequestPrivate::DescribeUserProfileRequestPrivate(
     const CodeStarRequest::Action action, DescribeUserProfileRequest * const q)

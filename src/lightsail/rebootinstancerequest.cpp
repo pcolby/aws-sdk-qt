@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * RebootInstanceRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a RebootInstanceRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a RebootInstanceRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 RebootInstanceRequestPrivate::RebootInstanceRequestPrivate(
     const LightsailRequest::Action action, RebootInstanceRequest * const q)

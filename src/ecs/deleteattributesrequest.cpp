@@ -98,9 +98,8 @@ QtAws::Core::AwsAbstractResponse * DeleteAttributesRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteAttributesRequestPrivate object for ECS \a action with,
- * public implementation \a q.
+ * Constructs a DeleteAttributesRequestPrivate object for ECS \a action,
+ * with public implementation \a q.
  */
 DeleteAttributesRequestPrivate::DeleteAttributesRequestPrivate(
     const ECSRequest::Action action, DeleteAttributesRequest * const q)

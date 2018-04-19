@@ -29,10 +29,9 @@ namespace CloudFront {
 
 /*!
  * \class QtAws::CloudFront::ListDistributionsByWebACLIdResponse
- *
  * \brief The ListDistributionsByWebACLIdResponse class provides an interace for CloudFront ListDistributionsByWebACLId responses.
  *
- * \ingroup CloudFront
+ * \inmodule QtAwsCloudFront
  *
  *  <fullname>Amazon CloudFront</fullname>
  * 
@@ -44,11 +43,7 @@ namespace CloudFront {
  */
 
 /*!
- * @brief  Constructs a new ListDistributionsByWebACLIdResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDistributionsByWebACLIdResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDistributionsByWebACLIdResponse::ListDistributionsByWebACLIdResponse(
         const ListDistributionsByWebACLIdRequest &request,
@@ -60,6 +55,9 @@ ListDistributionsByWebACLIdResponse::ListDistributionsByWebACLIdResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDistributionsByWebACLIdRequest * ListDistributionsByWebACLIdResponse::request() const
 {
     Q_D(const ListDistributionsByWebACLIdResponse);
@@ -67,9 +65,8 @@ const ListDistributionsByWebACLIdRequest * ListDistributionsByWebACLIdResponse::
 }
 
 /*!
- * @brief  Parse a CloudFront ListDistributionsByWebACLId response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFront ListDistributionsByWebACLId \a response.
  */
 void ListDistributionsByWebACLIdResponse::parseSuccess(QIODevice &response)
 {
@@ -79,19 +76,15 @@ void ListDistributionsByWebACLIdResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFront::ListDistributionsByWebACLIdResponsePrivate
+ * \brief The ListDistributionsByWebACLIdResponsePrivate class provides private implementation for ListDistributionsByWebACLIdResponse.
  * \internal
  *
- * \class ListDistributionsByWebACLIdResponsePrivate
- *
- * \brief Private implementation for ListDistributionsByWebACLIdResponse.
+ * \inmodule QtAwsCloudFront
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDistributionsByWebACLIdResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDistributionsByWebACLIdResponse instance.
+ * Constructs a ListDistributionsByWebACLIdResponsePrivate object with public implementation \a q.
  */
 ListDistributionsByWebACLIdResponsePrivate::ListDistributionsByWebACLIdResponsePrivate(
     ListDistributionsByWebACLIdResponse * const q) : CloudFrontResponsePrivate(q)
@@ -100,9 +93,7 @@ ListDistributionsByWebACLIdResponsePrivate::ListDistributionsByWebACLIdResponseP
 }
 
 /*!
- * @brief  Parse an CloudFront ListDistributionsByWebACLIdResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFront ListDistributionsByWebACLId response element from \a xml.
  */
 void ListDistributionsByWebACLIdResponsePrivate::parseListDistributionsByWebACLIdResponse(QXmlStreamReader &xml)
 {

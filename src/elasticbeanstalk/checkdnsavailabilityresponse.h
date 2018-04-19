@@ -34,10 +34,10 @@ class QTAWS_EXPORT CheckDNSAvailabilityResponse : public ElasticBeanstalkRespons
 public:
     CheckDNSAvailabilityResponse(const CheckDNSAvailabilityRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CheckDNSAvailabilityRequest * request() const;
+    virtual const CheckDNSAvailabilityRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CheckDNSAvailabilityResponse)

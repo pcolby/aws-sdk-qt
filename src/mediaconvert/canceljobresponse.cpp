@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::CancelJobResponse
- *
  * \brief The CancelJobResponse class provides an interace for MediaConvert CancelJob responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::cancelJob
  */
 
 /*!
- * @brief  Constructs a new CancelJobResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelJobResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelJobResponse::CancelJobResponse(
         const CancelJobRequest &request,
@@ -55,6 +50,9 @@ CancelJobResponse::CancelJobResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelJobRequest * CancelJobResponse::request() const
 {
     Q_D(const CancelJobResponse);
@@ -62,9 +60,8 @@ const CancelJobRequest * CancelJobResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert CancelJob response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert CancelJob \a response.
  */
 void CancelJobResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void CancelJobResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::CancelJobResponsePrivate
+ * \brief The CancelJobResponsePrivate class provides private implementation for CancelJobResponse.
  * \internal
  *
- * \class CancelJobResponsePrivate
- *
- * \brief Private implementation for CancelJobResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelJobResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelJobResponse instance.
+ * Constructs a CancelJobResponsePrivate object with public implementation \a q.
  */
 CancelJobResponsePrivate::CancelJobResponsePrivate(
     CancelJobResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ CancelJobResponsePrivate::CancelJobResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert CancelJobResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert CancelJob response element from \a xml.
  */
 void CancelJobResponsePrivate::parseCancelJobResponse(QXmlStreamReader &xml)
 {

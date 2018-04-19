@@ -29,10 +29,9 @@ namespace Redshift {
 
 /*!
  * \class QtAws::Redshift::DescribeClustersResponse
- *
  * \brief The DescribeClustersResponse class provides an interace for Redshift DescribeClusters responses.
  *
- * \ingroup Redshift
+ * \inmodule QtAwsRedshift
  *
  *  <fullname>Amazon Redshift</fullname>
  * 
@@ -69,11 +68,7 @@ namespace Redshift {
  */
 
 /*!
- * @brief  Constructs a new DescribeClustersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeClustersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeClustersResponse::DescribeClustersResponse(
         const DescribeClustersRequest &request,
@@ -85,6 +80,9 @@ DescribeClustersResponse::DescribeClustersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeClustersRequest * DescribeClustersResponse::request() const
 {
     Q_D(const DescribeClustersResponse);
@@ -92,9 +90,8 @@ const DescribeClustersRequest * DescribeClustersResponse::request() const
 }
 
 /*!
- * @brief  Parse a Redshift DescribeClusters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Redshift DescribeClusters \a response.
  */
 void DescribeClustersResponse::parseSuccess(QIODevice &response)
 {
@@ -104,19 +101,15 @@ void DescribeClustersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Redshift::DescribeClustersResponsePrivate
+ * \brief The DescribeClustersResponsePrivate class provides private implementation for DescribeClustersResponse.
  * \internal
  *
- * \class DescribeClustersResponsePrivate
- *
- * \brief Private implementation for DescribeClustersResponse.
+ * \inmodule QtAwsRedshift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeClustersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeClustersResponse instance.
+ * Constructs a DescribeClustersResponsePrivate object with public implementation \a q.
  */
 DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
     DescribeClustersResponse * const q) : RedshiftResponsePrivate(q)
@@ -125,9 +118,7 @@ DescribeClustersResponsePrivate::DescribeClustersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Redshift DescribeClustersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Redshift DescribeClusters response element from \a xml.
  */
 void DescribeClustersResponsePrivate::parseDescribeClustersResponse(QXmlStreamReader &xml)
 {

@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * ImportDocumentationPartsRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a ImportDocumentationPartsRequestPrivate object for APIGateway \a action with,
- * public implementation \a q.
+ * Constructs a ImportDocumentationPartsRequestPrivate object for APIGateway \a action,
+ * with public implementation \a q.
  */
 ImportDocumentationPartsRequestPrivate::ImportDocumentationPartsRequestPrivate(
     const APIGatewayRequest::Action action, ImportDocumentationPartsRequest * const q)

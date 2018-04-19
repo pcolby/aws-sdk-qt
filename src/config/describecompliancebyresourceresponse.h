@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeComplianceByResourceResponse : public ConfigServiceRe
 public:
     DescribeComplianceByResourceResponse(const DescribeComplianceByResourceRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeComplianceByResourceRequest * request() const;
+    virtual const DescribeComplianceByResourceRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeComplianceByResourceResponse)

@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeTableRestoreStatusRequest::response(Q
  */
 
 /*!
- *
- * Constructs a DescribeTableRestoreStatusRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeTableRestoreStatusRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeTableRestoreStatusRequestPrivate::DescribeTableRestoreStatusRequestPrivate(
     const RedshiftRequest::Action action, DescribeTableRestoreStatusRequest * const q)

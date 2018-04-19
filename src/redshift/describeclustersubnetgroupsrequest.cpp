@@ -111,9 +111,8 @@ QtAws::Core::AwsAbstractResponse * DescribeClusterSubnetGroupsRequest::response(
  */
 
 /*!
- *
- * Constructs a DescribeClusterSubnetGroupsRequestPrivate object for Redshift \a action with,
- * public implementation \a q.
+ * Constructs a DescribeClusterSubnetGroupsRequestPrivate object for Redshift \a action,
+ * with public implementation \a q.
  */
 DescribeClusterSubnetGroupsRequestPrivate::DescribeClusterSubnetGroupsRequestPrivate(
     const RedshiftRequest::Action action, DescribeClusterSubnetGroupsRequest * const q)

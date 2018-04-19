@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutObjectAclResponse : public S3Response {
 public:
     PutObjectAclResponse(const PutObjectAclRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutObjectAclRequest * request() const;
+    virtual const PutObjectAclRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutObjectAclResponse)

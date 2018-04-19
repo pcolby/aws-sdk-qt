@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateSnapshotScheduleResponse : public StorageGatewayRespons
 public:
     UpdateSnapshotScheduleResponse(const UpdateSnapshotScheduleRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateSnapshotScheduleRequest * request() const;
+    virtual const UpdateSnapshotScheduleRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateSnapshotScheduleResponse)

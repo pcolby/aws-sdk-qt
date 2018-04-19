@@ -162,9 +162,8 @@ QtAws::Core::AwsAbstractResponse * DeregisterOnPremisesInstanceRequest::response
  */
 
 /*!
- *
- * Constructs a DeregisterOnPremisesInstanceRequestPrivate object for CodeDeploy \a action with,
- * public implementation \a q.
+ * Constructs a DeregisterOnPremisesInstanceRequestPrivate object for CodeDeploy \a action,
+ * with public implementation \a q.
  */
 DeregisterOnPremisesInstanceRequestPrivate::DeregisterOnPremisesInstanceRequestPrivate(
     const CodeDeployRequest::Action action, DeregisterOnPremisesInstanceRequest * const q)

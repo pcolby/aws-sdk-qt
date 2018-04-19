@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * UpdateGroupRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a UpdateGroupRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a UpdateGroupRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 UpdateGroupRequestPrivate::UpdateGroupRequestPrivate(
     const IAMRequest::Action action, UpdateGroupRequest * const q)

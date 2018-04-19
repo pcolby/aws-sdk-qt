@@ -83,9 +83,8 @@ QtAws::Core::AwsAbstractResponse * AssociateCreatedArtifactRequest::response(QNe
  */
 
 /*!
- *
- * Constructs a AssociateCreatedArtifactRequestPrivate object for MigrationHub \a action with,
- * public implementation \a q.
+ * Constructs a AssociateCreatedArtifactRequestPrivate object for MigrationHub \a action,
+ * with public implementation \a q.
  */
 AssociateCreatedArtifactRequestPrivate::AssociateCreatedArtifactRequestPrivate(
     const MigrationHubRequest::Action action, AssociateCreatedArtifactRequest * const q)

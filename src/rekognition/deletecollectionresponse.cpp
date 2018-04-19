@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DeleteCollectionResponse
- *
  * \brief The DeleteCollectionResponse class provides an interace for Rekognition DeleteCollection responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DeleteCollectionResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteCollectionResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteCollectionResponse::DeleteCollectionResponse(
         const DeleteCollectionRequest &request,
@@ -56,6 +51,9 @@ DeleteCollectionResponse::DeleteCollectionResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteCollectionRequest * DeleteCollectionResponse::request() const
 {
     Q_D(const DeleteCollectionResponse);
@@ -63,9 +61,8 @@ const DeleteCollectionRequest * DeleteCollectionResponse::request() const
 }
 
 /*!
- * @brief  Parse a Rekognition DeleteCollection response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition DeleteCollection \a response.
  */
 void DeleteCollectionResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DeleteCollectionResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::DeleteCollectionResponsePrivate
+ * \brief The DeleteCollectionResponsePrivate class provides private implementation for DeleteCollectionResponse.
  * \internal
  *
- * \class DeleteCollectionResponsePrivate
- *
- * \brief Private implementation for DeleteCollectionResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteCollectionResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteCollectionResponse instance.
+ * Constructs a DeleteCollectionResponsePrivate object with public implementation \a q.
  */
 DeleteCollectionResponsePrivate::DeleteCollectionResponsePrivate(
     DeleteCollectionResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ DeleteCollectionResponsePrivate::DeleteCollectionResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition DeleteCollectionResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition DeleteCollection response element from \a xml.
  */
 void DeleteCollectionResponsePrivate::parseDeleteCollectionResponse(QXmlStreamReader &xml)
 {

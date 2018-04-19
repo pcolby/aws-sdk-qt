@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeletePolicyVersionResponse : public IoTResponse {
 public:
     DeletePolicyVersionResponse(const DeletePolicyVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeletePolicyVersionRequest * request() const;
+    virtual const DeletePolicyVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeletePolicyVersionResponse)

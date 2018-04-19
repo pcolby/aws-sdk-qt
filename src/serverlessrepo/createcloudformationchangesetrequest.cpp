@@ -102,9 +102,8 @@ QtAws::Core::AwsAbstractResponse * CreateCloudFormationChangeSetRequest::respons
  */
 
 /*!
- *
- * Constructs a CreateCloudFormationChangeSetRequestPrivate object for ServerlessApplicationRepository \a action with,
- * public implementation \a q.
+ * Constructs a CreateCloudFormationChangeSetRequestPrivate object for ServerlessApplicationRepository \a action,
+ * with public implementation \a q.
  */
 CreateCloudFormationChangeSetRequestPrivate::CreateCloudFormationChangeSetRequestPrivate(
     const ServerlessApplicationRepositoryRequest::Action action, CreateCloudFormationChangeSetRequest * const q)

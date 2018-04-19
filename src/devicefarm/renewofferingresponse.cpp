@@ -29,10 +29,9 @@ namespace DeviceFarm {
 
 /*!
  * \class QtAws::DeviceFarm::RenewOfferingResponse
- *
  * \brief The RenewOfferingResponse class provides an interace for DeviceFarm RenewOffering responses.
  *
- * \ingroup DeviceFarm
+ * \inmodule QtAwsDeviceFarm
  *
  *  AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical
  *  phones, tablets, and other devices in the
@@ -41,11 +40,7 @@ namespace DeviceFarm {
  */
 
 /*!
- * @brief  Constructs a new RenewOfferingResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a RenewOfferingResponse object for \a reply to \a request, with parent \a parent.
  */
 RenewOfferingResponse::RenewOfferingResponse(
         const RenewOfferingRequest &request,
@@ -57,6 +52,9 @@ RenewOfferingResponse::RenewOfferingResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const RenewOfferingRequest * RenewOfferingResponse::request() const
 {
     Q_D(const RenewOfferingResponse);
@@ -64,9 +62,8 @@ const RenewOfferingRequest * RenewOfferingResponse::request() const
 }
 
 /*!
- * @brief  Parse a DeviceFarm RenewOffering response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DeviceFarm RenewOffering \a response.
  */
 void RenewOfferingResponse::parseSuccess(QIODevice &response)
 {
@@ -76,19 +73,15 @@ void RenewOfferingResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DeviceFarm::RenewOfferingResponsePrivate
+ * \brief The RenewOfferingResponsePrivate class provides private implementation for RenewOfferingResponse.
  * \internal
  *
- * \class RenewOfferingResponsePrivate
- *
- * \brief Private implementation for RenewOfferingResponse.
+ * \inmodule QtAwsDeviceFarm
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new RenewOfferingResponsePrivate object.
- *
- * @param  q  Pointer to this object's public RenewOfferingResponse instance.
+ * Constructs a RenewOfferingResponsePrivate object with public implementation \a q.
  */
 RenewOfferingResponsePrivate::RenewOfferingResponsePrivate(
     RenewOfferingResponse * const q) : DeviceFarmResponsePrivate(q)
@@ -97,9 +90,7 @@ RenewOfferingResponsePrivate::RenewOfferingResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DeviceFarm RenewOfferingResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DeviceFarm RenewOffering response element from \a xml.
  */
 void RenewOfferingResponsePrivate::parseRenewOfferingResponse(QXmlStreamReader &xml)
 {

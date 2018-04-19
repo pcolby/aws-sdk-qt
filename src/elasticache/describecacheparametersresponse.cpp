@@ -29,10 +29,9 @@ namespace ElastiCache {
 
 /*!
  * \class QtAws::ElastiCache::DescribeCacheParametersResponse
- *
  * \brief The DescribeCacheParametersResponse class provides an interace for ElastiCache DescribeCacheParameters responses.
  *
- * \ingroup ElastiCache
+ * \inmodule QtAwsElastiCache
  *
  *  <fullname>Amazon ElastiCache</fullname>
  * 
@@ -53,11 +52,7 @@ namespace ElastiCache {
  */
 
 /*!
- * @brief  Constructs a new DescribeCacheParametersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeCacheParametersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeCacheParametersResponse::DescribeCacheParametersResponse(
         const DescribeCacheParametersRequest &request,
@@ -69,6 +64,9 @@ DescribeCacheParametersResponse::DescribeCacheParametersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeCacheParametersRequest * DescribeCacheParametersResponse::request() const
 {
     Q_D(const DescribeCacheParametersResponse);
@@ -76,9 +74,8 @@ const DescribeCacheParametersRequest * DescribeCacheParametersResponse::request(
 }
 
 /*!
- * @brief  Parse a ElastiCache DescribeCacheParameters response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElastiCache DescribeCacheParameters \a response.
  */
 void DescribeCacheParametersResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void DescribeCacheParametersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElastiCache::DescribeCacheParametersResponsePrivate
+ * \brief The DescribeCacheParametersResponsePrivate class provides private implementation for DescribeCacheParametersResponse.
  * \internal
  *
- * \class DescribeCacheParametersResponsePrivate
- *
- * \brief Private implementation for DescribeCacheParametersResponse.
+ * \inmodule QtAwsElastiCache
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeCacheParametersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeCacheParametersResponse instance.
+ * Constructs a DescribeCacheParametersResponsePrivate object with public implementation \a q.
  */
 DescribeCacheParametersResponsePrivate::DescribeCacheParametersResponsePrivate(
     DescribeCacheParametersResponse * const q) : ElastiCacheResponsePrivate(q)
@@ -109,9 +102,7 @@ DescribeCacheParametersResponsePrivate::DescribeCacheParametersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an ElastiCache DescribeCacheParametersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElastiCache DescribeCacheParameters response element from \a xml.
  */
 void DescribeCacheParametersResponsePrivate::parseDescribeCacheParametersResponse(QXmlStreamReader &xml)
 {

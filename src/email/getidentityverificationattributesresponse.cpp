@@ -29,10 +29,9 @@ namespace SES {
 
 /*!
  * \class QtAws::SES::GetIdentityVerificationAttributesResponse
- *
  * \brief The GetIdentityVerificationAttributesResponse class provides an interace for SES GetIdentityVerificationAttributes responses.
  *
- * \ingroup SES
+ * \inmodule QtAwsSES
  *
  *  <fullname>Amazon Simple Email Service</fullname>
  * 
@@ -50,11 +49,7 @@ namespace SES {
  */
 
 /*!
- * @brief  Constructs a new GetIdentityVerificationAttributesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetIdentityVerificationAttributesResponse object for \a reply to \a request, with parent \a parent.
  */
 GetIdentityVerificationAttributesResponse::GetIdentityVerificationAttributesResponse(
         const GetIdentityVerificationAttributesRequest &request,
@@ -66,6 +61,9 @@ GetIdentityVerificationAttributesResponse::GetIdentityVerificationAttributesResp
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetIdentityVerificationAttributesRequest * GetIdentityVerificationAttributesResponse::request() const
 {
     Q_D(const GetIdentityVerificationAttributesResponse);
@@ -73,9 +71,8 @@ const GetIdentityVerificationAttributesRequest * GetIdentityVerificationAttribut
 }
 
 /*!
- * @brief  Parse a SES GetIdentityVerificationAttributes response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SES GetIdentityVerificationAttributes \a response.
  */
 void GetIdentityVerificationAttributesResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void GetIdentityVerificationAttributesResponse::parseSuccess(QIODevice &response
 }
 
 /*!
+ * \class QtAws::SES::GetIdentityVerificationAttributesResponsePrivate
+ * \brief The GetIdentityVerificationAttributesResponsePrivate class provides private implementation for GetIdentityVerificationAttributesResponse.
  * \internal
  *
- * \class GetIdentityVerificationAttributesResponsePrivate
- *
- * \brief Private implementation for GetIdentityVerificationAttributesResponse.
+ * \inmodule QtAwsSES
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetIdentityVerificationAttributesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetIdentityVerificationAttributesResponse instance.
+ * Constructs a GetIdentityVerificationAttributesResponsePrivate object with public implementation \a q.
  */
 GetIdentityVerificationAttributesResponsePrivate::GetIdentityVerificationAttributesResponsePrivate(
     GetIdentityVerificationAttributesResponse * const q) : SESResponsePrivate(q)
@@ -106,9 +99,7 @@ GetIdentityVerificationAttributesResponsePrivate::GetIdentityVerificationAttribu
 }
 
 /*!
- * @brief  Parse an SES GetIdentityVerificationAttributesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SES GetIdentityVerificationAttributes response element from \a xml.
  */
 void GetIdentityVerificationAttributesResponsePrivate::parseGetIdentityVerificationAttributesResponse(QXmlStreamReader &xml)
 {

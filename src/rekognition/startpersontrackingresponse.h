@@ -34,10 +34,10 @@ class QTAWS_EXPORT StartPersonTrackingResponse : public RekognitionResponse {
 public:
     StartPersonTrackingResponse(const StartPersonTrackingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const StartPersonTrackingRequest * request() const;
+    virtual const StartPersonTrackingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(StartPersonTrackingResponse)

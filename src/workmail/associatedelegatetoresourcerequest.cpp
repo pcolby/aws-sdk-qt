@@ -114,9 +114,8 @@ QtAws::Core::AwsAbstractResponse * AssociateDelegateToResourceRequest::response(
  */
 
 /*!
- *
- * Constructs a AssociateDelegateToResourceRequestPrivate object for WorkMail \a action with,
- * public implementation \a q.
+ * Constructs a AssociateDelegateToResourceRequestPrivate object for WorkMail \a action,
+ * with public implementation \a q.
  */
 AssociateDelegateToResourceRequestPrivate::AssociateDelegateToResourceRequestPrivate(
     const WorkMailRequest::Action action, AssociateDelegateToResourceRequest * const q)

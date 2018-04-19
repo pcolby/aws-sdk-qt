@@ -92,9 +92,8 @@ QtAws::Core::AwsAbstractResponse * TestAuthorizationRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a TestAuthorizationRequestPrivate object for IoT \a action with,
- * public implementation \a q.
+ * Constructs a TestAuthorizationRequestPrivate object for IoT \a action,
+ * with public implementation \a q.
  */
 TestAuthorizationRequestPrivate::TestAuthorizationRequestPrivate(
     const IoTRequest::Action action, TestAuthorizationRequest * const q)

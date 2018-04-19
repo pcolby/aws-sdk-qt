@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetHostnameSuggestionResponse : public OpsWorksResponse {
 public:
     GetHostnameSuggestionResponse(const GetHostnameSuggestionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetHostnameSuggestionRequest * request() const;
+    virtual const GetHostnameSuggestionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetHostnameSuggestionResponse)

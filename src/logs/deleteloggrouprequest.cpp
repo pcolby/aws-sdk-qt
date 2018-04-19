@@ -110,9 +110,8 @@ QtAws::Core::AwsAbstractResponse * DeleteLogGroupRequest::response(QNetworkReply
  */
 
 /*!
- *
- * Constructs a DeleteLogGroupRequestPrivate object for CloudWatchLogs \a action with,
- * public implementation \a q.
+ * Constructs a DeleteLogGroupRequestPrivate object for CloudWatchLogs \a action,
+ * with public implementation \a q.
  */
 DeleteLogGroupRequestPrivate::DeleteLogGroupRequestPrivate(
     const CloudWatchLogsRequest::Action action, DeleteLogGroupRequest * const q)

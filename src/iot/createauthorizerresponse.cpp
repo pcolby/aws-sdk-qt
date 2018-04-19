@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::CreateAuthorizerResponse
- *
  * \brief The CreateAuthorizerResponse class provides an interace for IoT CreateAuthorizer responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new CreateAuthorizerResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAuthorizerResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAuthorizerResponse::CreateAuthorizerResponse(
         const CreateAuthorizerRequest &request,
@@ -66,6 +61,9 @@ CreateAuthorizerResponse::CreateAuthorizerResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAuthorizerRequest * CreateAuthorizerResponse::request() const
 {
     Q_D(const CreateAuthorizerResponse);
@@ -73,9 +71,8 @@ const CreateAuthorizerRequest * CreateAuthorizerResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT CreateAuthorizer response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT CreateAuthorizer \a response.
  */
 void CreateAuthorizerResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void CreateAuthorizerResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::CreateAuthorizerResponsePrivate
+ * \brief The CreateAuthorizerResponsePrivate class provides private implementation for CreateAuthorizerResponse.
  * \internal
  *
- * \class CreateAuthorizerResponsePrivate
- *
- * \brief Private implementation for CreateAuthorizerResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAuthorizerResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAuthorizerResponse instance.
+ * Constructs a CreateAuthorizerResponsePrivate object with public implementation \a q.
  */
 CreateAuthorizerResponsePrivate::CreateAuthorizerResponsePrivate(
     CreateAuthorizerResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ CreateAuthorizerResponsePrivate::CreateAuthorizerResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT CreateAuthorizerResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT CreateAuthorizer response element from \a xml.
  */
 void CreateAuthorizerResponsePrivate::parseCreateAuthorizerResponse(QXmlStreamReader &xml)
 {

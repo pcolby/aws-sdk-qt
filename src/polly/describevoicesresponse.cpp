@@ -29,10 +29,9 @@ namespace Polly {
 
 /*!
  * \class QtAws::Polly::DescribeVoicesResponse
- *
  * \brief The DescribeVoicesResponse class provides an interace for Polly DescribeVoices responses.
  *
- * \ingroup Polly
+ * \inmodule QtAwsPolly
  *
  *  Amazon Polly is a web service that makes it easy to synthesize speech from
  * 
@@ -46,11 +45,7 @@ namespace Polly {
  */
 
 /*!
- * @brief  Constructs a new DescribeVoicesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeVoicesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeVoicesResponse::DescribeVoicesResponse(
         const DescribeVoicesRequest &request,
@@ -62,6 +57,9 @@ DescribeVoicesResponse::DescribeVoicesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeVoicesRequest * DescribeVoicesResponse::request() const
 {
     Q_D(const DescribeVoicesResponse);
@@ -69,9 +67,8 @@ const DescribeVoicesRequest * DescribeVoicesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Polly DescribeVoices response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Polly DescribeVoices \a response.
  */
 void DescribeVoicesResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void DescribeVoicesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Polly::DescribeVoicesResponsePrivate
+ * \brief The DescribeVoicesResponsePrivate class provides private implementation for DescribeVoicesResponse.
  * \internal
  *
- * \class DescribeVoicesResponsePrivate
- *
- * \brief Private implementation for DescribeVoicesResponse.
+ * \inmodule QtAwsPolly
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeVoicesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeVoicesResponse instance.
+ * Constructs a DescribeVoicesResponsePrivate object with public implementation \a q.
  */
 DescribeVoicesResponsePrivate::DescribeVoicesResponsePrivate(
     DescribeVoicesResponse * const q) : PollyResponsePrivate(q)
@@ -102,9 +95,7 @@ DescribeVoicesResponsePrivate::DescribeVoicesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Polly DescribeVoicesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Polly DescribeVoices response element from \a xml.
  */
 void DescribeVoicesResponsePrivate::parseDescribeVoicesResponse(QXmlStreamReader &xml)
 {

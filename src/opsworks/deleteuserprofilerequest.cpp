@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * DeleteUserProfileRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a DeleteUserProfileRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a DeleteUserProfileRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 DeleteUserProfileRequestPrivate::DeleteUserProfileRequestPrivate(
     const OpsWorksRequest::Action action, DeleteUserProfileRequest * const q)

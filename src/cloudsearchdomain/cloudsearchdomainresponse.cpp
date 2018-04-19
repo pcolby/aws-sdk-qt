@@ -28,16 +28,13 @@ namespace CloudSearchDomain {
 
 /*!
  * \class QtAws::CloudSearchDomain::CloudSearchDomainResponse
- *
  * \brief The CloudSearchDomainResponse class provides an interface for CloudSearchDomain responses.
  *
- * \ingroup CloudSearchDomain
+ * \inmodule QtAwsCloudSearchDomain
  */
 
 /*!
- * @brief  Constructs a new CloudSearchDomainResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a CloudSearchDomainResponse object with parent \a parent.
  */
 CloudSearchDomainResponse::CloudSearchDomainResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new CloudSearchDomainResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ CloudSearchDomainResponse::CloudSearchDomainResponse(QObject * const parent)
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudSearchDomainResponse object.
- *
+ * \internal
+ * Constructs a CloudSearchDomainResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudSearchDomainResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 CloudSearchDomainResponse::CloudSearchDomainResponse(CloudSearchDomainResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ CloudSearchDomainResponse::CloudSearchDomainResponse(CloudSearchDomainResponsePr
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void CloudSearchDomainResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void CloudSearchDomainResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::CloudSearchDomain::CloudSearchDomainResponsePrivate
+ * \brief The CloudSearchDomainResponsePrivate class provides private implementation for CloudSearchDomainResponse.
+ * \internal
  *
- * @class  CloudSearchDomainResponsePrivate
- *
- * @brief  Private implementation for CloudSearchDomainResponse.
+ * \inmodule QtAwsCloudSearchDomain
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CloudSearchDomainResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CloudSearchDomainResponse instance.
+ * Constructs a CloudSearchDomainResponsePrivate object with public implementation \a q.
  */
 CloudSearchDomainResponsePrivate::CloudSearchDomainResponsePrivate(
     CloudSearchDomainResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

@@ -146,9 +146,8 @@ QtAws::Core::AwsAbstractResponse * CreateServiceSpecificCredentialRequest::respo
  */
 
 /*!
- *
- * Constructs a CreateServiceSpecificCredentialRequestPrivate object for IAM \a action with,
- * public implementation \a q.
+ * Constructs a CreateServiceSpecificCredentialRequestPrivate object for IAM \a action,
+ * with public implementation \a q.
  */
 CreateServiceSpecificCredentialRequestPrivate::CreateServiceSpecificCredentialRequestPrivate(
     const IAMRequest::Action action, CreateServiceSpecificCredentialRequest * const q)

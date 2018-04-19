@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeVpcPeeringConnectionsResponse : public GameLiftRespon
 public:
     DescribeVpcPeeringConnectionsResponse(const DescribeVpcPeeringConnectionsRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeVpcPeeringConnectionsRequest * request() const;
+    virtual const DescribeVpcPeeringConnectionsRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeVpcPeeringConnectionsResponse)

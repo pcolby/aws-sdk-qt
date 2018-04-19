@@ -34,10 +34,10 @@ class QTAWS_EXPORT RequestCancelWorkflowExecutionResponse : public SWFResponse {
 public:
     RequestCancelWorkflowExecutionResponse(const RequestCancelWorkflowExecutionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const RequestCancelWorkflowExecutionRequest * request() const;
+    virtual const RequestCancelWorkflowExecutionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(RequestCancelWorkflowExecutionResponse)

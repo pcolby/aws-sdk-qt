@@ -29,10 +29,9 @@ namespace SimpleDB {
 
 /*!
  * \class QtAws::SimpleDB::ListDomainsResponse
- *
  * \brief The ListDomainsResponse class provides an interace for SimpleDB ListDomains responses.
  *
- * \ingroup SimpleDB
+ * \inmodule QtAwsSimpleDB
  *
  *  Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By
  *  offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers
@@ -52,11 +51,7 @@ namespace SimpleDB {
  */
 
 /*!
- * @brief  Constructs a new ListDomainsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListDomainsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListDomainsResponse::ListDomainsResponse(
         const ListDomainsRequest &request,
@@ -68,6 +63,9 @@ ListDomainsResponse::ListDomainsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListDomainsRequest * ListDomainsResponse::request() const
 {
     Q_D(const ListDomainsResponse);
@@ -75,9 +73,8 @@ const ListDomainsRequest * ListDomainsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SimpleDB ListDomains response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SimpleDB ListDomains \a response.
  */
 void ListDomainsResponse::parseSuccess(QIODevice &response)
 {
@@ -87,19 +84,15 @@ void ListDomainsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SimpleDB::ListDomainsResponsePrivate
+ * \brief The ListDomainsResponsePrivate class provides private implementation for ListDomainsResponse.
  * \internal
  *
- * \class ListDomainsResponsePrivate
- *
- * \brief Private implementation for ListDomainsResponse.
+ * \inmodule QtAwsSimpleDB
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListDomainsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListDomainsResponse instance.
+ * Constructs a ListDomainsResponsePrivate object with public implementation \a q.
  */
 ListDomainsResponsePrivate::ListDomainsResponsePrivate(
     ListDomainsResponse * const q) : SimpleDBResponsePrivate(q)
@@ -108,9 +101,7 @@ ListDomainsResponsePrivate::ListDomainsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SimpleDB ListDomainsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SimpleDB ListDomains response element from \a xml.
  */
 void ListDomainsResponsePrivate::parseListDomainsResponse(QXmlStreamReader &xml)
 {

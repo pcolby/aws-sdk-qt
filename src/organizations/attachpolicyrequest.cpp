@@ -223,9 +223,8 @@ QtAws::Core::AwsAbstractResponse * AttachPolicyRequest::response(QNetworkReply *
  */
 
 /*!
- *
- * Constructs a AttachPolicyRequestPrivate object for Organizations \a action with,
- * public implementation \a q.
+ * Constructs a AttachPolicyRequestPrivate object for Organizations \a action,
+ * with public implementation \a q.
  */
 AttachPolicyRequestPrivate::AttachPolicyRequestPrivate(
     const OrganizationsRequest::Action action, AttachPolicyRequest * const q)

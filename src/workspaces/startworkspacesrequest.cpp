@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * StartWorkspacesRequest::response(QNetworkRepl
  */
 
 /*!
- *
- * Constructs a StartWorkspacesRequestPrivate object for WorkSpaces \a action with,
- * public implementation \a q.
+ * Constructs a StartWorkspacesRequestPrivate object for WorkSpaces \a action,
+ * with public implementation \a q.
  */
 StartWorkspacesRequestPrivate::StartWorkspacesRequestPrivate(
     const WorkSpacesRequest::Action action, StartWorkspacesRequest * const q)

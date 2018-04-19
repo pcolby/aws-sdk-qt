@@ -29,10 +29,9 @@ namespace Comprehend {
 
 /*!
  * \class QtAws::Comprehend::DetectEntitiesResponse
- *
  * \brief The DetectEntitiesResponse class provides an interace for Comprehend DetectEntities responses.
  *
- * \ingroup Comprehend
+ * \inmodule QtAwsComprehend
  *
  *  Amazon Comprehend is an AWS service for gaining insight into the content of documents. Use these actions to determine
  *  the topics contained in your documents, the topics they discuss, the predominant sentiment expressed in them, the
@@ -42,11 +41,7 @@ namespace Comprehend {
  */
 
 /*!
- * @brief  Constructs a new DetectEntitiesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetectEntitiesResponse object for \a reply to \a request, with parent \a parent.
  */
 DetectEntitiesResponse::DetectEntitiesResponse(
         const DetectEntitiesRequest &request,
@@ -58,6 +53,9 @@ DetectEntitiesResponse::DetectEntitiesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetectEntitiesRequest * DetectEntitiesResponse::request() const
 {
     Q_D(const DetectEntitiesResponse);
@@ -65,9 +63,8 @@ const DetectEntitiesRequest * DetectEntitiesResponse::request() const
 }
 
 /*!
- * @brief  Parse a Comprehend DetectEntities response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Comprehend DetectEntities \a response.
  */
 void DetectEntitiesResponse::parseSuccess(QIODevice &response)
 {
@@ -77,19 +74,15 @@ void DetectEntitiesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Comprehend::DetectEntitiesResponsePrivate
+ * \brief The DetectEntitiesResponsePrivate class provides private implementation for DetectEntitiesResponse.
  * \internal
  *
- * \class DetectEntitiesResponsePrivate
- *
- * \brief Private implementation for DetectEntitiesResponse.
+ * \inmodule QtAwsComprehend
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectEntitiesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetectEntitiesResponse instance.
+ * Constructs a DetectEntitiesResponsePrivate object with public implementation \a q.
  */
 DetectEntitiesResponsePrivate::DetectEntitiesResponsePrivate(
     DetectEntitiesResponse * const q) : ComprehendResponsePrivate(q)
@@ -98,9 +91,7 @@ DetectEntitiesResponsePrivate::DetectEntitiesResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Comprehend DetectEntitiesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Comprehend DetectEntities response element from \a xml.
  */
 void DetectEntitiesResponsePrivate::parseDetectEntitiesResponse(QXmlStreamReader &xml)
 {

@@ -85,9 +85,8 @@ QtAws::Core::AwsAbstractResponse * DescribeClassicLinkInstancesRequest::response
  */
 
 /*!
- *
- * Constructs a DescribeClassicLinkInstancesRequestPrivate object for EC2 \a action with,
- * public implementation \a q.
+ * Constructs a DescribeClassicLinkInstancesRequestPrivate object for EC2 \a action,
+ * with public implementation \a q.
  */
 DescribeClassicLinkInstancesRequestPrivate::DescribeClassicLinkInstancesRequestPrivate(
     const EC2Request::Action action, DescribeClassicLinkInstancesRequest * const q)

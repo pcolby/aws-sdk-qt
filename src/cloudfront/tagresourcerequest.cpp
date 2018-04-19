@@ -86,9 +86,8 @@ QtAws::Core::AwsAbstractResponse * TagResourceRequest::response(QNetworkReply * 
  */
 
 /*!
- *
- * Constructs a TagResourceRequestPrivate object for CloudFront \a action with,
- * public implementation \a q.
+ * Constructs a TagResourceRequestPrivate object for CloudFront \a action,
+ * with public implementation \a q.
  */
 TagResourceRequestPrivate::TagResourceRequestPrivate(
     const CloudFrontRequest::Action action, TagResourceRequest * const q)

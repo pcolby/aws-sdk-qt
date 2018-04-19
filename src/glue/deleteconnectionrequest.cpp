@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteConnectionRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a DeleteConnectionRequestPrivate object for Glue \a action with,
- * public implementation \a q.
+ * Constructs a DeleteConnectionRequestPrivate object for Glue \a action,
+ * with public implementation \a q.
  */
 DeleteConnectionRequestPrivate::DeleteConnectionRequestPrivate(
     const GlueRequest::Action action, DeleteConnectionRequest * const q)

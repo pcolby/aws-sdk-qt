@@ -29,10 +29,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::DescribeMountTargetsResponse
- *
  * \brief The DescribeMountTargetsResponse class provides an interace for EFS DescribeMountTargets responses.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -45,11 +44,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new DescribeMountTargetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeMountTargetsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeMountTargetsResponse::DescribeMountTargetsResponse(
         const DescribeMountTargetsRequest &request,
@@ -61,6 +56,9 @@ DescribeMountTargetsResponse::DescribeMountTargetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeMountTargetsRequest * DescribeMountTargetsResponse::request() const
 {
     Q_D(const DescribeMountTargetsResponse);
@@ -68,9 +66,8 @@ const DescribeMountTargetsRequest * DescribeMountTargetsResponse::request() cons
 }
 
 /*!
- * @brief  Parse a EFS DescribeMountTargets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EFS DescribeMountTargets \a response.
  */
 void DescribeMountTargetsResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeMountTargetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EFS::DescribeMountTargetsResponsePrivate
+ * \brief The DescribeMountTargetsResponsePrivate class provides private implementation for DescribeMountTargetsResponse.
  * \internal
  *
- * \class DescribeMountTargetsResponsePrivate
- *
- * \brief Private implementation for DescribeMountTargetsResponse.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeMountTargetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeMountTargetsResponse instance.
+ * Constructs a DescribeMountTargetsResponsePrivate object with public implementation \a q.
  */
 DescribeMountTargetsResponsePrivate::DescribeMountTargetsResponsePrivate(
     DescribeMountTargetsResponse * const q) : EFSResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeMountTargetsResponsePrivate::DescribeMountTargetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EFS DescribeMountTargetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EFS DescribeMountTargets response element from \a xml.
  */
 void DescribeMountTargetsResponsePrivate::parseDescribeMountTargetsResponse(QXmlStreamReader &xml)
 {

@@ -29,10 +29,9 @@ namespace EFS {
 
 /*!
  * \class QtAws::EFS::DescribeFileSystemsResponse
- *
  * \brief The DescribeFileSystemsResponse class provides an interace for EFS DescribeFileSystems responses.
  *
- * \ingroup EFS
+ * \inmodule QtAwsEFS
  *
  *  <fullname>Amazon Elastic File System</fullname>
  * 
@@ -45,11 +44,7 @@ namespace EFS {
  */
 
 /*!
- * @brief  Constructs a new DescribeFileSystemsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeFileSystemsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeFileSystemsResponse::DescribeFileSystemsResponse(
         const DescribeFileSystemsRequest &request,
@@ -61,6 +56,9 @@ DescribeFileSystemsResponse::DescribeFileSystemsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeFileSystemsRequest * DescribeFileSystemsResponse::request() const
 {
     Q_D(const DescribeFileSystemsResponse);
@@ -68,9 +66,8 @@ const DescribeFileSystemsRequest * DescribeFileSystemsResponse::request() const
 }
 
 /*!
- * @brief  Parse a EFS DescribeFileSystems response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EFS DescribeFileSystems \a response.
  */
 void DescribeFileSystemsResponse::parseSuccess(QIODevice &response)
 {
@@ -80,19 +77,15 @@ void DescribeFileSystemsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EFS::DescribeFileSystemsResponsePrivate
+ * \brief The DescribeFileSystemsResponsePrivate class provides private implementation for DescribeFileSystemsResponse.
  * \internal
  *
- * \class DescribeFileSystemsResponsePrivate
- *
- * \brief Private implementation for DescribeFileSystemsResponse.
+ * \inmodule QtAwsEFS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeFileSystemsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeFileSystemsResponse instance.
+ * Constructs a DescribeFileSystemsResponsePrivate object with public implementation \a q.
  */
 DescribeFileSystemsResponsePrivate::DescribeFileSystemsResponsePrivate(
     DescribeFileSystemsResponse * const q) : EFSResponsePrivate(q)
@@ -101,9 +94,7 @@ DescribeFileSystemsResponsePrivate::DescribeFileSystemsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EFS DescribeFileSystemsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EFS DescribeFileSystems response element from \a xml.
  */
 void DescribeFileSystemsResponsePrivate::parseDescribeFileSystemsResponse(QXmlStreamReader &xml)
 {

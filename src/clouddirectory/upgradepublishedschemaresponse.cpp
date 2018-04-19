@@ -29,10 +29,9 @@ namespace CloudDirectory {
 
 /*!
  * \class QtAws::CloudDirectory::UpgradePublishedSchemaResponse
- *
  * \brief The UpgradePublishedSchemaResponse class provides an interace for CloudDirectory UpgradePublishedSchema responses.
  *
- * \ingroup CloudDirectory
+ * \inmodule QtAwsCloudDirectory
  *
  *  <fullname>Amazon Cloud Directory</fullname>
  * 
@@ -46,11 +45,7 @@ namespace CloudDirectory {
  */
 
 /*!
- * @brief  Constructs a new UpgradePublishedSchemaResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UpgradePublishedSchemaResponse object for \a reply to \a request, with parent \a parent.
  */
 UpgradePublishedSchemaResponse::UpgradePublishedSchemaResponse(
         const UpgradePublishedSchemaRequest &request,
@@ -62,6 +57,9 @@ UpgradePublishedSchemaResponse::UpgradePublishedSchemaResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UpgradePublishedSchemaRequest * UpgradePublishedSchemaResponse::request() const
 {
     Q_D(const UpgradePublishedSchemaResponse);
@@ -69,9 +67,8 @@ const UpgradePublishedSchemaRequest * UpgradePublishedSchemaResponse::request() 
 }
 
 /*!
- * @brief  Parse a CloudDirectory UpgradePublishedSchema response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudDirectory UpgradePublishedSchema \a response.
  */
 void UpgradePublishedSchemaResponse::parseSuccess(QIODevice &response)
 {
@@ -81,19 +78,15 @@ void UpgradePublishedSchemaResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudDirectory::UpgradePublishedSchemaResponsePrivate
+ * \brief The UpgradePublishedSchemaResponsePrivate class provides private implementation for UpgradePublishedSchemaResponse.
  * \internal
  *
- * \class UpgradePublishedSchemaResponsePrivate
- *
- * \brief Private implementation for UpgradePublishedSchemaResponse.
+ * \inmodule QtAwsCloudDirectory
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UpgradePublishedSchemaResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UpgradePublishedSchemaResponse instance.
+ * Constructs a UpgradePublishedSchemaResponsePrivate object with public implementation \a q.
  */
 UpgradePublishedSchemaResponsePrivate::UpgradePublishedSchemaResponsePrivate(
     UpgradePublishedSchemaResponse * const q) : CloudDirectoryResponsePrivate(q)
@@ -102,9 +95,7 @@ UpgradePublishedSchemaResponsePrivate::UpgradePublishedSchemaResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudDirectory UpgradePublishedSchemaResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudDirectory UpgradePublishedSchema response element from \a xml.
  */
 void UpgradePublishedSchemaResponsePrivate::parseUpgradePublishedSchemaResponse(QXmlStreamReader &xml)
 {

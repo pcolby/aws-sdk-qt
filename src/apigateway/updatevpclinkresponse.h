@@ -34,10 +34,10 @@ class QTAWS_EXPORT UpdateVpcLinkResponse : public APIGatewayResponse {
 public:
     UpdateVpcLinkResponse(const UpdateVpcLinkRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const UpdateVpcLinkRequest * request() const;
+    virtual const UpdateVpcLinkRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(UpdateVpcLinkResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT CreateBasePathMappingResponse : public APIGatewayResponse {
 public:
     CreateBasePathMappingResponse(const CreateBasePathMappingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const CreateBasePathMappingRequest * request() const;
+    virtual const CreateBasePathMappingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(CreateBasePathMappingResponse)

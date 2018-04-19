@@ -119,9 +119,8 @@ QtAws::Core::AwsAbstractResponse * GetVaultNotificationsRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a GetVaultNotificationsRequestPrivate object for Glacier \a action with,
- * public implementation \a q.
+ * Constructs a GetVaultNotificationsRequestPrivate object for Glacier \a action,
+ * with public implementation \a q.
  */
 GetVaultNotificationsRequestPrivate::GetVaultNotificationsRequestPrivate(
     const GlacierRequest::Action action, GetVaultNotificationsRequest * const q)

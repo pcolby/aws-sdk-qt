@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::AuthorizeDBSecurityGroupIngressResponse
- *
  * \brief The AuthorizeDBSecurityGroupIngressResponse class provides an interace for RDS AuthorizeDBSecurityGroupIngress responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new AuthorizeDBSecurityGroupIngressResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a AuthorizeDBSecurityGroupIngressResponse object for \a reply to \a request, with parent \a parent.
  */
 AuthorizeDBSecurityGroupIngressResponse::AuthorizeDBSecurityGroupIngressResponse(
         const AuthorizeDBSecurityGroupIngressRequest &request,
@@ -119,6 +114,9 @@ AuthorizeDBSecurityGroupIngressResponse::AuthorizeDBSecurityGroupIngressResponse
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const AuthorizeDBSecurityGroupIngressRequest * AuthorizeDBSecurityGroupIngressResponse::request() const
 {
     Q_D(const AuthorizeDBSecurityGroupIngressResponse);
@@ -126,9 +124,8 @@ const AuthorizeDBSecurityGroupIngressRequest * AuthorizeDBSecurityGroupIngressRe
 }
 
 /*!
- * @brief  Parse a RDS AuthorizeDBSecurityGroupIngress response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS AuthorizeDBSecurityGroupIngress \a response.
  */
 void AuthorizeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void AuthorizeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::AuthorizeDBSecurityGroupIngressResponsePrivate
+ * \brief The AuthorizeDBSecurityGroupIngressResponsePrivate class provides private implementation for AuthorizeDBSecurityGroupIngressResponse.
  * \internal
  *
- * \class AuthorizeDBSecurityGroupIngressResponsePrivate
- *
- * \brief Private implementation for AuthorizeDBSecurityGroupIngressResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new AuthorizeDBSecurityGroupIngressResponsePrivate object.
- *
- * @param  q  Pointer to this object's public AuthorizeDBSecurityGroupIngressResponse instance.
+ * Constructs a AuthorizeDBSecurityGroupIngressResponsePrivate object with public implementation \a q.
  */
 AuthorizeDBSecurityGroupIngressResponsePrivate::AuthorizeDBSecurityGroupIngressResponsePrivate(
     AuthorizeDBSecurityGroupIngressResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ AuthorizeDBSecurityGroupIngressResponsePrivate::AuthorizeDBSecurityGroupIngressR
 }
 
 /*!
- * @brief  Parse an RDS AuthorizeDBSecurityGroupIngressResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS AuthorizeDBSecurityGroupIngress response element from \a xml.
  */
 void AuthorizeDBSecurityGroupIngressResponsePrivate::parseAuthorizeDBSecurityGroupIngressResponse(QXmlStreamReader &xml)
 {

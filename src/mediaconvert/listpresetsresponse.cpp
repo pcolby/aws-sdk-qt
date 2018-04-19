@@ -29,21 +29,16 @@ namespace MediaConvert {
 
 /*!
  * \class QtAws::MediaConvert::ListPresetsResponse
- *
  * \brief The ListPresetsResponse class provides an interace for MediaConvert ListPresets responses.
  *
- * \ingroup MediaConvert
+ * \inmodule QtAwsMediaConvert
  *
  *
  * \sa MediaConvertClient::listPresets
  */
 
 /*!
- * @brief  Constructs a new ListPresetsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListPresetsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListPresetsResponse::ListPresetsResponse(
         const ListPresetsRequest &request,
@@ -55,6 +50,9 @@ ListPresetsResponse::ListPresetsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListPresetsRequest * ListPresetsResponse::request() const
 {
     Q_D(const ListPresetsResponse);
@@ -62,9 +60,8 @@ const ListPresetsRequest * ListPresetsResponse::request() const
 }
 
 /*!
- * @brief  Parse a MediaConvert ListPresets response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful MediaConvert ListPresets \a response.
  */
 void ListPresetsResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void ListPresetsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::MediaConvert::ListPresetsResponsePrivate
+ * \brief The ListPresetsResponsePrivate class provides private implementation for ListPresetsResponse.
  * \internal
  *
- * \class ListPresetsResponsePrivate
- *
- * \brief Private implementation for ListPresetsResponse.
+ * \inmodule QtAwsMediaConvert
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListPresetsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListPresetsResponse instance.
+ * Constructs a ListPresetsResponsePrivate object with public implementation \a q.
  */
 ListPresetsResponsePrivate::ListPresetsResponsePrivate(
     ListPresetsResponse * const q) : MediaConvertResponsePrivate(q)
@@ -95,9 +88,7 @@ ListPresetsResponsePrivate::ListPresetsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an MediaConvert ListPresetsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a MediaConvert ListPresets response element from \a xml.
  */
 void ListPresetsResponsePrivate::parseListPresetsResponse(QXmlStreamReader &xml)
 {

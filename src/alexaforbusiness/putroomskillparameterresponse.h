@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutRoomSkillParameterResponse : public AlexaForBusinessRespon
 public:
     PutRoomSkillParameterResponse(const PutRoomSkillParameterRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutRoomSkillParameterRequest * request() const;
+    virtual const PutRoomSkillParameterRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutRoomSkillParameterResponse)

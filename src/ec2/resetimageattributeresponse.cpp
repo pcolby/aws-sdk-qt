@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::ResetImageAttributeResponse
- *
  * \brief The ResetImageAttributeResponse class provides an interace for EC2 ResetImageAttribute responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new ResetImageAttributeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ResetImageAttributeResponse object for \a reply to \a request, with parent \a parent.
  */
 ResetImageAttributeResponse::ResetImageAttributeResponse(
         const ResetImageAttributeRequest &request,
@@ -59,6 +54,9 @@ ResetImageAttributeResponse::ResetImageAttributeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ResetImageAttributeRequest * ResetImageAttributeResponse::request() const
 {
     Q_D(const ResetImageAttributeResponse);
@@ -66,9 +64,8 @@ const ResetImageAttributeRequest * ResetImageAttributeResponse::request() const
 }
 
 /*!
- * @brief  Parse a EC2 ResetImageAttribute response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 ResetImageAttribute \a response.
  */
 void ResetImageAttributeResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void ResetImageAttributeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::ResetImageAttributeResponsePrivate
+ * \brief The ResetImageAttributeResponsePrivate class provides private implementation for ResetImageAttributeResponse.
  * \internal
  *
- * \class ResetImageAttributeResponsePrivate
- *
- * \brief Private implementation for ResetImageAttributeResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ResetImageAttributeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ResetImageAttributeResponse instance.
+ * Constructs a ResetImageAttributeResponsePrivate object with public implementation \a q.
  */
 ResetImageAttributeResponsePrivate::ResetImageAttributeResponsePrivate(
     ResetImageAttributeResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ ResetImageAttributeResponsePrivate::ResetImageAttributeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an EC2 ResetImageAttributeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 ResetImageAttribute response element from \a xml.
  */
 void ResetImageAttributeResponsePrivate::parseResetImageAttributeResponse(QXmlStreamReader &xml)
 {

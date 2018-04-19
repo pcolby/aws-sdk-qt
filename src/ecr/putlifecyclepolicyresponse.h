@@ -34,10 +34,10 @@ class QTAWS_EXPORT PutLifecyclePolicyResponse : public ECRResponse {
 public:
     PutLifecyclePolicyResponse(const PutLifecyclePolicyRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PutLifecyclePolicyRequest * request() const;
+    virtual const PutLifecyclePolicyRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PutLifecyclePolicyResponse)

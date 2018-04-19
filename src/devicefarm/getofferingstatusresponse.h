@@ -34,10 +34,10 @@ class QTAWS_EXPORT GetOfferingStatusResponse : public DeviceFarmResponse {
 public:
     GetOfferingStatusResponse(const GetOfferingStatusRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const GetOfferingStatusRequest * request() const;
+    virtual const GetOfferingStatusRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(GetOfferingStatusResponse)

@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteApplicationVersionResponse : public ElasticBeanstalkRes
 public:
     DeleteApplicationVersionResponse(const DeleteApplicationVersionRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteApplicationVersionRequest * request() const;
+    virtual const DeleteApplicationVersionRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteApplicationVersionResponse)

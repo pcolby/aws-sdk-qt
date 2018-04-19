@@ -34,10 +34,10 @@ class QTAWS_EXPORT ListAccessKeysResponse : public IAMResponse {
 public:
     ListAccessKeysResponse(const ListAccessKeysRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ListAccessKeysRequest * request() const;
+    virtual const ListAccessKeysRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ListAccessKeysResponse)

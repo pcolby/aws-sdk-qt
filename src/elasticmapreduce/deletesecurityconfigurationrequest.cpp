@@ -84,9 +84,8 @@ QtAws::Core::AwsAbstractResponse * DeleteSecurityConfigurationRequest::response(
  */
 
 /*!
- *
- * Constructs a DeleteSecurityConfigurationRequestPrivate object for EMR \a action with,
- * public implementation \a q.
+ * Constructs a DeleteSecurityConfigurationRequestPrivate object for EMR \a action,
+ * with public implementation \a q.
  */
 DeleteSecurityConfigurationRequestPrivate::DeleteSecurityConfigurationRequestPrivate(
     const EMRRequest::Action action, DeleteSecurityConfigurationRequest * const q)

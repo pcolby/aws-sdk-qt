@@ -29,10 +29,9 @@ namespace CodeStar {
 
 /*!
  * \class QtAws::CodeStar::DescribeProjectResponse
- *
  * \brief The DescribeProjectResponse class provides an interace for CodeStar DescribeProject responses.
  *
- * \ingroup CodeStar
+ * \inmodule QtAwsCodeStar
  *
  *  <fullname>AWS CodeStar</fullname>
  * 
@@ -127,11 +126,7 @@ namespace CodeStar {
  */
 
 /*!
- * @brief  Constructs a new DescribeProjectResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeProjectResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeProjectResponse::DescribeProjectResponse(
         const DescribeProjectRequest &request,
@@ -143,6 +138,9 @@ DescribeProjectResponse::DescribeProjectResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeProjectRequest * DescribeProjectResponse::request() const
 {
     Q_D(const DescribeProjectResponse);
@@ -150,9 +148,8 @@ const DescribeProjectRequest * DescribeProjectResponse::request() const
 }
 
 /*!
- * @brief  Parse a CodeStar DescribeProject response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CodeStar DescribeProject \a response.
  */
 void DescribeProjectResponse::parseSuccess(QIODevice &response)
 {
@@ -162,19 +159,15 @@ void DescribeProjectResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CodeStar::DescribeProjectResponsePrivate
+ * \brief The DescribeProjectResponsePrivate class provides private implementation for DescribeProjectResponse.
  * \internal
  *
- * \class DescribeProjectResponsePrivate
- *
- * \brief Private implementation for DescribeProjectResponse.
+ * \inmodule QtAwsCodeStar
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeProjectResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeProjectResponse instance.
+ * Constructs a DescribeProjectResponsePrivate object with public implementation \a q.
  */
 DescribeProjectResponsePrivate::DescribeProjectResponsePrivate(
     DescribeProjectResponse * const q) : CodeStarResponsePrivate(q)
@@ -183,9 +176,7 @@ DescribeProjectResponsePrivate::DescribeProjectResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CodeStar DescribeProjectResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CodeStar DescribeProject response element from \a xml.
  */
 void DescribeProjectResponsePrivate::parseDescribeProjectResponse(QXmlStreamReader &xml)
 {

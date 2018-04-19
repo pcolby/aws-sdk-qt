@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * DescribeDBParametersRequest::response(QNetwor
  */
 
 /*!
- *
- * Constructs a DescribeDBParametersRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a DescribeDBParametersRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 DescribeDBParametersRequestPrivate::DescribeDBParametersRequestPrivate(
     const RDSRequest::Action action, DescribeDBParametersRequest * const q)

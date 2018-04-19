@@ -34,10 +34,10 @@ class QTAWS_EXPORT DescribeRulesResponse : public ElasticLoadBalancingv2Response
 public:
     DescribeRulesResponse(const DescribeRulesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DescribeRulesRequest * request() const;
+    virtual const DescribeRulesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DescribeRulesResponse)

@@ -29,10 +29,9 @@ namespace SSM {
 
 /*!
  * \class QtAws::SSM::ListComplianceItemsResponse
- *
  * \brief The ListComplianceItemsResponse class provides an interace for SSM ListComplianceItems responses.
  *
- * \ingroup SSM
+ * \inmodule QtAwsSSM
  *
  *  <fullname>AWS Systems Manager</fullname>
  * 
@@ -63,11 +62,7 @@ namespace SSM {
  */
 
 /*!
- * @brief  Constructs a new ListComplianceItemsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a ListComplianceItemsResponse object for \a reply to \a request, with parent \a parent.
  */
 ListComplianceItemsResponse::ListComplianceItemsResponse(
         const ListComplianceItemsRequest &request,
@@ -79,6 +74,9 @@ ListComplianceItemsResponse::ListComplianceItemsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const ListComplianceItemsRequest * ListComplianceItemsResponse::request() const
 {
     Q_D(const ListComplianceItemsResponse);
@@ -86,9 +84,8 @@ const ListComplianceItemsRequest * ListComplianceItemsResponse::request() const
 }
 
 /*!
- * @brief  Parse a SSM ListComplianceItems response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SSM ListComplianceItems \a response.
  */
 void ListComplianceItemsResponse::parseSuccess(QIODevice &response)
 {
@@ -98,19 +95,15 @@ void ListComplianceItemsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SSM::ListComplianceItemsResponsePrivate
+ * \brief The ListComplianceItemsResponsePrivate class provides private implementation for ListComplianceItemsResponse.
  * \internal
  *
- * \class ListComplianceItemsResponsePrivate
- *
- * \brief Private implementation for ListComplianceItemsResponse.
+ * \inmodule QtAwsSSM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ListComplianceItemsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ListComplianceItemsResponse instance.
+ * Constructs a ListComplianceItemsResponsePrivate object with public implementation \a q.
  */
 ListComplianceItemsResponsePrivate::ListComplianceItemsResponsePrivate(
     ListComplianceItemsResponse * const q) : SSMResponsePrivate(q)
@@ -119,9 +112,7 @@ ListComplianceItemsResponsePrivate::ListComplianceItemsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SSM ListComplianceItemsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SSM ListComplianceItems response element from \a xml.
  */
 void ListComplianceItemsResponsePrivate::parseListComplianceItemsResponse(QXmlStreamReader &xml)
 {

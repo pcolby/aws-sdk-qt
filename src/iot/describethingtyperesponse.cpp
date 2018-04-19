@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::DescribeThingTypeResponse
- *
  * \brief The DescribeThingTypeResponse class provides an interace for IoT DescribeThingType responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new DescribeThingTypeResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeThingTypeResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeThingTypeResponse::DescribeThingTypeResponse(
         const DescribeThingTypeRequest &request,
@@ -66,6 +61,9 @@ DescribeThingTypeResponse::DescribeThingTypeResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeThingTypeRequest * DescribeThingTypeResponse::request() const
 {
     Q_D(const DescribeThingTypeResponse);
@@ -73,9 +71,8 @@ const DescribeThingTypeRequest * DescribeThingTypeResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT DescribeThingType response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT DescribeThingType \a response.
  */
 void DescribeThingTypeResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void DescribeThingTypeResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::DescribeThingTypeResponsePrivate
+ * \brief The DescribeThingTypeResponsePrivate class provides private implementation for DescribeThingTypeResponse.
  * \internal
  *
- * \class DescribeThingTypeResponsePrivate
- *
- * \brief Private implementation for DescribeThingTypeResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeThingTypeResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeThingTypeResponse instance.
+ * Constructs a DescribeThingTypeResponsePrivate object with public implementation \a q.
  */
 DescribeThingTypeResponsePrivate::DescribeThingTypeResponsePrivate(
     DescribeThingTypeResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ DescribeThingTypeResponsePrivate::DescribeThingTypeResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT DescribeThingTypeResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT DescribeThingType response element from \a xml.
  */
 void DescribeThingTypeResponsePrivate::parseDescribeThingTypeResponse(QXmlStreamReader &xml)
 {

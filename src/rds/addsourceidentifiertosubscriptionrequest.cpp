@@ -145,9 +145,8 @@ QtAws::Core::AwsAbstractResponse * AddSourceIdentifierToSubscriptionRequest::res
  */
 
 /*!
- *
- * Constructs a AddSourceIdentifierToSubscriptionRequestPrivate object for RDS \a action with,
- * public implementation \a q.
+ * Constructs a AddSourceIdentifierToSubscriptionRequestPrivate object for RDS \a action,
+ * with public implementation \a q.
  */
 AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscriptionRequestPrivate(
     const RDSRequest::Action action, AddSourceIdentifierToSubscriptionRequest * const q)

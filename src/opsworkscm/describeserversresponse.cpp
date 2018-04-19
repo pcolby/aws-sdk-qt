@@ -29,10 +29,9 @@ namespace OpsWorksCM {
 
 /*!
  * \class QtAws::OpsWorksCM::DescribeServersResponse
- *
  * \brief The DescribeServersResponse class provides an interace for OpsWorksCM DescribeServers responses.
  *
- * \ingroup OpsWorksCM
+ * \inmodule QtAwsOpsWorksCM
  *
  *  <fullname>AWS OpsWorks CM</fullname>
  * 
@@ -99,11 +98,7 @@ namespace OpsWorksCM {
  */
 
 /*!
- * @brief  Constructs a new DescribeServersResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeServersResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeServersResponse::DescribeServersResponse(
         const DescribeServersRequest &request,
@@ -115,6 +110,9 @@ DescribeServersResponse::DescribeServersResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeServersRequest * DescribeServersResponse::request() const
 {
     Q_D(const DescribeServersResponse);
@@ -122,9 +120,8 @@ const DescribeServersRequest * DescribeServersResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorksCM DescribeServers response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorksCM DescribeServers \a response.
  */
 void DescribeServersResponse::parseSuccess(QIODevice &response)
 {
@@ -134,19 +131,15 @@ void DescribeServersResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorksCM::DescribeServersResponsePrivate
+ * \brief The DescribeServersResponsePrivate class provides private implementation for DescribeServersResponse.
  * \internal
  *
- * \class DescribeServersResponsePrivate
- *
- * \brief Private implementation for DescribeServersResponse.
+ * \inmodule QtAwsOpsWorksCM
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeServersResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeServersResponse instance.
+ * Constructs a DescribeServersResponsePrivate object with public implementation \a q.
  */
 DescribeServersResponsePrivate::DescribeServersResponsePrivate(
     DescribeServersResponse * const q) : OpsWorksCMResponsePrivate(q)
@@ -155,9 +148,7 @@ DescribeServersResponsePrivate::DescribeServersResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorksCM DescribeServersResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorksCM DescribeServers response element from \a xml.
  */
 void DescribeServersResponsePrivate::parseDescribeServersResponse(QXmlStreamReader &xml)
 {

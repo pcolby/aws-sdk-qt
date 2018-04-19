@@ -29,10 +29,9 @@ namespace GameLift {
 
 /*!
  * \class QtAws::GameLift::CreateAliasResponse
- *
  * \brief The CreateAliasResponse class provides an interace for GameLift CreateAlias responses.
  *
- * \ingroup GameLift
+ * \inmodule QtAwsGameLift
  *
  *  <fullname>Amazon GameLift Service</fullname>
  * 
@@ -475,11 +474,7 @@ namespace GameLift {
  */
 
 /*!
- * @brief  Constructs a new CreateAliasResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CreateAliasResponse object for \a reply to \a request, with parent \a parent.
  */
 CreateAliasResponse::CreateAliasResponse(
         const CreateAliasRequest &request,
@@ -491,6 +486,9 @@ CreateAliasResponse::CreateAliasResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CreateAliasRequest * CreateAliasResponse::request() const
 {
     Q_D(const CreateAliasResponse);
@@ -498,9 +496,8 @@ const CreateAliasRequest * CreateAliasResponse::request() const
 }
 
 /*!
- * @brief  Parse a GameLift CreateAlias response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful GameLift CreateAlias \a response.
  */
 void CreateAliasResponse::parseSuccess(QIODevice &response)
 {
@@ -510,19 +507,15 @@ void CreateAliasResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::GameLift::CreateAliasResponsePrivate
+ * \brief The CreateAliasResponsePrivate class provides private implementation for CreateAliasResponse.
  * \internal
  *
- * \class CreateAliasResponsePrivate
- *
- * \brief Private implementation for CreateAliasResponse.
+ * \inmodule QtAwsGameLift
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CreateAliasResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CreateAliasResponse instance.
+ * Constructs a CreateAliasResponsePrivate object with public implementation \a q.
  */
 CreateAliasResponsePrivate::CreateAliasResponsePrivate(
     CreateAliasResponse * const q) : GameLiftResponsePrivate(q)
@@ -531,9 +524,7 @@ CreateAliasResponsePrivate::CreateAliasResponsePrivate(
 }
 
 /*!
- * @brief  Parse an GameLift CreateAliasResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a GameLift CreateAlias response element from \a xml.
  */
 void CreateAliasResponsePrivate::parseCreateAliasResponse(QXmlStreamReader &xml)
 {

@@ -97,9 +97,8 @@ QtAws::Core::AwsAbstractResponse * GetRegionsRequest::response(QNetworkReply * c
  */
 
 /*!
- *
- * Constructs a GetRegionsRequestPrivate object for Lightsail \a action with,
- * public implementation \a q.
+ * Constructs a GetRegionsRequestPrivate object for Lightsail \a action,
+ * with public implementation \a q.
  */
 GetRegionsRequestPrivate::GetRegionsRequestPrivate(
     const LightsailRequest::Action action, GetRegionsRequest * const q)

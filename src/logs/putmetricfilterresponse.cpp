@@ -29,10 +29,9 @@ namespace CloudWatchLogs {
 
 /*!
  * \class QtAws::CloudWatchLogs::PutMetricFilterResponse
- *
  * \brief The PutMetricFilterResponse class provides an interace for CloudWatchLogs PutMetricFilter responses.
  *
- * \ingroup CloudWatchLogs
+ * \inmodule QtAwsCloudWatchLogs
  *
  *  You can use Amazon CloudWatch Logs to monitor, store, and access your log files from Amazon EC2 instances, AWS
  *  CloudTrail, or other sources. You can then retrieve the associated log data from CloudWatch Logs using the CloudWatch
@@ -68,11 +67,7 @@ namespace CloudWatchLogs {
  */
 
 /*!
- * @brief  Constructs a new PutMetricFilterResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a PutMetricFilterResponse object for \a reply to \a request, with parent \a parent.
  */
 PutMetricFilterResponse::PutMetricFilterResponse(
         const PutMetricFilterRequest &request,
@@ -84,6 +79,9 @@ PutMetricFilterResponse::PutMetricFilterResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const PutMetricFilterRequest * PutMetricFilterResponse::request() const
 {
     Q_D(const PutMetricFilterResponse);
@@ -91,9 +89,8 @@ const PutMetricFilterRequest * PutMetricFilterResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudWatchLogs PutMetricFilter response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudWatchLogs PutMetricFilter \a response.
  */
 void PutMetricFilterResponse::parseSuccess(QIODevice &response)
 {
@@ -103,19 +100,15 @@ void PutMetricFilterResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudWatchLogs::PutMetricFilterResponsePrivate
+ * \brief The PutMetricFilterResponsePrivate class provides private implementation for PutMetricFilterResponse.
  * \internal
  *
- * \class PutMetricFilterResponsePrivate
- *
- * \brief Private implementation for PutMetricFilterResponse.
+ * \inmodule QtAwsCloudWatchLogs
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new PutMetricFilterResponsePrivate object.
- *
- * @param  q  Pointer to this object's public PutMetricFilterResponse instance.
+ * Constructs a PutMetricFilterResponsePrivate object with public implementation \a q.
  */
 PutMetricFilterResponsePrivate::PutMetricFilterResponsePrivate(
     PutMetricFilterResponse * const q) : CloudWatchLogsResponsePrivate(q)
@@ -124,9 +117,7 @@ PutMetricFilterResponsePrivate::PutMetricFilterResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudWatchLogs PutMetricFilterResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudWatchLogs PutMetricFilter response element from \a xml.
  */
 void PutMetricFilterResponsePrivate::parsePutMetricFilterResponse(QXmlStreamReader &xml)
 {

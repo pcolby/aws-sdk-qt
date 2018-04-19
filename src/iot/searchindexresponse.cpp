@@ -29,10 +29,9 @@ namespace IoT {
 
 /*!
  * \class QtAws::IoT::SearchIndexResponse
- *
  * \brief The SearchIndexResponse class provides an interace for IoT SearchIndex responses.
  *
- * \ingroup IoT
+ * \inmodule QtAwsIoT
  *
  *  <fullname>AWS IoT</fullname>
  * 
@@ -50,11 +49,7 @@ namespace IoT {
  */
 
 /*!
- * @brief  Constructs a new SearchIndexResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a SearchIndexResponse object for \a reply to \a request, with parent \a parent.
  */
 SearchIndexResponse::SearchIndexResponse(
         const SearchIndexRequest &request,
@@ -66,6 +61,9 @@ SearchIndexResponse::SearchIndexResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const SearchIndexRequest * SearchIndexResponse::request() const
 {
     Q_D(const SearchIndexResponse);
@@ -73,9 +71,8 @@ const SearchIndexRequest * SearchIndexResponse::request() const
 }
 
 /*!
- * @brief  Parse a IoT SearchIndex response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful IoT SearchIndex \a response.
  */
 void SearchIndexResponse::parseSuccess(QIODevice &response)
 {
@@ -85,19 +82,15 @@ void SearchIndexResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::IoT::SearchIndexResponsePrivate
+ * \brief The SearchIndexResponsePrivate class provides private implementation for SearchIndexResponse.
  * \internal
  *
- * \class SearchIndexResponsePrivate
- *
- * \brief Private implementation for SearchIndexResponse.
+ * \inmodule QtAwsIoT
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new SearchIndexResponsePrivate object.
- *
- * @param  q  Pointer to this object's public SearchIndexResponse instance.
+ * Constructs a SearchIndexResponsePrivate object with public implementation \a q.
  */
 SearchIndexResponsePrivate::SearchIndexResponsePrivate(
     SearchIndexResponse * const q) : IoTResponsePrivate(q)
@@ -106,9 +99,7 @@ SearchIndexResponsePrivate::SearchIndexResponsePrivate(
 }
 
 /*!
- * @brief  Parse an IoT SearchIndexResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a IoT SearchIndex response element from \a xml.
  */
 void SearchIndexResponsePrivate::parseSearchIndexResponse(QXmlStreamReader &xml)
 {

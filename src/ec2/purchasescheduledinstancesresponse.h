@@ -34,10 +34,10 @@ class QTAWS_EXPORT PurchaseScheduledInstancesResponse : public EC2Response {
 public:
     PurchaseScheduledInstancesResponse(const PurchaseScheduledInstancesRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const PurchaseScheduledInstancesRequest * request() const;
+    virtual const PurchaseScheduledInstancesRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(PurchaseScheduledInstancesResponse)

@@ -29,10 +29,9 @@ namespace Rekognition {
 
 /*!
  * \class QtAws::Rekognition::DetectModerationLabelsResponse
- *
  * \brief The DetectModerationLabelsResponse class provides an interace for Rekognition DetectModerationLabels responses.
  *
- * \ingroup Rekognition
+ * \inmodule QtAwsRekognition
  *
  *  This is the Amazon Rekognition API
  *
@@ -40,11 +39,7 @@ namespace Rekognition {
  */
 
 /*!
- * @brief  Constructs a new DetectModerationLabelsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DetectModerationLabelsResponse object for \a reply to \a request, with parent \a parent.
  */
 DetectModerationLabelsResponse::DetectModerationLabelsResponse(
         const DetectModerationLabelsRequest &request,
@@ -56,6 +51,9 @@ DetectModerationLabelsResponse::DetectModerationLabelsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DetectModerationLabelsRequest * DetectModerationLabelsResponse::request() const
 {
     Q_D(const DetectModerationLabelsResponse);
@@ -63,9 +61,8 @@ const DetectModerationLabelsRequest * DetectModerationLabelsResponse::request() 
 }
 
 /*!
- * @brief  Parse a Rekognition DetectModerationLabels response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful Rekognition DetectModerationLabels \a response.
  */
 void DetectModerationLabelsResponse::parseSuccess(QIODevice &response)
 {
@@ -75,19 +72,15 @@ void DetectModerationLabelsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::Rekognition::DetectModerationLabelsResponsePrivate
+ * \brief The DetectModerationLabelsResponsePrivate class provides private implementation for DetectModerationLabelsResponse.
  * \internal
  *
- * \class DetectModerationLabelsResponsePrivate
- *
- * \brief Private implementation for DetectModerationLabelsResponse.
+ * \inmodule QtAwsRekognition
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DetectModerationLabelsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DetectModerationLabelsResponse instance.
+ * Constructs a DetectModerationLabelsResponsePrivate object with public implementation \a q.
  */
 DetectModerationLabelsResponsePrivate::DetectModerationLabelsResponsePrivate(
     DetectModerationLabelsResponse * const q) : RekognitionResponsePrivate(q)
@@ -96,9 +89,7 @@ DetectModerationLabelsResponsePrivate::DetectModerationLabelsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an Rekognition DetectModerationLabelsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a Rekognition DetectModerationLabels response element from \a xml.
  */
 void DetectModerationLabelsResponsePrivate::parseDetectModerationLabelsResponse(QXmlStreamReader &xml)
 {

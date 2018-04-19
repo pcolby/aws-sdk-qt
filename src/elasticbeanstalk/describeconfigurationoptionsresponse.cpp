@@ -29,10 +29,9 @@ namespace ElasticBeanstalk {
 
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeConfigurationOptionsResponse
- *
  * \brief The DescribeConfigurationOptionsResponse class provides an interace for ElasticBeanstalk DescribeConfigurationOptions responses.
  *
- * \ingroup ElasticBeanstalk
+ * \inmodule QtAwsElasticBeanstalk
  *
  *  <fullname>AWS Elastic Beanstalk</fullname>
  * 
@@ -61,11 +60,7 @@ namespace ElasticBeanstalk {
  */
 
 /*!
- * @brief  Constructs a new DescribeConfigurationOptionsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeConfigurationOptionsResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeConfigurationOptionsResponse::DescribeConfigurationOptionsResponse(
         const DescribeConfigurationOptionsRequest &request,
@@ -77,6 +72,9 @@ DescribeConfigurationOptionsResponse::DescribeConfigurationOptionsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeConfigurationOptionsRequest * DescribeConfigurationOptionsResponse::request() const
 {
     Q_D(const DescribeConfigurationOptionsResponse);
@@ -84,9 +82,8 @@ const DescribeConfigurationOptionsRequest * DescribeConfigurationOptionsResponse
 }
 
 /*!
- * @brief  Parse a ElasticBeanstalk DescribeConfigurationOptions response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful ElasticBeanstalk DescribeConfigurationOptions \a response.
  */
 void DescribeConfigurationOptionsResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void DescribeConfigurationOptionsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::ElasticBeanstalk::DescribeConfigurationOptionsResponsePrivate
+ * \brief The DescribeConfigurationOptionsResponsePrivate class provides private implementation for DescribeConfigurationOptionsResponse.
  * \internal
  *
- * \class DescribeConfigurationOptionsResponsePrivate
- *
- * \brief Private implementation for DescribeConfigurationOptionsResponse.
+ * \inmodule QtAwsElasticBeanstalk
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeConfigurationOptionsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeConfigurationOptionsResponse instance.
+ * Constructs a DescribeConfigurationOptionsResponsePrivate object with public implementation \a q.
  */
 DescribeConfigurationOptionsResponsePrivate::DescribeConfigurationOptionsResponsePrivate(
     DescribeConfigurationOptionsResponse * const q) : ElasticBeanstalkResponsePrivate(q)
@@ -117,9 +110,7 @@ DescribeConfigurationOptionsResponsePrivate::DescribeConfigurationOptionsRespons
 }
 
 /*!
- * @brief  Parse an ElasticBeanstalk DescribeConfigurationOptionsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a ElasticBeanstalk DescribeConfigurationOptions response element from \a xml.
  */
 void DescribeConfigurationOptionsResponsePrivate::parseDescribeConfigurationOptionsResponse(QXmlStreamReader &xml)
 {

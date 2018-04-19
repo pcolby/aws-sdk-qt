@@ -29,10 +29,9 @@ namespace EC2 {
 
 /*!
  * \class QtAws::EC2::DescribeReservedInstancesResponse
- *
  * \brief The DescribeReservedInstancesResponse class provides an interace for EC2 DescribeReservedInstances responses.
  *
- * \ingroup EC2
+ * \inmodule QtAwsEC2
  *
  *  <fullname>Amazon Elastic Compute Cloud</fullname>
  * 
@@ -43,11 +42,7 @@ namespace EC2 {
  */
 
 /*!
- * @brief  Constructs a new DescribeReservedInstancesResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DescribeReservedInstancesResponse object for \a reply to \a request, with parent \a parent.
  */
 DescribeReservedInstancesResponse::DescribeReservedInstancesResponse(
         const DescribeReservedInstancesRequest &request,
@@ -59,6 +54,9 @@ DescribeReservedInstancesResponse::DescribeReservedInstancesResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DescribeReservedInstancesRequest * DescribeReservedInstancesResponse::request() const
 {
     Q_D(const DescribeReservedInstancesResponse);
@@ -66,9 +64,8 @@ const DescribeReservedInstancesRequest * DescribeReservedInstancesResponse::requ
 }
 
 /*!
- * @brief  Parse a EC2 DescribeReservedInstances response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful EC2 DescribeReservedInstances \a response.
  */
 void DescribeReservedInstancesResponse::parseSuccess(QIODevice &response)
 {
@@ -78,19 +75,15 @@ void DescribeReservedInstancesResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::EC2::DescribeReservedInstancesResponsePrivate
+ * \brief The DescribeReservedInstancesResponsePrivate class provides private implementation for DescribeReservedInstancesResponse.
  * \internal
  *
- * \class DescribeReservedInstancesResponsePrivate
- *
- * \brief Private implementation for DescribeReservedInstancesResponse.
+ * \inmodule QtAwsEC2
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DescribeReservedInstancesResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DescribeReservedInstancesResponse instance.
+ * Constructs a DescribeReservedInstancesResponsePrivate object with public implementation \a q.
  */
 DescribeReservedInstancesResponsePrivate::DescribeReservedInstancesResponsePrivate(
     DescribeReservedInstancesResponse * const q) : EC2ResponsePrivate(q)
@@ -99,9 +92,7 @@ DescribeReservedInstancesResponsePrivate::DescribeReservedInstancesResponsePriva
 }
 
 /*!
- * @brief  Parse an EC2 DescribeReservedInstancesResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a EC2 DescribeReservedInstances response element from \a xml.
  */
 void DescribeReservedInstancesResponsePrivate::parseDescribeReservedInstancesResponse(QXmlStreamReader &xml)
 {

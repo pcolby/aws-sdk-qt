@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * RegisterInstanceRequest::response(QNetworkRep
  */
 
 /*!
- *
- * Constructs a RegisterInstanceRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a RegisterInstanceRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
     const OpsWorksRequest::Action action, RegisterInstanceRequest * const q)

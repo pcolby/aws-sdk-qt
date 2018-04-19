@@ -34,10 +34,10 @@ class QTAWS_EXPORT ViewBillingResponse : public Route53DomainsResponse {
 public:
     ViewBillingResponse(const ViewBillingRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const ViewBillingRequest * request() const;
+    virtual const ViewBillingRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(ViewBillingResponse)

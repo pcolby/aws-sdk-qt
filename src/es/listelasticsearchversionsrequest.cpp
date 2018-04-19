@@ -90,9 +90,8 @@ QtAws::Core::AwsAbstractResponse * ListElasticsearchVersionsRequest::response(QN
  */
 
 /*!
- *
- * Constructs a ListElasticsearchVersionsRequestPrivate object for ElasticsearchService \a action with,
- * public implementation \a q.
+ * Constructs a ListElasticsearchVersionsRequestPrivate object for ElasticsearchService \a action,
+ * with public implementation \a q.
  */
 ListElasticsearchVersionsRequestPrivate::ListElasticsearchVersionsRequestPrivate(
     const ElasticsearchServiceRequest::Action action, ListElasticsearchVersionsRequest * const q)

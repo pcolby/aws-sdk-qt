@@ -29,21 +29,16 @@ namespace SageMaker {
 
 /*!
  * \class QtAws::SageMaker::DeleteModelResponse
- *
  * \brief The DeleteModelResponse class provides an interace for SageMaker DeleteModel responses.
  *
- * \ingroup SageMaker
+ * \inmodule QtAwsSageMaker
  *
  *
  * \sa SageMakerClient::deleteModel
  */
 
 /*!
- * @brief  Constructs a new DeleteModelResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteModelResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteModelResponse::DeleteModelResponse(
         const DeleteModelRequest &request,
@@ -55,6 +50,9 @@ DeleteModelResponse::DeleteModelResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteModelRequest * DeleteModelResponse::request() const
 {
     Q_D(const DeleteModelResponse);
@@ -62,9 +60,8 @@ const DeleteModelRequest * DeleteModelResponse::request() const
 }
 
 /*!
- * @brief  Parse a SageMaker DeleteModel response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SageMaker DeleteModel \a response.
  */
 void DeleteModelResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DeleteModelResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SageMaker::DeleteModelResponsePrivate
+ * \brief The DeleteModelResponsePrivate class provides private implementation for DeleteModelResponse.
  * \internal
  *
- * \class DeleteModelResponsePrivate
- *
- * \brief Private implementation for DeleteModelResponse.
+ * \inmodule QtAwsSageMaker
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteModelResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteModelResponse instance.
+ * Constructs a DeleteModelResponsePrivate object with public implementation \a q.
  */
 DeleteModelResponsePrivate::DeleteModelResponsePrivate(
     DeleteModelResponse * const q) : SageMakerResponsePrivate(q)
@@ -95,9 +88,7 @@ DeleteModelResponsePrivate::DeleteModelResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SageMaker DeleteModelResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SageMaker DeleteModel response element from \a xml.
  */
 void DeleteModelResponsePrivate::parseDeleteModelResponse(QXmlStreamReader &xml)
 {

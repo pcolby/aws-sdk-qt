@@ -29,10 +29,9 @@ namespace DirectoryService {
 
 /*!
  * \class QtAws::DirectoryService::GetSnapshotLimitsResponse
- *
  * \brief The GetSnapshotLimitsResponse class provides an interace for DirectoryService GetSnapshotLimits responses.
  *
- * \ingroup DirectoryService
+ * \inmodule QtAwsDirectoryService
  *
  *  <fullname>AWS Directory Service</fullname>
  * 
@@ -53,11 +52,7 @@ namespace DirectoryService {
  */
 
 /*!
- * @brief  Constructs a new GetSnapshotLimitsResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetSnapshotLimitsResponse object for \a reply to \a request, with parent \a parent.
  */
 GetSnapshotLimitsResponse::GetSnapshotLimitsResponse(
         const GetSnapshotLimitsRequest &request,
@@ -69,6 +64,9 @@ GetSnapshotLimitsResponse::GetSnapshotLimitsResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetSnapshotLimitsRequest * GetSnapshotLimitsResponse::request() const
 {
     Q_D(const GetSnapshotLimitsResponse);
@@ -76,9 +74,8 @@ const GetSnapshotLimitsRequest * GetSnapshotLimitsResponse::request() const
 }
 
 /*!
- * @brief  Parse a DirectoryService GetSnapshotLimits response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful DirectoryService GetSnapshotLimits \a response.
  */
 void GetSnapshotLimitsResponse::parseSuccess(QIODevice &response)
 {
@@ -88,19 +85,15 @@ void GetSnapshotLimitsResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::DirectoryService::GetSnapshotLimitsResponsePrivate
+ * \brief The GetSnapshotLimitsResponsePrivate class provides private implementation for GetSnapshotLimitsResponse.
  * \internal
  *
- * \class GetSnapshotLimitsResponsePrivate
- *
- * \brief Private implementation for GetSnapshotLimitsResponse.
+ * \inmodule QtAwsDirectoryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetSnapshotLimitsResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetSnapshotLimitsResponse instance.
+ * Constructs a GetSnapshotLimitsResponsePrivate object with public implementation \a q.
  */
 GetSnapshotLimitsResponsePrivate::GetSnapshotLimitsResponsePrivate(
     GetSnapshotLimitsResponse * const q) : DirectoryServiceResponsePrivate(q)
@@ -109,9 +102,7 @@ GetSnapshotLimitsResponsePrivate::GetSnapshotLimitsResponsePrivate(
 }
 
 /*!
- * @brief  Parse an DirectoryService GetSnapshotLimitsResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a DirectoryService GetSnapshotLimits response element from \a xml.
  */
 void GetSnapshotLimitsResponsePrivate::parseGetSnapshotLimitsResponse(QXmlStreamReader &xml)
 {

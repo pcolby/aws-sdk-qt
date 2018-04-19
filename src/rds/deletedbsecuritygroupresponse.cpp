@@ -29,10 +29,9 @@ namespace RDS {
 
 /*!
  * \class QtAws::RDS::DeleteDBSecurityGroupResponse
- *
  * \brief The DeleteDBSecurityGroupResponse class provides an interace for RDS DeleteDBSecurityGroup responses.
  *
- * \ingroup RDS
+ * \inmodule QtAwsRDS
  *
  *  <fullname>Amazon Relational Database Service</fullname>
  * 
@@ -103,11 +102,7 @@ namespace RDS {
  */
 
 /*!
- * @brief  Constructs a new DeleteDBSecurityGroupResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DeleteDBSecurityGroupResponse object for \a reply to \a request, with parent \a parent.
  */
 DeleteDBSecurityGroupResponse::DeleteDBSecurityGroupResponse(
         const DeleteDBSecurityGroupRequest &request,
@@ -119,6 +114,9 @@ DeleteDBSecurityGroupResponse::DeleteDBSecurityGroupResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DeleteDBSecurityGroupRequest * DeleteDBSecurityGroupResponse::request() const
 {
     Q_D(const DeleteDBSecurityGroupResponse);
@@ -126,9 +124,8 @@ const DeleteDBSecurityGroupRequest * DeleteDBSecurityGroupResponse::request() co
 }
 
 /*!
- * @brief  Parse a RDS DeleteDBSecurityGroup response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful RDS DeleteDBSecurityGroup \a response.
  */
 void DeleteDBSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
@@ -138,19 +135,15 @@ void DeleteDBSecurityGroupResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::RDS::DeleteDBSecurityGroupResponsePrivate
+ * \brief The DeleteDBSecurityGroupResponsePrivate class provides private implementation for DeleteDBSecurityGroupResponse.
  * \internal
  *
- * \class DeleteDBSecurityGroupResponsePrivate
- *
- * \brief Private implementation for DeleteDBSecurityGroupResponse.
+ * \inmodule QtAwsRDS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DeleteDBSecurityGroupResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DeleteDBSecurityGroupResponse instance.
+ * Constructs a DeleteDBSecurityGroupResponsePrivate object with public implementation \a q.
  */
 DeleteDBSecurityGroupResponsePrivate::DeleteDBSecurityGroupResponsePrivate(
     DeleteDBSecurityGroupResponse * const q) : RDSResponsePrivate(q)
@@ -159,9 +152,7 @@ DeleteDBSecurityGroupResponsePrivate::DeleteDBSecurityGroupResponsePrivate(
 }
 
 /*!
- * @brief  Parse an RDS DeleteDBSecurityGroupResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a RDS DeleteDBSecurityGroup response element from \a xml.
  */
 void DeleteDBSecurityGroupResponsePrivate::parseDeleteDBSecurityGroupResponse(QXmlStreamReader &xml)
 {

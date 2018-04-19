@@ -29,21 +29,16 @@ namespace SMS {
 
 /*!
  * \class QtAws::SMS::DisassociateConnectorResponse
- *
  * \brief The DisassociateConnectorResponse class provides an interace for SMS DisassociateConnector responses.
  *
- * \ingroup SMS
+ * \inmodule QtAwsSMS
  *
  *
  * \sa SMSClient::disassociateConnector
  */
 
 /*!
- * @brief  Constructs a new DisassociateConnectorResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a DisassociateConnectorResponse object for \a reply to \a request, with parent \a parent.
  */
 DisassociateConnectorResponse::DisassociateConnectorResponse(
         const DisassociateConnectorRequest &request,
@@ -55,6 +50,9 @@ DisassociateConnectorResponse::DisassociateConnectorResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const DisassociateConnectorRequest * DisassociateConnectorResponse::request() const
 {
     Q_D(const DisassociateConnectorResponse);
@@ -62,9 +60,8 @@ const DisassociateConnectorRequest * DisassociateConnectorResponse::request() co
 }
 
 /*!
- * @brief  Parse a SMS DisassociateConnector response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful SMS DisassociateConnector \a response.
  */
 void DisassociateConnectorResponse::parseSuccess(QIODevice &response)
 {
@@ -74,19 +71,15 @@ void DisassociateConnectorResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::SMS::DisassociateConnectorResponsePrivate
+ * \brief The DisassociateConnectorResponsePrivate class provides private implementation for DisassociateConnectorResponse.
  * \internal
  *
- * \class DisassociateConnectorResponsePrivate
- *
- * \brief Private implementation for DisassociateConnectorResponse.
+ * \inmodule QtAwsSMS
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new DisassociateConnectorResponsePrivate object.
- *
- * @param  q  Pointer to this object's public DisassociateConnectorResponse instance.
+ * Constructs a DisassociateConnectorResponsePrivate object with public implementation \a q.
  */
 DisassociateConnectorResponsePrivate::DisassociateConnectorResponsePrivate(
     DisassociateConnectorResponse * const q) : SMSResponsePrivate(q)
@@ -95,9 +88,7 @@ DisassociateConnectorResponsePrivate::DisassociateConnectorResponsePrivate(
 }
 
 /*!
- * @brief  Parse an SMS DisassociateConnectorResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a SMS DisassociateConnector response element from \a xml.
  */
 void DisassociateConnectorResponsePrivate::parseDisassociateConnectorResponse(QXmlStreamReader &xml)
 {

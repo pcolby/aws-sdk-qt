@@ -34,10 +34,10 @@ class QTAWS_EXPORT DeleteFpgaImageResponse : public EC2Response {
 public:
     DeleteFpgaImageResponse(const DeleteFpgaImageRequest &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const DeleteFpgaImageRequest * request() const;
+    virtual const DeleteFpgaImageRequest * request() const override;
 
 protected slots:
-    virtual void parseSuccess(QIODevice &response);
+    virtual void parseSuccess(QIODevice &response) override;
 
 private:
     Q_DECLARE_PRIVATE(DeleteFpgaImageResponse)

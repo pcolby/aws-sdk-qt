@@ -28,16 +28,13 @@ namespace ApplicationDiscoveryService {
 
 /*!
  * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceResponse
- *
  * \brief The ApplicationDiscoveryServiceResponse class provides an interface for ApplicationDiscoveryService responses.
  *
- * \ingroup ApplicationDiscoveryService
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @brief  Constructs a new ApplicationDiscoveryServiceResponse object.
- *
- * @param  parent   This object's parent.
+ * Constructs a ApplicationDiscoveryServiceResponse object with parent \a parent.
  */
 ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(new ApplicationDiscoveryServiceResponsePrivate(this), parent)
@@ -46,16 +43,12 @@ ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(QObject
 }
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplicationDiscoveryServiceResponse object.
- *
+ * \internal
+ * Constructs a ApplicationDiscoveryServiceResponse object with private implementation \a d,
+ * and parent \a parent.
  *
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ApplicationDiscoveryServiceResponsePrivate.
- *
- * @param  d       Pointer to private data (aka D-Pointer).
- * @param  parent  This object's parent.
  */
 ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(ApplicationDiscoveryServiceResponsePrivate * const d, QObject * const parent)
     : QtAws::Core::AwsAbstractResponse(d, parent)
@@ -64,9 +57,7 @@ ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(Applica
 }
 
 /*!
- * @brief  Parse a failure response.
- *
- * @param  response  Response to parse.
+ * \reimp
  */
 void ApplicationDiscoveryServiceResponse::parseFailure(QIODevice &response)
 {
@@ -85,19 +76,15 @@ void ApplicationDiscoveryServiceResponse::parseFailure(QIODevice &response)
 }
 
 /*!
- * @internal
+ * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceResponsePrivate
+ * \brief The ApplicationDiscoveryServiceResponsePrivate class provides private implementation for ApplicationDiscoveryServiceResponse.
+ * \internal
  *
- * @class  ApplicationDiscoveryServiceResponsePrivate
- *
- * @brief  Private implementation for ApplicationDiscoveryServiceResponse.
+ * \inmodule QtAwsApplicationDiscoveryService
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new ApplicationDiscoveryServiceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public ApplicationDiscoveryServiceResponse instance.
+ * Constructs a ApplicationDiscoveryServiceResponsePrivate object with public implementation \a q.
  */
 ApplicationDiscoveryServiceResponsePrivate::ApplicationDiscoveryServiceResponsePrivate(
     ApplicationDiscoveryServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)

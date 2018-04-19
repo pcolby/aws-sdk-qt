@@ -29,10 +29,9 @@ namespace CloudFormation {
 
 /*!
  * \class QtAws::CloudFormation::CancelUpdateStackResponse
- *
  * \brief The CancelUpdateStackResponse class provides an interace for CloudFormation CancelUpdateStack responses.
  *
- * \ingroup CloudFormation
+ * \inmodule QtAwsCloudFormation
  *
  *  <fullname>AWS CloudFormation</fullname>
  * 
@@ -61,11 +60,7 @@ namespace CloudFormation {
  */
 
 /*!
- * @brief  Constructs a new CancelUpdateStackResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a CancelUpdateStackResponse object for \a reply to \a request, with parent \a parent.
  */
 CancelUpdateStackResponse::CancelUpdateStackResponse(
         const CancelUpdateStackRequest &request,
@@ -77,6 +72,9 @@ CancelUpdateStackResponse::CancelUpdateStackResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const CancelUpdateStackRequest * CancelUpdateStackResponse::request() const
 {
     Q_D(const CancelUpdateStackResponse);
@@ -84,9 +82,8 @@ const CancelUpdateStackRequest * CancelUpdateStackResponse::request() const
 }
 
 /*!
- * @brief  Parse a CloudFormation CancelUpdateStack response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CloudFormation CancelUpdateStack \a response.
  */
 void CancelUpdateStackResponse::parseSuccess(QIODevice &response)
 {
@@ -96,19 +93,15 @@ void CancelUpdateStackResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CloudFormation::CancelUpdateStackResponsePrivate
+ * \brief The CancelUpdateStackResponsePrivate class provides private implementation for CancelUpdateStackResponse.
  * \internal
  *
- * \class CancelUpdateStackResponsePrivate
- *
- * \brief Private implementation for CancelUpdateStackResponse.
+ * \inmodule QtAwsCloudFormation
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new CancelUpdateStackResponsePrivate object.
- *
- * @param  q  Pointer to this object's public CancelUpdateStackResponse instance.
+ * Constructs a CancelUpdateStackResponsePrivate object with public implementation \a q.
  */
 CancelUpdateStackResponsePrivate::CancelUpdateStackResponsePrivate(
     CancelUpdateStackResponse * const q) : CloudFormationResponsePrivate(q)
@@ -117,9 +110,7 @@ CancelUpdateStackResponsePrivate::CancelUpdateStackResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CloudFormation CancelUpdateStackResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CloudFormation CancelUpdateStack response element from \a xml.
  */
 void CancelUpdateStackResponsePrivate::parseCancelUpdateStackResponse(QXmlStreamReader &xml)
 {

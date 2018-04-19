@@ -187,9 +187,8 @@ QtAws::Core::AwsAbstractResponse * CreateUserProfileRequest::response(QNetworkRe
  */
 
 /*!
- *
- * Constructs a CreateUserProfileRequestPrivate object for OpsWorks \a action with,
- * public implementation \a q.
+ * Constructs a CreateUserProfileRequestPrivate object for OpsWorks \a action,
+ * with public implementation \a q.
  */
 CreateUserProfileRequestPrivate::CreateUserProfileRequestPrivate(
     const OpsWorksRequest::Action action, CreateUserProfileRequest * const q)

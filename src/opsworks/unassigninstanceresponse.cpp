@@ -29,10 +29,9 @@ namespace OpsWorks {
 
 /*!
  * \class QtAws::OpsWorks::UnassignInstanceResponse
- *
  * \brief The UnassignInstanceResponse class provides an interace for OpsWorks UnassignInstance responses.
  *
- * \ingroup OpsWorks
+ * \inmodule QtAwsOpsWorks
  *
  *  <fullname>AWS OpsWorks</fullname>
  * 
@@ -145,11 +144,7 @@ namespace OpsWorks {
  */
 
 /*!
- * @brief  Constructs a new UnassignInstanceResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a UnassignInstanceResponse object for \a reply to \a request, with parent \a parent.
  */
 UnassignInstanceResponse::UnassignInstanceResponse(
         const UnassignInstanceRequest &request,
@@ -161,6 +156,9 @@ UnassignInstanceResponse::UnassignInstanceResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const UnassignInstanceRequest * UnassignInstanceResponse::request() const
 {
     Q_D(const UnassignInstanceResponse);
@@ -168,9 +166,8 @@ const UnassignInstanceRequest * UnassignInstanceResponse::request() const
 }
 
 /*!
- * @brief  Parse a OpsWorks UnassignInstance response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful OpsWorks UnassignInstance \a response.
  */
 void UnassignInstanceResponse::parseSuccess(QIODevice &response)
 {
@@ -180,19 +177,15 @@ void UnassignInstanceResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::OpsWorks::UnassignInstanceResponsePrivate
+ * \brief The UnassignInstanceResponsePrivate class provides private implementation for UnassignInstanceResponse.
  * \internal
  *
- * \class UnassignInstanceResponsePrivate
- *
- * \brief Private implementation for UnassignInstanceResponse.
+ * \inmodule QtAwsOpsWorks
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new UnassignInstanceResponsePrivate object.
- *
- * @param  q  Pointer to this object's public UnassignInstanceResponse instance.
+ * Constructs a UnassignInstanceResponsePrivate object with public implementation \a q.
  */
 UnassignInstanceResponsePrivate::UnassignInstanceResponsePrivate(
     UnassignInstanceResponse * const q) : OpsWorksResponsePrivate(q)
@@ -201,9 +194,7 @@ UnassignInstanceResponsePrivate::UnassignInstanceResponsePrivate(
 }
 
 /*!
- * @brief  Parse an OpsWorks UnassignInstanceResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a OpsWorks UnassignInstance response element from \a xml.
  */
 void UnassignInstanceResponsePrivate::parseUnassignInstanceResponse(QXmlStreamReader &xml)
 {

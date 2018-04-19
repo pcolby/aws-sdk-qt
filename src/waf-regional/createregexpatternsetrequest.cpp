@@ -88,9 +88,8 @@ QtAws::Core::AwsAbstractResponse * CreateRegexPatternSetRequest::response(QNetwo
  */
 
 /*!
- *
- * Constructs a CreateRegexPatternSetRequestPrivate object for WAFRegional \a action with,
- * public implementation \a q.
+ * Constructs a CreateRegexPatternSetRequestPrivate object for WAFRegional \a action,
+ * with public implementation \a q.
  */
 CreateRegexPatternSetRequestPrivate::CreateRegexPatternSetRequestPrivate(
     const WAFRegionalRequest::Action action, CreateRegexPatternSetRequest * const q)

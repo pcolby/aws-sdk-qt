@@ -29,10 +29,9 @@ namespace CognitoIdentityProvider {
 
 /*!
  * \class QtAws::CognitoIdentityProvider::GetUserResponse
- *
  * \brief The GetUserResponse class provides an interace for CognitoIdentityProvider GetUser responses.
  *
- * \ingroup CognitoIdentityProvider
+ * \inmodule QtAwsCognitoIdentityProvider
  *
  *  Using the Amazon Cognito User Pools API, you can create a user pool to manage directories and users. You can
  *  authenticate a user to obtain tokens related to user identity and access
@@ -49,11 +48,7 @@ namespace CognitoIdentityProvider {
  */
 
 /*!
- * @brief  Constructs a new GetUserResponse object.
- *
- * @param  request  Original AWS request.
- * @param  reply    AWS network response to observe.
- * @param  parent   This object's parent.
+ * Constructs a GetUserResponse object for \a reply to \a request, with parent \a parent.
  */
 GetUserResponse::GetUserResponse(
         const GetUserRequest &request,
@@ -65,6 +60,9 @@ GetUserResponse::GetUserResponse(
     setReply(reply);
 }
 
+/*!
+ * \reimp
+ */
 const GetUserRequest * GetUserResponse::request() const
 {
     Q_D(const GetUserResponse);
@@ -72,9 +70,8 @@ const GetUserRequest * GetUserResponse::request() const
 }
 
 /*!
- * @brief  Parse a CognitoIdentityProvider GetUser response.
- *
- * @param  response  Response to parse.
+ * \reimp
+ * Parses a successful CognitoIdentityProvider GetUser \a response.
  */
 void GetUserResponse::parseSuccess(QIODevice &response)
 {
@@ -84,19 +81,15 @@ void GetUserResponse::parseSuccess(QIODevice &response)
 }
 
 /*!
+ * \class QtAws::CognitoIdentityProvider::GetUserResponsePrivate
+ * \brief The GetUserResponsePrivate class provides private implementation for GetUserResponse.
  * \internal
  *
- * \class GetUserResponsePrivate
- *
- * \brief Private implementation for GetUserResponse.
+ * \inmodule QtAwsCognitoIdentityProvider
  */
 
 /*!
- * @internal
- *
- * @brief  Constructs a new GetUserResponsePrivate object.
- *
- * @param  q  Pointer to this object's public GetUserResponse instance.
+ * Constructs a GetUserResponsePrivate object with public implementation \a q.
  */
 GetUserResponsePrivate::GetUserResponsePrivate(
     GetUserResponse * const q) : CognitoIdentityProviderResponsePrivate(q)
@@ -105,9 +98,7 @@ GetUserResponsePrivate::GetUserResponsePrivate(
 }
 
 /*!
- * @brief  Parse an CognitoIdentityProvider GetUserResponse element.
- *
- * @param  xml  XML stream to parse.
+ * Parses a CognitoIdentityProvider GetUser response element from \a xml.
  */
 void GetUserResponsePrivate::parseGetUserResponse(QXmlStreamReader &xml)
 {
